@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<appwidget-provider android:description="@0x7f14072b"
+                    android:minWidth="136.0dp"
+                    android:updatePeriodMillis="60000"
+                    android:initialLayout="@0x7f0e01ce"
+                    android:configure="com.android.systemui.people.PeopleSpaceActivity"
+                    android:resizeMode="horizontal|vertical"
+                    android:minResizeWidth="60.0dp"
+                    android:minResizeHeight="50.0dp"
+                    android:widgetFeatures="reconfigurable"
+                    android:previewLayout="@layout/people_space_placeholder_layout"
+                    android:maxResizeHeight="207.0dp"
+                    android:targetCellHeight="1" xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<inset android:insetLeft="@dimen/overlay_action_container_minimum_edge_spacing"
+       android:insetRight="@dimen/overlay_action_container_minimum_edge_spacing" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+  <shape android:shape="rectangle">
+    <solid android:color="?android:^attr-private/monthTextAppearance" />
+    <corners android:radius="10000.0dp" />
+  </shape>
+</inset>

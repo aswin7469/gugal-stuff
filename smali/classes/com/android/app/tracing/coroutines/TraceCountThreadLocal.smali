@@ -1,0 +1,22 @@
+.class public final Lcom/android/app/tracing/coroutines/TraceCountThreadLocal;
+.super Ljava/lang/ThreadLocal;
+.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+
+
+# virtual methods
+.method public final bridge synthetic initialValue()Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    const/4 p0, 0x0
+
+    .line 2
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 3
+    move-result-object p0
+
+    .line 6
+    return-object p0
+    .line 7
+.end method

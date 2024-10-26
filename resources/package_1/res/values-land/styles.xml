@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <style name="AuthNonBioCredentialHeaderStyle">
+    <item name="android:gravity">center|left|top</item>
+    <item name="android:paddingTop">48.0dp</item>
+    <item name="android:paddingBottom">10.0dp</item>
+    <item name="android:paddingStart">48.0dp</item>
+    <item name="android:paddingEnd">24.0dp</item>
+  </style>
+  <style name="TextAppearance.AuthNonBioCredential.Description" parent="@style/TextAppearance.AuthNonBioCredential">
+    <item name="android:textSize">18.0sp</item>
+    <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
+    <item name="android:layout_marginTop">6.0dp</item>
+    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+  </style>
+  <style name="TextAppearance.AuthNonBioCredential.Subtitle" parent="@style/TextAppearance.AuthNonBioCredential">
+    <item name="android:textSize">18.0sp</item>
+    <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
+    <item name="android:layout_marginTop">6.0dp</item>
+    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+  </style>
+  <style name="TextAppearance.AuthNonBioCredential.Title" parent="@style/TextAppearance.AuthNonBioCredential">
+    <item name="android:textSize">36.0dp</item>
+    <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
+    <item name="android:focusable">true</item>
+    <item name="android:layout_marginTop">6.0dp</item>
+    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+  </style>
+</resources>

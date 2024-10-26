@@ -1,0 +1,3 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.systemui.media.controls.ui.drawable.LightSourceDrawable systemui:rippleMaxSize="135.0dp"
+                      systemui:rippleMinSize="25.0dp" xmlns:systemui="http://schemas.android.com/apk/res-auto" />

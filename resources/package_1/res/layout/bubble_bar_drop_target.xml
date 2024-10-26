@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<View android:id="@id/bubble_bar_drop_target"
+      android:background="@drawable/bubble_drop_target_background"
+      android:layout_width="0.0dp"
+      android:layout_height="0.0dp"
+      android:importantForAccessibility="no"
+      android:elevation="@dimen/bubble_elevation" xmlns:android="http://schemas.android.com/apk/res/android" />

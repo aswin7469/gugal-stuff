@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list android:color="?android:attr/colorControlHighlight" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+  <item>
+    <shape>
+      <solid android:color="?android:^attr-private/mtpReserve" />
+    </shape>
+  </item>
+  <item>
+    <shape>
+      <solid android:color="@color/notification_state_color_default" />
+    </shape>
+  </item>
+  <item android:id="@id/notification_focus_overlay">
+    <shape>
+      <stroke android:width="@dimen/notification_focus_stroke_width"
+              android:color="@color/notification_focus_overlay_color" />
+    </shape>
+  </item>
+</layer-list>

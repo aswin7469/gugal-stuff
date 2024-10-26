@@ -1,0 +1,68 @@
+.class final Lcom/android/systemui/statusbar/pipeline/satellite/data/prod/DeviceBasedSatelliteRepositoryImpl$satelliteIsSupportedCallback$1$callback$1$1;
+.super Lkotlin/jvm/internal/Lambda;
+.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# instance fields
+.field final synthetic $supported:Z
+
+
+# direct methods
+.method public constructor <init>(Z)V
+    .locals 0
+
+    .line 1
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/pipeline/satellite/data/prod/DeviceBasedSatelliteRepositoryImpl$satelliteIsSupportedCallback$1$callback$1$1;->$supported:Z
+
+    .line 2
+    const/4 p1, 0x1
+
+    .line 4
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+
+    .line 5
+    return-void
+    .line 8
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    check-cast p1, Lcom/android/systemui/log/core/LogMessage;
+
+    .line 2
+    iget-boolean p0, p0, Lcom/android/systemui/statusbar/pipeline/satellite/data/prod/DeviceBasedSatelliteRepositoryImpl$satelliteIsSupportedCallback$1$callback$1$1;->$supported:Z
+
+    .line 4
+    if-eqz p0, :cond_0
+
+    .line 6
+    const-string p0, "supported"
+
+    .line 8
+    goto :goto_0
+
+    .line 10
+    :cond_0
+    const-string p0, "not supported"
+
+    .line 11
+    :goto_0
+    const-string p1, "onSatelliteSupportedStateChanged: "
+
+    .line 13
+    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 15
+    move-result-object p0
+
+    .line 18
+    return-object p0
+    .line 19
+.end method
