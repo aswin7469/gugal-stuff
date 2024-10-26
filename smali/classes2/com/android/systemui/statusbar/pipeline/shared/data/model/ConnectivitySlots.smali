@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/pipeline/shared/data/model/ConnectivitySlots;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -15,7 +15,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    const v0, 0x1040968    # @android:string/storage_usb_drive
+    const v0, 0x104095f    # @android:string/stk_cc_ss_to_ussd
 
     .line 5
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -24,7 +24,7 @@
     move-result-object v0
 
     .line 11
-    const v1, 0x104097b    # @android:string/time_of_day
+    const v1, 0x1040972    # @android:string/sync_undo_deletes
 
     .line 12
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -33,7 +33,7 @@
     move-result-object v1
 
     .line 18
-    const v2, 0x104098c    # @android:string/toolbar_collapse_description
+    const v2, 0x1040983    # @android:string/time_picker_increment_minute_button
 
     .line 19
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -42,7 +42,7 @@
     move-result-object v2
 
     .line 25
-    const v3, 0x1040974    # @android:string/system_error_wipe_data
+    const v3, 0x104096b    # @android:string/supervised_user_creation_label
 
     .line 26
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;

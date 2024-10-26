@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/ambient/touch/TouchMonitor$4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/GestureDetector$OnGestureListener;
@@ -49,10 +49,10 @@
     move-result-object v1
 
     .line 14
-    new-instance v2, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda6;
+    new-instance v2, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda8;
 
     .line 15
-    invoke-direct {v2, p1, v0}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/ambient/touch/TouchMonitor$Evaluator;Ljava/util/Set;)V
+    invoke-direct {v2, p1, v0}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/ambient/touch/TouchMonitor$Evaluator;Ljava/util/Set;)V
 
     .line 17
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
@@ -61,13 +61,13 @@
     move-result-object p1
 
     .line 23
-    new-instance v1, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda7;
+    new-instance v1, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda1;
 
     .line 24
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     .line 26
-    invoke-direct {v1, v2}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda7;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda1;-><init>(I)V
 
     .line 27
     invoke-interface {p1, v1}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
@@ -91,10 +91,10 @@
     move-result-object v1
 
     .line 43
-    new-instance v2, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda5;
+    new-instance v2, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda0;
 
     .line 44
-    invoke-direct {v2, v0}, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda5;-><init>(Ljava/util/Set;)V
+    invoke-direct {v2, v0}, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda0;-><init>(Ljava/util/Set;)V
 
     .line 46
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
@@ -103,7 +103,7 @@
     move-result-object v0
 
     .line 52
-    new-instance v1, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda6;
+    new-instance v1, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda1;
 
     .line 53
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
@@ -124,13 +124,13 @@
     check-cast v0, Ljava/util/Collection;
 
     .line 66
-    new-instance v1, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda3;
+    new-instance v1, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda2;
 
     .line 68
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     .line 70
-    invoke-direct {v1, v2}, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda3;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda2;-><init>(I)V
 
     .line 71
     invoke-interface {v0, v1}, Ljava/util/Collection;->forEach(Ljava/util/function/Consumer;)V
@@ -193,13 +193,13 @@
     move-result-object p0
 
     .line 29
-    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda2;
+    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda7;
 
     .line 30
     const/4 v1, 0x2
 
     .line 32
-    invoke-direct {v0, v1, p1}, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda7;-><init>(ILjava/lang/Object;)V
 
     .line 33
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
@@ -213,13 +213,13 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda2;
+    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda4;
 
     .line 2
     const/4 v1, 0x1
 
     .line 4
-    invoke-direct {v0, p1, v1}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda2;-><init>(Landroid/view/MotionEvent;I)V
+    invoke-direct {v0, p1, v1}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda4;-><init>(Landroid/view/MotionEvent;I)V
 
     .line 5
     invoke-virtual {p0, v0}, Lcom/android/systemui/ambient/touch/TouchMonitor$4;->evaluate(Lcom/android/systemui/ambient/touch/TouchMonitor$Evaluator;)Z
@@ -236,7 +236,7 @@
     .locals 7
 
     .line 1
-    new-instance v6, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda4;
+    new-instance v6, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda6;
 
     .line 2
     const/4 v5, 0x1
@@ -257,7 +257,7 @@
     move v4, p4
 
     .line 9
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda4;-><init>(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FFI)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda6;-><init>(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FFI)V
 
     .line 10
     invoke-virtual {p0, v6}, Lcom/android/systemui/ambient/touch/TouchMonitor$4;->evaluate(Lcom/android/systemui/ambient/touch/TouchMonitor$Evaluator;)Z
@@ -274,13 +274,13 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda0;
+    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda2;
 
     .line 2
     const/4 v1, 0x0
 
     .line 4
-    invoke-direct {v0, p1, v1}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda0;-><init>(Landroid/view/MotionEvent;I)V
+    invoke-direct {v0, p1, v1}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda2;-><init>(Landroid/view/MotionEvent;I)V
 
     .line 5
     invoke-virtual {p0, v0}, Lcom/android/systemui/ambient/touch/TouchMonitor$4;->observe(Ljava/util/function/Consumer;)V
@@ -294,7 +294,7 @@
     .locals 7
 
     .line 1
-    new-instance v6, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda4;
+    new-instance v6, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda6;
 
     .line 2
     const/4 v5, 0x0
@@ -315,7 +315,7 @@
     move v4, p4
 
     .line 9
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda4;-><init>(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FFI)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda6;-><init>(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FFI)V
 
     .line 10
     invoke-virtual {p0, v6}, Lcom/android/systemui/ambient/touch/TouchMonitor$4;->evaluate(Lcom/android/systemui/ambient/touch/TouchMonitor$Evaluator;)Z
@@ -332,13 +332,13 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda0;
+    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda2;
 
     .line 2
     const/4 v1, 0x1
 
     .line 4
-    invoke-direct {v0, p1, v1}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda0;-><init>(Landroid/view/MotionEvent;I)V
+    invoke-direct {v0, p1, v1}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda2;-><init>(Landroid/view/MotionEvent;I)V
 
     .line 5
     invoke-virtual {p0, v0}, Lcom/android/systemui/ambient/touch/TouchMonitor$4;->observe(Ljava/util/function/Consumer;)V
@@ -352,13 +352,13 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda2;
+    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda4;
 
     .line 2
     const/4 v1, 0x0
 
     .line 4
-    invoke-direct {v0, p1, v1}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda2;-><init>(Landroid/view/MotionEvent;I)V
+    invoke-direct {v0, p1, v1}, Lcom/android/systemui/ambient/touch/TouchMonitor$4$$ExternalSyntheticLambda4;-><init>(Landroid/view/MotionEvent;I)V
 
     .line 5
     invoke-virtual {p0, v0}, Lcom/android/systemui/ambient/touch/TouchMonitor$4;->evaluate(Lcom/android/systemui/ambient/touch/TouchMonitor$Evaluator;)Z

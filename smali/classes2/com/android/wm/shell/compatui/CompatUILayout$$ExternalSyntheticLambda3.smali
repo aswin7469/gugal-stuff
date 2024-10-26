@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/compatui/CompatUILayout$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -42,7 +42,7 @@
     const-string v0, "Camera compat shouldn\'t receive clicks in the hidden state."
 
     .line 4
-    const v1, 0x7f0b01a1    # @id/camera_compat_hint
+    const v1, 0x7f0a01a7    # @id/camera_compat_hint
 
     .line 6
     const/4 v2, 0x0
@@ -70,7 +70,7 @@
     sget p1, Lcom/android/wm/shell/compatui/CompatUILayout;->$r8$clinit:I
 
     .line 23
-    const p1, 0x7f0b0722    # @id/size_compat_hint
+    const p1, 0x7f0a074e    # @id/size_compat_hint
 
     .line 25
     invoke-virtual {p0, p1, v2}, Lcom/android/wm/shell/compatui/CompatUILayout;->setViewVisibility(IZ)V
@@ -148,7 +148,7 @@
     iget-object p0, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mLayout:Lcom/android/wm/shell/compatui/CompatUILayout;
 
     .line 74
-    const p1, 0x7f0b019f    # @id/camera_compat_control
+    const p1, 0x7f0a01a5    # @id/camera_compat_control
 
     .line 76
     invoke-virtual {p0, p1, v2}, Lcom/android/wm/shell/compatui/CompatUILayout;->setViewVisibility(IZ)V

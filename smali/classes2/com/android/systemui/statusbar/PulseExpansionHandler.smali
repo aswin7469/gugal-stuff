@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/PulseExpansionHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Gefingerpoken;
@@ -93,7 +93,7 @@
     move-result-object p2
 
     .line 27
-    const p3, 0x7f07033f    # @dimen/keyguard_drag_down_min_distance '100.0dp'
+    const p3, 0x7f07037b    # @dimen/keyguard_drag_down_min_distance '100.0dp'
 
     .line 28
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -274,6 +274,7 @@
 
     .line 30
     return-void
+    .line 33
 .end method
 
 .method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V

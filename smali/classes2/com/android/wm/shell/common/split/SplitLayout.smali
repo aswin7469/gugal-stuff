@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/split/SplitLayout;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/DisplayInsetsController$OnInsetsChangedListener;
@@ -288,7 +288,7 @@
     move-result-object p1
 
     .line 148
-    const p3, 0x7f05000d    # @bool/config_dimNonImeAttachedSide 'true'
+    const p3, 0x7f050013    # @bool/config_dimNonImeAttachedSide 'true'
 
     .line 149
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -306,7 +306,7 @@
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 160
-    const p3, 0x11101bf    # @android:bool/config_localDisplaysMirrorContent
+    const p3, 0x11101be    # @android:bool/config_lidControlsSleep
 
     .line 163
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -468,10 +468,10 @@
     iget-object p1, p0, Lcom/android/wm/shell/common/split/SplitLayout;->mDividerFlingAnimator:Landroid/animation/ValueAnimator;
 
     .line 46
-    new-instance p2, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda0;
+    new-instance p2, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda1;
 
     .line 48
-    invoke-direct {p2, p0}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/common/split/SplitLayout;)V
+    invoke-direct {p2, p0}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/common/split/SplitLayout;)V
 
     .line 50
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
@@ -515,10 +515,10 @@
     iget v1, p0, Lcom/android/wm/shell/common/split/SplitLayout;->mDividerPosition:I
 
     .line 8
-    new-instance v2, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda6;
+    new-instance v2, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda0;
 
     .line 10
-    invoke-direct {v2, p0, v0, p1}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda6;-><init>(Lcom/android/wm/shell/common/split/SplitLayout;ILcom/android/wm/shell/splitscreen/StageCoordinator$$ExternalSyntheticLambda4;)V
+    invoke-direct {v2, p0, v0, p1}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/common/split/SplitLayout;ILcom/android/wm/shell/splitscreen/StageCoordinator$$ExternalSyntheticLambda4;)V
 
     .line 12
     const/16 p1, 0x1c2
@@ -564,10 +564,10 @@
     iget v1, p0, Lcom/android/wm/shell/common/split/SplitLayout;->mDividerPosition:I
 
     .line 17
-    new-instance v2, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda5;
+    new-instance v2, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda6;
 
     .line 19
-    invoke-direct {v2, p0, p2, p1}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda5;-><init>(Lcom/android/wm/shell/common/split/SplitLayout;ZI)V
+    invoke-direct {v2, p0, p2, p1}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda6;-><init>(Lcom/android/wm/shell/common/split/SplitLayout;ZI)V
 
     .line 21
     const/16 p1, 0x1c2
@@ -1292,7 +1292,7 @@
     move-result-object v11
 
     .line 57
-    new-instance v12, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda4;
+    new-instance v12, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda5;
 
     .line 58
     move-object v0, v12
@@ -1313,7 +1313,7 @@
     move-object v10, p1
 
     .line 67
-    invoke-direct/range {v0 .. v10}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda4;-><init>(Lcom/android/wm/shell/common/split/SplitLayout;Landroid/view/SurfaceControl;Landroid/graphics/Rect;FFFFFFLandroid/view/SurfaceControl$Transaction;)V
+    invoke-direct/range {v0 .. v10}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda5;-><init>(Lcom/android/wm/shell/common/split/SplitLayout;Landroid/view/SurfaceControl;Landroid/graphics/Rect;FFFFFFLandroid/view/SurfaceControl$Transaction;)V
 
     .line 68
     invoke-virtual {v11, v12}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
@@ -1925,10 +1925,10 @@
     if-eq v0, v1, :cond_0
 
     .line 14
-    new-instance v0, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda3;
+    new-instance v0, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda4;
 
     .line 16
-    invoke-direct {v0, p0, p2}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda3;-><init>(Lcom/android/wm/shell/common/split/SplitLayout;Lcom/android/wm/shell/common/split/DividerSnapAlgorithm$SnapTarget;)V
+    invoke-direct {v0, p0, p2}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda4;-><init>(Lcom/android/wm/shell/common/split/SplitLayout;Lcom/android/wm/shell/common/split/DividerSnapAlgorithm$SnapTarget;)V
 
     .line 18
     invoke-virtual {p0, p1, v3, v2, v0}, Lcom/android/wm/shell/common/split/SplitLayout;->flingDividerPosition(IIILjava/lang/Runnable;)V
@@ -1938,13 +1938,13 @@
 
     .line 24
     :cond_0
-    new-instance p2, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda1;
+    new-instance p2, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda2;
 
     .line 25
     const/4 v0, 0x1
 
     .line 27
-    invoke-direct {p2, v0, p0}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda1;-><init>(ILcom/android/wm/shell/common/split/SplitLayout;)V
+    invoke-direct {p2, v0, p0}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda2;-><init>(ILcom/android/wm/shell/common/split/SplitLayout;)V
 
     .line 28
     invoke-virtual {p0, p1, v3, v2, p2}, Lcom/android/wm/shell/common/split/SplitLayout;->flingDividerPosition(IIILjava/lang/Runnable;)V
@@ -1954,13 +1954,13 @@
 
     .line 34
     :cond_1
-    new-instance p2, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda1;
+    new-instance p2, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda2;
 
     .line 35
     const/4 v0, 0x0
 
     .line 37
-    invoke-direct {p2, v0, p0}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda1;-><init>(ILcom/android/wm/shell/common/split/SplitLayout;)V
+    invoke-direct {p2, v0, p0}, Lcom/android/wm/shell/common/split/SplitLayout$$ExternalSyntheticLambda2;-><init>(ILcom/android/wm/shell/common/split/SplitLayout;)V
 
     .line 38
     invoke-virtual {p0, p1, v3, v2, p2}, Lcom/android/wm/shell/common/split/SplitLayout;->flingDividerPosition(IIILjava/lang/Runnable;)V
@@ -1968,6 +1968,7 @@
     .line 41
     :goto_0
     return-void
+    .line 44
 .end method
 
 .method public final splitSwitching(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/view/SurfaceControl;Lcom/android/wm/shell/splitscreen/StageCoordinator$$ExternalSyntheticLambda10;)V
@@ -3505,7 +3506,7 @@
     iput p1, p0, Lcom/android/wm/shell/common/split/SplitLayout;->mDividerInsets:I
 
     .line 81
-    const p1, 0x7f0709a1    # @dimen/split_divider_bar_width '10.0dp'
+    const p1, 0x7f0709f9    # @dimen/split_divider_bar_width '10.0dp'
 
     .line 83
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

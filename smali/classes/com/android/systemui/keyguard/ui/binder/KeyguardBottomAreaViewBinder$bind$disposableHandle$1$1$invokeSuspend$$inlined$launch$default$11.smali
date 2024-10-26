@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$bind$disposableHandle$1$1$invokeSuspend$$inlined$launch$default$11;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -284,7 +284,7 @@
     iget-object v8, v7, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;->settingsMenuViewModel:Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSettingsMenuViewModel;
 
     .line 95
-    iget-object v8, v8, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSettingsMenuViewModel;->shouldOpenSettings:Lkotlinx/coroutines/flow/StateFlow;
+    iget-object v8, v8, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSettingsMenuViewModel;->shouldOpenSettings:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 97
     new-instance v9, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$bind$disposableHandle$1$1$10$1;
@@ -323,108 +323,111 @@
     invoke-direct {p1, v9}, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$bind$disposableHandle$1$1$invokeSuspend$lambda$13$$inlined$filter$1$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;)V
 
     .line 120
-    invoke-interface {v8, p1, p0}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v3, v8, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
     .line 123
+    invoke-interface {v3, p1, p0}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 125
     move-result-object p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 126
+    .line 128
     if-ne p0, v0, :cond_7
 
-    .line 127
+    .line 129
     goto :goto_2
 
-    .line 129
+    .line 131
     :cond_7
     move-object p0, v2
 
-    .line 130
+    .line 132
     :goto_2
     if-ne p0, v0, :cond_8
 
-    .line 131
+    .line 133
     return-object v0
 
-    .line 133
+    .line 135
     :cond_8
     move-object p0, v1
 
-    .line 134
+    .line 136
     move v1, v5
 
-    .line 135
+    .line 137
     move v0, v6
 
-    .line 136
+    .line 138
     :goto_3
     if-eqz v1, :cond_9
 
-    .line 137
+    .line 139
     invoke-static {v0, v4}, Lcom/android/app/tracing/TraceProxy_platformKt;->asyncTraceForTrackEnd(ILjava/lang/String;)V
 
-    .line 139
+    .line 141
     :cond_9
     if-eqz p0, :cond_a
 
-    .line 142
+    .line 144
     invoke-virtual {p0}, Lcom/android/app/tracing/coroutines/TraceData;->endSpan()V
 
-    .line 144
+    .line 146
     :cond_a
     return-object v2
 
-    .line 147
+    .line 149
     :goto_4
     move-object p1, p0
 
-    .line 148
+    .line 150
     goto :goto_5
 
-    .line 149
+    .line 151
     :catchall_1
     move-exception p0
 
-    .line 150
+    .line 152
     goto :goto_4
 
-    .line 151
+    .line 153
     :goto_5
     move-object p0, v1
 
-    .line 152
+    .line 154
     move v1, v5
 
-    .line 153
+    .line 155
     move v0, v6
 
-    .line 154
+    .line 156
     goto :goto_6
 
-    .line 155
+    .line 157
     :catchall_2
     move-exception p1
 
-    .line 156
+    .line 158
     goto :goto_5
 
-    .line 157
+    .line 159
     :goto_6
     if-eqz v1, :cond_b
 
-    .line 158
+    .line 160
     invoke-static {v0, v4}, Lcom/android/app/tracing/TraceProxy_platformKt;->asyncTraceForTrackEnd(ILjava/lang/String;)V
 
-    .line 160
+    .line 162
     :cond_b
     if-eqz p0, :cond_c
 
-    .line 163
+    .line 165
     invoke-virtual {p0}, Lcom/android/app/tracing/coroutines/TraceData;->endSpan()V
 
-    .line 165
+    .line 167
     :cond_c
     throw p1
-    .line 168
+    .line 170
 .end method

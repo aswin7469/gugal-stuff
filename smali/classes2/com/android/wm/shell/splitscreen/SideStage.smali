@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/splitscreen/SideStage;
 .super Lcom/android/wm/shell/splitscreen/StageTaskListener;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # virtual methods
@@ -8,7 +8,7 @@
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
 
     .line 2
     const/4 v1, 0x0
@@ -62,7 +62,7 @@
     const-wide v3, 0x5682e0cf88d63c75L    # 5.542022304927444E108
 
     .line 34
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 39
     :cond_0

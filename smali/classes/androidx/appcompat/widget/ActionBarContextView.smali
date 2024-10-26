@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/ActionBarContextView;
 .super Landroid/view/ViewGroup;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -194,7 +194,7 @@
 
     const/4 p1, 0x2
 
-    const p3, 0x7f0e0005    # @layout/abc_action_mode_close_item_material 'res/layout/abc_action_mode_close_item_material.xml'
+    const p3, 0x7f0d0005    # @layout/abc_action_mode_close_item_material 'res/layout/abc_action_mode_close_item_material.xml'
 
     .line 22
     invoke-virtual {p2, p1, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -441,7 +441,7 @@
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mClose:Landroid/view/View;
 
     .line 38
-    const v2, 0x7f0b0070    # @id/action_mode_close_button
+    const v2, 0x7f0a0070    # @id/action_mode_close_button
 
     .line 40
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -650,7 +650,7 @@
     move-result-object v0
 
     .line 13
-    const/high16 v1, 0x7f0e0000    # @layout/abc_action_bar_title_item 'res/layout/abc_action_bar_title_item.xml'
+    const/high16 v1, 0x7f0d0000    # @layout/abc_action_bar_title_item 'res/layout/abc_action_bar_title_item.xml'
 
     .line 14
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -677,7 +677,7 @@
     iput-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
     .line 31
-    const v1, 0x7f0b0062    # @id/action_bar_title
+    const v1, 0x7f0a0062    # @id/action_bar_title
 
     .line 33
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -695,7 +695,7 @@
     iget-object v0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
     .line 44
-    const v1, 0x7f0b0061    # @id/action_bar_subtitle
+    const v1, 0x7f0a0061    # @id/action_bar_subtitle
 
     .line 46
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2076,7 +2076,7 @@
     .line 18
 .end method
 
-.method public final setupAnimatorToVisibility(IJ)Landroidx/core/view/ViewPropertyAnimatorCompat;
+.method public final setupAnimatorToVisibility(JI)Landroidx/core/view/ViewPropertyAnimatorCompat;
     .locals 2
 
     .line 1
@@ -2093,7 +2093,7 @@
     const/4 v0, 0x0
 
     .line 9
-    if-nez p1, :cond_2
+    if-nez p3, :cond_2
 
     .line 10
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getVisibility()I
@@ -2121,19 +2121,19 @@
     invoke-virtual {v0, v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->alpha(F)V
 
     .line 27
-    invoke-virtual {v0, p2, p3}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setDuration(J)V
+    invoke-virtual {v0, p1, p2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setDuration(J)V
 
     .line 30
     iget-object p0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mVisAnimListener:Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;
 
     .line 33
-    iget-object p2, p0, Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object p1, p0, Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ActionBarContextView;
 
     .line 35
-    iput-object v0, p2, Landroidx/appcompat/widget/ActionBarContextView;->mVisibilityAnim:Landroidx/core/view/ViewPropertyAnimatorCompat;
+    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarContextView;->mVisibilityAnim:Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     .line 37
-    iput p1, p0, Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;->mFinalVisibility:I
+    iput p3, p0, Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;->mFinalVisibility:I
 
     .line 39
     invoke-virtual {v0, p0}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setListener(Landroidx/core/view/ViewPropertyAnimatorListener;)V
@@ -2152,19 +2152,19 @@
     invoke-virtual {v1, v0}, Landroidx/core/view/ViewPropertyAnimatorCompat;->alpha(F)V
 
     .line 49
-    invoke-virtual {v1, p2, p3}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setDuration(J)V
+    invoke-virtual {v1, p1, p2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setDuration(J)V
 
     .line 52
     iget-object p0, p0, Landroidx/appcompat/widget/ActionBarContextView;->mVisAnimListener:Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;
 
     .line 55
-    iget-object p2, p0, Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object p1, p0, Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ActionBarContextView;
 
     .line 57
-    iput-object v1, p2, Landroidx/appcompat/widget/ActionBarContextView;->mVisibilityAnim:Landroidx/core/view/ViewPropertyAnimatorCompat;
+    iput-object v1, p1, Landroidx/appcompat/widget/ActionBarContextView;->mVisibilityAnim:Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     .line 59
-    iput p1, p0, Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;->mFinalVisibility:I
+    iput p3, p0, Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;->mFinalVisibility:I
 
     .line 61
     invoke-virtual {v1, p0}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setListener(Landroidx/core/view/ViewPropertyAnimatorListener;)V

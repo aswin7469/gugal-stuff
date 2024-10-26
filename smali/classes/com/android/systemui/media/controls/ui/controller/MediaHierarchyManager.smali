@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -380,7 +380,7 @@
     move-result-object v4
 
     .line 186
-    const v5, 0x7f07048d    # @dimen/lockscreen_shade_media_transition_distance '120.0dp'
+    const v5, 0x7f0704c9    # @dimen/lockscreen_shade_media_transition_distance '120.0dp'
 
     .line 187
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1227,290 +1227,287 @@
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 50
-    invoke-static {}, Lcom/android/systemui/media/controls/util/MediaFlags;->isSceneContainerEnabled()V
-
-    .line 53
     iget-boolean v5, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->dreamOverlayActive:Z
 
-    .line 56
+    .line 53
     const/4 v6, 0x2
+
+    .line 55
+    if-eqz v5, :cond_4
+
+    .line 56
+    iget-boolean v5, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->dreamMediaComplicationActive:Z
 
     .line 58
     if-eqz v5, :cond_4
 
-    .line 59
-    iget-boolean v5, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->dreamMediaComplicationActive:Z
-
-    .line 61
-    if-eqz v5, :cond_4
-
-    .line 63
+    .line 60
     const/4 v0, 0x3
 
-    .line 65
+    .line 62
     goto :goto_6
 
-    .line 66
+    .line 63
     :cond_4
     const/4 v5, 0x4
 
-    .line 67
+    .line 64
     if-eqz v3, :cond_5
 
-    .line 68
+    .line 65
     :goto_3
     move v0, v5
 
-    .line 70
+    .line 67
     goto :goto_6
 
-    .line 71
+    .line 68
     :cond_5
     iget v3, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->qsExpansion:F
 
-    .line 72
+    .line 69
     cmpl-float v4, v3, v4
 
-    .line 74
+    .line 71
     if-gtz v4, :cond_6
 
-    .line 76
+    .line 73
     iget-boolean v4, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->inSplitShade:Z
 
-    .line 78
+    .line 75
     if-eqz v4, :cond_7
 
-    .line 80
+    .line 77
     :cond_6
     if-nez v0, :cond_7
 
-    .line 82
+    .line 79
     :goto_4
     move v0, v2
 
-    .line 84
+    .line 81
     goto :goto_6
 
-    .line 85
+    .line 82
     :cond_7
     const v4, 0x3ecccccd    # 0.4f
 
-    .line 86
+    .line 83
     cmpl-float v3, v3, v4
 
-    .line 89
+    .line 86
     if-lez v3, :cond_8
 
-    .line 91
+    .line 88
     if-eqz v0, :cond_8
 
-    .line 93
+    .line 90
     goto :goto_4
 
-    .line 95
+    .line 92
     :cond_8
     if-eqz v0, :cond_9
 
-    .line 96
+    .line 93
     iget-boolean v3, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->inSplitShade:Z
 
-    .line 98
+    .line 95
     if-eqz v3, :cond_9
 
-    .line 100
+    .line 97
     invoke-virtual {p0}, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->isTransitioningToFullShade()Z
 
-    .line 102
+    .line 99
     move-result v3
 
-    .line 105
+    .line 102
     if-eqz v3, :cond_9
 
-    .line 106
+    .line 103
     goto :goto_4
 
-    .line 108
+    .line 105
     :cond_9
     if-eqz v0, :cond_d
 
-    .line 109
+    .line 106
     invoke-virtual {p0}, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->isTransitioningToFullShade()Z
 
-    .line 111
+    .line 108
     move-result v3
 
-    .line 114
+    .line 111
     if-nez v3, :cond_a
 
-    .line 115
+    .line 112
     goto :goto_5
 
-    .line 117
+    .line 114
     :cond_a
     iget-boolean v3, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->inSplitShade:Z
 
-    .line 118
+    .line 115
     if-eqz v3, :cond_b
 
-    .line 120
+    .line 117
     goto :goto_5
 
-    .line 122
+    .line 119
     :cond_b
     iget v3, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->fullShadeTransitionProgress:F
 
-    .line 123
+    .line 120
     const/high16 v4, 0x3f000000    # 0.5f
 
-    .line 125
+    .line 122
     cmpl-float v3, v3, v4
 
-    .line 127
+    .line 124
     if-lez v3, :cond_d
 
-    .line 129
+    .line 126
     :cond_c
     move v0, v1
 
-    .line 131
+    .line 128
     goto :goto_6
 
-    .line 132
+    .line 129
     :cond_d
     :goto_5
     iget-boolean v3, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->isCommunalShowing:Z
 
-    .line 133
+    .line 130
     if-eqz v3, :cond_e
 
-    .line 135
+    .line 132
     goto :goto_3
 
-    .line 137
+    .line 134
     :cond_e
     if-eqz v0, :cond_c
 
-    .line 138
+    .line 135
     iget-boolean v0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->allowMediaPlayerOnLockScreen:Z
 
-    .line 140
+    .line 137
     if-eqz v0, :cond_c
 
-    .line 142
+    .line 139
     move v0, v6
 
-    .line 144
+    .line 141
     :goto_6
     if-ne v0, v6, :cond_10
 
-    .line 145
+    .line 142
     invoke-virtual {p0, v0}, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->getHost(I)Lcom/android/systemui/media/controls/ui/view/MediaHost;
 
-    .line 147
+    .line 144
     move-result-object v3
 
-    .line 150
+    .line 147
     if-eqz v3, :cond_f
 
-    .line 151
+    .line 148
     iget-object v3, v3, Lcom/android/systemui/media/controls/ui/view/MediaHost;->state:Lcom/android/systemui/media/controls/ui/view/MediaHost$MediaHostStateHolder;
 
-    .line 153
+    .line 150
     iget-boolean v3, v3, Lcom/android/systemui/media/controls/ui/view/MediaHost$MediaHostStateHolder;->visible:Z
 
-    .line 155
+    .line 152
     if-ne v3, v1, :cond_f
 
-    .line 157
+    .line 154
     goto :goto_7
 
-    .line 159
+    .line 156
     :cond_f
     iget-object v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->statusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 160
+    .line 157
     check-cast v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 162
+    .line 159
     iget-boolean v1, v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mIsDozing:Z
 
-    .line 164
+    .line 161
     if-nez v1, :cond_10
 
-    .line 166
+    .line 163
     return v2
 
-    .line 168
+    .line 165
     :cond_10
     :goto_7
     if-ne v0, v6, :cond_11
 
-    .line 169
+    .line 166
     iget v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->desiredLocation:I
 
-    .line 171
+    .line 168
     if-nez v1, :cond_11
 
-    .line 173
+    .line 170
     iget-boolean v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->collapsingShadeFromQS:Z
 
-    .line 175
+    .line 172
     if-eqz v1, :cond_11
 
-    .line 177
+    .line 174
     return v2
 
-    .line 179
+    .line 176
     :cond_11
     if-eq v0, v6, :cond_12
 
-    .line 180
+    .line 177
     iget v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->desiredLocation:I
 
-    .line 182
+    .line 179
     if-ne v1, v6, :cond_12
 
-    .line 184
+    .line 181
     iget-boolean v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->fullyAwake:Z
 
-    .line 186
+    .line 183
     if-nez v1, :cond_12
 
-    .line 188
+    .line 185
     return v6
 
-    .line 190
+    .line 187
     :cond_12
     iget-boolean v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->isCommunalShowing:Z
 
-    .line 191
+    .line 188
     if-eqz v1, :cond_13
 
-    .line 193
+    .line 190
     return v0
 
-    .line 195
+    .line 192
     :cond_13
     iget-boolean p0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->skipQqsOnExpansion:Z
 
-    .line 196
+    .line 193
     if-eqz p0, :cond_14
 
-    .line 198
+    .line 195
     return v2
 
-    .line 200
+    .line 197
     :cond_14
     return v0
 
-    .line 201
+    .line 198
     :cond_15
     :goto_8
     iget p0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->desiredLocation:I
 
-    .line 202
+    .line 199
     return p0
-    .line 204
+    .line 201
 .end method
 
 .method public final calculateTransformationType()I
@@ -1983,7 +1980,6 @@
 
     .line 22
     return p0
-    .line 24
 .end method
 
 .method public final isCurrentlyInGuidedTransformation()Z
@@ -2361,6 +2357,7 @@
     .line 24
     :goto_1
     return v0
+    .line 25
 .end method
 
 .method public final performTransitionToNewLocation(ZZ)V
@@ -3650,419 +3647,416 @@
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 19
-    invoke-static {}, Lcom/android/systemui/media/controls/util/MediaFlags;->isSceneContainerEnabled()V
-
-    .line 22
     iget-boolean v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->isCrossFadeAnimatorRunning:Z
 
-    .line 25
+    .line 22
     if-eqz v3, :cond_3
 
-    .line 27
+    .line 24
     iget v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->animationCrossFadeProgress:F
 
-    .line 29
+    .line 26
     float-to-double v3, v3
 
-    .line 31
+    .line 28
     const-wide/high16 v5, 0x3fe0000000000000L    # 0.5
 
-    .line 32
+    .line 29
     cmpl-double v3, v3, v5
 
-    .line 34
+    .line 31
     if-gtz v3, :cond_2
 
-    .line 36
+    .line 33
     iget v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->previousLocation:I
 
-    .line 38
+    .line 35
     const/4 v4, -0x1
 
-    .line 40
+    .line 37
     if-ne v3, v4, :cond_1
 
-    .line 41
+    .line 38
     goto :goto_0
 
-    .line 43
+    .line 40
     :cond_1
     iget v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->crossFadeAnimationStartLocation:I
+
+    .line 41
+    goto :goto_1
+
+    .line 43
+    :cond_2
+    :goto_0
+    iget v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->crossFadeAnimationEndLocation:I
 
     .line 44
     goto :goto_1
 
     .line 46
-    :cond_2
-    :goto_0
-    iget v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->crossFadeAnimationEndLocation:I
-
-    .line 47
-    goto :goto_1
-
-    .line 49
     :cond_3
     iget v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->desiredLocation:I
 
-    .line 50
+    .line 47
     :goto_1
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->isCurrentlyFading()Z
 
-    .line 52
+    .line 49
     move-result v4
 
-    .line 55
+    .line 52
     const/4 v5, 0x0
 
-    .line 56
+    .line 53
     const/4 v6, 0x1
 
-    .line 57
+    .line 54
     if-nez v4, :cond_4
 
-    .line 58
+    .line 55
     iget-object v4, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->mediaManager:Lcom/android/systemui/media/controls/domain/pipeline/MediaDataManager;
 
-    .line 60
+    .line 57
     invoke-interface {v4}, Lcom/android/systemui/media/controls/domain/pipeline/MediaDataManager;->hasActiveMediaOrRecommendation()Z
 
-    .line 62
+    .line 59
     move-result v4
 
-    .line 65
+    .line 62
     if-eqz v4, :cond_4
 
-    .line 66
+    .line 63
     move v4, v6
 
-    .line 68
+    .line 65
     goto :goto_2
 
-    .line 69
+    .line 66
     :cond_4
     move v4, v5
 
-    .line 70
+    .line 67
     :goto_2
     iget-boolean v7, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->isCrossFadeAnimatorRunning:Z
 
-    .line 71
+    .line 68
     const/4 v8, 0x0
 
-    .line 73
+    .line 70
     if-eqz v7, :cond_6
 
-    .line 74
+    .line 71
     invoke-virtual {v0, v3}, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->getHost(I)Lcom/android/systemui/media/controls/ui/view/MediaHost;
+
+    .line 73
+    move-result-object v7
 
     .line 76
-    move-result-object v7
-
-    .line 79
     if-eqz v7, :cond_6
 
-    .line 80
+    .line 77
     iget-object v7, v7, Lcom/android/systemui/media/controls/ui/view/MediaHost;->state:Lcom/android/systemui/media/controls/ui/view/MediaHost$MediaHostStateHolder;
 
-    .line 82
+    .line 79
     iget-boolean v7, v7, Lcom/android/systemui/media/controls/ui/view/MediaHost$MediaHostStateHolder;->visible:Z
 
-    .line 84
+    .line 81
     if-ne v7, v6, :cond_6
 
-    .line 86
+    .line 83
     invoke-virtual {v0, v3}, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->getHost(I)Lcom/android/systemui/media/controls/ui/view/MediaHost;
 
-    .line 88
+    .line 85
     move-result-object v7
 
-    .line 91
+    .line 88
     if-eqz v7, :cond_6
 
-    .line 92
+    .line 89
     iget-object v7, v7, Lcom/android/systemui/media/controls/ui/view/MediaHost;->hostView:Lcom/android/systemui/util/animation/UniqueObjectHostView;
 
-    .line 94
+    .line 91
     if-eqz v7, :cond_5
 
-    .line 96
+    .line 93
     goto :goto_3
 
-    .line 98
+    .line 95
     :cond_5
     move-object v7, v8
 
-    .line 99
+    .line 96
     :goto_3
     if-eqz v7, :cond_6
 
-    .line 100
+    .line 97
     invoke-virtual {v7}, Landroid/widget/FrameLayout;->isShown()Z
 
-    .line 102
+    .line 99
     move-result v7
 
-    .line 105
+    .line 102
     if-nez v7, :cond_6
 
-    .line 106
+    .line 103
     iget v7, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->desiredLocation:I
 
-    .line 108
+    .line 105
     if-eq v3, v7, :cond_6
 
-    .line 110
+    .line 107
     move v4, v6
 
-    .line 112
+    .line 109
     goto :goto_4
 
-    .line 113
+    .line 110
     :catchall_0
     move-exception v0
 
-    .line 114
+    .line 111
     goto/16 :goto_7
 
-    .line 115
+    .line 112
     :cond_6
     :goto_4
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->isCurrentlyInGuidedTransformation()Z
 
-    .line 117
+    .line 114
     move-result v7
 
-    .line 120
+    .line 117
     if-eqz v7, :cond_7
 
-    .line 121
+    .line 118
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->getTransformationProgress()F
 
-    .line 123
+    .line 120
     move-result v7
 
-    .line 126
+    .line 123
     const/high16 v9, 0x3f800000    # 1.0f
 
-    .line 127
+    .line 124
     cmpg-float v7, v7, v9
 
-    .line 129
+    .line 126
     if-nez v7, :cond_8
 
-    .line 131
+    .line 128
     :cond_7
     iget-object v7, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->animator:Landroid/animation/ValueAnimator;
 
-    .line 133
+    .line 130
     invoke-virtual {v7}, Landroid/animation/ValueAnimator;->isRunning()Z
 
-    .line 135
+    .line 132
     move-result v7
 
-    .line 138
+    .line 135
     if-nez v7, :cond_8
 
-    .line 139
+    .line 136
     iget-boolean v7, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->animationPending:Z
 
-    .line 141
+    .line 138
     if-eqz v7, :cond_9
 
-    .line 143
+    .line 140
     :cond_8
     iget-object v7, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->rootOverlay:Landroid/view/ViewGroupOverlay;
 
-    .line 145
+    .line 142
     if-eqz v7, :cond_9
 
-    .line 147
+    .line 144
     if-eqz v4, :cond_9
 
-    .line 149
+    .line 146
     move v5, v6
 
-    .line 151
+    .line 148
     :cond_9
     if-eqz v5, :cond_a
 
-    .line 152
+    .line 149
     const/16 v3, -0x3e8
 
-    .line 154
+    .line 151
     :cond_a
     move v10, v3
 
-    .line 156
+    .line 153
     iget v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->currentAttachmentLocation:I
 
-    .line 157
+    .line 154
     if-eq v3, v10, :cond_e
 
-    .line 159
+    .line 156
     iput v10, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->currentAttachmentLocation:I
 
-    .line 161
+    .line 158
     iget-object v3, v1, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;->mediaFrame:Landroid/view/ViewGroup;
 
-    .line 163
+    .line 160
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
-    .line 165
+    .line 162
     move-result-object v3
 
-    .line 168
+    .line 165
     check-cast v3, Landroid/view/ViewGroup;
 
-    .line 169
+    .line 166
     if-eqz v3, :cond_b
 
-    .line 171
+    .line 168
     iget-object v4, v1, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;->mediaFrame:Landroid/view/ViewGroup;
 
-    .line 173
+    .line 170
     invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 175
+    .line 172
     :cond_b
     if-eqz v5, :cond_c
 
-    .line 178
+    .line 175
     iget-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->rootOverlay:Landroid/view/ViewGroupOverlay;
 
-    .line 180
+    .line 177
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 182
+    .line 179
     iget-object v1, v1, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;->mediaFrame:Landroid/view/ViewGroup;
 
-    .line 185
+    .line 182
     invoke-virtual {v3, v1}, Landroid/view/ViewGroupOverlay;->add(Landroid/view/View;)V
 
-    .line 187
+    .line 184
     goto :goto_6
 
-    .line 190
+    .line 187
     :cond_c
     invoke-virtual {v0, v10}, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->getHost(I)Lcom/android/systemui/media/controls/ui/view/MediaHost;
 
-    .line 191
+    .line 188
     move-result-object v3
 
-    .line 194
+    .line 191
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 195
+    .line 192
     iget-object v3, v3, Lcom/android/systemui/media/controls/ui/view/MediaHost;->hostView:Lcom/android/systemui/util/animation/UniqueObjectHostView;
 
-    .line 198
+    .line 195
     if-eqz v3, :cond_d
 
-    .line 200
+    .line 197
     goto :goto_5
 
-    .line 202
+    .line 199
     :cond_d
     move-object v3, v8
 
-    .line 203
+    .line 200
     :goto_5
     iget-object v1, v1, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;->mediaFrame:Landroid/view/ViewGroup;
 
-    .line 204
+    .line 201
     invoke-virtual {v3, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 206
+    .line 203
     :goto_6
     iget-object v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->logger:Lcom/android/systemui/media/controls/ui/controller/MediaViewLogger;
 
-    .line 209
+    .line 206
     iget v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->currentAttachmentLocation:I
 
-    .line 211
+    .line 208
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 213
+    .line 210
     sget-object v4, Lcom/android/systemui/log/core/LogLevel;->DEBUG:Lcom/android/systemui/log/core/LogLevel;
 
-    .line 216
+    .line 213
     sget-object v5, Lcom/android/systemui/media/controls/ui/controller/MediaViewLogger$logMediaHostAttachment$2;->INSTANCE:Lcom/android/systemui/media/controls/ui/controller/MediaViewLogger$logMediaHostAttachment$2;
 
-    .line 218
+    .line 215
     iget-object v1, v1, Lcom/android/systemui/media/controls/ui/controller/MediaViewLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
 
-    .line 220
+    .line 217
     const-string v6, "MediaView"
 
-    .line 222
+    .line 219
     invoke-virtual {v1, v6, v4, v5, v8}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
 
-    .line 224
+    .line 221
     move-result-object v4
 
-    .line 227
+    .line 224
     move-object v5, v4
 
-    .line 228
+    .line 225
     check-cast v5, Lcom/android/systemui/log/LogMessageImpl;
 
-    .line 229
+    .line 226
     iput v3, v5, Lcom/android/systemui/log/LogMessageImpl;->int1:I
 
-    .line 231
+    .line 228
     invoke-virtual {v1, v4}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
 
-    .line 233
+    .line 230
     iget-boolean v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->isCrossFadeAnimatorRunning:Z
 
-    .line 236
+    .line 233
     if-eqz v1, :cond_e
 
-    .line 238
+    .line 235
     iget-object v9, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->mediaCarouselController:Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;
 
-    .line 240
+    .line 237
     invoke-virtual {v0, v10}, Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;->getHost(I)Lcom/android/systemui/media/controls/ui/view/MediaHost;
 
-    .line 242
+    .line 239
     move-result-object v11
 
-    .line 245
+    .line 242
     const/4 v12, 0x0
 
-    .line 246
+    .line 243
     const-wide/16 v13, 0xc8
 
-    .line 247
+    .line 244
     const-wide/16 v15, 0x0
 
-    .line 249
+    .line 246
     invoke-virtual/range {v9 .. v16}, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;->onDesiredLocationChanged(ILcom/android/systemui/media/controls/ui/view/MediaHostState;ZJJ)Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 251
+    .line 248
     :cond_e
     if-eqz v2, :cond_f
 
-    .line 254
+    .line 251
     invoke-static {}, Lcom/android/app/tracing/TraceUtilsKt;->endSlice()V
 
-    .line 256
+    .line 253
     :cond_f
     return-void
 
-    .line 259
+    .line 256
     :goto_7
     if-eqz v2, :cond_10
 
-    .line 260
+    .line 257
     invoke-static {}, Lcom/android/app/tracing/TraceUtilsKt;->endSlice()V
 
-    .line 262
+    .line 259
     :cond_10
     throw v0
-    .line 265
+    .line 262
 .end method
 
 .method public final updateTargetState()V

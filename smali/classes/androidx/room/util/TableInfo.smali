@@ -1,6 +1,6 @@
 .class public final Landroidx/room/util/TableInfo;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -126,693 +126,693 @@
     move-result v4
 
     .line 53
-    const-string v11, "type"
+    const-string/jumbo v11, "type"
 
     .line 54
     invoke-static {v2, v11}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 56
+    .line 57
     move-result v11
 
-    .line 59
+    .line 60
     const-string v12, "notnull"
 
-    .line 60
+    .line 61
     invoke-static {v2, v12}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 62
+    .line 63
     move-result v12
 
-    .line 65
+    .line 66
     const-string v13, "pk"
 
-    .line 66
+    .line 67
     invoke-static {v2, v13}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 68
+    .line 69
     move-result v13
 
-    .line 71
+    .line 72
     const-string v14, "dflt_value"
 
-    .line 72
+    .line 73
     invoke-static {v2, v14}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 74
+    .line 75
     move-result v14
 
-    .line 77
+    .line 78
     new-instance v15, Lkotlin/collections/builders/MapBuilder;
 
-    .line 78
+    .line 79
     invoke-direct {v15}, Lkotlin/collections/builders/MapBuilder;-><init>()V
 
-    .line 80
+    .line 81
     :cond_1
     invoke-interface {v2, v4}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
 
-    .line 83
+    .line 84
     move-result-object v5
 
-    .line 86
+    .line 87
     invoke-interface {v2, v11}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
 
-    .line 87
+    .line 88
     move-result-object v18
 
-    .line 90
+    .line 91
     invoke-interface {v2, v12}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
 
-    .line 91
+    .line 92
     move-result-wide v16
 
-    .line 94
+    .line 95
     cmp-long v16, v16, v8
 
-    .line 95
+    .line 96
     if-eqz v16, :cond_2
 
-    .line 97
+    .line 98
     const/16 v19, 0x1
 
-    .line 99
+    .line 100
     goto :goto_1
 
-    .line 101
+    .line 102
     :cond_2
     const/16 v19, 0x0
 
-    .line 102
+    .line 103
     :goto_1
     invoke-interface {v2, v13}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
 
-    .line 104
+    .line 105
     move-result-wide v6
 
-    .line 107
+    .line 108
     long-to-int v6, v6
 
-    .line 108
+    .line 109
     invoke-interface {v2, v14}, Landroidx/sqlite/SQLiteStatement;->isNull(I)Z
 
-    .line 109
+    .line 110
     move-result v7
 
-    .line 112
+    .line 113
     if-eqz v7, :cond_3
 
-    .line 113
+    .line 114
     const/16 v21, 0x0
 
-    .line 115
+    .line 116
     goto :goto_2
 
-    .line 117
+    .line 118
     :cond_3
     invoke-interface {v2, v14}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
 
-    .line 118
+    .line 119
     move-result-object v7
 
-    .line 121
+    .line 122
     move-object/from16 v21, v7
 
-    .line 122
+    .line 123
     :goto_2
     new-instance v7, Landroidx/room/util/TableInfo$Column;
 
-    .line 124
+    .line 125
     const/16 v22, 0x2
 
-    .line 126
+    .line 127
     move-object/from16 v16, v7
 
-    .line 128
+    .line 129
     move-object/from16 v17, v5
 
-    .line 130
+    .line 131
     move/from16 v20, v6
 
-    .line 132
+    .line 133
     invoke-direct/range {v16 .. v22}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 134
+    .line 135
     invoke-virtual {v15, v5, v7}, Lkotlin/collections/builders/MapBuilder;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 137
+    .line 138
     invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->step()Z
 
-    .line 140
+    .line 141
     move-result v5
 
-    .line 143
+    .line 144
     if-nez v5, :cond_1
 
-    .line 144
+    .line 145
     invoke-virtual {v15}, Lkotlin/collections/builders/MapBuilder;->build()Lkotlin/collections/builders/MapBuilder;
 
-    .line 146
+    .line 147
     move-result-object v4
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 149
+    .line 150
     goto :goto_0
 
-    .line 150
+    .line 151
     :goto_3
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 151
+    .line 152
     const-string v5, "PRAGMA foreign_key_list(`"
 
-    .line 153
+    .line 154
     invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 155
+    .line 156
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 158
+    .line 159
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 161
+    .line 162
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 164
+    .line 165
     move-result-object v2
-
-    .line 167
-    invoke-interface {v0, v2}, Landroidx/sqlite/SQLiteConnection;->prepare(Ljava/lang/String;)Landroidx/sqlite/SQLiteStatement;
 
     .line 168
+    invoke-interface {v0, v2}, Landroidx/sqlite/SQLiteConnection;->prepare(Ljava/lang/String;)Landroidx/sqlite/SQLiteStatement;
+
+    .line 169
     move-result-object v2
 
-    .line 171
+    .line 172
     :try_start_3
     const-string v5, "id"
 
-    .line 172
+    .line 173
     invoke-static {v2, v5}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 174
+    .line 175
     move-result v5
 
-    .line 177
+    .line 178
     const-string v6, "seq"
 
-    .line 178
+    .line 179
     invoke-static {v2, v6}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 180
+    .line 181
     move-result v6
 
-    .line 183
-    const-string v7, "table"
-
     .line 184
+    const-string/jumbo v7, "table"
+
+    .line 185
     invoke-static {v2, v7}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 186
+    .line 188
     move-result v7
 
-    .line 189
+    .line 191
     const-string v11, "on_delete"
 
-    .line 190
+    .line 192
     invoke-static {v2, v11}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 192
+    .line 194
     move-result v11
 
-    .line 195
+    .line 197
     const-string v12, "on_update"
 
-    .line 196
+    .line 198
     invoke-static {v2, v12}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 198
+    .line 200
     move-result v12
 
-    .line 201
+    .line 203
     invoke-static {v2}, Landroidx/room/util/SchemaInfoUtilKt;->readForeignKeyFieldMappings(Landroidx/sqlite/SQLiteStatement;)Ljava/util/List;
 
-    .line 202
+    .line 204
     move-result-object v13
 
-    .line 205
+    .line 207
     invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->reset()V
 
-    .line 206
+    .line 208
     new-instance v14, Lkotlin/collections/builders/SetBuilder;
 
-    .line 209
+    .line 211
     invoke-direct {v14}, Lkotlin/collections/builders/SetBuilder;-><init>()V
 
-    .line 211
+    .line 213
     :goto_4
     invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->step()Z
 
-    .line 214
+    .line 216
     move-result v15
 
-    .line 217
+    .line 219
     if-eqz v15, :cond_8
 
-    .line 218
+    .line 220
     invoke-interface {v2, v6}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
 
-    .line 220
+    .line 222
     move-result-wide v15
 
-    .line 223
+    .line 225
     cmp-long v15, v15, v8
 
-    .line 224
+    .line 226
     if-eqz v15, :cond_4
 
-    .line 226
+    .line 228
     goto :goto_4
 
-    .line 228
+    .line 230
     :cond_4
     invoke-interface {v2, v5}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
 
-    .line 229
+    .line 231
     move-result-wide v8
 
-    .line 232
+    .line 234
     long-to-int v8, v8
 
-    .line 233
+    .line 235
     new-instance v9, Ljava/util/ArrayList;
 
-    .line 234
+    .line 236
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 236
+    .line 238
     new-instance v15, Ljava/util/ArrayList;
 
-    .line 239
+    .line 241
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 241
+    .line 243
     move/from16 v18, v5
 
-    .line 244
+    .line 246
     new-instance v5, Ljava/util/ArrayList;
 
-    .line 246
+    .line 248
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 248
+    .line 250
     invoke-interface {v13}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 251
+    .line 253
     move-result-object v19
 
-    .line 254
+    .line 256
     :goto_5
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 255
+    .line 257
     move-result v20
 
-    .line 258
+    .line 260
     if-eqz v20, :cond_6
 
-    .line 259
+    .line 261
     move/from16 v20, v6
 
-    .line 261
+    .line 263
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 263
+    .line 265
     move-result-object v6
 
-    .line 266
+    .line 268
     move-object/from16 v21, v13
 
-    .line 267
+    .line 269
     move-object v13, v6
 
-    .line 269
+    .line 271
     check-cast v13, Landroidx/room/util/ForeignKeyWithSequence;
 
-    .line 270
+    .line 272
     iget v13, v13, Landroidx/room/util/ForeignKeyWithSequence;->id:I
 
-    .line 272
+    .line 274
     if-ne v13, v8, :cond_5
 
-    .line 274
+    .line 276
     invoke-interface {v5, v6}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 276
+    .line 278
     :cond_5
     move/from16 v6, v20
 
-    .line 279
+    .line 281
     move-object/from16 v13, v21
 
-    .line 281
+    .line 283
     goto :goto_5
 
-    .line 283
+    .line 285
     :catchall_1
     move-exception v0
 
-    .line 284
+    .line 286
     goto/16 :goto_c
 
-    .line 285
+    .line 287
     :cond_6
     move/from16 v20, v6
 
-    .line 287
+    .line 289
     move-object/from16 v21, v13
 
-    .line 289
+    .line 291
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 291
+    .line 293
     move-result-object v5
 
-    .line 294
+    .line 296
     :goto_6
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 295
+    .line 297
     move-result v6
 
-    .line 298
+    .line 300
     if-eqz v6, :cond_7
 
-    .line 299
+    .line 301
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 301
+    .line 303
     move-result-object v6
 
-    .line 304
+    .line 306
     check-cast v6, Landroidx/room/util/ForeignKeyWithSequence;
 
-    .line 305
+    .line 307
     iget-object v8, v6, Landroidx/room/util/ForeignKeyWithSequence;->from:Ljava/lang/String;
 
-    .line 307
+    .line 309
     invoke-interface {v9, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 309
+    .line 311
     iget-object v6, v6, Landroidx/room/util/ForeignKeyWithSequence;->to:Ljava/lang/String;
 
-    .line 312
+    .line 314
     invoke-interface {v15, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 314
+    .line 316
     goto :goto_6
 
-    .line 317
+    .line 319
     :cond_7
     new-instance v5, Landroidx/room/util/TableInfo$ForeignKey;
 
-    .line 318
+    .line 320
     invoke-interface {v2, v7}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
 
-    .line 320
+    .line 322
     move-result-object v24
 
-    .line 323
+    .line 325
     invoke-interface {v2, v11}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
 
-    .line 324
+    .line 326
     move-result-object v25
 
-    .line 327
+    .line 329
     invoke-interface {v2, v12}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
 
-    .line 328
+    .line 330
     move-result-object v26
 
-    .line 331
+    .line 333
     move-object/from16 v23, v5
 
-    .line 332
+    .line 334
     move-object/from16 v27, v9
 
-    .line 334
+    .line 336
     move-object/from16 v28, v15
 
-    .line 336
+    .line 338
     invoke-direct/range {v23 .. v28}, Landroidx/room/util/TableInfo$ForeignKey;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
 
-    .line 338
+    .line 340
     invoke-virtual {v14, v5}, Lkotlin/collections/builders/SetBuilder;->add(Ljava/lang/Object;)Z
 
-    .line 341
+    .line 343
     move/from16 v5, v18
 
-    .line 344
+    .line 346
     move/from16 v6, v20
 
-    .line 346
+    .line 348
     move-object/from16 v13, v21
 
-    .line 348
+    .line 350
     const-wide/16 v8, 0x0
 
-    .line 350
+    .line 352
     goto/16 :goto_4
 
-    .line 352
+    .line 354
     :cond_8
     invoke-virtual {v14}, Lkotlin/collections/builders/SetBuilder;->build()Lkotlin/collections/builders/SetBuilder;
 
-    .line 354
+    .line 356
     move-result-object v5
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 357
+    .line 359
     invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->close()V
 
-    .line 358
+    .line 360
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 361
+    .line 363
     const-string v6, "PRAGMA index_list(`"
 
-    .line 363
+    .line 365
     invoke-direct {v2, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 365
+    .line 367
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 368
+    .line 370
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 371
+    .line 373
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 374
+    .line 376
     move-result-object v2
 
-    .line 377
+    .line 379
     invoke-interface {v0, v2}, Landroidx/sqlite/SQLiteConnection;->prepare(Ljava/lang/String;)Landroidx/sqlite/SQLiteStatement;
 
-    .line 378
+    .line 380
     move-result-object v2
 
-    .line 381
+    .line 383
     :try_start_4
     invoke-static {v2, v10}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 382
+    .line 384
     move-result v3
 
-    .line 385
+    .line 387
     const-string v6, "origin"
 
-    .line 386
+    .line 388
     invoke-static {v2, v6}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 388
+    .line 390
     move-result v6
 
-    .line 391
+    .line 393
     const-string/jumbo v7, "unique"
 
-    .line 392
+    .line 394
     invoke-static {v2, v7}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 395
+    .line 397
     move-result v7
 
-    .line 398
+    .line 400
     const/4 v8, -0x1
 
-    .line 399
+    .line 401
     if-eq v3, v8, :cond_c
 
-    .line 400
+    .line 402
     if-eq v6, v8, :cond_c
 
-    .line 402
+    .line 404
     if-ne v7, v8, :cond_9
 
-    .line 404
+    .line 406
     goto :goto_9
 
-    .line 406
+    .line 408
     :cond_9
     new-instance v8, Lkotlin/collections/builders/SetBuilder;
 
-    .line 407
+    .line 409
     invoke-direct {v8}, Lkotlin/collections/builders/SetBuilder;-><init>()V
 
-    .line 409
+    .line 411
     :goto_7
     invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->step()Z
 
-    .line 412
+    .line 414
     move-result v9
 
-    .line 415
+    .line 417
     if-eqz v9, :cond_e
 
-    .line 416
+    .line 418
     invoke-interface {v2, v6}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
 
-    .line 418
+    .line 420
     move-result-object v9
 
-    .line 421
+    .line 423
     const-string v10, "c"
 
-    .line 422
+    .line 424
     invoke-virtual {v10, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 424
+    .line 426
     move-result v9
 
-    .line 427
+    .line 429
     if-nez v9, :cond_a
 
-    .line 428
+    .line 430
     goto :goto_7
 
-    .line 430
+    .line 432
     :cond_a
     invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
 
-    .line 431
+    .line 433
     move-result-object v9
 
-    .line 434
+    .line 436
     invoke-interface {v2, v7}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
 
-    .line 435
+    .line 437
     move-result-wide v10
 
-    .line 438
+    .line 440
     const-wide/16 v12, 0x1
 
-    .line 439
+    .line 441
     cmp-long v10, v10, v12
 
-    .line 441
+    .line 443
     if-nez v10, :cond_b
 
-    .line 443
+    .line 445
     const/4 v10, 0x1
 
-    .line 445
+    .line 447
     goto :goto_8
 
-    .line 446
+    .line 448
     :cond_b
     const/4 v10, 0x0
 
-    .line 447
+    .line 449
     :goto_8
     invoke-static {v0, v9, v10}, Landroidx/room/util/SchemaInfoUtilKt;->readIndex(Landroidx/sqlite/SQLiteConnection;Ljava/lang/String;Z)Landroidx/room/util/TableInfo$Index;
 
-    .line 448
+    .line 450
     move-result-object v9
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 451
+    .line 453
     if-nez v9, :cond_d
 
-    .line 452
+    .line 454
     :cond_c
     :goto_9
     invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->close()V
 
-    .line 454
+    .line 456
     const/4 v0, 0x0
 
-    .line 457
+    .line 459
     goto :goto_a
 
-    .line 458
+    .line 460
     :cond_d
     :try_start_5
     invoke-virtual {v8, v9}, Lkotlin/collections/builders/SetBuilder;->add(Ljava/lang/Object;)Z
 
-    .line 459
+    .line 461
     goto :goto_7
 
-    .line 462
+    .line 464
     :catchall_2
     move-exception v0
 
-    .line 463
+    .line 465
     goto :goto_b
 
-    .line 464
+    .line 466
     :cond_e
     invoke-virtual {v8}, Lkotlin/collections/builders/SetBuilder;->build()Lkotlin/collections/builders/SetBuilder;
 
-    .line 465
+    .line 467
     move-result-object v0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 468
+    .line 470
     invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->close()V
 
-    .line 469
+    .line 471
     :goto_a
     new-instance v2, Landroidx/room/util/TableInfo;
 
-    .line 472
+    .line 474
     invoke-direct {v2, v1, v4, v5, v0}, Landroidx/room/util/TableInfo;-><init>(Ljava/lang/String;Ljava/util/Map;Ljava/util/Set;Ljava/util/Set;)V
 
-    .line 474
+    .line 476
     return-object v2
 
-    .line 477
+    .line 479
     :goto_b
     invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->close()V
 
-    .line 478
+    .line 480
     throw v0
 
-    .line 481
+    .line 483
     :goto_c
     invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->close()V
 
-    .line 482
+    .line 484
     throw v0
 
-    .line 485
+    .line 487
     :goto_d
     invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->close()V
 
-    .line 486
+    .line 488
     throw v0
-    .line 489
+    .line 491
 .end method
 
 

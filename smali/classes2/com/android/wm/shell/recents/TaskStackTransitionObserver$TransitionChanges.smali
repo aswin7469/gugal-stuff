@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/recents/TaskStackTransitionObserver$TransitionChanges;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -10,38 +10,33 @@
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method public constructor <init>()V
     .locals 2
 
-    .line 4
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
+    .line 2
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5
+    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
+    .line 7
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6
-    invoke-direct {p0, v0, v1}, Lcom/android/wm/shell/recents/TaskStackTransitionObserver$TransitionChanges;-><init>(Ljava/util/List;Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
-    .locals 0
-
-    .line 1
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lcom/android/wm/shell/recents/TaskStackTransitionObserver$TransitionChanges;->taskInfoList:Ljava/util/List;
+    .line 12
+    iput-object v0, p0, Lcom/android/wm/shell/recents/TaskStackTransitionObserver$TransitionChanges;->taskInfoList:Ljava/util/List;
 
-    .line 3
-    iput-object p2, p0, Lcom/android/wm/shell/recents/TaskStackTransitionObserver$TransitionChanges;->transitionTypeList:Ljava/util/List;
+    .line 15
+    iput-object v1, p0, Lcom/android/wm/shell/recents/TaskStackTransitionObserver$TransitionChanges;->transitionTypeList:Ljava/util/List;
 
+    .line 17
     return-void
+    .line 19
 .end method
 
 
@@ -194,4 +189,5 @@
 
     .line 32
     return-object p0
+    .line 33
 .end method

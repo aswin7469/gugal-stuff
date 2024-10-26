@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/AppSwitchPreference;
 .super Landroidx/preference/SwitchPreferenceCompat;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -11,7 +11,7 @@
     invoke-direct {p0, p1, p2}, Landroidx/preference/SwitchPreferenceCompat;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 2
-    const p1, 0x7f0e01e2    # @layout/preference_app 'res/layout/preference_app.xml'
+    const p1, 0x7f0d01f0    # @layout/preference_app 'res/layout/preference_app.xml'
 
     .line 5
     iput p1, p0, Landroidx/preference/Preference;->mLayoutResId:I
@@ -30,7 +30,7 @@
     invoke-super {p0, p1}, Landroidx/preference/SwitchPreferenceCompat;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
     .line 2
-    const p0, 0x7f0b07bb    # @id/switchWidget
+    const p0, 0x7f0a07ea    # @id/switchWidget
 
     .line 5
     invoke-virtual {p1, p0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

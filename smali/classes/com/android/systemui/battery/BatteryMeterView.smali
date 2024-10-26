@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/battery/BatteryMeterView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/DarkIconDispatcher$DarkReceiver;
@@ -47,11 +47,9 @@
 
 .field public mTextColor:I
 
-.field public final mUnifiedBattery:Lcom/android/systemui/battery/unified/BatteryLayersDrawable;
+.field public final mUnifiedBatteryColors:Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;
 
-.field public mUnifiedBatteryColors:Lcom/android/systemui/battery/unified/BatteryColors;
-
-.field public mUnifiedBatteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
+.field public final mUnifiedBatteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
 
 .field public mUnknownStateDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -69,7 +67,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 12
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -94,8 +92,6 @@
     .line 6
     sget-object v4, Lcom/android/systemui/battery/unified/BatteryColors;->LIGHT_THEME_COLORS:Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;
 
-    iput-object v4, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBatteryColors:Lcom/android/systemui/battery/unified/BatteryColors;
-
     .line 7
     sget-object v4, Lcom/android/systemui/battery/unified/BatteryDrawableState;->DefaultInitialState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
 
@@ -117,7 +113,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f0603a9    # @color/meter_background_color 'res/color/meter_background_color.xml'
+    const p3, 0x7f0603b5    # @color/meter_background_color 'res/color/meter_background_color.xml'
 
     .line 12
     invoke-virtual {p1, p3}, Landroid/content/Context;->getColor(I)I
@@ -231,164 +227,28 @@
     iput-object p2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryIconView:Landroid/widget/ImageView;
 
     .line 31
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 32
-    sget-object v0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->PercentFont:Landroid/graphics/Typeface;
-
-    iget-object v11, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBatteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    const v0, 0x7f140172    # @string/battery_unified_frame_path_string 'M2.75,3C2.75,1.757 3.757,0.75 5,0.75H20C21.795,0.75 23.25,2.205 23.25,4V10C23.25,11.795 21.795,13.25 ...'
-
-    .line 33
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 34
-    invoke-static {v0}, Landroid/util/PathParser;->createPathFromPathData(Ljava/lang/String;)Landroid/graphics/Path;
-
-    move-result-object v0
-
-    const v1, 0x7f08061b    # @drawable/battery_unified_frame_bg 'res/drawable/battery_unified_frame_bg.xml'
-
-    .line 35
-    invoke-virtual {p1, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_1
-
-    const v1, 0x7f08061a    # @drawable/battery_unified_frame 'res/drawable/battery_unified_frame.xml'
-
-    .line 36
-    invoke-virtual {p1, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_0
-
-    .line 37
-    new-instance v7, Lcom/android/systemui/battery/unified/BatteryFillDrawable;
-
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
-
-    invoke-direct {v7, v0}, Lcom/android/systemui/battery/unified/BatteryFillDrawable;-><init>(Landroid/graphics/Path;)V
-
-    .line 38
-    new-instance v8, Lcom/android/systemui/battery/unified/BatteryPercentTextOnlyDrawable;
-
-    invoke-direct {v8}, Lcom/android/systemui/battery/unified/BatteryPercentTextOnlyDrawable;-><init>()V
-
-    .line 39
-    new-instance v9, Lcom/android/systemui/battery/unified/BatterySpaceSharingPercentTextDrawable;
-
-    invoke-direct {v9}, Lcom/android/systemui/battery/unified/BatterySpaceSharingPercentTextDrawable;-><init>()V
-
-    .line 40
-    new-instance v10, Lcom/android/systemui/battery/unified/BatteryAttributionDrawable;
-
-    .line 41
-    invoke-direct {v10, v3}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
-
-    const/16 v0, 0x11
-
-    .line 42
-    iput v0, v10, Lcom/android/systemui/battery/unified/BatteryAttributionDrawable;->gravity:I
-
-    .line 43
-    new-instance v0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;
-
-    move-object v4, v0
-
-    invoke-direct/range {v4 .. v11}, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lcom/android/systemui/battery/unified/BatteryFillDrawable;Lcom/android/systemui/battery/unified/BatteryPercentTextOnlyDrawable;Lcom/android/systemui/battery/unified/BatterySpaceSharingPercentTextDrawable;Lcom/android/systemui/battery/unified/BatteryAttributionDrawable;Lcom/android/systemui/battery/unified/BatteryDrawableState;)V
-
-    .line 44
-    iput-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBattery:Lcom/android/systemui/battery/unified/BatteryLayersDrawable;
-
-    .line 45
-    invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 46
-    new-instance v0, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    .line 47
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v3, 0x7f0709b8    # @dimen/status_bar_battery_unified_icon_width '20.6sp'
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
-
-    .line 48
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f0709b7    # @dimen/status_bar_battery_unified_icon_height '12.0sp'
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v3
-
-    invoke-direct {v0, v1, v3}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
-
-    .line 49
-    invoke-virtual {p0, p2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    goto :goto_0
-
-    .line 50
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Missing battery_unified_frame.xml"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 51
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Missing battery_unified_frame_bg.xml"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 52
-    :cond_2
     invoke-virtual {p2, v4}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 53
+    .line 32
     new-instance v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 54
+    .line 33
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v3, 0x7f0709b6    # @dimen/status_bar_battery_icon_width '7.8sp'
+    const v3, 0x7f070a0e    # @dimen/status_bar_battery_icon_width '7.8sp'
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    .line 55
+    .line 34
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0709b5    # @dimen/status_bar_battery_icon_height '13.0sp'
+    const v4, 0x7f070a0d    # @dimen/status_bar_battery_icon_height '13.0sp'
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -396,40 +256,39 @@
 
     invoke-direct {v0, v1, v3}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    .line 56
+    .line 35
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v3, 0x7f0700b2    # @dimen/battery_margin_bottom '0.0dp'
+    const v3, 0x7f0700b8    # @dimen/battery_margin_bottom '0.0dp'
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v1
 
-    .line 57
+    .line 36
     invoke-virtual {v0, v2, v2, v2, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    .line 58
+    .line 37
     invoke-virtual {p0, p2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 59
-    :goto_0
+    .line 38
     invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->updateShowPercent()V
 
-    .line 60
+    .line 39
     new-instance p2, Lcom/android/systemui/DualToneHandler;
 
-    .line 61
+    .line 40
     invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
-    .line 62
+    .line 41
     invoke-virtual {p2, p1}, Lcom/android/systemui/DualToneHandler;->setColorsFromContext(Landroid/content/Context;)V
 
-    .line 63
+    .line 42
     iput-object p2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDualToneHandler:Lcom/android/systemui/DualToneHandler;
 
-    .line 64
+    .line 43
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -438,10 +297,10 @@
 
     invoke-virtual {p0, p1, p3, p2}, Lcom/android/systemui/battery/BatteryMeterView;->onDarkChanged(Ljava/util/ArrayList;FI)V
 
-    .line 65
+    .line 44
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->setClipChildren(Z)V
 
-    .line 66
+    .line 45
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->setClipToPadding(Z)V
 
     return-void
@@ -461,180 +320,6 @@
 
 
 # virtual methods
-.method public final addPercentView(Landroid/widget/TextView;)V
-    .locals 4
-
-    .line 1
-    iput-object p1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    .line 2
-    iget v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mPercentageStyleId:I
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 6
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextAppearance(I)V
-
-    .line 8
-    :cond_0
-    iget-object p1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    .line 11
-    invoke-virtual {p1}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
-
-    .line 13
-    move-result-object p1
-
-    .line 16
-    const/4 v0, 0x0
-
-    .line 17
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
-
-    .line 18
-    move-result p1
-
-    .line 21
-    int-to-float p1, p1
-
-    .line 22
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    .line 23
-    const/4 v1, 0x0
-
-    .line 25
-    invoke-virtual {v0, v1, p1}, Landroid/widget/TextView;->setLineHeight(IF)V
-
-    .line 26
-    iget v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mTextColor:I
-
-    .line 29
-    if-eqz v0, :cond_1
-
-    .line 31
-    iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    .line 33
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 35
-    :cond_1
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    .line 38
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
-
-    .line 40
-    float-to-double v2, p1
-
-    .line 42
-    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
-
-    .line 43
-    move-result-wide v2
-
-    .line 46
-    double-to-int p1, v2
-
-    .line 47
-    const/4 v2, -0x2
-
-    .line 48
-    invoke-direct {v1, v2, p1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    .line 49
-    invoke-virtual {p0, v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 52
-    return-void
-    .line 55
-.end method
-
-.method public final getBatteryAttribution(Z)Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    const/4 v1, 0x0
-
-    .line 6
-    if-nez v0, :cond_0
-
-    .line 7
-    return-object v1
-
-    .line 9
-    :cond_0
-    iget-boolean v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mPowerSaveEnabled:Z
-
-    .line 10
-    if-eqz v0, :cond_1
-
-    .line 12
-    const p1, 0x7f080619    # @drawable/battery_unified_attr_powersave 'res/drawable/battery_unified_attr_powersave.xml'
-
-    .line 14
-    goto :goto_0
-
-    .line 17
-    :cond_1
-    iget-boolean v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mIsBatteryDefender:Z
-
-    .line 18
-    if-eqz v0, :cond_2
-
-    .line 20
-    iget-boolean v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDisplayShieldEnabled:Z
-
-    .line 22
-    if-eqz v0, :cond_2
-
-    .line 24
-    const p1, 0x7f080618    # @drawable/battery_unified_attr_defend 'res/drawable/battery_unified_attr_defend.xml'
-
-    .line 26
-    goto :goto_0
-
-    .line 29
-    :cond_2
-    if-eqz p1, :cond_3
-
-    .line 30
-    const p1, 0x7f080617    # @drawable/battery_unified_attr_charging 'res/drawable/battery_unified_attr_charging.xml'
-
-    .line 32
-    goto :goto_0
-
-    .line 35
-    :cond_3
-    const/4 p1, 0x0
-
-    .line 36
-    :goto_0
-    if-lez p1, :cond_4
-
-    .line 37
-    iget-object p0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
-
-    .line 39
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    .line 41
-    move-result-object v1
-
-    .line 44
-    :cond_4
-    return-object v1
-    .line 45
-.end method
-
 .method public getBatteryPercentView()Landroid/widget/TextView;
     .locals 0
 
@@ -661,106 +346,6 @@
     .line 7
     return-object p0
     .line 8
-.end method
-
-.method public final getCurrentColorProfile()Lcom/android/systemui/battery/unified/ColorProfile;
-    .locals 6
-
-    .line 1
-    iget-boolean v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mPowerSaveEnabled:Z
-
-    .line 2
-    iget-boolean v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mIsBatteryDefender:Z
-
-    .line 4
-    const/4 v2, 0x0
-
-    .line 6
-    const/4 v3, 0x1
-
-    .line 7
-    if-eqz v1, :cond_0
-
-    .line 8
-    iget-boolean v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDisplayShieldEnabled:Z
-
-    .line 10
-    if-eqz v1, :cond_0
-
-    .line 12
-    move v1, v3
-
-    .line 14
-    goto :goto_0
-
-    .line 15
-    :cond_0
-    move v1, v2
-
-    .line 16
-    :goto_0
-    iget-boolean v4, p0, Lcom/android/systemui/battery/BatteryMeterView;->mPluggedIn:Z
-
-    .line 17
-    iget p0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mLevel:I
-
-    .line 19
-    const/16 v5, 0x14
-
-    .line 21
-    if-gt p0, v5, :cond_1
-
-    .line 23
-    move v2, v3
-
-    .line 25
-    :cond_1
-    if-eqz v4, :cond_2
-
-    .line 26
-    sget-object p0, Lcom/android/systemui/battery/unified/ColorProfile;->Active:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 28
-    goto :goto_1
-
-    .line 30
-    :cond_2
-    if-eqz v0, :cond_3
-
-    .line 31
-    sget-object p0, Lcom/android/systemui/battery/unified/ColorProfile;->Warning:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 33
-    goto :goto_1
-
-    .line 35
-    :cond_3
-    if-eqz v1, :cond_4
-
-    .line 36
-    sget-object p0, Lcom/android/systemui/battery/unified/ColorProfile;->None:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 38
-    goto :goto_1
-
-    .line 40
-    :cond_4
-    if-eqz v2, :cond_5
-
-    .line 41
-    sget-object p0, Lcom/android/systemui/battery/unified/ColorProfile;->Error:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 43
-    goto :goto_1
-
-    .line 45
-    :cond_5
-    sget-object p0, Lcom/android/systemui/battery/unified/ColorProfile;->None:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 46
-    :goto_1
-    return-object p0
-    .line 48
 .end method
 
 .method public getUnifiedBatteryState()Lcom/android/systemui/battery/unified/BatteryDrawableState;
@@ -817,181 +402,131 @@
 .end method
 
 .method public final onBatteryLevelChanged(IZ)V
-    .locals 6
+    .locals 4
 
     .line 1
     invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->isCharging()Z
 
     .line 2
-    move-result v0
-
-    .line 5
     iput-boolean p2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mPluggedIn:Z
 
-    .line 6
+    .line 5
     iput p1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mLevel:I
 
-    .line 8
+    .line 7
     invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->isCharging()Z
 
-    .line 10
+    .line 9
     move-result p2
 
+    .line 12
+    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDrawable:Lcom/android/systemui/battery/AccessorizedBatteryDrawable;
+
     .line 13
-    iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDrawable:Lcom/android/systemui/battery/AccessorizedBatteryDrawable;
+    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    .line 14
-    invoke-virtual {v1}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    .line 15
+    move-result-object v0
 
-    .line 16
-    move-result-object v1
+    .line 18
+    check-cast v0, Lcom/android/settingslib/graph/ThemedBatteryDrawable;
 
     .line 19
-    check-cast v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable;
+    iput-boolean p2, v0, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->charging:Z
 
-    .line 20
-    iput-boolean p2, v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->charging:Z
+    .line 21
+    iget-object p2, v0, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->invalidateRunnable:Lkotlin/jvm/functions/Function0;
 
-    .line 22
-    iget-object v2, v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->invalidateRunnable:Lkotlin/jvm/functions/Function0;
+    .line 23
+    new-instance v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable$sam$java_lang_Runnable$0;
 
-    .line 24
-    new-instance v3, Lcom/android/settingslib/graph/ThemedBatteryDrawable$sam$java_lang_Runnable$0;
+    .line 25
+    invoke-direct {v1, p2}, Lcom/android/settingslib/graph/ThemedBatteryDrawable$sam$java_lang_Runnable$0;-><init>(Lkotlin/jvm/functions/Function0;)V
 
-    .line 26
-    invoke-direct {v3, v2}, Lcom/android/settingslib/graph/ThemedBatteryDrawable$sam$java_lang_Runnable$0;-><init>(Lkotlin/jvm/functions/Function0;)V
+    .line 27
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
 
-    .line 28
-    invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+    .line 30
+    iget-object p2, v0, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->invalidateRunnable:Lkotlin/jvm/functions/Function0;
 
-    .line 31
-    iget-object v2, v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->invalidateRunnable:Lkotlin/jvm/functions/Function0;
+    .line 33
+    new-instance v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable$sam$java_lang_Runnable$0;
 
-    .line 34
-    new-instance v3, Lcom/android/settingslib/graph/ThemedBatteryDrawable$sam$java_lang_Runnable$0;
+    .line 35
+    invoke-direct {v1, p2}, Lcom/android/settingslib/graph/ThemedBatteryDrawable$sam$java_lang_Runnable$0;-><init>(Lkotlin/jvm/functions/Function0;)V
 
-    .line 36
-    invoke-direct {v3, v2}, Lcom/android/settingslib/graph/ThemedBatteryDrawable$sam$java_lang_Runnable$0;-><init>(Lkotlin/jvm/functions/Function0;)V
+    .line 37
+    const-wide/16 v2, 0x0
 
-    .line 38
-    const-wide/16 v4, 0x0
+    .line 40
+    invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
 
-    .line 41
-    invoke-virtual {v1, v3, v4, v5}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+    .line 42
+    iget-object p2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDrawable:Lcom/android/systemui/battery/AccessorizedBatteryDrawable;
 
-    .line 43
-    iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDrawable:Lcom/android/systemui/battery/AccessorizedBatteryDrawable;
+    .line 45
+    invoke-virtual {p2}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    .line 46
-    invoke-virtual {v1}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    .line 47
+    move-result-object p2
 
-    .line 48
-    move-result-object v1
+    .line 50
+    check-cast p2, Lcom/android/settingslib/graph/ThemedBatteryDrawable;
 
     .line 51
-    check-cast v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable;
+    const/16 v0, 0x43
 
-    .line 52
-    const/16 v2, 0x43
+    .line 53
+    if-lt p1, v0, :cond_0
 
-    .line 54
-    if-lt p1, v2, :cond_0
+    .line 55
+    const/4 v0, 0x1
 
-    .line 56
-    const/4 v2, 0x1
+    .line 57
+    goto :goto_0
 
     .line 58
-    goto :goto_0
+    :cond_0
+    const/16 v0, 0x21
 
     .line 59
-    :cond_0
-    const/16 v2, 0x21
+    if-gt p1, v0, :cond_1
 
-    .line 60
-    if-gt p1, v2, :cond_1
+    .line 61
+    const/4 v0, 0x0
 
-    .line 62
-    const/4 v2, 0x0
-
-    .line 64
+    .line 63
     goto :goto_0
 
-    .line 65
+    .line 64
     :cond_1
-    iget-boolean v2, v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->invertFillIcon:Z
+    iget-boolean v0, p2, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->invertFillIcon:Z
 
-    .line 66
+    .line 65
     :goto_0
-    iput-boolean v2, v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->invertFillIcon:Z
+    iput-boolean v0, p2, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->invertFillIcon:Z
 
-    .line 68
-    iput p1, v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->batteryLevel:I
+    .line 67
+    iput p1, p2, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->batteryLevel:I
 
-    .line 70
-    invoke-virtual {v1, p1}, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->batteryColorForLevel(I)I
+    .line 69
+    invoke-virtual {p2, p1}, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->batteryColorForLevel(I)I
 
-    .line 72
-    move-result v2
+    .line 71
+    move-result p1
+
+    .line 74
+    iput p1, p2, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->levelColor:I
 
     .line 75
-    iput v2, v1, Lcom/android/settingslib/graph/ThemedBatteryDrawable;->levelColor:I
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    .line 76
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    .line 78
+    .line 77
     invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->updatePercentText()V
 
-    .line 81
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 84
-    move-result v1
-
-    .line 87
-    if-eqz v1, :cond_3
-
-    .line 88
-    iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBatteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 90
-    iget-object v1, v1, Lcom/android/systemui/battery/unified/BatteryDrawableState;->attribution:Landroid/graphics/drawable/Drawable;
-
-    .line 92
-    if-eq p2, v0, :cond_2
-
-    .line 94
-    invoke-virtual {p0, p2}, Lcom/android/systemui/battery/BatteryMeterView;->getBatteryAttribution(Z)Landroid/graphics/drawable/Drawable;
-
-    .line 96
-    move-result-object v1
-
-    .line 99
-    :cond_2
-    new-instance p2, Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 100
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBatteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 102
-    iget-boolean v0, v0, Lcom/android/systemui/battery/unified/BatteryDrawableState;->showPercent:Z
-
-    .line 104
-    invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->getCurrentColorProfile()Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 106
-    move-result-object v2
-
-    .line 109
-    invoke-direct {p2, p1, v0, v2, v1}, Lcom/android/systemui/battery/unified/BatteryDrawableState;-><init>(IZLcom/android/systemui/battery/unified/ColorProfile;Landroid/graphics/drawable/Drawable;)V
-
-    .line 110
-    invoke-virtual {p0, p2}, Lcom/android/systemui/battery/BatteryMeterView;->setBatteryDrawableState(Lcom/android/systemui/battery/unified/BatteryDrawableState;)V
-
-    .line 113
-    :cond_3
+    .line 80
     return-void
-    .line 116
+    .line 83
 .end method
 
 .method public final onBatteryUnknownStateChanged(Z)V
@@ -1032,7 +567,7 @@
     iget-object v0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     .line 22
-    const v1, 0x7f0806e6    # @drawable/ic_battery_unknown 'res/drawable/ic_battery_unknown.xml'
+    const v1, 0x7f0806fb    # @drawable/ic_battery_unknown 'res/drawable/ic_battery_unknown.xml'
 
     .line 24
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1146,954 +681,387 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 7
-    move-result p3
-
-    .line 10
-    if-nez p3, :cond_8
-
-    .line 11
     invoke-static {p1, p0}, Lcom/android/systemui/plugins/DarkIconDispatcher;->isInAreas(Ljava/util/Collection;Landroid/view/View;)Z
 
-    .line 13
+    .line 7
     move-result p1
 
-    .line 16
+    .line 10
     if-eqz p1, :cond_1
 
-    .line 17
+    .line 11
     goto :goto_0
 
-    .line 19
+    .line 13
     :cond_1
     const/4 p2, 0x0
 
-    .line 20
+    .line 14
     :goto_0
     iget-object p1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDualToneHandler:Lcom/android/systemui/DualToneHandler;
 
-    .line 21
+    .line 15
     iget-object p3, p1, Lcom/android/systemui/DualToneHandler;->lightColor:Lcom/android/systemui/DualToneHandler$Color;
 
-    .line 23
+    .line 17
     const/4 v0, 0x0
 
-    .line 25
+    .line 19
     if-nez p3, :cond_2
 
-    .line 26
+    .line 20
     move-object p3, v0
 
-    .line 28
+    .line 22
     :cond_2
     iget p3, p3, Lcom/android/systemui/DualToneHandler$Color;->single:I
 
-    .line 29
+    .line 23
     iget-object p1, p1, Lcom/android/systemui/DualToneHandler;->darkColor:Lcom/android/systemui/DualToneHandler$Color;
 
-    .line 31
+    .line 25
     if-nez p1, :cond_3
 
-    .line 33
+    .line 27
     move-object p1, v0
 
-    .line 35
+    .line 29
     :cond_3
     iget p1, p1, Lcom/android/systemui/DualToneHandler$Color;->single:I
 
-    .line 36
+    .line 30
     invoke-static {p3, p2, p1}, Lcom/android/systemui/DualToneHandler;->getColorForDarkIntensity(IFI)I
 
-    .line 38
+    .line 32
     move-result p1
 
-    .line 41
+    .line 35
     iget-object p3, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDualToneHandler:Lcom/android/systemui/DualToneHandler;
 
-    .line 42
+    .line 36
     iget-object v1, p3, Lcom/android/systemui/DualToneHandler;->lightColor:Lcom/android/systemui/DualToneHandler$Color;
 
-    .line 44
+    .line 38
     if-nez v1, :cond_4
 
-    .line 46
+    .line 40
     move-object v1, v0
 
-    .line 48
+    .line 42
     :cond_4
     iget v1, v1, Lcom/android/systemui/DualToneHandler$Color;->fill:I
 
-    .line 49
+    .line 43
     iget-object p3, p3, Lcom/android/systemui/DualToneHandler;->darkColor:Lcom/android/systemui/DualToneHandler$Color;
 
-    .line 51
+    .line 45
     if-nez p3, :cond_5
 
-    .line 53
+    .line 47
     move-object p3, v0
 
-    .line 55
+    .line 49
     :cond_5
     iget p3, p3, Lcom/android/systemui/DualToneHandler$Color;->fill:I
 
-    .line 56
+    .line 50
     invoke-static {v1, p2, p3}, Lcom/android/systemui/DualToneHandler;->getColorForDarkIntensity(IFI)I
 
-    .line 58
+    .line 52
     move-result p3
 
-    .line 61
+    .line 55
     iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDualToneHandler:Lcom/android/systemui/DualToneHandler;
 
-    .line 62
+    .line 56
     iget-object v2, v1, Lcom/android/systemui/DualToneHandler;->lightColor:Lcom/android/systemui/DualToneHandler$Color;
 
-    .line 64
+    .line 58
     if-nez v2, :cond_6
 
-    .line 66
+    .line 60
     move-object v2, v0
 
-    .line 68
+    .line 62
     :cond_6
     iget v2, v2, Lcom/android/systemui/DualToneHandler$Color;->background:I
 
-    .line 69
+    .line 63
     iget-object v1, v1, Lcom/android/systemui/DualToneHandler;->darkColor:Lcom/android/systemui/DualToneHandler$Color;
 
-    .line 71
+    .line 65
     if-nez v1, :cond_7
 
-    .line 73
+    .line 67
     goto :goto_1
 
-    .line 75
+    .line 69
     :cond_7
     move-object v0, v1
 
-    .line 76
+    .line 70
     :goto_1
     iget v0, v0, Lcom/android/systemui/DualToneHandler$Color;->background:I
 
-    .line 77
+    .line 71
     invoke-static {v2, p2, v0}, Lcom/android/systemui/DualToneHandler;->getColorForDarkIntensity(IFI)I
 
-    .line 79
+    .line 73
     move-result p2
 
-    .line 82
+    .line 76
     invoke-virtual {p0, p3, p2, p1}, Lcom/android/systemui/battery/BatteryMeterView;->updateColors(III)V
 
-    .line 83
+    .line 77
     return-void
-
-    .line 86
-    :cond_8
-    iget-object p3, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBattery:Lcom/android/systemui/battery/unified/BatteryLayersDrawable;
-
-    .line 87
-    if-nez p3, :cond_9
-
-    .line 89
-    return-void
-
-    .line 91
-    :cond_9
-    invoke-static {p1, p0}, Lcom/android/systemui/plugins/DarkIconDispatcher;->isInAreas(Ljava/util/Collection;Landroid/view/View;)Z
-
-    .line 92
-    move-result p1
-
-    .line 95
-    if-eqz p1, :cond_b
-
-    .line 96
-    float-to-double p1, p2
-
-    .line 98
-    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
-
-    .line 99
-    cmpg-double p1, p1, v0
-
-    .line 101
-    if-gez p1, :cond_a
-
-    .line 103
-    sget-object p1, Lcom/android/systemui/battery/unified/BatteryColors;->DARK_THEME_COLORS:Lcom/android/systemui/battery/unified/BatteryColors$DarkThemeColors;
-
-    .line 105
-    iput-object p1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBatteryColors:Lcom/android/systemui/battery/unified/BatteryColors;
-
-    .line 107
-    goto :goto_2
-
-    .line 109
-    :cond_a
-    sget-object p1, Lcom/android/systemui/battery/unified/BatteryColors;->LIGHT_THEME_COLORS:Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;
-
-    .line 110
-    iput-object p1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBatteryColors:Lcom/android/systemui/battery/unified/BatteryColors;
-
-    .line 112
-    :goto_2
-    iget-object p1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBattery:Lcom/android/systemui/battery/unified/BatteryLayersDrawable;
-
-    .line 114
-    iget-object p0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBatteryColors:Lcom/android/systemui/battery/unified/BatteryColors;
-
-    .line 116
-    iput-object p0, p1, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->colors:Lcom/android/systemui/battery/unified/BatteryColors;
-
-    .line 118
-    iget-object p2, p1, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->batteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 120
-    invoke-virtual {p2}, Lcom/android/systemui/battery/unified/BatteryDrawableState;->hasForegroundContent()Z
-
-    .line 122
-    move-result p2
-
-    .line 125
-    iget-object p3, p1, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->batteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 126
-    iget-object p3, p3, Lcom/android/systemui/battery/unified/BatteryDrawableState;->color:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 128
-    invoke-virtual {p1, p2, p3, p0}, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->updateColorProfile(ZLcom/android/systemui/battery/unified/ColorProfile;Lcom/android/systemui/battery/unified/BatteryColors;)V
-
-    .line 130
-    goto :goto_3
-
-    .line 133
-    :cond_b
-    sget-object p1, Lcom/android/systemui/battery/unified/BatteryColors;->DARK_THEME_COLORS:Lcom/android/systemui/battery/unified/BatteryColors$DarkThemeColors;
-
-    .line 134
-    iput-object p1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBatteryColors:Lcom/android/systemui/battery/unified/BatteryColors;
-
-    .line 136
-    iget-object p0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBattery:Lcom/android/systemui/battery/unified/BatteryLayersDrawable;
-
-    .line 138
-    iput-object p1, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->colors:Lcom/android/systemui/battery/unified/BatteryColors;
-
-    .line 140
-    iget-object p2, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->batteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 142
-    invoke-virtual {p2}, Lcom/android/systemui/battery/unified/BatteryDrawableState;->hasForegroundContent()Z
-
-    .line 144
-    move-result p2
-
-    .line 147
-    iget-object p3, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->batteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 148
-    iget-object p3, p3, Lcom/android/systemui/battery/unified/BatteryDrawableState;->color:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 150
-    invoke-virtual {p0, p2, p3, p1}, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->updateColorProfile(ZLcom/android/systemui/battery/unified/ColorProfile;Lcom/android/systemui/battery/unified/BatteryColors;)V
-
-    .line 152
-    :goto_3
-    return-void
-    .line 155
+    .line 80
 .end method
 
 .method public final scaleBatteryMeterViews()V
     .locals 7
 
     .line 1
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    const/4 v1, 0x1
-
-    .line 6
-    const v2, 0x7f0709cb    # @dimen/status_bar_icon_scale_factor '1.0'
-
-    .line 7
-    if-nez v0, :cond_4
-
-    .line 10
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
-    .line 12
+    .line 2
     move-result-object v0
 
-    .line 15
+    .line 5
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 16
+    .line 6
     move-result-object v0
 
-    .line 19
-    new-instance v3, Landroid/util/TypedValue;
+    .line 9
+    new-instance v1, Landroid/util/TypedValue;
 
-    .line 20
-    invoke-direct {v3}, Landroid/util/TypedValue;-><init>()V
+    .line 10
+    invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
+
+    .line 12
+    const v2, 0x7f070a23    # @dimen/status_bar_icon_scale_factor '1.0'
+
+    .line 15
+    const/4 v3, 0x1
+
+    .line 18
+    invoke-virtual {v0, v2, v1, v3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+
+    .line 19
+    invoke-virtual {v1}, Landroid/util/TypedValue;->getFloat()F
 
     .line 22
-    invoke-virtual {v0, v2, v3, v1}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+    move-result v1
 
     .line 25
-    invoke-virtual {v3}, Landroid/util/TypedValue;->getFloat()F
+    const v2, 0x7f070a0d    # @dimen/status_bar_battery_icon_height '13.0sp'
 
-    .line 28
+    .line 26
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 29
     move-result v2
 
-    .line 31
-    const v3, 0x7f0709b5    # @dimen/status_bar_battery_icon_height '13.0sp'
-
     .line 32
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    int-to-float v2, v2
+
+    .line 33
+    mul-float/2addr v2, v1
+
+    .line 34
+    const v4, 0x7f070a0e    # @dimen/status_bar_battery_icon_width '7.8sp'
 
     .line 35
-    move-result v3
-
-    .line 38
-    int-to-float v3, v3
-
-    .line 39
-    mul-float/2addr v3, v2
-
-    .line 40
-    const v4, 0x7f0709b6    # @dimen/status_bar_battery_icon_width '7.8sp'
-
-    .line 41
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 44
+    .line 38
     move-result v4
 
-    .line 47
+    .line 41
     int-to-float v4, v4
 
-    .line 48
-    mul-float/2addr v4, v2
+    .line 42
+    mul-float/2addr v4, v1
 
-    .line 49
-    iget-boolean v2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDisplayShieldEnabled:Z
+    .line 43
+    iget-boolean v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDisplayShieldEnabled:Z
 
-    .line 50
+    .line 44
     const/4 v5, 0x0
 
-    .line 52
-    if-eqz v2, :cond_0
+    .line 46
+    if-eqz v1, :cond_0
 
-    .line 53
-    iget-boolean v2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mIsBatteryDefender:Z
+    .line 47
+    iget-boolean v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mIsBatteryDefender:Z
 
-    .line 55
-    if-eqz v2, :cond_0
+    .line 49
+    if-eqz v1, :cond_0
 
-    .line 57
+    .line 51
     goto :goto_0
 
-    .line 59
+    .line 53
     :cond_0
-    move v1, v5
+    move v3, v5
 
-    .line 60
+    .line 54
     :goto_0
-    if-nez v1, :cond_1
+    if-nez v3, :cond_1
 
-    .line 61
-    move v2, v3
+    .line 55
+    move v1, v2
 
-    .line 63
+    .line 57
     goto :goto_1
 
-    .line 64
+    .line 58
     :cond_1
-    const/high16 v2, 0x41a00000    # 20.0f
+    const/high16 v1, 0x41a00000    # 20.0f
 
-    .line 65
-    div-float v2, v3, v2
+    .line 59
+    div-float v1, v2, v1
 
-    .line 67
+    .line 61
     const/high16 v6, 0x41b80000    # 23.0f
 
-    .line 69
-    mul-float/2addr v2, v6
+    .line 63
+    mul-float/2addr v1, v6
 
-    .line 71
+    .line 65
     :goto_1
-    if-nez v1, :cond_2
+    if-nez v3, :cond_2
 
-    .line 72
+    .line 66
     goto :goto_2
 
-    .line 74
+    .line 68
     :cond_2
     const/high16 v6, 0x41400000    # 12.0f
 
-    .line 75
+    .line 69
     div-float/2addr v4, v6
 
-    .line 77
+    .line 71
     const/high16 v6, 0x41900000    # 18.0f
 
-    .line 78
+    .line 72
     mul-float/2addr v4, v6
 
-    .line 80
-    :goto_2
-    if-eqz v1, :cond_3
-
-    .line 81
-    sub-float v3, v2, v3
-
-    .line 83
-    invoke-static {v3}, Ljava/lang/Math;->round(F)I
-
-    .line 85
-    move-result v3
-
-    .line 88
-    const v6, 0x7f0709b4    # @dimen/status_bar_battery_extra_vertical_spacing '1.0sp'
-
-    .line 89
-    invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 92
-    move-result v6
-
-    .line 95
-    sub-int/2addr v3, v6
-
-    .line 96
-    goto :goto_3
-
-    .line 97
-    :cond_3
-    move v3, v5
-
-    .line 98
-    :goto_3
-    const v6, 0x7f0700b2    # @dimen/battery_margin_bottom '0.0dp'
-
-    .line 99
-    invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 102
-    move-result v0
-
-    .line 105
-    new-instance v6, Landroid/widget/LinearLayout$LayoutParams;
-
-    .line 106
-    invoke-static {v4}, Ljava/lang/Math;->round(F)I
-
-    .line 108
-    move-result v4
-
-    .line 111
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
-
-    .line 112
-    move-result v2
-
-    .line 115
-    invoke-direct {v6, v4, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    .line 116
-    invoke-virtual {v6, v5, v3, v5, v0}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
-
-    .line 119
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDrawable:Lcom/android/systemui/battery/AccessorizedBatteryDrawable;
-
-    .line 122
-    iput-boolean v1, v0, Lcom/android/systemui/battery/AccessorizedBatteryDrawable;->displayShield:Z
-
-    .line 124
-    iget-object v1, v0, Lcom/android/systemui/battery/AccessorizedBatteryDrawable;->invalidateRunnable:Lkotlin/jvm/functions/Function0;
-
-    .line 126
-    new-instance v2, Lcom/android/systemui/battery/AccessorizedBatteryDrawable$sam$java_lang_Runnable$0;
-
-    .line 128
-    invoke-direct {v2, v1}, Lcom/android/systemui/battery/AccessorizedBatteryDrawable$sam$java_lang_Runnable$0;-><init>(Lkotlin/jvm/functions/Function0;)V
-
-    .line 130
-    invoke-virtual {v0, v2}, Landroid/graphics/drawable/DrawableWrapper;->unscheduleSelf(Ljava/lang/Runnable;)V
-
-    .line 133
-    iget-object v1, v0, Lcom/android/systemui/battery/AccessorizedBatteryDrawable;->invalidateRunnable:Lkotlin/jvm/functions/Function0;
-
-    .line 136
-    new-instance v2, Lcom/android/systemui/battery/AccessorizedBatteryDrawable$sam$java_lang_Runnable$0;
-
-    .line 138
-    invoke-direct {v2, v1}, Lcom/android/systemui/battery/AccessorizedBatteryDrawable$sam$java_lang_Runnable$0;-><init>(Lkotlin/jvm/functions/Function0;)V
-
-    .line 140
-    const-wide/16 v3, 0x0
-
-    .line 143
-    invoke-virtual {v0, v2, v3, v4}, Landroid/graphics/drawable/DrawableWrapper;->scheduleSelf(Ljava/lang/Runnable;J)V
-
-    .line 145
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryIconView:Landroid/widget/ImageView;
-
-    .line 148
-    invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 150
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryIconView:Landroid/widget/ImageView;
-
-    .line 153
-    iget-object p0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDrawable:Lcom/android/systemui/battery/AccessorizedBatteryDrawable;
-
-    .line 155
-    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 157
-    return-void
-
-    .line 160
-    :cond_4
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    .line 161
-    move-result-object v0
-
-    .line 164
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 165
-    move-result-object v0
-
-    .line 168
-    new-instance v3, Landroid/util/TypedValue;
-
-    .line 169
-    invoke-direct {v3}, Landroid/util/TypedValue;-><init>()V
-
-    .line 171
-    invoke-virtual {v0, v2, v3, v1}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
-
-    .line 174
-    invoke-virtual {v3}, Landroid/util/TypedValue;->getFloat()F
-
-    .line 177
-    move-result v1
-
-    .line 180
-    const v2, 0x7f0709b7    # @dimen/status_bar_battery_unified_icon_height '12.0sp'
-
-    .line 181
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 184
-    move-result v2
-
-    .line 187
-    int-to-float v2, v2
-
-    .line 188
-    mul-float/2addr v2, v1
-
-    .line 189
-    const v3, 0x7f0709b8    # @dimen/status_bar_battery_unified_icon_width '20.6sp'
-
-    .line 190
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 193
-    move-result v0
-
-    .line 196
-    int-to-float v0, v0
-
-    .line 197
-    mul-float/2addr v0, v1
-
-    .line 198
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
-
-    .line 199
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    .line 201
-    move-result v0
-
-    .line 204
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
-
-    .line 205
-    move-result v2
-
-    .line 208
-    invoke-direct {v1, v0, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    .line 209
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryIconView:Landroid/widget/ImageView;
-
-    .line 212
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 214
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryIconView:Landroid/widget/ImageView;
-
-    .line 217
-    iget-object p0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBattery:Lcom/android/systemui/battery/unified/BatteryLayersDrawable;
-
-    .line 219
-    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 221
-    return-void
-    .line 224
-.end method
-
-.method public final setBatteryDrawableState(Lcom/android/systemui/battery/unified/BatteryDrawableState;)V
-    .locals 8
-
-    .line 1
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-nez v0, :cond_0
-
-    .line 6
-    return-void
-
-    .line 8
-    :cond_0
-    iput-object p1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBatteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 9
-    iget-object p0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBattery:Lcom/android/systemui/battery/unified/BatteryLayersDrawable;
-
-    .line 11
-    iget-object v0, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->batteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 13
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 15
-    move-result v0
-
-    .line 18
-    if-nez v0, :cond_a
-
-    .line 19
-    iget-object v0, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->batteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 21
-    iget v1, v0, Lcom/android/systemui/battery/unified/BatteryDrawableState;->level:I
-
-    .line 23
-    iget v2, p1, Lcom/android/systemui/battery/unified/BatteryDrawableState;->level:I
-
-    .line 25
-    if-eq v2, v1, :cond_2
-
-    .line 27
-    iget-object v1, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->fill:Lcom/android/systemui/battery/unified/BatteryFillDrawable;
-
-    .line 29
-    iput v2, v1, Lcom/android/systemui/battery/unified/BatteryFillDrawable;->batteryLevel:I
-
-    .line 31
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    .line 33
-    iget-object v1, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->textOnly:Lcom/android/systemui/battery/unified/BatteryPercentTextOnlyDrawable;
-
-    .line 36
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 38
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    .line 41
-    move-result-object v3
-
-    .line 44
-    iput-object v3, v1, Lcom/android/systemui/battery/unified/BatteryPercentTextOnlyDrawable;->percentText:Ljava/lang/String;
-
-    .line 45
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    .line 47
-    iget-object v1, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->spaceSharingText:Lcom/android/systemui/battery/unified/BatterySpaceSharingPercentTextDrawable;
-
-    .line 50
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 52
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    .line 55
-    move-result-object v2
-
-    .line 58
-    iput-object v2, v1, Lcom/android/systemui/battery/unified/BatterySpaceSharingPercentTextDrawable;->percentText:Ljava/lang/String;
-
-    .line 59
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    .line 61
-    move-result v2
-
-    .line 64
-    iget v3, v1, Lcom/android/systemui/battery/unified/BatterySpaceSharingPercentTextDrawable;->numberOfCharacters:I
-
-    .line 65
-    if-eq v3, v2, :cond_1
-
-    .line 67
-    iput v2, v1, Lcom/android/systemui/battery/unified/BatterySpaceSharingPercentTextDrawable;->numberOfCharacters:I
-
-    .line 69
-    invoke-virtual {v1}, Lcom/android/systemui/battery/unified/BatterySpaceSharingPercentTextDrawable;->updateFontSize()V
-
-    .line 71
-    :cond_1
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
     .line 74
-    :cond_2
-    iget-object v1, v0, Lcom/android/systemui/battery/unified/BatteryDrawableState;->color:Lcom/android/systemui/battery/unified/ColorProfile;
+    :goto_2
+    if-eqz v3, :cond_3
+
+    .line 75
+    sub-float v2, v1, v2
 
     .line 77
-    iget-object v2, p1, Lcom/android/systemui/battery/unified/BatteryDrawableState;->color:Lcom/android/systemui/battery/unified/ColorProfile;
+    invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
     .line 79
-    if-ne v2, v1, :cond_4
+    move-result v2
 
-    .line 81
-    iget-object v1, p1, Lcom/android/systemui/battery/unified/BatteryDrawableState;->attribution:Landroid/graphics/drawable/Drawable;
+    .line 82
+    const v6, 0x7f070a0c    # @dimen/status_bar_battery_extra_vertical_spacing '1.0sp'
 
     .line 83
-    iget-object v3, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->attribution:Lcom/android/systemui/battery/unified/BatteryAttributionDrawable;
+    invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 85
-    invoke-virtual {v3}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+    .line 86
+    move-result v6
 
-    .line 87
-    move-result-object v3
+    .line 89
+    sub-int/2addr v2, v6
 
     .line 90
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 91
-    move-result v1
-
-    .line 94
-    if-eqz v1, :cond_4
-
-    .line 95
-    invoke-virtual {p1}, Lcom/android/systemui/battery/unified/BatteryDrawableState;->hasForegroundContent()Z
-
-    .line 97
-    move-result v1
-
-    .line 100
-    invoke-virtual {v0}, Lcom/android/systemui/battery/unified/BatteryDrawableState;->hasForegroundContent()Z
-
-    .line 101
-    move-result v3
-
-    .line 104
-    if-eq v1, v3, :cond_3
-
-    .line 105
-    goto :goto_0
-
-    .line 107
-    :cond_3
-    const/4 v1, 0x0
-
-    .line 108
-    goto :goto_1
-
-    .line 109
-    :cond_4
-    :goto_0
-    const/4 v1, 0x1
-
-    .line 110
-    :goto_1
-    iget-object v3, p1, Lcom/android/systemui/battery/unified/BatteryDrawableState;->attribution:Landroid/graphics/drawable/Drawable;
-
-    .line 111
-    if-eqz v3, :cond_5
-
-    .line 113
-    iget-object v4, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->attribution:Lcom/android/systemui/battery/unified/BatteryAttributionDrawable;
-
-    .line 115
-    invoke-virtual {v4}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    .line 117
-    move-result-object v4
-
-    .line 120
-    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 121
-    move-result v3
-
-    .line 124
-    if-nez v3, :cond_5
-
-    .line 125
-    iget-object v3, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->attribution:Lcom/android/systemui/battery/unified/BatteryAttributionDrawable;
-
-    .line 127
-    iget-object v4, p1, Lcom/android/systemui/battery/unified/BatteryDrawableState;->attribution:Landroid/graphics/drawable/Drawable;
-
-    .line 129
-    invoke-virtual {v3, v4}, Lcom/android/systemui/battery/unified/BatteryAttributionDrawable;->setDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 131
-    :cond_5
-    invoke-virtual {p1}, Lcom/android/systemui/battery/unified/BatteryDrawableState;->hasForegroundContent()Z
-
-    .line 134
-    move-result v3
-
-    .line 137
-    invoke-virtual {v0}, Lcom/android/systemui/battery/unified/BatteryDrawableState;->hasForegroundContent()Z
-
-    .line 138
-    move-result v0
-
-    .line 141
-    if-eq v3, v0, :cond_8
-
-    .line 142
-    invoke-virtual {p1}, Lcom/android/systemui/battery/unified/BatteryDrawableState;->hasForegroundContent()Z
-
-    .line 144
-    move-result v0
-
-    .line 147
-    iget-object v3, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->fill:Lcom/android/systemui/battery/unified/BatteryFillDrawable;
-
-    .line 148
-    const/high16 v4, 0x3fc00000    # 1.5f
-
-    .line 150
-    const/4 v5, 0x0
-
-    .line 152
-    if-eqz v0, :cond_6
-
-    .line 153
-    move v0, v5
-
-    .line 155
-    goto :goto_2
-
-    .line 156
-    :cond_6
-    move v0, v4
-
-    .line 157
-    :goto_2
-    iget v6, v3, Lcom/android/systemui/battery/unified/BatteryFillDrawable;->fillInsetAmount:F
-
-    .line 158
-    cmpg-float v6, v6, v0
-
-    .line 160
-    if-nez v6, :cond_7
-
-    .line 162
     goto :goto_3
 
-    .line 164
-    :cond_7
-    iput v0, v3, Lcom/android/systemui/battery/unified/BatteryFillDrawable;->fillInsetAmount:F
+    .line 91
+    :cond_3
+    move v2, v5
 
-    .line 165
-    const/high16 v6, 0x40600000    # 3.5f
-
-    .line 167
-    add-float/2addr v6, v0
-
-    .line 169
-    iput v6, v3, Lcom/android/systemui/battery/unified/BatteryFillDrawable;->leftInsetNotScaled:F
-
-    .line 170
-    add-float/2addr v0, v4
-
-    .line 172
-    iput v0, v3, Lcom/android/systemui/battery/unified/BatteryFillDrawable;->rightInsetNotScaled:F
-
-    .line 173
-    iget-object v0, v3, Lcom/android/systemui/battery/unified/BatteryFillDrawable;->fillRectNotScaled:Landroid/graphics/RectF;
-
-    .line 175
-    sget-object v4, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->Metrics:Lcom/android/systemui/battery/unified/BatteryLayersDrawable$Companion$Metrics$1;
-
-    .line 177
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 179
-    const/high16 v4, 0x41c00000    # 24.0f
-
-    .line 182
-    iget v7, v3, Lcom/android/systemui/battery/unified/BatteryFillDrawable;->rightInsetNotScaled:F
-
-    .line 184
-    sub-float/2addr v4, v7
-
-    .line 186
-    const/high16 v7, 0x41600000    # 14.0f
-
-    .line 187
-    invoke-virtual {v0, v6, v5, v4, v7}, Landroid/graphics/RectF;->set(FFFF)V
-
-    .line 189
-    invoke-virtual {v3}, Lcom/android/systemui/battery/unified/BatteryFillDrawable;->updateScale()V
-
-    .line 192
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    .line 195
-    :cond_8
+    .line 92
     :goto_3
-    if-eqz v1, :cond_9
+    const v6, 0x7f0700b8    # @dimen/battery_margin_bottom '0.0dp'
 
-    .line 198
-    invoke-virtual {p1}, Lcom/android/systemui/battery/unified/BatteryDrawableState;->hasForegroundContent()Z
+    .line 93
+    invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 200
+    .line 96
     move-result v0
 
-    .line 203
-    iget-object v1, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->colors:Lcom/android/systemui/battery/unified/BatteryColors;
+    .line 99
+    new-instance v6, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 204
-    invoke-virtual {p0, v0, v2, v1}, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->updateColorProfile(ZLcom/android/systemui/battery/unified/ColorProfile;Lcom/android/systemui/battery/unified/BatteryColors;)V
+    .line 100
+    invoke-static {v4}, Ljava/lang/Math;->round(F)I
 
-    .line 206
-    :cond_9
-    iput-object p1, p0, Lcom/android/systemui/battery/unified/BatteryLayersDrawable;->batteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
+    .line 102
+    move-result v4
 
-    .line 209
-    invoke-virtual {p0}, Landroid/graphics/drawable/LayerDrawable;->invalidateSelf()V
+    .line 105
+    invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
-    .line 211
-    :cond_a
+    .line 106
+    move-result v1
+
+    .line 109
+    invoke-direct {v6, v4, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    .line 110
+    invoke-virtual {v6, v5, v2, v5, v0}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
+
+    .line 113
+    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDrawable:Lcom/android/systemui/battery/AccessorizedBatteryDrawable;
+
+    .line 116
+    iput-boolean v3, v0, Lcom/android/systemui/battery/AccessorizedBatteryDrawable;->displayShield:Z
+
+    .line 118
+    iget-object v1, v0, Lcom/android/systemui/battery/AccessorizedBatteryDrawable;->invalidateRunnable:Lkotlin/jvm/functions/Function0;
+
+    .line 120
+    new-instance v2, Lcom/android/systemui/battery/AccessorizedBatteryDrawable$sam$java_lang_Runnable$0;
+
+    .line 122
+    invoke-direct {v2, v1}, Lcom/android/systemui/battery/AccessorizedBatteryDrawable$sam$java_lang_Runnable$0;-><init>(Lkotlin/jvm/functions/Function0;)V
+
+    .line 124
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/DrawableWrapper;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    .line 127
+    iget-object v1, v0, Lcom/android/systemui/battery/AccessorizedBatteryDrawable;->invalidateRunnable:Lkotlin/jvm/functions/Function0;
+
+    .line 130
+    new-instance v2, Lcom/android/systemui/battery/AccessorizedBatteryDrawable$sam$java_lang_Runnable$0;
+
+    .line 132
+    invoke-direct {v2, v1}, Lcom/android/systemui/battery/AccessorizedBatteryDrawable$sam$java_lang_Runnable$0;-><init>(Lkotlin/jvm/functions/Function0;)V
+
+    .line 134
+    const-wide/16 v3, 0x0
+
+    .line 137
+    invoke-virtual {v0, v2, v3, v4}, Landroid/graphics/drawable/DrawableWrapper;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    .line 139
+    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryIconView:Landroid/widget/ImageView;
+
+    .line 142
+    invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 144
+    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryIconView:Landroid/widget/ImageView;
+
+    .line 147
+    iget-object p0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mDrawable:Lcom/android/systemui/battery/AccessorizedBatteryDrawable;
+
+    .line 149
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 151
     return-void
-    .line 214
+    .line 154
 .end method
 
 .method public final setPercentShowMode(I)V
@@ -2333,7 +1301,7 @@
     if-eqz v1, :cond_0
 
     .line 8
-    const v1, 0x7f14004f    # @string/accessibility_battery_unknown 'Battery percentage unknown.'
+    const v1, 0x7f130050    # @string/accessibility_battery_unknown 'Battery percentage unknown.'
 
     .line 10
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2373,14 +1341,14 @@
     if-eqz v1, :cond_1
 
     .line 33
-    const v1, 0x7f14004d    # @string/accessibility_battery_level_charging_paused_with_estimate 'Battery %1$d percent, %2$s, charging paused for battery protection.'
+    const v1, 0x7f13004e    # @string/accessibility_battery_level_charging_paused_with_estimate 'Battery %1$d percent, %2$s, charging paused for battery protection.'
 
     .line 35
     goto :goto_0
 
     .line 38
     :cond_1
-    const v1, 0x7f14004e    # @string/accessibility_battery_level_with_estimate 'Battery %1$d percent, %2$s'
+    const v1, 0x7f13004f    # @string/accessibility_battery_level_with_estimate 'Battery %1$d percent, %2$s'
 
     .line 39
     :goto_0
@@ -2433,7 +1401,7 @@
     move-result-object v1
 
     .line 72
-    const v2, 0x7f14004c    # @string/accessibility_battery_level_charging_paused 'Battery %d percent, charging paused for battery protection.'
+    const v2, 0x7f13004d    # @string/accessibility_battery_level_charging_paused 'Battery %d percent, charging paused for battery protection.'
 
     .line 73
     invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -2470,7 +1438,7 @@
     move-result-object v1
 
     .line 96
-    const v2, 0x7f14004b    # @string/accessibility_battery_level_charging 'Battery charging, %d percent.'
+    const v2, 0x7f13004c    # @string/accessibility_battery_level_charging 'Battery charging, %d percent.'
 
     .line 97
     invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -2498,7 +1466,7 @@
     move-result-object v1
 
     .line 114
-    const v2, 0x7f14004a    # @string/accessibility_battery_level 'Battery %d percent.'
+    const v2, 0x7f13004b    # @string/accessibility_battery_level 'Battery %d percent.'
 
     .line 115
     invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -2516,573 +1484,380 @@
 .end method
 
 .method public final updatePercentText()V
-    .locals 4
+    .locals 3
 
     .line 1
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    const/4 v1, 0x1
-
-    .line 6
-    const/4 v2, 0x3
-
-    .line 7
-    if-nez v0, :cond_5
-
-    .line 8
     iget-boolean v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryStateUnknown:Z
 
-    .line 10
+    .line 2
     if-eqz v0, :cond_0
 
-    .line 12
+    .line 4
     goto :goto_0
 
-    .line 14
+    .line 6
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryEstimateFetcher:Lcom/android/systemui/battery/BatteryMeterViewController$$ExternalSyntheticLambda0;
 
-    .line 15
+    .line 7
     if-nez v0, :cond_1
 
-    .line 17
+    .line 9
     invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->setPercentTextAtCurrentLevel()V
 
-    .line 19
+    .line 11
     goto :goto_0
 
-    .line 22
+    .line 14
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
 
-    .line 23
+    .line 15
     if-eqz v0, :cond_4
 
-    .line 25
+    .line 17
     iget v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentMode:I
 
-    .line 27
-    if-ne v0, v2, :cond_3
+    .line 19
+    const/4 v1, 0x3
 
-    .line 29
+    .line 21
+    if-ne v0, v1, :cond_3
+
+    .line 22
     invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->isCharging()Z
 
-    .line 31
+    .line 24
     move-result v0
 
-    .line 34
+    .line 27
     if-nez v0, :cond_3
 
-    .line 35
+    .line 28
     iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryEstimateFetcher:Lcom/android/systemui/battery/BatteryMeterViewController$$ExternalSyntheticLambda0;
 
-    .line 37
-    new-instance v2, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda1;
+    .line 30
+    new-instance v1, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda0;
 
-    .line 39
-    const/4 v3, 0x1
+    .line 32
+    invoke-direct {v1, p0}, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/battery/BatteryMeterView;)V
 
-    .line 41
-    invoke-direct {v2, p0, v3}, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/battery/BatteryMeterView;I)V
-
-    .line 42
+    .line 34
     iget-object p0, v0, Lcom/android/systemui/battery/BatteryMeterViewController$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/statusbar/policy/BatteryController;
 
-    .line 45
+    .line 37
     check-cast p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
 
-    .line 47
+    .line 39
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchCallbacks:Ljava/util/ArrayList;
 
-    .line 49
+    .line 41
     monitor-enter v0
 
-    .line 51
+    .line 43
     :try_start_0
-    iget-object v3, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchCallbacks:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchCallbacks:Ljava/util/ArrayList;
 
-    .line 52
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 44
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 54
+    .line 46
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 57
+    .line 49
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchingEstimate:Z
 
-    .line 58
+    .line 50
     if-eqz v0, :cond_2
 
-    .line 60
+    .line 52
     goto :goto_0
 
-    .line 62
+    .line 54
     :cond_2
-    iput-boolean v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchingEstimate:Z
+    const/4 v0, 0x1
 
-    .line 63
+    .line 55
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchingEstimate:Z
+
+    .line 56
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mBgHandler:Landroid/os/Handler;
 
-    .line 65
+    .line 58
     new-instance v1, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl$$ExternalSyntheticLambda0;
 
-    .line 67
+    .line 60
     const/4 v2, 0x0
 
-    .line 69
+    .line 62
     invoke-direct {v1, p0, v2}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;I)V
 
-    .line 70
+    .line 63
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 73
+    .line 66
     goto :goto_0
 
-    .line 76
+    .line 69
     :catchall_0
     move-exception p0
 
-    .line 77
+    .line 70
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 78
+    .line 71
     throw p0
 
-    .line 79
+    .line 72
     :cond_3
     invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->setPercentTextAtCurrentLevel()V
 
-    .line 80
+    .line 73
     goto :goto_0
 
-    .line 83
+    .line 76
     :cond_4
     invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->updateContentDescription()V
 
-    .line 84
+    .line 77
     :goto_0
     return-void
-
-    .line 87
-    :cond_5
-    iget v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentMode:I
-
-    .line 88
-    if-ne v0, v2, :cond_7
-
-    .line 90
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryEstimateFetcher:Lcom/android/systemui/battery/BatteryMeterViewController$$ExternalSyntheticLambda0;
-
-    .line 92
-    if-eqz v0, :cond_7
-
-    .line 94
-    invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->isCharging()Z
-
-    .line 96
-    move-result v0
-
-    .line 99
-    if-nez v0, :cond_7
-
-    .line 100
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryEstimateFetcher:Lcom/android/systemui/battery/BatteryMeterViewController$$ExternalSyntheticLambda0;
-
-    .line 102
-    new-instance v2, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda1;
-
-    .line 104
-    const/4 v3, 0x0
-
-    .line 106
-    invoke-direct {v2, p0, v3}, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/battery/BatteryMeterView;I)V
-
-    .line 107
-    iget-object p0, v0, Lcom/android/systemui/battery/BatteryMeterViewController$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/statusbar/policy/BatteryController;
-
-    .line 110
-    check-cast p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
-
-    .line 112
-    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchCallbacks:Ljava/util/ArrayList;
-
-    .line 114
-    monitor-enter v0
-
-    .line 116
-    :try_start_2
-    iget-object v3, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchCallbacks:Ljava/util/ArrayList;
-
-    .line 117
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 119
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 122
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchingEstimate:Z
-
-    .line 123
-    if-eqz v0, :cond_6
-
-    .line 125
-    goto :goto_1
-
-    .line 127
-    :cond_6
-    iput-boolean v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchingEstimate:Z
-
-    .line 128
-    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mBgHandler:Landroid/os/Handler;
-
-    .line 130
-    new-instance v1, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl$$ExternalSyntheticLambda0;
-
-    .line 132
-    const/4 v2, 0x0
-
-    .line 134
-    invoke-direct {v1, p0, v2}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;I)V
-
-    .line 135
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 138
-    goto :goto_1
-
-    .line 141
-    :catchall_1
-    move-exception p0
-
-    .line 142
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 143
-    throw p0
-
-    .line 144
-    :cond_7
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    .line 145
-    if-eqz v0, :cond_8
-
-    .line 147
-    const/4 v1, 0x0
-
-    .line 149
-    iput-object v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mEstimateText:Ljava/lang/String;
-
-    .line 150
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 152
-    :cond_8
-    invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->updateContentDescription()V
-
-    .line 155
-    :goto_1
-    return-void
-    .line 158
+    .line 80
 .end method
 
 .method public final updateShowPercent()V
-    .locals 8
+    .locals 6
 
     .line 1
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
+    const/4 v0, 0x0
 
     .line 2
-    move-result v0
-
-    .line 5
     const/4 v1, 0x0
 
+    .line 3
+    iget-object v2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
+    .line 4
+    const/4 v3, 0x1
+
     .line 6
-    const/4 v2, 0x2
+    if-eqz v2, :cond_0
 
     .line 7
-    const/4 v3, 0x3
-
-    .line 8
-    const/4 v4, 0x0
+    move v2, v3
 
     .line 9
-    const/4 v5, 0x1
-
-    .line 10
-    if-nez v0, :cond_6
-
-    .line 11
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    .line 13
-    if-eqz v0, :cond_0
-
-    .line 15
-    move v0, v5
-
-    .line 17
     goto :goto_0
 
-    .line 18
+    .line 10
     :cond_0
-    move v0, v4
+    move v2, v1
 
-    .line 19
+    .line 11
     :goto_0
-    new-instance v6, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda0;
+    new-instance v4, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda1;
+
+    .line 12
+    invoke-direct {v4, p0}, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/battery/BatteryMeterView;)V
+
+    .line 14
+    invoke-static {v4}, Lcom/android/systemui/DejankUtils;->whitelistIpcs(Ljava/util/function/Supplier;)Ljava/lang/Object;
+
+    .line 17
+    move-result-object v4
 
     .line 20
-    invoke-direct {v6, p0, v5}, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/battery/BatteryMeterView;I)V
+    check-cast v4, Ljava/lang/Integer;
 
-    .line 22
-    invoke-static {v6}, Lcom/android/systemui/DejankUtils;->whitelistIpcs(Ljava/util/function/Supplier;)Ljava/lang/Object;
+    .line 21
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
-    .line 25
-    move-result-object v6
+    .line 23
+    move-result v4
 
-    .line 28
-    check-cast v6, Ljava/lang/Integer;
+    .line 26
+    if-eqz v4, :cond_1
+
+    .line 27
+    move v4, v3
 
     .line 29
-    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
-
-    .line 31
-    move-result v6
-
-    .line 34
-    if-eqz v6, :cond_1
-
-    .line 35
-    move v4, v5
-
-    .line 37
-    :cond_1
-    iget-boolean v6, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentAvailable:Z
-
-    .line 38
-    if-eqz v6, :cond_2
-
-    .line 40
-    if-eqz v4, :cond_2
-
-    .line 42
-    iget v4, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentMode:I
-
-    .line 44
-    if-ne v4, v2, :cond_3
-
-    .line 46
-    :cond_2
-    iget v2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentMode:I
-
-    .line 48
-    if-eq v2, v5, :cond_3
-
-    .line 50
-    if-ne v2, v3, :cond_4
-
-    .line 52
-    :cond_3
-    iget-boolean v2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryStateUnknown:Z
-
-    .line 54
-    if-nez v2, :cond_4
-
-    .line 56
-    if-nez v0, :cond_5
-
-    .line 58
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    .line 60
-    move-result-object v0
-
-    .line 63
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    .line 64
-    move-result-object v0
-
-    .line 67
-    const v2, 0x7f0e004c    # @layout/battery_percentage_view 'res/layout/battery_percentage_view.xml'
-
-    .line 68
-    invoke-virtual {v0, v2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    .line 71
-    move-result-object v0
-
-    .line 74
-    check-cast v0, Landroid/widget/TextView;
-
-    .line 75
-    invoke-virtual {p0, v0}, Lcom/android/systemui/battery/BatteryMeterView;->addPercentView(Landroid/widget/TextView;)V
-
-    .line 77
-    invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->updatePercentText()V
-
-    .line 80
     goto :goto_1
 
-    .line 83
+    .line 30
+    :cond_1
+    move v4, v1
+
+    .line 31
+    :goto_1
+    iget-boolean v5, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentAvailable:Z
+
+    .line 32
+    if-eqz v5, :cond_2
+
+    .line 34
+    if-eqz v4, :cond_2
+
+    .line 36
+    iget v4, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentMode:I
+
+    .line 38
+    const/4 v5, 0x2
+
+    .line 40
+    if-ne v4, v5, :cond_3
+
+    .line 41
+    :cond_2
+    iget v4, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentMode:I
+
+    .line 43
+    if-eq v4, v3, :cond_3
+
+    .line 45
+    const/4 v3, 0x3
+
+    .line 47
+    if-ne v4, v3, :cond_6
+
+    .line 48
+    :cond_3
+    iget-boolean v3, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryStateUnknown:Z
+
+    .line 50
+    if-nez v3, :cond_6
+
+    .line 52
+    if-nez v2, :cond_7
+
+    .line 54
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    .line 56
+    move-result-object v2
+
+    .line 59
+    invoke-static {v2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    .line 60
+    move-result-object v2
+
+    .line 63
+    const v3, 0x7f0d0050    # @layout/battery_percentage_view 'res/layout/battery_percentage_view.xml'
+
+    .line 64
+    invoke-virtual {v2, v3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    .line 67
+    move-result-object v2
+
+    .line 70
+    check-cast v2, Landroid/widget/TextView;
+
+    .line 71
+    iput-object v2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
+    .line 73
+    iget v3, p0, Lcom/android/systemui/battery/BatteryMeterView;->mPercentageStyleId:I
+
+    .line 75
+    if-eqz v3, :cond_4
+
+    .line 77
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextAppearance(I)V
+
+    .line 79
     :cond_4
-    if-eqz v0, :cond_5
+    iget-object v2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
+    .line 82
+    invoke-virtual {v2}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
     .line 84
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+    move-result-object v2
 
-    .line 86
-    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
+    .line 87
+    invoke-virtual {v2, v0}, Landroid/text/TextPaint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
 
     .line 88
-    iput-object v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    .line 91
-    :cond_5
-    :goto_1
-    return-void
-
-    .line 93
-    :cond_6
-    iget-boolean v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentAvailable:Z
-
-    .line 94
-    if-eqz v0, :cond_c
-
-    .line 96
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBattery:Lcom/android/systemui/battery/unified/BatteryLayersDrawable;
-
-    .line 98
-    if-nez v0, :cond_7
-
-    .line 100
-    goto :goto_4
-
-    .line 102
-    :cond_7
-    iget v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentMode:I
-
-    .line 103
-    if-eq v0, v5, :cond_9
-
-    .line 105
-    if-ne v0, v3, :cond_8
-
-    .line 107
-    goto :goto_2
-
-    .line 109
-    :cond_8
-    move v6, v4
-
-    .line 110
-    goto :goto_3
-
-    .line 111
-    :cond_9
-    :goto_2
-    move v6, v5
-
-    .line 112
-    :goto_3
-    iget-boolean v7, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryStateUnknown:Z
-
-    .line 113
-    if-nez v7, :cond_b
-
-    .line 115
-    if-nez v6, :cond_b
-
-    .line 117
-    if-eq v0, v2, :cond_b
-
-    .line 119
-    new-instance v0, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda0;
-
-    .line 121
-    invoke-direct {v0, p0, v4}, Lcom/android/systemui/battery/BatteryMeterView$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/battery/BatteryMeterView;I)V
-
-    .line 123
-    invoke-static {v0}, Lcom/android/systemui/DejankUtils;->whitelistIpcs(Ljava/util/function/Supplier;)Ljava/lang/Object;
-
-    .line 126
-    move-result-object v0
-
-    .line 129
-    check-cast v0, Ljava/lang/Integer;
-
-    .line 130
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    .line 132
     move-result v0
 
+    .line 91
+    int-to-float v0, v0
+
+    .line 92
+    iget-object v2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
+    .line 93
+    invoke-virtual {v2, v1, v0}, Landroid/widget/TextView;->setLineHeight(IF)V
+
+    .line 95
+    iget v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mTextColor:I
+
+    .line 98
+    if-eqz v1, :cond_5
+
+    .line 100
+    iget-object v2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
+    .line 102
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 104
+    :cond_5
+    iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
+    .line 107
+    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
+
+    .line 109
+    float-to-double v3, v0
+
+    .line 111
+    invoke-static {v3, v4}, Ljava/lang/Math;->ceil(D)D
+
+    .line 112
+    move-result-wide v3
+
+    .line 115
+    double-to-int v0, v3
+
+    .line 116
+    const/4 v3, -0x2
+
+    .line 117
+    invoke-direct {v2, v3, v0}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    .line 118
+    invoke-virtual {p0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 121
+    invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->updatePercentText()V
+
+    .line 124
+    goto :goto_2
+
+    .line 127
+    :cond_6
+    if-eqz v2, :cond_7
+
+    .line 128
+    iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
+    .line 130
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
+
+    .line 132
+    iput-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
+
     .line 135
-    if-eqz v0, :cond_a
-
-    .line 136
-    move v4, v5
-
-    .line 138
-    :cond_a
-    move v6, v4
-
-    .line 139
-    :cond_b
-    new-instance v0, Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 140
-    iget-object v2, p0, Lcom/android/systemui/battery/BatteryMeterView;->mUnifiedBatteryState:Lcom/android/systemui/battery/unified/BatteryDrawableState;
-
-    .line 142
-    iget v4, v2, Lcom/android/systemui/battery/unified/BatteryDrawableState;->level:I
-
-    .line 144
-    iget-object v5, v2, Lcom/android/systemui/battery/unified/BatteryDrawableState;->attribution:Landroid/graphics/drawable/Drawable;
-
-    .line 146
-    iget-object v2, v2, Lcom/android/systemui/battery/unified/BatteryDrawableState;->color:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 148
-    invoke-direct {v0, v4, v6, v2, v5}, Lcom/android/systemui/battery/unified/BatteryDrawableState;-><init>(IZLcom/android/systemui/battery/unified/ColorProfile;Landroid/graphics/drawable/Drawable;)V
-
-    .line 150
-    invoke-virtual {p0, v0}, Lcom/android/systemui/battery/BatteryMeterView;->setBatteryDrawableState(Lcom/android/systemui/battery/unified/BatteryDrawableState;)V
-
-    .line 153
-    iget v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mShowPercentMode:I
-
-    .line 156
-    if-eq v0, v3, :cond_c
-
-    .line 158
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    .line 160
-    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
-
-    .line 162
-    iput-object v1, p0, Lcom/android/systemui/battery/BatteryMeterView;->mBatteryPercentView:Landroid/widget/TextView;
-
-    .line 165
-    :cond_c
-    :goto_4
+    :cond_7
+    :goto_2
     return-void
-    .line 167
+    .line 137
 .end method

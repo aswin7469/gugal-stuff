@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/pip2/phone/PipMenuView$2;
 .super Landroid/view/View$AccessibilityDelegate;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -40,7 +40,7 @@
     move-result-object p0
 
     .line 10
-    const p1, 0x7f14073a    # @string/pip_menu_title 'Menu'
+    const p1, 0x7f130796    # @string/pip_menu_title 'Menu'
 
     .line 11
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

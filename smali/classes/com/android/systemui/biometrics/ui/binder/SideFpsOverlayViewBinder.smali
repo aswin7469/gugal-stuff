@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -77,7 +77,7 @@
     if-eqz v0, :cond_0
 
     .line 4
-    const v1, 0x7f0b0719    # @id/sidefps_animation
+    const v1, 0x7f0a0745    # @id/sidefps_animation
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -231,7 +231,7 @@
     const/4 v2, 0x0
 
     .line 49
-    const v3, 0x7f0e0253    # @layout/sidefps_view 'res/layout/sidefps_view.xml'
+    const v3, 0x7f0d0264    # @layout/sidefps_view 'res/layout/sidefps_view.xml'
 
     .line 50
     const/4 v4, 0x0
@@ -390,7 +390,7 @@
     move-result-object p0
 
     .line 165
-    const v1, 0x7f1400e9    # @string/accessibility_side_fingerprint_indicator_label 'Touch the fingerprint sensor. It’s the shorter button on the side of the phone'
+    const v1, 0x7f1300e9    # @string/accessibility_side_fingerprint_indicator_label 'Touch the fingerprint sensor. It’s the shorter button on the side of the phone'
 
     .line 166
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

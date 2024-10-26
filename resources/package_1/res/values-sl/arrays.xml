@@ -5,7 +5,9 @@
     <item>Prikaži odstotek med polnjenjem (privzeto)</item>
     <item>Ne prikaži te ikone</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Prikaži ure, minute in sekunde</item>
     <item>Prikaži ure in minute (privzeto)</item>

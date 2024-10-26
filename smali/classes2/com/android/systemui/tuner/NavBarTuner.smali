@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/tuner/NavBarTuner;
 .super Lcom/android/systemui/tuner/TunerPreferenceFragment;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # annotations
@@ -23,10 +23,10 @@
     .locals 8
 
     .line 1
-    const v0, 0x7f0808f7    # @drawable/ic_qs_circle 'res/drawable/ic_qs_circle.xml'
+    const v0, 0x7f08091b    # @drawable/ic_qs_circle 'res/drawable/ic_qs_circle.xml'
 
     .line 2
-    const v1, 0x7f140992    # @string/tuner_circle 'Circle'
+    const v1, 0x7f130a18    # @string/tuner_circle 'Circle'
 
     .line 5
     filled-new-array {v0, v1}, [I
@@ -35,10 +35,10 @@
     move-result-object v2
 
     .line 11
-    const v0, 0x7f0806cd    # @drawable/ic_add 'res/drawable/ic_add.xml'
+    const v0, 0x7f0806dc    # @drawable/ic_add 'res/drawable/ic_add.xml'
 
     .line 12
-    const v1, 0x7f14099d    # @string/tuner_plus 'Plus'
+    const v1, 0x7f130a23    # @string/tuner_plus 'Plus'
 
     .line 15
     filled-new-array {v0, v1}, [I
@@ -47,10 +47,10 @@
     move-result-object v3
 
     .line 21
-    const v0, 0x7f080908    # @drawable/ic_remove 'res/drawable/ic_remove.xml'
+    const v0, 0x7f080931    # @drawable/ic_remove 'res/drawable/ic_remove.xml'
 
     .line 22
-    const v1, 0x7f14099a    # @string/tuner_minus 'Minus'
+    const v1, 0x7f130a20    # @string/tuner_minus 'Minus'
 
     .line 25
     filled-new-array {v0, v1}, [I
@@ -59,10 +59,10 @@
     move-result-object v4
 
     .line 31
-    const v0, 0x7f0807fe    # @drawable/ic_left 'res/drawable/ic_left.xml'
+    const v0, 0x7f080820    # @drawable/ic_left 'res/drawable/ic_left.xml'
 
     .line 32
-    const v1, 0x7f140996    # @string/tuner_left 'Left'
+    const v1, 0x7f130a1c    # @string/tuner_left 'Left'
 
     .line 35
     filled-new-array {v0, v1}, [I
@@ -71,10 +71,10 @@
     move-result-object v5
 
     .line 41
-    const v0, 0x7f08090c    # @drawable/ic_right 'res/drawable/ic_right.xml'
+    const v0, 0x7f080935    # @drawable/ic_right 'res/drawable/ic_right.xml'
 
     .line 42
-    const v1, 0x7f14099e    # @string/tuner_right 'Right'
+    const v1, 0x7f130a24    # @string/tuner_right 'Right'
 
     .line 45
     filled-new-array {v0, v1}, [I
@@ -83,10 +83,10 @@
     move-result-object v6
 
     .line 51
-    const v0, 0x7f08082c    # @drawable/ic_menu 'res/drawable/ic_menu.xml'
+    const v0, 0x7f08084f    # @drawable/ic_menu 'res/drawable/ic_menu.xml'
 
     .line 52
-    const v1, 0x7f140999    # @string/tuner_menu 'Menu'
+    const v1, 0x7f130a1f    # @string/tuner_menu 'Menu'
 
     .line 55
     filled-new-array {v0, v1}, [I
@@ -687,7 +687,7 @@
     .locals 4
 
     .line 1
-    const p1, 0x7f18000c    # @xml/nav_bar_tuner 'res/xml/nav_bar_tuner.xml'
+    const p1, 0x7f17000f    # @xml/nav_bar_tuner 'res/xml/nav_bar_tuner.xml'
 
     .line 2
     invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragment;->addPreferencesFromResource(I)V

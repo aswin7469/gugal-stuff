@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/BubbleOverflowAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -89,7 +89,7 @@
     move-result-object v0
 
     .line 41
-    const v2, 0x7f1406d5    # @string/notification_bubble_title 'Bubble'
+    const v2, 0x7f130730    # @string/notification_bubble_title 'Bubble'
 
     .line 42
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -117,7 +117,7 @@
     move-result-object v0
 
     .line 60
-    const v3, 0x7f140225    # @string/bubble_content_description_single '%1$s from %2$s'
+    const v3, 0x7f13022c    # @string/bubble_content_description_single '%1$s from %2$s'
 
     .line 61
     invoke-virtual {v2, v3, v0}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -184,7 +184,7 @@
     move-result-object p1
 
     .line 9
-    const v0, 0x7f0e0069    # @layout/bubble_overflow_view 'res/layout/bubble_overflow_view.xml'
+    const v0, 0x7f0d006e    # @layout/bubble_overflow_view 'res/layout/bubble_overflow_view.xml'
 
     .line 10
     const/4 v1, 0x0
@@ -262,7 +262,7 @@
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 61
-    const p2, 0x7f0b0182    # @id/bubble_view_name
+    const p2, 0x7f0a0188    # @id/bubble_view_name
 
     .line 64
     invoke-virtual {p1, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -283,7 +283,7 @@
     invoke-direct {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     .line 78
-    const v1, 0x7f0b0181    # @id/bubble_view
+    const v1, 0x7f0a0187    # @id/bubble_view
 
     .line 81
     invoke-virtual {p1, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;

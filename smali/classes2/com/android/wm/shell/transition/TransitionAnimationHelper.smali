@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/wm/shell/transition/TransitionAnimationHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -152,7 +152,7 @@
     if-nez p0, :cond_1
 
     .line 96
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 98
     const/4 p1, 0x4
@@ -179,7 +179,7 @@
     const/4 p6, 0x0
 
     .line 115
-    invoke-static/range {p1 .. p6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {p1 .. p6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 116
     :cond_0
@@ -614,92 +614,86 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->moveAnimationOptionsToChange()Z
 
     .line 9
-    move-result v0
+    invoke-virtual {p0}, Landroid/window/TransitionInfo;->getAnimationOptions()Landroid/window/TransitionInfo$AnimationOptions;
 
     .line 12
-    if-nez v0, :cond_1
-
-    .line 13
-    invoke-virtual {p0}, Landroid/window/TransitionInfo;->getAnimationOptions()Landroid/window/TransitionInfo$AnimationOptions;
+    move-result-object v0
 
     .line 15
-    move-result-object v0
+    if-eqz v0, :cond_1
+
+    .line 16
+    invoke-virtual {p0}, Landroid/window/TransitionInfo;->getAnimationOptions()Landroid/window/TransitionInfo$AnimationOptions;
 
     .line 18
-    if-eqz v0, :cond_1
-
-    .line 19
-    invoke-virtual {p0}, Landroid/window/TransitionInfo;->getAnimationOptions()Landroid/window/TransitionInfo$AnimationOptions;
-
-    .line 21
     move-result-object v0
 
-    .line 24
+    .line 21
     invoke-virtual {v0}, Landroid/window/TransitionInfo$AnimationOptions;->getBackgroundColor()I
 
-    .line 25
+    .line 22
     move-result v0
 
-    .line 28
+    .line 25
     if-eqz v0, :cond_1
 
-    .line 29
+    .line 26
     invoke-virtual {p0}, Landroid/window/TransitionInfo;->getAnimationOptions()Landroid/window/TransitionInfo$AnimationOptions;
 
-    .line 31
+    .line 28
     move-result-object p0
 
-    .line 34
+    .line 31
     invoke-virtual {p0}, Landroid/window/TransitionInfo$AnimationOptions;->getBackgroundColor()I
 
-    .line 35
+    .line 32
     move-result p0
 
-    .line 38
+    .line 35
     return p0
 
-    .line 39
+    .line 36
     :cond_1
     invoke-virtual {p2}, Landroid/view/animation/Animation;->getBackdropColor()I
 
-    .line 40
+    .line 37
     move-result p0
 
-    .line 43
+    .line 40
     if-eqz p0, :cond_2
 
-    .line 44
+    .line 41
     invoke-virtual {p2}, Landroid/view/animation/Animation;->getBackdropColor()I
 
-    .line 46
+    .line 43
     move-result p0
 
-    .line 49
+    .line 46
     return p0
 
-    .line 50
+    .line 47
     :cond_2
     invoke-virtual {p1}, Landroid/window/TransitionInfo$Change;->getBackgroundColor()I
 
-    .line 51
+    .line 48
     move-result p0
 
-    .line 54
+    .line 51
     if-eqz p0, :cond_3
 
-    .line 55
+    .line 52
     invoke-virtual {p1}, Landroid/window/TransitionInfo$Change;->getBackgroundColor()I
 
-    .line 57
+    .line 54
     move-result p0
 
-    .line 60
+    .line 57
     return p0
 
-    .line 61
+    .line 58
     :cond_3
     return p3
-    .line 62
+    .line 59
 .end method
 
 .method public static getTransitionTypeFromInfo(Landroid/window/TransitionInfo;)I
@@ -892,630 +886,613 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->moveAnimationOptionsToChange()Z
 
     .line 30
-    move-result v8
-
-    .line 33
-    if-eqz v8, :cond_1
-
-    .line 34
-    invoke-virtual/range {p2 .. p2}, Landroid/window/TransitionInfo$Change;->getAnimationOptions()Landroid/window/TransitionInfo$AnimationOptions;
-
-    .line 36
-    move-result-object v8
-
-    .line 39
-    goto :goto_1
-
-    .line 40
-    :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/window/TransitionInfo;->getAnimationOptions()Landroid/window/TransitionInfo$AnimationOptions;
 
-    .line 41
+    .line 33
     move-result-object v8
+
+    .line 36
+    if-eqz v8, :cond_1
+
+    .line 37
+    invoke-virtual {v8}, Landroid/window/TransitionInfo$AnimationOptions;->getType()I
+
+    .line 39
+    move-result v9
+
+    .line 42
+    goto :goto_1
+
+    .line 43
+    :cond_1
+    const/4 v9, 0x0
 
     .line 44
     :goto_1
-    if-eqz v8, :cond_2
-
-    .line 45
-    invoke-virtual {v8}, Landroid/window/TransitionInfo$AnimationOptions;->getType()I
-
-    .line 47
-    move-result v9
-
-    .line 50
-    goto :goto_2
-
-    .line 51
-    :cond_2
-    const/4 v9, 0x0
-
-    .line 52
-    :goto_2
     const/16 v10, 0xe
 
-    .line 53
+    .line 45
     const/4 v11, 0x6
 
-    .line 55
+    .line 47
     const/4 v12, 0x5
 
-    .line 56
+    .line 48
     const/4 v13, 0x7
 
-    .line 57
+    .line 49
     const/4 v14, 0x2
 
-    .line 58
+    .line 50
     const/4 v15, 0x4
 
-    .line 59
-    if-eqz p5, :cond_6
+    .line 51
+    if-eqz p5, :cond_5
 
-    .line 60
-    if-ne v0, v7, :cond_4
+    .line 52
+    if-ne v0, v7, :cond_3
 
-    .line 62
-    if-eqz v3, :cond_3
+    .line 54
+    if-eqz v3, :cond_2
 
-    .line 64
+    .line 56
     const/16 v1, 0x1c
 
-    .line 66
-    goto :goto_3
+    .line 58
+    goto :goto_2
 
-    .line 68
-    :cond_3
+    .line 60
+    :cond_2
     const/16 v1, 0x1d
 
-    .line 69
-    :goto_3
+    .line 61
+    :goto_2
     const/4 v6, 0x0
 
-    .line 71
-    goto/16 :goto_8
-
-    .line 72
-    :cond_4
-    if-ne v0, v14, :cond_1d
-
-    .line 74
-    if-eqz v3, :cond_5
-
-    .line 76
+    .line 63
     goto/16 :goto_7
 
-    .line 78
-    :cond_5
+    .line 64
+    :cond_3
+    if-ne v0, v14, :cond_1c
+
+    .line 66
+    if-eqz v3, :cond_4
+
+    .line 68
+    goto/16 :goto_6
+
+    .line 70
+    :cond_4
     const/16 v1, 0x1b
 
+    .line 72
+    goto :goto_2
+
+    .line 74
+    :cond_5
+    const/4 v6, 0x3
+
+    .line 75
+    if-ne v1, v6, :cond_7
+
+    .line 76
+    if-eqz v3, :cond_6
+
+    .line 78
+    const/16 v1, 0x14
+
     .line 80
-    goto :goto_3
+    goto :goto_2
 
     .line 82
     :cond_6
-    const/4 v6, 0x3
-
-    .line 83
-    if-ne v1, v6, :cond_8
-
-    .line 84
-    if-eqz v3, :cond_7
-
-    .line 86
-    const/16 v1, 0x14
-
-    .line 88
-    goto :goto_3
-
-    .line 90
-    :cond_7
     const/16 v1, 0x15
 
-    .line 91
-    goto :goto_3
+    .line 83
+    goto :goto_2
 
-    .line 93
-    :cond_8
-    if-ne v1, v15, :cond_a
+    .line 85
+    :cond_7
+    if-ne v1, v15, :cond_9
 
-    .line 94
-    if-eqz v3, :cond_9
+    .line 86
+    if-eqz v3, :cond_8
 
-    .line 96
+    .line 88
     const/16 v1, 0x16
 
-    .line 98
-    goto :goto_3
+    .line 90
+    goto :goto_2
 
-    .line 100
-    :cond_9
+    .line 92
+    :cond_8
     const/16 v1, 0x17
 
-    .line 101
-    goto :goto_3
+    .line 93
+    goto :goto_2
 
-    .line 103
-    :cond_a
-    if-ne v1, v7, :cond_c
+    .line 95
+    :cond_9
+    if-ne v1, v7, :cond_b
 
-    .line 104
-    if-eqz v3, :cond_b
+    .line 96
+    if-eqz v3, :cond_a
 
-    .line 106
+    .line 98
     const/16 v1, 0x10
 
-    .line 108
-    goto :goto_3
+    .line 100
+    goto :goto_2
 
-    .line 110
-    :cond_b
+    .line 102
+    :cond_a
     const/16 v1, 0x11
 
-    .line 111
-    goto :goto_3
+    .line 103
+    goto :goto_2
 
-    .line 113
-    :cond_c
-    if-ne v1, v14, :cond_e
+    .line 105
+    :cond_b
+    if-ne v1, v14, :cond_d
 
-    .line 114
-    if-eqz v3, :cond_d
+    .line 106
+    if-eqz v3, :cond_c
 
-    .line 116
+    .line 108
     const/16 v1, 0x12
 
-    .line 118
-    goto :goto_3
+    .line 110
+    goto :goto_2
 
-    .line 120
-    :cond_d
+    .line 112
+    :cond_c
     const/16 v1, 0x13
 
-    .line 121
+    .line 113
+    goto :goto_2
+
+    .line 115
+    :cond_d
+    if-ne v0, v7, :cond_13
+
+    .line 116
+    and-int/lit8 v1, v4, 0x4
+
+    .line 118
+    if-eqz v1, :cond_e
+
+    .line 120
+    move v1, v7
+
+    .line 122
     goto :goto_3
 
     .line 123
     :cond_e
-    if-ne v0, v7, :cond_14
-
-    .line 124
-    and-int/lit8 v1, v4, 0x4
-
-    .line 126
-    if-eqz v1, :cond_f
-
-    .line 128
-    move v1, v7
-
-    .line 130
-    goto :goto_4
-
-    .line 131
-    :cond_f
     const/4 v1, 0x0
 
-    .line 132
-    :goto_4
-    if-eqz v5, :cond_10
+    .line 124
+    :goto_3
+    if-eqz v5, :cond_f
 
-    .line 133
-    if-eqz v1, :cond_10
+    .line 125
+    if-eqz v1, :cond_f
 
-    .line 135
-    if-nez v3, :cond_10
+    .line 127
+    if-nez v3, :cond_f
 
-    .line 137
+    .line 129
     move v6, v1
 
-    .line 139
+    .line 131
     move v1, v13
 
-    .line 140
-    goto/16 :goto_8
+    .line 132
+    goto/16 :goto_7
 
-    .line 141
-    :cond_10
-    if-eqz v5, :cond_12
+    .line 133
+    :cond_f
+    if-eqz v5, :cond_11
 
-    .line 143
-    if-nez v1, :cond_12
+    .line 135
+    if-nez v1, :cond_11
 
-    .line 145
-    if-eqz v3, :cond_11
+    .line 137
+    if-eqz v3, :cond_10
 
-    .line 147
+    .line 139
     const/16 v6, 0x8
 
+    .line 141
+    goto :goto_4
+
+    .line 143
+    :cond_10
+    const/16 v6, 0x9
+
+    .line 144
+    :goto_4
+    move/from16 v16, v6
+
+    .line 146
+    move v6, v1
+
+    .line 148
+    move/from16 v1, v16
+
     .line 149
-    goto :goto_5
+    goto :goto_7
 
     .line 151
     :cond_11
-    const/16 v6, 0x9
+    if-eqz v3, :cond_12
 
     .line 152
-    :goto_5
-    move/from16 v16, v6
-
-    .line 154
-    move v6, v1
-
-    .line 156
-    move/from16 v1, v16
-
-    .line 157
-    goto :goto_8
-
-    .line 159
-    :cond_12
-    if-eqz v3, :cond_13
-
-    .line 160
     move v6, v15
 
-    .line 162
-    goto :goto_5
+    .line 154
+    goto :goto_4
 
-    .line 163
-    :cond_13
+    .line 155
+    :cond_12
     move v6, v12
 
-    .line 164
-    goto :goto_5
+    .line 156
+    goto :goto_4
 
-    .line 165
-    :cond_14
-    if-ne v0, v6, :cond_16
+    .line 157
+    :cond_13
+    if-ne v0, v6, :cond_15
 
-    .line 166
-    if-eqz v3, :cond_15
+    .line 158
+    if-eqz v3, :cond_14
 
-    .line 168
+    .line 160
     const/16 v1, 0xc
 
-    .line 170
-    goto :goto_3
+    .line 162
+    goto :goto_2
 
-    .line 172
-    :cond_15
+    .line 164
+    :cond_14
     const/16 v1, 0xd
 
-    .line 173
-    goto :goto_3
+    .line 165
+    goto :goto_2
 
-    .line 175
-    :cond_16
-    if-ne v0, v14, :cond_1b
+    .line 167
+    :cond_15
+    if-ne v0, v14, :cond_1a
 
-    .line 176
+    .line 168
     and-int/lit8 v1, v4, 0x4
 
-    .line 178
-    if-eqz v1, :cond_17
+    .line 170
+    if-eqz v1, :cond_16
 
-    .line 180
-    if-nez v3, :cond_17
+    .line 172
+    if-nez v3, :cond_16
 
-    .line 182
+    .line 174
     move v1, v7
 
-    .line 184
-    goto :goto_6
+    .line 176
+    goto :goto_5
 
-    .line 185
-    :cond_17
+    .line 177
+    :cond_16
     const/4 v1, 0x0
 
-    .line 186
-    :goto_6
-    if-eqz v5, :cond_19
+    .line 178
+    :goto_5
+    if-eqz v5, :cond_18
 
-    .line 187
-    if-nez v1, :cond_19
+    .line 179
+    if-nez v1, :cond_18
 
-    .line 189
-    if-eqz v3, :cond_18
+    .line 181
+    if-eqz v3, :cond_17
 
-    .line 191
+    .line 183
     const/16 v6, 0xa
 
-    .line 193
-    goto :goto_5
+    .line 185
+    goto :goto_4
 
-    .line 195
-    :cond_18
+    .line 187
+    :cond_17
     const/16 v6, 0xb
 
-    .line 196
-    goto :goto_5
+    .line 188
+    goto :goto_4
 
-    .line 198
-    :cond_19
-    if-eqz v3, :cond_1a
+    .line 190
+    :cond_18
+    if-eqz v3, :cond_19
 
-    .line 199
+    .line 191
     move v6, v11
 
-    .line 201
-    goto :goto_5
+    .line 193
+    goto :goto_4
 
-    .line 202
-    :cond_1a
+    .line 194
+    :cond_19
     move v6, v13
 
-    .line 203
-    goto :goto_5
+    .line 195
+    goto :goto_4
 
-    .line 204
-    :cond_1b
-    if-ne v0, v15, :cond_1d
+    .line 196
+    :cond_1a
+    if-ne v0, v15, :cond_1c
 
-    .line 205
-    if-eqz v3, :cond_1c
+    .line 197
+    if-eqz v3, :cond_1b
 
-    .line 207
+    .line 199
     move v1, v10
 
-    .line 209
-    goto/16 :goto_3
+    .line 201
+    goto/16 :goto_2
 
-    .line 210
-    :cond_1c
+    .line 202
+    :cond_1b
     const/16 v1, 0xf
 
-    .line 212
-    goto/16 :goto_3
+    .line 204
+    goto/16 :goto_2
 
-    .line 214
-    :cond_1d
-    :goto_7
+    .line 206
+    :cond_1c
+    :goto_6
     const/4 v1, 0x0
 
-    .line 216
-    goto/16 :goto_3
+    .line 208
+    goto/16 :goto_2
 
-    .line 217
-    :goto_8
+    .line 209
+    :goto_7
     const/4 v14, 0x0
 
-    .line 219
-    if-eqz v1, :cond_25
+    .line 211
+    if-eqz v1, :cond_24
+
+    .line 212
+    if-ne v9, v10, :cond_22
+
+    .line 214
+    if-nez v5, :cond_22
+
+    .line 216
+    if-eq v1, v15, :cond_1e
+
+    .line 218
+    if-eq v1, v12, :cond_1e
 
     .line 220
-    if-ne v9, v10, :cond_23
+    if-eq v1, v11, :cond_1d
 
     .line 222
-    if-nez v5, :cond_23
+    if-eq v1, v13, :cond_1d
 
     .line 224
-    if-eq v1, v15, :cond_1f
-
-    .line 226
-    if-eq v1, v12, :cond_1f
-
-    .line 228
-    if-eq v1, v11, :cond_1e
-
-    .line 230
-    if-eq v1, v13, :cond_1e
-
-    .line 232
-    goto :goto_a
-
-    .line 234
-    :cond_1e
-    const/4 v4, 0x0
-
-    .line 235
     goto :goto_9
 
-    .line 236
-    :cond_1f
+    .line 226
+    :cond_1d
+    const/4 v4, 0x0
+
+    .line 227
+    goto :goto_8
+
+    .line 228
+    :cond_1e
     move v4, v7
 
-    .line 237
-    :goto_9
+    .line 229
+    :goto_8
     invoke-virtual {v8, v4}, Landroid/window/TransitionInfo$AnimationOptions;->getCustomActivityTransition(Z)Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;
 
-    .line 238
+    .line 230
     move-result-object v14
 
-    .line 241
-    :goto_a
-    if-eqz v14, :cond_22
+    .line 233
+    :goto_9
+    if-eqz v14, :cond_21
 
-    .line 242
+    .line 234
     invoke-virtual {v8}, Landroid/window/TransitionInfo$AnimationOptions;->getPackageName()Ljava/lang/String;
 
-    .line 244
+    .line 236
     move-result-object v4
 
-    .line 247
-    if-eqz v3, :cond_20
+    .line 239
+    if-eqz v3, :cond_1f
 
-    .line 248
+    .line 240
     invoke-virtual {v14}, Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;->getCustomEnterResId()I
 
-    .line 250
+    .line 242
     move-result v5
 
-    .line 253
-    goto :goto_b
+    .line 245
+    goto :goto_a
 
-    .line 254
-    :cond_20
+    .line 246
+    :cond_1f
     invoke-virtual {v14}, Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;->getCustomExitResId()I
 
-    .line 255
+    .line 247
     move-result v5
 
-    .line 258
-    :goto_b
+    .line 250
+    :goto_a
     invoke-virtual {v2, v4, v5}, Lcom/android/internal/policy/TransitionAnimation;->loadAppTransitionAnimation(Ljava/lang/String;I)Landroid/view/animation/Animation;
 
-    .line 259
+    .line 251
     move-result-object v2
 
-    .line 262
-    if-eqz v2, :cond_21
+    .line 254
+    if-eqz v2, :cond_20
+
+    .line 255
+    invoke-virtual {v14}, Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;->getCustomBackgroundColor()I
+
+    .line 257
+    move-result v4
+
+    .line 260
+    if-eqz v4, :cond_20
+
+    .line 261
+    invoke-virtual {v14}, Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;->getCustomBackgroundColor()I
 
     .line 263
-    invoke-virtual {v14}, Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;->getCustomBackgroundColor()I
-
-    .line 265
     move-result v4
 
-    .line 268
-    if-eqz v4, :cond_21
-
-    .line 269
-    invoke-virtual {v14}, Landroid/window/TransitionInfo$AnimationOptions$CustomActivityTransition;->getCustomBackgroundColor()I
-
-    .line 271
-    move-result v4
-
-    .line 274
+    .line 266
     invoke-virtual {v2, v4}, Landroid/view/animation/Animation;->setBackdropColor(I)V
 
-    .line 275
-    :cond_21
-    :goto_c
+    .line 267
+    :cond_20
+    :goto_b
     move-object v14, v2
 
-    .line 278
-    goto :goto_d
-
-    .line 279
-    :cond_22
-    invoke-virtual {v8}, Landroid/window/TransitionInfo$AnimationOptions;->getPackageName()Ljava/lang/String;
-
-    .line 280
-    move-result-object v4
-
-    .line 283
-    invoke-virtual {v8}, Landroid/window/TransitionInfo$AnimationOptions;->getAnimations()I
-
-    .line 284
-    move-result v5
-
-    .line 287
-    invoke-virtual {v2, v4, v5, v1, v6}, Lcom/android/internal/policy/TransitionAnimation;->loadAnimationAttr(Ljava/lang/String;IIZ)Landroid/view/animation/Animation;
-
-    .line 288
-    move-result-object v2
-
-    .line 291
+    .line 270
     goto :goto_c
 
-    .line 292
-    :cond_23
-    if-eqz v6, :cond_24
+    .line 271
+    :cond_21
+    invoke-virtual {v8}, Landroid/window/TransitionInfo$AnimationOptions;->getPackageName()Ljava/lang/String;
 
-    .line 293
-    if-nez v5, :cond_24
-
-    .line 295
-    const v5, 0x10102
-
-    .line 297
-    and-int/2addr v4, v5
-
-    .line 300
-    if-nez v4, :cond_24
-
-    .line 301
-    goto :goto_d
-
-    .line 303
-    :cond_24
-    invoke-virtual {v2, v1, v6}, Lcom/android/internal/policy/TransitionAnimation;->loadDefaultAnimationAttr(IZ)Landroid/view/animation/Animation;
-
-    .line 304
-    move-result-object v14
-
-    .line 307
-    :cond_25
-    :goto_d
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
-
-    .line 308
-    aget-boolean v2, v2, v7
-
-    .line 310
-    if-eqz v2, :cond_26
-
-    .line 312
-    invoke-static {v14}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 314
-    move-result-object v2
-
-    .line 317
-    int-to-long v4, v1
-
-    .line 318
-    invoke-static/range {p0 .. p0}, Landroid/view/WindowManager;->transitTypeToString(I)Ljava/lang/String;
-
-    .line 319
-    move-result-object v0
-
-    .line 322
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 323
-    move-result-object v0
-
-    .line 326
-    sget-object v1, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_TRANSITIONS:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
-
-    .line 327
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 329
+    .line 272
     move-result-object v4
 
-    .line 332
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 275
+    invoke-virtual {v8}, Landroid/window/TransitionInfo$AnimationOptions;->getAnimations()I
 
-    .line 333
-    move-result-object v3
+    .line 276
+    move-result v5
 
-    .line 336
-    filled-new-array {v2, v4, v0, v3}, [Ljava/lang/Object;
+    .line 279
+    invoke-virtual {v2, v4, v5, v1, v6}, Lcom/android/internal/policy/TransitionAnimation;->loadAnimationAttr(Ljava/lang/String;IIZ)Landroid/view/animation/Animation;
 
-    .line 337
+    .line 280
+    move-result-object v2
+
+    .line 283
+    goto :goto_b
+
+    .line 284
+    :cond_22
+    if-eqz v6, :cond_23
+
+    .line 285
+    if-nez v5, :cond_23
+
+    .line 287
+    const v5, 0x10102
+
+    .line 289
+    and-int/2addr v4, v5
+
+    .line 292
+    if-nez v4, :cond_23
+
+    .line 293
+    goto :goto_c
+
+    .line 295
+    :cond_23
+    invoke-virtual {v2, v1, v6}, Lcom/android/internal/policy/TransitionAnimation;->loadDefaultAnimationAttr(IZ)Landroid/view/animation/Animation;
+
+    .line 296
+    move-result-object v14
+
+    .line 299
+    :cond_24
+    :goto_c
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+
+    .line 300
+    aget-boolean v2, v2, v7
+
+    .line 302
+    if-eqz v2, :cond_25
+
+    .line 304
+    invoke-static {v14}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 306
+    move-result-object v2
+
+    .line 309
+    int-to-long v4, v1
+
+    .line 310
+    invoke-static/range {p0 .. p0}, Landroid/view/WindowManager;->transitTypeToString(I)Ljava/lang/String;
+
+    .line 311
     move-result-object v0
 
-    .line 340
+    .line 314
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 315
+    move-result-object v0
+
+    .line 318
+    sget-object v1, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_TRANSITIONS:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
+
+    .line 319
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 321
+    move-result-object v4
+
+    .line 324
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 325
+    move-result-object v3
+
+    .line 328
+    filled-new-array {v2, v4, v0, v3}, [Ljava/lang/Object;
+
+    .line 329
+    move-result-object v0
+
+    .line 332
     const-wide v2, -0x47ca01eaa5aec497L    # -6.46301879139433E-38
 
-    .line 341
+    .line 333
     const/16 v4, 0xc4
 
-    .line 346
+    .line 338
     const-string v5, "loadAnimation: anim=%s animAttr=0x%x type=%s isEntrance=%b"
 
-    .line 348
+    .line 340
     move-object/from16 p0, v1
 
-    .line 350
+    .line 342
     move-wide/from16 p1, v2
 
-    .line 352
+    .line 344
     move/from16 p3, v4
 
-    .line 354
+    .line 346
     move-object/from16 p4, v5
 
-    .line 356
+    .line 348
     move-object/from16 p5, v0
 
-    .line 358
-    invoke-static/range {p0 .. p5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    .line 350
+    invoke-static/range {p0 .. p5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 360
-    :cond_26
+    .line 352
+    :cond_25
     return-object v14
-    .line 363
+    .line 355
 .end method

@@ -1,10 +1,9 @@
 .class public final Lcom/google/common/collect/ImmutableList$Itr;
-.super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.super Lcom/google/common/collect/UnmodifiableIterator;
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/ListIterator;
-.implements Ljava/util/Iterator;
 
 
 # instance fields
@@ -29,42 +28,20 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 6
-    if-ltz p2, :cond_0
+    invoke-static {p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)V
 
     .line 9
-    if-gt p2, v0, :cond_0
-
-    .line 11
     iput v0, p0, Lcom/google/common/collect/ImmutableList$Itr;->size:I
 
-    .line 13
+    .line 12
     iput p2, p0, Lcom/google/common/collect/ImmutableList$Itr;->position:I
 
-    .line 15
+    .line 14
     iput-object p1, p0, Lcom/google/common/collect/ImmutableList$Itr;->list:Lcom/google/common/collect/ImmutableList;
 
-    .line 17
+    .line 16
     return-void
-
-    .line 19
-    :cond_0
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    .line 20
-    const-string p1, "index"
-
-    .line 22
-    invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->badPositionIndex(Ljava/lang/String;II)Ljava/lang/String;
-
-    .line 24
-    move-result-object p1
-
-    .line 27
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    .line 28
-    throw p0
-    .line 31
+    .line 18
 .end method
 
 
@@ -249,20 +226,6 @@
     .line 4
     return p0
     .line 6
-.end method
-
-.method public final remove()V
-    .locals 0
-
-    .line 1
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    .line 4
-    throw p0
-    .line 7
 .end method
 
 .method public final set(Ljava/lang/Object;)V

@@ -1,36 +1,36 @@
 .class public final Lcom/google/android/systemui/smartspace/CardPagerAdapter$ViewHolder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
-.field public final mCard:Lcom/google/android/systemui/smartspace/uitemplate/BaseTemplateCard;
+.field public final card:Lcom/google/android/systemui/smartspace/uitemplate/BaseTemplateCard;
 
-.field public final mLegacyCard:Lcom/google/android/systemui/smartspace/BcSmartspaceCard;
+.field public final legacyCard:Lcom/google/android/systemui/smartspace/BcSmartspaceLegacyCard;
 
-.field public final mPosition:I
+.field public final position:I
 
-.field public mTarget:Landroid/app/smartspace/SmartspaceTarget;
+.field public target:Landroid/app/smartspace/SmartspaceTarget;
 
 
 # direct methods
-.method public constructor <init>(ILcom/google/android/systemui/smartspace/BcSmartspaceCard;Landroid/app/smartspace/SmartspaceTarget;Lcom/google/android/systemui/smartspace/uitemplate/BaseTemplateCard;)V
+.method public constructor <init>(ILcom/google/android/systemui/smartspace/BcSmartspaceLegacyCard;Landroid/app/smartspace/SmartspaceTarget;Lcom/google/android/systemui/smartspace/uitemplate/BaseTemplateCard;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput p1, p0, Lcom/google/android/systemui/smartspace/CardPagerAdapter$ViewHolder;->mPosition:I
+    iput p1, p0, Lcom/google/android/systemui/smartspace/CardPagerAdapter$ViewHolder;->position:I
 
     .line 5
-    iput-object p2, p0, Lcom/google/android/systemui/smartspace/CardPagerAdapter$ViewHolder;->mLegacyCard:Lcom/google/android/systemui/smartspace/BcSmartspaceCard;
+    iput-object p2, p0, Lcom/google/android/systemui/smartspace/CardPagerAdapter$ViewHolder;->legacyCard:Lcom/google/android/systemui/smartspace/BcSmartspaceLegacyCard;
 
     .line 7
-    iput-object p3, p0, Lcom/google/android/systemui/smartspace/CardPagerAdapter$ViewHolder;->mTarget:Landroid/app/smartspace/SmartspaceTarget;
+    iput-object p3, p0, Lcom/google/android/systemui/smartspace/CardPagerAdapter$ViewHolder;->target:Landroid/app/smartspace/SmartspaceTarget;
 
     .line 9
-    iput-object p4, p0, Lcom/google/android/systemui/smartspace/CardPagerAdapter$ViewHolder;->mCard:Lcom/google/android/systemui/smartspace/uitemplate/BaseTemplateCard;
+    iput-object p4, p0, Lcom/google/android/systemui/smartspace/CardPagerAdapter$ViewHolder;->card:Lcom/google/android/systemui/smartspace/uitemplate/BaseTemplateCard;
 
     .line 11
     return-void

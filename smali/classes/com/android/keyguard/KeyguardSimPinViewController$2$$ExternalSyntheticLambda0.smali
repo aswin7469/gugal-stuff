@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/keyguard/KeyguardSimPinViewController$2$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -298,10 +298,10 @@
     move-result v3
 
     .line 170
-    const/4 v5, 0x2
+    const/4 v6, 0x2
 
     .line 171
-    if-gt v3, v5, :cond_5
+    if-gt v3, v6, :cond_5
 
     .line 172
     iget-object v3, v2, Lcom/android/keyguard/KeyguardSimPinViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPinViewController;
@@ -349,7 +349,7 @@
     invoke-virtual {v6, v0}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 204
-    const v0, 0x7f140709    # @string/ok '@android:string/ok'
+    const v0, 0x7f130764    # @string/ok '@android:string/ok'
 
     .line 207
     invoke-virtual {v6, v0, v4}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -403,16 +403,16 @@
     invoke-virtual {p0}, Landroid/telephony/PinResult;->getAttemptsRemaining()I
 
     .line 242
-    move-result v5
+    move-result v6
 
     .line 245
-    invoke-virtual {v0, v5}, Lcom/android/keyguard/KeyguardSimPinViewController;->getPinPasswordErrorMessage(I)Ljava/lang/String;
+    invoke-virtual {v0, v6}, Lcom/android/keyguard/KeyguardSimPinViewController;->getPinPasswordErrorMessage(I)Ljava/lang/String;
 
     .line 246
     move-result-object v0
 
     .line 249
-    invoke-virtual {v3, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v0, v5}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     .line 250
     goto :goto_3
@@ -437,16 +437,16 @@
     move-result-object v0
 
     .line 265
-    const v5, 0x7f1404dd    # @string/kg_password_pin_failed 'SIM PIN operation failed!'
+    const v6, 0x7f130533    # @string/kg_password_pin_failed 'SIM PIN operation failed!'
 
     .line 266
-    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     .line 269
     move-result-object v0
 
     .line 272
-    invoke-virtual {v3, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v0, v5}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     .line 273
     :goto_3

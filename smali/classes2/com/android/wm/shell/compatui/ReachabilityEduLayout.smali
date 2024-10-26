@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/compatui/ReachabilityEduLayout;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -329,7 +329,7 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b0636    # @id/reachability_move_left_button
+    const v0, 0x7f0a065f    # @id/reachability_move_left_button
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -341,7 +341,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/compatui/ReachabilityEduLayout;->mMoveLeftButton:Landroid/view/View;
 
     .line 12
-    const v0, 0x7f0b0637    # @id/reachability_move_right_button
+    const v0, 0x7f0a0660    # @id/reachability_move_right_button
 
     .line 14
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -353,7 +353,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/compatui/ReachabilityEduLayout;->mMoveRightButton:Landroid/view/View;
 
     .line 21
-    const v0, 0x7f0b0638    # @id/reachability_move_up_button
+    const v0, 0x7f0a0661    # @id/reachability_move_up_button
 
     .line 23
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -365,7 +365,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/compatui/ReachabilityEduLayout;->mMoveUpButton:Landroid/view/View;
 
     .line 30
-    const v0, 0x7f0b0635    # @id/reachability_move_down_button
+    const v0, 0x7f0a065e    # @id/reachability_move_down_button
 
     .line 32
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;

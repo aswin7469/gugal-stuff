@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -128,7 +128,7 @@
     const-string v1, "]"
 
     .line 8
-    invoke-static {v0, v1, p0}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v1, p0}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 10
     move-result-object p0
@@ -180,61 +180,61 @@
 
     .line 33
     :pswitch_7
-    const-string p0, "trust"
+    const-string/jumbo p0, "trust"
 
     .line 34
     return-object p0
 
-    .line 36
-    :pswitch_8
-    const-string p0, "transient"
-
     .line 37
+    :pswitch_8
+    const-string/jumbo p0, "transient"
+
+    .line 38
     return-object p0
 
-    .line 39
+    .line 41
     :pswitch_9
     const-string p0, "alignment"
 
-    .line 40
+    .line 42
     return-object p0
 
-    .line 42
+    .line 44
     :pswitch_a
     const-string p0, "battery"
 
-    .line 43
+    .line 45
     return-object p0
 
-    .line 45
+    .line 47
     :pswitch_b
     const-string p0, "logout"
 
-    .line 46
+    .line 48
     return-object p0
 
-    .line 48
+    .line 50
     :pswitch_c
     const-string p0, "disclosure"
 
-    .line 49
+    .line 51
     return-object p0
 
-    .line 51
+    .line 53
     :pswitch_d
     const-string p0, "owner_info"
 
-    .line 52
+    .line 54
     return-object p0
 
-    .line 54
+    .line 56
     :pswitch_e
     const-string p0, "none"
 
-    .line 55
+    .line 57
     return-object p0
 
-    .line 57
+    .line 59
     :pswitch_data_0
     .packed-switch -0x1
         :pswitch_e
@@ -254,7 +254,7 @@
         :pswitch_0
         :pswitch_1
     .end packed-switch
-    .line 58
+    .line 60
 .end method
 
 
@@ -459,7 +459,7 @@
     const-string v3, " "
 
     .line 142
-    invoke-static {v2, v3, v1}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v1}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 144
     move-result-object v1
@@ -613,13 +613,13 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController;->mStatusBarStateListener:Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController$1;
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
     .line 2
-    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+    iget-object v1, p0, Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController;->mStatusBarStateListener:Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController$1;
 
     .line 4
-    invoke-interface {v1, v0}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->removeCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
+    invoke-interface {v0, v1}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->removeCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
 
     .line 6
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController;->mShowNextIndicationRunnable:Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController$ShowNextIndication;
@@ -649,6 +649,7 @@
     .line 23
     :cond_1
     return-void
+    .line 25
 .end method
 
 .method public final showIndication(I)V

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 .super Landroid/view/ViewGroup;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -932,7 +932,7 @@
     move-result-object v0
 
     .line 5
-    const v1, 0x7f0c00a5    # @integer/max_notif_icons_on_aod '3'
+    const v1, 0x7f0b00ba    # @integer/max_notif_icons_on_aod '3'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -944,7 +944,7 @@
     move-result-object v0
 
     .line 15
-    const v1, 0x7f0c00a6    # @integer/max_notif_icons_on_lockscreen '3'
+    const v1, 0x7f0b00bb    # @integer/max_notif_icons_on_lockscreen '3'
 
     .line 16
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -956,7 +956,7 @@
     move-result-object v0
 
     .line 25
-    const v1, 0x7f0c00a7    # @integer/max_notif_static_icons '4'
+    const v1, 0x7f0b00bc    # @integer/max_notif_static_icons '4'
 
     .line 26
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -968,7 +968,7 @@
     move-result-object v0
 
     .line 35
-    const v1, 0x7f070843    # @dimen/overflow_icon_dot_padding '3.0sp'
+    const v1, 0x7f070893    # @dimen/overflow_icon_dot_padding '3.0sp'
 
     .line 36
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -986,7 +986,7 @@
     move-result-object v0
 
     .line 48
-    const v1, 0x7f070842    # @dimen/overflow_dot_radius '2.0sp'
+    const v1, 0x7f070892    # @dimen/overflow_dot_radius '2.0sp'
 
     .line 49
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

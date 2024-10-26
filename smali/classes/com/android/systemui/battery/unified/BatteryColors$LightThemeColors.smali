@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/battery/unified/BatteryColors;
@@ -51,74 +51,38 @@
     invoke-virtual {v0}, Landroid/graphics/Color;->toArgb()I
 
     .line 18
-    move-result v0
-
-    .line 21
-    sput v0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->bg:I
-
-    .line 22
     const-string v0, "#9AA0A6"
 
-    .line 24
+    .line 21
     invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
-    .line 26
-    move-result v0
-
-    .line 29
-    sput v0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->fill:I
-
-    .line 30
+    .line 23
     const-string v0, "#80868B"
 
-    .line 32
+    .line 26
     invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
-    .line 34
-    move-result v0
-
-    .line 37
-    sput v0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->fillOnly:I
-
-    .line 38
+    .line 28
     const-string v0, "#34A853"
 
-    .line 40
+    .line 31
     invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
-    .line 42
-    move-result v0
-
-    .line 45
-    sput v0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->activeFill:I
-
-    .line 46
+    .line 33
     const-string v0, "#FBBC04"
 
-    .line 48
+    .line 36
     invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
-    .line 50
-    move-result v0
-
-    .line 53
-    sput v0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->warnFill:I
-
-    .line 54
+    .line 38
     const-string v0, "#EA4335"
 
-    .line 56
+    .line 41
     invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
-    .line 58
-    move-result v0
-
-    .line 61
-    sput v0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->errorFill:I
-
-    .line 62
+    .line 43
     return-void
-    .line 64
+    .line 46
 .end method
 
 
@@ -152,83 +116,6 @@
     :cond_1
     return v0
     .line 12
-.end method
-
-.method public final getActiveFill()I
-    .locals 0
-
-    .line 1
-    sget p0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->activeFill:I
-
-    .line 2
-    return p0
-    .line 4
-.end method
-
-.method public final getBg()I
-    .locals 0
-
-    .line 1
-    sget p0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->bg:I
-
-    .line 2
-    return p0
-    .line 4
-.end method
-
-.method public final getErrorFill()I
-    .locals 0
-
-    .line 1
-    sget p0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->errorFill:I
-
-    .line 2
-    return p0
-    .line 4
-.end method
-
-.method public final getFg()I
-    .locals 0
-
-    .line 1
-    const/high16 p0, -0x1000000
-
-    .line 2
-    return p0
-    .line 4
-.end method
-
-.method public final getFill()I
-    .locals 0
-
-    .line 1
-    sget p0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->fill:I
-
-    .line 2
-    return p0
-    .line 4
-.end method
-
-.method public final getFillOnly()I
-    .locals 0
-
-    .line 1
-    sget p0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->fillOnly:I
-
-    .line 2
-    return p0
-    .line 4
-.end method
-
-.method public final getWarnFill()I
-    .locals 0
-
-    .line 1
-    sget p0, Lcom/android/systemui/battery/unified/BatteryColors$LightThemeColors;->warnFill:I
-
-    .line 2
-    return p0
-    .line 4
 .end method
 
 .method public final hashCode()I

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/people/widget/PeopleBackupHelper;
 .super Landroid/app/backup/SharedPreferencesBackupHelper;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -1029,67 +1029,67 @@
     invoke-direct {v1}, Landroid/os/PersistableBundle;-><init>()V
 
     .line 299
-    const-string v2, "start_date"
+    const-string/jumbo v2, "start_date"
 
     .line 302
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 304
+    .line 305
     move-result-wide v3
 
-    .line 307
+    .line 308
     invoke-virtual {v1, v2, v3, v4}, Landroid/os/PersistableBundle;->putLong(Ljava/lang/String;J)V
 
-    .line 308
+    .line 309
     new-instance v2, Landroid/app/job/JobInfo$Builder;
 
-    .line 311
+    .line 312
     new-instance v3, Landroid/content/ComponentName;
 
-    .line 313
+    .line 314
     const-class v4, Lcom/android/systemui/people/PeopleBackupFollowUpJob;
 
-    .line 315
+    .line 316
     invoke-direct {v3, p1, v4}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 317
+    .line 318
     const p1, 0x475b8c1
 
-    .line 320
+    .line 321
     invoke-direct {v2, p1, v3}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
 
-    .line 323
+    .line 324
     sget-wide v3, Lcom/android/systemui/people/PeopleBackupFollowUpJob;->JOB_PERIODIC_DURATION:J
 
-    .line 326
+    .line 327
     invoke-virtual {v2, v3, v4}, Landroid/app/job/JobInfo$Builder;->setPeriodic(J)Landroid/app/job/JobInfo$Builder;
 
-    .line 328
+    .line 329
     move-result-object p1
-
-    .line 331
-    invoke-virtual {p1, v1}, Landroid/app/job/JobInfo$Builder;->setExtras(Landroid/os/PersistableBundle;)Landroid/app/job/JobInfo$Builder;
 
     .line 332
-    move-result-object p1
+    invoke-virtual {p1, v1}, Landroid/app/job/JobInfo$Builder;->setExtras(Landroid/os/PersistableBundle;)Landroid/app/job/JobInfo$Builder;
 
-    .line 335
-    invoke-virtual {p1}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
+    .line 333
+    move-result-object p1
 
     .line 336
+    invoke-virtual {p1}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
+
+    .line 337
     move-result-object p1
 
-    .line 339
+    .line 340
     invoke-virtual {v0, p1}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
-    .line 340
+    .line 341
     :cond_b
     iget-object p0, p0, Lcom/android/systemui/people/widget/PeopleBackupHelper;->mContext:Landroid/content/Context;
 
-    .line 343
+    .line 344
     invoke-static {p0}, Lcom/android/systemui/people/widget/PeopleBackupHelper;->updateWidgets(Landroid/content/Context;)V
 
-    .line 345
+    .line 346
     return-void
-    .line 348
+    .line 349
 .end method

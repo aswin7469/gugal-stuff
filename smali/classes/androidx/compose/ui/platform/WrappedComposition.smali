@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/platform/WrappedComposition;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/runtime/Composition;
@@ -67,7 +67,7 @@
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 11
-    const v1, 0x7f0b090d    # @id/wrapped_composition_tag
+    const v1, 0x7f0a0946    # @id/wrapped_composition_tag
 
     .line 14
     const/4 v2, 0x0
@@ -94,23 +94,6 @@
     .line 30
     return-void
     .line 33
-.end method
-
-.method public final isDisposed()Z
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Landroidx/compose/ui/platform/WrappedComposition;->original:Landroidx/compose/runtime/Composition;
-
-    .line 2
-    invoke-interface {p0}, Landroidx/compose/runtime/Composition;->isDisposed()Z
-
-    .line 4
-    move-result p0
-
-    .line 7
-    return p0
-    .line 8
 .end method
 
 .method public final onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -194,5 +177,4 @@
     .line 24
     :cond_1
     return-void
-    .line 26
 .end method

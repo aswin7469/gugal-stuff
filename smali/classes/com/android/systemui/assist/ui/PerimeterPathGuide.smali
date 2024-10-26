@@ -1,12 +1,12 @@
 .class public final Lcom/android/systemui/assist/ui/PerimeterPathGuide;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final mBottomCornerRadiusPx:I
 
-.field public final mCornerPathRenderer:Lcom/android/systemui/assist/ui/CircularCornerPathRenderer;
+.field public final mCornerPathRenderer:Lcom/android/systemui/assist/ui/PathSpecCornerPathRenderer;
 
 .field public final mDeviceHeightPx:I
 
@@ -24,7 +24,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/assist/ui/CircularCornerPathRenderer;III)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/assist/ui/PathSpecCornerPathRenderer;III)V
     .locals 3
 
     .line 1
@@ -52,7 +52,7 @@
     iput v2, p0, Lcom/android/systemui/assist/ui/PerimeterPathGuide;->mRotation:I
 
     .line 18
-    iput-object p2, p0, Lcom/android/systemui/assist/ui/PerimeterPathGuide;->mCornerPathRenderer:Lcom/android/systemui/assist/ui/CircularCornerPathRenderer;
+    iput-object p2, p0, Lcom/android/systemui/assist/ui/PerimeterPathGuide;->mCornerPathRenderer:Lcom/android/systemui/assist/ui/PathSpecCornerPathRenderer;
 
     .line 20
     iput p4, p0, Lcom/android/systemui/assist/ui/PerimeterPathGuide;->mDeviceWidthPx:I
@@ -309,10 +309,10 @@
     int-to-float v3, v15
 
     .line 99
-    iget-object v5, v0, Lcom/android/systemui/assist/ui/PerimeterPathGuide;->mCornerPathRenderer:Lcom/android/systemui/assist/ui/CircularCornerPathRenderer;
+    iget-object v5, v0, Lcom/android/systemui/assist/ui/PerimeterPathGuide;->mCornerPathRenderer:Lcom/android/systemui/assist/ui/PathSpecCornerPathRenderer;
 
     .line 100
-    invoke-virtual {v5, v1, v3}, Lcom/android/systemui/assist/ui/CircularCornerPathRenderer;->getInsetPath(Lcom/android/systemui/assist/ui/CornerPathRenderer$Corner;F)Landroid/graphics/Path;
+    invoke-virtual {v5, v1, v3}, Lcom/android/systemui/assist/ui/PathSpecCornerPathRenderer;->getInsetPath(Lcom/android/systemui/assist/ui/CornerPathRenderer$Corner;F)Landroid/graphics/Path;
 
     .line 102
     move-result-object v3
@@ -327,7 +327,7 @@
     int-to-float v14, v15
 
     .line 110
-    invoke-virtual {v5, v8, v14}, Lcom/android/systemui/assist/ui/CircularCornerPathRenderer;->getInsetPath(Lcom/android/systemui/assist/ui/CornerPathRenderer$Corner;F)Landroid/graphics/Path;
+    invoke-virtual {v5, v8, v14}, Lcom/android/systemui/assist/ui/PathSpecCornerPathRenderer;->getInsetPath(Lcom/android/systemui/assist/ui/CornerPathRenderer$Corner;F)Landroid/graphics/Path;
 
     .line 111
     move-result-object v14
@@ -342,7 +342,7 @@
     int-to-float v14, v15
 
     .line 119
-    invoke-virtual {v5, v11, v14}, Lcom/android/systemui/assist/ui/CircularCornerPathRenderer;->getInsetPath(Lcom/android/systemui/assist/ui/CornerPathRenderer$Corner;F)Landroid/graphics/Path;
+    invoke-virtual {v5, v11, v14}, Lcom/android/systemui/assist/ui/PathSpecCornerPathRenderer;->getInsetPath(Lcom/android/systemui/assist/ui/CornerPathRenderer$Corner;F)Landroid/graphics/Path;
 
     .line 120
     move-result-object v14
@@ -360,7 +360,7 @@
     int-to-float v3, v15
 
     .line 129
-    invoke-virtual {v5, v10, v3}, Lcom/android/systemui/assist/ui/CircularCornerPathRenderer;->getInsetPath(Lcom/android/systemui/assist/ui/CornerPathRenderer$Corner;F)Landroid/graphics/Path;
+    invoke-virtual {v5, v10, v3}, Lcom/android/systemui/assist/ui/PathSpecCornerPathRenderer;->getInsetPath(Lcom/android/systemui/assist/ui/CornerPathRenderer$Corner;F)Landroid/graphics/Path;
 
     .line 130
     move-result-object v3

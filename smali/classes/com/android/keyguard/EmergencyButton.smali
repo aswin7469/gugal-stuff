@@ -1,6 +1,6 @@
 .class public Lcom/android/keyguard/EmergencyButton;
 .super Landroid/widget/Button;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -38,7 +38,7 @@
     iget-object v1, p0, Landroid/widget/Button;->mContext:Landroid/content/Context;
 
     .line 12
-    const v2, 0x104055d    # @android:string/lockscreen_too_many_failed_pin_attempts_dialog_message
+    const v2, 0x1040554    # @android:string/lockscreen_sim_puk_locked_instructions
 
     .line 14
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -119,7 +119,7 @@
 
     move-result-object p2
 
-    const v0, 0x111018a    # @android:bool/config_fillSecondaryBuiltInDisplayCutout
+    const v0, 0x1110189    # @android:bool/config_fillMainBuiltInDisplayCutout
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -292,4 +292,5 @@
 
     .line 68
     return p0
+    .line 69
 .end method

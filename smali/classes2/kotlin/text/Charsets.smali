@@ -1,9 +1,11 @@
 .class public abstract Lkotlin/text/Charsets;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
+.field public static final UTF_16:Ljava/nio/charset/Charset;
+
 .field public static final UTF_8:Ljava/nio/charset/Charset;
 
 
@@ -30,30 +32,36 @@
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     .line 12
-    const-string v0, "UTF-16BE"
+    move-result-object v0
 
     .line 15
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    sput-object v0, Lkotlin/text/Charsets;->UTF_16:Ljava/nio/charset/Charset;
 
-    .line 17
-    const-string v0, "UTF-16LE"
+    .line 16
+    const-string v0, "UTF-16BE"
+
+    .line 18
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     .line 20
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    const-string v0, "UTF-16LE"
 
-    .line 22
-    const-string v0, "US-ASCII"
+    .line 23
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     .line 25
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    const-string v0, "US-ASCII"
 
-    .line 27
-    const-string v0, "ISO-8859-1"
+    .line 28
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     .line 30
+    const-string v0, "ISO-8859-1"
+
+    .line 33
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-    .line 32
-    return-void
     .line 35
+    return-void
+    .line 38
 .end method

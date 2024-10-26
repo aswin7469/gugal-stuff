@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/classifier/ProximityClassifier;
 .super Lcom/android/systemui/classifier/FalsingClassifier;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -33,26 +33,26 @@
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 7
-    const-string p1, "systemui"
+    const-string p1, "brightline_falsing_proximity_percent_covered_threshold"
 
     .line 10
-    const-string p2, "brightline_falsing_proximity_percent_covered_threshold"
+    const p2, 0x3dcccccd    # 0.1f
 
     .line 12
-    const p3, 0x3dcccccd    # 0.1f
+    const-string/jumbo p3, "systemui"
 
-    .line 14
-    invoke-static {p1, p2, p3}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
+    .line 15
+    invoke-static {p3, p1, p2}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 17
+    .line 18
     move-result p1
 
-    .line 20
+    .line 21
     iput p1, p0, Lcom/android/systemui/classifier/ProximityClassifier;->mPercentCoveredThreshold:F
 
-    .line 21
+    .line 22
     return-void
-    .line 23
+    .line 24
 .end method
 
 

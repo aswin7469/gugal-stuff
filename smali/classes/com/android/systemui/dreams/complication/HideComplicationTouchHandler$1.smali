@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -76,102 +76,96 @@
     iget-object v0, p0, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler$1;->this$0:Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;
 
     .line 27
-    iget-object v0, v0, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;->mVisibilityController:Lcom/android/systemui/complication/Complication$VisibilityController;
+    iget-object v0, v0, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;->mVisibilityController:Lcom/android/systemui/complication/ComplicationLayoutEngine;
 
     .line 29
-    check-cast v0, Lcom/android/systemui/complication/ComplicationLayoutEngine;
-
-    .line 31
     iget-object v1, v0, Lcom/android/systemui/complication/ComplicationLayoutEngine;->mLayout:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    .line 33
+    .line 31
     iget v0, v0, Lcom/android/systemui/complication/ComplicationLayoutEngine;->mFadeOutDuration:I
 
-    .line 35
+    .line 33
     int-to-long v2, v0
 
-    .line 37
+    .line 35
     const/4 v0, 0x0
 
-    .line 38
+    .line 36
     invoke-static {v1, v2, v3, v0}, Lcom/android/systemui/statusbar/CrossFadeHelper;->fadeOut(Landroid/view/View;JLjava/lang/Runnable;)V
 
-    .line 39
+    .line 37
     iget-object v1, p0, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler$1;->this$0:Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;
 
-    .line 42
+    .line 40
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 44
+    .line 42
     iget-object v1, v1, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;->mHiddenCallback:Ljava/lang/Runnable;
 
-    .line 47
+    .line 45
     if-eqz v1, :cond_1
 
-    .line 49
+    .line 47
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 51
+    .line 49
     iget-object p0, p0, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler$1;->this$0:Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;
 
-    .line 54
+    .line 52
     iput-object v0, p0, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;->mHiddenCallback:Ljava/lang/Runnable;
 
-    .line 56
+    .line 54
     :cond_1
     :goto_0
     return-void
 
-    .line 58
+    .line 56
     :pswitch_0
     const-string v0, "HideComplicationHandler"
 
-    .line 59
+    .line 57
     const-string v1, "Restoring complications..."
 
-    .line 61
+    .line 59
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
+    .line 61
     iget-object v0, p0, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler$1;->this$0:Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;
 
+    .line 64
+    iget-object v0, v0, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;->mVisibilityController:Lcom/android/systemui/complication/ComplicationLayoutEngine;
+
     .line 66
-    iget-object v0, v0, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;->mVisibilityController:Lcom/android/systemui/complication/Complication$VisibilityController;
-
-    .line 68
-    check-cast v0, Lcom/android/systemui/complication/ComplicationLayoutEngine;
-
-    .line 70
     iget-object v1, v0, Lcom/android/systemui/complication/ComplicationLayoutEngine;->mLayout:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    .line 72
+    .line 68
     iget v0, v0, Lcom/android/systemui/complication/ComplicationLayoutEngine;->mFadeInDuration:I
 
-    .line 74
+    .line 70
     int-to-long v2, v0
 
-    .line 76
+    .line 72
     const/4 v0, 0x0
 
-    .line 77
+    .line 73
     invoke-static {v1, v2, v3, v0}, Lcom/android/systemui/statusbar/CrossFadeHelper;->fadeIn(Landroid/view/View;JI)V
 
-    .line 78
+    .line 74
     iget-object p0, p0, Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler$1;->this$0:Lcom/android/systemui/dreams/complication/HideComplicationTouchHandler;
 
-    .line 81
+    .line 77
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 83
+    .line 79
     return-void
 
-    .line 86
+    .line 82
     nop
 
-    .line 87
+    .line 83
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 88
+    .line 84
 .end method

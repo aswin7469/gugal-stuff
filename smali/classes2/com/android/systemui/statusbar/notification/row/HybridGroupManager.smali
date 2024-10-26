@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/HybridGroupManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -30,7 +30,7 @@
     move-result-object p1
 
     .line 10
-    const v0, 0x7f070304    # @dimen/group_overflow_number_size '@android:dimen/preference_breadcrumbs_padding_end_material'
+    const v0, 0x7f070339    # @dimen/group_overflow_number_size '@android:dimen/preference_breadcrumbs_padding_end_material'
 
     .line 11
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -45,7 +45,7 @@
     iput v0, p0, Lcom/android/systemui/statusbar/notification/row/HybridGroupManager;->mOverflowNumberSize:F
 
     .line 19
-    const v0, 0x7f070303    # @dimen/group_overflow_number_padding '@android:dimen/notification_header_padding_top'
+    const v0, 0x7f070338    # @dimen/group_overflow_number_padding '@android:dimen/notification_header_padding_top'
 
     .line 21
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -139,116 +139,110 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/row/shared/AsyncHybridViewInflation;->assertInLegacyMode()V
-
-    .line 2
     const/4 v0, 0x0
 
-    .line 5
+    .line 2
     if-nez p1, :cond_1
 
-    .line 6
+    .line 3
     const-string p1, "HybridGroupManager#bindFromNotification"
 
-    .line 8
+    .line 5
     invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 10
+    .line 7
     const-string p1, "HybridGroupManager#inflateHybridView"
 
-    .line 13
+    .line 10
     invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 15
+    .line 12
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/HybridGroupManager;->mContext:Landroid/content/Context;
 
-    .line 18
+    .line 15
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    .line 20
+    .line 17
     move-result-object p0
 
-    .line 23
+    .line 20
     instance-of p1, p2, Lcom/android/internal/widget/ConversationLayout;
 
-    .line 24
+    .line 21
     if-eqz p1, :cond_0
 
-    .line 26
-    const p1, 0x7f0e00d2    # @layout/hybrid_conversation_notification 'res/layout/hybrid_conversation_notification.xml'
+    .line 23
+    const p1, 0x7f0d00db    # @layout/hybrid_conversation_notification 'res/layout/hybrid_conversation_notification.xml'
 
-    .line 28
+    .line 25
     goto :goto_0
 
-    .line 31
+    .line 28
     :cond_0
-    const p1, 0x7f0e00d3    # @layout/hybrid_notification 'res/layout/hybrid_notification.xml'
+    const p1, 0x7f0d00dc    # @layout/hybrid_notification 'res/layout/hybrid_notification.xml'
 
-    .line 32
+    .line 29
     :goto_0
     invoke-virtual {p0, p1, p4, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 35
+    .line 32
     move-result-object p0
 
-    .line 38
+    .line 35
     move-object p1, p0
 
-    .line 39
+    .line 36
     check-cast p1, Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
 
-    .line 40
+    .line 37
     invoke-virtual {p4, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 42
+    .line 39
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 45
+    .line 42
     const/4 v0, 0x1
 
-    .line 48
+    .line 45
     :cond_1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/row/shared/AsyncHybridViewInflation;->assertInLegacyMode()V
+    invoke-virtual {p3}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    .line 46
+    move-result-object p0
 
     .line 49
-    invoke-virtual {p3}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
-
-    .line 52
-    move-result-object p0
-
-    .line 55
     invoke-static {p0}, Lcom/android/systemui/statusbar/notification/row/HybridGroupManager;->resolveTitle(Landroid/app/Notification;)Ljava/lang/CharSequence;
 
-    .line 56
+    .line 50
     move-result-object p0
 
-    .line 59
+    .line 53
     invoke-virtual {p3}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    .line 60
+    .line 54
     move-result-object p3
 
-    .line 63
+    .line 57
     invoke-static {p3}, Lcom/android/systemui/statusbar/notification/row/HybridGroupManager;->resolveText(Landroid/app/Notification;)Ljava/lang/CharSequence;
 
-    .line 64
+    .line 58
     move-result-object p3
 
-    .line 67
+    .line 61
     if-eqz p1, :cond_2
 
-    .line 68
+    .line 62
     invoke-virtual {p1, p0, p3, p2}, Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;->bind(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/view/View;)V
 
-    .line 70
+    .line 64
     :cond_2
     if-eqz v0, :cond_3
 
-    .line 73
+    .line 67
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 75
+    .line 69
     :cond_3
     return-object p1
-    .line 78
+    .line 72
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -531,7 +531,7 @@
     move-object/from16 v14, p1
 
     .line 4
-    const v1, 0x7f0b00b1    # @id/ambient_indication_container
+    const v1, 0x7f0a00b1    # @id/ambient_indication_container
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -540,7 +540,7 @@
     move-result-object v10
 
     .line 12
-    const v1, 0x7f0b075e    # @id/start_button
+    const v1, 0x7f0a078d    # @id/start_button
 
     .line 13
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -555,7 +555,7 @@
     check-cast v4, Landroid/widget/ImageView;
 
     .line 21
-    const v1, 0x7f0b02d1    # @id/end_button
+    const v1, 0x7f0a02ea    # @id/end_button
 
     .line 23
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -570,7 +570,7 @@
     check-cast v8, Landroid/widget/ImageView;
 
     .line 31
-    const v1, 0x7f0b05b2    # @id/overlay_container
+    const v1, 0x7f0a05d7    # @id/overlay_container
 
     .line 33
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -579,7 +579,7 @@
     move-result-object v9
 
     .line 39
-    const v1, 0x7f0b03e4    # @id/keyguard_settings_button
+    const v1, 0x7f0a0405    # @id/keyguard_settings_button
 
     .line 40
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -633,7 +633,7 @@
     move-result-object v2
 
     .line 80
-    const v3, 0x7f070208    # @dimen/default_burn_in_prevention_offset '15.0dp'
+    const v3, 0x7f07022a    # @dimen/default_burn_in_prevention_offset '15.0dp'
 
     .line 81
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -651,7 +651,7 @@
     move-result-object v5
 
     .line 93
-    const v6, 0x7f070335    # @dimen/keyguard_affordance_fixed_width '48.0dp'
+    const v6, 0x7f070371    # @dimen/keyguard_affordance_fixed_width '48.0dp'
 
     .line 94
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -666,7 +666,7 @@
     move-result-object v6
 
     .line 104
-    const v7, 0x7f070332    # @dimen/keyguard_affordance_fixed_height '48.0dp'
+    const v7, 0x7f07036e    # @dimen/keyguard_affordance_fixed_height '48.0dp'
 
     .line 105
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

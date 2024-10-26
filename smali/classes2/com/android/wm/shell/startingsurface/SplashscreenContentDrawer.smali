@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/startingsurface/SplashscreenContentDrawer;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -100,7 +100,7 @@
 
     .line 32
     :goto_0
-    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 34
     aget-boolean v4, v4, v2
@@ -160,7 +160,7 @@
     const-wide v9, -0xdabcd33eb6ac5d8L    # -5.387335982221266E242
 
     .line 70
-    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 75
     :cond_2
@@ -300,7 +300,7 @@
     move-result-wide v12
 
     .line 155
-    sget-object v14, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object v14, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 156
     aget-boolean v14, v14, v2
@@ -450,7 +450,7 @@
     const-wide v26, 0x63e30ae91f036fbL
 
     .line 247
-    invoke-static/range {v25 .. v30}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v25 .. v30}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 252
     goto :goto_1
@@ -555,7 +555,7 @@
     move-result-object p1
 
     .line 51
-    const p2, 0x7f050007    # @bool/config_canUseAppIconForSplashScreen 'true'
+    const p2, 0x7f05000c    # @bool/config_canUseAppIconForSplashScreen 'true'
 
     .line 52
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -627,7 +627,7 @@
     iget v6, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 28
-    sget-object v7, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object v7, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 30
     const/4 v8, 0x1
@@ -696,7 +696,7 @@
     const/16 v17, 0x0
 
     .line 74
-    invoke-static/range {v13 .. v18}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v13 .. v18}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 76
     :cond_2
@@ -857,7 +857,7 @@
     if-eqz v3, :cond_a
 
     .line 174
-    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 176
     aget-boolean v3, v3, v8
@@ -890,7 +890,7 @@
     const/4 v12, 0x0
 
     .line 198
-    invoke-static/range {v9 .. v14}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v9 .. v14}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 199
     :cond_7
@@ -934,7 +934,7 @@
     if-eqz v5, :cond_9
 
     .line 226
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 228
     aget-boolean v0, v0, v8
@@ -967,7 +967,7 @@
     const/4 v12, 0x0
 
     .line 250
-    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -1286,7 +1286,7 @@
     if-lez v1, :cond_1
 
     .line 13
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 15
     const/4 v1, 0x1
@@ -1313,7 +1313,7 @@
     const/4 v4, 0x0
 
     .line 31
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 32
     :cond_0
@@ -1522,7 +1522,7 @@
     move-result-object v0
 
     .line 21
-    const v1, 0x7f0604ee    # @color/splash_window_background_default '@color/splash_screen_bg_light'
+    const v1, 0x7f0604fc    # @color/splash_window_background_default '@color/splash_screen_bg_light'
 
     .line 22
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
@@ -1671,7 +1671,7 @@
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 85
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 88
     aget-boolean p0, p0, v2
@@ -1729,7 +1729,7 @@
     const-wide v2, -0x2146dbcfeb3fce9eL    # -2.0092159986130433E148
 
     .line 122
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 127
     :cond_1
@@ -1988,7 +1988,7 @@
     sub-long/2addr p6, p2
 
     .line 51
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 52
     const/4 p2, 0x1
@@ -2024,7 +2024,7 @@
     const/4 v4, 0x0
 
     .line 75
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 76
     :cond_2
@@ -2460,7 +2460,7 @@
     move-result-object v0
 
     .line 37
-    const v1, 0x7f0709ae    # @dimen/starting_surface_brand_image_width '200.0dp'
+    const v1, 0x7f070a06    # @dimen/starting_surface_brand_image_width '200.0dp'
 
     .line 38
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2481,7 +2481,7 @@
     move-result-object v0
 
     .line 52
-    const v1, 0x7f0709ad    # @dimen/starting_surface_brand_image_height '80.0dp'
+    const v1, 0x7f070a05    # @dimen/starting_surface_brand_image_height '80.0dp'
 
     .line 53
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2502,7 +2502,7 @@
     move-result-object v0
 
     .line 67
-    const v1, 0x7f0709b0    # @dimen/starting_surface_exit_animation_window_shift_length '20.0dp'
+    const v1, 0x7f070a08    # @dimen/starting_surface_exit_animation_window_shift_length '20.0dp'
 
     .line 68
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2523,7 +2523,7 @@
     move-result-object v0
 
     .line 82
-    const v1, 0x7f07099f    # @dimen/splash_icon_enlarge_foreground_threshold '0.44'
+    const v1, 0x7f0709f7    # @dimen/splash_icon_enlarge_foreground_threshold '0.44'
 
     .line 83
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F
@@ -2544,7 +2544,7 @@
     move-result-object v0
 
     .line 97
-    const v1, 0x7f0709a0    # @dimen/splash_icon_no_background_scale_factor '1.2'
+    const v1, 0x7f0709f8    # @dimen/splash_icon_no_background_scale_factor '1.2'
 
     .line 98
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F

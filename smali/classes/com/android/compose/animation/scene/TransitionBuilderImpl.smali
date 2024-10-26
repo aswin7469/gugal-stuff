@@ -1,6 +1,6 @@
 .class public final Lcom/android/compose/animation/scene/TransitionBuilderImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -19,7 +19,7 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 4
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,7 +34,7 @@
     iput-object v0, p0, Lcom/android/compose/animation/scene/TransitionBuilderImpl;->transformations:Ljava/util/List;
 
     .line 10
-    const/4 v0, 0x5
+    const/4 v0, 0x0
 
     .line 12
     const/high16 v1, 0x43480000    # 200.0f
@@ -43,32 +43,35 @@
     const/4 v2, 0x0
 
     .line 15
-    invoke-static {v1, v2, v0}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
+    const/4 v3, 0x5
 
     .line 16
-    move-result-object v0
+    invoke-static {v0, v1, v2, v3}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FFLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
 
-    .line 19
-    iput-object v0, p0, Lcom/android/compose/animation/scene/TransitionBuilderImpl;->spec:Landroidx/compose/animation/core/AnimationSpec;
+    .line 17
+    move-result-object v0
 
     .line 20
+    iput-object v0, p0, Lcom/android/compose/animation/scene/TransitionBuilderImpl;->spec:Landroidx/compose/animation/core/AnimationSpec;
+
+    .line 21
     new-instance v0, Lcom/android/compose/animation/scene/TransitionBuilderImpl$durationMillis$2;
 
-    .line 22
+    .line 23
     invoke-direct {v0, p0}, Lcom/android/compose/animation/scene/TransitionBuilderImpl$durationMillis$2;-><init>(Lcom/android/compose/animation/scene/TransitionBuilderImpl;)V
 
-    .line 24
+    .line 25
     invoke-static {v0}, Lkotlin/LazyKt__LazyJVMKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
 
-    .line 27
+    .line 28
     move-result-object v0
 
-    .line 30
+    .line 31
     iput-object v0, p0, Lcom/android/compose/animation/scene/TransitionBuilderImpl;->durationMillis$delegate:Lkotlin/Lazy;
 
-    .line 31
+    .line 32
     return-void
-    .line 33
+    .line 34
 .end method
 
 .method public static synthetic timestampRange$default(Lcom/android/compose/animation/scene/TransitionBuilderImpl;Ljava/lang/Integer;Lkotlin/jvm/functions/Function1;)V

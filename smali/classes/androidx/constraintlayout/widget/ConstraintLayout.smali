@@ -1,6 +1,6 @@
 .class public Landroidx/constraintlayout/widget/ConstraintLayout;
 .super Landroid/view/ViewGroup;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -1911,7 +1911,7 @@
     check-cast v4, Landroidx/constraintlayout/widget/ConstraintHelper;
 
     .line 24
-    invoke-virtual {v4, v0}, Landroidx/constraintlayout/widget/ConstraintHelper;->updatePreDraw(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 26
     add-int/lit8 v3, v3, 0x1

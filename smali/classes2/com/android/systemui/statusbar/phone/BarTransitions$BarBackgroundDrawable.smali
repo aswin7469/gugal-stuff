@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/BarTransitions$BarBackgroundDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -71,7 +71,7 @@
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     .line 19
-    const v0, 0x7f060571    # @color/system_bar_background_opaque '#ff000000'
+    const v0, 0x7f060587    # @color/system_bar_background_opaque '#ff000000'
 
     .line 22
     invoke-virtual {p2, v0}, Landroid/content/Context;->getColor(I)I
@@ -95,7 +95,7 @@
     iput v0, p0, Lcom/android/systemui/statusbar/phone/BarTransitions$BarBackgroundDrawable;->mSemiTransparent:I
 
     .line 38
-    const v0, 0x7f060572    # @color/system_bar_background_transparent '#00000000'
+    const v0, 0x7f060588    # @color/system_bar_background_transparent '#00000000'
 
     .line 40
     invoke-virtual {p2, v0}, Landroid/content/Context;->getColor(I)I
@@ -688,6 +688,7 @@
 
     .line 30
     return-void
+    .line 33
 .end method
 
 .method public final setTintMode(Landroid/graphics/PorterDuff$Mode;)V

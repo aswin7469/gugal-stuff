@@ -1,6 +1,6 @@
 .class final synthetic Lcom/android/systemui/controls/ui/ControlsUiControllerImpl$show$1;
 .super Lkotlin/jvm/internal/FunctionReferenceImpl;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -45,7 +45,7 @@
     const/4 v2, 0x1
 
     .line 20
-    const v3, 0x7f0e008c    # @layout/controls_no_favorites 'res/layout/controls_no_favorites.xml'
+    const v3, 0x7f0d0094    # @layout/controls_no_favorites 'res/layout/controls_no_favorites.xml'
 
     .line 21
     invoke-virtual {p1, v3, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -65,7 +65,7 @@
 
     .line 32
     :goto_0
-    const p1, 0x7f0b0221    # @id/controls_subtitle
+    const p1, 0x7f0a022c    # @id/controls_subtitle
 
     .line 33
     invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -86,7 +86,7 @@
     move-result-object p0
 
     .line 47
-    const v0, 0x7f1402ee    # @string/controls_seeding_in_progress 'Loading recommendations'
+    const v0, 0x7f13030a    # @string/controls_seeding_in_progress 'Loading recommendations'
 
     .line 48
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

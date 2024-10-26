@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -41,7 +41,7 @@
     iput-object p5, p0, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl;->subscriptionManager:Lcom/android/systemui/statusbar/pipeline/mobile/util/SubscriptionManagerProxyImpl;
 
     .line 7
-    const p2, 0x111018c    # @android:bool/config_flipToScreenOffEnabled
+    const p2, 0x111018b    # @android:bool/config_fingerprintSupportsGestures
 
     .line 9
     invoke-virtual {p3, p2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -128,150 +128,102 @@
     move-result-object v1
 
     .line 66
-    iput-object v1, p0, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl;->activeSubscriptionInfo:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 67
     new-instance v2, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl$special$$inlined$map$3;
 
-    .line 69
+    .line 67
     const/4 v3, 0x1
 
-    .line 71
+    .line 69
     invoke-direct {v2, v1, p7, v3}, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl$special$$inlined$map$3;-><init>(Lkotlinx/coroutines/flow/ReadonlyStateFlow;Ljava/lang/Object;I)V
 
-    .line 72
+    .line 70
     invoke-static {v2, p1, p2, p5}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 75
+    .line 73
     move-result-object p7
 
-    .line 78
+    .line 76
     iput-object p7, p0, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl;->isLockedEsim:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 79
+    .line 77
     new-instance p7, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl$special$$inlined$map$2;
 
-    .line 81
+    .line 79
     const/4 v1, 0x1
 
-    .line 83
+    .line 81
     invoke-direct {p7, v0, v1}, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl$special$$inlined$map$2;-><init>(Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl$special$$inlined$map$1;I)V
 
-    .line 84
+    .line 82
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 87
+    .line 85
     invoke-static {p7, p1, p2, v0}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 89
-    move-result-object p2
-
-    .line 92
-    iput-object p2, p0, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl;->isSimPukLocked:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 93
+    .line 87
     new-instance p2, Landroid/content/IntentFilter;
 
-    .line 95
+    .line 90
     const-string p7, "com.android.keyguard.disable_esim"
 
-    .line 97
+    .line 92
     invoke-direct {p2, p7}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 99
+    .line 94
     new-instance p7, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl$disableEsimErrorMessage$1;
 
-    .line 102
+    .line 97
     invoke-direct {p7, p3}, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl$disableEsimErrorMessage$1;-><init>(Landroid/content/res/Resources;)V
 
-    .line 104
+    .line 99
     const/16 p3, 0xe
 
-    .line 107
+    .line 102
     invoke-static {p6, p2, p5, p7, p3}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->broadcastFlow$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/IntentFilter;Landroid/os/UserHandle;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/flow/Flow;
 
-    .line 109
+    .line 104
     move-result-object p2
 
-    .line 112
+    .line 107
     invoke-static {p5}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 113
+    .line 108
     move-result-object p3
 
-    .line 116
-    iput-object p3, p0, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl;->simVerificationErrorMessage:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 117
+    .line 111
     filled-new-array {p2, p3}, [Lkotlinx/coroutines/flow/Flow;
 
-    .line 119
+    .line 112
     move-result-object p2
 
-    .line 122
+    .line 115
     invoke-static {p2}, Lkotlinx/coroutines/flow/FlowKt;->merge([Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/internal/ChannelLimitedFlowMerge;
 
-    .line 123
+    .line 116
     move-result-object p2
 
-    .line 126
+    .line 119
     invoke-static {p4}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 127
+    .line 120
     move-result-object p3
 
-    .line 130
+    .line 123
     invoke-static {p2, p1, p3, p5}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 131
+    .line 124
     move-result-object p1
 
-    .line 134
+    .line 127
     iput-object p1, p0, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl;->errorDialogMessage:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
+    .line 128
+    new-instance p0, Lcom/android/systemui/bouncer/data/model/SimPukInputModel;
+
+    .line 130
+    invoke-direct {p0, p5, p5}, Lcom/android/systemui/bouncer/data/model/SimPukInputModel;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 132
+    return-void
     .line 135
-    new-instance p1, Lcom/android/systemui/bouncer/data/model/SimPukInputModel;
-
-    .line 137
-    invoke-direct {p1, p5, p5}, Lcom/android/systemui/bouncer/data/model/SimPukInputModel;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 139
-    iput-object p1, p0, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl;->_simPukInputModel:Lcom/android/systemui/bouncer/data/model/SimPukInputModel;
-
-    .line 142
-    return-void
-    .line 144
-.end method
-
-.method public static setSimPukUserInput$default(Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl;Ljava/lang/String;I)V
-    .locals 1
-
-    .line 1
-    and-int/lit8 p2, p2, 0x1
-
-    .line 2
-    const/4 v0, 0x0
-
-    .line 4
-    if-eqz p2, :cond_0
-
-    .line 5
-    move-object p1, v0
-
-    .line 7
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 8
-    new-instance p2, Lcom/android/systemui/bouncer/data/model/SimPukInputModel;
-
-    .line 11
-    invoke-direct {p2, p1, v0}, Lcom/android/systemui/bouncer/data/model/SimPukInputModel;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 13
-    iput-object p2, p0, Lcom/android/systemui/bouncer/data/repository/SimBouncerRepositoryImpl;->_simPukInputModel:Lcom/android/systemui/bouncer/data/model/SimPukInputModel;
-
-    .line 16
-    return-void
-    .line 18
 .end method

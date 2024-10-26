@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/AuthController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -381,7 +381,7 @@
     .line 180
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lkotlinx/coroutines/CoroutineScope;Lcom/android/systemui/util/concurrency/ExecutionImpl;Lcom/android/systemui/statusbar/CommandQueue;Landroid/app/ActivityTaskManager;Landroid/view/WindowManager;Landroid/hardware/fingerprint/FingerprintManager;Landroid/hardware/face/FaceManager;Ldagger/internal/Provider;Landroid/hardware/display/DisplayManager;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/biometrics/AuthDialogPanelInteractionDetector;Landroid/os/UserManager;Lcom/android/internal/widget/LockPatternUtils;Ldagger/Lazy;Ldagger/Lazy;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Lcom/android/internal/jank/InteractionJankMonitor;Landroid/os/Handler;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/biometrics/UdfpsUtils;Lcom/android/systemui/statusbar/VibratorHelper;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlinx/coroutines/CoroutineScope;Lcom/android/systemui/util/concurrency/ExecutionImpl;Lcom/android/systemui/statusbar/CommandQueue;Landroid/app/ActivityTaskManager;Landroid/view/WindowManager;Landroid/hardware/fingerprint/FingerprintManager;Landroid/hardware/face/FaceManager;Ldagger/internal/DelegateFactory;Landroid/hardware/display/DisplayManager;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/biometrics/AuthDialogPanelInteractionDetector;Landroid/os/UserManager;Lcom/android/internal/widget/LockPatternUtils;Ldagger/Lazy;Ldagger/Lazy;Ldagger/internal/Provider;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;Lcom/android/internal/jank/InteractionJankMonitor;Landroid/os/Handler;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/biometrics/UdfpsUtils;Lcom/android/systemui/statusbar/VibratorHelper;)V
     .locals 9
 
     move-object v0, p0
@@ -565,9 +565,9 @@
 
     sget-object v7, Lcom/android/systemui/biometrics/BiometricDisplayListener$SensorType$Generic;->INSTANCE:Lcom/android/systemui/biometrics/BiometricDisplayListener$SensorType$Generic;
 
-    new-instance v8, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda0;
+    new-instance v8, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda1;
 
-    invoke-direct {v8, p0}, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/biometrics/AuthController;)V
+    invoke-direct {v8, p0}, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/biometrics/AuthController;)V
 
     move-object p2, v6
 
@@ -1206,7 +1206,7 @@
     move-result-object v1
 
     .line 26
-    const v2, 0x7f07086e    # @dimen/physical_fingerprint_sensor_center_screen_location_x '@null'
+    const v2, 0x7f0708be    # @dimen/physical_fingerprint_sensor_center_screen_location_x '@null'
 
     .line 27
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1242,7 +1242,7 @@
     move-result-object v2
 
     .line 46
-    const v3, 0x7f07086f    # @dimen/physical_fingerprint_sensor_center_screen_location_y '610.0px'
+    const v3, 0x7f0708bf    # @dimen/physical_fingerprint_sensor_center_screen_location_y '610.0px'
 
     .line 47
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2144,14 +2144,14 @@
     if-ne p1, v8, :cond_c
 
     .line 185
-    const p2, 0x1040410    # @android:string/foreground_service_app_in_background
+    const p2, 0x1040407    # @android:string/font_family_display_1_material
 
     .line 187
     goto :goto_6
 
     .line 190
     :cond_c
-    const p2, 0x1040419    # @android:string/fp_power_button_bp_title
+    const p2, 0x1040410    # @android:string/foreground_service_app_in_background
 
     .line 191
     goto :goto_6
@@ -2181,10 +2181,10 @@
     if-eqz v5, :cond_e
 
     .line 209
-    new-instance p2, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda2;
+    new-instance p2, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda0;
 
     .line 211
-    invoke-direct {p2, p0, p1}, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/biometrics/AuthController;I)V
+    invoke-direct {p2, p0, p1}, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/biometrics/AuthController;I)V
 
     .line 213
     const-wide/16 v0, 0x1f4
@@ -2447,6 +2447,111 @@
     .line 7
 .end method
 
+.method public final requestMaxRefreshRate(Z)V
+    .locals 5
+
+    .line 1
+    iget-object v0, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsRefreshRateRequestCallback:Landroid/hardware/fingerprint/IUdfpsRefreshRateRequestCallback;
+
+    .line 2
+    iget-object v1, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsLogger:Ldagger/Lazy;
+
+    .line 4
+    const/4 v2, 0x0
+
+    .line 6
+    if-nez v0, :cond_0
+
+    .line 7
+    invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    .line 9
+    move-result-object p0
+
+    .line 12
+    check-cast p0, Lcom/android/systemui/biometrics/UdfpsLogger;
+
+    .line 13
+    sget-object p1, Lcom/android/systemui/log/core/LogLevel;->DEBUG:Lcom/android/systemui/log/core/LogLevel;
+
+    .line 15
+    iget-object p0, p0, Lcom/android/systemui/biometrics/UdfpsLogger;->logBuffer:Lcom/android/systemui/log/LogBuffer;
+
+    .line 17
+    const-string v0, "PreAuthRefreshRate"
+
+    .line 19
+    const-string v1, "skip request - refreshRateCallback is null"
+
+    .line 21
+    invoke-virtual {p0, v0, p1, v1, v2}, Lcom/android/systemui/log/LogBuffer;->log(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 23
+    return-void
+
+    .line 26
+    :cond_0
+    invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    .line 27
+    move-result-object v0
+
+    .line 30
+    check-cast v0, Lcom/android/systemui/biometrics/UdfpsLogger;
+
+    .line 31
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 33
+    sget-object v1, Lcom/android/systemui/log/core/LogLevel;->DEBUG:Lcom/android/systemui/log/core/LogLevel;
+
+    .line 36
+    sget-object v3, Lcom/android/systemui/biometrics/UdfpsLogger$requestMaxRefreshRate$2;->INSTANCE:Lcom/android/systemui/biometrics/UdfpsLogger$requestMaxRefreshRate$2;
+
+    .line 38
+    iget-object v0, v0, Lcom/android/systemui/biometrics/UdfpsLogger;->logBuffer:Lcom/android/systemui/log/LogBuffer;
+
+    .line 40
+    const-string v4, "RefreshRate"
+
+    .line 42
+    invoke-virtual {v0, v4, v1, v3, v2}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
+
+    .line 44
+    move-result-object v1
+
+    .line 47
+    move-object v2, v1
+
+    .line 48
+    check-cast v2, Lcom/android/systemui/log/LogMessageImpl;
+
+    .line 49
+    iput-boolean p1, v2, Lcom/android/systemui/log/LogMessageImpl;->bool1:Z
+
+    .line 51
+    invoke-virtual {v0, v1}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
+
+    .line 53
+    iget-object v0, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsRefreshRateRequestCallback:Landroid/hardware/fingerprint/IUdfpsRefreshRateRequestCallback;
+
+    .line 56
+    iget-object p0, p0, Lcom/android/systemui/biometrics/AuthController;->mContext:Landroid/content/Context;
+
+    .line 58
+    invoke-virtual {p0}, Landroid/content/Context;->getDisplayId()I
+
+    .line 60
+    move-result p0
+
+    .line 63
+    invoke-interface {v0, p0, p1}, Landroid/hardware/fingerprint/IUdfpsRefreshRateRequestCallback;->onAuthenticationPossible(IZ)V
+
+    .line 64
+    return-void
+    .line 67
+.end method
+
 .method public rotateToCurrentOrientation(Landroid/graphics/Point;Landroid/view/DisplayInfo;)Landroid/graphics/Point;
     .locals 1
 
@@ -2705,7 +2810,7 @@
     const-string v10, ", sensorIds: "
 
     .line 37
-    invoke-static {v8, v10, v6}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v8, v10, v6}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 39
     move-result-object v6
@@ -2993,10 +3098,10 @@
     iput-object v3, v12, Lcom/android/systemui/biometrics/AuthContainerView$Config;->mSensorIds:[I
 
     .line 72
-    new-instance v3, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda1;
+    new-instance v3, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda2;
 
     .line 74
-    invoke-direct {v3, v0}, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/biometrics/AuthController;)V
+    invoke-direct {v3, v0}, Lcom/android/systemui/biometrics/AuthController$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/biometrics/AuthController;)V
 
     .line 76
     new-instance v3, Lcom/android/systemui/biometrics/AuthContainerView;
@@ -3107,7 +3212,7 @@
     move/from16 v4, v28
 
     .line 148
-    invoke-static {v1, v2, v4}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, v4}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 150
     move-result-object v1
@@ -3609,22 +3714,22 @@
     new-instance v1, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
     .line 59
-    iget-object v7, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsBounds:Landroid/graphics/Rect;
+    iget-object v4, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsBounds:Landroid/graphics/Rect;
 
     .line 61
-    iget-object v4, p0, Lcom/android/systemui/biometrics/AuthController;->mCachedDisplayInfo:Landroid/view/DisplayInfo;
+    iget-object v5, p0, Lcom/android/systemui/biometrics/AuthController;->mCachedDisplayInfo:Landroid/view/DisplayInfo;
 
     .line 63
-    invoke-virtual {v4}, Landroid/view/DisplayInfo;->getNaturalWidth()I
+    invoke-virtual {v5}, Landroid/view/DisplayInfo;->getNaturalWidth()I
 
     .line 65
     move-result v9
 
     .line 68
-    iget-object v4, p0, Lcom/android/systemui/biometrics/AuthController;->mCachedDisplayInfo:Landroid/view/DisplayInfo;
+    iget-object v5, p0, Lcom/android/systemui/biometrics/AuthController;->mCachedDisplayInfo:Landroid/view/DisplayInfo;
 
     .line 69
-    invoke-virtual {v4}, Landroid/view/DisplayInfo;->getNaturalHeight()I
+    invoke-virtual {v5}, Landroid/view/DisplayInfo;->getNaturalHeight()I
 
     .line 71
     move-result v10
@@ -3633,10 +3738,10 @@
     iget v11, p0, Lcom/android/systemui/biometrics/AuthController;->mScaleFactor:F
 
     .line 75
-    iget-object v4, p0, Lcom/android/systemui/biometrics/AuthController;->mCachedDisplayInfo:Landroid/view/DisplayInfo;
+    iget-object v5, p0, Lcom/android/systemui/biometrics/AuthController;->mCachedDisplayInfo:Landroid/view/DisplayInfo;
 
     .line 77
-    iget v12, v4, Landroid/view/DisplayInfo;->rotation:I
+    iget v12, v5, Landroid/view/DisplayInfo;->rotation:I
 
     .line 79
     iget v13, v0, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorType:I
@@ -3645,153 +3750,184 @@
     move-object v6, v1
 
     .line 83
-    invoke-direct/range {v6 .. v13}, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;IIFII)V
+    move-object v7, v4
 
     .line 84
+    invoke-direct/range {v6 .. v13}, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;IIFII)V
+
+    .line 85
     iput-object v1, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsOverlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
-    .line 87
-    iget-object v4, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsController:Lcom/android/systemui/biometrics/UdfpsController;
+    .line 88
+    iget-object v5, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsController:Lcom/android/systemui/biometrics/UdfpsController;
 
-    .line 89
-    iget-object v5, v4, Lcom/android/systemui/biometrics/UdfpsController;->mSensorProps:Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
+    .line 90
+    iget-object v6, v5, Lcom/android/systemui/biometrics/UdfpsController;->mSensorProps:Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
 
-    .line 91
-    iget v5, v5, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorId:I
+    .line 92
+    iget v6, v6, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorId:I
 
-    .line 93
-    iget v6, v0, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorId:I
+    .line 94
+    iget v7, v0, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorId:I
 
-    .line 95
-    if-eq v5, v6, :cond_0
+    .line 96
+    if-eq v6, v7, :cond_0
 
-    .line 97
-    iput-object v0, v4, Lcom/android/systemui/biometrics/UdfpsController;->mSensorProps:Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
+    .line 98
+    iput-object v0, v5, Lcom/android/systemui/biometrics/UdfpsController;->mSensorProps:Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
 
-    .line 99
+    .line 100
     const-string v0, "UdfpsController"
 
-    .line 101
-    const-string/jumbo v5, "updateUdfpsParams | sensorId has changed"
+    .line 102
+    const-string/jumbo v6, "updateUdfpsParams | sensorId has changed"
 
-    .line 103
-    invoke-static {v0, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    .line 104
+    invoke-static {v0, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
+    .line 107
     :cond_0
-    iget-object v0, v4, Lcom/android/systemui/biometrics/UdfpsController;->mOverlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
+    iget-object v0, v5, Lcom/android/systemui/biometrics/UdfpsController;->mOverlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
-    .line 109
+    .line 110
     invoke-virtual {v0, v1}, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->equals(Ljava/lang/Object;)Z
 
-    .line 111
+    .line 112
     move-result v0
-
-    .line 114
-    if-nez v0, :cond_2
 
     .line 115
-    iput-object v1, v4, Lcom/android/systemui/biometrics/UdfpsController;->mOverlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
+    if-nez v0, :cond_2
 
-    .line 117
-    iget-object v0, v4, Lcom/android/systemui/biometrics/UdfpsController;->mAlternateBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;
+    .line 116
+    iput-object v1, v5, Lcom/android/systemui/biometrics/UdfpsController;->mOverlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
-    .line 119
-    invoke-virtual {v0}, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->isVisibleState()Z
+    .line 118
+    iget-object v0, v5, Lcom/android/systemui/biometrics/UdfpsController;->mOverlay:Lcom/android/systemui/biometrics/UdfpsControllerOverlay;
 
-    .line 121
-    move-result v0
+    .line 120
+    if-eqz v0, :cond_1
+
+    .line 122
+    const/4 v6, 0x4
 
     .line 124
-    iget-object v1, v4, Lcom/android/systemui/biometrics/UdfpsController;->mOverlay:Lcom/android/systemui/biometrics/UdfpsControllerOverlay;
+    iget v7, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->requestReason:I
 
     .line 125
-    if-eqz v1, :cond_1
+    if-ne v7, v6, :cond_1
 
     .line 127
-    invoke-virtual {v4}, Lcom/android/systemui/biometrics/UdfpsController;->hideUdfpsOverlay()V
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->overlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
     .line 129
-    invoke-virtual {v4, v1}, Lcom/android/systemui/biometrics/UdfpsController;->showUdfpsOverlay(Lcom/android/systemui/biometrics/UdfpsControllerOverlay;)V
+    iput-object v4, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->sensorBounds:Landroid/graphics/Rect;
 
-    .line 132
+    .line 131
+    iget-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->overlayTouchView:Lcom/android/systemui/biometrics/ui/view/UdfpsTouchOverlay;
+
+    .line 133
+    if-eqz v1, :cond_2
+
+    .line 135
+    iget-object v4, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->addViewRunnable:Lcom/android/systemui/biometrics/UdfpsControllerOverlay$addViewNowOrLater$$inlined$Runnable$1;
+
+    .line 137
+    if-nez v4, :cond_2
+
+    .line 139
+    iget-object v4, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->windowManager:Landroid/view/WindowManager;
+
+    .line 141
+    iget-object v5, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->coreLayoutParams:Landroid/view/WindowManager$LayoutParams;
+
+    .line 143
+    invoke-virtual {v0, v5}, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->updateDimensions(Landroid/view/WindowManager$LayoutParams;)V
+
+    .line 145
+    invoke-interface {v4, v1, v5}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 148
+    goto :goto_0
+
+    .line 151
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 135
-    iget-object v0, v4, Lcom/android/systemui/biometrics/UdfpsController;->mKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
+    .line 152
+    invoke-virtual {v5}, Lcom/android/systemui/biometrics/UdfpsController;->hideUdfpsOverlay()V
 
-    .line 137
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->showBouncer()V
+    .line 154
+    invoke-virtual {v5, v0}, Lcom/android/systemui/biometrics/UdfpsController;->showUdfpsOverlay(Lcom/android/systemui/biometrics/UdfpsControllerOverlay;)V
 
-    .line 139
+    .line 157
     :cond_2
+    :goto_0
     iget-object v0, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsBounds:Landroid/graphics/Rect;
 
-    .line 142
+    .line 160
     invoke-static {v2, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 144
+    .line 162
     move-result v0
 
-    .line 147
+    .line 165
     if-eqz v0, :cond_3
 
-    .line 148
+    .line 166
     iget-object v0, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsOverlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
-    .line 150
+    .line 168
     invoke-static {v3, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 152
+    .line 170
     move-result v0
 
-    .line 155
+    .line 173
     if-nez v0, :cond_4
 
-    .line 156
+    .line 174
     :cond_3
     iget-object v0, p0, Lcom/android/systemui/biometrics/AuthController;->mCallbacks:Ljava/util/Set;
 
-    .line 158
+    .line 176
     check-cast v0, Ljava/util/HashSet;
 
-    .line 160
+    .line 178
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    .line 162
+    .line 180
     move-result-object v0
 
-    .line 165
-    :goto_0
+    .line 183
+    :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 166
+    .line 184
     move-result v1
 
-    .line 169
+    .line 187
     if-eqz v1, :cond_4
 
-    .line 170
+    .line 188
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 172
+    .line 190
     move-result-object v1
 
-    .line 175
+    .line 193
     check-cast v1, Lcom/android/systemui/biometrics/AuthController$Callback;
 
-    .line 176
+    .line 194
     iget-object v2, p0, Lcom/android/systemui/biometrics/AuthController;->mUdfpsOverlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
-    .line 178
+    .line 196
     invoke-interface {v1, v2}, Lcom/android/systemui/biometrics/AuthController$Callback;->onUdfpsLocationChanged(Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;)V
 
-    .line 180
-    goto :goto_0
+    .line 198
+    goto :goto_1
 
-    .line 183
+    .line 201
     :cond_4
     return-void
-    .line 184
+    .line 202
 .end method

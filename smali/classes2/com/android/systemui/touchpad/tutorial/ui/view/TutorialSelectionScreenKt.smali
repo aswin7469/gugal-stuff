@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/touchpad/tutorial/ui/view/TutorialSelectionScreenKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -1275,7 +1275,7 @@
     sget-object v0, Landroidx/compose/foundation/layout/RowScopeInstance;->INSTANCE:Landroidx/compose/foundation/layout/RowScopeInstance;
 
     .line 246
-    const v6, 0x7f140968    # @string/touchpad_tutorial_back_gesture_button 'Back gesture'
+    const v6, 0x7f1309ee    # @string/touchpad_tutorial_back_gesture_button 'Back gesture'
 
     .line 248
     invoke-static {v6, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -1347,7 +1347,7 @@
     invoke-static/range {v6 .. v13}, Lcom/android/systemui/touchpad/tutorial/ui/view/TutorialSelectionScreenKt;->TutorialButton-cf5BqRc(Ljava/lang/String;Lkotlin/jvm/functions/Function0;JLandroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 
     .line 292
-    const v6, 0x7f14096a    # @string/touchpad_tutorial_home_gesture_button 'Home gesture'
+    const v6, 0x7f1309f0    # @string/touchpad_tutorial_home_gesture_button 'Home gesture'
 
     .line 295
     invoke-static {v6, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -1401,7 +1401,7 @@
     invoke-static/range {v6 .. v13}, Lcom/android/systemui/touchpad/tutorial/ui/view/TutorialSelectionScreenKt;->TutorialButton-cf5BqRc(Ljava/lang/String;Lkotlin/jvm/functions/Function0;JLandroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
 
     .line 327
-    const v6, 0x7f140967    # @string/touchpad_tutorial_action_key_button 'Action key'
+    const v6, 0x7f1309ed    # @string/touchpad_tutorial_action_key_button 'Action key'
 
     .line 330
     invoke-static {v6, v2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/TooltipManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -64,7 +64,7 @@
     move-result-object v1
 
     .line 27
-    const v2, 0x7f0e008d    # @layout/controls_onboarding 'res/layout/controls_onboarding.xml'
+    const v2, 0x7f0d0095    # @layout/controls_onboarding 'res/layout/controls_onboarding.xml'
 
     .line 28
     const/4 v3, 0x0
@@ -97,7 +97,7 @@
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setAlpha(F)V
 
     .line 48
-    const v3, 0x7f0b058e    # @id/onboarding_text
+    const v3, 0x7f0a05b3    # @id/onboarding_text
 
     .line 51
     invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -112,7 +112,7 @@
     iput-object v3, p0, Lcom/android/systemui/controls/TooltipManager;->textView:Landroid/widget/TextView;
 
     .line 60
-    const v3, 0x7f0b0282    # @id/dismiss
+    const v3, 0x7f0a028f    # @id/dismiss
 
     .line 62
     invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -130,7 +130,7 @@
     invoke-virtual {v3, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 74
-    const p0, 0x7f0b00d4    # @id/arrow
+    const p0, 0x7f0a00d7    # @id/arrow
 
     .line 77
     invoke-virtual {v1, p0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -184,7 +184,7 @@
     move-result-object p1
 
     .line 116
-    const v1, 0x7f07091b    # @dimen/recents_onboarding_toast_arrow_corner_radius '2.0dp'
+    const v1, 0x7f07096b    # @dimen/recents_onboarding_toast_arrow_corner_radius '2.0dp'
 
     .line 117
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -338,7 +338,7 @@
     iget-object v0, p0, Lcom/android/systemui/controls/TooltipManager;->textView:Landroid/widget/TextView;
 
     .line 8
-    const v1, 0x7f1402f5    # @string/controls_structure_tooltip 'Swipe to see more'
+    const v1, 0x7f130311    # @string/controls_structure_tooltip 'Swipe to see more'
 
     .line 10
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V

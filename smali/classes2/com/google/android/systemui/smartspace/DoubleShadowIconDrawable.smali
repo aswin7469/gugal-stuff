@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -24,135 +24,120 @@
 
 
 # direct methods
+.method public constructor <init>(IILandroid/content/Context;)V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+
+    const/4 v0, 0x1
+
+    .line 5
+    iput-boolean v0, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mShowShadow:Z
+
+    .line 6
+    iput p2, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mIconInsetSize:I
+
+    mul-int/lit8 p2, p2, 0x2
+
+    add-int/2addr p2, p1
+
+    .line 7
+    iput p2, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mCanvasSize:I
+
+    .line 8
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const v0, 0x7f070096    # @dimen/ambient_text_shadow_radius '1.5dp'
+
+    .line 9
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mAmbientShadowRadius:I
+
+    .line 10
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const v0, 0x7f07036d    # @dimen/key_text_shadow_radius '0.5dp'
+
+    .line 11
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mKeyShadowRadius:I
+
+    .line 12
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const v0, 0x7f07036b    # @dimen/key_text_shadow_dx '0.5dp'
+
+    .line 13
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mKeyShadowOffsetX:I
+
+    .line 14
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p3, 0x7f07036c    # @dimen/key_text_shadow_dy '0.5dp'
+
+    .line 15
+    invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mKeyShadowOffsetY:I
+
+    const/4 p1, 0x0
+
+    .line 16
+    invoke-virtual {p0, p1, p1, p2, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0702fe    # @dimen/enhanced_smartspace_icon_size '20.0dp'
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
 
     .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 5
-    move-result-object v0
-
-    .line 8
-    const v1, 0x7f0702cd    # @dimen/enhanced_smartspace_icon_size '20.0dp'
-
-    .line 9
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 12
-    move-result v0
-
-    .line 15
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 16
     move-result-object v1
 
-    .line 19
-    const v2, 0x7f0702cb    # @dimen/enhanced_smartspace_icon_inset '2.0dp'
+    const v2, 0x7f0702fc    # @dimen/enhanced_smartspace_icon_inset '2.0dp'
 
-    .line 20
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 23
     move-result v1
 
-    .line 26
-    iput v1, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mIconInsetSize:I
+    .line 3
+    invoke-direct {p0, v0, v1, p1}, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;-><init>(IILandroid/content/Context;)V
 
-    .line 27
-    mul-int/lit8 v1, v1, 0x2
-
-    .line 29
-    add-int/2addr v1, v0
-
-    .line 31
-    iput v1, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mCanvasSize:I
-
-    .line 32
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 34
-    move-result-object v0
-
-    .line 37
-    const v2, 0x7f070093    # @dimen/ambient_text_shadow_radius '1.5dp'
-
-    .line 38
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 41
-    move-result v0
-
-    .line 44
-    iput v0, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mAmbientShadowRadius:I
-
-    .line 45
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 47
-    move-result-object v0
-
-    .line 50
-    const v2, 0x7f070331    # @dimen/key_text_shadow_radius '0.5dp'
-
-    .line 51
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 54
-    move-result v0
-
-    .line 57
-    iput v0, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mKeyShadowRadius:I
-
-    .line 58
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 60
-    move-result-object v0
-
-    .line 63
-    const v2, 0x7f07032f    # @dimen/key_text_shadow_dx '0.5dp'
-
-    .line 64
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 67
-    move-result v0
-
-    .line 70
-    iput v0, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mKeyShadowOffsetX:I
-
-    .line 71
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 73
-    move-result-object p1
-
-    .line 76
-    const v0, 0x7f070330    # @dimen/key_text_shadow_dy '0.5dp'
-
-    .line 77
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 80
-    move-result p1
-
-    .line 83
-    iput p1, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mKeyShadowOffsetY:I
-
-    .line 84
-    const/4 p1, 0x0
-
-    .line 86
-    invoke-virtual {p0, p1, p1, v1, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    .line 87
     return-void
-    .line 90
 .end method
 
 
@@ -191,19 +176,19 @@
     if-nez v0, :cond_0
 
     .line 20
-    iget-object v0, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mIconDrawable:Landroid/graphics/drawable/InsetDrawable;
+    iget-object v0, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mDoubleShadowNode:Landroid/graphics/RenderNode;
 
     .line 22
-    iget-object v1, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mDoubleShadowNode:Landroid/graphics/RenderNode;
+    invoke-virtual {v0}, Landroid/graphics/RenderNode;->beginRecording()Landroid/graphics/RecordingCanvas;
 
     .line 24
-    invoke-virtual {v1}, Landroid/graphics/RenderNode;->beginRecording()Landroid/graphics/RecordingCanvas;
+    move-result-object v0
 
-    .line 26
-    move-result-object v1
+    .line 27
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mIconDrawable:Landroid/graphics/drawable/InsetDrawable;
 
-    .line 29
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/InsetDrawable;->draw(Landroid/graphics/Canvas;)V
+    .line 28
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/InsetDrawable;->draw(Landroid/graphics/Canvas;)V
 
     .line 30
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mDoubleShadowNode:Landroid/graphics/RenderNode;
@@ -234,11 +219,33 @@
     .line 50
 .end method
 
+.method public final getIntrinsicHeight()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mCanvasSize:I
+
+    .line 2
+    return p0
+    .line 4
+.end method
+
+.method public final getIntrinsicWidth()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mCanvasSize:I
+
+    .line 2
+    return p0
+    .line 4
+.end method
+
 .method public final getOpacity()I
     .locals 0
 
     .line 1
-    const/4 p0, 0x0
+    const/4 p0, -0x2
 
     .line 2
     return p0
@@ -314,7 +321,7 @@
     iget-object p1, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mIconDrawable:Landroid/graphics/drawable/InsetDrawable;
 
     .line 23
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     .line 25
     new-instance p1, Landroid/graphics/RenderNode;
@@ -431,33 +438,38 @@
     move-result-object v2
 
     .line 101
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     .line 102
-    if-eqz v2, :cond_1
+    if-nez v2, :cond_1
 
     .line 104
-    sget-object v0, Landroid/graphics/BlendMode;->DARKEN:Landroid/graphics/BlendMode;
+    goto :goto_0
 
     .line 106
+    :cond_1
+    sget-object v0, Landroid/graphics/BlendMode;->DARKEN:Landroid/graphics/BlendMode;
+
+    .line 107
     invoke-static {v1, v2, v0}, Landroid/graphics/RenderEffect;->createBlendModeEffect(Landroid/graphics/RenderEffect;Landroid/graphics/RenderEffect;Landroid/graphics/BlendMode;)Landroid/graphics/RenderEffect;
 
-    .line 108
+    .line 109
     move-result-object v0
 
-    .line 111
+    .line 112
     invoke-virtual {p1, v0}, Landroid/graphics/RenderNode;->setRenderEffect(Landroid/graphics/RenderEffect;)Z
 
-    .line 112
+    .line 113
     move-object v0, p1
 
-    .line 115
-    :cond_1
+    .line 116
+    :cond_2
+    :goto_0
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mDoubleShadowNode:Landroid/graphics/RenderNode;
 
-    .line 116
+    .line 117
     return-void
-    .line 118
+    .line 119
 .end method
 
 .method public final setTint(I)V

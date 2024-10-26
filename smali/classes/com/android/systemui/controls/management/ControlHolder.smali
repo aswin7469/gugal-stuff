@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/management/ControlHolder;
 .super Lcom/android/systemui/controls/management/Holder;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -59,7 +59,7 @@
     move-result-object v0
 
     .line 18
-    const v1, 0x7f140064    # @string/accessibility_control_favorite 'Favorited'
+    const v1, 0x7f130065    # @string/accessibility_control_favorite 'Favorited'
 
     .line 19
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -77,7 +77,7 @@
     move-result-object v0
 
     .line 31
-    const v1, 0x7f14006d    # @string/accessibility_control_not_favorite 'Unfavorited'
+    const v1, 0x7f13006e    # @string/accessibility_control_not_favorite 'Unfavorited'
 
     .line 32
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -89,7 +89,7 @@
     iput-object v0, v7, Lcom/android/systemui/controls/management/ControlHolder;->notFavoriteStateDescription:Ljava/lang/String;
 
     .line 39
-    const v0, 0x7f0b0379    # @id/icon
+    const v0, 0x7f0a0399    # @id/icon
 
     .line 41
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -104,7 +104,7 @@
     iput-object v0, v7, Lcom/android/systemui/controls/management/ControlHolder;->icon:Landroid/widget/ImageView;
 
     .line 50
-    const v0, 0x7f0b07ff    # @id/title
+    const v0, 0x7f0a082e    # @id/title
 
     .line 52
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -119,7 +119,7 @@
     iput-object v0, v7, Lcom/android/systemui/controls/management/ControlHolder;->title:Landroid/widget/TextView;
 
     .line 61
-    const v0, 0x7f0b0782    # @id/subtitle
+    const v0, 0x7f0a07b1    # @id/subtitle
 
     .line 63
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -134,7 +134,7 @@
     iput-object v0, v7, Lcom/android/systemui/controls/management/ControlHolder;->subtitle:Landroid/widget/TextView;
 
     .line 72
-    const v0, 0x7f0b0762    # @id/status
+    const v0, 0x7f0a0791    # @id/status
 
     .line 74
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -149,7 +149,7 @@
     iput-object v0, v7, Lcom/android/systemui/controls/management/ControlHolder;->removed:Landroid/widget/TextView;
 
     .line 83
-    const v0, 0x7f0b02f9    # @id/favorite
+    const v0, 0x7f0a0315    # @id/favorite
 
     .line 85
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -191,65 +191,65 @@
     const-class v3, Lcom/android/systemui/controls/management/ControlHolder;
 
     .line 112
-    const-string v4, "stateDescription"
+    const-string/jumbo v4, "stateDescription"
 
     .line 114
     const/4 v1, 0x1
 
-    .line 116
-    const-string v5, "stateDescription(Z)Ljava/lang/CharSequence;"
-
     .line 117
+    const-string/jumbo v5, "stateDescription(Z)Ljava/lang/CharSequence;"
+
+    .line 118
     const/4 v6, 0x0
-
-    .line 119
-    move-object v0, v11
-
-    .line 120
-    move-object v2, p0
 
     .line 121
-    invoke-direct/range {v0 .. v6}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    move-object v0, v11
 
     .line 122
-    new-instance v12, Lcom/android/systemui/controls/management/ControlHolder$accessibilityDelegate$2;
-
-    .line 125
-    const-class v3, Lcom/android/systemui/controls/management/ControlHolder;
-
-    .line 127
-    const-string v4, "getLayoutPosition"
-
-    .line 129
-    const/4 v1, 0x0
-
-    .line 131
-    const-string v5, "getLayoutPosition()I"
-
-    .line 132
-    const/4 v6, 0x0
-
-    .line 134
-    move-object v0, v12
-
-    .line 135
     move-object v2, p0
 
-    .line 136
+    .line 123
     invoke-direct/range {v0 .. v6}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 124
+    new-instance v12, Lcom/android/systemui/controls/management/ControlHolder$accessibilityDelegate$2;
+
+    .line 127
+    const-class v3, Lcom/android/systemui/controls/management/ControlHolder;
+
+    .line 129
+    const-string v4, "getLayoutPosition"
+
+    .line 131
+    const/4 v1, 0x0
+
+    .line 133
+    const-string v5, "getLayoutPosition()I"
+
+    .line 134
+    const/4 v6, 0x0
+
+    .line 136
+    move-object v0, v12
+
     .line 137
+    move-object v2, p0
+
+    .line 138
+    invoke-direct/range {v0 .. v6}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 139
     invoke-direct {v10, v11, v12, v9}, Lcom/android/systemui/controls/management/ControlHolderAccessibilityDelegate;-><init>(Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lcom/android/systemui/controls/management/FavoritesModel$moveHelper$1;)V
 
-    .line 140
+    .line 142
     iput-object v10, v7, Lcom/android/systemui/controls/management/ControlHolder;->accessibilityDelegate:Lcom/android/systemui/controls/management/ControlHolderAccessibilityDelegate;
 
-    .line 143
+    .line 145
     invoke-static {p1, v10}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
 
-    .line 145
+    .line 147
     return-void
-    .line 148
+    .line 150
 .end method
 
 
@@ -351,7 +351,7 @@
     move-result-object v3
 
     .line 64
-    const v4, 0x7f1402ed    # @string/controls_removed 'Removed'
+    const v4, 0x7f130309    # @string/controls_removed 'Removed'
 
     .line 65
     invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -565,7 +565,7 @@
     move-result-object p1
 
     .line 33
-    const v0, 0x7f140065    # @string/accessibility_control_favorite_position 'Favorited, position %d'
+    const v0, 0x7f130066    # @string/accessibility_control_favorite_position 'Favorited, position %d'
 
     .line 34
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

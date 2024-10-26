@@ -1,6 +1,6 @@
 .class final Lcom/android/wm/shell/bubbles/bar/BubbleExpandedViewPinController$exclRectHeight$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -46,7 +46,7 @@
     move-result-object p0
 
     .line 9
-    const v0, 0x7f070110    # @dimen/bubble_bar_dismiss_zone_height '242.0dp'
+    const v0, 0x7f070116    # @dimen/bubble_bar_dismiss_zone_height '242.0dp'
 
     .line 10
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimension(I)F

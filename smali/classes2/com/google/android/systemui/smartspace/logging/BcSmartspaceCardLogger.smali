@@ -1,142 +1,239 @@
 .class public abstract Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLogger;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
 .method public static log(Lcom/google/android/systemui/smartspace/BcSmartspaceEvent;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;)V
-    .locals 13
+    .locals 14
 
     .line 1
     iget-object v0, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mSubcardInfo:Lcom/google/android/systemui/smartspace/logging/BcSmartspaceSubcardLoggingInfo;
 
     .line 2
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
     .line 4
-    iget-object v1, v0, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceSubcardLoggingInfo;->mSubcards:Ljava/util/List;
+    if-eqz v0, :cond_2
 
-    .line 6
-    if-eqz v1, :cond_0
+    .line 5
+    iget-object v2, v0, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceSubcardLoggingInfo;->mSubcards:Ljava/util/List;
 
-    .line 8
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    .line 7
+    if-eqz v2, :cond_2
 
-    .line 10
-    move-result v1
+    .line 9
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
-    .line 13
-    if-nez v1, :cond_0
+    .line 11
+    move-result v2
 
     .line 14
-    new-instance v1, Lcom/android/systemui/smartspace/nano/SmartspaceProto$SmartSpaceSubcards;
+    if-eqz v2, :cond_0
 
-    .line 16
-    invoke-direct {v1}, Lcom/android/systemui/smartspace/nano/SmartspaceProto$SmartSpaceSubcards;-><init>()V
-
-    .line 18
-    iget v2, v0, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceSubcardLoggingInfo;->mClickedSubcardIndex:I
-
-    .line 21
-    iput v2, v1, Lcom/android/systemui/smartspace/nano/SmartspaceProto$SmartSpaceSubcards;->clickedSubcardIndex:I
-
-    .line 23
-    iget-object v0, v0, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceSubcardLoggingInfo;->mSubcards:Ljava/util/List;
-
-    .line 25
-    new-instance v2, Ljava/util/ArrayList;
-
-    .line 27
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    .line 29
-    new-instance v3, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLogger$$ExternalSyntheticLambda0;
-
-    .line 32
-    invoke-direct {v3, v2}, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLogger$$ExternalSyntheticLambda0;-><init>(Ljava/util/ArrayList;)V
-
-    .line 34
-    invoke-interface {v0, v3}, Ljava/util/List;->forEach(Ljava/util/function/Consumer;)V
-
-    .line 37
-    const/4 v0, 0x0
-
-    .line 40
-    new-array v0, v0, [Lcom/android/systemui/smartspace/nano/SmartspaceProto$SmartSpaceCardMetadata;
-
-    .line 41
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    .line 43
-    move-result-object v0
-
-    .line 46
-    check-cast v0, [Lcom/android/systemui/smartspace/nano/SmartspaceProto$SmartSpaceCardMetadata;
-
-    .line 47
-    iput-object v0, v1, Lcom/android/systemui/smartspace/nano/SmartspaceProto$SmartSpaceSubcards;->subcards:[Lcom/android/systemui/smartspace/nano/SmartspaceProto$SmartSpaceCardMetadata;
-
-    .line 49
-    invoke-static {v1}, Lcom/google/protobuf/nano/MessageNano;->toByteArray(Lcom/google/protobuf/nano/MessageNano;)[B
-
-    .line 51
-    move-result-object v0
-
-    .line 54
-    :goto_0
-    move-object v12, v0
-
-    .line 55
+    .line 15
     goto :goto_1
 
-    .line 56
+    .line 17
     :cond_0
-    const/4 v0, 0x0
+    new-instance v2, Ljava/util/ArrayList;
+
+    .line 18
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 20
+    iget-object v3, v0, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceSubcardLoggingInfo;->mSubcards:Ljava/util/List;
+
+    .line 23
+    const/4 v4, 0x0
+
+    .line 25
+    :goto_0
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    .line 26
+    move-result v5
+
+    .line 29
+    if-ge v4, v5, :cond_1
+
+    .line 30
+    invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 32
+    move-result-object v5
+
+    .line 35
+    check-cast v5, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardMetadataLoggingInfo;
+
+    .line 36
+    invoke-static {}, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceCardMetadata;->newBuilder()Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceCardMetadata$Builder;
+
+    .line 38
+    move-result-object v6
+
+    .line 41
+    iget v7, v5, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardMetadataLoggingInfo;->mInstanceId:I
+
+    .line 42
+    invoke-virtual {v6}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
+
+    .line 44
+    iget-object v8, v6, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
+
+    .line 47
+    check-cast v8, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceCardMetadata;
+
+    .line 49
+    invoke-static {v8, v7}, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceCardMetadata;->-$$Nest$msetInstanceId(Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceCardMetadata;I)V
+
+    .line 51
+    invoke-virtual {v6}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
+
+    .line 54
+    iget-object v7, v6, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     .line 57
-    goto :goto_0
-
-    .line 58
-    :goto_1
-    invoke-virtual {p0}, Lcom/google/android/systemui/smartspace/BcSmartspaceEvent;->getId()I
+    check-cast v7, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceCardMetadata;
 
     .line 59
-    move-result v1
+    iget v5, v5, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardMetadataLoggingInfo;->mCardTypeId:I
 
-    .line 62
-    iget v2, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mInstanceId:I
+    .line 61
+    invoke-static {v7, v5}, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceCardMetadata;->-$$Nest$msetCardTypeId(Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceCardMetadata;I)V
 
     .line 63
-    iget v6, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mFeatureType:I
+    invoke-virtual {v6}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
-    .line 65
-    const/4 v9, 0x0
+    .line 66
+    move-result-object v5
 
-    .line 67
-    iget v10, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mReceivedLatency:I
-
-    .line 68
-    iget v3, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mDisplaySurface:I
+    .line 69
+    check-cast v5, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceCardMetadata;
 
     .line 70
-    iget v4, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mRank:I
+    invoke-interface {v2, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 72
-    iget v5, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mCardinality:I
+    add-int/lit8 v4, v4, 0x1
 
-    .line 74
-    iget v7, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mUid:I
+    .line 75
+    goto :goto_0
 
-    .line 76
-    const/4 v8, 0x0
+    .line 77
+    :cond_1
+    invoke-static {}, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceSubcards;->newBuilder()Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceSubcards$Builder;
 
     .line 78
-    move-object v11, v12
+    move-result-object v3
 
-    .line 79
-    invoke-static/range {v1 .. v12}, Lcom/android/systemui/shared/system/SysUiStatsLog;->write(IIIIIIIIII[B[B)V
+    .line 81
+    iget v0, v0, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceSubcardLoggingInfo;->mClickedSubcardIndex:I
 
-    .line 80
+    .line 82
+    invoke-virtual {v3}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
+
+    .line 84
+    iget-object v4, v3, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
+
+    .line 87
+    check-cast v4, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceSubcards;
+
+    .line 89
+    invoke-static {v4, v0}, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceSubcards;->-$$Nest$msetClickedSubcardIndex(Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceSubcards;I)V
+
+    .line 91
+    invoke-virtual {v3}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
+
+    .line 94
+    iget-object v0, v3, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
+
+    .line 97
+    check-cast v0, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceSubcards;
+
+    .line 99
+    invoke-static {v0, v2}, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceSubcards;->-$$Nest$maddAllSubcards(Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceSubcards;Ljava/lang/Iterable;)V
+
+    .line 101
+    invoke-virtual {v3}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
+
+    .line 104
+    move-result-object v0
+
+    .line 107
+    check-cast v0, Lcom/android/systemui/smartspace/SmartspaceProtoLite$SmartSpaceSubcards;
+
+    .line 108
+    invoke-virtual {v0}, Lcom/google/protobuf/AbstractMessageLite;->toByteArray()[B
+
+    .line 110
+    move-result-object v0
+
+    .line 113
+    move-object v12, v0
+
+    .line 114
+    goto :goto_2
+
+    .line 115
+    :cond_2
+    :goto_1
+    move-object v12, v1
+
+    .line 116
+    :goto_2
+    iget-object v0, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mDimensionalInfo:Lcom/android/systemui/smartspace/nano/SmartspaceProto$SmartspaceCardDimensionalInfo;
+
+    .line 117
+    if-eqz v0, :cond_3
+
+    .line 119
+    invoke-static {v0}, Lcom/google/protobuf/nano/MessageNano;->toByteArray(Lcom/google/protobuf/nano/MessageNano;)[B
+
+    .line 121
+    move-result-object v1
+
+    .line 124
+    :cond_3
+    move-object v13, v1
+
+    .line 125
+    invoke-virtual {p0}, Lcom/google/android/systemui/smartspace/BcSmartspaceEvent;->getId()I
+
+    .line 126
+    move-result v2
+
+    .line 129
+    iget v3, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mInstanceId:I
+
+    .line 130
+    iget v7, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mFeatureType:I
+
+    .line 132
+    const/4 v10, 0x0
+
+    .line 134
+    iget v11, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mReceivedLatency:I
+
+    .line 135
+    iget v4, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mDisplaySurface:I
+
+    .line 137
+    iget v5, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mRank:I
+
+    .line 139
+    iget v6, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mCardinality:I
+
+    .line 141
+    iget v8, p1, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;->mUid:I
+
+    .line 143
+    const/4 v9, 0x0
+
+    .line 145
+    invoke-static/range {v2 .. v13}, Lcom/android/systemui/shared/system/SysUiStatsLog;->write(IIIIIIIIII[B[B)V
+
+    .line 146
     return-void
-    .line 83
+    .line 149
 .end method

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/mediaprojection/permission/MediaProjectionPermissionActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -659,7 +659,7 @@
     move-result v0
 
     .line 149
-    const v2, 0x7f1504be    # @style/Theme.SystemUI.Dialog
+    const v2, 0x7f1404c6    # @style/Theme.SystemUI.Dialog
 
     .line 150
     if-eqz v0, :cond_5
@@ -765,7 +765,7 @@
     if-eqz v7, :cond_6
 
     .line 228
-    const v0, 0x7f140616    # @string/media_projection_sys_service_dialog_warning 'The service providing this function will have access to all of the information that is visible on yo ...'
+    const v0, 0x7f130670    # @string/media_projection_sys_service_dialog_warning 'The service providing this function will have access to all of the information that is visible on yo ...'
 
     .line 230
     invoke-virtual {v1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -774,7 +774,7 @@
     move-result-object v0
 
     .line 236
-    const v3, 0x7f140615    # @string/media_projection_sys_service_dialog_title 'Start recording or casting?'
+    const v3, 0x7f13066f    # @string/media_projection_sys_service_dialog_title 'Start recording or casting?'
 
     .line 237
     invoke-virtual {v1, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -937,7 +937,7 @@
     move-result-object v0
 
     .line 339
-    const v3, 0x7f140607    # @string/media_projection_dialog_warning '%s will have access to all of the information that is visible on your screen or played from your dev ...'
+    const v3, 0x7f130661    # @string/media_projection_dialog_warning '%s will have access to all of the information that is visible on your screen or played from your dev ...'
 
     .line 340
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -986,7 +986,7 @@
 
     .line 372
     :cond_b
-    const v3, 0x7f140606    # @string/media_projection_dialog_title 'Start recording or casting with %s?'
+    const v3, 0x7f130660    # @string/media_projection_dialog_title 'Start recording or casting with %s?'
 
     .line 375
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -1153,7 +1153,7 @@
     move-result-object v2
 
     .line 478
-    const v4, 0x7f080826    # @drawable/ic_media_projection_permission 'res/drawable/ic_media_projection_permission.xml'
+    const v4, 0x7f080849    # @drawable/ic_media_projection_permission 'res/drawable/ic_media_projection_permission.xml'
 
     .line 479
     invoke-virtual {v2, v4}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
@@ -1168,7 +1168,7 @@
     move-result-object v0
 
     .line 489
-    const v2, 0x7f140605    # @string/media_projection_action_text 'Start now'
+    const v2, 0x7f13065f    # @string/media_projection_action_text 'Start now'
 
     .line 490
     invoke-virtual {v0, v2, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;

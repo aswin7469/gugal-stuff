@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/shared/model/AcquiredFingerprintAuthenticationStatus;
 .super Lcom/android/systemui/keyguard/shared/model/FingerprintAuthenticationStatus;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -15,7 +15,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/systemui/biometrics/shared/model/AuthenticationReason;I)V
-    .locals 2
+    .locals 1
 
     .line 1
     const/4 v0, 0x7
@@ -27,31 +27,31 @@
     if-eq p2, v0, :cond_0
 
     .line 5
-    const/16 v1, 0x8
+    const/16 v0, 0x8
 
     .line 7
-    if-eq p2, v1, :cond_1
+    if-eq p2, v0, :cond_1
 
     .line 9
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     .line 11
     goto :goto_0
 
     .line 13
     :cond_0
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     .line 14
     goto :goto_0
 
     .line 16
     :cond_1
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     .line 17
     :goto_0
-    invoke-direct {p0, v1}, Lcom/android/systemui/keyguard/shared/model/FingerprintAuthenticationStatus;-><init>(Ljava/lang/Boolean;)V
+    invoke-direct {p0, v0}, Lcom/android/systemui/keyguard/shared/model/FingerprintAuthenticationStatus;-><init>(Ljava/lang/Boolean;)V
 
     .line 18
     iput-object p1, p0, Lcom/android/systemui/keyguard/shared/model/AcquiredFingerprintAuthenticationStatus;->authenticationReason:Lcom/android/systemui/biometrics/shared/model/AuthenticationReason;
@@ -60,41 +60,8 @@
     iput p2, p0, Lcom/android/systemui/keyguard/shared/model/AcquiredFingerprintAuthenticationStatus;->acquiredInfo:I
 
     .line 23
-    const/4 p1, 0x0
-
-    .line 25
-    const/4 v1, 0x1
-
-    .line 26
-    if-ne p2, v0, :cond_2
-
-    .line 27
-    move v0, v1
-
-    .line 29
-    goto :goto_1
-
-    .line 30
-    :cond_2
-    move v0, p1
-
-    .line 31
-    :goto_1
-    iput-boolean v0, p0, Lcom/android/systemui/keyguard/shared/model/AcquiredFingerprintAuthenticationStatus;->fingerprintCaptureStarted:Z
-
-    .line 32
-    if-nez p2, :cond_3
-
-    .line 34
-    move p1, v1
-
-    .line 36
-    :cond_3
-    iput-boolean p1, p0, Lcom/android/systemui/keyguard/shared/model/AcquiredFingerprintAuthenticationStatus;->fingerprintCaptureCompleted:Z
-
-    .line 37
     return-void
-    .line 39
+    .line 25
 .end method
 
 

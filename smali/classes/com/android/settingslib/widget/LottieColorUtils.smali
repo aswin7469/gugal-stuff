@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/settingslib/widget/LottieColorUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -18,7 +18,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4
-    const v1, 0x7f060478    # @color/settingslib_color_grey800 '#3c4043'
+    const v1, 0x7f060484    # @color/settingslib_color_grey800 '#3c4043'
 
     .line 7
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -33,7 +33,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 16
-    const v1, 0x7f060473    # @color/settingslib_color_grey400 '#bdc1c6'
+    const v1, 0x7f06047f    # @color/settingslib_color_grey400 '#bdc1c6'
 
     .line 19
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -48,7 +48,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 28
-    const v1, 0x7f060472    # @color/settingslib_color_grey300 '#dadce0'
+    const v1, 0x7f06047e    # @color/settingslib_color_grey300 '#dadce0'
 
     .line 31
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -63,7 +63,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 40
-    const v1, 0x7f060474    # @color/settingslib_color_grey50 '#f8f9fa'
+    const v1, 0x7f060480    # @color/settingslib_color_grey50 '#f8f9fa'
 
     .line 43
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -78,7 +78,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 52
-    const v1, 0x7f06048a    # @color/settingslib_color_red600 '#d93025'
+    const v1, 0x7f060496    # @color/settingslib_color_red600 '#d93025'
 
     .line 55
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -108,7 +108,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 76
-    const v1, 0x7f060465    # @color/settingslib_color_blue700 '#0b57d0'
+    const v1, 0x7f060471    # @color/settingslib_color_blue700 '#0b57d0'
 
     .line 79
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -123,7 +123,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 88
-    const v1, 0x7f060464    # @color/settingslib_color_blue600 '#1a73e8'
+    const v1, 0x7f060470    # @color/settingslib_color_blue600 '#1a73e8'
 
     .line 91
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -138,7 +138,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 100
-    const v1, 0x7f06046f    # @color/settingslib_color_green600 '#1e8e3e'
+    const v1, 0x7f06047b    # @color/settingslib_color_green600 '#1e8e3e'
 
     .line 103
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -153,7 +153,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 112
-    const v1, 0x7f06046e    # @color/settingslib_color_green500 '#34a853'
+    const v1, 0x7f06047a    # @color/settingslib_color_green500 '#34a853'
 
     .line 115
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -168,7 +168,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 124
-    const v1, 0x7f060489    # @color/settingslib_color_red500 '#b3261e'
+    const v1, 0x7f060495    # @color/settingslib_color_red500 '#b3261e'
 
     .line 127
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -183,7 +183,7 @@
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 136
-    const v1, 0x7f060466    # @color/settingslib_color_charcoal '#171717'
+    const v1, 0x7f060472    # @color/settingslib_color_charcoal '#171717'
 
     .line 139
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

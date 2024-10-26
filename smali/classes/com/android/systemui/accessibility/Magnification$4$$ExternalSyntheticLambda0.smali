@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/accessibility/Magnification$4$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -213,14 +213,14 @@
     if-eqz p0, :cond_3
 
     .line 97
-    const v5, 0x7f0805f9    # @drawable/accessibility_window_magnification_drag_handle_background_change_inset 'res/drawable/accessibility_window_magnification_drag_handle_background_change_inset.xml'
+    const v5, 0x7f0805fb    # @drawable/accessibility_window_magnification_drag_handle_background_change_inset 'res/drawable/accessibility_window_magnification_drag_handle_background_change_inset.xml'
 
     .line 99
     goto :goto_0
 
     .line 102
     :cond_3
-    const v5, 0x7f0805fa    # @drawable/accessibility_window_magnification_drag_handle_background_inset 'res/drawable/accessibility_window_magnification_drag_handle_background_inset.xml'
+    const v5, 0x7f0805fc    # @drawable/accessibility_window_magnification_drag_handle_background_inset 'res/drawable/accessibility_window_magnification_drag_handle_background_inset.xml'
 
     .line 103
     :goto_0
@@ -242,14 +242,14 @@
     if-eqz p0, :cond_4
 
     .line 117
-    const v5, 0x7f0602f3    # @color/magnification_border_color '#f29900'
+    const v5, 0x7f0602ff    # @color/magnification_border_color '#f29900'
 
     .line 119
     goto :goto_1
 
     .line 122
     :cond_4
-    const v5, 0x7f0602f6    # @color/magnification_drag_handle_stroke '#000000'
+    const v5, 0x7f060302    # @color/magnification_drag_handle_stroke '#000000'
 
     .line 123
     :goto_1

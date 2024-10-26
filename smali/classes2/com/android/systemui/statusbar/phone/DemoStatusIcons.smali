@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/DemoStatusIcons;
 .super Lcom/android/systemui/statusbar/phone/StatusIconContainer;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/demomode/DemoMode;
@@ -366,7 +366,7 @@
     if-eqz v0, :cond_0
 
     .line 17
-    const v0, 0x7f080b57    # @drawable/stat_sys_ringer_vibrate 'res/drawable/stat_sys_ringer_vibrate.xml'
+    const v0, 0x7f080b9e    # @drawable/stat_sys_ringer_vibrate 'res/drawable/stat_sys_ringer_vibrate.xml'
 
     .line 19
     goto :goto_0
@@ -405,7 +405,7 @@
     if-eqz v0, :cond_2
 
     .line 41
-    const v0, 0x7f080b4e    # @drawable/stat_sys_dnd 'res/drawable/stat_sys_dnd.xml'
+    const v0, 0x7f080b95    # @drawable/stat_sys_dnd 'res/drawable/stat_sys_dnd.xml'
 
     .line 43
     goto :goto_1
@@ -444,7 +444,7 @@
     if-eqz v0, :cond_4
 
     .line 65
-    const v0, 0x7f080b4c    # @drawable/stat_sys_data_bluetooth_connected 'res/drawable/stat_sys_data_bluetooth_connected.xml'
+    const v0, 0x7f080b93    # @drawable/stat_sys_data_bluetooth_connected 'res/drawable/stat_sys_data_bluetooth_connected.xml'
 
     .line 67
     goto :goto_2
@@ -519,7 +519,7 @@
     if-eqz p2, :cond_8
 
     .line 110
-    const p2, 0x7f080b47    # @drawable/stat_sys_alarm 'res/drawable/stat_sys_alarm.xml'
+    const p2, 0x7f080b8e    # @drawable/stat_sys_alarm 'res/drawable/stat_sys_alarm.xml'
 
     .line 112
     goto :goto_4
@@ -558,7 +558,7 @@
     if-eqz v0, :cond_a
 
     .line 134
-    const v0, 0x7f080b61    # @drawable/stat_sys_tty_mode 'res/drawable/stat_sys_tty_mode.xml'
+    const v0, 0x7f080ba8    # @drawable/stat_sys_tty_mode 'res/drawable/stat_sys_tty_mode.xml'
 
     .line 136
     goto :goto_5
@@ -666,7 +666,7 @@
     if-eqz v0, :cond_10
 
     .line 200
-    const v0, 0x7f080b4a    # @drawable/stat_sys_cast 'res/drawable/stat_sys_cast.xml'
+    const v0, 0x7f080b91    # @drawable/stat_sys_cast 'res/drawable/stat_sys_cast.xml'
 
     .line 202
     goto :goto_8
@@ -702,7 +702,7 @@
     if-eqz p1, :cond_12
 
     .line 222
-    const v1, 0x7f080b53    # @drawable/stat_sys_hotspot 'res/drawable/stat_sys_hotspot.xml'
+    const v1, 0x7f080b9a    # @drawable/stat_sys_hotspot 'res/drawable/stat_sys_hotspot.xml'
 
     .line 224
     :cond_12

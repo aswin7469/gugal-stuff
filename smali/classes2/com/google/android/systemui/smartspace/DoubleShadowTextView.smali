@@ -1,6 +1,6 @@
 .class public Lcom/google/android/systemui/smartspace/DoubleShadowTextView;
 .super Landroid/widget/TextView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -79,8 +79,9 @@
 
     move-result-object p2
 
-    const p3, 0x7f070331    # @dimen/key_text_shadow_radius '0.5dp'
+    const p3, 0x7f07036d    # @dimen/key_text_shadow_radius '0.5dp'
 
+    .line 7
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p2
@@ -89,13 +90,14 @@
 
     iput p2, p0, Lcom/google/android/systemui/smartspace/DoubleShadowTextView;->mKeyShadowBlur:F
 
-    .line 7
+    .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const p3, 0x7f07032f    # @dimen/key_text_shadow_dx '0.5dp'
+    const p3, 0x7f07036b    # @dimen/key_text_shadow_dx '0.5dp'
 
+    .line 9
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p2
@@ -104,13 +106,14 @@
 
     iput p2, p0, Lcom/google/android/systemui/smartspace/DoubleShadowTextView;->mKeyShadowOffsetX:F
 
-    .line 8
+    .line 10
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const p3, 0x7f070330    # @dimen/key_text_shadow_dy '0.5dp'
+    const p3, 0x7f07036c    # @dimen/key_text_shadow_dy '0.5dp'
 
+    .line 11
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p2
@@ -119,12 +122,12 @@
 
     iput p2, p0, Lcom/google/android/systemui/smartspace/DoubleShadowTextView;->mKeyShadowOffsetY:F
 
-    .line 9
+    .line 12
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const p3, 0x7f0600fa    # @color/key_text_shadow_color '#89000000'
+    const p3, 0x7f060104    # @color/key_text_shadow_color '#89000000'
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -132,13 +135,14 @@
 
     iput p2, p0, Lcom/google/android/systemui/smartspace/DoubleShadowTextView;->mKeyShadowColor:I
 
-    .line 10
+    .line 13
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const p3, 0x7f070093    # @dimen/ambient_text_shadow_radius '1.5dp'
+    const p3, 0x7f070096    # @dimen/ambient_text_shadow_radius '1.5dp'
 
+    .line 14
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p2
@@ -147,7 +151,7 @@
 
     iput p2, p0, Lcom/google/android/systemui/smartspace/DoubleShadowTextView;->mAmbientShadowBlur:F
 
-    .line 11
+    .line 15
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -221,13 +225,13 @@
     move-result v0
 
     .line 38
-    invoke-virtual {p0}, Landroid/widget/TextView;->getExtendedPaddingTop()I
+    invoke-virtual {p0}, Landroid/widget/TextView;->getScrollY()I
 
     .line 39
     move-result v1
 
     .line 42
-    invoke-virtual {p0}, Landroid/widget/TextView;->getScrollY()I
+    invoke-virtual {p0}, Landroid/widget/TextView;->getExtendedPaddingTop()I
 
     .line 43
     move-result v2
@@ -236,13 +240,13 @@
     add-int/2addr v2, v1
 
     .line 47
-    invoke-virtual {p0}, Landroid/widget/TextView;->getWidth()I
+    invoke-virtual {p0}, Landroid/widget/TextView;->getScrollX()I
 
     .line 48
     move-result v1
 
     .line 51
-    invoke-virtual {p0}, Landroid/widget/TextView;->getScrollX()I
+    invoke-virtual {p0}, Landroid/widget/TextView;->getWidth()I
 
     .line 52
     move-result v3
@@ -251,13 +255,13 @@
     add-int/2addr v3, v1
 
     .line 56
-    invoke-virtual {p0}, Landroid/widget/TextView;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/TextView;->getScrollY()I
 
     .line 57
     move-result v1
 
     .line 60
-    invoke-virtual {p0}, Landroid/widget/TextView;->getScrollY()I
+    invoke-virtual {p0}, Landroid/widget/TextView;->getHeight()I
 
     .line 61
     move-result v4

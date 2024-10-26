@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/media/dialog/MediaOutputAdapter$MediaDeviceViewHolder$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -170,169 +170,166 @@
     const-string v0, "android.provider.extra.SETTINGS_EMBEDDED_DEEP_LINK_HIGHLIGHT_MENU_KEY"
 
     .line 95
-    const-string v2, "top_level_connected_devices"
+    const-string/jumbo v2, "top_level_connected_devices"
 
     .line 97
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 99
+    .line 100
     iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
 
-    .line 102
+    .line 103
     invoke-interface {p0, v1, v3, p1}, Lcom/android/systemui/plugins/ActivityStarter;->startActivity(Landroid/content/Intent;ZLcom/android/systemui/animation/ActivityTransitionAnimator$Controller;)V
 
-    .line 104
+    .line 105
     goto :goto_0
 
-    .line 107
+    .line 108
     :cond_2
     iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
 
-    .line 108
+    .line 109
     invoke-interface {p0, v0, v3, p1}, Lcom/android/systemui/plugins/ActivityStarter;->startActivity(Landroid/content/Intent;ZLcom/android/systemui/animation/ActivityTransitionAnimator$Controller;)V
 
-    .line 110
+    .line 111
     :goto_0
     return-void
 
-    .line 113
+    .line 114
     :pswitch_0
     check-cast p0, Lcom/android/systemui/media/dialog/MediaOutputAdapter$MediaDeviceViewHolder;
 
-    .line 114
+    .line 115
     iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mEndClickIcon:Landroid/widget/ImageView;
 
-    .line 116
+    .line 117
     invoke-virtual {p0}, Landroid/widget/ImageView;->performClick()Z
 
-    .line 118
+    .line 119
     return-void
 
-    .line 121
+    .line 122
     :pswitch_1
     check-cast p0, Lcom/android/systemui/media/dialog/MediaOutputAdapter$MediaDeviceViewHolder;
 
-    .line 122
+    .line 123
     iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mCheckBox:Landroid/widget/CheckBox;
 
-    .line 124
+    .line 125
     invoke-virtual {p0}, Landroid/widget/CheckBox;->performClick()Z
 
-    .line 126
+    .line 127
     return-void
 
-    .line 129
+    .line 130
     :pswitch_2
     check-cast p0, Lcom/android/systemui/media/dialog/MediaOutputAdapter$MediaDeviceViewHolder;
 
-    .line 130
+    .line 131
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputAdapter$MediaDeviceViewHolder;->this$0:Lcom/android/systemui/media/dialog/MediaOutputAdapter;
 
-    .line 132
+    .line 133
     iget-object p1, p1, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter;->mController:Lcom/android/systemui/media/dialog/MediaOutputController;
 
-    .line 134
+    .line 135
     iget-object v0, p1, Lcom/android/systemui/media/dialog/MediaOutputController;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 136
+    .line 137
     invoke-virtual {v0}, Landroid/media/AudioManager;->getMutingExpectedDevice()Landroid/media/AudioDeviceAttributes;
 
-    .line 138
+    .line 139
     move-result-object v0
 
-    .line 141
+    .line 142
     if-nez v0, :cond_3
 
-    .line 142
+    .line 143
     goto :goto_1
 
-    .line 144
+    .line 145
     :cond_3
     :try_start_0
     iget-object v0, p1, Lcom/android/systemui/media/dialog/MediaOutputController;->mMediaDevicesLock:Ljava/lang/Object;
 
-    .line 145
+    .line 146
     monitor-enter v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 147
+    .line 148
     :try_start_1
     iget-object v1, p1, Lcom/android/systemui/media/dialog/MediaOutputController;->mMediaItemList:Ljava/util/List;
 
-    .line 148
+    .line 149
     new-instance v2, Lcom/android/systemui/media/dialog/MediaOutputController$$ExternalSyntheticLambda0;
 
-    .line 150
+    .line 151
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    .line 152
+    .line 153
     check-cast v1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 155
+    .line 156
     invoke-virtual {v1, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->removeIf(Ljava/util/function/Predicate;)Z
 
-    .line 157
+    .line 158
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 160
+    .line 161
     :try_start_2
     iget-object p1, p1, Lcom/android/systemui/media/dialog/MediaOutputController;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 161
+    .line 162
     invoke-virtual {p1}, Landroid/media/AudioManager;->getMutingExpectedDevice()Landroid/media/AudioDeviceAttributes;
 
-    .line 163
+    .line 164
     move-result-object v0
 
-    .line 166
+    .line 167
     invoke-virtual {p1, v0}, Landroid/media/AudioManager;->cancelMuteAwaitConnection(Landroid/media/AudioDeviceAttributes;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 167
+    .line 168
     goto :goto_1
 
-    .line 170
+    .line 171
     :catchall_0
     move-exception p1
 
-    .line 171
+    .line 172
     :try_start_3
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 172
+    .line 173
     :try_start_4
     throw p1
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 173
+    .line 174
     :catch_0
     const-string p1, "MediaOutputController"
 
-    .line 174
+    .line 175
     const-string v0, "Unable to cancel mute await connection"
 
-    .line 176
+    .line 177
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
+    .line 179
     :goto_1
     iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputAdapter$MediaDeviceViewHolder;->this$0:Lcom/android/systemui/media/dialog/MediaOutputAdapter;
 
-    .line 181
+    .line 182
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 183
+    .line 184
     return-void
-
-    .line 186
-    nop
 
     .line 187
     :pswitch_data_0

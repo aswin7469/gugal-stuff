@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/LegacyLockIconViewController$3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;
@@ -84,7 +84,7 @@
     invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateBurnInOffsets$1()V
 
     .line 13
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$3()V
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$5()V
 
     .line 16
     return-void
@@ -101,7 +101,7 @@
     iput p1, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mStatusBarState:I
 
     .line 4
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$3()V
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$5()V
 
     .line 6
     return-void

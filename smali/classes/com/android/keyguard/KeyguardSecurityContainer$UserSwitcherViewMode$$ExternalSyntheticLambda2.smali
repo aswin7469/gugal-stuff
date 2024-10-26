@@ -1,19 +1,21 @@
 .class public final synthetic Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic f$0:Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;
 
-.field public final synthetic f$1:Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;
+.field public final synthetic f$1:Lcom/android/keyguard/KeyguardUserSwitcherAnchor;
+
+.field public final synthetic f$2:Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$2;)V
+.method public synthetic constructor <init>(Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;Lcom/android/keyguard/KeyguardUserSwitcherAnchor;Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$2;)V
     .locals 0
 
     .line 1
@@ -23,158 +25,138 @@
     iput-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;->f$0:Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;
 
     .line 5
-    iput-object p2, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;->f$1:Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;
+    iput-object p2, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;->f$1:Lcom/android/keyguard/KeyguardUserSwitcherAnchor;
 
     .line 7
-    return-void
+    iput-object p3, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;->f$2:Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;
+
     .line 9
+    return-void
+    .line 11
 .end method
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 6
 
     .line 1
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;->f$0:Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;
 
     .line 2
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;->f$1:Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;->f$1:Lcom/android/keyguard/KeyguardUserSwitcherAnchor;
 
     .line 4
-    iget-object p4, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;->f$2:Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;
 
     .line 6
-    const/4 p5, 0x1
+    iget-object v1, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
 
     .line 8
-    invoke-interface {p4, p5}, Lcom/android/systemui/plugins/FalsingManager;->isFalseTap(I)Z
+    const/4 v2, 0x1
 
-    .line 9
-    move-result p4
+    .line 10
+    invoke-interface {v1, v2}, Lcom/android/systemui/plugins/FalsingManager;->isFalseTap(I)Z
 
-    .line 12
-    if-eqz p4, :cond_0
+    .line 11
+    move-result v1
 
-    .line 13
-    goto :goto_0
+    .line 14
+    if-eqz v1, :cond_0
 
     .line 15
+    goto :goto_0
+
+    .line 17
     :cond_0
-    invoke-virtual {p2}, Landroid/view/View;->isEnabled()Z
+    new-instance v1, Lcom/android/keyguard/KeyguardUserSwitcherPopupMenu;
 
-    .line 16
-    move-result p2
-
-    .line 19
-    if-nez p2, :cond_1
+    .line 18
+    iget-object v3, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mView:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 20
-    goto :goto_0
+    invoke-virtual {v3}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     .line 22
-    :cond_1
-    iget-object p2, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mPopup:Lcom/android/keyguard/KeyguardUserSwitcherPopupMenu;
-
-    .line 23
-    if-nez p2, :cond_2
+    move-result-object v3
 
     .line 25
-    goto :goto_0
+    iget-object v4, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
 
-    .line 27
-    :cond_2
-    sub-int/2addr p3, p5
+    .line 26
+    invoke-direct {v1, v3}, Landroid/widget/ListPopupWindow;-><init>(Landroid/content/Context;)V
 
     .line 28
-    invoke-virtual {p0, p3}, Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;->getItem(I)Lcom/android/systemui/user/data/source/UserRecord;
+    iput-object v3, v1, Lcom/android/keyguard/KeyguardUserSwitcherPopupMenu;->mContext:Landroid/content/Context;
 
-    .line 29
-    move-result-object p2
-
-    .line 32
-    iget-boolean p3, p2, Lcom/android/systemui/user/data/source/UserRecord;->isManageUsers:Z
+    .line 31
+    iput-object v4, v1, Lcom/android/keyguard/KeyguardUserSwitcherPopupMenu;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
 
     .line 33
-    const/4 p4, 0x0
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     .line 35
-    if-nez p3, :cond_3
-
-    .line 36
-    iget-boolean p3, p2, Lcom/android/systemui/user/data/source/UserRecord;->isAddSupervisedUser:Z
+    move-result-object v4
 
     .line 38
-    if-eqz p3, :cond_4
+    const v5, 0x7f08062c    # @drawable/bouncer_user_switcher_popup_bg 'res/drawable/bouncer_user_switcher_popup_bg.xml'
 
-    .line 40
-    :cond_3
-    iget-object p3, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mUserSwitcherCallback:Lcom/android/keyguard/KeyguardSecurityContainerController$$ExternalSyntheticLambda2;
+    .line 39
+    invoke-virtual {v3}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     .line 42
-    iget-object p3, p3, Lcom/android/keyguard/KeyguardSecurityContainerController$$ExternalSyntheticLambda2;->f$0:Ljava/lang/Object;
+    move-result-object v3
 
-    .line 44
-    check-cast p3, Lcom/android/keyguard/KeyguardSecurityContainerController;
+    .line 45
+    invoke-virtual {v4, v5, v3}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     .line 46
-    iget-object v0, p3, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+    move-result-object v3
 
-    .line 48
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 49
+    invoke-virtual {v1, v3}, Landroid/widget/ListPopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 50
-    move-result-object v0
+    invoke-virtual {v1, v2}, Landroid/widget/ListPopupWindow;->setModal(Z)V
 
     .line 53
-    const v1, 0x7f1404bf    # @string/keyguard_unlock_to_continue 'Unlock your device to continue'
+    invoke-virtual {v1, v2}, Landroid/widget/ListPopupWindow;->setOverlapAnchor(Z)V
 
-    .line 54
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    .line 56
+    iput-object v1, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mPopup:Lcom/android/keyguard/KeyguardUserSwitcherPopupMenu;
 
-    .line 57
-    move-result-object v0
-
-    .line 60
-    iget-object v1, p3, Lcom/android/keyguard/KeyguardSecurityContainerController;->mCurrentSecurityMode:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    .line 59
+    invoke-virtual {v1, v0}, Landroid/widget/ListPopupWindow;->setAnchorView(Landroid/view/View;)V
 
     .line 61
-    sget-object v2, Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;->None:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    iget-object v0, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mPopup:Lcom/android/keyguard/KeyguardUserSwitcherPopupMenu;
 
-    .line 63
-    if-eq v1, v2, :cond_4
+    .line 64
+    invoke-virtual {v0, p0}, Landroid/widget/ListPopupWindow;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 65
-    new-instance v1, Lcom/android/keyguard/KeyguardSecurityContainerController$$ExternalSyntheticLambda5;
-
-    .line 67
-    invoke-direct {v1, v0, p4, p5}, Lcom/android/keyguard/KeyguardSecurityContainerController$$ExternalSyntheticLambda5;-><init>(Ljava/lang/CharSequence;Landroid/content/res/ColorStateList;Z)V
+    .line 66
+    iget-object v0, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mPopup:Lcom/android/keyguard/KeyguardUserSwitcherPopupMenu;
 
     .line 69
-    invoke-virtual {p3, v1}, Lcom/android/keyguard/KeyguardSecurityContainerController;->getCurrentSecurityController(Lcom/android/keyguard/KeyguardSecurityViewFlipperController$OnViewInflatedCallback;)V
+    new-instance v1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda0;
 
-    .line 72
-    :cond_4
-    iget-boolean p3, p2, Lcom/android/systemui/user/data/source/UserRecord;->isCurrent:Z
+    .line 71
+    check-cast p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$2;
+
+    .line 73
+    invoke-direct {v1, p1, p0}, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda0;-><init>(Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$2;)V
 
     .line 75
-    if-nez p3, :cond_5
+    invoke-virtual {v0, v1}, Landroid/widget/ListPopupWindow;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 77
-    invoke-virtual {p0, p2, p4}, Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;->onUserListItemClicked(Lcom/android/systemui/user/data/source/UserRecord;Lcom/android/systemui/qs/user/UserSwitchDialogController$DialogShower;)V
-
-    .line 79
-    :cond_5
+    .line 78
     iget-object p0, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mPopup:Lcom/android/keyguard/KeyguardUserSwitcherPopupMenu;
 
-    .line 82
-    invoke-virtual {p0}, Landroid/widget/ListPopupWindow;->dismiss()V
+    .line 81
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardUserSwitcherPopupMenu;->show()V
 
-    .line 84
-    iput-object p4, p1, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mPopup:Lcom/android/keyguard/KeyguardUserSwitcherPopupMenu;
-
-    .line 87
+    .line 83
     :goto_0
     return-void
-    .line 89
+    .line 86
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/management/ControlsEditingActivity$bindButtons$1$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -73,7 +73,7 @@
     move-result-object p1
 
     .line 22
-    const v2, 0x7f1402ca    # @string/controls_favorite_toast_no_changes 'Changes not saved'
+    const v2, 0x7f1302e6    # @string/controls_favorite_toast_no_changes 'Changes not saved'
 
     .line 23
     invoke-static {p1, v2, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;

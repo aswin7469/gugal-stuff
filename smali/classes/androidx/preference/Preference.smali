@@ -1,6 +1,6 @@
 .class public Landroidx/preference/Preference;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Comparable;
@@ -92,7 +92,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    const v0, 0x7f0404f8    # @attr/preferenceStyle
+    const v0, 0x7f0404fb    # @attr/preferenceStyle
 
     const v1, 0x101008e    # @android:attr/preferenceStyle
 
@@ -154,7 +154,7 @@
     .line 12
     iput-boolean v2, p0, Landroidx/preference/Preference;->mShouldDisableView:Z
 
-    const v3, 0x7f0e01e0    # @layout/preference 'res/layout/preference.xml'
+    const v3, 0x7f0d01ee    # @layout/preference 'res/layout/preference.xml'
 
     .line 13
     iput v3, p0, Landroidx/preference/Preference;->mLayoutResId:I
@@ -1713,7 +1713,7 @@
     .line 169
     :cond_a
     :goto_3
-    const v2, 0x7f0b037f    # @id/icon_frame
+    const v2, 0x7f0a039f    # @id/icon_frame
 
     .line 172
     invoke-virtual {p1, v2}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

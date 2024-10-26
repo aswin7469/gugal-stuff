@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/volume/panel/component/popup/ui/composable/ComposableSingletons$VolumePanelPopupKt$lambda-1$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -102,7 +102,7 @@
     sget-object p0, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
 
     .line 30
-    const p0, 0x7f080710    # @drawable/ic_close 'res/drawable/ic_close.xml'
+    const p0, 0x7f080727    # @drawable/ic_close 'res/drawable/ic_close.xml'
 
     .line 32
     const/4 p1, 0x0
@@ -114,7 +114,7 @@
     move-result-object v0
 
     .line 39
-    const p0, 0x7f140075    # @string/accessibility_desc_close 'Close'
+    const p0, 0x7f130076    # @string/accessibility_desc_close 'Close'
 
     .line 40
     invoke-static {p0, v5}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;

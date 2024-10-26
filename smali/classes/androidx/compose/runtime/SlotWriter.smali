@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/runtime/SlotWriter;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -588,6 +588,7 @@
     .line 22
     :cond_0
     return-void
+    .line 25
 .end method
 
 .method public final close(Z)V
@@ -1318,29 +1319,29 @@
 
     .line 44
     :cond_1
-    const-string p0, "startGroup/endGroup mismatch while inserting"
+    const-string/jumbo p0, "startGroup/endGroup mismatch while inserting"
 
     .line 45
     invoke-static {p0}, Landroidx/compose/runtime/ComposerKt;->composeImmediateRuntimeError(Ljava/lang/String;)V
 
-    .line 47
+    .line 48
     throw v2
 
-    .line 50
+    .line 51
     :cond_2
     :goto_1
     return-void
 
-    .line 51
+    .line 52
     :cond_3
     const-string p0, "Unbalanced begin/end insert"
 
-    .line 52
+    .line 53
     invoke-static {p0}, Landroidx/compose/runtime/PreconditionsKt;->throwIllegalStateException(Ljava/lang/String;)V
 
-    .line 54
+    .line 55
     throw v2
-    .line 57
+    .line 58
 .end method
 
 .method public final ensureStarted(I)V
@@ -2123,10 +2124,10 @@
     add-int v3, p2, v4
 
     .line 48
-    invoke-static {v1, v5, v6, v6, p2}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v6, v6, p2, v1, v5}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 50
-    invoke-static {v1, v5, v3, v0, v2}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v3, v0, v2, v1, v5}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 53
     iput-object v5, p0, Landroidx/compose/runtime/SlotWriter;->slots:[Ljava/lang/Object;
@@ -2739,7 +2740,7 @@
     add-int v4, p1, v0
 
     .line 14
-    invoke-static {v3, v3, v4, p1, v1}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v4, p1, v1, v3, v3}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 16
     goto :goto_0
@@ -2752,7 +2753,7 @@
     add-int v5, p1, v0
 
     .line 22
-    invoke-static {v3, v3, v1, v4, v5}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v1, v4, v5, v3, v3}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 24
     :cond_1

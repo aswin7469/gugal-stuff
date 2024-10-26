@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/keyguard/KeyguardSimPukViewController$3$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -38,7 +38,7 @@
 
 # virtual methods
 .method public final run()V
-    .locals 9
+    .locals 10
 
     .line 1
     const/4 v0, 0x1
@@ -341,70 +341,70 @@
     if-ne v4, v0, :cond_7
 
     .line 197
-    iget-object v0, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
+    iget-object v4, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
 
     .line 199
-    iget-object v4, v0, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
+    iget-object v6, v4, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
 
     .line 201
-    iget-object v0, v0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+    iget-object v4, v4, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
     .line 203
-    check-cast v0, Lcom/android/keyguard/KeyguardSimPukView;
+    check-cast v4, Lcom/android/keyguard/KeyguardSimPukView;
 
     .line 205
     invoke-virtual {p0}, Landroid/telephony/PinResult;->getAttemptsRemaining()I
 
     .line 207
-    move-result v6
-
-    .line 210
-    iget-object v7, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
-
-    .line 211
-    iget-object v7, v7, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
-
-    .line 213
-    check-cast v7, Lcom/android/keyguard/KeyguardSimPukView;
-
-    .line 215
-    invoke-virtual {v7}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    .line 217
-    move-result-object v7
-
-    .line 220
-    iget-object v8, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
-
-    .line 221
-    iget v8, v8, Lcom/android/keyguard/KeyguardSimPukViewController;->mSubId:I
-
-    .line 223
-    invoke-static {v8, v7}, Lcom/android/keyguard/KeyguardEsimArea;->isEsimLocked(ILandroid/content/Context;)Z
-
-    .line 225
     move-result v7
 
+    .line 210
+    iget-object v8, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
+
+    .line 211
+    iget-object v8, v8, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+
+    .line 213
+    check-cast v8, Lcom/android/keyguard/KeyguardSimPukView;
+
+    .line 215
+    invoke-virtual {v8}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    .line 217
+    move-result-object v8
+
+    .line 220
+    iget-object v9, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
+
+    .line 221
+    iget v9, v9, Lcom/android/keyguard/KeyguardSimPukViewController;->mSubId:I
+
+    .line 223
+    invoke-static {v9, v8}, Lcom/android/keyguard/KeyguardEsimArea;->isEsimLocked(ILandroid/content/Context;)Z
+
+    .line 225
+    move-result v8
+
     .line 228
-    invoke-virtual {v0, v6, v2, v7}, Lcom/android/keyguard/KeyguardSimPukView;->getPukPasswordErrorMessage(IZZ)Ljava/lang/String;
+    invoke-virtual {v4, v7, v2, v8}, Lcom/android/keyguard/KeyguardSimPukView;->getPukPasswordErrorMessage(IZZ)Ljava/lang/String;
 
     .line 229
-    move-result-object v0
+    move-result-object v4
 
     .line 232
-    invoke-virtual {v4, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v6, v4, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     .line 233
     invoke-virtual {p0}, Landroid/telephony/PinResult;->getAttemptsRemaining()I
 
     .line 236
-    move-result v0
+    move-result v4
 
     .line 239
-    const/4 v4, 0x2
+    const/4 v6, 0x2
 
     .line 240
-    if-gt v0, v4, :cond_6
+    if-gt v4, v6, :cond_6
 
     .line 241
     iget-object v0, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
@@ -473,7 +473,7 @@
     invoke-virtual {v6, v2}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 287
-    const v2, 0x7f140709    # @string/ok '@android:string/ok'
+    const v2, 0x7f130764    # @string/ok '@android:string/ok'
 
     .line 290
     invoke-virtual {v6, v2, v5}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -518,92 +518,92 @@
 
     .line 320
     :cond_6
-    iget-object v0, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
+    iget-object v4, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
 
     .line 321
-    iget-object v4, v0, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
+    iget-object v6, v4, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
 
     .line 323
-    iget-object v0, v0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+    iget-object v4, v4, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
     .line 325
-    check-cast v0, Lcom/android/keyguard/KeyguardSimPukView;
+    check-cast v4, Lcom/android/keyguard/KeyguardSimPukView;
 
     .line 327
     invoke-virtual {p0}, Landroid/telephony/PinResult;->getAttemptsRemaining()I
 
     .line 329
-    move-result v6
-
-    .line 332
-    iget-object v7, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
-
-    .line 333
-    iget-object v7, v7, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
-
-    .line 335
-    check-cast v7, Lcom/android/keyguard/KeyguardSimPukView;
-
-    .line 337
-    invoke-virtual {v7}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    .line 339
-    move-result-object v7
-
-    .line 342
-    iget-object v8, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
-
-    .line 343
-    iget v8, v8, Lcom/android/keyguard/KeyguardSimPukViewController;->mSubId:I
-
-    .line 345
-    invoke-static {v8, v7}, Lcom/android/keyguard/KeyguardEsimArea;->isEsimLocked(ILandroid/content/Context;)Z
-
-    .line 347
     move-result v7
 
+    .line 332
+    iget-object v8, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
+
+    .line 333
+    iget-object v8, v8, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+
+    .line 335
+    check-cast v8, Lcom/android/keyguard/KeyguardSimPukView;
+
+    .line 337
+    invoke-virtual {v8}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    .line 339
+    move-result-object v8
+
+    .line 342
+    iget-object v9, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
+
+    .line 343
+    iget v9, v9, Lcom/android/keyguard/KeyguardSimPukViewController;->mSubId:I
+
+    .line 345
+    invoke-static {v9, v8}, Lcom/android/keyguard/KeyguardEsimArea;->isEsimLocked(ILandroid/content/Context;)Z
+
+    .line 347
+    move-result v8
+
     .line 350
-    invoke-virtual {v0, v6, v2, v7}, Lcom/android/keyguard/KeyguardSimPukView;->getPukPasswordErrorMessage(IZZ)Ljava/lang/String;
+    invoke-virtual {v4, v7, v2, v8}, Lcom/android/keyguard/KeyguardSimPukView;->getPukPasswordErrorMessage(IZZ)Ljava/lang/String;
 
     .line 351
-    move-result-object v0
+    move-result-object v2
 
     .line 354
-    invoke-virtual {v4, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v6, v2, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     .line 355
     goto :goto_3
 
     .line 358
     :cond_7
-    iget-object v0, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
+    iget-object v2, v3, Lcom/android/keyguard/KeyguardSimPukViewController$2;->this$0:Lcom/android/keyguard/KeyguardSimPukViewController;
 
     .line 359
-    iget-object v2, v0, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
+    iget-object v4, v2, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
 
     .line 361
-    iget-object v0, v0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+    iget-object v2, v2, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
     .line 363
-    check-cast v0, Lcom/android/keyguard/KeyguardSimPukView;
+    check-cast v2, Lcom/android/keyguard/KeyguardSimPukView;
 
     .line 365
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     .line 367
-    move-result-object v0
+    move-result-object v2
 
     .line 370
-    const v4, 0x7f1404de    # @string/kg_password_puk_failed 'SIM PUK operation failed!'
+    const v6, 0x7f130534    # @string/kg_password_puk_failed 'SIM PUK operation failed!'
 
     .line 371
-    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     .line 374
-    move-result-object v0
+    move-result-object v2
 
     .line 377
-    invoke-virtual {v2, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v2, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     .line 378
     :goto_3

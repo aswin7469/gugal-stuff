@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/communal/ui/compose/CommunalHubKt$AccessibilityContainer$1$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -45,7 +45,7 @@
     iget-object v0, p0, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$AccessibilityContainer$1$1;->$context:Landroid/content/Context;
 
     .line 4
-    const v1, 0x7f14005f    # @string/accessibility_content_description_for_communal_hub 'Widgets on lock screen'
+    const v1, 0x7f130060    # @string/accessibility_content_description_for_communal_hub 'Widgets on lock screen'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -63,7 +63,7 @@
     iget-object v1, p0, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$AccessibilityContainer$1$1;->$context:Landroid/content/Context;
 
     .line 18
-    const v2, 0x7f14003a    # @string/accessibility_action_label_close_communal_hub 'Close widgets on lock screen'
+    const v2, 0x7f13003a    # @string/accessibility_action_label_close_communal_hub 'Close widgets on lock screen'
 
     .line 20
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -90,7 +90,7 @@
     iget-object v2, p0, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$AccessibilityContainer$1$1;->$context:Landroid/content/Context;
 
     .line 39
-    const v3, 0x7f14003b    # @string/accessibility_action_label_edit_widgets 'Customize widgets'
+    const v3, 0x7f13003b    # @string/accessibility_action_label_edit_widgets 'Customize widgets'
 
     .line 41
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;

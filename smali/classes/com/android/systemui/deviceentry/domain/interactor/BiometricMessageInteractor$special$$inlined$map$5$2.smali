@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/deviceentry/domain/interactor/BiometricMessageInteractor$special$$inlined$map$5$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -133,7 +133,7 @@
     iget-object p2, p2, Lcom/android/systemui/deviceentry/domain/interactor/BiometricMessageInteractor;->resources:Landroid/content/res/Resources;
 
     .line 61
-    const v2, 0x7f140499    # @string/keyguard_face_failed 'Face not recognized'
+    const v2, 0x7f1304e3    # @string/keyguard_face_failed 'Face not recognized'
 
     .line 63
     invoke-virtual {p2, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

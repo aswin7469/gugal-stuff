@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 .super Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$ScrollVectorProvider;
@@ -1467,7 +1467,7 @@
     const-wide v13, 0x7fffffffffffffffL
 
     .line 131
-    invoke-virtual {v1, v10, v13, v14}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->tryGetViewHolderForPositionByDeadline(IJ)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+    invoke-virtual {v1, v13, v14, v10}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->tryGetViewHolderForPositionByDeadline(JI)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     .line 136
     move-result-object v10
@@ -7921,7 +7921,6 @@
     .line 22
     :goto_1
     return-void
-    .line 24
 .end method
 
 .method public final scrollBy$1(ILandroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I

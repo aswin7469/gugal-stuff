@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableMap/TrieNodeKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -23,7 +23,7 @@
     const/4 v2, 0x6
 
     .line 8
-    invoke-static {p0, v0, v1, p1, v2}, Lkotlin/collections/ArraysKt;->copyInto$default([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v1, p1, v2, p0, v0}, Lkotlin/collections/ArraysKt;->copyInto$default(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 9
     add-int/lit8 v1, p1, 0x2
@@ -32,7 +32,7 @@
     array-length v2, p0
 
     .line 14
-    invoke-static {p0, v0, v1, p1, v2}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v1, p1, v2, p0, v0}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 15
     aput-object p2, v0, p1
@@ -67,7 +67,7 @@
     const/4 v2, 0x6
 
     .line 8
-    invoke-static {p1, v0, v1, p0, v2}, Lkotlin/collections/ArraysKt;->copyInto$default([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v1, p0, v2, p1, v0}, Lkotlin/collections/ArraysKt;->copyInto$default(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 9
     add-int/lit8 v1, p0, 0x2
@@ -76,7 +76,7 @@
     array-length v2, p1
 
     .line 14
-    invoke-static {p1, v0, p0, v1, v2}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {p0, v1, v2, p1, v0}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 15
     return-object v0
@@ -102,7 +102,7 @@
     const/4 v2, 0x6
 
     .line 8
-    invoke-static {p1, v0, v1, p0, v2}, Lkotlin/collections/ArraysKt;->copyInto$default([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v1, p0, v2, p1, v0}, Lkotlin/collections/ArraysKt;->copyInto$default(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 9
     add-int/lit8 v1, p0, 0x1
@@ -111,7 +111,7 @@
     array-length v2, p1
 
     .line 14
-    invoke-static {p1, v0, p0, v1, v2}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {p0, v1, v2, p1, v0}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 15
     return-object v0

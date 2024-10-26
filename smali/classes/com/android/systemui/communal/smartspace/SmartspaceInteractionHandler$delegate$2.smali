@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/communal/smartspace/SmartspaceInteractionHandler$delegate$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/communal/util/InteractionHandlerDelegate$IntentStarter;
@@ -89,23 +89,23 @@
     iget-object v2, p0, Lcom/android/systemui/communal/smartspace/SmartspaceInteractionHandler$delegate$2;->$tmp0:Lcom/android/systemui/communal/smartspace/SmartspaceInteractionHandler;
 
     .line 7
-    const-string v4, "startIntent"
+    const-string/jumbo v4, "startIntent"
 
     .line 9
-    const-string v5, "startIntent(Landroid/app/PendingIntent;Landroid/content/Intent;Landroid/app/ActivityOptions;Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;)Z"
+    const-string/jumbo v5, "startIntent(Landroid/app/PendingIntent;Landroid/content/Intent;Landroid/app/ActivityOptions;Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;)Z"
 
-    .line 11
+    .line 12
     const/4 v6, 0x0
 
-    .line 13
+    .line 15
     move-object v0, v7
 
-    .line 14
+    .line 16
     invoke-direct/range {v0 .. v6}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 15
+    .line 17
     return-object v7
-    .line 18
+    .line 20
 .end method
 
 .method public final hashCode()I

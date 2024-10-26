@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -11,34 +11,39 @@
 
 .field public final synthetic f$0:Lcom/android/systemui/util/sensors/AsyncSensorManager;
 
-.field public final synthetic f$1:Ljava/lang/Object;
+.field public final synthetic f$1:Lcom/android/systemui/plugins/SensorManagerPlugin$Sensor;
+
+.field public final synthetic f$2:Lcom/android/systemui/plugins/SensorManagerPlugin$SensorEventListener;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/util/sensors/AsyncSensorManager;Ljava/lang/Object;I)V
+.method public synthetic constructor <init>(Lcom/android/systemui/util/sensors/AsyncSensorManager;Lcom/android/systemui/plugins/SensorManagerPlugin$Sensor;Lcom/android/systemui/plugins/SensorManagerPlugin$SensorEventListener;I)V
     .locals 0
 
     .line 1
-    iput p3, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->$r8$classId:I
+    iput p4, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->$r8$classId:I
 
     .line 2
     iput-object p1, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/util/sensors/AsyncSensorManager;
 
     .line 4
-    iput-object p2, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$1:Ljava/lang/Object;
+    iput-object p2, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$1:Lcom/android/systemui/plugins/SensorManagerPlugin$Sensor;
 
     .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$2:Lcom/android/systemui/plugins/SensorManagerPlugin$SensorEventListener;
 
     .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 10
     return-void
-    .line 11
+    .line 13
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 4
 
     .line 1
     iget v0, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->$r8$classId:I
@@ -50,46 +55,122 @@
     iget-object v0, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/util/sensors/AsyncSensorManager;
 
     .line 7
-    iget-object p0, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$1:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$1:Lcom/android/systemui/plugins/SensorManagerPlugin$Sensor;
 
     .line 9
-    check-cast p0, Landroid/hardware/SensorManager$DynamicSensorCallback;
+    iget-object p0, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$2:Lcom/android/systemui/plugins/SensorManagerPlugin$SensorEventListener;
 
     .line 11
-    iget-object v0, v0, Lcom/android/systemui/util/sensors/AsyncSensorManager;->mInner:Landroid/hardware/SensorManager;
+    const/4 v2, 0x0
 
     .line 13
-    invoke-virtual {v0, p0}, Landroid/hardware/SensorManager;->unregisterDynamicSensorCallback(Landroid/hardware/SensorManager$DynamicSensorCallback;)V
+    :goto_0
+    iget-object v3, v0, Lcom/android/systemui/util/sensors/AsyncSensorManager;->mPlugins:Ljava/util/List;
 
-    .line 15
-    return-void
+    .line 14
+    check-cast v3, Ljava/util/ArrayList;
+
+    .line 16
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     .line 18
+    move-result v3
+
+    .line 21
+    if-ge v2, v3, :cond_0
+
+    .line 22
+    iget-object v3, v0, Lcom/android/systemui/util/sensors/AsyncSensorManager;->mPlugins:Ljava/util/List;
+
+    .line 24
+    check-cast v3, Ljava/util/ArrayList;
+
+    .line 26
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    .line 28
+    move-result-object v3
+
+    .line 31
+    check-cast v3, Lcom/android/systemui/plugins/SensorManagerPlugin;
+
+    .line 32
+    invoke-interface {v3, v1, p0}, Lcom/android/systemui/plugins/SensorManagerPlugin;->registerListener(Lcom/android/systemui/plugins/SensorManagerPlugin$Sensor;Lcom/android/systemui/plugins/SensorManagerPlugin$SensorEventListener;)V
+
+    .line 34
+    add-int/lit8 v2, v2, 0x1
+
+    .line 37
+    goto :goto_0
+
+    .line 39
+    :cond_0
+    return-void
+
+    .line 40
     :pswitch_0
     iget-object v0, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/util/sensors/AsyncSensorManager;
 
-    .line 19
-    iget-object p0, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$1:Ljava/lang/Object;
+    .line 41
+    iget-object v1, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$1:Lcom/android/systemui/plugins/SensorManagerPlugin$Sensor;
 
-    .line 21
-    check-cast p0, Landroid/hardware/SensorAdditionalInfo;
+    .line 43
+    iget-object p0, p0, Lcom/android/systemui/util/sensors/AsyncSensorManager$$ExternalSyntheticLambda0;->f$2:Lcom/android/systemui/plugins/SensorManagerPlugin$SensorEventListener;
 
-    .line 23
-    iget-object v0, v0, Lcom/android/systemui/util/sensors/AsyncSensorManager;->mInner:Landroid/hardware/SensorManager;
+    .line 45
+    const/4 v2, 0x0
 
-    .line 25
-    invoke-virtual {v0, p0}, Landroid/hardware/SensorManager;->setOperationParameter(Landroid/hardware/SensorAdditionalInfo;)Z
+    .line 47
+    :goto_1
+    iget-object v3, v0, Lcom/android/systemui/util/sensors/AsyncSensorManager;->mPlugins:Ljava/util/List;
 
-    .line 27
+    .line 48
+    check-cast v3, Ljava/util/ArrayList;
+
+    .line 50
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    .line 52
+    move-result v3
+
+    .line 55
+    if-ge v2, v3, :cond_1
+
+    .line 56
+    iget-object v3, v0, Lcom/android/systemui/util/sensors/AsyncSensorManager;->mPlugins:Ljava/util/List;
+
+    .line 58
+    check-cast v3, Ljava/util/ArrayList;
+
+    .line 60
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    .line 62
+    move-result-object v3
+
+    .line 65
+    check-cast v3, Lcom/android/systemui/plugins/SensorManagerPlugin;
+
+    .line 66
+    invoke-interface {v3, v1, p0}, Lcom/android/systemui/plugins/SensorManagerPlugin;->unregisterListener(Lcom/android/systemui/plugins/SensorManagerPlugin$Sensor;Lcom/android/systemui/plugins/SensorManagerPlugin$SensorEventListener;)V
+
+    .line 68
+    add-int/lit8 v2, v2, 0x1
+
+    .line 71
+    goto :goto_1
+
+    .line 73
+    :cond_1
     return-void
 
-    .line 30
+    .line 74
     nop
 
-    .line 31
+    .line 75
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 32
+    .line 76
 .end method

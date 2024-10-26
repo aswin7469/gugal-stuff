@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -30,7 +30,7 @@
     .locals 4
 
     .line 1
-    const v0, 0x7f0b064b    # @id/remove_text
+    const v0, 0x7f0a0675    # @id/remove_text
 
     .line 2
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -39,7 +39,7 @@
     move-result-object v0
 
     .line 8
-    const v1, 0x7f0b01a3    # @id/cancel
+    const v1, 0x7f0a01a9    # @id/cancel
 
     .line 9
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -48,7 +48,7 @@
     move-result-object v1
 
     .line 15
-    const v2, 0x7f0b0282    # @id/dismiss
+    const v2, 0x7f0a028f    # @id/dismiss
 
     .line 16
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -57,7 +57,7 @@
     move-result-object v2
 
     .line 22
-    const v3, 0x7f0b06f5    # @id/settings
+    const v3, 0x7f0a0720    # @id/settings
 
     .line 23
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -92,7 +92,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    const v0, 0x7f0b064b    # @id/remove_text
+    const v0, 0x7f0a0675    # @id/remove_text
 
     .line 5
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -107,7 +107,7 @@
     iput-object v0, p0, Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;->gutsText:Landroid/widget/TextView;
 
     .line 14
-    const v0, 0x7f0b01a3    # @id/cancel
+    const v0, 0x7f0a01a9    # @id/cancel
 
     .line 16
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -119,7 +119,7 @@
     iput-object v0, p0, Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;->cancel:Landroid/view/View;
 
     .line 23
-    const v0, 0x7f0b01a6    # @id/cancel_text
+    const v0, 0x7f0a01ac    # @id/cancel_text
 
     .line 25
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -134,7 +134,7 @@
     iput-object v0, p0, Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;->cancelText:Landroid/widget/TextView;
 
     .line 34
-    const v0, 0x7f0b0282    # @id/dismiss
+    const v0, 0x7f0a028f    # @id/dismiss
 
     .line 36
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -149,7 +149,7 @@
     iput-object v0, p0, Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;->dismiss:Landroid/view/ViewGroup;
 
     .line 45
-    const v0, 0x7f0b0285    # @id/dismiss_text
+    const v0, 0x7f0a0292    # @id/dismiss_text
 
     .line 47
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -164,7 +164,7 @@
     iput-object v0, p0, Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;->dismissText:Landroid/widget/TextView;
 
     .line 56
-    const v0, 0x7f0b06f5    # @id/settings
+    const v0, 0x7f0a0720    # @id/settings
 
     .line 58
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;

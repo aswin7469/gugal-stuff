@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/ScreenDecorations$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -45,43 +45,43 @@
     packed-switch v0, :pswitch_data_0
 
     .line 6
-    invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations;->startOnScreenDecorationsThread()V
-
-    .line 9
-    return-void
-
-    .line 12
-    :pswitch_0
     invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations;->removeAllOverlays()V
 
-    .line 13
+    .line 9
     invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations;->removeHwcOverlay()V
 
-    .line 16
+    .line 12
     invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations;->startOnScreenDecorationsThread()V
 
-    .line 19
+    .line 15
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations;->mColorInversionSetting:Lcom/android/systemui/ScreenDecorations$4;
 
-    .line 22
+    .line 18
     if-eqz v0, :cond_0
 
-    .line 24
+    .line 20
     invoke-virtual {v0}, Lcom/android/systemui/qs/UserSettingObserver;->getValue()I
 
-    .line 26
+    .line 22
     move-result v0
 
-    .line 29
+    .line 25
     goto :goto_0
 
-    .line 30
+    .line 26
     :cond_0
     const/4 v0, 0x0
 
-    .line 31
+    .line 27
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/systemui/ScreenDecorations;->updateColorInversion(I)V
+
+    .line 28
+    return-void
+
+    .line 31
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/android/systemui/ScreenDecorations;->startOnScreenDecorationsThread()V
 
     .line 32
     return-void

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryInteractor$deviceEntryRestrictionReason$lambda$6$$inlined$map$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -188,236 +188,236 @@
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 91
-    const-string v5, "sys.boot.reason.last"
+    const-string/jumbo v5, "sys.boot.reason.last"
 
     .line 94
     invoke-static {v5}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 96
+    .line 97
     move-result-object v5
 
-    .line 99
+    .line 100
     const-string v6, "reboot,mainline_update"
 
-    .line 100
+    .line 101
     invoke-virtual {v5, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 102
+    .line 103
     move-result v5
 
-    .line 105
+    .line 106
     if-eqz v5, :cond_3
 
-    .line 106
+    .line 107
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->DeviceNotUnlockedSinceMainlineUpdate:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 108
+    .line 109
     goto/16 :goto_1
 
-    .line 110
+    .line 111
     :cond_3
     iget-boolean v5, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredAfterReboot:Z
 
-    .line 112
+    .line 113
     if-eqz v5, :cond_4
 
-    .line 114
+    .line 115
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->DeviceNotUnlockedSinceReboot:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 116
+    .line 117
     goto/16 :goto_1
 
-    .line 118
+    .line 119
     :cond_4
     iget-boolean v5, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredAfterDpmLockdown:Z
 
-    .line 120
+    .line 121
     if-eqz v5, :cond_5
 
-    .line 122
+    .line 123
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->PolicyLockdown:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 124
+    .line 125
     goto :goto_1
 
-    .line 126
+    .line 127
     :cond_5
     iget-boolean v5, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isInUserLockdown:Z
 
-    .line 127
+    .line 128
     if-eqz v5, :cond_6
 
-    .line 129
+    .line 130
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->UserLockdown:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 131
+    .line 132
     goto :goto_1
 
-    .line 133
+    .line 134
     :cond_6
     iget-boolean v5, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredForUnattendedUpdate:Z
 
-    .line 134
+    .line 135
     if-eqz v5, :cond_7
 
-    .line 136
+    .line 137
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->UnattendedUpdate:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 138
+    .line 139
     goto :goto_1
 
-    .line 140
+    .line 141
     :cond_7
     iget-boolean v5, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredAfterTimeout:Z
 
-    .line 141
+    .line 142
     if-eqz v5, :cond_8
 
-    .line 143
+    .line 144
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->SecurityTimeout:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 145
+    .line 146
     goto :goto_1
 
-    .line 147
+    .line 148
     :cond_8
     iget-boolean v5, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredAfterLockout:Z
 
-    .line 148
+    .line 149
     if-eqz v5, :cond_9
 
-    .line 150
+    .line 151
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->BouncerLockedOut:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 152
+    .line 153
     goto :goto_1
 
-    .line 154
+    .line 155
     :cond_9
     if-eqz v4, :cond_a
 
-    .line 155
+    .line 156
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->StrongBiometricsLockedOut:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 157
+    .line 158
     goto :goto_1
 
-    .line 159
+    .line 160
     :cond_a
     if-eqz v2, :cond_b
 
-    .line 160
+    .line 161
     iget-object v4, p0, Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryInteractor$deviceEntryRestrictionReason$lambda$6$$inlined$map$1$2;->$faceAuthInteractor$inlined:Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryFaceAuthInteractor;
 
-    .line 162
+    .line 163
     invoke-interface {v4}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryFaceAuthInteractor;->isFaceAuthStrong()Z
 
-    .line 164
+    .line 165
     move-result v4
 
-    .line 167
+    .line 168
     if-eqz v4, :cond_b
 
-    .line 168
+    .line 169
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->StrongBiometricsLockedOut:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 170
+    .line 171
     goto :goto_1
 
-    .line 172
+    .line 173
     :cond_b
     if-eqz v2, :cond_c
 
-    .line 173
+    .line 174
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->NonStrongFaceLockedOut:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 175
+    .line 176
     goto :goto_1
 
-    .line 177
+    .line 178
     :cond_c
     iget-boolean v2, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isSomeAuthRequiredAfterAdaptiveAuthRequest:Z
 
-    .line 178
+    .line 179
     if-eqz v2, :cond_d
 
-    .line 180
+    .line 181
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->AdaptiveAuthRequest:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 182
+    .line 183
     goto :goto_1
 
-    .line 184
+    .line 185
     :cond_d
     iget-boolean v2, p0, Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryInteractor$deviceEntryRestrictionReason$lambda$6$$inlined$map$1$2;->$trustEnabled$inlined:Z
 
-    .line 185
+    .line 186
     if-eqz v2, :cond_f
 
-    .line 187
+    .line 188
     if-nez p1, :cond_f
 
-    .line 189
+    .line 190
     iget-boolean p1, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->someAuthRequiredAfterTrustAgentExpired:Z
 
-    .line 191
+    .line 192
     if-nez p1, :cond_e
 
-    .line 193
+    .line 194
     iget-boolean p1, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->someAuthRequiredAfterUserRequest:Z
 
-    .line 195
+    .line 196
     if-eqz p1, :cond_f
 
-    .line 197
+    .line 198
     :cond_e
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->TrustAgentDisabled:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 199
+    .line 200
     goto :goto_1
 
-    .line 201
+    .line 202
     :cond_f
     iget-boolean p1, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->strongerAuthRequiredAfterNonStrongBiometricsTimeout:Z
 
-    .line 202
+    .line 203
     if-eqz p1, :cond_10
 
-    .line 204
+    .line 205
     sget-object p1, Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;->NonStrongBiometricsSecurityTimeout:Lcom/android/systemui/deviceentry/shared/model/DeviceEntryRestrictionReason;
 
-    .line 206
+    .line 207
     goto :goto_1
 
-    .line 208
+    .line 209
     :cond_10
     const/4 p1, 0x0
 
-    .line 209
+    .line 210
     :goto_1
     iput v3, v0, Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryInteractor$deviceEntryRestrictionReason$lambda$6$$inlined$map$1$2$1;->label:I
 
-    .line 210
+    .line 211
     iget-object p0, p0, Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryInteractor$deviceEntryRestrictionReason$lambda$6$$inlined$map$1$2;->$this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
 
-    .line 212
+    .line 213
     invoke-interface {p0, p1, v0}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 214
+    .line 215
     move-result-object p0
 
-    .line 217
+    .line 218
     if-ne p0, v1, :cond_11
 
-    .line 218
+    .line 219
     return-object v1
 
-    .line 220
+    .line 221
     :cond_11
     :goto_2
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 221
+    .line 222
     return-object p0
-    .line 223
+    .line 224
 .end method

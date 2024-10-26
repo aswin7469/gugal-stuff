@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/NotificationMenuRow$NotificationMenuItem;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/statusbar/NotificationMenuRowPlugin$MenuItem;
@@ -28,7 +28,7 @@
     move-result-object v0
 
     .line 8
-    const v1, 0x7f070801    # @dimen/notification_menu_icon_padding '20.0dp'
+    const v1, 0x7f070844    # @dimen/notification_menu_icon_padding '20.0dp'
 
     .line 9
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -37,7 +37,7 @@
     move-result v1
 
     .line 15
-    const v2, 0x7f0603ff    # @color/notification_gear_color '@color/GM2_grey_700'
+    const v2, 0x7f06040b    # @color/notification_gear_color '@color/GM2_grey_700'
 
     .line 16
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultStatusBarSection;
 .super Lcom/android/systemui/keyguard/shared/model/KeyguardSection;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -8,7 +8,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/shade/NotificationPanelView;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardStatusBarViewComponentFactory;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/shade/NotificationPanelView;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentFactory;)V
     .locals 0
 
     .line 1
@@ -28,57 +28,8 @@
     .locals 0
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 2
-    move-result p0
-
-    .line 5
-    if-eqz p0, :cond_0
-
-    .line 6
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 8
-    move-result p0
-
-    .line 11
-    if-eqz p0, :cond_0
-
-    .line 12
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 14
-    move-result p0
-
-    .line 17
-    if-eqz p0, :cond_0
-
-    .line 18
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 20
-    move-result p0
-
-    .line 23
-    if-eqz p0, :cond_0
-
-    .line 24
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 26
-    move-result p0
-
-    .line 29
-    if-eqz p0, :cond_0
-
-    .line 30
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 32
-    :cond_0
     return-void
-    .line 35
+    .line 2
 .end method
 
 .method public final applyConstraints(Landroidx/constraintlayout/widget/ConstraintSet;)V
@@ -94,7 +45,7 @@
     move-result p0
 
     .line 7
-    const v0, 0x7f0b03d2    # @id/keyguard_header
+    const v0, 0x7f0a03f3    # @id/keyguard_header
 
     .line 8
     invoke-virtual {p1, v0, p0}, Landroidx/constraintlayout/widget/ConstraintSet;->constrainHeight(II)V
@@ -122,70 +73,22 @@
 
     .line 24
     return-void
+    .line 27
 .end method
 
 .method public final bindData(Landroidx/constraintlayout/widget/ConstraintLayout;)V
     .locals 0
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 2
-    move-result p0
-
-    .line 5
-    if-eqz p0, :cond_0
-
-    .line 6
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 8
-    move-result p0
-
-    .line 11
-    if-eqz p0, :cond_0
-
-    .line 12
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 14
-    move-result p0
-
-    .line 17
-    if-eqz p0, :cond_0
-
-    .line 18
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 20
-    move-result p0
-
-    .line 23
-    if-eqz p0, :cond_0
-
-    .line 24
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 26
-    move-result p0
-
-    .line 29
-    if-eqz p0, :cond_0
-
-    .line 30
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 32
-    :cond_0
     return-void
-    .line 35
+    .line 2
 .end method
 
 .method public final removeViews(Landroidx/constraintlayout/widget/ConstraintLayout;)V
     .locals 0
 
     .line 1
-    const p0, 0x7f0b03d2    # @id/keyguard_header
+    const p0, 0x7f0a03f3    # @id/keyguard_header
 
     .line 2
     invoke-static {p1, p0}, Lcom/android/systemui/keyguard/ui/view/layout/sections/ExtensionsKt;->removeView(Landroidx/constraintlayout/widget/ConstraintLayout;I)V

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/tuner/ShortcutPicker;
 .super Landroidx/preference/PreferenceFragment;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/tuner/TunerService$Tunable;
@@ -71,7 +71,7 @@
     move-result-object p0
 
     .line 18
-    const p1, 0x7f14055f    # @string/lockscreen_shortcut_left 'Left shortcut'
+    const p1, 0x7f1305b5    # @string/lockscreen_shortcut_left 'Left shortcut'
 
     .line 19
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setTitle(I)V
@@ -87,7 +87,7 @@
     move-result-object p0
 
     .line 29
-    const p1, 0x7f140560    # @string/lockscreen_shortcut_right 'Right shortcut'
+    const p1, 0x7f1305b6    # @string/lockscreen_shortcut_right 'Right shortcut'
 
     .line 30
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setTitle(I)V
@@ -132,7 +132,7 @@
     invoke-direct {v0, v1, v3}, Landroidx/preference/PreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 20
-    const v4, 0x7f14099b    # @string/tuner_other_apps 'Other apps'
+    const v4, 0x7f130a21    # @string/tuner_other_apps 'Other apps'
 
     .line 23
     invoke-virtual {v0, v4}, Landroidx/preference/Preference;->setTitle(I)V
@@ -156,7 +156,7 @@
     iget-object v4, p0, Lcom/android/systemui/tuner/ShortcutPicker;->mNonePreference:Lcom/android/systemui/tuner/SelectablePreference;
 
     .line 41
-    const v5, 0x7f14055e    # @string/lockscreen_none 'None'
+    const v5, 0x7f1305b4    # @string/lockscreen_none 'None'
 
     .line 43
     invoke-virtual {v4, v5}, Landroidx/preference/Preference;->setTitle(I)V
@@ -168,7 +168,7 @@
     iget-object v5, v4, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
     .line 51
-    const v6, 0x7f080909    # @drawable/ic_remove_circle 'res/drawable/ic_remove_circle.xml'
+    const v6, 0x7f080932    # @drawable/ic_remove_circle 'res/drawable/ic_remove_circle.xml'
 
     .line 53
     invoke-static {v6, v5}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(ILandroid/content/Context;)Landroid/graphics/drawable/Drawable;

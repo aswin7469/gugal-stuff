@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -9,203 +9,476 @@
 # instance fields
 .field public final synthetic $r8$classId:I
 
-.field public final synthetic f$0:Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl;
-
-.field public final synthetic f$1:I
-
-.field public final synthetic f$2:Ljava/lang/Object;
-
-.field public final synthetic f$3:I
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl;ILandroid/content/ComponentName;I)V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
     .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->$r8$classId:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl;
-
-    iput p2, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$1:I
-
-    iput-object p3, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$2:Ljava/lang/Object;
-
-    iput p4, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$3:I
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl;ILjava/lang/String;I)V
-    .locals 1
+    iput p1, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->$r8$classId:I
 
     .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->$r8$classId:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl;
-
-    iput p2, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$1:I
-
-    iput-object p3, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$2:Ljava/lang/Object;
-
-    iput p4, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$3:I
-
+    .line 4
     return-void
+    .line 7
 .end method
 
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 17
 
     .line 1
-    iget v0, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->$r8$classId:I
+    move-object/from16 v0, p0
 
     .line 2
-    packed-switch v0, :pswitch_data_0
+    iget v0, v0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->$r8$classId:I
 
     .line 4
-    check-cast p1, Landroidx/sqlite/SQLiteConnection;
+    packed-switch v0, :pswitch_data_0
 
-    .line 7
-    iget-object p1, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl;
+    .line 6
+    move-object/from16 v0, p1
 
     .line 9
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Landroidx/sqlite/SQLiteConnection;
 
     .line 11
-    new-instance v0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda5;
+    const-string v1, "DELETE FROM communal_item_rank_table"
 
-    .line 14
-    iget v1, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$3:I
+    .line 13
+    invoke-interface {v0, v1}, Landroidx/sqlite/SQLiteConnection;->prepare(Ljava/lang/String;)Landroidx/sqlite/SQLiteStatement;
 
-    .line 16
-    const/4 v2, 0x1
+    .line 15
+    move-result-object v1
 
     .line 18
-    invoke-direct {v0, v1, v2}, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda5;-><init>(II)V
+    :try_start_0
+    invoke-interface {v1}, Landroidx/sqlite/SQLiteStatement;->step()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 19
-    iget-object p1, p1, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl;->__db:Landroidx/room/RoomDatabase;
+    invoke-interface {v1}, Landroidx/sqlite/SQLiteStatement;->close()V
 
     .line 22
-    const/4 v1, 0x0
-
-    .line 24
-    invoke-static {p1, v1, v2, v0}, Landroidx/room/util/DBUtil;->performBlocking(Landroidx/room/RoomDatabase;ZZLkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
     .line 25
-    move-result-object v0
+    return-object v0
+
+    .line 26
+    :catchall_0
+    move-exception v0
+
+    .line 27
+    move-object v2, v0
 
     .line 28
-    check-cast v0, Ljava/lang/Long;
+    invoke-interface {v1}, Landroidx/sqlite/SQLiteStatement;->close()V
 
     .line 29
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    throw v2
 
-    .line 31
-    move-result-wide v3
+    .line 32
+    :pswitch_0
+    move-object/from16 v0, p1
 
-    .line 34
-    new-instance v0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda12;
+    .line 33
+    check-cast v0, Landroidx/sqlite/SQLiteConnection;
 
     .line 35
-    iget v5, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$1:I
+    const-string v1, "DELETE FROM communal_widget_table"
 
     .line 37
-    iget-object p0, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$2:Ljava/lang/Object;
+    invoke-interface {v0, v1}, Landroidx/sqlite/SQLiteConnection;->prepare(Ljava/lang/String;)Landroidx/sqlite/SQLiteStatement;
 
     .line 39
-    check-cast p0, Ljava/lang/String;
+    move-result-object v1
 
-    .line 41
-    invoke-direct {v0, v5, v3, v4, p0}, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda12;-><init>(IJLjava/lang/String;)V
+    .line 42
+    :try_start_1
+    invoke-interface {v1}, Landroidx/sqlite/SQLiteStatement;->step()Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 43
-    invoke-static {p1, v1, v2, v0}, Landroidx/room/util/DBUtil;->performBlocking(Landroidx/room/RoomDatabase;ZZLkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+    invoke-interface {v1}, Landroidx/sqlite/SQLiteStatement;->close()V
 
     .line 46
-    move-result-object p0
+    const/4 v0, 0x0
 
     .line 49
-    check-cast p0, Ljava/lang/Long;
+    return-object v0
 
     .line 50
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :catchall_1
+    move-exception v0
+
+    .line 51
+    move-object v2, v0
 
     .line 52
-    return-object p0
+    invoke-interface {v1}, Landroidx/sqlite/SQLiteStatement;->close()V
 
-    .line 55
-    :pswitch_0
-    iget-object v0, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$2:Ljava/lang/Object;
+    .line 53
+    throw v2
 
     .line 56
-    check-cast v0, Landroid/content/ComponentName;
+    :pswitch_1
+    move-object/from16 v0, p1
 
-    .line 58
-    check-cast p1, Landroidx/sqlite/SQLiteConnection;
+    .line 57
+    check-cast v0, Landroidx/sqlite/SQLiteConnection;
 
-    .line 60
-    iget-object p1, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl;
+    .line 59
+    const-string/jumbo v1, "uid"
 
-    .line 62
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 61
+    const-string v2, "SELECT * FROM communal_widget_table JOIN communal_item_rank_table ON communal_item_rank_table.uid = communal_widget_table.item_id ORDER BY communal_item_rank_table.rank DESC"
 
     .line 64
-    invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
+    invoke-interface {v0, v2}, Landroidx/sqlite/SQLiteConnection;->prepare(Ljava/lang/String;)Landroidx/sqlite/SQLiteStatement;
 
-    .line 67
-    move-result-object v0
+    .line 66
+    move-result-object v2
+
+    .line 69
+    :try_start_2
+    invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->getColumnCount()I
 
     .line 70
-    new-instance v1, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;
-
-    .line 71
-    iget v2, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$1:I
+    move-result v0
 
     .line 73
-    iget p0, p0, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;->f$3:I
+    new-instance v3, Ljava/util/ArrayList;
 
-    .line 75
-    invoke-direct {v1, p1, v2, v0, p0}, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl;ILjava/lang/String;I)V
+    .line 74
+    invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 77
-    const/4 p0, 0x0
+    .line 76
+    const/4 v4, 0x0
+
+    .line 79
+    move v5, v4
 
     .line 80
-    const/4 v0, 0x1
+    :goto_0
+    if-ge v5, v0, :cond_0
 
     .line 81
-    iget-object p1, p1, Lcom/android/systemui/communal/data/db/CommunalWidgetDao_Impl;->__db:Landroidx/room/RoomDatabase;
+    invoke-interface {v2, v5}, Landroidx/sqlite/SQLiteStatement;->getColumnName(I)Ljava/lang/String;
 
-    .line 82
-    invoke-static {p1, p0, v0, v1}, Landroidx/room/util/DBUtil;->performBlocking(Landroidx/room/RoomDatabase;ZZLkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+    .line 83
+    move-result-object v6
 
-    .line 84
-    move-result-object p0
+    .line 86
+    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 87
-    check-cast p0, Ljava/lang/Long;
-
-    .line 88
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    add-int/lit8 v5, v5, 0x1
 
     .line 90
-    return-object p0
+    goto :goto_0
+
+    .line 92
+    :cond_0
+    const-string v0, "rank"
 
     .line 93
+    filled-new-array {v1, v0}, [Ljava/lang/String;
+
+    .line 95
+    move-result-object v0
+
+    .line 98
+    const-string/jumbo v5, "widget_id"
+
+    .line 99
+    const-string v6, "component_name"
+
+    .line 102
+    const-string v7, "item_id"
+
+    .line 104
+    filled-new-array {v1, v5, v6, v7}, [Ljava/lang/String;
+
+    .line 106
+    move-result-object v1
+
+    .line 109
+    filled-new-array {v0, v1}, [[Ljava/lang/String;
+
+    .line 110
+    move-result-object v0
+
+    .line 113
+    invoke-static {v3, v0}, Landroidx/room/AmbiguousColumnResolver;->resolve(Ljava/util/List;[[Ljava/lang/String;)[[I
+
+    .line 114
+    move-result-object v0
+
+    .line 117
+    new-instance v1, Ljava/util/LinkedHashMap;
+
+    .line 118
+    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
+
+    .line 120
+    :cond_1
+    :goto_1
+    invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->step()Z
+
+    .line 123
+    move-result v3
+
+    .line 126
+    if-eqz v3, :cond_4
+
+    .line 127
+    aget-object v3, v0, v4
+
+    .line 129
+    aget v3, v3, v4
+
+    .line 131
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
+
+    .line 133
+    move-result-wide v5
+
+    .line 136
+    aget-object v3, v0, v4
+
+    .line 137
+    const/4 v7, 0x1
+
+    .line 139
+    aget v3, v3, v7
+
+    .line 140
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
+
+    .line 142
+    move-result-wide v8
+
+    .line 145
+    long-to-int v3, v8
+
+    .line 146
+    new-instance v8, Lcom/android/systemui/communal/data/db/CommunalItemRank;
+
+    .line 147
+    invoke-direct {v8, v5, v6, v3}, Lcom/android/systemui/communal/data/db/CommunalItemRank;-><init>(JI)V
+
+    .line 149
+    aget-object v3, v0, v7
+
+    .line 152
+    aget v3, v3, v4
+
+    .line 154
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->isNull(I)Z
+
+    .line 156
+    move-result v3
+
+    .line 159
+    const/4 v5, 0x0
+
+    .line 160
+    const/4 v6, 0x3
+
+    .line 161
+    const/4 v9, 0x2
+
+    .line 162
+    if-eqz v3, :cond_2
+
+    .line 163
+    aget-object v3, v0, v7
+
+    .line 165
+    aget v3, v3, v7
+
+    .line 167
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->isNull(I)Z
+
+    .line 169
+    move-result v3
+
+    .line 172
+    if-eqz v3, :cond_2
+
+    .line 173
+    aget-object v3, v0, v7
+
+    .line 175
+    aget v3, v3, v9
+
+    .line 177
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->isNull(I)Z
+
+    .line 179
+    move-result v3
+
+    .line 182
+    if-eqz v3, :cond_2
+
+    .line 183
+    aget-object v3, v0, v7
+
+    .line 185
+    aget v3, v3, v6
+
+    .line 187
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->isNull(I)Z
+
+    .line 189
+    move-result v3
+
+    .line 192
+    if-eqz v3, :cond_2
+
+    .line 193
+    invoke-interface {v1, v8, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 195
+    goto :goto_1
+
+    .line 198
+    :catchall_2
+    move-exception v0
+
+    .line 199
+    goto :goto_4
+
+    .line 200
+    :cond_2
+    aget-object v3, v0, v7
+
+    .line 201
+    aget v3, v3, v4
+
+    .line 203
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
+
+    .line 205
+    move-result-wide v11
+
+    .line 208
+    aget-object v3, v0, v7
+
+    .line 209
+    aget v3, v3, v7
+
+    .line 211
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
+
+    .line 213
+    move-result-wide v13
+
+    .line 216
+    long-to-int v13, v13
+
+    .line 217
+    aget-object v3, v0, v7
+
+    .line 218
+    aget v3, v3, v9
+
+    .line 220
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->isNull(I)Z
+
+    .line 222
+    move-result v3
+
+    .line 225
+    if-eqz v3, :cond_3
+
+    .line 226
+    :goto_2
+    move-object v14, v5
+
+    .line 228
+    goto :goto_3
+
+    .line 229
+    :cond_3
+    aget-object v3, v0, v7
+
+    .line 230
+    aget v3, v3, v9
+
+    .line 232
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
+
+    .line 234
+    move-result-object v5
+
+    .line 237
+    goto :goto_2
+
+    .line 238
+    :goto_3
+    aget-object v3, v0, v7
+
+    .line 239
+    aget v3, v3, v6
+
+    .line 241
+    invoke-interface {v2, v3}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
+
+    .line 243
+    move-result-wide v15
+
+    .line 246
+    new-instance v3, Lcom/android/systemui/communal/data/db/CommunalWidgetItem;
+
+    .line 247
+    move-object v10, v3
+
+    .line 249
+    invoke-direct/range {v10 .. v16}, Lcom/android/systemui/communal/data/db/CommunalWidgetItem;-><init>(JILjava/lang/String;J)V
+
+    .line 250
+    invoke-interface {v1, v8}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    .line 253
+    move-result v5
+
+    .line 256
+    if-nez v5, :cond_1
+
+    .line 257
+    invoke-interface {v1, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    .line 259
+    goto/16 :goto_1
+
+    .line 262
+    :cond_4
+    invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->close()V
+
+    .line 264
+    return-object v1
+
+    .line 267
+    :goto_4
+    invoke-interface {v2}, Landroidx/sqlite/SQLiteStatement;->close()V
+
+    .line 268
+    throw v0
+
+    .line 271
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 94
+    .line 272
 .end method

@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/keyboard/shortcut/ui/composable/ShortcutHelperKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -5195,379 +5195,382 @@
 
     .line 56
     :goto_3
-    const/16 v6, 0xc00
+    const/16 v7, 0xc00
 
     .line 57
-    const/16 v7, 0x16
+    const/16 v8, 0x16
 
     .line 59
-    const-string v3, "Expand icon rotation animation"
+    const/4 v3, 0x0
 
     .line 61
-    const/4 v4, 0x0
+    const-string v4, "Expand icon rotation animation"
 
-    .line 63
-    move-object v5, v10
+    .line 62
+    const/4 v5, 0x0
 
     .line 64
-    invoke-static/range {v2 .. v7}, Landroidx/compose/animation/core/AnimateAsStateKt;->animateFloatAsState(FLjava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)Landroidx/compose/runtime/State;
+    move-object v6, v10
 
     .line 65
+    invoke-static/range {v2 .. v8}, Landroidx/compose/animation/core/AnimateAsStateKt;->animateFloatAsState(FLandroidx/compose/animation/core/SpringSpec;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)Landroidx/compose/runtime/State;
+
+    .line 66
     move-result-object v2
 
-    .line 68
+    .line 69
     sget-object v3, Landroidx/compose/ui/Modifier$Companion;->$$INSTANCE:Landroidx/compose/ui/Modifier$Companion;
 
-    .line 69
+    .line 70
     sget-object v4, Landroidx/compose/material3/ColorSchemeKt;->LocalColorScheme:Landroidx/compose/runtime/StaticProvidableCompositionLocal;
 
-    .line 71
+    .line 72
     invoke-virtual {v10, v4}, Landroidx/compose/runtime/ComposerImpl;->consume(Landroidx/compose/runtime/ProvidableCompositionLocal;)Ljava/lang/Object;
 
-    .line 73
+    .line 74
     move-result-object v5
 
-    .line 76
+    .line 77
     check-cast v5, Landroidx/compose/material3/ColorScheme;
 
-    .line 77
+    .line 78
     iget-wide v5, v5, Landroidx/compose/material3/ColorScheme;->surfaceContainerHigh:J
 
-    .line 79
+    .line 80
     sget-object v7, Landroidx/compose/foundation/shape/RoundedCornerShapeKt;->CircleShape:Landroidx/compose/foundation/shape/RoundedCornerShape;
 
-    .line 81
+    .line 82
     invoke-static {v3, v5, v6, v7}, Landroidx/compose/foundation/BackgroundKt;->background-bw27NRU(Landroidx/compose/ui/Modifier;JLandroidx/compose/ui/graphics/Shape;)Landroidx/compose/ui/Modifier;
 
-    .line 83
+    .line 84
     move-result-object v3
 
-    .line 86
+    .line 87
     const v5, -0x536af642
 
-    .line 87
+    .line 88
     invoke-virtual {v10, v5}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
 
-    .line 90
+    .line 91
     invoke-virtual {v10, v2}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
 
-    .line 93
+    .line 94
     move-result v5
 
-    .line 96
+    .line 97
     invoke-virtual {v10}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
 
-    .line 97
+    .line 98
     move-result-object v6
 
-    .line 100
+    .line 101
     if-nez v5, :cond_5
 
-    .line 101
+    .line 102
     sget-object v5, Landroidx/compose/runtime/Composer$Companion;->Empty:Landroidx/compose/runtime/Composer$Companion$Empty$1;
 
-    .line 103
+    .line 104
     if-ne v6, v5, :cond_6
 
-    .line 105
+    .line 106
     :cond_5
     new-instance v6, Lcom/android/systemui/keyboard/shortcut/ui/composable/ShortcutHelperKt$RotatingExpandCollapseIcon$1$1;
 
-    .line 107
+    .line 108
     invoke-direct {v6, v2}, Lcom/android/systemui/keyboard/shortcut/ui/composable/ShortcutHelperKt$RotatingExpandCollapseIcon$1$1;-><init>(Landroidx/compose/runtime/State;)V
 
-    .line 109
+    .line 110
     invoke-virtual {v10, v6}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 112
+    .line 113
     :cond_6
     check-cast v6, Lkotlin/jvm/functions/Function1;
 
-    .line 115
+    .line 116
     const/4 v2, 0x0
 
-    .line 117
+    .line 118
     invoke-virtual {v10, v2}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 118
+    .line 119
     invoke-static {v3, v6}, Landroidx/compose/ui/graphics/GraphicsLayerModifierKt;->graphicsLayer(Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;)Landroidx/compose/ui/Modifier;
 
-    .line 121
+    .line 122
     move-result-object v5
 
-    .line 124
+    .line 125
     sget-object v3, Landroidx/compose/material/icons/filled/ExpandMoreKt;->_expandMore:Landroidx/compose/ui/graphics/vector/ImageVector;
 
-    .line 125
+    .line 126
     if-eqz v3, :cond_7
 
-    .line 127
+    .line 128
     goto :goto_4
 
-    .line 129
+    .line 130
     :cond_7
     new-instance v3, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;
 
-    .line 130
+    .line 131
     const/16 v19, 0x0
 
-    .line 132
+    .line 133
     const/16 v20, 0x0
 
-    .line 134
+    .line 135
     const-string v12, "Filled.ExpandMore"
 
-    .line 136
+    .line 137
     const/high16 v13, 0x41c00000    # 24.0f
 
-    .line 138
+    .line 139
     const/high16 v14, 0x41c00000    # 24.0f
 
-    .line 140
+    .line 141
     const/high16 v15, 0x41c00000    # 24.0f
 
-    .line 142
+    .line 143
     const/high16 v16, 0x41c00000    # 24.0f
 
-    .line 144
+    .line 145
     const-wide/16 v17, 0x0
 
-    .line 146
+    .line 147
     const/16 v21, 0x60
 
-    .line 148
+    .line 149
     move-object v11, v3
 
-    .line 150
+    .line 151
     invoke-direct/range {v11 .. v21}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;-><init>(Ljava/lang/String;FFFFJIZI)V
 
-    .line 151
+    .line 152
     sget-object v6, Landroidx/compose/ui/graphics/vector/VectorKt;->EmptyPath:Lkotlin/collections/EmptyList;
 
-    .line 154
+    .line 155
     new-instance v6, Landroidx/compose/ui/graphics/SolidColor;
 
-    .line 156
+    .line 157
     sget-wide v7, Landroidx/compose/ui/graphics/Color;->Black:J
 
-    .line 158
+    .line 159
     invoke-direct {v6, v7, v8}, Landroidx/compose/ui/graphics/SolidColor;-><init>(J)V
 
-    .line 160
+    .line 161
     new-instance v7, Ljava/util/ArrayList;
 
-    .line 163
+    .line 164
     const/16 v8, 0x20
 
-    .line 165
+    .line 166
     invoke-direct {v7, v8}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 167
+    .line 168
     new-instance v8, Landroidx/compose/ui/graphics/vector/PathNode$MoveTo;
 
-    .line 170
+    .line 171
     const v9, 0x4184b852    # 16.59f
 
-    .line 172
+    .line 173
     const v11, 0x410970a4    # 8.59f
 
-    .line 175
+    .line 176
     invoke-direct {v8, v9, v11}, Landroidx/compose/ui/graphics/vector/PathNode$MoveTo;-><init>(FF)V
 
-    .line 178
+    .line 179
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 181
+    .line 182
     new-instance v8, Landroidx/compose/ui/graphics/vector/PathNode$LineTo;
 
-    .line 184
+    .line 185
     const/high16 v9, 0x41400000    # 12.0f
 
-    .line 186
+    .line 187
     const v12, 0x4152b852    # 13.17f
 
-    .line 188
+    .line 189
     invoke-direct {v8, v9, v12}, Landroidx/compose/ui/graphics/vector/PathNode$LineTo;-><init>(FF)V
 
-    .line 191
+    .line 192
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 194
+    .line 195
     new-instance v8, Landroidx/compose/ui/graphics/vector/PathNode$LineTo;
 
-    .line 197
+    .line 198
     const v9, 0x40ed1eb8    # 7.41f
 
-    .line 199
+    .line 200
     invoke-direct {v8, v9, v11}, Landroidx/compose/ui/graphics/vector/PathNode$LineTo;-><init>(FF)V
 
-    .line 202
+    .line 203
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 205
+    .line 206
     new-instance v8, Landroidx/compose/ui/graphics/vector/PathNode$LineTo;
 
-    .line 208
+    .line 209
     const/high16 v9, 0x41200000    # 10.0f
 
-    .line 210
+    .line 211
     const/high16 v11, 0x40c00000    # 6.0f
 
-    .line 212
+    .line 213
     invoke-direct {v8, v11, v9}, Landroidx/compose/ui/graphics/vector/PathNode$LineTo;-><init>(FF)V
 
-    .line 214
+    .line 215
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 217
+    .line 218
     new-instance v8, Landroidx/compose/ui/graphics/vector/PathNode$RelativeLineTo;
 
-    .line 220
+    .line 221
     invoke-direct {v8, v11, v11}, Landroidx/compose/ui/graphics/vector/PathNode$RelativeLineTo;-><init>(FF)V
 
-    .line 222
+    .line 223
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 225
+    .line 226
     new-instance v8, Landroidx/compose/ui/graphics/vector/PathNode$RelativeLineTo;
 
-    .line 228
+    .line 229
     const/high16 v9, -0x3f400000    # -6.0f
 
-    .line 230
+    .line 231
     invoke-direct {v8, v11, v9}, Landroidx/compose/ui/graphics/vector/PathNode$RelativeLineTo;-><init>(FF)V
 
-    .line 232
+    .line 233
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 235
+    .line 236
     sget-object v8, Landroidx/compose/ui/graphics/vector/PathNode$Close;->INSTANCE:Landroidx/compose/ui/graphics/vector/PathNode$Close;
 
-    .line 238
+    .line 239
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 240
+    .line 241
     invoke-static {v3, v7, v6}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;->addPath-oIyEayM$default(Landroidx/compose/ui/graphics/vector/ImageVector$Builder;Ljava/util/List;Landroidx/compose/ui/graphics/SolidColor;)V
 
-    .line 243
+    .line 244
     invoke-virtual {v3}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;->build()Landroidx/compose/ui/graphics/vector/ImageVector;
 
-    .line 246
+    .line 247
     move-result-object v3
 
-    .line 249
+    .line 250
     sput-object v3, Landroidx/compose/material/icons/filled/ExpandMoreKt;->_expandMore:Landroidx/compose/ui/graphics/vector/ImageVector;
 
-    .line 250
+    .line 251
     :goto_4
     if-eqz v0, :cond_8
 
-    .line 252
+    .line 253
     const v6, -0x536af59c
 
-    .line 254
+    .line 255
     invoke-virtual {v10, v6}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
 
-    .line 257
-    const v6, 0x7f1408da    # @string/shortcut_helper_content_description_collapse_icon 'Collapse icon'
+    .line 258
+    const v6, 0x7f130955    # @string/shortcut_helper_content_description_collapse_icon 'Collapse icon'
 
-    .line 260
+    .line 261
     invoke-static {v6, v10}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
 
-    .line 263
+    .line 264
     move-result-object v6
 
-    .line 266
+    .line 267
     invoke-virtual {v10, v2}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 267
+    .line 268
     goto :goto_5
 
-    .line 270
+    .line 271
     :cond_8
     const v6, -0x536af52c
 
-    .line 271
+    .line 272
     invoke-virtual {v10, v6}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
 
-    .line 274
-    const v6, 0x7f1408db    # @string/shortcut_helper_content_description_expand_icon 'Expand icon'
+    .line 275
+    const v6, 0x7f130956    # @string/shortcut_helper_content_description_expand_icon 'Expand icon'
 
-    .line 277
+    .line 278
     invoke-static {v6, v10}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
 
-    .line 280
+    .line 281
     move-result-object v6
 
-    .line 283
+    .line 284
     invoke-virtual {v10, v2}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 284
+    .line 285
     :goto_5
     invoke-virtual {v10, v4}, Landroidx/compose/runtime/ComposerImpl;->consume(Landroidx/compose/runtime/ProvidableCompositionLocal;)Ljava/lang/Object;
 
-    .line 287
+    .line 288
     move-result-object v2
 
-    .line 290
+    .line 291
     check-cast v2, Landroidx/compose/material3/ColorScheme;
 
-    .line 291
+    .line 292
     iget-wide v7, v2, Landroidx/compose/material3/ColorScheme;->onSurface:J
 
-    .line 293
+    .line 294
     const/4 v9, 0x0
 
-    .line 295
+    .line 296
     const/4 v11, 0x0
 
-    .line 296
+    .line 297
     move-object v2, v3
 
-    .line 297
+    .line 298
     move-object v3, v6
 
-    .line 298
+    .line 299
     move-object v4, v5
 
-    .line 299
+    .line 300
     move-wide v5, v7
 
-    .line 300
+    .line 301
     move-object v7, v10
 
-    .line 301
+    .line 302
     move v8, v9
 
-    .line 302
+    .line 303
     move v9, v11
 
-    .line 303
+    .line 304
     invoke-static/range {v2 .. v9}, Landroidx/compose/material3/IconKt;->Icon-ww6aTOc(Landroidx/compose/ui/graphics/vector/ImageVector;Ljava/lang/String;Landroidx/compose/ui/Modifier;JLandroidx/compose/runtime/Composer;II)V
 
-    .line 304
+    .line 305
     :goto_6
     invoke-virtual {v10}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
 
-    .line 307
+    .line 308
     move-result-object v2
 
-    .line 310
+    .line 311
     if-eqz v2, :cond_9
 
-    .line 311
+    .line 312
     new-instance v3, Lcom/android/systemui/keyboard/shortcut/ui/composable/ShortcutHelperKt$RotatingExpandCollapseIcon$2;
 
-    .line 313
+    .line 314
     invoke-direct {v3, v1, v0}, Lcom/android/systemui/keyboard/shortcut/ui/composable/ShortcutHelperKt$RotatingExpandCollapseIcon$2;-><init>(IZ)V
 
-    .line 315
+    .line 316
     iput-object v3, v2, Landroidx/compose/runtime/RecomposeScopeImpl;->block:Lkotlin/jvm/functions/Function2;
 
-    .line 318
+    .line 319
     :cond_9
     return-void
-    .line 320
+    .line 321
 .end method
 
 .method public static final access$ShortcutCategoryDetailsSinglePane(Lcom/android/systemui/keyboard/shortcut/ui/composable/ShortcutHelperCategory;Landroidx/compose/runtime/Composer;I)V
@@ -6287,7 +6290,7 @@
     invoke-static {v4, v5}, Landroidx/compose/foundation/layout/SpacerKt;->Spacer(Landroidx/compose/runtime/Composer;Landroidx/compose/ui/Modifier;)V
 
     .line 75
-    const v5, 0x7f1408dc    # @string/shortcut_helper_key_combinations_or_separator 'or'
+    const v5, 0x7f130957    # @string/shortcut_helper_key_combinations_or_separator 'or'
 
     .line 78
     invoke-static {v5, v4}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;

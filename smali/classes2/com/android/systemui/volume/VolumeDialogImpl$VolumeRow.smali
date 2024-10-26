@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -112,22 +112,22 @@
     new-instance v0, Lcom/android/systemui/haptics/slider/SeekableSliderTrackerConfig;
 
     .line 36
-    const v19, 0x3c23d70a    # 0.01f
+    const v17, 0x3c23d70a    # 0.01f
 
     .line 38
-    const v20, 0x3f7d70a4    # 0.99f
+    const v18, 0x3f7d70a4    # 0.99f
 
     .line 41
-    const-wide/16 v16, 0x64
+    const-wide/16 v19, 0x64
 
     .line 44
-    const v18, 0x3ca3d70a    # 0.02f
+    const v16, 0x3ca3d70a    # 0.02f
 
     .line 46
     move-object v15, v0
 
     .line 49
-    invoke-direct/range {v15 .. v20}, Lcom/android/systemui/haptics/slider/SeekableSliderTrackerConfig;-><init>(JFFF)V
+    invoke-direct/range {v15 .. v20}, Lcom/android/systemui/haptics/slider/SeekableSliderTrackerConfig;-><init>(FFFJ)V
 
     .line 50
     sput-object v0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;->sSliderTrackerConfig:Lcom/android/systemui/haptics/slider/SeekableSliderTrackerConfig;

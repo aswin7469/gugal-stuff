@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/pip2/phone/PipDismissTargetHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
@@ -430,7 +430,7 @@
     move-result-object v0
 
     .line 19
-    const v1, 0x7f07027c    # @dimen/dismiss_circle_size '96.0dp'
+    const v1, 0x7f07029e    # @dimen/dismiss_circle_size '96.0dp'
 
     .line 20
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -442,7 +442,7 @@
     iput v1, p0, Lcom/android/wm/shell/pip2/phone/PipDismissTargetHandler;->mTargetSize:I
 
     .line 27
-    const v1, 0x7f0702df    # @dimen/floating_dismiss_gradient_height '548.0dp'
+    const v1, 0x7f07030f    # @dimen/floating_dismiss_gradient_height '548.0dp'
 
     .line 29
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

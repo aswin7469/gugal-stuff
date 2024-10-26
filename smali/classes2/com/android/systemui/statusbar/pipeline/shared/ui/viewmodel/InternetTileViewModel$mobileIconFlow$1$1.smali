@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/InternetTileViewModel$mobileIconFlow$1$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function4;
@@ -186,7 +186,7 @@
     iget-object v2, v2, Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/InternetTileViewModel;->context:Landroid/content/Context;
 
     .line 59
-    const v4, 0x7f140632    # @string/mobile_carrier_text_format '%1$s, %2$s'
+    const v4, 0x7f13068c    # @string/mobile_carrier_text_format '%1$s, %2$s'
 
     .line 61
     filled-new-array {p1, v1}, [Ljava/lang/Object;
@@ -229,7 +229,7 @@
     if-eqz v1, :cond_3
 
     .line 87
-    sget v0, Lcom/android/settingslib/graph/SignalDrawable;->ICON_RES:I
+    sget v0, Lcom/android/settingslib/graph/SignalDrawable;->$r8$clinit:I
 
     .line 89
     shl-int/lit8 v0, v3, 0x8

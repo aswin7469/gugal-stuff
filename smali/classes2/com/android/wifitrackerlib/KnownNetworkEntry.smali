@@ -1,6 +1,6 @@
 .class public final Lcom/android/wifitrackerlib/KnownNetworkEntry;
 .super Lcom/android/wifitrackerlib/StandardWifiEntry;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -277,7 +277,7 @@
     move-result-object v0
 
     .line 26
-    const v1, 0x7f140a8f    # @string/wifitrackerlib_known_network_summary 'Available from %1$s'
+    const v1, 0x7f130b1c    # @string/wifitrackerlib_known_network_summary 'Available from %1$s'
 
     .line 27
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

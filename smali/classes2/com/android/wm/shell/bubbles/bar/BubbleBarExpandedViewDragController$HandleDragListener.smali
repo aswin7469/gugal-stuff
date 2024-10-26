@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/bar/BubbleBarExpandedViewDragController$HandleDragListener;
 .super Lcom/android/wm/shell/common/bubbles/RelativeTouchListener;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -941,7 +941,7 @@
     iget-object p5, p0, Lcom/android/wm/shell/bubbles/bar/BubbleExpandedViewPinController;->container:Landroid/widget/FrameLayout;
 
     .line 228
-    const p6, 0x7f0e005c    # @layout/bubble_bar_drop_target 'res/layout/bubble_bar_drop_target.xml'
+    const p6, 0x7f0d0061    # @layout/bubble_bar_drop_target 'res/layout/bubble_bar_drop_target.xml'
 
     .line 230
     invoke-virtual {p2, p6, p5, p4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -1028,10 +1028,10 @@
     iget-object p2, p2, Lcom/android/wm/shell/bubbles/BubbleController$IBubblesImpl;->mListener:Lcom/android/wm/shell/common/SingleInstanceRemoteListener;
 
     .line 290
-    new-instance p3, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda1;
+    new-instance p3, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda2;
 
     .line 292
-    invoke-direct {p3, p1}, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda1;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p3, p1}, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda2;-><init>(Ljava/lang/Object;)V
 
     .line 294
     invoke-virtual {p2, p3}, Lcom/android/wm/shell/common/SingleInstanceRemoteListener;->call(Lcom/android/wm/shell/common/SingleInstanceRemoteListener$RemoteCall;)V

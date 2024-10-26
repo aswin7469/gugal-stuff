@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/IllustrationPreference;
 .super Landroidx/preference/Preference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -58,7 +58,7 @@
     iput-object v2, p0, Lcom/android/settingslib/widget/IllustrationPreference;->mAnimationCallbackCompat:Lcom/android/settingslib/widget/IllustrationPreference$2;
 
     .line 24
-    const v2, 0x7f0e00d5    # @layout/illustration_preference 'res/layout/illustration_preference.xml'
+    const v2, 0x7f0d00de    # @layout/illustration_preference 'res/layout/illustration_preference.xml'
 
     .line 26
     iput v2, p0, Landroidx/preference/Preference;->mLayoutResId:I
@@ -135,7 +135,7 @@
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
     .line 2
-    const v0, 0x7f0b00f7    # @id/background_view
+    const v0, 0x7f0a00fb    # @id/background_view
 
     .line 5
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -147,7 +147,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 12
-    const v1, 0x7f0b04d1    # @id/middleground_layout
+    const v1, 0x7f0a04f5    # @id/middleground_layout
 
     .line 14
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -159,7 +159,7 @@
     check-cast v1, Landroid/widget/FrameLayout;
 
     .line 21
-    const v2, 0x7f0b045b    # @id/lottie_view
+    const v2, 0x7f0a047d    # @id/lottie_view
 
     .line 23
     invoke-virtual {p1, v2}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -232,7 +232,7 @@
     iget v5, v5, Landroid/util/DisplayMetrics;->heightPixels:I
 
     .line 70
-    const v6, 0x7f0b038d    # @id/illustration_frame
+    const v6, 0x7f0a03ad    # @id/illustration_frame
 
     .line 72
     invoke-virtual {p1, v6}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -647,7 +647,7 @@
     move-result-object p1
 
     .line 321
-    const v3, 0x7f070963    # @dimen/settingslib_illustration_width '412.0dp'
+    const v3, 0x7f0709b8    # @dimen/settingslib_illustration_width '412.0dp'
 
     .line 322
     invoke-virtual {p1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -656,7 +656,7 @@
     move-result v3
 
     .line 328
-    const v4, 0x7f070961    # @dimen/settingslib_illustration_height '300.0dp'
+    const v4, 0x7f0709b6    # @dimen/settingslib_illustration_height '300.0dp'
 
     .line 329
     invoke-virtual {p1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

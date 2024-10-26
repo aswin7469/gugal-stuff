@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;
 .super Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -151,26 +151,8 @@
     iput-object v0, v8, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;->communalInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;
 
     .line 25
-    move-object/from16 v0, p10
-
-    .line 27
-    iput-object v0, v8, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;->biometricSettingsRepository:Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;
-
-    .line 29
-    move-object/from16 v0, p11
-
-    .line 31
-    iput-object v0, v8, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;->keyguardRepository:Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;
-
-    .line 33
-    move-object/from16 v0, p12
-
-    .line 35
-    iput-object v0, v8, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;->keyguardEnabledInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardEnabledInteractor;
-
-    .line 37
     return-void
-    .line 39
+    .line 27
 .end method
 
 
@@ -294,150 +276,66 @@
     .locals 6
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 8
-    move-result v0
-
-    .line 11
-    if-eqz v0, :cond_0
-
-    .line 12
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 14
-    move-result v0
-
-    .line 17
-    if-eqz v0, :cond_0
-
-    .line 18
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 20
-    move-result v0
-
-    .line 23
-    if-eqz v0, :cond_0
-
-    .line 24
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 26
-    move-result v0
-
-    .line 29
-    if-eqz v0, :cond_0
-
-    .line 30
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 32
-    :cond_0
     sget-object v0, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
-    .line 35
+    .line 2
     new-instance v1, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToAodOrDozing$$inlined$launch$default$1;
 
-    .line 37
+    .line 4
     const-string v2, "FromGoneTransitionInteractor#listenForGoneToAodOrDozing"
 
-    .line 39
+    .line 6
     const/4 v3, 0x0
 
-    .line 41
+    .line 8
     invoke-direct {v1, v2, v3, p0}, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToAodOrDozing$$inlined$launch$default$1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;)V
 
-    .line 42
+    .line 9
     iget-object v2, p0, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;->scope:Lkotlinx/coroutines/CoroutineScope;
 
-    .line 45
+    .line 12
     const/4 v4, 0x2
 
-    .line 47
+    .line 14
     invoke-static {v2, v0, v3, v1, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 48
+    .line 15
     new-instance v1, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToDreaming$$inlined$launch$default$1;
 
-    .line 51
+    .line 18
     const-string v5, "FromGoneTransitionInteractor#listenForGoneToDreaming"
 
-    .line 53
+    .line 20
     invoke-direct {v1, v5, v3, p0}, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToDreaming$$inlined$launch$default$1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;)V
 
-    .line 55
+    .line 22
     invoke-static {v2, v0, v3, v1, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 58
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 61
-    move-result v1
-
-    .line 64
-    const-string v5, "FromGoneTransitionInteractor#listenForGoneToLockscreenOrHub"
-
-    .line 65
-    if-eqz v1, :cond_1
-
-    .line 67
-    new-instance v1, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToLockscreenOrHub$$inlined$launch$default$1;
-
-    .line 69
-    invoke-direct {v1, v5, v3, p0}, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToLockscreenOrHub$$inlined$launch$default$1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;)V
-
-    .line 71
-    invoke-static {v2, v0, v3, v1, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 74
-    new-instance v1, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToLockscreenOrHub$2;
-
-    .line 77
-    invoke-direct {v1, p0, v3}, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToLockscreenOrHub$2;-><init>(Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;Lkotlin/coroutines/Continuation;)V
-
-    .line 79
-    const/4 v5, 0x3
-
-    .line 82
-    invoke-static {v2, v3, v3, v1, v5}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 83
-    goto :goto_0
-
-    .line 86
-    :cond_1
+    .line 25
     new-instance v1, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToLockscreenOrHub$$inlined$launch$default$2;
 
-    .line 87
+    .line 28
+    const-string v5, "FromGoneTransitionInteractor#listenForGoneToLockscreenOrHub"
+
+    .line 30
     invoke-direct {v1, v5, v3, p0}, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToLockscreenOrHub$$inlined$launch$default$2;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;)V
 
-    .line 89
+    .line 32
     invoke-static {v2, v0, v3, v1, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 92
-    :goto_0
+    .line 35
     new-instance v1, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToDreamingLockscreenHosted$$inlined$launch$default$1;
 
-    .line 95
+    .line 38
     const-string v5, "FromGoneTransitionInteractor#listenForGoneToDreamingLockscreenHosted"
 
-    .line 97
+    .line 40
     invoke-direct {v1, v5, v3, p0}, Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor$listenForGoneToDreamingLockscreenHosted$$inlined$launch$default$1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/domain/interactor/FromGoneTransitionInteractor;)V
 
-    .line 99
+    .line 42
     invoke-static {v2, v0, v3, v1, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 102
+    .line 45
     return-void
-    .line 105
+    .line 48
 .end method

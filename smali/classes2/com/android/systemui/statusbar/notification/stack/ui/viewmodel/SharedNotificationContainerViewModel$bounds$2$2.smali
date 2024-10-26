@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/statusbar/notification/stack/ui/viewmodel/SharedNotificationContainerViewModel$bounds$2$2;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function5;
@@ -85,7 +85,7 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 5
 
     .line 1
     sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
@@ -166,35 +166,35 @@
     const/4 v4, 0x0
 
     .line 53
-    const/4 v5, 0x0
-
-    .line 54
     if-eqz p1, :cond_0
 
-    .line 55
+    .line 54
     iget p0, v0, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;->top:F
 
-    .line 57
+    .line 56
     int-to-float p1, v1
 
-    .line 59
+    .line 58
     sub-float/2addr p0, p1
 
-    .line 60
+    .line 59
     const/4 p1, 0x6
 
-    .line 61
-    invoke-static {v0, p0, v5, v4, p1}, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;->copy$default(Lcom/android/systemui/common/shared/model/NotificationContainerBounds;FFZI)Lcom/android/systemui/common/shared/model/NotificationContainerBounds;
+    .line 60
+    invoke-static {v0, p0, v4, p1}, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;->copy$default(Lcom/android/systemui/common/shared/model/NotificationContainerBounds;FZI)Lcom/android/systemui/common/shared/model/NotificationContainerBounds;
 
-    .line 62
+    .line 61
     move-result-object p0
 
-    .line 65
+    .line 64
     goto :goto_0
 
-    .line 66
+    .line 65
     :cond_0
-    cmpg-float p0, p0, v5
+    const/4 p1, 0x0
+
+    .line 66
+    cmpg-float p0, p0, p1
 
     .line 67
     if-nez p0, :cond_1
@@ -210,7 +210,7 @@
     const/4 p0, 0x2
 
     .line 74
-    invoke-static {v0, v2, v5, v4, p0}, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;->copy$default(Lcom/android/systemui/common/shared/model/NotificationContainerBounds;FFZI)Lcom/android/systemui/common/shared/model/NotificationContainerBounds;
+    invoke-static {v0, v2, v4, p0}, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;->copy$default(Lcom/android/systemui/common/shared/model/NotificationContainerBounds;FZI)Lcom/android/systemui/common/shared/model/NotificationContainerBounds;
 
     .line 75
     move-result-object p0

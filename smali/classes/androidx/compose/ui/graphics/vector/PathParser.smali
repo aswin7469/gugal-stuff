@@ -1,34 +1,10 @@
 .class public final Landroidx/compose/ui/graphics/vector/PathParser;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public nodeData:[F
-
-.field public nodes:Ljava/util/ArrayList;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    const/16 v0, 0x40
-
-    .line 5
-    new-array v0, v0, [F
-
-    .line 7
-    iput-object v0, p0, Landroidx/compose/ui/graphics/vector/PathParser;->nodeData:[F
-
-    .line 9
-    return-void
-    .line 11
-.end method
 
 
 # virtual methods

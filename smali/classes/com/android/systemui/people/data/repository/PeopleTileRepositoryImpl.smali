@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/people/data/repository/PeopleTileRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/people/data/repository/PeopleTileRepository;
@@ -26,105 +26,116 @@
 .end method
 
 .method public static toModel(Landroid/app/people/PeopleSpaceTile;)Lcom/android/systemui/people/data/model/PeopleTileModel;
-    .locals 9
+    .locals 8
 
     .line 1
-    const/4 v0, 0x0
+    new-instance v7, Lcom/android/systemui/people/data/model/PeopleTileModel;
 
     .line 2
-    new-instance v8, Lcom/android/systemui/people/data/model/PeopleTileModel;
+    new-instance v1, Lcom/android/systemui/people/widget/PeopleTileKey;
 
-    .line 3
-    new-instance v2, Lcom/android/systemui/people/widget/PeopleTileKey;
+    .line 4
+    invoke-direct {v1, p0}, Lcom/android/systemui/people/widget/PeopleTileKey;-><init>(Landroid/app/people/PeopleSpaceTile;)V
 
-    .line 5
-    invoke-direct {v2, p0}, Lcom/android/systemui/people/widget/PeopleTileKey;-><init>(Landroid/app/people/PeopleSpaceTile;)V
-
-    .line 7
+    .line 6
     invoke-virtual {p0}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
 
-    .line 10
-    move-result-object v1
+    .line 9
+    move-result-object v0
+
+    .line 12
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 13
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    .line 14
-    move-result-object v3
-
-    .line 17
+    .line 16
     invoke-virtual {p0}, Landroid/app/people/PeopleSpaceTile;->getUserIcon()Landroid/graphics/drawable/Icon;
 
-    .line 18
-    move-result-object v4
+    .line 17
+    move-result-object v3
+
+    .line 20
+    sget-object v0, Lcom/android/systemui/people/PeopleTileViewHelper;->DOUBLE_EXCLAMATION_PATTERN:Ljava/util/regex/Pattern;
 
     .line 21
-    sget-object v1, Lcom/android/systemui/people/PeopleTileViewHelper;->DOUBLE_EXCLAMATION_PATTERN:Ljava/util/regex/Pattern;
-
-    .line 22
     invoke-virtual {p0}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
 
-    .line 24
-    move-result-object v1
+    .line 23
+    move-result-object v0
+
+    .line 26
+    if-eqz v0, :cond_0
 
     .line 27
-    if-eqz v1, :cond_0
-
-    .line 28
     invoke-virtual {p0}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
 
-    .line 30
-    move-result-object v1
+    .line 29
+    move-result-object v0
+
+    .line 32
+    invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     .line 33
-    invoke-interface {v1}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
+    move-result-object v0
 
-    .line 34
-    move-result-object v1
+    .line 36
+    new-instance v4, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;
 
     .line 37
-    new-instance v5, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;
+    const/4 v5, 0x2
 
-    .line 38
-    invoke-direct {v5, v0}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;-><init>(I)V
+    .line 39
+    invoke-direct {v4, v5}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;-><init>(I)V
 
     .line 40
-    invoke-interface {v1, v5}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
+    invoke-interface {v0, v4}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
     .line 43
-    move-result v1
+    move-result v0
 
     .line 46
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 47
     const/4 v0, 0x1
 
     .line 49
-    :cond_0
-    move v5, v0
+    :goto_0
+    move v4, v0
 
     .line 50
-    invoke-virtual {p0}, Landroid/app/people/PeopleSpaceTile;->isImportantConversation()Z
+    goto :goto_1
 
     .line 51
-    move-result v6
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 52
+    goto :goto_0
+
+    .line 53
+    :goto_1
+    invoke-virtual {p0}, Landroid/app/people/PeopleSpaceTile;->isImportantConversation()Z
 
     .line 54
+    move-result v5
+
+    .line 57
     invoke-static {p0}, Lcom/android/systemui/people/PeopleTileViewHelper;->isDndBlockingTileData(Landroid/app/people/PeopleSpaceTile;)Z
 
-    .line 55
-    move-result v7
-
     .line 58
-    move-object v1, v8
+    move-result v6
 
-    .line 59
-    invoke-direct/range {v1 .. v7}, Lcom/android/systemui/people/data/model/PeopleTileModel;-><init>(Lcom/android/systemui/people/widget/PeopleTileKey;Ljava/lang/String;Landroid/graphics/drawable/Icon;ZZZ)V
+    .line 61
+    move-object v0, v7
 
-    .line 60
-    return-object v8
+    .line 62
+    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/people/data/model/PeopleTileModel;-><init>(Lcom/android/systemui/people/widget/PeopleTileKey;Ljava/lang/String;Landroid/graphics/drawable/Icon;ZZZ)V
+
     .line 63
+    return-object v7
+    .line 66
 .end method
 
 

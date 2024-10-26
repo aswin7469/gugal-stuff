@@ -1,61 +1,133 @@
 .class public final Lcom/android/systemui/power/BatteryStateSnapshot;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
+.field public final averageTimeToDischargeMillis:J
+
 .field public final batteryLevel:I
 
 .field public final batteryStatus:I
 
 .field public final bucket:I
 
+.field public final isBasedOnUsage:Z
+
+.field public final isLowWarningEnabled:Z
+
 .field public final isPowerSaver:Z
 
 .field public final lowLevelThreshold:I
+
+.field public final lowThresholdMillis:J
 
 .field public final plugged:Z
 
 .field public final severeLevelThreshold:I
 
+.field public final severeThresholdMillis:J
+
+.field public final timeRemainingMillis:J
+
 
 # direct methods
-.method public constructor <init>(IIIIIZZ)V
-    .locals 0
+.method public constructor <init>(IZZIIIIJJJJZZ)V
+    .locals 3
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v0, p0
 
     .line 2
-    iput p1, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->batteryLevel:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    iput-boolean p6, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->isPowerSaver:Z
+    .line 3
+    move v1, p1
+
+    .line 6
+    iput v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->batteryLevel:I
 
     .line 7
-    iput-boolean p7, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->plugged:Z
+    move v1, p2
 
     .line 9
-    iput p2, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->bucket:I
+    iput-boolean v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->isPowerSaver:Z
 
-    .line 11
-    iput p3, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->batteryStatus:I
+    .line 10
+    move v1, p3
+
+    .line 12
+    iput-boolean v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->plugged:Z
 
     .line 13
-    iput p4, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->severeLevelThreshold:I
+    move v1, p4
 
     .line 15
-    iput p5, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowLevelThreshold:I
+    iput v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->bucket:I
 
-    .line 17
-    return-void
+    .line 16
+    move v1, p5
+
+    .line 18
+    iput v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->batteryStatus:I
+
     .line 19
+    move v1, p6
+
+    .line 21
+    iput v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->severeLevelThreshold:I
+
+    .line 22
+    move v1, p7
+
+    .line 24
+    iput v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowLevelThreshold:I
+
+    .line 25
+    move-wide v1, p8
+
+    .line 27
+    iput-wide v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->timeRemainingMillis:J
+
+    .line 28
+    move-wide v1, p10
+
+    .line 30
+    iput-wide v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->averageTimeToDischargeMillis:J
+
+    .line 31
+    move-wide v1, p12
+
+    .line 33
+    iput-wide v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->severeThresholdMillis:J
+
+    .line 34
+    move-wide/from16 v1, p14
+
+    .line 36
+    iput-wide v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowThresholdMillis:J
+
+    .line 38
+    move/from16 v1, p16
+
+    .line 40
+    iput-boolean v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->isBasedOnUsage:Z
+
+    .line 42
+    move/from16 v1, p17
+
+    .line 44
+    iput-boolean v1, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->isLowWarningEnabled:Z
+
+    .line 46
+    return-void
+    .line 48
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     .line 1
     const/4 v0, 0x1
@@ -162,21 +234,111 @@
 
     .line 55
     :cond_7
-    iget p0, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowLevelThreshold:I
+    iget v1, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowLevelThreshold:I
 
     .line 56
-    iget p1, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->lowLevelThreshold:I
+    iget v3, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->lowLevelThreshold:I
 
     .line 58
-    if-eq p0, p1, :cond_8
+    if-eq v1, v3, :cond_8
 
     .line 60
     return v2
 
     .line 62
     :cond_8
-    return v0
+    iget-wide v3, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->timeRemainingMillis:J
+
     .line 63
+    iget-wide v5, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->timeRemainingMillis:J
+
+    .line 65
+    cmp-long v1, v3, v5
+
+    .line 67
+    if-eqz v1, :cond_9
+
+    .line 69
+    return v2
+
+    .line 71
+    :cond_9
+    iget-wide v3, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->averageTimeToDischargeMillis:J
+
+    .line 72
+    iget-wide v5, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->averageTimeToDischargeMillis:J
+
+    .line 74
+    cmp-long v1, v3, v5
+
+    .line 76
+    if-eqz v1, :cond_a
+
+    .line 78
+    return v2
+
+    .line 80
+    :cond_a
+    iget-wide v3, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->severeThresholdMillis:J
+
+    .line 81
+    iget-wide v5, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->severeThresholdMillis:J
+
+    .line 83
+    cmp-long v1, v3, v5
+
+    .line 85
+    if-eqz v1, :cond_b
+
+    .line 87
+    return v2
+
+    .line 89
+    :cond_b
+    iget-wide v3, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowThresholdMillis:J
+
+    .line 90
+    iget-wide v5, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->lowThresholdMillis:J
+
+    .line 92
+    cmp-long v1, v3, v5
+
+    .line 94
+    if-eqz v1, :cond_c
+
+    .line 96
+    return v2
+
+    .line 98
+    :cond_c
+    iget-boolean v1, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->isBasedOnUsage:Z
+
+    .line 99
+    iget-boolean v3, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->isBasedOnUsage:Z
+
+    .line 101
+    if-eq v1, v3, :cond_d
+
+    .line 103
+    return v2
+
+    .line 105
+    :cond_d
+    iget-boolean p0, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->isLowWarningEnabled:Z
+
+    .line 106
+    iget-boolean p1, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->isLowWarningEnabled:Z
+
+    .line 108
+    if-eq p0, p1, :cond_e
+
+    .line 110
+    return v2
+
+    .line 112
+    :cond_e
+    return v0
+    .line 113
 .end method
 
 .method public final hashCode()I
@@ -243,69 +405,78 @@
     move-result v0
 
     .line 40
-    iget p0, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowLevelThreshold:I
+    iget v2, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowLevelThreshold:I
 
     .line 41
-    invoke-static {p0, v0, v1}, Landroidx/compose/animation/core/KeyframesSpec$KeyframeEntity$$ExternalSyntheticOutline0;->m(III)I
+    invoke-static {v2, v0, v1}, Landroidx/compose/animation/core/KeyframesSpec$KeyframeEntity$$ExternalSyntheticOutline0;->m(III)I
 
     .line 43
-    move-result p0
-
-    .line 46
-    const-wide/16 v2, -0x1
-
-    .line 47
-    invoke-static {p0, v1, v2, v3}, Landroidx/compose/animation/Scale$$ExternalSyntheticOutline0;->m(IIJ)I
-
-    .line 49
-    move-result p0
-
-    .line 52
-    invoke-static {p0, v1, v2, v3}, Landroidx/compose/animation/Scale$$ExternalSyntheticOutline0;->m(IIJ)I
-
-    .line 53
-    move-result p0
-
-    .line 56
-    invoke-static {p0, v1, v2, v3}, Landroidx/compose/animation/Scale$$ExternalSyntheticOutline0;->m(IIJ)I
-
-    .line 57
-    move-result p0
-
-    .line 60
-    invoke-static {p0, v1, v2, v3}, Landroidx/compose/animation/Scale$$ExternalSyntheticOutline0;->m(IIJ)I
-
-    .line 61
-    move-result p0
-
-    .line 64
-    const/4 v0, 0x0
-
-    .line 65
-    invoke-static {p0, v1, v0}, Landroidx/compose/animation/TransitionData$$ExternalSyntheticOutline0;->m(IIZ)I
-
-    .line 66
-    move-result p0
-
-    .line 69
-    const/4 v0, 0x1
-
-    .line 70
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    .line 71
     move-result v0
 
-    .line 74
-    add-int/2addr v0, p0
+    .line 46
+    iget-wide v2, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->timeRemainingMillis:J
 
-    .line 75
-    return v0
+    .line 47
+    invoke-static {v0, v1, v2, v3}, Landroidx/compose/animation/Scale$$ExternalSyntheticOutline0;->m(IIJ)I
+
+    .line 49
+    move-result v0
+
+    .line 52
+    iget-wide v2, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->averageTimeToDischargeMillis:J
+
+    .line 53
+    invoke-static {v0, v1, v2, v3}, Landroidx/compose/animation/Scale$$ExternalSyntheticOutline0;->m(IIJ)I
+
+    .line 55
+    move-result v0
+
+    .line 58
+    iget-wide v2, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->severeThresholdMillis:J
+
+    .line 59
+    invoke-static {v0, v1, v2, v3}, Landroidx/compose/animation/Scale$$ExternalSyntheticOutline0;->m(IIJ)I
+
+    .line 61
+    move-result v0
+
+    .line 64
+    iget-wide v2, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowThresholdMillis:J
+
+    .line 65
+    invoke-static {v0, v1, v2, v3}, Landroidx/compose/animation/Scale$$ExternalSyntheticOutline0;->m(IIJ)I
+
+    .line 67
+    move-result v0
+
+    .line 70
+    iget-boolean v2, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->isBasedOnUsage:Z
+
+    .line 71
+    invoke-static {v0, v1, v2}, Landroidx/compose/animation/TransitionData$$ExternalSyntheticOutline0;->m(IIZ)I
+
+    .line 73
+    move-result v0
+
     .line 76
+    iget-boolean p0, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->isLowWarningEnabled:Z
+
+    .line 77
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    .line 79
+    move-result p0
+
+    .line 82
+    add-int/2addr p0, v0
+
+    .line 83
+    return p0
+    .line 84
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     .line 1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -389,18 +560,90 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 66
-    iget p0, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowLevelThreshold:I
+    iget v1, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowLevelThreshold:I
 
     .line 69
-    const-string v1, ", timeRemainingMillis=-1, averageTimeToDischargeMillis=-1, severeThresholdMillis=-1, lowThresholdMillis=-1, isBasedOnUsage=false, isLowWarningEnabled=true)"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 71
-    invoke-static {v0, p0, v1}, Landroidx/compose/runtime/Anchor$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    const-string v1, ", timeRemainingMillis="
 
-    .line 73
-    move-result-object p0
+    .line 74
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 76
+    iget-wide v1, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->timeRemainingMillis:J
+
+    .line 79
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    .line 81
+    const-string v1, ", averageTimeToDischargeMillis="
+
+    .line 84
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 86
+    iget-wide v1, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->averageTimeToDischargeMillis:J
+
+    .line 89
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    .line 91
+    const-string v1, ", severeThresholdMillis="
+
+    .line 94
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 96
+    iget-wide v1, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->severeThresholdMillis:J
+
+    .line 99
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    .line 101
+    const-string v1, ", lowThresholdMillis="
+
+    .line 104
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 106
+    iget-wide v1, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->lowThresholdMillis:J
+
+    .line 109
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    .line 111
+    const-string v1, ", isBasedOnUsage="
+
+    .line 114
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 116
+    iget-boolean v1, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->isBasedOnUsage:Z
+
+    .line 119
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 121
+    const-string v1, ", isLowWarningEnabled="
+
+    .line 124
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 126
+    iget-boolean p0, p0, Lcom/android/systemui/power/BatteryStateSnapshot;->isLowWarningEnabled:Z
+
+    .line 129
+    const-string v1, ")"
+
+    .line 131
+    invoke-static {v0, p0, v1}, Landroidx/appcompat/app/AppCompatDelegateImpl$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    .line 133
+    move-result-object p0
+
+    .line 136
     return-object p0
-    .line 77
+    .line 137
 .end method

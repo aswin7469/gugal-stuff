@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGoneTransitionViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -42,73 +42,24 @@
     invoke-direct {v4, v2, v3}, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;-><init>(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;)V
 
     .line 22
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 25
-    move-result v2
-
-    .line 28
-    if-eqz v2, :cond_0
-
-    .line 29
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 31
-    move-result v2
-
-    .line 34
-    if-eqz v2, :cond_0
-
-    .line 35
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 37
-    move-result v2
-
-    .line 40
-    if-eqz v2, :cond_0
-
-    .line 41
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 43
-    move-result v2
-
-    .line 46
-    if-eqz v2, :cond_0
-
-    .line 47
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 49
-    move-result v2
-
-    .line 52
-    if-eqz v2, :cond_0
-
-    .line 53
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 55
-    :cond_0
     new-instance v2, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;
 
-    .line 58
+    .line 25
     invoke-direct {v2, p1, v0, v1, v4}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;-><init>(Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow;JLcom/android/systemui/keyguard/shared/model/Edge;)V
 
-    .line 60
+    .line 27
     const/4 p1, 0x0
 
-    .line 63
+    .line 30
     invoke-virtual {v2, p1}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;->immediatelyTransitionTo(F)Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 64
+    .line 31
     move-result-object p1
 
-    .line 67
+    .line 34
     iput-object p1, p0, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGoneTransitionViewModel;->lockscreenAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 68
+    .line 35
     return-void
-    .line 70
+    .line 37
 .end method

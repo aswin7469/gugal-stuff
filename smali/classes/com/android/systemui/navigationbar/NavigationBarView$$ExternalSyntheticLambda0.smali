@@ -1,9 +1,9 @@
 .class public final synthetic Lcom/android/systemui/navigationbar/NavigationBarView$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -27,31 +27,47 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/navigationbar/NavigationBarView$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/navigationbar/NavigationBarView;
 
     .line 2
-    check-cast p1, Landroid/graphics/Rect;
+    iget-boolean p0, p0, Lcom/android/systemui/navigationbar/NavigationBarView;->mShowSwipeUpUi:Z
 
     .line 4
-    sget v0, Lcom/android/systemui/navigationbar/NavigationBarView;->$r8$clinit:I
+    xor-int/lit8 p0, p0, 0x1
 
     .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_start_0
+    invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
     .line 8
-    new-instance v0, Lcom/android/systemui/navigationbar/NavigationBarView$$ExternalSyntheticLambda3;
+    move-result-object v0
 
     .line 11
-    invoke-direct {v0, p0, p1}, Lcom/android/systemui/navigationbar/NavigationBarView$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/navigationbar/NavigationBarView;Landroid/graphics/Rect;)V
+    invoke-interface {v0, p0}, Landroid/view/IWindowManager;->setNavBarVirtualKeyHapticFeedbackEnabled(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 13
-    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->post(Ljava/lang/Runnable;)Z
+    .line 12
+    goto :goto_0
+
+    .line 15
+    :catch_0
+    move-exception p0
 
     .line 16
-    return-void
+    const-string v0, "NavBarView"
+
+    .line 17
+    const-string v1, "Failed to enable or disable navigation bar button haptics: "
+
     .line 19
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 21
+    :goto_0
+    return-void
 .end method

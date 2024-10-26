@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter$DeviceItemViewHolder$bind$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -84,7 +84,7 @@
     iget-object v0, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter$DeviceItemViewHolder$bind$2;->$deviceItemOnClickCallback:Ljava/lang/Object;
 
     .line 30
-    check-cast v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;
+    check-cast v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
     .line 32
     iget-object p0, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter$DeviceItemViewHolder$bind$2;->$item:Lcom/android/systemui/bluetooth/qsdialog/DeviceItem;
@@ -93,66 +93,63 @@
     invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 36
-    check-cast v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
-
-    .line 39
     iget-object v1, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->uiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
-    .line 41
+    .line 39
     sget-object v2, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;->DEVICE_GEAR_CLICKED:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
 
-    .line 43
+    .line 41
     invoke-interface {v1, v2}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
 
-    .line 45
+    .line 43
     new-instance v1, Landroid/content/Intent;
 
-    .line 48
+    .line 46
     const-string v2, "com.android.settings.BLUETOOTH_DEVICE_DETAIL_SETTINGS"
 
-    .line 50
+    .line 48
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 52
+    .line 50
     new-instance v2, Landroid/os/Bundle;
 
-    .line 55
+    .line 53
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 57
+    .line 55
     iget-object p0, p0, Lcom/android/systemui/bluetooth/qsdialog/DeviceItem;->cachedBluetoothDevice:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
 
-    .line 60
+    .line 58
     iget-object p0, p0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 62
+    .line 60
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
-    .line 64
+    .line 62
     move-result-object p0
 
-    .line 67
+    .line 65
     const-string v3, "device_address"
 
-    .line 68
+    .line 66
     invoke-virtual {v2, v3, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 70
+    .line 68
     const-string p0, ":settings:show_fragment_args"
 
-    .line 73
+    .line 71
     invoke-virtual {v1, p0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 75
+    .line 73
     invoke-virtual {v0, v1, p1}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->startSettingsActivity(Landroid/content/Intent;Landroid/view/View;)V
 
-    .line 78
+    .line 76
     return-void
 
-    .line 81
+    .line 79
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 82
+    .line 80
 .end method

@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController$8$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -132,25 +132,22 @@
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 34
-    invoke-static {}, Lcom/android/systemui/media/controls/util/MediaFlags;->isSceneContainerEnabled()V
-
-    .line 37
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 40
+    .line 37
     return-object p0
 
-    .line 42
+    .line 39
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 43
+    .line 40
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    .line 45
+    .line 42
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 47
+    .line 44
     throw p0
-    .line 50
+    .line 47
 .end method

@@ -5,7 +5,9 @@
     <item>Mostra la percentuale quando in carica (opzione predefinita)</item>
     <item>Non mostrare questa icona</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Mostra ore, minuti e secondi</item>
     <item>Mostra ore e minuti (opzione predefinita)</item>

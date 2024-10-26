@@ -1,6 +1,6 @@
 .class public final Lcom/android/compose/animation/scene/SwipeTransition;
 .super Lcom/android/compose/animation/scene/TransitionState$Transition;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -276,41 +276,35 @@
     iget-object v1, v0, Lcom/android/compose/animation/scene/SwipeTransition$OffsetAnimation;->animatable:Landroidx/compose/animation/core/Animatable;
 
     .line 15
-    iget-object v1, v1, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {v1}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 17
-    iget-object v1, v1, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 19
-    invoke-virtual {v1}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 21
     move-result-object v1
 
-    .line 24
+    .line 20
     check-cast v1, Ljava/lang/Number;
 
-    .line 25
+    .line 21
     invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
 
-    .line 27
+    .line 23
     move-result v1
 
-    .line 30
+    .line 26
     iget-object p0, p0, Lcom/android/compose/animation/scene/SwipeTransition;->dragOffset$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableFloatState;
 
-    .line 31
+    .line 27
     invoke-virtual {p0, v1}, Landroidx/compose/runtime/SnapshotMutableFloatStateImpl;->setFloatValue(F)V
 
-    .line 33
+    .line 29
     iget-object p0, v0, Lcom/android/compose/animation/scene/SwipeTransition$OffsetAnimation;->job:Lkotlinx/coroutines/Job;
 
-    .line 36
+    .line 32
     invoke-interface {p0, v2}, Lkotlinx/coroutines/Job;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    .line 38
+    .line 34
     return-void
-    .line 41
+    .line 37
 .end method
 
 .method public final distance()F
@@ -636,20 +630,20 @@
     new-instance p0, Ljava/lang/IllegalStateException;
 
     .line 107
-    const-string v0, "targetScene != fromScene but distance is unspecified"
+    const-string/jumbo v0, "targetScene != fromScene but distance is unspecified"
 
     .line 109
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 111
+    .line 112
     move-result-object v0
 
-    .line 114
+    .line 115
     invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 115
+    .line 116
     throw p0
-    .line 118
+    .line 119
 .end method
 
 .method public final getCurrentScene()Lcom/android/compose/animation/scene/SceneKey;
@@ -719,62 +713,59 @@
     if-eqz v0, :cond_0
 
     .line 10
-    iget-object v0, v0, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {v0}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 12
-    invoke-virtual {v0}, Landroidx/compose/animation/core/AnimationState;->getValue()Ljava/lang/Object;
-
-    .line 14
     move-result-object v0
 
-    .line 17
+    .line 15
     check-cast v0, Ljava/lang/Number;
 
-    .line 18
+    .line 16
     invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
 
-    .line 20
+    .line 18
     move-result v0
 
-    .line 23
+    .line 21
     goto :goto_0
 
-    .line 24
+    .line 22
     :cond_0
     iget-object v0, p0, Lcom/android/compose/animation/scene/SwipeTransition;->dragOffset$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableFloatState;
 
-    .line 25
+    .line 23
     invoke-virtual {v0}, Landroidx/compose/runtime/SnapshotMutableFloatStateImpl;->getFloatValue()F
 
-    .line 27
+    .line 25
     move-result v0
 
-    .line 30
+    .line 28
     :goto_0
     invoke-virtual {p0}, Lcom/android/compose/animation/scene/SwipeTransition;->distance()F
 
-    .line 31
+    .line 29
     move-result p0
 
-    .line 34
+    .line 32
     const/4 v1, 0x0
 
-    .line 35
+    .line 33
     cmpg-float v2, p0, v1
 
-    .line 36
+    .line 34
     if-nez v2, :cond_1
 
-    .line 38
+    .line 36
     return v1
 
-    .line 40
+    .line 38
     :cond_1
     div-float/2addr v0, p0
 
-    .line 41
+    .line 39
     return v0
-    .line 42
+    .line 40
 .end method
 
 .method public final getProgressVelocity()F

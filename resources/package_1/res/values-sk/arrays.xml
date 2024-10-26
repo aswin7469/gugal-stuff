@@ -5,7 +5,9 @@
     <item>Zobrazovať percentá počas nabíjania (predvolené)</item>
     <item>Nezobrazovať túto ikonu</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Zobrazovať hodiny, minúty a sekundy</item>
     <item>Zobrazovať hodiny a minúty (predvolené)</item>

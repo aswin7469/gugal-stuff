@@ -5,7 +5,9 @@
     <item>Erakutsi ehunekoa kargatu bitartean (balio lehenetsia)</item>
     <item>Ez erakutsi ikonoa</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Erakutsi orduak, minutuak eta segundoak</item>
     <item>Erakutsi orduak eta minutuak (balio lehenetsia)</item>

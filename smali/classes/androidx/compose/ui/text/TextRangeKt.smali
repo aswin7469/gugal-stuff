@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/text/TextRangeKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -94,42 +94,42 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     .line 58
-    const-string v3, "start cannot be negative. [start: "
+    const-string/jumbo v3, "start cannot be negative. [start: "
 
     .line 60
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 62
+    .line 63
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 65
+    .line 66
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 68
+    .line 69
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 71
+    .line 72
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 74
+    .line 75
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 77
+    .line 78
     move-result-object p0
-
-    .line 80
-    new-instance p1, Ljava/lang/IllegalArgumentException;
 
     .line 81
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    .line 82
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 83
+    .line 84
     move-result-object p0
 
-    .line 86
+    .line 87
     invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 87
+    .line 88
     throw p1
-    .line 90
+    .line 91
 .end method

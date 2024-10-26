@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/collection/coordinator/Coordinator;
@@ -180,173 +180,50 @@
     new-instance p1, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$unseenNotifPromoter$1;
 
     .line 59
-    invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$unseenNotifPromoter$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;)V
+    const-string p2, "KeyguardCoordinator-unseen"
 
     .line 61
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;->unseenNotifPromoter:Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$unseenNotifPromoter$1;
+    invoke-direct {p1, p2}, Lcom/android/systemui/statusbar/notification/collection/listbuilder/pluggable/Pluggable;-><init>(Ljava/lang/String;)V
 
-    .line 64
+    .line 63
     new-instance p1, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$topUnseenSectioner$1;
 
     .line 66
-    invoke-direct {p1, p0, p2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$topUnseenSectioner$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;I)V
+    const/4 p2, 0x1
 
     .line 68
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;->topOngoingSectioner:Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$topUnseenSectioner$1;
-
-    .line 71
-    new-instance p1, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$topUnseenSectioner$1;
-
-    .line 73
-    const/4 p2, 0x0
-
-    .line 75
     invoke-direct {p1, p0, p2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$topUnseenSectioner$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;I)V
 
-    .line 76
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;->topUnseenSectioner:Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$topUnseenSectioner$1;
+    .line 69
+    new-instance p1, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$topUnseenSectioner$1;
 
-    .line 79
+    .line 72
+    const/4 p2, 0x0
+
+    .line 74
+    invoke-direct {p1, p0, p2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$topUnseenSectioner$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;I)V
+
+    .line 75
     new-instance p1, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$unseenNotifFilter$1;
 
-    .line 81
+    .line 78
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$unseenNotifFilter$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;)V
 
-    .line 83
+    .line 80
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;->unseenNotifFilter:Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$unseenNotifFilter$1;
 
-    .line 86
+    .line 83
     new-instance p1, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$notifFilter$1;
 
-    .line 88
+    .line 85
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$notifFilter$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;)V
 
-    .line 90
+    .line 87
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;->notifFilter:Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$notifFilter$1;
 
-    .line 93
+    .line 90
     return-void
-    .line 95
-.end method
-
-.method public static final access$anyEntry(Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;Lcom/android/systemui/statusbar/notification/collection/ListEntry;Lkotlin/jvm/functions/Function1;)Z
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 2
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/ListEntry;->getRepresentativeEntry()Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
-
-    .line 5
-    move-result-object p0
-
-    .line 8
-    invoke-interface {p2, p0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 9
-    move-result-object p0
-
-    .line 12
-    check-cast p0, Ljava/lang/Boolean;
-
-    .line 13
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 15
-    move-result p0
-
-    .line 18
-    const/4 v0, 0x1
-
-    .line 19
-    if-eqz p0, :cond_0
-
-    .line 20
-    goto :goto_1
-
-    .line 22
-    :cond_0
-    instance-of p0, p1, Lcom/android/systemui/statusbar/notification/collection/GroupEntry;
-
-    .line 23
-    const/4 v1, 0x0
-
-    .line 25
-    if-nez p0, :cond_2
-
-    .line 26
-    :cond_1
-    :goto_0
-    move v0, v1
-
-    .line 28
-    goto :goto_1
-
-    .line 29
-    :cond_2
-    check-cast p1, Lcom/android/systemui/statusbar/notification/collection/GroupEntry;
-
-    .line 30
-    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/GroupEntry;->mUnmodifiableChildren:Ljava/util/List;
-
-    .line 32
-    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
-
-    .line 34
-    move-result p1
-
-    .line 37
-    if-eqz p1, :cond_3
-
-    .line 38
-    goto :goto_0
-
-    .line 40
-    :cond_3
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    .line 41
-    move-result-object p0
-
-    .line 44
-    :cond_4
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 45
-    move-result p1
-
-    .line 48
-    if-eqz p1, :cond_1
-
-    .line 49
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 51
-    move-result-object p1
-
-    .line 54
-    invoke-interface {p2, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 55
-    move-result-object p1
-
-    .line 58
-    check-cast p1, Ljava/lang/Boolean;
-
-    .line 59
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 61
-    move-result p1
-
-    .line 64
-    if-eqz p1, :cond_4
-
-    .line 65
-    :goto_1
-    return v0
-    .line 67
+    .line 92
 .end method
 
 .method public static synthetic getUnseenNotifFilter$frameworks__base__packages__SystemUI__android_common__SystemUI_core$annotations()V
@@ -443,108 +320,44 @@
     iput-boolean v1, v3, Lcom/android/systemui/statusbar/notification/collection/provider/SectionHeaderVisibilityProvider;->sectionHeadersVisible:Z
 
     .line 42
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationMinimalismPrototype()Z
-
-    .line 44
-    move-result v0
-
-    .line 47
-    if-eqz v0, :cond_2
-
-    .line 48
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/shared/NotificationMinimalismPrototype;->getVersion()I
-
-    .line 50
-    move-result v0
-
-    .line 53
-    const/4 v1, 0x2
-
-    .line 54
-    if-ne v0, v1, :cond_2
-
-    .line 55
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;->unseenNotifPromoter:Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$unseenNotifPromoter$1;
-
-    .line 57
-    invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->addPromoter(Lcom/android/systemui/statusbar/notification/collection/listbuilder/pluggable/NotifPromoter;)V
-
-    .line 59
-    new-instance v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$attachUnseenFilter$1;
-
-    .line 62
-    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$attachUnseenFilter$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;)V
-
-    .line 64
-    iget-object v1, p1, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->mShadeListBuilder:Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;
-
-    .line 67
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 69
-    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
-
-    .line 72
-    iget-object v2, v1, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mPipelineState:Lcom/android/systemui/statusbar/notification/collection/listbuilder/PipelineState;
-
-    .line 75
-    invoke-virtual {v2}, Lcom/android/systemui/statusbar/notification/collection/listbuilder/PipelineState;->requireState()V
-
-    .line 77
-    iget-object v1, v1, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mOnBeforeTransformGroupsListeners:Lcom/android/systemui/util/NamedListenerSet;
-
-    .line 80
-    iget-object v2, v1, Lcom/android/systemui/util/NamedListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    .line 82
-    new-instance v3, Lcom/android/systemui/util/NamedListenerSet$NamedListener;
-
-    .line 84
-    invoke-direct {v3, v1, v0}, Lcom/android/systemui/util/NamedListenerSet$NamedListener;-><init>(Lcom/android/systemui/util/NamedListenerSet;Ljava/lang/Object;)V
-
-    .line 86
-    invoke-virtual {v2, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->addIfAbsent(Ljava/lang/Object;)Z
-
-    .line 89
-    :cond_2
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;->unseenNotifFilter:Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$unseenNotifFilter$1;
 
-    .line 92
+    .line 44
     invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->addFinalizeFilter(Lcom/android/systemui/statusbar/notification/collection/listbuilder/pluggable/NotifFilter;)V
 
-    .line 94
+    .line 46
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;->collectionListener:Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$collectionListener$1;
 
-    .line 97
+    .line 49
     invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->addCollectionListener(Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionListener;)V
 
-    .line 99
+    .line 51
     new-instance p1, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$attachUnseenFilter$2;
 
-    .line 102
+    .line 54
     const/4 v0, 0x0
 
-    .line 104
+    .line 56
     invoke-direct {p1, p0, v0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator$attachUnseenFilter$2;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;Lkotlin/coroutines/Continuation;)V
 
-    .line 105
+    .line 57
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;->scope:Lkotlinx/coroutines/CoroutineScope;
 
-    .line 108
+    .line 60
     const/4 v2, 0x3
 
-    .line 110
+    .line 62
     invoke-static {v1, v0, v0, p1, v2}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 111
+    .line 63
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/KeyguardCoordinator;->dumpManager:Lcom/android/systemui/dump/DumpManager;
 
-    .line 114
+    .line 66
     invoke-virtual {p1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
 
-    .line 116
+    .line 68
     return-void
-    .line 119
+    .line 71
 .end method
 
 .method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V

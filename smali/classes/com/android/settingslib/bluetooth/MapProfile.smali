@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/bluetooth/MapProfile;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;
@@ -208,7 +208,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x108056d    # @android:drawable/ic_perm_group_wallpapewr
+    const p0, 0x108056b    # @android:drawable/ic_perm_group_system_tools
 
     .line 2
     return p0
@@ -261,7 +261,7 @@
 .end method
 
 .method public final isProfileReady()Z
-    .locals 2
+    .locals 3
 
     .line 1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -276,25 +276,17 @@
     iget-boolean v1, p0, Lcom/android/settingslib/bluetooth/MapProfile;->mIsProfileReady:Z
 
     .line 9
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const-string v2, "MapProfile"
 
     .line 11
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)V
 
-    .line 14
-    move-result-object v0
-
-    .line 17
-    const-string v1, "MapProfile"
-
-    .line 18
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 20
+    .line 13
     iget-boolean p0, p0, Lcom/android/settingslib/bluetooth/MapProfile;->mIsProfileReady:Z
 
-    .line 23
+    .line 16
     return p0
+    .line 18
 .end method
 
 .method public final setEnabled(Landroid/bluetooth/BluetoothDevice;Z)Z

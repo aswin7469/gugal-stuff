@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/WindowMagnificationSettings$3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -37,7 +37,7 @@
     move-result p1
 
     .line 5
-    const v0, 0x7f0b046f    # @id/magnifier_small_button
+    const v0, 0x7f0a0493    # @id/magnifier_small_button
 
     .line 6
     const/4 v1, 0x1
@@ -56,7 +56,7 @@
 
     .line 17
     :cond_0
-    const v0, 0x7f0b046c    # @id/magnifier_medium_button
+    const v0, 0x7f0a0490    # @id/magnifier_medium_button
 
     .line 18
     if-ne p1, v0, :cond_1
@@ -75,7 +75,7 @@
 
     .line 29
     :cond_1
-    const v0, 0x7f0b046b    # @id/magnifier_large_button
+    const v0, 0x7f0a048f    # @id/magnifier_large_button
 
     .line 30
     if-ne p1, v0, :cond_2
@@ -94,7 +94,7 @@
 
     .line 41
     :cond_2
-    const v0, 0x7f0b0467    # @id/magnifier_full_button
+    const v0, 0x7f0a048b    # @id/magnifier_full_button
 
     .line 42
     if-ne p1, v0, :cond_3
@@ -113,7 +113,7 @@
 
     .line 53
     :cond_3
-    const v0, 0x7f0b0466    # @id/magnifier_edit_button
+    const v0, 0x7f0a048a    # @id/magnifier_edit_button
 
     .line 54
     if-ne p1, v0, :cond_4
@@ -180,7 +180,7 @@
 
     .line 101
     :cond_4
-    const v0, 0x7f0b0465    # @id/magnifier_done_button
+    const v0, 0x7f0a0489    # @id/magnifier_done_button
 
     .line 102
     if-ne p1, v0, :cond_5

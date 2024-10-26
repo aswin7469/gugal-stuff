@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/media/controls/ui/viewmodel/MediaControlViewModel$toViewModel$3;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -90,7 +90,7 @@
     move-result-object p0
 
     .line 30
-    const v0, 0x7f1402d4    # @string/controls_media_playing_item_description '%1$s by %2$s is playing from %3$s'
+    const v0, 0x7f1302f0    # @string/controls_media_playing_item_description '%1$s by %2$s is playing from %3$s'
 
     .line 31
     invoke-virtual {p1, v0, p0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

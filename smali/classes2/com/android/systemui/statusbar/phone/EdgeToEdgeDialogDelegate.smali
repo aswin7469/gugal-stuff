@@ -1,13 +1,13 @@
 .class public final Lcom/android/systemui/statusbar/phone/EdgeToEdgeDialogDelegate;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/phone/DialogDelegate;
 
 
 # virtual methods
-.method public final getBackAnimationSpec(Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda2;)Lcom/android/systemui/animation/back/BackAnimationSpec;
+.method public final getBackAnimationSpec(Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda1;)Lcom/android/systemui/animation/back/BackAnimationSpec;
     .locals 1
 
     .line 1
@@ -17,7 +17,7 @@
     new-instance v0, Lcom/android/systemui/animation/back/BottomsheetBackAnimationSpecKt$createBottomsheetAnimationSpec$1;
 
     .line 4
-    invoke-direct {v0, p1, p0}, Lcom/android/systemui/animation/back/BottomsheetBackAnimationSpecKt$createBottomsheetAnimationSpec$1;-><init>(Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda2;Landroid/view/animation/Interpolator;)V
+    invoke-direct {v0, p1, p0}, Lcom/android/systemui/animation/back/BottomsheetBackAnimationSpecKt$createBottomsheetAnimationSpec$1;-><init>(Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda1;Landroid/view/animation/Interpolator;)V
 
     .line 6
     return-object v0

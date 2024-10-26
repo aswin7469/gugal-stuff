@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/globalactions/GlobalActionsDialogLite$RestartAction;
 .super Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/globalactions/GlobalActionsDialogLite$LongPressAction;
@@ -18,10 +18,10 @@
     iput-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$RestartAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialogLite;
 
     .line 2
-    const v0, 0x1080584    # @android:drawable/ic_qs_ui_mode_night
+    const v0, 0x1080582    # @android:drawable/ic_qs_night_display_on
 
     .line 4
-    const v1, 0x104044e    # @android:string/httpError
+    const v1, 0x1040445    # @android:string/harmful_app_warning_uninstall
 
     .line 7
     invoke-direct {p0, p1, v0, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialogLite;II)V
@@ -136,7 +136,6 @@
 
     .line 21
     return-void
-    .line 24
 .end method
 
 .method public final showBeforeProvisioning()Z

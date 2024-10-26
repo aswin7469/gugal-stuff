@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -85,165 +85,8 @@
     .line 41
 .end method
 
-.method public static isEdgeResizePermitted(Landroid/view/MotionEvent;)Z
-    .locals 5
-
-    .line 1
-    invoke-static {}, Lcom/android/window/flags/Flags;->enableWindowingEdgeDragResize()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    const/4 v1, 0x1
-
-    .line 6
-    const/4 v2, 0x3
-
-    .line 7
-    const/4 v3, 0x0
-
-    .line 8
-    if-eqz v0, :cond_2
-
-    .line 9
-    invoke-virtual {p0, v3}, Landroid/view/MotionEvent;->getToolType(I)I
-
-    .line 11
-    move-result v0
-
-    .line 14
-    const/4 v4, 0x2
-
-    .line 15
-    if-eq v0, v4, :cond_1
-
-    .line 16
-    invoke-virtual {p0, v3}, Landroid/view/MotionEvent;->getToolType(I)I
-
-    .line 18
-    move-result p0
-
-    .line 21
-    if-ne p0, v2, :cond_0
-
-    .line 22
-    goto :goto_0
-
-    .line 24
-    :cond_0
-    move v1, v3
-
-    .line 25
-    :cond_1
-    :goto_0
-    return v1
-
-    .line 26
-    :cond_2
-    invoke-virtual {p0, v3}, Landroid/view/MotionEvent;->getToolType(I)I
-
-    .line 27
-    move-result p0
-
-    .line 30
-    if-ne p0, v2, :cond_3
-
-    .line 31
-    goto :goto_1
-
-    .line 33
-    :cond_3
-    move v1, v3
-
-    .line 34
-    :goto_1
-    return v1
-    .line 35
-.end method
-
 
 # virtual methods
-.method public final calculateCtrlType(FFZZ)I
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lcom/android/window/flags/Flags;->enableWindowingEdgeDragResize()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    iget-object v1, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mFineTaskCorners:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;
-
-    .line 6
-    if-eqz v0, :cond_2
-
-    .line 8
-    if-eqz p3, :cond_0
-
-    .line 10
-    iget-object p3, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mLargeTaskCorners:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;
-
-    .line 12
-    invoke-virtual {p3, p1, p2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->calculateCornersCtrlType(FF)I
-
-    .line 14
-    move-result p3
-
-    .line 17
-    goto :goto_0
-
-    .line 18
-    :cond_0
-    invoke-virtual {v1, p1, p2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->calculateCornersCtrlType(FF)I
-
-    .line 19
-    move-result p3
-
-    .line 22
-    :goto_0
-    if-nez p3, :cond_1
-
-    .line 23
-    if-eqz p4, :cond_1
-
-    .line 25
-    invoke-virtual {p0, p1, p2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->calculateEdgeResizeCtrlType(FF)I
-
-    .line 27
-    move-result p3
-
-    .line 30
-    :cond_1
-    return p3
-
-    .line 31
-    :cond_2
-    if-eqz p3, :cond_3
-
-    .line 32
-    invoke-virtual {v1, p1, p2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->calculateCornersCtrlType(FF)I
-
-    .line 34
-    move-result p0
-
-    .line 37
-    goto :goto_1
-
-    .line 38
-    :cond_3
-    invoke-virtual {p0, p1, p2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->calculateEdgeResizeCtrlType(FF)I
-
-    .line 39
-    move-result p0
-
-    .line 42
-    :goto_1
-    return p0
-    .line 43
-.end method
-
 .method public final calculateEdgeResizeCtrlType(FF)I
     .locals 6
 
@@ -873,7 +716,7 @@
 .end method
 
 .method public final shouldHandleEvent(Landroid/view/MotionEvent;Landroid/graphics/Point;)Z
-    .locals 6
+    .locals 4
 
     .line 1
     const/4 v0, 0x0
@@ -912,287 +755,58 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->enableWindowingEdgeDragResize()Z
 
     .line 19
-    move-result p2
-
-    .line 22
-    const/16 v3, 0x1002
-
-    .line 23
-    const/4 v4, 0x1
-
-    .line 25
-    iget-object v5, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mFineTaskCorners:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;
-
-    .line 26
-    if-eqz p2, :cond_4
-
-    .line 28
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getSource()I
 
-    .line 30
-    move-result p2
+    .line 22
+    move-result p1
 
-    .line 33
-    and-int/2addr p2, v3
+    .line 25
+    const/16 p2, 0x1002
+
+    .line 26
+    and-int/2addr p1, p2
+
+    .line 28
+    const/4 v3, 0x1
+
+    .line 29
+    if-ne p1, p2, :cond_0
+
+    .line 30
+    iget-object p0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mFineTaskCorners:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;
+
+    .line 32
+    invoke-virtual {p0, v1, v2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->calculateCornersCtrlType(FF)I
 
     .line 34
-    if-ne p2, v3, :cond_1
-
-    .line 35
-    iget-object p2, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mLargeTaskCorners:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;
+    move-result p0
 
     .line 37
-    invoke-virtual {p2, v1, v2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->calculateCornersCtrlType(FF)I
+    if-eqz p0, :cond_1
 
-    .line 39
-    move-result p2
+    .line 38
+    :goto_0
+    move v0, v3
+
+    .line 40
+    goto :goto_1
+
+    .line 41
+    :cond_0
+    invoke-virtual {p0, v1, v2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->calculateEdgeResizeCtrlType(FF)I
 
     .line 42
-    if-eqz p2, :cond_0
-
-    .line 43
-    :goto_0
-    move p2, v4
+    move-result p0
 
     .line 45
-    goto :goto_1
+    if-eqz p0, :cond_1
 
     .line 46
-    :cond_0
-    move p2, v0
-
-    .line 47
-    goto :goto_1
+    goto :goto_0
 
     .line 48
     :cond_1
-    invoke-virtual {v5, v1, v2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->calculateCornersCtrlType(FF)I
-
-    .line 49
-    move-result p2
-
-    .line 52
-    if-eqz p2, :cond_0
-
-    .line 53
-    goto :goto_0
-
-    .line 55
     :goto_1
-    if-nez p2, :cond_3
-
-    .line 56
-    invoke-static {p1}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->isEdgeResizePermitted(Landroid/view/MotionEvent;)Z
-
-    .line 58
-    move-result p1
-
-    .line 61
-    if-eqz p1, :cond_3
-
-    .line 62
-    invoke-virtual {p0, v1, v2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->calculateEdgeResizeCtrlType(FF)I
-
-    .line 64
-    move-result p0
-
-    .line 67
-    if-eqz p0, :cond_2
-
-    .line 68
-    move v0, v4
-
-    .line 70
-    :cond_2
-    move p2, v0
-
-    .line 71
-    :cond_3
-    return p2
-
-    .line 72
-    :cond_4
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getSource()I
-
-    .line 73
-    move-result p1
-
-    .line 76
-    and-int/2addr p1, v3
-
-    .line 77
-    if-ne p1, v3, :cond_5
-
-    .line 78
-    invoke-virtual {v5, v1, v2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->calculateCornersCtrlType(FF)I
-
-    .line 80
-    move-result p0
-
-    .line 83
-    if-eqz p0, :cond_6
-
-    .line 84
-    :goto_2
-    move v0, v4
-
-    .line 86
-    goto :goto_3
-
-    .line 87
-    :cond_5
-    invoke-virtual {p0, v1, v2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->calculateEdgeResizeCtrlType(FF)I
-
-    .line 88
-    move-result p0
-
-    .line 91
-    if-eqz p0, :cond_6
-
-    .line 92
-    goto :goto_2
-
-    .line 94
-    :cond_6
-    :goto_3
     return v0
-    .line 95
-.end method
-
-.method public final union(Landroid/graphics/Region;)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mDebugTaskEdges:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;
-
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 4
-    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mTopEdgeBounds:Landroid/graphics/Rect;
-
-    .line 6
-    invoke-virtual {p1, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 8
-    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mLeftEdgeBounds:Landroid/graphics/Rect;
-
-    .line 11
-    invoke-virtual {p1, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 13
-    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mRightEdgeBounds:Landroid/graphics/Rect;
-
-    .line 16
-    invoke-virtual {p1, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 18
-    iget-object v0, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mBottomEdgeBounds:Landroid/graphics/Rect;
-
-    .line 21
-    invoke-virtual {p1, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 23
-    goto :goto_0
-
-    .line 26
-    :cond_0
-    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mTaskEdges:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;
-
-    .line 27
-    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mTopEdgeBounds:Landroid/graphics/Rect;
-
-    .line 29
-    invoke-virtual {p1, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 31
-    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mLeftEdgeBounds:Landroid/graphics/Rect;
-
-    .line 34
-    invoke-virtual {p1, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 36
-    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mRightEdgeBounds:Landroid/graphics/Rect;
-
-    .line 39
-    invoke-virtual {p1, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 41
-    iget-object v0, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mBottomEdgeBounds:Landroid/graphics/Rect;
-
-    .line 44
-    invoke-virtual {p1, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 46
-    :goto_0
-    invoke-static {}, Lcom/android/window/flags/Flags;->enableWindowingEdgeDragResize()Z
-
     .line 49
-    move-result v0
-
-    .line 52
-    if-eqz v0, :cond_1
-
-    .line 53
-    iget-object p0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mLargeTaskCorners:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;
-
-    .line 55
-    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mLeftTopCornerBounds:Landroid/graphics/Rect;
-
-    .line 57
-    invoke-virtual {p1, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 59
-    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mRightTopCornerBounds:Landroid/graphics/Rect;
-
-    .line 62
-    invoke-virtual {p1, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 64
-    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mLeftBottomCornerBounds:Landroid/graphics/Rect;
-
-    .line 67
-    invoke-virtual {p1, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 69
-    iget-object p0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mRightBottomCornerBounds:Landroid/graphics/Rect;
-
-    .line 72
-    invoke-virtual {p1, p0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 74
-    goto :goto_1
-
-    .line 77
-    :cond_1
-    iget-object p0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mFineTaskCorners:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;
-
-    .line 78
-    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mLeftTopCornerBounds:Landroid/graphics/Rect;
-
-    .line 80
-    invoke-virtual {p1, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 82
-    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mRightTopCornerBounds:Landroid/graphics/Rect;
-
-    .line 85
-    invoke-virtual {p1, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 87
-    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mLeftBottomCornerBounds:Landroid/graphics/Rect;
-
-    .line 90
-    invoke-virtual {p1, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 92
-    iget-object p0, p0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mRightBottomCornerBounds:Landroid/graphics/Rect;
-
-    .line 95
-    invoke-virtual {p1, p0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
-
-    .line 97
-    :goto_1
-    return-void
-    .line 100
 .end method

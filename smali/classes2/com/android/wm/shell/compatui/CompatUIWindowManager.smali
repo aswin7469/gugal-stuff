@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/compatui/CompatUIWindowManager;
 .super Lcom/android/wm/shell/compatui/CompatUIWindowManagerAbstract;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -68,72 +68,38 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->enableDesktopWindowingMode()Z
 
     .line 22
-    move-result p1
-
-    .line 25
-    if-eqz p1, :cond_0
-
-    .line 26
-    invoke-static {}, Lcom/android/window/flags/Flags;->enableWindowingDynamicInitialBounds()Z
-
-    .line 28
-    move-result p1
-
-    .line 31
-    if-eqz p1, :cond_0
-
-    .line 32
-    iget-boolean p1, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mHasSizeCompat:Z
-
-    .line 34
-    invoke-virtual {p2}, Landroid/app/TaskInfo;->isFreeform()Z
-
-    .line 36
-    move-result p3
-
-    .line 39
-    xor-int/lit8 p3, p3, 0x1
-
-    .line 40
-    and-int/2addr p1, p3
-
-    .line 42
-    iput-boolean p1, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mHasSizeCompat:Z
-
-    .line 43
-    :cond_0
     iget-object p1, p2, Landroid/app/TaskInfo;->appCompatTaskInfo:Landroid/app/AppCompatTaskInfo;
 
-    .line 45
+    .line 25
     iget-object p1, p1, Landroid/app/AppCompatTaskInfo;->cameraCompatTaskInfo:Landroid/app/CameraCompatTaskInfo;
 
-    .line 47
+    .line 27
     iget p1, p1, Landroid/app/CameraCompatTaskInfo;->cameraCompatControlState:I
 
-    .line 49
+    .line 29
     iput p1, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mCameraCompatControlState:I
 
-    .line 51
+    .line 31
     iput-object p7, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mCompatUIHintsState:Lcom/android/wm/shell/compatui/CompatUIController$CompatUIHintsState;
 
-    .line 53
+    .line 33
     iput-object p8, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mCompatUIConfiguration:Lcom/android/wm/shell/compatui/CompatUIConfiguration;
 
-    .line 55
+    .line 35
     iput-object p9, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mOnRestartButtonClicked:Ljava/util/function/Consumer;
 
-    .line 57
+    .line 37
     iget p1, p8, Lcom/android/wm/shell/compatui/CompatUIConfiguration;->mHideSizeCompatRestartButtonTolerance:I
 
-    .line 59
+    .line 39
     int-to-float p1, p1
 
-    .line 61
+    .line 41
     iput p1, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mHideScmTolerance:F
 
-    .line 62
+    .line 42
     return-void
-    .line 64
+    .line 44
 .end method
 
 
@@ -342,7 +308,7 @@
     move-result-object p0
 
     .line 7
-    const v0, 0x7f0e0079    # @layout/compat_ui_layout 'res/layout/compat_ui_layout.xml'
+    const v0, 0x7f0d0081    # @layout/compat_ui_layout 'res/layout/compat_ui_layout.xml'
 
     .line 8
     const/4 v1, 0x0
@@ -558,7 +524,7 @@
 .end method
 
 .method public final updateCompatInfo(Landroid/app/TaskInfo;Lcom/android/wm/shell/ShellTaskOrganizer$TaskListener;Z)Z
-    .locals 5
+    .locals 3
 
     .line 1
     iget-boolean v0, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mHasSizeCompat:Z
@@ -579,90 +545,56 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->enableDesktopWindowingMode()Z
 
     .line 12
-    move-result v2
-
-    .line 15
-    const/4 v3, 0x1
-
-    .line 16
-    if-eqz v2, :cond_0
-
-    .line 17
-    invoke-static {}, Lcom/android/window/flags/Flags;->enableWindowingDynamicInitialBounds()Z
-
-    .line 19
-    move-result v2
-
-    .line 22
-    if-eqz v2, :cond_0
-
-    .line 23
-    iget-boolean v2, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mHasSizeCompat:Z
-
-    .line 25
-    invoke-virtual {p1}, Landroid/app/TaskInfo;->isFreeform()Z
-
-    .line 27
-    move-result v4
-
-    .line 30
-    xor-int/2addr v4, v3
-
-    .line 31
-    and-int/2addr v2, v4
-
-    .line 32
-    iput-boolean v2, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mHasSizeCompat:Z
-
-    .line 33
-    :cond_0
     iget-object v2, p1, Landroid/app/TaskInfo;->appCompatTaskInfo:Landroid/app/AppCompatTaskInfo;
 
-    .line 35
+    .line 15
     iget-object v2, v2, Landroid/app/AppCompatTaskInfo;->cameraCompatTaskInfo:Landroid/app/CameraCompatTaskInfo;
 
-    .line 37
+    .line 17
     iget v2, v2, Landroid/app/CameraCompatTaskInfo;->cameraCompatControlState:I
 
-    .line 39
+    .line 19
     iput v2, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mCameraCompatControlState:I
 
-    .line 41
+    .line 21
     invoke-super {p0, p1, p2, p3}, Lcom/android/wm/shell/compatui/CompatUIWindowManagerAbstract;->updateCompatInfo(Landroid/app/TaskInfo;Lcom/android/wm/shell/ShellTaskOrganizer$TaskListener;Z)Z
 
-    .line 43
+    .line 23
     move-result p1
 
-    .line 46
-    if-nez p1, :cond_1
+    .line 26
+    if-nez p1, :cond_0
 
-    .line 47
+    .line 27
     const/4 p0, 0x0
 
-    .line 49
+    .line 29
     return p0
 
-    .line 50
-    :cond_1
+    .line 30
+    :cond_0
     iget-boolean p1, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mHasSizeCompat:Z
 
-    .line 51
-    if-ne v0, p1, :cond_2
+    .line 31
+    if-ne v0, p1, :cond_1
 
-    .line 53
+    .line 33
     iget p1, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mCameraCompatControlState:I
 
-    .line 55
-    if-eq v1, p1, :cond_3
+    .line 35
+    if-eq v1, p1, :cond_2
 
-    .line 57
-    :cond_2
+    .line 37
+    :cond_1
     invoke-virtual {p0}, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->updateVisibilityOfViews$1()V
 
-    .line 59
-    :cond_3
-    return v3
-    .line 62
+    .line 39
+    :cond_2
+    const/4 p0, 0x1
+
+    .line 42
+    return p0
+    .line 43
 .end method
 
 .method public updateSurfacePosition()V
@@ -819,7 +751,7 @@
     iget-boolean v1, p0, Lcom/android/wm/shell/compatui/CompatUIWindowManager;->mHasSizeCompat:Z
 
     .line 7
-    const v2, 0x7f0b0723    # @id/size_compat_restart_button
+    const v2, 0x7f0a074f    # @id/size_compat_restart_button
 
     .line 9
     invoke-virtual {v0, v2, v1}, Lcom/android/wm/shell/compatui/CompatUILayout;->setViewVisibility(IZ)V
@@ -828,7 +760,7 @@
     const/4 v2, 0x0
 
     .line 15
-    const v3, 0x7f0b0722    # @id/size_compat_hint
+    const v3, 0x7f0a074e    # @id/size_compat_hint
 
     .line 16
     if-nez v1, :cond_1
@@ -878,13 +810,13 @@
     move-result v3
 
     .line 49
-    const v4, 0x7f0b019f    # @id/camera_compat_control
+    const v4, 0x7f0a01a5    # @id/camera_compat_control
 
     .line 50
     invoke-virtual {v0, v4, v3}, Lcom/android/wm/shell/compatui/CompatUILayout;->setViewVisibility(IZ)V
 
     .line 53
-    const v4, 0x7f0b01a1    # @id/camera_compat_hint
+    const v4, 0x7f0a01a7    # @id/camera_compat_hint
 
     .line 56
     if-nez v3, :cond_3

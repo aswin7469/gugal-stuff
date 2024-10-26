@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/classifier/DistanceClassifier;
 .super Lcom/android/systemui/classifier/FalsingClassifier;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -30,182 +30,181 @@
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 5
-    const-string p2, "systemui"
+    const-string/jumbo p2, "systemui"
 
     .line 8
     const-string v0, "brightline_falsing_distance_velcoity_to_distance"
 
-    .line 10
+    .line 11
     const/high16 v1, 0x41f00000    # 30.0f
 
-    .line 12
+    .line 13
     invoke-static {p2, v0, v1}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 14
+    .line 15
     move-result v0
-
-    .line 17
-    iput v0, p0, Lcom/android/systemui/classifier/DistanceClassifier;->mVelocityToDistanceMultiplier:F
 
     .line 18
+    iput v0, p0, Lcom/android/systemui/classifier/DistanceClassifier;->mVelocityToDistanceMultiplier:F
+
+    .line 19
     const-string v0, "brightline_falsing_distance_horizontal_fling_threshold_in"
 
-    .line 20
+    .line 21
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 22
+    .line 23
     invoke-static {p2, v0, v1}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 24
+    .line 25
     move-result v0
-
-    .line 27
-    const-string v1, "brightline_falsing_distance_vertical_fling_threshold_in"
 
     .line 28
+    const-string v1, "brightline_falsing_distance_vertical_fling_threshold_in"
+
+    .line 29
     const/high16 v2, 0x3fc00000    # 1.5f
 
-    .line 30
+    .line 31
     invoke-static {p2, v1, v2}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 32
+    .line 33
     move-result v1
 
-    .line 35
+    .line 36
     const-string v2, "brightline_falsing_distance_horizontal_swipe_threshold_in"
 
-    .line 36
+    .line 37
     const/high16 v3, 0x40400000    # 3.0f
 
-    .line 38
+    .line 39
     invoke-static {p2, v2, v3}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 40
+    .line 41
     move-result v4
 
-    .line 43
+    .line 44
     invoke-static {p2, v2, v3}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 44
+    .line 45
     move-result v2
 
-    .line 47
+    .line 48
     const-string v3, "brightline_falsing_distance_screen_fraction_max_distance"
 
-    .line 48
+    .line 49
     const v5, 0x3f4ccccd    # 0.8f
 
-    .line 50
+    .line 51
     invoke-static {p2, v3, v5}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 53
+    .line 54
     move-result p2
 
-    .line 56
+    .line 57
     iget v3, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mWidthPixels:I
 
-    .line 57
+    .line 58
     int-to-float v3, v3
 
-    .line 59
+    .line 60
     mul-float/2addr v3, p2
 
-    .line 60
+    .line 61
     iget v5, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mXdpi:F
 
-    .line 61
+    .line 62
     mul-float/2addr v0, v5
 
-    .line 63
+    .line 64
     invoke-static {v3, v0}, Ljava/lang/Math;->min(FF)F
 
-    .line 64
+    .line 65
     move-result v0
-
-    .line 67
-    iput v0, p0, Lcom/android/systemui/classifier/DistanceClassifier;->mHorizontalFlingThresholdPx:F
 
     .line 68
+    iput v0, p0, Lcom/android/systemui/classifier/DistanceClassifier;->mHorizontalFlingThresholdPx:F
+
+    .line 69
     iget v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mHeightPixels:I
 
-    .line 70
+    .line 71
     int-to-float v0, v0
-
-    .line 72
-    mul-float/2addr v0, p2
 
     .line 73
-    iget v3, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mYdpi:F
+    mul-float/2addr v0, p2
 
     .line 74
+    iget v3, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mYdpi:F
+
+    .line 75
     mul-float/2addr v1, v3
 
-    .line 76
+    .line 77
     invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 
-    .line 77
+    .line 78
     move-result v0
-
-    .line 80
-    iput v0, p0, Lcom/android/systemui/classifier/DistanceClassifier;->mVerticalFlingThresholdPx:F
 
     .line 81
+    iput v0, p0, Lcom/android/systemui/classifier/DistanceClassifier;->mVerticalFlingThresholdPx:F
+
+    .line 82
     iget v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mWidthPixels:I
 
-    .line 83
+    .line 84
     int-to-float v0, v0
-
-    .line 85
-    mul-float/2addr v0, p2
 
     .line 86
-    iget v1, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mXdpi:F
-
-    .line 87
-    mul-float/2addr v4, v1
-
-    .line 89
-    invoke-static {v0, v4}, Ljava/lang/Math;->min(FF)F
-
-    .line 90
-    move-result v0
-
-    .line 93
-    iput v0, p0, Lcom/android/systemui/classifier/DistanceClassifier;->mHorizontalSwipeThresholdPx:F
-
-    .line 94
-    iget v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mHeightPixels:I
-
-    .line 96
-    int-to-float v0, v0
-
-    .line 98
     mul-float/2addr v0, p2
 
+    .line 87
+    iget v1, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mXdpi:F
+
+    .line 88
+    mul-float/2addr v4, v1
+
+    .line 90
+    invoke-static {v0, v4}, Ljava/lang/Math;->min(FF)F
+
+    .line 91
+    move-result v0
+
+    .line 94
+    iput v0, p0, Lcom/android/systemui/classifier/DistanceClassifier;->mHorizontalSwipeThresholdPx:F
+
+    .line 95
+    iget v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mHeightPixels:I
+
+    .line 97
+    int-to-float v0, v0
+
     .line 99
-    iget p1, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mYdpi:F
+    mul-float/2addr v0, p2
 
     .line 100
+    iget p1, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mYdpi:F
+
+    .line 101
     mul-float/2addr v2, p1
 
-    .line 102
+    .line 103
     invoke-static {v0, v2}, Ljava/lang/Math;->min(FF)F
 
-    .line 103
+    .line 104
     move-result p1
 
-    .line 106
+    .line 107
     iput p1, p0, Lcom/android/systemui/classifier/DistanceClassifier;->mVerticalSwipeThresholdPx:F
 
-    .line 107
+    .line 108
     const/4 p1, 0x1
 
-    .line 109
+    .line 110
     iput-boolean p1, p0, Lcom/android/systemui/classifier/DistanceClassifier;->mDistanceDirty:Z
 
-    .line 110
+    .line 111
     return-void
-    .line 112
 .end method
 
 

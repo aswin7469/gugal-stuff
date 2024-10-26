@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/demomode/DemoModeController$tracker$1;
 .super Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -61,15 +61,15 @@
     check-cast p0, Lcom/android/systemui/util/settings/GlobalSettingsImpl;
 
     .line 22
-    const-string v1, "sysui_tuner_demo_on"
+    const-string/jumbo v1, "sysui_tuner_demo_on"
 
     .line 24
     invoke-virtual {p0, v1, v0}, Lcom/android/systemui/util/settings/GlobalSettingsImpl;->putString(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 26
+    .line 27
     :cond_0
     return-void
-    .line 29
+    .line 30
 .end method
 
 .method public final onDemoModeFinished()V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/LegacyLockIconViewController$1;
 .super Landroid/view/View$AccessibilityDelegate;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -28,7 +28,7 @@
     iget-object v1, p1, Lcom/android/keyguard/LegacyLockIconViewController;->mResources:Landroid/content/res/Resources;
 
     .line 9
-    const v2, 0x7f140047    # @string/accessibility_authenticate_hint 'authenticate'
+    const v2, 0x7f130048    # @string/accessibility_authenticate_hint 'authenticate'
 
     .line 11
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -52,7 +52,7 @@
     iget-object p1, p1, Lcom/android/keyguard/LegacyLockIconViewController;->mResources:Landroid/content/res/Resources;
 
     .line 27
-    const v1, 0x7f140080    # @string/accessibility_enter_hint 'enter device'
+    const v1, 0x7f130081    # @string/accessibility_enter_hint 'enter device'
 
     .line 29
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

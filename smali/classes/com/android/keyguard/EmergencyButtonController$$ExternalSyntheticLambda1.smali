@@ -1,97 +1,165 @@
 .class public final synthetic Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
+.field public final synthetic $r8$classId:I
+
 .field public final synthetic f$0:Lcom/android/keyguard/EmergencyButtonController;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/keyguard/EmergencyButtonController;)V
+.method public synthetic constructor <init>(Lcom/android/keyguard/EmergencyButtonController;I)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda1;->$r8$classId:I
 
     .line 2
     iput-object p1, p0, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda1;->f$0:Lcom/android/keyguard/EmergencyButtonController;
 
-    .line 5
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
     return-void
-    .line 7
+    .line 9
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final run()V
+    .locals 4
 
     .line 1
-    iget-object p0, p0, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda1;->f$0:Lcom/android/keyguard/EmergencyButtonController;
+    iget v0, p0, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda1;->$r8$classId:I
 
     .line 2
-    iget-object p1, p0, Lcom/android/keyguard/EmergencyButtonController;->mMetricsLogger:Lcom/android/internal/logging/MetricsLogger;
+    iget-object p0, p0, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda1;->f$0:Lcom/android/keyguard/EmergencyButtonController;
 
     .line 4
-    const/16 v0, 0xc8
+    packed-switch v0, :pswitch_data_0
 
     .line 6
-    invoke-virtual {p1, v0}, Lcom/android/internal/logging/MetricsLogger;->action(I)V
+    iget-object v0, p0, Lcom/android/keyguard/EmergencyButtonController;->mTelecomManager:Landroid/telecom/TelecomManager;
 
-    .line 8
-    iget-object p1, p0, Lcom/android/keyguard/EmergencyButtonController;->mPowerManager:Landroid/os/PowerManager;
+    .line 9
+    if-eqz v0, :cond_0
 
     .line 11
-    if-eqz p1, :cond_0
+    invoke-virtual {v0}, Landroid/telecom/TelecomManager;->isInCall()Z
 
     .line 13
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    move-result v0
 
-    .line 15
-    move-result-wide v0
+    .line 16
+    if-eqz v0, :cond_0
 
-    .line 18
-    const/4 v2, 0x1
+    .line 17
+    const/4 v0, 0x1
 
     .line 19
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/PowerManager;->userActivity(JZ)V
+    goto :goto_0
 
     .line 20
     :cond_0
-    iget-object p1, p0, Lcom/android/keyguard/EmergencyButtonController;->mActivityTaskManager:Landroid/app/ActivityTaskManager;
-
-    .line 23
-    invoke-virtual {p1}, Landroid/app/ActivityTaskManager;->stopSystemLockTaskMode()V
-
-    .line 25
-    iget-object p1, p0, Lcom/android/keyguard/EmergencyButtonController;->mShadeController:Lcom/android/systemui/shade/ShadeController;
-
-    .line 28
     const/4 v0, 0x0
 
-    .line 30
-    invoke-interface {p1, v0}, Lcom/android/systemui/shade/ShadeController;->collapseShade(Z)V
+    .line 21
+    :goto_0
+    iget-object v1, p0, Lcom/android/keyguard/EmergencyButtonController;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 31
-    iget-object p1, p0, Lcom/android/keyguard/EmergencyButtonController;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
+    .line 22
+    iget-object v2, p0, Lcom/android/keyguard/EmergencyButtonController;->mSelectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
+
+    .line 24
+    invoke-virtual {v2}, Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;->getSelectedUserId()I
+
+    .line 26
+    move-result v2
+
+    .line 29
+    invoke-virtual {v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
+
+    .line 30
+    move-result v1
+
+    .line 33
+    iget-object v2, p0, Lcom/android/keyguard/EmergencyButtonController;->mMainExecutor:Ljava/util/concurrent/Executor;
 
     .line 34
-    new-instance v0, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda0;
+    new-instance v3, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda0;
 
     .line 36
-    const/4 v1, 0x2
+    invoke-direct {v3, p0, v0, v1}, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda0;-><init>(Lcom/android/keyguard/EmergencyButtonController;ZZ)V
 
     .line 38
-    invoke-direct {v0, p0, v1}, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda0;-><init>(Lcom/android/keyguard/EmergencyButtonController;I)V
+    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 39
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 42
+    .line 41
     return-void
+
+    .line 44
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/android/keyguard/EmergencyButtonController;->updateEmergencyCallButton()V
+
     .line 45
+    return-void
+
+    .line 48
+    :pswitch_1
+    iget-object v0, p0, Lcom/android/keyguard/EmergencyButtonController;->mTelecomManager:Landroid/telecom/TelecomManager;
+
+    .line 49
+    if-eqz v0, :cond_1
+
+    .line 51
+    invoke-virtual {v0}, Landroid/telecom/TelecomManager;->isInCall()Z
+
+    .line 53
+    move-result v0
+
+    .line 56
+    if-eqz v0, :cond_1
+
+    .line 57
+    const/4 v0, 0x1
+
+    .line 59
+    goto :goto_1
+
+    .line 60
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 61
+    :goto_1
+    iget-object v1, p0, Lcom/android/keyguard/EmergencyButtonController;->mMainExecutor:Ljava/util/concurrent/Executor;
+
+    .line 62
+    new-instance v2, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda2;
+
+    .line 64
+    invoke-direct {v2, p0, v0}, Lcom/android/keyguard/EmergencyButtonController$$ExternalSyntheticLambda2;-><init>(Lcom/android/keyguard/EmergencyButtonController;Z)V
+
+    .line 66
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 69
+    return-void
+
+    .line 72
+    nop
+
+    .line 73
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+    .line 74
 .end method

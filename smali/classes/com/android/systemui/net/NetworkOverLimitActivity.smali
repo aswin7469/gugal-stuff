@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/net/NetworkOverLimitActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -64,21 +64,21 @@
     if-eq v1, v2, :cond_0
 
     .line 27
-    const v1, 0x7f14031f    # @string/data_usage_disabled_dialog_title 'Data is paused'
+    const v1, 0x7f13033d    # @string/data_usage_disabled_dialog_title 'Data is paused'
 
     .line 29
     goto :goto_0
 
     .line 32
     :cond_0
-    const v1, 0x7f14031e    # @string/data_usage_disabled_dialog_mobile_title 'Mobile data is paused'
+    const v1, 0x7f13033c    # @string/data_usage_disabled_dialog_mobile_title 'Mobile data is paused'
 
     .line 33
     :goto_0
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 36
-    const v1, 0x7f14031c    # @string/data_usage_disabled_dialog 'The data limit you set has been reached. You are no longer using mobile data.\n\nIf you resume, charge ...'
+    const v1, 0x7f13033a    # @string/data_usage_disabled_dialog 'The data limit you set has been reached. You are no longer using mobile data.\n\nIf you resume, charge ...'
 
     .line 39
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
@@ -99,7 +99,7 @@
     invoke-direct {v1, p0, p1}, Lcom/android/systemui/net/NetworkOverLimitActivity$1;-><init>(Lcom/android/systemui/net/NetworkOverLimitActivity;Landroid/net/NetworkTemplate;)V
 
     .line 54
-    const p1, 0x7f14031d    # @string/data_usage_disabled_dialog_enable 'Resume'
+    const p1, 0x7f13033b    # @string/data_usage_disabled_dialog_enable 'Resume'
 
     .line 57
     invoke-virtual {v0, p1, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;

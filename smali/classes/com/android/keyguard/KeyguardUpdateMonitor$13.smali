@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardUpdateMonitor$13;
 .super Landroid/os/Handler;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -1931,254 +1931,260 @@
     iget-object p1, v4, Lcom/android/keyguard/KeyguardUpdateMonitor;->mBatteryStatus:Lcom/android/settingslib/fuelgauge/BatteryStatus;
 
     .line 1271
-    invoke-virtual {p0}, Lcom/android/settingslib/fuelgauge/BatteryStatus;->isPluggedIn()Z
+    iget v0, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->plugged:I
 
     .line 1273
+    invoke-static {v0}, Lcom/android/settingslib/fuelgauge/BatteryStatus;->isPluggedIn(I)Z
+
+    .line 1275
     move-result v0
 
-    .line 1276
-    invoke-virtual {p1}, Lcom/android/settingslib/fuelgauge/BatteryStatus;->isPluggedIn()Z
+    .line 1278
+    iget v1, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->plugged:I
 
-    .line 1277
-    move-result v1
-
-    .line 1280
-    if-eqz v1, :cond_28
+    .line 1279
+    invoke-static {v1}, Lcom/android/settingslib/fuelgauge/BatteryStatus;->isPluggedIn(I)Z
 
     .line 1281
-    if-eqz v0, :cond_28
+    move-result v1
 
-    .line 1283
-    iget v5, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->status:I
+    .line 1284
+    if-eqz v1, :cond_28
 
     .line 1285
-    iget v6, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->status:I
+    if-eqz v0, :cond_28
 
     .line 1287
-    if-eq v5, v6, :cond_28
+    iget v5, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->status:I
 
     .line 1289
-    move v5, v3
+    iget v6, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->status:I
 
     .line 1291
+    if-eq v5, v6, :cond_28
+
+    .line 1293
+    move v5, v3
+
+    .line 1295
     goto :goto_18
 
-    .line 1292
+    .line 1296
     :cond_28
     move v5, v2
 
-    .line 1293
+    .line 1297
     :goto_18
     if-ne v1, v0, :cond_2f
 
-    .line 1294
+    .line 1298
     if-eqz v5, :cond_29
 
-    .line 1296
+    .line 1300
     goto :goto_19
 
-    .line 1298
+    .line 1302
     :cond_29
     iget v1, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->level:I
 
-    .line 1299
+    .line 1303
     iget v5, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->level:I
 
-    .line 1301
+    .line 1305
     if-eq v1, v5, :cond_2a
 
-    .line 1303
+    .line 1307
     goto :goto_19
 
-    .line 1305
+    .line 1309
     :cond_2a
     if-eqz v0, :cond_2b
 
-    .line 1306
+    .line 1310
     iget v0, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->maxChargingWattage:I
 
-    .line 1308
+    .line 1312
     iget v1, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->maxChargingWattage:I
 
-    .line 1310
+    .line 1314
     if-eq v0, v1, :cond_2b
 
-    .line 1312
+    .line 1316
     goto :goto_19
 
-    .line 1314
+    .line 1318
     :cond_2b
     iget-boolean v0, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->present:Z
 
-    .line 1315
+    .line 1319
     iget-boolean v1, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->present:Z
 
-    .line 1317
+    .line 1321
     if-eq v0, v1, :cond_2c
 
-    .line 1319
+    .line 1323
     goto :goto_19
 
-    .line 1321
+    .line 1325
     :cond_2c
     iget-object v0, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->incompatibleCharger:Ljava/util/Optional;
 
-    .line 1322
+    .line 1326
     iget-object v1, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->incompatibleCharger:Ljava/util/Optional;
 
-    .line 1324
+    .line 1328
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 1326
+    .line 1330
     move-result v0
 
-    .line 1329
+    .line 1333
     if-nez v0, :cond_2d
 
-    .line 1330
+    .line 1334
     goto :goto_19
 
-    .line 1332
+    .line 1336
     :cond_2d
     iget v0, p0, Lcom/android/settingslib/fuelgauge/BatteryStatus;->chargingStatus:I
 
-    .line 1333
+    .line 1337
     iget p1, p1, Lcom/android/settingslib/fuelgauge/BatteryStatus;->chargingStatus:I
 
-    .line 1335
+    .line 1339
     if-eq v0, p1, :cond_2e
 
-    .line 1337
+    .line 1341
     goto :goto_19
 
-    .line 1339
+    .line 1343
     :cond_2e
     move v3, v2
 
-    .line 1340
+    .line 1344
     :cond_2f
     :goto_19
     iput-object p0, v4, Lcom/android/keyguard/KeyguardUpdateMonitor;->mBatteryStatus:Lcom/android/settingslib/fuelgauge/BatteryStatus;
 
-    .line 1341
+    .line 1345
     if-eqz v3, :cond_32
 
-    .line 1343
+    .line 1347
     iget-object p1, v4, Lcom/android/keyguard/KeyguardUpdateMonitor;->mLogger:Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;
 
-    .line 1345
+    .line 1349
     invoke-virtual {p1, p0}, Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;->logHandleBatteryUpdate(Lcom/android/settingslib/fuelgauge/BatteryStatus;)V
 
-    .line 1347
+    .line 1351
     :goto_1a
     iget-object p1, v4, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 1350
+    .line 1354
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    .line 1352
+    .line 1356
     move-result p1
 
-    .line 1355
+    .line 1359
     if-ge v2, p1, :cond_32
 
-    .line 1356
+    .line 1360
     iget-object p1, v4, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 1358
+    .line 1362
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 1360
+    .line 1364
     move-result-object p1
 
-    .line 1363
+    .line 1367
     check-cast p1, Ljava/lang/ref/WeakReference;
 
-    .line 1364
+    .line 1368
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    .line 1366
+    .line 1370
     move-result-object p1
 
-    .line 1369
+    .line 1373
     check-cast p1, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 1370
+    .line 1374
     if-eqz p1, :cond_30
 
-    .line 1372
+    .line 1376
     invoke-virtual {p1, p0}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;->onRefreshBatteryInfo(Lcom/android/settingslib/fuelgauge/BatteryStatus;)V
 
-    .line 1374
+    .line 1378
     :cond_30
     add-int/lit8 v2, v2, 0x1
 
-    .line 1377
+    .line 1381
     goto :goto_1a
 
-    .line 1379
+    .line 1383
     :pswitch_21
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1380
+    .line 1384
     invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
 
-    .line 1383
+    .line 1387
     :goto_1b
     iget-object p0, v4, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 1386
+    .line 1390
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
-    .line 1388
+    .line 1392
     move-result p0
 
-    .line 1391
+    .line 1395
     if-ge v2, p0, :cond_32
 
-    .line 1392
+    .line 1396
     iget-object p0, v4, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 1394
+    .line 1398
     invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 1396
+    .line 1400
     move-result-object p0
 
-    .line 1399
+    .line 1403
     check-cast p0, Ljava/lang/ref/WeakReference;
 
-    .line 1400
+    .line 1404
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    .line 1402
+    .line 1406
     move-result-object p0
 
-    .line 1405
+    .line 1409
     check-cast p0, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 1406
+    .line 1410
     if-eqz p0, :cond_31
 
-    .line 1408
+    .line 1412
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;->onTimeChanged()V
 
-    .line 1410
+    .line 1414
     :cond_31
     add-int/lit8 v2, v2, 0x1
 
-    .line 1413
+    .line 1417
     goto :goto_1b
 
-    .line 1415
+    .line 1419
     :cond_32
     :goto_1c
     return-void
 
-    .line 1416
+    .line 1420
     nop
 
-    .line 1417
+    .line 1421
     :pswitch_data_0
     .packed-switch 0x12d
         :pswitch_21
@@ -2230,5 +2236,5 @@
         :pswitch_2
         :pswitch_1
     .end packed-switch
-    .line 1418
+    .line 1422
 .end method

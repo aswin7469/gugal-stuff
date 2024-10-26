@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/compose/animation/scene/ElementKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -282,44 +282,6 @@
     :goto_4
     return-object v0
     .line 172
-.end method
-
-.method public static final element(Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/SceneTransitionLayoutImpl;Lcom/android/compose/animation/scene/Scene;Lcom/android/compose/animation/scene/ElementKey;)Landroidx/compose/ui/Modifier;
-    .locals 2
-
-    .line 1
-    iget-object v0, p1, Lcom/android/compose/animation/scene/SceneTransitionLayoutImpl;->state:Lcom/android/compose/animation/scene/BaseSceneTransitionLayoutState;
-
-    .line 2
-    invoke-virtual {v0}, Lcom/android/compose/animation/scene/BaseSceneTransitionLayoutState;->getCurrentTransitions()Ljava/util/List;
-
-    .line 4
-    move-result-object v0
-
-    .line 7
-    new-instance v1, Lcom/android/compose/animation/scene/ElementModifier;
-
-    .line 8
-    invoke-direct {v1, p1, v0, p2, p3}, Lcom/android/compose/animation/scene/ElementModifier;-><init>(Lcom/android/compose/animation/scene/SceneTransitionLayoutImpl;Ljava/util/List;Lcom/android/compose/animation/scene/Scene;Lcom/android/compose/animation/scene/ElementKey;)V
-
-    .line 10
-    invoke-interface {p0, v1}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
-
-    .line 13
-    move-result-object p0
-
-    .line 16
-    iget-object p1, p3, Lcom/android/compose/animation/scene/ElementKey;->testTag:Ljava/lang/String;
-
-    .line 17
-    invoke-static {p0, p1}, Landroidx/compose/ui/platform/TestTagKt;->testTag(Landroidx/compose/ui/Modifier;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
-
-    .line 19
-    move-result-object p0
-
-    .line 22
-    return-object p0
-    .line 23
 .end method
 
 .method public static final getDrawScale$specifiedOrCenter(JLandroidx/compose/ui/graphics/drawscope/ContentDrawScope;)J
@@ -971,7 +933,7 @@
     move-result v1
 
     .line 29
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     .line 30
     iget-object v1, p2, Lcom/android/compose/animation/scene/Element;->sceneStates:Landroidx/compose/runtime/snapshots/SnapshotStateMap;
@@ -986,7 +948,7 @@
     if-nez v1, :cond_2
 
     .line 38
-    goto :goto_0
+    goto :goto_1
 
     .line 40
     :cond_2
@@ -996,98 +958,85 @@
     invoke-static {p2, p3}, Lcom/android/compose/animation/scene/ElementKt;->sharedElementTransformation(Lcom/android/compose/animation/scene/ElementKey;Lcom/android/compose/animation/scene/TransitionState$Transition;)V
 
     .line 43
-    invoke-static {p0, p1, p2, p3}, Lcom/android/compose/animation/scene/ElementKt;->shouldPlaceOrComposeSharedElement(Lcom/android/compose/animation/scene/SceneTransitionLayoutImpl;Lcom/android/compose/animation/scene/SceneKey;Lcom/android/compose/animation/scene/ElementKey;Lcom/android/compose/animation/scene/TransitionState$Transition;)Z
-
-    .line 46
-    move-result p0
-
-    .line 49
-    return p0
-
-    .line 50
-    :cond_3
-    :goto_0
-    return v0
-    .line 51
-.end method
-
-.method public static final shouldPlaceOrComposeSharedElement(Lcom/android/compose/animation/scene/SceneTransitionLayoutImpl;Lcom/android/compose/animation/scene/SceneKey;Lcom/android/compose/animation/scene/ElementKey;Lcom/android/compose/animation/scene/TransitionState$Transition;)Z
-    .locals 2
-
-    .line 1
     invoke-virtual {p3}, Lcom/android/compose/animation/scene/TransitionState$Transition;->getCurrentOverscrollSpec$frameworks__base__packages__SystemUI__compose__scene__android_common__PlatformComposeSceneTransitionLayout()Lcom/android/compose/animation/scene/OverscrollSpecImpl;
 
-    .line 2
+    .line 46
     iget-object p0, p0, Lcom/android/compose/animation/scene/SceneTransitionLayoutImpl;->scenes:Landroidx/compose/runtime/snapshots/SnapshotStateMap;
 
-    .line 5
+    .line 49
     iget-object v0, p3, Lcom/android/compose/animation/scene/TransitionState$Transition;->fromScene:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 7
+    .line 51
     invoke-static {v0, p0}, Lkotlin/collections/MapsKt;->getValue(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/Object;
 
-    .line 9
+    .line 53
     move-result-object v0
 
-    .line 12
+    .line 56
     check-cast v0, Lcom/android/compose/animation/scene/Scene;
 
-    .line 13
+    .line 57
     iget-object v0, v0, Lcom/android/compose/animation/scene/Scene;->zIndex$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableFloatState;
 
-    .line 15
+    .line 59
     invoke-virtual {v0}, Landroidx/compose/runtime/SnapshotMutableFloatStateImpl;->getFloatValue()F
 
-    .line 17
+    .line 61
     move-result v0
 
-    .line 20
+    .line 64
     iget-object v1, p3, Lcom/android/compose/animation/scene/TransitionState$Transition;->toScene:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 21
+    .line 65
     invoke-static {v1, p0}, Lkotlin/collections/MapsKt;->getValue(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/Object;
 
-    .line 23
+    .line 67
     move-result-object p0
 
-    .line 26
+    .line 70
     check-cast p0, Lcom/android/compose/animation/scene/Scene;
 
-    .line 27
+    .line 71
     iget-object p0, p0, Lcom/android/compose/animation/scene/Scene;->zIndex$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableFloatState;
 
-    .line 29
+    .line 73
     invoke-virtual {p0}, Landroidx/compose/runtime/SnapshotMutableFloatStateImpl;->getFloatValue()F
 
-    .line 31
+    .line 75
     move-result p0
 
-    .line 34
+    .line 78
     iget-object p2, p2, Lcom/android/compose/animation/scene/ElementKey;->scenePicker:Lcom/android/compose/animation/scene/ElementScenePicker;
 
-    .line 35
+    .line 79
     invoke-interface {p2, p3, v0, p0}, Lcom/android/compose/animation/scene/ElementScenePicker;->sceneDuringTransition(Lcom/android/compose/animation/scene/TransitionState$Transition;FF)Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 37
+    .line 81
     move-result-object p0
 
-    .line 40
-    if-nez p0, :cond_0
+    .line 84
+    if-nez p0, :cond_3
 
-    .line 41
+    .line 85
     const/4 p0, 0x0
 
-    .line 43
-    return p0
+    .line 87
+    goto :goto_0
 
-    .line 44
-    :cond_0
+    .line 88
+    :cond_3
     invoke-virtual {p0, p1}, Lcom/android/compose/animation/scene/Key;->equals(Ljava/lang/Object;)Z
 
-    .line 45
+    .line 89
     move-result p0
 
-    .line 48
+    .line 92
+    :goto_0
     return p0
-    .line 49
+
+    .line 93
+    :cond_4
+    :goto_1
+    return v0
+    .line 94
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardSimPukViewController;
 .super Lcom/android/keyguard/KeyguardPinBasedInputViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -135,7 +135,7 @@
     iput-object v0, v13, Lcom/android/keyguard/KeyguardSimPukViewController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     .line 53
-    const v0, 0x7f0b03e5    # @id/keyguard_sim
+    const v0, 0x7f0a0406    # @id/keyguard_sim
 
     .line 55
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -270,7 +270,7 @@
 .end method
 
 .method public final showDefaultMessage$1()V
-    .locals 8
+    .locals 9
 
     .line 1
     iget v0, p0, Lcom/android/keyguard/KeyguardSimPukViewController;->mRemainingAttempts:I
@@ -312,7 +312,7 @@
     move-result-object p0
 
     .line 26
-    invoke-virtual {v1, p0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, p0, v2}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     .line 27
     return-void
@@ -349,209 +349,216 @@
     invoke-virtual {v3}, Landroid/telephony/TelephonyManager;->getActiveModemCount()I
 
     .line 49
-    move-result v2
+    move-result v3
 
     .line 52
-    :cond_1
-    iget-object v3, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
-
-    .line 53
-    check-cast v3, Lcom/android/keyguard/KeyguardSimPukView;
-
-    .line 55
-    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
-
-    .line 57
-    move-result-object v3
-
-    .line 60
-    iget-object v4, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
-
-    .line 61
-    check-cast v4, Lcom/android/keyguard/KeyguardSimPukView;
-
-    .line 63
-    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    .line 65
-    move-result-object v4
-
-    .line 68
-    const v5, 0x1010098    # @android:attr/textColor
-
-    .line 69
-    filled-new-array {v5}, [I
-
-    .line 72
-    move-result-object v5
-
-    .line 75
-    invoke-virtual {v4, v5}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
-
-    .line 76
-    move-result-object v4
-
-    .line 79
-    const/4 v5, 0x0
-
-    .line 80
-    const/4 v6, -0x1
-
-    .line 81
-    invoke-virtual {v4, v5, v6}, Landroid/content/res/TypedArray;->getColor(II)I
-
-    .line 82
-    move-result v5
-
-    .line 85
-    invoke-virtual {v4}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 86
-    const/4 v4, 0x2
-
-    .line 89
-    const v6, 0x7f140502    # @string/kg_puk_enter_puk_hint 'SIM is now disabled. Enter PUK code to continue. Contact carrier for details.'
-
-    .line 90
-    if-ge v2, v4, :cond_2
-
-    .line 93
-    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    .line 95
-    move-result-object v2
-
-    .line 98
-    goto :goto_2
-
-    .line 99
-    :cond_2
-    iget-object v2, p0, Lcom/android/keyguard/KeyguardSimPukViewController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    .line 100
-    iget v4, p0, Lcom/android/keyguard/KeyguardSimPukViewController;->mSubId:I
-
-    .line 102
-    invoke-virtual {v2, v4}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getSubscriptionInfoForSubId(I)Landroid/telephony/SubscriptionInfo;
-
-    .line 104
-    move-result-object v2
-
-    .line 107
-    if-eqz v2, :cond_3
-
-    .line 108
-    invoke-virtual {v2}, Landroid/telephony/SubscriptionInfo;->getDisplayName()Ljava/lang/CharSequence;
-
-    .line 110
-    move-result-object v4
-
-    .line 113
     goto :goto_0
 
-    .line 114
-    :cond_3
-    const-string v4, ""
+    .line 53
+    :cond_1
+    move v3, v2
+
+    .line 54
+    :goto_0
+    iget-object v4, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+
+    .line 55
+    check-cast v4, Lcom/android/keyguard/KeyguardSimPukView;
+
+    .line 57
+    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+
+    .line 59
+    move-result-object v4
+
+    .line 62
+    iget-object v5, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+
+    .line 63
+    check-cast v5, Lcom/android/keyguard/KeyguardSimPukView;
+
+    .line 65
+    invoke-virtual {v5}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    .line 67
+    move-result-object v5
+
+    .line 70
+    const v6, 0x1010098    # @android:attr/textColor
+
+    .line 71
+    filled-new-array {v6}, [I
+
+    .line 74
+    move-result-object v6
+
+    .line 77
+    invoke-virtual {v5, v6}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+
+    .line 78
+    move-result-object v5
+
+    .line 81
+    const/4 v6, 0x0
+
+    .line 82
+    const/4 v7, -0x1
+
+    .line 83
+    invoke-virtual {v5, v6, v7}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    .line 84
+    move-result v6
+
+    .line 87
+    invoke-virtual {v5}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 88
+    const/4 v5, 0x2
+
+    .line 91
+    const v7, 0x7f130558    # @string/kg_puk_enter_puk_hint 'SIM is now disabled. Enter PUK code to continue. Contact carrier for details.'
+
+    .line 92
+    if-ge v3, v5, :cond_2
+
+    .line 95
+    invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 97
+    move-result-object v3
+
+    .line 100
+    goto :goto_3
+
+    .line 101
+    :cond_2
+    iget-object v3, p0, Lcom/android/keyguard/KeyguardSimPukViewController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    .line 102
+    iget v5, p0, Lcom/android/keyguard/KeyguardSimPukViewController;->mSubId:I
+
+    .line 104
+    invoke-virtual {v3, v5}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getSubscriptionInfoForSubId(I)Landroid/telephony/SubscriptionInfo;
+
+    .line 106
+    move-result-object v3
+
+    .line 109
+    if-eqz v3, :cond_3
+
+    .line 110
+    invoke-virtual {v3}, Landroid/telephony/SubscriptionInfo;->getDisplayName()Ljava/lang/CharSequence;
+
+    .line 112
+    move-result-object v5
 
     .line 115
-    :goto_0
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    .line 117
-    move-result v7
-
-    .line 120
-    if-nez v7, :cond_4
-
-    .line 121
-    const v6, 0x7f140503    # @string/kg_puk_enter_puk_hint_multi 'SIM "%1$s" is now disabled. Enter PUK code to continue. Contact carrier for details.'
-
-    .line 123
-    filled-new-array {v4}, [Ljava/lang/Object;
-
-    .line 126
-    move-result-object v4
-
-    .line 129
-    invoke-virtual {v3, v6, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 130
-    move-result-object v4
-
-    .line 133
     goto :goto_1
 
-    .line 134
-    :cond_4
-    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    .line 116
+    :cond_3
+    const-string v5, ""
+
+    .line 117
+    :goto_1
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    .line 119
+    move-result v8
+
+    .line 122
+    if-nez v8, :cond_4
+
+    .line 123
+    const v7, 0x7f130559    # @string/kg_puk_enter_puk_hint_multi 'SIM "%1$s" is now disabled. Enter PUK code to continue. Contact carrier for details.'
+
+    .line 125
+    filled-new-array {v5}, [Ljava/lang/Object;
+
+    .line 128
+    move-result-object v5
+
+    .line 131
+    invoke-virtual {v4, v7, v5}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 132
+    move-result-object v5
 
     .line 135
-    move-result-object v4
+    goto :goto_2
 
-    .line 138
-    :goto_1
-    if-eqz v2, :cond_5
+    .line 136
+    :cond_4
+    invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 139
-    invoke-virtual {v2}, Landroid/telephony/SubscriptionInfo;->getIconTint()I
+    .line 137
+    move-result-object v5
+
+    .line 140
+    :goto_2
+    if-eqz v3, :cond_5
 
     .line 141
-    move-result v5
+    invoke-virtual {v3}, Landroid/telephony/SubscriptionInfo;->getIconTint()I
 
-    .line 144
-    :cond_5
-    move-object v2, v4
-
-    .line 145
-    :goto_2
-    if-eqz v0, :cond_6
+    .line 143
+    move-result v6
 
     .line 146
-    const v0, 0x7f140504    # @string/kg_sim_lock_esim_instructions '%1$s Disable eSIM to use device without mobile service.'
+    :cond_5
+    move-object v3, v5
+
+    .line 147
+    :goto_3
+    if-eqz v0, :cond_6
 
     .line 148
-    filled-new-array {v2}, [Ljava/lang/Object;
+    const v0, 0x7f13055a    # @string/kg_sim_lock_esim_instructions '%1$s Disable eSIM to use device without mobile service.'
 
-    .line 151
-    move-result-object v2
+    .line 150
+    filled-new-array {v3}, [Ljava/lang/Object;
 
-    .line 154
-    invoke-virtual {v3, v0, v2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    .line 153
+    move-result-object v3
 
-    .line 155
-    move-result-object v2
+    .line 156
+    invoke-virtual {v4, v0, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 158
+    .line 157
+    move-result-object v3
+
+    .line 160
     :cond_6
-    invoke-virtual {v1, v2}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v3, v2}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
-    .line 159
+    .line 161
     iget-object v0, p0, Lcom/android/keyguard/KeyguardSimPukViewController;->mSimImageView:Landroid/widget/ImageView;
 
-    .line 162
-    invoke-static {v5}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
     .line 164
+    invoke-static {v6}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    .line 166
     move-result-object v1
 
-    .line 167
+    .line 169
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 168
+    .line 170
     new-instance v0, Lcom/android/keyguard/KeyguardSimPukViewController$2;
 
-    .line 171
+    .line 173
     iget v1, p0, Lcom/android/keyguard/KeyguardSimPukViewController;->mSubId:I
 
-    .line 173
+    .line 175
     invoke-direct {v0, p0, v1}, Lcom/android/keyguard/KeyguardSimPukViewController$2;-><init>(Lcom/android/keyguard/KeyguardSimPukViewController;I)V
 
-    .line 175
+    .line 177
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 178
+    .line 180
     return-void
-    .line 181
+    .line 183
 .end method
 
 .method public final updateMessageAreaVisibility()V
@@ -624,14 +631,14 @@
     iput v2, p0, Lcom/android/keyguard/KeyguardSimPukViewController$StateMachine;->mState:I
 
     .line 27
-    const p0, 0x7f140501    # @string/kg_puk_enter_pin_hint 'Enter desired PIN code'
+    const p0, 0x7f130557    # @string/kg_puk_enter_pin_hint 'Enter desired PIN code'
 
     .line 29
     goto/16 :goto_0
 
     .line 32
     :cond_0
-    const p0, 0x7f1404da    # @string/kg_invalid_sim_puk_hint 'PUK code should be 8 numbers or more.'
+    const p0, 0x7f130530    # @string/kg_invalid_sim_puk_hint 'PUK code should be 8 numbers or more.'
 
     .line 34
     goto/16 :goto_0
@@ -674,14 +681,14 @@
     iput v4, p0, Lcom/android/keyguard/KeyguardSimPukViewController$StateMachine;->mState:I
 
     .line 59
-    const p0, 0x7f1404cb    # @string/kg_enter_confirm_pin_hint 'Confirm desired PIN code'
+    const p0, 0x7f130521    # @string/kg_enter_confirm_pin_hint 'Confirm desired PIN code'
 
     .line 61
     goto/16 :goto_0
 
     .line 64
     :cond_2
-    const p0, 0x7f1404d9    # @string/kg_invalid_sim_pin_hint 'Type a PIN that is 4 to 8 numbers.'
+    const p0, 0x7f13052f    # @string/kg_invalid_sim_pin_hint 'Type a PIN that is 4 to 8 numbers.'
 
     .line 66
     goto/16 :goto_0
@@ -757,7 +764,7 @@
     move-result-object v0
 
     .line 115
-    const v4, 0x7f140507    # @string/kg_sim_unlock_progress_dialog_message 'Unlocking SIM…'
+    const v4, 0x7f13055d    # @string/kg_sim_unlock_progress_dialog_message 'Unlocking SIM…'
 
     .line 116
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -849,7 +856,7 @@
 
     .line 181
     :cond_5
-    const p0, 0x7f1404ba    # @string/keyguard_sim_unlock_progress_dialog_message 'Unlocking SIM…'
+    const p0, 0x7f130510    # @string/keyguard_sim_unlock_progress_dialog_message 'Unlocking SIM…'
 
     .line 184
     goto :goto_0
@@ -859,7 +866,7 @@
     iput v2, p0, Lcom/android/keyguard/KeyguardSimPukViewController$StateMachine;->mState:I
 
     .line 188
-    const p0, 0x7f1404d8    # @string/kg_invalid_confirm_pin_hint 'PIN codes does not match'
+    const p0, 0x7f13052e    # @string/kg_invalid_confirm_pin_hint 'PIN codes does not match'
 
     .line 190
     goto :goto_0

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/startingsurface/StartingWindowController$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -302,7 +302,7 @@
 
     .line 132
     :goto_9
-    sget-object v14, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object v14, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 133
     aget-boolean v14, v14, v4
@@ -389,7 +389,7 @@
     const-wide v18, -0x2c5e5f53b932c65cL    # -7.353981727579795E94
 
     .line 190
-    invoke-static/range {v17 .. v22}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v17 .. v22}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 195
     :cond_a
@@ -550,7 +550,7 @@
     const-string v2, "Windowless Snapshot "
 
     .line 275
-    invoke-static {v7, v2}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v7, v2}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 277
     move-result-object v2
@@ -1287,7 +1287,7 @@
     if-ne v12, v14, :cond_21
 
     .line 756
-    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 758
     const/4 v6, 0x1
@@ -1314,7 +1314,7 @@
     const/16 v20, 0x0
 
     .line 776
-    invoke-static/range {v17 .. v22}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v17 .. v22}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 778
     :cond_20
@@ -1341,7 +1341,7 @@
 
     .line 792
     :cond_21
-    sget-object v12, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
+    sget-object v12, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_STARTING_WINDOW_enabled:[Z
 
     .line 794
     const/4 v14, 0x1
@@ -1380,7 +1380,7 @@
     const/16 v21, 0x0
 
     .line 819
-    invoke-static/range {v17 .. v22}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v17 .. v22}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 821
     :cond_22
@@ -1390,7 +1390,7 @@
     const-string v12, "SnapshotStartingWindow for taskId="
 
     .line 826
-    invoke-static {v10, v12}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v10, v12}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 828
     move-result-object v10

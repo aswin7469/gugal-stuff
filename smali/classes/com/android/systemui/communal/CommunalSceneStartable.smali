@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/communal/CommunalSceneStartable;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -178,7 +178,7 @@
 .end method
 
 .method public static final access$determineSceneAfterTransition(Lcom/android/systemui/communal/CommunalSceneStartable;Lcom/android/systemui/keyguard/shared/model/TransitionStep;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 6
+    .locals 7
 
     .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -272,170 +272,179 @@
     iget-object v2, p0, Lcom/android/systemui/communal/CommunalSceneStartable;->dockManager:Lcom/android/systemui/dock/DockManager;
 
     .line 58
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v2, Lcom/google/android/systemui/dreamliner/DockObserver;
 
     .line 60
-    iget-object v2, p0, Lcom/android/systemui/communal/CommunalSceneStartable;->centralSurfaces$delegate:Ljava/util/Optional;
+    invoke-virtual {v2}, Lcom/google/android/systemui/dreamliner/DockObserver;->isDocked()Z
 
-    .line 63
-    sget-object v4, Lcom/android/systemui/communal/CommunalSceneStartable;->$$delegatedProperties:[Lkotlin/reflect/KProperty;
+    .line 62
+    move-result v2
 
     .line 65
-    const/4 v5, 0x0
+    iget-object v4, p0, Lcom/android/systemui/communal/CommunalSceneStartable;->centralSurfaces$delegate:Ljava/util/Optional;
 
-    .line 67
-    aget-object v4, v4, v5
+    .line 66
+    sget-object v5, Lcom/android/systemui/communal/CommunalSceneStartable;->$$delegatedProperties:[Lkotlin/reflect/KProperty;
 
     .line 68
-    const/4 v4, 0x0
+    const/4 v6, 0x0
 
     .line 70
-    invoke-virtual {v2, v4}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
+    aget-object v5, v5, v6
 
     .line 71
-    move-result-object v2
+    const/4 v5, 0x0
+
+    .line 73
+    invoke-virtual {v4, v5}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 74
-    check-cast v2, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
-
-    .line 75
-    if-eqz v2, :cond_3
+    move-result-object v4
 
     .line 77
-    check-cast v2, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
+    check-cast v4, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
 
-    .line 79
-    iget-boolean v5, v2, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mIsLaunchingActivityOverLockscreen:Z
+    .line 78
+    if-eqz v4, :cond_3
 
-    .line 81
+    .line 80
+    check-cast v4, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
+
+    .line 82
+    iget-boolean v6, v4, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mIsLaunchingActivityOverLockscreen:Z
+
+    .line 84
     :cond_3
-    sget-object v2, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->OCCLUDED:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
+    sget-object v4, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->OCCLUDED:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 83
-    if-ne p2, v2, :cond_4
+    .line 86
+    if-ne p2, v4, :cond_4
 
-    .line 85
-    if-nez v5, :cond_4
+    .line 88
+    if-nez v6, :cond_4
 
-    .line 87
+    .line 90
     sget-object p0, Lcom/android/systemui/communal/shared/model/CommunalScenes;->Blank:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 89
+    .line 92
     :goto_1
     move-object v1, p0
 
-    .line 91
+    .line 94
     goto :goto_3
 
-    .line 92
-    :cond_4
-    sget-object v5, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GLANCEABLE_HUB:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
-
-    .line 93
-    if-ne p2, v5, :cond_5
-
     .line 95
+    :cond_4
+    sget-object v6, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GLANCEABLE_HUB:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
+
+    .line 96
+    if-ne p2, v6, :cond_5
+
+    .line 98
     iget-object p1, p1, Lcom/android/systemui/keyguard/shared/model/TransitionStep;->from:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 97
-    if-ne p1, v2, :cond_5
+    .line 100
+    if-ne p1, v4, :cond_5
 
-    .line 99
+    .line 102
     sget-object p0, Lcom/android/systemui/communal/shared/model/CommunalScenes;->Communal:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 101
+    .line 104
     goto :goto_1
 
-    .line 103
+    .line 106
     :cond_5
     sget-object p1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GONE:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 104
+    .line 107
     if-ne p2, p1, :cond_6
 
-    .line 106
+    .line 109
     iget-object p0, p0, Lcom/android/systemui/communal/CommunalSceneStartable;->communalInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;
 
-    .line 108
+    .line 111
     iget-object p0, p0, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;->editModeOpen:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 110
+    .line 113
     iget-object p0, p0, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 112
+    .line 115
     invoke-interface {p0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
-    .line 114
-    move-result-object p0
-
     .line 117
-    check-cast p0, Ljava/lang/Boolean;
-
-    .line 118
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result-object p0
 
     .line 120
-    move-result p0
+    check-cast p0, Ljava/lang/Boolean;
+
+    .line 121
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 123
-    if-nez p0, :cond_6
-
-    .line 124
-    sget-object p0, Lcom/android/systemui/communal/shared/model/CommunalScenes;->Blank:Lcom/android/compose/animation/scene/SceneKey;
-
-    .line 126
-    goto :goto_1
-
-    .line 128
-    :cond_6
-    sget-object p0, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->Companion:Lcom/android/systemui/keyguard/shared/model/KeyguardState$Companion;
-
-    .line 129
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 131
-    invoke-static {p2}, Lcom/android/systemui/keyguard/shared/model/KeyguardState$Companion;->deviceIsAwakeInState(Lcom/android/systemui/keyguard/shared/model/KeyguardState;)Z
-
-    .line 134
     move-result p0
 
-    .line 137
-    if-nez p0, :cond_8
+    .line 126
+    if-nez p0, :cond_6
 
-    .line 138
-    iput v3, v0, Lcom/android/systemui/communal/CommunalSceneStartable$determineSceneAfterTransition$1;->label:I
+    .line 127
+    sget-object p0, Lcom/android/systemui/communal/shared/model/CommunalScenes;->Blank:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 140
-    sget-wide p0, Lcom/android/systemui/communal/CommunalSceneStartable;->AWAKE_DEBOUNCE_DELAY:J
+    .line 129
+    goto :goto_1
+
+    .line 131
+    :cond_6
+    if-nez v2, :cond_8
+
+    .line 132
+    sget-object p0, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->Companion:Lcom/android/systemui/keyguard/shared/model/KeyguardState$Companion;
+
+    .line 134
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 136
+    invoke-static {p2}, Lcom/android/systemui/keyguard/shared/model/KeyguardState$Companion;->deviceIsAwakeInState(Lcom/android/systemui/keyguard/shared/model/KeyguardState;)Z
+
+    .line 139
+    move-result p0
 
     .line 142
-    invoke-static {p0, p1, v0}, Lkotlinx/coroutines/DelayKt;->delay-VtjQ1oo(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-nez p0, :cond_8
 
-    .line 144
-    move-result-object p0
+    .line 143
+    iput v3, v0, Lcom/android/systemui/communal/CommunalSceneStartable$determineSceneAfterTransition$1;->label:I
+
+    .line 145
+    sget-wide p0, Lcom/android/systemui/communal/CommunalSceneStartable;->AWAKE_DEBOUNCE_DELAY:J
 
     .line 147
+    invoke-static {p0, p1, v0}, Lkotlinx/coroutines/DelayKt;->delay-VtjQ1oo(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 149
+    move-result-object p0
+
+    .line 152
     if-ne p0, v1, :cond_7
 
-    .line 148
+    .line 153
     goto :goto_3
 
-    .line 150
+    .line 155
     :cond_7
     :goto_2
     sget-object p0, Lcom/android/systemui/communal/shared/model/CommunalScenes;->Blank:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 151
+    .line 156
     goto :goto_1
 
-    .line 153
+    .line 158
     :cond_8
-    move-object v1, v4
+    move-object v1, v5
 
-    .line 154
+    .line 159
     :goto_3
     return-object v1
-    .line 155
+    .line 160
 .end method
 
 

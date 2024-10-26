@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;
 .super Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -69,7 +69,7 @@
     iput v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mLatestUpdateVolume:I
 
     .line 9
-    const v1, 0x7f0b0267    # @id/device_container
+    const v1, 0x7f0a0273    # @id/device_container
 
     .line 11
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -84,7 +84,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mContainerLayout:Landroid/view/ViewGroup;
 
     .line 20
-    const v1, 0x7f0b03b3    # @id/item_layout
+    const v1, 0x7f0a03d4    # @id/item_layout
 
     .line 22
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -99,7 +99,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mItemLayout:Landroid/widget/FrameLayout;
 
     .line 31
-    const v1, 0x7f0b07ff    # @id/title
+    const v1, 0x7f0a082e    # @id/title
 
     .line 33
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -114,7 +114,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mTitleText:Landroid/widget/TextView;
 
     .line 42
-    const v1, 0x7f0b0782    # @id/subtitle
+    const v1, 0x7f0a07b1    # @id/subtitle
 
     .line 44
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -129,7 +129,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mSubTitleText:Landroid/widget/TextView;
 
     .line 53
-    const v1, 0x7f0b0864    # @id/two_line_layout
+    const v1, 0x7f0a0892    # @id/two_line_layout
 
     .line 55
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -144,7 +144,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mTwoLineLayout:Landroid/widget/LinearLayout;
 
     .line 64
-    const v1, 0x7f0b0865    # @id/two_line_title
+    const v1, 0x7f0a0893    # @id/two_line_title
 
     .line 66
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -159,7 +159,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mTwoLineTitleText:Landroid/widget/TextView;
 
     .line 75
-    const v1, 0x7f0b0802    # @id/title_icon
+    const v1, 0x7f0a0831    # @id/title_icon
 
     .line 77
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -174,7 +174,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mTitleIcon:Landroid/widget/ImageView;
 
     .line 86
-    const v1, 0x7f0b08c5    # @id/volume_indeterminate_progress
+    const v1, 0x7f0a08fb    # @id/volume_indeterminate_progress
 
     .line 88
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -189,7 +189,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mProgressBar:Landroid/widget/ProgressBar;
 
     .line 97
-    const v1, 0x7f0b08d2    # @id/volume_seekbar
+    const v1, 0x7f0a0908    # @id/volume_seekbar
 
     .line 99
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -204,7 +204,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mSeekBar:Lcom/android/systemui/media/dialog/MediaOutputSeekbar;
 
     .line 108
-    const v1, 0x7f0b04b5    # @id/media_output_item_status
+    const v1, 0x7f0a04d9    # @id/media_output_item_status
 
     .line 110
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -219,7 +219,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mStatusIcon:Landroid/widget/ImageView;
 
     .line 119
-    const v1, 0x7f0b01c7    # @id/check_box
+    const v1, 0x7f0a01ce    # @id/check_box
 
     .line 121
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -234,7 +234,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mCheckBox:Landroid/widget/CheckBox;
 
     .line 130
-    const v1, 0x7f0b02d0    # @id/end_action_area
+    const v1, 0x7f0a02e9    # @id/end_action_area
 
     .line 132
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -249,7 +249,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mEndTouchArea:Landroid/view/ViewGroup;
 
     .line 141
-    const v1, 0x7f0b04b4    # @id/media_output_item_end_click_icon
+    const v1, 0x7f0a04d8    # @id/media_output_item_end_click_icon
 
     .line 143
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -264,7 +264,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mEndClickIcon:Landroid/widget/ImageView;
 
     .line 152
-    const v1, 0x7f0b08d5    # @id/volume_value
+    const v1, 0x7f0a090b    # @id/volume_value
 
     .line 154
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -279,7 +279,7 @@
     iput-object v1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->mVolumeValueText:Landroid/widget/TextView;
 
     .line 163
-    const v1, 0x7f0b037a    # @id/icon_area
+    const v1, 0x7f0a039a    # @id/icon_area
 
     .line 165
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -440,6 +440,7 @@
 
     .line 22
     return-void
+    .line 25
 .end method
 
 .method public final initSeekbar(Lcom/android/settingslib/media/MediaDevice;Z)V
@@ -658,14 +659,14 @@
     if-nez v2, :cond_6
 
     .line 131
-    const p2, 0x7f0809f6    # @drawable/media_output_icon_volume_off 'res/drawable/media_output_icon_volume_off.xml'
+    const p2, 0x7f080a2f    # @drawable/media_output_icon_volume_off 'res/drawable/media_output_icon_volume_off.xml'
 
     .line 133
     goto :goto_5
 
     .line 136
     :cond_6
-    const p2, 0x7f0809f5    # @drawable/media_output_icon_volume 'res/drawable/media_output_icon_volume.xml'
+    const p2, 0x7f080a2e    # @drawable/media_output_icon_volume 'res/drawable/media_output_icon_volume.xml'
 
     .line 137
     :goto_5
@@ -886,7 +887,7 @@
     iget-object v3, v4, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter;->mContext:Landroid/content/Context;
 
     .line 30
-    const v5, 0x7f0809f8    # @drawable/media_output_item_background_active 'res/drawable/media_output_item_background_active.xml'
+    const v5, 0x7f080a31    # @drawable/media_output_item_background_active 'res/drawable/media_output_item_background_active.xml'
 
     .line 32
     invoke-virtual {v3, v5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -908,7 +909,7 @@
     iget-object v3, v4, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter;->mContext:Landroid/content/Context;
 
     .line 44
-    const v5, 0x7f0809f7    # @drawable/media_output_item_background 'res/drawable/media_output_item_background.xml'
+    const v5, 0x7f080a30    # @drawable/media_output_item_background 'res/drawable/media_output_item_background.xml'
 
     .line 46
     invoke-virtual {v3, v5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1261,14 +1262,14 @@
     if-nez p3, :cond_2
 
     .line 46
-    const v3, 0x7f0809f7    # @drawable/media_output_item_background 'res/drawable/media_output_item_background.xml'
+    const v3, 0x7f080a30    # @drawable/media_output_item_background 'res/drawable/media_output_item_background.xml'
 
     .line 48
     goto :goto_2
 
     .line 51
     :cond_2
-    const v3, 0x7f0809f8    # @drawable/media_output_item_background_active 'res/drawable/media_output_item_background_active.xml'
+    const v3, 0x7f080a31    # @drawable/media_output_item_background_active 'res/drawable/media_output_item_background_active.xml'
 
     .line 52
     :goto_2
@@ -1463,14 +1464,14 @@
     if-eqz p2, :cond_9
 
     .line 173
-    const p2, 0x1040275    # @android:string/config_networkOverLimitComponent
+    const p2, 0x104026e    # @android:string/config_misprovisionedBrandValue
 
     .line 175
     goto :goto_8
 
     .line 178
     :cond_9
-    const p2, 0x1040274    # @android:string/config_networkLocationProviderPackageName
+    const p2, 0x104026d    # @android:string/config_mediaProjectionPermissionDialogComponent
 
     .line 179
     :goto_8
@@ -1523,7 +1524,7 @@
     iget-object v2, v1, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter;->mContext:Landroid/content/Context;
 
     .line 6
-    const v3, 0x7f0809f8    # @drawable/media_output_item_background_active 'res/drawable/media_output_item_background_active.xml'
+    const v3, 0x7f080a31    # @drawable/media_output_item_background_active 'res/drawable/media_output_item_background_active.xml'
 
     .line 8
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1541,7 +1542,7 @@
     iget v0, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mColorItemContent:I
 
     .line 20
-    const v1, 0x7f0809f6    # @drawable/media_output_icon_volume_off 'res/drawable/media_output_icon_volume_off.xml'
+    const v1, 0x7f080a2f    # @drawable/media_output_icon_volume_off 'res/drawable/media_output_icon_volume_off.xml'
 
     .line 22
     invoke-virtual {p0, v1, v0}, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->updateTitleIcon(II)V
@@ -1730,7 +1731,7 @@
     iget-object v2, v1, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter;->mContext:Landroid/content/Context;
 
     .line 6
-    const v3, 0x7f080a01    # @drawable/media_output_title_icon_area 'res/drawable/media_output_title_icon_area.xml'
+    const v3, 0x7f080a3a    # @drawable/media_output_title_icon_area 'res/drawable/media_output_title_icon_area.xml'
 
     .line 8
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1748,7 +1749,7 @@
     iget v0, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mColorItemContent:I
 
     .line 20
-    const v1, 0x7f0809f5    # @drawable/media_output_icon_volume 'res/drawable/media_output_icon_volume.xml'
+    const v1, 0x7f080a2e    # @drawable/media_output_icon_volume 'res/drawable/media_output_icon_volume.xml'
 
     .line 22
     invoke-virtual {p0, v1, v0}, Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;->updateTitleIcon(II)V

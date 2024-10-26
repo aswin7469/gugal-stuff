@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/mediaprojection/taskswitcher/data/repository/ActivityTaskManagerTasksRepository;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -353,43 +353,5 @@
     :cond_3
     :goto_1
     return-object p1
-.end method
-
-.method public final launchRecentTask(Landroid/app/ActivityManager$RunningTaskInfo;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
-
-    .line 1
-    new-instance v0, Lcom/android/systemui/mediaprojection/taskswitcher/data/repository/ActivityTaskManagerTasksRepository$launchRecentTask$2;
-
-    .line 2
-    const/4 v1, 0x0
-
-    .line 4
-    invoke-direct {v0, p1, p0, v1}, Lcom/android/systemui/mediaprojection/taskswitcher/data/repository/ActivityTaskManagerTasksRepository$launchRecentTask$2;-><init>(Landroid/app/ActivityManager$RunningTaskInfo;Lcom/android/systemui/mediaprojection/taskswitcher/data/repository/ActivityTaskManagerTasksRepository;Lkotlin/coroutines/Continuation;)V
-
-    .line 5
-    iget-object p0, p0, Lcom/android/systemui/mediaprojection/taskswitcher/data/repository/ActivityTaskManagerTasksRepository;->backgroundDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
-
-    .line 8
-    invoke-static {p0, v0, p2}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    .line 10
-    move-result-object p0
-
-    .line 13
-    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
-
-    .line 14
-    if-ne p0, p1, :cond_0
-
-    .line 16
-    return-object p0
-
-    .line 18
-    :cond_0
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    .line 19
-    return-object p0
-    .line 21
+    .line 69
 .end method

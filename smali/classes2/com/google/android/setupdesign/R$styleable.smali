@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/setupdesign/R$styleable;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -55,10 +55,10 @@
     sput-object v0, Lcom/google/android/setupdesign/R$styleable;->SudButtonItem:[I
 
     .line 26
-    const v0, 0x7f040602    # @attr/sudCollapsedSummary
+    const v0, 0x7f040608    # @attr/sudCollapsedSummary
 
     .line 28
-    const v1, 0x7f040617    # @attr/sudExpandedSummary
+    const v1, 0x7f04061d    # @attr/sudExpandedSummary
 
     .line 31
     filled-new-array {v0, v1}, [I
@@ -124,8 +124,8 @@
         0x10101e1    # @android:attr/title
         0x10101e9    # @android:attr/summary
         0x1010273    # @android:attr/contentDescription
-        0x7f040628    # @attr/sudIconGravity
-        0x7f040629    # @attr/sudIconTint
+        0x7f04062e    # @attr/sudIconGravity
+        0x7f04062f    # @attr/sudIconTint
     .end array-data
     .line 72
 .end method

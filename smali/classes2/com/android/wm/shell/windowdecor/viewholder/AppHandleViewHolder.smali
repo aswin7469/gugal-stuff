@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/viewholder/AppHandleViewHolder;
 .super Lcom/android/wm/shell/windowdecor/viewholder/WindowDecorationViewHolder;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -15,7 +15,7 @@
     invoke-direct {p0, p1}, Lcom/android/wm/shell/windowdecor/viewholder/WindowDecorationViewHolder;-><init>(Landroid/view/View;)V
 
     .line 2
-    const v0, 0x7f0b025a    # @id/desktop_mode_caption
+    const v0, 0x7f0a0266    # @id/desktop_mode_caption
 
     .line 5
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -24,7 +24,7 @@
     move-result-object v0
 
     .line 11
-    const v1, 0x7f0b01a8    # @id/caption_handle
+    const v1, 0x7f0a01ae    # @id/caption_handle
 
     .line 12
     invoke-virtual {p1, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -144,7 +144,7 @@
     iget-object p0, p0, Lcom/android/wm/shell/windowdecor/viewholder/WindowDecorationViewHolder;->context:Landroid/content/Context;
 
     .line 53
-    const p1, 0x7f0600ce    # @color/desktop_mode_caption_handle_bar_light '#eff1f2'
+    const p1, 0x7f0600d4    # @color/desktop_mode_caption_handle_bar_light '#eff1f2'
 
     .line 55
     invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I
@@ -160,7 +160,7 @@
     iget-object p0, p0, Lcom/android/wm/shell/windowdecor/viewholder/WindowDecorationViewHolder;->context:Landroid/content/Context;
 
     .line 63
-    const p1, 0x7f0600cd    # @color/desktop_mode_caption_handle_bar_dark '#1c1c17'
+    const p1, 0x7f0600d3    # @color/desktop_mode_caption_handle_bar_dark '#1c1c17'
 
     .line 65
     invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I

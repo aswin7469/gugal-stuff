@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/communal/ui/viewmodel/CommunalViewModel$widgetAccessibilityDelegate$1;
 .super Landroid/view/View$AccessibilityDelegate;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -49,7 +49,7 @@
     iget-object p0, p0, Lcom/android/systemui/communal/ui/viewmodel/CommunalViewModel;->resources:Landroid/content/res/Resources;
 
     .line 15
-    const v1, 0x7f14003b    # @string/accessibility_action_label_edit_widgets 'Customize widgets'
+    const v1, 0x7f13003b    # @string/accessibility_action_label_edit_widgets 'Customize widgets'
 
     .line 17
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

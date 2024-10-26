@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/volume/panel/ui/viewmodel/VolumePanelViewModel$componentsLayout$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -157,442 +157,451 @@
     iget-object v4, v2, Lcom/android/systemui/volume/panel/domain/model/ComponentModel;->key:Ljava/lang/String;
 
     .line 52
-    iget-object v5, v0, Lcom/android/systemui/volume/panel/ui/viewmodel/VolumePanelViewModel;->volumePanelComponent:Lcom/android/systemui/volume/panel/dagger/VolumePanelComponent;
+    iget-object v5, v0, Lcom/android/systemui/volume/panel/ui/viewmodel/VolumePanelViewModel;->volumePanelComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$GoogleVolumePanelComponentImpl;
 
     .line 54
-    invoke-interface {v5}, Lcom/android/systemui/volume/panel/dagger/VolumePanelComponent;->componentsFactory()Lcom/android/systemui/volume/panel/ui/composable/ComponentsFactory;
+    iget-object v5, v5, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$GoogleVolumePanelComponentImpl;->componentsFactoryProvider:Ldagger/internal/Provider;
 
     .line 56
-    move-result-object v5
-
-    .line 59
-    iget-object v6, v5, Lcom/android/systemui/volume/panel/ui/composable/ComponentsFactory;->componentByKey:Ljava/util/Map;
-
-    .line 60
-    iget-object v7, v2, Lcom/android/systemui/volume/panel/domain/model/ComponentModel;->key:Ljava/lang/String;
-
-    .line 62
-    invoke-interface {v6, v7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    .line 64
-    move-result v6
-
-    .line 67
-    if-eqz v6, :cond_0
-
-    .line 68
-    iget-object v5, v5, Lcom/android/systemui/volume/panel/ui/composable/ComponentsFactory;->componentByKey:Ljava/util/Map;
-
-    .line 70
-    invoke-static {v7, v5}, Lkotlin/collections/MapsKt;->getValue(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/Object;
-
-    .line 72
-    move-result-object v5
-
-    .line 75
-    check-cast v5, Ljavax/inject/Provider;
-
-    .line 76
     invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 78
+    .line 58
     move-result-object v5
 
-    .line 81
-    check-cast v5, Lcom/android/systemui/volume/panel/ui/composable/ComposeVolumePanelUiComponent;
+    .line 61
+    check-cast v5, Lcom/android/systemui/volume/panel/ui/composable/ComponentsFactory;
+
+    .line 62
+    iget-object v6, v5, Lcom/android/systemui/volume/panel/ui/composable/ComponentsFactory;->componentByKey:Ljava/util/Map;
+
+    .line 64
+    iget-object v7, v2, Lcom/android/systemui/volume/panel/domain/model/ComponentModel;->key:Ljava/lang/String;
+
+    .line 66
+    invoke-interface {v6, v7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    .line 68
+    move-result v6
+
+    .line 71
+    if-eqz v6, :cond_0
+
+    .line 72
+    iget-object v5, v5, Lcom/android/systemui/volume/panel/ui/composable/ComponentsFactory;->componentByKey:Ljava/util/Map;
+
+    .line 74
+    invoke-static {v7, v5}, Lkotlin/collections/MapsKt;->getValue(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/Object;
+
+    .line 76
+    move-result-object v5
+
+    .line 79
+    check-cast v5, Ljavax/inject/Provider;
+
+    .line 80
+    invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 82
-    iget-boolean v2, v2, Lcom/android/systemui/volume/panel/domain/model/ComponentModel;->isAvailable:Z
+    move-result-object v5
 
-    .line 84
-    invoke-direct {v3, v4, v5, v2}, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;-><init>(Ljava/lang/String;Lcom/android/systemui/volume/panel/ui/composable/ComposeVolumePanelUiComponent;Z)V
+    .line 85
+    check-cast v5, Lcom/android/systemui/volume/panel/ui/composable/ComposeVolumePanelUiComponent;
 
     .line 86
+    iget-boolean v2, v2, Lcom/android/systemui/volume/panel/domain/model/ComponentModel;->isAvailable:Z
+
+    .line 88
+    invoke-direct {v3, v4, v5, v2}, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;-><init>(Ljava/lang/String;Lcom/android/systemui/volume/panel/ui/composable/ComposeVolumePanelUiComponent;Z)V
+
+    .line 90
     invoke-interface {v1, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 89
+    .line 93
     goto :goto_0
 
-    .line 92
+    .line 96
     :cond_0
     const-string p0, "Component for key="
 
-    .line 93
+    .line 97
     const-string p1, " is not bound."
 
-    .line 95
-    invoke-static {p0, v7, p1}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 97
-    move-result-object p0
-
-    .line 100
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    .line 99
+    invoke-static {p0, v7, p1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 101
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 103
     move-result-object p0
 
-    .line 106
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    .line 104
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    .line 105
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 107
-    throw p1
+    move-result-object p0
 
     .line 110
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 111
+    throw p1
+
+    .line 114
     :cond_1
     iget-object p0, p0, Lcom/android/systemui/volume/panel/ui/viewmodel/VolumePanelViewModel$componentsLayout$1;->this$0:Lcom/android/systemui/volume/panel/ui/viewmodel/VolumePanelViewModel;
 
-    .line 111
-    iget-object p0, p0, Lcom/android/systemui/volume/panel/ui/viewmodel/VolumePanelViewModel;->volumePanelComponent:Lcom/android/systemui/volume/panel/dagger/VolumePanelComponent;
-
-    .line 113
-    invoke-interface {p0}, Lcom/android/systemui/volume/panel/dagger/VolumePanelComponent;->componentsLayoutManager()Lcom/android/systemui/volume/panel/ui/layout/ComponentsLayoutManager;
-
     .line 115
-    move-result-object p0
+    iget-object p0, p0, Lcom/android/systemui/volume/panel/ui/viewmodel/VolumePanelViewModel;->volumePanelComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$GoogleVolumePanelComponentImpl;
 
-    .line 118
-    check-cast p0, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager;
+    .line 117
+    iget-object p0, p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$GoogleVolumePanelComponentImpl;->defaultComponentsLayoutManagerProvider:Ldagger/internal/Provider;
 
     .line 119
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 121
-    new-instance p1, Ljava/util/ArrayList;
+    move-result-object p0
 
     .line 124
+    check-cast p0, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager;
+
+    .line 125
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 127
+    new-instance p1, Ljava/util/ArrayList;
+
+    .line 130
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 126
+    .line 132
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 129
+    .line 135
     move-result-object v0
 
-    .line 132
+    .line 138
     :cond_2
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 133
+    .line 139
     move-result v2
 
-    .line 136
+    .line 142
     iget-object v3, p0, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager;->bottomBar:Ljava/lang/String;
 
-    .line 137
+    .line 143
     if-eqz v2, :cond_3
 
-    .line 139
+    .line 145
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 141
+    .line 147
     move-result-object v2
 
-    .line 144
+    .line 150
     move-object v4, v2
 
-    .line 145
+    .line 151
     check-cast v4, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;
 
-    .line 146
+    .line 152
     iget-object v5, p0, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager;->headerComponents:Ljava/util/Collection;
 
-    .line 148
+    .line 154
     iget-object v6, v4, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;->key:Ljava/lang/String;
 
-    .line 150
+    .line 156
     invoke-interface {v5, v6}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    .line 152
+    .line 158
     move-result v5
 
-    .line 155
+    .line 161
     if-nez v5, :cond_2
-
-    .line 156
-    iget-object v5, p0, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager;->footerComponents:Ljava/util/Collection;
-
-    .line 158
-    iget-object v4, v4, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;->key:Ljava/lang/String;
-
-    .line 160
-    invoke-interface {v5, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     .line 162
-    move-result v5
+    iget-object v5, p0, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager;->footerComponents:Ljava/util/Collection;
 
-    .line 165
-    if-nez v5, :cond_2
+    .line 164
+    iget-object v4, v4, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;->key:Ljava/lang/String;
 
     .line 166
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v5, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     .line 168
-    move-result v3
+    move-result v5
 
     .line 171
-    if-nez v3, :cond_2
+    if-nez v5, :cond_2
 
     .line 172
-    invoke-interface {p1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 174
-    goto :goto_1
+    move-result v3
 
     .line 177
+    if-nez v3, :cond_2
+
+    .line 178
+    invoke-interface {p1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    .line 180
+    goto :goto_1
+
+    .line 183
     :cond_3
     new-instance v0, Ljava/util/ArrayList;
 
-    .line 178
+    .line 184
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 180
+    .line 186
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 183
+    .line 189
     move-result-object v2
 
-    .line 186
+    .line 192
     :cond_4
     :goto_2
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 187
+    .line 193
     move-result v4
 
-    .line 190
+    .line 196
     if-eqz v4, :cond_5
 
-    .line 191
+    .line 197
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 193
+    .line 199
     move-result-object v4
 
-    .line 196
+    .line 202
     move-object v5, v4
 
-    .line 197
+    .line 203
     check-cast v5, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;
 
-    .line 198
+    .line 204
     iget-object v6, p0, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager;->headerComponents:Ljava/util/Collection;
 
-    .line 200
+    .line 206
     iget-object v5, v5, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;->key:Ljava/lang/String;
 
-    .line 202
+    .line 208
     invoke-interface {v6, v5}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    .line 204
+    .line 210
     move-result v5
 
-    .line 207
+    .line 213
     if-eqz v5, :cond_4
 
-    .line 208
+    .line 214
     invoke-interface {v0, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 210
+    .line 216
     goto :goto_2
 
-    .line 213
+    .line 219
     :cond_5
     new-instance v2, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager$layout$$inlined$sortedBy$1;
 
-    .line 214
+    .line 220
     const/4 v4, 0x0
 
-    .line 216
+    .line 222
     invoke-direct {v2, p0, v4}, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager$layout$$inlined$sortedBy$1;-><init>(Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager;I)V
 
-    .line 217
+    .line 223
     invoke-static {v0, v2}, Lkotlin/collections/CollectionsKt;->sortedWith(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
 
-    .line 220
+    .line 226
     move-result-object v0
 
-    .line 223
+    .line 229
     new-instance v2, Ljava/util/ArrayList;
 
-    .line 224
+    .line 230
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 226
+    .line 232
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 229
+    .line 235
     move-result-object v4
 
-    .line 232
+    .line 238
     :cond_6
     :goto_3
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 233
+    .line 239
     move-result v5
 
-    .line 236
+    .line 242
     if-eqz v5, :cond_7
 
-    .line 237
+    .line 243
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 239
+    .line 245
     move-result-object v5
 
-    .line 242
+    .line 248
     move-object v6, v5
 
-    .line 243
+    .line 249
     check-cast v6, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;
 
-    .line 244
+    .line 250
     iget-object v7, p0, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager;->footerComponents:Ljava/util/Collection;
 
-    .line 246
+    .line 252
     iget-object v6, v6, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;->key:Ljava/lang/String;
 
-    .line 248
+    .line 254
     invoke-interface {v7, v6}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    .line 250
+    .line 256
     move-result v6
 
-    .line 253
+    .line 259
     if-eqz v6, :cond_6
 
-    .line 254
+    .line 260
     invoke-interface {v2, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 256
+    .line 262
     goto :goto_3
 
-    .line 259
+    .line 265
     :cond_7
     new-instance v4, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager$layout$$inlined$sortedBy$1;
 
-    .line 260
+    .line 266
     const/4 v5, 0x1
 
-    .line 262
+    .line 268
     invoke-direct {v4, p0, v5}, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager$layout$$inlined$sortedBy$1;-><init>(Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager;I)V
 
-    .line 263
+    .line 269
     invoke-static {v2, v4}, Lkotlin/collections/CollectionsKt;->sortedWith(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
 
-    .line 266
+    .line 272
     move-result-object p0
 
-    .line 269
+    .line 275
     new-instance v2, Lcom/android/systemui/volume/panel/ui/layout/DefaultComponentsLayoutManager$layout$$inlined$sortedBy$3;
 
-    .line 270
+    .line 276
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    .line 272
+    .line 278
     invoke-static {p1, v2}, Lkotlin/collections/CollectionsKt;->sortedWith(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
 
-    .line 275
+    .line 281
     move-result-object p1
 
-    .line 278
+    .line 284
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 279
+    .line 285
     move-result-object v1
 
-    .line 282
+    .line 288
     :cond_8
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 283
+    .line 289
     move-result v2
 
-    .line 286
+    .line 292
     if-eqz v2, :cond_9
 
-    .line 287
+    .line 293
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 289
+    .line 295
     move-result-object v2
 
-    .line 292
+    .line 298
     move-object v4, v2
 
-    .line 293
+    .line 299
     check-cast v4, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;
 
-    .line 294
+    .line 300
     iget-object v4, v4, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;->key:Ljava/lang/String;
 
-    .line 296
+    .line 302
     invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 298
+    .line 304
     move-result v4
 
-    .line 301
+    .line 307
     if-eqz v4, :cond_8
 
-    .line 302
+    .line 308
     goto :goto_4
 
-    .line 304
+    .line 310
     :cond_9
     const/4 v2, 0x0
 
-    .line 305
+    .line 311
     :goto_4
     check-cast v2, Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;
 
-    .line 306
+    .line 312
     if-eqz v2, :cond_a
 
-    .line 308
+    .line 314
     new-instance v1, Lcom/android/systemui/volume/panel/ui/layout/ComponentsLayout;
 
-    .line 310
+    .line 316
     invoke-direct {v1, v0, p1, p0, v2}, Lcom/android/systemui/volume/panel/ui/layout/ComponentsLayout;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/android/systemui/volume/panel/ui/viewmodel/ComponentState;)V
 
-    .line 312
+    .line 318
     return-object v1
 
-    .line 315
+    .line 321
     :cond_a
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 316
+    .line 322
     const-string p1, "VolumePanelComponents.BOTTOM_BAR must be present in the default components layout."
 
-    .line 318
+    .line 324
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 320
+    .line 326
     move-result-object p1
 
-    .line 323
+    .line 329
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 324
+    .line 330
     throw p0
 
-    .line 327
+    .line 333
     :cond_b
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 328
+    .line 334
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    .line 330
+    .line 336
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 332
+    .line 338
     throw p0
-    .line 335
+    .line 341
 .end method

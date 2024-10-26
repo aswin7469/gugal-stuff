@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/Consumer;
@@ -40,55 +40,52 @@
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 6
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/shared/NotificationsHeadsUpRefactor;->assertInLegacyMode()V
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 9
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result v0
 
     .line 12
-    move-result v0
-
-    .line 15
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mIsExpanded:Z
 
-    .line 16
+    .line 13
     if-eq v0, v1, :cond_0
 
-    .line 18
+    .line 15
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 20
+    .line 17
     move-result v0
 
-    .line 23
+    .line 20
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mIsExpanded:Z
 
-    .line 24
+    .line 21
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 26
+    .line 23
     move-result p1
 
-    .line 29
+    .line 26
     if-eqz p1, :cond_0
 
-    .line 30
+    .line 27
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 32
+    .line 29
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mHeadsUpAnimatingAway:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 34
+    .line 31
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 36
+    .line 33
     const/4 v0, 0x0
 
-    .line 39
+    .line 36
     invoke-virtual {p0, v0, p1}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 40
+    .line 37
     :cond_0
     return-void
-    .line 43
+    .line 40
 .end method

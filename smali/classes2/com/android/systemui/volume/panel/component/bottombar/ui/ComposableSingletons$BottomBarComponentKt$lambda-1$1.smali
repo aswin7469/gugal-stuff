@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/volume/panel/component/bottombar/ui/ComposableSingletons$BottomBarComponentKt$lambda-1$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -111,7 +111,7 @@
     sget-object v0, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
 
     .line 38
-    const v0, 0x7f140a0a    # @string/volume_panel_dialog_settings_button 'Settings'
+    const v0, 0x7f130a97    # @string/volume_panel_dialog_settings_button 'Settings'
 
     .line 40
     invoke-static {v0, v15}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;

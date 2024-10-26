@@ -1,6 +1,6 @@
 .class public final Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 .super Landroidx/vectordrawable/graphics/drawable/VectorDrawableCommon;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/vectordrawable/graphics/drawable/Animatable2Compat;
@@ -59,7 +59,6 @@
 
     .line 24
     return-void
-    .line 26
 .end method
 
 
@@ -549,7 +548,7 @@
 
     .line 21
     :cond_4
-    const-string v3, "target"
+    const-string/jumbo v3, "target"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

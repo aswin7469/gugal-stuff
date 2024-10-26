@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">বাছনি কৰা ৱিজেটটো ৰাখক</string>
   <string name="accessibility_action_label_remove_widget">ৱিজেট আঁতৰাওক</string>
   <string name="accessibility_action_label_select_widget">ৱিজেট বাছনি কৰক</string>
-  <string name="accessibility_action_open_communal_hub">লক স্ক্ৰীনত ৱিজেট</string>
   <string name="accessibility_action_pip_resize">আকাৰ সলনি কৰক</string>
   <string name="accessibility_action_pip_stash">লুকুৱাওক</string>
   <string name="accessibility_action_pip_unstash">দেখুৱাওক</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">এখন হাতেৰে ব্যৱহাৰ কৰা ম'ডটোৰ পৰা বাহিৰ হওক</string>
   <string name="accessibility_airplane_mode">এয়াৰপ্লে’ন ম’ড।</string>
   <string name="accessibility_allow_diagonal_scrolling">কোণীয়াকৈ স্ক্ৰ’ল কৰাৰ অনুমতি দিয়ক</string>
+  <string name="accessibility_assistant_poodle">কণ্ঠধ্বনিৰ দ্বাৰা সন্ধান</string>
   <string name="accessibility_authenticate_hint">বিশ্বাসযোগ্যতা প্ৰমাণ কৰক</string>
   <string name="accessibility_back">উভতি যাওক</string>
   <string name="accessibility_banner_message_dismiss">অগ্ৰাহ্য কৰক</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">ডিভাইচ আনলক কৰক</string>
   <string name="accessibility_ethernet_connected">ইথাৰনেট।</string>
   <string name="accessibility_ethernet_disconnected">ইথাৰনেট সংযোগ বিচ্ছিন্ন হৈছে।</string>
-  <string name="accessibility_fingerprint_bouncer">বিশ্বাসযোগ্যতা প্ৰমাণীকৰণৰ আৱশ্যক। বিশ্বাসযোগ্যতা প্ৰমাণীকৰণ কৰিবলৈ ফিংগাৰপ্ৰিণ্ট ছেন্সৰটো স্পৰ্শ কৰক।</string>
   <string name="accessibility_fingerprint_label">ফিংগাৰপ্ৰিণ্ট ছেন্সৰ</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">ট’গল কৰক</string>
   <string name="accessibility_floating_button_action_edit">সম্পাদনা কৰক</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">মেনু</string>
   <string name="accessibility_multi_user_list_switcher">পুল-ডাউনৰ মেনু</string>
   <string name="accessibility_multi_user_switch_switcher">ব্যৱহাৰকাৰী সলনি কৰক</string>
+  <string name="accessibility_next_alarm">পৰৱৰ্তী এলাৰ্ম %sত</string>
   <string name="accessibility_no_calling">কল কৰা নহয়</string>
   <string name="accessibility_no_phone">ফ'নত ছিগনেল নাই৷</string>
   <string name="accessibility_no_wifi">ৱাইফাই সংযোগ বিচ্ছিন্ন হৈ আছে।</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">স্ক্ৰীন প'ৰ্ট্ৰেইট দিশত লক কৰা হ’ল।</string>
   <string name="accessibility_send_smart_reply">পঠিয়াওক</string>
   <string name="accessibility_sensors_off_active">ছেন্সৰ অফ সক্ৰিয় কৰা আছে</string>
+  <string name="accessibility_settings_gear">Pixel Stand ছেটিং</string>
   <string name="accessibility_side_fingerprint_indicator_label">ফিংগাৰপ্ৰিণ্ট ছেন্সৰটো স্পৰ্শ কৰক। এইটো হৈছে আপোনাৰ ফ’নটোৰ কাষৰফালে থকা চুটি বুটামটো</string>
+  <string name="accessibility_smartspace_page">%2$d খন পৃষ্ঠাৰ %1$d নম্বৰখন</string>
   <string name="accessibility_split_bottom">একেবাৰে তলৰফালে বিভাজন কৰক</string>
   <string name="accessibility_split_left">বাওঁফালে বিভাজন কৰক</string>
   <string name="accessibility_split_right">সোঁফালে বিভাজন কৰক</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">ৱাই-ফাইৰ তিনিডাল দণ্ড।</string>
   <string name="accessibility_wifi_two_bars">ৱাই-ফাইৰ দুডাল দণ্ড।</string>
   <string name="accesssibility_keyguard_retry">ফে’চ আনলক পুনৰ ব্যৱহাৰ কৰি চাবলৈ ওপৰলৈ ছোৱাইপ কৰক</string>
+  <string name="adaptive_charging_notify_des">%1$s বেটাৰী বাকী আছে। বেটাৰীৰ জীৱনকাল বৃদ্ধি কৰিবলৈ স্থিৰভাৱে চাৰ্জ কৰি থকা হৈছে।</string>
+  <string name="adaptive_charging_notify_title">অভিযোজিত চাৰ্জিং অন হৈ আছে</string>
+  <string name="adaptive_charging_notify_turn_off_once">এবাৰ অফ কৰক</string>
+  <string name="adaptive_charging_time_estimate">%1$s • অভিযোজিত চাৰ্জিং • %2$sৰ ভিতৰত সম্পূৰ্ণ হ’ব</string>
   <string name="add">যোগ দিয়ক</string>
   <string name="add_guest_failed">নতুন অতিথি সৃষ্টি কৰিব পৰা নগ’ল</string>
   <string name="airplane_mode">এয়াৰপ্লে’ন ম’ড</string>
@@ -233,6 +239,7 @@
   <string name="app_info">এপৰ তথ্য</string>
   <string name="app_label">ছিষ্টেম ইউআই</string>
   <string name="assistant_attention_content_description">ব্যৱহাৰকাৰীৰ উপস্থিতি চিনাক্ত কৰা হৈছে</string>
+  <string name="assistant_scrim_label">শুনি আছে, বাতিল কৰিবলৈ টিপক</string>
   <string name="audio_sharing_description">অডিঅ’ শ্বেয়াৰ কৰি থকা হৈছে</string>
   <string name="audio_status">শুনি আছোঁ</string>
   <string name="auto_data_switch_dialog_negative_button">নালাগে, ধন্যবাদ</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">উভতি যাওক</string>
   <string name="battery">বেটাৰী</string>
   <string name="battery_detail_switch_title">বেটাৰী সঞ্চয়কাৰী</string>
-  <string name="battery_low_description">আপোনাৰ %s বেটাৰী বাকী আছে। বেটাৰী সঞ্চয়কাৰীয়ে গাঢ় ৰঙৰ থীম অন কৰে, নেপথ্যৰ কাৰ্যকলাপ সীমাবদ্ধ কৰে আৰু জাননী পলম কৰে।</string>
+  <string name="battery_health_notify_learn_more">অধিক জানক</string>
   <string name="battery_low_intro">বেটাৰী সঞ্চয়কাৰীয়ে গাঢ় ৰঙৰ থীম অন কৰে, নেপথ্যৰ কাৰ্যকলাপ সীমাবদ্ধ কৰে আৰু জাননী পলম কৰে।</string>
-  <string name="battery_low_title">বেটাৰী সঞ্চয়কাৰী অন কৰিবনে?</string>
   <string name="battery_saver_confirmation_ok">অন কৰক</string>
   <string name="battery_saver_confirmation_title">বেটাৰী সঞ্চয়কাৰী অন কৰিবনে?</string>
   <string name="battery_saver_confirmation_title_generic">বেটাৰী সঞ্চয়কাৰীৰ বিষয়ে</string>
-  <string name="battery_saver_dismiss_action">নালাগে, ধন্যবাদ</string>
   <string name="battery_saver_start_action">অন কৰক</string>
   <string name="battery_state_unknown_notification_text">অধিক তথ্যৰ বাবে টিপক</string>
   <string name="battery_state_unknown_notification_title">আপোনাৰ বেটাৰী মিটাৰ পঢ়োঁতে সমস্যা হৈছে</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">সক্ৰিয় হৈ আছে। বাওঁ: %1$s, সোঁ: %2$s বেটাৰী।</string>
   <string name="bluetooth_active_battery_level_untethered_left">সক্ৰিয় হৈ আছে। বাওঁ: %1$s বেটাৰী।</string>
   <string name="bluetooth_active_battery_level_untethered_right">সক্ৰিয় হৈ আছে। সোঁ: %1$s বেটাৰী।</string>
-  <string name="bluetooth_active_media_only_battery_level">সক্ৰিয় হৈ আছে (কেৱল মিডিয়া)। %1$s বেটাৰী।</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">সক্ৰিয় হৈ আছে (কেৱল মিডিয়া)। বাওঁ: %1$s, সোঁ: %2$s বেটাৰী।</string>
-  <string name="bluetooth_active_media_only_no_battery_level">সক্ৰিয় হৈ আছে (কেৱল মিডিয়া)</string>
   <string name="bluetooth_active_no_battery_level">সক্ৰিয়</string>
   <string name="bluetooth_battery_level">%1$s বেটাৰী</string>
-  <string name="bluetooth_battery_level_lea_support">সংযুক্ত হৈ আছে (অডিঅ’ শ্বেয়াৰিং সমৰ্থন কৰে), %1$s বেটাৰী।</string>
   <string name="bluetooth_battery_level_untethered">বাওঁ: %1$s, সোঁ: %2$s বেটাৰী।</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">সংযুক্ত হৈ আছে (অডিঅ’ শ্বেয়াৰিং সমৰ্থন কৰে), বাওঁ: %1$s, সোঁ: %2$s বেটাৰী</string>
   <string name="bluetooth_connected">%1$s সংযোগ কৰা হ’ল</string>
   <string name="bluetooth_connecting">সংযোগ কৰি থকা হৈছে…</string>
   <string name="bluetooth_disconnected">সংযোগ বিচ্ছিন্ন কৰা হ’ল</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">সক্ৰিয় হৈ আছে (কেৱল বাওঁফালৰটো)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">সক্ৰিয় হৈ আছে (বাওঁফালৰটো আৰু সোঁফালৰটো)</string>
   <string name="bluetooth_hearing_aid_right_active">সক্ৰিয় হৈ আছে (কেৱল সোঁফালৰটো)</string>
-  <string name="bluetooth_no_battery_level_lea_support">সংযুক্ত হৈ আছে (অডিঅ’ শ্বেয়াৰিং সমৰ্থন কৰে)</string>
   <string name="bluetooth_pairing">পেয়াৰ কৰি থকা হৈছে…</string>
   <string name="bluetooth_pairing_device_down_error_message">%1$sৰ সৈতে যোগাযোগ কৰিব পৰা নগ'ল</string>
   <string name="bluetooth_pairing_error_message">%1$sৰ সৈতে পেয়াৰ কৰিব পৰা নগ’ল।</string>
   <string name="bluetooth_pairing_pin_error_message">এটা ভুল পিন বা পাছকীৰ কাৰণে %1$sৰ সৈতে পেয়াৰ কৰিব পৰা নাই।</string>
   <string name="bluetooth_pairing_rejected_error_message">%1$sএ যোৰা লগাব বিচৰা নাই</string>
-  <string name="bluetooth_saved_device_lea_support">অডিঅ’ শ্বেয়াৰিং সমৰ্থন কৰে</string>
   <string name="bluetooth_talkback_bluetooth">ব্লুটুথ</string>
   <string name="bluetooth_talkback_computer">কম্পিউটাৰ</string>
   <string name="bluetooth_talkback_headphone">হেডফ'ন</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">অভাৰফ্ল’</string>
   <string name="bubble_overflow_empty_subtitle">শেহতীয়া bubbles আৰু অগ্ৰাহ্য কৰা bubbles ইয়াত প্ৰদর্শিত হ'ব</string>
   <string name="bubble_overflow_empty_title">কোনো শেহতীয়া bubbles নাই</string>
-  <string name="bubble_shortcut_label">বাবল</string>
-  <string name="bubble_shortcut_long_label">বাবল দেখুৱাওক</string>
   <string name="bubbles_app_settings">%1$s ছেটিং</string>
   <string name="bubbles_dont_bubble_conversation">বাৰ্তালাপ বাবল নকৰিব</string>
   <string name="bubbles_settings_button_description">%1$sৰ bubblesৰ ছেটিং</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">কাষ্ট বন্ধ কৰক</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">আপুনি &lt;b&gt;%1$s&lt;/b&gt; কাষ্ট কৰা বন্ধ কৰিব</string>
   <string name="cell_data_off_content_description">ম’বাইল ডেটা অফ অৱস্থাত আছে</string>
+  <string name="charge_limit_discovery_notification_enable_button">এতিয়াই সক্ষম কৰক</string>
+  <string name="charge_limit_discovery_notification_text">বেটাৰীৰ অৱস্থা আৰু জীৱনকাল সুৰক্ষিত কৰিবলৈ ৮০% সীমাৰ সুবিধাটো অন কৰি চাওক। আপুনি ছেটিঙত এইটো যিকোনো সময়তে পৰিচালনা কৰিব পাৰে</string>
+  <string name="charge_limit_discovery_notification_title">চাৰ্জ কৰি থকাৰ সময়ত আপোনাৰ বেটাৰী সুৰক্ষিত কৰি ৰাখক</string>
+  <string name="charging_reverse_text">বেটাৰী শ্বেয়াৰ কৰি থকা হৈছে</string>
   <string name="clear_all_notifications_text">আটাইবোৰ মচক</string>
   <string name="clipboard">ক্লিপব'ৰ্ড</string>
   <string name="clipboard_content_copied">সমল প্ৰতিলিপি কৰা হ’ল</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">বন্ধ কৰক</string>
   <string name="close_dialog_button">বন্ধ কৰক</string>
   <string name="collapse_menu_text">মেনু বন্ধ কৰক</string>
+  <string name="columbus_bouncer_message">কুইক টেপ সম্পূৰ্ণ কৰিবলৈ আনলক কৰক</string>
+  <string name="columbus_target_request_dialog_allow">অনুমতি দিয়ক</string>
+  <string name="columbus_target_request_dialog_deny">অনুমতি নিদিব</string>
+  <string name="columbus_target_request_dialog_summary">%1$s খুলিবলৈ নিজৰ ফ’নটোৰ পিছফালে দুবাৰ টিপক। আপুনি যিকোনো সময়তে ছেটিঙত এইটো সলনি কৰিব পাৰে।</string>
+  <string name="columbus_target_request_dialog_title">%1$s খুলিবলৈ কুইক টেপ ব্যৱহাৰ কৰিবলৈ অনুমতি দিবনে?</string>
   <string name="communal_tutorial_indicator_text">সম্প্ৰদায় সম্পৰ্কীয় নিৰ্দেশনা আৰম্ভ কৰিবলৈ বাওঁফালে ছোৱাইপ কৰক</string>
   <string name="connected_display_dialog_dual_display_stop_warning">আপোনাৰ ইনাৰ ডিছপ্লে’ প্ৰতিবিম্বিত কৰা হ’ব। আপোনাৰ ফ্ৰণ্ট ডিছপ্লে’ অফ কৰা হ’ব।</string>
   <string name="connected_display_dialog_start_mirroring">বাহ্যিক ডিছপ্লে’লৈ মিৰ’ৰ কৰিবনে?</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">ম’বাইল ডেটা পজ কৰা হৈছে</string>
   <string name="data_usage_disabled_dialog_title">ডেটা পজ কৰা হৈছে</string>
   <string name="days_timestamp">%1$s দিন আগতে</string>
-  <string name="default_error_message">অমান্য ইনপুট</string>
   <string name="default_popup_window_title">পপ-আপ ৱিণ্ড’</string>
+  <string name="defender_notify_resume_charge">অ’ভাৰৰাইড কৰক</string>
+  <string name="defender_notify_title">আপোনাৰ বেটাৰী সুৰক্ষিত কৰি থকা হৈছে</string>
+  <string name="defender_post_notify_des">আপোনাৰ বেটাৰীৰ জীৱনকাল বৃদ্ধি কৰাত সহায় কৰিবলৈ, চাৰ্জিং %1$sৰ পৰা %2$sলৈ অপ্টিমাইজ কৰা হৈছে</string>
+  <string name="defender_post_notify_title">চাৰ্জিং অপ্টিমাইজ কৰা হৈছে</string>
   <string name="demo_mode">ছিষ্টেমৰ UI প্ৰদৰ্শন ম'ড</string>
   <string name="desktop_mode_maximize_menu_maximize_text">স্ক্ৰীন মেক্সিমাইজ কৰক</string>
   <string name="desktop_mode_maximize_menu_snap_text">স্ক্ৰীন স্নেপ কৰক</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">এই ডিভাইচটো আপোনাৰ প্ৰতিষ্ঠানৰ</string>
   <string name="do_disclosure_with_name">এই ডিভাইচটো %sৰ</string>
   <string name="do_financed_disclosure_with_name">এই ডিভাইচটো %sএ প্ৰদান কৰিছে</string>
+  <string name="dock_a11y_action_show_photo_text">ফট’ ফ্ৰে’ম দেখুৱাওক</string>
+  <string name="dock_alignment_not_charging">তাঁৰৰ অবিহনে চাৰ্জ কৰিবলৈ ফ’নটো পুনৰ সংৰেখিত কৰক</string>
+  <string name="dock_alignment_slow_charging">খৰতকীয়াকৈ চাৰ্জ কৰিবলৈ ফ’নটো পুনৰ সংৰেখিত কৰক</string>
+  <string name="dock_defender_first_run_des">আপোনাৰ বেটাৰীৰ জীৱনকাল বৃদ্ধি কৰাত সহায় কৰিবলৈ, আপোনাৰ টেবলেটটো ড’ক কৰাৰ সময়ত ৯০%ত চাৰ্জিং স্থগিত ৰখা হৈছে। অ’ভাৰৰাইড কৰিবলৈ যিকোনো সময়তে ছেটিঙলৈ যাওক।</string>
+  <string name="dock_defender_first_run_settings">ছেটিং</string>
+  <string name="dock_defender_first_run_title">বেটাৰী সুৰক্ষিত কৰিবলৈ চাৰ্জিং স্থগিত ৰখা হৈছে</string>
   <string name="dock_multi_instances_not_supported_text">এই এপ্‌টো কেৱল ১ খন ৱিণ্ড’ত খুলিব পাৰি</string>
   <string name="dock_non_resizeble_failed_to_dock_text">এপ্‌টোৱে বিভাজিত স্ক্ৰীন সমৰ্থন নকৰে</string>
+  <string name="dock_photo_preview_text">ফট’ ফ্ৰে’ম আৰম্ভ হৈছে...</string>
+  <string name="dock_promo_text">ফট’ ফ্ৰে’মৰ বাবে বাওঁফাললৈ ছোৱাইপ কৰক</string>
   <string name="done">হ’ল</string>
   <string name="drag_split_not_supported">এই জাননীটোৱে বিভাজিত স্ক্ৰীনলৈ টানি আনি এৰাৰ সুবিধাটো সমৰ্থন নকৰে</string>
   <string name="drag_to_add_tiles">টাইল যোগ কৰিবলৈ হেঁচি ধৰি টানি আনক</string>
   <string name="drag_to_rearrange_tiles">টাইলসমূহ পুনৰ সজাবলৈ ধৰি টানক</string>
   <string name="drag_to_remove_disabled">আপোনাক অতিকমেও %1$dখন টাইল লাগিব</string>
   <string name="drag_to_remove_tiles">আঁতৰাবৰ বাবে টানি আনি ইয়াত এৰি দিয়ক</string>
+  <string name="dream_lockscreen_wallpaper_description">বৰ্তমানৰ লকস্ক্ৰীন ৱালপেপাৰ ব্যৱহাৰ কৰক</string>
+  <string name="dream_lockscreen_wallpaper_label">ৱালপেপাৰ</string>
   <string name="dream_overlay_status_bar_alarm_set">এলাৰ্ম ছেট কৰা হ’ল</string>
   <string name="dream_overlay_status_bar_camera_mic_off">কেমেৰা আৰু মাইক অফ হৈ আছে</string>
   <string name="dream_overlay_status_bar_camera_off">কেমেৰা অফ আছে</string>
   <string name="dream_overlay_status_bar_mic_off">মাইক অফ আছে</string>
   <string name="dream_overlay_status_bar_priority_mode">অগ্ৰাধিকাৰ ম’ড</string>
   <string name="dream_overlay_status_bar_wifi_off">ৱাই-ফাই উপলব্ধ নহয়</string>
+  <string name="dwell_defender_notify_des">আপোনাৰ ফ’নটো বেছি সময়ৰ বাবে চাৰ্জ হৈ থাকোঁতে ই বেটাৰীৰ জীৱনকাল বৃদ্ধি কৰাত সহায় কৰে</string>
+  <string name="dwell_defender_notify_title">বেটাৰী সুৰক্ষিত কৰিবলৈ চাৰ্জিং স্থগিত ৰখা হৈছে</string>
   <string name="edit_user_info_message">এই ডিভাইচটো ব্যৱহাৰ কৰা যিকোনো লোকে আপুনি বাছনি কৰা নাম আৰু চিত্ৰখন দেখা পাব।</string>
   <string name="edit_widget">ৱিজেট সম্পাদনা কৰক</string>
   <string name="empty_shade_text">কোনো জাননী নাই</string>
@@ -561,13 +581,17 @@
   <string name="ethernet_label">ইথাৰনেট</string>
   <string name="expand_button_title">উন্নত</string>
   <string name="expand_menu_text">মেনু খোলক</string>
+  <string name="extreme_battery_saver_text">চৰম</string>
+  <string name="extreme_low_battery_notification_text">আপোনাৰ ফ’নটো সোনকালে চাৰ্জ নকৰিলে সেইটো শ্বাট ডাউন হৈ যাব</string>
+  <string name="extreme_low_battery_notification_title">বেটাৰী তেনেই কম আছে</string>
   <string name="face_re_enroll_dialog_content">ফে’চ আনলক পুনৰ ছেট আপ কৰিবলৈ, আপোনাৰ বৰ্তমানৰ মুখাৱয়বৰ মডেলটো মচা হ’ব।
 
 আপোনাৰ ফ’নটো আনলক কৰিবৰ বাবে আপোনাৰ মুখাৱয়ব ব্যৱহাৰ কৰিবলৈ আপুনি এই সুবিধাটো পুনৰ ছেট আপ কৰিব লাগিব।</string>
   <string name="face_re_enroll_dialog_title">ফে’চ আনলক ছেট আপ কৰক</string>
   <string name="face_re_enroll_notification_name">ফে’চ আনলক</string>
   <string name="face_re_enroll_notification_title">ফে’চ আনলক পুনৰ ছেট আপ কৰক</string>
-  <string name="face_reenroll_failure_dialog_content">ফে’চ আনলক ছেট আপ কৰিব পৰা নগ’ল। পুনৰ চেষ্টা কৰিবলৈ ছেটিঙলৈ যাওক।</string>
+  <string name="face_reenroll_dialog_confirm">ছেট আপ কৰক</string>
+  <string name="face_reenroll_failure_dialog_content">ফেচ আনলকৰ সুবিধাটো ছেট আপ কৰিব পৰা নগ’ল। আকৌ চেষ্টা কৰিবলৈ ছেটিঙলৈ যাওক।</string>
   <string name="failed_attempts_now_wiping_device">অতি বেছি ভুল প্ৰয়াস। ডিভাইচটোৰ ডেটা মচা হ’ব।</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">অগ্ৰাহ্য কৰক</string>
   <string name="failed_attempts_now_wiping_profile">অতি বেছি ভুল প্ৰয়াস। এই কৰ্মস্থানৰ প্ৰ’ফাইলটো আৰু তাৰ লগত জড়িত ডেটা মচা হ’ব।</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">সৰু কৰক</string>
   <string name="fullscreen_text">সম্পূৰ্ণ স্ক্ৰীন</string>
   <string name="game_status">প্লে’ হৈ আছে</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">এক্সটেণ্ড আনলক অক্ষম কৰা আছে</string>
   <string name="go_to_web">ব্ৰাউজাৰলৈ যাওক</string>
   <string name="got_it">বুজি পালোঁ</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">অতিথিৰ ছেশ্বন ৰিছেট কৰিবনে?</string>
   <string name="guest_reset_guest_confirm_button">ৰিছেট কৰক</string>
   <string name="guest_resetting">অতিথিৰ ছেশ্বন ৰিছেট কৰি থকা হৈছে…</string>
+  <string name="handle_invocation_prompt">কথা পাতিবলৈ ছোৱাইপ কৰক</string>
   <string name="handle_text">হেণ্ডেল</string>
   <string name="headset">হেডছেট</string>
   <string name="hearing_devices_preset_label">প্ৰিছেট</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">ফ’নটো গৰম হ’বলৈ ধৰিছে</string>
   <string name="home_controls_dream_description">স্ক্ৰীনছেভাৰ হিচাপে ক্ষিপ্ৰতাৰে ঘৰৰ সা-সৰঞ্জামৰ নিয়ন্ত্ৰণ এক্সেছ কৰক</string>
   <string name="home_controls_dream_label">ঘৰৰ সা-সৰঞ্জামৰ নিয়ন্ত্ৰণ</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• অতি কমেও এটা ডিভাইচ বা ডিভাইচৰ পেনেল উপলব্ধ</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Home এপ্‌টোক এটা শ্বৰ্টকাট হিচাপে যোগ দিবলৈ, এপ্‌টো ইনষ্টল কৰি থোৱাটো নিশ্চিত কৰক</string>
   <string name="hub_mode_add_widget_button_text">ৱিজেট যোগ দিয়ক</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">প্ৰক্ৰিয়াকৰণ কৰি থকা হৈছে</string>
   <string name="inattentive_sleep_warning_message">এই ডিভাইচটো সোনকালেই অফ হ’ব; এইটো অন কৰি ৰাখিবলৈ টিপক।</string>
   <string name="inattentive_sleep_warning_title">ষ্টেণ্ডবাই</string>
+  <string name="incompatible_charging_learn_more">অধিক জানক</string>
+  <string name="incompatible_charging_notify_des">আপোনাৰ ফ’নটো হয়তো লাহে লাহে চাৰ্জ হৈ আছে অথবা চাৰ্জ হোৱা নাই। দ্ৰুত চাৰ্জিঙৰ বাবে, চুপাৰিছ কৰা কে’বল আৰু এডাপ্টাৰ ব্যৱহাৰ কৰক।</string>
+  <string name="incompatible_charging_notify_title">চাৰ্জিঙৰ সৈতে জড়িত আনুষংগিক সামগ্ৰী পৰীক্ষা কৰক</string>
   <string name="indeterminate">আংশিকভাৱে পৰীক্ষা কৰা হৈছে</string>
   <string name="inline_done_button">কৰা হ’ল</string>
   <string name="inline_ok_button">প্ৰয়োগ কৰক</string>
   <string name="inline_turn_off_notifications">জাননী অফ কৰক</string>
   <string name="input_switch_input_language_next">পৰৱৰ্তী ভাষাটোলৈ সলনি কৰক</string>
   <string name="input_switch_input_language_previous">পূৰ্বৰ ভাষালৈ সলনি কৰক</string>
+  <string name="install_app">এপ্‌টো ইনষ্টল কৰক</string>
   <string name="install_dialer_on_work_profile_action">কাম সম্পৰ্কীয় এটা ফ’ন এপ্ ইনষ্টল কৰক</string>
   <string name="install_type_instant">তাৎক্ষণিক এপ্‌</string>
   <string name="instant_apps">Instant Apps</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">%1$s চলি আছে</string>
   <string name="interruption_level_none">সম্পূর্ণ নিৰৱতা</string>
   <string name="interruption_level_priority">কেৱল গুৰুত্বপূৰ্ণ</string>
-  <string name="invalid_charger_text">আপোনাৰ ডিভাইচৰ লগত পোৱা চ্চাৰ্জাৰটো ব্যৱহাৰ কৰক।</string>
-  <string name="invalid_charger_title">ইউএছবি জৰিয়তে চাৰ্জ কৰিব নোৱাৰি</string>
   <string name="issuerecord_background_processing_label">সমস্যা ৰেকৰ্ড কৰি থকা হৈছে</string>
   <string name="issuerecord_ongoing_screen_only">সমস্যাটো ৰেকৰ্ড কৰি থকা হৈছে</string>
   <string name="issuerecord_save_title">সমস্যাৰ ৰেকৰ্ডিং ছেভ কৰা হৈছে</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">ডিভাইচ লক কৰা হৈছে
 বিশ্বাসযোগ্যতা প্ৰমাণীকৰণ কৰিব পৰা নগ’ল</string>
   <string name="keyguard_indication_charging_time">%2$s • চাৰ্জ হৈ আছে • %1$sত সম্পূৰ্ণ হ’ব</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • %1$sলৈকে চাৰ্জিং সম্পূৰ্ণ হ’ব</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • চাৰ্জ হৈ আছে • %1$sত সম্পূৰ্ণ হ’ব</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • %1$sৰ ভিতৰত সম্পূৰ্ণৰূপে চাৰ্জ হ’ব</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • দ্ৰুতগতিৰে চাৰ্জ হৈ আছে • %1$sত সম্পূৰ্ণ হ’ব</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • দ্ৰুত চাৰ্জিং • %1$sৰ ভিতৰত সম্পূৰ্ণ হ’ব</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • চাৰ্জিং সম্পূৰ্ণ হৈছে</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • লাহে লাহে চাৰ্জ হৈ আছে • %1$sত সম্পূৰ্ণ হ’ব</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • %1$sৰ ভিতৰত সম্পূৰ্ণৰূপে চাৰ্জ হ’ব</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • %1$sৰ ভিতৰত সম্পূৰ্ণৰূপে চাৰ্জ হ’ব</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • বেতাঁৰৰ দ্বাৰা চাৰ্জ হৈ আছে • %1$sত সম্পূৰ্ণ হ’ব</string>
-  <string name="keyguard_indication_trust_unlocked">TrustAgentএ আনলক কৰি ৰাখিছে</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • %1$sৰ ভিতৰত সম্পূৰ্ণৰূপে চাৰ্জ হ’ব</string>
+  <string name="keyguard_indication_trust_unlocked">এক্সটেণ্ড আনলকে আনলক কৰি ৰাখিছে</string>
   <string name="keyguard_missing_sim_message_short">কোনো ছিম নাই</string>
   <string name="keyguard_network_locked_message">নেটৱর্ক লক কৰা অৱস্থাত আছে</string>
   <string name="keyguard_permanent_disabled_sim_message_short">ব্যৱহাৰ কৰিব নোৱৰা ছিম।</string>
   <string name="keyguard_plugged_in">%s • চ্চার্জ কৰি থকা হৈছে</string>
   <string name="keyguard_plugged_in_charging_fast">%s • দ্ৰুত গতিৰে চাৰ্জ কৰি থকা হৈছে</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • দ্ৰুত চাৰ্জিং</string>
   <string name="keyguard_plugged_in_charging_limited">%s • বেটাৰী সুৰক্ষিত কৰিবলৈ চাৰ্জিং স্থগিত ৰখা হৈছে</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • লাহে লাহে চাৰ্জ কৰি থকা হৈছে</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • চাৰ্জ কৰি থকা হৈছে</string>
   <string name="keyguard_plugged_in_dock">%s • চাৰ্জ কৰি থকা হৈছে</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • চাৰ্জ কৰি থকা হৈছে</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • চাৰ্জিঙৰ সৈতে জড়িত আনুষংগিক সামগ্ৰী পৰীক্ষা কৰক</string>
+  <string name="keyguard_plugged_in_v2">%s • চাৰ্জ কৰি থকা হৈছে</string>
   <string name="keyguard_plugged_in_wireless">%s • বেতাঁৰৰ জৰিয়তে চাৰ্জ কৰি থকা হৈছে</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • চাৰ্জ কৰি থকা হৈছে</string>
   <string name="keyguard_retry">পুনৰ চেষ্টা কৰিবলৈ ওপৰলৈ ছোৱাইপ কৰক</string>
   <string name="keyguard_sim_error_message_short">ব্যৱহাৰৰ অযোগ্য ছিম কাৰ্ড</string>
   <string name="keyguard_sim_locked_message">ছিমখন লক হৈ আছে।</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">পিন ক’ড মিলা নাই</string>
   <string name="kg_invalid_sim_pin_hint">৪টাৰ পৰা ৮টা সংখ্যাযুক্ত এটা পিন লিখক।</string>
   <string name="kg_invalid_sim_puk_hint">PUK ক'ডটো ৮টা বা তাতকৈ অধিক সংখ্যা থকা হ'ব লাগিব।</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{ছিমৰ পিন দিয়ক। আপোনাৰ ডিভাইচ আনলক কৰিবলৈ আপোনাৰ বাহকৰ লগত যোগাযোগ কৰিবই লগা হোৱাৰ পূৰ্বে আপোনাৰ ওচৰত # টা প্ৰয়াস বাকী আছে।}one{ছিমৰ পিন দিয়ক। আপোনাৰ ওচৰত # টা প্ৰয়াস বাকী আছে।}other{ছিমৰ পিন দিয়ক। আপোনাৰ ওচৰত # টা প্ৰয়াস বাকী আছে।}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{ছিমখন এতিয়া অক্ষম কৰা হৈছে। অব্যাহত ৰাখিবলৈ PUK ক’ড দিয়ক। ছিমখন স্থায়ীভাৱে ব্যৱহাৰৰ অনুপযোগী হোৱাৰ পূৰ্বে আপোনাৰ ওচৰত # টা প্ৰয়াস বাকী আছে। সবিশেষৰ বাবে বাহকৰ সৈতে যোগাযোগ কৰক।}one{ছিমখন এতিয়া অক্ষম কৰা হৈছে। অব্যাহত ৰাখিবলৈ PUK ক’ড দিয়ক। ছিমখন স্থায়ীভাৱে ব্যৱহাৰৰ অনুপযোগী হোৱাৰ পূৰ্বে আপোনাৰ ওচৰত # টা প্ৰয়াস বাকী আছে। সবিশেষৰ বাবে বাহকৰ সৈতে যোগাযোগ কৰক।}other{ছিমখন এতিয়া অক্ষম কৰা হৈছে। অব্যাহত ৰাখিবলৈ PUK ক’ড দিয়ক। ছিমখন স্থায়ীভাৱে ব্যৱহাৰৰ অনুপযোগী হোৱাৰ পূৰ্বে আপোনাৰ ওচৰত # টা প্ৰয়াস বাকী আছে। সবিশেষৰ বাবে বাহকৰ সৈতে যোগাযোগ কৰক।}}</string>
   <string name="kg_password_pin_failed">ছিম পিনৰ জৰিয়তে আনলক কৰিব পৰা নগ'ল!</string>
   <string name="kg_password_puk_failed">ছিম PUKৰ জৰিয়তে আনলক কৰিব পৰা নগ'ল!</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">"%1$s"ৰ ছিমৰ পিন দিয়ক।</string>
   <string name="kg_sim_unlock_progress_dialog_message">ছিম আনলক কৰি থকা হৈছে…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{১ ছেকেণ্ডত আকৌ চেষ্টা কৰক।}one{# ছেকেণ্ডৰ পাছত আকৌ চেষ্টা কৰক।}other{# ছেকেণ্ডৰ পাছত আকৌ চেষ্টা কৰক।}}</string>
-  <string name="kg_trust_agent_disabled">বিশ্বাসী এজেণ্ট উপলব্ধ নহয়</string>
+  <string name="kg_trust_agent_disabled">এক্সটেণ্ড আনলক উপলব্ধ নহয়</string>
   <string name="kg_unlock_with_password_or_fp">পাছৱৰ্ড অথবা ফিংগাৰপ্ৰিণ্টেৰে আনলক কৰক</string>
   <string name="kg_unlock_with_pattern_or_fp">আৰ্হি অথবা ফিংগাৰপ্ৰিণ্টেৰে আনলক কৰক</string>
   <string name="kg_unlock_with_pin_or_fp">পিন অথবা ফিংগাৰপ্ৰিণ্টেৰে আনলক কৰক</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">অধিক জানক</string>
   <string name="log_access_confirmation_learn_more_at">%sত অধিক জানক</string>
   <string name="log_access_confirmation_title">%sক আটাইবোৰ ডিভাইচৰ লগ এক্সেছ কৰাৰ অনুমতি প্ৰদান কৰিবনে?</string>
+  <string name="low_battery_label">বেটাৰী কমিছে</string>
+  <string name="low_battery_notification_text">বেটাৰীৰ জীৱনকাল বৃদ্ধি কৰিবলৈ মানক বেটাৰী সঞ্চয়কাৰী অন কৰক</string>
+  <string name="low_battery_notification_text_ebs">বেটাৰীৰ জীৱনকাল বৃদ্ধি কৰিবলৈ চৰম বেটাৰী সঞ্চয়কাৰী অন কৰক</string>
+  <string name="low_battery_notification_title">%s বেটাৰী বাকী আছে</string>
   <string name="m3c_search_bar_search">সন্ধান কৰক</string>
   <string name="m3c_suggestions_available">তলত পৰামৰ্শ দেখুওৱা হৈছে</string>
   <string name="magnification_close_settings_click_label">বিবৰ্ধনৰ ছেটিং বন্ধ কৰক</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">বন্ধ কৰক</string>
   <string name="media_output_end_session_dialog_summary">মিডিয়া অন্য ডিভাইচলৈ স্থানান্তৰ কৰিবলৈ আপোনাৰ শ্বেয়াৰ কৰা ছেশ্বনটো বন্ধ কৰক</string>
-  <string name="media_output_first_broadcast_title">সম্প্ৰচাৰ কৰাটোৱে কেনেকৈ কাম কৰে</string>
-  <string name="media_output_first_notify_broadcast_message">সমিল ব্লুটুথ ডিভাইচৰ সৈতে আপোনাৰ নিকটৱৰ্তী স্থানত থকা লোকসকলে আপুনি সম্প্ৰচাৰ কৰা মিডিয়াটো শুনিব পাৰে</string>
   <string name="media_output_group_title_speakers_and_displays">স্পীকাৰ আৰু ডিছপ্লে’</string>
   <string name="media_output_group_title_suggested_device">পৰামৰ্শ হিচাপে পোৱা ডিভাইচ</string>
   <string name="media_output_label_title">ইয়াত %s প্লে’ হৈ আছে</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">আপুনি এটা এপ্ কাষ্ট কৰাৰ সময়ত সেইটো এপত দৃশ্যমান হোৱা যিকোনো বস্তু অথবা আপোনাৰ ডিভাইচত প্লে’ কৰা যিকোনো সমললৈ Androidৰ এক্সেছ থাকে। গতিকে, পাছৱৰ্ড, পৰিশোধৰ সবিশেষ, বাৰ্তা, ফট’ আৰু অডিঅ’ আৰু ভিডিঅ’ৰ ক্ষেত্ৰত সাৱধান হওক।</string>
   <string name="media_projection_sys_service_dialog_title">ৰেকৰ্ডিং অথবা কাষ্টিং আৰম্ভ কৰিবনে?</string>
   <string name="media_projection_sys_service_dialog_warning">এই সুবিধাটো প্ৰদান কৰা সেৱাটোৱে আপোনাৰ স্ক্ৰীনত দৃশ্যমান হোৱা অথবা ৰেকৰ্ডিং অথবা কাষ্টিঙৰ সময়ত আপোনাৰ ডিভাইচত প্লে’ কৰা আটাইবোৰ তথ্যলৈ এক্সেছ পাব। এইটোত পাছৱৰ্ড, পৰিশোধৰ সবিশেষ, ফট’, বাৰ্তাসমূহ আৰু আপুনি প্লে’ কৰা অডিঅ’ৰ দৰে তথ্য অন্তৰ্ভুক্ত হয়।</string>
-  <string name="media_projection_task_switcher_action_back">উভতি যাওক</string>
-  <string name="media_projection_task_switcher_action_switch">তাৰ সলনি এই এপ্‌টো শ্বেয়াৰ কৰক</string>
-  <string name="media_projection_task_switcher_text">আপুনি এপ্‌ সলনি কৰিলে শ্বেয়াৰ কৰাটো পজ হয়</string>
   <string name="media_seamless_other_device">অন্য ডিভাইচ</string>
   <string name="media_transfer_default_device_name">সংযোগ হৈ থকা ডিভাইচ</string>
   <string name="media_transfer_dock_speaker_device_name">ড’ক স্পীকাৰ</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">অধিক ৰিজ’লিউশ্বনৰ বাবে, ফ’নটো লুটিয়াই দিয়ক</string>
   <string name="rear_display_unfolded_bottom_sheet_title">স্ক্ৰীন সলনি কৰিবনে?</string>
   <string name="recent_conversations">শেহতীয়া বাৰ্তালাপ</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">এখন প্ৰতিচ্ছবি পঠিয়াইছে</string>
   <string name="remove_from_settings">ছেটিঙৰ পৰা আঁতৰাওক</string>
   <string name="remove_from_settings_prompt">ছেটিঙৰ পৰা System UI Tuner আঁতৰাই ইয়াৰ সুবিধাসমূহ ব্যৱহাৰ কৰাটো বন্ধ কৰিবনে?</string>
   <string name="require_unlock_for_nfc">NFC ব্যৱহাৰ কৰিবলৈ আনলক কৰক</string>
   <string name="restart_button_description">উন্নত ভিউ পোৱাৰ বাবে এপ্‌টো ৰিষ্টাৰ্ট কৰিবলৈ টিপক</string>
   <string name="retry_face">পুনৰ মুখমণ্ডলৰ বিশ্বাসযোগ্যতাৰ প্ৰমাণীকৰণ কৰিবলৈ চেষ্টা কৰক</string>
+  <string name="reverse_charging_device_name_text">অন্য Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$sএ চাৰ্জ প্ৰদান কৰি আছে (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">বেটাৰী শ্বেয়াৰ কৰাৰ সুবিধাটো অন আছে</string>
+  <string name="reverse_charging_title">বেটাৰী শ্বেয়াৰ কৰাৰ সুবিধা</string>
   <string name="right_icon">সোঁ আইকন</string>
   <string name="right_keycode">সোঁ কীক'ড</string>
   <string name="right_nav_bar_button_type">সোঁ বুটামৰ অতিৰিক্ত প্ৰকাৰ</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">বেটাৰী আৰু ডেটাৰ ব্যৱহাৰৰ বিষয়ে সবিশেষ জানিবলৈ টিপক</string>
   <string name="running_foreground_services_title">নেপথ্যত চলি থকা এপ্‌সমূহ</string>
-  <string name="satellite_connected_carrier_text">উপগ্ৰহ SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel উপগ্ৰহ SOS</string>
   <string name="save">ছেভ কৰক</string>
+  <string name="saver_confirmation_dialog_dismiss_text">বাতিল কৰক</string>
+  <string name="saver_confirmation_dialog_subtitle">ব্যৱহাৰ কৰিবলৈ ম’ডটো বাছনি কৰক</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">ওপৰত সূচীবদ্ধ কৰা আটাইবোৰ সালসলনি অন্তৰ্ভুক্ত কৰে। অত্যাৱশ্যকীয় নোহোৱা এপ্‌ আৰু সেইবোৰৰ জাননীও পজ কৰে।</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">ভিজুৱেল ইফেক্ট আৰু নেপথ্যৰ কাৰ্যকলাপ সীমিত কৰে। ইতিমধ্যে অন কৰি থোৱা নাথাকিলে গাঢ় ৰঙৰ থীম অন কৰে।</string>
+  <string name="saver_confirmation_dialog_title">বেটাৰী সঞ্চয়কাৰীলৈ স্বাগতম</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">চৰম বেটাৰী সঞ্চয়কাৰী</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">মানক বেটাৰী সঞ্চয়কাৰী</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">ডিভাইচ সম্পৰ্কীয় নীতিয়ে স্ক্ৰীন কেপশ্বাৰ কৰাটো অক্ষম কৰিছে</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">আপোনাৰ আইটি প্ৰশাসকে অৱৰোধ কৰিছে</string>
   <string name="screen_pinning_can_open_other_apps">পিন কৰি ৰখা এপ্‌টোৱে হয়তো অন্য এপ্‌সমূহ খুলিব পাৰে।</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">এই এপ্‌টো আনপিন কৰিবলৈ, উভতি যাওক আৰু ৰূপৰেখাৰ বুটামসমূহ স্পৰ্শ কৰি ধৰি ৰাখক</string>
   <string name="screen_pinning_toast_gesture_nav">এই এপ্‌টো আনপিন কৰিবলৈ, ওপৰলৈ ছোৱাইপ কৰক আৰু ধৰি ৰাখক</string>
   <string name="screen_pinning_toast_recents_invisible">এই এপ্‌টো আনপিন কৰিবলৈ, উভতি যাওক আৰু গৃহপৃষ্ঠাৰ বুটামসমূহ স্পৰ্শ কৰি ধৰি ৰাখক</string>
+  <string name="screen_protector_absent_message">স্ক্ৰীনৰ সুৰক্ষা প্ৰদানকাৰী ম’ডটো অক্ষম কৰাটোৱে স্ক্ৰীনৰ সুৰক্ষা প্ৰদানকাৰী ব্যৱহাৰ নকৰাৰ সময়ত স্পৰ্শ উন্নত কৰে।</string>
+  <string name="screen_protector_disable_notification">জাননী অক্ষম কৰক</string>
+  <string name="screen_protector_go_to_settings">ছেটিঙলৈ যাওক</string>
+  <string name="screen_protector_got_it">বুজি পালোঁ</string>
+  <string name="screen_protector_mode_title">স্ক্ৰীনৰ সুৰক্ষা প্ৰদানকাৰী ম’ড</string>
+  <string name="screen_protector_present_message">স্ক্ৰীনৰ সুৰক্ষা প্ৰদানকাৰী ম’ডটো সক্ষম কৰাটোৱে স্ক্ৰীনৰ সুৰক্ষা প্ৰদানকাৰী ব্যৱহাৰ কৰাৰ সময়ত স্পৰ্শ উন্নত কৰে।</string>
   <string name="screen_share_permission_app_selector_title">এটা এপ্ শ্বেয়াৰ অথবা ৰেকৰ্ড কৰক</string>
   <string name="screen_share_permission_dialog_option_entire_screen">সম্পূৰ্ণ স্ক্ৰীন</string>
   <string name="screen_share_permission_dialog_option_single_app">এটা একক এপ্</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">কৰ্মস্থানৰ প্ৰ’ফাইলত স্ক্ৰীনশ্বট ছেভ কৰি থকা হৈছে…</string>
   <string name="screenshot_scroll_label">অধিক কেপচাৰ কৰক</string>
   <string name="screenshot_share_description">স্ক্ৰীনশ্বট শ্বেয়াৰ কৰক</string>
-  <string name="screenshot_share_label">শ্বেয়াৰ কৰক</string>
   <string name="screenshot_text">স্ক্ৰীনশ্বট</string>
   <string name="screenshot_top_boundary_pct">শীৰ্ষৰ সীমা %1$d শতাংশ</string>
+  <string name="screenshot_view_description">স্ক্ৰীনশ্বট চাওক</string>
   <string name="screenshot_work_profile_notification">%1$s কৰ্মস্থানৰ প্ৰ’ফাইলত ছেভ কৰা হৈছে</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">ফিংগাৰপ্ৰিণ্ট ছেন্সৰটো পাৱাৰ বুটামটোত আছে। এইটো হৈছে ফ’নটোৰ প্ৰান্তত থকা উঠঙা ভলিউমৰ বুটামটোৰ কাষত থকা চেপেটা বুটামটো।</string>
   <string name="see_all_bluetooth_devices">আটাইবোৰ চাওক</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">ছেটিঙত টোকাৰ ডিফ’ল্ট এপ্ ছেট কৰক</string>
   <string name="settings_label">ছেটিং</string>
   <string name="settingslib_learn_more_text">অধিক জানক</string>
+  <string name="severe_battery_notification_switch_text">চৰম বেটাৰী সঞ্চয়কাৰীলৈ সলনি কৰিবনে? 
+
+এইটোৱে অত্যাৱশ্যকীয় নোহোৱা আটাইবোৰ এপ্‌ আৰু সেইবোৰৰ জাননী পজ কৰিব</string>
+  <string name="severe_battery_notification_text">চৰম বেটাৰী সঞ্চয়কাৰী অন কৰক। এইটোৱে অত্যাৱশ্যকীয় নোহোৱা আটাইবোৰ এপ্‌ পজ কৰিব</string>
+  <string name="severe_battery_notification_title">%s বেটাৰী বাকী আছে</string>
+  <string name="severe_low_battery_dialog_switch_action_text">সলনি কৰক</string>
   <string name="share_to_app_stop_dialog_button">শ্বেয়াৰ কৰা বন্ধ কৰক</string>
   <string name="share_to_app_stop_dialog_message_specific_app">আপুনি &lt;b&gt;%1$s&lt;/b&gt; শ্বেয়াৰ কৰা বন্ধ কৰিব</string>
   <string name="share_to_app_stop_dialog_title">স্ক্ৰীন শ্বেয়াৰ কৰা বন্ধ কৰিবনে?</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- ই %1$sৰ তথ্য পঢ়িব পাৰে</string>
   <string name="slice_permission_text_2">- ই %1$sৰ ভিতৰত কাৰ্য কৰিব পাৰে</string>
   <string name="slice_permission_title">%1$sক %2$sৰ অংশ দেখুওৱাবলৈ অনুমতি দিবনে?</string>
+  <string name="smartspace_content_desc">এক দৃষ্টিত</string>
+  <string name="smartspace_flight_qr_code">কিউআৰ ক’ড</string>
+  <string name="smartspace_role_desc">চাওক</string>
   <string name="snoozeHourOptions">{count,plural, =1{# ঘণ্টা}=2{# ঘণ্টা}one{# ঘণ্টা}other{# ঘণ্টা}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# মিনিট}one{# মিনিট}other{# মিনিট}}</string>
   <string name="snooze_undo">আনডু কৰক</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">লেহেমীয়া</string>
   <string name="speed_label_very_fast">অতি দ্ৰুত</string>
   <string name="split_screen_text">বিভাজিত স্ক্ৰীন</string>
+  <string name="squeeze_invocation_prompt">কথা পাতিবলৈ দুয়োকাষত হেঁচা দিয়ক</string>
+  <string name="standard_battery_saver_text">মানক</string>
   <string name="start_dreams">স্ক্ৰীন ছেভাৰ</string>
   <string name="state_empty">খালী</string>
   <string name="state_off">অফ আছে</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">টেব</string>
   <string name="tap_a_network_to_connect">সংযোগ কৰিবলৈ এটা নেটৱৰ্কত টিপক</string>
   <string name="tap_again">পুনৰ টিপক</string>
+  <string name="temp_defender_notify_des">আপোনাৰ ফ’নটোৰ তাপমাত্ৰা স্বাভাৱিক হোৱাৰ লগে লগে চাৰ্জিং পুনৰ আৰম্ভ হ’ব</string>
+  <string name="temp_defender_notify_title">বেটাৰী সুৰক্ষিত কৰিবলৈ চাৰ্জিং স্থগিত ৰখা হৈছে</string>
   <string name="template_percent">%1$d শতাংশ।</string>
   <string name="thermal">থাৰ্মেল</string>
   <string name="thermal_shutdown_dialog_help_text">যত্ন লোৱাৰ পদক্ষেপসমূহ চাওক</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">আপোনাৰ টেবলেটটো আনলক নকৰাকৈ আপোনাৰ প্ৰিয় এপৰ ৱিজেটসমূহলৈ ক্ষিপ্ৰভাৱে এক্সেছ পাওক।</string>
   <string name="title_usb_accessory">ইউএছবিৰ সহায়ক সামগ্ৰী</string>
   <string name="to_switch_networks_disconnect_ethernet">নেটৱৰ্ক সলনি কৰিবলৈ ইথাৰনেটৰ পৰা সংযোগ বিচ্ছিন্ন কৰক</string>
+  <string name="too_hot_label">Pixel বেছি গৰম হৈছে</string>
   <string name="touch_filtered_warning">এটা এপে অনুমতি বিচাৰি কৰা অনুৰোধ এটা ঢাকি ধৰা বাবে ছেটিঙৰ পৰা আপোনাৰ উত্তৰ সত্যাপন কৰিব পৰা নাই।</string>
   <string name="touchpad_tutorial_action_key_button">কাৰ্য কী</string>
   <string name="touchpad_tutorial_back_gesture_button">উভতি যাওক নিৰ্দেশ</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">মেনু</string>
   <string name="tuner_minus">বিয়োগ চিহ্ন</string>
   <string name="tuner_other_apps">অন্যান্য এপ্‌সমূহ</string>
+  <string name="tuner_persistent_warning">এই পৰীক্ষামূলক সুবিধাসমূহ সলনি হ'ব পাৰে, সেইবোৰে কাম নকৰিব পাৰে বা আগন্তুক সংস্কৰণসমূহত সেইবোৰ অন্তৰ্ভুক্ত কৰা নহ’ব পাৰে। সাৱধানেৰে আগবাঢ়ক।</string>
   <string name="tuner_plus">যোগ চিহ্ন</string>
   <string name="tuner_right">সোঁ</string>
   <string name="tuner_time">সময়</string>
+  <string name="tuner_warning">System UI Tunerএ আপোনাক Android ব্যৱহাৰকাৰী ইণ্টাৰফেইচ সলনি কৰিবলৈ আৰু নিজৰ উপযোগিতা অনুসৰি ব্যৱহাৰ কৰিবলৈ অতিৰিক্ত সুবিধা প্ৰদান কৰে। এই পৰীক্ষামূলক সুবিধাসমূহ সলনি হ'ব পাৰে, সেইবোৰে কাম নকৰিব পাৰে বা আগন্তুক সংস্কৰণসমূহত সেইবোৰ অন্তৰ্ভুক্ত কৰা নহ’ব পাৰে। সাৱধানেৰে আগবাঢ়ক।</string>
+  <string name="tuner_warning_title">কিছুমানৰ বাবে আমোদজনক হয় কিন্তু সকলোৰে বাবে নহয়</string>
   <string name="turn_off_airplane_mode">এয়াৰপ্লে’ন ম’ডটো অফ কৰক</string>
   <string name="turn_on_bluetooth">ব্লুটুথ ব্যৱহাৰ কৰক</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Quick Share আৰু Find My Deviceৰ দৰে সুবিধাসমূহে ব্লুটুথ ব্যৱহাৰ কৰে</string>
   <string name="turn_on_bluetooth_auto_info_enabled">কাইলৈ পুৱা ব্লুটুথ অন হ’ব</string>
   <string name="turn_on_bluetooth_auto_tomorrow">কাইলৈ স্বয়ংক্ৰিয়ভাৱে অন কৰক</string>
   <string name="turn_on_wifi">ৱাই-ফাই</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">টিভি ডিফ’ল্ট</string>
   <string name="two_weeks_timestamp">২ সপ্তাহ পূৰ্বে</string>
   <string name="unknown">অজ্ঞাত</string>
   <string name="unlock_to_see_notif_text">পুৰণি জাননী চবলৈ আনলক কৰক</string>
@@ -1552,7 +1624,9 @@
   <string name="volume_odi_captions_hint_enable">সক্ষম কৰক</string>
   <string name="volume_odi_captions_tip">স্বয়ংক্ৰিয় কেপশ্বন মিডিয়া</string>
   <string name="volume_panel_captioning_title">লাইভ কেপশ্বন</string>
+  <string name="volume_panel_clear_calling_title">স্পষ্ট কলিং</string>
   <string name="volume_panel_collapsed_sliders">ভলিউমৰ শ্লাইডাৰ সংকোচন কৰা আছে</string>
+  <string name="volume_panel_device_settings_title">ডিভাইচৰ ছেটিং</string>
   <string name="volume_panel_dialog_settings_button">ছেটিং</string>
   <string name="volume_panel_enter_media_output_settings">আউটপুট ছেটিং খোলক</string>
   <string name="volume_panel_expanded_sliders">ভলিউমৰ শ্লাইডাৰ বিস্তাৰ কৰা আছে</string>
@@ -1667,6 +1741,9 @@
   <string name="wifitrackerlib_wifi_standard_unknown">অজ্ঞাত</string>
   <string name="wifitrackerlib_wifi_unmetered_label">নিৰিখ নিৰ্দিষ্ট নকৰা</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">সদ্যহতে ৱাই-ফাই স্বয়ংক্ৰিয়ভাৱে সংযুক্ত নহ’ব</string>
+  <string name="wireless_charging_label">তাঁৰৰ অবিহনে চাৰ্জ কৰি থকা হৈছে</string>
+  <string name="wireless_charging_notification_text">বেতাঁৰ চাৰ্জিঙে তাঁৰযুক্ত চাৰ্জিঙতকৈ অধিক শক্তি ব্যৱহাৰ কৰিব পাৰে। বিদ্যুৎ আৰু সময় ৰাহি কৰিবলৈ, তাঁৰযুক্ত চাৰ্জাৰ ব্যৱহাৰ কৰি চাওক।</string>
+  <string name="wireless_charging_notification_title">তাঁৰৰ অবিহনে চাৰ্জ কৰি থকা হৈছে</string>
   <string name="work_challenge_emergency_button_text">জৰুৰীকালীন</string>
   <string name="work_mode_off_title">কাম সম্পৰ্কীয় এপ্ আনপজ কৰিবনে?</string>
   <string name="work_mode_turn_on">আনপজ কৰক</string>

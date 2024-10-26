@@ -5,7 +5,9 @@
     <item>ආරෝපණය වන විට ප්‍රතිශතය පෙන්වන්න (පෙරනිමි)</item>
     <item>මෙම නිරූපකය නොපෙන්වන්න</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>පැය, මිනිත්තු, සහ තත්පර පෙන්වන්න</item>
     <item>පැය සහ මිනිත්තු පෙන්වන්න (පෙරනිමි)</item>

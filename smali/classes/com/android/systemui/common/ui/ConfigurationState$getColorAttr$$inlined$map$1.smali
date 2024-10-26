@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/common/ui/ConfigurationState$getColorAttr$$inlined$map$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/Flow;
@@ -30,7 +30,7 @@
     iput-object p2, p0, Lcom/android/systemui/common/ui/ConfigurationState$getColorAttr$$inlined$map$1;->this$0:Lcom/android/systemui/common/ui/ConfigurationState;
 
     .line 7
-    const p1, 0x7f04073b    # @attr/wallpaperTextColor
+    const p1, 0x7f040741    # @attr/wallpaperTextColor
 
     .line 9
     iput p1, p0, Lcom/android/systemui/common/ui/ConfigurationState$getColorAttr$$inlined$map$1;->$id$inlined:I

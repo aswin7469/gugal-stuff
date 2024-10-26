@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/ui/ThumbnailBehavior;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/controls/ui/Behavior;
@@ -194,7 +194,7 @@
     check-cast p1, Landroid/graphics/drawable/LayerDrawable;
 
     .line 78
-    const v0, 0x7f0b01d6    # @id/clip_layer
+    const v0, 0x7f0a01e1    # @id/clip_layer
 
     .line 80
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
@@ -503,7 +503,7 @@
     move-result-object v1
 
     .line 14
-    const v2, 0x7f0701fa    # @dimen/controls_thumbnail_shadow_x '2.0'
+    const v2, 0x7f07021b    # @dimen/controls_thumbnail_shadow_x '2.0'
 
     .line 15
     const/4 v3, 0x1
@@ -530,7 +530,7 @@
     move-result-object v1
 
     .line 33
-    const v2, 0x7f0701fb    # @dimen/controls_thumbnail_shadow_y '2.0'
+    const v2, 0x7f07021c    # @dimen/controls_thumbnail_shadow_y '2.0'
 
     .line 34
     invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
@@ -554,7 +554,7 @@
     move-result-object v1
 
     .line 51
-    const v2, 0x7f0701f9    # @dimen/controls_thumbnail_shadow_radius '2.0'
+    const v2, 0x7f07021a    # @dimen/controls_thumbnail_shadow_radius '2.0'
 
     .line 52
     invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
@@ -578,7 +578,7 @@
     move-result-object v0
 
     .line 69
-    const v1, 0x7f060094    # @color/control_thumbnail_shadow_color '@android:color/black'
+    const v1, 0x7f060095    # @color/control_thumbnail_shadow_color '@android:color/black'
 
     .line 70
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/ui/binder/BiometricViewBinder$bind$1$8$12$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -168,7 +168,7 @@
     move-result-object v0
 
     .line 69
-    const v2, 0x7f140173    # @string/biometric_dialog_authenticated 'Authenticated'
+    const v2, 0x7f13017a    # @string/biometric_dialog_authenticated 'Authenticated'
 
     .line 70
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

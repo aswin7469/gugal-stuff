@@ -1,6 +1,6 @@
 .class public abstract Lkotlinx/coroutines/JobSupport;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/Job;
@@ -2154,84 +2154,6 @@
     .line 144
 .end method
 
-.method public getCompleted()Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0}, Lkotlinx/coroutines/JobSupport;->getCompletedInternal$external__kotlinx_coroutines__linux_glibc_common__kotlinx_coroutines_host()Ljava/lang/Object;
-
-    .line 2
-    move-result-object p0
-
-    .line 5
-    return-object p0
-    .line 6
-.end method
-
-.method public final getCompletedInternal$external__kotlinx_coroutines__linux_glibc_common__kotlinx_coroutines_host()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lkotlinx/coroutines/JobSupport;->getState$external__kotlinx_coroutines__linux_glibc_common__kotlinx_coroutines_host()Ljava/lang/Object;
-
-    .line 2
-    move-result-object p0
-
-    .line 5
-    instance-of v0, p0, Lkotlinx/coroutines/Incomplete;
-
-    .line 6
-    xor-int/lit8 v0, v0, 0x1
-
-    .line 8
-    if-eqz v0, :cond_1
-
-    .line 10
-    instance-of v0, p0, Lkotlinx/coroutines/CompletedExceptionally;
-
-    .line 12
-    if-nez v0, :cond_0
-
-    .line 14
-    invoke-static {p0}, Lkotlinx/coroutines/JobSupportKt;->unboxState(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 16
-    move-result-object p0
-
-    .line 19
-    return-object p0
-
-    .line 20
-    :cond_0
-    check-cast p0, Lkotlinx/coroutines/CompletedExceptionally;
-
-    .line 21
-    iget-object p0, p0, Lkotlinx/coroutines/CompletedExceptionally;->cause:Ljava/lang/Throwable;
-
-    .line 23
-    throw p0
-
-    .line 25
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    .line 26
-    const-string v0, "This job has not completed yet"
-
-    .line 28
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 30
-    move-result-object v0
-
-    .line 33
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    .line 34
-    throw p0
-    .line 37
-.end method
-
 .method public final getFinalRootCause(Lkotlinx/coroutines/JobSupport$Finishing;Ljava/util/List;)Ljava/lang/Throwable;
     .locals 2
 
@@ -2658,7 +2580,6 @@
     .line 31
     :cond_1
     return-void
-    .line 34
 .end method
 
 .method public final invokeOnCompletion(Lkotlin/jvm/functions/Function1;)Lkotlinx/coroutines/DisposableHandle;
@@ -3823,7 +3744,7 @@
     const-string v1, "@"
 
     .line 43
-    invoke-static {v0, v1, p0}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, p0}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m$1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 45
     move-result-object p0

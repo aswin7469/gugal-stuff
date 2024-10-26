@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/connectivity/NetworkController;
@@ -114,6 +114,8 @@
 .field public final mUserChangedCallback:Lcom/android/systemui/settings/UserTracker$Callback;
 
 .field public mUserSetup:Z
+
+.field public final mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
 .field public final mValidatedTransports:Ljava/util/BitSet;
 
@@ -768,7 +770,7 @@
     iget-object v3, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mContext:Landroid/content/Context;
 
     .line 16
-    const v4, 0x7f140045    # @string/accessibility_airplane_mode 'Airplane mode.'
+    const v4, 0x7f130045    # @string/accessibility_airplane_mode 'Airplane mode.'
 
     .line 18
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -777,7 +779,7 @@
     move-result-object v3
 
     .line 24
-    const v4, 0x7f080b46    # @drawable/stat_sys_airplane_mode 'res/drawable/stat_sys_airplane_mode.xml'
+    const v4, 0x7f080b8d    # @drawable/stat_sys_airplane_mode 'res/drawable/stat_sys_airplane_mode.xml'
 
     .line 25
     invoke-direct {v1, v4, v3, v2}, Lcom/android/systemui/statusbar/connectivity/IconState;-><init>(ILjava/lang/String;Z)V
@@ -1119,7 +1121,7 @@
     iget-object v4, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mContext:Landroid/content/Context;
 
     .line 30
-    const v5, 0x7f140045    # @string/accessibility_airplane_mode 'Airplane mode.'
+    const v5, 0x7f130045    # @string/accessibility_airplane_mode 'Airplane mode.'
 
     .line 32
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1128,7 +1130,7 @@
     move-result-object v4
 
     .line 38
-    const v5, 0x7f080b46    # @drawable/stat_sys_airplane_mode 'res/drawable/stat_sys_airplane_mode.xml'
+    const v5, 0x7f080b8d    # @drawable/stat_sys_airplane_mode 'res/drawable/stat_sys_airplane_mode.xml'
 
     .line 39
     invoke-direct {v3, v5, v4, v0}, Lcom/android/systemui/statusbar/connectivity/IconState;-><init>(ILjava/lang/String;Z)V
@@ -3873,7 +3875,7 @@
     iget-object v3, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mContext:Landroid/content/Context;
 
     .line 10
-    const v4, 0x7f140045    # @string/accessibility_airplane_mode 'Airplane mode.'
+    const v4, 0x7f130045    # @string/accessibility_airplane_mode 'Airplane mode.'
 
     .line 12
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -3882,7 +3884,7 @@
     move-result-object v3
 
     .line 18
-    const v4, 0x7f080b46    # @drawable/stat_sys_airplane_mode 'res/drawable/stat_sys_airplane_mode.xml'
+    const v4, 0x7f080b8d    # @drawable/stat_sys_airplane_mode 'res/drawable/stat_sys_airplane_mode.xml'
 
     .line 19
     invoke-direct {v1, v4, v3, v2}, Lcom/android/systemui/statusbar/connectivity/IconState;-><init>(ILjava/lang/String;Z)V
@@ -4970,215 +4972,206 @@
     iget-object v2, v5, Lcom/android/systemui/statusbar/connectivity/SignalController;->mTag:Ljava/lang/String;
 
     .line 89
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v4}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 91
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 94
-    move-result-object v0
-
-    .line 97
-    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 98
     :cond_1
     move v2, v1
 
-    .line 101
+    .line 94
     goto :goto_1
 
-    .line 102
+    .line 95
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
-    .line 103
+    .line 96
     goto :goto_0
 
-    .line 105
+    .line 98
     :cond_3
     iget-object v3, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mMobileSignalControllers:Landroid/util/SparseArray;
 
-    .line 106
+    .line 99
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->indexOfKey(I)I
 
-    .line 108
+    .line 101
     move-result v3
 
-    .line 111
+    .line 104
     if-ltz v3, :cond_5
 
-    .line 112
+    .line 105
     add-int/lit16 v2, v0, 0xc8
 
-    .line 114
+    .line 107
     iput v2, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mEmergencySource:I
 
-    .line 116
+    .line 109
     sget-boolean v2, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->DEBUG:Z
 
-    .line 118
+    .line 111
     if-eqz v2, :cond_4
 
-    .line 120
+    .line 113
     const-string v2, "Getting emergency from "
 
-    .line 122
+    .line 115
     invoke-static {v2, v4, v0}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 124
+    .line 117
     :cond_4
     iget-object v2, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mMobileSignalControllers:Landroid/util/SparseArray;
 
-    .line 127
+    .line 120
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    .line 129
+    .line 122
     move-result-object v0
 
-    .line 132
+    .line 125
     check-cast v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;
 
-    .line 133
+    .line 126
     iget-object v0, v0, Lcom/android/systemui/statusbar/connectivity/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/connectivity/ConnectivityState;
 
-    .line 135
+    .line 128
     check-cast v0, Lcom/android/systemui/statusbar/connectivity/MobileState;
 
-    .line 137
+    .line 130
     iget-boolean v2, v0, Lcom/android/systemui/statusbar/connectivity/MobileState;->isEmergency:Z
 
-    .line 139
+    .line 132
     goto :goto_1
 
-    .line 141
+    .line 134
     :cond_5
     iget-object v3, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mMobileSignalControllers:Landroid/util/SparseArray;
 
-    .line 142
+    .line 135
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
-    .line 144
+    .line 137
     move-result v3
 
-    .line 147
+    .line 140
     if-ne v3, v2, :cond_7
 
-    .line 148
+    .line 141
     iget-object v0, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mMobileSignalControllers:Landroid/util/SparseArray;
 
-    .line 150
+    .line 143
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
-    .line 152
+    .line 145
     move-result v0
 
-    .line 155
+    .line 148
     add-int/lit16 v0, v0, 0x190
 
-    .line 156
+    .line 149
     iput v0, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mEmergencySource:I
 
-    .line 158
+    .line 151
     sget-boolean v0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->DEBUG:Z
 
-    .line 160
+    .line 153
     if-eqz v0, :cond_6
 
-    .line 162
+    .line 155
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 164
+    .line 157
     const-string v2, "Getting assumed emergency from "
 
-    .line 166
+    .line 159
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 168
+    .line 161
     iget-object v2, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mMobileSignalControllers:Landroid/util/SparseArray;
 
-    .line 171
+    .line 164
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
-    .line 173
+    .line 166
     move-result v2
 
-    .line 176
+    .line 169
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 177
+    .line 170
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 180
+    .line 173
     move-result-object v0
 
-    .line 183
+    .line 176
     invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
+    .line 177
     :cond_6
     iget-object v0, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mMobileSignalControllers:Landroid/util/SparseArray;
 
-    .line 187
+    .line 180
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
-    .line 189
+    .line 182
     move-result-object v0
 
-    .line 192
+    .line 185
     check-cast v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;
 
-    .line 193
+    .line 186
     iget-object v0, v0, Lcom/android/systemui/statusbar/connectivity/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/connectivity/ConnectivityState;
 
-    .line 195
+    .line 188
     check-cast v0, Lcom/android/systemui/statusbar/connectivity/MobileState;
 
-    .line 197
+    .line 190
     iget-boolean v2, v0, Lcom/android/systemui/statusbar/connectivity/MobileState;->isEmergency:Z
 
-    .line 199
+    .line 192
     goto :goto_1
 
-    .line 201
+    .line 194
     :cond_7
     sget-boolean v3, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->DEBUG:Z
 
-    .line 202
+    .line 195
     if-eqz v3, :cond_8
 
-    .line 204
+    .line 197
     const-string v3, "Cannot find controller for voice sub: "
 
-    .line 206
+    .line 199
     invoke-static {v3, v4, v0}, Lcom/android/keyguard/ClockEventController$zenModeCallback$1$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 208
+    .line 201
     :cond_8
     add-int/lit16 v0, v0, 0x12c
 
-    .line 211
+    .line 204
     iput v0, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mEmergencySource:I
 
-    .line 213
+    .line 206
     :goto_1
     iput-boolean v2, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mIsEmergency:Z
 
-    .line 215
+    .line 208
     iget-object p0, p0, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mCallbackHandler:Lcom/android/systemui/statusbar/connectivity/CallbackHandler;
 
-    .line 217
+    .line 210
     invoke-virtual {p0, v1, v2, v1}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
-    .line 219
+    .line 212
     move-result-object p0
 
-    .line 222
+    .line 215
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 223
+    .line 216
     return-void
-    .line 226
+    .line 219
 .end method
 
 .method public final refreshLocale()V

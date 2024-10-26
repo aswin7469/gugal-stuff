@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/FullscreenMagnificationController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/ComponentCallbacks;
@@ -163,7 +163,7 @@
     move-result-object p2
 
     .line 59
-    const p3, 0x7f070645    # @dimen/magnifier_border_width_fullscreen_with_offset '12.0dp'
+    const p3, 0x7f070687    # @dimen/magnifier_border_width_fullscreen_with_offset '12.0dp'
 
     .line 60
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -178,7 +178,7 @@
     move-result-object p3
 
     .line 70
-    const p4, 0x7f070644    # @dimen/magnifier_border_width_fullscreen '6.0dp'
+    const p4, 0x7f070686    # @dimen/magnifier_border_width_fullscreen '6.0dp'
 
     .line 71
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -401,7 +401,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f070645    # @dimen/magnifier_border_width_fullscreen_with_offset '12.0dp'
+    const v0, 0x7f070687    # @dimen/magnifier_border_width_fullscreen_with_offset '12.0dp'
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -414,7 +414,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070644    # @dimen/magnifier_border_width_fullscreen '6.0dp'
+    const v1, 0x7f070686    # @dimen/magnifier_border_width_fullscreen '6.0dp'
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

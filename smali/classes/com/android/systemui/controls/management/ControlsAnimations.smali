@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/management/ControlsAnimations;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -64,102 +64,102 @@
     invoke-virtual {p0, v1}, Landroid/view/View;->setTranslationY(F)V
 
     .line 32
-    const-string v1, "transitionAlpha"
+    const-string/jumbo v1, "transitionAlpha"
 
     .line 35
     const/4 v2, 0x2
 
-    .line 37
+    .line 38
     new-array v3, v2, [F
 
-    .line 38
+    .line 39
     fill-array-data v3, :array_0
 
-    .line 40
+    .line 41
     invoke-static {p0, v1, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
-    .line 43
+    .line 44
     move-result-object v1
 
-    .line 46
+    .line 47
     sget-object v3, Lcom/android/app/animation/Interpolators;->DECELERATE_QUINT:Landroid/view/animation/Interpolator;
 
-    .line 47
+    .line 48
     invoke-virtual {v1, v3}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 49
+    .line 50
     const-wide/16 v4, 0xb7
 
-    .line 52
+    .line 53
     invoke-virtual {v1, v4, v5}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 54
+    .line 55
     const-wide/16 v4, 0xa7
 
-    .line 57
+    .line 58
     invoke-virtual {v1, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 59
-    const-string v4, "translationY"
+    .line 60
+    const-string/jumbo v4, "translationY"
 
-    .line 62
+    .line 63
     const/4 v5, 0x1
 
-    .line 64
+    .line 66
     new-array v6, v5, [F
 
-    .line 65
+    .line 67
     const/4 v7, 0x0
 
-    .line 67
+    .line 69
     aput v0, v6, v7
 
-    .line 68
+    .line 70
     invoke-static {p0, v4, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
-    .line 70
+    .line 72
     move-result-object p0
 
-    .line 73
+    .line 75
     invoke-virtual {p0, v3}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 74
+    .line 76
     const-wide/16 v3, 0xd9
 
-    .line 77
+    .line 79
     invoke-virtual {p0, v3, v4}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 79
+    .line 81
     invoke-virtual {p0, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 82
+    .line 84
     new-instance v0, Landroid/animation/AnimatorSet;
 
-    .line 85
+    .line 87
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 87
+    .line 89
     new-array v2, v2, [Landroid/animation/Animator;
 
-    .line 90
+    .line 92
     aput-object v1, v2, v7
 
-    .line 92
+    .line 94
     aput-object p0, v2, v5
 
-    .line 94
+    .line 96
     invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 96
+    .line 98
     return-object v0
 
-    .line 99
+    .line 101
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
-    .line 100
+    .line 102
 .end method
 
 .method public static final exitAnimation(Landroid/view/View;Ljava/lang/Runnable;)Landroid/animation/Animator;
@@ -205,93 +205,93 @@
     aput v0, v2, v3
 
     .line 26
-    const-string v4, "transitionAlpha"
+    const-string/jumbo v4, "transitionAlpha"
 
     .line 28
     invoke-static {p0, v4, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
-    .line 30
+    .line 31
     move-result-object v2
 
-    .line 33
+    .line 34
     sget-object v4, Lcom/android/app/animation/Interpolators;->ACCELERATE:Landroid/view/animation/Interpolator;
 
-    .line 34
+    .line 35
     invoke-virtual {v2, v4}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 36
+    .line 37
     const-wide/16 v5, 0xb7
 
-    .line 39
+    .line 40
     invoke-virtual {v2, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 41
+    .line 42
     invoke-virtual {p0, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 44
+    .line 45
     sget v0, Lcom/android/systemui/controls/management/ControlsAnimations;->translationY:F
 
-    .line 47
+    .line 48
     neg-float v0, v0
 
-    .line 49
+    .line 50
     new-array v7, v1, [F
 
-    .line 50
+    .line 51
     aput v0, v7, v3
 
-    .line 52
-    const-string v0, "translationY"
+    .line 53
+    const-string/jumbo v0, "translationY"
 
-    .line 54
+    .line 55
     invoke-static {p0, v0, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
-    .line 56
+    .line 58
     move-result-object p0
 
-    .line 59
+    .line 61
     invoke-virtual {p0, v4}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 60
+    .line 62
     invoke-virtual {p0, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 63
+    .line 65
     new-instance v0, Landroid/animation/AnimatorSet;
 
-    .line 66
+    .line 68
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 68
+    .line 70
     const/4 v4, 0x2
 
-    .line 71
+    .line 73
     new-array v4, v4, [Landroid/animation/Animator;
 
-    .line 72
+    .line 74
     aput-object v2, v4, v3
 
-    .line 74
+    .line 76
     aput-object p0, v4, v1
 
-    .line 76
+    .line 78
     invoke-virtual {v0, v4}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 78
+    .line 80
     if-eqz p1, :cond_0
 
-    .line 81
+    .line 83
     new-instance p0, Lcom/android/systemui/controls/management/ControlsAnimations$exitAnimation$1$1$1;
 
-    .line 83
+    .line 85
     invoke-direct {p0, p1}, Lcom/android/systemui/controls/management/ControlsAnimations$exitAnimation$1$1$1;-><init>(Ljava/lang/Runnable;)V
 
-    .line 85
+    .line 87
     invoke-virtual {v0, p0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 88
+    .line 90
     :cond_0
     return-object v0
-    .line 91
+    .line 93
 .end method
 
 .method public static observerForAnimations$default(Landroid/view/ViewGroup;Landroid/view/Window;Landroid/content/Intent;)Lcom/android/systemui/controls/management/ControlsAnimations$observerForAnimations$1;

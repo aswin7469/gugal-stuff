@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/systemui/smartspace/LazyServerFlagLoader;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -42,43 +42,43 @@
     if-nez v0, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/google/android/systemui/smartspace/LazyServerFlagLoader;->mPropertyKey:Ljava/lang/String;
+    const-string v0, "launcher"
 
     .line 6
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/LazyServerFlagLoader;->mPropertyKey:Ljava/lang/String;
 
     .line 8
-    const-string v2, "launcher"
+    const/4 v2, 0x1
 
-    .line 9
-    invoke-static {v2, v0, v1}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
+    .line 10
+    invoke-static {v0, v1, v2}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     .line 11
-    move-result v0
+    move-result v1
 
     .line 14
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 15
-    move-result-object v0
+    move-result-object v1
 
     .line 18
-    iput-object v0, p0, Lcom/google/android/systemui/smartspace/LazyServerFlagLoader;->mValue:Ljava/lang/Boolean;
+    iput-object v1, p0, Lcom/google/android/systemui/smartspace/LazyServerFlagLoader;->mValue:Ljava/lang/Boolean;
 
     .line 19
-    new-instance v0, Lcom/google/android/systemui/smartspace/LazyServerFlagLoader$$ExternalSyntheticLambda0;
+    new-instance v1, Landroidx/profileinstaller/ProfileInstallReceiver$$ExternalSyntheticLambda0;
 
     .line 21
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     .line 23
-    new-instance v1, Lcom/google/android/systemui/smartspace/LazyServerFlagLoader$$ExternalSyntheticLambda1;
+    new-instance v2, Lcom/google/android/systemui/smartspace/LazyServerFlagLoader$$ExternalSyntheticLambda0;
 
     .line 26
-    invoke-direct {v1, p0}, Lcom/google/android/systemui/smartspace/LazyServerFlagLoader$$ExternalSyntheticLambda1;-><init>(Lcom/google/android/systemui/smartspace/LazyServerFlagLoader;)V
+    invoke-direct {v2, p0}, Lcom/google/android/systemui/smartspace/LazyServerFlagLoader$$ExternalSyntheticLambda0;-><init>(Lcom/google/android/systemui/smartspace/LazyServerFlagLoader;)V
 
     .line 28
-    invoke-static {v2, v0, v1}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
+    invoke-static {v0, v1, v2}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
     .line 31
     :cond_0

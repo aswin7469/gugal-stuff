@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/pip/PipBoundsState;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -227,7 +227,7 @@
     move-result-object p1
 
     .line 118
-    const v0, 0x7f07089a    # @dimen/pip_stash_offset '32.0dp'
+    const v0, 0x7f0708ea    # @dimen/pip_stash_offset '32.0dp'
 
     .line 119
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1419,7 +1419,7 @@
 
     .line 26
     :catch_0
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
 
     .line 27
     const/4 p1, 0x4
@@ -1452,7 +1452,7 @@
     const/4 v3, 0x0
 
     .line 49
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 50
     :cond_2

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/StatusOverlayHoverListener$1$1$configurationListener$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
@@ -37,7 +37,7 @@
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusOverlayHoverListener;->resources:Landroid/content/res/Resources;
 
     .line 4
-    const v0, 0x7f0604f2    # @color/status_bar_icons_hover_color_light '#38ffffff'
+    const v0, 0x7f060500    # @color/status_bar_icons_hover_color_light '#38ffffff'
 
     .line 6
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
@@ -52,7 +52,7 @@
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusOverlayHoverListener;->resources:Landroid/content/res/Resources;
 
     .line 15
-    const v0, 0x7f0604f1    # @color/status_bar_icons_hover_color_dark '#38000000'
+    const v0, 0x7f0604ff    # @color/status_bar_icons_hover_color_dark '#38000000'
 
     .line 17
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
@@ -67,7 +67,7 @@
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusOverlayHoverListener;->resources:Landroid/content/res/Resources;
 
     .line 26
-    const v0, 0x7f0709e6    # @dimen/status_icons_hover_state_background_radius '16.0dp'
+    const v0, 0x7f070a3e    # @dimen/status_icons_hover_state_background_radius '16.0dp'
 
     .line 28
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F

@@ -1,6 +1,6 @@
 .class final Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -83,174 +83,168 @@
     iget v1, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->$targetOffset:F
 
     .line 16
-    iget-object v2, v0, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {v0}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 18
-    iget-object v2, v2, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 20
-    invoke-virtual {v2}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 22
     move-result-object v2
 
-    .line 25
+    .line 21
     check-cast v2, Ljava/lang/Number;
 
-    .line 26
+    .line 22
     invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
 
-    .line 28
+    .line 24
     move-result v2
 
-    .line 31
+    .line 27
     cmpl-float v1, v1, v2
 
-    .line 32
+    .line 28
     const/4 v12, 0x1
 
-    .line 34
+    .line 30
     const/4 v2, 0x0
 
-    .line 35
+    .line 31
     if-lez v1, :cond_0
 
-    .line 36
+    .line 32
     move v9, v12
 
-    .line 38
+    .line 34
     goto :goto_0
 
-    .line 39
+    .line 35
     :cond_0
     move v9, v2
 
-    .line 40
+    .line 36
     :goto_0
     iget-object v1, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->$targetScene:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 41
+    .line 37
     iget-object v3, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->this$0:Lcom/android/compose/animation/scene/SwipeTransition;
 
-    .line 43
+    .line 39
     iget-object v3, v3, Lcom/android/compose/animation/scene/TransitionState$Transition;->fromScene:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 45
+    .line 41
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 47
+    .line 43
     move-result v1
 
-    .line 50
+    .line 46
     if-eqz v1, :cond_2
 
-    .line 51
+    .line 47
     iget-object v1, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->this$0:Lcom/android/compose/animation/scene/SwipeTransition;
 
-    .line 53
+    .line 49
     invoke-virtual {v1}, Lcom/android/compose/animation/scene/SwipeTransition;->getProgress()F
 
-    .line 55
+    .line 51
     move-result v1
 
-    .line 58
+    .line 54
     const/4 v3, 0x0
 
-    .line 59
+    .line 55
     cmpg-float v1, v1, v3
 
-    .line 60
+    .line 56
     if-gez v1, :cond_1
 
-    .line 62
+    .line 58
     :goto_1
     move v10, v12
 
-    .line 64
+    .line 60
     goto :goto_2
 
-    .line 65
+    .line 61
     :cond_1
     move v10, v2
 
-    .line 66
+    .line 62
     goto :goto_2
 
-    .line 67
+    .line 63
     :cond_2
     iget-object v1, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->this$0:Lcom/android/compose/animation/scene/SwipeTransition;
 
-    .line 68
+    .line 64
     invoke-virtual {v1}, Lcom/android/compose/animation/scene/SwipeTransition;->getProgress()F
 
-    .line 70
+    .line 66
     move-result v1
 
-    .line 73
+    .line 69
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 74
+    .line 70
     cmpl-float v1, v1, v3
 
-    .line 76
+    .line 72
     if-lez v1, :cond_1
 
-    .line 78
+    .line 74
     goto :goto_1
 
-    .line 80
+    .line 76
     :goto_2
     iget-object v1, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->$coroutineScope:Lkotlinx/coroutines/CoroutineScope;
 
-    .line 81
+    .line 77
     sget-object v13, Lkotlinx/coroutines/CoroutineStart;->ATOMIC:Lkotlinx/coroutines/CoroutineStart;
 
-    .line 83
+    .line 79
     new-instance v14, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1;
 
-    .line 85
+    .line 81
     iget-boolean v3, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->$skipAnimation:Z
 
-    .line 87
+    .line 83
     iget-object v4, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->this$0:Lcom/android/compose/animation/scene/SwipeTransition;
 
-    .line 89
+    .line 85
     iget-object v5, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->$targetScene:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 91
+    .line 87
     iget v6, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->$targetOffset:F
 
-    .line 93
+    .line 89
     iget v8, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1;->$initialVelocity:F
 
-    .line 95
+    .line 91
     const/4 v11, 0x0
 
-    .line 97
+    .line 93
     move-object v2, v14
 
-    .line 98
+    .line 94
     move-object v7, v0
 
-    .line 99
+    .line 95
     invoke-direct/range {v2 .. v11}, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1;-><init>(ZLcom/android/compose/animation/scene/SwipeTransition;Lcom/android/compose/animation/scene/SceneKey;FLandroidx/compose/animation/core/Animatable;FZZLkotlin/coroutines/Continuation;)V
 
-    .line 100
+    .line 96
     const/4 p0, 0x0
 
-    .line 103
+    .line 99
     invoke-static {v1, p0, v13, v14, v12}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 104
+    .line 100
     move-result-object p0
 
-    .line 107
+    .line 103
     new-instance v1, Lcom/android/compose/animation/scene/SwipeTransition$OffsetAnimation;
 
-    .line 108
+    .line 104
     invoke-direct {v1, v0, p0}, Lcom/android/compose/animation/scene/SwipeTransition$OffsetAnimation;-><init>(Landroidx/compose/animation/core/Animatable;Lkotlinx/coroutines/StandaloneCoroutine;)V
 
-    .line 110
+    .line 106
     return-object v1
-    .line 113
+    .line 109
 .end method

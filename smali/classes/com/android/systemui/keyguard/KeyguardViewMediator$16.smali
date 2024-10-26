@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/KeyguardViewMediator$16;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -55,99 +55,88 @@
 
     .line 11
     :try_start_0
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 13
-    move-result v0
-
-    .line 16
-    if-nez v0, :cond_0
-
-    .line 17
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$16;->val$finishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
 
-    .line 19
+    .line 13
     invoke-interface {v0}, Landroid/view/IRemoteAnimationFinishedCallback;->onAnimationFinished()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
-    goto :goto_0
+    .line 15
+    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$16;->this$0:Ljava/lang/Object;
+
+    .line 18
+    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
+
+    .line 20
+    :goto_0
+    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
+
+    .line 22
+    invoke-virtual {p0, p1}, Lcom/android/internal/jank/InteractionJankMonitor;->cancel(I)Z
 
     .line 24
+    goto :goto_1
+
+    .line 27
     :catchall_0
     move-exception v0
 
-    .line 25
-    goto :goto_3
-
-    .line 26
-    :cond_0
-    :goto_0
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$16;->this$0:Ljava/lang/Object;
-
-    .line 27
-    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
-
-    .line 29
-    :goto_1
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
-
-    .line 31
-    invoke-virtual {p0, p1}, Lcom/android/internal/jank/InteractionJankMonitor;->cancel(I)Z
-
-    .line 33
+    .line 28
     goto :goto_2
 
-    .line 36
+    .line 29
     :catch_0
     :try_start_1
     const-string v0, "KeyguardViewMediator"
 
-    .line 37
+    .line 30
     const-string v1, "RemoteException"
 
-    .line 39
+    .line 32
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 41
+    .line 34
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$16;->this$0:Ljava/lang/Object;
 
-    .line 44
+    .line 37
     check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 46
-    goto :goto_1
+    .line 39
+    goto :goto_0
 
-    .line 48
-    :goto_2
+    .line 41
+    :goto_1
     return-void
 
-    .line 49
-    :goto_3
+    .line 42
+    :goto_2
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$16;->this$0:Ljava/lang/Object;
 
-    .line 50
+    .line 43
     check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 52
+    .line 45
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 54
+    .line 47
     invoke-virtual {p0, p1}, Lcom/android/internal/jank/InteractionJankMonitor;->cancel(I)Z
 
-    .line 56
+    .line 49
     throw v0
 
-    .line 59
+    .line 52
+    nop
+
+    .line 53
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 60
+    .line 54
 .end method
 
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
@@ -218,100 +207,83 @@
 
     .line 38
     :try_start_1
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 40
-    move-result v0
-
-    .line 43
-    if-nez v0, :cond_0
-
-    .line 44
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$16;->val$finishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
 
-    .line 46
+    .line 40
     invoke-interface {v0}, Landroid/view/IRemoteAnimationFinishedCallback;->onAnimationFinished()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 48
-    goto :goto_1
+    .line 42
+    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$16;->this$0:Ljava/lang/Object;
+
+    .line 45
+    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
+
+    .line 47
+    :goto_1
+    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
+
+    .line 49
+    invoke-virtual {p0, p1}, Lcom/android/internal/jank/InteractionJankMonitor;->end(I)Z
 
     .line 51
+    goto :goto_2
+
+    .line 54
     :catchall_0
     move-exception v0
 
-    .line 52
-    goto :goto_4
-
-    .line 53
-    :cond_0
-    :goto_1
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$16;->this$0:Ljava/lang/Object;
-
-    .line 54
-    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
-
-    .line 56
-    :goto_2
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
-
-    .line 58
-    invoke-virtual {p0, p1}, Lcom/android/internal/jank/InteractionJankMonitor;->end(I)Z
-
-    .line 60
+    .line 55
     goto :goto_3
 
-    .line 63
+    .line 56
     :catch_1
     :try_start_2
     const-string v0, "KeyguardViewMediator"
 
-    .line 64
+    .line 57
     const-string v1, "RemoteException"
 
-    .line 66
+    .line 59
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 68
+    .line 61
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$16;->this$0:Ljava/lang/Object;
 
-    .line 71
+    .line 64
     check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 73
-    goto :goto_2
+    .line 66
+    goto :goto_1
 
-    .line 75
-    :goto_3
+    .line 68
+    :goto_2
     return-void
 
-    .line 76
-    :goto_4
+    .line 69
+    :goto_3
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$16;->this$0:Ljava/lang/Object;
 
-    .line 77
+    .line 70
     check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 79
+    .line 72
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 81
+    .line 74
     invoke-virtual {p0, p1}, Lcom/android/internal/jank/InteractionJankMonitor;->end(I)Z
 
-    .line 83
+    .line 76
     throw v0
 
-    .line 86
-    nop
-
-    .line 87
+    .line 79
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 88
+    .line 80
 .end method

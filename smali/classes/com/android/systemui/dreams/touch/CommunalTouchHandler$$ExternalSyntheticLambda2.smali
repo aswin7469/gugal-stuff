@@ -1,26 +1,26 @@
 .class public final synthetic Lcom/android/systemui/dreams/touch/CommunalTouchHandler$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Lcom/android/systemui/shared/system/InputChannelCompat$InputEventListener;
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public final synthetic f$0:Lcom/android/systemui/statusbar/phone/CentralSurfaces;
+.field public final synthetic f$0:Lcom/android/systemui/dreams/touch/CommunalTouchHandler;
 
 .field public final synthetic f$1:Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;)V
+.method public synthetic constructor <init>(Lcom/android/systemui/dreams/touch/CommunalTouchHandler;Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/android/systemui/dreams/touch/CommunalTouchHandler$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/statusbar/phone/CentralSurfaces;
+    iput-object p1, p0, Lcom/android/systemui/dreams/touch/CommunalTouchHandler$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/dreams/touch/CommunalTouchHandler;
 
     .line 5
     iput-object p2, p0, Lcom/android/systemui/dreams/touch/CommunalTouchHandler$$ExternalSyntheticLambda2;->f$1:Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;
@@ -32,53 +32,46 @@
 
 
 # virtual methods
-.method public final onInputEvent(Landroid/view/InputEvent;)V
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
     .line 1
-    move-object v0, p1
+    iget-object v0, p0, Lcom/android/systemui/dreams/touch/CommunalTouchHandler$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/dreams/touch/CommunalTouchHandler;
 
     .line 2
-    check-cast v0, Landroid/view/MotionEvent;
-
-    .line 3
-    iget-object v1, p0, Lcom/android/systemui/dreams/touch/CommunalTouchHandler$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/statusbar/phone/CentralSurfaces;
-
-    .line 5
-    check-cast v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
-
-    .line 7
-    iget-object v1, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mGlanceableHubContainerController:Lcom/android/systemui/shade/GlanceableHubContainerController;
-
-    .line 9
-    invoke-virtual {v1, v0}, Lcom/android/systemui/shade/GlanceableHubContainerController;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    .line 11
-    if-eqz p1, :cond_0
-
-    .line 14
-    check-cast p1, Landroid/view/MotionEvent;
-
-    .line 16
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    .line 18
-    move-result p1
-
-    .line 21
-    const/4 v0, 0x1
-
-    .line 22
-    if-ne p1, v0, :cond_0
-
-    .line 23
     iget-object p0, p0, Lcom/android/systemui/dreams/touch/CommunalTouchHandler$$ExternalSyntheticLambda2;->f$1:Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;
 
-    .line 25
-    invoke-virtual {p0}, Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;->pop()V
+    .line 4
+    check-cast p1, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
 
-    .line 27
-    :cond_0
+    .line 6
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 8
+    new-instance v0, Lcom/android/systemui/dreams/touch/CommunalTouchHandler$$ExternalSyntheticLambda0;
+
+    .line 11
+    invoke-direct {v0, p1, p0}, Lcom/android/systemui/dreams/touch/CommunalTouchHandler$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;)V
+
+    .line 13
+    iget-object p1, p0, Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;->mEventListeners:Ljava/util/HashSet;
+
+    .line 16
+    invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 18
+    new-instance p1, Lcom/android/systemui/dreams/touch/CommunalTouchHandler$1;
+
+    .line 21
+    invoke-direct {p1}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
+
+    .line 23
+    iget-object p0, p0, Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;->mGestureListeners:Ljava/util/HashSet;
+
+    .line 26
+    invoke-virtual {p0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 28
     return-void
-    .line 30
+    .line 31
 .end method

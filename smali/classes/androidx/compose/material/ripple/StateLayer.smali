@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/material/ripple/StateLayer;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -66,158 +66,152 @@
     iget-object v0, p0, Landroidx/compose/material/ripple/StateLayer;->animatedAlpha:Landroidx/compose/animation/core/Animatable;
 
     .line 2
-    iget-object v0, v0, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {v0}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 4
-    iget-object v0, v0, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 6
-    invoke-virtual {v0}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 8
     move-result-object v0
 
-    .line 11
+    .line 7
     check-cast v0, Ljava/lang/Number;
 
-    .line 12
+    .line 8
     invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
 
-    .line 14
+    .line 10
     move-result v0
 
-    .line 17
+    .line 13
     const/4 v1, 0x0
 
-    .line 18
+    .line 14
     cmpl-float v1, v0, v1
 
-    .line 19
+    .line 15
     if-lez v1, :cond_1
 
-    .line 21
+    .line 17
     invoke-static {v0, p3, p4}, Landroidx/compose/ui/graphics/Color;->copy-wmQWz5c$default(FJ)J
 
-    .line 23
+    .line 19
     move-result-wide v3
 
-    .line 26
+    .line 22
     iget-boolean p0, p0, Landroidx/compose/material/ripple/StateLayer;->bounded:Z
 
-    .line 27
+    .line 23
     if-eqz p0, :cond_0
 
-    .line 29
+    .line 25
     invoke-interface {p1}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getSize-NH-jbRc()J
 
-    .line 31
+    .line 27
     move-result-wide p3
 
-    .line 34
+    .line 30
     invoke-static {p3, p4}, Landroidx/compose/ui/geometry/Size;->getWidth-impl(J)F
 
-    .line 35
+    .line 31
     move-result v8
 
-    .line 38
+    .line 34
     invoke-interface {p1}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getSize-NH-jbRc()J
 
-    .line 39
+    .line 35
     move-result-wide p3
 
-    .line 42
+    .line 38
     invoke-static {p3, p4}, Landroidx/compose/ui/geometry/Size;->getHeight-impl(J)F
 
-    .line 43
+    .line 39
     move-result v9
 
-    .line 46
+    .line 42
     invoke-interface {p1}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getDrawContext()Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;
 
-    .line 47
+    .line 43
     move-result-object p0
 
-    .line 50
+    .line 46
     invoke-virtual {p0}, Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;->getSize-NH-jbRc()J
 
-    .line 51
+    .line 47
     move-result-wide p3
 
-    .line 54
+    .line 50
     invoke-virtual {p0}, Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
 
-    .line 55
+    .line 51
     move-result-object v0
 
-    .line 58
+    .line 54
     invoke-interface {v0}, Landroidx/compose/ui/graphics/Canvas;->save()V
 
-    .line 59
+    .line 55
     iget-object v0, p0, Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;->transform:Landroidx/compose/ui/graphics/drawscope/CanvasDrawScopeKt$asDrawTransform$1;
 
-    .line 62
+    .line 58
     iget-object v0, v0, Landroidx/compose/ui/graphics/drawscope/CanvasDrawScopeKt$asDrawTransform$1;->$this_asDrawTransform:Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;
 
-    .line 64
+    .line 60
     invoke-virtual {v0}, Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
 
-    .line 66
+    .line 62
     move-result-object v5
 
-    .line 69
+    .line 65
     const/4 v6, 0x0
 
-    .line 70
+    .line 66
     const/4 v7, 0x0
 
-    .line 71
+    .line 67
     const/4 v10, 0x1
 
-    .line 72
+    .line 68
     invoke-interface/range {v5 .. v10}, Landroidx/compose/ui/graphics/Canvas;->clipRect-N_I0leg(FFFFI)V
 
-    .line 73
+    .line 69
     const/16 v8, 0x7c
 
-    .line 76
+    .line 72
     const-wide/16 v6, 0x0
 
-    .line 78
+    .line 74
     move-object v2, p1
 
-    .line 80
+    .line 76
     move v5, p2
 
-    .line 81
+    .line 77
     invoke-static/range {v2 .. v8}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawCircle-VaOC9Bg$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;JFJI)V
 
-    .line 82
+    .line 78
     invoke-static {p0, p3, p4}, Landroidx/compose/foundation/BorderModifierNode$drawRoundRectBorder$1$$ExternalSyntheticOutline0;->m(Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;J)V
 
-    .line 85
+    .line 81
     goto :goto_0
 
-    .line 88
+    .line 84
     :cond_0
     const/16 v8, 0x7c
 
-    .line 89
+    .line 85
     const-wide/16 v6, 0x0
 
-    .line 91
+    .line 87
     move-object v2, p1
 
-    .line 93
+    .line 89
     move v5, p2
 
-    .line 94
+    .line 90
     invoke-static/range {v2 .. v8}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawCircle-VaOC9Bg$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;JFJI)V
 
-    .line 95
+    .line 91
     :cond_1
     :goto_0
     return-void
-    .line 98
+    .line 94
 .end method
 
 .method public final handleInteraction$material_ripple_release(Landroidx/compose/foundation/interaction/Interaction;Lkotlinx/coroutines/CoroutineScope;)V

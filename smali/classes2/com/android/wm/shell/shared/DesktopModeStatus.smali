@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/wm/shell/shared/DesktopModeStatus;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -13,8 +13,6 @@
 .field public static final ENFORCE_DEVICE_RESTRICTIONS:Z
 
 .field public static final IS_VEILED_RESIZE_ENABLED:Z
-
-.field public static final MAX_TASK_LIMIT:I
 
 .field public static final USE_ROUNDED_CORNERS:Z
 
@@ -136,14 +134,8 @@
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     .line 70
-    move-result v0
-
-    .line 73
-    sput v0, Lcom/android/wm/shell/shared/DesktopModeStatus;->MAX_TASK_LIMIT:I
-
-    .line 74
     return-void
-    .line 76
+    .line 73
 .end method
 
 .method public static canEnterDesktopMode(Landroid/content/Context;)Z
@@ -214,7 +206,7 @@
     move-result-object p0
 
     .line 5
-    const v0, 0x11101b2    # @android:bool/config_launchCameraOnCameraLensCoverToggle
+    const v0, 0x11101b1    # @android:bool/config_knownNetworksEnabledForService
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -234,7 +226,7 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->enableDesktopWindowingMode()Z
 
     .line 2
-    move-result v0
+    const/4 v0, 0x0
 
     .line 5
     return v0

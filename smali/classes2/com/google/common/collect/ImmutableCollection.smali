@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/common/collect/ImmutableCollection;
 .super Ljava/util/AbstractCollection;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -107,16 +107,63 @@
     .line 7
 .end method
 
+.method public abstract contains(Ljava/lang/Object;)Z
+.end method
+
 .method public abstract copyIntoArray([Ljava/lang/Object;)I
 .end method
 
-.method public abstract internalArray()[Ljava/lang/Object;
+.method public internalArray()[Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    const/4 p0, 0x0
+
+    .line 2
+    return-object p0
+    .line 3
 .end method
 
-.method public abstract internalArrayEnd()I
+.method public internalArrayEnd()I
+    .locals 0
+
+    .line 1
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    .line 4
+    throw p0
+    .line 7
 .end method
 
-.method public abstract internalArrayStart()I
+.method public internalArrayStart()I
+    .locals 0
+
+    .line 1
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    .line 4
+    throw p0
+    .line 7
+.end method
+
+.method public abstract iterator()Lcom/google/common/collect/UnmodifiableIterator;
+.end method
+
+.method public bridge synthetic iterator()Ljava/util/Iterator;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public final remove(Ljava/lang/Object;)Z

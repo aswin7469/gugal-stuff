@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/StatusOverlayHoverListener;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnHoverListener;
@@ -52,7 +52,7 @@
     invoke-static {p1, p4}, Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt;->repeatWhenAttached$default(Landroid/view/View;Lkotlin/jvm/functions/Function3;)Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt$repeatWhenAttached$1;
 
     .line 19
-    const p1, 0x7f0604f2    # @color/status_bar_icons_hover_color_light '#38ffffff'
+    const p1, 0x7f060500    # @color/status_bar_icons_hover_color_light '#38ffffff'
 
     .line 22
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getColor(I)I
@@ -64,7 +64,7 @@
     iput p1, p0, Lcom/android/systemui/statusbar/phone/StatusOverlayHoverListener;->lightColor:I
 
     .line 29
-    const p1, 0x7f0604f1    # @color/status_bar_icons_hover_color_dark '#38000000'
+    const p1, 0x7f0604ff    # @color/status_bar_icons_hover_color_dark '#38000000'
 
     .line 31
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getColor(I)I
@@ -76,7 +76,7 @@
     iput p1, p0, Lcom/android/systemui/statusbar/phone/StatusOverlayHoverListener;->darkColor:I
 
     .line 38
-    const p1, 0x7f0709e6    # @dimen/status_icons_hover_state_background_radius '16.0dp'
+    const p1, 0x7f070a3e    # @dimen/status_icons_hover_state_background_radius '16.0dp'
 
     .line 40
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getDimension(I)F

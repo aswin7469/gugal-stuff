@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/flags/PluggedInCondition$canRestartNow$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -155,74 +155,71 @@
     check-cast v3, Lcom/android/systemui/statusbar/policy/BatteryController;
 
     .line 43
-    check-cast v3, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
+    invoke-interface {v3, v1}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
     .line 45
-    invoke-virtual {v3, v1}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->addCallback(Ljava/lang/Object;)V
-
-    .line 47
     iget-object v3, p0, Lcom/android/systemui/flags/PluggedInCondition$canRestartNow$1;->this$0:Lcom/android/systemui/flags/PluggedInCondition;
 
-    .line 50
+    .line 48
     iget-object v3, v3, Lcom/android/systemui/flags/PluggedInCondition;->batteryControllerLazy:Ldagger/Lazy;
 
-    .line 52
+    .line 50
     invoke-interface {v3}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 54
+    .line 52
     move-result-object v3
 
-    .line 57
+    .line 55
     check-cast v3, Lcom/android/systemui/statusbar/policy/BatteryController;
 
-    .line 58
+    .line 56
     check-cast v3, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
 
-    .line 60
+    .line 58
     iget-boolean v3, v3, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mPluggedIn:Z
 
-    .line 62
+    .line 60
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 64
+    .line 62
     move-result-object v3
 
-    .line 67
+    .line 65
     check-cast p1, Lkotlinx/coroutines/channels/ProducerCoroutine;
 
-    .line 68
+    .line 66
     invoke-virtual {p1, v3}, Lkotlinx/coroutines/channels/ProducerCoroutine;->trySend-JP2dKIU(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
+    .line 68
     new-instance v3, Lcom/android/systemui/flags/PluggedInCondition$canRestartNow$1$1;
 
-    .line 73
+    .line 71
     iget-object v4, p0, Lcom/android/systemui/flags/PluggedInCondition$canRestartNow$1;->this$0:Lcom/android/systemui/flags/PluggedInCondition;
 
-    .line 75
+    .line 73
     invoke-direct {v3, v4, v1}, Lcom/android/systemui/flags/PluggedInCondition$canRestartNow$1$1;-><init>(Lcom/android/systemui/flags/PluggedInCondition;Lcom/android/systemui/flags/PluggedInCondition$canRestartNow$1$batteryCallback$1;)V
 
-    .line 77
+    .line 75
     iput v2, p0, Lcom/android/systemui/flags/PluggedInCondition$canRestartNow$1;->label:I
 
-    .line 80
+    .line 78
     invoke-static {p1, v3, p0}, Lkotlinx/coroutines/channels/ProduceKt;->awaitClose(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/jvm/functions/Function0;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 82
+    .line 80
     move-result-object p0
 
-    .line 85
+    .line 83
     if-ne p0, v0, :cond_2
 
-    .line 86
+    .line 84
     return-object v0
 
-    .line 88
+    .line 86
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 89
+    .line 87
     return-object p0
-    .line 91
+    .line 89
 .end method

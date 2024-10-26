@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/wifi/AccessPoint;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Comparable;
@@ -1163,7 +1163,7 @@
 
     .line 18
     :cond_0
-    const p0, 0x7f14090a    # @string/speed_label_very_fast 'Very Fast'
+    const p0, 0x7f130984    # @string/speed_label_very_fast 'Very Fast'
 
     .line 19
     invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1176,7 +1176,7 @@
 
     .line 26
     :cond_1
-    const p0, 0x7f140907    # @string/speed_label_fast 'Fast'
+    const p0, 0x7f130981    # @string/speed_label_fast 'Fast'
 
     .line 27
     invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1189,7 +1189,7 @@
 
     .line 34
     :cond_2
-    const p0, 0x7f140908    # @string/speed_label_okay 'OK'
+    const p0, 0x7f130982    # @string/speed_label_okay 'OK'
 
     .line 35
     invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1202,7 +1202,7 @@
 
     .line 42
     :cond_3
-    const p0, 0x7f140909    # @string/speed_label_slow 'Slow'
+    const p0, 0x7f130983    # @string/speed_label_slow 'Slow'
 
     .line 43
     invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1659,7 +1659,6 @@
 
     .line 74
     return-object p0
-    .line 76
 .end method
 
 .method public final getWifiManager()Landroid/net/wifi/WifiManager;
@@ -2411,379 +2410,370 @@
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 91
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, p0, p1}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 97
-    move-result-object p0
-
-    .line 100
-    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 101
     return-void
 
-    .line 104
+    .line 97
     :cond_3
     :goto_0
     invoke-virtual {p0}, Lcom/android/settingslib/wifi/AccessPoint;->getLevel()I
 
-    .line 105
+    .line 98
     move-result v0
 
-    .line 108
+    .line 101
     iget-object v1, p0, Lcom/android/settingslib/wifi/AccessPoint;->mLock:Ljava/lang/Object;
 
-    .line 109
+    .line 102
     monitor-enter v1
 
-    .line 111
+    .line 104
     :try_start_0
     iget-object v2, p0, Lcom/android/settingslib/wifi/AccessPoint;->mScanResults:Landroid/util/ArraySet;
 
-    .line 112
+    .line 105
     invoke-virtual {v2}, Landroid/util/ArraySet;->clear()V
 
-    .line 114
+    .line 107
     iget-object v2, p0, Lcom/android/settingslib/wifi/AccessPoint;->mScanResults:Landroid/util/ArraySet;
 
-    .line 117
+    .line 110
     invoke-virtual {v2, p1}, Landroid/util/ArraySet;->addAll(Ljava/util/Collection;)Z
 
-    .line 119
+    .line 112
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 122
+    .line 115
     invoke-virtual {p0}, Lcom/android/settingslib/wifi/AccessPoint;->updateBestRssiInfo()V
 
-    .line 123
+    .line 116
     invoke-virtual {p0}, Lcom/android/settingslib/wifi/AccessPoint;->getLevel()I
 
-    .line 126
+    .line 119
     move-result p1
 
-    .line 129
+    .line 122
     if-lez p1, :cond_10
 
-    .line 130
+    .line 123
     if-eq p1, v0, :cond_10
 
-    .line 132
+    .line 125
     iget p1, p0, Lcom/android/settingslib/wifi/AccessPoint;->mSpeed:I
 
-    .line 134
+    .line 127
     iget-object v0, p0, Lcom/android/settingslib/wifi/AccessPoint;->mScoredNetworkCache:Ljava/util/Map;
 
-    .line 136
+    .line 129
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
-    .line 138
+    .line 131
     move-result v0
 
-    .line 141
+    .line 134
     const/4 v1, 0x0
 
-    .line 142
+    .line 135
     const-string v2, "SettingsLib.AccessPoint"
 
-    .line 143
+    .line 136
     if-eqz v0, :cond_4
 
-    .line 145
+    .line 138
     :goto_1
     move v0, v1
 
-    .line 147
+    .line 140
     goto/16 :goto_4
 
-    .line 148
+    .line 141
     :cond_4
     const/4 v0, 0x3
 
-    .line 150
+    .line 143
     invoke-static {v2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    .line 151
+    .line 144
     move-result v0
 
-    .line 154
+    .line 147
     if-eqz v0, :cond_5
 
-    .line 155
+    .line 148
     iget-object v0, p0, Lcom/android/settingslib/wifi/AccessPoint;->ssid:Ljava/lang/String;
 
-    .line 157
+    .line 150
     iget-object v3, p0, Lcom/android/settingslib/wifi/AccessPoint;->mScoredNetworkCache:Ljava/util/Map;
 
-    .line 159
+    .line 152
     filled-new-array {v0, v3}, [Ljava/lang/Object;
 
-    .line 161
+    .line 154
     move-result-object v0
 
-    .line 164
+    .line 157
     const-string v3, "Generating fallbackspeed for %s using cache: %s"
 
-    .line 165
+    .line 158
     invoke-static {v3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 167
+    .line 160
     move-result-object v0
 
-    .line 170
+    .line 163
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
+    .line 164
     :cond_5
     iget-object v0, p0, Lcom/android/settingslib/wifi/AccessPoint;->mScoredNetworkCache:Ljava/util/Map;
 
-    .line 174
+    .line 167
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
-    .line 176
+    .line 169
     move-result-object v0
 
-    .line 179
+    .line 172
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    .line 180
+    .line 173
     move-result-object v0
 
-    .line 183
+    .line 176
     move v3, v1
 
-    .line 184
+    .line 177
     move v4, v3
 
-    .line 185
+    .line 178
     :cond_6
     :goto_2
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 186
+    .line 179
     move-result v5
 
-    .line 189
+    .line 182
     if-eqz v5, :cond_7
 
-    .line 190
+    .line 183
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 192
+    .line 185
     move-result-object v5
 
-    .line 195
+    .line 188
     check-cast v5, Lcom/android/settingslib/wifi/TimestampedScoredNetwork;
 
-    .line 196
+    .line 189
     iget-object v5, v5, Lcom/android/settingslib/wifi/TimestampedScoredNetwork;->mScore:Landroid/net/ScoredNetwork;
 
-    .line 198
+    .line 191
     iget v6, p0, Lcom/android/settingslib/wifi/AccessPoint;->mRssi:I
 
-    .line 200
+    .line 193
     invoke-virtual {v5, v6}, Landroid/net/ScoredNetwork;->calculateBadge(I)I
 
-    .line 202
+    .line 195
     move-result v5
 
-    .line 205
+    .line 198
     if-eqz v5, :cond_6
 
-    .line 206
+    .line 199
     add-int/lit8 v3, v3, 0x1
 
-    .line 208
+    .line 201
     add-int/2addr v4, v5
 
-    .line 210
+    .line 203
     goto :goto_2
 
-    .line 211
+    .line 204
     :cond_7
     if-nez v3, :cond_8
 
-    .line 212
+    .line 205
     move v4, v1
 
-    .line 214
+    .line 207
     goto :goto_3
 
-    .line 215
+    .line 208
     :cond_8
     div-int/2addr v4, v3
 
-    .line 216
+    .line 209
     :goto_3
     sget-boolean v0, Lcom/android/settingslib/wifi/WifiTracker;->sVerboseLogging:Z
 
-    .line 217
+    .line 210
     if-eqz v0, :cond_9
 
-    .line 219
+    .line 212
     iget-object v0, p0, Lcom/android/settingslib/wifi/AccessPoint;->ssid:Ljava/lang/String;
 
-    .line 221
+    .line 214
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 223
+    .line 216
     move-result-object v3
 
-    .line 226
+    .line 219
     filled-new-array {v0, v3}, [Ljava/lang/Object;
 
-    .line 227
+    .line 220
     move-result-object v0
 
-    .line 230
+    .line 223
     const-string v3, "%s generated fallback speed is: %d"
 
-    .line 231
+    .line 224
     invoke-static {v3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 233
+    .line 226
     move-result-object v0
 
-    .line 236
+    .line 229
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
+    .line 230
     :cond_9
     const/4 v0, 0x5
 
-    .line 240
+    .line 233
     if-ge v4, v0, :cond_a
 
-    .line 241
+    .line 234
     goto :goto_1
 
-    .line 243
+    .line 236
     :cond_a
     const/4 v3, 0x7
 
-    .line 244
+    .line 237
     if-ge v4, v3, :cond_b
+
+    .line 238
+    goto :goto_4
+
+    .line 240
+    :cond_b
+    const/16 v0, 0xf
+
+    .line 241
+    if-ge v4, v0, :cond_c
+
+    .line 243
+    const/16 v0, 0xa
 
     .line 245
     goto :goto_4
 
     .line 247
-    :cond_b
-    const/16 v0, 0xf
+    :cond_c
+    const/16 v0, 0x19
 
     .line 248
-    if-ge v4, v0, :cond_c
+    if-ge v4, v0, :cond_d
 
     .line 250
-    const/16 v0, 0xa
+    const/16 v0, 0x14
 
     .line 252
     goto :goto_4
 
     .line 254
-    :cond_c
-    const/16 v0, 0x19
-
-    .line 255
-    if-ge v4, v0, :cond_d
-
-    .line 257
-    const/16 v0, 0x14
-
-    .line 259
-    goto :goto_4
-
-    .line 261
     :cond_d
     const/16 v0, 0x1e
 
-    .line 262
+    .line 255
     :goto_4
     iput v0, p0, Lcom/android/settingslib/wifi/AccessPoint;->mSpeed:I
 
-    .line 264
+    .line 257
     if-eq p1, v0, :cond_e
 
-    .line 266
+    .line 259
     const/4 v1, 0x1
 
-    .line 268
+    .line 261
     :cond_e
     sget-boolean p1, Lcom/android/settingslib/wifi/WifiTracker;->sVerboseLogging:Z
 
-    .line 269
+    .line 262
     if-eqz p1, :cond_f
 
-    .line 271
+    .line 264
     if-eqz v1, :cond_f
 
-    .line 273
+    .line 266
     iget-object p1, p0, Lcom/android/settingslib/wifi/AccessPoint;->ssid:Ljava/lang/String;
 
-    .line 275
+    .line 268
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 277
+    .line 270
     move-result-object v0
 
-    .line 280
+    .line 273
     filled-new-array {p1, v0}, [Ljava/lang/Object;
 
-    .line 281
+    .line 274
     move-result-object p1
 
-    .line 284
+    .line 277
     const-string v0, "%s: Set speed to %d"
 
-    .line 285
+    .line 278
     invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 287
+    .line 280
     move-result-object p1
 
-    .line 290
+    .line 283
     invoke-static {v2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
+    .line 284
     :cond_f
     new-instance p1, Lcom/android/settingslib/wifi/AccessPoint$$ExternalSyntheticLambda0;
 
-    .line 294
+    .line 287
     invoke-direct {p1, p0}, Lcom/android/settingslib/wifi/AccessPoint$$ExternalSyntheticLambda0;-><init>(Lcom/android/settingslib/wifi/AccessPoint;)V
 
-    .line 296
+    .line 289
     invoke-static {p1}, Lcom/android/settingslib/utils/ThreadUtils;->postOnMainThread(Ljava/lang/Runnable;)V
 
-    .line 299
+    .line 292
     :cond_10
     new-instance p1, Lcom/android/settingslib/wifi/AccessPoint$$ExternalSyntheticLambda0;
 
-    .line 302
+    .line 295
     invoke-direct {p1, p0}, Lcom/android/settingslib/wifi/AccessPoint$$ExternalSyntheticLambda0;-><init>(Lcom/android/settingslib/wifi/AccessPoint;)V
 
-    .line 304
+    .line 297
     invoke-static {p1}, Lcom/android/settingslib/utils/ThreadUtils;->postOnMainThread(Ljava/lang/Runnable;)V
 
-    .line 307
+    .line 300
     return-void
 
-    .line 310
+    .line 303
     :catchall_0
     move-exception p0
 
-    .line 311
+    .line 304
     :try_start_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 312
+    .line 305
     throw p0
-    .line 313
+    .line 306
 .end method
 
 .method public final setScanResultsPasspoint(Ljava/util/Collection;Ljava/util/Collection;)V
@@ -4180,7 +4170,7 @@
     const-string v1, "\""
 
     .line 213
-    invoke-static {v1, p0, v1}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 215
     move-result-object p0
@@ -4238,7 +4228,7 @@
     move-result-object v0
 
     .line 21
-    invoke-static {v1, v0}, Landroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Landroidx/appsearch/app/AppSearchSchema$Builder$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 22
     move-result-object v0
@@ -4292,7 +4282,7 @@
     if-nez v2, :cond_2
 
     .line 52
-    invoke-static {v1, v0}, Landroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Landroidx/appsearch/app/AppSearchSchema$Builder$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 54
     move-result-object v0

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
@@ -150,241 +150,232 @@
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 78
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v1, p3, v0}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)V
 
     .line 81
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 84
-    move-result-object v1
-
-    .line 87
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 88
     :cond_3
     if-nez p3, :cond_4
 
-    .line 91
+    .line 84
     return-void
 
-    .line 93
+    .line 86
     :cond_4
     iget-object p3, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;
 
-    .line 94
+    .line 87
     iget-object p3, p3, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;->ss:Lcom/android/systemui/plugins/VolumeDialogController$StreamState;
 
-    .line 96
+    .line 89
     iget v0, p3, Lcom/android/systemui/plugins/VolumeDialogController$StreamState;->levelMin:I
 
-    .line 98
+    .line 91
     if-lez v0, :cond_7
 
-    .line 100
+    .line 93
     int-to-float v1, v0
 
-    .line 102
+    .line 95
     int-to-float v0, v0
 
-    .line 103
+    .line 96
     iget p3, p3, Lcom/android/systemui/plugins/VolumeDialogController$StreamState;->levelMax:I
 
-    .line 104
+    .line 97
     int-to-float p3, p3
 
-    .line 106
+    .line 99
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getMin()I
 
-    .line 107
+    .line 100
     move-result v2
 
-    .line 110
+    .line 103
     int-to-float v2, v2
 
-    .line 111
+    .line 104
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getMax()I
 
-    .line 112
+    .line 105
     move-result v3
 
-    .line 115
+    .line 108
     int-to-float v3, v3
 
-    .line 116
+    .line 109
     sub-float/2addr p3, v0
 
-    .line 117
+    .line 110
     sub-float v4, v3, v2
 
-    .line 118
+    .line 111
     const/4 v5, 0x0
 
-    .line 120
+    .line 113
     cmpl-float v6, p3, v5
 
-    .line 121
+    .line 114
     if-eqz v6, :cond_6
 
-    .line 123
+    .line 116
     cmpl-float v5, v4, v5
 
-    .line 125
+    .line 118
     if-nez v5, :cond_5
 
-    .line 127
+    .line 120
     goto :goto_0
 
-    .line 129
+    .line 122
     :cond_5
     sub-float/2addr v1, v0
 
-    .line 130
+    .line 123
     div-float/2addr v1, p3
 
-    .line 131
+    .line 124
     mul-float/2addr v1, v4
 
-    .line 132
+    .line 125
     add-float/2addr v1, v2
 
-    .line 133
+    .line 126
     invoke-static {v1, v2, v3}, Landroid/util/MathUtils;->constrain(FFF)F
 
-    .line 134
+    .line 127
     move-result v2
 
-    .line 137
+    .line 130
     :cond_6
     :goto_0
     float-to-int p3, v2
 
-    .line 138
+    .line 131
     if-ge p2, p3, :cond_7
 
-    .line 139
+    .line 132
     invoke-virtual {p1, p3}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 141
+    .line 134
     move p2, p3
 
-    .line 144
+    .line 137
     :cond_7
     iget-object p3, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;
 
-    .line 145
+    .line 138
     iget-object p3, p3, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;->ss:Lcom/android/systemui/plugins/VolumeDialogController$StreamState;
 
-    .line 147
+    .line 140
     invoke-static {p3, p1, p2}, Lcom/android/systemui/volume/VolumeDialogImpl;->getVolumeFromProgress(Lcom/android/systemui/plugins/VolumeDialogController$StreamState;Landroid/widget/SeekBar;I)I
 
-    .line 149
+    .line 142
     move-result p1
 
-    .line 152
+    .line 145
     iget-object p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;
 
-    .line 153
+    .line 146
     iget-object p3, p2, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;->ss:Lcom/android/systemui/plugins/VolumeDialogController$StreamState;
 
-    .line 155
+    .line 148
     iget v0, p3, Lcom/android/systemui/plugins/VolumeDialogController$StreamState;->level:I
 
-    .line 157
+    .line 150
     if-ne v0, p1, :cond_8
 
-    .line 159
+    .line 152
     iget-boolean p3, p3, Lcom/android/systemui/plugins/VolumeDialogController$StreamState;->muted:Z
 
-    .line 161
+    .line 154
     if-eqz p3, :cond_9
 
-    .line 163
+    .line 156
     if-lez p1, :cond_9
 
-    .line 165
+    .line 158
     :cond_8
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    .line 167
+    .line 160
     move-result-wide v0
 
-    .line 170
+    .line 163
     iput-wide v0, p2, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;->userAttempt:J
 
-    .line 171
+    .line 164
     iget-object p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;
 
-    .line 173
+    .line 166
     iget p3, p2, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;->requestedLevel:I
 
-    .line 175
+    .line 168
     if-eq p3, p1, :cond_9
 
-    .line 177
+    .line 170
     iget-object p3, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
 
-    .line 179
+    .line 172
     iget-object p3, p3, Lcom/android/systemui/volume/VolumeDialogImpl;->mController:Lcom/android/systemui/plugins/VolumeDialogController;
 
-    .line 181
+    .line 174
     iget p2, p2, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;->stream:I
 
-    .line 183
+    .line 176
     invoke-interface {p3, p2}, Lcom/android/systemui/plugins/VolumeDialogController;->setActiveStream(I)V
 
-    .line 185
+    .line 178
     iget-object p2, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
 
-    .line 188
+    .line 181
     iget-object p2, p2, Lcom/android/systemui/volume/VolumeDialogImpl;->mController:Lcom/android/systemui/plugins/VolumeDialogController;
 
-    .line 190
+    .line 183
     iget-object p3, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;
 
-    .line 192
+    .line 185
     iget p3, p3, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;->stream:I
 
-    .line 194
+    .line 187
     invoke-interface {p2, p3, p1}, Lcom/android/systemui/plugins/VolumeDialogController;->setStreamVolume(II)V
 
-    .line 196
+    .line 189
     iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeSeekBarChangeListener;->mRow:Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;
 
-    .line 199
+    .line 192
     iput p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;->requestedLevel:I
 
-    .line 201
+    .line 194
     iget p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$VolumeRow;->stream:I
 
-    .line 203
+    .line 196
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 205
+    .line 198
     move-result-object p0
 
-    .line 208
+    .line 201
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 209
+    .line 202
     move-result-object p1
 
-    .line 212
+    .line 205
     filled-new-array {p0, p1}, [Ljava/lang/Object;
 
-    .line 213
+    .line 206
     move-result-object p0
 
-    .line 216
+    .line 209
     const/16 p1, 0x9
 
-    .line 217
+    .line 210
     invoke-static {p1, p0}, Lcom/android/systemui/volume/Events;->writeEvent(I[Ljava/lang/Object;)V
 
-    .line 219
+    .line 212
     :cond_9
     return-void
-    .line 222
+    .line 215
 .end method
 
 .method public final onStartTrackingTouch(Landroid/widget/SeekBar;)V

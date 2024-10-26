@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;
 .super Landroidx/constraintlayout/widget/ConstraintLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -38,6 +38,36 @@
 
 
 # virtual methods
+.method public final reset(Ljava/lang/String;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;->mPrevSmartspaceTargetId:Ljava/lang/String;
+
+    .line 2
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 4
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    return-void
+
+    .line 10
+    :cond_0
+    iput-object p1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;->mPrevSmartspaceTargetId:Ljava/lang/String;
+
+    .line 11
+    invoke-virtual {p0}, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;->resetUi()V
+
+    .line 13
+    return-void
+    .line 16
+.end method
+
 .method public resetUi()V
     .locals 0
 

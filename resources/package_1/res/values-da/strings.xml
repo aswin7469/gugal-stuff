@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">placer valgt widget</string>
   <string name="accessibility_action_label_remove_widget">fjern widget</string>
   <string name="accessibility_action_label_select_widget">vælg widget</string>
-  <string name="accessibility_action_open_communal_hub">Widgets på låseskærmen</string>
   <string name="accessibility_action_pip_resize">Rediger størrelse</string>
   <string name="accessibility_action_pip_stash">Skjul</string>
   <string name="accessibility_action_pip_unstash">Vis</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Afslut enhåndstilstand</string>
   <string name="accessibility_airplane_mode">Flytilstand.</string>
   <string name="accessibility_allow_diagonal_scrolling">Tillad diagonal rulning</string>
+  <string name="accessibility_assistant_poodle">Talesøgning</string>
   <string name="accessibility_authenticate_hint">godkende</string>
   <string name="accessibility_back">Tilbage</string>
   <string name="accessibility_banner_message_dismiss">Luk</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">få adgang til enheden</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Ethernet er ikke tilsluttet.</string>
-  <string name="accessibility_fingerprint_bouncer">Godkendelse er påkrævet. Sæt fingeren på fingeraftrykssensoren for at godkende.</string>
   <string name="accessibility_fingerprint_label">Fingeraftrykssensor</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">slå til/fra</string>
   <string name="accessibility_floating_button_action_edit">Rediger</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menu</string>
   <string name="accessibility_multi_user_list_switcher">rullemenu</string>
   <string name="accessibility_multi_user_switch_switcher">Skift bruger</string>
+  <string name="accessibility_next_alarm">Næste alarm er klokken %s</string>
   <string name="accessibility_no_calling">Opkald er deaktiveret.</string>
   <string name="accessibility_no_phone">Ingen telefon.</string>
   <string name="accessibility_no_wifi">Wi-Fi er afbrudt.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Skærmen er nu låst i stående format.</string>
   <string name="accessibility_send_smart_reply">Send</string>
   <string name="accessibility_sensors_off_active">Sensorer er slået fra</string>
+  <string name="accessibility_settings_gear">Indstillinger for Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Sæt fingeren på fingeraftrykssensoren. Det er den mindste knap på siden af telefonen</string>
+  <string name="accessibility_smartspace_page">Side %1$d af %2$d</string>
   <string name="accessibility_split_bottom">Vis nederst</string>
   <string name="accessibility_split_left">Vis i venstre side</string>
   <string name="accessibility_split_right">Vis i højre side</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi har tre bjælker.</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi har to bjælker.</string>
   <string name="accesssibility_keyguard_retry">Stryg opad for at prøve ansigtsoplåsning igen</string>
+  <string name="adaptive_charging_notify_des">Batteriet er fuldt opladet senest kl. %1$s. Oplader støt for at forlænge batteritiden.</string>
+  <string name="adaptive_charging_notify_title">Adaptiv opladning er aktiveret</string>
+  <string name="adaptive_charging_notify_turn_off_once">Deaktiver én gang</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Adaptiv opladning • Opladet senest kl. %2$s</string>
   <string name="add">Tilføj</string>
   <string name="add_guest_failed">Der kunne ikke oprettes en ny gæst</string>
   <string name="airplane_mode">Flytilstand</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Appinfo</string>
   <string name="app_label">System-UI</string>
   <string name="assistant_attention_content_description">Brugertilstedeværelse er registreret</string>
+  <string name="assistant_scrim_label">Lytter – tryk for at annullere</string>
   <string name="audio_sharing_description">Deler lyd</string>
   <string name="audio_status">Lytter</string>
   <string name="auto_data_switch_dialog_negative_button">Nej tak</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Tilbage</string>
   <string name="battery">Batteri</string>
   <string name="battery_detail_switch_title">Batterisparefunktion</string>
-  <string name="battery_low_description">Du har %s batteri tilbage. Batterisparefunktion aktiverer Mørkt tema, begrænser aktivitet i baggrunden og udskyder notifikationer.</string>
+  <string name="battery_health_notify_learn_more">Få flere oplysninger</string>
   <string name="battery_low_intro">Batterisparefunktion aktiverer Mørkt tema, begrænser aktivitet i baggrunden og udskyder notifikationer.</string>
-  <string name="battery_low_title">Vil du aktivere Batterisparefunktion?</string>
   <string name="battery_saver_confirmation_ok">Aktivér</string>
   <string name="battery_saver_confirmation_title">Vil du aktivere Batterisparefunktion?</string>
   <string name="battery_saver_confirmation_title_generic">Om Batterisparefunktion</string>
-  <string name="battery_saver_dismiss_action">Nej tak</string>
   <string name="battery_saver_start_action">Aktivér</string>
   <string name="battery_state_unknown_notification_text">Tryk for at få flere oplysninger</string>
   <string name="battery_state_unknown_notification_title">Der er problemer med at læse dit batteriniveau</string>
@@ -296,14 +301,9 @@ Prøv igen om %d sekunder.</string>
   <string name="bluetooth_active_battery_level_untethered">Aktiveret. V: %1$s, H: %2$s batteri.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Aktiveret. V: %1$s batteri.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Aktiveret. H: %1$s batteri.</string>
-  <string name="bluetooth_active_media_only_battery_level">Aktiveret (kun for medier). %1$s batteri.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Aktiveret (kun for medier), V: %1$s, H: %2$s batteri.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Aktiveret (kun for medier)</string>
   <string name="bluetooth_active_no_battery_level">Aktiv</string>
   <string name="bluetooth_battery_level">%1$s batteri</string>
-  <string name="bluetooth_battery_level_lea_support">Forbundet (understøtter lyddeling). %1$s batteri.</string>
   <string name="bluetooth_battery_level_untethered">V: %1$s, H: %2$s batteri.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Forbundet (understøtter lyddeling), V: %1$s, H: %2$s batteri.</string>
   <string name="bluetooth_connected">Forbundet med %1$s</string>
   <string name="bluetooth_connecting">Opretter forbindelse...</string>
   <string name="bluetooth_disconnected">Afbrudt</string>
@@ -311,13 +311,11 @@ Prøv igen om %d sekunder.</string>
   <string name="bluetooth_hearing_aid_left_active">Aktiveret (kun venstre)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Aktiveret (venstre og højre)</string>
   <string name="bluetooth_hearing_aid_right_active">Aktiveret (kun højre)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Forbundet (understøtter lyddeling)</string>
   <string name="bluetooth_pairing">Parrer...</string>
   <string name="bluetooth_pairing_device_down_error_message">Der kan ikke kommunikeres med %1$s.</string>
   <string name="bluetooth_pairing_error_message">Der kunne ikke parres med %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Parring med %1$s mislykkedes på grund af en forkert pinkode eller adgangsnøgle.</string>
   <string name="bluetooth_pairing_rejected_error_message">Parring afvist af %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">Understøtter lyddeling</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Computer</string>
   <string name="bluetooth_talkback_headphone">Hovedtelefoner</string>
@@ -356,8 +354,6 @@ Prøv igen om %d sekunder.</string>
   <string name="bubble_overflow_button_content_description">Overløb</string>
   <string name="bubble_overflow_empty_subtitle">Nye bobler og afviste bobler vises her</string>
   <string name="bubble_overflow_empty_title">Ingen seneste bobler</string>
-  <string name="bubble_shortcut_label">Bobler</string>
-  <string name="bubble_shortcut_long_label">Vis bobler</string>
   <string name="bubbles_app_settings">Indstillinger for %1$s</string>
   <string name="bubbles_dont_bubble_conversation">Vis ikke samtaler i bobler</string>
   <string name="bubbles_settings_button_description">Indstillinger for %1$s-bobler</string>
@@ -387,6 +383,10 @@ Tryk for at gendanne det oprindelige format</string>
   <string name="cast_to_other_device_stop_dialog_button">Stop cast</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Du stopper casting af &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">Mobildata er deaktiveret</string>
+  <string name="charge_limit_discovery_notification_enable_button">Aktivér nu</string>
+  <string name="charge_limit_discovery_notification_text">Prøv at aktivere begrænsningsfunktionen på 80 % for at beskytte batteritilstanden og -levetiden. Du kan til enhver tid administrere dette i indstillingerne</string>
+  <string name="charge_limit_discovery_notification_title">Beskyt dit batteri under opladning</string>
+  <string name="charging_reverse_text">Batterideling</string>
   <string name="clear_all_notifications_text">Ryd alle</string>
   <string name="clipboard">Udklipsholder</string>
   <string name="clipboard_content_copied">Indholdet blev kopieret</string>
@@ -406,6 +406,11 @@ Tryk for at gendanne det oprindelige format</string>
   <string name="close_button_text">Luk</string>
   <string name="close_dialog_button">Luk</string>
   <string name="collapse_menu_text">Luk menu</string>
+  <string name="columbus_bouncer_message">Lås op for at udføre et Kviktryk</string>
+  <string name="columbus_target_request_dialog_allow">Tillad</string>
+  <string name="columbus_target_request_dialog_deny">Tillad ikke</string>
+  <string name="columbus_target_request_dialog_summary">Tryk to gange på bagsiden af din telefon for at åbne %1$s. Du kan altid ændre dette under Indstillinger.</string>
+  <string name="columbus_target_request_dialog_title">Vil du tillade, at %1$s åbnes med Kviktryk?</string>
   <string name="communal_tutorial_indicator_text">Stryg mod venstre for at starte den fælles vejledning</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Din indre skærm spejles. Din skærm på forsiden slukkes.</string>
   <string name="connected_display_dialog_start_mirroring">Vil du spejle til ekstern skærm?</string>
@@ -511,8 +516,11 @@ Hvis du fortsætter, bliver du muligvis opkrævet betaling for dit dataforbrug.<
   <string name="data_usage_disabled_dialog_mobile_title">Mobildata er sat på pause</string>
   <string name="data_usage_disabled_dialog_title">Data er sat på pause</string>
   <string name="days_timestamp">%1$s dage siden</string>
-  <string name="default_error_message">Ugyldigt input</string>
   <string name="default_popup_window_title">Pop op-vindue</string>
+  <string name="defender_notify_resume_charge">Tilsidesæt</string>
+  <string name="defender_notify_title">Beskytter dit batteri</string>
+  <string name="defender_post_notify_des">For at hjælpe med at forlænge batteriets levetid var opladning optimeret fra %1$s til %2$s</string>
+  <string name="defender_post_notify_title">Opladning var optimeret</string>
   <string name="demo_mode">Demotilstand for systemets brugerflade</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Maksimér skærm</string>
   <string name="desktop_mode_maximize_menu_snap_text">Tilpas skærm</string>
@@ -532,20 +540,32 @@ Hvis du fortsætter, bliver du muligvis opkrævet betaling for dit dataforbrug.<
   <string name="do_disclosure_generic">Denne enhed tilhører din organisation</string>
   <string name="do_disclosure_with_name">Denne enhed tilhører %s</string>
   <string name="do_financed_disclosure_with_name">Denne enhed er leveret af %s</string>
+  <string name="dock_a11y_action_show_photo_text">Vis billedramme</string>
+  <string name="dock_alignment_not_charging">Juster telefonens placering for at oplade den trådløst</string>
+  <string name="dock_alignment_slow_charging">Juster telefonens placering for at oplade den hurtigere</string>
+  <string name="dock_defender_first_run_des">For at hjælpe med at forlænge batteritiden sættes opladningen på pause ved 90 %, mens din tablet er docket. Gå til Indstillinger for tilsidesætte denne indstilling.</string>
+  <string name="dock_defender_first_run_settings">Indstillinger</string>
+  <string name="dock_defender_first_run_title">Opladningen er sat på pause for at beskytte batteriet</string>
   <string name="dock_multi_instances_not_supported_text">Denne app kan kun åbnes i 1 vindue</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Appen understøtter ikke opdelt skærm</string>
+  <string name="dock_photo_preview_text">Billedramme starter…</string>
+  <string name="dock_promo_text">Stryg til venstre for at se billedrammen</string>
   <string name="done">Udfør</string>
   <string name="drag_split_not_supported">Denne notifikation kan ikke trækkes til en opdelt skærm</string>
   <string name="drag_to_add_tiles">Tilføj felter ved at holde dem nede og trække dem</string>
   <string name="drag_to_rearrange_tiles">Flyt rundt på felterne ved at holde dem nede og trække</string>
   <string name="drag_to_remove_disabled">Du skal bruge mindst %1$d felter</string>
   <string name="drag_to_remove_tiles">Træk herhen for at fjerne</string>
+  <string name="dream_lockscreen_wallpaper_description">Brug din nuværende låseskærmsbaggrund</string>
+  <string name="dream_lockscreen_wallpaper_label">Baggrund</string>
   <string name="dream_overlay_status_bar_alarm_set">Alarmen er indstillet</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Kamera og mikrofon er slået fra</string>
   <string name="dream_overlay_status_bar_camera_off">Kameraet er slukket</string>
   <string name="dream_overlay_status_bar_mic_off">Mikrofonen er slået fra</string>
   <string name="dream_overlay_status_bar_priority_mode">Tilstanden Prioritet</string>
   <string name="dream_overlay_status_bar_wifi_off">Ingen tilgængelig Wi-Fi-forbindelse</string>
+  <string name="dwell_defender_notify_des">Dette hjælper med at forlænge batteritiden, når din telefon oplades for længe</string>
+  <string name="dwell_defender_notify_title">Opladningen er sat på pause for at beskytte batteriet</string>
   <string name="edit_user_info_message">Det navn og billede, du vælger, er synligt for alle, der bruger denne enhed.</string>
   <string name="edit_widget">Rediger widget</string>
   <string name="empty_shade_text">Ingen notifikationer</string>
@@ -561,12 +581,16 @@ Hvis du fortsætter, bliver du muligvis opkrævet betaling for dit dataforbrug.<
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Avanceret</string>
   <string name="expand_menu_text">Åbn menu</string>
+  <string name="extreme_battery_saver_text">Ekstrem</string>
+  <string name="extreme_low_battery_notification_text">Din telefon slukker, hvis du ikke snart oplader den</string>
+  <string name="extreme_low_battery_notification_title">Meget lavt batteriniveau</string>
   <string name="face_re_enroll_dialog_content">Hvis du vil konfigurere ansigtsoplåsning igen, bliver din nuværende ansigtsmodel slettet.
 
 Du skal konfigurere funktionen igen for at bruge ansigtsgenkendelse til at låse din telefon op.</string>
   <string name="face_re_enroll_dialog_title">Konfigurer ansigts­oplåsning</string>
   <string name="face_re_enroll_notification_name">Ansigtsoplåsning</string>
   <string name="face_re_enroll_notification_title">Konfigurer ansigtsoplåsning igen</string>
+  <string name="face_reenroll_dialog_confirm">Konfigurer</string>
   <string name="face_reenroll_failure_dialog_content">Ansigtsoplåsning kunne ikke konfigureres. Gå til Indstillinger for at prøve igen.</string>
   <string name="failed_attempts_now_wiping_device">For mange forkerte forsøg. Dataene på denne enhed slettes.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Luk</string>
@@ -604,6 +628,7 @@ Når de er slettet, skal du konfigurere fingeroplåsning igen for at bruge dit f
   <string name="font_scaling_smaller">Formindsk</string>
   <string name="fullscreen_text">Fuld skærm</string>
   <string name="game_status">Spiller</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Hold ulåst er deaktiveret</string>
   <string name="go_to_web">Gå til en browser</string>
   <string name="got_it">OK</string>
@@ -640,6 +665,7 @@ Når de er slettet, skal du konfigurere fingeroplåsning igen for at bruge dit f
   <string name="guest_reset_and_restart_dialog_title">Vil du nulstille gæstesessionen?</string>
   <string name="guest_reset_guest_confirm_button">Nulstil</string>
   <string name="guest_resetting">Nulstiller gæst…</string>
+  <string name="handle_invocation_prompt">Stryg for at tale</string>
   <string name="handle_text">Håndtag</string>
   <string name="headset">Headset</string>
   <string name="hearing_devices_preset_label">Forindstilling</string>
@@ -656,6 +682,7 @@ Tryk for at få flere oplysninger</string>
   <string name="high_temp_title">Telefonen er ved at blive varm</string>
   <string name="home_controls_dream_description">Tilgå hurtigt hjemmestyring via din pauseskærm</string>
   <string name="home_controls_dream_label">Hjemmestyring</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Mindst én enhed eller ét enhedspanel er til rådighed</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Hvis du vil tilføje en genvej til Home-appen, skal du sørge for, at appen er installeret</string>
   <string name="hub_mode_add_widget_button_text">Tilføj widget</string>
@@ -669,12 +696,16 @@ Tryk for at få flere oplysninger</string>
   <string name="in_progress">I gang</string>
   <string name="inattentive_sleep_warning_message">Enheden slukker snart. Tryk for at holde den tændt.</string>
   <string name="inattentive_sleep_warning_title">Standby</string>
+  <string name="incompatible_charging_learn_more">Få flere oplysninger</string>
+  <string name="incompatible_charging_notify_des">Din telefon oplader muligvis langsomt eller slet ikke. Opnå hurtigere opladning ved at bruge et kabel og en adapter, som er anbefalet.</string>
+  <string name="incompatible_charging_notify_title">Tjek opladningstilbehøret</string>
   <string name="indeterminate">Delvist markeret</string>
   <string name="inline_done_button">Udfør</string>
   <string name="inline_ok_button">Anvend</string>
   <string name="inline_turn_off_notifications">Deaktiver notifikationer</string>
   <string name="input_switch_input_language_next">Skift til næste sprog</string>
   <string name="input_switch_input_language_previous">Skift til forrige sprog</string>
+  <string name="install_app">Installer app</string>
   <string name="install_dialer_on_work_profile_action">Installer en arbejdstelefonapp</string>
   <string name="install_type_instant">Instant-app</string>
   <string name="instant_apps">Instant Apps</string>
@@ -683,8 +714,6 @@ Tryk for at få flere oplysninger</string>
   <string name="instant_apps_title">%1$s kører</string>
   <string name="interruption_level_none">Total stilhed</string>
   <string name="interruption_level_priority">Kun prioritet</string>
-  <string name="invalid_charger_text">Brug den oplader, der fulgte med din enhed</string>
-  <string name="invalid_charger_title">Enheden kan ikke oplades via USB</string>
   <string name="issuerecord_background_processing_label">Behandler optagelse af problem</string>
   <string name="issuerecord_ongoing_screen_only">Optager problem</string>
   <string name="issuerecord_save_title">Optagelse af problem er gemt</string>
@@ -766,21 +795,33 @@ Tryk for at få flere oplysninger</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Enheden er låst
 Godkendelsen mislykkedes</string>
   <string name="keyguard_indication_charging_time">%2$s • Oplader • Fuldt opladet om %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s •Opladning færdig senest kl. %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Oplader • Fuldt opladet om %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Fuldt opladet senest kl. %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Oplader hurtigt • Fuldt opladet om %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Lynopladning • Opladet senest kl. %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Fuldt opladet</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Oplader langsomt • Fuldt opladet om %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Fuldt opladet senest kl. %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Fuldt opladet senest kl. %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Trådløs opladning • Fuldt opladet om %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Holdes oplåst af TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Fuldt opladet senest kl. %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Holdes ulåst med Hold ulåst</string>
   <string name="keyguard_missing_sim_message_short">Intet SIM-kort</string>
   <string name="keyguard_network_locked_message">Netværket er låst</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Deaktiveret SIM-kort.</string>
   <string name="keyguard_plugged_in">%s • Oplader</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Oplader hurtigt</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Lynopladning</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Opladningen er sat på pause for at beskytte batteriet</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Oplader langsomt</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Oplader</string>
   <string name="keyguard_plugged_in_dock">%s • Oplader</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Oplader</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Tjek opladningstilbehøret</string>
+  <string name="keyguard_plugged_in_v2">%s • Oplader</string>
   <string name="keyguard_plugged_in_wireless">%s • Trådløs opladning</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Oplader</string>
   <string name="keyguard_retry">Stryg opad for at prøve igen</string>
   <string name="keyguard_sim_error_message_short">Ugyldigt kort.</string>
   <string name="keyguard_sim_locked_message">SIM-kortet er låst.</string>
@@ -811,7 +852,6 @@ Godkendelsen mislykkedes</string>
   <string name="kg_invalid_confirm_pin_hint">Pinkoderne stemmer ikke overens</string>
   <string name="kg_invalid_sim_pin_hint">Angiv en pinkode på mellem 4 og 8 tal.</string>
   <string name="kg_invalid_sim_puk_hint">PUK-koden skal være på 8 tal eller mere.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Angiv pinkoden til SIM-kortet. Du har # forsøg tilbage, før du skal kontakte dit mobilselskab for at låse din enhed op.}one{Angiv pinkoden til SIM-kortet. Du har # forsøg tilbage.}other{Angiv pinkoden til SIM-kortet. Du har # forsøg tilbage.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM-kortet er nu deaktiveret. Angiv PUK-koden for at fortsætte. Du har # forsøg tilbage, før SIM-kortet bliver permanent ubrugeligt. Kontakt dit mobilselskab for at få flere oplysninger.}one{SIM-kortet er nu deaktiveret. Angiv PUK-koden for at fortsætte. Du har # forsøg tilbage, før SIM-kortet bliver permanent ubrugeligt. Kontakt dit mobilselskab for at få flere oplysninger.}other{SIM-kortet er nu deaktiveret. Angiv PUK-koden for at fortsætte. Du har # forsøg tilbage, før SIM-kortet bliver permanent ubrugeligt. Kontakt dit mobilselskab for at få flere oplysninger.}}</string>
   <string name="kg_password_pin_failed">Pinkoden til SIM-kortet blev afvist</string>
   <string name="kg_password_puk_failed">PUK-koden til SIM-kortet blev afvist</string>
@@ -852,7 +892,7 @@ Godkendelsen mislykkedes</string>
   <string name="kg_sim_pin_instructions_multi">Angiv pinkoden til SIM-kortet fra "%1$s".</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM-kortet låses op…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Prøv igen om # sekund.}one{Prøv igen om # sekund.}other{Prøv igen om # sekunder.}}</string>
-  <string name="kg_trust_agent_disabled">Trust agent er ikke tilgængelig</string>
+  <string name="kg_trust_agent_disabled">Hold ulåst er ikke tilgængelig</string>
   <string name="kg_unlock_with_password_or_fp">Lås op med adgangskode eller fingeraftryk</string>
   <string name="kg_unlock_with_pattern_or_fp">Lås op med mønster eller fingeraftryk</string>
   <string name="kg_unlock_with_pin_or_fp">Lås op med pinkode eller fingeraftryk</string>
@@ -900,6 +940,10 @@ Selvom du ikke giver denne app adgang til alle enhedslogs, kan den stadig tilgå
   <string name="log_access_confirmation_learn_more">Få flere oplysninger</string>
   <string name="log_access_confirmation_learn_more_at">Få flere oplysninger på %s</string>
   <string name="log_access_confirmation_title">Vil du give %s adgang til alle enhedslogs?</string>
+  <string name="low_battery_label">Lavt batteriniveau</string>
+  <string name="low_battery_notification_text">Aktivér Standard batterisparefunktion for at forlænge batteritiden</string>
+  <string name="low_battery_notification_text_ebs">Aktivér Ekstrem batterisparefunktion for at forlænge batteritiden</string>
+  <string name="low_battery_notification_title">%s batteri tilbage</string>
   <string name="m3c_search_bar_search">Søg</string>
   <string name="m3c_suggestions_available">Forslag nedenfor</string>
   <string name="magnification_close_settings_click_label">Luk indstillinger for forstørrelse</string>
@@ -939,8 +983,6 @@ Selvom du ikke giver denne app adgang til alle enhedslogs, kan den stadig tilgå
   <string name="media_output_dialog_volume_percentage">%1$d %%</string>
   <string name="media_output_end_session_dialog_stop">Stop</string>
   <string name="media_output_end_session_dialog_summary">Stop din delte session for at flytte medier til en anden enhed</string>
-  <string name="media_output_first_broadcast_title">Sådan fungerer udsendelser</string>
-  <string name="media_output_first_notify_broadcast_message">Personer i nærheden, som har kompatible Bluetooth-enheder, kan lytte til det medie, du udsender</string>
   <string name="media_output_group_title_speakers_and_displays">Højttalere og skærme</string>
   <string name="media_output_group_title_suggested_device">Foreslåede enheder</string>
   <string name="media_output_label_title">Afspiller %s på</string>
@@ -967,9 +1009,6 @@ Selvom du ikke giver denne app adgang til alle enhedslogs, kan den stadig tilgå
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Når du caster en app, har Android adgang til alt, der vises eller afspilles i den pågældende app. Vær derfor forsigtig med ting såsom adgangskoder, betalingsoplysninger, beskeder, billeder, lyd og video.</string>
   <string name="media_projection_sys_service_dialog_title">Vil du begynde at optage eller caste?</string>
   <string name="media_projection_sys_service_dialog_warning">Tjenesten, der tilbyder denne funktion, får adgang til alle de oplysninger, der er synlige på din skærm, eller som afspilles på din enhed, når du optager eller caster. Dette omfatter oplysninger som f.eks. adgangskoder, betalingsoplysninger, billeder, beskeder og afspillet lyd.</string>
-  <string name="media_projection_task_switcher_action_back">Skift tilbage</string>
-  <string name="media_projection_task_switcher_action_switch">Del denne app i stedet</string>
-  <string name="media_projection_task_switcher_text">Delingen sættes på pause, når du skifter apps</string>
   <string name="media_seamless_other_device">Anden enhed</string>
   <string name="media_transfer_default_device_name">Forbundet enhed</string>
   <string name="media_transfer_dock_speaker_device_name">Dockhøjttaler</string>
@@ -1138,7 +1177,7 @@ Kontakt %2$s, hvis du har spørgsmål.</string>
   <string name="pip_skip_to_prev">Gå til forrige</string>
   <string name="popup_on_dismiss_cta_tile_text">Hold fingeren nede for at tilpasse widgets</string>
   <string name="power_discharge_by_only_short">Indtil %1$s</string>
-  <string name="preference_summary_default_combination">%1$s/%2$s</string>
+  <string name="preference_summary_default_combination">%1$s – %2$s</string>
   <string name="priority_conversations">Prioriterede samtaler</string>
   <string name="priority_mode_dream_overlay_content_description">Forstyr ikke</string>
   <string name="privacy_dialog_active_app_usage">Bruges af %1$s</string>
@@ -1280,12 +1319,17 @@ Kontakt %2$s, hvis du har spørgsmål.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Vend telefonen for at få højere opløsning</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Vil du skifte skærm?</string>
   <string name="recent_conversations">Seneste samtaler</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">sendte et billede</string>
   <string name="remove_from_settings">Fjern fra Indstillinger</string>
   <string name="remove_from_settings_prompt">Vil du fjerne System UI Tuner fra Indstillinger og stoppe med at bruge alle dens funktioner?</string>
   <string name="require_unlock_for_nfc">Lås op for at bruge NFC</string>
   <string name="restart_button_description">Tryk for at genstarte denne app, så visningen forbedres</string>
   <string name="retry_face">Prøv ansigtsgodkendelse igen</string>
+  <string name="reverse_charging_device_name_text">Anden Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s bruges som oplader (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Batterideling er aktiveret</string>
+  <string name="reverse_charging_title">Batterideling</string>
   <string name="right_icon">Højre ikon</string>
   <string name="right_keycode">Højre tastekode</string>
   <string name="right_nav_bar_button_type">Ekstra højre knaptype</string>
@@ -1293,8 +1337,15 @@ Kontakt %2$s, hvis du har spørgsmål.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">Tryk for at se info om batteri- og dataforbrug</string>
   <string name="running_foreground_services_title">Apps, der kører i baggrunden</string>
-  <string name="satellite_connected_carrier_text">SOS-meldinger via satellit</string>
+  <string name="satellite_connected_carrier_text">SOS-meldinger via satellit på Pixel</string>
   <string name="save">Gem</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Annuller</string>
+  <string name="saver_confirmation_dialog_subtitle">Vælg den tilstand, du vil bruge</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Omfatter alle ændringer angivet ovenfor. Sætter også apps, der ikke er vigtige, og deres notifikationer på pause.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Reducerer visuelle effekter og baggrundsaktivitet. Aktiverer Mørkt tema, hvis det ikke allerede er aktiveret.</string>
+  <string name="saver_confirmation_dialog_title">Velkommen til Batterisparefunktion</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Ekstrem batterisparefunktion</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Standard batterisparefunktion</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Screenshots er deaktiveret af enhedspolitikken</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Blokeret af din it-administrator</string>
   <string name="screen_pinning_can_open_other_apps">En fastgjort app kan åbne andre apps.</string>
@@ -1312,6 +1363,12 @@ Kontakt %2$s, hvis du har spørgsmål.</string>
   <string name="screen_pinning_toast">Du kan frigøre denne app ved at holde knapperne Tilbage og Oversigt nede</string>
   <string name="screen_pinning_toast_gesture_nav">Du kan frigøre denne app ved at stryge opad og holde fingeren nede</string>
   <string name="screen_pinning_toast_recents_invisible">Du kan frigøre denne app ved at holde knapperne Tilbage og Hjem nede</string>
+  <string name="screen_protector_absent_message">Deaktivering af tilstanden forbedrer touchfunktioner, når skærmbeskyttelse ikke anvendes.</string>
+  <string name="screen_protector_disable_notification">Deaktiver notifikation</string>
+  <string name="screen_protector_go_to_settings">Gå til indstillinger</string>
+  <string name="screen_protector_got_it">OK</string>
+  <string name="screen_protector_mode_title">Skærmbeskyttertilstand</string>
+  <string name="screen_protector_present_message">Aktivering af tilstanden forbedrer touchfunktioner, når skærmbeskyttelse anvendes.</string>
   <string name="screen_share_permission_app_selector_title">Del eller optag en app</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Hele skærmen</string>
   <string name="screen_share_permission_dialog_option_single_app">Én app</string>
@@ -1364,9 +1421,9 @@ Kontakt %2$s, hvis du har spørgsmål.</string>
   <string name="screenshot_saving_work_profile_title">Gemmer screenshot på din arbejdsprofil…</string>
   <string name="screenshot_scroll_label">Medtag mere</string>
   <string name="screenshot_share_description">Del screenshottet</string>
-  <string name="screenshot_share_label">Del</string>
   <string name="screenshot_text">Screenshot</string>
   <string name="screenshot_top_boundary_pct">Øverste kant: %1$d procent</string>
+  <string name="screenshot_view_description">Se screenshot</string>
   <string name="screenshot_work_profile_notification">Gemt i %1$s på arbejdsprofilen</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Fingeraftrykssensoren sidder på afbryderknappen. Det er den flade knap ved siden af den hævede lydstyrkeknap på siden af telefonen.</string>
   <string name="see_all_bluetooth_devices">Se alt</string>
@@ -1384,6 +1441,12 @@ Kontakt %2$s, hvis du har spørgsmål.</string>
   <string name="set_default_notes_app_toast_content">Angiv standardapp til noter i Indstillinger</string>
   <string name="settings_label">Indstillinger</string>
   <string name="settingslib_learn_more_text">Få flere oplysninger</string>
+  <string name="severe_battery_notification_switch_text">Vil du skifte til Ekstrem batterisparefunktion? 
+
+Dette vil sætte alle apps, der ikke er vigtige, og deres notifikationer på pause</string>
+  <string name="severe_battery_notification_text">Aktivér Ekstrem batterisparefunktion. Dette vil sætte alle apps, der ikke er vigtige, på pause</string>
+  <string name="severe_battery_notification_title">%s batteri tilbage</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Skift</string>
   <string name="share_to_app_stop_dialog_button">Stop deling</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Du stopper deling af &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Vil du stoppe skærmdelingen?</string>
@@ -1406,6 +1469,9 @@ Kontakt %2$s, hvis du har spørgsmål.</string>
   <string name="slice_permission_text_1">- Den kan læse oplysninger fra %1$s</string>
   <string name="slice_permission_text_2">- Den kan foretage handlinger i %1$s</string>
   <string name="slice_permission_title">Vil du give %1$s tilladelse til at vise eksempler fra %2$s?</string>
+  <string name="smartspace_content_desc">Overblik</string>
+  <string name="smartspace_flight_qr_code">QR-kode</string>
+  <string name="smartspace_role_desc">Se</string>
   <string name="snoozeHourOptions">{count,plural, =1{# time}=2{# timer}one{# time}other{# timer}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minut}one{# minut}other{# minutter}}</string>
   <string name="snooze_undo">Fortryd</string>
@@ -1416,6 +1482,8 @@ Kontakt %2$s, hvis du har spørgsmål.</string>
   <string name="speed_label_slow">Langsom</string>
   <string name="speed_label_very_fast">Meget hurtig</string>
   <string name="split_screen_text">Opdelt skærm</string>
+  <string name="squeeze_invocation_prompt">Klem for at tale</string>
+  <string name="standard_battery_saver_text">Standard</string>
   <string name="start_dreams">Pauseskærm</string>
   <string name="state_empty">Tom</string>
   <string name="state_off">Fra</string>
@@ -1453,6 +1521,8 @@ Kontakt %2$s, hvis du har spørgsmål.</string>
   <string name="tab">Fane</string>
   <string name="tap_a_network_to_connect">Tryk på et netværk for at oprette forbindelse</string>
   <string name="tap_again">Tryk igen</string>
+  <string name="temp_defender_notify_des">Opladningen genoptages, når din telefons temperatur igen er inden for normalområdet</string>
+  <string name="temp_defender_notify_title">Opladningen er sat på pause for at beskytte batteriet</string>
   <string name="template_percent">%1$d procent.</string>
   <string name="thermal">Termisk</string>
   <string name="thermal_shutdown_dialog_help_text">Se håndteringsvejledning</string>
@@ -1469,6 +1539,7 @@ Tryk for at få flere oplysninger</string>
   <string name="title_for_empty_state_cta">Få hurtig adgang til dine foretrukne appwidgets uden at låse din tablet op.</string>
   <string name="title_usb_accessory">USB-ekstraudstyr</string>
   <string name="to_switch_networks_disconnect_ethernet">Afbryd ethernetforbindelsen for at skifte netværk</string>
+  <string name="too_hot_label">Din Pixel er for varm</string>
   <string name="touch_filtered_warning">Indstillinger kan ikke verificere dit svar, da en app dækker for en anmodning om tilladelse.</string>
   <string name="touchpad_tutorial_action_key_button">Handlingstast</string>
   <string name="touchpad_tutorial_back_gesture_button">Bevægelse for at gå tilbage</string>
@@ -1483,17 +1554,18 @@ Tryk for at få flere oplysninger</string>
   <string name="tuner_menu">Menu</string>
   <string name="tuner_minus">Minus</string>
   <string name="tuner_other_apps">Andre apps</string>
+  <string name="tuner_persistent_warning">Disse eksperimentelle funktioner kan ændres, gå i stykker eller forsvinde i fremtidige udgivelser. Vær forsigtig, hvis du fortsætter.</string>
   <string name="tuner_plus">Plus</string>
   <string name="tuner_right">Højre</string>
   <string name="tuner_time">Tid</string>
+  <string name="tuner_warning">System UI Tuner giver dig flere muligheder for at justere og tilpasse Android-brugerfladen. Disse eksperimentelle funktioner kan ændres, gå i stykker eller forsvinde i fremtidige udgivelser. Vær forsigtig, hvis du fortsætter.</string>
+  <string name="tuner_warning_title">Sjovt for nogle, men ikke for alle</string>
   <string name="turn_off_airplane_mode">Deaktiver flytilstand</string>
   <string name="turn_on_bluetooth">Brug Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Funktioner som f.eks. Quick Share og Find min enhed anvender Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth aktiveres i morgen tidlig</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Aktivér automatisk i morgen</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Standardindstillinger for fjernsyn</string>
   <string name="two_weeks_timestamp">For 2 uger siden</string>
   <string name="unknown">Ukendt</string>
   <string name="unlock_to_see_notif_text">Lås op for at se ældre notifikationer</string>
@@ -1552,7 +1624,9 @@ Alle brugere kan opdatere apps for alle de andre brugere.</string>
   <string name="volume_odi_captions_hint_enable">aktivér</string>
   <string name="volume_odi_captions_tip">Undertekster til medier</string>
   <string name="volume_panel_captioning_title">Livetekstning</string>
+  <string name="volume_panel_clear_calling_title">Klar opkaldslyd</string>
   <string name="volume_panel_collapsed_sliders">Lydstyrkeskydere er skjult</string>
+  <string name="volume_panel_device_settings_title">Enhedsindstillinger</string>
   <string name="volume_panel_dialog_settings_button">Indstillinger</string>
   <string name="volume_panel_enter_media_output_settings">Angiv indstillinger for output</string>
   <string name="volume_panel_expanded_sliders">Lydstyrkeskydere er udvidet</string>
@@ -1667,6 +1741,9 @@ Wi‑Fi-adresse (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Ukendt</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Ikke forbrugsafregnet</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Der oprettes ikke automatisk forbindelse til Wi-Fi-netværket i øjeblikket</string>
+  <string name="wireless_charging_label">Trådløs opladning</string>
+  <string name="wireless_charging_notification_text">Trådløs opladning kan kræve mere energi end opladning med ledning. Skift til en oplader med ledning for at spare på elforbruget og oplade hurtigere.</string>
+  <string name="wireless_charging_notification_title">Trådløs opladning</string>
   <string name="work_challenge_emergency_button_text">Nødsituation</string>
   <string name="work_mode_off_title">Vil du genoptage arbejdsapps?</string>
   <string name="work_mode_turn_on">Genoptag</string>

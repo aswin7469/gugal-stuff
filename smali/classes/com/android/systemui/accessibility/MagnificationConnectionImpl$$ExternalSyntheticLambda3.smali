@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/accessibility/MagnificationConnectionImpl$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -119,7 +119,7 @@
     move-result-object p0
 
     .line 55
-    const v1, 0x7f0e00bf    # @layout/fullscreen_magnification_border 'res/layout/fullscreen_magnification_border.xml'
+    const v1, 0x7f0d00c8    # @layout/fullscreen_magnification_border 'res/layout/fullscreen_magnification_border.xml'
 
     .line 56
     const/4 v2, 0x0

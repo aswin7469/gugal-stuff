@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/UsageProgressBarPreference;
 .super Landroidx/preference/Preference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -35,7 +35,7 @@
     iput p1, p0, Lcom/android/settingslib/widget/UsageProgressBarPreference;->mPercent:I
 
     .line 14
-    const p1, 0x7f0e01f3    # @layout/preference_usage_progress_bar 'res/layout/preference_usage_progress_bar.xml'
+    const p1, 0x7f0d0201    # @layout/preference_usage_progress_bar 'res/layout/preference_usage_progress_bar.xml'
 
     .line 16
     iput p1, p0, Landroidx/preference/Preference;->mLayoutResId:I
@@ -63,7 +63,7 @@
     iput-boolean v0, p1, Landroidx/preference/PreferenceViewHolder;->mDividerAllowedBelow:Z
 
     .line 8
-    const v1, 0x7f0b0883    # @id/usage_summary
+    const v1, 0x7f0a08b6    # @id/usage_summary
 
     .line 10
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -162,7 +162,7 @@
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 70
-    const v1, 0x7f0b081d    # @id/total_summary
+    const v1, 0x7f0a084b    # @id/total_summary
 
     .line 73
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -174,7 +174,7 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 80
-    const v1, 0x7f0b0140    # @id/bottom_summary
+    const v1, 0x7f0a0146    # @id/bottom_summary
 
     .line 82
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -269,7 +269,7 @@
 
     .line 147
     :goto_2
-    const p0, 0x7f0b0237    # @id/custom_content
+    const p0, 0x7f0a0242    # @id/custom_content
 
     .line 150
     invoke-virtual {p1, p0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

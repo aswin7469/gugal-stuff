@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/users/CreateUserDialogController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -138,7 +138,7 @@
     const/16 v2, 0x8
 
     .line 7
-    const v3, 0x7f1406c1    # @string/next 'Next'
+    const v3, 0x7f13071b    # @string/next 'Next'
 
     .line 9
     const/4 v4, 0x2
@@ -153,7 +153,7 @@
     if-eqz v0, :cond_6
 
     .line 15
-    const v7, 0x7f140151    # @string/back 'Back'
+    const v7, 0x7f130157    # @string/back 'Back'
 
     .line 17
     if-eq v0, v5, :cond_5
@@ -238,7 +238,7 @@
     iget-object v1, p0, Lcom/android/settingslib/users/CreateUserDialogController;->mActivity:Landroid/app/Activity;
 
     .line 70
-    const v2, 0x7f1409ed    # @string/user_new_user_name 'New user'
+    const v2, 0x7f130a76    # @string/user_new_user_name 'New user'
 
     .line 72
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -292,7 +292,7 @@
     iget-object v1, v0, Lcom/android/settingslib/utils/CustomDialogHelper;->mDialogTitle:Landroid/widget/TextView;
 
     .line 106
-    const v3, 0x7f1409e7    # @string/user_info_settings_title 'User info'
+    const v3, 0x7f130a70    # @string/user_info_settings_title 'User info'
 
     .line 108
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(I)V
@@ -307,7 +307,7 @@
     iget-object v0, v0, Lcom/android/settingslib/utils/CustomDialogHelper;->mPositiveButton:Landroid/widget/Button;
 
     .line 119
-    const v1, 0x7f14035a    # @string/done 'Done'
+    const v1, 0x7f130388    # @string/done 'Done'
 
     .line 121
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
@@ -368,7 +368,7 @@
     iget-object v1, p0, Lcom/android/settingslib/users/CreateUserDialogController;->mActivity:Landroid/app/Activity;
 
     .line 169
-    const v4, 0x7f0806d1    # @drawable/ic_admin_panel_settings 'res/drawable/ic_admin_panel_settings.xml'
+    const v4, 0x7f0806e0    # @drawable/ic_admin_panel_settings 'res/drawable/ic_admin_panel_settings.xml'
 
     .line 171
     invoke-virtual {v1, v4}, Landroid/app/Activity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -386,7 +386,7 @@
     iget-object v1, v0, Lcom/android/settingslib/utils/CustomDialogHelper;->mDialogTitle:Landroid/widget/TextView;
 
     .line 183
-    const v4, 0x7f1409e5    # @string/user_grant_admin_title 'Make this user an admin?'
+    const v4, 0x7f130a6e    # @string/user_grant_admin_title 'Make this user an admin?'
 
     .line 185
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(I)V
@@ -395,7 +395,7 @@
     iget-object v1, v0, Lcom/android/settingslib/utils/CustomDialogHelper;->mDialogMessage:Landroid/widget/TextView;
 
     .line 191
-    const v4, 0x7f1409e4    # @string/user_grant_admin_message 'Admins have special privileges that other users don’t. An admin can manage all users, update or rese ...'
+    const v4, 0x7f130a6d    # @string/user_grant_admin_message 'Admins have special privileges that other users don’t. An admin can manage all users, update or rese ...'
 
     .line 193
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(I)V
@@ -480,14 +480,14 @@
     if-eqz v7, :cond_7
 
     .line 255
-    const v8, 0x7f1409de    # @string/user_add_user_message_short 'When you add a new user, that person needs to set up their space.\n\nAny user can update apps for all  ...'
+    const v8, 0x7f130a67    # @string/user_add_user_message_short 'When you add a new user, that person needs to set up their space.\n\nAny user can update apps for all  ...'
 
     .line 257
     goto :goto_2
 
     .line 260
     :cond_7
-    const v8, 0x7f1409dd    # @string/user_add_user_message_long 'You can share this device with other people by creating additional users. Each user has their own sp ...'
+    const v8, 0x7f130a66    # @string/user_add_user_message_long 'You can share this device with other people by creating additional users. Each user has their own sp ...'
 
     .line 261
     :goto_2
@@ -513,7 +513,7 @@
     iget-object v0, p0, Lcom/android/settingslib/users/CreateUserDialogController;->mActivity:Landroid/app/Activity;
 
     .line 277
-    const v1, 0x7f0808e9    # @drawable/ic_person_add 'res/drawable/ic_person_add.xml'
+    const v1, 0x7f08090e    # @drawable/ic_person_add 'res/drawable/ic_person_add.xml'
 
     .line 279
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -546,7 +546,7 @@
     iget-object v0, v1, Lcom/android/settingslib/utils/CustomDialogHelper;->mDialogTitle:Landroid/widget/TextView;
 
     .line 304
-    const v4, 0x7f1409df    # @string/user_add_user_title 'Add new user?'
+    const v4, 0x7f130a68    # @string/user_add_user_title 'Add new user?'
 
     .line 306
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
@@ -561,7 +561,7 @@
     iget-object v0, v1, Lcom/android/settingslib/utils/CustomDialogHelper;->mNegativeButton:Landroid/widget/Button;
 
     .line 317
-    const v4, 0x7f140253    # @string/cancel 'Cancel'
+    const v4, 0x7f13025a    # @string/cancel 'Cancel'
 
     .line 319
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setText(I)V

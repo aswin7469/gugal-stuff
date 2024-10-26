@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimationKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -30,18 +30,21 @@
     invoke-direct {v3, v1, v2}, Landroidx/compose/ui/unit/IntOffset;-><init>(J)V
 
     .line 11
-    const/high16 v1, 0x43c80000    # 400.0f
+    const/4 v1, 0x0
 
     .line 14
-    invoke-static {v1, v3, v0}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
+    const/high16 v2, 0x43c80000    # 400.0f
 
-    .line 16
+    .line 15
+    invoke-static {v1, v2, v3, v0}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FFLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
+
+    .line 17
     move-result-object v0
 
-    .line 19
+    .line 20
     sput-object v0, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimationKt;->InterruptionSpec:Landroidx/compose/animation/core/SpringSpec;
 
-    .line 20
+    .line 21
     return-void
-    .line 22
+    .line 23
 .end method

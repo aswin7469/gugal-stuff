@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/text/AnnotatedStringKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -218,50 +218,50 @@
     new-instance p2, Ljava/lang/StringBuilder;
 
     .line 107
-    const-string v0, "start ("
+    const-string/jumbo v0, "start ("
 
     .line 109
     invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 111
+    .line 112
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 114
+    .line 115
     const-string p0, ") should be less than or equal to end ("
 
-    .line 117
+    .line 118
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 119
+    .line 120
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 122
+    .line 123
     const/16 p0, 0x29
 
-    .line 125
+    .line 126
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 127
+    .line 128
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 130
+    .line 131
     move-result-object p0
-
-    .line 133
-    new-instance p1, Ljava/lang/IllegalArgumentException;
 
     .line 134
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    .line 135
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 136
+    .line 137
     move-result-object p0
 
-    .line 139
+    .line 140
     invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 140
+    .line 141
     throw p1
-    .line 143
+    .line 144
 .end method
 
 .method public static final getLocalSpanStyles(Landroidx/compose/ui/text/AnnotatedString;II)Ljava/util/List;

@@ -1,6 +1,6 @@
 .class public final Landroidx/room/coroutines/PooledConnectionImpl$StatementWrapper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/sqlite/SQLiteStatement;
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public final bindLong(IJ)V
+.method public final bindLong(JI)V
     .locals 7
 
     .line 1
@@ -86,7 +86,7 @@
     iget-object p0, p0, Landroidx/room/coroutines/PooledConnectionImpl$StatementWrapper;->delegate:Landroidx/sqlite/SQLiteStatement;
 
     .line 25
-    invoke-interface {p0, p1, p2, p3}, Landroidx/sqlite/SQLiteStatement;->bindLong(IJ)V
+    invoke-interface {p0, p1, p2, p3}, Landroidx/sqlite/SQLiteStatement;->bindLong(JI)V
 
     .line 27
     return-void

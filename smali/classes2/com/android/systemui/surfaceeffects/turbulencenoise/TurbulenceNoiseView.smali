@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;
 .super Landroid/view/View;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -92,7 +92,7 @@
 .end method
 
 .method public final initShader(Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;)V
-    .locals 1
+    .locals 2
 
     .line 1
     iput-object p2, p0, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;->noiseConfig:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
@@ -144,11 +144,119 @@
     invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 30
-    invoke-virtual {p0, p2}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader;->applyConfig(Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;)V
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 33
-    return-void
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
     .line 36
+    const p1, 0x4008f5c3    # 2.14f
+
+    .line 39
+    const-string v0, "in_gridNum"
+
+    .line 42
+    invoke-virtual {p0, v0, p1}, Landroid/graphics/RuntimeShader;->setFloatUniform(Ljava/lang/String;F)V
+
+    .line 44
+    const-string p1, "in_pixelDensity"
+
+    .line 47
+    iget v0, p2, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;->pixelDensity:F
+
+    .line 49
+    invoke-virtual {p0, p1, v0}, Landroid/graphics/RuntimeShader;->setFloatUniform(Ljava/lang/String;F)V
+
+    .line 51
+    const-string p1, "in_color"
+
+    .line 54
+    iget v0, p2, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;->color:I
+
+    .line 56
+    invoke-virtual {p0, p1, v0}, Landroid/graphics/RuntimeShader;->setColorUniform(Ljava/lang/String;I)V
+
+    .line 58
+    const-string p1, "in_screenColor"
+
+    .line 61
+    const/high16 v0, -0x1000000
+
+    .line 63
+    invoke-virtual {p0, p1, v0}, Landroid/graphics/RuntimeShader;->setColorUniform(Ljava/lang/String;I)V
+
+    .line 65
+    const-string p1, "in_size"
+
+    .line 68
+    iget v0, p2, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;->width:F
+
+    .line 70
+    iget v1, p2, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;->height:F
+
+    .line 72
+    invoke-virtual {p0, p1, v0, v1}, Landroid/graphics/RuntimeShader;->setFloatUniform(Ljava/lang/String;FF)V
+
+    .line 74
+    const p1, 0x3a83126f    # 0.001f
+
+    .line 77
+    invoke-static {v1, p1}, Ljava/lang/Float;->max(FF)F
+
+    .line 80
+    move-result p1
+
+    .line 83
+    div-float/2addr v0, p1
+
+    .line 84
+    const-string p1, "in_aspectRatio"
+
+    .line 85
+    invoke-virtual {p0, p1, v0}, Landroid/graphics/RuntimeShader;->setFloatUniform(Ljava/lang/String;F)V
+
+    .line 87
+    const-string p1, "in_lumaMatteBlendFactor"
+
+    .line 90
+    const v0, 0x3e851eb8    # 0.26f
+
+    .line 92
+    invoke-virtual {p0, p1, v0}, Landroid/graphics/RuntimeShader;->setFloatUniform(Ljava/lang/String;F)V
+
+    .line 95
+    const-string p1, "in_lumaMatteOverallBrightness"
+
+    .line 98
+    const v0, 0x3db851ec    # 0.09f
+
+    .line 100
+    invoke-virtual {p0, p1, v0}, Landroid/graphics/RuntimeShader;->setFloatUniform(Ljava/lang/String;F)V
+
+    .line 103
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    .line 106
+    const-string v0, "in_inverseLuma"
+
+    .line 108
+    invoke-virtual {p0, v0, p1}, Landroid/graphics/RuntimeShader;->setFloatUniform(Ljava/lang/String;F)V
+
+    .line 110
+    iget p1, p2, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;->noiseOffsetY:F
+
+    .line 113
+    iget v0, p2, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;->noiseOffsetZ:F
+
+    .line 115
+    iget p2, p2, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;->noiseOffsetX:F
+
+    .line 117
+    invoke-virtual {p0, p2, p1, v0}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader;->setNoiseMove(FFF)V
+
+    .line 119
+    return-void
+    .line 122
 .end method
 
 .method public final onDraw(Landroid/graphics/Canvas;)V

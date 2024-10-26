@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">geselecteerde widget plaatsen</string>
   <string name="accessibility_action_label_remove_widget">widget verwijderen</string>
   <string name="accessibility_action_label_select_widget">widget selecteren</string>
-  <string name="accessibility_action_open_communal_hub">Widgets op het vergrendelscherm</string>
   <string name="accessibility_action_pip_resize">Formaat aanpassen</string>
   <string name="accessibility_action_pip_stash">Verbergen</string>
   <string name="accessibility_action_pip_unstash">Niet meer verbergen</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Bediening met 1 hand afsluiten</string>
   <string name="accessibility_airplane_mode">Vliegtuigmodus.</string>
   <string name="accessibility_allow_diagonal_scrolling">Diagonaal scrollen toestaan</string>
+  <string name="accessibility_assistant_poodle">Gesproken zoekopdracht</string>
   <string name="accessibility_authenticate_hint">verifiëren</string>
   <string name="accessibility_back">Terug</string>
   <string name="accessibility_banner_message_dismiss">Sluiten</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">apparaat opgeven</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Ethernetverbinding verbroken.</string>
-  <string name="accessibility_fingerprint_bouncer">Verificatie vereist. Raak de vingerafdruksensor aan om de verificatie uit te voeren.</string>
   <string name="accessibility_fingerprint_label">Vingerafdruksensor</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">schakelen</string>
   <string name="accessibility_floating_button_action_edit">Bewerken</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menu</string>
   <string name="accessibility_multi_user_list_switcher">pull-downmenu</string>
   <string name="accessibility_multi_user_switch_switcher">Gebruiker wijzigen</string>
+  <string name="accessibility_next_alarm">Volgende wekker om %s</string>
   <string name="accessibility_no_calling">Geen gesprekken.</string>
   <string name="accessibility_no_phone">Geen telefoonsignaal.</string>
   <string name="accessibility_no_wifi">Wifi-verbinding verbroken.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Het scherm is nu vergrendeld in staande stand.</string>
   <string name="accessibility_send_smart_reply">Verzenden</string>
   <string name="accessibility_sensors_off_active">'Sensoren uit' actief</string>
+  <string name="accessibility_settings_gear">Instellingen voor Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Plaats je vinger op de vingerafdruksensor. Dat is de kortere knop aan de zijkant van de telefoon.</string>
+  <string name="accessibility_smartspace_page">Pagina %1$d van %2$d</string>
   <string name="accessibility_split_bottom">Gesplitst scherm onder</string>
   <string name="accessibility_split_left">Gesplitst scherm links</string>
   <string name="accessibility_split_right">Gesplitst scherm rechts</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">Wifi: drie streepjes.</string>
   <string name="accessibility_wifi_two_bars">Wifi: twee streepjes.</string>
   <string name="accesssibility_keyguard_retry">Swipe omhoog om Ontgrendelen via gezichtsherkenning opnieuw te proberen</string>
+  <string name="adaptive_charging_notify_des">Batterij vol om %1$s. Er wordt geleidelijk opgeladen om de levensduur van de batterij te verlengen.</string>
+  <string name="adaptive_charging_notify_title">Aangepast opladen staat aan</string>
+  <string name="adaptive_charging_notify_turn_off_once">Eén keer uitzetten</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Aangepast opladen • Vol om %2$s</string>
   <string name="add">Toevoegen</string>
   <string name="add_guest_failed">Kan geen nieuwe gast maken</string>
   <string name="airplane_mode">Vliegtuig­modus</string>
@@ -233,6 +239,7 @@
   <string name="app_info">App-info</string>
   <string name="app_label">Systeem-UI</string>
   <string name="assistant_attention_content_description">Gebruikersaanwezigheid is waargenomen</string>
+  <string name="assistant_scrim_label">Luisteren, tik om te annuleren</string>
   <string name="audio_sharing_description">Audio delen</string>
   <string name="audio_status">Aan het luisteren</string>
   <string name="auto_data_switch_dialog_negative_button">Nee, bedankt</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Terug</string>
   <string name="battery">Batterij</string>
   <string name="battery_detail_switch_title">Batterijbesparing</string>
-  <string name="battery_low_description">Je hebt nog %s batterij. Batterijbesparing zet het donkere thema aan, beperkt activiteit op de achtergrond en vertraagt meldingen.</string>
+  <string name="battery_health_notify_learn_more">Meer informatie</string>
   <string name="battery_low_intro">Batterijbesparing zet het donkere thema aan, beperkt activiteit op de achtergrond en vertraagt meldingen.</string>
-  <string name="battery_low_title">Batterijbesparing aanzetten?</string>
   <string name="battery_saver_confirmation_ok">Aanzetten</string>
   <string name="battery_saver_confirmation_title">Batterijbesparing aanzetten?</string>
   <string name="battery_saver_confirmation_title_generic">Over Batterijbesparing</string>
-  <string name="battery_saver_dismiss_action">Nee, bedankt</string>
   <string name="battery_saver_start_action">Aanzetten</string>
   <string name="battery_state_unknown_notification_text">Tik hier voor meer informatie</string>
   <string name="battery_state_unknown_notification_title">Probleem bij het lezen van je batterijmeter</string>
@@ -296,14 +301,9 @@ Probeer het over %d seconden opnieuw.</string>
   <string name="bluetooth_active_battery_level_untethered">Actief. L: batterijniveau %1$s, R: batterijniveau %2$s.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Actief. L: %1$s batterij.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Actief. R: %1$s batterij.</string>
-  <string name="bluetooth_active_media_only_battery_level">Actief (alleen media). Batterijniveau %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Actief (alleen media), L: batterijniveau %1$s, R: batterijniveau %2$s.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Actief (alleen media)</string>
   <string name="bluetooth_active_no_battery_level">Actief</string>
   <string name="bluetooth_battery_level">Batterijniveau %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Verbonden (ondersteunt audio delen), batterijniveau %1$s.</string>
   <string name="bluetooth_battery_level_untethered">L: batterijniveau %1$s, R: batterijniveau %2$s.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Verbonden (ondersteunt audio delen), L: batterijniveau %1$s, R: batterijniveau %2$s.</string>
   <string name="bluetooth_connected">Verbonden: %1$s</string>
   <string name="bluetooth_connecting">Verbinding maken...</string>
   <string name="bluetooth_disconnected">Verbinding verbroken</string>
@@ -311,13 +311,11 @@ Probeer het over %d seconden opnieuw.</string>
   <string name="bluetooth_hearing_aid_left_active">Actief (alleen links)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Actief (links en rechts)</string>
   <string name="bluetooth_hearing_aid_right_active">Actief (alleen rechts)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Verbonden (ondersteunt audio delen)</string>
   <string name="bluetooth_pairing">Koppelen...</string>
   <string name="bluetooth_pairing_device_down_error_message">Kan niet communiceren met %1$s.</string>
   <string name="bluetooth_pairing_error_message">Kan niet koppelen aan %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Kan niet koppelen aan %1$s door een onjuiste pincode of toegangscode.</string>
   <string name="bluetooth_pairing_rejected_error_message">Koppeling geweigerd door %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">Ondersteunt audio delen</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Computer</string>
   <string name="bluetooth_talkback_headphone">Hoofdtelefoon</string>
@@ -356,8 +354,6 @@ Probeer het over %d seconden opnieuw.</string>
   <string name="bubble_overflow_button_content_description">Overloop</string>
   <string name="bubble_overflow_empty_subtitle">Recente bubbels en gesloten bubbels zie je hier</string>
   <string name="bubble_overflow_empty_title">Geen recente bubbels</string>
-  <string name="bubble_shortcut_label">Bubbels</string>
-  <string name="bubble_shortcut_long_label">Bubbels tonen</string>
   <string name="bubbles_app_settings">Instellingen voor %1$s</string>
   <string name="bubbles_dont_bubble_conversation">Gesprekken niet in bubbels tonen</string>
   <string name="bubbles_settings_button_description">Instellingen voor %1$s-bubbels</string>
@@ -387,6 +383,10 @@ Tik om opnieuw passend te maken.</string>
   <string name="cast_to_other_device_stop_dialog_button">Casten stoppen</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Je stopt met het casten van &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">Mobiele data uit</string>
+  <string name="charge_limit_discovery_notification_enable_button">Nu aanzetten</string>
+  <string name="charge_limit_discovery_notification_text">Probeer de functie voor begrenzing tot 80% aan te zetten om de batterijconditie en -levensduur te beschermen. Je kunt dit altijd beheren via de instellingen.</string>
+  <string name="charge_limit_discovery_notification_title">Bescherm je batterij tijdens het opladen</string>
+  <string name="charging_reverse_text">Batterij delen</string>
   <string name="clear_all_notifications_text">Alles wissen</string>
   <string name="clipboard">Klembord</string>
   <string name="clipboard_content_copied">Content gekopieerd</string>
@@ -406,6 +406,11 @@ Tik om opnieuw passend te maken.</string>
   <string name="close_button_text">Sluiten</string>
   <string name="close_dialog_button">Sluiten</string>
   <string name="collapse_menu_text">Menu sluiten</string>
+  <string name="columbus_bouncer_message">Ontgrendel het apparaat om snel tikken af te ronden</string>
+  <string name="columbus_target_request_dialog_allow">Toestaan</string>
+  <string name="columbus_target_request_dialog_deny">Niet toestaan</string>
+  <string name="columbus_target_request_dialog_summary">Tik 2 keer op de achterkant van je telefoon om %1$s te openen. Je kunt dit op elk moment wijzigen in Instellingen.</string>
+  <string name="columbus_target_request_dialog_title">%1$s openen via Snel tikken?</string>
   <string name="communal_tutorial_indicator_text">Swipe naar links om de communitytutorial te starten</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Het scherm aan de binnenkant wordt gemirrord. Het scherm aan de voorkant wordt uitgezet.</string>
   <string name="connected_display_dialog_start_mirroring">Mirroren naar extern scherm?</string>
@@ -511,8 +516,11 @@ Als je hervat, kunnen er kosten voor datagebruik in rekening worden gebracht.</s
   <string name="data_usage_disabled_dialog_mobile_title">Mobiele data zijn onderbroken</string>
   <string name="data_usage_disabled_dialog_title">Gegevens zijn onderbroken</string>
   <string name="days_timestamp">%1$s dagen geleden</string>
-  <string name="default_error_message">Ongeldige invoer</string>
   <string name="default_popup_window_title">Pop-upvenster</string>
+  <string name="defender_notify_resume_charge">Overschrijven</string>
+  <string name="defender_notify_title">De batterij beschermen</string>
+  <string name="defender_post_notify_des">Opladen was geoptimaliseerd van %1$s tot %2$s om de levensduur van de batterij te verlengen</string>
+  <string name="defender_post_notify_title">Opladen was geoptimaliseerd</string>
   <string name="demo_mode">Demomodus voor systeemgebruikersinterface</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Scherm maximaliseren</string>
   <string name="desktop_mode_maximize_menu_snap_text">Scherm halveren</string>
@@ -532,20 +540,32 @@ Als je hervat, kunnen er kosten voor datagebruik in rekening worden gebracht.</s
   <string name="do_disclosure_generic">Dit apparaat is eigendom van je organisatie</string>
   <string name="do_disclosure_with_name">Dit apparaat is eigendom van %s</string>
   <string name="do_financed_disclosure_with_name">Dit apparaat wordt geleverd door %s</string>
+  <string name="dock_a11y_action_show_photo_text">Fotolijstje tonen</string>
+  <string name="dock_alignment_not_charging">Lijn de telefoon opnieuw uit om draadloos op te laden</string>
+  <string name="dock_alignment_slow_charging">Lijn de telefoon opnieuw uit om sneller op te laden</string>
+  <string name="dock_defender_first_run_des">Het opladen wordt bij 90% in de wacht gezet terwijl je tablet in het dock is geplaatst, om de levensduur van de batterij te verlengen. Dit kun je op elk gewenst moment in de instellingen overschrijven.</string>
+  <string name="dock_defender_first_run_settings">Instellingen</string>
+  <string name="dock_defender_first_run_title">Opladen is in de wacht gezet om de batterij te beschermen</string>
   <string name="dock_multi_instances_not_supported_text">Deze app kan maar in 1 venster worden geopend</string>
   <string name="dock_non_resizeble_failed_to_dock_text">App ondersteunt geen gesplitst scherm</string>
+  <string name="dock_photo_preview_text">Fotolijstje starten…</string>
+  <string name="dock_promo_text">Swipe naar links voor het fotolijstje</string>
   <string name="done">Klaar</string>
   <string name="drag_split_not_supported">Deze melding biedt geen ondersteuning voor slepen naar het gesplitste scherm</string>
   <string name="drag_to_add_tiles">Houd een tegel ingedrukt en sleep om die toe te voegen</string>
   <string name="drag_to_rearrange_tiles">Houd een tegel ingedrukt en sleep om die te verplaatsen</string>
   <string name="drag_to_remove_disabled">Je hebt minimaal %1$d tegels nodig</string>
   <string name="drag_to_remove_tiles">Sleep hier naartoe om te verwijderen</string>
+  <string name="dream_lockscreen_wallpaper_description">Je huidige vergrendelschermachtergrond gebruiken</string>
+  <string name="dream_lockscreen_wallpaper_label">Achtergrond</string>
   <string name="dream_overlay_status_bar_alarm_set">Wekker gezet</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Camera en microfoon staan uit</string>
   <string name="dream_overlay_status_bar_camera_off">Camera staat uit</string>
   <string name="dream_overlay_status_bar_mic_off">Microfoon staat uit</string>
   <string name="dream_overlay_status_bar_priority_mode">Prioriteitsmodus</string>
   <string name="dream_overlay_status_bar_wifi_off">Wifi niet beschikbaar</string>
+  <string name="dwell_defender_notify_des">Dit helpt de levensduur van de batterij te verlengen als je telefoon te lang wordt opgeladen</string>
+  <string name="dwell_defender_notify_title">Opladen is in de wacht gezet om de batterij te beschermen</string>
   <string name="edit_user_info_message">De naam en afbeelding die je kiest, zijn zichtbaar voor iedereen die dit apparaat gebruikt.</string>
   <string name="edit_widget">Widget bewerken</string>
   <string name="empty_shade_text">Geen meldingen</string>
@@ -561,12 +581,16 @@ Als je hervat, kunnen er kosten voor datagebruik in rekening worden gebracht.</s
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Geavanceerd</string>
   <string name="expand_menu_text">Menu openen</string>
+  <string name="extreme_battery_saver_text">Extreem</string>
+  <string name="extreme_low_battery_notification_text">Je telefoon gaat uit als deze niet snel wordt opgeladen</string>
+  <string name="extreme_low_battery_notification_title">Batterij bijna leeg</string>
   <string name="face_re_enroll_dialog_content">Als je Ontgrendelen via gezichtsherkenning weer wilt instellen, wordt je huidige gezichtsmodel verwijderd.
 
 Je moet deze functie opnieuw instellen om je gezicht te gebruiken voor telefoonontgrendeling.</string>
   <string name="face_re_enroll_dialog_title">Ontgrendelen via gezichtsherkenning instellen</string>
   <string name="face_re_enroll_notification_name">Ontgrendelen via gezichtsherkenning</string>
   <string name="face_re_enroll_notification_title">Ontgrendelen via gezicht weer instellen</string>
+  <string name="face_reenroll_dialog_confirm">Instellen</string>
   <string name="face_reenroll_failure_dialog_content">Kan ontgrendelen via gezichtsherkenning niet instellen. Ga naar Instellingen om het opnieuw te proberen.</string>
   <string name="failed_attempts_now_wiping_device">Te veel onjuiste pogingen. De gegevens van dit apparaat worden verwijderd.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Sluiten</string>
@@ -604,6 +628,7 @@ Nadat ze zijn verwijderd, moet je Ontgrendelen met vingerafdruk opnieuw instelle
   <string name="font_scaling_smaller">Verkleinen</string>
   <string name="fullscreen_text">Volledig scherm</string>
   <string name="game_status">Aan het spelen</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Ontgrendelen verlengen uitgezet</string>
   <string name="go_to_web">Ga naar browser</string>
   <string name="got_it">OK</string>
@@ -640,6 +665,7 @@ Nadat ze zijn verwijderd, moet je Ontgrendelen met vingerafdruk opnieuw instelle
   <string name="guest_reset_and_restart_dialog_title">Gastsessie resetten?</string>
   <string name="guest_reset_guest_confirm_button">Resetten</string>
   <string name="guest_resetting">Gast resetten…</string>
+  <string name="handle_invocation_prompt">Swipe om te praten</string>
   <string name="handle_text">Gebruikersnaam</string>
   <string name="headset">Headset</string>
   <string name="hearing_devices_preset_label">Voorinstelling</string>
@@ -656,6 +682,7 @@ Tik voor meer informatie</string>
   <string name="high_temp_title">De telefoon wordt warm</string>
   <string name="home_controls_dream_description">Gebruik bediening voor in huis als screensaver</string>
   <string name="home_controls_dream_label">Bediening voor in huis</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Er is minstens één apparaat of apparaatdeelvenster beschikbaar</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Als je de Home-app wilt toevoegen als sneltoets, zorg je dat de app is geïnstalleerd</string>
   <string name="hub_mode_add_widget_button_text">Widget toevoegen</string>
@@ -669,12 +696,16 @@ Tik voor meer informatie</string>
   <string name="in_progress">Bezig</string>
   <string name="inattentive_sleep_warning_message">Het apparaat wordt binnenkort uitgezet. Druk om het aan te laten.</string>
   <string name="inattentive_sleep_warning_title">Stand-by</string>
+  <string name="incompatible_charging_learn_more">Meer informatie</string>
+  <string name="incompatible_charging_notify_des">Je telefoon laadt misschien langzaam of helemaal niet op. Gebruik een aanbevolen kabel en adapter om sneller op te laden.</string>
+  <string name="incompatible_charging_notify_title">Oplaadaccessoire checken</string>
   <string name="indeterminate">Gedeeltelijk aangevinkt</string>
   <string name="inline_done_button">Klaar</string>
   <string name="inline_ok_button">Toepassen</string>
   <string name="inline_turn_off_notifications">Meldingen uitzetten</string>
   <string name="input_switch_input_language_next">Overschakelen naar volgende taal</string>
   <string name="input_switch_input_language_previous">Overschakelen naar vorige taal</string>
+  <string name="install_app">App installeren</string>
   <string name="install_dialer_on_work_profile_action">Installeer een telefoon-app voor werk</string>
   <string name="install_type_instant">Instant app</string>
   <string name="instant_apps">Instant-apps</string>
@@ -683,8 +714,6 @@ Tik voor meer informatie</string>
   <string name="instant_apps_title">%1$s actief</string>
   <string name="interruption_level_none">Helemaal stil</string>
   <string name="interruption_level_priority">Alleen prioriteit</string>
-  <string name="invalid_charger_text">Gebruik de oplader die bij je apparaat is geleverd</string>
-  <string name="invalid_charger_title">Kan niet opladen via USB</string>
   <string name="issuerecord_background_processing_label">Probleemopname verwerken</string>
   <string name="issuerecord_ongoing_screen_only">Probleem opnemen</string>
   <string name="issuerecord_save_title">Probleemopname opgeslagen</string>
@@ -766,21 +795,33 @@ Tik voor meer informatie</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Apparaat vergrendeld
 Verificatie mislukt</string>
   <string name="keyguard_indication_charging_time">%2$s • Opladen • Vol over %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Opladen klaar om %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Opladen • Vol over %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Volledig opgeladen om %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Snel opladen • Vol over %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Snel opladen • Vol om %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Helemaal opgeladen</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Langzaam opladen • Vol over %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Volledig opgeladen om %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Volledig opgeladen om %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Draadloos opladen • Vol over %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Ontgrendeld gehouden door TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Volledig opgeladen om %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Ontgrendeld gehouden door Ontgrendelen verlengen</string>
   <string name="keyguard_missing_sim_message_short">Geen simkaart</string>
   <string name="keyguard_network_locked_message">Netwerk vergrendeld</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Onbruikbare simkaart.</string>
   <string name="keyguard_plugged_in">%s • Opladen</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Snel opladen</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Snel opladen</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Opladen in de wacht gezet om batterij te beschermen</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Langzaam opladen</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Opladen</string>
   <string name="keyguard_plugged_in_dock">%s • Opladen</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Opladen</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Check je oplaadaccessoire</string>
+  <string name="keyguard_plugged_in_v2">%s • Opladen</string>
   <string name="keyguard_plugged_in_wireless">%s • Draadloos opladen</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Opladen</string>
   <string name="keyguard_retry">Swipe omhoog om het opnieuw te proberen</string>
   <string name="keyguard_sim_error_message_short">Ongeldige kaart.</string>
   <string name="keyguard_sim_locked_message">Simkaart is vergrendeld.</string>
@@ -811,7 +852,6 @@ Verificatie mislukt</string>
   <string name="kg_invalid_confirm_pin_hint">Pincodes komen niet overeen</string>
   <string name="kg_invalid_sim_pin_hint">Geef een pincode van vier tot acht cijfers op.</string>
   <string name="kg_invalid_sim_puk_hint">De pukcode is minimaal acht cijfers lang.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Geef de pincode van de simkaart op. Je hebt nog # poging over voordat je contact met je provider moet opnemen om het apparaat te laten ontgrendelen.}other{Geef de pincode van de simkaart op. Je hebt nog # pogingen.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{De simkaart is nu gedeactiveerd. Geef de pukcode op om door te gaan. Je hebt nog # poging over voordat de simkaart definitief onbruikbaar wordt. Neem contact op met je provider voor meer informatie.}other{De simkaart is nu gedeactiveerd. Geef de pukcode op om door te gaan. Je hebt nog # pogingen over voordat de simkaart definitief onbruikbaar wordt. Neem contact op met je provider voor meer informatie.}}</string>
   <string name="kg_password_pin_failed">Bewerking met pincode voor simkaart is mislukt.</string>
   <string name="kg_password_puk_failed">Bewerking met pukcode voor simkaart is mislukt.</string>
@@ -852,7 +892,7 @@ Verificatie mislukt</string>
   <string name="kg_sim_pin_instructions_multi">Geef de pincode voor de simkaart van '%1$s' op.</string>
   <string name="kg_sim_unlock_progress_dialog_message">Simkaart ontgrendelen…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Probeer het over # seconde opnieuw.}other{Probeer het over # seconden opnieuw.}}</string>
-  <string name="kg_trust_agent_disabled">Trust agent is niet beschikbaar</string>
+  <string name="kg_trust_agent_disabled">Ontgrendelen verlengen is niet beschikbaar</string>
   <string name="kg_unlock_with_password_or_fp">Ontgrendel met wachtwoord/vingerafdruk</string>
   <string name="kg_unlock_with_pattern_or_fp">Ontgrendel met patroon/vingerafdruk</string>
   <string name="kg_unlock_with_pin_or_fp">Ontgrendel met pincode/vingerafdruk</string>
@@ -900,6 +940,10 @@ Als je deze app geen toegang tot alle apparaatlogboeken geeft, heeft de app nog 
   <string name="log_access_confirmation_learn_more">Meer informatie</string>
   <string name="log_access_confirmation_learn_more_at">Ga voor meer informatie naar %s</string>
   <string name="log_access_confirmation_title">%s toegang geven tot alle apparaatlogboeken?</string>
+  <string name="low_battery_label">De batterij is bijna leeg</string>
+  <string name="low_battery_notification_text">Zet Standaard batterijbesparing aan om de batterijduur te verlengen</string>
+  <string name="low_battery_notification_text_ebs">Zet Extreme batterijbesparing aan om de batterijduur te verlengen</string>
+  <string name="low_battery_notification_title">Nog %s batterijlading over</string>
   <string name="m3c_search_bar_search">Zoeken</string>
   <string name="m3c_suggestions_available">Suggesties hieronder</string>
   <string name="magnification_close_settings_click_label">Instellingen voor vergroting sluiten</string>
@@ -939,8 +983,6 @@ Als je deze app geen toegang tot alle apparaatlogboeken geeft, heeft de app nog 
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Stoppen</string>
   <string name="media_output_end_session_dialog_summary">Stop je gedeelde sessie om media naar een ander apparaat te verplaatsen</string>
-  <string name="media_output_first_broadcast_title">Hoe uitzenden werkt</string>
-  <string name="media_output_first_notify_broadcast_message">Mensen bij jou in de buurt met geschikte bluetooth-apparaten kunnen luisteren naar de media die je uitzendt</string>
   <string name="media_output_group_title_speakers_and_displays">Speakers en schermen</string>
   <string name="media_output_group_title_suggested_device">Voorgestelde apparaten</string>
   <string name="media_output_label_title">%s wordt afgespeeld op</string>
@@ -967,9 +1009,6 @@ Als je deze app geen toegang tot alle apparaatlogboeken geeft, heeft de app nog 
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Als je een app cast, heeft Android toegang tot alles dat wordt getoond of afgespeeld in die app. Wees daarom voorzichtig met bijvoorbeeld wachtwoorden, betalingsgegevens, berichten, foto's, en audio en video.</string>
   <string name="media_projection_sys_service_dialog_title">Opnemen of casten starten?</string>
   <string name="media_projection_sys_service_dialog_warning">De service die deze functie levert, krijgt tijdens het opnemen of casten toegang tot alle informatie die zichtbaar is op je scherm of wordt afgespeeld op je apparaat. Dit omvat informatie zoals wachtwoorden, betalingsgegevens, foto's, berichten en audio die je afspeelt.</string>
-  <string name="media_projection_task_switcher_action_back">Terugschakelen</string>
-  <string name="media_projection_task_switcher_action_switch">In plaats daarvan deze app delen</string>
-  <string name="media_projection_task_switcher_text">Delen wordt onderbroken als je schakelt tussen apps</string>
   <string name="media_seamless_other_device">Ander apparaat</string>
   <string name="media_transfer_default_device_name">Verbonden apparaat</string>
   <string name="media_transfer_dock_speaker_device_name">Dockspeaker</string>
@@ -1280,12 +1319,17 @@ Als je vragen hebt, kun je contact opnemen met %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Draai de telefoon om voor een hogere resolutie</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Van scherm wisselen?</string>
   <string name="recent_conversations">Recente gesprekken</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">heeft een afbeelding gestuurd</string>
   <string name="remove_from_settings">Verwijderen uit Instellingen</string>
   <string name="remove_from_settings_prompt">Systeem-UI-tuner uit Instellingen verwijderen en het gebruik van alle functies daarvan stopzetten?</string>
   <string name="require_unlock_for_nfc">Ontgrendel het apparaat om NFC te gebruiken</string>
   <string name="restart_button_description">Tik om deze app opnieuw op te starten voor een betere weergave</string>
   <string name="retry_face">Gezichtsherkenning opnieuw proberen</string>
+  <string name="reverse_charging_device_name_text">Andere Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s levert voeding (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Batterij delen staat aan</string>
+  <string name="reverse_charging_title">Batterij delen</string>
   <string name="right_icon">Icoon rechts</string>
   <string name="right_keycode">Toetscode rechts</string>
   <string name="right_nav_bar_button_type">Extra knoptype rechts</string>
@@ -1293,8 +1337,15 @@ Als je vragen hebt, kun je contact opnemen met %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">Tik voor batterij- en datagebruik</string>
   <string name="running_foreground_services_title">Apps uitgevoerd op achtergrond</string>
-  <string name="satellite_connected_carrier_text">SOS via satelliet</string>
+  <string name="satellite_connected_carrier_text">SOS via satelliet op de Pixel</string>
   <string name="save">Opslaan</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Annuleren</string>
+  <string name="saver_confirmation_dialog_subtitle">Kies de modus die je wilt gebruiken</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Bevat alle hierboven vermelde wijzigingen. Onderbreekt ook niet-essentiële apps en de meldingen daarvan.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Beperkt visuele effecten en activiteit op de achtergrond. Zet het donkere thema aan als dit nog niet actief is.</string>
+  <string name="saver_confirmation_dialog_title">Welkom bij Batterijbesparing</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Extreme batterijbesparing</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Standaard batterijbesparing</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Schermopname staat uit vanwege apparaatbeleid</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Geblokkeerd door je IT-beheerder</string>
   <string name="screen_pinning_can_open_other_apps">De vastgezette app kan andere apps openen.</string>
@@ -1312,6 +1363,12 @@ Als je vragen hebt, kun je contact opnemen met %2$s.</string>
   <string name="screen_pinning_toast">Tik op Terug en Overzicht en houd de knoppen vast om deze app los te maken</string>
   <string name="screen_pinning_toast_gesture_nav">Swipe omhoog en houd vast om deze app los te maken</string>
   <string name="screen_pinning_toast_recents_invisible">Tik op Terug en Home en houd de knoppen vast om deze app los te maken</string>
+  <string name="screen_protector_absent_message">Zet de modus voor de screenprotector uit voor een betere tikreactie als je geen screenprotector gebruikt.</string>
+  <string name="screen_protector_disable_notification">Melding uitzetten</string>
+  <string name="screen_protector_go_to_settings">Naar instellingen</string>
+  <string name="screen_protector_got_it">OK</string>
+  <string name="screen_protector_mode_title">Modus voor screenprotector</string>
+  <string name="screen_protector_present_message">Zet de modus voor de screenprotector aan voor een betere tikreactie met een screenprotector.</string>
   <string name="screen_share_permission_app_selector_title">App delen of opnemen</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Volledig scherm</string>
   <string name="screen_share_permission_dialog_option_single_app">Eén app</string>
@@ -1364,9 +1421,9 @@ Als je vragen hebt, kun je contact opnemen met %2$s.</string>
   <string name="screenshot_saving_work_profile_title">Screenshot opslaan in werkprofiel…</string>
   <string name="screenshot_scroll_label">Meer opnemen</string>
   <string name="screenshot_share_description">Screenshot delen</string>
-  <string name="screenshot_share_label">Delen</string>
   <string name="screenshot_text">Screenshot</string>
   <string name="screenshot_top_boundary_pct">Bovengrens %1$d procent</string>
+  <string name="screenshot_view_description">Screenshot bekijken</string>
   <string name="screenshot_work_profile_notification">Opgeslagen in %1$s in het werkprofiel.</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Je vindt de vingerafdruksensor op de aan/uit-knop. Het is de platte knop naast de verhoogde volumeknop aan de zijkant van de telefoon.</string>
   <string name="see_all_bluetooth_devices">Alles tonen</string>
@@ -1384,6 +1441,12 @@ Als je vragen hebt, kun je contact opnemen met %2$s.</string>
   <string name="set_default_notes_app_toast_content">Standaard notitie-app instellen in Instellingen</string>
   <string name="settings_label">Instellingen</string>
   <string name="settingslib_learn_more_text">Meer informatie</string>
+  <string name="severe_battery_notification_switch_text">Overschakelen naar Extreme batterijbesparing? 
+
+Hiermee worden alle niet-essentiële apps en hun meldingen gepauzeerd.</string>
+  <string name="severe_battery_notification_text">Zet Extreme batterijbesparing aan. Hiermee worden alle niet-essentiële apps gepauzeerd.</string>
+  <string name="severe_battery_notification_title">Nog %s batterijlading over</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Aanzetten</string>
   <string name="share_to_app_stop_dialog_button">Delen stoppen</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Je stopt met het delen van &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Scherm delen stoppen?</string>
@@ -1406,6 +1469,9 @@ Als je vragen hebt, kun je contact opnemen met %2$s.</string>
   <string name="slice_permission_text_1">- Deze kan informatie lezen van %1$s</string>
   <string name="slice_permission_text_2">- Deze kan acties uitvoeren in %1$s</string>
   <string name="slice_permission_title">%1$s toestaan om segmenten van %2$s te tonen?</string>
+  <string name="smartspace_content_desc">Snel overzicht</string>
+  <string name="smartspace_flight_qr_code">QR-code</string>
+  <string name="smartspace_role_desc">Bekijken</string>
   <string name="snoozeHourOptions">{count,plural, =1{# uur}=2{# uur}other{# uur}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minuut}other{# minuten}}</string>
   <string name="snooze_undo">Ongedaan maken</string>
@@ -1416,6 +1482,8 @@ Als je vragen hebt, kun je contact opnemen met %2$s.</string>
   <string name="speed_label_slow">Langzaam</string>
   <string name="speed_label_very_fast">Zeer snel</string>
   <string name="split_screen_text">Gesplitst scherm</string>
+  <string name="squeeze_invocation_prompt">Knijpen om te praten</string>
+  <string name="standard_battery_saver_text">Standaard</string>
   <string name="start_dreams">Screensaver</string>
   <string name="state_empty">Leeg</string>
   <string name="state_off">Uit</string>
@@ -1453,6 +1521,8 @@ Als je vragen hebt, kun je contact opnemen met %2$s.</string>
   <string name="tab">Tabblad</string>
   <string name="tap_a_network_to_connect">Tik op een netwerk om verbinding te maken</string>
   <string name="tap_again">Tik nog een keer</string>
+  <string name="temp_defender_notify_des">Het opladen wordt hervat wanneer je telefoon terugkeert naar de normale temperatuur</string>
+  <string name="temp_defender_notify_title">Opladen is in de wacht gezet om de batterij te beschermen</string>
   <string name="template_percent">%1$d procent.</string>
   <string name="thermal">Thermisch</string>
   <string name="thermal_shutdown_dialog_help_text">Onderhoudsstappen bekijken</string>
@@ -1469,6 +1539,7 @@ Tik voor meer informatie</string>
   <string name="title_for_empty_state_cta">Krijg snel toegang tot je favoriete app-widgets zonder je tablet te ontgrendelen.</string>
   <string name="title_usb_accessory">USB-accessoire</string>
   <string name="to_switch_networks_disconnect_ethernet">Verbreek de ethernetverbinding om van netwerk te wisselen</string>
+  <string name="too_hot_label">Pixel te heet</string>
   <string name="touch_filtered_warning">Aangezien een app een rechtenverzoek afdekt, kan Instellingen je reactie niet verifiëren.</string>
   <string name="touchpad_tutorial_action_key_button">Actietoets</string>
   <string name="touchpad_tutorial_back_gesture_button">Gebaar voor terug</string>
@@ -1483,17 +1554,18 @@ Tik voor meer informatie</string>
   <string name="tuner_menu">Menu</string>
   <string name="tuner_minus">Min</string>
   <string name="tuner_other_apps">Andere apps</string>
+  <string name="tuner_persistent_warning">Deze experimentele functies kunnen veranderen, vastlopen of verdwijnen in toekomstige releases. Ga voorzichtig verder.</string>
   <string name="tuner_plus">Plus</string>
   <string name="tuner_right">Rechts</string>
   <string name="tuner_time">Tijd</string>
+  <string name="tuner_warning">Met Systeem-UI-tuner beschikt u over extra manieren om de Android-gebruikersinterface aan te passen. Deze experimentele functies kunnen veranderen, vastlopen of verdwijnen in toekomstige releases. Ga voorzichtig verder.</string>
+  <string name="tuner_warning_title">Leuk voor sommige gebruikers, maar niet voor iedereen</string>
   <string name="turn_off_airplane_mode">Vliegtuigmodus uitzetten</string>
   <string name="turn_on_bluetooth">Bluetooth gebruiken</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Functies zoals Quick Share en Vind mijn apparaat gebruiken bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth wordt morgenochtend aangezet</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Morgen automatisch aanzetten</string>
   <string name="turn_on_wifi">Wifi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Tv-standaard</string>
   <string name="two_weeks_timestamp">2 weken geleden</string>
   <string name="unknown">Onbekend</string>
   <string name="unlock_to_see_notif_text">Ontgrendel om oudere meldingen te zien</string>
@@ -1552,7 +1624,9 @@ Elke gebruiker kan apps updaten voor alle andere gebruikers.</string>
   <string name="volume_odi_captions_hint_enable">aanzetten</string>
   <string name="volume_odi_captions_tip">Automatisch ondertitelen</string>
   <string name="volume_panel_captioning_title">Live ondertiteling</string>
+  <string name="volume_panel_clear_calling_title">Helder gespreksgeluid</string>
   <string name="volume_panel_collapsed_sliders">Volumeschuifregelaars samengevouwen</string>
+  <string name="volume_panel_device_settings_title">Apparaatinstellingen</string>
   <string name="volume_panel_dialog_settings_button">Instellingen</string>
   <string name="volume_panel_enter_media_output_settings">Uitvoerinstellingen invoeren</string>
   <string name="volume_panel_expanded_sliders">Volumeschuifregelaars uitgevouwen</string>
@@ -1667,6 +1741,9 @@ Wifi-adres (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Onbekend</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Gratis</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wifi maakt momenteel niet automatisch verbinding</string>
+  <string name="wireless_charging_label">Draadloos opladen</string>
+  <string name="wireless_charging_notification_text">Draadloos opladen kan meer stroom verbruiken dan bedraad opladen. Stap over op opladen met een snoer om elektriciteit en tijd te besparen.</string>
+  <string name="wireless_charging_notification_title">Draadloos opladen</string>
   <string name="work_challenge_emergency_button_text">Noodgeval</string>
   <string name="work_mode_off_title">Werk-apps hervatten?</string>
   <string name="work_mode_turn_on">Hervatten</string>

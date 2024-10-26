@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/NotificationFadeAware;
@@ -21,11 +21,11 @@
 
 .field public mCachedExpandedRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-.field public mCachedExpandedRemoteInputViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+.field public mCachedExpandedRemoteInputViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
 .field public mCachedHeadsUpRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-.field public mCachedHeadsUpRemoteInputViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+.field public mCachedHeadsUpRemoteInputViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
 .field public mClipBottomAmount:I
 
@@ -61,7 +61,7 @@
 
 .field public mExpandedRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-.field public mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+.field public mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
 .field public mExpandedSmartReplyView:Lcom/android/systemui/statusbar/policy/SmartReplyView;
 
@@ -83,7 +83,7 @@
 
 .field public mHeadsUpRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-.field public mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+.field public mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
 .field public mHeadsUpSmartReplyView:Lcom/android/systemui/statusbar/policy/SmartReplyView;
 
@@ -101,8 +101,6 @@
 
 .field public mMinContractedHeight:I
 
-.field public mMinSingleLineHeight:I
-
 .field public mNotificationEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
 .field public mNotificationMaxHeight:I
@@ -117,7 +115,7 @@
 
 .field public mRemoteInputController:Lcom/android/systemui/statusbar/RemoteInputController;
 
-.field public mRemoteInputSubcomponentFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$RemoteInputViewSubcomponentFactory;
+.field public mRemoteInputSubcomponentFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$AmbientStatusBarComponentImpl;
 
 .field public mRemoteInputVisible:Z
 
@@ -227,7 +225,7 @@
     move-result-object p1
 
     .line 55
-    const p2, 0x7f0706a8    # @dimen/min_notification_layout_height '48.0dp'
+    const p2, 0x7f0706ea    # @dimen/min_notification_layout_height '48.0dp'
 
     .line 56
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -239,36 +237,8 @@
     iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mMinContractedHeight:I
 
     .line 63
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncHybridViewInflation()Z
-
-    .line 65
-    move-result p1
-
-    .line 68
-    if-eqz p1, :cond_0
-
-    .line 69
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    .line 71
-    move-result-object p1
-
-    .line 74
-    const p2, 0x7f070201    # @dimen/conversation_single_line_face_pile_size '24.0dp'
-
-    .line 75
-    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 78
-    move-result p1
-
-    .line 81
-    iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mMinSingleLineHeight:I
-
-    .line 82
-    :cond_0
     return-void
-    .line 84
+    .line 65
 .end method
 
 .method public static applyExternalSmartReplyState(Landroid/view/View;Lcom/android/systemui/statusbar/policy/InflatedSmartReplyState;)V
@@ -524,7 +494,7 @@
     move-result v5
 
     .line 45
-    const v6, 0x7f0b0732    # @id/smart_reply_view
+    const v6, 0x7f0a075e    # @id/smart_reply_view
 
     .line 46
     if-ne v5, v6, :cond_2
@@ -827,14 +797,14 @@
     if-eqz v3, :cond_2
 
     .line 56
-    const v3, 0x7f080640    # @drawable/bubble_ic_stop_bubble 'res/drawable/bubble_ic_stop_bubble.xml'
+    const v3, 0x7f080641    # @drawable/bubble_ic_stop_bubble 'res/drawable/bubble_ic_stop_bubble.xml'
 
     .line 58
     goto :goto_0
 
     .line 61
     :cond_2
-    const v3, 0x7f08063c    # @drawable/bubble_ic_create_bubble 'res/drawable/bubble_ic_create_bubble.xml'
+    const v3, 0x7f08063d    # @drawable/bubble_ic_create_bubble 'res/drawable/bubble_ic_create_bubble.xml'
 
     .line 62
     :goto_0
@@ -862,14 +832,14 @@
     if-eqz p2, :cond_3
 
     .line 79
-    const p2, 0x7f1406f0    # @string/notification_conversation_unbubble 'Remove bubbles'
+    const p2, 0x7f13074b    # @string/notification_conversation_unbubble 'Remove bubbles'
 
     .line 81
     goto :goto_1
 
     .line 84
     :cond_3
-    const p2, 0x7f1406ee    # @string/notification_conversation_bubble 'Show bubble'
+    const p2, 0x7f130749    # @string/notification_conversation_bubble 'Show bubble'
 
     .line 85
     :goto_1
@@ -955,589 +925,673 @@
     .line 143
 .end method
 
-.method public final applyRemoteInput(Landroid/view/View;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;ZLandroid/app/PendingIntent;Lcom/android/systemui/statusbar/policy/RemoteInputView;Lcom/android/systemui/statusbar/policy/RemoteInputViewController;Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;)Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;
-    .locals 6
+.method public final applyRemoteInput(Landroid/view/View;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;ZLandroid/app/PendingIntent;Lcom/android/systemui/statusbar/policy/RemoteInputView;Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;)Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;
+    .locals 16
 
     .line 1
-    new-instance v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;
+    move-object/from16 v0, p0
 
     .line 2
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v1, p1
 
     .line 4
-    const v1, 0x10201ce    # @android:id/actions_container
+    move-object/from16 v2, p2
 
-    .line 7
-    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 6
+    move-object/from16 v3, p4
+
+    .line 8
+    move-object/from16 v4, p5
 
     .line 10
-    move-result-object v1
+    new-instance v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;
 
-    .line 13
-    instance-of v2, v1, Landroid/widget/FrameLayout;
+    .line 12
+    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
     .line 14
-    if-eqz v2, :cond_11
+    const v6, 0x10201ce    # @android:id/actions_container
 
-    .line 16
-    sget-object v2, Lcom/android/systemui/statusbar/policy/RemoteInputView;->VIEW_TAG:Ljava/lang/Object;
-
-    .line 18
-    invoke-virtual {p1, v2}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+    .line 17
+    invoke-virtual {v1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     .line 20
-    move-result-object p1
+    move-result-object v6
 
     .line 23
-    check-cast p1, Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    instance-of v7, v6, Landroid/widget/FrameLayout;
 
     .line 24
-    iput-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    if-eqz v7, :cond_11
 
     .line 26
-    if-eqz p1, :cond_0
+    sget-object v7, Lcom/android/systemui/statusbar/policy/RemoteInputView;->VIEW_TAG:Ljava/lang/Object;
 
     .line 28
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->onNotificationUpdateOrReset()V
+    invoke-virtual {v1, v7}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
 
     .line 30
-    iget-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    move-result-object v1
 
     .line 33
-    iget-object p1, p1, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    check-cast v1, Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 35
-    iput-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 34
+    iput-object v1, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 37
+    .line 36
+    if-eqz v1, :cond_0
+
+    .line 38
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->onNotificationUpdateOrReset()V
+
+    .line 40
+    iget-object v1, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+
+    .line 43
+    iget-object v1, v1, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+
+    .line 45
+    iput-object v1, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+
+    .line 47
     :cond_0
-    iget-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    iget-object v1, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 39
-    const/4 v3, 0x0
+    .line 49
+    const/4 v8, 0x0
 
-    .line 41
-    if-nez p1, :cond_3
-
-    .line 42
-    if-eqz p3, :cond_3
-
-    .line 44
-    check-cast v1, Landroid/widget/FrameLayout;
-
-    .line 46
-    if-nez p5, :cond_2
-
-    .line 48
-    iget-object p1, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
-
-    .line 50
-    iget-object p5, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mRemoteInputController:Lcom/android/systemui/statusbar/RemoteInputController;
+    .line 51
+    if-nez v1, :cond_3
 
     .line 52
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    if-eqz p3, :cond_3
 
     .line 54
-    move-result-object p1
+    check-cast v6, Landroid/widget/FrameLayout;
 
-    .line 57
-    const p6, 0x7f0e021d    # @layout/remote_input 'res/layout/remote_input.xml'
+    .line 56
+    if-nez v4, :cond_2
 
     .line 58
-    invoke-virtual {p1, p6, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    iget-object v1, v0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
-    .line 61
-    move-result-object p1
+    .line 60
+    iget-object v4, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mRemoteInputController:Lcom/android/systemui/statusbar/RemoteInputController;
+
+    .line 62
+    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     .line 64
-    check-cast p1, Lcom/android/systemui/statusbar/policy/RemoteInputView;
-
-    .line 65
-    iput-object p5, p1, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mController:Lcom/android/systemui/statusbar/RemoteInputController;
+    move-result-object v1
 
     .line 67
-    iput-object p2, p1, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
+    const v9, 0x7f0d022b    # @layout/remote_input 'res/layout/remote_input.xml'
 
-    .line 69
-    iget-object p5, p2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
+    .line 68
+    invoke-virtual {v1, v9, v6, v8}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 71
-    invoke-virtual {p5}, Landroid/service/notification/StatusBarNotification;->getUser()Landroid/os/UserHandle;
+    move-result-object v1
 
-    .line 73
-    move-result-object p5
+    .line 74
+    move-object v10, v1
+
+    .line 75
+    check-cast v10, Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
     .line 76
-    sget-object p6, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+    iput-object v4, v10, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mController:Lcom/android/systemui/statusbar/RemoteInputController;
 
-    .line 77
-    invoke-virtual {p6, p5}, Landroid/os/UserHandle;->equals(Ljava/lang/Object;)Z
+    .line 78
+    iput-object v2, v10, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 79
-    move-result p6
+    .line 80
+    iget-object v1, v2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
 
     .line 82
-    if-eqz p6, :cond_1
+    invoke-virtual {v1}, Landroid/service/notification/StatusBarNotification;->getUser()Landroid/os/UserHandle;
 
-    .line 83
-    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+    .line 84
+    move-result-object v1
 
-    .line 85
-    move-result p5
+    .line 87
+    sget-object v4, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     .line 88
-    invoke-static {p5}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
+    invoke-virtual {v4, v1}, Landroid/os/UserHandle;->equals(Ljava/lang/Object;)Z
 
-    .line 89
-    move-result-object p5
-
-    .line 92
-    :cond_1
-    iget-object p6, p1, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mEditText:Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;
+    .line 90
+    move-result v4
 
     .line 93
-    iput-object p5, p6, Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;->mUser:Landroid/os/UserHandle;
+    if-eqz v4, :cond_1
 
-    .line 95
-    invoke-virtual {p6, p5}, Landroid/widget/EditText;->setTextOperationUser(Landroid/os/UserHandle;)V
+    .line 94
+    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
-    .line 97
-    invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
+    .line 96
+    move-result v1
+
+    .line 99
+    invoke-static {v1}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
     .line 100
-    const/16 p5, 0x8
+    move-result-object v1
 
     .line 103
-    invoke-virtual {p1, p5}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    :cond_1
+    iget-object v4, v10, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mEditText:Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;
 
-    .line 105
-    new-instance p5, Landroid/widget/FrameLayout$LayoutParams;
+    .line 104
+    iput-object v1, v4, Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;->mUser:Landroid/os/UserHandle;
+
+    .line 106
+    invoke-virtual {v4, v1}, Landroid/widget/EditText;->setTextOperationUser(Landroid/os/UserHandle;)V
 
     .line 108
-    const/4 p6, -0x1
-
-    .line 110
-    invoke-direct {p5, p6, p6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-virtual {v10, v7}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
     .line 111
-    invoke-virtual {v1, p1, p5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    const/16 v1, 0x8
 
     .line 114
-    iput-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    invoke-virtual {v10, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 117
-    iget-object p5, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mRemoteInputSubcomponentFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$RemoteInputViewSubcomponentFactory;
+    .line 116
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
     .line 119
-    iget-object p6, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mRemoteInputController:Lcom/android/systemui/statusbar/RemoteInputController;
+    const/4 v4, -0x1
 
     .line 121
-    invoke-virtual {p5, p1, p6}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$RemoteInputViewSubcomponentFactory;->create(Lcom/android/systemui/statusbar/policy/RemoteInputView;Lcom/android/systemui/statusbar/RemoteInputController;)Lcom/android/systemui/statusbar/policy/dagger/RemoteInputViewSubcomponent;
+    invoke-direct {v1, v4, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 123
-    move-result-object p1
+    .line 122
+    invoke-virtual {v6, v10, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 126
-    invoke-interface {p1}, Lcom/android/systemui/statusbar/policy/dagger/RemoteInputViewSubcomponent;->getController()Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 125
+    iput-object v10, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 127
-    move-result-object p1
+    .line 128
+    iget-object v1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mRemoteInputSubcomponentFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$AmbientStatusBarComponentImpl;
 
     .line 130
-    iput-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    iget-object v13, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mRemoteInputController:Lcom/android/systemui/statusbar/RemoteInputController;
 
-    .line 131
-    iget-object p5, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    .line 132
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 133
-    iput-object p1, p5, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
-
-    .line 135
-    goto :goto_0
+    .line 134
+    invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 137
-    :cond_2
-    invoke-virtual {v1, p5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    new-instance v4, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 138
-    invoke-virtual {p5}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->dispatchFinishTemporaryDetach()V
+    .line 140
+    iget-object v6, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$AmbientStatusBarComponentImpl;->view:Ljava/lang/Object;
 
-    .line 141
-    invoke-virtual {p5}, Landroid/widget/LinearLayout;->requestFocus()Z
+    .line 142
+    check-cast v6, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$ExpandableNotificationRowComponentImpl;
 
     .line 144
-    iput-object p5, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    iget-object v11, v6, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$ExpandableNotificationRowComponentImpl;->notificationEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 147
-    iput-object p6, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 146
+    iget-object v6, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$AmbientStatusBarComponentImpl;->sysUIGoogleSysUIComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
-    .line 149
+    .line 148
+    iget-object v7, v6, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->remoteInputQuickSettingsDisablerProvider:Ldagger/internal/Provider;
+
+    .line 150
+    invoke-interface {v7}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 152
+    move-result-object v7
+
+    .line 155
+    move-object v12, v7
+
+    .line 156
+    check-cast v12, Lcom/android/systemui/statusbar/policy/RemoteInputQuickSettingsDisabler;
+
+    .line 157
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$AmbientStatusBarComponentImpl;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
+
+    .line 159
+    iget-object v7, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->provideShortcutManagerProvider:Ldagger/internal/Provider;
+
+    .line 161
+    invoke-interface {v7}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 163
+    move-result-object v7
+
+    .line 166
+    move-object v14, v7
+
+    .line 167
+    check-cast v14, Landroid/content/pm/ShortcutManager;
+
+    .line 168
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->provideUiEventLoggerProvider:Ldagger/internal/Provider;
+
+    .line 170
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 172
+    move-result-object v1
+
+    .line 175
+    move-object v15, v1
+
+    .line 176
+    check-cast v15, Lcom/android/internal/logging/UiEventLogger;
+
+    .line 177
+    iget-object v1, v6, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->featureFlagsClassicReleaseProvider:Ldagger/internal/DelegateFactory;
+
+    .line 179
+    invoke-virtual {v1}, Ldagger/internal/DelegateFactory;->get()Ljava/lang/Object;
+
+    .line 181
+    move-result-object v1
+
+    .line 184
+    check-cast v1, Lcom/android/systemui/flags/FeatureFlags;
+
+    .line 185
+    move-object v9, v4
+
+    .line 187
+    invoke-direct/range {v9 .. v15}, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;-><init>(Lcom/android/systemui/statusbar/policy/RemoteInputView;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/policy/RemoteInputQuickSettingsDisabler;Lcom/android/systemui/statusbar/RemoteInputController;Landroid/content/pm/ShortcutManager;Lcom/android/internal/logging/UiEventLogger;)V
+
+    .line 188
+    iput-object v4, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+
+    .line 191
+    iget-object v1, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+
+    .line 193
+    iput-object v4, v1, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+
+    .line 195
+    goto :goto_0
+
+    .line 197
+    :cond_2
+    invoke-virtual {v6, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    .line 198
+    invoke-virtual/range {p5 .. p5}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->dispatchFinishTemporaryDetach()V
+
+    .line 201
+    invoke-virtual/range {p5 .. p5}, Landroid/widget/LinearLayout;->requestFocus()Z
+
+    .line 204
+    iput-object v4, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+
+    .line 207
+    move-object/from16 v1, p6
+
+    .line 209
+    iput-object v1, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+
+    .line 211
     :cond_3
     :goto_0
     if-eqz p3, :cond_10
 
-    .line 151
-    iget-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
-
-    .line 153
-    iput-object p7, p1, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mWrapper:Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
-
-    .line 155
-    new-instance p3, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$$ExternalSyntheticLambda0;
-
-    .line 157
-    invoke-direct {p3, p0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationContentView;)V
-
-    .line 159
-    iget-object p0, p1, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mOnVisibilityChangedListeners:Ljava/util/ArrayList;
-
-    .line 162
-    invoke-virtual {p0, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 164
-    if-nez p4, :cond_4
-
-    .line 167
-    iget-object p0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
-
-    .line 169
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->isActive()Z
-
-    .line 171
-    move-result p0
-
-    .line 174
-    if-eqz p0, :cond_10
-
-    .line 175
-    :cond_4
-    iget-object p0, p2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
-
-    .line 177
-    invoke-virtual {p0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
-
-    .line 179
-    move-result-object p0
-
-    .line 182
-    iget-object p0, p0, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
-
-    .line 183
-    if-eqz p4, :cond_5
-
-    .line 185
-    iget-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
-
-    .line 187
-    check-cast p1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 189
-    iput-object p4, p1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
-
-    .line 191
-    :cond_5
-    iget-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
-
-    .line 193
-    check-cast p1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 195
-    if-nez p0, :cond_6
-
-    .line 197
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 199
-    goto/16 :goto_6
-
-    .line 202
-    :cond_6
-    iget-object p3, p1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
-
-    .line 204
-    const/4 p4, 0x0
-
-    .line 206
-    if-eqz p3, :cond_7
-
-    .line 207
-    invoke-virtual {p3}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
-
-    .line 209
-    move-result-object p3
-
-    .line 212
-    goto :goto_1
-
     .line 213
-    :cond_7
-    move-object p3, p4
-
-    .line 214
-    :goto_1
-    if-nez p3, :cond_8
+    iget-object v1, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
     .line 215
-    goto :goto_6
+    move-object/from16 v4, p7
 
     .line 217
-    :cond_8
-    move p5, v3
-
-    .line 218
-    :goto_2
-    array-length p6, p0
+    iput-object v4, v1, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mWrapper:Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
     .line 219
-    if-ge p5, p6, :cond_f
+    new-instance v4, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$$ExternalSyntheticLambda0;
 
-    .line 220
-    add-int/lit8 p6, p5, 0x1
+    .line 221
+    invoke-direct {v4, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationContentView;)V
 
-    .line 222
+    .line 223
+    iget-object v0, v1, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mOnVisibilityChangedListeners:Ljava/util/ArrayList;
+
+    .line 226
+    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 228
+    if-nez v3, :cond_4
+
+    .line 231
+    iget-object v0, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+
+    .line 233
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->isActive()Z
+
+    .line 235
+    move-result v0
+
+    .line 238
+    if-eqz v0, :cond_10
+
+    .line 239
+    :cond_4
+    iget-object v0, v2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
+
+    .line 241
+    invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    .line 243
+    move-result-object v0
+
+    .line 246
+    iget-object v0, v0, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
+
+    .line 247
+    if-eqz v3, :cond_5
+
+    .line 249
+    iget-object v1, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+
+    .line 251
+    iput-object v3, v1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
+
+    .line 253
+    :cond_5
+    iget-object v1, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+
+    .line 255
+    if-nez v0, :cond_6
+
+    .line 257
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 259
+    goto/16 :goto_6
+
+    .line 262
+    :cond_6
+    iget-object v3, v1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
+
+    .line 264
+    const/4 v4, 0x0
+
+    .line 266
+    if-eqz v3, :cond_7
+
+    .line 267
+    invoke-virtual {v3}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
+
+    .line 269
+    move-result-object v3
+
+    .line 272
+    goto :goto_1
+
+    .line 273
+    :cond_7
+    move-object v3, v4
+
+    .line 274
+    :goto_1
+    if-nez v3, :cond_8
+
+    .line 275
+    goto :goto_6
+
+    .line 277
+    :cond_8
+    move v6, v8
+
+    .line 278
+    :goto_2
+    array-length v7, v0
+
+    .line 279
+    if-ge v6, v7, :cond_f
+
+    .line 280
+    add-int/lit8 v7, v6, 0x1
+
+    .line 282
     :try_start_0
-    aget-object p5, p0, p5
+    aget-object v6, v0, v6
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 224
-    iget-object p7, p5, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
-
-    .line 226
-    if-nez p7, :cond_a
-
-    .line 228
-    :cond_9
-    :goto_3
-    move p5, p6
-
-    .line 230
-    goto :goto_2
-
-    .line 231
-    :cond_a
-    invoke-virtual {p5}, Landroid/app/Notification$Action;->getRemoteInputs()[Landroid/app/RemoteInput;
-
-    .line 232
-    move-result-object p5
-
-    .line 235
-    if-nez p5, :cond_b
-
-    .line 236
-    goto :goto_3
-
-    .line 238
-    :cond_b
-    invoke-virtual {p7}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
-
-    .line 239
-    move-result-object v1
-
-    .line 242
-    invoke-virtual {p3, v1}, Landroid/content/Intent;->filterEquals(Landroid/content/Intent;)Z
-
-    .line 243
-    move-result v1
-
-    .line 246
-    if-eqz v1, :cond_9
-
-    .line 247
-    array-length v1, p5
-
-    .line 249
-    move v2, v3
-
-    .line 250
-    :goto_4
-    if-ge v2, v1, :cond_d
-
-    .line 251
-    aget-object v4, p5, v2
-
-    .line 253
-    invoke-virtual {v4}, Landroid/app/RemoteInput;->getAllowFreeFormInput()Z
-
-    .line 255
-    move-result v5
-
-    .line 258
-    if-eqz v5, :cond_c
-
-    .line 259
-    goto :goto_5
-
-    .line 261
-    :cond_c
-    add-int/lit8 v2, v2, 0x1
-
-    .line 262
-    goto :goto_4
-
-    .line 264
-    :cond_d
-    move-object v4, p4
-
-    .line 265
-    :goto_5
-    if-nez v4, :cond_e
-
-    .line 266
-    goto :goto_3
-
-    .line 268
-    :cond_e
-    iput-object p7, p1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
-
-    .line 269
-    invoke-virtual {p1, v4}, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->setRemoteInput(Landroid/app/RemoteInput;)V
-
-    .line 271
-    iput-object p5, p1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->remoteInputs:[Landroid/app/RemoteInput;
-
-    .line 274
-    iget-object p0, p1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->entry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
-
-    .line 276
-    iput-object p4, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->editedSuggestionInfo:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry$EditedSuggestionInfo;
-
-    .line 278
-    iget-object p0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
-
-    .line 280
-    check-cast p0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 282
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
-
     .line 284
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->isActive()Z
+    iget-object v9, v6, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
 
     .line 286
-    move-result p0
+    if-nez v9, :cond_a
 
-    .line 289
-    if-nez p0, :cond_10
+    .line 288
+    :cond_9
+    :goto_3
+    move v6, v7
 
     .line 290
-    iget-object p0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    goto :goto_2
+
+    .line 291
+    :cond_a
+    invoke-virtual {v6}, Landroid/app/Notification$Action;->getRemoteInputs()[Landroid/app/RemoteInput;
 
     .line 292
-    check-cast p0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+    move-result-object v6
 
-    .line 294
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    .line 295
+    if-nez v6, :cond_b
 
     .line 296
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->focus()V
+    goto :goto_3
 
     .line 298
-    goto :goto_7
+    :cond_b
+    invoke-virtual {v9}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
 
-    .line 301
-    :catch_0
-    move-exception p0
+    .line 299
+    move-result-object v10
 
     .line 302
-    new-instance p1, Ljava/util/NoSuchElementException;
+    invoke-virtual {v3, v10}, Landroid/content/Intent;->filterEquals(Landroid/content/Intent;)Z
 
     .line 303
-    invoke-virtual {p0}, Ljava/lang/ArrayIndexOutOfBoundsException;->getMessage()Ljava/lang/String;
+    move-result v10
 
-    .line 305
-    move-result-object p0
+    .line 306
+    if-eqz v10, :cond_9
 
-    .line 308
-    invoke-direct {p1, p0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    .line 307
+    array-length v10, v6
 
     .line 309
-    throw p1
+    move v11, v8
 
-    .line 312
-    :cond_f
-    :goto_6
-    iget-object p0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 310
+    :goto_4
+    if-ge v11, v10, :cond_d
+
+    .line 311
+    aget-object v12, v6, v11
 
     .line 313
-    check-cast p0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+    invoke-virtual {v12}, Landroid/app/RemoteInput;->getAllowFreeFormInput()Z
 
     .line 315
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    move-result v13
 
-    .line 317
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->isActive()Z
+    .line 318
+    if-eqz v13, :cond_c
 
     .line 319
-    move-result p0
+    goto :goto_5
+
+    .line 321
+    :cond_c
+    add-int/lit8 v11, v11, 0x1
 
     .line 322
-    if-eqz p0, :cond_10
+    goto :goto_4
 
-    .line 323
-    iget-object p0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 324
+    :cond_d
+    move-object v12, v4
 
     .line 325
-    check-cast p0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+    :goto_5
+    if-nez v12, :cond_e
 
-    .line 327
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    .line 326
+    goto :goto_3
+
+    .line 328
+    :cond_e
+    iput-object v9, v1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
 
     .line 329
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mEditText:Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;
+    invoke-virtual {v1, v12}, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->setRemoteInput(Landroid/app/RemoteInput;)V
 
     .line 331
-    sget p1, Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;->$r8$clinit:I
+    iput-object v6, v1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->remoteInputs:[Landroid/app/RemoteInput;
 
-    .line 333
-    invoke-virtual {p0, v3}, Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;->defocusIfNeeded(Z)V
+    .line 334
+    iget-object v0, v1, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->entry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 335
-    :cond_10
-    :goto_7
-    iget-object p0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    .line 336
+    iput-object v4, v0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->editedSuggestionInfo:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry$EditedSuggestionInfo;
 
     .line 338
-    if-eqz p0, :cond_11
+    iget-object v0, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
     .line 340
-    iget-object p0, p2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->row:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
+    iget-object v0, v0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
     .line 342
-    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->mCurrentBackgroundTint:I
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->isActive()Z
 
     .line 344
-    iget-object p1, p2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
+    move-result v0
 
-    .line 346
-    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+    .line 347
+    if-nez v0, :cond_10
 
     .line 348
-    move-result-object p1
+    iget-object v0, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 351
-    invoke-virtual {p1}, Landroid/app/Notification;->isColorized()Z
+    .line 350
+    iget-object v0, v0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
     .line 352
-    move-result p1
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->focus()V
 
-    .line 355
-    iget-object p2, v0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+    .line 354
+    goto :goto_7
 
-    .line 356
-    invoke-virtual {p2, p0, p1}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->setBackgroundTintColor(IZ)V
+    .line 357
+    :catch_0
+    move-exception v0
 
     .line 358
+    move-object v1, v0
+
+    .line 359
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    .line 360
+    invoke-virtual {v1}, Ljava/lang/ArrayIndexOutOfBoundsException;->getMessage()Ljava/lang/String;
+
+    .line 362
+    move-result-object v1
+
+    .line 365
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    .line 366
+    throw v0
+
+    .line 369
+    :cond_f
+    :goto_6
+    iget-object v0, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+
+    .line 370
+    iget-object v0, v0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+
+    .line 372
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->isActive()Z
+
+    .line 374
+    move-result v0
+
+    .line 377
+    if-eqz v0, :cond_10
+
+    .line 378
+    iget-object v0, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
+
+    .line 380
+    iget-object v0, v0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+
+    .line 382
+    iget-object v0, v0, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mEditText:Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;
+
+    .line 384
+    sget v1, Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;->$r8$clinit:I
+
+    .line 386
+    invoke-virtual {v0, v8}, Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;->defocusIfNeeded(Z)V
+
+    .line 388
+    :cond_10
+    :goto_7
+    iget-object v0, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+
+    .line 391
+    if-eqz v0, :cond_11
+
+    .line 393
+    iget-object v0, v2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->row:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
+
+    .line 395
+    iget v0, v0, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->mCurrentBackgroundTint:I
+
+    .line 397
+    iget-object v1, v2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
+
+    .line 399
+    invoke-virtual {v1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    .line 401
+    move-result-object v1
+
+    .line 404
+    invoke-virtual {v1}, Landroid/app/Notification;->isColorized()Z
+
+    .line 405
+    move-result v1
+
+    .line 408
+    iget-object v2, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$RemoteInputViewData;->mView:Lcom/android/systemui/statusbar/policy/RemoteInputView;
+
+    .line 409
+    invoke-virtual {v2, v0, v1}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->setBackgroundTintColor(IZ)V
+
+    .line 411
     :cond_11
-    return-object v0
-    .line 361
+    return-object v5
+    .line 414
 .end method
 
 .method public final applySystemActions(Landroid/view/View;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
-    .locals 9
+    .locals 10
 
     .line 1
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     .line 2
     if-eqz p1, :cond_4
@@ -1590,56 +1644,59 @@
     move-result v3
 
     .line 35
-    xor-int/lit8 v3, v3, 0x1
+    xor-int/2addr v3, v0
 
     .line 36
     iget-object v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 38
+    .line 37
     iget-boolean v4, v4, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mShowSnooze:Z
 
-    .line 40
+    .line 39
     if-eqz v4, :cond_3
 
-    .line 42
+    .line 41
     if-eqz v3, :cond_2
 
-    .line 44
+    .line 43
     goto :goto_0
 
-    .line 46
+    .line 45
     :cond_2
     iget-object v3, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
-    .line 47
-    const v4, 0x7f08092c    # @drawable/ic_snooze 'res/drawable/ic_snooze.xml'
+    .line 46
+    const v4, 0x7f080959    # @drawable/ic_snooze 'res/drawable/ic_snooze.xml'
 
-    .line 49
+    .line 48
     invoke-virtual {v3, v4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    .line 52
+    .line 51
     move-result-object v3
 
-    .line 55
+    .line 54
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 56
+    .line 55
     iget-object v3, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
-    .line 59
+    .line 58
     invoke-static {v3}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    .line 61
+    .line 60
     move-result-object v3
 
-    .line 64
-    const v5, 0x7f0e01b4    # @layout/notification_snooze 'res/layout/notification_snooze.xml'
+    .line 63
+    const v5, 0x7f0d01c1    # @layout/notification_snooze 'res/layout/notification_snooze.xml'
 
-    .line 65
+    .line 64
     const/4 v6, 0x0
 
+    .line 67
+    const/4 v7, 0x0
+
     .line 68
-    invoke-virtual {v3, v5, v6, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {v3, v5, v6, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 69
     move-result-object v3
@@ -1651,7 +1708,7 @@
     iget-object v5, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     .line 75
-    const v6, 0x7f1406f7    # @string/notification_menu_snooze_description 'notification snooze options'
+    const v6, 0x7f130752    # @string/notification_menu_snooze_description 'notification snooze options'
 
     .line 77
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1660,13 +1717,13 @@
     move-result-object v5
 
     .line 83
-    new-instance v7, Lcom/android/systemui/statusbar/notification/row/NotificationMenuRow$NotificationMenuItem;
+    new-instance v8, Lcom/android/systemui/statusbar/notification/row/NotificationMenuRow$NotificationMenuItem;
 
     .line 84
-    iget-object v8, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     .line 86
-    invoke-direct {v7, v8, v5, v3, v4}, Lcom/android/systemui/statusbar/notification/row/NotificationMenuRow$NotificationMenuItem;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/android/systemui/statusbar/notification/row/NotificationGuts$GutsContent;I)V
+    invoke-direct {v8, v9, v5, v3, v4}, Lcom/android/systemui/statusbar/notification/row/NotificationMenuRow$NotificationMenuItem;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/android/systemui/statusbar/notification/row/NotificationGuts$GutsContent;I)V
 
     .line 88
     iget-object v3, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
@@ -1693,19 +1750,19 @@
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 106
-    new-instance v4, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$$ExternalSyntheticLambda4;
+    new-instance v4, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$$ExternalSyntheticLambda3;
 
     .line 109
-    invoke-direct {v4, v3, v7, v0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Ljava/lang/Object;I)V
+    invoke-direct {v4, v3, v8, v0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Ljava/lang/Object;I)V
 
     .line 111
     invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 114
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v1, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 117
-    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
 
     .line 120
     goto :goto_1
@@ -2982,111 +3039,73 @@
 .end method
 
 .method public final getMinHeight(Z)I
-    .locals 1
+    .locals 0
 
     .line 1
-    const/4 v0, 0x0
+    if-nez p1, :cond_1
 
     .line 2
-    if-nez p1, :cond_3
-
-    .line 3
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mIsChildInGroup:Z
 
-    .line 5
-    if-eqz p1, :cond_3
-
-    .line 7
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
-
-    .line 9
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->isGroupExpanded()Z
-
-    .line 11
-    move-result p1
-
-    .line 14
-    if-eqz p1, :cond_0
-
-    .line 15
-    goto :goto_0
-
-    .line 17
-    :cond_0
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncHybridViewInflation()Z
-
-    .line 18
-    move-result p1
-
-    .line 21
-    if-eqz p1, :cond_2
-
-    .line 22
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-
-    .line 24
+    .line 4
     if-eqz p1, :cond_1
 
+    .line 6
+    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
+
+    .line 8
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->isGroupExpanded()Z
+
+    .line 10
+    move-result p1
+
+    .line 13
+    if-eqz p1, :cond_0
+
+    .line 14
+    goto :goto_0
+
+    .line 16
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
+
+    .line 17
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getHeight()I
+
+    .line 19
+    move-result p0
+
+    .line 22
+    return p0
+
+    .line 23
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContractedChild:Landroid/view/View;
+
+    .line 24
+    if-eqz p1, :cond_2
+
     .line 26
-    const/4 p1, 0x3
+    const/4 p1, 0x0
 
     .line 28
-    invoke-virtual {p0, p1, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getViewHeight(IZ)I
+    invoke-virtual {p0, p1, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getViewHeight(IZ)I
 
     .line 29
     move-result p0
 
     .line 32
-    return p0
-
-    .line 33
-    :cond_1
-    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mMinSingleLineHeight:I
-
-    .line 34
-    return p0
-
-    .line 36
-    :cond_2
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/row/shared/AsyncHybridViewInflation;->assertInLegacyMode()V
-
-    .line 37
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-
-    .line 40
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getHeight()I
-
-    .line 42
-    move-result p0
-
-    .line 45
-    return p0
-
-    .line 46
-    :cond_3
-    :goto_0
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContractedChild:Landroid/view/View;
-
-    .line 47
-    if-eqz p1, :cond_4
-
-    .line 49
-    invoke-virtual {p0, v0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getViewHeight(IZ)I
-
-    .line 51
-    move-result p0
-
-    .line 54
     goto :goto_1
 
-    .line 55
-    :cond_4
+    .line 33
+    :cond_2
     iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mMinContractedHeight:I
 
-    .line 56
+    .line 34
     :goto_1
     return p0
-    .line 58
+    .line 36
 .end method
 
 .method public final getTransformableViewForVisibleType(I)Lcom/android/systemui/statusbar/TransformableView;
@@ -3667,7 +3686,7 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateVisibility$2()V
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateVisibility$4()V
 
     .line 5
     return-void
@@ -4498,7 +4517,7 @@
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onViewAdded(Landroid/view/View;)V
 
     .line 2
-    const v0, 0x7f0b0674    # @id/row_tag_for_content_view
+    const v0, 0x7f0a069d    # @id/row_tag_for_content_view
 
     .line 5
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
@@ -4542,7 +4561,7 @@
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onVisibilityChanged(Landroid/view/View;I)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateVisibility$2()V
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateVisibility$4()V
 
     .line 5
     if-eqz p2, :cond_1
@@ -5068,590 +5087,554 @@
     iget v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mTransformationStartVisibleType:I
 
     .line 178
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v6, " height: "
 
     .line 180
-    const-string v4, " height: "
+    const-string v7, "\n VisibleType: "
 
-    .line 183
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 182
+    invoke-static {v3, v4, v6, v0, v7}, Landroidx/viewpager/widget/ViewPager$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    .line 185
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 188
-    const-string v0, "\n VisibleType: "
-
-    .line 191
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 193
+    .line 184
     iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
 
-    .line 196
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 187
+    const-string v4, "\n mContentHeight: "
 
-    .line 198
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 189
+    invoke-static {v3, v0, v6, v2, v4}, Landroidx/viewpager/widget/ViewPager$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    .line 201
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 204
-    const-string v0, "\n mContentHeight: "
-
-    .line 207
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 209
+    .line 191
     iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContentHeight:I
 
-    .line 212
+    .line 194
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 214
+    .line 196
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 217
+    .line 199
     move-result-object v0
 
-    .line 220
+    .line 202
     const-string v2, "NotificationContentView"
 
-    .line 221
+    .line 203
     invoke-static {v2, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
+    .line 205
     goto :goto_0
 
-    .line 226
+    .line 208
     :cond_4
     int-to-float v0, v3
 
-    .line 227
+    .line 209
     int-to-float v2, v4
 
-    .line 228
+    .line 210
     div-float/2addr v0, v2
 
-    .line 229
+    .line 211
     invoke-static {v5, v0}, Ljava/lang/Math;->min(FF)F
 
-    .line 230
+    .line 212
     move-result v5
 
-    .line 233
+    .line 215
     :goto_0
     invoke-interface {p1, v5, p2}, Lcom/android/systemui/statusbar/TransformableView;->transformFrom(FLcom/android/systemui/statusbar/TransformableView;)V
 
-    .line 234
+    .line 216
     invoke-interface {p2, v5, p1}, Lcom/android/systemui/statusbar/TransformableView;->transformTo(FLcom/android/systemui/statusbar/TransformableView;)V
 
-    .line 237
+    .line 219
     iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
 
-    .line 240
+    .line 222
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getVisibleWrapper(I)Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 242
+    .line 224
     move-result-object p1
 
-    .line 245
+    .line 227
     if-eqz p1, :cond_5
 
-    .line 246
+    .line 228
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->getCustomBackgroundColor()I
 
-    .line 248
+    .line 230
     move-result p1
 
-    .line 251
+    .line 233
     goto :goto_1
 
-    .line 252
+    .line 234
     :cond_5
     move p1, v1
 
-    .line 253
+    .line 235
     :goto_1
     iget p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mTransformationStartVisibleType:I
 
-    .line 254
+    .line 236
     invoke-virtual {p0, p2}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getVisibleWrapper(I)Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 256
+    .line 238
     move-result-object p2
 
-    .line 259
+    .line 241
     if-eqz p2, :cond_6
 
-    .line 260
+    .line 242
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->getCustomBackgroundColor()I
 
-    .line 262
+    .line 244
     move-result p2
 
-    .line 265
+    .line 247
     goto :goto_2
 
-    .line 266
+    .line 248
     :cond_6
     move p2, v1
 
-    .line 267
+    .line 249
     :goto_2
     if-eq p1, p2, :cond_9
 
-    .line 268
+    .line 250
     if-nez p2, :cond_7
 
-    .line 270
+    .line 252
     iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 272
+    .line 254
     iget p2, p2, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->mNormalColor:I
 
-    .line 274
+    .line 256
     :cond_7
     if-nez p1, :cond_8
 
-    .line 276
+    .line 258
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 278
+    .line 260
     iget p1, p1, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->mNormalColor:I
 
-    .line 280
+    .line 262
     :cond_8
     invoke-static {p2, v5, p1}, Lcom/android/systemui/statusbar/notification/NotificationUtils;->interpolateColors(IFI)I
 
-    .line 282
+    .line 264
     move-result p1
 
-    .line 285
+    .line 267
     :cond_9
     iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 286
+    .line 268
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->getShowingLayout()Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
-    .line 288
+    .line 270
     move-result-object v0
 
-    .line 291
+    .line 273
     if-ne v0, p0, :cond_1a
 
-    .line 292
+    .line 274
     iget p0, p2, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->mBgTint:I
 
-    .line 294
+    .line 276
     if-eq p1, p0, :cond_1a
 
-    .line 296
+    .line 278
     iput p1, p2, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->mBgTint:I
 
-    .line 298
+    .line 280
     invoke-virtual {p2, v1}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->updateBackgroundTint(Z)V
 
-    .line 300
+    .line 282
     goto/16 :goto_6
 
-    .line 303
+    .line 285
     :cond_a
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateViewVisibilities(I)V
 
-    .line 305
+    .line 287
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateBackgroundColor(Z)V
 
-    .line 308
+    .line 290
     goto/16 :goto_6
 
-    .line 311
+    .line 293
     :cond_b
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->calculateVisibleType()I
 
-    .line 313
+    .line 295
     move-result v0
 
-    .line 316
+    .line 298
     iget v5, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
 
-    .line 317
+    .line 299
     if-eq v0, v5, :cond_c
 
-    .line 319
+    .line 301
     move v5, v4
 
-    .line 321
+    .line 303
     goto :goto_3
 
-    .line 322
+    .line 304
     :cond_c
     move v5, v1
 
-    .line 323
+    .line 305
     :goto_3
     if-nez v5, :cond_d
 
-    .line 324
+    .line 306
     if-eqz p2, :cond_1a
 
-    .line 326
+    .line 308
     :cond_d
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getViewForVisibleType(I)Landroid/view/View;
 
-    .line 328
+    .line 310
     move-result-object p2
 
-    .line 331
+    .line 313
     if-eqz p2, :cond_f
 
-    .line 332
+    .line 314
     invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 334
+    .line 316
     if-ne v0, v3, :cond_e
 
-    .line 337
-    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 319
+    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 339
+    .line 321
     if-eqz p2, :cond_e
 
-    .line 341
-    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 323
+    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 343
+    .line 325
     if-eqz p2, :cond_e
 
-    .line 345
-    check-cast p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 347
+    .line 327
     iget-object p2, p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 349
+    .line 329
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->isActive()Z
 
-    .line 351
+    .line 331
     move-result p2
 
-    .line 354
+    .line 334
     if-eqz p2, :cond_e
 
-    .line 355
-    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 335
+    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 357
-    iget-object v6, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 337
+    iget-object v6, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 359
+    .line 339
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 361
-    check-cast v6, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 364
+    .line 341
     iget-object v7, v6, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 366
+    .line 344
     iget-object v7, v7, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mEditText:Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;
 
-    .line 368
+    .line 346
     sget v8, Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;->$r8$clinit:I
 
-    .line 370
+    .line 348
     invoke-virtual {v7, v1}, Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;->defocusIfNeeded(Z)V
 
-    .line 372
+    .line 350
     iget-object v7, v6, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->remoteInput:Landroid/app/RemoteInput;
 
-    .line 375
-    check-cast p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 377
+    .line 353
     invoke-virtual {p2, v7}, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->setRemoteInput(Landroid/app/RemoteInput;)V
 
-    .line 379
+    .line 355
     iget-object v7, v6, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->remoteInputs:[Landroid/app/RemoteInput;
 
-    .line 382
+    .line 358
     iput-object v7, p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->remoteInputs:[Landroid/app/RemoteInput;
 
-    .line 384
+    .line 360
     iget-object v6, v6, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
 
-    .line 386
+    .line 362
     iput-object v6, p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
 
-    .line 388
+    .line 364
     iget-object p2, p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 390
+    .line 366
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->focus()V
 
-    .line 392
+    .line 368
     :cond_e
     if-ne v0, v4, :cond_f
 
-    .line 395
-    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 371
+    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 397
+    .line 373
     if-eqz p2, :cond_f
 
-    .line 399
-    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 375
+    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 401
+    .line 377
     if-eqz p2, :cond_f
 
-    .line 403
-    check-cast p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 405
+    .line 379
     iget-object p2, p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 407
+    .line 381
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->isActive()Z
 
-    .line 409
+    .line 383
     move-result p2
 
-    .line 412
+    .line 386
     if-eqz p2, :cond_f
 
-    .line 413
-    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 387
+    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 415
-    iget-object v6, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 389
+    iget-object v6, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 417
+    .line 391
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 419
-    check-cast v6, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 422
+    .line 393
     iget-object v7, v6, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 424
+    .line 396
     iget-object v7, v7, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mEditText:Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;
 
-    .line 426
+    .line 398
     sget v8, Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;->$r8$clinit:I
 
-    .line 428
+    .line 400
     invoke-virtual {v7, v1}, Lcom/android/systemui/statusbar/policy/RemoteInputView$RemoteEditText;->defocusIfNeeded(Z)V
 
-    .line 430
+    .line 402
     iget-object v7, v6, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->remoteInput:Landroid/app/RemoteInput;
 
-    .line 433
-    check-cast p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 435
+    .line 405
     invoke-virtual {p2, v7}, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->setRemoteInput(Landroid/app/RemoteInput;)V
 
-    .line 437
+    .line 407
     iget-object v7, v6, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->remoteInputs:[Landroid/app/RemoteInput;
 
-    .line 440
+    .line 410
     iput-object v7, p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->remoteInputs:[Landroid/app/RemoteInput;
 
-    .line 442
+    .line 412
     iget-object v6, v6, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
 
-    .line 444
+    .line 414
     iput-object v6, p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
 
-    .line 446
+    .line 416
     iget-object p2, p2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->view:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 448
+    .line 418
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->focus()V
 
-    .line 450
+    .line 420
     :cond_f
     if-eqz p1, :cond_16
 
-    .line 453
+    .line 423
     if-ne v0, v4, :cond_10
 
-    .line 455
+    .line 425
     iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedChild:Landroid/view/View;
 
-    .line 457
+    .line 427
     if-nez p2, :cond_13
 
-    .line 459
+    .line 429
     :cond_10
     if-ne v0, v3, :cond_11
 
-    .line 461
+    .line 431
     iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpChild:Landroid/view/View;
 
-    .line 463
+    .line 433
     if-nez p2, :cond_13
 
-    .line 465
+    .line 435
     :cond_11
     if-ne v0, v2, :cond_12
 
-    .line 467
+    .line 437
     iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
 
-    .line 469
+    .line 439
     if-nez p2, :cond_13
 
-    .line 471
+    .line 441
     :cond_12
     if-nez v0, :cond_16
 
-    .line 473
+    .line 443
     :cond_13
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getTransformableViewForVisibleType(I)Lcom/android/systemui/statusbar/TransformableView;
 
-    .line 475
+    .line 445
     move-result-object p2
 
-    .line 478
+    .line 448
     iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
 
-    .line 479
+    .line 449
     invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getTransformableViewForVisibleType(I)Lcom/android/systemui/statusbar/TransformableView;
 
-    .line 481
+    .line 451
     move-result-object v2
 
-    .line 484
+    .line 454
     if-eq p2, v2, :cond_15
 
-    .line 485
+    .line 455
     if-nez v2, :cond_14
 
-    .line 487
+    .line 457
     goto :goto_4
 
-    .line 489
+    .line 459
     :cond_14
     iget v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
 
-    .line 490
+    .line 460
     iput v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mAnimationStartVisibleType:I
 
-    .line 492
+    .line 462
     invoke-interface {p2, v2}, Lcom/android/systemui/statusbar/TransformableView;->transformFrom(Lcom/android/systemui/statusbar/TransformableView;)V
 
-    .line 494
+    .line 464
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getViewForVisibleType(I)Landroid/view/View;
 
-    .line 497
+    .line 467
     move-result-object v3
 
-    .line 500
+    .line 470
     invoke-virtual {v3, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 501
+    .line 471
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateShownWrapper(I)V
 
-    .line 504
+    .line 474
     new-instance v3, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$2;
 
-    .line 507
+    .line 477
     invoke-direct {v3, p0, v2}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView$2;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationContentView;Lcom/android/systemui/statusbar/TransformableView;)V
 
-    .line 509
+    .line 479
     invoke-interface {v2, p2, v3}, Lcom/android/systemui/statusbar/TransformableView;->transformTo(Lcom/android/systemui/statusbar/TransformableView;Ljava/lang/Runnable;)V
 
-    .line 512
+    .line 482
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->fireExpandedVisibleListenerIfVisible()V
 
-    .line 515
+    .line 485
     goto :goto_5
 
-    .line 518
+    .line 488
     :cond_15
     :goto_4
     invoke-interface {p2, v4}, Lcom/android/systemui/statusbar/TransformableView;->setVisible(Z)V
 
-    .line 519
+    .line 489
     goto :goto_5
 
-    .line 522
+    .line 492
     :cond_16
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateViewVisibilities(I)V
 
-    .line 523
+    .line 493
     :goto_5
     iput v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
 
-    .line 526
+    .line 496
     if-eqz v5, :cond_18
 
-    .line 528
+    .line 498
     iget-boolean p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mFocusOnVisibilityChange:Z
 
-    .line 530
+    .line 500
     if-eqz p2, :cond_18
 
-    .line 532
+    .line 502
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getVisibleWrapper(I)Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 534
+    .line 504
     move-result-object p2
 
-    .line 537
+    .line 507
     if-eqz p2, :cond_17
 
-    .line 538
+    .line 508
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->getExpandButton()Landroid/view/View;
 
-    .line 540
+    .line 510
     move-result-object p2
 
-    .line 543
+    .line 513
     if-eqz p2, :cond_17
 
-    .line 544
+    .line 514
     invoke-virtual {p2}, Landroid/view/View;->requestAccessibilityFocus()Z
 
-    .line 546
+    .line 516
     :cond_17
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mFocusOnVisibilityChange:Z
 
-    .line 549
+    .line 519
     :cond_18
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getVisibleWrapper(I)Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 551
+    .line 521
     move-result-object p2
 
-    .line 554
+    .line 524
     if-eqz p2, :cond_19
 
-    .line 555
+    .line 525
     iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mUnrestrictedContentHeight:I
 
-    .line 557
+    .line 527
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getMinContentHeightHint()I
 
-    .line 559
+    .line 529
     move-result v1
 
-    .line 562
+    .line 532
     invoke-virtual {p2, v0, v1}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->setContentHeight(II)V
 
-    .line 563
+    .line 533
     :cond_19
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateBackgroundColor(Z)V
 
-    .line 566
+    .line 536
     :cond_1a
     :goto_6
     return-void
-    .line 569
+    .line 539
 .end method
 
 .method public setAnimationStartVisibleType(I)V
@@ -5842,193 +5825,184 @@
     if-eqz v0, :cond_1
 
     .line 22
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
     .line 24
     if-eqz v0, :cond_0
 
     .line 26
-    move-object v2, v0
+    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
 
     .line 28
-    check-cast v2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 29
-    iget-object v2, v2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
-
-    .line 31
     iput-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mPreviousExpandedRemoteInputIntent:Landroid/app/PendingIntent;
 
-    .line 33
+    .line 30
     :cond_0
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 35
+    .line 32
     iput-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mCachedExpandedRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 37
-    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mCachedExpandedRemoteInputViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 34
+    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mCachedExpandedRemoteInputViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 39
+    .line 36
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->dispatchStartTemporaryDetach()V
 
-    .line 41
+    .line 38
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 44
+    .line 41
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
-    .line 46
+    .line 43
     move-result-object v0
 
-    .line 49
+    .line 46
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 50
+    .line 47
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 52
+    .line 49
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 54
+    .line 51
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mOnContentViewInactiveListeners:Landroid/util/ArrayMap;
 
-    .line 57
+    .line 54
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedChild:Landroid/view/View;
 
-    .line 59
+    .line 56
     invoke-virtual {v0, v2}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
+    .line 58
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedChild:Landroid/view/View;
 
-    .line 64
+    .line 61
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    .line 66
+    .line 63
     move-result-object v0
 
-    .line 69
+    .line 66
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 70
+    .line 67
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedChild:Landroid/view/View;
 
-    .line 73
+    .line 70
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 75
+    .line 72
     iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 78
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 75
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 80
+    .line 77
     if-eqz v0, :cond_2
 
-    .line 82
-    check-cast v0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 84
+    .line 79
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->unbind()V
 
-    .line 86
+    .line 81
     :cond_2
-    iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 89
+    .line 84
     :cond_3
     if-nez p1, :cond_6
 
-    .line 91
+    .line 86
     iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedChild:Landroid/view/View;
 
-    .line 93
+    .line 88
     iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedWrapper:Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 95
+    .line 90
     iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mTransformationStartVisibleType:I
 
-    .line 97
+    .line 92
     const/4 v0, 0x1
 
-    .line 99
+    .line 94
     if-ne p1, v0, :cond_4
 
-    .line 100
+    .line 95
     const/4 p1, -0x1
 
-    .line 102
+    .line 97
     iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mTransformationStartVisibleType:I
 
-    .line 103
+    .line 98
     :cond_4
     iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
 
-    .line 105
+    .line 100
     if-ne p1, v0, :cond_5
 
-    .line 107
+    .line 102
     const/4 p1, 0x0
 
-    .line 109
+    .line 104
     invoke-virtual {p0, p1, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->selectLayout(ZZ)V
 
-    .line 110
+    .line 105
     :cond_5
     return-void
 
-    .line 113
+    .line 108
     :cond_6
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 114
+    .line 109
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedChild:Landroid/view/View;
 
-    .line 117
+    .line 112
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
-    .line 119
+    .line 114
     move-result-object v0
 
-    .line 122
+    .line 117
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 123
+    .line 118
     invoke-static {v0, p1, v1}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->wrap(Landroid/content/Context;Landroid/view/View;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;)Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 125
+    .line 120
     move-result-object p1
 
-    .line 128
+    .line 123
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedWrapper:Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 129
+    .line 124
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 131
+    .line 126
     if-eqz p1, :cond_7
 
-    .line 133
+    .line 128
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedChild:Landroid/view/View;
 
-    .line 135
+    .line 130
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 137
+    .line 132
     invoke-virtual {p0, v0, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->applySystemActions(Landroid/view/View;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
 
-    .line 139
+    .line 134
     :cond_7
     iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
 
-    .line 142
+    .line 137
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateShownWrapper(I)V
 
-    .line 144
+    .line 139
     return-void
-    .line 147
+    .line 142
 .end method
 
 .method public setExpandedWrapper(Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;)V
@@ -6079,196 +6053,187 @@
     if-eqz v0, :cond_1
 
     .line 22
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
     .line 24
     if-eqz v0, :cond_0
 
     .line 26
-    move-object v2, v0
+    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
 
     .line 28
-    check-cast v2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 29
-    iget-object v2, v2, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->pendingIntent:Landroid/app/PendingIntent;
-
-    .line 31
     iput-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mPreviousHeadsUpRemoteInputIntent:Landroid/app/PendingIntent;
 
-    .line 33
+    .line 30
     :cond_0
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 35
+    .line 32
     iput-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mCachedHeadsUpRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 37
-    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mCachedHeadsUpRemoteInputViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 34
+    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mCachedHeadsUpRemoteInputViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 39
+    .line 36
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/policy/RemoteInputView;->dispatchStartTemporaryDetach()V
 
-    .line 41
+    .line 38
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 44
+    .line 41
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
-    .line 46
+    .line 43
     move-result-object v0
 
-    .line 49
+    .line 46
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 50
+    .line 47
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 52
+    .line 49
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 54
+    .line 51
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mOnContentViewInactiveListeners:Landroid/util/ArrayMap;
 
-    .line 57
+    .line 54
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpChild:Landroid/view/View;
 
-    .line 59
+    .line 56
     invoke-virtual {v0, v2}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
+    .line 58
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpChild:Landroid/view/View;
 
-    .line 64
+    .line 61
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    .line 66
+    .line 63
     move-result-object v0
 
-    .line 69
+    .line 66
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 70
+    .line 67
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpChild:Landroid/view/View;
 
-    .line 73
+    .line 70
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 75
+    .line 72
     iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInput:Lcom/android/systemui/statusbar/policy/RemoteInputView;
 
-    .line 78
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    .line 75
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 80
+    .line 77
     if-eqz v0, :cond_2
 
-    .line 82
-    check-cast v0, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
-
-    .line 84
+    .line 79
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;->unbind()V
 
-    .line 86
+    .line 81
     :cond_2
-    iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+    iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpRemoteInputController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
-    .line 89
+    .line 84
     :cond_3
     if-nez p1, :cond_6
 
-    .line 91
+    .line 86
     iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpChild:Landroid/view/View;
 
-    .line 93
+    .line 88
     iput-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpWrapper:Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 95
+    .line 90
     iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mTransformationStartVisibleType:I
 
-    .line 97
+    .line 92
     const/4 v0, 0x2
 
-    .line 99
+    .line 94
     if-ne p1, v0, :cond_4
 
-    .line 100
+    .line 95
     const/4 p1, -0x1
 
-    .line 102
+    .line 97
     iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mTransformationStartVisibleType:I
 
-    .line 103
+    .line 98
     :cond_4
     iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
 
-    .line 105
+    .line 100
     if-ne p1, v0, :cond_5
 
-    .line 107
+    .line 102
     const/4 p1, 0x0
 
-    .line 109
+    .line 104
     const/4 v0, 0x1
 
-    .line 110
+    .line 105
     invoke-virtual {p0, p1, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->selectLayout(ZZ)V
 
-    .line 111
+    .line 106
     :cond_5
     return-void
 
-    .line 114
+    .line 109
     :cond_6
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 115
+    .line 110
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpChild:Landroid/view/View;
 
-    .line 118
+    .line 113
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
-    .line 120
+    .line 115
     move-result-object v0
 
-    .line 123
+    .line 118
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 124
+    .line 119
     invoke-static {v0, p1, v1}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->wrap(Landroid/content/Context;Landroid/view/View;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;)Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 126
+    .line 121
     move-result-object p1
 
-    .line 129
+    .line 124
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpWrapper:Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 130
+    .line 125
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContainingNotification:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 132
+    .line 127
     if-eqz p1, :cond_7
 
-    .line 134
+    .line 129
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpChild:Landroid/view/View;
 
-    .line 136
+    .line 131
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 138
+    .line 133
     invoke-virtual {p0, v0, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->applySystemActions(Landroid/view/View;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
 
-    .line 140
+    .line 135
     :cond_7
     iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
 
-    .line 143
+    .line 138
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateShownWrapper(I)V
 
-    .line 145
+    .line 140
     return-void
-    .line 148
+    .line 143
 .end method
 
 .method public final setHeadsUpInflatedSmartReplies(Lcom/android/systemui/statusbar/policy/InflatedSmartReplyViewHolder;)V
@@ -6349,93 +6314,6 @@
     :cond_3
     return-void
     .line 30
-.end method
-
-.method public final setSingleLineView(Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;)V
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/row/shared/AsyncHybridViewInflation;->isUnexpectedlyInLegacyMode()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    return-void
-
-    .line 8
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-
-    .line 9
-    if-eqz v0, :cond_1
-
-    .line 11
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mOnContentViewInactiveListeners:Landroid/util/ArrayMap;
-
-    .line 13
-    invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 15
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-
-    .line 18
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
-
-    .line 20
-    move-result-object v0
-
-    .line 23
-    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
-
-    .line 24
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-
-    .line 27
-    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
-
-    .line 29
-    :cond_1
-    if-nez p1, :cond_3
-
-    .line 32
-    const/4 p1, 0x0
-
-    .line 34
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-
-    .line 35
-    iget p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mTransformationStartVisibleType:I
-
-    .line 37
-    const/4 v0, 0x3
-
-    .line 39
-    if-ne p1, v0, :cond_2
-
-    .line 40
-    const/4 p1, -0x1
-
-    .line 42
-    iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mTransformationStartVisibleType:I
-
-    .line 43
-    :cond_2
-    return-void
-
-    .line 45
-    :cond_3
-    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
-
-    .line 46
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-
-    .line 49
-    return-void
-    .line 51
 .end method
 
 .method public final setTranslationY(F)V
@@ -6522,130 +6400,107 @@
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
     .line 4
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncHybridViewInflation()Z
-
-    .line 7
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 10
-    if-eqz v0, :cond_1
-
-    .line 11
-    :cond_0
-    :goto_0
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    .line 13
-    goto :goto_2
-
-    .line 16
-    :cond_1
-    :try_start_1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/row/shared/AsyncHybridViewInflation;->assertInLegacyMode()V
-
-    .line 17
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mIsChildInGroup:Z
 
-    .line 20
-    if-eqz v0, :cond_3
+    .line 7
+    if-eqz v0, :cond_1
 
-    .line 22
+    .line 9
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
 
-    .line 24
-    if-nez v0, :cond_2
+    .line 11
+    if-nez v0, :cond_0
 
-    .line 26
+    .line 13
     const/4 v1, 0x1
 
-    .line 28
-    goto :goto_1
-
-    .line 29
-    :cond_2
-    const/4 v1, 0x0
-
-    .line 30
-    :goto_1
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHybridGroupManager:Lcom/android/systemui/statusbar/notification/row/HybridGroupManager;
-
-    .line 31
-    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContractedChild:Landroid/view/View;
-
-    .line 33
-    iget-object v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mNotificationEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
-
-    .line 35
-    iget-object v4, v4, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
-
-    .line 37
-    invoke-virtual {v2, v0, v3, v4, p0}, Lcom/android/systemui/statusbar/notification/row/HybridGroupManager;->bindFromNotification(Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;Landroid/view/View;Landroid/service/notification/StatusBarNotification;Landroid/view/ViewGroup;)Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-
-    .line 39
-    move-result-object v0
-
-    .line 42
-    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-
-    .line 43
-    if-eqz v1, :cond_0
-
-    .line 45
-    if-eqz v0, :cond_0
-
-    .line 47
-    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
-
-    .line 49
-    const/4 v1, 0x3
-
-    .line 51
-    invoke-static {p0, v1, v0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateViewVisibility(IILandroid/view/View;Lcom/android/systemui/statusbar/TransformableView;)V
-
-    .line 52
+    .line 15
     goto :goto_0
 
-    .line 55
+    .line 16
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 17
+    :goto_0
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHybridGroupManager:Lcom/android/systemui/statusbar/notification/row/HybridGroupManager;
+
+    .line 18
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContractedChild:Landroid/view/View;
+
+    .line 20
+    iget-object v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mNotificationEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
+
+    .line 22
+    iget-object v4, v4, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
+
+    .line 24
+    invoke-virtual {v2, v0, v3, v4, p0}, Lcom/android/systemui/statusbar/notification/row/HybridGroupManager;->bindFromNotification(Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;Landroid/view/View;Landroid/service/notification/StatusBarNotification;Landroid/view/ViewGroup;)Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
+
+    .line 26
+    move-result-object v0
+
+    .line 29
+    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
+
+    .line 30
+    if-eqz v1, :cond_2
+
+    .line 32
+    if-eqz v0, :cond_2
+
+    .line 34
+    iget p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mVisibleType:I
+
+    .line 36
+    const/4 v1, 0x3
+
+    .line 38
+    invoke-static {p0, v1, v0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->updateViewVisibility(IILandroid/view/View;Lcom/android/systemui/statusbar/TransformableView;)V
+
+    .line 39
+    goto :goto_1
+
+    .line 42
     :catchall_0
     move-exception p0
 
-    .line 56
-    goto :goto_3
+    .line 43
+    goto :goto_2
 
-    .line 57
-    :cond_3
+    .line 44
+    :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
 
-    .line 58
-    if-eqz v0, :cond_0
+    .line 45
+    if-eqz v0, :cond_2
 
-    .line 60
+    .line 47
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 62
+    .line 49
     const/4 v0, 0x0
 
-    .line 65
+    .line 52
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 66
-    goto :goto_0
-
-    .line 68
-    :goto_2
-    return-void
-
-    .line 69
-    :goto_3
+    .line 53
+    :cond_2
+    :goto_1
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 70
+    .line 55
+    return-void
+
+    .line 58
+    :goto_2
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    .line 59
     throw p0
-    .line 73
+    .line 62
 .end method
 
 .method public final updateBackgroundColor(Z)V
@@ -6704,6 +6559,7 @@
     .line 30
     :cond_1
     return-void
+    .line 33
 .end method
 
 .method public final updateClipping()V
@@ -7175,7 +7031,7 @@
     .line 44
 .end method
 
-.method public final updateVisibility$2()V
+.method public final updateVisibility$4()V
     .locals 2
 
     .line 1

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/Flow;
@@ -11,11 +11,11 @@
 
 .field public final synthetic $this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
 
-.field public final synthetic this$0:Ljava/lang/Object;
+.field public final synthetic this$0:Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
+.method public synthetic constructor <init>(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;I)V
     .locals 0
 
     .line 1
@@ -25,7 +25,7 @@
     iput-object p1, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->$this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
 
     .line 4
-    iput-object p2, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Ljava/lang/Object;
+    iput-object p2, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;
 
     .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,206 +47,157 @@
     packed-switch v0, :pswitch_data_0
 
     .line 4
-    new-instance v0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$mapElementsLazily$$inlined$map$1$2;
+    new-instance v0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$7$2;
 
     .line 7
-    iget-object v1, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;
 
     .line 9
-    check-cast v1, Lkotlin/jvm/internal/Ref$ObjectRef;
+    invoke-direct {v0, p1, v1}, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$7$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;)V
 
     .line 11
-    invoke-direct {v0, p1, v1}, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$mapElementsLazily$$inlined$map$1$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/jvm/internal/Ref$ObjectRef;)V
-
-    .line 13
     iget-object p0, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->$this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
 
-    .line 16
+    .line 14
     invoke-interface {p0, v0, p2}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 18
+    .line 16
     move-result-object p0
 
-    .line 21
+    .line 19
     sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
 
-    .line 22
+    .line 20
     if-ne p0, p1, :cond_0
 
-    .line 24
+    .line 22
     goto :goto_0
 
-    .line 26
+    .line 24
     :cond_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 27
+    .line 25
     :goto_0
     return-object p0
 
-    .line 29
+    .line 27
     :pswitch_0
-    new-instance v0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$7$2;
+    new-instance v0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$5$2;
+
+    .line 28
+    iget-object v1, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;
 
     .line 30
-    iget-object v1, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Ljava/lang/Object;
+    invoke-direct {v0, p1, v1}, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$5$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;)V
 
     .line 32
-    check-cast v1, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;
-
-    .line 34
-    invoke-direct {v0, p1, v1}, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$7$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;)V
-
-    .line 36
     iget-object p0, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->$this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
 
-    .line 39
+    .line 35
     invoke-interface {p0, v0, p2}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 41
+    .line 37
     move-result-object p0
 
-    .line 44
+    .line 40
     sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
 
-    .line 45
+    .line 41
     if-ne p0, p1, :cond_1
 
-    .line 47
+    .line 43
     goto :goto_1
 
-    .line 49
+    .line 45
     :cond_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 50
+    .line 46
     :goto_1
     return-object p0
 
-    .line 52
+    .line 48
     :pswitch_1
-    new-instance v0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$5$2;
+    new-instance v0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$3$2;
+
+    .line 49
+    iget-object v1, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;
+
+    .line 51
+    invoke-direct {v0, p1, v1}, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$3$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;)V
 
     .line 53
-    iget-object v1, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Ljava/lang/Object;
-
-    .line 55
-    check-cast v1, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;
-
-    .line 57
-    invoke-direct {v0, p1, v1}, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$5$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;)V
-
-    .line 59
     iget-object p0, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->$this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
 
-    .line 62
+    .line 56
     invoke-interface {p0, v0, p2}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 64
+    .line 58
     move-result-object p0
 
-    .line 67
+    .line 61
     sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
 
-    .line 68
+    .line 62
     if-ne p0, p1, :cond_2
 
-    .line 70
+    .line 64
     goto :goto_2
 
-    .line 72
+    .line 66
     :cond_2
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 73
+    .line 67
     :goto_2
     return-object p0
 
-    .line 75
+    .line 69
     :pswitch_2
-    new-instance v0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$3$2;
+    new-instance v0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2$2;
 
-    .line 76
-    iget-object v1, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Ljava/lang/Object;
+    .line 70
+    iget-object v1, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;
 
-    .line 78
-    check-cast v1, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;
+    .line 72
+    invoke-direct {v0, p1, v1}, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;)V
 
-    .line 80
-    invoke-direct {v0, p1, v1}, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$3$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;)V
-
-    .line 82
+    .line 74
     iget-object p0, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->$this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
 
-    .line 85
+    .line 77
     invoke-interface {p0, v0, p2}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 87
+    .line 79
     move-result-object p0
 
-    .line 90
+    .line 82
     sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
 
-    .line 91
+    .line 83
     if-ne p0, p1, :cond_3
 
-    .line 93
+    .line 85
     goto :goto_3
 
-    .line 95
+    .line 87
     :cond_3
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 96
+    .line 88
     :goto_3
     return-object p0
 
-    .line 98
-    :pswitch_3
-    new-instance v0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2$2;
+    .line 90
+    nop
 
-    .line 99
-    iget-object v1, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->this$0:Ljava/lang/Object;
-
-    .line 101
-    check-cast v1, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;
-
-    .line 103
-    invoke-direct {v0, p1, v1}, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl;)V
-
-    .line 105
-    iget-object p0, p0, Lcom/android/systemui/display/data/repository/DisplayRepositoryImpl$special$$inlined$map$2;->$this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
-
-    .line 108
-    invoke-interface {p0, v0, p2}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    .line 110
-    move-result-object p0
-
-    .line 113
-    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
-
-    .line 114
-    if-ne p0, p1, :cond_4
-
-    .line 116
-    goto :goto_4
-
-    .line 118
-    :cond_4
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    .line 119
-    :goto_4
-    return-object p0
-
-    .line 121
+    .line 91
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 122
+    .line 92
 .end method

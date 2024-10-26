@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/pip/phone/PipMenuActionView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -30,7 +30,7 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b038e    # @id/image
+    const v0, 0x7f0a03ae    # @id/image
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -45,7 +45,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/pip/phone/PipMenuActionView;->mImageView:Landroid/widget/ImageView;
 
     .line 14
-    const v0, 0x7f0b0236    # @id/custom_close_bg
+    const v0, 0x7f0a0241    # @id/custom_close_bg
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;

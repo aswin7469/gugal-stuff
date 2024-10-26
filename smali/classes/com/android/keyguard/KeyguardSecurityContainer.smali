@@ -1,6 +1,6 @@
 .class public Lcom/android/keyguard/KeyguardSecurityContainer;
 .super Landroidx/constraintlayout/widget/ConstraintLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -44,7 +44,7 @@
 
 .field public final mViewConfiguration:Landroid/view/ViewConfiguration;
 
-.field public mViewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+.field public mViewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
 .field public mViewMode:Lcom/android/keyguard/KeyguardSecurityContainer$ViewMode;
 
@@ -79,7 +79,7 @@
     move-result-object p1
 
     .line 15
-    const p2, 0x7f1404cf    # @string/kg_failed_attempts_almost_at_erase_profile 'You have incorrectly attempted to unlock the phone %1$d times. After %2$d more unsuccessful attempts ...'
+    const p2, 0x7f130525    # @string/kg_failed_attempts_almost_at_erase_profile 'You have incorrectly attempted to unlock the phone %1$d times. After %2$d more unsuccessful attempts ...'
 
     .line 16
     invoke-virtual {p0, p2, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -111,7 +111,7 @@
     move-result-object p1
 
     .line 11
-    const v0, 0x7f1404d3    # @string/kg_failed_attempts_now_erasing_profile 'You have incorrectly attempted to unlock the phone %d times. The work profile will be removed, which ...'
+    const v0, 0x7f130529    # @string/kg_failed_attempts_now_erasing_profile 'You have incorrectly attempted to unlock the phone %d times. The work profile will be removed, which ...'
 
     .line 12
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -250,7 +250,7 @@
 
     move-result-object p3
 
-    const v0, 0x7f070354    # @dimen/keyguard_security_container_padding_top '20.0dp'
+    const v0, 0x7f070390    # @dimen/keyguard_security_container_padding_top '20.0dp'
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -332,7 +332,7 @@
     const-string v2, " not supported"
 
     .line 20
-    invoke-static {v1, v2, p0}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v2, p0}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 22
     move-result-object p0
@@ -375,39 +375,35 @@
     invoke-super {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     .line 2
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mViewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mViewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
     .line 5
     if-eqz p0, :cond_0
 
     .line 7
-    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
-
-    .line 9
     const-string p1, "KeyguardViewMediator.mViewMediatorCallback#keyguardDoneDrawing"
 
-    .line 11
+    .line 9
     invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 13
+    .line 11
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$4;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 16
+    .line 14
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mHandler:Lcom/android/systemui/keyguard/KeyguardViewMediator$13;
 
-    .line 18
+    .line 16
     const/16 p1, 0x8
 
-    .line 20
+    .line 18
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 22
+    .line 20
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 25
+    .line 23
     :cond_0
     return-void
-    .line 28
 .end method
 
 .method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
@@ -512,7 +508,7 @@
     move-result-object v1
 
     .line 33
-    const v2, 0x7f070356    # @dimen/keyguard_security_view_bottom_margin '60.0dp'
+    const v2, 0x7f070392    # @dimen/keyguard_security_view_bottom_margin '60.0dp'
 
     .line 34
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -565,6 +561,7 @@
 
     .line 68
     return-object p0
+    .line 69
 .end method
 
 .method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -591,7 +588,7 @@
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b08a0    # @id/view_flipper
+    const v0, 0x7f0a08d3    # @id/view_flipper
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -1211,86 +1208,83 @@
     sget-object p1, Lcom/android/keyguard/ActiveUnlockConfig$ActiveUnlockRequestOrigin;->UNLOCK_INTENT_LEGACY:Lcom/android/keyguard/ActiveUnlockConfig$ActiveUnlockRequestOrigin;
 
     .line 192
-    const-string v0, "swipeUpOnBouncer"
+    const-string/jumbo v0, "swipeUpOnBouncer"
 
     .line 194
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainerController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 196
+    .line 197
     invoke-virtual {p0, p1, v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->requestActiveUnlock(Lcom/android/keyguard/ActiveUnlockConfig$ActiveUnlockRequestOrigin;Ljava/lang/String;)V
 
-    .line 198
+    .line 199
     goto :goto_1
 
-    .line 201
+    .line 202
     :cond_8
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getTranslationY()F
 
-    .line 202
+    .line 203
     move-result p1
 
-    .line 205
+    .line 206
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
-    .line 206
+    .line 207
     move-result-object v0
-
-    .line 209
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     .line 210
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    .line 211
     move-result-object v0
 
-    .line 213
+    .line 214
     invoke-static {v4, v1, v0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
-    .line 214
+    .line 215
     move-result v0
 
-    .line 217
+    .line 218
     cmpl-float p1, p1, v0
 
-    .line 218
+    .line 219
     if-lez p1, :cond_9
 
-    .line 220
+    .line 221
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mSwipeListener:Lcom/android/keyguard/KeyguardSecurityContainerController$3;
 
-    .line 222
+    .line 223
     if-eqz p0, :cond_9
 
-    .line 224
+    .line 225
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainerController$3;->this$0:Lcom/android/keyguard/KeyguardSecurityContainerController;
 
-    .line 226
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainerController;->mViewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+    .line 227
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainerController;->mViewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
-    .line 228
-    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
-
-    .line 230
+    .line 229
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$4;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 232
+    .line 231
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardViewControllerLazy:Ldagger/Lazy;
 
-    .line 234
+    .line 233
     invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 236
+    .line 235
     move-result-object p0
 
-    .line 239
+    .line 238
     check-cast p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 240
+    .line 239
     invoke-virtual {p0, v4}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->reset(Z)V
 
-    .line 242
+    .line 241
     :cond_9
     :goto_1
     return v4
-    .line 245
+    .line 244
 .end method
 
 .method public final showAlmostAtWipeDialog(III)V
@@ -1343,7 +1337,7 @@
     move-result-object p1
 
     .line 26
-    const p2, 0x7f1404d0    # @string/kg_failed_attempts_almost_at_erase_user 'You have incorrectly attempted to unlock the phone %1$d times. After %2$d more unsuccessful attempts ...'
+    const p2, 0x7f130526    # @string/kg_failed_attempts_almost_at_erase_user 'You have incorrectly attempted to unlock the phone %1$d times. After %2$d more unsuccessful attempts ...'
 
     .line 27
     invoke-virtual {p3, p2, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1435,7 +1429,7 @@
     move-result-object p1
 
     .line 86
-    const p2, 0x7f1404d2    # @string/kg_failed_attempts_almost_at_wipe 'You have incorrectly attempted to unlock the phone %1$d times. After %2$d more unsuccessful attempts ...'
+    const p2, 0x7f130528    # @string/kg_failed_attempts_almost_at_wipe 'You have incorrectly attempted to unlock the phone %1$d times. After %2$d more unsuccessful attempts ...'
 
     .line 87
     invoke-virtual {p3, p2, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1499,7 +1493,7 @@
     move-result-object p1
 
     .line 29
-    const v0, 0x7f140709    # @string/ok '@android:string/ok'
+    const v0, 0x7f130764    # @string/ok '@android:string/ok'
 
     .line 30
     invoke-virtual {p1, v0, v1}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -1593,7 +1587,7 @@
     move-result-object p1
 
     .line 22
-    const v0, 0x7f1404d4    # @string/kg_failed_attempts_now_erasing_user 'You have incorrectly attempted to unlock the phone %d times. This user will be removed, which will d ...'
+    const v0, 0x7f13052a    # @string/kg_failed_attempts_now_erasing_user 'You have incorrectly attempted to unlock the phone %d times. This user will be removed, which will d ...'
 
     .line 23
     invoke-virtual {p2, v0, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1673,7 +1667,7 @@
     move-result-object p1
 
     .line 74
-    const v0, 0x7f1404d5    # @string/kg_failed_attempts_now_wiping 'You have incorrectly attempted to unlock the phone %d times. This phone will be reset, which will de ...'
+    const v0, 0x7f13052b    # @string/kg_failed_attempts_now_wiping 'You have incorrectly attempted to unlock the phone %d times. This phone will be reset, which will de ...'
 
     .line 75
     invoke-virtual {p2, v0, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

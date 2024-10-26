@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/common/split/DividerHandleView;
 .super Landroid/view/View;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -101,7 +101,7 @@
     move-result-object p2
 
     .line 15
-    const v0, 0x7f0600da    # @color/docked_divider_handle '#ffffff'
+    const v0, 0x7f0600e2    # @color/docked_divider_handle '#ffffff'
 
     .line 16
     const/4 v1, 0x0
@@ -420,10 +420,10 @@
     iget-boolean v1, p0, Lcom/android/wm/shell/common/split/DividerHandleView;->mIsLeftRightSplit:Z
 
     .line 6
-    const v2, 0x7f0709a6    # @dimen/split_divider_handle_width '72.0dp'
+    const v2, 0x7f0709fe    # @dimen/split_divider_handle_width '72.0dp'
 
     .line 8
-    const v3, 0x7f0709a3    # @dimen/split_divider_handle_height '3.0dp'
+    const v3, 0x7f0709fb    # @dimen/split_divider_handle_height '3.0dp'
 
     .line 11
     if-eqz v1, :cond_0

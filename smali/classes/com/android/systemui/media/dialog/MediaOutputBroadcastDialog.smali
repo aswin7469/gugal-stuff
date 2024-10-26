@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog;
 .super Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -263,7 +263,7 @@
     move-result-object p0
 
     .line 7
-    const v0, 0x7f07068a    # @dimen/media_output_dialog_header_album_icon_size '72.0dp'
+    const v0, 0x7f0706cc    # @dimen/media_output_dialog_header_album_icon_size '72.0dp'
 
     .line 8
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -323,6 +323,7 @@
     .line 24
     :goto_0
     return-object v0
+    .line 25
 .end method
 
 .method public final getHeaderText()Ljava/lang/CharSequence;
@@ -366,7 +367,7 @@
     iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mContext:Landroid/content/Context;
 
     .line 23
-    const v0, 0x7f1402dd    # @string/controls_media_title 'Media'
+    const v0, 0x7f1302f9    # @string/controls_media_title 'Media'
 
     .line 25
     invoke-virtual {p0, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -701,7 +702,7 @@
     if-ge v1, v2, :cond_1
 
     .line 19
-    const v1, 0x7f1405e6    # @string/media_output_broadcast_update_error 'Can’t save. Try again.'
+    const v1, 0x7f130640    # @string/media_output_broadcast_update_error 'Can’t save. Try again.'
 
     .line 21
     move v2, v3
@@ -714,7 +715,7 @@
     iput v4, p0, Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog;->mRetryCount:I
 
     .line 26
-    const v1, 0x7f1405e2    # @string/media_output_broadcast_last_update_error 'Can’t save.'
+    const v1, 0x7f13063c    # @string/media_output_broadcast_last_update_error 'Can’t save.'
 
     .line 28
     move v2, v4
@@ -760,108 +761,6 @@
     .line 56
 .end method
 
-.method public final isBroadcastSupported()Z
-    .locals 4
-
-    .line 1
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->legacyLeAudioSharing()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    const/4 v1, 0x0
-
-    .line 6
-    if-nez v0, :cond_0
-
-    .line 7
-    return v1
-
-    .line 9
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMediaOutputController:Lcom/android/systemui/media/dialog/MediaOutputController;
-
-    .line 10
-    iget-object v0, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mLocalMediaManager:Lcom/android/settingslib/media/LocalMediaManager;
-
-    .line 12
-    invoke-virtual {v0}, Lcom/android/settingslib/media/LocalMediaManager;->getCurrentConnectedDevice()Lcom/android/settingslib/media/MediaDevice;
-
-    .line 14
-    move-result-object v0
-
-    .line 17
-    const/4 v2, 0x1
-
-    .line 18
-    if-eqz v0, :cond_1
-
-    .line 19
-    iget-object v0, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMediaOutputController:Lcom/android/systemui/media/dialog/MediaOutputController;
-
-    .line 21
-    iget-object v0, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mLocalMediaManager:Lcom/android/settingslib/media/LocalMediaManager;
-
-    .line 23
-    invoke-virtual {v0}, Lcom/android/settingslib/media/LocalMediaManager;->getCurrentConnectedDevice()Lcom/android/settingslib/media/MediaDevice;
-
-    .line 25
-    move-result-object v0
-
-    .line 28
-    iget-object v0, v0, Lcom/android/settingslib/media/MediaDevice;->mRouteInfo:Landroid/media/MediaRoute2Info;
-
-    .line 29
-    invoke-virtual {v0}, Landroid/media/MediaRoute2Info;->getType()I
-
-    .line 31
-    move-result v0
-
-    .line 34
-    const/16 v3, 0x1a
-
-    .line 35
-    if-ne v0, v3, :cond_1
-
-    .line 37
-    move v0, v2
-
-    .line 39
-    goto :goto_0
-
-    .line 40
-    :cond_1
-    move v0, v1
-
-    .line 41
-    :goto_0
-    iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMediaOutputController:Lcom/android/systemui/media/dialog/MediaOutputController;
-
-    .line 42
-    iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-    .line 44
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
-
-    .line 46
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
-
-    .line 48
-    if-eqz p0, :cond_2
-
-    .line 50
-    if-eqz v0, :cond_2
-
-    .line 52
-    move v1, v2
-
-    .line 54
-    :cond_2
-    return v1
-    .line 55
-.end method
-
 .method public final launchBroadcastUpdatedDialog(Ljava/lang/String;Z)V
     .locals 4
 
@@ -875,7 +774,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f0e0163    # @layout/media_output_broadcast_update_dialog 'res/layout/media_output_broadcast_update_dialog.xml'
+    const v1, 0x7f0d016f    # @layout/media_output_broadcast_update_dialog 'res/layout/media_output_broadcast_update_dialog.xml'
 
     .line 8
     const/4 v2, 0x0
@@ -887,7 +786,7 @@
     move-result-object v0
 
     .line 15
-    const v1, 0x7f0b0150    # @id/broadcast_edit_text
+    const v1, 0x7f0a0156    # @id/broadcast_edit_text
 
     .line 16
     invoke-virtual {v0, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -919,7 +818,7 @@
     invoke-virtual {v1, p1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 35
-    const p1, 0x7f0b0151    # @id/broadcast_error_message
+    const p1, 0x7f0a0157    # @id/broadcast_error_message
 
     .line 38
     invoke-virtual {v0, p1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -946,14 +845,14 @@
     if-eqz p2, :cond_1
 
     .line 56
-    const v3, 0x7f1405de    # @string/media_output_broadcast_code 'Password'
+    const v3, 0x7f130638    # @string/media_output_broadcast_code 'Password'
 
     .line 58
     goto :goto_1
 
     .line 61
     :cond_1
-    const v3, 0x7f1405e3    # @string/media_output_broadcast_name 'Broadcast Name'
+    const v3, 0x7f13063d    # @string/media_output_broadcast_name 'Broadcast Name'
 
     .line 62
     :goto_1
@@ -984,7 +883,7 @@
     invoke-direct {v0, p0, p2, v1}, Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog;ZLandroid/widget/EditText;)V
 
     .line 81
-    const p2, 0x7f1405e0    # @string/media_output_broadcast_dialog_save 'Save'
+    const p2, 0x7f13063a    # @string/media_output_broadcast_dialog_save 'Save'
 
     .line 84
     invoke-virtual {p1, p2, v0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -1046,7 +945,7 @@
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mDialogView:Landroid/view/View;
 
     .line 5
-    const v0, 0x7f0b0159    # @id/broadcast_qrcode
+    const v0, 0x7f0a015f    # @id/broadcast_qrcode
 
     .line 7
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1064,7 +963,7 @@
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mDialogView:Landroid/view/View;
 
     .line 19
-    const v0, 0x7f0b0622    # @id/qrcode_view
+    const v0, 0x7f0a064b    # @id/qrcode_view
 
     .line 21
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1082,7 +981,7 @@
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mDialogView:Landroid/view/View;
 
     .line 32
-    const v0, 0x7f0b0153    # @id/broadcast_info
+    const v0, 0x7f0a0159    # @id/broadcast_info
 
     .line 34
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1109,7 +1008,7 @@
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mDialogView:Landroid/view/View;
 
     .line 52
-    const v0, 0x7f0b0157    # @id/broadcast_name_summary
+    const v0, 0x7f0a015d    # @id/broadcast_name_summary
 
     .line 54
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1127,7 +1026,7 @@
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mDialogView:Landroid/view/View;
 
     .line 65
-    const v0, 0x7f0b0155    # @id/broadcast_name_edit
+    const v0, 0x7f0a015b    # @id/broadcast_name_edit
 
     .line 67
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1154,7 +1053,7 @@
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mDialogView:Landroid/view/View;
 
     .line 85
-    const v0, 0x7f0b014e    # @id/broadcast_code_summary
+    const v0, 0x7f0a0154    # @id/broadcast_code_summary
 
     .line 87
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1181,7 +1080,7 @@
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mDialogView:Landroid/view/View;
 
     .line 105
-    const v0, 0x7f0b014c    # @id/broadcast_code_eye
+    const v0, 0x7f0a0152    # @id/broadcast_code_eye
 
     .line 107
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1208,7 +1107,7 @@
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mDialogView:Landroid/view/View;
 
     .line 125
-    const v0, 0x7f0b014b    # @id/broadcast_code_edit
+    const v0, 0x7f0a0151    # @id/broadcast_code_edit
 
     .line 127
     invoke-virtual {p1, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1240,20 +1139,77 @@
 .end method
 
 .method public final onStopButtonClick()V
-    .locals 1
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMediaOutputController:Lcom/android/systemui/media/dialog/MediaOutputController;
 
     .line 2
-    invoke-virtual {v0}, Lcom/android/systemui/media/dialog/MediaOutputController;->stopBluetoothLeBroadcast()Z
+    iget-object v0, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
     .line 4
+    iget-object v0, v0, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+
+    .line 6
+    iget-object v0, v0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
+
+    .line 8
+    if-nez v0, :cond_0
+
+    .line 10
+    const-string v0, "MediaOutputController"
+
+    .line 12
+    const-string v1, "The broadcast profile is null"
+
+    .line 14
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 16
+    goto :goto_0
+
+    .line 19
+    :cond_0
+    iget v1, v0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mBroadcastId:I
+
+    .line 20
+    iget-object v2, v0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
+
+    .line 22
+    const-string v3, "LocalBluetoothLeBroadcast"
+
+    .line 24
+    if-nez v2, :cond_1
+
+    .line 26
+    const-string v0, "The BluetoothLeBroadcast is null when stopping the broadcast."
+
+    .line 28
+    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 30
+    goto :goto_0
+
+    .line 33
+    :cond_1
+    const-string/jumbo v2, "stopBroadcast()"
+
+    .line 34
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 37
+    iget-object v0, v0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
+
+    .line 40
+    invoke-virtual {v0, v1}, Landroid/bluetooth/BluetoothLeBroadcast;->stopBroadcast(I)V
+
+    .line 42
+    :goto_0
     invoke-virtual {p0}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->dismiss()V
 
-    .line 7
+    .line 45
     return-void
-    .line 10
+    .line 48
 .end method
 
 .method public final refreshUi()V
@@ -2249,7 +2205,7 @@
     const-string v6, ";;"
 
     .line 659
-    invoke-static {v5, v0, v6}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v0, v6}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 661
     move-result-object v0
@@ -2324,7 +2280,7 @@
     move-result-object v0
 
     .line 703
-    const v5, 0x7f070695    # @dimen/media_output_qrcode_size '216.0dp'
+    const v5, 0x7f0706d7    # @dimen/media_output_qrcode_size '216.0dp'
 
     .line 704
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2956,7 +2912,7 @@
 .end method
 
 .method public updateBroadcastInfo(ZLjava/lang/String;)V
-    .locals 2
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog;->mAlertDialog:Landroid/app/AlertDialog;
@@ -2981,163 +2937,203 @@
 
     .line 12
     :cond_0
-    const/4 v0, 0x1
+    const-string v0, "LocalBluetoothLeBroadcast"
 
     .line 15
-    if-eqz p1, :cond_1
+    const-string v1, "The broadcast profile is null"
 
-    .line 16
-    iput-boolean v0, p0, Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog;->mIsStopbyUpdateBroadcastCode:Z
+    .line 17
+    const/4 v2, 0x1
 
-    .line 18
-    iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMediaOutputController:Lcom/android/systemui/media/dialog/MediaOutputController;
+    .line 19
+    const-string v3, "MediaOutputController"
 
     .line 20
-    invoke-virtual {p1, p2}, Lcom/android/systemui/media/dialog/MediaOutputController;->setBroadcastCode(Ljava/lang/String;)V
+    if-eqz p1, :cond_3
 
     .line 22
+    iput-boolean v2, p0, Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog;->mIsStopbyUpdateBroadcastCode:Z
+
+    .line 24
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMediaOutputController:Lcom/android/systemui/media/dialog/MediaOutputController;
 
-    .line 25
-    invoke-virtual {p1}, Lcom/android/systemui/media/dialog/MediaOutputController;->stopBluetoothLeBroadcast()Z
+    .line 26
+    invoke-virtual {p1, p2}, Lcom/android/systemui/media/dialog/MediaOutputController;->setBroadcastCode(Ljava/lang/String;)V
 
-    .line 27
-    move-result p1
-
-    .line 30
-    if-nez p1, :cond_5
+    .line 28
+    iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMediaOutputController:Lcom/android/systemui/media/dialog/MediaOutputController;
 
     .line 31
-    invoke-virtual {p0}, Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog;->handleLeBroadcastStopFailed()V
-
-    .line 33
-    return-void
-
-    .line 36
-    :cond_1
-    iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMediaOutputController:Lcom/android/systemui/media/dialog/MediaOutputController;
-
-    .line 37
     iget-object p1, p1, Lcom/android/systemui/media/dialog/MediaOutputController;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
-    .line 39
+    .line 33
     iget-object p1, p1, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
 
-    .line 41
+    .line 35
     iget-object p1, p1, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
 
-    .line 43
-    const-string v1, "MediaOutputController"
+    .line 37
+    if-nez p1, :cond_1
 
-    .line 45
-    if-nez p1, :cond_2
+    .line 39
+    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 41
+    invoke-virtual {p0}, Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog;->handleLeBroadcastStopFailed()V
+
+    .line 44
+    return-void
 
     .line 47
-    const-string p1, "setBroadcastName: LE Audio Broadcast is null"
+    :cond_1
+    iget p0, p1, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mBroadcastId:I
 
-    .line 49
-    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 48
+    iget-object p2, p1, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
 
-    .line 51
-    goto :goto_0
+    .line 50
+    if-nez p2, :cond_2
+
+    .line 52
+    const-string p0, "The BluetoothLeBroadcast is null when stopping the broadcast."
 
     .line 54
-    :cond_2
-    invoke-virtual {p1, p2, v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->setProgramInfo(Ljava/lang/String;Z)V
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
+    .line 56
+    goto :goto_1
+
+    .line 59
+    :cond_2
+    const-string/jumbo p2, "stopBroadcast()"
+
+    .line 60
+    invoke-static {v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 63
+    iget-object p1, p1, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
+
+    .line 66
+    invoke-virtual {p1, p0}, Landroid/bluetooth/BluetoothLeBroadcast;->stopBroadcast(I)V
+
+    .line 68
+    goto :goto_1
+
+    .line 71
+    :cond_3
+    iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMediaOutputController:Lcom/android/systemui/media/dialog/MediaOutputController;
+
+    .line 72
+    iget-object p1, p1, Lcom/android/systemui/media/dialog/MediaOutputController;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+
+    .line 74
+    iget-object p1, p1, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+
+    .line 76
+    iget-object p1, p1, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
+
+    .line 78
+    if-nez p1, :cond_4
+
+    .line 80
+    const-string p1, "setBroadcastName: LE Audio Broadcast is null"
+
+    .line 82
+    invoke-static {v3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 84
+    goto :goto_0
+
+    .line 87
+    :cond_4
+    invoke-virtual {p1, p2, v2}, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->setProgramInfo(Ljava/lang/String;Z)V
+
+    .line 88
     :goto_0
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMediaOutputController:Lcom/android/systemui/media/dialog/MediaOutputController;
 
-    .line 58
+    .line 91
     iget-object p2, p1, Lcom/android/systemui/media/dialog/MediaOutputController;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
-    .line 60
+    .line 93
     iget-object p2, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
 
-    .line 62
+    .line 95
     iget-object p2, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
 
-    .line 64
-    if-nez p2, :cond_3
+    .line 97
+    if-nez p2, :cond_5
 
-    .line 66
-    const-string p1, "The broadcast profile is null"
-
-    .line 68
-    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 70
-    invoke-virtual {p0}, Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog;->handleLeBroadcastUpdateFailed()V
-
-    .line 73
-    goto :goto_1
-
-    .line 76
-    :cond_3
-    invoke-virtual {p1}, Lcom/android/systemui/media/dialog/MediaOutputController;->getAppSourceName()Ljava/lang/String;
-
-    .line 77
-    move-result-object p0
-
-    .line 80
-    iget-object p1, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
-
-    .line 81
-    const-string v0, "LocalBluetoothLeBroadcast"
-
-    .line 83
-    if-nez p1, :cond_4
-
-    .line 85
-    const-string p0, "The BluetoothLeBroadcast is null when updating the broadcast."
-
-    .line 87
-    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 89
-    goto :goto_1
-
-    .line 92
-    :cond_4
-    iget-object p1, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mProgramInfo:Ljava/lang/String;
-
-    .line 93
-    const-string/jumbo v1, "updateBroadcast: language = null ,programInfo = "
-
-    .line 95
-    invoke-static {v1, p1, v0}, Landroidx/fragment/app/FragmentManagerViewModel$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 98
-    iput-object p0, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mNewAppSourceName:Ljava/lang/String;
+    .line 99
+    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 101
-    iget-object p0, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mBuilder:Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;
+    invoke-virtual {p0}, Lcom/android/systemui/media/dialog/MediaOutputBroadcastDialog;->handleLeBroadcastUpdateFailed()V
 
-    .line 103
-    invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;->setProgramInfo(Ljava/lang/String;)Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;
+    .line 104
+    goto :goto_1
 
-    .line 105
-    move-result-object p0
+    .line 107
+    :cond_5
+    invoke-virtual {p1}, Lcom/android/systemui/media/dialog/MediaOutputController;->getAppSourceName()Ljava/lang/String;
 
     .line 108
-    invoke-virtual {p0}, Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;->build()Landroid/bluetooth/BluetoothLeAudioContentMetadata;
-
-    .line 109
     move-result-object p0
 
-    .line 112
+    .line 111
     iget-object p1, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
 
-    .line 113
+    .line 112
+    if-nez p1, :cond_6
+
+    .line 114
+    const-string p0, "The BluetoothLeBroadcast is null when updating the broadcast."
+
+    .line 116
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 118
+    goto :goto_1
+
+    .line 121
+    :cond_6
+    iget-object p1, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mProgramInfo:Ljava/lang/String;
+
+    .line 122
+    const-string/jumbo v1, "updateBroadcast: language = null ,programInfo = "
+
+    .line 124
+    invoke-static {v1, p1, v0}, Landroidx/fragment/app/FragmentManagerViewModel$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 127
+    iput-object p0, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mNewAppSourceName:Ljava/lang/String;
+
+    .line 130
+    iget-object p0, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mBuilder:Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;
+
+    .line 132
+    invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;->setProgramInfo(Ljava/lang/String;)Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;
+
+    .line 134
+    move-result-object p0
+
+    .line 137
+    invoke-virtual {p0}, Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;->build()Landroid/bluetooth/BluetoothLeAudioContentMetadata;
+
+    .line 138
+    move-result-object p0
+
+    .line 141
+    iget-object p1, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
+
+    .line 142
     iget p2, p2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mBroadcastId:I
 
-    .line 115
+    .line 144
     invoke-virtual {p1, p2, p0}, Landroid/bluetooth/BluetoothLeBroadcast;->updateBroadcast(ILandroid/bluetooth/BluetoothLeAudioContentMetadata;)V
 
-    .line 117
-    :cond_5
+    .line 146
     :goto_1
     return-void
-    .line 120
+    .line 149
 .end method

@@ -1,6 +1,6 @@
 .class Lcom/android/systemui/GuestResumeSessionReceiver$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/settings/UserTracker$Callback;
@@ -96,399 +96,399 @@
     iget-object v4, v1, Lcom/android/systemui/GuestResumeSessionReceiver;->mSecureSettings:Lcom/android/systemui/util/settings/SecureSettings;
 
     .line 41
-    const-string v5, "systemui.guest_has_logged_in"
+    const-string/jumbo v5, "systemui.guest_has_logged_in"
 
     .line 43
     const/4 v6, 0x0
 
-    .line 45
+    .line 46
     invoke-interface {v4, v5, v6, v0}, Lcom/android/systemui/util/settings/UserSettingsProxy;->getIntForUser(Ljava/lang/String;II)I
 
-    .line 46
+    .line 47
     move-result v7
 
-    .line 49
+    .line 50
     const/4 v8, 0x1
 
-    .line 50
+    .line 51
     if-nez v7, :cond_2
 
-    .line 51
+    .line 52
     invoke-interface {v4, v5, v8, v0}, Lcom/android/systemui/util/settings/UserSettingsProxy;->putIntForUser(Ljava/lang/String;II)Z
 
-    .line 53
+    .line 54
     move v7, v8
 
-    .line 56
+    .line 57
     goto :goto_0
 
-    .line 57
+    .line 58
     :cond_2
     if-ne v7, v8, :cond_3
 
-    .line 58
+    .line 59
     const/4 v7, 0x2
 
-    .line 60
+    .line 61
     invoke-interface {v4, v5, v7, v0}, Lcom/android/systemui/util/settings/UserSettingsProxy;->putIntForUser(Ljava/lang/String;II)Z
 
-    .line 61
+    .line 62
     :cond_3
     :goto_0
     if-gt v7, v8, :cond_4
 
-    .line 64
+    .line 65
     move v4, v8
 
-    .line 66
+    .line 67
     goto :goto_1
 
-    .line 67
+    .line 68
     :cond_4
     move v4, v6
 
-    .line 68
+    .line 69
     :goto_1
     iget-object v5, v1, Lcom/android/systemui/GuestResumeSessionReceiver;->mGuestSessionNotification:Lcom/android/systemui/GuestSessionNotification;
 
-    .line 69
+    .line 70
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 71
+    .line 72
     invoke-virtual {v2}, Landroid/content/pm/UserInfo;->isGuest()Z
 
-    .line 74
+    .line 75
     move-result v9
 
-    .line 77
+    .line 78
     if-nez v9, :cond_5
 
-    .line 78
+    .line 79
     goto/16 :goto_3
 
-    .line 80
+    .line 81
     :cond_5
     invoke-virtual {v2}, Landroid/content/pm/UserInfo;->isEphemeral()Z
 
-    .line 82
+    .line 83
     move-result v9
 
-    .line 85
+    .line 86
     if-eqz v9, :cond_6
 
-    .line 86
+    .line 87
     iget-object v9, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 88
-    const v10, 0x7f1403e2    # @string/guest_notification_ephemeral 'All activity will be deleted on exit'
+    .line 89
+    const v10, 0x7f130425    # @string/guest_notification_ephemeral 'All activity will be deleted on exit'
 
-    .line 90
+    .line 91
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 93
+    .line 94
     move-result-object v9
 
-    .line 96
+    .line 97
     goto :goto_2
 
-    .line 97
+    .line 98
     :cond_6
     if-eqz v4, :cond_7
 
-    .line 98
+    .line 99
     iget-object v9, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 100
-    const v10, 0x7f1403e3    # @string/guest_notification_non_ephemeral 'You can save or delete your activity on exit'
+    .line 101
+    const v10, 0x7f130426    # @string/guest_notification_non_ephemeral 'You can save or delete your activity on exit'
 
-    .line 102
+    .line 103
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 105
+    .line 106
     move-result-object v9
 
-    .line 108
+    .line 109
     goto :goto_2
 
-    .line 109
+    .line 110
     :cond_7
     iget-object v9, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 110
-    const v10, 0x7f1403e4    # @string/guest_notification_non_ephemeral_non_first_login 'Reset to delete session activity now, or you can save or delete activity on exit'
+    .line 111
+    const v10, 0x7f130427    # @string/guest_notification_non_ephemeral_non_first_login 'Reset to delete session activity now, or you can save or delete activity on exit'
 
-    .line 112
+    .line 113
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 115
+    .line 116
     move-result-object v9
 
-    .line 118
+    .line 119
     :goto_2
     new-instance v10, Landroid/content/Intent;
 
-    .line 119
+    .line 120
     const-string v11, "android.intent.action.GUEST_EXIT"
 
-    .line 121
+    .line 122
     invoke-direct {v10, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 123
+    .line 124
     new-instance v14, Landroid/content/Intent;
 
-    .line 126
+    .line 127
     const-string v11, "android.settings.USER_SETTINGS"
 
-    .line 128
+    .line 129
     invoke-direct {v14, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 130
+    .line 131
     iget-object v11, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 133
+    .line 134
     sget-object v15, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
 
-    .line 135
+    .line 136
     const/high16 v13, 0x4000000
 
-    .line 137
+    .line 138
     invoke-static {v11, v6, v10, v13, v15}, Landroid/app/PendingIntent;->getBroadcastAsUser(Landroid/content/Context;ILandroid/content/Intent;ILandroid/os/UserHandle;)Landroid/app/PendingIntent;
 
-    .line 139
+    .line 140
     move-result-object v10
 
-    .line 142
+    .line 143
     iget-object v12, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 143
+    .line 144
     iget v11, v2, Landroid/content/pm/UserInfo;->id:I
 
-    .line 145
+    .line 146
     invoke-static {v11}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
-    .line 147
+    .line 148
     move-result-object v17
 
-    .line 150
+    .line 151
     const/16 v16, 0x0
 
-    .line 151
+    .line 152
     const/4 v11, 0x0
 
-    .line 153
+    .line 154
     const/high16 v18, 0x14000000
 
-    .line 154
+    .line 155
     move v3, v13
 
-    .line 156
+    .line 157
     move v13, v11
 
-    .line 157
+    .line 158
     move-object v11, v15
 
-    .line 158
+    .line 159
     move/from16 v15, v18
 
-    .line 159
+    .line 160
     invoke-static/range {v12 .. v17}, Landroid/app/PendingIntent;->getActivityAsUser(Landroid/content/Context;ILandroid/content/Intent;ILandroid/os/Bundle;Landroid/os/UserHandle;)Landroid/app/PendingIntent;
 
-    .line 161
+    .line 162
     move-result-object v12
 
-    .line 164
+    .line 165
     new-instance v13, Landroid/app/Notification$Builder;
 
-    .line 165
+    .line 166
     iget-object v14, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 167
+    .line 168
     const-string v15, "ALR"
 
-    .line 169
+    .line 170
     invoke-direct {v13, v14, v15}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 171
-    const v14, 0x7f0806c8    # @drawable/ic_account_circle 'res/drawable/ic_account_circle.xml'
+    .line 172
+    const v14, 0x7f0806d7    # @drawable/ic_account_circle 'res/drawable/ic_account_circle.xml'
 
-    .line 174
+    .line 175
     invoke-virtual {v13, v14}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
-    .line 177
+    .line 178
     move-result-object v13
-
-    .line 180
-    iget-object v14, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
     .line 181
-    const v15, 0x7f1403e5    # @string/guest_notification_session_active 'You are in guest mode'
+    iget-object v14, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 183
+    .line 182
+    const v15, 0x7f130428    # @string/guest_notification_session_active 'You are in guest mode'
+
+    .line 184
     invoke-virtual {v14, v15}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 186
+    .line 187
     move-result-object v14
 
-    .line 189
+    .line 190
     invoke-virtual {v13, v14}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 190
+    .line 191
     move-result-object v13
 
-    .line 193
+    .line 194
     invoke-virtual {v13, v9}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 194
+    .line 195
     move-result-object v9
-
-    .line 197
-    invoke-virtual {v9, v6}, Landroid/app/Notification$Builder;->setPriority(I)Landroid/app/Notification$Builder;
 
     .line 198
-    move-result-object v9
+    invoke-virtual {v9, v6}, Landroid/app/Notification$Builder;->setPriority(I)Landroid/app/Notification$Builder;
 
-    .line 201
-    invoke-virtual {v9, v8}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
+    .line 199
+    move-result-object v9
 
     .line 202
-    move-result-object v9
+    invoke-virtual {v9, v8}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
 
-    .line 205
-    invoke-virtual {v9, v12}, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
+    .line 203
+    move-result-object v9
 
     .line 206
+    invoke-virtual {v9, v12}, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
+
+    .line 207
     move-result-object v9
 
-    .line 209
-    const v12, 0x7f08093b    # @drawable/ic_sysbar_home 'res/drawable/ic_sysbar_home.xml'
-
     .line 210
+    const v12, 0x7f08096a    # @drawable/ic_sysbar_home 'res/drawable/ic_sysbar_home.xml'
+
+    .line 211
     if-nez v4, :cond_8
 
-    .line 213
+    .line 214
     new-instance v4, Landroid/content/Intent;
 
-    .line 215
+    .line 216
     const-string v13, "android.intent.action.GUEST_RESET"
 
-    .line 217
+    .line 218
     invoke-direct {v4, v13}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 219
+    .line 220
     iget-object v13, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 222
+    .line 223
     invoke-static {v13, v6, v4, v3, v11}, Landroid/app/PendingIntent;->getBroadcastAsUser(Landroid/content/Context;ILandroid/content/Intent;ILandroid/os/UserHandle;)Landroid/app/PendingIntent;
 
-    .line 224
+    .line 225
     move-result-object v3
 
-    .line 227
+    .line 228
     iget-object v4, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 228
-    const v6, 0x7f1403ec    # @string/guest_reset_guest_confirm_button 'Reset'
+    .line 229
+    const v6, 0x7f13042f    # @string/guest_reset_guest_confirm_button 'Reset'
 
-    .line 230
+    .line 231
     invoke-virtual {v4, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 233
+    .line 234
     move-result-object v4
 
-    .line 236
+    .line 237
     invoke-virtual {v9, v12, v4, v3}, Landroid/app/Notification$Builder;->addAction(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
-    .line 237
+    .line 238
     :cond_8
     iget-object v3, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 240
-    const v4, 0x7f1403d5    # @string/guest_exit_button 'Exit guest mode'
+    .line 241
+    const v4, 0x7f130418    # @string/guest_exit_button 'Exit guest mode'
 
-    .line 242
+    .line 243
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 245
+    .line 246
     move-result-object v3
 
-    .line 248
+    .line 249
     invoke-virtual {v9, v12, v3, v10}, Landroid/app/Notification$Builder;->addAction(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
-    .line 249
+    .line 250
     new-instance v3, Landroid/os/Bundle;
 
-    .line 252
+    .line 253
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 254
+    .line 255
     iget-object v4, v5, Lcom/android/systemui/GuestSessionNotification;->mContext:Landroid/content/Context;
 
-    .line 257
-    const v6, 0x7f1403e1    # @string/guest_notification_app_name 'Guest mode'
+    .line 258
+    const v6, 0x7f130424    # @string/guest_notification_app_name 'Guest mode'
 
-    .line 259
+    .line 260
     invoke-virtual {v4, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 262
+    .line 263
     move-result-object v4
-
-    .line 265
-    const-string v6, "android.substName"
 
     .line 266
+    const-string v6, "android.substName"
+
+    .line 267
     invoke-virtual {v3, v6, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 268
+    .line 269
     invoke-virtual {v9, v3}, Landroid/app/Notification$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;
 
-    .line 271
+    .line 272
     iget-object v3, v5, Lcom/android/systemui/GuestSessionNotification;->mNotificationManager:Landroid/app/NotificationManager;
 
-    .line 274
+    .line 275
     invoke-virtual {v9}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
-    .line 276
+    .line 277
     move-result-object v4
 
-    .line 279
+    .line 280
     iget v2, v2, Landroid/content/pm/UserInfo;->id:I
 
-    .line 280
+    .line 281
     invoke-static {v2}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
-    .line 282
+    .line 283
     move-result-object v2
 
-    .line 285
+    .line 286
     const/16 v5, 0x46
 
-    .line 286
+    .line 287
     const/4 v6, 0x0
 
-    .line 288
+    .line 289
     invoke-virtual {v3, v6, v5, v4, v2}, Landroid/app/NotificationManager;->notifyAsUser(Ljava/lang/String;ILandroid/app/Notification;Landroid/os/UserHandle;)V
 
-    .line 289
+    .line 290
     :goto_3
     if-le v7, v8, :cond_9
 
-    .line 292
-    iget-object v2, v1, Lcom/android/systemui/GuestResumeSessionReceiver;->mResetSessionDialogFactory:Lcom/android/systemui/GuestResetOrExitSessionReceiver$ResetSessionDialogFactory;
+    .line 293
+    iget-object v2, v1, Lcom/android/systemui/GuestResumeSessionReceiver;->mResetSessionDialogFactory:Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;
 
-    .line 294
-    invoke-virtual {v2, v0}, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ResetSessionDialogFactory;->create(I)Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+    .line 295
+    invoke-virtual {v2, v0}, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->create(I)Lcom/android/systemui/statusbar/phone/SystemUIDialog;
 
-    .line 296
+    .line 297
     move-result-object v0
 
-    .line 299
+    .line 300
     iput-object v0, v1, Lcom/android/systemui/GuestResumeSessionReceiver;->mNewSessionDialog:Landroid/app/AlertDialog;
 
-    .line 300
+    .line 301
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 302
+    .line 303
     :cond_9
     return-void
-    .line 305
+    .line 306
 .end method

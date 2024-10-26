@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -88,7 +88,7 @@
     move-result-object v2
 
     .line 15
-    const v3, 0x7f07024a    # @dimen/desktop_mode_fullscreen_from_desktop_height '40.0dp'
+    const v3, 0x7f07026c    # @dimen/desktop_mode_fullscreen_from_desktop_height '40.0dp'
 
     .line 16
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -123,7 +123,7 @@
     move-result-object p0
 
     .line 37
-    const v1, 0x7f07024b    # @dimen/desktop_mode_fullscreen_from_desktop_width '80.0dp'
+    const v1, 0x7f07026d    # @dimen/desktop_mode_fullscreen_from_desktop_width '80.0dp'
 
     .line 38
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -224,7 +224,7 @@
     move-result-object p0
 
     .line 15
-    const p2, 0x7f07026d    # @dimen/desktop_mode_split_from_desktop_height '100.0dp'
+    const p2, 0x7f07028f    # @dimen/desktop_mode_split_from_desktop_height '100.0dp'
 
     .line 16
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -285,7 +285,7 @@
     move-result-object p0
 
     .line 15
-    const p2, 0x7f07026d    # @dimen/desktop_mode_split_from_desktop_height '100.0dp'
+    const p2, 0x7f07028f    # @dimen/desktop_mode_split_from_desktop_height '100.0dp'
 
     .line 16
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -450,7 +450,7 @@
     move-result-object v2
 
     .line 19
-    const v4, 0x7f07026e    # @dimen/desktop_mode_transition_area_width '32.0dp'
+    const v4, 0x7f070290    # @dimen/desktop_mode_transition_area_width '32.0dp'
 
     .line 20
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -468,7 +468,7 @@
     move-result-object v4
 
     .line 32
-    const v5, 0x7f070247    # @dimen/desktop_mode_freeform_decor_caption_height '40.0dp'
+    const v5, 0x7f070269    # @dimen/desktop_mode_freeform_decor_caption_height '40.0dp'
 
     .line 33
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -841,7 +841,7 @@
     iget-object p1, p0, Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator;->mView:Landroid/view/View;
 
     .line 270
-    const p2, 0x7f080683    # @drawable/desktop_windowing_transition_background 'res/drawable/desktop_windowing_transition_background.xml'
+    const p2, 0x7f08068b    # @drawable/desktop_windowing_transition_background 'res/drawable/desktop_windowing_transition_background.xml'
 
     .line 272
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundResource(I)V

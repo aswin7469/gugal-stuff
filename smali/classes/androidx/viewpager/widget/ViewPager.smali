@@ -1,6 +1,6 @@
 .class public abstract Landroidx/viewpager/widget/ViewPager;
 .super Landroid/view/ViewGroup;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -135,6 +135,7 @@
 
     .line 23
     return-void
+    .line 25
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
@@ -1897,7 +1898,7 @@
     iget-object v9, v7, Landroidx/viewpager/widget/ViewPager$ItemInfo;->object:Ljava/lang/Object;
 
     .line 90
-    invoke-virtual {v1, v8, p0, v9}, Landroidx/viewpager/widget/PagerAdapter;->destroyItem(ILandroid/view/ViewGroup;Ljava/lang/Object;)V
+    invoke-virtual {v1, p0, v8, v9}, Landroidx/viewpager/widget/PagerAdapter;->destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     .line 92
     iget v1, p0, Landroidx/viewpager/widget/ViewPager;->mCurItem:I
@@ -4134,6 +4135,7 @@
 
     .line 22
     return-void
+    .line 25
 .end method
 
 .method public final onDraw(Landroid/graphics/Canvas;)V
@@ -6214,6 +6216,7 @@
     .line 23
     :cond_0
     return-object v1
+    .line 25
 .end method
 
 .method public final onSecondaryPointerUp(Landroid/view/MotionEvent;)V
@@ -7203,7 +7206,6 @@
 
     .line 23
     return p0
-    .line 24
 .end method
 
 .method public final pageScrolled(I)Z
@@ -8019,7 +8021,7 @@
 
     iget-object v11, v11, Landroidx/viewpager/widget/ViewPager$ItemInfo;->object:Ljava/lang/Object;
 
-    invoke-virtual {v9, v3, v0, v11}, Landroidx/viewpager/widget/PagerAdapter;->destroyItem(ILandroid/view/ViewGroup;Ljava/lang/Object;)V
+    invoke-virtual {v9, v0, v3, v11}, Landroidx/viewpager/widget/PagerAdapter;->destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     add-int/lit8 v10, v10, -0x1
 
@@ -8203,7 +8205,7 @@
 
     iget-object v9, v9, Landroidx/viewpager/widget/ViewPager$ItemInfo;->object:Ljava/lang/Object;
 
-    invoke-virtual {v13, v11, v0, v9}, Landroidx/viewpager/widget/PagerAdapter;->destroyItem(ILandroid/view/ViewGroup;Ljava/lang/Object;)V
+    invoke-virtual {v13, v0, v11, v9}, Landroidx/viewpager/widget/PagerAdapter;->destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     .line 39
     iget-object v9, v0, Landroidx/viewpager/widget/ViewPager;->mItems:Ljava/util/ArrayList;
@@ -8933,25 +8935,21 @@
 
     iget v4, v0, Landroidx/viewpager/widget/ViewPager;->mExpectedAdapterCount:I
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v5, ", found: "
 
-    const-string v4, ", found: "
+    const-string v7, " Pager id: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 113
+    invoke-static {v3, v4, v5, v6, v7}, Landroidx/viewpager/widget/ViewPager$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, " Pager id: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
+    .line 114
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, " Pager class: "
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 113
+    .line 115
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -8964,7 +8962,7 @@
 
     iget-object v0, v0, Landroidx/viewpager/widget/ViewPager;->mAdapter:Landroidx/viewpager/widget/PagerAdapter;
 
-    .line 114
+    .line 116
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -9558,7 +9556,7 @@
     iget-object v3, v3, Landroidx/viewpager/widget/ViewPager$ItemInfo;->object:Ljava/lang/Object;
 
     .line 39
-    invoke-virtual {v4, v5, p0, v3}, Landroidx/viewpager/widget/PagerAdapter;->destroyItem(ILandroid/view/ViewGroup;Ljava/lang/Object;)V
+    invoke-virtual {v4, p0, v5, v3}, Landroidx/viewpager/widget/PagerAdapter;->destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     .line 41
     add-int/lit8 v0, v0, 0x1

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProvider;
@@ -8,8 +8,6 @@
 
 # instance fields
 .field public final ambientDisplayConfiguration:Landroid/hardware/display/AmbientDisplayConfiguration;
-
-.field public final avalancheProvider:Lcom/android/systemui/statusbar/notification/interruption/AvalancheProvider;
 
 .field public final batteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
@@ -35,8 +33,6 @@
 
 .field public final mainHandler:Landroid/os/Handler;
 
-.field public final packageManager:Landroid/content/pm/PackageManager;
-
 .field public final powerManager:Landroid/os/PowerManager;
 
 .field public started:Z
@@ -44,8 +40,6 @@
 .field public final statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
 .field public final systemClock:Lcom/android/systemui/util/time/SystemClock;
-
-.field public final systemSettings:Lcom/android/systemui/util/settings/SystemSettingsImpl;
 
 .field public final uiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
@@ -141,74 +135,56 @@
     iput-object v3, v0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->userTracker:Lcom/android/systemui/settings/UserTracker;
 
     .line 49
-    move-object/from16 v3, p16
-
-    .line 51
-    iput-object v3, v0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->avalancheProvider:Lcom/android/systemui/statusbar/notification/interruption/AvalancheProvider;
-
-    .line 53
-    move-object/from16 v3, p17
-
-    .line 55
-    iput-object v3, v0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->systemSettings:Lcom/android/systemui/util/settings/SystemSettingsImpl;
-
-    .line 57
-    move-object/from16 v3, p18
-
-    .line 59
-    iput-object v3, v0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->packageManager:Landroid/content/pm/PackageManager;
-
-    .line 61
     move-object/from16 v3, p19
 
-    .line 63
+    .line 51
     iput-object v3, v0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->bubbles:Ljava/util/Optional;
 
-    .line 65
+    .line 53
     new-instance v3, Lcom/android/systemui/statusbar/notification/interruption/FullScreenIntentDecisionProvider;
 
-    .line 67
+    .line 55
     move-object v4, p3
 
-    .line 69
+    .line 57
     move-object v5, p8
 
-    .line 70
+    .line 58
     invoke-direct {v3, p3, p8, v1, v2}, Lcom/android/systemui/statusbar/notification/interruption/FullScreenIntentDecisionProvider;-><init>(Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Landroid/os/PowerManager;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;)V
 
-    .line 71
+    .line 59
     iput-object v3, v0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->fullScreenIntentDecisionProvider:Lcom/android/systemui/statusbar/notification/interruption/FullScreenIntentDecisionProvider;
 
-    .line 74
+    .line 62
     new-instance v1, Ljava/util/LinkedHashSet;
 
-    .line 76
+    .line 64
     invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 78
+    .line 66
     iput-object v1, v0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->legacySuppressors:Ljava/util/Set;
 
-    .line 81
+    .line 69
     new-instance v1, Ljava/util/ArrayList;
 
-    .line 83
+    .line 71
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 85
+    .line 73
     iput-object v1, v0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->conditions:Ljava/util/List;
 
-    .line 88
+    .line 76
     new-instance v1, Ljava/util/ArrayList;
 
-    .line 90
+    .line 78
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 92
+    .line 80
     iput-object v1, v0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->filters:Ljava/util/List;
 
-    .line 95
+    .line 83
     return-void
-    .line 97
+    .line 85
 .end method
 
 
@@ -448,86 +424,8 @@
     .line 59
 .end method
 
-.method public final checkSuppressAwakeInterruptions()Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
-    .locals 3
-
-    .line 1
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->legacySuppressors:Ljava/util/Set;
-
-    .line 2
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    .line 4
-    move-result-object p0
-
-    .line 7
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 8
-    move-result v0
-
-    .line 11
-    const/4 v1, 0x0
-
-    .line 12
-    if-eqz v0, :cond_1
-
-    .line 13
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 15
-    move-result-object v0
-
-    .line 18
-    move-object v2, v0
-
-    .line 19
-    check-cast v2, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;
-
-    .line 20
-    check-cast v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$3;
-
-    .line 22
-    iget-object v2, v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$3;->this$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
-
-    .line 24
-    iget-boolean v2, v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mVrMode:Z
-
-    .line 26
-    if-eqz v2, :cond_0
-
-    .line 28
-    goto :goto_0
-
-    .line 30
-    :cond_1
-    move-object v0, v1
-
-    .line 31
-    :goto_0
-    check-cast v0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;
-
-    .line 32
-    if-eqz v0, :cond_2
-
-    .line 34
-    const-string p0, "suppressAwakeInterruptions"
-
-    .line 36
-    invoke-static {p0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision$Companion;->suppressed(Ljava/lang/String;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
-
-    .line 38
-    move-result-object v1
-
-    .line 41
-    :cond_2
-    return-object v1
-    .line 42
-.end method
-
-.method public final checkSuppressInterruptions(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
-    .locals 3
+.method public final checkSuppressAwakeInterruptions(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
+    .locals 2
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->legacySuppressors:Ljava/util/Set;
@@ -549,7 +447,7 @@
     const/4 v0, 0x0
 
     .line 12
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
     .line 13
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -564,91 +462,116 @@
     check-cast v1, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;
 
     .line 20
-    check-cast v1, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$3;
+    invoke-interface {v1}, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;->suppressAwakeInterruptions()Z
 
     .line 22
-    iget-object v1, v1, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$3;->this$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
+    move-result v1
 
-    .line 24
-    iget-object v1, v1, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mNotificationAlertsInteractor:Lcom/android/systemui/statusbar/notification/domain/interactor/NotificationAlertsInteractor;
-
-    .line 26
-    iget-object v1, v1, Lcom/android/systemui/statusbar/notification/domain/interactor/NotificationAlertsInteractor;->disableFlagsRepository:Lcom/android/systemui/statusbar/disableflags/data/repository/DisableFlagsRepositoryImpl;
-
-    .line 28
-    iget-object v1, v1, Lcom/android/systemui/statusbar/disableflags/data/repository/DisableFlagsRepositoryImpl;->disableFlags:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 30
-    iget-object v1, v1, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
-
-    .line 32
-    invoke-interface {v1}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
-
-    .line 34
-    move-result-object v1
-
-    .line 37
-    check-cast v1, Lcom/android/systemui/statusbar/disableflags/data/model/DisableFlagsModel;
-
-    .line 38
-    iget v1, v1, Lcom/android/systemui/statusbar/disableflags/data/model/DisableFlagsModel;->disable1:I
-
-    .line 40
-    const/high16 v2, 0x40000
-
-    .line 42
-    and-int/2addr v1, v2
-
-    .line 44
-    const/4 v2, 0x1
-
-    .line 45
-    if-nez v1, :cond_1
-
-    .line 46
-    move v1, v2
-
-    .line 48
-    goto :goto_0
-
-    .line 49
-    :cond_1
-    const/4 v1, 0x0
-
-    .line 50
-    :goto_0
-    xor-int/2addr v1, v2
-
-    .line 51
+    .line 25
     if-eqz v1, :cond_0
 
-    .line 52
-    goto :goto_1
+    .line 26
+    goto :goto_0
 
-    .line 54
-    :cond_2
+    .line 28
+    :cond_1
     move-object p1, v0
 
-    .line 55
-    :goto_1
+    .line 29
+    :goto_0
     check-cast p1, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;
 
-    .line 56
-    if-eqz p1, :cond_3
+    .line 30
+    if-eqz p1, :cond_2
 
-    .line 58
-    const-string p0, "suppressInterruptions"
+    .line 32
+    const-string p0, "suppressAwakeInterruptions"
 
-    .line 60
-    invoke-static {p0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision$Companion;->suppressed(Ljava/lang/String;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
+    .line 34
+    invoke-static {p1, p0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision$Companion;->suppressed(Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;Ljava/lang/String;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
 
-    .line 62
+    .line 36
     move-result-object v0
 
-    .line 65
-    :cond_3
+    .line 39
+    :cond_2
     return-object v0
-    .line 66
+    .line 40
+.end method
+
+.method public final checkSuppressInterruptions(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
+    .locals 2
+
+    .line 1
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->legacySuppressors:Ljava/util/Set;
+
+    .line 2
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    .line 4
+    move-result-object p0
+
+    .line 7
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 8
+    move-result p1
+
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    if-eqz p1, :cond_1
+
+    .line 13
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 15
+    move-result-object p1
+
+    .line 18
+    move-object v1, p1
+
+    .line 19
+    check-cast v1, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;
+
+    .line 20
+    invoke-interface {v1}, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;->suppressInterruptions()Z
+
+    .line 22
+    move-result v1
+
+    .line 25
+    if-eqz v1, :cond_0
+
+    .line 26
+    goto :goto_0
+
+    .line 28
+    :cond_1
+    move-object p1, v0
+
+    .line 29
+    :goto_0
+    check-cast p1, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;
+
+    .line 30
+    if-eqz p1, :cond_2
+
+    .line 32
+    const-string p0, "suppressInterruptions"
+
+    .line 34
+    invoke-static {p1, p0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision$Companion;->suppressed(Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;Ljava/lang/String;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
+
+    .line 36
+    move-result-object v0
+
+    .line 39
+    :cond_2
+    return-object v0
+    .line 40
 .end method
 
 .method public final logDecision(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;)V
@@ -1166,7 +1089,7 @@
     if-nez v2, :cond_1
 
     .line 35
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->checkSuppressAwakeInterruptions()Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->checkSuppressAwakeInterruptions(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
 
     .line 37
     move-result-object v2
@@ -1388,7 +1311,7 @@
 .end method
 
 .method public final makeLoggablePeekDecision(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
-    .locals 8
+    .locals 3
 
     .line 1
     sget-object v0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;->PEEK:Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;
@@ -1400,7 +1323,7 @@
     move-result-object v1
 
     .line 7
-    if-nez v1, :cond_7
+    if-nez v1, :cond_3
 
     .line 8
     invoke-virtual {p0, v0, p1}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->checkFilters(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
@@ -1409,7 +1332,7 @@
     move-result-object v1
 
     .line 13
-    if-nez v1, :cond_7
+    if-nez v1, :cond_3
 
     .line 14
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->checkSuppressInterruptions(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
@@ -1418,16 +1341,16 @@
     move-result-object v1
 
     .line 19
-    if-nez v1, :cond_7
+    if-nez v1, :cond_3
 
     .line 20
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->checkSuppressAwakeInterruptions()Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->checkSuppressAwakeInterruptions(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
 
     .line 22
     move-result-object v1
 
     .line 25
-    if-nez v1, :cond_7
+    if-nez v1, :cond_3
 
     .line 26
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->legacySuppressors:Ljava/util/Set;
@@ -1449,7 +1372,7 @@
     const/4 v1, 0x0
 
     .line 38
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_1
 
     .line 39
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -1464,179 +1387,51 @@
     check-cast v2, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;
 
     .line 46
-    check-cast v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$3;
+    invoke-interface {v2, p1}, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;->suppressAwakeHeadsUp(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
     .line 48
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 50
-    iget-object v3, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
-
-    .line 53
-    iget-object v2, v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$3;->this$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
-
-    .line 55
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
-
-    .line 57
-    check-cast v4, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
-
-    .line 59
-    iget-boolean v4, v4, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mOccluded:Z
-
-    .line 61
-    const/4 v5, 0x0
-
-    .line 63
-    const/4 v6, 0x1
-
-    .line 64
-    if-eqz v4, :cond_3
-
-    .line 65
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
-
-    .line 67
-    move-object v7, v4
-
-    .line 69
-    check-cast v7, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
-
-    .line 70
-    iget v7, v7, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mCurrentUserId:I
-
-    .line 72
-    check-cast v4, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
-
-    .line 74
-    invoke-virtual {v4, v7}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->isLockscreenPublicMode(I)Z
-
-    .line 76
-    move-result v4
-
-    .line 79
-    if-nez v4, :cond_2
-
-    .line 80
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
-
-    .line 82
-    invoke-virtual {v3}, Landroid/service/notification/StatusBarNotification;->getUserId()I
-
-    .line 84
-    move-result v3
-
-    .line 87
-    check-cast v4, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
-
-    .line 88
-    invoke-virtual {v4, v3}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->isLockscreenPublicMode(I)Z
-
-    .line 90
-    move-result v3
-
-    .line 93
-    if-eqz v3, :cond_1
-
-    .line 94
-    goto :goto_0
-
-    .line 96
-    :cond_1
-    move v3, v5
-
-    .line 97
-    goto :goto_1
-
-    .line 98
-    :cond_2
-    :goto_0
-    move v3, v6
-
-    .line 99
-    :goto_1
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
-
-    .line 100
-    check-cast v4, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
-
-    .line 102
-    invoke-virtual {v4, p1}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->needsRedaction(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
-
-    .line 104
-    move-result v4
-
-    .line 107
-    if-eqz v3, :cond_3
-
-    .line 108
-    if-eqz v4, :cond_3
-
-    .line 110
-    :goto_2
-    move v5, v6
-
-    .line 112
-    goto :goto_3
-
-    .line 113
-    :cond_3
-    iget-object v2, v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mCommandQueue:Lcom/android/systemui/statusbar/CommandQueue;
-
-    .line 114
-    invoke-virtual {v2}, Lcom/android/systemui/statusbar/CommandQueue;->panelsEnabled()Z
-
-    .line 116
     move-result v2
 
-    .line 119
-    if-nez v2, :cond_4
+    .line 51
+    if-eqz v2, :cond_0
 
-    .line 120
-    goto :goto_2
+    .line 52
+    goto :goto_0
 
-    .line 122
-    :cond_4
-    :goto_3
-    if-eqz v5, :cond_0
-
-    .line 123
-    goto :goto_4
-
-    .line 125
-    :cond_5
+    .line 54
+    :cond_1
     move-object v0, v1
 
-    .line 126
-    :goto_4
+    .line 55
+    :goto_0
     check-cast v0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;
 
-    .line 127
-    if-eqz v0, :cond_6
+    .line 56
+    if-eqz v0, :cond_2
 
-    .line 129
+    .line 58
     const-string p0, "suppressAwakeHeadsUp"
 
-    .line 131
-    invoke-static {p0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision$Companion;->suppressed(Ljava/lang/String;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
+    .line 60
+    invoke-static {v0, p0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision$Companion;->suppressed(Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptSuppressor;Ljava/lang/String;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
 
-    .line 133
+    .line 62
     move-result-object p0
 
-    .line 136
+    .line 65
     move-object v1, p0
 
-    .line 137
-    :cond_6
-    if-nez v1, :cond_7
+    .line 66
+    :cond_2
+    if-nez v1, :cond_3
 
-    .line 138
+    .line 67
     sget-object v1, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;->unsuppressed:Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl$LoggableDecision;
 
-    .line 140
-    :cond_7
+    .line 69
+    :cond_3
     return-object v1
-    .line 142
+    .line 71
 .end method
 
 .method public final makeUnloggedFullScreenIntentDecision(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProvider$FullScreenIntentDecision;
@@ -1929,7 +1724,7 @@
 .end method
 
 .method public final start()V
-    .locals 10
+    .locals 7
 
     .line 1
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->started:Z
@@ -1941,25 +1736,25 @@
     xor-int/2addr v0, v1
 
     .line 5
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_0
 
     .line 6
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/PeekDisabledSuppressor;
 
     .line 8
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->globalSettings:Lcom/android/systemui/util/settings/GlobalSettings;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->logger:Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionLogger;
 
     .line 10
-    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->headsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->mainHandler:Landroid/os/Handler;
 
     .line 12
-    iget-object v4, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->logger:Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionLogger;
+    iget-object v4, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->globalSettings:Lcom/android/systemui/util/settings/GlobalSettings;
 
     .line 14
-    iget-object v5, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->mainHandler:Landroid/os/Handler;
+    iget-object v5, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->headsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
 
     .line 16
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/android/systemui/statusbar/notification/interruption/PeekDisabledSuppressor;-><init>(Lcom/android/systemui/util/settings/GlobalSettings;Lcom/android/systemui/statusbar/policy/HeadsUpManager;Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionLogger;Landroid/os/Handler;)V
+    invoke-direct {v0, v4, v5, v2, v3}, Lcom/android/systemui/statusbar/notification/interruption/PeekDisabledSuppressor;-><init>(Lcom/android/systemui/util/settings/GlobalSettings;Lcom/android/systemui/statusbar/policy/HeadsUpManager;Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionLogger;Landroid/os/Handler;)V
 
     .line 18
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addCondition(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionCondition;)V
@@ -1971,10 +1766,10 @@
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->ambientDisplayConfiguration:Landroid/hardware/display/AmbientDisplayConfiguration;
 
     .line 26
-    iget-object v4, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->userTracker:Lcom/android/systemui/settings/UserTracker;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->userTracker:Lcom/android/systemui/settings/UserTracker;
 
     .line 28
-    invoke-direct {v0, v2, v4}, Lcom/android/systemui/statusbar/notification/interruption/PulseDisabledSuppressor;-><init>(Landroid/hardware/display/AmbientDisplayConfiguration;Lcom/android/systemui/settings/UserTracker;)V
+    invoke-direct {v0, v2, v3}, Lcom/android/systemui/statusbar/notification/interruption/PulseDisabledSuppressor;-><init>(Landroid/hardware/display/AmbientDisplayConfiguration;Lcom/android/systemui/settings/UserTracker;)V
 
     .line 30
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addCondition(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionCondition;)V
@@ -1995,7 +1790,7 @@
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/PeekPackageSnoozedSuppressor;
 
     .line 46
-    invoke-direct {v0, v3}, Lcom/android/systemui/statusbar/notification/interruption/PeekPackageSnoozedSuppressor;-><init>(Lcom/android/systemui/statusbar/policy/HeadsUpManager;)V
+    invoke-direct {v0, v5}, Lcom/android/systemui/statusbar/notification/interruption/PeekPackageSnoozedSuppressor;-><init>(Lcom/android/systemui/statusbar/policy/HeadsUpManager;)V
 
     .line 48
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
@@ -2031,371 +1826,253 @@
     const-string v5, "suppressed by DND"
 
     .line 74
-    const/4 v6, 0x0
+    invoke-direct {v0, v5, v4}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/lang/String;Ljava/util/Set;)V
 
     .line 76
-    invoke-direct {v0, v4, v5, v6}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/util/Set;Ljava/lang/String;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
-
-    .line 77
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 80
+    .line 79
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/PeekNotImportantSuppressor;
 
-    .line 83
+    .line 82
     invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 85
+    .line 84
     move-result-object v4
+
+    .line 87
+    const-string v6, "importance < HIGH"
 
     .line 88
-    const-string v7, "importance < HIGH"
+    invoke-direct {v0, v6, v4}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 89
-    invoke-direct {v0, v4, v7, v6}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/util/Set;Ljava/lang/String;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
-
-    .line 91
+    .line 90
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 94
+    .line 93
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/PeekDeviceNotInUseSuppressor;
 
-    .line 97
+    .line 96
     iget-object v4, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->powerManager:Landroid/os/PowerManager;
 
-    .line 99
+    .line 98
     invoke-direct {v0, v4, v3}, Lcom/android/systemui/statusbar/notification/interruption/PeekDeviceNotInUseSuppressor;-><init>(Landroid/os/PowerManager;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;)V
 
-    .line 101
+    .line 100
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addCondition(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionCondition;)V
 
-    .line 104
+    .line 103
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/PeekOldWhenSuppressor;
 
-    .line 107
+    .line 106
     iget-object v3, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->systemClock:Lcom/android/systemui/util/time/SystemClock;
 
-    .line 109
+    .line 108
     invoke-direct {v0, v3}, Lcom/android/systemui/statusbar/notification/interruption/PeekOldWhenSuppressor;-><init>(Lcom/android/systemui/util/time/SystemClock;)V
 
-    .line 111
+    .line 110
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 114
+    .line 113
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/PulseEffectSuppressor;
 
-    .line 117
+    .line 116
     sget-object v3, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;->PULSE:Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;
 
-    .line 119
+    .line 118
     invoke-static {v3}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 121
+    .line 120
     move-result-object v4
+
+    .line 123
+    invoke-direct {v0, v5, v4}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/lang/String;Ljava/util/Set;)V
 
     .line 124
-    invoke-direct {v0, v4, v5, v6}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/util/Set;Ljava/lang/String;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
-
-    .line 125
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 128
+    .line 127
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/PulseLockscreenVisibilityPrivateSuppressor;
 
-    .line 131
+    .line 130
     invoke-static {v3}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 133
+    .line 132
     move-result-object v4
 
-    .line 136
+    .line 135
     const-string v5, "hidden by lockscreen visibility override"
 
-    .line 137
-    invoke-direct {v0, v4, v5, v6}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/util/Set;Ljava/lang/String;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
+    .line 136
+    invoke-direct {v0, v5, v4}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 139
+    .line 138
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 142
+    .line 141
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/PulseLowImportanceSuppressor;
 
-    .line 145
+    .line 144
     invoke-static {v3}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 147
+    .line 146
     move-result-object v4
 
-    .line 150
+    .line 149
     const-string v5, "importance < DEFAULT"
 
-    .line 151
-    invoke-direct {v0, v4, v5, v6}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/util/Set;Ljava/lang/String;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
+    .line 150
+    invoke-direct {v0, v5, v4}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 153
+    .line 152
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 156
+    .line 155
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/BubbleNotAllowedSuppressor;
 
-    .line 159
+    .line 158
     sget-object v4, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;->BUBBLE:Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;
 
-    .line 161
+    .line 160
     invoke-static {v4}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 163
+    .line 162
     move-result-object v5
+
+    .line 165
+    const-string v6, "cannot bubble"
 
     .line 166
-    const-string v7, "cannot bubble"
+    invoke-direct {v0, v6, v5}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 167
-    invoke-direct {v0, v5, v7, v6}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/util/Set;Ljava/lang/String;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
-
-    .line 169
+    .line 168
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 172
+    .line 171
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/BubbleNoMetadataSuppressor;
 
-    .line 175
+    .line 174
     invoke-static {v4}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 177
+    .line 176
     move-result-object v5
+
+    .line 179
+    const-string v6, "has no or invalid bubble metadata"
 
     .line 180
-    const-string v7, "has no or invalid bubble metadata"
+    invoke-direct {v0, v6, v5}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 181
-    invoke-direct {v0, v5, v7, v6}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/util/Set;Ljava/lang/String;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
-
-    .line 183
+    .line 182
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 186
+    .line 185
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/HunGroupAlertBehaviorSuppressor;
 
-    .line 189
+    .line 188
     filled-new-array {v2, v3}, [Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;
 
-    .line 191
+    .line 190
     move-result-object v5
+
+    .line 193
+    invoke-static {v5}, Lkotlin/collections/SetsKt;->setOf([Ljava/lang/Object;)Ljava/util/Set;
 
     .line 194
-    invoke-static {v5}, Lkotlin/collections/SetsKt;->setOf([Ljava/lang/Object;)Ljava/util/Set;
-
-    .line 195
     move-result-object v5
+
+    .line 197
+    const-string v6, "suppressive group alert behavior"
 
     .line 198
-    const-string v7, "suppressive group alert behavior"
+    invoke-direct {v0, v6, v5}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 199
-    invoke-direct {v0, v5, v7, v6}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/util/Set;Ljava/lang/String;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
-
-    .line 201
+    .line 200
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 204
+    .line 203
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/HunJustLaunchedFsiSuppressor;
 
-    .line 207
+    .line 206
     filled-new-array {v2, v3}, [Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;
 
-    .line 209
+    .line 208
     move-result-object v5
 
-    .line 212
+    .line 211
     invoke-static {v5}, Lkotlin/collections/SetsKt;->setOf([Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 213
+    .line 212
     move-result-object v5
 
+    .line 215
+    const-string v6, "just launched FSI"
+
     .line 216
-    const-string v7, "just launched FSI"
+    invoke-direct {v0, v6, v5}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 217
-    invoke-direct {v0, v5, v7, v6}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/util/Set;Ljava/lang/String;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
-
-    .line 219
+    .line 218
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 222
+    .line 221
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/AlertAppSuspendedSuppressor;
 
-    .line 225
+    .line 224
     filled-new-array {v2, v3, v4}, [Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionType;
 
-    .line 227
+    .line 226
     move-result-object v2
 
-    .line 230
+    .line 229
     invoke-static {v2}, Lkotlin/collections/SetsKt;->setOf([Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 231
+    .line 230
     move-result-object v2
 
-    .line 234
+    .line 233
     const-string v3, "app is suspended"
 
-    .line 235
-    invoke-direct {v0, v2, v3, v6}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/util/Set;Ljava/lang/String;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
+    .line 234
+    invoke-direct {v0, v3, v2}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;-><init>(Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 237
+    .line 236
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 240
+    .line 239
     new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/AlertKeyguardVisibilitySuppressor;
 
-    .line 243
+    .line 242
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->keyguardNotificationVisibilityProvider:Lcom/android/systemui/statusbar/notification/interruption/KeyguardNotificationVisibilityProviderImpl;
 
-    .line 245
+    .line 244
     invoke-direct {v0, v2}, Lcom/android/systemui/statusbar/notification/interruption/AlertKeyguardVisibilitySuppressor;-><init>(Lcom/android/systemui/statusbar/notification/interruption/KeyguardNotificationVisibilityProviderImpl;)V
 
-    .line 247
+    .line 246
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
 
-    .line 250
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 253
-    if-nez v0, :cond_0
-
-    .line 255
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 257
-    :cond_0
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->notificationAvalancheSuppression:Z
-
-    .line 260
-    if-eqz v0, :cond_2
-
-    .line 262
-    new-instance v0, Lcom/android/systemui/statusbar/notification/interruption/AvalancheSuppressor;
-
-    .line 264
-    iget-object v6, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->packageManager:Landroid/content/pm/PackageManager;
-
-    .line 266
-    iget-object v7, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->uiEventLogger:Lcom/android/internal/logging/UiEventLogger;
-
-    .line 268
-    iget-object v4, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->systemClock:Lcom/android/systemui/util/time/SystemClock;
-
-    .line 270
-    iget-object v5, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->systemSettings:Lcom/android/systemui/util/settings/SystemSettingsImpl;
-
-    .line 272
-    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->avalancheProvider:Lcom/android/systemui/statusbar/notification/interruption/AvalancheProvider;
-
-    .line 274
-    move-object v2, v0
-
-    .line 276
-    invoke-direct/range {v2 .. v7}, Lcom/android/systemui/statusbar/notification/interruption/AvalancheSuppressor;-><init>(Lcom/android/systemui/statusbar/notification/interruption/AvalancheProvider;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/util/settings/SystemSettingsImpl;Landroid/content/pm/PackageManager;Lcom/android/internal/logging/UiEventLogger;)V
-
-    .line 277
-    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
-
-    .line 280
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->avalancheProvider:Lcom/android/systemui/statusbar/notification/interruption/AvalancheProvider;
-
-    .line 283
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 285
-    new-instance v4, Landroid/content/IntentFilter;
-
-    .line 288
-    invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
-
-    .line 290
-    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/interruption/AvalancheProvider;->avalancheTriggerIntents:Ljava/util/Set;
-
-    .line 293
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    .line 295
-    move-result-object v2
-
-    .line 298
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 299
-    move-result v3
-
-    .line 302
-    if-eqz v3, :cond_1
-
-    .line 303
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 305
-    move-result-object v3
-
-    .line 308
-    check-cast v3, Ljava/lang/String;
-
-    .line 309
-    invoke-virtual {v4, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 311
-    goto :goto_0
-
-    .line 314
-    :cond_1
-    const/4 v6, 0x0
-
-    .line 315
-    const/16 v9, 0x3c
-
-    .line 316
-    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/interruption/AvalancheProvider;->broadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
-
-    .line 318
-    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/interruption/AvalancheProvider;->broadcastReceiver:Lcom/android/systemui/statusbar/notification/interruption/AvalancheProvider$broadcastReceiver$1;
-
-    .line 320
-    const/4 v5, 0x0
-
-    .line 322
-    const/4 v7, 0x0
-
-    .line 323
-    const/4 v8, 0x0
-
-    .line 324
-    invoke-static/range {v2 .. v9}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiver$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/util/concurrent/Executor;Landroid/os/UserHandle;ILjava/lang/String;I)V
-
-    .line 325
-    :cond_2
+    .line 249
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->started:Z
 
-    .line 328
+    .line 252
     return-void
 
-    .line 330
-    :cond_3
+    .line 254
+    :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 331
+    .line 255
     const-string v0, "Check failed."
 
-    .line 333
+    .line 257
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 335
+    .line 259
     move-result-object v0
 
-    .line 338
+    .line 262
     invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 339
+    .line 263
     throw p0
-    .line 342
+    .line 266
 .end method

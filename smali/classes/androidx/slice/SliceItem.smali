@@ -1,6 +1,6 @@
 .class public final Landroidx/slice/SliceItem;
 .super Landroidx/versionedparcelable/CustomVersionedParcelable;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -30,7 +30,7 @@
     iput-object v0, p0, Landroidx/slice/SliceItem;->mHints:[Ljava/lang/String;
 
     .line 9
-    const-string v0, "text"
+    const-string/jumbo v0, "text"
 
     iput-object v0, p0, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
@@ -356,6 +356,7 @@
 
     .line 34
     throw p0
+    .line 35
 .end method
 
 .method public final getAction()Landroid/app/PendingIntent;
@@ -704,7 +705,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .line 80
+    .line 1
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Landroidx/slice/SliceItem;->toString(Ljava/lang/String;)Ljava/lang/String;
@@ -721,12 +722,12 @@
 
     move-object/from16 v1, p1
 
-    .line 1
+    .line 2
     const-string v3, "slice"
 
     const-string v5, "image"
 
-    const-string v6, "text"
+    const-string/jumbo v6, "text"
 
     const-string v7, "long"
 
@@ -736,69 +737,72 @@
 
     const/4 v14, 0x1
 
-    invoke-static/range {p1 .. p1}, Landroidx/compose/ui/text/input/EditProcessor$generateBatchErrorMessage$1$1$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v15, Ljava/lang/StringBuilder;
 
-    move-result-object v15
-
-    .line 2
-    iget-object v2, v0, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 3
-    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 4
+    iget-object v2, v0, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
+
+    .line 5
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 6
     iget-object v2, v0, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
     const/16 v2, 0x3c
 
-    .line 5
+    .line 7
     invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6
+    .line 8
     iget-object v2, v0, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 7
+    .line 9
     invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 v2, 0x3e
 
-    .line 8
+    .line 10
     invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_0
     const/16 v2, 0x20
 
-    .line 9
+    .line 11
     invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 10
+    .line 12
     iget-object v4, v0, Landroidx/slice/SliceItem;->mHints:[Ljava/lang/String;
 
     array-length v9, v4
 
     if-lez v9, :cond_1
 
-    .line 11
+    .line 13
     invoke-static {v15, v4}, Landroidx/slice/Slice;->appendHints(Ljava/lang/StringBuilder;[Ljava/lang/String;)V
 
-    .line 12
+    .line 14
     invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 13
+    .line 15
     :cond_1
     const-string v2, "  "
 
-    .line 14
-    invoke-static {v1, v2}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 16
+    invoke-static {v1, v2}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 15
+    .line 17
     iget-object v4, v0, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
-    .line 16
+    .line 18
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/16 v9, 0x7d
@@ -905,10 +909,10 @@
     :goto_1
     packed-switch v4, :pswitch_data_0
 
-    .line 17
+    .line 19
     iget-object v0, v0, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
-    .line 18
+    .line 20
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -1023,7 +1027,7 @@
     :goto_3
     packed-switch v2, :pswitch_data_1
 
-    .line 19
+    .line 21
     const-string v1, "Unrecognized format: "
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
@@ -1032,72 +1036,72 @@
 
     goto :goto_4
 
-    .line 20
+    .line 22
     :pswitch_0
     const-string v0, "Slice"
 
     goto :goto_4
 
-    .line 21
+    .line 23
     :pswitch_1
     const-string v0, "RemoteInput"
 
     goto :goto_4
 
-    .line 22
+    .line 24
     :pswitch_2
     const-string v0, "Image"
 
     goto :goto_4
 
-    .line 23
+    .line 25
     :pswitch_3
     const-string v0, "Text"
 
     goto :goto_4
 
-    .line 24
+    .line 26
     :pswitch_4
     const-string v0, "Long"
 
     goto :goto_4
 
-    .line 25
+    .line 27
     :pswitch_5
     const-string v0, "Int"
 
     goto :goto_4
 
-    .line 26
+    .line 28
     :pswitch_6
     const-string v0, "Action"
 
-    .line 27
+    .line 29
     :goto_4
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_6
 
-    .line 28
+    .line 30
     :pswitch_7
     invoke-virtual/range {p0 .. p0}, Landroidx/slice/SliceItem;->getSlice()Landroidx/slice/Slice;
 
     move-result-object v0
 
-    .line 29
+    .line 31
     invoke-static {v0, v13}, Landroidx/core/util/ObjectsCompat;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 30
+    .line 32
     invoke-virtual {v15, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 31
+    .line 33
     invoke-virtual {v0, v2}, Landroidx/slice/Slice;->toString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 32
+    .line 34
     invoke-virtual {v15, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v15, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1106,13 +1110,13 @@
 
     goto/16 :goto_6
 
-    .line 33
+    .line 35
     :pswitch_8
     iget-object v0, v0, Landroidx/slice/SliceItem;->mObj:Ljava/lang/Object;
 
     check-cast v0, Landroidx/core/graphics/drawable/IconCompat;
 
-    .line 34
+    .line 36
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_6
@@ -1120,26 +1124,26 @@
     :pswitch_9
     const/16 v1, 0x22
 
-    .line 35
+    .line 37
     invoke-virtual {v15, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 36
+    .line 38
     iget-object v0, v0, Landroidx/slice/SliceItem;->mObj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    .line 37
+    .line 39
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v15, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto/16 :goto_6
 
-    .line 38
+    .line 40
     :pswitch_a
     iget-object v1, v0, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 39
+    .line 41
     const-string v2, "millis"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1148,7 +1152,7 @@
 
     if-eqz v1, :cond_10
 
-    .line 40
+    .line 42
     invoke-virtual/range {p0 .. p0}, Landroidx/slice/SliceItem;->getLong()J
 
     move-result-wide v1
@@ -1159,20 +1163,20 @@
 
     if-nez v1, :cond_f
 
-    .line 41
+    .line 43
     const-string v0, "INFINITY"
 
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_6
 
-    .line 42
+    .line 44
     :cond_f
     invoke-virtual/range {p0 .. p0}, Landroidx/slice/SliceItem;->getLong()J
 
     move-result-wide v1
 
-    .line 43
+    .line 45
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
@@ -1185,7 +1189,7 @@
 
     const/high16 v7, 0x40000
 
-    .line 44
+    .line 46
     invoke-static/range {v1 .. v7}, Landroid/text/format/DateUtils;->getRelativeTimeSpanString(JJJI)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -1194,7 +1198,7 @@
 
     goto/16 :goto_6
 
-    .line 45
+    .line 47
     :cond_10
     invoke-virtual/range {p0 .. p0}, Landroidx/slice/SliceItem;->getLong()J
 
@@ -1208,11 +1212,11 @@
 
     goto/16 :goto_6
 
-    .line 46
+    .line 48
     :pswitch_b
     iget-object v1, v0, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 47
+    .line 49
     const-string v2, "color"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1221,12 +1225,12 @@
 
     if-eqz v1, :cond_11
 
-    .line 48
+    .line 50
     invoke-virtual/range {p0 .. p0}, Landroidx/slice/SliceItem;->getInt()I
 
     move-result v0
 
-    .line 49
+    .line 51
     invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v1
@@ -1251,7 +1255,7 @@
 
     move-result-object v3
 
-    .line 50
+    .line 52
     invoke-static {v0}, Landroid/graphics/Color;->blue(I)I
 
     move-result v0
@@ -1264,7 +1268,7 @@
 
     move-result-object v0
 
-    .line 51
+    .line 53
     const-string v1, "a=0x%02x r=0x%02x g=0x%02x b=0x%02x"
 
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -1275,11 +1279,11 @@
 
     goto/16 :goto_6
 
-    .line 52
+    .line 54
     :cond_11
     iget-object v1, v0, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 53
+    .line 55
     const-string v2, "layout_direction"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1288,7 +1292,7 @@
 
     if-eqz v1, :cond_16
 
-    .line 54
+    .line 56
     invoke-virtual/range {p0 .. p0}, Landroidx/slice/SliceItem;->getInt()I
 
     move-result v0
@@ -1305,42 +1309,42 @@
 
     if-eq v0, v1, :cond_12
 
-    .line 55
+    .line 57
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_5
 
-    .line 56
+    .line 58
     :cond_12
     const-string v0, "LOCALE"
 
     goto :goto_5
 
-    .line 57
+    .line 59
     :cond_13
     const-string v0, "INHERIT"
 
     goto :goto_5
 
-    .line 58
+    .line 60
     :cond_14
     const-string v0, "RTL"
 
     goto :goto_5
 
-    .line 59
+    .line 61
     :cond_15
     const-string v0, "LTR"
 
-    .line 60
+    .line 62
     :goto_5
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_6
 
-    .line 61
+    .line 63
     :cond_16
     invoke-virtual/range {p0 .. p0}, Landroidx/slice/SliceItem;->getInt()I
 
@@ -1350,23 +1354,23 @@
 
     goto :goto_6
 
-    .line 62
+    .line 64
     :pswitch_c
     invoke-virtual/range {p0 .. p0}, Landroidx/slice/SliceItem;->getSlice()Landroidx/slice/Slice;
 
     move-result-object v3
 
-    .line 63
+    .line 65
     iget-object v4, v0, Landroidx/slice/SliceItem;->mObj:Ljava/lang/Object;
 
     const-string v5, "Object must be non-null for FORMAT_ACTION"
 
     invoke-static {v4, v5}, Landroidx/core/util/ObjectsCompat;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 64
+    .line 66
     invoke-static {v3, v13}, Landroidx/core/util/ObjectsCompat;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 65
+    .line 67
     iget-object v3, v0, Landroidx/slice/SliceItem;->mObj:Ljava/lang/Object;
 
     check-cast v3, Landroidx/core/util/Pair;
@@ -1375,7 +1379,7 @@
 
     const/16 v4, 0x5b
 
-    .line 66
+    .line 68
     invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v15, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -1384,10 +1388,10 @@
 
     invoke-virtual {v15, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 67
+    .line 69
     invoke-virtual {v15, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 68
+    .line 70
     invoke-virtual/range {p0 .. p0}, Landroidx/slice/SliceItem;->getSlice()Landroidx/slice/Slice;
 
     move-result-object v0
@@ -1398,25 +1402,27 @@
 
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 69
+    .line 71
     invoke-virtual {v15, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v15, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v15, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 70
+    .line 72
     :goto_6
     const-string v0, "\n"
 
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 71
+    .line 73
     invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardClockSwitchController$4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/shared/clocks/ClockRegistry$ClockChangeListener;
@@ -31,31 +31,21 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-nez v0, :cond_0
-
-    .line 6
     iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitchController$4;->this$0:Lcom/android/keyguard/KeyguardClockSwitchController;
 
-    .line 8
+    .line 2
     iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitchController;->mClockRegistry:Lcom/android/systemui/shared/clocks/ClockRegistry;
 
-    .line 10
+    .line 4
     invoke-virtual {v0}, Lcom/android/systemui/shared/clocks/ClockRegistry;->createCurrentClock()Lcom/android/systemui/plugins/clocks/ClockController;
 
-    .line 12
+    .line 6
     move-result-object v0
 
-    .line 15
+    .line 9
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardClockSwitchController;->setClock(Lcom/android/systemui/plugins/clocks/ClockController;)V
 
-    .line 16
-    :cond_0
+    .line 10
     return-void
-    .line 19
+    .line 13
 .end method

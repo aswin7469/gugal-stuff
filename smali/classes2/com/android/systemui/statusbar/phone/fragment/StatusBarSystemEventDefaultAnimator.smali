@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/fragment/StatusBarSystemEventDefaultAnimator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/events/SystemStatusAnimationCallback;
@@ -35,7 +35,7 @@
     iput-boolean p4, p0, Lcom/android/systemui/statusbar/phone/fragment/StatusBarSystemEventDefaultAnimator;->isAnimationRunning:Z
 
     .line 9
-    const p2, 0x7f070832    # @dimen/ongoing_appops_chip_animation_in_status_bar_translation_x '15.0dp'
+    const p2, 0x7f070875    # @dimen/ongoing_appops_chip_animation_in_status_bar_translation_x '15.0dp'
 
     .line 11
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -47,7 +47,7 @@
     iput p2, p0, Lcom/android/systemui/statusbar/phone/fragment/StatusBarSystemEventDefaultAnimator;->translationXIn:I
 
     .line 18
-    const p2, 0x7f070833    # @dimen/ongoing_appops_chip_animation_out_status_bar_translation_x '7.0dp'
+    const p2, 0x7f070876    # @dimen/ongoing_appops_chip_animation_out_status_bar_translation_x '7.0dp'
 
     .line 20
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/row/NotificationGuts;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -476,7 +476,7 @@
     iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     .line 5
-    const v1, 0x7f080a68    # @drawable/notification_guts_bg 'res/drawable/notification_guts_bg.xml'
+    const v1, 0x7f080aa2    # @drawable/notification_guts_bg 'res/drawable/notification_guts_bg.xml'
 
     .line 7
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;

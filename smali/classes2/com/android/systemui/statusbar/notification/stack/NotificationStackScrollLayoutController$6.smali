@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$6;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;
@@ -162,85 +162,65 @@
     iput-boolean v1, v2, Lcom/android/systemui/ExpandHelper;->mEnabled:Z
 
     .line 38
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    .line 40
-    move-result v1
-
-    .line 43
-    if-nez v1, :cond_1
-
-    .line 44
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateFooter()V
 
-    .line 46
-    :cond_1
+    .line 40
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->requestChildrenUpdate()V
 
-    .line 49
+    .line 43
     iget-object v1, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mFooterView:Lcom/android/systemui/statusbar/notification/footer/ui/view/FooterView;
 
-    .line 52
+    .line 46
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    .line 54
+    .line 48
     move-result v2
 
-    .line 57
+    .line 51
     add-int/lit8 v2, v2, -0x1
 
-    .line 58
+    .line 52
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->changeViewPosition(Lcom/android/systemui/statusbar/notification/row/ExpandableView;I)V
 
-    .line 60
+    .line 54
     iget-object v1, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mEmptyShadeView:Lcom/android/systemui/statusbar/EmptyShadeView;
 
-    .line 63
+    .line 57
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    .line 65
+    .line 59
     move-result v2
 
-    .line 68
+    .line 62
     add-int/lit8 v2, v2, -0x2
 
-    .line 69
+    .line 63
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->changeViewPosition(Lcom/android/systemui/statusbar/notification/row/ExpandableView;I)V
 
-    .line 71
+    .line 65
     iget-object v1, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mShelf:Lcom/android/systemui/statusbar/NotificationShelf;
 
-    .line 74
+    .line 68
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    .line 76
+    .line 70
     move-result v2
 
-    .line 79
+    .line 73
     add-int/lit8 v2, v2, -0x3
 
-    .line 80
+    .line 74
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->changeViewPosition(Lcom/android/systemui/statusbar/notification/row/ExpandableView;I)V
 
-    .line 82
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateVisibility$5()V
+    .line 76
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateVisibility$7()V
 
-    .line 85
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    .line 88
-    move-result v0
-
-    .line 91
-    if-nez v0, :cond_2
-
-    .line 92
+    .line 79
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->updateImportantForAccessibility()V
 
-    .line 94
-    :cond_2
+    .line 82
     return-void
-    .line 97
+    .line 85
 .end method
 
 .method public final onStatePreChange(II)V
@@ -295,40 +275,25 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-nez v0, :cond_0
-
-    .line 6
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$6;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 8
+    .line 2
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 10
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 12
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 15
+    .line 4
     iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mUpcomingStatusBarState:I
 
-    .line 18
+    .line 6
     iget v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mStatusBarState:I
 
-    .line 20
+    .line 8
     if-eq p1, v0, :cond_0
 
-    .line 22
+    .line 10
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateFooter()V
 
-    .line 24
+    .line 12
     :cond_0
     return-void
-    .line 27
+    .line 15
 .end method

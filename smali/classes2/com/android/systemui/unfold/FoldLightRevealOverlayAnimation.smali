@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/unfold/FullscreenLightRevealAnimation;
@@ -15,7 +15,7 @@
 
 .field public controller:Lcom/android/systemui/unfold/FullscreenLightRevealAnimationController;
 
-.field public final controllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
+.field public final controllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
 
 .field public final deviceStateRepository:Lcom/android/systemui/display/data/repository/DeviceStateRepositoryImpl;
 
@@ -29,7 +29,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/display/data/repository/DeviceStateRepositoryImpl;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Lkotlinx/coroutines/CoroutineScope;Lcom/android/systemui/util/animation/data/repository/AnimationStatusRepositoryImpl;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;Lcom/android/internal/foldables/FoldLockSettingAvailabilityProvider;)V
+.method public constructor <init>(Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/display/data/repository/DeviceStateRepositoryImpl;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Lkotlinx/coroutines/CoroutineScope;Lcom/android/systemui/util/animation/data/repository/AnimationStatusRepositoryImpl;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;Lcom/android/internal/foldables/FoldLockSettingAvailabilityProvider;)V
     .locals 0
 
     .line 1
@@ -51,7 +51,7 @@
     iput-object p5, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->animationStatusRepository:Lcom/android/systemui/util/animation/data/repository/AnimationStatusRepositoryImpl;
 
     .line 13
-    iput-object p6, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->controllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
+    iput-object p6, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->controllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
 
     .line 15
     iput-object p7, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->foldLockSettingAvailabilityProvider:Lcom/android/internal/foldables/FoldLockSettingAvailabilityProvider;
@@ -704,10 +704,10 @@
     const-string v2, "fold-overlay-container"
 
     .line 15
-    iget-object v3, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->controllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
+    iget-object v3, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->controllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
 
     .line 17
-    invoke-virtual {v3, v0, v1, v2}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;->create(Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Ljava/lang/String;)Lcom/android/systemui/unfold/FullscreenLightRevealAnimationController;
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;->create(Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Ljava/lang/String;)Lcom/android/systemui/unfold/FullscreenLightRevealAnimationController;
 
     .line 19
     move-result-object v0
@@ -716,48 +716,41 @@
     iput-object v0, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->controller:Lcom/android/systemui/unfold/FullscreenLightRevealAnimationController;
 
     .line 23
-    const/4 v1, 0x0
-
-    .line 25
-    if-nez v0, :cond_1
-
-    .line 26
-    move-object v0, v1
-
-    .line 28
-    :cond_1
     invoke-virtual {v0}, Lcom/android/systemui/unfold/FullscreenLightRevealAnimationController;->init()V
 
-    .line 29
+    .line 25
     new-instance v0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation$init$3;
 
-    .line 32
+    .line 28
+    const/4 v1, 0x0
+
+    .line 30
     invoke-direct {v0, p0, v1}, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation$init$3;-><init>(Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;Lkotlin/coroutines/Continuation;)V
 
-    .line 34
+    .line 31
     iget-object v2, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->applicationScope:Lkotlinx/coroutines/CoroutineScope;
 
-    .line 37
+    .line 34
     iget-object v3, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->bgDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 39
+    .line 36
     const/4 v4, 0x2
 
-    .line 41
+    .line 38
     invoke-static {v2, v3, v1, v0, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 42
+    .line 39
     new-instance v0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation$init$4;
 
-    .line 45
+    .line 42
     invoke-direct {v0, p0, v1}, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation$init$4;-><init>(Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;Lkotlin/coroutines/Continuation;)V
 
-    .line 47
+    .line 44
     invoke-static {v2, v3, v1, v0, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 50
+    .line 47
     return-void
-    .line 53
+    .line 50
 .end method
 
 .method public final onScreenTurningOn(Lcom/android/systemui/util/concurrency/PendingTasksContainer$registerTask$1;)V

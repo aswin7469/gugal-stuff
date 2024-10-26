@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/split/DividerSnapAlgorithm;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -136,7 +136,7 @@
     invoke-virtual {v8, v9}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     .line 65
-    const v9, 0x10e007d    # @android:integer/config_dreamOpenAnimationDuration
+    const v9, 0x10e0077    # @android:integer/config_doublelineClockDefault
 
     .line 68
     invoke-virtual {v1, v9}, Landroid/content/res/Resources;->getInteger(I)I
@@ -145,7 +145,7 @@
     move-result v9
 
     .line 74
-    const v10, 0x1110147    # @android:bool/config_dozeAlwaysOnEnabled
+    const v10, 0x1110146    # @android:bool/config_dozeAlwaysOnDisplayAvailable
 
     .line 75
     invoke-virtual {v1, v10}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -181,7 +181,7 @@
     iput v12, v0, Lcom/android/wm/shell/common/split/DividerSnapAlgorithm;->mMinimalSizeResizableTask:I
 
     .line 99
-    const v13, 0x1110196    # @android:bool/config_guestUserEphemeral
+    const v13, 0x1110195    # @android:bool/config_guestUserAutoCreated
 
     .line 101
     invoke-virtual {v1, v13}, Landroid/content/res/Resources;->getBoolean(I)Z

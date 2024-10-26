@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/RestrictedPreferenceHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -318,7 +318,7 @@
     if-eqz p0, :cond_3
 
     .line 66
-    const p0, 0x7f14034b    # @string/disabled_by_app_ops_text 'Controlled by Restricted Setting'
+    const p0, 0x7f130370    # @string/disabled_by_app_ops_text 'Controlled by Restricted Setting'
 
     .line 68
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(I)V
@@ -643,7 +643,7 @@
     if-eqz p0, :cond_3
 
     .line 42
-    const p0, 0x7f14034b    # @string/disabled_by_app_ops_text 'Controlled by Restricted Setting'
+    const p0, 0x7f130370    # @string/disabled_by_app_ops_text 'Controlled by Restricted Setting'
 
     .line 44
     invoke-virtual {v1, p0}, Landroidx/preference/Preference;->setSummary(I)V

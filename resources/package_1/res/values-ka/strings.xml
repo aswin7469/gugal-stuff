@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">არჩეული ვიჯეტის განთავსება</string>
   <string name="accessibility_action_label_remove_widget">ვიჯეტის ამოშლა</string>
   <string name="accessibility_action_label_select_widget">ვიჯეტის არჩევა</string>
-  <string name="accessibility_action_open_communal_hub">ვიჯეტები ჩაკეტილ ეკრანზე</string>
   <string name="accessibility_action_pip_resize">ზომის შეცვლა</string>
   <string name="accessibility_action_pip_stash">გადანახვა</string>
   <string name="accessibility_action_pip_unstash">გადანახვის გაუქმება</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">ცალი ხელის რეჟიმიდან გამოსვლა</string>
   <string name="accessibility_airplane_mode">თვითმფრინავის რეჟიმი</string>
   <string name="accessibility_allow_diagonal_scrolling">დიაგონალური გადაადგილების დაშვება</string>
+  <string name="accessibility_assistant_poodle">ხმოვანი ძიება</string>
   <string name="accessibility_authenticate_hint">ავტორიზაცია</string>
   <string name="accessibility_back">უკან</string>
   <string name="accessibility_banner_message_dismiss">უარყოფა</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">მოწყობილობის შეყვანა</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Ethernet კავშირი შეწყვეტილია.</string>
-  <string name="accessibility_fingerprint_bouncer">საჭიროა ავტორიზაცია. ავტორიზაციისთვის შეეხეთ თითის ანაბეჭდის სენსორს.</string>
   <string name="accessibility_fingerprint_label">თითის ანაბეჭდის სენსორი</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">გადართვა</string>
   <string name="accessibility_floating_button_action_edit">რედაქტირება</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">მენიუ</string>
   <string name="accessibility_multi_user_list_switcher">ჩამოშლადი მენიუ</string>
   <string name="accessibility_multi_user_switch_switcher">მომხმარებლის გადართვა</string>
+  <string name="accessibility_next_alarm">შემდეგი მაღვიძარის დრო: %s</string>
   <string name="accessibility_no_calling">ზარების გარეშე.</string>
   <string name="accessibility_no_phone">ტელეფონი არ არის.</string>
   <string name="accessibility_no_wifi">WiFi არ არის დაკავშირებული.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">ეკრანი დაბლოკილია პორტრეტის ორიენტაციაში.</string>
   <string name="accessibility_send_smart_reply">გაგზავნა</string>
   <string name="accessibility_sensors_off_active">სენსორების გამორთვა აქტიურია</string>
+  <string name="accessibility_settings_gear">Pixel Stand-ის პარამეტრები</string>
   <string name="accessibility_side_fingerprint_indicator_label">შეეხეთ თითის ანაბეჭდის სენსორს. ის მოკლე ღილაკია ტელეფონის კიდეზე</string>
+  <string name="accessibility_smartspace_page">გვერდი %1$d / %2$d-დან</string>
   <string name="accessibility_split_bottom">გაყოფა ქვემოთ</string>
   <string name="accessibility_split_left">გაყოფა მარცხნივ</string>
   <string name="accessibility_split_right">გაყოფა მარჯვნივ</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">WiFi სიგნალი სამ ზოლზეა.</string>
   <string name="accessibility_wifi_two_bars">WiFi სიგნალი ორ ზოლზეა.</string>
   <string name="accesssibility_keyguard_retry">გადაფურცლეთ ზემოთ, რომ კიდევ ცადოთ სახით განბლოკვა</string>
+  <string name="adaptive_charging_notify_des">ბატარეის სრულად დამუხტვის დრო: %1$s. სტაბილური დატენა ბატარეის ხანგრძლივობის გასაზრდელად.</string>
+  <string name="adaptive_charging_notify_title">ადაპტირებადი დატენვა ჩართულია</string>
+  <string name="adaptive_charging_notify_turn_off_once">ერთხელ გამორთვა</string>
+  <string name="adaptive_charging_time_estimate">%1$s • ადაპტიური დამუხტვა • სრულად დამუხტვის დრო: %2$s</string>
   <string name="add">დამატება</string>
   <string name="add_guest_failed">ახალი სტუმრის შექმნა ვერ მოხერხდა</string>
   <string name="airplane_mode">თვითმფრინავის რეჟიმი</string>
@@ -233,6 +239,7 @@
   <string name="app_info">აპის ინფორმაცია</string>
   <string name="app_label">სისტემის UI</string>
   <string name="assistant_attention_content_description">აღმოჩენილია მომხმარებლის ყოფნა</string>
+  <string name="assistant_scrim_label">მიმდინარეობს მოსმენა, გასაუქმებლად შეეხეთ</string>
   <string name="audio_sharing_description">აუდიოს გაზიარება</string>
   <string name="audio_status">მიმდინარეობს მოსმენა</string>
   <string name="auto_data_switch_dialog_negative_button">არა, გმადლობთ</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">უკან</string>
   <string name="battery">ბატარეა</string>
   <string name="battery_detail_switch_title">ბატარეის დამზოგი</string>
-  <string name="battery_low_description">თქვენი ბატარეა დატენილია %s-ზე. ბატარეის დამზოგი ჩართავს მუქ თემას, შეზღუდავს აქტივობას ფონურ რეჟიმში და შეტყობინებების მიღება შეფერხდება.</string>
+  <string name="battery_health_notify_learn_more">შეიტყვეთ მეტი</string>
   <string name="battery_low_intro">ბატარეის დამზოგი ჩართავს მუქ თემას, შეზღუდავს აქტივობას ფონურ რეჟიმში და შეტყობინებების მიღება შეფერხდება.</string>
-  <string name="battery_low_title">გსურთ ბატარეის დამზოგის ჩართვა?</string>
   <string name="battery_saver_confirmation_ok">ჩართვა</string>
   <string name="battery_saver_confirmation_title">გსურთ ბატარეის დამზოგის ჩართვა?</string>
   <string name="battery_saver_confirmation_title_generic">ბატარეის დამზოგის შესახებ</string>
-  <string name="battery_saver_dismiss_action">არა, გმადლობთ</string>
   <string name="battery_saver_start_action">ჩართვა</string>
   <string name="battery_state_unknown_notification_text">შეეხეთ მეტი ინფორმაციისთვის</string>
   <string name="battery_state_unknown_notification_title">თქვენი ბატარეის მზომის წაკითხვასთან დაკავშირებით პრობლემა დაფიქსირდა</string>
@@ -295,13 +300,9 @@
   <string name="bluetooth_active_battery_level_untethered">აქტიური. მარცხენა: %1$s, მარჯვენა: %2$s ბატარეა.</string>
   <string name="bluetooth_active_battery_level_untethered_left">აქტიური. მარცხენა ბატარეის დონე: %1$s.</string>
   <string name="bluetooth_active_battery_level_untethered_right">აქტიური. მარჯვენა ბატარეის დონე: %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">აქტიური (მხოლოდ მედია), მარცხენა: %1$s, მარჯვენა:%2$s ბატარეა.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">აქტიური (მხოლოდ მედია)</string>
   <string name="bluetooth_active_no_battery_level">აქტიური</string>
   <string name="bluetooth_battery_level">%1$s ბატარეა</string>
-  <string name="bluetooth_battery_level_lea_support">დაკავშირებული (აუდიოს გაზიარება მხარდაჭერილია). ბატარეა %1$s.</string>
   <string name="bluetooth_battery_level_untethered">მარცხენა: %1$s, მარჯვენა: %2$s ბატარეა.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">დაკავშირებული (აუდიოს გაზიარება მხარდაჭერილია). მარცხენა: ბატარეა %1$s, მარჯვენა: ბატარეა %2$s</string>
   <string name="bluetooth_connected">დაკავშირებულია%1$s</string>
   <string name="bluetooth_connecting">მიმდინარეობს დაკავშირება…</string>
   <string name="bluetooth_disconnected">კავშირი გაწყვეტილია</string>
@@ -309,13 +310,11 @@
   <string name="bluetooth_hearing_aid_left_active">აქტიური (მხოლოდ მარცხენა)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">აქტიური (მარცხენა და მარჯვენა)</string>
   <string name="bluetooth_hearing_aid_right_active">აქტიური (მხოლოდ მარჯვენა)</string>
-  <string name="bluetooth_no_battery_level_lea_support">დაკავშირებული (აუდიოს გაზიარება მხარდაჭერილია)</string>
   <string name="bluetooth_pairing">დაწყვილება…</string>
   <string name="bluetooth_pairing_device_down_error_message">შეუძლებელია %1$s-თან კომუნიკაცია.</string>
   <string name="bluetooth_pairing_error_message">ვერ დაწყვილდა %1$s-თან.</string>
   <string name="bluetooth_pairing_pin_error_message">%1$s-თან დაწყვილება ვერ მოხერხდა, რადგან PIN ან გასაღები არასწორია.</string>
   <string name="bluetooth_pairing_rejected_error_message">დაწყვილება უარყოფილია %1$s-ის მიერ.</string>
-  <string name="bluetooth_saved_device_lea_support">აუდიოს გაზიარება მხარდაჭერილია</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">კომპიუტერი</string>
   <string name="bluetooth_talkback_headphone">ყურსასმენი</string>
@@ -354,8 +353,6 @@
   <string name="bubble_overflow_button_content_description">გადავსება</string>
   <string name="bubble_overflow_empty_subtitle">აქ გამოჩნდება ბოლოდროინდელი ბუშტები და უარყოფილი ბუშტები</string>
   <string name="bubble_overflow_empty_title">ბოლო დროს გამოყენებული ბუშტები არ არის</string>
-  <string name="bubble_shortcut_label">ბუშტები</string>
-  <string name="bubble_shortcut_long_label">ბუშტების ჩვენება</string>
   <string name="bubbles_app_settings">%1$s-ის პარამეტრები</string>
   <string name="bubbles_dont_bubble_conversation">აიკრძალოს საუბრის ბუშტები</string>
   <string name="bubbles_settings_button_description">პარამეტრები %1$s ბუშტებისთვის</string>
@@ -385,6 +382,10 @@
   <string name="cast_to_other_device_stop_dialog_button">ტრანსლირების შეწყვეტა</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">თქვენ შეწყვეტთ &lt;b&gt;%1$s-ის&lt;/b&gt; ტრანსლირებას</string>
   <string name="cell_data_off_content_description">მობილური ინტერნეტი გამორთულია</string>
+  <string name="charge_limit_discovery_notification_enable_button">ახლა ჩართვა</string>
+  <string name="charge_limit_discovery_notification_text">ბატარეის მდგომარეობის დასაცავად და სიცოცხლის გასახანგრძლივებლად ცადეთ 80%-ზე შეზღუდვა. ამის მართვა ნებისმიერ დროს შეგიძლიათ პარამეტრებიდან.</string>
+  <string name="charge_limit_discovery_notification_title">თქვენი ბატარეის დაცვა დატენვისას</string>
+  <string name="charging_reverse_text">ბატარეა ზიარდება</string>
   <string name="clear_all_notifications_text">ყველას გასუფთავება</string>
   <string name="clipboard">გაცვლის ბუფერი</string>
   <string name="clipboard_content_copied">კონტენტი დაკოპირდა</string>
@@ -404,6 +405,11 @@
   <string name="close_button_text">დახურვა</string>
   <string name="close_dialog_button">დახურვა</string>
   <string name="collapse_menu_text">მენიუს დახურვა</string>
+  <string name="columbus_bouncer_message">განბლოკეთ სწრაფი შეხების შესასრულებლად</string>
+  <string name="columbus_target_request_dialog_allow">დაშვება</string>
+  <string name="columbus_target_request_dialog_deny">არ დაიშვას</string>
+  <string name="columbus_target_request_dialog_summary">ორჯერ შეეხეთ თქვენი ტელეფონის უკანა მხარეს, რომ გახსნათ %1$s. ამის შეცვლა ნებისმიერ დროს შეგიძლიათ პარამეტრებში</string>
+  <string name="columbus_target_request_dialog_title">დართავთ ნებას სწრაფ შეხებას, გახსნას %1$s?</string>
   <string name="communal_tutorial_indicator_text">გადაფურცლეთ მარცხნივ, რათა დაიწყოთ საერთო სახელმძღვანელო</string>
   <string name="connected_display_dialog_dual_display_stop_warning">თქვენი შიდა ეკრანი აირეკლება. თქვენი წინა ეკრანი გამოირთვება.</string>
   <string name="connected_display_dialog_start_mirroring">აირეკლოს გარე ეკრანზე?</string>
@@ -509,8 +515,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">მობილური ინტერნეტი დაპაუზებულია</string>
   <string name="data_usage_disabled_dialog_title">მონაცემები შეჩერებულია</string>
   <string name="days_timestamp">%1$s დღის წინ</string>
-  <string name="default_error_message">შენატანი არასწორია</string>
   <string name="default_popup_window_title">ამომხტარი ფანჯარა</string>
+  <string name="defender_notify_resume_charge">უგულებელყოფა</string>
+  <string name="defender_notify_title">თქვენი ბატარეის დაცვა</string>
+  <string name="defender_post_notify_des">ბატარეის მუშაობის გახანგრძლივების მიზნით, დატენვა ოპტიმიზირებული იყო %1$s-დან %2$s-ზე</string>
+  <string name="defender_post_notify_title">დატენვა ოპტიმიზირებული იყო</string>
   <string name="demo_mode">სისტემის UI-ს დემო-რეჟიმი</string>
   <string name="desktop_mode_maximize_menu_maximize_text">აპლიკაციის გაშლა სრულ ეკრანზე</string>
   <string name="desktop_mode_maximize_menu_snap_text">აპლიკაციის დაპატარავება ეკრანზე</string>
@@ -530,20 +539,32 @@
   <string name="do_disclosure_generic">ამ მოწყობილობას ფლობს თქვენი ორგანიზაცია</string>
   <string name="do_disclosure_with_name">ამ მოწყობილობას ფლობს %s</string>
   <string name="do_financed_disclosure_with_name">ამ მოწყობილობის მომწოდებელია %s</string>
+  <string name="dock_a11y_action_show_photo_text">ფოტოჩარჩოს ჩვენება</string>
+  <string name="dock_alignment_not_charging">ხელახლა შეუერთეთ ტელეფონი უსადენოდ დასამუხტად</string>
+  <string name="dock_alignment_slow_charging">ზუსტად მოათავსეთ ტელეფონი სწრაფად დასატენად</string>
+  <string name="dock_defender_first_run_des">ბატარეის ხანგრძლივობის შესანარჩუნებლად, ტაბლეტის ჩამაგრებისას დატენვა შეჩერებულია 90%-ზე. ნებისმიერ დროს გადადით პარამეტრებში უგულებელსაყოფად.</string>
+  <string name="dock_defender_first_run_settings">პარამეტრები</string>
+  <string name="dock_defender_first_run_title">დატენვა შეჩერებულია ბატარეის დასაცავად</string>
   <string name="dock_multi_instances_not_supported_text">ამ აპის გახსნა შესაძლებელია მხოლოდ 1 ფანჯარაში</string>
   <string name="dock_non_resizeble_failed_to_dock_text">ეკრანის გაყოფა არ არის მხარდაჭერილი აპის მიერ</string>
+  <string name="dock_photo_preview_text">ფოტოჩარჩო იწყება...</string>
+  <string name="dock_promo_text">ფოტოჩარჩოსთვის გადაფურცლეთ მარცხნივ</string>
   <string name="done">მზადაა</string>
   <string name="drag_split_not_supported">ამ შეტყობინების გადათრევა გაყოფილ ეკრანებს შორის არ არის მხარდაჭერილი.</string>
   <string name="drag_to_add_tiles">ჩავლებით გადაიტანეთ ბლოკების დასამატებლად</string>
   <string name="drag_to_rearrange_tiles">ფილების გადაწყობა შეგიძლიათ მათი ჩავლებით გადატანით</string>
   <string name="drag_to_remove_disabled">თქვენ გჭირდებათ მოზაიკის %1$d ფილა მაინც</string>
   <string name="drag_to_remove_tiles">ამოსაშლელად, ჩავლებით გადმოიტანეთ აქ</string>
+  <string name="dream_lockscreen_wallpaper_description">გამოიყ. თქვენი ჩაკეტილი ეკრანის ამჟ. ფონი</string>
+  <string name="dream_lockscreen_wallpaper_label">ფონი</string>
   <string name="dream_overlay_status_bar_alarm_set">მაღვიძარა დაყენებულია</string>
   <string name="dream_overlay_status_bar_camera_mic_off">კამერა და მიკროფონი გამორთულია</string>
   <string name="dream_overlay_status_bar_camera_off">კამერა გამორთულია</string>
   <string name="dream_overlay_status_bar_mic_off">მიკროფონი გამორთულია</string>
   <string name="dream_overlay_status_bar_priority_mode">პრიორიტეტული რეჟიმი</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi მიუწვდომელია</string>
+  <string name="dwell_defender_notify_des">ეს ხელს უწყობს ბატარეის ხანგრძლივობას მაშინ, როდესაც ტელეფონის დიდი ხნით ტოვებთ დასატენად</string>
+  <string name="dwell_defender_notify_title">დატენვა შეჩერებულია ბატარეის დასაცავად</string>
   <string name="edit_user_info_message">სახელი და სურათი, რომელსაც აირჩევთ, ხილვადი იქნება ამ მოწყობილობით მოსარგებლე ნებისმიერი პირისთვის.</string>
   <string name="edit_widget">ვიჯეტის რედაქტირება</string>
   <string name="empty_shade_text">შეტყობინებები არ არის.</string>
@@ -559,12 +580,16 @@
   <string name="ethernet_label">ეთერნეტი</string>
   <string name="expand_button_title">დამატებით</string>
   <string name="expand_menu_text">მენიუს გახსნა</string>
+  <string name="extreme_battery_saver_text">უკიდურესი</string>
+  <string name="extreme_low_battery_notification_text">თუ დროულად არ დატენით, თქვენი ტელეფონი მალე გამოირთვება</string>
+  <string name="extreme_low_battery_notification_title">ბატარეის მუხტი ძალიან დაბალია</string>
   <string name="face_re_enroll_dialog_content">სახით განბლოკვის ისევ დასაყენებლად თქვენი ამჟამინდელი სახის მოდელი წაიშლება.
 
 თქვენ მოგიწევთ ამ ფუნქციის ხელახლა დაყენება სახის მეშვეობით ტელეფონის განსაბლოკად.</string>
   <string name="face_re_enroll_dialog_title">სახით განბლოკვის პარამეტრების დაყენება</string>
   <string name="face_re_enroll_notification_name">განბლოკვა სახით</string>
   <string name="face_re_enroll_notification_title">დააყენეთ სახით განბლოკვა ხელახლა</string>
+  <string name="face_reenroll_dialog_confirm">დაყენება</string>
   <string name="face_reenroll_failure_dialog_content">სახით განბლოკვის დაყენება ვერ მოხერხდა. გადადით პარამეტრებზე და ცადეთ ხელახლა.</string>
   <string name="failed_attempts_now_wiping_device">დაფიქსირდა ზედმეტად ბევრი არასწორი მცდელობა. შედეგად, ამ მოწყობილობის მონაცემები წაიშლება.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">უარყოფა</string>
@@ -602,6 +627,7 @@
   <string name="font_scaling_smaller">დაპატარავება</string>
   <string name="fullscreen_text">სრულ ეკრანზე</string>
   <string name="game_status">იკვრება</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">ხანგრძლივი განბლოკვა გაითიშა</string>
   <string name="go_to_web">ბრაუზერზე გადასვლა</string>
   <string name="got_it">გასაგებია</string>
@@ -638,6 +664,7 @@
   <string name="guest_reset_and_restart_dialog_title">გსურთ სტუმრის სესიის გადაყენება?</string>
   <string name="guest_reset_guest_confirm_button">გადაყენება</string>
   <string name="guest_resetting">მიმდინარეობს სტუმრის გადაყენება…</string>
+  <string name="handle_invocation_prompt">გადაფურცლეთ სასაუბროდ</string>
   <string name="handle_text">იდენტიფიკატორი</string>
   <string name="headset">ყურსაცვამი</string>
   <string name="hearing_devices_preset_label">წინასწარ დაყენებული</string>
@@ -654,6 +681,7 @@
   <string name="high_temp_title">ტელეფონი ცხელდება</string>
   <string name="home_controls_dream_description">სწრაფი წვდომა სახლის კონტროლზე ეკრანმზოგის სახით</string>
   <string name="home_controls_dream_label">სახლის კონტროლი</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• სულ მცირე, ერთი მოწყობილობა ან მოწყობილობის პანელია ხელმისაწვდომი</string>
   <string name="home_quick_affordance_unavailable_install_the_app">მთავარი აპის მალსახმობის დასამატებლად დარწმუნდით, რომ აპი დაინსტალირებულია</string>
   <string name="hub_mode_add_widget_button_text">ვიჯეტის დამატება</string>
@@ -667,12 +695,16 @@
   <string name="in_progress">მუშავდება</string>
   <string name="inattentive_sleep_warning_message">მოწყობილობა მალე გამოირთვება, დააჭირეთ, რომ ჩართული დარჩეს.</string>
   <string name="inattentive_sleep_warning_title">მოლოდინის რეჟიმი</string>
+  <string name="incompatible_charging_learn_more">შეიტყვეთ მეტი</string>
+  <string name="incompatible_charging_notify_des">თქვენი ტელეფონი შესაძლოა ნელა ან საერთოდ არ იმუხტებოდეს. უფრო სწრაფად დატენვისთვის გამოიყენეთ რეკომენდებული კაბელი და ადაპტერი.</string>
+  <string name="incompatible_charging_notify_title">მიმდინარეობს დამტენი აქსესუარის შემოწმება</string>
   <string name="indeterminate">ნაწილობრივ შემოწმებულია</string>
   <string name="inline_done_button">მზადაა</string>
   <string name="inline_ok_button">მისადაგება</string>
   <string name="inline_turn_off_notifications">შეტყობინებების გამორთვა</string>
   <string name="input_switch_input_language_next">შემდეგ ენაზე გადართვა</string>
   <string name="input_switch_input_language_previous">წინა ენაზე გადართვა</string>
+  <string name="install_app">აპის ინსტალაცია</string>
   <string name="install_dialer_on_work_profile_action">სამსახურის ტელეფონის აპის ინსტალაცია</string>
   <string name="install_type_instant">მყისიერი აპი</string>
   <string name="instant_apps">მყისიერი აპები</string>
@@ -681,8 +713,6 @@
   <string name="instant_apps_title">%1$s გაშვებულია</string>
   <string name="interruption_level_none">სრული სიჩუმე</string>
   <string name="interruption_level_priority">მხოლოდ პრიორიტეტული</string>
-  <string name="invalid_charger_text">გამოიყენეთ დამტენი, რომელიც თქვენს მოწყობილობას მოჰყვა</string>
-  <string name="invalid_charger_title">USB-თ დატენვა ვერ ხერხდება</string>
   <string name="issuerecord_background_processing_label">პრობლემის ჩანაწერის დამუშავება</string>
   <string name="issuerecord_ongoing_screen_only">ჩანაწერთან დაკავშირებული პრობლემა</string>
   <string name="issuerecord_save_title">პრობლემის ჩანაწერი შენახულია</string>
@@ -764,21 +794,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">მოწყობილობა ჩაკეტილია
 ავტორიზაცია ვერ შესრულდა</string>
   <string name="keyguard_indication_charging_time">%2$s • იტენება • სრულ დატენვამდე %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • დამუხტვის დასრულების დრო: %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • იტენება • სრულ დატენვამდე %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • სრულად დამუხტვის დრო: %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • სწრაფად იტენება • სრულ დატენვამდე %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • სწრაფი დატენა • სრულად დამუხტვის დრო: %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • დატენვა დასრულებულია</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • ნელა იტენება • სრულ დატენვამდე %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • სრულად დამუხტვის დრო: %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • სრულად დამუხტვის დრო: %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • უსადენოდ იტენება • სრულ დატენვამდე %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">განბლოკილია TrustAgent-ის მიერ</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • სრულად დამუხტვის დრო: %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">განბლოკილი იყო ხანგრძლივი განბლოკვის მიერ</string>
   <string name="keyguard_missing_sim_message_short">SIM არ არის</string>
   <string name="keyguard_network_locked_message">ქსელი ჩაკეტილია</string>
   <string name="keyguard_permanent_disabled_sim_message_short">გამოუყენებელი SIM.</string>
   <string name="keyguard_plugged_in">%s • იტენება</string>
   <string name="keyguard_plugged_in_charging_fast">%s • სწრაფად იტენება</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • სწრაფი დატენა</string>
   <string name="keyguard_plugged_in_charging_limited">%s • დატენვა შეჩერებულია ბატარეის დასაცავად</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • ნელა იტენება</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • იტენება</string>
   <string name="keyguard_plugged_in_dock">%s • იტენება</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • იტენება</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • შეამოწმეთ დამტენი აქსესუარი</string>
+  <string name="keyguard_plugged_in_v2">%s • იტენება</string>
   <string name="keyguard_plugged_in_wireless">%s • იტენება უსადენოდ</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • იტენება</string>
   <string name="keyguard_retry">ხელახლა საცდელად გადაფურცლეთ ზემოთ</string>
   <string name="keyguard_sim_error_message_short">ბარათი არასწორია.</string>
   <string name="keyguard_sim_locked_message">SIM-ბარათი ჩაკეტილია.</string>
@@ -809,7 +851,6 @@
   <string name="kg_invalid_confirm_pin_hint">PIN-კოდები არ ემთხვევა</string>
   <string name="kg_invalid_sim_pin_hint">აკრიფეთ 4-8 ციფრისგან შემდგარი PIN-კოდი.</string>
   <string name="kg_invalid_sim_puk_hint">PUK-კოდი 8 ან მეტი ციფრისგან უნდა შედგებოდეს.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{შეიყვანეთ SIM ბარათის PIN-კოდი. თქვენ დაგრჩათ # მცდელობა, რის შემდეგაც მოწყობილობის განსაბლოკად დაგჭირდებათ თქვენს ოპერატორთან დაკავშირება.}other{შეიყვანეთ SIM ბარათის PIN-კოდი. თქვენ დაგრჩათ # მცდელობა.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM ბარათი ახლა გათიშულია. გასაგრძელებლად შეიყვანეთ PUK-კოდი. თქვენ დაგრჩათ # მცდელობა, სანამ SIM სამუდამოდ გამოუსადეგარი გახდება. დეტალური ინფორმაციისთვის დაუკავშირდით თქვენს ოპერატორს.}other{SIM ბარათი ახლა გათიშულია. გასაგრძელებლად შეიყვანეთ PUK-კოდი. თქვენ დაგრჩათ # მცდელობა, სანამ SIM სამუდამოდ გამოუსადეგარი გახდება. დეტალური ინფორმაციისთვის დაუკავშირდით თქვენს ოპერატორს.}}</string>
   <string name="kg_password_pin_failed">SIM ბარათის PIN-კოდით განბლოკვა ვერ მოხერხდა!</string>
   <string name="kg_password_puk_failed">SIM ბარათის PUK-კოდით განბლოკვა ვერ მოხერხდა!</string>
@@ -850,7 +891,7 @@
   <string name="kg_sim_pin_instructions_multi">შეიყვანეთ SIM ბარათის PIN-კოდი „%1$s“-ისთვის.</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM-ის განბლოკვა…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{# წამში ისევ ცადეთ.}other{# წამში ისევ ცადეთ.}}</string>
-  <string name="kg_trust_agent_disabled">ნდობის აგენტი მიუწვდომელია</string>
+  <string name="kg_trust_agent_disabled">ხანგრძლივი განბლოკვა მიუწვდომელია</string>
   <string name="kg_unlock_with_password_or_fp">პაროლ. ან თითის ან. განბლ.</string>
   <string name="kg_unlock_with_pattern_or_fp">ნიმუშით ან თითის ან. განბ.</string>
   <string name="kg_unlock_with_pin_or_fp">PIN-კოდ. ან თითის ან. გან.</string>
@@ -898,6 +939,10 @@
   <string name="log_access_confirmation_learn_more">შეიტყვეთ მეტი</string>
   <string name="log_access_confirmation_learn_more_at">შეიტყვეთ მეტი აქ: %s</string>
   <string name="log_access_confirmation_title">გსურთ %s-ს მიანიჭოთ მოწყობილობის ყველა ჟურნალზე წვდომა?</string>
+  <string name="low_battery_label">ბატარეის მუხტი დაბალია</string>
+  <string name="low_battery_notification_text">ბატარეის სტანდარტული დამზოგის ჩართვა მისი მუშაობის გასახანგრძლივებლად</string>
+  <string name="low_battery_notification_text_ebs">ბატარეის სუპერდამზოგის ჩართვა მისი მუშაობის გასახანგრძლივებლად</string>
+  <string name="low_battery_notification_title">ბატარეა დატენილია %s-ზე</string>
   <string name="m3c_search_bar_search">ძიება</string>
   <string name="m3c_suggestions_available">შემოთავაზებები იხილეთ ქვემოთ</string>
   <string name="magnification_close_settings_click_label">გადიდების პარამეტრების დახურვა</string>
@@ -937,8 +982,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">შეწყვეტა</string>
   <string name="media_output_end_session_dialog_summary">შეწყვიტეთ გაზიარებული სესია, რათა მულტიმედია სხვა მოწყობილობაზე გადაიტანოთ</string>
-  <string name="media_output_first_broadcast_title">ტრანსლირების მუშაობის პრინციპი</string>
-  <string name="media_output_first_notify_broadcast_message">თქვენთან ახლოს მყოფ ხალხს თავსებადი Bluetooth მოწყობილობით შეუძლიათ თქვენ მიერ ტრანსლირებული მედიის მოსმენა</string>
   <string name="media_output_group_title_speakers_and_displays">დინამიკები და დისპლეები</string>
   <string name="media_output_group_title_suggested_device">შემოთავაზებული მოწყობილობები</string>
   <string name="media_output_label_title">უკრავს %s:</string>
@@ -965,9 +1008,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">როდესაც აპს ტრანსლირებთ, Android-ს წვდომა აქვს ყველაფერზე, რაც ჩანს ან იკვრება აპში. ამიტომ იყავით ფრთხილად ისეთ ინფორმაციასთან, როგორიცაა პაროლები, გადახდის დეტალები, შეტყობინებები, ფოტოები, აუდიო და ვიდეო.</string>
   <string name="media_projection_sys_service_dialog_title">დაიწყოს ჩაწერა ან ტრანსლირება?</string>
   <string name="media_projection_sys_service_dialog_warning">ამ ფუნქციის მომწოდებელ სერვისს ექნება წვდომა ყველა ინფორმაციაზე, რომელიც თქვენს ეკრანზე გამოჩნდება ან თქვენს მოწყობილობაზე დაიკვრება ჩაწერის ან ტრანსლირების განმავლობაში. აღნიშნული მოიცავს ისეთ ინფორმაციას, როგორიც არის პაროლები, გადახდის დეტალები, ფოტოები, შეტყობინებები და თქვენ მიერ დაკრული აუდიო.</string>
-  <string name="media_projection_task_switcher_action_back">უკან გადართვა</string>
-  <string name="media_projection_task_switcher_action_switch">სანაცვლოდ ამ აპის გაზიარება</string>
-  <string name="media_projection_task_switcher_text">აპების გადართვისას გაზიარება პაუზდება</string>
   <string name="media_seamless_other_device">სხვა მოწყობილობა</string>
   <string name="media_transfer_default_device_name">დაკავშირებული მოწყობილობა</string>
   <string name="media_transfer_dock_speaker_device_name">სამაგრის დინამიკი</string>
@@ -1278,12 +1318,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">მაღალი გარჩევადობისთვის ამოაბრუნეთ ტელეფონი</string>
   <string name="rear_display_unfolded_bottom_sheet_title">გადაირთოს ეკრანები?</string>
   <string name="recent_conversations">ბოლო მიმოწერები</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">გაიგზავნა სურათი</string>
   <string name="remove_from_settings">პარამეტრებიდან წაშლა</string>
   <string name="remove_from_settings_prompt">გსურთ სისტემის UI ტუნერის პარამეტრებიდან წაშლა და მისი ყველა ფუნქციის გამოყენების შეწყვეტა?</string>
   <string name="require_unlock_for_nfc">განბლოკეთ NFC-ის გამოსაყენებლად</string>
   <string name="restart_button_description">შეხებით გადატვირთეთ ეს აპი უკეთესი ხედის მისაღებად</string>
   <string name="retry_face">ხელახლა სცადეთ სახის ავტორიზაცია</string>
+  <string name="reverse_charging_device_name_text">სხვა Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s აწვდის მუხტს (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">ბატარეის გაზიარება ჩართულია</string>
+  <string name="reverse_charging_title">ბატარეის გაზიარება</string>
   <string name="right_icon">მარჯვენა ხატულა</string>
   <string name="right_keycode">მარჯვენა კლავიშის კოდი</string>
   <string name="right_nav_bar_button_type">მარჯვენა დამატებითი ღილაკის ტიპი</string>
@@ -1291,8 +1336,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">შეეხეთ ბატარეისა და მონაცემების მოხმარების შესახებ დეტალური ინფორმაციისთვის</string>
   <string name="running_foreground_services_title">ფონურ რეჟიმში გაშვებული აპები</string>
-  <string name="satellite_connected_carrier_text">სატელიტური SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel-ის სატელიტური SOS</string>
   <string name="save">შენახვა</string>
+  <string name="saver_confirmation_dialog_dismiss_text">გაუქმება</string>
+  <string name="saver_confirmation_dialog_subtitle">აირჩიეთ სასურველი რეჟიმი</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">მოიცავს ყველა ზემოხსენებულ ცვლილებას. ასევე აპაუზებს არაარსებით აპებსა და მათ შეტყობინებებს.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">ზღუდავს ვიზუალურ ეფექტებსა და ფონურ აქტივობას. ჩართავს მუქ თემას, თუ უკვე ჩართული არაა.</string>
+  <string name="saver_confirmation_dialog_title">მოგესალმებათ ბატარეის დამზოგი</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">ბატარეის სუპერდამზოგი</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">ბატარეის სტანდარტული დამზოგი</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">ეკრანის აღბეჭდვა გამორთულია მოწყობილობის წესების თანახმად</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">დაბლოკილია თქვენი IT-ადმინისტრატორის მიერ</string>
   <string name="screen_pinning_can_open_other_apps">ჩამაგრებულმა აპმა შეიძლება სხვა აპები გახსნას.</string>
@@ -1310,6 +1362,12 @@
   <string name="screen_pinning_toast">ამ აპის ჩამაგრების მოსახსნელად, ხანგრძლივად შეეხეთ ღილაკებს „უკან“ და „მიმოხილვა“</string>
   <string name="screen_pinning_toast_gesture_nav">ამ აპის ჩამაგრების მოსახსნელად გადაფურცლეთ ზემოთ და არ აუშვათ</string>
   <string name="screen_pinning_toast_recents_invisible">ამ აპის ჩამაგრების მოსახსნელად, ხანგრძლივად შეეხეთ ღილაკებს „უკან“ და „მთავარი გვერდი“</string>
+  <string name="screen_protector_absent_message">როდესაც ეკრანის დამცავს არ იყენებთ, ეკრანის დამცავის რეჟიმის გამორთვა აუმჯობესებს შეხებას.</string>
+  <string name="screen_protector_disable_notification">შეტყობინებების გათიშვა</string>
+  <string name="screen_protector_go_to_settings">პარამეტრებზე გადასვლა</string>
+  <string name="screen_protector_got_it">გასაგებია</string>
+  <string name="screen_protector_mode_title">ეკრანის დამცავის რეჟიმი</string>
+  <string name="screen_protector_present_message">ეკრანის დამცავის გამოყენებისას ეკრანის დამცავის რეჟიმის ჩართვა აუმჯობესებს შეხებას.</string>
   <string name="screen_share_permission_app_selector_title">გააზიარეთ ან ჩაწერეთ აპი</string>
   <string name="screen_share_permission_dialog_option_entire_screen">მთელი ეკრანი</string>
   <string name="screen_share_permission_dialog_option_single_app">ერთი აპი</string>
@@ -1362,9 +1420,9 @@
   <string name="screenshot_saving_work_profile_title">მიმდინარეობს ეკრანის ანაბეჭდის შენახვა სამუშაო პროფილში…</string>
   <string name="screenshot_scroll_label">მეტის აღბეჭდვა</string>
   <string name="screenshot_share_description">ეკრანის ანაბეჭდის გაზიარება</string>
-  <string name="screenshot_share_label">გაზიარება</string>
   <string name="screenshot_text">ეკრანის ანაბეჭდი</string>
   <string name="screenshot_top_boundary_pct">ზედა ზღვარი: %1$d პროცენტი</string>
+  <string name="screenshot_view_description">ეკრანის ანაბეჭდის ნახვა</string>
   <string name="screenshot_work_profile_notification">შენახულია %1$s-ში სამსახურის პროფილში</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">თითის ანაბეჭდის სენსორი ჩართვის ღილაკზეა. ეს არის ბრტყელი ღილაკი ხმის აწევის ღილაკის გვერდით, ტელეფონის კიდეში.</string>
   <string name="see_all_bluetooth_devices">ყველას ნახვა</string>
@@ -1382,6 +1440,12 @@
   <string name="set_default_notes_app_toast_content">დააყენეთ ნაგულისხმევი შენიშვნების აპი პარამეტრებში</string>
   <string name="settings_label">პარამეტრები</string>
   <string name="settingslib_learn_more_text">შეიტყვეთ მეტი</string>
+  <string name="severe_battery_notification_switch_text">გსურთ ბატარეის სუპერდამზოგ რეჟიმზე გადართვა? 
+
+დაპაუზდება ყველა არაარსებითი აპი და მათი შეტყობინებები</string>
+  <string name="severe_battery_notification_text">გსურთ ბატარეის სუპერდამზოგის ჩართვა? დაპაუზდება ყველა არაარსებითი აპი და მათი შეტყობინებები</string>
+  <string name="severe_battery_notification_title">ბატარეა დატენილია %s-ზე</string>
+  <string name="severe_low_battery_dialog_switch_action_text">გადართვა</string>
   <string name="share_to_app_stop_dialog_button">გაზიარების შეწყვეტა</string>
   <string name="share_to_app_stop_dialog_message_specific_app">თქვენ შეწყვეტთ &lt;b&gt;%1$s-ის&lt;/b&gt; გაზიარებას</string>
   <string name="share_to_app_stop_dialog_title">გსურთ ეკრანის გაზიარების შეწყვეტა?</string>
@@ -1404,6 +1468,9 @@
   <string name="slice_permission_text_1">- მას შეუძლია ინფორმაციის %1$s-დან წაკითხვა</string>
   <string name="slice_permission_text_2">- მას შეუძლია ქმედებების %1$s-ში განხორციელება</string>
   <string name="slice_permission_title">ანიჭებთ ნებართვას %1$s-ს, აჩვენოს %2$s-ის ფრაგმენტები?</string>
+  <string name="smartspace_content_desc">მოკლე მიმოხილვა</string>
+  <string name="smartspace_flight_qr_code">QR კოდი</string>
+  <string name="smartspace_role_desc">ნახვა</string>
   <string name="snoozeHourOptions">{count,plural, =1{# საათი}=2{# საათი}other{# საათი}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# წუთი}other{# წუთი}}</string>
   <string name="snooze_undo">მოქმედების გაუქმება</string>
@@ -1414,6 +1481,8 @@
   <string name="speed_label_slow">ნელი</string>
   <string name="speed_label_very_fast">ძალიან სწრაფი</string>
   <string name="split_screen_text">ეკრანის გაყოფა</string>
+  <string name="squeeze_invocation_prompt">მოუჭირეთ სალაპარაკოდ</string>
+  <string name="standard_battery_saver_text">სტანდარტული</string>
   <string name="start_dreams">ეკრანმზოგი</string>
   <string name="state_empty">ცარიელი</string>
   <string name="state_off">გამორთული</string>
@@ -1451,6 +1520,8 @@
   <string name="tab">ჩანართი</string>
   <string name="tap_a_network_to_connect">დასაკავშირებლად შეეხეთ ქსელს</string>
   <string name="tap_again">შეეხეთ ხელახლა</string>
+  <string name="temp_defender_notify_des">დატენვა განახლდება ტელეფონის ნორმალურ ტემპერატურაზე დაბრუნებისას</string>
+  <string name="temp_defender_notify_title">დატენვა შეჩერებულია ბატარეის დასაცავად</string>
   <string name="template_percent">%1$d პროცენტი.</string>
   <string name="thermal">თერმული</string>
   <string name="thermal_shutdown_dialog_help_text">მისაღები ზომების გაცნობა</string>
@@ -1467,6 +1538,7 @@
   <string name="title_for_empty_state_cta">მიიღეთ წვდომა თქვენი რჩეული აპების ვიჯეტებზე ტაბლეტის განბლოკვის გარეშე.</string>
   <string name="title_usb_accessory">USB აქსესუარი</string>
   <string name="to_switch_networks_disconnect_ethernet">ქსელების გადასართავად, გაწყვიტეთ Ethernet-თან კავშირი</string>
+  <string name="too_hot_label">Pixel ზედმეტად ცხელია</string>
   <string name="touch_filtered_warning">ვინაიდან აპი ფარავს ნებართვის მოთხოვნას, პარამეტრების მიერ თქვენი პასუხი ვერ დასტურდება.</string>
   <string name="touchpad_tutorial_action_key_button">მოქმედების კლავიში</string>
   <string name="touchpad_tutorial_back_gesture_button">უკან დაბრუნების ჟესტი</string>
@@ -1481,17 +1553,18 @@
   <string name="tuner_menu">მენიუ</string>
   <string name="tuner_minus">მინუსი</string>
   <string name="tuner_other_apps">სხვა აპები</string>
+  <string name="tuner_persistent_warning">ეს ექსპერიმენტული მახასიათებლები შეიძლება შეიცვალოს, შეწყდეს ან გაქრეს მომავალ ვერსიებში. სიფრთხილით გააგრძელეთ.</string>
   <string name="tuner_plus">პლუსი</string>
   <string name="tuner_right">მარჯვენა</string>
   <string name="tuner_time">დრო</string>
+  <string name="tuner_warning">სისტემის UI ტუნერი გაძლევთ დამატებით გზებს Android-ის სამომხმარებლო ინტერფეისის პარამეტრების დაყენებისთვის. ეს ექსპერიმენტული მახასიათებლები შეიძლება შეიცვალოს, შეწყდეს ან გაქრეს მომავალ ვერსიებში. სიფრთხილით გააგრძელეთ.</string>
+  <string name="tuner_warning_title">ზოგისთვის გასართობია, მაგრამ არა ყველასთვის</string>
   <string name="turn_off_airplane_mode">თვითმფრინავის რეჟიმის გამორთვა</string>
   <string name="turn_on_bluetooth">Bluetooth-ის გამოყენება</string>
   <string name="turn_on_bluetooth_auto_info_disabled">ისეთი ფუნქციები, როგორიცაა სწრაფი გაზიარება და ჩემი მოწყობილობის პოვნა, იყენებს Bluetooth-ს</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth ჩაირთვება ხვალ დილით</string>
   <string name="turn_on_bluetooth_auto_tomorrow">ხვალ ავტომატურად ჩართვა</string>
   <string name="turn_on_wifi">Wi‑Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">ტელევიზორის ნაგულისხმევი</string>
   <string name="two_weeks_timestamp">2 კვირის წინ</string>
   <string name="unknown">უცნობი</string>
   <string name="unlock_to_see_notif_text">განბლოკეთ ძველი შეტყობინებების სანახავად</string>
@@ -1550,7 +1623,9 @@
   <string name="volume_odi_captions_hint_enable">ჩართვა</string>
   <string name="volume_odi_captions_tip">მედიის ავტომ. სუბტიტრირება</string>
   <string name="volume_panel_captioning_title">ავტოსუბტიტრები</string>
+  <string name="volume_panel_clear_calling_title">სუფთა აუდიო</string>
   <string name="volume_panel_collapsed_sliders">ხმის სლაიდერების ჩაკეცვა</string>
+  <string name="volume_panel_device_settings_title">მოწყობილობის პარამეტრები</string>
   <string name="volume_panel_dialog_settings_button">პარამეტრები</string>
   <string name="volume_panel_enter_media_output_settings">აუდიოს გამოსვლის პარამეტრების გახსნა</string>
   <string name="volume_panel_expanded_sliders">ხმის სლაიდერების გაფართოება</string>
@@ -1665,6 +1740,9 @@ Wi‑Fi მისამართი (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">უცნობი</string>
   <string name="wifitrackerlib_wifi_unmetered_label">არალიმიტირებული</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi დროებით ინტერნეტს ავტომატურად არ დაუკავშირდება</string>
+  <string name="wireless_charging_label">დატენვა უსადენოდ</string>
+  <string name="wireless_charging_notification_text">უსადენო დატენამ შეიძლება უფრო მეტი ენერგია მოიხმაროს, ვიდრე სადენიანმა. ელექტროენერგიისა და დროის დაზოგვის მიზნით, ცადეთ სადენიანი დამტენი.</string>
+  <string name="wireless_charging_notification_title">იტენება უსადენოდ</string>
   <string name="work_challenge_emergency_button_text">საგანგებო სიტუაცია</string>
   <string name="work_mode_off_title">კვლავ გააქტიურდეს სამსახურის აპები?</string>
   <string name="work_mode_turn_on">გააქტიურება</string>

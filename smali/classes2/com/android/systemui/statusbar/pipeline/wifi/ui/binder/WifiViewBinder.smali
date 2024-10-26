@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/statusbar/pipeline/wifi/ui/binder/WifiViewBinder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -11,7 +11,7 @@
     move-object/from16 v15, p0
 
     .line 2
-    const v0, 0x7f0b08ef    # @id/wifi_group
+    const v0, 0x7f0a0928    # @id/wifi_group
 
     .line 4
     invoke-virtual {v15, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -26,7 +26,7 @@
     check-cast v3, Landroid/view/ViewGroup;
 
     .line 12
-    const v0, 0x7f0b08fa    # @id/wifi_signal
+    const v0, 0x7f0a0933    # @id/wifi_signal
 
     .line 14
     invoke-virtual {v15, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -41,7 +41,7 @@
     check-cast v7, Landroid/widget/ImageView;
 
     .line 22
-    const v0, 0x7f0b0767    # @id/status_bar_dot
+    const v0, 0x7f0a0796    # @id/status_bar_dot
 
     .line 24
     invoke-virtual {v15, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -56,7 +56,7 @@
     check-cast v4, Lcom/android/systemui/statusbar/StatusBarIconView;
 
     .line 32
-    const v0, 0x7f0b08f1    # @id/wifi_in
+    const v0, 0x7f0a092a    # @id/wifi_in
 
     .line 34
     invoke-virtual {v15, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -71,7 +71,7 @@
     check-cast v9, Landroid/widget/ImageView;
 
     .line 42
-    const v0, 0x7f0b08f5    # @id/wifi_out
+    const v0, 0x7f0a092e    # @id/wifi_out
 
     .line 44
     invoke-virtual {v15, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -86,7 +86,7 @@
     check-cast v10, Landroid/widget/ImageView;
 
     .line 52
-    const v0, 0x7f0b03a5    # @id/inout_container
+    const v0, 0x7f0a03c5    # @id/inout_container
 
     .line 54
     invoke-virtual {v15, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -95,7 +95,7 @@
     move-result-object v12
 
     .line 60
-    const v0, 0x7f0b08e8    # @id/wifi_airplane_spacer
+    const v0, 0x7f0a0921    # @id/wifi_airplane_spacer
 
     .line 61
     invoke-virtual {v15, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -104,7 +104,7 @@
     move-result-object v13
 
     .line 67
-    const v0, 0x7f0b08fb    # @id/wifi_signal_spacer
+    const v0, 0x7f0a0934    # @id/wifi_signal_spacer
 
     .line 68
     invoke-virtual {v15, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;

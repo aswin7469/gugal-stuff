@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/DragResizeInputListener;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/AutoCloseable;
@@ -553,145 +553,234 @@
     iget-object p2, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mTouchRegion:Landroid/graphics/Region;
 
     .line 25
-    invoke-virtual {p1, p2}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->union(Landroid/graphics/Region;)V
+    iget-object v0, p1, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mDebugTaskEdges:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;
 
     .line 27
-    iget-object p2, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mInputEventReceiver:Lcom/android/wm/shell/windowdecor/DragResizeInputListener$TaskResizeInputEventReceiver;
+    if-eqz v0, :cond_1
 
-    .line 30
-    iput-object p1, p2, Lcom/android/wm/shell/windowdecor/DragResizeInputListener$TaskResizeInputEventReceiver;->mDragResizeWindowGeometry:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;
+    .line 29
+    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mTopEdgeBounds:Landroid/graphics/Rect;
 
-    .line 32
-    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mTouchRegion:Landroid/graphics/Region;
+    .line 31
+    invoke-virtual {p2, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
 
-    .line 34
-    iput-object v0, p2, Lcom/android/wm/shell/windowdecor/DragResizeInputListener$TaskResizeInputEventReceiver;->mTouchRegion:Landroid/graphics/Region;
+    .line 33
+    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mLeftEdgeBounds:Landroid/graphics/Rect;
 
     .line 36
+    invoke-virtual {p2, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 38
+    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mRightEdgeBounds:Landroid/graphics/Rect;
+
+    .line 41
+    invoke-virtual {p2, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 43
+    iget-object v0, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mBottomEdgeBounds:Landroid/graphics/Rect;
+
+    .line 46
+    invoke-virtual {p2, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 48
+    goto :goto_0
+
+    .line 51
+    :cond_1
+    iget-object v0, p1, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mTaskEdges:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;
+
+    .line 52
+    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mTopEdgeBounds:Landroid/graphics/Rect;
+
+    .line 54
+    invoke-virtual {p2, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 56
+    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mLeftEdgeBounds:Landroid/graphics/Rect;
+
+    .line 59
+    invoke-virtual {p2, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 61
+    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mRightEdgeBounds:Landroid/graphics/Rect;
+
+    .line 64
+    invoke-virtual {p2, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 66
+    iget-object v0, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskEdges;->mBottomEdgeBounds:Landroid/graphics/Rect;
+
+    .line 69
+    invoke-virtual {p2, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 71
+    :goto_0
+    invoke-static {}, Lcom/android/window/flags/Flags;->enableWindowingEdgeDragResize()Z
+
+    .line 74
+    iget-object v0, p1, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mFineTaskCorners:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;
+
+    .line 77
+    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mLeftTopCornerBounds:Landroid/graphics/Rect;
+
+    .line 79
+    invoke-virtual {p2, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 81
+    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mRightTopCornerBounds:Landroid/graphics/Rect;
+
+    .line 84
+    invoke-virtual {p2, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 86
+    iget-object v1, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mLeftBottomCornerBounds:Landroid/graphics/Rect;
+
+    .line 89
+    invoke-virtual {p2, v1}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 91
+    iget-object v0, v0, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry$TaskCorners;->mRightBottomCornerBounds:Landroid/graphics/Rect;
+
+    .line 94
+    invoke-virtual {p2, v0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
+
+    .line 96
+    iget-object p2, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mInputEventReceiver:Lcom/android/wm/shell/windowdecor/DragResizeInputListener$TaskResizeInputEventReceiver;
+
+    .line 99
+    iput-object p1, p2, Lcom/android/wm/shell/windowdecor/DragResizeInputListener$TaskResizeInputEventReceiver;->mDragResizeWindowGeometry:Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;
+
+    .line 101
+    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mTouchRegion:Landroid/graphics/Region;
+
+    .line 103
+    iput-object v0, p2, Lcom/android/wm/shell/windowdecor/DragResizeInputListener$TaskResizeInputEventReceiver;->mTouchRegion:Landroid/graphics/Region;
+
+    .line 105
     :try_start_0
     iget-object v1, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mWindowSession:Landroid/view/IWindowSession;
 
-    .line 38
+    .line 107
     iget-object p2, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mInputChannel:Landroid/view/InputChannel;
 
-    .line 40
+    .line 109
     invoke-virtual {p2}, Landroid/view/InputChannel;->getToken()Landroid/os/IBinder;
 
-    .line 42
+    .line 111
     move-result-object v2
 
-    .line 45
+    .line 114
     iget v3, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mDisplayId:I
 
-    .line 46
+    .line 115
     iget-object v4, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mDecorationSurface:Landroid/view/SurfaceControl;
 
-    .line 48
+    .line 117
     iget-object v8, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mTouchRegion:Landroid/graphics/Region;
 
-    .line 50
+    .line 119
     const/high16 v6, 0x20000000
 
-    .line 52
+    .line 121
     const/4 v7, 0x4
 
-    .line 54
+    .line 123
     const/16 v5, 0x8
 
-    .line 55
+    .line 124
     invoke-interface/range {v1 .. v8}, Landroid/view/IWindowSession;->updateInputChannel(Landroid/os/IBinder;ILandroid/view/SurfaceControl;IIILandroid/graphics/Region;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
-    goto :goto_0
+    .line 126
+    goto :goto_1
 
-    .line 60
+    .line 129
     :catch_0
     move-exception p2
 
-    .line 61
+    .line 130
     invoke-virtual {p2}, Landroid/os/RemoteException;->rethrowFromSystemServer()Ljava/lang/RuntimeException;
 
-    .line 62
-    :goto_0
+    .line 131
+    :goto_1
     iget-object p1, p1, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;->mTaskSize:Landroid/util/Size;
 
-    .line 65
+    .line 134
     iget-object p2, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mSurfaceControlTransactionSupplier:Ljava/util/function/Supplier;
 
-    .line 67
+    .line 136
     invoke-interface {p2}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
-    .line 69
+    .line 138
     move-result-object p2
 
-    .line 72
+    .line 141
     check-cast p2, Landroid/view/SurfaceControl$Transaction;
 
-    .line 73
+    .line 142
     iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mInputSinkSurface:Landroid/view/SurfaceControl;
 
-    .line 75
+    .line 144
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
-    .line 77
+    .line 146
     move-result v1
 
-    .line 80
+    .line 149
     invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
-    .line 81
+    .line 150
     move-result v2
 
-    .line 84
+    .line 153
     invoke-virtual {p2, v0, v1, v2}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
 
-    .line 85
+    .line 154
     move-result-object p2
 
-    .line 88
+    .line 157
     invoke-virtual {p2}, Landroid/view/SurfaceControl$Transaction;->apply()V
 
-    .line 89
+    .line 158
     iget-object v0, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mTouchRegion:Landroid/graphics/Region;
 
-    .line 92
+    .line 161
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
-    .line 94
+    .line 163
     move-result v3
 
-    .line 97
+    .line 166
     invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
-    .line 98
+    .line 167
     move-result v4
 
-    .line 101
+    .line 170
     sget-object v5, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
 
-    .line 102
+    .line 171
     const/4 v1, 0x0
 
-    .line 104
+    .line 173
     const/4 v2, 0x0
 
-    .line 105
+    .line 174
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Region;->op(IIIILandroid/graphics/Region$Op;)Z
 
-    .line 106
+    .line 175
     iget-object p1, p0, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->mTouchRegion:Landroid/graphics/Region;
 
-    .line 109
+    .line 178
     invoke-virtual {p0, p1}, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->updateSinkInputChannel(Landroid/graphics/Region;)V
 
-    .line 111
+    .line 180
     const/4 p0, 0x1
 
-    .line 114
+    .line 183
     return p0
-    .line 115
+    .line 184
 .end method
 
 .method public final updateSinkInputChannel(Landroid/graphics/Region;)V

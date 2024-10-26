@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/compatui/CompatUILayout$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnLongClickListener;
@@ -36,7 +36,7 @@
     .locals 2
 
     .line 1
-    const p1, 0x7f0b01a1    # @id/camera_compat_hint
+    const p1, 0x7f0a01a7    # @id/camera_compat_hint
 
     .line 2
     const/4 v0, 0x1
@@ -106,7 +106,7 @@
 
     .line 41
     :cond_2
-    const p1, 0x7f0b0722    # @id/size_compat_hint
+    const p1, 0x7f0a074e    # @id/size_compat_hint
 
     .line 42
     invoke-virtual {p0, p1, v0}, Lcom/android/wm/shell/compatui/CompatUILayout;->setViewVisibility(IZ)V

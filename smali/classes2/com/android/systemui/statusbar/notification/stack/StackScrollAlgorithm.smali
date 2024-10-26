@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -21,8 +21,6 @@
 .field public mHeadsUpAppearHeightBottom:I
 
 .field mHeadsUpAppearStartAboveScreen:F
-
-.field public mHeadsUpCyclingPadding:I
 
 .field mHeadsUpInset:F
 
@@ -135,280 +133,6 @@
     :goto_0
     return p0
     .line 21
-.end method
-
-.method public static hasNonClearableNotifs(Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;)Z
-    .locals 4
-
-    .line 1
-    const/4 v0, 0x0
-
-    .line 2
-    move v1, v0
-
-    .line 3
-    :goto_0
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;->visibleChildren:Ljava/util/ArrayList;
-
-    .line 4
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    .line 6
-    move-result v2
-
-    .line 9
-    if-ge v1, v2, :cond_2
-
-    .line 10
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm$StackScrollAlgorithmState;->visibleChildren:Ljava/util/ArrayList;
-
-    .line 12
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    .line 14
-    move-result-object v2
-
-    .line 17
-    check-cast v2, Landroid/view/View;
-
-    .line 18
-    instance-of v3, v2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
-
-    .line 20
-    if-eqz v3, :cond_1
-
-    .line 22
-    check-cast v2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
-
-    .line 24
-    iget-object v3, v2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
-
-    .line 26
-    invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->isClearable()Z
-
-    .line 28
-    move-result v3
-
-    .line 31
-    if-eqz v3, :cond_0
-
-    .line 32
-    invoke-virtual {v2}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->shouldShowPublic()Z
-
-    .line 34
-    move-result v3
-
-    .line 37
-    if-eqz v3, :cond_1
-
-    .line 38
-    iget-boolean v2, v2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mSensitiveHiddenInGeneral:Z
-
-    .line 40
-    if-nez v2, :cond_0
-
-    .line 42
-    goto :goto_1
-
-    .line 44
-    :cond_0
-    const/4 p0, 0x1
-
-    .line 45
-    return p0
-
-    .line 46
-    :cond_1
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    .line 47
-    goto :goto_0
-
-    .line 49
-    :cond_2
-    return v0
-    .line 50
-.end method
-
-.method public static isCyclingIn(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/systemui/statusbar/notification/stack/AmbientState;)Z
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAvalancheThrottleHun()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    const/4 v1, 0x0
-
-    .line 6
-    if-nez v0, :cond_0
-
-    .line 7
-    return v1
-
-    .line 9
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
-
-    .line 10
-    if-nez v0, :cond_1
-
-    .line 12
-    return v1
-
-    .line 14
-    :cond_1
-    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mKey:Ljava/lang/String;
-
-    .line 15
-    if-nez v0, :cond_2
-
-    .line 17
-    return v1
-
-    .line 19
-    :cond_2
-    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mAvalancheController:Lcom/android/systemui/statusbar/policy/AvalancheController;
-
-    .line 20
-    iget-object v0, p1, Lcom/android/systemui/statusbar/policy/AvalancheController;->previousHunKey:Ljava/lang/String;
-
-    .line 22
-    if-eqz v0, :cond_5
-
-    .line 24
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    .line 26
-    move-result v1
-
-    .line 29
-    if-eqz v1, :cond_3
-
-    .line 30
-    goto :goto_0
-
-    .line 32
-    :cond_3
-    const-string v1, "HeadsUpEntry null"
-
-    .line 33
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 35
-    move-result v1
-
-    .line 38
-    if-nez v1, :cond_5
-
-    .line 39
-    const-string v1, "HeadsUpEntry.mEntry null"
-
-    .line 41
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 43
-    move-result v0
-
-    .line 46
-    if-eqz v0, :cond_4
-
-    .line 47
-    goto :goto_0
-
-    .line 49
-    :cond_4
-    iget-object p1, p1, Lcom/android/systemui/statusbar/policy/AvalancheController;->headsUpEntryShowing:Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;
-
-    .line 50
-    invoke-static {p1}, Lcom/android/systemui/statusbar/policy/AvalancheController;->getKey(Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;)Ljava/lang/String;
-
-    .line 52
-    move-result-object p1
-
-    .line 55
-    goto :goto_1
-
-    .line 56
-    :cond_5
-    :goto_0
-    const-string p1, ""
-
-    .line 57
-    :goto_1
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
-
-    .line 59
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mKey:Ljava/lang/String;
-
-    .line 61
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 63
-    move-result p0
-
-    .line 66
-    return p0
-    .line 67
-.end method
-
-.method public static isCyclingOut(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/systemui/statusbar/notification/stack/AmbientState;)Z
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAvalancheThrottleHun()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    const/4 v1, 0x0
-
-    .line 6
-    if-nez v0, :cond_0
-
-    .line 7
-    return v1
-
-    .line 9
-    :cond_0
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
-
-    .line 10
-    if-nez p0, :cond_1
-
-    .line 12
-    return v1
-
-    .line 14
-    :cond_1
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mKey:Ljava/lang/String;
-
-    .line 15
-    if-nez p0, :cond_2
-
-    .line 17
-    return v1
-
-    .line 19
-    :cond_2
-    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mAvalancheController:Lcom/android/systemui/statusbar/policy/AvalancheController;
-
-    .line 20
-    iget-object p1, p1, Lcom/android/systemui/statusbar/policy/AvalancheController;->previousHunKey:Ljava/lang/String;
-
-    .line 22
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 24
-    move-result p0
-
-    .line 27
-    return p0
-    .line 28
 .end method
 
 
@@ -673,7 +397,7 @@
     move-result-object v0
 
     .line 5
-    const v1, 0x7f0707e6    # @dimen/notification_divider_height '2.0dp'
+    const v1, 0x7f070829    # @dimen/notification_divider_height '2.0dp'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -688,13 +412,13 @@
     iput v1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mPaddingBetweenElements:F
 
     .line 14
-    const v1, 0x7f070804    # @dimen/notification_min_height '@android:dimen/notification_top_pad_large_text'
+    const v1, 0x7f070847    # @dimen/notification_min_height '@android:dimen/notification_top_pad_large_text'
 
     .line 16
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 19
-    const v1, 0x7f050070    # @bool/notification_enable_clipping 'true'
+    const v1, 0x7f05007e    # @bool/notification_enable_clipping 'true'
 
     .line 22
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -706,7 +430,7 @@
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mEnableNotificationClipping:Z
 
     .line 29
-    const v1, 0x7f050009    # @bool/config_clipNotificationScrollToTop 'true'
+    const v1, 0x7f05000f    # @bool/config_clipNotificationScrollToTop 'true'
 
     .line 31
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -724,7 +448,7 @@
     move-result v1
 
     .line 43
-    const v2, 0x7f07030b    # @dimen/heads_up_status_bar_padding '8.0dp'
+    const v2, 0x7f070340    # @dimen/heads_up_status_bar_padding '8.0dp'
 
     .line 44
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -742,7 +466,7 @@
     iput v1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mHeadsUpInset:F
 
     .line 53
-    const v1, 0x7f070308    # @dimen/heads_up_appear_y_above_screen '32.0dp'
+    const v1, 0x7f07033d    # @dimen/heads_up_appear_y_above_screen '32.0dp'
 
     .line 55
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -763,125 +487,119 @@
     move-result-object v1
 
     .line 68
-    const v2, 0x7f070309    # @dimen/heads_up_cycling_padding '8.0dp'
+    const v2, 0x7f07033e    # @dimen/heads_up_cycling_padding '8.0dp'
 
     .line 69
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 72
-    move-result v1
+    const v1, 0x7f07033f    # @dimen/heads_up_pinned_elevation '16.0dp'
 
     .line 75
-    iput v1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mHeadsUpCyclingPadding:I
-
-    .line 76
-    const v1, 0x7f07030a    # @dimen/heads_up_pinned_elevation '16.0dp'
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 78
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    move-result v1
 
     .line 81
-    move-result v1
-
-    .line 84
     iput v1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mPinnedZTranslationExtra:I
 
-    .line 85
-    const v1, 0x7f070812    # @dimen/notification_section_divider_height '@dimen/notification_side_paddings'
+    .line 82
+    const v1, 0x7f070855    # @dimen/notification_section_divider_height '@dimen/notification_side_paddings'
+
+    .line 84
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 87
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    move-result v1
 
     .line 90
-    move-result v1
-
-    .line 93
     int-to-float v1, v1
 
-    .line 94
+    .line 91
     iput v1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mGapHeight:F
 
-    .line 95
-    const v1, 0x7f070813    # @dimen/notification_section_divider_height_lockscreen '4.0dp'
+    .line 92
+    const v1, 0x7f070856    # @dimen/notification_section_divider_height_lockscreen '4.0dp'
+
+    .line 94
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 97
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    move-result v1
 
     .line 100
-    move-result v1
-
-    .line 103
     int-to-float v1, v1
 
-    .line 104
+    .line 101
     iput v1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mGapHeightOnLockscreen:F
 
-    .line 105
-    const v1, 0x7f070818    # @dimen/notification_side_paddings '16.0dp'
+    .line 102
+    const v1, 0x7f07085b    # @dimen/notification_side_paddings '16.0dp'
+
+    .line 104
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 107
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    move-result v1
 
     .line 110
-    move-result v1
-
-    .line 113
     int-to-float v1, v1
 
-    .line 114
+    .line 111
     iput v1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mNotificationScrimPadding:F
 
-    .line 115
-    const v1, 0x7f07080a    # @dimen/notification_panel_margin_bottom '32.0dp'
+    .line 112
+    const v1, 0x7f07084d    # @dimen/notification_panel_margin_bottom '32.0dp'
 
-    .line 117
+    .line 114
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 120
+    .line 117
     move-result v1
 
-    .line 123
+    .line 120
     iput v1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mMarginBottom:I
 
-    .line 124
+    .line 121
     invoke-static {p1}, Lcom/android/internal/policy/SystemBarUtils;->getQuickQsOffsetHeight(Landroid/content/Context;)I
 
-    .line 126
+    .line 123
     move-result p1
 
-    .line 129
+    .line 126
     int-to-float p1, p1
 
-    .line 130
+    .line 127
     iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mQuickQsOffsetHeight:F
 
-    .line 131
-    const p1, 0x7f0707e4    # @dimen/notification_corner_radius_small '4.0dp'
+    .line 128
+    const p1, 0x7f070827    # @dimen/notification_corner_radius_small '4.0dp'
+
+    .line 130
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimension(I)F
 
     .line 133
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimension(I)F
+    move-result p1
 
     .line 136
-    move-result p1
-
-    .line 139
     iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mSmallCornerRadius:F
 
-    .line 140
-    const p1, 0x7f0707e3    # @dimen/notification_corner_radius '28.0dp'
+    .line 137
+    const p1, 0x7f070826    # @dimen/notification_corner_radius '28.0dp'
 
-    .line 142
+    .line 139
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimension(I)F
 
-    .line 145
+    .line 142
     move-result p1
 
-    .line 148
+    .line 145
     iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->mLargeCornerRadius:F
 
-    .line 149
+    .line 146
     return-void
-    .line 151
+    .line 148
 .end method
 
 .method public maybeUpdateHeadsUpIsVisible(Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;ZZZFF)V

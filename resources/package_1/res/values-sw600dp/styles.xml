@@ -3,6 +3,6 @@
   <style name="TextAppearance.QS.UserSwitcher" parent="@style/TextAppearance.QS">
     <item name="android:textSize">@dimen/kg_user_switcher_text_size</item>
     <item name="android:textColor">?android:attr/textColorSecondary</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
 </resources>

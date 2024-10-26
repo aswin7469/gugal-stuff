@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/graph/ThemedBatteryDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -245,7 +245,7 @@
     move-result-object v0
 
     .line 134
-    const v1, 0x10e0042    # @android:integer/config_datagram_wait_for_connected_state_timeout_millis
+    const v1, 0x10e0040    # @android:integer/config_cursorWindowSize
 
     .line 135
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -606,7 +606,7 @@
     move-result-object p1
 
     .line 400
-    const p2, 0x10401fc    # @android:string/config_controlsPackage
+    const p2, 0x10401f5    # @android:string/config_cameraShutterSound
 
     .line 401
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -648,7 +648,7 @@
     move-result-object p1
 
     .line 432
-    const p2, 0x10401fa    # @android:string/config_clockFontFamily
+    const p2, 0x10401f3    # @android:string/config_cameraLaunchGestureSensorStringType
 
     .line 433
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -690,7 +690,7 @@
     move-result-object p1
 
     .line 464
-    const p2, 0x10401fb    # @android:string/config_companionDeviceManagerPackage
+    const p2, 0x10401f4    # @android:string/config_cameraLiftTriggerSensorStringType
 
     .line 465
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -729,7 +729,7 @@
     move-result-object p1
 
     .line 493
-    const p2, 0x10401f9    # @android:string/config_chooserActivity
+    const p2, 0x10401f2    # @android:string/config_bodyFontFamilyMedium
 
     .line 494
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -759,7 +759,7 @@
     move-result-object p1
 
     .line 515
-    const p2, 0x10401fd    # @android:string/config_credentialManagerDialogComponent
+    const p2, 0x10401f6    # @android:string/config_carrierAppInstallDialogComponent
 
     .line 516
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

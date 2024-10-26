@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/window/AndroidPopup_androidKt$Popup$2$1$invoke$$inlined$onDispose$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/runtime/DisposableEffectResult;
@@ -37,7 +37,7 @@
     invoke-virtual {p0}, Landroidx/compose/ui/platform/AbstractComposeView;->disposeComposition()V
 
     .line 4
-    const v0, 0x7f0b08ad    # @id/view_tree_lifecycle_owner
+    const v0, 0x7f0a08e0    # @id/view_tree_lifecycle_owner
 
     .line 7
     const/4 v1, 0x0

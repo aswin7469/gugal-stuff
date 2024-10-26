@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/dump/DumpHandlerKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -64,18 +64,18 @@
     const-string v4, "dumpables"
 
     .line 33
-    const-string v5, "tables"
+    const-string/jumbo v5, "tables"
 
     .line 35
     filled-new-array/range {v1 .. v7}, [Ljava/lang/String;
 
-    .line 37
+    .line 38
     move-result-object v0
 
-    .line 40
+    .line 41
     sput-object v0, Lcom/android/systemui/dump/DumpHandlerKt;->COMMANDS:[Ljava/lang/String;
 
-    .line 41
+    .line 42
     return-void
-    .line 43
+    .line 44
 .end method

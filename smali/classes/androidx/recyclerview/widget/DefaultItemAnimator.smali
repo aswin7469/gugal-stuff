@@ -1,6 +1,6 @@
 .class public final Landroidx/recyclerview/widget/DefaultItemAnimator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -615,6 +615,17 @@
     .line 69
 .end method
 
+.method public dispatchAddFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->dispatchAnimationFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+
+    .line 2
+    return-void
+    .line 5
+.end method
+
 .method public final dispatchAnimationFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 8
 
@@ -1053,7 +1064,7 @@
     invoke-virtual {v0, v3}, Landroid/view/View;->setAlpha(F)V
 
     .line 80
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->dispatchAnimationFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->dispatchAddFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     .line 83
     :cond_3
@@ -1253,7 +1264,7 @@
     invoke-virtual {v0, v3}, Landroid/view/View;->setAlpha(F)V
 
     .line 211
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->dispatchAnimationFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->dispatchAddFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     .line 214
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z

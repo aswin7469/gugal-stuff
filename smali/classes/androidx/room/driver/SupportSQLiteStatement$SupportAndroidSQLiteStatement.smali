@@ -1,6 +1,6 @@
 .class public final Landroidx/room/driver/SupportSQLiteStatement$SupportAndroidSQLiteStatement;
 .super Landroidx/room/driver/SupportSQLiteStatement;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final bindLong(IJ)V
+.method public final bindLong(JI)V
     .locals 2
 
     .line 1
@@ -66,19 +66,19 @@
     const/4 v0, 0x1
 
     .line 5
-    invoke-virtual {p0, v0, p1}, Landroidx/room/driver/SupportSQLiteStatement$SupportAndroidSQLiteStatement;->ensureCapacity(II)V
+    invoke-virtual {p0, v0, p3}, Landroidx/room/driver/SupportSQLiteStatement$SupportAndroidSQLiteStatement;->ensureCapacity(II)V
 
     .line 6
     iget-object v1, p0, Landroidx/room/driver/SupportSQLiteStatement$SupportAndroidSQLiteStatement;->bindingTypes:[I
 
     .line 9
-    aput v0, v1, p1
+    aput v0, v1, p3
 
     .line 11
     iget-object p0, p0, Landroidx/room/driver/SupportSQLiteStatement$SupportAndroidSQLiteStatement;->longBindings:[J
 
     .line 13
-    aput-wide p2, p0, p1
+    aput-wide p1, p0, p3
 
     .line 15
     return-void

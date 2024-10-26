@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/keyguard/KeyguardService;
 .super Landroid/app/Service;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -27,8 +27,6 @@
 .field public final mScreenOnCoordinator:Lcom/android/keyguard/mediator/ScreenOnCoordinator;
 
 .field public final mShellTransitions:Lcom/android/wm/shell/shared/ShellTransitions;
-
-.field public final mWmOcclusionManager:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;
 
 
 # direct methods
@@ -486,174 +484,74 @@
 .end method
 
 .method public constructor <init>(Lcom/android/systemui/keyguard/KeyguardViewMediator;Lcom/android/systemui/keyguard/KeyguardLifecyclesDispatcher;Lcom/android/keyguard/mediator/ScreenOnCoordinator;Lcom/android/wm/shell/shared/ShellTransitions;Lcom/android/systemui/settings/DisplayTracker;Lcom/android/systemui/keyguard/ui/viewmodel/WindowManagerLockscreenVisibilityViewModel;Lcom/android/systemui/keyguard/WindowManagerLockscreenVisibilityManager;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSurfaceBehindViewModel;Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;Lkotlinx/coroutines/CoroutineScope;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;Ldagger/Lazy;Ljava/util/concurrent/Executor;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Lcom/android/systemui/keyguard/domain/interactor/KeyguardEnabledInteractor;)V
-    .locals 9
+    .locals 2
 
     .line 1
     move-object v0, p0
 
     .line 2
-    move-object v1, p6
-
-    .line 3
-    move-object/from16 v2, p7
-
-    .line 4
-    move-object/from16 v3, p10
-
-    .line 6
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
+    .line 3
+    new-instance v1, Lcom/android/systemui/keyguard/KeyguardService$3;
+
+    .line 6
+    invoke-direct {v1, p0}, Lcom/android/systemui/keyguard/KeyguardService$3;-><init>(Lcom/android/systemui/keyguard/KeyguardService;)V
+
     .line 8
-    new-instance v4, Lcom/android/systemui/keyguard/KeyguardService$3;
+    iput-object v1, v0, Lcom/android/systemui/keyguard/KeyguardService;->mBinder:Lcom/android/systemui/keyguard/KeyguardService$3;
 
     .line 11
-    invoke-direct {v4, p0}, Lcom/android/systemui/keyguard/KeyguardService$3;-><init>(Lcom/android/systemui/keyguard/KeyguardService;)V
+    move-object v1, p1
 
     .line 13
-    iput-object v4, v0, Lcom/android/systemui/keyguard/KeyguardService;->mBinder:Lcom/android/systemui/keyguard/KeyguardService$3;
+    iput-object v1, v0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+
+    .line 14
+    move-object v1, p2
 
     .line 16
-    move-object v4, p1
+    iput-object v1, v0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardLifecyclesDispatcher:Lcom/android/systemui/keyguard/KeyguardLifecyclesDispatcher;
 
-    .line 18
-    iput-object v4, v0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    .line 17
+    move-object v1, p3
 
     .line 19
-    move-object v4, p2
+    iput-object v1, v0, Lcom/android/systemui/keyguard/KeyguardService;->mScreenOnCoordinator:Lcom/android/keyguard/mediator/ScreenOnCoordinator;
 
-    .line 21
-    iput-object v4, v0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardLifecyclesDispatcher:Lcom/android/systemui/keyguard/KeyguardLifecyclesDispatcher;
+    .line 20
+    move-object v1, p4
 
     .line 22
-    move-object v4, p3
+    iput-object v1, v0, Lcom/android/systemui/keyguard/KeyguardService;->mShellTransitions:Lcom/android/wm/shell/shared/ShellTransitions;
 
-    .line 24
-    iput-object v4, v0, Lcom/android/systemui/keyguard/KeyguardService;->mScreenOnCoordinator:Lcom/android/keyguard/mediator/ScreenOnCoordinator;
+    .line 23
+    move-object v1, p5
 
     .line 25
-    move-object v4, p4
+    iput-object v1, v0, Lcom/android/systemui/keyguard/KeyguardService;->mDisplayTracker:Lcom/android/systemui/settings/DisplayTracker;
 
-    .line 27
-    iput-object v4, v0, Lcom/android/systemui/keyguard/KeyguardService;->mShellTransitions:Lcom/android/wm/shell/shared/ShellTransitions;
+    .line 26
+    move-object v1, p12
 
     .line 28
-    move-object v4, p5
+    iput-object v1, v0, Lcom/android/systemui/keyguard/KeyguardService;->mPowerInteractor:Lcom/android/systemui/power/domain/interactor/PowerInteractor;
 
-    .line 30
-    iput-object v4, v0, Lcom/android/systemui/keyguard/KeyguardService;->mDisplayTracker:Lcom/android/systemui/settings/DisplayTracker;
+    .line 29
+    move-object/from16 v1, p16
 
     .line 31
-    move-object/from16 v4, p12
+    iput-object v1, v0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;
 
     .line 33
-    iput-object v4, v0, Lcom/android/systemui/keyguard/KeyguardService;->mPowerInteractor:Lcom/android/systemui/power/domain/interactor/PowerInteractor;
-
-    .line 35
-    move-object/from16 v4, p16
-
-    .line 37
-    iput-object v4, v0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;
-
-    .line 39
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 41
-    move-result v4
-
-    .line 44
-    if-eqz v4, :cond_0
-
-    .line 45
-    sget-object v4, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
-
-    .line 47
-    new-instance v5, Lcom/android/systemui/keyguard/ui/binder/WindowManagerLockscreenVisibilityViewBinder$bind$$inlined$launch$default$1;
-
-    .line 49
-    const-string v6, "WindowManagerLockscreenVisibilityViewBinder#viewModel.surfaceBehindVisibility"
-
-    .line 51
-    const/4 v7, 0x0
-
-    .line 53
-    invoke-direct {v5, v6, v7, p6, v2}, Lcom/android/systemui/keyguard/ui/binder/WindowManagerLockscreenVisibilityViewBinder$bind$$inlined$launch$default$1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/ui/viewmodel/WindowManagerLockscreenVisibilityViewModel;Lcom/android/systemui/keyguard/WindowManagerLockscreenVisibilityManager;)V
-
-    .line 54
-    const/4 v6, 0x2
-
-    .line 57
-    invoke-static {v3, v4, v7, v5, v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 58
-    new-instance v5, Lcom/android/systemui/keyguard/ui/binder/WindowManagerLockscreenVisibilityViewBinder$bind$$inlined$launch$default$2;
-
-    .line 61
-    const-string v8, "WindowManagerLockscreenVisibilityViewBinder#viewModel.lockscreenVisibility"
-
-    .line 63
-    invoke-direct {v5, v8, v7, p6, v2}, Lcom/android/systemui/keyguard/ui/binder/WindowManagerLockscreenVisibilityViewBinder$bind$$inlined$launch$default$2;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/ui/viewmodel/WindowManagerLockscreenVisibilityViewModel;Lcom/android/systemui/keyguard/WindowManagerLockscreenVisibilityManager;)V
-
-    .line 65
-    invoke-static {v3, v4, v7, v5, v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 68
-    new-instance v5, Lcom/android/systemui/keyguard/ui/binder/WindowManagerLockscreenVisibilityViewBinder$bind$$inlined$launch$default$3;
-
-    .line 71
-    const-string v8, "WindowManagerLockscreenVisibilityViewBinder#viewModel.aodVisibility"
-
-    .line 73
-    invoke-direct {v5, v8, v7, p6, v2}, Lcom/android/systemui/keyguard/ui/binder/WindowManagerLockscreenVisibilityViewBinder$bind$$inlined$launch$default$3;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/ui/viewmodel/WindowManagerLockscreenVisibilityViewModel;Lcom/android/systemui/keyguard/WindowManagerLockscreenVisibilityManager;)V
-
-    .line 75
-    invoke-static {v3, v4, v7, v5, v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 78
-    new-instance v5, Lcom/android/systemui/keyguard/ui/binder/WindowManagerLockscreenVisibilityViewBinder$bind$$inlined$launch$default$4;
-
-    .line 81
-    const-string v8, "WindowManagerLockscreenVisibilityViewBinder#viewModel.surfaceBehindAnimating"
-
-    .line 83
-    invoke-direct {v5, v8, v7, p6, v2}, Lcom/android/systemui/keyguard/ui/binder/WindowManagerLockscreenVisibilityViewBinder$bind$$inlined$launch$default$4;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/ui/viewmodel/WindowManagerLockscreenVisibilityViewModel;Lcom/android/systemui/keyguard/WindowManagerLockscreenVisibilityManager;)V
-
-    .line 85
-    invoke-static {v3, v4, v7, v5, v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 88
-    new-instance v1, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindViewBinder$bind$$inlined$launch$default$1;
-
-    .line 91
-    const-string v2, "KeyguardSurfaceBehindViewBinder#viewModel.surfaceBehindViewParams"
-
-    .line 93
-    move-object/from16 v5, p8
-
-    .line 95
-    move-object/from16 v8, p9
-
-    .line 97
-    invoke-direct {v1, v2, v7, v5, v8}, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindViewBinder$bind$$inlined$launch$default$1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSurfaceBehindViewModel;Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;)V
-
-    .line 99
-    invoke-static {v3, v4, v7, v1, v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 102
-    :cond_0
-    move-object/from16 v1, p13
-
-    .line 105
-    iput-object v1, v0, Lcom/android/systemui/keyguard/KeyguardService;->mWmOcclusionManager:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;
-
-    .line 107
     move-object/from16 v1, p17
 
-    .line 109
+    .line 35
     iput-object v1, v0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardEnabledInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardEnabledInteractor;
 
-    .line 111
+    .line 37
     return-void
-    .line 113
+    .line 39
 .end method
 
 
@@ -806,7 +704,7 @@
     sget-boolean v0, Lcom/android/wm/shell/transition/Transitions;->ENABLE_SHELL_TRANSITIONS:Z
 
     .line 15
-    if-nez v0, :cond_3
+    if-nez v0, :cond_1
 
     .line 17
     :cond_0
@@ -867,185 +765,124 @@
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 60
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
+    new-instance v9, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;
 
     .line 63
-    move-result v3
+    iget-object v3, v2, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mOccludeAnimationRunner:Lcom/android/systemui/keyguard/KeyguardViewMediator$OccludeActivityLaunchRemoteAnimationRunner;
 
-    .line 66
-    if-eqz v3, :cond_1
+    .line 65
+    invoke-direct {v9, v2, v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;-><init>(Lcom/android/systemui/keyguard/KeyguardViewMediator;Landroid/view/IRemoteAnimationRunner;)V
 
     .line 67
-    iget-object v3, v2, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mWmOcclusionManager:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;
-
-    .line 69
-    iget-object v3, v3, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;->occludeAnimationRunner:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$occludeAnimationRunner$1;
-
-    .line 71
-    new-instance v4, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;
-
-    .line 73
-    invoke-direct {v4, v2, v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;-><init>(Lcom/android/systemui/keyguard/KeyguardViewMediator;Landroid/view/IRemoteAnimationRunner;)V
-
-    .line 75
-    move-object v9, v4
-
-    .line 78
-    goto :goto_0
-
-    .line 79
-    :cond_1
-    new-instance v3, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;
-
-    .line 80
-    iget-object v4, v2, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mOccludeAnimationRunner:Lcom/android/systemui/keyguard/KeyguardViewMediator$OccludeActivityLaunchRemoteAnimationRunner;
-
-    .line 82
-    invoke-direct {v3, v2, v4}, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;-><init>(Lcom/android/systemui/keyguard/KeyguardViewMediator;Landroid/view/IRemoteAnimationRunner;)V
-
-    .line 84
-    move-object v9, v3
-
-    .line 87
-    :goto_0
     const-wide/16 v10, 0x0
 
-    .line 88
+    .line 70
     const-wide/16 v12, 0x0
 
-    .line 90
+    .line 72
     move-object v8, v1
 
-    .line 92
+    .line 74
     invoke-direct/range {v8 .. v13}, Landroid/view/RemoteAnimationAdapter;-><init>(Landroid/view/IRemoteAnimationRunner;JJ)V
 
-    .line 93
+    .line 75
     const/16 v2, 0x16
 
-    .line 96
+    .line 78
     invoke-virtual {v0, v2, v1}, Landroid/view/RemoteAnimationDefinition;->addRemoteAnimation(ILandroid/view/RemoteAnimationAdapter;)V
 
-    .line 98
+    .line 80
     new-instance v1, Landroid/view/RemoteAnimationAdapter;
 
-    .line 101
+    .line 83
     iget-object v2, p0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 103
+    .line 85
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 105
+    .line 87
     new-instance v4, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;
 
-    .line 108
+    .line 90
     iget-object v3, v2, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mOccludeByDreamAnimationRunner:Lcom/android/systemui/keyguard/KeyguardViewMediator$8;
 
-    .line 110
+    .line 92
     invoke-direct {v4, v2, v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;-><init>(Lcom/android/systemui/keyguard/KeyguardViewMediator;Landroid/view/IRemoteAnimationRunner;)V
 
-    .line 112
+    .line 94
     const-wide/16 v5, 0x0
 
-    .line 115
+    .line 97
     const-wide/16 v7, 0x0
 
-    .line 117
+    .line 99
     move-object v3, v1
 
-    .line 119
+    .line 101
     invoke-direct/range {v3 .. v8}, Landroid/view/RemoteAnimationAdapter;-><init>(Landroid/view/IRemoteAnimationRunner;JJ)V
 
-    .line 120
+    .line 102
     const/16 v2, 0x21
 
-    .line 123
+    .line 105
     invoke-virtual {v0, v2, v1}, Landroid/view/RemoteAnimationDefinition;->addRemoteAnimation(ILandroid/view/RemoteAnimationAdapter;)V
 
-    .line 125
+    .line 107
     new-instance v1, Landroid/view/RemoteAnimationAdapter;
 
-    .line 128
+    .line 110
     iget-object v2, p0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 130
+    .line 112
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 132
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 135
-    move-result v3
-
-    .line 138
-    if-eqz v3, :cond_2
-
-    .line 139
-    iget-object v3, v2, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mWmOcclusionManager:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;
-
-    .line 141
-    iget-object v3, v3, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;->unoccludeAnimationRunner:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;
-
-    .line 143
+    .line 114
     new-instance v4, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;
 
-    .line 145
+    .line 117
+    iget-object v3, v2, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mUnoccludeAnimationRunner:Lcom/android/systemui/keyguard/KeyguardViewMediator$9;
+
+    .line 119
     invoke-direct {v4, v2, v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;-><init>(Lcom/android/systemui/keyguard/KeyguardViewMediator;Landroid/view/IRemoteAnimationRunner;)V
 
-    .line 147
-    goto :goto_1
-
-    .line 150
-    :cond_2
-    new-instance v3, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;
-
-    .line 151
-    iget-object v4, v2, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mUnoccludeAnimationRunner:Lcom/android/systemui/keyguard/KeyguardViewMediator$9;
-
-    .line 153
-    invoke-direct {v3, v2, v4}, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;-><init>(Lcom/android/systemui/keyguard/KeyguardViewMediator;Landroid/view/IRemoteAnimationRunner;)V
-
-    .line 155
-    move-object v4, v3
-
-    .line 158
-    :goto_1
+    .line 121
     const-wide/16 v5, 0x0
 
-    .line 159
+    .line 124
     const-wide/16 v7, 0x0
 
-    .line 161
+    .line 126
     move-object v3, v1
 
-    .line 163
+    .line 128
     invoke-direct/range {v3 .. v8}, Landroid/view/RemoteAnimationAdapter;-><init>(Landroid/view/IRemoteAnimationRunner;JJ)V
 
-    .line 164
+    .line 129
     const/16 v2, 0x17
 
-    .line 167
+    .line 132
     invoke-virtual {v0, v2, v1}, Landroid/view/RemoteAnimationDefinition;->addRemoteAnimation(ILandroid/view/RemoteAnimationAdapter;)V
 
-    .line 169
+    .line 134
     invoke-static {}, Landroid/app/ActivityTaskManager;->getInstance()Landroid/app/ActivityTaskManager;
 
-    .line 172
+    .line 137
     move-result-object v1
 
-    .line 175
+    .line 140
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardService;->mDisplayTracker:Lcom/android/systemui/settings/DisplayTracker;
 
-    .line 176
+    .line 141
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 178
+    .line 143
     const/4 p0, 0x0
 
-    .line 181
+    .line 146
     invoke-virtual {v1, p0, v0}, Landroid/app/ActivityTaskManager;->registerRemoteAnimationsForDisplay(ILandroid/view/RemoteAnimationDefinition;)V
 
-    .line 182
-    :cond_3
+    .line 147
+    :cond_1
     return-void
-    .line 185
+    .line 150
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -56,152 +56,149 @@
     move-result-object p3
 
     .line 18
-    iput-object p3, p0, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;->_clockSize:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 19
     new-instance p4, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 21
+    .line 19
     invoke-direct {p4, p3}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
-    .line 23
+    .line 21
     iput-object p4, p0, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;->clockSize:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 26
+    .line 24
     const-string p3, "lockscreen_use_double_line_clock"
 
-    .line 28
+    .line 26
     filled-new-array {p3}, [Ljava/lang/String;
 
-    .line 30
+    .line 28
     move-result-object p3
 
-    .line 33
+    .line 31
     const/4 p4, 0x0
 
-    .line 34
+    .line 32
     invoke-static {p1, p4, p3}, Lcom/android/systemui/util/settings/SettingsProxyExt;->observerFlow(Lcom/android/systemui/util/settings/UserSettingsProxy;I[Ljava/lang/String;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 35
+    .line 33
     move-result-object p1
 
-    .line 38
+    .line 36
     new-instance p3, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$selectedClockSize$1;
 
-    .line 39
+    .line 37
     const/4 p4, 0x2
 
-    .line 41
+    .line 39
     const/4 p6, 0x0
 
-    .line 42
+    .line 40
     invoke-direct {p3, p4, p6}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 43
+    .line 41
     new-instance p4, Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;
 
-    .line 46
+    .line 44
     invoke-direct {p4, p3, p1}, Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;-><init>(Lkotlin/jvm/functions/Function2;Lkotlinx/coroutines/flow/Flow;)V
 
-    .line 48
+    .line 46
     new-instance p1, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$special$$inlined$map$1;
 
-    .line 51
+    .line 49
     const/4 p3, 0x0
 
-    .line 53
+    .line 51
     invoke-direct {p1, p4, p0, p3}, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;I)V
 
-    .line 54
+    .line 52
     const/4 p3, 0x3
 
-    .line 57
+    .line 55
     invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 58
+    .line 56
     move-result-object p4
 
-    .line 61
+    .line 59
     invoke-virtual {p0}, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;->getClockSize()Lcom/android/systemui/keyguard/shared/model/ClockSizeSetting;
 
-    .line 62
+    .line 60
     move-result-object p7
 
-    .line 65
+    .line 63
     invoke-static {p1, p5, p4, p7}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 66
+    .line 64
     move-result-object p1
 
-    .line 69
+    .line 67
     iput-object p1, p0, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;->selectedClockSize:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 70
+    .line 68
     new-instance p1, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$currentClockId$1;
 
-    .line 72
+    .line 70
     invoke-direct {p1, p0, p6}, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$currentClockId$1;-><init>(Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;Lkotlin/coroutines/Continuation;)V
 
-    .line 74
+    .line 72
     invoke-static {p1}, Lkotlinx/coroutines/flow/FlowKt;->callbackFlow(Lkotlin/jvm/functions/Function2;)Lkotlinx/coroutines/flow/CallbackFlowBuilder;
 
-    .line 77
+    .line 75
     move-result-object p1
 
-    .line 80
+    .line 78
     new-instance p4, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$special$$inlined$mapNotNull$1;
 
-    .line 81
+    .line 79
     invoke-direct {p4, p1}, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$special$$inlined$mapNotNull$1;-><init>(Lkotlinx/coroutines/flow/CallbackFlowBuilder;)V
 
-    .line 83
+    .line 81
     iput-object p4, p0, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;->currentClockId:Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$special$$inlined$mapNotNull$1;
 
-    .line 86
+    .line 84
     new-instance p1, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$special$$inlined$map$1;
 
-    .line 88
+    .line 86
     const/4 p6, 0x1
 
-    .line 90
+    .line 88
     invoke-direct {p1, p4, p0, p6}, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;I)V
 
-    .line 91
+    .line 89
     invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 94
+    .line 92
     move-result-object p3
 
-    .line 97
+    .line 95
     invoke-virtual {p2}, Lcom/android/systemui/shared/clocks/ClockRegistry;->createCurrentClock()Lcom/android/systemui/plugins/clocks/ClockController;
 
-    .line 98
+    .line 96
     move-result-object p2
 
-    .line 101
+    .line 99
     invoke-static {p1, p5, p3, p2}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 102
+    .line 100
     move-result-object p1
 
-    .line 105
+    .line 103
     iput-object p1, p0, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;->currentClock:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 106
+    .line 104
     new-instance p1, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$special$$inlined$map$1;
 
-    .line 108
+    .line 106
     const/4 p2, 0x2
 
-    .line 110
+    .line 108
     invoke-direct {p1, p4, p0, p2}, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;I)V
 
-    .line 111
+    .line 109
     iput-object p1, p0, Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl;->previewClock:Lcom/android/systemui/keyguard/data/repository/KeyguardClockRepositoryImpl$special$$inlined$map$1;
 
-    .line 114
+    .line 112
     return-void
-    .line 116
+    .line 114
 .end method
 
 

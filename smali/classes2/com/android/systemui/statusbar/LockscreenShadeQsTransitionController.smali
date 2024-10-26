@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/LockscreenShadeQsTransitionController;
 .super Lcom/android/systemui/statusbar/AbstractLockscreenShadeTransitionController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -181,7 +181,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f070495    # @dimen/lockscreen_shade_qs_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
+    const v1, 0x7f0704d1    # @dimen/lockscreen_shade_qs_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -202,7 +202,7 @@
     move-result-object v0
 
     .line 22
-    const v1, 0x7f070494    # @dimen/lockscreen_shade_qs_transition_delay '0.0dp'
+    const v1, 0x7f0704d0    # @dimen/lockscreen_shade_qs_transition_delay '0.0dp'
 
     .line 23
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -223,7 +223,7 @@
     move-result-object v0
 
     .line 37
-    const v1, 0x7f070493    # @dimen/lockscreen_shade_qs_squish_transition_distance '@dimen/lockscreen_shade_qs_transition_distance'
+    const v1, 0x7f0704cf    # @dimen/lockscreen_shade_qs_squish_transition_distance '@dimen/lockscreen_shade_qs_transition_distance'
 
     .line 38
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -244,7 +244,7 @@
     move-result-object v0
 
     .line 52
-    const v1, 0x7f070492    # @dimen/lockscreen_shade_qs_squish_start_fraction '0.5'
+    const v1, 0x7f0704ce    # @dimen/lockscreen_shade_qs_squish_start_fraction '0.5'
 
     .line 53
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F

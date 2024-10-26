@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/ambient/touch/InputSession$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/shared/system/InputChannelCompat$InputEventListener;
@@ -15,7 +15,7 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/ambient/touch/InputSession;Lcom/android/systemui/shared/system/InputChannelCompat$InputEventListener;Z)V
+.method public synthetic constructor <init>(Lcom/android/systemui/ambient/touch/InputSession;Lcom/android/systemui/ambient/touch/TouchMonitor$3;Z)V
     .locals 0
 
     .line 1
@@ -56,7 +56,7 @@
     instance-of v1, p1, Landroid/view/MotionEvent;
 
     .line 12
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_0
 
     .line 14
     iget-object v1, v0, Lcom/android/systemui/ambient/touch/InputSession;->mGestureDetector:Landroid/view/GestureDetector;
@@ -71,54 +71,25 @@
     move-result p1
 
     .line 23
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_0
 
     .line 24
     iget-boolean p0, p0, Lcom/android/systemui/ambient/touch/InputSession$$ExternalSyntheticLambda0;->f$2:Z
 
     .line 26
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_0
 
     .line 28
-    iget-boolean p0, v0, Lcom/android/systemui/ambient/touch/InputSession;->mPilfering:Z
-
-    .line 30
-    if-eqz p0, :cond_1
-
-    .line 32
-    sget-boolean p0, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 34
-    if-nez p0, :cond_0
-
-    .line 36
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 38
-    :cond_0
-    sget-boolean p0, Lcom/android/systemui/FeatureFlagsImpl;->dreamInputSessionPilferOnce:Z
-
-    .line 41
-    if-nez p0, :cond_2
-
-    .line 43
-    :cond_1
-    const/4 p0, 0x1
-
-    .line 45
-    iput-boolean p0, v0, Lcom/android/systemui/ambient/touch/InputSession;->mPilfering:Z
-
-    .line 46
     iget-object p0, v0, Lcom/android/systemui/ambient/touch/InputSession;->mInputMonitor:Lcom/android/systemui/shared/system/InputMonitorCompat;
 
-    .line 48
+    .line 30
     iget-object p0, p0, Lcom/android/systemui/shared/system/InputMonitorCompat;->mInputMonitor:Landroid/view/InputMonitor;
 
-    .line 50
+    .line 32
     invoke-virtual {p0}, Landroid/view/InputMonitor;->pilferPointers()V
 
-    .line 52
-    :cond_2
+    .line 34
+    :cond_0
     return-void
-    .line 55
+    .line 37
 .end method

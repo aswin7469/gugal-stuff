@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/SystemUIService;
 .super Landroid/app/Service;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -189,7 +189,7 @@
     move-result-object v0
 
     .line 57
-    const v1, 0x7f05003c    # @bool/config_showNotificationForUnknownBatteryState 'false'
+    const v1, 0x7f050047    # @bool/config_showNotificationForUnknownBatteryState 'false'
 
     .line 58
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -207,104 +207,101 @@
     iget-object v1, v0, Lcom/android/systemui/statusbar/policy/BatteryStateNotifier;->controller:Lcom/android/systemui/statusbar/policy/BatteryController;
 
     .line 69
-    check-cast v1, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
+    invoke-interface {v1, v0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
     .line 71
-    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->addCallback(Ljava/lang/Object;)V
-
-    .line 73
     :cond_0
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
-    .line 76
+    .line 74
     if-eqz v0, :cond_2
 
-    .line 78
+    .line 76
     const-string v1, "debug.crash_sysui"
 
-    .line 80
+    .line 78
     const/4 v2, 0x0
 
-    .line 82
+    .line 80
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    .line 83
+    .line 81
     move-result v1
 
-    .line 86
+    .line 84
     if-nez v1, :cond_1
 
-    .line 87
+    .line 85
     goto :goto_0
 
-    .line 89
+    .line 87
     :cond_1
     new-instance p0, Ljava/lang/RuntimeException;
 
-    .line 90
+    .line 88
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
-    .line 92
+    .line 90
     throw p0
 
-    .line 95
+    .line 93
     :cond_2
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 96
+    .line 94
     const/4 v0, 0x1
 
-    .line 98
+    .line 96
     invoke-static {v0}, Lcom/android/internal/os/BinderInternal;->nSetBinderProxyCountEnabled(Z)V
 
-    .line 99
+    .line 97
     const/16 v0, 0x3b6
 
-    .line 102
+    .line 100
     const/16 v1, 0x3e8
 
-    .line 104
+    .line 102
     const/16 v2, 0x384
 
-    .line 106
+    .line 104
     invoke-static {v1, v2, v0}, Lcom/android/internal/os/BinderInternal;->nSetBinderProxyCountWatermarks(III)V
 
-    .line 108
+    .line 106
     new-instance v0, Lcom/android/systemui/SystemUIService$1;
 
-    .line 111
+    .line 109
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 113
+    .line 111
     iget-object v1, p0, Lcom/android/systemui/SystemUIService;->mMainHandler:Landroid/os/Handler;
 
-    .line 116
+    .line 114
     invoke-static {v0, v1}, Lcom/android/internal/os/BinderInternal;->setBinderProxyCountCallback(Lcom/android/internal/os/BinderInternal$BinderProxyCountEventListener;Landroid/os/Handler;)V
 
-    .line 118
+    .line 116
     :cond_3
     new-instance v0, Landroid/content/Intent;
 
-    .line 121
+    .line 119
     invoke-virtual {p0}, Landroid/app/Service;->getApplicationContext()Landroid/content/Context;
 
-    .line 123
+    .line 121
     move-result-object v1
 
-    .line 126
+    .line 124
     const-class v2, Lcom/android/systemui/dump/SystemUIAuxiliaryDumpService;
 
-    .line 127
+    .line 125
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 129
+    .line 127
     sget-object v1, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
 
-    .line 132
+    .line 130
     invoke-virtual {p0, v0, v1}, Landroid/app/Service;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 134
+    .line 132
     return-void
-    .line 137
+    .line 135
 .end method

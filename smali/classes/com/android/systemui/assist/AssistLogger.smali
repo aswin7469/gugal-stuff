@@ -1,6 +1,6 @@
-.class public final Lcom/android/systemui/assist/AssistLogger;
+.class public abstract Lcom/android/systemui/assist/AssistLogger;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -602,12 +602,82 @@
     invoke-static/range {v15 .. v21}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIILjava/lang/String;IIZ)V
 
     .line 207
-    return-void
+    check-cast v0, Lcom/google/android/systemui/assist/GoogleAssistLogger;
 
     .line 210
-    nop
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
 
-    .line 211
+    .line 212
+    move-result-object v1
+
+    .line 215
+    const v2, 0x186cd
+
+    .line 216
+    invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 219
+    move-result-object v1
+
+    .line 222
+    iget-object v2, v0, Lcom/android/systemui/assist/AssistLogger;->currentInstanceId:Lcom/android/internal/logging/InstanceId;
+
+    .line 223
+    if-nez v2, :cond_9
+
+    .line 225
+    iget-object v2, v0, Lcom/android/systemui/assist/AssistLogger;->instanceIdSequence:Lcom/android/internal/logging/InstanceIdSequence;
+
+    .line 227
+    invoke-virtual {v2}, Lcom/android/internal/logging/InstanceIdSequence;->newInstanceId()Lcom/android/internal/logging/InstanceId;
+
+    .line 229
+    move-result-object v2
+
+    .line 232
+    :cond_9
+    iput-object v2, v0, Lcom/android/systemui/assist/AssistLogger;->currentInstanceId:Lcom/android/internal/logging/InstanceId;
+
+    .line 233
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    .line 235
+    invoke-virtual {v2}, Lcom/android/internal/logging/InstanceId;->getId()I
+
+    .line 238
+    move-result v2
+
+    .line 241
+    invoke-virtual {v1, v2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 242
+    move-result-object v1
+
+    .line 245
+    iget-object v0, v0, Lcom/google/android/systemui/assist/GoogleAssistLogger;->assistantPresenceHandler:Lcom/google/android/systemui/assist/uihints/AssistantPresenceHandler;
+
+    .line 246
+    iget-boolean v0, v0, Lcom/google/android/systemui/assist/uihints/AssistantPresenceHandler;->mNgaIsAssistant:Z
+
+    .line 248
+    invoke-virtual {v1, v0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 250
+    move-result-object v0
+
+    .line 253
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    .line 254
+    move-result-object v0
+
+    .line 257
+    invoke-static {v0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    .line 258
+    return-void
+
+    .line 261
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_9
@@ -622,7 +692,7 @@
         :pswitch_0
     .end packed-switch
 
-    .line 212
+    .line 262
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_f
@@ -633,7 +703,7 @@
         :pswitch_a
     .end packed-switch
 
-    .line 236
+    .line 286
     :pswitch_data_2
     .packed-switch 0x1
         :pswitch_19
@@ -647,7 +717,7 @@
         :pswitch_12
         :pswitch_11
     .end packed-switch
-    .line 252
+    .line 302
 .end method
 
 .method public final reportAssistantSessionEvent(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V

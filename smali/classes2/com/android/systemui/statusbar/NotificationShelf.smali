@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/NotificationShelf;
 .super Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -1294,7 +1294,7 @@
     invoke-super {p0}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b01fb    # @id/content
+    const v0, 0x7f0a0206    # @id/content
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1383,7 +1383,7 @@
     move-result-object p0
 
     .line 19
-    const v1, 0x7f1400b8    # @string/accessibility_overflow_action 'See all notifications'
+    const v1, 0x7f1300b9    # @string/accessibility_overflow_action 'See all notifications'
 
     .line 20
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -3214,7 +3214,7 @@
 
     .line 794
     :goto_23
-    const v6, 0x7f0b0206    # @id/continuous_clipping_tag
+    const v6, 0x7f0a0211    # @id/continuous_clipping_tag
 
     .line 795
     invoke-virtual {v2, v6}, Landroid/widget/ImageView;->getTag(I)Ljava/lang/Object;
@@ -3346,7 +3346,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->updateColors$1()V
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->updateColors$2()V
 
     .line 2
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ActivatableNotificationView;->mBackgroundNormal:Lcom/android/systemui/statusbar/notification/row/NotificationBackgroundView;
@@ -3425,6 +3425,7 @@
 
     .line 30
     return-void
+    .line 33
 .end method
 
 .method public final updateNotificationClipHeight(Lcom/android/systemui/statusbar/notification/row/ExpandableView;FI)I
@@ -3642,7 +3643,7 @@
     invoke-static {v1}, Lcom/android/internal/policy/SystemBarUtils;->getStatusBarHeight(Landroid/content/Context;)I
 
     .line 8
-    const v1, 0x7f0707e6    # @dimen/notification_divider_height '2.0dp'
+    const v1, 0x7f070829    # @dimen/notification_divider_height '2.0dp'
 
     .line 11
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3654,7 +3655,7 @@
     iput v1, p0, Lcom/android/systemui/statusbar/NotificationShelf;->mPaddingBetweenElements:I
 
     .line 18
-    const v1, 0x7f0c00a6    # @integer/max_notif_icons_on_lockscreen '3'
+    const v1, 0x7f0b00bb    # @integer/max_notif_icons_on_lockscreen '3'
 
     .line 20
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -3672,7 +3673,7 @@
     move-result-object v1
 
     .line 32
-    const v2, 0x7f070817    # @dimen/notification_shelf_height '48.0dp'
+    const v2, 0x7f07085a    # @dimen/notification_shelf_height '48.0dp'
 
     .line 33
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -3694,7 +3695,7 @@
 
     .line 46
     :cond_0
-    const v1, 0x7f070982    # @dimen/shelf_icon_container_padding '13.0dp'
+    const v1, 0x7f0709d9    # @dimen/shelf_icon_container_padding '13.0dp'
 
     .line 49
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -3712,7 +3713,7 @@
     invoke-virtual {v2, v1, v3, v1, v3}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     .line 59
-    const v1, 0x7f070956    # @dimen/scroll_fast_threshold '1500.0dp'
+    const v1, 0x7f0709a8    # @dimen/scroll_fast_threshold '1500.0dp'
 
     .line 62
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -3724,7 +3725,7 @@
     iput v1, p0, Lcom/android/systemui/statusbar/NotificationShelf;->mScrollFastThreshold:I
 
     .line 69
-    const v1, 0x7f05003f    # @bool/config_showNotificationShelf 'true'
+    const v1, 0x7f05004a    # @bool/config_showNotificationShelf 'true'
 
     .line 71
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -3736,7 +3737,7 @@
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/NotificationShelf;->mShowNotificationShelf:Z
 
     .line 78
-    const v1, 0x7f0707e2    # @dimen/notification_corner_animation_distance '48.0dp'
+    const v1, 0x7f070825    # @dimen/notification_corner_animation_distance '48.0dp'
 
     .line 80
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3751,7 +3752,7 @@
     iput v1, p0, Lcom/android/systemui/statusbar/NotificationShelf;->mCornerAnimationDistance:F
 
     .line 88
-    const v1, 0x7f050070    # @bool/notification_enable_clipping 'true'
+    const v1, 0x7f05007e    # @bool/notification_enable_clipping 'true'
 
     .line 90
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z

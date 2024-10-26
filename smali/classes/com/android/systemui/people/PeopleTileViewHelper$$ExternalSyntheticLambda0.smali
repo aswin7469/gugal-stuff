@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/Function;
@@ -121,7 +121,7 @@
     iput p1, v3, Lcom/android/systemui/people/PeopleTileViewHelper;->mHeight:I
 
     .line 49
-    const p0, 0x7f070920    # @dimen/required_height_for_large '168.0dp'
+    const p0, 0x7f070970    # @dimen/required_height_for_large '168.0dp'
 
     .line 51
     invoke-virtual {v3, p0}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -142,7 +142,7 @@
     if-lt p1, p0, :cond_0
 
     .line 61
-    const p0, 0x7f070922    # @dimen/required_width_for_large '120.0dp'
+    const p0, 0x7f070972    # @dimen/required_width_for_large '120.0dp'
 
     .line 63
     invoke-virtual {v3, p0}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -158,7 +158,7 @@
 
     .line 72
     :cond_0
-    const p0, 0x7f070921    # @dimen/required_height_for_medium '80.0dp'
+    const p0, 0x7f070971    # @dimen/required_height_for_medium '80.0dp'
 
     .line 73
     invoke-virtual {v3, p0}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -170,7 +170,7 @@
     if-lt p1, p0, :cond_1
 
     .line 80
-    const p0, 0x7f070923    # @dimen/required_width_for_medium '136.0dp'
+    const p0, 0x7f070973    # @dimen/required_width_for_medium '136.0dp'
 
     .line 82
     invoke-virtual {v3, p0}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -182,7 +182,7 @@
     if-lt v4, p0, :cond_1
 
     .line 89
-    const p0, 0x7f0700a1    # @dimen/avatar_size_for_medium '52.0dp'
+    const p0, 0x7f0700a7    # @dimen/avatar_size_for_medium '52.0dp'
 
     .line 91
     invoke-virtual {v3, p0}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -197,7 +197,7 @@
     add-int/2addr p0, v4
 
     .line 99
-    const v5, 0x7f070786    # @dimen/name_text_size_for_medium_content '12.0sp'
+    const v5, 0x7f0707c8    # @dimen/name_text_size_for_medium_content '12.0sp'
 
     .line 100
     invoke-virtual {v3, v5}, Lcom/android/systemui/people/PeopleTileViewHelper;->getLineHeightFromResource(I)I

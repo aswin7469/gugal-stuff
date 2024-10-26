@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/people/ui/compose/ComposableSingletons$PeopleScreenEmptyKt$lambda-2$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -353,7 +353,7 @@
     invoke-static {v15, v11, v2}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
     .line 202
-    const v0, 0x7f0806e2    # @drawable/ic_avatar_with_badge 'res/drawable/ic_avatar_with_badge.xml'
+    const v0, 0x7f0806f3    # @drawable/ic_avatar_with_badge 'res/drawable/ic_avatar_with_badge.xml'
 
     .line 205
     const/4 v1, 0x0
@@ -416,7 +416,7 @@
     invoke-static {v15, v0}, Landroidx/compose/foundation/layout/SpacerKt;->Spacer(Landroidx/compose/runtime/Composer;Landroidx/compose/ui/Modifier;)V
 
     .line 238
-    const v0, 0x7f140370    # @string/empty_user_name 'Friends'
+    const v0, 0x7f1303a8    # @string/empty_user_name 'Friends'
 
     .line 241
     invoke-static {v0, v15}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -566,7 +566,7 @@
     invoke-static {v13, v1}, Landroidx/compose/foundation/layout/SpacerKt;->Spacer(Landroidx/compose/runtime/Composer;Landroidx/compose/ui/Modifier;)V
 
     .line 336
-    const v1, 0x7f14036f    # @string/empty_status 'Let’s chat tonight!'
+    const v1, 0x7f1303a7    # @string/empty_status 'Let’s chat tonight!'
 
     .line 339
     invoke-static {v1, v13}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;

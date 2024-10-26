@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/back/domain/interactor/BackActionInteractor$start$1$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -68,7 +68,7 @@
     check-cast p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
 
     .line 21
-    iget-object p1, p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
+    iget-object p1, p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
     .line 23
     if-eqz p1, :cond_1
@@ -93,7 +93,7 @@
     if-eqz p2, :cond_5
 
     .line 37
-    iget-object p1, p0, Lcom/android/systemui/back/domain/interactor/BackActionInteractor;->callback:Landroid/window/OnBackInvokedCallback;
+    iget-object p1, p0, Lcom/android/systemui/back/domain/interactor/BackActionInteractor;->callback:Lcom/android/systemui/back/domain/interactor/BackActionInteractor$callback$2;
 
     .line 39
     invoke-virtual {p2, v0, p1}, Landroid/window/WindowOnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
@@ -125,7 +125,7 @@
     check-cast p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
 
     .line 55
-    iget-object p1, p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
+    iget-object p1, p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
     .line 57
     if-eqz p1, :cond_4
@@ -150,7 +150,7 @@
     if-eqz p2, :cond_5
 
     .line 71
-    iget-object p1, p0, Lcom/android/systemui/back/domain/interactor/BackActionInteractor;->callback:Landroid/window/OnBackInvokedCallback;
+    iget-object p1, p0, Lcom/android/systemui/back/domain/interactor/BackActionInteractor;->callback:Lcom/android/systemui/back/domain/interactor/BackActionInteractor$callback$2;
 
     .line 73
     invoke-virtual {p2, p1}, Landroid/window/WindowOnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V

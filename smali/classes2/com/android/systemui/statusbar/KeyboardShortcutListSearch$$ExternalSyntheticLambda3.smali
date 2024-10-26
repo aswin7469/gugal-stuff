@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -77,7 +77,7 @@
     move-result-object v0
 
     .line 26
-    const v2, 0x7f07036b    # @dimen/ksh_icon_scaled_size '18.0dp'
+    const v2, 0x7f0703a7    # @dimen/ksh_icon_scaled_size '18.0dp'
 
     .line 27
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -186,7 +186,7 @@
     check-cast p0, Ljava/util/List;
 
     .line 89
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_1
 
     .line 91
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -250,138 +250,112 @@
     iput-object v2, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mCurrentAppPackageName:Ljava/lang/CharSequence;
 
     .line 129
-    invoke-static {}, Lcom/android/systemui/Flags;->validateKeyboardShortcutHelperIconUri()Z
-
-    .line 131
-    move-result v2
-
-    .line 134
-    if-eqz v2, :cond_1
-
-    .line 135
-    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyboardShortcuts;->sanitiseShortcuts(Ljava/util/List;)V
-
-    .line 137
-    :cond_1
     iget-object v2, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mSpecificAppGroup:Ljava/util/List;
 
-    .line 140
+    .line 131
     invoke-static {p0}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->reMapToKeyboardShortcutMultiMappingGroup(Ljava/util/List;)Ljava/util/List;
 
-    .line 142
+    .line 133
     move-result-object p0
 
-    .line 145
+    .line 136
     invoke-interface {v2, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 146
+    .line 137
     iget-object p0, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mKeySearchResultMap:Ljava/util/Map;
 
-    .line 149
+    .line 140
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 151
+    .line 142
     move-result-object v2
 
-    .line 154
+    .line 145
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 155
+    .line 146
     invoke-interface {p0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 157
-    :cond_2
+    .line 148
+    :cond_1
     :goto_0
     iput-boolean v0, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mAppShortcutsReceived:Z
 
-    .line 160
+    .line 151
     iget-boolean p0, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mImeShortcutsReceived:Z
 
-    .line 162
-    if-eqz p0, :cond_3
+    .line 153
+    if-eqz p0, :cond_2
 
-    .line 164
+    .line 155
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mergeAndShowKeyboardShortcutsGroups()V
 
-    .line 166
-    :cond_3
+    .line 157
+    :cond_2
     return-void
 
-    .line 169
+    .line 160
     :pswitch_1
     iget-object v1, p0, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticLambda3;->f$0:Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;
 
-    .line 170
+    .line 161
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticLambda3;->f$1:Ljava/lang/Object;
 
-    .line 172
+    .line 163
     check-cast p0, Ljava/util/List;
 
-    .line 174
-    if-eqz p0, :cond_5
+    .line 165
+    if-eqz p0, :cond_3
 
-    .line 176
+    .line 167
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 178
+    .line 169
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
-    .line 181
+    .line 172
     move-result v2
+
+    .line 175
+    if-nez v2, :cond_3
+
+    .line 176
+    iget-object v2, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mInputGroup:Ljava/util/List;
+
+    .line 178
+    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->reMapToKeyboardShortcutMultiMappingGroup(Ljava/util/List;)Ljava/util/List;
+
+    .line 180
+    move-result-object p0
+
+    .line 183
+    invoke-interface {v2, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 184
-    if-nez v2, :cond_5
-
-    .line 185
-    invoke-static {}, Lcom/android/systemui/Flags;->validateKeyboardShortcutHelperIconUri()Z
+    :cond_3
+    iput-boolean v0, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mImeShortcutsReceived:Z
 
     .line 187
-    move-result v2
+    iget-boolean p0, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mAppShortcutsReceived:Z
 
-    .line 190
-    if-eqz v2, :cond_4
+    .line 189
+    if-eqz p0, :cond_4
 
     .line 191
-    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyboardShortcuts;->sanitiseShortcuts(Ljava/util/List;)V
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mergeAndShowKeyboardShortcutsGroups()V
 
     .line 193
     :cond_4
-    iget-object v2, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mInputGroup:Ljava/util/List;
-
-    .line 196
-    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->reMapToKeyboardShortcutMultiMappingGroup(Ljava/util/List;)Ljava/util/List;
-
-    .line 198
-    move-result-object p0
-
-    .line 201
-    invoke-interface {v2, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    .line 202
-    :cond_5
-    iput-boolean v0, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mImeShortcutsReceived:Z
-
-    .line 205
-    iget-boolean p0, v1, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mAppShortcutsReceived:Z
-
-    .line 207
-    if-eqz p0, :cond_6
-
-    .line 209
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mergeAndShowKeyboardShortcutsGroups()V
-
-    .line 211
-    :cond_6
     return-void
 
-    .line 214
+    .line 196
     nop
 
-    .line 215
+    .line 197
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 216
+    .line 198
 .end method

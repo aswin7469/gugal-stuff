@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/split/SplitDecorManager;
 .super Landroid/view/WindowlessWindowManager;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -380,7 +380,7 @@
     move-result-object p2
 
     .line 40
-    const v0, 0x7f0709a7    # @dimen/split_icon_size '72.0dp'
+    const v0, 0x7f0709ff    # @dimen/split_icon_size '72.0dp'
 
     .line 41
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -398,7 +398,7 @@
     move-result-object p1
 
     .line 53
-    const p2, 0x7f0e0276    # @layout/split_decor 'res/layout/split_decor.xml'
+    const p2, 0x7f0d0287    # @layout/split_decor 'res/layout/split_decor.xml'
 
     .line 54
     invoke-virtual {p1, p2, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -410,7 +410,7 @@
     check-cast p1, Landroid/widget/FrameLayout;
 
     .line 61
-    const p2, 0x7f0b074b    # @id/split_resizing_icon
+    const p2, 0x7f0a0777    # @id/split_resizing_icon
 
     .line 63
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/ui/binder/PromptIconViewBinder$bind$1$1$2$4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -123,7 +123,7 @@
 
     .line 51
     :cond_0
-    const v2, 0x7f130015    # @raw/face_dialog_authenticating 'res/raw/face_dialog_authenticating.json'
+    const v2, 0x7f120016    # @raw/face_dialog_authenticating 'res/raw/face_dialog_authenticating.json'
 
     .line 52
     if-ne p2, v2, :cond_1
@@ -164,7 +164,7 @@
 
     .line 82
     :cond_2
-    const v2, 0x7f08069f    # @drawable/face_dialog_dark_to_error 'res/drawable/face_dialog_dark_to_error.xml'
+    const v2, 0x7f0806a9    # @drawable/face_dialog_dark_to_error 'res/drawable/face_dialog_dark_to_error.xml'
 
     .line 83
     if-ne p2, v2, :cond_3

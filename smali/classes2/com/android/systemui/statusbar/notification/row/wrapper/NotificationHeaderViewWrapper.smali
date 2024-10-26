@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;
 .super Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/Roundable;
@@ -91,7 +91,7 @@
     move-result-object p1
 
     .line 12
-    const v1, 0x7f0707e3    # @dimen/notification_corner_radius '28.0dp'
+    const v1, 0x7f070826    # @dimen/notification_corner_radius '28.0dp'
 
     .line 13
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -139,7 +139,7 @@
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->resolveHeaderViews()V
 
     .line 47
-    iget-object p1, p3, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mOnFeedbackClickListener:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$$ExternalSyntheticLambda4;
+    iget-object p1, p3, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mOnFeedbackClickListener:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$$ExternalSyntheticLambda3;
 
     .line 50
     iget-object p2, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;->mNotificationTopLine:Landroid/view/NotificationTopLineView;
@@ -471,7 +471,7 @@
 
     .line 59
     :goto_1
-    const v7, 0x7f0b01fa    # @id/contains_transformed_view
+    const v7, 0x7f0a0205    # @id/contains_transformed_view
 
     .line 60
     if-ge v6, v5, :cond_2
@@ -757,7 +757,7 @@
     move-result v4
 
     .line 240
-    const v5, 0x7f0b038f    # @id/image_icon_tag
+    const v5, 0x7f0a03af    # @id/image_icon_tag
 
     .line 241
     if-eqz v4, :cond_9

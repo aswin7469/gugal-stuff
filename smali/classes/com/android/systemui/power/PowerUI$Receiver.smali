@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/power/PowerUI$Receiver;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -66,7 +66,7 @@
     invoke-static {p1}, Lcom/android/settingslib/utils/ThreadUtils;->postOnBackgroundThread(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     .line 20
-    goto/16 :goto_4
+    goto/16 :goto_3
 
     .line 23
     :cond_0
@@ -82,7 +82,7 @@
     const-string v0, "PowerUI"
 
     .line 31
-    if-eqz p1, :cond_c
+    if-eqz p1, :cond_7
 
     .line 33
     const/4 p1, 0x1
@@ -118,599 +118,515 @@
     iget v3, v1, Lcom/android/systemui/power/PowerUI;->mBatteryStatus:I
 
     .line 54
-    const-string v4, "status"
+    const-string/jumbo v4, "status"
 
     .line 56
     invoke-virtual {p2, v4, p1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    .line 58
+    .line 59
     move-result v4
 
-    .line 61
+    .line 62
     iput v4, v1, Lcom/android/systemui/power/PowerUI;->mBatteryStatus:I
 
-    .line 62
+    .line 63
     iget-object v1, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 64
+    .line 65
     iget v4, v1, Lcom/android/systemui/power/PowerUI;->mPlugType:I
 
-    .line 66
+    .line 67
     const-string v5, "plugged"
 
-    .line 68
+    .line 69
     invoke-virtual {p2, v5, p1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    .line 70
+    .line 71
     move-result v5
 
-    .line 73
+    .line 74
     iput v5, v1, Lcom/android/systemui/power/PowerUI;->mPlugType:I
 
-    .line 74
+    .line 75
     iget-object v1, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 76
+    .line 77
     iget v5, v1, Lcom/android/systemui/power/PowerUI;->mInvalidCharger:I
 
-    .line 78
+    .line 79
     const-string v6, "invalid_charger"
 
-    .line 80
+    .line 81
     const/4 v7, 0x0
 
-    .line 82
+    .line 83
     invoke-virtual {p2, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    .line 83
+    .line 84
     move-result p2
 
-    .line 86
+    .line 87
     iput p2, v1, Lcom/android/systemui/power/PowerUI;->mInvalidCharger:I
 
-    .line 87
+    .line 88
     iget-object p2, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 89
+    .line 90
     iget-object v1, p2, Lcom/android/systemui/power/PowerUI;->mCurrentBatteryStateSnapshot:Lcom/android/systemui/power/BatteryStateSnapshot;
 
-    .line 91
+    .line 92
     iput-object v1, p2, Lcom/android/systemui/power/PowerUI;->mLastBatteryStateSnapshot:Lcom/android/systemui/power/BatteryStateSnapshot;
 
-    .line 93
+    .line 94
     iget v1, p2, Lcom/android/systemui/power/PowerUI;->mPlugType:I
 
-    .line 95
+    .line 96
     if-eqz v1, :cond_1
 
-    .line 97
+    .line 98
     move v1, p1
 
-    .line 99
+    .line 100
     goto :goto_0
 
-    .line 100
+    .line 101
     :cond_1
     move v1, v7
 
-    .line 101
+    .line 102
     :goto_0
     if-eqz v4, :cond_2
 
-    .line 102
+    .line 103
     move v6, p1
 
-    .line 104
+    .line 105
     goto :goto_1
 
-    .line 105
+    .line 106
     :cond_2
     move v6, v7
 
-    .line 106
+    .line 107
     :goto_1
     invoke-virtual {p2, v2}, Lcom/android/systemui/power/PowerUI;->findBatteryLevelBucket(I)I
 
-    .line 107
+    .line 108
     move-result p2
 
-    .line 110
+    .line 111
     iget-object v8, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 111
+    .line 112
     iget v9, v8, Lcom/android/systemui/power/PowerUI;->mBatteryLevel:I
 
-    .line 113
+    .line 114
     invoke-virtual {v8, v9}, Lcom/android/systemui/power/PowerUI;->findBatteryLevelBucket(I)I
 
-    .line 115
+    .line 116
     move-result v8
 
-    .line 118
+    .line 119
     sget-boolean v9, Lcom/android/systemui/power/PowerUI;->DEBUG:Z
 
-    .line 119
+    .line 120
     if-eqz v9, :cond_3
 
-    .line 121
+    .line 122
     new-instance v10, Ljava/lang/StringBuilder;
 
-    .line 123
+    .line 124
     const-string v11, "buckets   ....."
 
-    .line 125
+    .line 126
     invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 127
+    .line 128
     iget-object v11, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 130
+    .line 131
     iget v11, v11, Lcom/android/systemui/power/PowerUI;->mLowBatteryAlertCloseLevel:I
 
-    .line 132
+    .line 133
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 134
+    .line 135
     const-string v11, " .. "
 
-    .line 137
+    .line 138
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 139
+    .line 140
     iget-object v12, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 142
+    .line 143
     iget-object v12, v12, Lcom/android/systemui/power/PowerUI;->mLowBatteryReminderLevels:[I
 
-    .line 144
-    aget v12, v12, v7
+    .line 145
+    aget v7, v12, v7
 
-    .line 146
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 147
+    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 148
+    .line 149
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 151
-    iget-object v11, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
+    .line 152
+    iget-object v7, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 154
-    iget-object v11, v11, Lcom/android/systemui/power/PowerUI;->mLowBatteryReminderLevels:[I
+    .line 155
+    iget-object v7, v7, Lcom/android/systemui/power/PowerUI;->mLowBatteryReminderLevels:[I
 
-    .line 156
-    aget v11, v11, p1
+    .line 157
+    aget v7, v7, p1
 
-    .line 158
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 159
+    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 160
+    .line 161
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 163
-    move-result-object v10
-
-    .line 166
-    invoke-static {v0, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 164
+    move-result-object v7
 
     .line 167
-    new-instance v10, Ljava/lang/StringBuilder;
+    invoke-static {v0, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
-    const-string v11, "level          "
+    .line 168
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    .line 172
-    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 171
+    const-string v10, "level          "
 
-    .line 174
-    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 173
+    invoke-direct {v7, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 177
+    .line 175
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 178
     const-string v2, " --> "
 
-    .line 180
-    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 181
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 182
-    iget-object v11, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
+    .line 183
+    iget-object v10, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 185
-    iget v11, v11, Lcom/android/systemui/power/PowerUI;->mBatteryLevel:I
+    .line 186
+    iget v10, v10, Lcom/android/systemui/power/PowerUI;->mBatteryLevel:I
 
-    .line 187
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 188
+    invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 189
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 190
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 192
-    move-result-object v10
-
-    .line 195
-    invoke-static {v0, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 193
+    move-result-object v7
 
     .line 196
-    new-instance v10, Ljava/lang/StringBuilder;
+    invoke-static {v0, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
-    const-string v11, "status         "
+    .line 197
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    .line 201
-    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 200
+    const-string/jumbo v10, "status         "
 
-    .line 203
-    invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 202
+    invoke-direct {v7, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 206
-    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 205
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 209
+    .line 208
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 211
     iget-object v3, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 212
+    .line 214
     iget v3, v3, Lcom/android/systemui/power/PowerUI;->mBatteryStatus:I
 
-    .line 214
-    invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
     .line 216
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 219
+    .line 218
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 221
     move-result-object v3
 
-    .line 222
+    .line 224
     invoke-static {v0, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
+    .line 225
     new-instance v3, Ljava/lang/StringBuilder;
-
-    .line 226
-    const-string v10, "plugType       "
 
     .line 228
-    invoke-direct {v3, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v7, "plugType       "
 
     .line 230
+    invoke-direct {v3, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 232
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 233
+    .line 235
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 236
+    .line 238
     iget-object v4, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
-
-    .line 239
-    iget v4, v4, Lcom/android/systemui/power/PowerUI;->mPlugType:I
 
     .line 241
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v4, v4, Lcom/android/systemui/power/PowerUI;->mPlugType:I
 
     .line 243
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 246
-    move-result-object v3
-
-    .line 249
-    invoke-static {v0, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 250
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    .line 253
-    const-string v4, "invalidCharger "
-
-    .line 255
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 257
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 260
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 263
-    iget-object v4, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
-
-    .line 266
-    iget v4, v4, Lcom/android/systemui/power/PowerUI;->mInvalidCharger:I
-
-    .line 268
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 270
+    .line 245
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 273
+    .line 248
     move-result-object v3
 
-    .line 276
+    .line 251
     invoke-static {v0, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
+    .line 252
     new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 280
-    const-string v4, "bucket         "
+    .line 255
+    const-string v4, "invalidCharger "
 
-    .line 282
+    .line 257
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 284
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 259
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 287
+    .line 262
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 290
-    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 265
+    iget-object v4, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 293
+    .line 268
+    iget v4, v4, Lcom/android/systemui/power/PowerUI;->mInvalidCharger:I
+
+    .line 270
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 272
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 296
+    .line 275
+    move-result-object v3
+
+    .line 278
+    invoke-static {v0, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 279
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    .line 282
+    const-string v4, "bucket         "
+
+    .line 284
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 286
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 289
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 292
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 295
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 298
     move-result-object p2
 
-    .line 299
+    .line 301
     invoke-static {v0, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
+    .line 302
     new-instance p2, Ljava/lang/StringBuilder;
 
-    .line 303
+    .line 305
     const-string v3, "plugged        "
 
-    .line 305
+    .line 307
     invoke-direct {p2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 307
+    .line 309
     invoke-virtual {p2, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 310
+    .line 312
     invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 313
+    .line 315
     invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 316
+    .line 318
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 319
+    .line 321
     move-result-object p2
 
-    .line 322
+    .line 324
     invoke-static {v0, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 323
+    .line 325
     :cond_3
     iget-object p2, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 326
+    .line 328
     iget-object v2, p2, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
 
-    .line 328
+    .line 330
     iget v3, p2, Lcom/android/systemui/power/PowerUI;->mBatteryLevel:I
 
-    .line 330
-    iget-wide v10, p2, Lcom/android/systemui/power/PowerUI;->mScreenOffTime:J
-
     .line 332
-    check-cast v2, Lcom/android/systemui/power/PowerNotificationWarnings;
+    iget-wide v3, p2, Lcom/android/systemui/power/PowerUI;->mScreenOffTime:J
 
     .line 334
-    iput v3, v2, Lcom/android/systemui/power/PowerNotificationWarnings;->mBatteryLevel:I
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 336
-    if-ltz v8, :cond_4
+    if-nez v5, :cond_4
 
-    .line 338
-    const-wide/16 v3, 0x0
-
-    .line 340
-    iput-wide v3, v2, Lcom/android/systemui/power/PowerNotificationWarnings;->mWarningTriggerTimeMs:J
-
-    .line 342
-    goto :goto_2
-
-    .line 344
-    :cond_4
-    iget p2, v2, Lcom/android/systemui/power/PowerNotificationWarnings;->mBucket:I
-
-    .line 345
-    if-ge v8, p2, :cond_5
-
-    .line 347
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    .line 349
-    move-result-wide v3
-
-    .line 352
-    iput-wide v3, v2, Lcom/android/systemui/power/PowerNotificationWarnings;->mWarningTriggerTimeMs:J
-
-    .line 353
-    :cond_5
-    :goto_2
-    iput v8, v2, Lcom/android/systemui/power/PowerNotificationWarnings;->mBucket:I
-
-    .line 355
-    if-nez v5, :cond_6
-
-    .line 357
+    .line 339
     iget-object p2, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 359
+    .line 341
     iget p2, p2, Lcom/android/systemui/power/PowerUI;->mInvalidCharger:I
 
-    .line 361
-    if-eqz p2, :cond_6
+    .line 343
+    if-eqz p2, :cond_4
 
-    .line 363
-    const-string p2, "showing invalid charger warning"
+    .line 345
+    const-string p1, "showing invalid charger warning"
 
-    .line 365
-    invoke-static {v0, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 347
+    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
+    .line 349
     iget-object p0, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 370
+    .line 352
     iget-object p0, p0, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
 
-    .line 372
-    check-cast p0, Lcom/android/systemui/power/PowerNotificationWarnings;
+    .line 354
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 374
-    iput-boolean p1, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mInvalidCharger:Z
-
-    .line 376
-    invoke-virtual {p0}, Lcom/android/systemui/power/PowerNotificationWarnings;->updateNotification()V
-
-    .line 378
+    .line 356
     return-void
 
-    .line 381
-    :cond_6
-    if-eqz v5, :cond_8
+    .line 359
+    :cond_4
+    if-eqz v5, :cond_5
 
-    .line 382
+    .line 360
     iget-object p2, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 384
+    .line 362
     iget v2, p2, Lcom/android/systemui/power/PowerUI;->mInvalidCharger:I
 
-    .line 386
-    if-nez v2, :cond_8
+    .line 364
+    if-nez v2, :cond_5
 
-    .line 388
+    .line 366
     iget-object p2, p2, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
 
+    .line 368
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 370
+    goto :goto_2
+
+    .line 373
+    :cond_5
+    iget-object p2, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
+
+    .line 374
+    iget-object p2, p2, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
+
+    .line 376
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 378
+    :goto_2
+    iget-object p2, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
+
+    .line 381
+    iget-object p2, p2, Lcom/android/systemui/power/PowerUI;->mLastShowWarningTask:Ljava/util/concurrent/Future;
+
+    .line 383
+    if-eqz p2, :cond_6
+
+    .line 385
+    invoke-interface {p2, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    .line 387
+    if-eqz v9, :cond_6
+
     .line 390
-    check-cast p2, Lcom/android/systemui/power/PowerNotificationWarnings;
+    const-string p1, "cancelled task"
 
     .line 392
-    iget-boolean v2, p2, Lcom/android/systemui/power/PowerNotificationWarnings;->mInvalidCharger:Z
+    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 394
-    if-eqz v2, :cond_7
+    :cond_6
+    iget-object p1, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
 
-    .line 396
-    const-string v2, "PowerUI.Notification"
+    .line 397
+    new-instance p2, Lcom/android/systemui/power/PowerUI$Receiver$$ExternalSyntheticLambda1;
 
-    .line 398
-    const-string v3, "dismissing invalid charger notification"
+    .line 399
+    invoke-direct {p2, p0, v1, v8}, Lcom/android/systemui/power/PowerUI$Receiver$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/power/PowerUI$Receiver;ZI)V
 
-    .line 400
-    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    .line 401
+    invoke-static {p2}, Lcom/android/settingslib/utils/ThreadUtils;->postOnBackgroundThread(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    .line 402
-    :cond_7
-    iput-boolean v7, p2, Lcom/android/systemui/power/PowerNotificationWarnings;->mInvalidCharger:Z
-
-    .line 405
-    invoke-virtual {p2}, Lcom/android/systemui/power/PowerNotificationWarnings;->updateNotification()V
+    .line 404
+    move-result-object p0
 
     .line 407
+    iput-object p0, p1, Lcom/android/systemui/power/PowerUI;->mLastShowWarningTask:Ljava/util/concurrent/Future;
+
+    .line 408
     goto :goto_3
 
     .line 410
-    :cond_8
-    iget-object p2, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
-
-    .line 411
-    iget-object p2, p2, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
-
-    .line 413
-    check-cast p2, Lcom/android/systemui/power/PowerNotificationWarnings;
-
-    .line 415
-    iget-boolean p2, p2, Lcom/android/systemui/power/PowerNotificationWarnings;->mInvalidCharger:Z
-
-    .line 417
-    if-eqz p2, :cond_a
-
-    .line 419
-    if-eqz v9, :cond_9
-
-    .line 421
-    const-string p0, "Bad Charger"
-
-    .line 423
-    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 425
-    :cond_9
-    return-void
-
-    .line 428
-    :cond_a
-    :goto_3
-    iget-object p2, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
-
-    .line 429
-    iget-object p2, p2, Lcom/android/systemui/power/PowerUI;->mLastShowWarningTask:Ljava/util/concurrent/Future;
-
-    .line 431
-    if-eqz p2, :cond_b
-
-    .line 433
-    invoke-interface {p2, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    .line 435
-    if-eqz v9, :cond_b
-
-    .line 438
-    const-string p1, "cancelled task"
-
-    .line 440
-    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 442
-    :cond_b
-    iget-object p1, p0, Lcom/android/systemui/power/PowerUI$Receiver;->this$0:Lcom/android/systemui/power/PowerUI;
-
-    .line 445
-    new-instance p2, Lcom/android/systemui/power/PowerUI$Receiver$$ExternalSyntheticLambda1;
-
-    .line 447
-    invoke-direct {p2, p0, v1, v8}, Lcom/android/systemui/power/PowerUI$Receiver$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/power/PowerUI$Receiver;ZI)V
-
-    .line 449
-    invoke-static {p2}, Lcom/android/settingslib/utils/ThreadUtils;->postOnBackgroundThread(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
-
-    .line 452
-    move-result-object p0
-
-    .line 455
-    iput-object p0, p1, Lcom/android/systemui/power/PowerUI;->mLastShowWarningTask:Ljava/util/concurrent/Future;
-
-    .line 456
-    goto :goto_4
-
-    .line 458
-    :cond_c
+    :cond_7
     new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 459
+    .line 411
     const-string/jumbo p1, "unknown intent: "
 
-    .line 461
+    .line 413
     invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 464
+    .line 416
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 467
+    .line 419
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 470
+    .line 422
     move-result-object p0
 
-    .line 473
+    .line 425
     invoke-static {v0, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 474
-    :goto_4
+    .line 426
+    :goto_3
     return-void
-    .line 477
+    .line 429
 .end method

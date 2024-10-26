@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/ui/controller/MediaViewController$configurationListener$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
@@ -115,7 +115,7 @@
     move-result-object p0
 
     .line 49
-    const p1, 0x7f0708f7    # @dimen/qs_media_session_height_expanded '184.0dp'
+    const p1, 0x7f070947    # @dimen/qs_media_session_height_expanded '184.0dp'
 
     .line 50
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -134,22 +134,19 @@
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 62
-    invoke-static {}, Lcom/android/systemui/media/controls/util/MediaFlags;->isSceneContainerEnabled()V
-
-    .line 65
     iget-object p0, v0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->configurationChangeListener:Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda2;
 
-    .line 68
+    .line 65
     if-eqz p0, :cond_3
 
-    .line 70
+    .line 67
     invoke-virtual {p0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda2;->invoke()Ljava/lang/Object;
 
-    .line 72
+    .line 69
     invoke-virtual {v0}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->refreshState()V
 
-    .line 75
+    .line 72
     :cond_3
     return-void
-    .line 78
+    .line 75
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/dreams/DreamOverlayContainerViewController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -328,7 +328,7 @@
     .line 166
 .end method
 
-.method public constructor <init>(Lcom/android/systemui/dreams/DreamOverlayContainerView;Lcom/android/systemui/complication/ComplicationHostViewController;Landroid/view/ViewGroup;Landroid/view/View;Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;Lcom/android/dream/lowlight/LowLightTransitionCoordinator;Lcom/android/systemui/touch/TouchInsetManager$TouchInsetSession;Lcom/android/systemui/statusbar/BlurUtils;Landroid/os/Handler;Lkotlinx/coroutines/CoroutineDispatcher;Landroid/content/res/Resources;IJJLcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerCallbackInteractor;Lcom/android/systemui/dreams/DreamOverlayAnimationsController;Lcom/android/systemui/dreams/DreamOverlayStateController;Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;Landroid/app/DreamManager;)V
+.method public constructor <init>(Lcom/android/systemui/dreams/DreamOverlayContainerView;Lcom/android/systemui/complication/ComplicationHostViewController;Landroid/view/ViewGroup;Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;Lcom/android/dream/lowlight/LowLightTransitionCoordinator;Lcom/android/systemui/touch/TouchInsetManager$TouchInsetSession;Lcom/android/systemui/statusbar/BlurUtils;Landroid/os/Handler;Lkotlinx/coroutines/CoroutineDispatcher;Landroid/content/res/Resources;IJJLcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerCallbackInteractor;Lcom/android/systemui/dreams/DreamOverlayAnimationsController;Lcom/android/systemui/dreams/DreamOverlayStateController;Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;Landroid/app/DreamManager;)V
     .locals 4
 
     .line 1
@@ -368,61 +368,61 @@
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mDreamOverlayStateCallback:Lcom/android/systemui/dreams/DreamOverlayStateController$Callback;
 
     .line 26
-    move-object v2, p5
+    move-object v2, p4
 
     .line 28
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mStatusBarViewController:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;
 
     .line 29
-    move-object v2, p7
+    move-object v2, p6
 
     .line 31
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mTouchInsetSession:Lcom/android/systemui/touch/TouchInsetManager$TouchInsetSession;
 
     .line 32
-    move-object v2, p8
+    move-object v2, p7
 
     .line 34
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mBlurUtils:Lcom/android/systemui/statusbar/BlurUtils;
 
     .line 35
-    move-object/from16 v2, p18
+    move-object/from16 v2, p17
 
     .line 37
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mDreamOverlayAnimationsController:Lcom/android/systemui/dreams/DreamOverlayAnimationsController;
 
     .line 39
-    move-object/from16 v2, p19
+    move-object/from16 v2, p18
 
     .line 41
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mStateController:Lcom/android/systemui/dreams/DreamOverlayStateController;
 
     .line 43
-    move-object/from16 v2, p23
+    move-object/from16 v2, p22
 
     .line 45
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mCommunalInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;
 
     .line 47
-    move-object v2, p6
+    move-object v2, p5
 
     .line 49
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mLowLightTransitionCoordinator:Lcom/android/dream/lowlight/LowLightTransitionCoordinator;
 
     .line 50
-    move-object/from16 v2, p20
+    move-object/from16 v2, p19
 
     .line 52
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mBouncerlessScrimController:Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController;
 
     .line 54
-    move-object/from16 v2, p21
+    move-object/from16 v2, p20
 
     .line 56
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
     .line 58
-    move-object/from16 v2, p22
+    move-object/from16 v2, p21
 
     .line 60
     iput-object v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mShadeInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
@@ -431,13 +431,13 @@
     iput-object v1, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mComplicationHostViewController:Lcom/android/systemui/complication/ComplicationHostViewController;
 
     .line 64
-    const v2, 0x7f0702be    # @dimen/dream_overlay_y_offset '80.0dp'
+    const v2, 0x7f0702ea    # @dimen/dream_overlay_y_offset '80.0dp'
 
     .line 66
-    move-object v3, p11
+    move-object v3, p10
 
     .line 69
-    invoke-virtual {p11, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {p10, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 70
     move-result v2
@@ -446,102 +446,68 @@
     iput v2, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mDreamOverlayMaxTranslationY:I
 
     .line 74
-    invoke-static {}, Lcom/android/systemui/Flags;->communalHub()Z
-
-    .line 76
-    move-result v2
-
-    .line 79
-    if-eqz v2, :cond_1
-
-    .line 80
-    sget-boolean v2, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 82
-    if-nez v2, :cond_0
-
-    .line 84
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 86
-    :cond_0
-    sget-boolean v2, Lcom/android/systemui/FeatureFlagsImpl;->glanceableHubGestureHandle:Z
-
-    .line 89
-    if-eqz v2, :cond_1
-
-    .line 91
-    const/4 v2, 0x0
-
-    .line 93
-    move-object v3, p4
-
-    .line 94
-    invoke-virtual {p4, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 95
-    :cond_1
     iget-object v1, v1, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    .line 98
+    .line 76
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
-    .line 100
+    .line 78
     const/4 v3, -0x1
 
-    .line 102
+    .line 80
     invoke-direct {v2, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 103
+    .line 81
     move-object v3, p3
 
-    .line 106
+    .line 84
     invoke-virtual {p3, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 107
-    move-object v1, p9
+    .line 85
+    move-object v1, p8
 
-    .line 110
+    .line 88
     iput-object v1, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mHandler:Landroid/os/Handler;
 
-    .line 111
-    move-object v1, p10
+    .line 89
+    move-object v1, p9
 
-    .line 113
+    .line 91
     iput-object v1, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mBackgroundDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 114
-    move/from16 v1, p12
+    .line 92
+    move v1, p11
 
-    .line 116
+    .line 94
     iput v1, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mMaxBurnInOffset:I
 
-    .line 118
-    move-wide/from16 v1, p13
+    .line 95
+    move-wide/from16 v1, p12
 
-    .line 120
+    .line 97
     iput-wide v1, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mBurnInProtectionUpdateInterval:J
 
-    .line 122
-    move-wide/from16 v1, p15
+    .line 99
+    move-wide/from16 v1, p14
 
-    .line 124
+    .line 101
     iput-wide v1, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mMillisUntilFullJitter:J
 
-    .line 126
-    move-object/from16 v1, p17
+    .line 103
+    move-object/from16 v1, p16
 
-    .line 128
+    .line 105
     iput-object v1, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mPrimaryBouncerCallbackInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerCallbackInteractor;
 
-    .line 130
-    move-object/from16 v1, p24
+    .line 107
+    move-object/from16 v1, p23
 
-    .line 132
+    .line 109
     iput-object v1, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mDreamManager:Landroid/app/DreamManager;
 
-    .line 134
+    .line 111
     return-void
+    .line 113
 .end method
 
 
@@ -676,13 +642,13 @@
     iget-object v5, v4, Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController;->mExecutor:Ljava/util/concurrent/Executor;
 
     .line 46
-    new-instance v6, Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController$$ExternalSyntheticLambda2;
+    new-instance v6, Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController$$ExternalSyntheticLambda4;
 
     .line 48
     iget-object v7, v0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mBouncerlessExpansionCallback:Lcom/android/systemui/dreams/DreamOverlayContainerViewController$1;
 
     .line 50
-    invoke-direct {v6, v4, v7, v2}, Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController;Ljava/lang/Object;I)V
+    invoke-direct {v6, v4, v7, v2}, Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController;Ljava/lang/Object;I)V
 
     .line 52
     invoke-interface {v5, v6}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -1107,7 +1073,7 @@
     iget-object v1, v0, Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController;->mExecutor:Ljava/util/concurrent/Executor;
 
     .line 19
-    new-instance v2, Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController$$ExternalSyntheticLambda2;
+    new-instance v2, Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController$$ExternalSyntheticLambda4;
 
     .line 21
     iget-object v3, p0, Lcom/android/systemui/dreams/DreamOverlayContainerViewController;->mBouncerlessExpansionCallback:Lcom/android/systemui/dreams/DreamOverlayContainerViewController$1;
@@ -1116,7 +1082,7 @@
     const/4 v4, 0x0
 
     .line 25
-    invoke-direct {v2, v0, v3, v4}, Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController;Ljava/lang/Object;I)V
+    invoke-direct {v2, v0, v3, v4}, Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController;Ljava/lang/Object;I)V
 
     .line 26
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V

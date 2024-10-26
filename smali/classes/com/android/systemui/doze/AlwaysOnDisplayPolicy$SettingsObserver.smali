@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/doze/AlwaysOnDisplayPolicy$SettingsObserver;
 .super Landroid/database/ContentObserver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -230,7 +230,7 @@
     iget-object v0, p0, Lcom/android/systemui/doze/AlwaysOnDisplayPolicy$SettingsObserver;->this$0:Lcom/android/systemui/doze/AlwaysOnDisplayPolicy;
 
     .line 122
-    const v1, 0x10e010d    # @android:integer/config_shortPressOnPowerBehavior
+    const v1, 0x10e0107    # @android:integer/config_screen_rotation_fade_out
 
     .line 124
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -245,7 +245,7 @@
     iget-object v0, p0, Lcom/android/systemui/doze/AlwaysOnDisplayPolicy$SettingsObserver;->this$0:Lcom/android/systemui/doze/AlwaysOnDisplayPolicy;
 
     .line 133
-    const v1, 0x10e010c    # @android:integer/config_selected_udfps_touch_detection
+    const v1, 0x10e0106    # @android:integer/config_screen_rotation_fade_in_delay
 
     .line 135
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -263,7 +263,7 @@
     iget-object v1, v0, Lcom/android/systemui/doze/AlwaysOnDisplayPolicy;->mParser:Landroid/util/KeyValueListParser;
 
     .line 146
-    const v2, 0x7f030033    # @array/config_doze_brightness_sensor_to_brightness
+    const v2, 0x7f030038    # @array/config_doze_brightness_sensor_to_brightness
 
     .line 148
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -290,7 +290,7 @@
     iget-object v0, p0, Lcom/android/systemui/doze/AlwaysOnDisplayPolicy;->mParser:Landroid/util/KeyValueListParser;
 
     .line 165
-    const v1, 0x7f030034    # @array/config_doze_brightness_sensor_to_scrim_opacity
+    const v1, 0x7f030039    # @array/config_doze_brightness_sensor_to_scrim_opacity
 
     .line 167
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getIntArray(I)[I

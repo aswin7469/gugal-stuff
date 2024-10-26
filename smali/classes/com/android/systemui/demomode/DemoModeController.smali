@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/demomode/DemoModeController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/CallbackController;
@@ -48,130 +48,127 @@
     iput-object p1, p0, Lcom/android/systemui/demomode/DemoModeController;->receivers:Ljava/util/List;
 
     .line 14
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 16
     const/4 p1, 0x0
 
-    .line 19
+    .line 16
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    .line 20
+    .line 17
     move-result-object p1
 
-    .line 23
+    .line 20
     check-cast p3, Lcom/android/systemui/util/settings/GlobalSettingsImpl;
 
-    .line 24
-    const-string p2, "sysui_tuner_demo_on"
+    .line 21
+    const-string/jumbo p2, "sysui_tuner_demo_on"
 
-    .line 26
+    .line 23
     invoke-virtual {p3, p2, p1}, Lcom/android/systemui/util/settings/GlobalSettingsImpl;->putString(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 28
+    .line 26
     new-instance p1, Ljava/util/LinkedHashMap;
 
-    .line 31
+    .line 29
     invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 33
+    .line 31
     sget-object p2, Lcom/android/systemui/demomode/DemoMode;->COMMANDS:Ljava/util/List;
 
-    .line 36
+    .line 34
     new-instance p3, Ljava/util/ArrayList;
 
-    .line 38
+    .line 36
     const/16 p4, 0xa
 
-    .line 40
+    .line 38
     invoke-static {p2, p4}, Lkotlin/collections/CollectionsKt__IterablesKt;->collectionSizeOrDefault(Ljava/lang/Iterable;I)I
 
-    .line 42
+    .line 40
     move-result p4
 
-    .line 45
+    .line 43
     invoke-direct {p3, p4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 46
+    .line 44
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 49
+    .line 47
     move-result-object p2
 
-    .line 52
+    .line 50
     :goto_0
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 53
+    .line 51
     move-result p4
 
-    .line 56
+    .line 54
     if-eqz p4, :cond_0
 
-    .line 57
+    .line 55
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 59
+    .line 57
     move-result-object p4
 
-    .line 62
+    .line 60
     check-cast p4, Ljava/lang/String;
 
-    .line 63
+    .line 61
     invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 65
+    .line 63
     new-instance v0, Ljava/util/ArrayList;
 
-    .line 68
+    .line 66
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 70
+    .line 68
     invoke-interface {p1, p4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
+    .line 71
     move-result-object p4
 
-    .line 76
+    .line 74
     check-cast p4, Ljava/util/List;
 
-    .line 77
+    .line 75
     invoke-interface {p3, p4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 79
+    .line 77
     goto :goto_0
 
-    .line 82
+    .line 80
     :cond_0
     iput-object p1, p0, Lcom/android/systemui/demomode/DemoModeController;->receiverMap:Ljava/util/Map;
 
-    .line 83
+    .line 81
     iget-object p1, p0, Lcom/android/systemui/demomode/DemoModeController;->context:Landroid/content/Context;
 
-    .line 85
+    .line 83
     iget-object p2, p0, Lcom/android/systemui/demomode/DemoModeController;->globalSettings:Lcom/android/systemui/util/settings/GlobalSettings;
 
-    .line 87
+    .line 85
     new-instance p3, Lcom/android/systemui/demomode/DemoModeController$tracker$1;
 
-    .line 89
+    .line 87
     invoke-direct {p3, p0, p1, p2}, Lcom/android/systemui/demomode/DemoModeController$tracker$1;-><init>(Lcom/android/systemui/demomode/DemoModeController;Landroid/content/Context;Lcom/android/systemui/util/settings/GlobalSettings;)V
 
-    .line 91
+    .line 89
     iput-object p3, p0, Lcom/android/systemui/demomode/DemoModeController;->tracker:Lcom/android/systemui/demomode/DemoModeController$tracker$1;
 
-    .line 94
+    .line 92
     new-instance p1, Lcom/android/systemui/demomode/DemoModeController$broadcastReceiver$1;
 
-    .line 96
+    .line 94
     invoke-direct {p1, p0}, Lcom/android/systemui/demomode/DemoModeController$broadcastReceiver$1;-><init>(Lcom/android/systemui/demomode/DemoModeController;)V
 
-    .line 98
+    .line 96
     iput-object p1, p0, Lcom/android/systemui/demomode/DemoModeController;->broadcastReceiver:Lcom/android/systemui/demomode/DemoModeController$broadcastReceiver$1;
 
-    .line 101
+    .line 99
     return-void
-    .line 103
+    .line 101
 .end method
 
 
@@ -239,7 +236,7 @@
     const-string v0, ") not recognized. See DemoMode.java for valid commands"
 
     .line 9
-    invoke-static {p1, v1, v0}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1, v0}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

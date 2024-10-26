@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/FooterPreference;
 .super Landroidx/preference/Preference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -18,7 +18,7 @@
     .locals 2
 
     .line 1
-    const v0, 0x7f040288    # @attr/footerPreferenceStyle
+    const v0, 0x7f04028a    # @attr/footerPreferenceStyle
 
     .line 2
     const/4 v1, 0x0
@@ -30,7 +30,7 @@
     iput v1, p0, Lcom/android/settingslib/widget/FooterPreference;->mIconVisibility:I
 
     .line 9
-    const p2, 0x7f0e01ea    # @layout/preference_footer 'res/layout/preference_footer.xml'
+    const p2, 0x7f0d01f8    # @layout/preference_footer 'res/layout/preference_footer.xml'
 
     .line 11
     iput p2, p0, Landroidx/preference/Preference;->mLayoutResId:I
@@ -45,7 +45,7 @@
     if-nez p2, :cond_0
 
     .line 20
-    const p2, 0x7f080b1a    # @drawable/settingslib_ic_info_outline_24 'res/drawable/settingslib_ic_info_outline_24.xml'
+    const p2, 0x7f080b5f    # @drawable/settingslib_ic_info_outline_24 'res/drawable/settingslib_ic_info_outline_24.xml'
 
     .line 22
     invoke-static {p2, p1}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(ILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
@@ -377,7 +377,7 @@
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     .line 139
-    const v1, 0x7f0b06fc    # @id/settingslib_learn_more
+    const v1, 0x7f0a0727    # @id/settingslib_learn_more
 
     .line 141
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -491,7 +491,7 @@
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     .line 218
-    const v0, 0x7f0b037f    # @id/icon_frame
+    const v0, 0x7f0a039f    # @id/icon_frame
 
     .line 220
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

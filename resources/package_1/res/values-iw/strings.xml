@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">צריך למקם את הווידג'ט שנבחר</string>
   <string name="accessibility_action_label_remove_widget">הסרת הווידג'ט</string>
   <string name="accessibility_action_label_select_widget">צריך לבחור ווידג'ט</string>
-  <string name="accessibility_action_open_communal_hub">ווידג'טים במסך הנעילה</string>
   <string name="accessibility_action_pip_resize">שינוי גודל</string>
   <string name="accessibility_action_pip_stash">הסתרה זמנית</string>
   <string name="accessibility_action_pip_unstash">ביטול ההסתרה הזמנית</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">יציאה ממצב שימוש ביד אחת</string>
   <string name="accessibility_airplane_mode">מצב טיסה</string>
   <string name="accessibility_allow_diagonal_scrolling">הפעלת גלילה באלכסון</string>
+  <string name="accessibility_assistant_poodle">חיפוש קולי</string>
   <string name="accessibility_authenticate_hint">אימות</string>
   <string name="accessibility_back">חזרה</string>
   <string name="accessibility_banner_message_dismiss">סגירה</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">הזנת מכשיר</string>
   <string name="accessibility_ethernet_connected">אתרנט.</string>
   <string name="accessibility_ethernet_disconnected">אתרנט מנותק.</string>
-  <string name="accessibility_fingerprint_bouncer">נדרש אימות. יש לגעת בחיישן טביעות האצבע כדי לבצע אימות.</string>
   <string name="accessibility_fingerprint_label">חיישן טביעות אצבע</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">החלפת מצב</string>
   <string name="accessibility_floating_button_action_edit">עריכה</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">תפריט</string>
   <string name="accessibility_multi_user_list_switcher">תפריט במשיכה למטה</string>
   <string name="accessibility_multi_user_switch_switcher">החלפת משתמש</string>
+  <string name="accessibility_next_alarm">ההתראה הבאה ב-%s</string>
   <string name="accessibility_no_calling">אין שיחות.</string>
   <string name="accessibility_no_phone">אין טלפון.</string>
   <string name="accessibility_no_wifi">‏Wi-Fi מנותק.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">המסך נעול כעת לאורך.</string>
   <string name="accessibility_send_smart_reply">שליחה</string>
   <string name="accessibility_sensors_off_active">ההגדרה 'חיישנים כבויים' פעילה</string>
+  <string name="accessibility_settings_gear">הגדרות Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">צריך לגעת בחיישן טביעות האצבע. זה הלחצן הקצר יותר בצד של הטלפון</string>
+  <string name="accessibility_smartspace_page">דף %1$d מתוך %2$d</string>
   <string name="accessibility_split_bottom">פיצול למטה</string>
   <string name="accessibility_split_left">פיצול שמאלה</string>
   <string name="accessibility_split_right">פיצול ימינה</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">‏שלושה פסים של Wi-Fi.</string>
   <string name="accessibility_wifi_two_bars">‏שני פסים של Wi-Fi.</string>
   <string name="accesssibility_keyguard_retry">אפשר להחליק למעלה כדי לנסות שוב לפתוח ע"י זיהוי הפנים</string>
+  <string name="adaptive_charging_notify_des">הסוללה תיטען במלואה עד %1$s. מתבצעת טעינה אחידה כדי להאריך את משך חיי הסוללה.</string>
+  <string name="adaptive_charging_notify_title">הטעינה הדינמית מופעלת</string>
+  <string name="adaptive_charging_notify_turn_off_once">השבתה פעם אחת</string>
+  <string name="adaptive_charging_time_estimate">‫%1$s • טעינה דינמית • טעינה מלאה עד %2$s</string>
   <string name="add">הוספה</string>
   <string name="add_guest_failed">יצירת אורח חדש נכשלה</string>
   <string name="airplane_mode">מצב טיסה</string>
@@ -233,6 +239,7 @@
   <string name="app_info">פרטי האפליקציה</string>
   <string name="app_label">ממשק משתמש של המערכת</string>
   <string name="assistant_attention_content_description">נוכחות המשתמש זוהתה</string>
+  <string name="assistant_scrim_label">ההאזנה מתבצעת, יש להקיש כדי לבטל</string>
   <string name="audio_sharing_description">שיתוף האודיו</string>
   <string name="audio_status">מתבצעת האזנה</string>
   <string name="auto_data_switch_dialog_negative_button">לא, תודה</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">חזרה</string>
   <string name="battery">סוללה</string>
   <string name="battery_detail_switch_title">חיסכון בסוללה</string>
-  <string name="battery_low_description">אחוז הטעינה של הסוללה: %s. התכונה 'חיסכון בסוללה' מפעילה עיצוב כהה, מגבילה את הפעילת ברקע ומשהה את ההתראות.</string>
+  <string name="battery_health_notify_learn_more">מידע נוסף</string>
   <string name="battery_low_intro">התכונה 'חיסכון בסוללה' מפעילה עיצוב כהה, מגבילה את הפעילת ברקע ומשהה את ההתראות.</string>
-  <string name="battery_low_title">להפעיל את התכונה 'חיסכון בסוללה'?</string>
   <string name="battery_saver_confirmation_ok">הפעלה</string>
   <string name="battery_saver_confirmation_title">להפעיל את תכונת החיסכון בסוללה?</string>
   <string name="battery_saver_confirmation_title_generic">מידע על מצב 'חיסכון בסוללה'</string>
-  <string name="battery_saver_dismiss_action">לא תודה</string>
   <string name="battery_saver_start_action">הפעלה</string>
   <string name="battery_state_unknown_notification_text">יש להקיש כדי להציג מידע נוסף</string>
   <string name="battery_state_unknown_notification_title">בעיה בקריאת מדדי הסוללה</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">פעיל. סוללה בצד שמאל: %1$s, סוללה בצד ימין: %2$s.</string>
   <string name="bluetooth_active_battery_level_untethered_left">פעיל. סוללה בצד שמאל: %1$s.</string>
   <string name="bluetooth_active_battery_level_untethered_right">פעיל. סוללה בצד ימין: %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level">פעיל (מדיה בלבד). סוללה: %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">פעיל (מדיה בלבד). סוללה בצד שמאל: %1$s, סוללה בצד ימין: %2$s.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">פעיל (מדיה בלבד)</string>
   <string name="bluetooth_active_no_battery_level">פעיל</string>
   <string name="bluetooth_battery_level">טעינת הסוללה: %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">מחובר (תמיכה בשיתוף אודיו). סוללה: %1$s.</string>
   <string name="bluetooth_battery_level_untethered">סוללה בצד שמאל: %1$s, סוללה בצד ימין: %2$s.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">מחובר (תמיכה בשיתוף אודיו). סוללה בצד שמאל: %1$s, סוללה בצד ימין: %2$s.</string>
   <string name="bluetooth_connected">%1$s מחובר</string>
   <string name="bluetooth_connecting">מתבצעת התחברות…</string>
   <string name="bluetooth_disconnected">מנותק</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">פעיל (שמאל בלבד)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">פעיל (ימין ושמאל)</string>
   <string name="bluetooth_hearing_aid_right_active">פעיל (ימין בלבד)</string>
-  <string name="bluetooth_no_battery_level_lea_support">מחובר (תמיכה בשיתוף אודיו)</string>
   <string name="bluetooth_pairing">ההתאמה מתבצעת...</string>
   <string name="bluetooth_pairing_device_down_error_message">לא ניתן לתקשר עם %1$s.</string>
   <string name="bluetooth_pairing_error_message">לא ניתן לבצע התאמה עם %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">לא ניתן לבצע התאמה עם %1$s כי קוד הגישה או הסיסמה שגויים.</string>
   <string name="bluetooth_pairing_rejected_error_message">ההתאמה נדחתה על ידי %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">תמיכה בשיתוף אודיו</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">מחשב</string>
   <string name="bluetooth_talkback_headphone">אוזניות</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">אפשרויות נוספות</string>
   <string name="bubble_overflow_empty_subtitle">בועות אחרונות ובועות שנסגרו יופיעו כאן</string>
   <string name="bubble_overflow_empty_title">אין בועות מהזמן האחרון</string>
-  <string name="bubble_shortcut_label">בועות</string>
-  <string name="bubble_shortcut_long_label">הצגת הבועות</string>
   <string name="bubbles_app_settings">הגדרות %1$s</string>
   <string name="bubbles_dont_bubble_conversation">אין להציג בועות לשיחה</string>
   <string name="bubbles_settings_button_description">הגדרות לבועות של %1$s</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">‏הפסקת ה-Cast</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">‏הפעלת ה-Cast‏ של &lt;b&gt;%1$s&lt;/b&gt; תיפסק</string>
   <string name="cell_data_off_content_description">חבילת הגלישה כבויה</string>
+  <string name="charge_limit_discovery_notification_enable_button">להפעלה</string>
+  <string name="charge_limit_discovery_notification_text">מומלץ להפעיל את תכונת ההגבלה ל-80% כדי להגן על תקינות הסוללה ועל תוחלת החיים שלה. אפשר לנהל את זה ב'הגדרות' בכל שלב</string>
+  <string name="charge_limit_discovery_notification_title">הגנה על הסוללה בזמן הטעינה</string>
+  <string name="charging_reverse_text">הסוללה משותפת</string>
   <string name="clear_all_notifications_text">ניקוי הכול</string>
   <string name="clipboard">לוח</string>
   <string name="clipboard_content_copied">התוכן הועתק</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">סגירה</string>
   <string name="close_dialog_button">סגירה</string>
   <string name="collapse_menu_text">סגירת התפריט</string>
+  <string name="columbus_bouncer_message">כדי להשלים את ההקשה המהירה, צריך לבטל את הנעילה</string>
+  <string name="columbus_target_request_dialog_allow">אישור</string>
+  <string name="columbus_target_request_dialog_deny">אין אישור</string>
+  <string name="columbus_target_request_dialog_summary">כדי לפתוח את %1$s, לוחצים פעמיים על גב הטלפון. תמיד אפשר לשנות זאת ב'הגדרות'.</string>
+  <string name="columbus_target_request_dialog_title">להשתמש בהקשה מהירה כדי לפתוח את %1$s?</string>
   <string name="communal_tutorial_indicator_text">אפשר להחליק שמאלה כדי להפעיל את המדריך המשותף</string>
   <string name="connected_display_dialog_dual_display_stop_warning">המסך הפנימי שלך ישוכפל. המסך החיצוני שלך יכובה.</string>
   <string name="connected_display_dialog_start_mirroring">לשקף למסך חיצוני?</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">חבילת הגלישה מושהה</string>
   <string name="data_usage_disabled_dialog_title">השימוש בנתונים מושהה</string>
   <string name="days_timestamp">לפני %1$s ימים</string>
-  <string name="default_error_message">הקלט לא תקין</string>
   <string name="default_popup_window_title">חלון קופץ</string>
+  <string name="defender_notify_resume_charge">שינוי מברירת המחדל</string>
+  <string name="defender_notify_title">הגנה על הסוללה</string>
+  <string name="defender_post_notify_des">כדי לשפר את אורך החיים הכולל של הסוללה, הטעינה עברה אופטימיזציה מ-%1$s עד %2$s</string>
+  <string name="defender_post_notify_title">הטעינה עברה אופטימיזציה</string>
   <string name="demo_mode">מצב הדגמה בממשק המשתמש של המערכת</string>
   <string name="desktop_mode_maximize_menu_maximize_text">הגדלת המסך</string>
   <string name="desktop_mode_maximize_menu_snap_text">כיווץ המסך</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">המכשיר הזה שייך לארגון שלך</string>
   <string name="do_disclosure_with_name">המכשיר הזה שייך לארגון %s</string>
   <string name="do_financed_disclosure_with_name">המכשיר הזה התקבל מ-%s</string>
+  <string name="dock_a11y_action_show_photo_text">הצגת האלבום הדיגיטלי</string>
+  <string name="dock_alignment_not_charging">צריך ליישר את הטלפון כדי לטעון אותו באופן אלחוטי</string>
+  <string name="dock_alignment_slow_charging">צריך ליישר את הטלפון כדי לטעון אותו במהירות</string>
+  <string name="dock_defender_first_run_des">כדי לשפר את משך חיי הסוללה, הטעינה מושהית כשהסוללה מגיעה ל-90% בזמן שהטבאלט באביזר העגינה. אפשר לעבור ל'הגדרות' בכל שלב כדי לשנות מברירת המחדל.</string>
+  <string name="dock_defender_first_run_settings">הגדרות</string>
+  <string name="dock_defender_first_run_title">הטעינה הושהתה כדי להגן על הסוללה</string>
   <string name="dock_multi_instances_not_supported_text">ניתן לפתוח את האפליקציה הזו רק בחלון אחד</string>
   <string name="dock_non_resizeble_failed_to_dock_text">האפליקציה לא תומכת במסך מפוצל</string>
+  <string name="dock_photo_preview_text">הפעלת האלבום הדיגיטלי מתחילה…</string>
+  <string name="dock_promo_text">כדי להציג את האלבום הדיגיטלי, יש להחליק שמאלה</string>
   <string name="done">סיום</string>
   <string name="drag_split_not_supported">ההתראה הזו לא תומכת בגרירה למסך מפוצל</string>
   <string name="drag_to_add_tiles">יש ללחוץ ולגרור כדי להוסיף לחצנים</string>
   <string name="drag_to_rearrange_tiles">יש ללחוץ ולגרור כדי לסדר מחדש את כרטיסי המידע</string>
   <string name="drag_to_remove_disabled">יש צורך ב-%1$d אריחים לפחות</string>
   <string name="drag_to_remove_tiles">אפשר לגרור לכאן כדי להסיר</string>
+  <string name="dream_lockscreen_wallpaper_description">שימוש בטפט הנוכחי של מסך הנעילה</string>
+  <string name="dream_lockscreen_wallpaper_label">טפט</string>
   <string name="dream_overlay_status_bar_alarm_set">ההתראה מוגדרת</string>
   <string name="dream_overlay_status_bar_camera_mic_off">המצלמה והמיקרופון כבויים</string>
   <string name="dream_overlay_status_bar_camera_off">המצלמה כבויה</string>
   <string name="dream_overlay_status_bar_mic_off">המיקרופון כבוי</string>
   <string name="dream_overlay_status_bar_priority_mode">מצב עדיפות</string>
   <string name="dream_overlay_status_bar_wifi_off">‏Wi‑Fi לא זמין</string>
+  <string name="dwell_defender_notify_des">הפעולה הזו מאפשרת להאריך את משך חיי הסוללה כשהטלפון נשאר בטעינה יותר מדי זמן</string>
+  <string name="dwell_defender_notify_title">הטעינה הושהתה כדי להגן על הסוללה</string>
   <string name="edit_user_info_message">השם והתמונה שייבחרו יהיו גלויים לכל מי שמשתמש במכשיר הזה.</string>
   <string name="edit_widget">עריכת הווידג'ט</string>
   <string name="empty_shade_text">אין התראות</string>
@@ -561,13 +581,17 @@
   <string name="ethernet_label">אתרנט</string>
   <string name="expand_button_title">מתקדם</string>
   <string name="expand_menu_text">פתיחת התפריט</string>
+  <string name="extreme_battery_saver_text">משמעותי</string>
+  <string name="extreme_low_battery_notification_text">אם הטלפון לא ייטען בקרוב, הוא יכבה</string>
+  <string name="extreme_low_battery_notification_title">הסוללה חלשה מאוד</string>
   <string name="face_re_enroll_dialog_content">כדי להגדיר שוב את התכונה 'פתיחה ע"י זיהוי הפנים', עליך למחוק את התבנית הנוכחית לזיהוי הפנים.
 
 יהיה צורך להגדיר את התכונה הזו שוב כדי להשתמש בזיהוי הפנים לביטול הנעילה של הטלפון.</string>
   <string name="face_re_enroll_dialog_title">להגדרת התכונה 'פתיחה ע"י זיהוי הפנים'</string>
   <string name="face_re_enroll_notification_name">פתיחה בזיהוי פנים</string>
   <string name="face_re_enroll_notification_title">הגדרה חוזרת של 'פתיחה ע"י זיהוי הפנים'</string>
-  <string name="face_reenroll_failure_dialog_content">לא ניתן להגדיר פתיחה ע"י זיהוי הפנים. צריך לעבור להגדרות כדי לנסות שוב.</string>
+  <string name="face_reenroll_dialog_confirm">הגדרה</string>
+  <string name="face_reenroll_failure_dialog_content">לא ניתן להגדיר פתיחה ע"י זיהוי הפנים. יש לעבור להגדרות כדי לנסות שוב.</string>
   <string name="failed_attempts_now_wiping_device">נעשו יותר מדי ניסיונות שגויים. הנתונים במכשיר יימחקו.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">סגירה</string>
   <string name="failed_attempts_now_wiping_profile">נעשו יותר מדי ניסיונות שגויים. פרופיל העבודה והנתונים שמשויכים אליו יימחקו.</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">הקטנה</string>
   <string name="fullscreen_text">מסך מלא</string>
   <string name="game_status">במשחק פעיל</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">‏התכונה Extend Unlock מושבתת</string>
   <string name="go_to_web">מעבר אל הדפדפן</string>
   <string name="got_it">הבנתי</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">לאפס את הגלישה כאורח?</string>
   <string name="guest_reset_guest_confirm_button">איפוס</string>
   <string name="guest_resetting">מתבצע איפוס של הגלישה כאורח…</string>
+  <string name="handle_invocation_prompt">אפשר להחליק ואז לדבר</string>
   <string name="handle_text">נקודת אחיזה</string>
   <string name="headset">אוזניות</string>
   <string name="hearing_devices_preset_label">הגדרה קבועה מראש</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">הטלפון מתחמם</string>
   <string name="home_controls_dream_description">גישה מהירה לממשק השליטה במכשירים כשומר מסך</string>
   <string name="home_controls_dream_label">שליטה במכשירים</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• יש לפחות מכשיר אחד או פאנל מכשיר אחד זמינים</string>
   <string name="home_quick_affordance_unavailable_install_the_app">‏כדי להוסיף את אפליקציית Home כקיצור דרך, צריך לוודא שהאפליקציה מותקנת</string>
   <string name="hub_mode_add_widget_button_text">הוספת ווידג'ט</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">בתהליך</string>
   <string name="inattentive_sleep_warning_message">המכשיר ייכבה בקרוב, יש ללחוץ כדי שהוא ימשיך לפעול.</string>
   <string name="inattentive_sleep_warning_title">המתנה</string>
+  <string name="incompatible_charging_learn_more">מידע נוסף</string>
+  <string name="incompatible_charging_notify_des">יכול להיות שהטלפון נטען לאט או לא נטען. לטעינה מהירה יותר, כדאי להשתמש במתאם ובכבל מומלצים.</string>
+  <string name="incompatible_charging_notify_title">בדיקה של אביזר הטעינה</string>
   <string name="indeterminate">מסומנת חלקית</string>
   <string name="inline_done_button">סיום</string>
   <string name="inline_ok_button">אישור</string>
   <string name="inline_turn_off_notifications">השבתת ההתראות</string>
   <string name="input_switch_input_language_next">מעבר לשפה הבאה</string>
   <string name="input_switch_input_language_previous">מעבר לשפה הקודמת</string>
+  <string name="install_app">התקנת האפליקציה</string>
   <string name="install_dialer_on_work_profile_action">התקנה של אפליקציה לעבודה בטלפון</string>
   <string name="install_type_instant">אפליקציה ללא התקנה</string>
   <string name="instant_apps">אפליקציות ללא התקנה</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">האפליקציה %1$s פועלת</string>
   <string name="interruption_level_none">שקט מוחלט</string>
   <string name="interruption_level_priority">עדיפות בלבד</string>
-  <string name="invalid_charger_text">שימוש במטען שסופק עם המכשיר</string>
-  <string name="invalid_charger_title">‏לא ניתן לטעון באמצעות USB</string>
   <string name="issuerecord_background_processing_label">מתבצע עיבוד של בעיית ההקלטה</string>
   <string name="issuerecord_ongoing_screen_only">בעיית הקלטה</string>
   <string name="issuerecord_save_title">בעיית ההקלטה נשמרה</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">המכשיר ננעל
 האימות נכשל</string>
   <string name="keyguard_indication_charging_time">%2$s • בטעינה • %1$s עד לסיום</string>
+  <string name="keyguard_indication_charging_time_charge_limit">‫%2$s • טעינה מלאה עד %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • בטעינה • %1$s עד לסיום</string>
+  <string name="keyguard_indication_charging_time_dock_v2">‫%2$s • טעינה מלאה עד %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • בטעינה מהירה • %1$s עד לסיום</string>
+  <string name="keyguard_indication_charging_time_fast_v2">‫%2$s • טעינה מהירה • טעינה מלאה עד %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">‫%1$s • הטעינה הסתיימה</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • בטעינה איטית • %1$s עד לסיום</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">‫%2$s • טעינה מלאה עד %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">‫%2$s • טעינה מלאה עד %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • בטעינה אלחוטית • %1$s עד לסיום</string>
-  <string name="keyguard_indication_trust_unlocked">הנעילה נמנעת על ידי סביבה מהימנה</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">‫%2$s • טעינה מלאה עד %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">‏המכשיר פתוח עם Extend Unlock</string>
   <string name="keyguard_missing_sim_message_short">‏אין כרטיס SIM</string>
   <string name="keyguard_network_locked_message">הרשת נעולה</string>
   <string name="keyguard_permanent_disabled_sim_message_short">‏לא ניתן להשתמש בכרטיס ה-SIM הזה.</string>
   <string name="keyguard_plugged_in">%s • בטעינה</string>
   <string name="keyguard_plugged_in_charging_fast">%s • בטעינה מהירה</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">‫%s • טעינה מהירה</string>
   <string name="keyguard_plugged_in_charging_limited">%s • הטעינה הושהתה כדי להגן על הסוללה</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • בטעינה איטית</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">‫%s • בטעינה</string>
   <string name="keyguard_plugged_in_dock">%s • בטעינה</string>
+  <string name="keyguard_plugged_in_dock_v2">‫%s • בטעינה</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • צריך לבדוק את אביזר הטעינה</string>
+  <string name="keyguard_plugged_in_v2">‫%s • בטעינה</string>
   <string name="keyguard_plugged_in_wireless">%s • בטעינה אלחוטית</string>
+  <string name="keyguard_plugged_in_wireless_v2">‫%s • בטעינה</string>
   <string name="keyguard_retry">יש להחליק למעלה כדי לנסות שוב</string>
   <string name="keyguard_sim_error_message_short">כרטיס לא חוקי.</string>
   <string name="keyguard_sim_locked_message">‏כרטיס ה-SIM נעול.</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">קודי האימות לא תואמים</string>
   <string name="kg_invalid_sim_pin_hint">יש להקליד קוד אימות שאורכו 4 עד 8 ספרות.</string>
   <string name="kg_invalid_sim_puk_hint">‏קוד PUK צריך להיות בן 8 ספרות או יותר.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{‏יש להזין את קוד האימות של כרטיס ה-SIM. נשאר לך עוד ניסיון אחד (#) לפני שיהיה צורך ליצור קשר עם הספק כדי לבטל את נעילת המכשיר.}one{‏יש להזין את קוד האימות של כרטיס ה-SIM. נשארו לך עוד # ניסיונות.}two{‏יש להזין את קוד האימות של כרטיס ה-SIM. נשארו לך עוד # ניסיונות.}other{‏יש להזין את קוד האימות של כרטיס ה-SIM. נשארו לך עוד # ניסיונות.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{‏כרטיס ה-SIM מושבת כעת. יש להזין קוד PUK כדי להמשיך. נשאר לך עוד ניסיון אחד (#) לפני שכרטיס ה-SIM יינעל לתמיד. למידע נוסף, ניתן לפנות לספק.}one{‏כרטיס ה-SIM מושבת כעת. יש להזין קוד PUK כדי להמשיך. נשארו לך עוד # ניסיונות לפני שכרטיס ה-SIM יינעל לתמיד. למידע נוסף, ניתן לפנות לספק.}two{‏כרטיס ה-SIM מושבת כעת. יש להזין קוד PUK כדי להמשיך. נשארו לך עוד # ניסיונות לפני שכרטיס ה-SIM יינעל לתמיד. למידע נוסף, ניתן לפנות לספק.}other{‏כרטיס ה-SIM מושבת כעת. יש להזין קוד PUK כדי להמשיך. נשארו לך עוד # ניסיונות לפני שכרטיס ה-SIM יינעל לתמיד. למידע נוסף, ניתן לפנות לספק.}}</string>
   <string name="kg_password_pin_failed">‏נכשלה פעולת קוד הגישה של כרטיס ה-SIM</string>
   <string name="kg_password_puk_failed">‏הניסיון לביטול הנעילה של כרטיס ה-SIM באמצעות קוד PUK נכשל!</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">‏יש להזין את קוד האימות של כרטיס ה-SIM של %1$s.</string>
   <string name="kg_sim_unlock_progress_dialog_message">‏מתבצע ביטול נעילה של כרטיס ה-SIM…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{אפשר לנסות שוב בעוד שנייה אחת.}one{אפשר לנסות שוב בעוד # שניות.}two{אפשר לנסות שוב בעוד # שניות.}other{אפשר לנסות שוב בעוד # שניות.}}</string>
-  <string name="kg_trust_agent_disabled">התכונה 'סביבה אמינה' לא זמינה</string>
+  <string name="kg_trust_agent_disabled">‏התכונה Extend Unlock לא זמינה</string>
   <string name="kg_unlock_with_password_or_fp">פתיחה בסיסמה או טביעת אצבע</string>
   <string name="kg_unlock_with_pattern_or_fp">פתיחה בקו ביטול נעילה או טביעת אצבע</string>
   <string name="kg_unlock_with_pin_or_fp">פתיחה בקוד אימות או טביעת אצבע</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">מידע נוסף</string>
   <string name="log_access_confirmation_learn_more_at">מידע נוסף זמין בכתובת %s</string>
   <string name="log_access_confirmation_title">לתת לאפליקציה %s הרשאת גישה לכל יומני המכשיר?</string>
+  <string name="low_battery_label">הסוללה חלשה</string>
+  <string name="low_battery_notification_text">ניתן להפעיל את 'חיסכון בסוללה ברמה רגילה' כדי להאריך את חיי הסוללה</string>
+  <string name="low_battery_notification_text_ebs">ניתן להפעיל את 'חיסכון משמעותי בסוללה' כדי להאריך את חיי הסוללה</string>
+  <string name="low_battery_notification_title">%s נותרו בסוללה</string>
   <string name="m3c_search_bar_search">חיפוש</string>
   <string name="m3c_suggestions_available">הצעות מופיעות למטה</string>
   <string name="magnification_close_settings_click_label">סגירת הגדרות ההגדלה</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">‎%1$d%%‎‎</string>
   <string name="media_output_end_session_dialog_stop">עצירה</string>
   <string name="media_output_end_session_dialog_summary">עצירת הסשן המשותף כדי להעביר מדיה למכשיר אחר</string>
-  <string name="media_output_first_broadcast_title">הסבר על שידורים</string>
-  <string name="media_output_first_notify_broadcast_message">‏אנשים בקרבת מקום עם מכשירי Bluetooth תואמים יכולים להאזין למדיה שמשודרת על ידך</string>
   <string name="media_output_group_title_speakers_and_displays">רמקולים ומסכים</string>
   <string name="media_output_group_title_suggested_device">הצעות למכשירים</string>
   <string name="media_output_label_title">הפעלה של %s במכשיר</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">‏בזמן Cast מאפליקציה, תהיה ל-Android גישה לכל מה שמופיע באפליקציה ולכל מדיה שפועלת בה. כדאי להיזהר עם סיסמאות, פרטי תשלום, הודעות, תמונות, אודיו וסרטונים.</string>
   <string name="media_projection_sys_service_dialog_title">‏להתחיל הקלטה או הפעלת Cast?</string>
   <string name="media_projection_sys_service_dialog_warning">‏לשירות שמספק את הפונקציה הזו תהיה גישה לכל הפרטים שגלויים במסך שלך או מופעלים מהמכשיר שלך בזמן הקלטה או הפעלת Cast – כולל פרטים כמו סיסמאות, פרטי תשלום, תמונות, הודעות ואודיו שמושמע מהמכשיר.</string>
-  <string name="media_projection_task_switcher_action_back">חזרה למשימה הקודמת</string>
-  <string name="media_projection_task_switcher_action_switch">שיתוף של האפליקציה הזו במקום</string>
-  <string name="media_projection_task_switcher_text">השיתוף מושהה כשמחליפים אפליקציות</string>
   <string name="media_seamless_other_device">מכשיר אחר</string>
   <string name="media_transfer_default_device_name">המכשיר המחובר</string>
   <string name="media_transfer_dock_speaker_device_name">רמקול של אביזר העגינה</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">כדי לצלם תמונה ברזולוציה גבוהה יותר, כדאי להפוך את הטלפון</string>
   <string name="rear_display_unfolded_bottom_sheet_title">להחליף בין המסכים?</string>
   <string name="recent_conversations">שיחות אחרונות</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">נשלחה תמונה</string>
   <string name="remove_from_settings">הסרה מההגדרות</string>
   <string name="remove_from_settings_prompt">‏האם להסיר את System UI Tuner ולהפסיק להשתמש בכל התכונות שלו?</string>
   <string name="require_unlock_for_nfc">‏יש לבטל את הנעילה כדי להשתמש ב-NFC</string>
   <string name="restart_button_description">כדי לראות טוב יותר יש להקיש ולהפעיל את האפליקציה הזו מחדש</string>
   <string name="retry_face">איך מנסים שוב לזהות את הפנים לצורך אימות</string>
+  <string name="reverse_charging_device_name_text">‏מכשיר Pixel אחר</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s מספק טעינה מהסוללה (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">שיתוף הסוללה פועל</string>
+  <string name="reverse_charging_title">שיתוף סוללה</string>
   <string name="right_icon">סמל ימני</string>
   <string name="right_keycode">קוד מפתח ימני</string>
   <string name="right_nav_bar_button_type">סוג נוסף של לחצן ימני</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">‏%1$s‏ / %2$s</string>
   <string name="running_foreground_services_msg">אפשר להקיש לקבלת פרטים על צריכה של נתונים וסוללה</string>
   <string name="running_foreground_services_title">אפליקציות שפועלות ברקע</string>
-  <string name="satellite_connected_carrier_text">תקשורת לוויינית למצב חירום</string>
+  <string name="satellite_connected_carrier_text">‏תקשורת לוויינית למצב חירום ב-Pixel</string>
   <string name="save">שמירה</string>
+  <string name="saver_confirmation_dialog_dismiss_text">ביטול</string>
+  <string name="saver_confirmation_dialog_subtitle">בחירת המצב לשימוש</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">כל השינויים שרשומים למעלה כלולים. בנוסף, אפליקציות לא חיוניות וההתראות שלהן יושהו.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">הגבלה של אפקטים חזותיים ופעילות ברקע. הפעלת העיצוב הכהה, אם הוא עדיין לא מופעל.</string>
+  <string name="saver_confirmation_dialog_title">נעים להכיר: מצב חיסכון בסוללה</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">חיסכון משמעותי בסוללה</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">חיסכון סטנדרטי בסוללה</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">צילום המסך מושבת בגלל מדיניות המכשיר</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">‏האפשרות נחסמה על ידי אדמין ב-IT</string>
   <string name="screen_pinning_can_open_other_apps">האפליקציה שהוצמדה עשויה לפתוח אפליקציות אחרות.</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">כדי לבטל את ההצמדה של האפליקציה הזו, יש ללחוץ לחיצה ארוכה על הלחצנים 'הקודם' ו'סקירה'</string>
   <string name="screen_pinning_toast_gesture_nav">לביטול ההצמדה של האפליקציה הזו, יש להחליק למעלה ולהחזיק</string>
   <string name="screen_pinning_toast_recents_invisible">כדי לבטל את ההצמדה של האפליקציה הזו, יש ללחוץ לחיצה ארוכה על הלחצן 'הקודם' והלחצן הראשי</string>
+  <string name="screen_protector_absent_message">השבתת מצב מגן מסך משפרת את הרגישות למגע כשאין על המסך מגן.</string>
+  <string name="screen_protector_disable_notification">השבתת ההתראה</string>
+  <string name="screen_protector_go_to_settings">מעבר להגדרות</string>
+  <string name="screen_protector_got_it">הבנתי</string>
+  <string name="screen_protector_mode_title">מצב מגן מסך</string>
+  <string name="screen_protector_present_message">הפעלת מצב מגן מסך משפרת את הרגישות למגע כשיש על המסך מגן.</string>
   <string name="screen_share_permission_app_selector_title">שיתוף או הקלטה של אפליקציה</string>
   <string name="screen_share_permission_dialog_option_entire_screen">כל המסך</string>
   <string name="screen_share_permission_dialog_option_single_app">אפליקציה אחת</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">צילום המסך נשמר בפרופיל העבודה…</string>
   <string name="screenshot_scroll_label">צילום תוכן נוסף</string>
   <string name="screenshot_share_description">שיתוף של צילום מסך</string>
-  <string name="screenshot_share_label">שיתוף</string>
   <string name="screenshot_text">צילום מסך</string>
   <string name="screenshot_top_boundary_pct">%1$d אחוז מהשוליים העליונים</string>
+  <string name="screenshot_view_description">צפייה בצילום מסך</string>
   <string name="screenshot_work_profile_notification">נשמר באפליקציה %1$s בתוך פרופיל העבודה</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">חיישן טביעות האצבע נמצא על לחצן ההפעלה. זה הלחצן השטוח ליד הלחצן הבולט של עוצמת הקול בשולי הטלפון.</string>
   <string name="see_all_bluetooth_devices">הצגת הכול</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">צריך להגדיר את אפליקציית ברירת המחדל לפתקים ב'הגדרות'</string>
   <string name="settings_label">הגדרות</string>
   <string name="settingslib_learn_more_text">מידע נוסף</string>
+  <string name="severe_battery_notification_switch_text">לעבור למצב 'חיסכון משמעותי בסוללה'? 
+
+הפעולה הזו תשהה את כל האפליקציות הלא חיוניות ואת ההתראות שלהן</string>
+  <string name="severe_battery_notification_text">הפעלת המצב 'חיסכון משמעותי בסוללה'. הפעולה הזו תשהה את כל האפליקציות הלא חיוניות</string>
+  <string name="severe_battery_notification_title">%s נותרו בסוללה</string>
+  <string name="severe_low_battery_dialog_switch_action_text">מעבר</string>
   <string name="share_to_app_stop_dialog_button">הפסקת השיתוף</string>
   <string name="share_to_app_stop_dialog_message_specific_app">‏השיתוף של &lt;b&gt;%1$s&lt;/b&gt; יופסק</string>
   <string name="share_to_app_stop_dialog_title">להפסיק את שיתוף המסך?</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- תהיה לה אפשרות לקרוא מידע מאפליקציית %1$s</string>
   <string name="slice_permission_text_2">- תהיה לה יכולת לנקוט פעולה בתוך %1$s</string>
   <string name="slice_permission_title">האם לאפשר ל-%1$s להציג חלקים מ-%2$s?</string>
+  <string name="smartspace_content_desc">בקצרה</string>
+  <string name="smartspace_flight_qr_code">‏קוד QR</string>
+  <string name="smartspace_role_desc">תצוגה</string>
   <string name="snoozeHourOptions">{count,plural, =1{שעה}=2{שעתיים}one{# שעות}other{# שעות}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{דקה}one{# דקות}two{# דקות}other{# דקות}}</string>
   <string name="snooze_undo">ביטול</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">איטית</string>
   <string name="speed_label_very_fast">מהירה מאוד</string>
   <string name="split_screen_text">מסך מפוצל</string>
+  <string name="squeeze_invocation_prompt">יש ללחוץ משני צדי המכשיר כדי לדבר</string>
+  <string name="standard_battery_saver_text">רגיל</string>
   <string name="start_dreams">שומר מסך</string>
   <string name="state_empty">ריק</string>
   <string name="state_off">מצב מושבת</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">כרטיסייה</string>
   <string name="tap_a_network_to_connect">כדי להתחבר לרשת צריך להקיש עליה</string>
   <string name="tap_again">צריך להקיש פעם נוספת</string>
+  <string name="temp_defender_notify_des">הטעינה תתחדש כשהטלפון יחזור לטמפרטורה רגילה</string>
+  <string name="temp_defender_notify_title">הטעינה הושהתה כדי להגן על הסוללה</string>
   <string name="template_percent">%1$d אחוזים.</string>
   <string name="thermal">תרמי</string>
   <string name="thermal_shutdown_dialog_help_text">לצפייה בשלבי הטיפול</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">קבלת גישה מהירה לווידג'טים של האפליקציות המועדפות עליך בלי לבטל את נעילת הטאבלט.</string>
   <string name="title_usb_accessory">‏אביזר USB</string>
   <string name="to_switch_networks_disconnect_ethernet">כדי לעבור בין רשתות, צריך לנתק את האתרנט</string>
+  <string name="too_hot_label">‏מכשיר ה-Pixel התחמם יותר מדי</string>
   <string name="touch_filtered_warning">יש אפליקציה שמסתירה את בקשת ההרשאה, ולכן אין אפשרות לאמת את התשובה בהגדרות.</string>
   <string name="touchpad_tutorial_action_key_button">מקש הפעולה</string>
   <string name="touchpad_tutorial_back_gesture_button">תנועת חזרה</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">תפריט</string>
   <string name="tuner_minus">מינוס</string>
   <string name="tuner_other_apps">אפליקציות אחרות</string>
+  <string name="tuner_persistent_warning">התכונות הניסיוניות האלה עשויות להשתנות, להתקלקל או להיעלם בגרסאות עתידיות. יש להמשיך בזהירות.</string>
   <string name="tuner_plus">פלוס</string>
   <string name="tuner_right">ימינה</string>
   <string name="tuner_time">שעה</string>
+  <string name="tuner_warning">‏התכונה System UI Tuner מספקת לך דרכים נוספות להתאים אישית את ממשק המשתמש של Android. התכונות הניסיוניות האלה עשויות להשתנות, לא לעבוד כראוי או להיעלם בגרסאות עתידיות. יש להמשיך בזהירות.</string>
+  <string name="tuner_warning_title">מהנה בשביל חלק מהאנשים, אבל לא בשביל כולם</string>
   <string name="turn_off_airplane_mode">השבתה של מצב טיסה</string>
   <string name="turn_on_bluetooth">‏שימוש ב-Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">‏תכונות כמו 'שיתוף מהיר' ו'איפה המכשיר שלי' משתמשות ב-Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">‏חיבור ה-Bluetooth יופעל מחר בבוקר</string>
   <string name="turn_on_bluetooth_auto_tomorrow">הפעלה אוטומטית מחר</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">ברירת המחדל של הטלוויזיה</string>
   <string name="two_weeks_timestamp">לפני שבועיים</string>
   <string name="unknown">לא ידוע</string>
   <string name="unlock_to_see_notif_text">יש לבטל את הנעילה כדי לראות התראות ישנות</string>
@@ -1552,7 +1624,9 @@
   <string name="volume_odi_captions_hint_enable">הפעלה</string>
   <string name="volume_odi_captions_tip">הוספת כתוביות באופן אוטומטי למדיה</string>
   <string name="volume_panel_captioning_title">כתוביות מיידיות</string>
+  <string name="volume_panel_clear_calling_title">שיחה ללא רעשי רקע</string>
   <string name="volume_panel_collapsed_sliders">פסי ההזזה של עוצמת הקול במצב מכווץ</string>
+  <string name="volume_panel_device_settings_title">הגדרות המכשיר</string>
   <string name="volume_panel_dialog_settings_button">הגדרות</string>
   <string name="volume_panel_enter_media_output_settings">הזנה של הגדרות הפלט</string>
   <string name="volume_panel_expanded_sliders">פסי ההזזה של עוצמת הקול במצב מורחב</string>
@@ -1667,10 +1741,13 @@
   <string name="wifitrackerlib_wifi_standard_unknown">לא ידוע</string>
   <string name="wifitrackerlib_wifi_unmetered_label">שימוש חופשי</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">‏ה-Wi-Fi לא יתחבר באופן אוטומטי בינתיים</string>
+  <string name="wireless_charging_label">טעינה אלחוטית</string>
+  <string name="wireless_charging_notification_text">טעינה אלחוטית עשויה לצרוך יותר חשמל מאשר טעינה חוטית. כדי לחסוך בחשמל ובזמן, כדאי להחליף למטען חוטי.</string>
+  <string name="wireless_charging_notification_title">טעינה אלחוטית</string>
   <string name="work_challenge_emergency_button_text">חירום</string>
   <string name="work_mode_off_title">להפעיל את האפליקציות לעבודה?</string>
   <string name="work_mode_turn_on">ביטול ההשהיה</string>
-  <string name="zen_alarm_warning">לא ניתן יהיה לשמוע את ההתראה הבאה שלך %1$s</string>
+  <string name="zen_alarm_warning">לא תושמע ההתראה הבאה %1$s</string>
   <string name="zen_alarm_warning_indef">לא תושמע ההתראה הבאה %1$s, אלא אם ההגדרה הזו תושבת לפני כן</string>
   <string name="zen_mode_enable_dialog_turn_on">הפעלה</string>
   <string name="zen_mode_settings_turn_on_dialog_title">הפעלת מצב נא לא להפריע</string>

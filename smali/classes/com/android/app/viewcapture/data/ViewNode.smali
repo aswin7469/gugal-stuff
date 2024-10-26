@@ -1,6 +1,6 @@
 .class public final Lcom/android/app/viewcapture/data/ViewNode;
 .super Lcom/google/protobuf/GeneratedMessageLite;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -722,92 +722,89 @@
     const-string v7, "left_"
 
     .line 70
-    const-string v8, "top_"
+    const-string/jumbo v8, "top_"
 
     .line 72
     const-string/jumbo v9, "width_"
 
-    .line 74
+    .line 75
     const-string v10, "height_"
 
-    .line 77
+    .line 78
     const-string v11, "scrollX_"
 
-    .line 79
+    .line 80
     const-string v12, "scrollY_"
 
-    .line 81
-    const-string v13, "translationX_"
+    .line 82
+    const-string/jumbo v13, "translationX_"
 
-    .line 83
-    const-string v14, "translationY_"
-
-    .line 85
-    const-string v15, "scaleX_"
+    .line 84
+    const-string/jumbo v14, "translationY_"
 
     .line 87
+    const-string v15, "scaleX_"
+
+    .line 90
     const-string v16, "scaleY_"
 
-    .line 89
+    .line 92
     const-string v17, "alpha_"
 
-    .line 91
+    .line 94
     const-string/jumbo v18, "willNotDraw_"
 
-    .line 93
+    .line 96
     const-string v19, "clipChildren_"
 
-    .line 96
+    .line 99
     const-string/jumbo v20, "visibility_"
 
-    .line 98
+    .line 101
     const-string v21, "elevation_"
 
-    .line 101
+    .line 104
     filled-new-array/range {v1 .. v21}, [Ljava/lang/Object;
 
-    .line 103
+    .line 106
     move-result-object v0
 
-    .line 106
+    .line 109
     const-string v1, "\u0001\u0013\u0000\u0001\u0001\u0013\u0013\u0000\u0001\u0000\u0001\u1004\u0000\u0002\u1004\u0001\u0003\u001b\u0004\u1008\u0002\u0005\u1004\u0003\u0006\u1004\u0004\u0007\u1004\u0005\u0008\u1004\u0006\t\u1004\u0007\n\u1004\u0008\u000b\u1001\t\u000c\u1001\n\r\u1001\u000b\u000e\u1001\u000c\u000f\u1001\r\u0010\u1007\u000e\u0011\u1007\u000f\u0012\u1004\u0010\u0013\u1001\u0011"
 
-    .line 107
+    .line 110
     sget-object v2, Lcom/android/app/viewcapture/data/ViewNode;->DEFAULT_INSTANCE:Lcom/android/app/viewcapture/data/ViewNode;
 
-    .line 109
+    .line 112
     new-instance v3, Lcom/google/protobuf/RawMessageInfo;
 
-    .line 111
+    .line 114
     invoke-direct {v3, v2, v1, v0}, Lcom/google/protobuf/RawMessageInfo;-><init>(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 113
+    .line 116
     return-object v3
 
-    .line 116
+    .line 119
     :pswitch_5
     const/4 v0, 0x0
 
-    .line 117
+    .line 120
     return-object v0
 
-    .line 118
+    .line 121
     :pswitch_6
     const/4 v0, 0x1
 
-    .line 119
+    .line 122
     invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    .line 120
+    .line 123
     move-result-object v0
 
-    .line 123
+    .line 126
     return-object v0
 
-    .line 124
-    nop
-
-    .line 125
+    .line 127
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_6
@@ -818,5 +815,5 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 126
+    .line 128
 .end method

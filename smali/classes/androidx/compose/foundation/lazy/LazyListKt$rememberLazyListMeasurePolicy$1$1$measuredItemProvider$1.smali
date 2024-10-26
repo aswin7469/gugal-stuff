@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/lazy/LazyListKt$rememberLazyListMeasurePolicy$1$1$measuredItemProvider$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/foundation/lazy/layout/LazyLayoutMeasuredItemProvider;
@@ -135,7 +135,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p3, p4}, Landroidx/compose/foundation/lazy/LazyListKt$rememberLazyListMeasurePolicy$1$1$measuredItemProvider$1;->getAndMeasure-0kLqBqw(IJ)Landroidx/compose/foundation/lazy/LazyListMeasuredItem;
+    invoke-virtual {p0, p3, p4, p1}, Landroidx/compose/foundation/lazy/LazyListKt$rememberLazyListMeasurePolicy$1$1$measuredItemProvider$1;->getAndMeasure-0kLqBqw(JI)Landroidx/compose/foundation/lazy/LazyListMeasuredItem;
 
     .line 2
     move-result-object p0
@@ -145,14 +145,14 @@
     .line 6
 .end method
 
-.method public final getAndMeasure-0kLqBqw(IJ)Landroidx/compose/foundation/lazy/LazyListMeasuredItem;
+.method public final getAndMeasure-0kLqBqw(JI)Landroidx/compose/foundation/lazy/LazyListMeasuredItem;
     .locals 20
 
     .line 1
     move-object/from16 v0, p0
 
     .line 2
-    move/from16 v2, p1
+    move/from16 v2, p3
 
     .line 4
     iget-object v1, v0, Landroidx/compose/foundation/lazy/LazyListKt$rememberLazyListMeasurePolicy$1$1$measuredItemProvider$1;->itemProvider:Landroidx/compose/foundation/lazy/LazyListItemProviderImpl;
@@ -179,10 +179,10 @@
     check-cast v1, Landroidx/compose/foundation/lazy/layout/LazyLayoutMeasureScopeImpl;
 
     .line 20
-    move-wide/from16 v11, p2
+    move-wide/from16 v11, p1
 
     .line 22
-    invoke-virtual {v1, v2, v11, v12}, Landroidx/compose/foundation/lazy/layout/LazyLayoutMeasureScopeImpl;->measure-0kLqBqw(IJ)Ljava/util/List;
+    invoke-virtual {v1, v11, v12, v2}, Landroidx/compose/foundation/lazy/layout/LazyLayoutMeasureScopeImpl;->measure-0kLqBqw(JI)Ljava/util/List;
 
     .line 24
     move-result-object v3
@@ -272,7 +272,7 @@
     move-object/from16 v1, v19
 
     .line 76
-    move/from16 v2, p1
+    move/from16 v2, p3
 
     .line 78
     move/from16 v11, v16
@@ -281,7 +281,7 @@
     move-object/from16 v16, v0
 
     .line 82
-    move-wide/from16 v17, p2
+    move-wide/from16 v17, p1
 
     .line 84
     invoke-direct/range {v1 .. v18}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem;-><init>(ILjava/util/List;ZLandroidx/compose/ui/Alignment$Horizontal;Landroidx/compose/ui/Alignment$Vertical;Landroidx/compose/ui/unit/LayoutDirection;ZIIIJLjava/lang/Object;Ljava/lang/Object;Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimator;J)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/usb/StorageNotification;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -241,7 +241,7 @@
     move-result p1
 
     .line 21
-    const v2, 0x1080589    # @android:drawable/ic_screenshot
+    const v2, 0x1080587    # @android:drawable/ic_satellite_alt_24px
 
     .line 22
     if-eqz p1, :cond_0
@@ -260,7 +260,7 @@
     if-eqz p1, :cond_1
 
     .line 32
-    const v2, 0x10805ba    # @android:drawable/ic_usb_48dp
+    const v2, 0x10805b8    # @android:drawable/ic_thermostat
 
     .line 34
     :cond_1
@@ -673,7 +673,7 @@
     move-result-object v1
 
     .line 24
-    const v2, 0x10403b5    # @android:string/face_error_hw_not_available
+    const v2, 0x10403ac    # @android:string/face_acquired_too_low
 
     .line 25
     invoke-virtual {p2, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -697,7 +697,7 @@
     move-result-object v2
 
     .line 41
-    const v3, 0x10403b4    # @android:string/face_error_canceled
+    const v3, 0x10403ab    # @android:string/face_acquired_too_left
 
     .line 42
     invoke-virtual {v1, v3, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -724,7 +724,7 @@
     move-result v3
 
     .line 61
-    const v4, 0x1080589    # @android:drawable/ic_screenshot
+    const v4, 0x1080587    # @android:drawable/ic_satellite_alt_24px
 
     .line 62
     if-eqz v3, :cond_0
@@ -743,7 +743,7 @@
     if-eqz v3, :cond_1
 
     .line 72
-    const v4, 0x10805ba    # @android:drawable/ic_usb_48dp
+    const v4, 0x10805b8    # @android:drawable/ic_thermostat
 
     .line 74
     :cond_1
@@ -1164,7 +1164,7 @@
     move-result-object v2
 
     .line 112
-    const v4, 0x1040391    # @android:string/ext_media_unmountable_notification_title
+    const v4, 0x1040388    # @android:string/ext_media_status_missing
 
     .line 113
     invoke-virtual {v1, v4, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1188,7 +1188,7 @@
     move-result-object v0
 
     .line 129
-    const v4, 0x1040390    # @android:string/ext_media_unmountable_notification_message
+    const v4, 0x1040387    # @android:string/ext_media_status_formatting
 
     .line 130
     invoke-virtual {v2, v4, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1253,7 +1253,7 @@
     move-result-object v2
 
     .line 172
-    const v4, 0x10403a1    # @android:string/face_acquired_recalibrate_alt
+    const v4, 0x1040398    # @android:string/face_acquired_dark_glasses_detected_alt
 
     .line 173
     invoke-virtual {v1, v4, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1277,7 +1277,7 @@
     move-result-object v0
 
     .line 189
-    const v4, 0x10403a0    # @android:string/face_acquired_recalibrate
+    const v4, 0x1040397    # @android:string/face_acquired_dark_glasses_detected
 
     .line 190
     invoke-virtual {v2, v4, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1329,7 +1329,7 @@
     move-result-object v2
 
     .line 224
-    const v4, 0x10403b1    # @android:string/face_authenticated_confirmation_required
+    const v4, 0x10403a8    # @android:string/face_acquired_too_different
 
     .line 225
     invoke-virtual {v1, v4, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1353,7 +1353,7 @@
     move-result-object v0
 
     .line 241
-    const v4, 0x10403b0    # @android:string/face_app_setting_name
+    const v4, 0x10403a7    # @android:string/face_acquired_too_dark
 
     .line 242
     invoke-virtual {v2, v4, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1437,7 +1437,7 @@
     move-result-object v4
 
     .line 295
-    const v5, 0x10403b3    # @android:string/face_dialog_default_subtitle
+    const v5, 0x10403aa    # @android:string/face_acquired_too_high
 
     .line 296
     invoke-virtual {v3, v5, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1461,7 +1461,7 @@
     move-result-object v0
 
     .line 312
-    const v5, 0x10403b2    # @android:string/face_authenticated_no_confirmation_required
+    const v5, 0x10403a9    # @android:string/face_acquired_too_far
 
     .line 313
     invoke-virtual {v4, v5, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1550,10 +1550,10 @@
     move-result v3
 
     .line 371
-    const v4, 0x10403af    # @android:string/face_acquired_too_similar
+    const v4, 0x10403a6    # @android:string/face_acquired_too_close
 
     .line 372
-    const v5, 0x10803f3    # @android:drawable/ic_drag_handle
+    const v5, 0x10803f1    # @android:drawable/ic_doc_video
 
     .line 375
     if-eqz v3, :cond_8
@@ -1607,7 +1607,7 @@
     move-result-object v1
 
     .line 411
-    const v3, 0x104039e    # @android:string/face_acquired_pan_too_extreme
+    const v3, 0x1040395    # @android:string/ext_media_unsupported_notification_title
 
     .line 412
     invoke-virtual {v2, v3, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1689,7 +1689,7 @@
     iget-object v6, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
     .line 465
-    const v7, 0x1040395    # @android:string/ext_media_unsupported_notification_title
+    const v7, 0x104038c    # @android:string/ext_media_status_unmountable
 
     .line 467
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1698,7 +1698,7 @@
     move-result-object v6
 
     .line 473
-    const v7, 0x108058f    # @android:drawable/ic_search_api_material
+    const v7, 0x108058d    # @android:drawable/ic_search_api_holo_dark
 
     .line 474
     invoke-direct {v1, v7, v6, v2}, Landroid/app/Notification$Action;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
@@ -1786,7 +1786,7 @@
     move-result-object v3
 
     .line 534
-    const v6, 0x10403a2    # @android:string/face_acquired_roll_too_extreme
+    const v6, 0x1040399    # @android:string/face_acquired_insufficient
 
     .line 535
     invoke-virtual {v2, v6, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1861,7 +1861,7 @@
     iget-object v3, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
     .line 582
-    const v7, 0x1040392    # @android:string/ext_media_unmounting_notification_message
+    const v7, 0x1040389    # @android:string/ext_media_status_mounted
 
     .line 584
     invoke-virtual {v3, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1870,7 +1870,7 @@
     move-result-object v3
 
     .line 590
-    const v7, 0x108040a    # @android:drawable/ic_find_previous_mtrl_alpha
+    const v7, 0x1080408    # @android:drawable/ic_find_previous_holo_light
 
     .line 591
     invoke-direct {v2, v7, v3, v6}, Landroid/app/Notification$Action;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
@@ -1990,7 +1990,7 @@
     move-result-object v4
 
     .line 670
-    const v5, 0x1040394    # @android:string/ext_media_unsupported_notification_message
+    const v5, 0x104038b    # @android:string/ext_media_status_removed
 
     .line 671
     invoke-virtual {v3, v5, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -2014,7 +2014,7 @@
     move-result-object v0
 
     .line 687
-    const v5, 0x1040393    # @android:string/ext_media_unmounting_notification_title
+    const v5, 0x104038a    # @android:string/ext_media_status_mounted_ro
 
     .line 688
     invoke-virtual {v4, v5, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -2311,6 +2311,7 @@
 
     .line 119
     return-void
+    .line 122
 .end method
 
 .method public final updateMissingPrivateVolumes()V
@@ -2458,7 +2459,7 @@
     move-result-object v6
 
     .line 90
-    const v7, 0x1040397    # @android:string/face_acquired_dark_glasses_detected
+    const v7, 0x104038e    # @android:string/ext_media_status_unsupported
 
     .line 91
     invoke-virtual {v4, v7, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -2470,7 +2471,7 @@
     iget-object v6, p0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
     .line 98
-    const v7, 0x1040396    # @android:string/extract_edit_menu_button
+    const v7, 0x104038d    # @android:string/ext_media_status_unmounted
 
     .line 100
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2491,7 +2492,7 @@
     invoke-direct {v7, v8, v9}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 113
-    const v8, 0x1080589    # @android:drawable/ic_screenshot
+    const v8, 0x1080587    # @android:drawable/ic_satellite_alt_24px
 
     .line 116
     invoke-virtual {v7, v8}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;

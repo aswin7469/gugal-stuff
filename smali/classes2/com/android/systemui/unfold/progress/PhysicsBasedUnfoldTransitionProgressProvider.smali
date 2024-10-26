@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/unfold/progress/PhysicsBasedUnfoldTransitionProgressProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/unfold/UnfoldTransitionProgressProvider;
@@ -13,7 +13,7 @@
 
 .field public final emphasizedInterpolator:Landroid/view/animation/Interpolator;
 
-.field public final foldStateProvider:Lcom/android/systemui/unfold/updates/FoldStateProvider;
+.field public final foldStateProvider:Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;
 
 .field public isAnimatedCancelRunning:Z
 
@@ -23,7 +23,7 @@
 
 .field public final progressHandler:Landroid/os/Handler;
 
-.field public final schedulerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceGlobalRootComponentImpl$SwitchingProvider$4;
+.field public final schedulerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl$SwitchingProvider$4;
 
 .field public final springAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -31,17 +31,17 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceGlobalRootComponentImpl$SwitchingProvider$4;Lcom/android/systemui/unfold/updates/FoldStateProvider;Landroid/os/Handler;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl$SwitchingProvider$4;Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;Landroid/os/Handler;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p2, p0, Lcom/android/systemui/unfold/progress/PhysicsBasedUnfoldTransitionProgressProvider;->schedulerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceGlobalRootComponentImpl$SwitchingProvider$4;
+    iput-object p2, p0, Lcom/android/systemui/unfold/progress/PhysicsBasedUnfoldTransitionProgressProvider;->schedulerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl$SwitchingProvider$4;
 
     .line 5
-    iput-object p3, p0, Lcom/android/systemui/unfold/progress/PhysicsBasedUnfoldTransitionProgressProvider;->foldStateProvider:Lcom/android/systemui/unfold/updates/FoldStateProvider;
+    iput-object p3, p0, Lcom/android/systemui/unfold/progress/PhysicsBasedUnfoldTransitionProgressProvider;->foldStateProvider:Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;
 
     .line 7
     iput-object p4, p0, Lcom/android/systemui/unfold/progress/PhysicsBasedUnfoldTransitionProgressProvider;->progressHandler:Landroid/os/Handler;
@@ -767,77 +767,74 @@
     invoke-virtual {p0, v0}, Lcom/android/systemui/unfold/progress/PhysicsBasedUnfoldTransitionProgressProvider;->startTransition(F)V
 
     .line 3
-    iget-object v0, p0, Lcom/android/systemui/unfold/progress/PhysicsBasedUnfoldTransitionProgressProvider;->foldStateProvider:Lcom/android/systemui/unfold/updates/FoldStateProvider;
+    iget-object v0, p0, Lcom/android/systemui/unfold/progress/PhysicsBasedUnfoldTransitionProgressProvider;->foldStateProvider:Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;
 
     .line 6
-    check-cast v0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;
-
-    .line 8
     iget-boolean v1, v0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->isFolded:Z
 
-    .line 10
+    .line 8
     if-nez v1, :cond_3
 
-    .line 12
+    .line 10
     iget-object v1, v0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->lastFoldUpdate:Ljava/lang/Integer;
 
-    .line 14
+    .line 12
     if-nez v1, :cond_0
 
-    .line 16
+    .line 14
     goto :goto_0
 
-    .line 18
+    .line 16
     :cond_0
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    .line 19
+    .line 17
     move-result v1
 
-    .line 22
+    .line 20
     const/4 v2, 0x3
 
-    .line 23
+    .line 21
     if-eq v1, v2, :cond_2
 
-    .line 24
+    .line 22
     :goto_0
     iget-object v0, v0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->lastFoldUpdate:Ljava/lang/Integer;
 
-    .line 26
+    .line 24
     if-nez v0, :cond_1
 
-    .line 28
+    .line 26
     goto :goto_1
 
-    .line 30
+    .line 28
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    .line 31
+    .line 29
     move-result v0
 
-    .line 34
+    .line 32
     const/4 v1, 0x2
 
-    .line 35
+    .line 33
     if-ne v0, v1, :cond_3
 
-    .line 36
+    .line 34
     :cond_2
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 38
+    .line 36
     const/4 v1, 0x1
 
-    .line 40
+    .line 38
     invoke-virtual {p0, v0, v1}, Lcom/android/systemui/unfold/progress/PhysicsBasedUnfoldTransitionProgressProvider;->cancelTransition(FZ)V
 
-    .line 41
+    .line 39
     :cond_3
     :goto_1
     return-void
-    .line 44
+    .line 42
 .end method
 
 .method public final removeCallback(Ljava/lang/Object;)V
@@ -918,6 +915,7 @@
 
     .line 31
     return-void
+    .line 33
 .end method
 
 .method public final startTransition(F)V
@@ -1048,4 +1046,5 @@
 
     .line 85
     return-void
+    .line 88
 .end method

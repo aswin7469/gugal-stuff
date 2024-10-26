@@ -1,6 +1,6 @@
 .class public Lcom/google/android/systemui/smartspace/BcSmartspaceCardLoyalty;
 .super Lcom/google/android/systemui/smartspace/BcSmartspaceCardGenericImage;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -39,7 +39,7 @@
     invoke-super {p0}, Lcom/google/android/systemui/smartspace/BcSmartspaceCardGenericImage;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b045e    # @id/loyalty_program_logo
+    const v0, 0x7f0a0482    # @id/loyalty_program_logo
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -54,7 +54,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardLoyalty;->mLoyaltyProgramLogoView:Landroid/widget/ImageView;
 
     .line 14
-    const v0, 0x7f0b045f    # @id/loyalty_program_name
+    const v0, 0x7f0a0483    # @id/loyalty_program_name
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -69,7 +69,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardLoyalty;->mLoyaltyProgramNameView:Landroid/widget/TextView;
 
     .line 25
-    const v0, 0x7f0b01ad    # @id/card_prompt
+    const v0, 0x7f0a01b3    # @id/card_prompt
 
     .line 27
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -176,155 +176,155 @@
     const/4 p2, 0x0
 
     .line 17
-    if-nez p1, :cond_1
+    if-eqz p1, :cond_8
 
     .line 18
-    return p2
-
-    .line 20
-    :cond_1
     const-string p3, "imageBitmap"
 
-    .line 21
+    .line 20
     invoke-virtual {p1, p3}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    .line 23
+    .line 22
     move-result p3
 
-    .line 26
+    .line 25
     const-string v0, "cardPrompt"
 
-    .line 27
+    .line 26
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    .line 29
+    .line 28
     move-result v1
 
+    .line 31
+    const/4 v2, 0x1
+
     .line 32
-    const-string v2, "BcSmartspaceCardLoyalty"
+    const-string v3, "BcSmartspaceCardLoyalty"
 
     .line 33
-    const/4 v3, 0x1
+    if-eqz v1, :cond_3
 
     .line 35
-    if-eqz v1, :cond_4
-
-    .line 36
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 38
+    .line 37
     move-result-object p1
 
-    .line 41
+    .line 40
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardLoyalty;->mCardPromptView:Landroid/widget/TextView;
 
-    .line 42
-    if-nez v0, :cond_2
+    .line 41
+    if-nez v0, :cond_1
 
-    .line 44
+    .line 43
     const-string p1, "No card prompt view to update"
 
-    .line 46
-    invoke-static {v2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    .line 45
+    invoke-static {v3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
+    .line 47
     goto :goto_1
 
-    .line 51
-    :cond_2
+    .line 50
+    :cond_1
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 52
+    .line 51
     :goto_1
     iget-object p1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardLoyalty;->mCardPromptView:Landroid/widget/TextView;
 
-    .line 55
+    .line 54
     invoke-static {p1, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 57
-    if-eqz p3, :cond_3
+    .line 56
+    if-eqz p3, :cond_2
 
-    .line 60
+    .line 59
     iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardGenericImage;->mImageView:Landroid/widget/ImageView;
 
-    .line 62
+    .line 61
     invoke-static {p0, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 64
-    :cond_3
-    return v3
+    .line 63
+    :cond_2
+    return v2
 
-    .line 67
-    :cond_4
+    .line 66
+    :cond_3
     const-string v0, "loyaltyProgramName"
 
-    .line 68
+    .line 67
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    .line 70
+    .line 69
     move-result v1
 
-    .line 73
-    if-eqz v1, :cond_7
+    .line 72
+    if-eqz v1, :cond_6
 
-    .line 74
+    .line 73
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 76
+    .line 75
     move-result-object p1
 
-    .line 79
+    .line 78
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardLoyalty;->mLoyaltyProgramNameView:Landroid/widget/TextView;
 
-    .line 80
-    if-nez v0, :cond_5
+    .line 79
+    if-nez v0, :cond_4
 
-    .line 82
+    .line 81
     const-string p1, "No loyalty program name view to update"
 
-    .line 84
-    invoke-static {v2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    .line 83
+    invoke-static {v3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
+    .line 85
     goto :goto_2
 
-    .line 89
-    :cond_5
+    .line 88
+    :cond_4
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 90
+    .line 89
     :goto_2
     iget-object p1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardLoyalty;->mLoyaltyProgramNameView:Landroid/widget/TextView;
 
-    .line 93
+    .line 92
     invoke-static {p1, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 95
-    if-eqz p3, :cond_6
+    .line 94
+    if-eqz p3, :cond_5
 
-    .line 98
+    .line 97
     iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardLoyalty;->mLoyaltyProgramLogoView:Landroid/widget/ImageView;
 
-    .line 100
+    .line 99
     invoke-static {p0, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 102
+    .line 101
+    :cond_5
+    return v2
+
+    .line 104
     :cond_6
-    return v3
+    if-eqz p3, :cond_7
 
     .line 105
-    :cond_7
-    if-eqz p3, :cond_8
-
-    .line 106
     iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardLoyalty;->mLoyaltyProgramLogoView:Landroid/widget/ImageView;
 
-    .line 108
+    .line 107
     invoke-static {p0, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 110
-    :cond_8
+    .line 109
+    :cond_7
     return p3
+
+    .line 112
+    :cond_8
+    return p2
     .line 113
 .end method
 

@@ -1,6 +1,6 @@
 .class public abstract Landroidx/core/view/ViewCompat;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -47,40 +47,331 @@
     .line 19
     :array_0
     .array-data 4
-        0x7f0b0030    # @id/accessibility_custom_action_0
-        0x7f0b0031    # @id/accessibility_custom_action_1
-        0x7f0b003c    # @id/accessibility_custom_action_2
-        0x7f0b0047    # @id/accessibility_custom_action_3
-        0x7f0b004a    # @id/accessibility_custom_action_4
-        0x7f0b004b    # @id/accessibility_custom_action_5
-        0x7f0b004c    # @id/accessibility_custom_action_6
-        0x7f0b004d    # @id/accessibility_custom_action_7
-        0x7f0b004e    # @id/accessibility_custom_action_8
-        0x7f0b004f    # @id/accessibility_custom_action_9
-        0x7f0b0032    # @id/accessibility_custom_action_10
-        0x7f0b0033    # @id/accessibility_custom_action_11
-        0x7f0b0034    # @id/accessibility_custom_action_12
-        0x7f0b0035    # @id/accessibility_custom_action_13
-        0x7f0b0036    # @id/accessibility_custom_action_14
-        0x7f0b0037    # @id/accessibility_custom_action_15
-        0x7f0b0038    # @id/accessibility_custom_action_16
-        0x7f0b0039    # @id/accessibility_custom_action_17
-        0x7f0b003a    # @id/accessibility_custom_action_18
-        0x7f0b003b    # @id/accessibility_custom_action_19
-        0x7f0b003d    # @id/accessibility_custom_action_20
-        0x7f0b003e    # @id/accessibility_custom_action_21
-        0x7f0b003f    # @id/accessibility_custom_action_22
-        0x7f0b0040    # @id/accessibility_custom_action_23
-        0x7f0b0041    # @id/accessibility_custom_action_24
-        0x7f0b0042    # @id/accessibility_custom_action_25
-        0x7f0b0043    # @id/accessibility_custom_action_26
-        0x7f0b0044    # @id/accessibility_custom_action_27
-        0x7f0b0045    # @id/accessibility_custom_action_28
-        0x7f0b0046    # @id/accessibility_custom_action_29
-        0x7f0b0048    # @id/accessibility_custom_action_30
-        0x7f0b0049    # @id/accessibility_custom_action_31
+        0x7f0a0030    # @id/accessibility_custom_action_0
+        0x7f0a0031    # @id/accessibility_custom_action_1
+        0x7f0a003c    # @id/accessibility_custom_action_2
+        0x7f0a0047    # @id/accessibility_custom_action_3
+        0x7f0a004a    # @id/accessibility_custom_action_4
+        0x7f0a004b    # @id/accessibility_custom_action_5
+        0x7f0a004c    # @id/accessibility_custom_action_6
+        0x7f0a004d    # @id/accessibility_custom_action_7
+        0x7f0a004e    # @id/accessibility_custom_action_8
+        0x7f0a004f    # @id/accessibility_custom_action_9
+        0x7f0a0032    # @id/accessibility_custom_action_10
+        0x7f0a0033    # @id/accessibility_custom_action_11
+        0x7f0a0034    # @id/accessibility_custom_action_12
+        0x7f0a0035    # @id/accessibility_custom_action_13
+        0x7f0a0036    # @id/accessibility_custom_action_14
+        0x7f0a0037    # @id/accessibility_custom_action_15
+        0x7f0a0038    # @id/accessibility_custom_action_16
+        0x7f0a0039    # @id/accessibility_custom_action_17
+        0x7f0a003a    # @id/accessibility_custom_action_18
+        0x7f0a003b    # @id/accessibility_custom_action_19
+        0x7f0a003d    # @id/accessibility_custom_action_20
+        0x7f0a003e    # @id/accessibility_custom_action_21
+        0x7f0a003f    # @id/accessibility_custom_action_22
+        0x7f0a0040    # @id/accessibility_custom_action_23
+        0x7f0a0041    # @id/accessibility_custom_action_24
+        0x7f0a0042    # @id/accessibility_custom_action_25
+        0x7f0a0043    # @id/accessibility_custom_action_26
+        0x7f0a0044    # @id/accessibility_custom_action_27
+        0x7f0a0045    # @id/accessibility_custom_action_28
+        0x7f0a0046    # @id/accessibility_custom_action_29
+        0x7f0a0048    # @id/accessibility_custom_action_30
+        0x7f0a0049    # @id/accessibility_custom_action_31
     .end array-data
     .line 20
+.end method
+
+.method public static addAccessibilityAction(Landroid/view/View;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)I
+    .locals 11
+
+    .line 1
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getActionList(Landroid/view/View;)Ljava/util/List;
+
+    .line 2
+    move-result-object v0
+
+    .line 5
+    const/4 v1, 0x0
+
+    .line 6
+    move v2, v1
+
+    .line 7
+    :goto_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    .line 8
+    move-result v3
+
+    .line 11
+    const/4 v4, -0x1
+
+    .line 12
+    if-ge v2, v3, :cond_1
+
+    .line 13
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 15
+    move-result-object v3
+
+    .line 18
+    check-cast v3, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+
+    .line 19
+    iget-object v3, v3, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->mAction:Ljava/lang/Object;
+
+    .line 21
+    check-cast v3, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+
+    .line 23
+    invoke-virtual {v3}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getLabel()Ljava/lang/CharSequence;
+
+    .line 25
+    move-result-object v3
+
+    .line 28
+    invoke-static {p1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    .line 29
+    move-result v3
+
+    .line 32
+    if-eqz v3, :cond_0
+
+    .line 33
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 35
+    move-result-object v0
+
+    .line 38
+    check-cast v0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+
+    .line 39
+    invoke-virtual {v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getId()I
+
+    .line 41
+    move-result v0
+
+    .line 44
+    goto :goto_4
+
+    .line 45
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    .line 46
+    goto :goto_0
+
+    .line 48
+    :cond_1
+    move v3, v1
+
+    .line 49
+    move v2, v4
+
+    .line 50
+    :goto_1
+    const/16 v5, 0x20
+
+    .line 51
+    if-ge v3, v5, :cond_5
+
+    .line 53
+    if-ne v2, v4, :cond_5
+
+    .line 55
+    sget-object v5, Landroidx/core/view/ViewCompat;->ACCESSIBILITY_ACTIONS_RESOURCE_IDS:[I
+
+    .line 57
+    aget v5, v5, v3
+
+    .line 59
+    const/4 v6, 0x1
+
+    .line 61
+    move v7, v1
+
+    .line 62
+    move v8, v6
+
+    .line 63
+    :goto_2
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    .line 64
+    move-result v9
+
+    .line 67
+    if-ge v7, v9, :cond_3
+
+    .line 68
+    invoke-interface {v0, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 70
+    move-result-object v9
+
+    .line 73
+    check-cast v9, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+
+    .line 74
+    invoke-virtual {v9}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getId()I
+
+    .line 76
+    move-result v9
+
+    .line 79
+    if-eq v9, v5, :cond_2
+
+    .line 80
+    move v9, v6
+
+    .line 82
+    goto :goto_3
+
+    .line 83
+    :cond_2
+    move v9, v1
+
+    .line 84
+    :goto_3
+    and-int/2addr v8, v9
+
+    .line 85
+    add-int/lit8 v7, v7, 0x1
+
+    .line 86
+    goto :goto_2
+
+    .line 88
+    :cond_3
+    if-eqz v8, :cond_4
+
+    .line 89
+    move v2, v5
+
+    .line 91
+    :cond_4
+    add-int/lit8 v3, v3, 0x1
+
+    .line 92
+    goto :goto_1
+
+    .line 94
+    :cond_5
+    move v0, v2
+
+    .line 95
+    :goto_4
+    if-eq v0, v4, :cond_9
+
+    .line 96
+    new-instance v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+
+    .line 98
+    const/4 v6, 0x0
+
+    .line 100
+    const/4 v10, 0x0
+
+    .line 101
+    move-object v5, v2
+
+    .line 102
+    move v7, v0
+
+    .line 103
+    move-object v8, p1
+
+    .line 104
+    move-object v9, p2
+
+    .line 105
+    invoke-direct/range {v5 .. v10}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(Ljava/lang/Object;ILjava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;Ljava/lang/Class;)V
+
+    .line 106
+    invoke-static {p0}, Landroidx/core/view/ViewCompat$Api29Impl;->getAccessibilityDelegate(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
+
+    .line 109
+    move-result-object p1
+
+    .line 112
+    if-nez p1, :cond_6
+
+    .line 113
+    const/4 p1, 0x0
+
+    .line 115
+    goto :goto_5
+
+    .line 116
+    :cond_6
+    instance-of p2, p1, Landroidx/core/view/AccessibilityDelegateCompat$AccessibilityDelegateAdapter;
+
+    .line 117
+    if-eqz p2, :cond_7
+
+    .line 119
+    check-cast p1, Landroidx/core/view/AccessibilityDelegateCompat$AccessibilityDelegateAdapter;
+
+    .line 121
+    iget-object p1, p1, Landroidx/core/view/AccessibilityDelegateCompat$AccessibilityDelegateAdapter;->mCompat:Landroidx/core/view/AccessibilityDelegateCompat;
+
+    .line 123
+    goto :goto_5
+
+    .line 125
+    :cond_7
+    new-instance p2, Landroidx/core/view/AccessibilityDelegateCompat;
+
+    .line 126
+    invoke-direct {p2, p1}, Landroidx/core/view/AccessibilityDelegateCompat;-><init>(Landroid/view/View$AccessibilityDelegate;)V
+
+    .line 128
+    move-object p1, p2
+
+    .line 131
+    :goto_5
+    if-nez p1, :cond_8
+
+    .line 132
+    new-instance p1, Landroidx/core/view/AccessibilityDelegateCompat;
+
+    .line 134
+    invoke-direct {p1}, Landroidx/core/view/AccessibilityDelegateCompat;-><init>()V
+
+    .line 136
+    :cond_8
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
+
+    .line 139
+    invoke-virtual {v2}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getId()I
+
+    .line 142
+    move-result p1
+
+    .line 145
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->removeActionWithId(Landroid/view/View;I)V
+
+    .line 146
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->getActionList(Landroid/view/View;)Ljava/util/List;
+
+    .line 149
+    move-result-object p1
+
+    .line 152
+    invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 153
+    invoke-static {p0, v1}, Landroidx/core/view/ViewCompat;->notifyViewAccessibilityStateChangedIfNeeded(Landroid/view/View;I)V
+
+    .line 156
+    :cond_9
+    return v0
+    .line 159
 .end method
 
 .method public static animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
@@ -201,7 +492,7 @@
     .locals 2
 
     .line 1
-    const v0, 0x7f0b07c5    # @id/tag_accessibility_actions
+    const v0, 0x7f0a07f4    # @id/tag_accessibility_actions
 
     .line 2
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -812,7 +1103,7 @@
     const/16 v4, 0x1c
 
     .line 6
-    const v1, 0x7f0b07c8    # @id/tag_accessibility_pane_title
+    const v1, 0x7f0a07f7    # @id/tag_accessibility_pane_title
 
     .line 8
     const/16 v3, 0x8

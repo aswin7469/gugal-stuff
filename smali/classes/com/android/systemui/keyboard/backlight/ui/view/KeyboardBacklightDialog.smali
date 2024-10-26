@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyboard/backlight/ui/view/KeyboardBacklightDialog;
 .super Landroid/app/Dialog;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -96,7 +96,7 @@
     .locals 2
 
     .line 1
-    const v0, 0x7f1504be    # @style/Theme.SystemUI.Dialog
+    const v0, 0x7f1404c6    # @style/Theme.SystemUI.Dialog
 
     .line 2
     invoke-direct {p0, p3, v0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
@@ -189,7 +189,7 @@
     iput v0, p0, Lcom/android/systemui/keyboard/backlight/ui/view/KeyboardBacklightDialog;->dimmedIconBackgroundColor:I
 
     .line 70
-    const v0, 0x7f14044a    # @string/keyboard_backlight_value 'Level %1$d of %2$d'
+    const v0, 0x7f130494    # @string/keyboard_backlight_value 'Level %1$d of %2$d'
 
     .line 72
     invoke-virtual {p3, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -208,7 +208,6 @@
 
     .line 83
     return-void
-    .line 85
 .end method
 
 .method public static updateColor(Landroid/graphics/drawable/ShapeDrawable;I)V
@@ -386,7 +385,7 @@
     move-result-object v2
 
     .line 83
-    const v3, 0x7f140449    # @string/keyboard_backlight_dialog_title 'Keyboard backlight'
+    const v3, 0x7f130493    # @string/keyboard_backlight_dialog_title 'Keyboard backlight'
 
     .line 84
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -414,7 +413,7 @@
     new-instance v2, Lcom/android/systemui/keyboard/backlight/ui/view/KeyboardBacklightDialog$RootProperties;
 
     .line 102
-    const v3, 0x7f0700a8    # @dimen/backlight_indicator_root_corner_radius '48.0dp'
+    const v3, 0x7f0700ae    # @dimen/backlight_indicator_root_corner_radius '48.0dp'
 
     .line 104
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -426,7 +425,7 @@
     int-to-float v3, v3
 
     .line 111
-    const v4, 0x7f0700aa    # @dimen/backlight_indicator_root_vertical_padding '8.0dp'
+    const v4, 0x7f0700b0    # @dimen/backlight_indicator_root_vertical_padding '8.0dp'
 
     .line 112
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -435,7 +434,7 @@
     move-result v4
 
     .line 118
-    const v5, 0x7f0700a9    # @dimen/backlight_indicator_root_horizontal_padding '6.0dp'
+    const v5, 0x7f0700af    # @dimen/backlight_indicator_root_horizontal_padding '6.0dp'
 
     .line 119
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -453,7 +452,7 @@
     new-instance v2, Lcom/android/systemui/keyboard/backlight/ui/view/KeyboardBacklightDialog$BacklightIconProperties;
 
     .line 131
-    const v3, 0x7f0700a7    # @dimen/backlight_indicator_icon_width '22.0dp'
+    const v3, 0x7f0700ad    # @dimen/backlight_indicator_icon_width '22.0dp'
 
     .line 133
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -462,7 +461,7 @@
     move-result v3
 
     .line 139
-    const v4, 0x7f0700a5    # @dimen/backlight_indicator_icon_height '11.0dp'
+    const v4, 0x7f0700ab    # @dimen/backlight_indicator_icon_height '11.0dp'
 
     .line 140
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -471,7 +470,7 @@
     move-result v4
 
     .line 146
-    const v5, 0x7f0700a6    # @dimen/backlight_indicator_icon_padding '10.0dp'
+    const v5, 0x7f0700ac    # @dimen/backlight_indicator_icon_padding '10.0dp'
 
     .line 147
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -489,7 +488,7 @@
     new-instance v2, Lcom/android/systemui/keyboard/backlight/ui/view/KeyboardBacklightDialog$StepViewProperties;
 
     .line 159
-    const v3, 0x7f0700af    # @dimen/backlight_indicator_step_width '52.0dp'
+    const v3, 0x7f0700b5    # @dimen/backlight_indicator_step_width '52.0dp'
 
     .line 161
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -498,7 +497,7 @@
     move-result v7
 
     .line 167
-    const v3, 0x7f0700ab    # @dimen/backlight_indicator_step_height '40.0dp'
+    const v3, 0x7f0700b1    # @dimen/backlight_indicator_step_height '40.0dp'
 
     .line 168
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -507,7 +506,7 @@
     move-result v8
 
     .line 174
-    const v3, 0x7f0700ac    # @dimen/backlight_indicator_step_horizontal_margin '2.0dp'
+    const v3, 0x7f0700b2    # @dimen/backlight_indicator_step_horizontal_margin '2.0dp'
 
     .line 175
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -516,7 +515,7 @@
     move-result v9
 
     .line 181
-    const v3, 0x7f0700ae    # @dimen/backlight_indicator_step_small_radius '4.0dp'
+    const v3, 0x7f0700b4    # @dimen/backlight_indicator_step_small_radius '4.0dp'
 
     .line 182
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -528,7 +527,7 @@
     int-to-float v10, v3
 
     .line 189
-    const v3, 0x7f0700ad    # @dimen/backlight_indicator_step_large_radius '28.0dp'
+    const v3, 0x7f0700b3    # @dimen/backlight_indicator_step_large_radius '28.0dp'
 
     .line 190
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -561,7 +560,7 @@
     invoke-direct {v1, v2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     .line 210
-    const v2, 0x7f0b03c2    # @id/keyboard_backlight_dialog_container
+    const v2, 0x7f0a03e3    # @id/keyboard_backlight_dialog_container
 
     .line 213
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setId(I)V
@@ -753,7 +752,7 @@
     const/4 v3, 0x4
 
     .line 8
-    const v4, 0x7f0b00f8    # @id/backlight_icon
+    const v4, 0x7f0a00fc    # @id/backlight_icon
 
     .line 9
     const/4 v5, 0x1
@@ -849,7 +848,7 @@
     invoke-direct {v8, v9}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     .line 67
-    const v9, 0x7f0807f3    # @drawable/ic_keyboard_backlight 'res/drawable/ic_keyboard_backlight.xml'
+    const v9, 0x7f080815    # @drawable/ic_keyboard_backlight 'res/drawable/ic_keyboard_backlight.xml'
 
     .line 70
     invoke-virtual {v8, v9}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -1196,7 +1195,7 @@
     invoke-interface {v2, v8}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     .line 279
-    const v4, 0x7f0b00f8    # @id/backlight_icon
+    const v4, 0x7f0a00fc    # @id/backlight_icon
 
     .line 282
     const/4 v11, 0x0
@@ -1261,7 +1260,7 @@
 
     .line 319
     :cond_13
-    const v2, 0x7f0b00f8    # @id/backlight_icon
+    const v2, 0x7f0a00fc    # @id/backlight_icon
 
     .line 320
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/startingsurface/SplashscreenIconDrawableFactory$MaskBackgroundDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -29,7 +29,7 @@
     move-result-object v0
 
     .line 8
-    const v1, 0x1040279    # @android:string/config_oem_enabled_satellite_s2cell_file
+    const v1, 0x1040272    # @android:string/config_mobile_hotspot_provision_app_no_ui
 
     .line 9
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

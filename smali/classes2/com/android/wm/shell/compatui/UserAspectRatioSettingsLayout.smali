@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/compatui/UserAspectRatioSettingsLayout;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -100,7 +100,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b0886    # @id/user_aspect_ratio_settings_button
+    const v0, 0x7f0a08b9    # @id/user_aspect_ratio_settings_button
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -133,7 +133,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 28
-    const v0, 0x7f0b0887    # @id/user_aspect_ratio_settings_hint
+    const v0, 0x7f0a08ba    # @id/user_aspect_ratio_settings_hint
 
     .line 31
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -145,7 +145,7 @@
     check-cast v0, Landroid/widget/LinearLayout;
 
     .line 38
-    const v1, 0x7f0b01e8    # @id/compat_mode_hint_text
+    const v1, 0x7f0a01f3    # @id/compat_mode_hint_text
 
     .line 40
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -157,7 +157,7 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 47
-    const v2, 0x7f1409e2    # @string/user_aspect_ratio_settings_button_hint 'Change this app's aspect ratio in Settings'
+    const v2, 0x7f130a6b    # @string/user_aspect_ratio_settings_button_hint 'Change this app's aspect ratio in Settings'
 
     .line 49
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V

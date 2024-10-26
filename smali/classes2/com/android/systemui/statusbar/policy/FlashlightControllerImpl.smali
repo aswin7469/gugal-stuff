@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/FlashlightControllerImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/CallbackController;
@@ -205,7 +205,7 @@
     :try_start_1
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/policy/FlashlightControllerImpl;->mTorchAvailable:Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 42
     :try_start_2
@@ -215,22 +215,13 @@
     invoke-interface {p1, v1}, Lcom/android/systemui/statusbar/policy/FlashlightController$FlashlightListener;->onFlashlightAvailabilityChanged(Z)V
 
     .line 45
-    monitor-enter p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/FlashlightControllerImpl;->isEnabled()Z
 
     .line 48
-    :try_start_3
-    iget-boolean v1, p0, Lcom/android/systemui/statusbar/policy/FlashlightControllerImpl;->mFlashlightEnabled:Z
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 49
-    :try_start_4
-    monitor-exit p0
+    move-result p0
 
     .line 51
-    invoke-interface {p1, v1}, Lcom/android/systemui/statusbar/policy/FlashlightController$FlashlightListener;->onFlashlightChanged(Z)V
+    invoke-interface {p1, p0}, Lcom/android/systemui/statusbar/policy/FlashlightController$FlashlightListener;->onFlashlightChanged(Z)V
 
     .line 52
     monitor-exit v0
@@ -249,24 +240,14 @@
     throw p1
 
     .line 59
-    :catchall_2
-    move-exception p1
-
-    .line 60
-    monitor-exit p0
-
-    .line 61
-    throw p1
-
-    .line 62
     :goto_1
     monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 63
+    .line 60
     throw p0
-    .line 64
+    .line 61
 .end method
 
 .method public final cleanUpListenersLocked(Lcom/android/systemui/statusbar/policy/FlashlightController$FlashlightListener;)V
@@ -521,6 +502,36 @@
     .line 34
     return-void
     .line 37
+.end method
+
+.method public final declared-synchronized isEnabled()Z
+    .locals 1
+
+    .line 1
+    monitor-enter p0
+
+    .line 2
+    :try_start_0
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/FlashlightControllerImpl;->mFlashlightEnabled:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 3
+    monitor-exit p0
+
+    .line 5
+    return v0
+
+    .line 6
+    :catchall_0
+    move-exception v0
+
+    .line 7
+    monitor-exit p0
+
+    .line 8
+    throw v0
+    .line 9
 .end method
 
 .method public final removeCallback(Ljava/lang/Object;)V

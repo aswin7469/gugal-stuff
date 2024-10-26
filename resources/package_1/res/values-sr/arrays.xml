@@ -5,7 +5,9 @@
     <item>Прикажи проценат током пуњења (подразумевано)</item>
     <item>Не приказуј ову икону</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Прикажи сате, минуте и секунде</item>
     <item>Прикажи сате и минуте (подразумевано)</item>

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$IntentStarter;
@@ -111,32 +111,84 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;->this$0:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->activityStarter:Lcom/android/systemui/plugins/ActivityStarter;
+    if-eqz p3, :cond_0
 
     .line 4
-    const/4 p1, 0x0
+    iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->activityStarter:Lcom/android/systemui/plugins/ActivityStarter;
 
     .line 6
+    const/4 p1, 0x0
+
+    .line 8
+    const/4 p3, 0x1
+
+    .line 9
+    invoke-interface {p0, p2, p3, p1, p3}, Lcom/android/systemui/plugins/ActivityStarter;->startActivity(Landroid/content/Intent;ZLcom/android/systemui/animation/ActivityTransitionAnimator$Controller;Z)V
+
+    .line 10
+    goto :goto_0
+
+    .line 13
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->activityStarter:Lcom/android/systemui/plugins/ActivityStarter;
+
+    .line 14
+    const/4 p1, 0x0
+
+    .line 16
     invoke-interface {p0, p2, p1}, Lcom/android/systemui/plugins/ActivityStarter;->postStartActivityDismissingKeyguard(Landroid/content/Intent;I)V
 
-    .line 7
+    .line 17
+    :goto_0
     return-void
-    .line 10
+    .line 20
 .end method
 
 .method public startPendingIntent(Landroid/view/View;Landroid/app/PendingIntent;Z)V
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;->this$0:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;
+    if-eqz p3, :cond_0
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->activityStarter:Lcom/android/systemui/plugins/ActivityStarter;
+    invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     .line 4
+    move-result-object p0
+
+    .line 7
+    const/4 p1, 0x1
+
+    .line 8
+    invoke-virtual {p0, p1}, Landroid/app/ActivityOptions;->setPendingIntentBackgroundActivityStartMode(I)Landroid/app/ActivityOptions;
+
+    .line 9
+    move-result-object p0
+
+    .line 12
+    invoke-virtual {p0}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
+
+    .line 13
+    move-result-object p0
+
+    .line 16
+    invoke-virtual {p2, p0}, Landroid/app/PendingIntent;->send(Landroid/os/Bundle;)V
+
+    .line 17
+    goto :goto_0
+
+    .line 20
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;->this$0:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;
+
+    .line 21
+    iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->activityStarter:Lcom/android/systemui/plugins/ActivityStarter;
+
+    .line 23
     invoke-interface {p0, p2}, Lcom/android/systemui/plugins/ActivityStarter;->postStartActivityDismissingKeyguard(Landroid/app/PendingIntent;)V
 
-    .line 6
+    .line 25
+    :goto_0
     return-void
-    .line 9
+    .line 28
 .end method

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/policy/KeyguardUserDetailItemView;
 .super Lcom/android/systemui/qs/tiles/UserDetailItemView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -76,7 +76,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f070365    # @dimen/kg_user_switcher_text_size '16.0sp'
+    const p0, 0x7f0703a1    # @dimen/kg_user_switcher_text_size '16.0sp'
 
     .line 2
     return p0
@@ -149,236 +149,227 @@
     move-result-object v0
 
     .line 15
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 16
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 19
-    move-result-object v0
-
-    .line 22
     const-string v1, "KeyguardUserDetailItemView"
 
-    .line 23
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 16
+    invoke-static {v0, p3, v1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)V
 
-    .line 25
+    .line 18
     :cond_0
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    .line 28
+    .line 21
     move-result-object v0
 
-    .line 31
+    .line 24
     const/4 v1, 0x0
 
-    .line 32
+    .line 25
     if-eqz p1, :cond_1
 
-    .line 33
+    .line 26
     if-eqz p2, :cond_1
 
-    .line 35
+    .line 28
     const/16 v2, 0xff
 
-    .line 37
+    .line 30
     goto :goto_0
 
-    .line 39
+    .line 32
     :cond_1
     move v2, v1
 
-    .line 40
+    .line 33
     :goto_0
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 41
+    .line 34
     const/16 v0, 0x8
 
-    .line 44
+    .line 37
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 46
+    .line 39
     if-eqz p1, :cond_5
 
-    .line 48
+    .line 41
     const-wide/16 v3, 0xf0
 
-    .line 50
+    .line 43
     const/4 p1, 0x0
 
-    .line 52
+    .line 45
     if-eqz p2, :cond_3
+
+    .line 46
+    iget-object p2, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
+
+    .line 48
+    invoke-virtual {p2, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 50
+    if-eqz p3, :cond_2
 
     .line 53
     iget-object p2, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
 
     .line 55
-    invoke-virtual {p2, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 57
-    if-eqz p3, :cond_2
-
-    .line 60
-    iget-object p2, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
-
-    .line 62
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 64
+    .line 57
     iget-object p1, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
 
-    .line 67
+    .line 60
     invoke-virtual {p1}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
 
-    .line 69
+    .line 62
     move-result-object p1
 
-    .line 72
+    .line 65
     invoke-virtual {p1, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 73
+    .line 66
     move-result-object p1
 
-    .line 76
+    .line 69
     invoke-virtual {p1, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    .line 77
+    .line 70
     move-result-object p1
 
-    .line 80
+    .line 73
     sget-object p2, Lcom/android/app/animation/Interpolators;->ALPHA_IN:Landroid/view/animation/Interpolator;
 
-    .line 81
+    .line 74
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    .line 83
+    .line 76
     goto :goto_1
 
-    .line 86
+    .line 79
     :cond_2
     iget-object p1, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
 
-    .line 87
+    .line 80
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 89
+    .line 82
     goto :goto_1
 
-    .line 92
+    .line 85
     :cond_3
     if-eqz p3, :cond_4
 
-    .line 93
+    .line 86
     iget-object p2, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
 
-    .line 95
+    .line 88
     invoke-virtual {p2, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 97
+    .line 90
     iget-object p2, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
 
-    .line 100
+    .line 93
     invoke-virtual {p2, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 102
+    .line 95
     iget-object p2, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
 
-    .line 105
+    .line 98
     invoke-virtual {p2}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
 
-    .line 107
+    .line 100
     move-result-object p2
 
-    .line 110
+    .line 103
     invoke-virtual {p2, p1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 111
+    .line 104
     move-result-object p1
 
-    .line 114
+    .line 107
     invoke-virtual {p1, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    .line 115
+    .line 108
     move-result-object p1
 
-    .line 118
+    .line 111
     sget-object p2, Lcom/android/app/animation/Interpolators;->ALPHA_OUT:Landroid/view/animation/Interpolator;
 
-    .line 119
+    .line 112
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    .line 121
+    .line 114
     move-result-object p1
 
-    .line 124
+    .line 117
     new-instance p2, Lcom/android/systemui/statusbar/policy/KeyguardUserDetailItemView$$ExternalSyntheticLambda0;
 
-    .line 125
+    .line 118
     invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/policy/KeyguardUserDetailItemView$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/policy/KeyguardUserDetailItemView;)V
 
-    .line 127
+    .line 120
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
-    .line 130
+    .line 123
     goto :goto_1
 
-    .line 133
+    .line 126
     :cond_4
     iget-object p1, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
 
-    .line 134
+    .line 127
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 136
+    .line 129
     iget-object p1, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
 
-    .line 139
+    .line 132
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 141
+    .line 134
     :goto_1
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 137
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->setAlpha(F)V
+
+    .line 140
+    goto :goto_3
+
+    .line 143
+    :cond_5
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 144
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
     .line 147
-    goto :goto_3
-
-    .line 150
-    :cond_5
-    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 151
-    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->setAlpha(F)V
-
-    .line 154
     iget-object p1, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
 
-    .line 157
+    .line 150
     if-eqz p2, :cond_6
 
-    .line 159
+    .line 152
     goto :goto_2
 
-    .line 161
+    .line 154
     :cond_6
     move v1, v0
 
-    .line 162
+    .line 155
     :goto_2
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 163
+    .line 156
     iget-object p0, p0, Lcom/android/systemui/qs/tiles/UserDetailItemView;->mName:Landroid/widget/TextView;
 
-    .line 166
+    .line 159
     invoke-virtual {p0, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 168
+    .line 161
     :goto_3
     return-void
-    .line 171
+    .line 164
 .end method

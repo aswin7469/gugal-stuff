@@ -1,6 +1,6 @@
 .class final Lcom/android/keyguard/logging/BiometricUnlockLogger$logUdfpsAttemptThresholdMet$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -57,15 +57,15 @@
     move-result p0
 
     .line 7
-    const-string p1, "udfpsAttemptThresholdMet consecutiveFailedAttempts="
+    const-string/jumbo p1, "udfpsAttemptThresholdMet consecutiveFailedAttempts="
 
     .line 8
-    invoke-static {p0, p1}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
-    .line 10
+    .line 11
     move-result-object p0
 
-    .line 13
-    return-object p0
     .line 14
+    return-object p0
+    .line 15
 .end method

@@ -1,88 +1,187 @@
 .class public final synthetic Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Predicate;
+.implements Ljava/util/function/Function;
 
 
 # instance fields
 .field public final synthetic $r8$classId:I
 
+.field public final synthetic f$0:Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell;
+
+.field public final synthetic f$1:Landroid/content/ContentResolver;
+
+.field public final synthetic f$2:I
+
+.field public final synthetic f$3:F
+
+.field public final synthetic f$4:Ljava/lang/ref/WeakReference;
+
+.field public final synthetic f$5:Ljava/lang/ref/WeakReference;
+
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell;Landroid/content/ContentResolver;IFLjava/lang/ref/WeakReference;Ljava/lang/ref/WeakReference;I)V
     .locals 0
 
     .line 1
-    iput p1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->$r8$classId:I
+    iput p7, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->$r8$classId:I
 
     .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$0:Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell;
 
     .line 4
+    iput-object p2, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$1:Landroid/content/ContentResolver;
+
+    .line 6
+    iput p3, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$2:I
+
+    .line 8
+    iput p4, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$3:F
+
+    .line 10
+    iput-object p5, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$4:Ljava/lang/ref/WeakReference;
+
+    .line 12
+    iput-object p6, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$5:Ljava/lang/ref/WeakReference;
+
+    .line 14
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 16
     return-void
-    .line 7
+    .line 19
 .end method
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
     .line 1
-    iget p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->$r8$classId:I
+    iget v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->$r8$classId:I
 
     .line 2
-    packed-switch p0, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
     .line 4
-    check-cast p1, Landroid/app/smartspace/SmartspaceAction;
+    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$0:Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell;
 
     .line 7
-    sget p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell;->$r8$clinit:I
+    iget-object v3, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$1:Landroid/content/ContentResolver;
 
     .line 9
-    invoke-virtual {p1}, Landroid/app/smartspace/SmartspaceAction;->getExtras()Landroid/os/Bundle;
+    iget v4, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$2:I
 
     .line 11
-    move-result-object p0
+    iget v5, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$3:F
 
-    .line 14
-    const-string p1, "imageUri"
+    .line 13
+    iget-object v6, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$4:Ljava/lang/ref/WeakReference;
 
     .line 15
-    invoke-virtual {p0, p1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+    iget-object v7, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$5:Ljava/lang/ref/WeakReference;
 
     .line 17
-    move-result p0
+    move-object v2, p1
+
+    .line 19
+    check-cast v2, Landroid/net/Uri;
 
     .line 20
-    return p0
-
-    .line 21
-    :pswitch_0
-    check-cast p1, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$DrawableWithUri;
-
-    .line 22
     sget p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell;->$r8$clinit:I
 
-    .line 24
-    invoke-static {p1}, Ljava/util/Objects;->nonNull(Ljava/lang/Object;)Z
+    .line 22
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 26
-    move-result p0
+    .line 24
+    new-instance p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$DrawableWithUri;
+
+    .line 27
+    move-object v1, p0
 
     .line 29
-    return p0
+    invoke-direct/range {v1 .. v7}, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$DrawableWithUri;-><init>(Landroid/net/Uri;Landroid/content/ContentResolver;IFLjava/lang/ref/WeakReference;Ljava/lang/ref/WeakReference;)V
 
     .line 30
-    nop
+    new-instance p1, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$LoadUriTask;
 
-    .line 31
+    .line 33
+    iget-object v0, v0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell;->mLatencyInstrumentContext:Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$LatencyInstrumentContext;
+
+    .line 35
+    invoke-direct {p1, v0}, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$LoadUriTask;-><init>(Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$LatencyInstrumentContext;)V
+
+    .line 37
+    filled-new-array {p0}, [Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$DrawableWithUri;
+
+    .line 40
+    move-result-object v0
+
+    .line 43
+    invoke-virtual {p1, v0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    .line 44
+    return-object p0
+
+    .line 47
+    :pswitch_0
+    iget-object v2, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$0:Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell;
+
+    .line 48
+    iget-object v3, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$1:Landroid/content/ContentResolver;
+
+    .line 50
+    iget v4, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$2:I
+
+    .line 52
+    iget v5, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$3:F
+
+    .line 54
+    iget-object v6, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$4:Ljava/lang/ref/WeakReference;
+
+    .line 56
+    iget-object v7, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;->f$5:Ljava/lang/ref/WeakReference;
+
+    .line 58
+    check-cast p1, Landroid/net/Uri;
+
+    .line 60
+    iget-object p0, v2, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell;->mUriToDrawable:Ljava/util/Map;
+
+    .line 62
+    new-instance v0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;
+
+    .line 64
+    const/4 v8, 0x1
+
+    .line 66
+    move-object v1, v0
+
+    .line 67
+    invoke-direct/range {v1 .. v8}, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$$ExternalSyntheticLambda1;-><init>(Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell;Landroid/content/ContentResolver;IFLjava/lang/ref/WeakReference;Ljava/lang/ref/WeakReference;I)V
+
+    .line 68
+    check-cast p0, Ljava/util/HashMap;
+
+    .line 71
+    invoke-virtual {p0, p1, v0}, Ljava/util/HashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+
+    .line 73
+    move-result-object p0
+
+    .line 76
+    check-cast p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardDoorbell$DrawableWithUri;
+
+    .line 77
+    return-object p0
+
+    .line 79
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 32
+    .line 80
 .end method

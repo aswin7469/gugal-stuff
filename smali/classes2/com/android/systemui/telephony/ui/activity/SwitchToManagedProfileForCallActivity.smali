@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/telephony/ui/activity/SwitchToManagedProfileForCallActivity;
 .super Lcom/android/internal/app/AlertActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -182,7 +182,7 @@
     iget-object p1, p0, Lcom/android/internal/app/AlertActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 42
-    const v0, 0x7f140245    # @string/call_from_work_profile_title 'Can't call from a personal app'
+    const v0, 0x7f13024c    # @string/call_from_work_profile_title 'Can't call from a personal app'
 
     .line 44
     invoke-virtual {p0, v0}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
@@ -194,7 +194,7 @@
     iput-object v0, p1, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 51
-    const v0, 0x7f140244    # @string/call_from_work_profile_text 'Your organization only allows you to make calls from work apps'
+    const v0, 0x7f13024b    # @string/call_from_work_profile_text 'Your organization only allows you to make calls from work apps'
 
     .line 53
     invoke-virtual {p0, v0}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
@@ -206,7 +206,7 @@
     iput-object v0, p1, Lcom/android/internal/app/AlertController$AlertParams;->mMessage:Ljava/lang/CharSequence;
 
     .line 60
-    const v0, 0x7f140243    # @string/call_from_work_profile_close 'Cancel'
+    const v0, 0x7f13024a    # @string/call_from_work_profile_close 'Cancel'
 
     .line 62
     invoke-virtual {p0, v0}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
@@ -282,7 +282,7 @@
     invoke-direct {p1, v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 104
-    const v0, 0x7f140242    # @string/call_from_work_profile_action 'Switch to work profile'
+    const v0, 0x7f130249    # @string/call_from_work_profile_action 'Switch to work profile'
 
     .line 107
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -319,7 +319,7 @@
     invoke-direct {p1, v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 130
-    const v0, 0x7f14042c    # @string/install_dialer_on_work_profile_action 'Install a work phone app'
+    const v0, 0x7f130476    # @string/install_dialer_on_work_profile_action 'Install a work phone app'
 
     .line 133
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

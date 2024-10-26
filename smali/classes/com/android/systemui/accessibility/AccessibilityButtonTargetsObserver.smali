@@ -1,6 +1,22 @@
 .class public final Lcom/android/systemui/accessibility/AccessibilityButtonTargetsObserver;
 .super Lcom/android/systemui/accessibility/SecureSettingsContentObserver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/settings/UserTracker;)V
+    .locals 1
+
+    .line 1
+    const-string v0, "accessibility_button_targets"
+
+    .line 2
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/systemui/accessibility/SecureSettingsContentObserver;-><init>(Landroid/content/Context;Lcom/android/systemui/settings/UserTracker;Ljava/lang/String;)V
+
+    .line 4
+    return-void
+    .line 7
+.end method
 
 
 # virtual methods

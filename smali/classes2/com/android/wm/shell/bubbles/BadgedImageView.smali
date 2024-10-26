@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/bubbles/BadgedImageView;
 .super Landroidx/constraintlayout/widget/ConstraintLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -115,11 +115,11 @@
 
     move-result-object p1
 
-    const v1, 0x7f0e004b    # @layout/badged_image_view 'res/layout/badged_image_view.xml'
+    const v1, 0x7f0d004f    # @layout/badged_image_view 'res/layout/badged_image_view.xml'
 
     invoke-virtual {p1, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const p1, 0x7f0b0387    # @id/icon_view
+    const p1, 0x7f0a03a7    # @id/icon_view
 
     .line 13
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -130,7 +130,7 @@
 
     iput-object p1, p0, Lcom/android/wm/shell/bubbles/BadgedImageView;->mBubbleIcon:Landroid/widget/ImageView;
 
-    const v1, 0x7f0b00c5    # @id/app_icon_view
+    const v1, 0x7f0a00c8    # @id/app_icon_view
 
     .line 14
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -758,7 +758,7 @@
     move-result-object p1
 
     .line 7
-    const v0, 0x1040279    # @android:string/config_oem_enabled_satellite_s2cell_file
+    const v0, 0x1040272    # @android:string/config_mobile_hotspot_provision_app_no_ui
 
     .line 8
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1132,7 +1132,6 @@
 
     .line 31
     return-void
-    .line 34
 .end method
 
 .method public final toString()Ljava/lang/String;

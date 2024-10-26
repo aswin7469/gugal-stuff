@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/binder/KeyguardBlueprintViewBinder$bind$1$1$invokeSuspend$$inlined$launch$default$2;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -202,7 +202,7 @@
     move-exception p1
 
     .line 42
-    goto :goto_4
+    goto :goto_3
 
     .line 43
     :cond_1
@@ -323,71 +323,51 @@
 
     .line 115
     iput v3, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardBlueprintViewBinder$bind$1$1$invokeSuspend$$inlined$launch$default$2;->label:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     .line 117
-    :try_start_2
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v7, v8, p0}, Lkotlinx/coroutines/flow/SharedFlowImpl;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 119
-    invoke-static {v7, v8, p0}, Lkotlinx/coroutines/flow/SharedFlowImpl;->collect$suspendImpl(Lkotlinx/coroutines/flow/SharedFlowImpl;Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 122
     return-object v0
 
-    .line 125
+    .line 122
     :goto_2
-    move-object p1, p0
-
-    .line 126
-    goto :goto_3
-
-    .line 127
-    :catchall_1
-    move-exception p0
-
-    .line 128
-    goto :goto_2
-
-    .line 129
-    :goto_3
     move-object p0, v1
 
-    .line 130
+    .line 123
     move v1, v4
 
-    .line 131
+    .line 124
     move v0, v5
 
-    .line 132
-    goto :goto_4
-
-    .line 133
-    :catchall_2
-    move-exception p1
-
-    .line 134
+    .line 125
     goto :goto_3
 
-    .line 135
-    :goto_4
+    .line 126
+    :catchall_1
+    move-exception p1
+
+    .line 127
+    goto :goto_2
+
+    .line 128
+    :goto_3
     if-eqz v1, :cond_7
 
-    .line 136
+    .line 129
     invoke-static {v0, v2}, Lcom/android/app/tracing/TraceProxy_platformKt;->asyncTraceForTrackEnd(ILjava/lang/String;)V
 
-    .line 138
+    .line 131
     :cond_7
     if-eqz p0, :cond_8
 
-    .line 141
+    .line 134
     invoke-virtual {p0}, Lcom/android/app/tracing/coroutines/TraceData;->endSpan()V
 
-    .line 143
+    .line 136
     :cond_8
     throw p1
-    .line 146
+    .line 139
 .end method

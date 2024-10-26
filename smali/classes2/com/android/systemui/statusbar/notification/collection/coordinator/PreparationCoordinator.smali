@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/collection/coordinator/Coordinator;
@@ -664,10 +664,10 @@
 
     .line 119
     :goto_3
-    iget-boolean v2, v1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mHasEverBeenGroupChild:Z
+    const/16 v18, 0x0
 
     .line 121
-    iget-boolean v11, v1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mHasEverBeenGroupSummary:Z
+    const/16 v19, 0x0
 
     .line 123
     move-object v3, v12
@@ -682,258 +682,252 @@
     move/from16 v9, v20
 
     .line 129
-    move v10, v2
+    move/from16 v10, v18
 
     .line 131
-    move/from16 v19, v11
+    move/from16 v11, v19
 
-    .line 132
+    .line 133
     invoke-direct/range {v3 .. v11}, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;-><init>(Ljava/util/List;Ljava/util/List;ZZZZZZ)V
 
-    .line 134
-    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflatingNotifs:Landroid/util/ArraySet;
+    .line 135
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflatingNotifs:Landroid/util/ArraySet;
 
-    .line 137
-    invoke-virtual {v3, v1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
+    .line 138
+    invoke-virtual {v2, v1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
-    .line 139
-    move-result v3
-
-    .line 142
-    if-eqz v3, :cond_7
-
-    .line 143
-    const-string v2, "Inflating notification has no adjustments"
-
-    .line 145
-    invoke-virtual {v0, v1, v12, v2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->needToReinflate(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;Ljava/lang/String;)Z
-
-    .line 147
+    .line 140
     move-result v2
 
-    .line 150
-    if-eqz v2, :cond_6
+    .line 143
+    if-eqz v2, :cond_7
+
+    .line 144
+    const-string v2, "Inflating notification has no adjustments"
+
+    .line 146
+    invoke-virtual {v0, v1, v12, v2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->needToReinflate(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;Ljava/lang/String;)Z
+
+    .line 148
+    move-result v2
 
     .line 151
+    if-eqz v2, :cond_6
+
+    .line 152
     const-string v2, "adjustment changed while inflating"
 
-    .line 153
+    .line 154
     invoke-virtual {v0, v1, v12, v2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->inflateEntry(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;Ljava/lang/String;)V
 
-    .line 155
+    .line 156
     :cond_6
     return-void
 
-    .line 158
-    :cond_7
-    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflationStates:Landroid/util/ArrayMap;
-
     .line 159
-    invoke-virtual {v3, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_7
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflationStates:Landroid/util/ArrayMap;
 
-    .line 161
-    move-result-object v3
+    .line 160
+    invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 164
-    check-cast v3, Ljava/lang/Integer;
+    .line 162
+    move-result-object v2
 
     .line 165
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+    check-cast v2, Ljava/lang/Integer;
 
-    .line 167
-    move-result v3
+    .line 166
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    .line 170
-    const/4 v4, -0x1
+    .line 168
+    move-result v2
 
     .line 171
-    if-eq v3, v4, :cond_b
+    const/4 v3, -0x1
 
     .line 172
-    if-eqz v3, :cond_a
+    if-eq v2, v3, :cond_b
 
-    .line 174
-    iget-object v4, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mNotifInflater:Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater;
+    .line 173
+    if-eqz v2, :cond_a
 
-    .line 176
-    if-eq v3, v13, :cond_9
+    .line 175
+    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mNotifInflater:Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater;
 
-    .line 178
-    const/4 v5, 0x2
+    .line 177
+    if-eq v2, v13, :cond_9
 
-    .line 180
-    if-eq v3, v5, :cond_8
+    .line 179
+    const/4 v4, 0x2
 
     .line 181
+    if-eq v2, v4, :cond_8
+
+    .line 182
     goto :goto_4
 
-    .line 183
-    :cond_8
-    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflationAdjustments:Landroid/util/ArrayMap;
-
     .line 184
-    invoke-virtual {v3, v1, v12}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_8
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflationAdjustments:Landroid/util/ArrayMap;
 
-    .line 186
-    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflatingNotifs:Landroid/util/ArraySet;
+    .line 185
+    invoke-virtual {v2, v1, v12}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 189
-    invoke-virtual {v3, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+    .line 187
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflatingNotifs:Landroid/util/ArraySet;
 
-    .line 191
-    new-instance v3, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;
+    .line 190
+    invoke-virtual {v2, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 194
+    .line 192
+    new-instance v2, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;
+
+    .line 195
     const-string v16, "entryUpdated"
 
-    .line 196
-    move-object v14, v3
-
-    .line 198
-    move/from16 v18, v2
+    .line 197
+    move-object v14, v2
 
     .line 199
     invoke-direct/range {v14 .. v20}, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;-><init>(ZLjava/lang/String;ZZZZ)V
 
-    .line 201
-    new-instance v2, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;
+    .line 200
+    new-instance v4, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;
 
-    .line 204
-    invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;)V
+    .line 203
+    invoke-direct {v4, v0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;)V
 
-    .line 206
-    check-cast v4, Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;
+    .line 205
+    check-cast v3, Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;
 
-    .line 209
-    invoke-virtual {v4, v1, v3, v2}, Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;->rebindViews(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;)V
+    .line 208
+    invoke-virtual {v3, v1, v2, v4}, Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;->rebindViews(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;)V
 
-    .line 211
+    .line 210
     goto :goto_4
+
+    .line 213
+    :cond_9
+    const-string v2, "Fully inflated notification has no adjustments"
 
     .line 214
-    :cond_9
-    const-string v3, "Fully inflated notification has no adjustments"
+    invoke-virtual {v0, v1, v12, v2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->needToReinflate(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;Ljava/lang/String;)Z
 
-    .line 215
-    invoke-virtual {v0, v1, v12, v3}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->needToReinflate(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;Ljava/lang/String;)Z
+    .line 216
+    move-result v2
 
-    .line 217
-    move-result v3
+    .line 219
+    if-eqz v2, :cond_c
 
     .line 220
-    if-eqz v3, :cond_c
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflationAdjustments:Landroid/util/ArrayMap;
 
-    .line 221
-    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflationAdjustments:Landroid/util/ArrayMap;
+    .line 222
+    invoke-virtual {v2, v1, v12}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 223
-    invoke-virtual {v3, v1, v12}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 224
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflatingNotifs:Landroid/util/ArraySet;
 
-    .line 225
-    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->mInflatingNotifs:Landroid/util/ArraySet;
+    .line 227
+    invoke-virtual {v2, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 228
-    invoke-virtual {v3, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+    .line 229
+    new-instance v2, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;
 
-    .line 230
-    new-instance v3, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;
-
-    .line 233
+    .line 232
     const-string v16, "adjustment changed after inflated"
 
-    .line 235
-    move-object v14, v3
+    .line 234
+    move-object v14, v2
 
-    .line 237
-    move/from16 v18, v2
-
-    .line 238
+    .line 236
     invoke-direct/range {v14 .. v20}, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;-><init>(ZLjava/lang/String;ZZZZ)V
 
-    .line 240
-    new-instance v2, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;
+    .line 237
+    new-instance v4, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;
 
-    .line 243
-    invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;)V
+    .line 240
+    invoke-direct {v4, v0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;)V
+
+    .line 242
+    check-cast v3, Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;
 
     .line 245
-    check-cast v4, Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;
+    invoke-virtual {v3, v1, v2, v4}, Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;->rebindViews(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;)V
 
-    .line 248
-    invoke-virtual {v4, v1, v3, v2}, Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;->rebindViews(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator$$ExternalSyntheticLambda2;)V
-
-    .line 250
+    .line 247
     goto :goto_4
 
-    .line 253
+    .line 250
     :cond_a
     const-string v2, "entryAdded"
 
-    .line 254
+    .line 251
     invoke-virtual {v0, v1, v12, v2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->inflateEntry(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;Ljava/lang/String;)V
 
-    .line 256
+    .line 253
     goto :goto_4
 
-    .line 259
+    .line 256
     :cond_b
     invoke-virtual {v0, v1, v12, v14}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->needToReinflate(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;Ljava/lang/String;)Z
 
-    .line 260
+    .line 257
     move-result v2
 
-    .line 263
+    .line 260
     if-eqz v2, :cond_c
 
-    .line 264
+    .line 261
     const-string v2, "adjustment changed after error"
 
-    .line 266
+    .line 263
     invoke-virtual {v0, v1, v12, v2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/PreparationCoordinator;->inflateEntry(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;Ljava/lang/String;)V
 
-    .line 268
+    .line 265
     :cond_c
     :goto_4
     return-void
 
-    .line 271
+    .line 268
     :cond_d
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 272
+    .line 269
     const-string v1, "Entry must have a parent to determine if minimized"
 
-    .line 274
+    .line 271
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 276
+    .line 273
     move-result-object v1
 
-    .line 279
+    .line 276
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 280
+    .line 277
     throw v0
 
-    .line 283
+    .line 280
     :cond_e
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 284
+    .line 281
     const-string v1, "Entry must have a section to determine if minimized"
 
-    .line 286
+    .line 283
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 288
+    .line 285
     move-result-object v1
 
-    .line 291
+    .line 288
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 292
+    .line 289
     throw v0
-    .line 295
+    .line 292
 .end method
 
 .method public final needToReinflate(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;Ljava/lang/String;)Z
@@ -1183,7 +1177,7 @@
     move-result v4
 
     .line 153
-    if-eqz v4, :cond_19
+    if-eqz v4, :cond_17
 
     .line 154
     invoke-virtual {v3}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
@@ -1223,7 +1217,7 @@
 
     .line 178
     :cond_b
-    if-eqz v4, :cond_19
+    if-eqz v4, :cond_17
 
     .line 179
     if-nez v5, :cond_c
@@ -1277,7 +1271,7 @@
     move-result v4
 
     .line 212
-    if-eqz v4, :cond_19
+    if-eqz v4, :cond_17
 
     .line 213
     invoke-virtual {v3}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
@@ -1317,7 +1311,7 @@
 
     .line 237
     :cond_e
-    if-eqz v4, :cond_19
+    if-eqz v4, :cond_17
 
     .line 239
     if-nez v3, :cond_f
@@ -1456,7 +1450,7 @@
     move-result v7
 
     .line 326
-    if-eqz v7, :cond_19
+    if-eqz v7, :cond_17
 
     .line 327
     invoke-virtual {v6}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
@@ -1496,210 +1490,160 @@
 
     .line 351
     :cond_12
-    if-eqz v7, :cond_19
+    if-eqz v7, :cond_17
 
     .line 352
     if-nez v6, :cond_13
 
     .line 354
-    goto/16 :goto_4
+    goto :goto_4
 
     .line 356
     :cond_13
     array-length v8, v7
 
-    .line 358
+    .line 357
     array-length v9, v6
 
-    .line 359
+    .line 358
     if-eq v8, v9, :cond_14
 
-    .line 360
-    goto/16 :goto_4
+    .line 359
+    goto :goto_4
 
-    .line 362
+    .line 361
     :cond_14
     invoke-static {v7}, Lkotlin/collections/ArraysKt;->asSequence([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 
-    .line 364
+    .line 362
     move-result-object v7
 
-    .line 367
+    .line 365
     invoke-static {v6}, Lkotlin/collections/ArraysKt;->asSequence([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 
-    .line 368
+    .line 366
     move-result-object v6
 
-    .line 371
+    .line 369
     invoke-static {v7, v6}, Lkotlin/sequences/SequencesKt;->zip(Lkotlin/sequences/Sequence;Lkotlin/sequences/Sequence;)Lkotlin/sequences/MergingSequence;
 
-    .line 372
+    .line 370
     move-result-object v6
 
-    .line 375
+    .line 373
     iget-object v7, v6, Lkotlin/sequences/MergingSequence;->sequence1:Lkotlin/sequences/Sequence;
 
-    .line 376
+    .line 374
     invoke-interface {v7}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
-    .line 378
+    .line 376
     move-result-object v7
 
-    .line 381
+    .line 379
     iget-object v8, v6, Lkotlin/sequences/MergingSequence;->sequence2:Lkotlin/sequences/Sequence;
 
-    .line 382
+    .line 380
     invoke-interface {v8}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
-    .line 384
+    .line 382
     move-result-object v8
 
-    .line 387
+    .line 385
     :cond_15
     invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 388
+    .line 386
     move-result v9
 
-    .line 391
+    .line 389
     if-eqz v9, :cond_11
 
-    .line 392
+    .line 390
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 394
+    .line 392
     move-result v9
 
-    .line 397
+    .line 395
     if-eqz v9, :cond_11
 
-    .line 398
+    .line 396
     invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 400
+    .line 398
     move-result-object v9
 
-    .line 403
+    .line 401
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 404
+    .line 402
     move-result-object v10
 
-    .line 407
+    .line 405
     iget-object v11, v6, Lkotlin/sequences/MergingSequence;->transform:Lkotlin/jvm/functions/Function2;
 
-    .line 408
+    .line 406
     invoke-interface {v11, v9, v10}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 410
+    .line 408
     move-result-object v9
 
-    .line 413
+    .line 411
     check-cast v9, Lkotlin/Pair;
 
-    .line 414
+    .line 412
     invoke-virtual {v9}, Lkotlin/Pair;->getFirst()Ljava/lang/Object;
 
-    .line 416
+    .line 414
     move-result-object v10
 
-    .line 419
+    .line 417
     check-cast v10, Ljava/lang/CharSequence;
 
-    .line 420
+    .line 418
     invoke-virtual {v9}, Lkotlin/Pair;->getSecond()Ljava/lang/Object;
 
-    .line 422
+    .line 420
     move-result-object v9
 
-    .line 425
+    .line 423
     check-cast v9, Ljava/lang/CharSequence;
 
-    .line 426
+    .line 424
     invoke-static {v10, v9}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    .line 428
+    .line 426
     move-result v9
 
-    .line 431
+    .line 429
     xor-int/2addr v9, p1
 
-    .line 432
+    .line 430
     if-eqz v9, :cond_15
 
-    .line 433
+    .line 431
     goto :goto_4
 
-    .line 435
+    .line 433
     :cond_16
     :goto_3
-    iget-object v0, p2, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;->smartReplies:Ljava/util/List;
+    iget-object p2, p2, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;->smartReplies:Ljava/util/List;
+
+    .line 434
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;->smartReplies:Ljava/util/List;
 
     .line 436
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;->smartReplies:Ljava/util/List;
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 438
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result p0
 
-    .line 440
-    move-result v0
-
-    .line 443
-    if-nez v0, :cond_17
-
-    .line 444
-    goto :goto_4
-
-    .line 446
-    :cond_17
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncHybridViewInflation()Z
-
-    .line 447
-    move-result v0
-
-    .line 450
-    if-eqz v0, :cond_18
-
-    .line 451
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;->isChildInGroup:Z
-
-    .line 453
-    if-nez v0, :cond_18
-
-    .line 455
-    iget-boolean v0, p2, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;->isChildInGroup:Z
-
-    .line 457
-    if-eqz v0, :cond_18
-
-    .line 459
-    goto :goto_4
-
-    .line 461
-    :cond_18
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncGroupHeaderInflation()Z
-
-    .line 462
-    move-result v0
-
-    .line 465
-    if-eqz v0, :cond_2
-
-    .line 466
-    iget-boolean p0, p0, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;->isGroupSummary:Z
-
-    .line 468
+    .line 441
     if-nez p0, :cond_2
 
-    .line 470
-    iget-boolean p0, p2, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifUiAdjustment;->isGroupSummary:Z
-
-    .line 472
-    if-eqz p0, :cond_2
-
-    .line 474
-    :cond_19
+    .line 442
+    :cond_17
     :goto_4
     return p1
-    .line 476
+    .line 444
 .end method

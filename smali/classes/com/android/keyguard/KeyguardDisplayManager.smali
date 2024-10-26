@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardDisplayManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field public final mConnectedDisplayKeyguardPresentationFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$33;
+.field public final mConnectedDisplayKeyguardPresentationFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$33;
 
 .field public final mContext:Landroid/content/Context;
 
@@ -50,7 +50,7 @@
     .line 6
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Ldagger/Lazy;Lcom/android/systemui/settings/DisplayTracker;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lcom/android/keyguard/KeyguardDisplayManager$DeviceStateHelper;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$33;)V
+.method public constructor <init>(Landroid/content/Context;Ldagger/Lazy;Lcom/android/systemui/settings/DisplayTracker;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lcom/android/keyguard/KeyguardDisplayManager$DeviceStateHelper;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$33;)V
     .locals 2
 
     .line 1
@@ -141,7 +141,7 @@
     iput-object p7, p0, Lcom/android/keyguard/KeyguardDisplayManager;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
     .line 65
-    iput-object p8, p0, Lcom/android/keyguard/KeyguardDisplayManager;->mConnectedDisplayKeyguardPresentationFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$33;
+    iput-object p8, p0, Lcom/android/keyguard/KeyguardDisplayManager;->mConnectedDisplayKeyguardPresentationFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$33;
 
     .line 67
     return-void
@@ -151,7 +151,7 @@
 
 # virtual methods
 .method public final showPresentation(Landroid/view/Display;)Z
-    .locals 5
+    .locals 11
 
     .line 1
     const/4 v0, 0x0
@@ -360,65 +360,116 @@
     if-nez v3, :cond_7
 
     .line 136
-    iget-object v3, p0, Lcom/android/keyguard/KeyguardDisplayManager;->mConnectedDisplayKeyguardPresentationFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$33;
+    iget-object v3, p0, Lcom/android/keyguard/KeyguardDisplayManager;->mConnectedDisplayKeyguardPresentationFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$33;
 
     .line 138
-    invoke-virtual {v3, p1}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$33;->create(Landroid/view/Display;)Lcom/android/keyguard/ConnectedDisplayKeyguardPresentation;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 140
-    move-result-object p1
+    new-instance v10, Lcom/android/keyguard/ConnectedDisplayKeyguardPresentation;
 
     .line 143
-    new-instance v3, Lcom/android/keyguard/KeyguardDisplayManager$$ExternalSyntheticLambda1;
+    iget-object v3, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$33;->this$0:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;
 
-    .line 144
-    invoke-direct {v3, p0, p1, v2}, Lcom/android/keyguard/KeyguardDisplayManager$$ExternalSyntheticLambda1;-><init>(Lcom/android/keyguard/KeyguardDisplayManager;Lcom/android/keyguard/ConnectedDisplayKeyguardPresentation;I)V
+    .line 145
+    iget-object v4, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
 
-    .line 146
-    invoke-virtual {p1, v3}, Landroid/app/Presentation;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    .line 147
+    iget-object v6, v4, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->context:Landroid/content/Context;
 
     .line 149
+    new-instance v7, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentFactory;
+
+    .line 151
+    iget-object v3, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->wMComponentImpl:Ljava/lang/Object;
+
+    .line 153
+    check-cast v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
+
+    .line 155
+    invoke-direct {v7, v4, v3}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentFactory;-><init>(Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;)V
+
+    .line 157
+    iget-object v4, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->getClockRegistryProvider:Ldagger/internal/Provider;
+
+    .line 160
+    invoke-interface {v4}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 162
+    move-result-object v4
+
+    .line 165
+    move-object v8, v4
+
+    .line 166
+    check-cast v8, Lcom/android/systemui/shared/clocks/ClockRegistry;
+
+    .line 167
+    invoke-static {v3}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->-$$Nest$mclockEventController(Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;)Lcom/android/keyguard/ClockEventController;
+
+    .line 169
+    move-result-object v9
+
+    .line 172
+    move-object v4, v10
+
+    .line 173
+    move-object v5, p1
+
+    .line 174
+    invoke-direct/range {v4 .. v9}, Lcom/android/keyguard/ConnectedDisplayKeyguardPresentation;-><init>(Landroid/view/Display;Landroid/content/Context;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentFactory;Lcom/android/systemui/shared/clocks/ClockRegistry;Lcom/android/keyguard/ClockEventController;)V
+
+    .line 175
+    new-instance p1, Lcom/android/keyguard/KeyguardDisplayManager$$ExternalSyntheticLambda1;
+
+    .line 178
+    invoke-direct {p1, p0, v10, v2}, Lcom/android/keyguard/KeyguardDisplayManager$$ExternalSyntheticLambda1;-><init>(Lcom/android/keyguard/KeyguardDisplayManager;Lcom/android/keyguard/ConnectedDisplayKeyguardPresentation;I)V
+
+    .line 180
+    invoke-virtual {v10, p1}, Landroid/app/Presentation;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+
+    .line 183
     :try_start_0
-    invoke-virtual {p1}, Landroid/app/Presentation;->show()V
+    invoke-virtual {v10}, Landroid/app/Presentation;->show()V
     :try_end_0
     .catch Landroid/view/WindowManager$InvalidDisplayException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 152
+    .line 186
     goto :goto_1
 
-    .line 155
+    .line 189
     :catch_0
     move-exception p1
 
-    .line 156
+    .line 190
     const-string v3, "Invalid display:"
 
-    .line 157
+    .line 191
     invoke-static {v1, v3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 159
-    const/4 p1, 0x0
+    .line 193
+    const/4 v10, 0x0
 
-    .line 162
+    .line 196
     :goto_1
-    if-eqz p1, :cond_7
+    if-eqz v10, :cond_7
 
-    .line 163
+    .line 197
     iget-object p0, p0, Lcom/android/keyguard/KeyguardDisplayManager;->mPresentations:Landroid/util/SparseArray;
 
-    .line 165
-    invoke-virtual {p0, v2, p1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+    .line 199
+    invoke-virtual {p0, v2, v10}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 167
+    .line 201
     const/4 p0, 0x1
 
-    .line 170
+    .line 204
     return p0
 
-    .line 171
+    .line 205
     :cond_7
     return v0
-    .line 172
+    .line 206
 .end method
 
 .method public final updateDisplays(Z)V

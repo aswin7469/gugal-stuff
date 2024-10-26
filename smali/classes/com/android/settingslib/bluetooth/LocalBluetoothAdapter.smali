@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -34,72 +34,6 @@
     .line 9
     return-void
     .line 11
-.end method
-
-.method public static declared-synchronized getInstance()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-    .locals 3
-
-    .line 1
-    const-class v0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-
-    .line 2
-    monitor-enter v0
-
-    .line 4
-    :try_start_0
-    sget-object v1, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-
-    .line 5
-    if-nez v1, :cond_0
-
-    .line 7
-    invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
-
-    .line 9
-    move-result-object v1
-
-    .line 12
-    if-eqz v1, :cond_0
-
-    .line 13
-    new-instance v2, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-
-    .line 15
-    invoke-direct {v2, v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;-><init>(Landroid/bluetooth/BluetoothAdapter;)V
-
-    .line 17
-    sput-object v2, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-
-    .line 20
-    goto :goto_0
-
-    .line 22
-    :catchall_0
-    move-exception v1
-
-    .line 23
-    goto :goto_1
-
-    .line 24
-    :cond_0
-    :goto_0
-    sget-object v1, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 25
-    monitor-exit v0
-
-    .line 27
-    return-object v1
-
-    .line 28
-    :goto_1
-    monitor-exit v0
-
-    .line 29
-    throw v1
-    .line 30
 .end method
 
 

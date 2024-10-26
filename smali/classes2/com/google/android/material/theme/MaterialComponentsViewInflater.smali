@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/theme/MaterialComponentsViewInflater;
 .super Landroidx/appcompat/app/AppCompatViewInflater;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -69,10 +69,10 @@
     new-instance v0, Lcom/google/android/material/radiobutton/MaterialRadioButton;
 
     .line 3
-    const v1, 0x7f1506d6    # @style/Widget.MaterialComponents.CompoundButton.RadioButton
+    const v1, 0x7f1406e0    # @style/Widget.MaterialComponents.CompoundButton.RadioButton
 
     .line 5
-    const v8, 0x7f04050d    # @attr/radioButtonStyle
+    const v8, 0x7f040510    # @attr/radioButtonStyle
 
     .line 8
     invoke-static {p1, p2, v8, v1}, Lcom/google/android/material/theme/overlay/MaterialThemeOverlay;->wrap(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
@@ -96,7 +96,7 @@
     new-array v7, p0, [I
 
     .line 24
-    const v9, 0x7f1506d6    # @style/Widget.MaterialComponents.CompoundButton.RadioButton
+    const v9, 0x7f1406e0    # @style/Widget.MaterialComponents.CompoundButton.RadioButton
 
     .line 26
     invoke-static {p1, p2, v8, v9}, Lcom/google/android/material/internal/ThemeEnforcement;->checkCompatibleTheme(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -195,7 +195,7 @@
     move-result-object p1
 
     .line 19
-    const v3, 0x7f04069f    # @attr/textAppearanceLineHeightEnabled
+    const v3, 0x7f0406a5    # @attr/textAppearanceLineHeightEnabled
 
     .line 20
     invoke-static {p1, v3, p0}, Lcom/google/android/material/resources/MaterialAttributes;->resolveBoolean(Landroid/content/Context;IZ)Z

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/compatui/RestartDialogWindowManager$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -150,7 +150,7 @@
     invoke-direct {v2, p0, v1}, Lcom/android/wm/shell/compatui/RestartDialogWindowManager$$ExternalSyntheticLambda3;-><init>(Lcom/android/wm/shell/compatui/RestartDialogWindowManager;Landroid/app/TaskInfo;)V
 
     .line 73
-    const v1, 0x7f0b0429    # @id/letterbox_restart_dialog_checkbox
+    const v1, 0x7f0a044a    # @id/letterbox_restart_dialog_checkbox
 
     .line 76
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -168,7 +168,7 @@
     invoke-direct {v3, v2, v1}, Lcom/android/wm/shell/compatui/RestartDialogLayout$$ExternalSyntheticLambda2;-><init>(Lcom/android/wm/shell/compatui/RestartDialogWindowManager$$ExternalSyntheticLambda3;Landroid/widget/CheckBox;)V
 
     .line 87
-    const v1, 0x7f0b042f    # @id/letterbox_restart_dialog_restart_button
+    const v1, 0x7f0a0450    # @id/letterbox_restart_dialog_restart_button
 
     .line 90
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;

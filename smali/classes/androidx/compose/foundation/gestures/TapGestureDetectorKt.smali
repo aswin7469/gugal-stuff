@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/foundation/gestures/TapGestureDetectorKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -560,7 +560,7 @@
     invoke-direct/range {v0 .. v5}, Landroidx/compose/foundation/gestures/TapGestureDetectorKt$detectTapAndPress$2;-><init>(Landroidx/compose/ui/input/pointer/PointerInputScope;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function1;Landroidx/compose/foundation/gestures/PressGestureScopeImpl;Lkotlin/coroutines/Continuation;)V
 
     .line 14
-    invoke-static {p3, v6}, Lkotlinx/coroutines/CoroutineScopeKt;->coroutineScope(Lkotlin/coroutines/Continuation;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
+    invoke-static {v6, p3}, Lkotlinx/coroutines/CoroutineScopeKt;->coroutineScope(Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     .line 17
     move-result-object p0
@@ -583,62 +583,8 @@
     .line 28
 .end method
 
-.method public static final detectTapGestures(Landroidx/compose/ui/input/pointer/PointerInputScope;Lkotlin/coroutines/Continuation;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function3;)Ljava/lang/Object;
-    .locals 8
-
-    .line 1
-    new-instance v7, Landroidx/compose/foundation/gestures/TapGestureDetectorKt$detectTapGestures$2;
-
-    .line 2
-    const/4 v2, 0x0
-
-    .line 4
-    move-object v0, v7
-
-    .line 5
-    move-object v1, p0
-
-    .line 6
-    move-object v3, p3
-
-    .line 7
-    move-object v4, p2
-
-    .line 8
-    move-object v5, p4
-
-    .line 9
-    move-object v6, p5
-
-    .line 10
-    invoke-direct/range {v0 .. v6}, Landroidx/compose/foundation/gestures/TapGestureDetectorKt$detectTapGestures$2;-><init>(Landroidx/compose/ui/input/pointer/PointerInputScope;Lkotlin/coroutines/Continuation;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function3;)V
-
-    .line 11
-    invoke-static {p1, v7}, Lkotlinx/coroutines/CoroutineScopeKt;->coroutineScope(Lkotlin/coroutines/Continuation;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
-
-    .line 14
-    move-result-object p0
-
-    .line 17
-    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
-
-    .line 18
-    if-ne p0, p1, :cond_0
-
-    .line 20
-    return-object p0
-
-    .line 22
-    :cond_0
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    .line 23
-    return-object p0
-    .line 25
-.end method
-
-.method public static synthetic detectTapGestures$default(Landroidx/compose/ui/input/pointer/PointerInputScope;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;I)Ljava/lang/Object;
-    .locals 8
+.method public static detectTapGestures$default(Landroidx/compose/ui/input/pointer/PointerInputScope;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;I)Ljava/lang/Object;
+    .locals 9
 
     .line 1
     and-int/lit8 v0, p6, 0x1
@@ -650,14 +596,14 @@
     if-eqz v0, :cond_0
 
     .line 5
-    move-object v4, v1
+    move-object v6, v1
 
     .line 7
     goto :goto_0
 
     .line 8
     :cond_0
-    move-object v4, p1
+    move-object v6, p1
 
     .line 9
     :goto_0
@@ -688,7 +634,7 @@
 
     .line 21
     :cond_2
-    move-object v7, p3
+    move-object v4, p3
 
     .line 23
     and-int/lit8 p1, p6, 0x8
@@ -697,31 +643,54 @@
     if-eqz p1, :cond_3
 
     .line 26
-    move-object v6, v1
+    move-object v7, v1
 
     .line 28
     goto :goto_2
 
     .line 29
     :cond_3
-    move-object v6, p4
+    move-object v7, p4
 
     .line 30
     :goto_2
-    move-object v2, p0
+    new-instance p1, Landroidx/compose/foundation/gestures/TapGestureDetectorKt$detectTapGestures$2;
 
     .line 31
-    move-object v3, p5
-
-    .line 32
-    invoke-static/range {v2 .. v7}, Landroidx/compose/foundation/gestures/TapGestureDetectorKt;->detectTapGestures(Landroidx/compose/ui/input/pointer/PointerInputScope;Lkotlin/coroutines/Continuation;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function3;)Ljava/lang/Object;
+    const/4 v8, 0x0
 
     .line 33
-    move-result-object p0
+    move-object v2, p1
+
+    .line 34
+    move-object v3, p0
+
+    .line 35
+    invoke-direct/range {v2 .. v8}, Landroidx/compose/foundation/gestures/TapGestureDetectorKt$detectTapGestures$2;-><init>(Landroidx/compose/ui/input/pointer/PointerInputScope;Lkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)V
 
     .line 36
+    invoke-static {p1, p5}, Lkotlinx/coroutines/CoroutineScopeKt;->coroutineScope(Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 39
+    move-result-object p0
+
+    .line 42
+    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    .line 43
+    if-ne p0, p1, :cond_4
+
+    .line 45
+    goto :goto_3
+
+    .line 47
+    :cond_4
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    .line 48
+    :goto_3
     return-object p0
-    .line 37
+    .line 50
 .end method
 
 .method public static final waitForUpOrCancellation(Landroidx/compose/ui/input/pointer/AwaitPointerEventScope;Landroidx/compose/ui/input/pointer/PointerEventPass;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;

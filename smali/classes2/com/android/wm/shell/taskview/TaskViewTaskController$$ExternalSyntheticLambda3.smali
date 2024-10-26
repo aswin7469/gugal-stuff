@@ -1,100 +1,218 @@
 .class public final synthetic Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Lcom/android/wm/shell/common/SyncTransactionQueue$TransactionRunnable;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
+.field public final synthetic $r8$classId:I
+
 .field public final synthetic f$0:Lcom/android/wm/shell/taskview/TaskViewTaskController;
 
-.field public final synthetic f$1:Landroid/app/ActivityManager$RunningTaskInfo;
-
-.field public final synthetic f$2:Landroid/view/SurfaceControl;
+.field public final synthetic f$1:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/wm/shell/taskview/TaskViewTaskController;Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;)V
+.method public synthetic constructor <init>(Lcom/android/wm/shell/taskview/TaskViewTaskController;Ljava/lang/Object;I)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->$r8$classId:I
 
     .line 2
     iput-object p1, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->f$0:Lcom/android/wm/shell/taskview/TaskViewTaskController;
 
-    .line 5
-    iput-object p2, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->f$1:Landroid/app/ActivityManager$RunningTaskInfo;
+    .line 4
+    iput-object p2, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->f$1:Ljava/lang/Object;
 
-    .line 7
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
     return-void
-    .line 9
+    .line 11
 .end method
 
 
 # virtual methods
-.method public final runWithTransaction(Landroid/view/SurfaceControl$Transaction;)V
-    .locals 2
+.method public final run()V
+    .locals 6
 
     .line 1
-    iget-object p1, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->f$1:Landroid/app/ActivityManager$RunningTaskInfo;
+    iget v0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->$r8$classId:I
 
     .line 2
-    iget-object p0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->f$0:Lcom/android/wm/shell/taskview/TaskViewTaskController;
+    packed-switch v0, :pswitch_data_0
 
     .line 4
-    iget-object p0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController;->mTaskViewBase:Lcom/android/wm/shell/taskview/TaskViewBase;
+    iget-object v0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->f$0:Lcom/android/wm/shell/taskview/TaskViewTaskController;
 
-    .line 6
-    check-cast p0, Lcom/android/wm/shell/taskview/TaskView;
+    .line 7
+    iget-object p0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->f$1:Ljava/lang/Object;
 
-    .line 8
-    iget-object v0, p0, Lcom/android/wm/shell/taskview/TaskView;->mTaskViewTaskController:Lcom/android/wm/shell/taskview/TaskViewTaskController;
+    .line 9
+    check-cast p0, Landroid/os/Binder;
 
-    .line 10
-    invoke-virtual {v0}, Lcom/android/wm/shell/taskview/TaskViewTaskController;->isUsingShellTransitions()Z
+    .line 11
+    iget-object v1, v0, Lcom/android/wm/shell/taskview/TaskViewTaskController;->mTaskOrganizer:Lcom/android/wm/shell/ShellTaskOrganizer;
 
-    .line 12
-    move-result v0
+    .line 13
+    iget-object v2, v1, Lcom/android/wm/shell/ShellTaskOrganizer;->mLock:Ljava/lang/Object;
 
     .line 15
-    if-eqz v0, :cond_0
+    monitor-enter v2
 
-    .line 16
-    goto :goto_0
+    .line 17
+    :try_start_0
+    iget-object v1, v1, Lcom/android/wm/shell/ShellTaskOrganizer;->mLaunchCookieToListener:Landroid/util/ArrayMap;
 
     .line 18
-    :cond_0
-    invoke-virtual {p0}, Lcom/android/wm/shell/taskview/TaskView;->onLocationChanged()V
+    invoke-virtual {v1, p0, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
-    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskDescription:Landroid/app/ActivityManager$TaskDescription;
+    .line 20
+    monitor-exit v2
 
-    .line 22
-    if-eqz p1, :cond_1
+    .line 23
+    return-void
 
     .line 24
-    invoke-virtual {p1}, Landroid/app/ActivityManager$TaskDescription;->getBackgroundColor()I
+    :catchall_0
+    move-exception p0
+
+    .line 25
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 26
-    move-result p1
+    throw p0
 
-    .line 29
-    new-instance v0, Lcom/android/wm/shell/taskview/TaskView$$ExternalSyntheticLambda0;
+    .line 27
+    :pswitch_0
+    iget-object v0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->f$0:Lcom/android/wm/shell/taskview/TaskViewTaskController;
+
+    .line 28
+    iget-object p0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda3;->f$1:Ljava/lang/Object;
 
     .line 30
-    const/4 v1, 0x1
+    check-cast p0, Landroid/graphics/Rect;
 
     .line 32
-    invoke-direct {v0, p0, p1, v1}, Lcom/android/wm/shell/taskview/TaskView$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/taskview/TaskView;II)V
+    iget-object v1, v0, Lcom/android/wm/shell/taskview/TaskViewTaskController;->mTaskViewTransitions:Lcom/android/wm/shell/taskview/TaskViewTransitions;
 
-    .line 33
-    invoke-virtual {p0, v0}, Lcom/android/wm/shell/taskview/TaskView;->runOnViewThread(Ljava/lang/Runnable;)V
+    .line 34
+    iget-object v2, v1, Lcom/android/wm/shell/taskview/TaskViewTransitions;->mTaskViews:Landroid/util/ArrayMap;
 
     .line 36
+    invoke-virtual {v2, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 38
+    move-result-object v2
+
+    .line 41
+    check-cast v2, Lcom/android/wm/shell/taskview/TaskViewTransitions$TaskViewRequestedState;
+
+    .line 42
+    if-eqz v2, :cond_3
+
+    .line 44
+    iget-object v3, v2, Lcom/android/wm/shell/taskview/TaskViewTransitions$TaskViewRequestedState;->mBounds:Landroid/graphics/Rect;
+
+    .line 46
+    invoke-static {p0, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 48
+    move-result v3
+
+    .line 51
+    if-eqz v3, :cond_0
+
+    .line 52
+    goto :goto_0
+
+    .line 54
+    :cond_0
+    iget-object v3, v2, Lcom/android/wm/shell/taskview/TaskViewTransitions$TaskViewRequestedState;->mBounds:Landroid/graphics/Rect;
+
+    .line 55
+    invoke-virtual {v3, p0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    .line 57
+    iget-boolean v2, v2, Lcom/android/wm/shell/taskview/TaskViewTransitions$TaskViewRequestedState;->mVisible:Z
+
+    .line 60
+    if-nez v2, :cond_1
+
+    .line 62
+    goto :goto_0
+
+    .line 64
     :cond_1
+    iget-object v2, v1, Lcom/android/wm/shell/taskview/TaskViewTransitions;->mPending:Ljava/util/ArrayList;
+
+    .line 65
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+
+    .line 67
+    move-result v2
+
+    .line 70
+    xor-int/lit8 v2, v2, 0x1
+
+    .line 71
+    if-eqz v2, :cond_2
+
+    .line 73
+    goto :goto_0
+
+    .line 75
+    :cond_2
+    new-instance v2, Landroid/window/WindowContainerTransaction;
+
+    .line 76
+    invoke-direct {v2}, Landroid/window/WindowContainerTransaction;-><init>()V
+
+    .line 78
+    iget-object v3, v0, Lcom/android/wm/shell/taskview/TaskViewTaskController;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 81
+    iget-object v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    .line 83
+    invoke-virtual {v2, v3, p0}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+
+    .line 85
+    iget-object p0, v1, Lcom/android/wm/shell/taskview/TaskViewTransitions;->mPending:Ljava/util/ArrayList;
+
+    .line 88
+    new-instance v3, Lcom/android/wm/shell/taskview/TaskViewTransitions$PendingTransition;
+
+    .line 90
+    const/4 v4, 0x6
+
+    .line 92
+    const/4 v5, 0x0
+
+    .line 93
+    invoke-direct {v3, v4, v2, v0, v5}, Lcom/android/wm/shell/taskview/TaskViewTransitions$PendingTransition;-><init>(ILandroid/window/WindowContainerTransaction;Lcom/android/wm/shell/taskview/TaskViewTaskController;Landroid/os/IBinder;)V
+
+    .line 94
+    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 97
+    invoke-virtual {v1}, Lcom/android/wm/shell/taskview/TaskViewTransitions;->startNextTransition()V
+
+    .line 100
+    :cond_3
     :goto_0
     return-void
-    .line 39
+
+    .line 103
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+    .line 104
 .end method

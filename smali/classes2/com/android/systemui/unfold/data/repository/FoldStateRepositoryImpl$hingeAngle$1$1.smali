@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -42,21 +42,18 @@
     iget-object v0, p0, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1$1;->this$0:Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl;
 
     .line 2
-    iget-object v0, v0, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl;->foldStateProvider:Lcom/android/systemui/unfold/updates/FoldStateProvider;
+    iget-object v0, v0, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl;->foldStateProvider:Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;
 
     .line 4
     iget-object p0, p0, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1$1;->$callback:Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1$callback$1;
 
     .line 6
-    check-cast v0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;
-
-    .line 8
     invoke-virtual {v0, p0}, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->removeCallback(Ljava/lang/Object;)V
 
-    .line 10
+    .line 8
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 13
+    .line 11
     return-object p0
-    .line 15
+    .line 13
 .end method

@@ -1,6 +1,6 @@
 .class final synthetic Lcom/android/systemui/controls/management/ControlsProviderSelectorActivity$onStart$1;
 .super Lkotlin/jvm/internal/FunctionReferenceImpl;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -94,7 +94,7 @@
     sget v4, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->$r8$clinit:I
 
     .line 61
-    const v4, 0x7f1504be    # @style/Theme.SystemUI.Dialog
+    const v4, 0x7f1404c6    # @style/Theme.SystemUI.Dialog
 
     .line 63
     invoke-virtual {p1, v3, p0, v4}, Lcom/android/systemui/statusbar/phone/SystemUIDialog$Factory;->create(Lcom/android/systemui/statusbar/phone/DialogDelegate;Landroid/content/Context;I)Lcom/android/systemui/statusbar/phone/SystemUIDialog;
@@ -109,7 +109,7 @@
     move-result-object v3
 
     .line 73
-    const v4, 0x7f1402e5    # @string/controls_panel_authorization_title 'Add %s?'
+    const v4, 0x7f130301    # @string/controls_panel_authorization_title 'Add %s?'
 
     .line 74
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -133,7 +133,7 @@
     move-result-object v3
 
     .line 91
-    const v4, 0x7f1402e4    # @string/controls_panel_authorization '%s can choose which controls and content show here.'
+    const v4, 0x7f130300    # @string/controls_panel_authorization '%s can choose which controls and content show here.'
 
     .line 92
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -166,13 +166,13 @@
     invoke-virtual {p1, v3}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 115
-    const v1, 0x7f1402b6    # @string/controls_dialog_ok 'Add'
+    const v1, 0x7f1302d2    # @string/controls_dialog_ok 'Add'
 
     .line 118
     invoke-virtual {p1, v1, v2}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
 
     .line 121
-    const v1, 0x7f140253    # @string/cancel 'Cancel'
+    const v1, 0x7f13025a    # @string/cancel 'Cancel'
 
     .line 124
     invoke-virtual {p1, v1, v2, v0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;Z)V

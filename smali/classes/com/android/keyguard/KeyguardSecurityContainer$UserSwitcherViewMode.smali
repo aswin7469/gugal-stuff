@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;
 .super Lcom/android/keyguard/KeyguardSecurityContainer$SidedSecurityMode;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -12,11 +12,11 @@
 
 .field public mResources:Landroid/content/res/Resources;
 
-.field public mUserSwitchCallback:Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda0;
+.field public mUserSwitchCallback:Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda1;
 
 .field public mUserSwitcher:Landroid/widget/TextView;
 
-.field public mUserSwitcherCallback:Lcom/android/keyguard/KeyguardSecurityContainerController$$ExternalSyntheticLambda2;
+.field public mUserSwitcherCallback:Lcom/android/keyguard/KeyguardSecurityContainerController$$ExternalSyntheticLambda0;
 
 .field public mUserSwitcherController:Lcom/android/systemui/statusbar/policy/UserSwitcherController;
 
@@ -53,7 +53,7 @@
     const/4 v2, 0x1
 
     .line 14
-    const v3, 0x7f0e00ec    # @layout/keyguard_bouncer_user_switcher 'res/layout/keyguard_bouncer_user_switcher.xml'
+    const v3, 0x7f0d00f7    # @layout/keyguard_bouncer_user_switcher 'res/layout/keyguard_bouncer_user_switcher.xml'
 
     .line 15
     invoke-virtual {v0, v3, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -62,7 +62,7 @@
     iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mView:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 21
-    const v1, 0x7f0b03cd    # @id/keyguard_bouncer_user_switcher
+    const v1, 0x7f0a03ee    # @id/keyguard_bouncer_user_switcher
 
     .line 23
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -80,7 +80,7 @@
     iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mView:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 34
-    const v1, 0x7f0b0894    # @id/user_switcher_header
+    const v1, 0x7f0a08c7    # @id/user_switcher_header
 
     .line 36
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -164,7 +164,7 @@
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mUserSwitcherController:Lcom/android/systemui/statusbar/policy/UserSwitcherController;
 
     .line 42
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mUserSwitchCallback:Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda0;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mUserSwitchCallback:Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda1;
 
     .line 44
     invoke-virtual {p1, p0}, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->addUserSwitchCallback(Lcom/android/systemui/statusbar/policy/UserSwitcherController$UserSwitchCallback;)V
@@ -201,7 +201,7 @@
     iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mUserSwitcherController:Lcom/android/systemui/statusbar/policy/UserSwitcherController;
 
     .line 2
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mUserSwitchCallback:Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda0;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mUserSwitchCallback:Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda1;
 
     .line 4
     iget-object v1, v0, Lcom/android/systemui/statusbar/policy/UserSwitcherController;->callbackCompatMap:Ljava/util/Map;
@@ -240,7 +240,7 @@
     iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mView:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 2
-    const v1, 0x7f0b0894    # @id/user_switcher_header
+    const v1, 0x7f0a08c7    # @id/user_switcher_header
 
     .line 4
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -288,7 +288,7 @@
     move-result-object v1
 
     .line 37
-    const v2, 0x7f080629    # @drawable/bouncer_user_switcher_header_bg 'res/drawable/bouncer_user_switcher_header_bg.xml'
+    const v2, 0x7f08062a    # @drawable/bouncer_user_switcher_header_bg 'res/drawable/bouncer_user_switcher_header_bg.xml'
 
     .line 38
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -315,7 +315,7 @@
     check-cast v0, Landroid/graphics/drawable/LayerDrawable;
 
     .line 56
-    const v1, 0x7f0b0897    # @id/user_switcher_key_down
+    const v1, 0x7f0a08ca    # @id/user_switcher_key_down
 
     .line 58
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
@@ -516,7 +516,7 @@
     iget-object v2, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mResources:Landroid/content/res/Resources;
 
     .line 87
-    const v3, 0x7f0700f1    # @dimen/bouncer_user_switcher_icon_size '190.0dp'
+    const v3, 0x7f0700f7    # @dimen/bouncer_user_switcher_icon_size '190.0dp'
 
     .line 89
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -581,7 +581,7 @@
     iget-object v2, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mView:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 131
-    const v3, 0x7f0b088b    # @id/user_icon
+    const v3, 0x7f0a08be    # @id/user_icon
 
     .line 133
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -605,7 +605,7 @@
     iget-object v1, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mView:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 150
-    const v2, 0x7f0b0891    # @id/user_switcher_anchor
+    const v2, 0x7f0a08c4    # @id/user_switcher_anchor
 
     .line 152
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -632,10 +632,10 @@
     invoke-direct {v2, v3, v0}, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$2;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;Lcom/android/systemui/user/data/source/UserRecord;)V
 
     .line 170
-    new-instance v0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda1;
+    new-instance v0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;
 
     .line 173
-    invoke-direct {v0, p0, v1, v2}, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda1;-><init>(Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;Lcom/android/keyguard/KeyguardUserSwitcherAnchor;Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$2;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$$ExternalSyntheticLambda2;-><init>(Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;Lcom/android/keyguard/KeyguardUserSwitcherAnchor;Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$2;)V
 
     .line 175
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -692,7 +692,7 @@
     move-result-object v0
 
     .line 28
-    const v1, 0x7f070875    # @dimen/pin_view_trans_y_entry '120.0dp'
+    const v1, 0x7f0708c5    # @dimen/pin_view_trans_y_entry '120.0dp'
 
     .line 29
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -736,13 +736,11 @@
     .line 62
     return-void
 
-    .line 65
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
-    .line 66
 .end method
 
 .method public final startDisappearAnimation(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)V
@@ -768,7 +766,7 @@
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mResources:Landroid/content/res/Resources;
 
     .line 9
-    const v2, 0x7f07027b    # @dimen/disappear_y_translation '-50.0dp'
+    const v2, 0x7f07029d    # @dimen/disappear_y_translation '-50.0dp'
 
     .line 11
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -890,7 +888,7 @@
     :cond_0
     iget-object v1, v0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mResources:Landroid/content/res/Resources;
 
-    const v2, 0x7f0700ff    # @dimen/bouncer_user_switcher_y_trans '80.0dp'
+    const v2, 0x7f070105    # @dimen/bouncer_user_switcher_y_trans '80.0dp'
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -899,7 +897,7 @@
     .line 6
     iget-object v1, v0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mResources:Landroid/content/res/Resources;
 
-    const v2, 0x7f0700fd    # @dimen/bouncer_user_switcher_view_mode_view_flipper_bottom_margin '0.0dp'
+    const v2, 0x7f070103    # @dimen/bouncer_user_switcher_view_mode_view_flipper_bottom_margin '0.0dp'
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -908,7 +906,7 @@
     .line 7
     iget-object v1, v0, Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode;->mResources:Landroid/content/res/Resources;
 
-    const v2, 0x7f0700fc    # @dimen/bouncer_user_switcher_view_mode_user_switcher_bottom_margin '0.0dp'
+    const v2, 0x7f070102    # @dimen/bouncer_user_switcher_view_mode_user_switcher_bottom_margin '0.0dp'
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView$3;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -59,7 +59,7 @@
 .end method
 
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    .locals 2
 
     .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
@@ -68,7 +68,7 @@
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView$3;->mCancelled:Z
 
     .line 5
-    if-nez p1, :cond_5
+    if-nez p1, :cond_6
 
     .line 7
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView$3;->this$0:Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;
@@ -83,7 +83,7 @@
     const/4 v0, 0x0
 
     .line 15
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     .line 16
     iget-object p1, p1, Lcom/android/systemui/keyguard/KeyguardIndication;->mBackground:Landroid/graphics/drawable/Drawable;
@@ -92,7 +92,7 @@
     if-eqz p1, :cond_0
 
     .line 20
-    const p1, 0x7f15038e    # @style/TextAppearance.Keyguard.BottomArea.Button
+    const p1, 0x7f140396    # @style/TextAppearance.Keyguard.BottomArea.Button
 
     .line 22
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextAppearance(I)V
@@ -102,7 +102,7 @@
 
     .line 28
     :cond_0
-    const p1, 0x7f15038d    # @style/TextAppearance.Keyguard.BottomArea
+    const p1, 0x7f140395    # @style/TextAppearance.Keyguard.BottomArea
 
     .line 29
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextAppearance(I)V
@@ -162,65 +162,93 @@
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;->mKeyguardIndicationInfo:Lcom/android/systemui/keyguard/KeyguardIndication;
 
     .line 68
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p1, Lcom/android/systemui/keyguard/KeyguardIndication;->mIcon:Landroid/graphics/drawable/Drawable;
 
     .line 70
-    const/4 p1, 0x0
+    if-eqz p1, :cond_2
 
-    .line 73
-    invoke-virtual {p0, p1, p1, p1, p1}, Landroid/widget/TextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    .line 72
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCurrentTextColor()I
 
     .line 74
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;->mKeyguardIndicationInfo:Lcom/android/systemui/keyguard/KeyguardIndication;
+    move-result v1
 
     .line 77
-    iget-boolean p1, p1, Lcom/android/systemui/keyguard/KeyguardIndication;->mForceAccessibilityLiveRegionAssertive:Z
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
-    .line 79
-    goto :goto_2
+    .line 78
+    instance-of v1, p1, Landroid/graphics/drawable/AnimatedVectorDrawable;
 
     .line 81
-    :cond_2
-    move p1, v0
-
-    .line 82
-    :goto_2
-    if-nez p1, :cond_3
+    if-eqz v1, :cond_2
 
     .line 83
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setAccessibilityLiveRegion(I)V
+    move-object v1, p1
 
     .line 85
-    :cond_3
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;->mMessage:Ljava/lang/CharSequence;
+    check-cast v1, Landroid/graphics/drawable/AnimatedVectorDrawable;
+
+    .line 86
+    invoke-virtual {v1}, Landroid/graphics/drawable/AnimatedVectorDrawable;->start()V
 
     .line 88
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    :cond_2
+    const/4 v1, 0x0
 
-    .line 90
-    if-eqz p1, :cond_4
+    .line 91
+    invoke-virtual {p0, p1, v1, v1, v1}, Landroid/widget/TextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 93
-    const/4 p1, 0x2
+    .line 92
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;->mKeyguardIndicationInfo:Lcom/android/systemui/keyguard/KeyguardIndication;
 
     .line 95
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setAccessibilityLiveRegion(I)V
+    iget-boolean p1, p1, Lcom/android/systemui/keyguard/KeyguardIndication;->mForceAccessibilityLiveRegionAssertive:Z
 
-    .line 96
-    :cond_4
-    iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;->mAlwaysAnnounceText:Z
+    .line 97
+    goto :goto_2
 
     .line 99
-    if-eqz p1, :cond_5
+    :cond_3
+    move p1, v0
+
+    .line 100
+    :goto_2
+    if-nez p1, :cond_4
 
     .line 101
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;->mMessage:Ljava/lang/CharSequence;
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setAccessibilityLiveRegion(I)V
 
     .line 103
+    :cond_4
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;->mMessage:Ljava/lang/CharSequence;
+
+    .line 106
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 108
+    if-eqz p1, :cond_5
+
+    .line 111
+    const/4 p1, 0x2
+
+    .line 113
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setAccessibilityLiveRegion(I)V
+
+    .line 114
+    :cond_5
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;->mAlwaysAnnounceText:Z
+
+    .line 117
+    if-eqz p1, :cond_6
+
+    .line 119
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;->mMessage:Ljava/lang/CharSequence;
+
+    .line 121
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    .line 105
-    :cond_5
+    .line 123
+    :cond_6
     return-void
-    .line 108
+    .line 126
 .end method

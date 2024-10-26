@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/broadcast/BroadcastSender;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -60,24 +60,35 @@
     .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 2
     move-result-object v0
 
-    .line 5
     new-instance v1, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcast$1;
 
-    .line 6
     invoke-direct {v1, p0, p1}, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcast$1;-><init>(Lcom/android/systemui/broadcast/BroadcastSender;Landroid/content/Intent;)V
 
-    .line 8
     invoke-virtual {p0, v0, v1}, Lcom/android/systemui/broadcast/BroadcastSender;->sendInBackground(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
 
-    .line 11
     return-void
-    .line 14
 .end method
 
-.method public final sendBroadcast$1(Landroid/content/Intent;)V
+.method public final sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
+    .locals 2
+
+    .line 2
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcast$2;
+
+    invoke-direct {v1, p0, p1, p2}, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcast$2;-><init>(Lcom/android/systemui/broadcast/BroadcastSender;Landroid/content/Intent;Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0, v1}, Lcom/android/systemui/broadcast/BroadcastSender;->sendInBackground(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
+
+    return-void
+.end method
+
+.method public final sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
     .locals 2
 
     .line 1
@@ -87,10 +98,10 @@
     move-result-object v0
 
     .line 5
-    new-instance v1, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcast$2;
+    new-instance v1, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcastAsUser$1;
 
     .line 6
-    invoke-direct {v1, p0, p1}, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcast$2;-><init>(Lcom/android/systemui/broadcast/BroadcastSender;Landroid/content/Intent;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcastAsUser$1;-><init>(Lcom/android/systemui/broadcast/BroadcastSender;Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     .line 8
     invoke-virtual {p0, v0, v1}, Lcom/android/systemui/broadcast/BroadcastSender;->sendInBackground(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V

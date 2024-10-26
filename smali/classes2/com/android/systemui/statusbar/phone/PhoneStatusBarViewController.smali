@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/PhoneStatusBarViewController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -32,7 +32,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;Lcom/android/systemui/unfold/util/ScopedUnfoldTransitionProgressProvider;Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/systemui/shade/ShadeController;Lcom/android/systemui/shade/ShadeViewController;Lcom/android/systemui/shade/domain/interactor/PanelExpansionInteractor;Ljavax/inject/Provider;Lcom/android/systemui/shade/ShadeLogger;Lcom/android/systemui/user/ui/viewmodel/StatusBarUserChipViewModel;Lcom/android/systemui/util/view/ViewUtil;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/statusbar/phone/StatusOverlayHoverListenerFactory;)V
+.method public constructor <init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;Lcom/android/systemui/unfold/util/ScopedUnfoldTransitionProgressProvider;Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/systemui/shade/ShadeController;Lcom/android/systemui/shade/ShadeViewController;Lcom/android/systemui/shade/domain/interactor/PanelExpansionInteractor;Ldagger/internal/DelegateFactory;Lcom/android/systemui/shade/ShadeLogger;Lcom/android/systemui/user/ui/viewmodel/StatusBarUserChipViewModel;Lcom/android/systemui/util/view/ViewUtil;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/statusbar/phone/StatusOverlayHoverListenerFactory;)V
     .locals 0
 
     .line 1
@@ -93,7 +93,7 @@
     iput-object p2, p1, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mTouchEventHandler:Lcom/android/systemui/Gefingerpoken;
 
     .line 40
-    const p0, 0x7f0b0892    # @id/user_switcher_container
+    const p0, 0x7f0a08c5    # @id/user_switcher_container
 
     .line 42
     invoke-virtual {p1, p0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -208,7 +208,7 @@
     check-cast v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
 
     .line 4
-    const v1, 0x7f0b07c0    # @id/system_icons
+    const v1, 0x7f0a07ef    # @id/system_icons
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -316,7 +316,7 @@
     check-cast v1, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
 
     .line 80
-    const v2, 0x7f0b076e    # @id/status_bar_start_side_except_heads_up
+    const v2, 0x7f0a079d    # @id/status_bar_start_side_except_heads_up
 
     .line 82
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -331,7 +331,7 @@
     check-cast v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
 
     .line 91
-    const v3, 0x7f0b0769    # @id/status_bar_end_side_content
+    const v3, 0x7f0a0798    # @id/status_bar_end_side_content
 
     .line 93
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;

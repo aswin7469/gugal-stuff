@@ -1,6 +1,6 @@
 .class public final Landroidx/window/core/ConsumerAdapter$ConsumerHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/reflect/InvocationHandler;
@@ -274,95 +274,95 @@
     move-result-object v0
 
     .line 150
-    const-string v1, "toString"
+    const-string/jumbo v1, "toString"
 
     .line 151
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 153
+    .line 154
     move-result v0
-
-    .line 156
-    if-eqz v0, :cond_7
 
     .line 157
-    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
-
-    .line 159
-    move-result-object v0
-
-    .line 162
-    const-class v1, Ljava/lang/String;
-
-    .line 163
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->equals(Ljava/lang/Object;)Z
-
-    .line 165
-    move-result v0
-
-    .line 168
     if-eqz v0, :cond_7
 
+    .line 158
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
+
+    .line 160
+    move-result-object v0
+
+    .line 163
+    const-class v1, Ljava/lang/String;
+
+    .line 164
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->equals(Ljava/lang/Object;)Z
+
+    .line 166
+    move-result v0
+
     .line 169
+    if-eqz v0, :cond_7
+
+    .line 170
     if-nez p3, :cond_7
 
-    .line 171
+    .line 172
     iget-object p0, p0, Landroidx/window/core/ConsumerAdapter$ConsumerHandler;->consumer:Lkotlin/jvm/functions/Function1;
 
-    .line 173
+    .line 174
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 175
+    .line 176
     move-result-object p0
 
-    .line 178
+    .line 179
     :goto_0
     return-object p0
 
-    .line 179
+    .line 180
     :cond_7
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    .line 180
+    .line 181
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 182
+    .line 183
     const-string v1, "Unexpected method call object:"
 
-    .line 184
+    .line 185
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 186
+    .line 187
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 189
+    .line 190
     const-string p1, ", method: "
 
-    .line 192
+    .line 193
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 194
+    .line 195
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 197
+    .line 198
     const-string p1, ", args: "
 
-    .line 200
+    .line 201
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 202
+    .line 203
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 205
+    .line 206
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 208
+    .line 209
     move-result-object p1
 
-    .line 211
+    .line 212
     invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    .line 212
+    .line 213
     throw p0
-    .line 215
+    .line 216
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/fuelgauge/BatterySaverUtils$Parameters;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -76,36 +76,35 @@
 
     .line 42
     :goto_0
-    const-string p1, "start_nth"
+    const-string/jumbo p1, "start_nth"
 
     .line 45
     const/4 v1, 0x4
 
-    .line 47
+    .line 48
     invoke-virtual {v0, p1, v1}, Landroid/util/KeyValueListParser;->getInt(Ljava/lang/String;I)I
 
-    .line 48
+    .line 49
     move-result p1
-
-    .line 51
-    iput p1, p0, Lcom/android/settingslib/fuelgauge/BatterySaverUtils$Parameters;->startNth:I
 
     .line 52
+    iput p1, p0, Lcom/android/settingslib/fuelgauge/BatterySaverUtils$Parameters;->startNth:I
+
+    .line 53
     const-string p1, "end_nth"
 
-    .line 54
+    .line 55
     const/16 v1, 0x8
 
-    .line 56
+    .line 57
     invoke-virtual {v0, p1, v1}, Landroid/util/KeyValueListParser;->getInt(Ljava/lang/String;I)I
 
-    .line 58
+    .line 59
     move-result p1
 
-    .line 61
+    .line 62
     iput p1, p0, Lcom/android/settingslib/fuelgauge/BatterySaverUtils$Parameters;->endNth:I
 
-    .line 62
+    .line 63
     return-void
-    .line 64
 .end method

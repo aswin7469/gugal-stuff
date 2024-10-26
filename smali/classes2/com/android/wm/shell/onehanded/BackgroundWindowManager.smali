@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/onehanded/BackgroundWindowManager;
 .super Landroid/view/WindowlessWindowManager;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -196,7 +196,7 @@
     invoke-direct {v0, p0, v1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
     .line 9
-    const p0, 0x7f060416    # @color/one_handed_tutorial_background_color 'res/color/one_handed_tutorial_background_color.xml'
+    const p0, 0x7f060422    # @color/one_handed_tutorial_background_color 'res/color/one_handed_tutorial_background_color.xml'
 
     .line 12
     invoke-virtual {v0, p0}, Landroid/content/Context;->getColor(I)I
@@ -321,7 +321,7 @@
     move-result-object v0
 
     .line 32
-    const v1, 0x7f0e004a    # @layout/background_panel 'res/layout/background_panel.xml'
+    const v1, 0x7f0d004e    # @layout/background_panel 'res/layout/background_panel.xml'
 
     .line 33
     const/4 v2, 0x0

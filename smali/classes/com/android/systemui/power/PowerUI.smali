@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/power/PowerUI;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -337,7 +337,7 @@
     move-result-object v3
 
     .line 18
-    const v4, 0x7f0c0039    # @integer/config_showTemperatureWarning '0'
+    const v4, 0x7f0b003e    # @integer/config_showTemperatureWarning '0'
 
     .line 19
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
@@ -421,120 +421,120 @@
     if-nez v0, :cond_2
 
     .line 59
-    const-string v0, "thermalservice"
+    const-string/jumbo v0, "thermalservice"
 
     .line 61
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
-    .line 63
+    .line 64
     move-result-object v0
-
-    .line 66
-    invoke-static {v0}, Landroid/os/IThermalService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IThermalService;
 
     .line 67
+    invoke-static {v0}, Landroid/os/IThermalService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IThermalService;
+
+    .line 68
     move-result-object v0
 
-    .line 70
+    .line 71
     iput-object v0, p0, Lcom/android/systemui/power/PowerUI;->mThermalService:Landroid/os/IThermalService;
 
-    .line 71
+    .line 72
     :cond_2
     iget-boolean v0, p0, Lcom/android/systemui/power/PowerUI;->mEnableSkinTemperatureWarning:Z
 
-    .line 73
+    .line 74
     if-eqz v0, :cond_3
 
-    .line 75
+    .line 76
     iget-object v0, p0, Lcom/android/systemui/power/PowerUI;->mThermalService:Landroid/os/IThermalService;
 
-    .line 77
+    .line 78
     iget-object v1, p0, Lcom/android/systemui/power/PowerUI;->mSkinThermalEventListener:Landroid/os/IThermalEventListener;
 
-    .line 79
+    .line 80
     const/4 v4, 0x3
 
-    .line 81
+    .line 82
     invoke-interface {v0, v1, v4}, Landroid/os/IThermalService;->registerThermalEventListenerWithType(Landroid/os/IThermalEventListener;I)Z
 
-    .line 82
+    .line 83
     move-result v0
 
-    .line 85
+    .line 86
     :goto_2
     move v3, v0
 
-    .line 86
+    .line 87
     goto :goto_4
 
-    .line 87
+    .line 88
     :cond_3
     iget-object v0, p0, Lcom/android/systemui/power/PowerUI;->mThermalService:Landroid/os/IThermalService;
 
-    .line 88
+    .line 89
     iget-object v1, p0, Lcom/android/systemui/power/PowerUI;->mSkinThermalEventListener:Landroid/os/IThermalEventListener;
 
-    .line 90
+    .line 91
     invoke-interface {v0, v1}, Landroid/os/IThermalService;->unregisterThermalEventListener(Landroid/os/IThermalEventListener;)Z
 
-    .line 92
+    .line 93
     move-result v0
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 95
+    .line 96
     goto :goto_2
 
-    .line 96
+    .line 97
     :goto_3
     :try_start_2
     const-string v1, "PowerUI"
 
-    .line 97
+    .line 98
     const-string v4, "Exception while (un)registering skin thermal event listener."
 
-    .line 99
+    .line 100
     invoke-static {v1, v4, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 101
+    .line 102
     :goto_4
     if-nez v3, :cond_4
 
-    .line 104
+    .line 105
     iget-boolean v0, p0, Lcom/android/systemui/power/PowerUI;->mEnableSkinTemperatureWarning:Z
 
-    .line 106
+    .line 107
     xor-int/2addr v0, v2
 
-    .line 108
+    .line 109
     iput-boolean v0, p0, Lcom/android/systemui/power/PowerUI;->mEnableSkinTemperatureWarning:Z
 
-    .line 109
+    .line 110
     const-string v0, "PowerUI"
 
-    .line 111
+    .line 112
     const-string v1, "Failed to register or unregister skin thermal event listener."
 
-    .line 113
+    .line 114
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 115
+    .line 116
     :cond_4
     monitor-exit p0
 
-    .line 118
+    .line 119
     return-void
 
-    .line 119
+    .line 120
     :goto_5
     monitor-exit p0
 
-    .line 120
-    throw v0
     .line 121
+    throw v0
+    .line 122
 .end method
 
 .method public declared-synchronized doUsbThermalEventListenerRegistration()V
@@ -569,7 +569,7 @@
     move-result-object v3
 
     .line 18
-    const v4, 0x7f0c003a    # @integer/config_showUsbPortAlarm '0'
+    const v4, 0x7f0b003f    # @integer/config_showUsbPortAlarm '0'
 
     .line 19
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
@@ -653,120 +653,120 @@
     if-nez v0, :cond_2
 
     .line 59
-    const-string v0, "thermalservice"
+    const-string/jumbo v0, "thermalservice"
 
     .line 61
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
-    .line 63
+    .line 64
     move-result-object v0
-
-    .line 66
-    invoke-static {v0}, Landroid/os/IThermalService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IThermalService;
 
     .line 67
+    invoke-static {v0}, Landroid/os/IThermalService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IThermalService;
+
+    .line 68
     move-result-object v0
 
-    .line 70
+    .line 71
     iput-object v0, p0, Lcom/android/systemui/power/PowerUI;->mThermalService:Landroid/os/IThermalService;
 
-    .line 71
+    .line 72
     :cond_2
     iget-boolean v0, p0, Lcom/android/systemui/power/PowerUI;->mEnableUsbTemperatureAlarm:Z
 
-    .line 73
+    .line 74
     if-eqz v0, :cond_3
 
-    .line 75
+    .line 76
     iget-object v0, p0, Lcom/android/systemui/power/PowerUI;->mThermalService:Landroid/os/IThermalService;
 
-    .line 77
+    .line 78
     iget-object v1, p0, Lcom/android/systemui/power/PowerUI;->mUsbThermalEventListener:Landroid/os/IThermalEventListener;
 
-    .line 79
+    .line 80
     const/4 v4, 0x4
 
-    .line 81
+    .line 82
     invoke-interface {v0, v1, v4}, Landroid/os/IThermalService;->registerThermalEventListenerWithType(Landroid/os/IThermalEventListener;I)Z
 
-    .line 82
+    .line 83
     move-result v0
 
-    .line 85
+    .line 86
     :goto_2
     move v3, v0
 
-    .line 86
+    .line 87
     goto :goto_4
 
-    .line 87
+    .line 88
     :cond_3
     iget-object v0, p0, Lcom/android/systemui/power/PowerUI;->mThermalService:Landroid/os/IThermalService;
 
-    .line 88
+    .line 89
     iget-object v1, p0, Lcom/android/systemui/power/PowerUI;->mUsbThermalEventListener:Landroid/os/IThermalEventListener;
 
-    .line 90
+    .line 91
     invoke-interface {v0, v1}, Landroid/os/IThermalService;->unregisterThermalEventListener(Landroid/os/IThermalEventListener;)Z
 
-    .line 92
+    .line 93
     move-result v0
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 95
+    .line 96
     goto :goto_2
 
-    .line 96
+    .line 97
     :goto_3
     :try_start_2
     const-string v1, "PowerUI"
 
-    .line 97
+    .line 98
     const-string v4, "Exception while (un)registering usb thermal event listener."
 
-    .line 99
+    .line 100
     invoke-static {v1, v4, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 101
+    .line 102
     :goto_4
     if-nez v3, :cond_4
 
-    .line 104
+    .line 105
     iget-boolean v0, p0, Lcom/android/systemui/power/PowerUI;->mEnableUsbTemperatureAlarm:Z
 
-    .line 106
+    .line 107
     xor-int/2addr v0, v2
 
-    .line 108
+    .line 109
     iput-boolean v0, p0, Lcom/android/systemui/power/PowerUI;->mEnableUsbTemperatureAlarm:Z
 
-    .line 109
+    .line 110
     const-string v0, "PowerUI"
 
-    .line 111
+    .line 112
     const-string v1, "Failed to register or unregister usb thermal event listener."
 
-    .line 113
+    .line 114
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 115
+    .line 116
     :cond_4
     monitor-exit p0
 
-    .line 118
+    .line 119
     return-void
 
-    .line 119
+    .line 120
     :goto_5
     monitor-exit p0
 
-    .line 120
-    throw v0
     .line 121
+    throw v0
+    .line 122
 .end method
 
 .method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
@@ -863,22 +863,22 @@
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 70
-    iget v0, p0, Lcom/android/systemui/power/PowerUI;->mInvalidCharger:I
+    iget p2, p0, Lcom/android/systemui/power/PowerUI;->mInvalidCharger:I
 
     .line 73
-    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     .line 75
-    move-result-object v0
+    move-result-object p2
 
     .line 78
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 79
-    const-string v0, "mScreenOffTime="
+    const-string p2, "mScreenOffTime="
 
     .line 82
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 84
     iget-wide v0, p0, Lcom/android/systemui/power/PowerUI;->mScreenOffTime:J
@@ -893,16 +893,16 @@
     const-wide/16 v2, 0x0
 
     .line 94
-    cmp-long v0, v0, v2
+    cmp-long p2, v0, v2
 
     .line 96
-    if-ltz v0, :cond_0
+    if-ltz p2, :cond_0
 
     .line 98
-    const-string v0, " ("
+    const-string p2, " ("
 
     .line 100
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 102
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -920,277 +920,105 @@
     invoke-virtual {p1, v0, v1}, Ljava/io/PrintWriter;->print(J)V
 
     .line 112
-    const-string v0, " ago)"
+    const-string p2, " ago)"
 
     .line 115
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 117
     :cond_0
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     .line 120
-    const-string v0, "soundTimeout="
+    const-string p2, "soundTimeout="
 
     .line 123
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 125
-    iget-object v0, p0, Lcom/android/systemui/power/PowerUI;->mContext:Landroid/content/Context;
+    iget-object p2, p0, Lcom/android/systemui/power/PowerUI;->mContext:Landroid/content/Context;
 
     .line 128
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     .line 130
-    move-result-object v0
+    move-result-object p2
 
     .line 133
-    const-string v1, "low_battery_sound_timeout"
+    const-string v0, "low_battery_sound_timeout"
 
     .line 134
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     .line 136
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {p2, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     .line 137
-    move-result v0
+    move-result p2
 
     .line 140
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(I)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(I)V
 
     .line 141
-    const-string v0, "bucket: "
+    const-string p2, "bucket: "
 
     .line 144
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 146
-    iget v0, p0, Lcom/android/systemui/power/PowerUI;->mBatteryLevel:I
+    iget p2, p0, Lcom/android/systemui/power/PowerUI;->mBatteryLevel:I
 
     .line 149
-    invoke-virtual {p0, v0}, Lcom/android/systemui/power/PowerUI;->findBatteryLevelBucket(I)I
+    invoke-virtual {p0, p2}, Lcom/android/systemui/power/PowerUI;->findBatteryLevelBucket(I)I
 
     .line 151
-    move-result v0
+    move-result p2
 
     .line 154
-    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     .line 155
-    move-result-object v0
+    move-result-object p2
 
     .line 158
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 159
-    const-string v0, "mEnableSkinTemperatureWarning="
+    const-string p2, "mEnableSkinTemperatureWarning="
 
     .line 162
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 164
-    iget-boolean v0, p0, Lcom/android/systemui/power/PowerUI;->mEnableSkinTemperatureWarning:Z
+    iget-boolean p2, p0, Lcom/android/systemui/power/PowerUI;->mEnableSkinTemperatureWarning:Z
 
     .line 167
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Z)V
 
     .line 169
-    const-string v0, "mEnableUsbTemperatureAlarm="
+    const-string p2, "mEnableUsbTemperatureAlarm="
 
     .line 172
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 174
-    iget-boolean v0, p0, Lcom/android/systemui/power/PowerUI;->mEnableUsbTemperatureAlarm:Z
+    iget-boolean p2, p0, Lcom/android/systemui/power/PowerUI;->mEnableUsbTemperatureAlarm:Z
 
     .line 177
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Z)V
 
     .line 179
     iget-object p0, p0, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
 
     .line 182
-    check-cast p0, Lcom/android/systemui/power/PowerNotificationWarnings;
+    check-cast p0, Lcom/google/android/systemui/power/PowerNotificationWarningsGoogleImpl;
 
     .line 184
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0, p1}, Lcom/google/android/systemui/power/PowerNotificationWarningsGoogleImpl;->dump(Ljava/io/PrintWriter;)V
 
     .line 186
-    const-string v0, "mWarning="
-
-    .line 189
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 191
-    iget-boolean v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mWarning:Z
-
-    .line 194
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
-
-    .line 196
-    const-string v0, "mPlaySound="
-
-    .line 199
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 201
-    iget-boolean v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mPlaySound:Z
-
-    .line 204
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
-
-    .line 206
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 209
-    iget-boolean p2, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mInvalidCharger:Z
-
-    .line 212
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Z)V
-
-    .line 214
-    const-string p2, "mShowing="
-
-    .line 217
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 219
-    sget-object p2, Lcom/android/systemui/power/PowerNotificationWarnings;->SHOWING_STRINGS:[Ljava/lang/String;
-
-    .line 222
-    iget v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mShowing:I
-
-    .line 224
-    aget-object p2, p2, v0
-
-    .line 226
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 228
-    const-string p2, "mSaverConfirmation="
-
-    .line 231
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 233
-    iget-object p2, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mSaverConfirmation:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
-
-    .line 236
-    const/4 v0, 0x0
-
-    .line 238
-    const-string v1, "not null"
-
-    .line 239
-    if-eqz p2, :cond_1
-
-    .line 241
-    move-object p2, v1
-
-    .line 243
-    goto :goto_0
-
-    .line 244
-    :cond_1
-    move-object p2, v0
-
-    .line 245
-    :goto_0
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 246
-    const-string p2, "mSaverEnabledConfirmation="
-
-    .line 249
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 251
-    const-string p2, "mHighTempWarning="
-
-    .line 254
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 256
-    iget-boolean p2, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mHighTempWarning:Z
-
-    .line 259
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Z)V
-
-    .line 261
-    const-string p2, "mHighTempDialog="
-
-    .line 264
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 266
-    iget-object p2, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mHighTempDialog:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
-
-    .line 269
-    if-eqz p2, :cond_2
-
-    .line 271
-    move-object p2, v1
-
-    .line 273
-    goto :goto_1
-
-    .line 274
-    :cond_2
-    move-object p2, v0
-
-    .line 275
-    :goto_1
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 276
-    const-string p2, "mThermalShutdownDialog="
-
-    .line 279
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 281
-    iget-object p2, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mThermalShutdownDialog:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
-
-    .line 284
-    if-eqz p2, :cond_3
-
-    .line 286
-    move-object p2, v1
-
-    .line 288
-    goto :goto_2
-
-    .line 289
-    :cond_3
-    move-object p2, v0
-
-    .line 290
-    :goto_2
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 291
-    const-string p2, "mUsbHighTempDialog="
-
-    .line 294
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 296
-    iget-object p0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mUsbHighTempDialog:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
-
-    .line 299
-    if-eqz p0, :cond_4
-
-    .line 301
-    move-object v0, v1
-
-    .line 303
-    :cond_4
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 304
     return-void
-    .line 307
+    .line 189
 .end method
 
 .method public final findBatteryLevelBucket(I)I
@@ -1270,7 +1098,7 @@
 .end method
 
 .method public maybeShowHybridWarning(Lcom/android/systemui/power/BatteryStateSnapshot;Lcom/android/systemui/power/BatteryStateSnapshot;)V
-    .locals 6
+    .locals 4
 
     .line 1
     iget v0, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->batteryLevel:I
@@ -1279,225 +1107,152 @@
     const/16 v1, 0x1e
 
     .line 4
-    const/4 v2, 0x0
+    sget-boolean v2, Lcom/android/systemui/power/PowerUI;->DEBUG:Z
 
     .line 6
-    sget-boolean v3, Lcom/android/systemui/power/PowerUI;->DEBUG:Z
+    const-string v3, "PowerUI"
 
-    .line 7
-    const-string v4, "PowerUI"
-
-    .line 9
+    .line 8
     if-lt v0, v1, :cond_0
 
-    .line 11
-    iput-boolean v2, p0, Lcom/android/systemui/power/PowerUI;->mLowWarningShownThisChargeCycle:Z
+    .line 10
+    const/4 v0, 0x0
+
+    .line 12
+    iput-boolean v0, p0, Lcom/android/systemui/power/PowerUI;->mLowWarningShownThisChargeCycle:Z
 
     .line 13
-    iput-boolean v2, p0, Lcom/android/systemui/power/PowerUI;->mSevereWarningShownThisChargeCycle:Z
+    iput-boolean v0, p0, Lcom/android/systemui/power/PowerUI;->mSevereWarningShownThisChargeCycle:Z
 
     .line 15
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
     .line 17
     const-string v0, "Charge cycle reset! Can show warnings again"
 
     .line 19
-    invoke-static {v4, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 21
     :cond_0
     iget v0, p2, Lcom/android/systemui/power/BatteryStateSnapshot;->bucket:I
 
     .line 24
-    const/4 v1, 0x1
+    iget v1, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->bucket:I
 
     .line 26
-    iget v5, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->bucket:I
+    if-ne v1, v0, :cond_1
 
-    .line 27
-    if-ne v5, v0, :cond_1
-
-    .line 29
+    .line 28
     iget-boolean p2, p2, Lcom/android/systemui/power/BatteryStateSnapshot;->plugged:Z
 
-    .line 31
-    if-eqz p2, :cond_2
-
-    .line 33
+    .line 30
     :cond_1
-    move v2, v1
-
-    .line 35
-    :cond_2
     invoke-virtual {p0, p1}, Lcom/android/systemui/power/PowerUI;->shouldShowHybridWarning(Lcom/android/systemui/power/BatteryStateSnapshot;)Z
 
-    .line 36
+    .line 32
     move-result p2
 
-    .line 39
+    .line 35
     iget-object v0, p0, Lcom/android/systemui/power/PowerUI;->mWarnings:Lcom/android/systemui/power/PowerUI$WarningsUI;
 
-    .line 40
-    if-eqz p2, :cond_4
+    .line 36
+    if-eqz p2, :cond_3
 
-    .line 42
-    check-cast v0, Lcom/android/systemui/power/PowerNotificationWarnings;
+    .line 38
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 40
+    const/4 p2, 0x1
+
+    .line 43
+    iget v0, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->batteryLevel:I
 
     .line 44
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    .line 46
-    const-string v5, "show low battery warning: level="
-
-    .line 48
-    invoke-direct {p2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 50
-    iget v5, v0, Lcom/android/systemui/power/PowerNotificationWarnings;->mBatteryLevel:I
-
-    .line 53
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 55
-    const-string v5, " ["
-
-    .line 58
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 60
-    iget v5, v0, Lcom/android/systemui/power/PowerNotificationWarnings;->mBucket:I
-
-    .line 63
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 65
-    const-string v5, "] playSound="
-
-    .line 68
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 70
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 73
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 76
-    move-result-object p2
-
-    .line 79
-    const-string v5, "PowerUI.Notification"
-
-    .line 80
-    invoke-static {v5, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 82
-    sget-object p2, Lcom/android/systemui/power/BatteryWarningEvents$LowBatteryWarningEvent;->LOW_BATTERY_NOTIFICATION:Lcom/android/systemui/power/BatteryWarningEvents$LowBatteryWarningEvent;
-
-    .line 85
-    invoke-virtual {v0, p2}, Lcom/android/systemui/power/PowerNotificationWarnings;->logEvent(Lcom/android/systemui/power/BatteryWarningEvents$LowBatteryWarningEvent;)V
-
-    .line 87
-    iput-boolean v2, v0, Lcom/android/systemui/power/PowerNotificationWarnings;->mPlaySound:Z
-
-    .line 90
-    iput-boolean v1, v0, Lcom/android/systemui/power/PowerNotificationWarnings;->mWarning:Z
-
-    .line 92
-    invoke-virtual {v0}, Lcom/android/systemui/power/PowerNotificationWarnings;->updateNotification()V
-
-    .line 94
-    iget p2, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->batteryLevel:I
-
-    .line 97
     iget p1, p1, Lcom/android/systemui/power/BatteryStateSnapshot;->severeLevelThreshold:I
 
-    .line 99
-    if-gt p2, p1, :cond_3
+    .line 46
+    if-gt v0, p1, :cond_2
 
-    .line 101
-    iput-boolean v1, p0, Lcom/android/systemui/power/PowerUI;->mSevereWarningShownThisChargeCycle:Z
+    .line 48
+    iput-boolean p2, p0, Lcom/android/systemui/power/PowerUI;->mSevereWarningShownThisChargeCycle:Z
 
-    .line 103
-    iput-boolean v1, p0, Lcom/android/systemui/power/PowerUI;->mLowWarningShownThisChargeCycle:Z
+    .line 50
+    iput-boolean p2, p0, Lcom/android/systemui/power/PowerUI;->mLowWarningShownThisChargeCycle:Z
 
-    .line 105
-    if-eqz v3, :cond_8
+    .line 52
+    if-eqz v2, :cond_7
 
-    .line 107
+    .line 54
     const-string p0, "Severe warning marked as shown this cycle"
 
-    .line 109
-    invoke-static {v4, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 56
+    invoke-static {v3, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
+    .line 58
     goto :goto_0
 
-    .line 114
-    :cond_3
+    .line 61
+    :cond_2
     const-string p1, "Low warning marked as shown this cycle"
 
-    .line 115
-    invoke-static {v4, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 62
+    invoke-static {v3, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
-    iput-boolean v1, p0, Lcom/android/systemui/power/PowerUI;->mLowWarningShownThisChargeCycle:Z
+    .line 64
+    iput-boolean p2, p0, Lcom/android/systemui/power/PowerUI;->mLowWarningShownThisChargeCycle:Z
 
-    .line 120
+    .line 67
     goto :goto_0
 
-    .line 122
-    :cond_4
+    .line 69
+    :cond_3
     invoke-virtual {p0, p1}, Lcom/android/systemui/power/PowerUI;->shouldDismissHybridWarning(Lcom/android/systemui/power/BatteryStateSnapshot;)Z
 
-    .line 123
+    .line 70
     move-result p0
 
-    .line 126
-    if-eqz p0, :cond_6
+    .line 73
+    if-eqz p0, :cond_5
 
-    .line 127
-    if-eqz v3, :cond_5
+    .line 74
+    if-eqz v2, :cond_4
 
-    .line 129
+    .line 76
     const-string p0, "Dismissing warning"
 
-    .line 131
-    invoke-static {v4, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 78
+    invoke-static {v3, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
-    :cond_5
-    check-cast v0, Lcom/android/systemui/power/PowerNotificationWarnings;
+    .line 80
+    :cond_4
+    check-cast v0, Lcom/google/android/systemui/power/PowerNotificationWarningsGoogleImpl;
 
-    .line 136
-    invoke-virtual {v0}, Lcom/android/systemui/power/PowerNotificationWarnings;->dismissLowBatteryWarning()V
+    .line 83
+    invoke-virtual {v0}, Lcom/google/android/systemui/power/PowerNotificationWarningsGoogleImpl;->dismissLowBatteryWarning()V
 
-    .line 138
+    .line 85
     goto :goto_0
 
-    .line 141
-    :cond_6
-    if-eqz v3, :cond_7
+    .line 88
+    :cond_5
+    if-eqz v2, :cond_6
 
-    .line 142
+    .line 89
     const-string p0, "Updating warning"
 
-    .line 144
-    invoke-static {v4, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 91
+    invoke-static {v3, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
+    .line 93
+    :cond_6
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 96
     :cond_7
-    check-cast v0, Lcom/android/systemui/power/PowerNotificationWarnings;
-
-    .line 149
-    invoke-virtual {v0}, Lcom/android/systemui/power/PowerNotificationWarnings;->updateNotification()V
-
-    .line 151
-    :cond_8
     :goto_0
     return-void
-    .line 154
+    .line 99
 .end method
 
 .method public final onConfigChanged(Landroid/content/res/Configuration;)V
@@ -1540,54 +1295,108 @@
 .end method
 
 .method public refreshEstimateIfNeeded()Lcom/android/settingslib/fuelgauge/Estimate;
-    .locals 6
+    .locals 7
 
     .line 1
-    iget-object p0, p0, Lcom/android/systemui/power/PowerUI;->mEnhancedEstimates:Lcom/android/systemui/power/EnhancedEstimates;
+    iget-object v0, p0, Lcom/android/systemui/power/PowerUI;->mLastBatteryStateSnapshot:Lcom/android/systemui/power/BatteryStateSnapshot;
 
     .line 2
-    check-cast p0, Lcom/android/systemui/power/EnhancedEstimatesImpl;
+    if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-wide v2, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->timeRemainingMillis:J
 
     .line 6
-    new-instance p0, Lcom/android/settingslib/fuelgauge/Estimate;
+    const-wide/16 v4, -0x1
 
-    .line 9
-    const-wide/16 v3, -0x1
+    .line 8
+    cmp-long v1, v2, v4
 
-    .line 11
-    const-wide/16 v1, -0x1
+    .line 10
+    if-eqz v1, :cond_1
 
-    .line 13
-    const/4 v5, 0x0
+    .line 12
+    iget v1, p0, Lcom/android/systemui/power/PowerUI;->mBatteryLevel:I
 
-    .line 15
-    move-object v0, p0
+    .line 14
+    iget v4, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->batteryLevel:I
 
     .line 16
-    invoke-direct/range {v0 .. v5}, Lcom/android/settingslib/fuelgauge/Estimate;-><init>(JJZ)V
+    if-eq v1, v4, :cond_0
 
-    .line 17
-    sget-boolean v0, Lcom/android/systemui/power/PowerUI;->DEBUG:Z
+    .line 18
+    goto :goto_0
 
     .line 20
-    if-eqz v0, :cond_0
+    :cond_0
+    new-instance p0, Lcom/android/settingslib/fuelgauge/Estimate;
 
-    .line 22
-    const-string/jumbo v0, "updated estimate: -1"
+    .line 21
+    iget-boolean v6, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->isBasedOnUsage:Z
 
-    .line 24
-    const-string v1, "PowerUI"
+    .line 23
+    iget-wide v4, v0, Lcom/android/systemui/power/BatteryStateSnapshot;->averageTimeToDischargeMillis:J
+
+    .line 25
+    move-object v1, p0
 
     .line 27
+    invoke-direct/range {v1 .. v6}, Lcom/android/settingslib/fuelgauge/Estimate;-><init>(JJZ)V
+
+    .line 28
+    return-object p0
+
+    .line 31
+    :cond_1
+    :goto_0
+    iget-object p0, p0, Lcom/android/systemui/power/PowerUI;->mEnhancedEstimates:Lcom/android/systemui/power/EnhancedEstimates;
+
+    .line 32
+    check-cast p0, Lcom/google/android/systemui/power/EnhancedEstimatesGoogleImpl;
+
+    .line 34
+    invoke-virtual {p0}, Lcom/google/android/systemui/power/EnhancedEstimatesGoogleImpl;->getEstimate()Lcom/android/settingslib/fuelgauge/Estimate;
+
+    .line 36
+    move-result-object p0
+
+    .line 39
+    sget-boolean v0, Lcom/android/systemui/power/PowerUI;->DEBUG:Z
+
+    .line 40
+    if-eqz v0, :cond_2
+
+    .line 42
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 44
+    const-string/jumbo v1, "updated estimate: "
+
+    .line 46
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 49
+    iget-wide v1, p0, Lcom/android/settingslib/fuelgauge/Estimate;->estimateMillis:J
+
+    .line 52
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    .line 54
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 57
+    move-result-object v0
+
+    .line 60
+    const-string v1, "PowerUI"
+
+    .line 61
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
-    :cond_0
+    .line 63
+    :cond_2
     return-object p0
-    .line 32
+    .line 66
 .end method
 
 .method public shouldDismissHybridWarning(Lcom/android/systemui/power/BatteryStateSnapshot;)Z
@@ -2074,7 +1883,7 @@
     move-result-object v0
 
     .line 82
-    const v1, 0x7f140421    # @string/inattentive_sleep_warning_message 'The device will soon turn off; press to keep it on.'
+    const v1, 0x7f130467    # @string/inattentive_sleep_warning_message 'The device will soon turn off; press to keep it on.'
 
     .line 83
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2398,7 +2207,7 @@
     iget-object v6, v3, Lcom/android/systemui/power/PowerNotificationWarnings;->mContext:Landroid/content/Context;
 
     .line 204
-    const v7, 0x7f14095c    # @string/thermal_shutdown_message 'Your phone is now running normally.\nTap for more info'
+    const v7, 0x7f1309e1    # @string/thermal_shutdown_message 'Your phone is now running normally.\nTap for more info'
 
     .line 206
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2419,7 +2228,7 @@
     invoke-direct {v7, v8, v9}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 219
-    const v8, 0x7f080786    # @drawable/ic_device_thermostat_24 'res/drawable/ic_device_thermostat_24.xml'
+    const v8, 0x7f08079f    # @drawable/ic_device_thermostat_24 'res/drawable/ic_device_thermostat_24.xml'
 
     .line 222
     invoke-virtual {v7, v8}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
@@ -2446,7 +2255,7 @@
     iget-object v8, v3, Lcom/android/systemui/power/PowerNotificationWarnings;->mContext:Landroid/content/Context;
 
     .line 239
-    const v9, 0x7f14095d    # @string/thermal_shutdown_title 'Phone turned off due to heat'
+    const v9, 0x7f1309e2    # @string/thermal_shutdown_title 'Phone turned off due to heat'
 
     .line 241
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2680,7 +2489,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x10e0042    # @android:integer/config_datagram_wait_for_connected_state_timeout_millis
+    const v1, 0x10e0040    # @android:integer/config_cursorWindowSize
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -2698,7 +2507,7 @@
     move-result-object v1
 
     .line 20
-    const v2, 0x10e00b6    # @android:integer/config_maxUiWidth
+    const v2, 0x10e00b0    # @android:integer/config_maxNumVisibleRecentTasks
 
     .line 21
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -2738,7 +2547,7 @@
     move-result-object v0
 
     .line 44
-    const v2, 0x10e00b5    # @android:integer/config_maxShortcutTargetsPerApp
+    const v2, 0x10e00af    # @android:integer/config_lowPowerStandbyNonInteractiveTimeout
 
     .line 45
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I

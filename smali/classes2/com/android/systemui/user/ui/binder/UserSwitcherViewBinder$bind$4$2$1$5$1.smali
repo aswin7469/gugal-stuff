@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/user/ui/binder/UserSwitcherViewBinder$bind$4$2$1$5$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -43,7 +43,7 @@
 
 # virtual methods
 .method public final emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 12
+    .locals 13
 
     .line 1
     check-cast p1, Ljava/util/List;
@@ -86,359 +86,450 @@
     move-result v2
 
     .line 27
-    iget-object v3, p0, Lcom/android/systemui/user/ui/binder/UserSwitcherViewBinder$bind$4$2$1$5$1;->$flowWidget:Landroidx/constraintlayout/helper/widget/Flow;
+    const/4 v3, 0x0
 
     .line 28
-    if-eqz v2, :cond_0
+    const/4 v4, 0x0
+
+    .line 29
+    iget-object v5, p0, Lcom/android/systemui/user/ui/binder/UserSwitcherViewBinder$bind$4$2$1$5$1;->$flowWidget:Landroidx/constraintlayout/helper/widget/Flow;
 
     .line 30
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eqz v2, :cond_4
 
     .line 32
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 34
     move-result-object v2
 
-    .line 35
+    .line 37
     check-cast v2, Landroid/view/View;
 
-    .line 36
+    .line 38
     invoke-virtual {p2, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 38
-    invoke-virtual {v3, v2}, Landroidx/constraintlayout/widget/ConstraintHelper;->removeView(Landroid/view/View;)V
+    .line 40
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 41
-    goto :goto_0
+    .line 43
+    invoke-virtual {v2}, Landroid/view/View;->getId()I
 
-    .line 44
-    :cond_0
-    iget-object v1, p0, Lcom/android/systemui/user/ui/binder/UserSwitcherViewBinder$bind$4$2$1$5$1;->$layoutInflater:Landroid/view/LayoutInflater;
-
-    .line 45
-    iget-object p0, p0, Lcom/android/systemui/user/ui/binder/UserSwitcherViewBinder$bind$4$2$1$5$1;->$view:Landroid/view/ViewGroup;
-
-    .line 47
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    .line 49
-    move-result-object p1
-
-    .line 52
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 53
+    .line 46
     move-result v2
 
+    .line 49
+    const/4 v6, -0x1
+
+    .line 50
+    if-ne v2, v6, :cond_0
+
+    .line 51
+    goto :goto_0
+
+    .line 53
+    :cond_0
+    iput-object v4, v5, Landroidx/constraintlayout/widget/ConstraintHelper;->mReferenceIds:Ljava/lang/String;
+
+    .line 54
+    move v4, v3
+
     .line 56
-    if-eqz v2, :cond_7
+    :goto_1
+    iget v6, v5, Landroidx/constraintlayout/widget/ConstraintHelper;->mCount:I
 
     .line 57
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-ge v4, v6, :cond_3
 
     .line 59
-    move-result-object v2
+    iget-object v6, v5, Landroidx/constraintlayout/widget/ConstraintHelper;->mIds:[I
 
-    .line 62
-    check-cast v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;
+    .line 61
+    aget v6, v6, v4
 
     .line 63
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    if-ne v6, v2, :cond_2
 
     .line 65
-    move-result v4
+    :goto_2
+    iget v2, v5, Landroidx/constraintlayout/widget/ConstraintHelper;->mCount:I
 
-    .line 68
-    xor-int/lit8 v4, v4, 0x1
+    .line 67
+    add-int/lit8 v2, v2, -0x1
 
     .line 69
-    const/4 v5, 0x0
+    if-ge v4, v2, :cond_1
 
     .line 71
-    if-eqz v4, :cond_1
+    iget-object v2, v5, Landroidx/constraintlayout/widget/ConstraintHelper;->mIds:[I
 
-    .line 72
-    invoke-interface {v0, v5}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+    .line 73
+    add-int/lit8 v6, v4, 0x1
 
-    .line 74
-    move-result-object v4
+    .line 75
+    aget v7, v2, v6
 
     .line 77
-    check-cast v4, Landroid/view/View;
+    aput v7, v2, v4
 
-    .line 78
-    goto :goto_2
-
-    .line 80
-    :cond_1
-    const v4, 0x7f0e0309    # @layout/user_switcher_fullscreen_item 'res/layout/user_switcher_fullscreen_item.xml'
+    .line 79
+    move v4, v6
 
     .line 81
-    invoke-virtual {v1, v4, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    goto :goto_2
 
-    .line 84
-    move-result-object v4
+    .line 82
+    :cond_1
+    iget-object v4, v5, Landroidx/constraintlayout/widget/ConstraintHelper;->mIds:[I
+
+    .line 83
+    aput v3, v4, v2
+
+    .line 85
+    iput v2, v5, Landroidx/constraintlayout/widget/ConstraintHelper;->mCount:I
 
     .line 87
-    const-string v6, "user_view"
-
-    .line 88
-    invoke-virtual {v4, v6}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    .line 90
-    :goto_2
-    invoke-static {}, Landroid/view/View;->generateViewId()I
-
-    .line 93
-    move-result v6
-
-    .line 96
-    invoke-virtual {v4, v6}, Landroid/view/View;->setId(I)V
-
-    .line 97
-    invoke-virtual {p2, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    .line 100
-    invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/ConstraintHelper;->addView(Landroid/view/View;)V
-
-    .line 103
-    const v6, 0x7f0b0899    # @id/user_switcher_text
-
-    .line 106
-    invoke-virtual {v4, v6}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
-
-    .line 109
-    move-result-object v6
-
-    .line 112
-    check-cast v6, Landroid/widget/TextView;
-
-    .line 113
-    iget-object v7, v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;->name:Lcom/android/systemui/common/shared/model/Text;
-
-    .line 115
-    instance-of v8, v7, Lcom/android/systemui/common/shared/model/Text$Resource;
-
-    .line 117
-    if-eqz v8, :cond_2
-
-    .line 119
-    invoke-virtual {v6}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
-
-    .line 121
-    move-result-object v8
-
-    .line 124
-    check-cast v7, Lcom/android/systemui/common/shared/model/Text$Resource;
-
-    .line 125
-    iget v7, v7, Lcom/android/systemui/common/shared/model/Text$Resource;->res:I
-
-    .line 127
-    invoke-virtual {v8, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 129
-    move-result-object v7
-
-    .line 132
     goto :goto_3
 
-    .line 133
+    .line 89
     :cond_2
-    instance-of v8, v7, Lcom/android/systemui/common/shared/model/Text$Loaded;
+    add-int/lit8 v4, v4, 0x1
 
-    .line 134
-    if-eqz v8, :cond_6
+    .line 90
+    goto :goto_1
 
-    .line 136
-    check-cast v7, Lcom/android/systemui/common/shared/model/Text$Loaded;
-
-    .line 138
-    iget-object v7, v7, Lcom/android/systemui/common/shared/model/Text$Loaded;->text:Ljava/lang/String;
-
-    .line 140
-    :goto_3
-    invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 142
-    const v6, 0x7f0b0895    # @id/user_switcher_icon
-
-    .line 145
-    invoke-virtual {v4, v6}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
-
-    .line 148
-    move-result-object v6
-
-    .line 151
-    check-cast v6, Landroid/widget/ImageView;
-
-    .line 152
-    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    .line 154
-    move-result-object v7
-
-    .line 157
-    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 158
-    move-result-object v8
-
-    .line 161
-    invoke-virtual {v7}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    .line 162
-    move-result-object v9
-
-    .line 165
-    sget-object v10, Landroidx/core/content/res/ResourcesCompat;->sTempTypedValue:Ljava/lang/ThreadLocal;
-
-    .line 166
-    const v10, 0x7f080ba7    # @drawable/user_switcher_icon_large 'res/drawable/user_switcher_icon_large.xml'
-
-    .line 168
-    invoke-virtual {v8, v10, v9}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-
-    .line 171
-    move-result-object v8
-
-    .line 174
-    if-eqz v8, :cond_5
-
-    .line 175
-    invoke-virtual {v8}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    .line 177
-    move-result-object v8
-
-    .line 180
-    check-cast v8, Landroid/graphics/drawable/LayerDrawable;
-
-    .line 181
-    iget-boolean v9, v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;->isSelectionMarkerVisible:Z
-
-    .line 183
-    if-eqz v9, :cond_3
-
-    .line 185
-    const v9, 0x7f0b0660    # @id/ring
-
-    .line 187
-    invoke-virtual {v8, v9}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
-
-    .line 190
-    move-result-object v9
-
-    .line 193
-    check-cast v9, Landroid/graphics/drawable/GradientDrawable;
-
-    .line 194
-    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 196
-    move-result-object v10
-
-    .line 199
-    const v11, 0x7f070acf    # @dimen/user_switcher_icon_selected_width '8.0dp'
-
-    .line 200
-    invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 203
-    move-result v10
-
-    .line 206
-    const v11, 0x1120026    # @android:^attr-private/colorAccentPrimary
-
-    .line 207
-    invoke-static {v11, v5, v7}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
-
-    .line 210
-    move-result v5
-
-    .line 213
-    invoke-virtual {v9, v10, v5}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
-
-    .line 214
+    .line 92
     :cond_3
-    iget-object v5, v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;->image:Landroid/graphics/drawable/Drawable;
+    :goto_3
+    invoke-virtual {v5}, Landroid/view/View;->requestLayout()V
 
-    .line 217
-    const v7, 0x7f0b0888    # @id/user_avatar
+    .line 93
+    goto :goto_0
 
-    .line 219
-    invoke-virtual {v8, v7, v5}, Landroid/graphics/drawable/LayerDrawable;->setDrawableByLayerId(ILandroid/graphics/drawable/Drawable;)Z
-
-    .line 222
-    invoke-virtual {v6, v8}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 225
-    iget v5, v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;->alpha:F
-
-    .line 228
-    invoke-virtual {v4, v5}, Landroid/view/View;->setAlpha(F)V
-
-    .line 230
-    iget-object v5, v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;->onClicked:Lkotlin/jvm/functions/Function0;
-
-    .line 233
-    if-eqz v5, :cond_4
-
-    .line 235
-    new-instance v5, Lcom/android/systemui/user/ui/binder/UserViewBinder$bind$1;
-
-    .line 237
-    invoke-direct {v5, v2}, Lcom/android/systemui/user/ui/binder/UserViewBinder$bind$1;-><init>(Lcom/android/systemui/user/ui/viewmodel/UserViewModel;)V
-
-    .line 239
-    invoke-virtual {v4, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 242
-    goto/16 :goto_1
-
-    .line 245
+    .line 96
     :cond_4
-    const/4 v2, 0x0
+    iget-object v1, p0, Lcom/android/systemui/user/ui/binder/UserSwitcherViewBinder$bind$4$2$1$5$1;->$layoutInflater:Landroid/view/LayoutInflater;
 
-    .line 247
-    invoke-virtual {v4, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 97
+    iget-object p0, p0, Lcom/android/systemui/user/ui/binder/UserSwitcherViewBinder$bind$4$2$1$5$1;->$view:Landroid/view/ViewGroup;
 
-    .line 248
-    goto/16 :goto_1
+    .line 99
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 251
-    :cond_5
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    .line 253
-    const-string p1, "Required value was null."
-
-    .line 255
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 257
+    .line 101
     move-result-object p1
 
-    .line 260
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    .line 104
+    :goto_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 105
+    move-result v2
+
+    .line 108
+    if-eqz v2, :cond_b
+
+    .line 109
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 111
+    move-result-object v2
+
+    .line 114
+    check-cast v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;
+
+    .line 115
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    .line 117
+    move-result v6
+
+    .line 120
+    xor-int/lit8 v6, v6, 0x1
+
+    .line 121
+    if-eqz v6, :cond_5
+
+    .line 123
+    invoke-interface {v0, v3}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    .line 125
+    move-result-object v6
+
+    .line 128
+    check-cast v6, Landroid/view/View;
+
+    .line 129
+    goto :goto_5
+
+    .line 131
+    :cond_5
+    const v6, 0x7f0d031c    # @layout/user_switcher_fullscreen_item 'res/layout/user_switcher_fullscreen_item.xml'
+
+    .line 132
+    invoke-virtual {v1, v6, p0, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    .line 135
+    move-result-object v6
+
+    .line 138
+    const-string v7, "user_view"
+
+    .line 139
+    invoke-virtual {v6, v7}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 141
+    :goto_5
+    invoke-static {}, Landroid/view/View;->generateViewId()I
+
+    .line 144
+    move-result v7
+
+    .line 147
+    invoke-virtual {v6, v7}, Landroid/view/View;->setId(I)V
+
+    .line 148
+    invoke-virtual {p2, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    .line 151
+    invoke-virtual {v5, v6}, Landroidx/constraintlayout/widget/ConstraintHelper;->addView(Landroid/view/View;)V
+
+    .line 154
+    const v7, 0x7f0a08cc    # @id/user_switcher_text
+
+    .line 157
+    invoke-virtual {v6, v7}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
+
+    .line 160
+    move-result-object v7
+
+    .line 163
+    check-cast v7, Landroid/widget/TextView;
+
+    .line 164
+    iget-object v8, v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;->name:Lcom/android/systemui/common/shared/model/Text;
+
+    .line 166
+    instance-of v9, v8, Lcom/android/systemui/common/shared/model/Text$Resource;
+
+    .line 168
+    if-eqz v9, :cond_6
+
+    .line 170
+    invoke-virtual {v7}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    .line 172
+    move-result-object v9
+
+    .line 175
+    check-cast v8, Lcom/android/systemui/common/shared/model/Text$Resource;
+
+    .line 176
+    iget v8, v8, Lcom/android/systemui/common/shared/model/Text$Resource;->res:I
+
+    .line 178
+    invoke-virtual {v9, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 180
+    move-result-object v8
+
+    .line 183
+    goto :goto_6
+
+    .line 184
+    :cond_6
+    instance-of v9, v8, Lcom/android/systemui/common/shared/model/Text$Loaded;
+
+    .line 185
+    if-eqz v9, :cond_a
+
+    .line 187
+    check-cast v8, Lcom/android/systemui/common/shared/model/Text$Loaded;
+
+    .line 189
+    iget-object v8, v8, Lcom/android/systemui/common/shared/model/Text$Loaded;->text:Ljava/lang/String;
+
+    .line 191
+    :goto_6
+    invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 193
+    const v7, 0x7f0a08c8    # @id/user_switcher_icon
+
+    .line 196
+    invoke-virtual {v6, v7}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
+
+    .line 199
+    move-result-object v7
+
+    .line 202
+    check-cast v7, Landroid/widget/ImageView;
+
+    .line 203
+    invoke-virtual {v6}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    .line 205
+    move-result-object v8
+
+    .line 208
+    invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 209
+    move-result-object v9
+
+    .line 212
+    invoke-virtual {v8}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    .line 213
+    move-result-object v10
+
+    .line 216
+    sget-object v11, Landroidx/core/content/res/ResourcesCompat;->sTempTypedValue:Ljava/lang/ThreadLocal;
+
+    .line 217
+    const v11, 0x7f080bf0    # @drawable/user_switcher_icon_large 'res/drawable/user_switcher_icon_large.xml'
+
+    .line 219
+    invoke-virtual {v9, v11, v10}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    .line 222
+    move-result-object v9
+
+    .line 225
+    if-eqz v9, :cond_9
+
+    .line 226
+    invoke-virtual {v9}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    .line 228
+    move-result-object v9
+
+    .line 231
+    check-cast v9, Landroid/graphics/drawable/LayerDrawable;
+
+    .line 232
+    iget-boolean v10, v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;->isSelectionMarkerVisible:Z
+
+    .line 234
+    if-eqz v10, :cond_7
+
+    .line 236
+    const v10, 0x7f0a068a    # @id/ring
+
+    .line 238
+    invoke-virtual {v9, v10}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
+
+    .line 241
+    move-result-object v10
+
+    .line 244
+    check-cast v10, Landroid/graphics/drawable/GradientDrawable;
+
+    .line 245
+    invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 247
+    move-result-object v11
+
+    .line 250
+    const v12, 0x7f070b2b    # @dimen/user_switcher_icon_selected_width '8.0dp'
+
+    .line 251
+    invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 254
+    move-result v11
+
+    .line 257
+    const v12, 0x1120026    # @android:^attr-private/colorAccentPrimary
+
+    .line 258
+    invoke-static {v12, v3, v8}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
 
     .line 261
-    throw p0
+    move-result v8
 
     .line 264
-    :cond_6
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v10, v11, v8}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
 
     .line 265
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    :cond_7
+    iget-object v8, v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;->image:Landroid/graphics/drawable/Drawable;
 
-    .line 267
-    throw p0
+    .line 268
+    const v10, 0x7f0a08bb    # @id/user_avatar
 
     .line 270
-    :cond_7
+    invoke-virtual {v9, v10, v8}, Landroid/graphics/drawable/LayerDrawable;->setDrawableByLayerId(ILandroid/graphics/drawable/Drawable;)Z
+
+    .line 273
+    invoke-virtual {v7, v9}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 276
+    iget v7, v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;->alpha:F
+
+    .line 279
+    invoke-virtual {v6, v7}, Landroid/view/View;->setAlpha(F)V
+
+    .line 281
+    iget-object v7, v2, Lcom/android/systemui/user/ui/viewmodel/UserViewModel;->onClicked:Lkotlin/jvm/functions/Function0;
+
+    .line 284
+    if-eqz v7, :cond_8
+
+    .line 286
+    new-instance v7, Lcom/android/systemui/user/ui/binder/UserViewBinder$bind$1;
+
+    .line 288
+    invoke-direct {v7, v2}, Lcom/android/systemui/user/ui/binder/UserViewBinder$bind$1;-><init>(Lcom/android/systemui/user/ui/viewmodel/UserViewModel;)V
+
+    .line 290
+    invoke-virtual {v6, v7}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 293
+    goto/16 :goto_4
+
+    .line 296
+    :cond_8
+    invoke-virtual {v6, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 298
+    goto/16 :goto_4
+
+    .line 301
+    :cond_9
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    .line 303
+    const-string p1, "Required value was null."
+
+    .line 305
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 307
+    move-result-object p1
+
+    .line 310
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 311
+    throw p0
+
+    .line 314
+    :cond_a
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    .line 315
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    .line 317
+    throw p0
+
+    .line 320
+    :cond_b
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 271
+    .line 321
     return-object p0
-    .line 273
+    .line 323
 .end method

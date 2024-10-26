@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/AmbientState;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -10,8 +10,6 @@
 .field public mAppearFraction:F
 
 .field public mAppearing:Z
-
-.field public final mAvalancheController:Lcom/android/systemui/statusbar/policy/AvalancheController;
 
 .field public final mBypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
 
@@ -108,34 +106,34 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/shade/transition/LargeScreenShadeInterpolator;Lcom/android/systemui/statusbar/policy/AvalancheController;)V
-    .locals 1
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    const v0, 0x47c35000    # 100000.0f
+    const p7, 0x47c35000    # 100000.0f
 
     .line 5
-    iput v0, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mPulseHeight:F
+    iput p7, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mPulseHeight:F
 
     .line 8
-    const/4 v0, 0x0
+    const/4 p7, 0x0
 
     .line 10
-    iput v0, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mDozeAmount:F
+    iput p7, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mDozeAmount:F
 
     .line 11
-    iput v0, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mStackY:F
+    iput p7, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mStackY:F
 
     .line 13
-    iput v0, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mStackHeight:F
+    iput p7, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mStackHeight:F
 
     .line 15
-    const/4 v0, 0x0
+    const/4 p7, 0x0
 
     .line 17
-    iput-boolean v0, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mIsFlingRequiredAfterLockScreenSwipeUp:Z
+    iput-boolean p7, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mIsFlingRequiredAfterLockScreenSwipeUp:Z
 
     .line 18
     iput-object p3, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mSectionProvider:Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;
@@ -150,41 +148,38 @@
     iput-object p6, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mLargeScreenShadeInterpolator:Lcom/android/systemui/shade/transition/LargeScreenShadeInterpolator;
 
     .line 26
-    iput-object p7, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mAvalancheController:Lcom/android/systemui/statusbar/policy/AvalancheController;
-
-    .line 28
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 30
+    .line 28
     move-result-object p1
 
-    .line 33
-    const p3, 0x7f070b0a    # @dimen/z_distance_between_notifications '0.5dp'
+    .line 31
+    const p3, 0x7f070b6d    # @dimen/z_distance_between_notifications '0.5dp'
 
-    .line 34
+    .line 32
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 37
+    .line 35
     move-result p1
 
-    .line 40
+    .line 38
     const/4 p3, 0x1
 
-    .line 41
+    .line 39
     invoke-static {p3, p1}, Ljava/lang/Math;->max(II)I
 
-    .line 42
+    .line 40
     move-result p1
 
-    .line 45
+    .line 43
     iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mZDistanceBetweenElements:I
 
-    .line 46
+    .line 44
     invoke-virtual {p2, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
 
-    .line 48
+    .line 46
     return-void
-    .line 51
+    .line 49
 .end method
 
 

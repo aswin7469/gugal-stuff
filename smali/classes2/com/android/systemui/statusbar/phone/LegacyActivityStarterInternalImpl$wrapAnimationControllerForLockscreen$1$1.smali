@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$wrapAnimationControllerForLockscreen$1$1;
 .super Lcom/android/systemui/animation/DelegateTransitionAnimatorController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -80,6 +80,7 @@
     .line 30
     :cond_0
     return-void
+    .line 33
 .end method
 
 .method public final onTransitionAnimationCancelled(Ljava/lang/Boolean;)V
@@ -204,109 +205,61 @@
 .end method
 
 .method public final onTransitionAnimationStart(Z)V
-    .locals 3
+    .locals 1
 
     .line 1
     invoke-super {p0, p1}, Lcom/android/systemui/animation/DelegateTransitionAnimatorController;->onTransitionAnimationStart(Z)V
 
     .line 2
-    invoke-static {}, Lcom/android/systemui/Flags;->communalHub()Z
-
-    .line 5
-    move-result p1
-
-    .line 8
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$wrapAnimationControllerForLockscreen$1$1;->this$0:Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;
 
-    .line 9
-    if-eqz p1, :cond_1
-
-    .line 11
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->communalSceneInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;
-
-    .line 13
-    sget-object v0, Lcom/android/systemui/communal/shared/model/CommunalScenes;->Blank:Lcom/android/compose/animation/scene/SceneKey;
-
-    .line 15
-    sget-object v1, Lcom/android/systemui/animation/ActivityTransitionAnimator;->TIMINGS:Lcom/android/systemui/animation/TransitionAnimator$Timings;
-
-    .line 17
-    iget-object v1, p1, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;->_editModeState:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 19
-    invoke-virtual {v1}, Lkotlinx/coroutines/flow/StateFlowImpl;->getValue()Ljava/lang/Object;
-
-    .line 21
-    move-result-object v1
-
-    .line 24
-    sget-object v2, Lcom/android/systemui/communal/shared/model/EditModeState;->STARTING:Lcom/android/systemui/communal/shared/model/EditModeState;
-
-    .line 25
-    if-ne v1, v2, :cond_0
-
-    .line 27
-    goto :goto_0
-
-    .line 29
-    :cond_0
-    iget-object p1, p1, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;->communalSceneRepository:Lcom/android/systemui/communal/data/repository/CommunalSceneRepositoryImpl;
-
-    .line 30
-    const-wide/16 v1, 0x1f4
-
-    .line 32
-    invoke-virtual {p1, v0, v1, v2}, Lcom/android/systemui/communal/data/repository/CommunalSceneRepositoryImpl;->snapToScene(Lcom/android/compose/animation/scene/SceneKey;J)V
-
-    .line 34
-    :cond_1
-    :goto_0
+    .line 5
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 37
+    .line 7
     check-cast p1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 39
+    .line 9
     iget-boolean v0, p1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mShowing:Z
 
-    .line 41
-    if-eqz v0, :cond_2
+    .line 11
+    if-eqz v0, :cond_0
 
-    .line 43
+    .line 13
     iget-boolean p1, p1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardGoingAway:Z
 
-    .line 45
-    if-nez p1, :cond_2
+    .line 15
+    if-nez p1, :cond_0
 
-    .line 47
+    .line 17
     const-string p1, "LegacyActivityStarterInternalImpl"
 
-    .line 49
+    .line 19
     const-string v0, "Setting occluded = true in #startActivity."
 
-    .line 51
+    .line 21
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
+    .line 23
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->keyguardViewMediatorLazy:Ldagger/Lazy;
 
-    .line 56
+    .line 26
     invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 58
+    .line 28
     move-result-object p0
 
-    .line 61
+    .line 31
     check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 62
+    .line 32
     const/4 p1, 0x1
 
-    .line 64
+    .line 34
     invoke-virtual {p0, p1, p1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->setOccluded(ZZ)V
 
-    .line 65
-    :cond_2
+    .line 35
+    :cond_0
     return-void
-    .line 68
+    .line 38
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/bouncer/ui/composable/MotionTestKeys;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -26,59 +26,44 @@
     invoke-direct {v0}, Lcom/android/systemui/bouncer/ui/composable/MotionTestKeys;-><init>()V
 
     .line 4
-    sput-object v0, Lcom/android/systemui/bouncer/ui/composable/MotionTestKeys;->INSTANCE:Lcom/android/systemui/bouncer/ui/composable/MotionTestKeys;
+    new-instance v0, Lplatform/test/motion/compose/values/MotionTestValueKey;
 
     .line 7
-    new-instance v0, Lplatform/test/motion/compose/values/MotionTestValueKey;
-
-    .line 9
     const-string v1, "PinBouncer::entryAnimationCompleted"
 
-    .line 11
+    .line 9
     invoke-direct {v0, v1}, Lplatform/test/motion/compose/values/MotionTestValueKey;-><init>(Ljava/lang/String;)V
 
-    .line 13
-    sput-object v0, Lcom/android/systemui/bouncer/ui/composable/MotionTestKeys;->entryCompleted:Lplatform/test/motion/compose/values/MotionTestValueKey;
-
-    .line 16
+    .line 11
     new-instance v0, Lplatform/test/motion/compose/values/MotionTestValueKey;
 
-    .line 18
+    .line 14
     const-string v1, "PinBouncer::dotAppearFadeIn"
 
-    .line 20
+    .line 16
     invoke-direct {v0, v1}, Lplatform/test/motion/compose/values/MotionTestValueKey;-><init>(Ljava/lang/String;)V
 
-    .line 22
-    sput-object v0, Lcom/android/systemui/bouncer/ui/composable/MotionTestKeys;->dotAppearFadeIn:Lplatform/test/motion/compose/values/MotionTestValueKey;
+    .line 18
+    new-instance v0, Lplatform/test/motion/compose/values/MotionTestValueKey;
+
+    .line 21
+    const-string v1, "PinBouncer::dotAppearMoveUp"
+
+    .line 23
+    invoke-direct {v0, v1}, Lplatform/test/motion/compose/values/MotionTestValueKey;-><init>(Ljava/lang/String;)V
 
     .line 25
     new-instance v0, Lplatform/test/motion/compose/values/MotionTestValueKey;
 
-    .line 27
-    const-string v1, "PinBouncer::dotAppearMoveUp"
-
-    .line 29
-    invoke-direct {v0, v1}, Lplatform/test/motion/compose/values/MotionTestValueKey;-><init>(Ljava/lang/String;)V
-
-    .line 31
-    sput-object v0, Lcom/android/systemui/bouncer/ui/composable/MotionTestKeys;->dotAppearMoveUp:Lplatform/test/motion/compose/values/MotionTestValueKey;
-
-    .line 34
-    new-instance v0, Lplatform/test/motion/compose/values/MotionTestValueKey;
-
-    .line 36
+    .line 28
     const-string v1, "PinBouncer::dotScaling"
 
-    .line 38
+    .line 30
     invoke-direct {v0, v1}, Lplatform/test/motion/compose/values/MotionTestValueKey;-><init>(Ljava/lang/String;)V
 
-    .line 40
-    sput-object v0, Lcom/android/systemui/bouncer/ui/composable/MotionTestKeys;->dotScaling:Lplatform/test/motion/compose/values/MotionTestValueKey;
-
-    .line 43
+    .line 32
     return-void
-    .line 45
+    .line 35
 .end method
 
 .method private constructor <init>()V

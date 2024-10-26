@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/decor/RoundedCornerDecorProviderImpl;
 .super Lcom/android/systemui/decor/CornerDecorProvider;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -232,14 +232,14 @@
     if-eqz v1, :cond_2
 
     .line 23
-    const v0, 0x7f080b05    # @drawable/rounded_corner_top 'res/drawable/rounded_corner_top.xml'
+    const v0, 0x7f080b43    # @drawable/rounded_corner_top 'res/drawable/rounded_corner_top.xml'
 
     .line 25
     goto :goto_1
 
     .line 28
     :cond_2
-    const v0, 0x7f080b03    # @drawable/rounded_corner_bottom 'res/drawable/rounded_corner_bottom.xml'
+    const v0, 0x7f080b41    # @drawable/rounded_corner_bottom 'res/drawable/rounded_corner_bottom.xml'
 
     .line 29
     :goto_1

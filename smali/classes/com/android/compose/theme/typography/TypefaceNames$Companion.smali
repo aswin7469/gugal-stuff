@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/compose/theme/typography/TypefaceNames$Companion;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -52,54 +52,54 @@
     move-result-object v1
 
     .line 9
-    const-string v2, "string"
+    const-string/jumbo v2, "string"
 
     .line 10
     const-string v3, "android"
 
-    .line 12
+    .line 13
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
+    .line 15
     move-result v0
-
-    .line 17
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     .line 18
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 19
     move-result-object p0
 
-    .line 21
+    .line 22
     invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 22
+    .line 23
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    .line 25
+    .line 26
     move-result v0
 
-    .line 28
+    .line 29
     if-lez v0, :cond_0
 
-    .line 29
+    .line 30
     goto :goto_0
 
-    .line 31
+    .line 32
     :cond_0
     const/4 p0, 0x0
 
-    .line 32
+    .line 33
     :goto_0
     if-nez p0, :cond_1
 
-    .line 33
+    .line 34
     invoke-virtual {p1}, Lcom/android/compose/theme/typography/TypefaceNames$Config;->getDefault()Ljava/lang/String;
 
-    .line 35
+    .line 36
     move-result-object p0
 
-    .line 38
+    .line 39
     :cond_1
     return-object p0
-    .line 39
+    .line 40
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -589,7 +589,7 @@
     aget-object v1, v1, v2
 
     .line 14
-    iget-object v0, v0, Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable$special$$inlined$observable$1;->value:Ljava/lang/Object;
+    iget-object v0, v0, Lkotlin/properties/ObservableProperty;->value:Ljava/lang/Object;
 
     .line 16
     check-cast v0, Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable$ArrowDirection;
@@ -760,7 +760,7 @@
     aget-object v4, v3, v1
 
     .line 37
-    iget-object v2, v2, Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable$special$$inlined$observable$1;->value:Ljava/lang/Object;
+    iget-object v2, v2, Lkotlin/properties/ObservableProperty;->value:Ljava/lang/Object;
 
     .line 39
     check-cast v2, Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable$ArrowDirection;
@@ -854,7 +854,7 @@
     aget-object v3, v3, v4
 
     .line 96
-    iget-object v3, v6, Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable$special$$inlined$observable$1;->value:Ljava/lang/Object;
+    iget-object v3, v6, Lkotlin/properties/ObservableProperty;->value:Ljava/lang/Object;
 
     .line 98
     check-cast v3, Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable$ArrowPosition;
@@ -900,7 +900,7 @@
     aget-object v3, v3, v4
 
     .line 127
-    iget-object v3, v5, Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable$special$$inlined$observable$1;->value:Ljava/lang/Object;
+    iget-object v3, v5, Lkotlin/properties/ObservableProperty;->value:Ljava/lang/Object;
 
     .line 129
     check-cast v3, Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable$ArrowPosition;

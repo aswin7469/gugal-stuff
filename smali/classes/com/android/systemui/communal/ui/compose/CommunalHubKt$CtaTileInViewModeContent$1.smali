@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/communal/ui/compose/CommunalHubKt$CtaTileInViewModeContent$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -274,7 +274,7 @@
     move-result-object v0
 
     .line 156
-    const v1, 0x7f140300    # @string/cta_label_to_open_widget_picker 'Add more widgets'
+    const v1, 0x7f13031e    # @string/cta_label_to_open_widget_picker 'Add more widgets'
 
     .line 157
     invoke-static {v1, v12}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -337,7 +337,7 @@
     invoke-static {v12, v1}, Landroidx/compose/foundation/layout/SpacerKt;->Spacer(Landroidx/compose/runtime/Composer;Landroidx/compose/ui/Modifier;)V
 
     .line 196
-    const v1, 0x7f1402ff    # @string/cta_label_to_edit_widget 'Add, remove, and reorder your widgets in this space'
+    const v1, 0x7f13031d    # @string/cta_label_to_edit_widget 'Add, remove, and reorder your widgets in this space'
 
     .line 199
     invoke-static {v1, v12}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;

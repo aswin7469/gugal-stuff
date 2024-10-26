@@ -1,6 +1,6 @@
 .class public final Landroidx/collection/SparseArrayCompat;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -471,7 +471,7 @@
     iget v2, p0, Landroidx/collection/SparseArrayCompat;->size:I
 
     .line 94
-    invoke-static {v1, v1, v4, v0, v2}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v4, v0, v2, v1, v1}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 96
     :cond_5

@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/TrustGrantFlags;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -178,32 +178,32 @@
     if-eqz p0, :cond_2
 
     .line 41
-    const-string p0, "temporaryAndRenewable|"
+    const-string/jumbo p0, "temporaryAndRenewable|"
 
     .line 43
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 45
+    .line 46
     :cond_2
     and-int/lit8 p0, v1, 0x8
 
-    .line 48
+    .line 49
     if-eqz p0, :cond_3
 
-    .line 50
+    .line 51
     const-string p0, "displayMessage|"
 
-    .line 52
+    .line 53
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 54
+    .line 55
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 57
+    .line 58
     move-result-object p0
 
-    .line 60
-    return-object p0
     .line 61
+    return-object p0
+    .line 62
 .end method

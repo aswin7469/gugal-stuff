@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/HandleMenuAnimator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -47,7 +47,7 @@
     iput-object p2, p0, Lcom/android/wm/shell/windowdecor/HandleMenuAnimator;->animators:Ljava/util/List;
 
     .line 16
-    const p2, 0x7f0b00c6    # @id/app_info_pill
+    const p2, 0x7f0a00c9    # @id/app_info_pill
 
     .line 18
     invoke-virtual {p1, p2}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -62,7 +62,7 @@
     iput-object p2, p0, Lcom/android/wm/shell/windowdecor/HandleMenuAnimator;->appInfoPill:Landroid/view/ViewGroup;
 
     .line 27
-    const p2, 0x7f0b0901    # @id/windowing_pill
+    const p2, 0x7f0a093a    # @id/windowing_pill
 
     .line 29
     invoke-virtual {p1, p2}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -77,7 +77,7 @@
     iput-object p2, p0, Lcom/android/wm/shell/windowdecor/HandleMenuAnimator;->windowingPill:Landroid/view/ViewGroup;
 
     .line 38
-    const p2, 0x7f0b04ed    # @id/more_actions_pill
+    const p2, 0x7f0a0511    # @id/more_actions_pill
 
     .line 40
     invoke-virtual {p1, p2}, Landroid/view/View;->requireViewById(I)Landroid/view/View;

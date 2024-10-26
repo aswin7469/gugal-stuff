@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -140,151 +140,145 @@
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
     .line 71
-    iget-object v3, v2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mOnExpandClickListener:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$OnExpandClickListener;
+    iget-object v3, v2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mOnExpandClickListener:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
     .line 73
     iget-object v2, v2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
     .line 75
-    check-cast v3, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
-
-    .line 77
     invoke-virtual {v3, v2, v0}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->onExpandClicked(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
 
-    .line 79
+    .line 77
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 82
+    .line 80
     iget-object v2, v2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mMetricsLogger:Lcom/android/internal/logging/MetricsLogger;
 
-    .line 84
+    .line 82
     const/16 v3, 0x198
 
-    .line 86
+    .line 84
     invoke-virtual {v2, v3, v0}, Lcom/android/internal/logging/MetricsLogger;->action(IZ)V
 
-    .line 88
+    .line 86
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 91
+    .line 89
     invoke-virtual {p0, v1, p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->onExpansionChanged(ZZ)V
 
-    .line 93
+    .line 91
     goto :goto_1
 
-    .line 96
+    .line 94
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 97
+    .line 95
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEnableNonGroupedNotificationExpand:Z
 
-    .line 99
+    .line 97
     if-eqz v0, :cond_5
 
-    .line 101
+    .line 99
     invoke-virtual {p1}, Landroid/view/View;->isAccessibilityFocused()Z
 
-    .line 103
+    .line 101
     move-result p1
 
-    .line 106
+    .line 104
     if-eqz p1, :cond_2
 
-    .line 107
+    .line 105
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 109
+    .line 107
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
-    .line 111
+    .line 109
     iput-boolean v1, p1, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mFocusOnVisibilityChange:Z
 
-    .line 113
+    .line 111
     :cond_2
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 115
+    .line 113
     iget-boolean v0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsPinned:Z
 
-    .line 117
+    .line 115
     if-eqz v0, :cond_3
 
-    .line 119
+    .line 117
     iget-boolean v0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mExpandedWhenPinned:Z
 
-    .line 121
+    .line 119
     xor-int/2addr v0, v1
 
-    .line 123
+    .line 121
     iput-boolean v0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mExpandedWhenPinned:Z
 
-    .line 124
+    .line 122
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mExpansionChangedListener:Lcom/android/systemui/statusbar/notification/ConversationNotificationManager$onEntryViewBound$1;
 
-    .line 126
+    .line 124
     if-eqz p1, :cond_4
 
-    .line 128
+    .line 126
     invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/notification/ConversationNotificationManager$onEntryViewBound$1;->onExpansionChanged(Z)V
 
-    .line 130
+    .line 128
     goto :goto_0
 
-    .line 133
+    .line 131
     :cond_3
     invoke-virtual {p1, v2}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->isExpanded(Z)Z
 
-    .line 134
+    .line 132
     move-result p1
 
-    .line 137
+    .line 135
     xor-int/lit8 v0, p1, 0x1
 
-    .line 138
+    .line 136
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 140
+    .line 138
     invoke-virtual {p1, v0, v2}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setUserExpanded(ZZ)V
 
-    .line 142
+    .line 140
     :cond_4
     :goto_0
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 145
+    .line 143
     invoke-virtual {p1, v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->notifyHeightChanged(Z)V
 
-    .line 147
+    .line 145
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 150
-    iget-object v1, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mOnExpandClickListener:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$OnExpandClickListener;
+    .line 148
+    iget-object v1, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mOnExpandClickListener:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
-    .line 152
+    .line 150
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 154
-    check-cast v1, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
-
-    .line 156
+    .line 152
     invoke-virtual {v1, p1, v0}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->onExpandClicked(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
 
-    .line 158
+    .line 154
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow$1;->this$0:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 161
+    .line 157
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mMetricsLogger:Lcom/android/internal/logging/MetricsLogger;
 
-    .line 163
+    .line 159
     const/16 p1, 0x197
 
-    .line 165
+    .line 161
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/logging/MetricsLogger;->action(IZ)V
 
-    .line 167
+    .line 163
     :cond_5
     :goto_1
     return-void
-    .line 170
+    .line 166
 .end method

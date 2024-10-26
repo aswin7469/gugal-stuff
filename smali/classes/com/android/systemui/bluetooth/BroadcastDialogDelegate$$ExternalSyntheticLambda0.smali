@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/bluetooth/BroadcastDialogDelegate$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -83,115 +83,115 @@
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 32
-    const-string v0, "startSwitchBroadcast"
+    const-string/jumbo v0, "startSwitchBroadcast"
 
     .line 35
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
+    .line 38
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/bluetooth/BroadcastDialogDelegate;->mSwitchBroadcast:Landroid/widget/Button;
 
-    .line 40
-    const v1, 0x7f1405e5    # @string/media_output_broadcast_starting 'Starting…'
+    .line 41
+    const v1, 0x7f13063f    # @string/media_output_broadcast_starting 'Starting…'
 
-    .line 42
+    .line 43
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
-    .line 45
+    .line 46
     iget-object v0, p0, Lcom/android/systemui/bluetooth/BroadcastDialogDelegate;->mSwitchBroadcast:Landroid/widget/Button;
 
-    .line 48
+    .line 49
     const/4 v1, 0x0
 
-    .line 50
+    .line 51
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 51
+    .line 52
     iget-object v0, p0, Lcom/android/systemui/bluetooth/BroadcastDialogDelegate;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
-    .line 54
+    .line 55
     iget-object v0, v0, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
 
-    .line 56
+    .line 57
     iget-object v0, v0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
 
-    .line 58
+    .line 59
     if-nez v0, :cond_2
 
-    .line 60
+    .line 61
     const-string v0, "The broadcast profile is null"
 
-    .line 62
+    .line 63
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
+    .line 65
     iget-object p1, p0, Lcom/android/systemui/bluetooth/BroadcastDialogDelegate;->mSwitchBroadcast:Landroid/widget/Button;
 
-    .line 67
-    const v0, 0x7f1405e4    # @string/media_output_broadcast_start_failed 'Can’t broadcast'
+    .line 68
+    const v0, 0x7f13063e    # @string/media_output_broadcast_start_failed 'Can’t broadcast'
 
-    .line 69
+    .line 70
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 
-    .line 72
+    .line 73
     iget-object p1, p0, Lcom/android/systemui/bluetooth/BroadcastDialogDelegate;->mSwitchBroadcast:Landroid/widget/Button;
 
-    .line 75
+    .line 76
     invoke-virtual {p1, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 77
+    .line 78
     invoke-virtual {p0}, Lcom/android/systemui/bluetooth/BroadcastDialogDelegate;->refreshSwitchBroadcastButton()V
 
-    .line 80
+    .line 81
     goto :goto_0
 
-    .line 83
+    .line 84
     :cond_2
     iget p0, v0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mBroadcastId:I
 
-    .line 84
+    .line 85
     iget-object p1, v0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
 
-    .line 86
+    .line 87
     const-string v1, "LocalBluetoothLeBroadcast"
 
-    .line 88
+    .line 89
     if-nez p1, :cond_3
 
-    .line 90
+    .line 91
     const-string p0, "The BluetoothLeBroadcast is null when stopping the broadcast."
 
-    .line 92
+    .line 93
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
+    .line 95
     goto :goto_0
 
-    .line 97
-    :cond_3
-    const-string p1, "stopBroadcast()"
-
     .line 98
+    :cond_3
+    const-string/jumbo p1, "stopBroadcast()"
+
+    .line 99
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
+    .line 102
     iget-object p1, v0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
 
-    .line 103
+    .line 105
     invoke-virtual {p1, p0}, Landroid/bluetooth/BluetoothLeBroadcast;->stopBroadcast(I)V
 
-    .line 105
+    .line 107
     :goto_0
     return-void
 
-    .line 108
+    .line 110
     nop
 
-    .line 109
+    .line 111
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 110
+    .line 112
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardDisplayManager$DeviceStateHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/hardware/devicestate/DeviceStateManager$DeviceStateCallback;
@@ -28,7 +28,7 @@
     move-result-object v0
 
     .line 8
-    const v1, 0x10402a8    # @android:string/config_slicePermissionComponent
+    const v1, 0x10402a0    # @android:string/config_secondaryLocationTimeZoneProviderPackageName
 
     .line 9
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -78,7 +78,7 @@
     move-result-object p1
 
     .line 39
-    const v0, 0x10e006e    # @android:integer/config_displayWhiteBalanceDisplayNominalWhiteCct
+    const v0, 0x10e0068    # @android:integer/config_displayWhiteBalanceColorTemperatureDefault
 
     .line 40
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I

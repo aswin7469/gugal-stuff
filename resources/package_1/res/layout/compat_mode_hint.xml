@@ -15,7 +15,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="4.0sp"
-            android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent"
+            android:fontFamily="@android:string/config_chooseTypeAndAccountActivity"
             android:textAlignment="viewStart"
             android:letterSpacing="0.02" />
   <ImageView android:layout_gravity="end"

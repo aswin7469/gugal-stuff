@@ -1,9 +1,17 @@
 .class public interface abstract Lcom/android/wm/shell/sysui/ShellInterface;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # virtual methods
+.method public addDisplayImeChangeListener(Lcom/google/android/systemui/input/TouchContextService$4;Ljava/util/concurrent/Executor;)V
+    .locals 0
+
+    .line 1
+    return-void
+    .line 2
+.end method
+
 .method public createExternalInterfaces(Landroid/os/Bundle;)V
     .locals 0
 
@@ -72,6 +80,14 @@
 .end method
 
 .method public onUserProfilesChanged(Ljava/util/List;)V
+    .locals 0
+
+    .line 1
+    return-void
+    .line 2
+.end method
+
+.method public removeDisplayImeChangeListener(Lcom/google/android/systemui/input/TouchContextService$4;)V
     .locals 0
 
     .line 1

@@ -1,6 +1,6 @@
 .class public Lcom/android/keyguard/KeyguardSimPukView;
 .super Lcom/android/keyguard/KeyguardSimInputView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -48,7 +48,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f0b0617    # @id/pukEntry
+    const p0, 0x7f0a0640    # @id/pukEntry
 
     .line 2
     return p0
@@ -79,7 +79,7 @@
     move-result-object p2
 
     .line 7
-    const v0, 0x7f1404e2    # @string/kg_password_wrong_puk_code_dead 'SIM is unusable. Contact your carrier.'
+    const v0, 0x7f130538    # @string/kg_password_wrong_puk_code_dead 'SIM is unusable. Contact your carrier.'
 
     .line 8
     invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -98,14 +98,14 @@
     if-eqz p2, :cond_1
 
     .line 18
-    const p2, 0x7f1404dc    # @string/kg_password_default_puk_message '{count, plural, =1 {SIM is now disabled. Enter PUK code to continue. You have # remaining attempt be ...'
+    const p2, 0x7f130532    # @string/kg_password_default_puk_message '{count, plural, =1 {SIM is now disabled. Enter PUK code to continue. You have # remaining attempt be ...'
 
     .line 20
     goto :goto_0
 
     .line 23
     :cond_1
-    const p2, 0x7f1404e1    # @string/kg_password_wrong_puk_code '{count, plural, =1 {Incorrect SIM PUK code, you have # remaining attempt before SIM becomes permanen ...'
+    const p2, 0x7f130537    # @string/kg_password_wrong_puk_code '{count, plural, =1 {Incorrect SIM PUK code, you have # remaining attempt before SIM becomes permanen ...'
 
     .line 24
     :goto_0
@@ -128,14 +128,14 @@
     if-eqz p2, :cond_3
 
     .line 36
-    const p2, 0x7f140502    # @string/kg_puk_enter_puk_hint 'SIM is now disabled. Enter PUK code to continue. Contact carrier for details.'
+    const p2, 0x7f130558    # @string/kg_puk_enter_puk_hint 'SIM is now disabled. Enter PUK code to continue. Contact carrier for details.'
 
     .line 38
     goto :goto_1
 
     .line 41
     :cond_3
-    const p2, 0x7f1404de    # @string/kg_password_puk_failed 'SIM PUK operation failed!'
+    const p2, 0x7f130534    # @string/kg_password_puk_failed 'SIM PUK operation failed!'
 
     .line 42
     :goto_1
@@ -161,7 +161,7 @@
     move-result-object p0
 
     .line 58
-    const p3, 0x7f140504    # @string/kg_sim_lock_esim_instructions '%1$s Disable eSIM to use device without mobile service.'
+    const p3, 0x7f13055a    # @string/kg_sim_lock_esim_instructions '%1$s Disable eSIM to use device without mobile service.'
 
     .line 59
     filled-new-array {p2}, [Ljava/lang/Object;
@@ -231,7 +231,7 @@
     move-result-object p0
 
     .line 5
-    const v0, 0x1040509    # @android:string/kg_password_instructions
+    const v0, 0x1040500    # @android:string/kg_invalid_sim_puk_hint
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/text/TextLayoutResult;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -705,7 +705,7 @@
     const-string v1, ") is out of bounds [0,"
 
     .line 177
-    invoke-static {p0, v1, p1}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {p0, v1, p1}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 179
     move-result-object p0
@@ -942,7 +942,7 @@
     const-string v1, ") is out of bounds [0,"
 
     .line 117
-    invoke-static {p0, v1, p1}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {p0, v1, p1}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 119
     move-result-object p0

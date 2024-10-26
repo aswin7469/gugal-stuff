@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardPatternViewController;
 .super Lcom/android/keyguard/KeyguardInputViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -133,7 +133,7 @@
     iput-boolean v0, v8, Lcom/android/keyguard/KeyguardPatternView;->mIsSmallLockScreenLandscapeEnabled:Z
 
     .line 61
-    const v0, 0x7f0b05d0    # @id/pattern_container
+    const v0, 0x7f0a05f5    # @id/pattern_container
 
     .line 63
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -148,7 +148,7 @@
     iput-object v0, v8, Lcom/android/keyguard/KeyguardPatternView;->mContainerConstraintLayout:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 72
-    const v0, 0x7f0b0447    # @id/lockPatternView
+    const v0, 0x7f0a0468    # @id/lockPatternView
 
     .line 74
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -179,7 +179,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f140497    # @string/keyguard_enter_your_pattern 'Enter your pattern'
+    const p0, 0x7f1304e1    # @string/keyguard_enter_your_pattern 'Enter your pattern'
 
     .line 2
     return p0
@@ -336,7 +336,7 @@
     iget-object p0, p0, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
 
     .line 25
-    const v0, 0x7f140497    # @string/keyguard_enter_your_pattern 'Enter your pattern'
+    const v0, 0x7f1304e1    # @string/keyguard_enter_your_pattern 'Enter your pattern'
 
     .line 27
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(I)V
@@ -442,7 +442,7 @@
     check-cast v0, Lcom/android/keyguard/KeyguardPatternView;
 
     .line 58
-    const v1, 0x7f0b01a5    # @id/cancel_button
+    const v1, 0x7f0a01ab    # @id/cancel_button
 
     .line 60
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -554,7 +554,7 @@
     check-cast v0, Lcom/android/keyguard/KeyguardPatternView;
 
     .line 19
-    const v2, 0x7f0b01a5    # @id/cancel_button
+    const v2, 0x7f0a01ab    # @id/cancel_button
 
     .line 21
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -641,7 +641,7 @@
     iget-object p0, p0, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
 
     .line 36
-    const v0, 0x7f140497    # @string/keyguard_enter_your_pattern 'Enter your pattern'
+    const v0, 0x7f1304e1    # @string/keyguard_enter_your_pattern 'Enter your pattern'
 
     .line 38
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(I)V
@@ -678,14 +678,11 @@
 
     .line 13
     :cond_1
-    const/4 p2, 0x0
+    invoke-virtual {p0, p1, p3}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     .line 16
-    invoke-virtual {p0, p1, p3, p2}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;ZLandroid/hardware/biometrics/BiometricSourceType;)V
-
-    .line 17
     return-void
-    .line 20
+    .line 19
 .end method
 
 .method public final showPromptReason(I)V
@@ -707,7 +704,7 @@
     const/4 v1, 0x2
 
     .line 8
-    const v2, 0x7f1404fa    # @string/kg_prompt_reason_timeout_pattern 'For additional security, use pattern instead'
+    const v2, 0x7f130550    # @string/kg_prompt_reason_timeout_pattern 'For additional security, use pattern instead'
 
     .line 9
     if-eq p1, v1, :cond_7
@@ -747,42 +744,42 @@
 
     .line 31
     :cond_0
-    const v2, 0x7f1404e9    # @string/kg_prompt_after_adaptive_auth_lock 'Device was locked, too many authentication attempts'
+    const v2, 0x7f13053f    # @string/kg_prompt_after_adaptive_auth_lock 'Device was locked, too many authentication attempts'
 
     .line 32
     goto :goto_0
 
     .line 35
     :cond_1
-    const v2, 0x7f1404e7    # @string/kg_prompt_added_security_pattern 'Pattern required for additional security'
+    const v2, 0x7f13053d    # @string/kg_prompt_added_security_pattern 'Pattern required for additional security'
 
     .line 36
     goto :goto_0
 
     .line 39
     :cond_2
-    const v2, 0x7f1404ec    # @string/kg_prompt_after_update_pattern 'Device updated. Draw pattern to continue.'
+    const v2, 0x7f130542    # @string/kg_prompt_after_update_pattern 'Device updated. Draw pattern to continue.'
 
     .line 40
     goto :goto_0
 
     .line 43
     :cond_3
-    const v2, 0x7f1404ef    # @string/kg_prompt_after_user_lockdown_pattern 'Pattern is required after lockdown'
+    const v2, 0x7f130545    # @string/kg_prompt_after_user_lockdown_pattern 'Pattern is required after lockdown'
 
     .line 44
     goto :goto_0
 
     .line 47
     :cond_4
-    const v2, 0x7f1404f5    # @string/kg_prompt_reason_device_admin 'Device locked by admin'
+    const v2, 0x7f13054b    # @string/kg_prompt_reason_device_admin 'Device locked by admin'
 
     .line 48
     goto :goto_0
 
     .line 51
     :cond_5
-    const v2, 0x7f1404f7    # @string/kg_prompt_reason_restart_pattern 'Pattern is required after device restarts'
+    const v2, 0x7f13054d    # @string/kg_prompt_reason_restart_pattern 'Pattern is required after device restarts'
 
     .line 52
     goto :goto_0
@@ -812,18 +809,15 @@
     move-result-object p1
 
     .line 68
-    const/4 v1, 0x0
-
-    .line 69
     iget-object p0, p0, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
 
-    .line 70
-    invoke-virtual {p0, p1, v0, v1}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;ZLandroid/hardware/biometrics/BiometricSourceType;)V
+    .line 69
+    invoke-virtual {p0, p1, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
-    .line 72
+    .line 71
     :cond_8
     return-void
-    .line 75
+    .line 74
 .end method
 
 .method public final startDisappearAnimation(Ljava/lang/Runnable;)Z
@@ -949,13 +943,13 @@
     move-result-object v2
 
     .line 73
-    new-instance v3, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda1;
+    new-instance v3, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda2;
 
     .line 74
     move-object/from16 v4, p1
 
     .line 76
-    invoke-direct {v3, v1, v4}, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda1;-><init>(Lcom/android/keyguard/KeyguardPatternView;Ljava/lang/Runnable;)V
+    invoke-direct {v3, v1, v4}, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda2;-><init>(Lcom/android/keyguard/KeyguardPatternView;Ljava/lang/Runnable;)V
 
     .line 78
     invoke-virtual {v0, v2, v3, v1}, Lcom/android/settingslib/animation/AppearAnimationUtils;->startAnimation2d([[Ljava/lang/Object;Ljava/lang/Runnable;Lcom/android/settingslib/animation/AppearAnimationCreator;)V

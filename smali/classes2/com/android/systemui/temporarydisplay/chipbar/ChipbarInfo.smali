@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;
 .super Lcom/android/systemui/temporarydisplay/TemporaryViewInfo;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -28,6 +28,39 @@
 
 
 # direct methods
+.method public synthetic constructor <init>(Lcom/android/systemui/common/shared/model/TintedIcon;Lcom/android/systemui/common/shared/model/Text$Loaded;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/android/internal/logging/InstanceId;)V
+    .locals 12
+
+    sget-object v10, Lcom/android/systemui/temporarydisplay/ViewPriority;->CRITICAL:Lcom/android/systemui/temporarydisplay/ViewPriority;
+
+    const/4 v5, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v6, p3
+
+    move-object/from16 v7, p4
+
+    move/from16 v8, p5
+
+    move-object/from16 v9, p6
+
+    move-object/from16 v11, p7
+
+    .line 13
+    invoke-direct/range {v0 .. v11}, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;-><init>(Lcom/android/systemui/common/shared/model/TintedIcon;Lcom/android/systemui/common/shared/model/Text;Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem;Landroid/os/VibrationEffect;ZLjava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/android/systemui/temporarydisplay/ViewPriority;Lcom/android/internal/logging/InstanceId;)V
+
+    return-void
+.end method
+
 .method public constructor <init>(Lcom/android/systemui/common/shared/model/TintedIcon;Lcom/android/systemui/common/shared/model/Text;Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem;Landroid/os/VibrationEffect;ZLjava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/android/systemui/temporarydisplay/ViewPriority;Lcom/android/internal/logging/InstanceId;)V
     .locals 0
 
@@ -37,39 +70,37 @@
     .line 2
     iput-object p1, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->startIcon:Lcom/android/systemui/common/shared/model/TintedIcon;
 
-    .line 5
+    .line 3
     iput-object p2, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->text:Lcom/android/systemui/common/shared/model/Text;
 
-    .line 7
+    .line 4
     iput-object p3, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->endItem:Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem;
 
-    .line 9
+    .line 5
     iput-object p4, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->vibrationEffect:Landroid/os/VibrationEffect;
 
-    .line 11
+    .line 6
     iput-boolean p5, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->allowSwipeToDismiss:Z
 
-    .line 13
+    .line 7
     iput-object p6, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->windowTitle:Ljava/lang/String;
 
-    .line 15
+    .line 8
     iput-object p7, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->wakeReason:Ljava/lang/String;
 
-    .line 17
+    .line 9
     iput p8, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->timeoutMs:I
 
-    .line 19
+    .line 10
     iput-object p9, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->id:Ljava/lang/String;
 
-    .line 21
+    .line 11
     iput-object p10, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->priority:Lcom/android/systemui/temporarydisplay/ViewPriority;
 
-    .line 23
+    .line 12
     iput-object p11, p0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->instanceId:Lcom/android/internal/logging/InstanceId;
 
-    .line 25
     return-void
-    .line 27
 .end method
 
 

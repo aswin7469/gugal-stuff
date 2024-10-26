@@ -1,72 +1,103 @@
 .class public final synthetic Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
 .field public final synthetic $r8$classId:I
 
-.field public final synthetic f$0:Landroid/app/ActivityManager$RunningTaskInfo;
-
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/app/ActivityManager$RunningTaskInfo;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
     .line 1
-    iput p2, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda2;->$r8$classId:I
+    iput p1, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda2;->$r8$classId:I
 
     .line 2
-    iput-object p1, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda2;->f$0:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
+    .line 4
     return-void
-    .line 9
+    .line 7
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final test(Ljava/lang/Object;)Z
+    .locals 0
 
     .line 1
-    iget v0, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda2;->$r8$classId:I
+    iget p0, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda2;->$r8$classId:I
 
     .line 2
-    iget-object p0, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda2;->f$0:Landroid/app/ActivityManager$RunningTaskInfo;
+    check-cast p1, Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 4
-    check-cast p1, Lcom/android/wm/shell/windowdecor/WindowDecorViewModel;
+    packed-switch p0, :pswitch_data_0
 
     .line 6
-    packed-switch v0, :pswitch_data_0
+    iget-boolean p0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->isFocused:Z
 
-    .line 8
-    invoke-interface {p1, p0}, Lcom/android/wm/shell/windowdecor/WindowDecorViewModel;->onTaskVanished(Landroid/app/ActivityManager$RunningTaskInfo;)V
+    .line 9
+    return p0
 
     .line 11
-    return-void
+    :pswitch_0
+    iget-boolean p0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->isVisible:Z
+
+    .line 12
+    if-eqz p0, :cond_0
 
     .line 14
-    :pswitch_0
-    invoke-interface {p1, p0}, Lcom/android/wm/shell/windowdecor/WindowDecorViewModel;->onTaskInfoChanged(Landroid/app/ActivityManager$RunningTaskInfo;)V
+    iget-boolean p0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->isVisibleRequested:Z
 
-    .line 15
-    return-void
+    .line 16
+    if-eqz p0, :cond_0
 
     .line 18
-    nop
+    const/4 p0, 0x1
 
-    .line 19
+    .line 20
+    goto :goto_0
+
+    .line 21
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 22
+    :goto_0
+    return p0
+
+    .line 23
+    :pswitch_1
+    iget-object p0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+
+    .line 24
+    if-eqz p0, :cond_1
+
+    .line 26
+    const/4 p0, 0x1
+
+    .line 28
+    goto :goto_1
+
+    .line 29
+    :cond_1
+    const/4 p0, 0x0
+
+    .line 30
+    :goto_1
+    return p0
+
+    .line 31
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 20
+    .line 32
 .end method

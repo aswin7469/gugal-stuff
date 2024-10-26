@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -165,7 +165,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/systemui/biometrics/domain/interactor/DisplayStateInteractorImpl;Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;Landroid/content/Context;Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;Lcom/android/systemui/biometrics/domain/interactor/BiometricStatusInteractorImpl;Lcom/android/systemui/biometrics/UdfpsUtils;Lcom/android/launcher3/icons/IconProvider;Landroid/app/ActivityTaskManager;)V
-    .locals 23
+    .locals 21
 
     .line 1
     move-object/from16 v0, p0
@@ -255,7 +255,7 @@
     move-result-object v13
 
     .line 56
-    const v14, 0x7f0700c7    # @dimen/biometric_dialog_fingerprint_icon_width '100.0dp'
+    const v14, 0x7f0700cd    # @dimen/biometric_dialog_fingerprint_icon_width '100.0dp'
 
     .line 57
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -273,7 +273,7 @@
     move-result-object v13
 
     .line 69
-    const v14, 0x7f0700c6    # @dimen/biometric_dialog_fingerprint_icon_height '100.0dp'
+    const v14, 0x7f0700cc    # @dimen/biometric_dialog_fingerprint_icon_height '100.0dp'
 
     .line 70
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -291,7 +291,7 @@
     move-result-object v13
 
     .line 82
-    const v14, 0x7f0700c5    # @dimen/biometric_dialog_face_icon_size '68.0dp'
+    const v14, 0x7f0700cb    # @dimen/biometric_dialog_face_icon_size '68.0dp'
 
     .line 83
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -324,7 +324,7 @@
     move-result-object v13
 
     .line 105
-    const v14, 0x7f0700e0    # @dimen/biometric_prompt_portrait_small_bottom_padding '60.0dp'
+    const v14, 0x7f0700e6    # @dimen/biometric_prompt_portrait_small_bottom_padding '60.0dp'
 
     .line 106
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -342,7 +342,7 @@
     move-result-object v13
 
     .line 118
-    const v14, 0x7f0700df    # @dimen/biometric_prompt_portrait_medium_bottom_padding '160.0dp'
+    const v14, 0x7f0700e5    # @dimen/biometric_prompt_portrait_medium_bottom_padding '160.0dp'
 
     .line 119
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -360,7 +360,7 @@
     move-result-object v13
 
     .line 131
-    const v14, 0x7f0700de    # @dimen/biometric_prompt_portrait_large_screen_bottom_padding '176.0dp'
+    const v14, 0x7f0700e4    # @dimen/biometric_prompt_portrait_large_screen_bottom_padding '176.0dp'
 
     .line 132
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -378,7 +378,7 @@
     move-result-object v13
 
     .line 144
-    const v14, 0x7f0700d7    # @dimen/biometric_prompt_landscape_small_bottom_padding '192.0dp'
+    const v14, 0x7f0700dd    # @dimen/biometric_prompt_landscape_small_bottom_padding '192.0dp'
 
     .line 145
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -396,7 +396,7 @@
     move-result-object v13
 
     .line 157
-    const v14, 0x7f0700d8    # @dimen/biometric_prompt_landscape_small_horizontal_padding '145.0dp'
+    const v14, 0x7f0700de    # @dimen/biometric_prompt_landscape_small_horizontal_padding '145.0dp'
 
     .line 158
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -414,7 +414,7 @@
     move-result-object v13
 
     .line 170
-    const v14, 0x7f0700d5    # @dimen/biometric_prompt_landscape_medium_bottom_padding '148.0dp'
+    const v14, 0x7f0700db    # @dimen/biometric_prompt_landscape_medium_bottom_padding '148.0dp'
 
     .line 171
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -432,7 +432,7 @@
     move-result-object v13
 
     .line 183
-    const v14, 0x7f0700d6    # @dimen/biometric_prompt_landscape_medium_horizontal_padding '125.0dp'
+    const v14, 0x7f0700dc    # @dimen/biometric_prompt_landscape_medium_horizontal_padding '125.0dp'
 
     .line 184
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -444,31 +444,31 @@
     iput v13, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->landscapeMediumHorizontalPadding:I
 
     .line 191
-    new-instance v13, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$udfpsSensorBounds$1;
+    iget-object v3, v3, Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;->udfpsOverlayParams:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 193
-    const/4 v15, 0x0
+    iget-object v13, v1, Lcom/android/systemui/biometrics/domain/interactor/DisplayStateInteractorImpl;->currentRotation:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 195
-    invoke-direct {v13, v9, v15}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v14, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$udfpsSensorBounds$1;
 
-    .line 196
-    new-instance v14, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+    .line 197
+    const/4 v15, 0x0
 
     .line 199
-    iget-object v4, v3, Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;->udfpsOverlayParams:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    invoke-direct {v14, v9, v15}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 201
-    iget-object v5, v1, Lcom/android/systemui/biometrics/domain/interactor/DisplayStateInteractorImpl;->currentRotation:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 200
+    new-instance v4, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
     .line 203
-    invoke-direct {v14, v4, v5, v13}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    invoke-direct {v4, v3, v13, v14}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
     .line 205
-    invoke-static {v14}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+    invoke-static {v4}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
     .line 208
-    move-result-object v13
+    move-result-object v4
 
     .line 211
     new-instance v14, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$legacyFingerprintSensorWidth$1;
@@ -477,151 +477,151 @@
     invoke-direct {v14, v0, v15}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$legacyFingerprintSensorWidth$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
 
     .line 214
-    new-instance v9, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+    new-instance v5, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
     .line 217
-    invoke-direct {v9, v12, v4, v14}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    invoke-direct {v5, v12, v3, v14}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
     .line 219
-    iput-object v9, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->legacyFingerprintSensorWidth:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->legacyFingerprintSensorWidth:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
     .line 222
-    new-instance v9, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$legacyFingerprintSensorHeight$1;
+    new-instance v5, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$legacyFingerprintSensorHeight$1;
 
     .line 224
-    invoke-direct {v9, v0, v15}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$legacyFingerprintSensorHeight$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v5, v0, v15}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$legacyFingerprintSensorHeight$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
 
     .line 226
     new-instance v14, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
     .line 229
-    invoke-direct {v14, v12, v4, v9}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    invoke-direct {v14, v12, v3, v5}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
     .line 231
     iput-object v14, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->legacyFingerprintSensorHeight:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
     .line 234
-    iget-object v9, v4, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+    iget-object v5, v3, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
     .line 236
-    invoke-interface {v9}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+    invoke-interface {v5}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
     .line 238
-    move-result-object v9
+    move-result-object v5
 
     .line 241
-    check-cast v9, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
+    check-cast v5, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
     .line 242
-    iget-object v9, v9, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->sensorBounds:Landroid/graphics/Rect;
+    iget-object v5, v5, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->sensorBounds:Landroid/graphics/Rect;
 
     .line 244
-    invoke-virtual {v9}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
 
     .line 246
-    move-result v9
+    move-result v5
 
     .line 249
-    iput v9, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->fingerprintSensorWidth:I
+    iput v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->fingerprintSensorWidth:I
 
     .line 250
-    iget-object v4, v4, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+    iget-object v3, v3, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
     .line 252
-    invoke-interface {v4}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
     .line 254
-    move-result-object v4
+    move-result-object v3
 
     .line 257
-    check-cast v4, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
+    check-cast v3, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
     .line 258
-    iget-object v4, v4, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->sensorBounds:Landroid/graphics/Rect;
+    iget-object v3, v3, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->sensorBounds:Landroid/graphics/Rect;
 
     .line 260
-    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
 
     .line 262
-    move-result v4
+    move-result v3
 
     .line 265
-    iput v4, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->fingerprintSensorHeight:I
+    iput v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->fingerprintSensorHeight:I
 
     .line 266
     invoke-static {v10, v10, v15, v8}, Lkotlinx/coroutines/flow/SharedFlowKt;->MutableSharedFlow$default(IILkotlinx/coroutines/channels/BufferOverflow;I)Lkotlinx/coroutines/flow/SharedFlowImpl;
 
     .line 268
-    move-result-object v4
+    move-result-object v3
 
     .line 271
-    iput-object v4, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_accessibilityHint:Lkotlinx/coroutines/flow/SharedFlowImpl;
+    iput-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_accessibilityHint:Lkotlinx/coroutines/flow/SharedFlowImpl;
 
     .line 272
-    new-instance v9, Lkotlinx/coroutines/flow/ReadonlySharedFlow;
+    new-instance v5, Lkotlinx/coroutines/flow/ReadonlySharedFlow;
 
     .line 274
-    invoke-direct {v9, v4}, Lkotlinx/coroutines/flow/ReadonlySharedFlow;-><init>(Lkotlinx/coroutines/flow/SharedFlow;)V
+    invoke-direct {v5, v3}, Lkotlinx/coroutines/flow/ReadonlySharedFlow;-><init>(Lkotlinx/coroutines/flow/SharedFlow;)V
 
     .line 276
-    iput-object v9, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->accessibilityHint:Lkotlinx/coroutines/flow/ReadonlySharedFlow;
+    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->accessibilityHint:Lkotlinx/coroutines/flow/ReadonlySharedFlow;
 
     .line 279
-    sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     .line 281
-    invoke-static {v4}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
+    invoke-static {v3}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 283
-    move-result-object v9
+    move-result-object v5
 
     .line 286
-    iput-object v9, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_isAuthenticating:Lkotlinx/coroutines/flow/StateFlowImpl;
+    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_isAuthenticating:Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 287
     new-instance v14, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 289
-    invoke-direct {v14, v9}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
+    invoke-direct {v14, v5}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
     .line 291
     iput-object v14, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isAuthenticating:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 294
-    new-instance v9, Lcom/android/systemui/biometrics/ui/viewmodel/PromptAuthState;
+    new-instance v5, Lcom/android/systemui/biometrics/ui/viewmodel/PromptAuthState;
 
     .line 296
-    invoke-direct {v9}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptAuthState;-><init>()V
+    invoke-direct {v5}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptAuthState;-><init>()V
 
     .line 298
-    invoke-static {v9}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
+    invoke-static {v5}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 301
-    move-result-object v9
+    move-result-object v5
 
     .line 304
-    iput-object v9, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_isAuthenticated:Lkotlinx/coroutines/flow/StateFlowImpl;
+    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_isAuthenticated:Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 305
     new-instance v14, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 307
-    invoke-direct {v14, v9}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
+    invoke-direct {v14, v5}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
     .line 309
     iput-object v14, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isAuthenticated:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 312
-    new-instance v9, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
+    new-instance v5, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
 
     .line 314
-    invoke-direct {v9, v14, v7}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    invoke-direct {v5, v14, v7}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
     .line 316
-    iput-object v9, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isPendingConfirmation:Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
+    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isPendingConfirmation:Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
 
     .line 319
-    invoke-static {v4}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
+    invoke-static {v3}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 321
     move-result-object v14
@@ -660,16 +660,16 @@
     iget-object v6, v2, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
 
     .line 346
-    new-instance v15, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
+    new-instance v9, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
 
     .line 348
-    const/4 v8, 0x6
+    const/4 v15, 0x6
 
     .line 350
-    invoke-direct {v15, v6, v8}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    invoke-direct {v9, v6, v15}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
     .line 351
-    iput-object v15, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->negativeButtonText:Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
+    iput-object v9, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->negativeButtonText:Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
 
     .line 354
     sget-object v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptMessage$Empty;->INSTANCE:Lcom/android/systemui/biometrics/ui/viewmodel/PromptMessage$Empty;
@@ -684,978 +684,966 @@
     iput-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_message:Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 362
-    new-instance v8, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    new-instance v9, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 364
-    invoke-direct {v8, v6}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
+    invoke-direct {v9, v6}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
     .line 366
-    iput-object v8, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->message:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    iput-object v9, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->message:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 369
     new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
 
     .line 371
-    const/4 v15, 0x7
+    invoke-direct {v6, v9, v8}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
     .line 373
-    invoke-direct {v6, v8, v15}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
-
-    .line 374
     invoke-static {v6}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 377
+    .line 376
     move-result-object v6
 
-    .line 380
+    .line 379
     iput-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->showingError:Lkotlinx/coroutines/flow/Flow;
 
-    .line 381
+    .line 380
     new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
 
-    .line 383
-    const/16 v15, 0x8
+    .line 382
+    const/16 v8, 0x8
 
-    .line 385
-    invoke-direct {v6, v12, v15}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    .line 384
+    invoke-direct {v6, v12, v8}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 387
-    sget-object v15, Lcom/android/systemui/biometrics/ui/viewmodel/FingerprintStartMode;->Pending:Lcom/android/systemui/biometrics/ui/viewmodel/FingerprintStartMode;
+    .line 386
+    sget-object v8, Lcom/android/systemui/biometrics/ui/viewmodel/FingerprintStartMode;->Pending:Lcom/android/systemui/biometrics/ui/viewmodel/FingerprintStartMode;
 
-    .line 390
-    invoke-static {v15}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
+    .line 389
+    invoke-static {v8}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 392
-    move-result-object v15
+    .line 391
+    move-result-object v8
+
+    .line 394
+    iput-object v8, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_fingerprintStartMode:Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 395
-    iput-object v15, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_fingerprintStartMode:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 396
-    new-instance v11, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 398
-    invoke-direct {v11, v15}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
-
-    .line 400
-    iput-object v11, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->fingerprintStartMode:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 403
-    new-instance v15, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$hasFingerBeenAcquired$1;
-
-    .line 405
-    move-object/from16 p7, v6
-
-    .line 407
-    move-object/from16 p8, v9
-
-    .line 409
-    const/4 v6, 0x0
-
-    .line 411
-    const/4 v9, 0x3
-
-    .line 412
-    invoke-direct {v15, v9, v6}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    .line 413
-    new-instance v6, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 416
-    move-object/from16 v9, p5
-
-    .line 418
-    iget-object v9, v9, Lcom/android/systemui/biometrics/domain/interactor/BiometricStatusInteractorImpl;->fingerprintAcquiredStatus:Lcom/android/systemui/biometrics/data/repository/BiometricStatusRepositoryImpl$special$$inlined$map$1;
-
-    .line 420
-    invoke-direct {v6, v9, v12, v15}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
-
-    .line 422
-    invoke-static {v6}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 425
-    move-result-object v6
-
-    .line 428
-    new-instance v9, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$hasFingerOnSensor$1;
-
-    .line 429
-    move-object/from16 v20, v8
-
-    .line 431
-    const/4 v8, 0x3
-
-    .line 433
-    const/4 v15, 0x0
-
-    .line 434
-    invoke-direct {v9, v8, v15}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    .line 435
-    new-instance v8, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 438
-    invoke-direct {v8, v6, v14, v9}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
-
-    .line 440
-    iput-object v8, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->hasFingerOnSensor:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 443
-    invoke-static {v4}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 445
-    move-result-object v6
-
-    .line 448
-    iput-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_forceLargeSize:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 449
-    invoke-static {v4}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 451
-    move-result-object v8
-
-    .line 454
-    iput-object v8, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_forceMediumSize:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 455
-    new-instance v9, Lcom/android/systemui/biometrics/ui/viewmodel/HapticsToPlay;
-
-    .line 457
-    const/4 v15, -0x1
-
-    .line 459
-    move-object/from16 p6, v5
-
-    .line 460
-    const/4 v5, 0x0
-
-    .line 462
-    invoke-direct {v9, v15, v5}, Lcom/android/systemui/biometrics/ui/viewmodel/HapticsToPlay;-><init>(ILjava/lang/Integer;)V
-
-    .line 463
-    invoke-static {v9}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 466
-    move-result-object v9
-
-    .line 469
-    iput-object v9, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_hapticsToPlay:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 470
     new-instance v15, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 472
-    invoke-direct {v15, v9}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
+    .line 397
+    invoke-direct {v15, v8}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
-    .line 474
-    iput-object v15, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->hapticsToPlay:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 399
+    iput-object v15, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->fingerprintStartMode:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 477
-    new-instance v9, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$position$1;
+    .line 402
+    move-object/from16 v8, p5
 
-    .line 479
-    invoke-direct {v9, v5}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$position$1;-><init>(Lkotlin/coroutines/Continuation;)V
+    .line 404
+    iget-object v8, v8, Lcom/android/systemui/biometrics/domain/interactor/BiometricStatusInteractorImpl;->fingerprintAcquiredStatus:Lcom/android/systemui/biometrics/data/repository/BiometricStatusRepositoryImpl$special$$inlined$map$1;
 
-    .line 481
-    iget-object v15, v1, Lcom/android/systemui/biometrics/domain/interactor/DisplayStateInteractorImpl;->isLargeScreen:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 406
+    new-instance v11, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$hasFingerBeenAcquired$1;
 
-    .line 484
-    iget-object v5, v1, Lcom/android/systemui/biometrics/domain/interactor/DisplayStateInteractorImpl;->currentRotation:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 408
+    move-object/from16 p7, v6
 
-    .line 486
-    move-object/from16 v21, v7
+    .line 410
+    move-object/from16 p4, v15
 
-    .line 488
-    move-object v7, v14
+    .line 412
+    const/4 v6, 0x3
 
-    .line 490
-    move-object v14, v6
+    .line 414
+    const/4 v15, 0x0
 
-    .line 491
-    move-object/from16 v22, v4
+    .line 415
+    invoke-direct {v11, v6, v15}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 492
-    move-object/from16 v16, v15
+    .line 416
+    new-instance v6, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 494
-    const/4 v4, 0x0
+    .line 419
+    invoke-direct {v6, v8, v12, v11}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 496
-    move-object v15, v10
-
-    .line 497
-    move-object/from16 v17, v5
-
-    .line 498
-    move-object/from16 v18, v12
-
-    .line 500
-    move-object/from16 v19, v9
-
-    .line 502
-    invoke-static/range {v14 .. v19}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function6;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 504
-    move-result-object v5
-
-    .line 507
-    invoke-static {v5}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 508
-    move-result-object v5
-
-    .line 511
-    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->position:Lkotlinx/coroutines/flow/Flow;
-
-    .line 512
-    new-instance v9, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$size$1;
-
-    .line 514
-    invoke-direct {v9, v4}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$size$1;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    .line 516
-    iget-object v2, v2, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->isConfirmationRequired:Lkotlinx/coroutines/flow/Flow;
-
-    .line 519
-    move-object v14, v6
-
-    .line 521
-    move-object v15, v8
-
-    .line 522
-    move-object/from16 v16, v12
-
-    .line 523
-    move-object/from16 v17, v2
-
-    .line 525
-    move-object/from16 v18, v11
-
-    .line 527
-    move-object/from16 v19, v9
-
-    .line 529
-    invoke-static/range {v14 .. v19}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function6;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 531
-    move-result-object v2
-
-    .line 534
-    invoke-static {v2}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 535
-    move-result-object v2
-
-    .line 538
-    iput-object v2, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->size:Lkotlinx/coroutines/flow/Flow;
-
-    .line 539
-    invoke-virtual/range {p3 .. p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 541
-    move-result-object v6
-
-    .line 544
-    const v8, 0x7f0700d4    # @dimen/biometric_prompt_land_small_horizontal_guideline_padding '344.0dp'
-
-    .line 545
-    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 548
-    move-result v6
-
-    .line 551
-    iput v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->smallHorizontalGuidelinePadding:I
-
-    .line 552
-    invoke-virtual/range {p3 .. p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 554
-    move-result-object v6
-
-    .line 557
-    const v8, 0x7f0700e4    # @dimen/biometric_prompt_two_pane_udfps_horizontal_guideline_padding '114.0dp'
-
-    .line 558
-    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 561
-    move-result v6
-
-    .line 564
-    iput v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->udfpsHorizontalGuidelinePadding:I
-
-    .line 565
-    invoke-virtual/range {p3 .. p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 567
-    move-result-object v6
-
-    .line 570
-    const v8, 0x7f0700e6    # @dimen/biometric_prompt_two_pane_udfps_shorter_horizontal_guideline_padding '661.0dp'
-
-    .line 571
-    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 574
-    move-result v6
-
-    .line 577
-    iput v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->udfpsHorizontalShorterGuidelinePadding:I
-
-    .line 578
-    invoke-virtual/range {p3 .. p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 580
-    move-result-object v6
-
-    .line 583
-    const v8, 0x7f0700dc    # @dimen/biometric_prompt_one_pane_medium_top_guideline_padding '119.0dp'
-
-    .line 584
-    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 587
-    move-result v6
-
-    .line 590
-    iput v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->mediumTopGuidelinePadding:I
-
-    .line 591
-    invoke-virtual/range {p3 .. p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 593
-    move-result-object v6
-
-    .line 596
-    const v8, 0x7f0700e3    # @dimen/biometric_prompt_two_pane_medium_horizontal_guideline_padding '640.0dp'
-
-    .line 597
-    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 600
-    move-result v6
-
-    .line 603
-    iput v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->mediumHorizontalGuidelinePadding:I
-
-    .line 604
-    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$iconPosition$1;
-
-    .line 606
-    invoke-direct {v6, v0, v4}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$iconPosition$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
-
-    .line 608
-    invoke-static {v13, v2, v5, v12, v6}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 611
-    move-result-object v6
-
-    .line 614
+    .line 421
     invoke-static {v6}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 615
+    .line 424
     move-result-object v6
 
-    .line 618
-    iput-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->iconPosition:Lkotlinx/coroutines/flow/Flow;
+    .line 427
+    new-instance v8, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$hasFingerOnSensor$1;
 
-    .line 619
-    new-instance v8, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isConfirmationRequired$1;
-
-    .line 621
-    const/4 v9, 0x3
-
-    .line 623
-    invoke-direct {v8, v9, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    .line 624
-    new-instance v9, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 627
-    invoke-direct {v9, v7, v2, v8}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
-
-    .line 629
-    iput-object v9, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isConfirmationRequired:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 632
-    new-instance v7, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$faceMode$1;
-
-    .line 634
-    const/4 v8, 0x4
-
-    .line 636
-    invoke-direct {v7, v8, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    .line 637
-    invoke-static {v12, v9, v11, v7}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function4;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 640
-    move-result-object v7
-
-    .line 643
-    invoke-static {v7}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 644
-    move-result-object v7
-
-    .line 647
-    iput-object v7, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->faceMode:Lkotlinx/coroutines/flow/Flow;
-
-    .line 648
-    new-instance v7, Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;
-
-    .line 650
-    iget-object v8, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
-
-    .line 652
-    invoke-direct {v7, v0, v1, v8, v3}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lcom/android/systemui/biometrics/domain/interactor/DisplayStateInteractorImpl;Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;)V
-
-    .line 654
-    iput-object v7, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->iconViewModel:Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;
-
-    .line 657
-    invoke-static/range {v22 .. v22}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 659
-    move-result-object v1
-
-    .line 662
-    new-instance v3, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 663
-    invoke-direct {v3, v1}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
-
-    .line 665
-    new-instance v1, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isIconViewLoaded$1;
-
-    .line 668
-    const/4 v8, 0x3
-
-    .line 670
-    invoke-direct {v1, v8, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    .line 671
-    new-instance v8, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 674
-    move-object/from16 v9, v21
-
-    .line 676
-    invoke-direct {v8, v9, v3, v1}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
-
-    .line 678
-    invoke-static {v8}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 681
-    iget-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->modalities:Lkotlinx/coroutines/flow/Flow;
-
-    .line 684
-    new-instance v3, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$iconSize$1;
-
-    .line 686
-    invoke-direct {v3, v0, v4}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$iconSize$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
-
-    .line 688
-    new-instance v8, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 691
-    iget-object v7, v7, Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;->activeAuthType:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 693
-    invoke-direct {v8, v7, v1, v3}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
-
-    .line 695
-    iput-object v8, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->iconSize:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 698
-    new-instance v1, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$promptPadding$1;
-
-    .line 700
-    invoke-direct {v1, v0, v4}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$promptPadding$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
-
-    .line 702
-    new-instance v3, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 705
-    move-object/from16 v7, p6
-
-    .line 707
-    invoke-direct {v3, v2, v7, v1}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
-
-    .line 709
-    iput-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptPadding:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 712
-    iget-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
-
-    .line 714
-    check-cast v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
-
-    .line 716
-    iget-object v1, v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 718
-    new-instance v3, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;
-
-    .line 720
-    const/4 v7, 0x0
-
-    .line 722
-    invoke-direct {v3, v1, v0, v7}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;-><init>(Ljava/lang/Object;Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;I)V
-
-    .line 723
-    invoke-static {v3}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 726
-    move-result-object v1
-
-    .line 729
-    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->logo:Lkotlinx/coroutines/flow/Flow;
-
-    .line 730
-    iget-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
-
-    .line 732
-    check-cast v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
-
-    .line 734
-    iget-object v1, v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 736
-    new-instance v3, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;
-
-    .line 738
-    const/4 v7, 0x1
-
-    .line 740
-    invoke-direct {v3, v1, v0, v7}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;-><init>(Ljava/lang/Object;Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;I)V
-
-    .line 741
-    invoke-static {v3}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 744
-    move-result-object v1
-
-    .line 747
-    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->logoDescription:Lkotlinx/coroutines/flow/Flow;
-
-    .line 748
-    iget-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
-
-    .line 750
-    check-cast v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
-
-    .line 752
-    iget-object v1, v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 754
-    new-instance v3, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
-
-    .line 756
-    const/16 v7, 0x9
-
-    .line 758
-    invoke-direct {v3, v1, v7}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
-
-    .line 760
-    invoke-static {v3}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 763
-    move-result-object v1
-
-    .line 766
-    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->title:Lkotlinx/coroutines/flow/Flow;
-
-    .line 767
-    iget-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
-
-    .line 769
-    check-cast v3, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
-
-    .line 771
-    iget-object v3, v3, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 773
-    new-instance v7, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
-
-    .line 775
-    const/4 v8, 0x1
-
-    .line 777
-    invoke-direct {v7, v3, v8}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
-
-    .line 778
-    invoke-static {v7}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 781
-    move-result-object v3
-
-    .line 784
-    iput-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->subtitle:Lkotlinx/coroutines/flow/Flow;
-
-    .line 785
-    iget-object v7, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
-
-    .line 787
-    check-cast v7, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
-
-    .line 789
-    iget-object v7, v7, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 791
-    new-instance v8, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
-
-    .line 793
-    const/4 v9, 0x2
-
-    .line 795
-    invoke-direct {v8, v7, v9}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
-
-    .line 796
-    invoke-static {v8}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 799
-    move-result-object v7
-
-    .line 802
-    iput-object v7, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->contentView:Lkotlinx/coroutines/flow/Flow;
-
-    .line 803
-    iget-object v8, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
-
-    .line 805
-    check-cast v8, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
-
-    .line 807
-    iget-object v8, v8, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 809
-    new-instance v9, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
-
-    .line 811
+    .line 428
     const/4 v11, 0x3
 
-    .line 813
-    invoke-direct {v9, v8, v11}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    .line 430
+    invoke-direct {v8, v11, v15}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 814
-    invoke-static {v9}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 817
-    move-result-object v8
-
-    .line 820
-    new-instance v9, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$description$1;
-
-    .line 821
-    invoke-direct {v9, v11, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    .line 823
+    .line 431
     new-instance v11, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 826
-    invoke-direct {v11, v7, v8, v9}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    .line 434
+    invoke-direct {v11, v6, v14, v8}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 828
-    iput-object v11, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->description:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+    .line 436
+    iput-object v11, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->hasFingerOnSensor:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 831
-    new-instance v8, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$hasOnlyOneLineTitle$1;
+    .line 439
+    invoke-static {v3}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 833
-    invoke-direct {v8, v0, v4}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$hasOnlyOneLineTitle$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
+    .line 441
+    move-result-object v6
 
-    .line 835
-    invoke-static {v1, v3, v7, v11, v8}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+    .line 444
+    iput-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_forceLargeSize:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 838
-    move-result-object v1
+    .line 445
+    invoke-static {v3}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 841
-    iget-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->modalities:Lkotlinx/coroutines/flow/Flow;
+    .line 447
+    move-result-object v8
 
-    .line 842
-    move-object/from16 p1, v6
+    .line 450
+    iput-object v8, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_forceMediumSize:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 844
-    move-object/from16 p2, v10
+    .line 451
+    new-instance v11, Lcom/android/systemui/biometrics/ui/viewmodel/HapticsToPlay;
 
-    .line 846
-    move-object/from16 p3, v2
+    .line 453
+    const/4 v15, -0x1
 
-    .line 848
-    move-object/from16 p4, v5
+    .line 455
+    move-object/from16 p8, v5
 
-    .line 850
-    move-object/from16 p5, v3
+    .line 456
+    const/4 v5, 0x0
 
-    .line 852
-    move-object/from16 p6, v1
+    .line 458
+    invoke-direct {v11, v15, v5}, Lcom/android/systemui/biometrics/ui/viewmodel/HapticsToPlay;-><init>(ILjava/lang/Integer;)V
 
-    .line 854
-    filled-new-array/range {p1 .. p6}, [Lkotlinx/coroutines/flow/Flow;
+    .line 459
+    invoke-static {v11}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 856
-    move-result-object v1
+    .line 462
+    move-result-object v11
 
-    .line 859
-    new-instance v3, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;
+    .line 465
+    iput-object v11, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_hapticsToPlay:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 860
-    const/4 v6, 0x2
+    .line 466
+    new-instance v15, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 862
-    invoke-direct {v3, v1, v0, v6}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;-><init>(Ljava/lang/Object;Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;I)V
+    .line 468
+    invoke-direct {v15, v11}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
-    .line 863
-    invoke-static {v3}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+    .line 470
+    iput-object v15, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->hapticsToPlay:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 866
-    move-result-object v1
+    .line 473
+    new-instance v11, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$position$1;
 
-    .line 869
-    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->guidelineBounds:Lkotlinx/coroutines/flow/Flow;
+    .line 475
+    invoke-direct {v11, v5}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$position$1;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    .line 870
-    new-instance v1, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isIndicatorMessageVisible$1;
+    .line 477
+    iget-object v15, v1, Lcom/android/systemui/biometrics/domain/interactor/DisplayStateInteractorImpl;->isLargeScreen:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 872
-    const/4 v3, 0x4
+    .line 480
+    move-object v5, v14
 
-    .line 874
-    invoke-direct {v1, v3, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 482
+    move-object v14, v6
 
-    .line 875
-    move-object/from16 v6, v20
+    .line 483
+    move-object/from16 v20, v9
 
-    .line 878
-    invoke-static {v2, v5, v6, v1}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function4;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+    .line 484
+    move-object/from16 v16, v15
 
-    .line 880
-    move-result-object v1
+    .line 486
+    const/4 v9, 0x0
 
-    .line 883
-    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isIndicatorMessageVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+    .line 488
+    move-object v15, v10
 
-    .line 884
-    new-instance v1, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isConfirmButtonVisible$1;
+    .line 489
+    move-object/from16 v17, v13
 
-    .line 886
-    invoke-direct {v1, v3, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 490
+    move-object/from16 v18, v12
 
-    .line 888
-    move-object/from16 v3, p8
+    .line 492
+    move-object/from16 v19, v11
 
-    .line 891
-    invoke-static {v2, v5, v3, v1}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function4;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 893
-    move-result-object v1
-
-    .line 896
-    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isConfirmButtonVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 897
-    iget-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->modalities:Lkotlinx/coroutines/flow/Flow;
-
-    .line 899
-    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isIconConfirmButton$1;
-
-    .line 901
-    const/4 v7, 0x3
-
-    .line 903
-    invoke-direct {v6, v7, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    .line 904
-    new-instance v7, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 907
-    invoke-direct {v7, v3, v2, v6}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
-
-    .line 909
-    iput-object v7, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isIconConfirmButton:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 912
-    iget-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isAuthenticated:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 914
-    iget-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
-
-    .line 916
-    check-cast v6, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
-
-    .line 918
-    iget-object v6, v6, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->isCredentialAllowed:Lkotlinx/coroutines/flow/Flow;
-
-    .line 920
-    new-instance v7, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isNegativeButtonVisible$1;
-
-    .line 922
-    const/4 v8, 0x5
-
-    .line 924
-    invoke-direct {v7, v8, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    .line 925
-    invoke-static {v2, v5, v3, v6, v7}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 928
-    move-result-object v3
-
-    .line 931
-    iput-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isNegativeButtonVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 932
-    iget-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isAuthenticated:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 934
-    new-instance v7, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isCancelButtonVisible$1;
-
-    .line 936
-    invoke-direct {v7, v4}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isCancelButtonVisible$1;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    .line 938
-    move-object v14, v2
-
-    .line 941
-    move-object v15, v5
-
-    .line 942
-    move-object/from16 v16, v6
-
-    .line 943
-    move-object/from16 v17, v3
-
-    .line 945
-    move-object/from16 v18, v1
-
-    .line 947
-    move-object/from16 v19, v7
-
-    .line 949
+    .line 494
     invoke-static/range {v14 .. v19}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function6;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
 
-    .line 951
+    .line 496
+    move-result-object v11
+
+    .line 499
+    invoke-static {v11}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 500
+    move-result-object v11
+
+    .line 503
+    iput-object v11, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->position:Lkotlinx/coroutines/flow/Flow;
+
+    .line 504
+    new-instance v15, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$size$1;
+
+    .line 506
+    invoke-direct {v15, v9}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$size$1;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    .line 508
+    iget-object v2, v2, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->isConfirmationRequired:Lkotlinx/coroutines/flow/Flow;
+
+    .line 511
+    move-object v14, v6
+
+    .line 513
+    move-object v6, v15
+
+    .line 514
+    move-object v15, v8
+
+    .line 515
+    move-object/from16 v16, v12
+
+    .line 516
+    move-object/from16 v17, v2
+
+    .line 518
+    move-object/from16 v18, p4
+
+    .line 520
+    move-object/from16 v19, v6
+
+    .line 522
+    invoke-static/range {v14 .. v19}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function6;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 524
+    move-result-object v2
+
+    .line 527
+    invoke-static {v2}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 528
+    move-result-object v2
+
+    .line 531
+    iput-object v2, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->size:Lkotlinx/coroutines/flow/Flow;
+
+    .line 532
+    invoke-virtual/range {p3 .. p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 534
+    move-result-object v6
+
+    .line 537
+    const v8, 0x7f0700da    # @dimen/biometric_prompt_land_small_horizontal_guideline_padding '344.0dp'
+
+    .line 538
+    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 541
+    move-result v6
+
+    .line 544
+    iput v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->smallHorizontalGuidelinePadding:I
+
+    .line 545
+    invoke-virtual/range {p3 .. p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 547
+    move-result-object v6
+
+    .line 550
+    const v8, 0x7f0700ea    # @dimen/biometric_prompt_two_pane_udfps_horizontal_guideline_padding '114.0dp'
+
+    .line 551
+    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 554
+    move-result v6
+
+    .line 557
+    iput v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->udfpsHorizontalGuidelinePadding:I
+
+    .line 558
+    invoke-virtual/range {p3 .. p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 560
+    move-result-object v6
+
+    .line 563
+    const v8, 0x7f0700ec    # @dimen/biometric_prompt_two_pane_udfps_shorter_horizontal_guideline_padding '661.0dp'
+
+    .line 564
+    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 567
+    move-result v6
+
+    .line 570
+    iput v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->udfpsHorizontalShorterGuidelinePadding:I
+
+    .line 571
+    invoke-virtual/range {p3 .. p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 573
+    move-result-object v6
+
+    .line 576
+    const v8, 0x7f0700e2    # @dimen/biometric_prompt_one_pane_medium_top_guideline_padding '119.0dp'
+
+    .line 577
+    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 580
+    move-result v6
+
+    .line 583
+    iput v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->mediumTopGuidelinePadding:I
+
+    .line 584
+    invoke-virtual/range {p3 .. p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 586
+    move-result-object v6
+
+    .line 589
+    const v8, 0x7f0700e9    # @dimen/biometric_prompt_two_pane_medium_horizontal_guideline_padding '640.0dp'
+
+    .line 590
+    invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 593
+    move-result v6
+
+    .line 596
+    iput v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->mediumHorizontalGuidelinePadding:I
+
+    .line 597
+    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$iconPosition$1;
+
+    .line 599
+    invoke-direct {v6, v0, v9}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$iconPosition$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
+
+    .line 601
+    invoke-static {v4, v2, v11, v12, v6}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 604
+    move-result-object v4
+
+    .line 607
+    invoke-static {v4}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 608
+    move-result-object v4
+
+    .line 611
+    iput-object v4, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->iconPosition:Lkotlinx/coroutines/flow/Flow;
+
+    .line 612
+    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isConfirmationRequired$1;
+
+    .line 614
+    const/4 v8, 0x3
+
+    .line 616
+    invoke-direct {v6, v8, v9}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    .line 617
+    new-instance v8, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+
+    .line 620
+    invoke-direct {v8, v5, v2, v6}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+
+    .line 622
+    iput-object v8, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isConfirmationRequired:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+
+    .line 625
+    new-instance v5, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$faceMode$1;
+
+    .line 627
+    const/4 v6, 0x4
+
+    .line 629
+    invoke-direct {v5, v6, v9}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    .line 630
+    move-object/from16 v6, p4
+
+    .line 633
+    invoke-static {v12, v8, v6, v5}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function4;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 635
+    move-result-object v5
+
+    .line 638
+    invoke-static {v5}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 639
+    move-result-object v5
+
+    .line 642
+    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->faceMode:Lkotlinx/coroutines/flow/Flow;
+
+    .line 643
+    new-instance v5, Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;
+
+    .line 645
+    iget-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
+
+    .line 647
+    iget-object v8, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->udfpsOverlayInteractor:Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;
+
+    .line 649
+    invoke-direct {v5, v0, v1, v6, v8}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lcom/android/systemui/biometrics/domain/interactor/DisplayStateInteractorImpl;Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;)V
+
+    .line 651
+    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->iconViewModel:Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;
+
+    .line 654
+    invoke-static {v3}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
+
+    .line 656
     move-result-object v1
 
-    .line 954
-    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isCancelButtonVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+    .line 659
+    new-instance v6, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 955
-    invoke-static/range {v22 .. v22}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
+    .line 660
+    invoke-direct {v6, v1}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
-    .line 957
-    move-result-object v1
+    .line 662
+    new-instance v1, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isIconViewLoaded$1;
 
-    .line 960
-    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_canTryAgainNow:Lkotlinx/coroutines/flow/StateFlowImpl;
+    .line 665
+    const/4 v8, 0x3
 
-    .line 961
-    iget-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isAuthenticated:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 667
+    invoke-direct {v1, v8, v9}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 963
-    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$canTryAgainNow$1;
+    .line 668
+    new-instance v8, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 965
-    invoke-direct {v6, v4}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$canTryAgainNow$1;-><init>(Lkotlin/coroutines/Continuation;)V
+    .line 671
+    invoke-direct {v8, v7, v6, v1}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 967
-    move-object/from16 p3, v1
+    .line 673
+    invoke-static {v8}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 970
-    move-object/from16 p4, v2
+    .line 676
+    iget-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->modalities:Lkotlinx/coroutines/flow/Flow;
 
-    .line 972
-    move-object/from16 p5, v5
+    .line 679
+    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$iconSize$1;
 
-    .line 974
-    move-object/from16 p6, v3
+    .line 681
+    invoke-direct {v6, v0, v9}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$iconSize$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
 
-    .line 976
-    move-object/from16 p8, v6
-
-    .line 978
-    invoke-static/range {p3 .. p8}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function6;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 980
-    move-result-object v1
-
-    .line 983
-    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->canTryAgainNow:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-    .line 984
-    iget-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->modalities:Lkotlinx/coroutines/flow/Flow;
-
-    .line 986
-    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isTryAgainButtonVisible$1;
-
-    .line 988
-    const/4 v7, 0x3
-
-    .line 990
-    invoke-direct {v6, v7, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    .line 991
+    .line 683
     new-instance v7, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 994
-    invoke-direct {v7, v1, v3, v6}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    .line 686
+    iget-object v5, v5, Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;->activeAuthType:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 996
-    iput-object v7, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isTryAgainButtonVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+    .line 688
+    invoke-direct {v7, v5, v1, v6}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 999
-    iget-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isAuthenticated:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 690
+    iput-object v7, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->iconSize:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 1001
-    iget-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
+    .line 693
+    new-instance v1, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$promptPadding$1;
 
-    .line 1003
-    check-cast v3, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
+    .line 695
+    invoke-direct {v1, v0, v9}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$promptPadding$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
 
-    .line 1005
-    iget-object v3, v3, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->isCredentialAllowed:Lkotlinx/coroutines/flow/Flow;
+    .line 697
+    new-instance v5, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 1007
-    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isCredentialButtonVisible$1;
+    .line 700
+    invoke-direct {v5, v2, v13, v1}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 1009
-    const/4 v7, 0x5
+    .line 702
+    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptPadding:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 1011
-    invoke-direct {v6, v7, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 705
+    iget-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
 
-    .line 1012
-    invoke-static {v2, v5, v1, v3, v6}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+    .line 707
+    check-cast v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
 
-    .line 1015
+    .line 709
+    iget-object v1, v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 711
+    new-instance v5, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;
+
+    .line 713
+    const/4 v6, 0x0
+
+    .line 715
+    invoke-direct {v5, v1, v0, v6}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;-><init>(Ljava/lang/Object;Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;I)V
+
+    .line 716
+    invoke-static {v5}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 719
     move-result-object v1
 
-    .line 1018
+    .line 722
+    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->logo:Lkotlinx/coroutines/flow/Flow;
+
+    .line 723
+    iget-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
+
+    .line 725
+    check-cast v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
+
+    .line 727
+    iget-object v1, v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 729
+    new-instance v5, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;
+
+    .line 731
+    const/4 v6, 0x1
+
+    .line 733
+    invoke-direct {v5, v1, v0, v6}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;-><init>(Ljava/lang/Object;Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;I)V
+
+    .line 734
+    invoke-static {v5}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 737
+    move-result-object v1
+
+    .line 740
+    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->logoDescription:Lkotlinx/coroutines/flow/Flow;
+
+    .line 741
+    iget-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
+
+    .line 743
+    check-cast v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
+
+    .line 745
+    iget-object v1, v1, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 747
+    new-instance v5, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
+
+    .line 749
+    const/16 v6, 0x9
+
+    .line 751
+    invoke-direct {v5, v1, v6}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+
+    .line 753
+    invoke-static {v5}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 756
+    move-result-object v1
+
+    .line 759
+    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->title:Lkotlinx/coroutines/flow/Flow;
+
+    .line 760
+    iget-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
+
+    .line 762
+    check-cast v5, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
+
+    .line 764
+    iget-object v5, v5, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 766
+    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
+
+    .line 768
+    const/4 v7, 0x1
+
+    .line 770
+    invoke-direct {v6, v5, v7}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+
+    .line 771
+    invoke-static {v6}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 774
+    move-result-object v5
+
+    .line 777
+    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->subtitle:Lkotlinx/coroutines/flow/Flow;
+
+    .line 778
+    iget-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
+
+    .line 780
+    check-cast v6, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
+
+    .line 782
+    iget-object v6, v6, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 784
+    new-instance v7, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
+
+    .line 786
+    const/4 v8, 0x2
+
+    .line 788
+    invoke-direct {v7, v6, v8}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+
+    .line 789
+    invoke-static {v7}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 792
+    move-result-object v6
+
+    .line 795
+    iput-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->contentView:Lkotlinx/coroutines/flow/Flow;
+
+    .line 796
+    iget-object v7, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
+
+    .line 798
+    check-cast v7, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
+
+    .line 800
+    iget-object v7, v7, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->prompt:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 802
+    new-instance v8, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;
+
+    .line 804
+    const/4 v12, 0x3
+
+    .line 806
+    invoke-direct {v8, v7, v12}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+
+    .line 807
+    invoke-static {v8}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 810
+    move-result-object v7
+
+    .line 813
+    new-instance v8, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$description$1;
+
+    .line 814
+    invoke-direct {v8, v12, v9}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    .line 816
+    new-instance v12, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+
+    .line 819
+    invoke-direct {v12, v6, v7, v8}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+
+    .line 821
+    iput-object v12, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->description:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+
+    .line 824
+    new-instance v7, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$hasOnlyOneLineTitle$1;
+
+    .line 826
+    invoke-direct {v7, v0, v9}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$hasOnlyOneLineTitle$1;-><init>(Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;Lkotlin/coroutines/Continuation;)V
+
+    .line 828
+    invoke-static {v1, v5, v6, v12, v7}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 831
+    move-result-object v1
+
+    .line 834
+    iget-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->modalities:Lkotlinx/coroutines/flow/Flow;
+
+    .line 835
+    move-object/from16 p1, v4
+
+    .line 837
+    move-object/from16 p2, v10
+
+    .line 839
+    move-object/from16 p3, v2
+
+    .line 841
+    move-object/from16 p4, v11
+
+    .line 843
+    move-object/from16 p5, v5
+
+    .line 845
+    move-object/from16 p6, v1
+
+    .line 847
+    filled-new-array/range {p1 .. p6}, [Lkotlinx/coroutines/flow/Flow;
+
+    .line 849
+    move-result-object v1
+
+    .line 852
+    new-instance v4, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;
+
+    .line 853
+    const/4 v5, 0x2
+
+    .line 855
+    invoke-direct {v4, v1, v0, v5}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$special$$inlined$map$7;-><init>(Ljava/lang/Object;Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;I)V
+
+    .line 856
+    invoke-static {v4}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
+
+    .line 859
+    move-result-object v1
+
+    .line 862
+    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->guidelineBounds:Lkotlinx/coroutines/flow/Flow;
+
+    .line 863
+    new-instance v1, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isIndicatorMessageVisible$1;
+
+    .line 865
+    const/4 v4, 0x4
+
+    .line 867
+    invoke-direct {v1, v4, v9}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    .line 868
+    move-object/from16 v5, v20
+
+    .line 871
+    invoke-static {v2, v11, v5, v1}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function4;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 873
+    move-result-object v1
+
+    .line 876
+    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isIndicatorMessageVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 877
+    new-instance v1, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isConfirmButtonVisible$1;
+
+    .line 879
+    invoke-direct {v1, v4, v9}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    .line 881
+    move-object/from16 v4, p8
+
+    .line 884
+    invoke-static {v2, v11, v4, v1}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function4;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 886
+    move-result-object v1
+
+    .line 889
+    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isConfirmButtonVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 890
+    iget-object v4, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->modalities:Lkotlinx/coroutines/flow/Flow;
+
+    .line 892
+    new-instance v5, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isIconConfirmButton$1;
+
+    .line 894
+    const/4 v6, 0x3
+
+    .line 896
+    invoke-direct {v5, v6, v9}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    .line 897
+    new-instance v6, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+
+    .line 900
+    invoke-direct {v6, v4, v2, v5}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+
+    .line 902
+    iput-object v6, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isIconConfirmButton:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+
+    .line 905
+    iget-object v4, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isAuthenticated:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 907
+    iget-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
+
+    .line 909
+    check-cast v5, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
+
+    .line 911
+    iget-object v5, v5, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->isCredentialAllowed:Lkotlinx/coroutines/flow/Flow;
+
+    .line 913
+    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isNegativeButtonVisible$1;
+
+    .line 915
+    const/4 v7, 0x5
+
+    .line 917
+    invoke-direct {v6, v7, v9}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    .line 918
+    invoke-static {v2, v11, v4, v5, v6}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 921
+    move-result-object v4
+
+    .line 924
+    iput-object v4, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isNegativeButtonVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 925
+    iget-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isAuthenticated:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 927
+    new-instance v6, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isCancelButtonVisible$1;
+
+    .line 929
+    invoke-direct {v6, v9}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isCancelButtonVisible$1;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    .line 931
+    move-object v14, v2
+
+    .line 934
+    move-object v15, v11
+
+    .line 935
+    move-object/from16 v16, v5
+
+    .line 936
+    move-object/from16 v17, v4
+
+    .line 938
+    move-object/from16 v18, v1
+
+    .line 940
+    move-object/from16 v19, v6
+
+    .line 942
+    invoke-static/range {v14 .. v19}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function6;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 944
+    move-result-object v1
+
+    .line 947
+    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isCancelButtonVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 948
+    invoke-static {v3}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
+
+    .line 950
+    move-result-object v1
+
+    .line 953
+    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->_canTryAgainNow:Lkotlinx/coroutines/flow/StateFlowImpl;
+
+    .line 954
+    iget-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isAuthenticated:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 956
+    new-instance v4, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$canTryAgainNow$1;
+
+    .line 958
+    invoke-direct {v4, v9}, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$canTryAgainNow$1;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    .line 960
+    move-object/from16 p3, v1
+
+    .line 963
+    move-object/from16 p4, v2
+
+    .line 965
+    move-object/from16 p5, v11
+
+    .line 967
+    move-object/from16 p6, v3
+
+    .line 969
+    move-object/from16 p8, v4
+
+    .line 971
+    invoke-static/range {p3 .. p8}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function6;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 973
+    move-result-object v1
+
+    .line 976
+    iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->canTryAgainNow:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 977
+    iget-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->modalities:Lkotlinx/coroutines/flow/Flow;
+
+    .line 979
+    new-instance v4, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isTryAgainButtonVisible$1;
+
+    .line 981
+    const/4 v5, 0x3
+
+    .line 983
+    invoke-direct {v4, v5, v9}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    .line 984
+    new-instance v5, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+
+    .line 987
+    invoke-direct {v5, v1, v3, v4}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+
+    .line 989
+    iput-object v5, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isTryAgainButtonVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+
+    .line 992
+    iget-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isAuthenticated:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 994
+    iget-object v3, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->promptSelectorInteractor:Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractor;
+
+    .line 996
+    check-cast v3, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;
+
+    .line 998
+    iget-object v3, v3, Lcom/android/systemui/biometrics/domain/interactor/PromptSelectorInteractorImpl;->isCredentialAllowed:Lkotlinx/coroutines/flow/Flow;
+
+    .line 1000
+    new-instance v4, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel$isCredentialButtonVisible$1;
+
+    .line 1002
+    const/4 v5, 0x5
+
+    .line 1004
+    invoke-direct {v4, v5, v9}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    .line 1005
+    invoke-static {v2, v11, v1, v3, v4}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
+
+    .line 1008
+    move-result-object v1
+
+    .line 1011
     iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->isCredentialButtonVisible:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
 
-    .line 1019
+    .line 1012
     new-instance v1, Lcom/android/systemui/biometrics/ui/viewmodel/PromptHistoryImpl;
 
-    .line 1021
+    .line 1014
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    .line 1023
+    .line 1016
     new-instance v2, Ljava/util/LinkedHashSet;
 
-    .line 1026
+    .line 1019
     invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 1028
+    .line 1021
     iput-object v2, v1, Lcom/android/systemui/biometrics/ui/viewmodel/PromptHistoryImpl;->failures:Ljava/util/Set;
 
-    .line 1031
+    .line 1024
     iput-object v1, v0, Lcom/android/systemui/biometrics/ui/viewmodel/PromptViewModel;->history:Lcom/android/systemui/biometrics/ui/viewmodel/PromptHistoryImpl;
 
-    .line 1033
+    .line 1026
     return-void
 .end method
 
@@ -1969,7 +1957,7 @@
     move-object/from16 v1, p6
 
     .line 43
-    invoke-static {v1, v0}, Lkotlinx/coroutines/CoroutineScopeKt;->coroutineScope(Lkotlin/coroutines/Continuation;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lkotlinx/coroutines/CoroutineScopeKt;->coroutineScope(Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     .line 45
     move-result-object v0
@@ -2166,7 +2154,6 @@
     .line 23
     :cond_1
     return-void
-    .line 26
 .end method
 
 .method public final needsExplicitConfirmation(Lcom/android/systemui/biometrics/shared/model/BiometricModality;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;

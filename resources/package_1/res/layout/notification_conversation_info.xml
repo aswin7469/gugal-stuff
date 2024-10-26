@@ -81,7 +81,7 @@
         <TextView android:visibility="gone"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:text="@android:string/peerTtyModeVco"
+                  android:text="@android:string/package_updated_device_owner"
                   android:layout_centerVertical="true"
                   android:layout_marginStart="2.0dp"
                   android:layout_marginEnd="2.0dp"

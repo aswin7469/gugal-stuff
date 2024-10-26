@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/ResizeVeil;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -339,7 +339,7 @@
     const-string v2, "Resize veil of Task="
 
     .line 27
-    invoke-static {v1, v2}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 29
     move-result-object v1
@@ -408,7 +408,7 @@
     const-string v3, "Resize veil background of Task="
 
     .line 74
-    invoke-static {v1, v3}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v3}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 76
     move-result-object v1
@@ -471,7 +471,7 @@
     const-string v3, "Resize veil icon of Task="
 
     .line 117
-    invoke-static {v1, v3}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v3}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 119
     move-result-object v1
@@ -534,7 +534,7 @@
     move-result-object v0
 
     .line 161
-    const v1, 0x7f07026b    # @dimen/desktop_mode_resize_veil_icon_size '96.0dp'
+    const v1, 0x7f07028d    # @dimen/desktop_mode_resize_veil_icon_size '96.0dp'
 
     .line 162
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -555,7 +555,7 @@
     move-result-object v0
 
     .line 176
-    const v1, 0x7f0e00a9    # @layout/desktop_mode_resize_veil 'res/layout/desktop_mode_resize_veil.xml'
+    const v1, 0x7f0d00b2    # @layout/desktop_mode_resize_veil 'res/layout/desktop_mode_resize_veil.xml'
 
     .line 177
     const/4 v2, 0x0
@@ -567,7 +567,7 @@
     move-result-object v0
 
     .line 184
-    const v1, 0x7f0b089a    # @id/veil_application_icon
+    const v1, 0x7f0a08cd    # @id/veil_application_icon
 
     .line 185
     invoke-virtual {v0, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class final Landroidx/compose/animation/core/VectorConvertersKt$DpOffsetToVector$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -45,7 +45,7 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 4
 
     .line 1
     check-cast p1, Landroidx/compose/animation/core/AnimationVector2D;
@@ -57,18 +57,45 @@
     iget p1, p1, Landroidx/compose/animation/core/AnimationVector2D;->v2:F
 
     .line 6
-    invoke-static {p0, p1}, Landroidx/compose/ui/unit/DpKt;->DpOffset-YgX7TsA(FF)J
+    invoke-static {p0}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
     .line 8
-    move-result-wide p0
+    move-result p0
 
     .line 11
-    new-instance v0, Landroidx/compose/ui/unit/DpOffset;
+    int-to-long v0, p0
 
     .line 12
+    invoke-static {p1}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
+    .line 13
+    move-result p0
+
+    .line 16
+    int-to-long p0, p0
+
+    .line 17
+    const/16 v2, 0x20
+
+    .line 18
+    shl-long/2addr v0, v2
+
+    .line 20
+    const-wide v2, 0xffffffffL
+
+    .line 21
+    and-long/2addr p0, v2
+
+    .line 26
+    or-long/2addr p0, v0
+
+    .line 27
+    new-instance v0, Landroidx/compose/ui/unit/DpOffset;
+
+    .line 28
     invoke-direct {v0, p0, p1}, Landroidx/compose/ui/unit/DpOffset;-><init>(J)V
 
-    .line 14
+    .line 30
     return-object v0
-    .line 17
+    .line 33
 .end method

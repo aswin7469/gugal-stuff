@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/globalactions/GlobalActionsDialogLite$ShutDownAction;
 .super Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/globalactions/GlobalActionsDialogLite$LongPressAction;
@@ -21,7 +21,7 @@
     const v0, 0x1080030    # @android:drawable/ic_lock_power_off
 
     .line 4
-    const v1, 0x104044c    # @android:string/hour_picker_description
+    const v1, 0x1040443    # @android:string/harmful_app_warning_open_anyway
 
     .line 7
     invoke-direct {p0, p1, v0, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialogLite;II)V

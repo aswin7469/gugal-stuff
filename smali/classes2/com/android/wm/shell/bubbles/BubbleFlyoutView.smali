@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/BubbleFlyoutView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -173,13 +173,13 @@
     move-result-object p1
 
     .line 61
-    const p2, 0x7f0e0064    # @layout/bubble_flyout 'res/layout/bubble_flyout.xml'
+    const p2, 0x7f0d0069    # @layout/bubble_flyout 'res/layout/bubble_flyout.xml'
 
     .line 62
     invoke-virtual {p1, p2, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 65
-    const p1, 0x7f0b0173    # @id/bubble_flyout_text_container
+    const p1, 0x7f0a0179    # @id/bubble_flyout_text_container
 
     .line 68
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -194,7 +194,7 @@
     iput-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleFlyoutView;->mFlyoutTextContainer:Landroid/view/ViewGroup;
 
     .line 77
-    const p2, 0x7f0b0171    # @id/bubble_flyout_name
+    const p2, 0x7f0a0177    # @id/bubble_flyout_name
 
     .line 79
     invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -209,7 +209,7 @@
     iput-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleFlyoutView;->mSenderText:Landroid/widget/TextView;
 
     .line 88
-    const p2, 0x7f0b0170    # @id/bubble_flyout_avatar
+    const p2, 0x7f0a0176    # @id/bubble_flyout_avatar
 
     .line 90
     invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -224,7 +224,7 @@
     iput-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleFlyoutView;->mSenderAvatar:Landroid/widget/ImageView;
 
     .line 99
-    const p2, 0x7f0b0172    # @id/bubble_flyout_text
+    const p2, 0x7f0a0178    # @id/bubble_flyout_text
 
     .line 101
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -245,7 +245,7 @@
     move-result-object p1
 
     .line 115
-    const p2, 0x7f070130    # @dimen/bubble_flyout_padding_x '14.0dp'
+    const p2, 0x7f070136    # @dimen/bubble_flyout_padding_x '14.0dp'
 
     .line 116
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -257,7 +257,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubbleFlyoutView;->mFlyoutPadding:I
 
     .line 123
-    const p2, 0x7f070133    # @dimen/bubble_flyout_space_from_bubble '8.0dp'
+    const p2, 0x7f070139    # @dimen/bubble_flyout_space_from_bubble '8.0dp'
 
     .line 125
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -269,7 +269,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubbleFlyoutView;->mFlyoutSpaceFromBubble:I
 
     .line 132
-    const p2, 0x7f070125    # @dimen/bubble_elevation '1.0dp'
+    const p2, 0x7f07012b    # @dimen/bubble_elevation '1.0dp'
 
     .line 134
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -281,7 +281,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubbleFlyoutView;->mBubbleElevation:I
 
     .line 141
-    const p2, 0x7f07012f    # @dimen/bubble_flyout_elevation '4.0dp'
+    const p2, 0x7f070135    # @dimen/bubble_flyout_elevation '4.0dp'
 
     .line 143
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/navigationbar/NavigationBar$3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/recents/OverviewProxyService$OverviewProxyListener;
@@ -43,7 +43,7 @@
     iget-object p0, p0, Lcom/android/systemui/navigationbar/NavigationBarView;->mButtonDispatchers:Landroid/util/SparseArray;
 
     .line 8
-    const v0, 0x7f0b0372    # @id/home_handle
+    const v0, 0x7f0a0392    # @id/home_handle
 
     .line 10
     invoke-virtual {p0, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -151,7 +151,6 @@
 
     .line 23
     return-void
-    .line 26
 .end method
 
 .method public final onHomeRotationEnabled(Z)V
@@ -381,14 +380,20 @@
     move-result-object p0
 
     .line 9
-    check-cast p0, Lcom/android/systemui/assist/AssistManager;
+    check-cast p0, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 10
-    iput-object p1, p0, Lcom/android/systemui/assist/AssistManager;->mAssistOverrideInvocationTypes:[I
+    iput-object p1, p0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mAssistOverrideInvocationTypes:[I
 
     .line 12
-    return-void
+    iget-object p0, p0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mOpaEnabledReceiver:Lcom/google/android/systemui/assist/OpaEnabledReceiver;
+
     .line 14
+    iput-object p1, p0, Lcom/google/android/systemui/assist/OpaEnabledReceiver;->mAssistOverrideInvocationTypes:[I
+
+    .line 16
+    return-void
+    .line 18
 .end method
 
 .method public final setOverrideHomeButtonLongPress(FJZ)V
@@ -560,10 +565,10 @@
     move-result-object p0
 
     .line 9
-    check-cast p0, Lcom/android/systemui/assist/AssistManager;
+    check-cast p0, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 10
-    invoke-virtual {p0, p1}, Lcom/android/systemui/assist/AssistManager;->startAssist(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/systemui/assist/AssistManagerGoogle;->startAssist(Landroid/os/Bundle;)V
 
     .line 12
     return-void

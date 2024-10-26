@@ -1,6 +1,6 @@
 .class public Lcom/google/android/systemui/smartspace/BcSmartspaceCardGenericImage;
 .super Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -35,7 +35,7 @@
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b0391    # @id/image_view
+    const v0, 0x7f0a03b1    # @id/image_view
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -185,7 +185,7 @@
     const-string v0, "SmartspaceGenericImg"
 
     .line 60
-    invoke-static {v0, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 62
     :cond_1
@@ -236,7 +236,7 @@
     move-result-object v0
 
     .line 94
-    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+    check-cast v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
     .line 95
     invoke-virtual {p1, p3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -270,7 +270,7 @@
     move-result-object v0
 
     .line 116
-    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+    check-cast v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
     .line 117
     invoke-virtual {p1, p3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I

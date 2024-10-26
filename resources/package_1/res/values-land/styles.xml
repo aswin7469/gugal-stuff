@@ -11,19 +11,19 @@
     <item name="android:textSize">18.0sp</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
     <item name="android:layout_marginTop">6.0dp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.AuthNonBioCredential.Subtitle" parent="@style/TextAppearance.AuthNonBioCredential">
     <item name="android:textSize">18.0sp</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
     <item name="android:layout_marginTop">6.0dp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.AuthNonBioCredential.Title" parent="@style/TextAppearance.AuthNonBioCredential">
     <item name="android:textSize">36.0dp</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
     <item name="android:focusable">true</item>
     <item name="android:layout_marginTop">6.0dp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
 </resources>

@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/drawable/UserIconDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/graphics/drawable/Drawable$Callback;
@@ -424,7 +424,6 @@
     .line 21
     :cond_0
     return-void
-    .line 24
 .end method
 
 .method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V

@@ -1,16 +1,14 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final headsUpStatusBarModel:Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;
 
-.field public final singleLineViewModel:Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/SingleLineViewModel;
-
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/SingleLineViewModel;)V
+.method public constructor <init>(Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;)V
     .locals 0
 
     .line 1
@@ -20,17 +18,14 @@
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->headsUpStatusBarModel:Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;
 
     .line 5
-    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->singleLineViewModel:Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/SingleLineViewModel;
-
-    .line 7
     return-void
-    .line 9
+    .line 7
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     .line 1
     const/4 v0, 0x1
@@ -59,89 +54,63 @@
     check-cast p1, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;
 
     .line 12
-    iget-object v1, p1, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->headsUpStatusBarModel:Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;
+    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->headsUpStatusBarModel:Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;
 
     .line 14
-    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->headsUpStatusBarModel:Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->headsUpStatusBarModel:Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;
 
     .line 16
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 18
-    move-result v1
+    move-result p0
 
     .line 21
-    if-nez v1, :cond_2
+    if-nez p0, :cond_2
 
     .line 22
     return v2
 
     .line 24
     :cond_2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->singleLineViewModel:Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/SingleLineViewModel;
+    const/4 p0, 0x0
 
     .line 25
-    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->singleLineViewModel:Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/SingleLineViewModel;
+    invoke-static {p0, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 27
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 29
+    .line 26
     move-result p0
 
-    .line 32
+    .line 29
     if-nez p0, :cond_3
 
-    .line 33
+    .line 30
     return v2
 
-    .line 35
+    .line 32
     :cond_3
     return v0
-    .line 36
+    .line 33
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 0
 
     .line 1
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->headsUpStatusBarModel:Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->headsUpStatusBarModel:Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;
 
     .line 2
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     .line 4
-    move-result v0
-
-    .line 7
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 8
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->singleLineViewModel:Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/SingleLineViewModel;
-
-    .line 10
-    if-nez p0, :cond_0
-
-    .line 12
-    const/4 p0, 0x0
-
-    .line 14
-    goto :goto_0
-
-    .line 15
-    :cond_0
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/SingleLineViewModel;->hashCode()I
-
-    .line 16
     move-result p0
 
-    .line 19
-    :goto_0
-    add-int/2addr v0, p0
+    .line 7
+    mul-int/lit8 p0, p0, 0x1f
 
-    .line 20
-    return v0
-    .line 21
+    .line 8
+    return p0
+    .line 10
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -157,35 +126,24 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 6
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->headsUpStatusBarModel:Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->headsUpStatusBarModel:Lcom/android/systemui/statusbar/notification/row/shared/HeadsUpStatusBarModel;
 
     .line 9
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 11
-    const-string v1, ", singleLineViewModel="
-
-    .line 14
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 16
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->singleLineViewModel:Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/SingleLineViewModel;
-
-    .line 19
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 21
-    const-string p0, ")"
+    .line 11
+    const-string p0, ", singleLineViewModel=null)"
 
-    .line 24
+    .line 14
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 26
+    .line 16
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 29
+    .line 19
     move-result-object p0
 
-    .line 32
+    .line 22
     return-object p0
+    .line 23
 .end method

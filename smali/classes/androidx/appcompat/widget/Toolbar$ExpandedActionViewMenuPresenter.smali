@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/widget/Toolbar$ExpandedActionViewMenuPresenter;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter;
@@ -181,7 +181,7 @@
     const/4 v5, 0x0
 
     .line 18
-    const v6, 0x7f040702    # @attr/toolbarNavigationButtonStyle
+    const v6, 0x7f040708    # @attr/toolbarNavigationButtonStyle
 
     .line 19
     invoke-direct {v1, v4, v5, v6}, Landroidx/appcompat/widget/AppCompatImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V

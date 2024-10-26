@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyboard/shortcut/ui/view/ShortcutHelperActivity$setUpInsets$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnApplyWindowInsetsListener;
@@ -103,7 +103,7 @@
     iget-object p2, p0, Lcom/android/systemui/keyboard/shortcut/ui/view/ShortcutHelperActivity$setUpInsets$1;->this$0:Lcom/android/systemui/keyboard/shortcut/ui/view/ShortcutHelperActivity;
 
     .line 47
-    const v0, 0x7f0b070c    # @id/shortcut_helper_sheet
+    const v0, 0x7f0a0738    # @id/shortcut_helper_sheet
 
     .line 49
     invoke-virtual {p2, v0}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;

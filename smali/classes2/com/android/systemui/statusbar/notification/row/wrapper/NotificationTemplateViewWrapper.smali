@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationTemplateViewWrapper;
 .super Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationHeaderViewWrapper;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -56,7 +56,7 @@
     move-result-object p2
 
     .line 15
-    const p3, 0x7f050067    # @bool/heads_up_notification_hides_header 'false'
+    const p3, 0x7f050075    # @bool/heads_up_notification_hides_header 'false'
 
     .line 16
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -331,7 +331,7 @@
     move-result-object p0
 
     .line 33
-    const v1, 0x7f07091e    # @dimen/remote_input_history_extra_height '60.0dp'
+    const v1, 0x7f07096e    # @dimen/remote_input_history_extra_height '60.0dp'
 
     .line 34
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -410,7 +410,7 @@
     iput-object v2, p0, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationTemplateViewWrapper;->mRightIcon:Landroid/widget/ImageView;
 
     .line 18
-    const v3, 0x7f0b038f    # @id/image_icon_tag
+    const v3, 0x7f0a03af    # @id/image_icon_tag
 
     .line 20
     if-eqz v2, :cond_2
@@ -506,7 +506,7 @@
     sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     .line 80
-    const v5, 0x7f0b009f    # @id/align_transform_end_tag
+    const v5, 0x7f0a009e    # @id/align_transform_end_tag
 
     .line 82
     invoke-virtual {v2, v5, v4}, Landroid/widget/ImageView;->setTag(ILjava/lang/Object;)V
@@ -846,7 +846,7 @@
     .line 314
     :cond_8
     :goto_3
-    const v7, 0x7f0b05d4    # @id/pending_intent_listener_tag
+    const v7, 0x7f0a05f9    # @id/pending_intent_listener_tag
 
     .line 315
     invoke-virtual {v6, v7}, Landroid/widget/Button;->getTag(I)Ljava/lang/Object;

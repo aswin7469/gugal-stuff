@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/broadcast/logging/BroadcastDispatcherLogger;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -309,7 +309,7 @@
     const-string p1, "\n"
 
     .line 70
-    invoke-static {v0, p1, p3}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, p3}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m$1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 72
     move-result-object v0
@@ -494,14 +494,14 @@
     .line 29
 .end method
 
-.method public final logTagForRemoval(Landroid/content/BroadcastReceiver;)V
+.method public final logTagForRemoval(ILandroid/content/BroadcastReceiver;)V
     .locals 4
 
     .line 1
-    invoke-virtual {p1}, Landroid/content/BroadcastReceiver;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Landroid/content/BroadcastReceiver;->toString()Ljava/lang/String;
 
     .line 2
-    move-result-object p1
+    move-result-object p2
 
     .line 5
     sget-object v0, Lcom/android/systemui/log/core/LogLevel;->DEBUG:Lcom/android/systemui/log/core/LogLevel;
@@ -510,15 +510,15 @@
     sget-object v1, Lcom/android/systemui/broadcast/logging/BroadcastDispatcherLogger$logTagForRemoval$2;->INSTANCE:Lcom/android/systemui/broadcast/logging/BroadcastDispatcherLogger$logTagForRemoval$2;
 
     .line 8
-    iget-object p0, p0, Lcom/android/systemui/broadcast/logging/BroadcastDispatcherLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
-
-    .line 10
     const-string v2, "BroadcastDispatcherLog"
 
-    .line 12
+    .line 10
     const/4 v3, 0x0
 
-    .line 14
+    .line 12
+    iget-object p0, p0, Lcom/android/systemui/broadcast/logging/BroadcastDispatcherLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
+
+    .line 13
     invoke-virtual {p0, v2, v0, v1, v3}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
 
     .line 15
@@ -531,18 +531,21 @@
     check-cast v1, Lcom/android/systemui/log/LogMessageImpl;
 
     .line 20
-    const/4 v2, -0x1
+    iput p1, v1, Lcom/android/systemui/log/LogMessageImpl;->int1:I
 
     .line 22
-    iput v2, v1, Lcom/android/systemui/log/LogMessageImpl;->int1:I
+    move-object p1, v0
 
-    .line 23
-    iput-object p1, v1, Lcom/android/systemui/log/LogMessageImpl;->str1:Ljava/lang/String;
+    .line 24
+    check-cast p1, Lcom/android/systemui/log/LogMessageImpl;
 
     .line 25
-    invoke-virtual {p0, v0}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
+    iput-object p2, p1, Lcom/android/systemui/log/LogMessageImpl;->str1:Ljava/lang/String;
 
     .line 27
+    invoke-virtual {p0, v0}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
+
+    .line 29
     return-void
-    .line 30
+    .line 32
 .end method

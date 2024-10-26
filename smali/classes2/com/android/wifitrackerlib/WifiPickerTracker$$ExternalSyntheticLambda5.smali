@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wifitrackerlib/WifiPickerTracker$$ExternalSyntheticLambda5;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/Predicate;
@@ -13,14 +13,14 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/util/Map;)V
+.method public synthetic constructor <init>(Ljava/util/Map;I)V
     .locals 0
 
     .line 1
-    iput p1, p0, Lcom/android/wifitrackerlib/WifiPickerTracker$$ExternalSyntheticLambda5;->$r8$classId:I
+    iput p2, p0, Lcom/android/wifitrackerlib/WifiPickerTracker$$ExternalSyntheticLambda5;->$r8$classId:I
 
     .line 2
-    iput-object p2, p0, Lcom/android/wifitrackerlib/WifiPickerTracker$$ExternalSyntheticLambda5;->f$0:Ljava/util/Map;
+    iput-object p1, p0, Lcom/android/wifitrackerlib/WifiPickerTracker$$ExternalSyntheticLambda5;->f$0:Ljava/util/Map;
 
     .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -87,6 +87,7 @@
     .line 32
     nop
 
+    .line 33
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

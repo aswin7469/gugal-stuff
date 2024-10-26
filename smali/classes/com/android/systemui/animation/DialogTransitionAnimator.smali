@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/animation/DialogTransitionAnimator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -308,58 +308,73 @@
     check-cast p0, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;
 
     .line 30
-    invoke-virtual {p0}, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->canShowAlternateBouncerForFingerprint()Z
+    iget-object p0, p0, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->canShowAlternateBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 32
-    move-result p0
+    iget-object p0, p0, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 35
-    if-nez p0, :cond_0
+    .line 34
+    invoke-interface {p0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
     .line 36
+    move-result-object p0
+
+    .line 39
+    check-cast p0, Ljava/lang/Boolean;
+
+    .line 40
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 42
+    move-result p0
+
+    .line 45
+    if-nez p0, :cond_0
+
+    .line 46
     goto :goto_0
 
-    .line 38
+    .line 48
     :cond_0
     iget-object p0, p1, Lcom/android/systemui/animation/AnimatedDialog;->dialogContentWithBackground:Landroid/view/ViewGroup;
 
-    .line 39
+    .line 49
     if-nez p0, :cond_1
 
-    .line 41
+    .line 51
     return-object v2
 
-    .line 43
+    .line 53
     :cond_1
     const/16 v1, 0x1c
 
-    .line 44
+    .line 54
     invoke-static {p0, p2, v1}, Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller$Companion;->fromView$default(Landroid/view/View;Ljava/lang/Integer;I)Lcom/android/systemui/animation/GhostedViewTransitionAnimatorController;
 
-    .line 46
+    .line 56
     move-result-object p0
 
-    .line 49
+    .line 59
     if-nez p0, :cond_2
 
-    .line 50
+    .line 60
     return-object v2
 
-    .line 52
+    .line 62
     :cond_2
     new-instance p2, Lcom/android/systemui/animation/DialogTransitionAnimator$createActivityTransitionController$1;
 
-    .line 53
+    .line 63
     invoke-direct {p2, p0, v0, p1}, Lcom/android/systemui/animation/DialogTransitionAnimator$createActivityTransitionController$1;-><init>(Lcom/android/systemui/animation/GhostedViewTransitionAnimatorController;Landroid/app/Dialog;Lcom/android/systemui/animation/AnimatedDialog;)V
 
-    .line 55
+    .line 65
     return-object p2
 
-    .line 58
+    .line 68
     :cond_3
     :goto_0
     return-object v2
-    .line 59
+    .line 69
 .end method
 
 .method public final disableAllCurrentDialogsExitAnimations()V
@@ -405,7 +420,6 @@
     .line 23
     :cond_0
     return-void
-    .line 24
 .end method
 
 .method public final dismissStack(Landroid/app/Dialog;)V
@@ -1080,7 +1094,7 @@
     sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     .line 370
-    const v6, 0x7f0b07cc    # @id/tag_dialog_background
+    const v6, 0x7f0a07fb    # @id/tag_dialog_background
 
     .line 372
     invoke-virtual {v5, v6, v4}, Landroid/view/ViewGroup;->setTag(ILjava/lang/Object;)V
@@ -1151,7 +1165,7 @@
     move-result-object v4
 
     .line 419
-    const v6, 0x7f15000c    # @style/Animation.LaunchAnimation
+    const v6, 0x7f14000c    # @style/Animation.LaunchAnimation
 
     .line 420
     iput v6, v4, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I

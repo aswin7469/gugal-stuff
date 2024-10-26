@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/semantics/SemanticsPropertiesKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -18,435 +18,429 @@
     const-class v1, Landroidx/compose/ui/semantics/SemanticsPropertiesKt;
 
     .line 4
-    const-string v2, "stateDescription"
+    const-string/jumbo v2, "stateDescription"
 
     .line 6
     const-string v3, "getStateDescription(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Ljava/lang/String;"
 
-    .line 8
+    .line 9
     const/4 v4, 0x1
 
-    .line 10
+    .line 11
     invoke-direct {v0, v1, v2, v3, v4}, Lkotlin/jvm/internal/MutablePropertyReference1Impl;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 11
+    .line 12
     sget-object v2, Lkotlin/jvm/internal/Reflection;->factory:Lkotlin/jvm/internal/ReflectionFactory;
 
-    .line 14
+    .line 15
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 16
+    .line 17
     new-instance v3, Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 19
+    .line 20
     const-string v5, "progressBarRangeInfo"
 
-    .line 21
+    .line 22
     const-string v6, "getProgressBarRangeInfo(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/semantics/ProgressBarRangeInfo;"
 
-    .line 23
+    .line 24
     invoke-direct {v3, v1, v5, v6, v4}, Lkotlin/jvm/internal/MutablePropertyReference1Impl;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 25
+    .line 26
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 28
+    .line 29
     const-string v5, "paneTitle"
 
-    .line 31
+    .line 32
     const-string v6, "getPaneTitle(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Ljava/lang/String;"
 
-    .line 33
+    .line 34
     invoke-static {v1, v5, v6, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 35
+    .line 36
     move-result-object v5
 
-    .line 38
+    .line 39
     const-string v6, "liveRegion"
 
-    .line 39
+    .line 40
     const-string v7, "getLiveRegion(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)I"
 
-    .line 41
+    .line 42
     invoke-static {v1, v6, v7, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 43
+    .line 44
     move-result-object v6
 
-    .line 46
+    .line 47
     const-string v7, "focused"
 
-    .line 47
+    .line 48
     const-string v8, "getFocused(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Z"
 
-    .line 49
+    .line 50
     invoke-static {v1, v7, v8, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 51
+    .line 52
     move-result-object v7
 
-    .line 54
+    .line 55
     const-string v8, "isContainer"
 
-    .line 55
+    .line 56
     const-string v9, "isContainer(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Z"
 
-    .line 57
+    .line 58
     invoke-static {v1, v8, v9, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 59
+    .line 60
     move-result-object v8
 
-    .line 62
+    .line 63
     const-string v9, "isTraversalGroup"
 
-    .line 63
+    .line 64
     const-string v10, "isTraversalGroup(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Z"
 
-    .line 65
+    .line 66
     invoke-static {v1, v9, v10, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 67
+    .line 68
     move-result-object v9
 
-    .line 70
+    .line 71
     const-string v10, "contentType"
 
-    .line 71
+    .line 72
     const-string v11, "getContentType(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/autofill/ContentType;"
 
-    .line 73
+    .line 74
     invoke-static {v1, v10, v11, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 75
+    .line 76
     move-result-object v10
 
-    .line 78
+    .line 79
     const-string v11, "contentDataType"
 
-    .line 79
+    .line 80
     const-string v12, "getContentDataType(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)I"
 
-    .line 81
+    .line 82
     invoke-static {v1, v11, v12, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 83
+    .line 84
     move-result-object v11
 
-    .line 86
-    const-string v12, "traversalIndex"
-
     .line 87
+    const-string/jumbo v12, "traversalIndex"
+
+    .line 88
     const-string v13, "getTraversalIndex(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)F"
 
-    .line 89
+    .line 91
     invoke-static {v1, v12, v13, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 91
+    .line 93
     move-result-object v12
 
-    .line 94
+    .line 96
     const-string v13, "horizontalScrollAxisRange"
 
-    .line 95
+    .line 97
     const-string v14, "getHorizontalScrollAxisRange(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/semantics/ScrollAxisRange;"
 
-    .line 97
+    .line 99
     invoke-static {v1, v13, v14, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 99
+    .line 101
     move-result-object v13
 
-    .line 102
+    .line 104
     const-string/jumbo v14, "verticalScrollAxisRange"
 
-    .line 103
+    .line 105
     const-string v15, "getVerticalScrollAxisRange(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/semantics/ScrollAxisRange;"
 
-    .line 106
+    .line 108
     invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 108
+    .line 110
     move-result-object v14
 
-    .line 111
+    .line 113
     const-string v15, "role"
 
-    .line 112
+    .line 114
     move-object/from16 v16, v14
 
-    .line 114
+    .line 116
     const-string v14, "getRole(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)I"
 
-    .line 116
+    .line 118
     invoke-static {v1, v15, v14, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 118
+    .line 120
     move-result-object v14
 
-    .line 121
-    const-string v15, "testTag"
-
-    .line 122
-    move-object/from16 v17, v14
+    .line 123
+    const-string/jumbo v15, "testTag"
 
     .line 124
+    move-object/from16 v17, v14
+
+    .line 127
     const-string v14, "getTestTag(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Ljava/lang/String;"
 
-    .line 126
+    .line 129
     invoke-static {v1, v15, v14, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
-
-    .line 128
-    move-result-object v14
 
     .line 131
-    const-string v15, "textSubstitution"
-
-    .line 132
-    move-object/from16 v18, v14
-
-    .line 134
-    const-string v14, "getTextSubstitution(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/text/AnnotatedString;"
-
-    .line 136
-    invoke-static {v1, v15, v14, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
-
-    .line 138
     move-result-object v14
 
-    .line 141
-    const-string v15, "isShowingTextSubstitution"
+    .line 134
+    const-string/jumbo v15, "textSubstitution"
 
-    .line 142
-    move-object/from16 v19, v14
+    .line 135
+    move-object/from16 v18, v14
 
-    .line 144
-    const-string v14, "isShowingTextSubstitution(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Z"
+    .line 138
+    const-string v14, "getTextSubstitution(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/text/AnnotatedString;"
 
-    .line 146
+    .line 140
     invoke-static {v1, v15, v14, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 148
-    move-result-object v15
+    .line 142
+    move-result-object v14
 
-    .line 151
-    const-string v14, "editableText"
+    .line 145
+    const-string v15, "isShowingTextSubstitution"
+
+    .line 146
+    move-object/from16 v19, v14
+
+    .line 148
+    const-string v14, "isShowingTextSubstitution(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Z"
+
+    .line 150
+    invoke-static {v1, v15, v14, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
     .line 152
-    move-object/from16 v20, v15
+    move-result-object v15
 
-    .line 154
-    const-string v15, "getEditableText(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/text/AnnotatedString;"
+    .line 155
+    const-string v14, "editableText"
 
     .line 156
-    invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
+    move-object/from16 v20, v15
 
     .line 158
-    move-result-object v21
+    const-string v15, "getEditableText(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/text/AnnotatedString;"
 
-    .line 161
-    const-string v14, "textSelectionRange"
+    .line 160
+    invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
     .line 162
-    const-string v15, "getTextSelectionRange(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)J"
+    move-result-object v21
 
-    .line 164
-    invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
+    .line 165
+    const-string/jumbo v14, "textSelectionRange"
 
     .line 166
-    move-result-object v22
+    const-string v15, "getTextSelectionRange(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)J"
 
     .line 169
-    const-string v14, "imeAction"
-
-    .line 170
-    const-string v15, "getImeAction(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)I"
-
-    .line 172
     invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
+
+    .line 171
+    move-result-object v22
 
     .line 174
-    move-result-object v23
+    const-string v14, "imeAction"
+
+    .line 175
+    const-string v15, "getImeAction(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)I"
 
     .line 177
-    const-string v14, "selected"
-
-    .line 178
-    const-string v15, "getSelected(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Z"
-
-    .line 180
     invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
+
+    .line 179
+    move-result-object v23
 
     .line 182
-    move-result-object v24
+    const-string v14, "selected"
+
+    .line 183
+    const-string v15, "getSelected(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Z"
 
     .line 185
-    const-string v14, "collectionInfo"
-
-    .line 186
-    const-string v15, "getCollectionInfo(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/semantics/CollectionInfo;"
-
-    .line 188
     invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
+
+    .line 187
+    move-result-object v24
 
     .line 190
-    move-result-object v25
+    const-string v14, "collectionInfo"
+
+    .line 191
+    const-string v15, "getCollectionInfo(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/semantics/CollectionInfo;"
 
     .line 193
-    const-string v14, "collectionItemInfo"
-
-    .line 194
-    const-string v15, "getCollectionItemInfo(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/semantics/CollectionItemInfo;"
-
-    .line 196
     invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
+
+    .line 195
+    move-result-object v25
 
     .line 198
-    move-result-object v26
+    const-string v14, "collectionItemInfo"
+
+    .line 199
+    const-string v15, "getCollectionItemInfo(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/semantics/CollectionItemInfo;"
 
     .line 201
-    const-string v14, "toggleableState"
-
-    .line 202
-    const-string v15, "getToggleableState(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/state/ToggleableState;"
-
-    .line 204
     invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
+
+    .line 203
+    move-result-object v26
 
     .line 206
-    move-result-object v27
+    const-string/jumbo v14, "toggleableState"
 
-    .line 209
-    const-string v14, "isEditable"
+    .line 207
+    const-string v15, "getToggleableState(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Landroidx/compose/ui/state/ToggleableState;"
 
     .line 210
-    const-string v15, "isEditable(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Z"
+    invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
     .line 212
-    invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
+    move-result-object v27
 
-    .line 214
-    move-result-object v28
+    .line 215
+    const-string v14, "isEditable"
 
-    .line 217
-    const-string v14, "maxTextLength"
+    .line 216
+    const-string v15, "isEditable(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Z"
 
     .line 218
-    const-string v15, "getMaxTextLength(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)I"
+    invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
     .line 220
-    invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
+    move-result-object v28
 
-    .line 222
-    move-result-object v29
+    .line 223
+    const-string v14, "maxTextLength"
 
-    .line 225
-    const-string v14, "customActions"
+    .line 224
+    const-string v15, "getMaxTextLength(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)I"
 
     .line 226
-    const-string v15, "getCustomActions(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Ljava/util/List;"
-
-    .line 228
     invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
-    .line 230
-    move-result-object v30
+    .line 228
+    move-result-object v29
 
-    .line 233
-    move-object v1, v3
+    .line 231
+    const-string v14, "customActions"
+
+    .line 232
+    const-string v15, "getCustomActions(Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)Ljava/util/List;"
 
     .line 234
-    move-object v2, v5
-
-    .line 235
-    move-object v3, v6
+    invoke-static {v1, v14, v15, v4, v2}, Landroidx/compose/ui/semantics/SemanticsPropertiesKt$$ExternalSyntheticOutline0;->m(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/ReflectionFactory;)Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
     .line 236
-    move-object v4, v7
-
-    .line 237
-    move-object v5, v8
-
-    .line 238
-    move-object v6, v9
+    move-result-object v30
 
     .line 239
-    move-object v7, v10
+    move-object v1, v3
 
     .line 240
-    move-object v8, v11
+    move-object v2, v5
 
     .line 241
-    move-object v9, v12
+    move-object v3, v6
 
     .line 242
-    move-object v10, v13
+    move-object v4, v7
 
     .line 243
-    move-object/from16 v11, v16
+    move-object v5, v8
 
     .line 244
-    move-object/from16 v12, v17
+    move-object v6, v9
+
+    .line 245
+    move-object v7, v10
 
     .line 246
-    move-object/from16 v13, v18
+    move-object v8, v11
+
+    .line 247
+    move-object v9, v12
 
     .line 248
-    move-object/from16 v14, v19
+    move-object v10, v13
+
+    .line 249
+    move-object/from16 v11, v16
 
     .line 250
-    move-object/from16 v15, v20
+    move-object/from16 v12, v17
 
     .line 252
-    move-object/from16 v16, v21
+    move-object/from16 v13, v18
 
     .line 254
-    move-object/from16 v17, v22
+    move-object/from16 v14, v19
 
     .line 256
-    move-object/from16 v18, v23
+    move-object/from16 v15, v20
 
     .line 258
-    move-object/from16 v19, v24
+    move-object/from16 v16, v21
 
     .line 260
-    move-object/from16 v20, v25
+    move-object/from16 v17, v22
 
     .line 262
-    move-object/from16 v21, v26
+    move-object/from16 v18, v23
 
     .line 264
-    move-object/from16 v22, v27
+    move-object/from16 v19, v24
 
     .line 266
-    move-object/from16 v23, v28
+    move-object/from16 v20, v25
 
     .line 268
-    move-object/from16 v24, v29
+    move-object/from16 v21, v26
 
     .line 270
-    move-object/from16 v25, v30
+    move-object/from16 v22, v27
 
     .line 272
-    filled-new-array/range {v0 .. v25}, [Lkotlin/reflect/KProperty;
+    move-object/from16 v23, v28
 
     .line 274
-    move-result-object v0
+    move-object/from16 v24, v29
 
-    .line 277
-    sput-object v0, Landroidx/compose/ui/semantics/SemanticsPropertiesKt;->$$delegatedProperties:[Lkotlin/reflect/KProperty;
+    .line 276
+    move-object/from16 v25, v30
 
     .line 278
-    sget-object v0, Landroidx/compose/ui/semantics/SemanticsProperties;->INSTANCE:Landroidx/compose/ui/semantics/SemanticsProperties;
+    filled-new-array/range {v0 .. v25}, [Lkotlin/reflect/KProperty;
 
     .line 280
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    .line 282
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 283
+    sput-object v0, Landroidx/compose/ui/semantics/SemanticsPropertiesKt;->$$delegatedProperties:[Lkotlin/reflect/KProperty;
 
-    .line 285
+    .line 284
+    sget-object v0, Landroidx/compose/ui/semantics/SemanticsProperties;->INSTANCE:Landroidx/compose/ui/semantics/SemanticsProperties;
+
+    .line 286
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 288
@@ -516,11 +510,17 @@
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 354
-    sget-object v0, Landroidx/compose/ui/semantics/SemanticsActions;->GetTextLayoutResult:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 357
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 360
+    sget-object v0, Landroidx/compose/ui/semantics/SemanticsActions;->GetTextLayoutResult:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
+
+    .line 363
     return-void
-    .line 359
+    .line 365
 .end method
 
 .method public static final AccessibilityKey(Ljava/lang/String;)Landroidx/compose/ui/semantics/SemanticsPropertyKey;

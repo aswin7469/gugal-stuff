@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/dialog/MediaOutputController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/settingslib/media/LocalMediaManager$DeviceCallback;
@@ -302,7 +302,7 @@
     iput-object v2, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mNearbyMediaDevicesManager:Lcom/android/systemui/media/nearby/NearbyMediaDevicesManager;
 
     .line 121
-    const v2, 0x7f06039f    # @color/media_dialog_item_main_content '@color/material_dynamic_primary20'
+    const v2, 0x7f0603ab    # @color/media_dialog_item_main_content '@color/material_dynamic_primary20'
 
     .line 123
     invoke-static {v2, p1}, Lcom/android/settingslib/Utils;->getColorStateListDefaultColor(ILandroid/content/Context;)I
@@ -314,7 +314,7 @@
     iput v2, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mColorItemContent:I
 
     .line 130
-    const v2, 0x7f0603a0    # @color/media_dialog_seekbar_progress '@android:color/system_accent1_200'
+    const v2, 0x7f0603ac    # @color/media_dialog_seekbar_progress '@android:color/system_accent1_200'
 
     .line 132
     invoke-static {v2, p1}, Lcom/android/settingslib/Utils;->getColorStateListDefaultColor(ILandroid/content/Context;)I
@@ -326,7 +326,7 @@
     iput v2, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mColorSeekbarProgress:I
 
     .line 139
-    const v2, 0x7f06039c    # @color/media_dialog_button_background '@color/material_dynamic_primary40'
+    const v2, 0x7f0603a8    # @color/media_dialog_button_background '@color/material_dynamic_primary40'
 
     .line 141
     invoke-static {v2, p1}, Lcom/android/settingslib/Utils;->getColorStateListDefaultColor(ILandroid/content/Context;)I
@@ -338,7 +338,7 @@
     iput v2, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mColorButtonBackground:I
 
     .line 148
-    const v2, 0x7f06039e    # @color/media_dialog_item_background '@color/material_dynamic_secondary95'
+    const v2, 0x7f0603aa    # @color/media_dialog_item_background '@color/material_dynamic_secondary95'
 
     .line 150
     invoke-static {v2, p1}, Lcom/android/settingslib/Utils;->getColorStateListDefaultColor(ILandroid/content/Context;)I
@@ -350,7 +350,7 @@
     iput v2, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mColorItemBackground:I
 
     .line 157
-    const v2, 0x7f06039d    # @color/media_dialog_connected_item_background '@color/material_dynamic_primary90'
+    const v2, 0x7f0603a9    # @color/media_dialog_connected_item_background '@color/material_dynamic_primary90'
 
     .line 159
     invoke-static {v2, p1}, Lcom/android/settingslib/Utils;->getColorStateListDefaultColor(ILandroid/content/Context;)I
@@ -362,7 +362,7 @@
     iput v2, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mColorConnectedItemBackground:I
 
     .line 166
-    const v2, 0x7f0603a1    # @color/media_dialog_solid_button_text '@color/material_dynamic_neutral95'
+    const v2, 0x7f0603ad    # @color/media_dialog_solid_button_text '@color/material_dynamic_neutral95'
 
     .line 168
     invoke-static {v2, p1}, Lcom/android/settingslib/Utils;->getColorStateListDefaultColor(ILandroid/content/Context;)I
@@ -380,7 +380,7 @@
     move-result-object v2
 
     .line 180
-    const v3, 0x7f070688    # @dimen/media_output_dialog_background_radius '16.0dp'
+    const v3, 0x7f0706ca    # @dimen/media_output_dialog_background_radius '16.0dp'
 
     .line 181
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -398,7 +398,7 @@
     move-result-object v2
 
     .line 193
-    const v3, 0x7f070686    # @dimen/media_output_dialog_active_background_radius '30.0dp'
+    const v3, 0x7f0706c8    # @dimen/media_output_dialog_active_background_radius '30.0dp'
 
     .line 194
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -410,7 +410,7 @@
     iput v2, v0, Lcom/android/systemui/media/dialog/MediaOutputController;->mActiveRadius:F
 
     .line 201
-    const v2, 0x7f06039b    # @color/media_dialog_background '@color/material_dynamic_neutral90'
+    const v2, 0x7f0603a7    # @color/media_dialog_background '@color/material_dynamic_neutral90'
 
     .line 203
     invoke-static {v2, p1}, Lcom/android/settingslib/Utils;->getColorStateListDefaultColor(ILandroid/content/Context;)I
@@ -428,7 +428,7 @@
     move-result-object v2
 
     .line 215
-    const v3, 0x7f070689    # @dimen/media_output_dialog_default_margin_end '16.0dp'
+    const v3, 0x7f0706cb    # @dimen/media_output_dialog_default_margin_end '16.0dp'
 
     .line 216
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -449,7 +449,7 @@
     move-result-object v1
 
     .line 229
-    const v2, 0x7f070693    # @dimen/media_output_dialog_selectable_margin_end '80.0dp'
+    const v2, 0x7f0706d5    # @dimen/media_output_dialog_selectable_margin_end '80.0dp'
 
     .line 230
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1243,7 +1243,7 @@
     iget-object v3, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mContext:Landroid/content/Context;
 
     .line 118
-    const v6, 0x7f1405fa    # @string/media_output_group_title_suggested_device 'Suggested Devices'
+    const v6, 0x7f130654    # @string/media_output_group_title_suggested_device 'Suggested Devices'
 
     .line 120
     invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1283,7 +1283,7 @@
     iget-object v4, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mContext:Landroid/content/Context;
 
     .line 145
-    const v6, 0x7f1405f9    # @string/media_output_group_title_speakers_and_displays 'Speakers & Displays'
+    const v6, 0x7f130653    # @string/media_output_group_title_speakers_and_displays 'Speakers & Displays'
 
     .line 147
     invoke-virtual {v4, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1402,7 +1402,7 @@
     iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mContext:Landroid/content/Context;
 
     .line 37
-    const v0, 0x7f1405f3    # @string/media_output_dialog_unknown_launch_app_name 'Unknown app'
+    const v0, 0x7f13064d    # @string/media_output_dialog_unknown_launch_app_name 'Unknown app'
 
     .line 39
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1526,27 +1526,18 @@
     iget-object v2, p0, Lcom/android/settingslib/media/InfoMediaManager;->mPackageName:Ljava/lang/String;
 
     .line 74
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v4, "InfoMediaManager"
 
     .line 76
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v3, v2, v4}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
-    move-result-object v2
-
-    .line 82
-    const-string v3, "InfoMediaManager"
-
-    .line 83
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 85
+    .line 78
     goto :goto_0
 
-    .line 88
+    .line 81
     :cond_0
     return-object v1
-    .line 89
+    .line 82
 .end method
 
 .method public final getHeaderIcon()Landroidx/core/graphics/drawable/IconCompat;
@@ -1599,7 +1590,7 @@
     move-result-object v1
 
     .line 29
-    const v2, 0x7f07068d    # @dimen/media_output_dialog_icon_corner_radius '16.0dp'
+    const v2, 0x7f0706cf    # @dimen/media_output_dialog_icon_corner_radius '16.0dp'
 
     .line 30
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2324,42 +2315,6 @@
     .line 54
 .end method
 
-.method public final isBluetoothLeBroadcastEnabled()Z
-    .locals 1
-
-    .line 1
-    iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-    .line 2
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
-
-    .line 4
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
-
-    .line 6
-    if-nez p0, :cond_0
-
-    .line 8
-    const/4 p0, 0x0
-
-    .line 10
-    return p0
-
-    .line 11
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 12
-    invoke-virtual {p0, v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->isEnabled(Landroid/bluetooth/BluetoothDevice;)Z
-
-    .line 13
-    move-result p0
-
-    .line 16
-    return p0
-    .line 17
-.end method
-
 .method public final isCurrentConnectedDeviceRemote()Z
     .locals 0
 
@@ -2400,166 +2355,6 @@
     .line 19
 .end method
 
-.method public final isPlaying()Z
-    .locals 2
-
-    .line 1
-    iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mMediaController:Landroid/media/session/MediaController;
-
-    .line 2
-    const/4 v0, 0x0
-
-    .line 4
-    if-nez p0, :cond_0
-
-    .line 5
-    return v0
-
-    .line 7
-    :cond_0
-    invoke-virtual {p0}, Landroid/media/session/MediaController;->getPlaybackState()Landroid/media/session/PlaybackState;
-
-    .line 8
-    move-result-object p0
-
-    .line 11
-    if-nez p0, :cond_1
-
-    .line 12
-    return v0
-
-    .line 14
-    :cond_1
-    invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getState()I
-
-    .line 15
-    move-result p0
-
-    .line 18
-    const/4 v1, 0x3
-
-    .line 19
-    if-ne p0, v1, :cond_2
-
-    .line 20
-    const/4 v0, 0x1
-
-    .line 22
-    :cond_2
-    return v0
-    .line 23
-.end method
-
-.method public final launchLeBroadcastNotifyDialog(Lcom/android/systemui/media/dialog/MediaOutputController$BroadcastNotifyDialog;Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda9;)V
-    .locals 2
-
-    .line 1
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
-    .line 2
-    iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mContext:Landroid/content/Context;
-
-    .line 4
-    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    .line 6
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    .line 9
-    move-result p0
-
-    .line 12
-    const p1, 0x7f1405dd    # @string/media_output_broadcast 'Broadcast'
-
-    .line 13
-    const/4 v1, 0x0
-
-    .line 16
-    if-eqz p0, :cond_1
-
-    .line 17
-    const/4 p2, 0x1
-
-    .line 19
-    if-eq p0, p2, :cond_0
-
-    .line 20
-    goto :goto_0
-
-    .line 22
-    :cond_0
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
-
-    .line 23
-    const p0, 0x7f1405e7    # @string/media_output_broadcasting_message 'To listen to your broadcast, people nearby with compatible Bluetooth devices can scan your QR code o ...'
-
-    .line 26
-    invoke-virtual {v0, p0}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
-
-    .line 29
-    const p0, 0x104000a    # @android:string/ok
-
-    .line 32
-    invoke-virtual {v0, p0, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 35
-    goto :goto_0
-
-    .line 38
-    :cond_1
-    const p0, 0x7f1405f7    # @string/media_output_first_broadcast_title 'How broadcasting works'
-
-    .line 39
-    invoke-virtual {v0, p0}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
-
-    .line 42
-    const p0, 0x7f1405f8    # @string/media_output_first_notify_broadcast_message 'People near you with compatible Bluetooth devices can listen to the media you're broadcasting'
-
-    .line 45
-    invoke-virtual {v0, p0}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
-
-    .line 48
-    const/high16 p0, 0x1040000    # @android:string/cancel
-
-    .line 51
-    invoke-virtual {v0, p0, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 53
-    invoke-virtual {v0, p1, p2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 56
-    :goto_0
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    .line 59
-    move-result-object p0
-
-    .line 62
-    invoke-virtual {p0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
-
-    .line 63
-    move-result-object p1
-
-    .line 66
-    const/16 p2, 0x7d9
-
-    .line 67
-    invoke-virtual {p1, p2}, Landroid/view/Window;->setType(I)V
-
-    .line 69
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setShowForAllUsers(Landroid/app/Dialog;)V
-
-    .line 72
-    invoke-static {p0, v1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->registerDismissListener(Landroid/app/Dialog;Ljava/lang/Runnable;)V
-
-    .line 75
-    invoke-virtual {p0}, Landroid/app/AlertDialog;->show()V
-
-    .line 78
-    return-void
-    .line 81
-.end method
-
 .method public final onDeviceAttributesChanged()V
     .locals 3
 
@@ -2573,13 +2368,13 @@
     iget-object v0, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMainThreadHandler:Landroid/os/Handler;
 
     .line 6
-    new-instance v1, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda2;
+    new-instance v1, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda6;
 
     .line 8
     const/4 v2, 0x2
 
     .line 10
-    invoke-direct {v1, p0, v2}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;I)V
+    invoke-direct {v1, p0, v2}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;I)V
 
     .line 11
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -2681,13 +2476,13 @@
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMainThreadHandler:Landroid/os/Handler;
 
     .line 49
-    new-instance v0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda2;
+    new-instance v0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda6;
 
     .line 51
-    const/4 v1, 0x3
+    const/4 v1, 0x0
 
     .line 53
-    invoke-direct {v0, p0, v1}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;I)V
+    invoke-direct {v0, p0, v1}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;I)V
 
     .line 54
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -2822,13 +2617,13 @@
     iget-object v1, v0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMainThreadHandler:Landroid/os/Handler;
 
     .line 6
-    new-instance v2, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda2;
+    new-instance v2, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda6;
 
     .line 8
     const/4 v3, 0x2
 
     .line 10
-    invoke-direct {v2, v0, v3}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;I)V
+    invoke-direct {v2, v0, v3}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;I)V
 
     .line 11
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -3021,13 +2816,13 @@
     iget-object v1, v0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMainThreadHandler:Landroid/os/Handler;
 
     .line 6
-    new-instance v2, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda2;
+    new-instance v2, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda6;
 
     .line 8
     const/4 v3, 0x2
 
     .line 10
-    invoke-direct {v2, v0, v3}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;I)V
+    invoke-direct {v2, v0, v3}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;I)V
 
     .line 11
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -3215,80 +3010,6 @@
     .line 25
     return-void
     .line 28
-.end method
-
-.method public final stopBluetoothLeBroadcast()Z
-    .locals 3
-
-    .line 1
-    iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputController;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-    .line 2
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
-
-    .line 4
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
-
-    .line 6
-    if-nez p0, :cond_0
-
-    .line 8
-    const-string p0, "MediaOutputController"
-
-    .line 10
-    const-string v0, "The broadcast profile is null"
-
-    .line 12
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 14
-    const/4 p0, 0x0
-
-    .line 17
-    return p0
-
-    .line 18
-    :cond_0
-    iget v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mBroadcastId:I
-
-    .line 19
-    iget-object v1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
-
-    .line 21
-    const-string v2, "LocalBluetoothLeBroadcast"
-
-    .line 23
-    if-nez v1, :cond_1
-
-    .line 25
-    const-string p0, "The BluetoothLeBroadcast is null when stopping the broadcast."
-
-    .line 27
-    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 29
-    goto :goto_0
-
-    .line 32
-    :cond_1
-    const-string v1, "stopBroadcast()"
-
-    .line 33
-    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 35
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
-
-    .line 38
-    invoke-virtual {p0, v0}, Landroid/bluetooth/BluetoothLeBroadcast;->stopBroadcast(I)V
-
-    .line 40
-    :goto_0
-    const/4 p0, 0x1
-
-    .line 43
-    return p0
-    .line 44
 .end method
 
 .method public final tryToLaunchInAppRoutingIntent(Landroid/view/View;Ljava/lang/String;)V

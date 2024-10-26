@@ -34,7 +34,7 @@
                   android:layout_height="wrap_content"
                   android:text="@string/letterbox_education_dialog_title"
                   android:lineSpacingExtra="4.0sp"
-                  android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent"
+                  android:fontFamily="@android:string/config_chooserActivity"
                   android:textAlignment="center" />
         <LinearLayout android:gravity="top"
                       android:orientation="horizontal"
@@ -62,7 +62,7 @@
                 android:layout_marginTop="40.0dp"
                 android:text="@string/letterbox_education_got_it"
                 android:contentDescription="@string/letterbox_education_got_it"
-                android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent"
+                android:fontFamily="@android:string/config_chooseTypeAndAccountActivity"
                 android:textAlignment="center"
                 android:fontWeight="500"
                 android:lineHeight="20.0dp" />

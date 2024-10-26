@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/wm/shell/transition/MixedTransitionHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -23,7 +23,7 @@
     move-object/from16 v4, p8
 
     .line 10
-    sget-object v5, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v5, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 12
     const/4 v10, 0x1
@@ -50,7 +50,7 @@
     const/16 v16, 0x0
 
     .line 29
-    invoke-static/range {v11 .. v16}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v11 .. v16}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 31
     :cond_0
@@ -261,7 +261,7 @@
 
     .line 153
     :cond_7
-    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 154
     aget-boolean v4, v4, v10
@@ -285,7 +285,7 @@
     const/16 v21, 0x0
 
     .line 171
-    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 173
     :cond_8
@@ -321,7 +321,7 @@
     .line 195
     :cond_9
     :goto_2
-    sget-object v8, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v8, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 197
     aget-boolean v8, v8, v10
@@ -345,7 +345,7 @@
     const/16 v21, 0x0
 
     .line 214
-    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 216
     :cond_a
@@ -453,13 +453,13 @@
     invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 282
-    new-instance v12, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda8;
+    new-instance v12, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;
 
     .line 285
-    const/4 v6, 0x0
+    const/4 v6, 0x1
 
     .line 287
-    invoke-direct {v12, v6, v8}, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v12, v6, v8}, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;)V
 
     .line 288
     invoke-virtual {v9, v12}, Lcom/android/wm/shell/splitscreen/StageTaskListener;->contains(Ljava/util/function/Predicate;)Z
@@ -484,13 +484,13 @@
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 301
-    new-instance v9, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda8;
+    new-instance v9, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;
 
     .line 304
-    const/4 v12, 0x0
+    const/4 v12, 0x1
 
     .line 306
-    invoke-direct {v9, v12, v8}, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v9, v12, v8}, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;)V
 
     .line 307
     invoke-virtual {v6, v9}, Lcom/android/wm/shell/splitscreen/StageTaskListener;->contains(Ljava/util/function/Predicate;)Z
@@ -646,6 +646,7 @@
     .line 395
     :goto_9
     return v10
+    .line 397
 .end method
 
 .method public static animateKeyguard(Lcom/android/wm/shell/transition/DefaultMixedHandler$MixedTransition;Landroid/window/TransitionInfo;Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl$Transaction;Lcom/android/wm/shell/transition/Transitions$TransitionFinishCallback;Lcom/android/wm/shell/keyguard/KeyguardTransitionHandler;Lcom/android/wm/shell/pip/PipTransitionController;)Z

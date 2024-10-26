@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/settingslib/bluetooth/BluetoothEventManager$Handler;
@@ -883,237 +883,183 @@
     move-exception p0
 
     .line 460
-    goto/16 :goto_13
+    goto :goto_13
 
     .line 461
     :cond_1a
     if-eq v4, v2, :cond_1c
 
-    .line 463
+    .line 462
     if-eq v4, v3, :cond_1c
 
-    .line 465
+    .line 464
     const/16 v5, 0x16
 
-    .line 467
+    .line 466
     if-eq v4, v5, :cond_1c
 
-    .line 469
+    .line 468
     if-ne v4, v6, :cond_1b
 
-    .line 471
+    .line 470
     goto :goto_f
 
-    .line 473
+    .line 472
     :cond_1b
     monitor-exit p1
 
-    .line 474
+    .line 473
     goto :goto_11
 
-    .line 475
+    .line 474
     :cond_1c
     :goto_f
     :try_start_2
     iget-object v4, p1, Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;->mCsipDeviceManager:Lcom/android/settingslib/bluetooth/CsipDeviceManager;
 
-    .line 476
+    .line 475
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 478
+    .line 477
     new-instance v5, Ljava/lang/StringBuilder;
 
-    .line 481
+    .line 480
     const-string v6, "onProfileConnectionStateChangedIfProcessed: "
 
-    .line 483
+    .line 482
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 485
+    .line 484
     invoke-virtual {v5, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 488
+    .line 487
     const-string v6, ", state: "
 
-    .line 491
+    .line 490
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 493
+    .line 492
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 496
+    .line 495
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 499
+    .line 498
     move-result-object v5
 
-    .line 502
+    .line 501
     invoke-static {v5}, Lcom/android/settingslib/bluetooth/CsipDeviceManager;->log(Ljava/lang/String;)V
 
-    .line 503
+    .line 502
     if-eq v0, v3, :cond_1d
 
-    .line 506
+    .line 505
     if-eqz v0, :cond_1d
 
-    .line 508
+    .line 507
     goto :goto_10
 
-    .line 510
+    .line 509
     :cond_1d
     iget v1, p2, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mGroupId:I
 
-    .line 511
+    .line 510
     invoke-virtual {v4, v1}, Lcom/android/settingslib/bluetooth/CsipDeviceManager;->updateRelationshipOfGroupDevices(I)Z
 
-    .line 513
+    .line 512
     move-result v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 516
+    .line 515
     :goto_10
     monitor-exit p1
 
-    .line 517
+    .line 516
     :goto_11
     xor-int/2addr v2, v1
 
-    .line 518
+    .line 517
     :cond_1e
     if-eqz v2, :cond_20
 
-    .line 519
+    .line 518
     invoke-virtual {p2}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->refresh()V
 
-    .line 521
+    .line 520
     iget-object p1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;->this$0:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
 
-    .line 524
+    .line 523
     iget-object p1, p1, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mEventManager:Lcom/android/settingslib/bluetooth/BluetoothEventManager;
 
-    .line 526
+    .line 525
     iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;->mProfile:Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;
 
-    .line 528
+    .line 527
     invoke-interface {p0}, Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;->getProfileId()I
 
-    .line 530
+    .line 529
     move-result p0
+
+    .line 532
+    iget-object p1, p1, Lcom/android/settingslib/bluetooth/BluetoothEventManager;->mCallbacks:Ljava/util/Collection;
 
     .line 533
-    iget-object v1, p1, Lcom/android/settingslib/bluetooth/BluetoothEventManager;->mCallbacks:Ljava/util/Collection;
+    check-cast p1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 534
-    check-cast v1, Ljava/util/concurrent/CopyOnWriteArrayList;
+    .line 535
+    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 536
-    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    .line 537
+    move-result-object p1
 
-    .line 538
-    move-result-object v1
+    .line 540
+    :goto_12
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 541
-    :goto_12
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    move-result v1
 
-    .line 542
-    move-result v2
+    .line 544
+    if-eqz v1, :cond_1f
 
     .line 545
-    if-eqz v2, :cond_1f
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 546
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 547
+    move-result-object v1
 
-    .line 548
-    move-result-object v2
+    .line 550
+    check-cast v1, Lcom/android/settingslib/bluetooth/BluetoothCallback;
 
     .line 551
-    check-cast v2, Lcom/android/settingslib/bluetooth/BluetoothCallback;
+    invoke-interface {v1, p2, v0, p0}, Lcom/android/settingslib/bluetooth/BluetoothCallback;->onProfileConnectionStateChanged(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;II)V
 
-    .line 552
-    invoke-interface {v2, p2, v0, p0}, Lcom/android/settingslib/bluetooth/BluetoothCallback;->onProfileConnectionStateChanged(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;II)V
-
-    .line 554
+    .line 553
     goto :goto_12
 
-    .line 557
+    .line 556
     :cond_1f
-    const/16 p2, 0x1d
+    const/16 p1, 0x1d
 
-    .line 558
-    if-ne p0, p2, :cond_20
+    .line 557
+    if-ne p0, p1, :cond_20
 
-    .line 560
+    .line 559
     if-nez v0, :cond_20
 
-    .line 562
-    invoke-static {}, Lcom/android/settingslib/bluetooth/BluetoothUtils;->isAudioSharingEnabled()Z
+    .line 561
+    invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
-    .line 564
-    move-result p0
-
-    .line 567
-    if-eqz p0, :cond_20
-
-    .line 568
-    iget-object p0, p1, Lcom/android/settingslib/bluetooth/BluetoothEventManager;->mBtManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-    .line 570
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
-
-    .line 572
-    if-eqz p0, :cond_20
-
-    .line 574
-    iget-object p1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
-
-    .line 576
-    if-eqz p1, :cond_20
-
-    .line 578
-    iget-boolean p1, p1, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mIsBroadcastProfileReady:Z
-
-    .line 580
-    if-eqz p1, :cond_20
-
-    .line 582
-    iget-object p1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcastAssistant:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcastAssistant;
-
-    .line 584
-    if-eqz p1, :cond_20
-
-    .line 586
-    iget-boolean p1, p1, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcastAssistant;->mIsProfileReady:Z
-
-    .line 588
-    if-eqz p1, :cond_20
-
-    .line 590
-    const-string p1, "BluetoothEventManager"
-
-    .line 592
-    const-string/jumbo p2, "updateFallbackActiveDeviceIfNeeded, ASSISTANT profile disconnected"
-
-    .line 594
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 597
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
-
-    .line 600
-    invoke-virtual {p0}, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->updateFallbackActiveDeviceIfNeeded()V
-
-    .line 602
+    .line 563
     :cond_20
     return-void
 
-    .line 605
+    .line 566
     :goto_13
     monitor-exit p1
 
-    .line 606
+    .line 567
     throw p0
-    .line 607
+    .line 568
 .end method

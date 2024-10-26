@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/domain/interactor/AudioOutputInteractor$currentAudioDevice$lambda$2$$inlined$map$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -245,7 +245,7 @@
     iget-object v4, v4, Lcom/android/systemui/volume/domain/interactor/DeviceIconInteractor;->context:Landroid/content/Context;
 
     .line 138
-    const v5, 0x7f0807ae    # @drawable/ic_earbuds_advanced 'res/drawable/ic_earbuds_advanced.xml'
+    const v5, 0x7f0807c9    # @drawable/ic_earbuds_advanced 'res/drawable/ic_earbuds_advanced.xml'
 
     .line 140
     invoke-virtual {v4, v5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;

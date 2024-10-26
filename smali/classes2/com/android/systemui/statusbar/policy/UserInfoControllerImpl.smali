@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/CallbackController;
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/Executor;Lcom/android/systemui/settings/UserTracker;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/settings/UserTracker;Ljava/util/concurrent/Executor;)V
     .locals 8
 
     .line 1
@@ -61,13 +61,13 @@
     iput-object p1, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mContext:Landroid/content/Context;
 
     .line 24
-    iput-object p3, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
+    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
     .line 26
-    check-cast p3, Lcom/android/systemui/settings/UserTrackerImpl;
+    check-cast p2, Lcom/android/systemui/settings/UserTrackerImpl;
 
     .line 28
-    invoke-virtual {p3, v0, p2}, Lcom/android/systemui/settings/UserTrackerImpl;->addCallback(Lcom/android/systemui/settings/UserTracker$Callback;Ljava/util/concurrent/Executor;)V
+    invoke-virtual {p2, v0, p3}, Lcom/android/systemui/settings/UserTrackerImpl;->addCallback(Lcom/android/systemui/settings/UserTracker$Callback;Ljava/util/concurrent/Executor;)V
 
     .line 30
     new-instance v4, Landroid/content/IntentFilter;
@@ -135,183 +135,19 @@
     .line 14
 .end method
 
-.method public final queryForUserInformation()V
-    .locals 13
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
-
-    .line 2
-    check-cast v0, Lcom/android/systemui/settings/UserTrackerImpl;
-
-    .line 4
-    invoke-virtual {v0}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserInfo()Landroid/content/pm/UserInfo;
-
-    .line 6
-    move-result-object v0
-
-    .line 9
-    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mContext:Landroid/content/Context;
-
-    .line 10
-    const-string v2, "android"
-
-    .line 12
-    new-instance v3, Landroid/os/UserHandle;
-
-    .line 14
-    iget v4, v0, Landroid/content/pm/UserInfo;->id:I
-
-    .line 16
-    invoke-direct {v3, v4}, Landroid/os/UserHandle;-><init>(I)V
-
-    .line 18
-    const/4 v4, 0x0
-
-    .line 21
-    invoke-virtual {v1, v2, v4, v3}, Landroid/content/Context;->createPackageContextAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)Landroid/content/Context;
-
-    .line 22
-    move-result-object v10
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 25
-    iget v8, v0, Landroid/content/pm/UserInfo;->id:I
-
-    .line 26
-    invoke-virtual {v0}, Landroid/content/pm/UserInfo;->isGuest()Z
-
-    .line 28
-    move-result v11
-
-    .line 31
-    iget-object v7, v0, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
-
-    .line 32
-    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mContext:Landroid/content/Context;
-
-    .line 34
-    invoke-virtual {v0}, Landroid/content/Context;->getThemeResId()I
-
-    .line 36
-    move-result v0
-
-    .line 39
-    const v1, 0x7f1504c9    # @style/Theme.SystemUI.LightWallpaper
-
-    .line 40
-    if-eq v0, v1, :cond_0
-
-    .line 43
-    const/4 v0, 0x1
-
-    .line 45
-    move v12, v0
-
-    .line 46
-    goto :goto_0
-
-    .line 47
-    :cond_0
-    move v12, v4
-
-    .line 48
-    :goto_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mContext:Landroid/content/Context;
-
-    .line 49
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 51
-    move-result-object v0
-
-    .line 54
-    const v1, 0x7f070782    # @dimen/multi_user_avatar_expanded_size '20.0dp'
-
-    .line 55
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 58
-    move-result v1
-
-    .line 61
-    const v2, 0x7f070783    # @dimen/multi_user_avatar_keyguard_size '22.0dp'
-
-    .line 62
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 65
-    move-result v0
-
-    .line 68
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    .line 69
-    move-result v9
-
-    .line 72
-    new-instance v0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl$3;
-
-    .line 73
-    move-object v5, v0
-
-    .line 75
-    move-object v6, p0
-
-    .line 76
-    invoke-direct/range {v5 .. v12}, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl$3;-><init>(Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;Ljava/lang/String;IILandroid/content/Context;ZZ)V
-
-    .line 77
-    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mUserInfoTask:Landroid/os/AsyncTask;
-
-    .line 80
-    new-array p0, v4, [Ljava/lang/Void;
-
-    .line 82
-    invoke-virtual {v0, p0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
-
-    .line 84
-    return-void
-
-    .line 87
-    :catch_0
-    move-exception p0
-
-    .line 88
-    const-string v0, "UserInfoController"
-
-    .line 89
-    const-string v1, "Couldn\'t create user context"
-
-    .line 91
-    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 93
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    .line 96
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    .line 98
-    throw v0
-    .line 101
-.end method
-
 .method public final reloadUserInfo()V
-    .locals 2
+    .locals 14
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mUserInfoTask:Landroid/os/AsyncTask;
 
     .line 2
-    if-eqz v0, :cond_0
-
-    .line 4
     const/4 v1, 0x0
 
-    .line 6
+    .line 4
+    if-eqz v0, :cond_0
+
+    .line 5
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
     .line 7
@@ -323,30 +159,160 @@
     .line 11
     :cond_0
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->queryForUserInformation()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
     .line 13
+    check-cast v0, Lcom/android/systemui/settings/UserTrackerImpl;
+
+    .line 15
+    invoke-virtual {v0}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserInfo()Landroid/content/pm/UserInfo;
+
+    .line 17
+    move-result-object v0
+
+    .line 20
+    iget-object v2, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mContext:Landroid/content/Context;
+
+    .line 21
+    const-string v3, "android"
+
+    .line 23
+    new-instance v4, Landroid/os/UserHandle;
+
+    .line 25
+    iget v5, v0, Landroid/content/pm/UserInfo;->id:I
+
+    .line 27
+    invoke-direct {v4, v5}, Landroid/os/UserHandle;-><init>(I)V
+
+    .line 29
+    invoke-virtual {v2, v3, v1, v4}, Landroid/content/Context;->createPackageContextAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)Landroid/content/Context;
+
+    .line 32
+    move-result-object v11
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 35
+    iget v9, v0, Landroid/content/pm/UserInfo;->id:I
+
+    .line 36
+    invoke-virtual {v0}, Landroid/content/pm/UserInfo;->isGuest()Z
+
+    .line 38
+    move-result v12
+
+    .line 41
+    iget-object v8, v0, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
+
+    .line 42
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mContext:Landroid/content/Context;
+
+    .line 44
+    invoke-virtual {v0}, Landroid/content/Context;->getThemeResId()I
+
+    .line 46
+    move-result v0
+
+    .line 49
+    const v2, 0x7f1404d1    # @style/Theme.SystemUI.LightWallpaper
+
+    .line 50
+    if-eq v0, v2, :cond_1
+
+    .line 53
+    const/4 v0, 0x1
+
+    .line 55
+    move v13, v0
+
+    .line 56
     goto :goto_0
 
-    .line 16
+    .line 57
+    :cond_1
+    move v13, v1
+
+    .line 58
+    :goto_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mContext:Landroid/content/Context;
+
+    .line 59
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 61
+    move-result-object v0
+
+    .line 64
+    const v2, 0x7f0707c4    # @dimen/multi_user_avatar_expanded_size '20.0dp'
+
+    .line 65
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 68
+    move-result v2
+
+    .line 71
+    const v3, 0x7f0707c5    # @dimen/multi_user_avatar_keyguard_size '22.0dp'
+
+    .line 72
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 75
+    move-result v0
+
+    .line 78
+    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+
+    .line 79
+    move-result v10
+
+    .line 82
+    new-instance v0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl$3;
+
+    .line 83
+    move-object v6, v0
+
+    .line 85
+    move-object v7, p0
+
+    .line 86
+    invoke-direct/range {v6 .. v13}, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl$3;-><init>(Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;Ljava/lang/String;IILandroid/content/Context;ZZ)V
+
+    .line 87
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;->mUserInfoTask:Landroid/os/AsyncTask;
+
+    .line 90
+    new-array p0, v1, [Ljava/lang/Void;
+
+    .line 92
+    invoke-virtual {v0, p0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    .line 94
+    return-void
+
+    .line 97
     :catch_0
     move-exception p0
 
-    .line 17
+    .line 98
     const-string v0, "UserInfoController"
 
-    .line 18
-    const-string v1, "Couldn\'t query user info"
+    .line 99
+    const-string v1, "Couldn\'t create user context"
 
-    .line 20
+    .line 101
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 22
-    :goto_0
-    return-void
-    .line 25
+    .line 103
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    .line 106
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 108
+    throw v0
+    .line 111
 .end method
 
 .method public final removeCallback(Ljava/lang/Object;)V

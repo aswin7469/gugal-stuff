@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/globalactions/ShutdownUi;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -34,7 +34,7 @@
     iget-object p0, p0, Lcom/android/systemui/globalactions/ShutdownUi;->mContext:Landroid/content/Context;
 
     .line 12
-    const p1, 0x1040898    # @android:string/restr_pin_enter_pin
+    const p1, 0x104088f    # @android:string/resolver_switch_on_work
 
     .line 14
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -65,7 +65,7 @@
     iget-object p0, p0, Lcom/android/systemui/globalactions/ShutdownUi;->mContext:Landroid/content/Context;
 
     .line 32
-    const p1, 0x1040894    # @android:string/restr_pin_create_pin
+    const p1, 0x104088b    # @android:string/resolver_no_personal_apps_available
 
     .line 34
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -104,14 +104,14 @@
     if-eqz p0, :cond_0
 
     .line 10
-    const p0, 0x1040897    # @android:string/restr_pin_enter_old_pin
+    const p0, 0x104088e    # @android:string/resolver_personal_tab_accessibility
 
     .line 12
     return p0
 
     .line 15
     :cond_0
-    const p0, 0x1040893    # @android:string/restr_pin_confirm_pin
+    const p0, 0x104088a    # @android:string/resolver_cross_profile_blocked
 
     .line 16
     if-eqz p2, :cond_1
@@ -140,7 +140,7 @@
 
     .line 32
     :cond_2
-    const p0, 0x104093f    # @android:string/status_bar_connected_display
+    const p0, 0x1040936    # @android:string/status_bar_airplane
 
     .line 33
     return p0
@@ -202,7 +202,7 @@
 
     .line 29
     :cond_2
-    const v1, 0x7f0e0251    # @layout/shutdown_dialog_finder_active 'res/layout/shutdown_dialog_finder_active.xml'
+    const v1, 0x7f0d0262    # @layout/shutdown_dialog_finder_active 'res/layout/shutdown_dialog_finder_active.xml'
 
     .line 30
     :goto_0

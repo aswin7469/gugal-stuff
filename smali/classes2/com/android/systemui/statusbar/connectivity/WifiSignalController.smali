@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/connectivity/WifiSignalController;
 .super Lcom/android/systemui/statusbar/connectivity/SignalController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -693,7 +693,7 @@
     const/4 v4, 0x0
 
     .line 13
-    const v5, 0x7f140319    # @string/data_connection_no_internet 'No internet'
+    const v5, 0x7f130337    # @string/data_connection_no_internet 'No internet'
 
     .line 14
     const/4 v6, 0x0
@@ -982,7 +982,7 @@
     move-result-object v3
 
     .line 184
-    const v9, 0x7f050040    # @bool/config_showWifiIndicatorWhenEnabled 'false'
+    const v9, 0x7f05004b    # @bool/config_showWifiIndicatorWhenEnabled 'false'
 
     .line 185
     invoke-virtual {v3, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -1205,7 +1205,7 @@
     if-eqz v0, :cond_f
 
     .line 313
-    const v0, 0x7f080906    # @drawable/ic_qs_wifi_disconnected 'res/drawable/ic_qs_wifi_disconnected.xml'
+    const v0, 0x7f08092a    # @drawable/ic_qs_wifi_disconnected 'res/drawable/ic_qs_wifi_disconnected.xml'
 
     .line 315
     goto :goto_b
@@ -1414,6 +1414,7 @@
 
     .line 30
     return-void
+    .line 33
 .end method
 
 .method public final updateConnectivity(Ljava/util/BitSet;Ljava/util/BitSet;)V

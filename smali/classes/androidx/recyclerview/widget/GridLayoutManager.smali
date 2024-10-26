@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/GridLayoutManager;
 .super Landroidx/recyclerview/widget/LinearLayoutManager;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -963,6 +963,7 @@
     .line 26
     :goto_0
     return p0
+    .line 27
 .end method
 
 .method public getRowCountForAccessibility(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
@@ -1228,6 +1229,7 @@
 
     .line 34
     return p2
+    .line 35
 .end method
 
 .method public final getSpanGroupIndex(ILandroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
@@ -4026,7 +4028,6 @@
     .line 24
     :cond_0
     return-void
-    .line 26
 .end method
 
 .method public final performAccessibilityAction(ILandroid/os/Bundle;)Z
@@ -5538,7 +5539,7 @@
     const-string v0, "Span count should be at least 1. Provided "
 
     .line 25
-    invoke-static {p1, v0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 27
     move-result-object p1

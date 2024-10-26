@@ -1,16 +1,10 @@
 .class public final Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultIndicationAreaSection;
 .super Lcom/android/systemui/keyguard/shared/model/KeyguardSection;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final context:Landroid/content/Context;
-
-.field public indicationAreaHandle:Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt$repeatWhenAttached$1;
-
-.field public final indicationController:Lcom/android/systemui/statusbar/KeyguardIndicationController;
-
-.field public final keyguardIndicationAreaViewModel:Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardIndicationAreaViewModel;
 
 
 # direct methods
@@ -24,53 +18,25 @@
     iput-object p1, p0, Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultIndicationAreaSection;->context:Landroid/content/Context;
 
     .line 5
-    iput-object p2, p0, Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultIndicationAreaSection;->keyguardIndicationAreaViewModel:Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardIndicationAreaViewModel;
-
-    .line 7
-    iput-object p3, p0, Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultIndicationAreaSection;->indicationController:Lcom/android/systemui/statusbar/KeyguardIndicationController;
-
-    .line 9
     return-void
-    .line 11
+    .line 7
 .end method
 
 
 # virtual methods
 .method public final addViews(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-    .locals 1
+    .locals 0
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    new-instance v0, Lcom/android/systemui/keyguard/ui/view/KeyguardIndicationArea;
-
-    .line 8
-    iget-object p0, p0, Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultIndicationAreaSection;->context:Landroid/content/Context;
-
-    .line 10
-    invoke-direct {v0, p0}, Lcom/android/systemui/keyguard/ui/view/KeyguardIndicationArea;-><init>(Landroid/content/Context;)V
-
-    .line 12
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    .line 15
-    :cond_0
     return-void
-    .line 18
+    .line 2
 .end method
 
 .method public final applyConstraints(Landroidx/constraintlayout/widget/ConstraintSet;)V
     .locals 8
 
     .line 1
-    const v0, 0x7f0b03d6    # @id/keyguard_indication_area
+    const v0, 0x7f0a03f7    # @id/keyguard_indication_area
 
     .line 2
     const/4 v1, -0x1
@@ -94,7 +60,7 @@
     move-result-object p0
 
     .line 18
-    const v1, 0x7f070346    # @dimen/keyguard_indication_margin_bottom '32.0dp'
+    const v1, 0x7f070382    # @dimen/keyguard_indication_margin_bottom '32.0dp'
 
     .line 19
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -109,7 +75,7 @@
     const/4 v6, 0x4
 
     .line 27
-    const v3, 0x7f0b03d6    # @id/keyguard_indication_area
+    const v3, 0x7f0a03f7    # @id/keyguard_indication_area
 
     .line 28
     const/4 v4, 0x4
@@ -141,69 +107,23 @@
 .end method
 
 .method public final bindData(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-    .locals 2
+    .locals 0
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    const v0, 0x7f0b03d6    # @id/keyguard_indication_area
-
-    .line 8
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
-
-    .line 11
-    move-result-object p1
-
-    .line 14
-    check-cast p1, Landroid/view/ViewGroup;
-
-    .line 15
-    iget-object v0, p0, Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultIndicationAreaSection;->keyguardIndicationAreaViewModel:Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardIndicationAreaViewModel;
-
-    .line 17
-    iget-object v1, p0, Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultIndicationAreaSection;->indicationController:Lcom/android/systemui/statusbar/KeyguardIndicationController;
-
-    .line 19
-    invoke-static {p1, v0, v1}, Lcom/android/systemui/keyguard/ui/binder/KeyguardIndicationAreaBinder;->bind(Landroid/view/ViewGroup;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardIndicationAreaViewModel;Lcom/android/systemui/statusbar/KeyguardIndicationController;)Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt$repeatWhenAttached$1;
-
-    .line 21
-    move-result-object p1
-
-    .line 24
-    iput-object p1, p0, Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultIndicationAreaSection;->indicationAreaHandle:Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt$repeatWhenAttached$1;
-
-    .line 25
-    :cond_0
     return-void
+    .line 2
 .end method
 
 .method public final removeViews(Landroidx/constraintlayout/widget/ConstraintLayout;)V
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultIndicationAreaSection;->indicationAreaHandle:Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt$repeatWhenAttached$1;
+    const p0, 0x7f0a03f7    # @id/keyguard_indication_area
 
     .line 2
-    if-eqz p0, :cond_0
-
-    .line 4
-    invoke-virtual {p0}, Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt$repeatWhenAttached$1;->dispose()V
-
-    .line 6
-    :cond_0
-    const p0, 0x7f0b03d6    # @id/keyguard_indication_area
-
-    .line 9
     invoke-static {p1, p0}, Lcom/android/systemui/keyguard/ui/view/layout/sections/ExtensionsKt;->removeView(Landroidx/constraintlayout/widget/ConstraintLayout;I)V
 
-    .line 12
+    .line 5
     return-void
-    .line 15
+    .line 8
 .end method

@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/keyguard/ui/view/layout/sections/transitions/ClockSizeTransition$VisibilityBoundsTransition;
 .super Landroid/transition/Transition;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -358,7 +358,7 @@
     check-cast v0, Landroid/view/View;
 
     .line 73
-    const v1, 0x7f0b0114    # @id/bc_smartspace_view
+    const v1, 0x7f0a0119    # @id/bc_smartspace_view
 
     .line 75
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -370,7 +370,7 @@
     if-nez v1, :cond_1
 
     .line 82
-    const v1, 0x7f0b03e8    # @id/keyguard_slice_view
+    const v1, 0x7f0a0409    # @id/keyguard_slice_view
 
     .line 84
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

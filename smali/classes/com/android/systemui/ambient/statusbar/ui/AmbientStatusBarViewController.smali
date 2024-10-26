@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -28,19 +28,19 @@
 
 .field public final mMainExecutor:Ljava/util/concurrent/Executor;
 
-.field public final mNextAlarmCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda1;
+.field public final mNextAlarmCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;
 
 .field public final mNextAlarmController:Lcom/android/systemui/statusbar/policy/NextAlarmController;
 
 .field public final mResources:Landroid/content/res/Resources;
 
-.field public final mSensorCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda0;
+.field public final mSensorCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda3;
 
 .field public final mSensorPrivacyController:Lcom/android/systemui/statusbar/policy/IndividualSensorPrivacyController;
 
 .field public final mStatusBarItemsProvider:Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider;
 
-.field public final mStatusBarItemsProviderCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda2;
+.field public final mStatusBarItemsProviderCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda5;
 
 .field public final mStatusBarWindowStateController:Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;
 
@@ -91,22 +91,22 @@
     iput-object v2, v0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mDreamOverlayStateCallback:Lcom/android/systemui/dreams/DreamOverlayStateController$Callback;
 
     .line 22
-    new-instance v2, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda0;
+    new-instance v2, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda3;
 
     .line 24
-    invoke-direct {v2, p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;)V
+    invoke-direct {v2, p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;)V
 
     .line 26
-    iput-object v2, v0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mSensorCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda0;
+    iput-object v2, v0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mSensorCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda3;
 
     .line 29
-    new-instance v2, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda1;
+    new-instance v2, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;
 
     .line 31
-    invoke-direct {v2, p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;)V
+    invoke-direct {v2, p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;)V
 
     .line 33
-    iput-object v2, v0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mNextAlarmCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda1;
+    iput-object v2, v0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mNextAlarmCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;
 
     .line 36
     new-instance v2, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$2;
@@ -118,13 +118,13 @@
     iput-object v2, v0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mZenModeCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$2;
 
     .line 43
-    new-instance v2, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda2;
+    new-instance v2, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda5;
 
     .line 45
-    invoke-direct {v2, p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;)V
+    invoke-direct {v2, p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;)V
 
     .line 47
-    iput-object v2, v0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mStatusBarItemsProviderCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda2;
+    iput-object v2, v0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mStatusBarItemsProviderCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda5;
 
     .line 50
     move-object v2, p2
@@ -223,10 +223,10 @@
     iput-object v2, v0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mLogger:Lcom/android/systemui/dreams/DreamLogger;
 
     .line 107
-    new-instance v2, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda3;
+    new-instance v2, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda6;
 
     .line 109
-    invoke-direct {v2, p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;)V
+    invoke-direct {v2, p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;)V
 
     .line 111
     iget-object v0, v1, Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;->listeners:Ljava/util/Set;
@@ -263,151 +263,154 @@
     iget-object v3, v3, Lcom/android/systemui/statusbar/pipeline/wifi/domain/interactor/WifiInteractorImpl;->wifiNetwork:Lkotlinx/coroutines/flow/StateFlow;
 
     .line 10
-    new-instance v4, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;
+    new-instance v4, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda7;
 
     .line 12
-    invoke-direct {v4, p0, v1}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;I)V
-
-    .line 14
-    invoke-static {v2, v3, v4}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)V
-
-    .line 17
-    iget-object v2, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
-
-    .line 20
-    iget-object v3, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mCommunalSceneInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;
-
-    .line 22
-    iget-object v3, v3, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;->isCommunalVisible:Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1;
-
-    .line 24
-    new-instance v4, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;
-
-    .line 26
     const/4 v5, 0x2
 
-    .line 28
-    invoke-direct {v4, p0, v5}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;I)V
+    .line 14
+    invoke-direct {v4, p0, v5}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda7;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;I)V
 
-    .line 29
+    .line 15
     invoke-static {v2, v3, v4}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)V
 
-    .line 32
-    iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mNextAlarmCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda1;
+    .line 18
+    iget-object v2, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    .line 35
+    .line 21
+    iget-object v3, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mCommunalSceneInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;
+
+    .line 23
+    iget-object v3, v3, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;->isCommunalVisible:Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1;
+
+    .line 25
+    new-instance v4, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda7;
+
+    .line 27
+    const/4 v5, 0x3
+
+    .line 29
+    invoke-direct {v4, p0, v5}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda7;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;I)V
+
+    .line 30
+    invoke-static {v2, v3, v4}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)V
+
+    .line 33
+    iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mNextAlarmCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;
+
+    .line 36
     iget-object v3, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mNextAlarmController:Lcom/android/systemui/statusbar/policy/NextAlarmController;
 
-    .line 37
+    .line 38
     check-cast v3, Lcom/android/systemui/statusbar/policy/NextAlarmControllerImpl;
 
-    .line 39
+    .line 40
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/NextAlarmControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 41
+    .line 42
     invoke-virtual {p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->updateAlarmStatusIcon()V
 
-    .line 44
-    iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mSensorCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda0;
+    .line 45
+    iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mSensorCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda3;
 
-    .line 47
+    .line 48
     iget-object v3, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mSensorPrivacyController:Lcom/android/systemui/statusbar/policy/IndividualSensorPrivacyController;
 
-    .line 49
+    .line 50
     check-cast v3, Lcom/android/systemui/statusbar/policy/IndividualSensorPrivacyControllerImpl;
 
-    .line 51
+    .line 52
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/IndividualSensorPrivacyControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 53
+    .line 54
     invoke-virtual {p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->updateMicCameraBlockedStatusIcon()V
 
-    .line 56
+    .line 57
     iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mZenModeCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$2;
 
-    .line 59
+    .line 60
     iget-object v3, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mZenModeController:Lcom/android/systemui/statusbar/policy/ZenModeController;
 
-    .line 61
+    .line 62
     check-cast v3, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;
 
-    .line 63
+    .line 64
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 65
+    .line 66
     iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mZenModeController:Lcom/android/systemui/statusbar/policy/ZenModeController;
 
-    .line 68
+    .line 69
     check-cast v2, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;
 
-    .line 70
+    .line 71
     iget v2, v2, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;->mZenMode:I
 
-    .line 72
+    .line 73
     if-eqz v2, :cond_0
 
-    .line 74
-    goto :goto_0
-
-    .line 76
-    :cond_0
-    move v1, v0
+    .line 75
+    move v2, v1
 
     .line 77
-    :goto_0
-    const v2, 0x7f14076b    # @string/priority_mode_dream_overlay_content_description 'Do not disturb'
+    goto :goto_0
 
     .line 78
-    const/4 v3, 0x6
+    :cond_0
+    move v2, v0
 
-    .line 81
-    invoke-virtual {p0, v3, v2, v1}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->showIcon(IIZ)V
+    .line 79
+    :goto_0
+    const v3, 0x7f1307c7    # @string/priority_mode_dream_overlay_content_description 'Do not disturb'
 
-    .line 82
-    iget-object v1, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mDreamOverlayNotificationCountProvider:Ljava/util/Optional;
+    .line 80
+    const/4 v4, 0x6
 
-    .line 85
-    new-instance v2, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;
+    .line 83
+    invoke-virtual {p0, v4, v3, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->showIcon(IIZ)V
+
+    .line 84
+    iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mDreamOverlayNotificationCountProvider:Ljava/util/Optional;
 
     .line 87
-    const/4 v3, 0x3
+    new-instance v3, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda7;
 
     .line 89
-    invoke-direct {v2, p0, v3}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;I)V
+    invoke-direct {v3, p0, v1}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda7;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;I)V
 
-    .line 90
-    invoke-virtual {v1, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
+    .line 91
+    invoke-virtual {v2, v3}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 93
+    .line 94
     iget-object v1, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mStatusBarItemsProvider:Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider;
 
-    .line 96
-    iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mStatusBarItemsProviderCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda2;
+    .line 97
+    iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mStatusBarItemsProviderCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda5;
 
-    .line 98
+    .line 99
     iget-object v3, v1, Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 100
+    .line 101
     new-instance v4, Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider$$ExternalSyntheticLambda0;
 
-    .line 102
-    invoke-direct {v4, v1, v2, v0}, Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider;Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda2;I)V
+    .line 103
+    invoke-direct {v4, v1, v2, v0}, Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider;Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda5;I)V
 
-    .line 104
+    .line 105
     invoke-interface {v3, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 107
+    .line 108
     iget-object v0, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mDreamOverlayStateCallback:Lcom/android/systemui/dreams/DreamOverlayStateController$Callback;
 
-    .line 110
+    .line 111
     iget-object p0, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mDreamOverlayStateController:Lcom/android/systemui/dreams/DreamOverlayStateController;
 
-    .line 112
+    .line 113
     invoke-virtual {p0, v0}, Lcom/android/systemui/dreams/DreamOverlayStateController;->addCallback(Lcom/android/systemui/dreams/DreamOverlayStateController$Callback;)V
 
-    .line 114
+    .line 115
     return-void
-    .line 117
+    .line 118
 .end method
 
 .method public final onViewDetached()V
@@ -432,7 +435,7 @@
     check-cast v0, Lcom/android/systemui/statusbar/policy/IndividualSensorPrivacyControllerImpl;
 
     .line 13
-    iget-object v1, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mSensorCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda0;
+    iget-object v1, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mSensorCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda3;
 
     .line 15
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/policy/IndividualSensorPrivacyControllerImpl;->removeCallback(Ljava/lang/Object;)V
@@ -444,7 +447,7 @@
     check-cast v0, Lcom/android/systemui/statusbar/policy/NextAlarmControllerImpl;
 
     .line 22
-    iget-object v1, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mNextAlarmCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda1;
+    iget-object v1, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mNextAlarmCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;
 
     .line 24
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/policy/NextAlarmControllerImpl;->removeCallback(Ljava/lang/Object;)V
@@ -453,13 +456,13 @@
     iget-object v0, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mDreamOverlayNotificationCountProvider:Ljava/util/Optional;
 
     .line 29
-    new-instance v1, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;
+    new-instance v1, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda7;
 
     .line 31
     const/4 v2, 0x0
 
     .line 33
-    invoke-direct {v1, p0, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;I)V
+    invoke-direct {v1, p0, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda7;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;I)V
 
     .line 34
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
@@ -474,13 +477,13 @@
     new-instance v2, Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider$$ExternalSyntheticLambda0;
 
     .line 44
-    iget-object v3, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mStatusBarItemsProviderCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda2;
+    iget-object v3, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mStatusBarItemsProviderCallback:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda5;
 
     .line 46
     const/4 v4, 0x1
 
     .line 48
-    invoke-direct {v2, v0, v3, v4}, Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider;Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda2;I)V
+    invoke-direct {v2, v0, v3, v4}, Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/dreams/DreamOverlayStatusBarItemsProvider;Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda5;I)V
 
     .line 49
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -548,10 +551,10 @@
     iget-object v0, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mMainExecutor:Ljava/util/concurrent/Executor;
 
     .line 8
-    new-instance v1, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda8;
+    new-instance v1, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda11;
 
     .line 10
-    invoke-direct {v1, p0, p3, p1, p2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;ZILjava/lang/String;)V
+    invoke-direct {v1, p0, p3, p1, p2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda11;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;ZILjava/lang/String;)V
 
     .line 12
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -674,7 +677,7 @@
     iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mResources:Landroid/content/res/Resources;
 
     .line 66
-    const v3, 0x7f1400c9    # @string/accessibility_quick_settings_alarm 'Alarm set for %s.'
+    const v3, 0x7f1300ca    # @string/accessibility_quick_settings_alarm 'Alarm set for %s.'
 
     .line 68
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -700,13 +703,13 @@
     iget-object v2, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mMainExecutor:Ljava/util/concurrent/Executor;
 
     .line 81
-    new-instance v3, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda8;
+    new-instance v3, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda11;
 
     .line 83
     const/4 v4, 0x2
 
     .line 85
-    invoke-direct {v3, p0, v1, v4, v0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;ZILjava/lang/String;)V
+    invoke-direct {v3, p0, v1, v4, v0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda11;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;ZILjava/lang/String;)V
 
     .line 86
     invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -770,7 +773,7 @@
 
     .line 26
     :goto_0
-    const v5, 0x7f14024e    # @string/camera_blocked_dream_overlay_content_description 'Camera blocked'
+    const v5, 0x7f130255    # @string/camera_blocked_dream_overlay_content_description 'Camera blocked'
 
     .line 27
     const/4 v6, 0x3
@@ -796,7 +799,7 @@
 
     .line 40
     :goto_1
-    const v5, 0x7f14062e    # @string/microphone_blocked_dream_overlay_content_description 'Microphone blocked'
+    const v5, 0x7f130688    # @string/microphone_blocked_dream_overlay_content_description 'Microphone blocked'
 
     .line 41
     const/4 v6, 0x4
@@ -819,7 +822,7 @@
 
     .line 53
     :goto_2
-    const v0, 0x7f14024d    # @string/camera_and_microphone_blocked_dream_overlay_content_description 'Camera and microphone blocked'
+    const v0, 0x7f130254    # @string/camera_and_microphone_blocked_dream_overlay_content_description 'Camera and microphone blocked'
 
     .line 54
     const/4 v1, 0x5
@@ -832,7 +835,7 @@
     .line 61
 .end method
 
-.method public final updateVisibility()V
+.method public final updateVisibility$2()V
     .locals 4
 
     .line 1
@@ -934,7 +937,7 @@
     xor-int/2addr p1, v0
 
     .line 3
-    const v1, 0x7f140a7a    # @string/wifi_unavailable_dream_overlay_content_description 'Wi-Fi not available'
+    const v1, 0x7f130b07    # @string/wifi_unavailable_dream_overlay_content_description 'Wi-Fi not available'
 
     .line 4
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->showIcon(IIZ)V

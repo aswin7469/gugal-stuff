@@ -5,7 +5,9 @@
     <item>ఛార్జ్ అవుతున్నప్పుడు శాతాన్ని చూపు (ఆటోమేటిక్)</item>
     <item>ఈ చిహ్నాన్ని చూపవద్దు</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>గంటలు, నిమిషాలు మరియు సెకన్లను చూపు</item>
     <item>గంటలు, నిమిషాలను చూపు (ఆటోమేటిక్)</item>

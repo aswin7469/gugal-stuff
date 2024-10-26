@@ -11,7 +11,7 @@
             android:paddingBottom="18.0dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@android:string/config_networkOverLimitComponent"
+            android:fontFamily="google-sans-medium"
             android:textAlignment="center" />
   <TextView android:textSize="16.0sp"
             android:textColor="?android:attr/textColorPrimary"

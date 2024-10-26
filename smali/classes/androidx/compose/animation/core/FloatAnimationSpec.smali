@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/compose/animation/core/FloatAnimationSpec;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/animation/core/AnimationSpec;
@@ -17,22 +17,22 @@
     invoke-interface {p0, p1, p2, p3}, Landroidx/compose/animation/core/FloatAnimationSpec;->getDurationNanos(FFF)J
 
     .line 2
-    move-result-wide v1
+    move-result-wide v4
 
     .line 5
     move-object v0, p0
 
     .line 6
-    move v3, p1
+    move v1, p1
 
     .line 7
-    move v4, p2
+    move v2, p2
 
     .line 8
-    move v5, p3
+    move v3, p3
 
     .line 9
-    invoke-interface/range {v0 .. v5}, Landroidx/compose/animation/core/FloatAnimationSpec;->getVelocityFromNanos(JFFF)F
+    invoke-interface/range {v0 .. v5}, Landroidx/compose/animation/core/FloatAnimationSpec;->getVelocityFromNanos(FFFJ)F
 
     .line 10
     move-result p0
@@ -42,10 +42,10 @@
     .line 14
 .end method
 
-.method public abstract getValueFromNanos(JFFF)F
+.method public abstract getValueFromNanos(FFFJ)F
 .end method
 
-.method public abstract getVelocityFromNanos(JFFF)F
+.method public abstract getVelocityFromNanos(FFFJ)F
 .end method
 
 .method public vectorize(Landroidx/compose/animation/core/TwoWayConverter;)Landroidx/compose/animation/core/VectorizedAnimationSpec;

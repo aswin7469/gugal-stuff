@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/complication/ComplicationHostViewController$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/Predicate;
@@ -48,52 +48,40 @@
     check-cast p0, Lcom/android/systemui/complication/ComplicationHostViewController;
 
     .line 9
-    check-cast p1, Lcom/android/systemui/complication/ComplicationViewModel;
+    invoke-static {p1}, Landroidx/appcompat/app/WindowDecorActionBar$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
     .line 11
-    iget-object p0, p0, Lcom/android/systemui/complication/ComplicationHostViewController;->mComplications:Ljava/util/HashMap;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 13
-    iget-object p1, p1, Lcom/android/systemui/complication/ComplicationViewModel;->mId:Lcom/android/systemui/complication/ComplicationId;
-
-    .line 15
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    .line 14
+    const/4 p0, 0x0
 
     .line 17
-    move-result p0
+    throw p0
 
-    .line 20
-    xor-int/lit8 p0, p0, 0x1
-
-    .line 21
-    return p0
-
-    .line 23
+    .line 18
     :pswitch_0
     check-cast p0, Ljava/util/Collection;
 
-    .line 24
+    .line 19
     check-cast p1, Lcom/android/systemui/complication/ComplicationId;
 
-    .line 26
+    .line 21
     invoke-interface {p0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    .line 28
+    .line 23
     move-result p0
 
-    .line 31
+    .line 26
     xor-int/lit8 p0, p0, 0x1
 
-    .line 32
+    .line 27
     return p0
 
-    .line 34
-    nop
-
-    .line 35
+    .line 29
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 36
+    .line 30
 .end method

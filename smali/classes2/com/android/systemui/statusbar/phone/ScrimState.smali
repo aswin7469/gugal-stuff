@@ -1,14 +1,12 @@
 .class public enum Lcom/android/systemui/statusbar/phone/ScrimState;
 .super Ljava/lang/Enum;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
 .field public static final synthetic $VALUES:[Lcom/android/systemui/statusbar/phone/ScrimState;
 
 .field public static final enum AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
-
-.field public static final enum AUTH_SCRIMMED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
 .field public static final enum AUTH_SCRIMMED_SHADE:Lcom/android/systemui/statusbar/phone/ScrimState;
 
@@ -170,176 +168,173 @@
     invoke-direct {v4, v6, v5}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
     .line 47
-    sput-object v4, Lcom/android/systemui/statusbar/phone/ScrimState;->AUTH_SCRIMMED:Lcom/android/systemui/statusbar/phone/ScrimState;
-
-    .line 50
     new-instance v5, Lcom/android/systemui/statusbar/phone/ScrimState$5;
 
-    .line 52
+    .line 50
     const-string v6, "BOUNCER"
 
-    .line 54
+    .line 52
     const/4 v7, 0x5
 
-    .line 56
+    .line 54
     invoke-direct {v5, v7, v6}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
-    .line 57
+    .line 55
     sput-object v5, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 60
+    .line 58
     new-instance v6, Lcom/android/systemui/statusbar/phone/ScrimState$6;
 
-    .line 62
+    .line 60
     const-string v7, "BOUNCER_SCRIMMED"
 
-    .line 64
+    .line 62
     const/4 v8, 0x6
 
-    .line 66
+    .line 64
     invoke-direct {v6, v8, v7}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
-    .line 67
+    .line 65
     sput-object v6, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER_SCRIMMED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 70
+    .line 68
     new-instance v7, Lcom/android/systemui/statusbar/phone/ScrimState$7;
 
-    .line 72
+    .line 70
     const-string v8, "SHADE_LOCKED"
 
-    .line 74
+    .line 72
     const/4 v9, 0x7
 
-    .line 76
+    .line 74
     invoke-direct {v7, v9, v8}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
-    .line 77
+    .line 75
     sput-object v7, Lcom/android/systemui/statusbar/phone/ScrimState;->SHADE_LOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 80
+    .line 78
     new-instance v8, Lcom/android/systemui/statusbar/phone/ScrimState$8;
 
-    .line 82
+    .line 80
     const-string v9, "BRIGHTNESS_MIRROR"
 
-    .line 84
+    .line 82
     const/16 v10, 0x8
 
-    .line 86
+    .line 84
     invoke-direct {v8, v10, v9}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
-    .line 88
+    .line 86
     sput-object v8, Lcom/android/systemui/statusbar/phone/ScrimState;->BRIGHTNESS_MIRROR:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 91
+    .line 89
     new-instance v9, Lcom/android/systemui/statusbar/phone/ScrimState$9;
 
-    .line 93
+    .line 91
     const-string v10, "AOD"
 
-    .line 95
+    .line 93
     const/16 v11, 0x9
 
-    .line 97
+    .line 95
     invoke-direct {v9, v11, v10}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
-    .line 99
+    .line 97
     sput-object v9, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 102
+    .line 100
     new-instance v10, Lcom/android/systemui/statusbar/phone/ScrimState$10;
 
-    .line 104
+    .line 102
     const-string v11, "PULSING"
 
-    .line 106
+    .line 104
     const/16 v12, 0xa
 
-    .line 108
+    .line 106
     invoke-direct {v10, v12, v11}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
-    .line 110
+    .line 108
     sput-object v10, Lcom/android/systemui/statusbar/phone/ScrimState;->PULSING:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 113
+    .line 111
     new-instance v11, Lcom/android/systemui/statusbar/phone/ScrimState$11;
 
-    .line 115
+    .line 113
     const-string v12, "UNLOCKED"
 
-    .line 117
+    .line 115
     const/16 v13, 0xb
 
-    .line 119
+    .line 117
     invoke-direct {v11, v13, v12}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
-    .line 121
+    .line 119
     sput-object v11, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 124
+    .line 122
     new-instance v12, Lcom/android/systemui/statusbar/phone/ScrimState$12;
 
-    .line 126
+    .line 124
     const-string v13, "DREAMING"
 
-    .line 128
+    .line 126
     const/16 v14, 0xc
 
-    .line 130
+    .line 128
     invoke-direct {v12, v14, v13}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
-    .line 132
+    .line 130
     sput-object v12, Lcom/android/systemui/statusbar/phone/ScrimState;->DREAMING:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 135
+    .line 133
     new-instance v13, Lcom/android/systemui/statusbar/phone/ScrimState$13;
 
-    .line 137
+    .line 135
     const-string v14, "GLANCEABLE_HUB"
 
-    .line 139
+    .line 137
     const/16 v15, 0xd
 
-    .line 141
+    .line 139
     invoke-direct {v13, v15, v14}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
-    .line 143
+    .line 141
     sput-object v13, Lcom/android/systemui/statusbar/phone/ScrimState;->GLANCEABLE_HUB:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 146
+    .line 144
     new-instance v14, Lcom/android/systemui/statusbar/phone/ScrimState$14;
 
-    .line 148
+    .line 146
     const-string v15, "GLANCEABLE_HUB_OVER_DREAM"
 
-    .line 150
+    .line 148
     move-object/from16 v16, v13
 
-    .line 152
+    .line 150
     const/16 v13, 0xe
 
-    .line 154
+    .line 152
     invoke-direct {v14, v13, v15}, Lcom/android/systemui/statusbar/phone/ScrimState;-><init>(ILjava/lang/String;)V
 
-    .line 156
+    .line 154
     sput-object v14, Lcom/android/systemui/statusbar/phone/ScrimState;->GLANCEABLE_HUB_OVER_DREAM:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 159
+    .line 157
     move-object/from16 v13, v16
 
-    .line 161
+    .line 159
     filled-new-array/range {v0 .. v14}, [Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 163
+    .line 161
     move-result-object v0
 
-    .line 166
+    .line 164
     sput-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->$VALUES:[Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 167
+    .line 165
     return-void
-    .line 169
+    .line 167
 .end method
 
 .method public constructor <init>(ILjava/lang/String;)V
@@ -544,5 +539,4 @@
 
     .line 48
     return-void
-    .line 51
 .end method

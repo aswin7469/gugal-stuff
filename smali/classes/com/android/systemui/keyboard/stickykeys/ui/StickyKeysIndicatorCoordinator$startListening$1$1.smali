@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyboard/stickykeys/ui/StickyKeysIndicatorCoordinator$startListening$1$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -90,7 +90,7 @@
     iget-object p1, p1, Lcom/android/systemui/keyboard/stickykeys/ui/StickyKeyDialogFactory;->context:Landroid/content/Context;
 
     .line 39
-    const v0, 0x7f1504c7    # @style/Theme.SystemUI.Dialog.StickyKeys
+    const v0, 0x7f1404cf    # @style/Theme.SystemUI.Dialog.StickyKeys
 
     .line 41
     invoke-direct {p2, v0, p1}, Landroidx/activity/ComponentDialog;-><init>(ILandroid/content/Context;)V

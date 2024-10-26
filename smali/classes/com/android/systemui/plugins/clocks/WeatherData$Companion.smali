@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/plugins/clocks/WeatherData$Companion;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -133,144 +133,144 @@
     sget-object v0, Lcom/android/systemui/plugins/clocks/WeatherData$WeatherStateIcon;->Companion:Lcom/android/systemui/plugins/clocks/WeatherData$WeatherStateIcon$Companion;
 
     .line 8
-    const-string v1, "state"
+    const-string/jumbo v1, "state"
 
     .line 10
     const/4 v3, -0x1
 
-    .line 12
+    .line 13
     invoke-virtual {p1, v1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    .line 13
+    .line 14
     move-result v1
 
-    .line 16
+    .line 17
     invoke-virtual {v0, v1}, Lcom/android/systemui/plugins/clocks/WeatherData$WeatherStateIcon$Companion;->fromInt(I)Lcom/android/systemui/plugins/clocks/WeatherData$WeatherStateIcon;
 
-    .line 17
+    .line 18
     move-result-object v3
 
-    .line 20
-    const-string v0, "temperature"
-
     .line 21
+    const-string/jumbo v0, "temperature"
+
+    .line 22
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/plugins/clocks/WeatherData$Companion;->readIntFromBundle(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Integer;
 
-    .line 23
+    .line 25
     move-result-object p0
 
-    .line 26
+    .line 28
     const-string v0, "WeatherData"
 
-    .line 27
+    .line 29
     if-eqz v2, :cond_1
 
-    .line 29
+    .line 31
     if-eqz v3, :cond_1
 
-    .line 31
+    .line 33
     const-string/jumbo v1, "use_celsius"
 
-    .line 33
+    .line 35
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    .line 36
+    .line 38
     move-result v4
 
-    .line 39
+    .line 41
     if-eqz v4, :cond_1
 
-    .line 40
+    .line 42
     if-nez p0, :cond_0
 
-    .line 42
+    .line 44
     goto :goto_0
 
-    .line 44
+    .line 46
     :cond_0
     new-instance v7, Lcom/android/systemui/plugins/clocks/WeatherData;
 
-    .line 45
+    .line 47
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
-    .line 47
+    .line 49
     move-result v4
 
-    .line 50
+    .line 52
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    .line 51
+    .line 53
     move-result v5
 
-    .line 54
+    .line 56
     move-object v1, v7
 
-    .line 55
+    .line 57
     move-object v6, p2
 
-    .line 56
+    .line 58
     invoke-direct/range {v1 .. v6}, Lcom/android/systemui/plugins/clocks/WeatherData;-><init>(Ljava/lang/String;Lcom/android/systemui/plugins/clocks/WeatherData$WeatherStateIcon;ZILkotlin/jvm/functions/Function1;)V
 
-    .line 57
+    .line 59
     new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 60
+    .line 62
     const-string p2, "Weather data parsed "
 
-    .line 62
+    .line 64
     invoke-direct {p0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 64
+    .line 66
     invoke-virtual {p0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 67
+    .line 69
     const-string p2, " from "
 
-    .line 70
+    .line 72
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 72
+    .line 74
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 75
+    .line 77
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 78
+    .line 80
     move-result-object p0
 
-    .line 81
+    .line 83
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
+    .line 84
     return-object v7
 
-    .line 85
+    .line 87
     :cond_1
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 86
+    .line 88
     const-string p2, "Weather data did not parse from "
 
-    .line 88
+    .line 90
     invoke-direct {p0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 90
+    .line 92
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 93
+    .line 95
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 96
+    .line 98
     move-result-object p0
 
-    .line 99
+    .line 101
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
+    .line 102
     const/4 p0, 0x0
 
-    .line 103
+    .line 105
     return-object p0
-    .line 104
+    .line 106
 .end method

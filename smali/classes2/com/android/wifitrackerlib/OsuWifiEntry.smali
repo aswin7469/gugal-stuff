@@ -1,6 +1,6 @@
 .class public final Lcom/android/wifitrackerlib/OsuWifiEntry;
 .super Lcom/android/wifitrackerlib/WifiEntry;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -413,7 +413,7 @@
     iget-object p1, p0, Lcom/android/wifitrackerlib/WifiEntry;->mContext:Landroid/content/Context;
 
     .line 9
-    const v0, 0x7f140a7f    # @string/wifitrackerlib_admin_restricted_network 'Not allowed by your organization'
+    const v0, 0x7f130b0c    # @string/wifitrackerlib_admin_restricted_network 'Not allowed by your organization'
 
     .line 11
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -479,7 +479,7 @@
     iget-object p1, p0, Lcom/android/wifitrackerlib/WifiEntry;->mContext:Landroid/content/Context;
 
     .line 36
-    const v0, 0x7f140ab3    # @string/wifitrackerlib_wifi_passpoint_expired 'Expired'
+    const v0, 0x7f130b40    # @string/wifitrackerlib_wifi_passpoint_expired 'Expired'
 
     .line 38
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -495,7 +495,7 @@
     iget-object p1, p0, Lcom/android/wifitrackerlib/WifiEntry;->mContext:Landroid/content/Context;
 
     .line 46
-    const v0, 0x7f140a9d    # @string/wifitrackerlib_tap_to_renew_subscription_and_connect 'Tap to renew subscription and connect'
+    const v0, 0x7f130b2a    # @string/wifitrackerlib_tap_to_renew_subscription_and_connect 'Tap to renew subscription and connect'
 
     .line 48
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -518,7 +518,7 @@
     iget-object p1, p0, Lcom/android/wifitrackerlib/WifiEntry;->mContext:Landroid/content/Context;
 
     .line 57
-    const v0, 0x7f140a9e    # @string/wifitrackerlib_tap_to_sign_up 'Tap to sign up'
+    const v0, 0x7f130b2b    # @string/wifitrackerlib_tap_to_sign_up 'Tap to sign up'
 
     .line 59
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

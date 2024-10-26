@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/material3/SurfaceKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -626,101 +626,131 @@
 .end method
 
 .method public static final access$surface-XO-JAsU(Landroidx/compose/ui/Modifier;Landroidx/compose/ui/graphics/Shape;JLandroidx/compose/foundation/BorderStroke;F)Landroidx/compose/ui/Modifier;
-    .locals 10
+    .locals 16
 
     .line 1
-    const/4 v0, 0x0
+    move-object/from16 v13, p1
 
     .line 2
+    move-object/from16 v14, p4
+
+    .line 4
+    const/4 v0, 0x0
+
+    .line 6
     cmpl-float v0, p5, v0
 
-    .line 3
-    sget-object v9, Landroidx/compose/ui/Modifier$Companion;->$$INSTANCE:Landroidx/compose/ui/Modifier$Companion;
-
-    .line 5
-    if-lez v0, :cond_0
-
     .line 7
-    const/4 v6, 0x0
+    sget-object v15, Landroidx/compose/ui/Modifier$Companion;->$$INSTANCE:Landroidx/compose/ui/Modifier$Companion;
 
     .line 9
-    const v8, 0x1e7df
+    if-lez v0, :cond_0
 
-    .line 10
-    const/4 v2, 0x0
+    .line 11
+    const/4 v10, 0x0
 
     .line 13
-    const/4 v4, 0x0
+    const v12, 0x1e7df
 
     .line 14
-    const/4 v7, 0x0
-
-    .line 15
-    move-object v1, v9
-
-    .line 16
-    move v3, p5
+    const/4 v1, 0x0
 
     .line 17
-    move-object v5, p1
+    const/4 v2, 0x0
 
     .line 18
-    invoke-static/range {v1 .. v8}, Landroidx/compose/ui/graphics/GraphicsLayerModifierKt;->graphicsLayer-Ap8cVGQ$default(Landroidx/compose/ui/Modifier;FFFLandroidx/compose/ui/graphics/Shape;ZII)Landroidx/compose/ui/Modifier;
+    const/4 v3, 0x0
 
     .line 19
-    move-result-object p5
+    const/4 v4, 0x0
+
+    .line 20
+    const/4 v5, 0x0
+
+    .line 21
+    const/4 v7, 0x0
 
     .line 22
-    goto :goto_0
+    const/4 v9, 0x0
 
     .line 23
-    :cond_0
-    move-object p5, v9
+    const/4 v11, 0x0
 
     .line 24
-    :goto_0
-    invoke-interface {p0, p5}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
+    move-object v0, v15
 
     .line 25
-    move-result-object p0
+    move/from16 v6, p5
+
+    .line 26
+    move-object/from16 v8, p1
 
     .line 28
-    if-eqz p4, :cond_1
+    invoke-static/range {v0 .. v12}, Landroidx/compose/ui/graphics/GraphicsLayerModifierKt;->graphicsLayer-Ap8cVGQ$default(Landroidx/compose/ui/Modifier;FFFFFFFLandroidx/compose/ui/graphics/Shape;ZLandroidx/compose/ui/graphics/AndroidRenderEffect;II)Landroidx/compose/ui/Modifier;
 
-    .line 29
-    new-instance v9, Landroidx/compose/foundation/BorderModifierNodeElement;
-
-    .line 31
-    iget p5, p4, Landroidx/compose/foundation/BorderStroke;->width:F
+    .line 30
+    move-result-object v0
 
     .line 33
-    iget-object p4, p4, Landroidx/compose/foundation/BorderStroke;->brush:Landroidx/compose/ui/graphics/Brush;
+    move-object/from16 v1, p0
 
-    .line 35
-    invoke-direct {v9, p5, p4, p1}, Landroidx/compose/foundation/BorderModifierNodeElement;-><init>(FLandroidx/compose/ui/graphics/Brush;Landroidx/compose/ui/graphics/Shape;)V
+    .line 34
+    goto :goto_0
+
+    .line 36
+    :cond_0
+    move-object/from16 v1, p0
 
     .line 37
-    :cond_1
-    invoke-interface {p0, v9}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
+    move-object v0, v15
+
+    .line 39
+    :goto_0
+    invoke-interface {v1, v0}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
 
     .line 40
-    move-result-object p0
+    move-result-object v0
 
     .line 43
-    invoke-static {p0, p2, p3, p1}, Landroidx/compose/foundation/BackgroundKt;->background-bw27NRU(Landroidx/compose/ui/Modifier;JLandroidx/compose/ui/graphics/Shape;)Landroidx/compose/ui/Modifier;
+    if-eqz v14, :cond_1
 
     .line 44
-    move-result-object p0
+    new-instance v15, Landroidx/compose/foundation/BorderModifierNodeElement;
 
-    .line 47
-    invoke-static {p0, p1}, Landroidx/compose/ui/draw/ClipKt;->clip(Landroidx/compose/ui/Modifier;Landroidx/compose/ui/graphics/Shape;)Landroidx/compose/ui/Modifier;
+    .line 46
+    iget v1, v14, Landroidx/compose/foundation/BorderStroke;->width:F
 
     .line 48
-    move-result-object p0
+    iget-object v2, v14, Landroidx/compose/foundation/BorderStroke;->brush:Landroidx/compose/ui/graphics/Brush;
 
-    .line 51
-    return-object p0
+    .line 50
+    invoke-direct {v15, v1, v2, v13}, Landroidx/compose/foundation/BorderModifierNodeElement;-><init>(FLandroidx/compose/ui/graphics/Brush;Landroidx/compose/ui/graphics/Shape;)V
+
     .line 52
+    :cond_1
+    invoke-interface {v0, v15}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
+
+    .line 55
+    move-result-object v0
+
+    .line 58
+    move-wide/from16 v1, p2
+
+    .line 59
+    invoke-static {v0, v1, v2, v13}, Landroidx/compose/foundation/BackgroundKt;->background-bw27NRU(Landroidx/compose/ui/Modifier;JLandroidx/compose/ui/graphics/Shape;)Landroidx/compose/ui/Modifier;
+
+    .line 61
+    move-result-object v0
+
+    .line 64
+    invoke-static {v0, v13}, Landroidx/compose/ui/draw/ClipKt;->clip(Landroidx/compose/ui/Modifier;Landroidx/compose/ui/graphics/Shape;)Landroidx/compose/ui/Modifier;
+
+    .line 65
+    move-result-object v0
+
+    .line 68
+    return-object v0
+    .line 69
 .end method
 
 .method public static final access$surfaceColorAtElevation-CLU3JFs(JFLandroidx/compose/runtime/Composer;)J

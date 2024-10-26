@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/temporarydisplay/chipbar/ChipbarCoordinator$animateViewIn$onAnimationEnd$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -94,7 +94,7 @@
     check-cast v2, Landroid/view/ViewGroup;
 
     .line 35
-    const v3, 0x7f0b07cb    # @id/tag_chipbar_info
+    const v3, 0x7f0a07fa    # @id/tag_chipbar_info
 
     .line 37
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->getTag(I)Ljava/lang/Object;
@@ -125,7 +125,7 @@
     instance-of v0, v0, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem$Button;
 
     .line 57
-    const v1, 0x7f0b01ce    # @id/chipbar_inner
+    const v1, 0x7f0a01d8    # @id/chipbar_inner
 
     .line 59
     if-eqz v0, :cond_2

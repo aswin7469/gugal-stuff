@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/BubbleController$8;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/bubbles/BubbleData$Listener;
@@ -46,7 +46,7 @@
     .line 2
 .end method
 
-.method private final bubbleOverflowChanged$com$android$wm$shell$bubbles$BubbleController$9(Z)V
+.method private final bubbleOverflowChanged$com$android$wm$shell$bubbles$BubbleController$9()V
     .locals 0
 
     .line 1
@@ -74,7 +74,7 @@
     move-object/from16 v1, p1
 
     .line 4
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BUBBLES_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BUBBLES_enabled:[Z
 
     .line 6
     const/4 v3, 0x0
@@ -324,7 +324,7 @@
     move-wide/from16 v17, v5
 
     .line 159
-    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 161
     :cond_5
@@ -349,7 +349,7 @@
     iget-boolean v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->showOverflowChanged:Z
 
     .line 178
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_6
 
     .line 180
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
@@ -367,2165 +367,2087 @@
     invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
 
     .line 190
-    move-result v5
+    iget v2, v2, Lcom/android/wm/shell/bubbles/BubbleController$8;->$r8$classId:I
 
     .line 193
-    xor-int/2addr v5, v4
-
-    .line 194
-    iget v6, v2, Lcom/android/wm/shell/bubbles/BubbleController$8;->$r8$classId:I
+    packed-switch v2, :pswitch_data_0
 
     .line 195
-    packed-switch v6, :pswitch_data_0
-
-    .line 197
     goto :goto_5
 
-    .line 200
+    .line 198
     :pswitch_0
-    sget-object v6, Lcom/android/wm/shell/Flags;->FEATURE_FLAGS:Lcom/android/wm/shell/FeatureFlagsImpl;
+    sget-object v2, Lcom/android/wm/shell/Flags;->FEATURE_FLAGS:Lcom/android/wm/shell/FeatureFlagsImpl;
+
+    .line 199
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 201
-    invoke-virtual {v6}, Lcom/android/wm/shell/FeatureFlagsImpl;->enableOptionalBubbleOverflow()Z
-
-    .line 203
-    move-result v6
-
-    .line 206
-    if-eqz v6, :cond_8
-
-    .line 207
-    iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
-
-    .line 209
-    check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
-
-    .line 211
-    iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
-
-    .line 213
-    if-eqz v2, :cond_8
-
-    .line 215
-    sget-object v6, Lcom/android/wm/shell/Flags;->FEATURE_FLAGS:Lcom/android/wm/shell/FeatureFlagsImpl;
-
-    .line 217
-    invoke-virtual {v6}, Lcom/android/wm/shell/FeatureFlagsImpl;->enableOptionalBubbleOverflow()Z
-
-    .line 219
-    move-result v6
-
-    .line 222
-    if-nez v6, :cond_6
-
-    .line 223
-    goto :goto_5
-
-    .line 225
     :cond_6
-    iget-boolean v6, v2, Lcom/android/wm/shell/bubbles/BubbleStackView;->mShowingOverflow:Z
-
-    .line 226
-    if-eq v6, v5, :cond_8
-
-    .line 228
-    iput-boolean v5, v2, Lcom/android/wm/shell/bubbles/BubbleStackView;->mShowingOverflow:Z
-
-    .line 230
-    if-eqz v5, :cond_7
-
-    .line 232
-    invoke-virtual {v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->setUpOverflow()V
-
-    .line 234
-    goto :goto_5
-
-    .line 237
-    :cond_7
-    iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleOverflow:Lcom/android/wm/shell/bubbles/BubbleOverflow;
-
-    .line 238
-    if-eqz v5, :cond_8
-
-    .line 240
-    invoke-virtual {v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->resetOverflowView()V
-
-    .line 242
-    :cond_8
     :goto_5
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 245
+    .line 204
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 247
+    .line 206
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
 
-    .line 249
+    .line 208
     iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleData;->mOverflow:Lcom/android/wm/shell/bubbles/BubbleOverflow;
 
-    .line 251
-    if-nez v5, :cond_9
+    .line 210
+    if-nez v5, :cond_7
 
-    .line 253
+    .line 212
     goto :goto_6
 
-    .line 255
-    :cond_9
+    .line 214
+    :cond_7
     invoke-virtual {v2}, Lcom/android/wm/shell/bubbles/BubbleData;->getOverflowBubbles()Ljava/util/List;
 
-    .line 256
+    .line 215
     move-result-object v2
 
-    .line 259
+    .line 218
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    .line 260
+    .line 219
     move-result-object v2
 
-    .line 263
-    :cond_a
+    .line 222
+    :cond_8
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 264
+    .line 223
     move-result v6
 
-    .line 267
-    if-eqz v6, :cond_b
+    .line 226
+    if-eqz v6, :cond_9
 
-    .line 268
+    .line 227
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 270
+    .line 229
     move-result-object v6
 
-    .line 273
+    .line 232
     check-cast v6, Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 274
+    .line 233
     invoke-virtual {v6}, Lcom/android/wm/shell/bubbles/Bubble;->showDot()Z
 
-    .line 276
+    .line 235
     move-result v6
 
-    .line 279
-    if-eqz v6, :cond_a
+    .line 238
+    if-eqz v6, :cond_8
 
-    .line 280
+    .line 239
     iput-boolean v4, v5, Lcom/android/wm/shell/bubbles/BubbleOverflow;->showDot:Z
 
-    .line 282
+    .line 241
     iget-object v2, v5, Lcom/android/wm/shell/bubbles/BubbleOverflow;->overflowBtn:Lcom/android/wm/shell/bubbles/BadgedImageView;
 
-    .line 284
-    if-eqz v2, :cond_c
+    .line 243
+    if-eqz v2, :cond_a
 
-    .line 286
+    .line 245
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getVisibility()I
 
-    .line 288
+    .line 247
     move-result v2
 
-    .line 291
-    if-nez v2, :cond_c
+    .line 250
+    if-nez v2, :cond_a
 
-    .line 292
+    .line 251
     iget-object v2, v5, Lcom/android/wm/shell/bubbles/BubbleOverflow;->overflowBtn:Lcom/android/wm/shell/bubbles/BadgedImageView;
 
-    .line 294
-    if-eqz v2, :cond_c
+    .line 253
+    if-eqz v2, :cond_a
 
-    .line 296
+    .line 255
     invoke-virtual {v2, v4}, Lcom/android/wm/shell/bubbles/BadgedImageView;->updateDotVisibility(Z)V
 
-    .line 298
+    .line 257
     goto :goto_6
 
-    .line 301
-    :cond_b
+    .line 260
+    :cond_9
     iput-boolean v3, v5, Lcom/android/wm/shell/bubbles/BubbleOverflow;->showDot:Z
 
-    .line 302
+    .line 261
     iget-object v2, v5, Lcom/android/wm/shell/bubbles/BubbleOverflow;->overflowBtn:Lcom/android/wm/shell/bubbles/BadgedImageView;
 
-    .line 304
-    if-eqz v2, :cond_c
+    .line 263
+    if-eqz v2, :cond_a
 
-    .line 306
+    .line 265
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getVisibility()I
 
-    .line 308
+    .line 267
     move-result v2
 
-    .line 311
-    if-nez v2, :cond_c
+    .line 270
+    if-nez v2, :cond_a
 
-    .line 312
+    .line 271
     iget-object v2, v5, Lcom/android/wm/shell/bubbles/BubbleOverflow;->overflowBtn:Lcom/android/wm/shell/bubbles/BadgedImageView;
 
-    .line 314
-    if-eqz v2, :cond_c
+    .line 273
+    if-eqz v2, :cond_a
 
-    .line 316
+    .line 275
     invoke-virtual {v2, v4}, Lcom/android/wm/shell/bubbles/BadgedImageView;->updateDotVisibility(Z)V
 
-    .line 318
-    :cond_c
+    .line 277
+    :cond_a
     :goto_6
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 321
+    .line 280
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 323
+    .line 282
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mOverflowListener:Lcom/android/wm/shell/bubbles/BubbleData$Listener;
 
-    .line 325
-    if-eqz v2, :cond_d
+    .line 284
+    if-eqz v2, :cond_b
 
-    .line 327
+    .line 286
     invoke-interface {v2, v1}, Lcom/android/wm/shell/bubbles/BubbleData$Listener;->applyUpdate(Lcom/android/wm/shell/bubbles/BubbleData$Update;)V
 
-    .line 329
-    :cond_d
+    .line 288
+    :cond_b
     new-instance v2, Ljava/util/ArrayList;
 
-    .line 332
+    .line 291
     iget-object v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->removedBubbles:Ljava/util/List;
 
-    .line 334
+    .line 293
     invoke-direct {v2, v5}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 336
+    .line 295
     new-instance v5, Ljava/util/ArrayList;
 
-    .line 339
+    .line 298
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 341
+    .line 300
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 344
+    .line 303
     move-result-object v2
 
-    .line 347
-    :cond_e
+    .line 306
+    :cond_c
     :goto_7
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 348
+    .line 307
     move-result v6
 
-    .line 351
-    if-eqz v6, :cond_1f
+    .line 310
+    if-eqz v6, :cond_1d
 
-    .line 352
+    .line 311
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 354
+    .line 313
     move-result-object v6
 
-    .line 357
+    .line 316
     check-cast v6, Landroid/util/Pair;
 
-    .line 358
+    .line 317
     iget-object v7, v6, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    .line 360
+    .line 319
     check-cast v7, Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 362
+    .line 321
     iget-object v6, v6, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    .line 364
+    .line 323
     check-cast v6, Ljava/lang/Integer;
 
-    .line 366
+    .line 325
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
-    .line 368
+    .line 327
     move-result v6
 
-    .line 371
+    .line 330
     iget-object v8, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 372
+    .line 331
     check-cast v8, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 374
+    .line 333
     iget-object v8, v8, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleViewCallback:Lcom/android/wm/shell/bubbles/BubbleController$8;
 
-    .line 376
+    .line 335
     iget v9, v8, Lcom/android/wm/shell/bubbles/BubbleController$8;->$r8$classId:I
 
-    .line 378
+    .line 337
     packed-switch v9, :pswitch_data_1
 
-    .line 380
+    .line 339
     iget-object v9, v8, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 383
+    .line 342
     check-cast v9, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 385
+    .line 344
     iget-object v9, v9, Lcom/android/wm/shell/bubbles/BubbleController;->mLayerView:Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;
 
-    .line 387
-    if-eqz v9, :cond_18
+    .line 346
+    if-eqz v9, :cond_16
 
-    .line 389
+    .line 348
     new-instance v10, Lcom/android/wm/shell/bubbles/BubbleController$6$$ExternalSyntheticLambda0;
 
-    .line 391
+    .line 350
     const/4 v11, 0x2
 
-    .line 393
+    .line 352
     invoke-direct {v10, v11, v8}, Lcom/android/wm/shell/bubbles/BubbleController$6$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;)V
 
-    .line 394
+    .line 353
     new-instance v8, Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView$$ExternalSyntheticLambda6;
 
-    .line 397
+    .line 356
     invoke-direct {v8, v7, v10}, Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView$$ExternalSyntheticLambda6;-><init>(Lcom/android/wm/shell/bubbles/Bubble;Lcom/android/wm/shell/bubbles/BubbleController$6$$ExternalSyntheticLambda0;)V
 
-    .line 399
+    .line 358
     iget-object v10, v9, Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
 
-    .line 402
+    .line 361
     iget-object v10, v10, Lcom/android/wm/shell/bubbles/BubbleData;->mBubbles:Ljava/util/List;
 
-    .line 404
+    .line 363
     invoke-static {v10}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    .line 406
+    .line 365
     move-result-object v10
 
-    .line 409
+    .line 368
     invoke-interface {v10}, Ljava/util/List;->isEmpty()Z
 
-    .line 410
+    .line 369
     move-result v10
 
-    .line 413
-    if-eqz v10, :cond_f
+    .line 372
+    if-eqz v10, :cond_d
 
-    .line 414
+    .line 373
     invoke-virtual {v9, v8}, Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;->collapse(Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView$$ExternalSyntheticLambda6;)V
 
-    .line 416
+    .line 375
     goto/16 :goto_b
 
-    .line 419
-    :cond_f
+    .line 378
+    :cond_d
     invoke-virtual {v8}, Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView$$ExternalSyntheticLambda6;->run()V
 
-    .line 421
+    .line 380
     goto/16 :goto_b
 
-    .line 424
+    .line 383
     :pswitch_1
     iget-object v8, v8, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 426
+    .line 385
     check-cast v8, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 428
+    .line 387
     iget-object v8, v8, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 430
-    if-eqz v8, :cond_18
+    .line 389
+    if-eqz v8, :cond_16
 
-    .line 432
+    .line 391
     iget-boolean v9, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
 
-    .line 434
+    .line 393
     const/4 v10, 0x1
 
-    .line 436
+    .line 395
     const/4 v11, 0x0
 
-    .line 437
+    .line 396
     const/4 v12, 0x5
 
-    .line 438
-    if-eqz v9, :cond_10
+    .line 397
+    if-eqz v9, :cond_e
 
-    .line 439
+    .line 398
     invoke-virtual {v8}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getBubbleCount()I
 
-    .line 441
+    .line 400
     move-result v9
 
-    .line 444
-    if-ne v9, v10, :cond_10
+    .line 403
+    if-ne v9, v10, :cond_e
 
-    .line 445
+    .line 404
     iput-boolean v10, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mRemovingLastBubbleWhileExpanded:Z
 
-    .line 447
+    .line 406
     iget-object v9, v7, Lcom/android/wm/shell/bubbles/Bubble;->mIconView:Lcom/android/wm/shell/bubbles/BadgedImageView;
 
-    .line 449
-    new-instance v10, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda28;
+    .line 408
+    new-instance v10, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda38;
 
-    .line 451
+    .line 410
     const/4 v13, 0x0
 
-    .line 453
-    invoke-direct {v10, v8, v7, v9, v13}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda28;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;Lcom/android/wm/shell/bubbles/BubbleViewProvider;Ljava/lang/Object;I)V
+    .line 412
+    invoke-direct {v10, v8, v7, v9, v13}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda38;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;Lcom/android/wm/shell/bubbles/BubbleViewProvider;Ljava/lang/Object;I)V
 
-    .line 454
-    invoke-virtual {v8, v11, v10}, Lcom/android/wm/shell/bubbles/BubbleStackView;->showScrim(ZLcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda28;)V
+    .line 413
+    invoke-virtual {v8, v11, v10}, Lcom/android/wm/shell/bubbles/BubbleStackView;->showScrim(ZLcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda38;)V
 
-    .line 457
+    .line 416
     invoke-virtual {v8, v7, v12}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
 
-    .line 460
+    .line 419
     goto/16 :goto_b
 
-    .line 463
-    :cond_10
+    .line 422
+    :cond_e
     invoke-virtual {v8}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getBubbleCount()I
 
-    .line 465
+    .line 424
     move-result v9
 
-    .line 468
+    .line 427
     const/4 v13, 0x0
 
-    .line 469
-    if-ne v9, v10, :cond_11
+    .line 428
+    if-ne v9, v10, :cond_f
 
-    .line 470
+    .line 429
     iput-object v13, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
 
-    .line 472
-    :cond_11
+    .line 431
+    :cond_f
     :goto_8
     invoke-virtual {v8}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getBubbleCount()I
 
-    .line 474
+    .line 433
     move-result v9
 
-    .line 477
-    if-ge v11, v9, :cond_16
+    .line 436
+    if-ge v11, v9, :cond_14
 
-    .line 478
+    .line 437
     iget-object v9, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleContainer:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
 
-    .line 480
+    .line 439
     invoke-virtual {v9, v11}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 482
+    .line 441
     move-result-object v9
 
-    .line 485
+    .line 444
     instance-of v14, v9, Lcom/android/wm/shell/bubbles/BadgedImageView;
 
-    .line 486
-    if-eqz v14, :cond_15
+    .line 445
+    if-eqz v14, :cond_13
 
-    .line 488
+    .line 447
     check-cast v9, Lcom/android/wm/shell/bubbles/BadgedImageView;
 
-    .line 490
+    .line 449
     iget-object v9, v9, Lcom/android/wm/shell/bubbles/BadgedImageView;->mBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
 
-    .line 492
-    if-eqz v9, :cond_12
+    .line 451
+    if-eqz v9, :cond_10
 
-    .line 494
+    .line 453
     invoke-interface {v9}, Lcom/android/wm/shell/bubbles/BubbleViewProvider;->getKey()Ljava/lang/String;
 
-    .line 496
+    .line 455
     move-result-object v9
 
-    .line 499
+    .line 458
     goto :goto_9
 
-    .line 500
-    :cond_12
+    .line 459
+    :cond_10
     move-object v9, v13
 
-    .line 501
+    .line 460
     :goto_9
     iget-object v14, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
 
-    .line 502
+    .line 461
     invoke-virtual {v9, v14}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 504
+    .line 463
     move-result v9
 
-    .line 507
-    if-eqz v9, :cond_15
-
-    .line 508
-    iget-object v9, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleContainer:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
-
-    .line 510
-    invoke-virtual {v9, v11}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->removeViewAt(I)V
-
-    .line 512
-    iget-object v9, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
-
-    .line 515
-    iget-object v11, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
-
-    .line 517
-    invoke-virtual {v9, v11}, Lcom/android/wm/shell/bubbles/BubbleData;->hasOverflowBubbleWithKey(Ljava/lang/String;)Z
-
-    .line 519
-    move-result v9
-
-    .line 522
+    .line 466
     if-eqz v9, :cond_13
 
-    .line 523
+    .line 467
+    iget-object v9, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleContainer:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
+
+    .line 469
+    invoke-virtual {v9, v11}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->removeViewAt(I)V
+
+    .line 471
+    iget-object v9, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
+
+    .line 474
+    iget-object v11, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
+
+    .line 476
+    invoke-virtual {v9, v11}, Lcom/android/wm/shell/bubbles/BubbleData;->hasOverflowBubbleWithKey(Ljava/lang/String;)Z
+
+    .line 478
+    move-result v9
+
+    .line 481
+    if-eqz v9, :cond_11
+
+    .line 482
     invoke-virtual {v7, v10}, Lcom/android/wm/shell/bubbles/Bubble;->cleanupExpandedView(Z)V
 
-    .line 525
+    .line 484
     goto :goto_a
 
-    .line 528
-    :cond_13
+    .line 487
+    :cond_11
     invoke-virtual {v7}, Lcom/android/wm/shell/bubbles/Bubble;->cleanupViews()V
 
-    .line 529
+    .line 488
     :goto_a
     invoke-virtual {v8}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateExpandedView()V
 
-    .line 532
+    .line 491
     invoke-virtual {v8}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getBubbleCount()I
 
-    .line 535
+    .line 494
     move-result v9
 
-    .line 538
-    if-nez v9, :cond_14
+    .line 497
+    if-nez v9, :cond_12
 
-    .line 539
+    .line 498
     iget-boolean v9, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
 
-    .line 541
-    if-nez v9, :cond_14
+    .line 500
+    if-nez v9, :cond_12
 
-    .line 543
+    .line 502
     iget-object v9, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackAnimationController:Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
 
-    .line 545
+    .line 504
     iget-object v10, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
 
-    .line 547
+    .line 506
     invoke-virtual {v10}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getRestingPosition()Landroid/graphics/PointF;
 
-    .line 549
+    .line 508
     move-result-object v10
 
-    .line 552
+    .line 511
     invoke-virtual {v9, v10}, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->setStackPosition(Landroid/graphics/PointF;)V
 
-    .line 553
+    .line 512
     iget-object v9, v8, Lcom/android/wm/shell/bubbles/BubbleStackView;->mDismissView:Lcom/android/wm/shell/common/bubbles/DismissView;
 
-    .line 556
+    .line 515
     invoke-virtual {v9}, Lcom/android/wm/shell/common/bubbles/DismissView;->hide()V
 
-    .line 558
-    :cond_14
+    .line 517
+    :cond_12
     invoke-virtual {v8, v7, v12}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
 
-    .line 561
+    .line 520
     goto :goto_b
 
-    .line 564
-    :cond_15
+    .line 523
+    :cond_13
     add-int/lit8 v11, v11, 0x1
 
-    .line 565
+    .line 524
     goto :goto_8
 
-    .line 567
-    :cond_16
+    .line 526
+    :cond_14
     invoke-virtual {v7}, Lcom/android/wm/shell/bubbles/Bubble;->isSuppressed()Z
 
-    .line 568
+    .line 527
     move-result v9
 
-    .line 571
-    if-eqz v9, :cond_17
+    .line 530
+    if-eqz v9, :cond_15
 
-    .line 572
+    .line 531
     invoke-virtual {v7}, Lcom/android/wm/shell/bubbles/Bubble;->cleanupViews()V
 
-    .line 574
+    .line 533
     invoke-virtual {v8, v7, v12}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
 
-    .line 577
+    .line 536
     goto :goto_b
 
-    .line 580
-    :cond_17
+    .line 539
+    :cond_15
     new-instance v8, Ljava/lang/StringBuilder;
 
-    .line 581
+    .line 540
     const-string v9, "was asked to remove Bubble, but didn\'t find the view! "
 
-    .line 583
+    .line 542
     invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 585
+    .line 544
     invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 588
+    .line 547
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 591
+    .line 550
     move-result-object v8
 
-    .line 594
+    .line 553
     const-string v9, "Bubbles"
 
-    .line 595
+    .line 554
     invoke-static {v9, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 597
-    :cond_18
+    .line 556
+    :cond_16
     :goto_b
     const/16 v8, 0x8
 
-    .line 600
-    if-eq v6, v8, :cond_e
+    .line 559
+    if-eq v6, v8, :cond_c
 
-    .line 602
+    .line 561
     const/16 v8, 0xe
 
-    .line 604
-    if-ne v6, v8, :cond_19
+    .line 563
+    if-ne v6, v8, :cond_17
 
-    .line 606
+    .line 565
     goto/16 :goto_7
 
-    .line 608
-    :cond_19
+    .line 567
+    :cond_17
     const/4 v8, 0x5
 
-    .line 610
-    if-eq v6, v8, :cond_1a
+    .line 569
+    if-eq v6, v8, :cond_18
 
-    .line 611
+    .line 570
     const/16 v9, 0xc
 
-    .line 613
-    if-ne v6, v9, :cond_1b
+    .line 572
+    if-ne v6, v9, :cond_19
 
-    .line 615
-    :cond_1a
+    .line 574
+    :cond_18
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 617
-    :cond_1b
+    .line 576
+    :cond_19
     iget-object v9, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 620
+    .line 579
     check-cast v9, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 622
+    .line 581
     iget-object v9, v9, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
 
-    .line 624
+    .line 583
     iget-object v10, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
 
-    .line 626
+    .line 585
     invoke-virtual {v9, v10}, Lcom/android/wm/shell/bubbles/BubbleData;->hasBubbleInStackWithKey(Ljava/lang/String;)Z
 
-    .line 628
+    .line 587
     move-result v9
 
-    .line 631
-    if-nez v9, :cond_e
+    .line 590
+    if-nez v9, :cond_c
 
-    .line 632
+    .line 591
     iget-object v9, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 634
+    .line 593
     check-cast v9, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 636
+    .line 595
     iget-object v9, v9, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
 
-    .line 638
+    .line 597
     iget-object v10, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
 
-    .line 640
+    .line 599
     invoke-virtual {v9, v10}, Lcom/android/wm/shell/bubbles/BubbleData;->hasOverflowBubbleWithKey(Ljava/lang/String;)Z
 
-    .line 642
+    .line 601
     move-result v9
 
-    .line 645
-    if-nez v9, :cond_1d
+    .line 604
+    if-nez v9, :cond_1b
 
-    .line 646
+    .line 605
     invoke-virtual {v7}, Lcom/android/wm/shell/bubbles/Bubble;->showInShade()Z
 
-    .line 648
+    .line 607
     move-result v9
 
-    .line 651
-    if-eqz v9, :cond_1c
+    .line 610
+    if-eqz v9, :cond_1a
 
-    .line 652
-    if-eq v6, v8, :cond_1c
+    .line 611
+    if-eq v6, v8, :cond_1a
 
-    .line 654
+    .line 613
     const/16 v8, 0x9
 
-    .line 656
-    if-ne v6, v8, :cond_1d
+    .line 615
+    if-ne v6, v8, :cond_1b
 
-    .line 658
+    .line 617
+    :cond_1a
+    iget-object v6, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
+
+    .line 619
+    check-cast v6, Lcom/android/wm/shell/bubbles/BubbleController;
+
+    .line 621
+    iget-object v6, v6, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
+
+    .line 623
+    iget-object v7, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
+
+    .line 625
+    iget-object v8, v6, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
+
+    .line 627
+    new-instance v9, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda4;
+
+    .line 629
+    invoke-direct {v9, v6, v7}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Ljava/lang/String;)V
+
+    .line 631
+    invoke-interface {v8, v9}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 634
+    goto/16 :goto_7
+
+    .line 637
+    :cond_1b
+    iget-boolean v6, v7, Lcom/android/wm/shell/bubbles/Bubble;->mIsBubble:Z
+
+    .line 639
+    if-eqz v6, :cond_1c
+
+    .line 641
+    iget-object v6, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
+
+    .line 643
+    check-cast v6, Lcom/android/wm/shell/bubbles/BubbleController;
+
+    .line 645
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 647
+    iput-boolean v3, v7, Lcom/android/wm/shell/bubbles/Bubble;->mIsBubble:Z
+
+    .line 650
+    iget-object v8, v6, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
+
+    .line 652
+    new-instance v9, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda1;
+
+    .line 654
+    invoke-direct {v9, v6, v3, v7}, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/bubbles/BubbleController;ZLcom/android/wm/shell/bubbles/Bubble;)V
+
+    .line 656
+    iget-object v6, v8, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
+
+    .line 659
+    new-instance v10, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda1;
+
+    .line 661
+    iget-object v11, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
+
+    .line 663
+    invoke-direct {v10, v8, v11, v9}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Ljava/lang/String;Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda1;)V
+
+    .line 665
+    invoke-interface {v6, v10}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 668
     :cond_1c
     iget-object v6, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 660
+    .line 671
     check-cast v6, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 662
+    .line 673
     iget-object v6, v6, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
-
-    .line 664
-    iget-object v7, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
-
-    .line 666
-    iget-object v8, v6, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
-
-    .line 668
-    new-instance v9, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda3;
-
-    .line 670
-    invoke-direct {v9, v6, v7}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Ljava/lang/String;)V
-
-    .line 672
-    invoke-interface {v8, v9}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     .line 675
-    goto/16 :goto_7
-
-    .line 678
-    :cond_1d
-    iget-boolean v6, v7, Lcom/android/wm/shell/bubbles/Bubble;->mIsBubble:Z
-
-    .line 680
-    if-eqz v6, :cond_1e
-
-    .line 682
-    iget-object v6, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
-
-    .line 684
-    check-cast v6, Lcom/android/wm/shell/bubbles/BubbleController;
-
-    .line 686
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 688
-    iput-boolean v3, v7, Lcom/android/wm/shell/bubbles/Bubble;->mIsBubble:Z
-
-    .line 691
-    iget-object v8, v6, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
-
-    .line 693
-    new-instance v9, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda0;
-
-    .line 695
-    invoke-direct {v9, v6, v3, v7}, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/bubbles/BubbleController;ZLcom/android/wm/shell/bubbles/Bubble;)V
-
-    .line 697
-    iget-object v6, v8, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
-
-    .line 700
-    new-instance v10, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda0;
-
-    .line 702
-    iget-object v11, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
-
-    .line 704
-    invoke-direct {v10, v8, v11, v9}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Ljava/lang/String;Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda0;)V
-
-    .line 706
-    invoke-interface {v6, v10}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 709
-    :cond_1e
-    iget-object v6, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
-
-    .line 712
-    check-cast v6, Lcom/android/wm/shell/bubbles/BubbleController;
-
-    .line 714
-    iget-object v6, v6, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
-
-    .line 716
     iget-object v7, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
 
-    .line 718
+    .line 677
     iget-object v8, v6, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
 
-    .line 720
-    new-instance v9, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda1;
+    .line 679
+    new-instance v9, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda2;
 
-    .line 722
+    .line 681
     const/4 v10, 0x2
 
-    .line 724
-    invoke-direct {v9, v6, v7, v10}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Ljava/lang/Object;I)V
+    .line 683
+    invoke-direct {v9, v6, v7, v10}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Ljava/lang/Object;I)V
 
-    .line 725
+    .line 684
     invoke-interface {v8, v9}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 728
+    .line 687
     goto/16 :goto_7
 
-    .line 731
-    :cond_1f
+    .line 690
+    :cond_1d
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 733
+    .line 692
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 735
+    .line 694
     iget-object v6, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mDataRepository:Lcom/android/wm/shell/bubbles/BubbleDataRepository;
 
-    .line 737
+    .line 696
     iget v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mCurrentUserId:I
 
-    .line 739
+    .line 698
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 741
+    .line 700
     invoke-static {v5}, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->transform(Ljava/util/List;)Ljava/util/List;
 
-    .line 744
+    .line 703
     move-result-object v5
 
-    .line 747
+    .line 706
     iget-object v7, v6, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->volatileRepository:Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository;
 
-    .line 748
+    .line 707
     monitor-enter v7
 
-    .line 750
+    .line 709
     :try_start_0
     new-instance v8, Ljava/util/ArrayList;
 
-    .line 751
+    .line 710
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 753
+    .line 712
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 756
+    .line 715
     move-result-object v9
 
-    .line 759
-    :cond_20
+    .line 718
+    :cond_1e
     :goto_c
     invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 760
+    .line 719
     move-result v10
 
-    .line 763
-    if-eqz v10, :cond_21
+    .line 722
+    if-eqz v10, :cond_1f
 
-    .line 764
+    .line 723
     invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 766
+    .line 725
     move-result-object v10
 
-    .line 769
+    .line 728
     move-object v11, v10
 
-    .line 770
+    .line 729
     check-cast v11, Lcom/android/wm/shell/bubbles/storage/BubbleEntity;
 
-    .line 771
+    .line 730
     invoke-virtual {v7, v2}, Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository;->getEntities(I)Ljava/util/List;
 
-    .line 773
+    .line 732
     move-result-object v12
 
-    .line 776
+    .line 735
     new-instance v13, Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository$removeBubbles$1$1;
 
-    .line 777
+    .line 736
     const/4 v14, 0x0
 
-    .line 779
+    .line 738
     invoke-direct {v13, v14, v11}, Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository$removeBubbles$1$1;-><init>(ILjava/lang/Object;)V
 
-    .line 780
+    .line 739
     invoke-interface {v12, v13}, Ljava/util/List;->removeIf(Ljava/util/function/Predicate;)Z
 
-    .line 783
+    .line 742
     move-result v11
 
-    .line 786
-    if-eqz v11, :cond_20
+    .line 745
+    if-eqz v11, :cond_1e
 
-    .line 787
+    .line 746
     invoke-interface {v8, v10}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 789
+    .line 748
     goto :goto_c
 
-    .line 792
+    .line 751
     :catchall_0
     move-exception v0
 
-    .line 793
+    .line 752
     goto/16 :goto_1d
 
-    .line 794
-    :cond_21
+    .line 753
+    :cond_1f
     invoke-virtual {v7, v8}, Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository;->uncache(Ljava/util/List;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 796
+    .line 755
     monitor-exit v7
 
-    .line 799
+    .line 758
     invoke-interface {v5}, Ljava/util/Collection;->isEmpty()Z
 
-    .line 800
+    .line 759
     move-result v2
 
-    .line 803
+    .line 762
     xor-int/2addr v2, v4
 
-    .line 804
-    if-eqz v2, :cond_22
+    .line 763
+    if-eqz v2, :cond_20
 
-    .line 805
+    .line 764
     invoke-static {v6}, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->persistToDisk$default(Lcom/android/wm/shell/bubbles/BubbleDataRepository;)V
 
-    .line 807
-    :cond_22
+    .line 766
+    :cond_20
     iget-object v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->addedBubble:Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 810
-    if-eqz v2, :cond_24
+    .line 769
+    if-eqz v2, :cond_22
 
-    .line 812
+    .line 771
     iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 814
+    .line 773
     check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 816
+    .line 775
     iget-object v6, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mDataRepository:Lcom/android/wm/shell/bubbles/BubbleDataRepository;
 
-    .line 818
+    .line 777
     iget v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mCurrentUserId:I
 
-    .line 820
+    .line 779
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 822
+    .line 781
     invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    .line 825
+    .line 784
     move-result-object v2
 
-    .line 828
+    .line 787
     invoke-static {v2}, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->transform(Ljava/util/List;)Ljava/util/List;
 
-    .line 829
+    .line 788
     move-result-object v2
 
-    .line 832
+    .line 791
     iget-object v7, v6, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->volatileRepository:Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository;
 
-    .line 833
+    .line 792
     invoke-virtual {v7, v5, v2}, Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository;->addBubbles(ILjava/util/List;)V
 
-    .line 835
+    .line 794
     invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
 
-    .line 838
+    .line 797
     move-result v2
 
-    .line 841
+    .line 800
     xor-int/2addr v2, v4
 
-    .line 842
-    if-eqz v2, :cond_23
+    .line 801
+    if-eqz v2, :cond_21
 
-    .line 843
+    .line 802
     invoke-static {v6}, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->persistToDisk$default(Lcom/android/wm/shell/bubbles/BubbleDataRepository;)V
 
-    .line 845
-    :cond_23
+    .line 804
+    :cond_21
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 848
+    .line 807
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 850
+    .line 809
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleViewCallback:Lcom/android/wm/shell/bubbles/BubbleController$8;
 
-    .line 852
+    .line 811
     iget-object v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->addedBubble:Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 854
+    .line 813
     iget v6, v2, Lcom/android/wm/shell/bubbles/BubbleController$8;->$r8$classId:I
 
-    .line 856
+    .line 815
     packed-switch v6, :pswitch_data_2
 
-    .line 858
+    .line 817
     goto :goto_d
 
-    .line 861
+    .line 820
     :pswitch_2
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 862
+    .line 821
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 864
+    .line 823
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
+
+    .line 825
+    if-eqz v2, :cond_22
+
+    .line 827
+    invoke-virtual {v2, v5}, Lcom/android/wm/shell/bubbles/BubbleStackView;->addBubble(Lcom/android/wm/shell/bubbles/Bubble;)V
+
+    .line 829
+    :cond_22
+    :goto_d
+    iget-object v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->updatedBubble:Lcom/android/wm/shell/bubbles/Bubble;
+
+    .line 832
+    if-eqz v2, :cond_23
+
+    .line 834
+    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
+
+    .line 836
+    check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
+
+    .line 838
+    iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleViewCallback:Lcom/android/wm/shell/bubbles/BubbleController$8;
+
+    .line 840
+    iget v6, v5, Lcom/android/wm/shell/bubbles/BubbleController$8;->$r8$classId:I
+
+    .line 842
+    packed-switch v6, :pswitch_data_3
+
+    .line 844
+    goto :goto_e
+
+    .line 847
+    :pswitch_3
+    iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
+
+    .line 848
+    check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
+
+    .line 850
+    iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
+
+    .line 852
+    if-eqz v5, :cond_23
+
+    .line 854
+    invoke-virtual {v5, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->animateInFlyoutForBubble(Lcom/android/wm/shell/bubbles/Bubble;)V
+
+    .line 856
+    invoke-virtual {v5}, Lcom/android/wm/shell/bubbles/BubbleStackView;->requestUpdate()V
+
+    .line 859
+    const/4 v6, 0x2
+
+    .line 862
+    invoke-virtual {v5, v2, v6}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
+
+    .line 863
+    :cond_23
+    :goto_e
+    iget-object v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->suppressedBubble:Lcom/android/wm/shell/bubbles/Bubble;
 
     .line 866
     if-eqz v2, :cond_24
 
     .line 868
-    invoke-virtual {v2, v5}, Lcom/android/wm/shell/bubbles/BubbleStackView;->addBubble(Lcom/android/wm/shell/bubbles/Bubble;)V
+    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
     .line 870
-    :cond_24
-    :goto_d
-    iget-object v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->updatedBubble:Lcom/android/wm/shell/bubbles/Bubble;
-
-    .line 873
-    if-eqz v2, :cond_25
-
-    .line 875
-    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
-
-    .line 877
     check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 879
+    .line 872
     iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleViewCallback:Lcom/android/wm/shell/bubbles/BubbleController$8;
 
-    .line 881
-    iget v6, v5, Lcom/android/wm/shell/bubbles/BubbleController$8;->$r8$classId:I
-
-    .line 883
-    packed-switch v6, :pswitch_data_3
-
-    .line 885
-    goto :goto_e
-
-    .line 888
-    :pswitch_3
-    iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
-
-    .line 889
-    check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
-
-    .line 891
-    iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
-
-    .line 893
-    if-eqz v5, :cond_25
-
-    .line 895
-    invoke-virtual {v5, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->animateInFlyoutForBubble(Lcom/android/wm/shell/bubbles/Bubble;)V
-
-    .line 897
-    invoke-virtual {v5}, Lcom/android/wm/shell/bubbles/BubbleStackView;->requestUpdate()V
-
-    .line 900
-    const/4 v6, 0x2
-
-    .line 903
-    invoke-virtual {v5, v2, v6}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
-
-    .line 904
-    :cond_25
-    :goto_e
-    iget-object v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->suppressedBubble:Lcom/android/wm/shell/bubbles/Bubble;
-
-    .line 907
-    if-eqz v2, :cond_26
-
-    .line 909
-    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
-
-    .line 911
-    check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
-
-    .line 913
-    iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleViewCallback:Lcom/android/wm/shell/bubbles/BubbleController$8;
-
-    .line 915
+    .line 874
     invoke-virtual {v5, v2, v4}, Lcom/android/wm/shell/bubbles/BubbleController$8;->suppressionChanged(Lcom/android/wm/shell/bubbles/Bubble;Z)V
 
-    .line 917
-    :cond_26
+    .line 876
+    :cond_24
     iget-object v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->unsuppressedBubble:Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 920
-    if-eqz v2, :cond_27
+    .line 879
+    if-eqz v2, :cond_25
 
-    .line 922
+    .line 881
     iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 924
+    .line 883
     check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 926
+    .line 885
     iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleViewCallback:Lcom/android/wm/shell/bubbles/BubbleController$8;
 
-    .line 928
+    .line 887
     invoke-virtual {v5, v2, v3}, Lcom/android/wm/shell/bubbles/BubbleController$8;->suppressionChanged(Lcom/android/wm/shell/bubbles/Bubble;Z)V
 
-    .line 930
-    :cond_27
+    .line 889
+    :cond_25
     iget-boolean v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->expandedChanged:Z
 
-    .line 933
-    if-eqz v2, :cond_28
+    .line 892
+    if-eqz v2, :cond_26
 
-    .line 935
+    .line 894
     iget-boolean v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->expanded:Z
 
-    .line 937
-    if-nez v2, :cond_28
+    .line 896
+    if-nez v2, :cond_26
 
-    .line 939
+    .line 898
     move v2, v4
 
-    .line 941
+    .line 900
     goto :goto_f
 
-    .line 942
-    :cond_28
+    .line 901
+    :cond_26
     move v2, v3
 
-    .line 943
+    .line 902
     :goto_f
     iget-boolean v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->orderChanged:Z
 
-    .line 944
-    if-eqz v5, :cond_2b
-
-    .line 946
-    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
-
-    .line 948
-    check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
-
-    .line 950
-    iget-object v6, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mDataRepository:Lcom/android/wm/shell/bubbles/BubbleDataRepository;
-
-    .line 952
-    iget v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mCurrentUserId:I
-
-    .line 954
-    iget-object v7, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->bubbles:Ljava/util/List;
-
-    .line 956
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 958
-    invoke-static {v7}, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->transform(Ljava/util/List;)Ljava/util/List;
-
-    .line 961
-    move-result-object v7
-
-    .line 964
-    iget-object v8, v6, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->volatileRepository:Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository;
-
-    .line 965
-    invoke-virtual {v8, v5, v7}, Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository;->addBubbles(ILjava/util/List;)V
-
-    .line 967
-    invoke-interface {v7}, Ljava/util/Collection;->isEmpty()Z
-
-    .line 970
-    move-result v5
-
-    .line 973
-    xor-int/2addr v5, v4
-
-    .line 974
+    .line 903
     if-eqz v5, :cond_29
 
-    .line 975
-    invoke-static {v6}, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->persistToDisk$default(Lcom/android/wm/shell/bubbles/BubbleDataRepository;)V
-
-    .line 977
-    :cond_29
+    .line 905
     iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 980
+    .line 907
     check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 982
+    .line 909
+    iget-object v6, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mDataRepository:Lcom/android/wm/shell/bubbles/BubbleDataRepository;
+
+    .line 911
+    iget v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mCurrentUserId:I
+
+    .line 913
+    iget-object v7, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->bubbles:Ljava/util/List;
+
+    .line 915
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 917
+    invoke-static {v7}, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->transform(Ljava/util/List;)Ljava/util/List;
+
+    .line 920
+    move-result-object v7
+
+    .line 923
+    iget-object v8, v6, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->volatileRepository:Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository;
+
+    .line 924
+    invoke-virtual {v8, v5, v7}, Lcom/android/wm/shell/bubbles/storage/BubbleVolatileRepository;->addBubbles(ILjava/util/List;)V
+
+    .line 926
+    invoke-interface {v7}, Ljava/util/Collection;->isEmpty()Z
+
+    .line 929
+    move-result v5
+
+    .line 932
+    xor-int/2addr v5, v4
+
+    .line 933
+    if-eqz v5, :cond_27
+
+    .line 934
+    invoke-static {v6}, Lcom/android/wm/shell/bubbles/BubbleDataRepository;->persistToDisk$default(Lcom/android/wm/shell/bubbles/BubbleDataRepository;)V
+
+    .line 936
+    :cond_27
+    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
+
+    .line 939
+    check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
+
+    .line 941
     iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleViewCallback:Lcom/android/wm/shell/bubbles/BubbleController$8;
 
-    .line 984
+    .line 943
     iget-object v6, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->bubbles:Ljava/util/List;
 
-    .line 986
+    .line 945
     xor-int/lit8 v7, v2, 0x1
 
-    .line 988
+    .line 947
     iget v8, v5, Lcom/android/wm/shell/bubbles/BubbleController$8;->$r8$classId:I
 
-    .line 990
+    .line 949
     packed-switch v8, :pswitch_data_4
 
-    .line 992
+    .line 951
     goto :goto_10
 
-    .line 995
+    .line 954
     :pswitch_4
     iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 996
+    .line 955
     check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 998
+    .line 957
     iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 1000
-    if-eqz v5, :cond_2b
+    .line 959
+    if-eqz v5, :cond_29
 
-    .line 1002
+    .line 961
     iget-boolean v8, v5, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsGestureInProgress:Z
 
-    .line 1004
-    if-eqz v8, :cond_2a
+    .line 963
+    if-eqz v8, :cond_28
 
-    .line 1006
+    .line 965
     const/4 v6, 0x1
 
-    .line 1008
+    .line 967
     iput-boolean v6, v5, Lcom/android/wm/shell/bubbles/BubbleStackView;->mShouldReorderBubblesAfterGestureCompletes:Z
 
-    .line 1009
+    .line 968
     goto :goto_10
 
-    .line 1011
-    :cond_2a
+    .line 970
+    :cond_28
     invoke-virtual {v5, v6, v7}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateBubbleOrderInternal(Ljava/util/List;Z)V
 
-    .line 1012
-    :cond_2b
+    .line 971
+    :cond_29
     :goto_10
-    if-eqz v2, :cond_2c
+    if-eqz v2, :cond_2a
 
-    .line 1015
+    .line 974
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1017
+    .line 976
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1019
+    .line 978
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleViewCallback:Lcom/android/wm/shell/bubbles/BubbleController$8;
 
-    .line 1021
+    .line 980
     invoke-virtual {v2, v3}, Lcom/android/wm/shell/bubbles/BubbleController$8;->expansionChanged(Z)V
 
-    .line 1023
+    .line 982
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1026
+    .line 985
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1028
+    .line 987
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
 
-    .line 1030
+    .line 989
     iget-object v5, v2, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
 
-    .line 1032
-    new-instance v6, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda8;
+    .line 991
+    new-instance v6, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda9;
 
-    .line 1034
-    invoke-direct {v6, v2, v3}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Z)V
+    .line 993
+    invoke-direct {v6, v2, v3}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda9;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Z)V
 
-    .line 1036
+    .line 995
     invoke-interface {v5, v6}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 1039
-    :cond_2c
+    .line 998
+    :cond_2a
     iget-boolean v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->selectionChanged:Z
 
-    .line 1042
-    if-eqz v2, :cond_2d
+    .line 1001
+    if-eqz v2, :cond_2b
 
-    .line 1044
+    .line 1003
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1046
+    .line 1005
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1048
+    .line 1007
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleViewCallback:Lcom/android/wm/shell/bubbles/BubbleController$8;
 
-    .line 1050
+    .line 1009
     iget-object v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->selectedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
 
-    .line 1052
+    .line 1011
     iget v6, v2, Lcom/android/wm/shell/bubbles/BubbleController$8;->$r8$classId:I
 
-    .line 1054
+    .line 1013
     packed-switch v6, :pswitch_data_5
 
-    .line 1056
+    .line 1015
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1059
+    .line 1018
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1061
+    .line 1020
     iget-object v6, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mLayerView:Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;
 
-    .line 1063
-    if-eqz v6, :cond_2d
+    .line 1022
+    if-eqz v6, :cond_2b
 
-    .line 1065
+    .line 1024
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
 
-    .line 1067
+    .line 1026
     iget-boolean v2, v2, Lcom/android/wm/shell/bubbles/BubbleData;->mExpanded:Z
 
-    .line 1069
-    if-eqz v2, :cond_2d
+    .line 1028
+    if-eqz v2, :cond_2b
 
-    .line 1071
+    .line 1030
     invoke-virtual {v6, v5}, Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;->showExpandedView(Lcom/android/wm/shell/bubbles/BubbleViewProvider;)V
 
-    .line 1073
+    .line 1032
     goto :goto_11
 
-    .line 1076
+    .line 1035
     :pswitch_5
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1077
+    .line 1036
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1079
+    .line 1038
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 1081
-    if-eqz v2, :cond_2d
+    .line 1040
+    if-eqz v2, :cond_2b
 
-    .line 1083
+    .line 1042
     invoke-virtual {v2, v5}, Lcom/android/wm/shell/bubbles/BubbleStackView;->setSelectedBubble(Lcom/android/wm/shell/bubbles/BubbleViewProvider;)V
 
-    .line 1085
-    :cond_2d
+    .line 1044
+    :cond_2b
     :goto_11
     iget-boolean v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->expandedChanged:Z
 
-    .line 1088
-    if-eqz v2, :cond_2e
+    .line 1047
+    if-eqz v2, :cond_2c
 
-    .line 1090
+    .line 1049
     iget-boolean v2, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->expanded:Z
 
-    .line 1092
-    if-eqz v2, :cond_2e
+    .line 1051
+    if-eqz v2, :cond_2c
 
-    .line 1094
+    .line 1053
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1096
+    .line 1055
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1098
+    .line 1057
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleViewCallback:Lcom/android/wm/shell/bubbles/BubbleController$8;
 
-    .line 1100
+    .line 1059
     invoke-virtual {v2, v4}, Lcom/android/wm/shell/bubbles/BubbleController$8;->expansionChanged(Z)V
 
-    .line 1102
+    .line 1061
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1105
+    .line 1064
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1107
+    .line 1066
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
 
-    .line 1109
+    .line 1068
     iget-object v5, v2, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
 
-    .line 1111
-    new-instance v6, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda8;
+    .line 1070
+    new-instance v6, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda9;
 
-    .line 1113
-    invoke-direct {v6, v2, v4}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Z)V
+    .line 1072
+    invoke-direct {v6, v2, v4}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda9;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Z)V
 
-    .line 1115
+    .line 1074
     invoke-interface {v5, v6}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 1118
-    :cond_2e
+    .line 1077
+    :cond_2c
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1121
+    .line 1080
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1123
+    .line 1082
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
 
-    .line 1125
+    .line 1084
     const-string v5, "BubbleData.Listener.applyUpdate"
 
-    .line 1127
+    .line 1086
     iget-object v6, v2, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
 
-    .line 1129
-    new-instance v7, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda1;
+    .line 1088
+    new-instance v7, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda2;
 
-    .line 1131
+    .line 1090
     const/4 v8, 0x1
 
-    .line 1133
-    invoke-direct {v7, v2, v5, v8}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Ljava/lang/Object;I)V
+    .line 1092
+    invoke-direct {v7, v2, v5, v8}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Ljava/lang/Object;I)V
 
-    .line 1134
+    .line 1093
     invoke-interface {v6, v7}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 1137
+    .line 1096
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1140
+    .line 1099
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1142
+    .line 1101
     invoke-virtual {v2}, Lcom/android/wm/shell/bubbles/BubbleController;->updateBubbleViews()V
 
-    .line 1144
+    .line 1103
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1147
+    .line 1106
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1149
+    .line 1108
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController;->mImpl:Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl;
 
-    .line 1151
+    .line 1110
     iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl;->mCachedState:Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;
 
-    .line 1153
+    .line 1112
     monitor-enter v2
 
-    .line 1155
+    .line 1114
     :try_start_1
     iget-boolean v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->selectionChanged:Z
 
-    .line 1156
+    .line 1115
     const/4 v6, 0x0
 
-    .line 1158
-    if-eqz v5, :cond_30
+    .line 1117
+    if-eqz v5, :cond_2e
 
-    .line 1159
+    .line 1118
     iget-object v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->selectedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
 
-    .line 1161
-    if-eqz v5, :cond_2f
+    .line 1120
+    if-eqz v5, :cond_2d
 
-    .line 1163
+    .line 1122
     invoke-interface {v5}, Lcom/android/wm/shell/bubbles/BubbleViewProvider;->getKey()Ljava/lang/String;
 
-    .line 1165
+    .line 1124
     move-result-object v5
 
-    .line 1168
+    .line 1127
     goto :goto_12
 
-    .line 1169
+    .line 1128
     :catchall_1
     move-exception v0
 
-    .line 1170
+    .line 1129
     goto/16 :goto_1c
 
-    .line 1171
-    :cond_2f
+    .line 1130
+    :cond_2d
     move-object v5, v6
 
-    .line 1173
+    .line 1132
     :goto_12
     iput-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mSelectedBubbleKey:Ljava/lang/String;
 
-    .line 1174
-    :cond_30
+    .line 1133
+    :cond_2e
     iget-boolean v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->expandedChanged:Z
 
-    .line 1176
-    if-eqz v5, :cond_31
+    .line 1135
+    if-eqz v5, :cond_2f
 
-    .line 1178
+    .line 1137
     iget-boolean v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->expanded:Z
 
-    .line 1180
+    .line 1139
     iput-boolean v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mIsStackExpanded:Z
 
-    .line 1182
-    :cond_31
+    .line 1141
+    :cond_2f
     iget-boolean v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->suppressedSummaryChanged:Z
 
-    .line 1184
-    if-eqz v5, :cond_33
+    .line 1143
+    if-eqz v5, :cond_31
 
-    .line 1186
+    .line 1145
     iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->this$1:Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl;
 
-    .line 1188
+    .line 1147
     iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl;->this$0:Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1190
+    .line 1149
     iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
 
-    .line 1192
+    .line 1151
     iget-object v7, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->suppressedSummaryGroup:Ljava/lang/String;
 
-    .line 1194
+    .line 1153
     iget-object v5, v5, Lcom/android/wm/shell/bubbles/BubbleData;->mSuppressedGroupKeys:Ljava/util/HashMap;
 
-    .line 1196
+    .line 1155
     invoke-virtual {v5, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1198
+    .line 1157
     move-result-object v5
 
-    .line 1201
+    .line 1160
     check-cast v5, Ljava/lang/String;
 
-    .line 1202
-    if-eqz v5, :cond_32
+    .line 1161
+    if-eqz v5, :cond_30
 
-    .line 1204
+    .line 1163
     iget-object v7, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mSuppressedGroupToNotifKeys:Ljava/util/HashMap;
 
-    .line 1206
+    .line 1165
     iget-object v8, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->suppressedSummaryGroup:Ljava/lang/String;
 
-    .line 1208
+    .line 1167
     invoke-virtual {v7, v8, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1210
+    .line 1169
     goto :goto_13
 
-    .line 1213
-    :cond_32
+    .line 1172
+    :cond_30
     iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mSuppressedGroupToNotifKeys:Ljava/util/HashMap;
 
-    .line 1214
+    .line 1173
     iget-object v7, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->suppressedSummaryGroup:Ljava/lang/String;
 
-    .line 1216
+    .line 1175
     invoke-virtual {v5, v7}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1218
-    :cond_33
+    .line 1177
+    :cond_31
     :goto_13
     iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mTmpBubbles:Ljava/util/ArrayList;
 
-    .line 1221
+    .line 1180
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 1223
+    .line 1182
     iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mTmpBubbles:Ljava/util/ArrayList;
 
-    .line 1226
+    .line 1185
     iget-object v7, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->bubbles:Ljava/util/List;
 
-    .line 1228
+    .line 1187
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1230
+    .line 1189
     iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mTmpBubbles:Ljava/util/ArrayList;
 
-    .line 1233
+    .line 1192
     iget-object v7, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->overflowBubbles:Ljava/util/List;
 
-    .line 1235
+    .line 1194
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1237
+    .line 1196
     iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mSuppressedBubbleKeys:Ljava/util/HashSet;
 
-    .line 1240
+    .line 1199
     invoke-virtual {v5}, Ljava/util/HashSet;->clear()V
 
-    .line 1242
+    .line 1201
     iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mShortcutIdToBubble:Ljava/util/HashMap;
 
-    .line 1245
+    .line 1204
     invoke-virtual {v5}, Ljava/util/HashMap;->clear()V
 
-    .line 1247
+    .line 1206
     iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mAppBubbleTaskIds:Ljava/util/HashMap;
 
-    .line 1250
+    .line 1209
     invoke-virtual {v5}, Ljava/util/HashMap;->clear()V
 
-    .line 1252
+    .line 1211
     iget-object v5, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mTmpBubbles:Ljava/util/ArrayList;
 
-    .line 1255
+    .line 1214
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 1257
+    .line 1216
     move-result-object v5
 
-    .line 1260
-    :cond_34
+    .line 1219
+    :cond_32
     :goto_14
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 1261
+    .line 1220
     move-result v7
 
-    .line 1264
-    if-eqz v7, :cond_36
+    .line 1223
+    if-eqz v7, :cond_34
 
-    .line 1265
+    .line 1224
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 1267
+    .line 1226
     move-result-object v7
 
-    .line 1270
+    .line 1229
     check-cast v7, Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 1271
+    .line 1230
     iget-object v8, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mShortcutIdToBubble:Ljava/util/HashMap;
 
-    .line 1273
+    .line 1232
     iget-object v9, v7, Lcom/android/wm/shell/bubbles/Bubble;->mShortcutInfo:Landroid/content/pm/ShortcutInfo;
 
-    .line 1275
-    if-eqz v9, :cond_35
+    .line 1234
+    if-eqz v9, :cond_33
 
-    .line 1277
+    .line 1236
     invoke-virtual {v9}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
-    .line 1279
+    .line 1238
     move-result-object v9
 
-    .line 1282
+    .line 1241
     goto :goto_15
 
-    .line 1283
-    :cond_35
+    .line 1242
+    :cond_33
     iget-object v9, v7, Lcom/android/wm/shell/bubbles/Bubble;->mMetadataShortcutId:Ljava/lang/String;
 
-    .line 1284
+    .line 1243
     :goto_15
     invoke-virtual {v8, v9, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1286
+    .line 1245
     invoke-virtual {v2, v7}, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->updateBubbleSuppressedState(Lcom/android/wm/shell/bubbles/Bubble;)V
 
-    .line 1289
+    .line 1248
     iget-boolean v8, v7, Lcom/android/wm/shell/bubbles/Bubble;->mIsAppBubble:Z
 
-    .line 1292
-    if-eqz v8, :cond_34
+    .line 1251
+    if-eqz v8, :cond_32
 
-    .line 1294
+    .line 1253
     iget-object v8, v2, Lcom/android/wm/shell/bubbles/BubbleController$BubblesImpl$CachedState;->mAppBubbleTaskIds:Ljava/util/HashMap;
 
-    .line 1296
+    .line 1255
     iget-object v9, v7, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
 
-    .line 1298
+    .line 1257
     invoke-virtual {v7}, Lcom/android/wm/shell/bubbles/Bubble;->getTaskId()I
 
-    .line 1300
+    .line 1259
     move-result v7
 
-    .line 1303
+    .line 1262
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 1304
+    .line 1263
     move-result-object v7
 
-    .line 1307
+    .line 1266
     invoke-virtual {v8, v9, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1308
+    .line 1267
     goto :goto_14
 
-    .line 1311
-    :cond_36
+    .line 1270
+    :cond_34
     monitor-exit v2
 
-    .line 1312
+    .line 1271
     iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1313
+    .line 1272
     check-cast v2, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1315
+    .line 1274
     invoke-virtual {v2}, Lcom/android/wm/shell/bubbles/BubbleController;->isShowingAsBubbleBar()Z
 
-    .line 1317
+    .line 1276
     move-result v2
 
-    .line 1320
-    if-eqz v2, :cond_40
+    .line 1279
+    if-eqz v2, :cond_3e
 
-    .line 1321
+    .line 1280
     new-instance v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;
 
-    .line 1323
+    .line 1282
     invoke-direct {v2, v3}, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;-><init>(Z)V
 
-    .line 1325
+    .line 1284
     iget-boolean v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->expandedChanged:Z
 
-    .line 1328
+    .line 1287
     iput-boolean v5, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->expandedChanged:Z
 
-    .line 1330
+    .line 1289
     iget-boolean v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->expanded:Z
 
-    .line 1332
+    .line 1291
     iput-boolean v5, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->expanded:Z
 
-    .line 1334
+    .line 1293
     iget-boolean v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->shouldShowEducation:Z
 
-    .line 1336
+    .line 1295
     iput-boolean v5, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->shouldShowEducation:Z
 
-    .line 1338
+    .line 1297
     iget-boolean v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->selectionChanged:Z
 
-    .line 1340
-    if-eqz v5, :cond_38
+    .line 1299
+    if-eqz v5, :cond_36
 
-    .line 1342
+    .line 1301
     iget-object v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->selectedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
 
-    .line 1344
-    if-eqz v5, :cond_37
+    .line 1303
+    if-eqz v5, :cond_35
 
-    .line 1346
+    .line 1305
     invoke-interface {v5}, Lcom/android/wm/shell/bubbles/BubbleViewProvider;->getKey()Ljava/lang/String;
 
-    .line 1348
+    .line 1307
     move-result-object v5
 
-    .line 1351
+    .line 1310
     goto :goto_16
 
-    .line 1352
-    :cond_37
+    .line 1311
+    :cond_35
     move-object v5, v6
 
-    .line 1353
+    .line 1312
     :goto_16
     iput-object v5, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->selectedBubbleKey:Ljava/lang/String;
 
-    .line 1354
-    :cond_38
+    .line 1313
+    :cond_36
     iget-object v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->addedBubble:Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 1356
-    if-eqz v5, :cond_39
+    .line 1315
+    if-eqz v5, :cond_37
 
-    .line 1358
+    .line 1317
     invoke-virtual {v5}, Lcom/android/wm/shell/bubbles/Bubble;->asBubbleBarBubble()Lcom/android/wm/shell/common/bubbles/BubbleInfo;
 
-    .line 1360
+    .line 1319
     move-result-object v5
 
-    .line 1363
+    .line 1322
     goto :goto_17
 
-    .line 1364
-    :cond_39
+    .line 1323
+    :cond_37
     move-object v5, v6
 
-    .line 1365
+    .line 1324
     :goto_17
     iput-object v5, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->addedBubble:Lcom/android/wm/shell/common/bubbles/BubbleInfo;
 
-    .line 1366
+    .line 1325
     iget-object v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->updatedBubble:Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 1368
-    if-eqz v5, :cond_3a
+    .line 1327
+    if-eqz v5, :cond_38
 
-    .line 1370
+    .line 1329
     invoke-virtual {v5}, Lcom/android/wm/shell/bubbles/Bubble;->asBubbleBarBubble()Lcom/android/wm/shell/common/bubbles/BubbleInfo;
 
-    .line 1372
+    .line 1331
     move-result-object v5
 
-    .line 1375
+    .line 1334
     goto :goto_18
 
-    .line 1376
-    :cond_3a
+    .line 1335
+    :cond_38
     move-object v5, v6
 
-    .line 1377
+    .line 1336
     :goto_18
     iput-object v5, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->updatedBubble:Lcom/android/wm/shell/common/bubbles/BubbleInfo;
 
-    .line 1378
+    .line 1337
     iget-object v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->suppressedBubble:Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 1380
-    if-eqz v5, :cond_3b
+    .line 1339
+    if-eqz v5, :cond_39
 
-    .line 1382
+    .line 1341
     iget-object v5, v5, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
 
-    .line 1384
+    .line 1343
     goto :goto_19
 
-    .line 1386
-    :cond_3b
+    .line 1345
+    :cond_39
     move-object v5, v6
 
-    .line 1387
+    .line 1346
     :goto_19
     iput-object v5, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->suppressedBubbleKey:Ljava/lang/String;
 
-    .line 1388
+    .line 1347
     iget-object v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->unsuppressedBubble:Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 1390
-    if-eqz v5, :cond_3c
+    .line 1349
+    if-eqz v5, :cond_3a
 
-    .line 1392
+    .line 1351
     iget-object v6, v5, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
 
-    .line 1394
-    :cond_3c
+    .line 1353
+    :cond_3a
     iput-object v6, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->unsupressedBubbleKey:Ljava/lang/String;
 
-    .line 1396
+    .line 1355
     move v5, v3
 
-    .line 1398
+    .line 1357
     :goto_1a
     iget-object v6, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->removedBubbles:Ljava/util/List;
 
-    .line 1399
+    .line 1358
     check-cast v6, Ljava/util/ArrayList;
 
-    .line 1401
+    .line 1360
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
-    .line 1403
+    .line 1362
     move-result v6
 
-    .line 1406
-    if-ge v5, v6, :cond_3d
+    .line 1365
+    if-ge v5, v6, :cond_3b
 
-    .line 1407
+    .line 1366
     iget-object v6, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->removedBubbles:Ljava/util/List;
 
-    .line 1409
+    .line 1368
     check-cast v6, Ljava/util/ArrayList;
 
-    .line 1411
+    .line 1370
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 1413
+    .line 1372
     move-result-object v6
 
-    .line 1416
+    .line 1375
     check-cast v6, Landroid/util/Pair;
 
-    .line 1417
+    .line 1376
     iget-object v7, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->removedBubbles:Ljava/util/List;
 
-    .line 1419
+    .line 1378
     new-instance v8, Lcom/android/wm/shell/common/bubbles/RemovedBubble;
 
-    .line 1421
+    .line 1380
     iget-object v9, v6, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    .line 1423
+    .line 1382
     check-cast v9, Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 1425
+    .line 1384
     iget-object v9, v9, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
 
-    .line 1427
+    .line 1386
     iget-object v6, v6, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    .line 1429
+    .line 1388
     check-cast v6, Ljava/lang/Integer;
 
-    .line 1431
+    .line 1390
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
-    .line 1433
+    .line 1392
     move-result v6
 
-    .line 1436
+    .line 1395
     invoke-direct {v8, v6, v9}, Lcom/android/wm/shell/common/bubbles/RemovedBubble;-><init>(ILjava/lang/String;)V
 
-    .line 1437
+    .line 1396
     invoke-interface {v7, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1440
+    .line 1399
     add-int/lit8 v5, v5, 0x1
 
-    .line 1443
+    .line 1402
     goto :goto_1a
 
-    .line 1445
-    :cond_3d
+    .line 1404
+    :cond_3b
     iget-boolean v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->orderChanged:Z
 
-    .line 1446
-    if-eqz v5, :cond_3e
+    .line 1405
+    if-eqz v5, :cond_3c
 
-    .line 1448
+    .line 1407
     :goto_1b
     iget-object v5, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->bubbles:Ljava/util/List;
 
-    .line 1450
+    .line 1409
     invoke-interface {v5}, Ljava/util/List;->size()I
 
-    .line 1452
+    .line 1411
     move-result v5
 
-    .line 1455
-    if-ge v3, v5, :cond_3e
+    .line 1414
+    if-ge v3, v5, :cond_3c
 
-    .line 1456
+    .line 1415
     iget-object v5, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->bubbleKeysInOrder:Ljava/util/List;
 
-    .line 1458
+    .line 1417
     iget-object v6, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->bubbles:Ljava/util/List;
 
-    .line 1460
+    .line 1419
     invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 1462
+    .line 1421
     move-result-object v6
 
-    .line 1465
+    .line 1424
     check-cast v6, Lcom/android/wm/shell/bubbles/Bubble;
 
-    .line 1466
+    .line 1425
     iget-object v6, v6, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
 
-    .line 1468
+    .line 1427
     invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1470
+    .line 1429
     add-int/lit8 v3, v3, 0x1
 
-    .line 1473
+    .line 1432
     goto :goto_1b
 
-    .line 1475
-    :cond_3e
+    .line 1434
+    :cond_3c
     iget-boolean v3, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->showOverflowChanged:Z
 
-    .line 1476
+    .line 1435
     iput-boolean v3, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->showOverflowChanged:Z
 
-    .line 1478
+    .line 1437
     iget-object v1, v1, Lcom/android/wm/shell/bubbles/BubbleData$Update;->overflowBubbles:Ljava/util/List;
 
-    .line 1480
+    .line 1439
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
-    .line 1482
+    .line 1441
     move-result v1
 
-    .line 1485
+    .line 1444
     xor-int/2addr v1, v4
 
-    .line 1486
+    .line 1445
     iput-boolean v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->showOverflow:Z
 
-    .line 1487
+    .line 1446
     iget-boolean v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->expandedChanged:Z
 
-    .line 1489
-    if-nez v1, :cond_3f
+    .line 1448
+    if-nez v1, :cond_3d
 
-    .line 1491
+    .line 1450
     iget-object v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->selectedBubbleKey:Ljava/lang/String;
 
-    .line 1493
-    if-nez v1, :cond_3f
+    .line 1452
+    if-nez v1, :cond_3d
 
-    .line 1495
+    .line 1454
     iget-object v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->addedBubble:Lcom/android/wm/shell/common/bubbles/BubbleInfo;
 
-    .line 1497
-    if-nez v1, :cond_3f
+    .line 1456
+    if-nez v1, :cond_3d
 
-    .line 1499
+    .line 1458
     iget-object v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->updatedBubble:Lcom/android/wm/shell/common/bubbles/BubbleInfo;
 
-    .line 1501
-    if-nez v1, :cond_3f
+    .line 1460
+    if-nez v1, :cond_3d
 
-    .line 1503
+    .line 1462
     iget-object v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->removedBubbles:Ljava/util/List;
 
-    .line 1505
+    .line 1464
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
-    .line 1507
+    .line 1466
     move-result v1
 
-    .line 1510
-    if-eqz v1, :cond_3f
+    .line 1469
+    if-eqz v1, :cond_3d
 
-    .line 1511
+    .line 1470
     iget-object v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->bubbleKeysInOrder:Ljava/util/List;
 
-    .line 1513
+    .line 1472
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
-    .line 1515
+    .line 1474
     move-result v1
 
-    .line 1518
-    if-eqz v1, :cond_3f
+    .line 1477
+    if-eqz v1, :cond_3d
 
-    .line 1519
+    .line 1478
     iget-object v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->suppressedBubbleKey:Ljava/lang/String;
 
-    .line 1521
-    if-nez v1, :cond_3f
+    .line 1480
+    if-nez v1, :cond_3d
 
-    .line 1523
+    .line 1482
     iget-object v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->unsupressedBubbleKey:Ljava/lang/String;
 
-    .line 1525
-    if-nez v1, :cond_3f
+    .line 1484
+    if-nez v1, :cond_3d
 
-    .line 1527
+    .line 1486
     iget-object v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->currentBubbleList:Ljava/util/List;
 
-    .line 1529
+    .line 1488
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
-    .line 1531
+    .line 1490
     move-result v1
 
-    .line 1534
-    if-eqz v1, :cond_3f
+    .line 1493
+    if-eqz v1, :cond_3d
 
-    .line 1535
+    .line 1494
     iget-object v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->bubbleBarLocation:Lcom/android/wm/shell/common/bubbles/BubbleBarLocation;
 
-    .line 1537
-    if-nez v1, :cond_3f
+    .line 1496
+    if-nez v1, :cond_3d
 
-    .line 1539
+    .line 1498
     iget-boolean v1, v2, Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;->showOverflowChanged:Z
 
-    .line 1541
-    if-eqz v1, :cond_40
+    .line 1500
+    if-eqz v1, :cond_3e
 
-    .line 1543
-    :cond_3f
+    .line 1502
+    :cond_3d
     iget-object v0, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
-    .line 1545
+    .line 1504
     check-cast v0, Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 1547
+    .line 1506
     iget-object v0, v0, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleStateListener:Lcom/android/wm/shell/bubbles/BubbleController$8;
 
-    .line 1549
+    .line 1508
     invoke-virtual {v0, v2}, Lcom/android/wm/shell/bubbles/BubbleController$8;->onBubbleStateChange(Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;)V
 
-    .line 1551
-    :cond_40
+    .line 1510
+    :cond_3e
     return-void
 
-    .line 1554
+    .line 1513
     :goto_1c
     monitor-exit v2
 
-    .line 1555
+    .line 1514
     throw v0
 
-    .line 1556
+    .line 1515
     :goto_1d
     monitor-exit v7
 
-    .line 1557
+    .line 1516
     throw v0
 
-    .line 1558
-    nop
-
-    .line 1559
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 
-    .line 1560
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_1
     .end packed-switch
 
-    .line 1566
     :pswitch_data_2
     .packed-switch 0x0
         :pswitch_2
     .end packed-switch
 
-    .line 1572
     :pswitch_data_3
     .packed-switch 0x0
         :pswitch_3
     .end packed-switch
 
-    .line 1578
     :pswitch_data_4
     .packed-switch 0x0
         :pswitch_4
     .end packed-switch
 
-    .line 1584
     :pswitch_data_5
     .packed-switch 0x0
         :pswitch_5
     .end packed-switch
-    .line 1590
 .end method
 
 .method public expansionChanged(Z)V
-    .locals 21
+    .locals 22
 
     .line 1
     move-object/from16 v0, p0
@@ -2534,362 +2456,362 @@
     move/from16 v1, p1
 
     .line 4
-    const/4 v3, 0x0
+    const/16 v3, 0xf
 
     .line 6
-    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    .line 7
-    const/4 v5, 0x0
+    .line 8
+    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->this$0:Ljava/lang/Object;
 
     .line 9
-    const/4 v6, 0x1
-
-    .line 10
-    iget v0, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->$r8$classId:I
+    const/4 v6, 0x0
 
     .line 11
-    packed-switch v0, :pswitch_data_0
+    const/4 v7, 0x1
+
+    .line 12
+    iget v0, v0, Lcom/android/wm/shell/bubbles/BubbleController$8;->$r8$classId:I
 
     .line 13
-    check-cast v4, Lcom/android/wm/shell/bubbles/BubbleController;
+    packed-switch v0, :pswitch_data_0
 
-    .line 16
-    iget-object v0, v4, Lcom/android/wm/shell/bubbles/BubbleController;->mLayerView:Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;
+    .line 15
+    check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
 
     .line 18
-    if-eqz v0, :cond_1
+    iget-object v0, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mLayerView:Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;
 
     .line 20
-    if-nez v1, :cond_0
+    if-eqz v0, :cond_1
 
     .line 22
-    invoke-virtual {v0, v3}, Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;->collapse(Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView$$ExternalSyntheticLambda6;)V
+    if-nez v1, :cond_0
 
     .line 24
+    invoke-virtual {v0, v4}, Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;->collapse(Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView$$ExternalSyntheticLambda6;)V
+
+    .line 26
     goto :goto_0
 
-    .line 27
+    .line 29
     :cond_0
-    iget-object v1, v4, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
-
-    .line 28
-    iget-object v1, v1, Lcom/android/wm/shell/bubbles/BubbleData;->mSelectedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
+    iget-object v1, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
 
     .line 30
-    if-eqz v1, :cond_1
+    iget-object v1, v1, Lcom/android/wm/shell/bubbles/BubbleData;->mSelectedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
 
     .line 32
-    invoke-virtual {v0, v1}, Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;->showExpandedView(Lcom/android/wm/shell/bubbles/BubbleViewProvider;)V
+    if-eqz v1, :cond_1
 
     .line 34
+    invoke-virtual {v0, v1}, Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;->showExpandedView(Lcom/android/wm/shell/bubbles/BubbleViewProvider;)V
+
+    .line 36
     :cond_1
     :goto_0
     return-void
 
-    .line 37
+    .line 39
     :pswitch_0
-    check-cast v4, Lcom/android/wm/shell/bubbles/BubbleController;
-
-    .line 38
-    iget-object v0, v4, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
+    check-cast v5, Lcom/android/wm/shell/bubbles/BubbleController;
 
     .line 40
-    if-eqz v0, :cond_23
+    iget-object v0, v5, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
     .line 42
-    if-nez v1, :cond_2
+    if-eqz v0, :cond_20
 
     .line 44
-    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->releaseAnimatingOutBubbleBuffer()V
+    if-nez v1, :cond_2
 
     .line 46
-    :cond_2
-    iget-boolean v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
+    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->releaseAnimatingOutBubbleBuffer()V
 
-    .line 49
-    if-ne v1, v4, :cond_3
+    .line 48
+    :cond_2
+    iget-boolean v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
 
     .line 51
-    goto/16 :goto_13
+    if-ne v1, v5, :cond_3
 
     .line 53
-    :cond_3
-    iget-object v7, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mManager:Lcom/android/wm/shell/bubbles/BubbleStackViewManager$Companion$fromBubbleController$1;
+    goto/16 :goto_10
 
     .line 55
-    iget-object v7, v7, Lcom/android/wm/shell/bubbles/BubbleStackViewManager$Companion$fromBubbleController$1;->$controller:Lcom/android/wm/shell/bubbles/BubbleController;
+    :cond_3
+    iget-object v8, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mManager:Lcom/android/wm/shell/bubbles/BubbleStackViewManager$Companion$fromBubbleController$1;
 
     .line 57
-    invoke-virtual {v7}, Lcom/android/wm/shell/bubbles/BubbleController;->hideCurrentInputMethod()V
+    iget-object v8, v8, Lcom/android/wm/shell/bubbles/BubbleStackViewManager$Companion$fromBubbleController$1;->$controller:Lcom/android/wm/shell/bubbles/BubbleController;
 
     .line 59
-    iget-object v7, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mSysuiProxyProvider:Lcom/android/wm/shell/bubbles/BubbleController;
+    invoke-virtual {v8}, Lcom/android/wm/shell/bubbles/BubbleController;->hideCurrentInputMethod()V
 
-    .line 62
-    iget-object v7, v7, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
+    .line 61
+    iget-object v8, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mSysuiProxyProvider:Lcom/android/wm/shell/bubbles/BubbleController;
 
     .line 64
-    iget-object v8, v7, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
+    iget-object v8, v8, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
 
     .line 66
-    new-instance v9, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda8;
+    iget-object v9, v8, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
 
     .line 68
-    iget-object v10, v7, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysUiState:Lcom/android/systemui/model/SysUiState;
+    new-instance v10, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda9;
 
     .line 70
-    invoke-direct {v9, v7, v10, v1, v6}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Lcom/android/systemui/model/SysUiState;ZI)V
+    iget-object v11, v8, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysUiState:Lcom/android/systemui/model/SysUiState;
 
     .line 72
-    invoke-interface {v8, v9}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-direct {v10, v8, v11, v1, v7}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda9;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Lcom/android/systemui/model/SysUiState;ZI)V
 
-    .line 75
+    .line 74
+    invoke-interface {v9, v10}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 77
     const/4 v1, 0x0
 
-    .line 78
-    if-eqz v4, :cond_f
-
-    .line 79
-    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->stopMonitoringSwipeUpGestureInternal()V
+    .line 80
+    if-eqz v5, :cond_f
 
     .line 81
-    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
+    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->stopMonitoringSwipeUpGestureInternal()V
 
-    .line 84
-    iget-object v7, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mDelayedAnimation:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda47;
+    .line 83
+    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
 
     .line 86
-    check-cast v4, Lcom/android/wm/shell/common/HandlerExecutor;
+    iget-object v8, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mDelayedAnimation:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda55;
 
     .line 88
-    invoke-virtual {v4, v7}, Lcom/android/wm/shell/common/HandlerExecutor;->removeCallbacks(Ljava/lang/Runnable;)V
+    check-cast v5, Lcom/android/wm/shell/common/HandlerExecutor;
 
     .line 90
-    iput-boolean v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpansionAnimating:Z
+    invoke-virtual {v5, v8}, Lcom/android/wm/shell/common/HandlerExecutor;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 93
-    iput-boolean v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsBubbleSwitchAnimating:Z
+    .line 92
+    iput-boolean v6, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpansionAnimating:Z
 
     .line 95
-    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BUBBLES_enabled:[Z
+    iput-boolean v6, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsBubbleSwitchAnimating:Z
 
     .line 97
-    aget-boolean v4, v4, v5
+    sget-object v5, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BUBBLES_enabled:[Z
 
     .line 99
-    if-eqz v4, :cond_4
+    aget-boolean v5, v5, v6
 
     .line 101
-    sget-object v7, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_BUBBLES:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
+    if-eqz v5, :cond_4
 
     .line 103
-    const-wide v8, 0xb48f89a16a533e9L
+    sget-object v8, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_BUBBLES:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
     .line 105
-    const/4 v10, 0x0
+    const-wide v9, 0xb48f89a16a533e9L
 
-    .line 110
+    .line 107
     const/4 v11, 0x0
 
-    .line 111
+    .line 112
     const/4 v12, 0x0
 
-    .line 112
-    invoke-static/range {v7 .. v12}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
-
     .line 113
+    const/4 v13, 0x0
+
+    .line 114
+    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+
+    .line 115
     :cond_4
     invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->isManageEduVisible()Z
 
-    .line 116
-    move-result v4
+    .line 118
+    move-result v5
 
-    .line 119
-    if-eqz v4, :cond_5
-
-    .line 120
-    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mManageEduView:Lcom/android/wm/shell/bubbles/ManageEducationView;
+    .line 121
+    if-eqz v5, :cond_5
 
     .line 122
-    invoke-virtual {v4}, Lcom/android/wm/shell/bubbles/ManageEducationView;->hide()V
+    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mManageEduView:Lcom/android/wm/shell/bubbles/ManageEducationView;
 
     .line 124
-    :cond_5
-    iput-boolean v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
+    invoke-virtual {v5}, Lcom/android/wm/shell/bubbles/ManageEducationView;->hide()V
 
-    .line 127
-    iput-boolean v6, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpansionAnimating:Z
+    .line 126
+    :cond_5
+    iput-boolean v6, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
 
     .line 129
-    iget-boolean v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mRemovingLastBubbleWhileExpanded:Z
+    iput-boolean v7, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpansionAnimating:Z
 
     .line 131
-    if-nez v4, :cond_6
+    iget-boolean v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mRemovingLastBubbleWhileExpanded:Z
 
     .line 133
-    invoke-virtual {v0, v5, v3}, Lcom/android/wm/shell/bubbles/BubbleStackView;->showScrim(ZLcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda28;)V
+    if-nez v5, :cond_6
 
     .line 135
-    :cond_6
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleContainer:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
+    invoke-virtual {v0, v6, v4}, Lcom/android/wm/shell/bubbles/BubbleStackView;->showScrim(ZLcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda38;)V
 
-    .line 138
-    iget-object v4, v3, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->mController:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;
+    .line 137
+    :cond_6
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleContainer:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
 
     .line 140
-    if-nez v4, :cond_7
+    iget-object v5, v4, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->mController:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;
 
     .line 142
-    goto :goto_1
+    if-nez v5, :cond_7
 
     .line 144
+    goto :goto_1
+
+    .line 146
     :cond_7
-    invoke-virtual {v4}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;->getAnimatedProperties()Ljava/util/Set;
+    invoke-virtual {v5}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;->getAnimatedProperties()Ljava/util/Set;
 
-    .line 145
-    move-result-object v4
+    .line 147
+    move-result-object v5
 
-    .line 148
-    new-array v7, v5, [Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
-
-    .line 149
-    invoke-interface {v4, v7}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .line 150
+    new-array v8, v6, [Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
     .line 151
-    move-result-object v4
+    invoke-interface {v5, v8}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 154
-    check-cast v4, [Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+    .line 153
+    move-result-object v5
 
-    .line 155
-    invoke-virtual {v3, v4}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->cancelAllAnimationsOfProperties([Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;)V
+    .line 156
+    check-cast v5, [Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
     .line 157
-    :goto_1
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mAnimatingOutSurfaceContainer:Landroid/widget/FrameLayout;
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->cancelAllAnimationsOfProperties([Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;)V
 
-    .line 160
-    sget-object v4, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->onAnimatorCreated:Lkotlin/jvm/functions/Function2;
+    .line 159
+    :goto_1
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mAnimatingOutSurfaceContainer:Landroid/widget/FrameLayout;
 
     .line 162
-    invoke-static {v3}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator$Companion;->getInstance(Ljava/lang/Object;)Lcom/android/wm/shell/shared/animation/PhysicsAnimator;
+    sget-object v5, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->onAnimatorCreated:Lkotlin/jvm/functions/Function2;
 
     .line 164
-    move-result-object v3
+    invoke-static {v4}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator$Companion;->getInstance(Ljava/lang/Object;)Lcom/android/wm/shell/shared/animation/PhysicsAnimator;
 
-    .line 167
-    invoke-virtual {v3}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->cancel()V
+    .line 166
+    move-result-object v4
 
-    .line 168
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mAnimatingOutSurfaceContainer:Landroid/widget/FrameLayout;
+    .line 169
+    invoke-virtual {v4}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->cancel()V
 
-    .line 171
-    invoke-virtual {v3, v1}, Landroid/widget/FrameLayout;->setScaleX(F)V
+    .line 170
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mAnimatingOutSurfaceContainer:Landroid/widget/FrameLayout;
 
     .line 173
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mAnimatingOutSurfaceContainer:Landroid/widget/FrameLayout;
+    invoke-virtual {v4, v1}, Landroid/widget/FrameLayout;->setScaleX(F)V
 
-    .line 176
-    invoke-virtual {v3, v1}, Landroid/widget/FrameLayout;->setScaleY(F)V
+    .line 175
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mAnimatingOutSurfaceContainer:Landroid/widget/FrameLayout;
 
     .line 178
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedAnimationController:Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;
+    invoke-virtual {v4, v1}, Landroid/widget/FrameLayout;->setScaleY(F)V
 
-    .line 181
-    iput-boolean v6, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mPreparingToCollapse:Z
+    .line 180
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedAnimationController:Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;
 
     .line 183
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackAnimationController:Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
+    iput-boolean v7, v4, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mPreparingToCollapse:Z
 
     .line 185
-    iget-object v4, v3, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mStackPosition:Landroid/graphics/PointF;
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackAnimationController:Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
 
     .line 187
-    iget-object v7, v3, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;->mLayout:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
+    iget-object v5, v4, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mStackPosition:Landroid/graphics/PointF;
 
     .line 189
-    iget v8, v4, Landroid/graphics/PointF;->x:F
+    iget-object v8, v4, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;->mLayout:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
 
     .line 191
-    invoke-virtual {v7, v8}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->isFirstChildXLeftOfCenter(F)Z
+    iget v9, v5, Landroid/graphics/PointF;->x:F
 
     .line 193
-    move-result v7
+    invoke-virtual {v8, v9}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->isFirstChildXLeftOfCenter(F)Z
 
-    .line 196
-    iget-object v8, v3, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mBubbleCountSupplier:Ljava/util/function/IntSupplier;
-
-    .line 197
-    invoke-interface {v8}, Ljava/util/function/IntSupplier;->getAsInt()I
-
-    .line 199
+    .line 195
     move-result v8
 
-    .line 202
-    iget-object v3, v3, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
+    .line 198
+    iget-object v9, v4, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mBubbleCountSupplier:Ljava/util/function/IntSupplier;
 
-    .line 203
-    invoke-virtual {v3, v8}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getAllowableStackPositionRegion(I)Landroid/graphics/RectF;
+    .line 199
+    invoke-interface {v9}, Ljava/util/function/IntSupplier;->getAsInt()I
+
+    .line 201
+    move-result v9
+
+    .line 204
+    iget-object v4, v4, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
 
     .line 205
-    move-result-object v3
+    invoke-virtual {v4, v9}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getAllowableStackPositionRegion(I)Landroid/graphics/RectF;
 
-    .line 208
-    if-eqz v7, :cond_8
+    .line 207
+    move-result-object v4
 
-    .line 209
-    iget v3, v3, Landroid/graphics/RectF;->left:F
+    .line 210
+    if-eqz v8, :cond_8
 
     .line 211
-    goto :goto_2
+    iget v4, v4, Landroid/graphics/RectF;->left:F
 
     .line 213
-    :cond_8
-    iget v3, v3, Landroid/graphics/RectF;->right:F
+    goto :goto_2
 
-    .line 214
-    :goto_2
-    iput v3, v4, Landroid/graphics/PointF;->x:F
+    .line 215
+    :cond_8
+    iget v4, v4, Landroid/graphics/RectF;->right:F
 
     .line 216
-    invoke-virtual {v0, v5}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateOverflowDotVisibility(Z)V
+    :goto_2
+    iput v4, v5, Landroid/graphics/PointF;->x:F
 
     .line 218
-    new-instance v3, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda16;
+    invoke-virtual {v0, v6}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateOverflowDotVisibility(Z)V
 
-    .line 221
-    invoke-direct {v3, v6, v0, v4}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda16;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+    .line 220
+    new-instance v4, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda26;
 
     .line 223
-    new-instance v7, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda0;
+    invoke-direct {v4, v7, v0, v5}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda26;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
 
-    .line 226
-    const/16 v8, 0xa
+    .line 225
+    new-instance v8, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda2;
 
     .line 228
-    invoke-direct {v7, v0, v8}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;I)V
+    invoke-direct {v8, v0, v3}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda2;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;I)V
 
     .line 230
-    iget-object v8, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewAnimationController:Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;
+    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewAnimationController:Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;
 
     .line 233
-    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 235
-    sget-object v9, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BUBBLES_enabled:[Z
+    sget-object v9, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BUBBLES_enabled:[Z
 
     .line 238
-    aget-boolean v9, v9, v5
+    aget-boolean v9, v9, v6
 
     .line 240
-    iget v10, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mMinFlingVelocity:I
+    iget v10, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mMinFlingVelocity:I
 
     .line 242
     if-eqz v9, :cond_9
 
     .line 244
-    iget v9, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mSwipeUpVelocity:F
+    iget v9, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mSwipeUpVelocity:F
 
     .line 246
     float-to-double v11, v9
@@ -2898,1586 +2820,1294 @@
     int-to-long v13, v10
 
     .line 249
-    iget v9, v4, Landroid/graphics/PointF;->x:F
+    iget v9, v5, Landroid/graphics/PointF;->x:F
 
     .line 250
-    move-object/from16 p0, v3
+    float-to-double v1, v9
 
     .line 252
-    float-to-double v2, v9
+    iget v5, v5, Landroid/graphics/PointF;->y:F
 
-    .line 254
-    iget v4, v4, Landroid/graphics/PointF;->y:F
+    .line 253
+    float-to-double v6, v5
 
     .line 255
-    float-to-double v5, v4
+    sget-object v16, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_BUBBLES:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 257
-    sget-object v15, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_BUBBLES:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
-
-    .line 258
+    .line 256
     invoke-static {v11, v12}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    .line 260
-    move-result-object v4
+    .line 258
+    move-result-object v5
 
-    .line 263
+    .line 261
     invoke-static {v13, v14}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 264
+    .line 262
     move-result-object v11
 
-    .line 267
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    .line 265
+    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    .line 268
-    move-result-object v2
-
-    .line 271
-    invoke-static {v5, v6}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    .line 272
-    move-result-object v3
-
-    .line 275
-    filled-new-array {v4, v11, v2, v3}, [Ljava/lang/Object;
-
-    .line 276
-    move-result-object v20
-
-    .line 279
-    const/16 v18, 0xa6
-
-    .line 280
-    const/16 v19, 0x0
-
-    .line 282
-    const-wide v16, 0x48d227b66013c3bL
-
-    .line 284
-    invoke-static/range {v15 .. v20}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 289
-    goto :goto_3
-
-    .line 292
-    :cond_9
-    move-object/from16 p0, v3
-
-    .line 293
-    :goto_3
-    iget-object v2, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
-
-    .line 295
-    if-eqz v2, :cond_d
-
-    .line 297
-    const/4 v3, 0x1
-
-    .line 299
-    iput-boolean v3, v2, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mIsAnimating:Z
-
-    .line 300
-    iget-object v2, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapseAnimation:Landroid/animation/AnimatorSet;
-
-    .line 302
-    if-eqz v2, :cond_a
-
-    .line 304
-    invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
-
-    .line 306
-    :cond_a
-    iget-object v2, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
-
-    .line 309
-    new-instance v3, Ljava/util/ArrayList;
-
-    .line 311
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    .line 313
-    iget v4, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapsedAmount:F
-
-    .line 316
-    float-to-int v4, v4
-
-    .line 318
-    invoke-virtual {v2}, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->getContentHeight()I
-
-    .line 319
-    move-result v2
-
-    .line 322
-    filled-new-array {v4, v2}, [I
-
-    .line 323
-    move-result-object v2
-
-    .line 326
-    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
-
-    .line 327
-    move-result-object v2
-
-    .line 330
-    sget-object v4, Lcom/android/wm/shell/animation/Interpolators;->EMPHASIZED_ACCELERATE:Landroid/view/animation/Interpolator;
-
-    .line 331
-    invoke-virtual {v2, v4}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 333
-    const-wide/16 v4, 0xfa
-
-    .line 336
-    invoke-virtual {v2, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    .line 338
-    new-instance v4, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$$ExternalSyntheticLambda1;
-
-    .line 341
-    invoke-direct {v4, v8}, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;)V
-
-    .line 343
-    invoke-virtual {v2, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    .line 346
-    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 349
-    iget-object v2, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
-
-    .line 352
-    sget-object v4, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->MANAGE_BUTTON_ALPHA:Lcom/android/wm/shell/bubbles/BubbleExpandedView$2;
-
-    .line 354
-    const/4 v5, 0x1
-
-    .line 356
-    new-array v6, v5, [F
-
-    .line 357
-    const/4 v5, 0x0
-
-    .line 359
-    aput v1, v6, v5
-
-    .line 360
-    invoke-static {v2, v4, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    .line 362
-    move-result-object v2
-
-    .line 365
-    const-wide/16 v4, 0x4e
-
-    .line 366
-    invoke-virtual {v2, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    .line 368
-    sget-object v6, Lcom/android/wm/shell/animation/Interpolators;->LINEAR:Landroid/view/animation/Interpolator;
-
-    .line 371
-    invoke-virtual {v2, v6}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 373
-    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 376
-    iget-object v2, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
-
-    .line 379
-    sget-object v11, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->CONTENT_ALPHA:Lcom/android/wm/shell/bubbles/BubbleExpandedView$2;
-
-    .line 381
-    const/4 v12, 0x1
-
-    .line 383
-    new-array v13, v12, [F
-
-    .line 384
-    const/4 v9, 0x0
-
-    .line 386
-    aput v1, v13, v9
-
-    .line 387
-    invoke-static {v2, v11, v13}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    .line 389
-    move-result-object v2
-
-    .line 392
-    invoke-virtual {v2, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    .line 393
-    invoke-virtual {v2, v6}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 396
-    const-wide/16 v13, 0x5d
-
-    .line 399
-    invoke-virtual {v2, v13, v14}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
-
-    .line 401
-    new-array v11, v12, [Z
-
-    .line 404
-    aput-boolean v9, v11, v9
-
-    .line 406
-    new-instance v13, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$$ExternalSyntheticLambda0;
-
-    .line 408
-    move-object/from16 v14, p0
-
-    .line 410
-    invoke-direct {v13, v11, v14}, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$$ExternalSyntheticLambda0;-><init>([ZLcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda16;)V
-
-    .line 412
-    invoke-virtual {v2, v13}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    .line 415
-    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 418
-    iget-object v2, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
-
-    .line 421
-    sget-object v11, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->BACKGROUND_ALPHA:Lcom/android/wm/shell/bubbles/BubbleExpandedView$2;
-
-    .line 423
-    new-array v13, v12, [F
-
-    .line 425
-    aput v1, v13, v9
-
-    .line 427
-    invoke-static {v2, v11, v13}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    .line 429
+    .line 266
     move-result-object v1
 
-    .line 432
-    invoke-virtual {v1, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    .line 269
+    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    .line 433
-    invoke-virtual {v1, v6}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    .line 270
+    move-result-object v2
 
-    .line 436
-    const-wide/16 v4, 0xac
+    .line 273
+    filled-new-array {v5, v11, v1, v2}, [Ljava/lang/Object;
 
-    .line 439
-    invoke-virtual {v1, v4, v5}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
+    .line 274
+    move-result-object v21
 
-    .line 441
-    invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 277
+    const/16 v19, 0xa6
 
-    .line 444
-    new-instance v1, Landroid/animation/AnimatorSet;
+    .line 278
+    const/16 v20, 0x0
 
-    .line 447
-    invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
+    .line 280
+    const-wide v17, 0x48d227b66013c3bL
 
-    .line 449
-    new-instance v2, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$3;
+    .line 282
+    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 452
-    const/4 v4, 0x1
+    .line 287
+    :cond_9
+    iget-object v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
 
-    .line 454
-    invoke-direct {v2, v4, v7}, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$3;-><init>(ILjava/lang/Object;)V
+    .line 290
+    if-eqz v1, :cond_d
 
-    .line 455
-    invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    .line 292
+    const/4 v2, 0x1
 
-    .line 458
-    invoke-virtual {v1, v3}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+    .line 294
+    iput-boolean v2, v1, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mIsAnimating:Z
 
-    .line 461
-    iput-object v1, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapseAnimation:Landroid/animation/AnimatorSet;
+    .line 295
+    iget-object v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapseAnimation:Landroid/animation/AnimatorSet;
 
-    .line 464
-    iget v1, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mSwipeUpVelocity:F
+    .line 297
+    if-eqz v1, :cond_a
 
-    .line 466
-    int-to-float v2, v10
+    .line 299
+    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 468
-    cmpl-float v1, v1, v2
+    .line 301
+    :cond_a
+    iget-object v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
 
-    .line 469
-    if-ltz v1, :cond_c
+    .line 304
+    new-instance v2, Ljava/util/ArrayList;
 
-    .line 471
-    iget-object v1, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
+    .line 306
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 473
+    .line 308
+    iget v5, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapsedAmount:F
+
+    .line 311
+    float-to-int v5, v5
+
+    .line 313
     invoke-virtual {v1}, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->getContentHeight()I
 
-    .line 475
+    .line 314
     move-result v1
 
-    .line 478
-    new-instance v10, Landroid/animation/ValueAnimator;
+    .line 317
+    filled-new-array {v5, v1}, [I
+
+    .line 318
+    move-result-object v1
+
+    .line 321
+    invoke-static {v1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+
+    .line 322
+    move-result-object v1
+
+    .line 325
+    sget-object v5, Lcom/android/wm/shell/animation/Interpolators;->EMPHASIZED_ACCELERATE:Landroid/view/animation/Interpolator;
+
+    .line 326
+    invoke-virtual {v1, v5}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 328
+    const-wide/16 v5, 0xfa
+
+    .line 331
+    invoke-virtual {v1, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    .line 333
+    new-instance v5, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$$ExternalSyntheticLambda1;
+
+    .line 336
+    invoke-direct {v5, v3}, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;)V
+
+    .line 338
+    invoke-virtual {v1, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    .line 341
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 344
+    iget-object v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
+
+    .line 347
+    sget-object v5, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->MANAGE_BUTTON_ALPHA:Lcom/android/wm/shell/bubbles/BubbleExpandedView$2;
+
+    .line 349
+    const/4 v6, 0x1
+
+    .line 351
+    new-array v7, v6, [F
+
+    .line 352
+    const/4 v6, 0x0
+
+    .line 354
+    const/4 v9, 0x0
+
+    .line 355
+    aput v6, v7, v9
+
+    .line 356
+    invoke-static {v1, v5, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    .line 358
+    move-result-object v1
+
+    .line 361
+    const-wide/16 v5, 0x4e
+
+    .line 362
+    invoke-virtual {v1, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    .line 364
+    sget-object v7, Lcom/android/wm/shell/animation/Interpolators;->LINEAR:Landroid/view/animation/Interpolator;
+
+    .line 367
+    invoke-virtual {v1, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 369
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 372
+    iget-object v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
+
+    .line 375
+    sget-object v11, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->CONTENT_ALPHA:Lcom/android/wm/shell/bubbles/BubbleExpandedView$2;
+
+    .line 377
+    const/4 v12, 0x1
+
+    .line 379
+    new-array v13, v12, [F
+
+    .line 380
+    const/4 v9, 0x0
+
+    .line 382
+    const/4 v14, 0x0
+
+    .line 383
+    aput v9, v13, v14
+
+    .line 384
+    invoke-static {v1, v11, v13}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    .line 386
+    move-result-object v1
+
+    .line 389
+    invoke-virtual {v1, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    .line 390
+    invoke-virtual {v1, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 393
+    const-wide/16 v5, 0x5d
+
+    .line 396
+    invoke-virtual {v1, v5, v6}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
+
+    .line 398
+    new-array v5, v12, [Z
+
+    .line 401
+    aput-boolean v14, v5, v14
+
+    .line 403
+    new-instance v6, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$$ExternalSyntheticLambda0;
+
+    .line 405
+    invoke-direct {v6, v5, v4}, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$$ExternalSyntheticLambda0;-><init>([ZLcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda26;)V
+
+    .line 407
+    invoke-virtual {v1, v6}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    .line 410
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 413
+    iget-object v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
+
+    .line 416
+    sget-object v4, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->BACKGROUND_ALPHA:Lcom/android/wm/shell/bubbles/BubbleExpandedView$2;
+
+    .line 418
+    new-array v5, v12, [F
+
+    .line 420
+    const/4 v6, 0x0
+
+    .line 422
+    aput v6, v5, v14
+
+    .line 423
+    invoke-static {v1, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    .line 425
+    move-result-object v1
+
+    .line 428
+    const-wide/16 v4, 0x4e
+
+    .line 429
+    invoke-virtual {v1, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    .line 431
+    invoke-virtual {v1, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 434
+    const-wide/16 v4, 0xac
+
+    .line 437
+    invoke-virtual {v1, v4, v5}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
+
+    .line 439
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 442
+    new-instance v1, Landroid/animation/AnimatorSet;
+
+    .line 445
+    invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
+
+    .line 447
+    new-instance v4, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$3;
+
+    .line 450
+    const/4 v5, 0x1
+
+    .line 452
+    invoke-direct {v4, v5, v8}, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl$3;-><init>(ILjava/lang/Object;)V
+
+    .line 453
+    invoke-virtual {v1, v4}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 456
+    invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+
+    .line 459
+    iput-object v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapseAnimation:Landroid/animation/AnimatorSet;
+
+    .line 462
+    iget v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mSwipeUpVelocity:F
+
+    .line 464
+    int-to-float v2, v10
+
+    .line 466
+    cmpl-float v1, v1, v2
+
+    .line 467
+    if-ltz v1, :cond_c
+
+    .line 469
+    iget-object v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mExpandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
+
+    .line 471
+    invoke-virtual {v1}, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->getContentHeight()I
+
+    .line 473
+    move-result v1
+
+    .line 476
+    new-instance v2, Landroid/animation/ValueAnimator;
+
+    .line 477
+    invoke-direct {v2}, Landroid/animation/ValueAnimator;-><init>()V
 
     .line 479
-    invoke-direct {v10}, Landroid/animation/ValueAnimator;-><init>()V
+    iget v4, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapsedAmount:F
 
-    .line 481
-    iget v4, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapsedAmount:F
+    .line 482
+    int-to-float v1, v1
 
     .line 484
-    int-to-float v5, v1
+    iget v5, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mSwipeUpVelocity:F
 
-    .line 486
-    iget v6, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mSwipeUpVelocity:F
+    .line 485
+    sub-float v20, v1, v4
 
     .line 487
-    sub-float v7, v5, v4
+    iget-object v6, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mFlingAnimationUtils:Lcom/android/wm/shell/animation/FlingAnimationUtils;
 
     .line 489
-    iget-object v2, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mFlingAnimationUtils:Lcom/android/wm/shell/animation/FlingAnimationUtils;
+    move-object v15, v6
 
     .line 491
-    move-object v3, v10
+    move-object/from16 v16, v2
 
-    .line 493
-    invoke-virtual/range {v2 .. v7}, Lcom/android/wm/shell/animation/FlingAnimationUtils;->applyDismissing(Landroid/animation/Animator;FFFF)V
+    .line 492
+    move/from16 v17, v4
 
     .line 494
-    invoke-virtual {v10}, Landroid/animation/ValueAnimator;->getDuration()J
+    move/from16 v18, v1
 
-    .line 497
-    move-result-wide v1
+    .line 496
+    move/from16 v19, v5
+
+    .line 498
+    invoke-virtual/range {v15 .. v20}, Lcom/android/wm/shell/animation/FlingAnimationUtils;->applyDismissing(Landroid/animation/Animator;FFFF)V
 
     .line 500
-    long-to-float v1, v1
+    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->getDuration()J
 
-    .line 501
-    const/high16 v2, 0x437a0000    # 250.0f
+    .line 503
+    move-result-wide v4
 
-    .line 502
-    div-float/2addr v1, v2
-
-    .line 504
-    iget-object v2, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapseAnimation:Landroid/animation/AnimatorSet;
-
-    .line 505
-    invoke-virtual {v2}, Landroid/animation/AnimatorSet;->getChildAnimations()Ljava/util/ArrayList;
+    .line 506
+    long-to-float v1, v4
 
     .line 507
-    move-result-object v2
+    const/high16 v4, 0x437a0000    # 250.0f
+
+    .line 508
+    div-float/2addr v1, v4
 
     .line 510
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v4, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapseAnimation:Landroid/animation/AnimatorSet;
 
     .line 511
-    move-result-object v2
+    invoke-virtual {v4}, Landroid/animation/AnimatorSet;->getChildAnimations()Ljava/util/ArrayList;
 
-    .line 514
-    :goto_4
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    .line 513
+    move-result-object v4
 
-    .line 515
-    move-result v3
+    .line 516
+    invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 518
-    if-eqz v3, :cond_b
+    .line 517
+    move-result-object v4
 
-    .line 519
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 520
+    :goto_3
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     .line 521
-    move-result-object v3
+    move-result v5
 
     .line 524
-    check-cast v3, Landroid/animation/Animator;
+    if-eqz v5, :cond_b
 
     .line 525
-    invoke-virtual {v3}, Landroid/animation/Animator;->getStartDelay()J
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 527
-    move-result-wide v4
+    move-result-object v5
 
     .line 530
-    long-to-float v4, v4
+    check-cast v5, Landroid/animation/Animator;
 
     .line 531
-    mul-float/2addr v4, v1
-
-    .line 532
-    float-to-long v4, v4
+    invoke-virtual {v5}, Landroid/animation/Animator;->getStartDelay()J
 
     .line 533
-    invoke-virtual {v3, v4, v5}, Landroid/animation/Animator;->setStartDelay(J)V
+    move-result-wide v6
 
-    .line 534
-    invoke-virtual {v3}, Landroid/animation/Animator;->getDuration()J
+    .line 536
+    long-to-float v6, v6
 
     .line 537
-    move-result-wide v4
+    mul-float/2addr v6, v1
+
+    .line 538
+    float-to-long v6, v6
+
+    .line 539
+    invoke-virtual {v5, v6, v7}, Landroid/animation/Animator;->setStartDelay(J)V
 
     .line 540
-    long-to-float v4, v4
-
-    .line 541
-    mul-float/2addr v4, v1
-
-    .line 542
-    float-to-long v4, v4
+    invoke-virtual {v5}, Landroid/animation/Animator;->getDuration()J
 
     .line 543
-    invoke-virtual {v3, v4, v5}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
+    move-result-wide v6
 
-    .line 544
-    goto :goto_4
+    .line 546
+    long-to-float v6, v6
 
     .line 547
-    :cond_b
-    iget-object v1, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapseAnimation:Landroid/animation/AnimatorSet;
+    mul-float/2addr v6, v1
 
     .line 548
-    invoke-virtual {v10}, Landroid/animation/ValueAnimator;->getInterpolator()Landroid/animation/TimeInterpolator;
+    float-to-long v6, v6
+
+    .line 549
+    invoke-virtual {v5, v6, v7}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
 
     .line 550
-    move-result-object v2
+    goto :goto_3
 
     .line 553
-    invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    :cond_b
+    iget-object v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapseAnimation:Landroid/animation/AnimatorSet;
 
     .line 554
-    :cond_c
-    iget-object v1, v8, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapseAnimation:Landroid/animation/AnimatorSet;
+    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->getInterpolator()Landroid/animation/TimeInterpolator;
 
-    .line 557
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
+    .line 556
+    move-result-object v2
 
     .line 559
+    invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 560
+    :cond_c
+    iget-object v1, v3, Lcom/android/wm/shell/bubbles/animation/ExpandedViewAnimationControllerImpl;->mCollapseAnimation:Landroid/animation/AnimatorSet;
+
+    .line 563
+    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
+
+    .line 565
     :cond_d
     invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getExpandedView()Lcom/android/wm/shell/bubbles/BubbleExpandedView;
 
-    .line 562
+    .line 568
     move-result-object v1
 
-    .line 565
+    .line 571
     const/4 v2, 0x0
 
-    .line 566
+    .line 572
     if-eqz v1, :cond_e
 
-    .line 567
+    .line 573
     invoke-virtual {v1, v2}, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->setContentVisibility(Z)V
 
-    .line 569
+    .line 575
     :cond_e
     invoke-virtual {v0, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->showManageMenu(Z)V
 
-    .line 572
-    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
-
-    .line 575
-    const/4 v2, 0x4
-
-    .line 577
-    invoke-virtual {v0, v1, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
-
     .line 578
-    goto/16 :goto_f
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
 
     .line 581
-    :cond_f
-    move v2, v5
+    const/4 v2, 0x4
 
     .line 583
-    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BUBBLES_enabled:[Z
+    invoke-virtual {v0, v1, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
 
     .line 584
-    aget-boolean v4, v4, v2
+    goto/16 :goto_c
 
-    .line 586
-    if-eqz v4, :cond_11
+    .line 587
+    :cond_f
+    move v2, v6
 
-    .line 588
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
+    .line 589
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BUBBLES_enabled:[Z
 
     .line 590
-    if-eqz v2, :cond_10
+    aget-boolean v1, v1, v2
 
     .line 592
-    invoke-interface {v2}, Lcom/android/wm/shell/bubbles/BubbleViewProvider;->getKey()Ljava/lang/String;
+    if-eqz v1, :cond_11
 
     .line 594
-    move-result-object v2
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
 
-    .line 597
-    goto :goto_5
+    .line 596
+    if-eqz v1, :cond_10
 
     .line 598
-    :cond_10
-    const-string v2, "null"
-
-    .line 599
-    :goto_5
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 601
-    move-result-object v2
-
-    .line 604
-    sget-object v15, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_BUBBLES:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
-
-    .line 605
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    .line 607
-    move-result-object v20
-
-    .line 610
-    const/16 v19, 0x0
-
-    .line 611
-    const-wide v16, -0x5789f699652ca9dL
-
-    .line 613
-    const/16 v18, 0x0
-
-    .line 618
-    invoke-static/range {v15 .. v20}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 620
-    :cond_11
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
-
-    .line 623
-    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mDelayedAnimation:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda47;
-
-    .line 625
-    check-cast v2, Lcom/android/wm/shell/common/HandlerExecutor;
-
-    .line 627
-    invoke-virtual {v2, v4}, Lcom/android/wm/shell/common/HandlerExecutor;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 629
-    const/4 v2, 0x0
-
-    .line 632
-    iput-boolean v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpansionAnimating:Z
-
-    .line 633
-    iput-boolean v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsBubbleSwitchAnimating:Z
-
-    .line 635
-    const/4 v2, 0x1
-
-    .line 637
-    iput-boolean v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
-
-    .line 638
-    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->isStackEduVisible()Z
-
-    .line 640
-    move-result v4
-
-    .line 643
-    if-eqz v4, :cond_12
-
-    .line 644
-    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackEduView:Lcom/android/wm/shell/bubbles/StackEducationView;
-
-    .line 646
-    invoke-virtual {v4, v2}, Lcom/android/wm/shell/bubbles/StackEducationView;->hide(Z)V
-
-    .line 648
-    :cond_12
-    iput-boolean v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpansionAnimating:Z
-
-    .line 651
-    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->hideFlyoutImmediate()V
-
-    .line 653
-    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateExpandedBubble()V
-
-    .line 656
-    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateExpandedView()V
-
-    .line 659
-    invoke-virtual {v0, v2, v3}, Lcom/android/wm/shell/bubbles/BubbleStackView;->showScrim(ZLcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda28;)V
-
-    .line 662
-    iget-boolean v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
-
-    .line 665
-    invoke-virtual {v0, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateBubbleShadows(Z)V
-
-    .line 667
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleContainer:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
-
-    .line 670
-    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedAnimationController:Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;
-
-    .line 672
-    invoke-virtual {v2, v4}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->setActiveController(Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;)V
-
-    .line 674
-    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateOverflowVisibility()V
-
-    .line 677
-    sget-object v2, Lcom/android/wm/shell/Flags;->FEATURE_FLAGS:Lcom/android/wm/shell/FeatureFlagsImpl;
-
-    .line 680
-    invoke-virtual {v2}, Lcom/android/wm/shell/FeatureFlagsImpl;->enableRetrievableBubbles()Z
-
-    .line 682
-    move-result v2
-
-    .line 685
-    const/high16 v4, 0x40000000    # 2.0f
-
-    .line 686
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    .line 688
-    const-string v6, "Overflow"
-
-    .line 690
-    if-eqz v2, :cond_14
-
-    .line 692
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
-
-    .line 694
-    if-eqz v2, :cond_14
-
-    .line 696
-    invoke-interface {v2}, Lcom/android/wm/shell/bubbles/BubbleViewProvider;->getKey()Ljava/lang/String;
-
-    .line 698
-    move-result-object v2
-
-    .line 701
-    invoke-virtual {v6, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 702
-    move-result v2
-
-    .line 705
-    if-eqz v2, :cond_14
-
-    .line 706
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
-
-    .line 708
-    iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleData;->mBubbles:Ljava/util/List;
-
-    .line 710
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
-
-    .line 712
-    move-result v2
-
-    .line 715
-    const/4 v7, 0x1
-
-    .line 716
-    xor-int/2addr v2, v7
-
-    .line 717
-    if-nez v2, :cond_14
-
-    .line 718
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
-
-    .line 720
-    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getState()Lcom/android/wm/shell/bubbles/BubbleStackView$StackViewState;
-
-    .line 722
-    move-result-object v3
-
-    .line 725
-    const/4 v6, 0x0
-
-    .line 726
-    invoke-virtual {v2, v6, v3}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getExpandedBubbleXY(ILcom/android/wm/shell/bubbles/BubbleStackView$StackViewState;)Landroid/graphics/PointF;
-
-    .line 727
-    move-result-object v2
-
-    .line 730
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
-
-    .line 731
-    iget-object v6, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
-
-    .line 733
-    invoke-virtual {v3}, Lcom/android/wm/shell/bubbles/BubblePositioner;->showBubblesVertically()Z
-
-    .line 735
-    move-result v7
-
-    .line 738
-    if-eqz v7, :cond_13
-
-    .line 739
-    iget v2, v2, Landroid/graphics/PointF;->y:F
-
-    .line 741
-    goto :goto_6
-
-    .line 743
-    :cond_13
-    iget v2, v2, Landroid/graphics/PointF;->x:F
-
-    .line 744
-    :goto_6
-    invoke-virtual {v3, v6, v2}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getExpandedViewY(Lcom/android/wm/shell/bubbles/BubbleViewProvider;F)F
-
-    .line 746
-    move-result v2
-
-    .line 749
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
-
-    .line 750
-    invoke-virtual {v3, v1}, Landroid/widget/FrameLayout;->setTranslationX(F)V
-
-    .line 752
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
-
-    .line 755
-    invoke-virtual {v3, v2}, Landroid/widget/FrameLayout;->setTranslationY(F)V
-
-    .line 757
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
-
-    .line 760
-    invoke-virtual {v2, v5}, Landroid/widget/FrameLayout;->setAlpha(F)V
-
-    .line 762
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
-
-    .line 765
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackAnimationController:Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
-
-    .line 767
-    iget-object v3, v3, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mStackPosition:Landroid/graphics/PointF;
-
-    .line 769
-    invoke-virtual {v2, v3}, Lcom/android/wm/shell/bubbles/BubblePositioner;->isStackOnLeft(Landroid/graphics/PointF;)Z
-
-    .line 771
-    move-result v2
-
-    .line 774
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
-
-    .line 775
-    invoke-virtual {v3, v2}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getTaskViewContentWidth(Z)I
-
-    .line 777
-    move-result v2
-
-    .line 780
-    int-to-float v2, v2
-
-    .line 781
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
-
-    .line 782
-    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
-
-    .line 784
-    invoke-virtual {v3, v5}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getExpandedViewHeight(Lcom/android/wm/shell/bubbles/BubbleViewProvider;)F
-
-    .line 786
-    move-result v3
-
-    .line 789
-    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
-
-    .line 790
-    div-float/2addr v2, v4
-
-    .line 792
-    div-float/2addr v3, v4
-
-    .line 793
-    const/high16 v4, 0x3f000000    # 0.5f
-
-    .line 794
-    invoke-virtual {v5, v4, v4, v2, v3}, Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;->setScale(FFFF)V
-
-    .line 796
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
-
-    .line 799
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
-
-    .line 801
-    invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->setAnimationMatrix(Landroid/graphics/Matrix;)V
-
-    .line 803
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewAlphaAnimator:Landroid/animation/ValueAnimator;
-
-    .line 806
-    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
-
-    .line 808
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
-
-    .line 811
-    sget-object v3, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->onAnimatorCreated:Lkotlin/jvm/functions/Function2;
-
-    .line 813
-    invoke-static {v2}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator$Companion;->getInstance(Ljava/lang/Object;)Lcom/android/wm/shell/shared/animation/PhysicsAnimator;
-
-    .line 815
-    move-result-object v2
-
-    .line 818
-    invoke-virtual {v2}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->cancel()V
-
-    .line 819
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
-
-    .line 822
-    invoke-static {v2}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator$Companion;->getInstance(Ljava/lang/Object;)Lcom/android/wm/shell/shared/animation/PhysicsAnimator;
-
-    .line 824
-    move-result-object v2
-
-    .line 827
-    sget-object v3, Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;->SCALE_X:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix$1;
-
-    .line 828
-    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mScaleInSpringConfig:Lcom/android/wm/shell/shared/animation/PhysicsAnimator$SpringConfig;
-
-    .line 830
-    const v5, 0x43f9ffff    # 499.99997f
-
-    .line 832
-    invoke-virtual {v2, v3, v5, v1, v4}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->spring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FFLcom/android/wm/shell/shared/animation/PhysicsAnimator$SpringConfig;)V
-
-    .line 835
-    sget-object v3, Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;->SCALE_Y:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix$1;
-
-    .line 838
-    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mScaleInSpringConfig:Lcom/android/wm/shell/shared/animation/PhysicsAnimator$SpringConfig;
-
-    .line 840
-    invoke-virtual {v2, v3, v5, v1, v4}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->spring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FFLcom/android/wm/shell/shared/animation/PhysicsAnimator$SpringConfig;)V
-
-    .line 842
-    new-instance v1, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda34;
-
-    .line 845
-    const/4 v3, 0x1
-
-    .line 847
-    invoke-direct {v1, v0, v3}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda34;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;I)V
-
-    .line 848
-    iget-object v4, v2, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->updateListeners:Ljava/util/ArrayList;
-
-    .line 851
-    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 853
-    new-array v1, v3, [Ljava/lang/Runnable;
-
-    .line 856
-    new-instance v3, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda0;
-
-    .line 858
-    const/16 v4, 0xb
-
-    .line 860
-    invoke-direct {v3, v0, v4}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;I)V
-
-    .line 862
-    const/4 v7, 0x0
-
-    .line 865
-    aput-object v3, v1, v7
-
-    .line 866
-    invoke-virtual {v2, v1}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->withEndActions([Ljava/lang/Runnable;)V
-
-    .line 868
-    invoke-virtual {v2}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->start()V
-
-    .line 871
-    goto/16 :goto_e
-
-    .line 874
-    :cond_14
-    const/4 v7, 0x0
-
-    .line 876
-    invoke-virtual {v0, v7}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateBadges(Z)V
-
-    .line 877
-    invoke-virtual {v0, v7}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updatePointerPosition(Z)V
-
-    .line 880
-    sget-object v2, Lcom/android/wm/shell/Flags;->FEATURE_FLAGS:Lcom/android/wm/shell/FeatureFlagsImpl;
-
-    .line 883
-    invoke-virtual {v2}, Lcom/android/wm/shell/FeatureFlagsImpl;->enableBubbleStashing()Z
-
-    .line 885
-    move-result v2
-
-    .line 888
-    if-eqz v2, :cond_15
-
-    .line 889
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleContainer:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
-
-    .line 891
-    invoke-virtual {v2}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
-
-    .line 893
-    move-result-object v2
-
-    .line 896
-    invoke-virtual {v2, v1}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
-
-    .line 897
-    move-result-object v2
-
-    .line 900
-    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    .line 901
-    :cond_15
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedAnimationController:Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;
-
-    .line 904
-    new-instance v7, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda0;
-
-    .line 906
-    const/16 v8, 0xc
-
-    .line 908
-    invoke-direct {v7, v0, v8}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;I)V
-
-    .line 910
-    const/4 v8, 0x0
-
-    .line 913
-    iput-boolean v8, v2, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mPreparingToCollapse:Z
-
-    .line 914
-    iput-boolean v8, v2, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mAnimatingCollapse:Z
-
-    .line 916
-    const/4 v8, 0x1
-
-    .line 918
-    iput-boolean v8, v2, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mAnimatingExpand:Z
-
-    .line 919
-    iput-object v7, v2, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mAfterExpand:Ljava/lang/Runnable;
-
-    .line 921
-    iput-object v3, v2, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mLeadBubbleEndAction:Ljava/lang/Runnable;
-
-    .line 923
-    invoke-virtual {v2, v8}, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->startOrUpdatePathAnimation(Z)V
-
-    .line 925
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
-
-    .line 928
-    if-eqz v2, :cond_16
-
-    .line 930
-    invoke-interface {v2}, Lcom/android/wm/shell/bubbles/BubbleViewProvider;->getKey()Ljava/lang/String;
-
-    .line 932
-    move-result-object v2
-
-    .line 935
-    invoke-virtual {v6, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 936
-    move-result v2
-
-    .line 939
-    if-eqz v2, :cond_16
-
-    .line 940
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
-
-    .line 942
-    iget-object v2, v2, Lcom/android/wm/shell/bubbles/BubbleData;->mBubbles:Ljava/util/List;
-
-    .line 944
-    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    .line 946
-    move-result-object v2
-
-    .line 949
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    .line 950
-    move-result v2
-
-    .line 953
-    goto :goto_7
-
-    .line 954
-    :cond_16
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
-
-    .line 955
-    invoke-virtual {v0, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getBubbleIndex(Lcom/android/wm/shell/bubbles/BubbleViewProvider;)I
-
-    .line 957
-    move-result v2
-
-    .line 960
-    :goto_7
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
-
-    .line 961
-    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getState()Lcom/android/wm/shell/bubbles/BubbleStackView$StackViewState;
-
-    .line 963
-    move-result-object v6
-
-    .line 966
-    invoke-virtual {v3, v2, v6}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getExpandedBubbleXY(ILcom/android/wm/shell/bubbles/BubbleStackView$StackViewState;)Landroid/graphics/PointF;
-
-    .line 967
-    move-result-object v2
-
-    .line 970
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
-
-    .line 971
-    iget-object v6, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
-
-    .line 973
-    invoke-virtual {v3}, Lcom/android/wm/shell/bubbles/BubblePositioner;->showBubblesVertically()Z
-
-    .line 975
-    move-result v7
-
-    .line 978
-    if-eqz v7, :cond_17
-
-    .line 979
-    iget v7, v2, Landroid/graphics/PointF;->y:F
-
-    .line 981
-    goto :goto_8
-
-    .line 983
-    :cond_17
-    iget v7, v2, Landroid/graphics/PointF;->x:F
-
-    .line 984
-    :goto_8
-    invoke-virtual {v3, v6, v7}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getExpandedViewY(Lcom/android/wm/shell/bubbles/BubbleViewProvider;F)F
-
-    .line 986
-    move-result v3
-
-    .line 989
-    iget-object v6, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
-
-    .line 990
-    invoke-virtual {v6, v1}, Landroid/widget/FrameLayout;->setTranslationX(F)V
-
-    .line 992
-    iget-object v6, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
-
-    .line 995
-    invoke-virtual {v6, v3}, Landroid/widget/FrameLayout;->setTranslationY(F)V
-
-    .line 997
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
-
-    .line 1000
-    invoke-virtual {v3, v5}, Landroid/widget/FrameLayout;->setAlpha(F)V
-
-    .line 1002
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
-
-    .line 1005
-    invoke-virtual {v3}, Lcom/android/wm/shell/bubbles/BubblePositioner;->showBubblesVertically()Z
-
-    .line 1007
-    move-result v3
-
-    .line 1010
-    if-eqz v3, :cond_18
-
-    .line 1011
-    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackAnimationController:Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
-
-    .line 1013
-    iget-object v5, v5, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mStackPosition:Landroid/graphics/PointF;
-
-    .line 1015
-    iget v5, v5, Landroid/graphics/PointF;->y:F
-
-    .line 1017
-    goto :goto_9
-
-    .line 1019
-    :cond_18
-    iget-object v5, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackAnimationController:Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
-
-    .line 1020
-    iget-object v5, v5, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mStackPosition:Landroid/graphics/PointF;
-
-    .line 1022
-    iget v5, v5, Landroid/graphics/PointF;->x:F
-
-    .line 1024
-    :goto_9
-    if-eqz v3, :cond_19
-
-    .line 1026
-    iget v6, v2, Landroid/graphics/PointF;->y:F
-
-    .line 1028
-    goto :goto_a
-
-    .line 1030
-    :cond_19
-    iget v6, v2, Landroid/graphics/PointF;->x:F
-
-    .line 1031
-    :goto_a
-    sub-float v5, v6, v5
-
-    .line 1033
-    invoke-static {v5}, Ljava/lang/Math;->abs(F)F
-
-    .line 1035
-    move-result v5
-
-    .line 1038
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getWidth()I
-
-    .line 1039
-    move-result v7
-
-    .line 1042
-    if-lez v7, :cond_1a
-
-    .line 1043
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getWidth()I
-
-    .line 1045
-    move-result v7
-
-    .line 1048
-    int-to-float v7, v7
-
-    .line 1049
-    div-float/2addr v5, v7
-
-    .line 1050
-    const/high16 v7, 0x41f00000    # 30.0f
-
-    .line 1051
-    mul-float/2addr v5, v7
-
-    .line 1053
-    const v7, 0x43520001    # 210.00002f
-
-    .line 1054
-    add-float/2addr v5, v7
-
-    .line 1057
-    float-to-long v7, v5
-
-    .line 1058
-    goto :goto_b
-
-    .line 1059
-    :cond_1a
-    const-wide/16 v7, 0x0
-
-    .line 1060
-    :goto_b
-    const v5, 0x3f666666    # 0.9f
-
-    .line 1062
-    if-eqz v3, :cond_1c
-
-    .line 1065
-    iget-boolean v9, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackOnLeftOrWillBe:Z
-
-    .line 1067
-    if-eqz v9, :cond_1b
-
-    .line 1069
-    iget v9, v2, Landroid/graphics/PointF;->x:F
-
-    .line 1071
-    iget v10, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleSize:I
-
-    .line 1073
-    int-to-float v10, v10
-
-    .line 1075
-    add-float/2addr v9, v10
-
-    .line 1076
-    iget v10, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewPadding:I
-
-    .line 1077
-    int-to-float v10, v10
-
-    .line 1079
-    add-float/2addr v9, v10
-
-    .line 1080
-    goto :goto_c
-
-    .line 1081
-    :cond_1b
-    iget v9, v2, Landroid/graphics/PointF;->x:F
-
-    .line 1082
-    iget v10, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewPadding:I
-
-    .line 1084
-    int-to-float v10, v10
-
-    .line 1086
-    sub-float/2addr v9, v10
-
-    .line 1087
-    :goto_c
-    iget-object v10, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
-
-    .line 1088
-    iget v2, v2, Landroid/graphics/PointF;->y:F
-
-    .line 1090
-    iget v11, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleSize:I
-
-    .line 1092
-    int-to-float v11, v11
-
-    .line 1094
-    div-float/2addr v11, v4
-
-    .line 1095
-    add-float/2addr v11, v2
-
-    .line 1096
-    invoke-virtual {v10, v5, v5, v9, v11}, Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;->setScale(FFFF)V
-
-    .line 1097
-    goto :goto_d
-
-    .line 1100
-    :cond_1c
-    iget-object v9, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
-
-    .line 1101
-    iget v10, v2, Landroid/graphics/PointF;->x:F
-
-    .line 1103
-    iget v11, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleSize:I
-
-    .line 1105
-    int-to-float v11, v11
-
-    .line 1107
-    div-float v4, v11, v4
-
-    .line 1108
-    add-float/2addr v4, v10
-
-    .line 1110
-    iget v2, v2, Landroid/graphics/PointF;->y:F
-
-    .line 1111
-    add-float/2addr v2, v11
-
-    .line 1113
-    iget v10, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewPadding:I
-
-    .line 1114
-    int-to-float v10, v10
-
-    .line 1116
-    add-float/2addr v2, v10
-
-    .line 1117
-    invoke-virtual {v9, v5, v5, v4, v2}, Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;->setScale(FFFF)V
-
-    .line 1118
-    :goto_d
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
-
-    .line 1121
-    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
-
-    .line 1123
-    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->setAnimationMatrix(Landroid/graphics/Matrix;)V
-
-    .line 1125
-    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getExpandedView()Lcom/android/wm/shell/bubbles/BubbleExpandedView;
-
-    .line 1128
-    move-result-object v2
-
-    .line 1131
-    if-eqz v2, :cond_1d
-
-    .line 1132
-    invoke-virtual {v2, v1}, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->setContentAlpha(F)V
-
-    .line 1134
-    invoke-virtual {v2, v1}, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->setBackgroundAlpha(F)V
-
-    .line 1137
-    const/4 v1, 0x1
-
-    .line 1140
-    iput-boolean v1, v2, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mIsAnimating:Z
-
-    .line 1141
-    :cond_1d
-    new-instance v1, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda47;
-
-    .line 1143
-    invoke-direct {v1, v0, v3, v6}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda47;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;ZF)V
-
-    .line 1145
-    iput-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mDelayedAnimation:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda47;
-
-    .line 1148
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
-
-    .line 1150
-    check-cast v2, Lcom/android/wm/shell/common/HandlerExecutor;
-
-    .line 1152
-    invoke-virtual {v2, v1, v7, v8}, Lcom/android/wm/shell/common/HandlerExecutor;->executeDelayed(Ljava/lang/Runnable;J)V
-
-    .line 1154
-    :goto_e
-    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
-
-    .line 1157
-    const/4 v2, 0x3
-
-    .line 1159
-    invoke-virtual {v0, v1, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
-
-    .line 1160
-    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
-
-    .line 1163
-    const/16 v2, 0xf
-
-    .line 1165
-    invoke-virtual {v0, v1, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
-
-    .line 1167
-    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mManager:Lcom/android/wm/shell/bubbles/BubbleStackViewManager$Companion$fromBubbleController$1;
-
-    .line 1170
-    new-instance v2, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda31;
-
-    .line 1172
-    invoke-direct {v2, v0}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda31;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;)V
-
-    .line 1174
-    iget-object v1, v1, Lcom/android/wm/shell/bubbles/BubbleStackViewManager$Companion$fromBubbleController$1;->$controller:Lcom/android/wm/shell/bubbles/BubbleController;
-
-    .line 1177
-    iget-object v3, v1, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
-
-    .line 1179
-    new-instance v4, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda4;
-
-    .line 1181
-    const/4 v5, 0x1
-
-    .line 1183
-    invoke-direct {v4, v1, v2, v5}, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda4;-><init>(Lcom/android/wm/shell/bubbles/BubbleController;Ljava/lang/Object;I)V
-
-    .line 1184
-    iget-object v1, v3, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
-
-    .line 1187
-    new-instance v2, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda1;
-
-    .line 1189
-    const/4 v5, 0x4
-
-    .line 1191
-    invoke-direct {v2, v3, v4, v5}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Ljava/lang/Object;I)V
-
-    .line 1192
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 1195
-    :goto_f
-    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
-
-    .line 1198
-    iget-boolean v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
-
-    .line 1200
-    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandListener:Lcom/android/wm/shell/bubbles/Bubbles$BubbleExpandListener;
-
-    .line 1202
-    if-eqz v3, :cond_1e
-
-    .line 1204
-    if-eqz v1, :cond_1e
-
-    .line 1206
     invoke-interface {v1}, Lcom/android/wm/shell/bubbles/BubbleViewProvider;->getKey()Ljava/lang/String;
 
-    .line 1208
+    .line 600
     move-result-object v1
 
-    .line 1211
-    invoke-interface {v3, v1, v2}, Lcom/android/wm/shell/bubbles/Bubbles$BubbleExpandListener;->onBubbleExpandChanged(Ljava/lang/String;Z)V
+    .line 603
+    goto :goto_4
 
-    .line 1212
-    :cond_1e
-    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
+    .line 604
+    :cond_10
+    const-string v1, "null"
 
-    .line 1215
-    iget-boolean v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
+    .line 605
+    :goto_4
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 1217
-    instance-of v3, v1, Lcom/android/wm/shell/bubbles/Bubble;
-
-    .line 1219
-    if-eqz v3, :cond_23
-
-    .line 1221
-    check-cast v1, Lcom/android/wm/shell/bubbles/Bubble;
-
-    .line 1223
-    iget-object v3, v1, Lcom/android/wm/shell/bubbles/Bubble;->mAppName:Ljava/lang/String;
-
-    .line 1225
-    iget-object v1, v1, Lcom/android/wm/shell/bubbles/Bubble;->mTitle:Ljava/lang/String;
-
-    .line 1227
-    if-eqz v1, :cond_1f
-
-    .line 1229
-    goto :goto_10
-
-    .line 1231
-    :cond_1f
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    .line 1232
+    .line 607
     move-result-object v1
 
-    .line 1235
-    const v4, 0x7f1406d5    # @string/notification_bubble_title 'Bubble'
+    .line 610
+    sget-object v16, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_BUBBLES:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 1236
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    .line 1239
-    move-result-object v1
-
-    .line 1242
-    :goto_10
-    if-eqz v3, :cond_21
-
-    .line 1243
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 1245
-    move-result v4
-
-    .line 1248
-    if-eqz v4, :cond_20
-
-    .line 1249
-    goto :goto_11
-
-    .line 1251
-    :cond_20
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    .line 1252
-    move-result-object v4
-
-    .line 1255
-    const v5, 0x7f140225    # @string/bubble_content_description_single '%1$s from %2$s'
-
-    .line 1256
-    filled-new-array {v1, v3}, [Ljava/lang/Object;
-
-    .line 1259
-    move-result-object v1
-
-    .line 1262
-    invoke-virtual {v4, v5, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 1263
-    move-result-object v1
-
-    .line 1266
-    :cond_21
-    :goto_11
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    .line 1267
-    move-result-object v3
-
-    .line 1270
-    if-eqz v2, :cond_22
-
-    .line 1271
-    const v2, 0x7f140220    # @string/bubble_accessibility_announce_expand 'expand %1$s'
-
-    .line 1273
-    goto :goto_12
-
-    .line 1276
-    :cond_22
-    const v2, 0x7f14021f    # @string/bubble_accessibility_announce_collapse 'collapse %1$s'
-
-    .line 1277
-    :goto_12
+    .line 611
     filled-new-array {v1}, [Ljava/lang/Object;
 
-    .line 1280
+    .line 613
+    move-result-object v21
+
+    .line 616
+    const/16 v20, 0x0
+
+    .line 617
+    const-wide v17, -0x5789f699652ca9dL
+
+    .line 619
+    const/16 v19, 0x0
+
+    .line 624
+    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+
+    .line 626
+    :cond_11
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
+
+    .line 629
+    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mDelayedAnimation:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda55;
+
+    .line 631
+    check-cast v1, Lcom/android/wm/shell/common/HandlerExecutor;
+
+    .line 633
+    invoke-virtual {v1, v2}, Lcom/android/wm/shell/common/HandlerExecutor;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 635
+    const/4 v1, 0x0
+
+    .line 638
+    iput-boolean v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpansionAnimating:Z
+
+    .line 639
+    iput-boolean v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsBubbleSwitchAnimating:Z
+
+    .line 641
+    const/4 v1, 0x1
+
+    .line 643
+    iput-boolean v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
+
+    .line 644
+    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->isStackEduVisible()Z
+
+    .line 646
+    move-result v2
+
+    .line 649
+    if-eqz v2, :cond_12
+
+    .line 650
+    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackEduView:Lcom/android/wm/shell/bubbles/StackEducationView;
+
+    .line 652
+    invoke-virtual {v2, v1}, Lcom/android/wm/shell/bubbles/StackEducationView;->hide(Z)V
+
+    .line 654
+    :cond_12
+    iput-boolean v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpansionAnimating:Z
+
+    .line 657
+    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->hideFlyoutImmediate()V
+
+    .line 659
+    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateExpandedBubble()V
+
+    .line 662
+    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateExpandedView()V
+
+    .line 665
+    invoke-virtual {v0, v1, v4}, Lcom/android/wm/shell/bubbles/BubbleStackView;->showScrim(ZLcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda38;)V
+
+    .line 668
+    iget-boolean v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
+
+    .line 671
+    invoke-virtual {v0, v1}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateBubbleShadows(Z)V
+
+    .line 673
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleContainer:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
+
+    .line 676
+    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedAnimationController:Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;
+
+    .line 678
+    invoke-virtual {v1, v2}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->setActiveController(Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;)V
+
+    .line 680
+    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateOverflowVisibility()V
+
+    .line 683
+    invoke-static {}, Lcom/android/wm/shell/Flags;->enableRetrievableBubbles()V
+
+    .line 686
+    const/4 v1, 0x0
+
+    .line 689
+    invoke-virtual {v0, v1}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateBadges(Z)V
+
+    .line 690
+    invoke-virtual {v0, v1}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updatePointerPosition(Z)V
+
+    .line 693
+    invoke-static {}, Lcom/android/wm/shell/Flags;->enableBubbleStashing()V
+
+    .line 696
+    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedAnimationController:Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;
+
+    .line 699
+    new-instance v5, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda2;
+
+    .line 701
+    const/16 v6, 0x10
+
+    .line 703
+    invoke-direct {v5, v0, v6}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda2;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;I)V
+
+    .line 705
+    iput-boolean v1, v2, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mPreparingToCollapse:Z
+
+    .line 708
+    iput-boolean v1, v2, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mAnimatingCollapse:Z
+
+    .line 710
+    const/4 v1, 0x1
+
+    .line 712
+    iput-boolean v1, v2, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mAnimatingExpand:Z
+
+    .line 713
+    iput-object v5, v2, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mAfterExpand:Ljava/lang/Runnable;
+
+    .line 715
+    iput-object v4, v2, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->mLeadBubbleEndAction:Ljava/lang/Runnable;
+
+    .line 717
+    invoke-virtual {v2, v1}, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->startOrUpdatePathAnimation(Z)V
+
+    .line 719
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
+
+    .line 722
+    if-eqz v1, :cond_13
+
+    .line 724
+    const-string v2, "Overflow"
+
+    .line 726
+    invoke-interface {v1}, Lcom/android/wm/shell/bubbles/BubbleViewProvider;->getKey()Ljava/lang/String;
+
+    .line 728
     move-result-object v1
 
-    .line 1283
+    .line 731
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 732
+    move-result v1
+
+    .line 735
+    if-eqz v1, :cond_13
+
+    .line 736
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
+
+    .line 738
+    iget-object v1, v1, Lcom/android/wm/shell/bubbles/BubbleData;->mBubbles:Ljava/util/List;
+
+    .line 740
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 742
+    move-result-object v1
+
+    .line 745
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    .line 746
+    move-result v1
+
+    .line 749
+    goto :goto_5
+
+    .line 750
+    :cond_13
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
+
+    .line 751
+    invoke-virtual {v0, v1}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getBubbleIndex(Lcom/android/wm/shell/bubbles/BubbleViewProvider;)I
+
+    .line 753
+    move-result v1
+
+    .line 756
+    :goto_5
+    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
+
+    .line 757
+    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getState()Lcom/android/wm/shell/bubbles/BubbleStackView$StackViewState;
+
+    .line 759
+    move-result-object v4
+
+    .line 762
+    invoke-virtual {v2, v1, v4}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getExpandedBubbleXY(ILcom/android/wm/shell/bubbles/BubbleStackView$StackViewState;)Landroid/graphics/PointF;
+
+    .line 763
+    move-result-object v1
+
+    .line 766
+    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
+
+    .line 767
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
+
+    .line 769
+    invoke-virtual {v2}, Lcom/android/wm/shell/bubbles/BubblePositioner;->showBubblesVertically()Z
+
+    .line 771
+    move-result v5
+
+    .line 774
+    if-eqz v5, :cond_14
+
+    .line 775
+    iget v5, v1, Landroid/graphics/PointF;->y:F
+
+    .line 777
+    goto :goto_6
+
+    .line 779
+    :cond_14
+    iget v5, v1, Landroid/graphics/PointF;->x:F
+
+    .line 780
+    :goto_6
+    invoke-virtual {v2, v4, v5}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getExpandedViewY(Lcom/android/wm/shell/bubbles/BubbleViewProvider;F)F
+
+    .line 782
+    move-result v2
+
+    .line 785
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
+
+    .line 786
+    const/4 v5, 0x0
+
+    .line 788
+    invoke-virtual {v4, v5}, Landroid/widget/FrameLayout;->setTranslationX(F)V
+
+    .line 789
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
+
+    .line 792
+    invoke-virtual {v4, v2}, Landroid/widget/FrameLayout;->setTranslationY(F)V
+
+    .line 794
+    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
+
+    .line 797
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    .line 799
+    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->setAlpha(F)V
+
+    .line 801
+    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
+
+    .line 804
+    invoke-virtual {v2}, Lcom/android/wm/shell/bubbles/BubblePositioner;->showBubblesVertically()Z
+
+    .line 806
+    move-result v2
+
+    .line 809
+    if-eqz v2, :cond_15
+
+    .line 810
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackAnimationController:Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
+
+    .line 812
+    iget-object v4, v4, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mStackPosition:Landroid/graphics/PointF;
+
+    .line 814
+    iget v4, v4, Landroid/graphics/PointF;->y:F
+
+    .line 816
+    goto :goto_7
+
+    .line 818
+    :cond_15
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackAnimationController:Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
+
+    .line 819
+    iget-object v4, v4, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mStackPosition:Landroid/graphics/PointF;
+
+    .line 821
+    iget v4, v4, Landroid/graphics/PointF;->x:F
+
+    .line 823
+    :goto_7
+    if-eqz v2, :cond_16
+
+    .line 825
+    iget v5, v1, Landroid/graphics/PointF;->y:F
+
+    .line 827
+    goto :goto_8
+
+    .line 829
+    :cond_16
+    iget v5, v1, Landroid/graphics/PointF;->x:F
+
+    .line 830
+    :goto_8
+    sub-float v4, v5, v4
+
+    .line 832
+    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
+
+    .line 834
+    move-result v4
+
+    .line 837
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getWidth()I
+
+    .line 838
+    move-result v6
+
+    .line 841
+    if-lez v6, :cond_17
+
+    .line 842
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getWidth()I
+
+    .line 844
+    move-result v6
+
+    .line 847
+    int-to-float v6, v6
+
+    .line 848
+    div-float/2addr v4, v6
+
+    .line 849
+    const/high16 v6, 0x41f00000    # 30.0f
+
+    .line 850
+    mul-float/2addr v4, v6
+
+    .line 852
+    const v6, 0x43520001    # 210.00002f
+
+    .line 853
+    add-float/2addr v4, v6
+
+    .line 856
+    float-to-long v6, v4
+
+    .line 857
+    goto :goto_9
+
+    .line 858
+    :cond_17
+    const-wide/16 v6, 0x0
+
+    .line 859
+    :goto_9
+    const/high16 v4, 0x40000000    # 2.0f
+
+    .line 861
+    const v8, 0x3f666666    # 0.9f
+
+    .line 863
+    if-eqz v2, :cond_19
+
+    .line 866
+    iget-boolean v9, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackOnLeftOrWillBe:Z
+
+    .line 868
+    if-eqz v9, :cond_18
+
+    .line 870
+    iget v9, v1, Landroid/graphics/PointF;->x:F
+
+    .line 872
+    iget v10, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleSize:I
+
+    .line 874
+    int-to-float v10, v10
+
+    .line 876
+    add-float/2addr v9, v10
+
+    .line 877
+    iget v10, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewPadding:I
+
+    .line 878
+    int-to-float v10, v10
+
+    .line 880
+    add-float/2addr v9, v10
+
+    .line 881
+    goto :goto_a
+
+    .line 882
+    :cond_18
+    iget v9, v1, Landroid/graphics/PointF;->x:F
+
+    .line 883
+    iget v10, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewPadding:I
+
+    .line 885
+    int-to-float v10, v10
+
+    .line 887
+    sub-float/2addr v9, v10
+
+    .line 888
+    :goto_a
+    iget-object v10, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
+
+    .line 889
+    iget v1, v1, Landroid/graphics/PointF;->y:F
+
+    .line 891
+    iget v11, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleSize:I
+
+    .line 893
+    int-to-float v11, v11
+
+    .line 895
+    div-float/2addr v11, v4
+
+    .line 896
+    add-float/2addr v11, v1
+
+    .line 897
+    invoke-virtual {v10, v8, v8, v9, v11}, Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;->setScale(FFFF)V
+
+    .line 898
+    goto :goto_b
+
+    .line 901
+    :cond_19
+    iget-object v9, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
+
+    .line 902
+    iget v10, v1, Landroid/graphics/PointF;->x:F
+
+    .line 904
+    iget v11, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleSize:I
+
+    .line 906
+    int-to-float v11, v11
+
+    .line 908
+    div-float v4, v11, v4
+
+    .line 909
+    add-float/2addr v4, v10
+
+    .line 911
+    iget v1, v1, Landroid/graphics/PointF;->y:F
+
+    .line 912
+    add-float/2addr v1, v11
+
+    .line 914
+    iget v10, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewPadding:I
+
+    .line 915
+    int-to-float v10, v10
+
+    .line 917
+    add-float/2addr v1, v10
+
+    .line 918
+    invoke-virtual {v9, v8, v8, v4, v1}, Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;->setScale(FFFF)V
+
+    .line 919
+    :goto_b
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
+
+    .line 922
+    iget-object v4, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
+
+    .line 924
+    invoke-virtual {v1, v4}, Landroid/widget/FrameLayout;->setAnimationMatrix(Landroid/graphics/Matrix;)V
+
+    .line 926
+    invoke-virtual {v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->getExpandedView()Lcom/android/wm/shell/bubbles/BubbleExpandedView;
+
+    .line 929
+    move-result-object v1
+
+    .line 932
+    if-eqz v1, :cond_1a
+
+    .line 933
+    const/4 v4, 0x0
+
+    .line 935
+    invoke-virtual {v1, v4}, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->setContentAlpha(F)V
+
+    .line 936
+    invoke-virtual {v1, v4}, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->setBackgroundAlpha(F)V
+
+    .line 939
+    const/4 v4, 0x1
+
+    .line 942
+    iput-boolean v4, v1, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mIsAnimating:Z
+
+    .line 943
+    :cond_1a
+    new-instance v1, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda55;
+
+    .line 945
+    invoke-direct {v1, v0, v2, v5}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda55;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;ZF)V
+
+    .line 947
+    iput-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mDelayedAnimation:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda55;
+
+    .line 950
+    iget-object v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
+
+    .line 952
+    check-cast v2, Lcom/android/wm/shell/common/HandlerExecutor;
+
+    .line 954
+    invoke-virtual {v2, v1, v6, v7}, Lcom/android/wm/shell/common/HandlerExecutor;->executeDelayed(Ljava/lang/Runnable;J)V
+
+    .line 956
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
+
+    .line 959
+    const/4 v2, 0x3
+
+    .line 961
+    invoke-virtual {v0, v1, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
+
+    .line 962
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
+
+    .line 965
+    invoke-virtual {v0, v1, v3}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
+
+    .line 967
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mManager:Lcom/android/wm/shell/bubbles/BubbleStackViewManager$Companion$fromBubbleController$1;
+
+    .line 970
+    new-instance v2, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda41;
+
+    .line 972
+    invoke-direct {v2, v0}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda41;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;)V
+
+    .line 974
+    iget-object v1, v1, Lcom/android/wm/shell/bubbles/BubbleStackViewManager$Companion$fromBubbleController$1;->$controller:Lcom/android/wm/shell/bubbles/BubbleController;
+
+    .line 977
+    iget-object v3, v1, Lcom/android/wm/shell/bubbles/BubbleController;->mSysuiProxy:Lcom/android/systemui/wmshell/BubblesManager$5;
+
+    .line 979
+    new-instance v4, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda5;
+
+    .line 981
+    const/4 v5, 0x1
+
+    .line 983
+    invoke-direct {v4, v1, v2, v5}, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda5;-><init>(Lcom/android/wm/shell/bubbles/BubbleController;Ljava/lang/Object;I)V
+
+    .line 984
+    iget-object v1, v3, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
+
+    .line 987
+    new-instance v2, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda2;
+
+    .line 989
+    const/4 v5, 0x4
+
+    .line 991
+    invoke-direct {v2, v3, v4, v5}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Ljava/lang/Object;I)V
+
+    .line 992
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 995
+    :goto_c
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
+
+    .line 998
+    iget-boolean v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
+
+    .line 1000
+    iget-object v3, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandListener:Lcom/android/wm/shell/bubbles/Bubbles$BubbleExpandListener;
+
+    .line 1002
+    if-eqz v3, :cond_1b
+
+    .line 1004
+    if-eqz v1, :cond_1b
+
+    .line 1006
+    invoke-interface {v1}, Lcom/android/wm/shell/bubbles/BubbleViewProvider;->getKey()Ljava/lang/String;
+
+    .line 1008
+    move-result-object v1
+
+    .line 1011
+    invoke-interface {v3, v1, v2}, Lcom/android/wm/shell/bubbles/Bubbles$BubbleExpandListener;->onBubbleExpandChanged(Ljava/lang/String;Z)V
+
+    .line 1012
+    :cond_1b
+    iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedBubble:Lcom/android/wm/shell/bubbles/BubbleViewProvider;
+
+    .line 1015
+    iget-boolean v2, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpanded:Z
+
+    .line 1017
+    instance-of v3, v1, Lcom/android/wm/shell/bubbles/Bubble;
+
+    .line 1019
+    if-eqz v3, :cond_20
+
+    .line 1021
+    check-cast v1, Lcom/android/wm/shell/bubbles/Bubble;
+
+    .line 1023
+    iget-object v3, v1, Lcom/android/wm/shell/bubbles/Bubble;->mAppName:Ljava/lang/String;
+
+    .line 1025
+    iget-object v1, v1, Lcom/android/wm/shell/bubbles/Bubble;->mTitle:Ljava/lang/String;
+
+    .line 1027
+    if-eqz v1, :cond_1c
+
+    .line 1029
+    goto :goto_d
+
+    .line 1031
+    :cond_1c
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    .line 1032
+    move-result-object v1
+
+    .line 1035
+    const v4, 0x7f130730    # @string/notification_bubble_title 'Bubble'
+
+    .line 1036
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 1039
+    move-result-object v1
+
+    .line 1042
+    :goto_d
+    if-eqz v3, :cond_1e
+
+    .line 1043
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 1045
+    move-result v4
+
+    .line 1048
+    if-eqz v4, :cond_1d
+
+    .line 1049
+    goto :goto_e
+
+    .line 1051
+    :cond_1d
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    .line 1052
+    move-result-object v4
+
+    .line 1055
+    const v5, 0x7f13022c    # @string/bubble_content_description_single '%1$s from %2$s'
+
+    .line 1056
+    filled-new-array {v1, v3}, [Ljava/lang/Object;
+
+    .line 1059
+    move-result-object v1
+
+    .line 1062
+    invoke-virtual {v4, v5, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 1063
+    move-result-object v1
+
+    .line 1066
+    :cond_1e
+    :goto_e
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    .line 1067
+    move-result-object v3
+
+    .line 1070
+    if-eqz v2, :cond_1f
+
+    .line 1071
+    const v2, 0x7f130227    # @string/bubble_accessibility_announce_expand 'expand %1$s'
+
+    .line 1073
+    goto :goto_f
+
+    .line 1076
+    :cond_1f
+    const v2, 0x7f130226    # @string/bubble_accessibility_announce_collapse 'collapse %1$s'
+
+    .line 1077
+    :goto_f
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    .line 1080
+    move-result-object v1
+
+    .line 1083
     invoke-virtual {v3, v2, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 1284
+    .line 1084
     move-result-object v1
 
-    .line 1287
+    .line 1087
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    .line 1288
-    :cond_23
-    :goto_13
+    .line 1088
+    :cond_20
+    :goto_10
     return-void
 
+    .line 1091
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
+    .line 1092
 .end method
 
 .method public onBubbleStateChange(Lcom/android/wm/shell/common/bubbles/BubbleBarUpdate;)V

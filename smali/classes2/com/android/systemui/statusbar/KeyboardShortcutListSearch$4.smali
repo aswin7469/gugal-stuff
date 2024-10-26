@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/text/TextWatcher;
@@ -81,7 +81,7 @@
     iget-object v0, v0, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mContext:Landroid/content/Context;
 
     .line 31
-    const v1, 0x7f140486    # @string/keyboard_shortcut_search_list_no_result 'No shortcuts found'
+    const v1, 0x7f1304d0    # @string/keyboard_shortcut_search_list_no_result 'No shortcuts found'
 
     .line 33
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -127,7 +127,7 @@
     iget-object v0, v0, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->mContext:Landroid/content/Context;
 
     .line 62
-    const v1, 0x7f14046b    # @string/keyboard_shortcut_a11y_show_search_results 'Showing search results'
+    const v1, 0x7f1304b5    # @string/keyboard_shortcut_a11y_show_search_results 'Showing search results'
 
     .line 64
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

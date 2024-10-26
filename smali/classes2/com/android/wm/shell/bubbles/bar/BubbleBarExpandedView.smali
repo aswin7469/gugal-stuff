@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/bubbles/bar/BubbleBarExpandedView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/bubbles/BubbleTaskViewHelper$Listener;
@@ -160,7 +160,7 @@
     move-result-object v0
 
     .line 5
-    const v1, 0x7f070114    # @dimen/bubble_bar_expanded_view_corner_radius '16.0dp'
+    const v1, 0x7f07011a    # @dimen/bubble_bar_expanded_view_corner_radius '16.0dp'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -181,7 +181,7 @@
     move-result-object v0
 
     .line 19
-    const v1, 0x7f070115    # @dimen/bubble_bar_expanded_view_corner_radius_dragged '28.0dp'
+    const v1, 0x7f07011b    # @dimen/bubble_bar_expanded_view_corner_radius_dragged '28.0dp'
 
     .line 20
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -244,7 +244,7 @@
     move-result-object v0
 
     .line 61
-    const v1, 0x7f070112    # @dimen/bubble_bar_expanded_view_caption_height '36.0dp'
+    const v1, 0x7f070118    # @dimen/bubble_bar_expanded_view_caption_height '36.0dp'
 
     .line 62
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -304,7 +304,7 @@
     move-result-object p3
 
     .line 15
-    const p4, 0x7f0e0068    # @layout/bubble_overflow_container 'res/layout/bubble_overflow_container.xml'
+    const p4, 0x7f0d006d    # @layout/bubble_overflow_container 'res/layout/bubble_overflow_container.xml'
 
     .line 16
     const/4 v0, 0x0
@@ -524,7 +524,7 @@
     move-result-object v1
 
     .line 12
-    const v2, 0x7f070125    # @dimen/bubble_elevation '1.0dp'
+    const v2, 0x7f07012b    # @dimen/bubble_elevation '1.0dp'
 
     .line 13
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -545,7 +545,7 @@
     move-result-object v0
 
     .line 27
-    const v1, 0x7f070112    # @dimen/bubble_bar_expanded_view_caption_height '36.0dp'
+    const v1, 0x7f070118    # @dimen/bubble_bar_expanded_view_caption_height '36.0dp'
 
     .line 28
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -557,7 +557,7 @@
     iput v0, p0, Lcom/android/wm/shell/bubbles/bar/BubbleBarExpandedView;->mCaptionHeight:I
 
     .line 35
-    const v0, 0x7f0b0167    # @id/bubble_bar_handle_view
+    const v0, 0x7f0a016d    # @id/bubble_bar_handle_view
 
     .line 37
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -845,7 +845,7 @@
     invoke-static {v3, v1}, Lcom/android/wm/shell/bubbles/bar/BubbleEducationViewController;->hideEducation$default(Lcom/android/wm/shell/bubbles/bar/BubbleEducationViewController;Z)V
 
     .line 74
-    const p0, 0x7f0e005e    # @layout/bubble_bar_manage_education 'res/layout/bubble_bar_manage_education.xml'
+    const p0, 0x7f0d0063    # @layout/bubble_bar_manage_education 'res/layout/bubble_bar_manage_education.xml'
 
     .line 77
     invoke-virtual {v3, p0, v2}, Lcom/android/wm/shell/bubbles/bar/BubbleEducationViewController;->createEducationView(ILandroid/view/ViewGroup;)Lcom/android/wm/shell/common/bubbles/BubblePopupView;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/fontscaling/FontScalingDialogDelegate$onCreate$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/common/ui/view/SeekBarWithIconButtonsView$OnSeekBarWithIconButtonsChangeListener;
@@ -104,7 +104,7 @@
     move-result-object p1
 
     .line 51
-    const p2, 0x7f070277    # @dimen/dialog_title_text_size '24.0sp'
+    const p2, 0x7f070299    # @dimen/dialog_title_text_size '24.0sp'
 
     .line 52
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F

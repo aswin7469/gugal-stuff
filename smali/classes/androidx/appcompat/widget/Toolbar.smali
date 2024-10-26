@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/Toolbar;
 .super Landroid/view/ViewGroup;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/core/view/MenuHost;
@@ -103,7 +103,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const v0, 0x7f040703    # @attr/toolbarStyle
+    const v0, 0x7f040709    # @attr/toolbarStyle
 
     .line 2
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/Toolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -1516,7 +1516,7 @@
     const/4 v2, 0x0
 
     .line 12
-    const v3, 0x7f040702    # @attr/toolbarNavigationButtonStyle
+    const v3, 0x7f040708    # @attr/toolbarNavigationButtonStyle
 
     .line 13
     invoke-direct {v0, v1, v2, v3}, Landroidx/appcompat/widget/AppCompatImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -2780,7 +2780,7 @@
     iget v1, v0, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mDefaultNavigationContentDescription:I
 
     .line 387
-    const v2, 0x7f140009    # @string/abc_action_bar_up_description 'Navigate up'
+    const v2, 0x7f130009    # @string/abc_action_bar_up_description 'Navigate up'
 
     .line 389
     if-ne v2, v1, :cond_12

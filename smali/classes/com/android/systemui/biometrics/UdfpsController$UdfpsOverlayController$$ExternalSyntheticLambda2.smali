@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/biometrics/UdfpsController$UdfpsOverlayController$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -38,7 +38,7 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/biometrics/UdfpsController$UdfpsOverlayController$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/biometrics/UdfpsController$UdfpsOverlayController;
@@ -50,13 +50,13 @@
     iget p0, p0, Lcom/android/systemui/biometrics/UdfpsController$UdfpsOverlayController$$ExternalSyntheticLambda2;->f$2:I
 
     .line 6
-    iget-object v0, v0, Lcom/android/systemui/biometrics/UdfpsController$UdfpsOverlayController;->this$0:Lcom/android/systemui/biometrics/UdfpsController;
+    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsController$UdfpsOverlayController;->this$0:Lcom/android/systemui/biometrics/UdfpsController;
 
     .line 8
-    iget-object v0, v0, Lcom/android/systemui/biometrics/UdfpsController;->mOverlay:Lcom/android/systemui/biometrics/UdfpsControllerOverlay;
+    iget-object v3, v2, Lcom/android/systemui/biometrics/UdfpsController;->mOverlay:Lcom/android/systemui/biometrics/UdfpsControllerOverlay;
 
     .line 10
-    if-nez v0, :cond_0
+    if-nez v3, :cond_0
 
     .line 12
     new-instance v0, Ljava/lang/StringBuilder;
@@ -92,7 +92,39 @@
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 38
-    :cond_0
-    return-void
+    goto :goto_0
+
     .line 41
+    :cond_0
+    iget-object p0, v2, Lcom/android/systemui/biometrics/UdfpsController;->mSensorProps:Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
+
+    .line 42
+    iget p0, p0, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorType:I
+
+    .line 44
+    const/4 v1, 0x3
+
+    .line 46
+    if-ne p0, v1, :cond_1
+
+    .line 47
+    iget-object p0, v2, Lcom/android/systemui/biometrics/UdfpsController;->mUdfpsDisplayMode:Lcom/android/systemui/biometrics/UdfpsDisplayMode;
+
+    .line 49
+    if-eqz p0, :cond_1
+
+    .line 51
+    invoke-virtual {p0}, Lcom/android/systemui/biometrics/UdfpsDisplayMode;->disable()V
+
+    .line 53
+    :cond_1
+    iget-object p0, v0, Lcom/android/systemui/biometrics/UdfpsController$UdfpsOverlayController;->this$0:Lcom/android/systemui/biometrics/UdfpsController;
+
+    .line 56
+    invoke-virtual {p0}, Lcom/android/systemui/biometrics/UdfpsController;->tryAodSendFingerUp()V
+
+    .line 58
+    :goto_0
+    return-void
+    .line 61
 .end method

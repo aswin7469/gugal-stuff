@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/StatusBarHeadsUpChangeListener$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -64,31 +64,21 @@
     invoke-virtual {v0, v1}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->apply(Lcom/android/systemui/shade/NotificationShadeWindowState;)V
 
     .line 21
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 24
-    move-result v0
-
-    .line 27
-    if-nez v0, :cond_0
-
-    .line 28
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarHeadsUpChangeListener;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
 
-    .line 30
+    .line 24
     check-cast v0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
-    .line 32
+    .line 26
     invoke-virtual {v0, v2}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->setHeadsUpAnimatingAway(Z)V
 
-    .line 34
+    .line 28
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarHeadsUpChangeListener;->mNotificationRemoteInputManager:Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
 
-    .line 37
+    .line 31
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->onPanelCollapsed()V
 
-    .line 39
+    .line 33
     return-void
-    .line 42
 .end method

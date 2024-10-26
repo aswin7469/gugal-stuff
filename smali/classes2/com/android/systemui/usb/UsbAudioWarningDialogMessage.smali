@@ -1,25 +1,12 @@
 .class public final Lcom/android/systemui/usb/UsbAudioWarningDialogMessage;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public mDialogHelper:Lcom/android/systemui/usb/UsbDialogHelper;
 
 .field public mDialogType:I
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    return-void
-    .line 5
-.end method
 
 
 # virtual methods
@@ -42,14 +29,14 @@
     if-nez p0, :cond_0
 
     .line 10
-    const p0, 0x7f1409c0    # @string/usb_accessory_permission_prompt 'Allow %1$s to access %2$s?'
+    const p0, 0x7f130a49    # @string/usb_accessory_permission_prompt 'Allow %1$s to access %2$s?'
 
     .line 12
     goto :goto_0
 
     .line 15
     :cond_0
-    const p0, 0x7f1409bf    # @string/usb_accessory_confirm_prompt 'Open %1$s to handle %2$s?'
+    const p0, 0x7f130a48    # @string/usb_accessory_confirm_prompt 'Open %1$s to handle %2$s?'
 
     .line 16
     :goto_0
@@ -63,7 +50,7 @@
     move-result v0
 
     .line 23
-    const v1, 0x7f1409c4    # @string/usb_audio_device_prompt 'Using %1$s with this device might prevent hearing calls, notifications and alarms.'
+    const v1, 0x7f130a4d    # @string/usb_audio_device_prompt 'Using %1$s with this device might prevent hearing calls, notifications and alarms.'
 
     .line 24
     if-eqz v0, :cond_2
@@ -170,7 +157,7 @@
     if-eqz p0, :cond_4
 
     .line 91
-    const p0, 0x7f1409c5    # @string/usb_audio_device_prompt_warn 'This app has not been granted record permission but could capture audio through this USB device. Usi ...'
+    const p0, 0x7f130a4e    # @string/usb_audio_device_prompt_warn 'This app has not been granted record permission but could capture audio through this USB device. Usi ...'
 
     .line 93
     return p0

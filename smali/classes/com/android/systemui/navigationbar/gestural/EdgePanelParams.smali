@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -203,7 +203,7 @@
     iput-object v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 6
-    const v2, 0x7f0707a1    # @dimen/navigation_edge_arrow_thickness '4.0dp'
+    const v2, 0x7f0707e4    # @dimen/navigation_edge_arrow_thickness '4.0dp'
 
     .line 8
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -215,7 +215,7 @@
     iput v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->arrowThickness:F
 
     .line 15
-    const v1, 0x7f0707b4    # @dimen/navigation_edge_panel_padding '8.0dp'
+    const v1, 0x7f0707f7    # @dimen/navigation_edge_panel_padding '8.0dp'
 
     .line 17
     iget-object v2, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
@@ -227,7 +227,7 @@
     iget-object v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 25
-    const v2, 0x7f0707a0    # @dimen/navigation_edge_arrow_min_y '64.0dp'
+    const v2, 0x7f0707e3    # @dimen/navigation_edge_arrow_min_y '64.0dp'
 
     .line 27
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -242,7 +242,7 @@
     iget-object v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 36
-    const v2, 0x7f0707b2    # @dimen/navigation_edge_finger_offset '64.0dp'
+    const v2, 0x7f0707f5    # @dimen/navigation_edge_finger_offset '64.0dp'
 
     .line 38
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -257,7 +257,7 @@
     iget-object v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 47
-    const v2, 0x7f070793    # @dimen/navigation_edge_action_drag_threshold '16.0dp'
+    const v2, 0x7f0707d6    # @dimen/navigation_edge_action_drag_threshold '16.0dp'
 
     .line 49
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -272,7 +272,7 @@
     iget-object v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 58
-    const v2, 0x7f070795    # @dimen/navigation_edge_action_reactivation_drag_threshold '32.0dp'
+    const v2, 0x7f0707d8    # @dimen/navigation_edge_action_reactivation_drag_threshold '32.0dp'
 
     .line 60
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -287,7 +287,7 @@
     iget-object v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 69
-    const v2, 0x7f070792    # @dimen/navigation_edge_action_deactivation_drag_threshold '32.0dp'
+    const v2, 0x7f0707d5    # @dimen/navigation_edge_action_deactivation_drag_threshold '32.0dp'
 
     .line 71
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -317,7 +317,7 @@
     iget-object v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 90
-    const v2, 0x7f070794    # @dimen/navigation_edge_action_progress_threshold '412.0dp'
+    const v2, 0x7f0707d7    # @dimen/navigation_edge_action_progress_threshold '412.0dp'
 
     .line 92
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -589,7 +589,7 @@
     iget-object v8, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 304
-    const v9, 0x7f0707b0    # @dimen/navigation_edge_entry_margin '4.0dp'
+    const v9, 0x7f0707f3    # @dimen/navigation_edge_entry_margin '4.0dp'
 
     .line 306
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimension(I)F
@@ -598,7 +598,7 @@
     move-result v8
 
     .line 312
-    const v9, 0x7f0707b1    # @dimen/navigation_edge_entry_scale '0.98'
+    const v9, 0x7f0707f4    # @dimen/navigation_edge_entry_scale '0.98'
 
     .line 313
     invoke-virtual {v0, v9}, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->getDimenFloat(I)F
@@ -610,7 +610,7 @@
     iget-object v9, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 320
-    const v11, 0x7f0707bb    # @dimen/navigation_edge_pre_threshold_background_width '51.0dp'
+    const v11, 0x7f0707fe    # @dimen/navigation_edge_pre_threshold_background_width '51.0dp'
 
     .line 322
     invoke-virtual {v9, v11}, Landroid/content/res/Resources;->getDimension(I)F
@@ -655,7 +655,7 @@
     iget-object v11, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 354
-    const v12, 0x7f0707aa    # @dimen/navigation_edge_entry_arrow_length '8.6dp'
+    const v12, 0x7f0707ed    # @dimen/navigation_edge_entry_arrow_length '8.6dp'
 
     .line 356
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getDimension(I)F
@@ -667,7 +667,7 @@
     iget-object v12, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 363
-    const v14, 0x7f0707a9    # @dimen/navigation_edge_entry_arrow_height '5.0dp'
+    const v14, 0x7f0707ec    # @dimen/navigation_edge_entry_arrow_height '5.0dp'
 
     .line 365
     invoke-virtual {v12, v14}, Landroid/content/res/Resources;->getDimension(I)F
@@ -727,7 +727,7 @@
     iget-object v5, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 406
-    const v11, 0x7f0707ad    # @dimen/navigation_edge_entry_background_width '0.0dp'
+    const v11, 0x7f0707f0    # @dimen/navigation_edge_entry_background_width '0.0dp'
 
     .line 408
     invoke-virtual {v5, v11}, Landroid/content/res/Resources;->getDimension(I)F
@@ -739,7 +739,7 @@
     iget-object v11, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 415
-    const v12, 0x7f0707ac    # @dimen/navigation_edge_entry_background_height '48.0dp'
+    const v12, 0x7f0707ef    # @dimen/navigation_edge_entry_background_height '48.0dp'
 
     .line 417
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getDimension(I)F
@@ -751,7 +751,7 @@
     iget-object v11, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 424
-    const v12, 0x7f0707ae    # @dimen/navigation_edge_entry_edge_corners '6.0dp'
+    const v12, 0x7f0707f1    # @dimen/navigation_edge_entry_edge_corners '6.0dp'
 
     .line 426
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getDimension(I)F
@@ -763,7 +763,7 @@
     iget-object v11, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 433
-    const v12, 0x7f0707af    # @dimen/navigation_edge_entry_far_corners '6.0dp'
+    const v12, 0x7f0707f2    # @dimen/navigation_edge_entry_far_corners '6.0dp'
 
     .line 435
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getDimension(I)F
@@ -853,7 +853,7 @@
     iget-object v5, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 498
-    const v8, 0x7f07079e    # @dimen/navigation_edge_active_margin '14.0dp'
+    const v8, 0x7f0707e1    # @dimen/navigation_edge_active_margin '14.0dp'
 
     .line 500
     invoke-virtual {v5, v8}, Landroid/content/res/Resources;->getDimension(I)F
@@ -862,7 +862,7 @@
     move-result v5
 
     .line 506
-    const v8, 0x7f07079f    # @dimen/navigation_edge_active_scale '1.0'
+    const v8, 0x7f0707e2    # @dimen/navigation_edge_active_scale '1.0'
 
     .line 507
     invoke-virtual {v0, v8}, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->getDimenFloat(I)F
@@ -895,7 +895,7 @@
     iget-object v8, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 530
-    const v11, 0x7f07079b    # @dimen/navigation_edge_active_background_width '48.0dp'
+    const v11, 0x7f0707de    # @dimen/navigation_edge_active_background_width '48.0dp'
 
     .line 532
     invoke-virtual {v8, v11}, Landroid/content/res/Resources;->getDimension(I)F
@@ -907,7 +907,7 @@
     iget-object v8, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 539
-    const v9, 0x7f070798    # @dimen/navigation_edge_active_arrow_length '6.4dp'
+    const v9, 0x7f0707db    # @dimen/navigation_edge_active_arrow_length '6.4dp'
 
     .line 541
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimension(I)F
@@ -919,7 +919,7 @@
     iget-object v9, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 548
-    const v10, 0x7f070797    # @dimen/navigation_edge_active_arrow_height '7.2dp'
+    const v10, 0x7f0707da    # @dimen/navigation_edge_active_arrow_height '7.2dp'
 
     .line 550
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getDimension(I)F
@@ -961,7 +961,7 @@
     move v1, v11
 
     .line 577
-    const v6, 0x7f0707bb    # @dimen/navigation_edge_pre_threshold_background_width '51.0dp'
+    const v6, 0x7f0707fe    # @dimen/navigation_edge_pre_threshold_background_width '51.0dp'
 
     .line 578
     move/from16 v11, v20
@@ -1003,7 +1003,7 @@
     iget-object v8, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 604
-    const v9, 0x7f07079a    # @dimen/navigation_edge_active_background_height '48.0dp'
+    const v9, 0x7f0707dd    # @dimen/navigation_edge_active_background_height '48.0dp'
 
     .line 606
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1015,7 +1015,7 @@
     iget-object v8, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 613
-    const v9, 0x7f07079c    # @dimen/navigation_edge_active_edge_corners '24.0dp'
+    const v9, 0x7f0707df    # @dimen/navigation_edge_active_edge_corners '24.0dp'
 
     .line 615
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1027,7 +1027,7 @@
     iget-object v8, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 622
-    const v9, 0x7f07079d    # @dimen/navigation_edge_active_far_corners '24.0dp'
+    const v9, 0x7f0707e0    # @dimen/navigation_edge_active_far_corners '24.0dp'
 
     .line 624
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1123,7 +1123,7 @@
     iget-object v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 693
-    const v4, 0x7f0707be    # @dimen/navigation_edge_pre_threshold_margin '4.0dp'
+    const v4, 0x7f070801    # @dimen/navigation_edge_pre_threshold_margin '4.0dp'
 
     .line 695
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1132,7 +1132,7 @@
     move-result v1
 
     .line 701
-    const v4, 0x7f0707bf    # @dimen/navigation_edge_pre_threshold_scale '0.98'
+    const v4, 0x7f070802    # @dimen/navigation_edge_pre_threshold_scale '0.98'
 
     .line 702
     invoke-virtual {v0, v4}, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->getDimenFloat(I)F
@@ -1174,7 +1174,7 @@
     iget-object v9, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 731
-    const v10, 0x7f0707b8    # @dimen/navigation_edge_pre_threshold_arrow_length '8.0dp'
+    const v10, 0x7f0707fb    # @dimen/navigation_edge_pre_threshold_arrow_length '8.0dp'
 
     .line 733
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1186,7 +1186,7 @@
     iget-object v10, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 740
-    const v12, 0x7f0707b7    # @dimen/navigation_edge_pre_threshold_arrow_height '5.6dp'
+    const v12, 0x7f0707fa    # @dimen/navigation_edge_pre_threshold_arrow_height '5.6dp'
 
     .line 742
     invoke-virtual {v10, v12}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1252,7 +1252,7 @@
     iget-object v7, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 787
-    const v9, 0x7f0707ba    # @dimen/navigation_edge_pre_threshold_background_height '46.0dp'
+    const v9, 0x7f0707fd    # @dimen/navigation_edge_pre_threshold_background_height '46.0dp'
 
     .line 789
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1264,7 +1264,7 @@
     iget-object v7, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 796
-    const v9, 0x7f0707bc    # @dimen/navigation_edge_pre_threshold_edge_corners '16.0dp'
+    const v9, 0x7f0707ff    # @dimen/navigation_edge_pre_threshold_edge_corners '16.0dp'
 
     .line 798
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1276,7 +1276,7 @@
     iget-object v7, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 805
-    const v9, 0x7f0707bd    # @dimen/navigation_edge_pre_threshold_far_corners '20.0dp'
+    const v9, 0x7f070800    # @dimen/navigation_edge_pre_threshold_far_corners '20.0dp'
 
     .line 807
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1711,7 +1711,7 @@
     iget-object v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 1067
-    const v2, 0x7f0707c6    # @dimen/navigation_edge_stretch_margin '18.0dp'
+    const v2, 0x7f070809    # @dimen/navigation_edge_stretch_margin '18.0dp'
 
     .line 1069
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1720,7 +1720,7 @@
     move-result v1
 
     .line 1075
-    const v2, 0x7f0707c7    # @dimen/navigation_edge_stretch_scale '1.0'
+    const v2, 0x7f07080a    # @dimen/navigation_edge_stretch_scale '1.0'
 
     .line 1076
     invoke-virtual {v0, v2}, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->getDimenFloat(I)F
@@ -1732,7 +1732,7 @@
     iget-object v2, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 1083
-    const v3, 0x7f0707c9    # @dimen/navigation_edge_stretched_arrow_length '5.6dp'
+    const v3, 0x7f07080c    # @dimen/navigation_edge_stretched_arrow_length '5.6dp'
 
     .line 1085
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1744,7 +1744,7 @@
     iget-object v3, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 1092
-    const v4, 0x7f0707c8    # @dimen/navigation_edge_stretched_arrow_height '8.0dp'
+    const v4, 0x7f07080b    # @dimen/navigation_edge_stretched_arrow_height '8.0dp'
 
     .line 1094
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1792,7 +1792,7 @@
     iget-object v2, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 1121
-    const v3, 0x7f0707c3    # @dimen/navigation_edge_stretch_background_width '60.0dp'
+    const v3, 0x7f070806    # @dimen/navigation_edge_stretch_background_width '60.0dp'
 
     .line 1123
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1804,7 +1804,7 @@
     iget-object v3, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 1130
-    const v4, 0x7f0707c2    # @dimen/navigation_edge_stretch_background_height '48.0dp'
+    const v4, 0x7f070805    # @dimen/navigation_edge_stretch_background_height '48.0dp'
 
     .line 1132
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1816,7 +1816,7 @@
     iget-object v3, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 1139
-    const v4, 0x7f0707c4    # @dimen/navigation_edge_stretch_edge_corners '24.0dp'
+    const v4, 0x7f070807    # @dimen/navigation_edge_stretch_edge_corners '24.0dp'
 
     .line 1141
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1828,7 +1828,7 @@
     iget-object v3, v0, Lcom/android/systemui/navigationbar/gestural/EdgePanelParams;->resources:Landroid/content/res/Resources;
 
     .line 1148
-    const v4, 0x7f0707c5    # @dimen/navigation_edge_stretch_far_corners '24.0dp'
+    const v4, 0x7f070808    # @dimen/navigation_edge_stretch_far_corners '24.0dp'
 
     .line 1150
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F

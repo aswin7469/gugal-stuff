@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/chips/sharetoapp/ui/view/EndShareToAppDialogDelegate;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/phone/SystemUIDialog$Delegate;
@@ -44,13 +44,13 @@
     check-cast p1, Lcom/android/systemui/statusbar/phone/SystemUIDialog;
 
     .line 2
-    const v0, 0x7f080918    # @drawable/ic_screenshot_share 'res/drawable/ic_screenshot_share.xml'
+    const v0, 0x7f080943    # @drawable/ic_screenshot_share 'res/drawable/ic_screenshot_share.xml'
 
     .line 4
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->setIcon(I)V
 
     .line 7
-    const v0, 0x7f1408cd    # @string/share_to_app_stop_dialog_title 'Stop sharing screen?'
+    const v0, 0x7f130948    # @string/share_to_app_stop_dialog_title 'Stop sharing screen?'
 
     .line 10
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->setTitle(I)V
@@ -91,10 +91,10 @@
 
     .line 35
     :goto_0
-    const v2, 0x7f1408cb    # @string/share_to_app_stop_dialog_message 'You will stop sharing your screen'
+    const v2, 0x7f130946    # @string/share_to_app_stop_dialog_message 'You will stop sharing your screen'
 
     .line 36
-    const v4, 0x7f1408cc    # @string/share_to_app_stop_dialog_message_specific_app 'You will stop sharing <b>%1$s</b>'
+    const v4, 0x7f130947    # @string/share_to_app_stop_dialog_message_specific_app 'You will stop sharing <b>%1$s</b>'
 
     .line 39
     invoke-virtual {v1, v0, v2, v4}, Lcom/android/systemui/statusbar/chips/mediaprojection/ui/view/EndMediaProjectionDialogHelper;->getDialogMessage(Landroid/app/ActivityManager$RunningTaskInfo;II)Ljava/lang/CharSequence;
@@ -106,7 +106,7 @@
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 46
-    const v0, 0x7f140282    # @string/close_dialog_button 'Close'
+    const v0, 0x7f13028f    # @string/close_dialog_button 'Close'
 
     .line 49
     invoke-virtual {p1, v0, v3}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)V
@@ -118,7 +118,7 @@
     invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/chips/sharetoapp/ui/view/EndShareToAppDialogDelegate$beforeCreate$1$1;-><init>(Lcom/android/systemui/statusbar/chips/sharetoapp/ui/view/EndShareToAppDialogDelegate;)V
 
     .line 57
-    const p0, 0x7f1408ca    # @string/share_to_app_stop_dialog_button 'Stop sharing'
+    const p0, 0x7f130945    # @string/share_to_app_stop_dialog_button 'Stop sharing'
 
     .line 60
     invoke-virtual {p1, p0, v0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V

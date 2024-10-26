@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/protobuf/GeneratedMessageLite;
 .super Lcom/google/protobuf/AbstractMessageLite;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -569,7 +569,7 @@
     const-string v0, "serialized size must be non-negative, was "
 
     .line 37
-    invoke-static {p0, v0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 39
     move-result-object p0
@@ -837,7 +837,7 @@
     const-string v0, "serialized size must be non-negative, was "
 
     .line 19
-    invoke-static {p1, v0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 21
     move-result-object p1
@@ -892,50 +892,4 @@
     .line 28
     return-object p0
     .line 29
-.end method
-
-.method public final writeTo(Lcom/google/protobuf/CodedOutputStream;)V
-    .locals 2
-
-    .line 1
-    sget-object v0, Lcom/google/protobuf/Protobuf;->INSTANCE:Lcom/google/protobuf/Protobuf;
-
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 4
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 7
-    move-result-object v1
-
-    .line 10
-    invoke-virtual {v0, v1}, Lcom/google/protobuf/Protobuf;->schemaFor(Ljava/lang/Class;)Lcom/google/protobuf/Schema;
-
-    .line 11
-    move-result-object v0
-
-    .line 14
-    iget-object v1, p1, Lcom/google/protobuf/CodedOutputStream;->wrapper:Lcom/google/protobuf/CodedOutputStreamWriter;
-
-    .line 15
-    if-eqz v1, :cond_0
-
-    .line 17
-    goto :goto_0
-
-    .line 19
-    :cond_0
-    new-instance v1, Lcom/google/protobuf/CodedOutputStreamWriter;
-
-    .line 20
-    invoke-direct {v1, p1}, Lcom/google/protobuf/CodedOutputStreamWriter;-><init>(Lcom/google/protobuf/CodedOutputStream;)V
-
-    .line 22
-    :goto_0
-    invoke-interface {v0, p0, v1}, Lcom/google/protobuf/Schema;->writeTo(Ljava/lang/Object;Lcom/google/protobuf/CodedOutputStreamWriter;)V
-
-    .line 25
-    return-void
-    .line 28
 .end method

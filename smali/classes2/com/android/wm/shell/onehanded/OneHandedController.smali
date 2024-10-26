@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/onehanded/OneHandedController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/RemoteCallable;
@@ -232,7 +232,7 @@
     move-result-object v4
 
     .line 97
-    const v5, 0x7f0a0005    # @fraction/config_one_handed_offset '40.0%'
+    const v5, 0x7f090005    # @fraction/config_one_handed_offset '40.0%'
 
     .line 98
     const/4 v6, 0x1
@@ -629,6 +629,7 @@
 
     .line 30
     return-void
+    .line 33
 .end method
 
 .method public onActivatedActionChanged()V
@@ -1123,7 +1124,6 @@
 
     .line 33
     return-void
-    .line 36
 .end method
 
 .method public final onKeyguardVisibilityChanged(ZZZ)V

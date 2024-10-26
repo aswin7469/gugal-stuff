@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -114,7 +114,7 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+    .locals 4
 
     .line 1
     sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
@@ -123,7 +123,7 @@
     iget v0, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->label:I
 
     .line 4
-    if-nez v0, :cond_2
+    if-nez v0, :cond_0
 
     .line 6
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
@@ -162,162 +162,31 @@
     iget-object v2, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->$viewModel:Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/CollapsedStatusBarViewModel;
 
     .line 31
-    iget-object v4, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->$listener:Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/StatusBarVisibilityChangeListener;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->$listener:Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/StatusBarVisibilityChangeListener;
 
     .line 33
-    invoke-direct {v0, v2, v4, v3}, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1$2;-><init>(Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/CollapsedStatusBarViewModel;Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/StatusBarVisibilityChangeListener;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v2, p0, v3}, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1$2;-><init>(Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/CollapsedStatusBarViewModel;Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/StatusBarVisibilityChangeListener;Lkotlin/coroutines/Continuation;)V
 
     .line 35
     invoke-static {p1, v3, v3, v0, v1}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
     .line 38
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsLiveDataStoreRefactor()Z
-
-    .line 41
-    move-result v0
-
-    .line 44
-    if-eqz v0, :cond_0
-
-    .line 45
-    iget-object v0, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->$view:Landroid/view/View;
-
-    .line 47
-    invoke-virtual {v0}, Landroid/view/View;->getDisplay()Landroid/view/Display;
-
-    .line 49
-    move-result-object v0
-
-    .line 52
-    invoke-virtual {v0}, Landroid/view/Display;->getDisplayId()I
-
-    .line 53
-    move-result v6
-
-    .line 56
-    iget-object v0, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->$view:Landroid/view/View;
-
-    .line 57
-    const v2, 0x7f0b0579    # @id/notification_lights_out
-
-    .line 59
-    invoke-virtual {v0, v2}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
-
-    .line 62
-    move-result-object v8
-
-    .line 65
-    new-instance v0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1$3;
-
-    .line 66
-    iget-object v5, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->$viewModel:Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/CollapsedStatusBarViewModel;
-
-    .line 68
-    iget-object v7, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->this$0:Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl;
-
-    .line 70
-    const/4 v9, 0x0
-
-    .line 72
-    move-object v4, v0
-
-    .line 73
-    invoke-direct/range {v4 .. v9}, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1$3;-><init>(Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/CollapsedStatusBarViewModel;ILcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    .line 74
-    invoke-static {p1, v3, v3, v0, v1}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 77
-    :cond_0
-    invoke-static {}, Lcom/android/systemui/Flags;->statusBarScreenSharingChips()Z
-
-    .line 80
-    move-result v0
-
-    .line 83
-    if-eqz v0, :cond_1
-
-    .line 84
-    iget-object v0, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->$view:Landroid/view/View;
-
-    .line 86
-    const v2, 0x7f0b0593    # @id/ongoing_activity_chip
-
-    .line 88
-    invoke-virtual {v0, v2}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
-
-    .line 91
-    move-result-object v8
-
-    .line 94
-    const v0, 0x7f0b0595    # @id/ongoing_activity_chip_icon
-
-    .line 95
-    invoke-virtual {v8, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
-
-    .line 98
-    move-result-object v0
-
-    .line 101
-    move-object v6, v0
-
-    .line 102
-    check-cast v6, Landroid/widget/ImageView;
-
-    .line 103
-    const v0, 0x7f0b0596    # @id/ongoing_activity_chip_time
-
-    .line 105
-    invoke-virtual {v8, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
-
-    .line 108
-    move-result-object v0
-
-    .line 111
-    move-object v7, v0
-
-    .line 112
-    check-cast v7, Lcom/android/systemui/statusbar/chips/ui/view/ChipChronometer;
-
-    .line 113
-    new-instance v0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1$4;
-
-    .line 115
-    iget-object v5, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->$viewModel:Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/CollapsedStatusBarViewModel;
-
-    .line 117
-    iget-object v9, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1;->$listener:Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/StatusBarVisibilityChangeListener;
-
-    .line 119
-    const/4 v10, 0x0
-
-    .line 121
-    move-object v4, v0
-
-    .line 122
-    invoke-direct/range {v4 .. v10}, Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/CollapsedStatusBarViewBinderImpl$bind$1$1$4;-><init>(Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/CollapsedStatusBarViewModel;Landroid/widget/ImageView;Lcom/android/systemui/statusbar/chips/ui/view/ChipChronometer;Landroid/view/View;Lcom/android/systemui/statusbar/pipeline/shared/ui/binder/StatusBarVisibilityChangeListener;Lkotlin/coroutines/Continuation;)V
-
-    .line 123
-    invoke-static {p1, v3, v3, v0, v1}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 126
-    :cond_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 129
+    .line 41
     return-object p0
 
-    .line 131
-    :cond_2
+    .line 43
+    :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 132
+    .line 44
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    .line 134
+    .line 46
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 136
+    .line 48
     throw p0
-    .line 139
+    .line 51
 .end method

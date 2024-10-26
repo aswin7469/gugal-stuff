@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/ClockEventController$zenModeCallback$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/ZenModeController$Callback;
@@ -95,35 +95,35 @@
 
     .line 37
     :goto_1
-    const-string v2, "status_bar_alarm"
+    const-string/jumbo v2, "status_bar_alarm"
 
     .line 38
     invoke-direct {v0, v1, v2}, Lcom/android/systemui/plugins/clocks/AlarmData;-><init>(Ljava/lang/Long;Ljava/lang/String;)V
 
-    .line 40
-    new-instance v1, Lcom/android/keyguard/ClockEventController$zenModeCallback$1$onZenChanged$1$1;
+    .line 41
+    iget-object v1, p0, Lcom/android/keyguard/ClockEventController;->mainExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
-    .line 43
-    const/4 v2, 0x1
-
-    .line 45
-    invoke-direct {v1, p0, v0, v2}, Lcom/android/keyguard/ClockEventController$zenModeCallback$1$onZenChanged$1$1;-><init>(Lcom/android/keyguard/ClockEventController;Ljava/lang/Object;I)V
+    .line 44
+    new-instance v2, Lcom/android/keyguard/ClockEventController$zenModeCallback$1$onZenChanged$1$1;
 
     .line 46
-    iget-object v2, p0, Lcom/android/keyguard/ClockEventController;->mainExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
+    const/4 v3, 0x1
+
+    .line 48
+    invoke-direct {v2, p0, v0, v3}, Lcom/android/keyguard/ClockEventController$zenModeCallback$1$onZenChanged$1$1;-><init>(Lcom/android/keyguard/ClockEventController;Ljava/lang/Object;I)V
 
     .line 49
-    check-cast v2, Lcom/android/systemui/util/concurrency/ExecutorImpl;
+    check-cast v1, Lcom/android/systemui/util/concurrency/ExecutorImpl;
 
-    .line 51
-    invoke-virtual {v2, v1}, Lcom/android/systemui/util/concurrency/ExecutorImpl;->execute(Ljava/lang/Runnable;)V
+    .line 52
+    invoke-virtual {v1, v2}, Lcom/android/systemui/util/concurrency/ExecutorImpl;->execute(Ljava/lang/Runnable;)V
 
-    .line 53
+    .line 54
     iput-object v0, p0, Lcom/android/keyguard/ClockEventController;->alarmData:Lcom/android/systemui/plugins/clocks/AlarmData;
 
-    .line 56
+    .line 57
     return-void
-    .line 58
+    .line 59
 .end method
 
 .method public final onZenChanged(I)V

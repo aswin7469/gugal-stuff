@@ -1,6 +1,6 @@
 .class public Landroidx/slice/widget/MessageView;
 .super Landroidx/slice/widget/SliceChildView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -197,81 +197,81 @@
     const/4 p3, 0x0
 
     .line 82
-    const-string p4, "text"
+    const-string/jumbo p4, "text"
 
     .line 83
     invoke-static {p1, p4, p3, p3}, Landroidx/slice/core/SliceQuery;->findAll(Landroidx/slice/SliceItem;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 85
+    .line 86
     move-result-object p1
-
-    .line 88
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     .line 89
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 90
     move-result-object p1
 
-    .line 92
+    .line 93
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 93
+    .line 94
     move-result p3
 
-    .line 96
+    .line 97
     if-eqz p3, :cond_2
 
-    .line 97
+    .line 98
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 99
+    .line 100
     move-result-object p3
 
-    .line 102
+    .line 103
     check-cast p3, Landroidx/slice/SliceItem;
 
-    .line 103
+    .line 104
     invoke-virtual {p2}, Landroid/text/SpannableStringBuilder;->length()I
 
-    .line 105
+    .line 106
     move-result p4
 
-    .line 108
+    .line 109
     if-eqz p4, :cond_1
 
-    .line 109
+    .line 110
     const/16 p4, 0xa
 
-    .line 111
+    .line 112
     invoke-virtual {p2, p4}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
-    .line 113
+    .line 114
     :cond_1
     invoke-virtual {p3}, Landroidx/slice/SliceItem;->getSanitizedText()Ljava/lang/CharSequence;
 
-    .line 116
+    .line 117
     move-result-object p3
 
-    .line 119
+    .line 120
     invoke-virtual {p2, p3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 120
+    .line 121
     goto :goto_0
 
-    .line 123
+    .line 124
     :cond_2
     iget-object p0, p0, Landroidx/slice/widget/MessageView;->mDetails:Landroid/widget/TextView;
 
-    .line 124
+    .line 125
     invoke-virtual {p2}, Landroid/text/SpannableStringBuilder;->toString()Ljava/lang/String;
 
-    .line 126
+    .line 127
     move-result-object p1
 
-    .line 129
+    .line 130
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 130
+    .line 131
     return-void
-    .line 133
+    .line 134
 .end method

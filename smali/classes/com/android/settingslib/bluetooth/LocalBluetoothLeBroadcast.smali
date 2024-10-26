@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;
@@ -606,7 +606,7 @@
     new-instance v2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast$$ExternalSyntheticLambda0;
 
     .line 27
-    const/4 v3, 0x0
+    const/4 v3, 0x2
 
     .line 29
     invoke-direct {v2, p0, v3}, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast$$ExternalSyntheticLambda0;-><init>(Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;I)V
@@ -1179,60 +1179,60 @@
     iget-object p1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mProgramInfo:Ljava/lang/String;
 
     .line 16
-    const-string v1, "startBroadcast: language = null ,programInfo = "
+    const-string/jumbo v1, "startBroadcast: language = null ,programInfo = "
 
     .line 18
     invoke-static {v1, p1, v0}, Landroidx/fragment/app/FragmentManagerViewModel$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 20
+    .line 21
     iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mBuilder:Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;
 
-    .line 23
+    .line 24
     const/4 v1, 0x0
 
-    .line 25
+    .line 26
     invoke-virtual {v0, v1}, Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;->setLanguage(Ljava/lang/String;)Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;
 
-    .line 26
+    .line 27
     move-result-object v0
 
-    .line 29
+    .line 30
     invoke-virtual {v0, p1}, Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;->setProgramInfo(Ljava/lang/String;)Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;
 
-    .line 30
+    .line 31
     move-result-object p1
-
-    .line 33
-    invoke-virtual {p1}, Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;->build()Landroid/bluetooth/BluetoothLeAudioContentMetadata;
 
     .line 34
+    invoke-virtual {p1}, Landroid/bluetooth/BluetoothLeAudioContentMetadata$Builder;->build()Landroid/bluetooth/BluetoothLeAudioContentMetadata;
+
+    .line 35
     move-result-object p1
 
-    .line 37
+    .line 38
     iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
 
-    .line 38
+    .line 39
     iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mBroadcastCode:[B
 
-    .line 40
+    .line 41
     if-eqz p0, :cond_1
 
-    .line 42
+    .line 43
     array-length v2, p0
 
-    .line 44
+    .line 45
     if-lez v2, :cond_1
 
-    .line 45
+    .line 46
     move-object v1, p0
 
-    .line 47
+    .line 48
     :cond_1
     invoke-virtual {v0, p1, v1}, Landroid/bluetooth/BluetoothLeBroadcast;->startBroadcast(Landroid/bluetooth/BluetoothLeAudioContentMetadata;[B)V
 
-    .line 48
+    .line 49
     return-void
-    .line 51
+    .line 52
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -1758,426 +1758,4 @@
     :goto_2
     return-void
     .line 217
-.end method
-
-.method public final updateFallbackActiveDeviceIfNeeded()V
-    .locals 8
-
-    .line 1
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
-
-    .line 2
-    const-string v1, "LocalBluetoothLeBroadcast"
-
-    .line 4
-    if-nez v0, :cond_0
-
-    .line 6
-    const-string p0, "Skip updateFallbackActiveDeviceIfNeeded due to broadcast profile is null"
-
-    .line 8
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 10
-    return-void
-
-    .line 13
-    :cond_0
-    invoke-virtual {v0}, Landroid/bluetooth/BluetoothLeBroadcast;->getAllBroadcastMetadata()Ljava/util/List;
-
-    .line 14
-    move-result-object v0
-
-    .line 17
-    invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
-
-    .line 18
-    move-result-object v0
-
-    .line 21
-    new-instance v2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast$$ExternalSyntheticLambda0;
-
-    .line 22
-    const/4 v3, 0x1
-
-    .line 24
-    invoke-direct {v2, p0, v3}, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast$$ExternalSyntheticLambda0;-><init>(Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;I)V
-
-    .line 25
-    invoke-interface {v0, v2}, Ljava/util/stream/Stream;->noneMatch(Ljava/util/function/Predicate;)Z
-
-    .line 28
-    move-result v0
-
-    .line 31
-    if-eqz v0, :cond_1
-
-    .line 32
-    const-string p0, "Skip updateFallbackActiveDeviceIfNeeded due to no broadcast ongoing"
-
-    .line 34
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 36
-    return-void
-
-    .line 39
-    :cond_1
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mServiceBroadcastAssistant:Landroid/bluetooth/BluetoothLeBroadcastAssistant;
-
-    .line 40
-    if-nez v0, :cond_2
-
-    .line 42
-    const-string p0, "Skip updateFallbackActiveDeviceIfNeeded due to assistant profile is null"
-
-    .line 44
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 46
-    return-void
-
-    .line 49
-    :cond_2
-    invoke-virtual {v0}, Landroid/bluetooth/BluetoothLeBroadcastAssistant;->getConnectedDevices()Ljava/util/List;
-
-    .line 50
-    move-result-object v0
-
-    .line 53
-    invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
-
-    .line 54
-    move-result-object v0
-
-    .line 57
-    new-instance v2, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast$$ExternalSyntheticLambda0;
-
-    .line 58
-    const/4 v3, 0x2
-
-    .line 60
-    invoke-direct {v2, p0, v3}, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast$$ExternalSyntheticLambda0;-><init>(Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;I)V
-
-    .line 61
-    invoke-interface {v0, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-
-    .line 64
-    move-result-object v0
-
-    .line 67
-    invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
-
-    .line 68
-    move-result-object v2
-
-    .line 71
-    invoke-interface {v0, v2}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
-
-    .line 72
-    move-result-object v0
-
-    .line 75
-    check-cast v0, Ljava/util/List;
-
-    .line 76
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    .line 78
-    move-result v2
-
-    .line 81
-    if-eqz v2, :cond_3
-
-    .line 82
-    const-string p0, "Skip updateFallbackActiveDeviceIfNeeded due to no sinks in broadcast"
-
-    .line 84
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 86
-    return-void
-
-    .line 89
-    :cond_3
-    invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
-
-    .line 90
-    move-result-object v2
-
-    .line 93
-    invoke-virtual {v2}, Landroid/bluetooth/BluetoothAdapter;->getMostRecentlyConnectedDevices()Ljava/util/List;
-
-    .line 94
-    move-result-object v2
-
-    .line 97
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 98
-    move-result-object v0
-
-    .line 101
-    const/4 v3, -0x1
-
-    .line 102
-    const/4 v4, 0x0
-
-    .line 103
-    move v5, v3
-
-    .line 104
-    :cond_4
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 105
-    move-result v6
-
-    .line 108
-    if-eqz v6, :cond_5
-
-    .line 109
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 111
-    move-result-object v6
-
-    .line 114
-    check-cast v6, Landroid/bluetooth/BluetoothDevice;
-
-    .line 115
-    invoke-interface {v2, v6}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    .line 117
-    move-result v7
-
-    .line 120
-    if-eqz v7, :cond_4
-
-    .line 121
-    invoke-interface {v2, v6}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
-
-    .line 123
-    move-result v7
-
-    .line 126
-    if-le v7, v5, :cond_4
-
-    .line 127
-    move-object v4, v6
-
-    .line 129
-    move v5, v7
-
-    .line 130
-    goto :goto_0
-
-    .line 131
-    :cond_5
-    if-nez v4, :cond_6
-
-    .line 132
-    const-string p0, "Skip updateFallbackActiveDeviceIfNeeded, target is null"
-
-    .line 134
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 136
-    return-void
-
-    .line 139
-    :cond_6
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 140
-    const-string/jumbo v2, "updateFallbackActiveDeviceIfNeeded, set active device: "
-
-    .line 142
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 145
-    invoke-virtual {v4}, Landroid/bluetooth/BluetoothDevice;->getAnonymizedAddress()Ljava/lang/String;
-
-    .line 148
-    move-result-object v2
-
-    .line 151
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 152
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 155
-    move-result-object v0
-
-    .line 158
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 159
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mDeviceManager:Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
-
-    .line 162
-    invoke-virtual {v0, v4}, Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;->findDevice(Landroid/bluetooth/BluetoothDevice;)Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
-
-    .line 164
-    move-result-object v0
-
-    .line 167
-    if-nez v0, :cond_7
-
-    .line 168
-    const-string p0, "Skip updateFallbackActiveDeviceIfNeeded, fail to find cached bt device"
-
-    .line 170
-    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 172
-    return-void
-
-    .line 175
-    :cond_7
-    iget-object p0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mContext:Landroid/content/Context;
-
-    .line 176
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    .line 178
-    move-result-object p0
-
-    .line 181
-    const-string v2, "bluetooth_le_broadcast_fallback_active_group_id"
-
-    .line 182
-    invoke-static {p0, v2, v3}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    .line 184
-    move-result p0
-
-    .line 187
-    if-eq p0, v3, :cond_c
-
-    .line 188
-    iget v2, v0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mGroupId:I
-
-    .line 190
-    iget-object v4, v0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mDevice:Landroid/bluetooth/BluetoothDevice;
-
-    .line 192
-    invoke-virtual {v4}, Landroid/bluetooth/BluetoothDevice;->getAnonymizedAddress()Ljava/lang/String;
-
-    .line 194
-    move-result-object v4
-
-    .line 197
-    if-eq v2, v3, :cond_8
-
-    .line 198
-    const-string v3, "getGroupId by CSIP profile for device: "
-
-    .line 200
-    invoke-static {v3, v4, v1}, Landroidx/fragment/app/FragmentManagerViewModel$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 202
-    move v3, v2
-
-    .line 205
-    goto :goto_1
-
-    .line 206
-    :cond_8
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getProfiles()Ljava/util/List;
-
-    .line 207
-    move-result-object v2
-
-    .line 210
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 211
-    move-result-object v2
-
-    .line 214
-    :cond_9
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 215
-    move-result v5
-
-    .line 218
-    if-eqz v5, :cond_b
-
-    .line 219
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 221
-    move-result-object v5
-
-    .line 224
-    check-cast v5, Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;
-
-    .line 225
-    instance-of v6, v5, Lcom/android/settingslib/bluetooth/LeAudioProfile;
-
-    .line 227
-    if-eqz v6, :cond_9
-
-    .line 229
-    const-string v2, "getGroupId by LEA profile for device: "
-
-    .line 231
-    invoke-static {v2, v4, v1}, Landroidx/fragment/app/FragmentManagerViewModel$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 233
-    check-cast v5, Lcom/android/settingslib/bluetooth/LeAudioProfile;
-
-    .line 236
-    iget-object v2, v0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mDevice:Landroid/bluetooth/BluetoothDevice;
-
-    .line 238
-    iget-object v4, v5, Lcom/android/settingslib/bluetooth/LeAudioProfile;->mService:Landroid/bluetooth/BluetoothLeAudio;
-
-    .line 240
-    if-nez v4, :cond_a
-
-    .line 242
-    goto :goto_1
-
-    .line 244
-    :cond_a
-    invoke-virtual {v4, v2}, Landroid/bluetooth/BluetoothLeAudio;->getGroupId(Landroid/bluetooth/BluetoothDevice;)I
-
-    .line 245
-    move-result v3
-
-    .line 248
-    goto :goto_1
-
-    .line 249
-    :cond_b
-    const-string v2, "getGroupId return invalid id for device: "
-
-    .line 250
-    invoke-static {v2, v4, v1}, Landroidx/fragment/app/FragmentManagerViewModel$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 252
-    :goto_1
-    if-ne v3, p0, :cond_c
-
-    .line 255
-    const-string v0, "Skip updateFallbackActiveDeviceIfNeeded, already is fallback: "
-
-    .line 257
-    invoke-static {v0, v1, p0}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)V
-
-    .line 259
-    return-void
-
-    .line 262
-    :cond_c
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->setActive()V
-
-    .line 263
-    return-void
-    .line 266
 .end method

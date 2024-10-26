@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/BubblePositioner;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -2419,7 +2419,7 @@
     move-result-object v2
 
     .line 80
-    const v7, 0x7f070157    # @dimen/bubble_stack_starting_offset_y '120.0dp'
+    const v7, 0x7f07015d    # @dimen/bubble_stack_starting_offset_y '120.0dp'
 
     .line 81
     invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -2506,76 +2506,6 @@
     .line 126
     return-object p1
     .line 129
-.end method
-
-.method public final getTaskViewContentWidth(Z)I
-    .locals 3
-
-    .line 1
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-virtual {p0, p1, v0}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getExpandedViewContainerPadding(ZZ)[I
-
-    .line 3
-    move-result-object p1
-
-    .line 6
-    invoke-virtual {p0}, Lcom/android/wm/shell/bubbles/BubblePositioner;->showBubblesVertically()Z
-
-    .line 7
-    move-result v1
-
-    .line 10
-    if-eqz v1, :cond_0
-
-    .line 11
-    iget v1, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mPointerHeight:I
-
-    .line 13
-    iget v2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mPointerOverlap:I
-
-    .line 15
-    sub-int/2addr v1, v2
-
-    .line 17
-    goto :goto_0
-
-    .line 18
-    :cond_0
-    move v1, v0
-
-    .line 19
-    :goto_0
-    iget-object p0, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mScreenRect:Landroid/graphics/Rect;
-
-    .line 20
-    invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
-
-    .line 22
-    move-result p0
-
-    .line 25
-    aget v0, p1, v0
-
-    .line 26
-    sub-int/2addr p0, v0
-
-    .line 28
-    const/4 v0, 0x2
-
-    .line 29
-    aget p1, p1, v0
-
-    .line 30
-    sub-int/2addr p0, p1
-
-    .line 32
-    sub-int/2addr p0, v1
-
-    .line 33
-    return p0
-    .line 34
 .end method
 
 .method public final isStackOnLeft(Landroid/graphics/PointF;)Z
@@ -2720,7 +2650,7 @@
     iput-object v1, v0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mDeviceConfig:Lcom/android/wm/shell/bubbles/DeviceConfig;
 
     .line 6
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BUBBLES_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BUBBLES_enabled:[Z
 
     .line 8
     const/4 v3, 0x0
@@ -2807,7 +2737,7 @@
     const-wide v12, -0x48cf138ab6f6c781L    # -7.588833682885774E-43
 
     .line 61
-    invoke-static/range {v11 .. v16}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v11 .. v16}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 66
     :cond_0
@@ -2965,7 +2895,7 @@
     move-result-object p1
 
     .line 85
-    const p2, 0x7f070153    # @dimen/bubble_size '60.0dp'
+    const p2, 0x7f070159    # @dimen/bubble_size '60.0dp'
 
     .line 86
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2977,7 +2907,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mBubbleSize:I
 
     .line 93
-    const p2, 0x7f070154    # @dimen/bubble_spacing '3.0dp'
+    const p2, 0x7f07015a    # @dimen/bubble_spacing '3.0dp'
 
     .line 95
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2989,7 +2919,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mSpacingBetweenBubbles:I
 
     .line 102
-    const p2, 0x7f0c000b    # @integer/bubbles_max_rendered '5'
+    const p2, 0x7f0b000b    # @integer/bubbles_max_rendered '5'
 
     .line 104
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -3001,7 +2931,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mDefaultMaxBubbles:I
 
     .line 111
-    const p2, 0x7f07012c    # @dimen/bubble_expanded_view_padding '16.0dp'
+    const p2, 0x7f070132    # @dimen/bubble_expanded_view_padding '16.0dp'
 
     .line 113
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3013,7 +2943,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mExpandedViewPadding:I
 
     .line 120
-    const p2, 0x7f070146    # @dimen/bubble_padding_top '16.0dp'
+    const p2, 0x7f07014c    # @dimen/bubble_padding_top '16.0dp'
 
     .line 122
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3025,7 +2955,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mBubblePaddingTop:I
 
     .line 129
-    const p2, 0x7f070155    # @dimen/bubble_stack_offscreen '2.5dp'
+    const p2, 0x7f07015b    # @dimen/bubble_stack_offscreen '2.5dp'
 
     .line 131
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3037,7 +2967,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mBubbleOffscreenAmount:I
 
     .line 138
-    const p2, 0x7f070156    # @dimen/bubble_stack_offset '12.0dp'
+    const p2, 0x7f07015c    # @dimen/bubble_stack_offset '12.0dp'
 
     .line 140
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3049,7 +2979,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mStackOffset:I
 
     .line 147
-    const p2, 0x7f070125    # @dimen/bubble_elevation '1.0dp'
+    const p2, 0x7f07012b    # @dimen/bubble_elevation '1.0dp'
 
     .line 149
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3067,7 +2997,7 @@
     if-eqz p2, :cond_1
 
     .line 160
-    const p2, 0x7f070119    # @dimen/bubble_bar_expanded_view_width '412.0dp'
+    const p2, 0x7f07011f    # @dimen/bubble_bar_expanded_view_width '412.0dp'
 
     .line 162
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3141,7 +3071,7 @@
 
     .line 205
     :cond_2
-    const p2, 0x7f07012a    # @dimen/bubble_expanded_view_largescreen_width '540.0dp'
+    const p2, 0x7f070130    # @dimen/bubble_expanded_view_largescreen_width '540.0dp'
 
     .line 206
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3194,7 +3124,7 @@
 
     .line 238
     :cond_3
-    const p2, 0x7f070129    # @dimen/bubble_expanded_view_largescreen_landscape_padding '102.0dp'
+    const p2, 0x7f07012f    # @dimen/bubble_expanded_view_largescreen_landscape_padding '102.0dp'
 
     .line 239
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3241,7 +3171,7 @@
 
     .line 265
     :goto_2
-    const p2, 0x7f07012b    # @dimen/bubble_expanded_view_overflow_width '380.0dp'
+    const p2, 0x7f070131    # @dimen/bubble_expanded_view_overflow_width '380.0dp'
 
     .line 267
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3253,7 +3183,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mOverflowWidth:I
 
     .line 274
-    const p2, 0x7f07014b    # @dimen/bubble_pointer_width '12.0dp'
+    const p2, 0x7f070151    # @dimen/bubble_pointer_width '12.0dp'
 
     .line 276
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3265,7 +3195,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mPointerWidth:I
 
     .line 283
-    const p2, 0x7f070147    # @dimen/bubble_pointer_height '10.0dp'
+    const p2, 0x7f07014d    # @dimen/bubble_pointer_height '10.0dp'
 
     .line 285
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3277,7 +3207,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mPointerHeight:I
 
     .line 292
-    const p2, 0x7f070148    # @dimen/bubble_pointer_margin '5.0dp'
+    const p2, 0x7f07014e    # @dimen/bubble_pointer_margin '5.0dp'
 
     .line 294
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3289,7 +3219,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mPointerMargin:I
 
     .line 301
-    const p2, 0x7f070149    # @dimen/bubble_pointer_overlap '1.0dp'
+    const p2, 0x7f07014f    # @dimen/bubble_pointer_overlap '1.0dp'
 
     .line 303
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3301,7 +3231,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mPointerOverlap:I
 
     .line 310
-    const p2, 0x7f070134    # @dimen/bubble_manage_button_height '36.0sp'
+    const p2, 0x7f07013a    # @dimen/bubble_manage_button_height '36.0sp'
 
     .line 312
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3313,7 +3243,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mManageButtonHeight:I
 
     .line 319
-    const p3, 0x7f070135    # @dimen/bubble_manage_button_margin '16.0dp'
+    const p3, 0x7f07013b    # @dimen/bubble_manage_button_margin '16.0dp'
 
     .line 321
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3331,7 +3261,7 @@
     iput p3, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mManageButtonHeightIncludingMargins:I
 
     .line 331
-    const p2, 0x7f070128    # @dimen/bubble_expanded_default_height '180.0dp'
+    const p2, 0x7f07012e    # @dimen/bubble_expanded_default_height '180.0dp'
 
     .line 333
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3343,7 +3273,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mExpandedViewMinHeight:I
 
     .line 340
-    const p2, 0x7f070141    # @dimen/bubble_overflow_height '480.0dp'
+    const p2, 0x7f070147    # @dimen/bubble_overflow_height '480.0dp'
 
     .line 342
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3355,7 +3285,7 @@
     iput p2, p0, Lcom/android/wm/shell/bubbles/BubblePositioner;->mOverflowHeight:I
 
     .line 349
-    const p2, 0x7f07015d    # @dimen/bubbles_flyout_min_width_large_screen '200.0dp'
+    const p2, 0x7f070163    # @dimen/bubbles_flyout_min_width_large_screen '200.0dp'
 
     .line 351
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

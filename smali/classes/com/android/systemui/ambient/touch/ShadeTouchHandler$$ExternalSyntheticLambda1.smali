@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/ambient/touch/ShadeTouchHandler$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/shared/system/InputChannelCompat$InputEventListener;
@@ -69,32 +69,35 @@
     check-cast v1, Landroid/view/MotionEvent;
 
     .line 22
-    invoke-virtual {v0, v1}, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->sendTouchEvent(Landroid/view/MotionEvent;)V
+    iget-object v0, v0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->mShadeViewController:Lcom/android/systemui/shade/ShadeViewController;
 
     .line 24
+    invoke-interface {v0, v1}, Lcom/android/systemui/shade/ShadeViewController;->handleExternalTouch(Landroid/view/MotionEvent;)Z
+
+    .line 26
     :cond_0
     check-cast p1, Landroid/view/MotionEvent;
 
-    .line 27
+    .line 29
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    .line 29
+    .line 31
     move-result p1
 
-    .line 32
+    .line 34
     const/4 v0, 0x1
 
-    .line 33
+    .line 35
     if-ne p1, v0, :cond_1
 
-    .line 34
+    .line 36
     iget-object p0, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler$$ExternalSyntheticLambda1;->f$1:Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;
 
-    .line 36
+    .line 38
     invoke-virtual {p0}, Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;->pop()V
 
-    .line 38
+    .line 40
     :cond_1
     return-void
-    .line 41
+    .line 43
 .end method

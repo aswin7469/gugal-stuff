@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/theme/ThemeOverlayController$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/app/WallpaperManager$OnColorsChangedListener;
@@ -92,97 +92,43 @@
 
     .line 5
     :goto_0
-    sget-boolean v3, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
+    iget-object v3, p0, Lcom/android/systemui/theme/ThemeOverlayController$2;->this$0:Lcom/android/systemui/theme/ThemeOverlayController;
 
-    if-nez v3, :cond_2
+    iget-object v4, v3, Lcom/android/systemui/theme/ThemeOverlayController;->mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
     .line 6
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
+    iget v4, v4, Lcom/android/systemui/keyguard/WakefulnessLifecycle;->mWakefulness:I
 
-    .line 7
+    if-eqz v4, :cond_2
+
+    goto :goto_1
+
     :cond_2
-    sget-boolean v3, Lcom/android/systemui/FeatureFlagsImpl;->themeOverlayControllerWakefulnessDeprecation:Z
-
-    if-eqz v3, :cond_3
-
-    .line 8
-    iget-object v3, p0, Lcom/android/systemui/theme/ThemeOverlayController$2;->this$0:Lcom/android/systemui/theme/ThemeOverlayController;
-
-    iget-object v3, v3, Lcom/android/systemui/theme/ThemeOverlayController;->mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
-
-    sget-object v4, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->Companion:Lcom/android/systemui/keyguard/shared/model/KeyguardState$Companion;
-
-    .line 9
-    invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 10
-    iget-object v3, v3, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->finishedKeyguardState:Lkotlinx/coroutines/flow/ReadonlySharedFlow;
-
-    .line 11
-    iget-object v3, v3, Lkotlinx/coroutines/flow/ReadonlySharedFlow;->$$delegate_0:Lkotlinx/coroutines/flow/SharedFlow;
-
-    .line 12
-    invoke-interface {v3}, Lkotlinx/coroutines/flow/SharedFlow;->getReplayCache()Ljava/util/List;
-
-    move-result-object v3
-
-    .line 13
-    invoke-static {v3}, Lkotlin/collections/CollectionsKt;->last(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/android/systemui/keyguard/shared/model/KeyguardState;
-
-    .line 14
-    invoke-static {v3}, Lcom/android/systemui/keyguard/shared/model/KeyguardState$Companion;->deviceIsAwakeInState(Lcom/android/systemui/keyguard/shared/model/KeyguardState;)Z
-
-    move-result v3
-
-    xor-int/2addr v1, v3
-
-    goto :goto_1
-
-    .line 15
-    :cond_3
-    iget-object v3, p0, Lcom/android/systemui/theme/ThemeOverlayController$2;->this$0:Lcom/android/systemui/theme/ThemeOverlayController;
-
-    iget-object v3, v3, Lcom/android/systemui/theme/ThemeOverlayController;->mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
-
-    .line 16
-    iget v3, v3, Lcom/android/systemui/keyguard/WakefulnessLifecycle;->mWakefulness:I
-
-    if-eqz v3, :cond_4
-
-    goto :goto_1
-
-    :cond_4
     move v1, v2
 
     :goto_1
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_3
 
-    .line 17
-    iget-object v3, p0, Lcom/android/systemui/theme/ThemeOverlayController$2;->this$0:Lcom/android/systemui/theme/ThemeOverlayController;
-
+    .line 7
     iget-boolean v4, v3, Lcom/android/systemui/theme/ThemeOverlayController;->mAcceptColorEvents:Z
 
-    if-nez v4, :cond_5
+    if-nez v4, :cond_3
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_3
 
-    .line 18
+    .line 8
     iget-object v0, v3, Lcom/android/systemui/theme/ThemeOverlayController;->mDeferredWallpaperColors:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p3, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 19
+    .line 9
     iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayController$2;->this$0:Lcom/android/systemui/theme/ThemeOverlayController;
 
     iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayController;->mDeferredWallpaperColorsFlags:Landroid/util/SparseIntArray;
 
     invoke-virtual {p0, p3, p2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 20
+    .line 10
     new-instance p0, Ljava/lang/StringBuilder;
 
     const-string p2, "colors received; processing deferred until screen off: "
@@ -207,32 +153,30 @@
 
     return-void
 
-    :cond_5
-    if-eqz v0, :cond_6
+    :cond_3
+    if-eqz v0, :cond_4
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_4
 
-    .line 21
-    iget-object v0, p0, Lcom/android/systemui/theme/ThemeOverlayController$2;->this$0:Lcom/android/systemui/theme/ThemeOverlayController;
+    .line 11
+    iput-boolean v2, v3, Lcom/android/systemui/theme/ThemeOverlayController;->mAcceptColorEvents:Z
 
-    iput-boolean v2, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mAcceptColorEvents:Z
-
-    .line 22
-    iget-object v0, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mDeferredWallpaperColors:Landroid/util/SparseArray;
+    .line 12
+    iget-object v0, v3, Lcom/android/systemui/theme/ThemeOverlayController;->mDeferredWallpaperColors:Landroid/util/SparseArray;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 23
+    .line 13
     iget-object v0, p0, Lcom/android/systemui/theme/ThemeOverlayController$2;->this$0:Lcom/android/systemui/theme/ThemeOverlayController;
 
     iget-object v0, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mDeferredWallpaperColorsFlags:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p3, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 24
-    :cond_6
+    .line 14
+    :cond_4
     iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayController$2;->this$0:Lcom/android/systemui/theme/ThemeOverlayController;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/systemui/theme/ThemeOverlayController;->handleWallpaperColors(Landroid/app/WallpaperColors;II)V

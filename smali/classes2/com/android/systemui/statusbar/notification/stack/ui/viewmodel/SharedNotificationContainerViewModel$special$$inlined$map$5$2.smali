@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/ui/viewmodel/SharedNotificationContainerViewModel$special$$inlined$map$5$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -116,141 +116,92 @@
     check-cast p1, Lcom/android/systemui/statusbar/notification/stack/domain/interactor/SharedNotificationContainerInteractor$ConfigurationBasedDimensions;
 
     .line 52
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 54
-    move-result p2
-
-    .line 57
-    if-eqz p2, :cond_3
-
-    .line 58
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 60
-    move-result p2
-
-    .line 63
-    if-eqz p2, :cond_3
-
-    .line 64
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 66
-    move-result p2
-
-    .line 69
-    if-eqz p2, :cond_3
-
-    .line 70
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 72
-    move-result p2
-
-    .line 75
-    if-eqz p2, :cond_3
-
-    .line 76
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 78
-    move-result p2
-
-    .line 81
-    if-eqz p2, :cond_3
-
-    .line 82
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 84
-    :cond_3
     iget-boolean p2, p1, Lcom/android/systemui/statusbar/notification/stack/domain/interactor/SharedNotificationContainerInteractor$ConfigurationBasedDimensions;->useLargeScreenHeader:Z
 
-    .line 87
-    if-eqz p2, :cond_4
+    .line 54
+    if-eqz p2, :cond_3
 
-    .line 89
+    .line 56
     iget p2, p1, Lcom/android/systemui/statusbar/notification/stack/domain/interactor/SharedNotificationContainerInteractor$ConfigurationBasedDimensions;->marginTopLargeScreen:I
 
-    .line 91
+    .line 58
     :goto_1
     move v7, p2
 
-    .line 93
+    .line 60
     goto :goto_2
 
-    .line 94
-    :cond_4
+    .line 61
+    :cond_3
     iget p2, p1, Lcom/android/systemui/statusbar/notification/stack/domain/interactor/SharedNotificationContainerInteractor$ConfigurationBasedDimensions;->marginTop:I
 
-    .line 95
+    .line 62
     goto :goto_1
 
-    .line 97
+    .line 64
     :goto_2
     iget-boolean v5, p1, Lcom/android/systemui/statusbar/notification/stack/domain/interactor/SharedNotificationContainerInteractor$ConfigurationBasedDimensions;->useSplitShade:Z
 
-    .line 98
-    if-eqz v5, :cond_5
+    .line 65
+    if-eqz v5, :cond_4
 
-    .line 100
+    .line 67
     const/4 p2, 0x0
 
-    .line 102
+    .line 69
     :goto_3
     move v6, p2
 
-    .line 103
+    .line 70
     goto :goto_4
 
-    .line 104
-    :cond_5
+    .line 71
+    :cond_4
     iget p2, p1, Lcom/android/systemui/statusbar/notification/stack/domain/interactor/SharedNotificationContainerInteractor$ConfigurationBasedDimensions;->marginHorizontal:I
 
-    .line 105
+    .line 72
     goto :goto_3
 
-    .line 107
+    .line 74
     :goto_4
     new-instance p2, Lcom/android/systemui/statusbar/notification/stack/ui/viewmodel/SharedNotificationContainerViewModel$ConfigurationBasedDimensions;
 
-    .line 108
+    .line 75
     iget v8, p1, Lcom/android/systemui/statusbar/notification/stack/domain/interactor/SharedNotificationContainerInteractor$ConfigurationBasedDimensions;->marginHorizontal:I
 
-    .line 110
+    .line 77
     iget v9, p1, Lcom/android/systemui/statusbar/notification/stack/domain/interactor/SharedNotificationContainerInteractor$ConfigurationBasedDimensions;->marginBottom:I
 
-    .line 112
+    .line 79
     move-object v4, p2
 
-    .line 114
+    .line 81
     invoke-direct/range {v4 .. v9}, Lcom/android/systemui/statusbar/notification/stack/ui/viewmodel/SharedNotificationContainerViewModel$ConfigurationBasedDimensions;-><init>(ZIIII)V
 
-    .line 115
+    .line 82
     iput v3, v0, Lcom/android/systemui/statusbar/notification/stack/ui/viewmodel/SharedNotificationContainerViewModel$special$$inlined$map$5$2$1;->label:I
 
-    .line 118
+    .line 85
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/ui/viewmodel/SharedNotificationContainerViewModel$special$$inlined$map$5$2;->$this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
 
-    .line 120
+    .line 87
     invoke-interface {p0, p2, v0}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 122
+    .line 89
     move-result-object p0
 
-    .line 125
-    if-ne p0, v1, :cond_6
+    .line 92
+    if-ne p0, v1, :cond_5
 
-    .line 126
+    .line 93
     return-object v1
 
-    .line 128
-    :cond_6
+    .line 95
+    :cond_5
     :goto_5
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 129
+    .line 96
     return-object p0
-    .line 131
+    .line 98
 .end method

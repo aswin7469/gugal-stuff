@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -61,8 +61,6 @@
 
 .field public final smartspaceManager:Landroid/app/smartspace/SmartspaceManager;
 
-.field public final smartspaceViewModelFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$9;
-
 .field public final smartspaceViews:Ljava/util/Set;
 
 .field public final stateChangeListener:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$stateChangeListener$1;
@@ -89,7 +87,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/flags/FeatureFlags;Landroid/app/smartspace/SmartspaceManager;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/util/settings/SecureSettings;Lcom/android/systemui/settings/UserTracker;Landroid/content/ContentResolver;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$9;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/util/concurrency/ExecutionImpl;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroid/os/Handler;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/flags/FeatureFlags;Landroid/app/smartspace/SmartspaceManager;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/util/settings/SecureSettings;Lcom/android/systemui/settings/UserTracker;Landroid/content/ContentResolver;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$21;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/util/concurrency/ExecutionImpl;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroid/os/Handler;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;)V
     .locals 4
 
     .line 1
@@ -183,215 +181,209 @@
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->wakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
     .line 50
-    move-object/from16 v2, p16
-
-    .line 52
-    iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->smartspaceViewModelFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$9;
-
-    .line 54
     move-object/from16 v2, p18
 
-    .line 56
+    .line 52
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->execution:Lcom/android/systemui/util/concurrency/ExecutionImpl;
 
-    .line 58
+    .line 54
     move-object/from16 v2, p19
 
-    .line 60
+    .line 56
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->uiExecutor:Ljava/util/concurrent/Executor;
 
-    .line 62
+    .line 58
     const/4 v2, 0x0
 
-    .line 64
+    .line 60
     move-object/from16 v3, p22
 
-    .line 65
+    .line 61
     invoke-virtual {v3, v2}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 63
+    move-result-object v3
+
+    .line 66
+    check-cast v3, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
 
     .line 67
-    move-result-object v3
-
-    .line 70
-    check-cast v3, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
-
-    .line 71
     iput-object v3, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->datePlugin:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
 
-    .line 73
+    .line 69
     move-object/from16 v3, p23
 
-    .line 75
+    .line 71
     invoke-virtual {v3, v2}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 73
+    move-result-object v3
+
+    .line 76
+    check-cast v3, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
 
     .line 77
-    move-result-object v3
-
-    .line 80
-    check-cast v3, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
-
-    .line 81
     iput-object v3, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->weatherPlugin:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
 
-    .line 83
+    .line 79
     move-object/from16 v3, p24
 
-    .line 85
+    .line 81
     invoke-virtual {v3, v2}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 87
+    .line 83
     move-result-object v3
 
-    .line 90
+    .line 86
     check-cast v3, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
 
-    .line 91
+    .line 87
     iput-object v3, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->plugin:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
 
-    .line 93
+    .line 89
     move-object/from16 v3, p25
 
-    .line 95
+    .line 91
     invoke-virtual {v3, v2}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 97
+    .line 93
     move-result-object v2
 
-    .line 100
+    .line 96
     check-cast v2, Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;
 
-    .line 101
+    .line 97
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->configPlugin:Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;
 
-    .line 103
+    .line 99
     new-instance v2, Ljava/util/LinkedList;
 
-    .line 105
+    .line 101
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    .line 107
+    .line 103
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->recentSmartspaceData:Ljava/util/Deque;
 
-    .line 110
+    .line 106
     new-instance v2, Ljava/util/LinkedHashSet;
 
-    .line 112
+    .line 108
     invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 114
+    .line 110
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->smartspaceViews:Ljava/util/Set;
 
-    .line 117
+    .line 113
     new-instance v2, Ljava/util/LinkedHashMap;
 
-    .line 119
+    .line 115
     invoke-direct {v2}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 121
+    .line 117
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->regionSamplers:Ljava/util/Map;
 
-    .line 124
+    .line 120
     sget-object v2, Lcom/android/systemui/flags/Flags;->NULL_FLAG:Lcom/android/systemui/flags/UnreleasedFlag;
 
-    .line 126
+    .line 122
     new-instance v2, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$stateChangeListener$1;
 
-    .line 128
+    .line 124
     invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$stateChangeListener$1;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;)V
 
-    .line 130
+    .line 126
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->stateChangeListener:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$stateChangeListener$1;
 
-    .line 133
+    .line 129
     new-instance v2, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$sessionListener$1;
 
-    .line 135
+    .line 131
     invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$sessionListener$1;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;)V
 
-    .line 137
+    .line 133
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->sessionListener:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$sessionListener$1;
 
-    .line 140
+    .line 136
     new-instance v2, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$userTrackerCallback$1;
 
-    .line 142
+    .line 138
     invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$userTrackerCallback$1;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;)V
 
-    .line 144
+    .line 140
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->userTrackerCallback:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$userTrackerCallback$1;
 
-    .line 147
+    .line 143
     new-instance v2, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$settingsObserver$1;
 
-    .line 149
+    .line 145
     move-object/from16 v3, p21
 
-    .line 151
+    .line 147
     invoke-direct {v2, p0, v3}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$settingsObserver$1;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;Landroid/os/Handler;)V
 
-    .line 153
+    .line 149
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->settingsObserver:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$settingsObserver$1;
 
-    .line 156
+    .line 152
     new-instance v2, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$configChangeListener$1;
 
-    .line 158
+    .line 154
     invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$configChangeListener$1;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;)V
 
-    .line 160
+    .line 156
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->configChangeListener:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$configChangeListener$1;
 
-    .line 163
+    .line 159
     new-instance v2, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$statusBarStateListener$1;
 
-    .line 165
+    .line 161
     invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$statusBarStateListener$1;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;)V
 
-    .line 167
+    .line 163
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->statusBarStateListener:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$statusBarStateListener$1;
 
-    .line 170
+    .line 166
     new-instance v2, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$deviceProvisionedListener$1;
 
-    .line 172
+    .line 168
     invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$deviceProvisionedListener$1;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;)V
 
-    .line 174
+    .line 170
     iput-object v2, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->deviceProvisionedListener:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$deviceProvisionedListener$1;
 
-    .line 177
+    .line 173
     new-instance v3, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$bypassStateChangedListener$1;
 
-    .line 179
+    .line 175
     invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$bypassStateChangedListener$1;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;)V
 
-    .line 181
+    .line 177
     iput-object v3, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->bypassStateChangedListener:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$bypassStateChangedListener$1;
 
-    .line 184
+    .line 180
     new-instance v3, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$wakefulnessLifecycleObserver$1;
 
-    .line 186
+    .line 182
     invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$wakefulnessLifecycleObserver$1;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;)V
 
-    .line 188
+    .line 184
     iput-object v3, v0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->wakefulnessLifecycleObserver:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$wakefulnessLifecycleObserver$1;
 
-    .line 191
+    .line 187
     check-cast v1, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;
 
-    .line 193
+    .line 189
     invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 195
+    .line 191
     move-object/from16 v1, p17
 
-    .line 198
+    .line 194
     invoke-virtual {v1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
 
-    .line 200
+    .line 196
     return-void
-    .line 203
+    .line 199
 .end method
 
 .method public static final access$updateTextColorFromWallpaper(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;)V
@@ -407,7 +399,7 @@
     const/4 v1, 0x0
 
     .line 7
-    const v2, 0x7f04073b    # @attr/wallpaperTextColor
+    const v2, 0x7f040741    # @attr/wallpaperTextColor
 
     .line 8
     invoke-static {v2, v1, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
@@ -466,7 +458,7 @@
 
 # virtual methods
 .method public final buildAndConnectDateView(Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->execution:Lcom/android/systemui/util/concurrency/ExecutionImpl;
@@ -496,186 +488,53 @@
     const/4 v0, 0x0
 
     .line 19
-    const-string v1, "date_view"
+    iget-object v1, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->datePlugin:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
 
     .line 20
-    iget-object v2, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->datePlugin:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
+    invoke-virtual {p0, p1, v1, v0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->buildView(Landroid/view/ViewGroup;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;)Landroid/view/View;
 
     .line 22
-    invoke-virtual {p0, v1, p1, v2, v0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->buildView(Ljava/lang/String;Landroid/view/ViewGroup;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;)Landroid/view/View;
-
-    .line 24
     move-result-object p1
 
-    .line 27
+    .line 25
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->connectSession()V
-
-    .line 28
-    return-object p1
-
-    .line 31
-    :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    .line 32
-    const-string p1, "Cannot build date view when not decoupled"
-
-    .line 34
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    .line 36
-    throw p0
-
-    .line 39
-    :cond_1
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    .line 40
-    const-string p1, "Cannot build view when not enabled"
-
-    .line 42
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    .line 44
-    throw p0
-    .line 47
-.end method
-
-.method public final buildAndConnectView(Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->execution:Lcom/android/systemui/util/concurrency/ExecutionImpl;
-
-    .line 2
-    invoke-virtual {v0}, Lcom/android/systemui/util/concurrency/ExecutionImpl;->assertIsMainThread()V
-
-    .line 4
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->isEnabled()Z
-
-    .line 7
-    move-result v0
-
-    .line 10
-    if-eqz v0, :cond_0
-
-    .line 11
-    iget-object v0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->configPlugin:Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;
-
-    .line 13
-    const-string v1, "general_view"
-
-    .line 15
-    iget-object v2, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->plugin:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
-
-    .line 17
-    invoke-virtual {p0, v1, p1, v2, v0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->buildView(Ljava/lang/String;Landroid/view/ViewGroup;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;)Landroid/view/View;
-
-    .line 19
-    move-result-object p1
-
-    .line 22
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->connectSession()V
-
-    .line 23
-    return-object p1
 
     .line 26
-    :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    .line 27
-    const-string p1, "Cannot build view when not enabled"
-
-    .line 29
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    .line 31
-    throw p0
-    .line 34
-.end method
-
-.method public final buildAndConnectWeatherView(Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->execution:Lcom/android/systemui/util/concurrency/ExecutionImpl;
-
-    .line 2
-    invoke-virtual {v0}, Lcom/android/systemui/util/concurrency/ExecutionImpl;->assertIsMainThread()V
-
-    .line 4
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->isEnabled()Z
-
-    .line 7
-    move-result v0
-
-    .line 10
-    if-eqz v0, :cond_1
-
-    .line 11
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->isDateWeatherDecoupled()Z
-
-    .line 13
-    move-result v0
-
-    .line 16
-    if-eqz v0, :cond_0
-
-    .line 17
-    const/4 v0, 0x0
-
-    .line 19
-    const-string v1, "weather_view"
-
-    .line 20
-    iget-object v2, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->weatherPlugin:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
-
-    .line 22
-    invoke-virtual {p0, v1, p1, v2, v0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->buildView(Ljava/lang/String;Landroid/view/ViewGroup;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;)Landroid/view/View;
-
-    .line 24
-    move-result-object p1
-
-    .line 27
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->connectSession()V
-
-    .line 28
     return-object p1
 
-    .line 31
+    .line 29
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
-    .line 32
-    const-string p1, "Cannot build weather view when not decoupled"
+    .line 30
+    const-string p1, "Cannot build date view when not decoupled"
 
-    .line 34
+    .line 32
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 36
+    .line 34
     throw p0
 
-    .line 39
+    .line 37
     :cond_1
     new-instance p0, Ljava/lang/RuntimeException;
 
-    .line 40
+    .line 38
     const-string p1, "Cannot build view when not enabled"
 
-    .line 42
+    .line 40
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 44
+    .line 42
     throw p0
-    .line 47
+    .line 45
 .end method
 
-.method public final buildView(Ljava/lang/String;Landroid/view/ViewGroup;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;)Landroid/view/View;
+.method public final buildView(Landroid/view/ViewGroup;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;)Landroid/view/View;
     .locals 1
 
     .line 1
-    if-nez p3, :cond_0
+    if-nez p2, :cond_0
 
     .line 2
     const/4 p0, 0x0
@@ -685,125 +544,93 @@
 
     .line 5
     :cond_0
-    invoke-interface {p3, p2}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;->getView(Landroid/view/ViewGroup;)Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;
+    invoke-interface {p2, p1}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;->getView(Landroid/view/ViewGroup;)Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;
 
     .line 6
-    move-result-object p2
+    move-result-object p1
 
     .line 9
-    if-eqz p4, :cond_1
+    if-eqz p3, :cond_1
 
     .line 10
-    invoke-interface {p2, p4}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->registerConfigProvider(Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;)V
+    invoke-interface {p1, p3}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->registerConfigProvider(Lcom/android/systemui/plugins/BcSmartspaceConfigPlugin;)V
 
     .line 12
     :cond_1
-    const-string p4, "lockscreen"
+    const-string p3, "lockscreen"
 
     .line 15
-    invoke-interface {p2, p4}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setUiSurface(Ljava/lang/String;)V
+    invoke-interface {p1, p3}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setUiSurface(Ljava/lang/String;)V
 
     .line 17
-    new-instance p4, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$SmartspaceTimeChangedDelegate;
+    new-instance p3, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$SmartspaceTimeChangedDelegate;
 
     .line 20
     iget-object v0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     .line 22
-    invoke-direct {p4, v0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$SmartspaceTimeChangedDelegate;-><init>(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
+    invoke-direct {p3, v0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$SmartspaceTimeChangedDelegate;-><init>(Lcom/android/keyguard/KeyguardUpdateMonitor;)V
 
     .line 24
-    invoke-interface {p2, p4}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setTimeChangedDelegate(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$TimeChangedDelegate;)V
+    invoke-interface {p1, p3}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setTimeChangedDelegate(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$TimeChangedDelegate;)V
 
     .line 27
-    invoke-interface {p2, p3}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->registerDataProvider(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;)V
+    invoke-interface {p1, p2}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->registerDataProvider(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;)V
 
     .line 30
-    new-instance p3, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;
+    new-instance p2, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;
 
     .line 33
-    const/4 p4, 0x0
+    const/4 p3, 0x0
 
     .line 35
-    invoke-direct {p3, p0, p4}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;I)V
+    invoke-direct {p2, p0, p3}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;I)V
 
     .line 36
-    invoke-interface {p2, p3}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setIntentStarter(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$IntentStarter;)V
+    invoke-interface {p1, p2}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setIntentStarter(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$IntentStarter;)V
 
     .line 39
-    iget-object p3, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->falsingManager:Lcom/android/systemui/plugins/FalsingManager;
+    iget-object p2, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->falsingManager:Lcom/android/systemui/plugins/FalsingManager;
 
     .line 42
-    invoke-interface {p2, p3}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setFalsingManager(Lcom/android/systemui/plugins/FalsingManager;)V
+    invoke-interface {p1, p2}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setFalsingManager(Lcom/android/systemui/plugins/FalsingManager;)V
 
     .line 44
-    iget-object p3, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->bypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
+    iget-object p2, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->bypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
 
     .line 47
-    invoke-virtual {p3}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->getBypassEnabled()Z
+    invoke-virtual {p2}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->getBypassEnabled()Z
 
     .line 49
-    move-result p3
+    move-result p2
 
     .line 52
-    invoke-interface {p2, p3}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setKeyguardBypassEnabled(Z)V
+    invoke-interface {p1, p2}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setKeyguardBypassEnabled(Z)V
 
     .line 53
-    move-object p3, p2
+    check-cast p1, Landroid/view/View;
 
     .line 56
-    check-cast p3, Landroid/view/View;
+    new-instance p2, Ljava/lang/Object;
 
-    .line 57
-    new-instance p4, Ljava/lang/Object;
+    .line 58
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
-    .line 59
-    invoke-direct {p4}, Ljava/lang/Object;-><init>()V
+    .line 60
+    const p3, 0x7f0a0805    # @id/tag_smartspace_view
 
-    .line 61
-    const v0, 0x7f0b07d6    # @id/tag_smartspace_view
+    .line 63
+    invoke-virtual {p1, p3, p2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 64
-    invoke-virtual {p3, v0, p4}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    .line 66
+    iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->stateChangeListener:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$stateChangeListener$1;
 
-    .line 67
-    iget-object p4, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->stateChangeListener:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$stateChangeListener$1;
+    .line 69
+    invoke-virtual {p1, p0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 70
-    invoke-virtual {p3, p4}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    .line 72
-    sget-boolean p4, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 75
-    if-nez p4, :cond_2
-
-    .line 77
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 79
-    :cond_2
-    sget-boolean p4, Lcom/android/systemui/FeatureFlagsImpl;->smartspaceLockscreenViewmodel:Z
-
-    .line 82
-    if-eqz p4, :cond_3
-
-    .line 84
-    iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->smartspaceViewModelFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$9;
-
-    .line 86
-    invoke-virtual {p0, p1}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$9;->create(Ljava/lang/String;)Lcom/android/systemui/smartspace/ui/viewmodel/SmartspaceViewModel;
-
-    .line 88
-    move-result-object p0
-
-    .line 91
-    invoke-static {p2, p0}, Lcom/android/systemui/smartspace/ui/binder/SmartspaceViewBinder;->bind(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;Lcom/android/systemui/smartspace/ui/viewmodel/SmartspaceViewModel;)V
-
-    .line 92
-    :cond_3
-    return-object p3
-    .line 95
+    .line 71
+    return-object p1
+    .line 74
 .end method
 
 .method public final connectSession()V
@@ -845,7 +672,7 @@
     iget-object v3, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->session:Landroid/app/smartspace/SmartspaceSession;
 
     .line 20
-    if-nez v3, :cond_a
+    if-nez v3, :cond_8
 
     .line 22
     iget-object v3, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->smartspaceViews:Ljava/util/Set;
@@ -879,7 +706,7 @@
     move-result v4
 
     .line 43
-    if-eqz v4, :cond_a
+    if-eqz v4, :cond_8
 
     .line 44
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;->isCurrentUserSetup()Z
@@ -1045,128 +872,111 @@
     invoke-virtual {v4, v3}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->registerOnBypassStateChangedListener(Lcom/android/systemui/statusbar/phone/KeyguardBypassController$OnBypassStateChangedListener;)V
 
     .line 161
-    sget-boolean v3, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 164
-    if-nez v3, :cond_4
-
-    .line 166
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 168
-    :cond_4
-    sget-boolean v3, Lcom/android/systemui/FeatureFlagsImpl;->smartspaceLockscreenViewmodel:Z
-
-    .line 171
-    if-nez v3, :cond_5
-
-    .line 173
     iget-object v3, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->wakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
-    .line 175
+    .line 164
     iget-object v5, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->wakefulnessLifecycleObserver:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$wakefulnessLifecycleObserver$1;
 
-    .line 177
+    .line 166
     invoke-virtual {v3, v5}, Lcom/android/systemui/keyguard/Lifecycle;->addObserver(Ljava/lang/Object;)V
 
-    .line 179
-    :cond_5
-    if-eqz v2, :cond_6
+    .line 168
+    if-eqz v2, :cond_4
 
-    .line 182
+    .line 171
     new-instance v3, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;
 
-    .line 184
+    .line 173
     const/4 v5, 0x1
 
-    .line 186
+    .line 175
     invoke-direct {v3, p0, v5}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;I)V
 
-    .line 187
+    .line 176
     invoke-interface {v2, v3}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;->registerSmartspaceEventNotifier(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;)V
 
-    .line 190
-    :cond_6
-    if-eqz v1, :cond_7
+    .line 179
+    :cond_4
+    if-eqz v1, :cond_5
 
-    .line 193
+    .line 182
     new-instance v2, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;
 
-    .line 195
+    .line 184
     const/4 v3, 0x2
 
-    .line 197
+    .line 186
     invoke-direct {v2, p0, v3}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;I)V
 
-    .line 198
+    .line 187
     invoke-interface {v1, v2}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;->registerSmartspaceEventNotifier(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;)V
 
-    .line 201
-    :cond_7
-    if-eqz v0, :cond_8
+    .line 190
+    :cond_5
+    if-eqz v0, :cond_6
 
-    .line 204
+    .line 193
     new-instance v1, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;
 
-    .line 206
+    .line 195
     const/4 v2, 0x3
 
-    .line 208
+    .line 197
     invoke-direct {v1, p0, v2}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$buildView$2;-><init>(Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;I)V
 
-    .line 209
+    .line 198
     invoke-interface {v0, v1}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;->registerSmartspaceEventNotifier(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;)V
 
-    .line 212
-    :cond_8
+    .line 201
+    :cond_6
     invoke-virtual {v4}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->getBypassEnabled()Z
 
-    .line 215
+    .line 204
     move-result v0
 
-    .line 218
+    .line 207
     iget-object v1, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->smartspaceViews:Ljava/util/Set;
 
-    .line 219
+    .line 208
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 221
+    .line 210
     move-result-object v1
 
-    .line 224
+    .line 213
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 225
+    .line 214
     move-result v2
 
-    .line 228
-    if-eqz v2, :cond_9
+    .line 217
+    if-eqz v2, :cond_7
 
-    .line 229
+    .line 218
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 231
+    .line 220
     move-result-object v2
 
-    .line 234
+    .line 223
     check-cast v2, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;
 
-    .line 235
+    .line 224
     invoke-interface {v2, v0}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;->setKeyguardBypassEnabled(Z)V
 
-    .line 237
+    .line 226
     goto :goto_0
 
-    .line 240
-    :cond_9
+    .line 229
+    :cond_7
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->reloadSmartspace()V
 
-    .line 241
-    :cond_a
+    .line 230
+    :cond_8
     :goto_1
     return-void
-    .line 244
+    .line 233
 .end method
 
 .method public final disconnect()V
@@ -1275,99 +1085,82 @@
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->unregisterOnBypassStateChangedListener(Lcom/android/systemui/statusbar/phone/KeyguardBypassController$OnBypassStateChangedListener;)V
 
     .line 70
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 73
-    if-nez v0, :cond_3
-
-    .line 75
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 77
-    :cond_3
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->smartspaceLockscreenViewmodel:Z
-
-    .line 80
-    if-nez v0, :cond_4
-
-    .line 82
     iget-object v0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->wakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
-    .line 84
+    .line 73
     iget-object v1, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->wakefulnessLifecycleObserver:Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController$wakefulnessLifecycleObserver$1;
 
-    .line 86
+    .line 75
     invoke-virtual {v0, v1}, Lcom/android/systemui/keyguard/Lifecycle;->removeObserver(Ljava/lang/Object;)V
 
-    .line 88
-    :cond_4
+    .line 77
     const/4 v0, 0x0
 
-    .line 91
+    .line 80
     iput-object v0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->session:Landroid/app/smartspace/SmartspaceSession;
 
-    .line 92
+    .line 81
     iget-object v1, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->datePlugin:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
 
-    .line 94
-    if-eqz v1, :cond_5
+    .line 83
+    if-eqz v1, :cond_3
 
-    .line 96
+    .line 85
     invoke-interface {v1, v0}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;->registerSmartspaceEventNotifier(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;)V
 
-    .line 98
-    :cond_5
+    .line 87
+    :cond_3
     iget-object v1, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->weatherPlugin:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
 
-    .line 101
-    if-eqz v1, :cond_6
+    .line 90
+    if-eqz v1, :cond_4
 
-    .line 103
+    .line 92
     invoke-interface {v1, v0}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;->registerSmartspaceEventNotifier(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;)V
 
-    .line 105
-    :cond_6
-    if-eqz v1, :cond_7
+    .line 94
+    :cond_4
+    if-eqz v1, :cond_5
 
-    .line 108
+    .line 97
     sget-object v2, Lkotlin/collections/EmptyList;->INSTANCE:Lkotlin/collections/EmptyList;
 
-    .line 110
+    .line 99
     invoke-interface {v1, v2}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;->onTargetsAvailable(Ljava/util/List;)V
 
-    .line 112
-    :cond_7
+    .line 101
+    :cond_5
     iget-object p0, p0, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->plugin:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
 
-    .line 115
-    if-eqz p0, :cond_8
+    .line 104
+    if-eqz p0, :cond_6
 
-    .line 117
+    .line 106
     invoke-interface {p0, v0}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;->registerSmartspaceEventNotifier(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;)V
 
-    .line 119
-    :cond_8
-    if-eqz p0, :cond_9
+    .line 108
+    :cond_6
+    if-eqz p0, :cond_7
 
-    .line 122
+    .line 111
     sget-object v0, Lkotlin/collections/EmptyList;->INSTANCE:Lkotlin/collections/EmptyList;
 
-    .line 124
+    .line 113
     invoke-interface {p0, v0}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;->onTargetsAvailable(Ljava/util/List;)V
 
-    .line 126
-    :cond_9
+    .line 115
+    :cond_7
     const-string p0, "LockscreenSmartspaceController"
 
-    .line 129
+    .line 118
     const-string v0, "Ended smartspace session for lockscreen"
 
-    .line 131
+    .line 120
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
+    .line 122
     return-void
-    .line 136
+    .line 125
 .end method
 
 .method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/ScrimController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
@@ -59,7 +59,7 @@
 
 .field public mExpansionAffectsAlpha:Z
 
-.field public final mGlanceableHubConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+.field public final mGlanceableHubConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
 .field public final mHandler:Landroid/os/Handler;
 
@@ -121,7 +121,7 @@
 
 .field public mScreenOn:Z
 
-.field public final mScrimAlphaConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+.field public final mScrimAlphaConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
 .field public mScrimBehind:Lcom/android/systemui/scrim/ScrimView;
 
@@ -129,7 +129,7 @@
 
 .field public mScrimInFront:Lcom/android/systemui/scrim/ScrimView;
 
-.field public final mScrimStateListener:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda4;
+.field public final mScrimStateListener:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda5;
 
 .field public mScrimVisibleListener:Ljava/util/function/Consumer;
 
@@ -182,19 +182,19 @@
     sput-boolean v0, Lcom/android/systemui/statusbar/phone/ScrimController;->DEBUG:Z
 
     .line 9
-    const v0, 0x7f0b06ba    # @id/scrim
+    const v0, 0x7f0a06e3    # @id/scrim
 
     .line 11
     sput v0, Lcom/android/systemui/statusbar/phone/ScrimController;->TAG_KEY_ANIM:I
 
     .line 14
-    const v0, 0x7f0b06bc    # @id/scrim_alpha_start
+    const v0, 0x7f0a06e5    # @id/scrim_alpha_start
 
     .line 16
     sput v0, Lcom/android/systemui/statusbar/phone/ScrimController;->TAG_START_ALPHA:I
 
     .line 19
-    const v0, 0x7f0b06bb    # @id/scrim_alpha_end
+    const v0, 0x7f0a06e4    # @id/scrim_alpha_end
 
     .line 21
     sput v0, Lcom/android/systemui/statusbar/phone/ScrimController;->TAG_END_ALPHA:I
@@ -204,7 +204,7 @@
     .line 26
 .end method
 
-.method public constructor <init>(Lcom/android/systemui/statusbar/phone/LightBarController;Lcom/android/systemui/statusbar/phone/DozeParameters;Landroid/app/AlarmManager;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$13;Landroid/os/Handler;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/dock/DockManager;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/util/kotlin/JavaAdapter;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/AlternateBouncerToGoneTransitionViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Lcom/android/systemui/wallpapers/data/repository/WallpaperRepositoryImpl;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/shade/transition/LargeScreenShadeInterpolator;)V
+.method public constructor <init>(Lcom/android/systemui/statusbar/phone/LightBarController;Lcom/android/systemui/statusbar/phone/DozeParameters;Landroid/app/AlarmManager;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$10;Landroid/os/Handler;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/dock/DockManager;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/util/kotlin/JavaAdapter;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/AlternateBouncerToGoneTransitionViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Lcom/android/systemui/wallpapers/data/repository/WallpaperRepositoryImpl;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/shade/transition/LargeScreenShadeInterpolator;)V
     .locals 8
 
     .line 1
@@ -283,43 +283,43 @@
     iput-boolean v3, v0, Lcom/android/systemui/statusbar/phone/ScrimController;->mIsBouncerToGoneTransitionRunning:Z
 
     .line 48
-    new-instance v3, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+    new-instance v3, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
     .line 50
     const/4 v6, 0x3
 
     .line 52
-    invoke-direct {v3, p0, v6}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;I)V
+    invoke-direct {v3, p0, v6}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;I)V
 
     .line 53
-    iput-object v3, v0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimAlphaConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+    iput-object v3, v0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimAlphaConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
     .line 56
-    new-instance v3, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+    new-instance v3, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
     .line 58
-    const/4 v6, 0x0
+    const/4 v6, 0x1
 
     .line 60
-    invoke-direct {v3, p0, v6}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;I)V
+    invoke-direct {v3, p0, v6}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;I)V
 
     .line 61
-    iput-object v3, v0, Lcom/android/systemui/statusbar/phone/ScrimController;->mGlanceableHubConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+    iput-object v3, v0, Lcom/android/systemui/statusbar/phone/ScrimController;->mGlanceableHubConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
     .line 64
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 66
-    new-instance v3, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda4;
+    new-instance v3, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda5;
 
     .line 69
     move-object v6, p1
 
     .line 71
-    invoke-direct {v3, p1}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/statusbar/phone/LightBarController;)V
+    invoke-direct {v3, p1}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/statusbar/phone/LightBarController;)V
 
     .line 72
-    iput-object v3, v0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimStateListener:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda4;
+    iput-object v3, v0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimStateListener:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda5;
 
     .line 75
     move-object/from16 v3, p20
@@ -382,10 +382,10 @@
     new-instance v4, Lcom/android/systemui/util/AlarmTimeout;
 
     .line 113
-    new-instance v5, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda5;
+    new-instance v5, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda6;
 
     .line 115
-    invoke-direct {v5, p0}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;)V
+    invoke-direct {v5, p0}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;)V
 
     .line 117
     const-string v6, "hide_aod_wallpaper"
@@ -406,7 +406,7 @@
     move-object v4, p5
 
     .line 130
-    invoke-virtual {p5, v2}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$13;->create(Ljava/lang/String;)Lcom/android/systemui/util/wakelock/DelayedWakeLock;
+    invoke-virtual {p5, v2}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$10;->create(Ljava/lang/String;)Lcom/android/systemui/util/wakelock/DelayedWakeLock;
 
     .line 131
     move-result-object v2
@@ -509,7 +509,6 @@
 
     .line 201
     return-void
-    .line 203
 .end method
 
 .method public static isAnimating(Landroid/view/View;)Z
@@ -607,7 +606,7 @@
     new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;
 
     .line 39
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
     .line 41
     invoke-direct {v0, v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;)V
@@ -1825,7 +1824,7 @@
 
     .line 10
     :cond_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimStateListener:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda4;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimStateListener:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda5;
 
     .line 12
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
@@ -1840,7 +1839,7 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mColors:Lcom/android/internal/colorextraction/ColorExtractor$GradientColors;
 
     .line 20
-    invoke-virtual {v0, v1, p1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda4;->accept(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, p1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda5;->accept(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 22
     return-void
@@ -2802,184 +2801,173 @@
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
     .line 224
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lcom/google/android/systemui/dreamliner/DockObserver;
 
     .line 226
-    goto :goto_2
+    invoke-virtual {p1}, Lcom/google/android/systemui/dreamliner/DockObserver;->isDocked()Z
 
-    .line 229
+    .line 228
+    move-result p1
+
+    .line 231
+    if-eqz p1, :cond_d
+
+    .line 232
     :cond_c
     new-instance p1, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;
 
-    .line 230
-    const/4 v1, 0x2
-
-    .line 232
-    invoke-direct {p1, v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;)V
-
-    .line 233
-    invoke-static {p1}, Lcom/android/systemui/DejankUtils;->postAfterTraversal(Ljava/lang/Runnable;)V
+    .line 234
+    const/4 v1, 0x3
 
     .line 236
+    invoke-direct {p1, v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;)V
+
+    .line 237
+    invoke-static {p1}, Lcom/android/systemui/DejankUtils;->postAfterTraversal(Ljava/lang/Runnable;)V
+
+    .line 240
     goto :goto_3
 
-    .line 239
+    .line 243
     :cond_d
     :goto_2
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mTimeTicker:Lcom/android/systemui/util/AlarmTimeout;
 
-    .line 240
+    .line 244
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
+    .line 246
     new-instance v1, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;
 
-    .line 245
+    .line 249
     const/4 v2, 0x4
 
-    .line 247
+    .line 251
     invoke-direct {v1, v2, p1}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;)V
 
-    .line 248
+    .line 252
     invoke-static {v1}, Lcom/android/systemui/DejankUtils;->postAfterTraversal(Ljava/lang/Runnable;)V
 
-    .line 251
+    .line 255
     :goto_3
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 254
+    .line 258
     iget-boolean p1, p1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mNeedsSlowUnlockTransition:Z
 
-    .line 256
+    .line 260
     sget-object v1, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 258
+    .line 262
     if-eqz p1, :cond_e
 
-    .line 260
+    .line 264
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 262
+    .line 266
     if-ne p1, v1, :cond_e
 
-    .line 264
+    .line 268
     const-wide/16 p1, 0x64
 
-    .line 266
+    .line 270
     iput-wide p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mAnimationDelay:J
 
-    .line 268
+    .line 272
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->scheduleUpdate$1()V
 
-    .line 270
+    .line 274
     goto :goto_5
 
-    .line 273
+    .line 277
     :cond_e
     if-eq v0, p2, :cond_f
 
-    .line 274
+    .line 278
     sget-object p1, Lcom/android/systemui/statusbar/phone/ScrimState;->PULSING:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 276
+    .line 280
     if-ne v0, p1, :cond_10
 
-    .line 278
+    .line 282
     :cond_f
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
-    .line 280
+    .line 284
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getAlwaysOn()Z
 
-    .line 282
+    .line 286
     move-result p1
 
-    .line 285
+    .line 289
     if-eqz p1, :cond_12
 
-    .line 286
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
-
-    .line 288
-    if-eq p1, v1, :cond_12
-
     .line 290
-    :cond_10
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     .line 292
-    if-ne p1, p2, :cond_11
+    if-eq p1, v1, :cond_12
 
     .line 294
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
+    :cond_10
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     .line 296
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getDisplayNeedsBlanking()Z
+    if-ne p1, p2, :cond_11
 
     .line 298
-    move-result p1
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
-    .line 301
-    if-nez p1, :cond_11
+    .line 300
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getDisplayNeedsBlanking()Z
 
     .line 302
+    move-result p1
+
+    .line 305
+    if-nez p1, :cond_11
+
+    .line 306
     goto :goto_4
 
-    .line 304
+    .line 308
     :cond_11
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->scheduleUpdate$1()V
 
-    .line 305
+    .line 309
     goto :goto_5
 
-    .line 308
+    .line 312
     :cond_12
     :goto_4
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->onPreDraw()Z
 
-    .line 309
+    .line 313
     :goto_5
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 312
+    .line 316
     iget p1, p1, Lcom/android/systemui/scrim/ScrimView;->mViewAlpha:F
 
-    .line 314
+    .line 318
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->dispatchBackScrimState(F)V
 
-    .line 316
+    .line 320
     return-void
 
-    .line 319
+    .line 323
     :cond_13
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 320
+    .line 324
     const-string p1, "Cannot change to UNINITIALIZED."
 
-    .line 322
+    .line 326
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 324
+    .line 328
     throw p0
-    .line 327
-.end method
-
-.method public final legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
-    .locals 1
-
-    .line 1
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->assertInLegacyMode()V
-
-    .line 2
-    const/4 v0, 0x0
-
-    .line 5
-    invoke-virtual {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
-
-    .line 6
-    return-void
-    .line 9
+    .line 331
 .end method
 
 .method public final onFinished(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
@@ -3843,10 +3831,10 @@
     iget v1, p1, Lcom/android/systemui/scrim/ScrimView;->mTintColor:I
 
     .line 135
-    new-instance v2, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
+    new-instance v2, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda2;
 
     .line 137
-    invoke-direct {v2, p0, p1, v1}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;Landroid/view/View;I)V
+    invoke-direct {v2, p0, p1, v1}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;Landroid/view/View;I)V
 
     .line 139
     invoke-virtual {p2, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
@@ -3935,13 +3923,11 @@
     .line 204
     nop
 
-    .line 205
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
-    .line 206
 .end method
 
 .method public final setWakeLockScreenSensorActive(Z)V
@@ -4078,13 +4064,13 @@
     iget-object v1, v1, Lcom/android/systemui/wallpapers/data/repository/WallpaperRepositoryImpl;->wallpaperSupportsAmbientMode:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 6
-    new-instance v2, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+    new-instance v2, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
     .line 8
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
     .line 10
-    invoke-direct {v2, p0, v3}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;I)V
+    invoke-direct {v2, p0, v3}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;I)V
 
     .line 11
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;

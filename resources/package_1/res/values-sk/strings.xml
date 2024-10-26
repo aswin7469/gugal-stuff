@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">prepnúť vybranú miniaplikáciu</string>
   <string name="accessibility_action_label_remove_widget">odstrániť miniaplikáciu</string>
   <string name="accessibility_action_label_select_widget">vybrať miniaplikáciu</string>
-  <string name="accessibility_action_open_communal_hub">Miniaplikácie na uzamknutej obrazovke</string>
   <string name="accessibility_action_pip_resize">Zmeniť veľkosť</string>
   <string name="accessibility_action_pip_stash">Skryť</string>
   <string name="accessibility_action_pip_unstash">Zrušiť skrytie</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Ukončiť režim jednej ruky</string>
   <string name="accessibility_airplane_mode">Režim v lietadle.</string>
   <string name="accessibility_allow_diagonal_scrolling">Povoliť diagonálne posúvanie</string>
+  <string name="accessibility_assistant_poodle">Hlasové vyhľadávanie</string>
   <string name="accessibility_authenticate_hint">overte</string>
   <string name="accessibility_back">Späť</string>
   <string name="accessibility_banner_message_dismiss">Zavrieť</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">vstúpte do zariadenia</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Sieť ethernet je odpojená</string>
-  <string name="accessibility_fingerprint_bouncer">Vyžaduje sa overenie. Dotknite sa senzora odtlačkov prstov.</string>
   <string name="accessibility_fingerprint_label">Senzor odtlačkov prstov</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">prepínač</string>
   <string name="accessibility_floating_button_action_edit">Upraviť</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menu</string>
   <string name="accessibility_multi_user_list_switcher">rozbaľovacia ponuka</string>
   <string name="accessibility_multi_user_switch_switcher">Prepnutie používateľa</string>
+  <string name="accessibility_next_alarm">Ďalší budík je nastavený na %s</string>
   <string name="accessibility_no_calling">Žiadne volanie.</string>
   <string name="accessibility_no_phone">Žiadna telefónna sieť.</string>
   <string name="accessibility_no_wifi">Sieť Wi‑Fi je odpojená.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Obrazovka je uzamknutá v orientácii na výšku.</string>
   <string name="accessibility_send_smart_reply">Odoslať</string>
   <string name="accessibility_sensors_off_active">Funkcia Senzory sú vypnuté je aktívna</string>
+  <string name="accessibility_settings_gear">Nastavenia stojančeka Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Dotknite sa senzora odtlačkov prstov. Ide o kratšie tlačidlo na boku telefónu.</string>
+  <string name="accessibility_smartspace_page">%1$d. stránka z(o) %2$d</string>
   <string name="accessibility_split_bottom">Rozdeliť dole</string>
   <string name="accessibility_split_left">Rozdeliť vľavo</string>
   <string name="accessibility_split_right">Rozdeliť vpravo</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Tri čiarky signálu Wi‑Fi.</string>
   <string name="accessibility_wifi_two_bars">Dve čiarky signálu Wi‑Fi.</string>
   <string name="accesssibility_keyguard_retry">Potiahnite nahor a zopakujte odomknutie tvárou</string>
+  <string name="adaptive_charging_notify_des">Batéria bude úplne nabitá o %1$s. Nabíjanie je plynulé, aby sa predĺžila životnosť batérie.</string>
+  <string name="adaptive_charging_notify_title">Je zapnuté adaptívne nabíjanie</string>
+  <string name="adaptive_charging_notify_turn_off_once">Vypnúť raz</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Adaptívne nabíjanie • Úplne nabité do %2$s</string>
   <string name="add">Pridať</string>
   <string name="add_guest_failed">Nového hosťa sa nepodarilo vytvoriť</string>
   <string name="airplane_mode">Režim v lietadle</string>
-  <string name="alarm_template">o %1$s</string>
-  <string name="alarm_template_far">%1$s</string>
+  <string name="alarm_template">o %1$s</string>
+  <string name="alarm_template_far">o %1$s</string>
   <string name="all_network_unavailable">Nie sú k dispozícii žiadne siete</string>
   <string name="always_use_accessory">Po pripojení zariadenia %2$s vždy otvoriť aplikáciu %1$s</string>
   <string name="always_use_device">Po pripojení zariadenia %2$s vždy otvoriť aplikáciu %1$s</string>
@@ -233,6 +239,7 @@
   <string name="app_info">O aplikácii</string>
   <string name="app_label">UI systému</string>
   <string name="assistant_attention_content_description">Bola rozpoznaná prítomnosť používateľa</string>
+  <string name="assistant_scrim_label">Počúvam, klepnutím zrušíte</string>
   <string name="audio_sharing_description">Zdieľa sa zvuk</string>
   <string name="audio_status">Počúvam</string>
   <string name="auto_data_switch_dialog_negative_button">Nie, vďaka</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Späť</string>
   <string name="battery">Batéria</string>
   <string name="battery_detail_switch_title">Šetrič batérie</string>
-  <string name="battery_low_description">Zostáva vám %s batérie. Šetrič batérie zapne tmavý motív, obmedzí aktivity na pozadí a odloží upozornenia.</string>
+  <string name="battery_health_notify_learn_more">Ďalšie informácie</string>
   <string name="battery_low_intro">Šetrič batérie zapne tmavý motív, obmedzí aktivity na pozadí a odloží upozornenia.</string>
-  <string name="battery_low_title">Chcete zapnúť šetrič batérie?</string>
   <string name="battery_saver_confirmation_ok">Zapnúť</string>
   <string name="battery_saver_confirmation_title">Chcete zapnúť šetrič batérie?</string>
   <string name="battery_saver_confirmation_title_generic">Šetrič batérie</string>
-  <string name="battery_saver_dismiss_action">Nie, vďaka</string>
   <string name="battery_saver_start_action">Zapnúť</string>
   <string name="battery_state_unknown_notification_text">Klepnutím si zobrazíte ďalšie informácie</string>
   <string name="battery_state_unknown_notification_title">Pri čítaní meradla batérie sa vyskytol problém</string>
@@ -296,14 +301,9 @@ Skúste to znova o %d s.</string>
   <string name="bluetooth_active_battery_level_untethered">Aktívne. Ľ: %1$s, P: %2$s batérie.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Aktívne. Ľ: %1$s batérie.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Aktívne. P: %1$s batérie.</string>
-  <string name="bluetooth_active_media_only_battery_level">Aktívne (iba médiá). %1$s batérie.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Aktívne (iba médiá). Ľ: %1$s batérie, P: %2$s batérie.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Aktívne (iba médiá)</string>
   <string name="bluetooth_active_no_battery_level">Aktívne</string>
   <string name="bluetooth_battery_level">Batéria: %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Pripojené (podporuje zdieľanie zvuku). %1$s batérie.</string>
   <string name="bluetooth_battery_level_untethered">Ľ: %1$s, P: %2$s batérie.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Pripojené (podporuje zdieľanie zvuku). Ľ: %1$s, P: %2$s batérie.</string>
   <string name="bluetooth_connected">Pripojené k zariadeniu %1$s</string>
   <string name="bluetooth_connecting">Prebieha pripájanie…</string>
   <string name="bluetooth_disconnected">Odpojený</string>
@@ -311,13 +311,11 @@ Skúste to znova o %d s.</string>
   <string name="bluetooth_hearing_aid_left_active">Aktívne (iba ľavé)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Aktívne (ľavé aj pravé)</string>
   <string name="bluetooth_hearing_aid_right_active">Aktívne (iba pravé)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Pripojené (podporuje zdieľanie zvuku)</string>
   <string name="bluetooth_pairing">Páruje sa...</string>
   <string name="bluetooth_pairing_device_down_error_message">So zariadením %1$s nie je možné komunikovať.</string>
   <string name="bluetooth_pairing_error_message">Nepodarilo sa spárovať so zariadením %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Nespárované so zariadením %1$s: nesprávny PIN či prístupový kľúč.</string>
   <string name="bluetooth_pairing_rejected_error_message">Párovanie odmietnuté zariadením %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">Podporuje zdieľanie zvuku</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Počítač</string>
   <string name="bluetooth_talkback_headphone">Slúchadlá</string>
@@ -356,8 +354,6 @@ Skúste to znova o %d s.</string>
   <string name="bubble_overflow_button_content_description">Rozšírená ponuka</string>
   <string name="bubble_overflow_empty_subtitle">Tu sa budú zobrazovať nedávne a zavreté bubliny</string>
   <string name="bubble_overflow_empty_title">Žiadne nedávne bubliny</string>
-  <string name="bubble_shortcut_label">Bubliny</string>
-  <string name="bubble_shortcut_long_label">Zobraziť bubliny</string>
   <string name="bubbles_app_settings">Nastavenia aplikácie %1$s</string>
   <string name="bubbles_dont_bubble_conversation">Nezobrazovať konverzáciu ako bublinu</string>
   <string name="bubbles_settings_button_description">Nastavenia bublín aplikácie %1$s</string>
@@ -387,6 +383,10 @@ Klepnutím znova upravte.</string>
   <string name="cast_to_other_device_stop_dialog_button">Zastaviť prenos</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Prestanete prenášať obsah aplikácie &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">Mobilné dáta sú vypnuté</string>
+  <string name="charge_limit_discovery_notification_enable_button">Zapnúť</string>
+  <string name="charge_limit_discovery_notification_text">Vyskúšajte zapnúť funkciu 80 % limitu na ochranu stavu a životnosti batérie. Môžete ju kedykoľvek spravovať v nastaveniach.</string>
+  <string name="charge_limit_discovery_notification_title">Chráňte batériu počas nabíjania</string>
+  <string name="charging_reverse_text">Zdieľa sa batéria</string>
   <string name="clear_all_notifications_text">Vymazať všetko</string>
   <string name="clipboard">Schránka</string>
   <string name="clipboard_content_copied">Obsah bol skopírovaný</string>
@@ -406,6 +406,11 @@ Klepnutím znova upravte.</string>
   <string name="close_button_text">Zavrieť</string>
   <string name="close_dialog_button">Zavrieť</string>
   <string name="collapse_menu_text">Zavrieť ponuku</string>
+  <string name="columbus_bouncer_message">Ak chcete dokončiť rýchle poklepanie, odomknite</string>
+  <string name="columbus_target_request_dialog_allow">Povoliť</string>
+  <string name="columbus_target_request_dialog_deny">Nepovoliť</string>
+  <string name="columbus_target_request_dialog_summary">%1$s otvoríte dvojitým klepnutím na zadnú stranu telefónu. Môžete to kedykoľvek zmeniť v Nastaveniach.</string>
+  <string name="columbus_target_request_dialog_title">Chcete rýchlym poklepaním otvárať aplikáciu %1$s?</string>
   <string name="communal_tutorial_indicator_text">Potiahnutím doľava spustite komunitný návod</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Vnútorná obrazovka bude zrkadlená. Predná obrazovka bude vypnutá.</string>
   <string name="connected_display_dialog_start_mirroring">Chcete zrkadliť na externú obrazovku?</string>
@@ -511,8 +516,11 @@ Ak ho znovu zapnete, môžu vám byť účtované poplatky za spotrebu dát.</st
   <string name="data_usage_disabled_dialog_mobile_title">Mobilné dáta sú pozastavené</string>
   <string name="data_usage_disabled_dialog_title">Dáta sú pozastavené</string>
   <string name="days_timestamp">Pred %1$s dňami</string>
-  <string name="default_error_message">Neplatný vstup</string>
   <string name="default_popup_window_title">Vyskakovacie okno</string>
+  <string name="defender_notify_resume_charge">Prepísať</string>
+  <string name="defender_notify_title">Ochrana batérie</string>
+  <string name="defender_post_notify_des">Nabíjanie bolo optimalizované v čase od %1$s do %2$s, aby sa predĺžila životnosť batérie</string>
+  <string name="defender_post_notify_title">Nabíjanie bolo optimalizované</string>
   <string name="demo_mode">Ukážka používateľského rozhrania systému</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Maximalizovať obrazovku</string>
   <string name="desktop_mode_maximize_menu_snap_text">Zobraziť polovicu obrazovky</string>
@@ -532,20 +540,32 @@ Ak ho znovu zapnete, môžu vám byť účtované poplatky za spotrebu dát.</st
   <string name="do_disclosure_generic">Toto zariadenie patrí vašej organizácii</string>
   <string name="do_disclosure_with_name">Toto zariadení patrí organizácii %s</string>
   <string name="do_financed_disclosure_with_name">Toto zariadenie poskytuje %s</string>
+  <string name="dock_a11y_action_show_photo_text">Zobraziť fotorámček</string>
+  <string name="dock_alignment_not_charging">Znova vložte telefón, aby sa bezdrôtovo nabil</string>
+  <string name="dock_alignment_slow_charging">Znova vložte telefón, aby sa rýchlejšie nabil</string>
+  <string name="dock_defender_first_run_des">Keď máte tablet v doku, nabíjanie sa pozastaví na úrovni 90 %, aby sa predĺžila životnosť batérie. Môžete to kedykoľvek prepísať v Nastaveniach.</string>
+  <string name="dock_defender_first_run_settings">Nastavenia</string>
+  <string name="dock_defender_first_run_title">Nabíjanie je pozastavené, aby sa chránila batéria</string>
   <string name="dock_multi_instances_not_supported_text">Táto aplikácia môže byť otvorená iba v jednom okne</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Aplikácia nepodporuje rozdelenú obrazovku</string>
+  <string name="dock_photo_preview_text">Spúšťa sa fotorámček...</string>
+  <string name="dock_promo_text">Ak chcete zobraziť fotorámček, potiahnite doľava</string>
   <string name="done">Hotovo</string>
   <string name="drag_split_not_supported">Toto upozornenie nepodporuje presun na rozdelenú obrazovku</string>
   <string name="drag_to_add_tiles">Pridržaním a presunutím pridáte karty</string>
   <string name="drag_to_rearrange_tiles">Karty môžete usporiadať pridržaním a presunutím</string>
   <string name="drag_to_remove_disabled">Minimálny počet vyžadovaných dlaždíc: %1$d</string>
   <string name="drag_to_remove_tiles">Presunutím sem odstránite</string>
+  <string name="dream_lockscreen_wallpaper_description">Použiť aktuálnu tapetu uzamknutej obraz.</string>
+  <string name="dream_lockscreen_wallpaper_label">Tapeta</string>
   <string name="dream_overlay_status_bar_alarm_set">Budík je nastavený</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Kamera a mikrofón sú vypnuté</string>
   <string name="dream_overlay_status_bar_camera_off">Kamera je vypnutá</string>
   <string name="dream_overlay_status_bar_mic_off">Mikrofón je vypnutý</string>
   <string name="dream_overlay_status_bar_priority_mode">Režim priority</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi nie je k dispozícii</string>
+  <string name="dwell_defender_notify_des">Týmto pomôžete zvýšiť životnosť batérie, keď sa telefón nabíja príliš dlho</string>
+  <string name="dwell_defender_notify_title">Nabíjanie je pozastavené, aby sa chránila batéria</string>
   <string name="edit_user_info_message">Meno a obrázok, ktorý vyberiete, uvidia všetci používatelia tohto zariadenia.</string>
   <string name="edit_widget">Upraviť miniaplikáciu</string>
   <string name="empty_shade_text">Žiadne upozornenia</string>
@@ -561,12 +581,16 @@ Ak ho znovu zapnete, môžu vám byť účtované poplatky za spotrebu dát.</st
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Rozšírené</string>
   <string name="expand_menu_text">Otvoriť ponuku</string>
+  <string name="extreme_battery_saver_text">Super</string>
+  <string name="extreme_low_battery_notification_text">Ak si telefón čo najskôr nenabijete, vypne sa</string>
+  <string name="extreme_low_battery_notification_title">Veľmi nízky stav batérie</string>
   <string name="face_re_enroll_dialog_content">Odomknutie tvárou môžete znova nastaviť, ale aktuálny model tváre bude odstránený.
 
 Ak chcete telefón odomykať tvárou, budete musieť túto funkciu znova nastaviť.</string>
   <string name="face_re_enroll_dialog_title">Nastavenie odomknutia tvárou</string>
   <string name="face_re_enroll_notification_name">Odomknutie tvárou</string>
   <string name="face_re_enroll_notification_title">Znova nastavte odomknutie tvárou</string>
+  <string name="face_reenroll_dialog_confirm">Nastaviť</string>
   <string name="face_reenroll_failure_dialog_content">Odomknutie tvárou sa nepodarilo nastaviť. Prejdite do Nastavení a skúste to znova.</string>
   <string name="failed_attempts_now_wiping_device">Príliš veľa chybných pokusov. Údaje tohto zariadenia budú odstránené.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Zavrieť</string>
@@ -604,6 +628,7 @@ Po ich odstránení budete musieť znova nastaviť odomknutie odtlačkom prsta, 
   <string name="font_scaling_smaller">Zmenšiť</string>
   <string name="fullscreen_text">Celá obrazovka</string>
   <string name="game_status">Hrám hru</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Rozšírené odomknutie je vypnuté</string>
   <string name="go_to_web">Otvoriť prehliadač</string>
   <string name="got_it">Dobre</string>
@@ -640,6 +665,7 @@ Po ich odstránení budete musieť znova nastaviť odomknutie odtlačkom prsta, 
   <string name="guest_reset_and_restart_dialog_title">Chcete resetovať reláciu hosťa?</string>
   <string name="guest_reset_guest_confirm_button">Resetovať</string>
   <string name="guest_resetting">Relácia hosťa sa resetuje…</string>
+  <string name="handle_invocation_prompt">Potiahnite a hovorte</string>
   <string name="handle_text">Rukoväť</string>
   <string name="headset">Náhlavná súprava</string>
   <string name="hearing_devices_preset_label">Predvoľba</string>
@@ -656,6 +682,7 @@ Viac sa dozviete po klepnutí.</string>
   <string name="high_temp_title">Telefón sa prehrieva</string>
   <string name="home_controls_dream_description">Rýchly prístup k ovládaniu domácnosti z šetriča obrazovky</string>
   <string name="home_controls_dream_label">Ovládanie domácnosti</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• K dispozícii je minimálne jedno zariadenie alebo panel zariadenia</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Ak chcete pridať aplikáciu Home ako odkaz, uistite sa, že je nainštalovaná</string>
   <string name="hub_mode_add_widget_button_text">Pridať miniaplikáciu</string>
@@ -669,12 +696,16 @@ Viac sa dozviete po klepnutí.</string>
   <string name="in_progress">Prebieha</string>
   <string name="inattentive_sleep_warning_message">Zariadenie sa čoskoro vypne. Ak ho chcete ponechať zapnuté, stlačte ľubovoľné tlačidlo.</string>
   <string name="inattentive_sleep_warning_title">Pohotovostný režim</string>
+  <string name="incompatible_charging_learn_more">Ďalšie informácie</string>
+  <string name="incompatible_charging_notify_des">Váš telefón sa zrejme nabíja pomaly alebo sa nenabíja vôbec. Ak chcete, aby sa nabíjalo rýchlejšie, použite odporúčaný kábel a nabíjačku.</string>
+  <string name="incompatible_charging_notify_title">Skontrolujte nabíjacie príslušenstvo</string>
   <string name="indeterminate">Čiastočne začiarknuté</string>
   <string name="inline_done_button">Hotovo</string>
   <string name="inline_ok_button">Použiť</string>
   <string name="inline_turn_off_notifications">Vypnúť upozornenia</string>
   <string name="input_switch_input_language_next">Prepnutie na ďalší jazyk</string>
   <string name="input_switch_input_language_previous">Prepnutie na predchádzajúci jazyk</string>
+  <string name="install_app">Inštalovať aplikáciu</string>
   <string name="install_dialer_on_work_profile_action">Inštalovať pracovnú telefónnu aplikáciu</string>
   <string name="install_type_instant">Okamžitá aplikácia</string>
   <string name="instant_apps">Okamžité aplikácie</string>
@@ -683,8 +714,6 @@ Viac sa dozviete po klepnutí.</string>
   <string name="instant_apps_title">Aplikácia %1$s je spustená</string>
   <string name="interruption_level_none">Úplné ticho</string>
   <string name="interruption_level_priority">Iba prioritné</string>
-  <string name="invalid_charger_text">Použite nabíjačku dodanú so zariadením</string>
-  <string name="invalid_charger_title">Nedá sa nabíjať cez USB</string>
   <string name="issuerecord_background_processing_label">Záznam problému sa spracúva</string>
   <string name="issuerecord_ongoing_screen_only">Problém sa zaznamenáva</string>
   <string name="issuerecord_save_title">Záznam problému bol uložený</string>
@@ -766,21 +795,33 @@ Viac sa dozviete po klepnutí.</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Zariadenie je uzamknuté
 Overenie sa nepodarilo</string>
   <string name="keyguard_indication_charging_time">%2$s • Nabíja sa • Do úplného nabitia zostáva %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Nabíjanie bude dokončené do %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Nabíja sa • Do úplného nabitia zostáva %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Úplne nabité do %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Nabíja sa rýchlo • Do úplného nabitia zostáva %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Rýchle nabíjanie • Úplne nabité do %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Nabíjanie je ukončené</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Nabíja sa pomaly • Do úplného nabitia zostáva %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Úplne nabité do %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Úplne nabité do %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Nabíja sa bezdrôtovo • Do úplného nabitia zostáva %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Odomknutie udržiava TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Úplne nabité do %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Uchované odomknuté rozšíreným odomknutím</string>
   <string name="keyguard_missing_sim_message_short">Žiadna SIM karta</string>
   <string name="keyguard_network_locked_message">Sieť je zablokovaná</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Nepoužiteľná SIM karta.</string>
   <string name="keyguard_plugged_in">%s • Nabíja sa</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Nabíja sa rýchlo</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Nabíja sa rýchlo</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Nabíjanie je pozastavené, aby sa chránila batéria</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Nabíja sa pomaly</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Nabíja sa</string>
   <string name="keyguard_plugged_in_dock">%s • Nabíja sa</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Nabíja sa</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Skontrolujte nabíjacie príslušenstvo</string>
+  <string name="keyguard_plugged_in_v2">%s • Nabíja sa</string>
   <string name="keyguard_plugged_in_wireless">%s • Nabíja sa bezdrôtovo</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Nabíja sa</string>
   <string name="keyguard_retry">Potiahnutím nahor to skúste znova</string>
   <string name="keyguard_sim_error_message_short">Neplatná karta.</string>
   <string name="keyguard_sim_locked_message">SIM karta je uzamknutá.</string>
@@ -811,7 +852,6 @@ Overenie sa nepodarilo</string>
   <string name="kg_invalid_confirm_pin_hint">Kódy PIN sa nezhodujú</string>
   <string name="kg_invalid_sim_pin_hint">Zadajte kód PIN s dĺžkou 4 až 8 číslic.</string>
   <string name="kg_invalid_sim_puk_hint">Kód PUK musí obsahovať 8 alebo viac číslic.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Zadajte kód PIN SIM karty. Zostáva vám # pokus, potom budete musieť kontaktovať svojho operátora, aby zariadenie odomkol.}few{Zadajte PIN SIM karty. Zostávajú vám # pokusy.}many{Enter SIM PIN. You have # remaining attempts.}other{Zadajte PIN SIM karty. Zostáva vám # pokusov.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM karta je deaktivovaná. Pokračujte zadaním kódu PUK. Zostáva vám # pokus, potom sa SIM karta natrvalo zablokuje. Podrobnosti vám poskytne operátor.}few{SIM karta je deaktivovaná. Pokračujte zadaním kódu PUK. Zostávajú vám # pokusy, potom sa SIM karta natrvalo zablokuje. Podrobnosti vám poskytne operátor.}many{SIM is now disabled. Enter PUK code to continue. You have # remaining attempts before SIM becomes permanently unusable. Contact carrier for details.}other{SIM karta je deaktivovaná. Pokračujte zadaním kódu PUK. Zostáva vám # pokusov, potom sa SIM karta natrvalo zablokuje. Podrobnosti vám poskytne operátor.}}</string>
   <string name="kg_password_pin_failed">Operácia kódu PIN SIM karty zlyhala!</string>
   <string name="kg_password_puk_failed">Operácia kódu PUK SIM karty zlyhala!</string>
@@ -852,7 +892,7 @@ Overenie sa nepodarilo</string>
   <string name="kg_sim_pin_instructions_multi">Zadajte kód PIN pre SIM kartu operátora %1$s.</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM karta sa odomyká…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Skúste to znova o # sekundu.}few{Skúste to znova o # sekundy.}many{Skúste to znova o # sekundy.}other{Skúste to znova o # sekúnd.}}</string>
-  <string name="kg_trust_agent_disabled">Agent dôvery nie je k dispozícii</string>
+  <string name="kg_trust_agent_disabled">Rozšírené odomknutie nie je k dispozícii</string>
   <string name="kg_unlock_with_password_or_fp">Odomknúť heslom/odtlačkom</string>
   <string name="kg_unlock_with_pattern_or_fp">Odomknúť vzorom/odtlačkom</string>
   <string name="kg_unlock_with_pin_or_fp">Odomknúť kódom PIN/odtlačkom</string>
@@ -900,6 +940,10 @@ Ak tejto aplikácii nepovolíte prístup k všetkým denníkom zariadenia, stá
   <string name="log_access_confirmation_learn_more">Ďalšie informácie</string>
   <string name="log_access_confirmation_learn_more_at">Viac sa dozviete na %s</string>
   <string name="log_access_confirmation_title">Chcete povoliť aplikácii %s prístup k všetkým denníkom zariadenia?</string>
+  <string name="low_battery_label">Nízky stav batérie</string>
+  <string name="low_battery_notification_text">Zapnite štandardný šetrič batérie na predĺženie jej výdrže</string>
+  <string name="low_battery_notification_text_ebs">Zapnite Super šetrič batérie na predĺženie jej výdrže</string>
+  <string name="low_battery_notification_title">Zostáva %s batérie</string>
   <string name="m3c_search_bar_search">Hľadať</string>
   <string name="m3c_suggestions_available">Návrhy sú nižšie</string>
   <string name="magnification_close_settings_click_label">Zavrieť nastavenia zväčšenia</string>
@@ -939,8 +983,6 @@ Ak tejto aplikácii nepovolíte prístup k všetkým denníkom zariadenia, stá
   <string name="media_output_dialog_volume_percentage">%1$d %%</string>
   <string name="media_output_end_session_dialog_stop">Ukončiť</string>
   <string name="media_output_end_session_dialog_summary">Ak chcete preniesť médiá do iného zariadenia, ukončite zdieľanú reláciu</string>
-  <string name="media_output_first_broadcast_title">Ako vysielanie funguje</string>
-  <string name="media_output_first_notify_broadcast_message">Ľudia v okolí s kompatibilnými zariadeniami s rozhraním Bluetooth si môžu vypočuť médiá, ktoré vysielate</string>
   <string name="media_output_group_title_speakers_and_displays">Reproduktory a obrazovky</string>
   <string name="media_output_group_title_suggested_device">Navrhované zariadenia</string>
   <string name="media_output_label_title">%s sa prehráva v:</string>
@@ -967,9 +1009,6 @@ Ak tejto aplikácii nepovolíte prístup k všetkým denníkom zariadenia, stá
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Počas prenosu v aplikácii bude mať Android prístup k všetkému, čo sa v danej aplikácii zobrazuje alebo prehráva. Preto zvýšte pozornosť v prípade položiek, ako sú heslá, platobné údaje, správy, fotky a zvuk či video.</string>
   <string name="media_projection_sys_service_dialog_title">Chcete spustiť nahrávanie alebo prenos?</string>
   <string name="media_projection_sys_service_dialog_warning">Služba poskytujúca túto funkciu bude mať prístup k všetkým informáciám zobrazovaným na obrazovke alebo prehrávaným v zariadení počas nahrávania či prenosu. Patria medzi ne informácie, ako sú heslá, platobné údaje, fotky, správy a prehrávaný zvuk.</string>
-  <string name="media_projection_task_switcher_action_back">Prepnúť späť</string>
-  <string name="media_projection_task_switcher_action_switch">Zdieľať radšej túto aplikáciu</string>
-  <string name="media_projection_task_switcher_text">Zdieľanie sa pozastaví, keď prepnete aplikácie</string>
   <string name="media_seamless_other_device">Iné zariadenie</string>
   <string name="media_transfer_default_device_name">Pripojené zariadenie</string>
   <string name="media_transfer_dock_speaker_device_name">Reproduktor doku</string>
@@ -1138,7 +1177,7 @@ V prípade otázok kontaktujte organizáciu %2$s.</string>
   <string name="pip_skip_to_prev">Preskočiť na predchádzajúce</string>
   <string name="popup_on_dismiss_cta_tile_text">Miniaplikácie prispôsobíte dlhým stlačením</string>
   <string name="power_discharge_by_only_short">Do %1$s</string>
-  <string name="preference_summary_default_combination">%1$s/%2$s</string>
+  <string name="preference_summary_default_combination">%1$s / %2$s</string>
   <string name="priority_conversations">Prioritné konverzácie</string>
   <string name="priority_mode_dream_overlay_content_description">Režim bez vyrušení</string>
   <string name="privacy_dialog_active_app_usage">Využíva %1$s</string>
@@ -1280,12 +1319,17 @@ V prípade otázok kontaktujte organizáciu %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Ak chcete vyššie rozlíšenie, prevráťte telefón</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Chcete prepnúť obrazovky?</string>
   <string name="recent_conversations">Nedávne konverzácie</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">odoslal(a) obrázok</string>
   <string name="remove_from_settings">Odstrániť z Nastavení</string>
   <string name="remove_from_settings_prompt">Chcete odstrániť tuner používateľského rozhrania systému z Nastavení a prestať používať všetky jeho funkcie?</string>
   <string name="require_unlock_for_nfc">Ak chcete použiť NFC, odomknite</string>
   <string name="restart_button_description">Ak chcete zlepšiť zobrazenie, klepnutím túto aplikáciu reštartujte</string>
   <string name="retry_face">Znova skúsiť overenie tvárou</string>
+  <string name="reverse_charging_device_name_text">Iný Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s nabíja (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Zdieľanie batérie je zapnuté</string>
+  <string name="reverse_charging_title">Zdieľanie batérie</string>
   <string name="right_icon">Pravá ikona</string>
   <string name="right_keycode">Pravý kód klávesnice</string>
   <string name="right_nav_bar_button_type">Dodatočný typ pravého tlačidla</string>
@@ -1293,8 +1337,15 @@ V prípade otázok kontaktujte organizáciu %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">Klepnutím zobrazíte podrobnosti o batérii a spotrebe dát</string>
   <string name="running_foreground_services_title">Aplikácie sú spustené na pozadí</string>
-  <string name="satellite_connected_carrier_text">Pomoc cez satelit</string>
+  <string name="satellite_connected_carrier_text">Pomoc cez satelit v Pixeli</string>
   <string name="save">Uložiť</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Zrušiť</string>
+  <string name="saver_confirmation_dialog_subtitle">Vyberte, ktorý režim sa má používať</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Zahŕňa všetky zmeny uvedené vyššie. Pozastaví aj aplikácie, ktoré nie sú nutné, vrátane ich upozornení.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Obmedzuje vizuálne efekty a aktivitu na pozadí. Ak ešte nie je zapnutý tmavý motív, zapne ho.</string>
+  <string name="saver_confirmation_dialog_title">Víta vás šetrič batérie</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Super šetrič batérie</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Štandardný šetrič batérie</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Snímanie obrazovky je zakázané pravidlami pre zariadenie</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Blokované vaším správcom IT</string>
   <string name="screen_pinning_can_open_other_apps">Pripnutá aplikácia môže otvoriť iné aplikácie.</string>
@@ -1312,6 +1363,12 @@ V prípade otázok kontaktujte organizáciu %2$s.</string>
   <string name="screen_pinning_toast">Túto aplikáciu odopnete pridržaním tlačidiel Späť a Prehľad</string>
   <string name="screen_pinning_toast_gesture_nav">Túto aplikáciu odopnete potiahnutím nahor a pridržaním</string>
   <string name="screen_pinning_toast_recents_invisible">Túto aplikáciu odopnete pridržaním tlačidiel Späť a Domov</string>
+  <string name="screen_protector_absent_message">Keď nepoužívate ochranu obrazovky, vypnutím režimu s ochranou obrazovky sa zlepší dotykové ovládanie.</string>
+  <string name="screen_protector_disable_notification">Zakázať upozornenie</string>
+  <string name="screen_protector_go_to_settings">Prejsť do nastavení</string>
+  <string name="screen_protector_got_it">Dobre</string>
+  <string name="screen_protector_mode_title">Režim s ochranou obrazovky</string>
+  <string name="screen_protector_present_message">Keď používate ochranu obrazovky, zapnutím režimu s ochranou obrazovky sa zlepší dotykové ovládanie.</string>
   <string name="screen_share_permission_app_selector_title">Vyberte aplikáciu, ktorú chcete zdieľať alebo nahrávať</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Celá obrazovka</string>
   <string name="screen_share_permission_dialog_option_single_app">Jedna aplikácia</string>
@@ -1364,9 +1421,9 @@ V prípade otázok kontaktujte organizáciu %2$s.</string>
   <string name="screenshot_saving_work_profile_title">Ukladá sa snímka obrazovky do pracovného profilu…</string>
   <string name="screenshot_scroll_label">Zachytiť viac</string>
   <string name="screenshot_share_description">Zdieľať snímku obrazovky</string>
-  <string name="screenshot_share_label">Zdieľať</string>
   <string name="screenshot_text">Snímka obrazovky</string>
   <string name="screenshot_top_boundary_pct">%1$d %% hornej hranice</string>
+  <string name="screenshot_view_description">Zobraziť snímku obrazovky</string>
   <string name="screenshot_work_profile_notification">Uložená v aplikácii %1$s v pracovnom profile</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Senzor odtlačkov prstov je na vypínači. Je to ploché tlačidlo vedľa vypuklého tlačidla hlasitosti na okraji telefónu.</string>
   <string name="see_all_bluetooth_devices">Zobraziť všetko</string>
@@ -1384,6 +1441,12 @@ V prípade otázok kontaktujte organizáciu %2$s.</string>
   <string name="set_default_notes_app_toast_content">Nastavte predvolenú aplikáciu na poznámky v Nastaveniach</string>
   <string name="settings_label">Nastavenia</string>
   <string name="settingslib_learn_more_text">Ďalšie informácie</string>
+  <string name="severe_battery_notification_switch_text">Chcete prepnúť na Super šetrič batérie? 
+
+Táto akcia pozastaví všetky aplikácie, ktoré nie sú nutné, a ich upozornenia</string>
+  <string name="severe_battery_notification_text">Zapnite Super šetrič batérie. Táto akcia pozastaví všetky aplikácie, ktoré nie sú nutné.</string>
+  <string name="severe_battery_notification_title">Zostáva %s batérie</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Prepnúť</string>
   <string name="share_to_app_stop_dialog_button">Prestať zdieľať</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Prestanete zdieľať obsah aplikácie &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Chcete prestať zdieľať obrazovku?</string>
@@ -1406,6 +1469,9 @@ V prípade otázok kontaktujte organizáciu %2$s.</string>
   <string name="slice_permission_text_1">– Môže čítať informácie z aplikácie %1$s</string>
   <string name="slice_permission_text_2">– Môže vykonávať akcie v aplikácii %1$s</string>
   <string name="slice_permission_title">Povoliť aplikácii %1$s zobrazovať rezy z aplikácie %2$s?</string>
+  <string name="smartspace_content_desc">Prehľad udalostí</string>
+  <string name="smartspace_flight_qr_code">QR kód</string>
+  <string name="smartspace_role_desc">Zobrazenie</string>
   <string name="snoozeHourOptions">{count,plural, =1{# hodina}=2{# hodiny}few{# hodiny}many{# hodiny}other{# hodín}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minúta}few{# minúty}many{# minúty}other{# minút}}</string>
   <string name="snooze_undo">Späť</string>
@@ -1416,6 +1482,8 @@ V prípade otázok kontaktujte organizáciu %2$s.</string>
   <string name="speed_label_slow">Pomalá</string>
   <string name="speed_label_very_fast">Veľmi rýchla</string>
   <string name="split_screen_text">Rozdelená obrazovka</string>
+  <string name="squeeze_invocation_prompt">Stlačte a hovorte</string>
+  <string name="standard_battery_saver_text">Štandardný</string>
   <string name="start_dreams">Šetrič obrazovky</string>
   <string name="state_empty">Prázdne</string>
   <string name="state_off">Vypnuté</string>
@@ -1453,6 +1521,8 @@ V prípade otázok kontaktujte organizáciu %2$s.</string>
   <string name="tab">Karta</string>
   <string name="tap_a_network_to_connect">Ak sa chcete pripojiť, klepnite na sieť</string>
   <string name="tap_again">Klepnite znova</string>
+  <string name="temp_defender_notify_des">Nabíjanie bude pokračovať, keď sa teplota telefónu vráti na bežnú hodnotu</string>
+  <string name="temp_defender_notify_title">Nabíjanie je pozastavené, aby sa chránila batéria</string>
   <string name="template_percent">%1$d %%</string>
   <string name="thermal">Termálne</string>
   <string name="thermal_shutdown_dialog_help_text">Zobraziť opatrenia</string>
@@ -1469,6 +1539,7 @@ Viac sa dozviete po klepnutí.</string>
   <string name="title_for_empty_state_cta">Majte k dispozícii rýchly prístup k svojim obľúbeným miniaplikáciám bez odomykania tabletu</string>
   <string name="title_usb_accessory">Periférne zariadenie USB</string>
   <string name="to_switch_networks_disconnect_ethernet">Ak chcete prepnúť siete, odpojte ethernet</string>
+  <string name="too_hot_label">Pixel je príliš horúci</string>
   <string name="touch_filtered_warning">Nastavenia nemôžu overiť vašu odpoveď, pretože určitá aplikácia blokuje žiadosť o povolenie.</string>
   <string name="touchpad_tutorial_action_key_button">Akčný kláves</string>
   <string name="touchpad_tutorial_back_gesture_button">Gesto prechodu späť</string>
@@ -1483,17 +1554,18 @@ Viac sa dozviete po klepnutí.</string>
   <string name="tuner_menu">Ponuka</string>
   <string name="tuner_minus">Mínus</string>
   <string name="tuner_other_apps">Ďalšie aplikácie</string>
+  <string name="tuner_persistent_warning">Tieto experimentálne funkcie sa môžu v budúcich verziách zmeniť, ich poskytovanie môže byť prerušené alebo môžu byť odstránené. Pokračujte opatrne.</string>
   <string name="tuner_plus">Plus</string>
   <string name="tuner_right">Doprava</string>
   <string name="tuner_time">Čas</string>
+  <string name="tuner_warning">Tuner používateľského rozhrania systému poskytujte ďalšie spôsoby ladenia a prispôsobenia používateľského rozhrania Android. Tieto experimentálne funkcie sa môžu v budúcich verziách zmeniť, ich poskytovanie môže byť prerušené alebo môžu byť odstránené. Pokračujte opatrne.</string>
+  <string name="tuner_warning_title">Pri používaní tuneru postupujte opatrne</string>
   <string name="turn_off_airplane_mode">Vypnúť režim v lietadle</string>
   <string name="turn_on_bluetooth">Používať Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Funkcie ako Quick Share a Nájdi moje zariadenie používajú Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth sa zapne zajtra ráno</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Automaticky zapnúť zajtra</string>
   <string name="turn_on_wifi">Wi‑Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Predvolené nastavenie televízora</string>
   <string name="two_weeks_timestamp">Pred 2 týždňami</string>
   <string name="unknown">Neznáme</string>
   <string name="unlock_to_see_notif_text">Odomknutím zobrazíte staršie upozornenia</string>
@@ -1552,7 +1624,9 @@ Každý používateľ môže aktualizovať aplikácie všetkých ostatných pou�
   <string name="volume_odi_captions_hint_enable">povoliť</string>
   <string name="volume_odi_captions_tip">Automatické titulkovanie médií</string>
   <string name="volume_panel_captioning_title">Živý prepis</string>
+  <string name="volume_panel_clear_calling_title">Čistý zvuk volania</string>
   <string name="volume_panel_collapsed_sliders">Posúvače hlasitosti sú zbalené</string>
+  <string name="volume_panel_device_settings_title">Nastavenia zariadenia</string>
   <string name="volume_panel_dialog_settings_button">Nastavenia</string>
   <string name="volume_panel_enter_media_output_settings">Zadať nastavenia výstupu</string>
   <string name="volume_panel_expanded_sliders">Posúvače hlasitosti sú rozbalené</string>
@@ -1667,10 +1741,13 @@ Adresa Wi‑Fi (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Neznáme</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Nemerané</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi sa momentálne automaticky nepripojí</string>
+  <string name="wireless_charging_label">Nabíja sa bezdrôtovo</string>
+  <string name="wireless_charging_notification_text">Bezdrôtové nabíjanie môže spotrebovávať viac energie než káblové nabíjanie. Vyskúšajte káblovú nabíjačku, aby ste ušetrili elektrinu aj čas.</string>
+  <string name="wireless_charging_notification_title">Nabíja sa bezdrôtovo</string>
   <string name="work_challenge_emergency_button_text">Tieseň</string>
   <string name="work_mode_off_title">Zrušiť pozast. prac. aplikácií?</string>
   <string name="work_mode_turn_on">Zrušiť pozastavenie</string>
-  <string name="zen_alarm_warning">Váš budík o %1$s sa nespustí</string>
+  <string name="zen_alarm_warning">Váš budík o %1$s sa nespustí</string>
   <string name="zen_alarm_warning_indef">Ak toto nastavenie nevypnete, váš budík o %1$s sa nespustí</string>
   <string name="zen_mode_enable_dialog_turn_on">Zapnúť</string>
   <string name="zen_mode_settings_turn_on_dialog_title">Zapnite režim bez vyrušení</string>

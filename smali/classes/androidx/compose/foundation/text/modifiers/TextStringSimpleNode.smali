@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/text/modifiers/TextStringSimpleNode;
 .super Landroidx/compose/ui/Modifier$Node;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/node/LayoutModifierNode;
@@ -759,7 +759,7 @@
     move-wide/from16 v6, p3
 
     .line 36
-    invoke-virtual {v3, v5, v6, v7}, Landroidx/compose/foundation/text/modifiers/MinLinesConstrainer;->coerceMinLines-Oh53vG4$foundation_release(IJ)J
+    invoke-virtual {v3, v6, v7, v5}, Landroidx/compose/foundation/text/modifiers/MinLinesConstrainer;->coerceMinLines-Oh53vG4$foundation_release(JI)J
 
     .line 38
     move-result-wide v5

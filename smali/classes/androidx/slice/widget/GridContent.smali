@@ -1,6 +1,6 @@
 .class public final Landroidx/slice/widget/GridContent;
 .super Landroidx/slice/widget/SliceContent;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -142,252 +142,252 @@
     const-string v4, "shortcut"
 
     .line 73
-    const-string v7, "title"
+    const-string/jumbo v7, "title"
 
     .line 75
     filled-new-array {v4, v7}, [Ljava/lang/String;
 
-    .line 77
+    .line 78
     move-result-object v4
-
-    .line 80
-    const-string v7, "actions"
 
     .line 81
+    const-string v7, "actions"
+
+    .line 82
     filled-new-array {v7}, [Ljava/lang/String;
 
-    .line 83
+    .line 84
     move-result-object v7
 
-    .line 86
+    .line 87
     invoke-static {v1, v6, v4, v7}, Landroidx/slice/core/SliceQuery;->find(Landroidx/slice/SliceItem;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Landroidx/slice/SliceItem;
 
-    .line 87
+    .line 88
     move-result-object v4
 
-    .line 90
+    .line 91
     iput-object v4, v0, Landroidx/slice/widget/GridContent;->mPrimaryAction:Landroidx/slice/SliceItem;
 
-    .line 91
+    .line 92
     const/4 v4, 0x1
 
-    .line 93
+    .line 94
     iput-boolean v4, v0, Landroidx/slice/widget/GridContent;->mAllImages:Z
 
-    .line 94
+    .line 95
     iget-object v7, v1, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
-    .line 96
+    .line 97
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 98
+    .line 99
     move-result v6
 
-    .line 101
+    .line 102
     if-eqz v6, :cond_7
 
-    .line 102
+    .line 103
     invoke-virtual/range {p1 .. p1}, Landroidx/slice/SliceItem;->getSlice()Landroidx/slice/Slice;
 
-    .line 104
+    .line 105
     move-result-object v1
-
-    .line 107
-    iget-object v1, v1, Landroidx/slice/Slice;->mItems:[Landroidx/slice/SliceItem;
 
     .line 108
+    iget-object v1, v1, Landroidx/slice/Slice;->mItems:[Landroidx/slice/SliceItem;
+
+    .line 109
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    .line 110
+    .line 111
     move-result-object v1
 
-    .line 113
+    .line 114
     new-instance v6, Ljava/util/ArrayList;
 
-    .line 114
+    .line 115
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 116
+    .line 117
     move v7, v5
 
-    .line 119
+    .line 120
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
-    .line 120
+    .line 121
     move-result v8
 
-    .line 123
+    .line 124
     const-string v9, "content_description"
 
-    .line 124
+    .line 125
     if-ge v7, v8, :cond_5
 
-    .line 126
+    .line 127
     invoke-interface {v1, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 128
+    .line 129
     move-result-object v8
 
-    .line 131
+    .line 132
     check-cast v8, Landroidx/slice/SliceItem;
 
-    .line 132
+    .line 133
     invoke-static {v8, v2, v3}, Landroidx/slice/core/SliceQuery;->find(Landroidx/slice/SliceItem;Ljava/lang/String;Ljava/lang/String;)Landroidx/slice/SliceItem;
 
-    .line 134
+    .line 135
     move-result-object v10
 
-    .line 137
+    .line 138
     if-eqz v10, :cond_1
 
-    .line 138
+    .line 139
     goto :goto_1
 
-    .line 140
+    .line 141
     :cond_1
     const-string v13, "keywords"
 
-    .line 141
-    const-string v14, "ttl"
+    .line 142
+    const-string/jumbo v14, "ttl"
 
-    .line 143
+    .line 144
     const-string v11, "shortcut"
 
-    .line 145
+    .line 147
     const-string v12, "see_more"
 
-    .line 147
+    .line 149
     const-string v15, "last_updated"
 
-    .line 149
+    .line 151
     const-string v16, "overlay"
 
-    .line 151
+    .line 153
     filled-new-array/range {v11 .. v16}, [Ljava/lang/String;
 
-    .line 153
+    .line 155
     move-result-object v10
 
-    .line 156
+    .line 158
     invoke-virtual {v8, v10}, Landroidx/slice/SliceItem;->hasAnyHints([Ljava/lang/String;)Z
 
-    .line 157
+    .line 159
     move-result v10
 
-    .line 160
+    .line 162
     if-eqz v10, :cond_2
 
-    .line 161
+    .line 163
     :goto_1
     move v10, v4
 
-    .line 163
+    .line 165
     goto :goto_2
 
-    .line 164
+    .line 166
     :cond_2
     move v10, v5
 
-    .line 165
+    .line 167
     :goto_2
     iget-object v11, v8, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 166
+    .line 168
     invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 168
+    .line 170
     move-result v9
 
-    .line 171
+    .line 173
     if-eqz v9, :cond_3
 
-    .line 172
+    .line 174
     iput-object v8, v0, Landroidx/slice/widget/SliceContent;->mContentDescr:Landroidx/slice/SliceItem;
 
-    .line 174
+    .line 176
     goto :goto_3
 
-    .line 176
+    .line 178
     :cond_3
     if-nez v10, :cond_4
 
-    .line 177
+    .line 179
     invoke-interface {v6, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 179
+    .line 181
     :cond_4
     :goto_3
     add-int/lit8 v7, v7, 0x1
 
-    .line 182
+    .line 184
     goto :goto_0
 
-    .line 184
+    .line 186
     :cond_5
     :goto_4
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
-    .line 185
+    .line 187
     move-result v1
 
-    .line 188
+    .line 190
     if-ge v5, v1, :cond_8
 
-    .line 189
+    .line 191
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 191
+    .line 193
     move-result-object v1
 
-    .line 194
+    .line 196
     check-cast v1, Landroidx/slice/SliceItem;
 
-    .line 195
+    .line 197
     iget-object v2, v1, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 197
+    .line 199
     invoke-virtual {v9, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 199
+    .line 201
     move-result v2
 
-    .line 202
+    .line 204
     if-nez v2, :cond_6
 
-    .line 203
+    .line 205
     new-instance v2, Landroidx/slice/widget/GridContent$CellContent;
 
-    .line 205
+    .line 207
     invoke-direct {v2, v1}, Landroidx/slice/widget/GridContent$CellContent;-><init>(Landroidx/slice/SliceItem;)V
 
-    .line 207
+    .line 209
     invoke-virtual {v0, v2}, Landroidx/slice/widget/GridContent;->processContent(Landroidx/slice/widget/GridContent$CellContent;)V
 
-    .line 210
+    .line 212
     :cond_6
     add-int/lit8 v5, v5, 0x1
 
-    .line 213
+    .line 215
     goto :goto_4
 
-    .line 215
+    .line 217
     :cond_7
     new-instance v2, Landroidx/slice/widget/GridContent$CellContent;
 
-    .line 216
+    .line 218
     invoke-direct {v2, v1}, Landroidx/slice/widget/GridContent$CellContent;-><init>(Landroidx/slice/SliceItem;)V
 
-    .line 218
+    .line 220
     invoke-virtual {v0, v2}, Landroidx/slice/widget/GridContent;->processContent(Landroidx/slice/widget/GridContent$CellContent;)V
 
-    .line 221
+    .line 223
     :cond_8
     invoke-virtual/range {p0 .. p0}, Landroidx/slice/widget/GridContent;->isValid()Z
 
-    .line 224
+    .line 226
     return-void
-    .line 227
+    .line 229
 .end method
 
 

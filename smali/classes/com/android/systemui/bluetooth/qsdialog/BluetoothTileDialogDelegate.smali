@@ -1,13 +1,13 @@
 .class public final Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/phone/SystemUIDialog$Delegate;
 
 
 # instance fields
-.field public final bluetoothTileDialogCallback:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;
+.field public final bluetoothTileDialogCallback:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
 .field public final cachedContentHeight:I
 
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;ILcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;Ljava/lang/Runnable;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/util/time/SystemClock;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogLogger;Lcom/android/systemui/statusbar/phone/SystemUIDialog$Factory;)V
+.method public constructor <init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;ILcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$2;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/util/time/SystemClock;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogLogger;Lcom/android/systemui/statusbar/phone/SystemUIDialog$Factory;)V
     .locals 0
 
     .line 1
@@ -54,7 +54,7 @@
     iput p2, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->cachedContentHeight:I
 
     .line 7
-    iput-object p3, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->bluetoothTileDialogCallback:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;
+    iput-object p3, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->bluetoothTileDialogCallback:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
     .line 9
     iput-object p4, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->dismissListener:Ljava/lang/Runnable;
@@ -126,7 +126,7 @@
     new-instance p1, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter;
 
     .line 51
-    invoke-direct {p1, p0, p3}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;)V
+    invoke-direct {p1, p0, p3}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;)V
 
     .line 53
     iput-object p1, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->deviceItemAdapter:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter;
@@ -243,293 +243,287 @@
     move-result-object v1
 
     .line 21
-    invoke-virtual {p1}, Landroid/app/AlertDialog;->getContext()Landroid/content/Context;
+    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     .line 22
     move-result-object v2
 
     .line 25
-    invoke-static {v2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    const v3, 0x7f0d005d    # @layout/bluetooth_tile_dialog 'res/layout/bluetooth_tile_dialog.xml'
 
     .line 26
-    move-result-object v2
-
-    .line 29
-    const v3, 0x7f0e0058    # @layout/bluetooth_tile_dialog 'res/layout/bluetooth_tile_dialog.xml'
-
-    .line 30
     const/4 v4, 0x0
 
-    .line 33
+    .line 29
     invoke-virtual {v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 34
+    .line 30
     move-result-object v2
 
-    .line 37
-    const v3, 0x7f14007a    # @string/accessibility_desc_quick_settings 'Quick settings.'
+    .line 33
+    const v3, 0x7f13007b    # @string/accessibility_desc_quick_settings 'Quick settings.'
 
-    .line 38
+    .line 34
     invoke-virtual {v1, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
-    .line 41
+    .line 37
     move-result-object v3
 
-    .line 44
+    .line 40
     invoke-virtual {v2, v3}, Landroid/view/View;->setAccessibilityPaneTitle(Ljava/lang/CharSequence;)V
 
-    .line 45
+    .line 41
     invoke-virtual {p1, v2}, Landroid/app/AlertDialog;->setContentView(Landroid/view/View;)V
 
-    .line 48
-    const v2, 0x7f0b012d    # @id/bluetooth_toggle
+    .line 44
+    const v2, 0x7f0a0133    # @id/bluetooth_toggle
 
-    .line 51
+    .line 47
     invoke-virtual {p1, v2}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
+
+    .line 50
+    move-result-object v2
+
+    .line 53
+    check-cast v2, Landroid/widget/Switch;
 
     .line 54
-    move-result-object v2
-
-    .line 57
-    check-cast v2, Landroid/widget/Switch;
-
-    .line 58
     new-instance v3, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$setupToggle$1;
 
-    .line 60
+    .line 56
     invoke-direct {v3, p0, p2}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$setupToggle$1;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;I)V
 
-    .line 62
+    .line 58
     invoke-virtual {v2, v3}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 65
-    const v2, 0x7f0b0123    # @id/bluetooth_auto_on_toggle_layout
+    .line 61
+    const v2, 0x7f0a0129    # @id/bluetooth_auto_on_toggle_layout
 
-    .line 68
+    .line 64
     invoke-virtual {p1, v2}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
 
-    .line 71
+    .line 67
     move-result-object v2
 
-    .line 74
+    .line 70
     iget-object v3, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->initialUiProperties:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;
 
-    .line 75
+    .line 71
     iget v4, v3, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;->autoOnToggleVisibility:I
 
-    .line 77
+    .line 73
     invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 79
-    const v2, 0x7f0b0120    # @id/bluetooth_auto_on_toggle
+    .line 75
+    const v2, 0x7f0a0126    # @id/bluetooth_auto_on_toggle
 
-    .line 82
+    .line 78
     invoke-virtual {p1, v2}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
 
-    .line 85
+    .line 81
     move-result-object v2
 
-    .line 88
+    .line 84
     check-cast v2, Landroid/widget/Switch;
 
-    .line 89
+    .line 85
     new-instance v4, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$setupToggle$1;
 
-    .line 91
+    .line 87
     invoke-direct {v4, p0, v0}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$setupToggle$1;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;I)V
 
-    .line 93
+    .line 89
     invoke-virtual {v2, v4}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 96
-    const v2, 0x7f0b026c    # @id/device_list
+    .line 92
+    const v2, 0x7f0a0278    # @id/device_list
 
-    .line 99
+    .line 95
     invoke-virtual {p1, v2}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
 
-    .line 102
+    .line 98
     move-result-object v2
 
-    .line 105
+    .line 101
     check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 106
+    .line 102
     new-instance v4, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    .line 108
+    .line 104
     invoke-virtual {p1}, Landroid/app/AlertDialog;->getContext()Landroid/content/Context;
 
-    .line 110
+    .line 106
     invoke-direct {v4, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(I)V
 
-    .line 113
+    .line 109
     invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 116
+    .line 112
     iget-object v4, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->deviceItemAdapter:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter;
 
-    .line 119
+    .line 115
     invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 121
-    const v2, 0x7f0b012b    # @id/bluetooth_tile_dialog_subtitle
+    .line 117
+    const v2, 0x7f0a0131    # @id/bluetooth_tile_dialog_subtitle
 
-    .line 124
+    .line 120
     invoke-virtual {p1, v2}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
 
-    .line 127
+    .line 123
     move-result-object v2
 
-    .line 130
+    .line 126
     check-cast v2, Landroid/widget/TextView;
 
-    .line 131
+    .line 127
     iget v4, v3, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;->subTitleResId:I
 
-    .line 133
+    .line 129
     invoke-virtual {v1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 135
+    .line 131
     move-result-object v1
 
-    .line 138
+    .line 134
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 139
-    const v1, 0x7f0b0294    # @id/done_button
+    .line 135
+    const v1, 0x7f0a02a3    # @id/done_button
 
-    .line 142
+    .line 138
     invoke-virtual {p1, v1}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
+
+    .line 141
+    move-result-object v1
+
+    .line 144
+    new-instance v2, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$onCreate$3;
 
     .line 145
-    move-result-object v1
-
-    .line 148
-    new-instance v2, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$onCreate$3;
-
-    .line 149
     const/4 v4, 0x3
 
-    .line 151
+    .line 147
     invoke-direct {v2, v4, p1}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$onCreate$3;-><init>(ILjava/lang/Object;)V
 
-    .line 152
+    .line 148
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 155
-    const v1, 0x7f0b06e4    # @id/see_all_button
+    .line 151
+    const v1, 0x7f0a070d    # @id/see_all_button
 
-    .line 158
+    .line 154
     invoke-virtual {p1, v1}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
 
-    .line 161
+    .line 157
     move-result-object v1
 
-    .line 164
+    .line 160
     new-instance v2, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$onCreate$3;
 
-    .line 165
+    .line 161
     invoke-direct {v2, p2, p0}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$onCreate$3;-><init>(ILjava/lang/Object;)V
 
-    .line 167
+    .line 163
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 170
-    const p2, 0x7f0b05b9    # @id/pair_new_device_button
+    .line 166
+    const p2, 0x7f0a05de    # @id/pair_new_device_button
 
-    .line 173
+    .line 169
     invoke-virtual {p1, p2}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
 
-    .line 176
+    .line 172
     move-result-object p2
 
-    .line 179
+    .line 175
     new-instance v1, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$onCreate$3;
 
-    .line 180
+    .line 176
     invoke-direct {v1, v0, p0}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$onCreate$3;-><init>(ILjava/lang/Object;)V
 
-    .line 182
+    .line 178
     invoke-virtual {p2, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 185
-    const p2, 0x7f0b00db    # @id/audio_sharing_button
+    .line 181
+    const p2, 0x7f0a00df    # @id/audio_sharing_button
 
-    .line 188
+    .line 184
     invoke-virtual {p1, p2}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
 
-    .line 191
+    .line 187
     move-result-object p2
 
-    .line 194
+    .line 190
     check-cast p2, Landroid/widget/Button;
 
-    .line 195
+    .line 191
     new-instance v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$onCreate$3;
 
-    .line 197
+    .line 193
     const/4 v1, 0x2
 
-    .line 199
+    .line 195
     invoke-direct {v0, v1, p0}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$onCreate$3;-><init>(ILjava/lang/Object;)V
 
-    .line 200
+    .line 196
     invoke-virtual {p2, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 203
-    const p2, 0x7f0b06c7    # @id/scroll_view
+    .line 199
+    const p2, 0x7f0a06f0    # @id/scroll_view
 
-    .line 206
+    .line 202
     invoke-virtual {p1, p2}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
 
-    .line 209
+    .line 205
     move-result-object p1
 
-    .line 212
+    .line 208
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    .line 213
+    .line 209
     move-result-object p2
 
-    .line 216
+    .line 212
     iget v0, v3, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;->scrollViewMinHeightResId:I
 
-    .line 217
+    .line 213
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 219
+    .line 215
     move-result p2
 
-    .line 222
+    .line 218
     invoke-virtual {p1, p2}, Landroid/view/View;->setMinimumHeight(I)V
 
-    .line 223
+    .line 219
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    .line 226
+    .line 222
     move-result-object p2
 
-    .line 229
+    .line 225
     iget p0, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->cachedContentHeight:I
 
-    .line 230
+    .line 226
     invoke-virtual {p1}, Landroid/view/View;->getMinimumHeight()I
 
-    .line 232
+    .line 228
     move-result p1
 
-    .line 235
+    .line 231
     invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
 
-    .line 236
+    .line 232
     move-result p0
 
-    .line 239
+    .line 235
     iput p0, p2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 240
+    .line 236
     return-void
-    .line 242
+    .line 238
 .end method
 
 .method public final onStart(Landroid/app/Dialog;)V
@@ -571,7 +565,7 @@
     iget-object p0, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->mutableContentHeight:Lkotlinx/coroutines/flow/SharedFlowImpl;
 
     .line 4
-    const v0, 0x7f0b06c7    # @id/scroll_view
+    const v0, 0x7f0a06f0    # @id/scroll_view
 
     .line 6
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;

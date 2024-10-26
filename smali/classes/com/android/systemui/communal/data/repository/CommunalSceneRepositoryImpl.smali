@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/communal/data/repository/CommunalSceneRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -118,45 +118,4 @@
     .line 11
     return-void
     .line 14
-.end method
-
-.method public final snapToScene(Lcom/android/compose/animation/scene/SceneKey;J)V
-    .locals 7
-
-    .line 1
-    new-instance v6, Lcom/android/systemui/communal/data/repository/CommunalSceneRepositoryImpl$snapToScene$1;
-
-    .line 2
-    const/4 v5, 0x0
-
-    .line 4
-    move-object v0, v6
-
-    .line 5
-    move-wide v1, p2
-
-    .line 6
-    move-object v3, p0
-
-    .line 7
-    move-object v4, p1
-
-    .line 8
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/communal/data/repository/CommunalSceneRepositoryImpl$snapToScene$1;-><init>(JLcom/android/systemui/communal/data/repository/CommunalSceneRepositoryImpl;Lcom/android/compose/animation/scene/SceneKey;Lkotlin/coroutines/Continuation;)V
-
-    .line 9
-    iget-object p0, p0, Lcom/android/systemui/communal/data/repository/CommunalSceneRepositoryImpl;->applicationScope:Lkotlinx/coroutines/CoroutineScope;
-
-    .line 12
-    const/4 p1, 0x0
-
-    .line 14
-    const/4 p2, 0x3
-
-    .line 15
-    invoke-static {p0, p1, p1, v6, p2}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 16
-    return-void
-    .line 19
 .end method

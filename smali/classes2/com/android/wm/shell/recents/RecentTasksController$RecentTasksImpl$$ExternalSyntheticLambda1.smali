@@ -1,109 +1,109 @@
 .class public final synthetic Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic f$0:Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl;
+.field public final synthetic $r8$classId:I
 
-.field public final synthetic f$1:I
+.field public final synthetic f$0:Ljava/lang/Object;
 
-.field public final synthetic f$2:I
-
-.field public final synthetic f$3:I
-
-.field public final synthetic f$4:Ljava/util/concurrent/Executor;
-
-.field public final synthetic f$5:Ljava/util/function/Consumer;
+.field public final synthetic f$1:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl;ILjava/util/concurrent/Executor;Lcom/android/systemui/mediaprojection/appselector/data/ShellRecentTaskListProvider$getTasks$2$1;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->$r8$classId:I
 
     .line 2
-    iput-object p1, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$0:Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl;
+    iput-object p2, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$0:Ljava/lang/Object;
 
-    .line 5
-    const p1, 0x7fffffff
+    .line 4
+    iput-object p3, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$1:Ljava/lang/Object;
 
-    .line 7
-    iput p1, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$1:I
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
-    const/4 p1, 0x2
-
-    .line 12
-    iput p1, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$2:I
-
-    .line 13
-    iput p2, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$3:I
-
-    .line 15
-    iput-object p3, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$4:Ljava/util/concurrent/Executor;
-
-    .line 17
-    iput-object p4, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$5:Ljava/util/function/Consumer;
-
-    .line 19
+    .line 8
     return-void
-    .line 21
+    .line 11
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$0:Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl;
+    iget v0, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->$r8$classId:I
 
     .line 2
-    iget v1, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$1:I
+    packed-switch v0, :pswitch_data_0
 
     .line 4
-    iget v2, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$2:I
+    iget-object v0, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$0:Ljava/lang/Object;
 
-    .line 6
-    iget v3, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$3:I
+    .line 7
+    check-cast v0, Ljava/util/function/Consumer;
 
-    .line 8
-    iget-object v4, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$4:Ljava/util/concurrent/Executor;
+    .line 9
+    iget-object p0, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$1:Ljava/lang/Object;
 
-    .line 10
-    iget-object p0, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$5:Ljava/util/function/Consumer;
+    .line 11
+    check-cast p0, Ljava/util/List;
 
-    .line 12
-    iget-object v0, v0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl;->this$0:Lcom/android/wm/shell/recents/RecentTasksController;
+    .line 13
+    invoke-interface {v0, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 14
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/wm/shell/recents/RecentTasksController;->getRecentTasks(III)Ljava/util/ArrayList;
+    .line 15
+    return-void
 
-    .line 16
-    move-result-object v0
+    .line 18
+    :pswitch_0
+    iget-object v0, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$0:Ljava/lang/Object;
 
     .line 19
-    new-instance v1, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda2;
+    check-cast v0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl;
 
-    .line 20
-    check-cast p0, Lcom/android/systemui/mediaprojection/appselector/data/ShellRecentTaskListProvider$getTasks$2$1;
+    .line 21
+    iget-object p0, p0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda1;->f$1:Ljava/lang/Object;
 
-    .line 22
-    const/4 v2, 0x1
-
-    .line 24
-    invoke-direct {v1, v2, p0, v0}, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl$$ExternalSyntheticLambda2;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+    .line 23
+    check-cast p0, Landroid/graphics/Color;
 
     .line 25
-    invoke-interface {v4, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    iget-object v0, v0, Lcom/android/wm/shell/recents/RecentTasksController$RecentTasksImpl;->this$0:Lcom/android/wm/shell/recents/RecentTasksController;
 
-    .line 28
-    return-void
+    .line 27
+    iget-object v0, v0, Lcom/android/wm/shell/recents/RecentTasksController;->mTransitionHandler:Lcom/android/wm/shell/recents/RecentsTransitionHandler;
+
+    .line 29
+    if-nez v0, :cond_0
+
     .line 31
+    goto :goto_0
+
+    .line 33
+    :cond_0
+    iput-object p0, v0, Lcom/android/wm/shell/recents/RecentsTransitionHandler;->mBackgroundColor:Landroid/graphics/Color;
+
+    .line 34
+    :goto_0
+    return-void
+
+    .line 36
+    nop
+
+    .line 37
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+    .line 38
 .end method

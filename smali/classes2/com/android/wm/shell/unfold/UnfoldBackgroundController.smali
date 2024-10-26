@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/unfold/UnfoldBackgroundController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -29,7 +29,7 @@
     iput-boolean v0, p0, Lcom/android/wm/shell/unfold/UnfoldBackgroundController;->mSplitScreenVisible:Z
 
     .line 6
-    const v0, 0x7f060595    # @color/unfold_background 'res/color/unfold_background.xml'
+    const v0, 0x7f0605ad    # @color/unfold_background 'res/color/unfold_background.xml'
 
     .line 8
     invoke-static {v0, p1}, Lcom/android/wm/shell/unfold/UnfoldBackgroundController;->getRGBColorFromId(ILandroid/content/Context;)[F
@@ -41,7 +41,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/unfold/UnfoldBackgroundController;->mBackgroundColor:[F
 
     .line 15
-    const v0, 0x7f0604ef    # @color/split_divider_background '@color/taskbar_background_dark'
+    const v0, 0x7f0604fd    # @color/split_divider_background '@color/taskbar_background_dark'
 
     .line 17
     invoke-static {v0, p1}, Lcom/android/wm/shell/unfold/UnfoldBackgroundController;->getRGBColorFromId(ILandroid/content/Context;)[F

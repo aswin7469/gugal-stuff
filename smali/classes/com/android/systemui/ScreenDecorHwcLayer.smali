@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/ScreenDecorHwcLayer;
 .super Lcom/android/systemui/DisplayCutoutBaseView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -259,7 +259,7 @@
     const-string p2, "Attempting to use unsupported mode "
 
     .line 148
-    invoke-static {p2, p1}, Landroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Landroidx/appsearch/app/AppSearchSchema$Builder$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 150
     move-result-object p1
@@ -1298,149 +1298,149 @@
     new-instance p1, Ljava/lang/StringBuilder;
 
     .line 17
-    const-string v1, "this="
+    const-string/jumbo v1, "this="
 
     .line 19
     invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 21
+    .line 22
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 24
+    .line 25
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 27
+    .line 28
     move-result-object p1
-
-    .line 30
-    invoke-virtual {v0, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     .line 31
+    invoke-virtual {v0, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+
+    .line 32
     iget-object p1, p0, Lcom/android/systemui/ScreenDecorHwcLayer;->transparentRect:Landroid/graphics/Rect;
 
-    .line 34
+    .line 35
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 36
-    const-string v2, "transparentRect="
+    .line 37
+    const-string/jumbo v2, "transparentRect="
 
-    .line 38
+    .line 39
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 40
+    .line 42
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 43
+    .line 45
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 46
+    .line 48
     move-result-object p1
 
-    .line 49
+    .line 51
     invoke-virtual {v0, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 50
+    .line 52
     iget-boolean p1, p0, Lcom/android/systemui/ScreenDecorHwcLayer;->hasTopRoundedCorner:Z
 
-    .line 53
-    new-instance v1, Ljava/lang/StringBuilder;
-
     .line 55
-    const-string v2, "hasTopRoundedCorner="
+    new-instance v1, Ljava/lang/StringBuilder;
 
     .line 57
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "hasTopRoundedCorner="
 
     .line 59
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 61
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 62
+    .line 64
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 65
+    .line 67
     move-result-object p1
 
-    .line 68
+    .line 70
     invoke-virtual {v0, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 69
+    .line 71
     iget-boolean p1, p0, Lcom/android/systemui/ScreenDecorHwcLayer;->hasBottomRoundedCorner:Z
 
-    .line 72
-    new-instance v1, Ljava/lang/StringBuilder;
-
     .line 74
-    const-string v2, "hasBottomRoundedCorner="
+    new-instance v1, Ljava/lang/StringBuilder;
 
     .line 76
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "hasBottomRoundedCorner="
 
     .line 78
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 81
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 84
-    move-result-object p1
-
-    .line 87
-    invoke-virtual {v0, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
-
-    .line 88
-    iget p1, p0, Lcom/android/systemui/ScreenDecorHwcLayer;->roundedCornerTopSize:I
-
-    .line 91
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 93
-    const-string v2, "roundedCornerTopSize="
-
-    .line 95
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 97
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 80
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 100
+    .line 83
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 103
+    .line 86
     move-result-object p1
 
-    .line 106
+    .line 89
     invoke-virtual {v0, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 107
+    .line 90
+    iget p1, p0, Lcom/android/systemui/ScreenDecorHwcLayer;->roundedCornerTopSize:I
+
+    .line 93
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 95
+    const-string v2, "roundedCornerTopSize="
+
+    .line 97
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 99
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 102
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 105
+    move-result-object p1
+
+    .line 108
+    invoke-virtual {v0, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+
+    .line 109
     iget p0, p0, Lcom/android/systemui/ScreenDecorHwcLayer;->roundedCornerBottomSize:I
 
-    .line 110
+    .line 112
     new-instance p1, Ljava/lang/StringBuilder;
 
-    .line 112
+    .line 114
     const-string v1, "roundedCornerBottomSize="
 
-    .line 114
+    .line 116
     invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 116
+    .line 118
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 119
+    .line 121
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 122
+    .line 124
     move-result-object p0
 
-    .line 125
+    .line 127
     invoke-virtual {v0, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 126
+    .line 128
     invoke-virtual {v0}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 129
+    .line 131
     return-void
-    .line 132
+    .line 134
 .end method
 
 .method public final gatherTransparentRegion(Landroid/graphics/Region;)Z
@@ -1531,7 +1531,7 @@
     const-string v0, "Incorrect position: "
 
     .line 23
-    invoke-static {p1, v0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 25
     move-result-object p1
@@ -1743,7 +1743,7 @@
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     .line 77
-    invoke-static {v2, v3}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 79
     move-result-object p1
@@ -1792,7 +1792,7 @@
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     .line 103
-    invoke-static {v2, v3}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 105
     move-result-object p1

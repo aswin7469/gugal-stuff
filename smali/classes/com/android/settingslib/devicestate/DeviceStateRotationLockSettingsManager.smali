@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/devicestate/DeviceStateRotationLockSettingsManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -72,7 +72,7 @@
     move-result-object p1
 
     .line 33
-    const v1, 0x10700ae    # @android:array/config_roundedCornerRadiusArray
+    const v1, 0x10700a5    # @android:array/config_rearDisplayDeviceStates
 
     .line 34
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
@@ -1112,7 +1112,7 @@
     .locals 1
 
     .line 1
-    const v0, 0x10700ae    # @android:array/config_roundedCornerRadiusArray
+    const v0, 0x10700a5    # @android:array/config_rearDisplayDeviceStates
 
     .line 2
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -4317,7 +4317,6 @@
 
     .line 2029
     return-void
-    .line 2031
 .end method
 
 .method public allowedInBarrier()Z
@@ -7264,7 +7263,6 @@
     .line 22
     :cond_1
     return-void
-    .line 24
 .end method
 
 .method public getAnchor(Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;)Landroidx/constraintlayout/core/widgets/ConstraintAnchor;
@@ -8136,6 +8134,7 @@
 
     .line 24
     return p0
+    .line 25
 .end method
 
 .method public final isInVerticalChain()Z
@@ -8185,6 +8184,7 @@
 
     .line 24
     return p0
+    .line 25
 .end method
 
 .method public final isMeasureRequested()Z
@@ -8985,116 +8985,116 @@
     new-instance v1, Ljava/lang/StringBuilder;
 
     .line 15
-    const-string v4, "type: "
+    const-string/jumbo v4, "type: "
 
     .line 17
     invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 19
+    .line 20
     iget-object v4, p0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->mType:Ljava/lang/String;
 
-    .line 22
+    .line 23
     invoke-static {v1, v4, v3}, Landroidx/activity/ComponentActivity$activityResultRegistry$1$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 24
+    .line 25
     move-result-object v1
 
-    .line 27
+    .line 28
     goto :goto_0
 
-    .line 28
+    .line 29
     :cond_0
     move-object v1, v2
 
-    .line 29
+    .line 30
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 30
+    .line 31
     iget-object v1, p0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->mDebugName:Ljava/lang/String;
 
-    .line 33
+    .line 34
     if-eqz v1, :cond_1
 
-    .line 35
+    .line 36
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 37
+    .line 38
     const-string v2, "id: "
 
-    .line 39
+    .line 40
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 41
+    .line 42
     iget-object v2, p0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->mDebugName:Ljava/lang/String;
 
-    .line 44
+    .line 45
     invoke-static {v1, v2, v3}, Landroidx/activity/ComponentActivity$activityResultRegistry$1$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 46
+    .line 47
     move-result-object v2
 
-    .line 49
+    .line 50
     :cond_1
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 50
+    .line 51
     const-string v1, "("
 
-    .line 53
+    .line 54
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 55
+    .line 56
     iget v1, p0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->mX:I
 
-    .line 58
+    .line 59
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 60
+    .line 61
     const-string v1, ", "
 
-    .line 63
+    .line 64
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 65
+    .line 66
     iget v1, p0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->mY:I
 
-    .line 68
+    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 70
+    .line 71
     const-string v1, ") - ("
 
-    .line 73
+    .line 74
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 75
+    .line 76
     iget v1, p0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->mWidth:I
 
-    .line 78
+    .line 79
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 80
+    .line 81
     const-string v1, " x "
 
-    .line 83
+    .line 84
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 85
+    .line 86
     iget p0, p0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->mHeight:I
 
-    .line 88
+    .line 89
     const-string v1, ")"
 
-    .line 90
+    .line 91
     invoke-static {v0, p0, v1}, Landroidx/compose/runtime/Anchor$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    .line 92
+    .line 93
     move-result-object p0
 
-    .line 95
-    return-object p0
     .line 96
+    return-object p0
+    .line 97
 .end method
 
 .method public updateFromRuns(ZZ)V

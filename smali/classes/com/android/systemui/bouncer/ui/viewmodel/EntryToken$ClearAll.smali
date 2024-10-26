@@ -1,9 +1,9 @@
 .class public final Lcom/android/systemui/bouncer/ui/viewmodel/EntryToken$ClearAll;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Lcom/android/systemui/bouncer/ui/viewmodel/EntryToken;
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
@@ -36,6 +36,47 @@
 
 
 # virtual methods
+.method public compareTo(Ljava/lang/Object;)I
+    .locals 0
+
+    .line 1
+    check-cast p1, Lcom/android/systemui/bouncer/ui/viewmodel/EntryToken$ClearAll;
+
+    .line 2
+    invoke-virtual {p0}, Lcom/android/systemui/bouncer/ui/viewmodel/EntryToken$ClearAll;->getSequenceNumber()I
+
+    .line 4
+    move-result p0
+
+    .line 7
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 8
+    move-result-object p0
+
+    .line 11
+    invoke-virtual {p1}, Lcom/android/systemui/bouncer/ui/viewmodel/EntryToken$ClearAll;->getSequenceNumber()I
+
+    .line 12
+    move-result p1
+
+    .line 15
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 16
+    move-result-object p1
+
+    .line 19
+    invoke-static {p0, p1}, Lkotlin/comparisons/ComparisonsKt___ComparisonsJvmKt;->compareValues(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    .line 20
+    move-result p0
+
+    .line 23
+    return p0
+    .line 24
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
@@ -124,7 +165,7 @@
     const-string v1, ")"
 
     .line 6
-    invoke-static {v0, v1, p0}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v1, p0}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 8
     move-result-object p0

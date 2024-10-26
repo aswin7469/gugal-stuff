@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/unfold/FoldAodAnimationController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/CallbackController;
@@ -142,56 +142,27 @@
 .end method
 
 .method public final getShadeFoldAnimator()Lcom/android/systemui/shade/ShadeFoldAnimator;
-    .locals 1
+    .locals 0
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    iget-object p0, p0, Lcom/android/systemui/unfold/FoldAodAnimationController;->foldTransitionInteractor:Ldagger/Lazy;
-
-    .line 8
-    invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
-
-    .line 10
-    move-result-object p0
-
-    .line 13
-    check-cast p0, Lcom/android/systemui/keyguard/domain/interactor/ToAodFoldTransitionInteractor;
-
-    .line 14
-    iget-object p0, p0, Lcom/android/systemui/keyguard/domain/interactor/ToAodFoldTransitionInteractor;->foldAnimator:Lcom/android/systemui/keyguard/domain/interactor/ToAodFoldTransitionInteractor$foldAnimator$1;
-
-    .line 16
-    goto :goto_0
-
-    .line 18
-    :cond_0
     iget-object p0, p0, Lcom/android/systemui/unfold/FoldAodAnimationController;->shadeViewController:Lcom/android/systemui/shade/ShadeViewController;
 
-    .line 19
-    if-nez p0, :cond_1
+    .line 2
+    if-nez p0, :cond_0
 
-    .line 21
+    .line 4
     const/4 p0, 0x0
 
-    .line 23
-    :cond_1
+    .line 6
+    :cond_0
     invoke-interface {p0}, Lcom/android/systemui/shade/ShadeViewController;->getShadeFoldAnimator$1()Lcom/android/systemui/shade/ShadeFoldAnimator;
 
-    .line 24
+    .line 7
     move-result-object p0
 
-    .line 27
-    :goto_0
+    .line 10
     return-object p0
-    .line 28
+    .line 11
 .end method
 
 .method public final initialize(Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/shade/ShadeViewController;Lcom/android/systemui/statusbar/LightRevealScrim;)V

@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/settingslib/wifi/WifiUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -13,7 +13,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 5
 
     .line 1
     new-instance v0, Lcom/android/settingslib/wifi/WifiUtils$Companion;
@@ -25,192 +25,56 @@
     sput-object v0, Lcom/android/settingslib/wifi/WifiUtils;->Companion:Lcom/android/settingslib/wifi/WifiUtils$Companion;
 
     .line 7
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
+    const v0, 0x10805c8    # @android:drawable/ic_volume_small
 
     .line 9
-    move-result v0
+    const v1, 0x10805c9    # @android:drawable/ic_wifi_signal_0
 
     .line 12
-    const/4 v1, 0x5
-
-    .line 13
-    const/4 v2, 0x0
-
-    .line 14
-    const/4 v3, 0x1
+    const v2, 0x10805c7    # @android:drawable/ic_volume_off_small
 
     .line 15
-    const/4 v4, 0x2
-
-    .line 16
-    const/4 v5, 0x3
-
-    .line 17
-    const/4 v6, 0x4
+    const v3, 0x10805ca    # @android:drawable/ic_wifi_signal_1
 
     .line 18
-    if-eqz v0, :cond_0
-
-    .line 19
-    new-array v0, v1, [I
+    const v4, 0x10805cb    # @android:drawable/ic_wifi_signal_2
 
     .line 21
-    const v7, 0x7f08096f    # @drawable/ic_wifi_0 'res/drawable/ic_wifi_0.xml'
+    filled-new-array {v2, v0, v1, v3, v4}, [I
 
-    .line 23
-    aput v7, v0, v2
+    .line 24
+    move-result-object v0
 
-    .line 26
-    const v7, 0x7f080971    # @drawable/ic_wifi_1 'res/drawable/ic_wifi_1.xml'
-
-    .line 28
-    aput v7, v0, v3
-
-    .line 31
-    const v7, 0x7f080973    # @drawable/ic_wifi_2 'res/drawable/ic_wifi_2.xml'
-
-    .line 33
-    aput v7, v0, v4
-
-    .line 36
-    const v7, 0x7f080975    # @drawable/ic_wifi_3 'res/drawable/ic_wifi_3.xml'
-
-    .line 38
-    aput v7, v0, v5
-
-    .line 41
-    const v7, 0x7f080977    # @drawable/ic_wifi_4 'res/drawable/ic_wifi_4.xml'
-
-    .line 43
-    aput v7, v0, v6
-
-    .line 46
-    goto :goto_0
-
-    .line 48
-    :cond_0
-    new-array v0, v1, [I
-
-    .line 49
-    const v7, 0x10805c9    # @android:drawable/ic_wifi_signal_0
-
-    .line 51
-    aput v7, v0, v2
-
-    .line 54
-    const v7, 0x10805ca    # @android:drawable/ic_wifi_signal_1
-
-    .line 56
-    aput v7, v0, v3
-
-    .line 59
-    const v7, 0x10805cb    # @android:drawable/ic_wifi_signal_2
-
-    .line 61
-    aput v7, v0, v4
-
-    .line 64
-    const v7, 0x10805cc    # @android:drawable/ic_wifi_signal_3
-
-    .line 66
-    aput v7, v0, v5
-
-    .line 69
-    const v7, 0x10805cd    # @android:drawable/ic_wifi_signal_4
-
-    .line 71
-    aput v7, v0, v6
-
-    .line 74
-    :goto_0
+    .line 27
     sput-object v0, Lcom/android/settingslib/wifi/WifiUtils;->WIFI_PIE:[I
 
-    .line 76
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
+    .line 28
+    const v0, 0x7f0808fb    # @drawable/ic_no_internet_wifi_signal_1 'res/drawable/ic_no_internet_wifi_signal_1.xml'
 
-    .line 78
-    move-result v0
+    .line 30
+    const v1, 0x7f0808fc    # @drawable/ic_no_internet_wifi_signal_2 'res/drawable/ic_no_internet_wifi_signal_2.xml'
 
-    .line 81
-    if-eqz v0, :cond_1
+    .line 33
+    const v2, 0x7f0808fa    # @drawable/ic_no_internet_wifi_signal_0 'res/drawable/ic_no_internet_wifi_signal_0.xml'
 
-    .line 82
-    new-array v0, v1, [I
+    .line 36
+    const v3, 0x7f0808fd    # @drawable/ic_no_internet_wifi_signal_3 'res/drawable/ic_no_internet_wifi_signal_3.xml'
 
-    .line 84
-    const v1, 0x7f080970    # @drawable/ic_wifi_0_error 'res/drawable/ic_wifi_0_error.xml'
+    .line 39
+    const v4, 0x7f0808fe    # @drawable/ic_no_internet_wifi_signal_4 'res/drawable/ic_no_internet_wifi_signal_4.xml'
 
-    .line 86
-    aput v1, v0, v2
+    .line 42
+    filled-new-array {v2, v0, v1, v3, v4}, [I
 
-    .line 89
-    const v1, 0x7f080972    # @drawable/ic_wifi_1_error 'res/drawable/ic_wifi_1_error.xml'
+    .line 45
+    move-result-object v0
 
-    .line 91
-    aput v1, v0, v3
-
-    .line 94
-    const v1, 0x7f080974    # @drawable/ic_wifi_2_error 'res/drawable/ic_wifi_2_error.xml'
-
-    .line 96
-    aput v1, v0, v4
-
-    .line 99
-    const v1, 0x7f080976    # @drawable/ic_wifi_3_error 'res/drawable/ic_wifi_3_error.xml'
-
-    .line 101
-    aput v1, v0, v5
-
-    .line 104
-    const v1, 0x7f080978    # @drawable/ic_wifi_4_error 'res/drawable/ic_wifi_4_error.xml'
-
-    .line 106
-    aput v1, v0, v6
-
-    .line 109
-    goto :goto_1
-
-    .line 111
-    :cond_1
-    new-array v0, v1, [I
-
-    .line 112
-    const v1, 0x7f0808d5    # @drawable/ic_no_internet_wifi_signal_0 'res/drawable/ic_no_internet_wifi_signal_0.xml'
-
-    .line 114
-    aput v1, v0, v2
-
-    .line 117
-    const v1, 0x7f0808d6    # @drawable/ic_no_internet_wifi_signal_1 'res/drawable/ic_no_internet_wifi_signal_1.xml'
-
-    .line 119
-    aput v1, v0, v3
-
-    .line 122
-    const v1, 0x7f0808d7    # @drawable/ic_no_internet_wifi_signal_2 'res/drawable/ic_no_internet_wifi_signal_2.xml'
-
-    .line 124
-    aput v1, v0, v4
-
-    .line 127
-    const v1, 0x7f0808d8    # @drawable/ic_no_internet_wifi_signal_3 'res/drawable/ic_no_internet_wifi_signal_3.xml'
-
-    .line 129
-    aput v1, v0, v5
-
-    .line 132
-    const v1, 0x7f0808d9    # @drawable/ic_no_internet_wifi_signal_4 'res/drawable/ic_no_internet_wifi_signal_4.xml'
-
-    .line 134
-    aput v1, v0, v6
-
-    .line 137
-    :goto_1
+    .line 48
     sput-object v0, Lcom/android/settingslib/wifi/WifiUtils;->NO_INTERNET_WIFI_PIE:[I
 
-    .line 139
+    .line 49
     return-void
-    .line 141
+    .line 51
 .end method
 
 .method public static final checkWepAllowed(Landroid/content/Context;Lkotlinx/coroutines/CoroutineScope;Ljava/lang/String;Lcom/android/systemui/qs/tiles/dialog/InternetAdapter$InternetViewHolder$$ExternalSyntheticLambda2;Lcom/android/systemui/qs/tiles/dialog/InternetAdapter$InternetViewHolder$$ExternalSyntheticLambda3;)Lkotlinx/coroutines/StandaloneCoroutine;

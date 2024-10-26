@@ -1,6 +1,6 @@
 .class public abstract Landroidx/core/animation/KeyframeSet;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Cloneable;
@@ -78,52 +78,55 @@
     if-ge v1, v2, :cond_0
 
     .line 7
-    invoke-static {v0}, Landroidx/compose/ui/text/input/EditProcessor$generateBatchErrorMessage$1$1$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
     .line 9
-    move-result-object v0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 12
-    iget-object v2, p0, Landroidx/core/animation/KeyframeSet;->mKeyframes:Ljava/util/List;
+    .line 11
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 13
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 14
+    iget-object v0, p0, Landroidx/core/animation/KeyframeSet;->mKeyframes:Ljava/util/List;
 
-    .line 15
-    move-result-object v2
-
-    .line 18
-    check-cast v2, Landroidx/core/animation/Keyframe;
+    .line 17
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     .line 19
-    invoke-virtual {v2}, Landroidx/core/animation/Keyframe;->getValue()Ljava/lang/Object;
-
-    .line 21
-    move-result-object v2
-
-    .line 24
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 25
-    const-string v2, "  "
-
-    .line 28
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 30
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 33
     move-result-object v0
 
-    .line 36
-    add-int/lit8 v1, v1, 0x1
+    .line 22
+    check-cast v0, Landroidx/core/animation/Keyframe;
+
+    .line 23
+    invoke-virtual {v0}, Landroidx/core/animation/Keyframe;->getValue()Ljava/lang/Object;
+
+    .line 25
+    move-result-object v0
+
+    .line 28
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 29
+    const-string v0, "  "
+
+    .line 32
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 34
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 37
+    move-result-object v0
+
+    .line 40
+    add-int/lit8 v1, v1, 0x1
+
+    .line 41
     goto :goto_0
 
-    .line 39
+    .line 43
     :cond_0
     return-object v0
-    .line 40
+    .line 44
 .end method

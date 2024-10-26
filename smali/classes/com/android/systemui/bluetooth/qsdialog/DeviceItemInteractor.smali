@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -65,25 +65,25 @@
     const/4 p3, 0x0
 
     .line 21
-    const/4 p5, 0x5
+    const/4 p4, 0x5
 
     .line 22
-    invoke-static {p1, p2, p3, p5}, Lkotlinx/coroutines/flow/SharedFlowKt;->MutableSharedFlow$default(IILkotlinx/coroutines/channels/BufferOverflow;I)Lkotlinx/coroutines/flow/SharedFlowImpl;
+    invoke-static {p1, p2, p3, p4}, Lkotlinx/coroutines/flow/SharedFlowKt;->MutableSharedFlow$default(IILkotlinx/coroutines/channels/BufferOverflow;I)Lkotlinx/coroutines/flow/SharedFlowImpl;
 
     .line 23
-    move-result-object p5
+    move-result-object p4
 
     .line 26
-    iput-object p5, p0, Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor;->mutableDeviceItemUpdate:Lkotlinx/coroutines/flow/SharedFlowImpl;
+    iput-object p4, p0, Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor;->mutableDeviceItemUpdate:Lkotlinx/coroutines/flow/SharedFlowImpl;
 
     .line 27
-    new-instance p5, Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor$deviceItemUpdateRequest$1;
+    new-instance p4, Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor$deviceItemUpdateRequest$1;
 
     .line 29
-    invoke-direct {p5, p0, p3}, Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor$deviceItemUpdateRequest$1;-><init>(Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p4, p0, p3}, Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor$deviceItemUpdateRequest$1;-><init>(Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor;Lkotlin/coroutines/Continuation;)V
 
     .line 31
-    invoke-static {p5}, Lcom/android/systemui/utils/coroutines/flow/FlowConflatedKt;->conflatedCallbackFlow(Lkotlin/jvm/functions/Function2;)Lkotlinx/coroutines/flow/Flow;
+    invoke-static {p4}, Lcom/android/systemui/utils/coroutines/flow/FlowConflatedKt;->conflatedCallbackFlow(Lkotlin/jvm/functions/Function2;)Lkotlinx/coroutines/flow/Flow;
 
     .line 34
     move-result-object p3
@@ -113,7 +113,7 @@
     new-instance p2, Lcom/android/systemui/bluetooth/qsdialog/AudioSharingMediaDeviceItemFactory;
 
     .line 53
-    invoke-direct {p2, p4}, Lcom/android/systemui/bluetooth/qsdialog/AudioSharingMediaDeviceItemFactory;-><init>(Lcom/android/settingslib/bluetooth/LocalBluetoothManager;)V
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
     .line 55
     new-instance p3, Lcom/android/systemui/bluetooth/qsdialog/AvailableMediaDeviceItemFactory;

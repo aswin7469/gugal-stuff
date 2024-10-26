@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/usb/StorageNotification$4;
 .super Landroid/content/pm/PackageManager$MoveCallback;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -146,7 +146,7 @@
     const v5, 0x106001c    # @android:color/system_notification_accent_color
 
     .line 33
-    const v6, 0x1080589    # @android:drawable/ic_screenshot
+    const v6, 0x1080587    # @android:drawable/ic_satellite_alt_24px
 
     .line 36
     const-string v7, "DSK"
@@ -228,7 +228,7 @@
     iget-object v2, v0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
     .line 91
-    const v15, 0x104039c    # @android:string/face_acquired_not_detected
+    const v15, 0x1040393    # @android:string/ext_media_unmounting_notification_title
 
     .line 93
     invoke-virtual {v2, v15}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -240,7 +240,7 @@
     iget-object v15, v0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
     .line 100
-    const v10, 0x104039b    # @android:string/face_acquired_mouth_covering_detected_alt
+    const v10, 0x1040392    # @android:string/ext_media_unmounting_notification_message
 
     .line 102
     filled-new-array {v14}, [Ljava/lang/Object;
@@ -262,7 +262,7 @@
     iget-object v2, v0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
     .line 114
-    const v10, 0x1040399    # @android:string/face_acquired_insufficient
+    const v10, 0x1040390    # @android:string/ext_media_unmountable_notification_message
 
     .line 116
     invoke-virtual {v2, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -274,7 +274,7 @@
     iget-object v10, v0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
     .line 123
-    const v14, 0x1040398    # @android:string/face_acquired_dark_glasses_detected_alt
+    const v14, 0x104038f    # @android:string/ext_media_unmount_action
 
     .line 125
     invoke-virtual {v10, v14}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -681,7 +681,7 @@
     move-result-object v10
 
     .line 393
-    const v14, 0x104039a    # @android:string/face_acquired_mouth_covering_detected
+    const v14, 0x1040391    # @android:string/ext_media_unmountable_notification_title
 
     .line 394
     invoke-virtual {v1, v14, v10}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -697,7 +697,7 @@
     iget-object v1, v0, Lcom/android/systemui/usb/StorageNotification;->mContext:Landroid/content/Context;
 
     .line 402
-    const v10, 0x104039d    # @android:string/face_acquired_obscured
+    const v10, 0x1040394    # @android:string/ext_media_unsupported_notification_message
 
     .line 404
     invoke-virtual {v1, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;

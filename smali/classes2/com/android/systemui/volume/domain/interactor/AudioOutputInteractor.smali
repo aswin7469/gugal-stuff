@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/domain/interactor/AudioOutputInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
 .field public final deviceIconInteractor:Lcom/android/systemui/volume/domain/interactor/DeviceIconInteractor;
 
-.field public final isInAudioSharing:Lkotlinx/coroutines/flow/Flow;
+.field public final isInAudioSharing:Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;
 
 .field public final localBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
@@ -87,10 +87,10 @@
     iput-object p1, p0, Lcom/android/systemui/volume/domain/interactor/AudioOutputInteractor;->currentAudioDevice:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 44
-    iget-object p1, p10, Lcom/android/settingslib/volume/data/repository/AudioSharingRepositoryImpl;->inAudioSharing:Lkotlinx/coroutines/flow/Flow;
+    iget-object p1, p10, Lcom/android/settingslib/volume/data/repository/AudioSharingRepositoryImpl;->inAudioSharing:Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;
 
     .line 46
-    iput-object p1, p0, Lcom/android/systemui/volume/domain/interactor/AudioOutputInteractor;->isInAudioSharing:Lkotlinx/coroutines/flow/Flow;
+    iput-object p1, p0, Lcom/android/systemui/volume/domain/interactor/AudioOutputInteractor;->isInAudioSharing:Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;
 
     .line 48
     return-void

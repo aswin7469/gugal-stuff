@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/power/PowerNotificationWarnings$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -56,7 +56,7 @@
     iget-object v3, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mContext:Landroid/content/Context;
 
     .line 13
-    const v4, 0x7f1504bf    # @style/Theme.SystemUI.Dialog.Alert
+    const v4, 0x7f1404c7    # @style/Theme.SystemUI.Dialog.Alert
 
     .line 15
     invoke-direct {v2, v3, v4, v0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;-><init>(Landroid/content/Context;IZ)V
@@ -71,7 +71,7 @@
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog;->setIconAttribute(I)V
 
     .line 27
-    const v3, 0x7f140404    # @string/high_temp_alarm_title 'Unplug your device'
+    const v3, 0x7f130448    # @string/high_temp_alarm_title 'Unplug your device'
 
     .line 30
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog;->setTitle(I)V
@@ -92,7 +92,7 @@
     move-result-object v4
 
     .line 46
-    const v5, 0x7f140403    # @string/high_temp_alarm_notify_message 'Your device is getting warm near the charging port. If it’s connected to a charger or USB accessory, ...'
+    const v5, 0x7f130447    # @string/high_temp_alarm_notify_message 'Your device is getting warm near the charging port. If it’s connected to a charger or USB accessory, ...'
 
     .line 47
     invoke-virtual {v3, v5, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -122,10 +122,10 @@
     invoke-direct {v3, p0, v0}, Lcom/android/systemui/power/PowerNotificationWarnings$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/power/PowerNotificationWarnings;I)V
 
     .line 70
-    const v0, 0x7f140401    # @string/high_temp_alarm_help_care_steps 'See care steps'
+    const v0, 0x7f130445    # @string/high_temp_alarm_help_care_steps 'See care steps'
 
     .line 73
-    invoke-virtual {v2, v0, v3}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v2, v0, v3}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setNegativeButton$1(ILandroid/content/DialogInterface$OnClickListener;)V
 
     .line 76
     new-instance v0, Lcom/android/systemui/power/PowerNotificationWarnings$$ExternalSyntheticLambda3;

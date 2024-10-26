@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/pip/PipBoundsAlgorithm;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -279,7 +279,7 @@
     if-lez v1, :cond_3
 
     .line 66
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
 
     .line 68
     aget-boolean v1, v1, v0
@@ -318,7 +318,7 @@
     const/4 v4, 0x0
 
     .line 95
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 96
     :cond_2
@@ -334,7 +334,7 @@
     .line 101
     :cond_4
     :goto_0
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
 
     .line 102
     aget-boolean v1, v1, v0
@@ -373,7 +373,7 @@
     const/4 v4, 0x0
 
     .line 129
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 130
     :cond_5
@@ -382,7 +382,7 @@
     .line 133
     :cond_6
     :goto_1
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
 
     .line 134
     aget-boolean p0, p0, v0
@@ -406,7 +406,7 @@
     const/4 v4, 0x0
 
     .line 150
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 151
     :cond_7
@@ -702,7 +702,7 @@
     const-string v0, "  "
 
     .line 2
-    invoke-static {p2, v0}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 4
     move-result-object v0
@@ -1436,7 +1436,7 @@
     move-result-object p1
 
     .line 5
-    const v0, 0x7f0701a2    # @dimen/config_pictureInPictureDefaultAspectRatio '1.777778'
+    const v0, 0x7f0701c3    # @dimen/config_pictureInPictureDefaultAspectRatio '1.777778'
 
     .line 6
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getFloat(I)F
@@ -1448,7 +1448,7 @@
     iput v0, p0, Lcom/android/wm/shell/common/pip/PipBoundsAlgorithm;->mDefaultAspectRatio:F
 
     .line 13
-    const v0, 0x7f0c001e    # @integer/config_defaultPictureInPictureGravity '0x00000055'
+    const v0, 0x7f0b0020    # @integer/config_defaultPictureInPictureGravity '0x00000055'
 
     .line 15
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I

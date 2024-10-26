@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/platform/NestedScrollInteropConnection;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/input/nestedscroll/NestedScrollConnection;
@@ -390,11 +390,11 @@
     .line 50
 .end method
 
-.method public final onPreScroll-OzD1aCk(IJ)J
+.method public final onPreScroll-OzD1aCk(JI)J
     .locals 10
 
     .line 1
-    invoke-static {p2, p3}, Landroidx/compose/ui/platform/NestedScrollInteropConnectionKt;->access$getScrollAxes-k-4lQ0M(J)I
+    invoke-static {p1, p2}, Landroidx/compose/ui/platform/NestedScrollInteropConnectionKt;->access$getScrollAxes-k-4lQ0M(J)I
 
     .line 2
     move-result v0
@@ -406,7 +406,7 @@
     const/4 v2, 0x0
 
     .line 7
-    if-ne p1, v1, :cond_0
+    if-ne p3, v1, :cond_0
 
     .line 8
     move v3, v1
@@ -441,7 +441,7 @@
     invoke-static {v0, v2}, Lkotlin/collections/ArraysKt;->fill$default([II)V
 
     .line 24
-    invoke-static {p2, p3}, Landroidx/compose/ui/geometry/Offset;->getX-impl(J)F
+    invoke-static {p1, p2}, Landroidx/compose/ui/geometry/Offset;->getX-impl(J)F
 
     .line 27
     move-result v3
@@ -453,7 +453,7 @@
     move-result v5
 
     .line 34
-    invoke-static {p2, p3}, Landroidx/compose/ui/geometry/Offset;->getY-impl(J)F
+    invoke-static {p1, p2}, Landroidx/compose/ui/geometry/Offset;->getY-impl(J)F
 
     .line 35
     move-result v3
@@ -465,7 +465,7 @@
     move-result v6
 
     .line 42
-    if-ne p1, v1, :cond_1
+    if-ne p3, v1, :cond_1
 
     .line 43
     move v2, v1
@@ -487,7 +487,7 @@
     invoke-virtual/range {v4 .. v9}, Landroidx/core/view/NestedScrollingChildHelper;->dispatchNestedPreScroll(III[I[I)Z
 
     .line 53
-    invoke-static {v0, p2, p3}, Landroidx/compose/ui/platform/NestedScrollInteropConnectionKt;->access$toOffset-Uv8p0NA([IJ)J
+    invoke-static {v0, p1, p2}, Landroidx/compose/ui/platform/NestedScrollInteropConnectionKt;->access$toOffset-Uv8p0NA([IJ)J
 
     .line 56
     move-result-wide p0

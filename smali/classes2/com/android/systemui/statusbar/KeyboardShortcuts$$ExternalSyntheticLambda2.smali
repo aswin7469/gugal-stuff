@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/KeyboardShortcuts$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -69,79 +69,47 @@
     iput-object p0, v0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mReceivedImeShortcutGroups:Ljava/util/List;
 
     .line 20
-    invoke-static {}, Lcom/android/systemui/Flags;->validateKeyboardShortcutHelperIconUri()Z
-
-    .line 22
-    move-result p0
-
-    .line 25
-    if-eqz p0, :cond_1
-
-    .line 26
-    iget-object p0, v0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mReceivedImeShortcutGroups:Ljava/util/List;
-
-    .line 28
-    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyboardShortcuts;->sanitiseShortcuts(Ljava/util/List;)V
-
-    .line 30
-    :cond_1
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/KeyboardShortcuts;->maybeMergeAndShowKeyboardShortcuts()V
 
-    .line 33
+    .line 22
     return-void
 
-    .line 36
+    .line 25
     :pswitch_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/statusbar/KeyboardShortcuts;
 
-    .line 37
+    .line 26
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts$$ExternalSyntheticLambda2;->f$1:Ljava/util/List;
 
-    .line 39
-    if-nez p0, :cond_2
+    .line 28
+    if-nez p0, :cond_1
 
-    .line 41
+    .line 30
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 43
+    .line 32
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
-    .line 46
+    .line 35
     move-result-object p0
 
-    .line 49
-    :cond_2
+    .line 38
+    :cond_1
     iput-object p0, v0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mReceivedAppShortcutGroups:Ljava/util/List;
 
-    .line 50
-    invoke-static {}, Lcom/android/systemui/Flags;->validateKeyboardShortcutHelperIconUri()Z
-
-    .line 52
-    move-result p0
-
-    .line 55
-    if-eqz p0, :cond_3
-
-    .line 56
-    iget-object p0, v0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mReceivedAppShortcutGroups:Ljava/util/List;
-
-    .line 58
-    invoke-static {p0}, Lcom/android/systemui/statusbar/KeyboardShortcuts;->sanitiseShortcuts(Ljava/util/List;)V
-
-    .line 60
-    :cond_3
+    .line 39
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/KeyboardShortcuts;->maybeMergeAndShowKeyboardShortcuts()V
 
-    .line 63
+    .line 41
     return-void
 
-    .line 66
+    .line 44
     nop
 
-    .line 67
+    .line 45
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 68
+    .line 46
 .end method

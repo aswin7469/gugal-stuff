@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -177,45 +177,31 @@
     move-result p0
 
     .line 96
-    if-nez p0, :cond_2
-
-    .line 97
-    sget-object p0, Lcom/android/systemui/animation/TransitionAnimator;->SRC_MODE:Landroid/graphics/PorterDuffXfermode;
-
-    .line 99
-    invoke-static {}, Lcom/android/systemui/shared/Flags;->returnAnimationFrameworkLibrary()Z
-
-    .line 101
-    move-result p0
-
-    .line 104
     if-eqz p0, :cond_1
 
-    .line 105
-    goto :goto_0
+    .line 97
+    return-void
 
-    .line 107
+    .line 99
     :cond_1
+    sget-object p0, Lcom/android/systemui/animation/TransitionAnimator;->SRC_MODE:Landroid/graphics/PorterDuffXfermode;
+
+    .line 100
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 108
+    .line 102
     const-string p1, "isLaunching cannot be false when the returnAnimationFrameworkLibrary flag is disabled"
 
-    .line 110
+    .line 104
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 112
+    .line 106
     move-result-object p1
 
-    .line 115
+    .line 109
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 116
+    .line 110
     throw p0
-
-    .line 119
-    :cond_2
-    :goto_0
-    return-void
-    .line 120
+    .line 113
 .end method

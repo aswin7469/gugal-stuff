@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/floatingmenu/DragToInteractView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -149,7 +149,7 @@
     move-result-object v2
 
     .line 70
-    const v3, 0x7f0702df    # @dimen/floating_dismiss_gradient_height '548.0dp'
+    const v3, 0x7f07030f    # @dimen/floating_dismiss_gradient_height '548.0dp'
 
     .line 71
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -281,19 +281,19 @@
     invoke-virtual {p0, v1}, Lcom/android/systemui/accessibility/floatingmenu/DragToInteractView;->addSpace(Landroid/widget/LinearLayout;)V
 
     .line 168
-    const v2, 0x7f0b007f    # @id/action_remove_menu
+    const v2, 0x7f0a007f    # @id/action_remove_menu
 
     .line 171
-    const v3, 0x7f080a90    # @drawable/pip_ic_close_white 'res/drawable/pip_ic_close_white.xml'
+    const v3, 0x7f080acb    # @drawable/pip_ic_close_white 'res/drawable/pip_ic_close_white.xml'
 
     .line 174
     invoke-virtual {p0, v0, v2, v3, v1}, Lcom/android/systemui/accessibility/floatingmenu/DragToInteractView;->addCircle(Lcom/android/systemui/accessibility/floatingmenu/DragToInteractView$Config;IILandroid/widget/LinearLayout;)V
 
     .line 177
-    const v2, 0x7f0b0067    # @id/action_edit
+    const v2, 0x7f0a0067    # @id/action_edit
 
     .line 180
-    const v3, 0x7f080916    # @drawable/ic_screenshot_edit 'res/drawable/ic_screenshot_edit.xml'
+    const v3, 0x7f080941    # @drawable/ic_screenshot_edit 'res/drawable/ic_screenshot_edit.xml'
 
     .line 183
     invoke-virtual {p0, v0, v2, v3, v1}, Lcom/android/systemui/accessibility/floatingmenu/DragToInteractView;->addCircle(Lcom/android/systemui/accessibility/floatingmenu/DragToInteractView$Config;IILandroid/widget/LinearLayout;)V
@@ -327,7 +327,7 @@
     move-result-object p1
 
     .line 5
-    const v0, 0x7f07027c    # @dimen/dismiss_circle_size '96.0dp'
+    const v0, 0x7f07029e    # @dimen/dismiss_circle_size '96.0dp'
 
     .line 6
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -366,13 +366,13 @@
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setId(I)V
 
     .line 32
-    const p2, 0x7f080697    # @drawable/dismiss_circle_background 'res/drawable/dismiss_circle_background.xml'
+    const p2, 0x7f08069f    # @drawable/dismiss_circle_background 'res/drawable/dismiss_circle_background.xml'
 
     .line 35
     iput p2, p1, Lcom/android/wm/shell/common/bubbles/DismissCircleView;->mBackgroundResId:I
 
     .line 38
-    const v1, 0x7f07027e    # @dimen/dismiss_target_x_size '24.0dp'
+    const v1, 0x7f0702a0    # @dimen/dismiss_target_x_size '24.0dp'
 
     .line 40
     iput v1, p1, Lcom/android/wm/shell/common/bubbles/DismissCircleView;->mIconSizeResId:I
@@ -450,7 +450,7 @@
     move-result-object p2
 
     .line 97
-    const p3, 0x7f0702df    # @dimen/floating_dismiss_gradient_height '548.0dp'
+    const p3, 0x7f07030f    # @dimen/floating_dismiss_gradient_height '548.0dp'
 
     .line 98
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -793,7 +793,7 @@
     move-result-object v1
 
     .line 39
-    const v2, 0x7f0702de    # @dimen/floating_dismiss_bottom_margin '50.0dp'
+    const v2, 0x7f07030e    # @dimen/floating_dismiss_bottom_margin '50.0dp'
 
     .line 40
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

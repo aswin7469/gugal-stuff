@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/BrightnessMirrorController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/settings/brightness/MirrorController;
@@ -68,7 +68,7 @@
     iput-object p4, p0, Lcom/android/systemui/statusbar/policy/BrightnessMirrorController;->mToggleSliderFactory:Lcom/android/systemui/settings/brightness/BrightnessSliderController$Factory;
 
     .line 22
-    const v1, 0x7f0b0149    # @id/brightness_mirror_container
+    const v1, 0x7f0a014f    # @id/brightness_mirror_container
 
     .line 24
     invoke-virtual {p1, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -269,7 +269,7 @@
     move-result-object v2
 
     .line 22
-    const v3, 0x7f0e005a    # @layout/brightness_mirror_container 'res/layout/brightness_mirror_container.xml'
+    const v3, 0x7f0d005f    # @layout/brightness_mirror_container 'res/layout/brightness_mirror_container.xml'
 
     .line 23
     const/4 v4, 0x0
@@ -612,7 +612,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f070929    # @dimen/rounded_slider_background_padding '8.0dp'
+    const v1, 0x7f070979    # @dimen/rounded_slider_background_padding '8.0dp'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

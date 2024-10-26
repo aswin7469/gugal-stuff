@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/clipboardoverlay/ClipboardModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -407,7 +407,7 @@
     move-result-object v0
 
     .line 19
-    const v1, 0x7f07085b    # @dimen/overlay_x_scale '80.0dp'
+    const v1, 0x7f0708ab    # @dimen/overlay_x_scale '80.0dp'
 
     .line 20
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

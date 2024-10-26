@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;
 .super Landroid/media/session/MediaController$Callback;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -120,113 +120,104 @@
     iget-boolean v2, p0, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->sentRemote:Z
 
     .line 34
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, v0}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)V
 
     .line 36
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 39
-    move-result-object v1
-
-    .line 42
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 43
     :cond_0
     const/4 v0, 0x0
 
-    .line 46
+    .line 39
     const/4 v1, 0x1
 
-    .line 47
+    .line 40
     if-eqz p1, :cond_1
 
-    .line 48
+    .line 41
     invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getPlaybackType()I
 
-    .line 50
+    .line 43
     move-result v2
 
-    .line 53
+    .line 46
     const/4 v3, 0x2
 
-    .line 54
+    .line 47
     if-ne v2, v3, :cond_1
 
-    .line 55
+    .line 48
     move v2, v1
 
-    .line 57
+    .line 50
     goto :goto_0
 
-    .line 58
+    .line 51
     :cond_1
     move v2, v0
 
-    .line 59
+    .line 52
     :goto_0
     if-nez v2, :cond_2
 
-    .line 60
+    .line 53
     iget-boolean v3, p0, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->sentRemote:Z
 
-    .line 62
+    .line 55
     if-eqz v3, :cond_2
 
-    .line 64
+    .line 57
     iget-object p1, p0, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->this$0:Lcom/android/settingslib/volume/MediaSessions;
 
-    .line 66
+    .line 59
     iget-object p1, p1, Lcom/android/settingslib/volume/MediaSessions;->mCallbacks:Lcom/android/systemui/volume/VolumeDialogControllerImpl$MediaSessionsCallbacks;
 
-    .line 68
+    .line 61
     iget-object v1, p0, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->controller:Landroid/media/session/MediaController;
 
-    .line 70
+    .line 63
     invoke-virtual {v1}, Landroid/media/session/MediaController;->getSessionToken()Landroid/media/session/MediaSession$Token;
 
-    .line 72
+    .line 65
     move-result-object v1
 
-    .line 75
+    .line 68
     invoke-virtual {p1, v1}, Lcom/android/systemui/volume/VolumeDialogControllerImpl$MediaSessionsCallbacks;->onRemoteRemoved(Landroid/media/session/MediaSession$Token;)V
 
-    .line 76
+    .line 69
     iput-boolean v0, p0, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->sentRemote:Z
 
-    .line 79
+    .line 72
     goto :goto_1
 
-    .line 81
+    .line 74
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 82
+    .line 75
     iget-object v0, p0, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->this$0:Lcom/android/settingslib/volume/MediaSessions;
 
-    .line 84
+    .line 77
     iget-object v2, p0, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->controller:Landroid/media/session/MediaController;
 
-    .line 86
+    .line 79
     invoke-virtual {v2}, Landroid/media/session/MediaController;->getSessionToken()Landroid/media/session/MediaSession$Token;
 
-    .line 88
+    .line 81
     move-result-object v2
 
-    .line 91
+    .line 84
     iget-object v3, p0, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->name:Ljava/lang/String;
 
-    .line 92
+    .line 85
     invoke-virtual {v0, v2, v3, p1}, Lcom/android/settingslib/volume/MediaSessions;->updateRemoteH(Landroid/media/session/MediaSession$Token;Ljava/lang/String;Landroid/media/session/MediaController$PlaybackInfo;)V
 
-    .line 94
+    .line 87
     iput-boolean v1, p0, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->sentRemote:Z
 
-    .line 97
+    .line 90
     :cond_3
     :goto_1
     return-void
-    .line 99
+    .line 92
 .end method
 
 .method public final onExtrasChanged(Landroid/os/Bundle;)V
@@ -331,21 +322,12 @@
 
     .line 33
     :goto_0
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p0, v0}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 34
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 37
-    move-result-object p0
-
-    .line 40
-    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 41
     :cond_1
     return-void
-    .line 44
+    .line 37
 .end method
 
 .method public final onPlaybackStateChanged(Landroid/media/session/PlaybackState;)V

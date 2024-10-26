@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$5;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
@@ -45,58 +45,35 @@
 .end method
 
 .method public final onDensityOrFontScaleChanged()V
-    .locals 1
+    .locals 0
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$5;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 6
-    if-nez v0, :cond_0
-
-    .line 8
+    .line 2
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->updateShowEmptyShadeView()V
 
-    .line 10
-    :cond_0
+    .line 4
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 13
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 15
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    .line 18
-    move-result v0
-
-    .line 21
-    if-nez v0, :cond_1
-
-    .line 22
+    .line 7
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->inflateFooterView()V
 
-    .line 24
+    .line 9
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateFooter()V
 
-    .line 27
-    :cond_1
+    .line 12
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->inflateEmptyShadeView()V
 
-    .line 30
+    .line 15
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mSectionsManager:Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;
 
-    .line 33
+    .line 18
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->reinflateViews()V
 
-    .line 35
+    .line 20
     return-void
-    .line 38
+    .line 23
 .end method
 
 .method public final onThemeChanged()V
@@ -130,7 +107,7 @@
     move-result-object v1
 
     .line 21
-    const v2, 0x7f0707e3    # @dimen/notification_corner_radius '28.0dp'
+    const v2, 0x7f070826    # @dimen/notification_corner_radius '28.0dp'
 
     .line 22
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -203,52 +180,29 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     .line 68
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 70
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    .line 73
-    move-result v1
-
-    .line 76
-    if-nez v1, :cond_3
-
-    .line 77
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->inflateFooterView()V
 
-    .line 79
+    .line 70
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateFooter()V
 
-    .line 82
-    :cond_3
+    .line 73
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->inflateEmptyShadeView()V
 
-    .line 85
+    .line 76
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mSectionsManager:Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;
 
-    .line 88
+    .line 79
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->reinflateViews()V
 
-    .line 90
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    .line 93
-    move-result v0
-
-    .line 96
-    if-nez v0, :cond_4
-
-    .line 97
+    .line 81
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->updateShowEmptyShadeView()V
 
-    .line 99
+    .line 84
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->updateFooter()V
 
-    .line 102
-    :cond_4
+    .line 87
     return-void
-    .line 105
+    .line 90
 .end method
 
 .method public final onUiModeChanged()V

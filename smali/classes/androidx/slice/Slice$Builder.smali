@@ -1,6 +1,6 @@
 .class public final Landroidx/slice/Slice$Builder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -270,17 +270,17 @@
     new-instance v0, Landroidx/slice/SliceItem;
 
     .line 4
-    const-string v1, "text"
+    const-string/jumbo v1, "text"
 
     .line 6
     invoke-direct {v0, p1, v1, p2, p3}, Landroidx/slice/SliceItem;-><init>(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 8
+    .line 9
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 11
+    .line 12
     return-void
-    .line 14
+    .line 15
 .end method
 
 .method public final build()Landroidx/slice/Slice;

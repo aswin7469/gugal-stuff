@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig;
@@ -89,6 +89,50 @@
     .line 44
 .end method
 
+.method public static disabledPickerState(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Disabled;
+    .locals 1
+
+    .line 1
+    if-eqz p2, :cond_1
+
+    .line 2
+    if-eqz p1, :cond_0
+
+    .line 4
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    .line 7
+    const-string p1, "Check failed."
+
+    .line 9
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 11
+    move-result-object p1
+
+    .line 14
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 15
+    throw p0
+
+    .line 18
+    :cond_1
+    :goto_0
+    new-instance v0, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Disabled;
+
+    .line 19
+    invoke-direct {v0, p0, p1, p2}, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Disabled;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+
+    .line 21
+    return-object v0
+    .line 24
+.end method
+
 
 # virtual methods
 .method public final getKey()Ljava/lang/String;
@@ -140,7 +184,7 @@
 .end method
 
 .method public final getPickerScreenState(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 7
+    .locals 8
 
     .line 1
     iget-object p1, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->component:Lcom/android/systemui/controls/dagger/ControlsComponent;
@@ -296,176 +340,343 @@
     .line 85
     :cond_5
     :goto_2
-    iget-object v5, p1, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfigurationImpl;
+    iget-object v5, p1, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;
 
     .line 86
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v5}, Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;->getPackageName()Ljava/lang/String;
 
     .line 88
-    if-eqz v0, :cond_6
+    move-result-object v5
 
     .line 91
+    const v6, 0x7f130453    # @string/home_quick_affordance_unavailable_install_the_app 'To add the Home app as a shortcut, make sure the app is installed'
+
+    .line 92
+    if-eqz v0, :cond_6
+
+    .line 95
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    .line 93
-    move-result v5
-
-    .line 96
-    :cond_6
-    if-eqz v0, :cond_a
 
     .line 97
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    move-result v7
 
-    .line 99
-    move-result v0
+    .line 100
+    if-eqz v7, :cond_c
 
-    .line 102
-    if-eqz v0, :cond_7
+    .line 101
+    :cond_6
+    if-eqz v5, :cond_c
 
     .line 103
-    goto :goto_3
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     .line 105
-    :cond_7
-    if-nez v2, :cond_9
-
-    .line 106
-    if-nez v3, :cond_9
+    move-result v7
 
     .line 108
-    iget-object p1, p1, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsUiController:Ljava/util/Optional;
+    if-nez v7, :cond_7
 
-    .line 110
-    invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
+    .line 109
+    goto :goto_4
+
+    .line 111
+    :cond_7
+    iget-object p1, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
 
     .line 112
+    invoke-virtual {p1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 114
     move-result-object p1
 
-    .line 115
-    check-cast p1, Lcom/android/systemui/controls/ui/ControlsUiController;
-
-    .line 116
-    check-cast p1, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;
-
-    .line 118
-    invoke-virtual {p1}, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->resolveActivity()Ljava/lang/Class;
-
-    .line 120
-    move-result-object p1
-
-    .line 123
+    .line 117
     iget-object v0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
 
-    .line 124
-    const v1, 0x7f14040d    # @string/home_quick_affordance_unavailable_configure_the_app '• At least one device or device panel are available'
+    .line 118
+    const v2, 0x7f130475    # @string/install_app 'Install app'
 
-    .line 126
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    .line 120
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 129
+    .line 123
     move-result-object v0
 
+    .line 126
+    iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
+
+    .line 127
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    .line 129
+    move-result v2
+
     .line 132
-    iget-object v1, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
+    if-nez v2, :cond_8
 
     .line 133
-    const v2, 0x7f1402e3    # @string/controls_open_app 'Open app'
+    goto :goto_3
 
     .line 135
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    :cond_8
+    const v2, 0x7f13029c    # @string/config_appStorePackageName 'com.android.vending'
 
-    .line 138
-    move-result-object v1
+    .line 136
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 141
-    new-instance v2, Landroid/content/Intent;
+    .line 139
+    move-result-object v2
 
     .line 142
-    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+    const v3, 0x7f13029b    # @string/config_appStoreAppLinkTemplate 'https://play.google.com/store/apps/details?id=$packageName'
 
-    .line 144
-    new-instance v3, Landroid/content/ComponentName;
+    .line 143
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 147
-    iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
-
-    .line 149
-    invoke-direct {v3, p0, p1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 151
-    invoke-virtual {v2, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    .line 154
-    const-string p0, "extra_animate"
-
-    .line 157
-    invoke-virtual {v2, p0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 159
-    if-eqz v1, :cond_8
-
-    .line 162
-    new-instance p0, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Disabled;
-
-    .line 164
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Disabled;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
-
-    .line 166
-    return-object p0
-
-    .line 169
-    :cond_8
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    .line 170
-    const-string p1, "Check failed."
-
-    .line 172
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 174
-    move-result-object p1
-
-    .line 177
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    .line 178
-    throw p0
-
-    .line 181
-    :cond_9
-    new-instance p0, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Default;
-
-    .line 182
-    invoke-direct {p0, v1}, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Default;-><init>(Landroid/content/Intent;)V
-
-    .line 184
-    return-object p0
-
-    .line 187
-    :cond_a
-    :goto_3
-    iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
-
-    .line 188
-    const p1, 0x7f14040e    # @string/home_quick_affordance_unavailable_install_the_app 'To add the Home app as a shortcut, make sure the app is installed'
-
-    .line 190
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 193
+    .line 146
     move-result-object p0
 
-    .line 196
-    new-instance p1, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Disabled;
+    .line 149
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    .line 150
+    move-result v3
+
+    .line 153
+    if-nez v3, :cond_9
+
+    .line 154
+    goto :goto_3
+
+    .line 156
+    :cond_9
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    .line 157
+    move-result v3
+
+    .line 160
+    if-nez v3, :cond_a
+
+    .line 161
+    goto :goto_3
+
+    .line 163
+    :cond_a
+    const-string v1, "$packageName"
+
+    .line 164
+    invoke-static {p0, v1}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    .line 166
+    move-result v3
+
+    .line 169
+    if-eqz v3, :cond_b
+
+    .line 170
+    new-instance v3, Landroid/content/Intent;
+
+    .line 172
+    const-string v4, "android.intent.action.VIEW"
+
+    .line 174
+    invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 176
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 179
+    invoke-static {p0, v1, v5}, Lkotlin/text/StringsKt__StringsJVMKt;->replace$default(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 182
+    move-result-object p0
+
+    .line 185
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    .line 186
+    move-result-object p0
+
+    .line 189
+    invoke-virtual {v3, p0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    .line 190
+    move-object v1, v3
+
+    .line 193
+    :goto_3
+    invoke-static {p1, v0, v1}, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->disabledPickerState(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Disabled;
+
+    .line 194
+    move-result-object p0
 
     .line 197
-    invoke-direct {p1, p0, v1, v1}, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Disabled;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    return-object p0
+
+    .line 198
+    :cond_b
+    new-instance p0, Ljava/lang/IllegalStateException;
 
     .line 199
-    return-object p1
-    .line 202
+    const-string p1, "Check failed."
+
+    .line 201
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 203
+    move-result-object p1
+
+    .line 206
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 207
+    throw p0
+
+    .line 210
+    :cond_c
+    :goto_4
+    if-eqz v0, :cond_d
+
+    .line 211
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    .line 213
+    move-result v0
+
+    .line 216
+    if-eqz v0, :cond_e
+
+    .line 217
+    :cond_d
+    if-eqz v5, :cond_10
+
+    .line 219
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    .line 221
+    move-result v0
+
+    .line 224
+    if-nez v0, :cond_e
+
+    .line 225
+    goto :goto_5
+
+    .line 227
+    :cond_e
+    if-nez v2, :cond_f
+
+    .line 228
+    if-nez v3, :cond_f
+
+    .line 230
+    iget-object p1, p1, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsUiController:Ljava/util/Optional;
+
+    .line 232
+    invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
+
+    .line 234
+    move-result-object p1
+
+    .line 237
+    check-cast p1, Lcom/android/systemui/controls/ui/ControlsUiController;
+
+    .line 238
+    check-cast p1, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;
+
+    .line 240
+    invoke-virtual {p1}, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->resolveActivity()Ljava/lang/Class;
+
+    .line 242
+    move-result-object p1
+
+    .line 245
+    iget-object v0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
+
+    .line 246
+    const v1, 0x7f130452    # @string/home_quick_affordance_unavailable_configure_the_app '• At least one device or device panel are available'
+
+    .line 248
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 251
+    move-result-object v0
+
+    .line 254
+    iget-object v1, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
+
+    .line 255
+    const v2, 0x7f1302ff    # @string/controls_open_app 'Open app'
+
+    .line 257
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 260
+    move-result-object v1
+
+    .line 263
+    new-instance v2, Landroid/content/Intent;
+
+    .line 264
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+
+    .line 266
+    new-instance v3, Landroid/content/ComponentName;
+
+    .line 269
+    iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
+
+    .line 271
+    invoke-direct {v3, p0, p1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 273
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    .line 276
+    const-string p0, "extra_animate"
+
+    .line 279
+    invoke-virtual {v2, p0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 281
+    invoke-static {v0, v1, v2}, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->disabledPickerState(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Disabled;
+
+    .line 284
+    move-result-object p0
+
+    .line 287
+    return-object p0
+
+    .line 288
+    :cond_f
+    new-instance p0, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Default;
+
+    .line 289
+    invoke-direct {p0, v1}, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Default;-><init>(Landroid/content/Intent;)V
+
+    .line 291
+    return-object p0
+
+    .line 294
+    :cond_10
+    :goto_5
+    iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
+
+    .line 295
+    invoke-virtual {p0, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 297
+    move-result-object p0
+
+    .line 300
+    invoke-static {p0, v1, v1}, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->disabledPickerState(Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$PickerScreenState$Disabled;
+
+    .line 301
+    move-result-object p0
+
+    .line 304
+    return-object p0
+    .line 305
 .end method
 
 .method public final onTriggered(Lcom/android/systemui/animation/Expandable$Companion$fromView$1;)Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$OnTriggeredResult;
@@ -546,21 +757,21 @@
     iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig;->component:Lcom/android/systemui/controls/dagger/ControlsComponent;
 
     .line 4
-    iget-object p0, p0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfigurationImpl;
+    iget-object p0, p0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;
 
     .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {p0}, Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;->getTileTitleId()I
 
     .line 8
-    const p0, 0x7f1407a4    # @string/quick_controls_title 'Device controls'
+    move-result p0
 
     .line 11
     invoke-virtual {v0, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 14
+    .line 12
     move-result-object p0
 
-    .line 17
+    .line 15
     return-object p0
-    .line 18
+    .line 16
 .end method

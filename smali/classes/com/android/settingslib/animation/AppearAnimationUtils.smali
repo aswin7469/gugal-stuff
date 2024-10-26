@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/animation/AppearAnimationUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/settingslib/animation/AppearAnimationCreator;
@@ -48,7 +48,7 @@
     move-result-object p1
 
     .line 17
-    const p6, 0x7f070097    # @dimen/appear_y_translation_start '32.0dp'
+    const p6, 0x7f07009a    # @dimen/appear_y_translation_start '32.0dp'
 
     .line 18
     invoke-virtual {p1, p6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/controller/ControlsFavoritePersistenceWrapper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -90,214 +90,214 @@
     const/4 v8, 0x2
 
     .line 31
-    const-string v9, "structure"
+    const-string/jumbo v9, "structure"
 
     .line 32
     if-ne v5, v8, :cond_3
 
-    .line 34
+    .line 35
     invoke-virtual {v6, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 36
+    .line 37
     move-result v10
 
-    .line 39
+    .line 40
     if-eqz v10, :cond_3
 
-    .line 40
+    .line 41
     const-string v3, "component"
 
-    .line 42
+    .line 43
     invoke-interface {p0, v2, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 44
+    .line 45
     move-result-object v3
-
-    .line 47
-    invoke-static {v3}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     .line 48
+    invoke-static {v3}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
+
+    .line 49
     move-result-object v3
 
-    .line 51
+    .line 52
     invoke-interface {p0, v2, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 52
+    .line 53
     move-result-object v4
 
-    .line 55
+    .line 56
     if-eqz v4, :cond_2
 
-    .line 56
+    .line 57
     goto :goto_0
 
-    .line 58
+    .line 59
     :cond_2
     move-object v4, v7
 
-    .line 59
+    .line 60
     goto :goto_0
 
-    .line 60
+    .line 61
     :cond_3
     if-ne v5, v8, :cond_6
 
-    .line 61
+    .line 62
     const-string v8, "control"
 
-    .line 63
+    .line 64
     invoke-virtual {v6, v8}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 65
+    .line 66
     move-result v8
 
-    .line 68
+    .line 69
     if-eqz v8, :cond_6
 
-    .line 69
+    .line 70
     const-string v5, "id"
 
-    .line 71
+    .line 72
     invoke-interface {p0, v2, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 73
+    .line 74
     move-result-object v5
 
-    .line 76
-    const-string v6, "title"
-
     .line 77
+    const-string/jumbo v6, "title"
+
+    .line 78
     invoke-interface {p0, v2, v6}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 79
+    .line 81
     move-result-object v6
 
-    .line 82
-    const-string v8, "subtitle"
-
-    .line 83
-    invoke-interface {p0, v2, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 84
+    const-string/jumbo v8, "subtitle"
 
     .line 85
-    move-result-object v8
+    invoke-interface {p0, v2, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 88
-    if-nez v8, :cond_4
-
-    .line 89
-    goto :goto_1
+    move-result-object v8
 
     .line 91
+    if-nez v8, :cond_4
+
+    .line 92
+    goto :goto_1
+
+    .line 94
     :cond_4
     move-object v7, v8
 
-    .line 92
+    .line 95
     :goto_1
-    const-string v8, "type"
+    const-string/jumbo v8, "type"
 
-    .line 93
+    .line 96
     invoke-interface {p0, v2, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 95
+    .line 99
     move-result-object v8
 
-    .line 98
+    .line 102
     if-eqz v8, :cond_5
 
-    .line 99
+    .line 103
     invoke-static {v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    .line 101
+    .line 105
     move-result v8
 
-    .line 104
+    .line 108
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 105
+    .line 109
     move-result-object v8
 
-    .line 108
+    .line 112
     goto :goto_2
 
-    .line 109
+    .line 113
     :cond_5
     move-object v8, v2
 
-    .line 110
+    .line 114
     :goto_2
     if-eqz v5, :cond_0
 
-    .line 111
+    .line 115
     if-eqz v6, :cond_0
 
-    .line 113
+    .line 117
     if-eqz v8, :cond_0
 
-    .line 115
+    .line 119
     new-instance v9, Lcom/android/systemui/controls/controller/ControlInfo;
 
-    .line 117
+    .line 121
     invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
 
-    .line 119
+    .line 123
     move-result v8
 
-    .line 122
+    .line 126
     invoke-direct {v9, v5, v6, v7, v8}, Lcom/android/systemui/controls/controller/ControlInfo;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
 
-    .line 123
+    .line 127
     invoke-interface {v1, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 126
+    .line 130
     goto :goto_0
 
-    .line 129
+    .line 133
     :cond_6
     const/4 v7, 0x3
 
-    .line 130
+    .line 134
     if-ne v5, v7, :cond_0
 
-    .line 131
+    .line 135
     invoke-virtual {v6, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 133
+    .line 137
     move-result v5
 
-    .line 136
+    .line 140
     if-eqz v5, :cond_0
 
-    .line 137
+    .line 141
     new-instance v5, Lcom/android/systemui/controls/controller/StructureInfo;
 
-    .line 139
+    .line 143
     invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 141
+    .line 145
     invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 144
+    .line 148
     invoke-static {v1}, Lkotlin/collections/CollectionsKt;->toList(Ljava/lang/Iterable;)Ljava/util/List;
 
-    .line 147
+    .line 151
     move-result-object v6
 
-    .line 150
+    .line 154
     invoke-direct {v5, v3, v4, v6}, Lcom/android/systemui/controls/controller/StructureInfo;-><init>(Landroid/content/ComponentName;Ljava/lang/CharSequence;Ljava/util/List;)V
 
-    .line 151
+    .line 155
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 154
+    .line 158
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 157
+    .line 161
     goto/16 :goto_0
 
-    .line 160
+    .line 164
     :cond_7
     return-object v0
-    .line 162
+    .line 166
 .end method
 
 
@@ -592,4 +592,5 @@
 
     .line 24
     return-void
+    .line 27
 .end method

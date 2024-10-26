@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/biometrics/ui/binder/PromptIconViewBinder$bind$1$1$3;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -158,65 +158,65 @@
     sget-object v8, Lcom/android/systemui/util/kotlin/Utils;->Companion:Lcom/android/systemui/util/kotlin/Utils$Companion;
 
     .line 43
-    const-string v11, "toTriple(Ljava/lang/Object;Lkotlin/Pair;)Lkotlin/Triple;"
+    const-string/jumbo v11, "toTriple(Ljava/lang/Object;Lkotlin/Pair;)Lkotlin/Triple;"
 
     .line 45
     const/4 v12, 0x4
 
-    .line 47
+    .line 48
     const/4 v7, 0x3
 
-    .line 48
+    .line 49
     const-class v9, Lcom/android/systemui/util/kotlin/Utils$Companion;
 
-    .line 49
-    const-string v10, "toTriple"
+    .line 50
+    const-string/jumbo v10, "toTriple"
 
-    .line 51
+    .line 52
     move-object v6, p1
 
-    .line 53
+    .line 55
     invoke-direct/range {v6 .. v12}, Lkotlin/jvm/internal/AdaptedFunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 54
+    .line 56
     invoke-static {v1, v4, p1}, Lcom/android/systemui/util/kotlin/FlowKt;->sample(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/SafeFlow;
 
-    .line 57
+    .line 59
     move-result-object p1
 
-    .line 60
+    .line 62
     new-instance v1, Lcom/android/systemui/biometrics/ui/binder/PromptIconViewBinder$bind$1$1$3$4;
 
-    .line 61
+    .line 63
     iget-object v3, p0, Lcom/android/systemui/biometrics/ui/binder/PromptIconViewBinder$bind$1$1$3;->$iconOverlayView:Lcom/airbnb/lottie/LottieAnimationView;
 
-    .line 63
+    .line 65
     iget-object v4, p0, Lcom/android/systemui/biometrics/ui/binder/PromptIconViewBinder$bind$1$1$3;->$viewModel:Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;
 
-    .line 65
+    .line 67
     invoke-direct {v1, v3, v4}, Lcom/android/systemui/biometrics/ui/binder/PromptIconViewBinder$bind$1$1$3$4;-><init>(Lcom/airbnb/lottie/LottieAnimationView;Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;)V
 
-    .line 67
+    .line 69
     iput v2, p0, Lcom/android/systemui/biometrics/ui/binder/PromptIconViewBinder$bind$1$1$3;->label:I
 
-    .line 70
+    .line 72
     invoke-virtual {p1, v1, p0}, Lkotlinx/coroutines/flow/AbstractFlow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 72
+    .line 74
     move-result-object p0
 
-    .line 75
+    .line 77
     if-ne p0, v0, :cond_2
 
-    .line 76
+    .line 78
     return-object v0
 
-    .line 78
+    .line 80
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 79
-    return-object p0
     .line 81
+    return-object p0
+    .line 83
 .end method

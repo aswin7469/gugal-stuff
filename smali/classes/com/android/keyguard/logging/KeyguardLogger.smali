@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/logging/KeyguardLogger;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -127,7 +127,7 @@
     .line 25
 .end method
 
-.method public final logBiometricMessage(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)V
+.method public final logBiometricMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 4
 
     .line 1
@@ -161,7 +161,7 @@
     iput-object p1, v1, Lcom/android/systemui/log/LogMessageImpl;->str1:Ljava/lang/String;
 
     .line 18
-    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     .line 20
     move-result-object p1
@@ -170,7 +170,7 @@
     iput-object p1, v1, Lcom/android/systemui/log/LogMessageImpl;->str2:Ljava/lang/String;
 
     .line 24
-    iput-object p3, v1, Lcom/android/systemui/log/LogMessageImpl;->str3:Ljava/lang/String;
+    iput-object p2, v1, Lcom/android/systemui/log/LogMessageImpl;->str3:Ljava/lang/String;
 
     .line 26
     invoke-virtual {p0, v0}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V

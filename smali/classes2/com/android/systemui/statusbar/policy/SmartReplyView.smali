@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/policy/SmartReplyView;
 .super Landroid/view/ViewGroup;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -114,7 +114,7 @@
     iget-object v2, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 9
-    const v3, 0x7f070994    # @dimen/smart_reply_button_max_height '100.0dp'
+    const v3, 0x7f0709eb    # @dimen/smart_reply_button_max_height '100.0dp'
 
     .line 11
     invoke-static {v3, v2}, Lcom/android/systemui/statusbar/notification/NotificationUtils;->getFontScaledHeight(ILandroid/content/Context;)I
@@ -126,7 +126,7 @@
     iput v2, p0, Lcom/android/systemui/statusbar/policy/SmartReplyView;->mHeightUpperLimit:I
 
     .line 18
-    const v2, 0x7f0604e6    # @color/smart_reply_button_background '#ffffffff'
+    const v2, 0x7f0604f4    # @color/smart_reply_button_background '#ffffffff'
 
     .line 20
     invoke-virtual {p1, v2}, Landroid/content/Context;->getColor(I)I
@@ -141,7 +141,7 @@
     iget-object v3, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 29
-    const v4, 0x7f0604e8    # @color/smart_reply_button_text '@android:color/primary_dark_material_settings_light'
+    const v4, 0x7f0604f6    # @color/smart_reply_button_text '@android:color/primary_dark_material_settings_light'
 
     .line 31
     invoke-virtual {v3, v4}, Landroid/content/Context;->getColor(I)I
@@ -156,7 +156,7 @@
     iget-object v3, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 40
-    const v4, 0x7f0604e9    # @color/smart_reply_button_text_dark_bg '@android:color/primary_dark_material_settings'
+    const v4, 0x7f0604f7    # @color/smart_reply_button_text_dark_bg '@android:color/primary_dark_material_settings'
 
     .line 42
     invoke-virtual {v3, v4}, Landroid/content/Context;->getColor(I)I
@@ -171,7 +171,7 @@
     iget-object v3, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 51
-    const v4, 0x7f0604e7    # @color/smart_reply_button_stroke '@android:color/accessibility_feature_background'
+    const v4, 0x7f0604f5    # @color/smart_reply_button_stroke '@android:color/accessibility_feature_background'
 
     .line 53
     invoke-virtual {v3, v4}, Landroid/content/Context;->getColor(I)I
@@ -186,7 +186,7 @@
     iget-object v4, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 62
-    const v5, 0x7f06040f    # @color/notification_ripple_untinted_color '#28000000'
+    const v5, 0x7f06041b    # @color/notification_ripple_untinted_color '#28000000'
 
     .line 64
     invoke-virtual {v4, v5}, Landroid/content/Context;->getColor(I)I

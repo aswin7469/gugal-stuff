@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/clipboardoverlay/ClipboardListener;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -22,15 +22,13 @@
 
 .field public final mContext:Landroid/content/Context;
 
-.field public final mKeyguardManager:Landroid/app/KeyguardManager;
-
 .field public final mOverlayProvider:Ljavax/inject/Provider;
 
 .field public final mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ldagger/internal/Provider;Lcom/android/systemui/clipboardoverlay/ClipboardToast;Landroid/content/ClipboardManager;Landroid/app/KeyguardManager;Lcom/android/internal/logging/UiEventLogger;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;Lcom/android/systemui/clipboardoverlay/ClipboardToast;Landroid/content/ClipboardManager;Landroid/app/KeyguardManager;Lcom/android/internal/logging/UiEventLogger;)V
     .locals 0
 
     .line 1
@@ -49,14 +47,11 @@
     iput-object p4, p0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mClipboardManager:Landroid/content/ClipboardManager;
 
     .line 11
-    iput-object p5, p0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mKeyguardManager:Landroid/app/KeyguardManager;
-
-    .line 13
     iput-object p6, p0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
-    .line 15
+    .line 13
     return-void
-    .line 17
+    .line 15
 .end method
 
 .method public static shouldSuppressOverlay(Landroid/content/ClipData;Ljava/lang/String;Z)Z
@@ -208,745 +203,747 @@
 
     .line 41
     :cond_1
-    sget-boolean v3, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 42
-    if-nez v3, :cond_2
-
-    .line 44
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 46
-    :cond_2
-    sget-boolean v3, Lcom/android/systemui/FeatureFlagsImpl;->clipboardNoninteractiveOnLockscreen:Z
-
-    .line 49
-    const/4 v12, 0x1
-
-    .line 51
-    if-eqz v3, :cond_3
-
-    .line 52
-    iget-object v3, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mKeyguardManager:Landroid/app/KeyguardManager;
-
-    .line 54
-    invoke-virtual {v3}, Landroid/app/KeyguardManager;->isDeviceLocked()Z
-
-    .line 56
-    move-result v3
-
-    .line 59
-    if-nez v3, :cond_19
-
-    .line 60
-    :cond_3
     iget-object v3, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mContext:Landroid/content/Context;
 
-    .line 62
+    .line 42
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    .line 64
+    .line 44
     move-result-object v3
 
-    .line 67
+    .line 47
     const-string/jumbo v5, "user_setup_complete"
 
-    .line 68
+    .line 48
     invoke-static {v3, v5, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    .line 71
+    .line 51
     move-result v3
 
-    .line 74
-    if-ne v3, v12, :cond_19
+    .line 54
+    const/4 v12, 0x1
 
-    .line 75
-    if-eqz v4, :cond_19
+    .line 55
+    if-ne v3, v12, :cond_17
 
-    .line 77
+    .line 56
+    if-eqz v4, :cond_17
+
+    .line 58
     invoke-virtual {v4}, Landroid/content/ClipData;->getItemCount()I
 
-    .line 79
+    .line 60
     move-result v3
 
-    .line 82
-    if-nez v3, :cond_4
+    .line 63
+    if-nez v3, :cond_2
 
-    .line 83
+    .line 64
     goto/16 :goto_e
 
-    .line 85
-    :cond_4
+    .line 66
+    :cond_2
     iget-object v3, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mClipboardOverlay:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;
 
-    .line 87
-    if-nez v3, :cond_5
+    .line 68
+    if-nez v3, :cond_3
 
-    .line 89
+    .line 70
     iget-object v3, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mOverlayProvider:Ljavax/inject/Provider;
 
-    .line 91
+    .line 72
     invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 93
+    .line 74
     move-result-object v3
 
-    .line 96
+    .line 77
     check-cast v3, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;
 
-    .line 97
+    .line 78
     iput-object v3, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mClipboardOverlay:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;
 
-    .line 99
+    .line 80
     iget-object v3, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
-    .line 101
+    .line 82
     sget-object v5, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;->CLIPBOARD_OVERLAY_ENTERED:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;
 
-    .line 103
+    .line 84
     invoke-interface {v3, v5, v1, v2}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;ILjava/lang/String;)V
 
-    .line 105
+    .line 86
     goto :goto_0
 
-    .line 108
-    :cond_5
+    .line 89
+    :cond_3
     iget-object v3, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
-    .line 109
+    .line 90
     sget-object v5, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;->CLIPBOARD_OVERLAY_UPDATED:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;
 
-    .line 111
+    .line 92
     invoke-interface {v3, v5, v1, v2}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;ILjava/lang/String;)V
 
-    .line 113
+    .line 94
     :goto_0
     iget-object v13, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mClipboardOverlay:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;
 
-    .line 116
+    .line 97
     iget-object v3, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mContext:Landroid/content/Context;
 
-    .line 118
+    .line 99
     invoke-virtual {v4}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
-    .line 120
+    .line 101
     move-result-object v5
 
-    .line 123
-    if-eqz v5, :cond_6
+    .line 104
+    if-eqz v5, :cond_4
 
-    .line 124
+    .line 105
     invoke-virtual {v5}, Landroid/content/ClipDescription;->getExtras()Landroid/os/PersistableBundle;
 
-    .line 126
+    .line 107
     move-result-object v5
 
-    .line 129
-    if-eqz v5, :cond_6
+    .line 110
+    if-eqz v5, :cond_4
 
-    .line 130
+    .line 111
     const-string v6, "android.content.extra.IS_SENSITIVE"
 
-    .line 132
+    .line 113
     invoke-virtual {v5, v6}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
 
-    .line 134
+    .line 115
     move-result v5
 
-    .line 137
+    .line 118
     move v14, v5
 
-    .line 138
+    .line 119
     goto :goto_1
 
-    .line 139
-    :cond_6
+    .line 120
+    :cond_4
     move v14, v1
 
-    .line 140
+    .line 121
     :goto_1
     invoke-virtual {v4, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
-    .line 141
+    .line 122
     move-result-object v5
 
-    .line 144
+    .line 125
     invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 145
+    .line 126
     invoke-virtual {v5}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
 
-    .line 148
+    .line 129
     move-result-object v6
 
-    .line 151
+    .line 132
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 152
+    .line 133
     move-result v6
 
-    .line 155
-    if-nez v6, :cond_7
+    .line 136
+    if-nez v6, :cond_5
 
-    .line 156
+    .line 137
     sget-object v6, Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;->TEXT:Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;
 
-    .line 158
+    .line 139
     :goto_2
     move-object v15, v6
 
-    .line 160
+    .line 141
     goto :goto_3
 
-    .line 161
-    :cond_7
+    .line 142
+    :cond_5
     invoke-virtual {v5}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
 
-    .line 162
+    .line 143
     move-result-object v6
 
-    .line 165
-    if-eqz v6, :cond_9
+    .line 146
+    if-eqz v6, :cond_7
 
-    .line 166
+    .line 147
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    .line 168
+    .line 149
     move-result-object v6
 
-    .line 171
+    .line 152
     invoke-virtual {v5}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
 
-    .line 172
+    .line 153
     move-result-object v7
 
-    .line 175
+    .line 156
     invoke-virtual {v6, v7}, Landroid/content/ContentResolver;->getType(Landroid/net/Uri;)Ljava/lang/String;
 
-    .line 176
+    .line 157
     move-result-object v6
 
-    .line 179
-    if-eqz v6, :cond_8
+    .line 160
+    if-eqz v6, :cond_6
 
-    .line 180
+    .line 161
     const-string v7, "image"
 
-    .line 182
+    .line 163
     invoke-virtual {v6, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    .line 184
+    .line 165
     move-result v6
 
-    .line 187
-    if-ne v6, v12, :cond_8
+    .line 168
+    if-ne v6, v12, :cond_6
 
-    .line 188
+    .line 169
     sget-object v6, Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;->IMAGE:Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;
 
-    .line 190
+    .line 171
     goto :goto_2
 
-    .line 192
-    :cond_8
+    .line 173
+    :cond_6
     sget-object v6, Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;->URI:Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;
 
-    .line 193
+    .line 174
     goto :goto_2
 
-    .line 195
-    :cond_9
+    .line 176
+    :cond_7
     sget-object v6, Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;->OTHER:Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;
 
-    .line 196
+    .line 177
     goto :goto_2
 
-    .line 198
+    .line 179
     :goto_3
     invoke-virtual {v4}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
-    .line 199
+    .line 180
     move-result-object v6
 
-    .line 202
+    .line 183
     invoke-virtual {v6}, Landroid/content/ClipDescription;->getExtras()Landroid/os/PersistableBundle;
 
-    .line 203
+    .line 184
     move-result-object v6
 
-    .line 206
-    if-eqz v6, :cond_b
+    .line 187
+    if-eqz v6, :cond_9
 
-    .line 207
+    .line 188
     invoke-virtual {v4}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
-    .line 209
+    .line 190
     move-result-object v6
 
-    .line 212
+    .line 193
     invoke-virtual {v6}, Landroid/content/ClipDescription;->getExtras()Landroid/os/PersistableBundle;
 
-    .line 213
+    .line 194
     move-result-object v6
 
-    .line 216
+    .line 197
     const-string v7, "android.content.extra.IS_REMOTE_DEVICE"
 
-    .line 217
+    .line 198
     invoke-virtual {v6, v7}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
 
-    .line 219
+    .line 200
     move-result v6
 
-    .line 222
-    if-eqz v6, :cond_b
+    .line 203
+    if-eqz v6, :cond_9
 
-    .line 223
+    .line 204
     invoke-static {}, Landroid/os/Build;->isDebuggable()Z
 
-    .line 225
+    .line 206
     move-result v6
 
-    .line 228
-    if-eqz v6, :cond_a
+    .line 209
+    if-eqz v6, :cond_8
 
-    .line 229
-    const-string v6, "systemui"
+    .line 210
+    const-string/jumbo v6, "systemui"
 
-    .line 231
+    .line 212
     const-string v7, "clipboard_ignore_remote_copy_source"
 
-    .line 233
+    .line 215
     invoke-static {v6, v7, v1}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 235
+    .line 217
     move-result v6
 
-    .line 238
-    if-eqz v6, :cond_a
+    .line 220
+    if-eqz v6, :cond_8
 
-    .line 239
+    .line 221
     move v11, v12
 
-    .line 241
+    .line 223
     goto :goto_4
 
-    .line 242
-    :cond_a
+    .line 224
+    :cond_8
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 243
+    .line 225
     move-result-object v3
 
-    .line 246
-    const v6, 0x7f1402a1    # @string/config_remoteCopyPackage ''
+    .line 228
+    const v6, 0x7f1302be    # @string/config_remoteCopyPackage ''
 
-    .line 247
+    .line 229
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 250
+    .line 232
     move-result-object v3
 
-    .line 253
+    .line 235
     invoke-static {v3}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
-    .line 254
+    .line 236
     move-result-object v3
 
-    .line 257
-    if-eqz v3, :cond_b
+    .line 239
+    if-eqz v3, :cond_9
 
-    .line 258
+    .line 240
     invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    .line 260
+    .line 242
     move-result-object v3
 
-    .line 263
+    .line 245
     invoke-virtual {v3, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 264
+    .line 246
     move-result v3
 
-    .line 267
+    .line 249
     move v11, v3
 
-    .line 268
+    .line 250
     goto :goto_4
 
-    .line 269
-    :cond_b
+    .line 251
+    :cond_9
     move v11, v1
 
-    .line 270
+    .line 252
     :goto_4
     new-instance v10, Lcom/android/systemui/clipboardoverlay/ClipboardModel;
 
-    .line 271
+    .line 253
     invoke-virtual {v5}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
 
-    .line 273
+    .line 255
     move-result-object v9
 
-    .line 276
+    .line 258
     invoke-virtual {v5}, Landroid/content/ClipData$Item;->getTextLinks()Landroid/view/textclassifier/TextLinks;
 
-    .line 277
+    .line 259
     move-result-object v8
 
-    .line 280
+    .line 262
     invoke-virtual {v5}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
 
-    .line 281
+    .line 263
     move-result-object v7
 
-    .line 284
+    .line 266
     move-object v3, v10
 
-    .line 285
+    .line 267
     move-object v5, v2
 
-    .line 286
+    .line 268
     move-object v6, v15
 
-    .line 287
+    .line 269
     move-object/from16 v16, v7
 
-    .line 288
+    .line 270
     move-object v7, v9
 
-    .line 290
+    .line 272
     move-object v12, v9
 
-    .line 291
+    .line 273
     move-object/from16 v9, v16
 
-    .line 292
+    .line 274
     move-object v1, v10
 
-    .line 294
+    .line 276
     move v10, v14
 
-    .line 295
+    .line 277
     invoke-direct/range {v3 .. v11}, Lcom/android/systemui/clipboardoverlay/ClipboardModel;-><init>(Landroid/content/ClipData;Ljava/lang/String;Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;Ljava/lang/CharSequence;Landroid/view/textclassifier/TextLinks;Landroid/net/Uri;ZZ)V
 
-    .line 296
+    .line 278
     iget-object v3, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mExitAnimator:Landroid/animation/Animator;
 
-    .line 299
-    if-eqz v3, :cond_c
+    .line 281
+    if-eqz v3, :cond_a
 
-    .line 301
+    .line 283
     invoke-virtual {v3}, Landroid/animation/Animator;->isRunning()Z
 
-    .line 303
+    .line 285
     move-result v3
 
-    .line 306
-    if-eqz v3, :cond_c
+    .line 288
+    if-eqz v3, :cond_a
 
-    .line 307
+    .line 289
     const/4 v3, 0x1
 
-    .line 309
+    .line 291
     goto :goto_5
 
-    .line 310
-    :cond_c
+    .line 292
+    :cond_a
     const/4 v3, 0x0
 
-    .line 311
+    .line 293
     :goto_5
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_b
 
-    .line 312
+    .line 294
     iget-object v4, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mExitAnimator:Landroid/animation/Animator;
 
-    .line 314
+    .line 296
     invoke-virtual {v4}, Landroid/animation/Animator;->cancel()V
 
-    .line 316
-    :cond_d
+    .line 298
+    :cond_b
     iget-object v4, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mClipboardModel:Lcom/android/systemui/clipboardoverlay/ClipboardModel;
 
-    .line 319
-    if-nez v4, :cond_e
+    .line 301
+    if-nez v4, :cond_c
 
-    .line 321
+    .line 303
     goto :goto_6
 
-    .line 323
-    :cond_e
+    .line 305
+    :cond_c
     iget-object v5, v4, Lcom/android/systemui/clipboardoverlay/ClipboardModel;->source:Ljava/lang/String;
 
-    .line 324
+    .line 306
     invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 326
+    .line 308
     move-result v5
 
-    .line 329
-    if-eqz v5, :cond_10
+    .line 311
+    if-eqz v5, :cond_e
 
-    .line 330
+    .line 312
     iget-object v5, v4, Lcom/android/systemui/clipboardoverlay/ClipboardModel;->type:Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;
 
-    .line 332
-    if-ne v15, v5, :cond_10
+    .line 314
+    if-ne v15, v5, :cond_e
 
-    .line 334
+    .line 316
     iget-object v5, v4, Lcom/android/systemui/clipboardoverlay/ClipboardModel;->text:Ljava/lang/CharSequence;
 
-    .line 336
+    .line 318
     invoke-static {v12, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 338
+    .line 320
     move-result v5
 
-    .line 341
-    if-eqz v5, :cond_10
+    .line 323
+    if-eqz v5, :cond_e
 
-    .line 342
+    .line 324
     iget-object v5, v4, Lcom/android/systemui/clipboardoverlay/ClipboardModel;->uri:Landroid/net/Uri;
 
-    .line 344
+    .line 326
     move-object/from16 v6, v16
 
-    .line 346
+    .line 328
     invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 348
+    .line 330
     move-result v5
 
-    .line 351
-    if-eqz v5, :cond_10
+    .line 333
+    if-eqz v5, :cond_e
 
-    .line 352
+    .line 334
     iget-boolean v4, v4, Lcom/android/systemui/clipboardoverlay/ClipboardModel;->isSensitive:Z
 
-    .line 354
-    if-ne v14, v4, :cond_10
+    .line 336
+    if-ne v14, v4, :cond_e
 
-    .line 356
-    if-eqz v3, :cond_f
+    .line 338
+    if-eqz v3, :cond_d
 
-    .line 358
+    .line 340
     goto :goto_6
 
-    .line 360
-    :cond_f
+    .line 342
+    :cond_d
     const/4 v3, 0x0
 
-    .line 361
+    .line 343
     goto :goto_7
 
-    .line 362
-    :cond_10
+    .line 344
+    :cond_e
     :goto_6
     const/4 v3, 0x1
 
-    .line 363
+    .line 345
     :goto_7
     iput-object v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mClipboardModel:Lcom/android/systemui/clipboardoverlay/ClipboardModel;
 
-    .line 364
+    .line 346
     iget-object v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mClipboardLogger:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;
 
-    .line 366
+    .line 348
     iput-object v2, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;->mClipSource:Ljava/lang/String;
 
-    .line 368
+    .line 350
     sget-object v2, Lcom/android/systemui/flags/Flags;->NULL_FLAG:Lcom/android/systemui/flags/UnreleasedFlag;
 
-    .line 370
+    .line 352
     iget-object v2, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mFeatureFlags:Lcom/android/systemui/flags/FeatureFlags;
 
-    .line 372
+    .line 354
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 374
+    .line 356
     const/4 v2, 0x2
 
-    .line 377
+    .line 359
     const/4 v4, 0x0
 
-    .line 378
+    .line 360
     iget-object v5, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mTimeoutHandler:Lcom/android/systemui/screenshot/TimeoutHandler;
 
-    .line 379
-    if-eqz v3, :cond_16
+    .line 361
+    if-eqz v3, :cond_14
 
-    .line 381
-    iput-object v4, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mOnRemoteCopyTapped:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda12;
+    .line 363
+    iput-object v4, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mOnRemoteCopyTapped:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda0;
 
-    .line 383
+    .line 365
     iput-object v4, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mOnShareTapped:Ljava/lang/Runnable;
 
-    .line 385
+    .line 367
     iput-object v4, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mOnPreviewTapped:Ljava/lang/Runnable;
 
-    .line 387
+    .line 369
     iget-object v3, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mView:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;
 
-    .line 389
+    .line 371
     const/4 v6, 0x0
 
-    .line 391
+    .line 373
     invoke-virtual {v3, v6}, Landroid/view/ViewGroup;->setTranslationX(F)V
 
-    .line 392
+    .line 374
     invoke-virtual {v3, v6}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    .line 395
+    .line 377
     iget-object v6, v3, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionContainerBackground:Landroid/view/View;
 
-    .line 398
+    .line 380
     const/16 v7, 0x8
 
-    .line 400
+    .line 382
     invoke-virtual {v6, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 402
+    .line 384
     iget-object v6, v3, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mDismissButton:Landroid/view/View;
 
-    .line 405
+    .line 387
     invoke-virtual {v6, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 407
+    .line 389
     iget-object v6, v3, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mShareChip:Landroid/view/View;
 
-    .line 410
+    .line 392
     invoke-virtual {v6, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 412
+    .line 394
     iget-object v6, v3, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mRemoteCopyChip:Landroid/view/View;
 
-    .line 415
+    .line 397
     invoke-virtual {v6, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 417
+    .line 399
     const/4 v6, 0x0
 
-    .line 420
+    .line 402
     invoke-virtual {v3, v6}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->setEditAccessibilityAction(Z)V
 
-    .line 421
+    .line 403
     iget-object v6, v3, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionChips:Ljava/util/ArrayList;
 
-    .line 424
+    .line 406
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 426
+    .line 408
     move-result-object v6
 
-    .line 429
+    .line 411
     :goto_8
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 430
+    .line 412
     move-result v7
 
-    .line 433
-    if-eqz v7, :cond_11
+    .line 415
+    if-eqz v7, :cond_f
 
-    .line 434
+    .line 416
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 436
+    .line 418
     move-result-object v7
 
-    .line 439
+    .line 421
     check-cast v7, Landroid/view/View;
 
-    .line 440
+    .line 422
     iget-object v8, v3, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionContainer:Landroid/widget/LinearLayout;
 
-    .line 442
+    .line 424
     invoke-virtual {v8, v7}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
-    .line 444
+    .line 426
     goto :goto_8
 
-    .line 447
-    :cond_11
+    .line 429
+    :cond_f
     iget-object v6, v3, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionChips:Ljava/util/ArrayList;
 
-    .line 448
+    .line 430
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 450
+    .line 432
     invoke-virtual {v5, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 453
+    .line 435
     const/4 v6, 0x0
 
-    .line 456
+    .line 438
     iput-boolean v6, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;->mGuarded:Z
 
-    .line 457
+    .line 439
     iput-object v4, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;->mClipSource:Ljava/lang/String;
 
-    .line 459
+    .line 441
     iget-object v6, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mClipboardModel:Lcom/android/systemui/clipboardoverlay/ClipboardModel;
 
-    .line 461
+    .line 443
     iget-object v6, v6, Lcom/android/systemui/clipboardoverlay/ClipboardModel;->source:Ljava/lang/String;
 
-    .line 463
+    .line 445
     iput-object v6, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;->mClipSource:Ljava/lang/String;
 
-    .line 465
+    .line 447
     iget-object v6, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mWindow:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayWindow;
 
-    .line 467
+    .line 449
     iget-object v6, v6, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayWindow;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 469
+    .line 451
     invoke-interface {v6}, Landroid/view/WindowManager;->getCurrentWindowMetrics()Landroid/view/WindowMetrics;
 
-    .line 471
+    .line 453
     move-result-object v6
 
-    .line 474
+    .line 456
     invoke-virtual {v6}, Landroid/view/WindowMetrics;->getWindowInsets()Landroid/view/WindowInsets;
 
-    .line 475
+    .line 457
     move-result-object v6
 
-    .line 478
+    .line 460
     invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
 
-    .line 479
+    .line 461
     move-result v7
 
-    .line 482
+    .line 464
     invoke-virtual {v6, v7}, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
 
-    .line 483
+    .line 465
     move-result-object v6
 
-    .line 486
+    .line 468
     iget v6, v6, Landroid/graphics/Insets;->bottom:I
 
-    .line 487
-    if-lez v6, :cond_12
+    .line 469
+    if-lez v6, :cond_10
 
-    .line 489
+    .line 471
     const/4 v6, 0x1
 
-    .line 491
+    .line 473
     goto :goto_9
 
-    .line 492
-    :cond_12
+    .line 474
+    :cond_10
     const/4 v6, 0x0
 
-    .line 493
+    .line 475
     :goto_9
-    if-eqz v6, :cond_13
+    if-eqz v6, :cond_11
+
+    .line 476
+    sget-object v6, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;->CLIPBOARD_OVERLAY_SHOWN_MINIMIZED:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;
+
+    .line 478
+    iget-object v7, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
+
+    .line 480
+    iget-object v1, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;->mClipSource:Ljava/lang/String;
+
+    .line 482
+    const/4 v8, 0x0
+
+    .line 484
+    invoke-interface {v7, v6, v8, v1}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;ILjava/lang/String;)V
+
+    .line 485
+    const/4 v1, 0x1
+
+    .line 488
+    iput-boolean v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mIsMinimized:Z
+
+    .line 489
+    invoke-virtual {v3, v1}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->setMinimized(Z)V
+
+    .line 491
+    goto :goto_a
 
     .line 494
-    sget-object v6, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;->CLIPBOARD_OVERLAY_SHOWN_MINIMIZED:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;
+    :cond_11
+    const/4 v8, 0x0
+
+    .line 495
+    sget-object v6, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;->CLIPBOARD_OVERLAY_SHOWN_EXPANDED:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;
 
     .line 496
     iget-object v7, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
@@ -955,306 +952,275 @@
     iget-object v1, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;->mClipSource:Ljava/lang/String;
 
     .line 500
-    const/4 v8, 0x0
+    invoke-interface {v7, v6, v8, v1}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;ILjava/lang/String;)V
 
     .line 502
-    invoke-interface {v7, v6, v8, v1}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;ILjava/lang/String;)V
-
-    .line 503
-    const/4 v1, 0x1
-
-    .line 506
-    iput-boolean v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mIsMinimized:Z
-
-    .line 507
-    invoke-virtual {v3, v1}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->setMinimized(Z)V
-
-    .line 509
-    goto :goto_a
-
-    .line 512
-    :cond_13
-    const/4 v8, 0x0
-
-    .line 513
-    sget-object v6, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;->CLIPBOARD_OVERLAY_SHOWN_EXPANDED:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;
-
-    .line 514
-    iget-object v7, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
-
-    .line 516
-    iget-object v1, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$ClipboardLogger;->mClipSource:Ljava/lang/String;
-
-    .line 518
-    invoke-interface {v7, v6, v8, v1}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;ILjava/lang/String;)V
-
-    .line 520
     invoke-virtual {v13}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->setExpandedView$1()V
 
-    .line 523
+    .line 505
     :goto_a
     invoke-virtual {v13}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->animateIn()V
 
-    .line 526
+    .line 508
     iget-object v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mClipboardModel:Lcom/android/systemui/clipboardoverlay/ClipboardModel;
 
-    .line 529
+    .line 511
     iget-object v1, v1, Lcom/android/systemui/clipboardoverlay/ClipboardModel;->type:Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;
 
-    .line 531
+    .line 513
     sget-object v6, Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;->TEXT:Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;
 
-    .line 533
-    if-ne v1, v6, :cond_14
+    .line 515
+    if-ne v1, v6, :cond_12
 
-    .line 535
+    .line 517
     iget-object v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mContext:Landroid/content/Context;
 
-    .line 537
-    const v6, 0x7f140277    # @string/clipboard_text_copied 'Text copied'
+    .line 519
+    const v6, 0x7f130284    # @string/clipboard_text_copied 'Text copied'
 
-    .line 539
+    .line 521
     invoke-virtual {v1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 542
+    .line 524
     move-result-object v1
 
-    .line 545
+    .line 527
     goto :goto_b
 
-    .line 546
-    :cond_14
+    .line 528
+    :cond_12
     sget-object v6, Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;->IMAGE:Lcom/android/systemui/clipboardoverlay/ClipboardModel$Type;
 
-    .line 547
-    if-ne v1, v6, :cond_15
+    .line 529
+    if-ne v1, v6, :cond_13
 
-    .line 549
+    .line 531
     iget-object v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mContext:Landroid/content/Context;
 
-    .line 551
-    const v6, 0x7f140272    # @string/clipboard_image_copied 'Image copied'
+    .line 533
+    const v6, 0x7f13027f    # @string/clipboard_image_copied 'Image copied'
 
-    .line 553
+    .line 535
     invoke-virtual {v1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 556
+    .line 538
     move-result-object v1
 
-    .line 559
+    .line 541
     goto :goto_b
 
-    .line 560
-    :cond_15
+    .line 542
+    :cond_13
     iget-object v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mContext:Landroid/content/Context;
 
-    .line 561
-    const v6, 0x7f14026a    # @string/clipboard_content_copied 'Content copied'
+    .line 543
+    const v6, 0x7f130277    # @string/clipboard_content_copied 'Content copied'
 
-    .line 563
+    .line 545
     invoke-virtual {v1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 566
+    .line 548
     move-result-object v1
 
-    .line 569
+    .line 551
     :goto_b
     invoke-virtual {v3, v1}, Landroid/view/ViewGroup;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    .line 570
+    .line 552
     goto :goto_c
 
-    .line 573
-    :cond_16
+    .line 555
+    :cond_14
     iget-boolean v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mIsMinimized:Z
 
-    .line 574
-    if-nez v1, :cond_17
+    .line 556
+    if-nez v1, :cond_15
 
-    .line 576
+    .line 558
     invoke-virtual {v13}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->setExpandedView$1()V
 
-    .line 578
-    :cond_17
+    .line 560
+    :cond_15
     :goto_c
     iget-object v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mClipboardModel:Lcom/android/systemui/clipboardoverlay/ClipboardModel;
 
-    .line 581
+    .line 563
     iget-boolean v1, v1, Lcom/android/systemui/clipboardoverlay/ClipboardModel;->isRemote:Z
 
-    .line 583
-    if-eqz v1, :cond_18
+    .line 565
+    if-eqz v1, :cond_16
 
-    .line 585
+    .line 567
     invoke-virtual {v5, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 587
-    iput-object v4, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mOnUiUpdate:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda4;
+    .line 569
+    iput-object v4, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mOnUiUpdate:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda6;
 
-    .line 590
+    .line 572
     goto :goto_d
 
-    .line 592
-    :cond_18
+    .line 574
+    :cond_16
     invoke-static {v5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 593
-    new-instance v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda4;
+    .line 575
+    new-instance v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda6;
 
-    .line 596
+    .line 578
     const/4 v2, 0x0
 
-    .line 598
-    invoke-direct {v1, v2, v5}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda4;-><init>(ILjava/lang/Object;)V
+    .line 580
+    invoke-direct {v1, v2, v5}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda6;-><init>(ILjava/lang/Object;)V
 
-    .line 599
-    iput-object v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mOnUiUpdate:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda4;
+    .line 581
+    iput-object v1, v13, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mOnUiUpdate:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda6;
 
-    .line 602
-    invoke-virtual {v1}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda4;->run()V
+    .line 584
+    invoke-virtual {v1}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda6;->run()V
 
-    .line 604
+    .line 586
     :goto_d
     iget-object v1, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mClipboardOverlay:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;
 
-    .line 607
+    .line 589
     new-instance v2, Lcom/android/systemui/clipboardoverlay/ClipboardListener$$ExternalSyntheticLambda0;
 
-    .line 609
+    .line 591
     invoke-direct {v2, v0}, Lcom/android/systemui/clipboardoverlay/ClipboardListener$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/clipboardoverlay/ClipboardListener;)V
 
-    .line 611
+    .line 593
     iput-object v2, v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController;->mOnSessionCompleteListener:Ljava/lang/Runnable;
 
-    .line 614
+    .line 596
     return-void
 
-    .line 616
-    :cond_19
+    .line 598
+    :cond_17
     :goto_e
-    if-nez v4, :cond_1a
+    if-nez v4, :cond_18
 
-    .line 617
+    .line 599
     const/4 v12, 0x0
 
-    .line 619
+    .line 601
     goto :goto_10
 
-    .line 620
-    :cond_1a
+    .line 602
+    :cond_18
     invoke-virtual {v4}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
-    .line 621
+    .line 603
     move-result-object v1
 
-    .line 624
+    .line 606
     invoke-virtual {v1}, Landroid/content/ClipDescription;->getClassificationStatus()I
 
-    .line 625
+    .line 607
     move-result v1
 
-    .line 628
+    .line 610
     const/4 v3, 0x3
 
-    .line 629
-    if-ne v1, v3, :cond_1c
+    .line 611
+    if-ne v1, v3, :cond_1a
 
-    .line 630
+    .line 612
     iget-object v1, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mClipboardToast:Lcom/android/systemui/clipboardoverlay/ClipboardToast;
 
-    .line 632
+    .line 614
     iget-object v1, v1, Lcom/android/systemui/clipboardoverlay/ClipboardToast;->mCopiedToast:Landroid/widget/Toast;
 
-    .line 634
-    if-eqz v1, :cond_1b
+    .line 616
+    if-eqz v1, :cond_19
 
-    .line 636
+    .line 618
     const/4 v1, 0x1
 
-    .line 638
+    .line 620
     const/4 v6, 0x1
 
-    .line 639
+    .line 621
     goto :goto_f
 
-    .line 640
-    :cond_1b
+    .line 622
+    :cond_19
     const/4 v1, 0x1
 
-    .line 641
+    .line 623
     const/4 v6, 0x0
 
-    .line 642
+    .line 624
     :goto_f
     xor-int/lit8 v12, v6, 0x1
 
-    .line 643
+    .line 625
     goto :goto_10
 
-    .line 645
-    :cond_1c
+    .line 627
+    :cond_1a
     const/4 v1, 0x1
 
-    .line 646
+    .line 628
     move v12, v1
 
-    .line 647
+    .line 629
     :goto_10
-    if-eqz v12, :cond_1e
+    if-eqz v12, :cond_1c
 
-    .line 648
+    .line 630
     iget-object v1, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
-    .line 650
+    .line 632
     sget-object v3, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;->CLIPBOARD_TOAST_SHOWN:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayEvent;
 
-    .line 652
+    .line 634
     const/4 v4, 0x0
 
-    .line 654
+    .line 636
     invoke-interface {v1, v3, v4, v2}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;ILjava/lang/String;)V
 
-    .line 655
+    .line 637
     iget-object v0, v0, Lcom/android/systemui/clipboardoverlay/ClipboardListener;->mClipboardToast:Lcom/android/systemui/clipboardoverlay/ClipboardToast;
 
-    .line 658
+    .line 640
     iget-object v1, v0, Lcom/android/systemui/clipboardoverlay/ClipboardToast;->mCopiedToast:Landroid/widget/Toast;
 
-    .line 660
-    if-eqz v1, :cond_1d
+    .line 642
+    if-eqz v1, :cond_1b
 
-    .line 662
+    .line 644
     invoke-virtual {v1}, Landroid/widget/Toast;->cancel()V
 
-    .line 664
-    :cond_1d
+    .line 646
+    :cond_1b
     iget-object v1, v0, Lcom/android/systemui/clipboardoverlay/ClipboardToast;->mContext:Landroid/content/Context;
 
-    .line 667
-    const v2, 0x7f140274    # @string/clipboard_overlay_text_copied 'Copied'
+    .line 649
+    const v2, 0x7f130281    # @string/clipboard_overlay_text_copied 'Copied'
 
-    .line 669
+    .line 651
     invoke-static {v1, v2, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
-    .line 672
+    .line 654
     move-result-object v1
 
-    .line 675
+    .line 657
     iput-object v1, v0, Lcom/android/systemui/clipboardoverlay/ClipboardToast;->mCopiedToast:Landroid/widget/Toast;
 
-    .line 676
+    .line 658
     invoke-virtual {v1, v0}, Landroid/widget/Toast;->addCallback(Landroid/widget/Toast$Callback;)V
 
-    .line 678
+    .line 660
     iget-object v0, v0, Lcom/android/systemui/clipboardoverlay/ClipboardToast;->mCopiedToast:Landroid/widget/Toast;
 
-    .line 681
+    .line 663
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 683
-    :cond_1e
+    .line 665
+    :cond_1c
     return-void
-    .line 686
+    .line 668
 .end method
 
 .method public final start()V

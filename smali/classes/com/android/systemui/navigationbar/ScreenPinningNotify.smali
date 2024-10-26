@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/navigationbar/ScreenPinningNotify;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -108,7 +108,7 @@
     if-eqz p1, :cond_2
 
     .line 31
-    const p1, 0x7f14084d    # @string/screen_pinning_toast_gesture_nav 'To unpin this app, swipe up & hold'
+    const p1, 0x7f1308b5    # @string/screen_pinning_toast_gesture_nav 'To unpin this app, swipe up & hold'
 
     .line 33
     goto :goto_0
@@ -118,14 +118,14 @@
     if-eqz p2, :cond_3
 
     .line 37
-    const p1, 0x7f14084c    # @string/screen_pinning_toast 'To unpin this app, touch & hold Back and Overview buttons'
+    const p1, 0x7f1308b4    # @string/screen_pinning_toast 'To unpin this app, touch & hold Back and Overview buttons'
 
     .line 39
     goto :goto_0
 
     .line 42
     :cond_3
-    const p1, 0x7f14084e    # @string/screen_pinning_toast_recents_invisible 'To unpin this app, touch & hold Back and Home buttons'
+    const p1, 0x7f1308b6    # @string/screen_pinning_toast_recents_invisible 'To unpin this app, touch & hold Back and Home buttons'
 
     .line 43
     :goto_0

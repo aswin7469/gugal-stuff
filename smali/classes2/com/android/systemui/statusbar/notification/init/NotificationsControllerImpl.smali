@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/init/NotificationsController;
@@ -98,598 +98,707 @@
 
 # virtual methods
 .method public final getActiveNotificationsCount()I
-    .locals 1
+    .locals 0
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsLiveDataStoreRefactor()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    xor-int/lit8 v0, v0, 0x1
-
-    .line 6
-    if-eqz v0, :cond_0
-
-    .line 8
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notifLiveDataStore:Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;
 
-    .line 10
+    .line 2
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;->activeNotifCount:Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataImpl;
 
-    .line 12
+    .line 4
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataImpl;->atomicValue:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 14
+    .line 6
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    .line 16
+    .line 8
     move-result-object p0
 
-    .line 19
+    .line 11
     check-cast p0, Ljava/lang/Number;
 
-    .line 20
+    .line 12
     invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
 
-    .line 22
+    .line 14
     move-result p0
 
-    .line 25
+    .line 17
     return p0
-
-    .line 26
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    .line 27
-    const-string v0, "Legacy code path not supported when com.android.systemui.notifications_live_data_store_refactor is enabled."
-
-    .line 29
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 31
-    move-result-object v0
-
-    .line 34
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    .line 35
-    throw p0
-    .line 38
+    .line 18
 .end method
 
-.method public final initialize(Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;)V
-    .locals 8
+.method public final initialize(Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;)V
+    .locals 18
 
     .line 1
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notificationListener:Lcom/android/systemui/statusbar/NotificationListener;
+    move-object/from16 v0, p0
 
     .line 2
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/NotificationListener;->registerAsSystemService()V
+    move-object/from16 v1, p1
 
     .line 4
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notifPipeline:Ldagger/Lazy;
+    move-object/from16 v11, p2
 
-    .line 7
-    invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    .line 6
+    iget-object v12, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notificationListener:Lcom/android/systemui/statusbar/NotificationListener;
 
-    .line 9
-    move-result-object v2
+    .line 8
+    invoke-virtual {v12}, Lcom/android/systemui/statusbar/NotificationListener;->registerAsSystemService()V
 
-    .line 12
-    check-cast v2, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
+    .line 10
+    iget-object v13, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notifPipeline:Ldagger/Lazy;
 
     .line 13
-    new-instance v3, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl$initialize$1;
+    invoke-interface {v13}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
     .line 15
-    invoke-direct {v3, p2}, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl$initialize$1;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;)V
+    move-result-object v2
 
-    .line 17
-    invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->addCollectionListener(Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionListener;)V
-
-    .line 20
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->bubblesOptional:Ljava/util/Optional;
-
-    .line 23
-    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->clickerBuilder:Lcom/android/systemui/statusbar/notification/NotificationClicker$Builder;
-
-    .line 25
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 27
-    new-instance v4, Lcom/android/systemui/statusbar/notification/NotificationClicker;
-
-    .line 30
-    iget-object v5, v3, Lcom/android/systemui/statusbar/notification/NotificationClicker$Builder;->mLogger:Lcom/android/systemui/statusbar/notification/NotificationClickerLogger;
-
-    .line 32
-    iget-object v3, v3, Lcom/android/systemui/statusbar/notification/NotificationClicker$Builder;->mPowerInteractor:Lcom/android/systemui/power/domain/interactor/PowerInteractor;
-
-    .line 34
-    invoke-direct {v4, v5, v3, v2, p4}, Lcom/android/systemui/statusbar/notification/NotificationClicker;-><init>(Lcom/android/systemui/statusbar/notification/NotificationClickerLogger;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Ljava/util/Optional;Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;)V
-
-    .line 36
-    iget-object p4, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notificationRowBinder:Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;
-
-    .line 39
-    iput-object v4, p4, Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;->mNotificationClicker:Lcom/android/systemui/statusbar/notification/NotificationClicker;
-
-    .line 41
-    iput-object p1, p4, Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;->mPresenter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
-
-    .line 43
-    iput-object p2, p4, Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;->mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
-
-    .line 45
-    iget-object v2, p4, Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;->mIconManager:Lcom/android/systemui/statusbar/notification/icon/IconManager;
-
-    .line 47
-    iget-object v3, v2, Lcom/android/systemui/statusbar/notification/icon/IconManager;->entryListener:Lcom/android/systemui/statusbar/notification/icon/IconManager$entryListener$1;
-
-    .line 49
-    iget-object v2, v2, Lcom/android/systemui/statusbar/notification/icon/IconManager;->notifCollection:Lcom/android/systemui/statusbar/notification/collection/notifcollection/CommonNotifCollection;
-
-    .line 51
+    .line 18
     check-cast v2, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
 
-    .line 53
+    .line 19
+    new-instance v3, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl$initialize$1;
+
+    .line 21
+    invoke-direct {v3, v11}, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl$initialize$1;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;)V
+
+    .line 23
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->addCollectionListener(Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionListener;)V
 
+    .line 26
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->bubblesOptional:Ljava/util/Optional;
+
+    .line 29
+    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->clickerBuilder:Lcom/android/systemui/statusbar/notification/NotificationClicker$Builder;
+
+    .line 31
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 33
+    new-instance v4, Lcom/android/systemui/statusbar/notification/NotificationClicker;
+
+    .line 36
+    iget-object v5, v3, Lcom/android/systemui/statusbar/notification/NotificationClicker$Builder;->mLogger:Lcom/android/systemui/statusbar/notification/NotificationClickerLogger;
+
+    .line 38
+    iget-object v3, v3, Lcom/android/systemui/statusbar/notification/NotificationClicker$Builder;->mPowerInteractor:Lcom/android/systemui/power/domain/interactor/PowerInteractor;
+
+    .line 40
+    move-object/from16 v6, p4
+
+    .line 42
+    invoke-direct {v4, v5, v3, v2, v6}, Lcom/android/systemui/statusbar/notification/NotificationClicker;-><init>(Lcom/android/systemui/statusbar/notification/NotificationClickerLogger;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Ljava/util/Optional;Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;)V
+
+    .line 44
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notificationRowBinder:Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;
+
+    .line 47
+    iput-object v4, v2, Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;->mNotificationClicker:Lcom/android/systemui/statusbar/notification/NotificationClicker;
+
+    .line 49
+    iput-object v1, v2, Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;->mPresenter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
+
+    .line 51
+    iput-object v11, v2, Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;->mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
+
+    .line 53
+    iget-object v3, v2, Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;->mIconManager:Lcom/android/systemui/statusbar/notification/icon/IconManager;
+
     .line 55
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->headsUpViewBinder:Lcom/android/systemui/statusbar/notification/interruption/HeadsUpViewBinder;
+    iget-object v4, v3, Lcom/android/systemui/statusbar/notification/icon/IconManager;->entryListener:Lcom/android/systemui/statusbar/notification/icon/IconManager$entryListener$1;
 
-    .line 58
-    iput-object p1, v2, Lcom/android/systemui/statusbar/notification/interruption/HeadsUpViewBinder;->mNotificationPresenter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
+    .line 57
+    iget-object v3, v3, Lcom/android/systemui/statusbar/notification/icon/IconManager;->notifCollection:Lcom/android/systemui/statusbar/notification/collection/notifcollection/CommonNotifCollection;
 
-    .line 60
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notifBindPipelineInitializer:Lcom/android/systemui/statusbar/notification/row/NotifBindPipelineInitializer;
+    .line 59
+    check-cast v3, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
 
-    .line 62
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/NotifBindPipelineInitializer;->initialize()V
+    .line 61
+    invoke-virtual {v3, v4}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->addCollectionListener(Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionListener;)V
 
-    .line 64
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->animatedImageNotificationManager:Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;
+    .line 63
+    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->headsUpViewBinder:Lcom/android/systemui/statusbar/notification/interruption/HeadsUpViewBinder;
 
-    .line 67
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 66
+    iput-object v1, v3, Lcom/android/systemui/statusbar/notification/interruption/HeadsUpViewBinder;->mNotificationPresenter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
-    .line 69
-    new-instance v2, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$1;
+    .line 68
+    iget-object v1, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notifBindPipelineInitializer:Lcom/android/systemui/statusbar/notification/row/NotifBindPipelineInitializer;
+
+    .line 70
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/row/NotifBindPipelineInitializer;->initialize()V
 
     .line 72
-    invoke-direct {v2, p1}, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$1;-><init>(Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;)V
+    iget-object v1, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->animatedImageNotificationManager:Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;
 
-    .line 74
-    iget-object v3, p1, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;->headsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
+    .line 75
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 77
-    check-cast v3, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;
+    new-instance v3, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$1;
 
-    .line 79
-    invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->addListener(Lcom/android/systemui/statusbar/policy/OnHeadsUpChangedListener;)V
+    .line 80
+    invoke-direct {v3, v1}, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$1;-><init>(Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;)V
 
-    .line 81
-    new-instance v2, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$2;
+    .line 82
+    iget-object v4, v1, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;->headsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
 
-    .line 84
-    invoke-direct {v2, p1}, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$2;-><init>(Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;)V
+    .line 85
+    check-cast v4, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;
 
-    .line 86
-    iget-object v3, p1, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+    .line 87
+    invoke-virtual {v4, v3}, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->addListener(Lcom/android/systemui/statusbar/policy/OnHeadsUpChangedListener;)V
 
     .line 89
-    invoke-interface {v3, v2}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->addCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
+    new-instance v3, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$2;
 
-    .line 91
-    new-instance v2, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$3;
+    .line 92
+    invoke-direct {v3, v1}, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$2;-><init>(Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;)V
 
     .line 94
-    invoke-direct {v2, p1}, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$3;-><init>(Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;)V
+    iget-object v4, v1, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
-    .line 96
-    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;->bindEventManager:Lcom/android/systemui/statusbar/notification/collection/inflation/BindEventManagerImpl;
+    .line 97
+    invoke-interface {v4, v3}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->addCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
 
     .line 99
-    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/collection/inflation/BindEventManagerImpl;->listeners:Lcom/android/systemui/util/ListenerSet;
+    new-instance v3, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$3;
 
-    .line 101
-    iget-object p1, p1, Lcom/android/systemui/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
+    .line 102
+    invoke-direct {v3, v1}, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager$bind$3;-><init>(Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;)V
 
-    .line 103
-    invoke-virtual {p1, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->addIfAbsent(Ljava/lang/Object;)Z
+    .line 104
+    iget-object v1, v1, Lcom/android/systemui/statusbar/notification/AnimatedImageNotificationManager;->bindEventManager:Lcom/android/systemui/statusbar/notification/collection/inflation/BindEventManagerImpl;
 
-    .line 105
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notifPipelineInitializer:Ldagger/Lazy;
+    .line 107
+    iget-object v1, v1, Lcom/android/systemui/statusbar/notification/collection/inflation/BindEventManagerImpl;->listeners:Lcom/android/systemui/util/ListenerSet;
 
-    .line 108
-    invoke-interface {p1}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    .line 109
+    iget-object v1, v1, Lcom/android/systemui/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 110
-    move-result-object p1
+    .line 111
+    invoke-virtual {v1, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->addIfAbsent(Ljava/lang/Object;)Z
 
     .line 113
-    check-cast p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;
-
-    .line 114
-    iget-object v2, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mDumpManager:Lcom/android/systemui/dump/DumpManager;
+    iget-object v1, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notifPipelineInitializer:Ldagger/Lazy;
 
     .line 116
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 118
-    const-string v3, "NotifPipeline"
-
-    .line 121
-    invoke-static {v2, v3, p1}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
-
-    .line 123
-    iput-object v0, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mNotificationService:Lcom/android/systemui/statusbar/NotificationListener;
-
-    .line 126
-    iget-object v2, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mNotifInflater:Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;
-
-    .line 128
-    iput-object p4, v2, Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;->mNotificationRowBinder:Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;
-
-    .line 130
-    iget-object p4, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mNotifPluggableCoordinators:Lcom/android/systemui/statusbar/notification/collection/coordinator/NotifCoordinators;
-
-    .line 132
-    check-cast p4, Lcom/android/systemui/statusbar/notification/collection/coordinator/NotifCoordinatorsImpl;
-
-    .line 134
-    iget-object v2, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mPipelineWrapper:Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
-
-    .line 136
-    invoke-virtual {p4, v2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/NotifCoordinatorsImpl;->attach(Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;)V
-
-    .line 138
-    iget-object p4, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mShadeViewManagerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$1;
-
-    .line 141
-    invoke-virtual {p4, p2, p3}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$1;->create(Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;Lcom/android/systemui/statusbar/notification/collection/render/NotifStackController;)Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager;
-
-    .line 143
-    move-result-object p3
-
-    .line 146
-    iput-object p3, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mShadeViewManager:Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager;
-
-    .line 147
-    iget-object p3, p3, Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager;->viewRenderer:Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager$viewRenderer$1;
-
-    .line 149
-    iget-object p4, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mRenderStageManager:Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager;
-
-    .line 151
-    iput-object p3, p4, Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager;->viewRenderer:Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager$viewRenderer$1;
-
-    .line 153
-    new-instance p3, Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager$attach$1;
-
-    .line 155
-    invoke-direct {p3, p4}, Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager$attach$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager;)V
-
-    .line 157
-    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
-
-    .line 160
-    iget-object p4, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mListBuilder:Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;
-
-    .line 163
-    iget-object v2, p4, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mPipelineState:Lcom/android/systemui/statusbar/notification/collection/listbuilder/PipelineState;
-
-    .line 165
-    invoke-virtual {v2}, Lcom/android/systemui/statusbar/notification/collection/listbuilder/PipelineState;->requireState()V
-
-    .line 167
-    iput-object p3, p4, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mOnRenderListListener:Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager$attach$1;
-
-    .line 170
-    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
-
-    .line 172
-    iget-object p3, p4, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mDumpManager:Lcom/android/systemui/dump/DumpManager;
-
-    .line 175
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 177
-    const-string v2, "ShadeListBuilder"
-
-    .line 180
-    invoke-static {p3, v2, p4}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
-
-    .line 182
-    iget-object p3, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mNotifCollection:Lcom/android/systemui/statusbar/notification/collection/NotifCollection;
-
-    .line 185
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 187
-    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
-
-    .line 190
-    iget-object v2, p3, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mNotifCollectionListeners:Lcom/android/systemui/util/NamedListenerSet;
-
-    .line 193
-    iget-object v4, v2, Lcom/android/systemui/util/NamedListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    .line 195
-    new-instance v5, Lcom/android/systemui/util/NamedListenerSet$NamedListener;
-
-    .line 197
-    iget-object v6, p4, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mInteractionTracker:Lcom/android/systemui/statusbar/NotificationInteractionTracker;
-
-    .line 199
-    invoke-direct {v5, v2, v6}, Lcom/android/systemui/util/NamedListenerSet$NamedListener;-><init>(Lcom/android/systemui/util/NamedListenerSet;Ljava/lang/Object;)V
-
-    .line 201
-    invoke-virtual {v4, v5}, Ljava/util/concurrent/CopyOnWriteArrayList;->addIfAbsent(Ljava/lang/Object;)Z
-
-    .line 204
-    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
-
-    .line 207
-    iget-object v2, p4, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mReadyForBuildListener:Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$1;
-
-    .line 210
-    iput-object v2, p3, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mBuildListener:Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$1;
-
-    .line 212
-    new-instance v2, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$$ExternalSyntheticLambda6;
-
-    .line 214
-    invoke-direct {v2, p4}, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;)V
-
-    .line 216
-    iget-object p4, p4, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mChoreographer:Lcom/android/systemui/statusbar/notification/collection/NotifPipelineChoreographerImpl;
-
-    .line 219
-    iget-object p4, p4, Lcom/android/systemui/statusbar/notification/collection/NotifPipelineChoreographerImpl;->listeners:Lcom/android/systemui/util/ListenerSet;
-
-    .line 221
-    invoke-virtual {p4, v2}, Lcom/android/systemui/util/ListenerSet;->addIfAbsent(Ljava/lang/Object;)Z
-
-    .line 223
-    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
-
-    .line 226
-    iget-boolean p4, p3, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mAttached:Z
-
-    .line 229
-    const-string v2, "attach() called twice"
-
-    .line 231
-    if-nez p4, :cond_4
-
-    .line 233
-    const/4 p4, 0x1
-
-    .line 235
-    iput-boolean p4, p3, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mAttached:Z
-
-    .line 236
-    iget-object v4, p3, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mDumpManager:Lcom/android/systemui/dump/DumpManager;
-
-    .line 238
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 240
-    const-string v5, "NotifCollection"
-
-    .line 243
-    invoke-static {v4, v5, p3}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
-
-    .line 245
-    iget-object v4, p3, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mNotifHandler:Lcom/android/systemui/statusbar/notification/collection/NotifCollection$1;
-
-    .line 248
-    iget-object v5, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mGroupCoalescer:Lcom/android/systemui/statusbar/notification/collection/coalescer/GroupCoalescer;
-
-    .line 250
-    iput-object v4, v5, Lcom/android/systemui/statusbar/notification/collection/coalescer/GroupCoalescer;->mHandler:Lcom/android/systemui/statusbar/notification/collection/NotifCollection$1;
-
-    .line 252
-    iget-object v4, p3, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mNotificationSet:Ljava/util/Map;
-
-    .line 254
-    invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 256
-    new-instance v6, Lcom/android/systemui/statusbar/notification/collection/NotifCollection$$ExternalSyntheticLambda4;
-
-    .line 259
-    const/4 v7, 0x0
-
-    .line 261
-    invoke-direct {v6, v7, v4}, Lcom/android/systemui/statusbar/notification/collection/NotifCollection$$ExternalSyntheticLambda4;-><init>(ILjava/lang/Object;)V
-
-    .line 262
-    new-instance v4, Lcom/android/systemui/statusbar/notification/collection/NotifCollection$$ExternalSyntheticLambda4;
-
-    .line 265
-    const/4 v7, 0x1
-
-    .line 267
-    invoke-direct {v4, v7, v5}, Lcom/android/systemui/statusbar/notification/collection/NotifCollection$$ExternalSyntheticLambda4;-><init>(ILjava/lang/Object;)V
-
-    .line 268
-    iget-object p3, p3, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mInconsistencyTracker:Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionInconsistencyTracker;
-
-    .line 271
-    iget-boolean v7, p3, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionInconsistencyTracker;->attached:Z
-
-    .line 273
-    if-nez v7, :cond_3
-
-    .line 275
-    iput-boolean p4, p3, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionInconsistencyTracker;->attached:Z
-
-    .line 277
-    iput-object v6, p3, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionInconsistencyTracker;->collectedKeySetAccessor:Lkotlin/jvm/functions/Function0;
-
-    .line 279
-    iput-object v4, p3, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionInconsistencyTracker;->coalescedKeySetAccessor:Lkotlin/jvm/functions/Function0;
-
-    .line 281
-    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mNotificationService:Lcom/android/systemui/statusbar/NotificationListener;
-
-    .line 283
-    iget-object p3, p1, Lcom/android/systemui/statusbar/NotificationListener;->mNotificationHandlers:Ljava/util/List;
-
-    .line 285
-    iget-object p4, v5, Lcom/android/systemui/statusbar/notification/collection/coalescer/GroupCoalescer;->mListener:Lcom/android/systemui/statusbar/notification/collection/coalescer/GroupCoalescer$1;
-
-    .line 287
-    invoke-interface {p3, p4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    .line 289
-    move-result p3
-
-    .line 292
-    const-string v2, "Listener is already added"
-
-    .line 293
-    if-nez p3, :cond_2
-
-    .line 295
-    iget-object p1, p1, Lcom/android/systemui/statusbar/NotificationListener;->mNotificationHandlers:Ljava/util/List;
-
-    .line 297
-    invoke-interface {p1, p4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 299
-    const-string p1, "Notif pipeline initialized. rendering=true"
-
-    .line 302
-    invoke-static {v3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 304
     invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 307
-    move-result-object p1
+    .line 118
+    move-result-object v1
 
-    .line 310
-    check-cast p1, Lcom/android/systemui/statusbar/notification/collection/notifcollection/CommonNotifCollection;
+    .line 121
+    move-object v14, v1
+
+    .line 122
+    check-cast v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;
+
+    .line 123
+    iget-object v1, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mDumpManager:Lcom/android/systemui/dump/DumpManager;
+
+    .line 125
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 127
+    const-string v15, "NotifPipeline"
+
+    .line 130
+    invoke-static {v1, v15, v14}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
+
+    .line 132
+    iput-object v12, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mNotificationService:Lcom/android/systemui/statusbar/NotificationListener;
+
+    .line 135
+    iget-object v1, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mNotifInflater:Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;
+
+    .line 137
+    iput-object v2, v1, Lcom/android/systemui/statusbar/notification/collection/NotifInflaterImpl;->mNotificationRowBinder:Lcom/android/systemui/statusbar/notification/collection/inflation/NotificationRowBinderImpl;
+
+    .line 139
+    iget-object v1, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mNotifPluggableCoordinators:Lcom/android/systemui/statusbar/notification/collection/coordinator/NotifCoordinatorsImpl;
+
+    .line 141
+    iget-object v2, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mPipelineWrapper:Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
+
+    .line 143
+    invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/NotifCoordinatorsImpl;->attach(Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;)V
+
+    .line 145
+    new-instance v10, Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager;
+
+    .line 148
+    iget-object v1, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mShadeViewManagerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$17;
+
+    .line 150
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$17;->this$0:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;
+
+    .line 152
+    iget-object v2, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
+
+    .line 154
+    iget-object v2, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->context:Landroid/content/Context;
+
+    .line 156
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->wMComponentImpl:Ljava/lang/Object;
+
+    .line 158
+    check-cast v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
+
+    .line 160
+    iget-object v3, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->mediaContainerControllerProvider:Ldagger/internal/Provider;
+
+    .line 162
+    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 164
+    move-result-object v3
+
+    .line 167
+    move-object v5, v3
+
+    .line 168
+    check-cast v5, Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;
+
+    .line 169
+    iget-object v3, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->notificationSectionsFeatureManagerProvider:Ldagger/internal/Provider;
+
+    .line 171
+    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 173
+    move-result-object v3
+
+    .line 176
+    move-object v6, v3
+
+    .line 177
+    check-cast v6, Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;
+
+    .line 178
+    iget-object v3, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->sectionHeaderVisibilityProvider:Ldagger/internal/Provider;
+
+    .line 180
+    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 182
+    move-result-object v3
+
+    .line 185
+    move-object v7, v3
+
+    .line 186
+    check-cast v7, Lcom/android/systemui/statusbar/notification/collection/provider/SectionHeaderVisibilityProvider;
+
+    .line 187
+    new-instance v8, Lcom/android/systemui/statusbar/notification/collection/render/NodeSpecBuilderLogger;
+
+    .line 189
+    invoke-virtual {v1}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->notifPipelineFlags()Lcom/android/systemui/statusbar/notification/NotifPipelineFlags;
+
+    .line 191
+    move-result-object v3
+
+    .line 194
+    iget-object v4, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->provideNotificationsLogBufferProvider:Ldagger/internal/Provider;
+
+    .line 195
+    invoke-interface {v4}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 197
+    move-result-object v4
+
+    .line 200
+    check-cast v4, Lcom/android/systemui/log/LogBuffer;
+
+    .line 201
+    invoke-direct {v8, v3}, Lcom/android/systemui/statusbar/notification/collection/render/NodeSpecBuilderLogger;-><init>(Lcom/android/systemui/statusbar/notification/NotifPipelineFlags;)V
+
+    .line 203
+    new-instance v9, Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewDifferLogger;
+
+    .line 206
+    iget-object v3, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->provideNotificationsLogBufferProvider:Ldagger/internal/Provider;
+
+    .line 208
+    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 210
+    move-result-object v3
+
+    .line 213
+    check-cast v3, Lcom/android/systemui/log/LogBuffer;
+
+    .line 214
+    invoke-direct {v9, v3}, Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewDifferLogger;-><init>(Lcom/android/systemui/log/LogBuffer;)V
+
+    .line 216
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->notifViewBarnProvider:Ldagger/internal/Provider;
+
+    .line 219
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 221
+    move-result-object v1
+
+    .line 224
+    move-object/from16 v16, v1
+
+    .line 225
+    check-cast v16, Lcom/android/systemui/statusbar/notification/collection/render/NotifViewBarn;
+
+    .line 227
+    move-object v1, v10
+
+    .line 229
+    move-object/from16 v3, p2
+
+    .line 230
+    move-object/from16 v4, p3
+
+    .line 232
+    move-object/from16 v17, v12
+
+    .line 234
+    move-object v12, v10
+
+    .line 236
+    move-object/from16 v10, v16
+
+    .line 237
+    invoke-direct/range {v1 .. v10}, Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager;-><init>(Landroid/content/Context;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;Lcom/android/systemui/statusbar/notification/collection/provider/SectionHeaderVisibilityProvider;Lcom/android/systemui/statusbar/notification/collection/render/NodeSpecBuilderLogger;Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewDifferLogger;Lcom/android/systemui/statusbar/notification/collection/render/NotifViewBarn;)V
+
+    .line 239
+    iput-object v12, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mShadeViewManager:Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager;
+
+    .line 242
+    iget-object v1, v12, Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager;->viewRenderer:Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager$viewRenderer$1;
+
+    .line 244
+    iget-object v2, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mRenderStageManager:Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager;
+
+    .line 246
+    iput-object v1, v2, Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager;->viewRenderer:Lcom/android/systemui/statusbar/notification/collection/render/ShadeViewManager$viewRenderer$1;
+
+    .line 248
+    new-instance v1, Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager$attach$1;
+
+    .line 250
+    invoke-direct {v1, v2}, Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager$attach$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager;)V
+
+    .line 252
+    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
+
+    .line 255
+    iget-object v2, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mListBuilder:Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;
+
+    .line 258
+    iget-object v3, v2, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mPipelineState:Lcom/android/systemui/statusbar/notification/collection/listbuilder/PipelineState;
+
+    .line 260
+    invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/collection/listbuilder/PipelineState;->requireState()V
+
+    .line 262
+    iput-object v1, v2, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mOnRenderListListener:Lcom/android/systemui/statusbar/notification/collection/render/RenderStageManager$attach$1;
+
+    .line 265
+    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
+
+    .line 267
+    iget-object v1, v2, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mDumpManager:Lcom/android/systemui/dump/DumpManager;
+
+    .line 270
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 272
+    const-string v3, "ShadeListBuilder"
+
+    .line 275
+    invoke-static {v1, v3, v2}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
+
+    .line 277
+    iget-object v1, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mNotifCollection:Lcom/android/systemui/statusbar/notification/collection/NotifCollection;
+
+    .line 280
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 282
+    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
+
+    .line 285
+    iget-object v3, v1, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mNotifCollectionListeners:Lcom/android/systemui/util/NamedListenerSet;
+
+    .line 288
+    iget-object v4, v3, Lcom/android/systemui/util/NamedListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 290
+    new-instance v5, Lcom/android/systemui/util/NamedListenerSet$NamedListener;
+
+    .line 292
+    iget-object v6, v2, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mInteractionTracker:Lcom/android/systemui/statusbar/NotificationInteractionTracker;
+
+    .line 294
+    invoke-direct {v5, v3, v6}, Lcom/android/systemui/util/NamedListenerSet$NamedListener;-><init>(Lcom/android/systemui/util/NamedListenerSet;Ljava/lang/Object;)V
+
+    .line 296
+    invoke-virtual {v4, v5}, Ljava/util/concurrent/CopyOnWriteArrayList;->addIfAbsent(Ljava/lang/Object;)Z
+
+    .line 299
+    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
+
+    .line 302
+    iget-object v3, v2, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mReadyForBuildListener:Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$1;
+
+    .line 305
+    iput-object v3, v1, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mBuildListener:Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$1;
+
+    .line 307
+    new-instance v3, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$$ExternalSyntheticLambda6;
+
+    .line 309
+    invoke-direct {v3, v2}, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;)V
 
     .line 311
-    iget-object p3, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->targetSdkResolver:Lcom/android/systemui/statusbar/notification/collection/TargetSdkResolver;
+    iget-object v2, v2, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mChoreographer:Lcom/android/systemui/statusbar/notification/collection/NotifPipelineChoreographerImpl;
 
-    .line 313
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 314
+    iget-object v2, v2, Lcom/android/systemui/statusbar/notification/collection/NotifPipelineChoreographerImpl;->listeners:Lcom/android/systemui/util/ListenerSet;
 
-    .line 315
-    new-instance p4, Lcom/android/systemui/statusbar/notification/collection/TargetSdkResolver$initialize$1;
+    .line 316
+    invoke-virtual {v2, v3}, Lcom/android/systemui/util/ListenerSet;->addIfAbsent(Ljava/lang/Object;)Z
 
     .line 318
-    invoke-direct {p4, p3}, Lcom/android/systemui/statusbar/notification/collection/TargetSdkResolver$initialize$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/TargetSdkResolver;)V
+    invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
 
-    .line 320
-    check-cast p1, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
+    .line 321
+    iget-boolean v2, v1, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mAttached:Z
 
-    .line 323
-    invoke-virtual {p1, p4}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->addCollectionListener(Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionListener;)V
+    .line 324
+    const-string v3, "attach() called twice"
 
-    .line 325
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notificationsMediaManager:Lcom/android/systemui/statusbar/NotificationMediaManager;
+    .line 326
+    if-nez v2, :cond_3
 
     .line 328
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x1
 
     .line 330
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsLiveDataStoreRefactor()Z
+    iput-boolean v2, v1, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mAttached:Z
+
+    .line 331
+    iget-object v4, v1, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mDumpManager:Lcom/android/systemui/dump/DumpManager;
 
     .line 333
-    move-result p1
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 336
-    if-nez p1, :cond_0
+    .line 335
+    const-string v5, "NotifCollection"
 
-    .line 337
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notificationLoggerOptional:Ljava/util/Optional;
+    .line 338
+    invoke-static {v4, v5, v1}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
 
-    .line 339
-    new-instance p3, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl$initialize$2;
-
-    .line 341
-    invoke-direct {p3, p2}, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl$initialize$2;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;)V
+    .line 340
+    iget-object v4, v1, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mNotifHandler:Lcom/android/systemui/statusbar/notification/collection/NotifCollection$1;
 
     .line 343
-    invoke-virtual {p1, p3}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
+    iget-object v5, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mGroupCoalescer:Lcom/android/systemui/statusbar/notification/collection/coalescer/GroupCoalescer;
 
-    .line 346
-    :cond_0
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->peopleSpaceWidgetManager:Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;
+    .line 345
+    iput-object v4, v5, Lcom/android/systemui/statusbar/notification/collection/coalescer/GroupCoalescer;->mHandler:Lcom/android/systemui/statusbar/notification/collection/NotifCollection$1;
+
+    .line 347
+    iget-object v4, v1, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mNotificationSet:Ljava/util/Map;
 
     .line 349
-    iget-object p0, p0, Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;->mListener:Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager$2;
+    invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 351
-    iget-object p1, v0, Lcom/android/systemui/statusbar/NotificationListener;->mNotificationHandlers:Ljava/util/List;
+    new-instance v6, Lcom/android/systemui/statusbar/notification/collection/NotifCollection$$ExternalSyntheticLambda4;
 
-    .line 353
-    invoke-interface {p1, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    .line 354
+    const/4 v7, 0x0
 
-    .line 355
-    move-result p1
+    .line 356
+    invoke-direct {v6, v7, v4}, Lcom/android/systemui/statusbar/notification/collection/NotifCollection$$ExternalSyntheticLambda4;-><init>(ILjava/lang/Object;)V
 
-    .line 358
-    if-nez p1, :cond_1
+    .line 357
+    new-instance v4, Lcom/android/systemui/statusbar/notification/collection/NotifCollection$$ExternalSyntheticLambda4;
 
-    .line 359
-    iget-object p1, v0, Lcom/android/systemui/statusbar/NotificationListener;->mNotificationHandlers:Ljava/util/List;
+    .line 360
+    const/4 v7, 0x1
 
-    .line 361
-    invoke-interface {p1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 362
+    invoke-direct {v4, v7, v5}, Lcom/android/systemui/statusbar/notification/collection/NotifCollection$$ExternalSyntheticLambda4;-><init>(ILjava/lang/Object;)V
 
     .line 363
-    return-void
+    iget-object v1, v1, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->mInconsistencyTracker:Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionInconsistencyTracker;
 
     .line 366
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iget-boolean v7, v1, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionInconsistencyTracker;->attached:Z
 
-    .line 367
-    invoke-direct {p0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    .line 368
+    if-nez v7, :cond_2
 
-    .line 369
-    throw p0
+    .line 370
+    iput-boolean v2, v1, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionInconsistencyTracker;->attached:Z
 
     .line 372
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iput-object v6, v1, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionInconsistencyTracker;->collectedKeySetAccessor:Lkotlin/jvm/functions/Function0;
 
-    .line 373
-    invoke-direct {p0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    .line 374
+    iput-object v4, v1, Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionInconsistencyTracker;->coalescedKeySetAccessor:Lkotlin/jvm/functions/Function0;
 
-    .line 375
-    throw p0
+    .line 376
+    iget-object v1, v14, Lcom/android/systemui/statusbar/notification/collection/init/NotifPipelineInitializer;->mNotificationService:Lcom/android/systemui/statusbar/NotificationListener;
 
     .line 378
-    :cond_3
-    new-instance p0, Ljava/lang/RuntimeException;
+    iget-object v2, v1, Lcom/android/systemui/statusbar/NotificationListener;->mNotificationHandlers:Ljava/util/List;
 
-    .line 379
-    invoke-direct {p0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    .line 380
+    iget-object v3, v5, Lcom/android/systemui/statusbar/notification/collection/coalescer/GroupCoalescer;->mListener:Lcom/android/systemui/statusbar/notification/collection/coalescer/GroupCoalescer$1;
 
-    .line 381
-    throw p0
+    .line 382
+    invoke-interface {v2, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     .line 384
-    :cond_4
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    .line 385
-    invoke-direct {p0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    move-result v2
 
     .line 387
-    throw p0
+    const-string v4, "Listener is already added"
+
+    .line 388
+    if-nez v2, :cond_1
+
     .line 390
+    iget-object v1, v1, Lcom/android/systemui/statusbar/NotificationListener;->mNotificationHandlers:Ljava/util/List;
+
+    .line 392
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 394
+    const-string v1, "Notif pipeline initialized. rendering=true"
+
+    .line 397
+    invoke-static {v15, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 399
+    invoke-interface {v13}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    .line 402
+    move-result-object v1
+
+    .line 405
+    check-cast v1, Lcom/android/systemui/statusbar/notification/collection/notifcollection/CommonNotifCollection;
+
+    .line 406
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->targetSdkResolver:Lcom/android/systemui/statusbar/notification/collection/TargetSdkResolver;
+
+    .line 408
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 410
+    new-instance v3, Lcom/android/systemui/statusbar/notification/collection/TargetSdkResolver$initialize$1;
+
+    .line 413
+    invoke-direct {v3, v2}, Lcom/android/systemui/statusbar/notification/collection/TargetSdkResolver$initialize$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/TargetSdkResolver;)V
+
+    .line 415
+    check-cast v1, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
+
+    .line 418
+    invoke-virtual {v1, v3}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->addCollectionListener(Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionListener;)V
+
+    .line 420
+    iget-object v1, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notificationsMediaManager:Lcom/android/systemui/statusbar/NotificationMediaManager;
+
+    .line 423
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 425
+    iget-object v1, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->notificationLoggerOptional:Ljava/util/Optional;
+
+    .line 428
+    new-instance v2, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl$initialize$2;
+
+    .line 430
+    invoke-direct {v2, v11}, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl$initialize$2;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;)V
+
+    .line 432
+    invoke-virtual {v1, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
+
+    .line 435
+    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/init/NotificationsControllerImpl;->peopleSpaceWidgetManager:Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;
+
+    .line 438
+    iget-object v0, v0, Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;->mListener:Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager$2;
+
+    .line 440
+    move-object/from16 v1, v17
+
+    .line 442
+    iget-object v2, v1, Lcom/android/systemui/statusbar/NotificationListener;->mNotificationHandlers:Ljava/util/List;
+
+    .line 444
+    invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    .line 446
+    move-result v2
+
+    .line 449
+    if-nez v2, :cond_0
+
+    .line 450
+    iget-object v1, v1, Lcom/android/systemui/statusbar/NotificationListener;->mNotificationHandlers:Ljava/util/List;
+
+    .line 452
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 454
+    return-void
+
+    .line 457
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 458
+    invoke-direct {v0, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 460
+    throw v0
+
+    .line 463
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 464
+    invoke-direct {v0, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 466
+    throw v0
+
+    .line 469
+    :cond_2
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    .line 470
+    invoke-direct {v0, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    .line 472
+    throw v0
+
+    .line 475
+    :cond_3
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    .line 476
+    invoke-direct {v0, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    .line 478
+    throw v0
+    .line 481
 .end method
 
 .method public final resetUserExpandedStates()V

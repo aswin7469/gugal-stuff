@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 .super Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/google/android/material/motion/MaterialBackHandler;
@@ -309,7 +309,7 @@
 
     move-result-object v13
 
-    const v14, 0x7f070739    # @dimen/mtrl_min_touch_target_size '48.0dp'
+    const v14, 0x7f07077b    # @dimen/mtrl_min_touch_target_size '48.0dp'
 
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -350,7 +350,7 @@
 
     const v14, 0x7f0400a2    # @attr/bottomSheetStyle
 
-    const v15, 0x7f1505a6    # @style/Widget.Design.BottomSheet.Modal
+    const v15, 0x7f1405b0    # @style/Widget.Design.BottomSheet.Modal
 
     .line 36
     invoke-static {v1, v2, v14, v15}, Lcom/google/android/material/shape/ShapeAppearanceModel;->builder(Landroid/content/Context;Landroid/util/AttributeSet;II)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
@@ -1837,7 +1837,7 @@
     const-string v0, "Invalid state to get top offset: "
 
     .line 19
-    invoke-static {p1, v0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 21
     move-result-object p1
@@ -2604,7 +2604,7 @@
     move-result-object v2
 
     .line 30
-    const v4, 0x7f07021f    # @dimen/design_bottom_sheet_peek_height_min '64.0dp'
+    const v4, 0x7f070241    # @dimen/design_bottom_sheet_peek_height_min '64.0dp'
 
     .line 31
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -4424,6 +4424,7 @@
     .line 30
     :cond_2
     return-void
+    .line 33
 .end method
 
 .method public final setState$2(I)V
@@ -5025,503 +5026,200 @@
 .end method
 
 .method public final updateAccessibilityActions(Landroid/view/View;I)V
-    .locals 16
+    .locals 4
 
     .line 1
-    move-object/from16 v0, p0
+    if-nez p1, :cond_0
 
     .line 2
-    move-object/from16 v1, p1
+    return-void
 
     .line 4
-    const/4 v2, 0x1
-
-    .line 6
-    if-nez v1, :cond_0
-
-    .line 7
-    return-void
-
-    .line 9
     :cond_0
-    invoke-virtual/range {p0 .. p2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->clearAccessibilityAction(Landroid/view/View;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->clearAccessibilityAction(Landroid/view/View;I)V
+
+    .line 5
+    iget-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->fitToContents:Z
+
+    .line 8
+    const/4 v1, 0x6
 
     .line 10
-    iget-boolean v3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->fitToContents:Z
+    if-nez v0, :cond_1
+
+    .line 11
+    iget v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->state:I
 
     .line 13
-    const/4 v4, 0x0
+    if-eq v0, v1, :cond_1
 
     .line 15
-    const/4 v5, 0x6
-
-    .line 16
-    if-nez v3, :cond_b
+    iget-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->expandHalfwayActionIds:Landroid/util/SparseIntArray;
 
     .line 17
-    iget v3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->state:I
+    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     .line 19
-    if-eq v3, v5, :cond_b
-
-    .line 21
-    iget-object v3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->expandHalfwayActionIds:Landroid/util/SparseIntArray;
-
-    .line 23
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    .line 25
-    move-result-object v6
-
-    .line 28
-    const v7, 0x7f14020d    # @string/bottomsheet_action_expand_halfway 'Expand halfway'
-
-    .line 29
-    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    .line 32
-    move-result-object v11
-
-    .line 35
-    new-instance v12, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
-
-    .line 36
-    invoke-direct {v12, v0, v5}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
-
-    .line 38
-    invoke-static/range {p1 .. p1}, Landroidx/core/view/ViewCompat;->getActionList(Landroid/view/View;)Ljava/util/List;
-
-    .line 41
-    move-result-object v6
-
-    .line 44
-    const/4 v7, 0x0
-
-    .line 45
-    move v8, v7
-
-    .line 46
-    :goto_0
-    invoke-interface {v6}, Ljava/util/List;->size()I
-
-    .line 47
-    move-result v9
-
-    .line 50
-    const/4 v10, -0x1
-
-    .line 51
-    if-ge v8, v9, :cond_2
-
-    .line 52
-    invoke-interface {v6, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 54
-    move-result-object v9
-
-    .line 57
-    check-cast v9, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
-
-    .line 58
-    iget-object v9, v9, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->mAction:Ljava/lang/Object;
-
-    .line 60
-    check-cast v9, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    .line 62
-    invoke-virtual {v9}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getLabel()Ljava/lang/CharSequence;
-
-    .line 64
-    move-result-object v9
-
-    .line 67
-    invoke-static {v11, v9}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    .line 68
-    move-result v9
-
-    .line 71
-    if-eqz v9, :cond_1
-
-    .line 72
-    invoke-interface {v6, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 74
     move-result-object v2
 
-    .line 77
-    check-cast v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+    .line 22
+    const v3, 0x7f130214    # @string/bottomsheet_action_expand_halfway 'Expand halfway'
 
-    .line 78
-    invoke-virtual {v2}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getId()I
+    .line 23
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 80
+    .line 26
+    move-result-object v2
+
+    .line 29
+    new-instance v3, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
+
+    .line 30
+    invoke-direct {v3, p0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
+
+    .line 32
+    invoke-static {p1, v2, v3}, Landroidx/core/view/ViewCompat;->addAccessibilityAction(Landroid/view/View;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)I
+
+    .line 35
     move-result v2
 
-    .line 83
-    goto :goto_4
+    .line 38
+    invoke-virtual {v0, p2, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 84
+    .line 39
     :cond_1
-    add-int/2addr v8, v2
+    iget-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->hideable:Z
 
-    .line 85
+    .line 42
+    const/4 v0, 0x0
+
+    .line 44
+    if-eqz p2, :cond_2
+
+    .line 45
+    iget p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->state:I
+
+    .line 47
+    const/4 v2, 0x5
+
+    .line 49
+    if-eq p2, v2, :cond_2
+
+    .line 50
+    sget-object p2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_DISMISS:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+
+    .line 52
+    new-instance v3, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
+
+    .line 54
+    invoke-direct {v3, p0, v2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
+
+    .line 56
+    invoke-static {p1, p2, v0, v3}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
+
+    .line 59
+    :cond_2
+    iget p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->state:I
+
+    .line 62
+    const/4 v2, 0x4
+
+    .line 64
+    const/4 v3, 0x3
+
+    .line 65
+    if-eq p2, v3, :cond_6
+
+    .line 66
+    if-eq p2, v2, :cond_4
+
+    .line 68
+    if-eq p2, v1, :cond_3
+
+    .line 70
     goto :goto_0
 
-    .line 86
-    :cond_2
-    move v9, v7
+    .line 72
+    :cond_3
+    sget-object p2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_COLLAPSE:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+
+    .line 73
+    new-instance v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
+
+    .line 75
+    invoke-direct {v1, p0, v2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
+
+    .line 77
+    invoke-static {p1, p2, v0, v1}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
+
+    .line 80
+    sget-object p2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_EXPAND:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+
+    .line 83
+    new-instance v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
+
+    .line 85
+    invoke-direct {v1, p0, v3}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
 
     .line 87
-    move v8, v10
+    invoke-static {p1, p2, v0, v1}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
 
-    .line 88
-    :goto_1
-    const/16 v13, 0x20
-
-    .line 89
-    if-ge v9, v13, :cond_6
-
-    .line 91
-    if-ne v8, v10, :cond_6
+    .line 90
+    goto :goto_0
 
     .line 93
-    sget-object v13, Landroidx/core/view/ViewCompat;->ACCESSIBILITY_ACTIONS_RESOURCE_IDS:[I
+    :cond_4
+    iget-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->fitToContents:Z
 
-    .line 95
-    aget v13, v13, v9
+    .line 94
+    if-eqz p2, :cond_5
 
-    .line 97
-    move v15, v2
+    .line 96
+    move v1, v3
+
+    .line 98
+    :cond_5
+    sget-object p2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_EXPAND:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
     .line 99
-    move v14, v7
-
-    .line 100
-    :goto_2
-    invoke-interface {v6}, Ljava/util/List;->size()I
+    new-instance v2, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
 
     .line 101
-    move-result v5
+    invoke-direct {v2, p0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
 
-    .line 104
-    if-ge v14, v5, :cond_4
+    .line 103
+    invoke-static {p1, p2, v0, v2}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
 
-    .line 105
-    invoke-interface {v6, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 106
+    goto :goto_0
 
-    .line 107
-    move-result-object v5
+    .line 109
+    :cond_6
+    iget-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->fitToContents:Z
 
     .line 110
-    check-cast v5, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
+    if-eqz p2, :cond_7
 
-    .line 111
-    invoke-virtual {v5}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getId()I
+    .line 112
+    move v1, v2
 
-    .line 113
-    move-result v5
+    .line 114
+    :cond_7
+    sget-object p2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_COLLAPSE:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 116
-    if-eq v5, v13, :cond_3
+    .line 115
+    new-instance v2, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
 
     .line 117
-    move v5, v2
+    invoke-direct {v2, p0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
 
     .line 119
-    goto :goto_3
-
-    .line 120
-    :cond_3
-    move v5, v7
-
-    .line 121
-    :goto_3
-    and-int/2addr v15, v5
+    invoke-static {p1, p2, v0, v2}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
 
     .line 122
-    add-int/2addr v14, v2
-
-    .line 123
-    goto :goto_2
-
-    .line 124
-    :cond_4
-    if-eqz v15, :cond_5
-
-    .line 125
-    move v8, v13
-
-    .line 127
-    :cond_5
-    add-int/2addr v9, v2
-
-    .line 128
-    const/4 v5, 0x6
-
-    .line 129
-    goto :goto_1
-
-    .line 130
-    :cond_6
-    move v2, v8
-
-    .line 131
-    :goto_4
-    if-eq v2, v10, :cond_a
-
-    .line 132
-    new-instance v5, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
-
-    .line 134
-    const/4 v9, 0x0
-
-    .line 136
-    const/4 v13, 0x0
-
-    .line 137
-    move-object v8, v5
-
-    .line 138
-    move v10, v2
-
-    .line 139
-    invoke-direct/range {v8 .. v13}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(Ljava/lang/Object;ILjava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;Ljava/lang/Class;)V
-
-    .line 140
-    invoke-static/range {p1 .. p1}, Landroidx/core/view/ViewCompat$Api29Impl;->getAccessibilityDelegate(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
-
-    .line 143
-    move-result-object v6
-
-    .line 146
-    if-nez v6, :cond_7
-
-    .line 147
-    move-object v6, v4
-
-    .line 149
-    goto :goto_5
-
-    .line 150
-    :cond_7
-    instance-of v8, v6, Landroidx/core/view/AccessibilityDelegateCompat$AccessibilityDelegateAdapter;
-
-    .line 151
-    if-eqz v8, :cond_8
-
-    .line 153
-    check-cast v6, Landroidx/core/view/AccessibilityDelegateCompat$AccessibilityDelegateAdapter;
-
-    .line 155
-    iget-object v6, v6, Landroidx/core/view/AccessibilityDelegateCompat$AccessibilityDelegateAdapter;->mCompat:Landroidx/core/view/AccessibilityDelegateCompat;
-
-    .line 157
-    goto :goto_5
-
-    .line 159
-    :cond_8
-    new-instance v8, Landroidx/core/view/AccessibilityDelegateCompat;
-
-    .line 160
-    invoke-direct {v8, v6}, Landroidx/core/view/AccessibilityDelegateCompat;-><init>(Landroid/view/View$AccessibilityDelegate;)V
-
-    .line 162
-    move-object v6, v8
-
-    .line 165
-    :goto_5
-    if-nez v6, :cond_9
-
-    .line 166
-    new-instance v6, Landroidx/core/view/AccessibilityDelegateCompat;
-
-    .line 168
-    invoke-direct {v6}, Landroidx/core/view/AccessibilityDelegateCompat;-><init>()V
-
-    .line 170
-    :cond_9
-    invoke-static {v1, v6}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
-
-    .line 173
-    invoke-virtual {v5}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getId()I
-
-    .line 176
-    move-result v6
-
-    .line 179
-    invoke-static {v1, v6}, Landroidx/core/view/ViewCompat;->removeActionWithId(Landroid/view/View;I)V
-
-    .line 180
-    invoke-static/range {p1 .. p1}, Landroidx/core/view/ViewCompat;->getActionList(Landroid/view/View;)Ljava/util/List;
-
-    .line 183
-    move-result-object v6
-
-    .line 186
-    invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 187
-    invoke-static {v1, v7}, Landroidx/core/view/ViewCompat;->notifyViewAccessibilityStateChangedIfNeeded(Landroid/view/View;I)V
-
-    .line 190
-    :cond_a
-    move/from16 v5, p2
-
-    .line 193
-    invoke-virtual {v3, v5, v2}, Landroid/util/SparseIntArray;->put(II)V
-
-    .line 195
-    :cond_b
-    iget-boolean v2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->hideable:Z
-
-    .line 198
-    if-eqz v2, :cond_c
-
-    .line 200
-    iget v2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->state:I
-
-    .line 202
-    const/4 v3, 0x5
-
-    .line 204
-    if-eq v2, v3, :cond_c
-
-    .line 205
-    sget-object v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_DISMISS:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
-
-    .line 207
-    new-instance v5, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
-
-    .line 209
-    invoke-direct {v5, v0, v3}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
-
-    .line 211
-    invoke-static {v1, v2, v4, v5}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
-
-    .line 214
-    :cond_c
-    iget v2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->state:I
-
-    .line 217
-    const/4 v3, 0x4
-
-    .line 219
-    const/4 v5, 0x3
-
-    .line 220
-    if-eq v2, v5, :cond_10
-
-    .line 221
-    if-eq v2, v3, :cond_e
-
-    .line 223
-    const/4 v6, 0x6
-
-    .line 225
-    if-eq v2, v6, :cond_d
-
-    .line 226
-    goto :goto_8
-
-    .line 228
-    :cond_d
-    sget-object v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_COLLAPSE:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
-
-    .line 229
-    new-instance v6, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
-
-    .line 231
-    invoke-direct {v6, v0, v3}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
-
-    .line 233
-    invoke-static {v1, v2, v4, v6}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
-
-    .line 236
-    sget-object v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_EXPAND:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
-
-    .line 239
-    new-instance v3, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
-
-    .line 241
-    invoke-direct {v3, v0, v5}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
-
-    .line 243
-    invoke-static {v1, v2, v4, v3}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
-
-    .line 246
-    goto :goto_8
-
-    .line 249
-    :cond_e
-    const/4 v6, 0x6
-
-    .line 250
-    iget-boolean v2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->fitToContents:Z
-
-    .line 251
-    if-eqz v2, :cond_f
-
-    .line 253
-    goto :goto_6
-
-    .line 255
-    :cond_f
-    move v5, v6
-
-    .line 256
-    :goto_6
-    sget-object v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_EXPAND:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
-
-    .line 257
-    new-instance v3, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
-
-    .line 259
-    invoke-direct {v3, v0, v5}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
-
-    .line 261
-    invoke-static {v1, v2, v4, v3}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
-
-    .line 264
-    goto :goto_8
-
-    .line 267
-    :cond_10
-    const/4 v6, 0x6
-
-    .line 268
-    iget-boolean v2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->fitToContents:Z
-
-    .line 269
-    if-eqz v2, :cond_11
-
-    .line 271
-    move v5, v3
-
-    .line 273
-    goto :goto_7
-
-    .line 274
-    :cond_11
-    move v5, v6
-
-    .line 275
-    :goto_7
-    sget-object v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_COLLAPSE:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
-
-    .line 276
-    new-instance v3, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;
-
-    .line 278
-    invoke-direct {v3, v0, v5}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$6;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;I)V
-
-    .line 280
-    invoke-static {v1, v2, v4, v3}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
-
-    .line 283
-    :goto_8
+    :goto_0
     return-void
-    .line 286
+    .line 125
 .end method
 
 .method public final updateAccessibilityActions$1()V

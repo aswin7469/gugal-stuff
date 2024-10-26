@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">จัดวางวิดเจ็ตที่เลือก</string>
   <string name="accessibility_action_label_remove_widget">นำวิดเจ็ตออก</string>
   <string name="accessibility_action_label_select_widget">เลือกวิดเจ็ต</string>
-  <string name="accessibility_action_open_communal_hub">วิดเจ็ตในหน้าจอล็อก</string>
   <string name="accessibility_action_pip_resize">ปรับขนาด</string>
   <string name="accessibility_action_pip_stash">เก็บเข้าที่เก็บส่วนตัว</string>
   <string name="accessibility_action_pip_unstash">เอาออกจากที่เก็บส่วนตัว</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">ออกจากโหมดมือเดียว</string>
   <string name="accessibility_airplane_mode">โหมดบนเครื่องบิน</string>
   <string name="accessibility_allow_diagonal_scrolling">อนุญาตการเลื่อนแบบทแยงมุม</string>
+  <string name="accessibility_assistant_poodle">ค้นหาด้วยเสียง</string>
   <string name="accessibility_authenticate_hint">ตรวจสอบสิทธิ์</string>
   <string name="accessibility_back">กลับ</string>
   <string name="accessibility_banner_message_dismiss">ปิด</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">เข้าถึงอุปกรณ์</string>
   <string name="accessibility_ethernet_connected">อีเทอร์เน็ต</string>
   <string name="accessibility_ethernet_disconnected">ยกเลิกการเชื่อมต่ออีเทอร์เน็ตแล้ว</string>
-  <string name="accessibility_fingerprint_bouncer">ต้องมีการตรวจสอบสิทธิ์ แตะเซ็นเซอร์ลายนิ้วมือเพื่อตรวจสอบสิทธิ์</string>
   <string name="accessibility_fingerprint_label">เซ็นเซอร์ลายนิ้วมือ</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">สลับ</string>
   <string name="accessibility_floating_button_action_edit">แก้ไข</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">เมนู</string>
   <string name="accessibility_multi_user_list_switcher">เมนูแบบเลื่อนลง</string>
   <string name="accessibility_multi_user_switch_switcher">สลับผู้ใช้</string>
+  <string name="accessibility_next_alarm">ปลุกครั้งต่อไปเวลา %s</string>
   <string name="accessibility_no_calling">ไม่มีการโทร</string>
   <string name="accessibility_no_phone">ไม่มีสัญญาณโทรศัพท์</string>
   <string name="accessibility_no_wifi">ไม่ได้เชื่อมต่อ Wi-Fi</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">ขณะนี้หน้าจอถูกล็อกให้วางในแนวตั้ง</string>
   <string name="accessibility_send_smart_reply">ส่ง</string>
   <string name="accessibility_sensors_off_active">"ปิดเซ็นเซอร์" เปิดใช้งานอยู่</string>
+  <string name="accessibility_settings_gear">การตั้งค่า Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">แตะเซ็นเซอร์ลายนิ้วมือ ซึ่งเป็นปุ่มสั้นๆ ที่อยู่ด้านข้างโทรศัพท์</string>
+  <string name="accessibility_smartspace_page">หน้า %1$d จาก %2$d</string>
   <string name="accessibility_split_bottom">แยกไปด้านล่าง</string>
   <string name="accessibility_split_left">แยกไปทางซ้าย</string>
   <string name="accessibility_split_right">แยกไปทางขวา</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">สัญญาณ Wi-Fi 3 ขีด</string>
   <string name="accessibility_wifi_two_bars">สัญญาณ Wi-Fi 2 ขีด</string>
   <string name="accesssibility_keyguard_retry">ปัดขึ้นเพื่อลองปลดล็อกด้วยใบหน้าอีกครั้ง</string>
+  <string name="adaptive_charging_notify_des">แบตเตอรี่จะเต็มภายในเวลา %1$s กำลังชาร์จอย่างต่อเนื่องเพื่อยืดอายุการใช้งานแบตเตอรี่</string>
+  <string name="adaptive_charging_notify_title">การชาร์จแบบปรับอัตโนมัติเปิดอยู่</string>
+  <string name="adaptive_charging_notify_turn_off_once">ปิดเฉพาะครั้งนี้</string>
+  <string name="adaptive_charging_time_estimate">%1$s • กำลังชาร์จแบบปรับอัตโนมัติ • จะเต็มภายใน %2$s</string>
   <string name="add">เพิ่ม</string>
   <string name="add_guest_failed">สร้างผู้เข้าร่วมใหม่ไม่สำเร็จ</string>
   <string name="airplane_mode">โหมดบนเครื่องบิน</string>
   <string name="alarm_template">เวลา %1$s</string>
-  <string name="alarm_template_far">ในวันที่ %1$s</string>
+  <string name="alarm_template_far">วัน%1$s</string>
   <string name="all_network_unavailable">ไม่มีเครือข่ายที่พร้อมใช้งาน</string>
   <string name="always_use_accessory">เปิด %1$s ทุกครั้งเมื่อเชื่อมต่อกับ %2$s</string>
   <string name="always_use_device">เปิด %1$s ทุกครั้งเมื่อเชื่อมต่อกับ %2$s</string>
@@ -233,6 +239,7 @@
   <string name="app_info">ข้อมูลแอป</string>
   <string name="app_label">UI ของระบบ</string>
   <string name="assistant_attention_content_description">ตรวจพบการแสดงข้อมูลของผู้ใช้</string>
+  <string name="assistant_scrim_label">กำลังฟังอยู่ แตะเพื่อยกเลิก</string>
   <string name="audio_sharing_description">กำลังแชร์เสียง</string>
   <string name="audio_status">กำลังฟัง</string>
   <string name="auto_data_switch_dialog_negative_button">ไม่เป็นไร</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">กลับ</string>
   <string name="battery">แบตเตอรี่</string>
   <string name="battery_detail_switch_title">โหมดประหยัดแบตเตอรี่</string>
-  <string name="battery_low_description">คุณมีแบตเตอรี่เหลืออยู่ %s โหมดประหยัดแบตเตอรี่จะเปิดธีมมืด จำกัดกิจกรรมในเบื้องหลัง และหน่วงเวลาการแจ้งเตือน</string>
+  <string name="battery_health_notify_learn_more">ดูข้อมูลเพิ่มเติม</string>
   <string name="battery_low_intro">โหมดประหยัดแบตเตอรี่จะเปิดธีมมืด จำกัดกิจกรรมในเบื้องหลัง และหน่วงเวลาการแจ้งเตือน</string>
-  <string name="battery_low_title">เปิดโหมดประหยัดแบตเตอรี่ใช่ไหม</string>
   <string name="battery_saver_confirmation_ok">เปิด</string>
   <string name="battery_saver_confirmation_title">เปิดโหมดประหยัดแบตเตอรี่ใช่ไหม</string>
   <string name="battery_saver_confirmation_title_generic">เกี่ยวกับโหมดประหยัดแบตเตอรี่</string>
-  <string name="battery_saver_dismiss_action">ไม่เป็นไร</string>
   <string name="battery_saver_start_action">เปิด</string>
   <string name="battery_state_unknown_notification_text">แตะดูข้อมูลเพิ่มเติม</string>
   <string name="battery_state_unknown_notification_title">พบปัญหาในการอ่านเครื่องวัดแบตเตอรี่</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">ใช้งานอยู่ L: แบตเตอรี่ %1$s, R: แบตเตอรี่ %2$s</string>
   <string name="bluetooth_active_battery_level_untethered_left">ใช้งานอยู่ L: แบตเตอรี่ %1$s</string>
   <string name="bluetooth_active_battery_level_untethered_right">ใช้งานอยู่ R: แบตเตอรี่ %1$s</string>
-  <string name="bluetooth_active_media_only_battery_level">ใช้งานอยู่ (สื่อเท่านั้น) แบตเตอรี่ %1$s</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">ใช้งานอยู่ (สื่อเท่านั้น) L: แบตเตอรี่ %1$s, R: แบตเตอรี่ %2$s</string>
-  <string name="bluetooth_active_media_only_no_battery_level">ใช้งานอยู่ (สื่อเท่านั้น)</string>
   <string name="bluetooth_active_no_battery_level">ใช้งานอยู่</string>
   <string name="bluetooth_battery_level">แบตเตอรี่ %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">เชื่อมต่อแล้ว (รองรับการแชร์เสียง) แบตเตอรี่ %1$s</string>
   <string name="bluetooth_battery_level_untethered">L: แบตเตอรี่ %1$s, R: แบตเตอรี่ %2$s</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">เชื่อมต่อแล้ว (รองรับการแชร์เสียง) L: แบตเตอรี่ %1$s, R: แบตเตอรี่ %2$s</string>
   <string name="bluetooth_connected">เชื่อมต่อแล้ว%1$s</string>
   <string name="bluetooth_connecting">กำลังเชื่อมต่อ…</string>
   <string name="bluetooth_disconnected">ตัดการเชื่อมต่อ</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">ใช้งานอยู่ (เฉพาะข้างซ้าย)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">ใช้งานอยู่ (ข้างซ้ายและขวา)</string>
   <string name="bluetooth_hearing_aid_right_active">ใช้งานอยู่ (เฉพาะข้างขวา)</string>
-  <string name="bluetooth_no_battery_level_lea_support">เชื่อมต่อแล้ว (รองรับการแชร์เสียง)</string>
   <string name="bluetooth_pairing">กำลังจับคู่อุปกรณ์...</string>
   <string name="bluetooth_pairing_device_down_error_message">ไม่สามารถเชื่อมต่อกับ %1$s</string>
   <string name="bluetooth_pairing_error_message">ไม่สามารถจับคู่กับ %1$s</string>
   <string name="bluetooth_pairing_pin_error_message">ไม่สามารถจับคู่กับ %1$s ได้เพราะ PIN หรือพาสคีย์ไม่ถูกต้อง</string>
   <string name="bluetooth_pairing_rejected_error_message">%1$s ปฏิเสธการจับคู่อุปกรณ์</string>
-  <string name="bluetooth_saved_device_lea_support">รองรับการแชร์เสียง</string>
   <string name="bluetooth_talkback_bluetooth">บลูทูธ</string>
   <string name="bluetooth_talkback_computer">คอมพิวเตอร์</string>
   <string name="bluetooth_talkback_headphone">หูฟัง</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">รายการเพิ่มเติม</string>
   <string name="bubble_overflow_empty_subtitle">บับเบิลที่แสดงและที่ปิดไปเมื่อเร็วๆ นี้จะปรากฏที่นี่</string>
   <string name="bubble_overflow_empty_title">ไม่มีบับเบิลเมื่อเร็วๆ นี้</string>
-  <string name="bubble_shortcut_label">บับเบิล</string>
-  <string name="bubble_shortcut_long_label">แสดงบับเบิล</string>
   <string name="bubbles_app_settings">การตั้งค่า %1$s</string>
   <string name="bubbles_dont_bubble_conversation">ไม่ต้องแสดงการสนทนาเป็นบับเบิล</string>
   <string name="bubbles_settings_button_description">การตั้งค่าบับเบิล %1$s</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">หยุดแคสต์</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">คุณจะหยุดการแคสต์ &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">เน็ตมือถือปิดอยู่</string>
+  <string name="charge_limit_discovery_notification_enable_button">เปิดใช้เลย</string>
+  <string name="charge_limit_discovery_notification_text">ลองเปิดฟีเจอร์จำกัดการชาร์จที่ 80% เพื่อปกป้องประสิทธิภาพแบตเตอรี่และยืดอายุการใช้งาน คุณจัดการฟีเจอร์นี้ได้ทุกเมื่อในการตั้งค่า</string>
+  <string name="charge_limit_discovery_notification_title">ปกป้องแบตเตอรี่ในระหว่างการชาร์จ</string>
+  <string name="charging_reverse_text">กำลังแชร์แบตเตอรี่</string>
   <string name="clear_all_notifications_text">ล้างทั้งหมด</string>
   <string name="clipboard">คลิปบอร์ด</string>
   <string name="clipboard_content_copied">คัดลอกเนื้อหาแล้ว</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">ปิด</string>
   <string name="close_dialog_button">ปิด</string>
   <string name="collapse_menu_text">ปิดเมนู</string>
+  <string name="columbus_bouncer_message">ปลดล็อกเพื่อดำเนินการแตะด่วนให้เสร็จสมบูรณ์</string>
+  <string name="columbus_target_request_dialog_allow">อนุญาต</string>
+  <string name="columbus_target_request_dialog_deny">ไม่อนุญาต</string>
+  <string name="columbus_target_request_dialog_summary">แตะด้านหลังโทรศัพท์ 2 ครั้งเพื่อเปิด %1$s คุณเปลี่ยนการตั้งค่านี้ได้ทุกเมื่อในการตั้งค่า</string>
+  <string name="columbus_target_request_dialog_title">อนุญาตให้การแตะด่วนเปิด %1$s ใช่ไหม</string>
   <string name="communal_tutorial_indicator_text">ปัดไปทางซ้ายเพื่อเริ่มบทแนะนำส่วนกลาง</string>
   <string name="connected_display_dialog_dual_display_stop_warning">ระบบจะมิเรอร์หน้าจอด้านใน และจะปิดหน้าจอด้านหน้า</string>
   <string name="connected_display_dialog_start_mirroring">มิเรอร์ไปยังจอแสดงผลภายนอกไหม</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">หยุดการใช้อินเทอร์เน็ตมือถือชั่วคราว</string>
   <string name="data_usage_disabled_dialog_title">หยุดการใช้ข้อมูลชั่วคราวแล้ว</string>
   <string name="days_timestamp">%1$s วันที่ผ่านมา</string>
-  <string name="default_error_message">อินพุตไม่ถูกต้อง</string>
   <string name="default_popup_window_title">หน้าต่างป๊อปอัป</string>
+  <string name="defender_notify_resume_charge">ลบล้าง</string>
+  <string name="defender_notify_title">การถนอมแบตเตอรี่</string>
+  <string name="defender_post_notify_des">ปรับการชาร์จให้เหมาะสมแล้วตั้งแต่ %1$s ถึง %2$s เพื่อช่วยยืดอายุการใช้งานแบตเตอรี่</string>
+  <string name="defender_post_notify_title">ปรับการชาร์จให้เหมาะสมแล้ว</string>
   <string name="demo_mode">โหมดสาธิต UI ของระบบ</string>
   <string name="desktop_mode_maximize_menu_maximize_text">ขยายหน้าจอให้ใหญ่สุด</string>
   <string name="desktop_mode_maximize_menu_snap_text">สแนปหน้าจอ</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">องค์กรของคุณเป็นเจ้าของอุปกรณ์นี้</string>
   <string name="do_disclosure_with_name">%s เป็นเจ้าของอุปกรณ์นี้</string>
   <string name="do_financed_disclosure_with_name">อุปกรณ์นี้ให้บริการโดย %s</string>
+  <string name="dock_a11y_action_show_photo_text">แสดงกรอบรูป</string>
+  <string name="dock_alignment_not_charging">จัดวางโทรศัพท์ใหม่เพื่อชาร์จแบบไร้สาย</string>
+  <string name="dock_alignment_slow_charging">จัดวางโทรศัพท์ใหม่เพื่อให้ชาร์จได้เร็วขึ้น</string>
+  <string name="dock_defender_first_run_des">การชาร์จหยุดชั่วคราวที่ 90% ขณะวางแท็บเล็ตบนแท่นชาร์จเพื่อช่วยยืดอายุการใช้งานแบตเตอรี่ ไปที่การตั้งค่าได้ทุกเมื่อเพื่อลบล้างลักษณะการทำงานนี้</string>
+  <string name="dock_defender_first_run_settings">การตั้งค่า</string>
+  <string name="dock_defender_first_run_title">หยุดการชาร์จชั่วคราวเพื่อถนอมแบตเตอรี่</string>
   <string name="dock_multi_instances_not_supported_text">แอปนี้เปิดได้ใน 1 หน้าต่างเท่านั้น</string>
   <string name="dock_non_resizeble_failed_to_dock_text">แอปไม่รองรับการแยกหน้าจอ</string>
+  <string name="dock_photo_preview_text">กรอบรูปกำลังเริ่ม...</string>
+  <string name="dock_promo_text">เลื่อนไปทางซ้ายเพื่อดูกรอบรูป</string>
   <string name="done">เสร็จสิ้น</string>
   <string name="drag_split_not_supported">การแจ้งเตือนนี้ไม่รองรับการลากเพื่อแยกหน้าจอ</string>
   <string name="drag_to_add_tiles">กดค้างแล้วลากเพื่อเพิ่มการ์ด</string>
   <string name="drag_to_rearrange_tiles">กดค้างแล้วลากเพื่อจัดเรียงการ์ดใหม่</string>
   <string name="drag_to_remove_disabled">คุณต้องมีการ์ดอย่างน้อย %1$d รายการ</string>
   <string name="drag_to_remove_tiles">ลากมาที่นี่เพื่อนำออก</string>
+  <string name="dream_lockscreen_wallpaper_description">ใช้วอลเปเปอร์หน้าจอล็อกปัจจุบัน</string>
+  <string name="dream_lockscreen_wallpaper_label">วอลเปเปอร์</string>
   <string name="dream_overlay_status_bar_alarm_set">ตั้งปลุกแล้ว</string>
   <string name="dream_overlay_status_bar_camera_mic_off">กล้องและไมค์ปิดอยู่</string>
   <string name="dream_overlay_status_bar_camera_off">กล้องปิดอยู่</string>
   <string name="dream_overlay_status_bar_mic_off">ไมค์ปิดอยู่</string>
   <string name="dream_overlay_status_bar_priority_mode">โหมดลำดับความสำคัญ</string>
   <string name="dream_overlay_status_bar_wifi_off">ใช้ Wi‑Fi ไม่ได้</string>
+  <string name="dwell_defender_notify_des">การตั้งค่านี้จะช่วยยืดอายุการใช้งานแบตเตอรี่เมื่อชาร์จโทรศัพท์ทิ้งไว้นานเกินไป</string>
+  <string name="dwell_defender_notify_title">หยุดการชาร์จชั่วคราวเพื่อถนอมแบตเตอรี่</string>
   <string name="edit_user_info_message">ทุกคนที่ใช้อุปกรณ์เครื่องนี้จะเห็นชื่อและรูปภาพที่คุณเลือก</string>
   <string name="edit_widget">แก้ไขวิดเจ็ต</string>
   <string name="empty_shade_text">ไม่มีการแจ้งเตือน</string>
@@ -561,12 +581,16 @@
   <string name="ethernet_label">อีเทอร์เน็ต</string>
   <string name="expand_button_title">ขั้นสูง</string>
   <string name="expand_menu_text">เปิดเมนู</string>
+  <string name="extreme_battery_saver_text">สูงสุด</string>
+  <string name="extreme_low_battery_notification_text">โทรศัพท์ของคุณจะปิดลงหากไม่ชาร์จเร็วๆ นี้</string>
+  <string name="extreme_low_battery_notification_title">แบตเตอรี่เหลือน้อยมาก</string>
   <string name="face_re_enroll_dialog_content">ระบบจะลบรูปแบบใบหน้าปัจจุบันเพื่อตั้งค่าการปลดล็อกด้วยใบหน้าอีกครั้ง
 
 คุณจะต้องตั้งค่าฟีเจอร์นี้ใหม่เพื่อใช้ใบหน้าในการปลดล็อกโทรศัพท์</string>
   <string name="face_re_enroll_dialog_title">ตั้งค่าการปลดล็อกด้วยใบหน้า</string>
   <string name="face_re_enroll_notification_name">ปลดล็อกด้วยใบหน้า</string>
   <string name="face_re_enroll_notification_title">ตั้งค่าการปลดล็อกด้วยใบหน้าอีกครั้ง</string>
+  <string name="face_reenroll_dialog_confirm">ตั้งค่า</string>
   <string name="face_reenroll_failure_dialog_content">ตั้งค่าการปลดล็อกด้วยใบหน้าไม่ได้ ไปที่การตั้งค่าเพื่อลองอีกครั้ง</string>
   <string name="failed_attempts_now_wiping_device">ใช้ความพยายามหลายครั้งเกินไป ระบบจะลบข้อมูลในอุปกรณ์เครื่องนี้</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">ปิด</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">ทำให้เล็กลง</string>
   <string name="fullscreen_text">เต็มหน้าจอ</string>
   <string name="game_status">กำลังเล่น</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s %2$s</string>
   <string name="global_action_smart_lock_disabled">ปิดใช้ฟีเจอร์ปลดล็อกต่อเนื่องอยู่</string>
   <string name="go_to_web">ไปที่เบราว์เซอร์</string>
   <string name="got_it">รับทราบ</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">รีเซ็ตเซสชันผู้ใช้ชั่วคราวไหม</string>
   <string name="guest_reset_guest_confirm_button">รีเซ็ต</string>
   <string name="guest_resetting">กำลังรีเซ็ตผู้เข้าร่วม…</string>
+  <string name="handle_invocation_prompt">เลื่อนเพื่อพูด</string>
   <string name="handle_text">แฮนเดิล</string>
   <string name="headset">ชุดหูฟัง</string>
   <string name="hearing_devices_preset_label">ค่าที่กำหนดล่วงหน้า</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">โทรศัพท์เริ่มร้อน</string>
   <string name="home_controls_dream_description">เข้าถึงระบบควบคุมอุปกรณ์สมาร์ทโฮมได้อย่างรวดเร็วผ่านภาพพักหน้าจอ</string>
   <string name="home_controls_dream_label">ระบบควบคุมอุปกรณ์สมาร์ทโฮม</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• มีอุปกรณ์หรือแผงอุปกรณ์พร้อมใช้งานอย่างน้อย 1 รายการ</string>
   <string name="home_quick_affordance_unavailable_install_the_app">หากต้องการเพิ่มแอป Home เป็นทางลัด โปรดตรวจสอบว่าได้ติดตั้งแอปแล้ว</string>
   <string name="hub_mode_add_widget_button_text">เพิ่มวิดเจ็ต</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">กำลังดำเนินการ</string>
   <string name="inattentive_sleep_warning_message">อุปกรณ์จะปิดเครื่องในอีกไม่ช้า กดเพื่อเปิดอุปกรณ์ต่อไป</string>
   <string name="inattentive_sleep_warning_title">สแตนด์บาย</string>
+  <string name="incompatible_charging_learn_more">ดูข้อมูลเพิ่มเติม</string>
+  <string name="incompatible_charging_notify_des">โทรศัพท์อาจชาร์จอย่างช้าๆ หรือไม่ชาร์จ ให้ใช้สายและอะแดปเตอร์ที่แนะนำเพื่อให้ชาร์จได้เร็วขึ้น</string>
+  <string name="incompatible_charging_notify_title">ตรวจสอบอุปกรณ์เสริมสำหรับการชาร์จ</string>
   <string name="indeterminate">เลือกบางส่วน</string>
   <string name="inline_done_button">เสร็จสิ้น</string>
   <string name="inline_ok_button">ใช้</string>
   <string name="inline_turn_off_notifications">ปิดการแจ้งเตือน</string>
   <string name="input_switch_input_language_next">เปลี่ยนเป็นภาษาถัดไป</string>
   <string name="input_switch_input_language_previous">เปลี่ยนเป็นภาษาก่อนหน้า</string>
+  <string name="install_app">ติดตั้งแอป</string>
   <string name="install_dialer_on_work_profile_action">ติดตั้งแอปโทรศัพท์ในโปรไฟล์งาน</string>
   <string name="install_type_instant">Instant App</string>
   <string name="instant_apps">Instant App</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">%1$s ทำงานอยู่</string>
   <string name="interruption_level_none">ปิดเสียงทั้งหมด</string>
   <string name="interruption_level_priority">เฉพาะเรื่องสำคัญ</string>
-  <string name="invalid_charger_text">ใช้ที่ชาร์จที่ให้มาพร้อมกับอุปกรณ์</string>
-  <string name="invalid_charger_title">ชาร์จผ่าน USB ไม่ได้</string>
   <string name="issuerecord_background_processing_label">กำลังประมวลผลการบันทึกปัญหา</string>
   <string name="issuerecord_ongoing_screen_only">กำลังบันทึกปัญหา</string>
   <string name="issuerecord_save_title">บันทึกไฟล์บันทึกปัญหาแล้ว</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">ล็อกอุปกรณ์แล้ว
 การตรวจสอบสิทธิ์ไม่สำเร็จ</string>
   <string name="keyguard_indication_charging_time">%2$s • กำลังชาร์จ • จะเต็มในอีก %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • ชาร์จเสร็จภายใน %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • กำลังชาร์จ • จะเต็มในอีก %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • จะชาร์จเต็มภายใน %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • กำลังชาร์จอย่างเร็ว • จะเต็มในอีก %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • กำลังชาร์จเร็ว • จะเต็มภายใน %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • ชาร์จแล้ว</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • กำลังชาร์จอย่างช้าๆ • จะเต็มในอีก %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • จะชาร์จเต็มภายใน %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • จะชาร์จเต็มภายใน %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • กำลังชาร์จแบบไร้สาย • จะเต็มในอีก %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">ปลดล็อกไว้โดย TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • จะชาร์จเต็มภายใน %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">ปลดล็อกไว้โดยฟีเจอร์ปลดล็อกต่อเนื่อง</string>
   <string name="keyguard_missing_sim_message_short">ไม่มี SIM</string>
   <string name="keyguard_network_locked_message">เครือข่ายถูกล็อก</string>
   <string name="keyguard_permanent_disabled_sim_message_short">SIM ใช้งานไม่ได้</string>
   <string name="keyguard_plugged_in">%s • กำลังชาร์จ</string>
   <string name="keyguard_plugged_in_charging_fast">%s • กำลังชาร์จอย่างเร็ว</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • กำลังชาร์จเร็ว</string>
   <string name="keyguard_plugged_in_charging_limited">%s • หยุดการชาร์จชั่วคราวเพื่อถนอมแบตเตอรี่</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • กำลังชาร์จอย่างช้าๆ</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • กำลังชาร์จ</string>
   <string name="keyguard_plugged_in_dock">%s • กำลังชาร์จ</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • กำลังชาร์จ</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • ตรวจสอบอุปกรณ์เสริมสำหรับการชาร์จ</string>
+  <string name="keyguard_plugged_in_v2">%s • กำลังชาร์จ</string>
   <string name="keyguard_plugged_in_wireless">%s • กำลังชาร์จแบบไร้สาย</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • กำลังชาร์จ</string>
   <string name="keyguard_retry">เลื่อนขึ้นเพื่อลองอีกครั้ง</string>
   <string name="keyguard_sim_error_message_short">การ์ดไม่ถูกต้อง</string>
   <string name="keyguard_sim_locked_message">SIM ถูกล็อก</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">รหัส PIN ไม่ตรง</string>
   <string name="kg_invalid_sim_pin_hint">พิมพ์ PIN ซึ่งเป็นเลข 4-8 หลัก</string>
   <string name="kg_invalid_sim_puk_hint">รหัส PUK ต้องเป็นตัวเลขอย่างน้อย 8 หลัก</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{ป้อน PIN ของซิม คุณพยายามได้อีก # ครั้งก่อนที่จะต้องติดต่อผู้ให้บริการเพื่อปลดล็อกอุปกรณ์}other{ป้อน PIN ของซิม คุณลองได้อีก # ครั้ง}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{ตอนนี้ซิมถูกปิดใช้แล้ว ป้อนรหัส PUK เพื่อดำเนินการต่อ คุณพยายามได้อีก # ครั้งก่อนที่ซิมจะใช้งานไม่ได้อย่างถาวร โปรดติดต่อสอบถามรายละเอียดจากผู้ให้บริการ}other{ตอนนี้ซิมถูกปิดใช้แล้ว ป้อนรหัส PUK เพื่อดำเนินการต่อ คุณพยายามได้อีก # ครั้งก่อนที่ซิมจะใช้งานไม่ได้อย่างถาวร โปรดติดต่อสอบถามรายละเอียดจากผู้ให้บริการ}}</string>
   <string name="kg_password_pin_failed">การปลดล็อกด้วย PIN ของซิมล้มเหลว!</string>
   <string name="kg_password_puk_failed">การปลดล็อกด้วย PUK ของซิมล้มเหลว!</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">ป้อน PIN ของซิมสำหรับ "%1$s"</string>
   <string name="kg_sim_unlock_progress_dialog_message">กำลังปลดล็อก SIM…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{ลองอีกครั้งใน # วินาที}other{ลองอีกครั้งใน # วินาที}}</string>
-  <string name="kg_trust_agent_disabled">เอเจนต์ความน่าเชื่อถือไม่พร้อมใช้งาน</string>
+  <string name="kg_trust_agent_disabled">ฟีเจอร์ปลดล็อกต่อเนื่องไม่พร้อมใช้งาน</string>
   <string name="kg_unlock_with_password_or_fp">ปลดล็อกด้วยรหัสผ่านหรือลายนิ้วมือ</string>
   <string name="kg_unlock_with_pattern_or_fp">ปลดล็อกด้วยรูปแบบหรือลายนิ้วมือ</string>
   <string name="kg_unlock_with_pin_or_fp">ปลดล็อกด้วย PIN หรือลายนิ้วมือ</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">ดูข้อมูลเพิ่มเติม</string>
   <string name="log_access_confirmation_learn_more_at">ดูข้อมูลเพิ่มเติมที่ %s</string>
   <string name="log_access_confirmation_title">อนุญาตให้ "%s" เข้าถึงบันทึกทั้งหมดของอุปกรณ์ไหม</string>
+  <string name="low_battery_label">แบตเตอรี่อ่อน</string>
+  <string name="low_battery_notification_text">เปิดโหมดประหยัดแบตเตอรี่แบบมาตรฐานเพื่อยืดระยะเวลาการใช้งานแบตเตอรี่</string>
+  <string name="low_battery_notification_text_ebs">เปิดโหมดประหยัดแบตเตอรี่สูงสุดเพื่อยืดอายุการใช้งานแบตเตอรี่</string>
+  <string name="low_battery_notification_title">แบตเตอรี่เหลืออยู่ %s</string>
   <string name="m3c_search_bar_search">ค้นหา</string>
   <string name="m3c_suggestions_available">มีคำแนะนำที่ด้านล่าง</string>
   <string name="magnification_close_settings_click_label">ปิดการตั้งค่าการขยาย</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">หยุด</string>
   <string name="media_output_end_session_dialog_summary">หยุดเซสชันที่แชร์อยู่เพื่อย้ายสื่อไปยังอุปกรณ์อื่น</string>
-  <string name="media_output_first_broadcast_title">วิธีการทำงานของการออกอากาศ</string>
-  <string name="media_output_first_notify_broadcast_message">ผู้ที่อยู่ใกล้คุณและมีอุปกรณ์บลูทูธที่รองรับสามารถรับฟังสื่อที่คุณกำลังออกอากาศได้</string>
   <string name="media_output_group_title_speakers_and_displays">ลำโพงและจอแสดงผล</string>
   <string name="media_output_group_title_suggested_device">อุปกรณ์ที่แนะนำ</string>
   <string name="media_output_label_title">กำลังเล่น %s ใน</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">เมื่อกำลังแคสต์แอป Android จะมีสิทธิ์เข้าถึงทุกสิ่งที่แสดงหรือเล่นอยู่ในแอปดังกล่าว ดังนั้นโปรดระวังสิ่งต่างๆ อย่างเช่นรหัสผ่าน รายละเอียดการชำระเงิน ข้อความ รูปภาพ รวมถึงเสียงและวิดีโอ</string>
   <string name="media_projection_sys_service_dialog_title">เริ่มบันทึกหรือแคสต์เลยไหม</string>
   <string name="media_projection_sys_service_dialog_warning">บริการที่มีฟังก์ชันนี้จะมีสิทธิ์เข้าถึงข้อมูลทั้งหมดที่ปรากฏบนหน้าจอหรือเปิดจากอุปกรณ์ของคุณขณะบันทึกหรือแคสต์ ซึ่งรวมถึงข้อมูลอย่างเช่นรหัสผ่าน รายละเอียดการชำระเงิน รูปภาพ ข้อความ และเสียงที่คุณเล่น</string>
-  <string name="media_projection_task_switcher_action_back">เปลี่ยนกลับ</string>
-  <string name="media_projection_task_switcher_action_switch">แชร์แอปนี้แทน</string>
-  <string name="media_projection_task_switcher_text">การแชร์จะหยุดชั่วคราวเมื่อสลับแอป</string>
   <string name="media_seamless_other_device">อุปกรณ์อื่น</string>
   <string name="media_transfer_default_device_name">อุปกรณ์ที่เชื่อมต่อ</string>
   <string name="media_transfer_dock_speaker_device_name">แท่นชาร์จที่มีลำโพง</string>
@@ -1138,7 +1177,7 @@
   <string name="pip_skip_to_prev">ข้ามไปรายการก่อนหน้า</string>
   <string name="popup_on_dismiss_cta_tile_text">กดค้างเพื่อปรับแต่งวิดเจ็ต</string>
   <string name="power_discharge_by_only_short">จนถึง %1$s น.</string>
-  <string name="preference_summary_default_combination">%1$s / %2$s</string>
+  <string name="preference_summary_default_combination">%1$s/%2$s</string>
   <string name="priority_conversations">การสนทนาสำคัญ</string>
   <string name="priority_mode_dream_overlay_content_description">ห้ามรบกวน</string>
   <string name="privacy_dialog_active_app_usage">ใช้อยู่โดย %1$s</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">พลิกด้านโทรศัพท์เพื่อให้ได้ภาพที่มีความละเอียดมากขึ้น</string>
   <string name="rear_display_unfolded_bottom_sheet_title">สลับหน้าจอไหม</string>
   <string name="recent_conversations">การสนทนาล่าสุด</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">ส่งรูปภาพ</string>
   <string name="remove_from_settings">นำออกจากการตั้งค่า</string>
   <string name="remove_from_settings_prompt">นำตัวรับสัญญาณ UI ระบบออกจากการตั้งค่าและหยุดใช้ฟีเจอร์ทั้งหมดของตัวรับสัญญาณใช่ไหม</string>
   <string name="require_unlock_for_nfc">ปลดล็อกเพื่อใช้ NFC</string>
   <string name="restart_button_description">แตะเพื่อรีสตาร์ทแอปนี้และรับมุมมองที่ดียิ่งขึ้น</string>
   <string name="retry_face">ลองตรวจสอบสิทธิ์ด้วยใบหน้าอีกครั้ง</string>
+  <string name="reverse_charging_device_name_text">Pixel เครื่องอื่น</string>
+  <string name="reverse_charging_device_providing_charge_text">กำลังจากชาร์จจากแบตเตอรี่ของ %1$s (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">การแชร์แบตเตอรี่เปิดอยู่</string>
+  <string name="reverse_charging_title">การแชร์แบตเตอรี่</string>
   <string name="right_icon">ไอคอนทางขวา</string>
   <string name="right_keycode">Keycode ทางขวา</string>
   <string name="right_nav_bar_button_type">ประเภทปุ่มทางขวาเพิ่มเติม</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">แตะเพื่อดูรายละเอียดเกี่ยวกับแบตเตอรี่และปริมาณการใช้อินเทอร์เน็ต</string>
   <string name="running_foreground_services_title">แอปที่กำลังทำงานในเบื้องหลัง</string>
-  <string name="satellite_connected_carrier_text">SOS ดาวเทียม</string>
+  <string name="satellite_connected_carrier_text">SOS ดาวเทียมของ Pixel</string>
   <string name="save">บันทึก</string>
+  <string name="saver_confirmation_dialog_dismiss_text">ยกเลิก</string>
+  <string name="saver_confirmation_dialog_subtitle">เลือกโหมดที่จะใช้</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">ประกอบด้วยการเปลี่ยนแปลงทั้งหมดที่ระบุไว้ด้านบน รวมถึงการหยุดแอปที่ไม่จำเป็นและการแจ้งเตือนของแอปไว้ชั่วคราว</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">จำกัดเอฟเฟกต์ภาพและกิจกรรมในเบื้องหลัง เปิดธีมมืดหากยังไม่ได้เปิด</string>
+  <string name="saver_confirmation_dialog_title">ยินดีต้อนรับสู่โหมดประหยัดแบตเตอรี่</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">โหมดประหยัดแบตเตอรี่สูงสุด</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">โหมดประหยัดแบตเตอรี่แบบมาตรฐาน</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">การจับภาพหน้าจอปิดใช้โดยนโยบายด้านอุปกรณ์</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">ผู้ดูแลระบบไอทีบล็อกไว้</string>
   <string name="screen_pinning_can_open_other_apps">แอปที่ปักหมุดไว้อาจเปิดแอปอื่นๆ</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">หากต้องการเลิกปักหมุดแอปนี้ ให้แตะปุ่ม "กลับ" และ "ภาพรวม" ค้างไว้</string>
   <string name="screen_pinning_toast_gesture_nav">หากต้องการเลิกปักหมุดแอปนี้ ให้ปัดขึ้นค้างไว้</string>
   <string name="screen_pinning_toast_recents_invisible">หากต้องการเลิกปักหมุดแอปนี้ ให้แตะปุ่ม "กลับ" และ "หน้าแรก" ค้างไว้</string>
+  <string name="screen_protector_absent_message">การปิดโหมดแผ่นปกป้องหน้าจอจะช่วยปรับปรุงการสัมผัสเมื่อไม่ได้ใช้แผ่นปกป้องหน้าจอ</string>
+  <string name="screen_protector_disable_notification">ปิดใช้งานการแจ้งเตือน</string>
+  <string name="screen_protector_go_to_settings">ไปที่การตั้งค่า</string>
+  <string name="screen_protector_got_it">รับทราบ</string>
+  <string name="screen_protector_mode_title">โหมดแผ่นปกป้องหน้าจอ</string>
+  <string name="screen_protector_present_message">การเปิดโหมดแผ่นปกป้องหน้าจอจะช่วยปรับปรุงการสัมผัสเมื่อใช้แผ่นปกป้องหน้าจอ</string>
   <string name="screen_share_permission_app_selector_title">แชร์หรือบันทึกแอป</string>
   <string name="screen_share_permission_dialog_option_entire_screen">ทั้งหน้าจอ</string>
   <string name="screen_share_permission_dialog_option_single_app">แอปเดียว</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">กำลังบันทึกภาพหน้าจอไปยังโปรไฟล์งาน…</string>
   <string name="screenshot_scroll_label">จับภาพได้มากขึ้น</string>
   <string name="screenshot_share_description">แชร์ภาพหน้าจอ</string>
-  <string name="screenshot_share_label">แชร์</string>
   <string name="screenshot_text">ภาพหน้าจอ</string>
   <string name="screenshot_top_boundary_pct">ขอบเขตด้านบน %1$d เปอร์เซ็นต์</string>
+  <string name="screenshot_view_description">ดูภาพหน้าจอ</string>
   <string name="screenshot_work_profile_notification">บันทึกไว้ที่ %1$s ในโปรไฟล์งาน</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">เซ็นเซอร์ลายนิ้วมืออยู่ที่ปุ่มเปิด/ปิด ซึ่งเป็นปุ่มแบนข้างปุ่มนูนที่ใช้ปรับระดับเสียงตรงบริเวณขอบของโทรศัพท์</string>
   <string name="see_all_bluetooth_devices">ดูทั้งหมด</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">กำหนดแอปการจดบันทึกเริ่มต้นในการตั้งค่า</string>
   <string name="settings_label">การตั้งค่า</string>
   <string name="settingslib_learn_more_text">ดูข้อมูลเพิ่มเติม</string>
+  <string name="severe_battery_notification_switch_text">เปลี่ยนไปใช้โหมดประหยัดแบตเตอรี่สูงสุดไหม 
+
+ระบบจะหยุดแอปที่ไม่จำเป็นทั้งหมดและการแจ้งเตือนของแอปเหล่านั้นไว้ชั่วคราว</string>
+  <string name="severe_battery_notification_text">เปิดโหมดประหยัดแบตเตอรี่สูงสุด ระบบจะหยุดแอปที่ไม่จำเป็นทั้งหมดไว้ชั่วคราว</string>
+  <string name="severe_battery_notification_title">แบตเตอรี่เหลืออยู่ %s</string>
+  <string name="severe_low_battery_dialog_switch_action_text">เปลี่ยน</string>
   <string name="share_to_app_stop_dialog_button">หยุดแชร์</string>
   <string name="share_to_app_stop_dialog_message_specific_app">คุณจะหยุดการแชร์ &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">หยุดแชร์หน้าจอไหม</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- อ่านข้อมูลจาก %1$s ได้</string>
   <string name="slice_permission_text_2">- ดำเนินการใน %1$s ได้</string>
   <string name="slice_permission_title">อนุญาตให้ %1$s แสดงส่วนต่างๆ ของ %2$s</string>
+  <string name="smartspace_content_desc">ข้อมูลโดยย่อ</string>
+  <string name="smartspace_flight_qr_code">คิวอาร์โค้ด</string>
+  <string name="smartspace_role_desc">ดู</string>
   <string name="snoozeHourOptions">{count,plural, =1{# ชั่วโมง}=2{# ชั่วโมง}other{# ชั่วโมง}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# นาที}other{# นาที}}</string>
   <string name="snooze_undo">เลิกทำ</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">ช้า</string>
   <string name="speed_label_very_fast">เร็วมาก</string>
   <string name="split_screen_text">แยกหน้าจอ</string>
+  <string name="squeeze_invocation_prompt">บีบเพื่อพูด</string>
+  <string name="standard_battery_saver_text">มาตรฐาน</string>
   <string name="start_dreams">ภาพพักหน้าจอ</string>
   <string name="state_empty">ว่าง</string>
   <string name="state_off">ปิดอยู่</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">แท็บ</string>
   <string name="tap_a_network_to_connect">แตะเครือข่ายเพื่อเชื่อมต่อ</string>
   <string name="tap_again">แตะอีกครั้ง</string>
+  <string name="temp_defender_notify_des">การชาร์จจะกลับมาทำงานอีกครั้งเมื่ออุณหภูมิของโทรศัพท์กลับมาเป็นปกติ</string>
+  <string name="temp_defender_notify_title">หยุดการชาร์จชั่วคราวเพื่อถนอมแบตเตอรี่</string>
   <string name="template_percent">%1$d เปอร์เซ็นต์</string>
   <string name="thermal">ความร้อน</string>
   <string name="thermal_shutdown_dialog_help_text">ดูขั้นตอนในการดูแลรักษา</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">เข้าถึงวิดเจ็ตแอปโปรดได้อย่างรวดเร็วโดยไม่ต้องปลดล็อกแท็บเล็ต</string>
   <string name="title_usb_accessory">อุปกรณ์เสริม USB</string>
   <string name="to_switch_networks_disconnect_ethernet">ตัดการเชื่อมต่ออีเทอร์เน็ตเพื่อสลับเครือข่าย</string>
+  <string name="too_hot_label">Pixel ร้อนเกินไป</string>
   <string name="touch_filtered_warning">เนื่องจากแอปหนึ่งได้บดบังคำขอสิทธิ์ ระบบจึงไม่สามารถยืนยันคำตอบของคุณสำหรับการตั้งค่าได้</string>
   <string name="touchpad_tutorial_action_key_button">ปุ่มดำเนินการ</string>
   <string name="touchpad_tutorial_back_gesture_button">ท่าทางสัมผัสสำหรับย้อนกลับ</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">เมนู</string>
   <string name="tuner_minus">เครื่องหมายลบ</string>
   <string name="tuner_other_apps">แอปอื่นๆ</string>
+  <string name="tuner_persistent_warning">ฟีเจอร์รุ่นทดลองเหล่านี้อาจมีการเปลี่ยนแปลง ขัดข้อง หรือหายไปในเวอร์ชันอนาคต โปรดดำเนินการด้วยความระมัดระวัง</string>
   <string name="tuner_plus">เครื่องหมายบวก</string>
   <string name="tuner_right">ขวา</string>
   <string name="tuner_time">เวลา</string>
+  <string name="tuner_warning">ตัวรับสัญญาณ UI ระบบช่วยให้คุณมีวิธีพิเศษในการปรับแต่งและกำหนดค่าส่วนติดต่อผู้ใช้ Android ฟีเจอร์รุ่นทดลองเหล่านี้อาจมีการเปลี่ยนแปลง ขัดข้อง หรือหายไปในเวอร์ชันอนาคต โปรดดำเนินการด้วยความระมัดระวัง</string>
+  <string name="tuner_warning_title">เพลิดเพลินกับบางส่วนแต่ไม่ใช่ทั้งหมด</string>
   <string name="turn_off_airplane_mode">ปิดโหมดบนเครื่องบิน</string>
   <string name="turn_on_bluetooth">ใช้บลูทูธ</string>
   <string name="turn_on_bluetooth_auto_info_disabled">ฟีเจอร์ต่างๆ เช่น Quick Share และ "หาอุปกรณ์ของฉัน" ใช้บลูทูธ</string>
   <string name="turn_on_bluetooth_auto_info_enabled">บลูทูธจะเปิดพรุ่งนี้เช้า</string>
   <string name="turn_on_bluetooth_auto_tomorrow">เปิดอัตโนมัติในวันพรุ่งนี้</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">ค่าเริ่มต้นของทีวี</string>
   <string name="two_weeks_timestamp">2 สัปดาห์ที่ผ่านมา</string>
   <string name="unknown">ไม่ทราบ</string>
   <string name="unlock_to_see_notif_text">ปลดล็อกเพื่อดูการแจ้งเตือนเก่า</string>
@@ -1552,7 +1624,9 @@
   <string name="volume_odi_captions_hint_enable">เปิดใช้</string>
   <string name="volume_odi_captions_tip">แสดงคำบรรยายสื่อโดยอัตโนมัติ</string>
   <string name="volume_panel_captioning_title">คำบรรยายสด</string>
+  <string name="volume_panel_clear_calling_title">การโทรเสียงคมชัด</string>
   <string name="volume_panel_collapsed_sliders">ยุบแถบเลื่อนระดับเสียงแล้ว</string>
+  <string name="volume_panel_device_settings_title">การตั้งค่าอุปกรณ์</string>
   <string name="volume_panel_dialog_settings_button">การตั้งค่า</string>
   <string name="volume_panel_enter_media_output_settings">เข้าสู่การตั้งค่าเอาต์พุต</string>
   <string name="volume_panel_expanded_sliders">ขยายแถบเลื่อนระดับเสียงแล้ว</string>
@@ -1667,6 +1741,9 @@
   <string name="wifitrackerlib_wifi_standard_unknown">ไม่ทราบ</string>
   <string name="wifitrackerlib_wifi_unmetered_label">ไม่มีการวัดปริมาณอินเทอร์เน็ต</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi จะไม่เชื่อมต่ออัตโนมัติในตอนนี้</string>
+  <string name="wireless_charging_label">กำลังชาร์จแบบไร้สาย</string>
+  <string name="wireless_charging_notification_text">การชาร์จแบบไร้สายอาจใช้พลังงานมากกว่าการชาร์จด้วยสาย ลองเปลี่ยนไปใช้ที่ชาร์จแบบมีสายเพื่อประหยัดไฟฟ้าและเวลา</string>
+  <string name="wireless_charging_notification_title">กำลังชาร์จแบบไร้สาย</string>
   <string name="work_challenge_emergency_button_text">ฉุกเฉิน</string>
   <string name="work_mode_off_title">ยกเลิกการหยุดแอปงานชั่วคราวไหม</string>
   <string name="work_mode_turn_on">ยกเลิกการหยุดชั่วคราว</string>

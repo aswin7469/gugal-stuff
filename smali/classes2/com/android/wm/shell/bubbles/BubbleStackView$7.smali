@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/BubbleStackView$7;
 .super Lcom/android/wm/shell/common/bubbles/RelativeTouchListener;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -46,23 +46,23 @@
     iget-object p0, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
     .line 8
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 10
-    invoke-virtual {p0, v0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->animateStashedState(Z)V
+    invoke-static {}, Lcom/android/wm/shell/Flags;->enableBubbleStashing()V
 
-    .line 11
+    .line 13
     return-void
 
-    .line 14
+    .line 16
     nop
 
-    .line 15
+    .line 17
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 16
+    .line 18
 .end method
 
 .method public final onDown(Landroid/view/View;Landroid/view/MotionEvent;)Z
@@ -109,7 +109,7 @@
     iget-object v1, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mFlyout:Lcom/android/wm/shell/bubbles/BubbleFlyoutView;
 
     .line 28
-    iget-object v0, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mHideFlyout:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda0;
+    iget-object v0, v0, Lcom/android/wm/shell/bubbles/BubbleStackView;->mHideFlyout:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda2;
 
     .line 30
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
@@ -796,13 +796,13 @@
     invoke-virtual {v1, v3, v5, v6, v4}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->spring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FFLcom/android/wm/shell/shared/animation/PhysicsAnimator$SpringConfig;)V
 
     .line 101
-    new-instance v3, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda34;
+    new-instance v3, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda8;
 
     .line 104
     const/4 v4, 0x2
 
     .line 106
-    invoke-direct {v3, v0, v4}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda34;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;I)V
+    invoke-direct {v3, v0, v4}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda8;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;I)V
 
     .line 107
     iget-object v4, v1, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->updateListeners:Ljava/util/ArrayList;
@@ -1280,10 +1280,10 @@
     const/4 v0, 0x0
 
     .line 2
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     .line 3
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     .line 4
     iget v3, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->$r8$classId:I
@@ -1330,14 +1330,14 @@
 
     .line 32
     :goto_0
-    move p2, v1
+    move p2, v2
 
     .line 34
     goto :goto_1
 
     .line 35
     :cond_0
-    move p2, v2
+    move p2, v1
 
     .line 36
     goto :goto_1
@@ -1391,14 +1391,14 @@
 
     .line 62
     :goto_2
-    move p3, v1
+    move p3, v2
 
     .line 64
     goto :goto_3
 
     .line 65
     :cond_2
-    move p3, v2
+    move p3, v1
 
     .line 66
     goto :goto_3
@@ -1443,14 +1443,14 @@
 
     .line 87
     :goto_4
-    move p1, v1
+    move p1, v2
 
     .line 89
     goto :goto_5
 
     .line 90
     :cond_4
-    move p1, v2
+    move p1, v1
 
     .line 91
     goto :goto_5
@@ -1467,293 +1467,292 @@
 
     .line 97
     :goto_5
-    if-nez p2, :cond_7
+    if-nez p2, :cond_6
 
     .line 98
-    if-eqz p3, :cond_6
+    if-eqz p3, :cond_7
 
     .line 100
-    if-nez p1, :cond_6
+    if-nez p1, :cond_7
 
     .line 102
-    goto :goto_6
-
-    .line 104
     :cond_6
     move v1, v2
 
-    .line 105
+    .line 104
     :cond_7
-    :goto_6
     iget-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 106
+    .line 105
     iget-object p2, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mFlyout:Lcom/android/wm/shell/bubbles/BubbleFlyoutView;
 
-    .line 108
-    iget-object p1, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mHideFlyout:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda0;
+    .line 107
+    iget-object p1, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mHideFlyout:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda2;
 
-    .line 110
+    .line 109
     invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 112
+    .line 111
     iget-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 115
+    .line 114
     invoke-virtual {p1, p5, v1}, Lcom/android/wm/shell/bubbles/BubbleStackView;->animateFlyoutCollapsed(FZ)V
 
-    .line 117
+    .line 116
     iget-object p0, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 120
+    .line 119
     invoke-virtual {p0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->maybeShowStackEdu()Z
 
-    .line 122
+    .line 121
     return-void
 
-    .line 125
+    .line 124
     :pswitch_1
     iget-object v3, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 126
+    .line 125
     iget-boolean v4, v3, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsExpansionAnimating:Z
 
-    .line 128
+    .line 127
     if-eqz v4, :cond_8
 
-    .line 130
-    goto/16 :goto_b
+    .line 129
+    goto/16 :goto_a
 
-    .line 132
+    .line 131
     :cond_8
     iget-boolean v4, v3, Lcom/android/wm/shell/bubbles/BubbleStackView;->mShowedUserEducationInTouchListenerActive:Z
 
-    .line 134
+    .line 133
     if-eqz v4, :cond_9
 
-    .line 136
-    iput-boolean v2, v3, Lcom/android/wm/shell/bubbles/BubbleStackView;->mShowedUserEducationInTouchListenerActive:Z
+    .line 135
+    iput-boolean v1, v3, Lcom/android/wm/shell/bubbles/BubbleStackView;->mShowedUserEducationInTouchListenerActive:Z
 
-    .line 138
-    goto/16 :goto_b
+    .line 137
+    goto/16 :goto_a
 
-    .line 140
+    .line 139
     :cond_9
     iget-object v3, v3, Lcom/android/wm/shell/bubbles/BubbleStackView;->mMagnetizedObject:Lcom/android/wm/shell/common/magnetictarget/MagnetizedObject;
 
-    .line 142
+    .line 141
     const/4 v4, 0x0
 
-    .line 144
+    .line 143
     if-eqz v3, :cond_a
 
-    .line 145
+    .line 144
     invoke-virtual {v3, p2}, Lcom/android/wm/shell/common/magnetictarget/MagnetizedObject;->maybeConsumeMotionEvent(Landroid/view/MotionEvent;)Z
 
-    .line 147
+    .line 146
     move-result p2
 
-    .line 150
+    .line 149
     if-eqz p2, :cond_a
 
-    .line 151
-    goto/16 :goto_a
+    .line 150
+    goto/16 :goto_9
 
-    .line 153
+    .line 152
     :cond_a
     iget-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 155
+    .line 154
     iget-object v3, p2, Lcom/android/wm/shell/bubbles/BubbleStackView;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
 
-    .line 157
+    .line 156
     iget-boolean v3, v3, Lcom/android/wm/shell/bubbles/BubbleData;->mExpanded:Z
 
-    .line 159
+    .line 158
     if-eqz v3, :cond_c
 
-    .line 161
+    .line 160
     iget-object p2, p2, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedAnimationController:Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;
 
-    .line 163
+    .line 162
     invoke-virtual {p2, p1, p5, p6}, Lcom/android/wm/shell/bubbles/animation/ExpandedAnimationController;->snapBubbleBack(Landroid/view/View;FF)V
 
-    .line 165
+    .line 164
     iget-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 168
+    .line 167
     iget-boolean p2, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewTemporarilyHidden:Z
 
-    .line 170
+    .line 169
     if-nez p2, :cond_b
 
-    .line 172
-    goto :goto_9
+    .line 171
+    goto :goto_8
+
+    .line 173
+    :cond_b
+    iput-boolean v1, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewTemporarilyHidden:Z
 
     .line 174
-    :cond_b
-    iput-boolean v2, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewTemporarilyHidden:Z
-
-    .line 175
     iget-object p2, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewContainerMatrix:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;
 
-    .line 177
+    .line 176
     sget-object p3, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->onAnimatorCreated:Lkotlin/jvm/functions/Function2;
 
-    .line 179
+    .line 178
     invoke-static {p2}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator$Companion;->getInstance(Ljava/lang/Object;)Lcom/android/wm/shell/shared/animation/PhysicsAnimator;
 
-    .line 181
+    .line 180
     move-result-object p2
 
-    .line 184
+    .line 183
     sget-object p3, Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;->SCALE_X:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix$1;
 
-    .line 185
+    .line 184
     iget-object p4, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mScaleOutSpringConfig:Lcom/android/wm/shell/shared/animation/PhysicsAnimator$SpringConfig;
 
-    .line 187
+    .line 186
     const p5, 0x43f9ffff    # 499.99997f
 
-    .line 189
+    .line 188
     invoke-virtual {p2, p3, p5, v0, p4}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->spring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FFLcom/android/wm/shell/shared/animation/PhysicsAnimator$SpringConfig;)V
 
-    .line 192
+    .line 191
     sget-object p3, Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix;->SCALE_Y:Lcom/android/wm/shell/bubbles/animation/AnimatableScaleMatrix$1;
 
-    .line 195
+    .line 194
     iget-object p4, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mScaleOutSpringConfig:Lcom/android/wm/shell/shared/animation/PhysicsAnimator$SpringConfig;
 
-    .line 197
+    .line 196
     invoke-virtual {p2, p3, p5, v0, p4}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->spring(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FFLcom/android/wm/shell/shared/animation/PhysicsAnimator$SpringConfig;)V
 
-    .line 199
-    new-instance p3, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda34;
+    .line 198
+    new-instance p3, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda8;
 
-    .line 202
-    invoke-direct {p3, p1, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda34;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;I)V
+    .line 201
+    invoke-direct {p3, p1, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda8;-><init>(Lcom/android/wm/shell/bubbles/BubbleStackView;I)V
 
-    .line 204
+    .line 203
     iget-object p4, p2, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->updateListeners:Ljava/util/ArrayList;
 
-    .line 207
+    .line 206
     invoke-virtual {p4, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 209
+    .line 208
     invoke-virtual {p2}, Lcom/android/wm/shell/shared/animation/PhysicsAnimator;->start()V
 
-    .line 212
+    .line 211
     iget-object p1, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mExpandedViewAlphaAnimator:Landroid/animation/ValueAnimator;
 
-    .line 215
+    .line 214
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 217
-    goto :goto_9
+    .line 216
+    goto :goto_8
 
-    .line 220
+    .line 219
     :cond_c
     iget-boolean p1, p2, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackOnLeftOrWillBe:Z
 
-    .line 221
+    .line 220
     iget-object v3, p2, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackAnimationController:Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
 
-    .line 223
+    .line 222
     add-float/2addr p3, p4
 
-    .line 225
+    .line 224
     invoke-virtual {v3, p3, p5, p6}, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->flingStackThenSpringToEdge(FFF)F
 
-    .line 226
+    .line 225
     move-result p3
 
-    .line 229
+    .line 228
     cmpg-float p3, p3, v0
 
-    .line 230
+    .line 229
     if-gtz p3, :cond_d
 
-    .line 232
-    move p3, v1
-
-    .line 234
-    goto :goto_7
-
-    .line 235
-    :cond_d
+    .line 231
     move p3, v2
 
-    .line 236
-    :goto_7
+    .line 233
+    goto :goto_6
+
+    .line 234
+    :cond_d
+    move p3, v1
+
+    .line 235
+    :goto_6
     iput-boolean p3, p2, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackOnLeftOrWillBe:Z
 
-    .line 237
+    .line 236
     iget-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 239
+    .line 238
     iget-boolean p3, p2, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackOnLeftOrWillBe:Z
 
-    .line 241
+    .line 240
     if-eq p1, p3, :cond_e
 
-    .line 243
-    goto :goto_8
+    .line 242
+    goto :goto_7
+
+    .line 244
+    :cond_e
+    move v2, v1
 
     .line 245
-    :cond_e
-    move v1, v2
+    :goto_7
+    invoke-virtual {p2, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateBadges(Z)V
 
     .line 246
-    :goto_8
-    invoke-virtual {p2, v1}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateBadges(Z)V
-
-    .line 247
     iget-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 250
+    .line 249
     const/4 p2, 0x7
 
-    .line 252
+    .line 251
     invoke-virtual {p1, v4, p2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->logBubbleEvent(Lcom/android/wm/shell/bubbles/BubbleViewProvider;I)V
 
-    .line 253
+    .line 252
+    :goto_8
+    iget-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
+
+    .line 255
+    iget-object p1, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mDismissView:Lcom/android/wm/shell/common/bubbles/DismissView;
+
+    .line 257
+    invoke-virtual {p1}, Lcom/android/wm/shell/common/bubbles/DismissView;->hide()V
+
+    .line 259
     :goto_9
     iget-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 256
-    iget-object p1, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mDismissView:Lcom/android/wm/shell/common/bubbles/DismissView;
+    .line 262
+    iput-boolean v1, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsDraggingStack:Z
 
-    .line 258
-    invoke-virtual {p1}, Lcom/android/wm/shell/common/bubbles/DismissView;->hide()V
-
-    .line 260
-    :goto_a
-    iget-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
-
-    .line 263
-    iput-boolean v2, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mIsDraggingStack:Z
-
-    .line 265
+    .line 264
     iput-object v4, p1, Lcom/android/wm/shell/bubbles/BubbleStackView;->mMagnetizedObject:Lcom/android/wm/shell/common/magnetictarget/MagnetizedObject;
 
-    .line 267
-    invoke-virtual {p1, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateTemporarilyInvisibleAnimation(Z)V
+    .line 266
+    invoke-virtual {p1, v1}, Lcom/android/wm/shell/bubbles/BubbleStackView;->updateTemporarilyInvisibleAnimation(Z)V
 
-    .line 269
+    .line 268
     iget-object p0, p0, Lcom/android/wm/shell/bubbles/BubbleStackView$7;->this$0:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 272
-    invoke-virtual {p0, v2}, Lcom/android/wm/shell/bubbles/BubbleStackView;->animateStashedState(Z)V
+    .line 271
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 274
-    :goto_b
+    .line 273
+    invoke-static {}, Lcom/android/wm/shell/Flags;->enableBubbleStashing()V
+
+    .line 276
+    :goto_a
     return-void
 
-    .line 277
+    .line 279
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 278
+    .line 280
 .end method

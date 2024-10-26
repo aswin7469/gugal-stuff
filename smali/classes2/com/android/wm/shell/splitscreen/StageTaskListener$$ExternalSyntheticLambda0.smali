@@ -1,26 +1,26 @@
 .class public final synthetic Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Lcom/android/wm/shell/common/SyncTransactionQueue$TransactionRunnable;
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
 .field public final synthetic $r8$classId:I
 
-.field public final synthetic f$0:Lcom/android/wm/shell/splitscreen/StageTaskListener;
+.field public final synthetic f$0:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/wm/shell/splitscreen/StageTaskListener;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
     .line 1
-    iput p2, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;->$r8$classId:I
+    iput p1, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;->$r8$classId:I
 
     .line 2
-    iput-object p1, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;->f$0:Lcom/android/wm/shell/splitscreen/StageTaskListener;
+    iput-object p2, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;->f$0:Ljava/lang/Object;
 
     .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -32,102 +32,73 @@
 
 
 # virtual methods
-.method public final runWithTransaction(Landroid/view/SurfaceControl$Transaction;)V
-    .locals 3
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;->f$0:Lcom/android/wm/shell/splitscreen/StageTaskListener;
+    iget v0, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;->$r8$classId:I
 
     .line 2
-    iget p0, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;->$r8$classId:I
+    iget-object p0, p0, Lcom/android/wm/shell/splitscreen/StageTaskListener$$ExternalSyntheticLambda0;->f$0:Ljava/lang/Object;
 
     .line 4
-    packed-switch p0, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
     .line 6
-    iget-object p0, v0, Lcom/android/wm/shell/splitscreen/StageTaskListener;->mDimLayer:Landroid/view/SurfaceControl;
+    check-cast p0, Landroid/window/WindowContainerToken;
 
     .line 9
-    invoke-virtual {p1, p0}, Landroid/view/SurfaceControl$Transaction;->remove(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
+    check-cast p1, Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 11
-    iget-object p0, v0, Lcom/android/wm/shell/splitscreen/StageTaskListener;->mSplitDecorManager:Lcom/android/wm/shell/common/split/SplitDecorManager;
+    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 14
-    invoke-virtual {p0, p1}, Lcom/android/wm/shell/common/split/SplitDecorManager;->release(Landroid/view/SurfaceControl$Transaction;)V
+    .line 13
+    invoke-virtual {p1, p0}, Landroid/window/WindowContainerToken;->equals(Ljava/lang/Object;)Z
 
-    .line 16
-    return-void
+    .line 15
+    move-result p0
+
+    .line 18
+    return p0
 
     .line 19
     :pswitch_0
-    iget-object p0, v0, Lcom/android/wm/shell/splitscreen/StageTaskListener;->mSplitDecorManager:Lcom/android/wm/shell/common/split/SplitDecorManager;
+    check-cast p0, Landroid/os/IBinder;
 
     .line 20
-    invoke-virtual {p0, p1}, Lcom/android/wm/shell/common/split/SplitDecorManager;->release(Landroid/view/SurfaceControl$Transaction;)V
+    check-cast p1, Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 22
-    return-void
+    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 25
-    :pswitch_1
-    iget-object p0, v0, Lcom/android/wm/shell/splitscreen/StageTaskListener;->mRootLeash:Landroid/view/SurfaceControl;
+    .line 24
+    invoke-virtual {p1}, Landroid/window/WindowContainerToken;->asBinder()Landroid/os/IBinder;
 
     .line 26
-    iget-object v1, v0, Lcom/android/wm/shell/splitscreen/StageTaskListener;->mSurfaceSession:Landroid/view/SurfaceSession;
-
-    .line 28
-    const-string v2, "Dim layer"
-
-    .line 30
-    invoke-static {p0, v2, v1}, Lcom/android/wm/shell/common/SurfaceUtils;->makeColorLayer(Landroid/view/SurfaceControl;Ljava/lang/String;Landroid/view/SurfaceSession;)Landroid/view/SurfaceControl;
-
-    .line 32
-    move-result-object p0
-
-    .line 35
-    const v1, 0x7fffffff
-
-    .line 36
-    invoke-virtual {p1, p0, v1}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
-
-    .line 39
     move-result-object p1
 
-    .line 42
-    const/4 v1, 0x3
+    .line 29
+    if-ne p1, p0, :cond_0
 
-    .line 43
-    new-array v1, v1, [F
+    .line 30
+    const/4 p0, 0x1
 
-    .line 44
-    fill-array-data v1, :array_0
+    .line 32
+    goto :goto_0
 
-    .line 46
-    invoke-virtual {p1, p0, v1}, Landroid/view/SurfaceControl$Transaction;->setColor(Landroid/view/SurfaceControl;[F)Landroid/view/SurfaceControl$Transaction;
+    .line 33
+    :cond_0
+    const/4 p0, 0x0
 
-    .line 49
-    iput-object p0, v0, Lcom/android/wm/shell/splitscreen/StageTaskListener;->mDimLayer:Landroid/view/SurfaceControl;
+    .line 34
+    :goto_0
+    return p0
 
-    .line 52
-    return-void
-
-    .line 54
-    nop
-
-    .line 55
+    .line 35
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
-
-    .line 56
-    :array_0
-    .array-data 4
-        0x0
-        0x0
-        0x0
-    .end array-data
-    .line 64
+    .line 36
 .end method

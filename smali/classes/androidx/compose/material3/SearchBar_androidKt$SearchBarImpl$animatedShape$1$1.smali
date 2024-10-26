@@ -1,6 +1,6 @@
 .class final Landroidx/compose/material3/SearchBar_androidKt$SearchBarImpl$animatedShape$1$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -78,108 +78,102 @@
     int-to-float v6, v6
 
     .line 25
-    iget-object v0, v0, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {v0}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 26
-    iget-object v0, v0, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 28
-    invoke-virtual {v0}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 30
     move-result-object v0
 
-    .line 33
+    .line 29
     check-cast v0, Ljava/lang/Number;
 
-    .line 34
+    .line 30
     invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
 
-    .line 36
+    .line 32
     move-result v0
 
-    .line 39
+    .line 35
     sub-float/2addr v6, v0
 
-    .line 40
+    .line 36
     mul-float/2addr v6, v5
 
-    .line 41
+    .line 37
     invoke-interface {v4, v6}, Landroidx/compose/ui/unit/Density;->toPx-0680j_4(F)F
 
-    .line 42
+    .line 38
     move-result v0
 
-    .line 45
+    .line 41
     const-wide/16 v4, 0x0
 
-    .line 46
+    .line 42
     invoke-static {v4, v5, v2, v3}, Landroidx/compose/ui/geometry/RectKt;->Rect-tz77jQw(JJ)Landroidx/compose/ui/geometry/Rect;
 
-    .line 48
+    .line 44
     move-result-object v2
 
-    .line 51
+    .line 47
     invoke-static {v0, v0}, Landroidx/compose/ui/geometry/CornerRadiusKt;->CornerRadius(FF)J
 
-    .line 52
+    .line 48
     move-result-wide v3
 
-    .line 55
+    .line 51
     invoke-static {v3, v4}, Landroidx/compose/ui/geometry/CornerRadius;->getX-impl(J)F
 
-    .line 56
+    .line 52
     move-result v0
 
-    .line 59
+    .line 55
     invoke-static {v3, v4}, Landroidx/compose/ui/geometry/CornerRadius;->getY-impl(J)F
 
-    .line 60
+    .line 56
     move-result v3
 
-    .line 63
+    .line 59
     invoke-static {v0, v3}, Landroidx/compose/ui/geometry/CornerRadiusKt;->CornerRadius(FF)J
 
-    .line 64
+    .line 60
     move-result-wide v15
 
-    .line 67
+    .line 63
     new-instance v0, Landroidx/compose/ui/geometry/RoundRect;
 
-    .line 68
+    .line 64
     iget v5, v2, Landroidx/compose/ui/geometry/Rect;->left:F
 
-    .line 70
+    .line 66
     iget v6, v2, Landroidx/compose/ui/geometry/Rect;->top:F
 
-    .line 72
+    .line 68
     iget v7, v2, Landroidx/compose/ui/geometry/Rect;->right:F
 
-    .line 74
+    .line 70
     iget v8, v2, Landroidx/compose/ui/geometry/Rect;->bottom:F
 
-    .line 76
+    .line 72
     move-object v4, v0
 
-    .line 78
+    .line 74
     move-wide v9, v15
 
-    .line 79
+    .line 75
     move-wide v11, v15
 
-    .line 80
+    .line 76
     move-wide v13, v15
 
-    .line 81
+    .line 77
     invoke-direct/range {v4 .. v16}, Landroidx/compose/ui/geometry/RoundRect;-><init>(FFFFJJJJ)V
 
-    .line 82
+    .line 78
     invoke-static {v1, v0}, Landroidx/compose/ui/graphics/Path;->addRoundRect$default(Landroidx/compose/ui/graphics/Path;Landroidx/compose/ui/geometry/RoundRect;)V
 
-    .line 85
+    .line 81
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 88
+    .line 84
     return-object v0
-    .line 90
+    .line 86
 .end method

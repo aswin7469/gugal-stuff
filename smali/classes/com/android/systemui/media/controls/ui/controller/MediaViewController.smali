@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/ui/controller/MediaViewController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -993,7 +993,7 @@
     iget-object v0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->context:Landroid/content/Context;
 
     .line 16
-    const v1, 0x7f180008    # @xml/media_recommendations_collapsed 'res/xml/media_recommendations_collapsed.xml'
+    const v1, 0x7f17000b    # @xml/media_recommendations_collapsed 'res/xml/media_recommendations_collapsed.xml'
 
     .line 18
     invoke-virtual {p1, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->load(ILandroid/content/Context;)V
@@ -1005,7 +1005,7 @@
     iget-object v0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->context:Landroid/content/Context;
 
     .line 26
-    const v1, 0x7f180009    # @xml/media_recommendations_expanded 'res/xml/media_recommendations_expanded.xml'
+    const v1, 0x7f17000c    # @xml/media_recommendations_expanded 'res/xml/media_recommendations_expanded.xml'
 
     .line 28
     invoke-virtual {p1, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->load(ILandroid/content/Context;)V
@@ -1021,7 +1021,7 @@
     iget-object v0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->context:Landroid/content/Context;
 
     .line 37
-    const v1, 0x7f18000a    # @xml/media_session_collapsed 'res/xml/media_session_collapsed.xml'
+    const v1, 0x7f17000d    # @xml/media_session_collapsed 'res/xml/media_session_collapsed.xml'
 
     .line 39
     invoke-virtual {p1, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->load(ILandroid/content/Context;)V
@@ -1033,7 +1033,7 @@
     iget-object v0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->context:Landroid/content/Context;
 
     .line 47
-    const v1, 0x7f18000b    # @xml/media_session_expanded 'res/xml/media_session_expanded.xml'
+    const v1, 0x7f17000e    # @xml/media_session_expanded 'res/xml/media_session_expanded.xml'
 
     .line 49
     invoke-virtual {p1, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->load(ILandroid/content/Context;)V
@@ -1060,630 +1060,627 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 5
-    invoke-static {}, Lcom/android/systemui/media/controls/util/MediaFlags;->isSceneContainerEnabled()V
-
-    .line 8
     const/4 v1, 0x0
 
-    .line 11
+    .line 8
     if-eqz p1, :cond_16
 
-    .line 12
+    .line 9
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getMeasurementInput()Lcom/android/systemui/util/animation/MeasurementInput;
 
-    .line 14
+    .line 11
     move-result-object v2
 
-    .line 17
+    .line 14
     if-nez v2, :cond_0
 
-    .line 18
+    .line 15
     goto/16 :goto_d
 
-    .line 20
+    .line 17
     :cond_0
     iget-boolean v2, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->isGutsVisible:Z
 
-    .line 22
+    .line 19
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getMeasurementInput()Lcom/android/systemui/util/animation/MeasurementInput;
 
-    .line 24
+    .line 21
     move-result-object v3
 
-    .line 27
+    .line 24
     const/4 v4, 0x0
 
-    .line 28
+    .line 25
     if-eqz v3, :cond_1
 
-    .line 29
+    .line 26
     iget v3, v3, Lcom/android/systemui/util/animation/MeasurementInput;->heightMeasureSpec:I
 
-    .line 31
+    .line 28
     goto :goto_0
 
-    .line 33
+    .line 30
     :cond_1
     move v3, v4
 
-    .line 34
+    .line 31
     :goto_0
     iget-object v5, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->tmpKey:Lcom/android/systemui/media/controls/ui/controller/CacheKey;
 
-    .line 35
+    .line 32
     iput v3, v5, Lcom/android/systemui/media/controls/ui/controller/CacheKey;->heightMeasureSpec:I
 
-    .line 37
+    .line 34
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getMeasurementInput()Lcom/android/systemui/util/animation/MeasurementInput;
 
-    .line 39
+    .line 36
     move-result-object v3
 
-    .line 42
+    .line 39
     if-eqz v3, :cond_2
 
-    .line 43
+    .line 40
     iget v3, v3, Lcom/android/systemui/util/animation/MeasurementInput;->widthMeasureSpec:I
 
-    .line 45
+    .line 42
     goto :goto_1
 
-    .line 47
+    .line 44
     :cond_2
     move v3, v4
 
-    .line 48
+    .line 45
     :goto_1
     iput v3, v5, Lcom/android/systemui/media/controls/ui/controller/CacheKey;->widthMeasureSpec:I
 
-    .line 49
+    .line 46
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getExpansion()F
 
-    .line 51
+    .line 48
     move-result v3
 
-    .line 54
+    .line 51
     iput v3, v5, Lcom/android/systemui/media/controls/ui/controller/CacheKey;->expansion:F
 
-    .line 55
+    .line 52
     iput-boolean v2, v5, Lcom/android/systemui/media/controls/ui/controller/CacheKey;->gutsVisible:Z
 
-    .line 57
+    .line 54
     iget-object v2, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->viewStates:Ljava/util/Map;
 
-    .line 59
+    .line 56
     invoke-interface {v2, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
+    .line 58
     move-result-object v2
 
-    .line 64
+    .line 61
     check-cast v2, Lcom/android/systemui/util/animation/TransitionViewState;
 
-    .line 65
+    .line 62
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 67
+    .line 64
     if-eqz v2, :cond_4
 
-    .line 69
+    .line 66
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getSquishFraction()F
+
+    .line 68
+    move-result p0
 
     .line 71
-    move-result p0
-
-    .line 74
     cmpg-float p0, p0, v3
 
-    .line 75
+    .line 72
     if-gtz p0, :cond_3
 
-    .line 77
+    .line 74
     if-nez p2, :cond_3
 
-    .line 79
+    .line 76
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getSquishFraction()F
 
-    .line 81
+    .line 78
     move-result p0
 
-    .line 84
+    .line 81
     invoke-static {v2, p0}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->squishViewState$frameworks__base__packages__SystemUI__android_common__SystemUI_core(Lcom/android/systemui/util/animation/TransitionViewState;F)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    .line 85
+    .line 82
     move-result-object p0
 
-    .line 88
+    .line 85
     return-object p0
 
-    .line 89
+    .line 86
     :cond_3
     return-object v2
 
-    .line 90
+    .line 87
     :cond_4
     iget v2, v5, Lcom/android/systemui/media/controls/ui/controller/CacheKey;->widthMeasureSpec:I
 
-    .line 91
+    .line 88
     iget v6, v5, Lcom/android/systemui/media/controls/ui/controller/CacheKey;->heightMeasureSpec:I
 
-    .line 93
+    .line 90
     iget v7, v5, Lcom/android/systemui/media/controls/ui/controller/CacheKey;->expansion:F
 
-    .line 95
+    .line 92
     iget-boolean v5, v5, Lcom/android/systemui/media/controls/ui/controller/CacheKey;->gutsVisible:Z
 
-    .line 97
+    .line 94
     new-instance v8, Lcom/android/systemui/media/controls/ui/controller/CacheKey;
 
-    .line 99
+    .line 96
     invoke-direct {v8, v2, v6, v7, v5}, Lcom/android/systemui/media/controls/ui/controller/CacheKey;-><init>(IIFZ)V
 
-    .line 101
+    .line 98
     iget-object v2, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
 
-    .line 104
+    .line 101
     if-nez v2, :cond_5
 
-    .line 106
+    .line 103
     return-object v1
 
-    .line 108
+    .line 105
     :cond_5
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getExpansion()F
 
-    .line 109
+    .line 106
     move-result v2
 
-    .line 112
+    .line 109
     cmpg-float v2, v2, v0
 
-    .line 113
+    .line 110
     if-nez v2, :cond_6
 
-    .line 115
+    .line 112
     goto :goto_2
 
-    .line 117
+    .line 114
     :cond_6
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getExpansion()F
 
-    .line 118
+    .line 115
     move-result v2
 
-    .line 121
+    .line 118
     cmpg-float v2, v2, v3
 
-    .line 122
+    .line 119
     if-nez v2, :cond_14
 
-    .line 124
+    .line 121
     :goto_2
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getExpansion()F
 
-    .line 126
+    .line 123
     move-result v1
 
-    .line 129
+    .line 126
     cmpg-float v1, v1, v3
 
-    .line 130
+    .line 127
     if-nez v1, :cond_8
 
-    .line 132
+    .line 129
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getExpandedMatchesParentHeight()Z
 
-    .line 134
+    .line 131
     move-result v1
 
-    .line 137
+    .line 134
     if-eqz v1, :cond_7
 
-    .line 138
+    .line 135
     goto :goto_3
 
-    .line 140
+    .line 137
     :cond_7
     iget-object v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->context:Landroid/content/Context;
 
-    .line 141
+    .line 138
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 143
+    .line 140
     move-result-object v1
 
-    .line 146
-    const v2, 0x7f0708f7    # @dimen/qs_media_session_height_expanded '184.0dp'
+    .line 143
+    const v2, 0x7f070947    # @dimen/qs_media_session_height_expanded '184.0dp'
 
-    .line 147
+    .line 144
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 150
+    .line 147
     move-result v4
 
-    .line 153
+    .line 150
     :goto_3
     invoke-virtual {p0, v4}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->setBackgroundHeights(I)V
 
-    .line 154
+    .line 151
     :cond_8
     iget-object v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->transitionLayout:Lcom/android/systemui/util/animation/TransitionLayout;
 
-    .line 157
+    .line 154
     invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 159
+    .line 156
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getMeasurementInput()Lcom/android/systemui/util/animation/MeasurementInput;
 
-    .line 162
+    .line 159
     move-result-object v2
 
-    .line 165
+    .line 162
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 166
+    .line 163
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getExpansion()F
 
-    .line 169
+    .line 166
     move-result v4
 
-    .line 172
+    .line 169
     cmpl-float v4, v4, v0
 
-    .line 173
+    .line 170
     if-lez v4, :cond_9
 
-    .line 175
+    .line 172
     iget-object v4, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->expandedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
 
-    .line 177
+    .line 174
     goto :goto_4
 
-    .line 179
+    .line 176
     :cond_9
     iget-object v4, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->collapsedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
 
-    .line 180
+    .line 177
     :goto_4
     new-instance v5, Lcom/android/systemui/util/animation/TransitionViewState;
 
-    .line 182
+    .line 179
     invoke-direct {v5}, Lcom/android/systemui/util/animation/TransitionViewState;-><init>()V
 
-    .line 184
+    .line 181
     invoke-virtual {v1, v2, v4, v5}, Lcom/android/systemui/util/animation/TransitionLayout;->calculateViewState(Lcom/android/systemui/util/animation/MeasurementInput;Landroidx/constraintlayout/widget/ConstraintSet;Lcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    .line 187
+    .line 184
     iget-object v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->type:Lcom/android/systemui/media/controls/ui/controller/MediaViewController$TYPE;
 
-    .line 190
+    .line 187
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 192
+    .line 189
     move-result v1
 
-    .line 195
+    .line 192
     const/4 v2, 0x1
 
-    .line 196
+    .line 193
     if-eqz v1, :cond_b
 
-    .line 197
+    .line 194
     if-ne v1, v2, :cond_a
 
-    .line 199
+    .line 196
     sget-object v1, Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;->controlsIds:Ljava/util/Set;
 
-    .line 201
+    .line 198
     goto :goto_5
 
-    .line 203
+    .line 200
     :cond_a
     new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    .line 204
+    .line 201
     invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    .line 206
+    .line 203
     throw p0
 
-    .line 209
+    .line 206
     :cond_b
     sget-object v1, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->controlsIds:Ljava/util/Set;
 
-    .line 210
+    .line 207
     :goto_5
     sget-object v4, Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;->ids:Ljava/util/Set;
 
-    .line 212
+    .line 209
     check-cast v1, Ljava/lang/Iterable;
 
-    .line 214
+    .line 211
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 216
+    .line 213
     move-result-object v1
 
-    .line 219
+    .line 216
     :cond_c
     :goto_6
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 220
+    .line 217
     move-result v6
 
-    .line 223
+    .line 220
     if-eqz v6, :cond_f
 
-    .line 224
+    .line 221
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 226
+    .line 223
     move-result-object v6
 
-    .line 229
+    .line 226
     check-cast v6, Ljava/lang/Number;
 
-    .line 230
+    .line 227
     invoke-virtual {v6}, Ljava/lang/Number;->intValue()I
 
-    .line 232
+    .line 229
     move-result v6
 
-    .line 235
+    .line 232
     iget-object v7, v5, Lcom/android/systemui/util/animation/TransitionViewState;->widgetStates:Ljava/util/Map;
 
-    .line 236
+    .line 233
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 238
+    .line 235
     move-result-object v6
 
-    .line 241
+    .line 238
     invoke-interface {v7, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
+    .line 239
     move-result-object v6
 
-    .line 245
+    .line 242
     check-cast v6, Lcom/android/systemui/util/animation/WidgetState;
 
-    .line 246
+    .line 243
     if-eqz v6, :cond_c
 
-    .line 248
+    .line 245
     iget-boolean v7, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->isGutsVisible:Z
 
-    .line 250
+    .line 247
     if-eqz v7, :cond_d
 
-    .line 252
+    .line 249
     move v9, v0
 
-    .line 254
+    .line 251
     goto :goto_7
 
-    .line 255
+    .line 252
     :cond_d
     iget v9, v6, Lcom/android/systemui/util/animation/WidgetState;->alpha:F
 
-    .line 256
+    .line 253
     :goto_7
     iput v9, v6, Lcom/android/systemui/util/animation/WidgetState;->alpha:F
 
-    .line 258
+    .line 255
     if-eqz v7, :cond_e
 
-    .line 260
+    .line 257
     move v7, v2
 
-    .line 262
+    .line 259
     goto :goto_8
 
-    .line 263
+    .line 260
     :cond_e
     iget-boolean v7, v6, Lcom/android/systemui/util/animation/WidgetState;->gone:Z
 
-    .line 264
+    .line 261
     :goto_8
     iput-boolean v7, v6, Lcom/android/systemui/util/animation/WidgetState;->gone:Z
 
-    .line 266
+    .line 263
     goto :goto_6
 
-    .line 268
+    .line 265
     :cond_f
     check-cast v4, Ljava/lang/Iterable;
 
-    .line 269
+    .line 266
     invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 271
+    .line 268
     move-result-object v1
 
-    .line 274
+    .line 271
     :cond_10
     :goto_9
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 275
+    .line 272
     move-result v4
 
-    .line 278
+    .line 275
     if-eqz v4, :cond_13
 
-    .line 279
+    .line 276
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 281
+    .line 278
     move-result-object v4
 
-    .line 284
+    .line 281
     check-cast v4, Ljava/lang/Number;
 
-    .line 285
+    .line 282
     invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
 
-    .line 287
+    .line 284
     move-result v4
 
-    .line 290
+    .line 287
     iget-object v6, v5, Lcom/android/systemui/util/animation/TransitionViewState;->widgetStates:Ljava/util/Map;
 
-    .line 291
+    .line 288
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 293
+    .line 290
     move-result-object v4
 
-    .line 296
+    .line 293
     invoke-interface {v6, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 297
+    .line 294
     move-result-object v4
 
-    .line 300
+    .line 297
     check-cast v4, Lcom/android/systemui/util/animation/WidgetState;
 
-    .line 301
+    .line 298
     if-eqz v4, :cond_10
 
-    .line 303
+    .line 300
     iget-boolean v6, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->isGutsVisible:Z
 
-    .line 305
+    .line 302
     if-eqz v6, :cond_11
 
-    .line 307
+    .line 304
     iget v7, v4, Lcom/android/systemui/util/animation/WidgetState;->alpha:F
 
-    .line 309
+    .line 306
     goto :goto_a
 
-    .line 311
+    .line 308
     :cond_11
     move v7, v0
 
-    .line 312
+    .line 309
     :goto_a
     iput v7, v4, Lcom/android/systemui/util/animation/WidgetState;->alpha:F
 
-    .line 313
+    .line 310
     if-eqz v6, :cond_12
 
-    .line 315
+    .line 312
     iget-boolean v6, v4, Lcom/android/systemui/util/animation/WidgetState;->gone:Z
 
-    .line 317
+    .line 314
     goto :goto_b
 
-    .line 319
+    .line 316
     :cond_12
     move v6, v2
 
-    .line 320
+    .line 317
     :goto_b
     iput-boolean v6, v4, Lcom/android/systemui/util/animation/WidgetState;->gone:Z
 
-    .line 321
+    .line 318
     goto :goto_9
 
-    .line 323
+    .line 320
     :cond_13
     iget-object p0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->viewStates:Ljava/util/Map;
 
-    .line 324
+    .line 321
     invoke-interface {p0, v8, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 326
+    .line 323
     goto :goto_c
 
-    .line 329
+    .line 326
     :cond_14
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->copy()Lcom/android/systemui/media/controls/ui/view/MediaHost$MediaHostStateHolder;
 
-    .line 330
+    .line 327
     move-result-object v2
 
-    .line 333
+    .line 330
     invoke-virtual {v2, v0}, Lcom/android/systemui/media/controls/ui/view/MediaHost$MediaHostStateHolder;->setExpansion(F)V
 
-    .line 334
+    .line 331
     invoke-virtual {p0, v2, p2}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->obtainViewState(Lcom/android/systemui/media/controls/ui/view/MediaHostState;Z)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    .line 337
+    .line 334
     move-result-object v0
 
-    .line 340
+    .line 337
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->copy()Lcom/android/systemui/media/controls/ui/view/MediaHost$MediaHostStateHolder;
 
-    .line 341
+    .line 338
     move-result-object v2
 
-    .line 344
+    .line 341
     invoke-virtual {v2, v3}, Lcom/android/systemui/media/controls/ui/view/MediaHost$MediaHostStateHolder;->setExpansion(F)V
 
-    .line 345
+    .line 342
     invoke-virtual {p0, v2, p2}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->obtainViewState(Lcom/android/systemui/media/controls/ui/view/MediaHostState;Z)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    .line 348
+    .line 345
     move-result-object v2
 
-    .line 351
+    .line 348
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getExpansion()F
 
-    .line 352
+    .line 349
     move-result v4
 
-    .line 355
+    .line 352
     iget-object p0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->layoutController:Lcom/android/systemui/util/animation/TransitionLayoutController;
 
-    .line 356
+    .line 353
     invoke-virtual {p0, v0, v2, v4, v1}, Lcom/android/systemui/util/animation/TransitionLayoutController;->getInterpolatedState(Lcom/android/systemui/util/animation/TransitionViewState;Lcom/android/systemui/util/animation/TransitionViewState;FLcom/android/systemui/util/animation/TransitionViewState;)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    .line 358
+    .line 355
     move-result-object v5
 
-    .line 361
+    .line 358
     :goto_c
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getSquishFraction()F
 
-    .line 362
+    .line 359
     move-result p0
 
-    .line 365
+    .line 362
     cmpg-float p0, p0, v3
 
-    .line 366
+    .line 363
     if-gtz p0, :cond_15
 
-    .line 368
+    .line 365
     if-nez p2, :cond_15
 
-    .line 370
+    .line 367
     invoke-interface {p1}, Lcom/android/systemui/media/controls/ui/view/MediaHostState;->getSquishFraction()F
 
-    .line 372
+    .line 369
     move-result p0
 
-    .line 375
+    .line 372
     invoke-static {v5, p0}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->squishViewState$frameworks__base__packages__SystemUI__android_common__SystemUI_core(Lcom/android/systemui/util/animation/TransitionViewState;F)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    .line 376
+    .line 373
     move-result-object p0
 
-    .line 379
+    .line 376
     return-object p0
 
-    .line 380
+    .line 377
     :cond_15
     return-object v5
 
-    .line 381
+    .line 378
     :cond_16
     :goto_d
     return-object v1
-    .line 382
+    .line 379
 .end method
 
 .method public final refreshState()V
@@ -1713,135 +1710,132 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 15
-    invoke-static {}, Lcom/android/systemui/media/controls/util/MediaFlags;->isSceneContainerEnabled()V
-
-    .line 18
     iget-object v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->viewStates:Ljava/util/Map;
 
-    .line 21
+    .line 18
     invoke-interface {v1}, Ljava/util/Map;->clear()V
 
-    .line 23
+    .line 20
     iget-boolean v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->firstRefresh:Z
 
-    .line 26
+    .line 23
     if-eqz v1, :cond_2
 
-    .line 28
+    .line 25
     iget-object v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->mediaHostStatesManager:Lcom/android/systemui/media/controls/ui/controller/MediaHostStatesManager;
 
-    .line 30
+    .line 27
     iget-object v1, v1, Lcom/android/systemui/media/controls/ui/controller/MediaHostStatesManager;->mediaHostStates:Ljava/util/Map;
 
-    .line 32
+    .line 29
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    .line 34
+    .line 31
     move-result-object v1
 
-    .line 37
+    .line 34
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    .line 38
+    .line 35
     move-result-object v1
 
-    .line 41
+    .line 38
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 42
+    .line 39
     move-result v2
 
-    .line 45
+    .line 42
     const/4 v3, 0x0
 
-    .line 46
+    .line 43
     if-eqz v2, :cond_1
 
-    .line 47
+    .line 44
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 49
+    .line 46
     move-result-object v2
 
-    .line 52
+    .line 49
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 53
+    .line 50
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    .line 55
+    .line 52
     move-result-object v2
 
-    .line 58
+    .line 55
     check-cast v2, Lcom/android/systemui/media/controls/ui/view/MediaHostState;
 
-    .line 59
+    .line 56
     invoke-virtual {p0, v2, v3}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->obtainViewState(Lcom/android/systemui/media/controls/ui/view/MediaHostState;Z)Lcom/android/systemui/util/animation/TransitionViewState;
 
-    .line 61
+    .line 58
     goto :goto_0
 
-    .line 64
+    .line 61
     :cond_1
     iput-boolean v3, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->firstRefresh:Z
 
-    .line 65
+    .line 62
     goto :goto_1
 
-    .line 67
+    .line 64
     :catchall_0
     move-exception p0
 
-    .line 68
+    .line 65
     goto :goto_2
 
-    .line 69
+    .line 66
     :cond_2
     :goto_1
     iget v2, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->currentStartLocation:I
 
-    .line 70
+    .line 67
     iget v3, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->currentEndLocation:I
 
-    .line 72
+    .line 69
     iget v4, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->currentTransitionProgress:F
 
-    .line 74
+    .line 71
     const/4 v6, 0x0
 
-    .line 76
+    .line 73
     const/4 v5, 0x1
 
-    .line 77
+    .line 74
     move-object v1, p0
 
-    .line 78
+    .line 75
     invoke-virtual/range {v1 .. v6}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->setCurrentState(IIFZZ)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 79
+    .line 76
     if-eqz v0, :cond_3
 
-    .line 82
+    .line 79
     invoke-static {}, Lcom/android/app/tracing/TraceUtilsKt;->endSlice()V
 
-    .line 84
+    .line 81
     :cond_3
     return-void
 
-    .line 87
+    .line 84
     :goto_2
     if-eqz v0, :cond_4
 
-    .line 88
+    .line 85
     invoke-static {}, Lcom/android/app/tracing/TraceUtilsKt;->endSlice()V
 
-    .line 90
+    .line 87
     :cond_4
     throw p0
-    .line 93
+    .line 90
 .end method
 
 .method public final setBackgroundHeights(I)V

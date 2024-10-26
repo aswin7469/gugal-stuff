@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -299,7 +299,7 @@
 
     move-result-object v11
 
-    const v13, 0x7f030035    # @array/config_face_acquire_device_entry_ignorelist
+    const v13, 0x7f03003a    # @array/config_face_acquire_device_entry_ignorelist
 
     invoke-virtual {v11, v13}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -337,434 +337,404 @@
     invoke-virtual {v13, v11, v0}, Lcom/android/systemui/dump/DumpManager;->registerCriticalDumpable(Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
 
     .line 39
-    new-instance v11, Ljava/util/ArrayList;
+    new-instance v11, Lkotlin/jvm/internal/SpreadBuilder;
 
     const/4 v13, 0x5
 
-    invoke-direct {v11, v13}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v11, v13}, Lkotlin/jvm/internal/SpreadBuilder;-><init>(I)V
 
-    .line 40
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->gatingConditionsForAuthAndDetect()[Lkotlin/Pair;
 
     move-result-object v13
 
+    invoke-virtual {v11, v13}, Lkotlin/jvm/internal/SpreadBuilder;->addSpread(Ljava/lang/Object;)V
+
+    .line 40
+    new-instance v13, Lkotlin/Pair;
+
     move-object/from16 p10, v14
 
     .line 41
-    array-length v14, v13
+    new-instance v14, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;
 
-    if-lez v14, :cond_3
+    invoke-direct {v14, v12}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
 
     .line 42
-    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
-
-    move-result v14
-
-    array-length v2, v13
-
-    add-int/2addr v14, v2
-
-    invoke-virtual {v11, v14}, Ljava/util/ArrayList;->ensureCapacity(I)V
-
-    .line 43
-    invoke-static {v11, v13}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
-
-    .line 44
-    :cond_3
-    new-instance v2, Lkotlin/Pair;
-
-    .line 45
-    new-instance v13, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;
-
-    invoke-direct {v13, v12}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
-
-    .line 46
     const-string v12, "isNotInLockOutState"
 
-    invoke-direct {v2, v13, v12}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v13, v14, v12}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 43
+    invoke-virtual {v11, v13}, Lkotlin/jvm/internal/SpreadBuilder;->add(Ljava/lang/Object;)V
+
+    .line 44
+    new-instance v12, Lkotlin/Pair;
+
+    .line 45
+    iget-object v13, v8, Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;->isKeyguardDismissible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 46
+    new-instance v14, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;
+
+    invoke-direct {v14, v13}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
 
     .line 47
-    invoke-virtual {v11, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v13, "keyguardIsNotDismissible"
 
     .line 48
-    new-instance v2, Lkotlin/Pair;
+    invoke-direct {v12, v14, v13}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 49
-    iget-object v12, v8, Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;->isKeyguardDismissible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    invoke-virtual {v11, v12}, Lkotlin/jvm/internal/SpreadBuilder;->add(Ljava/lang/Object;)V
 
     .line 50
-    new-instance v13, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;
-
-    invoke-direct {v13, v12}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
+    new-instance v12, Lkotlin/Pair;
 
     .line 51
-    const-string v12, "keyguardIsNotDismissible"
+    iget-object v13, v7, Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;->isFaceAuthCurrentlyAllowed:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
     .line 52
-    invoke-direct {v2, v13, v12}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const-string v14, "isFaceAuthCurrentlyAllowed"
 
     .line 53
-    invoke-virtual {v11, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-direct {v12, v13, v14}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 54
-    new-instance v2, Lkotlin/Pair;
+    invoke-virtual {v11, v12}, Lkotlin/jvm/internal/SpreadBuilder;->add(Ljava/lang/Object;)V
 
     .line 55
-    iget-object v12, v7, Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;->isFaceAuthCurrentlyAllowed:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+    new-instance v12, Lkotlin/Pair;
 
     .line 56
-    const-string v13, "isFaceAuthCurrentlyAllowed"
+    new-instance v13, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;
+
+    invoke-direct {v13, v1}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
 
     .line 57
-    invoke-direct {v2, v12, v13}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 58
-    invoke-virtual {v11, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 59
-    new-instance v2, Lkotlin/Pair;
-
-    .line 60
-    new-instance v12, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;
-
-    invoke-direct {v12, v1}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
-
-    .line 61
     const-string v1, "faceNotAuthenticated"
 
-    invoke-direct {v2, v12, v1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v12, v13, v1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 62
-    invoke-virtual {v11, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 58
+    invoke-virtual {v11, v12}, Lkotlin/jvm/internal/SpreadBuilder;->add(Ljava/lang/Object;)V
 
-    .line 63
-    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
+    .line 59
+    iget-object v1, v11, Lkotlin/jvm/internal/SpreadBuilder;->list:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 64
+    .line 60
     new-array v1, v1, [Lkotlin/Pair;
 
-    .line 65
+    .line 61
+    iget-object v11, v11, Lkotlin/jvm/internal/SpreadBuilder;->list:Ljava/util/ArrayList;
+
     invoke-virtual {v11, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 66
+    .line 62
     invoke-static {v1}, Lkotlin/collections/CollectionsKt__CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 67
-    const-string v2, "canFaceAuthRun"
+    .line 63
+    const-string v11, "canFaceAuthRun"
 
-    move-object/from16 v11, p19
+    move-object/from16 v12, p19
 
-    invoke-static {v1, v2, v11}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt;->access$andAllFlows(Ljava/util/List;Ljava/lang/String;Lcom/android/systemui/log/table/TableLogBuffer;)Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$andAllFlows$$inlined$combine$1;
+    invoke-static {v1, v11, v12}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt;->access$andAllFlows(Ljava/util/List;Ljava/lang/String;Lcom/android/systemui/log/table/TableLogBuffer;)Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$andAllFlows$$inlined$combine$1;
 
     move-result-object v1
 
-    .line 68
+    .line 64
     invoke-static {v1, v6}, Lkotlinx/coroutines/flow/FlowKt;->flowOn(Lkotlinx/coroutines/flow/Flow;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/flow/Flow;
 
     move-result-object v1
 
-    .line 69
-    sget-object v2, Lkotlinx/coroutines/flow/SharingStarted$Companion;->Eagerly:Lkotlinx/coroutines/flow/StartedEagerly;
+    .line 65
+    sget-object v11, Lkotlinx/coroutines/flow/SharingStarted$Companion;->Eagerly:Lkotlinx/coroutines/flow/StartedEagerly;
 
-    invoke-static {v1, v4, v2, v15}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    invoke-static {v1, v4, v11, v15}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     move-result-object v1
 
-    .line 70
+    .line 66
     iput-object v1, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->canRunFaceAuth:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 71
-    new-instance v11, Ljava/util/ArrayList;
+    .line 67
+    new-instance v12, Lkotlin/jvm/internal/SpreadBuilder;
 
-    const/4 v12, 0x4
+    const/4 v13, 0x4
 
-    invoke-direct {v11, v12}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v12, v13}, Lkotlin/jvm/internal/SpreadBuilder;-><init>(I)V
 
-    .line 72
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->gatingConditionsForAuthAndDetect()[Lkotlin/Pair;
 
-    move-result-object v12
+    move-result-object v13
 
-    .line 73
-    array-length v13, v12
+    invoke-virtual {v12, v13}, Lkotlin/jvm/internal/SpreadBuilder;->addSpread(Ljava/lang/Object;)V
 
-    if-lez v13, :cond_4
+    .line 68
+    new-instance v13, Lkotlin/Pair;
 
-    .line 74
-    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
+    const-string v14, "isBypassEnabled"
 
-    move-result v13
+    invoke-direct {v13, v3, v14}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    array-length v14, v12
+    .line 69
+    invoke-virtual {v12, v13}, Lkotlin/jvm/internal/SpreadBuilder;->add(Ljava/lang/Object;)V
 
-    add-int/2addr v13, v14
-
-    invoke-virtual {v11, v13}, Ljava/util/ArrayList;->ensureCapacity(I)V
-
-    .line 75
-    invoke-static {v11, v12}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
-
-    .line 76
-    :cond_4
-    new-instance v12, Lkotlin/Pair;
-
-    const-string v13, "isBypassEnabled"
-
-    invoke-direct {v12, v3, v13}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 77
-    invoke-virtual {v11, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 78
+    .line 70
     new-instance v3, Lkotlin/Pair;
 
-    .line 79
+    .line 71
     iget-object v7, v7, Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;->isFaceAuthCurrentlyAllowed:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 80
-    new-instance v12, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;
+    .line 72
+    new-instance v13, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;
 
-    invoke-direct {v12, v7}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
+    invoke-direct {v13, v7}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
 
-    .line 81
+    .line 73
     iget-object v7, v8, Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;->isKeyguardDismissible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 82
+    .line 74
     new-instance v8, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$or$1;
 
-    const/4 v13, 0x0
+    const/4 v2, 0x3
 
-    const/4 v14, 0x3
+    const/4 v14, 0x0
 
-    .line 83
-    invoke-direct {v8, v14, v13}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 75
+    invoke-direct {v8, v2, v14}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 84
-    new-instance v13, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+    .line 76
+    new-instance v2, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    invoke-direct {v13, v12, v7, v8}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    invoke-direct {v2, v13, v7, v8}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 85
+    .line 77
     const-string v7, "faceAuthIsNotCurrentlyAllowedOrCurrentUserIsTrusted"
 
-    .line 86
-    invoke-direct {v3, v13, v7}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 78
+    invoke-direct {v3, v2, v7}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 87
-    invoke-virtual {v11, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 79
+    invoke-virtual {v12, v3}, Lkotlin/jvm/internal/SpreadBuilder;->add(Ljava/lang/Object;)V
 
-    .line 88
-    new-instance v3, Lkotlin/Pair;
+    .line 80
+    new-instance v2, Lkotlin/Pair;
 
-    .line 89
-    move-object/from16 v7, p13
+    .line 81
+    move-object/from16 v3, p13
 
-    check-cast v7, Lcom/android/systemui/keyguard/data/repository/DeviceEntryFingerprintAuthRepositoryImpl;
+    check-cast v3, Lcom/android/systemui/keyguard/data/repository/DeviceEntryFingerprintAuthRepositoryImpl;
 
-    invoke-virtual {v7}, Lcom/android/systemui/keyguard/data/repository/DeviceEntryFingerprintAuthRepositoryImpl;->getAvailableFpSensorType()Lkotlinx/coroutines/flow/Flow;
-
-    move-result-object v8
-
-    .line 90
-    new-instance v12, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$isUdfps$$inlined$map$1;
-
-    const/4 v13, 0x0
-
-    invoke-direct {v12, v8, v13}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$isUdfps$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
-
-    .line 91
-    invoke-virtual {v7}, Lcom/android/systemui/keyguard/data/repository/DeviceEntryFingerprintAuthRepositoryImpl;->isRunning()Lkotlinx/coroutines/flow/Flow;
+    invoke-virtual {v3}, Lcom/android/systemui/keyguard/data/repository/DeviceEntryFingerprintAuthRepositoryImpl;->getAvailableFpSensorType()Lkotlinx/coroutines/flow/Flow;
 
     move-result-object v7
 
-    .line 92
-    new-instance v8, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$and$1;
+    .line 82
+    new-instance v8, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$isUdfps$$inlined$map$1;
+
+    const/4 v13, 0x0
+
+    invoke-direct {v8, v7, v13}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$isUdfps$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+
+    .line 83
+    invoke-virtual {v3}, Lcom/android/systemui/keyguard/data/repository/DeviceEntryFingerprintAuthRepositoryImpl;->isRunning()Lkotlinx/coroutines/flow/Flow;
+
+    move-result-object v3
+
+    .line 84
+    new-instance v7, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$and$1;
 
     const/4 v13, 0x0
 
     const/4 v14, 0x3
 
-    .line 93
-    invoke-direct {v8, v14, v13}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 85
+    invoke-direct {v7, v14, v13}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 94
+    .line 86
     new-instance v13, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    invoke-direct {v13, v12, v7, v8}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    invoke-direct {v13, v8, v3, v7}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 95
-    new-instance v7, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;
+    .line 87
+    new-instance v3, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;
 
-    invoke-direct {v7, v13}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
+    invoke-direct {v3, v13}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$isFalse$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
 
-    .line 96
-    const-string v8, "udfpsAuthIsNotPossibleAnymore"
+    .line 88
+    const-string/jumbo v7, "udfpsAuthIsNotPossibleAnymore"
 
-    .line 97
-    invoke-direct {v3, v7, v8}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 89
+    invoke-direct {v2, v3, v7}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 98
-    invoke-virtual {v11, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 90
+    invoke-virtual {v12, v2}, Lkotlin/jvm/internal/SpreadBuilder;->add(Ljava/lang/Object;)V
 
-    .line 99
-    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
+    .line 91
+    iget-object v2, v12, Lkotlin/jvm/internal/SpreadBuilder;->list:Ljava/util/ArrayList;
 
-    move-result v3
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    .line 100
-    new-array v3, v3, [Lkotlin/Pair;
+    move-result v2
 
-    .line 101
-    invoke-virtual {v11, v3}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .line 92
+    new-array v2, v2, [Lkotlin/Pair;
 
-    move-result-object v3
+    .line 93
+    iget-object v3, v12, Lkotlin/jvm/internal/SpreadBuilder;->list:Ljava/util/ArrayList;
 
-    .line 102
-    invoke-static {v3}, Lkotlin/collections/CollectionsKt__CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v3
-
-    .line 103
-    const-string v7, "canFaceDetectRun"
-
-    move-object/from16 v8, p18
-
-    invoke-static {v3, v7, v8}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt;->access$andAllFlows(Ljava/util/List;Ljava/lang/String;Lcom/android/systemui/log/table/TableLogBuffer;)Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$andAllFlows$$inlined$combine$1;
-
-    move-result-object v3
-
-    .line 104
-    invoke-static {v3, v6}, Lkotlinx/coroutines/flow/FlowKt;->flowOn(Lkotlinx/coroutines/flow/Flow;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/flow/Flow;
-
-    move-result-object v3
-
-    .line 105
-    invoke-static {v3, v4, v2, v15}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 106
+    .line 94
+    invoke-static {v2}, Lkotlin/collections/CollectionsKt__CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    .line 95
+    const-string v3, "canFaceDetectRun"
+
+    move-object/from16 v7, p18
+
+    invoke-static {v2, v3, v7}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt;->access$andAllFlows(Ljava/util/List;Ljava/lang/String;Lcom/android/systemui/log/table/TableLogBuffer;)Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryKt$andAllFlows$$inlined$combine$1;
+
+    move-result-object v2
+
+    .line 96
+    invoke-static {v2, v6}, Lkotlinx/coroutines/flow/FlowKt;->flowOn(Lkotlinx/coroutines/flow/Flow;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/flow/Flow;
+
+    move-result-object v2
+
+    .line 97
+    invoke-static {v2, v4, v11, v15}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    move-result-object v2
+
+    .line 98
     iput-object v2, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->canRunDetection:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 107
+    .line 99
     new-instance v3, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$observeFaceAuthGatingChecks$1;
 
     const/4 v6, 0x0
 
     invoke-direct {v3, v0, v6}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$observeFaceAuthGatingChecks$1;-><init>(Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;Lkotlin/coroutines/Continuation;)V
 
-    .line 108
+    .line 100
     new-instance v7, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
     const/4 v8, 0x0
 
     invoke-direct {v7, v1, v3, v8}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 109
+    .line 101
     invoke-static {v7, v5}, Lkotlinx/coroutines/flow/FlowKt;->flowOn(Lkotlinx/coroutines/flow/Flow;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/flow/Flow;
 
     move-result-object v3
 
-    .line 110
+    .line 102
     invoke-static {v3, v4}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 111
+    .line 103
     new-instance v3, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$observeFaceDetectGatingChecks$1;
 
     invoke-direct {v3, v0, v6}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$observeFaceDetectGatingChecks$1;-><init>(Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;Lkotlin/coroutines/Continuation;)V
 
-    .line 112
+    .line 104
     new-instance v6, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
     invoke-direct {v6, v2, v3, v8}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 113
+    .line 105
     invoke-static {v6, v5}, Lkotlinx/coroutines/flow/FlowKt;->flowOn(Lkotlinx/coroutines/flow/Flow;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/flow/Flow;
 
     move-result-object v3
 
-    .line 114
+    .line 106
     invoke-static {v3, v4}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
     move-object/from16 v3, p15
 
-    .line 115
+    .line 107
     iget-object v3, v3, Lcom/android/systemui/power/domain/interactor/PowerInteractor;->isAsleep:Lcom/android/systemui/power/domain/interactor/PowerInteractor$special$$inlined$map$1;
 
-    .line 116
+    .line 108
     sget-object v6, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GONE:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
     invoke-virtual {v10, v6}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->isFinishedInState(Lcom/android/systemui/keyguard/shared/model/KeyguardState;)Lkotlinx/coroutines/flow/Flow;
 
     move-result-object v7
 
-    .line 117
+    .line 109
     iget-object v8, v9, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;->statusBarState:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 118
+    .line 110
     new-instance v9, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$observeFaceAuthResettingConditions$1;
 
     const/4 v11, 0x0
 
     const/4 v12, 0x3
 
-    .line 119
+    .line 111
     invoke-direct {v9, v12, v11}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 120
+    .line 112
     new-instance v11, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
     invoke-direct {v11, v7, v8, v9}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
     move-object/from16 v7, p3
 
-    .line 121
+    .line 113
     iget-object v7, v7, Lcom/android/systemui/user/data/repository/UserRepositoryImpl;->selectedUser:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 122
+    .line 114
     new-instance v8, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$isUdfps$$inlined$map$1;
 
     invoke-direct {v8, v7, v12}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$isUdfps$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 123
+    .line 115
     filled-new-array {v3, v11, v8}, [Lkotlinx/coroutines/flow/Flow;
 
     move-result-object v3
 
-    .line 124
+    .line 116
     invoke-static {v3}, Lkotlinx/coroutines/flow/FlowKt;->merge([Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/internal/ChannelLimitedFlowMerge;
 
     move-result-object v3
 
-    .line 125
+    .line 117
     invoke-static {v3, v5}, Lkotlinx/coroutines/flow/FlowKt;->flowOn(Lkotlinx/coroutines/flow/Flow;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/flow/Flow;
 
     move-result-object v3
 
-    .line 126
+    .line 118
     new-instance v7, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$observeFaceAuthResettingConditions$3;
 
     const/4 v8, 0x0
 
     invoke-direct {v7, v0, v8}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$observeFaceAuthResettingConditions$3;-><init>(Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;Lkotlin/coroutines/Continuation;)V
 
-    .line 127
+    .line 119
     new-instance v9, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
     const/4 v11, 0x0
 
     invoke-direct {v9, v3, v7, v11}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 128
+    .line 120
     invoke-static {v9, v4}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 129
+    .line 121
     sget-object v3, Lcom/android/systemui/keyguard/shared/model/Edge;->Companion:Lcom/android/systemui/keyguard/shared/model/Edge$Companion;
 
     const/4 v3, 0x1
@@ -777,29 +747,29 @@
 
     move-result-object v3
 
-    .line 130
+    .line 122
     new-instance v6, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$isUdfps$$inlined$map$1;
 
     const/4 v7, 0x2
 
     invoke-direct {v6, v3, v7}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$isUdfps$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 131
+    .line 123
     new-instance v3, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$listenForSchedulingWatchdog$2;
 
     invoke-direct {v3, v0, v8}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$listenForSchedulingWatchdog$2;-><init>(Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;Lkotlin/coroutines/Continuation;)V
 
-    .line 132
+    .line 124
     new-instance v7, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
     const/4 v9, 0x0
 
     invoke-direct {v7, v6, v3, v9}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 133
+    .line 125
     invoke-static {v7, v4}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 134
+    .line 126
     new-instance v3, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$processPendingAuthRequests$1;
 
     invoke-direct {v3, v0, v8}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$processPendingAuthRequests$1;-><init>(Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;Lkotlin/coroutines/Continuation;)V
@@ -812,32 +782,32 @@
 
     move-result-object v1
 
-    .line 135
+    .line 127
     new-instance v2, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$processPendingAuthRequests$2;
 
     invoke-direct {v2, v0, v8}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$processPendingAuthRequests$2;-><init>(Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;Lkotlin/coroutines/Continuation;)V
 
-    .line 136
+    .line 128
     new-instance v3, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
     invoke-direct {v3, v1, v2, v9}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 137
+    .line 129
     invoke-static {v3, v5}, Lkotlinx/coroutines/flow/FlowKt;->flowOn(Lkotlinx/coroutines/flow/Flow;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/flow/Flow;
 
     move-result-object v1
 
-    .line 138
+    .line 130
     invoke-static {v1, v4}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 139
+    .line 131
     new-instance v1, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$faceAuthCallback$1;
 
     invoke-direct {v1, v0}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$faceAuthCallback$1;-><init>(Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;)V
 
     iput-object v1, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->faceAuthCallback:Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$faceAuthCallback$1;
 
-    .line 140
+    .line 132
     new-instance v1, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$detectionCallback$1;
 
     invoke-direct {v1, v0}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$detectionCallback$1;-><init>(Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;)V

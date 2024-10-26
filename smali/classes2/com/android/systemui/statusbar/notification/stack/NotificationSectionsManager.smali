@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -8,13 +8,13 @@
 
 
 # instance fields
-.field public final alertingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+.field public final alertingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
 .field public final configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
 .field public final configurationListener:Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$configurationListener$1;
 
-.field public final incomingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+.field public final incomingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
 .field public initialized:Z
 
@@ -26,11 +26,11 @@
 
 .field public parent:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-.field public final peopleHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+.field public final peopleHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
 .field public final sectionsFeatureManager:Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;
 
-.field public final silentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+.field public final silentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
 
 # direct methods
@@ -54,7 +54,7 @@
     .line 11
 .end method
 
-.method public constructor <init>(Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/media/controls/ui/controller/KeyguardMediaController;Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;)V
+.method public constructor <init>(Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/media/controls/ui/controller/KeyguardMediaController;Lcom/android/systemui/statusbar/notification/NotificationSectionsFeatureManager;Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;)V
     .locals 0
 
     .line 1
@@ -76,16 +76,16 @@
     iput-object p5, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->notificationRoundnessManager:Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;
 
     .line 13
-    iput-object p6, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->incomingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iput-object p6, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->incomingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 15
-    iput-object p7, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->peopleHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iput-object p7, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->peopleHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 17
-    iput-object p8, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iput-object p8, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 19
-    iput-object p9, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iput-object p9, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 21
     new-instance p1, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager$configurationListener$1;
@@ -147,43 +147,43 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 2
-    check-cast v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
+    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
 
     .line 4
-    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
+    if-eq p1, v0, :cond_1
 
     .line 6
-    if-eq p1, v0, :cond_1
-
-    .line 8
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->mediaContainerController:Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;
 
-    .line 10
+    .line 8
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;->mediaContainerView:Lcom/android/systemui/statusbar/notification/stack/MediaContainerView;
 
-    .line 12
+    .line 10
     if-eq p1, v0, :cond_1
+
+    .line 12
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->peopleHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 14
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->peopleHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
-
-    .line 16
-    check-cast v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 18
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
 
-    .line 20
+    .line 16
     if-eq p1, v0, :cond_1
 
+    .line 18
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
+
+    .line 20
+    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
+
     .line 22
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    if-eq p1, v0, :cond_1
 
     .line 24
-    check-cast v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->incomingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 26
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
@@ -192,216 +192,192 @@
     if-eq p1, v0, :cond_1
 
     .line 30
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->incomingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
-
-    .line 32
-    check-cast v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 34
-    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
-
-    .line 36
-    if-eq p1, v0, :cond_1
-
-    .line 38
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->getBucket(Landroid/view/View;)Ljava/lang/Integer;
 
-    .line 40
+    .line 32
     move-result-object p1
 
-    .line 43
+    .line 35
     invoke-virtual {p0, p2}, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->getBucket(Landroid/view/View;)Ljava/lang/Integer;
 
-    .line 44
+    .line 36
     move-result-object p0
 
-    .line 47
+    .line 39
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 48
+    .line 40
     move-result p0
 
-    .line 51
+    .line 43
     if-nez p0, :cond_0
 
-    .line 52
+    .line 44
     goto :goto_0
 
-    .line 54
+    .line 46
     :cond_0
     const/4 p0, 0x0
 
-    .line 55
+    .line 47
     goto :goto_1
 
-    .line 56
+    .line 48
     :cond_1
     :goto_0
     const/4 p0, 0x1
 
-    .line 57
+    .line 49
     :goto_1
     return p0
-    .line 58
+    .line 50
 .end method
 
 .method public final getBucket(Landroid/view/View;)Ljava/lang/Integer;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 2
-    check-cast v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
+    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
 
     .line 4
-    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
-
-    .line 6
     if-ne p1, v0, :cond_0
 
-    .line 8
+    .line 6
     const/4 p0, 0x6
 
-    .line 10
+    .line 8
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 11
+    .line 9
     move-result-object p0
+
+    .line 12
+    goto :goto_0
+
+    .line 13
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->incomingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 14
-    goto :goto_0
-
-    .line 15
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->incomingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
-
-    .line 16
-    check-cast v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 18
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
 
-    .line 20
+    .line 16
     if-ne p1, v0, :cond_1
 
-    .line 22
+    .line 18
     const/4 p0, 0x2
 
-    .line 24
+    .line 20
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 25
+    .line 21
     move-result-object p0
 
-    .line 28
+    .line 24
     goto :goto_0
 
-    .line 29
+    .line 25
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->mediaContainerController:Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;
 
-    .line 30
+    .line 26
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;->mediaContainerView:Lcom/android/systemui/statusbar/notification/stack/MediaContainerView;
 
-    .line 32
+    .line 28
     if-ne p1, v0, :cond_2
 
-    .line 34
+    .line 30
     const/4 p0, 0x1
 
-    .line 36
+    .line 32
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 33
+    move-result-object p0
+
+    .line 36
+    goto :goto_0
 
     .line 37
-    move-result-object p0
-
-    .line 40
-    goto :goto_0
-
-    .line 41
     :cond_2
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->peopleHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->peopleHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
-    .line 42
-    check-cast v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 44
+    .line 38
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
 
-    .line 46
+    .line 40
     if-ne p1, v0, :cond_3
 
-    .line 48
+    .line 42
     const/4 p0, 0x4
 
-    .line 50
+    .line 44
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 51
+    .line 45
     move-result-object p0
 
-    .line 54
+    .line 48
     goto :goto_0
 
-    .line 55
+    .line 49
     :cond_3
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
-    .line 56
-    check-cast p0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 58
+    .line 50
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
 
-    .line 60
+    .line 52
     if-ne p1, p0, :cond_4
 
-    .line 62
+    .line 54
     const/4 p0, 0x5
 
-    .line 64
+    .line 56
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 65
+    .line 57
     move-result-object p0
 
-    .line 68
+    .line 60
     goto :goto_0
 
-    .line 69
+    .line 61
     :cond_4
     instance-of p0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 70
+    .line 62
     if-eqz p0, :cond_5
 
-    .line 72
+    .line 64
     check-cast p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 74
+    .line 66
     iget-object p0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 76
+    .line 68
     iget p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mBucket:I
 
-    .line 78
+    .line 70
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 80
+    .line 72
     move-result-object p0
 
-    .line 83
+    .line 75
     goto :goto_0
 
-    .line 84
+    .line 76
     :cond_5
     const/4 p0, 0x0
 
-    .line 85
+    .line 77
     :goto_0
     return-object p0
-    .line 86
+    .line 78
 .end method
 
 .method public final reinflateViews()V
@@ -421,166 +397,154 @@
 
     .line 7
     :cond_0
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->silentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 8
-    check-cast v2, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
+    invoke-virtual {v2, v0}, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->reinflateView(Landroid/view/ViewGroup;)V
 
     .line 10
-    invoke-virtual {v2, v0}, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->reinflateView(Landroid/view/ViewGroup;)V
-
-    .line 12
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->parent:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 15
+    .line 13
     if-nez v0, :cond_1
 
-    .line 17
+    .line 15
     move-object v0, v1
 
-    .line 19
+    .line 17
     :cond_1
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->alertingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
+
+    .line 18
+    invoke-virtual {v2, v0}, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->reinflateView(Landroid/view/ViewGroup;)V
 
     .line 20
-    check-cast v2, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 22
-    invoke-virtual {v2, v0}, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->reinflateView(Landroid/view/ViewGroup;)V
-
-    .line 24
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->parent:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 27
+    .line 23
     if-nez v0, :cond_2
 
-    .line 29
+    .line 25
     move-object v0, v1
 
-    .line 31
+    .line 27
     :cond_2
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->peopleHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->peopleHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
-    .line 32
-    check-cast v2, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 34
+    .line 28
     invoke-virtual {v2, v0}, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->reinflateView(Landroid/view/ViewGroup;)V
 
-    .line 36
+    .line 30
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->parent:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 39
+    .line 33
     if-nez v0, :cond_3
 
-    .line 41
+    .line 35
     move-object v0, v1
 
-    .line 43
+    .line 37
     :cond_3
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->incomingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->incomingHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
-    .line 44
-    check-cast v2, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 46
+    .line 38
     invoke-virtual {v2, v0}, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->reinflateView(Landroid/view/ViewGroup;)V
 
-    .line 48
+    .line 40
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->parent:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 51
+    .line 43
     if-nez v0, :cond_4
 
-    .line 53
+    .line 45
     goto :goto_0
 
-    .line 55
+    .line 47
     :cond_4
     move-object v1, v0
 
-    .line 56
+    .line 48
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->mediaContainerController:Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;
 
-    .line 57
+    .line 49
     iget-object v2, v0, Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;->mediaContainerView:Lcom/android/systemui/statusbar/notification/stack/MediaContainerView;
 
-    .line 59
+    .line 51
     const/4 v3, -0x1
 
-    .line 61
+    .line 53
     if-eqz v2, :cond_5
 
-    .line 62
+    .line 54
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->removeFromTransientContainer()V
 
-    .line 64
+    .line 56
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
 
-    .line 67
+    .line 59
     move-result-object v4
 
-    .line 70
+    .line 62
     if-ne v4, v1, :cond_5
 
-    .line 71
+    .line 63
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
 
-    .line 73
+    .line 65
     move-result v4
 
-    .line 76
+    .line 68
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 77
+    .line 69
     goto :goto_1
 
-    .line 80
+    .line 72
     :cond_5
     move v4, v3
 
-    .line 81
+    .line 73
     :goto_1
     iget-object v2, v0, Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;->layoutInflater:Landroid/view/LayoutInflater;
 
-    .line 82
-    const v5, 0x7f0e00f3    # @layout/keyguard_media_container 'res/layout/keyguard_media_container.xml'
+    .line 74
+    const v5, 0x7f0d00fe    # @layout/keyguard_media_container 'res/layout/keyguard_media_container.xml'
 
-    .line 84
+    .line 76
     const/4 v6, 0x0
 
-    .line 87
+    .line 79
     invoke-virtual {v2, v5, v1, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 88
+    .line 80
     move-result-object v2
 
-    .line 91
+    .line 83
     check-cast v2, Lcom/android/systemui/statusbar/notification/stack/MediaContainerView;
 
-    .line 92
+    .line 84
     if-eq v4, v3, :cond_6
 
-    .line 94
+    .line 86
     invoke-virtual {v1, v2, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
-    .line 96
+    .line 88
     :cond_6
     iput-object v2, v0, Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;->mediaContainerView:Lcom/android/systemui/statusbar/notification/stack/MediaContainerView;
 
-    .line 99
+    .line 91
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/MediaContainerController;->mediaContainerView:Lcom/android/systemui/statusbar/notification/stack/MediaContainerView;
 
-    .line 101
+    .line 93
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;->keyguardMediaController:Lcom/android/systemui/media/controls/ui/controller/KeyguardMediaController;
 
-    .line 103
+    .line 95
     invoke-virtual {p0, v0}, Lcom/android/systemui/media/controls/ui/controller/KeyguardMediaController;->attachSinglePaneContainer(Lcom/android/systemui/statusbar/notification/stack/MediaContainerView;)V
 
-    .line 105
+    .line 97
     return-void
-    .line 108
+    .line 100
 .end method
 
 .method public final updateFirstAndLastViewsForAllSections([Lcom/android/systemui/statusbar/notification/stack/NotificationSection;Ljava/util/List;)V

@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel$toRecsViewModel$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -69,7 +69,7 @@
     move-result-object p0
 
     .line 21
-    const v0, 0x7f1402d1    # @string/controls_media_close_session 'Hide this media control for %1$s?'
+    const v0, 0x7f1302ed    # @string/controls_media_close_session 'Hide this media control for %1$s?'
 
     .line 22
     invoke-virtual {p1, v0, p0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -91,7 +91,7 @@
     iget-object p0, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel;->applicationContext:Landroid/content/Context;
 
     .line 35
-    const p1, 0x7f1402d9    # @string/controls_media_smartspace_rec_header 'For You'
+    const p1, 0x7f1302f5    # @string/controls_media_smartspace_rec_header 'For You'
 
     .line 37
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

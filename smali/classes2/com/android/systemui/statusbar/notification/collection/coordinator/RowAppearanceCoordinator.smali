@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/coordinator/RowAppearanceCoordinator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/collection/coordinator/Coordinator;
@@ -38,7 +38,7 @@
     move-result-object p2
 
     .line 12
-    const p3, 0x7f050004    # @bool/config_alwaysExpandNonGroupedNotifications 'false'
+    const p3, 0x7f050006    # @bool/config_alwaysExpandNonGroupedNotifications 'false'
 
     .line 13
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -56,7 +56,7 @@
     move-result-object p1
 
     .line 25
-    const p2, 0x7f050005    # @bool/config_autoExpandFirstNotification 'true'
+    const p2, 0x7f050007    # @bool/config_autoExpandFirstNotification 'true'
 
     .line 26
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getBoolean(I)Z

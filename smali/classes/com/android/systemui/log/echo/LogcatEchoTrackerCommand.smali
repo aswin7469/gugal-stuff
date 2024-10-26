@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/log/echo/LogcatEchoTrackerCommand;
 .super Lcom/android/systemui/statusbar/commandline/ParseableCommand;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -51,59 +51,59 @@
     new-instance v3, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     .line 19
-    const-string v5, "tag"
+    const-string/jumbo v5, "tag"
 
     .line 21
     const-string v6, "getTag()Ljava/lang/String;"
 
-    .line 23
+    .line 24
     invoke-direct {v3, v1, v5, v6, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 25
+    .line 26
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 28
+    .line 29
     new-instance v5, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    .line 31
+    .line 32
     const-string v6, "clearAll"
 
-    .line 33
+    .line 34
     const-string v7, "getClearAll()Z"
 
-    .line 35
+    .line 36
     invoke-direct {v5, v1, v6, v7, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 37
+    .line 38
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 40
+    .line 41
     new-instance v6, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    .line 43
+    .line 44
     const-string v7, "list"
 
-    .line 45
+    .line 46
     const-string v8, "getList()Z"
 
-    .line 47
+    .line 48
     invoke-direct {v6, v1, v7, v8, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 49
+    .line 50
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 52
+    .line 53
     filled-new-array {v0, v3, v5, v6}, [Lkotlin/reflect/KProperty;
 
-    .line 55
+    .line 56
     move-result-object v0
 
-    .line 58
+    .line 59
     sput-object v0, Lcom/android/systemui/log/echo/LogcatEchoTrackerCommand;->$$delegatedProperties:[Lkotlin/reflect/KProperty;
 
-    .line 59
+    .line 60
     return-void
-    .line 61
+    .line 62
 .end method
 
 .method public constructor <init>(Lcom/android/systemui/log/echo/LogcatEchoTrackerDebug;)V
@@ -140,59 +140,59 @@
     iput-object v0, p0, Lcom/android/systemui/log/echo/LogcatEchoTrackerCommand;->buffer$delegate:Lcom/android/systemui/statusbar/commandline/SingleArgParamOptional;
 
     .line 21
-    const-string v0, "t"
+    const-string/jumbo v0, "t"
 
     .line 23
     const-string v1, "Modifies the echo level of a tag. Use the form <name>:<level>, e.g. \'Foo:V\'. Valid levels are V,D,I,W,E, and -. The - level clears any pre-existing override."
 
-    .line 25
-    const-string v2, "tag"
+    .line 26
+    const-string/jumbo v2, "tag"
 
-    .line 27
+    .line 28
     invoke-virtual {p0, v2, v0, v1, p1}, Lcom/android/systemui/statusbar/commandline/ParseableCommand;->param(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/android/systemui/statusbar/commandline/ValueParser;)Lcom/android/systemui/statusbar/commandline/SingleArgParamOptional;
 
-    .line 29
+    .line 31
     move-result-object p1
 
-    .line 32
+    .line 34
     iput-object p1, p0, Lcom/android/systemui/log/echo/LogcatEchoTrackerCommand;->tag$delegate:Lcom/android/systemui/statusbar/commandline/SingleArgParamOptional;
 
-    .line 33
+    .line 35
     const-string p1, "clear-all"
 
-    .line 35
+    .line 37
     const/4 v0, 0x0
 
-    .line 37
+    .line 39
     const-string v1, "Removes all local echo level overrides"
 
-    .line 38
+    .line 40
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/systemui/statusbar/commandline/ParseableCommand;->flag(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/android/systemui/statusbar/commandline/Flag;
 
-    .line 40
+    .line 42
     move-result-object p1
 
-    .line 43
+    .line 45
     iput-object p1, p0, Lcom/android/systemui/log/echo/LogcatEchoTrackerCommand;->clearAll$delegate:Lcom/android/systemui/statusbar/commandline/Flag;
 
-    .line 44
+    .line 46
     const-string p1, "list"
 
-    .line 46
+    .line 48
     const-string v1, "Lists all local echo level overrides"
 
-    .line 48
+    .line 50
     invoke-virtual {p0, p1, v0, v1}, Lcom/android/systemui/statusbar/commandline/ParseableCommand;->flag(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/android/systemui/statusbar/commandline/Flag;
 
-    .line 50
+    .line 52
     move-result-object p1
 
-    .line 53
+    .line 55
     iput-object p1, p0, Lcom/android/systemui/log/echo/LogcatEchoTrackerCommand;->list$delegate:Lcom/android/systemui/statusbar/commandline/Flag;
 
-    .line 54
-    return-void
     .line 56
+    return-void
+    .line 58
 .end method
 
 .method public static parseTagStructure(Ljava/lang/String;Lcom/android/systemui/log/echo/EchoOverrideType;)Lcom/android/systemui/log/echo/Outcome;
@@ -653,7 +653,7 @@
     const-string v1, ". Must be one of \'v,d,i,w,e,-\'"
 
     .line 276
-    invoke-static {v0, p0, v1}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 278
     move-result-object p0

@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">таңдалған виджетті орналастыру</string>
   <string name="accessibility_action_label_remove_widget">виджетті өшіру</string>
   <string name="accessibility_action_label_select_widget">виджет таңдау</string>
-  <string name="accessibility_action_open_communal_hub">Құлыптаулы экрандағы виджеттер</string>
   <string name="accessibility_action_pip_resize">Өлшемін өзгерту</string>
   <string name="accessibility_action_pip_stash">Жасыру</string>
   <string name="accessibility_action_pip_unstash">Көрсету</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Бір қолмен енгізу режимінен шығу</string>
   <string name="accessibility_airplane_mode">Ұшақ режимі.</string>
   <string name="accessibility_allow_diagonal_scrolling">Диагональ бойынша айналдыруға рұқсат беру</string>
+  <string name="accessibility_assistant_poodle">Дауыспен іздеу</string>
   <string name="accessibility_authenticate_hint">аутентификациялау</string>
   <string name="accessibility_back">Артқа</string>
   <string name="accessibility_banner_message_dismiss">Жабу</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">құрылғыны енгізу</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Ethernet ажыратылған.</string>
-  <string name="accessibility_fingerprint_bouncer">Аутентификациядан өту қажет. Ол үшін саусақ ізін оқу сканерін түртіңіз.</string>
   <string name="accessibility_fingerprint_label">Саусақ ізін оқу сканері</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">ауыстыру</string>
   <string name="accessibility_floating_button_action_edit">Өзгерту</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Mәзір</string>
   <string name="accessibility_multi_user_list_switcher">ашылмалы мәзір</string>
   <string name="accessibility_multi_user_switch_switcher">Пайдаланушыны ауыстыру</string>
+  <string name="accessibility_next_alarm">Келесі оятқыш уақыты: %s</string>
   <string name="accessibility_no_calling">Қоңырау шалу мүмкін емес.</string>
   <string name="accessibility_no_phone">Телефон жоқ.</string>
   <string name="accessibility_no_wifi">Wi-Fi ажыратылған.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Экран портрет бағытында бекітілген.</string>
   <string name="accessibility_send_smart_reply">Жіберу</string>
   <string name="accessibility_sensors_off_active">Датчиктер өшірулі.</string>
+  <string name="accessibility_settings_gear">Pixel Stand параметрлері</string>
   <string name="accessibility_side_fingerprint_indicator_label">Саусақ ізін оқу сканерін түртіңіз. Ол – телефонның бүйіріндегі шағын түйме.</string>
+  <string name="accessibility_smartspace_page">Бет: %1$d/%2$d</string>
   <string name="accessibility_split_bottom">Астынан шығару</string>
   <string name="accessibility_split_left">Сол жақтан шығару</string>
   <string name="accessibility_split_right">Оң жақтан шығару</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi сигналы — үш жолақ.</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi сигналы — екі жолақ.</string>
   <string name="accesssibility_keyguard_retry">Бет тану функциясын тағы қолданып көру үшін жоғары сырғытыңыз.</string>
+  <string name="adaptive_charging_notify_des">Батарея толатын уақыт: %1$s. Тұрақты түрде зарядтау арқылы батареяның қызмет мерзімі ұзартылып жатыр.</string>
+  <string name="adaptive_charging_notify_title">Бейімдеп зарядтау функциясы қосулы</string>
+  <string name="adaptive_charging_notify_turn_off_once">Бір рет өшіру</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Бейімдеп зарядтау • Толық зарядталу уақыты: %2$s</string>
   <string name="add">Қосу</string>
   <string name="add_guest_failed">Жаңа қонақ профилі жасалмады.</string>
   <string name="airplane_mode">Ұшақ режимі</string>
-  <string name="alarm_template">%1$s</string>
-  <string name="alarm_template_far">%1$s</string>
+  <string name="alarm_template">Уақыты: %1$s</string>
+  <string name="alarm_template_far">Уақыты: %1$s</string>
   <string name="all_network_unavailable">Қолжетімді желілер жоқ</string>
   <string name="always_use_accessory">%2$s қосылған кезде, %1$s қолданбасын ашу</string>
   <string name="always_use_device">%2$s қосылған кезде, %1$s қолданбасын ашу</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Қолданба ақпараты</string>
   <string name="app_label">Жүйе интерфейсі</string>
   <string name="assistant_attention_content_description">Пайдаланушы анықталды.</string>
+  <string name="assistant_scrim_label">Тыңдап тұр. Бас тарту үшін түртіңіз.</string>
   <string name="audio_sharing_description">Аудио бөлісу</string>
   <string name="audio_status">Тыңдалуда</string>
   <string name="auto_data_switch_dialog_negative_button">Жоқ, рақмет</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Артқа</string>
   <string name="battery">Батарея</string>
   <string name="battery_detail_switch_title">Батареяны үнемдеу режимі</string>
-  <string name="battery_low_description">%s заряд қалды. Батареяны үнемдеу режимі қараңғы режимді іске қосады, фондық әрекеттерге шектеу қояды және хабарландыруларды кідіртеді.</string>
+  <string name="battery_health_notify_learn_more">Толық ақпарат</string>
   <string name="battery_low_intro">Батареяны үнемдеу режимі қараңғы режимді іске қосады, фондық әрекеттерге шектеу қояды және хабарландыруларды кідіртеді.</string>
-  <string name="battery_low_title">Батареяны үнемдеу режимі қосылсын ба?</string>
   <string name="battery_saver_confirmation_ok">Қосу</string>
   <string name="battery_saver_confirmation_title">Батареяны үнемдеу режимін қосу керек пе?</string>
   <string name="battery_saver_confirmation_title_generic">Батареяны үнемдеу режимі туралы ақпарат</string>
-  <string name="battery_saver_dismiss_action">Жоқ, рақмет</string>
   <string name="battery_saver_start_action">Қосу</string>
   <string name="battery_state_unknown_notification_text">Толығырақ ақпарат алу үшін түртіңіз.</string>
   <string name="battery_state_unknown_notification_title">Батарея зарядының дерегі алынбай жатыр</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">Істеп тұр. Сол жақ: батарея зарядының деңгейі – %1$s. Оң жақ: батарея зарядының деңгейі — %2$s.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Істеп тұр. Сол жақ: %1$s қуат.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Істеп тұр. Оң жақ: %1$s қуат.</string>
-  <string name="bluetooth_active_media_only_battery_level">Істеп тұр (тек мультимедиа). Батарея зарядының деңгейі – %1$s</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Істеп тұр (тек мультимедиа). Сол жақ: батарея зарядының деңгейі — %1$s. Оң жақ: батарея зарядының деңгейі — %2$s.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Істеп тұр (тек мультимедиа).</string>
   <string name="bluetooth_active_no_battery_level">Қосулы</string>
   <string name="bluetooth_battery_level">Батарея қуаты: %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Қосылды (аудио бөлісуге мүмкіндік береді). Батарея зарядының деңгейі:%1$s.</string>
   <string name="bluetooth_battery_level_untethered">Сол жақ: батарея зарядының деңгейі – %1$s. Оң жақ: батарея зарядының деңгейі — %2$s.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Қосылды (аудио бөлісуге мүмкіндік береді). Сол жақ: батарея зарядының деңгейі — %1$s. Оң жақ: батарея зарядының деңгейі — %2$s.</string>
   <string name="bluetooth_connected">%1$s жалғанды</string>
   <string name="bluetooth_connecting">Қосылып жатыр...</string>
   <string name="bluetooth_disconnected">Ажыратылған</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">Істеп тұр (тек сол жағы)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Істеп тұр (екі жағы да)</string>
   <string name="bluetooth_hearing_aid_right_active">Істеп тұр (тек оң жағы)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Қосылды (аудио бөлісуге мүмкіндік береді).</string>
   <string name="bluetooth_pairing">Жұптасып жатыр...</string>
   <string name="bluetooth_pairing_device_down_error_message">%1$s құрылғысымен қатынаса алмайды</string>
   <string name="bluetooth_pairing_error_message">%1$s жұпталу орындалмады.</string>
   <string name="bluetooth_pairing_pin_error_message">%1$s құрылғысымен жұптаса алмады, себебі PIN немесе кіру кілті дұрыс емес.</string>
   <string name="bluetooth_pairing_rejected_error_message">%1$s құрылғысы жұпталудан бас тартты.</string>
-  <string name="bluetooth_saved_device_lea_support">Аудио бөлісуге мүмкіндік береді.</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Компьютер</string>
   <string name="bluetooth_talkback_headphone">Құлақаспап</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">Қосымша мәзір</string>
   <string name="bubble_overflow_empty_subtitle">Соңғы және жабылған қалқыма хабарлар осы жерде көрсетіледі.</string>
   <string name="bubble_overflow_empty_title">Жақындағы қалқыма хабарлар жоқ</string>
-  <string name="bubble_shortcut_label">Қалқыма хабарлар</string>
-  <string name="bubble_shortcut_long_label">Қалқыма хабарлар көрсету</string>
   <string name="bubbles_app_settings">%1$s параметрлері</string>
   <string name="bubbles_dont_bubble_conversation">Әңгіменің қалқыма хабары көрсетілмесін</string>
   <string name="bubbles_settings_button_description">%1$s қалқыма хабарларының параметрлері</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">Трансляцияны тоқтату</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; қолданбасының контентін трансляциялауды тоқтатасыз.</string>
   <string name="cell_data_off_content_description">Мобильдік интернет өшірулі</string>
+  <string name="charge_limit_discovery_notification_enable_button">Қазір қосу</string>
+  <string name="charge_limit_discovery_notification_text">80%-ға шектеу функциясын қосып көрсеңіз, батареяның күйі мен қызмет мерзімін қорғай аласыз. Мұны кез келген уақытта параметрлерден басқаруға болады.</string>
+  <string name="charge_limit_discovery_notification_title">Зарядтау барысында батареяны қорғаңыз</string>
+  <string name="charging_reverse_text">Батарея қуатын бөлісу</string>
   <string name="clear_all_notifications_text">Барлығын тазарту</string>
   <string name="clipboard">Буфер</string>
   <string name="clipboard_content_copied">Контент көшірілді.</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">Жабу</string>
   <string name="close_dialog_button">Жабу</string>
   <string name="collapse_menu_text">Мәзірді жабу</string>
+  <string name="columbus_bouncer_message">Жылдам түрту қимылын орындау үшін құлыпты ашыңыз.</string>
+  <string name="columbus_target_request_dialog_allow">Рұқсат ету</string>
+  <string name="columbus_target_request_dialog_deny">Рұқсат бермеу</string>
+  <string name="columbus_target_request_dialog_summary">%1$s қолданбасын ашу үшін телефонның артын екі рет түртіңіз. Мұны кез келген уақытта "Параметрлер" бөлімінен өзгертуге болады.</string>
+  <string name="columbus_target_request_dialog_title">"Жылдам түрту" қимылына %1$s қолданбасын ашуға рұқсат берілсін бе?</string>
   <string name="communal_tutorial_indicator_text">Ортақ оқулықты ашу үшін солға қарай сырғытыңыз.</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Ішкі экран көшірмесі көрсетіледі. Алдыңғы экран өшіріледі.</string>
   <string name="connected_display_dialog_start_mirroring">Сыртқы экран арқылы да көрсету керек пе?</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">Мобильдік интернет кідіртілді</string>
   <string name="data_usage_disabled_dialog_title">Деректер кідіртілді</string>
   <string name="days_timestamp">%1$s күн бұрын</string>
-  <string name="default_error_message">Енгізілген мән жарамсыз.</string>
   <string name="default_popup_window_title">Қалқымалы терезе</string>
+  <string name="defender_notify_resume_charge">Қайта анықтау</string>
+  <string name="defender_notify_title">Батареяны қорғау</string>
+  <string name="defender_post_notify_des">Батареяның қызмет мерзімін ұзарту үшін, зарядтау %1$s – %2$s аралығында оңтайландырылды.</string>
+  <string name="defender_post_notify_title">Зарядтау оңтайландырылды</string>
   <string name="demo_mode">Жүйе интерфейсінің демо режимі</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Экранды ұлғайту</string>
   <string name="desktop_mode_maximize_menu_snap_text">Экранды бөлу</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">Бұл құрылғы ұйымыңызға тиесілі.</string>
   <string name="do_disclosure_with_name">Бұл құрылғы %s ұйымына тиесілі.</string>
   <string name="do_financed_disclosure_with_name">Бұл құрылғыны %s ұсынады.</string>
+  <string name="dock_a11y_action_show_photo_text">Сурет жақтауын көрсету</string>
+  <string name="dock_alignment_not_charging">Сымсыз зарядтау үшін телефонды қайта туралаңыз.</string>
+  <string name="dock_alignment_slow_charging">Жылдам зарядтау үшін телефонды қайта туралаңыз.</string>
+  <string name="dock_defender_first_run_des">Батареяның қызмет мерзімін созу үшін планшет қондыру станциясында тұрғанда, зарядтау 90% деңгейінде кідіртіледі. Қайта анықтау үшін кез келген уақытта параметрлерге өтіңіз.</string>
+  <string name="dock_defender_first_run_settings">Параметрлер</string>
+  <string name="dock_defender_first_run_title">Батареяны қорғау үшін зарядтау кідіртілді</string>
   <string name="dock_multi_instances_not_supported_text">Бұл қолданбаны тек 1 терезеден ашуға болады.</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Қолданбада экранды бөлу мүмкін емес.</string>
+  <string name="dock_photo_preview_text">Сурет жақтауын іске қосу...</string>
+  <string name="dock_promo_text">Сурет жақтауы үшін солға сырғытыңыз</string>
   <string name="done">Дайын</string>
   <string name="drag_split_not_supported">Бұл хабарландыруды бөлінген экранға сүйреп апару мүмкін емес.</string>
   <string name="drag_to_add_tiles">Қажетті элементтерді сүйреп әкеліп қойыңыз</string>
   <string name="drag_to_rearrange_tiles">Элементтердің ретін өзгерту үшін оларды басып тұрып сүйреңіз</string>
   <string name="drag_to_remove_disabled">Кемінде %1$d бөлшек қажет.</string>
   <string name="drag_to_remove_tiles">Керексіздерін осы жерге сүйреңіз</string>
+  <string name="dream_lockscreen_wallpaper_description">Қазіргі құлып экраны тұсқағазын пайдалану</string>
+  <string name="dream_lockscreen_wallpaper_label">Тұсқағаз</string>
   <string name="dream_overlay_status_bar_alarm_set">Оятқыш орнатылды</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Камера мен микрофон өшірулі</string>
   <string name="dream_overlay_status_bar_camera_off">Камера өшірулі.</string>
   <string name="dream_overlay_status_bar_mic_off">Микрофон өшірулі.</string>
   <string name="dream_overlay_status_bar_priority_mode">Басымдық режимі</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi қолжетімсіз</string>
+  <string name="dwell_defender_notify_des">Телефон тым ұзақ зарядталса, батареяның қызмет мерзімін ұзартуға көмектеседі.</string>
+  <string name="dwell_defender_notify_title">Батареяны қорғау үшін зарядтау кідіртілді</string>
   <string name="edit_user_info_message">Сіз таңдаған ат пен сурет осы құрылғыны пайдаланатын кез келген адамға көрінетін болады.</string>
   <string name="edit_widget">Виджетті өзгерту</string>
   <string name="empty_shade_text">Хабарландырулар жоқ</string>
@@ -561,13 +581,17 @@
   <string name="ethernet_label">Этернет</string>
   <string name="expand_button_title">Қосымша</string>
   <string name="expand_menu_text">Мәзірді ашу</string>
+  <string name="extreme_battery_saver_text">Барынша</string>
+  <string name="extreme_low_battery_notification_text">Жақын арада зарядталмаса, телефоныңыз өшеді.</string>
+  <string name="extreme_low_battery_notification_title">Батарея өте аз</string>
   <string name="face_re_enroll_dialog_content">Бет тану функциясын қайта реттеу үшін қолданыстағы бет үлгісі жойылады.
 
 Бет үлгісімен телефон құлпын ашу үшін бұл функцияны қайта реттеуіңіз қажет.</string>
   <string name="face_re_enroll_dialog_title">Бет тану функциясын реттеу</string>
   <string name="face_re_enroll_notification_name">Бет тану</string>
   <string name="face_re_enroll_notification_title">Бет тану функциясын қайта реттеңіз</string>
-  <string name="face_reenroll_failure_dialog_content">Бет тану функциясы реттелмеді. "Параметрлер" бөліміне өтіп, әрекетті қайталап көріңіз.</string>
+  <string name="face_reenroll_dialog_confirm">Реттеу</string>
+  <string name="face_reenroll_failure_dialog_content">Бет тану параметрлері реттелмеді. "Параметрлер" бөліміне өтіп, қайталап көріңіз.</string>
   <string name="failed_attempts_now_wiping_device">Тым көп қате әрекет жасалды. Бұл құрылғының деректері жойылады.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Жабу</string>
   <string name="failed_attempts_now_wiping_profile">Тым көп қате әрекет жасалды. Бұл жұмыс профилі мен оның деректері жойылады.</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">Кішірейту</string>
   <string name="fullscreen_text">Толық экран</string>
   <string name="game_status">Ойнатылуда</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Құлыпты ашық ұстау функциясы өшірілді.</string>
   <string name="go_to_web">Браузерге өту</string>
   <string name="got_it">Түсінікті</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">Қонақ сеансын бастапқы күйге қайтару керек пе?</string>
   <string name="guest_reset_guest_confirm_button">Бастапқы күйге қайтару</string>
   <string name="guest_resetting">Қонақ сеансы бастапқы күйге қайтарылуда…</string>
+  <string name="handle_invocation_prompt">Сөйлеу үшін сырғытыңыз.</string>
   <string name="handle_text">Идентификатор</string>
   <string name="headset">Құлақаспап жинағы</string>
   <string name="hearing_devices_preset_label">Параметрлер жинағы</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">Телефон қызып бара жатыр</string>
   <string name="home_controls_dream_description">Үй басқару элементтерін скринсейверден қолданыңыз.</string>
   <string name="home_controls_dream_label">Үй басқару элементтері</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Кемінде бір құрылғы немесе құрылғы панелі қолжетімді</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Home қолданбасын таңбаша ретінде қосу үшін қолданбаның орнатылғанын тексеріңіз.</string>
   <string name="hub_mode_add_widget_button_text">Виджет қосу</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">Орындалуда</string>
   <string name="inattentive_sleep_warning_message">Құрылғы жақын арада өшеді. Оны қосулы ұстау үшін басыңыз.</string>
   <string name="inattentive_sleep_warning_title">Күту режимі</string>
+  <string name="incompatible_charging_learn_more">Толық ақпарат</string>
+  <string name="incompatible_charging_notify_des">Телефоныңыз баяу зарядталуы немесе мүлдем зарядталмауы мүмкін. Жылдамырақ зарядтау үшін, ұсынылған кабель мен адаптерді пайдаланыңыз.</string>
+  <string name="incompatible_charging_notify_title">Зарядтау құрылғысын тексеріңіз</string>
   <string name="indeterminate">Жартылай белгіленді.</string>
   <string name="inline_done_button">Дайын</string>
   <string name="inline_ok_button">Қолдану</string>
   <string name="inline_turn_off_notifications">Хабарландыруларды өшіру</string>
   <string name="input_switch_input_language_next">Келесі тілге ауысу</string>
   <string name="input_switch_input_language_previous">Алдыңғы тілге ауысу</string>
+  <string name="install_app">Қолданбаны орнату</string>
   <string name="install_dialer_on_work_profile_action">Жұмысқа арналған телефон қолданбасын орнату</string>
   <string name="install_type_instant">Лездік қолданба</string>
   <string name="instant_apps">Instant Apps</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">%1$s іске қосулы</string>
   <string name="interruption_level_none">Толық тыныштық</string>
   <string name="interruption_level_priority">Маңыздылары ғана</string>
-  <string name="invalid_charger_text">Құрылғымен бірге берілген зарядтау құралын пайдаланыңыз</string>
-  <string name="invalid_charger_title">USB арқылы зарядтау мүмкін емес</string>
   <string name="issuerecord_background_processing_label">Мәселе жазбасы өңделіп жатыр</string>
   <string name="issuerecord_ongoing_screen_only">Мәселе жазылып жатыр</string>
   <string name="issuerecord_save_title">Мәселе жазбасы сақталды</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">Құрылғы құлыпталды
 Аутентификация орындалмады</string>
   <string name="keyguard_indication_charging_time">%2$s • Зарядталуда • Толуына %1$s қалды.</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • %1$s шамасында зарядталып болады.</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Зарядталып жатыр. • Толуына %1$s қалды.</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Толық зарядталу уақыты: %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Жылдам зарядтау • Толуына %1$s қалды.</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Жылдам зарядтау • Толық зарядталу уақыты: %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • зарядталып болды.</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Баяу зарядталуда • Толуына %1$s қалды.</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Толық зарядталу уақыты: %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Толық зарядталу уақыты: %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Сымсыз зарядталуда • Толуына %1$s қалды.</string>
-  <string name="keyguard_indication_trust_unlocked">TrustAgent арқылы құлпы ашылды.</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Толық зарядталу уақыты: %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Құлыпты ашық ұстау режимі арқылы ашық тұр.</string>
   <string name="keyguard_missing_sim_message_short">SIM картасы жоқ.</string>
   <string name="keyguard_network_locked_message">Желі құлыптаулы</string>
   <string name="keyguard_permanent_disabled_sim_message_short">SIM картасын пайдалану мүмкін емес.</string>
   <string name="keyguard_plugged_in">%s • Зарядталуда</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Жылдам зарядтау</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Жылдам зарядтау</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Батареяны қорғау мақсатында зарядтау кідіртілді.</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Баяу зарядталуда</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Зарядталып жатыр.</string>
   <string name="keyguard_plugged_in_dock">%s • Зарядталып жатыр.</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Зарядталып жатыр.</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Зарядтау құрылғысын тексеріңіз.</string>
+  <string name="keyguard_plugged_in_v2">%s • Зарядталып жатыр.</string>
   <string name="keyguard_plugged_in_wireless">%s • Сымсыз зарядталуда</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Зарядталып жатыр.</string>
   <string name="keyguard_retry">Әрекетті қайталау үшін жоғары сырғытыңыз.</string>
   <string name="keyguard_sim_error_message_short">Жарамсыз карта.</string>
   <string name="keyguard_sim_locked_message">SIM картасы құлыпталған.</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">PIN коды сәйкес келмейді</string>
   <string name="kg_invalid_sim_pin_hint">4-8 саннан тұратын PIN кодын енгізіңіз.</string>
   <string name="kg_invalid_sim_puk_hint">PUK коды 8 не одан көп саннан тұруы қажет.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{SIM картасының PIN кодын енгізіңіз. # мүмкіндік қалды, одан кейін оператордан SIM картасының құлпын ашуды сұрауға тура келеді.}other{SIM картасының PIN кодын енгізіңіз. # әрекет қалды.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM картасы өшірілді. Жалғастыру үшін PUK кодын енгізіңіз. # мүмкіндік қалды, одан кейін SIM картасы біржола құлыпталады. Толығырақ мәліметті оператордан алыңыз.}other{SIM картасы өшірілді. Жалғастыру үшін PUK кодын енгізіңіз. # мүмкіндік қалды, одан кейін SIM картасы біржола құлыпталады. Толығырақ мәліметті оператордан алыңыз.}}</string>
   <string name="kg_password_pin_failed">SIM PIN кодымен құлпы ашылмады!</string>
   <string name="kg_password_puk_failed">SIM PUK кодымен құлпы ашылмады!</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">"%1$s" үшін SIM PIN кодын енгізіңіз.</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM картасының құлпы ашылып жатыр…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{# секундтан соң қайталап көріңіз.}other{# секундтан соң қайталап көріңіз.}}</string>
-  <string name="kg_trust_agent_disabled">Сенімді агент функциясы істемейді.</string>
+  <string name="kg_trust_agent_disabled">Құлыпты ашық ұстау функциясы істемейді.</string>
   <string name="kg_unlock_with_password_or_fp">Құлыпты құпия сөзбен не саусақ ізімен ашыңыз.</string>
   <string name="kg_unlock_with_pattern_or_fp">Құлыпты өрнекпен не саусақ ізімен ашыңыз.</string>
   <string name="kg_unlock_with_pin_or_fp">Құлыпты PIN кодымен не саусақ ізімен ашыңыз.</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">Толық ақпарат</string>
   <string name="log_access_confirmation_learn_more_at">Толық ақпарат: %s</string>
   <string name="log_access_confirmation_title">%s қолданбасына құрылғының барлық журналын пайдалануға рұқсат берілсін бе?</string>
+  <string name="low_battery_label">Батарея заряды аз қалды.</string>
+  <string name="low_battery_notification_text">Батарея жұмысының ұзақтығын арттыру үшін батареяны стандартты үнемдеу режимін қосыңыз.</string>
+  <string name="low_battery_notification_text_ebs">Батарея жұмысының ұзақтығын арттыру үшін батареяны барынша үнемдеу режимін қосыңыз.</string>
+  <string name="low_battery_notification_title">Батарея қуаты — %s.</string>
   <string name="m3c_search_bar_search">Іздеу</string>
   <string name="m3c_suggestions_available">Төмендегі ұсыныстар</string>
   <string name="magnification_close_settings_click_label">Ұлғайту параметрлерін жабу</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Тоқтату</string>
   <string name="media_output_end_session_dialog_summary">Мультимедиа файлын басқа құрылғыға жылжыту үшін ортақ сеансты тоқтатыңыз.</string>
-  <string name="media_output_first_broadcast_title">Тарату қалай жүзеге асады</string>
-  <string name="media_output_first_notify_broadcast_message">Үйлесімді Bluetooth құрылғылары бар маңайдағы адамдар сіз таратып жатқан медиамазмұнды тыңдай алады.</string>
   <string name="media_output_group_title_speakers_and_displays">Динамиктер мен дисплейлер</string>
   <string name="media_output_group_title_suggested_device">Ұсынылған құрылғылар</string>
   <string name="media_output_label_title">%s ойнатылатын құрылғы:</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Қолданба экранын трансляциялау кезінде Android қолданбада көрінетін не ойнатылатын барлық контентті пайдалана алады. Сондықтан құпия сөздер, төлем туралы мәлімет, хабарлар, фотосуреттер, дыбыстар мен бейнелер сияқты ақпаратқа сақ болыңыз.</string>
   <string name="media_projection_sys_service_dialog_title">Жазу немесе трансляциялау басталсын ба?</string>
   <string name="media_projection_sys_service_dialog_warning">Осы функцияны ұсынатын қызмет экранда көрсетілетін немесе жазу не трансляциялау кезінде құрылғыда ойнатылған барлық ақпаратты пайдалана алады. Бұған құпия сөздер, төлем туралы мәліметтер, суреттер, хабарлар және ойнатылатын аудио сияқты ақпарат кіреді.</string>
-  <string name="media_projection_task_switcher_action_back">Қайта ауысу</string>
-  <string name="media_projection_task_switcher_action_switch">Орнына осы қолданбаны бөлісу</string>
-  <string name="media_projection_task_switcher_text">Қолданба ауыстырғанда, бөлісу кідіртіледі.</string>
   <string name="media_seamless_other_device">Басқа құрылғы</string>
   <string name="media_transfer_default_device_name">Жалғанған құрылғы</string>
   <string name="media_transfer_dock_speaker_device_name">Динамигі бар қондыру станциясы</string>
@@ -1138,7 +1177,7 @@
   <string name="pip_skip_to_prev">Алдыңғысына оралу</string>
   <string name="popup_on_dismiss_cta_tile_text">Виджеттерді бейімдеу үшін ұзақ басып тұрыңыз.</string>
   <string name="power_discharge_by_only_short">%1$s дейін</string>
-  <string name="preference_summary_default_combination">%1$s/%2$s</string>
+  <string name="preference_summary_default_combination">%1$s / %2$s</string>
   <string name="priority_conversations">Маңызды әңгімелер</string>
   <string name="priority_mode_dream_overlay_content_description">Мазаламау</string>
   <string name="privacy_dialog_active_app_usage">%1$s қолданбасы пайдаланып жатыр</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">Жоғары ажыратымдылық үшін телефонды айналдырыңыз.</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Экрандарды ауыстыру керек пе?</string>
   <string name="recent_conversations">Соңғы әңгімелер</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">сурет жіберілді</string>
   <string name="remove_from_settings">Параметрлерден жою</string>
   <string name="remove_from_settings_prompt">Жүйелік пайдаланушылық интерфейс тюнерін "Параметрлер" тармағынан жойып, оның барлық мүмкіндіктерін пайдалануды тоқтату керек пе?</string>
   <string name="require_unlock_for_nfc">NFC пайдалану үшін құлыпты ашыңыз.</string>
   <string name="restart_button_description">Көріністі жақсарту үшін осы қолданбаны түртіп, қайта ашыңыз.</string>
   <string name="retry_face">Бет аутентификациясын қайталап көру</string>
+  <string name="reverse_charging_device_name_text">Басқа Pixel құрылғысы</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s құрылғысы батарея зарядын беріп жатыр (%2$s).</string>
+  <string name="reverse_charging_on_notification_title">Батареяны бөлісу функциясы қосулы</string>
+  <string name="reverse_charging_title">Батареяны бөлісу</string>
   <string name="right_icon">Оң жақ белгіше</string>
   <string name="right_keycode">Оң жақ кілт коды</string>
   <string name="right_nav_bar_button_type">Қосымша оң жақ түйме түрі</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">Батарея мен деректер трафигі туралы білу үшін түртіңіз</string>
   <string name="running_foreground_services_title">Фонда жұмыс істеп тұрған қолданбалар</string>
-  <string name="satellite_connected_carrier_text">Satellite SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel Satellite SOS</string>
   <string name="save">Сақтау</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Бас тарту</string>
+  <string name="saver_confirmation_dialog_subtitle">Пайдаланатын режимді таңдаңыз.</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Жоғарыда берілген барлық өзгерісті қамтиды. Сондай-ақ қосалқы қолданбалар мен олардың хабарландыруларын кідіртіп қояды.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Визуалдық әсерлер мен фондық әрекет жұмысын шектейді. Қараңғы режим әлі қосылмаған болса, оны қосып қояды.</string>
+  <string name="saver_confirmation_dialog_title">Батареяны үнемдеу режиміне қош келдіңіз!</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Батареяны барынша үнемдеу режимі</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Батареяны стандартты үнемдеу режимі</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Құрылғы саясатына байланысты экранды түсіру өшірілді.</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Әкімшіңіз бөгеген</string>
   <string name="screen_pinning_can_open_other_apps">Бекітілген қолданба басқа қолданбаларды ашуы мүмкін.</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">Бұл қолданбаны босату үшін "Артқа" және "Шолу" түймелерін басып тұрыңыз.</string>
   <string name="screen_pinning_toast_gesture_nav">Бұл қолданбаны босату үшін экранды жоғары сырғытып, ұстап тұрыңыз.</string>
   <string name="screen_pinning_toast_recents_invisible">Бұл қолданбаны босату үшін "Артқа" және "Негізгі бет" түймелерін басып тұрыңыз.</string>
+  <string name="screen_protector_absent_message">Экран қорғанышы пайдаланылмаған кезде, экран қорғанышы режимін өшіру түрту сезгіштігін арттырады.</string>
+  <string name="screen_protector_disable_notification">Хабарландыруды өшіру</string>
+  <string name="screen_protector_go_to_settings">Параметрлерге өту</string>
+  <string name="screen_protector_got_it">Түсінікті</string>
+  <string name="screen_protector_mode_title">Экран қорғанышы режимі</string>
+  <string name="screen_protector_present_message">Экран қорғанышы пайдаланылған кезде, экран қорғанышы режимін қосу түрту сезгіштігін арттырады.</string>
   <string name="screen_share_permission_app_selector_title">Қолданба экранын бөлісу не жазу</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Бүкіл экран</string>
   <string name="screen_share_permission_dialog_option_single_app">Жалғыз қолданба</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">Скриншот жұмыс профиліне сақталып жатыр…</string>
   <string name="screenshot_scroll_label">Тағы суретке түсіру</string>
   <string name="screenshot_share_description">Скриншотты бөлісу</string>
-  <string name="screenshot_share_label">Бөлісу</string>
   <string name="screenshot_text">Скриншот</string>
   <string name="screenshot_top_boundary_pct">Жоғарғы шектік сызық: %1$d пайыз</string>
+  <string name="screenshot_view_description">Скриншотты көрсетеді.</string>
   <string name="screenshot_work_profile_notification">Жұмыс профиліндегі %1$s қолданбасында сақталған.</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Саусақ ізін оқу сканері қуат түймесінде орналасқан. Ол – телефон шетіндегі шығыңқы дыбыс деңгейі түймесінің жанында орналасқан жалпақ түйме.</string>
   <string name="see_all_bluetooth_devices">Барлығын көру</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">Параметрлерден әдепкі жазба қолданбасын орнатыңыз.</string>
   <string name="settings_label">Параметрлер</string>
   <string name="settingslib_learn_more_text">Толық ақпарат</string>
+  <string name="severe_battery_notification_switch_text">Батареяны барынша үнемдеу режиміне ауысу керек пе? 
+
+Барлық негізгі емес қолданбаның жұмысы және хабарландырулары кідіртіледі.</string>
+  <string name="severe_battery_notification_text">Батареяны барынша үнемдеу режимін қосыңыз. Барлық негізгі емес қолданбаның жұмысы кідіртіледі.</string>
+  <string name="severe_battery_notification_title">Қалған батарея қуаты: %s</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Ауысу</string>
   <string name="share_to_app_stop_dialog_button">Бөлісуді тоқтату</string>
   <string name="share_to_app_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; қолданбасының контентін бөлісуді тоқтатасыз.</string>
   <string name="share_to_app_stop_dialog_title">Экранды бөлісуді тоқтатасыз ба?</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- Бұл %1$s қолданбасындағы ақпаратты оқи алады</string>
   <string name="slice_permission_text_2">- Бұл %1$s қолданбасында әрекет ете алады</string>
   <string name="slice_permission_title">%1$s қолданбасына %2$s қолданбасының үзінділерін көрсетуге рұқсат берілсін бе?</string>
+  <string name="smartspace_content_desc">Қысқаша мәлімет</string>
+  <string name="smartspace_flight_qr_code">QR коды</string>
+  <string name="smartspace_role_desc">Көру</string>
   <string name="snoozeHourOptions">{count,plural, =1{# сағат}=2{# сағат}other{# сағат}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# минут}other{# минут}}</string>
   <string name="snooze_undo">Қайтару</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">Баяу</string>
   <string name="speed_label_very_fast">Өте жылдам</string>
   <string name="split_screen_text">Экранды бөлу</string>
+  <string name="squeeze_invocation_prompt">Сөйлеу үшін қысып ұстаңыз.</string>
+  <string name="standard_battery_saver_text">Стандартты</string>
   <string name="start_dreams">Скринсейвер</string>
   <string name="state_empty">Бос</string>
   <string name="state_off">Өшірулі</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">Қойынды</string>
   <string name="tap_a_network_to_connect">Желіге қосылу үшін оны түртіңіз.</string>
   <string name="tap_again">Қайта түртіңіз.</string>
+  <string name="temp_defender_notify_des">Зарядтау телефонның температурасы қалыпты болғанда жалғасады.</string>
+  <string name="temp_defender_notify_title">Батареяны қорғау үшін зарядтау кідіртілді</string>
   <string name="template_percent">%1$d пайыз.</string>
   <string name="thermal">Термовизия</string>
   <string name="thermal_shutdown_dialog_help_text">Пайдалану нұсқаулығын қараңыз</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">Таңдаулы қолданба виджеттерін планшет құлпын ашпай-ақ жылдам пайдаланыңыз.</string>
   <string name="title_usb_accessory">USB жабдығы</string>
   <string name="to_switch_networks_disconnect_ethernet">Желілерді ауыстыру үшін ethernet кабелін ажыратыңыз.</string>
+  <string name="too_hot_label">Pixel қызып кетті</string>
   <string name="touch_filtered_warning">Басқа қолданба рұқсат сұрауын жасырып тұрғандықтан, параметрлер жауабыңызды растай алмайды.</string>
   <string name="touchpad_tutorial_action_key_button">Әрекет пернесі</string>
   <string name="touchpad_tutorial_back_gesture_button">Артқа қайтару қимылы</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">Mәзір</string>
   <string name="tuner_minus">Минус</string>
   <string name="tuner_other_apps">Басқа қолданбалар</string>
+  <string name="tuner_persistent_warning">Бұл эксперименттік мүмкіндіктер болашақ шығарылымдарда өзгеруі, бұзылуы немесе жоғалуы мүмкін. Сақтықпен жалғастырыңыз.</string>
   <string name="tuner_plus">Плюс</string>
   <string name="tuner_right">Оң жақ</string>
   <string name="tuner_time">Уақыт</string>
+  <string name="tuner_warning">Жүйелік пайдаланушылық интерфейс тюнері Android пайдаланушылық интерфейсін реттеудің қосымша жолдарын береді. Бұл эксперименттік мүмкіндіктер болашақ шығарылымдарда өзгеруі, бұзылуы немесе жоғалуы мүмкін. Сақтықпен жалғастырыңыз.</string>
+  <string name="tuner_warning_title">Кейбіреулерге қызық, бірақ барлығына емес</string>
   <string name="turn_off_airplane_mode">Ұшақ режимін өшіру</string>
   <string name="turn_on_bluetooth">Bluetooth-ты пайдалану</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Quick Share және Find My Device сияқты функциялар Bluetooth-ты пайдаланады.</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth ертең таңертең қосылады.</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Ертең автоматты түрде қосу</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Теледидардың әдепкі шығысы</string>
   <string name="two_weeks_timestamp">2 апта бұрын</string>
   <string name="unknown">Белгісіз</string>
   <string name="unlock_to_see_notif_text">Ескі хабарландырулар үшін құлыпты ашыңыз</string>
@@ -1552,7 +1624,9 @@ USB портын қайта пайдалануға болатын кезде х�
   <string name="volume_odi_captions_hint_enable">қосу</string>
   <string name="volume_odi_captions_tip">Автоматты субтитр қосу</string>
   <string name="volume_panel_captioning_title">Live Caption</string>
+  <string name="volume_panel_clear_calling_title">Таза дауыс</string>
   <string name="volume_panel_collapsed_sliders">Дыбыс деңгейінің жүгірткі реттегіштері жиылды.</string>
+  <string name="volume_panel_device_settings_title">Құрылғы параметрлері</string>
   <string name="volume_panel_dialog_settings_button">Параметрлер</string>
   <string name="volume_panel_enter_media_output_settings">Шығыс параметрлерін енгізу</string>
   <string name="volume_panel_expanded_sliders">Дыбыс деңгейінің жүгірткі реттегіштері жайылды.</string>
@@ -1667,10 +1741,13 @@ Wi‑Fi мекенжайы (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Белгісіз</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Трафик саналмайды</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Қазір Wi-Fi автоматты түрде қосылмайды.</string>
+  <string name="wireless_charging_label">Сымсыз зарядтау</string>
+  <string name="wireless_charging_notification_text">Сымды зарядтауға қарағанда сымсыз зарядтауға көп қуат кетуі мүмкін. Электр энергиясы мен уақытты үнемдеу үшін сымды зарядтағышқа ауысып көріңіз.</string>
+  <string name="wireless_charging_notification_title">Сымсыз зарядтау</string>
   <string name="work_challenge_emergency_button_text">Төтенше жағдай</string>
   <string name="work_mode_off_title">Жұмыс қолданбаларын қайта қосасыз ба?</string>
   <string name="work_mode_turn_on">Қайта қосу</string>
-  <string name="zen_alarm_warning">Келесі %1$s дабылыңызды есітпейсіз</string>
+  <string name="zen_alarm_warning">Келесі дабылыңыз (уақыты: %1$s) естілмейді</string>
   <string name="zen_alarm_warning_indef">Мұны ертерек өшіріп қоймасаңыз, келесі дабыл (уақыты: %1$s) естілмейді</string>
   <string name="zen_mode_enable_dialog_turn_on">Қосу</string>
   <string name="zen_mode_settings_turn_on_dialog_title">Мазаламау режимін қосу</string>

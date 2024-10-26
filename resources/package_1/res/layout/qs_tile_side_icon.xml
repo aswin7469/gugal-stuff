@@ -14,6 +14,6 @@
                         android:visibility="gone"
                         android:layout_width="@dimen/qs_icon_size"
                         android:layout_height="@dimen/qs_icon_size"
-                        android:src="@android:drawable/ic_check_24dp"
+                        android:src="@android:drawable/ic_camera_blocked"
                         android:importantForAccessibility="no" />
 </FrameLayout>

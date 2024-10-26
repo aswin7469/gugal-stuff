@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/biometrics/ui/binder/BiometricViewBinder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -89,7 +89,7 @@
     move-result v27
 
     .line 58
-    const v0, 0x7f0b0457    # @id/logo
+    const v0, 0x7f0a0479    # @id/logo
 
     .line 59
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -104,7 +104,7 @@
     check-cast v3, Landroid/widget/ImageView;
 
     .line 67
-    const v0, 0x7f0b0459    # @id/logo_description
+    const v0, 0x7f0a047b    # @id/logo_description
 
     .line 69
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -119,7 +119,7 @@
     check-cast v4, Landroid/widget/TextView;
 
     .line 77
-    const v0, 0x7f0b07ff    # @id/title
+    const v0, 0x7f0a082e    # @id/title
 
     .line 79
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -134,7 +134,7 @@
     check-cast v5, Landroid/widget/TextView;
 
     .line 87
-    const v0, 0x7f0b0782    # @id/subtitle
+    const v0, 0x7f0a07b1    # @id/subtitle
 
     .line 89
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -149,7 +149,7 @@
     check-cast v6, Landroid/widget/TextView;
 
     .line 97
-    const v0, 0x7f0b0251    # @id/description
+    const v0, 0x7f0a025d    # @id/description
 
     .line 99
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -164,7 +164,7 @@
     check-cast v7, Landroid/widget/TextView;
 
     .line 107
-    const v0, 0x7f0b023b    # @id/customized_view_container
+    const v0, 0x7f0a0246    # @id/customized_view_container
 
     .line 109
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -179,7 +179,7 @@
     check-cast v8, Landroid/widget/LinearLayout;
 
     .line 117
-    const v0, 0x7f0b05ba    # @id/panel
+    const v0, 0x7f0a05df    # @id/panel
 
     .line 119
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -269,7 +269,7 @@
     invoke-virtual {v7, v0}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
     .line 171
-    const v0, 0x7f0b011c    # @id/biometric_icon_overlay
+    const v0, 0x7f0a0121    # @id/biometric_icon_overlay
 
     .line 174
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -284,7 +284,7 @@
     check-cast v21, Lcom/airbnb/lottie/LottieAnimationView;
 
     .line 183
-    const v0, 0x7f0b011a    # @id/biometric_icon
+    const v0, 0x7f0a011f    # @id/biometric_icon
 
     .line 185
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -299,7 +299,7 @@
     check-cast v20, Lcom/airbnb/lottie/LottieAnimationView;
 
     .line 194
-    const v0, 0x7f0b039a    # @id/indicator
+    const v0, 0x7f0a03ba    # @id/indicator
 
     .line 196
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -314,7 +314,7 @@
     check-cast v17, Landroid/widget/TextView;
 
     .line 205
-    const v0, 0x7f0b0194    # @id/button_negative
+    const v0, 0x7f0a019a    # @id/button_negative
 
     .line 207
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -329,7 +329,7 @@
     check-cast v10, Landroid/widget/Button;
 
     .line 215
-    const v0, 0x7f0b0190    # @id/button_cancel
+    const v0, 0x7f0a0196    # @id/button_cancel
 
     .line 217
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -344,7 +344,7 @@
     check-cast v11, Landroid/widget/Button;
 
     .line 225
-    const v0, 0x7f0b0199    # @id/button_use_credential
+    const v0, 0x7f0a019f    # @id/button_use_credential
 
     .line 227
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -359,7 +359,7 @@
     check-cast v12, Landroid/widget/Button;
 
     .line 235
-    const v0, 0x7f0b0192    # @id/button_confirm
+    const v0, 0x7f0a0198    # @id/button_confirm
 
     .line 237
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -374,7 +374,7 @@
     check-cast v13, Landroid/widget/Button;
 
     .line 245
-    const v0, 0x7f0b0198    # @id/button_try_again
+    const v0, 0x7f0a019e    # @id/button_try_again
 
     .line 247
     invoke-virtual {v9, v0}, Landroid/view/View;->requireViewById(I)Landroid/view/View;

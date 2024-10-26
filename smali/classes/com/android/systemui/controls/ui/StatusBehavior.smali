@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/ui/StatusBehavior;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/controls/ui/Behavior;
@@ -72,7 +72,7 @@
     move-result-object v1
 
     .line 42
-    const v2, 0x7f1402bd    # @string/controls_error_removed_title 'Control is unavailable'
+    const v2, 0x7f1302d9    # @string/controls_error_removed_title 'Control is unavailable'
 
     .line 43
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -99,7 +99,7 @@
     move-result-object p0
 
     .line 62
-    const v2, 0x7f1402bc    # @string/controls_error_removed_message 'Couldn’t access %1$s. Check the %2$s app to make sure the control is still available and that the ap ...'
+    const v2, 0x7f1302d8    # @string/controls_error_removed_message 'Couldn’t access %1$s. Check the %2$s app to make sure the control is still available and that the ap ...'
 
     .line 63
     invoke-virtual {v1, v2, p0}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -117,7 +117,7 @@
     invoke-direct {p0, p2, v0, p1}, Lcom/android/systemui/controls/ui/StatusBehavior$showNotFoundDialog$builder$1$1;-><init>(Lcom/android/systemui/controls/ui/ControlWithState;Landroid/app/AlertDialog$Builder;Lcom/android/systemui/controls/ui/ControlViewHolder;)V
 
     .line 75
-    const p2, 0x7f1402e3    # @string/controls_open_app 'Open app'
+    const p2, 0x7f1302ff    # @string/controls_open_app 'Open app'
 
     .line 78
     invoke-virtual {v0, p2, p0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -234,21 +234,21 @@
     iput-boolean v2, p1, Lcom/android/systemui/controls/ui/ControlViewHolder;->isLoading:Z
 
     .line 30
-    const p1, 0x104054c    # @android:string/lockscreen_pattern_correct
+    const p1, 0x1040543    # @android:string/lockscreen_glogin_username_hint
 
     .line 32
     goto :goto_4
 
     .line 35
     :cond_2
-    const p1, 0x7f1402be    # @string/controls_error_timeout 'Inactive, check app'
+    const p1, 0x7f1302da    # @string/controls_error_timeout 'Inactive, check app'
 
     .line 36
     goto :goto_4
 
     .line 39
     :cond_3
-    const p1, 0x7f1402ba    # @string/controls_error_generic 'Can’t load status'
+    const p1, 0x7f1302d6    # @string/controls_error_generic 'Can’t load status'
 
     .line 40
     goto :goto_4
@@ -307,7 +307,7 @@
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 73
-    const p1, 0x7f1402bb    # @string/controls_error_removed 'Not found'
+    const p1, 0x7f1302d7    # @string/controls_error_removed 'Not found'
 
     .line 76
     :goto_4

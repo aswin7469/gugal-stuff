@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -59,7 +59,7 @@
 
 .field public mLongPressedView:Landroid/view/View;
 
-.field public mMaxAlphaForGlanceableHub:F
+.field public final mMaxAlphaForGlanceableHub:F
 
 .field public mMaxAlphaForKeyguard:F
 
@@ -156,8 +156,8 @@
     .line 13
 .end method
 
-.method public constructor <init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;ZLcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/init/NotificationsController;Lcom/android/systemui/statusbar/notification/collection/render/NotificationVisibilityProvider;Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;Lcom/android/systemui/statusbar/policy/HeadsUpManager;Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;Lcom/android/systemui/tuner/TunerService;Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/media/controls/ui/controller/KeyguardMediaController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;Lcom/android/systemui/keyguard/data/repository/KeyguardTransitionRepositoryImpl;Lcom/android/systemui/statusbar/policy/ZenModeController;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/statusbar/notification/ColorUpdateLogger;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$Builder;Lcom/android/systemui/statusbar/notification/collection/render/GroupExpansionManagerImpl;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;Lcom/android/systemui/statusbar/notification/collection/NotifCollection;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/statusbar/NotificationRemoteInputManager;Lcom/android/systemui/statusbar/notification/collection/provider/VisibilityLocationProviderDelegator;Lcom/android/systemui/statusbar/notification/domain/interactor/SeenNotificationsInteractor;Lcom/android/systemui/statusbar/notification/stack/ui/viewbinder/NotificationListViewBinder;Lcom/android/systemui/shade/ShadeController;Ldagger/internal/Provider;Lcom/android/internal/jank/InteractionJankMonitor;Lcom/android/systemui/statusbar/notification/stack/StackStateLogger;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLogger;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;Lcom/android/systemui/statusbar/notification/stack/NotificationTargetsHelper;Lcom/android/systemui/util/settings/SecureSettings;Lcom/android/systemui/statusbar/notification/collection/provider/NotificationDismissibilityProviderImpl;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/statusbar/policy/SplitShadeStateControllerImpl;Lcom/android/systemui/statusbar/policy/SensitiveNotificationProtectionController;)V
-    .locals 24
+.method public constructor <init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;ZLcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/init/NotificationsController;Lcom/android/systemui/statusbar/notification/collection/render/NotificationVisibilityProvider;Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;Lcom/android/systemui/statusbar/policy/HeadsUpManager;Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;Lcom/android/systemui/tuner/TunerService;Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/media/controls/ui/controller/KeyguardMediaController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;Lcom/android/systemui/keyguard/data/repository/KeyguardTransitionRepositoryImpl;Lcom/android/systemui/statusbar/policy/ZenModeController;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/statusbar/notification/ColorUpdateLogger;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$Builder;Lcom/android/systemui/statusbar/notification/collection/render/GroupExpansionManagerImpl;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;Lcom/android/systemui/statusbar/notification/collection/NotifCollection;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/statusbar/NotificationRemoteInputManager;Lcom/android/systemui/statusbar/notification/collection/provider/VisibilityLocationProviderDelegator;Lcom/android/systemui/statusbar/notification/domain/interactor/SeenNotificationsInteractor;Lcom/android/systemui/statusbar/notification/stack/ui/viewbinder/NotificationListViewBinder;Lcom/android/systemui/shade/ShadeController;Ldagger/internal/DelegateFactory;Lcom/android/internal/jank/InteractionJankMonitor;Lcom/android/systemui/statusbar/notification/stack/StackStateLogger;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLogger;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;Lcom/android/systemui/statusbar/notification/stack/NotificationTargetsHelper;Lcom/android/systemui/util/settings/SecureSettings;Lcom/android/systemui/statusbar/notification/collection/provider/NotificationDismissibilityProviderImpl;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/statusbar/policy/SplitShadeStateControllerImpl;Lcom/android/systemui/statusbar/policy/SensitiveNotificationProtectionController;)V
+    .locals 28
 
     move-object/from16 v0, p0
 
@@ -185,13 +185,15 @@
 
     move-object/from16 v12, p27
 
-    move-object/from16 v13, p31
+    move-object/from16 v13, p28
 
-    move-object/from16 v14, p42
+    move-object/from16 v14, p31
 
-    move-object/from16 v15, p46
+    move-object/from16 v15, p42
 
-    move-object/from16 v13, p48
+    move-object/from16 v13, p46
+
+    move-object/from16 v14, p48
 
     .line 1
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -222,6 +224,8 @@
 
     iput-object v11, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mOnAttachStateChangeListener:Landroid/view/View$OnAttachStateChangeListener;
 
+    move-object/from16 p6, v11
+
     const/4 v11, 0x0
 
     .line 6
@@ -232,21 +236,21 @@
 
     invoke-direct {v11, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$3;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
-    iput-object v11, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mDeviceProvisionedListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$3;
+    move-object/from16 p38, v11
 
     .line 8
     new-instance v11, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$4;
 
     invoke-direct {v11, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$4;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
-    iput-object v11, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSensitiveStateChangedListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$4;
+    move-object/from16 v16, v11
 
     .line 9
     new-instance v11, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda0;
 
     invoke-direct {v11, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
-    iput-object v11, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mDynamicPrivacyControllerListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda0;
+    move-object/from16 v17, v11
 
     .line 10
     new-instance v11, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$5;
@@ -296,7 +300,7 @@
 
     invoke-direct {v11, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
-    move-object/from16 p6, v8
+    move-object/from16 v26, v8
 
     .line 20
     new-instance v8, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;
@@ -305,14 +309,14 @@
 
     iput-object v8, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotificationCallback:Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$NotificationCallback;
 
-    move-object/from16 p38, v11
+    move-object/from16 v24, v11
 
     .line 21
     new-instance v11, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$10;
 
     invoke-direct {v11, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$10;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
-    move-object/from16 v23, v11
+    move-object/from16 v27, v11
 
     .line 22
     new-instance v11, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$11;
@@ -411,7 +415,7 @@
     iput-object v11, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
     .line 44
-    iput-object v14, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotificationStackSizeCalculator:Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
+    iput-object v15, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotificationStackSizeCalculator:Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
 
     .line 45
     iput-object v12, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mGroupExpansionManager:Lcom/android/systemui/statusbar/notification/collection/render/GroupExpansionManagerImpl;
@@ -452,10 +456,10 @@
     iput-object v11, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mDismissibilityProvider:Lcom/android/systemui/statusbar/notification/collection/provider/NotificationDismissibilityProviderImpl;
 
     .line 53
-    iput-object v15, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
+    iput-object v13, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
 
     .line 54
-    iput-object v13, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSensitiveNotificationProtectionController:Lcom/android/systemui/statusbar/policy/SensitiveNotificationProtectionController;
+    iput-object v14, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSensitiveNotificationProtectionController:Lcom/android/systemui/statusbar/policy/SensitiveNotificationProtectionController;
 
     move-object/from16 v11, p47
 
@@ -466,110 +470,94 @@
     invoke-virtual/range {p1 .. p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateSplitNotificationShade()V
 
     .line 57
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 58
     invoke-virtual {v10, v0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
 
-    .line 59
+    .line 58
     invoke-virtual/range {p42 .. p42}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->updateResources()V
 
-    .line 60
+    .line 59
     iget-object v11, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mStateAnimator:Lcom/android/systemui/statusbar/notification/stack/StackStateAnimator;
 
-    move-object/from16 v13, p40
+    move-object/from16 v14, p40
+
+    .line 60
+    iput-object v14, v11, Lcom/android/systemui/statusbar/notification/stack/StackStateAnimator;->mLogger:Lcom/android/systemui/statusbar/notification/stack/StackStateLogger;
 
     .line 61
-    iput-object v13, v11, Lcom/android/systemui/statusbar/notification/stack/StackStateAnimator;->mLogger:Lcom/android/systemui/statusbar/notification/stack/StackStateLogger;
-
-    .line 62
     iput-object v0, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mController:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 63
+    .line 62
     iget-object v11, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mChildrenToAddAnimated:Ljava/util/HashSet;
 
-    .line 64
+    .line 63
     iput-object v11, v4, Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;->mAnimatedChildren:Ljava/util/HashSet;
 
     move-object/from16 v11, p41
 
-    .line 65
+    .line 64
     iput-object v11, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mLogger:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLogger;
 
-    .line 66
+    .line 65
     new-instance v11, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$TouchHandler;
 
     invoke-direct {v11, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$TouchHandler;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
     iput-object v11, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mTouchHandler:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$TouchHandler;
 
-    .line 67
+    .line 66
     iput-object v11, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mTouchHandler:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$TouchHandler;
 
-    .line 68
+    .line 67
     invoke-static/range {p4 .. p4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v11, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda7;
 
-    const/4 v13, 0x3
+    const/4 v14, 0x3
 
-    invoke-direct {v11, v13, v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v11, v14, v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda7;-><init>(ILjava/lang/Object;)V
 
-    .line 69
+    .line 68
     iput-object v11, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mResetUserExpandedStatesRunnable:Ljava/lang/Runnable;
 
+    .line 69
+    iput-object v13, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
+
     .line 70
-    iput-object v15, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
+    new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;
+
+    invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
     .line 71
-    new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;
-
-    invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
-
-    .line 72
     iput-object v2, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mClearAllAnimationListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;
 
-    .line 73
+    .line 72
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;
 
     invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
-    .line 74
+    .line 73
     iput-object v2, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mClearAllListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;
 
-    .line 75
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 76
+    .line 74
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;
 
     invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
-    .line 77
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 78
+    .line 75
     iput-object v2, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mFooterClearAllListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;
 
-    .line 79
+    .line 76
     invoke-virtual/range {p33 .. p33}, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->isRemoteInputActive()Z
 
     move-result v2
 
-    .line 80
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 81
+    .line 77
     iput-boolean v2, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mIsRemoteInputActive:Z
 
-    .line 82
+    .line 78
     invoke-virtual/range {p1 .. p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateFooter()V
 
-    .line 83
+    .line 79
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$12;
 
     invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$12;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
@@ -578,21 +566,20 @@
 
     invoke-virtual {v11, v2}, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->addControllerCallback(Lcom/android/systemui/statusbar/RemoteInputController$Callback;)V
 
-    .line 84
-    :cond_0
+    .line 80
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda7;
 
     const/4 v11, 0x0
 
     invoke-direct {v2, v11, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda7;-><init>(ILjava/lang/Object;)V
 
-    .line 85
+    .line 81
     iput-object v2, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mClearAllFinishedWhilePanelExpandedRunnable:Ljava/lang/Runnable;
 
-    .line 86
+    .line 82
     invoke-virtual {v10, v1}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
 
-    .line 87
+    .line 83
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda8;
 
     const/4 v10, 0x0
@@ -603,32 +590,32 @@
 
     invoke-virtual {v10, v2}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->registerOnBypassStateChangedListener(Lcom/android/systemui/statusbar/phone/KeyguardBypassController$OnBypassStateChangedListener;)V
 
-    .line 88
+    .line 84
     invoke-virtual/range {p15 .. p15}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->getBypassEnabled()Z
 
     move-result v2
 
     xor-int/lit8 v2, v2, 0x1
 
-    .line 89
+    .line 85
     iput-boolean v2, v4, Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;->mRoundForPulsingViews:Z
 
     move-object/from16 v2, p26
 
-    .line 90
+    .line 86
     iput-object v8, v2, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$Builder;->mNotificationCallback:Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$NotificationCallback;
 
-    move-object/from16 v4, p38
+    move-object/from16 v4, v24
 
-    .line 91
+    .line 87
     iput-object v4, v2, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$Builder;->mOnMenuEventListener:Lcom/android/systemui/plugins/statusbar/NotificationMenuRowPlugin$OnMenuEventListener;
 
-    .line 92
+    .line 88
     new-instance v11, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;
 
     iget-object v13, v2, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$Builder;->mResources:Landroid/content/res/Resources;
 
-    iget-object v15, v2, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$Builder;->mViewConfiguration:Landroid/view/ViewConfiguration;
+    iget-object v14, v2, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$Builder;->mViewConfiguration:Landroid/view/ViewConfiguration;
 
     iget-object v12, v2, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$Builder;->mNotificationRoundnessManager:Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;
 
@@ -636,33 +623,33 @@
 
     iget-object v7, v2, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$Builder;->mFeatureFlags:Lcom/android/systemui/flags/FeatureFlags;
 
-    move-object/from16 v17, v15
+    move-object/from16 v18, v11
 
-    move-object v15, v11
+    move-object/from16 v19, v13
 
-    move-object/from16 v16, v13
+    move-object/from16 v20, v14
 
-    move-object/from16 v18, v5
+    move-object/from16 v21, v5
 
-    move-object/from16 v19, v7
+    move-object/from16 v22, v7
 
-    move-object/from16 v20, v8
+    move-object/from16 v23, v8
 
-    move-object/from16 v21, v4
+    move-object/from16 v24, v4
 
-    move-object/from16 v22, v12
+    move-object/from16 v25, v12
 
-    invoke-direct/range {v15 .. v22}, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;-><init>(Landroid/content/res/Resources;Landroid/view/ViewConfiguration;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$NotificationCallback;Lcom/android/systemui/plugins/statusbar/NotificationMenuRowPlugin$OnMenuEventListener;Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;)V
+    invoke-direct/range {v18 .. v25}, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;-><init>(Landroid/content/res/Resources;Landroid/view/ViewConfiguration;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$NotificationCallback;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;)V
 
-    .line 93
+    .line 89
     iget-object v2, v2, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper$Builder;->mDumpManager:Lcom/android/systemui/dump/DumpManager;
 
     invoke-virtual {v2, v11}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
 
-    .line 94
+    .line 90
     iput-object v11, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSwipeHelper:Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;
 
-    .line 95
+    .line 91
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$13;
 
     invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$13;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
@@ -671,24 +658,24 @@
 
     invoke-virtual {v4, v2}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->addCollectionListener(Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionListener;)V
 
-    .line 96
+    .line 92
     invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
     iget-object v4, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSwipeHelper:Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;
 
-    invoke-virtual {v1, v2, v4, v14}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->initView(Landroid/content/Context;Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;)V
+    invoke-virtual {v1, v2, v4, v15}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->initView(Landroid/content/Context;Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;)V
 
-    .line 97
+    .line 93
     invoke-virtual/range {p15 .. p15}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->getBypassEnabled()Z
 
     move-result v2
 
-    .line 98
+    .line 94
     iput-boolean v2, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mKeyguardBypassEnabled:Z
 
-    .line 99
+    .line 95
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda8;
 
     const/4 v4, 0x1
@@ -697,108 +684,89 @@
 
     invoke-virtual {v10, v2}, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->registerOnBypassStateChangedListener(Lcom/android/systemui/statusbar/phone/KeyguardBypassController$OnBypassStateChangedListener;)V
 
-    .line 100
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    .line 101
+    .line 96
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda4;
 
     const/4 v4, 0x1
 
     invoke-direct {v2, v0, v4}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;I)V
 
-    .line 102
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 103
+    .line 97
     iput-object v2, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mManageButtonClickListener:Landroid/view/View$OnClickListener;
 
-    .line 104
+    .line 98
     iget-object v4, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mFooterView:Lcom/android/systemui/statusbar/notification/footer/ui/view/FooterView;
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_0
 
-    .line 105
+    .line 99
     iget-object v4, v4, Lcom/android/systemui/statusbar/notification/footer/ui/view/FooterView;->mManageOrHistoryButton:Lcom/android/systemui/statusbar/notification/row/FooterViewButton;
 
     invoke-virtual {v4, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 106
-    :cond_1
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    .line 107
+    .line 100
+    :cond_0
     move-object v2, v3
 
     check-cast v2, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;
 
-    move-object/from16 v4, v23
+    move-object/from16 v4, v27
 
     invoke-virtual {v2, v4}, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->addListener(Lcom/android/systemui/statusbar/policy/OnHeadsUpChangedListener;)V
 
-    .line 108
-    :cond_2
+    .line 101
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda11;
 
     invoke-direct {v2, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda11;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;)V
 
     check-cast v3, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
-    .line 109
+    .line 102
     iput-object v2, v3, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mAnimationStateHandler:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda11;
 
-    .line 110
-    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mDynamicPrivacyControllerListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda0;
+    .line 103
+    iget-object v2, v6, Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;->mListeners:Landroid/util/ArraySet;
 
-    .line 111
-    iget-object v3, v6, Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;->mListeners:Landroid/util/ArraySet;
+    move-object/from16 v3, v17
 
-    invoke-virtual {v3, v2}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v2, p31
 
-    .line 112
+    .line 104
     iput-object v0, v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->nsslController:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 113
+    .line 105
     iget-object v3, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mExpandHelperCallback:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;
 
-    .line 114
+    .line 106
     iget-object v2, v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->touchHelper:Lcom/android/systemui/statusbar/DragDownHelper;
 
     iput-object v3, v2, Lcom/android/systemui/statusbar/DragDownHelper;->expandCallback:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;
 
-    .line 115
+    .line 107
     move-object v2, v9
 
     check-cast v2, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 116
+    .line 108
     iget-object v2, v2, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mListeners:Ljava/util/List;
 
-    move-object/from16 v3, p6
+    move-object/from16 v3, v26
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 117
+    .line 109
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda12;
 
     invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda12;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
     move-object/from16 v3, p34
 
-    .line 118
+    .line 110
     iput-object v2, v3, Lcom/android/systemui/statusbar/notification/collection/provider/VisibilityLocationProviderDelegator;->delegate:Lcom/android/systemui/statusbar/notification/VisibilityLocationProvider;
 
-    .line 119
+    .line 111
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda2;
 
     invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
@@ -815,75 +783,62 @@
 
     invoke-virtual {v4, v2, v3}, Lcom/android/systemui/tuner/TunerService;->addTunable(Lcom/android/systemui/tuner/TunerService$Tunable;[Ljava/lang/String;)V
 
-    .line 120
+    .line 112
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda3;
 
     invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
     move-object/from16 v3, p14
 
-    .line 121
+    .line 113
     iput-object v2, v3, Lcom/android/systemui/media/controls/ui/controller/KeyguardMediaController;->visibilityChangedListener:Lkotlin/jvm/functions/Function1;
 
-    .line 122
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    .line 123
+    .line 114
     move-object/from16 v2, p10
 
     check-cast v2, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;
 
-    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mDeviceProvisionedListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$3;
+    move-object/from16 v3, p38
 
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 124
+    .line 115
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$3;->updateCurrentUserIsSetup()V
 
-    .line 125
-    :cond_3
-    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSensitiveStateChangedListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$4;
+    .line 116
+    move-object/from16 v2, p48
 
-    .line 126
-    move-object/from16 v3, p48
+    check-cast v2, Lcom/android/systemui/statusbar/policy/SensitiveNotificationProtectionControllerImpl;
 
-    check-cast v3, Lcom/android/systemui/statusbar/policy/SensitiveNotificationProtectionControllerImpl;
+    .line 117
+    iget-object v2, v2, Lcom/android/systemui/statusbar/policy/SensitiveNotificationProtectionControllerImpl;->mListeners:Lcom/android/systemui/util/ListenerSet;
 
-    .line 127
-    iget-object v3, v3, Lcom/android/systemui/statusbar/policy/SensitiveNotificationProtectionControllerImpl;->mListeners:Lcom/android/systemui/util/ListenerSet;
+    move-object/from16 v3, v16
 
-    invoke-virtual {v3, v2}, Lcom/android/systemui/util/ListenerSet;->addIfAbsent(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lcom/android/systemui/util/ListenerSet;->addIfAbsent(Ljava/lang/Object;)Z
 
-    .line 128
+    .line 118
     invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->isAttachedToWindow()Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_1
 
-    .line 129
-    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mOnAttachStateChangeListener:Landroid/view/View$OnAttachStateChangeListener;
+    move-object/from16 v2, p6
 
-    invoke-interface {v2, v1}, Landroid/view/View$OnAttachStateChangeListener;->onViewAttachedToWindow(Landroid/view/View;)V
+    .line 119
+    invoke-virtual {v2, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$1;->onViewAttachedToWindow(Landroid/view/View;)V
 
-    .line 130
-    :cond_4
-    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mOnAttachStateChangeListener:Landroid/view/View$OnAttachStateChangeListener;
+    goto :goto_0
 
+    :cond_1
+    move-object/from16 v2, p6
+
+    .line 120
+    :goto_0
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 131
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    move-result v2
-
-    if-nez v2, :cond_5
-
-    .line 132
+    .line 121
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda4;
 
     const/4 v3, 0x0
@@ -892,63 +847,53 @@
 
     move-object/from16 v3, p28
 
-    check-cast v3, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 133
+    .line 122
     iput-object v2, v3, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->clearAllClickListener:Landroid/view/View$OnClickListener;
 
-    .line 134
+    .line 123
     iget-object v3, v3, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_2
 
-    .line 135
+    .line 124
     iput-object v2, v3, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->mOnClearClickListener:Landroid/view/View$OnClickListener;
 
-    .line 136
+    .line 125
     iget-object v3, v3, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->mClearAllButton:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 137
-    :cond_5
+    .line 126
+    :cond_2
     new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;
 
     invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
     move-object/from16 v3, p27
 
-    .line 138
+    .line 127
     iget-object v3, v3, Lcom/android/systemui/statusbar/notification/collection/render/GroupExpansionManagerImpl;->mOnGroupChangeListeners:Ljava/util/Set;
 
-    .line 139
+    .line 128
     invoke-interface {v3, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v2, p36
 
-    .line 140
+    .line 129
     invoke-virtual {v2, v1, v0}, Lcom/android/systemui/statusbar/notification/stack/ui/viewbinder/NotificationListViewBinder;->bindWhileAttached(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
-
-    .line 141
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
 
     move-object/from16 v2, p18
 
-    .line 142
+    .line 130
     iget-object v2, v2, Lcom/android/systemui/keyguard/data/repository/KeyguardTransitionRepositoryImpl;->transitions:Lkotlinx/coroutines/flow/Flow;
 
-    .line 143
+    .line 131
     new-instance v3, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda6;
 
     invoke-direct {v3, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)V
 
     invoke-static {v1, v2, v3}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)V
 
-    :cond_6
     return-void
 .end method
 
@@ -1199,188 +1144,109 @@
     .line 4
 .end method
 
-.method public final getVisibleNotificationCount()I
-    .locals 0
-
-    .line 1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotifStats:Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;
-
-    .line 5
-    iget p0, p0, Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;->numActiveNotifs:I
-
-    .line 7
-    return p0
-    .line 9
-.end method
-
 .method public final hasNotifications(IZ)Z
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 2
     if-eqz p2, :cond_0
 
-    .line 5
+    .line 2
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotifStats:Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;
 
-    .line 7
+    .line 4
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;->hasClearableAlertingNotifs:Z
 
-    .line 9
+    .line 6
     goto :goto_0
 
-    .line 11
+    .line 8
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotifStats:Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;
 
-    .line 12
+    .line 9
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;->hasNonClearableAlertingNotifs:Z
 
-    .line 14
+    .line 11
     :goto_0
     if-eqz p2, :cond_1
 
-    .line 16
+    .line 13
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotifStats:Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;
 
-    .line 18
+    .line 15
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;->hasClearableSilentNotifs:Z
 
-    .line 20
+    .line 17
     goto :goto_1
 
-    .line 22
+    .line 19
     :cond_1
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotifStats:Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;
 
-    .line 23
+    .line 20
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;->hasNonClearableSilentNotifs:Z
 
-    .line 25
+    .line 22
     :goto_1
     const/4 p2, 0x1
 
-    .line 27
+    .line 24
     if-eqz p1, :cond_4
 
-    .line 28
+    .line 25
     if-eq p1, p2, :cond_3
 
-    .line 30
+    .line 27
     const/4 p2, 0x2
 
-    .line 32
+    .line 29
     if-ne p1, p2, :cond_2
 
-    .line 33
+    .line 30
     return p0
 
-    .line 35
+    .line 32
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 36
+    .line 33
     const-string p2, "Bad selection: "
 
-    .line 38
-    invoke-static {p1, p2}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    .line 35
+    invoke-static {p1, p2}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
-    .line 40
+    .line 37
     move-result-object p1
 
-    .line 43
+    .line 40
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 44
+    .line 41
     throw p0
 
-    .line 47
+    .line 44
     :cond_3
     return v0
 
-    .line 48
+    .line 45
     :cond_4
     if-nez p0, :cond_6
 
-    .line 49
+    .line 46
     if-eqz v0, :cond_5
 
-    .line 51
+    .line 48
     goto :goto_2
 
-    .line 53
+    .line 50
     :cond_5
     const/4 p2, 0x0
 
-    .line 54
+    .line 51
     :cond_6
     :goto_2
     return p2
-    .line 55
-.end method
-
-.method public final isAddOrRemoveAnimationPending()Z
-    .locals 1
-
-    .line 1
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->assertInLegacyMode()V
-
-    .line 2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
-
-    .line 5
-    if-eqz p0, :cond_1
-
-    .line 7
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mNeedsAnimation:Z
-
-    .line 9
-    if-eqz v0, :cond_1
-
-    .line 11
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mChildrenToAddAnimated:Ljava/util/HashSet;
-
-    .line 13
-    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
-
-    .line 15
-    move-result v0
-
-    .line 18
-    if-eqz v0, :cond_0
-
-    .line 19
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mChildrenToRemoveAnimated:Ljava/util/ArrayList;
-
-    .line 21
-    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    .line 23
-    move-result p0
-
-    .line 26
-    if-nez p0, :cond_1
-
-    .line 27
-    :cond_0
-    const/4 p0, 0x1
-
-    .line 29
-    goto :goto_0
-
-    .line 30
-    :cond_1
-    const/4 p0, 0x0
-
-    .line 31
-    :goto_0
-    return p0
-    .line 32
+    .line 52
 .end method
 
 .method public final isHistoryEnabled()Z
@@ -1482,78 +1348,75 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 2
     iget-object v0, p1, Lcom/android/systemui/keyguard/shared/model/TransitionStep;->to:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 5
+    .line 2
     sget-object v1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->AOD:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 7
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
-    .line 9
+    .line 6
     move-result v0
 
-    .line 12
+    .line 9
     if-eqz v0, :cond_1
 
-    .line 13
+    .line 10
     sget-object v0, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GONE:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 15
+    .line 12
     iget-object p1, p1, Lcom/android/systemui/keyguard/shared/model/TransitionStep;->from:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 17
+    .line 14
     invoke-virtual {p1, v0}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
-    .line 19
+    .line 16
     move-result v0
 
-    .line 22
+    .line 19
     if-nez v0, :cond_0
 
-    .line 23
+    .line 20
     sget-object v0, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->OCCLUDED:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 25
+    .line 22
     invoke-virtual {p1, v0}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
-    .line 27
+    .line 24
     move-result p1
 
-    .line 30
+    .line 27
     if-eqz p1, :cond_1
 
-    .line 31
+    .line 28
     :cond_0
     const/4 p1, 0x1
 
-    .line 33
+    .line 30
     goto :goto_0
 
-    .line 34
+    .line 31
     :cond_1
     const/4 p1, 0x0
 
-    .line 35
+    .line 32
     :goto_0
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mIsInTransitionToAod:Z
 
-    .line 36
+    .line 33
     if-eq v0, p1, :cond_2
 
-    .line 38
+    .line 35
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mIsInTransitionToAod:Z
 
-    .line 40
+    .line 37
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->updateShowEmptyShadeView()V
 
-    .line 42
+    .line 39
     :cond_2
     return-void
-    .line 45
+    .line 42
 .end method
 
 .method public final setMaxDisplayedNotifications(I)V
@@ -1608,57 +1471,51 @@
     iput p1, v0, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mOverExpansion:F
 
     .line 6
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 8
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mShouldUseSplitNotificationShade:Z
 
-    .line 11
+    .line 8
     const/4 v1, 0x0
 
-    .line 13
+    .line 10
     if-eqz v0, :cond_0
 
-    .line 14
+    .line 11
     float-to-int p1, p1
 
-    .line 16
+    .line 13
     goto :goto_0
 
-    .line 17
+    .line 14
     :cond_0
     move p1, v1
 
-    .line 18
+    .line 15
     :goto_0
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->assertInLegacyMode()V
-
-    .line 19
     iget v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mRoundedRectClippingYTranslation:I
 
-    .line 22
+    .line 16
     if-ne v0, p1, :cond_1
 
-    .line 24
+    .line 18
     goto :goto_1
 
-    .line 26
+    .line 20
     :cond_1
     iput p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mRoundedRectClippingYTranslation:I
 
-    .line 27
+    .line 21
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateRoundedClipPath()V
 
-    .line 29
+    .line 23
     :goto_1
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateStackPosition(Z)V
 
-    .line 32
+    .line 26
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->requestChildrenUpdate()V
 
-    .line 35
+    .line 29
     return-void
-    .line 38
+    .line 32
 .end method
 
 .method public final setOverScrollAmount(I)V
@@ -1810,24 +1667,15 @@
 
     .line 40
     :cond_2
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    .line 43
-    move-result p1
-
-    .line 46
-    if-nez p1, :cond_3
-
-    .line 47
     if-eqz v0, :cond_3
 
-    .line 49
+    .line 43
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateFooter()V
 
-    .line 51
+    .line 45
     :cond_3
     return-void
-    .line 54
+    .line 48
 .end method
 
 .method public final updateAlpha$1()V
@@ -1882,75 +1730,69 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 2
     const-string v0, "NSSLC.updateFooter"
 
-    .line 5
+    .line 2
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 7
+    .line 4
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 10
+    .line 7
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateFooter()V
 
-    .line 12
+    .line 9
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 15
+    .line 12
     return-void
-    .line 18
+    .line 15
 .end method
 
 .method public final updateImportantForAccessibility()V
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotifStats:Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;
 
     .line 2
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->getVisibleNotificationCount()I
+    iget v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;->numActiveNotifs:I
 
-    .line 5
-    move-result v0
-
-    .line 8
+    .line 4
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 9
+    .line 6
     if-nez v0, :cond_0
 
-    .line 11
+    .line 8
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->onKeyguard()Z
 
-    .line 13
+    .line 10
     move-result v0
 
-    .line 16
+    .line 13
     if-eqz v0, :cond_0
 
-    .line 17
+    .line 14
     const/4 v0, 0x2
 
-    .line 19
+    .line 16
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setImportantForAccessibility(I)V
 
-    .line 20
+    .line 17
     goto :goto_0
 
-    .line 23
+    .line 20
     :cond_0
     const/4 v0, 0x1
 
-    .line 24
+    .line 21
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setImportantForAccessibility(I)V
 
-    .line 25
+    .line 22
     :goto_0
     return-void
-    .line 28
+    .line 25
 .end method
 
 .method public final updateNotificationsContainerVisibility(ZZ)V
@@ -2201,114 +2043,105 @@
     .locals 5
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 2
     const-string v0, "NSSLC.updateShowEmptyShadeView"
 
-    .line 5
+    .line 2
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
+    .line 4
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotifStats:Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;
+
     .line 7
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->getVisibleNotificationCount()I
+    iget v0, v0, Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;->numActiveNotifs:I
 
-    .line 10
-    move-result v0
-
-    .line 13
+    .line 9
     const/4 v1, 0x0
 
-    .line 14
+    .line 11
     const/4 v2, 0x1
 
-    .line 15
+    .line 12
     if-nez v0, :cond_0
 
-    .line 16
+    .line 13
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 18
+    .line 15
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mQsFullScreen:Z
 
-    .line 20
+    .line 17
     if-nez v0, :cond_0
 
-    .line 22
+    .line 19
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mIsInTransitionToAod:Z
 
-    .line 24
+    .line 21
     if-nez v0, :cond_0
 
-    .line 26
+    .line 23
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mPrimaryBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;
 
-    .line 28
+    .line 25
     invoke-virtual {v0}, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->isBouncerShowing()Z
 
-    .line 30
+    .line 27
     move-result v0
 
-    .line 33
+    .line 30
     if-nez v0, :cond_0
 
-    .line 34
+    .line 31
     move v0, v2
 
-    .line 36
+    .line 33
     goto :goto_0
 
-    .line 37
+    .line 34
     :cond_0
     move v0, v1
 
-    .line 38
+    .line 35
     :goto_0
     iget-object v3, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 39
+    .line 36
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mZenModeController:Lcom/android/systemui/statusbar/policy/ZenModeController;
 
-    .line 41
+    .line 38
     check-cast p0, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;
 
-    .line 43
+    .line 40
     iget v4, p0, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;->mZenMode:I
 
-    .line 45
+    .line 42
     if-eqz v4, :cond_1
 
-    .line 47
+    .line 44
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;->mConsolidatedNotificationPolicy:Landroid/app/NotificationManager$Policy;
 
-    .line 49
+    .line 46
     iget p0, p0, Landroid/app/NotificationManager$Policy;->suppressedVisualEffects:I
 
-    .line 51
+    .line 48
     and-int/lit16 p0, p0, 0x100
 
-    .line 53
+    .line 50
     if-eqz p0, :cond_1
 
-    .line 55
+    .line 52
     move v1, v2
 
-    .line 57
+    .line 54
     :cond_1
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 58
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 61
     iget-boolean p0, v3, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mHasFilteredOutSeenNotifications:Z
 
-    .line 64
+    .line 55
     invoke-virtual {v3, v0, v1, p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateEmptyShadeView(ZZZ)V
 
-    .line 66
+    .line 57
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 69
+    .line 60
     return-void
-    .line 72
+    .line 63
 .end method

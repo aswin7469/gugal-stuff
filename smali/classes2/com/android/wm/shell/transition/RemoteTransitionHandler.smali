@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/transition/RemoteTransitionHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
@@ -203,190 +203,6 @@
 
 
 # virtual methods
-.method public final getHandlerForTakeover(Landroid/os/IBinder;Landroid/window/TransitionInfo;)Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
-    .locals 9
-
-    .line 1
-    invoke-static {}, Lcom/android/systemui/shared/Flags;->returnAnimationFrameworkLibrary()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    const/4 v1, 0x0
-
-    .line 6
-    if-nez v0, :cond_0
-
-    .line 7
-    return-object v1
-
-    .line 9
-    :cond_0
-    iget-object v0, p0, Lcom/android/wm/shell/transition/RemoteTransitionHandler;->mTakeoverFilters:Ljava/util/ArrayList;
-
-    .line 10
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    .line 12
-    move-result-object v0
-
-    .line 15
-    :cond_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 16
-    move-result v2
-
-    .line 19
-    const/4 v3, 0x1
-
-    .line 20
-    if-eqz v2, :cond_3
-
-    .line 21
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 23
-    move-result-object v2
-
-    .line 26
-    check-cast v2, Landroid/util/Pair;
-
-    .line 27
-    iget-object v4, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    .line 29
-    check-cast v4, Landroid/window/TransitionFilter;
-
-    .line 31
-    invoke-virtual {v4, p2}, Landroid/window/TransitionFilter;->matches(Landroid/window/TransitionInfo;)Z
-
-    .line 33
-    move-result v4
-
-    .line 36
-    if-eqz v4, :cond_1
-
-    .line 37
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
-
-    .line 39
-    aget-boolean v0, v0, v3
-
-    .line 41
-    if-eqz v0, :cond_2
-
-    .line 43
-    invoke-virtual {p2}, Landroid/window/TransitionInfo;->getDebugId()I
-
-    .line 45
-    move-result p2
-
-    .line 48
-    int-to-long v0, p2
-
-    .line 49
-    sget-object v3, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_RECENTS_TRANSITION:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
-
-    .line 50
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 52
-    move-result-object p2
-
-    .line 55
-    filled-new-array {p2}, [Ljava/lang/Object;
-
-    .line 56
-    move-result-object v8
-
-    .line 59
-    const-wide v4, 0x3a4c7f9de9533058L    # 7.194033632170392E-28
-
-    .line 60
-    const/4 v6, 0x1
-
-    .line 65
-    const-string v7, "Found matching remote to takeover (#%d)"
-
-    .line 66
-    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 68
-    :cond_2
-    new-instance p2, Lcom/android/wm/shell/transition/OneShotRemoteHandler;
-
-    .line 71
-    iget-object v0, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    .line 73
-    check-cast v0, Landroid/window/RemoteTransition;
-
-    .line 75
-    iget-object p0, p0, Lcom/android/wm/shell/transition/RemoteTransitionHandler;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
-
-    .line 77
-    invoke-direct {p2, p0, v0}, Lcom/android/wm/shell/transition/OneShotRemoteHandler;-><init>(Lcom/android/wm/shell/common/ShellExecutor;Landroid/window/RemoteTransition;)V
-
-    .line 79
-    iput-object p1, p2, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mTransition:Landroid/os/IBinder;
-
-    .line 82
-    return-object p2
-
-    .line 84
-    :cond_3
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
-
-    .line 85
-    aget-boolean p0, p0, v3
-
-    .line 87
-    if-eqz p0, :cond_4
-
-    .line 89
-    invoke-virtual {p2}, Landroid/window/TransitionInfo;->getDebugId()I
-
-    .line 91
-    move-result p0
-
-    .line 94
-    int-to-long p0, p0
-
-    .line 95
-    sget-object v2, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_RECENTS_TRANSITION:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
-
-    .line 96
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 98
-    move-result-object p0
-
-    .line 101
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    .line 102
-    move-result-object v7
-
-    .line 105
-    const-wide v3, 0x182b19d892323623L    # 2.9700069692666597E-192
-
-    .line 106
-    const/4 v5, 0x1
-
-    .line 111
-    const-string v6, "No matching remote found to takeover (#%d)"
-
-    .line 112
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 114
-    :cond_4
-    return-object v1
-    .line 117
-.end method
-
 .method public final handleDeath(Landroid/os/IBinder;Lcom/android/wm/shell/transition/Transitions$TransitionFinishCallback;)V
     .locals 3
 
@@ -527,7 +343,7 @@
     invoke-virtual {p0, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 12
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 15
     const/4 v1, 0x1
@@ -584,7 +400,7 @@
     const-string v7, "RemoteTransition directly requested for (#%d) %s: %s"
 
     .line 51
-    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 53
     :cond_1
@@ -630,7 +446,7 @@
 
     .line 15
     :cond_0
-    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 16
     const/4 v5, 0x1
@@ -666,7 +482,7 @@
     const-string v9, "   Merge into remote: %s"
 
     .line 39
-    invoke-static/range {v5 .. v10}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v5 .. v10}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 41
     :cond_1
@@ -875,7 +691,7 @@
     if-nez v0, :cond_4
 
     .line 36
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 38
     aget-boolean v2, v2, v11
@@ -908,7 +724,7 @@
     const-string v16, "Transition doesn\'t have explicit remote, search filters for match for %s"
 
     .line 60
-    invoke-static/range {v12 .. v17}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v12 .. v17}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 62
     :cond_1
@@ -928,7 +744,7 @@
     if-ltz v2, :cond_4
 
     .line 72
-    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 74
     aget-boolean v3, v3, v11
@@ -970,7 +786,7 @@
     const-string v16, " Checking filter %s"
 
     .line 102
-    invoke-static/range {v12 .. v17}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v12 .. v17}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 104
     :cond_2
@@ -1083,7 +899,7 @@
 
     .line 176
     :goto_2
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 177
     aget-boolean v0, v0, v11
@@ -1131,7 +947,7 @@
     const-wide v15, -0xd49994f1db0c790L    # -3.823900204409804E244
 
     .line 206
-    invoke-static/range {v14 .. v19}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v14 .. v19}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 211
     :cond_5
@@ -1290,115 +1106,6 @@
     :goto_4
     return v11
     .line 314
-.end method
-
-.method public final takeOverAnimation(Landroid/os/IBinder;Landroid/window/TransitionInfo;Landroid/view/SurfaceControl$Transaction;Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda7;[Landroid/window/WindowAnimationState;)Z
-    .locals 7
-
-    .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/android/wm/shell/transition/RemoteTransitionHandler;->getHandlerForTakeover(Landroid/os/IBinder;Landroid/window/TransitionInfo;)Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
-
-    .line 2
-    move-result-object p0
-
-    .line 5
-    if-nez p0, :cond_1
-
-    .line 6
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
-
-    .line 8
-    const/4 p1, 0x1
-
-    .line 10
-    aget-boolean p0, p0, p1
-
-    .line 11
-    if-eqz p0, :cond_0
-
-    .line 13
-    invoke-virtual {p2}, Landroid/window/TransitionInfo;->getDebugId()I
-
-    .line 15
-    move-result p0
-
-    .line 18
-    int-to-long p0, p0
-
-    .line 19
-    sget-object v0, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_RECENTS_TRANSITION:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
-
-    .line 20
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 22
-    move-result-object p0
-
-    .line 25
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    .line 26
-    move-result-object v5
-
-    .line 29
-    const/4 v3, 0x1
-
-    .line 30
-    const-string v4, "Take over request failed: no matching remote for (#%d)"
-
-    .line 31
-    const-wide v1, 0x936a88e97fe370bL
-
-    .line 33
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 38
-    :cond_0
-    const/4 p0, 0x0
-
-    .line 41
-    return p0
-
-    .line 42
-    :cond_1
-    move-object v0, p0
-
-    .line 43
-    check-cast v0, Lcom/android/wm/shell/transition/OneShotRemoteHandler;
-
-    .line 44
-    iput-object p1, v0, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mTransition:Landroid/os/IBinder;
-
-    .line 46
-    move-object v1, p0
-
-    .line 48
-    check-cast v1, Lcom/android/wm/shell/transition/OneShotRemoteHandler;
-
-    .line 49
-    move-object v2, p1
-
-    .line 51
-    move-object v3, p2
-
-    .line 52
-    move-object v4, p3
-
-    .line 53
-    move-object v5, p4
-
-    .line 54
-    move-object v6, p5
-
-    .line 55
-    invoke-virtual/range {v1 .. v6}, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->takeOverAnimation(Landroid/os/IBinder;Landroid/window/TransitionInfo;Landroid/view/SurfaceControl$Transaction;Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda7;[Landroid/window/WindowAnimationState;)Z
-
-    .line 56
-    move-result p0
-
-    .line 59
-    return p0
-    .line 60
 .end method
 
 .method public final unhandleDeath(Landroid/os/IBinder;Lcom/android/wm/shell/transition/Transitions$TransitionFinishCallback;)V

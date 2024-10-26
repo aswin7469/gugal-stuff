@@ -1,24 +1,24 @@
 .class public final Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final authenticationInteractor:Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;
 
-.field public final dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerDialogFactory;
+.field public final dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerViewModule$Companion$bouncerDialogFactory$1;
 
 .field public final legacyInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;
 
 .field public final selectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
 
-.field public final viewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+.field public final viewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
 .field public final viewModel:Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;Lcom/android/systemui/bouncer/ui/BouncerDialogFactory;Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;Lcom/android/keyguard/ViewMediatorCallback;Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;)V
+.method public constructor <init>(Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;Lcom/android/systemui/bouncer/ui/BouncerViewModule$Companion$bouncerDialogFactory$1;Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;Lcom/android/systemui/keyguard/KeyguardViewMediator$4;Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;)V
     .locals 0
 
     .line 1
@@ -31,13 +31,13 @@
     iput-object p2, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewModel:Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;
 
     .line 7
-    iput-object p3, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerDialogFactory;
+    iput-object p3, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerViewModule$Companion$bouncerDialogFactory$1;
 
     .line 9
     iput-object p4, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->authenticationInteractor:Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;
 
     .line 11
-    iput-object p5, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+    iput-object p5, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
     .line 13
     iput-object p6, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->selectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
@@ -117,10 +117,10 @@
 
     .line 35
     :cond_3
-    iget-object v1, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerDialogFactory;
+    iget-object v1, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerViewModule$Companion$bouncerDialogFactory$1;
 
     .line 36
-    iget-object v3, p1, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerDialogFactory;
+    iget-object v3, p1, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerViewModule$Companion$bouncerDialogFactory$1;
 
     .line 38
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -155,10 +155,10 @@
 
     .line 57
     :cond_5
-    iget-object v1, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+    iget-object v1, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
     .line 58
-    iget-object v3, p1, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+    iget-object v3, p1, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
     .line 60
     invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -228,7 +228,7 @@
     mul-int/lit8 v1, v1, 0x1f
 
     .line 17
-    iget-object v0, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerDialogFactory;
+    iget-object v0, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerViewModule$Companion$bouncerDialogFactory$1;
 
     .line 19
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -258,7 +258,7 @@
     mul-int/lit8 v1, v1, 0x1f
 
     .line 35
-    iget-object v0, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+    iget-object v0, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
     .line 37
     if-nez v0, :cond_0
@@ -337,7 +337,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 26
-    iget-object v1, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerDialogFactory;
+    iget-object v1, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->dialogFactory:Lcom/android/systemui/bouncer/ui/BouncerViewModule$Companion$bouncerDialogFactory$1;
 
     .line 29
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -361,7 +361,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 46
-    iget-object v1, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+    iget-object v1, p0, Lcom/android/systemui/bouncer/ui/binder/ComposeBouncerDependencies;->viewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
     .line 49
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;
@@ -21,13 +21,13 @@
 
 .field public final notificationLaunchAnimationInteractor:Lcom/android/systemui/statusbar/notification/domain/interactor/NotificationLaunchAnimationInteractor;
 
-.field public final notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
+.field public final notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
 .field public final onFinishAnimationCallback:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/statusbar/notification/domain/interactor/NotificationLaunchAnimationInteractor;Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;Lcom/android/systemui/statusbar/policy/HeadsUpManager;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/internal/jank/InteractionJankMonitor;Ljava/lang/Runnable;)V
+.method public constructor <init>(Lcom/android/systemui/statusbar/notification/domain/interactor/NotificationLaunchAnimationInteractor;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;Lcom/android/systemui/statusbar/policy/HeadsUpManager;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/internal/jank/InteractionJankMonitor;Ljava/lang/Runnable;)V
     .locals 0
 
     .line 1
@@ -37,7 +37,7 @@
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationLaunchAnimationInteractor:Lcom/android/systemui/statusbar/notification/domain/interactor/NotificationLaunchAnimationInteractor;
 
     .line 5
-    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
+    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
     .line 7
     iput-object p3, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->headsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
@@ -552,101 +552,98 @@
     .line 279
     :cond_6
     :goto_2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
     .line 282
-    check-cast p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
-
-    .line 284
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 286
+    .line 284
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 288
+    .line 286
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mLaunchAnimationParams:Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;
 
-    .line 290
+    .line 288
     if-eqz p1, :cond_7
 
-    .line 292
+    .line 290
     move v2, v0
 
-    .line 294
+    .line 292
     goto :goto_3
 
-    .line 295
+    .line 293
     :cond_7
     move v2, v1
 
-    .line 296
+    .line 294
     :goto_3
     iget-boolean v3, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mLaunchingNotification:Z
 
-    .line 297
+    .line 295
     if-ne v2, v3, :cond_8
 
-    .line 299
+    .line 297
     goto :goto_5
 
-    .line 301
+    .line 299
     :cond_8
     iput-boolean v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mLaunchingNotification:Z
 
-    .line 302
+    .line 300
     if-eqz p1, :cond_9
 
-    .line 304
+    .line 302
     iget v3, p1, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;->startRoundedTopClipping:I
 
-    .line 306
+    .line 304
     if-gtz v3, :cond_a
 
-    .line 308
+    .line 306
     iget p1, p1, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;->parentStartRoundedTopClipping:I
 
-    .line 310
+    .line 308
     if-lez p1, :cond_9
 
-    .line 312
+    .line 310
     goto :goto_4
 
-    .line 314
+    .line 312
     :cond_9
     move v0, v1
 
-    .line 315
+    .line 313
     :cond_a
     :goto_4
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mLaunchingNotificationNeedsToBeClipped:Z
 
-    .line 316
+    .line 314
     if-eqz v0, :cond_b
 
-    .line 318
+    .line 316
     if-nez v2, :cond_c
 
-    .line 320
+    .line 318
     :cond_b
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mLaunchedNotificationClipPath:Landroid/graphics/Path;
 
-    .line 322
+    .line 320
     invoke-virtual {p1}, Landroid/graphics/Path;->reset()V
 
-    .line 324
+    .line 322
     :cond_c
     invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 327
+    .line 325
     :goto_5
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->updateLaunchedNotificationClipPath()V
 
-    .line 330
+    .line 328
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->requestChildrenUpdate()V
 
-    .line 333
+    .line 331
     return-void
-    .line 336
+    .line 334
 .end method
 
 .method public final createAnimatorState()Lcom/android/systemui/animation/TransitionAnimator$State;
@@ -683,243 +680,240 @@
     move-result-object v4
 
     .line 19
-    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
+    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
     .line 20
-    check-cast v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
-
-    .line 22
     iget-object v5, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 24
+    .line 22
     iget-object v5, v5, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 26
+    .line 24
     iget-boolean v6, v5, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mIsExpanded:Z
 
-    .line 28
+    .line 26
     if-eqz v6, :cond_0
 
-    .line 30
+    .line 28
     iget v5, v5, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mQsScrollBoundaryPosition:I
 
-    .line 32
+    .line 30
     goto :goto_0
 
-    .line 34
+    .line 32
     :cond_0
     move v5, v3
 
-    .line 35
+    .line 33
     :goto_0
     const/4 v6, 0x1
 
-    .line 36
+    .line 34
     aget v7, v4, v6
 
-    .line 37
+    .line 35
     sub-int v8, v5, v7
 
-    .line 39
+    .line 37
     if-gez v8, :cond_1
 
-    .line 41
+    .line 39
     move v8, v3
 
-    .line 43
+    .line 41
     :cond_1
     add-int v10, v7, v8
 
-    .line 44
+    .line 42
     const/4 v7, 0x0
 
-    .line 46
+    .line 44
     if-lez v8, :cond_2
 
-    .line 47
+    .line 45
     move v14, v7
 
-    .line 49
+    .line 47
     goto :goto_1
 
-    .line 50
+    .line 48
     :cond_2
     invoke-interface {v1}, Lcom/android/systemui/statusbar/notification/Roundable;->getTopCornerRadius()F
 
-    .line 51
+    .line 49
     move-result v9
 
-    .line 54
+    .line 52
     move v14, v9
 
-    .line 55
+    .line 53
     :goto_1
     new-instance v15, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;
 
-    .line 56
+    .line 54
     aget v9, v4, v6
 
-    .line 58
+    .line 56
     add-int v11, v9, v2
 
-    .line 60
+    .line 58
     aget v12, v4, v3
 
-    .line 62
+    .line 60
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getWidth()I
 
-    .line 64
+    .line 62
     move-result v2
 
-    .line 67
+    .line 65
     add-int v13, v2, v12
 
-    .line 68
+    .line 66
     invoke-interface {v1}, Lcom/android/systemui/statusbar/notification/Roundable;->getBottomCornerRadius()F
 
-    .line 70
+    .line 68
     move-result v2
 
-    .line 73
+    .line 71
     move-object v9, v15
 
-    .line 74
+    .line 72
     move-object v3, v15
 
-    .line 75
+    .line 73
     move v15, v2
 
-    .line 76
+    .line 74
     invoke-direct/range {v9 .. v15}, Lcom/android/systemui/animation/TransitionAnimator$State;-><init>(IIIIFF)V
 
-    .line 77
+    .line 75
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getTranslationZ()F
 
-    .line 80
+    .line 78
     move-result v2
 
-    .line 83
+    .line 81
     iput v2, v3, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;->startTranslationZ:F
 
-    .line 84
+    .line 82
     aget v2, v4, v6
 
-    .line 86
+    .line 84
     iput v2, v3, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;->startNotificationTop:I
 
-    .line 88
+    .line 86
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 90
+    .line 88
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 92
+    .line 90
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 94
+    .line 92
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLocationOnScreen()[I
 
-    .line 97
+    .line 95
     move-result-object v0
 
-    .line 100
+    .line 98
     aget v0, v0, v6
 
-    .line 101
+    .line 99
     iput v0, v3, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;->notificationParentTop:I
 
-    .line 103
+    .line 101
     iput v8, v3, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;->startRoundedTopClipping:I
 
-    .line 105
+    .line 103
     iget v0, v1, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->mClipTopAmount:I
 
-    .line 107
+    .line 105
     iput v0, v3, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;->startClipTopAmount:I
 
-    .line 109
+    .line 107
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->isChildInGroup()Z
 
-    .line 111
+    .line 109
     move-result v0
 
-    .line 114
+    .line 112
     if-eqz v0, :cond_4
 
-    .line 115
+    .line 113
     iget-object v0, v1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mNotificationParent:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 117
+    .line 115
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLocationOnScreen()[I
 
-    .line 119
+    .line 117
     move-result-object v0
 
-    .line 122
+    .line 120
     aget v0, v0, v6
 
-    .line 123
+    .line 121
     sub-int/2addr v5, v0
 
-    .line 125
+    .line 123
     if-gez v5, :cond_3
 
-    .line 126
+    .line 124
     const/4 v5, 0x0
 
-    .line 128
+    .line 126
     :cond_3
     iput v5, v3, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;->parentStartRoundedTopClipping:I
 
-    .line 129
+    .line 127
     iget-object v0, v1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mNotificationParent:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 131
+    .line 129
     iget v0, v0, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->mClipTopAmount:I
 
-    .line 133
+    .line 131
     iput v0, v3, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;->parentStartClipTopAmount:I
 
-    .line 135
+    .line 133
     if-eqz v0, :cond_4
 
-    .line 137
+    .line 135
     int-to-float v0, v0
 
-    .line 139
+    .line 137
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getTranslationY()F
 
-    .line 140
+    .line 138
     move-result v1
 
-    .line 143
+    .line 141
     sub-float/2addr v0, v1
 
-    .line 144
+    .line 142
     cmpl-float v1, v0, v7
 
-    .line 145
+    .line 143
     if-lez v1, :cond_4
 
-    .line 147
+    .line 145
     float-to-double v0, v0
 
-    .line 149
+    .line 147
     invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
 
-    .line 150
+    .line 148
     move-result-wide v0
 
-    .line 153
+    .line 151
     double-to-int v0, v0
 
-    .line 154
+    .line 152
     iput v0, v3, Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;->startClipTopAmount:I
 
-    .line 155
+    .line 153
     :cond_4
     return-object v3
-    .line 157
+    .line 155
 .end method
 
 .method public final getTransitionContainer()Landroid/view/ViewGroup;
@@ -1081,7 +1075,6 @@
     .line 31
     :cond_1
     return-void
-    .line 34
 .end method
 
 .method public final onTransitionAnimationEnd(Z)V
@@ -1134,36 +1127,33 @@
     iput-boolean v0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mExpandAnimationRunning:Z
 
     .line 33
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
+    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
     .line 35
-    check-cast p1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
-
-    .line 37
     const/4 v1, 0x0
 
-    .line 39
+    .line 37
     invoke-virtual {p1, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;->setExpandingNotification(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;)V
 
-    .line 40
+    .line 38
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->applyParams(Lcom/android/systemui/statusbar/notification/LaunchAnimationParameters;)V
 
-    .line 43
+    .line 41
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->removeHun(Z)V
 
-    .line 46
+    .line 44
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->onFinishAnimationCallback:Ljava/lang/Runnable;
 
-    .line 49
+    .line 47
     if-eqz p0, :cond_1
 
-    .line 51
+    .line 49
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
-    .line 53
+    .line 51
     :cond_1
     return-void
-    .line 56
+    .line 54
 .end method
 
 .method public final onTransitionAnimationProgress(Lcom/android/systemui/animation/TransitionAnimator$State;FF)V
@@ -1199,26 +1189,23 @@
     invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setExpandAnimationRunning(Z)V
 
     .line 5
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->notificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
     .line 8
-    check-cast v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
-
-    .line 10
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;->setExpandingNotification(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;)V
 
-    .line 12
+    .line 10
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/NotificationTransitionAnimatorController;->jankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 15
+    .line 13
     const/16 v0, 0x10
 
-    .line 17
+    .line 15
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/jank/InteractionJankMonitor;->begin(Landroid/view/View;I)Z
 
-    .line 19
+    .line 17
     return-void
-    .line 22
+    .line 20
 .end method
 
 .method public final removeHun(Z)V
@@ -1323,7 +1310,7 @@
 
     .line 51
     :cond_5
-    const v3, 0x7f0b03af    # @id/is_clicked_heads_up_tag
+    const v3, 0x7f0a03d0    # @id/is_clicked_heads_up_tag
 
     .line 53
     invoke-virtual {p0, v3, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -1377,6 +1364,7 @@
     .line 86
     :goto_2
     return-void
+    .line 88
 .end method
 
 .method public final setTransitionContainer(Landroid/view/ViewGroup;)V

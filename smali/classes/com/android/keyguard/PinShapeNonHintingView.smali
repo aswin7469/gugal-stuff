@@ -1,6 +1,6 @@
 .class public Lcom/android/keyguard/PinShapeNonHintingView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/keyguard/PinShapeInput;
@@ -134,7 +134,7 @@
     move-result-object v0
 
     .line 10
-    const v1, 0x7f070866    # @dimen/password_shape_size '30.0dp'
+    const v1, 0x7f0708b6    # @dimen/password_shape_size '30.0dp'
 
     .line 11
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

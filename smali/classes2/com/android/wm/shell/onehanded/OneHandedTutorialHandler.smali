@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/onehanded/OneHandedTutorialHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/onehanded/OneHandedTransitionCallback;
@@ -56,7 +56,7 @@
     move-result-object p2
 
     .line 14
-    const p3, 0x7f0a0005    # @fraction/config_one_handed_offset '40.0%'
+    const p3, 0x7f090005    # @fraction/config_one_handed_offset '40.0%'
 
     .line 15
     const/4 p4, 0x1
@@ -77,7 +77,7 @@
     move-result-object p1
 
     .line 28
-    const p2, 0x7f0c002f    # @integer/config_one_handed_translate_animation_duration '600'
+    const p2, 0x7f0b0034    # @integer/config_one_handed_translate_animation_duration '600'
 
     .line 29
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -147,6 +147,7 @@
     .line 31
     :cond_1
     return-void
+    .line 33
 .end method
 
 .method public createViewAndAttachToWindow(Landroid/content/Context;)V
@@ -172,7 +173,7 @@
     move-result-object v0
 
     .line 12
-    const v1, 0x7f0e01c2    # @layout/one_handed_tutorial 'res/layout/one_handed_tutorial.xml'
+    const v1, 0x7f0d01cf    # @layout/one_handed_tutorial 'res/layout/one_handed_tutorial.xml'
 
     .line 13
     const/4 v2, 0x0
@@ -288,6 +289,7 @@
     .line 85
     :goto_1
     return-void
+    .line 88
 .end method
 
 .method public final getTutorialTargetLayoutParams()Landroid/view/WindowManager$LayoutParams;
@@ -852,7 +854,7 @@
     iget-object v0, p0, Lcom/android/wm/shell/onehanded/OneHandedTutorialHandler;->mTutorialView:Landroid/view/View;
 
     .line 48
-    const v3, 0x7f0b0590    # @id/one_handed_tutorial_image
+    const v3, 0x7f0a05b5    # @id/one_handed_tutorial_image
 
     .line 50
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -876,7 +878,7 @@
     iget-object v0, p0, Lcom/android/wm/shell/onehanded/OneHandedTutorialHandler;->mTutorialView:Landroid/view/View;
 
     .line 66
-    const v3, 0x7f0b0592    # @id/one_handed_tutorial_title
+    const v3, 0x7f0a05b7    # @id/one_handed_tutorial_title
 
     .line 68
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -891,7 +893,7 @@
     iget-object p0, p0, Lcom/android/wm/shell/onehanded/OneHandedTutorialHandler;->mTutorialView:Landroid/view/View;
 
     .line 77
-    const v3, 0x7f0b058f    # @id/one_handed_tutorial_description
+    const v3, 0x7f0a05b4    # @id/one_handed_tutorial_description
 
     .line 79
     invoke-virtual {p0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

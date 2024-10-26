@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnAttachStateChangeListener;
@@ -28,74 +28,117 @@
 
 # virtual methods
 .method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 2
+    .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$1;->this$0:Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;
 
     .line 2
-    iget-object v0, v0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mViews:Ljava/util/HashSet;
+    iget-object v0, v0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mViews:Ljava/util/Set;
 
     .line 4
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 6
     iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$1;->this$0:Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;
 
     .line 9
-    iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mAttachListeners:Ljava/util/HashSet;
+    iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mAttachListeners:Ljava/util/Set;
 
     .line 11
-    new-instance v0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$1$$ExternalSyntheticLambda0;
+    check-cast p0, Ljava/util/HashSet;
 
     .line 13
-    const/4 v1, 0x1
+    invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     .line 15
-    invoke-direct {v0, p1, v1}, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$1$$ExternalSyntheticLambda0;-><init>(Landroid/view/View;I)V
+    move-result-object p0
 
-    .line 16
-    invoke-virtual {p0, v0}, Ljava/util/HashSet;->forEach(Ljava/util/function/Consumer;)V
+    .line 18
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     .line 19
-    return-void
+    move-result v0
+
     .line 22
+    if-eqz v0, :cond_0
+
+    .line 23
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 25
+    move-result-object v0
+
+    .line 28
+    check-cast v0, Landroid/view/View$OnAttachStateChangeListener;
+
+    .line 29
+    invoke-interface {v0, p1}, Landroid/view/View$OnAttachStateChangeListener;->onViewAttachedToWindow(Landroid/view/View;)V
+
+    .line 31
+    goto :goto_0
+
+    .line 34
+    :cond_0
+    return-void
+    .line 35
 .end method
 
 .method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 2
+    .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$1;->this$0:Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;
 
     .line 2
-    iget-object v0, v0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mViews:Ljava/util/HashSet;
+    iget-object v0, v0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mViews:Ljava/util/Set;
 
     .line 4
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 6
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    .line 9
     iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$1;->this$0:Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;
 
-    .line 12
-    iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mAttachListeners:Ljava/util/HashSet;
+    .line 9
+    iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mAttachListeners:Ljava/util/Set;
 
-    .line 14
-    new-instance v0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$1$$ExternalSyntheticLambda0;
+    .line 11
+    check-cast p0, Ljava/util/HashSet;
 
-    .line 16
-    const/4 v1, 0x0
+    .line 13
+    invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    .line 15
+    move-result-object p0
 
     .line 18
-    invoke-direct {v0, p1, v1}, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$1$$ExternalSyntheticLambda0;-><init>(Landroid/view/View;I)V
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     .line 19
-    invoke-virtual {p0, v0}, Ljava/util/HashSet;->forEach(Ljava/util/function/Consumer;)V
+    move-result v0
 
     .line 22
-    return-void
+    if-eqz v0, :cond_0
+
+    .line 23
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 25
+    move-result-object v0
+
+    .line 28
+    check-cast v0, Landroid/view/View$OnAttachStateChangeListener;
+
+    .line 29
+    invoke-interface {v0, p1}, Landroid/view/View$OnAttachStateChangeListener;->onViewDetachedFromWindow(Landroid/view/View;)V
+
+    .line 31
+    goto :goto_0
+
+    .line 34
+    :cond_0
+    return-void
+    .line 35
 .end method

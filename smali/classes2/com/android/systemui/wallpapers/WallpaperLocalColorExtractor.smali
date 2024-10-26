@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -30,11 +30,7 @@
 
 .field public final mProcessedRegions:Ljava/util/Set;
 
-.field public mRecomputeColors:Z
-
-.field public mWallpaperColors:Landroid/app/WallpaperColors;
-
-.field public mWallpaperDimAmount:F
+.field public final mWallpaperDimAmount:F
 
 .field public final mWallpaperLocalColorExtractorCallback:Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$1;
 
@@ -106,29 +102,17 @@
     iput-object v0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mProcessedRegions:Ljava/util/Set;
 
     .line 28
-    const/4 v0, 0x0
-
-    .line 30
-    iput v0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mWallpaperDimAmount:F
-
-    .line 31
-    const/4 v0, 0x0
-
-    .line 33
-    iput-boolean v0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mRecomputeColors:Z
-
-    .line 34
     iput-object p1, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLongExecutor:Ljava/util/concurrent/Executor;
 
-    .line 36
+    .line 30
     iput-object p2, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLock:Ljava/lang/Object;
 
-    .line 38
+    .line 32
     iput-object p3, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mWallpaperLocalColorExtractorCallback:Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$1;
 
-    .line 40
+    .line 34
     return-void
-    .line 42
+    .line 36
 .end method
 
 
@@ -824,43 +808,4 @@
     :goto_5
     return-void
     .line 324
-.end method
-
-.method public final recomputeColorsInternal()V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mMiniBitmap:Landroid/graphics/Bitmap;
-
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 4
-    return-void
-
-    .line 6
-    :cond_0
-    iget v1, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mWallpaperDimAmount:F
-
-    .line 7
-    invoke-virtual {p0, v0, v1}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->getWallpaperColors(Landroid/graphics/Bitmap;F)Landroid/app/WallpaperColors;
-
-    .line 9
-    move-result-object v0
-
-    .line 12
-    iput-object v0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mWallpaperColors:Landroid/app/WallpaperColors;
-
-    .line 13
-    iget-object p0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mWallpaperLocalColorExtractorCallback:Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$1;
-
-    .line 15
-    iget-object p0, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$1;->this$1:Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;
-
-    .line 17
-    invoke-virtual {p0}, Landroid/service/wallpaper/WallpaperService$Engine;->notifyColorsChanged()V
-
-    .line 19
-    return-void
-    .line 22
 .end method

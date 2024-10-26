@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/bubbles/BubbleExpandedView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -827,7 +827,7 @@
 .end method
 
 .method public final initialize(Lcom/android/wm/shell/bubbles/BubbleExpandedViewManager;Lcom/android/wm/shell/bubbles/BubbleStackView;Lcom/android/wm/shell/bubbles/BubblePositioner;ZLcom/android/wm/shell/bubbles/BubbleTaskView;)V
-    .locals 1
+    .locals 3
 
     .line 1
     iput-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mManager:Lcom/android/wm/shell/bubbles/BubbleExpandedViewManager;
@@ -863,7 +863,7 @@
     move-result-object p4
 
     .line 21
-    const p5, 0x7f0e0068    # @layout/bubble_overflow_container 'res/layout/bubble_overflow_container.xml'
+    const p5, 0x7f0d006d    # @layout/bubble_overflow_container 'res/layout/bubble_overflow_container.xml'
 
     .line 22
     invoke-virtual {p4, p5, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -929,155 +929,211 @@
     invoke-virtual {p0, p1}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 69
-    goto :goto_1
+    goto/16 :goto_2
 
     .line 72
     :cond_0
     iget-object p1, p5, Lcom/android/wm/shell/bubbles/BubbleTaskView;->taskView:Lcom/android/wm/shell/taskview/TaskView;
 
-    .line 73
+    .line 74
     iput-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
 
-    .line 75
+    .line 76
     iput-object p2, p1, Lcom/android/wm/shell/taskview/TaskView;->mCaptionInsets:Landroid/graphics/Insets;
 
-    .line 77
+    .line 78
     iget-object p1, p1, Lcom/android/wm/shell/taskview/TaskView;->mTaskViewTaskController:Lcom/android/wm/shell/taskview/TaskViewTaskController;
 
-    .line 79
+    .line 80
     iget-object p3, p1, Lcom/android/wm/shell/taskview/TaskViewTaskController;->mCaptionInsets:Landroid/graphics/Rect;
 
-    .line 81
+    .line 82
     if-eqz p3, :cond_1
 
-    .line 83
+    .line 84
     invoke-virtual {p3, p2}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
-    .line 85
+    .line 86
     move-result p3
 
-    .line 88
+    .line 89
     if-eqz p3, :cond_1
 
-    .line 89
+    .line 90
     goto :goto_0
 
-    .line 91
+    .line 92
     :cond_1
     iput-object p2, p1, Lcom/android/wm/shell/taskview/TaskViewTaskController;->mCaptionInsets:Landroid/graphics/Rect;
 
-    .line 92
+    .line 93
     invoke-virtual {p1}, Lcom/android/wm/shell/taskview/TaskViewTaskController;->applyCaptionInsetsIfNeeded()V
 
-    .line 94
+    .line 95
     :goto_0
     iget-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskViewListener:Lcom/android/wm/shell/bubbles/BubbleExpandedView$5;
 
-    .line 97
+    .line 98
     iput-object p1, p5, Lcom/android/wm/shell/bubbles/BubbleTaskView;->delegateListener:Lcom/android/wm/shell/taskview/TaskView$Listener;
 
-    .line 99
+    .line 100
     new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 101
+    .line 102
     iget-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
 
-    .line 103
+    .line 104
     iget-object p3, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 105
+    .line 106
     iget-object p3, p3, Lcom/android/wm/shell/bubbles/BubbleStackView;->mStackAnimationController:Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
 
-    .line 107
+    .line 108
     iget-object p3, p3, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mStackPosition:Landroid/graphics/PointF;
 
-    .line 109
+    .line 110
     invoke-virtual {p2, p3}, Lcom/android/wm/shell/bubbles/BubblePositioner;->isStackOnLeft(Landroid/graphics/PointF;)Z
 
-    .line 111
+    .line 112
     move-result p2
-
-    .line 114
-    iget-object p3, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
 
     .line 115
-    invoke-virtual {p3, p2}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getTaskViewContentWidth(Z)I
+    iget-object p3, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mPositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
 
-    .line 117
-    move-result p2
+    .line 116
+    const/4 p4, 0x0
 
-    .line 120
-    invoke-direct {p1, p2, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    .line 118
+    invoke-virtual {p3, p2, p4}, Lcom/android/wm/shell/bubbles/BubblePositioner;->getExpandedViewContainerPadding(ZZ)[I
 
-    .line 121
-    iget-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
+    .line 119
+    move-result-object p2
 
-    .line 124
-    invoke-virtual {p2}, Landroid/view/SurfaceView;->getParent()Landroid/view/ViewParent;
+    .line 122
+    invoke-virtual {p3}, Lcom/android/wm/shell/bubbles/BubblePositioner;->showBubblesVertically()Z
+
+    .line 123
+    move-result v1
 
     .line 126
-    move-result-object p2
+    if-eqz v1, :cond_2
+
+    .line 127
+    iget v1, p3, Lcom/android/wm/shell/bubbles/BubblePositioner;->mPointerHeight:I
 
     .line 129
-    if-eqz p2, :cond_2
+    iget v2, p3, Lcom/android/wm/shell/bubbles/BubblePositioner;->mPointerOverlap:I
 
-    .line 130
-    iget-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
+    .line 131
+    sub-int/2addr v1, v2
 
-    .line 132
-    invoke-virtual {p2}, Landroid/view/SurfaceView;->getParent()Landroid/view/ViewParent;
+    .line 133
+    goto :goto_1
 
     .line 134
-    move-result-object p2
+    :cond_2
+    move v1, p4
 
-    .line 137
-    check-cast p2, Landroid/view/ViewGroup;
+    .line 135
+    :goto_1
+    iget-object p3, p3, Lcom/android/wm/shell/bubbles/BubblePositioner;->mScreenRect:Landroid/graphics/Rect;
+
+    .line 136
+    invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
 
     .line 138
-    iget-object p3, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
+    move-result p3
 
-    .line 140
-    invoke-virtual {p2, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    .line 141
+    aget p4, p2, p4
 
     .line 142
-    :cond_2
-    iget-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
+    sub-int/2addr p3, p4
+
+    .line 144
+    const/4 p4, 0x2
 
     .line 145
-    iget-object p3, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
+    aget p2, p2, p4
 
-    .line 147
-    invoke-virtual {p2, p3, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .line 146
+    sub-int/2addr p3, p2
+
+    .line 148
+    sub-int/2addr p3, v1
 
     .line 149
-    iget-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
+    invoke-direct {p1, p3, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 152
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->bringChildToFront(Landroid/view/View;)V
+    .line 150
+    iget-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
 
-    .line 154
-    iget-boolean p1, p5, Lcom/android/wm/shell/bubbles/BubbleTaskView;->isCreated:Z
+    .line 153
+    invoke-virtual {p2}, Landroid/view/SurfaceView;->getParent()Landroid/view/ViewParent;
 
-    .line 157
-    if-eqz p1, :cond_3
+    .line 155
+    move-result-object p2
+
+    .line 158
+    if-eqz p2, :cond_3
 
     .line 159
-    iget-object p0, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskViewListener:Lcom/android/wm/shell/bubbles/BubbleExpandedView$5;
+    iget-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
 
     .line 161
-    iget p1, p5, Lcom/android/wm/shell/bubbles/BubbleTaskView;->taskId:I
+    invoke-virtual {p2}, Landroid/view/SurfaceView;->getParent()Landroid/view/ViewParent;
 
     .line 163
-    iget-object p2, p5, Lcom/android/wm/shell/bubbles/BubbleTaskView;->componentName:Landroid/content/ComponentName;
+    move-result-object p2
 
-    .line 165
-    invoke-virtual {p0, p1, p2}, Lcom/android/wm/shell/bubbles/BubbleExpandedView$5;->onTaskCreated(ILandroid/content/ComponentName;)V
+    .line 166
+    check-cast p2, Landroid/view/ViewGroup;
 
     .line 167
+    iget-object p3, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
+
+    .line 169
+    invoke-virtual {p2, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    .line 171
     :cond_3
-    :goto_1
+    iget-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mExpandedViewContainer:Landroid/widget/FrameLayout;
+
+    .line 174
+    iget-object p3, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
+
+    .line 176
+    invoke-virtual {p2, p3, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 178
+    iget-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskView:Lcom/android/wm/shell/taskview/TaskView;
+
+    .line 181
+    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->bringChildToFront(Landroid/view/View;)V
+
+    .line 183
+    iget-boolean p1, p5, Lcom/android/wm/shell/bubbles/BubbleTaskView;->isCreated:Z
+
+    .line 186
+    if-eqz p1, :cond_4
+
+    .line 188
+    iget-object p0, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mTaskViewListener:Lcom/android/wm/shell/bubbles/BubbleExpandedView$5;
+
+    .line 190
+    iget p1, p5, Lcom/android/wm/shell/bubbles/BubbleTaskView;->taskId:I
+
+    .line 192
+    iget-object p2, p5, Lcom/android/wm/shell/bubbles/BubbleTaskView;->componentName:Landroid/content/ComponentName;
+
+    .line 194
+    invoke-virtual {p0, p1, p2}, Lcom/android/wm/shell/bubbles/BubbleExpandedView$5;->onTaskCreated(ILandroid/content/ComponentName;)V
+
+    .line 196
+    :cond_4
+    :goto_2
     return-void
-    .line 170
+    .line 199
 .end method
 
 .method public final movePointerBy(F)V
@@ -1296,7 +1352,7 @@
     move-result-object v0
 
     .line 12
-    const v1, 0x7f0e0065    # @layout/bubble_manage_button 'res/layout/bubble_manage_button.xml'
+    const v1, 0x7f0d006a    # @layout/bubble_manage_button 'res/layout/bubble_manage_button.xml'
 
     .line 13
     const/4 v2, 0x0
@@ -1317,7 +1373,7 @@
     invoke-virtual {p0}, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->updateDimensions()V
 
     .line 25
-    const v0, 0x7f0b05e9    # @id/pointer_view
+    const v0, 0x7f0a0611    # @id/pointer_view
 
     .line 28
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1448,41 +1504,17 @@
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 4
-    sget-boolean v0, Lcom/android/wm/shell/FeatureFlagsImpl;->multitasking_is_cached:Z
-
-    .line 7
-    if-nez v0, :cond_0
-
-    .line 9
-    invoke-static {}, Lcom/android/wm/shell/FeatureFlagsImpl;->load_overrides_multitasking()V
-
-    .line 11
-    :cond_0
-    sget-boolean v0, Lcom/android/wm/shell/FeatureFlagsImpl;->enableNewBubbleAnimations:Z
-
-    .line 14
-    if-eqz v0, :cond_1
-
-    .line 16
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setAlpha(F)V
-
-    .line 18
-    goto :goto_0
-
-    .line 21
-    :cond_1
     iget-object v0, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mPointerView:Landroid/view/View;
 
-    .line 22
+    .line 7
     invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 24
+    .line 9
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
-    .line 27
-    :goto_0
+    .line 12
     return-void
-    .line 30
+    .line 15
 .end method
 
 .method public final setContentAlpha(F)V
@@ -1973,7 +2005,7 @@
     invoke-virtual {p0}, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->updateFontSize()V
 
     .line 6
-    const v1, 0x7f07014b    # @dimen/bubble_pointer_width '12.0dp'
+    const v1, 0x7f070151    # @dimen/bubble_pointer_width '12.0dp'
 
     .line 9
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1985,7 +2017,7 @@
     iput v1, p0, Lcom/android/wm/shell/bubbles/BubbleExpandedView;->mPointerWidth:I
 
     .line 16
-    const v1, 0x7f070147    # @dimen/bubble_pointer_height '10.0dp'
+    const v1, 0x7f07014d    # @dimen/bubble_pointer_height '10.0dp'
 
     .line 18
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2003,7 +2035,7 @@
     move-result-object v0
 
     .line 30
-    const v1, 0x7f07014a    # @dimen/bubble_pointer_radius '2.0dp'
+    const v1, 0x7f070150    # @dimen/bubble_pointer_radius '2.0dp'
 
     .line 31
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2036,7 +2068,7 @@
     move-result-object v0
 
     .line 53
-    const v1, 0x7f070149    # @dimen/bubble_pointer_overlap '1.0dp'
+    const v1, 0x7f07014f    # @dimen/bubble_pointer_overlap '1.0dp'
 
     .line 54
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2454,7 +2486,7 @@
     iget-object v1, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     .line 6
-    const v2, 0x7f1405bc    # @string/manage_bubbles_text 'Manage'
+    const v2, 0x7f130616    # @string/manage_bubbles_text 'Manage'
 
     .line 8
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2531,7 +2563,7 @@
     move-result-object v2
 
     .line 32
-    const v3, 0x7f0e0065    # @layout/bubble_manage_button 'res/layout/bubble_manage_button.xml'
+    const v3, 0x7f0d006a    # @layout/bubble_manage_button 'res/layout/bubble_manage_button.xml'
 
     .line 33
     invoke-virtual {v2, v3, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;

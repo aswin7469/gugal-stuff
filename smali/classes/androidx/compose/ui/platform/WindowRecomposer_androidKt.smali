@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/platform/WindowRecomposer_androidKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -60,16 +60,16 @@
     move-result-object v4
 
     .line 20
-    const/4 v1, 0x6
+    const/4 v1, 0x0
 
     .line 21
-    const/4 v2, 0x0
+    const/4 v2, -0x1
 
     .line 22
-    const/4 v5, -0x1
+    const/4 v5, 0x6
 
     .line 23
-    invoke-static {v5, v2, v2, v1}, Lkotlinx/coroutines/channels/ChannelKt;->Channel$default(ILkotlinx/coroutines/channels/BufferOverflow;Lkotlin/jvm/functions/Function1;I)Lkotlinx/coroutines/channels/BufferedChannel;
+    invoke-static {v2, v1, v1, v5}, Lkotlinx/coroutines/channels/ChannelKt;->Channel$default(ILkotlinx/coroutines/channels/BufferOverflow;Lkotlin/jvm/functions/Function1;I)Lkotlinx/coroutines/channels/BufferedChannel;
 
     .line 24
     move-result-object v6
@@ -114,108 +114,90 @@
     invoke-direct {v2, v1}, Lkotlinx/coroutines/flow/SafeFlow;-><init>(Lkotlin/jvm/functions/Function2;)V
 
     .line 51
-    new-instance v1, Lkotlinx/coroutines/internal/ContextScope;
+    invoke-static {}, Lkotlinx/coroutines/CoroutineScopeKt;->MainScope()Lkotlinx/coroutines/internal/ContextScope;
 
     .line 54
-    invoke-static {}, Lkotlinx/coroutines/SupervisorKt;->SupervisorJob$default()Lkotlinx/coroutines/SupervisorJobImpl;
-
-    .line 56
-    move-result-object v3
-
-    .line 59
-    sget-object v4, Lkotlinx/coroutines/Dispatchers;->Default:Lkotlinx/coroutines/scheduling/DefaultScheduler;
-
-    .line 60
-    sget-object v4, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lkotlinx/coroutines/android/HandlerContext;
-
-    .line 62
-    invoke-static {v3, v4}, Lkotlin/coroutines/CoroutineContext$DefaultImpls;->plus(Lkotlin/coroutines/CoroutineContext;Lkotlin/coroutines/CoroutineContext;)Lkotlin/coroutines/CoroutineContext;
-
-    .line 64
-    move-result-object v3
-
-    .line 67
-    invoke-direct {v1, v3}, Lkotlinx/coroutines/internal/ContextScope;-><init>(Lkotlin/coroutines/CoroutineContext;)V
-
-    .line 68
-    const/4 v3, 0x3
-
-    .line 71
-    invoke-static {v3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
-
-    .line 72
-    move-result-object v3
-
-    .line 75
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    .line 76
-    move-result-object v4
-
-    .line 79
-    const-string v5, "animator_duration_scale"
-
-    .line 80
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    .line 82
-    invoke-static {v4, v5, v6}, Landroid/provider/Settings$Global;->getFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)F
-
-    .line 84
-    move-result v4
-
-    .line 87
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 88
-    move-result-object v4
-
-    .line 91
-    invoke-static {v2, v1, v3, v4}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 92
     move-result-object v1
 
-    .line 95
+    .line 57
+    const/4 v3, 0x3
+
+    .line 58
+    invoke-static {v3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
+
+    .line 59
+    move-result-object v3
+
+    .line 62
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    .line 63
+    move-result-object v4
+
+    .line 66
+    const-string v5, "animator_duration_scale"
+
+    .line 67
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    .line 69
+    invoke-static {v4, v5, v6}, Landroid/provider/Settings$Global;->getFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)F
+
+    .line 71
+    move-result v4
+
+    .line 74
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 75
+    move-result-object v4
+
+    .line 78
+    invoke-static {v2, v1, v3, v4}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 79
+    move-result-object v1
+
+    .line 82
     invoke-interface {v0, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 96
+    .line 83
     goto :goto_0
 
-    .line 99
+    .line 86
     :catchall_0
     move-exception p0
 
-    .line 100
+    .line 87
     goto :goto_1
 
-    .line 101
+    .line 88
     :cond_0
     :goto_0
     check-cast v1, Lkotlinx/coroutines/flow/StateFlow;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 102
+    .line 89
     monitor-exit v0
 
-    .line 104
+    .line 91
     return-object v1
 
-    .line 105
+    .line 92
     :goto_1
     monitor-exit v0
 
-    .line 106
+    .line 93
     throw p0
-    .line 107
+    .line 94
 .end method
 
 .method public static final getCompositionContext(Landroid/view/View;)Landroidx/compose/runtime/CompositionContext;
     .locals 1
 
     .line 1
-    const v0, 0x7f0b00b3    # @id/androidx_compose_ui_view_composition_context
+    const v0, 0x7f0a00b6    # @id/androidx_compose_ui_view_composition_context
 
     .line 2
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;

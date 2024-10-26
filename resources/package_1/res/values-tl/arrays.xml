@@ -5,7 +5,9 @@
     <item>Ipakita ang porsyento kapag nagcha-charge (default)</item>
     <item>Huwag ipakita ang icon na ito</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Ipakita ang oras, minuto at segundo</item>
     <item>Ipakita ang oras at minuto (default)</item>

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/events/SystemStatusAnimationSchedulerImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/CallbackController;
@@ -314,90 +314,87 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/events/SystemStatusAnimationSchedulerImpl;->coordinator:Lcom/android/systemui/statusbar/events/SystemEventCoordinator;
 
     .line 15
-    iget-object v1, v0, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->batteryStateListener:Lcom/android/systemui/statusbar/events/SystemEventCoordinator$batteryStateListener$1;
+    iget-object v1, v0, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->batteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
     .line 17
-    iget-object v2, v0, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->batteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+    iget-object v2, v0, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->batteryStateListener:Lcom/android/systemui/statusbar/events/SystemEventCoordinator$batteryStateListener$1;
 
     .line 19
-    check-cast v2, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
+    invoke-interface {v1, v2}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
     .line 21
-    invoke-virtual {v2, v1}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->addCallback(Ljava/lang/Object;)V
-
-    .line 23
     iget-object v1, v0, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->privacyController:Lcom/android/systemui/privacy/PrivacyItemController;
 
-    .line 26
+    .line 24
     iget-object v2, v0, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->privacyStateListener:Lcom/android/systemui/statusbar/events/SystemEventCoordinator$privacyStateListener$1;
 
-    .line 28
+    .line 26
     invoke-virtual {v1, v2}, Lcom/android/systemui/privacy/PrivacyItemController;->addCallback(Lcom/android/systemui/privacy/PrivacyItemController$Callback;)V
 
-    .line 30
+    .line 28
     new-instance v1, Lcom/android/systemui/statusbar/events/ConnectedDisplayEvent;
 
-    .line 33
+    .line 31
     invoke-direct {v1}, Lcom/android/systemui/statusbar/events/ConnectedDisplayEvent;-><init>()V
 
-    .line 35
+    .line 33
     iget-object v2, v0, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->context:Landroid/content/Context;
 
-    .line 38
-    const v3, 0x7f1402af    # @string/connected_display_icon_desc 'Display connected'
+    .line 36
+    const v3, 0x7f1302cb    # @string/connected_display_icon_desc 'Display connected'
 
-    .line 40
+    .line 38
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 43
+    .line 41
     move-result-object v2
 
-    .line 46
+    .line 44
     iput-object v2, v1, Lcom/android/systemui/statusbar/events/ConnectedDisplayEvent;->contentDescription:Ljava/lang/String;
 
-    .line 47
+    .line 45
     new-instance v2, Lcom/android/systemui/statusbar/events/SystemEventCoordinator$startConnectedDisplayCollection$1;
 
-    .line 49
+    .line 47
     const/4 v3, 0x0
 
-    .line 51
+    .line 49
     invoke-direct {v2, v0, v1, v3}, Lcom/android/systemui/statusbar/events/SystemEventCoordinator$startConnectedDisplayCollection$1;-><init>(Lcom/android/systemui/statusbar/events/SystemEventCoordinator;Lcom/android/systemui/statusbar/events/ConnectedDisplayEvent;Lkotlin/coroutines/Continuation;)V
 
-    .line 52
+    .line 50
     new-instance v1, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 55
+    .line 53
     iget-object v3, v0, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->onDisplayConnectedFlow:Lkotlinx/coroutines/flow/Flow;
 
-    .line 57
+    .line 55
     const/4 v4, 0x0
 
-    .line 59
+    .line 57
     invoke-direct {v1, v3, v2, v4}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 60
+    .line 58
     iget-object v2, v0, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->appScope:Lkotlinx/coroutines/CoroutineScope;
 
-    .line 63
+    .line 61
     invoke-static {v1, v2}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 65
+    .line 63
     move-result-object v1
 
-    .line 68
+    .line 66
     iput-object v1, v0, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->connectedDisplayCollectionJob:Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 69
+    .line 67
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/events/SystemStatusAnimationSchedulerImpl;->listeners:Ljava/util/Set;
 
-    .line 71
+    .line 69
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 73
+    .line 71
     return-void
-    .line 76
+    .line 74
 .end method
 
 .method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V

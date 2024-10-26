@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/repository/KeyguardSurfaceBehindRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -48,18 +48,15 @@
     move-result-object v0
 
     .line 23
-    iput-object v0, p0, Lcom/android/systemui/keyguard/data/repository/KeyguardSurfaceBehindRepositoryImpl;->_isSurfaceRemoteAnimationTargetAvailable:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 24
     new-instance v1, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 26
+    .line 24
     invoke-direct {v1, v0}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
-    .line 28
+    .line 26
     iput-object v1, p0, Lcom/android/systemui/keyguard/data/repository/KeyguardSurfaceBehindRepositoryImpl;->isSurfaceRemoteAnimationTargetAvailable:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 31
+    .line 29
     return-void
-    .line 33
+    .line 31
 .end method

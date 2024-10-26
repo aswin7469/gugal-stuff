@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/animation/core/Animatable;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -467,107 +467,127 @@
 
 # virtual methods
 .method public final animateTo(Ljava/lang/Object;Landroidx/compose/animation/core/AnimationSpec;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 12
+    .locals 11
 
     .line 1
     move-object v8, p0
 
     .line 2
-    iget-object v0, v8, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {p0}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 3
-    iget-object v1, v0, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
+    move-result-object v3
 
-    .line 5
-    invoke-virtual {v1}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
+    .line 6
+    new-instance v6, Landroidx/compose/animation/core/TargetBasedAnimation;
 
     .line 7
-    move-result-object v5
+    iget-object v2, v8, Landroidx/compose/animation/core/Animatable;->typeConverter:Landroidx/compose/animation/core/TwoWayConverter;
 
-    .line 10
-    new-instance v9, Landroidx/compose/animation/core/TargetBasedAnimation;
+    .line 9
+    move-object v0, v2
 
     .line 11
-    iget-object v4, v8, Landroidx/compose/animation/core/Animatable;->typeConverter:Landroidx/compose/animation/core/TwoWayConverter;
+    check-cast v0, Landroidx/compose/animation/core/TwoWayConverterImpl;
 
-    .line 13
-    move-object v1, v4
+    .line 12
+    iget-object v0, v0, Landroidx/compose/animation/core/TwoWayConverterImpl;->convertToVector:Lkotlin/jvm/functions/Function1;
 
-    .line 15
-    check-cast v1, Landroidx/compose/animation/core/TwoWayConverterImpl;
+    .line 14
+    move-object v7, p3
 
     .line 16
-    iget-object v1, v1, Landroidx/compose/animation/core/TwoWayConverterImpl;->convertToVector:Lkotlin/jvm/functions/Function1;
+    invoke-interface {v0, p3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 18
-    move-object v10, p3
-
-    .line 20
-    invoke-interface {v1, p3}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 21
-    move-result-object v1
-
-    .line 24
-    move-object v7, v1
-
-    .line 25
-    check-cast v7, Landroidx/compose/animation/core/AnimationVector;
-
-    .line 26
-    move-object v2, v9
-
-    .line 28
-    move-object v3, p2
-
-    .line 29
-    move-object v6, p1
-
-    .line 30
-    invoke-direct/range {v2 .. v7}, Landroidx/compose/animation/core/TargetBasedAnimation;-><init>(Landroidx/compose/animation/core/AnimationSpec;Landroidx/compose/animation/core/TwoWayConverter;Ljava/lang/Object;Ljava/lang/Object;Landroidx/compose/animation/core/AnimationVector;)V
-
-    .line 31
-    iget-wide v4, v0, Landroidx/compose/animation/core/AnimationState;->lastFrameTimeNanos:J
-
-    .line 34
-    new-instance v11, Landroidx/compose/animation/core/Animatable$runAnimation$2;
-
-    .line 36
-    const/4 v7, 0x0
-
-    .line 38
-    move-object v0, v11
-
-    .line 39
-    move-object v1, p0
-
-    .line 40
-    move-object v2, p3
-
-    .line 41
-    move-object v3, v9
-
-    .line 42
-    move-object/from16 v6, p4
-
-    .line 43
-    invoke-direct/range {v0 .. v7}, Landroidx/compose/animation/core/Animatable$runAnimation$2;-><init>(Landroidx/compose/animation/core/Animatable;Ljava/lang/Object;Landroidx/compose/animation/core/Animation;JLkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)V
-
-    .line 45
-    iget-object v0, v8, Landroidx/compose/animation/core/Animatable;->mutatorMutex:Landroidx/compose/animation/core/MutatorMutex;
-
-    .line 48
-    move-object/from16 v1, p5
-
-    .line 50
-    invoke-static {v0, v11, v1}, Landroidx/compose/animation/core/MutatorMutex;->mutate$default(Landroidx/compose/animation/core/MutatorMutex;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    .line 52
+    .line 17
     move-result-object v0
 
-    .line 55
+    .line 20
+    move-object v5, v0
+
+    .line 21
+    check-cast v5, Landroidx/compose/animation/core/AnimationVector;
+
+    .line 22
+    move-object v0, v6
+
+    .line 24
+    move-object v1, p2
+
+    .line 25
+    move-object v4, p1
+
+    .line 26
+    invoke-direct/range {v0 .. v5}, Landroidx/compose/animation/core/TargetBasedAnimation;-><init>(Landroidx/compose/animation/core/AnimationSpec;Landroidx/compose/animation/core/TwoWayConverter;Ljava/lang/Object;Ljava/lang/Object;Landroidx/compose/animation/core/AnimationVector;)V
+
+    .line 27
+    iget-object v0, v8, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+
+    .line 30
+    iget-wide v4, v0, Landroidx/compose/animation/core/AnimationState;->lastFrameTimeNanos:J
+
+    .line 32
+    new-instance v9, Landroidx/compose/animation/core/Animatable$runAnimation$2;
+
+    .line 34
+    const/4 v10, 0x0
+
+    .line 36
+    move-object v0, v9
+
+    .line 37
+    move-object v1, p0
+
+    .line 38
+    move-object v2, p3
+
+    .line 39
+    move-object v3, v6
+
+    .line 40
+    move-object v6, p4
+
+    .line 41
+    move-object v7, v10
+
+    .line 42
+    invoke-direct/range {v0 .. v7}, Landroidx/compose/animation/core/Animatable$runAnimation$2;-><init>(Landroidx/compose/animation/core/Animatable;Ljava/lang/Object;Landroidx/compose/animation/core/Animation;JLkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)V
+
+    .line 43
+    iget-object v0, v8, Landroidx/compose/animation/core/Animatable;->mutatorMutex:Landroidx/compose/animation/core/MutatorMutex;
+
+    .line 46
+    move-object/from16 v1, p5
+
+    .line 48
+    invoke-static {v0, v9, v1}, Landroidx/compose/animation/core/MutatorMutex;->mutate$default(Landroidx/compose/animation/core/MutatorMutex;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 50
+    move-result-object v0
+
+    .line 53
     return-object v0
-    .line 56
+    .line 54
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+
+    .line 2
+    iget-object p0, p0, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
+
+    .line 4
+    invoke-virtual {p0}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
+
+    .line 6
+    move-result-object p0
+
+    .line 9
+    return-object p0
+    .line 10
 .end method
 
 .method public final snapTo(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;

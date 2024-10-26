@@ -1,6 +1,6 @@
 .class public final Landroidx/slice/builders/SliceAction;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/slice/core/SliceAction;
@@ -103,33 +103,33 @@
     const-string v2, "shortcut"
 
     .line 19
-    const-string v3, "title"
+    const-string/jumbo v3, "title"
 
     .line 21
     filled-new-array {v2, v3}, [Ljava/lang/String;
 
-    .line 23
+    .line 24
     move-result-object v2
 
-    .line 26
+    .line 27
     invoke-virtual {v1, v2}, Landroidx/slice/Slice$Builder;->addHints([Ljava/lang/String;)V
 
-    .line 27
+    .line 28
     invoke-virtual {v1}, Landroidx/slice/Slice$Builder;->build()Landroidx/slice/Slice;
 
-    .line 30
+    .line 31
     move-result-object v1
 
-    .line 33
+    .line 34
     invoke-virtual {p0}, Landroidx/slice/core/SliceActionImpl;->getSubtype()Ljava/lang/String;
 
-    .line 34
+    .line 35
     move-result-object p0
 
-    .line 37
+    .line 38
     invoke-virtual {p1, v0, v1, p0}, Landroidx/slice/Slice$Builder;->addAction(Landroid/app/PendingIntent;Landroidx/slice/Slice;Ljava/lang/String;)V
 
-    .line 38
+    .line 39
     return-void
-    .line 41
+    .line 42
 .end method

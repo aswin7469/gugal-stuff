@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderContentKt$animateContentHeight$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -134,39 +134,33 @@
     iget p0, p2, Landroidx/compose/ui/layout/Placeable;->width:I
 
     .line 60
-    iget-object p3, p3, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {p3}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 62
-    iget-object p3, p3, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 64
-    invoke-virtual {p3}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 66
     move-result-object p3
 
-    .line 69
+    .line 65
     check-cast p3, Ljava/lang/Number;
 
-    .line 70
+    .line 66
     invoke-virtual {p3}, Ljava/lang/Number;->intValue()I
 
-    .line 72
+    .line 68
     move-result p3
 
-    .line 75
+    .line 71
     new-instance v0, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderContentKt$animateContentHeight$1$1;
 
-    .line 76
+    .line 72
     invoke-direct {v0, p2}, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderContentKt$animateContentHeight$1$1;-><init>(Landroidx/compose/ui/layout/Placeable;)V
 
-    .line 78
+    .line 74
     invoke-static {p1, p0, p3, v0}, Landroidx/compose/ui/layout/MeasureScope;->layout$default(Landroidx/compose/ui/layout/MeasureScope;IILkotlin/jvm/functions/Function1;)Landroidx/compose/ui/layout/MeasureResult;
 
-    .line 81
+    .line 77
     move-result-object p0
 
-    .line 84
+    .line 80
     return-object p0
-    .line 85
+    .line 81
 .end method

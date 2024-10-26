@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/animation/core/EasingKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -45,27 +45,24 @@
     invoke-direct {v0, v2, v2, v3, v4}, Landroidx/compose/animation/core/CubicBezierEasing;-><init>(FFFF)V
 
     .line 20
-    sput-object v0, Landroidx/compose/animation/core/EasingKt;->LinearOutSlowInEasing:Landroidx/compose/animation/core/CubicBezierEasing;
-
-    .line 23
     new-instance v0, Landroidx/compose/animation/core/CubicBezierEasing;
 
-    .line 25
+    .line 23
     invoke-direct {v0, v1, v2, v4, v4}, Landroidx/compose/animation/core/CubicBezierEasing;-><init>(FFFF)V
 
-    .line 27
+    .line 25
     sput-object v0, Landroidx/compose/animation/core/EasingKt;->FastOutLinearInEasing:Landroidx/compose/animation/core/CubicBezierEasing;
 
-    .line 30
+    .line 28
     new-instance v0, Landroidx/compose/animation/core/EasingKt$$ExternalSyntheticLambda0;
 
-    .line 32
+    .line 30
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
+    .line 32
     sput-object v0, Landroidx/compose/animation/core/EasingKt;->LinearEasing:Landroidx/compose/animation/core/EasingKt$$ExternalSyntheticLambda0;
 
-    .line 37
+    .line 35
     return-void
-    .line 39
+    .line 37
 .end method

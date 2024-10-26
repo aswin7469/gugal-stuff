@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/events/SystemStatusAnimationSchedulerImpl$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -228,7 +228,7 @@
     iget-object v6, v3, Lcom/android/systemui/statusbar/events/SystemEventChipAnimationController;->context:Landroid/content/Context;
 
     .line 129
-    const v7, 0x7f1504cc    # @style/Theme.SystemUI.QuickSettings
+    const v7, 0x7f1404d5    # @style/Theme.SystemUI.QuickSettings
 
     .line 131
     invoke-direct {v4, v6, v7}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
@@ -243,7 +243,7 @@
     move-result-object v4
 
     .line 142
-    const v6, 0x7f0e02ee    # @layout/system_event_animation_window 'res/layout/system_event_animation_window.xml'
+    const v6, 0x7f0d0300    # @layout/system_event_animation_window 'res/layout/system_event_animation_window.xml'
 
     .line 143
     invoke-virtual {v4, v6, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -274,7 +274,7 @@
     move-result-object v4
 
     .line 162
-    const v6, 0x7f0709c5    # @dimen/status_bar_height '@android:dimen/text_size_body_2_material'
+    const v6, 0x7f070a1d    # @dimen/status_bar_height '@android:dimen/text_size_body_2_material'
 
     .line 163
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

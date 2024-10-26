@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/KeyguardViewMediator$14;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -338,50 +338,40 @@
     invoke-virtual {v0, v3}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->apply(Lcom/android/systemui/shade/NotificationShadeWindowState;)V
 
     .line 199
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 202
-    move-result v0
-
-    .line 205
-    if-nez v0, :cond_6
-
-    .line 206
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$14;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 208
+    .line 202
     iget-object v0, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mUiBgExecutor:Ljava/util/concurrent/Executor;
 
-    .line 210
-    new-instance v2, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;
+    .line 204
+    new-instance v2, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda8;
 
-    .line 212
+    .line 206
     const/4 v3, 0x2
 
-    .line 214
-    invoke-direct {v2, v1, v3, p0}, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;-><init>(IILjava/lang/Object;)V
+    .line 208
+    invoke-direct {v2, v1, v3, p0}, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda8;-><init>(IILjava/lang/Object;)V
 
-    .line 215
+    .line 209
     invoke-interface {v0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 218
-    :cond_6
+    .line 212
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 221
+    .line 215
     return-void
 
-    .line 224
+    .line 218
     :catchall_0
     move-exception p0
 
-    .line 225
+    .line 219
     :try_start_1
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 226
+    .line 220
     throw p0
-    .line 227
+    .line 221
 .end method

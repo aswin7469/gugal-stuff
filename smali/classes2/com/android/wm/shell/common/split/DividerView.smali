@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/common/split/DividerView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -504,7 +504,7 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b028f    # @id/divider_bar
+    const v0, 0x7f0a029c    # @id/divider_bar
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -519,7 +519,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/common/split/DividerView;->mDividerBar:Landroid/widget/FrameLayout;
 
     .line 14
-    const v0, 0x7f0b0291    # @id/docked_divider_handle
+    const v0, 0x7f0a029f    # @id/docked_divider_handle
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -534,7 +534,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/common/split/DividerView;->mHandle:Lcom/android/wm/shell/common/split/DividerHandleView;
 
     .line 25
-    const v0, 0x7f0b0292    # @id/docked_divider_rounded_corner
+    const v0, 0x7f0a02a0    # @id/docked_divider_rounded_corner
 
     .line 27
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -555,7 +555,7 @@
     move-result-object v0
 
     .line 41
-    const v1, 0x7f070282    # @dimen/docked_stack_divider_lift_elevation '4.0dp'
+    const v1, 0x7f0702a9    # @dimen/docked_stack_divider_lift_elevation '4.0dp'
 
     .line 42
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -624,7 +624,7 @@
     move-result-object v2
 
     .line 91
-    const v3, 0x7f0604ef    # @color/split_divider_background '@color/taskbar_background_dark'
+    const v3, 0x7f0604fd    # @color/split_divider_background '@color/taskbar_background_dark'
 
     .line 92
     const/4 v4, 0x0
@@ -1042,7 +1042,7 @@
     move-result-object p2
 
     .line 59
-    const p4, 0x7f0709a1    # @dimen/split_divider_bar_width '10.0dp'
+    const p4, 0x7f0709f9    # @dimen/split_divider_bar_width '10.0dp'
 
     .line 60
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1934,7 +1934,7 @@
 
     .line 6
     :cond_0
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
 
     .line 7
     const/4 v1, 0x0
@@ -1984,7 +1984,7 @@
     const-wide v3, 0x54441870d4ab3ec6L    # 8.584733389479257E97
 
     .line 35
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 40
     :cond_2

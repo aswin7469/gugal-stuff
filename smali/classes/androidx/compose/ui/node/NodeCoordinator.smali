@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/node/NodeCoordinator;
 .super Landroidx/compose/ui/node/LookaheadCapablePlaceable;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/layout/Measurable;
@@ -3008,6 +3008,7 @@
 
     .line 24
     return p0
+    .line 25
 .end method
 
 .method public final isValidOwnerScope()Z
@@ -5190,7 +5191,7 @@
     iget v4, v11, Landroidx/compose/ui/node/HitTestResult;->size:I
 
     .line 125
-    invoke-static {v3, v3, v1, v0, v4}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v1, v0, v4, v3, v3}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 127
     iget-object v3, v11, Landroidx/compose/ui/node/HitTestResult;->distanceFromEdgeAndInLayer:[J
@@ -6084,228 +6085,234 @@
     invoke-virtual {v3, v4}, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->setClip(Z)V
 
     .line 108
-    invoke-static {v1, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v5, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->renderEffect:Landroidx/compose/ui/graphics/AndroidRenderEffect;
 
     .line 111
+    invoke-static {v5, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 113
     move-result v5
 
-    .line 114
+    .line 116
     if-nez v5, :cond_4
 
-    .line 115
+    .line 117
     iget v5, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->mutatedFields:I
 
-    .line 117
+    .line 119
     const/high16 v6, 0x20000
 
-    .line 119
+    .line 121
     or-int/2addr v5, v6
 
-    .line 121
+    .line 123
     iput v5, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->mutatedFields:I
 
-    .line 122
+    .line 124
+    iput-object v1, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->renderEffect:Landroidx/compose/ui/graphics/AndroidRenderEffect;
+
+    .line 126
     :cond_4
     invoke-virtual {v3, v4}, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->setCompositingStrategy-aDBOjCE(I)V
 
-    .line 124
+    .line 128
     const-wide v5, 0x7fc000007fc00000L    # 2.247117487993712E307
 
-    .line 127
+    .line 131
     iput-wide v5, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->size:J
 
-    .line 132
+    .line 136
     iput-object v1, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->outline:Landroidx/compose/ui/graphics/Outline;
 
-    .line 134
+    .line 138
     iput v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->mutatedFields:I
 
-    .line 136
+    .line 140
     iget-object v1, p0, Landroidx/compose/ui/node/NodeCoordinator;->layoutNode:Landroidx/compose/ui/node/LayoutNode;
 
-    .line 138
+    .line 142
     iget-object v4, v1, Landroidx/compose/ui/node/LayoutNode;->density:Landroidx/compose/ui/unit/Density;
 
-    .line 140
+    .line 144
     iput-object v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->graphicsDensity:Landroidx/compose/ui/unit/Density;
 
-    .line 142
+    .line 146
     iget-object v4, v1, Landroidx/compose/ui/node/LayoutNode;->layoutDirection:Landroidx/compose/ui/unit/LayoutDirection;
 
-    .line 144
+    .line 148
     iput-object v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->layoutDirection:Landroidx/compose/ui/unit/LayoutDirection;
 
-    .line 146
+    .line 150
     iget-wide v4, p0, Landroidx/compose/ui/layout/Placeable;->measuredSize:J
 
-    .line 148
+    .line 152
     invoke-static {v4, v5}, Landroidx/compose/ui/unit/IntSizeKt;->toSize-ozmzZPI(J)J
 
-    .line 150
+    .line 154
     move-result-wide v4
 
-    .line 153
+    .line 157
     iput-wide v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->size:J
 
-    .line 154
+    .line 158
     invoke-static {v1}, Landroidx/compose/ui/node/LayoutNodeKt;->requireOwner(Landroidx/compose/ui/node/LayoutNode;)Landroidx/compose/ui/node/Owner;
 
-    .line 156
+    .line 160
     move-result-object v4
 
-    .line 159
+    .line 163
     check-cast v4, Landroidx/compose/ui/platform/AndroidComposeView;
 
-    .line 160
+    .line 164
     iget-object v4, v4, Landroidx/compose/ui/platform/AndroidComposeView;->snapshotObserver:Landroidx/compose/ui/node/OwnerSnapshotObserver;
 
-    .line 162
+    .line 166
     sget-object v5, Landroidx/compose/ui/node/NodeCoordinator;->onCommitAffectingLayerParams:Lkotlin/jvm/functions/Function1;
 
-    .line 164
+    .line 168
     new-instance v6, Landroidx/compose/ui/node/NodeCoordinator$updateLayerParameters$1;
 
-    .line 166
+    .line 170
     invoke-direct {v6, v2}, Landroidx/compose/ui/node/NodeCoordinator$updateLayerParameters$1;-><init>(Lkotlin/jvm/functions/Function1;)V
 
-    .line 168
+    .line 172
     invoke-virtual {v4, p0, v5, v6}, Landroidx/compose/ui/node/OwnerSnapshotObserver;->observeReads$ui_release(Landroidx/compose/ui/node/OwnerScope;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;)V
 
-    .line 171
+    .line 175
     iget-object v2, p0, Landroidx/compose/ui/node/NodeCoordinator;->layerPositionalProperties:Landroidx/compose/ui/node/LayerPositionalProperties;
 
-    .line 174
+    .line 178
     if-nez v2, :cond_5
 
-    .line 176
+    .line 180
     new-instance v2, Landroidx/compose/ui/node/LayerPositionalProperties;
 
-    .line 178
+    .line 182
     invoke-direct {v2}, Landroidx/compose/ui/node/LayerPositionalProperties;-><init>()V
 
-    .line 180
+    .line 184
     iput-object v2, p0, Landroidx/compose/ui/node/NodeCoordinator;->layerPositionalProperties:Landroidx/compose/ui/node/LayerPositionalProperties;
 
-    .line 183
+    .line 187
     :cond_5
     iget v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->scaleX:F
 
-    .line 185
+    .line 189
     iput v4, v2, Landroidx/compose/ui/node/LayerPositionalProperties;->scaleX:F
 
-    .line 187
+    .line 191
     iget v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->scaleY:F
 
-    .line 189
+    .line 193
     iput v4, v2, Landroidx/compose/ui/node/LayerPositionalProperties;->scaleY:F
 
-    .line 191
+    .line 195
     iget v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->translationX:F
 
-    .line 193
+    .line 197
     iput v4, v2, Landroidx/compose/ui/node/LayerPositionalProperties;->translationX:F
 
-    .line 195
+    .line 199
     iget v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->translationY:F
 
-    .line 197
+    .line 201
     iput v4, v2, Landroidx/compose/ui/node/LayerPositionalProperties;->translationY:F
 
-    .line 199
+    .line 203
     iget v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->rotationX:F
 
-    .line 201
+    .line 205
     iput v4, v2, Landroidx/compose/ui/node/LayerPositionalProperties;->rotationX:F
 
-    .line 203
+    .line 207
     iget v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->rotationY:F
 
-    .line 205
+    .line 209
     iput v4, v2, Landroidx/compose/ui/node/LayerPositionalProperties;->rotationY:F
 
-    .line 207
+    .line 211
     iget v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->rotationZ:F
 
-    .line 209
+    .line 213
     iput v4, v2, Landroidx/compose/ui/node/LayerPositionalProperties;->rotationZ:F
 
-    .line 211
+    .line 215
     iget v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->cameraDistance:F
 
-    .line 213
+    .line 217
     iput v4, v2, Landroidx/compose/ui/node/LayerPositionalProperties;->cameraDistance:F
 
-    .line 215
+    .line 219
     iget-wide v4, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->transformOrigin:J
 
-    .line 217
+    .line 221
     iput-wide v4, v2, Landroidx/compose/ui/node/LayerPositionalProperties;->transformOrigin:J
 
-    .line 219
+    .line 223
     invoke-interface {v0, v3}, Landroidx/compose/ui/node/OwnedLayer;->updateLayerProperties(Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;)V
 
-    .line 221
+    .line 225
     iget-boolean v0, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->clip:Z
 
-    .line 224
+    .line 228
     iput-boolean v0, p0, Landroidx/compose/ui/node/NodeCoordinator;->isClipping:Z
 
-    .line 226
+    .line 230
     iget v0, v3, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->alpha:F
 
-    .line 228
+    .line 232
     iput v0, p0, Landroidx/compose/ui/node/NodeCoordinator;->lastLayerAlpha:F
 
-    .line 230
+    .line 234
     if-eqz p1, :cond_8
 
-    .line 232
+    .line 236
     iget-object p0, v1, Landroidx/compose/ui/node/LayoutNode;->owner:Landroidx/compose/ui/node/Owner;
 
-    .line 234
+    .line 238
     if-eqz p0, :cond_8
 
-    .line 236
+    .line 240
     check-cast p0, Landroidx/compose/ui/platform/AndroidComposeView;
 
-    .line 238
+    .line 242
     invoke-virtual {p0, v1}, Landroidx/compose/ui/platform/AndroidComposeView;->onLayoutChange(Landroidx/compose/ui/node/LayoutNode;)V
 
-    .line 240
+    .line 244
     goto :goto_3
 
-    .line 243
+    .line 247
     :cond_6
     const-string/jumbo p0, "updateLayerParameters requires a non-null layerBlock"
 
-    .line 244
+    .line 248
     invoke-static {p0}, Landroidx/compose/ui/internal/InlineClassHelperKt;->throwIllegalStateExceptionForNullCheck(Ljava/lang/String;)V
 
-    .line 247
+    .line 251
     throw v1
 
-    .line 250
+    .line 254
     :cond_7
     iget-object p0, p0, Landroidx/compose/ui/node/NodeCoordinator;->layerBlock:Lkotlin/jvm/functions/Function1;
 
-    .line 251
+    .line 255
     if-nez p0, :cond_9
 
-    .line 253
+    .line 257
     :cond_8
     :goto_3
     return-void
 
-    .line 255
+    .line 259
     :cond_9
     const-string p0, "null layer with a non-null layerBlock"
 
-    .line 256
+    .line 260
     invoke-static {p0}, Landroidx/compose/ui/internal/InlineClassHelperKt;->throwIllegalStateException(Ljava/lang/String;)V
 
-    .line 258
+    .line 262
     throw v1
-    .line 261
+    .line 265
 .end method
 
 .method public final windowToLocal-MK-Hz9U(J)J

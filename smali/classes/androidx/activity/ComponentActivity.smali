@@ -1,6 +1,6 @@
 .class public abstract Landroidx/activity/ComponentActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/lifecycle/ViewModelStoreOwner;
@@ -784,7 +784,7 @@
     move-result-object v0
 
     .line 9
-    const v1, 0x7f0b08ad    # @id/view_tree_lifecycle_owner
+    const v1, 0x7f0a08e0    # @id/view_tree_lifecycle_owner
 
     .line 10
     invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -802,7 +802,7 @@
     move-result-object v0
 
     .line 23
-    const v1, 0x7f0b08b0    # @id/view_tree_view_model_store_owner
+    const v1, 0x7f0a08e3    # @id/view_tree_view_model_store_owner
 
     .line 24
     invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -820,7 +820,7 @@
     move-result-object v0
 
     .line 37
-    const v1, 0x7f0b08af    # @id/view_tree_saved_state_registry_owner
+    const v1, 0x7f0a08e2    # @id/view_tree_saved_state_registry_owner
 
     .line 38
     invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -838,7 +838,7 @@
     move-result-object v0
 
     .line 51
-    const v1, 0x7f0b08ae    # @id/view_tree_on_back_pressed_dispatcher_owner
+    const v1, 0x7f0a08e1    # @id/view_tree_on_back_pressed_dispatcher_owner
 
     .line 52
     invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -856,7 +856,7 @@
     move-result-object v0
 
     .line 65
-    const v1, 0x7f0b064d    # @id/report_drawn
+    const v1, 0x7f0a0677    # @id/report_drawn
 
     .line 66
     invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -961,6 +961,7 @@
     .line 26
     :cond_0
     return-void
+    .line 27
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
@@ -1271,6 +1272,7 @@
     .line 26
     :cond_0
     return-void
+    .line 27
 .end method
 
 .method public onPanelClosed(ILandroid/view/Menu;)V
@@ -1749,20 +1751,6 @@
     :cond_0
     return-void
     .line 27
-.end method
-
-.method public final removeOnConfigurationChangedListener(Landroidx/core/util/Consumer;)V
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Landroidx/activity/ComponentActivity;->onConfigurationChangedListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    .line 2
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
-
-    .line 4
-    return-void
-    .line 7
 .end method
 
 .method public final reportFullyDrawn()V

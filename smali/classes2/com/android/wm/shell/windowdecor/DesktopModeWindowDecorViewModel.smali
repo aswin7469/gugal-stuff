@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/windowdecor/WindowDecorViewModel;
@@ -704,6 +704,7 @@
     .line 32
     :goto_1
     return-object v1
+    .line 33
 .end method
 
 .method public final incrementEventReceiverTasks(I)V
@@ -993,7 +994,6 @@
 
     .line 31
     return-void
-    .line 34
 .end method
 
 .method public final onTaskOpening(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl$Transaction;)Z
@@ -1059,7 +1059,7 @@
 
     .line 15
     :goto_0
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_DESKTOP_MODE_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_DESKTOP_MODE_enabled:[Z
 
     .line 16
     aget-boolean v1, v2, v1
@@ -1104,7 +1104,7 @@
     const-wide v4, -0x282aafd29b7fcf06L    # -1.3121602317210868E115
 
     .line 43
-    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 48
     :cond_1
@@ -1312,155 +1312,133 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->enableDesktopWindowingModalsPolicy()Z
 
     .line 40
-    move-result v0
+    iget-object v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
 
     .line 43
     if-eqz v0, :cond_3
 
-    .line 44
-    iget-boolean v0, p1, Landroid/app/TaskInfo;->isTopActivityTransparent:Z
-
-    .line 46
-    if-eqz v0, :cond_3
-
-    .line 48
-    iget v0, p1, Landroid/app/TaskInfo;->numActivities:I
-
-    .line 50
-    if-ne v0, v2, :cond_3
-
-    .line 52
-    return v1
-
-    .line 54
-    :cond_3
-    iget-object v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
-
-    .line 55
-    if-eqz v0, :cond_4
-
-    .line 57
+    .line 45
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    .line 59
+    .line 47
     move-result-object v0
 
-    .line 62
+    .line 50
     iget-object v3, p0, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mSysUIPackageName:Ljava/lang/String;
 
-    .line 63
+    .line 51
     invoke-static {v0, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 65
+    .line 53
     move-result v0
 
-    .line 68
+    .line 56
     goto :goto_0
 
-    .line 69
-    :cond_4
+    .line 57
+    :cond_3
     move v0, v1
 
-    .line 70
+    .line 58
     :goto_0
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
-    .line 71
+    .line 59
     return v1
 
-    .line 73
-    :cond_5
+    .line 61
+    :cond_4
     iget-object p0, p0, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mContext:Landroid/content/Context;
 
-    .line 74
+    .line 62
     invoke-static {p0}, Lcom/android/wm/shell/shared/DesktopModeStatus;->canEnterDesktopMode(Landroid/content/Context;)Z
 
-    .line 76
+    .line 64
     move-result p0
 
-    .line 79
-    if-eqz p0, :cond_7
-
-    .line 80
-    sget-object p0, Lcom/android/wm/shell/desktopmode/DesktopWallpaperActivity;->wallpaperActivityComponent:Landroid/content/ComponentName;
-
-    .line 82
-    iget-object p0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    .line 84
-    invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    .line 86
-    move-result-object p0
-
-    .line 89
+    .line 67
     if-eqz p0, :cond_6
 
-    .line 90
+    .line 68
+    sget-object p0, Lcom/android/wm/shell/desktopmode/DesktopWallpaperActivity;->wallpaperActivityComponent:Landroid/content/ComponentName;
+
+    .line 70
+    iget-object p0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->baseIntent:Landroid/content/Intent;
+
+    .line 72
+    invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    .line 74
+    move-result-object p0
+
+    .line 77
+    if-eqz p0, :cond_5
+
+    .line 78
     sget-object v0, Lcom/android/wm/shell/desktopmode/DesktopWallpaperActivity;->wallpaperActivityComponent:Landroid/content/ComponentName;
 
-    .line 92
+    .line 80
     invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 94
+    .line 82
     move-result p0
 
-    .line 97
+    .line 85
     goto :goto_1
 
-    .line 98
-    :cond_6
+    .line 86
+    :cond_5
     move p0, v1
 
-    .line 99
+    .line 87
     :goto_1
-    if-nez p0, :cond_7
+    if-nez p0, :cond_6
 
-    .line 100
+    .line 88
     invoke-virtual {p1}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
 
-    .line 102
+    .line 90
     move-result p0
 
-    .line 105
+    .line 93
     const/4 v0, 0x2
 
-    .line 106
-    if-eq p0, v0, :cond_7
+    .line 94
+    if-eq p0, v0, :cond_6
 
-    .line 107
+    .line 95
     invoke-virtual {p1}, Landroid/app/ActivityManager$RunningTaskInfo;->getActivityType()I
 
-    .line 109
+    .line 97
     move-result p0
 
-    .line 112
-    if-ne p0, v2, :cond_7
+    .line 100
+    if-ne p0, v2, :cond_6
 
-    .line 113
+    .line 101
     iget-object p0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
 
-    .line 115
+    .line 103
     iget-object p0, p0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    .line 117
+    .line 105
     invoke-virtual {p0}, Landroid/app/WindowConfiguration;->isAlwaysOnTop()Z
 
-    .line 119
+    .line 107
     move-result p0
 
-    .line 122
-    if-nez p0, :cond_7
+    .line 110
+    if-nez p0, :cond_6
 
-    .line 123
+    .line 111
     goto :goto_2
 
-    .line 125
-    :cond_7
+    .line 113
+    :cond_6
     move v2, v1
 
-    .line 126
+    .line 114
     :goto_2
     return v2
-    .line 127
+    .line 115
 .end method

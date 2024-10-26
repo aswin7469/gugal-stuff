@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -17,8 +17,6 @@
 .field public final displayData:Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$displayData$1;
 
 .field public final visibleTasksListeners:Landroid/util/ArrayMap;
-
-.field public wallpaperActivityToken:Landroid/window/WindowContainerToken;
 
 
 # direct methods
@@ -574,153 +572,6 @@
     .line 37
 .end method
 
-.method public final getActiveNonMinimizedTasksOrderedFrontToBack(I)Ljava/util/List;
-    .locals 4
-
-    .line 1
-    new-instance v0, Landroid/util/ArraySet;
-
-    .line 2
-    iget-object v1, p0, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;->displayData:Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$displayData$1;
-
-    .line 4
-    invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    .line 6
-    move-result-object v2
-
-    .line 9
-    check-cast v2, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$DisplayData;
-
-    .line 10
-    if-eqz v2, :cond_0
-
-    .line 12
-    iget-object v2, v2, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$DisplayData;->activeTasks:Landroid/util/ArraySet;
-
-    .line 14
-    goto :goto_0
-
-    .line 16
-    :cond_0
-    const/4 v2, 0x0
-
-    .line 17
-    :goto_0
-    invoke-direct {v0, v2}, Landroid/util/ArraySet;-><init>(Landroid/util/ArraySet;)V
-
-    .line 18
-    new-instance v2, Ljava/util/ArrayList;
-
-    .line 21
-    invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    .line 23
-    move-result-object p1
-
-    .line 26
-    check-cast p1, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$DisplayData;
-
-    .line 27
-    if-eqz p1, :cond_1
-
-    .line 29
-    iget-object p1, p1, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$DisplayData;->freeformTasksInZOrder:Ljava/util/ArrayList;
-
-    .line 31
-    if-eqz p1, :cond_1
-
-    .line 33
-    goto :goto_1
-
-    .line 35
-    :cond_1
-    sget-object p1, Lkotlin/collections/EmptyList;->INSTANCE:Lkotlin/collections/EmptyList;
-
-    .line 36
-    :goto_1
-    invoke-direct {v2, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    .line 38
-    new-instance p1, Ljava/util/ArrayList;
-
-    .line 41
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 43
-    invoke-virtual {v0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
-
-    .line 46
-    move-result-object v0
-
-    .line 49
-    :cond_2
-    :goto_2
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 50
-    move-result v1
-
-    .line 53
-    if-eqz v1, :cond_3
-
-    .line 54
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 56
-    move-result-object v1
-
-    .line 59
-    move-object v3, v1
-
-    .line 60
-    check-cast v3, Ljava/lang/Integer;
-
-    .line 61
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
-
-    .line 63
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    .line 66
-    move-result v3
-
-    .line 69
-    invoke-virtual {p0, v3}, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;->isMinimizedTask(I)Z
-
-    .line 70
-    move-result v3
-
-    .line 73
-    xor-int/lit8 v3, v3, 0x1
-
-    .line 74
-    if-eqz v3, :cond_2
-
-    .line 76
-    invoke-interface {p1, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    .line 78
-    goto :goto_2
-
-    .line 81
-    :cond_3
-    new-instance p0, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$getActiveNonMinimizedTasksOrderedFrontToBack$$inlined$sortedBy$1;
-
-    .line 82
-    invoke-direct {p0, v2}, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$getActiveNonMinimizedTasksOrderedFrontToBack$$inlined$sortedBy$1;-><init>(Ljava/util/ArrayList;)V
-
-    .line 84
-    invoke-static {p1, p0}, Lkotlin/collections/CollectionsKt;->sortedWith(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
-
-    .line 87
-    move-result-object p0
-
-    .line 90
-    return-object p0
-    .line 91
-.end method
-
 .method public final getVisibleTaskCount(I)I
     .locals 4
 
@@ -851,83 +702,6 @@
     :cond_2
     return v2
     .line 78
-.end method
-
-.method public final isActiveTask(I)Z
-    .locals 2
-
-    .line 1
-    new-instance v0, Landroidx/core/util/SparseArrayKt$valueIterator$1;
-
-    .line 2
-    iget-object p0, p0, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;->displayData:Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$displayData$1;
-
-    .line 4
-    invoke-direct {v0, p0}, Landroidx/core/util/SparseArrayKt$valueIterator$1;-><init>(Landroid/util/SparseArray;)V
-
-    .line 6
-    invoke-static {v0}, Lkotlin/sequences/SequencesKt;->asSequence(Ljava/util/Iterator;)Lkotlin/sequences/Sequence;
-
-    .line 9
-    move-result-object p0
-
-    .line 12
-    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
-
-    .line 13
-    move-result-object p0
-
-    .line 16
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 17
-    move-result v0
-
-    .line 20
-    if-eqz v0, :cond_1
-
-    .line 21
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 23
-    move-result-object v0
-
-    .line 26
-    check-cast v0, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$DisplayData;
-
-    .line 27
-    iget-object v0, v0, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$DisplayData;->activeTasks:Landroid/util/ArraySet;
-
-    .line 29
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 31
-    move-result-object v1
-
-    .line 34
-    invoke-virtual {v0, v1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
-
-    .line 35
-    move-result v0
-
-    .line 38
-    if-eqz v0, :cond_0
-
-    .line 39
-    const/4 p0, 0x1
-
-    .line 41
-    goto :goto_0
-
-    .line 42
-    :cond_1
-    const/4 p0, 0x0
-
-    .line 43
-    :goto_0
-    return p0
-    .line 44
 .end method
 
 .method public final isMinimizedTask(I)Z
@@ -1160,83 +934,6 @@
     :cond_6
     return v1
     .line 86
-.end method
-
-.method public final isVisibleTask(I)Z
-    .locals 2
-
-    .line 1
-    new-instance v0, Landroidx/core/util/SparseArrayKt$valueIterator$1;
-
-    .line 2
-    iget-object p0, p0, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;->displayData:Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$displayData$1;
-
-    .line 4
-    invoke-direct {v0, p0}, Landroidx/core/util/SparseArrayKt$valueIterator$1;-><init>(Landroid/util/SparseArray;)V
-
-    .line 6
-    invoke-static {v0}, Lkotlin/sequences/SequencesKt;->asSequence(Ljava/util/Iterator;)Lkotlin/sequences/Sequence;
-
-    .line 9
-    move-result-object p0
-
-    .line 12
-    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
-
-    .line 13
-    move-result-object p0
-
-    .line 16
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 17
-    move-result v0
-
-    .line 20
-    if-eqz v0, :cond_1
-
-    .line 21
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 23
-    move-result-object v0
-
-    .line 26
-    check-cast v0, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$DisplayData;
-
-    .line 27
-    iget-object v0, v0, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$DisplayData;->visibleTasks:Landroid/util/ArraySet;
-
-    .line 29
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 31
-    move-result-object v1
-
-    .line 34
-    invoke-virtual {v0, v1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
-
-    .line 35
-    move-result v0
-
-    .line 38
-    if-eqz v0, :cond_0
-
-    .line 39
-    const/4 p0, 0x1
-
-    .line 41
-    goto :goto_0
-
-    .line 42
-    :cond_1
-    const/4 p0, 0x0
-
-    .line 43
-    :goto_0
-    return p0
-    .line 44
 .end method
 
 .method public final notifyVisibleTaskListeners(II)V

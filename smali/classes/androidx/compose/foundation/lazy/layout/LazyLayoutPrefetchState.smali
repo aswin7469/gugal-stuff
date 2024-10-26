@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/lazy/layout/LazyLayoutPrefetchState;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -37,7 +37,7 @@
 
 
 # virtual methods
-.method public final schedulePrefetch-0kLqBqw(IJ)Landroidx/compose/foundation/lazy/layout/LazyLayoutPrefetchState$PrefetchHandle;
+.method public final schedulePrefetch-0kLqBqw(JI)Landroidx/compose/foundation/lazy/layout/LazyLayoutPrefetchState$PrefetchHandle;
     .locals 8
 
     .line 1
@@ -59,10 +59,10 @@
     move-object v1, v6
 
     .line 11
-    move v2, p1
+    move v2, p3
 
     .line 12
-    move-wide v3, p2
+    move-wide v3, p1
 
     .line 13
     invoke-direct/range {v0 .. v5}, Landroidx/compose/foundation/lazy/layout/PrefetchHandleProvider$HandleAndRequestImpl;-><init>(Landroidx/compose/foundation/lazy/layout/PrefetchHandleProvider;IJLandroidx/compose/foundation/lazy/layout/PrefetchMetrics;)V

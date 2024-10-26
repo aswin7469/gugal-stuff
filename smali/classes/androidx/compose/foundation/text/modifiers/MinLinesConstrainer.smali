@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/text/modifiers/MinLinesConstrainer;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -67,14 +67,14 @@
 
 
 # virtual methods
-.method public final coerceMinLines-Oh53vG4$foundation_release(IJ)J
+.method public final coerceMinLines-Oh53vG4$foundation_release(JI)J
     .locals 16
 
     .line 1
     move-object/from16 v0, p0
 
     .line 2
-    move/from16 v1, p1
+    move/from16 v1, p3
 
     .line 4
     iget v2, v0, Landroidx/compose/foundation/text/modifiers/MinLinesConstrainer;->oneLineHeightCache:F
@@ -240,7 +240,7 @@
 
     .line 96
     :goto_0
-    invoke-static/range {p2 .. p3}, Landroidx/compose/ui/unit/Constraints;->getMaxHeight-impl(J)I
+    invoke-static/range {p1 .. p2}, Landroidx/compose/ui/unit/Constraints;->getMaxHeight-impl(J)I
 
     .line 97
     move-result v0
@@ -256,7 +256,7 @@
 
     .line 104
     :cond_3
-    invoke-static/range {p2 .. p3}, Landroidx/compose/ui/unit/Constraints;->getMinHeight-impl(J)I
+    invoke-static/range {p1 .. p2}, Landroidx/compose/ui/unit/Constraints;->getMinHeight-impl(J)I
 
     .line 105
     move-result v5
@@ -264,19 +264,19 @@
     .line 108
     :cond_4
     :goto_1
-    invoke-static/range {p2 .. p3}, Landroidx/compose/ui/unit/Constraints;->getMaxHeight-impl(J)I
+    invoke-static/range {p1 .. p2}, Landroidx/compose/ui/unit/Constraints;->getMaxHeight-impl(J)I
 
     .line 109
     move-result v0
 
     .line 112
-    invoke-static/range {p2 .. p3}, Landroidx/compose/ui/unit/Constraints;->getMinWidth-impl(J)I
+    invoke-static/range {p1 .. p2}, Landroidx/compose/ui/unit/Constraints;->getMinWidth-impl(J)I
 
     .line 113
     move-result v1
 
     .line 116
-    invoke-static/range {p2 .. p3}, Landroidx/compose/ui/unit/Constraints;->getMaxWidth-impl(J)I
+    invoke-static/range {p1 .. p2}, Landroidx/compose/ui/unit/Constraints;->getMaxWidth-impl(J)I
 
     .line 117
     move-result v2
@@ -289,4 +289,5 @@
 
     .line 124
     return-wide v0
+    .line 125
 .end method

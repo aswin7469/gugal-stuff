@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent" />
+                android:fontFamily="@android:string/config_chooserActivity" />
       <TextView android:textAppearance="@android:style/TextAppearance.DeviceDefault.Notification.Info"
                 android:textColor="?android:^attr-private/materialColorSurfaceContainerHigh"
                 android:ellipsize="end"
@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="2"
-                android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent" />
+                android:fontFamily="@android:string/config_chooseTypeAndAccountActivity" />
     </LinearLayout>
   </LinearLayout>
 </merge>

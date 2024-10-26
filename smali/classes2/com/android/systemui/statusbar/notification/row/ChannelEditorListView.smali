@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -58,7 +58,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b00c0    # @id/app_control
+    const v0, 0x7f0a00c3    # @id/app_control
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;
@@ -73,7 +73,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView;->appControlRow:Lcom/android/systemui/statusbar/notification/row/AppControlView;
 
     .line 14
-    const v0, 0x7f0b06c5    # @id/scrollView
+    const v0, 0x7f0a06ee    # @id/scrollView
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;
@@ -266,7 +266,7 @@
     move-result-object v4
 
     .line 104
-    const v5, 0x7f1406db    # @string/notification_channel_dialog_title 'All %1$s notifications'
+    const v5, 0x7f130736    # @string/notification_channel_dialog_title 'All %1$s notifications'
 
     .line 105
     invoke-virtual {v3, v5, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -384,7 +384,7 @@
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 176
-    const v4, 0x7f0e01a9    # @layout/notif_half_shelf_row 'res/layout/notif_half_shelf_row.xml'
+    const v4, 0x7f0d01b6    # @layout/notif_half_shelf_row 'res/layout/notif_half_shelf_row.xml'
 
     .line 179
     invoke-virtual {v0, v4, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;

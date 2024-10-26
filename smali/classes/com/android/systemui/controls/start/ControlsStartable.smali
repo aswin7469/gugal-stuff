@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/start/ControlsStartable;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -279,468 +279,456 @@
     check-cast v2, Lcom/android/systemui/controls/controller/ControlsControllerImpl;
 
     .line 128
-    invoke-static {}, Lcom/android/systemui/controls/controller/Favorites;->getAllStructures()Ljava/util/List;
+    invoke-virtual {v2}, Lcom/android/systemui/controls/controller/ControlsControllerImpl;->getPreferredSelection()Lcom/android/systemui/controls/ui/SelectedItem;
 
     .line 130
-    move-result-object v3
-
-    .line 133
-    iget-object v2, v2, Lcom/android/systemui/controls/controller/ControlsControllerImpl;->uiController:Lcom/android/systemui/controls/ui/ControlsUiController;
-
-    .line 134
-    check-cast v2, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;
-
-    .line 136
-    invoke-virtual {v2, v3}, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->getPreferredSelectedItem(Ljava/util/List;)Lcom/android/systemui/controls/ui/SelectedItem;
-
-    .line 138
     move-result-object v2
 
-    .line 141
+    .line 133
     sget-object v3, Lcom/android/systemui/controls/ui/SelectedItem;->EMPTY_SELECTION:Lcom/android/systemui/controls/ui/SelectedItem$StructureItem;
 
-    .line 142
+    .line 134
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 144
+    .line 136
     move-result v2
 
-    .line 147
+    .line 139
     if-eqz v2, :cond_8
 
-    .line 148
+    .line 140
     iget-object v2, v0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsListingController:Ljava/util/Optional;
 
-    .line 150
+    .line 142
     invoke-virtual {v2}, Ljava/util/Optional;->get()Ljava/lang/Object;
+
+    .line 144
+    move-result-object v2
+
+    .line 147
+    check-cast v2, Lcom/android/systemui/controls/management/ControlsListingController;
+
+    .line 148
+    check-cast v2, Lcom/android/systemui/controls/management/ControlsListingControllerImpl;
+
+    .line 150
+    invoke-virtual {v2}, Lcom/android/systemui/controls/management/ControlsListingControllerImpl;->getCurrentServices()Ljava/util/List;
 
     .line 152
     move-result-object v2
 
     .line 155
-    check-cast v2, Lcom/android/systemui/controls/management/ControlsListingController;
-
-    .line 156
-    check-cast v2, Lcom/android/systemui/controls/management/ControlsListingControllerImpl;
-
-    .line 158
-    invoke-virtual {v2}, Lcom/android/systemui/controls/management/ControlsListingControllerImpl;->getCurrentServices()Ljava/util/List;
-
-    .line 160
-    move-result-object v2
-
-    .line 163
     new-instance v3, Ljava/util/ArrayList;
 
-    .line 164
+    .line 156
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 166
+    .line 158
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 169
+    .line 161
     move-result-object v2
 
-    .line 172
+    .line 164
     :cond_2
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 173
+    .line 165
     move-result v4
 
-    .line 176
+    .line 168
     if-eqz v4, :cond_3
 
-    .line 177
+    .line 169
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 179
+    .line 171
     move-result-object v4
 
-    .line 182
+    .line 174
     move-object v5, v4
 
-    .line 183
+    .line 175
     check-cast v5, Lcom/android/systemui/controls/ControlsServiceInfo;
 
-    .line 184
+    .line 176
     iget-object v5, v5, Lcom/android/systemui/controls/ControlsServiceInfo;->panelActivity:Landroid/content/ComponentName;
 
-    .line 186
+    .line 178
     if-eqz v5, :cond_2
 
-    .line 188
+    .line 180
     invoke-interface {v3, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 190
+    .line 182
     goto :goto_1
 
-    .line 193
+    .line 185
     :cond_3
     iget-object v2, p0, Lcom/android/systemui/controls/start/ControlsStartable;->authorizedPanelsRepository:Lcom/android/systemui/controls/panels/AuthorizedPanelsRepository;
 
-    .line 194
+    .line 186
     check-cast v2, Lcom/android/systemui/controls/panels/AuthorizedPanelsRepositoryImpl;
 
-    .line 196
+    .line 188
     iget-object v2, v2, Lcom/android/systemui/controls/panels/AuthorizedPanelsRepositoryImpl;->context:Landroid/content/Context;
 
-    .line 198
+    .line 190
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 200
+    .line 192
     move-result-object v2
 
-    .line 203
-    const v4, 0x7f030032    # @array/config_controlsPreferredPackages
+    .line 195
+    const v4, 0x7f030034    # @array/config_controlsPreferredPackages
 
-    .line 204
+    .line 196
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
-    .line 207
+    .line 199
     move-result-object v2
 
-    .line 210
+    .line 202
     invoke-static {v2}, Lkotlin/collections/ArraysKt;->toSet([Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 211
+    .line 203
     move-result-object v2
 
-    .line 214
+    .line 206
     check-cast v2, Ljava/lang/Iterable;
 
-    .line 215
+    .line 207
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 217
+    .line 209
     move-result-object v2
 
-    .line 220
+    .line 212
     :cond_4
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 221
+    .line 213
     move-result v4
 
-    .line 224
+    .line 216
     if-eqz v4, :cond_7
 
-    .line 225
+    .line 217
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 227
+    .line 219
     move-result-object v4
 
-    .line 230
+    .line 222
     check-cast v4, Ljava/lang/String;
 
-    .line 231
+    .line 223
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 233
+    .line 225
     move-result-object v5
 
-    .line 236
+    .line 228
     :cond_5
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 237
+    .line 229
     move-result v6
 
-    .line 240
+    .line 232
     if-eqz v6, :cond_6
 
-    .line 241
+    .line 233
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 243
+    .line 235
     move-result-object v6
 
-    .line 246
+    .line 238
     move-object v7, v6
 
-    .line 247
+    .line 239
     check-cast v7, Lcom/android/systemui/controls/ControlsServiceInfo;
 
-    .line 248
+    .line 240
     iget-object v7, v7, Lcom/android/systemui/controls/ControlsServiceInfo;->componentName:Landroid/content/ComponentName;
 
-    .line 250
+    .line 242
     invoke-virtual {v7}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    .line 252
+    .line 244
     move-result-object v7
 
-    .line 255
+    .line 247
     invoke-static {v7, v4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 256
+    .line 248
     move-result v7
 
-    .line 259
+    .line 251
     if-eqz v7, :cond_5
 
-    .line 260
+    .line 252
     goto :goto_2
 
-    .line 262
+    .line 254
     :cond_6
     move-object v6, v1
 
-    .line 263
+    .line 255
     :goto_2
     check-cast v6, Lcom/android/systemui/controls/ControlsServiceInfo;
 
-    .line 264
+    .line 256
     if-eqz v6, :cond_4
 
-    .line 266
+    .line 258
     goto :goto_3
 
-    .line 268
+    .line 260
     :cond_7
     move-object v6, v1
 
-    .line 269
+    .line 261
     :goto_3
     if-eqz v6, :cond_8
 
-    .line 270
+    .line 262
     iget-object v0, v0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsController:Ljava/util/Optional;
 
-    .line 272
+    .line 264
     invoke-virtual {v0}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
-    .line 274
+    .line 266
     move-result-object v0
 
-    .line 277
+    .line 269
     check-cast v0, Lcom/android/systemui/controls/controller/ControlsController;
 
-    .line 278
+    .line 270
     new-instance v2, Lcom/android/systemui/controls/ui/SelectedItem$PanelItem;
 
-    .line 280
+    .line 272
     invoke-virtual {v6}, Lcom/android/systemui/controls/ControlsServiceInfo;->loadLabel()Ljava/lang/CharSequence;
 
-    .line 282
+    .line 274
     move-result-object v3
 
-    .line 285
+    .line 277
     iget-object v4, v6, Lcom/android/systemui/controls/ControlsServiceInfo;->componentName:Landroid/content/ComponentName;
 
-    .line 286
+    .line 278
     invoke-direct {v2, v4, v3}, Lcom/android/systemui/controls/ui/SelectedItem$PanelItem;-><init>(Landroid/content/ComponentName;Ljava/lang/CharSequence;)V
 
-    .line 288
+    .line 280
     check-cast v0, Lcom/android/systemui/controls/controller/ControlsControllerImpl;
 
-    .line 291
+    .line 283
     invoke-virtual {v0, v2}, Lcom/android/systemui/controls/controller/ControlsControllerImpl;->setPreferredSelection(Lcom/android/systemui/controls/ui/SelectedItem$PanelItem;)V
 
-    .line 293
+    .line 285
     :cond_8
     :goto_4
     iget-object v0, p0, Lcom/android/systemui/controls/start/ControlsStartable;->userManager:Landroid/os/UserManager;
 
-    .line 296
+    .line 288
     iget-object v2, p0, Lcom/android/systemui/controls/start/ControlsStartable;->userTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 298
+    .line 290
     check-cast v2, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 300
+    .line 292
     invoke-virtual {v2}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 302
+    .line 294
     move-result v3
 
-    .line 305
+    .line 297
     invoke-virtual {v0, v3}, Landroid/os/UserManager;->isUserUnlocked(I)Z
 
-    .line 306
+    .line 298
     move-result v0
 
-    .line 309
+    .line 301
     if-eqz v0, :cond_9
 
-    .line 310
+    .line 302
     invoke-virtual {p0}, Lcom/android/systemui/controls/start/ControlsStartable;->bindToPanelInternal()V
 
-    .line 312
+    .line 304
     goto :goto_5
 
-    .line 315
+    .line 307
     :cond_9
     new-instance v4, Lcom/android/systemui/controls/start/ControlsStartable$bindToPanel$1;
 
-    .line 316
+    .line 308
     invoke-direct {v4, p0}, Lcom/android/systemui/controls/start/ControlsStartable$bindToPanel$1;-><init>(Lcom/android/systemui/controls/start/ControlsStartable;)V
 
-    .line 318
+    .line 310
     new-instance v5, Landroid/content/IntentFilter;
 
-    .line 321
+    .line 313
     const-string v0, "android.intent.action.USER_UNLOCKED"
 
-    .line 323
+    .line 315
     invoke-direct {v5, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 325
+    .line 317
     iget-object v6, p0, Lcom/android/systemui/controls/start/ControlsStartable;->executor:Ljava/util/concurrent/Executor;
 
-    .line 328
+    .line 320
     invoke-virtual {v2}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserHandle()Landroid/os/UserHandle;
 
-    .line 330
+    .line 322
     move-result-object v7
 
-    .line 333
+    .line 325
     const/4 v8, 0x0
 
-    .line 334
+    .line 326
     const/4 v9, 0x0
 
-    .line 335
+    .line 327
     iget-object v3, p0, Lcom/android/systemui/controls/start/ControlsStartable;->broadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
-    .line 336
+    .line 328
     const/16 v10, 0x30
 
-    .line 338
+    .line 330
     invoke-static/range {v3 .. v10}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiver$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/util/concurrent/Executor;Landroid/os/UserHandle;ILjava/lang/String;I)V
 
-    .line 340
+    .line 332
     :goto_5
     iget-object v0, p0, Lcom/android/systemui/controls/start/ControlsStartable;->packageJob:Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 343
+    .line 335
     if-eqz v0, :cond_a
 
-    .line 345
+    .line 337
     invoke-virtual {v0, v1}, Lkotlinx/coroutines/JobSupport;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    .line 347
+    .line 339
     :cond_a
     invoke-virtual {v2}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserHandle()Landroid/os/UserHandle;
 
-    .line 350
+    .line 342
     move-result-object v0
 
-    .line 353
+    .line 345
     iget-object v2, p0, Lcom/android/systemui/controls/start/ControlsStartable;->packageChangeInteractor:Lcom/android/systemui/common/domain/interactor/PackageChangeInteractor;
 
-    .line 354
+    .line 346
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 356
+    .line 348
     sget-object v3, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
-    .line 359
+    .line 351
     invoke-virtual {v0, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 361
+    .line 353
     move-result v3
 
-    .line 364
+    .line 356
     if-eqz v3, :cond_b
 
-    .line 365
+    .line 357
     iget-object v0, v2, Lcom/android/systemui/common/domain/interactor/PackageChangeInteractor;->userInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
 
-    .line 367
+    .line 359
     iget-object v0, v0, Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;->selectedUser:Lkotlinx/coroutines/flow/Flow;
 
-    .line 369
+    .line 361
     new-instance v3, Lcom/android/systemui/common/domain/interactor/PackageChangeInteractor$packageChanged$$inlined$flatMapLatest$1;
 
-    .line 371
+    .line 363
     invoke-direct {v3, v1, v2, v1}, Lcom/android/systemui/common/domain/interactor/PackageChangeInteractor$packageChanged$$inlined$flatMapLatest$1;-><init>(Lkotlin/coroutines/Continuation;Lcom/android/systemui/common/domain/interactor/PackageChangeInteractor;Ljava/lang/String;)V
 
-    .line 373
+    .line 365
     invoke-static {v0, v3}, Lkotlinx/coroutines/flow/FlowKt;->transformLatest(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 376
+    .line 368
     move-result-object v0
 
-    .line 379
+    .line 371
     goto :goto_6
 
-    .line 380
+    .line 372
     :cond_b
     iget-object v2, v2, Lcom/android/systemui/common/domain/interactor/PackageChangeInteractor;->packageChangeRepository:Lcom/android/systemui/common/data/repository/PackageChangeRepository;
 
-    .line 381
+    .line 373
     check-cast v2, Lcom/android/systemui/common/data/repository/PackageChangeRepositoryImpl;
 
-    .line 383
+    .line 375
     invoke-virtual {v2, v0}, Lcom/android/systemui/common/data/repository/PackageChangeRepositoryImpl;->packageChanged(Landroid/os/UserHandle;)Lcom/android/systemui/common/data/repository/PackageChangeRepositoryImpl$packageChanged$$inlined$filter$1;
 
-    .line 385
+    .line 377
     move-result-object v0
 
-    .line 388
+    .line 380
     new-instance v2, Lcom/android/systemui/common/domain/interactor/PackageChangeInteractor$packageChangedInternal$$inlined$filter$1;
 
-    .line 389
+    .line 381
     invoke-direct {v2, v0, v1}, Lcom/android/systemui/common/domain/interactor/PackageChangeInteractor$packageChangedInternal$$inlined$filter$1;-><init>(Lcom/android/systemui/common/data/repository/PackageChangeRepositoryImpl$packageChanged$$inlined$filter$1;Ljava/lang/String;)V
 
-    .line 391
+    .line 383
     move-object v0, v2
 
-    .line 394
+    .line 386
     :goto_6
     new-instance v2, Lcom/android/systemui/controls/start/ControlsStartable$monitorPackageUninstall$$inlined$filterIsInstance$1;
 
-    .line 395
+    .line 387
     invoke-direct {v2, v0}, Lcom/android/systemui/controls/start/ControlsStartable$monitorPackageUninstall$$inlined$filterIsInstance$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
 
-    .line 397
+    .line 389
     new-instance v0, Lcom/android/systemui/controls/start/ControlsStartable$monitorPackageUninstall$$inlined$filter$1;
 
-    .line 400
+    .line 392
     invoke-direct {v0, v2, p0}, Lcom/android/systemui/controls/start/ControlsStartable$monitorPackageUninstall$$inlined$filter$1;-><init>(Lcom/android/systemui/controls/start/ControlsStartable$monitorPackageUninstall$$inlined$filterIsInstance$1;Lcom/android/systemui/controls/start/ControlsStartable;)V
 
-    .line 402
+    .line 394
     new-instance v2, Lcom/android/systemui/controls/start/ControlsStartable$monitorPackageUninstall$2;
 
-    .line 405
+    .line 397
     invoke-direct {v2, p0, v1}, Lcom/android/systemui/controls/start/ControlsStartable$monitorPackageUninstall$2;-><init>(Lcom/android/systemui/controls/start/ControlsStartable;Lkotlin/coroutines/Continuation;)V
 
-    .line 407
+    .line 399
     new-instance v1, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 410
+    .line 402
     const/4 v3, 0x0
 
-    .line 412
+    .line 404
     invoke-direct {v1, v0, v2, v3}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 413
+    .line 405
     iget-object v0, p0, Lcom/android/systemui/controls/start/ControlsStartable;->bgDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 416
+    .line 408
     invoke-static {v1, v0}, Lkotlinx/coroutines/flow/FlowKt;->flowOn(Lkotlinx/coroutines/flow/Flow;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 418
+    .line 410
     move-result-object v0
 
-    .line 421
+    .line 413
     iget-object v1, p0, Lcom/android/systemui/controls/start/ControlsStartable;->scope:Lkotlinx/coroutines/CoroutineScope;
 
-    .line 422
+    .line 414
     invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 424
+    .line 416
     move-result-object v0
 
-    .line 427
+    .line 419
     iput-object v0, p0, Lcom/android/systemui/controls/start/ControlsStartable;->packageJob:Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 428
+    .line 420
     return-void
-    .line 430
+    .line 422
 .end method
 
 
@@ -767,216 +755,204 @@
     check-cast v0, Lcom/android/systemui/controls/controller/ControlsControllerImpl;
 
     .line 12
-    invoke-static {}, Lcom/android/systemui/controls/controller/Favorites;->getAllStructures()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/android/systemui/controls/controller/ControlsControllerImpl;->getPreferredSelection()Lcom/android/systemui/controls/ui/SelectedItem;
 
     .line 14
-    move-result-object v1
-
-    .line 17
-    iget-object v0, v0, Lcom/android/systemui/controls/controller/ControlsControllerImpl;->uiController:Lcom/android/systemui/controls/ui/ControlsUiController;
-
-    .line 18
-    check-cast v0, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;
-
-    .line 20
-    invoke-virtual {v0, v1}, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->getPreferredSelectedItem(Ljava/util/List;)Lcom/android/systemui/controls/ui/SelectedItem;
-
-    .line 22
     move-result-object v0
 
-    .line 25
+    .line 17
     iget-object v1, p0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsListingController:Ljava/util/Optional;
 
-    .line 26
+    .line 18
     invoke-virtual {v1}, Ljava/util/Optional;->get()Ljava/lang/Object;
+
+    .line 20
+    move-result-object v1
+
+    .line 23
+    check-cast v1, Lcom/android/systemui/controls/management/ControlsListingController;
+
+    .line 24
+    check-cast v1, Lcom/android/systemui/controls/management/ControlsListingControllerImpl;
+
+    .line 26
+    invoke-virtual {v1}, Lcom/android/systemui/controls/management/ControlsListingControllerImpl;->getCurrentServices()Ljava/util/List;
 
     .line 28
     move-result-object v1
 
     .line 31
-    check-cast v1, Lcom/android/systemui/controls/management/ControlsListingController;
-
-    .line 32
-    check-cast v1, Lcom/android/systemui/controls/management/ControlsListingControllerImpl;
-
-    .line 34
-    invoke-virtual {v1}, Lcom/android/systemui/controls/management/ControlsListingControllerImpl;->getCurrentServices()Ljava/util/List;
-
-    .line 36
-    move-result-object v1
-
-    .line 39
     new-instance v2, Ljava/util/ArrayList;
 
-    .line 40
+    .line 32
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 42
+    .line 34
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 45
+    .line 37
     move-result-object v1
 
-    .line 48
+    .line 40
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 49
+    .line 41
     move-result v3
 
-    .line 52
+    .line 44
     if-eqz v3, :cond_1
 
-    .line 53
+    .line 45
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 55
+    .line 47
     move-result-object v3
 
-    .line 58
+    .line 50
     move-object v4, v3
 
-    .line 59
+    .line 51
     check-cast v4, Lcom/android/systemui/controls/ControlsServiceInfo;
 
-    .line 60
+    .line 52
     iget-object v4, v4, Lcom/android/systemui/controls/ControlsServiceInfo;->panelActivity:Landroid/content/ComponentName;
 
-    .line 62
+    .line 54
     if-eqz v4, :cond_0
 
-    .line 64
+    .line 56
     invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 66
+    .line 58
     goto :goto_0
 
-    .line 69
+    .line 61
     :cond_1
     instance-of v1, v0, Lcom/android/systemui/controls/ui/SelectedItem$PanelItem;
 
-    .line 70
+    .line 62
     if-eqz v1, :cond_4
 
-    .line 72
+    .line 64
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 74
+    .line 66
     move-result-object v1
 
-    .line 77
+    .line 69
     :cond_2
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 78
+    .line 70
     move-result v2
 
-    .line 81
+    .line 73
     if-eqz v2, :cond_3
 
-    .line 82
+    .line 74
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 84
+    .line 76
     move-result-object v2
 
-    .line 87
+    .line 79
     move-object v3, v2
 
-    .line 88
+    .line 80
     check-cast v3, Lcom/android/systemui/controls/ControlsServiceInfo;
 
-    .line 89
+    .line 81
     iget-object v3, v3, Lcom/android/systemui/controls/ControlsServiceInfo;->componentName:Landroid/content/ComponentName;
 
-    .line 91
+    .line 83
     move-object v4, v0
 
-    .line 93
+    .line 85
     check-cast v4, Lcom/android/systemui/controls/ui/SelectedItem$PanelItem;
 
-    .line 94
+    .line 86
     iget-object v4, v4, Lcom/android/systemui/controls/ui/SelectedItem$PanelItem;->componentName:Landroid/content/ComponentName;
 
-    .line 96
+    .line 88
     invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 98
+    .line 90
     move-result v3
 
-    .line 101
+    .line 93
     if-eqz v3, :cond_2
 
-    .line 102
+    .line 94
     goto :goto_1
 
-    .line 104
+    .line 96
     :cond_3
     const/4 v2, 0x0
 
-    .line 105
+    .line 97
     :goto_1
     if-eqz v2, :cond_4
 
-    .line 106
+    .line 98
     iget-object p0, p0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsController:Ljava/util/Optional;
 
-    .line 108
+    .line 100
     invoke-virtual {p0}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
-    .line 110
+    .line 102
     move-result-object p0
 
-    .line 113
+    .line 105
     check-cast p0, Lcom/android/systemui/controls/controller/ControlsController;
 
-    .line 114
+    .line 106
     check-cast v0, Lcom/android/systemui/controls/ui/SelectedItem$PanelItem;
 
-    .line 116
+    .line 108
     iget-object v0, v0, Lcom/android/systemui/controls/ui/SelectedItem$PanelItem;->componentName:Landroid/content/ComponentName;
 
-    .line 118
+    .line 110
     check-cast p0, Lcom/android/systemui/controls/controller/ControlsControllerImpl;
 
-    .line 120
+    .line 112
     iget-object p0, p0, Lcom/android/systemui/controls/controller/ControlsControllerImpl;->bindingController:Lcom/android/systemui/controls/controller/ControlsBindingController;
 
-    .line 122
+    .line 114
     check-cast p0, Lcom/android/systemui/controls/controller/ControlsBindingControllerImpl;
 
-    .line 124
+    .line 116
     invoke-virtual {p0, v0}, Lcom/android/systemui/controls/controller/ControlsBindingControllerImpl;->retrieveLifecycleManager(Landroid/content/ComponentName;)Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager;
 
-    .line 126
+    .line 118
     move-result-object p0
 
-    .line 129
+    .line 121
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 130
+    .line 122
     new-instance v0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager$bindService$1;
 
-    .line 133
+    .line 125
     const/4 v1, 0x1
 
-    .line 135
+    .line 127
     invoke-direct {v0, p0, v1, v1}, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager$bindService$1;-><init>(Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager;ZZ)V
 
-    .line 136
+    .line 128
     iget-object p0, p0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager;->executor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
-    .line 139
+    .line 131
     check-cast p0, Lcom/android/systemui/util/concurrency/ExecutorImpl;
 
-    .line 141
+    .line 133
     invoke-virtual {p0, v0}, Lcom/android/systemui/util/concurrency/ExecutorImpl;->execute(Ljava/lang/Runnable;)V
 
-    .line 143
+    .line 135
     :cond_4
     return-void
-    .line 146
+    .line 138
 .end method
 
 .method public final onBootCompleted()V

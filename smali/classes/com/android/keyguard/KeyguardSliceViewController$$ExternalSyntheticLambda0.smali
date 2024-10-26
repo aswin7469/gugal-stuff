@@ -1,130 +1,55 @@
 .class public final synthetic Lcom/android/keyguard/KeyguardSliceViewController$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Lcom/android/systemui/tuner/TunerService$Tunable;
-
-
-# instance fields
-.field public final synthetic f$0:Lcom/android/keyguard/KeyguardSliceViewController;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lcom/android/keyguard/KeyguardSliceViewController;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lcom/android/keyguard/KeyguardSliceViewController$$ExternalSyntheticLambda0;->f$0:Lcom/android/keyguard/KeyguardSliceViewController;
-
-    .line 5
-    return-void
-    .line 7
-.end method
+.implements Ljava/util/function/Predicate;
 
 
 # virtual methods
-.method public final onTuningChanged(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+.method public final test(Ljava/lang/Object;)Z
+    .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardSliceViewController$$ExternalSyntheticLambda0;->f$0:Lcom/android/keyguard/KeyguardSliceViewController;
+    check-cast p1, Landroidx/slice/widget/SliceContent;
 
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p0, p1, Landroidx/slice/widget/SliceContent;->mSliceItem:Landroidx/slice/SliceItem;
 
     .line 4
-    if-nez p2, :cond_0
+    invoke-virtual {p0}, Landroidx/slice/SliceItem;->getSlice()Landroidx/slice/Slice;
 
-    .line 7
-    const-string p2, "content://com.android.systemui.keyguard/main"
+    .line 6
+    move-result-object p0
 
     .line 9
-    :cond_0
-    iget-object p1, p0, Lcom/android/keyguard/KeyguardSliceViewController;->mLiveData:Landroidx/slice/widget/SliceLiveData$SliceLiveDataImpl;
+    iget-object p0, p0, Landroidx/slice/Slice;->mUri:Ljava/lang/String;
 
-    .line 11
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardSliceViewController;->mObserver:Lcom/android/keyguard/KeyguardSliceViewController$2;
+    .line 10
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 13
-    if-eqz p1, :cond_1
+    .line 12
+    move-result-object p0
 
     .line 15
-    iget v1, p1, Landroidx/lifecycle/LiveData;->mActiveCount:I
+    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    .line 17
-    if-lez v1, :cond_1
+    .line 16
+    move-result-object p0
 
     .line 19
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/LiveData;->removeObserver(Landroidx/lifecycle/Observer;)V
+    const-string p1, "content://com.android.systemui.keyguard/action"
 
-    .line 21
-    const/4 p1, 0x1
+    .line 20
+    invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 24
-    goto :goto_0
+    .line 22
+    move-result p0
 
     .line 25
-    :cond_1
-    const/4 p1, 0x0
+    xor-int/lit8 p0, p0, 0x1
 
     .line 26
-    :goto_0
-    invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    .line 27
-    move-result-object p2
-
-    .line 30
-    iput-object p2, p0, Lcom/android/keyguard/KeyguardSliceViewController;->mKeyguardSliceUri:Landroid/net/Uri;
-
-    .line 31
-    iget-object p2, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
-
-    .line 33
-    check-cast p2, Lcom/android/keyguard/KeyguardSliceView;
-
-    .line 35
-    invoke-virtual {p2}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    .line 37
-    move-result-object p2
-
-    .line 40
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardSliceViewController;->mKeyguardSliceUri:Landroid/net/Uri;
-
-    .line 41
-    sget-object v2, Landroidx/slice/widget/SliceLiveData;->SUPPORTED_SPECS:Landroidx/collection/ArraySet;
-
-    .line 43
-    new-instance v2, Landroidx/slice/widget/SliceLiveData$SliceLiveDataImpl;
-
-    .line 45
-    invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    .line 47
-    move-result-object p2
-
-    .line 50
-    const/4 v3, 0x0
-
-    .line 51
-    invoke-direct {v2, p2, v1, v3}, Landroidx/slice/widget/SliceLiveData$SliceLiveDataImpl;-><init>(Landroid/content/Context;Landroid/net/Uri;Lcom/android/systemui/volume/VolumePanelDialog$$ExternalSyntheticLambda0;)V
-
-    .line 52
-    iput-object v2, p0, Lcom/android/keyguard/KeyguardSliceViewController;->mLiveData:Landroidx/slice/widget/SliceLiveData$SliceLiveDataImpl;
-
-    .line 55
-    if-eqz p1, :cond_2
-
-    .line 57
-    invoke-virtual {v2, v0}, Landroidx/lifecycle/LiveData;->observeForever(Landroidx/lifecycle/Observer;)V
-
-    .line 59
-    :cond_2
-    return-void
-    .line 62
+    return p0
+    .line 28
 .end method

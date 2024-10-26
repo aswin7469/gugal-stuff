@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/platform/Wrapper_androidKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -220,16 +220,16 @@
     iget-object v4, v1, Landroidx/compose/ui/platform/AndroidComposeView;->root:Landroidx/compose/ui/node/LayoutNode;
 
     .line 110
-    invoke-direct {p0, v4}, Landroidx/compose/runtime/AbstractApplier;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, v4}, Landroidx/compose/ui/node/UiApplier;-><init>(Ljava/lang/Object;)V
 
     .line 112
     new-instance v4, Landroidx/compose/runtime/CompositionImpl;
 
     .line 115
-    invoke-direct {v4, p1, p0}, Landroidx/compose/runtime/CompositionImpl;-><init>(Landroidx/compose/runtime/CompositionContext;Landroidx/compose/runtime/AbstractApplier;)V
+    invoke-direct {v4, p1, p0}, Landroidx/compose/runtime/CompositionImpl;-><init>(Landroidx/compose/runtime/CompositionContext;Landroidx/compose/ui/node/UiApplier;)V
 
     .line 117
-    const p0, 0x7f0b090d    # @id/wrapped_composition_tag
+    const p0, 0x7f0a0946    # @id/wrapped_composition_tag
 
     .line 120
     invoke-virtual {v1, p0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;

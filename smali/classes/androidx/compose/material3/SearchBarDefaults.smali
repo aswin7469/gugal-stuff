@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/material3/SearchBarDefaults;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -2213,7 +2213,7 @@
     check-cast v15, Landroidx/compose/ui/focus/FocusManager;
 
     .line 616
-    const v7, 0x7f1405a2    # @string/m3c_search_bar_search 'Search'
+    const v7, 0x7f1305fc    # @string/m3c_search_bar_search 'Search'
 
     .line 618
     invoke-static {v7, v12}, Landroidx/compose/material3/internal/Strings_androidKt;->getString-2EP1pXo(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -2222,7 +2222,7 @@
     move-result-object v7
 
     .line 624
-    const v9, 0x7f1405a4    # @string/m3c_suggestions_available 'Suggestions below'
+    const v9, 0x7f1305fe    # @string/m3c_suggestions_available 'Suggestions below'
 
     .line 625
     invoke-static {v9, v12}, Landroidx/compose/material3/internal/Strings_androidKt;->getString-2EP1pXo(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public final Lcom/google/protobuf/MessageSchema;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/google/protobuf/Schema;
@@ -1795,10 +1795,10 @@
     check-cast p1, Ljava/lang/String;
 
     .line 6
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 8
-    invoke-virtual {p2, p0, p1}, Lcom/google/protobuf/CodedOutputStream;->writeString(ILjava/lang/String;)V
+    invoke-virtual {p2, p0, p1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeString(ILjava/lang/String;)V
 
     .line 10
     goto :goto_0
@@ -2805,4561 +2805,3548 @@
 .method public final getSerializedSize(Ljava/lang/Object;)I
     .locals 20
 
-    .line 1
     move-object/from16 v0, p0
 
-    .line 2
     move-object/from16 v1, p1
 
-    .line 4
     const/16 v2, 0x3f
 
-    .line 6
+    .line 1
     iget-boolean v5, v0, Lcom/google/protobuf/MessageSchema;->proto3:Z
 
-    .line 8
     iget-object v6, v0, Lcom/google/protobuf/MessageSchema;->unknownFieldSchema:Lcom/google/protobuf/UnknownFieldSetLiteSchema;
 
-    .line 10
     iget-object v7, v0, Lcom/google/protobuf/MessageSchema;->mapFieldSchema:Lcom/google/protobuf/MapFieldSchemaLite;
 
-    .line 12
     const/4 v8, 0x1
 
-    .line 14
     const v9, 0xfffff
 
-    .line 15
     iget-object v10, v0, Lcom/google/protobuf/MessageSchema;->buffer:[I
 
-    .line 18
     if-eqz v5, :cond_8
 
-    .line 20
+    .line 2
     sget-object v5, Lcom/google/protobuf/MessageSchema;->UNSAFE:Lsun/misc/Unsafe;
 
-    .line 22
     const/4 v12, 0x0
 
-    .line 24
     const/4 v13, 0x0
 
-    .line 25
+    .line 3
     :goto_0
     array-length v14, v10
 
-    .line 26
     if-ge v12, v14, :cond_7
 
-    .line 27
+    .line 4
     invoke-virtual {v0, v12}, Lcom/google/protobuf/MessageSchema;->typeAndOffsetAt(I)I
 
-    .line 29
     move-result v14
 
-    .line 32
+    .line 5
     invoke-static {v14}, Lcom/google/protobuf/MessageSchema;->type(I)I
 
-    .line 33
     move-result v15
 
-    .line 36
+    .line 6
     aget v11, v10, v12
 
-    .line 37
     and-int/2addr v14, v9
 
-    .line 39
     int-to-long v3, v14
 
-    .line 40
+    .line 7
     sget-object v14, Lcom/google/protobuf/FieldType;->DOUBLE_LIST_PACKED:Lcom/google/protobuf/FieldType;
 
-    .line 41
+    .line 8
     invoke-virtual {v14}, Lcom/google/protobuf/FieldType;->id()I
 
-    .line 43
     move-result v14
 
-    .line 46
     if-lt v15, v14, :cond_0
 
-    .line 47
     sget-object v14, Lcom/google/protobuf/FieldType;->SINT64_LIST_PACKED:Lcom/google/protobuf/FieldType;
 
-    .line 49
+    .line 9
     invoke-virtual {v14}, Lcom/google/protobuf/FieldType;->id()I
 
-    .line 51
     move-result v14
 
-    .line 54
     if-gt v15, v14, :cond_0
 
-    .line 55
     add-int/lit8 v14, v12, 0x2
 
-    .line 57
+    .line 10
     aget v14, v10, v14
 
-    .line 59
     :cond_0
     packed-switch v15, :pswitch_data_0
 
-    .line 61
     goto/16 :goto_a
 
-    .line 64
+    .line 11
     :pswitch_0
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 66
     move-result v14
 
-    .line 69
     if-eqz v14, :cond_6
 
-    .line 70
+    .line 12
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     move-result-object v3
 
-    .line 75
     check-cast v3, Lcom/google/protobuf/MessageLite;
 
-    .line 76
+    .line 13
     invoke-virtual {v0, v12}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 78
     move-result-object v4
 
-    .line 81
-    invoke-static {v11, v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+    .line 14
+    invoke-static {v11, v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
 
-    .line 82
     move-result v3
 
-    .line 85
     :goto_1
     add-int/2addr v13, v3
 
-    .line 86
     goto/16 :goto_a
 
-    .line 87
+    .line 15
     :pswitch_1
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 89
     move-result v14
 
-    .line 92
     if-eqz v14, :cond_6
 
-    .line 93
+    .line 16
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 95
     move-result-wide v3
 
-    .line 98
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 17
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 99
     move-result v11
 
-    .line 102
     shl-long v14, v3, v8
 
-    .line 103
     shr-long/2addr v3, v2
 
-    .line 105
     xor-long/2addr v3, v14
 
-    .line 106
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    .line 18
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 107
     move-result v3
 
-    .line 110
     :goto_2
     add-int/2addr v3, v11
 
-    .line 111
     goto :goto_1
 
-    .line 112
+    .line 19
     :pswitch_2
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 113
     move-result v14
 
-    .line 116
     if-eqz v14, :cond_6
 
-    .line 117
+    .line 20
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 119
     move-result v3
 
-    .line 122
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 21
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 123
     move-result v4
 
-    .line 126
     shl-int/lit8 v11, v3, 0x1
 
-    .line 127
     shr-int/lit8 v3, v3, 0x1f
 
-    .line 129
     xor-int/2addr v3, v11
 
-    .line 131
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    .line 22
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
-    .line 132
     move-result v3
 
-    .line 135
     :goto_3
     add-int/2addr v3, v4
 
-    .line 136
     goto :goto_1
 
-    .line 137
+    .line 23
     :pswitch_3
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 138
     move-result v3
 
-    .line 141
     if-eqz v3, :cond_6
 
-    .line 142
     const/16 v3, 0x8
 
-    .line 144
+    .line 24
     invoke-static {v11, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 146
     move-result v13
 
-    .line 149
     goto/16 :goto_a
 
-    .line 150
+    .line 25
     :pswitch_4
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 152
     move-result v3
 
-    .line 155
     if-eqz v3, :cond_6
 
-    .line 156
     const/4 v3, 0x4
 
-    .line 158
+    .line 26
     invoke-static {v11, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 159
     move-result v13
 
-    .line 162
     goto/16 :goto_a
 
-    .line 163
+    .line 27
     :pswitch_5
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 165
     move-result v14
 
-    .line 168
     if-eqz v14, :cond_6
 
-    .line 169
+    .line 28
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 171
     move-result v3
 
-    .line 174
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 29
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 175
     move-result v4
 
-    .line 178
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    .line 30
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
-    .line 179
     move-result v3
 
-    .line 182
     goto :goto_3
 
-    .line 183
+    .line 31
     :pswitch_6
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 184
     move-result v14
 
-    .line 187
     if-eqz v14, :cond_6
 
-    .line 188
+    .line 32
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 190
     move-result v3
 
-    .line 193
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 33
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 194
     move-result v4
 
-    .line 197
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
-    .line 198
     move-result v3
 
-    .line 201
     goto :goto_3
 
-    .line 202
+    .line 34
     :pswitch_7
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 203
     move-result v14
 
-    .line 206
     if-eqz v14, :cond_6
 
-    .line 207
+    .line 35
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
     move-result-object v3
 
-    .line 212
     check-cast v3, Lcom/google/protobuf/ByteString;
 
-    .line 213
-    invoke-static {v11, v3}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+    .line 36
+    invoke-static {v11, v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
-    .line 215
     move-result v3
 
-    .line 218
     goto/16 :goto_1
 
-    .line 219
+    .line 37
     :pswitch_8
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 221
     move-result v14
 
-    .line 224
     if-eqz v14, :cond_6
 
-    .line 225
+    .line 38
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 227
     move-result-object v3
 
-    .line 230
+    .line 39
     invoke-virtual {v0, v12}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 231
     move-result-object v4
 
-    .line 234
     sget-object v14, Lcom/google/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
 
-    .line 235
+    .line 40
     check-cast v3, Lcom/google/protobuf/MessageLite;
 
-    .line 237
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 41
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 239
     move-result v11
 
-    .line 242
+    .line 42
     check-cast v3, Lcom/google/protobuf/AbstractMessageLite;
 
-    .line 243
     invoke-virtual {v3, v4}, Lcom/google/protobuf/AbstractMessageLite;->getSerializedSize(Lcom/google/protobuf/Schema;)I
 
-    .line 245
     move-result v3
 
-    .line 248
+    .line 43
     invoke-static {v3, v3, v11, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 249
     move-result v13
 
-    .line 252
     goto/16 :goto_a
 
-    .line 253
+    .line 44
     :pswitch_9
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 255
     move-result v14
 
-    .line 258
     if-eqz v14, :cond_6
 
-    .line 259
+    .line 45
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 261
     move-result-object v3
 
-    .line 264
+    .line 46
     instance-of v4, v3, Lcom/google/protobuf/ByteString;
 
-    .line 265
     if-eqz v4, :cond_1
 
-    .line 267
+    .line 47
     check-cast v3, Lcom/google/protobuf/ByteString;
 
-    .line 269
-    invoke-static {v11, v3}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+    invoke-static {v11, v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
-    .line 271
     move-result v3
 
-    .line 274
     :goto_4
     add-int/2addr v3, v13
 
-    .line 275
     move v13, v3
 
-    .line 276
     goto/16 :goto_a
 
-    .line 277
+    .line 48
     :cond_1
     check-cast v3, Ljava/lang/String;
 
-    .line 279
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 49
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 281
     move-result v4
 
-    .line 284
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeStringSizeNoTag(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeStringSizeNoTag(Ljava/lang/String;)I
 
-    .line 285
     move-result v3
 
-    .line 288
     :goto_5
     add-int/2addr v3, v4
 
-    .line 289
     goto :goto_4
 
-    .line 290
+    .line 50
     :pswitch_a
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 291
     move-result v3
 
-    .line 294
     if-eqz v3, :cond_6
 
-    .line 295
+    .line 51
     invoke-static {v11, v8, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 297
     move-result v13
 
-    .line 300
     goto/16 :goto_a
 
-    .line 301
+    .line 52
     :pswitch_b
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 303
     move-result v3
 
-    .line 306
     if-eqz v3, :cond_6
 
-    .line 307
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeFixed32Size(I)I
+    .line 53
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed32Size(I)I
 
-    .line 309
     move-result v3
 
-    .line 312
     goto/16 :goto_1
 
-    .line 313
+    .line 54
     :pswitch_c
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 315
     move-result v3
 
-    .line 318
     if-eqz v3, :cond_6
 
-    .line 319
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeFixed64Size(I)I
+    .line 55
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed64Size(I)I
 
-    .line 321
     move-result v3
 
-    .line 324
     goto/16 :goto_1
 
-    .line 325
+    .line 56
     :pswitch_d
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 327
     move-result v14
 
-    .line 330
     if-eqz v14, :cond_6
 
-    .line 331
+    .line 57
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 333
     move-result v3
 
-    .line 336
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 58
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 337
     move-result v4
 
-    .line 340
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
-    .line 341
     move-result v3
 
-    .line 344
     goto/16 :goto_3
 
-    .line 345
+    .line 59
     :pswitch_e
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 347
     move-result v14
 
-    .line 350
     if-eqz v14, :cond_6
 
-    .line 351
+    .line 60
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 353
     move-result-wide v3
 
-    .line 356
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 61
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 357
     move-result v11
 
-    .line 360
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 361
     move-result v3
 
-    .line 364
     goto/16 :goto_2
 
-    .line 365
+    .line 62
     :pswitch_f
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 367
     move-result v14
 
-    .line 370
     if-eqz v14, :cond_6
 
-    .line 371
+    .line 63
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 373
     move-result-wide v3
 
-    .line 376
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 64
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 377
     move-result v11
 
-    .line 380
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    .line 65
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 381
     move-result v3
 
-    .line 384
     goto/16 :goto_2
 
-    .line 385
+    .line 66
     :pswitch_10
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 387
     move-result v3
 
-    .line 390
     if-eqz v3, :cond_6
 
-    .line 391
     const/4 v3, 0x4
 
-    .line 393
+    .line 67
     invoke-static {v11, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 394
     move-result v13
 
-    .line 397
     goto/16 :goto_a
 
-    .line 398
+    .line 68
     :pswitch_11
     invoke-virtual {v0, v11, v12, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 400
     move-result v3
 
-    .line 403
     if-eqz v3, :cond_6
 
-    .line 404
     const/16 v3, 0x8
 
-    .line 406
+    .line 69
     invoke-static {v11, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 408
     move-result v13
 
-    .line 411
     goto/16 :goto_a
 
-    .line 412
+    .line 70
     :pswitch_12
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 414
     move-result-object v3
 
-    .line 417
     invoke-virtual {v0, v12}, Lcom/google/protobuf/MessageSchema;->getMapFieldDefaultEntry(I)Ljava/lang/Object;
 
-    .line 418
     move-result-object v4
 
-    .line 421
+    .line 71
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 422
     invoke-static {v3, v4}, Lcom/google/protobuf/MapFieldSchemaLite;->getSerializedSize(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 425
     goto/16 :goto_a
 
-    .line 428
+    .line 72
     :pswitch_13
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 430
     move-result-object v3
 
-    .line 433
     check-cast v3, Ljava/util/List;
 
-    .line 434
+    .line 73
     invoke-virtual {v0, v12}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 436
     move-result-object v4
 
-    .line 439
+    .line 74
     sget-object v14, Lcom/google/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
 
-    .line 440
+    .line 75
     invoke-interface {v3}, Ljava/util/List;->size()I
 
-    .line 442
     move-result v14
 
-    .line 445
     if-nez v14, :cond_2
 
-    .line 446
     const/16 v16, 0x0
 
-    .line 448
     goto :goto_7
 
-    .line 450
     :cond_2
     const/4 v15, 0x0
 
-    .line 451
     const/16 v16, 0x0
 
-    .line 452
     :goto_6
     if-ge v15, v14, :cond_3
 
-    .line 454
+    .line 76
     invoke-interface {v3, v15}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 456
     move-result-object v17
 
-    .line 459
     move-object/from16 v9, v17
 
-    .line 460
     check-cast v9, Lcom/google/protobuf/MessageLite;
 
-    .line 462
-    invoke-static {v11, v9, v4}, Lcom/google/protobuf/CodedOutputStream;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+    invoke-static {v11, v9, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
 
-    .line 464
     move-result v9
 
-    .line 467
     add-int v16, v9, v16
 
-    .line 468
     add-int/2addr v15, v8
 
-    .line 470
     const v9, 0xfffff
 
-    .line 471
     goto :goto_6
 
-    .line 474
     :cond_3
     :goto_7
     add-int v13, v16, v13
 
-    .line 475
     goto/16 :goto_a
 
-    .line 477
+    .line 77
     :pswitch_14
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 479
     move-result-object v3
 
-    .line 482
     check-cast v3, Ljava/util/List;
 
-    .line 483
+    .line 78
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeSInt64ListNoTag(Ljava/util/List;)I
 
-    .line 485
     move-result v3
 
-    .line 488
     if-lez v3, :cond_6
 
-    .line 489
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 79
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 491
     move-result v4
 
-    .line 494
+    .line 80
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 495
     move-result v13
 
-    .line 498
     goto/16 :goto_a
 
-    .line 499
+    .line 81
     :pswitch_15
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 501
     move-result-object v3
 
-    .line 504
     check-cast v3, Ljava/util/List;
 
-    .line 505
+    .line 82
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeSInt32ListNoTag(Ljava/util/List;)I
 
-    .line 507
     move-result v3
 
-    .line 510
     if-lez v3, :cond_6
 
-    .line 511
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 83
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 513
     move-result v4
 
-    .line 516
+    .line 84
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 517
     move-result v13
 
-    .line 520
     goto/16 :goto_a
 
-    .line 521
+    .line 85
     :pswitch_16
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 523
     move-result-object v3
 
-    .line 526
     check-cast v3, Ljava/util/List;
 
-    .line 527
+    .line 86
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64ListNoTag(Ljava/util/List;)I
 
-    .line 529
     move-result v3
 
-    .line 532
     if-lez v3, :cond_6
 
-    .line 533
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 87
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 535
     move-result v4
 
-    .line 538
+    .line 88
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 539
     move-result v13
 
-    .line 542
     goto/16 :goto_a
 
-    .line 543
+    .line 89
     :pswitch_17
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 545
     move-result-object v3
 
-    .line 548
     check-cast v3, Ljava/util/List;
 
-    .line 549
+    .line 90
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32ListNoTag(Ljava/util/List;)I
 
-    .line 551
     move-result v3
 
-    .line 554
     if-lez v3, :cond_6
 
-    .line 555
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 91
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 557
     move-result v4
 
-    .line 560
+    .line 92
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 561
     move-result v13
 
-    .line 564
     goto/16 :goto_a
 
-    .line 565
+    .line 93
     :pswitch_18
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 567
     move-result-object v3
 
-    .line 570
     check-cast v3, Ljava/util/List;
 
-    .line 571
+    .line 94
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeEnumListNoTag(Ljava/util/List;)I
 
-    .line 573
     move-result v3
 
-    .line 576
     if-lez v3, :cond_6
 
-    .line 577
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 95
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 579
     move-result v4
 
-    .line 582
+    .line 96
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 583
     move-result v13
 
-    .line 586
     goto/16 :goto_a
 
-    .line 587
+    .line 97
     :pswitch_19
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 589
     move-result-object v3
 
-    .line 592
     check-cast v3, Ljava/util/List;
 
-    .line 593
+    .line 98
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeUInt32ListNoTag(Ljava/util/List;)I
 
-    .line 595
     move-result v3
 
-    .line 598
     if-lez v3, :cond_6
 
-    .line 599
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 99
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 601
     move-result v4
 
-    .line 604
+    .line 100
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 605
     move-result v13
 
-    .line 608
     goto/16 :goto_a
 
-    .line 609
+    .line 101
     :pswitch_1a
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 611
     move-result-object v3
 
-    .line 614
     check-cast v3, Ljava/util/List;
 
-    .line 615
+    .line 102
     sget-object v4, Lcom/google/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
 
-    .line 617
+    .line 103
     invoke-interface {v3}, Ljava/util/List;->size()I
 
-    .line 619
     move-result v3
 
-    .line 622
     if-lez v3, :cond_6
 
-    .line 623
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 104
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 625
     move-result v4
 
-    .line 628
+    .line 105
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 629
     move-result v13
 
-    .line 632
     goto/16 :goto_a
 
-    .line 633
+    .line 106
     :pswitch_1b
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 635
     move-result-object v3
 
-    .line 638
     check-cast v3, Ljava/util/List;
 
-    .line 639
+    .line 107
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32ListNoTag(Ljava/util/List;)I
 
-    .line 641
     move-result v3
 
-    .line 644
     if-lez v3, :cond_6
 
-    .line 645
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 108
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 647
     move-result v4
 
-    .line 650
+    .line 109
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 651
     move-result v13
 
-    .line 654
     goto/16 :goto_a
 
-    .line 655
+    .line 110
     :pswitch_1c
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 657
     move-result-object v3
 
-    .line 660
     check-cast v3, Ljava/util/List;
 
-    .line 661
+    .line 111
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64ListNoTag(Ljava/util/List;)I
 
-    .line 663
     move-result v3
 
-    .line 666
     if-lez v3, :cond_6
 
-    .line 667
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 112
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 669
     move-result v4
 
-    .line 672
+    .line 113
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 673
     move-result v13
 
-    .line 676
     goto/16 :goto_a
 
-    .line 677
+    .line 114
     :pswitch_1d
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 679
     move-result-object v3
 
-    .line 682
     check-cast v3, Ljava/util/List;
 
-    .line 683
+    .line 115
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeInt32ListNoTag(Ljava/util/List;)I
 
-    .line 685
     move-result v3
 
-    .line 688
     if-lez v3, :cond_6
 
-    .line 689
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 116
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 691
     move-result v4
 
-    .line 694
+    .line 117
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 695
     move-result v13
 
-    .line 698
     goto/16 :goto_a
 
-    .line 699
+    .line 118
     :pswitch_1e
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 701
     move-result-object v3
 
-    .line 704
     check-cast v3, Ljava/util/List;
 
-    .line 705
+    .line 119
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeUInt64ListNoTag(Ljava/util/List;)I
 
-    .line 707
     move-result v3
 
-    .line 710
     if-lez v3, :cond_6
 
-    .line 711
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 120
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 713
     move-result v4
 
-    .line 716
+    .line 121
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 717
     move-result v13
 
-    .line 720
     goto/16 :goto_a
 
-    .line 721
+    .line 122
     :pswitch_1f
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 723
     move-result-object v3
 
-    .line 726
     check-cast v3, Ljava/util/List;
 
-    .line 727
+    .line 123
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeInt64ListNoTag(Ljava/util/List;)I
 
-    .line 729
     move-result v3
 
-    .line 732
     if-lez v3, :cond_6
 
-    .line 733
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 124
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 735
     move-result v4
 
-    .line 738
+    .line 125
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 739
     move-result v13
 
-    .line 742
     goto/16 :goto_a
 
-    .line 743
+    .line 126
     :pswitch_20
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 745
     move-result-object v3
 
-    .line 748
     check-cast v3, Ljava/util/List;
 
-    .line 749
+    .line 127
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32ListNoTag(Ljava/util/List;)I
 
-    .line 751
     move-result v3
 
-    .line 754
     if-lez v3, :cond_6
 
-    .line 755
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 128
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 757
     move-result v4
 
-    .line 760
+    .line 129
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 761
     move-result v13
 
-    .line 764
     goto/16 :goto_a
 
-    .line 765
+    .line 130
     :pswitch_21
     invoke-virtual {v5, v1, v3, v4}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 767
     move-result-object v3
 
-    .line 770
     check-cast v3, Ljava/util/List;
 
-    .line 771
+    .line 131
     invoke-static {v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64ListNoTag(Ljava/util/List;)I
 
-    .line 773
     move-result v3
 
-    .line 776
     if-lez v3, :cond_6
 
-    .line 777
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 132
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 779
     move-result v4
 
-    .line 782
+    .line 133
     invoke-static {v3, v4, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 783
     move-result v13
 
-    .line 786
     goto/16 :goto_a
 
-    .line 787
+    .line 134
     :pswitch_22
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 789
     move-result-object v3
 
-    .line 792
     check-cast v3, Ljava/util/List;
 
-    .line 793
+    .line 135
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeSInt64List(ILjava/util/List;)I
 
-    .line 795
     move-result v3
 
-    .line 798
     goto/16 :goto_1
 
-    .line 799
+    .line 136
     :pswitch_23
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 801
     move-result-object v3
 
-    .line 804
     check-cast v3, Ljava/util/List;
 
-    .line 805
+    .line 137
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeSInt32List(ILjava/util/List;)I
 
-    .line 807
     move-result v3
 
-    .line 810
     goto/16 :goto_1
 
-    .line 811
+    .line 138
     :pswitch_24
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 813
     move-result-object v3
 
-    .line 816
     check-cast v3, Ljava/util/List;
 
-    .line 817
+    .line 139
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64List(ILjava/util/List;)I
 
-    .line 819
     move-result v3
 
-    .line 822
     goto/16 :goto_1
 
-    .line 823
+    .line 140
     :pswitch_25
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 825
     move-result-object v3
 
-    .line 828
     check-cast v3, Ljava/util/List;
 
-    .line 829
+    .line 141
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32List(ILjava/util/List;)I
 
-    .line 831
     move-result v3
 
-    .line 834
     goto/16 :goto_1
 
-    .line 835
+    .line 142
     :pswitch_26
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 837
     move-result-object v3
 
-    .line 840
     check-cast v3, Ljava/util/List;
 
-    .line 841
+    .line 143
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeEnumList(ILjava/util/List;)I
 
-    .line 843
     move-result v3
 
-    .line 846
     goto/16 :goto_1
 
-    .line 847
+    .line 144
     :pswitch_27
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 849
     move-result-object v3
 
-    .line 852
     check-cast v3, Ljava/util/List;
 
-    .line 853
+    .line 145
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeUInt32List(ILjava/util/List;)I
 
-    .line 855
     move-result v3
 
-    .line 858
     goto/16 :goto_1
 
-    .line 859
+    .line 146
     :pswitch_28
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 861
     move-result-object v3
 
-    .line 864
     check-cast v3, Ljava/util/List;
 
-    .line 865
+    .line 147
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeByteStringList(ILjava/util/List;)I
 
-    .line 867
     move-result v3
 
-    .line 870
     goto/16 :goto_1
 
-    .line 871
+    .line 148
     :pswitch_29
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 873
     move-result-object v3
 
-    .line 876
     check-cast v3, Ljava/util/List;
 
-    .line 877
+    .line 149
     invoke-virtual {v0, v12}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 879
     move-result-object v4
 
-    .line 882
+    .line 150
     invoke-static {v11, v3, v4}, Lcom/google/protobuf/SchemaUtil;->computeSizeMessageList(ILjava/util/List;Lcom/google/protobuf/Schema;)I
 
-    .line 883
     move-result v3
 
-    .line 886
     goto/16 :goto_1
 
-    .line 887
+    .line 151
     :pswitch_2a
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 889
     move-result-object v3
 
-    .line 892
     check-cast v3, Ljava/util/List;
 
-    .line 893
+    .line 152
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeStringList(ILjava/util/List;)I
 
-    .line 895
     move-result v3
 
-    .line 898
     goto/16 :goto_1
 
-    .line 899
+    .line 153
     :pswitch_2b
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 901
     move-result-object v3
 
-    .line 904
     check-cast v3, Ljava/util/List;
 
-    .line 905
+    .line 154
     sget-object v4, Lcom/google/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
 
-    .line 907
+    .line 155
     invoke-interface {v3}, Ljava/util/List;->size()I
 
-    .line 909
     move-result v3
 
-    .line 912
     if-nez v3, :cond_4
 
-    .line 913
     const/4 v4, 0x0
 
-    .line 915
     goto :goto_8
 
-    .line 916
+    .line 156
     :cond_4
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 917
     move-result v4
 
-    .line 920
     add-int/2addr v4, v8
 
-    .line 921
     mul-int/2addr v4, v3
 
-    .line 922
     :goto_8
     add-int/2addr v13, v4
 
-    .line 923
     goto/16 :goto_a
 
-    .line 924
+    .line 157
     :pswitch_2c
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 926
     move-result-object v3
 
-    .line 929
     check-cast v3, Ljava/util/List;
 
-    .line 930
+    .line 158
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32List(ILjava/util/List;)I
 
-    .line 932
     move-result v3
 
-    .line 935
     goto/16 :goto_1
 
-    .line 936
+    .line 159
     :pswitch_2d
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 938
     move-result-object v3
 
-    .line 941
     check-cast v3, Ljava/util/List;
 
-    .line 942
+    .line 160
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64List(ILjava/util/List;)I
 
-    .line 944
     move-result v3
 
-    .line 947
     goto/16 :goto_1
 
-    .line 948
+    .line 161
     :pswitch_2e
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 950
     move-result-object v3
 
-    .line 953
     check-cast v3, Ljava/util/List;
 
-    .line 954
+    .line 162
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeInt32List(ILjava/util/List;)I
 
-    .line 956
     move-result v3
 
-    .line 959
     goto/16 :goto_1
 
-    .line 960
+    .line 163
     :pswitch_2f
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 962
     move-result-object v3
 
-    .line 965
     check-cast v3, Ljava/util/List;
 
-    .line 966
+    .line 164
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeUInt64List(ILjava/util/List;)I
 
-    .line 968
     move-result v3
 
-    .line 971
     goto/16 :goto_1
 
-    .line 972
+    .line 165
     :pswitch_30
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 974
     move-result-object v3
 
-    .line 977
     check-cast v3, Ljava/util/List;
 
-    .line 978
+    .line 166
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeInt64List(ILjava/util/List;)I
 
-    .line 980
     move-result v3
 
-    .line 983
     goto/16 :goto_1
 
-    .line 984
+    .line 167
     :pswitch_31
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 986
     move-result-object v3
 
-    .line 989
     check-cast v3, Ljava/util/List;
 
-    .line 990
+    .line 168
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32List(ILjava/util/List;)I
 
-    .line 992
     move-result v3
 
-    .line 995
     goto/16 :goto_1
 
-    .line 996
+    .line 169
     :pswitch_32
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 998
     move-result-object v3
 
-    .line 1001
     check-cast v3, Ljava/util/List;
 
-    .line 1002
+    .line 170
     invoke-static {v11, v3}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64List(ILjava/util/List;)I
 
-    .line 1004
     move-result v3
 
-    .line 1007
     goto/16 :goto_1
 
-    .line 1008
+    .line 171
     :pswitch_33
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1010
     move-result v9
 
-    .line 1013
     if-eqz v9, :cond_6
 
-    .line 1014
+    .line 172
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1016
     move-result-object v3
 
-    .line 1019
     check-cast v3, Lcom/google/protobuf/MessageLite;
 
-    .line 1020
+    .line 173
     invoke-virtual {v0, v12}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 1022
     move-result-object v4
 
-    .line 1025
-    invoke-static {v11, v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+    .line 174
+    invoke-static {v11, v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
 
-    .line 1026
     move-result v3
 
-    .line 1029
     goto/16 :goto_1
 
-    .line 1030
+    .line 175
     :pswitch_34
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1032
     move-result v9
 
-    .line 1035
     if-eqz v9, :cond_6
 
-    .line 1036
+    .line 176
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getLong(JLjava/lang/Object;)J
 
-    .line 1038
     move-result-wide v3
 
-    .line 1041
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 177
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1042
     move-result v9
 
-    .line 1045
     shl-long v14, v3, v8
 
-    .line 1046
     shr-long/2addr v3, v2
 
-    .line 1048
     xor-long/2addr v3, v14
 
-    .line 1049
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    .line 178
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 1050
     move-result v3
 
-    .line 1053
     :goto_9
     add-int/2addr v3, v9
 
-    .line 1054
     goto/16 :goto_1
 
-    .line 1055
+    .line 179
     :pswitch_35
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1057
     move-result v9
 
-    .line 1060
     if-eqz v9, :cond_6
 
-    .line 1061
+    .line 180
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getInt(JLjava/lang/Object;)I
 
-    .line 1063
     move-result v3
 
-    .line 1066
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 181
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1067
     move-result v4
 
-    .line 1070
     shl-int/lit8 v9, v3, 0x1
 
-    .line 1071
     shr-int/lit8 v3, v3, 0x1f
 
-    .line 1073
     xor-int/2addr v3, v9
 
-    .line 1075
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    .line 182
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
-    .line 1076
     move-result v3
 
-    .line 1079
     goto/16 :goto_3
 
-    .line 1080
+    .line 183
     :pswitch_36
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1082
     move-result v3
 
-    .line 1085
     if-eqz v3, :cond_6
 
-    .line 1086
     const/16 v3, 0x8
 
-    .line 1088
+    .line 184
     invoke-static {v11, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 1090
     move-result v13
 
-    .line 1093
     goto/16 :goto_a
 
-    .line 1094
+    .line 185
     :pswitch_37
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1096
     move-result v3
 
-    .line 1099
     if-eqz v3, :cond_6
 
-    .line 1100
     const/4 v3, 0x4
 
-    .line 1102
+    .line 186
     invoke-static {v11, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 1103
     move-result v13
 
-    .line 1106
     goto/16 :goto_a
 
-    .line 1107
+    .line 187
     :pswitch_38
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1109
     move-result v9
 
-    .line 1112
     if-eqz v9, :cond_6
 
-    .line 1113
+    .line 188
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getInt(JLjava/lang/Object;)I
 
-    .line 1115
     move-result v3
 
-    .line 1118
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 189
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1119
     move-result v4
 
-    .line 1122
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    .line 190
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
-    .line 1123
     move-result v3
 
-    .line 1126
     goto/16 :goto_3
 
-    .line 1127
+    .line 191
     :pswitch_39
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1129
     move-result v9
 
-    .line 1132
     if-eqz v9, :cond_6
 
-    .line 1133
+    .line 192
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getInt(JLjava/lang/Object;)I
 
-    .line 1135
     move-result v3
 
-    .line 1138
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 193
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1139
     move-result v4
 
-    .line 1142
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
-    .line 1143
     move-result v3
 
-    .line 1146
     goto/16 :goto_3
 
-    .line 1147
+    .line 194
     :pswitch_3a
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1149
     move-result v9
 
-    .line 1152
     if-eqz v9, :cond_6
 
-    .line 1153
+    .line 195
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1155
     move-result-object v3
 
-    .line 1158
     check-cast v3, Lcom/google/protobuf/ByteString;
 
-    .line 1159
-    invoke-static {v11, v3}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+    .line 196
+    invoke-static {v11, v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
-    .line 1161
     move-result v3
 
-    .line 1164
     goto/16 :goto_1
 
-    .line 1165
+    .line 197
     :pswitch_3b
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1167
     move-result v9
 
-    .line 1170
     if-eqz v9, :cond_6
 
-    .line 1171
+    .line 198
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1173
     move-result-object v3
 
-    .line 1176
+    .line 199
     invoke-virtual {v0, v12}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 1177
     move-result-object v4
 
-    .line 1180
     sget-object v9, Lcom/google/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
 
-    .line 1181
+    .line 200
     check-cast v3, Lcom/google/protobuf/MessageLite;
 
-    .line 1183
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 201
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1185
     move-result v9
 
-    .line 1188
+    .line 202
     check-cast v3, Lcom/google/protobuf/AbstractMessageLite;
 
-    .line 1189
     invoke-virtual {v3, v4}, Lcom/google/protobuf/AbstractMessageLite;->getSerializedSize(Lcom/google/protobuf/Schema;)I
 
-    .line 1191
     move-result v3
 
-    .line 1194
+    .line 203
     invoke-static {v3, v3, v9, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 1195
     move-result v13
 
-    .line 1198
     goto/16 :goto_a
 
-    .line 1199
+    .line 204
     :pswitch_3c
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1201
     move-result v9
 
-    .line 1204
     if-eqz v9, :cond_6
 
-    .line 1205
+    .line 205
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1207
     move-result-object v3
 
-    .line 1210
+    .line 206
     instance-of v4, v3, Lcom/google/protobuf/ByteString;
 
-    .line 1211
     if-eqz v4, :cond_5
 
-    .line 1213
+    .line 207
     check-cast v3, Lcom/google/protobuf/ByteString;
 
-    .line 1215
-    invoke-static {v11, v3}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+    invoke-static {v11, v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
-    .line 1217
     move-result v3
 
-    .line 1220
     goto/16 :goto_4
 
-    .line 1221
+    .line 208
     :cond_5
     check-cast v3, Ljava/lang/String;
 
-    .line 1223
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 209
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1225
     move-result v4
 
-    .line 1228
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeStringSizeNoTag(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeStringSizeNoTag(Ljava/lang/String;)I
 
-    .line 1229
     move-result v3
 
-    .line 1232
     goto/16 :goto_5
 
-    .line 1233
+    .line 210
     :pswitch_3d
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1235
     move-result v3
 
-    .line 1238
     if-eqz v3, :cond_6
 
-    .line 1239
+    .line 211
     invoke-static {v11, v8, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 1241
     move-result v13
 
-    .line 1244
     goto :goto_a
 
-    .line 1245
+    .line 212
     :pswitch_3e
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1246
     move-result v3
 
-    .line 1249
     if-eqz v3, :cond_6
 
-    .line 1250
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeFixed32Size(I)I
+    .line 213
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed32Size(I)I
 
-    .line 1252
     move-result v3
 
-    .line 1255
     goto/16 :goto_1
 
-    .line 1256
+    .line 214
     :pswitch_3f
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1258
     move-result v3
 
-    .line 1261
     if-eqz v3, :cond_6
 
-    .line 1262
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeFixed64Size(I)I
+    .line 215
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed64Size(I)I
 
-    .line 1264
     move-result v3
 
-    .line 1267
     goto/16 :goto_1
 
-    .line 1268
+    .line 216
     :pswitch_40
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1270
     move-result v9
 
-    .line 1273
     if-eqz v9, :cond_6
 
-    .line 1274
+    .line 217
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getInt(JLjava/lang/Object;)I
 
-    .line 1276
     move-result v3
 
-    .line 1279
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 218
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1280
     move-result v4
 
-    .line 1283
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
-    .line 1284
     move-result v3
 
-    .line 1287
     goto/16 :goto_3
 
-    .line 1288
+    .line 219
     :pswitch_41
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1290
     move-result v9
 
-    .line 1293
     if-eqz v9, :cond_6
 
-    .line 1294
+    .line 220
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getLong(JLjava/lang/Object;)J
 
-    .line 1296
     move-result-wide v3
 
-    .line 1299
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 221
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1300
     move-result v9
 
-    .line 1303
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 1304
     move-result v3
 
-    .line 1307
     goto/16 :goto_9
 
-    .line 1308
+    .line 222
     :pswitch_42
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1310
     move-result v9
 
-    .line 1313
     if-eqz v9, :cond_6
 
-    .line 1314
+    .line 223
     invoke-static {v3, v4, v1}, Lcom/google/protobuf/UnsafeUtil;->getLong(JLjava/lang/Object;)J
 
-    .line 1316
     move-result-wide v3
 
-    .line 1319
-    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 224
+    invoke-static {v11}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1320
     move-result v9
 
-    .line 1323
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    .line 225
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 1324
     move-result v3
 
-    .line 1327
     goto/16 :goto_9
 
-    .line 1328
+    .line 226
     :pswitch_43
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1330
     move-result v3
 
-    .line 1333
     if-eqz v3, :cond_6
 
-    .line 1334
     const/4 v3, 0x4
 
-    .line 1336
+    .line 227
     invoke-static {v11, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 1337
     move-result v13
 
-    .line 1340
     goto :goto_a
 
-    .line 1341
+    .line 228
     :pswitch_44
     invoke-virtual {v0, v12, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1342
     move-result v3
 
-    .line 1345
     if-eqz v3, :cond_6
 
-    .line 1346
     const/16 v3, 0x8
 
-    .line 1348
+    .line 229
     invoke-static {v11, v3, v13}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 1350
     move-result v13
 
-    .line 1353
     :cond_6
     :goto_a
     add-int/lit8 v12, v12, 0x3
 
-    .line 1354
     const v9, 0xfffff
 
-    .line 1356
     goto/16 :goto_0
 
-    .line 1359
+    .line 230
     :cond_7
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1361
+    .line 231
     move-object v0, v1
 
-    .line 1364
     check-cast v0, Lcom/google/protobuf/GeneratedMessageLite;
 
-    .line 1365
     iget-object v0, v0, Lcom/google/protobuf/GeneratedMessageLite;->unknownFields:Lcom/google/protobuf/UnknownFieldSetLite;
 
-    .line 1367
+    .line 232
     invoke-virtual {v0}, Lcom/google/protobuf/UnknownFieldSetLite;->getSerializedSize()I
 
-    .line 1369
     move-result v0
 
-    .line 1372
     add-int/2addr v0, v13
 
-    .line 1373
     goto/16 :goto_23
 
-    .line 1374
+    .line 233
     :cond_8
     sget-object v3, Lcom/google/protobuf/MessageSchema;->UNSAFE:Lsun/misc/Unsafe;
 
-    .line 1376
     const/4 v4, 0x0
 
-    .line 1378
     const/4 v5, 0x0
 
-    .line 1379
     const v9, 0xfffff
 
-    .line 1380
     const/4 v11, 0x0
 
-    .line 1383
+    .line 234
     :goto_b
     array-length v12, v10
 
-    .line 1384
     if-ge v4, v12, :cond_15
 
-    .line 1385
+    .line 235
     invoke-virtual {v0, v4}, Lcom/google/protobuf/MessageSchema;->typeAndOffsetAt(I)I
 
-    .line 1387
     move-result v12
 
-    .line 1390
+    .line 236
     aget v13, v10, v4
 
-    .line 1391
+    .line 237
     invoke-static {v12}, Lcom/google/protobuf/MessageSchema;->type(I)I
 
-    .line 1393
     move-result v14
 
-    .line 1396
     const/16 v15, 0x11
 
-    .line 1397
     if-gt v14, v15, :cond_9
 
-    .line 1399
     add-int/lit8 v15, v4, 0x2
 
-    .line 1401
+    .line 238
     aget v15, v10, v15
 
-    .line 1403
     const v16, 0xfffff
 
-    .line 1405
     and-int v2, v15, v16
 
-    .line 1408
     ushr-int/lit8 v15, v15, 0x14
 
-    .line 1410
     shl-int v15, v8, v15
 
-    .line 1412
     if-eq v2, v9, :cond_a
 
-    .line 1414
     int-to-long v8, v2
 
-    .line 1416
+    .line 239
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 1417
     move-result v11
 
-    .line 1420
     move v9, v2
 
-    .line 1421
     goto :goto_c
 
-    .line 1422
     :cond_9
     const v16, 0xfffff
 
-    .line 1423
     const/4 v15, 0x0
 
-    .line 1426
     :cond_a
     :goto_c
     and-int v2, v12, v16
 
-    .line 1427
     move v12, v9
 
-    .line 1429
     int-to-long v8, v2
 
-    .line 1430
     packed-switch v14, :pswitch_data_1
 
-    .line 1431
     goto :goto_e
 
-    .line 1434
+    .line 240
     :pswitch_45
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1435
     move-result v2
 
-    .line 1438
     if-eqz v2, :cond_b
 
-    .line 1439
+    .line 241
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1441
     move-result-object v2
 
-    .line 1444
     check-cast v2, Lcom/google/protobuf/MessageLite;
 
-    .line 1445
+    .line 242
     invoke-virtual {v0, v4}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 1447
     move-result-object v8
 
-    .line 1450
-    invoke-static {v13, v2, v8}, Lcom/google/protobuf/CodedOutputStream;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+    .line 243
+    invoke-static {v13, v2, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
 
-    .line 1451
     move-result v2
 
-    .line 1454
     :goto_d
     add-int/2addr v5, v2
 
-    .line 1455
     :cond_b
     :goto_e
     const/4 v2, 0x1
 
-    .line 1456
     :goto_f
     const/4 v8, 0x4
 
-    .line 1457
     :goto_10
     const/16 v9, 0x8
 
-    .line 1458
     :goto_11
     const/16 v17, 0x3f
 
-    .line 1460
     goto/16 :goto_22
 
-    .line 1462
+    .line 244
     :pswitch_46
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1464
     move-result v2
 
-    .line 1467
     if-eqz v2, :cond_b
 
-    .line 1468
+    .line 245
     invoke-static {v8, v9, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 1470
     move-result-wide v8
 
-    .line 1473
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 246
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1474
     move-result v2
 
-    .line 1477
     const/4 v13, 0x1
 
-    .line 1478
     shl-long v14, v8, v13
 
-    .line 1479
     const/16 v13, 0x3f
 
-    .line 1481
     shr-long/2addr v8, v13
 
-    .line 1483
     xor-long/2addr v8, v14
 
-    .line 1484
-    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    .line 247
+    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 1485
     move-result v8
 
-    .line 1488
     :goto_12
     add-int/2addr v8, v2
 
-    .line 1489
     :goto_13
     add-int/2addr v5, v8
 
-    .line 1490
     goto :goto_e
 
-    .line 1491
+    .line 248
     :pswitch_47
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1492
     move-result v2
 
-    .line 1495
     if-eqz v2, :cond_b
 
-    .line 1496
+    .line 249
     invoke-static {v8, v9, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 1498
     move-result v2
 
-    .line 1501
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 250
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1502
     move-result v8
 
-    .line 1505
     const/4 v9, 0x1
 
-    .line 1506
     shl-int/lit8 v13, v2, 0x1
 
-    .line 1507
     shr-int/lit8 v2, v2, 0x1f
 
-    .line 1509
     xor-int/2addr v2, v13
 
-    .line 1511
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    .line 251
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
-    .line 1512
     move-result v2
 
-    .line 1515
     :goto_14
     add-int/2addr v2, v8
 
-    .line 1516
     goto :goto_d
 
-    .line 1517
+    .line 252
     :pswitch_48
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1518
     move-result v2
 
-    .line 1521
     if-eqz v2, :cond_b
 
-    .line 1522
     const/16 v2, 0x8
 
-    .line 1524
+    .line 253
     invoke-static {v13, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 1526
     move-result v5
 
-    .line 1529
     :goto_15
     move v9, v2
 
-    .line 1530
     const/4 v2, 0x1
 
-    .line 1531
     const/4 v8, 0x4
 
-    .line 1532
     goto :goto_11
 
-    .line 1533
+    .line 254
     :pswitch_49
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1534
     move-result v2
 
-    .line 1537
     if-eqz v2, :cond_b
 
-    .line 1538
     const/4 v2, 0x4
 
-    .line 1540
+    .line 255
     invoke-static {v13, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 1541
     move-result v5
 
-    .line 1544
     :goto_16
     move v8, v2
 
-    .line 1545
     const/4 v2, 0x1
 
-    .line 1546
     goto :goto_10
 
-    .line 1547
+    .line 256
     :pswitch_4a
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1548
     move-result v2
 
-    .line 1551
     if-eqz v2, :cond_b
 
-    .line 1552
+    .line 257
     invoke-static {v8, v9, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 1554
     move-result v2
 
-    .line 1557
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 258
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1558
     move-result v8
 
-    .line 1561
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    .line 259
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
-    .line 1562
     move-result v2
 
-    .line 1565
     goto :goto_14
 
-    .line 1566
+    .line 260
     :pswitch_4b
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1567
     move-result v2
 
-    .line 1570
     if-eqz v2, :cond_b
 
-    .line 1571
+    .line 261
     invoke-static {v8, v9, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 1573
     move-result v2
 
-    .line 1576
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 262
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1577
     move-result v8
 
-    .line 1580
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
-    .line 1581
     move-result v2
 
-    .line 1584
     goto :goto_14
 
-    .line 1585
+    .line 263
     :pswitch_4c
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1586
     move-result v2
 
-    .line 1589
     if-eqz v2, :cond_b
 
-    .line 1590
+    .line 264
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1592
     move-result-object v2
 
-    .line 1595
     check-cast v2, Lcom/google/protobuf/ByteString;
 
-    .line 1596
-    invoke-static {v13, v2}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+    .line 265
+    invoke-static {v13, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
-    .line 1598
     move-result v2
 
-    .line 1601
     goto/16 :goto_d
 
-    .line 1602
+    .line 266
     :pswitch_4d
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1604
     move-result v2
 
-    .line 1607
     if-eqz v2, :cond_b
 
-    .line 1608
+    .line 267
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1610
     move-result-object v2
 
-    .line 1613
+    .line 268
     invoke-virtual {v0, v4}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 1614
     move-result-object v8
 
-    .line 1617
     sget-object v9, Lcom/google/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
 
-    .line 1618
+    .line 269
     check-cast v2, Lcom/google/protobuf/MessageLite;
 
-    .line 1620
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 270
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1622
     move-result v9
 
-    .line 1625
+    .line 271
     check-cast v2, Lcom/google/protobuf/AbstractMessageLite;
 
-    .line 1626
     invoke-virtual {v2, v8}, Lcom/google/protobuf/AbstractMessageLite;->getSerializedSize(Lcom/google/protobuf/Schema;)I
 
-    .line 1628
     move-result v2
 
-    .line 1631
+    .line 272
     invoke-static {v2, v2, v9, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 1632
     move-result v5
 
-    .line 1635
     goto/16 :goto_e
 
-    .line 1636
+    .line 273
     :pswitch_4e
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1638
     move-result v2
 
-    .line 1641
     if-eqz v2, :cond_b
 
-    .line 1642
+    .line 274
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1644
     move-result-object v2
 
-    .line 1647
+    .line 275
     instance-of v8, v2, Lcom/google/protobuf/ByteString;
 
-    .line 1648
     if-eqz v8, :cond_c
 
-    .line 1650
+    .line 276
     check-cast v2, Lcom/google/protobuf/ByteString;
 
-    .line 1652
-    invoke-static {v13, v2}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+    invoke-static {v13, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
-    .line 1654
     move-result v2
 
-    .line 1657
     :goto_17
     add-int/2addr v2, v5
 
-    .line 1658
     move v5, v2
 
-    .line 1659
     goto/16 :goto_e
 
-    .line 1660
+    .line 277
     :cond_c
     check-cast v2, Ljava/lang/String;
 
-    .line 1662
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 278
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1664
     move-result v8
 
-    .line 1667
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeStringSizeNoTag(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeStringSizeNoTag(Ljava/lang/String;)I
 
-    .line 1668
     move-result v2
 
-    .line 1671
     add-int/2addr v2, v8
 
-    .line 1672
     goto :goto_17
 
-    .line 1673
+    .line 279
     :pswitch_4f
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1674
     move-result v2
 
-    .line 1677
     if-eqz v2, :cond_b
 
-    .line 1678
     const/4 v2, 0x1
 
-    .line 1680
+    .line 280
     invoke-static {v13, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 1681
     move-result v5
 
-    .line 1684
     goto/16 :goto_f
 
-    .line 1685
+    .line 281
     :pswitch_50
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1687
     move-result v2
 
-    .line 1690
     if-eqz v2, :cond_b
 
-    .line 1691
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeFixed32Size(I)I
+    .line 282
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed32Size(I)I
 
-    .line 1693
     move-result v2
 
-    .line 1696
     goto/16 :goto_d
 
-    .line 1697
+    .line 283
     :pswitch_51
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1699
     move-result v2
 
-    .line 1702
     if-eqz v2, :cond_b
 
-    .line 1703
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeFixed64Size(I)I
+    .line 284
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed64Size(I)I
 
-    .line 1705
     move-result v2
 
-    .line 1708
     goto/16 :goto_d
 
-    .line 1709
+    .line 285
     :pswitch_52
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1711
     move-result v2
 
-    .line 1714
     if-eqz v2, :cond_b
 
-    .line 1715
+    .line 286
     invoke-static {v8, v9, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 1717
     move-result v2
 
-    .line 1720
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 287
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1721
     move-result v8
 
-    .line 1724
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
-    .line 1725
     move-result v2
 
-    .line 1728
     goto/16 :goto_14
 
-    .line 1729
+    .line 288
     :pswitch_53
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1731
     move-result v2
 
-    .line 1734
     if-eqz v2, :cond_b
 
-    .line 1735
+    .line 289
     invoke-static {v8, v9, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 1737
     move-result-wide v8
 
-    .line 1740
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 290
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1741
     move-result v2
 
-    .line 1744
-    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 1745
     move-result v8
 
-    .line 1748
     goto/16 :goto_12
 
-    .line 1749
+    .line 291
     :pswitch_54
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1751
     move-result v2
 
-    .line 1754
     if-eqz v2, :cond_b
 
-    .line 1755
+    .line 292
     invoke-static {v8, v9, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 1757
     move-result-wide v8
 
-    .line 1760
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 293
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1761
     move-result v2
 
-    .line 1764
-    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    .line 294
+    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 1765
     move-result v8
 
-    .line 1768
     goto/16 :goto_12
 
-    .line 1769
+    .line 295
     :pswitch_55
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1771
     move-result v2
 
-    .line 1774
     if-eqz v2, :cond_b
 
-    .line 1775
     const/4 v2, 0x4
 
-    .line 1777
+    .line 296
     invoke-static {v13, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 1778
     move-result v5
 
-    .line 1781
     goto/16 :goto_16
 
-    .line 1782
+    .line 297
     :pswitch_56
     invoke-virtual {v0, v13, v4, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1784
     move-result v2
 
-    .line 1787
     if-eqz v2, :cond_b
 
-    .line 1788
     const/16 v2, 0x8
 
-    .line 1790
+    .line 298
     invoke-static {v13, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 1792
     move-result v5
 
-    .line 1795
     goto/16 :goto_15
 
-    .line 1796
+    .line 299
     :pswitch_57
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1798
     move-result-object v2
 
-    .line 1801
     invoke-virtual {v0, v4}, Lcom/google/protobuf/MessageSchema;->getMapFieldDefaultEntry(I)Ljava/lang/Object;
 
-    .line 1802
     move-result-object v8
 
-    .line 1805
+    .line 300
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1806
     invoke-static {v2, v8}, Lcom/google/protobuf/MapFieldSchemaLite;->getSerializedSize(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 1809
     goto/16 :goto_e
 
-    .line 1812
+    .line 301
     :pswitch_58
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1814
     move-result-object v2
 
-    .line 1817
     check-cast v2, Ljava/util/List;
 
-    .line 1818
+    .line 302
     invoke-virtual {v0, v4}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 1820
     move-result-object v8
 
-    .line 1823
+    .line 303
     sget-object v9, Lcom/google/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
 
-    .line 1824
+    .line 304
     invoke-interface {v2}, Ljava/util/List;->size()I
 
-    .line 1826
     move-result v9
 
-    .line 1829
     if-nez v9, :cond_d
 
-    .line 1830
     const/4 v15, 0x0
 
-    .line 1832
     goto :goto_19
 
-    .line 1833
     :cond_d
     const/4 v14, 0x0
 
-    .line 1834
     const/4 v15, 0x0
 
-    .line 1835
     :goto_18
     if-ge v14, v9, :cond_e
 
-    .line 1836
+    .line 305
     invoke-interface {v2, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 1838
     move-result-object v18
 
-    .line 1841
     move-object/from16 v19, v2
 
-    .line 1842
     move-object/from16 v2, v18
 
-    .line 1844
     check-cast v2, Lcom/google/protobuf/MessageLite;
 
-    .line 1846
-    invoke-static {v13, v2, v8}, Lcom/google/protobuf/CodedOutputStream;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+    invoke-static {v13, v2, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
 
-    .line 1848
     move-result v2
 
-    .line 1851
     add-int/2addr v15, v2
 
-    .line 1852
     const/4 v2, 0x1
 
-    .line 1853
     add-int/2addr v14, v2
 
-    .line 1854
     move-object/from16 v2, v19
 
-    .line 1855
     goto :goto_18
 
-    .line 1857
     :cond_e
     :goto_19
     add-int/2addr v5, v15
 
-    .line 1858
     goto/16 :goto_e
 
-    .line 1859
+    .line 306
     :pswitch_59
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1861
     move-result-object v2
 
-    .line 1864
     check-cast v2, Ljava/util/List;
 
-    .line 1865
+    .line 307
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeSInt64ListNoTag(Ljava/util/List;)I
 
-    .line 1867
     move-result v2
 
-    .line 1870
     if-lez v2, :cond_b
 
-    .line 1871
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 308
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1873
     move-result v8
 
-    .line 1876
+    .line 309
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 1877
     move-result v5
 
-    .line 1880
     goto/16 :goto_e
 
-    .line 1881
+    .line 310
     :pswitch_5a
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1883
     move-result-object v2
 
-    .line 1886
     check-cast v2, Ljava/util/List;
 
-    .line 1887
+    .line 311
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeSInt32ListNoTag(Ljava/util/List;)I
 
-    .line 1889
     move-result v2
 
-    .line 1892
     if-lez v2, :cond_b
 
-    .line 1893
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 312
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1895
     move-result v8
 
-    .line 1898
+    .line 313
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 1899
     move-result v5
 
-    .line 1902
     goto/16 :goto_e
 
-    .line 1903
+    .line 314
     :pswitch_5b
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1905
     move-result-object v2
 
-    .line 1908
     check-cast v2, Ljava/util/List;
 
-    .line 1909
+    .line 315
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64ListNoTag(Ljava/util/List;)I
 
-    .line 1911
     move-result v2
 
-    .line 1914
     if-lez v2, :cond_b
 
-    .line 1915
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 316
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1917
     move-result v8
 
-    .line 1920
+    .line 317
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 1921
     move-result v5
 
-    .line 1924
     goto/16 :goto_e
 
-    .line 1925
+    .line 318
     :pswitch_5c
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1927
     move-result-object v2
 
-    .line 1930
     check-cast v2, Ljava/util/List;
 
-    .line 1931
+    .line 319
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32ListNoTag(Ljava/util/List;)I
 
-    .line 1933
     move-result v2
 
-    .line 1936
     if-lez v2, :cond_b
 
-    .line 1937
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 320
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1939
     move-result v8
 
-    .line 1942
+    .line 321
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 1943
     move-result v5
 
-    .line 1946
     goto/16 :goto_e
 
-    .line 1947
+    .line 322
     :pswitch_5d
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1949
     move-result-object v2
 
-    .line 1952
     check-cast v2, Ljava/util/List;
 
-    .line 1953
+    .line 323
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeEnumListNoTag(Ljava/util/List;)I
 
-    .line 1955
     move-result v2
 
-    .line 1958
     if-lez v2, :cond_b
 
-    .line 1959
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 324
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1961
     move-result v8
 
-    .line 1964
+    .line 325
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 1965
     move-result v5
 
-    .line 1968
     goto/16 :goto_e
 
-    .line 1969
+    .line 326
     :pswitch_5e
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1971
     move-result-object v2
 
-    .line 1974
     check-cast v2, Ljava/util/List;
 
-    .line 1975
+    .line 327
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeUInt32ListNoTag(Ljava/util/List;)I
 
-    .line 1977
     move-result v2
 
-    .line 1980
     if-lez v2, :cond_b
 
-    .line 1981
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 328
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 1983
     move-result v8
 
-    .line 1986
+    .line 329
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 1987
     move-result v5
 
-    .line 1990
     goto/16 :goto_e
 
-    .line 1991
+    .line 330
     :pswitch_5f
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1993
     move-result-object v2
 
-    .line 1996
     check-cast v2, Ljava/util/List;
 
-    .line 1997
+    .line 331
     sget-object v8, Lcom/google/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
 
-    .line 1999
+    .line 332
     invoke-interface {v2}, Ljava/util/List;->size()I
 
-    .line 2001
     move-result v2
 
-    .line 2004
     if-lez v2, :cond_b
 
-    .line 2005
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 333
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2007
     move-result v8
 
-    .line 2010
+    .line 334
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 2011
     move-result v5
 
-    .line 2014
     goto/16 :goto_e
 
-    .line 2015
+    .line 335
     :pswitch_60
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2017
     move-result-object v2
 
-    .line 2020
     check-cast v2, Ljava/util/List;
 
-    .line 2021
+    .line 336
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32ListNoTag(Ljava/util/List;)I
 
-    .line 2023
     move-result v2
 
-    .line 2026
     if-lez v2, :cond_b
 
-    .line 2027
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 337
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2029
     move-result v8
 
-    .line 2032
+    .line 338
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 2033
     move-result v5
 
-    .line 2036
     goto/16 :goto_e
 
-    .line 2037
+    .line 339
     :pswitch_61
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2039
     move-result-object v2
 
-    .line 2042
     check-cast v2, Ljava/util/List;
 
-    .line 2043
+    .line 340
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64ListNoTag(Ljava/util/List;)I
 
-    .line 2045
     move-result v2
 
-    .line 2048
     if-lez v2, :cond_b
 
-    .line 2049
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 341
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2051
     move-result v8
 
-    .line 2054
+    .line 342
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 2055
     move-result v5
 
-    .line 2058
     goto/16 :goto_e
 
-    .line 2059
+    .line 343
     :pswitch_62
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2061
     move-result-object v2
 
-    .line 2064
     check-cast v2, Ljava/util/List;
 
-    .line 2065
+    .line 344
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeInt32ListNoTag(Ljava/util/List;)I
 
-    .line 2067
     move-result v2
 
-    .line 2070
     if-lez v2, :cond_b
 
-    .line 2071
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 345
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2073
     move-result v8
 
-    .line 2076
+    .line 346
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 2077
     move-result v5
 
-    .line 2080
     goto/16 :goto_e
 
-    .line 2081
+    .line 347
     :pswitch_63
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2083
     move-result-object v2
 
-    .line 2086
     check-cast v2, Ljava/util/List;
 
-    .line 2087
+    .line 348
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeUInt64ListNoTag(Ljava/util/List;)I
 
-    .line 2089
     move-result v2
 
-    .line 2092
     if-lez v2, :cond_b
 
-    .line 2093
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 349
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2095
     move-result v8
 
-    .line 2098
+    .line 350
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 2099
     move-result v5
 
-    .line 2102
     goto/16 :goto_e
 
-    .line 2103
+    .line 351
     :pswitch_64
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2105
     move-result-object v2
 
-    .line 2108
     check-cast v2, Ljava/util/List;
 
-    .line 2109
+    .line 352
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeInt64ListNoTag(Ljava/util/List;)I
 
-    .line 2111
     move-result v2
 
-    .line 2114
     if-lez v2, :cond_b
 
-    .line 2115
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 353
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2117
     move-result v8
 
-    .line 2120
+    .line 354
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 2121
     move-result v5
 
-    .line 2124
     goto/16 :goto_e
 
-    .line 2125
+    .line 355
     :pswitch_65
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2127
     move-result-object v2
 
-    .line 2130
     check-cast v2, Ljava/util/List;
 
-    .line 2131
+    .line 356
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32ListNoTag(Ljava/util/List;)I
 
-    .line 2133
     move-result v2
 
-    .line 2136
     if-lez v2, :cond_b
 
-    .line 2137
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 357
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2139
     move-result v8
 
-    .line 2142
+    .line 358
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 2143
     move-result v5
 
-    .line 2146
     goto/16 :goto_e
 
-    .line 2147
+    .line 359
     :pswitch_66
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2149
     move-result-object v2
 
-    .line 2152
     check-cast v2, Ljava/util/List;
 
-    .line 2153
+    .line 360
     invoke-static {v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64ListNoTag(Ljava/util/List;)I
 
-    .line 2155
     move-result v2
 
-    .line 2158
     if-lez v2, :cond_b
 
-    .line 2159
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 361
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2161
     move-result v8
 
-    .line 2164
+    .line 362
     invoke-static {v2, v8, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 2165
     move-result v5
 
-    .line 2168
     goto/16 :goto_e
 
-    .line 2169
+    .line 363
     :pswitch_67
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2171
     move-result-object v2
 
-    .line 2174
     check-cast v2, Ljava/util/List;
 
-    .line 2175
+    .line 364
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeSInt64List(ILjava/util/List;)I
 
-    .line 2177
     move-result v2
 
-    .line 2180
     goto/16 :goto_d
 
-    .line 2181
+    .line 365
     :pswitch_68
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2183
     move-result-object v2
 
-    .line 2186
     check-cast v2, Ljava/util/List;
 
-    .line 2187
+    .line 366
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeSInt32List(ILjava/util/List;)I
 
-    .line 2189
     move-result v2
 
-    .line 2192
     goto/16 :goto_d
 
-    .line 2193
+    .line 367
     :pswitch_69
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2195
     move-result-object v2
 
-    .line 2198
     check-cast v2, Ljava/util/List;
 
-    .line 2199
+    .line 368
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64List(ILjava/util/List;)I
 
-    .line 2201
     move-result v2
 
-    .line 2204
     goto/16 :goto_d
 
-    .line 2205
+    .line 369
     :pswitch_6a
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2207
     move-result-object v2
 
-    .line 2210
     check-cast v2, Ljava/util/List;
 
-    .line 2211
+    .line 370
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32List(ILjava/util/List;)I
 
-    .line 2213
     move-result v2
 
-    .line 2216
     goto/16 :goto_d
 
-    .line 2217
+    .line 371
     :pswitch_6b
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2219
     move-result-object v2
 
-    .line 2222
     check-cast v2, Ljava/util/List;
 
-    .line 2223
+    .line 372
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeEnumList(ILjava/util/List;)I
 
-    .line 2225
     move-result v2
 
-    .line 2228
     goto/16 :goto_d
 
-    .line 2229
+    .line 373
     :pswitch_6c
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2231
     move-result-object v2
 
-    .line 2234
     check-cast v2, Ljava/util/List;
 
-    .line 2235
+    .line 374
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeUInt32List(ILjava/util/List;)I
 
-    .line 2237
     move-result v2
 
-    .line 2240
     goto/16 :goto_d
 
-    .line 2241
+    .line 375
     :pswitch_6d
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2243
     move-result-object v2
 
-    .line 2246
     check-cast v2, Ljava/util/List;
 
-    .line 2247
+    .line 376
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeByteStringList(ILjava/util/List;)I
 
-    .line 2249
     move-result v2
 
-    .line 2252
     goto/16 :goto_d
 
-    .line 2253
+    .line 377
     :pswitch_6e
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2255
     move-result-object v2
 
-    .line 2258
     check-cast v2, Ljava/util/List;
 
-    .line 2259
     invoke-virtual {v0, v4}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 2261
     move-result-object v8
 
-    .line 2264
+    .line 378
     invoke-static {v13, v2, v8}, Lcom/google/protobuf/SchemaUtil;->computeSizeMessageList(ILjava/util/List;Lcom/google/protobuf/Schema;)I
 
-    .line 2265
     move-result v2
 
-    .line 2268
     goto/16 :goto_d
 
-    .line 2269
+    .line 379
     :pswitch_6f
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2271
     move-result-object v2
 
-    .line 2274
     check-cast v2, Ljava/util/List;
 
-    .line 2275
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeStringList(ILjava/util/List;)I
 
-    .line 2277
     move-result v2
 
-    .line 2280
     goto/16 :goto_d
 
-    .line 2281
+    .line 380
     :pswitch_70
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2283
     move-result-object v2
 
-    .line 2286
     check-cast v2, Ljava/util/List;
 
-    .line 2287
+    .line 381
     sget-object v8, Lcom/google/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
 
-    .line 2289
+    .line 382
     invoke-interface {v2}, Ljava/util/List;->size()I
 
-    .line 2291
     move-result v2
 
-    .line 2294
     if-nez v2, :cond_f
 
-    .line 2295
     const/4 v8, 0x0
 
-    .line 2297
     goto/16 :goto_13
 
-    .line 2298
+    .line 383
     :cond_f
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2300
     move-result v8
 
-    .line 2303
     const/4 v9, 0x1
 
-    .line 2304
     add-int/2addr v8, v9
 
-    .line 2305
     mul-int/2addr v8, v2
 
-    .line 2306
     goto/16 :goto_13
 
-    .line 2307
+    .line 384
     :pswitch_71
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2309
     move-result-object v2
 
-    .line 2312
     check-cast v2, Ljava/util/List;
 
-    .line 2313
+    .line 385
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32List(ILjava/util/List;)I
 
-    .line 2315
     move-result v2
 
-    .line 2318
     goto/16 :goto_d
 
-    .line 2319
+    .line 386
     :pswitch_72
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2321
     move-result-object v2
 
-    .line 2324
     check-cast v2, Ljava/util/List;
 
-    .line 2325
+    .line 387
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64List(ILjava/util/List;)I
 
-    .line 2327
     move-result v2
 
-    .line 2330
     goto/16 :goto_d
 
-    .line 2331
+    .line 388
     :pswitch_73
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2333
     move-result-object v2
 
-    .line 2336
     check-cast v2, Ljava/util/List;
 
-    .line 2337
+    .line 389
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeInt32List(ILjava/util/List;)I
 
-    .line 2339
     move-result v2
 
-    .line 2342
     goto/16 :goto_d
 
-    .line 2343
+    .line 390
     :pswitch_74
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2345
     move-result-object v2
 
-    .line 2348
     check-cast v2, Ljava/util/List;
 
-    .line 2349
+    .line 391
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeUInt64List(ILjava/util/List;)I
 
-    .line 2351
     move-result v2
 
-    .line 2354
     goto/16 :goto_d
 
-    .line 2355
+    .line 392
     :pswitch_75
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2357
     move-result-object v2
 
-    .line 2360
     check-cast v2, Ljava/util/List;
 
-    .line 2361
+    .line 393
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeInt64List(ILjava/util/List;)I
 
-    .line 2363
     move-result v2
 
-    .line 2366
     goto/16 :goto_d
 
-    .line 2367
+    .line 394
     :pswitch_76
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2369
     move-result-object v2
 
-    .line 2372
     check-cast v2, Ljava/util/List;
 
-    .line 2373
+    .line 395
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed32List(ILjava/util/List;)I
 
-    .line 2375
     move-result v2
 
-    .line 2378
     goto/16 :goto_d
 
-    .line 2379
+    .line 396
     :pswitch_77
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2381
     move-result-object v2
 
-    .line 2384
     check-cast v2, Ljava/util/List;
 
-    .line 2385
+    .line 397
     invoke-static {v13, v2}, Lcom/google/protobuf/SchemaUtil;->computeSizeFixed64List(ILjava/util/List;)I
 
-    .line 2387
     move-result v2
 
-    .line 2390
     goto/16 :goto_d
 
-    .line 2391
     :pswitch_78
     and-int v2, v11, v15
 
-    .line 2393
     if-eqz v2, :cond_b
 
-    .line 2395
+    .line 398
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2397
     move-result-object v2
 
-    .line 2400
     check-cast v2, Lcom/google/protobuf/MessageLite;
 
-    .line 2401
+    .line 399
     invoke-virtual {v0, v4}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 2403
     move-result-object v8
 
-    .line 2406
-    invoke-static {v13, v2, v8}, Lcom/google/protobuf/CodedOutputStream;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+    .line 400
+    invoke-static {v13, v2, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
 
-    .line 2407
     move-result v2
 
-    .line 2410
     goto/16 :goto_d
 
-    .line 2411
     :pswitch_79
     and-int v2, v11, v15
 
-    .line 2413
     if-eqz v2, :cond_13
 
-    .line 2415
+    .line 401
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
-    .line 2417
     move-result-wide v8
 
-    .line 2420
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 402
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2421
     move-result v2
 
-    .line 2424
     const/4 v13, 0x1
 
-    .line 2425
     shl-long v14, v8, v13
 
-    .line 2426
     const/16 v17, 0x3f
 
-    .line 2428
     shr-long v8, v8, v17
 
-    .line 2430
     xor-long/2addr v8, v14
 
-    .line 2432
-    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    .line 403
+    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 2433
     move-result v8
 
-    .line 2436
     add-int/2addr v8, v2
 
-    .line 2437
     add-int/2addr v5, v8
 
-    .line 2438
     :cond_10
     :goto_1a
     const/4 v2, 0x1
 
-    .line 2439
     :cond_11
     :goto_1b
     const/4 v8, 0x4
 
-    .line 2440
     :cond_12
     :goto_1c
     const/16 v9, 0x8
 
-    .line 2441
     goto/16 :goto_22
 
-    .line 2443
     :cond_13
     const/16 v17, 0x3f
 
-    .line 2445
     goto :goto_1a
 
-    .line 2447
     :pswitch_7a
     const/16 v17, 0x3f
 
-    .line 2448
     and-int v2, v11, v15
 
-    .line 2450
     if-eqz v2, :cond_10
 
-    .line 2452
+    .line 404
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 2454
     move-result v2
 
-    .line 2457
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 405
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2458
     move-result v8
 
-    .line 2461
     const/4 v9, 0x1
 
-    .line 2462
     shl-int/lit8 v13, v2, 0x1
 
-    .line 2463
     shr-int/lit8 v2, v2, 0x1f
 
-    .line 2465
     xor-int/2addr v2, v13
 
-    .line 2467
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    .line 406
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
-    .line 2468
     move-result v2
 
-    .line 2471
     :goto_1d
     add-int/2addr v2, v8
 
-    .line 2472
     :goto_1e
     add-int/2addr v5, v2
 
-    .line 2473
     goto :goto_1a
 
-    .line 2474
     :pswitch_7b
     const/16 v17, 0x3f
 
-    .line 2475
     and-int v2, v11, v15
 
-    .line 2477
     if-eqz v2, :cond_10
 
-    .line 2479
     const/16 v2, 0x8
 
-    .line 2481
+    .line 407
     invoke-static {v13, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 2483
     move-result v5
 
-    .line 2486
     move v9, v2
 
-    .line 2487
     const/4 v2, 0x1
 
-    .line 2488
     const/4 v8, 0x4
 
-    .line 2489
     goto/16 :goto_22
 
-    .line 2490
     :pswitch_7c
     const/16 v17, 0x3f
 
-    .line 2492
     and-int v2, v11, v15
 
-    .line 2494
     if-eqz v2, :cond_10
 
-    .line 2496
     const/4 v2, 0x4
 
-    .line 2498
+    .line 408
     invoke-static {v13, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 2499
     move-result v5
 
-    .line 2502
     move v8, v2
 
-    .line 2503
     const/4 v2, 0x1
 
-    .line 2504
     goto :goto_1c
 
-    .line 2505
     :pswitch_7d
     const/16 v17, 0x3f
 
-    .line 2506
     and-int v2, v11, v15
 
-    .line 2508
     if-eqz v2, :cond_10
 
-    .line 2510
+    .line 409
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 2512
     move-result v2
 
-    .line 2515
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 410
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2516
     move-result v8
 
-    .line 2519
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    .line 411
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
-    .line 2520
     move-result v2
 
-    .line 2523
     goto :goto_1d
 
-    .line 2524
     :pswitch_7e
     const/16 v17, 0x3f
 
-    .line 2525
     and-int v2, v11, v15
 
-    .line 2527
     if-eqz v2, :cond_10
 
-    .line 2529
+    .line 412
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 2531
     move-result v2
 
-    .line 2534
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 413
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2535
     move-result v8
 
-    .line 2538
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
-    .line 2539
     move-result v2
 
-    .line 2542
     goto :goto_1d
 
-    .line 2543
     :pswitch_7f
     const/16 v17, 0x3f
 
-    .line 2544
     and-int v2, v11, v15
 
-    .line 2546
     if-eqz v2, :cond_10
 
-    .line 2548
+    .line 414
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2550
     move-result-object v2
 
-    .line 2553
     check-cast v2, Lcom/google/protobuf/ByteString;
 
-    .line 2554
-    invoke-static {v13, v2}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+    .line 415
+    invoke-static {v13, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
-    .line 2556
     move-result v2
 
-    .line 2559
     goto :goto_1e
 
-    .line 2560
     :pswitch_80
     const/16 v17, 0x3f
 
-    .line 2561
     and-int v2, v11, v15
 
-    .line 2563
     if-eqz v2, :cond_10
 
-    .line 2565
+    .line 416
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2567
     move-result-object v2
 
-    .line 2570
+    .line 417
     invoke-virtual {v0, v4}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 2571
     move-result-object v8
 
-    .line 2574
     sget-object v9, Lcom/google/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
 
-    .line 2575
+    .line 418
     check-cast v2, Lcom/google/protobuf/MessageLite;
 
-    .line 2577
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 419
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2579
     move-result v9
 
-    .line 2582
+    .line 420
     check-cast v2, Lcom/google/protobuf/AbstractMessageLite;
 
-    .line 2583
     invoke-virtual {v2, v8}, Lcom/google/protobuf/AbstractMessageLite;->getSerializedSize(Lcom/google/protobuf/Schema;)I
 
-    .line 2585
     move-result v2
 
-    .line 2588
+    .line 421
     invoke-static {v2, v2, v9, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(IIII)I
 
-    .line 2589
     move-result v5
 
-    .line 2592
     goto/16 :goto_1a
 
-    .line 2593
     :pswitch_81
     const/16 v17, 0x3f
 
-    .line 2595
     and-int v2, v11, v15
 
-    .line 2597
     if-eqz v2, :cond_10
 
-    .line 2599
+    .line 422
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2601
     move-result-object v2
 
-    .line 2604
+    .line 423
     instance-of v8, v2, Lcom/google/protobuf/ByteString;
 
-    .line 2605
     if-eqz v8, :cond_14
 
-    .line 2607
+    .line 424
     check-cast v2, Lcom/google/protobuf/ByteString;
 
-    .line 2609
-    invoke-static {v13, v2}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+    invoke-static {v13, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
-    .line 2611
     move-result v2
 
-    .line 2614
     :goto_1f
     add-int/2addr v2, v5
 
-    .line 2615
     move v5, v2
 
-    .line 2616
     goto/16 :goto_1a
 
-    .line 2617
+    .line 425
     :cond_14
     check-cast v2, Ljava/lang/String;
 
-    .line 2619
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 426
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2621
     move-result v8
 
-    .line 2624
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeStringSizeNoTag(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeStringSizeNoTag(Ljava/lang/String;)I
 
-    .line 2625
     move-result v2
 
-    .line 2628
     add-int/2addr v2, v8
 
-    .line 2629
     goto :goto_1f
 
-    .line 2630
     :pswitch_82
     const/16 v17, 0x3f
 
-    .line 2631
     and-int v2, v11, v15
 
-    .line 2633
     if-eqz v2, :cond_10
 
-    .line 2635
     const/4 v2, 0x1
 
-    .line 2637
+    .line 427
     invoke-static {v13, v2, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 2638
     move-result v5
 
-    .line 2641
     goto/16 :goto_1b
 
-    .line 2642
     :pswitch_83
     const/4 v2, 0x1
 
-    .line 2644
     const/16 v17, 0x3f
 
-    .line 2645
     and-int v8, v11, v15
 
-    .line 2647
     if-eqz v8, :cond_11
 
-    .line 2649
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeFixed32Size(I)I
+    .line 428
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed32Size(I)I
 
-    .line 2651
     move-result v8
 
-    .line 2654
     :goto_20
     add-int/2addr v5, v8
 
-    .line 2655
     goto/16 :goto_1b
 
-    .line 2656
     :pswitch_84
     const/4 v2, 0x1
 
-    .line 2658
     const/16 v17, 0x3f
 
-    .line 2659
     and-int v8, v11, v15
 
-    .line 2661
     if-eqz v8, :cond_11
 
-    .line 2663
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeFixed64Size(I)I
+    .line 429
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed64Size(I)I
 
-    .line 2665
     move-result v8
 
-    .line 2668
     goto :goto_20
 
-    .line 2669
     :pswitch_85
     const/4 v2, 0x1
 
-    .line 2670
     const/16 v17, 0x3f
 
-    .line 2671
     and-int v14, v11, v15
 
-    .line 2673
     if-eqz v14, :cond_11
 
-    .line 2675
+    .line 430
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 2677
     move-result v8
 
-    .line 2680
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 431
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2681
     move-result v9
 
-    .line 2684
-    invoke-static {v8}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    invoke-static {v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
-    .line 2685
     move-result v8
 
-    .line 2688
     add-int/2addr v8, v9
 
-    .line 2689
     goto :goto_20
 
-    .line 2690
     :pswitch_86
     const/4 v2, 0x1
 
-    .line 2691
     const/16 v17, 0x3f
 
-    .line 2692
     and-int v14, v11, v15
 
-    .line 2694
     if-eqz v14, :cond_11
 
-    .line 2696
+    .line 432
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
-    .line 2698
     move-result-wide v8
 
-    .line 2701
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 433
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2702
     move-result v13
 
-    .line 2705
-    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 2706
     move-result v8
 
-    .line 2709
     :goto_21
     add-int/2addr v8, v13
 
-    .line 2710
     goto :goto_20
 
-    .line 2711
     :pswitch_87
     const/4 v2, 0x1
 
-    .line 2712
     const/16 v17, 0x3f
 
-    .line 2713
     and-int v14, v11, v15
 
-    .line 2715
     if-eqz v14, :cond_11
 
-    .line 2717
+    .line 434
     invoke-virtual {v3, v1, v8, v9}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
-    .line 2719
     move-result-wide v8
 
-    .line 2722
-    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    .line 435
+    invoke-static {v13}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
-    .line 2723
     move-result v13
 
-    .line 2726
-    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    .line 436
+    invoke-static {v8, v9}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
-    .line 2727
     move-result v8
 
-    .line 2730
     goto :goto_21
 
-    .line 2731
     :pswitch_88
     const/4 v2, 0x1
 
-    .line 2732
     const/16 v17, 0x3f
 
-    .line 2733
     and-int v8, v11, v15
 
-    .line 2735
     if-eqz v8, :cond_11
 
-    .line 2737
     const/4 v8, 0x4
 
-    .line 2739
+    .line 437
     invoke-static {v13, v8, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 2740
     move-result v5
 
-    .line 2743
     goto/16 :goto_1c
 
-    .line 2744
     :pswitch_89
     const/4 v2, 0x1
 
-    .line 2746
     const/4 v8, 0x4
 
-    .line 2747
     const/16 v17, 0x3f
 
-    .line 2748
     and-int v9, v11, v15
 
-    .line 2750
     if-eqz v9, :cond_12
 
-    .line 2752
     const/16 v9, 0x8
 
-    .line 2754
+    .line 438
     invoke-static {v13, v9, v5}, Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;->m(III)I
 
-    .line 2756
     move-result v5
 
-    .line 2759
     :goto_22
     add-int/lit8 v4, v4, 0x3
 
-    .line 2760
     move v8, v2
 
-    .line 2762
     move v9, v12
 
-    .line 2763
     move/from16 v2, v17
 
-    .line 2764
     goto/16 :goto_b
 
-    .line 2766
+    .line 439
     :cond_15
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 2768
+    .line 440
     move-object v0, v1
 
-    .line 2771
     check-cast v0, Lcom/google/protobuf/GeneratedMessageLite;
 
-    .line 2772
     iget-object v0, v0, Lcom/google/protobuf/GeneratedMessageLite;->unknownFields:Lcom/google/protobuf/UnknownFieldSetLite;
 
-    .line 2774
+    .line 441
     invoke-virtual {v0}, Lcom/google/protobuf/UnknownFieldSetLite;->getSerializedSize()I
 
-    .line 2776
     move-result v0
 
-    .line 2779
     add-int/2addr v0, v5
 
-    .line 2780
     :goto_23
     return v0
 
@@ -16665,6 +15652,7 @@
     :goto_24
     return v0
 
+    .line 1323
     :pswitch_data_0
     .packed-switch 0x12
         :pswitch_d
@@ -16700,6 +15688,7 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
+    .line 1324
 .end method
 
 .method public final setFieldPresent(ILjava/lang/Object;)V
@@ -16883,3972 +15872,3128 @@
 .method public final writeTo(Ljava/lang/Object;Lcom/google/protobuf/CodedOutputStreamWriter;)V
     .locals 19
 
-    .line 1
     move-object/from16 v0, p0
 
-    .line 2
     move-object/from16 v1, p1
 
-    .line 4
     move-object/from16 v2, p2
 
-    .line 6
+    .line 1
     invoke-virtual/range {p2 .. p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 8
+    .line 2
     iget-boolean v3, v0, Lcom/google/protobuf/MessageSchema;->proto3:Z
 
-    .line 11
     if-eqz v3, :cond_3
 
-    .line 13
+    .line 3
     iget-object v3, v0, Lcom/google/protobuf/MessageSchema;->buffer:[I
 
-    .line 15
     array-length v4, v3
 
-    .line 17
     const/4 v5, 0x0
 
-    .line 18
     move v6, v5
 
-    .line 19
     :goto_0
     if-ge v6, v4, :cond_2
 
-    .line 20
+    .line 4
     invoke-virtual {v0, v6}, Lcom/google/protobuf/MessageSchema;->typeAndOffsetAt(I)I
 
-    .line 22
     move-result v7
 
-    .line 25
+    .line 5
     aget v8, v3, v6
 
-    .line 26
+    .line 6
     invoke-static {v7}, Lcom/google/protobuf/MessageSchema;->type(I)I
 
-    .line 28
     move-result v9
 
-    .line 31
     const/16 v10, 0x3f
 
-    .line 32
     const/4 v11, 0x1
 
-    .line 34
-    iget-object v12, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object v12, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 35
     const v13, 0xfffff
 
-    .line 37
     packed-switch v9, :pswitch_data_0
 
-    .line 40
     goto/16 :goto_1
 
-    .line 43
+    .line 7
     :pswitch_0
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 45
     move-result v9
 
-    .line 48
     if-eqz v9, :cond_1
 
-    .line 49
     and-int/2addr v7, v13
 
-    .line 51
     int-to-long v9, v7
 
-    .line 52
+    .line 8
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
     move-result-object v7
 
-    .line 56
+    .line 9
     invoke-virtual {v0, v6}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 57
     move-result-object v9
 
-    .line 60
+    .line 10
     invoke-virtual {v2, v8, v7, v9}, Lcom/google/protobuf/CodedOutputStreamWriter;->writeGroup(ILjava/lang/Object;Lcom/google/protobuf/Schema;)V
 
-    .line 61
     goto/16 :goto_1
 
-    .line 64
+    .line 11
     :pswitch_1
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 66
     move-result v9
 
-    .line 69
     if-eqz v9, :cond_1
 
-    .line 70
     and-int/2addr v7, v13
 
-    .line 72
     int-to-long v13, v7
 
-    .line 73
+    .line 12
     invoke-static {v13, v14, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 74
     move-result-wide v13
 
-    .line 77
     shl-long v15, v13, v11
 
-    .line 78
     shr-long v9, v13, v10
 
-    .line 80
     xor-long/2addr v9, v15
 
-    .line 82
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    .line 13
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 83
     goto/16 :goto_1
 
-    .line 86
+    .line 14
     :pswitch_2
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 88
     move-result v9
 
-    .line 91
     if-eqz v9, :cond_1
 
-    .line 92
     and-int/2addr v7, v13
 
-    .line 94
     int-to-long v9, v7
 
-    .line 95
+    .line 15
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 96
     move-result v7
 
-    .line 99
     shl-int/lit8 v9, v7, 0x1
 
-    .line 100
     shr-int/lit8 v7, v7, 0x1f
 
-    .line 102
     xor-int/2addr v7, v9
 
-    .line 104
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
+    .line 16
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
-    .line 105
     goto/16 :goto_1
 
-    .line 108
+    .line 17
     :pswitch_3
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 110
     move-result v9
 
-    .line 113
     if-eqz v9, :cond_1
 
-    .line 114
     and-int/2addr v7, v13
 
-    .line 116
     int-to-long v9, v7
 
-    .line 117
+    .line 18
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 118
     move-result-wide v9
 
-    .line 121
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    .line 19
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 122
     goto/16 :goto_1
 
-    .line 125
+    .line 20
     :pswitch_4
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 127
     move-result v9
 
-    .line 130
     if-eqz v9, :cond_1
 
-    .line 131
     and-int/2addr v7, v13
 
-    .line 133
     int-to-long v9, v7
 
-    .line 134
+    .line 21
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 135
     move-result v7
 
-    .line 138
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    .line 22
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 139
     goto/16 :goto_1
 
-    .line 142
+    .line 23
     :pswitch_5
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 144
     move-result v9
 
-    .line 147
     if-eqz v9, :cond_1
 
-    .line 148
     and-int/2addr v7, v13
 
-    .line 150
     int-to-long v9, v7
 
-    .line 151
+    .line 24
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 152
     move-result v7
 
-    .line 155
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+    .line 25
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32(II)V
 
-    .line 156
     goto/16 :goto_1
 
-    .line 159
+    .line 26
     :pswitch_6
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 161
     move-result v9
 
-    .line 164
     if-eqz v9, :cond_1
 
-    .line 165
     and-int/2addr v7, v13
 
-    .line 167
     int-to-long v9, v7
 
-    .line 168
+    .line 27
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 169
     move-result v7
 
-    .line 172
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
+    .line 28
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
-    .line 173
     goto/16 :goto_1
 
-    .line 176
+    .line 29
     :pswitch_7
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 178
     move-result v9
 
-    .line 181
     if-eqz v9, :cond_1
 
-    .line 182
     and-int/2addr v7, v13
 
-    .line 184
     int-to-long v9, v7
 
-    .line 185
+    .line 30
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 186
     move-result-object v7
 
-    .line 189
     check-cast v7, Lcom/google/protobuf/ByteString;
 
-    .line 190
+    .line 31
     invoke-virtual {v2, v8, v7}, Lcom/google/protobuf/CodedOutputStreamWriter;->writeBytes(ILcom/google/protobuf/ByteString;)V
 
-    .line 192
     goto/16 :goto_1
 
-    .line 195
+    .line 32
     :pswitch_8
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 197
     move-result v9
 
-    .line 200
     if-eqz v9, :cond_1
 
-    .line 201
     and-int/2addr v7, v13
 
-    .line 203
     int-to-long v9, v7
 
-    .line 204
+    .line 33
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 205
     move-result-object v7
 
-    .line 208
+    .line 34
     invoke-virtual {v0, v6}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 209
     move-result-object v9
 
-    .line 212
+    .line 35
     check-cast v7, Lcom/google/protobuf/MessageLite;
 
-    .line 213
-    invoke-virtual {v12, v8, v7, v9}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    invoke-virtual {v12, v8, v7, v9}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
 
-    .line 215
     goto/16 :goto_1
 
-    .line 218
+    .line 36
     :pswitch_9
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 220
     move-result v9
 
-    .line 223
     if-eqz v9, :cond_1
 
-    .line 224
     and-int/2addr v7, v13
 
-    .line 226
     int-to-long v9, v7
 
-    .line 227
+    .line 37
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 228
     move-result-object v7
 
-    .line 231
     invoke-static {v8, v7, v2}, Lcom/google/protobuf/MessageSchema;->writeString(ILjava/lang/Object;Lcom/google/protobuf/CodedOutputStreamWriter;)V
 
-    .line 232
     goto/16 :goto_1
 
-    .line 235
+    .line 38
     :pswitch_a
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 237
     move-result v9
 
-    .line 240
     if-eqz v9, :cond_1
 
-    .line 241
     and-int/2addr v7, v13
 
-    .line 243
     int-to-long v9, v7
 
-    .line 244
+    .line 39
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 245
     move-result-object v7
 
-    .line 248
     check-cast v7, Ljava/lang/Boolean;
 
-    .line 249
     invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 251
     move-result v7
 
-    .line 254
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeBool(IZ)V
+    .line 40
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeBool(IZ)V
 
-    .line 255
     goto/16 :goto_1
 
-    .line 258
+    .line 41
     :pswitch_b
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 260
     move-result v9
 
-    .line 263
     if-eqz v9, :cond_1
 
-    .line 264
     and-int/2addr v7, v13
 
-    .line 266
     int-to-long v9, v7
 
-    .line 267
+    .line 42
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 268
     move-result v7
 
-    .line 271
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    .line 43
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 272
     goto/16 :goto_1
 
-    .line 275
+    .line 44
     :pswitch_c
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 277
     move-result v9
 
-    .line 280
     if-eqz v9, :cond_1
 
-    .line 281
     and-int/2addr v7, v13
 
-    .line 283
     int-to-long v9, v7
 
-    .line 284
+    .line 45
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 285
     move-result-wide v9
 
-    .line 288
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    .line 46
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 289
     goto/16 :goto_1
 
-    .line 292
+    .line 47
     :pswitch_d
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 294
     move-result v9
 
-    .line 297
     if-eqz v9, :cond_1
 
-    .line 298
     and-int/2addr v7, v13
 
-    .line 300
     int-to-long v9, v7
 
-    .line 301
+    .line 48
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 302
     move-result v7
 
-    .line 305
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+    .line 49
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32(II)V
 
-    .line 306
     goto/16 :goto_1
 
-    .line 309
+    .line 50
     :pswitch_e
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 311
     move-result v9
 
-    .line 314
     if-eqz v9, :cond_1
 
-    .line 315
     and-int/2addr v7, v13
 
-    .line 317
     int-to-long v9, v7
 
-    .line 318
+    .line 51
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 319
     move-result-wide v9
 
-    .line 322
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    .line 52
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 323
     goto/16 :goto_1
 
-    .line 326
+    .line 53
     :pswitch_f
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 328
     move-result v9
 
-    .line 331
     if-eqz v9, :cond_1
 
-    .line 332
     and-int/2addr v7, v13
 
-    .line 334
     int-to-long v9, v7
 
-    .line 335
+    .line 54
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 336
     move-result-wide v9
 
-    .line 339
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    .line 55
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 340
     goto/16 :goto_1
 
-    .line 343
+    .line 56
     :pswitch_10
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 345
     move-result v9
 
-    .line 348
     if-eqz v9, :cond_1
 
-    .line 349
     and-int/2addr v7, v13
 
-    .line 351
     int-to-long v9, v7
 
-    .line 352
+    .line 57
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 353
     move-result-object v7
 
-    .line 356
     check-cast v7, Ljava/lang/Float;
 
-    .line 357
     invoke-virtual {v7}, Ljava/lang/Float;->floatValue()F
 
-    .line 359
     move-result v7
 
-    .line 362
+    .line 58
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 363
+    .line 59
     invoke-static {v7}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
-    .line 366
     move-result v7
 
-    .line 369
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 370
     goto/16 :goto_1
 
-    .line 373
+    .line 60
     :pswitch_11
     invoke-virtual {v0, v8, v6, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 375
     move-result v9
 
-    .line 378
     if-eqz v9, :cond_1
 
-    .line 379
     and-int/2addr v7, v13
 
-    .line 381
     int-to-long v9, v7
 
-    .line 382
+    .line 61
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 383
     move-result-object v7
 
-    .line 386
     check-cast v7, Ljava/lang/Double;
 
-    .line 387
     invoke-virtual {v7}, Ljava/lang/Double;->doubleValue()D
 
-    .line 389
     move-result-wide v9
 
-    .line 392
+    .line 62
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 393
+    .line 63
     invoke-static {v9, v10}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
-    .line 396
     move-result-wide v9
 
-    .line 399
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 400
     goto/16 :goto_1
 
-    .line 403
     :pswitch_12
     and-int/2addr v7, v13
 
-    .line 405
     int-to-long v7, v7
 
-    .line 406
+    .line 64
     invoke-static {v7, v8, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 407
     move-result-object v7
 
-    .line 410
     if-nez v7, :cond_0
 
-    .line 411
     goto/16 :goto_1
 
-    .line 413
+    .line 65
     :cond_0
     invoke-virtual {v0, v6}, Lcom/google/protobuf/MessageSchema;->getMapFieldDefaultEntry(I)Ljava/lang/Object;
 
-    .line 415
     move-result-object v1
 
-    .line 418
     iget-object v0, v0, Lcom/google/protobuf/MessageSchema;->mapFieldSchema:Lcom/google/protobuf/MapFieldSchemaLite;
 
-    .line 419
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 421
+    .line 66
     invoke-static {v1}, Landroidx/appcompat/app/WindowDecorActionBar$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
-    .line 424
     const/4 v0, 0x0
 
-    .line 427
     throw v0
 
-    .line 428
+    .line 67
     :pswitch_13
     aget v8, v3, v6
 
-    .line 429
     and-int/2addr v7, v13
 
-    .line 431
     int-to-long v9, v7
 
-    .line 432
+    .line 68
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 433
     move-result-object v7
 
-    .line 436
     check-cast v7, Ljava/util/List;
 
-    .line 437
+    .line 69
     invoke-virtual {v0, v6}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 439
     move-result-object v9
 
-    .line 442
+    .line 70
     invoke-static {v8, v7, v2, v9}, Lcom/google/protobuf/SchemaUtil;->writeGroupList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Lcom/google/protobuf/Schema;)V
 
-    .line 443
     goto/16 :goto_1
 
-    .line 446
+    .line 71
     :pswitch_14
     aget v8, v3, v6
 
-    .line 448
     and-int/2addr v7, v13
 
-    .line 450
     int-to-long v9, v7
 
-    .line 451
+    .line 72
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 452
     move-result-object v7
 
-    .line 455
     check-cast v7, Ljava/util/List;
 
-    .line 456
+    .line 73
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeSInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 458
     goto/16 :goto_1
 
-    .line 461
+    .line 74
     :pswitch_15
     aget v8, v3, v6
 
-    .line 463
     and-int/2addr v7, v13
 
-    .line 465
     int-to-long v9, v7
 
-    .line 466
+    .line 75
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 467
     move-result-object v7
 
-    .line 470
     check-cast v7, Ljava/util/List;
 
-    .line 471
+    .line 76
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeSInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 473
     goto/16 :goto_1
 
-    .line 476
+    .line 77
     :pswitch_16
     aget v8, v3, v6
 
-    .line 478
     and-int/2addr v7, v13
 
-    .line 480
     int-to-long v9, v7
 
-    .line 481
+    .line 78
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 482
     move-result-object v7
 
-    .line 485
     check-cast v7, Ljava/util/List;
 
-    .line 486
+    .line 79
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeSFixed64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 488
     goto/16 :goto_1
 
-    .line 491
+    .line 80
     :pswitch_17
     aget v8, v3, v6
 
-    .line 493
     and-int/2addr v7, v13
 
-    .line 495
     int-to-long v9, v7
 
-    .line 496
+    .line 81
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 497
     move-result-object v7
 
-    .line 500
     check-cast v7, Ljava/util/List;
 
-    .line 501
+    .line 82
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeSFixed32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 503
     goto/16 :goto_1
 
-    .line 506
+    .line 83
     :pswitch_18
     aget v8, v3, v6
 
-    .line 508
     and-int/2addr v7, v13
 
-    .line 510
     int-to-long v9, v7
 
-    .line 511
+    .line 84
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 512
     move-result-object v7
 
-    .line 515
     check-cast v7, Ljava/util/List;
 
-    .line 516
+    .line 85
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeEnumList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 518
     goto/16 :goto_1
 
-    .line 521
+    .line 86
     :pswitch_19
     aget v8, v3, v6
 
-    .line 523
     and-int/2addr v7, v13
 
-    .line 525
     int-to-long v9, v7
 
-    .line 526
+    .line 87
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 527
     move-result-object v7
 
-    .line 530
     check-cast v7, Ljava/util/List;
 
-    .line 531
+    .line 88
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeUInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 533
     goto/16 :goto_1
 
-    .line 536
+    .line 89
     :pswitch_1a
     aget v8, v3, v6
 
-    .line 538
     and-int/2addr v7, v13
 
-    .line 540
     int-to-long v9, v7
 
-    .line 541
+    .line 90
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 542
     move-result-object v7
 
-    .line 545
     check-cast v7, Ljava/util/List;
 
-    .line 546
+    .line 91
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeBoolList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 548
     goto/16 :goto_1
 
-    .line 551
+    .line 92
     :pswitch_1b
     aget v8, v3, v6
 
-    .line 553
     and-int/2addr v7, v13
 
-    .line 555
     int-to-long v9, v7
 
-    .line 556
+    .line 93
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 557
     move-result-object v7
 
-    .line 560
     check-cast v7, Ljava/util/List;
 
-    .line 561
+    .line 94
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeFixed32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 563
     goto/16 :goto_1
 
-    .line 566
+    .line 95
     :pswitch_1c
     aget v8, v3, v6
 
-    .line 568
     and-int/2addr v7, v13
 
-    .line 570
     int-to-long v9, v7
 
-    .line 571
+    .line 96
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 572
     move-result-object v7
 
-    .line 575
     check-cast v7, Ljava/util/List;
 
-    .line 576
+    .line 97
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeFixed64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 578
     goto/16 :goto_1
 
-    .line 581
+    .line 98
     :pswitch_1d
     aget v8, v3, v6
 
-    .line 583
     and-int/2addr v7, v13
 
-    .line 585
     int-to-long v9, v7
 
-    .line 586
+    .line 99
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 587
     move-result-object v7
 
-    .line 590
     check-cast v7, Ljava/util/List;
 
-    .line 591
+    .line 100
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 593
     goto/16 :goto_1
 
-    .line 596
+    .line 101
     :pswitch_1e
     aget v8, v3, v6
 
-    .line 598
     and-int/2addr v7, v13
 
-    .line 600
     int-to-long v9, v7
 
-    .line 601
+    .line 102
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 602
     move-result-object v7
 
-    .line 605
     check-cast v7, Ljava/util/List;
 
-    .line 606
+    .line 103
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeUInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 608
     goto/16 :goto_1
 
-    .line 611
+    .line 104
     :pswitch_1f
     aget v8, v3, v6
 
-    .line 613
     and-int/2addr v7, v13
 
-    .line 615
     int-to-long v9, v7
 
-    .line 616
+    .line 105
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 617
     move-result-object v7
 
-    .line 620
     check-cast v7, Ljava/util/List;
 
-    .line 621
+    .line 106
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 623
     goto/16 :goto_1
 
-    .line 626
+    .line 107
     :pswitch_20
     aget v8, v3, v6
 
-    .line 628
     and-int/2addr v7, v13
 
-    .line 630
     int-to-long v9, v7
 
-    .line 631
+    .line 108
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 632
     move-result-object v7
 
-    .line 635
     check-cast v7, Ljava/util/List;
 
-    .line 636
+    .line 109
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeFloatList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 638
     goto/16 :goto_1
 
-    .line 641
+    .line 110
     :pswitch_21
     aget v8, v3, v6
 
-    .line 643
     and-int/2addr v7, v13
 
-    .line 645
     int-to-long v9, v7
 
-    .line 646
+    .line 111
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 647
     move-result-object v7
 
-    .line 650
     check-cast v7, Ljava/util/List;
 
-    .line 651
+    .line 112
     invoke-static {v8, v7, v2, v11}, Lcom/google/protobuf/SchemaUtil;->writeDoubleList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 653
     goto/16 :goto_1
 
-    .line 656
+    .line 113
     :pswitch_22
     aget v8, v3, v6
 
-    .line 658
     and-int/2addr v7, v13
 
-    .line 660
     int-to-long v9, v7
 
-    .line 661
+    .line 114
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 662
     move-result-object v7
 
-    .line 665
     check-cast v7, Ljava/util/List;
 
-    .line 666
+    .line 115
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeSInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 668
     goto/16 :goto_1
 
-    .line 671
+    .line 116
     :pswitch_23
     aget v8, v3, v6
 
-    .line 673
     and-int/2addr v7, v13
 
-    .line 675
     int-to-long v9, v7
 
-    .line 676
+    .line 117
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 677
     move-result-object v7
 
-    .line 680
     check-cast v7, Ljava/util/List;
 
-    .line 681
+    .line 118
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeSInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 683
     goto/16 :goto_1
 
-    .line 686
+    .line 119
     :pswitch_24
     aget v8, v3, v6
 
-    .line 688
     and-int/2addr v7, v13
 
-    .line 690
     int-to-long v9, v7
 
-    .line 691
+    .line 120
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 692
     move-result-object v7
 
-    .line 695
     check-cast v7, Ljava/util/List;
 
-    .line 696
+    .line 121
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeSFixed64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 698
     goto/16 :goto_1
 
-    .line 701
+    .line 122
     :pswitch_25
     aget v8, v3, v6
 
-    .line 703
     and-int/2addr v7, v13
 
-    .line 705
     int-to-long v9, v7
 
-    .line 706
+    .line 123
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 707
     move-result-object v7
 
-    .line 710
     check-cast v7, Ljava/util/List;
 
-    .line 711
+    .line 124
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeSFixed32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 713
     goto/16 :goto_1
 
-    .line 716
+    .line 125
     :pswitch_26
     aget v8, v3, v6
 
-    .line 718
     and-int/2addr v7, v13
 
-    .line 720
     int-to-long v9, v7
 
-    .line 721
+    .line 126
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 722
     move-result-object v7
 
-    .line 725
     check-cast v7, Ljava/util/List;
 
-    .line 726
+    .line 127
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeEnumList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 728
     goto/16 :goto_1
 
-    .line 731
+    .line 128
     :pswitch_27
     aget v8, v3, v6
 
-    .line 733
     and-int/2addr v7, v13
 
-    .line 735
     int-to-long v9, v7
 
-    .line 736
+    .line 129
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 737
     move-result-object v7
 
-    .line 740
     check-cast v7, Ljava/util/List;
 
-    .line 741
+    .line 130
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeUInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 743
     goto/16 :goto_1
 
-    .line 746
+    .line 131
     :pswitch_28
     aget v8, v3, v6
 
-    .line 748
     and-int/2addr v7, v13
 
-    .line 750
     int-to-long v9, v7
 
-    .line 751
+    .line 132
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 752
     move-result-object v7
 
-    .line 755
     check-cast v7, Ljava/util/List;
 
-    .line 756
+    .line 133
     invoke-static {v8, v7, v2}, Lcom/google/protobuf/SchemaUtil;->writeBytesList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;)V
 
-    .line 758
     goto/16 :goto_1
 
-    .line 761
+    .line 134
     :pswitch_29
     aget v8, v3, v6
 
-    .line 763
     and-int/2addr v7, v13
 
-    .line 765
     int-to-long v9, v7
 
-    .line 766
+    .line 135
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 767
     move-result-object v7
 
-    .line 770
     check-cast v7, Ljava/util/List;
 
-    .line 771
+    .line 136
     invoke-virtual {v0, v6}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 773
     move-result-object v9
 
-    .line 776
+    .line 137
     invoke-static {v8, v7, v2, v9}, Lcom/google/protobuf/SchemaUtil;->writeMessageList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Lcom/google/protobuf/Schema;)V
 
-    .line 777
     goto/16 :goto_1
 
-    .line 780
+    .line 138
     :pswitch_2a
     aget v8, v3, v6
 
-    .line 782
     and-int/2addr v7, v13
 
-    .line 784
     int-to-long v9, v7
 
-    .line 785
+    .line 139
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 786
     move-result-object v7
 
-    .line 789
     check-cast v7, Ljava/util/List;
 
-    .line 790
+    .line 140
     invoke-static {v8, v7, v2}, Lcom/google/protobuf/SchemaUtil;->writeStringList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;)V
 
-    .line 792
     goto/16 :goto_1
 
-    .line 795
+    .line 141
     :pswitch_2b
     aget v8, v3, v6
 
-    .line 797
     and-int/2addr v7, v13
 
-    .line 799
     int-to-long v9, v7
 
-    .line 800
+    .line 142
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 801
     move-result-object v7
 
-    .line 804
     check-cast v7, Ljava/util/List;
 
-    .line 805
+    .line 143
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeBoolList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 807
     goto/16 :goto_1
 
-    .line 810
+    .line 144
     :pswitch_2c
     aget v8, v3, v6
 
-    .line 812
     and-int/2addr v7, v13
 
-    .line 814
     int-to-long v9, v7
 
-    .line 815
+    .line 145
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 816
     move-result-object v7
 
-    .line 819
     check-cast v7, Ljava/util/List;
 
-    .line 820
+    .line 146
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeFixed32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 822
     goto/16 :goto_1
 
-    .line 825
+    .line 147
     :pswitch_2d
     aget v8, v3, v6
 
-    .line 827
     and-int/2addr v7, v13
 
-    .line 829
     int-to-long v9, v7
 
-    .line 830
+    .line 148
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 831
     move-result-object v7
 
-    .line 834
     check-cast v7, Ljava/util/List;
 
-    .line 835
+    .line 149
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeFixed64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 837
     goto/16 :goto_1
 
-    .line 840
+    .line 150
     :pswitch_2e
     aget v8, v3, v6
 
-    .line 842
     and-int/2addr v7, v13
 
-    .line 844
     int-to-long v9, v7
 
-    .line 845
+    .line 151
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 846
     move-result-object v7
 
-    .line 849
     check-cast v7, Ljava/util/List;
 
-    .line 850
+    .line 152
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 852
     goto/16 :goto_1
 
-    .line 855
+    .line 153
     :pswitch_2f
     aget v8, v3, v6
 
-    .line 857
     and-int/2addr v7, v13
 
-    .line 859
     int-to-long v9, v7
 
-    .line 860
+    .line 154
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 861
     move-result-object v7
 
-    .line 864
     check-cast v7, Ljava/util/List;
 
-    .line 865
+    .line 155
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeUInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 867
     goto/16 :goto_1
 
-    .line 870
+    .line 156
     :pswitch_30
     aget v8, v3, v6
 
-    .line 872
     and-int/2addr v7, v13
 
-    .line 874
     int-to-long v9, v7
 
-    .line 875
+    .line 157
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 876
     move-result-object v7
 
-    .line 879
     check-cast v7, Ljava/util/List;
 
-    .line 880
+    .line 158
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 882
     goto/16 :goto_1
 
-    .line 885
+    .line 159
     :pswitch_31
     aget v8, v3, v6
 
-    .line 887
     and-int/2addr v7, v13
 
-    .line 889
     int-to-long v9, v7
 
-    .line 890
+    .line 160
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 891
     move-result-object v7
 
-    .line 894
     check-cast v7, Ljava/util/List;
 
-    .line 895
+    .line 161
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeFloatList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 897
     goto/16 :goto_1
 
-    .line 900
+    .line 162
     :pswitch_32
     aget v8, v3, v6
 
-    .line 902
     and-int/2addr v7, v13
 
-    .line 904
     int-to-long v9, v7
 
-    .line 905
+    .line 163
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 906
     move-result-object v7
 
-    .line 909
     check-cast v7, Ljava/util/List;
 
-    .line 910
+    .line 164
     invoke-static {v8, v7, v2, v5}, Lcom/google/protobuf/SchemaUtil;->writeDoubleList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 912
     goto/16 :goto_1
 
-    .line 915
+    .line 165
     :pswitch_33
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 917
     move-result v9
 
-    .line 920
     if-eqz v9, :cond_1
 
-    .line 921
     and-int/2addr v7, v13
 
-    .line 923
     int-to-long v9, v7
 
-    .line 924
+    .line 166
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 925
     move-result-object v7
 
-    .line 928
+    .line 167
     invoke-virtual {v0, v6}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 929
     move-result-object v9
 
-    .line 932
+    .line 168
     invoke-virtual {v2, v8, v7, v9}, Lcom/google/protobuf/CodedOutputStreamWriter;->writeGroup(ILjava/lang/Object;Lcom/google/protobuf/Schema;)V
 
-    .line 933
     goto/16 :goto_1
 
-    .line 936
+    .line 169
     :pswitch_34
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 938
     move-result v9
 
-    .line 941
     if-eqz v9, :cond_1
 
-    .line 942
     and-int/2addr v7, v13
 
-    .line 944
     int-to-long v13, v7
 
-    .line 945
+    .line 170
     invoke-static {v13, v14, v1}, Lcom/google/protobuf/UnsafeUtil;->getLong(JLjava/lang/Object;)J
 
-    .line 946
     move-result-wide v13
 
-    .line 949
     shl-long v15, v13, v11
 
-    .line 950
     shr-long v9, v13, v10
 
-    .line 952
     xor-long/2addr v9, v15
 
-    .line 954
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    .line 171
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 955
     goto/16 :goto_1
 
-    .line 958
+    .line 172
     :pswitch_35
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 960
     move-result v9
 
-    .line 963
     if-eqz v9, :cond_1
 
-    .line 964
     and-int/2addr v7, v13
 
-    .line 966
     int-to-long v9, v7
 
-    .line 967
+    .line 173
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getInt(JLjava/lang/Object;)I
 
-    .line 968
     move-result v7
 
-    .line 971
     shl-int/lit8 v9, v7, 0x1
 
-    .line 972
     shr-int/lit8 v7, v7, 0x1f
 
-    .line 974
     xor-int/2addr v7, v9
 
-    .line 976
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
+    .line 174
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
-    .line 977
     goto/16 :goto_1
 
-    .line 980
+    .line 175
     :pswitch_36
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 982
     move-result v9
 
-    .line 985
     if-eqz v9, :cond_1
 
-    .line 986
     and-int/2addr v7, v13
 
-    .line 988
     int-to-long v9, v7
 
-    .line 989
+    .line 176
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getLong(JLjava/lang/Object;)J
 
-    .line 990
     move-result-wide v9
 
-    .line 993
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    .line 177
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 994
     goto/16 :goto_1
 
-    .line 997
+    .line 178
     :pswitch_37
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 999
     move-result v9
 
-    .line 1002
     if-eqz v9, :cond_1
 
-    .line 1003
     and-int/2addr v7, v13
 
-    .line 1005
     int-to-long v9, v7
 
-    .line 1006
+    .line 179
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getInt(JLjava/lang/Object;)I
 
-    .line 1007
     move-result v7
 
-    .line 1010
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    .line 180
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 1011
     goto/16 :goto_1
 
-    .line 1014
+    .line 181
     :pswitch_38
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1016
     move-result v9
 
-    .line 1019
     if-eqz v9, :cond_1
 
-    .line 1020
     and-int/2addr v7, v13
 
-    .line 1022
     int-to-long v9, v7
 
-    .line 1023
+    .line 182
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getInt(JLjava/lang/Object;)I
 
-    .line 1024
     move-result v7
 
-    .line 1027
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+    .line 183
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32(II)V
 
-    .line 1028
     goto/16 :goto_1
 
-    .line 1031
+    .line 184
     :pswitch_39
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1033
     move-result v9
 
-    .line 1036
     if-eqz v9, :cond_1
 
-    .line 1037
     and-int/2addr v7, v13
 
-    .line 1039
     int-to-long v9, v7
 
-    .line 1040
+    .line 185
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getInt(JLjava/lang/Object;)I
 
-    .line 1041
     move-result v7
 
-    .line 1044
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
+    .line 186
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
-    .line 1045
     goto/16 :goto_1
 
-    .line 1048
+    .line 187
     :pswitch_3a
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1050
     move-result v9
 
-    .line 1053
     if-eqz v9, :cond_1
 
-    .line 1054
     and-int/2addr v7, v13
 
-    .line 1056
     int-to-long v9, v7
 
-    .line 1057
+    .line 188
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1058
     move-result-object v7
 
-    .line 1061
     check-cast v7, Lcom/google/protobuf/ByteString;
 
-    .line 1062
+    .line 189
     invoke-virtual {v2, v8, v7}, Lcom/google/protobuf/CodedOutputStreamWriter;->writeBytes(ILcom/google/protobuf/ByteString;)V
 
-    .line 1064
     goto/16 :goto_1
 
-    .line 1067
+    .line 190
     :pswitch_3b
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1069
     move-result v9
 
-    .line 1072
     if-eqz v9, :cond_1
 
-    .line 1073
     and-int/2addr v7, v13
 
-    .line 1075
     int-to-long v9, v7
 
-    .line 1076
+    .line 191
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1077
     move-result-object v7
 
-    .line 1080
+    .line 192
     invoke-virtual {v0, v6}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 1081
     move-result-object v9
 
-    .line 1084
+    .line 193
     check-cast v7, Lcom/google/protobuf/MessageLite;
 
-    .line 1085
-    invoke-virtual {v12, v8, v7, v9}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    invoke-virtual {v12, v8, v7, v9}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
 
-    .line 1087
     goto/16 :goto_1
 
-    .line 1090
+    .line 194
     :pswitch_3c
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1092
     move-result v9
 
-    .line 1095
     if-eqz v9, :cond_1
 
-    .line 1096
     and-int/2addr v7, v13
 
-    .line 1098
     int-to-long v9, v7
 
-    .line 1099
+    .line 195
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1100
     move-result-object v7
 
-    .line 1103
     invoke-static {v8, v7, v2}, Lcom/google/protobuf/MessageSchema;->writeString(ILjava/lang/Object;Lcom/google/protobuf/CodedOutputStreamWriter;)V
 
-    .line 1104
     goto/16 :goto_1
 
-    .line 1107
+    .line 196
     :pswitch_3d
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1109
     move-result v9
 
-    .line 1112
     if-eqz v9, :cond_1
 
-    .line 1113
     and-int/2addr v7, v13
 
-    .line 1115
     int-to-long v9, v7
 
-    .line 1116
+    .line 197
     sget-object v7, Lcom/google/protobuf/UnsafeUtil;->MEMORY_ACCESSOR:Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;
 
-    .line 1117
     invoke-virtual {v7, v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;->getBoolean(JLjava/lang/Object;)Z
 
-    .line 1119
     move-result v7
 
-    .line 1122
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeBool(IZ)V
+    .line 198
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeBool(IZ)V
 
-    .line 1123
     goto/16 :goto_1
 
-    .line 1126
+    .line 199
     :pswitch_3e
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1128
     move-result v9
 
-    .line 1131
     if-eqz v9, :cond_1
 
-    .line 1132
     and-int/2addr v7, v13
 
-    .line 1134
     int-to-long v9, v7
 
-    .line 1135
+    .line 200
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getInt(JLjava/lang/Object;)I
 
-    .line 1136
     move-result v7
 
-    .line 1139
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    .line 201
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 1140
     goto/16 :goto_1
 
-    .line 1143
+    .line 202
     :pswitch_3f
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1145
     move-result v9
 
-    .line 1148
     if-eqz v9, :cond_1
 
-    .line 1149
     and-int/2addr v7, v13
 
-    .line 1151
     int-to-long v9, v7
 
-    .line 1152
+    .line 203
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getLong(JLjava/lang/Object;)J
 
-    .line 1153
     move-result-wide v9
 
-    .line 1156
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    .line 204
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 1157
     goto :goto_1
 
-    .line 1160
+    .line 205
     :pswitch_40
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1161
     move-result v9
 
-    .line 1164
     if-eqz v9, :cond_1
 
-    .line 1165
     and-int/2addr v7, v13
 
-    .line 1167
     int-to-long v9, v7
 
-    .line 1168
+    .line 206
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getInt(JLjava/lang/Object;)I
 
-    .line 1169
     move-result v7
 
-    .line 1172
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+    .line 207
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32(II)V
 
-    .line 1173
     goto :goto_1
 
-    .line 1176
+    .line 208
     :pswitch_41
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1177
     move-result v9
 
-    .line 1180
     if-eqz v9, :cond_1
 
-    .line 1181
     and-int/2addr v7, v13
 
-    .line 1183
     int-to-long v9, v7
 
-    .line 1184
+    .line 209
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getLong(JLjava/lang/Object;)J
 
-    .line 1185
     move-result-wide v9
 
-    .line 1188
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    .line 210
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 1189
     goto :goto_1
 
-    .line 1192
+    .line 211
     :pswitch_42
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1193
     move-result v9
 
-    .line 1196
     if-eqz v9, :cond_1
 
-    .line 1197
     and-int/2addr v7, v13
 
-    .line 1199
     int-to-long v9, v7
 
-    .line 1200
+    .line 212
     invoke-static {v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil;->getLong(JLjava/lang/Object;)J
 
-    .line 1201
     move-result-wide v9
 
-    .line 1204
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    .line 213
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 1205
     goto :goto_1
 
-    .line 1208
+    .line 214
     :pswitch_43
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1209
     move-result v9
 
-    .line 1212
     if-eqz v9, :cond_1
 
-    .line 1213
     and-int/2addr v7, v13
 
-    .line 1215
     int-to-long v9, v7
 
-    .line 1216
+    .line 215
     sget-object v7, Lcom/google/protobuf/UnsafeUtil;->MEMORY_ACCESSOR:Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;
 
-    .line 1217
     invoke-virtual {v7, v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;->getFloat(JLjava/lang/Object;)F
 
-    .line 1219
     move-result v7
 
-    .line 1222
+    .line 216
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1223
+    .line 217
     invoke-static {v7}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
-    .line 1226
     move-result v7
 
-    .line 1229
-    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {v12, v8, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 1230
     goto :goto_1
 
-    .line 1233
+    .line 218
     :pswitch_44
     invoke-virtual {v0, v6, v1}, Lcom/google/protobuf/MessageSchema;->isFieldPresent(ILjava/lang/Object;)Z
 
-    .line 1234
     move-result v9
 
-    .line 1237
     if-eqz v9, :cond_1
 
-    .line 1238
     and-int/2addr v7, v13
 
-    .line 1240
     int-to-long v9, v7
 
-    .line 1241
+    .line 219
     sget-object v7, Lcom/google/protobuf/UnsafeUtil;->MEMORY_ACCESSOR:Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;
 
-    .line 1242
     invoke-virtual {v7, v9, v10, v1}, Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;->getDouble(JLjava/lang/Object;)D
 
-    .line 1244
     move-result-wide v9
 
-    .line 1247
+    .line 220
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1248
+    .line 221
     invoke-static {v9, v10}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
-    .line 1251
     move-result-wide v9
 
-    .line 1254
-    invoke-virtual {v12, v8, v9, v10}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {v12, v9, v10, v8}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 1255
     :cond_1
     :goto_1
     add-int/lit8 v6, v6, 0x3
 
-    .line 1258
     goto/16 :goto_0
 
-    .line 1260
+    .line 222
     :cond_2
     iget-object v0, v0, Lcom/google/protobuf/MessageSchema;->unknownFieldSchema:Lcom/google/protobuf/UnknownFieldSetLiteSchema;
 
-    .line 1262
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1264
+    .line 223
     move-object v0, v1
 
-    .line 1267
     check-cast v0, Lcom/google/protobuf/GeneratedMessageLite;
 
-    .line 1268
     iget-object v0, v0, Lcom/google/protobuf/GeneratedMessageLite;->unknownFields:Lcom/google/protobuf/UnknownFieldSetLite;
 
-    .line 1270
+    .line 224
     invoke-virtual {v0, v2}, Lcom/google/protobuf/UnknownFieldSetLite;->writeTo(Lcom/google/protobuf/CodedOutputStreamWriter;)V
 
-    .line 1272
     goto/16 :goto_7
 
-    .line 1275
+    .line 225
     :cond_3
     iget-object v3, v0, Lcom/google/protobuf/MessageSchema;->buffer:[I
 
-    .line 1277
     array-length v4, v3
 
-    .line 1279
+    .line 226
     sget-object v5, Lcom/google/protobuf/MessageSchema;->UNSAFE:Lsun/misc/Unsafe;
 
-    .line 1280
     const v6, 0xfffff
 
-    .line 1282
     move v9, v6
 
-    .line 1285
     const/4 v8, 0x0
 
-    .line 1286
     const/4 v10, 0x0
 
-    .line 1287
     :goto_2
     if-ge v8, v4, :cond_9
 
-    .line 1288
+    .line 227
     invoke-virtual {v0, v8}, Lcom/google/protobuf/MessageSchema;->typeAndOffsetAt(I)I
 
-    .line 1290
     move-result v11
 
-    .line 1293
+    .line 228
     aget v12, v3, v8
 
-    .line 1294
+    .line 229
     invoke-static {v11}, Lcom/google/protobuf/MessageSchema;->type(I)I
 
-    .line 1296
     move-result v13
 
-    .line 1299
     const/16 v14, 0x11
 
-    .line 1300
     const/4 v15, 0x1
 
-    .line 1302
     if-gt v13, v14, :cond_5
 
-    .line 1303
     add-int/lit8 v14, v8, 0x2
 
-    .line 1305
+    .line 230
     aget v14, v3, v14
 
-    .line 1307
     and-int v7, v14, v6
 
-    .line 1309
     if-eq v7, v9, :cond_4
 
-    .line 1311
     int-to-long v9, v7
 
-    .line 1313
+    .line 231
     invoke-virtual {v5, v1, v9, v10}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 1314
     move-result v10
 
-    .line 1317
     move v9, v7
 
-    .line 1318
     :cond_4
     ushr-int/lit8 v7, v14, 0x14
 
-    .line 1319
     shl-int v7, v15, v7
 
-    .line 1321
     goto :goto_3
 
-    .line 1323
     :cond_5
     const/4 v7, 0x0
 
-    .line 1324
     :goto_3
     and-int/2addr v11, v6
 
-    .line 1325
     move/from16 v17, v7
 
-    .line 1326
     int-to-long v6, v11
 
-    .line 1328
     const/16 v11, 0x3f
 
-    .line 1329
     packed-switch v13, :pswitch_data_1
 
-    .line 1331
     :cond_6
     :goto_4
     const/4 v13, 0x0
 
-    .line 1334
     goto/16 :goto_6
 
-    .line 1335
+    .line 232
     :pswitch_45
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1337
     move-result v11
 
-    .line 1340
     if-eqz v11, :cond_6
 
-    .line 1341
+    .line 233
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1343
     move-result-object v6
 
-    .line 1346
     invoke-virtual {v0, v8}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 1347
     move-result-object v7
 
-    .line 1350
+    .line 234
     invoke-virtual {v2, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStreamWriter;->writeGroup(ILjava/lang/Object;Lcom/google/protobuf/Schema;)V
 
-    .line 1351
     goto :goto_4
 
-    .line 1354
+    .line 235
     :pswitch_46
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1355
     move-result v13
 
-    .line 1358
     if-eqz v13, :cond_6
 
-    .line 1359
+    .line 236
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 1361
     move-result-wide v6
 
-    .line 1364
     shl-long v17, v6, v15
 
-    .line 1365
     shr-long/2addr v6, v11
 
-    .line 1367
     xor-long v6, v17, v6
 
-    .line 1368
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 237
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1370
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 1372
     goto :goto_4
 
-    .line 1375
+    .line 238
     :pswitch_47
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1376
     move-result v11
 
-    .line 1379
     if-eqz v11, :cond_6
 
-    .line 1380
+    .line 239
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 1382
     move-result v6
 
-    .line 1385
     shl-int/lit8 v7, v6, 0x1
 
-    .line 1386
     shr-int/lit8 v6, v6, 0x1f
 
-    .line 1388
     xor-int/2addr v6, v7
 
-    .line 1390
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 240
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1391
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
-    .line 1393
     goto :goto_4
 
-    .line 1396
+    .line 241
     :pswitch_48
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1397
     move-result v11
 
-    .line 1400
     if-eqz v11, :cond_6
 
-    .line 1401
+    .line 242
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 1403
     move-result-wide v6
 
-    .line 1406
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 243
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1407
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 1409
     goto :goto_4
 
-    .line 1412
+    .line 244
     :pswitch_49
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1413
     move-result v11
 
-    .line 1416
     if-eqz v11, :cond_6
 
-    .line 1417
+    .line 245
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 1419
     move-result v6
 
-    .line 1422
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 246
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1423
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 1425
     goto :goto_4
 
-    .line 1428
+    .line 247
     :pswitch_4a
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1429
     move-result v11
 
-    .line 1432
     if-eqz v11, :cond_6
 
-    .line 1433
+    .line 248
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 1435
     move-result v6
 
-    .line 1438
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 249
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1439
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32(II)V
 
-    .line 1441
     goto :goto_4
 
-    .line 1444
+    .line 250
     :pswitch_4b
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1445
     move-result v11
 
-    .line 1448
     if-eqz v11, :cond_6
 
-    .line 1449
+    .line 251
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 1451
     move-result v6
 
-    .line 1454
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 252
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1455
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
-    .line 1457
     goto :goto_4
 
-    .line 1460
+    .line 253
     :pswitch_4c
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1461
     move-result v11
 
-    .line 1464
     if-eqz v11, :cond_6
 
-    .line 1465
+    .line 254
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1467
     move-result-object v6
 
-    .line 1470
     check-cast v6, Lcom/google/protobuf/ByteString;
 
-    .line 1471
     invoke-virtual {v2, v12, v6}, Lcom/google/protobuf/CodedOutputStreamWriter;->writeBytes(ILcom/google/protobuf/ByteString;)V
 
-    .line 1473
     goto/16 :goto_4
 
-    .line 1476
+    .line 255
     :pswitch_4d
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1478
     move-result v11
 
-    .line 1481
     if-eqz v11, :cond_6
 
-    .line 1482
+    .line 256
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1484
     move-result-object v6
 
-    .line 1487
+    .line 257
     invoke-virtual {v0, v8}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 1488
     move-result-object v7
 
-    .line 1491
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 258
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1492
     check-cast v6, Lcom/google/protobuf/MessageLite;
 
-    .line 1494
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
 
-    .line 1496
     goto/16 :goto_4
 
-    .line 1499
+    .line 259
     :pswitch_4e
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1501
     move-result v11
 
-    .line 1504
     if-eqz v11, :cond_6
 
-    .line 1505
+    .line 260
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1507
     move-result-object v6
 
-    .line 1510
     invoke-static {v12, v6, v2}, Lcom/google/protobuf/MessageSchema;->writeString(ILjava/lang/Object;Lcom/google/protobuf/CodedOutputStreamWriter;)V
 
-    .line 1511
     goto/16 :goto_4
 
-    .line 1514
+    .line 261
     :pswitch_4f
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1516
     move-result v11
 
-    .line 1519
     if-eqz v11, :cond_6
 
-    .line 1520
+    .line 262
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1522
     move-result-object v6
 
-    .line 1525
     check-cast v6, Ljava/lang/Boolean;
 
-    .line 1526
     invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 1528
     move-result v6
 
-    .line 1531
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 263
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1532
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeBool(IZ)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeBool(IZ)V
 
-    .line 1534
     goto/16 :goto_4
 
-    .line 1537
+    .line 264
     :pswitch_50
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1539
     move-result v11
 
-    .line 1542
     if-eqz v11, :cond_6
 
-    .line 1543
+    .line 265
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 1545
     move-result v6
 
-    .line 1548
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 266
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1549
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 1551
     goto/16 :goto_4
 
-    .line 1554
+    .line 267
     :pswitch_51
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1556
     move-result v11
 
-    .line 1559
     if-eqz v11, :cond_6
 
-    .line 1560
+    .line 268
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 1562
     move-result-wide v6
 
-    .line 1565
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 269
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1566
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 1568
     goto/16 :goto_4
 
-    .line 1571
+    .line 270
     :pswitch_52
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1573
     move-result v11
 
-    .line 1576
     if-eqz v11, :cond_6
 
-    .line 1577
+    .line 271
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofIntAt(JLjava/lang/Object;)I
 
-    .line 1579
     move-result v6
 
-    .line 1582
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 272
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1583
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32(II)V
 
-    .line 1585
     goto/16 :goto_4
 
-    .line 1588
+    .line 273
     :pswitch_53
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1590
     move-result v11
 
-    .line 1593
     if-eqz v11, :cond_6
 
-    .line 1594
+    .line 274
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 1596
     move-result-wide v6
 
-    .line 1599
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 275
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1600
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 1602
     goto/16 :goto_4
 
-    .line 1605
+    .line 276
     :pswitch_54
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1607
     move-result v11
 
-    .line 1610
     if-eqz v11, :cond_6
 
-    .line 1611
+    .line 277
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/MessageSchema;->oneofLongAt(JLjava/lang/Object;)J
 
-    .line 1613
     move-result-wide v6
 
-    .line 1616
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 278
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1617
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 1619
     goto/16 :goto_4
 
-    .line 1622
+    .line 279
     :pswitch_55
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1624
     move-result v11
 
-    .line 1627
     if-eqz v11, :cond_6
 
-    .line 1628
+    .line 280
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1630
     move-result-object v6
 
-    .line 1633
     check-cast v6, Ljava/lang/Float;
 
-    .line 1634
     invoke-virtual {v6}, Ljava/lang/Float;->floatValue()F
 
-    .line 1636
     move-result v6
 
-    .line 1639
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 281
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1640
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1642
+    .line 282
     invoke-static {v6}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
-    .line 1645
     move-result v6
 
-    .line 1648
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 1649
     goto/16 :goto_4
 
-    .line 1652
+    .line 283
     :pswitch_56
     invoke-virtual {v0, v12, v8, v1}, Lcom/google/protobuf/MessageSchema;->isOneofPresent(IILjava/lang/Object;)Z
 
-    .line 1654
     move-result v11
 
-    .line 1657
     if-eqz v11, :cond_6
 
-    .line 1658
+    .line 284
     invoke-static {v6, v7, v1}, Lcom/google/protobuf/UnsafeUtil;->getObject(JLjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1660
     move-result-object v6
 
-    .line 1663
     check-cast v6, Ljava/lang/Double;
 
-    .line 1664
     invoke-virtual {v6}, Ljava/lang/Double;->doubleValue()D
 
-    .line 1666
     move-result-wide v6
 
-    .line 1669
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 285
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 1670
     invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1672
+    .line 286
     invoke-static {v6, v7}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
-    .line 1675
     move-result-wide v6
 
-    .line 1678
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 1679
     goto/16 :goto_4
 
-    .line 1682
+    .line 287
     :pswitch_57
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1684
     move-result-object v6
 
-    .line 1687
     if-nez v6, :cond_7
 
-    .line 1688
     goto/16 :goto_4
 
-    .line 1690
+    .line 288
     :cond_7
     invoke-virtual {v0, v8}, Lcom/google/protobuf/MessageSchema;->getMapFieldDefaultEntry(I)Ljava/lang/Object;
 
-    .line 1692
     move-result-object v1
 
-    .line 1695
     iget-object v0, v0, Lcom/google/protobuf/MessageSchema;->mapFieldSchema:Lcom/google/protobuf/MapFieldSchemaLite;
 
-    .line 1696
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1698
+    .line 289
     invoke-static {v1}, Landroidx/appcompat/app/WindowDecorActionBar$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
-    .line 1701
     const/4 v0, 0x0
 
-    .line 1704
     throw v0
 
-    .line 1705
+    .line 290
     :pswitch_58
     aget v11, v3, v8
 
-    .line 1706
+    .line 291
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1708
     move-result-object v6
 
-    .line 1711
     check-cast v6, Ljava/util/List;
 
-    .line 1712
+    .line 292
     invoke-virtual {v0, v8}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 1714
     move-result-object v7
 
-    .line 1717
+    .line 293
     invoke-static {v11, v6, v2, v7}, Lcom/google/protobuf/SchemaUtil;->writeGroupList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Lcom/google/protobuf/Schema;)V
 
-    .line 1718
     goto/16 :goto_4
 
-    .line 1721
+    .line 294
     :pswitch_59
     aget v11, v3, v8
 
-    .line 1723
+    .line 295
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1725
     move-result-object v6
 
-    .line 1728
     check-cast v6, Ljava/util/List;
 
-    .line 1729
+    .line 296
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeSInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1731
     goto/16 :goto_4
 
-    .line 1734
+    .line 297
     :pswitch_5a
     aget v11, v3, v8
 
-    .line 1736
+    .line 298
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1738
     move-result-object v6
 
-    .line 1741
     check-cast v6, Ljava/util/List;
 
-    .line 1742
+    .line 299
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeSInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1744
     goto/16 :goto_4
 
-    .line 1747
+    .line 300
     :pswitch_5b
     aget v11, v3, v8
 
-    .line 1749
+    .line 301
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1751
     move-result-object v6
 
-    .line 1754
     check-cast v6, Ljava/util/List;
 
-    .line 1755
+    .line 302
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeSFixed64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1757
     goto/16 :goto_4
 
-    .line 1760
+    .line 303
     :pswitch_5c
     aget v11, v3, v8
 
-    .line 1762
+    .line 304
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1764
     move-result-object v6
 
-    .line 1767
     check-cast v6, Ljava/util/List;
 
-    .line 1768
+    .line 305
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeSFixed32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1770
     goto/16 :goto_4
 
-    .line 1773
+    .line 306
     :pswitch_5d
     aget v11, v3, v8
 
-    .line 1775
+    .line 307
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1777
     move-result-object v6
 
-    .line 1780
     check-cast v6, Ljava/util/List;
 
-    .line 1781
+    .line 308
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeEnumList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1783
     goto/16 :goto_4
 
-    .line 1786
+    .line 309
     :pswitch_5e
     aget v11, v3, v8
 
-    .line 1788
+    .line 310
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1790
     move-result-object v6
 
-    .line 1793
     check-cast v6, Ljava/util/List;
 
-    .line 1794
+    .line 311
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeUInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1796
     goto/16 :goto_4
 
-    .line 1799
+    .line 312
     :pswitch_5f
     aget v11, v3, v8
 
-    .line 1801
+    .line 313
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1803
     move-result-object v6
 
-    .line 1806
     check-cast v6, Ljava/util/List;
 
-    .line 1807
+    .line 314
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeBoolList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1809
     goto/16 :goto_4
 
-    .line 1812
+    .line 315
     :pswitch_60
     aget v11, v3, v8
 
-    .line 1814
+    .line 316
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1816
     move-result-object v6
 
-    .line 1819
     check-cast v6, Ljava/util/List;
 
-    .line 1820
+    .line 317
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeFixed32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1822
     goto/16 :goto_4
 
-    .line 1825
+    .line 318
     :pswitch_61
     aget v11, v3, v8
 
-    .line 1827
+    .line 319
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1829
     move-result-object v6
 
-    .line 1832
     check-cast v6, Ljava/util/List;
 
-    .line 1833
+    .line 320
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeFixed64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1835
     goto/16 :goto_4
 
-    .line 1838
+    .line 321
     :pswitch_62
     aget v11, v3, v8
 
-    .line 1840
+    .line 322
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1842
     move-result-object v6
 
-    .line 1845
     check-cast v6, Ljava/util/List;
 
-    .line 1846
+    .line 323
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1848
     goto/16 :goto_4
 
-    .line 1851
+    .line 324
     :pswitch_63
     aget v11, v3, v8
 
-    .line 1853
+    .line 325
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1855
     move-result-object v6
 
-    .line 1858
     check-cast v6, Ljava/util/List;
 
-    .line 1859
+    .line 326
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeUInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1861
     goto/16 :goto_4
 
-    .line 1864
+    .line 327
     :pswitch_64
     aget v11, v3, v8
 
-    .line 1866
+    .line 328
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1868
     move-result-object v6
 
-    .line 1871
     check-cast v6, Ljava/util/List;
 
-    .line 1872
+    .line 329
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1874
     goto/16 :goto_4
 
-    .line 1877
+    .line 330
     :pswitch_65
     aget v11, v3, v8
 
-    .line 1879
+    .line 331
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1881
     move-result-object v6
 
-    .line 1884
     check-cast v6, Ljava/util/List;
 
-    .line 1885
+    .line 332
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeFloatList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1887
     goto/16 :goto_4
 
-    .line 1890
+    .line 333
     :pswitch_66
     aget v11, v3, v8
 
-    .line 1892
+    .line 334
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1894
     move-result-object v6
 
-    .line 1897
     check-cast v6, Ljava/util/List;
 
-    .line 1898
+    .line 335
     invoke-static {v11, v6, v2, v15}, Lcom/google/protobuf/SchemaUtil;->writeDoubleList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1900
     goto/16 :goto_4
 
-    .line 1903
+    .line 336
     :pswitch_67
     aget v11, v3, v8
 
-    .line 1905
+    .line 337
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1907
     move-result-object v6
 
-    .line 1910
     check-cast v6, Ljava/util/List;
 
-    .line 1911
     const/4 v12, 0x0
 
-    .line 1913
+    .line 338
     invoke-static {v11, v6, v2, v12}, Lcom/google/protobuf/SchemaUtil;->writeSInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1914
     :goto_5
     move v13, v12
 
-    .line 1917
     goto/16 :goto_6
 
-    .line 1918
     :pswitch_68
     const/4 v12, 0x0
 
-    .line 1920
+    .line 339
     aget v11, v3, v8
 
-    .line 1921
+    .line 340
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1923
     move-result-object v6
 
-    .line 1926
     check-cast v6, Ljava/util/List;
 
-    .line 1927
+    .line 341
     invoke-static {v11, v6, v2, v12}, Lcom/google/protobuf/SchemaUtil;->writeSInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1929
     goto :goto_5
 
-    .line 1932
     :pswitch_69
     const/4 v12, 0x0
 
-    .line 1933
+    .line 342
     aget v11, v3, v8
 
-    .line 1934
+    .line 343
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1936
     move-result-object v6
 
-    .line 1939
     check-cast v6, Ljava/util/List;
 
-    .line 1940
+    .line 344
     invoke-static {v11, v6, v2, v12}, Lcom/google/protobuf/SchemaUtil;->writeSFixed64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1942
     goto :goto_5
 
-    .line 1945
     :pswitch_6a
     const/4 v12, 0x0
 
-    .line 1946
+    .line 345
     aget v11, v3, v8
 
-    .line 1947
+    .line 346
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1949
     move-result-object v6
 
-    .line 1952
     check-cast v6, Ljava/util/List;
 
-    .line 1953
+    .line 347
     invoke-static {v11, v6, v2, v12}, Lcom/google/protobuf/SchemaUtil;->writeSFixed32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1955
     goto :goto_5
 
-    .line 1958
     :pswitch_6b
     const/4 v12, 0x0
 
-    .line 1959
+    .line 348
     aget v11, v3, v8
 
-    .line 1960
+    .line 349
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1962
     move-result-object v6
 
-    .line 1965
     check-cast v6, Ljava/util/List;
 
-    .line 1966
+    .line 350
     invoke-static {v11, v6, v2, v12}, Lcom/google/protobuf/SchemaUtil;->writeEnumList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1968
     goto :goto_5
 
-    .line 1971
     :pswitch_6c
     const/4 v12, 0x0
 
-    .line 1972
+    .line 351
     aget v11, v3, v8
 
-    .line 1973
+    .line 352
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1975
     move-result-object v6
 
-    .line 1978
     check-cast v6, Ljava/util/List;
 
-    .line 1979
+    .line 353
     invoke-static {v11, v6, v2, v12}, Lcom/google/protobuf/SchemaUtil;->writeUInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 1981
     goto :goto_5
 
-    .line 1984
+    .line 354
     :pswitch_6d
     aget v11, v3, v8
 
-    .line 1985
+    .line 355
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 1987
     move-result-object v6
 
-    .line 1990
     check-cast v6, Ljava/util/List;
 
-    .line 1991
+    .line 356
     invoke-static {v11, v6, v2}, Lcom/google/protobuf/SchemaUtil;->writeBytesList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;)V
 
-    .line 1993
     goto/16 :goto_4
 
-    .line 1996
+    .line 357
     :pswitch_6e
     aget v11, v3, v8
 
-    .line 1998
+    .line 358
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2000
     move-result-object v6
 
-    .line 2003
     check-cast v6, Ljava/util/List;
 
-    .line 2004
+    .line 359
     invoke-virtual {v0, v8}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 2006
     move-result-object v7
 
-    .line 2009
+    .line 360
     invoke-static {v11, v6, v2, v7}, Lcom/google/protobuf/SchemaUtil;->writeMessageList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Lcom/google/protobuf/Schema;)V
 
-    .line 2010
     goto/16 :goto_4
 
-    .line 2013
+    .line 361
     :pswitch_6f
     aget v11, v3, v8
 
-    .line 2015
+    .line 362
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2017
     move-result-object v6
 
-    .line 2020
     check-cast v6, Ljava/util/List;
 
-    .line 2021
+    .line 363
     invoke-static {v11, v6, v2}, Lcom/google/protobuf/SchemaUtil;->writeStringList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;)V
 
-    .line 2023
     goto/16 :goto_4
 
-    .line 2026
+    .line 364
     :pswitch_70
     aget v11, v3, v8
 
-    .line 2028
+    .line 365
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2030
     move-result-object v6
 
-    .line 2033
     check-cast v6, Ljava/util/List;
 
-    .line 2034
     const/4 v13, 0x0
 
-    .line 2036
+    .line 366
     invoke-static {v11, v6, v2, v13}, Lcom/google/protobuf/SchemaUtil;->writeBoolList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 2037
     goto/16 :goto_6
 
-    .line 2040
     :pswitch_71
     const/4 v13, 0x0
 
-    .line 2042
+    .line 367
     aget v11, v3, v8
 
-    .line 2043
+    .line 368
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2045
     move-result-object v6
 
-    .line 2048
     check-cast v6, Ljava/util/List;
 
-    .line 2049
+    .line 369
     invoke-static {v11, v6, v2, v13}, Lcom/google/protobuf/SchemaUtil;->writeFixed32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 2051
     goto/16 :goto_6
 
-    .line 2054
     :pswitch_72
     const/4 v13, 0x0
 
-    .line 2056
+    .line 370
     aget v11, v3, v8
 
-    .line 2057
+    .line 371
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2059
     move-result-object v6
 
-    .line 2062
     check-cast v6, Ljava/util/List;
 
-    .line 2063
+    .line 372
     invoke-static {v11, v6, v2, v13}, Lcom/google/protobuf/SchemaUtil;->writeFixed64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 2065
     goto/16 :goto_6
 
-    .line 2068
     :pswitch_73
     const/4 v13, 0x0
 
-    .line 2070
+    .line 373
     aget v11, v3, v8
 
-    .line 2071
+    .line 374
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2073
     move-result-object v6
 
-    .line 2076
     check-cast v6, Ljava/util/List;
 
-    .line 2077
+    .line 375
     invoke-static {v11, v6, v2, v13}, Lcom/google/protobuf/SchemaUtil;->writeInt32List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 2079
     goto/16 :goto_6
 
-    .line 2082
     :pswitch_74
     const/4 v13, 0x0
 
-    .line 2084
+    .line 376
     aget v11, v3, v8
 
-    .line 2085
+    .line 377
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2087
     move-result-object v6
 
-    .line 2090
     check-cast v6, Ljava/util/List;
 
-    .line 2091
+    .line 378
     invoke-static {v11, v6, v2, v13}, Lcom/google/protobuf/SchemaUtil;->writeUInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 2093
     goto/16 :goto_6
 
-    .line 2096
     :pswitch_75
     const/4 v13, 0x0
 
-    .line 2098
+    .line 379
     aget v11, v3, v8
 
-    .line 2099
+    .line 380
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2101
     move-result-object v6
 
-    .line 2104
     check-cast v6, Ljava/util/List;
 
-    .line 2105
+    .line 381
     invoke-static {v11, v6, v2, v13}, Lcom/google/protobuf/SchemaUtil;->writeInt64List(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 2107
     goto/16 :goto_6
 
-    .line 2110
     :pswitch_76
     const/4 v13, 0x0
 
-    .line 2112
+    .line 382
     aget v11, v3, v8
 
-    .line 2113
+    .line 383
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2115
     move-result-object v6
 
-    .line 2118
     check-cast v6, Ljava/util/List;
 
-    .line 2119
+    .line 384
     invoke-static {v11, v6, v2, v13}, Lcom/google/protobuf/SchemaUtil;->writeFloatList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 2121
     goto/16 :goto_6
 
-    .line 2124
     :pswitch_77
     const/4 v13, 0x0
 
-    .line 2126
+    .line 385
     aget v11, v3, v8
 
-    .line 2127
+    .line 386
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2129
     move-result-object v6
 
-    .line 2132
     check-cast v6, Ljava/util/List;
 
-    .line 2133
+    .line 387
     invoke-static {v11, v6, v2, v13}, Lcom/google/protobuf/SchemaUtil;->writeDoubleList(ILjava/util/List;Lcom/google/protobuf/CodedOutputStreamWriter;Z)V
 
-    .line 2135
     goto/16 :goto_6
 
-    .line 2138
     :pswitch_78
     const/4 v13, 0x0
 
-    .line 2140
     and-int v11, v10, v17
 
-    .line 2141
     if-eqz v11, :cond_8
 
-    .line 2143
+    .line 388
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2145
     move-result-object v6
 
-    .line 2148
     invoke-virtual {v0, v8}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 2149
     move-result-object v7
 
-    .line 2152
+    .line 389
     invoke-virtual {v2, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStreamWriter;->writeGroup(ILjava/lang/Object;Lcom/google/protobuf/Schema;)V
 
-    .line 2153
     goto/16 :goto_6
 
-    .line 2156
     :pswitch_79
     const/4 v13, 0x0
 
-    .line 2158
     and-int v16, v10, v17
 
-    .line 2159
     if-eqz v16, :cond_8
 
-    .line 2161
+    .line 390
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
-    .line 2163
     move-result-wide v6
 
-    .line 2166
     shl-long v15, v6, v15
 
-    .line 2167
     shr-long/2addr v6, v11
 
-    .line 2169
     xor-long/2addr v6, v15
 
-    .line 2170
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 391
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2171
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 2173
     goto/16 :goto_6
 
-    .line 2176
     :pswitch_7a
     const/4 v13, 0x0
 
-    .line 2178
     and-int v11, v10, v17
 
-    .line 2179
     if-eqz v11, :cond_8
 
-    .line 2181
+    .line 392
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 2183
     move-result v6
 
-    .line 2186
     shl-int/lit8 v7, v6, 0x1
 
-    .line 2187
     shr-int/lit8 v6, v6, 0x1f
 
-    .line 2189
     xor-int/2addr v6, v7
 
-    .line 2191
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 393
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2192
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
-    .line 2194
     goto/16 :goto_6
 
-    .line 2197
     :pswitch_7b
     const/4 v13, 0x0
 
-    .line 2199
     and-int v11, v10, v17
 
-    .line 2200
     if-eqz v11, :cond_8
 
-    .line 2202
+    .line 394
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
-    .line 2204
     move-result-wide v6
 
-    .line 2207
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 395
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2208
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 2210
     goto/16 :goto_6
 
-    .line 2213
     :pswitch_7c
     const/4 v13, 0x0
 
-    .line 2215
     and-int v11, v10, v17
 
-    .line 2216
     if-eqz v11, :cond_8
 
-    .line 2218
+    .line 396
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 2220
     move-result v6
 
-    .line 2223
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 397
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2224
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 2226
     goto/16 :goto_6
 
-    .line 2229
     :pswitch_7d
     const/4 v13, 0x0
 
-    .line 2231
     and-int v11, v10, v17
 
-    .line 2232
     if-eqz v11, :cond_8
 
-    .line 2234
+    .line 398
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 2236
     move-result v6
 
-    .line 2239
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 399
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2240
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32(II)V
 
-    .line 2242
     goto/16 :goto_6
 
-    .line 2245
     :pswitch_7e
     const/4 v13, 0x0
 
-    .line 2247
     and-int v11, v10, v17
 
-    .line 2248
     if-eqz v11, :cond_8
 
-    .line 2250
+    .line 400
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 2252
     move-result v6
 
-    .line 2255
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 401
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2256
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
-    .line 2258
     goto/16 :goto_6
 
-    .line 2261
     :pswitch_7f
     const/4 v13, 0x0
 
-    .line 2263
     and-int v11, v10, v17
 
-    .line 2264
     if-eqz v11, :cond_8
 
-    .line 2266
+    .line 402
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2268
     move-result-object v6
 
-    .line 2271
     check-cast v6, Lcom/google/protobuf/ByteString;
 
-    .line 2272
     invoke-virtual {v2, v12, v6}, Lcom/google/protobuf/CodedOutputStreamWriter;->writeBytes(ILcom/google/protobuf/ByteString;)V
 
-    .line 2274
     goto/16 :goto_6
 
-    .line 2277
     :pswitch_80
     const/4 v13, 0x0
 
-    .line 2279
     and-int v11, v10, v17
 
-    .line 2280
     if-eqz v11, :cond_8
 
-    .line 2282
+    .line 403
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2284
     move-result-object v6
 
-    .line 2287
+    .line 404
     invoke-virtual {v0, v8}, Lcom/google/protobuf/MessageSchema;->getMessageFieldSchema(I)Lcom/google/protobuf/Schema;
 
-    .line 2288
     move-result-object v7
 
-    .line 2291
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 405
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2292
     check-cast v6, Lcom/google/protobuf/MessageLite;
 
-    .line 2294
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
 
-    .line 2296
     goto/16 :goto_6
 
-    .line 2299
     :pswitch_81
     const/4 v13, 0x0
 
-    .line 2301
     and-int v11, v10, v17
 
-    .line 2302
     if-eqz v11, :cond_8
 
-    .line 2304
+    .line 406
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    .line 2306
     move-result-object v6
 
-    .line 2309
     invoke-static {v12, v6, v2}, Lcom/google/protobuf/MessageSchema;->writeString(ILjava/lang/Object;Lcom/google/protobuf/CodedOutputStreamWriter;)V
 
-    .line 2310
     goto/16 :goto_6
 
-    .line 2313
     :pswitch_82
     const/4 v13, 0x0
 
-    .line 2315
     and-int v11, v10, v17
 
-    .line 2316
     if-eqz v11, :cond_8
 
-    .line 2318
+    .line 407
     sget-object v11, Lcom/google/protobuf/UnsafeUtil;->MEMORY_ACCESSOR:Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;
 
-    .line 2320
     invoke-virtual {v11, v6, v7, v1}, Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;->getBoolean(JLjava/lang/Object;)Z
 
-    .line 2322
     move-result v6
 
-    .line 2325
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 408
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2326
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeBool(IZ)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeBool(IZ)V
 
-    .line 2328
     goto/16 :goto_6
 
-    .line 2331
     :pswitch_83
     const/4 v13, 0x0
 
-    .line 2333
     and-int v11, v10, v17
 
-    .line 2334
     if-eqz v11, :cond_8
 
-    .line 2336
+    .line 409
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 2338
     move-result v6
 
-    .line 2341
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 410
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2342
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 2344
     goto :goto_6
 
-    .line 2347
     :pswitch_84
     const/4 v13, 0x0
 
-    .line 2348
     and-int v11, v10, v17
 
-    .line 2349
     if-eqz v11, :cond_8
 
-    .line 2351
+    .line 411
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
-    .line 2353
     move-result-wide v6
 
-    .line 2356
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 412
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2357
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 2359
     goto :goto_6
 
-    .line 2362
     :pswitch_85
     const/4 v13, 0x0
 
-    .line 2363
     and-int v11, v10, v17
 
-    .line 2364
     if-eqz v11, :cond_8
 
-    .line 2366
+    .line 413
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
 
-    .line 2368
     move-result v6
 
-    .line 2371
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 414
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2372
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32(II)V
 
-    .line 2374
     goto :goto_6
 
-    .line 2377
     :pswitch_86
     const/4 v13, 0x0
 
-    .line 2378
     and-int v11, v10, v17
 
-    .line 2379
     if-eqz v11, :cond_8
 
-    .line 2381
+    .line 415
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
-    .line 2383
     move-result-wide v6
 
-    .line 2386
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 416
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2387
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 2389
     goto :goto_6
 
-    .line 2392
     :pswitch_87
     const/4 v13, 0x0
 
-    .line 2393
     and-int v11, v10, v17
 
-    .line 2394
     if-eqz v11, :cond_8
 
-    .line 2396
+    .line 417
     invoke-virtual {v5, v1, v6, v7}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
-    .line 2398
     move-result-wide v6
 
-    .line 2401
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 418
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2402
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
-    .line 2404
     goto :goto_6
 
-    .line 2407
     :pswitch_88
     const/4 v13, 0x0
 
-    .line 2408
     and-int v11, v10, v17
 
-    .line 2409
     if-eqz v11, :cond_8
 
-    .line 2411
+    .line 419
     sget-object v11, Lcom/google/protobuf/UnsafeUtil;->MEMORY_ACCESSOR:Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;
 
-    .line 2413
     invoke-virtual {v11, v6, v7, v1}, Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;->getFloat(JLjava/lang/Object;)F
 
-    .line 2415
     move-result v6
 
-    .line 2418
-    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 420
+    iget-object v7, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2419
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 2421
+    .line 421
     invoke-static {v6}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
-    .line 2424
     move-result v6
 
-    .line 2427
-    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {v7, v12, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
-    .line 2428
     goto :goto_6
 
-    .line 2431
     :pswitch_89
     const/4 v13, 0x0
 
-    .line 2432
     and-int v11, v10, v17
 
-    .line 2433
     if-eqz v11, :cond_8
 
-    .line 2435
+    .line 422
     sget-object v11, Lcom/google/protobuf/UnsafeUtil;->MEMORY_ACCESSOR:Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;
 
-    .line 2437
     invoke-virtual {v11, v6, v7, v1}, Lcom/google/protobuf/UnsafeUtil$Android32MemoryAccessor;->getDouble(JLjava/lang/Object;)D
 
-    .line 2439
     move-result-wide v6
 
-    .line 2442
-    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    .line 423
+    iget-object v11, v2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
-    .line 2443
     invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 2445
+    .line 424
     invoke-static {v6, v7}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
-    .line 2448
     move-result-wide v6
 
-    .line 2451
-    invoke-virtual {v11, v12, v6, v7}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {v11, v6, v7, v12}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
-    .line 2452
     :cond_8
     :goto_6
     add-int/lit8 v8, v8, 0x3
 
-    .line 2455
     const v6, 0xfffff
 
-    .line 2457
     goto/16 :goto_2
 
-    .line 2460
+    .line 425
     :cond_9
     iget-object v0, v0, Lcom/google/protobuf/MessageSchema;->unknownFieldSchema:Lcom/google/protobuf/UnknownFieldSetLiteSchema;
 
-    .line 2462
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 2464
+    .line 426
     move-object v0, v1
 
-    .line 2467
     check-cast v0, Lcom/google/protobuf/GeneratedMessageLite;
 
-    .line 2468
     iget-object v0, v0, Lcom/google/protobuf/GeneratedMessageLite;->unknownFields:Lcom/google/protobuf/UnknownFieldSetLite;
 
-    .line 2470
+    .line 427
     invoke-virtual {v0, v2}, Lcom/google/protobuf/UnknownFieldSetLite;->writeTo(Lcom/google/protobuf/CodedOutputStreamWriter;)V
 
-    .line 2472
     :goto_7
     return-void
 

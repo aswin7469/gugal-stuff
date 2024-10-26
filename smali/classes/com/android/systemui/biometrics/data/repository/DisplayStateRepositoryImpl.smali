@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/data/repository/DisplayStateRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/biometrics/data/repository/DisplayStateRepository;
@@ -39,7 +39,7 @@
     move-result-object v0
 
     .line 10
-    const v1, 0x1110204    # @android:bool/config_setColorTransformAccelerated
+    const v1, 0x1110203    # @android:bool/config_sensorPrivacyRequiresAuthentication
 
     .line 11
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -301,7 +301,7 @@
     const-string v0, "Invalid DisplayRotation value: "
 
     .line 26
-    invoke-static {p1, v0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 28
     move-result-object p1

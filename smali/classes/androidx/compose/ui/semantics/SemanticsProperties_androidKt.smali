@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/semantics/SemanticsProperties_androidKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -24,30 +24,30 @@
     const-class v3, Landroidx/compose/ui/semantics/SemanticsProperties_androidKt;
 
     .line 7
-    const-string v4, "testTagsAsResourceId"
+    const-string/jumbo v4, "testTagsAsResourceId"
 
     .line 9
     invoke-direct {v0, v3, v4, v1, v2}, Lkotlin/jvm/internal/MutablePropertyReference1Impl;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 11
+    .line 12
     sget-object v1, Lkotlin/jvm/internal/Reflection;->factory:Lkotlin/jvm/internal/ReflectionFactory;
 
-    .line 14
+    .line 15
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 16
+    .line 17
     filled-new-array {v0}, [Lkotlin/reflect/KProperty;
 
-    .line 19
+    .line 20
     move-result-object v0
 
-    .line 22
+    .line 23
     sput-object v0, Landroidx/compose/ui/semantics/SemanticsProperties_androidKt;->$$delegatedProperties:[Lkotlin/reflect/KProperty;
 
-    .line 23
+    .line 24
     sget-object v0, Landroidx/compose/ui/semantics/SemanticsPropertiesAndroid;->TestTagsAsResourceId:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 25
+    .line 26
     return-void
-    .line 27
+    .line 28
 .end method

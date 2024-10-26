@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/TabletopModeController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/DevicePostureController$OnDevicePostureChangedListener;
@@ -381,7 +381,7 @@
     move-result-object v0
 
     .line 39
-    const v1, 0x107004c    # @android:array/config_displayCutoutPathArray
+    const v1, 0x1070046    # @android:array/config_disableApksUnlessMatchedSku_apk_list
 
     .line 40
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -443,7 +443,7 @@
     if-eq v5, v6, :cond_3
 
     .line 73
-    sget-object v6, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_FOLDABLE_enabled:[Z
+    sget-object v6, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_FOLDABLE_enabled:[Z
 
     .line 75
     aget-boolean v6, v6, v1
@@ -479,7 +479,7 @@
     const-wide v8, -0x72286930f64ccc66L
 
     .line 94
-    invoke-static/range {v7 .. v12}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v7 .. v12}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 99
     goto :goto_2
@@ -581,7 +581,7 @@
     .line 156
     :cond_9
     :goto_3
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_FOLDABLE_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_FOLDABLE_enabled:[Z
 
     .line 157
     aget-boolean p0, p0, v1
@@ -605,7 +605,7 @@
     const/4 v5, 0x0
 
     .line 172
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 173
     :cond_a

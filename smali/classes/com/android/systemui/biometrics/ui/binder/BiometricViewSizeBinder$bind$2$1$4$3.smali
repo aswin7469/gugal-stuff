@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/ui/binder/BiometricViewSizeBinder$bind$2$1$4$3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -224,19 +224,19 @@
     invoke-virtual {v1, p1, p2}, Landroidx/constraintlayout/widget/ConstraintSet;->setVisibility(II)V
 
     .line 100
-    const p1, 0x7f0b011c    # @id/biometric_icon_overlay
+    const p1, 0x7f0a0121    # @id/biometric_icon_overlay
 
     .line 103
     invoke-virtual {v1, p1, p2}, Landroidx/constraintlayout/widget/ConstraintSet;->setVisibility(II)V
 
     .line 106
-    const v3, 0x7f0b039a    # @id/indicator
+    const v3, 0x7f0a03ba    # @id/indicator
 
     .line 109
     invoke-virtual {v1, v3, p2}, Landroidx/constraintlayout/widget/ConstraintSet;->setVisibility(II)V
 
     .line 112
-    const v4, 0x7f0b06c5    # @id/scrollView
+    const v4, 0x7f0a06ee    # @id/scrollView
 
     .line 115
     invoke-virtual {v1, v4, p2}, Landroidx/constraintlayout/widget/ConstraintSet;->setVisibility(II)V

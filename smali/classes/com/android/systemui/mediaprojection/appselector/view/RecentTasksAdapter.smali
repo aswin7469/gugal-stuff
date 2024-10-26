@@ -1,18 +1,18 @@
 .class public final Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final items:Ljava/util/List;
 
-.field public final listener:Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter$RecentTaskClickListener;
+.field public final listener:Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;
 
-.field public final viewHolderFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$MediaProjectionAppSelectorComponentImpl$SwitchingProvider$2;
+.field public final viewHolderFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl$SwitchingProvider$2;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter$RecentTaskClickListener;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$MediaProjectionAppSelectorComponentImpl$SwitchingProvider$2;)V
+.method public constructor <init>(Ljava/util/List;Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl$SwitchingProvider$2;)V
     .locals 0
 
     .line 1
@@ -22,10 +22,10 @@
     iput-object p1, p0, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;->items:Ljava/util/List;
 
     .line 5
-    iput-object p2, p0, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;->listener:Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter$RecentTaskClickListener;
+    iput-object p2, p0, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;->listener:Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;
 
     .line 7
-    iput-object p3, p0, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;->viewHolderFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$MediaProjectionAppSelectorComponentImpl$SwitchingProvider$2;
+    iput-object p3, p0, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;->viewHolderFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl$SwitchingProvider$2;
 
     .line 9
     return-void
@@ -136,7 +136,7 @@
 .end method
 
 .method public final onCreateViewHolder(ILandroid/view/ViewGroup;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
-    .locals 2
+    .locals 7
 
     .line 1
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -151,7 +151,7 @@
     move-result-object p1
 
     .line 9
-    const v0, 0x7f0e016a    # @layout/media_projection_task_item 'res/layout/media_projection_task_item.xml'
+    const v0, 0x7f0d0176    # @layout/media_projection_task_item 'res/layout/media_projection_task_item.xml'
 
     .line 10
     const/4 v1, 0x0
@@ -163,20 +163,146 @@
     move-result-object p1
 
     .line 17
-    check-cast p1, Landroid/view/ViewGroup;
+    move-object v1, p1
 
     .line 18
-    iget-object p0, p0, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;->viewHolderFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$MediaProjectionAppSelectorComponentImpl$SwitchingProvider$2;
+    check-cast v1, Landroid/view/ViewGroup;
 
-    .line 20
-    invoke-virtual {p0, p1}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$MediaProjectionAppSelectorComponentImpl$SwitchingProvider$2;->create(Landroid/view/ViewGroup;)Lcom/android/systemui/mediaprojection/appselector/view/RecentTaskViewHolder;
+    .line 19
+    iget-object p0, p0, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;->viewHolderFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl$SwitchingProvider$2;
 
-    .line 22
+    .line 21
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 23
+    new-instance p1, Lcom/android/systemui/mediaprojection/appselector/view/RecentTaskViewHolder;
+
+    .line 26
+    iget-object p0, p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl$SwitchingProvider$2;->this$0:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentImpl$SwitchingProvider;
+
+    .line 28
+    iget-object p2, p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentImpl$SwitchingProvider;->dozeComponentImpl:Ljava/lang/Object;
+
+    .line 30
+    check-cast p2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
+
+    .line 32
+    new-instance v2, Lcom/android/systemui/mediaprojection/appselector/data/BadgedAppIconLoader;
+
+    .line 34
+    iget-object v0, p2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->bindAppIconLoaderProvider:Ldagger/internal/Provider;
+
+    .line 36
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 38
+    move-result-object v0
+
+    .line 41
+    check-cast v0, Lcom/android/systemui/mediaprojection/appselector/data/BasicPackageManagerAppIconLoader;
+
+    .line 42
+    iget-object v3, p2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->sysUIGoogleSysUIComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
+
+    .line 44
+    iget-object v3, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->bgDispatcherProvider:Ldagger/internal/Provider;
+
+    .line 46
+    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 48
+    move-result-object v3
+
+    .line 51
+    check-cast v3, Lkotlinx/coroutines/CoroutineDispatcher;
+
+    .line 52
+    iget-object v4, p2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
+
+    .line 54
+    iget-object v4, v4, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->context:Landroid/content/Context;
+
+    .line 56
+    iget-object p2, p2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->bindIconFactoryProvider:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentImpl$SwitchingProvider;
+
+    .line 58
+    invoke-direct {v2, v0, v3, v4, p2}, Lcom/android/systemui/mediaprojection/appselector/data/BadgedAppIconLoader;-><init>(Lcom/android/systemui/mediaprojection/appselector/data/BasicPackageManagerAppIconLoader;Lkotlinx/coroutines/CoroutineDispatcher;Landroid/content/Context;Ljavax/inject/Provider;)V
+
+    .line 60
+    iget-object p0, p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentImpl$SwitchingProvider;->dozeComponentImpl:Ljava/lang/Object;
+
+    .line 63
+    check-cast p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
+
+    .line 65
+    iget-object p2, p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->bindRecentTaskThumbnailLoaderProvider:Ldagger/internal/Provider;
+
+    .line 67
+    invoke-interface {p2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 69
+    move-result-object p2
+
+    .line 72
+    move-object v3, p2
+
+    .line 73
+    check-cast v3, Lcom/android/systemui/mediaprojection/appselector/data/ActivityTaskManagerThumbnailLoader;
+
+    .line 74
+    iget-object p2, p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->bindRecentTaskLabelLoaderProvider:Ldagger/internal/Provider;
+
+    .line 76
+    invoke-interface {p2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 78
+    move-result-object p2
+
+    .line 81
+    move-object v4, p2
+
+    .line 82
+    check-cast v4, Lcom/android/systemui/mediaprojection/appselector/data/ActivityTaskManagerLabelLoader;
+
+    .line 83
+    iget-object p2, p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->taskPreviewSizeProvider:Ldagger/internal/Provider;
+
+    .line 85
+    invoke-interface {p2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 87
+    move-result-object p2
+
+    .line 90
+    move-object v5, p2
+
+    .line 91
+    check-cast v5, Lcom/android/systemui/mediaprojection/appselector/view/TaskPreviewSizeProvider;
+
+    .line 92
+    iget-object p0, p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->provideCoroutineScopeProvider:Ldagger/internal/Provider;
+
+    .line 94
+    invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 96
     move-result-object p0
 
-    .line 25
-    return-object p0
-    .line 26
+    .line 99
+    move-object v6, p0
+
+    .line 100
+    check-cast v6, Lkotlinx/coroutines/CoroutineScope;
+
+    .line 101
+    move-object v0, p1
+
+    .line 103
+    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/mediaprojection/appselector/view/RecentTaskViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/android/systemui/mediaprojection/appselector/data/BadgedAppIconLoader;Lcom/android/systemui/mediaprojection/appselector/data/ActivityTaskManagerThumbnailLoader;Lcom/android/systemui/mediaprojection/appselector/data/ActivityTaskManagerLabelLoader;Lcom/android/systemui/mediaprojection/appselector/view/TaskPreviewSizeProvider;Lkotlinx/coroutines/CoroutineScope;)V
+
+    .line 104
+    return-object p1
+    .line 107
 .end method
 
 .method public final onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V

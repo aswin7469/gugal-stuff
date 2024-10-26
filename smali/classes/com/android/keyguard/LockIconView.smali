@@ -1,6 +1,6 @@
 .class public Lcom/android/keyguard/LockIconView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -77,7 +77,7 @@
     iput-object v0, p0, Lcom/android/keyguard/LockIconView;->mBgView:Landroid/widget/ImageView;
 
     .line 30
-    const v1, 0x7f0b0449    # @id/lock_icon_bg
+    const v1, 0x7f0a046a    # @id/lock_icon_bg
 
     .line 32
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setId(I)V
@@ -86,7 +86,7 @@
     iget-object v0, p0, Lcom/android/keyguard/LockIconView;->mBgView:Landroid/widget/ImageView;
 
     .line 38
-    const v1, 0x7f0806a5    # @drawable/fingerprint_bg 'res/drawable/fingerprint_bg.xml'
+    const v1, 0x7f0806b0    # @drawable/fingerprint_bg 'res/drawable/fingerprint_bg.xml'
 
     .line 40
     invoke-virtual {p1, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -149,7 +149,7 @@
     iput-object v0, p0, Lcom/android/keyguard/LockIconView;->mLockIcon:Landroid/widget/ImageView;
 
     .line 84
-    const p2, 0x7f0b0448    # @id/lock_icon
+    const p2, 0x7f0a0469    # @id/lock_icon
 
     .line 86
     invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setId(I)V
@@ -167,7 +167,7 @@
     iget-object p2, p0, Lcom/android/keyguard/LockIconView;->mLockIcon:Landroid/widget/ImageView;
 
     .line 99
-    const v0, 0x7f080b87    # @drawable/super_lock_icon 'res/drawable/super_lock_icon.xml'
+    const v0, 0x7f080bce    # @drawable/super_lock_icon 'res/drawable/super_lock_icon.xml'
 
     .line 101
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -742,7 +742,7 @@
     move-result-object v0
 
     .line 74
-    const v3, 0x7f04073c    # @attr/wallpaperTextColorAccent
+    const v3, 0x7f040742    # @attr/wallpaperTextColorAccent
 
     .line 75
     invoke-static {v3, v2, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I

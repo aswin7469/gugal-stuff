@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/navigationbar/gestural/NavigationHandle;
 .super Landroid/view/View;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/navigationbar/buttons/ButtonInterface;
@@ -91,7 +91,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0707cb    # @dimen/navigation_handle_radius '2.0dp'
+    const v1, 0x7f07080e    # @dimen/navigation_handle_radius '2.0dp'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -100,7 +100,7 @@
 
     iput v1, p0, Lcom/android/systemui/navigationbar/gestural/NavigationHandle;->mRadius:F
 
-    const v1, 0x7f0707ca    # @dimen/navigation_handle_bottom '10.0dp'
+    const v1, 0x7f07080d    # @dimen/navigation_handle_bottom '10.0dp'
 
     .line 7
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -109,7 +109,7 @@
 
     iput v1, p0, Lcom/android/systemui/navigationbar/gestural/NavigationHandle;->mBottom:F
 
-    const v1, 0x7f0707ce    # @dimen/navigation_home_handle_additional_width_for_animation '20.0dp'
+    const v1, 0x7f070811    # @dimen/navigation_home_handle_additional_width_for_animation '20.0dp'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -118,7 +118,7 @@
 
     iput v1, p0, Lcom/android/systemui/navigationbar/gestural/NavigationHandle;->mAdditionalWidthForAnimation:F
 
-    const v1, 0x7f0707cd    # @dimen/navigation_home_handle_additional_height_for_animation '4.0dp'
+    const v1, 0x7f070810    # @dimen/navigation_home_handle_additional_height_for_animation '4.0dp'
 
     .line 9
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -127,7 +127,7 @@
 
     iput v1, p0, Lcom/android/systemui/navigationbar/gestural/NavigationHandle;->mAdditionalHeightForAnimation:F
 
-    const v1, 0x7f0707cf    # @dimen/navigation_home_handle_shrink_width_for_animation '16.0dp'
+    const v1, 0x7f070812    # @dimen/navigation_home_handle_shrink_width_for_animation '16.0dp'
 
     .line 10
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -143,7 +143,7 @@
 
     move-result v0
 
-    const v1, 0x7f0403b2    # @attr/lightIconTheme
+    const v1, 0x7f0403b4    # @attr/lightIconTheme
 
     .line 12
     invoke-static {v1, p1}, Lcom/android/settingslib/Utils;->getThemeAttr(ILandroid/content/Context;)I
@@ -160,7 +160,7 @@
 
     invoke-direct {v1, p1, v0}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    const p1, 0x7f0402f7    # @attr/homeHandleColor
+    const p1, 0x7f0402f9    # @attr/homeHandleColor
 
     const/4 v0, 0x0
 
@@ -576,6 +576,14 @@
 .end method
 
 .method public final setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    .line 1
+    return-void
+    .line 2
+.end method
+
+.method public final setVertical(Z)V
     .locals 0
 
     .line 1

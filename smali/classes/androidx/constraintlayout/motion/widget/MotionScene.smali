@@ -1,6 +1,6 @@
 .class public final Landroidx/constraintlayout/motion/widget/MotionScene;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -717,7 +717,7 @@
     invoke-direct {p2}, Landroidx/constraintlayout/widget/ConstraintSet;-><init>()V
 
     .line 417
-    const p3, 0x7f0b04ee    # @id/motion_base
+    const p3, 0x7f0a0512    # @id/motion_base
 
     .line 420
     invoke-virtual {p1, p3, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -1481,444 +1481,441 @@
 
     .line 48
     :sswitch_0
-    const-string v6, "stateLabels"
+    const-string/jumbo v6, "stateLabels"
 
     .line 49
     invoke-virtual {v14, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 51
+    .line 52
     move-result v6
 
-    .line 54
+    .line 55
     if-nez v6, :cond_0
 
-    .line 55
+    .line 56
     goto :goto_1
 
-    .line 57
+    .line 58
     :cond_0
     move v6, v4
 
-    .line 58
+    .line 59
     goto :goto_2
 
-    .line 59
+    .line 60
     :sswitch_1
     const-string v6, "id"
 
-    .line 60
+    .line 61
     invoke-virtual {v14, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 62
+    .line 63
     move-result v6
 
-    .line 65
+    .line 66
     if-nez v6, :cond_1
 
-    .line 66
+    .line 67
     goto :goto_1
 
-    .line 68
+    .line 69
     :cond_1
     move v6, v5
 
-    .line 69
+    .line 70
     goto :goto_2
 
-    .line 70
+    .line 71
     :sswitch_2
     const-string v6, "constraintRotate"
 
-    .line 71
+    .line 72
     invoke-virtual {v14, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 73
+    .line 74
     move-result v6
 
-    .line 76
+    .line 77
     if-nez v6, :cond_2
 
-    .line 77
+    .line 78
     goto :goto_1
 
-    .line 79
+    .line 80
     :cond_2
     move v6, v8
 
-    .line 80
+    .line 81
     goto :goto_2
 
-    .line 81
+    .line 82
     :sswitch_3
     const-string v6, "deriveConstraintsFrom"
 
-    .line 82
+    .line 83
     invoke-virtual {v14, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 84
+    .line 85
     move-result v6
 
-    .line 87
+    .line 88
     if-nez v6, :cond_3
 
-    .line 88
+    .line 89
     goto :goto_1
 
-    .line 90
+    .line 91
     :cond_3
     move v6, v7
 
-    .line 91
+    .line 92
     :goto_2
     packed-switch v6, :pswitch_data_0
 
-    .line 92
+    .line 93
     goto/16 :goto_7
 
-    .line 95
+    .line 96
     :pswitch_0
     const-string v6, ","
 
-    .line 97
+    .line 98
     invoke-virtual {v15, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 99
+    .line 100
     move-result-object v6
 
-    .line 102
+    .line 103
     iput-object v6, v9, Landroidx/constraintlayout/widget/ConstraintSet;->mMatchLabels:[Ljava/lang/String;
 
-    .line 103
+    .line 104
     move v6, v7
 
-    .line 105
+    .line 106
     :goto_3
     iget-object v14, v9, Landroidx/constraintlayout/widget/ConstraintSet;->mMatchLabels:[Ljava/lang/String;
 
-    .line 106
+    .line 107
     array-length v15, v14
 
-    .line 108
+    .line 109
     if-ge v6, v15, :cond_a
 
-    .line 109
+    .line 110
     aget-object v15, v14, v6
 
-    .line 111
+    .line 112
     invoke-virtual {v15}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    .line 113
+    .line 114
     move-result-object v15
 
-    .line 116
+    .line 117
     aput-object v15, v14, v6
 
-    .line 117
+    .line 118
     add-int/2addr v6, v8
 
-    .line 119
+    .line 120
     goto :goto_3
 
-    .line 120
+    .line 121
     :pswitch_1
     invoke-static {v1, v15}, Landroidx/constraintlayout/motion/widget/MotionScene;->getId(Landroid/content/Context;Ljava/lang/String;)I
 
-    .line 121
+    .line 122
     move-result v12
 
-    .line 124
+    .line 125
     iget-object v6, v0, Landroidx/constraintlayout/motion/widget/MotionScene;->mConstraintSetIdMap:Ljava/util/HashMap;
 
-    .line 125
+    .line 126
     const/16 v14, 0x2f
 
-    .line 127
+    .line 128
     invoke-virtual {v15, v14}, Ljava/lang/String;->indexOf(I)I
 
-    .line 129
+    .line 130
     move-result v14
 
-    .line 132
+    .line 133
     if-gez v14, :cond_4
 
-    .line 133
+    .line 134
     goto :goto_4
 
-    .line 135
+    .line 136
     :cond_4
     add-int/2addr v14, v8
 
-    .line 136
+    .line 137
     invoke-virtual {v15, v14}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    .line 137
+    .line 138
     move-result-object v15
 
-    .line 140
+    .line 141
     :goto_4
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 141
+    .line 142
     move-result-object v14
 
-    .line 144
+    .line 145
     invoke-virtual {v6, v15, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 145
+    .line 146
     invoke-static {v12, v1}, Landroidx/constraintlayout/motion/widget/Debug;->getName(ILandroid/content/Context;)Ljava/lang/String;
 
-    .line 148
+    .line 149
     move-result-object v6
 
-    .line 151
+    .line 152
     iput-object v6, v9, Landroidx/constraintlayout/widget/ConstraintSet;->mIdString:Ljava/lang/String;
 
-    .line 152
+    .line 153
     goto/16 :goto_7
 
-    .line 154
+    .line 155
     :pswitch_2
     :try_start_0
     invoke-static {v15}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    .line 156
+    .line 157
     move-result v6
 
-    .line 159
+    .line 160
     iput v6, v9, Landroidx/constraintlayout/widget/ConstraintSet;->mRotate:I
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 160
+    .line 161
     goto/16 :goto_7
 
-    .line 162
+    .line 163
     :catch_0
     invoke-virtual {v15}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 164
+    .line 165
     invoke-virtual {v15}, Ljava/lang/String;->hashCode()I
 
-    .line 167
+    .line 168
     move-result v6
 
-    .line 170
+    .line 171
     sparse-switch v6, :sswitch_data_1
 
-    .line 171
+    .line 172
     :goto_5
     const/4 v6, -0x1
 
-    .line 174
+    .line 175
     goto :goto_6
 
-    .line 175
+    .line 176
     :sswitch_4
     const-string/jumbo v6, "x_right"
 
-    .line 176
+    .line 177
     invoke-virtual {v15, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 179
+    .line 180
     move-result v6
 
-    .line 182
+    .line 183
     if-nez v6, :cond_5
 
-    .line 183
+    .line 184
     goto :goto_5
 
-    .line 185
+    .line 186
     :cond_5
     move v6, v3
 
-    .line 186
+    .line 187
     goto :goto_6
 
-    .line 187
+    .line 188
     :sswitch_5
     const-string v6, "right"
 
-    .line 188
+    .line 189
     invoke-virtual {v15, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 190
+    .line 191
     move-result v6
 
-    .line 193
+    .line 194
     if-nez v6, :cond_6
 
-    .line 194
+    .line 195
     goto :goto_5
 
-    .line 196
+    .line 197
     :cond_6
     move v6, v4
 
-    .line 197
+    .line 198
     goto :goto_6
 
-    .line 198
+    .line 199
     :sswitch_6
     const-string v6, "none"
 
-    .line 199
+    .line 200
     invoke-virtual {v15, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 201
+    .line 202
     move-result v6
 
-    .line 204
+    .line 205
     if-nez v6, :cond_7
 
-    .line 205
+    .line 206
     goto :goto_5
 
-    .line 207
+    .line 208
     :cond_7
     move v6, v5
 
-    .line 208
+    .line 209
     goto :goto_6
 
-    .line 209
+    .line 210
     :sswitch_7
     const-string v6, "left"
 
-    .line 210
+    .line 211
     invoke-virtual {v15, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 212
+    .line 213
     move-result v6
 
-    .line 215
+    .line 216
     if-nez v6, :cond_8
 
-    .line 216
+    .line 217
     goto :goto_5
 
-    .line 218
+    .line 219
     :cond_8
     move v6, v8
 
-    .line 219
+    .line 220
     goto :goto_6
 
-    .line 220
+    .line 221
     :sswitch_8
     const-string/jumbo v6, "x_left"
 
-    .line 221
+    .line 222
     invoke-virtual {v15, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 224
+    .line 225
     move-result v6
 
-    .line 227
+    .line 228
     if-nez v6, :cond_9
 
-    .line 228
+    .line 229
     goto :goto_5
 
-    .line 230
+    .line 231
     :cond_9
     move v6, v7
 
-    .line 231
+    .line 232
     :goto_6
     packed-switch v6, :pswitch_data_1
 
-    .line 232
+    .line 233
     goto :goto_7
 
-    .line 235
+    .line 236
     :pswitch_3
     iput v4, v9, Landroidx/constraintlayout/widget/ConstraintSet;->mRotate:I
 
-    .line 236
+    .line 237
     goto :goto_7
 
-    .line 238
+    .line 239
     :pswitch_4
     iput v8, v9, Landroidx/constraintlayout/widget/ConstraintSet;->mRotate:I
 
-    .line 239
+    .line 240
     goto :goto_7
 
-    .line 241
+    .line 242
     :pswitch_5
     iput v7, v9, Landroidx/constraintlayout/widget/ConstraintSet;->mRotate:I
 
-    .line 242
+    .line 243
     goto :goto_7
 
-    .line 244
+    .line 245
     :pswitch_6
     iput v5, v9, Landroidx/constraintlayout/widget/ConstraintSet;->mRotate:I
 
-    .line 245
+    .line 246
     goto :goto_7
 
-    .line 247
+    .line 248
     :pswitch_7
     iput v3, v9, Landroidx/constraintlayout/widget/ConstraintSet;->mRotate:I
 
-    .line 248
+    .line 249
     goto :goto_7
 
-    .line 250
+    .line 251
     :pswitch_8
     invoke-static {v1, v15}, Landroidx/constraintlayout/motion/widget/MotionScene;->getId(Landroid/content/Context;Ljava/lang/String;)I
 
-    .line 251
+    .line 252
     move-result v13
 
-    .line 254
+    .line 255
     :cond_a
     :goto_7
     add-int/2addr v11, v8
 
-    .line 255
+    .line 256
     goto/16 :goto_0
 
-    .line 256
+    .line 257
     :cond_b
     const/4 v6, -0x1
 
-    .line 258
+    .line 259
     if-eq v12, v6, :cond_d
 
-    .line 259
+    .line 260
     iget-object v3, v0, Landroidx/constraintlayout/motion/widget/MotionScene;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
-    .line 261
+    .line 262
     iget v3, v3, Landroidx/constraintlayout/motion/widget/MotionLayout;->mDebugPath:I
 
-    .line 263
+    .line 264
     invoke-virtual {v9, v1, v2}, Landroidx/constraintlayout/widget/ConstraintSet;->load(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 265
+    .line 266
     if-eq v13, v6, :cond_c
 
-    .line 268
+    .line 269
     iget-object v1, v0, Landroidx/constraintlayout/motion/widget/MotionScene;->mDeriveMap:Landroid/util/SparseIntArray;
 
-    .line 270
+    .line 271
     invoke-virtual {v1, v12, v13}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 272
+    .line 273
     :cond_c
     iget-object v0, v0, Landroidx/constraintlayout/motion/widget/MotionScene;->mConstraintSetMap:Landroid/util/SparseArray;
 
-    .line 275
+    .line 276
     invoke-virtual {v0, v12, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 277
+    .line 278
     :cond_d
     return v12
-
-    .line 280
-    nop
 
     .line 281
     :sswitch_data_0
@@ -3014,11 +3011,178 @@
 
     .line 514
     :cond_14
-    invoke-virtual {v0, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->applyDeltaFrom(Landroidx/constraintlayout/widget/ConstraintSet;)V
+    iget-object p0, v0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
 
     .line 516
+    invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    .line 518
+    move-result-object p0
+
+    .line 521
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    .line 522
+    move-result-object p0
+
+    .line 525
+    :cond_15
+    :goto_5
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 526
+    move-result p1
+
+    .line 529
+    if-eqz p1, :cond_1a
+
+    .line 530
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 532
+    move-result-object p1
+
+    .line 535
+    check-cast p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
+
+    .line 536
+    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mDelta:Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;
+
+    .line 538
+    if-nez p2, :cond_16
+
+    .line 540
+    goto :goto_5
+
+    .line 542
+    :cond_16
+    iget-object p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mTargetString:Ljava/lang/String;
+
+    .line 543
+    if-nez p2, :cond_17
+
+    .line 545
+    iget p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mViewId:I
+
+    .line 547
+    invoke-virtual {v0, p2}, Landroidx/constraintlayout/widget/ConstraintSet;->getConstraint(I)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
+
+    .line 549
+    move-result-object p2
+
+    .line 552
+    iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mDelta:Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;
+
+    .line 553
+    invoke-virtual {p1, p2}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->applyDelta(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;)V
+
+    .line 555
+    goto :goto_5
+
+    .line 558
+    :cond_17
+    iget-object p2, v0, Landroidx/constraintlayout/widget/ConstraintSet;->mConstraints:Ljava/util/HashMap;
+
+    .line 559
+    invoke-virtual {p2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    .line 561
+    move-result-object p2
+
+    .line 564
+    invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 565
+    move-result-object p2
+
+    .line 568
+    :cond_18
+    :goto_6
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 569
+    move-result v1
+
+    .line 572
+    if-eqz v1, :cond_15
+
+    .line 573
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 575
+    move-result-object v1
+
+    .line 578
+    check-cast v1, Ljava/lang/Integer;
+
+    .line 579
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    .line 581
+    move-result v1
+
+    .line 584
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet;->getConstraint(I)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
+
+    .line 585
+    move-result-object v1
+
+    .line 588
+    iget-object v2, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
+
+    .line 589
+    iget-object v2, v2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mConstraintTag:Ljava/lang/String;
+
+    .line 591
+    if-nez v2, :cond_19
+
+    .line 593
+    goto :goto_6
+
+    .line 595
+    :cond_19
+    iget-object v3, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mTargetString:Ljava/lang/String;
+
+    .line 596
+    invoke-virtual {v3, v2}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+
+    .line 598
+    move-result v2
+
+    .line 601
+    if-eqz v2, :cond_18
+
+    .line 602
+    iget-object v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mDelta:Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;
+
+    .line 604
+    invoke-virtual {v2, v1}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->applyDelta(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;)V
+
+    .line 606
+    iget-object v2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mCustomConstraints:Ljava/util/HashMap;
+
+    .line 609
+    invoke-virtual {v2}, Ljava/util/HashMap;->clone()Ljava/lang/Object;
+
+    .line 611
+    move-result-object v2
+
+    .line 614
+    check-cast v2, Ljava/util/HashMap;
+
+    .line 615
+    iget-object v1, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mCustomConstraints:Ljava/util/HashMap;
+
+    .line 617
+    invoke-virtual {v1, v2}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+
+    .line 619
+    goto :goto_6
+
+    .line 622
+    :cond_1a
     return-void
-    .line 519
+    .line 623
 .end method
 
 .method public final setTransition(II)V

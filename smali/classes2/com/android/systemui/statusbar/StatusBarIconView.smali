@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/StatusBarIconView;
 .super Lcom/android/systemui/statusbar/AnimatedImageView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/StatusIconDisplayable;
@@ -256,7 +256,7 @@
     invoke-virtual {p2, p4}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
     .line 78
-    const p4, 0x7f080a6c    # @drawable/notification_number_text_color '#ffffffff'
+    const p4, 0x7f080aa6    # @drawable/notification_number_text_color '#ffffffff'
 
     .line 81
     invoke-virtual {p1, p4}, Landroid/content/Context;->getColor(I)I
@@ -798,7 +798,7 @@
     move-result-object v2
 
     .line 113
-    const v4, 0x7f0709cb    # @dimen/status_bar_icon_scale_factor '1.0'
+    const v4, 0x7f070a23    # @dimen/status_bar_icon_scale_factor '1.0'
 
     .line 114
     invoke-virtual {v2, v4, v1, v8}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
@@ -1821,7 +1821,6 @@
     .line 139
     :goto_5
     return-void
-    .line 141
 .end method
 
 .method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -2636,7 +2635,7 @@
     move-result-object v1
 
     .line 17
-    const v2, 0x7f070842    # @dimen/overflow_dot_radius '2.0sp'
+    const v2, 0x7f070892    # @dimen/overflow_dot_radius '2.0sp'
 
     .line 18
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2648,7 +2647,7 @@
     iput v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mStaticDotRadius:I
 
     .line 25
-    const v2, 0x7f0709cc    # @dimen/status_bar_icon_size '@android:dimen/text_size_display_2_material'
+    const v2, 0x7f070a24    # @dimen/status_bar_icon_size '@android:dimen/text_size_display_2_material'
 
     .line 27
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2660,7 +2659,7 @@
     iput v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mOriginalStatusBarIconSize:I
 
     .line 34
-    const v2, 0x7f0709cd    # @dimen/status_bar_icon_size_sp '@android:dimen/text_size_display_3_material'
+    const v2, 0x7f070a25    # @dimen/status_bar_icon_size_sp '@android:dimen/text_size_display_3_material'
 
     .line 36
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2687,7 +2686,7 @@
     iput v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mScaleToFitNewIconSize:F
 
     .line 50
-    const v2, 0x7f0709c9    # @dimen/status_bar_icon_drawing_size_dark '@android:dimen/notification_messaging_spacing_conversation_group'
+    const v2, 0x7f070a21    # @dimen/status_bar_icon_drawing_size_dark '@android:dimen/notification_messaging_spacing_conversation_group'
 
     .line 52
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2699,7 +2698,7 @@
     iput v2, p0, Lcom/android/systemui/statusbar/StatusBarIconView;->mStatusBarIconDrawingSizeIncreased:I
 
     .line 59
-    const v2, 0x7f0709c8    # @dimen/status_bar_icon_drawing_size '15.0dp'
+    const v2, 0x7f070a20    # @dimen/status_bar_icon_drawing_size '15.0dp'
 
     .line 61
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3031,7 +3030,7 @@
 
     .line 142
     :cond_9
-    const v0, 0x7f0b0382    # @id/icon_is_grayscale
+    const v0, 0x7f0a03a2    # @id/icon_is_grayscale
 
     .line 143
     invoke-virtual {p0, v0, v6}, Landroid/widget/ImageView;->setTag(ILjava/lang/Object;)V
@@ -3072,7 +3071,7 @@
     move-result-object v0
 
     .line 172
-    const v3, 0x7f050048    # @bool/config_statusBarShowNumber 'false'
+    const v3, 0x7f050054    # @bool/config_statusBarShowNumber 'false'
 
     .line 173
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -3102,7 +3101,7 @@
     move-result-object v0
 
     .line 193
-    const v3, 0x7f0808df    # @drawable/ic_notification_overlay 'res/drawable-hdpi/ic_notification_overlay.9.png'
+    const v3, 0x7f080904    # @drawable/ic_notification_overlay 'res/drawable-hdpi/ic_notification_overlay.9.png'
 
     .line 194
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;

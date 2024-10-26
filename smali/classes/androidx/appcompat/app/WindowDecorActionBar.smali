@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/app/WindowDecorActionBar;
 .super Landroidx/appcompat/app/ActionBar;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/appcompat/widget/ActionBarOverlayLayout$ActionBarVisibilityCallback;
@@ -348,7 +348,7 @@
     iget-object p0, p0, Landroidx/appcompat/app/WindowDecorActionBar;->mContextView:Landroidx/appcompat/widget/ActionBarContextView;
 
     .line 65
-    invoke-virtual {p0, v0, v4, v5}, Landroidx/appcompat/widget/ActionBarContextView;->setupAnimatorToVisibility(IJ)Landroidx/core/view/ViewPropertyAnimatorCompat;
+    invoke-virtual {p0, v4, v5, v0}, Landroidx/appcompat/widget/ActionBarContextView;->setupAnimatorToVisibility(JI)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     .line 67
     move-result-object p0
@@ -391,7 +391,7 @@
     iget-object p0, p0, Landroidx/appcompat/app/WindowDecorActionBar;->mContextView:Landroidx/appcompat/widget/ActionBarContextView;
 
     .line 96
-    invoke-virtual {p0, v2, v6, v7}, Landroidx/appcompat/widget/ActionBarContextView;->setupAnimatorToVisibility(IJ)Landroidx/core/view/ViewPropertyAnimatorCompat;
+    invoke-virtual {p0, v6, v7, v2}, Landroidx/appcompat/widget/ActionBarContextView;->setupAnimatorToVisibility(JI)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     .line 98
     move-result-object p0
@@ -612,7 +612,7 @@
     const/16 v0, 0xe
 
     .line 2
-    const v1, 0x7f0b0246    # @id/decor_content_parent
+    const v1, 0x7f0a0252    # @id/decor_content_parent
 
     .line 4
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -670,7 +670,7 @@
 
     .line 42
     :cond_0
-    const v1, 0x7f0b005c    # @id/action_bar
+    const v1, 0x7f0a005c    # @id/action_bar
 
     .line 45
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -711,7 +711,7 @@
     iput-object v1, p0, Landroidx/appcompat/app/WindowDecorActionBar;->mDecorToolbar:Landroidx/appcompat/widget/ToolbarWidgetWrapper;
 
     .line 69
-    const v1, 0x7f0b0065    # @id/action_context_bar
+    const v1, 0x7f0a0065    # @id/action_context_bar
 
     .line 71
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -726,7 +726,7 @@
     iput-object v1, p0, Landroidx/appcompat/app/WindowDecorActionBar;->mContextView:Landroidx/appcompat/widget/ActionBarContextView;
 
     .line 80
-    const v1, 0x7f0b005e    # @id/action_bar_container
+    const v1, 0x7f0a005e    # @id/action_bar_container
 
     .line 82
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1037,6 +1037,7 @@
     .line 24
     :cond_1
     return-void
+    .line 27
 .end method
 
 .method public final setHasEmbeddedTabs(Z)V

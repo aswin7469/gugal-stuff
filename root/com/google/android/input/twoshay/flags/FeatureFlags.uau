@@ -1,0 +1,3 @@
+signature,file,startline,startcol,endline,endcol,properties
+Lcom/google/android/input/twoshay/flags/FeatureFlags;->enableAdaptiveTouchSensitivity()Z,out/soong/.intermediates/vendor/google/input/twoshay/twoshay_aconfig_java_lib/android_common/e18b8e8d84cb9f664aa09a397b08c165/javac/srcjars/com/google/android/input/twoshay/flags/FeatureFlags.java,9,5,9,25,
+Lcom/google/android/input/twoshay/flags/FeatureFlags;->enableKeyboardMode()Z,out/soong/.intermediates/vendor/google/input/twoshay/twoshay_aconfig_java_lib/android_common/e18b8e8d84cb9f664aa09a397b08c165/javac/srcjars/com/google/android/input/twoshay/flags/FeatureFlags.java,13,5,13,25,

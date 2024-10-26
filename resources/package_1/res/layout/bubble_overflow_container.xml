@@ -34,7 +34,7 @@
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:text="@string/bubble_overflow_empty_title"
-              android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent" />
+              android:fontFamily="@android:string/config_chooserActivity" />
     <TextView android:textAppearance="@android:style/TextAppearance.DeviceDefault.Notification.Info"
               android:textSize="@android:dimen/timepicker_ampm_horizontal_padding"
               android:textColor="?android:attr/textColorSecondary"
@@ -44,6 +44,6 @@
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:text="@string/bubble_overflow_empty_subtitle"
-              android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent" />
+              android:fontFamily="@android:string/config_chooseTypeAndAccountActivity" />
   </LinearLayout>
 </com.android.wm.shell.bubbles.BubbleOverflowContainerView>

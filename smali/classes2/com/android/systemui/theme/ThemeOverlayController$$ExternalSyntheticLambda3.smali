@@ -1,55 +1,80 @@
 .class public final synthetic Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic f$0:Ljava/lang/Runnable;
+.field public final synthetic f$0:Lcom/android/systemui/theme/ThemeOverlayController;
+
+.field public final synthetic f$1:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda1;)V
+.method public synthetic constructor <init>(Lcom/android/systemui/theme/ThemeOverlayController;I)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;->f$0:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;->f$0:Lcom/android/systemui/theme/ThemeOverlayController;
 
     .line 5
-    return-void
+    iput p2, p0, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;->f$1:I
+
     .line 7
+    return-void
+    .line 9
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 0
+.method public final run()V
+    .locals 3
 
     .line 1
-    iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;->f$0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;->f$0:Lcom/android/systemui/theme/ThemeOverlayController;
 
     .line 2
-    check-cast p1, Ljava/lang/Boolean;
+    iget p0, p0, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;->f$1:I
 
     .line 4
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 6
-    move-result p1
+    new-instance v1, Ljava/lang/StringBuilder;
 
     .line 9
-    if-eqz p1, :cond_0
+    const-string v2, "ThemeHomeDelay: ThemeOverlayController ready with user "
 
-    .line 10
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    .line 11
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 12
-    :cond_0
+    .line 13
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 16
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 19
+    move-result-object v1
+
+    .line 22
+    const-string v2, "ThemeOverlayController"
+
+    .line 23
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 25
+    iget-object v0, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mActivityManager:Landroid/app/ActivityManager;
+
+    .line 28
+    invoke-virtual {v0, p0}, Landroid/app/ActivityManager;->setThemeOverlayReady(I)V
+
+    .line 30
     return-void
-    .line 15
+    .line 33
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/airbnb/lottie/LottieDrawable;
 .super Landroid/graphics/drawable/Drawable;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/graphics/drawable/Drawable$Callback;
@@ -3173,6 +3173,241 @@
     .line 7
 .end method
 
+.method public final setComposition(Lcom/airbnb/lottie/LottieComposition;)Z
+    .locals 5
+
+    .line 1
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->composition:Lcom/airbnb/lottie/LottieComposition;
+
+    .line 2
+    const/4 v1, 0x0
+
+    .line 4
+    if-ne v0, p1, :cond_0
+
+    .line 5
+    return v1
+
+    .line 7
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 8
+    iput-boolean v0, p0, Lcom/airbnb/lottie/LottieDrawable;->isDirty:Z
+
+    .line 9
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->clearComposition()V
+
+    .line 11
+    iput-object p1, p0, Lcom/airbnb/lottie/LottieDrawable;->composition:Lcom/airbnb/lottie/LottieComposition;
+
+    .line 14
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->buildCompositionLayer()V
+
+    .line 16
+    iget-object v2, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
+
+    .line 19
+    iget-object v3, v2, Lcom/airbnb/lottie/utils/LottieValueAnimator;->composition:Lcom/airbnb/lottie/LottieComposition;
+
+    .line 21
+    if-nez v3, :cond_1
+
+    .line 23
+    move v1, v0
+
+    .line 25
+    :cond_1
+    iput-object p1, v2, Lcom/airbnb/lottie/utils/LottieValueAnimator;->composition:Lcom/airbnb/lottie/LottieComposition;
+
+    .line 26
+    if-eqz v1, :cond_2
+
+    .line 28
+    iget v1, v2, Lcom/airbnb/lottie/utils/LottieValueAnimator;->minFrame:F
+
+    .line 30
+    iget v3, p1, Lcom/airbnb/lottie/LottieComposition;->startFrame:F
+
+    .line 32
+    invoke-static {v1, v3}, Ljava/lang/Math;->max(FF)F
+
+    .line 34
+    move-result v1
+
+    .line 37
+    iget v3, v2, Lcom/airbnb/lottie/utils/LottieValueAnimator;->maxFrame:F
+
+    .line 38
+    iget v4, p1, Lcom/airbnb/lottie/LottieComposition;->endFrame:F
+
+    .line 40
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(FF)F
+
+    .line 42
+    move-result v3
+
+    .line 45
+    invoke-virtual {v2, v1, v3}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->setMinAndMaxFrames(FF)V
+
+    .line 46
+    goto :goto_0
+
+    .line 49
+    :cond_2
+    iget v1, p1, Lcom/airbnb/lottie/LottieComposition;->startFrame:F
+
+    .line 50
+    float-to-int v1, v1
+
+    .line 52
+    int-to-float v1, v1
+
+    .line 53
+    iget v3, p1, Lcom/airbnb/lottie/LottieComposition;->endFrame:F
+
+    .line 54
+    float-to-int v3, v3
+
+    .line 56
+    int-to-float v3, v3
+
+    .line 57
+    invoke-virtual {v2, v1, v3}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->setMinAndMaxFrames(FF)V
+
+    .line 58
+    :goto_0
+    iget v1, v2, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
+
+    .line 61
+    const/4 v3, 0x0
+
+    .line 63
+    iput v3, v2, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
+
+    .line 64
+    iput v3, v2, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frameRaw:F
+
+    .line 66
+    float-to-int v1, v1
+
+    .line 68
+    int-to-float v1, v1
+
+    .line 69
+    invoke-virtual {v2, v1}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->setFrame(F)V
+
+    .line 70
+    invoke-virtual {v2}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->notifyUpdate()V
+
+    .line 73
+    iget-object v1, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
+
+    .line 76
+    invoke-virtual {v1}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getAnimatedFraction()F
+
+    .line 78
+    move-result v1
+
+    .line 81
+    invoke-virtual {p0, v1}, Lcom/airbnb/lottie/LottieDrawable;->setProgress(F)V
+
+    .line 82
+    new-instance v1, Ljava/util/ArrayList;
+
+    .line 85
+    iget-object v2, p0, Lcom/airbnb/lottie/LottieDrawable;->lazyCompositionTasks:Ljava/util/ArrayList;
+
+    .line 87
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 89
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    .line 92
+    move-result-object v1
+
+    .line 95
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 96
+    move-result v2
+
+    .line 99
+    if-eqz v2, :cond_4
+
+    .line 100
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 102
+    move-result-object v2
+
+    .line 105
+    check-cast v2, Lcom/airbnb/lottie/LottieDrawable$LazyCompositionTask;
+
+    .line 106
+    if-eqz v2, :cond_3
+
+    .line 108
+    invoke-interface {v2}, Lcom/airbnb/lottie/LottieDrawable$LazyCompositionTask;->run()V
+
+    .line 110
+    :cond_3
+    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
+
+    .line 113
+    goto :goto_1
+
+    .line 116
+    :cond_4
+    iget-object v1, p0, Lcom/airbnb/lottie/LottieDrawable;->lazyCompositionTasks:Ljava/util/ArrayList;
+
+    .line 117
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+
+    .line 119
+    iget-boolean v1, p0, Lcom/airbnb/lottie/LottieDrawable;->performanceTrackingEnabled:Z
+
+    .line 122
+    iget-object p1, p1, Lcom/airbnb/lottie/LottieComposition;->performanceTracker:Lcom/airbnb/lottie/PerformanceTracker;
+
+    .line 124
+    iput-boolean v1, p1, Lcom/airbnb/lottie/PerformanceTracker;->enabled:Z
+
+    .line 126
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->computeRenderMode()V
+
+    .line 128
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+
+    .line 131
+    move-result-object p1
+
+    .line 134
+    instance-of v1, p1, Landroid/widget/ImageView;
+
+    .line 135
+    if-eqz v1, :cond_5
+
+    .line 137
+    check-cast p1, Landroid/widget/ImageView;
+
+    .line 139
+    const/4 v1, 0x0
+
+    .line 141
+    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 142
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 145
+    :cond_5
+    return v0
+    .line 148
+.end method
+
 .method public final setFrame(I)V
     .locals 3
 
@@ -3306,7 +3541,7 @@
     const-string v1, "."
 
     .line 11
-    invoke-static {v0, p1, v1}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -3406,7 +3641,7 @@
     const-string v1, "."
 
     .line 7
-    invoke-static {v0, p1, v1}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -3489,7 +3724,7 @@
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     .line 23
-    invoke-static {v2, p2, v1}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p2, v1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -3503,7 +3738,7 @@
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     .line 26
-    invoke-static {v2, p1, v1}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -3666,7 +3901,7 @@
     const-string v1, "."
 
     .line 11
-    invoke-static {v0, p1, v1}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

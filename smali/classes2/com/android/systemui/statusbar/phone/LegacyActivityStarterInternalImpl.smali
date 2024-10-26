@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -15,8 +15,6 @@
 .field public final centralSurfacesOptLazy:Ldagger/Lazy;
 
 .field public final commandQueue:Lcom/android/systemui/statusbar/CommandQueue;
-
-.field public final communalSceneInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;
 
 .field public final context:Landroid/content/Context;
 
@@ -202,140 +200,112 @@
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->mainExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
     .line 83
-    move-object/from16 v1, p24
-
-    .line 85
-    iput-object v1, v0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->communalSceneInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;
-
-    .line 87
     return-void
-    .line 89
+    .line 85
 .end method
 
-.method public static executeRunnableDismissingKeyguard$default(Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;Ljava/lang/Runnable;Ljava/lang/Runnable;ZZZZI)V
-    .locals 7
+.method public static synthetic executeRunnableDismissingKeyguard$default(Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;Ljava/lang/Runnable;Ljava/lang/Runnable;ZZZZI)V
+    .locals 8
 
     .line 1
     and-int/lit8 v0, p7, 0x2
 
     .line 2
-    const/4 v1, 0x0
-
-    .line 4
     if-eqz v0, :cond_0
 
-    .line 5
-    move-object v0, v1
+    .line 4
+    const/4 p2, 0x0
+
+    .line 6
+    :cond_0
+    move-object v2, p2
 
     .line 7
-    goto :goto_0
+    and-int/lit8 p2, p7, 0x4
 
     .line 8
-    :cond_0
-    move-object v0, p2
-
-    .line 9
-    :goto_0
-    and-int/lit8 v2, p7, 0x4
+    const/4 v0, 0x0
 
     .line 10
-    const/4 v3, 0x0
+    if-eqz p2, :cond_1
 
-    .line 12
-    if-eqz v2, :cond_1
+    .line 11
+    move v3, v0
 
     .line 13
-    move v2, v3
+    goto :goto_0
+
+    .line 14
+    :cond_1
+    move v3, p3
 
     .line 15
-    goto :goto_1
+    :goto_0
+    and-int/lit8 p2, p7, 0x8
 
     .line 16
-    :cond_1
-    move v2, p3
-
-    .line 17
-    :goto_1
-    and-int/lit8 v4, p7, 0x8
+    if-eqz p2, :cond_2
 
     .line 18
-    if-eqz v4, :cond_2
+    move v4, v0
 
     .line 20
-    move v4, v3
+    goto :goto_1
 
-    .line 22
-    goto :goto_2
-
-    .line 23
+    .line 21
     :cond_2
     move v4, p4
 
-    .line 24
-    :goto_2
-    and-int/lit8 v5, p7, 0x10
+    .line 22
+    :goto_1
+    and-int/lit8 p2, p7, 0x10
+
+    .line 23
+    if-eqz p2, :cond_3
 
     .line 25
-    if-eqz v5, :cond_3
+    move v5, v0
 
     .line 27
-    move v5, v3
+    goto :goto_2
 
-    .line 29
-    goto :goto_3
-
-    .line 30
+    .line 28
     :cond_3
     move v5, p5
 
-    .line 31
-    :goto_3
-    and-int/lit8 v6, p7, 0x20
+    .line 29
+    :goto_2
+    and-int/lit8 p2, p7, 0x20
+
+    .line 30
+    if-eqz p2, :cond_4
 
     .line 32
-    if-eqz v6, :cond_4
+    move v6, v0
 
     .line 34
-    goto :goto_4
+    goto :goto_3
+
+    .line 35
+    :cond_4
+    move v6, p6
 
     .line 36
-    :cond_4
-    move v3, p6
+    :goto_3
+    const/4 v7, 0x0
 
     .line 37
-    :goto_4
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object v0, p0
 
     .line 38
-    new-instance v6, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$executeRunnableDismissingKeyguard$onDismissAction$1;
+    move-object v1, p1
 
-    .line 41
-    move-object p2, v6
+    .line 39
+    invoke-virtual/range {v0 .. v7}, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->executeRunnableDismissingKeyguard(Ljava/lang/Runnable;Ljava/lang/Runnable;ZZZZLjava/lang/String;)V
 
-    .line 43
-    move-object p3, p1
-
-    .line 44
-    move-object p4, p0
-
-    .line 45
-    move p5, v2
-
-    .line 46
-    move p6, v5
-
-    .line 47
-    move p7, v3
-
-    .line 48
-    invoke-direct/range {p2 .. p7}, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$executeRunnableDismissingKeyguard$onDismissAction$1;-><init>(Ljava/lang/Runnable;Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;ZZZ)V
-
-    .line 49
-    invoke-virtual {p0, v6, v0, v4, v1}, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->dismissKeyguardThenExecute(Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;Ljava/lang/Runnable;ZLjava/lang/String;)V
-
-    .line 52
+    .line 40
     return-void
-    .line 55
+    .line 43
 .end method
 
 .method public static startActivityDismissingKeyguard$default(Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;Landroid/content/Intent;ZZLcom/android/systemui/plugins/ActivityStarter$Callback;ILcom/android/systemui/animation/ActivityTransitionAnimator$Controller;Ljava/lang/String;ZLandroid/os/UserHandle;I)V
@@ -662,36 +632,33 @@
     xor-int/2addr v3, v4
 
     .line 171
-    new-instance v4, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$executeRunnableDismissingKeyguard$onDismissAction$1;
+    move-object p1, v13
 
     .line 172
-    move-object p1, v4
+    move-object/from16 p2, v6
 
-    .line 174
-    move-object/from16 p2, v13
+    .line 173
+    move/from16 p3, v1
 
     .line 175
-    move-object/from16 p3, p0
+    move/from16 p4, v2
 
     .line 177
-    move/from16 p4, v1
-
-    .line 179
     move/from16 p5, v3
 
-    .line 181
+    .line 179
     move/from16 p6, v12
 
+    .line 181
+    move-object/from16 p7, v9
+
     .line 183
-    invoke-direct/range {p1 .. p6}, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$executeRunnableDismissingKeyguard$onDismissAction$1;-><init>(Ljava/lang/Runnable;Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;ZZZ)V
+    invoke-virtual/range {p0 .. p7}, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->executeRunnableDismissingKeyguard(Ljava/lang/Runnable;Ljava/lang/Runnable;ZZZZLjava/lang/String;)V
 
     .line 185
-    invoke-virtual {p0, v4, v6, v2, v9}, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->dismissKeyguardThenExecute(Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;Ljava/lang/Runnable;ZLjava/lang/String;)V
-
-    .line 188
     :goto_a
     return-void
-    .line 191
+    .line 188
 .end method
 
 .method public static startPendingIntentDismissingKeyguard$default(Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;Landroid/app/PendingIntent;ZLjava/lang/Runnable;Landroid/view/View;Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;ZZLandroid/content/Intent;Landroid/os/Bundle;I)V
@@ -1308,6 +1275,41 @@
     .line 113
 .end method
 
+.method public final executeRunnableDismissingKeyguard(Ljava/lang/Runnable;Ljava/lang/Runnable;ZZZZLjava/lang/String;)V
+    .locals 7
+
+    .line 1
+    new-instance v6, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$executeRunnableDismissingKeyguard$onDismissAction$1;
+
+    .line 2
+    move-object v0, v6
+
+    .line 4
+    move-object v1, p1
+
+    .line 5
+    move-object v2, p0
+
+    .line 6
+    move v3, p3
+
+    .line 7
+    move v4, p5
+
+    .line 8
+    move v5, p6
+
+    .line 9
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$executeRunnableDismissingKeyguard$onDismissAction$1;-><init>(Ljava/lang/Runnable;Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;ZZZ)V
+
+    .line 10
+    invoke-virtual {p0, v6, p2, p4, p7}, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->dismissKeyguardThenExecute(Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;Ljava/lang/Runnable;ZLjava/lang/String;)V
+
+    .line 13
+    return-void
+    .line 16
+.end method
+
 .method public final getActivityUserHandle(Landroid/content/Intent;)Landroid/os/UserHandle;
     .locals 5
 
@@ -1321,7 +1323,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f03006c    # @array/system_ui_packages
+    const v1, 0x7f030075    # @array/system_ui_packages
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;

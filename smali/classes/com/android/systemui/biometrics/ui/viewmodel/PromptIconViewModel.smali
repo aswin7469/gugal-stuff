@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -264,7 +264,7 @@
     if-eqz p3, :cond_0
 
     .line 15
-    const p0, 0x7f130007    # @raw/biometricprompt_rear_landscape_base 'res/raw/biometricprompt_rear_landscape_base.json'
+    const p0, 0x7f120007    # @raw/biometricprompt_rear_landscape_base 'res/raw/biometricprompt_rear_landscape_base.json'
 
     .line 17
     goto :goto_0
@@ -274,14 +274,14 @@
     if-eqz p2, :cond_1
 
     .line 21
-    const p0, 0x7f130002    # @raw/biometricprompt_folded_base_default 'res/raw/biometricprompt_folded_base_default.json'
+    const p0, 0x7f120002    # @raw/biometricprompt_folded_base_default 'res/raw/biometricprompt_folded_base_default.json'
 
     .line 23
     goto :goto_0
 
     .line 26
     :cond_1
-    const p0, 0x7f130004    # @raw/biometricprompt_landscape_base 'res/raw/biometricprompt_landscape_base.json'
+    const p0, 0x7f120004    # @raw/biometricprompt_landscape_base 'res/raw/biometricprompt_landscape_base.json'
 
     .line 27
     goto :goto_0
@@ -291,7 +291,7 @@
     if-eqz p3, :cond_3
 
     .line 31
-    const p0, 0x7f130008    # @raw/biometricprompt_rear_portrait_base 'res/raw/biometricprompt_rear_portrait_base.json'
+    const p0, 0x7f120008    # @raw/biometricprompt_rear_portrait_base 'res/raw/biometricprompt_rear_portrait_base.json'
 
     .line 33
     goto :goto_0
@@ -301,14 +301,14 @@
     if-eqz p2, :cond_4
 
     .line 37
-    const p0, 0x7f130001    # @raw/biometricprompt_folded_base_bottomright 'res/raw/biometricprompt_folded_base_bottomright.json'
+    const p0, 0x7f120001    # @raw/biometricprompt_folded_base_bottomright 'res/raw/biometricprompt_folded_base_bottomright.json'
 
     .line 39
     goto :goto_0
 
     .line 42
     :cond_4
-    const p0, 0x7f130005    # @raw/biometricprompt_portrait_base_bottomright 'res/raw/biometricprompt_portrait_base_bottomright.json'
+    const p0, 0x7f120005    # @raw/biometricprompt_portrait_base_bottomright 'res/raw/biometricprompt_portrait_base_bottomright.json'
 
     .line 43
     goto :goto_0
@@ -318,7 +318,7 @@
     if-eqz p3, :cond_6
 
     .line 47
-    const p0, 0x7f130009    # @raw/biometricprompt_rear_portrait_reverse_base 'res/raw/biometricprompt_rear_portrait_reverse_base.json'
+    const p0, 0x7f120009    # @raw/biometricprompt_rear_portrait_reverse_base 'res/raw/biometricprompt_rear_portrait_reverse_base.json'
 
     .line 49
     goto :goto_0
@@ -328,14 +328,14 @@
     if-eqz p2, :cond_7
 
     .line 53
-    const p0, 0x7f130003    # @raw/biometricprompt_folded_base_topleft 'res/raw/biometricprompt_folded_base_topleft.json'
+    const p0, 0x7f120003    # @raw/biometricprompt_folded_base_topleft 'res/raw/biometricprompt_folded_base_topleft.json'
 
     .line 55
     goto :goto_0
 
     .line 58
     :cond_7
-    const p0, 0x7f130006    # @raw/biometricprompt_portrait_base_topleft 'res/raw/biometricprompt_portrait_base_topleft.json'
+    const p0, 0x7f120006    # @raw/biometricprompt_portrait_base_topleft 'res/raw/biometricprompt_portrait_base_topleft.json'
 
     .line 59
     :goto_0

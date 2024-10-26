@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/communal/data/repository/CommunalSettingsRepositoryImpl$flagEnabled$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -49,38 +49,9 @@
     invoke-virtual {p0, v0}, Lcom/android/systemui/flags/FeatureFlagsClassicRelease;->isEnabled(Lcom/android/systemui/flags/ResourceBooleanFlag;)Z
 
     .line 10
-    move-result p0
+    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     .line 13
-    if-eqz p0, :cond_0
-
-    .line 14
-    invoke-static {}, Lcom/android/systemui/Flags;->communalHub()Z
-
-    .line 16
-    move-result p0
-
-    .line 19
-    if-eqz p0, :cond_0
-
-    .line 20
-    const/4 p0, 0x1
-
-    .line 22
-    goto :goto_0
-
-    .line 23
-    :cond_0
-    const/4 p0, 0x0
-
-    .line 24
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 25
-    move-result-object p0
-
-    .line 28
     return-object p0
-    .line 29
+    .line 15
 .end method

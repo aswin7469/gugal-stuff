@@ -1,6 +1,6 @@
 .class public final Lcom/google/protobuf/UnknownFieldSetLite;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -386,7 +386,7 @@
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 42
-    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream;->computeFixed32Size(I)I
+    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed32Size(I)I
 
     .line 45
     move-result v4
@@ -425,7 +425,7 @@
 
     .line 66
     :cond_2
-    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 67
     move-result v4
@@ -472,7 +472,7 @@
     check-cast v4, Lcom/google/protobuf/ByteString;
 
     .line 90
-    invoke-static {v5, v4}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+    invoke-static {v5, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
     .line 92
     move-result v4
@@ -494,7 +494,7 @@
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 103
-    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream;->computeFixed64Size(I)I
+    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed64Size(I)I
 
     .line 106
     move-result v4
@@ -519,13 +519,13 @@
     move-result-wide v6
 
     .line 120
-    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 121
     move-result v4
 
     .line 124
-    invoke-static {v6, v7}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v6, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
     .line 125
     move-result v5
@@ -750,7 +750,7 @@
     and-int/lit8 v3, v3, 0x7
 
     .line 27
-    iget-object v6, p1, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object v6, p1, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 29
     if-eqz v3, :cond_5
@@ -783,7 +783,7 @@
     move-result v3
 
     .line 48
-    invoke-virtual {v6, v5, v3}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {v6, v5, v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
     .line 49
     goto :goto_1
@@ -812,7 +812,7 @@
 
     .line 67
     :cond_2
-    invoke-virtual {v6, v5, v1}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {v6, v5, v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 68
     check-cast v4, Lcom/google/protobuf/UnknownFieldSetLite;
@@ -824,7 +824,7 @@
     const/4 v3, 0x4
 
     .line 76
-    invoke-virtual {v6, v5, v3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {v6, v5, v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 77
     goto :goto_1
@@ -850,7 +850,7 @@
     move-result-wide v3
 
     .line 92
-    invoke-virtual {v6, v5, v3, v4}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {v6, v3, v4, v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
     .line 93
     goto :goto_1
@@ -866,7 +866,7 @@
     move-result-wide v3
 
     .line 102
-    invoke-virtual {v6, v5, v3, v4}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    invoke-virtual {v6, v3, v4, v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
     .line 103
     :goto_1

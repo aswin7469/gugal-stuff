@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/dreams/DreamOverlayStateController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/CallbackController;
@@ -220,13 +220,13 @@
     move-result-object v0
 
     .line 23
-    new-instance v1, Lcom/android/systemui/dreams/DreamOverlayStateController$$ExternalSyntheticLambda7;
+    new-instance v1, Lcom/android/systemui/dreams/DreamOverlayStateController$$ExternalSyntheticLambda6;
 
     .line 24
     const/4 v2, 0x1
 
     .line 26
-    invoke-direct {v1, v2, p0}, Lcom/android/systemui/dreams/DreamOverlayStateController$$ExternalSyntheticLambda7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lcom/android/systemui/dreams/DreamOverlayStateController$$ExternalSyntheticLambda6;-><init>(ILjava/lang/Object;)V
 
     .line 27
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
@@ -235,7 +235,7 @@
     move-result-object p0
 
     .line 33
-    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda6;
+    new-instance v0, Lcom/android/systemui/ambient/touch/TouchMonitor$$ExternalSyntheticLambda1;
 
     .line 34
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V

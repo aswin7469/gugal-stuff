@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor;
 .super Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -17,8 +17,6 @@
 
 # instance fields
 .field public final canDismissLockscreen:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
-
-.field public final deviceEntryRepository:Lcom/android/systemui/deviceentry/data/repository/DeviceEntryRepositoryImpl;
 
 .field public final scope:Lkotlinx/coroutines/CoroutineScope;
 
@@ -119,44 +117,38 @@
     iput-object v0, v8, Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor;->scope:Lkotlinx/coroutines/CoroutineScope;
 
     .line 24
-    move-object/from16 v0, p9
-
-    .line 26
-    iput-object v0, v8, Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor;->deviceEntryRepository:Lcom/android/systemui/deviceentry/data/repository/DeviceEntryRepositoryImpl;
-
-    .line 28
     iget-object v0, v9, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;->biometricUnlockState:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 30
+    .line 26
     new-instance v1, Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor$canDismissLockscreen$1;
 
-    .line 32
+    .line 28
     const/4 v2, 0x4
 
-    .line 34
+    .line 30
     const/4 v3, 0x0
 
-    .line 35
+    .line 31
     invoke-direct {v1, v2, v3}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 36
+    .line 32
     iget-object v2, v9, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;->isKeyguardShowing:Lkotlinx/coroutines/flow/Flow;
 
-    .line 39
+    .line 35
     iget-object v3, v9, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;->isKeyguardDismissible:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 41
+    .line 37
     invoke-static {v2, v3, v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function4;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
 
-    .line 43
+    .line 39
     move-result-object v0
 
-    .line 46
+    .line 42
     iput-object v0, v8, Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor;->canDismissLockscreen:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
 
-    .line 47
+    .line 43
     return-void
-    .line 49
+    .line 45
 .end method
 
 
@@ -258,99 +250,36 @@
     invoke-static {v2, v0, v3, v1, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
     .line 15
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 18
-    move-result v1
-
-    .line 21
-    if-eqz v1, :cond_0
-
-    .line 22
-    goto :goto_0
-
-    .line 24
-    :cond_0
     new-instance v1, Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor$listenForAodToOccluded$$inlined$launch$default$1;
 
-    .line 25
+    .line 18
     const-string v5, "FromAodTransitionInteractor#listenForAodToOccluded"
 
-    .line 27
+    .line 20
     invoke-direct {v1, v5, v3, p0}, Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor$listenForAodToOccluded$$inlined$launch$default$1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor;)V
 
-    .line 29
+    .line 22
     invoke-static {v2, v0, v3, v1, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 32
-    :goto_0
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 35
-    move-result v1
-
-    .line 38
-    if-eqz v1, :cond_1
-
-    .line 39
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 41
-    move-result v1
-
-    .line 44
-    if-eqz v1, :cond_1
-
-    .line 45
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 47
-    move-result v1
-
-    .line 50
-    if-eqz v1, :cond_1
-
-    .line 51
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 53
-    move-result v1
-
-    .line 56
-    if-eqz v1, :cond_1
-
-    .line 57
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 59
-    move-result v1
-
-    .line 62
-    if-eqz v1, :cond_1
-
-    .line 63
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 65
-    :cond_1
+    .line 25
     new-instance v1, Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor$listenForAodToPrimaryBouncer$$inlined$launch$default$1;
 
-    .line 68
+    .line 28
     const-string v5, "FromAodTransitionInteractor#listenForAodToPrimaryBouncer"
 
-    .line 70
+    .line 30
     invoke-direct {v1, v5, v3, p0}, Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor$listenForAodToPrimaryBouncer$$inlined$launch$default$1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/domain/interactor/FromAodTransitionInteractor;)V
 
-    .line 72
+    .line 32
     invoke-static {v2, v0, v3, v1, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 75
+    .line 35
     iget-object v0, p0, Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;->keyguardInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;
 
-    .line 78
+    .line 38
     invoke-virtual {p0, v2, v0}, Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;->listenForTransitionToCamera(Lkotlinx/coroutines/CoroutineScope;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;)V
 
-    .line 80
+    .line 40
     return-void
-    .line 83
+    .line 43
 .end method

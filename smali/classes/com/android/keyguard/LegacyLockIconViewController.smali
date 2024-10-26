@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/LegacyLockIconViewController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -12,21 +12,19 @@
 
 
 # instance fields
-.field public final mA11yClickListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda4;
+.field public final mA11yClickListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda5;
 
 .field public final mAccessibilityDelegate:Lcom/android/keyguard/LegacyLockIconViewController$1;
 
 .field public final mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
-.field public final mAccessibilityStateChangeListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda5;
+.field public final mAccessibilityStateChangeListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda6;
 
 .field public mActivePointerId:I
 
 .field public final mAuthController:Lcom/android/systemui/biometrics/AuthController;
 
 .field public final mAuthControllerCallback:Lcom/android/keyguard/LegacyLockIconViewController$7;
-
-.field public final mAuthRippleController:Lcom/android/systemui/biometrics/AuthRippleController;
 
 .field public mBottomPaddingPx:I
 
@@ -190,37 +188,37 @@
     iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mSensorTouchLocation:Landroid/graphics/Rect;
 
     .line 16
-    new-instance v2, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda1;
+    new-instance v2, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda2;
 
     .line 18
     const/4 v3, 0x0
 
     .line 20
-    invoke-direct {v2, p0, v3}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda1;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;I)V
+    invoke-direct {v2, p0, v3}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda2;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;I)V
 
     .line 21
     iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mDozeTransitionCallback:Ljava/util/function/Consumer;
 
     .line 24
-    new-instance v2, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda1;
+    new-instance v2, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda2;
 
     .line 26
     const/4 v3, 0x1
 
     .line 28
-    invoke-direct {v2, p0, v3}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda1;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;I)V
+    invoke-direct {v2, p0, v3}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda2;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;I)V
 
     .line 29
     iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mIsDozingCallback:Ljava/util/function/Consumer;
 
     .line 32
-    new-instance v2, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda1;
+    new-instance v2, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda2;
 
     .line 34
     const/4 v3, 0x2
 
     .line 36
-    invoke-direct {v2, p0, v3}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda1;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;I)V
+    invoke-direct {v2, p0, v3}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda2;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;I)V
 
     .line 37
     iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mIsActiveDreamLockscreenHostedCallback:Ljava/util/function/Consumer;
@@ -271,22 +269,22 @@
     iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mAuthControllerCallback:Lcom/android/keyguard/LegacyLockIconViewController$7;
 
     .line 75
-    new-instance v2, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda4;
-
-    .line 77
-    invoke-direct {v2, p0}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda4;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;)V
-
-    .line 79
-    iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mA11yClickListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda4;
-
-    .line 82
     new-instance v2, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda5;
 
-    .line 84
+    .line 77
     invoke-direct {v2, p0}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda5;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;)V
 
+    .line 79
+    iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mA11yClickListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda5;
+
+    .line 82
+    new-instance v2, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda6;
+
+    .line 84
+    invoke-direct {v2, p0}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda6;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;)V
+
     .line 86
-    iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mAccessibilityStateChangeListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda5;
+    iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mAccessibilityStateChangeListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda6;
 
     .line 89
     move-object v2, p1
@@ -349,119 +347,113 @@
     iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mVibrator:Lcom/android/systemui/statusbar/VibratorHelper;
 
     .line 119
-    move-object/from16 v2, p12
-
-    .line 121
-    iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mAuthRippleController:Lcom/android/systemui/biometrics/AuthRippleController;
-
-    .line 123
     move-object/from16 v2, p16
 
-    .line 125
+    .line 121
     iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mFeatureFlags:Lcom/android/systemui/flags/FeatureFlags;
 
-    .line 127
+    .line 123
     move-object/from16 v2, p17
 
-    .line 129
+    .line 125
     iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mPrimaryBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;
 
-    .line 131
-    const v2, 0x7f070abc    # @dimen/udfps_burn_in_offset_x '7.0px'
+    .line 127
+    const v2, 0x7f070b18    # @dimen/udfps_burn_in_offset_x '7.0px'
 
-    .line 133
+    .line 129
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 136
+    .line 132
     move-result v2
 
-    .line 139
+    .line 135
     iput v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mMaxBurnInOffsetX:I
 
-    .line 140
-    const v2, 0x7f070abd    # @dimen/udfps_burn_in_offset_y '20.0px'
+    .line 136
+    const v2, 0x7f070b19    # @dimen/udfps_burn_in_offset_y '20.0px'
 
-    .line 142
+    .line 138
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 145
+    .line 141
     move-result v2
 
-    .line 148
+    .line 144
     iput v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mMaxBurnInOffsetY:I
 
-    .line 149
-    const v2, 0x7f1400f8    # @string/accessibility_unlock_button 'Unlocked'
+    .line 145
+    const v2, 0x7f1300f8    # @string/accessibility_unlock_button 'Unlocked'
 
-    .line 151
+    .line 147
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 154
+    .line 150
     move-result-object v2
 
-    .line 157
+    .line 153
     iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mUnlockedLabel:Ljava/lang/CharSequence;
 
-    .line 158
-    const v2, 0x7f14009a    # @string/accessibility_lock_icon 'Device locked'
+    .line 154
+    const v2, 0x7f13009b    # @string/accessibility_lock_icon 'Device locked'
 
-    .line 160
+    .line 156
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 163
+    .line 159
     move-result-object v2
 
-    .line 166
+    .line 162
     iput-object v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mLockedLabel:Ljava/lang/CharSequence;
 
-    .line 167
-    const v2, 0x7f0c002b    # @integer/config_lockIconLongPress '200'
+    .line 163
+    const v2, 0x7f0b0030    # @integer/config_lockIconLongPress '200'
 
-    .line 169
+    .line 165
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
-    .line 172
+    .line 168
     move-result v2
 
-    .line 175
+    .line 171
     int-to-long v2, v2
 
-    .line 176
+    .line 172
     iput-wide v2, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mLongPressTimeout:J
 
-    .line 177
+    .line 173
     invoke-virtual {p7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 179
+    .line 175
     const-string v2, "LockIconViewController"
 
-    .line 182
+    .line 178
     move-object v3, p7
 
-    .line 184
+    .line 180
     invoke-static {p7, v2, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
 
-    .line 185
+    .line 181
     iput-object v1, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mResources:Landroid/content/res/Resources;
 
-    .line 188
+    .line 184
     move-object/from16 v1, p18
 
-    .line 190
+    .line 186
     iput-object v1, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mContext:Landroid/content/Context;
 
-    .line 192
+    .line 188
     new-instance v1, Lcom/android/keyguard/LegacyLockIconViewController$1;
 
-    .line 194
+    .line 190
     invoke-direct {v1, p0}, Lcom/android/keyguard/LegacyLockIconViewController$1;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;)V
 
-    .line 196
+    .line 192
     iput-object v1, v0, Lcom/android/keyguard/LegacyLockIconViewController;->mAccessibilityDelegate:Lcom/android/keyguard/LegacyLockIconViewController$1;
 
-    .line 199
+    .line 195
     return-void
-    .line 201
+    .line 197
 .end method
 
 
@@ -861,7 +853,7 @@
 .end method
 
 .method public onLongPress()V
-    .locals 3
+    .locals 2
 
     .line 1
     invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->cancelTouches()V
@@ -889,48 +881,20 @@
     iput-boolean v1, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mIsBouncerShowing:Z
 
     .line 15
-    iget-boolean v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mUdfpsSupported:Z
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$5()V
 
     .line 17
-    if-eqz v0, :cond_1
-
-    .line 19
-    iget-boolean v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mShowUnlockIcon:Z
-
-    .line 21
-    if-eqz v0, :cond_1
-
-    .line 23
-    iget-object v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mAuthRippleController:Lcom/android/systemui/biometrics/AuthRippleController;
-
-    .line 25
-    if-eqz v0, :cond_1
-
-    .line 27
-    sget-object v2, Landroid/hardware/biometrics/BiometricSourceType;->FINGERPRINT:Landroid/hardware/biometrics/BiometricSourceType;
-
-    .line 29
-    invoke-virtual {v0, v2}, Lcom/android/systemui/biometrics/AuthRippleController;->showUnlockRippleInternal(Landroid/hardware/biometrics/BiometricSourceType;)V
-
-    .line 31
-    :cond_1
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$3()V
-
-    .line 34
     invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->vibrateOnLongPress()V
 
-    .line 37
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 40
+    .line 20
     iget-object p0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mKeyguardViewController:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 43
+    .line 23
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->showPrimaryBouncer(Z)V
 
-    .line 45
+    .line 25
     return-void
-    .line 48
+    .line 28
 .end method
 
 .method public final registerCallbacks$1()V
@@ -991,7 +955,7 @@
     iget-object v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
     .line 41
-    iget-object p0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mAccessibilityStateChangeListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda5;
+    iget-object p0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mAccessibilityStateChangeListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda6;
 
     .line 43
     invoke-virtual {v0, p0}, Landroid/view/accessibility/AccessibilityManager;->addAccessibilityStateChangeListener(Landroid/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener;)Z
@@ -1127,7 +1091,7 @@
     invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateBurnInOffsets$1()V
 
     .line 77
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$3()V
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$5()V
 
     .line 80
     iget-object v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
@@ -1145,7 +1109,7 @@
     iget-object v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mView:Lcom/android/keyguard/LockIconView;
 
     .line 91
-    iget-object v1, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mA11yClickListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda4;
+    iget-object v1, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mA11yClickListener:Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda5;
 
     .line 93
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -1187,10 +1151,10 @@
 
     .line 119
     :cond_1
-    new-instance v0, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda6;
+    new-instance v0, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda1;
 
     .line 122
-    invoke-direct {v0, p0}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda6;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;)V
+    invoke-direct {v0, p0}, Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda1;-><init>(Lcom/android/keyguard/LegacyLockIconViewController;)V
 
     .line 124
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
@@ -1344,7 +1308,7 @@
     iget-object v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mResources:Landroid/content/res/Resources;
 
     .line 37
-    const v1, 0x7f070486    # @dimen/lock_icon_margin_bottom '74.0dp'
+    const v1, 0x7f0704c2    # @dimen/lock_icon_margin_bottom '74.0dp'
 
     .line 39
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1359,7 +1323,7 @@
     iget-object v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mResources:Landroid/content/res/Resources;
 
     .line 48
-    const v1, 0x7f070487    # @dimen/lock_icon_padding '48.0px'
+    const v1, 0x7f0704c3    # @dimen/lock_icon_padding '48.0px'
 
     .line 50
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1374,7 +1338,7 @@
     iget-object v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mResources:Landroid/content/res/Resources;
 
     .line 59
-    const v1, 0x7f1400f8    # @string/accessibility_unlock_button 'Unlocked'
+    const v1, 0x7f1300f8    # @string/accessibility_unlock_button 'Unlocked'
 
     .line 61
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1389,7 +1353,7 @@
     iget-object v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mResources:Landroid/content/res/Resources;
 
     .line 70
-    const v1, 0x7f14009a    # @string/accessibility_lock_icon 'Device locked'
+    const v1, 0x7f13009b    # @string/accessibility_lock_icon 'Device locked'
 
     .line 72
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1419,124 +1383,88 @@
     float-to-int v2, v2
 
     .line 89
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 90
-    move-result v3
-
-    .line 93
-    if-nez v3, :cond_2
-
-    .line 94
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 96
-    move-result v3
-
-    .line 99
-    if-eqz v3, :cond_0
-
-    .line 100
-    goto :goto_0
-
-    .line 102
-    :cond_0
     iget-boolean v3, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mUdfpsSupported:Z
 
-    .line 103
-    if-eqz v3, :cond_1
+    .line 90
+    if-eqz v3, :cond_0
 
-    .line 105
+    .line 92
     iget-object p0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mView:Lcom/android/keyguard/LockIconView;
 
-    .line 107
+    .line 94
     invoke-virtual {v0}, Lcom/android/systemui/biometrics/AuthController;->getUdfpsLocation()Landroid/graphics/Point;
 
-    .line 109
+    .line 96
     move-result-object v1
 
-    .line 112
+    .line 99
     invoke-virtual {v0}, Lcom/android/systemui/biometrics/AuthController;->getUdfpsRadius()F
 
-    .line 113
+    .line 100
     move-result v0
 
-    .line 116
+    .line 103
     invoke-virtual {p0, v1, v0, v2}, Lcom/android/keyguard/LockIconView;->setCenterLocation(Landroid/graphics/Point;FI)V
 
-    .line 117
-    goto :goto_1
+    .line 104
+    goto :goto_0
 
-    .line 120
-    :cond_1
+    .line 107
+    :cond_0
     iget-object v0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mView:Lcom/android/keyguard/LockIconView;
 
-    .line 121
+    .line 108
     new-instance v3, Landroid/graphics/Point;
 
-    .line 123
+    .line 110
     iget v4, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mWidthPixels:F
 
-    .line 125
+    .line 112
     float-to-int v4, v4
 
-    .line 127
+    .line 114
     div-int/lit8 v4, v4, 0x2
 
-    .line 128
+    .line 115
     iget v5, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mHeightPixels:F
 
-    .line 130
+    .line 117
     iget p0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mBottomPaddingPx:I
 
-    .line 132
+    .line 119
     sget v6, Lcom/android/keyguard/LegacyLockIconViewController;->sLockIconRadiusPx:I
 
-    .line 134
+    .line 121
     add-int/2addr p0, v6
 
-    .line 136
+    .line 123
     int-to-float p0, p0
 
-    .line 137
+    .line 124
     mul-float/2addr p0, v1
 
-    .line 138
+    .line 125
     sub-float/2addr v5, p0
 
-    .line 139
+    .line 126
     float-to-int p0, v5
 
-    .line 140
+    .line 127
     invoke-direct {v3, v4, p0}, Landroid/graphics/Point;-><init>(II)V
 
-    .line 141
+    .line 128
     int-to-float p0, v6
 
-    .line 144
+    .line 131
     mul-float/2addr p0, v1
 
-    .line 145
+    .line 132
     invoke-virtual {v0, v3, p0, v2}, Lcom/android/keyguard/LockIconView;->setCenterLocation(Landroid/graphics/Point;FI)V
 
-    .line 146
-    goto :goto_1
-
-    .line 149
-    :cond_2
+    .line 133
     :goto_0
-    iget-object p0, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mView:Lcom/android/keyguard/LockIconView;
-
-    .line 150
-    iget-object p0, p0, Lcom/android/keyguard/LockIconView;->mLockIcon:Landroid/widget/ImageView;
-
-    .line 152
-    invoke-virtual {p0, v2, v2, v2, v2}, Landroid/widget/ImageView;->setPadding(IIII)V
-
-    .line 154
-    :goto_1
     return-void
-    .line 157
+    .line 136
 .end method
 
 .method public final updateIsUdfpsEnrolled()V
@@ -1592,7 +1520,7 @@
 
     .line 33
     :cond_0
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$3()V
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$5()V
 
     .line 35
     :cond_1
@@ -1646,7 +1574,7 @@
     .line 22
 .end method
 
-.method public final updateVisibility$3()V
+.method public final updateVisibility$5()V
     .locals 8
 
     .line 1

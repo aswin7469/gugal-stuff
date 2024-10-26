@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/log/echo/LogcatEchoSettingFormat;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -66,129 +66,126 @@
     if-ne v3, v4, :cond_0
 
     .line 39
-    const-string v3, "t"
+    const-string/jumbo v3, "t"
 
     .line 41
     goto :goto_1
 
-    .line 43
+    .line 44
     :cond_0
     new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    .line 44
+    .line 45
     invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    .line 46
+    .line 47
     throw p0
 
-    .line 49
+    .line 50
     :cond_1
     const-string v3, "b"
 
-    .line 50
+    .line 51
     :goto_1
     invoke-virtual {v0, v3}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 52
+    .line 53
     const-string v3, "\\;"
 
-    .line 55
+    .line 56
     iget-object v4, v2, Lcom/android/systemui/log/echo/LogcatEchoOverride;->name:Ljava/lang/String;
 
-    .line 57
+    .line 58
     invoke-static {v4, v1, v3}, Lkotlin/text/StringsKt__StringsJVMKt;->replace$default(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 59
+    .line 60
     move-result-object v3
 
-    .line 62
+    .line 63
     invoke-virtual {v0, v3}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 63
+    .line 64
     sget-object v3, Lcom/android/systemui/log/echo/LogcatEchoSettingFormat$WhenMappings;->$EnumSwitchMapping$1:[I
 
-    .line 66
+    .line 67
     iget-object v2, v2, Lcom/android/systemui/log/echo/LogcatEchoOverride;->level:Lcom/android/systemui/log/core/LogLevel;
 
-    .line 68
+    .line 69
     invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
-    .line 70
+    .line 71
     move-result v2
 
-    .line 73
+    .line 74
     aget v2, v3, v2
 
-    .line 74
+    .line 75
     packed-switch v2, :pswitch_data_0
 
-    .line 76
+    .line 77
     new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    .line 79
+    .line 80
     invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    .line 81
+    .line 82
     throw p0
 
-    .line 84
+    .line 85
     :pswitch_0
     const-string v2, "!"
 
-    .line 85
+    .line 86
     goto :goto_2
 
-    .line 87
+    .line 88
     :pswitch_1
     const-string v2, "e"
 
-    .line 88
+    .line 89
     goto :goto_2
 
-    .line 90
+    .line 91
     :pswitch_2
     const-string/jumbo v2, "w"
 
-    .line 91
+    .line 92
     goto :goto_2
 
-    .line 94
+    .line 95
     :pswitch_3
     const-string v2, "i"
 
-    .line 95
+    .line 96
     goto :goto_2
 
-    .line 97
+    .line 98
     :pswitch_4
     const-string v2, "d"
 
-    .line 98
+    .line 99
     goto :goto_2
 
-    .line 100
+    .line 101
     :pswitch_5
     const-string/jumbo v2, "v"
 
-    .line 101
+    .line 102
     :goto_2
     invoke-virtual {v0, v2}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 104
+    .line 105
     goto :goto_0
 
-    .line 107
+    .line 108
     :cond_2
     invoke-virtual {v0}, Ljava/util/StringJoiner;->toString()Ljava/lang/String;
 
-    .line 108
+    .line 109
     move-result-object p0
 
-    .line 111
-    return-object p0
-
     .line 112
-    nop
+    return-object p0
 
     .line 113
     :pswitch_data_0

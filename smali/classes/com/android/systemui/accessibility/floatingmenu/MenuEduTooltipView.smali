@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/floatingmenu/MenuEduTooltipView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/ComponentCallbacks;
@@ -60,7 +60,7 @@
     move-result-object p1
 
     .line 17
-    const p2, 0x7f0e0031    # @layout/accessibility_floating_menu_tooltip 'res/layout/accessibility_floating_menu_tooltip.xml'
+    const p2, 0x7f0d0031    # @layout/accessibility_floating_menu_tooltip 'res/layout/accessibility_floating_menu_tooltip.xml'
 
     .line 18
     const/4 v0, 0x0
@@ -72,7 +72,7 @@
     move-result-object p1
 
     .line 25
-    const p2, 0x7f0b07e0    # @id/text
+    const p2, 0x7f0a080f    # @id/text
 
     .line 26
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -96,7 +96,7 @@
     invoke-virtual {p2, v1}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
     .line 41
-    const p2, 0x7f0b00d6    # @id/arrow_left
+    const p2, 0x7f0a00d9    # @id/arrow_left
 
     .line 44
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -108,7 +108,7 @@
     iput-object p2, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuEduTooltipView;->mArrowLeftView:Landroid/view/View;
 
     .line 51
-    const p2, 0x7f0b00d7    # @id/arrow_right
+    const p2, 0x7f0a00da    # @id/arrow_right
 
     .line 53
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -701,7 +701,7 @@
     move-result-object v0
 
     .line 5
-    const v1, 0x7f070087    # @dimen/accessibility_floating_tooltip_arrow_width '8.0dp'
+    const v1, 0x7f070088    # @dimen/accessibility_floating_tooltip_arrow_width '8.0dp'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -713,7 +713,7 @@
     iput v1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuEduTooltipView;->mArrowWidth:I
 
     .line 13
-    const v1, 0x7f070085    # @dimen/accessibility_floating_tooltip_arrow_height '16.0dp'
+    const v1, 0x7f070086    # @dimen/accessibility_floating_tooltip_arrow_height '16.0dp'
 
     .line 15
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -725,7 +725,7 @@
     iput v1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuEduTooltipView;->mArrowHeight:I
 
     .line 22
-    const v1, 0x7f070086    # @dimen/accessibility_floating_tooltip_arrow_margin '-2.0dp'
+    const v1, 0x7f070087    # @dimen/accessibility_floating_tooltip_arrow_margin '-2.0dp'
 
     .line 24
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -737,7 +737,7 @@
     iput v1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuEduTooltipView;->mArrowMargin:I
 
     .line 31
-    const v1, 0x7f070084    # @dimen/accessibility_floating_tooltip_arrow_corner_radius '2.0dp'
+    const v1, 0x7f070085    # @dimen/accessibility_floating_tooltip_arrow_corner_radius '2.0dp'
 
     .line 33
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -749,7 +749,7 @@
     iput v1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuEduTooltipView;->mArrowCornerRadius:I
 
     .line 40
-    const v1, 0x7f070088    # @dimen/accessibility_floating_tooltip_font_size '14.0sp'
+    const v1, 0x7f070089    # @dimen/accessibility_floating_tooltip_font_size '14.0sp'
 
     .line 42
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -761,7 +761,7 @@
     iput v1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuEduTooltipView;->mFontSize:I
 
     .line 49
-    const v1, 0x7f070089    # @dimen/accessibility_floating_tooltip_margin '16.0dp'
+    const v1, 0x7f07008a    # @dimen/accessibility_floating_tooltip_margin '16.0dp'
 
     .line 51
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -773,7 +773,7 @@
     iput v1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuEduTooltipView;->mTextViewMargin:I
 
     .line 58
-    const v1, 0x7f07008a    # @dimen/accessibility_floating_tooltip_padding '16.0dp'
+    const v1, 0x7f07008b    # @dimen/accessibility_floating_tooltip_padding '16.0dp'
 
     .line 60
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -785,7 +785,7 @@
     iput v1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuEduTooltipView;->mTextViewPadding:I
 
     .line 67
-    const v1, 0x7f07008b    # @dimen/accessibility_floating_tooltip_text_corner_radius '8.0dp'
+    const v1, 0x7f07008c    # @dimen/accessibility_floating_tooltip_text_corner_radius '8.0dp'
 
     .line 69
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -67,318 +67,300 @@
     move-result-object v1
 
     .line 21
-    iput-object v1, v0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;->previewMode:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 22
     move-object/from16 v2, p21
 
-    .line 24
+    .line 22
     iget-object v2, v2, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->finishedKeyguardState:Lkotlinx/coroutines/flow/ReadonlySharedFlow;
 
-    .line 26
+    .line 24
     new-instance v3, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel$special$$inlined$map$1;
 
-    .line 28
+    .line 26
     const/4 v4, 0x0
 
-    .line 30
+    .line 28
     invoke-direct {v3, v2, v4}, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 31
+    .line 29
     move-object/from16 v2, p3
 
-    .line 34
+    .line 32
     check-cast v2, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;
 
-    .line 36
+    .line 34
     iget-object v2, v2, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;->baseShadeInteractor:Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;
 
-    .line 38
+    .line 36
     invoke-interface {v2}, Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;->getAnyExpansion()Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 40
+    .line 38
     move-result-object v2
 
-    .line 43
+    .line 41
     new-instance v4, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel$shadeExpansionAlpha$1;
 
-    .line 44
+    .line 42
     const/4 v5, 0x3
 
-    .line 46
+    .line 44
     const/4 v6, 0x0
 
-    .line 47
+    .line 45
     invoke-direct {v4, v5, v6}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 48
+    .line 46
     new-instance v5, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 51
+    .line 49
     invoke-direct {v5, v3, v2, v4}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 53
+    .line 51
     const-string v2, "bottom_start"
 
-    .line 56
+    .line 54
     invoke-static {v2}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 58
+    .line 56
     move-result-object v2
 
-    .line 61
+    .line 59
     iput-object v2, v0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;->selectedPreviewSlotId:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 62
+    .line 60
     move-object/from16 v2, p4
 
-    .line 64
+    .line 62
     iget-object v2, v2, Lcom/android/systemui/keyguard/ui/viewmodel/AodToLockscreenTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 66
+    .line 64
     move-object/from16 v3, p5
 
-    .line 68
+    .line 66
     iget-object v3, v3, Lcom/android/systemui/keyguard/ui/viewmodel/DozingToLockscreenTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 70
+    .line 68
     move-object/from16 v4, p6
 
-    .line 72
+    .line 70
     iget-object v4, v4, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingHostedToLockscreenTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 74
+    .line 72
     move-object/from16 v7, p7
 
-    .line 76
+    .line 74
     iget-object v7, v7, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 78
+    .line 76
     move-object/from16 v8, p8
 
-    .line 80
+    .line 78
     iget-object v8, v8, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToLockscreenTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 82
+    .line 80
     move-object/from16 v9, p9
 
-    .line 84
+    .line 82
     iget-object v9, v9, Lcom/android/systemui/keyguard/ui/viewmodel/OccludedToLockscreenTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 86
+    .line 84
     move-object/from16 v10, p10
 
-    .line 88
+    .line 86
     iget-object v10, v10, Lcom/android/systemui/keyguard/ui/viewmodel/OffToLockscreenTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 90
+    .line 88
     move-object/from16 v11, p11
 
-    .line 92
+    .line 90
     iget-object v11, v11, Lcom/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToLockscreenTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 94
+    .line 92
     move-object/from16 v12, p12
 
-    .line 96
+    .line 94
     iget-object v12, v12, Lcom/android/systemui/keyguard/ui/viewmodel/GlanceableHubToLockscreenTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 98
+    .line 96
     move-object p1, v2
 
-    .line 100
+    .line 98
     move-object p2, v3
 
-    .line 101
+    .line 99
     move-object/from16 p3, v4
 
-    .line 102
+    .line 100
     move-object/from16 p4, v7
 
-    .line 104
+    .line 102
     move-object/from16 p5, v8
 
-    .line 106
+    .line 104
     move-object/from16 p6, v9
 
-    .line 108
+    .line 106
     move-object/from16 p7, v10
 
-    .line 110
+    .line 108
     move-object/from16 p8, v11
 
-    .line 112
+    .line 110
     move-object/from16 p9, v12
 
-    .line 114
+    .line 112
     filled-new-array/range {p1 .. p9}, [Lkotlinx/coroutines/flow/Flow;
 
-    .line 116
+    .line 114
     move-result-object v2
 
-    .line 119
+    .line 117
     invoke-static {v2}, Lkotlinx/coroutines/flow/FlowKt;->merge([Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/internal/ChannelLimitedFlowMerge;
 
-    .line 120
+    .line 118
     move-result-object v2
 
-    .line 123
+    .line 121
     move-object/from16 v3, p13
 
-    .line 124
+    .line 122
     iget-object v3, v3, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToAodTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 126
+    .line 124
     move-object/from16 v4, p14
 
-    .line 128
+    .line 126
     iget-object v4, v4, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDozingTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 130
+    .line 128
     move-object/from16 v7, p15
 
-    .line 132
+    .line 130
     iget-object v7, v7, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDreamingHostedTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 134
+    .line 132
     move-object/from16 v8, p16
 
-    .line 136
+    .line 134
     iget-object v8, v8, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDreamingTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 138
+    .line 136
     move-object/from16 v9, p17
 
-    .line 140
+    .line 138
     iget-object v9, v9, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToGoneTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 142
+    .line 140
     move-object/from16 v10, p18
 
-    .line 144
+    .line 142
     iget-object v10, v10, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToOccludedTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 146
+    .line 144
     move-object/from16 v11, p19
 
-    .line 148
+    .line 146
     iget-object v11, v11, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToPrimaryBouncerTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 150
+    .line 148
     move-object/from16 v12, p20
 
-    .line 152
+    .line 150
     iget-object v12, v12, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToGlanceableHubTransitionViewModel;->shortcutsAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 154
+    .line 152
     move-object p1, v3
 
-    .line 156
+    .line 154
     move-object p2, v4
 
-    .line 157
+    .line 155
     move-object/from16 p3, v7
 
-    .line 158
+    .line 156
     move-object/from16 p4, v8
 
-    .line 160
+    .line 158
     move-object/from16 p5, v9
 
-    .line 162
+    .line 160
     move-object/from16 p6, v10
 
-    .line 164
+    .line 162
     move-object/from16 p7, v11
 
-    .line 166
+    .line 164
     move-object/from16 p8, v12
 
-    .line 168
+    .line 166
     move-object/from16 p9, v5
 
-    .line 170
+    .line 168
     filled-new-array/range {p1 .. p9}, [Lkotlinx/coroutines/flow/Flow;
 
-    .line 172
+    .line 170
     move-result-object v3
 
-    .line 175
+    .line 173
     invoke-static {v3}, Lkotlinx/coroutines/flow/FlowKt;->merge([Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/internal/ChannelLimitedFlowMerge;
 
-    .line 176
+    .line 174
     move-result-object v3
 
-    .line 179
+    .line 177
     filled-new-array {v2, v3}, [Lkotlinx/coroutines/flow/Flow;
 
-    .line 180
+    .line 178
     move-result-object v2
 
-    .line 183
+    .line 181
     invoke-static {v2}, Lkotlinx/coroutines/flow/FlowKt;->merge([Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/internal/ChannelLimitedFlowMerge;
 
-    .line 184
+    .line 182
     move-result-object v2
 
-    .line 187
-    iput-object v2, v0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;->transitionAlpha:Lkotlinx/coroutines/flow/internal/ChannelLimitedFlowMerge;
-
-    .line 188
+    .line 185
     new-instance v3, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel$special$$inlined$map$1;
 
-    .line 190
+    .line 186
     const/4 v4, 0x1
 
-    .line 192
+    .line 188
     invoke-direct {v3, v2, v4}, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 193
+    .line 189
     invoke-static {v3}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 196
+    .line 192
     move-result-object v2
 
-    .line 199
+    .line 195
     iput-object v2, v0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;->areQuickAffordancesFullyOpaque:Lkotlinx/coroutines/flow/Flow;
 
-    .line 200
+    .line 196
     sget-object v2, Lcom/android/systemui/keyguard/shared/quickaffordance/KeyguardQuickAffordancePosition;->BOTTOM_START:Lcom/android/systemui/keyguard/shared/quickaffordance/KeyguardQuickAffordancePosition;
 
-    .line 202
+    .line 198
     new-instance v3, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel$button$$inlined$flatMapLatest$1;
 
-    .line 204
+    .line 200
     invoke-direct {v3, v6, p0, v2}, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel$button$$inlined$flatMapLatest$1;-><init>(Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;Lcom/android/systemui/keyguard/shared/quickaffordance/KeyguardQuickAffordancePosition;)V
 
-    .line 206
+    .line 202
     invoke-static {v1, v3}, Lkotlinx/coroutines/flow/FlowKt;->transformLatest(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 209
-    move-result-object v2
-
-    .line 212
-    iput-object v2, v0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;->startButton:Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
-
-    .line 213
+    .line 205
     sget-object v2, Lcom/android/systemui/keyguard/shared/quickaffordance/KeyguardQuickAffordancePosition;->BOTTOM_END:Lcom/android/systemui/keyguard/shared/quickaffordance/KeyguardQuickAffordancePosition;
 
-    .line 215
+    .line 208
     new-instance v3, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel$button$$inlined$flatMapLatest$1;
 
-    .line 217
+    .line 210
     invoke-direct {v3, v6, p0, v2}, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel$button$$inlined$flatMapLatest$1;-><init>(Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;Lcom/android/systemui/keyguard/shared/quickaffordance/KeyguardQuickAffordancePosition;)V
 
-    .line 219
+    .line 212
     invoke-static {v1, v3}, Lkotlinx/coroutines/flow/FlowKt;->transformLatest(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 222
-    move-result-object v1
-
-    .line 225
-    iput-object v1, v0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;->endButton:Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
-
-    .line 226
+    .line 215
     return-void
-    .line 228
+    .line 218
 .end method

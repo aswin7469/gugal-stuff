@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/people/PeopleSpaceUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -493,270 +493,270 @@
 
     .line 81
     :try_start_2
-    const-string v6, "starred"
+    const-string/jumbo v6, "starred"
 
     .line 82
     invoke-interface {v13, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    .line 84
+    .line 85
     move-result v6
-
-    .line 87
-    const/high16 v7, 0x3f000000    # 0.5f
 
     .line 88
+    const/high16 v7, 0x3f000000    # 0.5f
+
+    .line 89
     if-ltz v6, :cond_3
 
-    .line 90
+    .line 91
     invoke-interface {v13, v6}, Landroid/database/Cursor;->getInt(I)I
 
-    .line 92
+    .line 93
     move-result v6
 
-    .line 95
+    .line 96
     if-eqz v6, :cond_3
 
-    .line 96
+    .line 97
     const/high16 v6, 0x3f800000    # 1.0f
 
-    .line 98
+    .line 99
     invoke-static {v7, v6}, Ljava/lang/Math;->max(FF)F
 
-    .line 100
+    .line 101
     move-result v6
     :try_end_2
     .catch Landroid/database/SQLException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 103
+    .line 104
     move v9, v6
 
-    .line 104
+    .line 105
     goto :goto_2
 
-    .line 105
+    .line 106
     :cond_3
     move v9, v7
 
-    .line 106
+    .line 107
     :goto_2
     :try_start_3
     invoke-virtual {v5}, Ljava/lang/String;->isEmpty()Z
 
-    .line 107
+    .line 108
     move-result v6
 
-    .line 110
+    .line 111
     if-nez v6, :cond_4
 
-    .line 111
+    .line 112
     invoke-interface {v2, v5}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    .line 113
+    .line 114
     move-result v5
     :try_end_3
     .catch Landroid/database/SQLException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 116
+    .line 117
     if-eqz v5, :cond_4
 
-    .line 117
-    const v5, 0x7f140199    # @string/birthday_status 'Birthday'
+    .line 118
+    const v5, 0x7f1301a0    # @string/birthday_status 'Birthday'
 
-    .line 119
+    .line 120
     move-object/from16 v14, p0
 
-    .line 122
+    .line 123
     :try_start_4
     invoke-virtual {v14, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 124
+    .line 125
     move-result-object v10
 
-    .line 127
+    .line 128
     move-object/from16 v5, p1
 
-    .line 128
+    .line 129
     move-object/from16 v6, p0
 
-    .line 130
+    .line 131
     move-object v7, v12
 
-    .line 132
+    .line 133
     move v8, v0
 
-    .line 133
+    .line 134
     invoke-static/range {v5 .. v10}, Lcom/android/systemui/people/PeopleSpaceUtils;->updateTileContactFields(Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;Landroid/content/Context;Landroid/app/people/PeopleSpaceTile;IFLjava/lang/String;)V
 
-    .line 134
+    .line 135
     goto :goto_1
 
-    .line 137
+    .line 138
     :catchall_0
     move-exception v0
 
-    .line 138
+    .line 139
     move-object v5, v13
 
-    .line 139
+    .line 140
     goto :goto_7
 
-    .line 140
+    .line 141
     :catch_0
     move-exception v0
 
-    .line 141
+    .line 142
     :goto_3
     move-object v5, v13
 
-    .line 142
+    .line 143
     goto :goto_6
 
-    .line 143
+    .line 144
     :cond_4
     move-object/from16 v14, p0
 
-    .line 144
+    .line 145
     goto :goto_5
 
-    .line 146
+    .line 147
     :catch_1
     move-exception v0
 
-    .line 147
+    .line 148
     :goto_4
     move-object/from16 v14, p0
 
-    .line 148
+    .line 149
     goto :goto_3
 
-    .line 150
+    .line 151
     :goto_5
     const/4 v10, 0x0
 
-    .line 151
+    .line 152
     move-object/from16 v5, p1
 
-    .line 152
+    .line 153
     move-object/from16 v6, p0
 
-    .line 154
+    .line 155
     move-object v7, v12
 
-    .line 156
+    .line 157
     move v8, v0
 
-    .line 157
+    .line 158
     invoke-static/range {v5 .. v10}, Lcom/android/systemui/people/PeopleSpaceUtils;->updateTileContactFields(Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;Landroid/content/Context;Landroid/app/people/PeopleSpaceTile;IFLjava/lang/String;)V
     :try_end_4
     .catch Landroid/database/SQLException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 158
+    .line 159
     goto :goto_1
 
-    .line 161
+    .line 162
     :catch_2
     move-exception v0
 
-    .line 162
+    .line 163
     goto :goto_4
 
-    .line 163
+    .line 164
     :cond_5
     move-object/from16 v14, p0
 
-    .line 164
+    .line 165
     if-eqz v13, :cond_7
 
-    .line 166
+    .line 167
     invoke-interface {v13}, Landroid/database/Cursor;->close()V
 
-    .line 168
+    .line 169
     goto :goto_9
 
-    .line 171
+    .line 172
     :catchall_1
     move-exception v0
 
-    .line 172
+    .line 173
     goto :goto_7
 
-    .line 173
+    .line 174
     :catch_3
     move-exception v0
 
-    .line 174
+    .line 175
     move-object/from16 v14, p0
 
-    .line 175
+    .line 176
     :goto_6
     :try_start_5
     const-string v6, "PeopleSpaceUtils"
 
-    .line 177
+    .line 178
     const-string v7, "Failed to query contact"
 
-    .line 179
+    .line 180
     invoke-static {v6, v7, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 181
+    .line 182
     if-eqz v5, :cond_7
 
-    .line 184
+    .line 185
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
-    .line 186
+    .line 187
     goto :goto_9
 
-    .line 189
+    .line 190
     :goto_7
     if-eqz v5, :cond_6
 
-    .line 190
+    .line 191
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
-    .line 192
+    .line 193
     :cond_6
     throw v0
 
-    .line 195
+    .line 196
     :goto_8
     const/4 v9, 0x0
 
-    .line 196
+    .line 197
     const/4 v10, 0x0
 
-    .line 197
+    .line 198
     move-object/from16 v5, p1
 
-    .line 198
+    .line 199
     move-object/from16 v6, p0
 
-    .line 200
+    .line 201
     move-object v7, v12
 
-    .line 202
+    .line 203
     move v8, v0
 
-    .line 203
+    .line 204
     invoke-static/range {v5 .. v10}, Lcom/android/systemui/people/PeopleSpaceUtils;->updateTileContactFields(Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;Landroid/content/Context;Landroid/app/people/PeopleSpaceTile;IFLjava/lang/String;)V
 
-    .line 204
+    .line 205
     :cond_7
     :goto_9
     add-int/lit8 v4, v4, 0x1
 
-    .line 207
+    .line 208
     goto/16 :goto_0
 
-    .line 209
+    .line 210
     :cond_8
     return-void
-    .line 211
+    .line 212
 .end method
 
 .method public static getSortedTiles(Landroid/app/people/IPeopleManager;Landroid/content/pm/LauncherApps;Landroid/os/UserManager;Ljava/util/stream/Stream;)Ljava/util/List;
@@ -1289,7 +1289,7 @@
     const/4 v2, 0x1
 
     .line 7
-    const v3, 0x7f140199    # @string/birthday_status 'Birthday'
+    const v3, 0x7f1301a0    # @string/birthday_status 'Birthday'
 
     .line 8
     if-eqz v0, :cond_0

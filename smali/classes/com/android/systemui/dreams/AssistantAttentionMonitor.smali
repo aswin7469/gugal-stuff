@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/dreams/AssistantAttentionMonitor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -56,46 +56,46 @@
     if-eqz v1, :cond_0
 
     .line 9
-    const-string v1, "started"
+    const-string/jumbo v1, "started"
 
     .line 11
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
+    .line 14
     :cond_0
     new-instance v0, Landroid/util/ArraySet;
 
-    .line 16
+    .line 17
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 18
+    .line 19
     iget-object v1, p0, Lcom/android/systemui/dreams/AssistantAttentionMonitor;->mAssistantAttentionCondition:Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;
 
-    .line 21
+    .line 22
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 23
+    .line 24
     new-instance v1, Lcom/android/systemui/shared/condition/Monitor$Subscription;
 
-    .line 26
+    .line 27
     iget-object v2, p0, Lcom/android/systemui/dreams/AssistantAttentionMonitor;->mCallback:Lcom/android/systemui/dreams/callbacks/AssistantAttentionCallback;
 
-    .line 28
+    .line 29
     const/4 v3, 0x0
 
-    .line 30
+    .line 31
     invoke-direct {v1, v0, v2, v3}, Lcom/android/systemui/shared/condition/Monitor$Subscription;-><init>(Ljava/util/Set;Lcom/android/systemui/shared/condition/Monitor$Callback;Lcom/android/systemui/shared/condition/Monitor$Subscription;)V
 
-    .line 31
+    .line 32
     iget-object p0, p0, Lcom/android/systemui/dreams/AssistantAttentionMonitor;->mConditionMonitor:Lcom/android/systemui/shared/condition/Monitor;
 
-    .line 34
+    .line 35
     iget-object v0, p0, Lcom/android/systemui/shared/condition/Monitor;->mPreconditions:Ljava/util/Set;
 
-    .line 36
+    .line 37
     invoke-virtual {p0, v1, v0}, Lcom/android/systemui/shared/condition/Monitor;->addSubscription(Lcom/android/systemui/shared/condition/Monitor$Subscription;Ljava/util/Set;)Lcom/android/systemui/shared/condition/Monitor$Subscription$Token;
 
-    .line 38
+    .line 39
     return-void
-    .line 41
+    .line 42
 .end method

@@ -13,7 +13,7 @@
              app:layout_constraintStart_toStartOf="parent"
              app:layout_constraintTop_toTopOf="parent" />
   <TextView android:textSize="14.0sp"
-            android:textColor="?android:^attr-private/updatableSystem"
+            android:textColor="?android:^attr-private/materialColorPrimaryFixed"
             android:ellipsize="end"
             android:gravity="center_horizontal"
             android:id="@id/sub_card_text"

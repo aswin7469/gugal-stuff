@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/graphics/GraphicsLayerModifierKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -24,178 +24,254 @@
     .line 11
 .end method
 
-.method public static graphicsLayer-Ap8cVGQ$default(Landroidx/compose/ui/Modifier;FFFLandroidx/compose/ui/graphics/Shape;ZII)Landroidx/compose/ui/Modifier;
-    .locals 22
+.method public static graphicsLayer-Ap8cVGQ$default(Landroidx/compose/ui/Modifier;FFFFFFFLandroidx/compose/ui/graphics/Shape;ZLandroidx/compose/ui/graphics/AndroidRenderEffect;II)Landroidx/compose/ui/Modifier;
+    .locals 24
 
     .line 1
-    move/from16 v0, p7
+    move/from16 v0, p12
 
     .line 2
-    and-int/lit8 v1, v0, 0x4
+    and-int/lit8 v1, v0, 0x1
 
     .line 4
-    if-eqz v1, :cond_0
+    const/high16 v2, 0x3f800000    # 1.0f
 
     .line 6
-    const/high16 v1, 0x3f800000    # 1.0f
+    if-eqz v1, :cond_0
 
     .line 8
-    move v5, v1
+    move v4, v2
 
     .line 10
     goto :goto_0
 
     .line 11
     :cond_0
-    move/from16 v5, p1
+    move/from16 v4, p1
 
     .line 12
     :goto_0
-    and-int/lit8 v1, v0, 0x20
+    and-int/lit8 v1, v0, 0x2
 
     .line 14
-    const/4 v2, 0x0
-
-    .line 16
     if-eqz v1, :cond_1
 
-    .line 17
-    move v8, v2
+    .line 16
+    move v5, v2
 
-    .line 19
+    .line 18
     goto :goto_1
 
-    .line 20
+    .line 19
     :cond_1
-    move/from16 v8, p2
+    move/from16 v5, p2
 
-    .line 21
+    .line 20
     :goto_1
-    and-int/lit16 v1, v0, 0x100
+    and-int/lit8 v1, v0, 0x4
 
-    .line 23
+    .line 22
     if-eqz v1, :cond_2
 
-    .line 25
-    move v11, v2
+    .line 24
+    move v6, v2
 
-    .line 27
+    .line 26
     goto :goto_2
 
-    .line 28
+    .line 27
     :cond_2
-    move/from16 v11, p3
+    move/from16 v6, p3
 
-    .line 29
+    .line 28
     :goto_2
-    sget-wide v13, Landroidx/compose/ui/graphics/TransformOrigin;->Center:J
+    and-int/lit8 v1, v0, 0x8
 
-    .line 31
-    and-int/lit16 v1, v0, 0x800
-
-    .line 33
-    if-eqz v1, :cond_3
-
-    .line 35
-    sget-object v1, Landroidx/compose/ui/graphics/RectangleShapeKt;->RectangleShape:Landroidx/compose/ui/graphics/RectangleShapeKt$RectangleShape$1;
-
-    .line 37
-    move-object v15, v1
-
-    .line 39
-    goto :goto_3
-
-    .line 40
-    :cond_3
-    move-object/from16 v15, p4
-
-    .line 41
-    :goto_3
-    and-int/lit16 v1, v0, 0x1000
-
-    .line 43
+    .line 30
     const/4 v2, 0x0
 
-    .line 45
+    .line 32
+    if-eqz v1, :cond_3
+
+    .line 33
+    move v7, v2
+
+    .line 35
+    goto :goto_3
+
+    .line 36
+    :cond_3
+    move/from16 v7, p4
+
+    .line 37
+    :goto_3
+    and-int/lit8 v1, v0, 0x10
+
+    .line 39
     if-eqz v1, :cond_4
 
-    .line 46
-    move/from16 v16, v2
+    .line 41
+    move v8, v2
 
-    .line 48
+    .line 43
     goto :goto_4
 
-    .line 50
+    .line 44
     :cond_4
-    move/from16 v16, p5
+    move/from16 v8, p5
+
+    .line 45
+    :goto_4
+    and-int/lit8 v1, v0, 0x20
+
+    .line 47
+    if-eqz v1, :cond_5
+
+    .line 49
+    move v9, v2
 
     .line 51
-    :goto_4
-    sget-wide v19, Landroidx/compose/ui/graphics/GraphicsLayerScopeKt;->DefaultShadowColor:J
-
-    .line 53
-    const/high16 v1, 0x10000
-
-    .line 55
-    and-int/2addr v0, v1
-
-    .line 57
-    if-eqz v0, :cond_5
-
-    .line 58
-    move/from16 v21, v2
-
-    .line 60
     goto :goto_5
 
-    .line 62
+    .line 52
     :cond_5
-    move/from16 v21, p6
+    move/from16 v9, p6
+
+    .line 53
+    :goto_5
+    and-int/lit16 v1, v0, 0x100
+
+    .line 55
+    if-eqz v1, :cond_6
+
+    .line 57
+    move v12, v2
+
+    .line 59
+    goto :goto_6
+
+    .line 60
+    :cond_6
+    move/from16 v12, p7
+
+    .line 61
+    :goto_6
+    sget-wide v14, Landroidx/compose/ui/graphics/TransformOrigin;->Center:J
 
     .line 63
-    :goto_5
-    new-instance v0, Landroidx/compose/ui/graphics/GraphicsLayerElement;
+    and-int/lit16 v1, v0, 0x800
 
     .line 65
-    move-object v2, v0
+    if-eqz v1, :cond_7
 
     .line 67
-    const/high16 v3, 0x3f800000    # 1.0f
+    sget-object v1, Landroidx/compose/ui/graphics/RectangleShapeKt;->RectangleShape:Landroidx/compose/ui/graphics/RectangleShapeKt$RectangleShape$1;
 
-    .line 68
-    const/high16 v4, 0x3f800000    # 1.0f
+    .line 69
+    move-object/from16 v16, v1
 
-    .line 70
-    const/4 v6, 0x0
-
-    .line 72
-    const/4 v7, 0x0
+    .line 71
+    goto :goto_7
 
     .line 73
-    const/4 v9, 0x0
+    :cond_7
+    move-object/from16 v16, p8
 
     .line 74
-    const/4 v10, 0x0
-
-    .line 75
-    const/high16 v12, 0x41000000    # 8.0f
+    :goto_7
+    and-int/lit16 v1, v0, 0x1000
 
     .line 76
-    move-wide/from16 v17, v19
+    const/4 v2, 0x0
 
     .line 78
-    invoke-direct/range {v2 .. v21}, Landroidx/compose/ui/graphics/GraphicsLayerElement;-><init>(FFFFFFFFFFJLandroidx/compose/ui/graphics/Shape;ZJJI)V
+    if-eqz v1, :cond_8
 
-    .line 80
-    move-object/from16 v1, p0
+    .line 79
+    move/from16 v17, v2
+
+    .line 81
+    goto :goto_8
 
     .line 83
-    invoke-interface {v1, v0}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
+    :cond_8
+    move/from16 v17, p9
 
-    .line 85
-    move-result-object v0
+    .line 84
+    :goto_8
+    and-int/lit16 v1, v0, 0x2000
+
+    .line 86
+    if-eqz v1, :cond_9
 
     .line 88
+    const/4 v1, 0x0
+
+    .line 90
+    move-object/from16 v18, v1
+
+    .line 91
+    goto :goto_9
+
+    .line 93
+    :cond_9
+    move-object/from16 v18, p10
+
+    .line 94
+    :goto_9
+    sget-wide v21, Landroidx/compose/ui/graphics/GraphicsLayerScopeKt;->DefaultShadowColor:J
+
+    .line 96
+    const/high16 v1, 0x10000
+
+    .line 98
+    and-int/2addr v0, v1
+
+    .line 100
+    if-eqz v0, :cond_a
+
+    .line 101
+    move/from16 v23, v2
+
+    .line 103
+    goto :goto_a
+
+    .line 105
+    :cond_a
+    move/from16 v23, p11
+
+    .line 106
+    :goto_a
+    new-instance v0, Landroidx/compose/ui/graphics/GraphicsLayerElement;
+
+    .line 108
+    move-object v3, v0
+
+    .line 110
+    const/4 v10, 0x0
+
+    .line 111
+    const/4 v11, 0x0
+
+    .line 112
+    const/high16 v13, 0x41000000    # 8.0f
+
+    .line 113
+    move-wide/from16 v19, v21
+
+    .line 115
+    invoke-direct/range {v3 .. v23}, Landroidx/compose/ui/graphics/GraphicsLayerElement;-><init>(FFFFFFFFFFJLandroidx/compose/ui/graphics/Shape;ZLandroidx/compose/ui/graphics/AndroidRenderEffect;JJI)V
+
+    .line 117
+    move-object/from16 v1, p0
+
+    .line 120
+    invoke-interface {v1, v0}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
+
+    .line 122
+    move-result-object v0
+
+    .line 125
     return-object v0
-    .line 89
+    .line 126
 .end method

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -58,100 +58,100 @@
     check-cast p0, Lcom/android/systemui/statusbar/phone/ScrimController;
 
     .line 15
-    const/4 v0, 0x0
-
-    .line 17
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mBlankingTransitionRunnable:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;
-
-    .line 18
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mPendingFrameCallback:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;
-
-    .line 20
-    const/4 v0, 0x0
-
-    .line 22
-    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mBlankScreen:Z
-
-    .line 23
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrims()V
-
-    .line 25
-    return-void
-
-    .line 28
-    :pswitch_1
-    check-cast p0, Lcom/android/systemui/statusbar/phone/ScrimController;
-
-    .line 29
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mTimeTicker:Lcom/android/systemui/util/AlarmTimeout;
 
-    .line 31
+    .line 17
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
-    .line 33
+    .line 19
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mControlScreenOffAnimation:Z
 
-    .line 35
+    .line 21
     if-eqz v1, :cond_0
 
-    .line 37
+    .line 23
     const-wide/16 v1, 0x9c4
 
-    .line 39
+    .line 25
     goto :goto_0
 
-    .line 41
+    .line 27
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mAlwaysOnPolicy:Lcom/android/systemui/doze/AlwaysOnDisplayPolicy;
 
-    .line 42
+    .line 28
     iget-wide v1, p0, Lcom/android/systemui/doze/AlwaysOnDisplayPolicy;->wallpaperVisibilityDuration:J
 
-    .line 44
+    .line 30
     :goto_0
     const/4 p0, 0x1
 
-    .line 46
-    invoke-virtual {v0, p0, v1, v2}, Lcom/android/systemui/util/AlarmTimeout;->schedule(IJ)Z
+    .line 32
+    invoke-virtual {v0, v1, v2, p0}, Lcom/android/systemui/util/AlarmTimeout;->schedule(JI)Z
 
-    .line 47
+    .line 33
     return-void
 
-    .line 50
-    :pswitch_2
+    .line 36
+    :pswitch_1
     check-cast p0, Lcom/android/systemui/statusbar/phone/ScrimController;
 
-    .line 51
+    .line 37
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mTimeTicker:Lcom/android/systemui/util/AlarmTimeout;
 
-    .line 53
+    .line 39
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
-    .line 55
+    .line 41
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mControlScreenOffAnimation:Z
 
-    .line 57
+    .line 43
     if-eqz v1, :cond_1
 
-    .line 59
+    .line 45
     const-wide/16 v1, 0x9c4
 
-    .line 61
+    .line 47
     goto :goto_1
 
-    .line 63
+    .line 49
     :cond_1
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mAlwaysOnPolicy:Lcom/android/systemui/doze/AlwaysOnDisplayPolicy;
 
-    .line 64
+    .line 50
     iget-wide v1, p0, Lcom/android/systemui/doze/AlwaysOnDisplayPolicy;->wallpaperVisibilityDuration:J
 
-    .line 66
+    .line 52
     :goto_1
     const/4 p0, 0x1
 
-    .line 68
-    invoke-virtual {v0, p0, v1, v2}, Lcom/android/systemui/util/AlarmTimeout;->schedule(IJ)Z
+    .line 54
+    invoke-virtual {v0, v1, v2, p0}, Lcom/android/systemui/util/AlarmTimeout;->schedule(JI)Z
+
+    .line 55
+    return-void
+
+    .line 58
+    :pswitch_2
+    check-cast p0, Lcom/android/systemui/statusbar/phone/ScrimController;
+
+    .line 59
+    const/4 v0, 0x0
+
+    .line 61
+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mBlankingTransitionRunnable:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;
+
+    .line 62
+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mPendingFrameCallback:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;
+
+    .line 64
+    const/4 v0, 0x0
+
+    .line 66
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mBlankScreen:Z
+
+    .line 67
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrims()V
 
     .line 69
     return-void
@@ -180,7 +180,7 @@
     new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;
 
     .line 85
-    const/4 v1, 0x3
+    const/4 v1, 0x1
 
     .line 87
     invoke-direct {v0, v1, p0}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;)V
@@ -244,4 +244,5 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
+    .line 122
 .end method

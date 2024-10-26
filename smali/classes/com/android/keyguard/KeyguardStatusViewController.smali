@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardStatusViewController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -29,8 +29,6 @@
 
 .field public final mKeyguardClockSwitchController:Lcom/android/keyguard/KeyguardClockSwitchController;
 
-.field public final mKeyguardInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;
-
 .field public final mKeyguardSliceViewController:Lcom/android/keyguard/KeyguardSliceViewController;
 
 .field public final mKeyguardStatusAlignmentTransitionListener:Lcom/android/keyguard/KeyguardStatusViewController$1;
@@ -38,8 +36,6 @@
 .field public final mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
 .field public final mKeyguardVisibilityHelper:Lcom/android/keyguard/KeyguardVisibilityHelper;
-
-.field public final mPowerInteractor:Lcom/android/systemui/power/domain/interactor/PowerInteractor;
 
 .field public mSplitShadeEnabled:Ljava/lang/Boolean;
 
@@ -188,15 +184,15 @@
     new-instance v7, Lcom/android/keyguard/KeyguardVisibilityHelper;
 
     .line 69
-    move-object/from16 v1, p9
-
-    .line 71
-    iget-object v6, v1, Lcom/android/keyguard/logging/KeyguardLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
-
-    .line 73
     const/4 v5, 0x1
 
-    .line 75
+    .line 71
+    move-object/from16 v1, p9
+
+    .line 72
+    iget-object v6, v1, Lcom/android/keyguard/logging/KeyguardLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
+
+    .line 74
     move-object v1, v7
 
     .line 76
@@ -227,20 +223,8 @@
     iput-object v1, v0, Lcom/android/keyguard/KeyguardStatusViewController;->mDumpManager:Lcom/android/systemui/dump/DumpManager;
 
     .line 92
-    move-object/from16 v1, p11
-
-    .line 94
-    iput-object v1, v0, Lcom/android/keyguard/KeyguardStatusViewController;->mKeyguardInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;
-
-    .line 96
-    move-object/from16 v1, p13
-
-    .line 98
-    iput-object v1, v0, Lcom/android/keyguard/KeyguardStatusViewController;->mPowerInteractor:Lcom/android/systemui/power/domain/interactor/PowerInteractor;
-
-    .line 100
     return-void
-    .line 102
+    .line 94
 .end method
 
 
@@ -295,13 +279,13 @@
     iget-object v1, p0, Lcom/android/keyguard/KeyguardSliceViewController;->mBgHandler:Landroid/os/Handler;
 
     .line 33
-    new-instance v2, Lcom/android/keyguard/KeyguardSliceViewController$$ExternalSyntheticLambda1;
+    new-instance v2, Lcom/android/keyguard/KeyguardSliceViewController$$ExternalSyntheticLambda2;
 
     .line 35
     const/4 v3, 0x0
 
     .line 37
-    invoke-direct {v2, p0, v0, v3}, Lcom/android/keyguard/KeyguardSliceViewController$$ExternalSyntheticLambda1;-><init>(Lcom/android/keyguard/KeyguardSliceViewController;Ljava/lang/Object;I)V
+    invoke-direct {v2, p0, v0, v3}, Lcom/android/keyguard/KeyguardSliceViewController$$ExternalSyntheticLambda2;-><init>(Lcom/android/keyguard/KeyguardSliceViewController;Ljava/lang/Object;I)V
 
     .line 38
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -647,7 +631,7 @@
 .end method
 
 .method public final onInit()V
-    .locals 5
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mKeyguardClockSwitchController:Lcom/android/keyguard/KeyguardClockSwitchController;
@@ -662,7 +646,7 @@
     check-cast v1, Lcom/android/keyguard/KeyguardStatusView;
 
     .line 9
-    const v2, 0x7f0b0775    # @id/status_view_media_container
+    const v2, 0x7f0a07a4    # @id/status_view_media_container
 
     .line 11
     invoke-virtual {v1, v2}, Landroid/widget/GridLayout;->findViewById(I)Landroid/view/View;
@@ -723,75 +707,8 @@
     invoke-static {v0, v1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
 
     .line 55
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 58
-    move-result v0
-
-    .line 61
-    if-eqz v0, :cond_1
-
-    .line 62
-    sget-object v0, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
-
-    .line 64
-    iget-object v1, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
-
-    .line 66
-    iget-object v2, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mKeyguardInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;
-
-    .line 68
-    iget-object v2, v2, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;->dozeTimeTick:Lkotlinx/coroutines/flow/StateFlow;
-
-    .line 70
-    new-instance v3, Lcom/android/keyguard/KeyguardStatusViewController$$ExternalSyntheticLambda2;
-
-    .line 72
-    const/4 v4, 0x0
-
-    .line 74
-    invoke-direct {v3, p0, v4}, Lcom/android/keyguard/KeyguardStatusViewController$$ExternalSyntheticLambda2;-><init>(Lcom/android/keyguard/KeyguardStatusViewController;I)V
-
-    .line 75
-    invoke-static {v1, v2, v3, v0}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;Lkotlin/coroutines/CoroutineContext;)V
-
-    .line 78
-    iget-object v1, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
-
-    .line 81
-    iget-object v2, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mPowerInteractor:Lcom/android/systemui/power/domain/interactor/PowerInteractor;
-
-    .line 83
-    iget-object v2, v2, Lcom/android/systemui/power/domain/interactor/PowerInteractor;->screenPowerState:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 85
-    new-instance v3, Lcom/android/keyguard/KeyguardStatusViewController$$ExternalSyntheticLambda2;
-
-    .line 87
-    const/4 v4, 0x1
-
-    .line 89
-    invoke-direct {v3, p0, v4}, Lcom/android/keyguard/KeyguardStatusViewController$$ExternalSyntheticLambda2;-><init>(Lcom/android/keyguard/KeyguardStatusViewController;I)V
-
-    .line 90
-    invoke-static {v1, v2, v3, v0}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;Lkotlin/coroutines/CoroutineContext;)V
-
-    .line 93
-    iget-object p0, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
-
-    .line 96
-    check-cast p0, Lcom/android/keyguard/KeyguardStatusView;
-
-    .line 98
-    const/16 v0, 0x8
-
-    .line 100
-    invoke-virtual {p0, v0}, Landroid/widget/GridLayout;->setVisibility(I)V
-
-    .line 102
-    :cond_1
     return-void
-    .line 105
+    .line 58
 .end method
 
 .method public final onViewAttached()V
@@ -804,7 +721,7 @@
     check-cast v0, Lcom/android/keyguard/KeyguardStatusView;
 
     .line 4
-    const v1, 0x7f0b03e9    # @id/keyguard_status_area
+    const v1, 0x7f0a040a    # @id/keyguard_status_area
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/widget/GridLayout;->findViewById(I)Landroid/view/View;
@@ -816,102 +733,73 @@
     iput-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mStatusArea:Landroid/view/View;
 
     .line 13
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 15
-    move-result v0
-
-    .line 18
-    if-eqz v0, :cond_0
-
-    .line 19
-    return-void
-
-    .line 21
-    :cond_0
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mStatusArea:Landroid/view/View;
-
-    .line 22
     iget-object v1, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mStatusAreaLayoutChangeListener:Lcom/android/keyguard/KeyguardStatusViewController$2;
 
-    .line 24
+    .line 15
     invoke-virtual {v0, v1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 26
+    .line 17
     iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mInfoCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 29
+    .line 20
     iget-object v1, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 31
+    .line 22
     invoke-virtual {v1, v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 33
+    .line 24
     iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mConfigurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
-    .line 36
+    .line 27
     check-cast v0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
 
-    .line 38
+    .line 29
     iget-object p0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mConfigurationListener:Lcom/android/keyguard/KeyguardStatusViewController$3;
 
-    .line 40
+    .line 31
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 42
+    .line 33
     return-void
-    .line 45
+    .line 36
 .end method
 
 .method public final onViewDetached()V
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    return-void
-
-    .line 8
-    :cond_0
     iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mStatusArea:Landroid/view/View;
 
-    .line 9
+    .line 2
     iget-object v1, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mStatusAreaLayoutChangeListener:Lcom/android/keyguard/KeyguardStatusViewController$2;
 
-    .line 11
+    .line 4
     invoke-virtual {v0, v1}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 13
+    .line 6
     iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mInfoCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 16
+    .line 9
     iget-object v1, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 18
+    .line 11
     invoke-virtual {v1, v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->removeCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 20
+    .line 13
     iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mConfigurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
-    .line 23
+    .line 16
     check-cast v0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
 
-    .line 25
+    .line 18
     iget-object p0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mConfigurationListener:Lcom/android/keyguard/KeyguardStatusViewController$3;
 
-    .line 27
+    .line 20
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->removeCallback(Ljava/lang/Object;)V
 
-    .line 29
+    .line 22
     return-void
-    .line 32
+    .line 25
 .end method
 
 .method public final refreshTime()V
@@ -958,12 +846,12 @@
 
     .line 27
     :cond_0
-    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardClockSwitchController;->getClock()Lcom/android/systemui/plugins/clocks/ClockController;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitchController;->mClockEventController:Lcom/android/keyguard/ClockEventController;
 
     .line 30
-    move-result-object p0
+    iget-object p0, p0, Lcom/android/keyguard/ClockEventController;->clock:Lcom/android/systemui/plugins/clocks/ClockController;
 
-    .line 33
+    .line 32
     if-eqz p0, :cond_1
 
     .line 34
@@ -1172,395 +1060,335 @@
 .end method
 
 .method public final updateAlignment(Landroidx/constraintlayout/widget/ConstraintLayout;ZZZ)V
-    .locals 6
+    .locals 7
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
+    const/4 v0, 0x0
 
     .line 2
-    move-result v0
+    const/4 v1, 0x1
 
-    .line 5
-    const/4 v1, 0x0
+    .line 3
+    if-eqz p2, :cond_0
+
+    .line 4
+    if-eqz p3, :cond_0
 
     .line 6
-    iget-object v2, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mKeyguardClockSwitchController:Lcom/android/keyguard/KeyguardClockSwitchController;
+    move v2, v1
 
-    .line 7
-    const/4 v3, 0x1
-
-    .line 9
-    if-eqz v0, :cond_0
-
-    .line 10
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mKeyguardInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;
-
-    .line 12
-    iget-object v0, v0, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;->repository:Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;
-
-    .line 14
-    invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 16
-    move-result-object v4
-
-    .line 19
-    iget-object v0, v0, Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;->_clockShouldBeCentered:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 20
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 22
-    const/4 v5, 0x0
-
-    .line 25
-    invoke-virtual {v0, v5, v4}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 26
-    goto :goto_1
-
-    .line 29
-    :cond_0
-    if-eqz p2, :cond_1
-
-    .line 30
-    if-eqz p3, :cond_1
-
-    .line 32
-    move v0, v3
-
-    .line 34
+    .line 8
     goto :goto_0
 
-    .line 35
-    :cond_1
-    move v0, v1
+    .line 9
+    :cond_0
+    move v2, v0
 
-    .line 36
+    .line 10
     :goto_0
-    iget-object v4, v2, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mKeyguardClockSwitchController:Lcom/android/keyguard/KeyguardClockSwitchController;
 
-    .line 37
+    .line 11
+    iget-object v4, v3, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+
+    .line 13
     check-cast v4, Lcom/android/keyguard/KeyguardClockSwitch;
 
-    .line 39
+    .line 15
     iget-boolean v5, v4, Lcom/android/keyguard/KeyguardClockSwitch;->mSplitShadeCentered:Z
 
-    .line 41
-    if-eq v5, v0, :cond_2
+    .line 17
+    if-eq v5, v2, :cond_1
 
-    .line 43
-    iput-boolean v0, v4, Lcom/android/keyguard/KeyguardClockSwitch;->mSplitShadeCentered:Z
+    .line 19
+    iput-boolean v2, v4, Lcom/android/keyguard/KeyguardClockSwitch;->mSplitShadeCentered:Z
 
-    .line 45
-    invoke-virtual {v4, v3}, Lcom/android/keyguard/KeyguardClockSwitch;->updateStatusArea(Z)V
+    .line 21
+    invoke-virtual {v4, v1}, Lcom/android/keyguard/KeyguardClockSwitch;->updateStatusArea(Z)V
 
-    .line 47
-    :cond_2
-    :goto_1
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mStatusViewCentered:Ljava/lang/Boolean;
+    .line 23
+    :cond_1
+    iget-object v2, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mStatusViewCentered:Ljava/lang/Boolean;
 
-    .line 50
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 26
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 52
-    move-result v0
+    .line 28
+    move-result v2
 
-    .line 55
-    if-ne v0, p3, :cond_3
+    .line 31
+    if-ne v2, p3, :cond_2
 
-    .line 56
+    .line 32
     return-void
 
-    .line 58
-    :cond_3
+    .line 34
+    :cond_2
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 59
-    move-result-object v0
+    .line 35
+    move-result-object v2
 
-    .line 62
-    iput-object v0, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mStatusViewCentered:Ljava/lang/Boolean;
+    .line 38
+    iput-object v2, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mStatusViewCentered:Ljava/lang/Boolean;
 
-    .line 63
-    if-nez p1, :cond_4
+    .line 39
+    if-nez p1, :cond_3
 
-    .line 65
+    .line 41
     return-void
 
-    .line 67
+    .line 43
+    :cond_3
+    new-instance v2, Landroidx/constraintlayout/widget/ConstraintSet;
+
+    .line 44
+    invoke-direct {v2}, Landroidx/constraintlayout/widget/ConstraintSet;-><init>()V
+
+    .line 46
+    invoke-virtual {v2, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->clone(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+
+    .line 49
+    if-eqz p3, :cond_4
+
+    .line 52
+    move p3, v0
+
+    .line 54
+    goto :goto_1
+
+    .line 55
     :cond_4
-    new-instance v0, Landroidx/constraintlayout/widget/ConstraintSet;
+    const p3, 0x7f0a064d    # @id/qs_edge_guideline
 
-    .line 68
-    invoke-direct {v0}, Landroidx/constraintlayout/widget/ConstraintSet;-><init>()V
+    .line 56
+    :goto_1
+    const v4, 0x7f0a040b    # @id/keyguard_status_view
 
-    .line 70
-    invoke-virtual {v0, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->clone(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    .line 73
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 76
-    move-result v4
-
-    .line 79
-    if-eqz v4, :cond_5
-
-    .line 80
-    const v4, 0x7f0b074d    # @id/split_shade_guideline
-
-    .line 82
-    goto :goto_2
-
-    .line 85
-    :cond_5
-    const v4, 0x7f0b0624    # @id/qs_edge_guideline
-
-    .line 86
-    :goto_2
-    if-eqz p3, :cond_6
-
-    .line 89
-    move v4, v1
-
-    .line 91
-    :cond_6
-    const p3, 0x7f0b03ea    # @id/keyguard_status_view
-
-    .line 92
+    .line 59
     const/4 v5, 0x7
 
-    .line 95
-    invoke-virtual {v0, p3, v5, v4, v5}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIII)V
+    .line 62
+    invoke-virtual {v2, v4, v5, p3, v5}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIII)V
 
-    .line 96
-    if-nez p4, :cond_7
+    .line 63
+    if-nez p4, :cond_5
 
-    .line 99
-    invoke-virtual {v0, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    .line 66
+    invoke-virtual {v2, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
-    .line 101
+    .line 68
     return-void
 
-    .line 104
-    :cond_7
+    .line 71
+    :cond_5
     iget-object p3, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 105
+    .line 72
     iget-object p4, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    .line 107
+    .line 74
     const/16 v4, 0x46
 
-    .line 109
+    .line 76
     invoke-virtual {p3, p4, v4}, Lcom/android/internal/jank/InteractionJankMonitor;->begin(Landroid/view/View;I)Z
 
-    .line 111
+    .line 78
     new-instance p3, Landroid/transition/ChangeBounds;
 
-    .line 114
+    .line 81
     invoke-direct {p3}, Landroid/transition/ChangeBounds;-><init>()V
 
-    .line 116
-    if-eqz p2, :cond_8
+    .line 83
+    if-eqz p2, :cond_6
 
-    .line 119
-    const p4, 0x7f0b0775    # @id/status_view_media_container
+    .line 86
+    const p4, 0x7f0a07a4    # @id/status_view_media_container
 
-    .line 121
-    invoke-virtual {p3, p4, v3}, Landroid/transition/ChangeBounds;->excludeTarget(IZ)Landroid/transition/Transition;
+    .line 88
+    invoke-virtual {p3, p4, v1}, Landroid/transition/ChangeBounds;->excludeTarget(IZ)Landroid/transition/Transition;
 
-    .line 124
+    .line 91
     const-class p4, Landroidx/viewpager/widget/ViewPager;
 
-    .line 127
-    invoke-virtual {p3, p4, v3}, Landroid/transition/ChangeBounds;->excludeTarget(Ljava/lang/Class;Z)Landroid/transition/Transition;
+    .line 94
+    invoke-virtual {p3, p4, v1}, Landroid/transition/ChangeBounds;->excludeTarget(Ljava/lang/Class;Z)Landroid/transition/Transition;
 
-    .line 129
+    .line 96
     const-class p4, Landroidx/viewpager/widget/ViewPager;
 
-    .line 132
-    invoke-virtual {p3, p4, v3}, Landroid/transition/ChangeBounds;->excludeChildren(Ljava/lang/Class;Z)Landroid/transition/Transition;
+    .line 99
+    invoke-virtual {p3, p4, v1}, Landroid/transition/ChangeBounds;->excludeChildren(Ljava/lang/Class;Z)Landroid/transition/Transition;
 
-    .line 134
-    :cond_8
+    .line 101
+    :cond_6
     sget-object p4, Lcom/android/app/animation/Interpolators;->FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
-    .line 137
+    .line 104
     invoke-virtual {p3, p4}, Landroid/transition/ChangeBounds;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/transition/Transition;
 
-    .line 139
+    .line 106
     const-wide/16 v4, 0x168
 
-    .line 142
+    .line 109
     invoke-virtual {p3, v4, v5}, Landroid/transition/ChangeBounds;->setDuration(J)Landroid/transition/Transition;
 
-    .line 144
-    invoke-virtual {v2}, Lcom/android/keyguard/KeyguardClockSwitchController;->getClock()Lcom/android/systemui/plugins/clocks/ClockController;
+    .line 111
+    iget-object p4, v3, Lcom/android/keyguard/KeyguardClockSwitchController;->mClockEventController:Lcom/android/keyguard/ClockEventController;
 
-    .line 147
-    move-result-object p4
+    .line 114
+    iget-object p4, p4, Lcom/android/keyguard/ClockEventController;->clock:Lcom/android/systemui/plugins/clocks/ClockController;
 
-    .line 150
+    .line 116
     iget-object v4, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mKeyguardStatusAlignmentTransitionListener:Lcom/android/keyguard/KeyguardStatusViewController$1;
 
-    .line 151
-    if-eqz p4, :cond_c
+    .line 118
+    if-eqz p4, :cond_a
 
-    .line 153
+    .line 120
     invoke-interface {p4}, Lcom/android/systemui/plugins/clocks/ClockController;->getLargeClock()Lcom/android/systemui/plugins/clocks/ClockFaceController;
 
-    .line 155
+    .line 122
     move-result-object p4
 
-    .line 158
+    .line 125
     invoke-interface {p4}, Lcom/android/systemui/plugins/clocks/ClockFaceController;->getConfig()Lcom/android/systemui/plugins/clocks/ClockFaceConfig;
 
-    .line 159
+    .line 126
     move-result-object p4
 
-    .line 162
+    .line 129
     invoke-virtual {p4}, Lcom/android/systemui/plugins/clocks/ClockFaceConfig;->getHasCustomPositionUpdatedAnimation()Z
 
-    .line 163
+    .line 130
     move-result p4
 
-    .line 166
-    if-eqz p4, :cond_c
+    .line 133
+    if-eqz p4, :cond_a
 
-    .line 167
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 169
-    move-result p4
-
-    .line 172
-    if-nez p4, :cond_c
-
-    .line 173
+    .line 134
     iget-object p0, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    .line 175
+    .line 136
     check-cast p0, Lcom/android/keyguard/KeyguardStatusView;
 
-    .line 177
-    const p4, 0x7f0b0451    # @id/lockscreen_clock_view_large
+    .line 138
+    const p4, 0x7f0a0472    # @id/lockscreen_clock_view_large
 
-    .line 179
+    .line 140
     invoke-virtual {p0, p4}, Landroid/widget/GridLayout;->findViewById(I)Landroid/view/View;
 
-    .line 182
+    .line 143
     move-result-object p0
 
-    .line 185
+    .line 146
     check-cast p0, Landroid/widget/FrameLayout;
 
-    .line 186
-    if-eqz p0, :cond_b
+    .line 147
+    if-eqz p0, :cond_9
 
-    .line 188
+    .line 149
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
-    .line 190
+    .line 151
     move-result p4
 
-    .line 193
-    if-nez p4, :cond_9
+    .line 154
+    if-nez p4, :cond_7
 
-    .line 194
-    goto :goto_3
+    .line 155
+    goto :goto_2
 
-    .line 196
-    :cond_9
-    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+    .line 157
+    :cond_7
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 197
+    .line 158
     move-result-object p0
 
-    .line 200
+    .line 161
     new-instance p4, Landroid/transition/TransitionSet;
 
-    .line 201
+    .line 162
     invoke-direct {p4}, Landroid/transition/TransitionSet;-><init>()V
 
-    .line 203
+    .line 164
     invoke-virtual {p4, p3}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
-    .line 206
+    .line 167
     new-instance p3, Lcom/android/keyguard/KeyguardStatusViewController$SplitShadeTransitionAdapter;
 
-    .line 209
-    invoke-direct {p3, v2}, Lcom/android/keyguard/KeyguardStatusViewController$SplitShadeTransitionAdapter;-><init>(Lcom/android/keyguard/KeyguardClockSwitchController;)V
+    .line 170
+    invoke-direct {p3, v3}, Lcom/android/keyguard/KeyguardStatusViewController$SplitShadeTransitionAdapter;-><init>(Lcom/android/keyguard/KeyguardClockSwitchController;)V
 
-    .line 211
-    sget-object v1, Lcom/android/app/animation/Interpolators;->LINEAR:Landroid/view/animation/Interpolator;
+    .line 172
+    sget-object v0, Lcom/android/app/animation/Interpolators;->LINEAR:Landroid/view/animation/Interpolator;
 
-    .line 214
-    invoke-virtual {p3, v1}, Landroid/transition/Transition;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/transition/Transition;
+    .line 175
+    invoke-virtual {p3, v0}, Landroid/transition/Transition;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/transition/Transition;
 
-    .line 216
-    const-wide/16 v1, 0x3e8
+    .line 177
+    const-wide/16 v5, 0x3e8
 
-    .line 219
-    invoke-virtual {p3, v1, v2}, Landroid/transition/Transition;->setDuration(J)Landroid/transition/Transition;
+    .line 180
+    invoke-virtual {p3, v5, v6}, Landroid/transition/Transition;->setDuration(J)Landroid/transition/Transition;
 
-    .line 221
+    .line 182
     invoke-virtual {p3, p0}, Landroid/transition/Transition;->addTarget(Landroid/view/View;)Landroid/transition/Transition;
 
-    .line 224
+    .line 185
     invoke-virtual {p4, p3}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
-    .line 227
-    if-eqz p2, :cond_a
+    .line 188
+    if-eqz p2, :cond_8
 
-    .line 230
+    .line 191
     const-class p0, Landroidx/viewpager/widget/ViewPager;
 
-    .line 232
-    invoke-virtual {p4, p0, v3}, Landroid/transition/TransitionSet;->excludeTarget(Ljava/lang/Class;Z)Landroid/transition/Transition;
+    .line 193
+    invoke-virtual {p4, p0, v1}, Landroid/transition/TransitionSet;->excludeTarget(Ljava/lang/Class;Z)Landroid/transition/Transition;
 
-    .line 234
+    .line 195
     const-class p0, Landroidx/viewpager/widget/ViewPager;
 
-    .line 237
-    invoke-virtual {p4, p0, v3}, Landroid/transition/TransitionSet;->excludeChildren(Ljava/lang/Class;Z)Landroid/transition/Transition;
+    .line 198
+    invoke-virtual {p4, p0, v1}, Landroid/transition/TransitionSet;->excludeChildren(Ljava/lang/Class;Z)Landroid/transition/Transition;
 
-    .line 239
-    :cond_a
+    .line 200
+    :cond_8
     invoke-virtual {p4, v4}, Landroid/transition/TransitionSet;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/TransitionSet;
 
-    .line 242
+    .line 203
     invoke-static {p1, p4}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
 
-    .line 245
-    goto :goto_4
+    .line 206
+    goto :goto_3
 
-    .line 248
-    :cond_b
+    .line 209
+    :cond_9
+    :goto_2
+    invoke-virtual {p3, v4}, Landroid/transition/ChangeBounds;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+
+    .line 210
+    invoke-static {p1, p3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
+
+    .line 213
+    goto :goto_3
+
+    .line 216
+    :cond_a
+    invoke-virtual {p3, v4}, Landroid/transition/ChangeBounds;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+
+    .line 217
+    invoke-static {p1, p3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
+
+    .line 220
     :goto_3
-    invoke-virtual {p3, v4}, Landroid/transition/ChangeBounds;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+    invoke-virtual {v2, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
-    .line 249
-    invoke-static {p1, p3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    .line 252
-    goto :goto_4
-
-    .line 255
-    :cond_c
-    invoke-virtual {p3, v4}, Landroid/transition/ChangeBounds;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
-
-    .line 256
-    invoke-static {p1, p3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    .line 259
-    :goto_4
-    invoke-virtual {v0, p1}, Landroidx/constraintlayout/widget/ConstraintSet;->applyTo(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    .line 262
+    .line 223
     return-void
-    .line 265
+    .line 226
 .end method
 
 .method public final updatePosition(IIFZ)V
@@ -1579,12 +1407,12 @@
     iget-object p2, p0, Lcom/android/keyguard/KeyguardStatusViewController;->mKeyguardClockSwitchController:Lcom/android/keyguard/KeyguardClockSwitchController;
 
     .line 8
-    invoke-virtual {p2}, Lcom/android/keyguard/KeyguardClockSwitchController;->getClock()Lcom/android/systemui/plugins/clocks/ClockController;
+    iget-object v0, p2, Lcom/android/keyguard/KeyguardClockSwitchController;->mClockEventController:Lcom/android/keyguard/ClockEventController;
 
     .line 10
-    move-result-object v0
+    iget-object v0, v0, Lcom/android/keyguard/ClockEventController;->clock:Lcom/android/systemui/plugins/clocks/ClockController;
 
-    .line 13
+    .line 12
     sget-object v1, Lcom/android/keyguard/KeyguardStatusViewController;->CLOCK_ANIMATION_PROPERTIES:Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;
 
     .line 14

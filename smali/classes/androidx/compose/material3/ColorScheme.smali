@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/material3/ColorScheme;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -15,8 +15,6 @@
 .field public defaultFilledIconButtonColorsCached:Landroidx/compose/material3/IconButtonColors;
 
 .field public defaultIconButtonColorsCached:Landroidx/compose/material3/IconButtonColors;
-
-.field public defaultMenuItemColorsCached:Landroidx/compose/material3/MenuItemColors;
 
 .field public defaultOutlinedButtonColorsCached:Landroidx/compose/material3/ButtonColors;
 
@@ -379,270 +377,270 @@
     iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onSecondaryContainer:J
 
     .line 65
-    const-string v3, "tertiary="
+    const-string/jumbo v3, "tertiary="
 
     .line 67
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 69
+    .line 70
     iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->tertiary:J
 
-    .line 72
+    .line 73
     const-string v3, "onTertiary="
 
-    .line 74
+    .line 75
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 76
+    .line 77
     iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onTertiary:J
 
-    .line 79
-    const-string v3, "tertiaryContainer="
+    .line 80
+    const-string/jumbo v3, "tertiaryContainer="
 
-    .line 81
+    .line 82
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 83
+    .line 85
     iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->tertiaryContainer:J
 
-    .line 86
+    .line 88
     const-string v3, "onTertiaryContainer="
 
-    .line 88
+    .line 90
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 90
+    .line 92
     iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onTertiaryContainer:J
 
-    .line 93
+    .line 95
     const-string v3, "background="
 
-    .line 95
+    .line 97
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 97
+    .line 99
     iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->background:J
 
-    .line 100
+    .line 102
     const-string v3, "onBackground="
 
-    .line 102
+    .line 104
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 104
+    .line 106
     iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onBackground:J
 
-    .line 107
-    const-string v3, "surface="
-
     .line 109
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    const-string/jumbo v3, "surface="
 
     .line 111
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surface:J
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 114
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surface:J
+
+    .line 117
     const-string v3, "onSurface="
 
-    .line 116
+    .line 119
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
-
-    .line 118
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onSurface:J
 
     .line 121
-    const-string v3, "surfaceVariant="
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onSurface:J
 
-    .line 123
+    .line 124
+    const-string/jumbo v3, "surfaceVariant="
+
+    .line 126
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 125
+    .line 129
     iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceVariant:J
 
-    .line 128
+    .line 132
     const-string v3, "onSurfaceVariant="
 
-    .line 130
+    .line 134
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 132
+    .line 136
     iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onSurfaceVariant:J
 
-    .line 135
-    const-string v3, "surfaceTint="
-
-    .line 137
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
-
     .line 139
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceTint:J
+    const-string/jumbo v3, "surfaceTint="
 
-    .line 142
-    const-string v3, "inverseSurface="
+    .line 141
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 144
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceTint:J
 
-    .line 146
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->inverseSurface:J
+    .line 147
+    const-string v3, "inverseSurface="
 
     .line 149
-    const-string v3, "inverseOnSurface="
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 151
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->inverseSurface:J
 
-    .line 153
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->inverseOnSurface:J
+    .line 154
+    const-string v3, "inverseOnSurface="
 
     .line 156
-    const-string v3, "error="
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 158
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->inverseOnSurface:J
 
-    .line 160
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->error:J
+    .line 161
+    const-string v3, "error="
 
     .line 163
-    const-string v3, "onError="
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 165
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->error:J
 
-    .line 167
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onError:J
+    .line 168
+    const-string v3, "onError="
 
     .line 170
-    const-string v3, "errorContainer="
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 172
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onError:J
 
-    .line 174
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->errorContainer:J
+    .line 175
+    const-string v3, "errorContainer="
 
     .line 177
-    const-string v3, "onErrorContainer="
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 179
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->errorContainer:J
 
-    .line 181
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onErrorContainer:J
+    .line 182
+    const-string v3, "onErrorContainer="
 
     .line 184
-    const-string v3, "outline="
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 186
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->onErrorContainer:J
 
-    .line 188
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->outline:J
+    .line 189
+    const-string v3, "outline="
 
     .line 191
-    const-string v3, "outlineVariant="
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 193
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->outline:J
 
-    .line 195
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->outlineVariant:J
+    .line 196
+    const-string v3, "outlineVariant="
 
     .line 198
-    const-string v3, "scrim="
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 200
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->outlineVariant:J
 
-    .line 202
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->scrim:J
+    .line 203
+    const-string v3, "scrim="
 
     .line 205
-    const-string v3, "surfaceBright="
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 207
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->scrim:J
 
-    .line 209
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceBright:J
+    .line 210
+    const-string/jumbo v3, "surfaceBright="
 
     .line 212
-    const-string v3, "surfaceDim="
-
-    .line 214
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 216
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceDim:J
+    .line 215
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceBright:J
 
-    .line 219
-    const-string v3, "surfaceContainer="
+    .line 218
+    const-string/jumbo v3, "surfaceDim="
 
-    .line 221
+    .line 220
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 223
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceContainer:J
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceDim:J
 
     .line 226
-    const-string v3, "surfaceContainerHigh="
+    const-string/jumbo v3, "surfaceContainer="
 
     .line 228
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 230
+    .line 231
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceContainer:J
+
+    .line 234
+    const-string/jumbo v3, "surfaceContainerHigh="
+
+    .line 236
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+
+    .line 239
     iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceContainerHigh:J
 
-    .line 233
-    const-string v3, "surfaceContainerHighest="
-
-    .line 235
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
-
-    .line 237
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceContainerHighest:J
-
-    .line 240
-    const-string v3, "surfaceContainerLow="
-
     .line 242
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    const-string/jumbo v3, "surfaceContainerHighest="
 
     .line 244
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceContainerLow:J
-
-    .line 247
-    const-string v3, "surfaceContainerLowest="
-
-    .line 249
     invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 251
-    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceContainerLowest:J
+    .line 247
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceContainerHighest:J
 
-    .line 254
-    invoke-static {v1, v2}, Landroidx/compose/ui/graphics/Color;->toString-impl(J)Ljava/lang/String;
+    .line 250
+    const-string/jumbo v3, "surfaceContainerLow="
 
-    .line 256
-    move-result-object p0
+    .line 252
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 259
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 255
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceContainerLow:J
+
+    .line 258
+    const-string/jumbo v3, "surfaceContainerLowest="
 
     .line 260
-    const/16 p0, 0x29
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 263
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iget-wide v1, p0, Landroidx/compose/material3/ColorScheme;->surfaceContainerLowest:J
 
-    .line 265
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 266
+    invoke-static {v1, v2}, Landroidx/compose/ui/graphics/Color;->toString-impl(J)Ljava/lang/String;
 
     .line 268
     move-result-object p0
 
     .line 271
-    return-object p0
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     .line 272
+    const/16 p0, 0x29
+
+    .line 275
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 277
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 280
+    move-result-object p0
+
+    .line 283
+    return-object p0
+    .line 284
 .end method

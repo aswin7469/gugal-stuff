@@ -1,6 +1,6 @@
 .class public abstract Landroidx/slice/widget/SliceLiveData;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -57,22 +57,12 @@
     move-result-object v0
 
     .line 32
-    const/4 v1, 0x0
+    invoke-direct {v2, v0}, Landroidx/collection/ArraySet;-><init>(Ljava/util/Collection;)V
 
     .line 33
-    invoke-direct {v2, v1}, Landroidx/collection/ArraySet;-><init>(I)V
-
-    .line 34
-    if-eqz v0, :cond_0
-
-    .line 37
-    invoke-virtual {v2, v0}, Landroidx/collection/ArraySet;->addAll(Ljava/util/Collection;)Z
-
-    .line 39
-    :cond_0
     sput-object v2, Landroidx/slice/widget/SliceLiveData;->SUPPORTED_SPECS:Landroidx/collection/ArraySet;
 
-    .line 42
+    .line 36
     return-void
-    .line 44
+    .line 38
 .end method

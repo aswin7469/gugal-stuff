@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/tuner/TunerFragment;
 .super Landroidx/preference/PreferenceFragment;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -13,38 +13,29 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 3
 
     .line 1
-    const-string v2, "picture_in_picture"
+    const-string v0, "picture_in_picture"
 
     .line 2
-    const-string v3, "volume_and_do_not_disturb"
+    const-string v1, "nav_bar"
 
     .line 4
-    const-string v0, "nav_bar"
+    const-string v2, "lockscreen"
 
     .line 6
-    const-string v1, "lockscreen"
+    filled-new-array {v1, v2, v0}, [Ljava/lang/String;
 
     .line 8
-    const-string v4, "doze"
-
-    .line 10
-    const-string v5, "plugins"
-
-    .line 12
-    filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
-
-    .line 14
     move-result-object v0
 
-    .line 17
+    .line 11
     sput-object v0, Lcom/android/systemui/tuner/TunerFragment;->DEBUG_ONLY:[Ljava/lang/String;
 
-    .line 18
+    .line 12
     return-void
-    .line 20
+    .line 14
 .end method
 
 .method public constructor <init>(Lcom/android/systemui/tuner/TunerService;)V
@@ -116,7 +107,7 @@
     const/4 p0, 0x2
 
     .line 2
-    const p2, 0x7f140826    # @string/remove_from_settings 'Remove from Settings'
+    const p2, 0x7f13087e    # @string/remove_from_settings 'Remove from Settings'
 
     .line 3
     const/4 v0, 0x0
@@ -130,10 +121,10 @@
 .end method
 
 .method public final onCreatePreferences(Ljava/lang/String;)V
-    .locals 2
+    .locals 3
 
     .line 1
-    const p1, 0x7f180012    # @xml/tuner_prefs 'res/xml/tuner_prefs.xml'
+    const p1, 0x7f170015    # @xml/tuner_prefs 'res/xml/tuner_prefs.xml'
 
     .line 2
     invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragment;->addPreferencesFromResource(I)V
@@ -231,47 +222,108 @@
     if-nez p1, :cond_3
 
     .line 68
-    :goto_0
-    const/4 p1, 0x6
+    move p1, v1
 
     .line 70
-    if-ge v1, p1, :cond_3
+    :goto_0
+    const/4 v0, 0x3
 
     .line 71
-    sget-object p1, Lcom/android/systemui/tuner/TunerFragment;->DEBUG_ONLY:[Ljava/lang/String;
+    if-ge p1, v0, :cond_3
 
-    .line 73
-    aget-object p1, p1, v1
+    .line 72
+    sget-object v0, Lcom/android/systemui/tuner/TunerFragment;->DEBUG_ONLY:[Ljava/lang/String;
 
-    .line 75
-    invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    .line 74
+    aget-object v0, v0, p1
 
-    .line 77
-    move-result-object p1
+    .line 76
+    invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    .line 80
-    if-eqz p1, :cond_2
+    .line 78
+    move-result-object v0
 
     .line 81
-    iget-object v0, p0, Landroidx/preference/PreferenceFragment;->mPreferenceManager:Landroidx/preference/PreferenceManager;
+    if-eqz v0, :cond_2
 
-    .line 83
-    iget-object v0, v0, Landroidx/preference/PreferenceManager;->mPreferenceScreen:Landroidx/preference/PreferenceScreen;
+    .line 82
+    iget-object v2, p0, Landroidx/preference/PreferenceFragment;->mPreferenceManager:Landroidx/preference/PreferenceManager;
 
-    .line 85
-    invoke-virtual {v0, p1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)V
+    .line 84
+    iget-object v2, v2, Landroidx/preference/PreferenceManager;->mPreferenceScreen:Landroidx/preference/PreferenceScreen;
 
-    .line 87
+    .line 86
+    invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)V
+
+    .line 88
     :cond_2
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 p1, p1, 0x1
 
-    .line 90
+    .line 91
     goto :goto_0
 
-    .line 92
-    :cond_3
-    return-void
     .line 93
+    :cond_3
+    invoke-virtual {p0}, Landroid/app/Fragment;->getContext()Landroid/content/Context;
+
+    .line 94
+    move-result-object p1
+
+    .line 97
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    .line 98
+    move-result-object p1
+
+    .line 101
+    const-string v0, "seen_tuner_warning"
+
+    .line 102
+    invoke-static {p1, v0, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    .line 104
+    move-result p1
+
+    .line 107
+    if-nez p1, :cond_4
+
+    .line 108
+    invoke-virtual {p0}, Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
+
+    .line 110
+    move-result-object p1
+
+    .line 113
+    const-string v0, "tuner_warning"
+
+    .line 114
+    invoke-virtual {p1, v0}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+
+    .line 116
+    move-result-object p1
+
+    .line 119
+    if-nez p1, :cond_4
+
+    .line 120
+    new-instance p1, Lcom/android/systemui/tuner/TunerFragment$TunerWarningFragment;
+
+    .line 122
+    invoke-direct {p1}, Landroid/app/DialogFragment;-><init>()V
+
+    .line 124
+    invoke-virtual {p0}, Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
+
+    .line 127
+    move-result-object p0
+
+    .line 130
+    invoke-virtual {p1, p0, v0}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+
+    .line 131
+    :cond_4
+    return-void
+    .line 134
 .end method
 
 .method public final onOptionsItemSelected(Landroid/view/MenuItem;)Z
@@ -355,7 +407,7 @@
     invoke-static {p0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setShowForAllUsers(Landroid/app/Dialog;)V
 
     .line 49
-    const v1, 0x7f140827    # @string/remove_from_settings_prompt 'Remove System UI Tuner from Settings and stop using all of its features?'
+    const v1, 0x7f13087f    # @string/remove_from_settings_prompt 'Remove System UI Tuner from Settings and stop using all of its features?'
 
     .line 52
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setMessage(I)V
@@ -364,7 +416,7 @@
     iget-object v1, p1, Lcom/android/systemui/tuner/TunerServiceImpl;->mContext:Landroid/content/Context;
 
     .line 58
-    const v3, 0x7f140253    # @string/cancel 'Cancel'
+    const v3, 0x7f13025a    # @string/cancel 'Cancel'
 
     .line 60
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -385,7 +437,7 @@
     iget-object v1, p1, Lcom/android/systemui/tuner/TunerServiceImpl;->mContext:Landroid/content/Context;
 
     .line 72
-    const v3, 0x7f140794    # @string/qs_customize_remove 'Remove'
+    const v3, 0x7f1307f0    # @string/qs_customize_remove 'Remove'
 
     .line 74
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -452,7 +504,7 @@
     move-result-object v0
 
     .line 8
-    const v1, 0x7f140948    # @string/system_ui_tuner 'System UI Tuner'
+    const v1, 0x7f1309ca    # @string/system_ui_tuner 'System UI Tuner'
 
     .line 9
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setTitle(I)V

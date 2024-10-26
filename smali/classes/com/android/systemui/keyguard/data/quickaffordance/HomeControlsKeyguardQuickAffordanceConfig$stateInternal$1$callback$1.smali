@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig$stateInternal$1$callback$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/controls/management/ControlsListingController$ControlsListingCallback;
@@ -163,118 +163,118 @@
     xor-int/2addr p1, v4
 
     .line 71
-    iget-object v4, v0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfigurationImpl;
+    iget-object v4, v0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;
 
     .line 72
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v4}, Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;->getTileImageId()I
 
     .line 74
-    invoke-virtual {v0}, Lcom/android/systemui/controls/dagger/ControlsComponent;->getVisibility()Lcom/android/systemui/controls/dagger/ControlsComponent$Visibility;
+    move-result v4
 
     .line 77
-    move-result-object v4
+    invoke-virtual {v0}, Lcom/android/systemui/controls/dagger/ControlsComponent;->getVisibility()Lcom/android/systemui/controls/dagger/ControlsComponent$Visibility;
 
-    .line 80
-    if-eqz v1, :cond_6
+    .line 78
+    move-result-object v5
 
     .line 81
+    if-eqz v1, :cond_6
+
+    .line 82
     if-nez v2, :cond_5
 
-    .line 83
+    .line 84
     if-eqz v3, :cond_6
 
-    .line 85
+    .line 86
     :cond_5
     if-eqz p1, :cond_6
 
-    .line 87
+    .line 88
     sget-object p1, Lcom/android/systemui/controls/dagger/ControlsComponent$Visibility;->AVAILABLE:Lcom/android/systemui/controls/dagger/ControlsComponent$Visibility;
 
-    .line 89
-    if-ne v4, p1, :cond_6
+    .line 90
+    if-ne v5, p1, :cond_6
 
-    .line 91
+    .line 92
     new-instance p1, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$LockScreenState$Visible;
 
-    .line 93
+    .line 94
     new-instance v1, Lcom/android/systemui/common/shared/model/Icon$Resource;
 
-    .line 95
+    .line 96
     new-instance v2, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
-    .line 97
-    iget-object v0, v0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfigurationImpl;
+    .line 98
+    iget-object v0, v0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;
 
-    .line 99
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 100
+    invoke-interface {v0}, Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;->getTileTitleId()I
 
-    .line 101
-    const v0, 0x7f1407a4    # @string/quick_controls_title 'Device controls'
+    .line 102
+    move-result v0
 
-    .line 104
+    .line 105
     invoke-direct {v2, v0}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V
 
-    .line 107
-    const v0, 0x7f080666    # @drawable/controls_icon 'res/drawable/controls_icon.xml'
+    .line 106
+    invoke-direct {v1, v4, v2}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V
 
-    .line 110
-    invoke-direct {v1, v0, v2}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V
-
-    .line 113
+    .line 109
     invoke-direct {p1, v1}, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$LockScreenState$Visible;-><init>(Lcom/android/systemui/common/shared/model/Icon;)V
 
-    .line 116
+    .line 112
     goto :goto_2
 
-    .line 119
+    .line 115
     :cond_6
     sget-object p1, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$LockScreenState$Hidden;->INSTANCE:Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$LockScreenState$Hidden;
 
-    .line 120
+    .line 116
     :goto_2
     iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/HomeControlsKeyguardQuickAffordanceConfig$stateInternal$1$callback$1;->$$this$conflatedCallbackFlow:Lkotlinx/coroutines/channels/ProducerScope;
 
-    .line 122
+    .line 118
     check-cast p0, Lkotlinx/coroutines/channels/ProducerCoroutine;
 
-    .line 124
+    .line 120
     iget-object p0, p0, Lkotlinx/coroutines/channels/ProducerCoroutine;->_channel:Lkotlinx/coroutines/channels/Channel;
 
-    .line 126
+    .line 122
     invoke-interface {p0, p1}, Lkotlinx/coroutines/channels/SendChannel;->trySend-JP2dKIU(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
+    .line 124
     move-result-object p0
 
-    .line 131
+    .line 127
     instance-of p1, p0, Lkotlinx/coroutines/channels/ChannelResult$Failed;
 
-    .line 132
+    .line 128
     if-eqz p1, :cond_7
 
-    .line 134
+    .line 130
     invoke-static {p0}, Lkotlinx/coroutines/channels/ChannelResult;->exceptionOrNull-impl(Ljava/lang/Object;)Ljava/lang/Throwable;
 
-    .line 136
+    .line 132
     move-result-object p0
 
-    .line 139
+    .line 135
     const-string p1, "Failed to send "
 
-    .line 140
+    .line 136
     const-string/jumbo v0, "updated state"
 
-    .line 142
+    .line 138
     const-string v1, " - downstream canceled or failed."
 
-    .line 145
+    .line 141
     const-string v2, "HomeControlsKeyguardQuickAffordanceConfig"
 
-    .line 147
+    .line 143
     invoke-static {p1, v0, v1, v2, p0}, Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl$cameraInfo$1$callback$1$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 149
+    .line 145
     :cond_7
     return-void
-    .line 152
+    .line 148
 .end method

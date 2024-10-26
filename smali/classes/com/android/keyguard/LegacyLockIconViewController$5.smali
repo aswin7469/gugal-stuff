@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/LegacyLockIconViewController$5;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/KeyguardStateController$Callback;
@@ -37,7 +37,7 @@
     invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateKeyguardShowing()V
 
     .line 4
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$3()V
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$5()V
 
     .line 7
     return-void
@@ -78,7 +78,7 @@
     invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateKeyguardShowing()V
 
     .line 20
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$3()V
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$5()V
 
     .line 23
     return-void
@@ -107,7 +107,7 @@
     invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateKeyguardShowing()V
 
     .line 12
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$3()V
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$5()V
 
     .line 15
     return-void

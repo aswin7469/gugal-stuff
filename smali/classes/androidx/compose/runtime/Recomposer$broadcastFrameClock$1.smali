@@ -1,6 +1,6 @@
 .class final Landroidx/compose/runtime/Recomposer$broadcastFrameClock$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -103,27 +103,24 @@
     iget-object p0, p0, Landroidx/compose/runtime/Recomposer;->closeCause:Ljava/lang/Throwable;
 
     .line 40
-    new-instance v2, Ljava/util/concurrent/CancellationException;
+    invoke-static {v1, p0}, Lkotlinx/coroutines/ExceptionsKt;->CancellationException(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/util/concurrent/CancellationException;
 
     .line 42
-    invoke-direct {v2, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    .line 44
-    invoke-virtual {v2, p0}, Ljava/util/concurrent/CancellationException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    .line 47
-    throw v2
+    .line 45
+    throw p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 50
+    .line 46
     :catchall_0
     move-exception p0
 
-    .line 51
+    .line 47
     monitor-exit v0
 
-    .line 52
+    .line 48
     throw p0
-    .line 53
+    .line 49
 .end method

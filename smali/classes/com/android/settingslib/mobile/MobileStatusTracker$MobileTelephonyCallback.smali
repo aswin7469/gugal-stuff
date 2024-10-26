@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/mobile/MobileStatusTracker$MobileTelephonyCallback;
 .super Landroid/telephony/TelephonyCallback;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/telephony/TelephonyCallback$ServiceStateListener;
@@ -272,63 +272,42 @@
     if-eqz v0, :cond_0
 
     .line 9
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "onDataConnectionStateChanged: state="
 
     .line 11
-    const-string v2, "onDataConnectionStateChanged: state="
-
-    .line 13
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 15
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 18
     const-string v2, " type="
 
-    .line 21
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 13
+    invoke-static {p1, p2, v0, v2, v1}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 23
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 26
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 29
-    move-result-object p2
-
-    .line 32
-    invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 33
+    .line 15
     :cond_0
     iget-object p0, p0, Lcom/android/settingslib/mobile/MobileStatusTracker$MobileTelephonyCallback;->this$0:Lcom/android/settingslib/mobile/MobileStatusTracker;
 
-    .line 36
+    .line 18
     iget-object p2, p0, Lcom/android/settingslib/mobile/MobileStatusTracker;->mMobileStatus:Lcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;
 
-    .line 38
+    .line 20
     iput p1, p2, Lcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;->dataState:I
 
-    .line 40
+    .line 22
     iget-object p0, p0, Lcom/android/settingslib/mobile/MobileStatusTracker;->mCallback:Lcom/android/systemui/statusbar/connectivity/MobileSignalController$1;
 
-    .line 42
+    .line 24
     new-instance p1, Lcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;
 
-    .line 44
+    .line 26
     invoke-direct {p1, p2}, Lcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;-><init>(Lcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;)V
 
-    .line 46
+    .line 28
     const/4 p2, 0x1
 
-    .line 49
+    .line 31
     invoke-virtual {p0, p2, p1}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController$1;->onMobileStatusChanged(ZLcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;)V
 
-    .line 50
+    .line 32
     return-void
-    .line 53
+    .line 35
 .end method
 
 .method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
@@ -590,43 +569,34 @@
 
     .line 43
     :goto_0
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v1}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 47
-    move-result-object v0
-
-    .line 50
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 51
     :cond_1
     iget-object p0, p0, Lcom/android/settingslib/mobile/MobileStatusTracker$MobileTelephonyCallback;->this$0:Lcom/android/settingslib/mobile/MobileStatusTracker;
 
-    .line 54
+    .line 47
     iget-object v0, p0, Lcom/android/settingslib/mobile/MobileStatusTracker;->mMobileStatus:Lcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;
 
-    .line 56
+    .line 49
     iput-object p1, v0, Lcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;->signalStrength:Landroid/telephony/SignalStrength;
 
-    .line 58
+    .line 51
     iget-object p0, p0, Lcom/android/settingslib/mobile/MobileStatusTracker;->mCallback:Lcom/android/systemui/statusbar/connectivity/MobileSignalController$1;
 
-    .line 60
+    .line 53
     new-instance p1, Lcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;
 
-    .line 62
+    .line 55
     invoke-direct {p1, v0}, Lcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;-><init>(Lcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;)V
 
-    .line 64
+    .line 57
     const/4 v0, 0x1
 
-    .line 67
+    .line 60
     invoke-virtual {p0, v0, p1}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController$1;->onMobileStatusChanged(ZLcom/android/settingslib/mobile/MobileStatusTracker$MobileStatus;)V
 
-    .line 68
+    .line 61
     return-void
-    .line 71
+    .line 64
 .end method

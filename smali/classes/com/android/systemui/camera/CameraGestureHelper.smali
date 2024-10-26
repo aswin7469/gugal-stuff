@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/camera/CameraGestureHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -165,7 +165,7 @@
     move-result-object v1
 
     .line 53
-    const v2, 0x7f14028c    # @string/config_cameraGesturePackage ''
+    const v2, 0x7f13029f    # @string/config_cameraGesturePackage ''
 
     .line 54
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -370,58 +370,52 @@
     check-cast p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
     .line 69
-    iget-object p1, p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mMessageRouter:Lcom/android/systemui/util/concurrency/MessageRouter;
+    iget-object p1, p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mMessageRouter:Lcom/android/systemui/util/concurrency/MessageRouterImpl;
 
     .line 71
-    check-cast p1, Lcom/android/systemui/util/concurrency/MessageRouterImpl;
-
-    .line 73
     const/16 v0, 0x3eb
 
-    .line 75
+    .line 73
     const-wide/16 v3, 0x1388
 
-    .line 77
-    invoke-virtual {p1, v0, v3, v4}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->sendMessageDelayed(IJ)V
+    .line 75
+    invoke-virtual {p1, v3, v4, v0}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->sendMessageDelayed(JI)V
 
-    .line 79
+    .line 77
     iget-object p0, p0, Lcom/android/systemui/camera/CameraGestureHelper;->statusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
+    .line 80
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mViewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
+
     .line 82
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mViewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
-
-    .line 84
-    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
-
-    .line 86
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 88
+    .line 84
     const-string p1, "KeyguardViewMediator.mViewMediatorCallback#readyForKeyguardDone"
 
-    .line 91
+    .line 87
     invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 93
+    .line 89
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$4;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 96
+    .line 92
     iget-boolean p1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardDonePending:Z
 
-    .line 98
+    .line 94
     if-eqz p1, :cond_3
 
-    .line 100
+    .line 96
     iput-boolean v2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardDonePending:Z
 
-    .line 102
+    .line 98
     invoke-virtual {p0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->tryKeyguardDone()V
 
-    .line 104
+    .line 100
     :cond_3
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 107
+    .line 103
     return-void
-    .line 110
+    .line 106
 .end method

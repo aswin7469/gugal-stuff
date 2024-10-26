@@ -1,10 +1,15 @@
 .class public Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;
-.super Lcom/android/systemui/screenshot/DraggableConstraintLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.super Landroidx/constraintlayout/widget/ConstraintLayout;
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;
 
 
 # static fields
 .field public static final synthetic $r8$clinit:I
+
+.field public static final synthetic $r8$clinit$1:I
 
 
 # instance fields
@@ -18,6 +23,10 @@
 
 .field public mActionContainerBackground:Landroid/view/View;
 
+.field public mActionsContainer:Landroid/view/View;
+
+.field public mCallbacks:Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissCallbacks;
+
 .field public mClipboardCallbacks:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$ClipboardOverlayCallbacks;
 
 .field public mClipboardPreview:Landroid/view/View;
@@ -25,6 +34,8 @@
 .field public mDismissButton:Landroid/view/View;
 
 .field public final mDisplayMetrics:Landroid/util/DisplayMetrics;
+
+.field public final mDisplayMetrics$1:Landroid/util/DisplayMetrics;
 
 .field public mHiddenPreview:Landroid/widget/TextView;
 
@@ -38,6 +49,10 @@
 
 .field public mShareChip:Landroid/view/View;
 
+.field public final mSwipeDetector:Landroid/view/GestureDetector;
+
+.field public final mSwipeDismissHandler:Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissHandler;
+
 .field public mTextPreview:Landroid/widget/TextView;
 
 
@@ -47,7 +62,7 @@
 
     const/4 v0, 0x0
 
-    .line 1
+    .line 18
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -58,7 +73,7 @@
 
     const/4 v0, 0x0
 
-    .line 2
+    .line 19
     invoke-direct {p0, p1, p2, v0}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -67,33 +82,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 3
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/screenshot/DraggableConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 4
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionChips:Ljava/util/ArrayList;
-
-    .line 5
-    new-instance p1, Lcom/android/systemui/screenshot/ui/binder/ActionButtonViewBinder;
-
-    .line 6
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionButtonViewBinder:Lcom/android/systemui/screenshot/ui/binder/ActionButtonViewBinder;
-
-    .line 8
+    .line 2
     new-instance p1, Landroid/util/DisplayMetrics;
 
     invoke-direct {p1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mDisplayMetrics$1:Landroid/util/DisplayMetrics;
 
-    .line 9
+    .line 3
     iget-object p2, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
@@ -102,7 +101,78 @@
 
     invoke-virtual {p2, p1}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
 
+    .line 4
+    new-instance p1, Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissHandler;
+
+    iget-object p2, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
+
+    invoke-direct {p1, p0, p2, p0}, Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissHandler;-><init>(Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;Landroid/content/Context;Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;)V
+
+    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mSwipeDismissHandler:Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissHandler;
+
+    .line 5
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    .line 6
+    new-instance p1, Landroid/view/GestureDetector;
+
+    iget-object p2, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
+
+    new-instance p3, Lcom/android/systemui/screenshot/DraggableConstraintLayout$1;
+
+    invoke-direct {p3, p0}, Lcom/android/systemui/screenshot/DraggableConstraintLayout$1;-><init>(Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;)V
+
+    invoke-direct {p1, p2, p3}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
+
+    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mSwipeDetector:Landroid/view/GestureDetector;
+
+    const/4 p2, 0x0
+
+    .line 7
+    invoke-virtual {p1, p2}, Landroid/view/GestureDetector;->setIsLongpressEnabled(Z)V
+
+    .line 8
+    new-instance p1, Lcom/android/systemui/screenshot/DraggableConstraintLayout$2;
+
+    .line 9
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
     .line 10
+    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mCallbacks:Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissCallbacks;
+
+    .line 11
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionChips:Ljava/util/ArrayList;
+
+    .line 12
+    new-instance p1, Lcom/android/systemui/screenshot/ui/binder/ActionButtonViewBinder;
+
+    .line 13
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    .line 14
+    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionButtonViewBinder:Lcom/android/systemui/screenshot/ui/binder/ActionButtonViewBinder;
+
+    .line 15
+    new-instance p1, Landroid/util/DisplayMetrics;
+
+    invoke-direct {p1}, Landroid/util/DisplayMetrics;-><init>()V
+
+    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+
+    .line 16
+    iget-object p2, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p2}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
+
+    .line 17
     iget-object p1, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
@@ -206,7 +276,7 @@
     move-result-object v1
 
     .line 14
-    const v2, 0x7f07017e    # @dimen/clipboard_overlay_min_font '10.0sp'
+    const v2, 0x7f07018e    # @dimen/clipboard_overlay_min_font '10.0sp'
 
     .line 15
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -218,7 +288,7 @@
     int-to-float v2, v2
 
     .line 22
-    const v3, 0x7f07017d    # @dimen/clipboard_overlay_max_font '50.0sp'
+    const v3, 0x7f07018d    # @dimen/clipboard_overlay_max_font '50.0sp'
 
     .line 23
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -348,6 +418,153 @@
 
 
 # virtual methods
+.method public final onAttachedToWindow()V
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Landroid/view/ViewGroup;->onAttachedToWindow()V
+
+    .line 2
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    .line 5
+    move-result-object v0
+
+    .line 8
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->addOnComputeInternalInsetsListener(Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;)V
+
+    .line 9
+    return-void
+    .line 12
+.end method
+
+.method public final onComputeInternalInsets(Landroid/view/ViewTreeObserver$InternalInsetsInfo;)V
+    .locals 6
+
+    .line 1
+    new-instance v0, Landroid/graphics/Region;
+
+    .line 2
+    invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
+
+    .line 4
+    new-instance v1, Landroid/graphics/Rect;
+
+    .line 7
+    invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
+
+    .line 9
+    const/4 v2, 0x0
+
+    .line 12
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    .line 13
+    move-result v3
+
+    .line 16
+    if-ge v2, v3, :cond_1
+
+    .line 17
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    .line 19
+    move-result-object v3
+
+    .line 22
+    invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
+
+    .line 23
+    move-result v4
+
+    .line 26
+    if-nez v4, :cond_0
+
+    .line 27
+    invoke-virtual {v3, v1}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
+
+    .line 29
+    iget-object v3, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mDisplayMetrics$1:Landroid/util/DisplayMetrics;
+
+    .line 32
+    const/high16 v4, -0x3ec00000    # -12.0f
+
+    .line 34
+    invoke-static {v3, v4}, Lcom/android/systemui/screenshot/FloatingWindowUtil;->dpToPx(Landroid/util/DisplayMetrics;F)F
+
+    .line 36
+    move-result v3
+
+    .line 39
+    float-to-int v3, v3
+
+    .line 40
+    iget-object v5, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mDisplayMetrics$1:Landroid/util/DisplayMetrics;
+
+    .line 41
+    invoke-static {v5, v4}, Lcom/android/systemui/screenshot/FloatingWindowUtil;->dpToPx(Landroid/util/DisplayMetrics;F)F
+
+    .line 43
+    move-result v4
+
+    .line 46
+    float-to-int v4, v4
+
+    .line 47
+    invoke-virtual {v1, v3, v4}, Landroid/graphics/Rect;->inset(II)V
+
+    .line 48
+    sget-object v3, Landroid/graphics/Region$Op;->UNION:Landroid/graphics/Region$Op;
+
+    .line 51
+    invoke-virtual {v0, v1, v3}, Landroid/graphics/Region;->op(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
+
+    .line 53
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    .line 56
+    goto :goto_0
+
+    .line 58
+    :cond_1
+    const/4 p0, 0x3
+
+    .line 59
+    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->setTouchableInsets(I)V
+
+    .line 60
+    iget-object p0, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
+
+    .line 63
+    invoke-virtual {p0, v0}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
+
+    .line 65
+    return-void
+    .line 68
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Landroid/view/ViewGroup;->onDetachedFromWindow()V
+
+    .line 2
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    .line 5
+    move-result-object v0
+
+    .line 8
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnComputeInternalInsetsListener(Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;)V
+
+    .line 9
+    return-void
+    .line 12
+.end method
+
 .method public final onFinishInflate()V
     .locals 9
 
@@ -355,7 +572,7 @@
     const/4 v0, 0x1
 
     .line 2
-    const v1, 0x7f0b008c    # @id/actions_container_background
+    const v1, 0x7f0a008c    # @id/actions_container_background
 
     .line 3
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -367,7 +584,7 @@
     iput-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionContainerBackground:Landroid/view/View;
 
     .line 10
-    const v1, 0x7f0b008a    # @id/actions
+    const v1, 0x7f0a008a    # @id/actions
 
     .line 12
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -382,7 +599,7 @@
     iput-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionContainer:Landroid/widget/LinearLayout;
 
     .line 21
-    const v1, 0x7f0b01da    # @id/clipboard_preview
+    const v1, 0x7f0a01e5    # @id/clipboard_preview
 
     .line 23
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -394,7 +611,7 @@
     iput-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mClipboardPreview:Landroid/view/View;
 
     .line 30
-    const v1, 0x7f0b05f6    # @id/preview_border
+    const v1, 0x7f0a061f    # @id/preview_border
 
     .line 32
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -406,7 +623,7 @@
     iput-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mPreviewBorder:Landroid/view/View;
 
     .line 39
-    const v1, 0x7f0b0390    # @id/image_preview
+    const v1, 0x7f0a03b0    # @id/image_preview
 
     .line 41
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -421,7 +638,7 @@
     iput-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mImagePreview:Landroid/widget/ImageView;
 
     .line 50
-    const v1, 0x7f0b07ee    # @id/text_preview
+    const v1, 0x7f0a081d    # @id/text_preview
 
     .line 52
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -436,7 +653,7 @@
     iput-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mTextPreview:Landroid/widget/TextView;
 
     .line 61
-    const v1, 0x7f0b0369    # @id/hidden_preview
+    const v1, 0x7f0a0388    # @id/hidden_preview
 
     .line 63
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -451,7 +668,7 @@
     iput-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mHiddenPreview:Landroid/widget/TextView;
 
     .line 72
-    const v1, 0x7f0b04d5    # @id/minimized_preview
+    const v1, 0x7f0a04f9    # @id/minimized_preview
 
     .line 74
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -466,7 +683,7 @@
     iput-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mMinimizedPreview:Landroid/widget/LinearLayout;
 
     .line 83
-    const v1, 0x7f0b0705    # @id/share_chip
+    const v1, 0x7f0a0731    # @id/share_chip
 
     .line 85
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -478,7 +695,7 @@
     iput-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mShareChip:Landroid/view/View;
 
     .line 92
-    const v1, 0x7f0b0641    # @id/remote_copy_chip
+    const v1, 0x7f0a066b    # @id/remote_copy_chip
 
     .line 94
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -490,7 +707,7 @@
     iput-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mRemoteCopyChip:Landroid/view/View;
 
     .line 101
-    const v1, 0x7f0b0283    # @id/dismiss_button
+    const v1, 0x7f0a0290    # @id/dismiss_button
 
     .line 103
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -514,7 +731,7 @@
     iget-object v4, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 118
-    const v5, 0x7f0806e4    # @drawable/ic_baseline_devices_24 'res/drawable/ic_baseline_devices_24.xml'
+    const v5, 0x7f0806f5    # @drawable/ic_baseline_devices_24 'res/drawable/ic_baseline_devices_24.xml'
 
     .line 120
     invoke-static {v4, v5}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
@@ -535,7 +752,7 @@
     iget-object v5, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 133
-    const v6, 0x7f140276    # @string/clipboard_send_nearby_description 'Send to nearby device'
+    const v6, 0x7f130283    # @string/clipboard_send_nearby_description 'Send to nearby device'
 
     .line 135
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -571,7 +788,7 @@
     sput v8, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;->nextId:I
 
     .line 158
-    invoke-direct {v5, v3, v7, v4}, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;-><init>(Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonAppearance;ILkotlin/jvm/functions/Function0;)V
+    invoke-direct {v5, v3, v7, v0, v4}, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;-><init>(Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonAppearance;IZLkotlin/jvm/functions/Function0;)V
 
     .line 160
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -592,7 +809,7 @@
     iget-object v4, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 175
-    const v5, 0x7f080918    # @drawable/ic_screenshot_share 'res/drawable/ic_screenshot_share.xml'
+    const v5, 0x7f080943    # @drawable/ic_screenshot_share 'res/drawable/ic_screenshot_share.xml'
 
     .line 177
     invoke-static {v4, v5}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
@@ -613,7 +830,7 @@
     iget-object v5, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 190
-    const v7, 0x104092f    # @android:string/splash_screen_view_icon_description
+    const v7, 0x1040926    # @android:string/sms_short_code_confirm_deny
 
     .line 192
     invoke-virtual {v5, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -637,219 +854,233 @@
     sget v6, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;->nextId:I
 
     .line 209
-    add-int/2addr v0, v6
+    add-int/lit8 v7, v6, 0x1
 
     .line 211
-    sput v0, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;->nextId:I
+    sput v7, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;->nextId:I
 
-    .line 212
-    invoke-direct {v5, v3, v6, v4}, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;-><init>(Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonAppearance;ILkotlin/jvm/functions/Function0;)V
+    .line 213
+    invoke-direct {v5, v3, v6, v0, v4}, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;-><init>(Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonAppearance;IZLkotlin/jvm/functions/Function0;)V
 
-    .line 214
+    .line 215
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 217
+    .line 218
     invoke-static {v2, v5}, Lcom/android/systemui/screenshot/ui/binder/ActionButtonViewBinder;->bind(Landroid/view/View;Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;)V
 
-    .line 220
+    .line 221
     iget-object v0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mTextPreview:Landroid/widget/TextView;
 
-    .line 223
+    .line 224
     invoke-virtual {v0}, Landroid/widget/TextView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    .line 225
+    .line 226
     move-result-object v0
 
-    .line 228
+    .line 229
     new-instance v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$$ExternalSyntheticLambda0;
 
-    .line 229
+    .line 230
     invoke-direct {v1, p0}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;)V
 
-    .line 231
+    .line 232
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 234
-    invoke-super {p0}, Lcom/android/systemui/screenshot/DraggableConstraintLayout;->onFinishInflate()V
+    .line 235
+    invoke-virtual {p0}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->onFinishInflate$com$android$systemui$screenshot$DraggableConstraintLayout()V
 
-    .line 237
+    .line 238
     return-void
-    .line 240
+    .line 241
+.end method
+
+.method public final onFinishInflate$com$android$systemui$screenshot$DraggableConstraintLayout()V
+    .locals 1
+
+    .line 1
+    const v0, 0x7f0a008b    # @id/actions_container
+
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    .line 5
+    move-result-object v0
+
+    .line 8
+    iput-object v0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionsContainer:Landroid/view/View;
+
+    .line 9
+    return-void
+    .line 11
+.end method
+
+.method public final onInterceptHoverEvent(Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mCallbacks:Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissCallbacks;
+
+    .line 2
+    invoke-interface {v0}, Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissCallbacks;->onInteraction()V
+
+    .line 4
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptHoverEvent(Landroid/view/MotionEvent;)Z
+
+    .line 7
+    move-result p0
+
+    .line 10
+    return p0
+    .line 11
+.end method
+
+.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    .line 1
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    .line 2
+    move-result v0
+
+    .line 5
+    if-nez v0, :cond_0
+
+    .line 6
+    iget-object v0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mSwipeDismissHandler:Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissHandler;
+
+    .line 8
+    invoke-virtual {v0, p0, p1}, Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissHandler;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+
+    .line 10
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mSwipeDetector:Landroid/view/GestureDetector;
+
+    .line 13
+    invoke-virtual {p0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    .line 15
+    move-result p0
+
+    .line 18
+    return p0
+    .line 19
 .end method
 
 .method public final setActionChip(Landroid/app/RemoteAction;Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda1;)V
-    .locals 7
+    .locals 8
 
     .line 1
-    iget-object v0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionContainerBackground:Landroid/view/View;
+    const/4 v0, 0x1
 
     .line 2
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionContainerBackground:Landroid/view/View;
 
-    .line 4
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 5
-    iget-object v0, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
-
-    .line 8
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    .line 10
-    move-result-object v0
-
-    .line 13
-    iget-object v2, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionContainer:Landroid/widget/LinearLayout;
-
-    .line 14
-    const v3, 0x7f0e0250    # @layout/shelf_action_chip 'res/layout/shelf_action_chip.xml'
-
-    .line 16
-    invoke-virtual {v0, v3, v2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    .line 19
-    move-result-object v0
-
-    .line 22
-    iget-object v2, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionButtonViewBinder:Lcom/android/systemui/screenshot/ui/binder/ActionButtonViewBinder;
-
-    .line 23
-    new-instance v3, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonAppearance;
-
-    .line 25
-    invoke-virtual {p1}, Landroid/app/RemoteAction;->getIcon()Landroid/graphics/drawable/Icon;
-
-    .line 27
-    move-result-object v4
-
-    .line 30
-    iget-object v5, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
-
-    .line 31
-    invoke-virtual {v4, v5}, Landroid/graphics/drawable/Icon;->loadDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-
-    .line 33
-    move-result-object v4
-
-    .line 36
-    invoke-virtual {p1}, Landroid/app/RemoteAction;->getTitle()Ljava/lang/CharSequence;
-
-    .line 37
-    move-result-object v5
-
-    .line 40
-    invoke-virtual {p1}, Landroid/app/RemoteAction;->getTitle()Ljava/lang/CharSequence;
-
-    .line 41
-    move-result-object v6
-
-    .line 44
-    invoke-direct {v3, v4, v5, v6, v1}, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonAppearance;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
-
-    .line 45
-    new-instance v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$5;
-
-    .line 48
-    invoke-direct {v1, p1, p2}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$5;-><init>(Landroid/app/RemoteAction;Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda1;)V
-
-    .line 50
-    new-instance p1, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;
-
-    .line 53
-    sget p2, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;->nextId:I
-
-    .line 55
-    add-int/lit8 v4, p2, 0x1
-
-    .line 57
-    sput v4, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;->nextId:I
-
-    .line 59
-    invoke-direct {p1, v3, p2, v1}, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;-><init>(Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonAppearance;ILkotlin/jvm/functions/Function0;)V
-
-    .line 61
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 64
-    invoke-static {v0, p1}, Lcom/android/systemui/screenshot/ui/binder/ActionButtonViewBinder;->bind(Landroid/view/View;Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;)V
-
-    .line 67
-    iget-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionContainer:Landroid/widget/LinearLayout;
-
-    .line 70
-    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    .line 72
-    iget-object p0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionChips:Ljava/util/ArrayList;
-
-    .line 75
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 77
-    return-void
-    .line 80
-.end method
-
-.method public final setCallbacks(Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissCallbacks;)V
-    .locals 3
-
-    .line 1
-    iput-object p1, p0, Lcom/android/systemui/screenshot/DraggableConstraintLayout;->mCallbacks:Lcom/android/systemui/screenshot/DraggableConstraintLayout$SwipeDismissCallbacks;
-
-    .line 2
-    check-cast p1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$ClipboardOverlayCallbacks;
-
-    .line 4
-    iget-object v0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mDismissButton:Landroid/view/View;
-
-    .line 6
-    new-instance v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$$ExternalSyntheticLambda1;
-
-    .line 8
+    .line 3
     const/4 v2, 0x0
 
-    .line 10
-    invoke-direct {v1, p1, v2}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$ClipboardOverlayCallbacks;I)V
+    .line 5
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 6
+    iget-object v1, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
+
+    .line 9
+    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     .line 11
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    move-result-object v1
 
     .line 14
-    iget-object v0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mClipboardPreview:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionContainer:Landroid/widget/LinearLayout;
+
+    .line 15
+    const v4, 0x7f0d0261    # @layout/shelf_action_chip 'res/layout/shelf_action_chip.xml'
 
     .line 17
-    new-instance v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$$ExternalSyntheticLambda1;
+    invoke-virtual {v1, v4, v3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 19
-    const/4 v2, 0x1
+    .line 20
+    move-result-object v1
 
-    .line 21
-    invoke-direct {v1, p1, v2}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$ClipboardOverlayCallbacks;I)V
+    .line 23
+    iget-object v3, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionButtonViewBinder:Lcom/android/systemui/screenshot/ui/binder/ActionButtonViewBinder;
 
-    .line 22
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 24
+    new-instance v4, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonAppearance;
 
-    .line 25
-    iget-object v0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mMinimizedPreview:Landroid/widget/LinearLayout;
+    .line 26
+    invoke-virtual {p1}, Landroid/app/RemoteAction;->getIcon()Landroid/graphics/drawable/Icon;
 
     .line 28
-    new-instance v1, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$$ExternalSyntheticLambda1;
+    move-result-object v5
 
-    .line 30
-    const/4 v2, 0x2
+    .line 31
+    iget-object v6, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 32
-    invoke-direct {v1, p1, v2}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$ClipboardOverlayCallbacks;I)V
+    invoke-virtual {v5, v6}, Landroid/graphics/drawable/Icon;->loadDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
-    .line 33
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 34
+    move-result-object v5
 
-    .line 36
-    iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mClipboardCallbacks:Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$ClipboardOverlayCallbacks;
+    .line 37
+    invoke-virtual {p1}, Landroid/app/RemoteAction;->getTitle()Ljava/lang/CharSequence;
 
-    .line 39
-    return-void
+    .line 38
+    move-result-object v6
+
     .line 41
+    invoke-virtual {p1}, Landroid/app/RemoteAction;->getTitle()Ljava/lang/CharSequence;
+
+    .line 42
+    move-result-object v7
+
+    .line 45
+    invoke-direct {v4, v5, v6, v7, v2}, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonAppearance;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
+
+    .line 46
+    new-instance v2, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$5;
+
+    .line 49
+    invoke-direct {v2, p1, p2}, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView$5;-><init>(Landroid/app/RemoteAction;Lcom/android/systemui/clipboardoverlay/ClipboardOverlayController$$ExternalSyntheticLambda1;)V
+
+    .line 51
+    new-instance p1, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;
+
+    .line 54
+    sget p2, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;->nextId:I
+
+    .line 56
+    add-int/lit8 v5, p2, 0x1
+
+    .line 58
+    sput v5, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;->nextId:I
+
+    .line 60
+    invoke-direct {p1, v4, p2, v0, v2}, Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;-><init>(Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonAppearance;IZLkotlin/jvm/functions/Function0;)V
+
+    .line 62
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 65
+    invoke-static {v1, p1}, Lcom/android/systemui/screenshot/ui/binder/ActionButtonViewBinder;->bind(Landroid/view/View;Lcom/android/systemui/screenshot/ui/viewmodel/ActionButtonViewModel;)V
+
+    .line 68
+    iget-object p1, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionContainer:Landroid/widget/LinearLayout;
+
+    .line 71
+    invoke-virtual {p1, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 73
+    iget-object p0, p0, Lcom/android/systemui/clipboardoverlay/ClipboardOverlayView;->mActionChips:Ljava/util/ArrayList;
+
+    .line 76
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 78
+    return-void
+    .line 81
 .end method
 
 .method public final setEditAccessibilityAction(Z)V
@@ -871,7 +1102,7 @@
     iget-object p0, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 9
-    const v2, 0x7f14026c    # @string/clipboard_edit 'edit'
+    const v2, 0x7f130279    # @string/clipboard_edit 'edit'
 
     .line 11
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1200,7 +1431,7 @@
     iget-object v0, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 2
-    const v1, 0x7f140274    # @string/clipboard_overlay_text_copied 'Copied'
+    const v1, 0x7f130281    # @string/clipboard_overlay_text_copied 'Copied'
 
     .line 4
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1232,7 +1463,7 @@
     iget-object v0, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
 
     .line 6
-    const v1, 0x7f140278    # @string/clipboard_text_hidden 'Tap to view'
+    const v1, 0x7f130285    # @string/clipboard_text_hidden 'Tap to view'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

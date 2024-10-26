@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/keyguard/KeyguardMessageArea;
 .super Landroid/widget/TextView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/keyguard/SecurityMessageDisplay;
@@ -59,7 +59,7 @@
 
     .line 21
     :cond_0
-    const p1, 0x7f1501a1    # @style/Keyguard.TextView
+    const p1, 0x7f1401a4    # @style/Keyguard.TextView
 
     .line 22
     iput p1, p0, Lcom/android/keyguard/KeyguardMessageArea;->mStyleResId:I
@@ -88,7 +88,7 @@
     move-result-object v0
 
     .line 8
-    const v1, 0x7f0b03db    # @id/keyguard_message_area_container
+    const v1, 0x7f0a03fc    # @id/keyguard_message_area_container
 
     .line 9
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/battery/AccessorizedBatteryDrawable;
 .super Landroid/graphics/drawable/DrawableWrapper;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -193,7 +193,7 @@
     move-result-object p2
 
     .line 122
-    const v0, 0x7f14028b    # @string/config_batterymeterShieldPath 'M5 0L0 1.88V6.19C0 9.35 2.13 12.29 5 13.01C7.87 12.29 10 9.35 10 6.19V1.88L5 0Z'
+    const v0, 0x7f13029e    # @string/config_batterymeterShieldPath 'M5 0L0 1.88V6.19C0 9.35 2.13 12.29 5 13.01C7.87 12.29 10 9.35 10 6.19V1.88L5 0Z'
 
     .line 123
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

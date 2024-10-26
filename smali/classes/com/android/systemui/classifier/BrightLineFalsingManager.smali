@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/classifier/BrightLineFalsingManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/FalsingManager;
@@ -487,290 +487,304 @@
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mWirelessCharging:Z
 
     .line 44
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     .line 46
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingDataProvider;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
     .line 48
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Lcom/google/android/systemui/dreamliner/DockObserver;
 
     .line 50
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lcom/google/android/systemui/dreamliner/DockObserver;->isDocked()Z
 
-    .line 53
-    goto :goto_0
-
-    .line 54
-    :cond_0
-    move v0, p1
+    .line 52
+    move-result v0
 
     .line 55
-    :goto_0
-    invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->println(I)V
+    if-eqz v0, :cond_0
 
     .line 56
-    const-string/jumbo v0, "width="
+    goto :goto_0
+
+    .line 58
+    :cond_0
+    const/4 v0, 0x0
 
     .line 59
-    invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    goto :goto_1
 
-    .line 62
-    iget v0, p0, Lcom/android/systemui/classifier/FalsingDataProvider;->mWidthPixels:I
+    .line 60
+    :cond_1
+    :goto_0
+    move v0, p1
 
-    .line 65
+    .line 61
+    :goto_1
     invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->println(I)V
 
-    .line 67
-    const-string v0, "height="
+    .line 62
+    const-string/jumbo v0, "width="
 
-    .line 70
+    .line 65
     invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 72
+    .line 68
+    iget v0, p0, Lcom/android/systemui/classifier/FalsingDataProvider;->mWidthPixels:I
+
+    .line 71
+    invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->println(I)V
+
+    .line 73
+    const-string v0, "height="
+
+    .line 76
+    invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+
+    .line 78
     iget p0, p0, Lcom/android/systemui/classifier/FalsingDataProvider;->mHeightPixels:I
 
-    .line 75
+    .line 81
     invoke-virtual {p2, p0}, Landroid/util/IndentingPrintWriter;->println(I)V
 
-    .line 77
+    .line 83
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 80
+    .line 86
     sget-object p0, Lcom/android/systemui/classifier/BrightLineFalsingManager;->RECENT_SWIPES:Ljava/util/Queue;
 
-    .line 83
+    .line 89
     check-cast p0, Ljava/util/ArrayDeque;
 
-    .line 85
+    .line 91
     invoke-virtual {p0}, Ljava/util/ArrayDeque;->size()I
 
-    .line 87
+    .line 93
     move-result v0
 
-    .line 90
-    if-eqz v0, :cond_4
+    .line 96
+    if-eqz v0, :cond_5
 
-    .line 91
+    .line 97
     const-string v0, "Recent swipes:"
 
-    .line 93
+    .line 99
     invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 95
+    .line 101
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 98
+    .line 104
     invoke-virtual {p0}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
 
-    .line 101
+    .line 107
     move-result-object p0
 
-    .line 104
-    :goto_1
+    .line 110
+    :goto_2
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 105
+    .line 111
     move-result v0
 
-    .line 108
-    if-eqz v0, :cond_3
-
-    .line 109
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 111
-    move-result-object v0
-
     .line 114
-    check-cast v0, Lcom/android/systemui/classifier/BrightLineFalsingManager$DebugSwipeRecord;
+    if-eqz v0, :cond_4
 
     .line 115
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 117
-    new-instance v1, Ljava/util/StringJoiner;
-
-    .line 120
-    const-string v2, ","
-
-    .line 122
-    invoke-direct {v1, v2}, Ljava/util/StringJoiner;-><init>(Ljava/lang/CharSequence;)V
-
-    .line 124
-    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    .line 127
-    move-result-object v2
-
-    .line 130
-    invoke-virtual {v1, v2}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
-
-    .line 131
-    move-result-object v2
-
-    .line 134
-    iget-boolean v3, v0, Lcom/android/systemui/classifier/BrightLineFalsingManager$DebugSwipeRecord;->mIsFalse:Z
-
-    .line 135
-    if-eqz v3, :cond_1
-
-    .line 137
-    const-string v3, "1"
-
-    .line 139
-    goto :goto_2
-
-    .line 141
-    :cond_1
-    const-string v3, "0"
-
-    .line 142
-    :goto_2
-    invoke-virtual {v2, v3}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
-
-    .line 144
-    move-result-object v2
-
-    .line 147
-    iget v3, v0, Lcom/android/systemui/classifier/BrightLineFalsingManager$DebugSwipeRecord;->mInteractionType:I
-
-    .line 148
-    invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    .line 150
-    move-result-object v3
-
-    .line 153
-    invoke-virtual {v2, v3}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
-
-    .line 154
-    iget-object v0, v0, Lcom/android/systemui/classifier/BrightLineFalsingManager$DebugSwipeRecord;->mRecentMotionEvents:Ljava/util/List;
-
-    .line 157
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 159
     move-result-object v0
 
-    .line 162
-    :goto_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    .line 120
+    check-cast v0, Lcom/android/systemui/classifier/BrightLineFalsingManager$DebugSwipeRecord;
 
-    .line 163
-    move-result v2
+    .line 121
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 166
-    if-eqz v2, :cond_2
+    .line 123
+    new-instance v1, Ljava/util/StringJoiner;
 
-    .line 167
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 126
+    const-string v2, ","
 
-    .line 169
+    .line 128
+    invoke-direct {v1, v2}, Ljava/util/StringJoiner;-><init>(Ljava/lang/CharSequence;)V
+
+    .line 130
+    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    .line 133
     move-result-object v2
 
+    .line 136
+    invoke-virtual {v1, v2}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
+
+    .line 137
+    move-result-object v2
+
+    .line 140
+    iget-boolean v3, v0, Lcom/android/systemui/classifier/BrightLineFalsingManager$DebugSwipeRecord;->mIsFalse:Z
+
+    .line 141
+    if-eqz v3, :cond_2
+
+    .line 143
+    const-string v3, "1"
+
+    .line 145
+    goto :goto_3
+
+    .line 147
+    :cond_2
+    const-string v3, "0"
+
+    .line 148
+    :goto_3
+    invoke-virtual {v2, v3}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
+
+    .line 150
+    move-result-object v2
+
+    .line 153
+    iget v3, v0, Lcom/android/systemui/classifier/BrightLineFalsingManager$DebugSwipeRecord;->mInteractionType:I
+
+    .line 154
+    invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    .line 156
+    move-result-object v3
+
+    .line 159
+    invoke-virtual {v2, v3}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
+
+    .line 160
+    iget-object v0, v0, Lcom/android/systemui/classifier/BrightLineFalsingManager$DebugSwipeRecord;->mRecentMotionEvents:Ljava/util/List;
+
+    .line 163
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 165
+    move-result-object v0
+
+    .line 168
+    :goto_4
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 169
+    move-result v2
+
     .line 172
-    check-cast v2, Lcom/android/systemui/classifier/BrightLineFalsingManager$XYDt;
+    if-eqz v2, :cond_3
 
     .line 173
-    invoke-virtual {v2}, Lcom/android/systemui/classifier/BrightLineFalsingManager$XYDt;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 175
     move-result-object v2
 
     .line 178
-    invoke-virtual {v1, v2}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
+    check-cast v2, Lcom/android/systemui/classifier/BrightLineFalsingManager$XYDt;
 
     .line 179
-    goto :goto_3
+    invoke-virtual {v2}, Lcom/android/systemui/classifier/BrightLineFalsingManager$XYDt;->toString()Ljava/lang/String;
 
-    .line 182
-    :cond_2
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 181
+    move-result-object v2
 
-    .line 183
-    move-result-object v0
+    .line 184
+    invoke-virtual {v1, v2}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 186
-    invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
-
-    .line 187
-    invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->println()V
-
-    .line 190
-    goto :goto_1
-
-    .line 193
-    :cond_3
-    invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
-
-    .line 194
+    .line 185
     goto :goto_4
 
-    .line 197
-    :cond_4
-    const-string p0, "No recent swipes"
+    .line 188
+    :cond_3
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 198
-    invoke-virtual {p2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+    .line 189
+    move-result-object v0
+
+    .line 192
+    invoke-virtual {p2, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+
+    .line 193
+    invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->println()V
+
+    .line 196
+    goto :goto_2
+
+    .line 199
+    :cond_4
+    invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     .line 200
-    :goto_4
-    invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->println()V
-
-    .line 203
-    const-string p0, "Recent falsing info:"
-
-    .line 206
-    invoke-virtual {p2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
-
-    .line 208
-    invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
-
-    .line 211
-    sget-object p0, Lcom/android/systemui/classifier/BrightLineFalsingManager;->RECENT_INFO_LOG:Ljava/util/Queue;
-
-    .line 214
-    check-cast p0, Ljava/util/ArrayDeque;
-
-    .line 216
-    invoke-virtual {p0}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
-
-    .line 218
-    move-result-object p0
-
-    .line 221
-    :goto_5
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 222
-    move-result p1
-
-    .line 225
-    if-eqz p1, :cond_5
-
-    .line 226
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 228
-    move-result-object p1
-
-    .line 231
-    check-cast p1, Ljava/lang/String;
-
-    .line 232
-    invoke-virtual {p2, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
-
-    .line 234
     goto :goto_5
 
-    .line 237
+    .line 203
     :cond_5
+    const-string p0, "No recent swipes"
+
+    .line 204
+    invoke-virtual {p2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+
+    .line 206
+    :goto_5
     invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->println()V
 
+    .line 209
+    const-string p0, "Recent falsing info:"
+
+    .line 212
+    invoke-virtual {p2, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+
+    .line 214
+    invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
+
+    .line 217
+    sget-object p0, Lcom/android/systemui/classifier/BrightLineFalsingManager;->RECENT_INFO_LOG:Ljava/util/Queue;
+
+    .line 220
+    check-cast p0, Ljava/util/ArrayDeque;
+
+    .line 222
+    invoke-virtual {p0}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
+
+    .line 224
+    move-result-object p0
+
+    .line 227
+    :goto_6
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 228
+    move-result p1
+
+    .line 231
+    if-eqz p1, :cond_6
+
+    .line 232
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 234
+    move-result-object p1
+
+    .line 237
+    check-cast p1, Ljava/lang/String;
+
     .line 238
+    invoke-virtual {p2, p1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+
+    .line 240
+    goto :goto_6
+
+    .line 243
+    :cond_6
+    invoke-virtual {p2}, Landroid/util/IndentingPrintWriter;->println()V
+
+    .line 244
     return-void
-    .line 241
+    .line 247
 .end method
 
 .method public final isClassifierEnabled()Z
@@ -1567,7 +1581,7 @@
     const-string v2, "): "
 
     .line 76
-    invoke-static {p0, v2, p1}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {p0, v2, p1}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 78
     move-result-object p0
@@ -1789,7 +1803,7 @@
     const/4 v1, 0x1
 
     .line 4
-    if-eq p1, v0, :cond_4
+    if-eq p1, v0, :cond_5
 
     .line 5
     iget-object p1, p0, Lcom/android/systemui/classifier/BrightLineFalsingManager;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
@@ -1801,13 +1815,13 @@
     iget-boolean p1, p1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mShowing:Z
 
     .line 11
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     .line 13
     iget-boolean p1, p0, Lcom/android/systemui/classifier/BrightLineFalsingManager;->mTestHarness:Z
 
     .line 15
-    if-nez p1, :cond_4
+    if-nez p1, :cond_5
 
     .line 17
     iget-object p1, p0, Lcom/android/systemui/classifier/BrightLineFalsingManager;->mDataProvider:Lcom/android/systemui/classifier/FalsingDataProvider;
@@ -1816,7 +1830,7 @@
     iget-boolean v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mJustUnlockedWithFace:Z
 
     .line 21
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     .line 23
     iget-object v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
@@ -1831,182 +1845,196 @@
     const/4 v2, 0x0
 
     .line 31
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     .line 32
     iget-object v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
     .line 34
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Lcom/google/android/systemui/dreamliner/DockObserver;
 
     .line 36
-    move v0, v2
+    invoke-virtual {v0}, Lcom/google/android/systemui/dreamliner/DockObserver;->isDocked()Z
 
-    .line 39
-    goto :goto_0
-
-    .line 40
-    :cond_0
-    move v0, v1
+    .line 38
+    move-result v0
 
     .line 41
-    :goto_0
-    if-nez v0, :cond_4
+    if-eqz v0, :cond_0
 
     .line 42
-    iget-object v0, p0, Lcom/android/systemui/classifier/BrightLineFalsingManager;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+    goto :goto_0
 
     .line 44
-    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+    :cond_0
+    move v0, v2
 
-    .line 46
-    move-result v0
-
-    .line 49
-    if-nez v0, :cond_4
-
-    .line 50
-    iget-boolean v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mA11YAction:Z
-
-    .line 52
-    if-nez v0, :cond_4
-
-    .line 54
-    iget-object v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
-
-    .line 56
-    iget-object v0, v0, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
-
-    .line 58
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    .line 60
-    move-result v0
-
-    .line 63
-    if-eqz v0, :cond_1
-
-    .line 64
+    .line 45
     goto :goto_1
 
-    .line 66
+    .line 46
     :cond_1
+    :goto_0
+    move v0, v1
+
+    .line 47
+    :goto_1
+    if-nez v0, :cond_5
+
+    .line 48
+    iget-object v0, p0, Lcom/android/systemui/classifier/BrightLineFalsingManager;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+
+    .line 50
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+
+    .line 52
+    move-result v0
+
+    .line 55
+    if-nez v0, :cond_5
+
+    .line 56
+    iget-boolean v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mA11YAction:Z
+
+    .line 58
+    if-nez v0, :cond_5
+
+    .line 60
     iget-object v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
 
-    .line 67
+    .line 62
     iget-object v0, v0, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
 
-    .line 69
-    check-cast v0, Ljava/util/ArrayList;
-
-    .line 71
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    .line 73
-    move-result-object v0
-
-    .line 76
-    check-cast v0, Landroid/view/InputEvent;
-
-    .line 77
-    check-cast v0, Landroid/view/MotionEvent;
-
-    .line 79
-    invoke-virtual {v0}, Landroid/view/MotionEvent;->getClassification()I
-
-    .line 81
-    move-result v0
-
-    .line 84
-    const/4 v3, 0x4
-
-    .line 85
-    if-eq v0, v3, :cond_4
-
-    .line 86
-    const/4 v3, 0x3
-
-    .line 88
-    if-ne v0, v3, :cond_2
-
-    .line 89
-    goto :goto_2
-
-    .line 91
-    :cond_2
-    :goto_1
-    iget-object v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentKeyEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
-
-    .line 92
-    iget-object v0, v0, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
-
-    .line 94
+    .line 64
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
-    .line 96
+    .line 66
     move-result v0
 
-    .line 99
-    xor-int/2addr v0, v1
+    .line 69
+    if-eqz v0, :cond_2
 
-    .line 100
-    if-nez v0, :cond_4
-
-    .line 101
-    sget-object v0, Lcom/android/systemui/flags/Flags;->FALSING_OFF_FOR_UNFOLDED:Lcom/android/systemui/flags/ReleasedFlag;
-
-    .line 103
-    iget-object p0, p0, Lcom/android/systemui/classifier/BrightLineFalsingManager;->mFeatureFlags:Lcom/android/systemui/flags/FeatureFlags;
-
-    .line 105
-    check-cast p0, Lcom/android/systemui/flags/FeatureFlagsClassicRelease;
-
-    .line 107
-    invoke-virtual {p0, v0}, Lcom/android/systemui/flags/FeatureFlagsClassicRelease;->isEnabled(Lcom/android/systemui/flags/ReleasedFlag;)Z
-
-    .line 109
-    move-result p0
-
-    .line 112
-    if-eqz p0, :cond_3
-
-    .line 113
-    iget-boolean p0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mIsFoldableDevice:Z
-
-    .line 115
-    if-eqz p0, :cond_3
-
-    .line 117
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    .line 119
-    iget-object p1, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mFoldStateListener:Landroid/hardware/devicestate/DeviceStateManager$FoldStateListener;
-
-    .line 121
-    invoke-virtual {p1}, Landroid/hardware/devicestate/DeviceStateManager$FoldStateListener;->getFolded()Ljava/lang/Boolean;
-
-    .line 123
-    move-result-object p1
-
-    .line 126
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 127
-    move-result p0
-
-    .line 130
-    if-eqz p0, :cond_3
-
-    .line 131
+    .line 70
     goto :goto_2
 
-    .line 133
+    .line 72
+    :cond_2
+    iget-object v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
+
+    .line 73
+    iget-object v0, v0, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
+
+    .line 75
+    check-cast v0, Ljava/util/ArrayList;
+
+    .line 77
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    .line 79
+    move-result-object v0
+
+    .line 82
+    check-cast v0, Landroid/view/InputEvent;
+
+    .line 83
+    check-cast v0, Landroid/view/MotionEvent;
+
+    .line 85
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getClassification()I
+
+    .line 87
+    move-result v0
+
+    .line 90
+    const/4 v3, 0x4
+
+    .line 91
+    if-eq v0, v3, :cond_5
+
+    .line 92
+    const/4 v3, 0x3
+
+    .line 94
+    if-ne v0, v3, :cond_3
+
+    .line 95
+    goto :goto_3
+
+    .line 97
     :cond_3
+    :goto_2
+    iget-object v0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentKeyEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
+
+    .line 98
+    iget-object v0, v0, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
+
+    .line 100
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    .line 102
+    move-result v0
+
+    .line 105
+    xor-int/2addr v0, v1
+
+    .line 106
+    if-nez v0, :cond_5
+
+    .line 107
+    sget-object v0, Lcom/android/systemui/flags/Flags;->FALSING_OFF_FOR_UNFOLDED:Lcom/android/systemui/flags/ReleasedFlag;
+
+    .line 109
+    iget-object p0, p0, Lcom/android/systemui/classifier/BrightLineFalsingManager;->mFeatureFlags:Lcom/android/systemui/flags/FeatureFlags;
+
+    .line 111
+    check-cast p0, Lcom/android/systemui/flags/FeatureFlagsClassicRelease;
+
+    .line 113
+    invoke-virtual {p0, v0}, Lcom/android/systemui/flags/FeatureFlagsClassicRelease;->isEnabled(Lcom/android/systemui/flags/ReleasedFlag;)Z
+
+    .line 115
+    move-result p0
+
+    .line 118
+    if-eqz p0, :cond_4
+
+    .line 119
+    iget-boolean p0, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mIsFoldableDevice:Z
+
+    .line 121
+    if-eqz p0, :cond_4
+
+    .line 123
+    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    .line 125
+    iget-object p1, p1, Lcom/android/systemui/classifier/FalsingDataProvider;->mFoldStateListener:Landroid/hardware/devicestate/DeviceStateManager$FoldStateListener;
+
+    .line 127
+    invoke-virtual {p1}, Landroid/hardware/devicestate/DeviceStateManager$FoldStateListener;->getFolded()Ljava/lang/Boolean;
+
+    .line 129
+    move-result-object p1
+
+    .line 132
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 133
+    move-result p0
+
+    .line 136
+    if-eqz p0, :cond_4
+
+    .line 137
+    goto :goto_3
+
+    .line 139
+    :cond_4
     move v1, v2
 
-    .line 134
-    :cond_4
-    :goto_2
+    .line 140
+    :cond_5
+    :goto_3
     return v1
-    .line 135
+    .line 141
 .end method

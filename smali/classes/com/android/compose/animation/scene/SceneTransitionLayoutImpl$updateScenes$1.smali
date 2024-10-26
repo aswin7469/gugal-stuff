@@ -1,6 +1,6 @@
 .class public final Lcom/android/compose/animation/scene/SceneTransitionLayoutImpl$updateScenes$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -30,23 +30,6 @@
     .line 9
     return-void
     .line 11
-.end method
-
-.method public static synthetic scene$default(Lcom/android/compose/animation/scene/SceneTransitionLayoutImpl$updateScenes$1;Lcom/android/compose/animation/scene/SceneKey;Landroidx/compose/runtime/internal/ComposableLambdaImpl;)V
-    .locals 1
-
-    .line 1
-    invoke-static {}, Lkotlin/collections/MapsKt;->emptyMap()Ljava/util/Map;
-
-    .line 2
-    move-result-object v0
-
-    .line 5
-    invoke-virtual {p0, p1, v0, p2}, Lcom/android/compose/animation/scene/SceneTransitionLayoutImpl$updateScenes$1;->scene(Lcom/android/compose/animation/scene/SceneKey;Ljava/util/Map;Landroidx/compose/runtime/internal/ComposableLambdaImpl;)V
-
-    .line 6
-    return-void
-    .line 9
 .end method
 
 

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/navigationbar/NavigationBarView$NavTransitionListener;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/animation/LayoutTransition$TransitionListener;
@@ -47,7 +47,7 @@
     move-result p1
 
     .line 5
-    const p2, 0x7f0b00ee    # @id/back
+    const p2, 0x7f0a00f2    # @id/back
 
     .line 6
     const/4 v0, 0x0
@@ -69,7 +69,7 @@
     move-result p1
 
     .line 18
-    const p2, 0x7f0b036f    # @id/home
+    const p2, 0x7f0a038e    # @id/home
 
     .line 19
     if-ne p1, p2, :cond_1
@@ -100,7 +100,7 @@
     move-result p2
 
     .line 5
-    const v0, 0x7f0b00ee    # @id/back
+    const v0, 0x7f0a00f2    # @id/back
 
     .line 6
     const/4 v1, 0x1
@@ -122,7 +122,7 @@
     move-result p2
 
     .line 18
-    const p3, 0x7f0b036f    # @id/home
+    const p3, 0x7f0a038e    # @id/home
 
     .line 19
     if-ne p2, p3, :cond_1

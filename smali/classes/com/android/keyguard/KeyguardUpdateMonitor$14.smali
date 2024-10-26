@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardUpdateMonitor$14;
 .super Landroid/database/ContentObserver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -104,31 +104,28 @@
     move-result-object p0
 
     .line 50
-    const-string v0, "time_12_24"
+    const-string/jumbo v0, "time_12_24"
 
     .line 51
     invoke-static {p0, v0}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 53
+    .line 54
     move-result-object p0
-
-    .line 56
-    const/16 v0, 0x158
 
     .line 57
+    const/16 v0, 0x158
+
+    .line 58
     invoke-virtual {p1, v0, p0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
-    .line 59
+    .line 60
     move-result-object p0
 
-    .line 62
+    .line 63
     invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 63
+    .line 64
     return-void
-
-    .line 66
-    nop
 
     .line 67
     :pswitch_data_0

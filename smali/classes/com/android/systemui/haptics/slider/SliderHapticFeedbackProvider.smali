@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/haptics/slider/SliderHapticFeedbackProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/haptics/slider/SliderStateListener;
@@ -73,6 +73,7 @@
 
     .line 23
     return-void
+    .line 25
 .end method
 
 .method public constructor <init>(Lcom/android/systemui/statusbar/VibratorHelper;Landroid/view/VelocityTracker;Lcom/android/systemui/haptics/slider/SliderHapticFeedbackConfig;Lcom/android/systemui/util/time/SystemClock;)V
@@ -383,10 +384,10 @@
     iget-object v6, v5, Lcom/android/systemui/statusbar/VibratorHelper;->mExecutor:Ljava/util/concurrent/Executor;
 
     .line 87
-    new-instance v7, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda0;
+    new-instance v7, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda1;
 
     .line 89
-    invoke-direct {v7, v5, v0, v3}, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/VibratorHelper;Landroid/os/VibrationEffect;Landroid/os/VibrationAttributes;)V
+    invoke-direct {v7, v5, v0, v3}, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/VibratorHelper;Landroid/os/VibrationEffect;Landroid/os/VibrationAttributes;)V
 
     .line 91
     invoke-interface {v6, v7}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V

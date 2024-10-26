@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/people/PeopleBackupFollowUpJob;
 .super Landroid/app/job/JobService;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -457,91 +457,91 @@
     move-result-object p1
 
     .line 31
-    const-string v6, "start_date"
+    const-string/jumbo v6, "start_date"
 
     .line 32
     invoke-virtual {p1, v6}, Landroid/os/PersistableBundle;->getLong(Ljava/lang/String;)J
 
-    .line 34
+    .line 35
     move-result-wide v6
 
-    .line 37
+    .line 38
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 38
+    .line 39
     move-result-wide v8
 
-    .line 41
+    .line 42
     invoke-interface {v3}, Ljava/util/Map;->isEmpty()Z
 
-    .line 42
+    .line 43
     move-result p1
 
-    .line 45
+    .line 46
     if-eqz p1, :cond_0
 
-    .line 46
+    .line 47
     goto :goto_0
 
-    .line 48
+    .line 49
     :cond_0
     sub-long/2addr v8, v6
 
-    .line 49
+    .line 50
     sget-wide v6, Lcom/android/systemui/people/PeopleBackupFollowUpJob;->CLEAN_UP_STORAGE_AFTER_DURATION:J
 
-    .line 50
+    .line 51
     cmp-long p1, v8, v6
 
-    .line 52
+    .line 53
     if-lez p1, :cond_1
 
-    .line 54
+    .line 55
     :goto_0
     invoke-virtual {p0, v3, v5, v1}, Lcom/android/systemui/people/PeopleBackupFollowUpJob;->cancelJobAndClearRemainingWidgets(Ljava/util/Map;Landroid/content/SharedPreferences$Editor;Landroid/content/SharedPreferences;)V
 
-    .line 56
+    .line 57
     goto :goto_1
 
-    .line 59
+    .line 60
     :catchall_0
     move-exception p0
 
-    .line 60
+    .line 61
     goto :goto_2
 
-    .line 61
+    .line 62
     :cond_1
     :goto_1
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 62
+    .line 63
     invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 65
+    .line 66
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 68
+    .line 69
     iget-object p0, p0, Lcom/android/systemui/people/PeopleBackupFollowUpJob;->mContext:Landroid/content/Context;
 
-    .line 69
+    .line 70
     invoke-static {p0}, Lcom/android/systemui/people/widget/PeopleBackupHelper;->updateWidgets(Landroid/content/Context;)V
 
-    .line 71
+    .line 72
     return v4
 
-    .line 74
+    .line 75
     :goto_2
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 75
-    throw p0
     .line 76
+    throw p0
+    .line 77
 .end method
 
 .method public final onStopJob(Landroid/app/job/JobParameters;)Z

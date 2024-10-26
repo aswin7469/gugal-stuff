@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/pipeline/ethernet/domain/EthernetInteractor$special$$inlined$map$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -146,7 +146,7 @@
     invoke-direct {v2, p2}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V
 
     .line 72
-    const p2, 0x7f080b50    # @drawable/stat_sys_ethernet_fully 'res/drawable/stat_sys_ethernet_fully.xml'
+    const p2, 0x7f080b97    # @drawable/stat_sys_ethernet_fully 'res/drawable/stat_sys_ethernet_fully.xml'
 
     .line 75
     invoke-direct {p1, p2, v2}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V
@@ -171,7 +171,7 @@
     invoke-direct {v2, p2}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V
 
     .line 89
-    const p2, 0x7f080b4f    # @drawable/stat_sys_ethernet 'res/drawable/stat_sys_ethernet.xml'
+    const p2, 0x7f080b96    # @drawable/stat_sys_ethernet 'res/drawable/stat_sys_ethernet.xml'
 
     .line 92
     invoke-direct {p1, p2, v2}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V

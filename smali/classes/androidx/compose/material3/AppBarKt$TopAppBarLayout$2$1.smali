@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/material3/AppBarKt$TopAppBarLayout$2$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/layout/MeasurePolicy;
@@ -281,246 +281,246 @@
     move-result-object v9
 
     .line 137
-    const-string v11, "title"
+    const-string/jumbo v11, "title"
 
     .line 138
     invoke-static {v9, v11}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 140
+    .line 141
     move-result v9
 
-    .line 143
+    .line 144
     if-eqz v9, :cond_5
 
-    .line 144
+    .line 145
     const/4 v15, 0x0
 
-    .line 146
+    .line 147
     const/16 v16, 0x0
 
-    .line 147
+    .line 148
     const/4 v13, 0x0
 
-    .line 149
+    .line 150
     const/16 v17, 0xc
 
-    .line 150
+    .line 151
     move-wide/from16 v11, p3
 
-    .line 152
+    .line 153
     invoke-static/range {v11 .. v17}, Landroidx/compose/ui/unit/Constraints;->copy-Zbe2FdA$default(JIIIII)J
 
-    .line 154
+    .line 155
     move-result-wide v4
 
-    .line 157
+    .line 158
     invoke-interface {v8, v4, v5}, Landroidx/compose/ui/layout/Measurable;->measure-BRTryo0(J)Landroidx/compose/ui/layout/Placeable;
 
-    .line 158
+    .line 159
     move-result-object v12
 
-    .line 161
+    .line 162
     sget-object v1, Landroidx/compose/ui/layout/AlignmentLineKt;->LastBaseline:Landroidx/compose/ui/layout/HorizontalAlignmentLine;
 
-    .line 162
+    .line 163
     invoke-virtual {v12, v1}, Landroidx/compose/ui/layout/Placeable;->get(Landroidx/compose/ui/layout/AlignmentLine;)I
 
-    .line 164
+    .line 165
     move-result v4
 
-    .line 167
+    .line 168
     const/high16 v5, -0x80000000
 
-    .line 168
+    .line 169
     if-eq v4, v5, :cond_2
 
-    .line 170
+    .line 171
     invoke-virtual {v12, v1}, Landroidx/compose/ui/layout/Placeable;->get(Landroidx/compose/ui/layout/AlignmentLine;)I
 
-    .line 172
+    .line 173
     move-result v1
 
-    .line 175
+    .line 176
     move/from16 v20, v1
 
-    .line 176
+    .line 177
     goto :goto_5
 
-    .line 178
+    .line 179
     :cond_2
     move/from16 v20, v3
 
-    .line 179
+    .line 180
     :goto_5
     iget-object v1, v0, Landroidx/compose/material3/AppBarKt$TopAppBarLayout$2$1;->$scrolledOffset:Landroidx/compose/material3/ScrolledOffset;
 
-    .line 181
+    .line 182
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 183
+    .line 184
     const/4 v1, 0x0
 
-    .line 186
+    .line 187
     invoke-static {v1}, Ljava/lang/Float;->isNaN(F)Z
 
-    .line 187
+    .line 188
     move-result v4
 
-    .line 190
+    .line 191
     if-eqz v4, :cond_3
 
-    .line 191
+    .line 192
     goto :goto_6
 
-    .line 193
+    .line 194
     :cond_3
     invoke-static {v1}, Lkotlin/math/MathKt;->roundToInt(F)I
 
-    .line 194
+    .line 195
     move-result v3
 
-    .line 197
+    .line 198
     :goto_6
     invoke-static/range {p3 .. p4}, Landroidx/compose/ui/unit/Constraints;->getMaxHeight-impl(J)I
 
-    .line 198
+    .line 199
     move-result v1
-
-    .line 201
-    if-ne v1, v6, :cond_4
 
     .line 202
+    if-ne v1, v6, :cond_4
+
+    .line 203
     invoke-static/range {p3 .. p4}, Landroidx/compose/ui/unit/Constraints;->getMaxHeight-impl(J)I
 
-    .line 204
+    .line 205
     move-result v1
 
-    .line 207
+    .line 208
     goto :goto_7
 
-    .line 208
+    .line 209
     :cond_4
     invoke-static/range {p3 .. p4}, Landroidx/compose/ui/unit/Constraints;->getMaxHeight-impl(J)I
 
-    .line 209
+    .line 210
     move-result v1
 
-    .line 212
+    .line 213
     add-int/2addr v1, v3
 
-    .line 213
+    .line 214
     :goto_7
     invoke-static/range {p3 .. p4}, Landroidx/compose/ui/unit/Constraints;->getMaxWidth-impl(J)I
 
-    .line 214
+    .line 215
     move-result v3
 
-    .line 217
+    .line 218
     new-instance v4, Landroidx/compose/material3/AppBarKt$TopAppBarLayout$2$1$1;
 
-    .line 218
+    .line 219
     iget v5, v0, Landroidx/compose/material3/AppBarKt$TopAppBarLayout$2$1;->$titleBottomPadding:I
 
-    .line 220
+    .line 221
     iget-object v13, v0, Landroidx/compose/material3/AppBarKt$TopAppBarLayout$2$1;->$titleHorizontalArrangement:Landroidx/compose/foundation/layout/Arrangement$Horizontal;
 
-    .line 222
+    .line 223
     iget-object v0, v0, Landroidx/compose/material3/AppBarKt$TopAppBarLayout$2$1;->$titleVerticalArrangement:Landroidx/compose/foundation/layout/Arrangement$Vertical;
 
-    .line 224
+    .line 225
     move-object v9, v4
 
-    .line 226
+    .line 227
     move v11, v1
 
-    .line 227
+    .line 228
     move-wide/from16 v14, p3
 
-    .line 228
+    .line 229
     move-object/from16 v16, v2
 
-    .line 230
+    .line 231
     move-object/from16 v17, p1
 
-    .line 232
+    .line 233
     move-object/from16 v18, v0
 
-    .line 234
+    .line 235
     move/from16 v19, v5
 
-    .line 236
+    .line 237
     invoke-direct/range {v9 .. v20}, Landroidx/compose/material3/AppBarKt$TopAppBarLayout$2$1$1;-><init>(Landroidx/compose/ui/layout/Placeable;ILandroidx/compose/ui/layout/Placeable;Landroidx/compose/foundation/layout/Arrangement$Horizontal;JLandroidx/compose/ui/layout/Placeable;Landroidx/compose/ui/layout/MeasureScope;Landroidx/compose/foundation/layout/Arrangement$Vertical;II)V
 
-    .line 238
+    .line 239
     move-object/from16 v8, p1
 
-    .line 241
+    .line 242
     invoke-static {v8, v3, v1, v4}, Landroidx/compose/ui/layout/MeasureScope;->layout$default(Landroidx/compose/ui/layout/MeasureScope;IILkotlin/jvm/functions/Function1;)Landroidx/compose/ui/layout/MeasureResult;
 
-    .line 243
+    .line 244
     move-result-object v0
 
-    .line 246
+    .line 247
     return-object v0
 
-    .line 247
+    .line 248
     :cond_5
     move-object/from16 v8, p1
 
-    .line 248
+    .line 249
     add-int/lit8 v7, v7, 0x1
 
-    .line 250
+    .line 251
     goto :goto_4
 
-    .line 252
+    .line 253
     :cond_6
     new-instance v0, Ljava/util/NoSuchElementException;
 
-    .line 253
+    .line 254
     invoke-direct {v0, v5}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    .line 255
+    .line 256
     throw v0
 
-    .line 258
+    .line 259
     :cond_7
     move-object/from16 v8, p1
 
-    .line 259
+    .line 260
     add-int/lit8 v4, v4, 0x1
 
-    .line 261
+    .line 262
     goto/16 :goto_1
 
-    .line 263
+    .line 264
     :cond_8
     new-instance v0, Ljava/util/NoSuchElementException;
 
-    .line 265
+    .line 266
     invoke-direct {v0, v5}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    .line 267
+    .line 268
     throw v0
 
-    .line 270
+    .line 271
     :cond_9
     move-object/from16 v8, p1
 
-    .line 271
+    .line 272
     add-int/lit8 v4, v4, 0x1
 
-    .line 273
+    .line 274
     goto/16 :goto_0
 
-    .line 275
+    .line 276
     :cond_a
     new-instance v0, Ljava/util/NoSuchElementException;
 
-    .line 277
+    .line 278
     invoke-direct {v0, v5}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    .line 279
+    .line 280
     throw v0
-    .line 282
+    .line 283
 .end method

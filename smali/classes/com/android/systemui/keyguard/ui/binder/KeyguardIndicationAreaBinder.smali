@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/keyguard/ui/binder/KeyguardIndicationAreaBinder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -11,7 +11,7 @@
     invoke-virtual {p2, p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->setIndicationArea(Landroid/view/ViewGroup;)V
 
     .line 2
-    const p2, 0x7f0b03d7    # @id/keyguard_indication_text
+    const p2, 0x7f0a03f8    # @id/keyguard_indication_text
 
     .line 5
     invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -26,7 +26,7 @@
     check-cast v4, Landroid/widget/TextView;
 
     .line 13
-    const p2, 0x7f0b03d8    # @id/keyguard_indication_text_bottom
+    const p2, 0x7f0a03f9    # @id/keyguard_indication_text_bottom
 
     .line 15
     invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -59,7 +59,7 @@
     move-result-object v0
 
     .line 37
-    const v1, 0x7f070208    # @dimen/default_burn_in_prevention_offset '15.0dp'
+    const v1, 0x7f07022a    # @dimen/default_burn_in_prevention_offset '15.0dp'
 
     .line 38
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -74,7 +74,7 @@
     move-result-object v1
 
     .line 48
-    const v2, 0x7f070344    # @dimen/keyguard_indication_area_padding '82.0dp'
+    const v2, 0x7f070380    # @dimen/keyguard_indication_area_padding '82.0dp'
 
     .line 49
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -135,4 +135,5 @@
 
     .line 88
     return-object p0
+    .line 89
 .end method

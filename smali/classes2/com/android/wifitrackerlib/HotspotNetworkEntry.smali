@@ -1,6 +1,6 @@
 .class public final Lcom/android/wifitrackerlib/HotspotNetworkEntry;
 .super Lcom/android/wifitrackerlib/WifiEntry;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -129,7 +129,6 @@
 
     .line 32
     return-object p0
-    .line 34
 .end method
 
 
@@ -508,6 +507,7 @@
 
     .line 32
     throw v0
+    .line 33
 .end method
 
 .method public final declared-synchronized getSsid()Ljava/lang/String;
@@ -670,7 +670,7 @@
     iget-object p1, p0, Lcom/android/wifitrackerlib/HotspotNetworkEntry;->mContext:Landroid/content/Context;
 
     .line 18
-    const v0, 0x7f140a87    # @string/wifitrackerlib_hotspot_network_connecting 'Connecting…'
+    const v0, 0x7f130b14    # @string/wifitrackerlib_hotspot_network_connecting 'Connecting…'
 
     .line 20
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -704,7 +704,7 @@
     iget-object p1, p0, Lcom/android/wifitrackerlib/HotspotNetworkEntry;->mContext:Landroid/content/Context;
 
     .line 38
-    const v0, 0x7f140a8b    # @string/wifitrackerlib_hotspot_network_summary_error_generic 'Can't connect. Try connecting again.'
+    const v0, 0x7f130b18    # @string/wifitrackerlib_hotspot_network_summary_error_generic 'Can't connect. Try connecting again.'
 
     .line 40
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -729,7 +729,7 @@
     iget-object v0, p0, Lcom/android/wifitrackerlib/HotspotNetworkEntry;->mContext:Landroid/content/Context;
 
     .line 51
-    const v1, 0x7f140a8c    # @string/wifitrackerlib_hotspot_network_summary_error_settings '{DEVICE_TYPE, select, PHONE {Can't connect. Check phone settings and try again.} TABLET {Can't conne ...'
+    const v1, 0x7f130b19    # @string/wifitrackerlib_hotspot_network_summary_error_settings '{DEVICE_TYPE, select, PHONE {Can't connect. Check phone settings and try again.} TABLET {Can't conne ...'
 
     .line 53
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -820,7 +820,7 @@
     move-result-object v0
 
     .line 112
-    const v1, 0x7f140a89    # @string/wifitrackerlib_hotspot_network_summary_error_carrier_block '%1$s doesn't allow this connection'
+    const v1, 0x7f130b16    # @string/wifitrackerlib_hotspot_network_summary_error_carrier_block '%1$s doesn't allow this connection'
 
     .line 113
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -869,7 +869,7 @@
     move-result-object v0
 
     .line 141
-    const v1, 0x7f140a8a    # @string/wifitrackerlib_hotspot_network_summary_error_carrier_incomplete 'Can't connect. Contact %1$s for help.'
+    const v1, 0x7f130b17    # @string/wifitrackerlib_hotspot_network_summary_error_carrier_incomplete 'Can't connect. Contact %1$s for help.'
 
     .line 142
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -894,7 +894,7 @@
     iget-object v0, p0, Lcom/android/wifitrackerlib/HotspotNetworkEntry;->mContext:Landroid/content/Context;
 
     .line 153
-    const v1, 0x7f140a8d    # @string/wifitrackerlib_hotspot_network_summary_new '{DEVICE_TYPE, select, PHONE {{NETWORK_NAME} from your phone} TABLET {{NETWORK_NAME} from your tablet ...'
+    const v1, 0x7f130b1a    # @string/wifitrackerlib_hotspot_network_summary_new '{DEVICE_TYPE, select, PHONE {{NETWORK_NAME} from your phone} TABLET {{NETWORK_NAME} from your tablet ...'
 
     .line 155
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

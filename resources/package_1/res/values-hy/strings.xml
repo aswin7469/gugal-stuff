@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">տեղադրել ընտրված վիջեթը</string>
   <string name="accessibility_action_label_remove_widget">հեռացնել վիջեթը</string>
   <string name="accessibility_action_label_select_widget">ընտրել վիջեթ</string>
-  <string name="accessibility_action_open_communal_hub">Վիջեթներ կողպէկրանին</string>
   <string name="accessibility_action_pip_resize">Փոխել չափը</string>
   <string name="accessibility_action_pip_stash">Թաքցնել</string>
   <string name="accessibility_action_pip_unstash">Ցուցադրել</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Դուրս գալ մեկ ձեռքի ռեժիմից</string>
   <string name="accessibility_airplane_mode">Ավիառեժիմ</string>
   <string name="accessibility_allow_diagonal_scrolling">Թույլատրել անկյունագծով ոլորումը</string>
+  <string name="accessibility_assistant_poodle">Ձայնային որոնում</string>
   <string name="accessibility_authenticate_hint">նույնականացնել</string>
   <string name="accessibility_back">Հետ</string>
   <string name="accessibility_banner_message_dismiss">Փակել</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">նշել սարքը</string>
   <string name="accessibility_ethernet_connected">Ethernet։</string>
   <string name="accessibility_ethernet_disconnected">Ethernet-ը անջատված է:</string>
-  <string name="accessibility_fingerprint_bouncer">Պահանջվում է նույնականացում։ Դրա համար մատը հպեք մատնահետքի սկաներին։</string>
   <string name="accessibility_fingerprint_label">Մատնահետքի սկաներ</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">միացնել/անջատել</string>
   <string name="accessibility_floating_button_action_edit">Փոփոխել</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Ցանկ</string>
   <string name="accessibility_multi_user_list_switcher">իջնող ընտրացանկ</string>
   <string name="accessibility_multi_user_switch_switcher">Անջատել օգտվողին</string>
+  <string name="accessibility_next_alarm">Հաջորդ զարթուցիչը՝ %s</string>
   <string name="accessibility_no_calling">Զանգել հնարավոր չէ։</string>
   <string name="accessibility_no_phone">Հեռախոս չկա:</string>
   <string name="accessibility_no_wifi">Wi-Fi-ը կապակցված չէ:</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Էկրանը կողպված է ուղղաձիգ դիրքավորմամբ:</string>
   <string name="accessibility_send_smart_reply">Ուղարկել</string>
   <string name="accessibility_sensors_off_active">Տվիչներն անջատված են</string>
+  <string name="accessibility_settings_gear">Pixel Stand – կարգավորումներ</string>
   <string name="accessibility_side_fingerprint_indicator_label">Հպեք մատնահետքի սկաներին։ Այն հեռախոսի կողքի ավելի կարճ կոճակն է</string>
+  <string name="accessibility_smartspace_page">Էջ %1$d/%2$d</string>
   <string name="accessibility_split_bottom">Հավելվածը ներքևում</string>
   <string name="accessibility_split_left">Հավելվածը ձախ կողմում</string>
   <string name="accessibility_split_right">Հավելվածը աջ կողմում</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi-ի ուժգնությունը՝ երեք գիծ:</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi-ի ուժգնությունը՝ երկու գիծ:</string>
   <string name="accesssibility_keyguard_retry">Սահեցրեք վերև՝ դեմքով ապակողպումը նորից փորձելու համար</string>
+  <string name="adaptive_charging_notify_des">Լիցքավորումը կավարտվի %1$s։ Այն դանդաղ է ընթանում՝ մարտկոցի աշխատաժամանակը երկարացնելու համար։</string>
+  <string name="adaptive_charging_notify_title">Հարմարվող լիցքավորումը միացված է</string>
+  <string name="adaptive_charging_notify_turn_off_once">Անջատել մեկ անգամ</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Հարմարվող լիցքավորում • Կավարտվի %2$s</string>
   <string name="add">Ավելացնել</string>
   <string name="add_guest_failed">Չհաջողվեց նոր հյուր ստեղծել</string>
   <string name="airplane_mode">Ավիառեժիմ</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Հավելվածի մասին</string>
   <string name="app_label">Համակարգի ինտերֆեյս</string>
   <string name="assistant_attention_content_description">Հայտնաբերվել է օգտատեր</string>
+  <string name="assistant_scrim_label">Օգնականը լսում է։ Հպեք՝ չեղարկելու համար։</string>
   <string name="audio_sharing_description">Փոխանցում է ձայնը</string>
   <string name="audio_status">Բան եմ լսում</string>
   <string name="auto_data_switch_dialog_negative_button">Ոչ, շնորհակալություն</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Հետ</string>
   <string name="battery">Մարտկոց</string>
   <string name="battery_detail_switch_title">Մարտկոցի տնտեսում</string>
-  <string name="battery_low_description">Մարտկոցի լիցքը՝ %s։ Մարտկոցի տնտեսման ռեժիմում միացվում է մուգ թեման, աշխատանքը ֆոնային ռեժիմում սահմանափակվում է, իսկ ծանուցումները՝ հետաձգվում։</string>
+  <string name="battery_health_notify_learn_more">Իմանալ ավելին</string>
   <string name="battery_low_intro">Մարտկոցի տնտեսման ռեժիմում միացվում է մուգ թեման, աշխատանքը ֆոնային ռեժիմում սահմանափակվում է, իսկ ծանուցումները՝ հետաձգվում։</string>
-  <string name="battery_low_title">Միացնե՞լ մարտկոցի տնտեսման ռեժիմը</string>
   <string name="battery_saver_confirmation_ok">Միացնել</string>
   <string name="battery_saver_confirmation_title">Միացնե՞լ մարտկոցի տնտեսումը</string>
   <string name="battery_saver_confirmation_title_generic">Մարտկոցի տնտեսման ռեժիմի մասին</string>
-  <string name="battery_saver_dismiss_action">Ոչ, շնորհակալություն</string>
   <string name="battery_saver_start_action">Միացնել</string>
   <string name="battery_state_unknown_notification_text">Հպեք՝ ավելին իմանալու համար</string>
   <string name="battery_state_unknown_notification_title">Մարտկոցի ցուցիչի ցուցմունքը կարդալու հետ կապված խնդիր կա</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">Ակտիվ է։ Ձախ ականջակալի լիցքը՝ %1$s, աջ ականջակալի լիցքը՝ %2$s։</string>
   <string name="bluetooth_active_battery_level_untethered_left">Ակտիվ է։ Ձախ․ մարտկոցի լիցքը՝ %1$s։</string>
   <string name="bluetooth_active_battery_level_untethered_right">Ակտիվ է։ Աջ․ մարտկոցի լիցքը՝ %1$s։</string>
-  <string name="bluetooth_active_media_only_battery_level">Ակտիվ է (միայն մեդիա)։ Մարտկոցի լիցքը՝ %1$s։</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Ակտիվ է (միայն մեդիա)։ Ձախ ականջակալի լիցքը՝ %1$s, աջ ականջակալի լիցքը՝ %2$s։</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Ակտիվ է (միայն մեդիա)</string>
   <string name="bluetooth_active_no_battery_level">Ակտիվ է</string>
   <string name="bluetooth_battery_level">Մարտկոցի լիցքը՝ %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Միացված է (աջակցում է աուդիոյի փոխանցում)։ Մարտկոցի լիցքը՝ %1$s։</string>
   <string name="bluetooth_battery_level_untethered">Ձախ ականջակալի լիցքը՝ %1$s, աջ ականջակալի լիցքը՝ %2$s։</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Միացված է (աջակցում է աուդիոյի փոխանցում)։ Ձախ ականջակալի լիցքը՝ %1$s, աջ ականջակալի լիցքը՝ %2$s։</string>
   <string name="bluetooth_connected">Միացավ %1$s սարքին</string>
   <string name="bluetooth_connecting">Միանում է...</string>
   <string name="bluetooth_disconnected">Անջատված է</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">Ակտիվ է (միայն ձախ)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Ակտիվ է (ձախ և աջ)</string>
   <string name="bluetooth_hearing_aid_right_active">Ակտիվ է (միայն աջ)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Միացված է (աջակցում է աուդիոյի փոխանցում)</string>
   <string name="bluetooth_pairing">Զուգակցում...</string>
   <string name="bluetooth_pairing_device_down_error_message">Հնարավոր չէ կապ հաստատել  %1$s-ի հետ:</string>
   <string name="bluetooth_pairing_error_message">Չհաջողվեց զուգակցել %1$s-ի հետ:</string>
   <string name="bluetooth_pairing_pin_error_message">Չհաջողվեց զուգակցել %1$s-ի հետ՝ սխալ PIN-ի կամ մուտքի բանալու պատճառով:</string>
   <string name="bluetooth_pairing_rejected_error_message">Զուգավորումը մերժվեց %1$s-ի կողմից:</string>
-  <string name="bluetooth_saved_device_lea_support">Աջակցում է աուդիոյի փոխանցում</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Համակարգիչ</string>
   <string name="bluetooth_talkback_headphone">Ականջակալ</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">Լրացուցիչ ընտրացանկ</string>
   <string name="bubble_overflow_empty_subtitle">Այստեղ կցուցադրվեն վերջերս օգտագործված և փակված ամպիկները, որոնք կկարողանաք հեշտությամբ վերաբացել</string>
   <string name="bubble_overflow_empty_title">Ամպիկներ չկան</string>
-  <string name="bubble_shortcut_label">Ամպիկներ</string>
-  <string name="bubble_shortcut_long_label">Ցույց տալ ամպիկներ</string>
   <string name="bubbles_app_settings">%1$s – կարգավորումներ</string>
   <string name="bubbles_dont_bubble_conversation">Զրույցը չցուցադրել ամպիկի տեսքով</string>
   <string name="bubbles_settings_button_description">%1$s-ի ամպիկների կարգավորումներ</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">Կանգնեցնել հեռարձակումը</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Դուք կկանգնեցնեք &lt;b&gt;%1$s&lt;/b&gt; հավելվածից բովանդակության հեռարձակումը</string>
   <string name="cell_data_off_content_description">Բջջային ինտերնետն անջատված է</string>
+  <string name="charge_limit_discovery_notification_enable_button">Միացնել հիմա</string>
+  <string name="charge_limit_discovery_notification_text">Փորձեք միացնել 80%-ով սահմանափակման գործառույթը՝ մարտկոցի վիճակը բարելավելու և աշխատաժամանակը երկարացնելու համար։ Սա կարող եք ցանկացած ժամանակ փոխել կարգավորումներում</string>
+  <string name="charge_limit_discovery_notification_title">Պաշտպանեք մարտկոցը լիցքավորման ժամանակ</string>
+  <string name="charging_reverse_text">Մարտկոցի լիցքի փոխանցում</string>
   <string name="clear_all_notifications_text">Մաքրել բոլորը</string>
   <string name="clipboard">Սեղմատախտակ</string>
   <string name="clipboard_content_copied">Բովանդակությունը պատճենվեց</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">Փակել</string>
   <string name="close_dialog_button">Փակել</string>
   <string name="collapse_menu_text">Փակել ընտրացանկը</string>
+  <string name="columbus_bouncer_message">Արագ հպումը կատարելու համար ապակողպեք էկրանը</string>
+  <string name="columbus_target_request_dialog_allow">Թույլատրել</string>
+  <string name="columbus_target_request_dialog_deny">Չթույլատրել</string>
+  <string name="columbus_target_request_dialog_summary">Կրկնակի հպեք հեռախոսի հետևի կողմին՝ %1$s հավելվածը բացելու համար։ Այս գործառույթը ցանկացած ժամանակ կարող եք փոփոխել Կարգավորումներում։</string>
+  <string name="columbus_target_request_dialog_title">Թույլատրե՞լ, որ %1$s հավելվածը բացվի կարճ հպումով</string>
   <string name="communal_tutorial_indicator_text">Թերթեք ձախ՝ ուղեցույցը գործարկելու համար</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Ներքին էկրանը կհայելապատճենվի։ Առջևի էկրանը կանջատվի։</string>
   <string name="connected_display_dialog_start_mirroring">Հայելապատճենե՞լ արտաքին էկրանին</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">Բջջային տվյալներն ընդհատված են</string>
   <string name="data_usage_disabled_dialog_title">Տվյալների օգտագործումը դադարեցված է</string>
   <string name="days_timestamp">%1$s օր առաջ</string>
-  <string name="default_error_message">Սխալ ներածում</string>
   <string name="default_popup_window_title">Ելնող պատուհան</string>
+  <string name="defender_notify_resume_charge">Վրագրել</string>
+  <string name="defender_notify_title">Մարտկոցի պաշտպանություն</string>
+  <string name="defender_post_notify_des">Մարտկոցի աշխատաժամանակը երկարացնելու համար լիցքավորումն օպտիմալացվել է՝ %1$s – %2$s</string>
+  <string name="defender_post_notify_title">Լիցքավորումն օպտիմալացվել է</string>
   <string name="demo_mode">Համակարգի միջերեսի ցուցադրական ռեժիմ</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Ծավալել էկրանը</string>
   <string name="desktop_mode_maximize_menu_snap_text">Ծալել էկրանը</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">Այս սարքը պատկանում է ձեր ընկերությանը</string>
   <string name="do_disclosure_with_name">Այս սարքը պատկանում է «%s» կազմակերպությանը</string>
   <string name="do_financed_disclosure_with_name">Այս սարքը տրամադրվել է «%s» կազմակերպության կողմից</string>
+  <string name="dock_a11y_action_show_photo_text">Ցուցադրել ֆոտոշրջանակը</string>
+  <string name="dock_alignment_not_charging">Կարգավորեք հեռախոսը` առանց լարի լիցքավորելու համար</string>
+  <string name="dock_alignment_slow_charging">Կարգավորեք հեռախոսը՝ ավելի արագ լիցքավորելու համար</string>
+  <string name="dock_defender_first_run_des">Մարտկոցի աշխատաժամանակը երկարացնելու համար լիցքավորումը դադարեցվում է 90% մակարդակում, քանի դեռ պլանշետը դոկ-կայանում է: Այս պարամետրը ցանկացած ժամանակ կարող եք փոխել Կարգավորումներում։</string>
+  <string name="dock_defender_first_run_settings">Կարգավորումներ</string>
+  <string name="dock_defender_first_run_title">Լիցքավորումը դադարեցվել է՝ մարտկոցը պաշտպանելու համար</string>
   <string name="dock_multi_instances_not_supported_text">Այս հավելվածը հնարավոր է բացել միայն մեկ պատուհանում</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Հավելվածը չի աջակցում էկրանի տրոհումը</string>
+  <string name="dock_photo_preview_text">Ֆոտոշրջանակը գործարկվում է…</string>
+  <string name="dock_promo_text">Էկրանի վրա մատը սահեցրեք ձախ՝ ֆոտոշրջանակը կիրառելու համար</string>
   <string name="done">Պատրաստ է</string>
   <string name="drag_split_not_supported">Այս ծանուցումը հնարավոր չէ քաշել տրոհված էկրանի մեկ հատվածից մյուսը</string>
   <string name="drag_to_add_tiles">Պահեք և քաշեք՝ սալիկներ ավելացնելու համար</string>
   <string name="drag_to_rearrange_tiles">Պահեք և քաշեք՝ սալիկները վերադասավորելու համար</string>
   <string name="drag_to_remove_disabled">Հարկավոր է առնվազն %1$d սալիկ</string>
   <string name="drag_to_remove_tiles">Քաշեք այստեղ՝ հեռացնելու համար</string>
+  <string name="dream_lockscreen_wallpaper_description">Օգտագործեք ձեր կողպէկրանի ընթացիկ պաստառը</string>
+  <string name="dream_lockscreen_wallpaper_label">Պաստառ</string>
   <string name="dream_overlay_status_bar_alarm_set">Զարթուցիչը դրված է</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Տեսախցիկը և խոսափողն անջատված են</string>
   <string name="dream_overlay_status_bar_camera_off">Տեսախցիկն անջատված է</string>
   <string name="dream_overlay_status_bar_mic_off">Խոսափողն անջատված է</string>
   <string name="dream_overlay_status_bar_priority_mode">Առաջնահերթության ռեժիմ</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi-ը հասանելի չէ</string>
+  <string name="dwell_defender_notify_des">Սա օգնում է երկարացնել մարտկոցի աշխատաժամանակը հեռախոսը չափազանց երկար լիցքավորելու դեպքում</string>
+  <string name="dwell_defender_notify_title">Լիցքավորումը դադարեցվել է՝ մարտկոցը պաշտպանելու համար</string>
   <string name="edit_user_info_message">Ձեր ընտրած անունն ու նկարը տեսանելի կլինեն այս սարքն օգտագործող բոլոր մարդկանց։</string>
   <string name="edit_widget">Փոփոխել վիջեթը</string>
   <string name="empty_shade_text">Ծանուցումներ չկան</string>
@@ -561,12 +581,16 @@
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Լրացուցիչ</string>
   <string name="expand_menu_text">Բացել ընտրացանկը</string>
+  <string name="extreme_battery_saver_text">Առավելագույն</string>
+  <string name="extreme_low_battery_notification_text">Ձեր հեռախոսը շուտով կանջատվի, եթե չլիցքավորեք մարտկոցը</string>
+  <string name="extreme_low_battery_notification_title">Մարտկոցի լիցքը շատ ցածր է</string>
   <string name="face_re_enroll_dialog_content">Դեմքով ապակողպումը նորից կարգավորելու համար ձեր ընթացիկ դեմքի նմուշը կջնջվի։
 
 Դուք պետք է նորից կարգավորեք այս գործառույթը, որպեսզի դեմքի միջոցով ապակողպեք ձեր հեռախոսը։</string>
   <string name="face_re_enroll_dialog_title">Կարգավորեք դեմքով ապակողպումը</string>
   <string name="face_re_enroll_notification_name">Դեմքով ապակողպում</string>
   <string name="face_re_enroll_notification_title">Նորից կարգավորեք դեմքով ապակողպումը</string>
+  <string name="face_reenroll_dialog_confirm">Կարգավորել</string>
   <string name="face_reenroll_failure_dialog_content">Չհաջողվեց կարգավորել դեմքով ապակողպումը։ Անցեք Կարգավորումներ և նորից փորձեք։</string>
   <string name="failed_attempts_now_wiping_device">Չափից շատ սխալ փորձեր են արվել։ Այս սարքի տվյալները կջնջվեն։</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Փակել</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">Փոքրացնել</string>
   <string name="fullscreen_text">Լիաէկրան</string>
   <string name="game_status">Խաղ եմ խաղում</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">«Հետաձգված ապակողպում» գործառույթն անջատված է</string>
   <string name="go_to_web">Անցնել դիտարկիչ</string>
   <string name="got_it">Եղավ</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">Զրոյացնե՞լ հյուրի աշխատաշրջանը</string>
   <string name="guest_reset_guest_confirm_button">Զրոյացնել</string>
   <string name="guest_resetting">Հյուրի աշխատաշրջանը վերակայվում է…</string>
+  <string name="handle_invocation_prompt">Մատը սահեցրեք և խոսեք</string>
   <string name="handle_text">Նշիչ</string>
   <string name="headset">Ականջակալ</string>
   <string name="hearing_devices_preset_label">Կարգավորումների հավաքածու</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">Հեռախոսը տաքանում է</string>
   <string name="home_controls_dream_description">Տան կառավարման տարրերը դարձրեք էկրանապահ</string>
   <string name="home_controls_dream_label">Տան կառավարման տարրեր</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Հասանելի է առնվազն մեկ սարք կամ սարքի վահանակ</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Home հավելվածի դյուրանցումն ավելացնելու համար համոզվեք, որ հավելվածը տեղադրված է</string>
   <string name="hub_mode_add_widget_button_text">Ավելացնել վիջեթ</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">Ընթացքում է</string>
   <string name="inattentive_sleep_warning_message">Սարքը շուտով կանջատվի: Սեղմեք՝ միացրած թողնելու համար:</string>
   <string name="inattentive_sleep_warning_title">Սպասման ռեժիմ</string>
+  <string name="incompatible_charging_learn_more">Իմանալ ավելին</string>
+  <string name="incompatible_charging_notify_des">Ձեր հեռախոսը կարող է դանդաղ լիցքավորվել կամ ընդհանրապես չլիցքավորվել։ Արագ լիցքավորման համար օգտագործեք խորհուրդ տրվող մալուխը և ադապտերը։</string>
+  <string name="incompatible_charging_notify_title">Ստուգեք լիցքավորիչը</string>
   <string name="indeterminate">Մասնակի նշված</string>
   <string name="inline_done_button">Փակել</string>
   <string name="inline_ok_button">Կիրառել</string>
   <string name="inline_turn_off_notifications">Անջատել ծանուցումները</string>
   <string name="input_switch_input_language_next">Անցնել հաջորդ լեզվին</string>
   <string name="input_switch_input_language_previous">Անցնել նախորդ լեզվին</string>
+  <string name="install_app">Տեղադրել հավելվածը</string>
   <string name="install_dialer_on_work_profile_action">Տեղադրել հեռախոսի աշխատանքային հավելված</string>
   <string name="install_type_instant">Ակնթարթային հավելված</string>
   <string name="instant_apps">Ակնթարթային հավելվածներ</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">%1$s հավելվածն աշխատում է</string>
   <string name="interruption_level_none">Կատարյալ լռություն</string>
   <string name="interruption_level_priority">Միայն կարևորները</string>
-  <string name="invalid_charger_text">Օգտագործեք սարքի լիցքավորիչը</string>
-  <string name="invalid_charger_title">Սարքը հնարավոր չէ լիցքավորել USB-ի միջոցով</string>
   <string name="issuerecord_background_processing_label">Մշակում ենք տեսագրությունը</string>
   <string name="issuerecord_ongoing_screen_only">Տեսագրում ենք խնդիրը</string>
   <string name="issuerecord_save_title">Տեսագրությունը պահվեց</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">Սարքը կողպվել է
 Չհաջողվեց իսկորոշել</string>
   <string name="keyguard_indication_charging_time">%2$s • Լիցքավորում • Մնացել է %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Լիցքավորումը կավարտվի %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Լիցքավորում • Մնացել է %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Ամբողջովին կլիցքավորվի մինչև %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Արագ լիցքավորում • Մնացել է %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Արագ լիցքավորում • Ամբողջովին կլիցքավորվի մինչև %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Լիցքավորումն ավարտված է</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Դանդաղ լիցքավորում • Մնացել է %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Ամբողջովին կլիցքավորվի մինչև %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Ամբողջովին կլիցքավորվի մինչև %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Անլար լիցքավորում • Մնացել է %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Ապակողպվում է TrustAgent-ի միջոցով</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Ամբողջովին կլիցքավորվի մինչև %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Հետաձգված ապակողպում</string>
   <string name="keyguard_missing_sim_message_short">SIM քարտ չկա</string>
   <string name="keyguard_network_locked_message">Ցանցը կողպված է</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Անվավեր SIM քարտ։</string>
   <string name="keyguard_plugged_in">%s • Լիցքավորում</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Արագ լիցքավորում</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Արագ լիցքավորում</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Լիցքավորումը դադարեցվել է՝ մարտկոցը պաշտպանելու համար</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Դանդաղ լիցքավորում</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Լիցքավորում</string>
   <string name="keyguard_plugged_in_dock">%s • Լիցքավորում</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Լիցքավորում</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Ստուգեք լիցքավորիչը</string>
+  <string name="keyguard_plugged_in_v2">%s • Լիցքավորում</string>
   <string name="keyguard_plugged_in_wireless">%s • Անլար լիցքավորում</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Լիցքավորում</string>
   <string name="keyguard_retry">Սահեցրեք վերև՝ նորից փորձելու համար</string>
   <string name="keyguard_sim_error_message_short">Սխալ քարտ</string>
   <string name="keyguard_sim_locked_message">SIM քարտը կողպված է։</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">PIN կոդերը չեն համընկնում</string>
   <string name="kg_invalid_sim_pin_hint">Մուտքագրեք 4-8 թվանշան պարունակող PIN կոդ։</string>
   <string name="kg_invalid_sim_puk_hint">PUK կոդը պետք է առնվազն 8 թվանշան պարունակի։</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Մուտքագրեք SIM քարտի PIN կոդը։ Մնացել է # փորձ, որից հետո պետք է դիմեք ձեր օպերատորին՝ սարքն ապակողպելու համար։}one{Մուտքագրեք SIM քարտի PIN կոդը։ Մնացել է # փորձ։}other{Մուտքագրեք SIM քարտի PIN կոդը։ Մնացել է # փորձ։}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM քարտն այժմ անջատված է։ Շարունակելու համար մուտքագրեք PUK կոդը։ Մնացել է # փորձ, որից հետո SIM քարտն այլևս հնարավոր չի լինի օգտագործել։ Մանրամասների համար դիմեք օպերատորին։}one{SIM քարտն այժմ անջատված է։ Շարունակելու համար մուտքագրեք PUK կոդը։ Մնացել է # փորձ, որից հետո SIM քարտն այլևս հնարավոր չի լինի օգտագործել։ Մանրամասների համար դիմեք օպերատորին։}other{SIM քարտն այժմ անջատված է։ Շարունակելու համար մուտքագրեք PUK կոդը։ Մնացել է # փորձ, որից հետո SIM քարտն այլևս հնարավոր չի լինի օգտագործել։ Մանրամասների համար դիմեք օպերատորին։}}</string>
   <string name="kg_password_pin_failed">SIM PIN կոդի գործողությունը ձախողվեց:</string>
   <string name="kg_password_puk_failed">SIM PUK կոդի գործողությունը ձախողվեց:</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">Մուտքագրեք SIM քարտի PIN կոդը «%1$s»-ի համար:</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM քարտն ապակողպվում է…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Նորից փորձեք # վայրկյանից։}one{Նորից փորձեք # վայրկյանից։}other{Նորից փորձեք # վայրկյանից։}}</string>
-  <string name="kg_trust_agent_disabled">Trust agent-ն անհասանելի է</string>
+  <string name="kg_trust_agent_disabled">Հետաձգված ապակողպումն անհասանելի է</string>
   <string name="kg_unlock_with_password_or_fp">Ապակողպեք գաղտնաբառով/մատնահետքով</string>
   <string name="kg_unlock_with_pattern_or_fp">Ապակողպեք նախշով/մատնահետքով</string>
   <string name="kg_unlock_with_pin_or_fp">Ապակողպեք PIN-ով/մատնահետքով</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">Իմանալ ավելին</string>
   <string name="log_access_confirmation_learn_more_at">Իմացեք ավելին %s էջում</string>
   <string name="log_access_confirmation_title">Հասանելի դարձնե՞լ %s հավելվածին սարքի բոլոր մատյանները</string>
+  <string name="low_battery_label">Մարտկոցի լիցքը քիչ է</string>
+  <string name="low_battery_notification_text">Միացրեք մարտկոցի ստանդարտ տնտեսումը՝ դրա աշխատաժամանակը երկարացնելու համար</string>
+  <string name="low_battery_notification_text_ebs">Միացրեք մարտկոցի առավելագույն տնտեսումը՝ դրա աշխատաժամանակը երկարացնելու համար</string>
+  <string name="low_battery_notification_title">Մնացել է %s մարտկոցի լիցք</string>
   <string name="m3c_search_bar_search">Որոնում</string>
   <string name="m3c_suggestions_available">Առաջարկները հասանելի են ստորև</string>
   <string name="magnification_close_settings_click_label">Փակել խոշորացման կարգավորումները</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Կանգնեցնել</string>
   <string name="media_output_end_session_dialog_summary">Կանգնեցրեք ընդհանուր աշխատաշրջանը՝ մուլտիմեդիա բովանդակությունն այլ սարք տեղափոխելու համար</string>
-  <string name="media_output_first_broadcast_title">Ինչպես է աշխատում հեռարձակումը</string>
-  <string name="media_output_first_notify_broadcast_message">Ձեր մոտակայքում գտնվող՝ համատեղելի Bluetooth սարքերով մարդիկ կարող են լսել մեդիա ֆայլերը, որոնք դուք հեռարձակում եք։</string>
   <string name="media_output_group_title_speakers_and_displays">Բարձրախոսներ և էկրաններ</string>
   <string name="media_output_group_title_suggested_device">Առաջարկվող սարքեր</string>
   <string name="media_output_label_title">%s. նվագարկվում է</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Երբ դուք տեսագրում եք որևէ հավելվածի էկրանը, Android-ին հասանելի է լինում այն ամենը, ինչ ցուցադրվում կամ նվագարկվում է այդ հավելվածում։ Ուստի ուշադիր եղեք այնպիսի բաների հետ, ինչպիսիք են գաղտնաբառերը, վճարային տվյալները, հաղորդագրությունները, լուսանկարները, աուդիո և վիդեո բովանդակությունը։</string>
   <string name="media_projection_sys_service_dialog_title">Սկսե՞լ տեսագրումը կամ հեռարձակումը</string>
   <string name="media_projection_sys_service_dialog_warning">Տեսագրման և հեռարձակման ընթացքում ծառայությունների մատակարարին հասանելի կլինեն ձեր սարքի էկրանին ցուցադրվող տեղեկությունները և ձեր սարքով նվագարկվող նյութերը։ Սա ներառում է այնպիսի տեղեկություններ, ինչպիսիք են, օրինակ, գաղտնաբառերը, վճարային տվյալները, լուսանկարները, հաղորդագրությունները և նվագարկվող աուդիո ֆայլերը։</string>
-  <string name="media_projection_task_switcher_action_back">Վերադառնալ</string>
-  <string name="media_projection_task_switcher_action_switch">Փոխարենը կիսվել այս հավելվածով</string>
-  <string name="media_projection_task_switcher_text">Երբ անցում եք կատարում մեկ այլ հավելվածի, ընթացիկ հավելվածի համատեղ օգտագործումը դադարեցվում է</string>
   <string name="media_seamless_other_device">Այլ սարք</string>
   <string name="media_transfer_default_device_name">Միացված սարք</string>
   <string name="media_transfer_dock_speaker_device_name">Դոկ-կայանով բարձրախոս</string>
@@ -1138,7 +1177,7 @@
   <string name="pip_skip_to_prev">Վերադառնալ նախորդին</string>
   <string name="popup_on_dismiss_cta_tile_text">Երկար սեղմեք՝ վիջեթները հարմարեցնելու համար</string>
   <string name="power_discharge_by_only_short">Մինչև %1$s</string>
-  <string name="preference_summary_default_combination">%1$s/%2$s</string>
+  <string name="preference_summary_default_combination">%1$s / %2$s</string>
   <string name="priority_conversations">Կարևոր զրույցներ</string>
   <string name="priority_mode_dream_overlay_content_description">Չանհանգստացնել</string>
   <string name="privacy_dialog_active_app_usage">Օգտագործվում է %1$s-ի կողմից</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">Ավելի մեծ լուծաչափի համար շրջեք հեռախոսը</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Փոխե՞լ էկրանը</string>
   <string name="recent_conversations">Վերջին հաղորդագրությունները</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">պատկեր է ուղարկվել</string>
   <string name="remove_from_settings">Հեռացնել կարգավորումներից</string>
   <string name="remove_from_settings_prompt">Հեռացնե՞լ Համակարգի ՕՄ-ի կարգավորիչը կարգավորումներից և չօգտվել այլևս նրա գործառույթներից:</string>
   <string name="require_unlock_for_nfc">Ապակողպեք՝ NFC-ն օգտագործելու համար</string>
   <string name="restart_button_description">Հպեք՝ հավելվածը վերագործարկելու և ավելի հարմար տեսք ընտրելու համար</string>
   <string name="retry_face">Նորից փորձեք դեմքով իսկորոշումը</string>
+  <string name="reverse_charging_device_name_text">Այլ Pixel սարք</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s-ը փոխանցում է իր լիցքը (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Մարտկոցի լիցքի փոխանցումը միացված է</string>
+  <string name="reverse_charging_title">Մարտկոցի լիցքի փոխանցում</string>
   <string name="right_icon">Աջ պատկերակ</string>
   <string name="right_keycode">Աջ ստեղնային կոդ</string>
   <string name="right_nav_bar_button_type">Լրացուցիչ աջ կոճակի տեսակ</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">Հպեք՝ մարտկոցի և թրաֆիկի մանրամասները տեսնելու համար</string>
   <string name="running_foreground_services_title">Ֆոնային ռեժիմում աշխատող հավելվածներ</string>
-  <string name="satellite_connected_carrier_text">Satellite SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel Satellite SOS</string>
   <string name="save">Պահել</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Չեղարկել</string>
+  <string name="saver_confirmation_dialog_subtitle">Ընտրեք ռեժիմ</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Ներառում է վերը թվարկված բոլոր փոփոխությունները։ Ինչպես նաև դադարեցնում է երկրորդական հավելվածների աշխատանքը և անջատում դրանց ծանուցումները։</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Սահմանափակում է վիզուալ էֆեկտները և աշխատանքը ֆոնային ռեժիմում։ Միացնում է մուգ թեման, եթե այն դեռ միացված չէ։</string>
+  <string name="saver_confirmation_dialog_title">Բարի գալուստ մարտկոցի տնտեսման ռեժիմ</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Մարտկոցի առավելագույն տնտեսում</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Մարտկոցի տնտեսման ստանդարտ ռեժիմ</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Էկրանի տեսագրումն անջատված է սարքի կանոնների համաձայն</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Արգելափակվել է ձեր ՏՏ ադմինիստրատորի կողմից</string>
   <string name="screen_pinning_can_open_other_apps">Ամրացված հավելվածը կարող է այլ հավելվածներ գործարկել։</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">Հավելվածն ապամրացնելու համար հպեք և պահեք «Հետ» և «Համատեսք» կոճակները</string>
   <string name="screen_pinning_toast_gesture_nav">Հավելվածն ապամրացնելու համար մատը սահեցրեք վերև և պահեք</string>
   <string name="screen_pinning_toast_recents_invisible">Հավելվածն ապամրացնելու համար հպեք և պահեք «Հետ» և «Գլխավոր էկրան» կոճակները</string>
+  <string name="screen_protector_absent_message">Եթե անջատեք էկրանի պաշտպանիչի ռեժիմը, հպէկրանի զգայունության մակարդակը կբարձրանա էկրանի պաշտպանիչ չօգտագործելու դեպքում։</string>
+  <string name="screen_protector_disable_notification">Անջատել ծանուցումը</string>
+  <string name="screen_protector_go_to_settings">Անցնել կարգավորումներ</string>
+  <string name="screen_protector_got_it">Եղավ</string>
+  <string name="screen_protector_mode_title">Էկրանի պաշտպանիչի ռեժիմ</string>
+  <string name="screen_protector_present_message">Էկրանի պաշտպանիչի ռեժիմում հպէկրանի զգայունությունը մեծանում է էկրանի պաշտպանիչ օգտագործելու դեպքում։</string>
   <string name="screen_share_permission_app_selector_title">Հավելվածի էկրանի ցուցադրում կամ տեսագրում</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Ամբողջ էկրանը</string>
   <string name="screen_share_permission_dialog_option_single_app">Մեկ հավելված</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">Սքրինշոթը պահվում է աշխատանքային պրոֆիլում…</string>
   <string name="screenshot_scroll_label">Մեծացնել սքրինշոթի տարածքը</string>
   <string name="screenshot_share_description">Ուղարկել սքրինշոթ</string>
-  <string name="screenshot_share_label">Կիսվել</string>
   <string name="screenshot_text">Սքրինշոթ</string>
   <string name="screenshot_top_boundary_pct">Վերևի եզրագիծը՝ %1$d տոկոս</string>
+  <string name="screenshot_view_description">Դիտել սքրինշոթը</string>
   <string name="screenshot_work_profile_notification">Սքրինշոթը պահվեց %1$s-ի աշխատանքային պրոֆիլում</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Մատնահետքերի սկաները սնուցման կոճակի վրա է։ Այն հարթ կոճակ է ձայնի ուժգնության ուռուցիկ կոճակի կողքին՝ հեռախոսի կողային մասում։</string>
   <string name="see_all_bluetooth_devices">Տեսնել բոլորը</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">Կարգավորեք նշումների կանխադրված հավելված Կարգավորումներում</string>
   <string name="settings_label">Կարգավորումներ</string>
   <string name="settingslib_learn_more_text">Իմանալ ավելին</string>
+  <string name="severe_battery_notification_switch_text">Անցնե՞լ մարտկոցի առավելագույն տնտեսմանը։ 
+
+Բոլոր ոչ կարևոր հավելվածների աշխատանքը և ծանուցումները կդադարեցվեն։</string>
+  <string name="severe_battery_notification_text">Միացրեք մարտկոցի առավելագույն տնտեսումը։ Բոլոր ոչ կարևոր հավելվածների աշխատանքը կդադարեցվի</string>
+  <string name="severe_battery_notification_title">Մնացել է մարտկոցի %s լիցք</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Անցնել</string>
   <string name="share_to_app_stop_dialog_button">Դադարեցնել էկրանի ցուցադրումը</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Դուք կկանգնեցնեք &lt;b&gt;%1$s&lt;/b&gt; հավելվածից բովանդակության փոխանցումը</string>
   <string name="share_to_app_stop_dialog_title">Դադարեցնե՞լ էկրանի ցուցադրումը</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- Կարող է կարդալ տեղեկություններ %1$s հավելվածից</string>
   <string name="slice_permission_text_2">- Կարող է կատարել գործողություններ %1$s հավելվածում</string>
   <string name="slice_permission_title">Թույլատրե՞լ %1$s հավելվածին ցուցադրել հատվածներ %2$s հավելվածից</string>
+  <string name="smartspace_content_desc">Հակիրճ գլխավորի մասին</string>
+  <string name="smartspace_flight_qr_code">QR կոդ</string>
+  <string name="smartspace_role_desc">Դիտել</string>
   <string name="snoozeHourOptions">{count,plural, =1{# ժամ}=2{# ժամ}one{# ժամ}other{# ժամ}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# րոպե}one{# րոպե}other{# րոպե}}</string>
   <string name="snooze_undo">Հետարկել</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">Դանդաղ</string>
   <string name="speed_label_very_fast">Շատ արագ</string>
   <string name="split_screen_text">Տրոհված էկրան</string>
+  <string name="squeeze_invocation_prompt">Սեղմեք և խոսեք</string>
+  <string name="standard_battery_saver_text">Ստանդարտ</string>
   <string name="start_dreams">Էկրանապահ</string>
   <string name="state_empty">Դատարկ</string>
   <string name="state_off">Անջատված է</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">Ներդիր</string>
   <string name="tap_a_network_to_connect">Հպեք ցանցին՝ միանալու համար</string>
   <string name="tap_again">Նորից հպեք</string>
+  <string name="temp_defender_notify_des">Լիցքավորումը կվերսկսվի, երբ հեռախոսի ջերմաստիճանը վերադառնա նորմալ ցուցանիշի</string>
+  <string name="temp_defender_notify_title">Լիցքավորումը դադարեցվել է՝ մարտկոցը պաշտպանելու համար</string>
   <string name="template_percent">%1$d տոկոս։</string>
   <string name="thermal">Ջերմատեսիլ</string>
   <string name="thermal_shutdown_dialog_help_text">Քայլեր գերտաքացման ահազանգի դեպքում</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">Արագ բացեք հավելվածների ձեր սիրելի վիջեթները առանց ապակողպելու պլանշետը։</string>
   <string name="title_usb_accessory">USB լրասարք</string>
   <string name="to_switch_networks_disconnect_ethernet">Մի ցանցից մյուսին անցնելու համար անջատեք Ethernet-ը</string>
+  <string name="too_hot_label">Pixel-ը գերտաքացած է</string>
   <string name="touch_filtered_warning">Քանի որ ներածումն արգելափակված է ինչ-որ հավելվածի կողմից, Կարգավորումները չեն կարող հաստատել ձեր պատասխանը:</string>
   <string name="touchpad_tutorial_action_key_button">Գործողության ստեղն</string>
   <string name="touchpad_tutorial_back_gesture_button">«Հետ» ժեստ</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">Ընտրացանկ</string>
   <string name="tuner_minus">Մինուս</string>
   <string name="tuner_other_apps">Այլ հավելվածներ</string>
+  <string name="tuner_persistent_warning">Այս փորձնական գործառույթները կարող են հետագա թողարկումների մեջ փոփոխվել, խափանվել կամ ընդհանրապես չհայտնվել: Եթե շարունակում եք, զգուշացեք:</string>
   <string name="tuner_plus">Պլյուս</string>
   <string name="tuner_right">Աջ</string>
   <string name="tuner_time">Ժամ</string>
+  <string name="tuner_warning">Համակարգի ՕՄ-ի կարգավորիչը հնարավորություն է տալիս հարմարեցնել Android-ի օգտատիրոջ միջերեսը: Այս փորձնական գործառույթները կարող են հետագա թողարկումների մեջ փոփոխվել, խափանվել կամ ընդհանրապես չհայտնվել: Եթե շարունակում եք, զգուշացեք:</string>
+  <string name="tuner_warning_title">Զվարճանք մեկ՝ որոշակի մարդու համար</string>
   <string name="turn_off_airplane_mode">Անջատել ավիառեժիմը</string>
   <string name="turn_on_bluetooth">Միացնել Bluetooth-ը</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Bluetooth-ն օգտագործում են, օրինակ, Quick Share և «Գտնել իմ սարքը» գործառույթները</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth-ը կմիանա վաղն առավոտյան</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Ավտոմատ միացնել վաղը</string>
   <string name="turn_on_wifi">Wi‑Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Հեռուստացույցի կանխադրված կարգավորումներ</string>
   <string name="two_weeks_timestamp">2 շաբաթ առաջ</string>
   <string name="unknown">Անհայտ</string>
   <string name="unlock_to_see_notif_text">Ապակողպեք՝ տեսնելու հին ծանուցումները</string>
@@ -1552,7 +1624,9 @@
   <string name="volume_odi_captions_hint_enable">միացնել</string>
   <string name="volume_odi_captions_tip">Ավտոմատ ավելացնել ենթագրեր</string>
   <string name="volume_panel_captioning_title">Կենդանի ենթագրեր</string>
+  <string name="volume_panel_clear_calling_title">Մաքուր ձայնով զանգեր</string>
   <string name="volume_panel_collapsed_sliders">Ձայնի ուժգնության սահիչները ծալված են</string>
+  <string name="volume_panel_device_settings_title">Սարքի կարգավորումներ</string>
   <string name="volume_panel_dialog_settings_button">Կարգավորումներ</string>
   <string name="volume_panel_enter_media_output_settings">Բացել նվագարկման կարգավորումները</string>
   <string name="volume_panel_expanded_sliders">Ձայնի ուժգնության սահիչները ծավալված են</string>
@@ -1667,6 +1741,9 @@ Wi‑Fi-ի հասցեն (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Անհայտ</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Անսահմանափակ թրաֆիկ</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi-ն ավտոմատ չի միանա</string>
+  <string name="wireless_charging_label">Անլար լիցքավորում</string>
+  <string name="wireless_charging_notification_text">Անլար լիցքավորման ժամանակ կարող է ավելի շատ էներգիա ծախսվել, քան լարով լիցքավորման ժամանակ։ Էլեկտրաէներգիա և ժամանակ խնայելու համար օգտագործեք լարով լիցքավորիչ։</string>
+  <string name="wireless_charging_notification_title">Անլար լիցքավորում</string>
   <string name="work_challenge_emergency_button_text">Արտակարգ իրավիճակ</string>
   <string name="work_mode_off_title">Վերսկսե՞լ աշխ. հավելվածները</string>
   <string name="work_mode_turn_on">Վերսկսել</string>

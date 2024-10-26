@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/ui/ControlsUiControllerImpl$startRemovingApp$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;
@@ -96,7 +96,7 @@
     sget v6, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->$r8$clinit:I
 
     .line 42
-    const v6, 0x7f1504be    # @style/Theme.SystemUI.Dialog
+    const v6, 0x7f1404c6    # @style/Theme.SystemUI.Dialog
 
     .line 44
     invoke-virtual {v0, v5, v2, v6}, Lcom/android/systemui/statusbar/phone/SystemUIDialog$Factory;->create(Lcom/android/systemui/statusbar/phone/DialogDelegate;Landroid/content/Context;I)Lcom/android/systemui/statusbar/phone/SystemUIDialog;
@@ -105,7 +105,7 @@
     move-result-object v0
 
     .line 50
-    const v5, 0x7f1402e6    # @string/controls_panel_remove_app_authorization 'Remove controls for %s?'
+    const v5, 0x7f130302    # @string/controls_panel_remove_app_authorization 'Remove controls for %s?'
 
     .line 51
     filled-new-array {v1}, [Ljava/lang/Object;
@@ -138,13 +138,13 @@
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 74
-    const v2, 0x7f1402b7    # @string/controls_dialog_remove 'Remove'
+    const v2, 0x7f1302d3    # @string/controls_dialog_remove 'Remove'
 
     .line 77
     invoke-virtual {v0, v2, v4}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
 
     .line 80
-    const v2, 0x7f140253    # @string/cancel 'Cancel'
+    const v2, 0x7f13025a    # @string/cancel 'Cancel'
 
     .line 83
     invoke-virtual {v0, v2, v4, v1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;Z)V

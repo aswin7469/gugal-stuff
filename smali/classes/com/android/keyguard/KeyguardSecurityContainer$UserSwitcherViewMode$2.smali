@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardSecurityContainer$UserSwitcherViewMode$2;
 .super Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -55,7 +55,7 @@
     move-result-object p2
 
     .line 18
-    const v1, 0x7f0e00ed    # @layout/keyguard_bouncer_user_switcher_item 'res/layout/keyguard_bouncer_user_switcher_item.xml'
+    const v1, 0x7f0d00f8    # @layout/keyguard_bouncer_user_switcher_item 'res/layout/keyguard_bouncer_user_switcher_item.xml'
 
     .line 19
     invoke-virtual {p2, v1, p3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -135,7 +135,7 @@
     if-eqz v4, :cond_2
 
     .line 70
-    const v4, 0x7f0806df    # @drawable/ic_avatar_guest_user 'res/drawable/ic_avatar_guest_user.xml'
+    const v4, 0x7f0806f0    # @drawable/ic_avatar_guest_user 'res/drawable/ic_avatar_guest_user.xml'
 
     .line 72
     invoke-virtual {p3, v4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -177,7 +177,7 @@
     move-result-object v5
 
     .line 97
-    const v6, 0x7f060100    # @color/kg_user_switcher_restricted_avatar_icon_color '@color/GM2_grey_600'
+    const v6, 0x7f06010a    # @color/kg_user_switcher_restricted_avatar_icon_color '@color/GM2_grey_600'
 
     .line 98
     invoke-virtual {p3}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
@@ -196,7 +196,7 @@
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
     .line 109
-    const v5, 0x7f080ba5    # @drawable/user_avatar_bg 'res/drawable/user_avatar_bg.xml'
+    const v5, 0x7f080bee    # @drawable/user_avatar_bg 'res/drawable/user_avatar_bg.xml'
 
     .line 112
     invoke-virtual {p3, v5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -248,7 +248,7 @@
     move-result-object v4
 
     .line 149
-    const v5, 0x7f0700f4    # @dimen/bouncer_user_switcher_item_icon_size '28.0dp'
+    const v5, 0x7f0700fa    # @dimen/bouncer_user_switcher_item_icon_size '28.0dp'
 
     .line 150
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -263,7 +263,7 @@
     move-result-object v5
 
     .line 160
-    const v6, 0x7f0700f3    # @dimen/bouncer_user_switcher_item_icon_padding '12.0dp'
+    const v6, 0x7f0700f9    # @dimen/bouncer_user_switcher_item_icon_padding '12.0dp'
 
     .line 161
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -296,7 +296,7 @@
     move-result-object p3
 
     .line 185
-    const v4, 0x7f08062a    # @drawable/bouncer_user_switcher_item_selected_bg 'res/drawable/bouncer_user_switcher_item_selected_bg.xml'
+    const v4, 0x7f08062b    # @drawable/bouncer_user_switcher_item_selected_bg 'res/drawable/bouncer_user_switcher_item_selected_bg.xml'
 
     .line 186
     invoke-virtual {p3, v4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;

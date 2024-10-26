@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/layout/PaddingValuesModifier;
 .super Landroidx/compose/ui/Modifier$Node;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/node/LayoutModifierNode;
@@ -207,7 +207,7 @@
     add-int/2addr v0, v1
 
     .line 122
-    invoke-static {v0, p3, p4}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainWidth-K40F9xA(IJ)I
+    invoke-static {p3, p4, v0}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainWidth-K40F9xA(JI)I
 
     .line 123
     move-result v0
@@ -219,7 +219,7 @@
     add-int/2addr v1, v2
 
     .line 129
-    invoke-static {v1, p3, p4}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainHeight-K40F9xA(IJ)I
+    invoke-static {p3, p4, v1}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainHeight-K40F9xA(JI)I
 
     .line 130
     move-result p3

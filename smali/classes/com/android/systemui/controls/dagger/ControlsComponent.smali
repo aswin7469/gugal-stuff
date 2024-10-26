@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/dagger/ControlsComponent;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -10,7 +10,7 @@
 
 .field public final controlsListingController:Ljava/util/Optional;
 
-.field public final controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfigurationImpl;
+.field public final controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;
 
 .field public final controlsUiController:Ljava/util/Optional;
 
@@ -91,10 +91,10 @@
     move-result-object p1
 
     .line 45
-    check-cast p1, Lcom/android/systemui/controls/controller/ControlsTileResourceConfigurationImpl;
+    check-cast p1, Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;
 
     .line 46
-    iput-object p1, p0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfigurationImpl;
+    iput-object p1, p0, Lcom/android/systemui/controls/dagger/ControlsComponent;->controlsTileResourceConfiguration:Lcom/android/systemui/controls/controller/ControlsTileResourceConfiguration;
 
     .line 48
     return-void

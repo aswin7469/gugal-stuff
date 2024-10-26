@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/CaptionWindowDecorViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/windowdecor/WindowDecorViewModel;
@@ -121,7 +121,7 @@
     check-cast p1, Lcom/android/wm/shell/windowdecor/WindowDecorLinearLayout;
 
     .line 15
-    const v0, 0x7f0b01a7    # @id/caption
+    const v0, 0x7f0a01ad    # @id/caption
 
     .line 17
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -166,14 +166,14 @@
     if-gez p0, :cond_1
 
     .line 46
-    const p0, 0x7f0600a0    # @color/decor_button_light_color 'res/color/decor_button_light_color.xml'
+    const p0, 0x7f0600a1    # @color/decor_button_light_color 'res/color/decor_button_light_color.xml'
 
     .line 48
     goto :goto_0
 
     .line 51
     :cond_1
-    const p0, 0x7f06009f    # @color/decor_button_dark_color 'res/color/decor_button_dark_color.xml'
+    const p0, 0x7f0600a0    # @color/decor_button_dark_color 'res/color/decor_button_dark_color.xml'
 
     .line 52
     :goto_0
@@ -192,7 +192,7 @@
     move-result-object p0
 
     .line 63
-    const v0, 0x7f0b00ef    # @id/back_button
+    const v0, 0x7f0a00f3    # @id/back_button
 
     .line 64
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -213,7 +213,7 @@
     invoke-virtual {v0, p0}, Landroid/graphics/drawable/VectorDrawable;->setTintList(Landroid/content/res/ColorStateList;)V
 
     .line 77
-    const v0, 0x7f0b04d4    # @id/minimize_window
+    const v0, 0x7f0a04f8    # @id/minimize_window
 
     .line 80
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -234,7 +234,7 @@
     invoke-virtual {v0, p0}, Landroid/graphics/drawable/VectorDrawable;->setTintList(Landroid/content/res/ColorStateList;)V
 
     .line 93
-    const v0, 0x7f0b049b    # @id/maximize_window
+    const v0, 0x7f0a04bf    # @id/maximize_window
 
     .line 96
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -255,7 +255,7 @@
     invoke-virtual {v0, p0}, Landroid/graphics/drawable/VectorDrawable;->setTintList(Landroid/content/res/ColorStateList;)V
 
     .line 109
-    const v0, 0x7f0b01df    # @id/close_window
+    const v0, 0x7f0a01ea    # @id/close_window
 
     .line 112
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

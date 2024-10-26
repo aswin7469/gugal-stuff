@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">தேர்ந்தெடுத்த விட்ஜெட்டைக் காட்சிப்படுத்தும்</string>
   <string name="accessibility_action_label_remove_widget">விட்ஜெட்டை அகற்றும்</string>
   <string name="accessibility_action_label_select_widget">விட்ஜெட்டைத் தேர்ந்தெடுக்கும்</string>
-  <string name="accessibility_action_open_communal_hub">பூட்டுத் திரையில் விட்ஜெட்கள்</string>
   <string name="accessibility_action_pip_resize">அளவு மாற்று</string>
   <string name="accessibility_action_pip_stash">Stash</string>
   <string name="accessibility_action_pip_unstash">Unstash</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">ஒற்றைக் கைப் பயன்முறையில் இருந்து வெளியேறும்</string>
   <string name="accessibility_airplane_mode">விமானப் பயன்முறை.</string>
   <string name="accessibility_allow_diagonal_scrolling">குறுக்கே ஸ்க்ரோல் செய்வதை அனுமதி</string>
+  <string name="accessibility_assistant_poodle">குரல் தேடல்</string>
   <string name="accessibility_authenticate_hint">அங்கீகரி</string>
   <string name="accessibility_back">பின்செல்</string>
   <string name="accessibility_banner_message_dismiss">மூடும்</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">சாதனத்தைத் திற</string>
   <string name="accessibility_ethernet_connected">ஈதர்நெட்.</string>
   <string name="accessibility_ethernet_disconnected">ஈத்தர்நெட் துண்டிக்கப்பட்டது.</string>
-  <string name="accessibility_fingerprint_bouncer">அங்கீகாரம் தேவை. கைரேகை சென்சாரைத் தொட்டு அங்கீகரியுங்கள்.</string>
   <string name="accessibility_fingerprint_label">கைரேகை சென்சார்</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">நிலைமாற்று</string>
   <string name="accessibility_floating_button_action_edit">திருத்தம் செய்யும்</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">மெனு</string>
   <string name="accessibility_multi_user_list_switcher">கீழ் இழுக்கும் மெனு</string>
   <string name="accessibility_multi_user_switch_switcher">பயனரை மாற்று</string>
+  <string name="accessibility_next_alarm">அடுத்த அலாரம் %s மணிக்கு ஒலிக்கும்</string>
   <string name="accessibility_no_calling">அழைப்பை மேற்கொள்ள முடியவில்லை.</string>
   <string name="accessibility_no_phone">சிக்னல் இல்லை.</string>
   <string name="accessibility_no_wifi">வைஃபை துண்டிக்கப்பட்டது.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">உருவப்பட திசையமைப்பில் திசை பூட்டப்பட்டுள்ளது.</string>
   <string name="accessibility_send_smart_reply">அனுப்பு</string>
   <string name="accessibility_sensors_off_active">’சென்சார்கள் ஆஃப்’ செயலில் உள்ளது</string>
+  <string name="accessibility_settings_gear">Pixel Stand அமைப்புகள்</string>
   <string name="accessibility_side_fingerprint_indicator_label">கைரேகை சென்சாரைத் தொடவும். இது மொபைலின் பக்கவாட்டில் உள்ள சிறிய பட்டன் ஆகும்</string>
+  <string name="accessibility_smartspace_page">பக்கம்: %1$d/%2$d</string>
   <string name="accessibility_split_bottom">கீழ்புறமாகப் பிரிக்கும்</string>
   <string name="accessibility_split_left">இடதுபுறமாகப் பிரிக்கும்</string>
   <string name="accessibility_split_right">வலதுபுறமாகப் பிரிக்கும்</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">வைஃபை சிக்னல்: மூன்று கோடுகள்.</string>
   <string name="accessibility_wifi_two_bars">வைஃபை சிக்னல்: இரண்டு கோடுகள்.</string>
   <string name="accesssibility_keyguard_retry">முகம் காட்டித் திறத்தலை மீண்டும் முயல மேலே ஸ்வைப் செய்யவும்</string>
+  <string name="adaptive_charging_notify_des">%1$sக்கு பேட்டரி முழுமையாகச் சார்ஜாகிவிடும். பேட்டரி ஆயுட்காலத்தை நீட்டிக்க சீராகச் சார்ஜ் செய்யப்படுகிறது.</string>
+  <string name="adaptive_charging_notify_title">சூழலுக்கேற்பச் சார்ஜ் செய்தல் அம்சம் இயக்கப்பட்டுள்ளது</string>
+  <string name="adaptive_charging_notify_turn_off_once">ஒருமுறை முடக்கு</string>
+  <string name="adaptive_charging_time_estimate">%1$s • அடாப்டிவ் சார்ஜிங் • %2$sக்கு முழுமையாகச் சார்ஜாகிவிடும்</string>
   <string name="add">சேர்</string>
   <string name="add_guest_failed">புதிய விருந்தினரை உருவாக்க முடியவில்லை</string>
   <string name="airplane_mode">விமானப் பயன்முறை</string>
-  <string name="alarm_template">%1$s மணிக்கு</string>
-  <string name="alarm_template_far">%1$s மணிக்கு</string>
+  <string name="alarm_template">அலாரம்: %1$s</string>
+  <string name="alarm_template_far">அலாரம்: %1$s</string>
   <string name="all_network_unavailable">நெட்வொர்க்குகள் எதுவும் கிடைக்கவில்லை</string>
   <string name="always_use_accessory">%2$s இணைக்கப்பட்டிருக்கையில், %1$sஐ எப்போதும் திற</string>
   <string name="always_use_device">%2$s இணைக்கப்பட்டிருக்கையில், %1$sஐ எப்போதும் திற</string>
@@ -233,6 +239,7 @@
   <string name="app_info">ஆப்ஸ் தகவல்</string>
   <string name="app_label">சாதனத்தின் UI</string>
   <string name="assistant_attention_content_description">பயனர் கண்டறியப்பட்டுள்ளார்</string>
+  <string name="assistant_scrim_label">கவனிக்கிறது, ரத்து செய்யத் தட்டவும்</string>
   <string name="audio_sharing_description">ஆடியோ பகிரப்படுகிறது</string>
   <string name="audio_status">ஆடியோ கேட்கிறீர்கள்</string>
   <string name="auto_data_switch_dialog_negative_button">வேண்டாம்</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">பின்செல்லும்</string>
   <string name="battery">பேட்டரி</string>
   <string name="battery_detail_switch_title">பேட்டரி சேமிப்பு</string>
-  <string name="battery_low_description">%s பேட்டரி மீதமுள்ளது. பேட்டரி சேமிப்பான் அம்சம் டார்க் தீமை இயக்கும், அத்துடன் பின்னணிச் செயல்பாடுகளைக் கட்டுப்படுத்தி, அறிவிப்புகளைத் தாமதப்படுத்தும்.</string>
+  <string name="battery_health_notify_learn_more">மேலும் அறிக</string>
   <string name="battery_low_intro">பேட்டரி சேமிப்பான் அம்சம் டார்க் தீமை இயக்கும், அத்துடன் பின்னணிச் செயல்பாடுகளைக் கட்டுப்படுத்தி, அறிவிப்புகளைத் தாமதப்படுத்தும்.</string>
-  <string name="battery_low_title">பேட்டரி சேமிப்பானை இயக்கவா?</string>
   <string name="battery_saver_confirmation_ok">இயக்கு</string>
   <string name="battery_saver_confirmation_title">பேட்டரி சேமிப்பானை ஆன் செய்யவா?</string>
   <string name="battery_saver_confirmation_title_generic">பேட்டரி சேமிப்பான்- ஓர் அறிமுகம்</string>
-  <string name="battery_saver_dismiss_action">வேண்டாம்</string>
   <string name="battery_saver_start_action">இயக்கு</string>
   <string name="battery_state_unknown_notification_text">மேலும் தகவல்களுக்கு தட்டவும்</string>
   <string name="battery_state_unknown_notification_title">பேட்டரி அளவை அறிவதில் சிக்கல்</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">செயலிலுள்ளது. இடது பேட்டரி: %1$s, வலது பேட்டரி: %2$s.</string>
   <string name="bluetooth_active_battery_level_untethered_left">செயலில் உள்ளது. இடது: %1$s பேட்டரி.</string>
   <string name="bluetooth_active_battery_level_untethered_right">செயலில் உள்ளது. வலது: %1$s பேட்டரி.</string>
-  <string name="bluetooth_active_media_only_battery_level">செயலிலுள்ளது (மீடியா மட்டும்). %1$s பேட்டரி.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">செயலிலுள்ளது (மீடியா மட்டும்). இடது பேட்டரி: %1$s, வலது பேட்டரி: %2$s.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">செயலிலுள்ளது (மீடியா மட்டும்)</string>
   <string name="bluetooth_active_no_battery_level">செயலில் உள்ளது</string>
   <string name="bluetooth_battery_level">%1$s பேட்டரி</string>
-  <string name="bluetooth_battery_level_lea_support">இணைக்கப்பட்டுள்ளது (ஆடியோ பகிர்வை ஆதரிக்கிறது). %1$s பேட்டரி.</string>
   <string name="bluetooth_battery_level_untethered">இடது பேட்டரி: %1$s, வலது பேட்டரி: %2$s.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">இணைக்கப்பட்டுள்ளது (ஆடியோ பகிர்வை ஆதரிக்கிறது). இடது பேட்டரி: %1$s, வலது பேட்டரி: %2$s.</string>
   <string name="bluetooth_connected">%1$s சாதனம் இணைக்கப்பட்டது</string>
   <string name="bluetooth_connecting">இணைக்கிறது...</string>
   <string name="bluetooth_disconnected">தொடர்பு துண்டிக்கப்பட்டது</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">செயலில் உள்ளது (இடதுபுறம் மட்டும்)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">செயலில் உள்ளது (இடது மற்றும் வலதுபுறம்)</string>
   <string name="bluetooth_hearing_aid_right_active">செயலில் உள்ளது (வலதுபுறம் மட்டும்)</string>
-  <string name="bluetooth_no_battery_level_lea_support">இணைக்கப்பட்டுள்ளது (ஆடியோ பகிர்வை ஆதரிக்கிறது)</string>
   <string name="bluetooth_pairing">இணைக்கிறது...</string>
   <string name="bluetooth_pairing_device_down_error_message">%1$s உடன் இணைக்க முடியவில்லை.</string>
   <string name="bluetooth_pairing_error_message">%1$s உடன் இணைய முடியவில்லை.</string>
   <string name="bluetooth_pairing_pin_error_message">தவறான பின் அல்லது கடவுச்சாவி காரணமாக %1$s உடன் இணைக்க முடியவில்லை.</string>
   <string name="bluetooth_pairing_rejected_error_message">%1$s இணைப்பதை நிராகரித்தது.</string>
-  <string name="bluetooth_saved_device_lea_support">ஆடியோ பகிர்வை ஆதரிக்கிறது</string>
   <string name="bluetooth_talkback_bluetooth">புளூடூத்</string>
   <string name="bluetooth_talkback_computer">கணினி</string>
   <string name="bluetooth_talkback_headphone">ஹெட்ஃபோன்</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">ஓவர்ஃப்லோ</string>
   <string name="bubble_overflow_empty_subtitle">சமீபத்திய குமிழ்களும் நிராகரிக்கப்பட்ட குமிழ்களும் இங்கே தோன்றும்</string>
   <string name="bubble_overflow_empty_title">சமீபத்திய குமிழ்கள் இல்லை</string>
-  <string name="bubble_shortcut_label">குமிழ்கள்</string>
-  <string name="bubble_shortcut_long_label">குமிழ்களைக் காட்டு</string>
   <string name="bubbles_app_settings">%1$s அமைப்புகள்</string>
   <string name="bubbles_dont_bubble_conversation">உரையாடலைக் குமிழாக்காதே</string>
   <string name="bubbles_settings_button_description">%1$s குமிழ்களுக்கான அமைப்புகள்</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">அலைபரப்புவதை நிறுத்து</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; ஆப்ஸை அலைபரப்புவதை நிறுத்துவீர்கள்</string>
   <string name="cell_data_off_content_description">மொபைல் டேட்டா ஆஃப் செய்யப்பட்டது</string>
+  <string name="charge_limit_discovery_notification_enable_button">இப்போதே இயக்கு</string>
+  <string name="charge_limit_discovery_notification_text">பேட்டரி நிலையையும் ஆயுட்காலத்தையும் பாதுகாக்க 80% வரம்பு அம்சத்தை இயக்க முயலவும். நீங்கள் எப்போது வேண்டுமானாலும் இதை அமைப்புகளில் நிர்வகிக்கலாம்.</string>
+  <string name="charge_limit_discovery_notification_title">சார்ஜ் செய்யும்போது உங்கள் பேட்டரியைப் பாதுகாத்தல்</string>
+  <string name="charging_reverse_text">பேட்டரியைப் பகிர்கிறது</string>
   <string name="clear_all_notifications_text">எல்லாவற்றையும் அழி</string>
   <string name="clipboard">கிளிப்போர்டு</string>
   <string name="clipboard_content_copied">உள்ளடக்கம் நகலெடுக்கப்பட்டது</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">மூடும்</string>
   <string name="close_dialog_button">மூடு</string>
   <string name="collapse_menu_text">மெனுவை மூடும்</string>
+  <string name="columbus_bouncer_message">விரைவுத் தட்டல் சைகையை நிறைவுசெய்ய அன்லாக் செய்யவும்</string>
+  <string name="columbus_target_request_dialog_allow">அனுமதி</string>
+  <string name="columbus_target_request_dialog_deny">அனுமதிக்காதே</string>
+  <string name="columbus_target_request_dialog_summary">%1$s ஆப்ஸைத் திறக்க மொபைலின் பின்புறத்தில் இருமுறை தட்டுங்கள். அமைப்புகளில் இதை எப்போது வேண்டுமானாலும் மாற்றிக்கொள்ளலாம்.</string>
+  <string name="columbus_target_request_dialog_title">%1$s ஆப்ஸைத் திறக்க, விரைவுத் தட்டல் சைகையை அனுமதிக்கவா?</string>
   <string name="communal_tutorial_indicator_text">சமூகப் பயிற்சியைத் தொடங்க இடதுபுறம் ஸ்வைப் செய்யுங்கள்</string>
   <string name="connected_display_dialog_dual_display_stop_warning">உங்கள் உட்புற டிஸ்பிளே பிரதிபலிக்கப்படும். உங்கள் முன்புற டிஸ்பிளே முடக்கப்படும்.</string>
   <string name="connected_display_dialog_start_mirroring">வெளிப்புறக் காட்சிக்கு மிரர் செய்யவா?</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">மொபைல் டேட்டா இடைநிறுத்தப்பட்டுள்ளது</string>
   <string name="data_usage_disabled_dialog_title">தரவு இடைநிறுத்தப்பட்டது</string>
   <string name="days_timestamp">%1$s நாட்களுக்கு முன்பு</string>
-  <string name="default_error_message">தவறான உள்ளீடு</string>
   <string name="default_popup_window_title">பாப்-அப் சாளரம்</string>
+  <string name="defender_notify_resume_charge">மீறிச் செயல்படு</string>
+  <string name="defender_notify_title">உங்கள் பேட்டரியைப் பாதுகாத்தல்</string>
+  <string name="defender_post_notify_des">பேட்டரியின் ஆயுளை நீட்டிக்க உதவுவதற்கு %1$s முதல் %2$s வரை சார்ஜிங் மேம்படுத்தப்பட்டுள்ளது</string>
+  <string name="defender_post_notify_title">சார்ஜிங் மேம்படுத்தப்பட்டுள்ளது</string>
   <string name="demo_mode">சிஸ்டம் பயனர் இடைமுக டெமோ பயன்முறை</string>
   <string name="desktop_mode_maximize_menu_maximize_text">திரையைப் பெரிதாக்கு</string>
   <string name="desktop_mode_maximize_menu_snap_text">திரையை ஸ்னாப் செய்</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">இந்த சாதனம் உங்கள் நிறுவனத்துக்கு சொந்தமானது</string>
   <string name="do_disclosure_with_name">இந்த சாதனம் %s நிறுவனத்துக்கு சொந்தமானது</string>
   <string name="do_financed_disclosure_with_name">இந்தச் சாதனத்தை வழங்கியவர் %s</string>
+  <string name="dock_a11y_action_show_photo_text">ஃபோட்டோ ஃபிரேமைக் காட்டு</string>
+  <string name="dock_alignment_not_charging">மொபைலை வயர்லெஸ்ஸாகச் சார்ஜ் செய்ய அதை சரியாக வைக்கவும்</string>
+  <string name="dock_alignment_slow_charging">வேகமாகச் சார்ஜ் செய்ய மொபைலை சரியாக வைக்கவும்</string>
+  <string name="dock_defender_first_run_des">பேட்டரி ஆயுட்காலத்தை நீட்டிக்க உதவ, டாக்கில் இணைக்கப்பட்டுள்ள உங்கள் டேப்லெட் 90% அடைந்தவுடன் சார்ஜிங் நிறுத்தப்பட்டுள்ளது. அமைப்புகளுக்குச் சென்று எப்போது வேண்டுமானாலும் அதை மாற்றிக்கொள்ளலாம்.</string>
+  <string name="dock_defender_first_run_settings">அமைப்புகள்</string>
+  <string name="dock_defender_first_run_title">பேட்டரியைப் பாதுகாப்பதற்காகச் சார்ஜிங் நிறுத்தப்பட்டுள்ளது</string>
   <string name="dock_multi_instances_not_supported_text">இந்த ஆப்ஸை 1 சாளரத்தில் மட்டுமே திறக்க முடியும்</string>
   <string name="dock_non_resizeble_failed_to_dock_text">திரைப் பிரிப்புப் பயன்முறையை ஆப்ஸ் ஆதரிக்காது</string>
+  <string name="dock_photo_preview_text">ஃபோட்டோ ஃபிரேம் தொடங்குகிறது...</string>
+  <string name="dock_promo_text">ஃபோட்டோ ஃபிரேமுக்கு இடதுபுறம் ஸ்வைப் செய்யவும்</string>
   <string name="done">முடிந்தது</string>
   <string name="drag_split_not_supported">பிரிக்கப்பட்ட திரைக்குள் இந்த அறிவிப்பை இழுத்துவிட முடியாது</string>
   <string name="drag_to_add_tiles">கட்டங்களைச் சேர்க்க, அவற்றைப் பிடித்து இழுக்கவும்</string>
   <string name="drag_to_rearrange_tiles">கட்டங்களை மறுவரிசைப்படுத்த அவற்றைப் பிடித்து இழுக்கவும்</string>
   <string name="drag_to_remove_disabled">குறைந்தது %1$d கட்டங்கள் தேவை</string>
   <string name="drag_to_remove_tiles">அகற்ற, இங்கே இழுக்கவும்</string>
+  <string name="dream_lockscreen_wallpaper_description">பூட்டுத்திரை வால்பேப்பரைப் பயன்படுத்தலாம்</string>
+  <string name="dream_lockscreen_wallpaper_label">வால்பேப்பர்</string>
   <string name="dream_overlay_status_bar_alarm_set">அலாரம் அமைக்கப்பட்டுள்ளது</string>
   <string name="dream_overlay_status_bar_camera_mic_off">கேமராவும் மைக்கும் ஆஃப் செய்யப்பட்டுள்ளன</string>
   <string name="dream_overlay_status_bar_camera_off">கேமரா முடக்கப்பட்டுள்ளது</string>
   <string name="dream_overlay_status_bar_mic_off">மைக் முடக்கப்பட்டுள்ளது</string>
   <string name="dream_overlay_status_bar_priority_mode">முன்னுரிமைப் பயன்முறை</string>
   <string name="dream_overlay_status_bar_wifi_off">வைஃபை கிடைக்கவில்லை</string>
+  <string name="dwell_defender_notify_des">உங்கள் மொபைல் நீண்ட நேரம் சார்ஜில் இருக்கும்போது பேட்டரி ஆயுட்காலத்தை நீட்டிக்க இது உதவுகிறது</string>
+  <string name="dwell_defender_notify_title">பேட்டரியைப் பாதுகாப்பதற்காகச் சார்ஜிங் இடைநிறுத்தப்பட்டுள்ளது</string>
   <string name="edit_user_info_message">நீங்கள் தேர்வுசெய்யும் பெயரையும் படத்தையும் இந்தச் சாதனத்தைப் பயன்படுத்தும் அனைவரும் பார்க்கலாம்.</string>
   <string name="edit_widget">விட்ஜெட்டைத் திருத்து</string>
   <string name="empty_shade_text">அறிவிப்புகள் இல்லை</string>
@@ -561,13 +581,17 @@
   <string name="ethernet_label">ஈதர்நெட்</string>
   <string name="expand_button_title">மேம்பட்டவை</string>
   <string name="expand_menu_text">மெனுவைத் திற</string>
+  <string name="extreme_battery_saver_text">மேம்பட்டது</string>
+  <string name="extreme_low_battery_notification_text">உங்கள் மொபைலை விரைவில் சார்ஜ் செய்யவில்லை எனில் அது ஷட் டவுன் ஆகிவிடும்</string>
+  <string name="extreme_low_battery_notification_title">பேட்டரி மிகக் குறைவாக உள்ளது</string>
   <string name="face_re_enroll_dialog_content">'முகம் காட்டித் திறத்தல்' அம்சத்தை மீண்டும் அமைக்க, உங்களுடைய தற்போதைய முகத் தோற்றப் பதிவு நீக்கப்படும்.
 
 உங்கள் முகத்தைப் பயன்படுத்தி மொபைலைத் திறக்க இந்த அம்சத்தை மீண்டும் அமைக்க வேண்டும்.</string>
   <string name="face_re_enroll_dialog_title">'முகம் காட்டித் திறத்தல்' அம்சத்தை அமையுங்கள்</string>
   <string name="face_re_enroll_notification_name">முகம் காட்டித் திறத்தல்</string>
   <string name="face_re_enroll_notification_title">'முகம் காட்டித் திறத்தல்' அம்சத்தை மீண்டும் அமையுங்கள்</string>
-  <string name="face_reenroll_failure_dialog_content">'முகம் காட்டித் திறத்தல்' அம்சத்தை அமைக்க முடியவில்லை. அமைப்புகளுக்குச் சென்று மீண்டும் முயலவும்.</string>
+  <string name="face_reenroll_dialog_confirm">அமை</string>
+  <string name="face_reenroll_failure_dialog_content">'முகம் காட்டித் திறத்தல்' அம்சத்தை அமைக்க முடியவில்லை. அமைப்புகளுக்குச் சென்று மீண்டும் முயற்சி செய்யவும்.</string>
   <string name="failed_attempts_now_wiping_device">பலமுறை தவறாக முயன்ற காரணத்தால் இந்தச் சாதனத்தின் தரவு நீக்கப்படும்.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">நிராகரி</string>
   <string name="failed_attempts_now_wiping_profile">பலமுறை தவறாக முயன்ற காரணத்தால் இந்தப் பணிக் கணக்கும் அதன் தரவும் நீக்கப்படும்.</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">சிறிதாக்கும்</string>
   <string name="fullscreen_text">முழுத்திரை</string>
   <string name="game_status">விளையாடுகிறீர்கள்</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">அன்லாக் நீட்டிப்பு அம்சம் முடக்கப்பட்டது</string>
   <string name="go_to_web">உலாவிக்குச் செல்</string>
   <string name="got_it">சரி</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">கெஸ்ட் அமர்வை ரீசெட் செய்யவா?</string>
   <string name="guest_reset_guest_confirm_button">ரீசெட்</string>
   <string name="guest_resetting">கெஸ்ட்டை மீட்டமைக்கிறது…</string>
+  <string name="handle_invocation_prompt">பேச ஸ்வைப் செய்யவும்</string>
   <string name="handle_text">ஹேண்டில்</string>
   <string name="headset">ஹெட்செட்</string>
   <string name="hearing_devices_preset_label">முன்னமைவு</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">மொபைல் சூடாகிறது</string>
   <string name="home_controls_dream_description">ஹோம் கன்ட்ரோல்களை ஸ்கிரீன் சேவராக அணுகலாம்</string>
   <string name="home_controls_dream_label">ஹோம் கன்ட்ரோல்கள்</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• குறைந்தபட்சம் ஒரு சாதனம் அல்லது சாதனப் பேனலாவது இருக்கிறது</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Home ஆப்ஸை ஷார்ட்கட்டாகச் சேர்க்க, அந்த ஆப்ஸ் நிறுவப்பட்டுள்ளதை உறுதிசெய்துகொள்ளவும்</string>
   <string name="hub_mode_add_widget_button_text">விட்ஜெட்டைச் சேர்</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">செயலிலுள்ளது</string>
   <string name="inattentive_sleep_warning_message">இந்தச் சாதனம் விரைவில் ஆஃப் ஆகும். இதைத் தொடர்ந்து ஆனில் வைக்கத் தட்டவும்.</string>
   <string name="inattentive_sleep_warning_title">இயக்க நேரம்</string>
+  <string name="incompatible_charging_learn_more">மேலும் அறிக</string>
+  <string name="incompatible_charging_notify_des">உங்கள் மொபைல் மெதுவாகச் சார்ஜ் ஆகலாம் அல்லது சார்ஜ் ஆகாமல் இருக்கலாம். விரைவாகச் சார்ஜ் ஆவதற்கு, பரிந்துரைக்கப்படும் கேபிளையும் அடாப்டரையும் பயன்படுத்துங்கள்.</string>
+  <string name="incompatible_charging_notify_title">சார்ஜிங் துணைக்கருவியைச் சரிபார்த்தல்</string>
   <string name="indeterminate">சில மட்டுமே தேர்ந்தெடுக்கப்பட்டுள்ளன</string>
   <string name="inline_done_button">முடிந்தது</string>
   <string name="inline_ok_button">பயன்படுத்து</string>
   <string name="inline_turn_off_notifications">அறிவிப்புகளை முடக்கு</string>
   <string name="input_switch_input_language_next">அடுத்த மொழிக்கு மாற்றுதல்</string>
   <string name="input_switch_input_language_previous">முந்தைய மொழிக்கு மாற்றுதல்</string>
+  <string name="install_app">ஆப்ஸை நிறுவுங்கள்</string>
   <string name="install_dialer_on_work_profile_action">பணி மொபைல் ஆப்ஸை நிறுவு</string>
   <string name="install_type_instant">இன்ஸ்டண்ட் ஆப்ஸ்</string>
   <string name="instant_apps">Instant Apps</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">%1$s இயங்குகிறது</string>
   <string name="interruption_level_none">அறிவிப்புகள் வேண்டாம்</string>
   <string name="interruption_level_priority">முன்னுரிமை மட்டும்</string>
-  <string name="invalid_charger_text">உங்கள் சாதனத்துடன் வழங்கப்பட்ட சார்ஜரைப் பயன்படுத்தவும்</string>
-  <string name="invalid_charger_title">USB மூலம், சார்ஜ் செய்ய முடியாது</string>
   <string name="issuerecord_background_processing_label">சிக்கல் ரெக்கார்டிங்கைச் செயலாக்குகிறது</string>
   <string name="issuerecord_ongoing_screen_only">சிக்கல் ரெக்கார்டு செய்யப்படுகிறது</string>
   <string name="issuerecord_save_title">சிக்கல் தொடர்பான ரெக்கார்டிங் சேமிக்கப்பட்டது</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">சாதனம் பூட்டப்பட்டது
 அங்கீகரிக்க முடியவில்லை</string>
   <string name="keyguard_indication_charging_time">%2$s • சார்ஜாகிறது • %1$s இல் முழுதும் சார்ஜாகும்</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • %1$sக்குச் சார்ஜாகிவிட்டது</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • சார்ஜாகிறது • %1$s இல் முழுவதும் சார்ஜாகும்</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • %1$sக்கு முழுமையாகச் சார்ஜாகிவிடும்</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • வேகமாகச் சார்ஜாகிறது • %1$s இல் முழுதும் சார்ஜாகும்</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • விரைவு சார்ஜிங் • %1$sக்கு முழுமையாகச் சார்ஜாகிவிடும்</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • சார்ஜாகிவிட்டது</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • மெதுவாக சார்ஜாகிறது • %1$s இல் முழுதும் சார்ஜாகும்</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • %1$sக்கு முழுமையாகச் சார்ஜாகிவிடும்</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • %1$sக்கு முழுமையாகச் சார்ஜாகிவிடும்</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • வயர்லெஸ் முறையில் சார்ஜாகிறது • %1$s இல் முழுதும் சார்ஜாகும்</string>
-  <string name="keyguard_indication_trust_unlocked">TrustAgent இதைத் திறந்தே வைத்துள்ளது</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • %1$sக்கு முழுமையாகச் சார்ஜாகிவிடும்</string>
+  <string name="keyguard_indication_trust_unlocked">அன்லாக் நீட்டிப்பு அம்சம் இதைத் திறந்தே வைத்துள்ளது</string>
   <string name="keyguard_missing_sim_message_short">சிம் இல்லை</string>
   <string name="keyguard_network_locked_message">நெட்வொர்க் பூட்டப்பட்டது</string>
   <string name="keyguard_permanent_disabled_sim_message_short">பயன்படுத்த முடியாத சிம்.</string>
   <string name="keyguard_plugged_in">%s • சார்ஜாகிறது</string>
   <string name="keyguard_plugged_in_charging_fast">%s • வேகமாகச் சார்ஜாகிறது</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • விரைவு சார்ஜிங்</string>
   <string name="keyguard_plugged_in_charging_limited">%s • பேட்டரியைப் பாதுகாப்பதற்காகச் சார்ஜிங் ஹோல்டு செய்யப்பட்டுள்ளது</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • மெதுவாகச் சார்ஜாகிறது</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • சார்ஜாகிறது</string>
   <string name="keyguard_plugged_in_dock">%s • சார்ஜாகிறது</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • சார்ஜாகிறது</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • சார்ஜிங் துணைக்கருவியைச் சரிபார்க்கவும்</string>
+  <string name="keyguard_plugged_in_v2">%s • சார்ஜாகிறது</string>
   <string name="keyguard_plugged_in_wireless">%s • வயர்லெஸ் முறையில் சார்ஜாகிறது</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • சார்ஜாகிறது</string>
   <string name="keyguard_retry">மீண்டும் முயல மேல்நோக்கி ஸ்வைப் செய்யவும்</string>
   <string name="keyguard_sim_error_message_short">செல்லாத சிம் கார்டு.</string>
   <string name="keyguard_sim_locked_message">சிம் லாக் செய்யப்பட்டுள்ளது.</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">பின் குறியீடுகள் பொருந்தவில்லை</string>
   <string name="kg_invalid_sim_pin_hint">4 இலிருந்து 8 எண்கள் உள்ள பின்னை உள்ளிடவும்.</string>
   <string name="kg_invalid_sim_puk_hint">PUK குறியீட்டில் 8 அல்லது அதற்கும் அதிகமான எண்கள் இருக்க வேண்டும்.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{சிம் பின்னை உள்ளிடவும். உங்கள் சாதனத்தை அன்லாக் செய்ய, உங்கள் மொபைல் நிறுவனத்தைத் தொடர்புகொள்வதற்கு முன்பு மேலும் # முறை முயலலாம்.}other{சிம் பின்னை உள்ளிடவும். இன்னும் # முறை மட்டுமே முயல முடியும்.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{சிம் இப்போது முடக்கப்பட்டுள்ளது. தொடர்வதற்கு PUK குறியீட்டை உள்ளிடவும். நீங்கள் # முறை மட்டுமே முயற்சிக்க முடியும். அதன்பிறகு சிம் நிரந்தரமாக முடக்கப்படும். விவரங்களுக்கு மொபைல் நிறுவனத்தைத் தொடர்புகொள்ளவும்.}other{சிம் இப்போது முடக்கப்பட்டுள்ளது. தொடர்வதற்கு PUK குறியீட்டை உள்ளிடவும். நீங்கள் # முறை மட்டுமே முயற்சிக்க முடியும். அதன்பிறகு சிம் நிரந்தரமாக முடக்கப்படும். விவரங்களுக்கு மொபைல் நிறுவனத்தைத் தொடர்புகொள்ளவும்.}}</string>
   <string name="kg_password_pin_failed">சிம் பின் செயல்பாடு தோல்வியடைந்தது!</string>
   <string name="kg_password_puk_failed">சிம் PUK செயல்பாடு தோல்வியடைந்தது!</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">"%1$s"க்கான சிம் பின்னை உள்ளிடவும்.</string>
   <string name="kg_sim_unlock_progress_dialog_message">சிம்மை அன்லாக் செய்கிறது…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{# வினாடியில் மீண்டும் முயலவும்.}other{# வினாடிகளில் மீண்டும் முயலவும்.}}</string>
-  <string name="kg_trust_agent_disabled">நம்பகமான ஏஜெண்ட் கிடைக்கவில்லை</string>
+  <string name="kg_trust_agent_disabled">அன்லாக் நீட்டிப்பு அம்சம் கிடைக்கவில்லை</string>
   <string name="kg_unlock_with_password_or_fp">கடவுச்சொல்/கைரேகை முயலவும்</string>
   <string name="kg_unlock_with_pattern_or_fp">பேட்டர்ன்/கைரேகை முயலவும்</string>
   <string name="kg_unlock_with_pin_or_fp">பின்/கைரேகையை முயலவும்</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">மேலும் அறிக</string>
   <string name="log_access_confirmation_learn_more_at">மேலும் அறிக: %s</string>
   <string name="log_access_confirmation_title">சாதனப் பதிவுகள் அனைத்தையும் %s அணுக அனுமதிக்கவா?</string>
+  <string name="low_battery_label">பேட்டரி குறைவாக உள்ளது</string>
+  <string name="low_battery_notification_text">பேட்டரி ஆயுளை நீட்டிக்க இயல்புநிலை பேட்டரி சேமிப்பானை இயக்குங்கள்</string>
+  <string name="low_battery_notification_text_ebs">பேட்டரி ஆயுளை நீட்டிக்க மேம்பட்ட பேட்டரி சேமிப்பானை இயக்குங்கள்</string>
+  <string name="low_battery_notification_title">%s பேட்டரி மீதமுள்ளது</string>
   <string name="m3c_search_bar_search">தேடல்</string>
   <string name="m3c_suggestions_available">பரிந்துரைகள் கீழே கிடைக்கும்</string>
   <string name="magnification_close_settings_click_label">பெரிதாக்கல் அமைப்புகளை மூடுக</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">நிறுத்து</string>
   <string name="media_output_end_session_dialog_summary">மீடியாவை வேறொரு சாதனத்திற்கு மாற்ற 'பகிரப்படும் அமர்வை' நிறுத்தவும்</string>
-  <string name="media_output_first_broadcast_title">பிராட்காஸ்ட் எவ்வாறு செயல்படுகிறது?</string>
-  <string name="media_output_first_notify_broadcast_message">நீங்கள் பிராட்காஸ்ட் செய்யும் மீடியாவை அருகிலுள்ளவர்கள் இணக்கமான புளூடூத் சாதனங்கள் மூலம் கேட்கலாம்</string>
   <string name="media_output_group_title_speakers_and_displays">ஸ்பீக்கர்கள் &amp; டிஸ்ப்ளேக்கள்</string>
   <string name="media_output_group_title_suggested_device">பரிந்துரைக்கப்படும் சாதனங்கள்</string>
   <string name="media_output_label_title">இதில் %s பிளே ஆகிறது</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">ஓர் ஆப்ஸை நீங்கள் அலைபரப்பும்போது அந்த ஆப்ஸில் காட்டப்படுகின்ற அல்லது பிளே செய்யப்படுகின்ற அனைத்தையும் Android அணுக முடியும். எனவே கடவுச்சொற்கள், பேமெண்ட் விவரங்கள், மெசேஜ்கள், படங்கள், ஆடியோ, வீடியோ போன்றவை குறித்துக் கவனத்துடன் இருங்கள்.</string>
   <string name="media_projection_sys_service_dialog_title">ரெக்கார்டு செய்ய அல்லது அலைபரப்பத் தொடங்கவா?</string>
   <string name="media_projection_sys_service_dialog_warning">ரெக்கார்டு செய்யும்போதோ அலைபரப்பும்போதோ உங்கள் திரையில் காட்டப்படுகின்ற அல்லது சாதனத்திலிருந்து பிளே செய்யப்படுகின்ற அனைத்துத் தகவல்களையும் இந்தச் செயல்பாட்டை வழங்கும் சேவையால் அணுக முடியும். கடவுச்சொற்கள், பேமெண்ட் விவரங்கள், படங்கள், மெசேஜ்கள், நீங்கள் பிளே செய்யும் ஆடியோ போன்றவை இதிலடங்கும்.</string>
-  <string name="media_projection_task_switcher_action_back">முந்தையதற்கு மாறு</string>
-  <string name="media_projection_task_switcher_action_switch">அதற்குப் பதிலாக இந்த ஆப்ஸைப் பகிர்</string>
-  <string name="media_projection_task_switcher_text">பகிர்தல் ஆப்ஸிற்கு இடையே மாறும்போது இடைநிறுத்தப்படும்</string>
   <string name="media_seamless_other_device">பிற சாதனம்</string>
   <string name="media_transfer_default_device_name">இணைக்கப்பட்டுள்ள சாதனம்</string>
   <string name="media_transfer_dock_speaker_device_name">டாக் ஸ்பீக்கர்</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">உயர் தெளிவுத்திறனுக்கு, மொபைலை ஃபிளிப் செய்யுங்கள்</string>
   <string name="rear_display_unfolded_bottom_sheet_title">காட்சித் திரைகளை மாற்றுவது எப்படி?</string>
   <string name="recent_conversations">சமீபத்திய உரையாடல்கள்</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">படம் அனுப்பப்பட்டது</string>
   <string name="remove_from_settings">அமைப்புகளிலிருந்து அகற்று</string>
   <string name="remove_from_settings_prompt">அமைப்புகளிலிருந்து System UI Tunerஐ அகற்றிவிட்டு, அதன் எல்லா அம்சங்களையும் பயன்படுத்துவதை நிறுத்தவா?</string>
   <string name="require_unlock_for_nfc">NFCயைப் பயன்படுத்த அன்லாக் செய்யவும்</string>
   <string name="restart_button_description">இங்கு தட்டுவதன் மூலம் இந்த ஆப்ஸை மீண்டும் தொடங்கி, ஆப்ஸ் காட்டப்படும் விதத்தை இன்னும் சிறப்பாக்கலாம்</string>
   <string name="retry_face">முக அங்கீகரிப்பை மீண்டும் முயலலாம்</string>
+  <string name="reverse_charging_device_name_text">பிற Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s சார்ஜை வழங்குகிறது (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">பேட்டரி பகிர்வு இயக்கத்தில் உள்ளது</string>
+  <string name="reverse_charging_title">பேட்டரி பகிர்வு</string>
   <string name="right_icon">வலப்புற ஐகான்</string>
   <string name="right_keycode">வலப்புற விசைக்குறியீடு</string>
   <string name="right_nav_bar_button_type">கூடுதல் வலப்புற பட்டன் வகை</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">பேட்டரி மற்றும் டேட்டா உபயோக விவரங்களைக் காண, தட்டவும்</string>
   <string name="running_foreground_services_title">பின்னணியில் இயங்கும் ஆப்ஸ்</string>
-  <string name="satellite_connected_carrier_text">சாட்டிலைட் SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel சாட்டிலைட் SOS</string>
   <string name="save">சேமி</string>
+  <string name="saver_confirmation_dialog_dismiss_text">ரத்துசெய்</string>
+  <string name="saver_confirmation_dialog_subtitle">பயன்படுத்துவதற்கான பயன்முறையைத் தேர்ந்தெடுக்கவும்</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">மேலே பட்டியலிடப்பட்டுள்ள அனைத்து மாற்றங்களும் அடங்கும். அத்துடன், அத்தியாவசியமற்ற ஆப்ஸையும் அவற்றின் அறிவிப்புகளையும் இடைநிறுத்தும்.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">விஷுவல் எஃபெக்ட்டுகளையும் பின்னணிச் செயல்பாடுகளையும் குறைக்கும். டார்க் தீம் ஏற்கெனவே இயக்கப்படவில்லை எனில் அதை இயக்கும்.</string>
+  <string name="saver_confirmation_dialog_title">பேட்டரி சேமிப்பான் அம்சத்திற்கு வரவேற்கிறோம்</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">மேம்பட்ட பேட்டரி சேமிப்பான்</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">இயல்புநிலை பேட்டரி சேமிப்பான்</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">'திரையைப் படமெடுத்தல்' சாதனக் கொள்கையின்படி முடக்கப்பட்டுள்ளது</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">உங்கள் IT நிர்வாகி தடுத்துள்ளார்</string>
   <string name="screen_pinning_can_open_other_apps">பின் செய்யப்பட்டிருக்கும் ஆப்ஸ் பிற ஆப்ஸைத் திறக்கக்கூடும்.</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">இந்த ஆப்ஸைப் பின்னிலிருந்து அகற்ற, 'பின்செல்' மற்றும் 'மேலோட்டப் பார்வை' பட்டன்களைத் தொட்டுப் பிடித்திருக்கவும்</string>
   <string name="screen_pinning_toast_gesture_nav">இந்த ஆப்ஸைப் பின்னிலிருந்து அகற்ற, மேல்நோக்கி ஸ்வைப் செய்தவாறு பிடித்திருக்கவும்</string>
   <string name="screen_pinning_toast_recents_invisible">இந்த ஆப்ஸைப் பின்னிலிருந்து அகற்ற, 'பின்செல்' மற்றும் 'முகப்பு' பட்டன்களைத் தொட்டுப் பிடித்திருக்கவும்</string>
+  <string name="screen_protector_absent_message">ஸ்கிரீன் கார்டைப் பயன்படுத்தாதபோது ஸ்கிரீன் கார்டுப் பயன்முறையை முடக்குவது தொடுதலை மேம்படுத்தும்.</string>
+  <string name="screen_protector_disable_notification">அறிவிப்பை முடக்கு</string>
+  <string name="screen_protector_go_to_settings">அமைப்புகளுக்குச் செல்</string>
+  <string name="screen_protector_got_it">சரி</string>
+  <string name="screen_protector_mode_title">ஸ்கிரீன் கார்டுப் பயன்முறை</string>
+  <string name="screen_protector_present_message">ஸ்கிரீன் கார்டைப் பயன்படுத்தும்போது ஸ்கிரீன் கார்டுப் பயன்முறையை இயக்குவது தொடுதலை மேம்படுத்தும்.</string>
   <string name="screen_share_permission_app_selector_title">ஆப்ஸைப் பகிர்தல் அல்லது ரெக்கார்டு செய்தல்</string>
   <string name="screen_share_permission_dialog_option_entire_screen">முழுத்திரையையும்</string>
   <string name="screen_share_permission_dialog_option_single_app">ஓர் ஆப்ஸ்</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">பணிக் கணக்கில் ஸ்கிரீன்ஷாட் சேமிக்கப்படுகிறது…</string>
   <string name="screenshot_scroll_label">கூடுதலாக படமெடு</string>
   <string name="screenshot_share_description">ஸ்கிரீன்ஷாட்டைப் பகிர்</string>
-  <string name="screenshot_share_label">பகிர்</string>
   <string name="screenshot_text">ஸ்கிரீன்ஷாட்</string>
   <string name="screenshot_top_boundary_pct">மேல் எல்லை %1$d சதவீதம்</string>
+  <string name="screenshot_view_description">ஸ்கிரீன்ஷாட்டைக் காட்டும்</string>
   <string name="screenshot_work_profile_notification">பணிக் கணக்கில் உள்ள %1$s ஆப்ஸில் சேமிக்கப்பட்டது</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">'கைரேகை சென்சார்' பவர் பட்டனில் உள்ளது. இது மொபைலின் விளிம்பில் சற்று மேலெழும்பிய ஒலியளவு பட்டனுக்கு அடுத்துள்ள தட்டையான பட்டனாகும்.</string>
   <string name="see_all_bluetooth_devices">அனைத்தையும் காட்டு</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">குறிப்பு எடுப்பதற்கான இயல்புநிலை ஆப்ஸை அமைப்புகளில் அமையுங்கள்</string>
   <string name="settings_label">அமைப்புகள்</string>
   <string name="settingslib_learn_more_text">மேலும் அறிக</string>
+  <string name="severe_battery_notification_switch_text">மேம்பட்ட பேட்டரி சேமிப்பான் அம்சத்திற்கு மாற்றவா? 
+
+இது அனைத்து அத்தியாவசியமற்ற ஆப்ஸையும் அவற்றின் அறிவிப்புகளையும் இடைநிறுத்தும்</string>
+  <string name="severe_battery_notification_text">மேம்பட்ட பேட்டரி சேமிப்பானை இயக்கவா? இது அனைத்து அத்தியாவசியமற்ற ஆப்ஸையும் இடைநிறுத்தும்</string>
+  <string name="severe_battery_notification_title">%s பேட்டரி மீதமுள்ளது</string>
+  <string name="severe_low_battery_dialog_switch_action_text">மாற்று</string>
   <string name="share_to_app_stop_dialog_button">பகிர்வதை நிறுத்து</string>
   <string name="share_to_app_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; ஆப்ஸைப் பகிர்வதை நிறுத்துவீர்கள்</string>
   <string name="share_to_app_stop_dialog_title">திரையைப் பகிர்வதை நிறுத்தவா?</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- இது, %1$s பயன்பாட்டிலிருந்து தகவலைப் படிக்கும்</string>
   <string name="slice_permission_text_2">- இது, %1$s பயன்பாட்டிற்குள் சென்று செயல்பாடுகளில் ஈடுபடும்</string>
   <string name="slice_permission_title">%1$s ஆப்ஸை, %2$s ஆப்ஸின் விழிப்பூட்டல்களைக் காண்பிக்க அனுமதிக்கவா?</string>
+  <string name="smartspace_content_desc">முகப்புத் தகவல்</string>
+  <string name="smartspace_flight_qr_code">QR குறியீடு</string>
+  <string name="smartspace_role_desc">காட்டும்</string>
   <string name="snoozeHourOptions">{count,plural, =1{# மணிநேரம்}=2{# மணிநேரம்}other{# மணிநேரம்}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# நிமிடம்}other{# நிமிடங்கள்}}</string>
   <string name="snooze_undo">செயல்தவிர்</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">வேகம் குறைவு</string>
   <string name="speed_label_very_fast">மிகவும் வேகமானது</string>
   <string name="split_screen_text">திரையைப் பிரிக்கும்</string>
+  <string name="squeeze_invocation_prompt">பேசுவதற்கு அழுத்தவும்</string>
+  <string name="standard_battery_saver_text">நிலையானது</string>
   <string name="start_dreams">ஸ்கிரீன் சேவர்</string>
   <string name="state_empty">காலியாக உள்ளது</string>
   <string name="state_off">ஆஃப்</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">பிரிவு</string>
   <string name="tap_a_network_to_connect">இணைக்க நெட்வொர்க்கைத் தட்டுங்கள்</string>
   <string name="tap_again">மீண்டும் தட்டவும்</string>
+  <string name="temp_defender_notify_des">உங்கள் மொபைல் சாதாரண வெப்பநிலையை அடையும்போது சார்ஜிங் மீண்டும் தொடங்கும்</string>
+  <string name="temp_defender_notify_title">பேட்டரியைப் பாதுகாப்பதற்காகச் சார்ஜிங் இடைநிறுத்தப்பட்டுள்ளது</string>
   <string name="template_percent">%1$d சதவீதம்.</string>
   <string name="thermal">தெர்மல்</string>
   <string name="thermal_shutdown_dialog_help_text">மேலும் விவரங்களுக்கு இதைப் பார்க்கவும்</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">டேப்லெட்டை அன்லாக் செய்யாமலே உங்களுக்கு விருப்பமான ஆப்ஸ் விட்ஜெட்களுக்கு விரைவு அணுகலைப் பெறுங்கள்.</string>
   <string name="title_usb_accessory">USB துணைக்கருவி</string>
   <string name="to_switch_networks_disconnect_ethernet">நெட்வொர்க்குகளை மாற்ற ஈதர்நெட் இணைப்பைத் துண்டிக்கவும்</string>
+  <string name="too_hot_label">Pixel அதிகச் சூடாக உள்ளது</string>
   <string name="touch_filtered_warning">அனுமதிக் கோரிக்கையை ஆப்ஸ் மறைப்பதால், அமைப்புகளால் உங்கள் பதிலைச் சரிபார்க்க முடியாது.</string>
   <string name="touchpad_tutorial_action_key_button">ஆக்ஷன் பட்டன்</string>
   <string name="touchpad_tutorial_back_gesture_button">பின்செல்வதற்கான சைகை</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">மெனு</string>
   <string name="tuner_minus">மைனஸ்</string>
   <string name="tuner_other_apps">பிற ஆப்ஸ்</string>
+  <string name="tuner_persistent_warning">இந்தப் பரிசோதனைக்குரிய அம்சங்கள் எதிர்கால வெளியீடுகளில் மாற்றப்படலாம், இடைநிறுத்தப்படலாம் அல்லது தோன்றாமல் போகலாம். கவனத்துடன் தொடரவும்.</string>
   <string name="tuner_plus">பிளஸ்</string>
   <string name="tuner_right">வலது</string>
   <string name="tuner_time">நேரம்</string>
+  <string name="tuner_warning">System UI Tuner, Android பயனர் இடைமுகத்தை மாற்றவும் தனிப்பயனாக்கவும் கூடுதல் வழிகளை வழங்குகிறது. இந்தப் பரிசோதனைக்குரிய அம்சங்கள் எதிர்கால வெளியீடுகளில் மாற்றப்படலாம், இடைநிறுத்தப்படலாம் அல்லது தோன்றாமல் போகலாம். கவனத்துடன் தொடரவும்.</string>
+  <string name="tuner_warning_title">சில வேடிக்கையாக இருந்தாலும் கவனம் தேவை</string>
   <string name="turn_off_airplane_mode">விமானப் பயன்முறையை முடக்கும்</string>
   <string name="turn_on_bluetooth">புளூடூத்தைப் பயன்படுத்துதல்</string>
   <string name="turn_on_bluetooth_auto_info_disabled">விரைவுப் பகிர்தல், Find My Device போன்ற அம்சங்கள் புளூடூத்தைப் பயன்படுத்துகின்றன</string>
   <string name="turn_on_bluetooth_auto_info_enabled">நாளை காலை புளூடூத் இயக்கப்படும்</string>
   <string name="turn_on_bluetooth_auto_tomorrow">தானாகவே நாளை இயக்கப்படும்</string>
   <string name="turn_on_wifi">வைஃபை</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">டிவி இயல்புநிலை</string>
   <string name="two_weeks_timestamp">2 வாரங்களுக்கு முன்பு</string>
   <string name="unknown">அறியப்படாத</string>
   <string name="unlock_to_see_notif_text">பழைய அறிவிப்பைப் பார்க்க அன்லாக் செய்க</string>
@@ -1552,7 +1624,9 @@ USB போர்ட்டை மீண்டும் எப்போது ப�
   <string name="volume_odi_captions_hint_enable">இயக்கும்</string>
   <string name="volume_odi_captions_tip">வசன உரைகளைத் தானாக எழுதும்</string>
   <string name="volume_panel_captioning_title">உடனடி வசனம்</string>
+  <string name="volume_panel_clear_calling_title">தெளிவான அழைப்பு</string>
   <string name="volume_panel_collapsed_sliders">ஒலியளவு ஸ்லைடர்கள் சுருக்கப்பட்டன</string>
+  <string name="volume_panel_device_settings_title">சாதன அமைப்புகள்</string>
   <string name="volume_panel_dialog_settings_button">அமைப்புகள்</string>
   <string name="volume_panel_enter_media_output_settings">வெளியீட்டு அமைப்புகளுக்குச் செல்லும்</string>
   <string name="volume_panel_expanded_sliders">ஒலியளவு ஸ்லைடர்கள் விரிவாக்கப்பட்டன</string>
@@ -1667,10 +1741,13 @@ USB போர்ட்டை மீண்டும் எப்போது ப�
   <string name="wifitrackerlib_wifi_standard_unknown">அறியப்படாதது</string>
   <string name="wifitrackerlib_wifi_unmetered_label">கட்டணமில்லா நெட்வொர்க்</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">இப்போது வைஃபை தானாக இணைக்கப்படாது</string>
+  <string name="wireless_charging_label">வயர்லெஸ் முறையில் சார்ஜ் ஆகிறது</string>
+  <string name="wireless_charging_notification_text">வயர்டு சார்ஜிங்கை விட வயர்லெஸ் சார்ஜிங் கூடுதல் மின்சாரத்தைப் பயன்படுத்தக்கூடும். மின்சாரத்தையும் நேரத்தையும் சேமிக்க, வயர்டு சார்ஜரைப் பயன்படுத்துங்கள்.</string>
+  <string name="wireless_charging_notification_title">வயர்லெஸ் முறையில் சார்ஜ் செய்தல்</string>
   <string name="work_challenge_emergency_button_text">அவசர அழைப்பு</string>
   <string name="work_mode_off_title">பணி ஆப்ஸை மீண்டும் இயக்கவா?</string>
   <string name="work_mode_turn_on">மீண்டும் இயக்கு</string>
-  <string name="zen_alarm_warning">அடுத்த அலாரத்தை %1$s மணிக்கு கேட்க மாட்டீர்கள்</string>
+  <string name="zen_alarm_warning">%1$sக்கான அடுத்த அலாரத்திற்கு ஒலி இருக்காது</string>
   <string name="zen_alarm_warning_indef">%1$sக்கு முன்பு இதை ஆஃப் செய்யாவிட்டால், அடுத்த அலாரத்திற்கு ஒலி இருக்காது</string>
   <string name="zen_mode_enable_dialog_turn_on">ஆன் செய்</string>
   <string name="zen_mode_settings_turn_on_dialog_title">தொந்தரவு செய்ய வேண்டாம் என்பதை ஆன் செய்யும்</string>

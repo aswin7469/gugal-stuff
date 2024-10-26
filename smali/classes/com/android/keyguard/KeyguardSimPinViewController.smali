@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardSimPinViewController;
 .super Lcom/android/keyguard/KeyguardPinBasedInputViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -105,7 +105,7 @@
     iput-object v0, v13, Lcom/android/keyguard/KeyguardSimPinViewController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     .line 48
-    const v0, 0x7f0b03e5    # @id/keyguard_sim
+    const v0, 0x7f0a0406    # @id/keyguard_sim
 
     .line 50
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -145,7 +145,7 @@
     move-result-object v0
 
     .line 11
-    const v1, 0x7f1404e0    # @string/kg_password_wrong_pin_code_pukked 'Incorrect SIM PIN code you must now contact your carrier to unlock your device.'
+    const v1, 0x7f130536    # @string/kg_password_wrong_pin_code_pukked 'Incorrect SIM PIN code you must now contact your carrier to unlock your device.'
 
     .line 12
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -173,7 +173,7 @@
     move-result-object v0
 
     .line 29
-    const v1, 0x7f1404df    # @string/kg_password_wrong_pin_code '{count, plural, =1 {Incorrect SIM PIN code, you have # remaining attempt before you must contact you ...'
+    const v1, 0x7f130535    # @string/kg_password_wrong_pin_code '{count, plural, =1 {Incorrect SIM PIN code, you have # remaining attempt before you must contact you ...'
 
     .line 30
     invoke-static {v0, v1, p1}, Lcom/android/systemui/util/PluralMessageFormaterKt;->icuMessageFormat(Landroid/content/res/Resources;II)Ljava/lang/String;
@@ -198,7 +198,7 @@
     move-result-object v0
 
     .line 45
-    const v1, 0x7f1404dd    # @string/kg_password_pin_failed 'SIM PIN operation failed!'
+    const v1, 0x7f130533    # @string/kg_password_pin_failed 'SIM PIN operation failed!'
 
     .line 46
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -244,7 +244,7 @@
     move-result-object p0
 
     .line 76
-    const v1, 0x7f140504    # @string/kg_sim_lock_esim_instructions '%1$s Disable eSIM to use device without mobile service.'
+    const v1, 0x7f13055a    # @string/kg_sim_lock_esim_instructions '%1$s Disable eSIM to use device without mobile service.'
 
     .line 77
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -406,25 +406,25 @@
     iget v1, p0, Lcom/android/keyguard/KeyguardSimPinViewController;->mSubId:I
 
     .line 12
-    if-eq v0, v1, :cond_0
+    const/4 v2, 0x1
 
     .line 14
+    if-eq v0, v1, :cond_0
+
+    .line 15
     invoke-static {v0}, Landroid/telephony/SubscriptionManager;->isValidSubscriptionId(I)Z
 
-    .line 16
+    .line 17
     move-result v1
 
-    .line 19
+    .line 20
     if-eqz v1, :cond_0
 
-    .line 20
+    .line 21
     iput v0, p0, Lcom/android/keyguard/KeyguardSimPinViewController;->mSubId:I
 
-    .line 22
-    const/4 v0, 0x1
-
-    .line 24
-    iput-boolean v0, p0, Lcom/android/keyguard/KeyguardSimPinViewController;->mShowDefaultMessage:Z
+    .line 23
+    iput-boolean v2, p0, Lcom/android/keyguard/KeyguardSimPinViewController;->mShowDefaultMessage:Z
 
     .line 25
     const/4 v0, -0x1
@@ -440,7 +440,7 @@
     const-string v1, ""
 
     .line 32
-    invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     .line 34
     iget-boolean v0, p0, Lcom/android/keyguard/KeyguardSimPinViewController;->mShowDefaultMessage:Z
@@ -609,7 +609,7 @@
     const/4 v3, 0x2
 
     .line 62
-    const v5, 0x7f140505    # @string/kg_sim_pin_instructions 'Enter SIM PIN.'
+    const v5, 0x7f13055b    # @string/kg_sim_pin_instructions 'Enter SIM PIN.'
 
     .line 63
     if-ge v1, v3, :cond_1
@@ -663,7 +663,7 @@
     if-nez v6, :cond_3
 
     .line 94
-    const v5, 0x7f140506    # @string/kg_sim_pin_instructions_multi 'Enter SIM PIN for "%1$s".'
+    const v5, 0x7f13055c    # @string/kg_sim_pin_instructions_multi 'Enter SIM PIN for "%1$s".'
 
     .line 96
     filled-new-array {v3}, [Ljava/lang/Object;
@@ -706,7 +706,7 @@
     if-eqz v0, :cond_5
 
     .line 119
-    const v0, 0x7f140504    # @string/kg_sim_lock_esim_instructions '%1$s Disable eSIM to use device without mobile service.'
+    const v0, 0x7f13055a    # @string/kg_sim_lock_esim_instructions '%1$s Disable eSIM to use device without mobile service.'
 
     .line 121
     filled-new-array {v1}, [Ljava/lang/Object;
@@ -875,7 +875,7 @@
     move-result-object v2
 
     .line 49
-    const v3, 0x7f140507    # @string/kg_sim_unlock_progress_dialog_message 'Unlocking SIM…'
+    const v3, 0x7f13055d    # @string/kg_sim_unlock_progress_dialog_message 'Unlocking SIM…'
 
     .line 50
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -975,7 +975,7 @@
     iget-object p0, p0, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
 
     .line 120
-    const v0, 0x7f1404d9    # @string/kg_invalid_sim_pin_hint 'Type a PIN that is 4 to 8 numbers.'
+    const v0, 0x7f13052f    # @string/kg_invalid_sim_pin_hint 'Type a PIN that is 4 to 8 numbers.'
 
     .line 122
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(I)V

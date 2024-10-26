@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/WindowMagnificationController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnTouchListener;
@@ -495,7 +495,7 @@
     iput-object p3, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mResources:Landroid/content/res/Resources;
 
     .line 163
-    const p6, 0x7f0c009d    # @integer/magnification_default_scale '2'
+    const p6, 0x7f0b00b2    # @integer/magnification_default_scale '2'
 
     .line 165
     invoke-virtual {p3, p6}, Landroid/content/res/Resources;->getInteger(I)I
@@ -723,14 +723,14 @@
     if-eqz v2, :cond_0
 
     .line 8
-    const v2, 0x7f0805f4    # @drawable/accessibility_window_magnification_background_change 'res/drawable/accessibility_window_magnification_background_change.xml'
+    const v2, 0x7f0805f6    # @drawable/accessibility_window_magnification_background_change 'res/drawable/accessibility_window_magnification_background_change.xml'
 
     .line 10
     goto :goto_0
 
     .line 13
     :cond_0
-    const v2, 0x7f0805f3    # @drawable/accessibility_window_magnification_background 'res/drawable/accessibility_window_magnification_background.xml'
+    const v2, 0x7f0805f5    # @drawable/accessibility_window_magnification_background 'res/drawable/accessibility_window_magnification_background.xml'
 
     .line 14
     :goto_0
@@ -1222,6 +1222,7 @@
 
     .line 77
     return-void
+    .line 80
 .end method
 
 .method public final changeMagnificationFrameSize(FFFF)V
@@ -1900,7 +1901,7 @@
     move-result p1
 
     .line 9
-    const v4, 0x7f0b029f    # @id/drag_handle
+    const v4, 0x7f0a02ae    # @id/drag_handle
 
     .line 10
     if-ne p1, v4, :cond_0
@@ -1934,7 +1935,7 @@
 
     .line 33
     :cond_0
-    const v4, 0x7f0b01de    # @id/close_button
+    const v4, 0x7f0a01e9    # @id/close_button
 
     .line 34
     if-ne p1, v4, :cond_1
@@ -2896,6 +2897,7 @@
     :cond_0
     :goto_0
     return-void
+    .line 35
 .end method
 
 .method public final moveWindowMagnifier(FF)V
@@ -4515,7 +4517,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mResources:Landroid/content/res/Resources;
 
     .line 2
-    const v1, 0x7f070627    # @dimen/magnification_mirror_surface_margin '20.0dp'
+    const v1, 0x7f070669    # @dimen/magnification_mirror_surface_margin '20.0dp'
 
     .line 4
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -4530,7 +4532,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mResources:Landroid/content/res/Resources;
 
     .line 13
-    const v1, 0x7f07061d    # @dimen/magnification_border_drag_size '35.0dp'
+    const v1, 0x7f07065f    # @dimen/magnification_border_drag_size '35.0dp'
 
     .line 15
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -4545,7 +4547,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mResources:Landroid/content/res/Resources;
 
     .line 24
-    const v1, 0x7f070628    # @dimen/magnification_outer_border_margin '15.0dp'
+    const v1, 0x7f07066a    # @dimen/magnification_outer_border_margin '15.0dp'
 
     .line 26
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -4560,7 +4562,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mResources:Landroid/content/res/Resources;
 
     .line 35
-    const v1, 0x7f07061e    # @dimen/magnification_button_reposition_threshold_from_edge '32.0dp'
+    const v1, 0x7f070660    # @dimen/magnification_button_reposition_threshold_from_edge '32.0dp'
 
     .line 37
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -4820,7 +4822,7 @@
     const-wide/32 v1, 0x80000
 
     .line 31
-    invoke-virtual {p1, v1, v2, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {p1, v1, v2, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 34
     iget p0, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mDisplayId:I
@@ -5149,7 +5151,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 178
-    const v1, 0x7f1405bb    # @string/magnification_window_title 'Magnification Window'
+    const v1, 0x7f130615    # @string/magnification_window_title 'Magnification Window'
 
     .line 180
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -5188,7 +5190,7 @@
     move-result-object v0
 
     .line 209
-    const v1, 0x7f0e0316    # @layout/window_magnifier_view 'res/layout/window_magnifier_view.xml'
+    const v1, 0x7f0d032b    # @layout/window_magnifier_view 'res/layout/window_magnifier_view.xml'
 
     .line 210
     const/4 v2, 0x0
@@ -5203,7 +5205,7 @@
     iput-object v0, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 218
-    const v1, 0x7f0b07ba    # @id/surface_view
+    const v1, 0x7f0a07e9    # @id/surface_view
 
     .line 220
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5221,7 +5223,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 231
-    const v1, 0x7f0b0463    # @id/magnification_inner_border
+    const v1, 0x7f0a0487    # @id/magnification_inner_border
 
     .line 233
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5425,7 +5427,7 @@
     iget-object p1, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 376
-    const p2, 0x7f0b029f    # @id/drag_handle
+    const p2, 0x7f0a02ae    # @id/drag_handle
 
     .line 378
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5443,7 +5445,7 @@
     iget-object p1, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 389
-    const p2, 0x7f0b0421    # @id/left_handle
+    const p2, 0x7f0a0442    # @id/left_handle
 
     .line 391
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5458,7 +5460,7 @@
     iget-object p1, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 400
-    const p2, 0x7f0b0812    # @id/top_handle
+    const p2, 0x7f0a0841    # @id/top_handle
 
     .line 402
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5473,7 +5475,7 @@
     iget-object p1, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 411
-    const p2, 0x7f0b065d    # @id/right_handle
+    const p2, 0x7f0a0687    # @id/right_handle
 
     .line 413
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5488,7 +5490,7 @@
     iget-object p1, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 422
-    const p2, 0x7f0b0136    # @id/bottom_handle
+    const p2, 0x7f0a013c    # @id/bottom_handle
 
     .line 424
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5503,7 +5505,7 @@
     iget-object p1, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 433
-    const p2, 0x7f0b01de    # @id/close_button
+    const p2, 0x7f0a01e9    # @id/close_button
 
     .line 435
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5521,7 +5523,7 @@
     iget-object p1, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 446
-    const p2, 0x7f0b0818    # @id/top_right_corner
+    const p2, 0x7f0a0846    # @id/top_right_corner
 
     .line 448
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5539,7 +5541,7 @@
     iget-object p1, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 459
-    const p2, 0x7f0b0816    # @id/top_left_corner
+    const p2, 0x7f0a0845    # @id/top_left_corner
 
     .line 461
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5557,7 +5559,7 @@
     iget-object p1, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 472
-    const p2, 0x7f0b013b    # @id/bottom_right_corner
+    const p2, 0x7f0a0141    # @id/bottom_right_corner
 
     .line 474
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5575,7 +5577,7 @@
     iget-object p1, p0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mMirrorView:Landroid/view/View;
 
     .line 485
-    const p2, 0x7f0b013a    # @id/bottom_left_corner
+    const p2, 0x7f0a0140    # @id/bottom_left_corner
 
     .line 487
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

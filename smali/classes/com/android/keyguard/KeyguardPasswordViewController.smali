@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardPasswordViewController;
 .super Lcom/android/keyguard/KeyguardAbsKeyInputViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -171,7 +171,7 @@
     invoke-virtual/range {p14 .. p14}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 76
-    const v0, 0x7f05006a    # @bool/kg_show_ime_at_screen_on 'true'
+    const v0, 0x7f050078    # @bool/kg_show_ime_at_screen_on 'true'
 
     .line 79
     move-object/from16 v1, p10
@@ -189,7 +189,7 @@
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 90
-    const v0, 0x7f0b05c8    # @id/passwordEntry
+    const v0, 0x7f0a05ed    # @id/passwordEntry
 
     .line 93
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -219,7 +219,7 @@
     move-result-object v0
 
     .line 113
-    const v1, 0x7f080627    # @drawable/bouncer_password_view_background 'res/drawable/bouncer_password_view_background.xml'
+    const v1, 0x7f080628    # @drawable/bouncer_password_view_background 'res/drawable/bouncer_password_view_background.xml'
 
     .line 114
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -231,7 +231,7 @@
     iput-object v0, v11, Lcom/android/keyguard/KeyguardPasswordViewController;->mFocusedPasswordFieldBackground:Landroid/graphics/drawable/Drawable;
 
     .line 121
-    const v0, 0x7f0b07be    # @id/switch_ime_button
+    const v0, 0x7f0a07ed    # @id/switch_ime_button
 
     .line 123
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -256,7 +256,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f140496    # @string/keyguard_enter_your_password 'Enter your password'
+    const p0, 0x7f1304e0    # @string/keyguard_enter_your_password 'Enter your password'
 
     .line 2
     return p0
@@ -601,7 +601,7 @@
     check-cast v2, Lcom/android/keyguard/KeyguardPasswordView;
 
     .line 106
-    const v4, 0x7f0b01a5    # @id/cancel_button
+    const v4, 0x7f0a01ab    # @id/cancel_button
 
     .line 108
     invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -922,7 +922,7 @@
     move-result-object v1
 
     .line 298
-    const v2, 0x7f07034e    # @dimen/keyguard_password_field_height '56.0dp'
+    const v2, 0x7f07038a    # @dimen/keyguard_password_field_height '56.0dp'
 
     .line 299
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -946,7 +946,7 @@
     move-result-object p0
 
     .line 314
-    const v1, 0x7f07034f    # @dimen/keyguard_password_field_width '276.0dp'
+    const v1, 0x7f07038b    # @dimen/keyguard_password_field_width '276.0dp'
 
     .line 315
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1022,7 +1022,7 @@
     iget-object v0, p0, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
 
     .line 17
-    const v1, 0x7f140496    # @string/keyguard_enter_your_password 'Enter your password'
+    const v1, 0x7f1304e0    # @string/keyguard_enter_your_password 'Enter your password'
 
     .line 19
     invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(I)V

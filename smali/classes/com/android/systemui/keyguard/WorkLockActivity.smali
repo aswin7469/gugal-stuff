@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/keyguard/WorkLockActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -336,7 +336,7 @@
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setOverlayWithDecorCaptionEnabled(Z)V
 
     .line 41
-    const p1, 0x7f0e0042    # @layout/auth_biometric_background 'res/layout/auth_biometric_background.xml'
+    const p1, 0x7f0d0046    # @layout/auth_biometric_background 'res/layout/auth_biometric_background.xml'
 
     .line 44
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setContentView(I)V
@@ -351,7 +351,7 @@
     if-eqz p1, :cond_1
 
     .line 54
-    const v0, 0x7f0b0379    # @id/icon
+    const v0, 0x7f0a0399    # @id/icon
 
     .line 56
     invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;

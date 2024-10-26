@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/biometrics/ui/binder/CredentialViewBinder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -14,7 +14,7 @@
     move-object/from16 v5, p1
 
     .line 4
-    const v0, 0x7f0b07ff    # @id/title
+    const v0, 0x7f0a082e    # @id/title
 
     .line 6
     invoke-virtual {v9, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -29,7 +29,7 @@
     check-cast v4, Landroid/widget/TextView;
 
     .line 14
-    const v0, 0x7f0b0782    # @id/subtitle
+    const v0, 0x7f0a07b1    # @id/subtitle
 
     .line 16
     invoke-virtual {v9, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -44,7 +44,7 @@
     check-cast v6, Landroid/widget/TextView;
 
     .line 24
-    const v0, 0x7f0b0251    # @id/description
+    const v0, 0x7f0a025d    # @id/description
 
     .line 26
     invoke-virtual {v9, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -59,7 +59,7 @@
     check-cast v7, Landroid/widget/TextView;
 
     .line 34
-    const v0, 0x7f0b023b    # @id/customized_view_container
+    const v0, 0x7f0a0246    # @id/customized_view_container
 
     .line 36
     invoke-virtual {v9, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -74,7 +74,7 @@
     check-cast v8, Landroid/widget/LinearLayout;
 
     .line 44
-    const v0, 0x7f0b0379    # @id/icon
+    const v0, 0x7f0a0399    # @id/icon
 
     .line 46
     invoke-virtual {v9, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -89,7 +89,7 @@
     check-cast v10, Landroid/widget/ImageView;
 
     .line 54
-    const v0, 0x7f0b02e4    # @id/error
+    const v0, 0x7f0a02fd    # @id/error
 
     .line 56
     invoke-virtual {v9, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -104,7 +104,7 @@
     check-cast v15, Landroid/widget/TextView;
 
     .line 64
-    const v0, 0x7f0b01a5    # @id/cancel_button
+    const v0, 0x7f0a01ab    # @id/cancel_button
 
     .line 66
     invoke-virtual {v9, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -122,7 +122,7 @@
     move-object/from16 v16, v3
 
     .line 76
-    const v0, 0x7f0b02c0    # @id/emergencyCallButton
+    const v0, 0x7f0a02d9    # @id/emergencyCallButton
 
     .line 78
     invoke-virtual {v9, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -256,7 +256,7 @@
     check-cast v6, Landroid/view/inputmethod/InputMethodManager;
 
     .line 165
-    const v0, 0x7f0b0445    # @id/lockPassword
+    const v0, 0x7f0a0466    # @id/lockPassword
 
     .line 167
     invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;
@@ -317,7 +317,7 @@
     check-cast v0, Lcom/android/systemui/biometrics/ui/CredentialPatternView;
 
     .line 203
-    const v1, 0x7f0b0446    # @id/lockPattern
+    const v1, 0x7f0a0467    # @id/lockPattern
 
     .line 205
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class final enum Lcom/android/systemui/statusbar/phone/ScrimState$9;
 .super Lcom/android/systemui/statusbar/phone/ScrimState;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # virtual methods
@@ -47,7 +47,7 @@
 .end method
 
 .method public final prepare(Lcom/android/systemui/statusbar/phone/ScrimState;)V
-    .locals 3
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
@@ -68,103 +68,112 @@
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
     .line 12
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v2, Lcom/google/android/systemui/dreamliner/DockObserver;
 
     .line 14
-    iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mDisplayRequiresBlanking:Z
+    invoke-virtual {v2}, Lcom/google/android/systemui/dreamliner/DockObserver;->isDocked()Z
 
-    .line 17
-    iput-boolean v2, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBlankScreen:Z
+    .line 16
+    move-result v2
 
     .line 19
-    iget v2, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBackgroundColor:I
+    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mDisplayRequiresBlanking:Z
 
-    .line 21
-    iput v2, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mFrontTint:I
+    .line 20
+    iput-boolean v3, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBlankScreen:Z
 
-    .line 23
+    .line 22
+    iget v3, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBackgroundColor:I
+
+    .line 24
+    iput v3, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mFrontTint:I
+
+    .line 26
     if-nez v0, :cond_1
 
-    .line 25
+    .line 28
+    if-nez v2, :cond_1
+
+    .line 30
     if-eqz v1, :cond_0
 
-    .line 27
+    .line 32
     goto :goto_0
 
-    .line 29
+    .line 34
     :cond_0
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 30
+    .line 35
     goto :goto_1
 
-    .line 32
+    .line 37
     :cond_1
     :goto_0
     iget v0, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mAodFrontScrimAlpha:F
 
-    .line 33
+    .line 38
     :goto_1
     iput v0, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mFrontAlpha:F
 
-    .line 35
-    iput v2, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBehindTint:I
-
-    .line 37
-    const/4 v0, 0x0
-
-    .line 39
-    iput v0, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBehindAlpha:F
-
     .line 40
-    const-wide/16 v0, 0x3e8
+    iput v3, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBehindTint:I
 
     .line 42
-    iput-wide v0, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mAnimationDuration:J
+    const/4 v0, 0x0
 
     .line 44
-    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->OFF:Lcom/android/systemui/statusbar/phone/ScrimState;
+    iput v0, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mBehindAlpha:F
 
-    .line 46
-    const/4 v1, 0x0
+    .line 45
+    const-wide/16 v0, 0x3e8
 
-    .line 48
-    if-ne p1, v0, :cond_2
+    .line 47
+    iput-wide v0, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mAnimationDuration:J
 
     .line 49
-    iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mAnimateChange:Z
+    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->OFF:Lcom/android/systemui/statusbar/phone/ScrimState;
 
     .line 51
-    goto :goto_2
+    const/4 v1, 0x0
 
     .line 53
+    if-ne p1, v0, :cond_2
+
+    .line 54
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mAnimateChange:Z
+
+    .line 56
+    goto :goto_2
+
+    .line 58
     :cond_2
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
-    .line 54
+    .line 59
     iget-boolean v0, p1, Lcom/android/systemui/statusbar/phone/DozeParameters;->mControlScreenOffAnimation:Z
 
-    .line 56
+    .line 61
     if-eqz v0, :cond_3
 
-    .line 58
+    .line 63
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->shouldShowLightRevealScrim()Z
 
-    .line 60
+    .line 65
     move-result p1
 
-    .line 63
+    .line 68
     if-nez p1, :cond_3
 
-    .line 64
+    .line 69
     const/4 v1, 0x1
 
-    .line 66
+    .line 71
     :cond_3
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/ScrimState;->mAnimateChange:Z
 
-    .line 67
+    .line 72
     :goto_2
     return-void
-    .line 69
+    .line 74
 .end method

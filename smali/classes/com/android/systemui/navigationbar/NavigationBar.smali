@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/navigationbar/NavigationBar;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/CommandQueue$Callbacks;
@@ -584,7 +584,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f0707cc    # @dimen/navigation_handle_sample_horizontal_margin '10.0dp'
+    const v8, 0x7f07080f    # @dimen/navigation_handle_sample_horizontal_margin '10.0dp'
 
     .line 71
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1204,7 +1204,7 @@
     move-result-object v3
 
     .line 71
-    const v13, 0x11101dd    # @android:bool/config_offsetWallpaperToCenterOfLargestDisplay
+    const v13, 0x11101dc    # @android:bool/config_oem_enabled_satellite_access_allow
 
     .line 72
     invoke-virtual {v3, v13}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -1430,7 +1430,7 @@
     move-result-object v3
 
     .line 203
-    const v11, 0x11101df    # @android:bool/config_orderUnlockAndWake
+    const v11, 0x11101de    # @android:bool/config_omnipresentCommunalUser
 
     .line 204
     invoke-virtual {v3, v11}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -1466,7 +1466,7 @@
     move-result-object v11
 
     .line 229
-    const v12, 0x11101e0    # @android:bool/config_overrideRemoteViewsActivityTransition
+    const v12, 0x11101df    # @android:bool/config_orderUnlockAndWake
 
     .line 230
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -1685,7 +1685,7 @@
     iput-object v0, v1, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
     .line 373
-    const v0, 0x7f1406b7    # @string/nav_bar 'Navigation bar'
+    const v0, 0x7f130711    # @string/nav_bar 'Navigation bar'
 
     .line 375
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1814,7 +1814,7 @@
 
     .line 28
     :goto_0
-    const v3, 0x7f0b054d    # @id/nav_buttons
+    const v3, 0x7f0a0571    # @id/nav_buttons
 
     .line 30
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1987,7 +1987,7 @@
     iget-object v0, v0, Lcom/android/systemui/navigationbar/NavigationBarView;->mButtonDispatchers:Landroid/util/SparseArray;
 
     .line 150
-    const v2, 0x7f0b0392    # @id/ime_switcher
+    const v2, 0x7f0a03b2    # @id/ime_switcher
 
     .line 152
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -2011,7 +2011,7 @@
     iget-object v0, v0, Lcom/android/systemui/navigationbar/NavigationBarView;->mButtonDispatchers:Landroid/util/SparseArray;
 
     .line 168
-    const v2, 0x7f0b002f    # @id/accessibility_button
+    const v2, 0x7f0a002f    # @id/accessibility_button
 
     .line 170
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -2229,7 +2229,7 @@
     if-eqz v1, :cond_1
 
     .line 20
-    const v0, 0x7f0b036f    # @id/home
+    const v0, 0x7f0a038e    # @id/home
 
     .line 22
     invoke-virtual {p0, p1, v0}, Lcom/android/systemui/navigationbar/NavigationBar;->onLongPressNavigationButtons(Landroid/view/View;I)Z
@@ -2319,10 +2319,10 @@
     move-result-object v4
 
     .line 80
-    check-cast v4, Lcom/android/systemui/assist/AssistManager;
+    check-cast v4, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 81
-    invoke-virtual {v4, v3}, Lcom/android/systemui/assist/AssistManager;->shouldOverrideAssist(I)Z
+    invoke-virtual {v4, v3}, Lcom/google/android/systemui/assist/AssistManagerGoogle;->shouldOverrideAssist(I)Z
 
     .line 83
     move-result v3
@@ -2362,10 +2362,10 @@
     move-result-object p1
 
     .line 108
-    check-cast p1, Lcom/android/systemui/assist/AssistManager;
+    check-cast p1, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 109
-    invoke-virtual {p1, v1}, Lcom/android/systemui/assist/AssistManager;->startAssist(Landroid/os/Bundle;)V
+    invoke-virtual {p1, v1}, Lcom/google/android/systemui/assist/AssistManagerGoogle;->startAssist(Landroid/os/Bundle;)V
 
     .line 111
     :goto_1
@@ -3158,177 +3158,177 @@
     const-wide/16 v4, 0x0
 
     .line 174
-    const-string v6, "systemui"
+    const-string/jumbo v6, "systemui"
 
     .line 176
     invoke-static {v6, v2, v4, v5}, Landroid/provider/DeviceConfig;->getLong(Ljava/lang/String;Ljava/lang/String;J)J
 
-    .line 178
+    .line 179
     move-result-wide v4
 
-    .line 181
+    .line 182
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 182
+    .line 183
     move-result-object v2
-
-    .line 185
-    invoke-static {v2}, Ljava/util/Optional;->of(Ljava/lang/Object;)Ljava/util/Optional;
 
     .line 186
-    move-result-object v2
+    invoke-static {v2}, Ljava/util/Optional;->of(Ljava/lang/Object;)Ljava/util/Optional;
 
-    .line 189
-    new-instance v4, Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda18;
+    .line 187
+    move-result-object v2
 
     .line 190
+    new-instance v4, Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda18;
+
+    .line 191
     const/4 v5, 0x0
 
-    .line 192
+    .line 193
     invoke-direct {v4, v5}, Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda18;-><init>(I)V
 
-    .line 193
+    .line 194
     invoke-virtual {v2, v4}, Ljava/util/Optional;->filter(Ljava/util/function/Predicate;)Ljava/util/Optional;
 
-    .line 196
+    .line 197
     move-result-object v2
 
-    .line 199
+    .line 200
     iput-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mHomeButtonLongPressDurationMs:Ljava/util/Optional;
 
-    .line 200
+    .line 201
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mNavbarTaskbarStateUpdater:Lcom/android/systemui/navigationbar/NavigationBar$2;
 
-    .line 202
+    .line 203
     invoke-virtual {v0, v2}, Lcom/android/systemui/navigationbar/NavBarHelper;->registerNavTaskStateUpdater(Lcom/android/systemui/navigationbar/NavBarHelper$NavbarTaskbarStateUpdater;)V
 
-    .line 204
+    .line 205
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mHandler:Landroid/os/Handler;
 
-    .line 207
+    .line 208
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
+    .line 210
     new-instance v2, Landroidx/emoji2/text/ConcurrencyHelpers$$ExternalSyntheticLambda0;
 
-    .line 212
+    .line 213
     invoke-direct {v2, v0}, Landroidx/emoji2/text/ConcurrencyHelpers$$ExternalSyntheticLambda0;-><init>(Landroid/os/Handler;)V
 
-    .line 214
+    .line 215
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOnPropertiesChangedListener:Lcom/android/systemui/navigationbar/NavigationBar$5;
 
-    .line 217
+    .line 218
     invoke-static {v6, v2, v0}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
-    .line 219
+    .line 220
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mSavedState:Landroid/os/Bundle;
 
-    .line 222
+    .line 223
     if-eqz v0, :cond_4
 
-    .line 224
+    .line 225
     const-string v2, "disabled_state"
 
-    .line 226
+    .line 227
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    .line 228
+    .line 229
     move-result v0
-
-    .line 231
-    iput v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mDisabledFlags1:I
 
     .line 232
+    iput v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mDisabledFlags1:I
+
+    .line 233
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mSavedState:Landroid/os/Bundle;
 
-    .line 234
+    .line 235
     const-string v2, "disabled2_state"
 
-    .line 236
+    .line 237
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    .line 238
+    .line 239
     move-result v0
-
-    .line 241
-    iput v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mDisabledFlags2:I
 
     .line 242
+    iput v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mDisabledFlags2:I
+
+    .line 243
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mSavedState:Landroid/os/Bundle;
 
-    .line 244
+    .line 245
     const-string v2, "appearance"
 
-    .line 246
+    .line 247
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    .line 248
+    .line 249
     move-result v0
-
-    .line 251
-    iput v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mAppearance:I
 
     .line 252
+    iput v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mAppearance:I
+
+    .line 253
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mSavedState:Landroid/os/Bundle;
 
-    .line 254
+    .line 255
     const-string v2, "behavior"
 
-    .line 256
+    .line 257
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
-    .line 258
+    .line 259
     move-result v0
-
-    .line 261
-    iput v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mBehavior:I
 
     .line 262
+    iput v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mBehavior:I
+
+    .line 263
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mSavedState:Landroid/os/Bundle;
 
-    .line 264
-    const-string v2, "transient_state"
+    .line 265
+    const-string/jumbo v2, "transient_state"
 
-    .line 266
+    .line 267
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    .line 268
+    .line 270
     move-result v0
 
-    .line 271
+    .line 273
     iput-boolean v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mTransientShown:Z
 
-    .line 272
+    .line 274
     :cond_4
     iget v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mDisplayId:I
 
-    .line 274
+    .line 276
     invoke-virtual {v1, v0, v3}, Lcom/android/systemui/statusbar/CommandQueue;->recomputeDisableFlags(IZ)V
 
-    .line 276
+    .line 278
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mNotificationShadeDepthController:Lcom/android/systemui/statusbar/NotificationShadeDepthController;
 
-    .line 279
+    .line 281
     iget-object v0, v0, Lcom/android/systemui/statusbar/NotificationShadeDepthController;->listeners:Ljava/util/List;
 
-    .line 281
+    .line 283
     iget-object v1, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mDepthListener:Lcom/android/systemui/navigationbar/NavigationBar$6;
 
-    .line 283
+    .line 285
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 285
+    .line 287
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mTaskStackListener:Lcom/android/systemui/navigationbar/NavigationBar$8;
 
-    .line 288
+    .line 290
     iget-object p0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mTaskStackChangeListeners:Lcom/android/systemui/shared/system/TaskStackChangeListeners;
 
-    .line 290
+    .line 292
     invoke-virtual {p0, v0}, Lcom/android/systemui/shared/system/TaskStackChangeListeners;->registerTaskStackListener(Lcom/android/systemui/shared/system/TaskStackChangeListener;)V
 
-    .line 292
+    .line 294
     return-void
-    .line 295
+    .line 297
 .end method
 
 .method public final onLongPressNavigationButtons(Landroid/view/View;I)Z
@@ -3362,10 +3362,10 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 16
-    const v4, 0x7f0b00ee    # @id/back
+    const v4, 0x7f0a00f2    # @id/back
 
     .line 17
-    const v5, 0x7f0b063c    # @id/recent_apps
+    const v5, 0x7f0a0665    # @id/recent_apps
 
     .line 20
     const/4 v6, 0x1
@@ -4871,7 +4871,7 @@
     iput-object v1, v0, Lcom/android/systemui/navigationbar/NavigationBar;->mOrientationHandle:Lcom/android/systemui/navigationbar/gestural/QuickswitchOrientedNavHandle;
 
     .line 426
-    const v3, 0x7f0b06dd    # @id/secondary_home_handle
+    const v3, 0x7f0a0706    # @id/secondary_home_handle
 
     .line 428
     invoke-virtual {v1, v3}, Landroid/view/View;->setId(I)V
@@ -5233,162 +5233,159 @@
     invoke-virtual {v2}, Lcom/android/internal/policy/GestureNavigationSettingsObserver;->unregister()V
 
     .line 30
-    iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
+    iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOverviewProxyListener:Lcom/android/systemui/navigationbar/NavigationBar$3;
 
     .line 33
-    iget-object v2, v2, Lcom/android/systemui/recents/OverviewProxyService;->mConnectionCallbacks:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
     .line 35
-    iget-object v3, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOverviewProxyListener:Lcom/android/systemui/navigationbar/NavigationBar$3;
+    invoke-virtual {v3, v2}, Lcom/android/systemui/recents/OverviewProxyService;->removeCallback(Lcom/android/systemui/recents/OverviewProxyService$OverviewProxyListener;)V
 
     .line 37
-    invoke-interface {v2, v3}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    .line 39
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mUserChangedCallback:Lcom/android/systemui/settings/UserTracker$Callback;
 
-    .line 42
+    .line 40
     iget-object v3, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 44
+    .line 42
     check-cast v3, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 46
+    .line 44
     invoke-virtual {v3, v2}, Lcom/android/systemui/settings/UserTrackerImpl;->removeCallback(Lcom/android/systemui/settings/UserTracker$Callback;)V
 
-    .line 48
+    .line 46
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mWakefulnessObserver:Lcom/android/systemui/navigationbar/NavigationBar$7;
 
-    .line 51
+    .line 49
     iget-object v3, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
-    .line 53
+    .line 51
     invoke-virtual {v3, v2}, Lcom/android/systemui/keyguard/Lifecycle;->removeObserver(Ljava/lang/Object;)V
 
-    .line 55
+    .line 53
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOrientationHandle:Lcom/android/systemui/navigationbar/gestural/QuickswitchOrientedNavHandle;
 
-    .line 58
+    .line 56
     if-eqz v2, :cond_0
 
-    .line 60
+    .line 58
     invoke-virtual {p0}, Lcom/android/systemui/navigationbar/NavigationBar;->resetSecondaryHandle()V
 
-    .line 62
+    .line 60
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOrientationHandleIntensityListener:Lcom/android/systemui/navigationbar/NavigationBar$4;
 
-    .line 65
+    .line 63
     iget-object v0, v0, Lcom/android/systemui/navigationbar/NavigationBarTransitions;->mDarkIntensityListeners:Ljava/util/List;
 
-    .line 67
+    .line 65
     invoke-interface {v0, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 69
+    .line 67
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 72
+    .line 70
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOrientationHandle:Lcom/android/systemui/navigationbar/gestural/QuickswitchOrientedNavHandle;
 
-    .line 74
+    .line 72
     invoke-interface {v0, v2}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 76
+    .line 74
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOrientationHandle:Lcom/android/systemui/navigationbar/gestural/QuickswitchOrientedNavHandle;
 
-    .line 79
+    .line 77
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    .line 81
+    .line 79
     move-result-object v0
 
-    .line 84
+    .line 82
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOrientationHandleGlobalLayoutListener:Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda26;
 
-    .line 85
+    .line 83
     invoke-virtual {v0, v2}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 87
+    .line 85
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    .line 90
+    .line 88
     check-cast v0, Lcom/android/systemui/navigationbar/NavigationBarView;
 
-    .line 92
+    .line 90
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    .line 94
+    .line 92
     move-result-object v0
 
-    .line 97
+    .line 95
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOnComputeInternalInsetsListener:Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda5;
 
-    .line 98
+    .line 96
     invoke-virtual {v0, v2}, Landroid/view/ViewTreeObserver;->removeOnComputeInternalInsetsListener(Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;)V
 
-    .line 100
+    .line 98
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mHandler:Landroid/os/Handler;
 
-    .line 103
+    .line 101
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mAutoDim:Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda2;
 
-    .line 105
+    .line 103
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 107
+    .line 105
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOnVariableDurationHomeLongClick:Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda2;
 
-    .line 110
+    .line 108
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 112
+    .line 110
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mEnableLayoutTransitions:Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda2;
 
-    .line 115
+    .line 113
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 117
+    .line 115
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mNavbarTaskbarStateUpdater:Lcom/android/systemui/navigationbar/NavigationBar$2;
 
-    .line 120
+    .line 118
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mNavBarHelper:Lcom/android/systemui/navigationbar/NavBarHelper;
 
-    .line 122
+    .line 120
     invoke-virtual {v2, v0}, Lcom/android/systemui/navigationbar/NavBarHelper;->removeNavTaskStateUpdater(Lcom/android/systemui/navigationbar/NavBarHelper$NavbarTaskbarStateUpdater;)V
 
-    .line 124
+    .line 122
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mPipOptional:Ljava/util/Optional;
 
-    .line 127
+    .line 125
     iget-object v2, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    .line 129
+    .line 127
     check-cast v2, Lcom/android/systemui/navigationbar/NavigationBarView;
 
-    .line 131
+    .line 129
     invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
+    .line 131
     new-instance v3, Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda8;
 
-    .line 136
+    .line 134
     const/4 v4, 0x1
 
-    .line 138
+    .line 136
     invoke-direct {v3, v2, v4}, Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/navigationbar/NavigationBarView;I)V
 
-    .line 139
+    .line 137
     invoke-virtual {v0, v3}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 142
+    .line 140
     iput-object v1, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mFrame:Lcom/android/systemui/navigationbar/NavigationBarFrame;
 
-    .line 145
+    .line 143
     iput-object v1, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mOrientationHandle:Lcom/android/systemui/navigationbar/gestural/QuickswitchOrientedNavHandle;
 
-    .line 147
+    .line 145
     return-void
-    .line 149
+    .line 147
 .end method
 
 .method public final orientSecondaryHomeHandle()V
@@ -5452,7 +5449,7 @@
     const-string v2, " current: "
 
     .line 35
-    invoke-static {v0, v2, v3}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v3}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 37
     move-result-object v0
@@ -5929,7 +5926,7 @@
     iget-object v1, v1, Lcom/android/systemui/navigationbar/NavigationBarView;->mButtonDispatchers:Landroid/util/SparseArray;
 
     .line 169
-    const v2, 0x7f0b002f    # @id/accessibility_button
+    const v2, 0x7f0a002f    # @id/accessibility_button
 
     .line 171
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -5971,7 +5968,7 @@
     iget-object v1, v1, Lcom/android/systemui/navigationbar/NavigationBarView;->mButtonDispatchers:Landroid/util/SparseArray;
 
     .line 203
-    const v2, 0x7f0b0392    # @id/ime_switcher
+    const v2, 0x7f0a03b2    # @id/ime_switcher
 
     .line 205
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -6472,7 +6469,7 @@
     move-result-object v1
 
     .line 13
-    const v2, 0x11101ae    # @android:bool/config_keepDreamingWhenUnplugging
+    const v2, 0x11101ad    # @android:bool/config_jobSchedulerRestrictBackgroundUser
 
     .line 14
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -7097,7 +7094,7 @@
     iget-object v2, v1, Lcom/android/systemui/navigationbar/NavigationBarView;->mButtonDispatchers:Landroid/util/SparseArray;
 
     .line 38
-    const v3, 0x7f0b002f    # @id/accessibility_button
+    const v3, 0x7f0a002f    # @id/accessibility_button
 
     .line 40
     invoke-virtual {v2, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -7317,10 +7314,10 @@
     iget-object v1, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mSysUiFlagsContainer:Lcom/android/systemui/model/SysUiState;
 
     .line 31
-    invoke-virtual {v1, v2, v3, v4}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v4}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 33
-    invoke-virtual {v1, v9, v10, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v9, v10, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 36
     iget v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mNavigationBarWindowState:I
@@ -7346,7 +7343,7 @@
     const-wide/16 v2, 0x2
 
     .line 47
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 49
     iget v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mNavigationIconHints:I
@@ -7372,7 +7369,7 @@
     const-wide/32 v2, 0x40000
 
     .line 60
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 63
     iget v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mNavigationIconHints:I
@@ -7398,7 +7395,7 @@
     const-wide/32 v2, 0x100000
 
     .line 75
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 78
     iget v0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mBehavior:I
@@ -7421,7 +7418,7 @@
     const-wide/32 v2, 0x20000
 
     .line 88
-    invoke-virtual {v1, v2, v3, v5}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v5}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 91
     iget p0, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mDisplayId:I

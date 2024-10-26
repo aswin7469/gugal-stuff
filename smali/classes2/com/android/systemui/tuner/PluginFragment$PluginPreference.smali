@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/tuner/PluginFragment$PluginPreference;
 .super Landroidx/preference/SwitchPreference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -160,7 +160,7 @@
     invoke-virtual {p0, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     .line 84
-    const p1, 0x7f0e02f7    # @layout/tuner_widget_settings_switch 'res/layout/tuner_widget_settings_switch.xml'
+    const p1, 0x7f0d0309    # @layout/tuner_widget_settings_switch 'res/layout/tuner_widget_settings_switch.xml'
 
     .line 87
     iput p1, p0, Landroidx/preference/Preference;->mWidgetLayoutResId:I
@@ -179,7 +179,7 @@
     invoke-super {p0, p1}, Landroidx/preference/SwitchPreference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
     .line 2
-    const v0, 0x7f0b06f5    # @id/settings
+    const v0, 0x7f0a0720    # @id/settings
 
     .line 5
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -214,7 +214,7 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 22
-    const v1, 0x7f0b028b    # @id/divider
+    const v1, 0x7f0a0298    # @id/divider
 
     .line 25
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

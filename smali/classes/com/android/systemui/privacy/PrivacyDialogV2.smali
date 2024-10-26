@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/privacy/PrivacyDialogV2;
 .super Lcom/android/systemui/statusbar/phone/SystemUIDialog;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -27,7 +27,7 @@
     const/4 v0, 0x1
 
     .line 2
-    const v1, 0x7f1504b5    # @style/Theme.PrivacyDialog
+    const v1, 0x7f1404bd    # @style/Theme.PrivacyDialog
 
     .line 3
     invoke-direct {p0, p1, v1, v0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;-><init>(Landroid/content/Context;IZ)V
@@ -155,19 +155,19 @@
     invoke-virtual {v0, v3}, Landroid/view/Window;->setGravity(I)V
 
     .line 16
-    const v0, 0x7f14077d    # @string/privacy_dialog_title 'Microphone & Camera'
+    const v0, 0x7f1307d9    # @string/privacy_dialog_title 'Microphone & Camera'
 
     .line 19
     invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->setTitle(I)V
 
     .line 22
-    const v0, 0x7f0e01ff    # @layout/privacy_dialog_v2 'res/layout/privacy_dialog_v2.xml'
+    const v0, 0x7f0d020d    # @layout/privacy_dialog_v2 'res/layout/privacy_dialog_v2.xml'
 
     .line 25
     invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->setContentView(I)V
 
     .line 28
-    const v0, 0x7f0b05fe    # @id/privacy_dialog_close_button
+    const v0, 0x7f0a0627    # @id/privacy_dialog_close_button
 
     .line 31
     invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
@@ -191,7 +191,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 46
-    const v0, 0x7f0b0608    # @id/privacy_dialog_more_button
+    const v0, 0x7f0a0631    # @id/privacy_dialog_more_button
 
     .line 49
     invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
@@ -215,7 +215,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 64
-    const v0, 0x7f0b0606    # @id/privacy_dialog_items_container
+    const v0, 0x7f0a062f    # @id/privacy_dialog_items_container
 
     .line 67
     invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
@@ -273,7 +273,7 @@
     move-result-object v0
 
     .line 103
-    const v7, 0x7f0e01fe    # @layout/privacy_dialog_item_v2 'res/layout/privacy_dialog_item_v2.xml'
+    const v7, 0x7f0d020c    # @layout/privacy_dialog_item_v2 'res/layout/privacy_dialog_item_v2.xml'
 
     .line 104
     invoke-virtual {v0, v7, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -288,7 +288,7 @@
     check-cast v7, Landroid/view/ViewGroup;
 
     .line 112
-    const v8, 0x7f0b0600    # @id/privacy_dialog_item_header
+    const v8, 0x7f0a0629    # @id/privacy_dialog_item_header
 
     .line 114
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -374,7 +374,7 @@
 
     .line 157
     :goto_2
-    const v0, 0x7f0b0603    # @id/privacy_dialog_item_header_icon
+    const v0, 0x7f0a062c    # @id/privacy_dialog_item_header_icon
 
     .line 158
     invoke-virtual {v9, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -533,7 +533,7 @@
 
     .line 240
     :cond_2
-    const v0, 0x7f080aa6    # @drawable/privacy_dialog_default_permission_icon 'res/drawable/privacy_dialog_default_permission_icon.xml'
+    const v0, 0x7f080ae1    # @drawable/privacy_dialog_default_permission_icon 'res/drawable/privacy_dialog_default_permission_icon.xml'
 
     .line 241
     invoke-virtual {v13, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -561,7 +561,7 @@
     invoke-virtual {v12, v10}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 260
-    const v0, 0x7f0b0605    # @id/privacy_dialog_item_header_title
+    const v0, 0x7f0a062e    # @id/privacy_dialog_item_header_title
 
     .line 263
     invoke-virtual {v9, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -591,14 +591,14 @@
     if-eqz v2, :cond_3
 
     .line 285
-    const v4, 0x7f14076f    # @string/privacy_dialog_active_call_usage 'In use by phone call'
+    const v4, 0x7f1307cb    # @string/privacy_dialog_active_call_usage 'In use by phone call'
 
     .line 287
     goto :goto_9
 
     .line 290
     :cond_3
-    const v4, 0x7f14077b    # @string/privacy_dialog_recent_call_usage 'Recently used in phone call'
+    const v4, 0x7f1307d7    # @string/privacy_dialog_recent_call_usage 'Recently used in phone call'
 
     .line 291
     :goto_9
@@ -633,14 +633,14 @@
     if-eqz v2, :cond_5
 
     .line 311
-    const v4, 0x7f14076c    # @string/privacy_dialog_active_app_usage 'In use by %1$s'
+    const v4, 0x7f1307c8    # @string/privacy_dialog_active_app_usage 'In use by %1$s'
 
     .line 313
     goto :goto_a
 
     .line 316
     :cond_5
-    const v4, 0x7f140778    # @string/privacy_dialog_recent_app_usage 'Recently used by %1$s'
+    const v4, 0x7f1307d4    # @string/privacy_dialog_recent_app_usage 'Recently used by %1$s'
 
     .line 317
     :goto_a
@@ -685,14 +685,14 @@
     if-eqz v2, :cond_8
 
     .line 342
-    const v4, 0x7f14076e    # @string/privacy_dialog_active_app_usage_2 'In use by %1$s (%2$s • %3$s)'
+    const v4, 0x7f1307ca    # @string/privacy_dialog_active_app_usage_2 'In use by %1$s (%2$s • %3$s)'
 
     .line 344
     goto :goto_b
 
     .line 347
     :cond_8
-    const v4, 0x7f14077a    # @string/privacy_dialog_recent_app_usage_2 'Recently used by %1$s (%2$s • %3$s)'
+    const v4, 0x7f1307d6    # @string/privacy_dialog_recent_app_usage_2 'Recently used by %1$s (%2$s • %3$s)'
 
     .line 348
     :goto_b
@@ -731,14 +731,14 @@
     if-eqz v2, :cond_a
 
     .line 370
-    const v4, 0x7f14076d    # @string/privacy_dialog_active_app_usage_1 'In use by %1$s (%2$s)'
+    const v4, 0x7f1307c9    # @string/privacy_dialog_active_app_usage_1 'In use by %1$s (%2$s)'
 
     .line 372
     goto :goto_d
 
     .line 375
     :cond_a
-    const v4, 0x7f140779    # @string/privacy_dialog_recent_app_usage_1 'Recently used by %1$s (%2$s)'
+    const v4, 0x7f1307d5    # @string/privacy_dialog_recent_app_usage_1 'Recently used by %1$s (%2$s)'
 
     .line 376
     :goto_d
@@ -777,7 +777,7 @@
     invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 399
-    const v10, 0x7f0b0604    # @id/privacy_dialog_item_header_summary
+    const v10, 0x7f0a062d    # @id/privacy_dialog_item_header_summary
 
     .line 402
     invoke-virtual {v9, v10}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -825,7 +825,7 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 433
-    const v4, 0x7f0b0601    # @id/privacy_dialog_item_header_expand_toggle
+    const v4, 0x7f0a062a    # @id/privacy_dialog_item_header_expand_toggle
 
     .line 435
     invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -840,7 +840,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 445
-    const v4, 0x7f080aa7    # @drawable/privacy_dialog_expand_toggle_down 'res/drawable/privacy_dialog_expand_toggle_down.xml'
+    const v4, 0x7f080ae2    # @drawable/privacy_dialog_expand_toggle_down 'res/drawable/privacy_dialog_expand_toggle_down.xml'
 
     .line 447
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -861,7 +861,7 @@
     move-result-object v8
 
     .line 462
-    const v9, 0x7f140774    # @string/privacy_dialog_expand_action 'Expand and show options'
+    const v9, 0x7f1307d0    # @string/privacy_dialog_expand_action 'Expand and show options'
 
     .line 463
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -873,7 +873,7 @@
     invoke-static {v7, v4, v8, v11}, Landroidx/core/view/ViewCompat;->replaceAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
 
     .line 470
-    const v4, 0x7f0b0602    # @id/privacy_dialog_item_header_expanded_layout
+    const v4, 0x7f0a062b    # @id/privacy_dialog_item_header_expanded_layout
 
     .line 473
     invoke-virtual {v7, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -927,7 +927,7 @@
     const-string v10, "Required value was null."
 
     .line 515
-    const v12, 0x7f0e01fc    # @layout/privacy_dialog_card_button 'res/layout/privacy_dialog_card_button.xml'
+    const v12, 0x7f0d020a    # @layout/privacy_dialog_card_button 'res/layout/privacy_dialog_card_button.xml'
 
     .line 517
     if-nez v9, :cond_10
@@ -970,13 +970,13 @@
     invoke-virtual {v0, v11}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 542
-    const v14, 0x7f0b05fd    # @id/privacy_dialog_close_app_button
+    const v14, 0x7f0a0626    # @id/privacy_dialog_close_app_button
 
     .line 545
     invoke-virtual {v11, v14}, Landroid/widget/Button;->setId(I)V
 
     .line 548
-    const v14, 0x7f140770    # @string/privacy_dialog_close_app_button 'Close this app'
+    const v14, 0x7f1307cc    # @string/privacy_dialog_close_app_button 'Close this app'
 
     .line 551
     invoke-virtual {v11, v14}, Landroid/widget/Button;->setText(I)V
@@ -1070,7 +1070,7 @@
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 613
-    const v0, 0x7f0b0607    # @id/privacy_dialog_manage_app_button
+    const v0, 0x7f0a0630    # @id/privacy_dialog_manage_app_button
 
     .line 616
     invoke-virtual {v10, v0}, Landroid/widget/Button;->setId(I)V
@@ -1079,14 +1079,14 @@
     if-eqz v9, :cond_12
 
     .line 622
-    const v0, 0x7f140776    # @string/privacy_dialog_manage_service 'Manage service'
+    const v0, 0x7f1307d2    # @string/privacy_dialog_manage_service 'Manage service'
 
     .line 624
     goto :goto_11
 
     .line 627
     :cond_12
-    const v0, 0x7f140775    # @string/privacy_dialog_manage_permissions 'Manage access'
+    const v0, 0x7f1307d1    # @string/privacy_dialog_manage_permissions 'Manage access'
 
     .line 628
     :goto_11
@@ -1192,7 +1192,7 @@
     if-eq v2, v6, :cond_16
 
     .line 694
-    const v2, 0x7f080aa2    # @drawable/privacy_dialog_background_large_top_small_bottom 'res/drawable/privacy_dialog_background_large_top_small_bottom.xml'
+    const v2, 0x7f080add    # @drawable/privacy_dialog_background_large_top_small_bottom 'res/drawable/privacy_dialog_background_large_top_small_bottom.xml'
 
     .line 696
     invoke-virtual {v1, v2}, Lcom/android/systemui/privacy/PrivacyDialogV2;->getMutableDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1201,7 +1201,7 @@
     move-result-object v2
 
     .line 702
-    const v8, 0x7f080aa4    # @drawable/privacy_dialog_background_small_top_small_bottom 'res/drawable/privacy_dialog_background_small_top_small_bottom.xml'
+    const v8, 0x7f080adf    # @drawable/privacy_dialog_background_small_top_small_bottom 'res/drawable/privacy_dialog_background_small_top_small_bottom.xml'
 
     .line 703
     invoke-virtual {v1, v8}, Lcom/android/systemui/privacy/PrivacyDialogV2;->getMutableDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1210,7 +1210,7 @@
     move-result-object v8
 
     .line 709
-    const v9, 0x7f080aa3    # @drawable/privacy_dialog_background_small_top_large_bottom 'res/drawable/privacy_dialog_background_small_top_large_bottom.xml'
+    const v9, 0x7f080ade    # @drawable/privacy_dialog_background_small_top_large_bottom 'res/drawable/privacy_dialog_background_small_top_large_bottom.xml'
 
     .line 710
     invoke-virtual {v1, v9}, Lcom/android/systemui/privacy/PrivacyDialogV2;->getMutableDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1288,7 +1288,7 @@
 
     .line 764
     :cond_16
-    const v2, 0x7f080aa1    # @drawable/privacy_dialog_background_large_top_large_bottom 'res/drawable/privacy_dialog_background_large_top_large_bottom.xml'
+    const v2, 0x7f080adc    # @drawable/privacy_dialog_background_large_top_large_bottom 'res/drawable/privacy_dialog_background_large_top_large_bottom.xml'
 
     .line 766
     invoke-virtual {v1, v2}, Lcom/android/systemui/privacy/PrivacyDialogV2;->getMutableDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1499,7 +1499,7 @@
     invoke-virtual {p2, v0}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
     .line 20
-    const v0, 0x7f080aa0    # @drawable/privacy_dialog_background_circle 'res/drawable/privacy_dialog_background_circle.xml'
+    const v0, 0x7f080adb    # @drawable/privacy_dialog_background_circle 'res/drawable/privacy_dialog_background_circle.xml'
 
     .line 23
     invoke-virtual {p0, v0}, Lcom/android/systemui/privacy/PrivacyDialogV2;->getMutableDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1549,7 +1549,7 @@
     move-result-object p3
 
     .line 57
-    const v1, 0x7f07083c    # @dimen/ongoing_appops_dialog_circle_size '32.0dp'
+    const v1, 0x7f07087f    # @dimen/ongoing_appops_dialog_circle_size '32.0dp'
 
     .line 58
     invoke-virtual {p3, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1573,7 +1573,7 @@
     move-result-object p0
 
     .line 73
-    const v1, 0x7f07083d    # @dimen/ongoing_appops_dialog_icon_size '16.0dp'
+    const v1, 0x7f070880    # @dimen/ongoing_appops_dialog_icon_size '16.0dp'
 
     .line 74
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimension(I)F

@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/keyboard/stickykeys/StickyKeysLogger$logNewSettingValue$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -71,15 +71,15 @@
 
     .line 13
     :goto_0
-    const-string p1, "sticky key setting changed, new state: "
+    const-string/jumbo p1, "sticky key setting changed, new state: "
 
     .line 15
     invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 17
+    .line 18
     move-result-object p0
 
-    .line 20
-    return-object p0
     .line 21
+    return-object p0
+    .line 22
 .end method

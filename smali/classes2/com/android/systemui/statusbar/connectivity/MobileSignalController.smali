@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/connectivity/MobileSignalController;
 .super Lcom/android/systemui/statusbar/connectivity/SignalController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -170,7 +170,7 @@
     iput-object v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMobileMappingsProxy:Lcom/android/systemui/statusbar/pipeline/mobile/util/MobileMappingsProxyImpl;
 
     .line 67
-    const v3, 0x7f140917    # @string/status_bar_network_name_separator '-'
+    const v3, 0x7f130993    # @string/status_bar_network_name_separator '-'
 
     .line 69
     invoke-virtual {p0, v3}, Lcom/android/systemui/statusbar/connectivity/SignalController;->getTextIfExists(I)Ljava/lang/CharSequence;
@@ -188,7 +188,7 @@
     iput-object v3, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mNetworkNameSeparator:Ljava/lang/String;
 
     .line 80
-    const v3, 0x104055c    # @android:string/lockscreen_too_many_failed_password_attempts_dialog_message
+    const v3, 0x1040553    # @android:string/lockscreen_sim_locked_message
 
     .line 82
     invoke-virtual {p0, v3}, Lcom/android/systemui/statusbar/connectivity/SignalController;->getTextIfExists(I)Ljava/lang/CharSequence;
@@ -770,7 +770,7 @@
 
     .line 26
     :goto_0
-    sget v0, Lcom/android/settingslib/graph/SignalDrawable;->ICON_RES:I
+    sget v0, Lcom/android/settingslib/graph/SignalDrawable;->$r8$clinit:I
 
     .line 27
     shl-int/lit8 p0, p0, 0x8
@@ -1075,286 +1075,277 @@
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 87
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 90
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 93
-    move-result-object v5
-
-    .line 96
     const-string v6, "CarrierLabel"
 
-    .line 97
-    invoke-static {v6, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 90
+    invoke-static {v5, p1, v6}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 99
+    .line 92
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
-    .line 102
+    .line 95
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 104
+    .line 97
     new-instance v6, Ljava/lang/StringBuilder;
 
-    .line 107
+    .line 100
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 109
+    .line 102
     if-eqz v3, :cond_1
 
-    .line 112
+    .line 105
     if-eqz p1, :cond_1
 
-    .line 114
+    .line 107
     invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 116
+    .line 109
     invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 119
+    .line 112
     :cond_1
     iget-object p1, p0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mNetworkNameSeparator:Ljava/lang/String;
 
-    .line 122
+    .line 115
     if-eqz v0, :cond_3
 
-    .line 124
+    .line 117
     if-eqz v1, :cond_3
 
-    .line 126
+    .line 119
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
-    .line 128
+    .line 121
     move-result v3
 
-    .line 131
+    .line 124
     if-eqz v3, :cond_2
 
-    .line 132
+    .line 125
     invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 134
+    .line 127
     :cond_2
     invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 137
+    .line 130
     :cond_3
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
-    .line 140
+    .line 133
     move-result v1
 
-    .line 143
+    .line 136
     iget-object v3, p0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mNetworkNameDefault:Ljava/lang/String;
 
-    .line 144
+    .line 137
     if-eqz v1, :cond_4
 
-    .line 146
+    .line 139
     move-object v1, v2
 
-    .line 148
+    .line 141
     check-cast v1, Lcom/android/systemui/statusbar/connectivity/MobileState;
 
-    .line 149
+    .line 142
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 151
+    .line 144
     move-result-object v5
 
-    .line 154
+    .line 147
     iput-object v5, v1, Lcom/android/systemui/statusbar/connectivity/MobileState;->networkName:Ljava/lang/String;
 
-    .line 155
+    .line 148
     goto :goto_0
 
-    .line 157
+    .line 150
     :cond_4
     move-object v1, v2
 
-    .line 158
+    .line 151
     check-cast v1, Lcom/android/systemui/statusbar/connectivity/MobileState;
 
-    .line 159
+    .line 152
     iput-object v3, v1, Lcom/android/systemui/statusbar/connectivity/MobileState;->networkName:Ljava/lang/String;
 
-    .line 161
+    .line 154
     :goto_0
     if-eqz v0, :cond_6
 
-    .line 163
+    .line 156
     if-eqz v4, :cond_6
 
-    .line 165
+    .line 158
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->length()I
 
-    .line 167
+    .line 160
     move-result v0
 
-    .line 170
+    .line 163
     if-eqz v0, :cond_5
 
-    .line 171
+    .line 164
     invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 173
+    .line 166
     :cond_5
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 176
+    .line 169
     :cond_6
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->length()I
 
-    .line 179
+    .line 172
     move-result p1
 
-    .line 182
+    .line 175
     if-eqz p1, :cond_7
 
-    .line 183
+    .line 176
     check-cast v2, Lcom/android/systemui/statusbar/connectivity/MobileState;
 
-    .line 185
+    .line 178
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 187
+    .line 180
     move-result-object p1
 
-    .line 190
+    .line 183
     iput-object p1, v2, Lcom/android/systemui/statusbar/connectivity/MobileState;->networkNameData:Ljava/lang/String;
 
-    .line 191
+    .line 184
     goto :goto_1
 
-    .line 193
+    .line 186
     :cond_7
     check-cast v2, Lcom/android/systemui/statusbar/connectivity/MobileState;
 
-    .line 194
+    .line 187
     iput-object v3, v2, Lcom/android/systemui/statusbar/connectivity/MobileState;->networkNameData:Ljava/lang/String;
 
-    .line 196
+    .line 189
     :goto_1
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/connectivity/SignalController;->notifyListenersIfNecessary()V
 
-    .line 198
+    .line 191
     goto :goto_3
 
-    .line 201
+    .line 194
     :cond_8
     const-string v1, "android.intent.action.ACTION_DEFAULT_DATA_SUBSCRIPTION_CHANGED"
 
-    .line 202
+    .line 195
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 204
+    .line 197
     move-result v1
 
-    .line 207
+    .line 200
     if-eqz v1, :cond_b
 
-    .line 208
+    .line 201
     iget-object p1, p0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mDefaults:Lcom/android/settingslib/mobile/MobileStatusTracker$SubscriptionDefaults;
 
-    .line 210
+    .line 203
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 212
+    .line 205
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getActiveDataSubscriptionId()I
 
-    .line 215
+    .line 208
     move-result p1
 
-    .line 218
+    .line 211
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->isValidSubscriptionId(I)Z
 
-    .line 219
+    .line 212
     move-result v0
 
-    .line 222
+    .line 215
     const/4 v1, 0x1
 
-    .line 223
+    .line 216
     if-eqz v0, :cond_a
 
-    .line 224
+    .line 217
     check-cast v2, Lcom/android/systemui/statusbar/connectivity/MobileState;
 
-    .line 226
+    .line 219
     iget-object v0, p0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
-    .line 228
+    .line 221
     invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
 
-    .line 230
+    .line 223
     move-result v0
 
-    .line 233
+    .line 226
     if-ne p1, v0, :cond_9
 
-    .line 234
+    .line 227
     move v3, v1
 
-    .line 236
+    .line 229
     :cond_9
     iput-boolean v3, v2, Lcom/android/systemui/statusbar/connectivity/MobileState;->dataSim:Z
 
-    .line 237
+    .line 230
     goto :goto_2
 
-    .line 239
+    .line 232
     :cond_a
     check-cast v2, Lcom/android/systemui/statusbar/connectivity/MobileState;
 
-    .line 240
+    .line 233
     iput-boolean v1, v2, Lcom/android/systemui/statusbar/connectivity/MobileState;->dataSim:Z
 
-    .line 242
+    .line 235
     :goto_2
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/connectivity/SignalController;->notifyListenersIfNecessary()V
 
-    .line 244
+    .line 237
     goto :goto_3
 
-    .line 247
+    .line 240
     :cond_b
     const-string p0, "android.telephony.action.SUBSCRIPTION_CARRIER_IDENTITY_CHANGED"
 
-    .line 248
+    .line 241
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 250
+    .line 243
     move-result p0
 
-    .line 253
+    .line 246
     if-eqz p0, :cond_c
 
-    .line 254
+    .line 247
     const-string p0, "android.telephony.extra.CARRIER_ID"
 
-    .line 256
+    .line 249
     const/4 v0, -0x1
 
-    .line 258
+    .line 251
     invoke-virtual {p1, p0, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    .line 259
+    .line 252
     move-result p0
 
-    .line 262
+    .line 255
     check-cast v2, Lcom/android/systemui/statusbar/connectivity/MobileState;
 
-    .line 263
+    .line 256
     iput p0, v2, Lcom/android/systemui/statusbar/connectivity/MobileState;->carrierId:I
 
-    .line 265
+    .line 258
     :cond_c
     :goto_3
     return-void
-    .line 267
+    .line 260
 .end method
 
 .method public final notifyListeners(Lcom/android/systemui/statusbar/connectivity/SignalCallback;)V
@@ -1476,7 +1467,7 @@
     iget-object v2, v0, Lcom/android/systemui/statusbar/connectivity/SignalController;->mContext:Landroid/content/Context;
 
     .line 74
-    const v5, 0x7f140319    # @string/data_connection_no_internet 'No internet'
+    const v5, 0x7f130337    # @string/data_connection_no_internet 'No internet'
 
     .line 76
     invoke-virtual {v2, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2179,6 +2170,7 @@
 
     .line 30
     return-void
+    .line 33
 .end method
 
 .method public final updateConnectivity(Ljava/util/BitSet;Ljava/util/BitSet;)V

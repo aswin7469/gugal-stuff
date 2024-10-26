@@ -1,6 +1,6 @@
 .class public final enum Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
 .super Ljava/lang/Enum;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/internal/logging/UiEventLogger$UiEventEnum;
@@ -305,101 +305,89 @@
     invoke-direct {v13, v12, v14, v15}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;-><init>(Ljava/lang/String;II)V
 
     .line 173
-    sput-object v13, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;->LAUNCH_SETTINGS_IN_SHARING_LE_DEVICE_CLICKED:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
+    new-instance v14, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
 
     .line 176
-    new-instance v14, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
-
-    .line 178
     const/16 v12, 0xe
 
-    .line 180
+    .line 178
     const/16 v15, 0x6b6
 
-    .line 182
+    .line 180
     move-object/from16 v17, v13
 
-    .line 184
+    .line 182
     const-string v13, "LAUNCH_SETTINGS_IN_SHARING_NON_LE_DEVICE_CLICKED"
 
-    .line 186
+    .line 184
     invoke-direct {v14, v13, v12, v15}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;-><init>(Ljava/lang/String;II)V
 
-    .line 188
-    sput-object v14, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;->LAUNCH_SETTINGS_IN_SHARING_NON_LE_DEVICE_CLICKED:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
-
-    .line 191
+    .line 186
     new-instance v15, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
 
-    .line 193
+    .line 189
     const/16 v12, 0xf
 
-    .line 195
+    .line 191
     const/16 v13, 0x6b7
 
-    .line 197
+    .line 193
     move-object/from16 v18, v14
 
-    .line 199
+    .line 195
     const-string v14, "LAUNCH_SETTINGS_NOT_SHARING_SAVED_LE_DEVICE_CLICKED"
 
-    .line 201
+    .line 197
     invoke-direct {v15, v14, v12, v13}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;-><init>(Ljava/lang/String;II)V
 
-    .line 203
-    sput-object v15, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;->LAUNCH_SETTINGS_NOT_SHARING_SAVED_LE_DEVICE_CLICKED:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
-
-    .line 206
+    .line 199
     new-instance v14, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
 
-    .line 208
+    .line 202
     const/16 v12, 0x10
 
-    .line 210
+    .line 204
     const/16 v13, 0x6b8
 
-    .line 212
+    .line 206
     move-object/from16 v19, v15
 
-    .line 214
+    .line 208
     const-string v15, "LAUNCH_SETTINGS_NOT_SHARING_CONNECTED_LE_DEVICE_CLICKED"
 
-    .line 216
+    .line 210
     invoke-direct {v14, v15, v12, v13}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;-><init>(Ljava/lang/String;II)V
 
-    .line 218
-    sput-object v14, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;->LAUNCH_SETTINGS_NOT_SHARING_CONNECTED_LE_DEVICE_CLICKED:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
-
-    .line 221
+    .line 212
     move-object/from16 v12, v16
 
-    .line 223
+    .line 215
     move-object/from16 v13, v17
 
-    .line 225
+    .line 217
     move-object/from16 v16, v14
 
-    .line 227
+    .line 219
     move-object/from16 v14, v18
 
-    .line 229
+    .line 221
     move-object/from16 v15, v19
 
-    .line 231
+    .line 223
     filled-new-array/range {v0 .. v16}, [Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
 
-    .line 233
+    .line 225
     move-result-object v0
 
-    .line 236
+    .line 228
     sput-object v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;->$VALUES:[Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogUiEvent;
 
-    .line 237
+    .line 229
     invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;->enumEntries([Ljava/lang/Enum;)Lkotlin/enums/EnumEntries;
 
-    .line 239
+    .line 231
     return-void
-    .line 242
+    .line 234
 .end method
 
 .method public constructor <init>(Ljava/lang/String;II)V

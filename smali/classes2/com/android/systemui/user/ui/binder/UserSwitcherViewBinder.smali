@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/user/ui/binder/UserSwitcherViewBinder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -14,7 +14,7 @@
     move-object v1, p1
 
     .line 3
-    const v0, 0x7f0b0893    # @id/user_switcher_grid_container
+    const v0, 0x7f0a08c6    # @id/user_switcher_grid_container
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -29,7 +29,7 @@
     check-cast v8, Lcom/android/systemui/user/UserSwitcherRootView;
 
     .line 12
-    const v0, 0x7f0b0315    # @id/flow
+    const v0, 0x7f0a0331    # @id/flow
 
     .line 14
     invoke-virtual {v8, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -44,7 +44,7 @@
     check-cast v7, Landroidx/constraintlayout/helper/widget/Flow;
 
     .line 22
-    const v0, 0x7f0b0090    # @id/add
+    const v0, 0x7f0a0090    # @id/add
 
     .line 24
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -53,7 +53,7 @@
     move-result-object v4
 
     .line 30
-    const v0, 0x7f0b01a3    # @id/cancel
+    const v0, 0x7f0a01a9    # @id/cancel
 
     .line 31
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;

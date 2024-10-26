@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/wallet/ui/WalletView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/wallet/ui/WalletCardCarousel$OnCardScrollListener;
@@ -70,12 +70,12 @@
     .line 4
     iput-boolean p2, p0, Lcom/android/systemui/wallet/ui/WalletView;->mIsUdfpsEnabled:Z
 
-    const p2, 0x7f0e0314    # @layout/wallet_fullscreen 'res/layout/wallet_fullscreen.xml'
+    const p2, 0x7f0d0327    # @layout/wallet_fullscreen 'res/layout/wallet_fullscreen.xml'
 
     .line 5
     invoke-static {p1, p2, p0}, Landroid/widget/FrameLayout;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const p2, 0x7f0b01ab    # @id/card_carousel_container
+    const p2, 0x7f0a01b1    # @id/card_carousel_container
 
     .line 6
     invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -86,7 +86,7 @@
 
     iput-object p2, p0, Lcom/android/systemui/wallet/ui/WalletView;->mCardCarouselContainer:Landroid/view/ViewGroup;
 
-    const p2, 0x7f0b01aa    # @id/card_carousel
+    const p2, 0x7f0a01b0    # @id/card_carousel
 
     .line 7
     invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -100,7 +100,7 @@
     .line 8
     iput-object p0, p2, Lcom/android/systemui/wallet/ui/WalletCardCarousel;->mCardScrollListener:Lcom/android/systemui/wallet/ui/WalletCardCarousel$OnCardScrollListener;
 
-    const v0, 0x7f0b0379    # @id/icon
+    const v0, 0x7f0a0399    # @id/icon
 
     .line 9
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -111,7 +111,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/wallet/ui/WalletView;->mIcon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0b03f1    # @id/label
+    const v0, 0x7f0a0412    # @id/label
 
     .line 10
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -122,7 +122,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/wallet/ui/WalletView;->mCardLabel:Landroid/widget/TextView;
 
-    const v0, 0x7f0b08da    # @id/wallet_app_button
+    const v0, 0x7f0a0910    # @id/wallet_app_button
 
     .line 11
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -133,7 +133,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/wallet/ui/WalletView;->mAppButton:Landroid/widget/Button;
 
-    const v0, 0x7f0b08dd    # @id/wallet_toolbar_app_button
+    const v0, 0x7f0a0913    # @id/wallet_toolbar_app_button
 
     .line 12
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -144,7 +144,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/wallet/ui/WalletView;->mToolbarAppButton:Landroid/widget/Button;
 
-    const v0, 0x7f0b08d9    # @id/wallet_action_button
+    const v0, 0x7f0a090f    # @id/wallet_action_button
 
     .line 13
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -155,7 +155,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/wallet/ui/WalletView;->mActionButton:Landroid/widget/Button;
 
-    const v0, 0x7f0b02e6    # @id/error_view
+    const v0, 0x7f0a02ff    # @id/error_view
 
     .line 14
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -166,7 +166,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/wallet/ui/WalletView;->mErrorView:Landroid/widget/TextView;
 
-    const v0, 0x7f0b08db    # @id/wallet_empty_state
+    const v0, 0x7f0a0911    # @id/wallet_empty_state
 
     .line 15
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -642,7 +642,7 @@
     iget p3, p1, Lcom/android/systemui/wallet/ui/WalletCardCarousel;->mCardWidthPx:I
 
     .line 79
-    const p4, 0x7f070171    # @dimen/card_margin '16.0dp'
+    const p4, 0x7f070177    # @dimen/card_margin '16.0dp'
 
     .line 81
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1233,7 +1233,7 @@
     iget p4, p4, Landroid/content/res/Configuration;->orientation:I
 
     .line 221
-    const v4, 0x7f0b02b1    # @id/dynamic_placeholder
+    const v4, 0x7f0a02c4    # @id/dynamic_placeholder
 
     .line 223
     if-ne p4, v2, :cond_a
@@ -1353,7 +1353,7 @@
     move-result-object v0
 
     .line 311
-    const v4, 0x7f070af1    # @dimen/wallet_card_carousel_container_top_margin '48.0dp'
+    const v4, 0x7f070b4f    # @dimen/wallet_card_carousel_container_top_margin '48.0dp'
 
     .line 312
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1509,7 +1509,7 @@
     iget-object p1, p0, Lcom/android/systemui/wallet/ui/WalletView;->mCardLabel:Landroid/widget/TextView;
 
     .line 30
-    const p2, 0x7f140a26    # @string/wallet_empty_state_label 'Get set up to make faster, more secure purchases with your phone'
+    const p2, 0x7f130ab3    # @string/wallet_empty_state_label 'Get set up to make faster, more secure purchases with your phone'
 
     .line 32
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(I)V
@@ -1518,7 +1518,7 @@
     iget-object p1, p0, Lcom/android/systemui/wallet/ui/WalletView;->mEmptyStateView:Landroid/view/ViewGroup;
 
     .line 38
-    const p2, 0x7f0b02c7    # @id/empty_state_icon
+    const p2, 0x7f0a02e0    # @id/empty_state_icon
 
     .line 40
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -1533,7 +1533,7 @@
     iget-object p2, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     .line 49
-    const v0, 0x7f080901    # @drawable/ic_qs_plus 'res/drawable/ic_qs_plus.xml'
+    const v0, 0x7f080925    # @drawable/ic_qs_plus 'res/drawable/ic_qs_plus.xml'
 
     .line 51
     invoke-virtual {p2, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1548,7 +1548,7 @@
     iget-object p1, p0, Lcom/android/systemui/wallet/ui/WalletView;->mEmptyStateView:Landroid/view/ViewGroup;
 
     .line 61
-    const p2, 0x7f0b02c8    # @id/empty_state_title
+    const p2, 0x7f0a02e1    # @id/empty_state_title
 
     .line 63
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/systemui/smartspace/uitemplate/CombinedCardsTemplateCard;
 .super Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -37,7 +37,7 @@
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b030a    # @id/first_sub_card_container
+    const v0, 0x7f0a0326    # @id/first_sub_card_container
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -52,7 +52,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/uitemplate/CombinedCardsTemplateCard;->mFirstSubCard:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 14
-    const v0, 0x7f0b06d9    # @id/second_sub_card_container
+    const v0, 0x7f0a0702    # @id/second_sub_card_container
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -98,167 +98,184 @@
     .locals 9
 
     .line 1
-    invoke-virtual {p1}, Landroid/app/smartspace/SmartspaceTarget;->getTemplateData()Landroid/app/smartspace/uitemplatedata/BaseTemplateData;
+    invoke-virtual {p1}, Landroid/app/smartspace/SmartspaceTarget;->getSmartspaceTargetId()Ljava/lang/String;
 
     .line 2
     move-result-object v0
 
     .line 5
-    check-cast v0, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData;
+    invoke-virtual {p0, v0}, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;->reset(Ljava/lang/String;)V
 
     .line 6
-    const/4 v6, 0x0
-
-    .line 8
-    if-eqz v0, :cond_3
+    invoke-virtual {p1}, Landroid/app/smartspace/SmartspaceTarget;->getTemplateData()Landroid/app/smartspace/uitemplatedata/BaseTemplateData;
 
     .line 9
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData;->getCombinedCardDataList()Ljava/util/List;
+    move-result-object v0
 
-    .line 11
-    move-result-object v1
+    .line 12
+    check-cast v0, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData;
 
-    .line 14
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    .line 13
+    invoke-static {v0}, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggerUtil;->containsValidTemplateType(Landroid/app/smartspace/uitemplatedata/BaseTemplateData;)Z
 
     .line 15
     move-result v1
 
     .line 18
-    if-nez v1, :cond_3
+    const/4 v6, 0x0
 
     .line 19
+    if-eqz v1, :cond_4
+
+    .line 20
     invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData;->getCombinedCardDataList()Ljava/util/List;
 
-    .line 21
-    move-result-object v0
-
-    .line 24
-    invoke-interface {v0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 25
+    .line 22
     move-result-object v1
 
-    .line 28
-    move-object v2, v1
+    .line 25
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
-    .line 29
-    check-cast v2, Landroid/app/smartspace/uitemplatedata/BaseTemplateData;
-
-    .line 30
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    .line 32
+    .line 26
     move-result v1
 
-    .line 35
-    const/4 v7, 0x1
+    .line 29
+    if-eqz v1, :cond_0
 
-    .line 36
-    if-le v1, v7, :cond_0
+    .line 30
+    goto :goto_2
 
-    .line 37
-    invoke-interface {v0, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 32
+    :cond_0
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData;->getCombinedCardDataList()Ljava/util/List;
 
-    .line 39
+    .line 33
     move-result-object v0
 
+    .line 36
+    invoke-interface {v0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 37
+    move-result-object v1
+
+    .line 40
+    move-object v2, v1
+
+    .line 41
+    check-cast v2, Landroid/app/smartspace/uitemplatedata/BaseTemplateData;
+
     .line 42
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    .line 44
+    move-result v1
+
+    .line 47
+    const/4 v7, 0x1
+
+    .line 48
+    if-le v1, v7, :cond_1
+
+    .line 49
+    invoke-interface {v0, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 51
+    move-result-object v0
+
+    .line 54
     check-cast v0, Landroid/app/smartspace/uitemplatedata/BaseTemplateData;
 
-    .line 43
+    .line 55
     :goto_0
     move-object v8, v0
 
-    .line 45
+    .line 57
     goto :goto_1
 
-    .line 46
-    :cond_0
+    .line 58
+    :cond_1
     const/4 v0, 0x0
 
-    .line 47
+    .line 59
     goto :goto_0
 
-    .line 48
+    .line 60
     :goto_1
     iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/CombinedCardsTemplateCard;->mFirstSubCard:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    .line 49
+    .line 61
     move-object v0, p0
 
-    .line 51
+    .line 63
     move-object v3, p1
-
-    .line 52
-    move-object v4, p2
-
-    .line 53
-    move-object v5, p3
-
-    .line 54
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/systemui/smartspace/uitemplate/CombinedCardsTemplateCard;->setupSubCard(Landroidx/constraintlayout/widget/ConstraintLayout;Landroid/app/smartspace/uitemplatedata/BaseTemplateData;Landroid/app/smartspace/SmartspaceTarget;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;)Z
-
-    .line 55
-    move-result v0
-
-    .line 58
-    if-nez v0, :cond_1
-
-    .line 59
-    return v6
-
-    .line 61
-    :cond_1
-    if-eqz v8, :cond_2
-
-    .line 62
-    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/CombinedCardsTemplateCard;->mSecondSubCard:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 64
-    move-object v0, p0
-
-    .line 66
-    move-object v2, v8
-
-    .line 67
-    move-object v3, p1
-
-    .line 68
     move-object v4, p2
 
-    .line 69
+    .line 65
     move-object v5, p3
 
-    .line 70
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/systemui/smartspace/uitemplate/CombinedCardsTemplateCard;->setupSubCard(Landroidx/constraintlayout/widget/ConstraintLayout;Landroid/app/smartspace/uitemplatedata/BaseTemplateData;Landroid/app/smartspace/SmartspaceTarget;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;)Z
+    .line 66
+    invoke-virtual/range {v0 .. v5}, Lcom/google/android/systemui/smartspace/uitemplate/CombinedCardsTemplateCard;->setupSubCard(Landroid/view/ViewGroup;Landroid/app/smartspace/uitemplatedata/BaseTemplateData;Landroid/app/smartspace/SmartspaceTarget;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;)Z
 
-    .line 71
+    .line 67
     move-result v0
 
-    .line 74
-    if-nez v0, :cond_2
+    .line 70
+    if-eqz v0, :cond_3
+
+    .line 71
+    if-eqz v8, :cond_2
+
+    .line 73
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/CombinedCardsTemplateCard;->mSecondSubCard:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 75
-    return v6
+    move-object v0, p0
 
     .line 77
-    :cond_2
-    return v7
+    move-object v2, v8
 
     .line 78
-    :cond_3
-    const-string v0, "CombinedCardsTemplateCard"
+    move-object v3, p1
 
     .line 79
-    const-string v1, "TemplateData is null or empty"
+    move-object v4, p2
+
+    .line 80
+    move-object v5, p3
 
     .line 81
+    invoke-virtual/range {v0 .. v5}, Lcom/google/android/systemui/smartspace/uitemplate/CombinedCardsTemplateCard;->setupSubCard(Landroid/view/ViewGroup;Landroid/app/smartspace/uitemplatedata/BaseTemplateData;Landroid/app/smartspace/SmartspaceTarget;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;)Z
+
+    .line 82
+    move-result v0
+
+    .line 85
+    if-eqz v0, :cond_3
+
+    .line 86
+    :cond_2
+    move v6, v7
+
+    .line 88
+    :cond_3
+    return v6
+
+    .line 89
+    :cond_4
+    :goto_2
+    const-string v0, "CombinedCardsTemplateCard"
+
+    .line 90
+    const-string v1, "TemplateData is null or empty or invalid template type"
+
+    .line 92
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
+    .line 94
     return v6
-    .line 86
+    .line 97
 .end method
 
 .method public final setTextColor(I)V
@@ -328,7 +345,7 @@
     .line 41
 .end method
 
-.method public final setupSubCard(Landroidx/constraintlayout/widget/ConstraintLayout;Landroid/app/smartspace/uitemplatedata/BaseTemplateData;Landroid/app/smartspace/SmartspaceTarget;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;)Z
+.method public final setupSubCard(Landroid/view/ViewGroup;Landroid/app/smartspace/uitemplatedata/BaseTemplateData;Landroid/app/smartspace/SmartspaceTarget;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;)Z
     .locals 5
 
     .line 1
@@ -373,42 +390,42 @@
 
     .line 26
     :pswitch_0
-    const v3, 0x7f0e0270    # @layout/smartspace_sub_card_template_card 'res/layout/smartspace_sub_card_template_card.xml'
+    const v3, 0x7f0d0280    # @layout/smartspace_sub_card_template_card 'res/layout/smartspace_sub_card_template_card.xml'
 
     .line 27
     goto :goto_0
 
     .line 30
     :pswitch_1
-    const v3, 0x7f0e026c    # @layout/smartspace_combined_cards_template_card 'res/layout/smartspace_combined_cards_template_card.xml'
+    const v3, 0x7f0d027c    # @layout/smartspace_combined_cards_template_card 'res/layout/smartspace_combined_cards_template_card.xml'
 
     .line 31
     goto :goto_0
 
     .line 34
     :pswitch_2
-    const v3, 0x7f0e026f    # @layout/smartspace_head_to_head_template_card 'res/layout/smartspace_head_to_head_template_card.xml'
+    const v3, 0x7f0d027f    # @layout/smartspace_head_to_head_template_card 'res/layout/smartspace_head_to_head_template_card.xml'
 
     .line 35
     goto :goto_0
 
     .line 38
     :pswitch_3
-    const v3, 0x7f0e026a    # @layout/smartspace_carousel_template_card 'res/layout/smartspace_carousel_template_card.xml'
+    const v3, 0x7f0d027a    # @layout/smartspace_carousel_template_card 'res/layout/smartspace_carousel_template_card.xml'
 
     .line 39
     goto :goto_0
 
     .line 42
     :pswitch_4
-    const v3, 0x7f0e0272    # @layout/smartspace_sub_list_template_card 'res/layout/smartspace_sub_list_template_card.xml'
+    const v3, 0x7f0d0282    # @layout/smartspace_sub_list_template_card 'res/layout/smartspace_sub_list_template_card.xml'
 
     .line 43
     goto :goto_0
 
     .line 46
     :pswitch_5
-    const v3, 0x7f0e0271    # @layout/smartspace_sub_image_template_card 'res/layout/smartspace_sub_image_template_card.xml'
+    const v3, 0x7f0d0281    # @layout/smartspace_sub_image_template_card 'res/layout/smartspace_sub_image_template_card.xml'
 
     .line 47
     :goto_0
@@ -500,7 +517,7 @@
     move-result-object p0
 
     .line 111
-    const p3, 0x7f0702c6    # @dimen/enhanced_smartspace_card_height '76.0dp'
+    const p3, 0x7f0702f7    # @dimen/enhanced_smartspace_card_height '76.0dp'
 
     .line 112
     invoke-virtual {p0, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/communal/ui/compose/CommunalHubKt$ButtonToEditWidgets$1$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -295,7 +295,7 @@
     move-result-object v0
 
     .line 171
-    const v10, 0x7f14023a    # @string/button_to_configure_widgets_text 'Customize widgets'
+    const v10, 0x7f130241    # @string/button_to_configure_widgets_text 'Customize widgets'
 
     .line 172
     invoke-static {v10, v15}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;

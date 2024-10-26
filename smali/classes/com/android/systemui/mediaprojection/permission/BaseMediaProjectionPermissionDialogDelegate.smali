@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/mediaprojection/permission/BaseMediaProjectionPermissionDialogDelegate;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/phone/DialogDelegate;
@@ -180,13 +180,13 @@
 
     .line 23
     :cond_1
-    const v0, 0x7f0e022e    # @layout/screen_share_dialog 'res/layout/screen_share_dialog.xml'
+    const v0, 0x7f0d023d    # @layout/screen_share_dialog 'res/layout/screen_share_dialog.xml'
 
     .line 26
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->setContentView(I)V
 
     .line 29
-    const v0, 0x7f0b069e    # @id/screen_share_dialog_title
+    const v0, 0x7f0a06c7    # @id/screen_share_dialog_title
 
     .line 32
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
@@ -201,7 +201,7 @@
     iput-object v0, p0, Lcom/android/systemui/mediaprojection/permission/BaseMediaProjectionPermissionDialogDelegate;->dialogTitle:Landroid/widget/TextView;
 
     .line 41
-    const v0, 0x7f0b07f1    # @id/text_warning
+    const v0, 0x7f0a0820    # @id/text_warning
 
     .line 43
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
@@ -263,7 +263,7 @@
 
     .line 82
     :goto_0
-    const v1, 0x7f0b069d    # @id/screen_share_dialog_icon
+    const v1, 0x7f0a06c6    # @id/screen_share_dialog_icon
 
     .line 83
     invoke-virtual {p1, v1}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
@@ -508,7 +508,7 @@
 
     .line 230
     :goto_5
-    const v2, 0x7f0b069f    # @id/screen_share_mode_spinner
+    const v2, 0x7f0a06c8    # @id/screen_share_mode_spinner
 
     .line 231
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
@@ -665,7 +665,7 @@
 
     .line 324
     :cond_13
-    const p0, 0x7f0b05aa    # @id/options_stub
+    const p0, 0x7f0a05cf    # @id/options_stub
 
     .line 325
     invoke-virtual {v0, p0}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public Lcom/android/keyguard/KeyguardPatternView;
 .super Lcom/android/keyguard/KeyguardInputView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/settingslib/animation/AppearAnimationCreator;
@@ -450,7 +450,7 @@
     move-result-object p0
 
     .line 5
-    const v0, 0x1040506    # @android:string/kg_login_submit_button
+    const v0, 0x10404fd    # @android:string/kg_invalid_confirm_pin_hint
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -481,7 +481,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
     .line 2
-    const v0, 0x7f0b0145    # @id/bouncer_message_area
+    const v0, 0x7f0a014b    # @id/bouncer_message_area
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -567,7 +567,7 @@
     move-result-object p1
 
     .line 32
-    const v2, 0x7f05007a    # @bool/update_bouncer_constraints 'true'
+    const v2, 0x7f050088    # @bool/update_bouncer_constraints 'true'
 
     .line 33
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -669,7 +669,7 @@
     invoke-super {p0}, Lcom/android/keyguard/KeyguardInputView;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b0447    # @id/lockPatternView
+    const v0, 0x7f0a0468    # @id/lockPatternView
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -684,7 +684,7 @@
     iput-object v0, p0, Lcom/android/keyguard/KeyguardPatternView;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     .line 14
-    const v0, 0x7f0b03e3    # @id/keyguard_selector_fade_container
+    const v0, 0x7f0a0404    # @id/keyguard_selector_fade_container
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -697,6 +697,7 @@
 
     .line 23
     return-void
+    .line 25
 .end method
 
 .method public final onLayout(ZIIII)V
@@ -971,7 +972,7 @@
     new-instance v1, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda0;
 
     .line 39
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     .line 41
     invoke-direct {v1, p0, v2}, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda0;-><init>(Lcom/android/keyguard/KeyguardPatternView;I)V
@@ -1100,7 +1101,7 @@
     move-result-object v0
 
     .line 36
-    const v2, 0x7f070305    # @dimen/half_opened_bouncer_height_ratio '0.0'
+    const v2, 0x7f07033a    # @dimen/half_opened_bouncer_height_ratio '0.0'
 
     .line 37
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getFloat(I)F
@@ -1135,7 +1136,7 @@
 
     .line 59
     :goto_0
-    const v1, 0x7f0b05d1    # @id/pattern_top_guideline
+    const v1, 0x7f0a05f6    # @id/pattern_top_guideline
 
     .line 60
     invoke-virtual {v2, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->setGuidelinePercent(IF)V

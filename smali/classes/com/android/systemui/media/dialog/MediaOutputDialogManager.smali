@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/dialog/MediaOutputDialogManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -10,13 +10,13 @@
 
 .field public final dialogTransitionAnimator:Lcom/android/systemui/animation/DialogTransitionAnimator;
 
-.field public final mediaOutputControllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$5;
+.field public final mediaOutputControllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$4;
 
 .field public final uiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/broadcast/BroadcastSender;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/animation/DialogTransitionAnimator;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$5;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/broadcast/BroadcastSender;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/animation/DialogTransitionAnimator;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$4;)V
     .locals 0
 
     .line 1
@@ -35,7 +35,7 @@
     iput-object p4, p0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->dialogTransitionAnimator:Lcom/android/systemui/animation/DialogTransitionAnimator;
 
     .line 11
-    iput-object p5, p0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->mediaOutputControllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$5;
+    iput-object p5, p0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->mediaOutputControllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$4;
 
     .line 13
     return-void
@@ -191,54 +191,198 @@
 .end method
 
 .method public final createAndShow(Ljava/lang/String;ZLcom/android/systemui/animation/DialogTransitionAnimator$Controller;ZLandroid/os/UserHandle;Landroid/media/session/MediaSession$Token;)V
-    .locals 9
+    .locals 20
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p3
 
     .line 14
-    iget-object v0, p0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->mediaOutputControllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$5;
+    iget-object v2, v0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->mediaOutputControllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$4;
 
-    invoke-virtual {v0, p1, p5, p6}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$5;->create(Ljava/lang/String;Landroid/os/UserHandle;Landroid/media/session/MediaSession$Token;)Lcom/android/systemui/media/dialog/MediaOutputController;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 15
+    new-instance v19, Lcom/android/systemui/media/dialog/MediaOutputController;
+
+    iget-object v2, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$4;->this$0:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;
+
+    iget-object v3, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
+
+    iget-object v4, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->context:Landroid/content/Context;
+
+    .line 16
+    const-class v3, Landroid/media/session/MediaSessionManager;
+
+    invoke-virtual {v4, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v8, v3
+
+    check-cast v8, Landroid/media/session/MediaSessionManager;
+
+    .line 17
+    invoke-static {v8}, Ldagger/internal/Preconditions;->checkNotNullFromProvides(Ljava/lang/Object;)V
+
+    .line 18
+    iget-object v3, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->wMComponentImpl:Ljava/lang/Object;
+
+    check-cast v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
+
+    iget-object v5, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->provideLocalBluetoothControllerProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v5
 
-    .line 15
-    new-instance p1, Lcom/android/systemui/media/dialog/MediaOutputDialog;
+    move-object v9, v5
 
-    .line 16
-    iget-object v2, p0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->context:Landroid/content/Context;
+    check-cast v9, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
-    .line 17
-    iget-object v7, p0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->uiEventLogger:Lcom/android/internal/logging/UiEventLogger;
+    iget-object v5, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->activityStarterImplProvider:Ldagger/internal/DelegateFactory;
 
-    .line 18
-    iget-object v4, p0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->broadcastSender:Lcom/android/systemui/broadcast/BroadcastSender;
+    invoke-virtual {v5}, Ldagger/internal/DelegateFactory;->get()Ljava/lang/Object;
 
-    iget-object v6, p0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->dialogTransitionAnimator:Lcom/android/systemui/animation/DialogTransitionAnimator;
+    move-result-object v5
 
-    move-object v1, p1
+    move-object v10, v5
 
-    move v3, p2
+    check-cast v10, Lcom/android/systemui/plugins/ActivityStarter;
 
-    move v8, p4
+    iget-object v5, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->notifPipelineProvider:Ldagger/internal/Provider;
 
-    invoke-direct/range {v1 .. v8}, Lcom/android/systemui/media/dialog/MediaOutputDialog;-><init>(Landroid/content/Context;ZLcom/android/systemui/broadcast/BroadcastSender;Lcom/android/systemui/media/dialog/MediaOutputController;Lcom/android/systemui/animation/DialogTransitionAnimator;Lcom/android/internal/logging/UiEventLogger;Z)V
+    invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    if-eqz p3, :cond_0
+    move-result-object v5
+
+    move-object v11, v5
+
+    check-cast v11, Lcom/android/systemui/statusbar/notification/collection/notifcollection/CommonNotifCollection;
+
+    iget-object v5, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->provideDialogTransitionAnimatorProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v12, v5
+
+    check-cast v12, Lcom/android/systemui/animation/DialogTransitionAnimator;
+
+    iget-object v5, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->nearbyMediaDevicesManagerProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v13, v5
+
+    check-cast v13, Lcom/android/systemui/media/nearby/NearbyMediaDevicesManager;
+
+    iget-object v2, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
+
+    iget-object v5, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->provideAudioManagerProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v14, v5
+
+    check-cast v14, Landroid/media/AudioManager;
+
+    iget-object v5, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->providePowerExemptionManagerProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v15, v5
+
+    check-cast v15, Landroid/os/PowerExemptionManager;
+
+    iget-object v2, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->provideKeyguardManagerProvider:Ldagger/internal/Provider;
+
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object/from16 v16, v2
+
+    check-cast v16, Landroid/app/KeyguardManager;
+
+    iget-object v2, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->featureFlagsClassicReleaseProvider:Ldagger/internal/DelegateFactory;
+
+    invoke-virtual {v2}, Ldagger/internal/DelegateFactory;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object/from16 v17, v2
+
+    check-cast v17, Lcom/android/systemui/flags/FeatureFlags;
+
+    iget-object v2, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->provideUserTrackerProvider:Ldagger/internal/DelegateFactory;
+
+    invoke-virtual {v2}, Ldagger/internal/DelegateFactory;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object/from16 v18, v2
+
+    check-cast v18, Lcom/android/systemui/settings/UserTracker;
+
+    move-object/from16 v3, v19
+
+    move-object/from16 v5, p1
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    invoke-direct/range {v3 .. v18}, Lcom/android/systemui/media/dialog/MediaOutputController;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/UserHandle;Landroid/media/session/MediaSession$Token;Landroid/media/session/MediaSessionManager;Lcom/android/settingslib/bluetooth/LocalBluetoothManager;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/statusbar/notification/collection/notifcollection/CommonNotifCollection;Lcom/android/systemui/animation/DialogTransitionAnimator;Lcom/android/systemui/media/nearby/NearbyMediaDevicesManager;Landroid/media/AudioManager;Landroid/os/PowerExemptionManager;Landroid/app/KeyguardManager;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/settings/UserTracker;)V
 
     .line 19
-    sget-object p2, Lcom/android/systemui/animation/DialogTransitionAnimator;->TIMINGS:Lcom/android/systemui/animation/TransitionAnimator$Timings;
-
-    const/4 p2, 0x0
+    new-instance v2, Lcom/android/systemui/media/dialog/MediaOutputDialog;
 
     .line 20
-    iget-object p0, p0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->dialogTransitionAnimator:Lcom/android/systemui/animation/DialogTransitionAnimator;
+    iget-object v4, v0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->context:Landroid/content/Context;
 
-    invoke-virtual {p0, p1, p3, p2}, Lcom/android/systemui/animation/DialogTransitionAnimator;->show(Landroid/app/Dialog;Lcom/android/systemui/animation/DialogTransitionAnimator$Controller;Z)V
+    .line 21
+    iget-object v9, v0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->uiEventLogger:Lcom/android/internal/logging/UiEventLogger;
+
+    .line 22
+    iget-object v6, v0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->broadcastSender:Lcom/android/systemui/broadcast/BroadcastSender;
+
+    iget-object v8, v0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->dialogTransitionAnimator:Lcom/android/systemui/animation/DialogTransitionAnimator;
+
+    move-object v3, v2
+
+    move/from16 v5, p2
+
+    move-object/from16 v7, v19
+
+    move/from16 v10, p4
+
+    invoke-direct/range {v3 .. v10}, Lcom/android/systemui/media/dialog/MediaOutputDialog;-><init>(Landroid/content/Context;ZLcom/android/systemui/broadcast/BroadcastSender;Lcom/android/systemui/media/dialog/MediaOutputController;Lcom/android/systemui/animation/DialogTransitionAnimator;Lcom/android/internal/logging/UiEventLogger;Z)V
+
+    if-eqz v1, :cond_0
+
+    .line 23
+    sget-object v3, Lcom/android/systemui/animation/DialogTransitionAnimator;->TIMINGS:Lcom/android/systemui/animation/TransitionAnimator$Timings;
+
+    const/4 v3, 0x0
+
+    .line 24
+    iget-object v0, v0, Lcom/android/systemui/media/dialog/MediaOutputDialogManager;->dialogTransitionAnimator:Lcom/android/systemui/animation/DialogTransitionAnimator;
+
+    invoke-virtual {v0, v2, v1, v3}, Lcom/android/systemui/animation/DialogTransitionAnimator;->show(Landroid/app/Dialog;Lcom/android/systemui/animation/DialogTransitionAnimator$Controller;Z)V
 
     goto :goto_0
 
-    .line 21
+    .line 25
     :cond_0
-    invoke-virtual {p1}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
 
     :goto_0
     return-void

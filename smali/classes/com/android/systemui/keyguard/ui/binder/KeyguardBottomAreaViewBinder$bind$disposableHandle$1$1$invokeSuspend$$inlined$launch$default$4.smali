@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$bind$disposableHandle$1$1$invokeSuspend$$inlined$launch$default$4;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -161,7 +161,7 @@
     move-exception p1
 
     .line 29
-    goto/16 :goto_4
+    goto/16 :goto_3
 
     .line 30
     :cond_0
@@ -339,41 +339,34 @@
     return-object p0
 
     .line 134
-    :goto_3
-    move-object p0, v1
-
-    .line 135
-    move v1, v4
-
-    .line 136
-    move v0, v5
-
-    .line 137
-    goto :goto_4
-
-    .line 138
     :catchall_1
     move-exception p1
 
-    .line 139
-    goto :goto_3
+    .line 135
+    move-object p0, v1
 
-    .line 140
-    :goto_4
+    .line 136
+    move v1, v4
+
+    .line 137
+    move v0, v5
+
+    .line 138
+    :goto_3
     if-eqz v1, :cond_a
 
-    .line 141
+    .line 139
     invoke-static {v0, v3}, Lcom/android/app/tracing/TraceProxy_platformKt;->asyncTraceForTrackEnd(ILjava/lang/String;)V
 
-    .line 143
+    .line 141
     :cond_a
     if-eqz p0, :cond_b
 
-    .line 146
+    .line 144
     invoke-virtual {p0}, Lcom/android/app/tracing/coroutines/TraceData;->endSpan()V
 
-    .line 148
+    .line 146
     :cond_b
     throw p1
-    .line 151
+    .line 149
 .end method

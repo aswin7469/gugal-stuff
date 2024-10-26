@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/MagnificationModeSwitch;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/accessibility/MagnificationGestureDetector$OnGestureListener;
@@ -157,7 +157,7 @@
     move-result-object p3
 
     .line 68
-    const p4, 0x7f070640    # @dimen/magnification_switch_button_size '56.0dp'
+    const p4, 0x7f070682    # @dimen/magnification_switch_button_size '56.0dp'
 
     .line 69
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -294,7 +294,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f0808e5    # @drawable/ic_open_in_new_window 'res/drawable/ic_open_in_new_window.xml'
+    const p0, 0x7f08090a    # @drawable/ic_open_in_new_window 'res/drawable/ic_open_in_new_window.xml'
 
     .line 2
     return p0
@@ -316,7 +316,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f07063e    # @dimen/magnification_switch_button_margin '16.0dp'
+    const v1, 0x7f070680    # @dimen/magnification_switch_button_margin '16.0dp'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -559,7 +559,7 @@
     move-result-object p1
 
     .line 84
-    const v0, 0x7f070640    # @dimen/magnification_switch_button_size '56.0dp'
+    const v0, 0x7f070682    # @dimen/magnification_switch_button_size '56.0dp'
 
     .line 85
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1059,7 +1059,7 @@
     move-result-object p1
 
     .line 114
-    const p2, 0x7f030067    # @array/services_always_show_magnification_settings
+    const p2, 0x7f030070    # @array/services_always_show_magnification_settings
 
     .line 115
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;

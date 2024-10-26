@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -146,7 +146,7 @@
     move-result-object v9
 
     .line 68
-    const v11, 0x7f0c0026    # @integer/config_face_auth_supported_posture '0'
+    const v11, 0x7f0b002b    # @integer/config_face_auth_supported_posture '0'
 
     .line 69
     invoke-virtual {v9, v11}, Landroid/content/res/Resources;->getInteger(I)I
@@ -620,6 +620,7 @@
 
     .line 398
     return-void
+    .line 400
 .end method
 
 

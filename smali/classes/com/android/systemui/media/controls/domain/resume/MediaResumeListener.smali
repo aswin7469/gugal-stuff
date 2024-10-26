@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/domain/resume/MediaResumeListener;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/media/controls/domain/pipeline/MediaDataManager$Listener;
@@ -31,6 +31,8 @@
 .field public final tunerService:Lcom/android/systemui/tuner/TunerService;
 
 .field public useMediaResumption:Z
+
+.field public final userTracker:Lcom/android/systemui/settings/UserTracker;
 
 .field public final userTrackerCallback:Lcom/android/systemui/media/controls/domain/resume/MediaResumeListener$userTrackerCallback$1;
 
@@ -743,129 +745,120 @@
     iget-object p3, p3, Lcom/android/systemui/media/controls/shared/model/MediaData;->packageName:Ljava/lang/String;
 
     .line 65
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 67
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 70
-    move-result-object p2
-
-    .line 73
     const-string p4, "MediaResumeListener"
 
-    .line 74
-    invoke-static {p4, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 67
+    invoke-static {p2, p3, p4}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
+    .line 69
     iget-object p2, p0, Lcom/android/systemui/media/controls/domain/resume/MediaResumeListener;->context:Landroid/content/Context;
 
-    .line 79
+    .line 72
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    .line 81
+    .line 74
     move-result-object p2
 
-    .line 84
+    .line 77
     new-instance p4, Landroid/content/Intent;
 
-    .line 85
+    .line 78
     const-string p6, "android.media.browse.MediaBrowserService"
 
-    .line 87
+    .line 80
     invoke-direct {p4, p6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 89
+    .line 82
     iget p6, p0, Lcom/android/systemui/media/controls/domain/resume/MediaResumeListener;->currentUserId:I
 
-    .line 92
+    .line 85
     invoke-virtual {p2, p4, p5, p6}, Landroid/content/pm/PackageManager;->queryIntentServicesAsUser(Landroid/content/Intent;II)Ljava/util/List;
 
-    .line 94
+    .line 87
     move-result-object p2
 
-    .line 97
+    .line 90
     new-instance p4, Ljava/util/ArrayList;
 
-    .line 98
+    .line 91
     invoke-direct {p4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 100
+    .line 93
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 103
+    .line 96
     move-result-object p2
 
-    .line 106
+    .line 99
     :cond_4
     :goto_1
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 107
+    .line 100
     move-result p5
 
-    .line 110
+    .line 103
     if-eqz p5, :cond_5
 
-    .line 111
+    .line 104
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 113
+    .line 106
     move-result-object p5
 
-    .line 116
+    .line 109
     move-object p6, p5
 
-    .line 117
+    .line 110
     check-cast p6, Landroid/content/pm/ResolveInfo;
 
-    .line 118
+    .line 111
     iget-object p6, p6, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 120
+    .line 113
     iget-object p6, p6, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
 
-    .line 122
+    .line 115
     invoke-static {p6, p3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 124
+    .line 117
     move-result p6
 
-    .line 127
+    .line 120
     if-eqz p6, :cond_4
 
-    .line 128
+    .line 121
     invoke-interface {p4, p5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 130
+    .line 123
     goto :goto_1
 
-    .line 133
+    .line 126
     :cond_5
     invoke-virtual {p4}, Ljava/util/ArrayList;->size()I
 
-    .line 134
+    .line 127
     move-result p2
 
-    .line 137
+    .line 130
     if-lez p2, :cond_6
 
-    .line 138
+    .line 131
     iget-object p2, p0, Lcom/android/systemui/media/controls/domain/resume/MediaResumeListener;->backgroundExecutor:Ljava/util/concurrent/Executor;
 
-    .line 140
+    .line 133
     new-instance p3, Lcom/android/systemui/media/controls/domain/resume/MediaResumeListener$onMediaDataLoaded$1;
 
-    .line 142
+    .line 135
     invoke-direct {p3, p0, p1, p4}, Lcom/android/systemui/media/controls/domain/resume/MediaResumeListener$onMediaDataLoaded$1;-><init>(Lcom/android/systemui/media/controls/domain/resume/MediaResumeListener;Ljava/lang/String;Ljava/util/List;)V
 
-    .line 144
+    .line 137
     invoke-interface {p2, p3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 147
+    .line 140
     :cond_6
     return-void
-    .line 150
+    .line 143
 .end method
 
 .method public final setMediaBrowser(Lcom/android/systemui/media/controls/domain/resume/ResumeMediaBrowser;)V
@@ -1006,7 +999,7 @@
     const-string v2, "browser_components_"
 
     .line 77
-    invoke-static {p0, v2}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v2}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 79
     move-result-object p0

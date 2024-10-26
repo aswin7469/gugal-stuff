@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/WindowMagnificationSettings;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/accessibility/MagnificationGestureDetector$OnGestureListener;
@@ -685,7 +685,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mContext:Landroid/content/Context;
 
     .line 4
-    const v2, 0x7f0e0315    # @layout/window_magnification_settings_view 'res/layout/window_magnification_settings_view.xml'
+    const v2, 0x7f0d032a    # @layout/window_magnification_settings_view 'res/layout/window_magnification_settings_view.xml'
 
     .line 6
     const/4 v3, 0x0
@@ -739,7 +739,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 44
-    const v3, 0x7f0b046d    # @id/magnifier_panel_view
+    const v3, 0x7f0a0491    # @id/magnifier_panel_view
 
     .line 46
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -754,7 +754,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 55
-    const v3, 0x7f0b046f    # @id/magnifier_small_button
+    const v3, 0x7f0a0493    # @id/magnifier_small_button
 
     .line 57
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -772,7 +772,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 68
-    const v3, 0x7f0b046c    # @id/magnifier_medium_button
+    const v3, 0x7f0a0490    # @id/magnifier_medium_button
 
     .line 70
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -790,7 +790,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 81
-    const v3, 0x7f0b046b    # @id/magnifier_large_button
+    const v3, 0x7f0a048f    # @id/magnifier_large_button
 
     .line 83
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -808,7 +808,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 94
-    const v3, 0x7f0b0465    # @id/magnifier_done_button
+    const v3, 0x7f0a0489    # @id/magnifier_done_button
 
     .line 96
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -826,7 +826,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 107
-    const v3, 0x7f0b046e    # @id/magnifier_size_title
+    const v3, 0x7f0a0492    # @id/magnifier_size_title
 
     .line 109
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -844,7 +844,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 120
-    const v3, 0x7f0b0466    # @id/magnifier_edit_button
+    const v3, 0x7f0a048a    # @id/magnifier_edit_button
 
     .line 122
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -862,7 +862,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 133
-    const v3, 0x7f0b0467    # @id/magnifier_full_button
+    const v3, 0x7f0a048b    # @id/magnifier_full_button
 
     .line 135
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -880,7 +880,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 146
-    const v3, 0x7f0b0469    # @id/magnifier_horizontal_lock_title
+    const v3, 0x7f0a048d    # @id/magnifier_horizontal_lock_title
 
     .line 148
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -898,7 +898,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 159
-    const v3, 0x7f0b0470    # @id/magnifier_zoom_slider
+    const v3, 0x7f0a0494    # @id/magnifier_zoom_slider
 
     .line 161
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -973,7 +973,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 209
-    const v3, 0x7f0b046a    # @id/magnifier_horizontal_lock_view
+    const v3, 0x7f0a048e    # @id/magnifier_horizontal_lock_view
 
     .line 211
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -991,7 +991,7 @@
     iget-object v1, p0, Lcom/android/systemui/accessibility/WindowMagnificationSettings;->mSettingView:Landroid/widget/LinearLayout;
 
     .line 222
-    const v3, 0x7f0b0468    # @id/magnifier_horizontal_lock_switch
+    const v3, 0x7f0a048c    # @id/magnifier_horizontal_lock_switch
 
     .line 224
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1464,7 +1464,7 @@
     move-result-object v0
 
     .line 103
-    const v1, 0x7f1400a5    # @string/accessibility_magnification_settings_panel_description 'Magnification settings'
+    const v1, 0x7f1300a6    # @string/accessibility_magnification_settings_panel_description 'Magnification settings'
 
     .line 104
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

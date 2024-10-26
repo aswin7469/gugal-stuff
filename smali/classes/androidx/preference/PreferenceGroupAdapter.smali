@@ -1,6 +1,6 @@
 .class public final Landroidx/preference/PreferenceGroupAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -396,7 +396,7 @@
     invoke-direct {v2, v3, v6}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 145
-    const v3, 0x7f0e00b8    # @layout/expand_button 'res/layout/expand_button.xml'
+    const v3, 0x7f0d00c1    # @layout/expand_button 'res/layout/expand_button.xml'
 
     .line 148
     iput v3, v2, Landroidx/preference/Preference;->mLayoutResId:I
@@ -405,7 +405,7 @@
     iget-object v3, v2, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
     .line 153
-    const v7, 0x7f0806d7    # @drawable/ic_arrow_down_24dp 'res/drawable/ic_arrow_down_24dp.xml'
+    const v7, 0x7f0806e6    # @drawable/ic_arrow_down_24dp 'res/drawable/ic_arrow_down_24dp.xml'
 
     .line 155
     invoke-static {v7, v3}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(ILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
@@ -420,7 +420,7 @@
     iput v7, v2, Landroidx/preference/Preference;->mIconResId:I
 
     .line 165
-    const v3, 0x7f140389    # @string/expand_button_title 'Advanced'
+    const v3, 0x7f1303c1    # @string/expand_button_title 'Advanced'
 
     .line 167
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setTitle(I)V
@@ -567,7 +567,7 @@
     iget-object v7, v2, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
     .line 262
-    const v9, 0x7f14093a    # @string/summary_collapsed_preference_list '%1$s, %2$s'
+    const v9, 0x7f1309bb    # @string/summary_collapsed_preference_list '%1$s, %2$s'
 
     .line 264
     filled-new-array {v6, v8}, [Ljava/lang/Object;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/MaximizeMenu$MaximizeMenuView;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -57,7 +57,7 @@
     move-result-object p2
 
     .line 12
-    const p3, 0x7f0e00ab    # @layout/desktop_mode_window_decor_maximize_menu 'res/layout/desktop_mode_window_decor_maximize_menu.xml'
+    const p3, 0x7f0d00b4    # @layout/desktop_mode_window_decor_maximize_menu 'res/layout/desktop_mode_window_decor_maximize_menu.xml'
 
     .line 13
     const/4 v0, 0x0
@@ -72,7 +72,7 @@
     iput-object p2, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu$MaximizeMenuView;->rootView:Landroid/view/View;
 
     .line 21
-    const p3, 0x7f0b0496    # @id/maximize_menu_maximize_window_text
+    const p3, 0x7f0a04ba    # @id/maximize_menu_maximize_window_text
 
     .line 23
     invoke-virtual {p2, p3}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -87,7 +87,7 @@
     iput-object p3, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu$MaximizeMenuView;->maximizeText:Landroid/widget/TextView;
 
     .line 32
-    const v1, 0x7f0b0495    # @id/maximize_menu_maximize_button
+    const v1, 0x7f0a04b9    # @id/maximize_menu_maximize_button
 
     .line 34
     invoke-virtual {p2, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -102,7 +102,7 @@
     iput-object v1, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu$MaximizeMenuView;->maximizeButton:Landroid/widget/Button;
 
     .line 43
-    const v2, 0x7f0b049a    # @id/maximize_menu_snap_window_text
+    const v2, 0x7f0a04be    # @id/maximize_menu_snap_window_text
 
     .line 45
     invoke-virtual {p2, v2}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -117,7 +117,7 @@
     iput-object v2, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu$MaximizeMenuView;->snapWindowText:Landroid/widget/TextView;
 
     .line 54
-    const v2, 0x7f0b0499    # @id/maximize_menu_snap_right_button
+    const v2, 0x7f0a04bd    # @id/maximize_menu_snap_right_button
 
     .line 56
     invoke-virtual {p2, v2}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -132,7 +132,7 @@
     iput-object v2, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu$MaximizeMenuView;->snapRightButton:Landroid/widget/Button;
 
     .line 65
-    const v3, 0x7f0b0497    # @id/maximize_menu_snap_left_button
+    const v3, 0x7f0a04bb    # @id/maximize_menu_snap_left_button
 
     .line 67
     invoke-virtual {p2, v3}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -147,7 +147,7 @@
     iput-object v3, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu$MaximizeMenuView;->snapLeftButton:Landroid/widget/Button;
 
     .line 76
-    const v4, 0x7f0b0498    # @id/maximize_menu_snap_menu_layout
+    const v4, 0x7f0a04bc    # @id/maximize_menu_snap_menu_layout
 
     .line 78
     invoke-virtual {p2, v4}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -174,7 +174,7 @@
     move-result-object v5
 
     .line 97
-    const v6, 0x7f070261    # @dimen/desktop_mode_maximize_menu_buttons_outline_radius '6.0dp'
+    const v6, 0x7f070283    # @dimen/desktop_mode_maximize_menu_buttons_outline_radius '6.0dp'
 
     .line 98
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -192,7 +192,7 @@
     move-result-object v5
 
     .line 110
-    const v6, 0x7f070262    # @dimen/desktop_mode_maximize_menu_buttons_outline_stroke '1.0dp'
+    const v6, 0x7f070284    # @dimen/desktop_mode_maximize_menu_buttons_outline_stroke '1.0dp'
 
     .line 111
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -210,7 +210,7 @@
     move-result-object v5
 
     .line 123
-    const v6, 0x7f07025f    # @dimen/desktop_mode_maximize_menu_buttons_fill_padding '4.0dp'
+    const v6, 0x7f070281    # @dimen/desktop_mode_maximize_menu_buttons_fill_padding '4.0dp'
 
     .line 124
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -228,7 +228,7 @@
     move-result-object p1
 
     .line 136
-    const v5, 0x7f070260    # @dimen/desktop_mode_maximize_menu_buttons_fill_radius '4.0dp'
+    const v5, 0x7f070282    # @dimen/desktop_mode_maximize_menu_buttons_fill_radius '4.0dp'
 
     .line 137
     invoke-virtual {p1, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -298,7 +298,7 @@
     iget-object v0, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu$MaximizeMenuView;->snapButtonsLayout:Landroid/view/View;
 
     .line 2
-    const v1, 0x7f080682    # @drawable/desktop_mode_maximize_menu_layout_background_on_hover 'res/drawable/desktop_mode_maximize_menu_layout_background_on_hover.xml'
+    const v1, 0x7f08068a    # @drawable/desktop_mode_maximize_menu_layout_background_on_hover 'res/drawable/desktop_mode_maximize_menu_layout_background_on_hover.xml'
 
     .line 4
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
@@ -1172,7 +1172,7 @@
     iget-object p1, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu$MaximizeMenuView;->snapButtonsLayout:Landroid/view/View;
 
     .line 122
-    const v0, 0x7f080681    # @drawable/desktop_mode_maximize_menu_layout_background 'res/drawable/desktop_mode_maximize_menu_layout_background.xml'
+    const v0, 0x7f080689    # @drawable/desktop_mode_maximize_menu_layout_background 'res/drawable/desktop_mode_maximize_menu_layout_background.xml'
 
     .line 124
     invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundResource(I)V

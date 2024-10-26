@@ -1,6 +1,6 @@
 .class final Landroidx/compose/material3/SearchBar_androidKt$SearchBar$2$1$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -219,120 +219,114 @@
     iget-object v1, p0, Landroidx/compose/material3/SearchBar_androidKt$SearchBar$2$1$1;->$animationProgress:Landroidx/compose/animation/core/Animatable;
 
     .line 66
-    iget-object v1, v1, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {v1}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 68
-    iget-object v1, v1, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 70
-    invoke-virtual {v1}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 72
     move-result-object v1
 
-    .line 75
+    .line 71
     check-cast v1, Ljava/lang/Number;
 
-    .line 76
+    .line 72
     invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
 
-    .line 78
+    .line 74
     move-result v1
 
-    .line 81
+    .line 77
     check-cast p1, Landroidx/compose/runtime/SnapshotMutableFloatStateImpl;
 
-    .line 82
+    .line 78
     invoke-virtual {p1, v1}, Landroidx/compose/runtime/SnapshotMutableFloatStateImpl;->setFloatValue(F)V
 
-    .line 84
+    .line 80
     iget-object p1, p0, Landroidx/compose/material3/SearchBar_androidKt$SearchBar$2$1$1;->$onExpandedChange:Lkotlin/jvm/functions/Function1;
 
-    .line 87
+    .line 83
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 89
+    .line 85
     invoke-interface {p1, v1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 91
+    .line 87
     goto :goto_2
 
-    .line 94
+    .line 90
     :catch_0
     iget-object v4, p0, Landroidx/compose/material3/SearchBar_androidKt$SearchBar$2$1$1;->$animationProgress:Landroidx/compose/animation/core/Animatable;
 
-    .line 95
+    .line 91
     new-instance v5, Ljava/lang/Float;
 
-    .line 97
+    .line 93
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 99
+    .line 95
     invoke-direct {v5, p1}, Ljava/lang/Float;-><init>(F)V
 
-    .line 101
+    .line 97
     sget-object v6, Landroidx/compose/material3/SearchBar_androidKt;->AnimationPredictiveBackExitFloatSpec:Landroidx/compose/animation/core/TweenSpec;
 
-    .line 104
+    .line 100
     iput v3, p0, Landroidx/compose/material3/SearchBar_androidKt$SearchBar$2$1$1;->label:I
 
-    .line 106
+    .line 102
     const/4 v8, 0x0
 
-    .line 108
+    .line 104
     const/16 v10, 0xc
 
-    .line 109
+    .line 105
     const/4 v7, 0x0
 
-    .line 111
+    .line 107
     move-object v9, p0
 
-    .line 112
+    .line 108
     invoke-static/range {v4 .. v10}, Landroidx/compose/animation/core/Animatable;->animateTo$default(Landroidx/compose/animation/core/Animatable;Ljava/lang/Object;Landroidx/compose/animation/core/AnimationSpec;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;I)Ljava/lang/Object;
 
-    .line 113
+    .line 109
     move-result-object p1
 
-    .line 116
+    .line 112
     if-ne p1, v0, :cond_4
 
-    .line 117
+    .line 113
     return-object v0
 
-    .line 119
+    .line 115
     :cond_4
     :goto_1
     iget-object p1, p0, Landroidx/compose/material3/SearchBar_androidKt$SearchBar$2$1$1;->$finalBackProgress:Landroidx/compose/runtime/MutableFloatState;
 
-    .line 120
+    .line 116
     check-cast p1, Landroidx/compose/runtime/SnapshotMutableFloatStateImpl;
 
-    .line 122
+    .line 118
     invoke-virtual {p1, v2}, Landroidx/compose/runtime/SnapshotMutableFloatStateImpl;->setFloatValue(F)V
 
-    .line 124
+    .line 120
     iget-object p1, p0, Landroidx/compose/material3/SearchBar_androidKt$SearchBar$2$1$1;->$firstBackEvent:Landroidx/compose/runtime/MutableState;
 
-    .line 127
+    .line 123
     const/4 v0, 0x0
 
-    .line 129
+    .line 125
     invoke-interface {p1, v0}, Landroidx/compose/runtime/MutableState;->setValue(Ljava/lang/Object;)V
 
-    .line 130
+    .line 126
     iget-object p0, p0, Landroidx/compose/material3/SearchBar_androidKt$SearchBar$2$1$1;->$currentBackEvent:Landroidx/compose/runtime/MutableState;
 
-    .line 133
+    .line 129
     invoke-interface {p0, v0}, Landroidx/compose/runtime/MutableState;->setValue(Ljava/lang/Object;)V
 
-    .line 135
+    .line 131
     :goto_2
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 138
+    .line 134
     return-object p0
-    .line 140
+    .line 136
 .end method

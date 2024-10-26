@@ -1,6 +1,6 @@
 .class public Lcom/google/android/material/bottomsheet/BottomSheetDragHandleView;
 .super Landroidx/appcompat/widget/AppCompatImageView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener;
@@ -56,7 +56,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
-    const v0, 0x7f150614    # @style/Widget.Material3.BottomSheet.DragHandle
+    const v0, 0x7f14061e    # @style/Widget.Material3.BottomSheet.DragHandle
 
     .line 3
     invoke-static {p1, p2, p3, v0}, Lcom/google/android/material/theme/overlay/MaterialThemeOverlay;->wrap(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
@@ -70,7 +70,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f14020c    # @string/bottomsheet_action_expand 'Expand the bottom sheet'
+    const p2, 0x7f130213    # @string/bottomsheet_action_expand 'Expand the bottom sheet'
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -83,7 +83,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f14020b    # @string/bottomsheet_action_collapse 'Collapse the bottom sheet'
+    const p2, 0x7f130212    # @string/bottomsheet_action_collapse 'Collapse the bottom sheet'
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -96,7 +96,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f14020e    # @string/bottomsheet_drag_handle_clicked 'Drag handle double-tapped'
+    const p2, 0x7f130215    # @string/bottomsheet_drag_handle_clicked 'Drag handle double-tapped'
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -453,7 +453,6 @@
 
     .line 31
     return-void
-    .line 34
 .end method
 
 .method public final onDetachedFromWindow()V

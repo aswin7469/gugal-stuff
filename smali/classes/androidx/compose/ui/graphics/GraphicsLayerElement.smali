@@ -1,6 +1,6 @@
 .class final Landroidx/compose/ui/graphics/GraphicsLayerElement;
 .super Landroidx/compose/ui/node/ModifierNodeElement;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -13,6 +13,8 @@
 .field public final clip:Z
 
 .field public final compositingStrategy:I
+
+.field public final renderEffect:Landroidx/compose/ui/graphics/AndroidRenderEffect;
 
 .field public final rotationX:F
 
@@ -38,7 +40,7 @@
 
 
 # direct methods
-.method public constructor <init>(FFFFFFFFFFJLandroidx/compose/ui/graphics/Shape;ZJJI)V
+.method public constructor <init>(FFFFFFFFFFJLandroidx/compose/ui/graphics/Shape;ZLandroidx/compose/ui/graphics/AndroidRenderEffect;JJI)V
     .locals 3
 
     .line 1
@@ -126,19 +128,19 @@
     iput-boolean v1, v0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->clip:Z
 
     .line 45
-    move-wide/from16 v1, p15
+    move-wide/from16 v1, p16
 
     .line 47
     iput-wide v1, v0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->ambientShadowColor:J
 
     .line 49
-    move-wide/from16 v1, p17
+    move-wide/from16 v1, p18
 
     .line 51
     iput-wide v1, v0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->spotShadowColor:J
 
     .line 53
-    move/from16 v1, p19
+    move/from16 v1, p20
 
     .line 55
     iput v1, v0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->compositingStrategy:I
@@ -536,85 +538,88 @@
 
     .line 151
     :cond_d
-    const/4 v1, 0x0
+    iget-object v1, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->renderEffect:Landroidx/compose/ui/graphics/AndroidRenderEffect;
 
     .line 152
-    invoke-static {v1, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v3, p1, Landroidx/compose/ui/graphics/GraphicsLayerElement;->renderEffect:Landroidx/compose/ui/graphics/AndroidRenderEffect;
 
-    .line 153
-    move-result v1
+    .line 154
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 156
-    if-nez v1, :cond_e
-
-    .line 157
-    return v2
+    move-result v1
 
     .line 159
+    if-nez v1, :cond_e
+
+    .line 160
+    return v2
+
+    .line 162
     :cond_e
     iget-wide v3, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->ambientShadowColor:J
 
-    .line 160
+    .line 163
     iget-wide v5, p1, Landroidx/compose/ui/graphics/GraphicsLayerElement;->ambientShadowColor:J
 
-    .line 162
+    .line 165
     invoke-static {v3, v4, v5, v6}, Landroidx/compose/ui/graphics/Color;->equals-impl0(JJ)Z
 
-    .line 164
+    .line 167
     move-result v1
 
-    .line 167
+    .line 170
     if-nez v1, :cond_f
 
-    .line 168
+    .line 171
     return v2
 
-    .line 170
+    .line 173
     :cond_f
     iget-wide v3, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->spotShadowColor:J
 
-    .line 171
+    .line 174
     iget-wide v5, p1, Landroidx/compose/ui/graphics/GraphicsLayerElement;->spotShadowColor:J
 
-    .line 173
+    .line 176
     invoke-static {v3, v4, v5, v6}, Landroidx/compose/ui/graphics/Color;->equals-impl0(JJ)Z
 
-    .line 175
+    .line 178
     move-result v1
 
-    .line 178
+    .line 181
     if-nez v1, :cond_10
 
-    .line 179
+    .line 182
     return v2
 
-    .line 181
+    .line 184
     :cond_10
     iget p0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->compositingStrategy:I
 
-    .line 182
+    .line 185
     iget p1, p1, Landroidx/compose/ui/graphics/GraphicsLayerElement;->compositingStrategy:I
 
-    .line 184
+    .line 187
     invoke-static {p0, p1}, Landroidx/compose/ui/graphics/CompositingStrategy;->equals-impl0(II)Z
 
-    .line 186
+    .line 189
     move-result p0
 
-    .line 189
+    .line 192
     if-nez p0, :cond_11
 
-    .line 190
+    .line 193
     return v2
 
-    .line 192
+    .line 195
     :cond_11
     return v0
 
-    .line 193
+    .line 196
     :cond_12
     return v2
-    .line 194
+    .line 197
 .end method
 
 .method public final hashCode()I
@@ -747,50 +752,53 @@
     iget-boolean v0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->clip:Z
 
     .line 81
-    const/16 v3, 0x3c1
+    invoke-static {v2, v1, v0}, Landroidx/compose/animation/TransitionData$$ExternalSyntheticOutline0;->m(IIZ)I
 
     .line 83
-    invoke-static {v2, v3, v0}, Landroidx/compose/animation/TransitionData$$ExternalSyntheticOutline0;->m(IIZ)I
-
-    .line 85
     move-result v0
 
-    .line 88
-    sget v2, Landroidx/compose/ui/graphics/Color;->$r8$clinit:I
+    .line 86
+    add-int/lit8 v0, v0, 0x0
+
+    .line 87
+    mul-int/2addr v0, v1
 
     .line 89
+    sget v2, Landroidx/compose/ui/graphics/Color;->$r8$clinit:I
+
+    .line 90
     iget-wide v2, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->ambientShadowColor:J
 
-    .line 91
+    .line 92
     invoke-static {v0, v1, v2, v3}, Landroidx/compose/animation/Scale$$ExternalSyntheticOutline0;->m(IIJ)I
 
-    .line 93
+    .line 94
     move-result v0
-
-    .line 96
-    iget-wide v2, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->spotShadowColor:J
 
     .line 97
+    iget-wide v2, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->spotShadowColor:J
+
+    .line 98
     invoke-static {v0, v1, v2, v3}, Landroidx/compose/animation/Scale$$ExternalSyntheticOutline0;->m(IIJ)I
 
-    .line 99
+    .line 100
     move-result v0
 
-    .line 102
+    .line 103
     iget p0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->compositingStrategy:I
 
-    .line 103
+    .line 104
     invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
 
-    .line 105
+    .line 106
     move-result p0
 
-    .line 108
+    .line 109
     add-int/2addr p0, v0
 
-    .line 109
-    return p0
     .line 110
+    return p0
+    .line 111
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -962,80 +970,92 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 135
-    const-string v1, ", renderEffect=null, ambientShadowColor="
+    const-string v1, ", renderEffect="
 
     .line 138
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 140
-    iget-wide v1, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->ambientShadowColor:J
+    iget-object v1, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->renderEffect:Landroidx/compose/ui/graphics/AndroidRenderEffect;
 
     .line 143
-    const-string v3, ", spotShadowColor="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 145
-    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
+    const-string v1, ", ambientShadowColor="
 
-    .line 147
-    iget-wide v1, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->spotShadowColor:J
-
-    .line 150
-    invoke-static {v1, v2}, Landroidx/compose/ui/graphics/Color;->toString-impl(J)Ljava/lang/String;
-
-    .line 152
-    move-result-object v1
-
-    .line 155
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 156
-    const-string v1, ", compositingStrategy="
-
-    .line 159
+    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 161
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 150
+    iget-wide v1, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->ambientShadowColor:J
 
-    .line 164
-    const-string v2, "CompositingStrategy(value="
+    .line 153
+    const-string v3, ", spotShadowColor="
 
-    .line 166
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 155
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/foundation/OverscrollConfiguration$$ExternalSyntheticOutline0;->m(JLjava/lang/StringBuilder;Ljava/lang/String;)V
 
-    .line 168
-    iget p0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->compositingStrategy:I
+    .line 157
+    iget-wide v1, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->spotShadowColor:J
 
-    .line 171
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 160
+    invoke-static {v1, v2}, Landroidx/compose/ui/graphics/Color;->toString-impl(J)Ljava/lang/String;
 
-    .line 173
-    const/16 p0, 0x29
-
-    .line 176
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 178
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 181
+    .line 162
     move-result-object v1
 
-    .line 184
+    .line 165
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 185
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    .line 166
+    const-string v1, ", compositingStrategy="
+
+    .line 169
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 171
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 174
+    const-string v2, "CompositingStrategy(value="
+
+    .line 176
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 178
+    iget p0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->compositingStrategy:I
+
+    .line 181
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 183
+    const/16 p0, 0x29
+
+    .line 186
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 188
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 191
-    move-result-object p0
+    move-result-object v1
 
     .line 194
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     .line 195
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 198
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 201
+    move-result-object p0
+
+    .line 204
+    return-object p0
+    .line 205
 .end method
 
 .method public final update(Landroidx/compose/ui/Modifier$Node;)V
@@ -1123,49 +1143,55 @@
     iput-boolean v0, p1, Landroidx/compose/ui/graphics/SimpleGraphicsLayerModifier;->clip:Z
 
     .line 54
-    iget-wide v0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->ambientShadowColor:J
+    iget-object v0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->renderEffect:Landroidx/compose/ui/graphics/AndroidRenderEffect;
 
     .line 56
-    iput-wide v0, p1, Landroidx/compose/ui/graphics/SimpleGraphicsLayerModifier;->ambientShadowColor:J
+    iput-object v0, p1, Landroidx/compose/ui/graphics/SimpleGraphicsLayerModifier;->renderEffect:Landroidx/compose/ui/graphics/AndroidRenderEffect;
 
     .line 58
-    iget-wide v0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->spotShadowColor:J
+    iget-wide v0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->ambientShadowColor:J
 
     .line 60
-    iput-wide v0, p1, Landroidx/compose/ui/graphics/SimpleGraphicsLayerModifier;->spotShadowColor:J
+    iput-wide v0, p1, Landroidx/compose/ui/graphics/SimpleGraphicsLayerModifier;->ambientShadowColor:J
 
     .line 62
-    iget p0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->compositingStrategy:I
+    iget-wide v0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->spotShadowColor:J
 
     .line 64
-    iput p0, p1, Landroidx/compose/ui/graphics/SimpleGraphicsLayerModifier;->compositingStrategy:I
+    iput-wide v0, p1, Landroidx/compose/ui/graphics/SimpleGraphicsLayerModifier;->spotShadowColor:J
 
     .line 66
-    const/4 p0, 0x2
+    iget p0, p0, Landroidx/compose/ui/graphics/GraphicsLayerElement;->compositingStrategy:I
 
     .line 68
-    invoke-static {p1, p0}, Landroidx/compose/ui/node/DelegatableNodeKt;->requireCoordinator-64DMado(Landroidx/compose/ui/node/DelegatableNode;I)Landroidx/compose/ui/node/NodeCoordinator;
+    iput p0, p1, Landroidx/compose/ui/graphics/SimpleGraphicsLayerModifier;->compositingStrategy:I
 
-    .line 69
-    move-result-object p0
+    .line 70
+    const/4 p0, 0x2
 
     .line 72
-    iget-object p0, p0, Landroidx/compose/ui/node/NodeCoordinator;->wrapped:Landroidx/compose/ui/node/NodeCoordinator;
+    invoke-static {p1, p0}, Landroidx/compose/ui/node/DelegatableNodeKt;->requireCoordinator-64DMado(Landroidx/compose/ui/node/DelegatableNode;I)Landroidx/compose/ui/node/NodeCoordinator;
 
     .line 73
-    if-eqz p0, :cond_0
+    move-result-object p0
 
-    .line 75
-    iget-object p1, p1, Landroidx/compose/ui/graphics/SimpleGraphicsLayerModifier;->layerBlock:Lkotlin/jvm/functions/Function1;
+    .line 76
+    iget-object p0, p0, Landroidx/compose/ui/node/NodeCoordinator;->wrapped:Landroidx/compose/ui/node/NodeCoordinator;
 
     .line 77
-    const/4 v0, 0x1
+    if-eqz p0, :cond_0
 
     .line 79
+    iget-object p1, p1, Landroidx/compose/ui/graphics/SimpleGraphicsLayerModifier;->layerBlock:Lkotlin/jvm/functions/Function1;
+
+    .line 81
+    const/4 v0, 0x1
+
+    .line 83
     invoke-virtual {p0, p1, v0}, Landroidx/compose/ui/node/NodeCoordinator;->updateLayerBlock(Lkotlin/jvm/functions/Function1;Z)V
 
-    .line 80
+    .line 84
     :cond_0
     return-void
-    .line 83
+    .line 87
 .end method

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/EmptyShadeView;
 .super Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -27,19 +27,19 @@
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 2
-    const p1, 0x7f14036e    # @string/empty_shade_text 'No notifications'
+    const p1, 0x7f1303a6    # @string/empty_shade_text 'No notifications'
 
     .line 5
     iput p1, p0, Lcom/android/systemui/statusbar/EmptyShadeView;->mText:I
 
     .line 8
-    const p1, 0x7f0807bb    # @drawable/ic_friction_lock_closed 'res/drawable/ic_friction_lock_closed.xml'
+    const p1, 0x7f0807db    # @drawable/ic_friction_lock_closed 'res/drawable/ic_friction_lock_closed.xml'
 
     .line 10
     iput p1, p0, Lcom/android/systemui/statusbar/EmptyShadeView;->mFooterIcon:I
 
     .line 13
-    const p1, 0x7f1409bb    # @string/unlock_to_see_notif_text 'Unlock to see older notifications'
+    const p1, 0x7f130a41    # @string/unlock_to_see_notif_text 'Unlock to see older notifications'
 
     .line 15
     iput p1, p0, Lcom/android/systemui/statusbar/EmptyShadeView;->mFooterText:I
@@ -57,7 +57,7 @@
     move-result-object p1
 
     .line 27
-    const p2, 0x7f070821    # @dimen/notifications_unseen_footer_icon_size '16.0dp'
+    const p2, 0x7f070864    # @dimen/notifications_unseen_footer_icon_size '16.0dp'
 
     .line 28
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -93,7 +93,7 @@
     .locals 1
 
     .line 1
-    const v0, 0x7f0b0568    # @id/no_notifications
+    const v0, 0x7f0a058d    # @id/no_notifications
 
     .line 2
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -110,7 +110,7 @@
     .locals 1
 
     .line 1
-    const v0, 0x7f0b0569    # @id/no_notifications_footer
+    const v0, 0x7f0a058e    # @id/no_notifications_footer
 
     .line 2
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -136,7 +136,7 @@
     move-result-object p1
 
     .line 8
-    const v0, 0x7f070821    # @dimen/notifications_unseen_footer_icon_size '16.0dp'
+    const v0, 0x7f070864    # @dimen/notifications_unseen_footer_icon_size '16.0dp'
 
     .line 9
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -250,7 +250,7 @@
     invoke-super {p0}, Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b0568    # @id/no_notifications
+    const v0, 0x7f0a058d    # @id/no_notifications
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -265,7 +265,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/EmptyShadeView;->mEmptyText:Landroid/widget/TextView;
 
     .line 14
-    const v0, 0x7f0b0569    # @id/no_notifications_footer
+    const v0, 0x7f0a058e    # @id/no_notifications_footer
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;

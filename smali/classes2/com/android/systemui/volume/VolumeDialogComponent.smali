@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/VolumeDialogComponent;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/volume/VolumeComponent;
@@ -69,7 +69,7 @@
     .line 20
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/keyguard/KeyguardViewMediator;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/volume/VolumeDialogControllerImpl;Lcom/android/systemui/demomode/DemoModeController;Lcom/android/systemui/plugins/PluginDependencyProvider;Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl;Lcom/android/systemui/tuner/TunerService;Lcom/android/systemui/plugins/VolumeDialog;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/keyguard/KeyguardViewMediator;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/volume/VolumeDialogControllerImpl;Lcom/android/systemui/demomode/DemoModeController;Lcom/android/systemui/plugins/PluginDependencyProvider;Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl;Lcom/android/systemui/tuner/TunerService;Lcom/android/systemui/volume/VolumeDialogImpl;)V
     .locals 2
 
     .line 1
@@ -160,7 +160,7 @@
     new-instance p3, Lcom/android/systemui/volume/VolumeDialogComponent$$ExternalSyntheticLambda0;
 
     .line 63
-    invoke-direct {p3, p9}, Lcom/android/systemui/volume/VolumeDialogComponent$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/plugins/VolumeDialog;)V
+    invoke-direct {p3, p9}, Lcom/android/systemui/volume/VolumeDialogComponent$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/volume/VolumeDialogImpl;)V
 
     .line 65
     iget-object p6, p2, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;->mProducers:Ljava/util/ArrayList;
@@ -214,7 +214,7 @@
     move-result-object p2
 
     .line 108
-    const p3, 0x111027d    # @android:bool/config_windowManagerPauseRotationWhenUnfolding
+    const p3, 0x1110279    # @android:bool/config_windowActionBarSupported
 
     .line 109
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -232,7 +232,7 @@
     move-result-object p1
 
     .line 121
-    const p3, 0x111027e    # @android:bool/config_windowNoTitleDefault
+    const p3, 0x111027a    # @android:bool/config_windowEnableCircularEmulatorDisplayOverlay
 
     .line 122
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getBoolean(I)Z

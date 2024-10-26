@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/settingslib/utils/PowerUtil;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -78,7 +78,7 @@
 .end method
 
 .method public static getBatteryRemainingShortStringFormatted(Landroid/content/Context;J)Ljava/lang/String;
-    .locals 8
+    .locals 6
 
     .line 1
     const/16 v0, 0xe10
@@ -106,484 +106,465 @@
     cmp-long v1, p1, v1
 
     .line 14
-    const-wide/16 v2, 0x2
+    if-gtz v1, :cond_1
 
     .line 16
-    if-gtz v1, :cond_2
-
-    .line 18
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 20
+    .line 18
     move-result-wide v0
 
-    .line 23
+    .line 21
     add-long/2addr v0, p1
 
-    .line 24
-    invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
+    .line 22
+    sget-wide p1, Lcom/android/settingslib/utils/PowerUtil;->FIFTEEN_MINUTES_MILLIS:J
+
+    .line 23
+    invoke-static {v0, v1, p1, p2}, Lcom/android/settingslib/utils/PowerUtil;->roundTimeToNearestThreshold(JJ)J
 
     .line 25
     move-result-wide p1
 
     .line 28
-    sget-wide v0, Lcom/android/settingslib/utils/PowerUtil;->FIFTEEN_MINUTES_MILLIS:J
-
-    .line 29
-    invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
-
-    .line 31
-    move-result-wide v0
-
-    .line 34
-    rem-long v4, p1, v0
-
-    .line 35
-    div-long v2, v0, v2
-
-    .line 37
-    cmp-long v2, v4, v2
-
-    .line 39
-    if-gez v2, :cond_1
-
-    .line 41
-    sub-long/2addr p1, v4
-
-    .line 43
-    goto :goto_0
-
-    .line 44
-    :cond_1
-    sub-long/2addr p1, v4
-
-    .line 45
-    add-long/2addr p1, v0
-
-    .line 46
-    :goto_0
     invoke-static {p0}, Landroid/text/format/DateFormat;->getTimeFormatString(Landroid/content/Context;)Ljava/lang/String;
 
-    .line 47
+    .line 29
     move-result-object v0
 
-    .line 50
+    .line 32
     invoke-static {v0}, Landroid/icu/text/DateFormat;->getInstanceForSkeleton(Ljava/lang/String;)Landroid/icu/text/DateFormat;
 
-    .line 51
+    .line 33
     move-result-object v0
 
-    .line 54
+    .line 36
     invoke-static {p1, p2}, Ljava/time/Instant;->ofEpochMilli(J)Ljava/time/Instant;
 
-    .line 55
+    .line 37
     move-result-object p1
 
-    .line 58
+    .line 40
     invoke-static {p1}, Ljava/util/Date;->from(Ljava/time/Instant;)Ljava/util/Date;
 
-    .line 59
+    .line 41
     move-result-object p1
 
-    .line 62
+    .line 44
     invoke-virtual {v0, p1}, Landroid/icu/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
-    .line 63
+    .line 45
     move-result-object p1
 
-    .line 66
-    const p2, 0x7f140757    # @string/power_discharge_by_only_short 'Until %1$s'
+    .line 48
+    const p2, 0x7f1307b3    # @string/power_discharge_by_only_short 'Until %1$s'
 
-    .line 67
+    .line 49
     filled-new-array {p1}, [Ljava/lang/Object;
 
-    .line 70
+    .line 52
     move-result-object p1
 
-    .line 73
+    .line 55
     invoke-virtual {p0, p2, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 74
+    .line 56
     move-result-object p0
 
-    .line 77
+    .line 59
     return-object p0
 
+    .line 60
+    :cond_1
+    sget-wide v1, Lcom/android/settingslib/utils/PowerUtil;->ONE_HOUR_MILLIS:J
+
+    .line 61
+    invoke-static {p1, p2, v1, v2}, Lcom/android/settingslib/utils/PowerUtil;->roundTimeToNearestThreshold(JJ)J
+
+    .line 63
+    move-result-wide p1
+
+    .line 66
+    long-to-double p1, p1
+
+    .line 67
+    new-instance v1, Landroid/text/SpannableStringBuilder;
+
+    .line 68
+    invoke-direct {v1}, Landroid/text/SpannableStringBuilder;-><init>()V
+
+    .line 70
+    const-wide v2, 0x408f400000000000L    # 1000.0
+
+    .line 73
+    div-double/2addr p1, v2
+
     .line 78
-    :cond_2
-    invoke-static {p1, p2}, Ljava/lang/Math;->abs(J)J
+    invoke-static {p1, p2}, Ljava/lang/Math;->floor(D)D
 
     .line 79
     move-result-wide p1
 
     .line 82
-    sget-wide v4, Lcom/android/settingslib/utils/PowerUtil;->ONE_HOUR_MILLIS:J
-
-    .line 83
-    invoke-static {v4, v5}, Ljava/lang/Math;->abs(J)J
-
-    .line 85
-    move-result-wide v4
-
-    .line 88
-    rem-long v6, p1, v4
-
-    .line 89
-    div-long v1, v4, v2
-
-    .line 91
-    cmp-long v1, v6, v1
-
-    .line 93
-    if-gez v1, :cond_3
-
-    .line 95
-    sub-long/2addr p1, v6
-
-    .line 97
-    goto :goto_1
-
-    .line 98
-    :cond_3
-    sub-long/2addr p1, v6
-
-    .line 99
-    add-long/2addr p1, v4
-
-    .line 100
-    :goto_1
-    long-to-double p1, p1
-
-    .line 101
-    new-instance v1, Landroid/text/SpannableStringBuilder;
-
-    .line 102
-    invoke-direct {v1}, Landroid/text/SpannableStringBuilder;-><init>()V
-
-    .line 104
-    const-wide v2, 0x408f400000000000L    # 1000.0
-
-    .line 107
-    div-double/2addr p1, v2
-
-    .line 112
-    invoke-static {p1, p2}, Ljava/lang/Math;->floor(D)D
-
-    .line 113
-    move-result-wide p1
-
-    .line 116
     double-to-int p1, p1
 
-    .line 117
+    .line 83
     add-int/lit8 p1, p1, 0x1e
 
-    .line 118
+    .line 84
     const p2, 0x15180
 
-    .line 120
+    .line 86
     const/4 v2, 0x0
 
-    .line 123
-    if-lt p1, p2, :cond_4
+    .line 89
+    if-lt p1, p2, :cond_2
 
-    .line 124
+    .line 90
     div-int v3, p1, p2
 
-    .line 126
+    .line 92
     mul-int/2addr p2, v3
 
-    .line 128
+    .line 94
     sub-int/2addr p1, p2
 
-    .line 129
-    goto :goto_2
+    .line 95
+    goto :goto_0
 
-    .line 130
-    :cond_4
+    .line 96
+    :cond_2
     move v3, v2
 
-    .line 131
-    :goto_2
-    if-lt p1, v0, :cond_5
+    .line 97
+    :goto_0
+    if-lt p1, v0, :cond_3
 
-    .line 132
+    .line 98
     div-int/lit16 p2, p1, 0xe10
 
-    .line 134
+    .line 100
     mul-int/2addr v0, p2
 
-    .line 136
+    .line 102
     sub-int/2addr p1, v0
 
-    .line 137
-    goto :goto_3
+    .line 103
+    goto :goto_1
 
-    .line 138
-    :cond_5
+    .line 104
+    :cond_3
     move p2, v2
 
-    .line 139
-    :goto_3
+    .line 105
+    :goto_1
     const/16 v0, 0x3c
 
-    .line 140
-    if-lt p1, v0, :cond_6
+    .line 106
+    if-lt p1, v0, :cond_4
 
-    .line 142
+    .line 108
     div-int/2addr p1, v0
 
-    .line 144
-    goto :goto_4
+    .line 110
+    goto :goto_2
 
-    .line 145
-    :cond_6
+    .line 111
+    :cond_4
     move p1, v2
 
-    .line 146
-    :goto_4
+    .line 112
+    :goto_2
     new-instance v0, Ljava/util/ArrayList;
 
-    .line 147
+    .line 113
     const/4 v4, 0x4
 
-    .line 149
+    .line 115
     invoke-direct {v0, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 150
-    if-lez v3, :cond_7
+    .line 116
+    if-lez v3, :cond_5
 
-    .line 153
+    .line 119
     new-instance v4, Landroid/icu/util/Measure;
 
-    .line 155
+    .line 121
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 157
+    .line 123
     move-result-object v3
 
-    .line 160
+    .line 126
     sget-object v5, Landroid/icu/util/MeasureUnit;->DAY:Landroid/icu/util/TimeUnit;
 
-    .line 161
+    .line 127
     invoke-direct {v4, v3, v5}, Landroid/icu/util/Measure;-><init>(Ljava/lang/Number;Landroid/icu/util/MeasureUnit;)V
 
-    .line 163
+    .line 129
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 166
-    :cond_7
-    if-lez p2, :cond_8
+    .line 132
+    :cond_5
+    if-lez p2, :cond_6
 
-    .line 169
+    .line 135
     new-instance v3, Landroid/icu/util/Measure;
 
-    .line 171
+    .line 137
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 173
+    .line 139
     move-result-object p2
 
-    .line 176
+    .line 142
     sget-object v4, Landroid/icu/util/MeasureUnit;->HOUR:Landroid/icu/util/TimeUnit;
 
-    .line 177
+    .line 143
     invoke-direct {v3, p2, v4}, Landroid/icu/util/Measure;-><init>(Ljava/lang/Number;Landroid/icu/util/MeasureUnit;)V
 
-    .line 179
+    .line 145
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 182
-    :cond_8
-    if-lez p1, :cond_9
+    .line 148
+    :cond_6
+    if-lez p1, :cond_7
 
-    .line 185
+    .line 151
     new-instance p2, Landroid/icu/util/Measure;
 
-    .line 187
+    .line 153
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 189
+    .line 155
     move-result-object v3
 
-    .line 192
+    .line 158
     sget-object v4, Landroid/icu/util/MeasureUnit;->MINUTE:Landroid/icu/util/TimeUnit;
 
-    .line 193
+    .line 159
     invoke-direct {p2, v3, v4}, Landroid/icu/util/Measure;-><init>(Ljava/lang/Number;Landroid/icu/util/MeasureUnit;)V
 
-    .line 195
+    .line 161
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 198
-    :cond_9
+    .line 164
+    :cond_7
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    .line 201
+    .line 167
     move-result p2
 
-    .line 204
-    if-nez p2, :cond_a
+    .line 170
+    if-nez p2, :cond_8
 
-    .line 205
+    .line 171
     new-instance p2, Landroid/icu/util/Measure;
 
-    .line 207
+    .line 173
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 209
+    .line 175
     move-result-object v3
 
-    .line 212
+    .line 178
     sget-object v4, Landroid/icu/util/MeasureUnit;->MINUTE:Landroid/icu/util/TimeUnit;
 
-    .line 213
+    .line 179
     invoke-direct {p2, v3, v4}, Landroid/icu/util/Measure;-><init>(Ljava/lang/Number;Landroid/icu/util/MeasureUnit;)V
 
-    .line 215
+    .line 181
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 218
-    :cond_a
+    .line 184
+    :cond_8
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    .line 221
+    .line 187
     move-result p2
 
-    .line 224
+    .line 190
     new-array p2, p2, [Landroid/icu/util/Measure;
 
-    .line 225
+    .line 191
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 227
+    .line 193
     move-result-object p2
 
-    .line 230
+    .line 196
     check-cast p2, [Landroid/icu/util/Measure;
 
-    .line 231
+    .line 197
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 233
+    .line 199
     move-result-object v0
 
-    .line 236
+    .line 202
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    .line 237
+    .line 203
     move-result-object v0
 
-    .line 240
+    .line 206
     iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 241
+    .line 207
     sget-object v3, Landroid/icu/text/MeasureFormat$FormatWidth;->SHORT:Landroid/icu/text/MeasureFormat$FormatWidth;
 
-    .line 243
+    .line 209
     invoke-static {v0, v3}, Landroid/icu/text/MeasureFormat;->getInstance(Ljava/util/Locale;Landroid/icu/text/MeasureFormat$FormatWidth;)Landroid/icu/text/MeasureFormat;
 
-    .line 245
+    .line 211
     move-result-object v0
 
-    .line 248
+    .line 214
     invoke-virtual {v0, p2}, Landroid/icu/text/MeasureFormat;->formatMeasures([Landroid/icu/util/Measure;)Ljava/lang/String;
 
-    .line 249
+    .line 215
     move-result-object v0
 
-    .line 252
+    .line 218
     invoke-virtual {v1, v0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 253
+    .line 219
     array-length v0, p2
 
-    .line 256
+    .line 222
     const/4 v3, 0x1
 
-    .line 257
-    if-ne v0, v3, :cond_b
+    .line 223
+    if-ne v0, v3, :cond_9
 
-    .line 258
+    .line 224
     sget-object v0, Landroid/icu/util/MeasureUnit;->MINUTE:Landroid/icu/util/TimeUnit;
 
-    .line 260
+    .line 226
     aget-object p2, p2, v2
 
-    .line 262
+    .line 228
     invoke-virtual {p2}, Landroid/icu/util/Measure;->getUnit()Landroid/icu/util/MeasureUnit;
 
-    .line 264
+    .line 230
     move-result-object p2
 
-    .line 267
+    .line 233
     invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 268
+    .line 234
     move-result p2
 
-    .line 271
-    if-eqz p2, :cond_b
+    .line 237
+    if-eqz p2, :cond_9
 
-    .line 272
+    .line 238
     new-instance p2, Landroid/text/style/TtsSpan$MeasureBuilder;
 
-    .line 274
+    .line 240
     invoke-direct {p2}, Landroid/text/style/TtsSpan$MeasureBuilder;-><init>()V
 
-    .line 276
+    .line 242
     int-to-long v3, p1
 
-    .line 279
+    .line 245
     invoke-virtual {p2, v3, v4}, Landroid/text/style/TtsSpan$MeasureBuilder;->setNumber(J)Landroid/text/style/TtsSpan$MeasureBuilder;
 
-    .line 280
+    .line 246
     move-result-object p1
 
-    .line 283
+    .line 249
     const-string p2, "minute"
 
-    .line 284
+    .line 250
     invoke-virtual {p1, p2}, Landroid/text/style/TtsSpan$MeasureBuilder;->setUnit(Ljava/lang/String;)Landroid/text/style/TtsSpan$MeasureBuilder;
 
-    .line 286
+    .line 252
     move-result-object p1
 
-    .line 289
+    .line 255
     invoke-virtual {p1}, Landroid/text/style/TtsSpan$MeasureBuilder;->build()Landroid/text/style/TtsSpan;
 
-    .line 290
+    .line 256
     move-result-object p1
 
-    .line 293
+    .line 259
     invoke-virtual {v1}, Landroid/text/SpannableStringBuilder;->length()I
 
-    .line 294
+    .line 260
     move-result p2
 
-    .line 297
+    .line 263
     const/16 v0, 0x21
 
-    .line 298
+    .line 264
     invoke-virtual {v1, p1, v2, p2, v0}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 300
-    :cond_b
+    .line 266
+    :cond_9
     filled-new-array {v1}, [Ljava/lang/Object;
 
-    .line 303
+    .line 269
     move-result-object p1
 
-    .line 306
-    const p2, 0x7f140760    # @string/power_remaining_duration_only_short '%1$s'
+    .line 272
+    const p2, 0x7f1307bc    # @string/power_remaining_duration_only_short '%1$s'
 
-    .line 307
+    .line 273
     invoke-virtual {p0, p2, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 310
+    .line 276
     move-result-object p0
 
-    .line 313
+    .line 279
     return-object p0
-    .line 314
+    .line 280
+.end method
+
+.method public static roundTimeToNearestThreshold(JJ)J
+    .locals 4
+
+    .line 1
+    invoke-static {p0, p1}, Ljava/lang/Math;->abs(J)J
+
+    .line 2
+    move-result-wide p0
+
+    .line 5
+    invoke-static {p2, p3}, Ljava/lang/Math;->abs(J)J
+
+    .line 6
+    move-result-wide p2
+
+    .line 9
+    rem-long v0, p0, p2
+
+    .line 10
+    const-wide/16 v2, 0x2
+
+    .line 12
+    div-long v2, p2, v2
+
+    .line 14
+    cmp-long v2, v0, v2
+
+    .line 16
+    if-gez v2, :cond_0
+
+    .line 18
+    sub-long/2addr p0, v0
+
+    .line 20
+    return-wide p0
+
+    .line 21
+    :cond_0
+    sub-long/2addr p0, v0
+
+    .line 22
+    add-long/2addr p0, p2
+
+    .line 23
+    return-wide p0
+    .line 24
 .end method

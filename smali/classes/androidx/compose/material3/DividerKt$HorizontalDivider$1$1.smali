@@ -1,6 +1,6 @@
 .class final Landroidx/compose/material3/DividerKt$HorizontalDivider$1$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+    .locals 13
 
     .line 1
     move-object v0, p1
@@ -114,21 +114,42 @@
     iget-wide v1, p0, Landroidx/compose/material3/DividerKt$HorizontalDivider$1$1;->$color:J
 
     .line 44
-    const/4 v9, 0x0
+    const/4 p0, 0x0
 
     .line 46
-    const/16 v10, 0x1f0
+    const/16 p1, 0x1f0
 
     .line 47
     const/4 v8, 0x0
 
     .line 49
-    invoke-static/range {v0 .. v10}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawLine-NGM6Ib0$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;JJJFIFI)V
+    and-int/lit8 p1, p1, 0x40
 
     .line 50
+    if-eqz p1, :cond_0
+
+    .line 52
+    const/high16 p0, 0x3f800000    # 1.0f
+
+    .line 54
+    :cond_0
+    move v10, p0
+
+    .line 56
+    const/4 v12, 0x3
+
+    .line 57
+    const/4 v9, 0x0
+
+    .line 58
+    const/4 v11, 0x0
+
+    .line 59
+    invoke-interface/range {v0 .. v12}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawLine-NGM6Ib0(JJJFILandroidx/compose/ui/graphics/AndroidPathEffect;FLandroidx/compose/ui/graphics/ColorFilter;I)V
+
+    .line 60
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 53
+    .line 63
     return-object p0
-    .line 55
 .end method

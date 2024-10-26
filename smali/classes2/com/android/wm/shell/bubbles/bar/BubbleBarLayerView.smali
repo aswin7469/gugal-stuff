@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;
@@ -622,13 +622,13 @@
     iget-object v2, p1, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
 
     .line 229
-    new-instance v3, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda8;
+    new-instance v3, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda9;
 
     .line 231
     iget-object v4, p1, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysUiState:Lcom/android/systemui/model/SysUiState;
 
     .line 233
-    invoke-direct {v3, p1, v4, v1, v0}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Lcom/android/systemui/model/SysUiState;ZI)V
+    invoke-direct {v3, p1, v4, v1, v0}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda9;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Lcom/android/systemui/model/SysUiState;ZI)V
 
     .line 235
     invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -957,6 +957,7 @@
     .line 31
     :cond_0
     return-void
+    .line 33
 .end method
 
 .method public final showExpandedView(Lcom/android/wm/shell/bubbles/BubbleViewProvider;)V
@@ -1242,13 +1243,13 @@
     iget-object v2, p1, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysuiMainExecutor:Ljava/util/concurrent/Executor;
 
     .line 180
-    new-instance v3, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda8;
+    new-instance v3, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda9;
 
     .line 182
     iget-object v4, p1, Lcom/android/systemui/wmshell/BubblesManager$5;->val$sysUiState:Lcom/android/systemui/model/SysUiState;
 
     .line 184
-    invoke-direct {v3, p1, v4, v0, v0}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Lcom/android/systemui/model/SysUiState;ZI)V
+    invoke-direct {v3, p1, v4, v0, v0}, Lcom/android/systemui/wmshell/BubblesManager$5$$ExternalSyntheticLambda9;-><init>(Lcom/android/systemui/wmshell/BubblesManager$5;Lcom/android/systemui/model/SysUiState;ZI)V
 
     .line 186
     invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -1587,7 +1588,7 @@
     new-instance v3, Lcom/android/wm/shell/bubbles/bar/BubbleEducationViewController$showStackEducation$1;
 
     .line 16
-    const v3, 0x7f0e0061    # @layout/bubble_bar_stack_education 'res/layout/bubble_bar_stack_education.xml'
+    const v3, 0x7f0d0066    # @layout/bubble_bar_stack_education 'res/layout/bubble_bar_stack_education.xml'
 
     .line 18
     invoke-virtual {v0, v3, p0}, Lcom/android/wm/shell/bubbles/bar/BubbleEducationViewController;->createEducationView(ILandroid/view/ViewGroup;)Lcom/android/wm/shell/common/bubbles/BubblePopupView;
@@ -1614,7 +1615,7 @@
     aget-object v7, v7, v2
 
     .line 35
-    invoke-virtual {v6, v5, v7, v4}, Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable$special$$inlined$observable$1;->setValue(Ljava/lang/Object;Lkotlin/reflect/KProperty;Ljava/lang/Object;)V
+    invoke-virtual {v6, v5, v7, v4}, Lkotlin/properties/ObservableProperty;->setValue(Ljava/lang/Object;Lkotlin/reflect/KProperty;Ljava/lang/Object;)V
 
     .line 37
     new-instance v4, Landroid/graphics/Rect;
@@ -1663,7 +1664,7 @@
     aget-object v8, v8, v6
 
     .line 70
-    invoke-virtual {v7, v5, v8, v4}, Lcom/android/wm/shell/common/bubbles/BubblePopupDrawable$special$$inlined$observable$1;->setValue(Ljava/lang/Object;Lkotlin/reflect/KProperty;Ljava/lang/Object;)V
+    invoke-virtual {v7, v5, v8, v4}, Lkotlin/properties/ObservableProperty;->setValue(Ljava/lang/Object;Lkotlin/reflect/KProperty;Ljava/lang/Object;)V
 
     .line 72
     invoke-virtual {v3}, Landroid/widget/LinearLayout;->invalidate()V

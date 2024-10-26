@@ -1,6 +1,6 @@
 .class Lcom/android/settingslib/widget/AdaptiveIcon$AdaptiveConstantState;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -57,7 +57,7 @@
     new-instance v3, Landroid/graphics/Path;
 
     .line 20
-    const v4, 0x1040279    # @android:string/config_oem_enabled_satellite_s2cell_file
+    const v4, 0x1040272    # @android:string/config_mobile_hotspot_provision_app_no_ui
 
     .line 22
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -114,7 +114,7 @@
     move-result-object v0
 
     .line 61
-    const v1, 0x7f070205    # @dimen/dashboard_tile_foreground_image_inset '6.0dp'
+    const v1, 0x7f070226    # @dimen/dashboard_tile_foreground_image_inset '6.0dp'
 
     .line 62
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

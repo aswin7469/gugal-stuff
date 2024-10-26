@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/desktopmode/DesktopModeLoggerTransitionObserver;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/transition/Transitions$TransitionObserver;
@@ -1325,7 +1325,7 @@
     const-string v2, "Unknown exit reason for transition type "
 
     .line 501
-    invoke-static {v1, v2}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 503
     move-result-object v1
@@ -1646,7 +1646,7 @@
     const-string v7, "Unknown enter reason for transition type "
 
     .line 702
-    invoke-static {v6, v7}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v6, v7}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 704
     move-result-object v6

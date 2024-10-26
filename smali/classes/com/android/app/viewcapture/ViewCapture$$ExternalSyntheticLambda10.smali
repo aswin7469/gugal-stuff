@@ -1,109 +1,68 @@
 .class public final synthetic Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Supplier;
 
 
 # instance fields
-.field public final synthetic f$0:Lcom/android/app/viewcapture/ViewCapture$WindowListener;
+.field public final synthetic f$0:Lcom/android/app/viewcapture/ViewCapture;
+
+.field public final synthetic f$1:Ljava/util/function/Predicate;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/app/viewcapture/ViewCapture$WindowListener;)V
+.method public synthetic constructor <init>(Lcom/android/app/viewcapture/ViewCapture;Ljava/util/function/Predicate;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;->f$0:Lcom/android/app/viewcapture/ViewCapture$WindowListener;
+    iput-object p1, p0, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;->f$0:Lcom/android/app/viewcapture/ViewCapture;
 
     .line 5
-    return-void
+    iput-object p2, p0, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;->f$1:Ljava/util/function/Predicate;
+
     .line 7
+    return-void
+    .line 9
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;->f$0:Lcom/android/app/viewcapture/ViewCapture$WindowListener;
+    iget-object v0, p0, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;->f$0:Lcom/android/app/viewcapture/ViewCapture;
 
     .line 2
-    iget-object v0, p0, Lcom/android/app/viewcapture/ViewCapture$WindowListener;->mRoot:Landroid/view/View;
+    iget-object p0, p0, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;->f$1:Ljava/util/function/Predicate;
 
     .line 4
-    if-nez v0, :cond_0
+    iget-object v0, v0, Lcom/android/app/viewcapture/ViewCapture;->mListeners:Ljava/util/List;
 
     .line 6
-    goto :goto_0
+    invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     .line 8
-    :cond_0
-    const/4 v1, 0x1
+    move-result-object v0
 
-    .line 9
-    iput-boolean v1, p0, Lcom/android/app/viewcapture/ViewCapture$WindowListener;->mIsActive:Z
-
-    .line 10
-    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
+    .line 11
+    invoke-interface {v0, p0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     .line 12
-    move-result v0
+    move-result-object p0
 
     .line 15
-    if-eqz v0, :cond_1
+    invoke-interface {p0}, Ljava/util/stream/Stream;->toList()Ljava/util/List;
 
     .line 16
-    iget-object v0, p0, Lcom/android/app/viewcapture/ViewCapture$WindowListener;->mRoot:Landroid/view/View;
+    move-result-object p0
 
-    .line 18
-    if-eqz v0, :cond_2
-
+    .line 19
+    return-object p0
     .line 20
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    .line 22
-    move-result-object v0
-
-    .line 25
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnDrawListener(Landroid/view/ViewTreeObserver$OnDrawListener;)V
-
-    .line 26
-    iget-object v0, p0, Lcom/android/app/viewcapture/ViewCapture$WindowListener;->mRoot:Landroid/view/View;
-
-    .line 29
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    .line 31
-    move-result-object v0
-
-    .line 34
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->addOnDrawListener(Landroid/view/ViewTreeObserver$OnDrawListener;)V
-
-    .line 35
-    goto :goto_0
-
-    .line 38
-    :cond_1
-    iget-object v0, p0, Lcom/android/app/viewcapture/ViewCapture$WindowListener;->mRoot:Landroid/view/View;
-
-    .line 39
-    new-instance v1, Lcom/android/app/viewcapture/ViewCapture$WindowListener$1;
-
-    .line 41
-    invoke-direct {v1, p0}, Lcom/android/app/viewcapture/ViewCapture$WindowListener$1;-><init>(Lcom/android/app/viewcapture/ViewCapture$WindowListener;)V
-
-    .line 43
-    invoke-virtual {v0, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    .line 46
-    :cond_2
-    :goto_0
-    return-void
-    .line 49
 .end method

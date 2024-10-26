@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/back/BackAnimationController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/RemoteCallable;
@@ -18,7 +18,7 @@
 
 .field public final mAnimationBackground:Lcom/android/wm/shell/back/BackAnimationBackground;
 
-.field public final mAnimationTimeoutRunnable:Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;
+.field public final mAnimationTimeoutRunnable:Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;
 
 .field public mApps:[Landroid/view/RemoteAnimationTarget;
 
@@ -36,7 +36,7 @@
 
 .field public mCurrentTracker:Landroid/window/BackTouchTracker;
 
-.field public mCustomizer:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda6;
+.field public mCustomizer:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda7;
 
 .field public final mEnableAnimations:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -176,16 +176,16 @@
     iput-object v0, p0, Lcom/android/wm/shell/back/BackAnimationController;->mQueuedTracker:Landroid/window/BackTouchTracker;
 
     .line 44
-    new-instance v0, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;
+    new-instance v0, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;
 
     .line 46
-    const/4 v1, 0x1
+    const/4 v1, 0x3
 
     .line 48
-    invoke-direct {v0, p0, v1}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;-><init>(Lcom/android/wm/shell/back/BackAnimationController;I)V
+    invoke-direct {v0, p0, v1}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;-><init>(Lcom/android/wm/shell/back/BackAnimationController;I)V
 
     .line 49
-    iput-object v0, p0, Lcom/android/wm/shell/back/BackAnimationController;->mAnimationTimeoutRunnable:Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;
+    iput-object v0, p0, Lcom/android/wm/shell/back/BackAnimationController;->mAnimationTimeoutRunnable:Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;
 
     .line 52
     new-instance v0, Landroid/os/RemoteCallback;
@@ -230,7 +230,7 @@
     move-result-object p2
 
     .line 84
-    const p3, 0x7f050006    # @bool/config_backAnimationRequiresPointerPilfer 'true'
+    const p3, 0x7f050008    # @bool/config_backAnimationRequiresPointerPilfer 'true'
 
     .line 85
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -242,10 +242,10 @@
     iput-boolean p2, p0, Lcom/android/wm/shell/back/BackAnimationController;->mRequirePointerPilfer:Z
 
     .line 92
-    new-instance p2, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;
+    new-instance p2, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;
 
     .line 94
-    invoke-direct {p2, p0, p7}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;-><init>(Lcom/android/wm/shell/back/BackAnimationController;I)V
+    invoke-direct {p2, p0, p7}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;-><init>(Lcom/android/wm/shell/back/BackAnimationController;I)V
 
     .line 96
     invoke-virtual {p1, p2, p0}, Lcom/android/wm/shell/sysui/ShellInit;->addInitCallback(Ljava/lang/Runnable;Ljava/lang/Object;)V
@@ -479,7 +479,7 @@
     check-cast v0, Lcom/android/wm/shell/common/HandlerExecutor;
 
     .line 4
-    iget-object v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mAnimationTimeoutRunnable:Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;
+    iget-object v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mAnimationTimeoutRunnable:Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;
 
     .line 6
     invoke-virtual {v0, v1}, Lcom/android/wm/shell/common/HandlerExecutor;->removeCallbacks(Ljava/lang/Runnable;)V
@@ -491,7 +491,7 @@
     iput-boolean v0, p0, Lcom/android/wm/shell/back/BackAnimationController;->mPostCommitAnimationInProgress:Z
 
     .line 12
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 14
     aget-boolean v1, v1, v0
@@ -515,7 +515,7 @@
     const/4 v7, 0x0
 
     .line 30
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 31
     :cond_0
@@ -547,7 +547,7 @@
 
     .line 50
     :cond_1
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 51
     aget-boolean v0, v1, v0
@@ -571,7 +571,7 @@
     const/4 v6, 0x0
 
     .line 67
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 68
     goto :goto_1
@@ -598,7 +598,7 @@
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 2
     const/4 v1, 0x0
@@ -625,7 +625,7 @@
     const/4 v7, 0x0
 
     .line 19
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 20
     :cond_0
@@ -990,7 +990,7 @@
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 2
     const/4 v1, 0x0
@@ -1026,14 +1026,14 @@
     const-string v6, "Received backNavigationInfo:%s"
 
     .line 25
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 27
     :cond_0
     if-nez p1, :cond_2
 
     .line 30
-    sget-object p1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object p1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 32
     const/4 p2, 0x4
@@ -1060,7 +1060,7 @@
     const/4 v5, 0x0
 
     .line 49
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 50
     :cond_1
@@ -1471,7 +1471,7 @@
     invoke-virtual {p0, v1}, Lcom/android/wm/shell/back/BackAnimationController;->finishBackNavigation(Z)V
 
     .line 33
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 36
     aget-boolean p0, p0, v1
@@ -1495,14 +1495,14 @@
     const/4 v5, 0x0
 
     .line 52
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 53
     goto :goto_0
 
     .line 56
     :cond_0
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 57
     aget-boolean p0, p0, v1
@@ -1526,7 +1526,7 @@
     const/4 v5, 0x0
 
     .line 73
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 74
     :cond_1
@@ -1559,7 +1559,7 @@
     if-eqz v0, :cond_5
 
     .line 92
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 94
     aget-boolean v0, v0, v1
@@ -1583,11 +1583,11 @@
     const/4 v7, 0x0
 
     .line 110
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 111
     :cond_3
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 114
     aget-boolean v0, v0, v1
@@ -1611,7 +1611,7 @@
     const/4 v7, 0x0
 
     .line 130
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 131
     :cond_4
@@ -1649,7 +1649,7 @@
     if-nez v0, :cond_6
 
     .line 156
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 158
     aget-boolean p0, p0, v1
@@ -1673,14 +1673,14 @@
     const/4 v5, 0x0
 
     .line 174
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 175
     goto :goto_1
 
     .line 178
     :cond_6
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 179
     aget-boolean v0, v0, v1
@@ -1704,7 +1704,7 @@
     const/4 v6, 0x0
 
     .line 195
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 196
     :cond_7
@@ -1811,7 +1811,7 @@
     if-nez p0, :cond_0
 
     .line 51
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 53
     const/4 p1, 0x4
@@ -1838,7 +1838,7 @@
     const/4 v5, 0x0
 
     .line 70
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 71
     :cond_0
@@ -1963,13 +1963,13 @@
     check-cast v0, Lcom/android/wm/shell/common/HandlerExecutor;
 
     .line 9
-    iget-object v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mAnimationTimeoutRunnable:Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;
+    iget-object v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mAnimationTimeoutRunnable:Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;
 
     .line 11
     invoke-virtual {v0, v1}, Lcom/android/wm/shell/common/HandlerExecutor;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 13
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 16
     const/4 v3, 0x0
@@ -1996,7 +1996,7 @@
     const/4 v8, 0x0
 
     .line 33
-    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 34
     :cond_1
@@ -2090,7 +2090,7 @@
     if-nez v0, :cond_1
 
     .line 6
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 8
     const/4 v1, 0x4
@@ -2117,7 +2117,7 @@
     const/4 v6, 0x0
 
     .line 25
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->e(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 26
     :cond_0
@@ -2137,7 +2137,7 @@
     if-nez v0, :cond_3
 
     .line 36
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 38
     const/4 v1, 0x3
@@ -2164,7 +2164,7 @@
     const/4 v6, 0x0
 
     .line 55
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->w(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->w(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 56
     :cond_2
@@ -2369,7 +2369,7 @@
     iput-object v3, v1, Lcom/android/wm/shell/back/BackAnimationController;->mActiveCallback:Landroid/window/IOnBackInvokedCallback;
 
     .line 182
-    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
+    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 184
     aget-boolean v3, v3, v4
@@ -2393,26 +2393,26 @@
     const/4 v10, 0x0
 
     .line 200
-    invoke-static/range {v5 .. v10}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v5 .. v10}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 201
     :cond_9
     iget-object v13, v1, Lcom/android/wm/shell/back/BackAnimationController;->mApps:[Landroid/view/RemoteAnimationTarget;
 
     .line 204
-    new-instance v3, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;
+    new-instance v3, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;
 
     .line 206
-    const/4 v5, 0x2
+    const/4 v5, 0x1
 
     .line 208
-    invoke-direct {v3, v1, v5}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;-><init>(Lcom/android/wm/shell/back/BackAnimationController;I)V
+    invoke-direct {v3, v1, v5}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;-><init>(Lcom/android/wm/shell/back/BackAnimationController;I)V
 
     .line 209
     new-instance v5, Lcom/android/wm/shell/back/BackAnimationRunner$1;
 
     .line 212
-    invoke-direct {v5, v0, v13, v3}, Lcom/android/wm/shell/back/BackAnimationRunner$1;-><init>(Lcom/android/wm/shell/back/BackAnimationRunner;[Landroid/view/RemoteAnimationTarget;Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda2;)V
+    invoke-direct {v5, v0, v13, v3}, Lcom/android/wm/shell/back/BackAnimationRunner$1;-><init>(Lcom/android/wm/shell/back/BackAnimationRunner;[Landroid/view/RemoteAnimationTarget;Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;)V
 
     .line 214
     iput-boolean v4, v0, Lcom/android/wm/shell/back/BackAnimationRunner;->mWaitingAnimation:Z

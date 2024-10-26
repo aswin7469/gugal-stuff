@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/ui/SystemBarUtilsProxyImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -72,7 +72,7 @@
     move-result-object v1
 
     .line 27
-    const v2, 0x7f0709c4    # @dimen/status_bar_header_height_keyguard '40.0dp'
+    const v2, 0x7f070a1c    # @dimen/status_bar_header_height_keyguard '40.0dp'
 
     .line 28
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

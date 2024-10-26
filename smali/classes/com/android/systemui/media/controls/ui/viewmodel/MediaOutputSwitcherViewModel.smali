@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -16,13 +16,11 @@
 
 .field public final isTapEnabled:Z
 
-.field public final isVisible:Z
-
 .field public final onClicked:Lkotlin/jvm/functions/Function1;
 
 
 # direct methods
-.method public constructor <init>(ZLjava/lang/CharSequence;Lcom/android/systemui/common/shared/model/Icon;ZZFZLkotlin/jvm/functions/Function1;)V
+.method public constructor <init>(ZLjava/lang/CharSequence;Lcom/android/systemui/common/shared/model/Icon;ZZFLkotlin/jvm/functions/Function1;)V
     .locals 0
 
     .line 1
@@ -47,14 +45,11 @@
     iput p6, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->alpha:F
 
     .line 15
-    iput-boolean p7, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->isVisible:Z
+    iput-object p7, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->onClicked:Lkotlin/jvm/functions/Function1;
 
     .line 17
-    iput-object p8, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->onClicked:Lkotlin/jvm/functions/Function1;
-
-    .line 19
     return-void
-    .line 21
+    .line 19
 .end method
 
 
@@ -185,40 +180,27 @@
 
     .line 67
     :cond_7
-    iget-boolean v1, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->isVisible:Z
-
-    .line 68
-    iget-boolean v3, p1, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->isVisible:Z
-
-    .line 70
-    if-eq v1, v3, :cond_8
-
-    .line 72
-    return v2
-
-    .line 74
-    :cond_8
     iget-object p0, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->onClicked:Lkotlin/jvm/functions/Function1;
 
-    .line 75
+    .line 68
     iget-object p1, p1, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->onClicked:Lkotlin/jvm/functions/Function1;
 
-    .line 77
+    .line 70
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 79
+    .line 72
     move-result p0
 
-    .line 82
-    if-nez p0, :cond_9
+    .line 75
+    if-nez p0, :cond_8
 
-    .line 83
+    .line 76
     return v2
 
-    .line 85
-    :cond_9
+    .line 78
+    :cond_8
     return v0
-    .line 86
+    .line 79
 .end method
 
 .method public final hashCode()I
@@ -297,29 +279,29 @@
     move-result v0
 
     .line 44
-    iget-boolean v2, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->isVisible:Z
+    const/4 v2, 0x0
 
     .line 45
     invoke-static {v0, v1, v2}, Landroidx/compose/animation/TransitionData$$ExternalSyntheticOutline0;->m(IIZ)I
 
-    .line 47
+    .line 46
     move-result v0
 
-    .line 50
+    .line 49
     iget-object p0, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->onClicked:Lkotlin/jvm/functions/Function1;
 
-    .line 51
+    .line 50
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    .line 53
+    .line 52
     move-result p0
 
-    .line 56
+    .line 55
     add-int/2addr p0, v0
 
-    .line 57
+    .line 56
     return p0
-    .line 58
+    .line 57
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -401,42 +383,30 @@
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     .line 61
-    const-string v0, ", isVisible="
+    const-string v0, ", isVisible=false, onClicked="
 
     .line 64
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 66
-    iget-boolean v0, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->isVisible:Z
-
-    .line 69
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 71
-    const-string v0, ", onClicked="
-
-    .line 74
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 76
     iget-object p0, p0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaOutputSwitcherViewModel;->onClicked:Lkotlin/jvm/functions/Function1;
 
-    .line 79
+    .line 69
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 81
+    .line 71
     const-string p0, ")"
 
-    .line 84
+    .line 74
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 86
+    .line 76
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 89
+    .line 79
     move-result-object p0
 
-    .line 92
+    .line 82
     return-object p0
-    .line 93
+    .line 83
 .end method

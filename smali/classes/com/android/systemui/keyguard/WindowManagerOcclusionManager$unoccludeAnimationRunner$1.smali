@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;
 .super Landroid/view/IRemoteAnimationRunner$Stub;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -161,144 +161,166 @@
     if-eqz p4, :cond_1
 
     .line 35
-    iget-object v0, p4, Landroid/view/RemoteAnimationTarget;->taskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    iget-object p4, p4, Landroid/view/RemoteAnimationTarget;->taskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 37
-    :cond_1
-    invoke-virtual {p3, v0, p5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardOcclusionInteractor;->setWmNotifiedShowWhenLockedActivityOnTop(Landroid/app/ActivityManager$RunningTaskInfo;Z)V
+    goto :goto_1
 
     .line 39
+    :cond_1
+    move-object p4, v0
+
+    .line 40
+    :goto_1
+    iget-object p3, p3, Lcom/android/systemui/keyguard/domain/interactor/KeyguardOcclusionInteractor;->repository:Lcom/android/systemui/keyguard/data/repository/KeyguardOcclusionRepository;
+
+    .line 41
+    iget-object p3, p3, Lcom/android/systemui/keyguard/data/repository/KeyguardOcclusionRepository;->showWhenLockedActivityInfo:Lkotlinx/coroutines/flow/StateFlowImpl;
+
+    .line 43
+    new-instance v1, Lcom/android/systemui/keyguard/data/repository/ShowWhenLockedActivityInfo;
+
+    .line 45
+    invoke-direct {v1, p4, p5}, Lcom/android/systemui/keyguard/data/repository/ShowWhenLockedActivityInfo;-><init>(Landroid/app/ActivityManager$RunningTaskInfo;Z)V
+
+    .line 47
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 50
+    invoke-virtual {p3, v0, v1}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 53
     iget-object p3, p0, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;->this$0:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;
 
-    .line 42
+    .line 56
     iget-object p4, p3, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;->interactionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 44
+    .line 58
     iget-object p3, p3, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;->keyguardViewController:Ldagger/Lazy;
 
-    .line 46
+    .line 60
     invoke-interface {p3}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 48
+    .line 62
     move-result-object p3
 
-    .line 51
+    .line 65
     check-cast p3, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 52
+    .line 66
     invoke-virtual {p3}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
-    .line 54
+    .line 68
     move-result-object p3
 
-    .line 57
+    .line 71
     invoke-virtual {p3}, Landroid/view/ViewRootImpl;->getView()Landroid/view/View;
 
-    .line 58
+    .line 72
     move-result-object p3
 
-    .line 61
+    .line 75
     const/16 v0, 0x40
 
-    .line 62
+    .line 76
     invoke-static {v0, p3}, Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;->withView(ILandroid/view/View;)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
 
-    .line 64
+    .line 78
     move-result-object p3
 
-    .line 67
+    .line 81
     const-string v0, "UNOCCLUDE"
 
-    .line 68
+    .line 82
     invoke-virtual {p3, v0}, Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;->setTag(Ljava/lang/String;)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
 
-    .line 70
+    .line 84
     move-result-object p3
 
-    .line 73
+    .line 87
     invoke-virtual {p4, p3}, Lcom/android/internal/jank/InteractionJankMonitor;->begin(Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;)Z
 
-    .line 74
+    .line 88
     array-length p3, p2
 
-    .line 77
+    .line 91
     if-nez p3, :cond_3
 
-    .line 78
+    .line 92
     const-string p2, "No apps provided to unocclude runner; skipping animation and unoccluding."
 
-    .line 80
+    .line 94
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
+    .line 96
     iget-object p0, p0, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;->this$0:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;
 
-    .line 85
+    .line 99
     iget-object p0, p0, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;->unoccludeAnimationFinishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
 
-    .line 87
+    .line 101
     if-eqz p0, :cond_2
 
-    .line 89
+    .line 103
     invoke-interface {p0}, Landroid/view/IRemoteAnimationFinishedCallback;->onAnimationFinished()V
 
-    .line 91
+    .line 105
     :cond_2
     return-void
 
-    .line 94
+    .line 108
     :cond_3
     aget-object p1, p2, p5
 
-    .line 95
+    .line 109
     iget-object p2, p0, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;->this$0:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;
 
-    .line 97
+    .line 111
     iget-object p2, p2, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;->keyguardViewController:Ldagger/Lazy;
 
-    .line 99
+    .line 113
     invoke-interface {p2}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 101
+    .line 115
     move-result-object p2
 
-    .line 104
+    .line 118
     check-cast p2, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 105
+    .line 119
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
-    .line 107
+    .line 121
     move-result-object p2
-
-    .line 110
-    invoke-virtual {p2}, Landroid/view/ViewRootImpl;->getView()Landroid/view/View;
-
-    .line 111
-    move-result-object p2
-
-    .line 114
-    new-instance p3, Landroid/view/SyncRtSurfaceTransactionApplier;
-
-    .line 115
-    invoke-direct {p3, p2}, Landroid/view/SyncRtSurfaceTransactionApplier;-><init>(Landroid/view/View;)V
-
-    .line 117
-    iget-object p2, p0, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;->$executor:Ljava/util/concurrent/Executor;
-
-    .line 120
-    new-instance p4, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1$onAnimationStart$2;
-
-    .line 122
-    iget-object p5, p0, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;->this$0:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;
 
     .line 124
-    invoke-direct {p4, p1, p3, p0, p5}, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1$onAnimationStart$2;-><init>(Landroid/view/RemoteAnimationTarget;Landroid/view/SyncRtSurfaceTransactionApplier;Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;)V
+    invoke-virtual {p2}, Landroid/view/ViewRootImpl;->getView()Landroid/view/View;
 
-    .line 126
-    invoke-interface {p2, p4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    .line 125
+    move-result-object p2
+
+    .line 128
+    new-instance p3, Landroid/view/SyncRtSurfaceTransactionApplier;
 
     .line 129
+    invoke-direct {p3, p2}, Landroid/view/SyncRtSurfaceTransactionApplier;-><init>(Landroid/view/View;)V
+
+    .line 131
+    iget-object p2, p0, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;->$executor:Ljava/util/concurrent/Executor;
+
+    .line 134
+    new-instance p4, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1$onAnimationStart$2;
+
+    .line 136
+    iget-object p5, p0, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;->this$0:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;
+
+    .line 138
+    invoke-direct {p4, p1, p3, p0, p5}, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1$onAnimationStart$2;-><init>(Landroid/view/RemoteAnimationTarget;Landroid/view/SyncRtSurfaceTransactionApplier;Lcom/android/systemui/keyguard/WindowManagerOcclusionManager$unoccludeAnimationRunner$1;Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;)V
+
+    .line 140
+    invoke-interface {p2, p4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 143
     return-void
-    .line 132
+    .line 146
 .end method

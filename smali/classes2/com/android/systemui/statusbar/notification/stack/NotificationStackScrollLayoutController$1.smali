@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnAttachStateChangeListener;
@@ -55,107 +55,97 @@
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
 
     .line 17
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
+    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
     .line 20
-    move-result p1
-
-    .line 23
-    if-nez p1, :cond_0
-
-    .line 24
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
-
-    .line 26
     iget-object v0, p1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mZenModeController:Lcom/android/systemui/statusbar/policy/ZenModeController;
 
-    .line 28
+    .line 22
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mZenModeControllerCallback:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$11;
 
-    .line 30
+    .line 24
     check-cast v0, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;
 
-    .line 32
+    .line 26
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 34
-    :cond_0
+    .line 28
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 37
+    .line 31
     iget-object v0, p1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 39
+    .line 33
     check-cast v0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 41
+    .line 35
     iget v0, v0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
 
-    .line 43
+    .line 37
     iget v1, p1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mBarState:I
 
-    .line 45
-    if-eq v0, v1, :cond_1
+    .line 39
+    if-eq v0, v1, :cond_0
 
-    .line 47
+    .line 41
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mStateListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$6;
 
-    .line 49
+    .line 43
     invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$6;->onStateChanged(I)V
 
-    .line 51
+    .line 45
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 54
+    .line 48
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mStateListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$6;
 
-    .line 56
+    .line 50
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$6;->onStatePostChange()V
 
-    .line 58
-    :cond_1
+    .line 52
+    :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 61
+    .line 55
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 63
+    .line 57
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mStateListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$6;
 
-    .line 65
+    .line 59
     check-cast p1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 67
+    .line 61
     iget-object v0, p1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mListeners:Ljava/util/ArrayList;
 
-    .line 69
+    .line 63
     monitor-enter v0
 
-    .line 71
+    .line 65
     const/4 v1, 0x2
 
-    .line 72
+    .line 66
     :try_start_0
     invoke-virtual {p1, p0, v1}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->addListenerInternalLocked(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;I)V
 
-    .line 73
+    .line 67
     monitor-exit v0
 
-    .line 76
+    .line 70
     return-void
 
-    .line 77
+    .line 71
     :catchall_0
     move-exception p0
 
-    .line 78
+    .line 72
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 79
+    .line 73
     throw p0
-    .line 80
+    .line 74
 .end method
 
 .method public final onViewDetachedFromWindow(Landroid/view/View;)V
@@ -186,46 +176,36 @@
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->removeCallback(Ljava/lang/Object;)V
 
     .line 17
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    .line 20
-    move-result p1
-
-    .line 23
-    if-nez p1, :cond_0
-
-    .line 24
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 26
+    .line 20
     iget-object v0, p1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mZenModeController:Lcom/android/systemui/statusbar/policy/ZenModeController;
 
-    .line 28
+    .line 22
     check-cast v0, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;
 
-    .line 30
+    .line 24
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mZenModeControllerCallback:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$11;
 
-    .line 32
+    .line 26
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;->removeCallback(Ljava/lang/Object;)V
 
-    .line 34
-    :cond_0
+    .line 28
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 37
+    .line 31
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 39
+    .line 33
     check-cast p1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 41
+    .line 35
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mStateListener:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$6;
 
-    .line 43
+    .line 37
     invoke-virtual {p1, p0}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->removeCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
 
-    .line 45
+    .line 39
     return-void
-    .line 48
+    .line 42
 .end method

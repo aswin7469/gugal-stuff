@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/quickaffordance/MuteQuickAffordanceConfig;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig;
@@ -169,7 +169,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f0808e2    # @drawable/ic_notifications_silence 'res/drawable/ic_notifications_silence.xml'
+    const p0, 0x7f080907    # @drawable/ic_notifications_silence 'res/drawable/ic_notifications_silence.xml'
 
     .line 2
     return p0
@@ -241,7 +241,7 @@
     iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/MuteQuickAffordanceConfig;->context:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f140a1b    # @string/volume_ringer_status_silent 'Mute'
+    const v0, 0x7f130aa8    # @string/volume_ringer_status_silent 'Mute'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

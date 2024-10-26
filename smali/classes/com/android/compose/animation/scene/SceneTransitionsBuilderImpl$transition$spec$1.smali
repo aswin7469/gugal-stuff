@@ -1,6 +1,6 @@
 .class final synthetic Lcom/android/compose/animation/scene/SceneTransitionsBuilderImpl$transition$spec$1;
 .super Lkotlin/jvm/internal/FunctionReferenceImpl;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -18,29 +18,29 @@
     iput-object p1, p0, Lcom/android/compose/animation/scene/SceneTransitionsBuilderImpl$transition$spec$1;->$builder:Lkotlin/jvm/functions/Function1;
 
     .line 2
-    const-string v4, "transition$transformationSpec$0(Lkotlin/jvm/functions/Function1;)Lcom/android/compose/animation/scene/TransformationSpecImpl;"
+    const-string/jumbo v4, "transition$transformationSpec$0(Lkotlin/jvm/functions/Function1;)Lcom/android/compose/animation/scene/TransformationSpecImpl;"
 
     .line 4
     const/4 v5, 0x0
 
-    .line 6
+    .line 7
     const/4 v1, 0x0
 
-    .line 7
+    .line 8
     const-class v2, Lkotlin/jvm/internal/Intrinsics$Kotlin;
 
-    .line 8
-    const-string v3, "transformationSpec"
+    .line 9
+    const-string/jumbo v3, "transformationSpec"
 
-    .line 10
+    .line 11
     move-object v0, p0
 
-    .line 12
+    .line 14
     invoke-direct/range {v0 .. v5}, Lkotlin/jvm/internal/FunctionReferenceImpl;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 13
+    .line 15
     return-void
-    .line 16
+    .line 18
 .end method
 
 

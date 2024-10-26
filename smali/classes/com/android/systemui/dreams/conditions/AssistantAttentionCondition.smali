@@ -1,16 +1,16 @@
 .class public final Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;
 .super Lcom/android/systemui/shared/condition/Condition;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
-.field public final mAssistManager:Lcom/android/systemui/assist/AssistManager;
+.field public final mAssistManager:Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
 .field public final mVisualQueryAttentionListener:Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition$1;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/assist/AssistManager;)V
+.method public constructor <init>(Lcom/google/android/systemui/assist/AssistManagerGoogle;)V
     .locals 1
 
     .line 1
@@ -26,7 +26,7 @@
     iput-object v0, p0, Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;->mVisualQueryAttentionListener:Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition$1;
 
     .line 10
-    iput-object p1, p0, Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;->mAssistManager:Lcom/android/systemui/assist/AssistManager;
+    iput-object p1, p0, Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;->mAssistManager:Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 12
     return-void
@@ -39,10 +39,10 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;->mAssistManager:Lcom/android/systemui/assist/AssistManager;
+    iget-object v0, p0, Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;->mAssistManager:Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 2
-    iget-object v1, v0, Lcom/android/systemui/assist/AssistManager;->mVisualQueryAttentionListeners:Ljava/util/List;
+    iget-object v1, v0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mVisualQueryAttentionListeners:Ljava/util/List;
 
     .line 4
     iget-object p0, p0, Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;->mVisualQueryAttentionListener:Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition$1;
@@ -57,7 +57,7 @@
     if-nez v1, :cond_0
 
     .line 12
-    iget-object v0, v0, Lcom/android/systemui/assist/AssistManager;->mVisualQueryAttentionListeners:Ljava/util/List;
+    iget-object v0, v0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mVisualQueryAttentionListeners:Ljava/util/List;
 
     .line 14
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -72,10 +72,10 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;->mAssistManager:Lcom/android/systemui/assist/AssistManager;
+    iget-object v0, p0, Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;->mAssistManager:Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 2
-    iget-object v0, v0, Lcom/android/systemui/assist/AssistManager;->mVisualQueryAttentionListeners:Ljava/util/List;
+    iget-object v0, v0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mVisualQueryAttentionListeners:Ljava/util/List;
 
     .line 4
     iget-object p0, p0, Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition;->mVisualQueryAttentionListener:Lcom/android/systemui/dreams/conditions/AssistantAttentionCondition$1;

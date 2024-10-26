@@ -1,160 +1,126 @@
 .class public final synthetic Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic $r8$classId:I
-
 .field public final synthetic f$0:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;
+
+.field public final synthetic f$1:Lcom/google/android/systemui/gesture/BackGestureTfClassifierProviderGoogle;
+
+.field public final synthetic f$2:Ljava/util/Map;
+
+.field public final synthetic f$3:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;I)V
+.method public synthetic constructor <init>(Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;Lcom/google/android/systemui/gesture/BackGestureTfClassifierProviderGoogle;Ljava/util/Map;F)V
     .locals 0
 
     .line 1
-    iput p2, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->$r8$classId:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
     iput-object p1, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 5
+    iput-object p2, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->f$1:Lcom/google/android/systemui/gesture/BackGestureTfClassifierProviderGoogle;
 
-    .line 6
-    return-void
+    .line 7
+    iput-object p3, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->f$2:Ljava/util/Map;
+
     .line 9
+    iput p4, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->f$3:F
+
+    .line 11
+    return-void
+    .line 13
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final run()V
+    .locals 5
 
     .line 1
-    iget v0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->$r8$classId:I
+    iget-object v0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;
+    iget-object v1, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->f$1:Lcom/google/android/systemui/gesture/BackGestureTfClassifierProviderGoogle;
 
     .line 4
-    packed-switch v0, :pswitch_data_0
+    iget-object v2, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->f$2:Ljava/util/Map;
 
     .line 6
-    check-cast p1, Landroid/graphics/Region;
+    iget p0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;->f$3:F
 
-    .line 9
-    iget-object p0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mDesktopModeExcludeRegion:Landroid/graphics/Region;
+    .line 8
+    iget-object v3, v0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mUiThreadContext:Lcom/android/systemui/util/concurrency/UiThreadContext;
 
-    .line 11
-    invoke-virtual {p0, p1}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
+    .line 10
+    invoke-virtual {v3}, Lcom/android/systemui/util/concurrency/UiThreadContext;->isCurrentThread()V
 
-    .line 13
-    return-void
+    .line 12
+    const/4 v3, 0x0
+
+    .line 15
+    iput-boolean v3, v0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mMLModelIsLoading:Z
 
     .line 16
-    :pswitch_0
-    check-cast p1, Lcom/android/wm/shell/desktopmode/DesktopTasksController$DesktopModeImpl;
+    iget-boolean v4, v0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mUseMLModel:Z
 
-    .line 17
-    iget-object v0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mDesktopCornersChangedListener:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;
+    .line 18
+    if-nez v4, :cond_1
 
-    .line 19
-    iget-object p0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mUiThreadContext:Lcom/android/systemui/util/concurrency/UiThreadContext;
+    .line 20
+    if-eqz v1, :cond_0
 
-    .line 21
-    iget-object p0, p0, Lcom/android/systemui/util/concurrency/UiThreadContext;->executor:Ljava/util/concurrent/Executor;
+    .line 22
+    const/4 p0, 0x0
 
-    .line 23
-    iget-object p1, p1, Lcom/android/wm/shell/desktopmode/DesktopTasksController$DesktopModeImpl;->this$0:Lcom/android/wm/shell/desktopmode/DesktopTasksController;
+    .line 24
+    iput-object p0, v1, Lcom/google/android/systemui/gesture/BackGestureTfClassifierProviderGoogle;->mVocab:Ljava/util/Map;
 
     .line 25
-    iget-object v1, p1, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->mainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
+    iput-boolean v3, v1, Lcom/google/android/systemui/gesture/BackGestureTfClassifierProviderGoogle;->mModelLoaded:Z
 
     .line 27
-    new-instance v2, Lcom/android/wm/shell/desktopmode/DesktopTasksController$DesktopModeImpl$addVisibleTasksListener$1;
+    iget-object p0, v1, Lcom/google/android/systemui/gesture/BackGestureTfClassifierProviderGoogle;->mInterpreter:Lorg/tensorflow/lite/Interpreter;
 
     .line 29
-    const/4 v3, 0x1
+    if-eqz p0, :cond_0
 
     .line 31
-    invoke-direct {v2, p1, v0, p0, v3}, Lcom/android/wm/shell/desktopmode/DesktopTasksController$DesktopModeImpl$addVisibleTasksListener$1;-><init>(Lcom/android/wm/shell/desktopmode/DesktopTasksController;Ljava/lang/Object;Ljava/util/concurrent/Executor;I)V
+    invoke-virtual {p0}, Lorg/tensorflow/lite/Interpreter;->close()V
 
-    .line 32
-    check-cast v1, Lcom/android/wm/shell/common/HandlerExecutor;
+    .line 33
+    :cond_0
+    const-string p0, "EdgeBackGestureHandler"
 
-    .line 35
-    invoke-virtual {v1, v2}, Lcom/android/wm/shell/common/HandlerExecutor;->execute(Ljava/lang/Runnable;)V
+    .line 36
+    const-string v0, "Model finished loading but isn\'t needed."
 
-    .line 37
-    return-void
+    .line 38
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 40
-    :pswitch_1
-    check-cast p1, Lcom/android/wm/shell/pip/Pip;
-
-    .line 41
-    iget-object p0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mOnIsInPipStateChangedListener:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda0;
+    goto :goto_0
 
     .line 43
-    check-cast p1, Lcom/android/wm/shell/pip/phone/PipController$PipImpl;
+    :cond_1
+    iput-object v1, v0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mBackGestureTfClassifierProvider:Lcom/google/android/systemui/gesture/BackGestureTfClassifierProviderGoogle;
 
-    .line 45
-    iget-object v0, p1, Lcom/android/wm/shell/pip/phone/PipController$PipImpl;->this$0:Lcom/android/wm/shell/pip/phone/PipController;
+    .line 44
+    iput-object v2, v0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mVocab:Ljava/util/Map;
 
-    .line 47
-    iget-object v0, v0, Lcom/android/wm/shell/pip/phone/PipController;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
+    .line 46
+    iput p0, v0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mMLModelThreshold:F
 
-    .line 49
-    new-instance v1, Lcom/android/wm/shell/pip/phone/PipController$$ExternalSyntheticLambda0;
-
-    .line 51
-    const/4 v2, 0x3
-
-    .line 53
-    invoke-direct {v1, v2, p1, p0}, Lcom/android/wm/shell/pip/phone/PipController$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
-
-    .line 54
-    check-cast v0, Lcom/android/wm/shell/common/HandlerExecutor;
-
-    .line 57
-    invoke-virtual {v0, v1}, Lcom/android/wm/shell/common/HandlerExecutor;->execute(Ljava/lang/Runnable;)V
-
-    .line 59
+    .line 48
+    :goto_0
     return-void
-
-    .line 62
-    :pswitch_2
-    check-cast p1, Ljava/lang/Boolean;
-
-    .line 63
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 65
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 68
-    move-result p1
-
-    .line 71
-    iput-boolean p1, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mIsInPip:Z
-
-    .line 72
-    return-void
-
-    .line 74
-    nop
-
-    .line 75
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-    .line 76
+    .line 50
 .end method

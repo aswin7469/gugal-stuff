@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -50,7 +50,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/bouncer/domain/interactor/BouncerInteractor;Lcom/android/systemui/inputmethod/domain/interactor/InputMethodInteractor;Lcom/android/systemui/bouncer/domain/interactor/SimBouncerInteractor;Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;Landroid/app/admin/DevicePolicyManager;Lcom/android/systemui/bouncer/ui/viewmodel/BouncerMessageViewModel;Lcom/android/systemui/bouncer/shared/flag/ComposeBouncerFlagsImpl;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/bouncer/domain/interactor/BouncerInteractor;Lcom/android/systemui/inputmethod/domain/interactor/InputMethodInteractor;Lcom/android/systemui/bouncer/domain/interactor/SimBouncerInteractor;Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;Landroid/app/admin/DevicePolicyManager;Lcom/android/systemui/bouncer/ui/viewmodel/BouncerMessageViewModel;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;)V
     .locals 0
 
     .line 1
@@ -75,420 +75,359 @@
     iput-object p6, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->simBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/SimBouncerInteractor;
 
     .line 15
-    iput-object p7, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->authenticationInteractor:Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;
-
-    .line 17
     iput-object p8, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->selectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
 
-    .line 19
-    iput-object p9, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->devicePolicyManager:Landroid/app/admin/DevicePolicyManager;
-
-    .line 21
+    .line 17
     new-instance p1, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$1;
 
-    .line 23
+    .line 19
     const/4 p3, 0x0
 
-    .line 25
-    invoke-direct {p1, p12, p3}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    .line 21
+    invoke-direct {p1, p11, p3}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 26
+    .line 22
     const/4 p3, 0x3
 
-    .line 29
+    .line 25
     invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 30
+    .line 26
     move-result-object p5
 
-    .line 33
+    .line 29
     const/4 p6, 0x0
 
-    .line 34
+    .line 30
     invoke-static {p1, p2, p5, p6}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 35
-    move-result-object p1
-
-    .line 38
-    iput-object p1, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->selectedUserImage:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 39
+    .line 31
     iget-object p1, p4, Lcom/android/systemui/bouncer/domain/interactor/BouncerInteractor;->dismissDestination:Lcom/android/systemui/bouncer/domain/interactor/BouncerInteractor$special$$inlined$map$1;
 
-    .line 41
+    .line 34
     new-instance p5, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$2;
 
-    .line 43
+    .line 36
     const/4 p8, 0x0
 
-    .line 45
+    .line 38
     invoke-direct {p5, p1, p0, p8}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$2;-><init>(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;I)V
 
-    .line 46
+    .line 39
     invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 49
+    .line 42
     move-result-object p1
 
-    .line 52
+    .line 45
     sget-object p8, Lcom/android/systemui/scene/shared/model/Scenes;->Lockscreen:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 53
+    .line 46
     invoke-static {p8}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->destinationSceneMap(Lcom/android/compose/animation/scene/SceneKey;)Ljava/util/Map;
 
-    .line 55
+    .line 48
     move-result-object p8
 
-    .line 58
+    .line 51
     invoke-static {p5, p2, p1, p8}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 59
+    .line 52
     move-result-object p1
 
-    .line 62
+    .line 55
     iput-object p1, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->destinationScenes:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 63
+    .line 56
     iput-object p10, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->message:Lcom/android/systemui/bouncer/ui/viewmodel/BouncerMessageViewModel;
 
-    .line 65
+    .line 58
     new-instance p1, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$userSwitcherDropdown$1;
 
-    .line 67
+    .line 60
     invoke-direct {p1, p3, p6}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 69
+    .line 62
     new-instance p5, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 72
-    invoke-direct {p5, p13, p14, p1}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    .line 65
+    invoke-direct {p5, p12, p13, p1}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 74
+    .line 67
     invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 77
+    .line 70
     move-result-object p1
 
-    .line 80
+    .line 73
     sget-object p8, Lkotlin/collections/EmptyList;->INSTANCE:Lkotlin/collections/EmptyList;
 
-    .line 81
+    .line 74
     invoke-static {p5, p2, p1, p8}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 83
-    move-result-object p1
-
-    .line 86
-    iput-object p1, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->userSwitcherDropdown:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 87
+    .line 76
     new-instance p1, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$2;
 
-    .line 89
+    .line 79
     iget-object p5, p7, Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;->authenticationMethod:Lkotlinx/coroutines/flow/Flow;
 
-    .line 91
+    .line 81
     const/4 p8, 0x1
 
-    .line 93
+    .line 83
     invoke-direct {p1, p5, p0, p8}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$2;-><init>(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;I)V
 
-    .line 94
+    .line 84
     invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
+
+    .line 87
+    move-result-object p5
+
+    .line 90
+    invoke-static {p1, p2, p5, p6}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 91
+    move-result-object p1
+
+    .line 94
+    iput-object p1, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->authMethodViewModel:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 95
+    invoke-static {p6}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 97
     move-result-object p5
 
     .line 100
-    invoke-static {p1, p2, p5, p6}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 101
-    move-result-object p1
-
-    .line 104
-    iput-object p1, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->authMethodViewModel:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 105
-    invoke-static {p6}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 107
-    move-result-object p5
-
-    .line 110
     iput-object p5, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->lockoutDialogMessage:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 111
+    .line 101
     invoke-static {p6}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 113
+    .line 103
     move-result-object p8
 
-    .line 116
+    .line 106
     iput-object p8, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->wipeDialogMessage:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 117
+    .line 107
     new-instance p9, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$dialogViewModel$1;
 
-    .line 119
+    .line 109
     invoke-direct {p9, p0, p6}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$dialogViewModel$1;-><init>(Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;Lkotlin/coroutines/Continuation;)V
 
-    .line 121
-    new-instance p12, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+    .line 111
+    new-instance p11, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 124
-    invoke-direct {p12, p8, p5, p9}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    .line 114
+    invoke-direct {p11, p8, p5, p9}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 126
+    .line 116
     invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 129
+    .line 119
     move-result-object p5
 
-    .line 132
+    .line 122
     invoke-virtual {p0}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->createDialogViewModel()Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$DialogViewModel;
 
-    .line 133
+    .line 123
     move-result-object p8
 
-    .line 136
-    invoke-static {p12, p2, p5, p8}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 126
+    invoke-static {p11, p2, p5, p8}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 137
+    .line 127
+    invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
+
+    .line 130
     move-result-object p5
 
-    .line 140
-    iput-object p5, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->dialogViewModel:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 133
+    invoke-static {p14, p2, p5, p6}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 141
+    .line 134
+    new-instance p5, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$2;
+
+    .line 137
+    const/4 p6, 0x2
+
+    .line 139
+    invoke-direct {p5, p1, p0, p6}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$2;-><init>(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;I)V
+
+    .line 140
     invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
     .line 143
-    move-result-object p5
+    move-result-object p6
 
     .line 146
-    invoke-static {p15, p2, p5, p6}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    iget-object p8, p1, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
     .line 147
-    move-result-object p5
+    invoke-interface {p8}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
-    .line 150
-    iput-object p5, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->actionButton:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 149
+    move-result-object p9
 
-    .line 151
-    new-instance p5, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$2;
+    .line 152
+    check-cast p9, Lcom/android/systemui/bouncer/ui/viewmodel/AuthMethodBouncerViewModel;
 
     .line 153
-    const/4 p8, 0x2
-
-    .line 155
-    invoke-direct {p5, p1, p0, p8}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$2;-><init>(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;I)V
-
-    .line 156
-    invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
-
-    .line 159
-    move-result-object p8
-
-    .line 162
-    iget-object p9, p1, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
-
-    .line 163
-    invoke-interface {p9}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
-
-    .line 165
-    move-result-object p12
-
-    .line 168
-    check-cast p12, Lcom/android/systemui/bouncer/ui/viewmodel/AuthMethodBouncerViewModel;
-
-    .line 169
     iget-object p4, p4, Lcom/android/systemui/bouncer/domain/interactor/BouncerInteractor;->repository:Lcom/android/systemui/bouncer/data/repository/BouncerRepository;
 
-    .line 171
+    .line 155
     invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 173
-    sget-object p13, Lcom/android/systemui/flags/Flags;->FULL_SCREEN_USER_SWITCHER:Lcom/android/systemui/flags/ResourceBooleanFlag;
+    .line 157
+    sget-object p11, Lcom/android/systemui/flags/Flags;->FULL_SCREEN_USER_SWITCHER:Lcom/android/systemui/flags/ResourceBooleanFlag;
 
-    .line 176
+    .line 160
     iget-object p4, p4, Lcom/android/systemui/bouncer/data/repository/BouncerRepository;->flags:Lcom/android/systemui/flags/FeatureFlagsClassic;
 
-    .line 178
+    .line 162
     check-cast p4, Lcom/android/systemui/flags/FeatureFlagsClassicRelease;
 
-    .line 180
-    invoke-virtual {p4, p13}, Lcom/android/systemui/flags/FeatureFlagsClassicRelease;->isEnabled(Lcom/android/systemui/flags/ResourceBooleanFlag;)Z
+    .line 164
+    invoke-virtual {p4, p11}, Lcom/android/systemui/flags/FeatureFlagsClassicRelease;->isEnabled(Lcom/android/systemui/flags/ResourceBooleanFlag;)Z
 
-    .line 182
+    .line 166
     move-result p4
 
-    .line 185
-    const/4 p13, 0x1
+    .line 169
+    const/4 p11, 0x1
 
-    .line 186
-    const/4 p14, 0x0
+    .line 170
+    const/4 p12, 0x0
 
-    .line 187
+    .line 171
     if-nez p4, :cond_1
 
-    .line 188
-    instance-of p4, p12, Lcom/android/systemui/bouncer/ui/viewmodel/PasswordBouncerViewModel;
+    .line 172
+    instance-of p4, p9, Lcom/android/systemui/bouncer/ui/viewmodel/PasswordBouncerViewModel;
 
-    .line 190
+    .line 174
     if-nez p4, :cond_0
 
-    .line 192
+    .line 176
     goto :goto_0
 
-    .line 194
+    .line 178
     :cond_0
-    move p4, p14
+    move p4, p12
 
-    .line 195
+    .line 179
     goto :goto_1
 
-    .line 196
+    .line 180
     :cond_1
     :goto_0
-    move p4, p13
+    move p4, p11
 
-    .line 197
+    .line 181
     :goto_1
     invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 198
+    .line 182
     move-result-object p4
 
-    .line 201
-    invoke-static {p5, p2, p8, p4}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 185
+    invoke-static {p5, p2, p6, p4}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 202
-    move-result-object p4
-
-    .line 205
-    iput-object p4, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->isSideBySideSupported:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 206
+    .line 186
     new-instance p4, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$2;
 
-    .line 208
+    .line 189
     const/4 p5, 0x3
 
-    .line 210
+    .line 191
     invoke-direct {p4, p1, p0, p5}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$2;-><init>(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;I)V
 
-    .line 211
+    .line 192
     invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 214
+    .line 195
     move-result-object p1
 
-    .line 217
-    invoke-interface {p9}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+    .line 198
+    invoke-interface {p8}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
-    .line 218
+    .line 199
     move-result-object p5
 
-    .line 221
+    .line 202
     check-cast p5, Lcom/android/systemui/bouncer/ui/viewmodel/AuthMethodBouncerViewModel;
 
-    .line 222
+    .line 203
     instance-of p5, p5, Lcom/android/systemui/bouncer/ui/viewmodel/PasswordBouncerViewModel;
 
-    .line 224
-    xor-int/2addr p5, p13
+    .line 205
+    xor-int/2addr p5, p11
 
-    .line 226
+    .line 207
     invoke-static {p5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 227
+    .line 208
     move-result-object p5
 
-    .line 230
+    .line 211
     invoke-static {p4, p2, p1, p5}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 231
-    move-result-object p1
-
-    .line 234
-    iput-object p1, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->isFoldSplitRequired:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 235
+    .line 212
     iget-object p1, p10, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerMessageViewModel;->isLockoutMessagePresent:Lcom/android/systemui/bouncer/ui/viewmodel/BouncerMessageViewModel$special$$inlined$map$1;
 
-    .line 237
+    .line 215
     new-instance p4, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$1;
 
-    .line 239
+    .line 217
     const/4 p5, 0x1
 
-    .line 241
+    .line 219
     invoke-direct {p4, p1, p5}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 242
+    .line 220
     invoke-static {p3}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 245
+    .line 223
     move-result-object p1
 
-    .line 248
-    iget-object p5, p7, Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;->repository:Lcom/android/systemui/authentication/data/repository/AuthenticationRepositoryImpl;
+    .line 226
+    iget-object p3, p7, Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;->repository:Lcom/android/systemui/authentication/data/repository/AuthenticationRepositoryImpl;
 
-    .line 249
-    invoke-virtual {p5}, Lcom/android/systemui/authentication/data/repository/AuthenticationRepositoryImpl;->getLockoutEndTimestamp()Ljava/lang/Long;
+    .line 227
+    invoke-virtual {p3}, Lcom/android/systemui/authentication/data/repository/AuthenticationRepositoryImpl;->getLockoutEndTimestamp()Ljava/lang/Long;
 
-    .line 251
-    move-result-object p5
+    .line 229
+    move-result-object p3
 
-    .line 254
-    if-nez p5, :cond_2
+    .line 232
+    if-nez p3, :cond_2
 
-    .line 255
+    .line 233
     goto :goto_2
 
-    .line 257
+    .line 235
     :cond_2
-    move p13, p14
+    move p11, p12
 
-    .line 258
+    .line 236
     :goto_2
-    invoke-static {p13}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p11}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 259
-    move-result-object p5
+    .line 237
+    move-result-object p3
 
-    .line 262
-    invoke-static {p4, p2, p1, p5}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 240
+    invoke-static {p4, p2, p1, p3}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 263
+    .line 241
     move-result-object p1
 
-    .line 266
+    .line 244
     iput-object p1, p0, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;->isInputEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 267
-    invoke-virtual {p11}, Lcom/android/systemui/bouncer/shared/flag/ComposeBouncerFlagsImpl;->isComposeBouncerOrSceneContainerEnabled()Z
-
-    .line 269
-    move-result p1
-
-    .line 272
-    if-eqz p1, :cond_3
-
-    .line 273
-    new-instance p1, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$1;
-
-    .line 275
-    invoke-direct {p1, p0, p6}, Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel$1;-><init>(Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;Lkotlin/coroutines/Continuation;)V
-
-    .line 277
-    invoke-static {p2, p6, p6, p1, p3}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 280
-    :cond_3
+    .line 245
     return-void
-    .line 283
+    .line 247
 .end method
 
 .method public static final access$onIntentionalUserInput(Lcom/android/systemui/bouncer/ui/viewmodel/BouncerViewModel;)V

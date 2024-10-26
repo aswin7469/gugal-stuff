@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/animation/ActivityTransitionAnimator$Runner$onAnimationStart$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -67,7 +67,7 @@
     iget-object v0, v0, Lcom/android/systemui/animation/ActivityTransitionAnimator$Runner$onAnimationStart$1;->$finishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
 
     .line 15
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_14
 
     .line 17
     invoke-interface {v0}, Landroid/view/IRemoteAnimationFinishedCallback;->onAnimationFinished()V
@@ -111,7 +111,7 @@
     if-eqz v0, :cond_2
 
     .line 46
-    if-eqz v5, :cond_15
+    if-eqz v5, :cond_14
 
     .line 48
     :try_start_0
@@ -185,7 +185,7 @@
     array-length v11, v2
 
     .line 84
-    if-ge v10, v11, :cond_9
+    if-ge v10, v11, :cond_8
 
     .line 85
     add-int/lit8 v11, v10, 0x1
@@ -200,471 +200,458 @@
     iget v12, v10, Landroid/view/RemoteAnimationTarget;->mode:I
 
     .line 91
-    if-ne v12, v7, :cond_8
+    if-ne v12, v7, :cond_7
 
     .line 93
-    invoke-static {}, Lcom/android/systemui/shared/Flags;->returnAnimationFrameworkLibrary()Z
+    if-eqz v9, :cond_6
 
     .line 95
-    move-result v12
-
-    .line 98
-    if-eqz v12, :cond_5
-
-    .line 99
-    invoke-interface {v6}, Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;->getTransitionCookie()V
-
-    .line 101
-    :cond_5
-    if-eqz v9, :cond_7
-
-    .line 104
     iget-boolean v12, v10, Landroid/view/RemoteAnimationTarget;->hasAnimatingParent:Z
 
-    .line 106
-    if-nez v12, :cond_6
+    .line 97
+    if-nez v12, :cond_5
 
-    .line 108
+    .line 99
     iget-boolean v13, v9, Landroid/view/RemoteAnimationTarget;->hasAnimatingParent:Z
 
-    .line 110
-    if-eqz v13, :cond_6
+    .line 101
+    if-eqz v13, :cond_5
 
-    .line 112
+    .line 103
     goto :goto_1
 
-    .line 114
-    :cond_6
-    if-nez v12, :cond_8
+    .line 105
+    :cond_5
+    if-nez v12, :cond_7
 
-    .line 115
+    .line 106
     iget-object v12, v10, Landroid/view/RemoteAnimationTarget;->screenSpaceBounds:Landroid/graphics/Rect;
 
-    .line 117
+    .line 108
     iget-object v13, v9, Landroid/view/RemoteAnimationTarget;->screenSpaceBounds:Landroid/graphics/Rect;
 
-    .line 119
+    .line 110
     invoke-virtual {v12}, Landroid/graphics/Rect;->width()I
+
+    .line 112
+    move-result v14
+
+    .line 115
+    invoke-virtual {v12}, Landroid/graphics/Rect;->height()I
+
+    .line 116
+    move-result v12
+
+    .line 119
+    mul-int/2addr v12, v14
+
+    .line 120
+    invoke-virtual {v13}, Landroid/graphics/Rect;->width()I
 
     .line 121
     move-result v14
 
     .line 124
-    invoke-virtual {v12}, Landroid/graphics/Rect;->height()I
-
-    .line 125
-    move-result v12
-
-    .line 128
-    mul-int/2addr v12, v14
-
-    .line 129
-    invoke-virtual {v13}, Landroid/graphics/Rect;->width()I
-
-    .line 130
-    move-result v14
-
-    .line 133
     invoke-virtual {v13}, Landroid/graphics/Rect;->height()I
 
-    .line 134
+    .line 125
     move-result v13
 
-    .line 137
+    .line 128
     mul-int/2addr v13, v14
 
-    .line 138
-    if-le v12, v13, :cond_8
+    .line 129
+    if-le v12, v13, :cond_7
 
-    .line 139
-    :cond_7
+    .line 130
+    :cond_6
     :goto_1
     move-object v9, v10
 
-    .line 141
-    :cond_8
+    .line 132
+    :cond_7
     move v10, v11
 
-    .line 142
+    .line 133
     goto :goto_0
 
-    .line 143
+    .line 134
     :catch_1
     move-exception v0
 
-    .line 144
+    .line 135
     move-object v1, v0
 
-    .line 145
+    .line 136
     new-instance v0, Ljava/util/NoSuchElementException;
 
-    .line 146
+    .line 137
     invoke-virtual {v1}, Ljava/lang/ArrayIndexOutOfBoundsException;->getMessage()Ljava/lang/String;
 
-    .line 148
+    .line 139
     move-result-object v1
 
-    .line 151
+    .line 142
     invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    .line 152
+    .line 143
     throw v0
 
-    .line 155
-    :cond_9
+    .line 146
+    :cond_8
     :goto_2
-    if-nez v9, :cond_c
+    if-nez v9, :cond_b
 
-    .line 156
+    .line 147
     const-string v0, "Aborting the animation as no window is opening"
 
-    .line 158
+    .line 149
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
-    if-eqz v5, :cond_a
+    .line 151
+    if-eqz v5, :cond_9
 
-    .line 163
+    .line 154
     :try_start_2
     invoke-interface {v5}, Landroid/view/IRemoteAnimationFinishedCallback;->onAnimationFinished()V
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 165
+    .line 156
     goto :goto_3
 
-    .line 168
+    .line 159
     :catch_2
     move-exception v0
 
-    .line 169
+    .line 160
     move-object v2, v0
 
-    .line 170
+    .line 161
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 171
-    :cond_a
+    .line 162
+    :cond_9
     :goto_3
     sget-boolean v0, Lcom/android/systemui/animation/ActivityTransitionAnimator;->DEBUG_TRANSITION_ANIMATION:Z
 
-    .line 174
-    if-eqz v0, :cond_b
+    .line 165
+    if-eqz v0, :cond_a
 
-    .line 176
+    .line 167
     const-string v0, "Calling controller.onTransitionAnimationCancelled() [no window opening]"
 
-    .line 178
+    .line 169
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
-    :cond_b
+    .line 171
+    :cond_a
     invoke-interface {v6, v4}, Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;->onTransitionAnimationCancelled(Ljava/lang/Boolean;)V
 
-    .line 183
+    .line 174
     iget-object v0, v8, Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate;->listener:Lcom/android/systemui/animation/ActivityTransitionAnimator$Listener;
 
-    .line 186
-    if-eqz v0, :cond_15
+    .line 177
+    if-eqz v0, :cond_14
 
-    .line 188
+    .line 179
     invoke-interface {v0}, Lcom/android/systemui/animation/ActivityTransitionAnimator$Listener;->onTransitionAnimationCancelled()V
 
-    .line 190
+    .line 181
     goto/16 :goto_b
 
-    .line 193
-    :cond_c
-    if-eqz v3, :cond_e
+    .line 184
+    :cond_b
+    if-eqz v3, :cond_d
 
-    .line 195
+    .line 186
     array-length v1, v3
 
-    .line 197
+    .line 188
     move v2, v0
 
-    .line 198
+    .line 189
     :goto_4
-    if-ge v2, v1, :cond_e
+    if-ge v2, v1, :cond_d
 
-    .line 199
+    .line 190
     aget-object v7, v3, v2
 
-    .line 201
+    .line 192
     iget v10, v7, Landroid/view/RemoteAnimationTarget;->windowType:I
 
-    .line 203
+    .line 194
     const/16 v11, 0x7e3
 
-    .line 205
-    if-ne v10, v11, :cond_d
+    .line 196
+    if-ne v10, v11, :cond_c
 
-    .line 207
+    .line 198
     goto :goto_5
 
-    .line 209
-    :cond_d
+    .line 200
+    :cond_c
     add-int/lit8 v2, v2, 0x1
 
-    .line 210
+    .line 201
     goto :goto_4
 
-    .line 212
-    :cond_e
+    .line 203
+    :cond_d
     move-object v7, v4
 
-    .line 213
+    .line 204
     :goto_5
     iget-object v4, v9, Landroid/view/RemoteAnimationTarget;->screenSpaceBounds:Landroid/graphics/Rect;
 
-    .line 214
+    .line 205
     invoke-interface {v6}, Lcom/android/systemui/animation/TransitionAnimator$Controller;->isLaunching()Z
 
-    .line 216
+    .line 207
     move-result v1
 
-    .line 219
-    if-eqz v1, :cond_f
+    .line 210
+    if-eqz v1, :cond_e
 
-    .line 220
+    .line 211
     new-instance v1, Lcom/android/systemui/animation/TransitionAnimator$State;
 
-    .line 222
+    .line 213
     iget v11, v4, Landroid/graphics/Rect;->top:I
 
-    .line 224
+    .line 215
     iget v12, v4, Landroid/graphics/Rect;->bottom:I
 
-    .line 226
+    .line 217
     iget v13, v4, Landroid/graphics/Rect;->left:I
 
-    .line 228
+    .line 219
     iget v14, v4, Landroid/graphics/Rect;->right:I
 
-    .line 230
+    .line 221
     const/4 v15, 0x0
 
-    .line 232
+    .line 223
     const/16 v16, 0x0
 
-    .line 233
+    .line 224
     const/16 v17, 0x30
 
-    .line 235
+    .line 226
     move-object v10, v1
 
-    .line 237
+    .line 228
     invoke-direct/range {v10 .. v17}, Lcom/android/systemui/animation/TransitionAnimator$State;-><init>(IIIIFFI)V
 
-    .line 238
+    .line 229
     :goto_6
     move-object v12, v1
 
-    .line 241
+    .line 232
     goto :goto_7
 
-    .line 242
-    :cond_f
+    .line 233
+    :cond_e
     invoke-interface {v6}, Lcom/android/systemui/animation/TransitionAnimator$Controller;->createAnimatorState()Lcom/android/systemui/animation/TransitionAnimator$State;
 
-    .line 243
+    .line 234
     move-result-object v1
 
-    .line 246
+    .line 237
     goto :goto_6
 
-    .line 247
+    .line 238
     :goto_7
     iget-boolean v1, v9, Landroid/view/RemoteAnimationTarget;->isTranslucent:Z
 
-    .line 248
-    if-eqz v1, :cond_10
+    .line 239
+    if-eqz v1, :cond_f
 
-    .line 250
+    .line 241
     :goto_8
     move v13, v0
 
-    .line 252
+    .line 243
     goto :goto_9
 
-    .line 253
-    :cond_10
+    .line 244
+    :cond_f
     iget-object v0, v9, Landroid/view/RemoteAnimationTarget;->taskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 254
-    if-eqz v0, :cond_12
+    .line 245
+    if-eqz v0, :cond_11
 
-    .line 256
+    .line 247
     iget-object v1, v8, Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate;->callback:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;
 
-    .line 258
+    .line 249
     iget-object v1, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 260
+    .line 251
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStartingSurfaceOptional:Ljava/util/Optional;
 
-    .line 262
+    .line 253
     invoke-virtual {v2}, Ljava/util/Optional;->isPresent()Z
 
-    .line 264
+    .line 255
     move-result v2
 
-    .line 267
-    if-nez v2, :cond_11
+    .line 258
+    if-nez v2, :cond_10
 
-    .line 268
+    .line 259
     const-string v0, "CentralSurfaces"
 
-    .line 270
+    .line 261
     const-string v1, "No starting surface, defaulting to SystemBGColor"
 
-    .line 272
+    .line 263
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 274
+    .line 265
     invoke-static {}, Lcom/android/wm/shell/startingsurface/SplashscreenContentDrawer;->getSystemBGColor()I
 
-    .line 277
+    .line 268
     move-result v0
 
-    .line 280
+    .line 271
     goto :goto_8
 
-    .line 281
-    :cond_11
+    .line 272
+    :cond_10
     iget-object v1, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStartingSurfaceOptional:Ljava/util/Optional;
 
-    .line 282
+    .line 273
     invoke-virtual {v1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
-    .line 284
+    .line 275
     move-result-object v1
 
-    .line 287
+    .line 278
     check-cast v1, Lcom/android/wm/shell/startingsurface/StartingWindowController$StartingSurfaceImpl;
 
-    .line 288
+    .line 279
     invoke-virtual {v1, v0}, Lcom/android/wm/shell/startingsurface/StartingWindowController$StartingSurfaceImpl;->getBackgroundColor(Landroid/app/TaskInfo;)I
 
-    .line 290
+    .line 281
     move-result v0
 
-    .line 293
+    .line 284
     goto :goto_8
 
-    .line 294
-    :cond_12
+    .line 285
+    :cond_11
     iget v0, v9, Landroid/view/RemoteAnimationTarget;->backgroundColor:I
 
-    .line 295
+    .line 286
     goto :goto_8
 
-    .line 297
+    .line 288
     :goto_9
     iget-object v0, v8, Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate;->transitionAnimator:Lcom/android/systemui/animation/TransitionAnimator;
 
-    .line 298
+    .line 289
     invoke-interface {v6}, Lcom/android/systemui/animation/TransitionAnimator$Controller;->getTransitionContainer()Landroid/view/ViewGroup;
 
-    .line 300
+    .line 291
     move-result-object v1
 
-    .line 303
+    .line 294
     invoke-virtual {v0, v1, v12}, Lcom/android/systemui/animation/TransitionAnimator;->isExpandingFullyAbove$frameworks__base__packages__SystemUI__animation__android_common__PlatformAnimationLib(Landroid/view/View;Lcom/android/systemui/animation/TransitionAnimator$State;)Z
 
-    .line 304
+    .line 295
     move-result v3
 
-    .line 307
+    .line 298
     invoke-interface {v6}, Lcom/android/systemui/animation/TransitionAnimator$Controller;->isLaunching()Z
 
-    .line 308
+    .line 299
     move-result v0
 
-    .line 311
-    if-eqz v0, :cond_14
+    .line 302
+    if-eqz v0, :cond_13
 
-    .line 312
-    if-eqz v3, :cond_13
+    .line 303
+    if-eqz v3, :cond_12
 
-    .line 314
+    .line 305
     iget-object v0, v8, Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate;->context:Landroid/content/Context;
 
-    .line 316
+    .line 307
     invoke-static {v0}, Lcom/android/internal/policy/ScreenDecorationsUtils;->getWindowCornerRadius(Landroid/content/Context;)F
 
-    .line 318
+    .line 309
     move-result v0
 
-    .line 321
+    .line 312
     goto :goto_a
 
-    .line 322
-    :cond_13
+    .line 313
+    :cond_12
     const/4 v0, 0x0
 
-    .line 323
+    .line 314
     :goto_a
     iput v0, v12, Lcom/android/systemui/animation/TransitionAnimator$State;->topCornerRadius:F
 
-    .line 324
+    .line 315
     iput v0, v12, Lcom/android/systemui/animation/TransitionAnimator$State;->bottomCornerRadius:F
 
-    .line 326
-    :cond_14
+    .line 317
+    :cond_13
     new-instance v11, Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate$startAnimation$controller$1;
 
-    .line 328
+    .line 319
     iget-object v10, v8, Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate;->controller:Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;
 
-    .line 330
+    .line 321
     move-object v0, v11
 
-    .line 332
+    .line 323
     move-object v1, v10
 
-    .line 333
+    .line 324
     move-object v2, v8
 
-    .line 334
+    .line 325
     move-object v6, v9
 
-    .line 335
+    .line 326
     invoke-direct/range {v0 .. v7}, Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate$startAnimation$controller$1;-><init>(Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate;ZLandroid/graphics/Rect;Landroid/view/IRemoteAnimationFinishedCallback;Landroid/view/RemoteAnimationTarget;Landroid/view/RemoteAnimationTarget;)V
 
-    .line 336
+    .line 327
     invoke-interface {v10}, Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;->isBelowAnimatingWindow()Z
 
-    .line 339
+    .line 330
     move-result v0
 
-    .line 342
+    .line 333
     xor-int/lit8 v14, v0, 0x1
 
-    .line 343
+    .line 334
     invoke-interface {v10}, Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;->isBelowAnimatingWindow()Z
 
-    .line 345
+    .line 336
     move-result v0
 
-    .line 348
+    .line 339
     xor-int/lit8 v15, v0, 0x1
 
-    .line 349
+    .line 340
     iget-object v10, v8, Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate;->transitionAnimator:Lcom/android/systemui/animation/TransitionAnimator;
 
-    .line 351
+    .line 342
     invoke-virtual/range {v10 .. v15}, Lcom/android/systemui/animation/TransitionAnimator;->startAnimation(Lcom/android/systemui/animation/TransitionAnimator$Controller;Lcom/android/systemui/animation/TransitionAnimator$State;IZZ)Lcom/android/systemui/animation/TransitionAnimator$startAnimation$1;
 
-    .line 353
+    .line 344
     move-result-object v0
 
-    .line 356
+    .line 347
     iput-object v0, v8, Lcom/android/systemui/animation/ActivityTransitionAnimator$AnimationDelegate;->animation:Lcom/android/systemui/animation/TransitionAnimator$startAnimation$1;
 
-    .line 357
-    :cond_15
+    .line 348
+    :cond_14
     :goto_b
     return-void
-    .line 359
+    .line 350
 .end method

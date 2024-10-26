@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/media/LocalMediaManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/settingslib/bluetooth/BluetoothCallback;
@@ -33,69 +33,67 @@
 
 .field public mOnTransferBluetoothDevice:Lcom/android/settingslib/media/MediaDevice;
 
-.field public final mPackageName:Ljava/lang/String;
-
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/android/settingslib/bluetooth/LocalBluetoothManager;Lcom/android/settingslib/media/InfoMediaManager;Ljava/lang/String;)V
-    .locals 1
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance p4, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 5
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    invoke-direct {p4}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     .line 7
-    iput-object v0, p0, Lcom/android/settingslib/media/LocalMediaManager;->mCallbacks:Ljava/util/Collection;
+    iput-object p4, p0, Lcom/android/settingslib/media/LocalMediaManager;->mCallbacks:Ljava/util/Collection;
 
     .line 10
-    new-instance v0, Ljava/lang/Object;
+    new-instance p4, Ljava/lang/Object;
 
     .line 12
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p4}, Ljava/lang/Object;-><init>()V
 
     .line 14
-    iput-object v0, p0, Lcom/android/settingslib/media/LocalMediaManager;->mMediaDevicesLock:Ljava/lang/Object;
+    iput-object p4, p0, Lcom/android/settingslib/media/LocalMediaManager;->mMediaDevicesLock:Ljava/lang/Object;
 
     .line 17
-    new-instance v0, Lcom/android/settingslib/media/LocalMediaManager$MediaDeviceCallback;
+    new-instance p4, Lcom/android/settingslib/media/LocalMediaManager$MediaDeviceCallback;
 
     .line 19
-    invoke-direct {v0, p0}, Lcom/android/settingslib/media/LocalMediaManager$MediaDeviceCallback;-><init>(Lcom/android/settingslib/media/LocalMediaManager;)V
+    invoke-direct {p4, p0}, Lcom/android/settingslib/media/LocalMediaManager$MediaDeviceCallback;-><init>(Lcom/android/settingslib/media/LocalMediaManager;)V
 
     .line 21
-    iput-object v0, p0, Lcom/android/settingslib/media/LocalMediaManager;->mMediaDeviceCallback:Lcom/android/settingslib/media/LocalMediaManager$MediaDeviceCallback;
+    iput-object p4, p0, Lcom/android/settingslib/media/LocalMediaManager;->mMediaDeviceCallback:Lcom/android/settingslib/media/LocalMediaManager$MediaDeviceCallback;
 
     .line 24
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance p4, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 26
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    invoke-direct {p4}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     .line 28
-    iput-object v0, p0, Lcom/android/settingslib/media/LocalMediaManager;->mMediaDevices:Ljava/util/List;
+    iput-object p4, p0, Lcom/android/settingslib/media/LocalMediaManager;->mMediaDevices:Ljava/util/List;
 
     .line 31
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance p4, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 33
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    invoke-direct {p4}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     .line 35
-    iput-object v0, p0, Lcom/android/settingslib/media/LocalMediaManager;->mDisconnectedMediaDevices:Ljava/util/List;
+    iput-object p4, p0, Lcom/android/settingslib/media/LocalMediaManager;->mDisconnectedMediaDevices:Ljava/util/List;
 
     .line 38
-    new-instance v0, Lcom/android/settingslib/media/LocalMediaManager$DeviceAttributeChangeCallback;
+    new-instance p4, Lcom/android/settingslib/media/LocalMediaManager$DeviceAttributeChangeCallback;
 
     .line 40
-    invoke-direct {v0, p0}, Lcom/android/settingslib/media/LocalMediaManager$DeviceAttributeChangeCallback;-><init>(Lcom/android/settingslib/media/LocalMediaManager;)V
+    invoke-direct {p4, p0}, Lcom/android/settingslib/media/LocalMediaManager$DeviceAttributeChangeCallback;-><init>(Lcom/android/settingslib/media/LocalMediaManager;)V
 
     .line 42
-    iput-object v0, p0, Lcom/android/settingslib/media/LocalMediaManager;->mDeviceAttributeChangeCallback:Lcom/android/settingslib/media/LocalMediaManager$DeviceAttributeChangeCallback;
+    iput-object p4, p0, Lcom/android/settingslib/media/LocalMediaManager;->mDeviceAttributeChangeCallback:Lcom/android/settingslib/media/LocalMediaManager$DeviceAttributeChangeCallback;
 
     .line 45
     iput-object p1, p0, Lcom/android/settingslib/media/LocalMediaManager;->mContext:Landroid/content/Context;
@@ -107,35 +105,32 @@
     iput-object p3, p0, Lcom/android/settingslib/media/LocalMediaManager;->mInfoMediaManager:Lcom/android/settingslib/media/InfoMediaManager;
 
     .line 51
-    iput-object p4, p0, Lcom/android/settingslib/media/LocalMediaManager;->mPackageName:Ljava/lang/String;
-
-    .line 53
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
-    .line 55
+    .line 53
     move-result-object p2
 
-    .line 58
+    .line 56
     iput-object p2, p0, Lcom/android/settingslib/media/LocalMediaManager;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
-    .line 59
+    .line 57
     const-class p2, Landroid/media/AudioManager;
 
-    .line 61
+    .line 59
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    .line 63
+    .line 61
     move-result-object p1
 
-    .line 66
+    .line 64
     check-cast p1, Landroid/media/AudioManager;
 
-    .line 67
+    .line 65
     iput-object p1, p0, Lcom/android/settingslib/media/LocalMediaManager;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 69
+    .line 67
     return-void
-    .line 71
+    .line 69
 .end method
 
 

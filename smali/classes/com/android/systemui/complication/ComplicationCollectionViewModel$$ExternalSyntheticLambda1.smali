@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/complication/ComplicationCollectionViewModel$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/Function;
@@ -95,51 +95,12 @@
     check-cast p1, Lcom/android/systemui/complication/ComplicationId;
 
     .line 44
-    iget-object p0, p0, Lcom/android/systemui/complication/ComplicationViewModelTransformer;->mViewModelComponentFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ComplicationViewModelComponentFactory;
+    iget-object p0, p0, Lcom/android/systemui/complication/ComplicationViewModelTransformer;->mViewModelComponentFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$ComplicationViewModelComponentFactory;
 
     .line 46
-    invoke-virtual {p0, v0, p1}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ComplicationViewModelComponentFactory;->create(Lcom/android/systemui/complication/Complication;Lcom/android/systemui/complication/ComplicationId;)Lcom/android/systemui/complication/dagger/ComplicationViewModelComponent;
-
-    .line 48
-    move-result-object p0
-
-    .line 51
-    invoke-interface {p0}, Lcom/android/systemui/complication/dagger/ComplicationViewModelComponent;->getViewModelProvider()Lcom/android/systemui/complication/ComplicationViewModelProvider;
-
-    .line 52
-    move-result-object p0
-
-    .line 55
-    invoke-virtual {p1}, Lcom/android/systemui/complication/ComplicationId;->toString()Ljava/lang/String;
-
-    .line 56
-    move-result-object p1
-
-    .line 59
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 60
-    const-class v0, Lcom/android/systemui/complication/ComplicationViewModel;
-
-    .line 63
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/jvm/internal/ClassReference;
-
-    .line 65
-    move-result-object v0
-
-    .line 68
-    iget-object p0, p0, Landroidx/lifecycle/ViewModelProvider;->impl:Landroidx/lifecycle/viewmodel/ViewModelProviderImpl;
-
-    .line 69
-    invoke-virtual {p0, v0, p1}, Landroidx/lifecycle/viewmodel/ViewModelProviderImpl;->getViewModel$lifecycle_viewmodel_release(Lkotlin/jvm/internal/ClassReference;Ljava/lang/String;)Landroidx/lifecycle/ViewModel;
-
-    .line 71
-    move-result-object p0
-
-    .line 74
-    check-cast p0, Lcom/android/systemui/complication/ComplicationViewModel;
-
-    .line 75
-    return-object p0
-    .line 77
+    .line 48
+    throw v0
+    .line 51
 .end method

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -36,68 +36,68 @@
     .locals 4
 
     .line 1
-    const/4 v0, 0x1
+    iget v0, p0, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda0;->$r8$classId:I
 
     .line 2
-    iget v1, p0, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda0;->$r8$classId:I
-
-    .line 3
     iget-object p0, p0, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda0;->f$0:Lcom/android/keyguard/KeyguardPatternView;
 
-    .line 5
-    packed-switch v1, :pswitch_data_0
+    .line 4
+    packed-switch v0, :pswitch_data_0
 
-    .line 7
-    sget v1, Lcom/android/keyguard/KeyguardPatternView;->$r8$clinit:I
+    .line 6
+    sget v0, Lcom/android/keyguard/KeyguardPatternView;->$r8$clinit:I
 
-    .line 10
-    invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardPatternView;->enableClipping(Z)V
+    .line 9
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 12
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardPatternView;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    .line 11
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
-    .line 15
-    invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternView;->invalidate()V
+    .line 13
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardPatternView;->mAppearAnimationUtils:Lcom/android/settingslib/animation/AppearAnimationUtils;
 
-    .line 17
-    return-void
+    .line 16
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardPatternView;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+
+    .line 18
+    invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternView;->getCellStates()[[Lcom/android/internal/widget/LockPatternView$CellState;
 
     .line 20
-    :pswitch_0
-    sget v1, Lcom/android/keyguard/KeyguardPatternView;->$r8$clinit:I
-
-    .line 21
-    const/high16 v1, 0x3f800000    # 1.0f
+    move-result-object v1
 
     .line 23
-    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->setAlpha(F)V
+    new-instance v2, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda0;
 
-    .line 25
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardPatternView;->mAppearAnimationUtils:Lcom/android/settingslib/animation/AppearAnimationUtils;
+    .line 24
+    const/4 v3, 0x0
 
-    .line 28
-    iget-object v2, p0, Lcom/android/keyguard/KeyguardPatternView;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    .line 26
+    invoke-direct {v2, p0, v3}, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda0;-><init>(Lcom/android/keyguard/KeyguardPatternView;I)V
+
+    .line 27
+    invoke-virtual {v0, v1, v2, p0}, Lcom/android/settingslib/animation/AppearAnimationUtils;->startAnimation2d([[Ljava/lang/Object;Ljava/lang/Runnable;Lcom/android/settingslib/animation/AppearAnimationCreator;)V
 
     .line 30
-    invoke-virtual {v2}, Lcom/android/internal/widget/LockPatternView;->getCellStates()[[Lcom/android/internal/widget/LockPatternView$CellState;
-
-    .line 32
-    move-result-object v2
-
-    .line 35
-    new-instance v3, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda0;
-
-    .line 36
-    invoke-direct {v3, p0, v0}, Lcom/android/keyguard/KeyguardPatternView$$ExternalSyntheticLambda0;-><init>(Lcom/android/keyguard/KeyguardPatternView;I)V
-
-    .line 38
-    invoke-virtual {v1, v2, v3, p0}, Lcom/android/settingslib/animation/AppearAnimationUtils;->startAnimation2d([[Ljava/lang/Object;Ljava/lang/Runnable;Lcom/android/settingslib/animation/AppearAnimationCreator;)V
-
-    .line 41
     return-void
 
-    .line 44
-    nop
+    .line 33
+    :pswitch_0
+    sget v0, Lcom/android/keyguard/KeyguardPatternView;->$r8$clinit:I
+
+    .line 34
+    const/4 v0, 0x1
+
+    .line 36
+    invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardPatternView;->enableClipping(Z)V
+
+    .line 37
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardPatternView;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+
+    .line 40
+    invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternView;->invalidate()V
+
+    .line 42
+    return-void
 
     .line 45
     :pswitch_data_0

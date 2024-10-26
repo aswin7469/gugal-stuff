@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardUpdateMonitor$10;
 .super Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -288,7 +288,7 @@
     iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mContext:Landroid/content/Context;
 
     .line 96
-    const v2, 0x1040426    # @android:string/global_action_power_options
+    const v2, 0x104041d    # @android:string/gadget_host_error_inflating
 
     .line 98
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -307,7 +307,7 @@
     iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mContext:Landroid/content/Context;
 
     .line 109
-    const v2, 0x1040419    # @android:string/fp_power_button_bp_title
+    const v2, 0x1040410    # @android:string/foreground_service_app_in_background
 
     .line 111
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

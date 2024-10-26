@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/LetterboxAppearanceCalculator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -33,7 +33,7 @@
     iput-object p3, p0, Lcom/android/systemui/statusbar/phone/LetterboxAppearanceCalculator;->letterboxBackgroundProvider:Lcom/android/systemui/statusbar/phone/LetterboxBackgroundProvider;
 
     .line 5
-    const p3, 0x7f060142    # @color/light_mode_icon_color_single_tone '#ffffff'
+    const p3, 0x7f06014c    # @color/light_mode_icon_color_single_tone '#ffffff'
 
     .line 7
     invoke-virtual {p1, p3}, Landroid/content/Context;->getColor(I)I
@@ -45,7 +45,7 @@
     iput p3, p0, Lcom/android/systemui/statusbar/phone/LetterboxAppearanceCalculator;->darkAppearanceIconColor:I
 
     .line 14
-    const p3, 0x7f060099    # @color/dark_mode_icon_color_single_tone '#99000000'
+    const p3, 0x7f06009a    # @color/dark_mode_icon_color_single_tone '#99000000'
 
     .line 16
     invoke-virtual {p1, p3}, Landroid/content/Context;->getColor(I)I

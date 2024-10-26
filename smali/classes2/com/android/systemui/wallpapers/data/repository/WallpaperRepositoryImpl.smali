@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/wallpapers/data/repository/WallpaperRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -37,7 +37,7 @@
     move-result-object p2
 
     .line 12
-    const p6, 0x111014e    # @android:bool/config_dreamsDisabledByAmbientModeSuppressionConfig
+    const p6, 0x111014d    # @android:bool/config_dreamsActivatedOnSleepByDefault
 
     .line 13
     invoke-virtual {p2, p6}, Landroid/content/res/Resources;->getBoolean(I)Z

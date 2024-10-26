@@ -1,9 +1,9 @@
 .class public final Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Lcom/android/systemui/unfold/updates/FoldStateProvider;
+.implements Lcom/android/systemui/unfold/util/CallbackController;
 
 
 # instance fields
@@ -47,7 +47,7 @@
 
 .field public final screenListener:Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider$ScreenStatusListener;
 
-.field public final screenStatusProvider:Lcom/android/systemui/unfold/updates/screen/ScreenStatusProvider;
+.field public final screenStatusProvider:Lcom/android/systemui/keyguard/LifecycleScreenStatusProvider;
 
 .field public final timeoutRunnable:Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider$timeoutRunnable$1;
 
@@ -55,7 +55,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/unfold/config/ResourceUnfoldTransitionConfig;Landroid/content/Context;Lcom/android/systemui/unfold/updates/screen/ScreenStatusProvider;Lcom/android/systemui/unfold/system/ActivityManagerActivityTypeProvider;Lcom/android/systemui/unfold/util/UnfoldKeyguardVisibilityManagerImpl;Lcom/android/systemui/unfold/updates/FoldProvider;Lcom/android/systemui/unfold/updates/hinge/HingeAngleProvider;Lcom/android/systemui/unfold/updates/RotationChangeProvider;Landroid/os/Handler;)V
+.method public constructor <init>(Lcom/android/systemui/unfold/config/ResourceUnfoldTransitionConfig;Landroid/content/Context;Lcom/android/systemui/keyguard/LifecycleScreenStatusProvider;Lcom/android/systemui/unfold/system/ActivityManagerActivityTypeProvider;Lcom/android/systemui/unfold/util/UnfoldKeyguardVisibilityManagerImpl;Lcom/android/systemui/unfold/updates/FoldProvider;Lcom/android/systemui/unfold/updates/hinge/HingeAngleProvider;Lcom/android/systemui/unfold/updates/RotationChangeProvider;Landroid/os/Handler;)V
     .locals 0
 
     .line 1
@@ -65,7 +65,7 @@
     iput-object p2, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->context:Landroid/content/Context;
 
     .line 5
-    iput-object p3, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->screenStatusProvider:Lcom/android/systemui/unfold/updates/screen/ScreenStatusProvider;
+    iput-object p3, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->screenStatusProvider:Lcom/android/systemui/keyguard/LifecycleScreenStatusProvider;
 
     .line 7
     iput-object p4, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->activityTypeProvider:Lcom/android/systemui/unfold/system/ActivityManagerActivityTypeProvider;
@@ -515,153 +515,150 @@
     invoke-interface {v0, v1, v2}, Lcom/android/systemui/unfold/updates/FoldProvider;->registerCallback(Lcom/android/systemui/unfold/updates/FoldProvider$FoldCallback;Ljava/util/concurrent/Executor;)V
 
     .line 13
-    iget-object v0, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->screenStatusProvider:Lcom/android/systemui/unfold/updates/screen/ScreenStatusProvider;
+    iget-object v0, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->screenStatusProvider:Lcom/android/systemui/keyguard/LifecycleScreenStatusProvider;
 
     .line 16
     iget-object v1, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->screenListener:Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider$ScreenStatusListener;
 
     .line 18
-    check-cast v0, Lcom/android/systemui/keyguard/LifecycleScreenStatusProvider;
-
-    .line 20
     invoke-virtual {v0, v1}, Lcom/android/systemui/keyguard/LifecycleScreenStatusProvider;->addCallback(Ljava/lang/Object;)V
 
-    .line 22
+    .line 20
     iget-object v0, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->hingeAngleProvider:Lcom/android/systemui/unfold/updates/hinge/HingeAngleProvider;
 
-    .line 25
+    .line 23
     iget-object v1, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->hingeAngleListener:Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider$HingeAngleListener;
 
-    .line 27
+    .line 25
     invoke-interface {v0, v1}, Lcom/android/systemui/unfold/util/CallbackController;->addCallback(Ljava/lang/Object;)V
 
-    .line 29
+    .line 27
     iget-object v0, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->rotationChangeProvider:Lcom/android/systemui/unfold/updates/RotationChangeProvider;
 
-    .line 32
+    .line 30
     iget-object v1, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->rotationListener:Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider$FoldRotationListener;
 
-    .line 34
+    .line 32
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 36
+    .line 34
     new-instance v2, Lcom/android/systemui/unfold/updates/RotationChangeProvider$addCallback$1;
 
-    .line 39
+    .line 37
     invoke-direct {v2, v0, v1}, Lcom/android/systemui/unfold/updates/RotationChangeProvider$addCallback$1;-><init>(Lcom/android/systemui/unfold/updates/RotationChangeProvider;Lcom/android/systemui/unfold/updates/RotationChangeProvider$RotationListener;)V
 
-    .line 41
+    .line 39
     iget-object v0, v0, Lcom/android/systemui/unfold/updates/RotationChangeProvider;->bgHandler:Landroid/os/Handler;
 
-    .line 44
+    .line 42
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 46
+    .line 44
     iget-object v0, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->activityTypeProvider:Lcom/android/systemui/unfold/system/ActivityManagerActivityTypeProvider;
 
-    .line 49
+    .line 47
     iget-object v1, v0, Lcom/android/systemui/unfold/system/ActivityManagerActivityTypeProvider;->activityManager:Landroid/app/ActivityManager;
 
-    .line 51
+    .line 49
     :try_start_0
     const-string v2, "isOnHomeActivity"
 
-    .line 53
+    .line 51
     invoke-static {v2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 55
+    .line 53
     const/4 v2, 0x1
 
-    .line 58
+    .line 56
     invoke-virtual {v1, v2}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
-    .line 59
+    .line 57
     move-result-object v1
 
-    .line 62
+    .line 60
     if-eqz v1, :cond_2
 
-    .line 63
+    .line 61
     invoke-static {v1}, Lkotlin/collections/CollectionsKt;->firstOrNull(Ljava/util/List;)Ljava/lang/Object;
 
-    .line 65
+    .line 63
     move-result-object v1
 
-    .line 68
+    .line 66
     check-cast v1, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 69
+    .line 67
     if-eqz v1, :cond_2
 
-    .line 71
+    .line 69
     iget v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
 
-    .line 73
+    .line 71
     const/4 v3, 0x2
 
-    .line 75
+    .line 73
     if-ne v1, v3, :cond_1
 
-    .line 76
+    .line 74
     move v1, v2
 
-    .line 78
+    .line 76
     goto :goto_0
 
-    .line 79
+    .line 77
     :cond_1
     const/4 v1, 0x0
 
-    .line 80
+    .line 78
     :goto_0
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 81
+    .line 79
     move-result-object v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 84
+    .line 82
     goto :goto_1
 
-    .line 85
+    .line 83
     :catchall_0
     move-exception p0
 
-    .line 86
+    .line 84
     goto :goto_2
 
-    .line 87
+    .line 85
     :cond_2
     const/4 v1, 0x0
 
-    .line 88
+    .line 86
     :goto_1
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 89
+    .line 87
     iput-object v1, v0, Lcom/android/systemui/unfold/system/ActivityManagerActivityTypeProvider;->_isHomeActivity:Ljava/lang/Boolean;
 
-    .line 92
+    .line 90
     sget-object v1, Lcom/android/systemui/shared/system/TaskStackChangeListeners;->INSTANCE:Lcom/android/systemui/shared/system/TaskStackChangeListeners;
 
-    .line 94
+    .line 92
     iget-object v0, v0, Lcom/android/systemui/unfold/system/ActivityManagerActivityTypeProvider;->taskStackChangeListener:Lcom/android/systemui/unfold/system/ActivityManagerActivityTypeProvider$taskStackChangeListener$1;
 
-    .line 96
+    .line 94
     invoke-virtual {v1, v0}, Lcom/android/systemui/shared/system/TaskStackChangeListeners;->registerTaskStackListener(Lcom/android/systemui/shared/system/TaskStackChangeListener;)V
 
-    .line 98
+    .line 96
     iput-boolean v2, p0, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->isStarted:Z
 
-    .line 101
+    .line 99
     return-void
 
-    .line 103
+    .line 101
     :goto_2
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 104
+    .line 102
     throw p0
-    .line 107
+    .line 105
 .end method

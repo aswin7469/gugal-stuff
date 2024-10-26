@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/globalactions/GlobalActionsImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/GlobalActions;
@@ -224,7 +224,7 @@
     iget-object v2, p0, Lcom/android/systemui/globalactions/ShutdownUi;->mContext:Landroid/content/Context;
 
     .line 14
-    const v3, 0x7f1504c3    # @style/Theme.SystemUI.Dialog.GlobalActions
+    const v3, 0x7f1404cb    # @style/Theme.SystemUI.Dialog.GlobalActions
 
     .line 16
     invoke-direct {v1, v2, v3}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
@@ -335,7 +335,7 @@
     invoke-virtual {v2, v0}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 94
-    const v0, 0x7f150013    # @style/Animation.ShutdownUi
+    const v0, 0x7f140013    # @style/Animation.ShutdownUi
 
     .line 97
     invoke-virtual {v2, v0}, Landroid/view/Window;->setWindowAnimations(I)V
@@ -368,7 +368,7 @@
     iget-object v0, p0, Lcom/android/systemui/globalactions/ShutdownUi;->mContext:Landroid/content/Context;
 
     .line 121
-    const v2, 0x7f04073b    # @attr/wallpaperTextColor
+    const v2, 0x7f040741    # @attr/wallpaperTextColor
 
     .line 123
     invoke-static {v2, v4, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
@@ -390,7 +390,7 @@
     move-result-object v0
 
     .line 136
-    const v2, 0x7f0600f3    # @color/global_actions_shutdown_ui_text '@color/control_primary_text'
+    const v2, 0x7f0600fc    # @color/global_actions_shutdown_ui_text '@color/control_primary_text'
 
     .line 137
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I

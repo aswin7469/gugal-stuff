@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/media/PhoneMediaDevice;
 .super Lcom/android/settingslib/media/MediaDevice;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -47,94 +47,66 @@
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     .line 8
-    move-result v0
-
-    .line 11
-    if-eqz v0, :cond_0
-
-    .line 12
-    invoke-static {}, Lcom/android/settingslib/media/flags/Flags;->enableTvMediaOutputDialog()Z
-
-    .line 14
-    move-result v0
-
-    .line 17
-    if-eqz v0, :cond_0
-
-    .line 18
-    const v0, 0x7f140627    # @string/media_transfer_this_device_name_tv '@string/tv_media_transfer_default'
-
-    .line 20
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 23
-    move-result-object p0
-
-    .line 26
-    return-object p0
-
-    .line 27
-    :cond_0
     const-string v0, "ro.build.characteristics"
 
-    .line 28
+    .line 11
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 30
+    .line 13
     move-result-object v0
 
-    .line 33
+    .line 16
     const-string v1, ","
 
-    .line 34
+    .line 17
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 36
+    .line 19
     move-result-object v0
 
-    .line 39
+    .line 22
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    .line 40
+    .line 23
     move-result-object v0
 
-    .line 43
-    const-string v1, "tablet"
+    .line 26
+    const-string/jumbo v1, "tablet"
 
-    .line 44
+    .line 27
     invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    .line 46
+    .line 30
     move-result v0
 
-    .line 49
-    if-eqz v0, :cond_1
+    .line 33
+    if-eqz v0, :cond_0
+
+    .line 34
+    const v0, 0x7f130680    # @string/media_transfer_this_device_name_tablet 'This tablet'
+
+    .line 36
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 39
+    move-result-object p0
+
+    .line 42
+    return-object p0
+
+    .line 43
+    :cond_0
+    const v0, 0x7f13067f    # @string/media_transfer_this_device_name 'This phone'
+
+    .line 44
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 47
+    move-result-object p0
 
     .line 50
-    const v0, 0x7f140626    # @string/media_transfer_this_device_name_tablet 'This tablet'
-
-    .line 52
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 55
-    move-result-object p0
-
-    .line 58
     return-object p0
-
-    .line 59
-    :cond_1
-    const v0, 0x7f140625    # @string/media_transfer_this_device_name 'This phone'
-
-    .line 60
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 63
-    move-result-object p0
-
-    .line 66
-    return-object p0
-    .line 67
+    .line 51
 .end method
 
 
@@ -301,7 +273,7 @@
 .end method
 
 .method public final getName()Ljava/lang/String;
-    .locals 6
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/android/settingslib/media/MediaDevice;->mContext:Landroid/content/Context;
@@ -322,354 +294,128 @@
     invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     .line 12
-    move-result v1
-
-    .line 15
-    const/4 v2, 0x1
-
-    .line 16
-    if-eqz v1, :cond_0
-
-    .line 17
-    invoke-static {}, Lcom/android/settingslib/media/flags/Flags;->enableTvMediaOutputDialog()Z
-
-    .line 19
-    move-result v1
-
-    .line 22
-    if-eqz v1, :cond_0
-
-    .line 23
-    move v1, v2
-
-    .line 25
-    goto :goto_0
-
-    .line 26
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 27
-    :goto_0
     invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getType()I
 
-    .line 28
+    .line 15
     move-result p0
 
-    .line 31
-    const/4 v3, 0x2
+    .line 18
+    const/4 v1, 0x2
+
+    .line 19
+    if-eq p0, v1, :cond_2
+
+    .line 20
+    const/4 v1, 0x3
+
+    .line 22
+    if-eq p0, v1, :cond_1
+
+    .line 23
+    const/4 v1, 0x4
+
+    .line 25
+    if-eq p0, v1, :cond_1
+
+    .line 26
+    const/16 v1, 0x16
+
+    .line 28
+    if-eq p0, v1, :cond_1
+
+    .line 30
+    const/16 v1, 0x1d
 
     .line 32
-    if-eq p0, v3, :cond_c
+    const v2, 0x7f130678    # @string/media_transfer_external_device_name 'External Device'
 
-    .line 33
-    const/4 v3, 0x3
+    .line 34
+    if-eq p0, v1, :cond_0
 
-    .line 35
-    if-eq p0, v3, :cond_b
-
-    .line 36
-    const/4 v3, 0x4
-
-    .line 38
-    if-eq p0, v3, :cond_b
-
-    .line 39
-    const/16 v3, 0x16
-
-    .line 41
-    if-eq p0, v3, :cond_b
-
-    .line 43
-    const/16 v3, 0x1d
-
-    .line 45
-    const v4, 0x7f14061e    # @string/media_transfer_external_device_name 'External Device'
-
-    .line 47
-    if-eq p0, v3, :cond_2
-
-    .line 50
+    .line 37
     packed-switch p0, :pswitch_data_0
 
-    .line 52
-    const p0, 0x7f14061c    # @string/media_transfer_default_device_name 'Connected device'
+    .line 39
+    const p0, 0x7f130676    # @string/media_transfer_default_device_name 'Connected device'
 
-    .line 55
+    .line 42
     invoke-virtual {v0, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 45
+    move-result-object p0
+
+    .line 48
+    goto :goto_0
+
+    .line 49
+    :pswitch_0
+    const p0, 0x7f130677    # @string/media_transfer_dock_speaker_device_name 'Dock speaker'
+
+    .line 50
+    invoke-virtual {v0, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 53
+    move-result-object p0
+
+    .line 56
+    goto :goto_0
+
+    .line 57
+    :pswitch_1
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     .line 58
     move-result-object p0
 
     .line 61
-    goto/16 :goto_3
+    goto :goto_0
 
     .line 62
-    :pswitch_0
-    const p0, 0x7f14061d    # @string/media_transfer_dock_speaker_device_name 'Dock speaker'
+    :cond_0
+    :pswitch_2
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 64
-    invoke-virtual {v0, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    .line 63
+    move-result-object p0
+
+    .line 66
+    goto :goto_0
 
     .line 67
-    move-result-object p0
+    :cond_1
+    :pswitch_3
+    const p0, 0x7f130685    # @string/media_transfer_wired_usb_device_name 'Wired headphone'
 
-    .line 70
-    goto/16 :goto_3
+    .line 68
+    invoke-virtual {v0, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     .line 71
-    :pswitch_1
-    if-eqz v1, :cond_1
+    move-result-object p0
 
-    .line 73
-    const v4, 0x7f1409b0    # @string/tv_media_transfer_default 'TV default'
+    .line 74
+    goto :goto_0
 
     .line 75
-    :cond_1
-    invoke-virtual {v0, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 78
-    move-result-object p0
-
-    .line 81
-    goto/16 :goto_3
-
-    .line 82
     :cond_2
-    :pswitch_2
-    if-eqz v1, :cond_a
-
-    .line 84
-    const-string p0, "android.permission.HDMI_CEC"
-
-    .line 86
-    invoke-virtual {v0, p0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
-
-    .line 88
-    move-result p0
-
-    .line 91
-    const/4 v1, 0x0
-
-    .line 92
-    if-nez p0, :cond_7
-
-    .line 93
-    const-class p0, Landroid/hardware/hdmi/HdmiControlManager;
-
-    .line 95
-    invoke-virtual {v0, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    .line 97
-    move-result-object p0
-
-    .line 100
-    check-cast p0, Landroid/hardware/hdmi/HdmiControlManager;
-
-    .line 101
-    invoke-virtual {p0}, Landroid/hardware/hdmi/HdmiControlManager;->getPortInfo()Ljava/util/List;
-
-    .line 103
-    move-result-object v3
-
-    .line 106
-    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 107
-    move-result-object v3
-
-    .line 110
-    :cond_3
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 111
-    move-result v4
-
-    .line 114
-    if-eqz v4, :cond_4
-
-    .line 115
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 117
-    move-result-object v4
-
-    .line 120
-    check-cast v4, Landroid/hardware/hdmi/HdmiPortInfo;
-
-    .line 121
-    invoke-virtual {v4}, Landroid/hardware/hdmi/HdmiPortInfo;->getType()I
-
-    .line 123
-    move-result v5
-
-    .line 126
-    if-ne v5, v2, :cond_3
-
-    .line 127
-    goto :goto_1
-
-    .line 129
-    :cond_4
-    move-object v4, v1
-
-    .line 130
-    :goto_1
-    if-nez v4, :cond_5
-
-    .line 131
-    goto :goto_2
-
-    .line 133
-    :cond_5
-    invoke-virtual {p0}, Landroid/hardware/hdmi/HdmiControlManager;->getConnectedDevices()Ljava/util/List;
-
-    .line 134
-    move-result-object p0
-
-    .line 137
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 138
-    move-result-object p0
-
-    .line 141
-    :cond_6
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 142
-    move-result v2
-
-    .line 145
-    if-eqz v2, :cond_8
-
-    .line 146
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 148
-    move-result-object v2
-
-    .line 151
-    check-cast v2, Landroid/hardware/hdmi/HdmiDeviceInfo;
-
-    .line 152
-    invoke-virtual {v2}, Landroid/hardware/hdmi/HdmiDeviceInfo;->getPortId()I
-
-    .line 154
-    move-result v3
-
-    .line 157
-    invoke-virtual {v4}, Landroid/hardware/hdmi/HdmiPortInfo;->getId()I
-
-    .line 158
-    move-result v5
-
-    .line 161
-    if-ne v3, v5, :cond_6
-
-    .line 162
-    invoke-virtual {v2}, Landroid/hardware/hdmi/HdmiDeviceInfo;->getDisplayName()Ljava/lang/String;
-
-    .line 164
-    move-result-object v2
-
-    .line 167
-    if-eqz v2, :cond_6
-
-    .line 168
-    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
-
-    .line 170
-    move-result v3
-
-    .line 173
-    if-nez v3, :cond_6
-
-    .line 174
-    move-object v1, v2
-
-    .line 176
-    goto :goto_2
-
-    .line 177
-    :cond_7
-    const-string p0, "PhoneMediaDevice"
-
-    .line 178
-    const-string v2, "Could not get HDMI device name, android.permission.HDMI_CEC denied"
-
-    .line 180
-    invoke-static {p0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 182
-    :cond_8
-    :goto_2
-    if-eqz v1, :cond_9
-
-    .line 185
-    move-object p0, v1
-
-    .line 187
-    goto :goto_3
-
-    .line 188
-    :cond_9
-    const p0, 0x7f1409ad    # @string/tv_media_transfer_arc_fallback_title 'HDMI ARC'
-
-    .line 189
-    invoke-virtual {v0, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 192
-    move-result-object p0
-
-    .line 195
-    goto :goto_3
-
-    .line 196
-    :cond_a
-    invoke-virtual {v0, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 197
-    move-result-object p0
-
-    .line 200
-    goto :goto_3
-
-    .line 201
-    :cond_b
-    :pswitch_3
-    const p0, 0x7f14062b    # @string/media_transfer_wired_usb_device_name 'Wired headphone'
-
-    .line 202
-    invoke-virtual {v0, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 205
-    move-result-object p0
-
-    .line 208
-    goto :goto_3
-
-    .line 209
-    :cond_c
     invoke-static {v0}, Lcom/android/settingslib/media/PhoneMediaDevice;->getMediaTransferThisDeviceName(Landroid/content/Context;)Ljava/lang/String;
 
-    .line 210
+    .line 76
     move-result-object p0
 
-    .line 213
-    :goto_3
+    .line 79
+    :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->toString()Ljava/lang/String;
 
-    .line 214
+    .line 80
     move-result-object p0
 
-    .line 217
+    .line 83
     return-object p0
 
-    .line 218
+    .line 84
     nop
 
-    .line 219
+    .line 85
     :pswitch_data_0
     .packed-switch 0x9
         :pswitch_1
@@ -678,7 +424,7 @@
         :pswitch_3
         :pswitch_0
     .end packed-switch
-    .line 220
+    .line 86
 .end method
 
 .method public final getSelectionBehavior()I

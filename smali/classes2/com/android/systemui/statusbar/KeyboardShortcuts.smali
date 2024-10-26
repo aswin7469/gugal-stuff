@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/KeyboardShortcuts;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -231,13 +231,13 @@
 
     .line 113
     :goto_0
-    const p0, 0x7f140455    # @string/keyboard_key_home 'Home'
+    const p0, 0x7f13049f    # @string/keyboard_key_home 'Home'
 
     .line 115
     const/4 p2, 0x3
 
     .line 118
-    const v9, 0x7f14044b    # @string/keyboard_key_back 'Back'
+    const v9, 0x7f130495    # @string/keyboard_key_back 'Back'
 
     .line 119
     invoke-static {p1, p0, v0, p2, v9}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticOutline0;->m(Landroid/content/Context;ILandroid/util/SparseArray;II)Ljava/lang/String;
@@ -249,13 +249,13 @@
     invoke-virtual {v0, v7, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 126
-    const p0, 0x7f140452    # @string/keyboard_key_dpad_up 'Up arrow'
+    const p0, 0x7f13049c    # @string/keyboard_key_dpad_up 'Up arrow'
 
     .line 129
     const/16 p2, 0x13
 
     .line 132
-    const v9, 0x7f14044f    # @string/keyboard_key_dpad_down 'Down arrow'
+    const v9, 0x7f130499    # @string/keyboard_key_dpad_down 'Down arrow'
 
     .line 134
     invoke-static {p1, p0, v0, p2, v9}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticOutline0;->m(Landroid/content/Context;ILandroid/util/SparseArray;II)Ljava/lang/String;
@@ -270,13 +270,13 @@
     invoke-virtual {v0, p2, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 143
-    const p0, 0x7f140450    # @string/keyboard_key_dpad_left 'Left arrow'
+    const p0, 0x7f13049a    # @string/keyboard_key_dpad_left 'Left arrow'
 
     .line 146
     const/16 p2, 0x15
 
     .line 149
-    const v9, 0x7f140451    # @string/keyboard_key_dpad_right 'Right arrow'
+    const v9, 0x7f13049b    # @string/keyboard_key_dpad_right 'Right arrow'
 
     .line 151
     invoke-static {p1, p0, v0, p2, v9}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticOutline0;->m(Landroid/content/Context;ILandroid/util/SparseArray;II)Ljava/lang/String;
@@ -291,7 +291,7 @@
     invoke-virtual {v0, p2, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 160
-    const p0, 0x7f14044e    # @string/keyboard_key_dpad_center 'Center'
+    const p0, 0x7f130498    # @string/keyboard_key_dpad_center 'Center'
 
     .line 163
     invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -315,13 +315,13 @@
     invoke-virtual {v0, p0, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 179
-    const p0, 0x7f140464    # @string/keyboard_key_tab 'Tab'
+    const p0, 0x7f1304ae    # @string/keyboard_key_tab 'Tab'
 
     .line 182
     const/16 v9, 0x3d
 
     .line 185
-    const v10, 0x7f140463    # @string/keyboard_key_space 'Space'
+    const v10, 0x7f1304ad    # @string/keyboard_key_space 'Space'
 
     .line 187
     invoke-static {p1, p0, v0, v9, v10}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticOutline0;->m(Landroid/content/Context;ILandroid/util/SparseArray;II)Ljava/lang/String;
@@ -336,13 +336,13 @@
     invoke-virtual {v0, v9, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 196
-    const p0, 0x7f140453    # @string/keyboard_key_enter 'Enter'
+    const p0, 0x7f13049d    # @string/keyboard_key_enter 'Enter'
 
     .line 199
     const/16 v9, 0x42
 
     .line 202
-    const v10, 0x7f14044c    # @string/keyboard_key_backspace 'Backspace'
+    const v10, 0x7f130496    # @string/keyboard_key_backspace 'Backspace'
 
     .line 204
     invoke-static {p1, p0, v0, v9, v10}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticOutline0;->m(Landroid/content/Context;ILandroid/util/SparseArray;II)Ljava/lang/String;
@@ -357,13 +357,13 @@
     invoke-virtual {v0, v10, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 213
-    const v9, 0x7f140459    # @string/keyboard_key_media_play_pause 'Play/Pause'
+    const v9, 0x7f1304a3    # @string/keyboard_key_media_play_pause 'Play/Pause'
 
     .line 216
     const/16 v10, 0x55
 
     .line 219
-    const v11, 0x7f14045c    # @string/keyboard_key_media_stop 'Stop'
+    const v11, 0x7f1304a6    # @string/keyboard_key_media_stop 'Stop'
 
     .line 221
     invoke-static {p1, v9, v0, v10, v11}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticOutline0;->m(Landroid/content/Context;ILandroid/util/SparseArray;II)Ljava/lang/String;
@@ -378,13 +378,13 @@
     invoke-virtual {v0, v10, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 230
-    const v9, 0x7f140458    # @string/keyboard_key_media_next 'Next'
+    const v9, 0x7f1304a2    # @string/keyboard_key_media_next 'Next'
 
     .line 233
     const/16 v10, 0x57
 
     .line 236
-    const v11, 0x7f14045a    # @string/keyboard_key_media_previous 'Previous'
+    const v11, 0x7f1304a4    # @string/keyboard_key_media_previous 'Previous'
 
     .line 238
     invoke-static {p1, v9, v0, v10, v11}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticOutline0;->m(Landroid/content/Context;ILandroid/util/SparseArray;II)Ljava/lang/String;
@@ -399,13 +399,13 @@
     invoke-virtual {v0, v10, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 247
-    const v9, 0x7f14045b    # @string/keyboard_key_media_rewind 'Rewind'
+    const v9, 0x7f1304a5    # @string/keyboard_key_media_rewind 'Rewind'
 
     .line 250
     const/16 v10, 0x59
 
     .line 253
-    const v11, 0x7f140457    # @string/keyboard_key_media_fast_forward 'Fast Forward'
+    const v11, 0x7f1304a1    # @string/keyboard_key_media_fast_forward 'Fast Forward'
 
     .line 255
     invoke-static {p1, v9, v0, v10, v11}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticOutline0;->m(Landroid/content/Context;ILandroid/util/SparseArray;II)Ljava/lang/String;
@@ -420,13 +420,13 @@
     invoke-virtual {v0, v10, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 264
-    const v9, 0x7f140462    # @string/keyboard_key_page_up 'Page Up'
+    const v9, 0x7f1304ac    # @string/keyboard_key_page_up 'Page Up'
 
     .line 267
     const/16 v10, 0x5c
 
     .line 270
-    const v11, 0x7f140461    # @string/keyboard_key_page_down 'Page Down'
+    const v11, 0x7f1304ab    # @string/keyboard_key_page_down 'Page Down'
 
     .line 272
     invoke-static {p1, v9, v0, v10, v11}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticOutline0;->m(Landroid/content/Context;ILandroid/util/SparseArray;II)Ljava/lang/String;
@@ -450,7 +450,7 @@
     move-result-object v9
 
     .line 289
-    const v10, 0x7f14044d    # @string/keyboard_key_button_template 'Button %1$s'
+    const v10, 0x7f130497    # @string/keyboard_key_button_template 'Button %1$s'
 
     .line 290
     invoke-virtual {p1, v10, v9}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -717,7 +717,7 @@
     invoke-virtual {v0, v10, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 479
-    const v9, 0x7f140454    # @string/keyboard_key_forward_del 'Delete'
+    const v9, 0x7f13049e    # @string/keyboard_key_forward_del 'Delete'
 
     .line 482
     invoke-virtual {p1, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -768,13 +768,13 @@
     invoke-virtual {v0, v9, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 519
-    const v9, 0x7f14045e    # @string/keyboard_key_move_home 'Home'
+    const v9, 0x7f1304a8    # @string/keyboard_key_move_home 'Home'
 
     .line 522
     const/16 v10, 0x7a
 
     .line 525
-    const v11, 0x7f14045d    # @string/keyboard_key_move_end 'End'
+    const v11, 0x7f1304a7    # @string/keyboard_key_move_end 'End'
 
     .line 527
     invoke-static {p1, v9, v0, v10, v11}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$$ExternalSyntheticOutline0;->m(Landroid/content/Context;ILandroid/util/SparseArray;II)Ljava/lang/String;
@@ -789,7 +789,7 @@
     invoke-virtual {v0, v10, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 536
-    const v9, 0x7f140456    # @string/keyboard_key_insert 'Insert'
+    const v9, 0x7f1304a0    # @string/keyboard_key_insert 'Insert'
 
     .line 539
     invoke-virtual {p1, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -912,7 +912,7 @@
     invoke-virtual {v0, v9, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 632
-    const v9, 0x7f14045f    # @string/keyboard_key_num_lock 'Num Lock'
+    const v9, 0x7f1304a9    # @string/keyboard_key_num_lock 'Num Lock'
 
     .line 635
     invoke-virtual {p1, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -936,7 +936,7 @@
     move-result-object v9
 
     .line 652
-    const v10, 0x7f140460    # @string/keyboard_key_numpad_template 'Numpad %1$s'
+    const v10, 0x7f1304aa    # @string/keyboard_key_numpad_template 'Numpad %1$s'
 
     .line 653
     invoke-virtual {p1, v10, v9}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1467,7 +1467,7 @@
     invoke-virtual {v1, v8, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 1042
-    const p0, 0x7f0807fb    # @drawable/ic_ksh_key_meta 'res/drawable/ic_ksh_key_meta.xml'
+    const p0, 0x7f08081d    # @drawable/ic_ksh_key_meta 'res/drawable/ic_ksh_key_meta.xml'
 
     .line 1045
     invoke-virtual {p1, p0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1558,77 +1558,6 @@
     .line 29
     throw v1
     .line 30
-.end method
-
-.method public static sanitiseShortcuts(Ljava/util/List;)V
-    .locals 2
-
-    .line 1
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 2
-    move-result-object p0
-
-    .line 5
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 6
-    move-result v0
-
-    .line 9
-    if-eqz v0, :cond_1
-
-    .line 10
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 12
-    move-result-object v0
-
-    .line 15
-    check-cast v0, Landroid/view/KeyboardShortcutGroup;
-
-    .line 16
-    invoke-virtual {v0}, Landroid/view/KeyboardShortcutGroup;->getItems()Ljava/util/List;
-
-    .line 18
-    move-result-object v0
-
-    .line 21
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 22
-    move-result-object v0
-
-    .line 25
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 26
-    move-result v1
-
-    .line 29
-    if-eqz v1, :cond_0
-
-    .line 30
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 32
-    move-result-object v1
-
-    .line 35
-    check-cast v1, Landroid/view/KeyboardShortcutInfo;
-
-    .line 36
-    invoke-virtual {v1}, Landroid/view/KeyboardShortcutInfo;->clearIcon()V
-
-    .line 38
-    goto :goto_0
-
-    .line 41
-    :cond_1
-    return-void
-    .line 42
 .end method
 
 .method public static show(ILandroid/content/Context;)V
@@ -2103,7 +2032,7 @@
     iget-object v7, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 90
-    const v8, 0x7f14046e    # @string/keyboard_shortcut_group_applications_assist 'Assistant'
+    const v8, 0x7f1304b8    # @string/keyboard_shortcut_group_applications_assist 'Assistant'
 
     .line 92
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2140,7 +2069,7 @@
     iget-object v7, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 116
-    const v8, 0x7f14046f    # @string/keyboard_shortcut_group_applications_browser 'Browser'
+    const v8, 0x7f1304b9    # @string/keyboard_shortcut_group_applications_browser 'Browser'
 
     .line 118
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2177,7 +2106,7 @@
     iget-object v7, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 143
-    const v8, 0x7f140472    # @string/keyboard_shortcut_group_applications_contacts 'Contacts'
+    const v8, 0x7f1304bc    # @string/keyboard_shortcut_group_applications_contacts 'Contacts'
 
     .line 145
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2214,7 +2143,7 @@
     iget-object v7, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 170
-    const v8, 0x7f140473    # @string/keyboard_shortcut_group_applications_email 'Email'
+    const v8, 0x7f1304bd    # @string/keyboard_shortcut_group_applications_email 'Email'
 
     .line 172
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2251,7 +2180,7 @@
     iget-object v7, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 197
-    const v8, 0x7f140476    # @string/keyboard_shortcut_group_applications_sms 'SMS'
+    const v8, 0x7f1304c0    # @string/keyboard_shortcut_group_applications_sms 'SMS'
 
     .line 199
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2288,7 +2217,7 @@
     iget-object v7, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 224
-    const v8, 0x7f140475    # @string/keyboard_shortcut_group_applications_music 'Music'
+    const v8, 0x7f1304bf    # @string/keyboard_shortcut_group_applications_music 'Music'
 
     .line 226
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2325,7 +2254,7 @@
     iget-object v6, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 251
-    const v7, 0x7f140471    # @string/keyboard_shortcut_group_applications_calendar 'Calendar'
+    const v7, 0x7f1304bb    # @string/keyboard_shortcut_group_applications_calendar 'Calendar'
 
     .line 253
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2372,7 +2301,7 @@
     iget-object v2, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 283
-    const v6, 0x7f14046d    # @string/keyboard_shortcut_group_applications 'Applications'
+    const v6, 0x7f1304b7    # @string/keyboard_shortcut_group_applications 'Applications'
 
     .line 285
     invoke-virtual {v2, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2398,7 +2327,7 @@
     iget-object v2, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 302
-    const v3, 0x7f140478    # @string/keyboard_shortcut_group_system 'System'
+    const v3, 0x7f1304c2    # @string/keyboard_shortcut_group_system 'System'
 
     .line 304
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2416,7 +2345,7 @@
     iget-object v3, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 316
-    const v4, 0x7f14047a    # @string/keyboard_shortcut_group_system_home 'Home'
+    const v4, 0x7f1304c4    # @string/keyboard_shortcut_group_system_home 'Home'
 
     .line 318
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2440,7 +2369,7 @@
     iget-object v3, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 335
-    const v4, 0x7f140479    # @string/keyboard_shortcut_group_system_back 'Back'
+    const v4, 0x7f1304c3    # @string/keyboard_shortcut_group_system_back 'Back'
 
     .line 337
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2467,7 +2396,7 @@
     move-result-object v2
 
     .line 357
-    const v3, 0x11101a5    # @android:bool/config_isCameraCompatControlForStretchedIssuesEnabled
+    const v3, 0x11101a4    # @android:bool/config_intrusiveNotificationLed
 
     .line 358
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -2485,7 +2414,7 @@
     iget-object v3, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 369
-    const v4, 0x7f14047d    # @string/keyboard_shortcut_group_system_recents 'Recents'
+    const v4, 0x7f1304c7    # @string/keyboard_shortcut_group_system_recents 'Recents'
 
     .line 371
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2513,7 +2442,7 @@
     iget-object v3, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 389
-    const v4, 0x7f14047c    # @string/keyboard_shortcut_group_system_notifications 'Notifications'
+    const v4, 0x7f1304c6    # @string/keyboard_shortcut_group_system_notifications 'Notifications'
 
     .line 391
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2537,7 +2466,7 @@
     iget-object v3, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 408
-    const v4, 0x7f14047e    # @string/keyboard_shortcut_group_system_shortcuts_helper 'Keyboard Shortcuts'
+    const v4, 0x7f1304c8    # @string/keyboard_shortcut_group_system_shortcuts_helper 'Keyboard Shortcuts'
 
     .line 410
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2561,7 +2490,7 @@
     iget-object v3, p0, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mContext:Landroid/content/Context;
 
     .line 427
-    const v4, 0x7f14047f    # @string/keyboard_shortcut_group_system_switch_input 'Switch keyboard layout'
+    const v4, 0x7f1304c9    # @string/keyboard_shortcut_group_system_switch_input 'Switch keyboard layout'
 
     .line 429
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;

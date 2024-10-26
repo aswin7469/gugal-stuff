@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/OnHeadsUpChangedListener;
@@ -287,10 +287,10 @@
     if-eqz p0, :cond_0
 
     .line 4
-    new-instance p0, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController$$ExternalSyntheticLambda6;
+    new-instance p0, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController$$ExternalSyntheticLambda7;
 
     .line 6
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController$$ExternalSyntheticLambda6;-><init>(Landroid/view/View;ILcom/android/systemui/statusbar/phone/HeadsUpAppearanceController$$ExternalSyntheticLambda4;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController$$ExternalSyntheticLambda7;-><init>(Landroid/view/View;ILcom/android/systemui/statusbar/phone/HeadsUpAppearanceController$$ExternalSyntheticLambda4;)V
 
     .line 8
     const-wide/16 p2, 0x6e
@@ -971,159 +971,154 @@
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->row:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
     .line 2
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncGroupHeaderInflation()Z
-
-    .line 4
-    move-result v0
-
-    .line 7
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    .line 8
-    if-nez v0, :cond_1
-
-    .line 10
     iget-boolean v0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsPinned:Z
 
-    .line 12
-    if-nez v0, :cond_0
+    .line 4
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 14
+    .line 6
+    if-nez v0, :cond_1
+
+    .line 8
     iget-boolean v0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mHeadsupDisappearRunning:Z
 
-    .line 16
-    if-nez v0, :cond_0
+    .line 10
+    if-nez v0, :cond_1
 
-    .line 18
+    .line 12
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;->mTrackedChild:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 20
-    if-eq p1, v0, :cond_0
+    .line 14
+    if-eq p1, v0, :cond_1
 
-    .line 22
+    .line 16
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->showingPulsing()Z
 
-    .line 24
+    .line 18
     move-result v0
 
-    .line 27
-    if-eqz v0, :cond_1
+    .line 21
+    if-eqz v0, :cond_0
 
-    .line 28
-    :cond_0
-    iget p0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;->mAppearFraction:F
-
-    .line 30
+    .line 22
     goto :goto_0
 
-    .line 32
-    :cond_1
+    .line 24
+    :cond_0
     move p0, v1
 
-    .line 33
+    .line 25
+    goto :goto_1
+
+    .line 26
+    :cond_1
     :goto_0
+    iget p0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpAppearanceController;->mAppearFraction:F
+
+    .line 27
+    :goto_1
     iget v0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mHeaderVisibleAmount:F
 
-    .line 34
+    .line 29
     cmpl-float v0, v0, p0
 
-    .line 36
+    .line 31
     if-eqz v0, :cond_7
 
-    .line 38
+    .line 33
     iput p0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mHeaderVisibleAmount:F
 
-    .line 40
+    .line 35
     iget-object v0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mLayouts:[Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
-    .line 42
+    .line 37
     array-length v2, v0
 
-    .line 44
+    .line 39
     const/4 v3, 0x0
 
-    .line 45
+    .line 40
     move v4, v3
 
-    .line 46
-    :goto_1
+    .line 41
+    :goto_2
     if-ge v4, v2, :cond_5
 
-    .line 47
+    .line 42
     aget-object v5, v0, v4
 
-    .line 49
+    .line 44
     iget-object v6, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mContractedWrapper:Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 51
+    .line 46
     if-eqz v6, :cond_2
 
-    .line 53
+    .line 48
     invoke-virtual {v6, p0}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->setHeaderVisibleAmount(F)V
 
-    .line 55
+    .line 50
     :cond_2
     iget-object v6, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mHeadsUpWrapper:Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 58
+    .line 53
     if-eqz v6, :cond_3
 
-    .line 60
+    .line 55
     invoke-virtual {v6, p0}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->setHeaderVisibleAmount(F)V
 
-    .line 62
+    .line 57
     :cond_3
     iget-object v5, v5, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mExpandedWrapper:Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
-    .line 65
+    .line 60
     if-eqz v5, :cond_4
 
-    .line 67
+    .line 62
     invoke-virtual {v5, p0}, Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;->setHeaderVisibleAmount(F)V
 
-    .line 69
+    .line 64
     :cond_4
     add-int/lit8 v4, v4, 0x1
 
-    .line 72
-    goto :goto_1
+    .line 67
+    goto :goto_2
 
-    .line 74
+    .line 69
     :cond_5
     iget-object v0, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mChildrenContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationChildrenContainer;
 
-    .line 75
+    .line 70
     if-eqz v0, :cond_6
 
-    .line 77
+    .line 72
     iput p0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationChildrenContainer;->mHeaderVisibleAmount:F
 
-    .line 79
+    .line 74
     sub-float/2addr v1, p0
 
-    .line 81
+    .line 76
     iget p0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationChildrenContainer;->mTranslationForHeader:I
 
-    .line 82
+    .line 77
     int-to-float p0, p0
 
-    .line 84
+    .line 79
     mul-float/2addr v1, p0
 
-    .line 85
+    .line 80
     float-to-int p0, v1
 
-    .line 86
+    .line 81
     iput p0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationChildrenContainer;->mCurrentHeaderTranslation:I
 
-    .line 87
+    .line 82
     :cond_6
     invoke-virtual {p1, v3}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->notifyHeightChanged(Z)V
 
-    .line 89
+    .line 84
     :cond_7
     return-void
-    .line 92
+    .line 87
 .end method
 
 .method public final updateHeadsUpAndPulsingRoundness(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V

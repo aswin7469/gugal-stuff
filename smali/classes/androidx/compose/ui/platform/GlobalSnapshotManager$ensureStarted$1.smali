@@ -1,6 +1,6 @@
 .class final Landroidx/compose/ui/platform/GlobalSnapshotManager$ensureStarted$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -332,22 +332,19 @@
     if-nez v2, :cond_7
 
     .line 126
-    new-instance v2, Ljava/util/concurrent/CancellationException;
-
-    .line 128
     const-string v0, "Channel was consumed, consumer had failed"
 
+    .line 128
+    invoke-static {v0, p0}, Lkotlinx/coroutines/ExceptionsKt;->CancellationException(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/util/concurrent/CancellationException;
+
     .line 130
-    invoke-direct {v2, v0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 132
-    invoke-virtual {v2, p0}, Ljava/util/concurrent/CancellationException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    .line 135
+    .line 133
     :cond_7
     invoke-interface {v4, v2}, Lkotlinx/coroutines/channels/ReceiveChannel;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    .line 138
+    .line 134
     throw p1
-    .line 141
+    .line 137
 .end method

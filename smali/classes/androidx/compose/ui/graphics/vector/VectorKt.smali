@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/graphics/vector/VectorKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -23,70 +23,6 @@
     .line 6
     return-void
     .line 8
-.end method
-
-.method public static final addPathNodes(Ljava/lang/String;)Ljava/util/List;
-    .locals 2
-
-    .line 1
-    if-nez p0, :cond_0
-
-    .line 2
-    sget-object p0, Landroidx/compose/ui/graphics/vector/VectorKt;->EmptyPath:Lkotlin/collections/EmptyList;
-
-    .line 4
-    goto :goto_1
-
-    .line 6
-    :cond_0
-    new-instance v0, Landroidx/compose/ui/graphics/vector/PathParser;
-
-    .line 7
-    invoke-direct {v0}, Landroidx/compose/ui/graphics/vector/PathParser;-><init>()V
-
-    .line 9
-    iget-object v1, v0, Landroidx/compose/ui/graphics/vector/PathParser;->nodes:Ljava/util/ArrayList;
-
-    .line 12
-    if-nez v1, :cond_1
-
-    .line 14
-    new-instance v1, Ljava/util/ArrayList;
-
-    .line 16
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 18
-    iput-object v1, v0, Landroidx/compose/ui/graphics/vector/PathParser;->nodes:Ljava/util/ArrayList;
-
-    .line 21
-    goto :goto_0
-
-    .line 23
-    :cond_1
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
-
-    .line 24
-    :goto_0
-    invoke-virtual {v0, p0, v1}, Landroidx/compose/ui/graphics/vector/PathParser;->pathStringToNodes(Ljava/lang/String;Ljava/util/ArrayList;)V
-
-    .line 27
-    iget-object p0, v0, Landroidx/compose/ui/graphics/vector/PathParser;->nodes:Ljava/util/ArrayList;
-
-    .line 30
-    if-eqz p0, :cond_2
-
-    .line 32
-    goto :goto_1
-
-    .line 34
-    :cond_2
-    sget-object p0, Lkotlin/collections/EmptyList;->INSTANCE:Lkotlin/collections/EmptyList;
-
-    .line 35
-    :goto_1
-    return-object p0
-    .line 37
 .end method
 
 .method public static final tintableWithAlphaMask(Landroidx/compose/ui/graphics/ColorFilter;)Z

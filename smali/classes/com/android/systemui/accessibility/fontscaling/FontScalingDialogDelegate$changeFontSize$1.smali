@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/fontscaling/FontScalingDialogDelegate$changeFontSize$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -161,7 +161,7 @@
 
     .line 73
     :cond_3
-    const v3, 0x7f150382    # @style/TextAppearance.Dialog.Title
+    const v3, 0x7f14038a    # @style/TextAppearance.Dialog.Title
 
     .line 74
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextAppearance(I)V
@@ -180,7 +180,7 @@
 
     .line 86
     :cond_4
-    const v3, 0x7f1505b0    # @style/Widget.Dialog.Button
+    const v3, 0x7f1405ba    # @style/Widget.Dialog.Button
 
     .line 87
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setTextAppearance(I)V

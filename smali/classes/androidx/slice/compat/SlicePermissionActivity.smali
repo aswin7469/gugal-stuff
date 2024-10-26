@@ -1,6 +1,6 @@
 .class public Landroidx/slice/compat/SlicePermissionActivity;
 .super Landroidx/activity/ComponentActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -382,6 +382,7 @@
 
     .line 124
     return-object p0
+    .line 125
 .end method
 
 
@@ -1098,7 +1099,7 @@
     new-instance v1, Landroidx/appcompat/view/ContextThemeWrapper;
 
     .line 398
-    const v2, 0x7f15043a    # @style/Theme.AppCompat.Empty
+    const v2, 0x7f140442    # @style/Theme.AppCompat.Empty
 
     .line 400
     invoke-direct {v1, v2, p1}, Landroidx/appcompat/view/ContextThemeWrapper;-><init>(ILandroid/content/Context;)V
@@ -1180,6 +1181,7 @@
     .line 22
     :cond_0
     return-void
+    .line 25
 .end method
 
 .method public final dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -1608,7 +1610,7 @@
     const-string p2, "    "
 
     .line 260
-    invoke-static {p1, p2}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 262
     move-result-object p2
@@ -2802,7 +2804,7 @@
     move-result-object v0
 
     .line 9
-    const v1, 0x7f0b08ad    # @id/view_tree_lifecycle_owner
+    const v1, 0x7f0a08e0    # @id/view_tree_lifecycle_owner
 
     .line 10
     invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -2820,7 +2822,7 @@
     move-result-object v0
 
     .line 23
-    const v1, 0x7f0b08b0    # @id/view_tree_view_model_store_owner
+    const v1, 0x7f0a08e3    # @id/view_tree_view_model_store_owner
 
     .line 24
     invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -2838,7 +2840,7 @@
     move-result-object v0
 
     .line 37
-    const v1, 0x7f0b08af    # @id/view_tree_saved_state_registry_owner
+    const v1, 0x7f0a08e2    # @id/view_tree_saved_state_registry_owner
 
     .line 38
     invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -2856,7 +2858,7 @@
     move-result-object v0
 
     .line 51
-    const v1, 0x7f0b08ae    # @id/view_tree_on_back_pressed_dispatcher_owner
+    const v1, 0x7f0a08e1    # @id/view_tree_on_back_pressed_dispatcher_owner
 
     .line 52
     invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -2902,7 +2904,6 @@
     .line 21
     :cond_0
     return-void
-    .line 24
 .end method
 
 .method public final onActivityResult(IILandroid/content/Intent;)V
@@ -3020,102 +3021,102 @@
     const-string p2, "grant_perms"
 
     .line 64
-    const-string v0, "supports_versioned_parcelable"
+    const-string/jumbo v0, "supports_versioned_parcelable"
 
     .line 66
     invoke-virtual {p1, p2, v0, v1}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 68
+    .line 69
     :try_start_2
     invoke-virtual {v2}, Landroidx/slice/compat/SliceProviderCompat$ProviderHolder;->close()V
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 71
+    .line 72
     goto :goto_2
 
-    .line 74
+    .line 75
     :catch_0
     move-exception p1
 
-    .line 75
+    .line 76
     goto :goto_1
 
-    .line 76
+    .line 77
     :catchall_0
     move-exception p1
 
-    .line 77
+    .line 78
     :try_start_3
     invoke-virtual {v2}, Landroidx/slice/compat/SliceProviderCompat$ProviderHolder;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 78
+    .line 79
     goto :goto_0
 
-    .line 81
+    .line 82
     :catchall_1
     move-exception p2
 
-    .line 82
+    .line 83
     :try_start_4
     invoke-virtual {p1, p2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    .line 83
+    .line 84
     :goto_0
     throw p1
 
-    .line 86
+    .line 87
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    .line 87
+    .line 88
     new-instance p2, Ljava/lang/StringBuilder;
 
-    .line 89
+    .line 90
     const-string v1, "No provider found for "
 
-    .line 91
+    .line 92
     invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 93
+    .line 94
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 96
+    .line 97
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 99
+    .line 100
     move-result-object p2
 
-    .line 102
+    .line 103
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 103
+    .line 104
     throw p1
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 106
+    .line 107
     :goto_1
     const-string p2, "SliceProviderCompat"
 
-    .line 107
+    .line 108
     const-string v0, "Unable to get slice descendants"
 
-    .line 109
+    .line 110
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 111
+    .line 112
     :cond_1
     :goto_2
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 114
+    .line 115
     return-void
-    .line 117
+    .line 118
 .end method
 
 .method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -3497,7 +3498,7 @@
     move-result-object v1
 
     .line 123
-    const v3, 0x7f140029    # @string/abc_slice_permission_title 'Allow %1$s to show %2$s slices?'
+    const v3, 0x7f130029    # @string/abc_slice_permission_title 'Allow %1$s to show %2$s slices?'
 
     .line 124
     invoke-virtual {p0, v3, v1}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -3509,7 +3510,7 @@
     iput-object v1, v2, Landroidx/appcompat/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 131
-    const v1, 0x7f0e0021    # @layout/abc_slice_permission_request 'res/layout/abc_slice_permission_request.xml'
+    const v1, 0x7f0d0021    # @layout/abc_slice_permission_request 'res/layout/abc_slice_permission_request.xml'
 
     .line 133
     iput v1, v2, Landroidx/appcompat/app/AlertController$AlertParams;->mViewLayoutResId:I
@@ -3518,7 +3519,7 @@
     iget-object v1, v2, Landroidx/appcompat/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
 
     .line 138
-    const v3, 0x7f140026    # @string/abc_slice_permission_deny 'Deny'
+    const v3, 0x7f130026    # @string/abc_slice_permission_deny 'Deny'
 
     .line 140
     invoke-virtual {v1, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -3536,7 +3537,7 @@
     iget-object v1, v2, Landroidx/appcompat/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
 
     .line 151
-    const v3, 0x7f140025    # @string/abc_slice_permission_allow 'Allow'
+    const v3, 0x7f130025    # @string/abc_slice_permission_allow 'Allow'
 
     .line 153
     invoke-virtual {v1, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -3578,7 +3579,7 @@
     move-result-object v0
 
     .line 182
-    const v1, 0x7f0b07e1    # @id/text1
+    const v1, 0x7f0a0810    # @id/text1
 
     .line 183
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -3596,7 +3597,7 @@
     move-result-object v1
 
     .line 195
-    const v2, 0x7f140027    # @string/abc_slice_permission_text_1 '- It can read information from %1$s'
+    const v2, 0x7f130027    # @string/abc_slice_permission_text_1 '- It can read information from %1$s'
 
     .line 196
     invoke-virtual {p0, v2, v1}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -3623,7 +3624,7 @@
     move-result-object v0
 
     .line 215
-    const v1, 0x7f0b07e2    # @id/text2
+    const v1, 0x7f0a0811    # @id/text2
 
     .line 216
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -3641,7 +3642,7 @@
     move-result-object p1
 
     .line 228
-    const v1, 0x7f140028    # @string/abc_slice_permission_text_2 '- It can take actions inside %1$s'
+    const v1, 0x7f130028    # @string/abc_slice_permission_text_2 '- It can take actions inside %1$s'
 
     .line 229
     invoke-virtual {p0, v1, p1}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -4045,173 +4046,179 @@
     iget-object v2, v0, Landroidx/fragment/app/FragmentManagerImpl;->mOnConfigurationChangedListener:Landroidx/fragment/app/FragmentManager$$ExternalSyntheticLambda0;
 
     .line 120
-    invoke-virtual {v1, v2}, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->removeOnConfigurationChangedListener(Landroidx/core/util/Consumer;)V
+    iget-object v1, v1, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/slice/compat/SlicePermissionActivity;
 
     .line 122
+    iget-object v1, v1, Landroidx/activity/ComponentActivity;->onConfigurationChangedListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 124
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+
+    .line 126
     :cond_5
     iget-object v1, v0, Landroidx/fragment/app/FragmentManagerImpl;->mHost:Landroidx/fragment/app/FragmentActivity$HostCallbacks;
 
-    .line 125
+    .line 129
     instance-of v2, v1, Landroidx/core/app/OnMultiWindowModeChangedProvider;
 
-    .line 127
+    .line 131
     if-eqz v2, :cond_6
 
-    .line 129
+    .line 133
     iget-object v2, v0, Landroidx/fragment/app/FragmentManagerImpl;->mOnMultiWindowModeChangedListener:Landroidx/fragment/app/FragmentManager$$ExternalSyntheticLambda0;
 
-    .line 131
+    .line 135
     iget-object v1, v1, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/slice/compat/SlicePermissionActivity;
 
-    .line 133
+    .line 137
     iget-object v1, v1, Landroidx/activity/ComponentActivity;->onMultiWindowModeChangedListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 135
+    .line 139
     invoke-virtual {v1, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 137
+    .line 141
     :cond_6
     iget-object v1, v0, Landroidx/fragment/app/FragmentManagerImpl;->mHost:Landroidx/fragment/app/FragmentActivity$HostCallbacks;
 
-    .line 140
+    .line 144
     instance-of v2, v1, Landroidx/core/app/OnPictureInPictureModeChangedProvider;
 
-    .line 142
+    .line 146
     if-eqz v2, :cond_7
 
-    .line 144
+    .line 148
     iget-object v2, v0, Landroidx/fragment/app/FragmentManagerImpl;->mOnPictureInPictureModeChangedListener:Landroidx/fragment/app/FragmentManager$$ExternalSyntheticLambda0;
 
-    .line 146
+    .line 150
     iget-object v1, v1, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/slice/compat/SlicePermissionActivity;
 
-    .line 148
+    .line 152
     iget-object v1, v1, Landroidx/activity/ComponentActivity;->onPictureInPictureModeChangedListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 150
+    .line 154
     invoke-virtual {v1, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 152
+    .line 156
     :cond_7
     iget-object v1, v0, Landroidx/fragment/app/FragmentManagerImpl;->mHost:Landroidx/fragment/app/FragmentActivity$HostCallbacks;
 
-    .line 155
+    .line 159
     instance-of v2, v1, Landroidx/core/view/MenuHost;
 
-    .line 157
+    .line 161
     if-eqz v2, :cond_8
 
-    .line 159
+    .line 163
     iget-object v2, v0, Landroidx/fragment/app/FragmentManagerImpl;->mMenuProvider:Landroidx/fragment/app/FragmentManager$2;
 
-    .line 161
+    .line 165
     iget-object v1, v1, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/slice/compat/SlicePermissionActivity;
 
-    .line 163
+    .line 167
     iget-object v1, v1, Landroidx/activity/ComponentActivity;->menuHostHelper:Landroidx/core/view/MenuHostHelper;
 
-    .line 165
+    .line 169
     iget-object v3, v1, Landroidx/core/view/MenuHostHelper;->mMenuProviders:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 167
+    .line 171
     invoke-virtual {v3, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 169
+    .line 173
     iget-object v3, v1, Landroidx/core/view/MenuHostHelper;->mProviderToLifecycleContainers:Ljava/util/Map;
 
-    .line 172
+    .line 176
     invoke-interface {v3, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
+    .line 178
     move-result-object v2
 
-    .line 177
+    .line 181
     invoke-static {v2}, Landroidx/appcompat/app/WindowDecorActionBar$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
-    .line 178
+    .line 182
     iget-object v1, v1, Landroidx/core/view/MenuHostHelper;->mOnInvalidateMenuCallback:Ljava/lang/Runnable;
 
-    .line 181
+    .line 185
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 183
+    .line 187
     :cond_8
     const/4 v1, 0x0
 
-    .line 186
+    .line 190
     iput-object v1, v0, Landroidx/fragment/app/FragmentManagerImpl;->mHost:Landroidx/fragment/app/FragmentActivity$HostCallbacks;
 
-    .line 187
+    .line 191
     iput-object v1, v0, Landroidx/fragment/app/FragmentManagerImpl;->mContainer:Landroidx/fragment/app/FragmentActivity$HostCallbacks;
 
-    .line 189
+    .line 193
     iget-object v2, v0, Landroidx/fragment/app/FragmentManagerImpl;->mOnBackPressedDispatcher:Landroidx/activity/OnBackPressedDispatcher;
 
-    .line 191
+    .line 195
     if-eqz v2, :cond_9
 
-    .line 193
+    .line 197
     iget-object v2, v0, Landroidx/fragment/app/FragmentManagerImpl;->mOnBackPressedCallback:Landroidx/fragment/app/FragmentManager$1;
 
-    .line 195
+    .line 199
     invoke-virtual {v2}, Landroidx/activity/OnBackPressedCallback;->remove()V
 
-    .line 197
+    .line 201
     iput-object v1, v0, Landroidx/fragment/app/FragmentManagerImpl;->mOnBackPressedDispatcher:Landroidx/activity/OnBackPressedDispatcher;
 
-    .line 200
+    .line 204
     :cond_9
     iget-object v1, v0, Landroidx/fragment/app/FragmentManagerImpl;->mStartActivityForResult:Landroidx/activity/result/ActivityResultRegistry$register$2;
 
-    .line 202
+    .line 206
     if-eqz v1, :cond_a
 
-    .line 204
-    iget-object v2, v1, Landroidx/activity/result/ActivityResultRegistry$register$2;->this$0:Landroidx/activity/result/ActivityResultRegistry;
-
-    .line 206
-    iget-object v1, v1, Landroidx/activity/result/ActivityResultRegistry$register$2;->$key:Ljava/lang/String;
-
     .line 208
-    invoke-virtual {v2, v1}, Landroidx/activity/result/ActivityResultRegistry;->unregister$activity_release(Ljava/lang/String;)V
+    iget-object v2, v1, Landroidx/activity/result/ActivityResultRegistry$register$2;->this$0:Landroidx/activity/result/ActivityResultRegistry;
 
     .line 210
-    iget-object v1, v0, Landroidx/fragment/app/FragmentManagerImpl;->mStartIntentSenderForResult:Landroidx/activity/result/ActivityResultRegistry$register$2;
-
-    .line 213
-    iget-object v2, v1, Landroidx/activity/result/ActivityResultRegistry$register$2;->this$0:Landroidx/activity/result/ActivityResultRegistry;
-
-    .line 215
     iget-object v1, v1, Landroidx/activity/result/ActivityResultRegistry$register$2;->$key:Ljava/lang/String;
 
-    .line 217
+    .line 212
     invoke-virtual {v2, v1}, Landroidx/activity/result/ActivityResultRegistry;->unregister$activity_release(Ljava/lang/String;)V
 
+    .line 214
+    iget-object v1, v0, Landroidx/fragment/app/FragmentManagerImpl;->mStartIntentSenderForResult:Landroidx/activity/result/ActivityResultRegistry$register$2;
+
+    .line 217
+    iget-object v2, v1, Landroidx/activity/result/ActivityResultRegistry$register$2;->this$0:Landroidx/activity/result/ActivityResultRegistry;
+
     .line 219
+    iget-object v1, v1, Landroidx/activity/result/ActivityResultRegistry$register$2;->$key:Ljava/lang/String;
+
+    .line 221
+    invoke-virtual {v2, v1}, Landroidx/activity/result/ActivityResultRegistry;->unregister$activity_release(Ljava/lang/String;)V
+
+    .line 223
     iget-object v0, v0, Landroidx/fragment/app/FragmentManagerImpl;->mRequestPermissions:Landroidx/activity/result/ActivityResultRegistry$register$2;
 
-    .line 222
+    .line 226
     iget-object v1, v0, Landroidx/activity/result/ActivityResultRegistry$register$2;->this$0:Landroidx/activity/result/ActivityResultRegistry;
 
-    .line 224
+    .line 228
     iget-object v0, v0, Landroidx/activity/result/ActivityResultRegistry$register$2;->$key:Ljava/lang/String;
 
-    .line 226
+    .line 230
     invoke-virtual {v1, v0}, Landroidx/activity/result/ActivityResultRegistry;->unregister$activity_release(Ljava/lang/String;)V
 
-    .line 228
+    .line 232
     :cond_a
     iget-object p0, p0, Landroidx/slice/compat/SlicePermissionActivity;->mFragmentLifecycleRegistry:Landroidx/lifecycle/LifecycleRegistry;
 
-    .line 231
+    .line 235
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
-    .line 233
+    .line 237
     invoke-virtual {p0, v0}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
 
-    .line 235
+    .line 239
     return-void
-    .line 238
+    .line 242
 .end method
 
 .method public final onMenuItemSelected(ILandroid/view/MenuItem;)Z
@@ -4642,6 +4649,7 @@
 
     .line 22
     return-void
+    .line 25
 .end method
 
 .method public final onPostCreate(Landroid/os/Bundle;)V
@@ -5136,6 +5144,7 @@
     .line 22
     :cond_0
     return-void
+    .line 25
 .end method
 
 .method public final setContentView(I)V

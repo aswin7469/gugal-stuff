@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/common/ui/view/LongPressHandlingView$interactionHandler$2$4;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -31,47 +31,25 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 2
+    .locals 0
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/common/ui/view/LongPressHandlingView$interactionHandler$2$4;->this$0:Lcom/android/systemui/common/ui/view/LongPressHandlingView;
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/common/ui/view/LongPressHandlingView;->listener:Lcom/android/systemui/keyguard/ui/binder/KeyguardLongPressViewBinder$bind$1;
+    iget-object p0, p0, Lcom/android/systemui/common/ui/view/LongPressHandlingView;->listener:Lcom/android/systemui/common/ui/view/LongPressHandlingView$Listener;
 
     .line 4
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_0
 
     .line 6
-    iget-object v0, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardLongPressViewBinder$bind$1;->$falsingManager:Lcom/android/systemui/plugins/FalsingManager;
+    invoke-interface {p0}, Lcom/android/systemui/common/ui/view/LongPressHandlingView$Listener;->onSingleTapDetected()V
 
     .line 8
-    const/4 v1, 0x1
-
-    .line 10
-    invoke-interface {v0, v1}, Lcom/android/systemui/plugins/FalsingManager;->isFalseTap(I)Z
-
-    .line 11
-    move-result v0
-
-    .line 14
-    if-eqz v0, :cond_0
-
-    .line 15
-    goto :goto_0
-
-    .line 17
     :cond_0
-    iget-object p0, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardLongPressViewBinder$bind$1;->$onSingleTap:Lkotlin/jvm/functions/Function0;
-
-    .line 18
-    invoke-interface {p0}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
-
-    .line 20
-    :cond_1
-    :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 23
+    .line 11
     return-object p0
+    .line 13
 .end method

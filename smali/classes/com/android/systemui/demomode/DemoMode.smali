@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/android/systemui/demomode/DemoMode;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/demomode/DemoModeCommandReceiver;
@@ -26,47 +26,47 @@
     sput-object v0, Lcom/android/systemui/demomode/DemoMode;->NO_COMMANDS:Ljava/util/List;
 
     .line 7
-    const-string v7, "status"
+    const-string/jumbo v7, "status"
 
     .line 9
     const-string/jumbo v8, "volume"
 
-    .line 11
+    .line 12
     const-string v1, "bars"
 
-    .line 14
+    .line 15
     const-string v2, "battery"
 
-    .line 16
+    .line 17
     const-string v3, "clock"
 
-    .line 18
+    .line 19
     const-string v4, "network"
 
-    .line 20
+    .line 21
     const-string v5, "notifications"
 
-    .line 22
+    .line 23
     const-string v6, "operator"
 
-    .line 24
+    .line 25
     filled-new-array/range {v1 .. v8}, [Ljava/lang/String;
 
-    .line 26
+    .line 27
     move-result-object v0
-
-    .line 29
-    invoke-static {v0}, Lcom/google/android/collect/Lists;->newArrayList([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     .line 30
+    invoke-static {v0}, Lcom/google/android/collect/Lists;->newArrayList([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    .line 31
     move-result-object v0
 
-    .line 33
+    .line 34
     sput-object v0, Lcom/android/systemui/demomode/DemoMode;->COMMANDS:Ljava/util/List;
 
-    .line 34
+    .line 35
     return-void
-    .line 36
+    .line 37
 .end method
 
 

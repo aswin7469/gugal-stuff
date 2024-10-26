@@ -1,6 +1,6 @@
 .class public final Lcom/google/protobuf/nano/CodedOutputByteBufferNano;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -32,6 +32,23 @@
     .line 13
     return-void
     .line 16
+.end method
+
+.method public static computeFloatSize(I)I
+    .locals 0
+
+    .line 1
+    invoke-static {p0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeTagSize(I)I
+
+    .line 2
+    move-result p0
+
+    .line 5
+    add-int/lit8 p0, p0, 0x4
+
+    .line 6
+    return p0
+    .line 8
 .end method
 
 .method public static computeInt32Size(II)I
@@ -68,199 +85,27 @@
     .line 16
 .end method
 
-.method public static computeInt64Size(IJ)I
-    .locals 4
+.method public static computeInt64Size(JI)I
+    .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeTagSize(I)I
+    invoke-static {p2}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeTagSize(I)I
 
     .line 2
-    move-result p0
+    move-result p2
 
     .line 5
-    const-wide/16 v0, -0x80
+    invoke-static {p0, p1}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeRawVarint64Size(J)I
 
     .line 6
-    and-long/2addr v0, p1
-
-    .line 8
-    const-wide/16 v2, 0x0
+    move-result p0
 
     .line 9
-    cmp-long v0, v0, v2
+    add-int/2addr p0, p2
 
-    .line 11
-    if-nez v0, :cond_0
-
-    .line 13
-    const/4 p1, 0x1
-
-    .line 15
-    goto :goto_0
-
-    .line 16
-    :cond_0
-    const-wide/16 v0, -0x4000
-
-    .line 17
-    and-long/2addr v0, p1
-
-    .line 19
-    cmp-long v0, v0, v2
-
-    .line 20
-    if-nez v0, :cond_1
-
-    .line 22
-    const/4 p1, 0x2
-
-    .line 24
-    goto :goto_0
-
-    .line 25
-    :cond_1
-    const-wide/32 v0, -0x200000
-
-    .line 26
-    and-long/2addr v0, p1
-
-    .line 29
-    cmp-long v0, v0, v2
-
-    .line 30
-    if-nez v0, :cond_2
-
-    .line 32
-    const/4 p1, 0x3
-
-    .line 34
-    goto :goto_0
-
-    .line 35
-    :cond_2
-    const-wide/32 v0, -0x10000000
-
-    .line 36
-    and-long/2addr v0, p1
-
-    .line 39
-    cmp-long v0, v0, v2
-
-    .line 40
-    if-nez v0, :cond_3
-
-    .line 42
-    const/4 p1, 0x4
-
-    .line 44
-    goto :goto_0
-
-    .line 45
-    :cond_3
-    const-wide v0, -0x800000000L
-
-    .line 46
-    and-long/2addr v0, p1
-
-    .line 51
-    cmp-long v0, v0, v2
-
-    .line 52
-    if-nez v0, :cond_4
-
-    .line 54
-    const/4 p1, 0x5
-
-    .line 56
-    goto :goto_0
-
-    .line 57
-    :cond_4
-    const-wide v0, -0x40000000000L
-
-    .line 58
-    and-long/2addr v0, p1
-
-    .line 63
-    cmp-long v0, v0, v2
-
-    .line 64
-    if-nez v0, :cond_5
-
-    .line 66
-    const/4 p1, 0x6
-
-    .line 68
-    goto :goto_0
-
-    .line 69
-    :cond_5
-    const-wide/high16 v0, -0x2000000000000L
-
-    .line 70
-    and-long/2addr v0, p1
-
-    .line 72
-    cmp-long v0, v0, v2
-
-    .line 73
-    if-nez v0, :cond_6
-
-    .line 75
-    const/4 p1, 0x7
-
-    .line 77
-    goto :goto_0
-
-    .line 78
-    :cond_6
-    const-wide/high16 v0, -0x100000000000000L
-
-    .line 79
-    and-long/2addr v0, p1
-
-    .line 81
-    cmp-long v0, v0, v2
-
-    .line 82
-    if-nez v0, :cond_7
-
-    .line 84
-    const/16 p1, 0x8
-
-    .line 86
-    goto :goto_0
-
-    .line 88
-    :cond_7
-    const-wide/high16 v0, -0x8000000000000000L
-
-    .line 89
-    and-long/2addr p1, v0
-
-    .line 91
-    cmp-long p1, p1, v2
-
-    .line 92
-    if-nez p1, :cond_8
-
-    .line 94
-    const/16 p1, 0x9
-
-    .line 96
-    goto :goto_0
-
-    .line 98
-    :cond_8
-    const/16 p1, 0xa
-
-    .line 99
-    :goto_0
-    add-int/2addr p0, p1
-
-    .line 101
+    .line 10
     return p0
-    .line 102
+    .line 11
 .end method
 
 .method public static computeMessageSize(ILcom/google/protobuf/nano/MessageNano;)I
@@ -362,6 +207,191 @@
     .line 28
     return p0
     .line 29
+.end method
+
+.method public static computeRawVarint64Size(J)I
+    .locals 4
+
+    .line 1
+    const-wide/16 v0, -0x80
+
+    .line 2
+    and-long/2addr v0, p0
+
+    .line 4
+    const-wide/16 v2, 0x0
+
+    .line 5
+    cmp-long v0, v0, v2
+
+    .line 7
+    if-nez v0, :cond_0
+
+    .line 9
+    const/4 p0, 0x1
+
+    .line 11
+    return p0
+
+    .line 12
+    :cond_0
+    const-wide/16 v0, -0x4000
+
+    .line 13
+    and-long/2addr v0, p0
+
+    .line 15
+    cmp-long v0, v0, v2
+
+    .line 16
+    if-nez v0, :cond_1
+
+    .line 18
+    const/4 p0, 0x2
+
+    .line 20
+    return p0
+
+    .line 21
+    :cond_1
+    const-wide/32 v0, -0x200000
+
+    .line 22
+    and-long/2addr v0, p0
+
+    .line 25
+    cmp-long v0, v0, v2
+
+    .line 26
+    if-nez v0, :cond_2
+
+    .line 28
+    const/4 p0, 0x3
+
+    .line 30
+    return p0
+
+    .line 31
+    :cond_2
+    const-wide/32 v0, -0x10000000
+
+    .line 32
+    and-long/2addr v0, p0
+
+    .line 35
+    cmp-long v0, v0, v2
+
+    .line 36
+    if-nez v0, :cond_3
+
+    .line 38
+    const/4 p0, 0x4
+
+    .line 40
+    return p0
+
+    .line 41
+    :cond_3
+    const-wide v0, -0x800000000L
+
+    .line 42
+    and-long/2addr v0, p0
+
+    .line 47
+    cmp-long v0, v0, v2
+
+    .line 48
+    if-nez v0, :cond_4
+
+    .line 50
+    const/4 p0, 0x5
+
+    .line 52
+    return p0
+
+    .line 53
+    :cond_4
+    const-wide v0, -0x40000000000L
+
+    .line 54
+    and-long/2addr v0, p0
+
+    .line 59
+    cmp-long v0, v0, v2
+
+    .line 60
+    if-nez v0, :cond_5
+
+    .line 62
+    const/4 p0, 0x6
+
+    .line 64
+    return p0
+
+    .line 65
+    :cond_5
+    const-wide/high16 v0, -0x2000000000000L
+
+    .line 66
+    and-long/2addr v0, p0
+
+    .line 68
+    cmp-long v0, v0, v2
+
+    .line 69
+    if-nez v0, :cond_6
+
+    .line 71
+    const/4 p0, 0x7
+
+    .line 73
+    return p0
+
+    .line 74
+    :cond_6
+    const-wide/high16 v0, -0x100000000000000L
+
+    .line 75
+    and-long/2addr v0, p0
+
+    .line 77
+    cmp-long v0, v0, v2
+
+    .line 78
+    if-nez v0, :cond_7
+
+    .line 80
+    const/16 p0, 0x8
+
+    .line 82
+    return p0
+
+    .line 84
+    :cond_7
+    const-wide/high16 v0, -0x8000000000000000L
+
+    .line 85
+    and-long/2addr p0, v0
+
+    .line 87
+    cmp-long p0, p0, v2
+
+    .line 88
+    if-nez p0, :cond_8
+
+    .line 90
+    const/16 p0, 0x9
+
+    .line 92
+    return p0
+
+    .line 94
+    :cond_8
+    const/16 p0, 0xa
+
+    .line 95
+    return p0
+    .line 97
 .end method
 
 .method public static computeStringSize(ILjava/lang/String;)I
@@ -1131,7 +1161,7 @@
     const-string v0, "Unpaired surrogate at index "
 
     .line 83
-    invoke-static {v2, v0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 85
     move-result-object v0
@@ -1202,35 +1232,35 @@
 
 
 # virtual methods
-.method public final writeFixed64(IJ)V
+.method public final writeFixed64(JI)V
     .locals 1
 
     .line 1
     const/4 v0, 0x1
 
     .line 2
-    invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeTag(II)V
+    invoke-virtual {p0, p3, v0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeTag(II)V
 
     .line 3
-    iget-object p1, p0, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->buffer:Ljava/nio/ByteBuffer;
+    iget-object p3, p0, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->buffer:Ljava/nio/ByteBuffer;
 
     .line 6
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
+    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->remaining()I
 
     .line 8
-    move-result p1
+    move-result p3
 
     .line 11
     const/16 v0, 0x8
 
     .line 12
-    if-lt p1, v0, :cond_0
+    if-lt p3, v0, :cond_0
 
     .line 14
     iget-object p0, p0, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->buffer:Ljava/nio/ByteBuffer;
 
     .line 16
-    invoke-virtual {p0, p2, p3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+    invoke-virtual {p0, p1, p2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
     .line 18
     return-void
@@ -1265,6 +1295,75 @@
     .line 39
 .end method
 
+.method public final writeFloat(IF)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x5
+
+    .line 2
+    invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeTag(II)V
+
+    .line 3
+    invoke-static {p2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    .line 6
+    move-result p1
+
+    .line 9
+    iget-object p2, p0, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->buffer:Ljava/nio/ByteBuffer;
+
+    .line 10
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
+
+    .line 12
+    move-result p2
+
+    .line 15
+    const/4 v0, 0x4
+
+    .line 16
+    if-lt p2, v0, :cond_0
+
+    .line 17
+    iget-object p0, p0, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->buffer:Ljava/nio/ByteBuffer;
+
+    .line 19
+    invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    .line 21
+    return-void
+
+    .line 24
+    :cond_0
+    new-instance p1, Lcom/google/protobuf/nano/CodedOutputByteBufferNano$OutOfSpaceException;
+
+    .line 25
+    iget-object p2, p0, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->buffer:Ljava/nio/ByteBuffer;
+
+    .line 27
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->position()I
+
+    .line 29
+    move-result p2
+
+    .line 32
+    iget-object p0, p0, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->buffer:Ljava/nio/ByteBuffer;
+
+    .line 33
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->limit()I
+
+    .line 35
+    move-result p0
+
+    .line 38
+    invoke-direct {p1, p2, p0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano$OutOfSpaceException;-><init>(II)V
+
+    .line 39
+    throw p1
+    .line 42
+.end method
+
 .method public final writeInt32(II)V
     .locals 1
 
@@ -1294,6 +1393,23 @@
     :goto_0
     return-void
     .line 16
+.end method
+
+.method public final writeInt64(JI)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p3, v0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeTag(II)V
+
+    .line 3
+    invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeRawVarint64(J)V
+
+    .line 6
+    return-void
+    .line 9
 .end method
 
 .method public final writeMessage(ILcom/google/protobuf/nano/MessageNano;)V
@@ -1376,7 +1492,6 @@
 
     .line 31
     throw p1
-    .line 34
 .end method
 
 .method public final writeRawVarint32(I)V

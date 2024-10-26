@@ -9,7 +9,7 @@
             android:text="@string/controls_media_close_session"
             android:singleLine="true"
             android:marqueeRepeatLimit="marquee_forever"
-            android:fontFamily="@android:string/config_networkOverLimitComponent"
+            android:fontFamily="@android:string/config_misprovisionedBrandValue"
             android:layout_marginStart="@dimen/qs_media_padding"
             android:layout_marginEnd="@dimen/qs_media_padding"
             app:layout_constraintBottom_toTopOf="@id/cancel"

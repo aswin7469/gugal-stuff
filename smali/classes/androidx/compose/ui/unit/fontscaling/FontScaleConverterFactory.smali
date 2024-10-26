@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/unit/fontscaling/FontScaleConverterFactory;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -322,7 +322,6 @@
         0x42c80000    # 100.0f
     .end array-data
 
-    .line 240
     :array_4
     .array-data 4
         0x41266666    # 10.4f

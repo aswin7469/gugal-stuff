@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -18,13 +18,13 @@
 
 .field public final matrix:Landroid/graphics/Matrix;
 
-.field public surfaceBehind:Landroid/view/RemoteAnimationTarget;
+.field public final surfaceBehind:Landroid/view/RemoteAnimationTarget;
 
 .field public final tmpFloat:[F
 
 .field public final translateYSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-.field public viewParams:Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;
+.field public final viewParams:Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;
 
 
 # direct methods
@@ -250,169 +250,6 @@
     :cond_0
     return-void
     .line 20
-.end method
-
-.method public final startOrUpdateAnimators()V
-    .locals 6
-
-    .line 1
-    const/4 v0, 0x1
-
-    .line 2
-    const/4 v1, 0x0
-
-    .line 3
-    iget-object v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->surfaceBehind:Landroid/view/RemoteAnimationTarget;
-
-    .line 4
-    if-nez v2, :cond_0
-
-    .line 6
-    return-void
-
-    .line 8
-    :cond_0
-    iget-object v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->viewParams:Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;
-
-    .line 9
-    iget v3, v2, Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;->animateFromAlpha:F
-
-    .line 11
-    iget v2, v2, Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;->alpha:F
-
-    .line 13
-    cmpg-float v2, v3, v2
-
-    .line 15
-    if-nez v2, :cond_1
-
-    .line 17
-    move v2, v0
-
-    .line 19
-    goto :goto_0
-
-    .line 20
-    :cond_1
-    move v2, v1
-
-    .line 21
-    :goto_0
-    xor-int/2addr v2, v0
-
-    .line 22
-    if-eqz v2, :cond_3
-
-    .line 23
-    iget-object v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->alphaAnimator:Landroid/animation/ValueAnimator;
-
-    .line 25
-    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->isRunning()Z
-
-    .line 27
-    move-result v2
-
-    .line 30
-    if-eqz v2, :cond_2
-
-    .line 31
-    iget-object v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->alphaAnimator:Landroid/animation/ValueAnimator;
-
-    .line 33
-    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->cancel()V
-
-    .line 35
-    iget v3, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->animatedAlpha:F
-
-    .line 38
-    :cond_2
-    iget-object v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->alphaAnimator:Landroid/animation/ValueAnimator;
-
-    .line 40
-    iget-object v4, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->viewParams:Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;
-
-    .line 42
-    iget v4, v4, Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;->alpha:F
-
-    .line 44
-    const/4 v5, 0x2
-
-    .line 46
-    new-array v5, v5, [F
-
-    .line 47
-    aput v3, v5, v1
-
-    .line 49
-    aput v4, v5, v0
-
-    .line 51
-    invoke-virtual {v2, v5}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
-
-    .line 53
-    iget-object v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->alphaAnimator:Landroid/animation/ValueAnimator;
-
-    .line 56
-    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
-
-    .line 58
-    :cond_3
-    iget-object v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->viewParams:Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;
-
-    .line 61
-    iget v3, v2, Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;->animateFromTranslationY:F
-
-    .line 63
-    iget v4, v2, Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;->translationY:F
-
-    .line 65
-    cmpg-float v5, v3, v4
-
-    .line 67
-    if-nez v5, :cond_4
-
-    .line 69
-    move v1, v0
-
-    .line 71
-    :cond_4
-    xor-int/2addr v0, v1
-
-    .line 72
-    if-eqz v0, :cond_6
-
-    .line 73
-    iget-object v0, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->translateYSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    .line 75
-    iget-boolean v1, v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
-
-    .line 77
-    if-nez v1, :cond_5
-
-    .line 79
-    iget-object v1, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->animatedTranslationY:Landroidx/dynamicanimation/animation/FloatValueHolder;
-
-    .line 81
-    iput v3, v1, Landroidx/dynamicanimation/animation/FloatValueHolder;->mValue:F
-
-    .line 83
-    iget v1, v2, Lcom/android/systemui/keyguard/shared/model/KeyguardSurfaceBehindModel;->startVelocity:F
-
-    .line 85
-    iput v1, v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
-
-    .line 87
-    :cond_5
-    invoke-virtual {v0, v4}, Landroidx/dynamicanimation/animation/SpringAnimation;->animateToFinalPosition(F)V
-
-    .line 89
-    :cond_6
-    invoke-virtual {p0}, Lcom/android/systemui/keyguard/ui/binder/KeyguardSurfaceBehindParamsApplier;->updateIsAnimatingSurface()V
-
-    .line 92
-    return-void
-    .line 95
 .end method
 
 .method public final updateIsAnimatingSurface()V

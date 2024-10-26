@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/statusbar/pipeline/satellite/ui/viewmodel/DeviceBasedSatelliteViewModelImpl$icon$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function4;
@@ -165,13 +165,13 @@
     new-instance p0, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
     .line 51
-    const p1, 0x7f1400f3    # @string/accessibility_status_bar_satellite_good_connection 'Satellite, good connection'
+    const p1, 0x7f1300f3    # @string/accessibility_status_bar_satellite_good_connection 'Satellite, good connection'
 
     .line 53
     invoke-direct {p0, p1}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V
 
     .line 56
-    const p1, 0x7f080911    # @drawable/ic_satellite_connected_2 'res/drawable/ic_satellite_connected_2.xml'
+    const p1, 0x7f08093a    # @drawable/ic_satellite_connected_2 'res/drawable/ic_satellite_connected_2.xml'
 
     .line 59
     invoke-direct {v1, p1, p0}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V
@@ -187,13 +187,13 @@
     new-instance p0, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
     .line 68
-    const p1, 0x7f1400f5    # @string/accessibility_status_bar_satellite_poor_connection 'Satellite, poor connection'
+    const p1, 0x7f1300f5    # @string/accessibility_status_bar_satellite_poor_connection 'Satellite, poor connection'
 
     .line 70
     invoke-direct {p0, p1}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V
 
     .line 73
-    const p1, 0x7f080910    # @drawable/ic_satellite_connected_1 'res/drawable/ic_satellite_connected_1.xml'
+    const p1, 0x7f080939    # @drawable/ic_satellite_connected_1 'res/drawable/ic_satellite_connected_1.xml'
 
     .line 76
     invoke-direct {v1, p1, p0}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V
@@ -209,13 +209,13 @@
     new-instance p0, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
     .line 85
-    const p1, 0x7f1400f4    # @string/accessibility_status_bar_satellite_no_connection 'Satellite, no connection'
+    const p1, 0x7f1300f4    # @string/accessibility_status_bar_satellite_no_connection 'Satellite, no connection'
 
     .line 87
     invoke-direct {p0, p1}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V
 
     .line 90
-    const p1, 0x7f08090f    # @drawable/ic_satellite_connected_0 'res/drawable/ic_satellite_connected_0.xml'
+    const p1, 0x7f080938    # @drawable/ic_satellite_connected_0 'res/drawable/ic_satellite_connected_0.xml'
 
     .line 93
     invoke-direct {v1, p1, p0}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V
@@ -241,13 +241,13 @@
     new-instance p1, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
     .line 108
-    const v0, 0x7f1400f2    # @string/accessibility_status_bar_satellite_available 'Satellite, connection available'
+    const v0, 0x7f1300f2    # @string/accessibility_status_bar_satellite_available 'Satellite, connection available'
 
     .line 110
     invoke-direct {p1, v0}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V
 
     .line 113
-    const v0, 0x7f080912    # @drawable/ic_satellite_not_connected 'res/drawable/ic_satellite_not_connected.xml'
+    const v0, 0x7f08093b    # @drawable/ic_satellite_not_connected 'res/drawable/ic_satellite_not_connected.xml'
 
     .line 116
     invoke-direct {p0, v0, p1}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V

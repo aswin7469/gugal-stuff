@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$9;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/WakefulnessLifecycle$Observer;
@@ -285,129 +285,126 @@
     iput-boolean v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLaunchEmergencyActionWhenFinishedWaking:Z
 
     .line 95
-    iget-object p0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mEmergencyGestureIntentFactory:Lcom/android/systemui/emergency/EmergencyGestureModule$EmergencyGestureIntentFactory;
+    iget-object p0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mEmergencyGestureIntentFactory:Lcom/android/systemui/emergency/EmergencyGestureModule$emergencyGestureIntentFactory$1;
 
     .line 97
-    check-cast p0, Lcom/android/systemui/emergency/EmergencyGestureModule$emergencyGestureIntentFactory$1;
-
-    .line 99
     invoke-virtual {p0}, Lcom/android/systemui/emergency/EmergencyGestureModule$emergencyGestureIntentFactory$1;->invoke()Landroid/content/Intent;
 
-    .line 101
+    .line 99
     move-result-object p0
 
-    .line 104
+    .line 102
     if-eqz p0, :cond_7
 
-    .line 105
+    .line 103
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mContext:Landroid/content/Context;
 
-    .line 107
+    .line 105
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 109
+    .line 107
     move-result-object v4
 
-    .line 112
-    const v5, 0x7f03006c    # @array/system_ui_packages
+    .line 110
+    const v5, 0x7f030075    # @array/system_ui_packages
 
-    .line 113
+    .line 111
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
-    .line 116
+    .line 114
     move-result-object v4
 
-    .line 119
+    .line 117
     array-length v5, v4
 
-    .line 120
+    .line 118
     :goto_0
     if-ge v2, v5, :cond_6
 
-    .line 121
+    .line 119
     aget-object v6, v4, v2
 
-    .line 123
+    .line 121
     invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
-    .line 125
+    .line 123
     move-result-object v7
 
-    .line 128
+    .line 126
     if-nez v7, :cond_4
 
-    .line 129
+    .line 127
     goto :goto_1
 
-    .line 131
+    .line 129
     :cond_4
     invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
-    .line 132
+    .line 130
     move-result-object v7
 
-    .line 135
+    .line 133
     invoke-virtual {v7}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    .line 136
+    .line 134
     move-result-object v7
 
-    .line 139
+    .line 137
     invoke-virtual {v6, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 140
+    .line 138
     move-result v6
 
-    .line 143
+    .line 141
     if-eqz v6, :cond_5
 
-    .line 144
+    .line 142
     new-instance v0, Landroid/os/UserHandle;
 
-    .line 146
+    .line 144
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
-    .line 148
+    .line 146
     move-result v2
 
-    .line 151
+    .line 149
     invoke-direct {v0, v2}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 152
+    .line 150
     goto :goto_2
 
-    .line 155
+    .line 153
     :cond_5
     add-int/2addr v2, v0
 
-    .line 156
+    .line 154
     goto :goto_0
 
-    .line 157
+    .line 155
     :cond_6
     :goto_1
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 158
+    .line 156
     check-cast v0, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 160
+    .line 158
     invoke-virtual {v0}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserHandle()Landroid/os/UserHandle;
 
-    .line 162
+    .line 160
     move-result-object v0
 
-    .line 165
+    .line 163
     :goto_2
     invoke-virtual {v3, p0, v0}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 166
+    .line 164
     :cond_7
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->updateScrimController()V
 
-    .line 169
+    .line 167
     return-void
-    .line 172
+    .line 170
 .end method
 
 .method public final onStartedGoingToSleep()V

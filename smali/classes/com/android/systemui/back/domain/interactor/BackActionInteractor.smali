@@ -1,13 +1,13 @@
 .class public final Lcom/android/systemui/back/domain/interactor/BackActionInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
 
 
 # instance fields
-.field public final callback:Landroid/window/OnBackInvokedCallback;
+.field public final callback:Lcom/android/systemui/back/domain/interactor/BackActionInteractor$callback$2;
 
 .field public isCallbackRegistered:Z
 
@@ -54,44 +54,17 @@
     iput-object p6, p0, Lcom/android/systemui/back/domain/interactor/BackActionInteractor;->windowRootViewVisibilityInteractor:Lcom/android/systemui/scene/domain/interactor/WindowRootViewVisibilityInteractor;
 
     .line 15
-    sget-boolean p1, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 17
-    if-nez p1, :cond_0
-
-    .line 19
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 21
-    :cond_0
-    sget-boolean p1, Lcom/android/systemui/FeatureFlagsImpl;->predictiveBackAnimateShade:Z
-
-    .line 24
-    if-eqz p1, :cond_1
-
-    .line 26
-    new-instance p1, Lcom/android/systemui/back/domain/interactor/BackActionInteractor$callback$1;
-
-    .line 28
-    invoke-direct {p1, p0}, Lcom/android/systemui/back/domain/interactor/BackActionInteractor$callback$1;-><init>(Lcom/android/systemui/back/domain/interactor/BackActionInteractor;)V
-
-    .line 30
-    goto :goto_0
-
-    .line 33
-    :cond_1
     new-instance p1, Lcom/android/systemui/back/domain/interactor/BackActionInteractor$callback$2;
 
-    .line 34
+    .line 17
     invoke-direct {p1, p0}, Lcom/android/systemui/back/domain/interactor/BackActionInteractor$callback$2;-><init>(Lcom/android/systemui/back/domain/interactor/BackActionInteractor;)V
 
-    .line 36
-    :goto_0
-    iput-object p1, p0, Lcom/android/systemui/back/domain/interactor/BackActionInteractor;->callback:Landroid/window/OnBackInvokedCallback;
+    .line 19
+    iput-object p1, p0, Lcom/android/systemui/back/domain/interactor/BackActionInteractor;->callback:Lcom/android/systemui/back/domain/interactor/BackActionInteractor$callback$2;
 
-    .line 39
+    .line 22
     return-void
-    .line 41
+    .line 24
 .end method
 
 

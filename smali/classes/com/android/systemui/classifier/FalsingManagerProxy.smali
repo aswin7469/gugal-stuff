@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/classifier/FalsingManagerProxy;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/FalsingManager;
@@ -24,7 +24,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/plugins/PluginManager;Ljava/util/concurrent/Executor;Lcom/android/systemui/util/DeviceConfigProxy;Lcom/android/systemui/dump/DumpManager;Ldagger/internal/Provider;)V
+.method public constructor <init>(Lcom/android/systemui/plugins/PluginManager;Ljava/util/concurrent/Executor;Lcom/android/systemui/util/DeviceConfigProxy;Lcom/android/systemui/dump/DumpManager;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;)V
     .locals 1
 
     .line 1
@@ -58,38 +58,38 @@
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 23
-    const-string p3, "systemui"
+    const-string/jumbo p3, "systemui"
 
     .line 26
     invoke-static {p3, p2, v0}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
-    .line 28
+    .line 29
     new-instance p2, Lcom/android/systemui/classifier/FalsingManagerProxy$1;
 
-    .line 31
+    .line 32
     invoke-direct {p2, p0}, Lcom/android/systemui/classifier/FalsingManagerProxy$1;-><init>(Lcom/android/systemui/classifier/FalsingManagerProxy;)V
 
-    .line 33
+    .line 34
     iput-object p2, p0, Lcom/android/systemui/classifier/FalsingManagerProxy;->mPluginListener:Lcom/android/systemui/classifier/FalsingManagerProxy$1;
 
-    .line 36
+    .line 37
     const-class p3, Lcom/android/systemui/plugins/FalsingPlugin;
 
-    .line 38
+    .line 39
     invoke-interface {p1, p2, p3}, Lcom/android/systemui/plugins/PluginManager;->addPluginListener(Lcom/android/systemui/plugins/PluginListener;Ljava/lang/Class;)V
 
-    .line 40
+    .line 41
     invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 43
+    .line 44
     const-string p1, "FalsingManager"
 
-    .line 46
+    .line 47
     invoke-static {p4, p1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
 
-    .line 48
+    .line 49
     return-void
-    .line 51
+    .line 52
 .end method
 
 

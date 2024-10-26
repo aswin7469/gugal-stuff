@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/volume/panel/component/spatial/ui/viewmodel/SpatialAudioViewModel$spatialAudioButton$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -126,7 +126,7 @@
     iget-object p0, p0, Lcom/android/systemui/volume/panel/component/spatial/ui/viewmodel/SpatialAudioViewModel;->context:Landroid/content/Context;
 
     .line 31
-    const v0, 0x7f140a14    # @string/volume_panel_spatial_audio_title 'Spatial Audio'
+    const v0, 0x7f130aa1    # @string/volume_panel_spatial_audio_title 'Spatial Audio'
 
     .line 33
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

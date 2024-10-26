@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaCarouselInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/media/controls/domain/pipeline/MediaDataManager;
@@ -729,7 +729,6 @@
 
     .line 22
     return p0
-    .line 24
 .end method
 
 .method public final hasAnyMediaOrRecommendation()Z
@@ -1756,9 +1755,6 @@
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 4
-    invoke-static {}, Lcom/android/systemui/media/controls/util/MediaFlags;->isSceneContainerEnabled()V
-
-    .line 7
     return-void
-    .line 10
+    .line 7
 .end method

@@ -1,6 +1,6 @@
 .class public abstract Lkotlin/collections/CollectionsKt;
 .super Lkotlin/collections/CollectionsKt__MutableCollectionsKt;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -369,7 +369,7 @@
     const-string v0, " is less than zero."
 
     .line 170
-    invoke-static {p0, v0, p1}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p0, v0, p1}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 172
     move-result-object p0
@@ -1959,7 +1959,7 @@
     const-string v0, " is less than zero."
 
     .line 72
-    invoke-static {p0, v0, p1}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p0, v0, p1}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 74
     move-result-object p0
@@ -2116,7 +2116,7 @@
     const-string v0, " is less than zero."
 
     .line 77
-    invoke-static {p1, v0, p0}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p1, v0, p0}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 79
     move-result-object p0
@@ -2136,6 +2136,70 @@
     .line 89
     throw p1
     .line 92
+.end method
+
+.method public static toByteArray(Ljava/util/Collection;)[B
+    .locals 4
+
+    .line 1
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
+
+    .line 2
+    move-result v0
+
+    .line 5
+    new-array v0, v0, [B
+
+    .line 6
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    .line 8
+    move-result-object p0
+
+    .line 11
+    const/4 v1, 0x0
+
+    .line 12
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 13
+    move-result v2
+
+    .line 16
+    if-eqz v2, :cond_0
+
+    .line 17
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 19
+    move-result-object v2
+
+    .line 22
+    check-cast v2, Ljava/lang/Number;
+
+    .line 23
+    invoke-virtual {v2}, Ljava/lang/Number;->byteValue()B
+
+    .line 25
+    move-result v2
+
+    .line 28
+    add-int/lit8 v3, v1, 0x1
+
+    .line 29
+    aput-byte v2, v0, v1
+
+    .line 31
+    move v1, v3
+
+    .line 33
+    goto :goto_0
+
+    .line 34
+    :cond_0
+    return-object v0
+    .line 35
 .end method
 
 .method public static final toCollection(Ljava/lang/Iterable;Ljava/util/Collection;)V

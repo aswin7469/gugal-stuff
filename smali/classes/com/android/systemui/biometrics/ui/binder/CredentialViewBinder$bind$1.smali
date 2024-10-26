@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/biometrics/ui/binder/CredentialViewBinder$bind$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -398,7 +398,7 @@
     move-result-object v1
 
     .line 65
-    const v8, 0x7f0700bf    # @dimen/biometric_dialog_border_padding '4.0dp'
+    const v8, 0x7f0700c5    # @dimen/biometric_dialog_border_padding '4.0dp'
 
     .line 66
     invoke-virtual {v1, v8}, Landroid/content/res/Resources;->getDimension(I)F
@@ -433,7 +433,7 @@
     move-result-object v8
 
     .line 85
-    const v9, 0x7f0700c2    # @dimen/biometric_dialog_corner_size '@android:dimen/secondary_rounded_corner_radius_top_adjustment'
+    const v9, 0x7f0700c8    # @dimen/biometric_dialog_corner_size '8.0dp'
 
     .line 86
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimension(I)F

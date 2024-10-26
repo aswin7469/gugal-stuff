@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/row/NotificationGuts$GutsContent;
@@ -51,7 +51,7 @@
 
 .field public final mOnMuteClick:Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda0;
 
-.field public mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+.field public mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
 .field public mOnUserInteractionCallback:Lcom/android/systemui/statusbar/notification/collection/inflation/OnUserInteractionCallbackImpl;
 
@@ -185,7 +185,7 @@
     iget-object v0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     .line 17
-    const v2, 0x7f0808e8    # @drawable/ic_person 'res/drawable/ic_person.xml'
+    const v2, 0x7f08090d    # @drawable/ic_person 'res/drawable/ic_person.xml'
 
     .line 19
     invoke-virtual {v0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -231,7 +231,7 @@
 
     .line 50
     :cond_0
-    const v2, 0x7f0b0223    # @id/conversation_icon
+    const v2, 0x7f0a022e    # @id/conversation_icon
 
     .line 53
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -246,7 +246,7 @@
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 62
-    const v0, 0x7f0b0226    # @id/conversation_icon_badge_icon
+    const v0, 0x7f0a0231    # @id/conversation_icon_badge_icon
 
     .line 65
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -323,7 +323,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 112
-    const v0, 0x7f0b0227    # @id/conversation_icon_badge_ring
+    const v0, 0x7f0a0232    # @id/conversation_icon_badge_ring
 
     .line 115
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -350,7 +350,7 @@
     .line 130
 .end method
 
-.method public final bindNotification(Landroid/content/pm/PackageManager;Landroid/os/UserManager;Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;Landroid/app/INotificationManager;Lcom/android/systemui/statusbar/notification/collection/inflation/OnUserInteractionCallbackImpl;Ljava/lang/String;Landroid/app/NotificationChannel;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Landroid/app/Notification$BubbleMetadata;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;Lcom/android/settingslib/notification/ConversationIconFactory;ZLandroid/os/Handler;Landroid/os/Handler;Ljava/util/Optional;Lcom/android/systemui/shade/ShadeController;)V
+.method public final bindNotification(Landroid/content/pm/PackageManager;Landroid/os/UserManager;Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;Landroid/app/INotificationManager;Lcom/android/systemui/statusbar/notification/collection/inflation/OnUserInteractionCallbackImpl;Ljava/lang/String;Landroid/app/NotificationChannel;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Landroid/app/Notification$BubbleMetadata;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;Lcom/android/settingslib/notification/ConversationIconFactory;ZLandroid/os/Handler;Landroid/os/Handler;Ljava/util/Optional;Lcom/android/systemui/shade/ShadeController;)V
     .locals 8
 
     .line 1
@@ -411,7 +411,7 @@
     move-object/from16 v0, p10
 
     .line 31
-    iput-object v0, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    iput-object v0, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 33
     move-object v0, p7
@@ -563,7 +563,7 @@
 
     .line 126
     :goto_0
-    const v0, 0x7f0b05c2    # @id/parent_channel_name
+    const v0, 0x7f0a05e7    # @id/parent_channel_name
 
     .line 128
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -650,7 +650,7 @@
 
     .line 180
     :goto_1
-    const v3, 0x7f0b0336    # @id/group_name
+    const v3, 0x7f0a0355    # @id/group_name
 
     .line 181
     invoke-virtual {p0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -738,7 +738,7 @@
     .line 235
     :catch_2
     :cond_2
-    const v0, 0x7f0b05e1    # @id/pkg_name
+    const v0, 0x7f0a0609    # @id/pkg_name
 
     .line 237
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -768,7 +768,7 @@
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->bindIcon(Z)V
 
     .line 257
-    const v0, 0x7f0b05fa    # @id/priority_summary
+    const v0, 0x7f0a0623    # @id/priority_summary
 
     .line 260
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -822,7 +822,7 @@
     iget-object v0, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mPriorityDescriptionView:Landroid/widget/TextView;
 
     .line 295
-    const v3, 0x7f1406e9    # @string/notification_channel_summary_priority_all 'Shows at the top of conversation notifications and as a profile picture on lock screen, appears as a ...'
+    const v3, 0x7f130744    # @string/notification_channel_summary_priority_all 'Shows at the top of conversation notifications and as a profile picture on lock screen, appears as a ...'
 
     .line 297
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(I)V
@@ -862,7 +862,7 @@
     iget-object v0, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mPriorityDescriptionView:Landroid/widget/TextView;
 
     .line 322
-    const v3, 0x7f1406eb    # @string/notification_channel_summary_priority_bubble 'Shows at the top of conversation notifications and as a profile picture on lock screen, appears as a ...'
+    const v3, 0x7f130746    # @string/notification_channel_summary_priority_bubble 'Shows at the top of conversation notifications and as a profile picture on lock screen, appears as a ...'
 
     .line 324
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(I)V
@@ -884,7 +884,7 @@
     iget-object v0, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mPriorityDescriptionView:Landroid/widget/TextView;
 
     .line 337
-    const v3, 0x7f1406ec    # @string/notification_channel_summary_priority_dnd 'Shows at the top of conversation notifications and as a profile picture on lock screen, interrupts D ...'
+    const v3, 0x7f130747    # @string/notification_channel_summary_priority_dnd 'Shows at the top of conversation notifications and as a profile picture on lock screen, interrupts D ...'
 
     .line 339
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(I)V
@@ -897,14 +897,14 @@
     iget-object v0, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mPriorityDescriptionView:Landroid/widget/TextView;
 
     .line 346
-    const v3, 0x7f1406ea    # @string/notification_channel_summary_priority_baseline 'Shows at the top of conversation notifications and as a profile picture on lock screen'
+    const v3, 0x7f130745    # @string/notification_channel_summary_priority_baseline 'Shows at the top of conversation notifications and as a profile picture on lock screen'
 
     .line 348
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 351
     :goto_3
-    const v0, 0x7f0b024d    # @id/delegate_name
+    const v0, 0x7f0a0259    # @id/delegate_name
 
     .line 354
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -942,7 +942,7 @@
 
     .line 377
     :goto_4
-    const v0, 0x7f0b024c    # @id/default_summary
+    const v0, 0x7f0a0258    # @id/default_summary
 
     .line 380
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -999,7 +999,7 @@
     move-result-object v6
 
     .line 417
-    const v7, 0x7f1406e7    # @string/notification_channel_summary_default_with_bubbles 'May ring or vibrate based on device settings. Conversations from %1$s bubble by default.'
+    const v7, 0x7f130742    # @string/notification_channel_summary_default_with_bubbles 'May ring or vibrate based on device settings. Conversations from %1$s bubble by default.'
 
     .line 418
     invoke-virtual {v3, v7, v6}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1021,7 +1021,7 @@
     move-result-object v3
 
     .line 432
-    const v6, 0x7f1406e6    # @string/notification_channel_summary_default 'May ring or vibrate based on device settings'
+    const v6, 0x7f130741    # @string/notification_channel_summary_default 'May ring or vibrate based on device settings'
 
     .line 433
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1034,7 +1034,7 @@
 
     .line 440
     :goto_5
-    const v0, 0x7f0b05f7    # @id/priority
+    const v0, 0x7f0a0620    # @id/priority
 
     .line 443
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1049,7 +1049,7 @@
     invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 452
-    const v0, 0x7f0b0248    # @id/default_behavior
+    const v0, 0x7f0a0254    # @id/default_behavior
 
     .line 455
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1064,7 +1064,7 @@
     invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 464
-    const v0, 0x7f0b071b    # @id/silence
+    const v0, 0x7f0a0747    # @id/silence
 
     .line 467
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1079,7 +1079,7 @@
     invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 476
-    const v0, 0x7f0b039d    # @id/info
+    const v0, 0x7f0a03bd    # @id/info
 
     .line 479
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1094,7 +1094,7 @@
     if-ltz v3, :cond_8
 
     .line 488
-    iget-object v6, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    iget-object v6, v1, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 490
     if-eqz v6, :cond_8
@@ -1151,7 +1151,7 @@
     invoke-virtual {p0, v0, v4}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->updateToggleActions(IZ)V
 
     .line 525
-    const v0, 0x7f0b0293    # @id/done
+    const v0, 0x7f0a02a2    # @id/done
 
     .line 528
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1274,6 +1274,7 @@
 
     .line 32
     return p0
+    .line 33
 .end method
 
 .method public final handleCloseControls(ZZ)Z
@@ -1334,13 +1335,13 @@
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mMainHandler:Landroid/os/Handler;
 
     .line 34
-    new-instance v0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;
+    new-instance v0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda7;
 
     .line 36
     const/4 v1, 0x0
 
     .line 38
-    invoke-direct {v0, v1, p0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda7;-><init>(ILjava/lang/Object;)V
 
     .line 39
     const-wide/16 v1, 0x168
@@ -1392,7 +1393,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b024c    # @id/default_summary
+    const v0, 0x7f0a0258    # @id/default_summary
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1407,7 +1408,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mDefaultDescriptionView:Landroid/widget/TextView;
 
     .line 14
-    const v0, 0x7f0b071e    # @id/silence_summary
+    const v0, 0x7f0a074a    # @id/silence_summary
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1486,7 +1487,7 @@
     move-result-object p0
 
     .line 34
-    const v1, 0x7f1406da    # @string/notification_channel_controls_opened_accessibility 'Notification controls for %1$s opened'
+    const v1, 0x7f130735    # @string/notification_channel_controls_opened_accessibility 'Notification controls for %1$s opened'
 
     .line 35
     invoke-virtual {v0, v1, p0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1520,7 +1521,7 @@
     move-result-object p0
 
     .line 57
-    const v1, 0x7f1406d9    # @string/notification_channel_controls_closed_accessibility 'Notification controls for %1$s closed'
+    const v1, 0x7f130734    # @string/notification_channel_controls_closed_accessibility 'Notification controls for %1$s closed'
 
     .line 58
     invoke-virtual {v0, v1, p0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1729,7 +1730,7 @@
 
     .line 67
     :cond_0
-    const p2, 0x7f0b05f7    # @id/priority
+    const p2, 0x7f0a0620    # @id/priority
 
     .line 70
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1738,7 +1739,7 @@
     move-result-object p2
 
     .line 76
-    const v3, 0x7f0b0248    # @id/default_behavior
+    const v3, 0x7f0a0254    # @id/default_behavior
 
     .line 77
     invoke-virtual {p0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1747,7 +1748,7 @@
     move-result-object v3
 
     .line 83
-    const v4, 0x7f0b071b    # @id/silence
+    const v4, 0x7f0a0747    # @id/silence
 
     .line 84
     invoke-virtual {p0, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1789,10 +1790,10 @@
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 112
-    new-instance v5, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda5;
+    new-instance v5, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;
 
     .line 115
-    invoke-direct {v5, p2, v3, v4, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda5;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;I)V
+    invoke-direct {v5, p2, v3, v4, v0}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;I)V
 
     .line 117
     invoke-virtual {p0, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->post(Ljava/lang/Runnable;)Z
@@ -1851,10 +1852,10 @@
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 158
-    new-instance v5, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda5;
+    new-instance v5, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;
 
     .line 161
-    invoke-direct {v5, p2, v3, v4, v2}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda5;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;I)V
+    invoke-direct {v5, p2, v3, v4, v2}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;I)V
 
     .line 163
     invoke-virtual {p0, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->post(Ljava/lang/Runnable;)Z
@@ -1882,10 +1883,10 @@
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 182
-    new-instance v5, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda5;
+    new-instance v5, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;
 
     .line 185
-    invoke-direct {v5, p2, v3, v4, v1}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda5;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;I)V
+    invoke-direct {v5, p2, v3, v4, v1}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;I)V
 
     .line 187
     invoke-virtual {p0, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->post(Ljava/lang/Runnable;)Z
@@ -1912,7 +1913,7 @@
 
     .line 201
     :goto_1
-    const v3, 0x7f0b0293    # @id/done
+    const v3, 0x7f0a02a2    # @id/done
 
     .line 202
     invoke-virtual {p0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1927,14 +1928,14 @@
     if-eqz p2, :cond_5
 
     .line 211
-    const p2, 0x7f140425    # @string/inline_ok_button 'Apply'
+    const p2, 0x7f13046f    # @string/inline_ok_button 'Apply'
 
     .line 213
     goto :goto_2
 
     .line 216
     :cond_5
-    const p2, 0x7f140424    # @string/inline_done_button 'Done'
+    const p2, 0x7f13046e    # @string/inline_done_button 'Done'
 
     .line 217
     :goto_2

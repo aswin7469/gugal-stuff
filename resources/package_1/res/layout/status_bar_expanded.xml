@@ -31,7 +31,7 @@
                  systemui:layout_constraintEnd_toEndOf="parent"
                  systemui:layout_constraintStart_toStartOf="parent"
                  systemui:layout_constraintTop_toTopOf="parent"
-                 systemui:r0x7f040738="com.android.systemui.plugins.qs.QS" />
+                 systemui:r0x7f04073e="com.android.systemui.plugins.qs.QS" />
     <ViewStub android:id="@id/qs_header_stub"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content" />

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/BcSmartspaceDataPlugin;
@@ -11,17 +11,17 @@
 
 
 # instance fields
-.field public final mAttachListeners:Ljava/util/HashSet;
+.field public final mAttachListeners:Ljava/util/Set;
 
 .field public mEventNotifier:Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;
 
-.field public final mSmartspaceTargetListeners:Ljava/util/HashSet;
+.field public final mSmartspaceTargetListeners:Ljava/util/Set;
 
-.field public final mSmartspaceTargets:Ljava/util/ArrayList;
+.field public final mSmartspaceTargets:Ljava/util/List;
 
 .field public final mStateChangeListener:Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$1;
 
-.field public final mViews:Ljava/util/HashSet;
+.field public final mViews:Ljava/util/Set;
 
 
 # direct methods
@@ -61,7 +61,7 @@
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     .line 7
-    iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargetListeners:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargetListeners:Ljava/util/Set;
 
     .line 10
     new-instance v0, Ljava/util/ArrayList;
@@ -70,7 +70,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 14
-    iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargets:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargets:Ljava/util/List;
 
     .line 17
     new-instance v0, Ljava/util/HashSet;
@@ -79,7 +79,7 @@
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     .line 21
-    iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mViews:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mViews:Ljava/util/Set;
 
     .line 24
     new-instance v0, Ljava/util/HashSet;
@@ -88,7 +88,7 @@
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     .line 28
-    iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mAttachListeners:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mAttachListeners:Ljava/util/Set;
 
     .line 31
     const/4 v0, 0x0
@@ -113,35 +113,55 @@
 
 # virtual methods
 .method public final addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-    .locals 2
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mAttachListeners:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mAttachListeners:Ljava/util/Set;
 
     .line 2
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 4
-    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mViews:Ljava/util/HashSet;
+    iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mViews:Ljava/util/Set;
 
     .line 7
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p0, Ljava/util/HashSet;
 
     .line 9
-    new-instance p1, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$$ExternalSyntheticLambda0;
+    invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    .line 12
-    const/4 v1, 0x1
+    .line 11
+    move-result-object p0
 
     .line 14
-    invoke-direct {p1, p0, v1}, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$$ExternalSyntheticLambda0;-><init>(Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;I)V
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     .line 15
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->forEach(Ljava/util/function/Consumer;)V
+    move-result v0
 
     .line 18
-    return-void
+    if-eqz v0, :cond_0
+
+    .line 19
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
     .line 21
+    move-result-object v0
+
+    .line 24
+    check-cast v0, Landroid/view/View;
+
+    .line 25
+    invoke-interface {p1, v0}, Landroid/view/View$OnAttachStateChangeListener;->onViewAttachedToWindow(Landroid/view/View;)V
+
+    .line 27
+    goto :goto_0
+
+    .line 30
+    :cond_0
+    return-void
+    .line 31
 .end method
 
 .method public final getView(Landroid/view/ViewGroup;)Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceView;
@@ -160,7 +180,7 @@
     move-result-object v0
 
     .line 9
-    const v1, 0x7f0e026d    # @layout/smartspace_enhanced 'res/layout/smartspace_enhanced.xml'
+    const v1, 0x7f0d027d    # @layout/smartspace_enhanced 'res/layout/smartspace_enhanced.xml'
 
     .line 10
     const/4 v2, 0x0
@@ -288,103 +308,109 @@
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 61
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Ljava/util/List;->toString()Ljava/lang/String;
 
     .line 64
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
 
     .line 67
-    move-result-object v0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 70
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 68
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 71
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargets:Ljava/util/ArrayList;
+    move-result-object v0
 
     .line 74
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
+    .line 75
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargets:Ljava/util/List;
+
+    .line 78
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 80
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    .line 79
+    .line 83
     move-result-object p1
 
-    .line 82
-    :cond_1
+    .line 86
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 83
+    .line 87
     move-result v0
 
-    .line 86
+    .line 90
     if-eqz v0, :cond_2
 
-    .line 87
+    .line 91
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 89
+    .line 93
     move-result-object v0
 
-    .line 92
+    .line 96
     check-cast v0, Landroid/app/smartspace/SmartspaceTarget;
 
-    .line 93
+    .line 97
     invoke-virtual {v0}, Landroid/app/smartspace/SmartspaceTarget;->getFeatureType()I
 
-    .line 95
+    .line 99
     move-result v1
 
-    .line 98
+    .line 102
     const/16 v2, 0xf
 
-    .line 99
-    if-eq v1, v2, :cond_1
-
-    .line 101
-    iget-object v1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargets:Ljava/util/ArrayList;
-
     .line 103
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-ne v1, v2, :cond_1
 
     .line 105
     goto :goto_0
 
+    .line 107
+    :cond_1
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargets:Ljava/util/List;
+
     .line 108
-    :cond_2
-    iget-object p1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargetListeners:Ljava/util/HashSet;
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 109
-    new-instance v0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$$ExternalSyntheticLambda0;
-
-    .line 111
-    const/4 v1, 0x0
+    .line 110
+    goto :goto_0
 
     .line 113
-    invoke-direct {v0, p0, v1}, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$$ExternalSyntheticLambda0;-><init>(Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;I)V
+    :cond_2
+    iget-object p1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargetListeners:Ljava/util/Set;
 
     .line 114
-    invoke-virtual {p1, v0}, Ljava/util/HashSet;->forEach(Ljava/util/function/Consumer;)V
+    new-instance v0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$$ExternalSyntheticLambda0;
 
-    .line 117
+    .line 116
+    invoke-direct {v0, p0}, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider$$ExternalSyntheticLambda0;-><init>(Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;)V
+
+    .line 118
+    invoke-interface {p1, v0}, Ljava/util/Set;->forEach(Ljava/util/function/Consumer;)V
+
+    .line 121
     return-void
-    .line 120
+    .line 124
 .end method
 
 .method public final registerListener(Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceTargetListener;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargetListeners:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargetListeners:Ljava/util/Set;
 
     .line 2
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 4
-    iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargets:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargets:Ljava/util/List;
 
     .line 7
     invoke-interface {p1, p0}, Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceTargetListener;->onSmartspaceTargetsUpdated(Ljava/util/List;)V
@@ -409,10 +435,10 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargetListeners:Ljava/util/HashSet;
+    iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceDataProvider;->mSmartspaceTargetListeners:Ljava/util/Set;
 
     .line 2
-    invoke-virtual {p0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 4
     return-void

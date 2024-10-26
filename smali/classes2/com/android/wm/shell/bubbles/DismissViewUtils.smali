@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/wm/shell/bubbles/DismissViewUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -26,7 +26,7 @@
     move-result-object v1
 
     .line 14
-    const v2, 0x7f0702df    # @dimen/floating_dismiss_gradient_height '548.0dp'
+    const v2, 0x7f07030f    # @dimen/floating_dismiss_gradient_height '548.0dp'
 
     .line 15
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -131,7 +131,7 @@
     iget-object v0, p0, Lcom/android/wm/shell/common/bubbles/DismissView;->circle:Lcom/android/wm/shell/common/bubbles/DismissCircleView;
 
     .line 89
-    const v1, 0x7f0b0286    # @id/dismiss_view
+    const v1, 0x7f0a0293    # @id/dismiss_view
 
     .line 91
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setId(I)V
@@ -140,13 +140,13 @@
     iget-object v0, p0, Lcom/android/wm/shell/common/bubbles/DismissView;->circle:Lcom/android/wm/shell/common/bubbles/DismissCircleView;
 
     .line 97
-    const v1, 0x7f080697    # @drawable/dismiss_circle_background 'res/drawable/dismiss_circle_background.xml'
+    const v1, 0x7f08069f    # @drawable/dismiss_circle_background 'res/drawable/dismiss_circle_background.xml'
 
     .line 99
     iput v1, v0, Lcom/android/wm/shell/common/bubbles/DismissCircleView;->mBackgroundResId:I
 
     .line 102
-    const v3, 0x7f07027e    # @dimen/dismiss_target_x_size '24.0dp'
+    const v3, 0x7f0702a0    # @dimen/dismiss_target_x_size '24.0dp'
 
     .line 104
     iput v3, v0, Lcom/android/wm/shell/common/bubbles/DismissCircleView;->mIconSizeResId:I
@@ -176,7 +176,7 @@
     move-result-object v3
 
     .line 125
-    const v4, 0x7f080a90    # @drawable/pip_ic_close_white 'res/drawable/pip_ic_close_white.xml'
+    const v4, 0x7f080acb    # @drawable/pip_ic_close_white 'res/drawable/pip_ic_close_white.xml'
 
     .line 126
     invoke-virtual {v3, v4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -224,7 +224,7 @@
     move-result-object v0
 
     .line 161
-    const v1, 0x7f07027c    # @dimen/dismiss_circle_size '96.0dp'
+    const v1, 0x7f07029e    # @dimen/dismiss_circle_size '96.0dp'
 
     .line 162
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

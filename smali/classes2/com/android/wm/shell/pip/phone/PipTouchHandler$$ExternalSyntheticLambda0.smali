@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/pip/phone/PipTouchHandler$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -60,7 +60,7 @@
     move-result-object v2
 
     .line 16
-    const v3, 0x7f05002c    # @bool/config_pipEnableResizeForMenu 'true'
+    const v3, 0x7f050034    # @bool/config_pipEnableResizeForMenu 'true'
 
     .line 17
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -81,7 +81,7 @@
     move-result-object v2
 
     .line 31
-    const v3, 0x7f07087c    # @dimen/pip_bottom_offset_buffer '1.0dp'
+    const v3, 0x7f0708cc    # @dimen/pip_bottom_offset_buffer '1.0dp'
 
     .line 32
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -93,7 +93,7 @@
     iput v3, p0, Lcom/android/wm/shell/pip/phone/PipTouchHandler;->mBottomOffsetBufferPx:I
 
     .line 39
-    const v3, 0x7f070884    # @dimen/pip_ime_offset '48.0dp'
+    const v3, 0x7f0708d4    # @dimen/pip_ime_offset '48.0dp'
 
     .line 41
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -183,7 +183,7 @@
     move-result-object v4
 
     .line 102
-    const v5, 0x7f05002b    # @bool/config_pipEnablePinchResize 'true'
+    const v5, 0x7f050033    # @bool/config_pipEnablePinchResize 'true'
 
     .line 103
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z

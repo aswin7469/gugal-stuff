@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/tuner/ShortcutPicker$AppPreference;
 .super Lcom/android/systemui/tuner/SelectablePreference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -34,7 +34,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f140995    # @string/tuner_launch_app 'Launch %1$s'
+    const v1, 0x7f130a1b    # @string/tuner_launch_app 'Launch %1$s'
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -51,7 +51,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f140991    # @string/tuner_app '%1$s app'
+    const v0, 0x7f130a17    # @string/tuner_app '%1$s app'
 
     invoke-virtual {p1, v0, p2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -80,7 +80,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
-    const p2, 0x7f140991    # @string/tuner_app '%1$s app'
+    const p2, 0x7f130a17    # @string/tuner_app '%1$s app'
 
     .line 8
     filled-new-array {p3}, [Ljava/lang/Object;

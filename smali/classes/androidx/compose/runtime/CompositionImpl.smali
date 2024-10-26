@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/runtime/CompositionImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/runtime/ControlledComposition;
@@ -51,7 +51,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/compose/runtime/CompositionContext;Landroidx/compose/runtime/AbstractApplier;)V
+.method public constructor <init>(Landroidx/compose/runtime/CompositionContext;Landroidx/compose/ui/node/UiApplier;)V
     .locals 9
 
     .line 1
@@ -243,7 +243,7 @@
     move-object v8, p0
 
     .line 136
-    invoke-direct/range {v1 .. v8}, Landroidx/compose/runtime/ComposerImpl;-><init>(Landroidx/compose/runtime/AbstractApplier;Landroidx/compose/runtime/CompositionContext;Landroidx/compose/runtime/SlotTable;Landroidx/collection/MutableScatterSet$MutableSetWrapper;Landroidx/compose/runtime/changelist/ChangeList;Landroidx/compose/runtime/changelist/ChangeList;Landroidx/compose/runtime/ControlledComposition;)V
+    invoke-direct/range {v1 .. v8}, Landroidx/compose/runtime/ComposerImpl;-><init>(Landroidx/compose/ui/node/UiApplier;Landroidx/compose/runtime/CompositionContext;Landroidx/compose/runtime/SlotTable;Landroidx/collection/MutableScatterSet$MutableSetWrapper;Landroidx/compose/runtime/changelist/ChangeList;Landroidx/compose/runtime/changelist/ChangeList;Landroidx/compose/runtime/ControlledComposition;)V
 
     .line 137
     invoke-virtual {p1, v0}, Landroidx/compose/runtime/CompositionContext;->registerComposer$runtime_release(Landroidx/compose/runtime/ComposerImpl;)V
@@ -6628,17 +6628,6 @@
     :cond_4
     return-void
     .line 112
-.end method
-
-.method public final isDisposed()Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Landroidx/compose/runtime/CompositionImpl;->disposed:Z
-
-    .line 2
-    return p0
-    .line 4
 .end method
 
 .method public final observer()V

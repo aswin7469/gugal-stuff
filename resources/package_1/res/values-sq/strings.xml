@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">vendos miniaplikacionin e zgjedhur</string>
   <string name="accessibility_action_label_remove_widget">hiq miniaplikacionin</string>
   <string name="accessibility_action_label_select_widget">zgjidh miniaplikacionin</string>
-  <string name="accessibility_action_open_communal_hub">Miniaplikacionet në ekranin e kyçjes</string>
   <string name="accessibility_action_pip_resize">Ndrysho përmasat</string>
   <string name="accessibility_action_pip_stash">Fshih</string>
   <string name="accessibility_action_pip_unstash">Mos e fshih</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Dil nga modaliteti i përdorimit me një dorë</string>
   <string name="accessibility_airplane_mode">modaliteti i aeroplanit</string>
   <string name="accessibility_allow_diagonal_scrolling">Lejo lëvizjen diagonale</string>
+  <string name="accessibility_assistant_poodle">Kërkim me zë</string>
   <string name="accessibility_authenticate_hint">për ta vërtetuar</string>
   <string name="accessibility_back">Prapa</string>
   <string name="accessibility_banner_message_dismiss">Hiq</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">për të hyrë në pajisje</string>
   <string name="accessibility_ethernet_connected">Eternet.</string>
   <string name="accessibility_ethernet_disconnected">Lidhja e eternetit u shkëput.</string>
-  <string name="accessibility_fingerprint_bouncer">Kërkohet vërtetimi. Prek sensorin e gjurmës së gishtit për t'u vërtetuar.</string>
   <string name="accessibility_fingerprint_label">Sensori i gjurmës së gishtit</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">aktivizo/çaktivizo</string>
   <string name="accessibility_floating_button_action_edit">Modifiko</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menyja</string>
   <string name="accessibility_multi_user_list_switcher">menyja me tërheqje poshtë</string>
   <string name="accessibility_multi_user_switch_switcher">Ndërro përdorues</string>
+  <string name="accessibility_next_alarm">Alarmi tjetër në %s</string>
   <string name="accessibility_no_calling">Telefonatat nuk ofrohen</string>
   <string name="accessibility_no_phone">Nuk ka telefon.</string>
   <string name="accessibility_no_wifi">Wi-Fi është i shkëputur.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Ekrani është i kyçur në orientimin vertikal.</string>
   <string name="accessibility_send_smart_reply">Dërgo</string>
   <string name="accessibility_sensors_off_active">Çaktivizimi i sensorëve aktiv</string>
+  <string name="accessibility_settings_gear">Cilësimet e Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Prek sensorin e gjurmës së gishtit. Është butoni më i shkurtër në pjesën anësore të telefonit</string>
+  <string name="accessibility_smartspace_page">Faqja %1$d nga %2$d</string>
   <string name="accessibility_split_bottom">Ndaj në fund</string>
   <string name="accessibility_split_left">Ndaj majtas</string>
   <string name="accessibility_split_right">Ndaj djathtas</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi: tre vija.</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi ka dy vija.</string>
   <string name="accesssibility_keyguard_retry">Rrëshqit shpejt lart dhe provo sërish "Shkyçjen me fytyrë"</string>
+  <string name="adaptive_charging_notify_des">Bateria do të karikohet plotësisht deri në %1$s. Po karikohet në mënyrë të qëndrueshme për të rritur jetëgjatësinë e baterisë.</string>
+  <string name="adaptive_charging_notify_title">"Karikimi me përshtatje" është aktiv</string>
+  <string name="adaptive_charging_notify_turn_off_once">Çaktivizo një herë</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Karikim me përshtatje • Plot deri në %2$s</string>
   <string name="add">Shto</string>
   <string name="add_guest_failed">Profili i vizitorit të ri nuk u krijua</string>
   <string name="airplane_mode">Modaliteti i aeroplanit</string>
   <string name="alarm_template">në %1$s</string>
-  <string name="alarm_template_far">në %1$s</string>
+  <string name="alarm_template_far">ditën %1$s</string>
   <string name="all_network_unavailable">Nuk ofrohet asnjë rrjet</string>
   <string name="always_use_accessory">Hap gjithmonë %1$s kur lidhet %2$s</string>
   <string name="always_use_device">Hap gjithmonë %1$s kur lidhet %2$s</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Informacioni i aplikacionit</string>
   <string name="app_label">Ndërfaqja e përdoruesit të sistemit</string>
   <string name="assistant_attention_content_description">Është zbuluar prania e përdoruesit</string>
+  <string name="assistant_scrim_label">Po dëgjon, trokit për të anuluar</string>
   <string name="audio_sharing_description">Po ndahet audio</string>
   <string name="audio_status">Po dëgjon</string>
   <string name="auto_data_switch_dialog_negative_button">Jo, faleminderit</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Pas</string>
   <string name="battery">Bateria</string>
   <string name="battery_detail_switch_title">Kursyesi i baterisë</string>
-  <string name="battery_low_description">Ke %s bateri të mbetur. "Kursyesi i baterisë" aktivizon "Temën e errët", kufizon aktivitetet në sfond dhe vonon njoftimet.</string>
+  <string name="battery_health_notify_learn_more">Mëso më shumë</string>
   <string name="battery_low_intro">"Kursyesi i baterisë" aktivizon "Temën e errët", kufizon aktivitetet në sfond dhe vonon njoftimet.</string>
-  <string name="battery_low_title">Të aktivizohet "Kursyesi i baterisë"?</string>
   <string name="battery_saver_confirmation_ok">Aktivizo</string>
   <string name="battery_saver_confirmation_title">Të aktivizohet "Kursyesi i baterisë"?</string>
   <string name="battery_saver_confirmation_title_generic">Rreth "Kursyesit të baterisë"</string>
-  <string name="battery_saver_dismiss_action">Jo, faleminderit</string>
   <string name="battery_saver_start_action">Aktivizo</string>
   <string name="battery_state_unknown_notification_text">Trokit për më shumë informacione</string>
   <string name="battery_state_unknown_notification_title">Problem me leximin e matësit të baterisë</string>
@@ -296,14 +301,9 @@ Provo përsëri brenda %d sekondash.</string>
   <string name="bluetooth_active_battery_level_untethered">Aktiv. Majtas: %1$s bateri, djathtas: %2$s bateri.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Aktive. Majtas: %1$s bateri.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Aktive. Djathtas: %1$s bateri.</string>
-  <string name="bluetooth_active_media_only_battery_level">Aktiv (vetëm për media). %1$s bateri.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Aktiv (vetëm për media). Majtas: %1$s bateri, djathtas: %2$s bateri.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Aktiv (vetëm për media)</string>
   <string name="bluetooth_active_no_battery_level">Aktiv</string>
   <string name="bluetooth_battery_level">Bateria %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Lidhur (mbështet ndarjen e audios). %1$s bateri.</string>
   <string name="bluetooth_battery_level_untethered">Majtas: %1$s bateri, djathtas: %2$s bateri.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Lidhur (mbështet ndarjen e audios). Majtas: %1$s bateri, djathtas: %2$s bateri.</string>
   <string name="bluetooth_connected">E lidhur%1$s</string>
   <string name="bluetooth_connecting">Po lidhet...</string>
   <string name="bluetooth_disconnected">Shkëputur</string>
@@ -311,13 +311,11 @@ Provo përsëri brenda %d sekondash.</string>
   <string name="bluetooth_hearing_aid_left_active">Aktive (vetëm majtas)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Aktive (majtas dhe djathtas)</string>
   <string name="bluetooth_hearing_aid_right_active">Aktive (vetëm djathtas)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Lidhur (mbështet ndarjen e audios)</string>
   <string name="bluetooth_pairing">Po çiftohet...</string>
   <string name="bluetooth_pairing_device_down_error_message">Nuk mund të komunikohet me %1$s.</string>
   <string name="bluetooth_pairing_error_message">Nuk mundi të çiftohej me %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Nuk mundi të çiftohej me %1$s për shkak të një kodi PIN ose çelësi kalimi të pasaktë.</string>
   <string name="bluetooth_pairing_rejected_error_message">Çiftimi u refuzua nga %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">Mbështet ndarjen e audios</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth-i</string>
   <string name="bluetooth_talkback_computer">Kompjuteri</string>
   <string name="bluetooth_talkback_headphone">Kufje</string>
@@ -356,8 +354,6 @@ Provo përsëri brenda %d sekondash.</string>
   <string name="bubble_overflow_button_content_description">Tejkalo</string>
   <string name="bubble_overflow_empty_subtitle">Flluskat e fundit dhe flluskat e hequra do të shfaqen këtu</string>
   <string name="bubble_overflow_empty_title">Nuk ka flluska të fundit</string>
-  <string name="bubble_shortcut_label">Flluskat</string>
-  <string name="bubble_shortcut_long_label">Shfaq "Flluskat"</string>
   <string name="bubbles_app_settings">Cilësimet e %1$s</string>
   <string name="bubbles_dont_bubble_conversation">Mos e vendos bisedën në flluskë</string>
   <string name="bubbles_settings_button_description">Cilësimet për flluskat e %1$s</string>
@@ -387,6 +383,10 @@ Trokit për ta ripërshtatur</string>
   <string name="cast_to_other_device_stop_dialog_button">Ndalo transmetimin</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Do të ndalosh transmetimin e &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">Të dhënat celulare janë joaktive</string>
+  <string name="charge_limit_discovery_notification_enable_button">Aktivizo tani</string>
+  <string name="charge_limit_discovery_notification_text">Provo të aktivizosh veçorinë e kufirit të karikimit në 80% për të mbrojtur gjendjen e baterisë dhe jetëgjatësinë e saj. Mund ta menaxhosh këtë te cilësimet në çdo kohë</string>
+  <string name="charge_limit_discovery_notification_title">Mbro baterinë tënde gjatë karikimit</string>
+  <string name="charging_reverse_text">Ndarja e baterisë</string>
   <string name="clear_all_notifications_text">Pastroji të gjitha</string>
   <string name="clipboard">Kujtesa e fragmenteve</string>
   <string name="clipboard_content_copied">Përmbajtja u kopjua</string>
@@ -406,6 +406,11 @@ Trokit për ta ripërshtatur</string>
   <string name="close_button_text">Mbyll</string>
   <string name="close_dialog_button">Mbyll</string>
   <string name="collapse_menu_text">Mbyll menynë</string>
+  <string name="columbus_bouncer_message">Shkyçe për të përfunduar "Trokitjen e shpejtë"</string>
+  <string name="columbus_target_request_dialog_allow">Lejo</string>
+  <string name="columbus_target_request_dialog_deny">Mos lejo</string>
+  <string name="columbus_target_request_dialog_summary">Trokit dy herë në pjesën e pasme të telefonit për të hapur %1$s. Këtë mund ta ndryshosh në çdo kohë te "Cilësimet".</string>
+  <string name="columbus_target_request_dialog_title">Të lejohet që "Trokitja e shpejtë" të hapë %1$s?</string>
   <string name="communal_tutorial_indicator_text">Rrëshqit shpejt majtas për të filluar udhëzuesin e përbashkët</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Ekrani i brendshëm do të pasqyrohet. Ekrani i parmë do të çaktivizohet.</string>
   <string name="connected_display_dialog_start_mirroring">Të pasqyrohet në ekranin e jashtëm?</string>
@@ -511,8 +516,11 @@ Nëse vazhdon, mund të zbatohen tarifa për përdorimin e të dhënave.</string
   <string name="data_usage_disabled_dialog_mobile_title">Të dhënat celulare janë ndërprerë</string>
   <string name="data_usage_disabled_dialog_title">Të dhënat janë ndërprerë</string>
   <string name="days_timestamp">%1$s ditë më parë</string>
-  <string name="default_error_message">Hyrje e pavlefshme</string>
   <string name="default_popup_window_title">Dritare kërcyese</string>
+  <string name="defender_notify_resume_charge">Anulo</string>
+  <string name="defender_notify_title">Mbrojtja e baterisë sate</string>
+  <string name="defender_post_notify_des">Për të ndihmuar në zgjatjen e jetëgjatësisë së baterisë sate, karikimi u optimizua nga %1$s në %2$s</string>
+  <string name="defender_post_notify_title">Karikimi u optimizua</string>
   <string name="demo_mode">Modaliteti i demonstrimit i ndërfaqes së përdoruesit të sistemit</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Maksimizo ekranin</string>
   <string name="desktop_mode_maximize_menu_snap_text">Regjistro ekranin</string>
@@ -532,20 +540,32 @@ Nëse vazhdon, mund të zbatohen tarifa për përdorimin e të dhënave.</string
   <string name="do_disclosure_generic">Kjo pajisje i përket organizatës sate</string>
   <string name="do_disclosure_with_name">Kjo pajisje i përket %s</string>
   <string name="do_financed_disclosure_with_name">Kjo pajisje ofrohet nga %s</string>
+  <string name="dock_a11y_action_show_photo_text">Shfaq kornizën e fotografisë</string>
+  <string name="dock_alignment_not_charging">Drejtvendose përsëri telefonin për karikim wireless</string>
+  <string name="dock_alignment_slow_charging">Drejtvendose përsëri telefonin për karikim më të shpejtë</string>
+  <string name="dock_defender_first_run_des">Për të ndihmuar në zgjatjen e jetëgjatësisë së baterisë, karikimi është vendosur në pritje në 90% ndërsa tableti është i lidhur me stacionin. Shko te "Cilësimet" në çdo kohë për ta anuluar.</string>
+  <string name="dock_defender_first_run_settings">Cilësimet</string>
+  <string name="dock_defender_first_run_title">Karikimi është vendosur në pritje për të mbrojtur baterinë</string>
   <string name="dock_multi_instances_not_supported_text">Ky aplikacion mund të hapet vetëm në 1 dritare</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Aplikacioni nuk mbështet ekranin e ndarë</string>
+  <string name="dock_photo_preview_text">Korniza e fotografisë po hapet...</string>
+  <string name="dock_promo_text">Rrëshqit shpejt majtas për kornizën e fotografisë</string>
   <string name="done">U krye</string>
   <string name="drag_split_not_supported">Ky njoftim nuk mbështet zvarritjen tek ekrani i ndarë</string>
   <string name="drag_to_add_tiles">Mbaje të shtypur dhe zvarrit për të shtuar pllakëza</string>
   <string name="drag_to_rearrange_tiles">Mbaje të shtypur dhe zvarrit për të risistemuar pllakëzat</string>
   <string name="drag_to_remove_disabled">Të duhen të paktën %1$d pllakëza</string>
   <string name="drag_to_remove_tiles">Zvarrit këtu për ta hequr</string>
+  <string name="dream_lockscreen_wallpaper_description">Përdor sfondin aktual të ekranit të kyçjes</string>
+  <string name="dream_lockscreen_wallpaper_label">Imazhi i sfondit</string>
   <string name="dream_overlay_status_bar_alarm_set">Alarmi është caktuar</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Kamera dhe mikrofoni janë joaktivë</string>
   <string name="dream_overlay_status_bar_camera_off">Kamera është joaktive</string>
   <string name="dream_overlay_status_bar_mic_off">Mikrofoni është joaktiv</string>
   <string name="dream_overlay_status_bar_priority_mode">Modaliteti "Me përparësi"</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi nuk ofrohet</string>
+  <string name="dwell_defender_notify_des">Kjo ndihmon për të zgjatur jetëgjatësinë e baterisë kur telefoni lihet për t'u karikuar për një kohë të gjatë</string>
+  <string name="dwell_defender_notify_title">Karikimi është vendosur në pritje për të mbrojtur baterinë</string>
   <string name="edit_user_info_message">Emri dhe fotografia që zgjedh ti do të jenë të dukshme për çdo person që përdor këtë pajisje.</string>
   <string name="edit_widget">Modifiko miniaplikacionin</string>
   <string name="empty_shade_text">Asnjë njoftim</string>
@@ -561,12 +581,16 @@ Nëse vazhdon, mund të zbatohen tarifa për përdorimin e të dhënave.</string
   <string name="ethernet_label">Eternet</string>
   <string name="expand_button_title">Të përparuara</string>
   <string name="expand_menu_text">Hap menynë</string>
+  <string name="extreme_battery_saver_text">Në kushte ekstreme</string>
+  <string name="extreme_low_battery_notification_text">Telefoni do të fiket nëse nuk karikohet së shpejti</string>
+  <string name="extreme_low_battery_notification_title">Nivel shumë i ulët baterie</string>
   <string name="face_re_enroll_dialog_content">Për të konfiguruar përsëri "Shkyçjen me fytyrë", modeli yt aktual i fytyrës do të fshihet.
 
 Do të duhet ta konfigurosh përsëri këtë veçori që të përdorësh fytyrën tënde për të shkyçur telefonin.</string>
   <string name="face_re_enroll_dialog_title">Konfiguro "Shkyçjen me fytyrë"</string>
   <string name="face_re_enroll_notification_name">Shkyçja me fytyrë</string>
   <string name="face_re_enroll_notification_title">Konfiguro "Shkyçjen me fytyrë" përsëri</string>
+  <string name="face_reenroll_dialog_confirm">Konfiguro</string>
   <string name="face_reenroll_failure_dialog_content">Shkyçja me fytyrë nuk mund të konfigurohej. Shko te "Cilësimet" për të provuar përsëri.</string>
   <string name="failed_attempts_now_wiping_device">Shumë tentativa të pasakta. Të dhënat e kësaj pajisjeje do të fshihen.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Hiq</string>
@@ -604,6 +628,7 @@ Pasi të fshihen, do të duhet të konfigurosh përsëri "Shkyçjen me gjurmën 
   <string name="font_scaling_smaller">Zvogëlo</string>
   <string name="fullscreen_text">Ekrani i plotë</string>
   <string name="game_status">Po luhet</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">"Shkyçja e zgjatur" u çaktivizua</string>
   <string name="go_to_web">Shko te shfletuesi</string>
   <string name="got_it">E kuptova</string>
@@ -640,6 +665,7 @@ Pasi të fshihen, do të duhet të konfigurosh përsëri "Shkyçjen me gjurmën 
   <string name="guest_reset_and_restart_dialog_title">Të rivendoset sesioni për vizitorë?</string>
   <string name="guest_reset_guest_confirm_button">Rivendos</string>
   <string name="guest_resetting">Vizitori po rivendoset…</string>
+  <string name="handle_invocation_prompt">Rrëshqit për të folur</string>
   <string name="handle_text">Emërtimi</string>
   <string name="headset">Kufjet me mikrofon</string>
   <string name="hearing_devices_preset_label">Paravendosja</string>
@@ -656,6 +682,7 @@ Trokit për më shumë informacione</string>
   <string name="high_temp_title">Telefoni po nxehet</string>
   <string name="home_controls_dream_description">Qasu te kontrollet e shtëpisë si mbrojtës ekrani</string>
   <string name="home_controls_dream_label">Kontrollet e shtëpisë</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Ofrohet të paktën një pajisje ose panel pajisjeje</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Për të shtuar aplikacionin Home si një shkurtore, sigurohu që aplikacioni të jetë i instaluar</string>
   <string name="hub_mode_add_widget_button_text">Shto miniaplikacionin</string>
@@ -669,12 +696,16 @@ Trokit për më shumë informacione</string>
   <string name="in_progress">Në vazhdim</string>
   <string name="inattentive_sleep_warning_message">Pajisja së shpejti do të fiket. Shtype për ta mbajtur të ndezur.</string>
   <string name="inattentive_sleep_warning_title">Në gatishmëri</string>
+  <string name="incompatible_charging_learn_more">Mëso më shumë</string>
+  <string name="incompatible_charging_notify_des">Telefoni yt mund të jetë duke u karikuar ngadalë ose nuk po karikohet. Për karikim më të shpejtë, përdor një kabllo dhe përshtatës të rekomanduar.</string>
+  <string name="incompatible_charging_notify_title">Kontrollo aksesorin e karikimit</string>
   <string name="indeterminate">Pjesërisht e shënuar</string>
   <string name="inline_done_button">U krye</string>
   <string name="inline_ok_button">Zbato</string>
   <string name="inline_turn_off_notifications">Çaktivizo njoftimet</string>
   <string name="input_switch_input_language_next">Kalo te gjuha tjetër</string>
   <string name="input_switch_input_language_previous">Kalo te gjuha e mëparshme</string>
+  <string name="install_app">Instalo aplikacionin</string>
   <string name="install_dialer_on_work_profile_action">Instalo një aplikacion të telefonit të punës</string>
   <string name="install_type_instant">Aplikacioni i çastit</string>
   <string name="instant_apps">Aplikacionet e çastit</string>
@@ -683,8 +714,6 @@ Trokit për më shumë informacione</string>
   <string name="instant_apps_title">Po ekzekutohet %1$s</string>
   <string name="interruption_level_none">Heshtje e plotë</string>
   <string name="interruption_level_priority">Vetëm me prioritet</string>
-  <string name="invalid_charger_text">Përdor karikuesin që ke marrë me pajisjen</string>
-  <string name="invalid_charger_title">Nuk mund të ngarkohet përmes USB-së</string>
   <string name="issuerecord_background_processing_label">Regjistrimi i problemeve me përpunimin</string>
   <string name="issuerecord_ongoing_screen_only">Problemi po regjistrohet</string>
   <string name="issuerecord_save_title">Regjistrimi i problemit u ruajt</string>
@@ -766,21 +795,33 @@ Trokit për më shumë informacione</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Pajisja është kyçur
 Vërtetimi dështoi</string>
   <string name="keyguard_indication_charging_time">%2$s • Po karikohet • Plot për %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Karikimi përfundon në %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Po karikohet • Plot për %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Karikohet plotësisht deri në %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Po karikohet shpejt • Plot për %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Karikim i shpejtë • Plot deri në %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Karikimi përfundoi</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Po karikohet ngadalë • Plot për %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Karikohet plotësisht deri në %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Karikohet plotësisht deri në %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Po karikohet në mënyrë wireless • Plot për %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Mbajtur shkyçur nga TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Karikohet plotësisht deri në %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Mbahet shkyçur nga "Shkyçja e zgjatur"</string>
   <string name="keyguard_missing_sim_message_short">Nuk ka kartë SIM</string>
   <string name="keyguard_network_locked_message">Rrjeti është i kyçur</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Kartë SIM e papërdorshme.</string>
   <string name="keyguard_plugged_in">%s • Po karikohet</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Po karikohet me shpejtësi</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Karikim i shpejtë</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Karikimi është vendosur në pritje për të mbrojtur baterinë</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Po karikohet ngadalë</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Po karikohet</string>
   <string name="keyguard_plugged_in_dock">%s • Po karikohet</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Po karikohet</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Kontrollo aksesorin e karikimit</string>
+  <string name="keyguard_plugged_in_v2">%s • Po karikohet</string>
   <string name="keyguard_plugged_in_wireless">%s • Po karikohet në mënyrë wireless</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Po karikohet</string>
   <string name="keyguard_retry">Rrëshqit lart për të provuar përsëri</string>
   <string name="keyguard_sim_error_message_short">Karta e pavlefshme.</string>
   <string name="keyguard_sim_locked_message">Karta SIM është e kyçur.</string>
@@ -811,7 +852,6 @@ Vërtetimi dështoi</string>
   <string name="kg_invalid_confirm_pin_hint">Kodet PIN nuk përputhen</string>
   <string name="kg_invalid_sim_pin_hint">Shkruaj një PIN me 4 deri në 8 numra.</string>
   <string name="kg_invalid_sim_puk_hint">Kodi PUK duhet të jetë me 8 numra ose më shumë.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Fut kodin PIN të kartës SIM. Të ka mbetur edhe # përpjekje përpara se të të duhet të kontaktosh me operatorin celular për ta shkyçur pajisjen.}other{Fut kodin PIN të kartës SIM. Të kanë mbetur edhe # përpjekje.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{Karta SIM është çaktivizuar tani. Fut kodin PUK për të vazhduar. Të ka mbetur edhe # përpjekje përpara se karta SIM të bëhet përgjithmonë e papërdorshme. Kontakto me operatorin celular për detajet.}other{Karta SIM tani është çaktivizuar. Fut kodin PUK për të vazhduar. Të kanë mbetur edhe # përpjekje përpara se karta SIM të bëhet përgjithmonë e papërdorshme. Kontakto me operatorin celular për detajet.}}</string>
   <string name="kg_password_pin_failed">Operacioni i kodit PIN të kartës SIM dështoi!</string>
   <string name="kg_password_puk_failed">Operacioni i kodit PUK të kartës SIM dështoi!</string>
@@ -852,7 +892,7 @@ Vërtetimi dështoi</string>
   <string name="kg_sim_pin_instructions_multi">Fut kodin PIN të kartës SIM për "%1$s".</string>
   <string name="kg_sim_unlock_progress_dialog_message">Karta SIM po shkyçet…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Provo sërish pas # sekonde.}other{Provo sërish pas # sekondash.}}</string>
-  <string name="kg_trust_agent_disabled">Agjenti i besimit nuk ofrohet</string>
+  <string name="kg_trust_agent_disabled">"Shkyçja e zgjatur" nuk ofrohet</string>
   <string name="kg_unlock_with_password_or_fp">Shkyçe me fjalëkalimin ose gjurmën e gishtit</string>
   <string name="kg_unlock_with_pattern_or_fp">Shkyçe me motivin ose gjurmën e gishtit</string>
   <string name="kg_unlock_with_pin_or_fp">Shkyçe me kodin PIN ose me gjurmën e gishtit</string>
@@ -900,6 +940,10 @@ Nëse nuk e lejon këtë aplikacion që të ketë qasje te të gjitha evidencat 
   <string name="log_access_confirmation_learn_more">Mëso më shumë</string>
   <string name="log_access_confirmation_learn_more_at">Mëso më shumë në %s</string>
   <string name="log_access_confirmation_title">Të lejohet që %s të ketë qasje te të gjitha evidencat e pajisjes?</string>
+  <string name="low_battery_label">Bateria në nivel të ulët</string>
+  <string name="low_battery_notification_text">Aktivizo "Kursyesin standard të baterisë" për të rritur kohëzgjatjen e baterisë</string>
+  <string name="low_battery_notification_text_ebs">Aktivizo "Kursyesin ekstrem të baterisë" për të rritur kohëzgjatjen e baterisë</string>
+  <string name="low_battery_notification_title">Bateria e mbetur: %s</string>
   <string name="m3c_search_bar_search">Kërkimi</string>
   <string name="m3c_suggestions_available">Sugjerimet më poshtë</string>
   <string name="magnification_close_settings_click_label">Mbyll cilësimet e zmadhimit</string>
@@ -939,8 +983,6 @@ Nëse nuk e lejon këtë aplikacion që të ketë qasje te të gjitha evidencat 
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Ndalo</string>
   <string name="media_output_end_session_dialog_summary">Ndalo sesionin e ndarë për ta zhvendosur median në një pajisje tjetër</string>
-  <string name="media_output_first_broadcast_title">Si funksionon transmetimi</string>
-  <string name="media_output_first_notify_broadcast_message">Personat në afërsi me ty me pajisje të përputhshme me Bluetooth mund të dëgjojnë median që ti po transmeton</string>
   <string name="media_output_group_title_speakers_and_displays">Altoparlantët dhe ekranet</string>
   <string name="media_output_group_title_suggested_device">Pajisjet e sugjeruara</string>
   <string name="media_output_label_title">Po luhet %s te</string>
@@ -967,9 +1009,6 @@ Nëse nuk e lejon këtë aplikacion që të ketë qasje te të gjitha evidencat 
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Kur ti transmeton një aplikacion, Android ka qasje te çdo gjë e dukshme ose që po luhet në atë aplikacion. Prandaj, ki kujdes me gjërat si fjalëkalimet, detajet e pagesës, mesazhet, fotografitë, si dhe audion dhe videon.</string>
   <string name="media_projection_sys_service_dialog_title">Të niset regjistrimi ose transmetimi?</string>
   <string name="media_projection_sys_service_dialog_warning">Shërbimi që e ofron këtë funksion do të ketë qasje te të gjitha informacionet që janë të dukshme në ekran ose që luhen nga pajisja jote gjatë regjistrimit ose transmetimit. Kjo përfshin informacione, si p.sh.: fjalëkalimet, detajet e pagesave, fotografitë, mesazhet, si dhe audion që luan ti.</string>
-  <string name="media_projection_task_switcher_action_back">Kthehu përsëri</string>
-  <string name="media_projection_task_switcher_action_switch">Ndaj më mirë këtë aplikacion</string>
-  <string name="media_projection_task_switcher_text">Ndarja vendoset në pauzë kur ndërron aplikacionet</string>
   <string name="media_seamless_other_device">Pajisje tjetër</string>
   <string name="media_transfer_default_device_name">Pajisja e lidhur</string>
   <string name="media_transfer_dock_speaker_device_name">Altoparlanti i stacionit</string>
@@ -1138,7 +1177,7 @@ Nëse ke pyetje, kontakto me %2$s.</string>
   <string name="pip_skip_to_prev">Kalo tek e mëparshmja</string>
   <string name="popup_on_dismiss_cta_tile_text">Shtyp gjatë për të personalizuar miniaplikacionet</string>
   <string name="power_discharge_by_only_short">Deri në: %1$s</string>
-  <string name="preference_summary_default_combination">%1$s/%2$s</string>
+  <string name="preference_summary_default_combination">%1$s / %2$s</string>
   <string name="priority_conversations">Bisedat me përparësi</string>
   <string name="priority_mode_dream_overlay_content_description">Mos shqetëso</string>
   <string name="privacy_dialog_active_app_usage">Në përdorim nga %1$s</string>
@@ -1280,12 +1319,17 @@ Nëse ke pyetje, kontakto me %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Për rezolucion më të lartë, përmbys telefonin</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Të ndërrohen ekranet?</string>
   <string name="recent_conversations">Bisedat e fundit</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">dërgoi një imazh</string>
   <string name="remove_from_settings">Hiqe nga Cilësimet</string>
   <string name="remove_from_settings_prompt">Të hiqet Sintonizuesi i Sistemit të Ndërfaqes së Përdoruesit nga Cilësimet dhe të ndërpritet përdorimi i të gjitha funksioneve të tij?</string>
   <string name="require_unlock_for_nfc">Shkyçe për të përdorur NFC-në</string>
   <string name="restart_button_description">Trokit për ta rinisur këtë aplikacion për një pamje më të mirë</string>
   <string name="retry_face">Riprovo vërtetimin me fytyrë</string>
+  <string name="reverse_charging_device_name_text">Pixel tjetër</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s që ofron karikim (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">"Ndarja e baterisë" është aktive</string>
+  <string name="reverse_charging_title">Ndarja e baterisë</string>
   <string name="right_icon">Ikona djathtas</string>
   <string name="right_keycode">Kodi i tasteve djathtas</string>
   <string name="right_nav_bar_button_type">Lloji i butonit shtesë djathtas</string>
@@ -1293,8 +1337,15 @@ Nëse ke pyetje, kontakto me %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">Trokit për detaje mbi baterinë dhe përdorimin e të dhënave</string>
   <string name="running_foreground_services_title">Aplikacionet që ekzekutohen në sfond</string>
-  <string name="satellite_connected_carrier_text">SOS satelitor</string>
+  <string name="satellite_connected_carrier_text">"SOS satelitor" në Pixel</string>
   <string name="save">Ruaj</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Anulo</string>
+  <string name="saver_confirmation_dialog_subtitle">Zgjidh modalitetin që do të përdoret</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Përfshin të gjitha ndryshimet e listuara më sipër. Vendos në pauzë edhe aplikacionet jothelbësore dhe njoftimet e tyre.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Kufizon efektet vizuale dhe aktivitetin në sfond. Aktivizon "Temën e errët", nëse nuk është aktivizuar tashmë.</string>
+  <string name="saver_confirmation_dialog_title">Mirë se vjen te "Kursyesi i baterisë"</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Kursyesi ekstrem i baterisë</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Kursyesi standard i baterisë</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Regjistrimi i ekranit është çaktivizuar nga politika e pajisjes.</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">U bllokua nga administratori yt i teknologjisë së informacionit</string>
   <string name="screen_pinning_can_open_other_apps">Aplikacioni i gozhduar mund të hapë aplikacione të tjera.</string>
@@ -1312,6 +1363,12 @@ Nëse ke pyetje, kontakto me %2$s.</string>
   <string name="screen_pinning_toast">Për të zhgozhduar këtë aplikacion, prek dhe mbaj shtypur butonat "Prapa" dhe "Përmbledhja"</string>
   <string name="screen_pinning_toast_gesture_nav">Për të zhgozhduar këtë aplikacion, rrëshqit shpejt lart dhe mbaje të shtypur</string>
   <string name="screen_pinning_toast_recents_invisible">Për të zhgozhduar këtë aplikacion, prek dhe mbaj shtypur butonat "Prapa" dhe "Ekrani bazë"</string>
+  <string name="screen_protector_absent_message">Çaktivizimi i këtij modaliteti përmirëson prekjen kur nuk përdoret një mbrojtës ekrani.</string>
+  <string name="screen_protector_disable_notification">Çaktivizo njoftimin</string>
+  <string name="screen_protector_go_to_settings">Shko te cilësimet</string>
+  <string name="screen_protector_got_it">E kuptova</string>
+  <string name="screen_protector_mode_title">Modaliteti i mbrojtësit të ekranit</string>
+  <string name="screen_protector_present_message">Aktivizimi i mbrojtësit të ekranit përmirëson prekjen kur përdoret një mbrojtës ekrani.</string>
   <string name="screen_share_permission_app_selector_title">Ndaj ose regjistro një aplikacion</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Të gjithë ekranin</string>
   <string name="screen_share_permission_dialog_option_single_app">Vetëm një aplikacion</string>
@@ -1364,9 +1421,9 @@ Nëse ke pyetje, kontakto me %2$s.</string>
   <string name="screenshot_saving_work_profile_title">Pamja e ekranit po ruhet te profili i punës…</string>
   <string name="screenshot_scroll_label">Regjistro më shumë</string>
   <string name="screenshot_share_description">Ndaj pamjen e ekranit</string>
-  <string name="screenshot_share_label">Ndaj</string>
   <string name="screenshot_text">Pamja e ekranit</string>
   <string name="screenshot_top_boundary_pct">Kufiri i sipërm %1$d për qind</string>
+  <string name="screenshot_view_description">Shiko pamjen e ekranit</string>
   <string name="screenshot_work_profile_notification">Ruajtur në %1$s në profilin e punës</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Sensori i gjurmës së gishtit është në butonin e energjisë. Ai është butoni i rrafshët pranë butonit të ngritur të volumit në anë të telefonit.</string>
   <string name="see_all_bluetooth_devices">Shiko të gjitha</string>
@@ -1384,6 +1441,12 @@ Nëse ke pyetje, kontakto me %2$s.</string>
   <string name="set_default_notes_app_toast_content">Cakto aplikacionin e parazgjedhur të shënimeve te "Cilësimet"</string>
   <string name="settings_label">Cilësimet</string>
   <string name="settingslib_learn_more_text">Mëso më shumë</string>
+  <string name="severe_battery_notification_switch_text">Të kalohet te "Kursyesi ekstrem i baterisë"? 
+
+Kjo do të vendosë në pauzë të gjitha aplikacionet jothelbësore dhe njoftimet e tyre</string>
+  <string name="severe_battery_notification_text">Aktivizo "Kursyesin ekstrem të baterisë". Kjo do të vendosë në pauzë të gjitha aplikacionet jothelbësore</string>
+  <string name="severe_battery_notification_title">Bateria e mbetur: %s</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Ndërro</string>
   <string name="share_to_app_stop_dialog_button">Ndalo ndarjen</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Do të ndalosh ndarjen e &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Të ndalohet ndarja e ekranit?</string>
@@ -1406,6 +1469,9 @@ Nëse ke pyetje, kontakto me %2$s.</string>
   <string name="slice_permission_text_1">- Mund të lexojë informacion nga %1$s</string>
   <string name="slice_permission_text_2">- Mund të ndërmarrë veprime brenda %1$s</string>
   <string name="slice_permission_title">Të lejohet %1$s që të shfaqë pjesë të %2$s?</string>
+  <string name="smartspace_content_desc">Shkurtimisht</string>
+  <string name="smartspace_flight_qr_code">Kodi QR</string>
+  <string name="smartspace_role_desc">Shiko</string>
   <string name="snoozeHourOptions">{count,plural, =1{# orë}=2{# orë}other{# orë}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minutë}other{# minuta}}</string>
   <string name="snooze_undo">Zhbëj</string>
@@ -1416,6 +1482,8 @@ Nëse ke pyetje, kontakto me %2$s.</string>
   <string name="speed_label_slow">E ngadaltë</string>
   <string name="speed_label_very_fast">Shumë e shpejtë</string>
   <string name="split_screen_text">Ekrani i ndarë</string>
+  <string name="squeeze_invocation_prompt">Shtrydhe për të folur</string>
+  <string name="standard_battery_saver_text">Standard</string>
   <string name="start_dreams">Mbrojtësi i ekranit</string>
   <string name="state_empty">Bosh</string>
   <string name="state_off">Joaktiv</string>
@@ -1453,6 +1521,8 @@ Nëse ke pyetje, kontakto me %2$s.</string>
   <string name="tab">Tab</string>
   <string name="tap_a_network_to_connect">Trokit te një rrjet për t'u lidhur</string>
   <string name="tap_again">Trokit sërish</string>
+  <string name="temp_defender_notify_des">Karikimi do të vazhdojë kur telefoni të kthehet në temperaturën normale</string>
+  <string name="temp_defender_notify_title">Karikimi është vendosur në pritje për të mbrojtur baterinë</string>
   <string name="template_percent">%1$d për qind.</string>
   <string name="thermal">Termike</string>
   <string name="thermal_shutdown_dialog_help_text">Shiko hapat për kujdesin</string>
@@ -1469,6 +1539,7 @@ Trokit për më shumë informacione</string>
   <string name="title_for_empty_state_cta">Merr qasjen e shpejtë në miniaplikacionet e tua të preferuara pa e shkyçur tabletin.</string>
   <string name="title_usb_accessory">Qasja në USB</string>
   <string name="to_switch_networks_disconnect_ethernet">Për të ndërruar rrjetet, shkëput Ethernet-in</string>
+  <string name="too_hot_label">Pixel është tepër i nxehtë</string>
   <string name="touch_filtered_warning">Duke qenë se një aplikacion po bllokon një kërkesë për leje, "Cilësimet" nuk mund të verifikojnë përgjigjen tënde.</string>
   <string name="touchpad_tutorial_action_key_button">Tasti i veprimit</string>
   <string name="touchpad_tutorial_back_gesture_button">Gjesti i kthimit prapa</string>
@@ -1483,17 +1554,18 @@ Trokit për më shumë informacione</string>
   <string name="tuner_menu">Menyja</string>
   <string name="tuner_minus">Minus</string>
   <string name="tuner_other_apps">Aplikacionet e tjera</string>
+  <string name="tuner_persistent_warning">Këto karakteristika eksperimentale mund të ndryshojnë, prishen ose të zhduken në versionet e ardhshme. Vazhdo me kujdes.</string>
   <string name="tuner_plus">Plus</string>
   <string name="tuner_right">Djathtas</string>
   <string name="tuner_time">Ora</string>
+  <string name="tuner_warning">Sintonizuesi i Sistemit të Ndërfaqes së Përdoruesit të jep mënyra shtesë për të tërhequr dhe personalizuar ndërfaqen Android të përdoruesit. Këto funksione eksperimentale mund të ndryshojnë, prishen ose zhduken në versionet e ardhshme. Vazhdo me kujdes.</string>
+  <string name="tuner_warning_title">Argëtim për disa, por jo për të gjithë!</string>
   <string name="turn_off_airplane_mode">Çaktivizo modalitetin e aeroplanit</string>
   <string name="turn_on_bluetooth">Përdor Bluetooth-in</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Veçoritë e tilla si "Ndarja e shpejtë" dhe "Gjej pajisjen time" përdorin Bluetooth-in</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth-i do të aktivizohet nesër në mëngjes</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Aktivizo automatikisht nesër</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Parazgjedhja e televizorit</string>
   <string name="two_weeks_timestamp">2 javë më parë</string>
   <string name="unknown">I panjohur</string>
   <string name="unlock_to_see_notif_text">Shkyç për të parë njoftimet e vjetra</string>
@@ -1552,7 +1624,9 @@ Kur shton një përdorues të ri, ai person duhet të konfigurojë hapësirën e
   <string name="volume_odi_captions_hint_enable">aktivizo</string>
   <string name="volume_odi_captions_tip">Media me titra automatike</string>
   <string name="volume_panel_captioning_title">Titrat në çast</string>
+  <string name="volume_panel_clear_calling_title">Telefonatat e qarta</string>
   <string name="volume_panel_collapsed_sliders">Rrëshqitësit e volumit u palosën</string>
+  <string name="volume_panel_device_settings_title">Cilësimet e pajisjes</string>
   <string name="volume_panel_dialog_settings_button">Cilësimet</string>
   <string name="volume_panel_enter_media_output_settings">Hyr te cilësimet e daljes</string>
   <string name="volume_panel_expanded_sliders">Rrëshqitësit e volumit u zgjeruan</string>
@@ -1667,6 +1741,9 @@ Adresa Wi‑Fi (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">I panjohur</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Pa matje</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi nuk do të lidhet automatikisht për momentin</string>
+  <string name="wireless_charging_label">Po karikohet në mënyrë wireless</string>
+  <string name="wireless_charging_notification_text">Karikimi wireless mund të përdorë më shumë energji se karikimi me tel. Për të kursyer energji elektrike dhe kohë, provo të kalosh në karikues me tel.</string>
+  <string name="wireless_charging_notification_title">Po karikohet në mënyrë wireless</string>
   <string name="work_challenge_emergency_button_text">Urgjencë</string>
   <string name="work_mode_off_title">Hiq nga pauza apl. e punës?</string>
   <string name="work_mode_turn_on">Hiq nga pauza</string>

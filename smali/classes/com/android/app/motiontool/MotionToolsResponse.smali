@@ -1,6 +1,6 @@
 .class public final Lcom/android/app/motiontool/MotionToolsResponse;
 .super Lcom/google/protobuf/GeneratedMessageLite;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -304,71 +304,71 @@
 
     .line 57
     :pswitch_4
-    const-string v0, "type_"
+    const-string/jumbo v0, "type_"
 
     .line 58
-    const-string v1, "typeCase_"
+    const-string/jumbo v1, "typeCase_"
 
-    .line 60
+    .line 61
     const-string v2, "bitField0_"
 
-    .line 62
+    .line 64
     const-class v3, Lcom/android/app/motiontool/ErrorResponse;
 
-    .line 64
+    .line 66
     const-class v4, Lcom/android/app/motiontool/HandshakeResponse;
 
-    .line 66
+    .line 68
     const-class v5, Lcom/android/app/motiontool/BeginTraceResponse;
 
-    .line 68
+    .line 70
     const-class v6, Lcom/android/app/motiontool/EndTraceResponse;
 
-    .line 70
+    .line 72
     const-class v7, Lcom/android/app/motiontool/PollTraceResponse;
 
-    .line 72
+    .line 74
     filled-new-array/range {v0 .. v7}, [Ljava/lang/Object;
 
-    .line 74
+    .line 76
     move-result-object p0
 
-    .line 77
+    .line 79
     const-string p1, "\u0001\u0005\u0001\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u103c\u0000\u0002\u103c\u0000\u0003\u103c\u0000\u0004\u103c\u0000\u0005\u103c\u0000"
 
-    .line 78
+    .line 80
     sget-object v0, Lcom/android/app/motiontool/MotionToolsResponse;->DEFAULT_INSTANCE:Lcom/android/app/motiontool/MotionToolsResponse;
 
-    .line 80
+    .line 82
     new-instance v1, Lcom/google/protobuf/RawMessageInfo;
 
-    .line 82
+    .line 84
     invoke-direct {v1, v0, p1, p0}, Lcom/google/protobuf/RawMessageInfo;-><init>(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 84
+    .line 86
     return-object v1
 
-    .line 87
+    .line 89
     :pswitch_5
     const/4 p0, 0x0
 
-    .line 88
+    .line 90
     return-object p0
 
-    .line 89
+    .line 91
     :pswitch_6
     const/4 p0, 0x1
 
-    .line 90
+    .line 92
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    .line 91
+    .line 93
     move-result-object p0
 
-    .line 94
+    .line 96
     return-object p0
 
-    .line 95
+    .line 97
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_6
@@ -379,5 +379,5 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 96
+    .line 98
 .end method

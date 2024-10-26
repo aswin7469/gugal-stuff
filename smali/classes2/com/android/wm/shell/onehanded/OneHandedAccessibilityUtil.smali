@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/onehanded/OneHandedAccessibilityUtil;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -47,7 +47,7 @@
     move-result-object v0
 
     .line 20
-    const v1, 0x7f140043    # @string/accessibility_action_start_one_handed 'Start one-handed mode'
+    const v1, 0x7f130043    # @string/accessibility_action_start_one_handed 'Start one-handed mode'
 
     .line 21
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -65,7 +65,7 @@
     move-result-object p1
 
     .line 33
-    const v0, 0x7f140044    # @string/accessibility_action_stop_one_handed 'Exit one-handed mode'
+    const v0, 0x7f130044    # @string/accessibility_action_stop_one_handed 'Exit one-handed mode'
 
     .line 34
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

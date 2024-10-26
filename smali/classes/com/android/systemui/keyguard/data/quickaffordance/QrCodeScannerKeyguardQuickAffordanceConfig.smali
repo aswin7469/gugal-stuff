@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/quickaffordance/QrCodeScannerKeyguardQuickAffordanceConfig;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig;
@@ -87,13 +87,13 @@
     new-instance v1, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
     .line 22
-    const v2, 0x7f1400bf    # @string/accessibility_qr_code_scanner_button 'QR Code Scanner'
+    const v2, 0x7f1300c0    # @string/accessibility_qr_code_scanner_button 'QR Code Scanner'
 
     .line 24
     invoke-direct {v1, v2}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V
 
     .line 27
-    const v2, 0x7f0808f1    # @drawable/ic_qr_code_scanner 'res/drawable/ic_qr_code_scanner.xml'
+    const v2, 0x7f080916    # @drawable/ic_qr_code_scanner 'res/drawable/ic_qr_code_scanner.xml'
 
     .line 30
     invoke-direct {v0, v2, v1}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V
@@ -142,7 +142,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f0808f1    # @drawable/ic_qr_code_scanner 'res/drawable/ic_qr_code_scanner.xml'
+    const p0, 0x7f080916    # @drawable/ic_qr_code_scanner 'res/drawable/ic_qr_code_scanner.xml'
 
     .line 2
     return p0
@@ -222,7 +222,7 @@
     iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/QrCodeScannerKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f140791    # @string/qr_code_scanner_title 'QR code scanner'
+    const v0, 0x7f1307ed    # @string/qr_code_scanner_title 'QR code scanner'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

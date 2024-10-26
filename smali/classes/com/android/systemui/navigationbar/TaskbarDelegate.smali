@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/navigationbar/TaskbarDelegate;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/CommandQueue$Callbacks;
@@ -38,7 +38,7 @@
 
 .field public mLightBarTransitionsController:Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;
 
-.field public final mLightBarTransitionsControllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$11;
+.field public final mLightBarTransitionsControllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$8;
 
 .field public mNavBarHelper:Lcom/android/systemui/navigationbar/NavBarHelper;
 
@@ -74,7 +74,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$11;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$8;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;)V
     .locals 1
 
     .line 1
@@ -120,7 +120,7 @@
     iput-object v0, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mAutoHideUiElement:Lcom/android/systemui/navigationbar/TaskbarDelegate$3;
 
     .line 30
-    iput-object p2, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mLightBarTransitionsControllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$11;
+    iput-object p2, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mLightBarTransitionsControllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$8;
 
     .line 32
     iput-object p1, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mContext:Landroid/content/Context;
@@ -1244,7 +1244,7 @@
     if-eqz p1, :cond_1
 
     .line 10
-    const p1, 0x7f14084a    # @string/screen_pinning_start 'App pinned'
+    const p1, 0x7f1308b2    # @string/screen_pinning_start 'App pinned'
 
     .line 12
     invoke-virtual {p0, p1}, Lcom/android/systemui/navigationbar/ScreenPinningNotify;->makeAllUserToastAndShow(I)Landroid/widget/Toast;
@@ -1254,7 +1254,7 @@
 
     .line 18
     :cond_1
-    const p1, 0x7f140846    # @string/screen_pinning_exit 'App unpinned'
+    const p1, 0x7f1308ae    # @string/screen_pinning_exit 'App unpinned'
 
     .line 19
     invoke-virtual {p0, p1}, Lcom/android/systemui/navigationbar/ScreenPinningNotify;->makeAllUserToastAndShow(I)Landroid/widget/Toast;
@@ -1570,10 +1570,10 @@
     iget-object v1, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mSysUiState:Lcom/android/systemui/model/SysUiState;
 
     .line 31
-    invoke-virtual {v1, v2, v3, v4}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v4}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 33
-    invoke-virtual {v1, v9, v10, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v9, v10, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 36
     iget v0, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mNavigationIconHints:I
@@ -1599,7 +1599,7 @@
     const-wide/32 v2, 0x40000
 
     .line 47
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 50
     iget v0, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mNavigationIconHints:I
@@ -1625,7 +1625,7 @@
     const-wide/32 v2, 0x100000
 
     .line 62
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 65
     iget v0, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mDisabledFlags:I
@@ -1654,7 +1654,7 @@
     const-wide/16 v2, 0x80
 
     .line 78
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 80
     iget v0, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mDisabledFlags:I
@@ -1683,7 +1683,7 @@
     const-wide/16 v2, 0x100
 
     .line 93
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 95
     iget v0, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mDisabledFlags:I
@@ -1712,7 +1712,7 @@
     const-wide/32 v2, 0x400000
 
     .line 108
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 111
     iget v0, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mTaskBarWindowState:I
@@ -1738,7 +1738,7 @@
     const-wide/16 v2, 0x2
 
     .line 122
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 124
     iget v0, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mBehavior:I
@@ -1757,7 +1757,7 @@
     const-wide/32 v2, 0x20000
 
     .line 133
-    invoke-virtual {v1, v2, v3, v5}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v1, v2, v3, v5}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 136
     iget p0, p0, Lcom/android/systemui/navigationbar/TaskbarDelegate;->mDisplayId:I

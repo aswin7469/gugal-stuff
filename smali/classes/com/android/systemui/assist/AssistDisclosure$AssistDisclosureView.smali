@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/assist/AssistDisclosure$AssistDisclosureView;
 .super Landroid/view/View;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -187,7 +187,7 @@
     move-result-object p1
 
     .line 120
-    const p2, 0x7f070099    # @dimen/assist_disclosure_thickness '2.5dp'
+    const p2, 0x7f07009c    # @dimen/assist_disclosure_thickness '2.5dp'
 
     .line 121
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -205,7 +205,7 @@
     move-result-object p1
 
     .line 133
-    const p2, 0x7f070098    # @dimen/assist_disclosure_shadow_thickness '1.5dp'
+    const p2, 0x7f07009b    # @dimen/assist_disclosure_shadow_thickness '1.5dp'
 
     .line 134
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F

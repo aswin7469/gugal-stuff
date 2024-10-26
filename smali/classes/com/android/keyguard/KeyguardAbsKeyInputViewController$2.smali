@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardAbsKeyInputViewController$2;
 .super Landroid/os/CountDownTimer;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -117,7 +117,7 @@
     move-result-object p0
 
     .line 39
-    const v0, 0x7f140508    # @string/kg_too_many_failed_attempts_countdown '{count, plural, =1 {Try again in # second.} other {Try again in # seconds.} }'
+    const v0, 0x7f13055e    # @string/kg_too_many_failed_attempts_countdown '{count, plural, =1 {Try again in # second.} other {Try again in # seconds.} }'
 
     .line 40
     invoke-static {p0, p2, v0}, Landroid/util/PluralsMessageFormatter;->format(Landroid/content/res/Resources;Ljava/util/Map;I)Ljava/lang/String;
@@ -129,12 +129,9 @@
     const/4 p2, 0x0
 
     .line 47
-    const/4 v0, 0x0
+    invoke-virtual {p1, p0, p2}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     .line 48
-    invoke-virtual {p1, p0, v0, p2}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;ZLandroid/hardware/biometrics/BiometricSourceType;)V
-
-    .line 49
     return-void
-    .line 52
+    .line 51
 .end method

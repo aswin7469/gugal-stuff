@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -80,13 +80,13 @@
 
     .line 28
     :cond_0
-    new-instance p0, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda6;
+    new-instance p0, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda8;
 
     .line 29
     const/4 v2, 0x0
 
     .line 31
-    invoke-direct {p0, v0, v1, v3, v2}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda6;-><init>(Ljava/lang/Object;Lcom/android/app/viewcapture/ViewCapture$ViewRef;Lcom/android/app/viewcapture/ViewCapture$ViewRef;I)V
+    invoke-direct {p0, v0, v1, v3, v2}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda8;-><init>(Ljava/lang/Object;Lcom/android/app/viewcapture/ViewCapture$ViewRef;Lcom/android/app/viewcapture/ViewCapture$ViewRef;I)V
 
     .line 32
     sget-object v0, Lcom/android/app/viewcapture/ViewCapture;->MAIN_EXECUTOR:Lcom/android/app/viewcapture/LooperExecutor;

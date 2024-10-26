@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/animation/core/FloatTweenSpec;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/animation/core/FloatAnimationSpec;
@@ -88,14 +88,14 @@
     .line 12
 .end method
 
-.method public final getValueFromNanos(JFFF)F
+.method public final getValueFromNanos(FFFJ)F
     .locals 8
 
     .line 1
     iget-wide v0, p0, Landroidx/compose/animation/core/FloatTweenSpec;->delayNanos:J
 
     .line 2
-    sub-long v2, p1, v0
+    sub-long v2, p4, v0
 
     .line 4
     const-wide/16 v4, 0x0
@@ -107,7 +107,7 @@
     invoke-static/range {v2 .. v7}, Lkotlin/ranges/RangesKt;->coerceIn(JJJ)J
 
     .line 10
-    move-result-wide p1
+    move-result-wide p3
 
     .line 13
     iget p5, p0, Landroidx/compose/animation/core/FloatTweenSpec;->duration:I
@@ -119,50 +119,50 @@
     if-nez p5, :cond_0
 
     .line 18
-    move p1, v0
+    move p3, v0
 
     .line 20
     goto :goto_0
 
     .line 21
     :cond_0
-    long-to-float p1, p1
+    long-to-float p3, p3
 
     .line 22
-    iget-wide v1, p0, Landroidx/compose/animation/core/FloatTweenSpec;->durationNanos:J
+    iget-wide p4, p0, Landroidx/compose/animation/core/FloatTweenSpec;->durationNanos:J
 
     .line 23
-    long-to-float p2, v1
+    long-to-float p4, p4
 
     .line 25
-    div-float/2addr p1, p2
+    div-float/2addr p3, p4
 
     .line 26
     :goto_0
-    const/4 p2, 0x0
+    const/4 p4, 0x0
 
     .line 27
-    cmpg-float p5, p1, p2
+    cmpg-float p5, p3, p4
 
     .line 28
     if-gez p5, :cond_1
 
     .line 30
-    move p1, p2
+    move p3, p4
 
     .line 32
     :cond_1
-    cmpl-float p2, p1, v0
+    cmpl-float p4, p3, v0
 
     .line 33
-    if-lez p2, :cond_2
+    if-lez p4, :cond_2
 
     .line 35
     goto :goto_1
 
     .line 37
     :cond_2
-    move v0, p1
+    move v0, p3
 
     .line 38
     :goto_1
@@ -175,32 +175,32 @@
     move-result p0
 
     .line 44
-    sget-object p1, Landroidx/compose/animation/core/VectorConvertersKt;->FloatToVector:Landroidx/compose/animation/core/TwoWayConverterImpl;
+    sget-object p3, Landroidx/compose/animation/core/VectorConvertersKt;->FloatToVector:Landroidx/compose/animation/core/TwoWayConverterImpl;
 
     .line 45
-    const/4 p1, 0x1
+    const/4 p3, 0x1
 
     .line 47
-    int-to-float p1, p1
+    int-to-float p3, p3
 
     .line 48
-    sub-float/2addr p1, p0
+    sub-float/2addr p3, p0
 
     .line 49
-    mul-float/2addr p1, p3
+    mul-float/2addr p3, p1
 
     .line 50
-    mul-float/2addr p4, p0
+    mul-float/2addr p2, p0
 
     .line 51
-    add-float/2addr p4, p1
+    add-float/2addr p2, p3
 
     .line 52
-    return p4
+    return p2
     .line 53
 .end method
 
-.method public final getVelocityFromNanos(JFFF)F
+.method public final getVelocityFromNanos(FFFJ)F
     .locals 13
 
     .line 1
@@ -210,7 +210,7 @@
     iget-wide v0, v6, Landroidx/compose/animation/core/FloatTweenSpec;->delayNanos:J
 
     .line 3
-    sub-long v7, p1, v0
+    sub-long v7, p4, v0
 
     .line 5
     const-wide/16 v9, 0x0
@@ -244,52 +244,52 @@
     if-nez v0, :cond_1
 
     .line 23
-    return p5
+    return p3
 
     .line 25
     :cond_1
     const-wide/32 v0, 0xf4240
 
     .line 26
-    sub-long v1, v7, v0
+    sub-long v4, v7, v0
 
     .line 29
     move-object v0, p0
 
     .line 31
-    move/from16 v3, p3
+    move v1, p1
 
     .line 32
-    move/from16 v4, p4
+    move v2, p2
+
+    .line 33
+    move/from16 v3, p3
 
     .line 34
-    move/from16 v5, p5
+    invoke-virtual/range {v0 .. v5}, Landroidx/compose/animation/core/FloatTweenSpec;->getValueFromNanos(FFFJ)F
 
     .line 36
-    invoke-virtual/range {v0 .. v5}, Landroidx/compose/animation/core/FloatTweenSpec;->getValueFromNanos(JFFF)F
-
-    .line 38
     move-result v9
 
+    .line 39
+    move-wide v4, v7
+
+    .line 40
+    invoke-virtual/range {v0 .. v5}, Landroidx/compose/animation/core/FloatTweenSpec;->getValueFromNanos(FFFJ)F
+
     .line 41
-    move-wide v1, v7
-
-    .line 42
-    invoke-virtual/range {v0 .. v5}, Landroidx/compose/animation/core/FloatTweenSpec;->getValueFromNanos(JFFF)F
-
-    .line 43
     move-result v0
 
-    .line 46
+    .line 44
     sub-float/2addr v0, v9
 
-    .line 47
+    .line 45
     const/high16 v1, 0x447a0000    # 1000.0f
 
-    .line 48
+    .line 46
     mul-float/2addr v0, v1
 
-    .line 50
+    .line 48
     return v0
-    .line 51
+    .line 49
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/temporarydisplay/chipbar/ChipbarCoordinator;
 .super Lcom/android/systemui/temporarydisplay/TemporaryViewDisplayController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -53,7 +53,7 @@
     move-object v13, p0
 
     .line 2
-    const v9, 0x7f0e006e    # @layout/chipbar 'res/layout/chipbar.xml'
+    const v9, 0x7f0d0074    # @layout/chipbar 'res/layout/chipbar.xml'
 
     .line 3
     move-object v0, p0
@@ -179,7 +179,7 @@
     invoke-direct {v9, v0, v1, v10}, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarCoordinator$animateViewIn$onAnimationEnd$1;-><init>(Lcom/android/systemui/temporarydisplay/chipbar/ChipbarCoordinator;Ljava/lang/Object;I)V
 
     .line 10
-    const v3, 0x7f0b01ce    # @id/chipbar_inner
+    const v3, 0x7f0a01d8    # @id/chipbar_inner
 
     .line 13
     invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -386,7 +386,7 @@
     .locals 1
 
     .line 1
-    const p2, 0x7f0b01ce    # @id/chipbar_inner
+    const p2, 0x7f0a01d8    # @id/chipbar_inner
 
     .line 2
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -700,7 +700,7 @@
     const-string v7, ")"
 
     .line 58
-    invoke-static {v6, v5, v7}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6, v5, v7}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 60
     move-result-object v5
@@ -752,13 +752,13 @@
     invoke-virtual {v8, v1}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
 
     .line 91
-    const v1, 0x7f0b07cb    # @id/tag_chipbar_info
+    const v1, 0x7f0a07fa    # @id/tag_chipbar_info
 
     .line 94
     invoke-virtual {p2, v1, p1}, Landroid/view/ViewGroup;->setTag(ILjava/lang/Object;)V
 
     .line 97
-    const v1, 0x7f0b01cf    # @id/chipbar_root_view
+    const v1, 0x7f0a01d9    # @id/chipbar_root_view
 
     .line 100
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -779,7 +779,7 @@
     iput-object v2, v1, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarRootView;->touchHandler:Lcom/android/systemui/Gefingerpoken;
 
     .line 114
-    const v1, 0x7f0b075f    # @id/start_icon
+    const v1, 0x7f0a078e    # @id/start_icon
 
     .line 116
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -835,7 +835,7 @@
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
     .line 150
-    const v1, 0x7f0b07e0    # @id/text
+    const v1, 0x7f0a080f    # @id/text
 
     .line 153
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -862,7 +862,7 @@
     move-result v1
 
     .line 173
-    const v5, 0x7f0b0440    # @id/loading
+    const v5, 0x7f0a0461    # @id/loading
 
     .line 174
     invoke-virtual {p2, v5}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -1005,7 +1005,7 @@
     .line 266
     :cond_9
     :goto_3
-    const v1, 0x7f0b02e4    # @id/error
+    const v1, 0x7f0a02fd    # @id/error
 
     .line 268
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -1040,7 +1040,7 @@
     invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 286
-    const v1, 0x7f0b02d1    # @id/end_button
+    const v1, 0x7f0a02ea    # @id/end_button
 
     .line 289
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -1090,7 +1090,7 @@
 
     .line 322
     :goto_5
-    const v1, 0x7f0b01ce    # @id/chipbar_inner
+    const v1, 0x7f0a01d8    # @id/chipbar_inner
 
     .line 325
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -1105,14 +1105,14 @@
     if-eqz v5, :cond_c
 
     .line 334
-    const v5, 0x7f07017a    # @dimen/chipbar_outer_padding_half '8.0dp'
+    const v5, 0x7f07018a    # @dimen/chipbar_outer_padding_half '8.0dp'
 
     .line 336
     goto :goto_6
 
     .line 339
     :cond_c
-    const v5, 0x7f070179    # @dimen/chipbar_outer_padding '16.0dp'
+    const v5, 0x7f070189    # @dimen/chipbar_outer_padding '16.0dp'
 
     .line 340
     :goto_6
@@ -1211,7 +1211,7 @@
     const-string v6, " "
 
     .line 403
-    invoke-static {v2, v6}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v6}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 405
     move-result-object v2
@@ -1250,7 +1250,7 @@
     move-result-object v5
 
     .line 426
-    const v6, 0x7f140620    # @string/media_transfer_loading 'Loading'
+    const v6, 0x7f13067a    # @string/media_transfer_loading 'Loading'
 
     .line 427
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1265,7 +1265,7 @@
     const-string v7, "."
 
     .line 436
-    invoke-static {v6, v5, v7}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6, v5, v7}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 438
     move-result-object v5
@@ -1410,7 +1410,7 @@
     iget-object p0, v1, Lcom/android/systemui/statusbar/VibratorHelper;->mExecutor:Ljava/util/concurrent/Executor;
 
     .line 538
-    new-instance p2, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda4;
+    new-instance p2, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda3;
 
     .line 540
     iget-object v5, p1, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;->windowTitle:Ljava/lang/String;
@@ -1419,7 +1419,7 @@
     move-object v0, p2
 
     .line 544
-    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/statusbar/VibratorHelper;ILjava/lang/String;Landroid/os/VibrationEffect;Ljava/lang/String;Landroid/os/VibrationAttributes;)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/VibratorHelper;ILjava/lang/String;Landroid/os/VibrationEffect;Ljava/lang/String;Landroid/os/VibrationAttributes;)V
 
     .line 545
     invoke-interface {p0, p2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V

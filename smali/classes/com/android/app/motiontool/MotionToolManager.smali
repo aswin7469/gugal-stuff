@@ -1,6 +1,6 @@
 .class public final Lcom/android/app/motiontool/MotionToolManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -56,35 +56,50 @@
     const-string v1, "MTViewCapture"
 
     .line 10
-    invoke-static {v0, v1}, Lcom/android/app/viewcapture/ViewCapture;->createAndStartNewLooperExecutor(ILjava/lang/String;)Lcom/android/app/viewcapture/LooperExecutor;
+    new-instance v2, Landroid/os/HandlerThread;
 
     .line 12
-    move-result-object v0
+    invoke-direct {v2, v1, v0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 15
-    const/16 v1, 0x7d0
+    .line 14
+    invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
-    .line 16
-    const/16 v2, 0x12c
-
-    .line 18
-    invoke-direct {p1, v1, v2, v0}, Lcom/android/app/viewcapture/ViewCapture;-><init>(IILcom/android/app/viewcapture/LooperExecutor;)V
+    .line 17
+    new-instance v0, Lcom/android/app/viewcapture/LooperExecutor;
 
     .line 20
-    iput-object p1, p0, Lcom/android/app/motiontool/MotionToolManager;->viewCapture:Lcom/android/app/viewcapture/SimpleViewCapture;
+    invoke-virtual {v2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
-    .line 23
-    new-instance p1, Ljava/util/LinkedHashMap;
+    .line 22
+    move-result-object v1
 
     .line 25
+    invoke-direct {v0, v1}, Lcom/android/app/viewcapture/LooperExecutor;-><init>(Landroid/os/Looper;)V
+
+    .line 26
+    const/16 v1, 0x7d0
+
+    .line 29
+    const/16 v2, 0x12c
+
+    .line 31
+    invoke-direct {p1, v1, v2, v0}, Lcom/android/app/viewcapture/ViewCapture;-><init>(IILcom/android/app/viewcapture/LooperExecutor;)V
+
+    .line 33
+    iput-object p1, p0, Lcom/android/app/motiontool/MotionToolManager;->viewCapture:Lcom/android/app/viewcapture/SimpleViewCapture;
+
+    .line 36
+    new-instance p1, Ljava/util/LinkedHashMap;
+
+    .line 38
     invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 27
+    .line 40
     iput-object p1, p0, Lcom/android/app/motiontool/MotionToolManager;->traces:Ljava/util/Map;
 
-    .line 30
+    .line 43
     return-void
-    .line 32
+    .line 45
 .end method
 
 

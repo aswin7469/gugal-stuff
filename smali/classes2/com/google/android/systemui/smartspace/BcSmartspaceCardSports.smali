@@ -1,6 +1,6 @@
 .class public Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;
 .super Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -43,7 +43,7 @@
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b047c    # @id/match_time_summary
+    const v0, 0x7f0a04a0    # @id/match_time_summary
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -58,7 +58,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mSummaryView:Landroid/widget/TextView;
 
     .line 14
-    const v0, 0x7f0b0307    # @id/first_competitor_score
+    const v0, 0x7f0a0323    # @id/first_competitor_score
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -73,7 +73,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mFirstCompetitorScore:Landroid/widget/TextView;
 
     .line 25
-    const v0, 0x7f0b06d6    # @id/second_competitor_score
+    const v0, 0x7f0a06ff    # @id/second_competitor_score
 
     .line 27
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -88,7 +88,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mSecondCompetitorScore:Landroid/widget/TextView;
 
     .line 36
-    const v0, 0x7f0b0306    # @id/first_competitor_logo
+    const v0, 0x7f0a0322    # @id/first_competitor_logo
 
     .line 38
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -103,7 +103,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mFirstCompetitorLogo:Landroid/widget/ImageView;
 
     .line 47
-    const v0, 0x7f0b06d5    # @id/second_competitor_logo
+    const v0, 0x7f0a06fe    # @id/second_competitor_logo
 
     .line 49
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -193,267 +193,272 @@
     const/4 p2, 0x0
 
     .line 14
-    if-nez p1, :cond_1
+    if-eqz p1, :cond_b
 
     .line 15
-    return p2
-
-    .line 17
-    :cond_1
     const-string p3, "matchTimeSummary"
 
-    .line 18
+    .line 17
     invoke-virtual {p1, p3}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    .line 20
+    .line 19
     move-result v0
 
+    .line 22
+    const/4 v1, 0x1
+
     .line 23
-    const-string v1, "BcSmartspaceCardSports"
+    const-string v2, "BcSmartspaceCardSports"
 
     .line 24
-    const/4 v2, 0x1
+    if-eqz v0, :cond_2
 
     .line 26
-    if-eqz v0, :cond_3
-
-    .line 27
     invoke-virtual {p1, p3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 29
+    .line 28
     move-result-object p3
 
-    .line 32
+    .line 31
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mSummaryView:Landroid/widget/TextView;
 
-    .line 33
-    if-nez v0, :cond_2
+    .line 32
+    if-nez v0, :cond_1
 
-    .line 35
+    .line 34
     const-string p3, "No match time summary view to update"
 
-    .line 37
-    invoke-static {v1, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    .line 36
+    invoke-static {v2, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
+    .line 38
     goto :goto_1
 
-    .line 42
-    :cond_2
+    .line 41
+    :cond_1
     invoke-static {v0, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 43
+    .line 42
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mSummaryView:Landroid/widget/TextView;
 
-    .line 46
+    .line 45
     invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 48
+    .line 47
     :goto_1
-    move p3, v2
+    move p3, v1
 
-    .line 51
+    .line 50
     goto :goto_2
 
-    .line 52
-    :cond_3
+    .line 51
+    :cond_2
     move p3, p2
 
-    .line 53
+    .line 52
     :goto_2
     const-string v0, "firstCompetitorScore"
 
-    .line 54
+    .line 53
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    .line 56
+    .line 55
     move-result v3
 
-    .line 59
+    .line 58
     const-string v4, "No first competitor logo view to update"
 
-    .line 60
-    if-eqz v3, :cond_5
+    .line 59
+    if-eqz v3, :cond_4
 
-    .line 62
+    .line 61
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 64
+    .line 63
     move-result-object p3
+
+    .line 66
+    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mFirstCompetitorScore:Landroid/widget/TextView;
 
     .line 67
-    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mFirstCompetitorScore:Landroid/widget/TextView;
+    if-nez v0, :cond_3
 
-    .line 68
-    if-nez v0, :cond_4
+    .line 69
+    invoke-static {v2, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
-    invoke-static {v1, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 72
+    .line 71
     goto :goto_3
 
-    .line 75
-    :cond_4
+    .line 74
+    :cond_3
     invoke-static {v0, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 76
+    .line 75
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mFirstCompetitorScore:Landroid/widget/TextView;
 
-    .line 79
+    .line 78
     invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 81
+    .line 80
     :goto_3
-    move p3, v2
+    move p3, v1
 
-    .line 84
-    :cond_5
+    .line 83
+    :cond_4
     const-string v0, "secondCompetitorScore"
 
-    .line 85
+    .line 84
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    .line 87
+    .line 86
     move-result v3
 
-    .line 90
+    .line 89
     const-string v5, "No second competitor logo view to update"
 
-    .line 91
-    if-eqz v3, :cond_7
+    .line 90
+    if-eqz v3, :cond_6
 
-    .line 93
+    .line 92
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 95
+    .line 94
     move-result-object p3
+
+    .line 97
+    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mSecondCompetitorScore:Landroid/widget/TextView;
 
     .line 98
-    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mSecondCompetitorScore:Landroid/widget/TextView;
+    if-nez v0, :cond_5
 
-    .line 99
-    if-nez v0, :cond_6
+    .line 100
+    invoke-static {v2, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
-    invoke-static {v1, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 103
+    .line 102
     goto :goto_4
 
-    .line 106
-    :cond_6
+    .line 105
+    :cond_5
     invoke-static {v0, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 107
+    .line 106
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mSecondCompetitorScore:Landroid/widget/TextView;
 
-    .line 110
+    .line 109
     invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 112
+    .line 111
     :goto_4
-    move p3, v2
+    move p3, v1
 
-    .line 115
-    :cond_7
+    .line 114
+    :cond_6
     const-string v0, "firstCompetitorLogo"
 
-    .line 116
+    .line 115
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    .line 118
+    .line 117
     move-result v3
+
+    .line 120
+    if-eqz v3, :cond_8
 
     .line 121
-    if-eqz v3, :cond_9
-
-    .line 122
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 124
+    .line 123
     move-result-object p3
 
-    .line 127
+    .line 126
     check-cast p3, Landroid/graphics/Bitmap;
 
-    .line 128
+    .line 127
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mFirstCompetitorLogo:Landroid/widget/ImageView;
 
-    .line 130
-    if-nez v0, :cond_8
+    .line 129
+    if-nez v0, :cond_7
 
-    .line 132
-    invoke-static {v1, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    .line 131
+    invoke-static {v2, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
+    .line 133
     goto :goto_5
 
-    .line 137
-    :cond_8
+    .line 136
+    :cond_7
     invoke-static {v0, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 138
+    .line 137
     iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mFirstCompetitorLogo:Landroid/widget/ImageView;
 
-    .line 141
+    .line 140
     invoke-virtual {v0, p3}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 143
+    .line 142
     :goto_5
-    move p3, v2
+    move p3, v1
 
-    .line 146
-    :cond_9
+    .line 145
+    :cond_8
     const-string v0, "secondCompetitorLogo"
 
-    .line 147
+    .line 146
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    .line 149
+    .line 148
     move-result v3
 
-    .line 152
-    if-eqz v3, :cond_b
+    .line 151
+    if-eqz v3, :cond_a
 
-    .line 153
+    .line 152
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 155
+    .line 154
     move-result-object p1
 
-    .line 158
+    .line 157
     check-cast p1, Landroid/graphics/Bitmap;
 
-    .line 159
+    .line 158
     iget-object p3, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mSecondCompetitorLogo:Landroid/widget/ImageView;
 
-    .line 161
-    if-nez p3, :cond_a
+    .line 160
+    if-nez p3, :cond_9
 
-    .line 163
-    invoke-static {v1, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    .line 162
+    invoke-static {v2, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
-    return v2
+    .line 164
+    goto :goto_6
 
-    .line 168
-    :cond_a
+    .line 167
+    :cond_9
     invoke-static {p3, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 169
+    .line 168
     iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardSports;->mSecondCompetitorLogo:Landroid/widget/ImageView;
 
-    .line 172
+    .line 171
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 174
-    return v2
+    .line 173
+    :goto_6
+    move p2, v1
+
+    .line 176
+    goto :goto_7
 
     .line 177
-    :cond_b
-    return p3
+    :cond_a
+    move p2, p3
+
     .line 178
+    :cond_b
+    :goto_7
+    return p2
+    .line 179
 .end method
 
 .method public final setTextColor(I)V

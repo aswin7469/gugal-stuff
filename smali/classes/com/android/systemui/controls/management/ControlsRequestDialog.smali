@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/controls/management/ControlsRequestDialog;
 .super Landroidx/activity/ComponentActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -784,7 +784,7 @@
     move-result-object v3
 
     .line 206
-    const v4, 0x7f0e0082    # @layout/controls_dialog 'res/layout/controls_dialog.xml'
+    const v4, 0x7f0d008a    # @layout/controls_dialog 'res/layout/controls_dialog.xml'
 
     .line 207
     invoke-virtual {v3, v4, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -793,7 +793,7 @@
     move-result-object v3
 
     .line 213
-    const v4, 0x7f0b0379    # @id/icon
+    const v4, 0x7f0a0399    # @id/icon
 
     .line 214
     invoke-virtual {v3, v4}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -847,7 +847,7 @@
     invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
     .line 250
-    const v1, 0x7f0b07ff    # @id/title
+    const v1, 0x7f0a082e    # @id/title
 
     .line 253
     invoke-virtual {v3, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -878,7 +878,7 @@
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 271
-    const v1, 0x7f0b0782    # @id/subtitle
+    const v1, 0x7f0a07b1    # @id/subtitle
 
     .line 274
     invoke-virtual {v3, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -909,7 +909,7 @@
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 292
-    const v1, 0x7f0b0207    # @id/control
+    const v1, 0x7f0a0212    # @id/control
 
     .line 295
     invoke-virtual {v3, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -924,7 +924,7 @@
     move-result-object v4
 
     .line 305
-    const v5, 0x7f0701b4    # @dimen/control_card_elevation '15.0'
+    const v5, 0x7f0701d5    # @dimen/control_card_elevation '15.0'
 
     .line 306
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getFloat(I)F
@@ -942,7 +942,7 @@
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 318
-    const v4, 0x7f1402b8    # @string/controls_dialog_title 'Add to device controls'
+    const v4, 0x7f1302d4    # @string/controls_dialog_title 'Add to device controls'
 
     .line 321
     invoke-virtual {p0, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -957,7 +957,7 @@
     move-result-object v1
 
     .line 331
-    const v4, 0x7f1402b5    # @string/controls_dialog_message 'Suggested by %s'
+    const v4, 0x7f1302d1    # @string/controls_dialog_message 'Suggested by %s'
 
     .line 332
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -978,7 +978,7 @@
     move-result-object v0
 
     .line 346
-    const v1, 0x7f1402b6    # @string/controls_dialog_ok 'Add'
+    const v1, 0x7f1302d2    # @string/controls_dialog_ok 'Add'
 
     .line 347
     invoke-virtual {v0, v1, p0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;

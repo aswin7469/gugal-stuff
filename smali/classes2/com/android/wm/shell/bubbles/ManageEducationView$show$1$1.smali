@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/ManageEducationView$show$1$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -45,7 +45,7 @@
     iget-object p0, p0, Lcom/android/wm/shell/bubbles/ManageEducationView$show$1$1;->$expandedView:Lcom/android/wm/shell/bubbles/BubbleExpandedView;
 
     .line 7
-    const p1, 0x7f0b0475    # @id/manage_button
+    const p1, 0x7f0a0499    # @id/manage_button
 
     .line 9
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;

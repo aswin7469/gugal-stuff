@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;
 .super Landroid/widget/BaseAdapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -77,7 +77,7 @@
     if-eqz v0, :cond_0
 
     .line 4
-    const p1, 0x7f0806cd    # @drawable/ic_add 'res/drawable/ic_add.xml'
+    const p1, 0x7f0806dc    # @drawable/ic_add 'res/drawable/ic_add.xml'
 
     .line 6
     goto :goto_0
@@ -90,7 +90,7 @@
     if-eqz v0, :cond_1
 
     .line 12
-    const p1, 0x7f0806c8    # @drawable/ic_account_circle 'res/drawable/ic_account_circle.xml'
+    const p1, 0x7f0806d7    # @drawable/ic_account_circle 'res/drawable/ic_account_circle.xml'
 
     .line 14
     goto :goto_0
@@ -103,7 +103,7 @@
     if-eqz v0, :cond_2
 
     .line 20
-    const p1, 0x7f0806d0    # @drawable/ic_add_supervised_user 'res/drawable/ic_add_supervised_user.xml'
+    const p1, 0x7f0806df    # @drawable/ic_add_supervised_user 'res/drawable/ic_add_supervised_user.xml'
 
     .line 22
     goto :goto_0
@@ -116,14 +116,14 @@
     if-eqz p1, :cond_3
 
     .line 28
-    const p1, 0x7f080812    # @drawable/ic_manage_users 'res/drawable/ic_manage_users.xml'
+    const p1, 0x7f080835    # @drawable/ic_manage_users 'res/drawable/ic_manage_users.xml'
 
     .line 30
     goto :goto_0
 
     .line 33
     :cond_3
-    const p1, 0x7f0806e1    # @drawable/ic_avatar_user 'res/drawable/ic_avatar_user.xml'
+    const p1, 0x7f0806f2    # @drawable/ic_avatar_user 'res/drawable/ic_avatar_user.xml'
 
     .line 34
     :goto_0

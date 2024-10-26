@@ -1,6 +1,6 @@
 .class public abstract synthetic Lkotlinx/coroutines/flow/FlowKt__ChannelsKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -311,23 +311,20 @@
     if-nez v3, :cond_9
 
     .line 168
-    new-instance v3, Ljava/util/concurrent/CancellationException;
-
-    .line 170
     const-string p2, "Channel was consumed, consumer had failed"
 
+    .line 170
+    invoke-static {p2, p0}, Lkotlinx/coroutines/ExceptionsKt;->CancellationException(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/util/concurrent/CancellationException;
+
     .line 172
-    invoke-direct {v3, p2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    move-result-object v3
 
-    .line 174
-    invoke-virtual {v3, p0}, Ljava/util/concurrent/CancellationException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    .line 177
+    .line 175
     :cond_9
     invoke-interface {p1, v3}, Lkotlinx/coroutines/channels/ReceiveChannel;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    .line 180
+    .line 176
     :cond_a
     throw p3
-    .line 183
+    .line 179
 .end method

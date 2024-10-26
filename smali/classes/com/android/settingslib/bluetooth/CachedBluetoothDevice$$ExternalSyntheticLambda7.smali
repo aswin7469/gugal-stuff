@@ -1,34 +1,42 @@
 .class public final synthetic Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticLambda7;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Function;
+.implements Ljava/lang/Runnable;
 
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+# instance fields
+.field public final synthetic f$0:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$Callback;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$Callback;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iget-object p0, p1, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mDevice:Landroid/bluetooth/BluetoothDevice;
+    iput-object p1, p0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticLambda7;->f$0:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$Callback;
+
+    .line 5
+    return-void
+    .line 7
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticLambda7;->f$0:Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$Callback;
+
+    .line 2
+    invoke-interface {p0}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$Callback;->onDeviceAttributesChanged()V
 
     .line 4
-    invoke-virtual {p0}, Landroid/bluetooth/BluetoothDevice;->getBatteryLevel()I
-
-    .line 6
-    move-result p0
-
-    .line 9
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 10
-    move-result-object p0
-
-    .line 13
-    return-object p0
-    .line 14
+    return-void
+    .line 7
 .end method

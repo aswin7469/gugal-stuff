@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/DeviceStateRotationLockSettingControllerLogger;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -32,7 +32,7 @@
     move-result-object p1
 
     .line 10
-    const v0, 0x107007c    # @android:array/config_hideWhenDisabled_packageNames
+    const v0, 0x1070076    # @android:array/config_forceSlowJpegModeList
 
     .line 11
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -50,7 +50,7 @@
     move-result-object p1
 
     .line 23
-    const v0, 0x1070085    # @android:array/config_locationProviderPackageNames
+    const v0, 0x107007d    # @android:array/config_highAmbientBrightnessThresholdsOfFixedRefreshRate
 
     .line 24
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -68,7 +68,7 @@
     move-result-object p1
 
     .line 36
-    const v0, 0x10700ac    # @android:array/config_roundedCornerBottomRadiusArray
+    const v0, 0x10700a3    # @android:array/config_priorityOnlyDndExemptPackages
 
     .line 37
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -86,7 +86,7 @@
     move-result-object p1
 
     .line 49
-    const p2, 0x10700b2    # @android:array/config_satellite_providers
+    const p2, 0x10700a9    # @android:array/config_restrictedImagesServices
 
     .line 50
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getIntArray(I)[I

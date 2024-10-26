@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$9$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -90,300 +90,286 @@
     iput-boolean v1, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDeviceInteractive:Z
 
     .line 34
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
+    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDozeServiceHost:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
 
     .line 36
-    move-result v2
+    iget-boolean v2, v2, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mAnimateWakeup:Z
 
-    .line 39
+    .line 38
     const/4 v3, 0x0
 
     .line 40
     if-eqz v2, :cond_0
 
     .line 41
-    goto/16 :goto_3
-
-    .line 43
-    :cond_0
-    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDozeServiceHost:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
-
-    .line 45
-    iget-boolean v2, v2, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mAnimateWakeup:Z
-
-    .line 47
-    if-eqz v2, :cond_1
-
-    .line 49
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 51
+    .line 43
     iget v2, v2, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mMode:I
 
-    .line 53
-    if-eq v2, v1, :cond_1
+    .line 45
+    if-eq v2, v1, :cond_0
 
-    .line 55
+    .line 47
     move v2, v1
 
-    .line 57
+    .line 49
     goto :goto_0
 
-    .line 58
+    .line 50
+    :cond_0
+    move v2, v3
+
+    .line 51
+    :goto_0
+    if-eqz v2, :cond_3
+
+    .line 52
+    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mContext:Landroid/content/Context;
+
+    .line 54
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    .line 56
+    move-result-object v2
+
+    .line 59
+    iget-object v4, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
+
+    .line 60
+    check-cast v4, Lcom/android/systemui/settings/UserTrackerImpl;
+
+    .line 62
+    invoke-virtual {v4}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
+
+    .line 64
+    move-result v5
+
+    .line 67
+    const-string v6, "sfps_performant_auth_enabled_v2"
+
+    .line 68
+    const/4 v7, -0x1
+
+    .line 70
+    invoke-static {v2, v6, v7, v5}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    .line 71
+    move-result v2
+
+    .line 74
+    if-lez v2, :cond_1
+
+    .line 75
+    move v2, v1
+
+    .line 77
+    goto :goto_1
+
+    .line 78
     :cond_1
     move v2, v3
 
-    .line 59
-    :goto_0
-    if-eqz v2, :cond_4
-
-    .line 60
-    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mContext:Landroid/content/Context;
-
-    .line 62
-    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    .line 64
-    move-result-object v2
-
-    .line 67
-    iget-object v4, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
-
-    .line 68
-    check-cast v4, Lcom/android/systemui/settings/UserTrackerImpl;
-
-    .line 70
-    invoke-virtual {v4}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
-
-    .line 72
-    move-result v5
-
-    .line 75
-    const-string v6, "sfps_performant_auth_enabled_v2"
-
-    .line 76
-    const/4 v7, -0x1
-
-    .line 78
-    invoke-static {v2, v6, v7, v5}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
     .line 79
-    move-result v2
-
-    .line 82
-    if-lez v2, :cond_2
-
-    .line 83
-    move v2, v1
-
-    .line 85
-    goto :goto_1
-
-    .line 86
-    :cond_2
-    move v2, v3
-
-    .line 87
     :goto_1
     iget-object v5, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDozeServiceHost:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
 
-    .line 88
+    .line 80
     iget-boolean v5, v5, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mPulsing:Z
 
-    .line 90
-    if-nez v5, :cond_3
+    .line 82
+    if-nez v5, :cond_2
 
-    .line 92
+    .line 84
     iget-object v5, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 94
+    .line 86
     check-cast v5, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 96
+    .line 88
     iget v5, v5, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mDozeAmount:F
 
-    .line 98
+    .line 90
     const/high16 v6, 0x3f800000    # 1.0f
 
-    .line 100
+    .line 92
     cmpl-float v5, v5, v6
 
-    .line 102
-    if-nez v5, :cond_3
+    .line 94
+    if-nez v5, :cond_2
 
-    .line 104
+    .line 96
     iget-object v5, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
-    .line 106
+    .line 98
     iget v5, v5, Lcom/android/systemui/keyguard/WakefulnessLifecycle;->mLastWakeReason:I
 
-    .line 108
-    if-ne v5, v1, :cond_3
+    .line 100
+    if-ne v5, v1, :cond_2
 
-    .line 110
+    .line 102
     iget-object v5, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mFingerprintManager:Ljavax/inject/Provider;
 
-    .line 112
+    .line 104
     invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 114
+    .line 106
     move-result-object v6
 
-    .line 117
-    if-eqz v6, :cond_3
+    .line 109
+    if-eqz v6, :cond_2
 
-    .line 118
+    .line 110
     invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 120
+    .line 112
     move-result-object v5
 
-    .line 123
+    .line 115
     check-cast v5, Landroid/hardware/fingerprint/FingerprintManager;
 
-    .line 124
+    .line 116
     invoke-virtual {v5}, Landroid/hardware/fingerprint/FingerprintManager;->isPowerbuttonFps()Z
 
-    .line 126
+    .line 118
     move-result v5
 
-    .line 129
-    if-eqz v5, :cond_3
+    .line 121
+    if-eqz v5, :cond_2
 
-    .line 130
+    .line 122
     invoke-virtual {v4}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 132
+    .line 124
     move-result v4
 
-    .line 135
+    .line 127
     iget-object v5, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 136
+    .line 128
     invoke-virtual {v5, v4}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isUnlockWithFingerprintPossible(I)Z
 
-    .line 138
+    .line 130
     move-result v4
 
-    .line 141
-    if-eqz v4, :cond_3
+    .line 133
+    if-eqz v4, :cond_2
 
-    .line 142
-    if-nez v2, :cond_3
+    .line 134
+    if-nez v2, :cond_2
 
-    .line 144
+    .line 136
     move v2, v1
 
-    .line 146
+    .line 138
     goto :goto_2
 
-    .line 147
-    :cond_3
+    .line 139
+    :cond_2
     move v2, v3
 
-    .line 148
+    .line 140
     :goto_2
     iput-boolean v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShouldDelayWakeUpAnimation:Z
 
-    .line 149
-    goto :goto_4
+    .line 141
+    goto :goto_3
 
-    .line 151
-    :cond_4
-    :goto_3
+    .line 143
+    :cond_3
     iput-boolean v3, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShouldDelayWakeUpAnimation:Z
 
-    .line 152
-    :goto_4
+    .line 144
+    :goto_3
     iget-boolean v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShouldDelayWakeUpAnimation:Z
 
-    .line 154
+    .line 146
     iget-object v4, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeSurface:Lcom/android/systemui/shade/ShadeSurface;
 
-    .line 156
+    .line 148
     invoke-interface {v4, v2}, Lcom/android/systemui/shade/ShadeSurface;->setWillPlayDelayedDozeAmountAnimation(Z)V
 
-    .line 158
+    .line 150
     iget-boolean v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShouldDelayWakeUpAnimation:Z
 
-    .line 161
+    .line 153
     iget-object v4, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mWakeUpCoordinator:Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;
 
-    .line 163
+    .line 155
     invoke-virtual {v4, v1, v2}, Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;->setWakingUp(ZZ)V
 
-    .line 165
+    .line 157
     invoke-virtual {v0, v3}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->updateIsKeyguard(Z)Z
 
-    .line 168
+    .line 160
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
-    .line 171
+    .line 163
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getAlwaysOn()Z
 
-    .line 173
+    .line 165
     move-result v4
 
-    .line 176
-    if-eqz v4, :cond_5
+    .line 168
+    if-eqz v4, :cond_4
 
-    .line 177
+    .line 169
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getDisplayNeedsBlanking()Z
 
-    .line 179
+    .line 171
     move-result v2
 
-    .line 182
-    if-nez v2, :cond_5
+    .line 174
+    if-nez v2, :cond_4
 
-    .line 183
+    .line 175
     sget-object v2, Lcom/android/systemui/flags/Flags;->ZJ_285570694_LOCKSCREEN_TRANSITION_FROM_AOD:Lcom/android/systemui/flags/ReleasedFlag;
 
-    .line 185
+    .line 177
     iget-object v4, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mFeatureFlags:Lcom/android/systemui/flags/FeatureFlags;
 
-    .line 187
+    .line 179
     check-cast v4, Lcom/android/systemui/flags/FeatureFlagsClassicRelease;
 
-    .line 189
+    .line 181
     invoke-virtual {v4, v2}, Lcom/android/systemui/flags/FeatureFlagsClassicRelease;->isEnabled(Lcom/android/systemui/flags/ReleasedFlag;)Z
 
-    .line 191
+    .line 183
     move-result v2
 
-    .line 194
-    if-eqz v2, :cond_5
+    .line 186
+    if-eqz v2, :cond_4
 
-    .line 195
-    goto :goto_5
+    .line 187
+    goto :goto_4
 
-    .line 197
-    :cond_5
+    .line 189
+    :cond_4
     move v1, v3
 
-    .line 198
-    :goto_5
+    .line 190
+    :goto_4
     iput-boolean v1, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShouldDelayLockscreenTransitionFromAod:Z
 
-    .line 199
-    if-nez v1, :cond_6
+    .line 191
+    if-nez v1, :cond_5
 
-    .line 201
+    .line 193
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$9;->startLockscreenTransitionFromAod()V
 
-    .line 203
-    :cond_6
+    .line 195
+    :cond_5
     return-void
 
-    .line 206
+    .line 198
     nop
 
-    .line 207
+    .line 199
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 208
+    .line 200
 .end method

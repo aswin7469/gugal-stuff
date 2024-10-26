@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/animation/ViewDialogTransitionAnimatorController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/animation/DialogTransitionAnimator$Controller;
@@ -376,25 +376,25 @@
     const-string p0, "ViewDialogTransitionAnimatorController"
 
     .line 28
-    const-string p1, "source was detached right before drawing was moved to overlay"
+    const-string/jumbo p1, "source was detached right before drawing was moved to overlay"
 
     .line 30
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
+    .line 33
     goto :goto_1
 
-    .line 35
+    .line 36
     :cond_2
     iget-object p0, p0, Lcom/android/systemui/animation/ViewDialogTransitionAnimatorController;->source:Landroid/view/View;
 
-    .line 36
+    .line 37
     invoke-static {p0, p1}, Landroid/view/GhostView;->addGhost(Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/GhostView;
 
-    .line 38
+    .line 39
     :goto_1
     return-void
-    .line 41
+    .line 42
 .end method
 
 .method public final stopDrawingInOverlay()V

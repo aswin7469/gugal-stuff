@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;
 .super Lcom/android/internal/app/ChooserActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorView;
@@ -11,7 +11,7 @@
 # instance fields
 .field public final activityLauncher:Lcom/android/systemui/util/AsyncActivityLauncher;
 
-.field public component:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;
+.field public component:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
 
 .field public final componentFactory:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent$Factory;
 
@@ -78,7 +78,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f1504cb    # @style/Theme.SystemUI.MediaProjectionAppSelector
+    const p0, 0x7f1404d3    # @style/Theme.SystemUI.MediaProjectionAppSelector
 
     .line 2
     return p0
@@ -142,7 +142,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;
+    iget-object p0, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
 
     .line 2
     if-nez p0, :cond_0
@@ -152,14 +152,20 @@
 
     .line 6
     :cond_0
-    invoke-interface {p0}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;->getEmptyStateProvider()Lcom/android/systemui/mediaprojection/appselector/MediaProjectionBlockerEmptyStateProvider;
+    iget-object p0, p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->mediaProjectionBlockerEmptyStateProvider:Ldagger/internal/Provider;
 
     .line 7
+    invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 9
     move-result-object p0
 
-    .line 10
+    .line 12
+    check-cast p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionBlockerEmptyStateProvider;
+
+    .line 13
     return-object p0
-    .line 11
+    .line 15
 .end method
 
 .method public final createContentPreviewView(Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
@@ -201,7 +207,7 @@
     move-result-object v0
 
     .line 22
-    const v1, 0x7f0e0169    # @layout/media_projection_recent_tasks 'res/layout/media_projection_recent_tasks.xml'
+    const v1, 0x7f0d0175    # @layout/media_projection_recent_tasks 'res/layout/media_projection_recent_tasks.xml'
 
     .line 23
     const/4 v2, 0x0
@@ -216,7 +222,7 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 31
-    const v1, 0x7f0b04b8    # @id/media_projection_recent_tasks_container
+    const v1, 0x7f0a04dc    # @id/media_projection_recent_tasks_container
 
     .line 33
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -228,7 +234,7 @@
     invoke-virtual {p0, v1}, Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;->setTaskHeightSize(Landroid/view/View;)V
 
     .line 40
-    const v3, 0x7f0b04b9    # @id/media_projection_recent_tasks_loader
+    const v3, 0x7f0a04dd    # @id/media_projection_recent_tasks_loader
 
     .line 43
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -237,7 +243,7 @@
     move-result-object v3
 
     .line 49
-    const v4, 0x7f0b04ba    # @id/media_projection_recent_tasks_recycler
+    const v4, 0x7f0a04de    # @id/media_projection_recent_tasks_recycler
 
     .line 50
     invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -270,7 +276,7 @@
     move-result-object p1
 
     .line 75
-    const v5, 0x7f070698    # @dimen/media_projection_app_selector_recents_padding '16.0dp'
+    const v5, 0x7f0706da    # @dimen/media_projection_app_selector_recents_padding '16.0dp'
 
     .line 76
     invoke-virtual {p1, v5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -360,7 +366,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f0e0168    # @layout/media_projection_app_selector 'res/layout/media_projection_app_selector.xml'
+    const p0, 0x7f0d0174    # @layout/media_projection_app_selector 'res/layout/media_projection_app_selector.xml'
 
     .line 2
     return p0
@@ -414,7 +420,7 @@
 .end method
 
 .method public final onCreate(Landroid/os/Bundle;)V
-    .locals 10
+    .locals 14
 
     .line 1
     const/4 v0, 0x1
@@ -429,559 +435,616 @@
     invoke-virtual {v1, v2}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 7
-    iget-object v3, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->componentFactory:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent$Factory;
+    iget-object v1, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->componentFactory:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent$Factory;
 
     .line 10
     invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->getIntent()Landroid/content/Intent;
 
     .line 12
-    move-result-object v1
+    move-result-object v2
 
     .line 15
-    invoke-virtual {v1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     .line 16
-    move-result-object v1
+    move-result-object v2
 
     .line 19
-    if-eqz v1, :cond_f
+    if-eqz v2, :cond_e
 
     .line 20
-    const-string v2, "launched_from_user_handle"
+    const-string v3, "launched_from_user_handle"
 
     .line 22
-    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     .line 24
-    move-result-object v1
+    move-result-object v2
 
     .line 27
-    move-object v4, v1
+    move-object v6, v2
 
     .line 28
-    check-cast v4, Landroid/os/UserHandle;
+    check-cast v6, Landroid/os/UserHandle;
 
     .line 29
-    if-eqz v4, :cond_e
+    if-eqz v6, :cond_d
 
     .line 31
     invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->getIntent()Landroid/content/Intent;
 
     .line 33
-    move-result-object v1
+    move-result-object v2
 
     .line 36
-    const-string v2, "launched_from_host_uid"
+    const-string v3, "launched_from_host_uid"
 
     .line 37
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     .line 39
-    move-result v1
+    move-result v2
 
     .line 42
-    if-eqz v1, :cond_d
+    if-eqz v2, :cond_c
 
     .line 43
     invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->getIntent()Landroid/content/Intent;
 
     .line 45
-    move-result-object v1
+    move-result-object v2
 
     .line 48
-    const/4 v5, -0x1
+    const/4 v4, -0x1
 
     .line 49
-    invoke-virtual {v1, v2, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     .line 50
-    move-result v5
+    move-result v2
 
     .line 53
     invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->getCallingPackage()Ljava/lang/String;
 
     .line 54
-    move-result-object v6
+    move-result-object v8
 
     .line 57
-    const/4 v1, 0x0
+    const/4 v12, 0x0
 
     .line 58
     if-nez p1, :cond_0
 
     .line 59
-    move v9, v0
+    move v3, v0
 
     .line 61
     goto :goto_0
 
     .line 62
     :cond_0
-    move v9, v1
+    move v3, v12
 
     .line 63
     :goto_0
-    move-object v7, p0
+    check-cast v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentFactory;
 
     .line 64
-    move-object v8, p0
-
-    .line 65
-    invoke-interface/range {v3 .. v9}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent$Factory;->create(Landroid/os/UserHandle;ILjava/lang/String;Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorView;Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorResultHandler;Z)Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 66
-    move-result-object v2
+    new-instance v13, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
 
     .line 69
-    iput-object v2, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 70
-    const/4 v3, 0x0
+    .line 71
+    move-result-object v7
 
-    .line 72
-    if-nez v2, :cond_1
-
-    .line 73
-    move-object v2, v3
+    .line 74
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     .line 75
-    :cond_1
-    invoke-interface {v2}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;->getLifecycleObservers()Ljava/util/Set;
+    move-result-object v11
 
-    .line 76
-    move-result-object v2
+    .line 78
+    iget-object v4, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentFactory;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
 
     .line 79
-    check-cast v2, Ljava/lang/Iterable;
+    iget-object v5, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$DozeComponentFactory;->sysUIGoogleSysUIComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
-    .line 80
-    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    .line 81
+    move-object v3, v13
 
-    .line 82
-    move-result-object v2
+    .line 83
+    move-object v9, p0
+
+    .line 84
+    move-object v10, p0
 
     .line 85
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct/range {v3 .. v11}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;-><init>(Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;Landroid/os/UserHandle;Ljava/lang/Integer;Ljava/lang/String;Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorView;Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorResultHandler;Ljava/lang/Boolean;)V
 
     .line 86
-    move-result v4
+    iput-object v13, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
 
     .line 89
-    if-eqz v4, :cond_2
+    iget-object v1, v13, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->taskPreviewSizeProvider:Ldagger/internal/Provider;
 
-    .line 90
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 91
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 92
-    move-result-object v4
-
-    .line 95
-    check-cast v4, Landroidx/lifecycle/DefaultLifecycleObserver;
+    .line 93
+    move-result-object v1
 
     .line 96
-    iget-object v5, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->lifecycle:Landroidx/lifecycle/LifecycleRegistry;
+    check-cast v1, Landroidx/lifecycle/DefaultLifecycleObserver;
 
-    .line 98
-    invoke-virtual {v5, v4}, Landroidx/lifecycle/LifecycleRegistry;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+    .line 97
+    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    .line 100
-    goto :goto_1
+    .line 99
+    move-result-object v1
+
+    .line 102
+    check-cast v1, Ljava/lang/Iterable;
 
     .line 103
-    :cond_2
-    iget-object v2, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 104
-    if-nez v2, :cond_3
-
-    .line 106
-    move-object v2, v3
+    .line 105
+    move-result-object v1
 
     .line 108
-    :cond_3
-    invoke-interface {v2}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;->getConfigurationController()Lcom/android/systemui/statusbar/policy/ConfigurationController;
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     .line 109
-    move-result-object v2
-
-    .line 112
-    iput-object v2, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
-
-    .line 113
-    iget-object v2, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;
-
-    .line 115
-    if-nez v2, :cond_4
-
-    .line 117
-    move-object v2, v3
-
-    .line 119
-    :cond_4
-    invoke-interface {v2}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;->getController()Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;
-
-    .line 120
-    move-result-object v2
-
-    .line 123
-    iput-object v2, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->controller:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;
-
-    .line 124
-    iget-object v2, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;
-
-    .line 126
-    if-nez v2, :cond_5
-
-    .line 128
-    move-object v2, v3
-
-    .line 130
-    :cond_5
-    invoke-interface {v2}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;->getRecentsViewController()Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;
-
-    .line 131
-    move-result-object v2
-
-    .line 134
-    iput-object v2, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->recentsViewController:Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;
-
-    .line 135
-    invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->getIntent()Landroid/content/Intent;
-
-    .line 137
-    move-result-object v2
-
-    .line 140
-    invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->getResources()Landroid/content/res/Resources;
-
-    .line 141
-    move-result-object v4
-
-    .line 144
-    iget-object v5, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;
-
-    .line 145
-    if-nez v5, :cond_6
-
-    .line 147
-    move-object v5, v3
-
-    .line 149
-    :cond_6
-    invoke-interface {v5}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;->getHostUserHandle()Landroid/os/UserHandle;
-
-    .line 150
-    move-result-object v5
-
-    .line 153
-    iget-object v6, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;
-
-    .line 154
-    if-nez v6, :cond_7
-
-    .line 156
-    move-object v6, v3
-
-    .line 158
-    :cond_7
-    invoke-interface {v6}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;->getPersonalProfileUserHandle()Landroid/os/UserHandle;
-
-    .line 159
-    move-result-object v6
-
-    .line 162
-    new-instance v7, Landroid/content/Intent;
-
-    .line 163
-    const-string v8, "android.intent.action.MAIN"
-
-    .line 165
-    invoke-direct {v7, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 167
-    const-string v8, "android.intent.category.LAUNCHER"
-
-    .line 170
-    invoke-virtual {v7, v8}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 172
-    const-string v8, "android.intent.extra.INTENT"
-
-    .line 175
-    invoke-virtual {v2, v8, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    .line 177
-    const v7, 0x7f14084f    # @string/screen_share_permission_app_selector_title 'Share or record an app'
-
-    .line 180
-    invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    .line 183
-    move-result-object v4
-
-    .line 186
-    const-string v7, "android.intent.extra.TITLE"
-
-    .line 187
-    invoke-virtual {v2, v7, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 189
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 192
-    move-result v4
-
-    .line 195
-    xor-int/2addr v4, v0
-
-    .line 196
-    const-string v5, "com.android.internal.app.ResolverActivity.EXTRA_SELECTED_PROFILE"
-
-    .line 197
-    invoke-virtual {v2, v5, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 199
-    invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->getIntent()Landroid/content/Intent;
-
-    .line 202
-    move-result-object v2
-
-    .line 205
-    const-string v4, "extra_media_projection_user_consent_required"
-
-    .line 206
-    invoke-virtual {v2, v4, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    .line 208
     move-result v2
 
-    .line 211
-    iput-boolean v2, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->reviewGrantedConsentRequired:Z
+    .line 112
+    if-eqz v2, :cond_1
 
-    .line 212
-    invoke-super {p0, p1}, Lcom/android/internal/app/ChooserActivity;->onCreate(Landroid/os/Bundle;)V
+    .line 113
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 214
-    iget-object p1, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->controller:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;
+    .line 115
+    move-result-object v2
 
-    .line 217
-    if-nez p1, :cond_8
+    .line 118
+    check-cast v2, Landroidx/lifecycle/DefaultLifecycleObserver;
 
-    .line 219
-    move-object p1, v3
+    .line 119
+    iget-object v3, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->lifecycle:Landroidx/lifecycle/LifecycleRegistry;
+
+    .line 121
+    invoke-virtual {v3, v2}, Landroidx/lifecycle/LifecycleRegistry;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+
+    .line 123
+    goto :goto_1
+
+    .line 126
+    :cond_1
+    iget-object v1, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
+
+    .line 127
+    const/4 v2, 0x0
+
+    .line 129
+    if-nez v1, :cond_2
+
+    .line 130
+    move-object v1, v2
+
+    .line 132
+    :cond_2
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->sysUIGoogleSysUIComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
+
+    .line 133
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->configurationControllerImplProvider:Ldagger/internal/Provider;
+
+    .line 135
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 137
+    move-result-object v1
+
+    .line 140
+    check-cast v1, Lcom/android/systemui/statusbar/policy/ConfigurationController;
+
+    .line 141
+    iput-object v1, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
+
+    .line 143
+    iget-object v1, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
+
+    .line 145
+    if-nez v1, :cond_3
+
+    .line 147
+    move-object v1, v2
+
+    .line 149
+    :cond_3
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->mediaProjectionAppSelectorControllerProvider:Ldagger/internal/Provider;
+
+    .line 150
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 152
+    move-result-object v1
+
+    .line 155
+    check-cast v1, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;
+
+    .line 156
+    iput-object v1, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->controller:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;
+
+    .line 158
+    iget-object v1, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
+
+    .line 160
+    if-nez v1, :cond_4
+
+    .line 162
+    move-object v1, v2
+
+    .line 164
+    :cond_4
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->mediaProjectionRecentsViewControllerProvider:Ldagger/internal/Provider;
+
+    .line 165
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 167
+    move-result-object v1
+
+    .line 170
+    check-cast v1, Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;
+
+    .line 171
+    iput-object v1, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->recentsViewController:Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;
+
+    .line 173
+    invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->getIntent()Landroid/content/Intent;
+
+    .line 175
+    move-result-object v1
+
+    .line 178
+    invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->getResources()Landroid/content/res/Resources;
+
+    .line 179
+    move-result-object v3
+
+    .line 182
+    iget-object v4, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
+
+    .line 183
+    if-nez v4, :cond_5
+
+    .line 185
+    move-object v5, v2
+
+    .line 187
+    goto :goto_2
+
+    .line 188
+    :cond_5
+    move-object v5, v4
+
+    .line 189
+    :goto_2
+    iget-object v5, v5, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->hostUserHandle:Landroid/os/UserHandle;
+
+    .line 190
+    if-nez v4, :cond_6
+
+    .line 192
+    move-object v4, v2
+
+    .line 194
+    :cond_6
+    iget-object v4, v4, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->sysUIGoogleSysUIComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
+
+    .line 195
+    invoke-static {v4}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->-$$Nest$mpersonalProfileUserHandle(Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;)Landroid/os/UserHandle;
+
+    .line 197
+    move-result-object v4
+
+    .line 200
+    new-instance v6, Landroid/content/Intent;
+
+    .line 201
+    const-string v7, "android.intent.action.MAIN"
+
+    .line 203
+    invoke-direct {v6, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 205
+    const-string v7, "android.intent.category.LAUNCHER"
+
+    .line 208
+    invoke-virtual {v6, v7}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 210
+    const-string v7, "android.intent.extra.INTENT"
+
+    .line 213
+    invoke-virtual {v1, v7, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    .line 215
+    const v6, 0x7f1308bd    # @string/screen_share_permission_app_selector_title 'Share or record an app'
+
+    .line 218
+    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     .line 221
-    :cond_8
-    iget-boolean v2, p1, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->isFirstStart:Z
-
-    .line 222
-    if-eqz v2, :cond_9
+    move-result-object v3
 
     .line 224
-    iget v2, p1, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->hostUid:I
+    const-string v6, "android.intent.extra.TITLE"
 
-    .line 226
-    iget-object v4, p1, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->logger:Lcom/android/systemui/mediaprojection/MediaProjectionMetricsLogger;
+    .line 225
+    invoke-virtual {v1, v6, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 228
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 227
+    invoke-static {v5, v4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 230
-    :try_start_0
-    iget-object v4, v4, Lcom/android/systemui/mediaprojection/MediaProjectionMetricsLogger;->service:Landroid/media/projection/IMediaProjectionManager;
+    move-result v3
 
     .line 233
-    invoke-interface {v4, v2}, Landroid/media/projection/IMediaProjectionManager;->notifyAppSelectorDisplayed(I)V
+    xor-int/2addr v3, v0
+
+    .line 234
+    const-string v4, "com.android.internal.app.ResolverActivity.EXTRA_SELECTED_PROFILE"
+
+    .line 235
+    invoke-virtual {v1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 237
+    invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->getIntent()Landroid/content/Intent;
+
+    .line 240
+    move-result-object v1
+
+    .line 243
+    const-string v3, "extra_media_projection_user_consent_required"
+
+    .line 244
+    invoke-virtual {v1, v3, v12}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    .line 246
+    move-result v1
+
+    .line 249
+    iput-boolean v1, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->reviewGrantedConsentRequired:Z
+
+    .line 250
+    invoke-super {p0, p1}, Lcom/android/internal/app/ChooserActivity;->onCreate(Landroid/os/Bundle;)V
+
+    .line 252
+    iget-object p1, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->controller:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;
+
+    .line 255
+    if-nez p1, :cond_7
+
+    .line 257
+    move-object p1, v2
+
+    .line 259
+    :cond_7
+    iget-boolean v1, p1, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->isFirstStart:Z
+
+    .line 260
+    if-eqz v1, :cond_8
+
+    .line 262
+    iget v1, p1, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->hostUid:I
+
+    .line 264
+    iget-object v3, p1, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->logger:Lcom/android/systemui/mediaprojection/MediaProjectionMetricsLogger;
+
+    .line 266
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 268
+    :try_start_0
+    iget-object v3, v3, Lcom/android/systemui/mediaprojection/MediaProjectionMetricsLogger;->service:Landroid/media/projection/IMediaProjectionManager;
+
+    .line 271
+    invoke-interface {v3, v1}, Landroid/media/projection/IMediaProjectionManager;->notifyAppSelectorDisplayed(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 235
-    goto :goto_2
-
-    .line 238
-    :catch_0
-    move-exception v2
-
-    .line 239
-    const-string v4, "MediaProjectionMetricsLogger"
-
-    .line 240
-    const-string v5, "Error notifying server of app selector displayed"
-
-    .line 242
-    invoke-static {v4, v5, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 244
-    :cond_9
-    :goto_2
-    new-instance v2, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController$init$1;
-
-    .line 247
-    invoke-direct {v2, p1, v3}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController$init$1;-><init>(Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;Lkotlin/coroutines/Continuation;)V
-
-    .line 249
-    iget-object p1, p1, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->scope:Lkotlinx/coroutines/CoroutineScope;
-
-    .line 252
-    const/4 v4, 0x3
-
-    .line 254
-    invoke-static {p1, v3, v3, v2, v4}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 255
-    const p1, 0x102026d    # @android:id/connectedDevice
-
-    .line 258
-    invoke-virtual {p0, p1}, Lcom/android/internal/app/ChooserActivity;->requireViewById(I)Landroid/view/View;
-
-    .line 261
-    move-result-object p1
-
-    .line 264
-    check-cast p1, Lcom/android/internal/widget/ResolverDrawerLayout;
-
-    .line 265
-    iget-object v2, p0, Lcom/android/internal/app/ChooserActivity;->mMultiProfilePagerAdapter:Lcom/android/internal/app/AbstractMultiProfilePagerAdapter;
-
-    .line 267
-    invoke-virtual {v2}, Lcom/android/internal/app/AbstractMultiProfilePagerAdapter;->getCount()I
-
-    .line 269
-    move-result v2
-
-    .line 272
-    :goto_3
-    if-ge v1, v2, :cond_c
-
     .line 273
-    iget-object v3, p0, Lcom/android/internal/app/ChooserActivity;->mMultiProfilePagerAdapter:Lcom/android/internal/app/AbstractMultiProfilePagerAdapter;
-
-    .line 275
-    invoke-virtual {v3, v1}, Lcom/android/internal/app/AbstractMultiProfilePagerAdapter;->getItem(I)Lcom/android/internal/app/AbstractMultiProfilePagerAdapter$ProfileDescriptor;
-
-    .line 277
-    move-result-object v3
-
-    .line 280
-    iget-object v3, v3, Lcom/android/internal/app/AbstractMultiProfilePagerAdapter$ProfileDescriptor;->rootView:Landroid/view/ViewGroup;
-
-    .line 281
-    const v4, 0x1020491    # @android:id/resolver_empty_state_subtitle
-
-    .line 283
-    invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    .line 286
-    move-result-object v3
-
-    .line 289
-    if-eqz v3, :cond_b
-
-    .line 290
-    instance-of v4, v3, Lcom/android/internal/widget/RecyclerView;
-
-    .line 292
-    if-nez v4, :cond_a
-
-    .line 294
-    goto :goto_4
-
-    .line 296
-    :cond_a
-    check-cast v3, Lcom/android/internal/widget/RecyclerView;
-
-    .line 297
-    new-instance v4, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity$RecyclerViewExpandingAccessibilityDelegate;
-
-    .line 299
-    invoke-direct {v4, p1, v3}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity$RecyclerViewExpandingAccessibilityDelegate;-><init>(Lcom/android/internal/widget/ResolverDrawerLayout;Lcom/android/internal/widget/RecyclerView;)V
-
-    .line 301
-    invoke-virtual {v3, v4}, Lcom/android/internal/widget/RecyclerView;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
-
-    .line 304
-    goto :goto_5
-
-    .line 307
-    :cond_b
-    :goto_4
-    const-string v3, "MediaProjectionAppSelectorActivity"
-
-    .line 308
-    const-string v4, "MediaProjection only supports RecyclerView"
-
-    .line 310
-    invoke-static {v3, v4}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 312
-    :goto_5
-    add-int/2addr v1, v0
-
-    .line 315
     goto :goto_3
 
-    .line 316
-    :cond_c
+    .line 276
+    :catch_0
+    move-exception v1
+
+    .line 277
+    const-string v3, "MediaProjectionMetricsLogger"
+
+    .line 278
+    const-string v4, "Error notifying server of app selector displayed"
+
+    .line 280
+    invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 282
+    :cond_8
+    :goto_3
+    new-instance v1, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController$init$1;
+
+    .line 285
+    invoke-direct {v1, p1, v2}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController$init$1;-><init>(Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;Lkotlin/coroutines/Continuation;)V
+
+    .line 287
+    iget-object p1, p1, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->scope:Lkotlinx/coroutines/CoroutineScope;
+
+    .line 290
+    const/4 v3, 0x3
+
+    .line 292
+    invoke-static {p1, v2, v2, v1, v3}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
+
+    .line 293
+    const p1, 0x102026d    # @android:id/connectedDevice
+
+    .line 296
+    invoke-virtual {p0, p1}, Lcom/android/internal/app/ChooserActivity;->requireViewById(I)Landroid/view/View;
+
+    .line 299
+    move-result-object p1
+
+    .line 302
+    check-cast p1, Lcom/android/internal/widget/ResolverDrawerLayout;
+
+    .line 303
+    iget-object v1, p0, Lcom/android/internal/app/ChooserActivity;->mMultiProfilePagerAdapter:Lcom/android/internal/app/AbstractMultiProfilePagerAdapter;
+
+    .line 305
+    invoke-virtual {v1}, Lcom/android/internal/app/AbstractMultiProfilePagerAdapter;->getCount()I
+
+    .line 307
+    move-result v1
+
+    .line 310
+    :goto_4
+    if-ge v12, v1, :cond_b
+
+    .line 311
+    iget-object v2, p0, Lcom/android/internal/app/ChooserActivity;->mMultiProfilePagerAdapter:Lcom/android/internal/app/AbstractMultiProfilePagerAdapter;
+
+    .line 313
+    invoke-virtual {v2, v12}, Lcom/android/internal/app/AbstractMultiProfilePagerAdapter;->getItem(I)Lcom/android/internal/app/AbstractMultiProfilePagerAdapter$ProfileDescriptor;
+
+    .line 315
+    move-result-object v2
+
+    .line 318
+    iget-object v2, v2, Lcom/android/internal/app/AbstractMultiProfilePagerAdapter$ProfileDescriptor;->rootView:Landroid/view/ViewGroup;
+
+    .line 319
+    const v3, 0x1020491    # @android:id/resolver_empty_state_subtitle
+
+    .line 321
+    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    .line 324
+    move-result-object v2
+
+    .line 327
+    if-eqz v2, :cond_a
+
+    .line 328
+    instance-of v3, v2, Lcom/android/internal/widget/RecyclerView;
+
+    .line 330
+    if-nez v3, :cond_9
+
+    .line 332
+    goto :goto_5
+
+    .line 334
+    :cond_9
+    check-cast v2, Lcom/android/internal/widget/RecyclerView;
+
+    .line 335
+    new-instance v3, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity$RecyclerViewExpandingAccessibilityDelegate;
+
+    .line 337
+    invoke-direct {v3, p1, v2}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity$RecyclerViewExpandingAccessibilityDelegate;-><init>(Lcom/android/internal/widget/ResolverDrawerLayout;Lcom/android/internal/widget/RecyclerView;)V
+
+    .line 339
+    invoke-virtual {v2, v3}, Lcom/android/internal/widget/RecyclerView;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
+
+    .line 342
+    goto :goto_6
+
+    .line 345
+    :cond_a
+    :goto_5
+    const-string v2, "MediaProjectionAppSelectorActivity"
+
+    .line 346
+    const-string v3, "MediaProjection only supports RecyclerView"
+
+    .line 348
+    invoke-static {v2, v3}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 350
+    :goto_6
+    add-int/2addr v12, v0
+
+    .line 353
+    goto :goto_4
+
+    .line 354
+    :cond_b
     return-void
 
-    .line 317
+    .line 355
+    :cond_c
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    .line 356
+    const-string p1, "MediaProjectionAppSelectorActivity should be provided with launched_from_host_uid extra"
+
+    .line 358
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 360
+    move-result-object p1
+
+    .line 363
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 364
+    throw p0
+
+    .line 367
     :cond_d
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 318
-    const-string p1, "MediaProjectionAppSelectorActivity should be provided with launched_from_host_uid extra"
+    .line 368
+    const-string p1, "MediaProjectionAppSelectorActivity should be provided with launched_from_user_handle extra"
 
-    .line 320
+    .line 370
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 322
+    .line 372
     move-result-object p1
 
-    .line 325
+    .line 375
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 326
+    .line 376
     throw p0
 
-    .line 329
+    .line 379
     :cond_e
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 330
-    const-string p1, "MediaProjectionAppSelectorActivity should be provided with launched_from_user_handle extra"
-
-    .line 332
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 334
-    move-result-object p1
-
-    .line 337
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    .line 338
-    throw p0
-
-    .line 341
-    :cond_f
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    .line 342
+    .line 380
     const-string p1, "MediaProjectionAppSelectorActivity should be launched with extras"
 
-    .line 344
+    .line 382
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 346
+    .line 384
     move-result-object p1
 
-    .line 349
+    .line 387
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 350
+    .line 388
     throw p0
-    .line 353
+    .line 391
 .end method
 
 .method public final onDestroy()V
@@ -997,7 +1060,7 @@
     invoke-virtual {v0, v1}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 6
-    iget-object v0, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;
+    iget-object v0, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->component:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;
 
     .line 9
     const/4 v1, 0x0
@@ -1010,150 +1073,162 @@
 
     .line 14
     :cond_0
-    invoke-interface {v0}, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorComponent;->getLifecycleObservers()Ljava/util/Set;
+    iget-object v0, v0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$MediaProjectionAppSelectorComponentImpl;->taskPreviewSizeProvider:Ldagger/internal/Provider;
 
     .line 15
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 17
     move-result-object v0
 
-    .line 18
-    check-cast v0, Ljava/lang/Iterable;
-
-    .line 19
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    .line 20
+    check-cast v0, Landroidx/lifecycle/DefaultLifecycleObserver;
 
     .line 21
+    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    .line 23
     move-result-object v0
 
-    .line 24
+    .line 26
+    check-cast v0, Ljava/lang/Iterable;
+
+    .line 27
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    .line 29
+    move-result-object v0
+
+    .line 32
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 25
+    .line 33
     move-result v2
 
-    .line 28
+    .line 36
     if-eqz v2, :cond_1
 
-    .line 29
+    .line 37
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 31
+    .line 39
     move-result-object v2
 
-    .line 34
+    .line 42
     check-cast v2, Landroidx/lifecycle/DefaultLifecycleObserver;
 
-    .line 35
+    .line 43
     iget-object v3, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->lifecycle:Landroidx/lifecycle/LifecycleRegistry;
 
-    .line 37
+    .line 45
     invoke-virtual {v3, v2}, Landroidx/lifecycle/LifecycleRegistry;->removeObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
-    .line 39
+    .line 47
     goto :goto_0
 
-    .line 42
+    .line 50
     :cond_1
     iget-boolean v0, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->taskSelected:Z
 
-    .line 43
+    .line 51
     if-nez v0, :cond_3
 
-    .line 45
+    .line 53
     sget-object v0, Lcom/android/systemui/mediaprojection/MediaProjectionServiceHelper;->service:Landroid/media/projection/IMediaProjectionManager;
 
-    .line 47
+    .line 55
     const/4 v0, 0x0
 
-    .line 49
+    .line 57
     iget-boolean v2, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->reviewGrantedConsentRequired:Z
 
-    .line 50
+    .line 58
     invoke-static {v0, v2, v1}, Lcom/android/systemui/mediaprojection/MediaProjectionServiceHelper$Companion;->setReviewedConsentIfNeeded(IZLandroid/media/projection/IMediaProjection;)V
 
-    .line 52
+    .line 60
     invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity;->isFinishing()Z
 
-    .line 55
+    .line 63
     move-result v0
 
-    .line 58
+    .line 66
     if-eqz v0, :cond_3
 
-    .line 59
+    .line 67
     iget-object v0, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->controller:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;
 
-    .line 61
+    .line 69
     if-nez v0, :cond_2
 
-    .line 63
+    .line 71
     move-object v0, v1
 
-    .line 65
+    .line 73
     :cond_2
     iget-object v2, v0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->logger:Lcom/android/systemui/mediaprojection/MediaProjectionMetricsLogger;
 
-    .line 66
+    .line 74
     iget v0, v0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->hostUid:I
 
-    .line 68
+    .line 76
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 70
+    .line 78
     :try_start_0
     iget-object v2, v2, Lcom/android/systemui/mediaprojection/MediaProjectionMetricsLogger;->service:Landroid/media/projection/IMediaProjectionManager;
 
-    .line 73
+    .line 81
     invoke-interface {v2, v0}, Landroid/media/projection/IMediaProjectionManager;->notifyPermissionRequestCancelled(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
+    .line 83
     goto :goto_1
 
-    .line 78
+    .line 86
     :catch_0
     move-exception v0
 
-    .line 79
+    .line 87
     const-string v2, "MediaProjectionMetricsLogger"
 
-    .line 80
+    .line 88
     const-string v3, "Error notifying server of projection cancelled"
 
-    .line 82
+    .line 90
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 84
+    .line 92
     :cond_3
     :goto_1
     iget-object v0, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->activityLauncher:Lcom/android/systemui/util/AsyncActivityLauncher;
 
-    .line 87
+    .line 95
     iput-object v1, v0, Lcom/android/systemui/util/AsyncActivityLauncher;->pendingCallback:Lkotlin/jvm/functions/Function1;
 
-    .line 89
+    .line 97
     iget-object v0, p0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorActivity;->controller:Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;
 
-    .line 91
+    .line 99
     if-nez v0, :cond_4
 
-    .line 93
+    .line 101
     move-object v0, v1
 
-    .line 95
+    .line 103
     :cond_4
     iget-object v0, v0, Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorController;->scope:Lkotlinx/coroutines/CoroutineScope;
 
-    .line 96
+    .line 104
     invoke-static {v0, v1}, Lkotlinx/coroutines/CoroutineScopeKt;->cancel(Lkotlinx/coroutines/CoroutineScope;Ljava/util/concurrent/CancellationException;)V
 
-    .line 98
+    .line 106
     invoke-super {p0}, Lcom/android/internal/app/ChooserActivity;->onDestroy()V
 
-    .line 101
+    .line 109
     return-void
-    .line 104
+    .line 112
 .end method
 
 .method public final onPause()V

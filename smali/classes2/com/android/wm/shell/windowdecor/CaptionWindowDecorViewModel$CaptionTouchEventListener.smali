@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/CaptionWindowDecorViewModel$CaptionTouchEventListener;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -349,7 +349,7 @@
     move-result-object v3
 
     .line 166
-    const v4, 0x7f070168    # @dimen/caption_left_buttons_width '32.0dp'
+    const v4, 0x7f07016e    # @dimen/caption_left_buttons_width '32.0dp'
 
     .line 167
     invoke-static {v4, v3}, Lcom/android/wm/shell/windowdecor/WindowDecoration;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
@@ -379,14 +379,14 @@
     if-lt v1, v4, :cond_7
 
     .line 186
-    const v1, 0x7f0702e8    # @dimen/freeform_required_visible_empty_space_in_header '48.0dp'
+    const v1, 0x7f070319    # @dimen/freeform_required_visible_empty_space_in_header '48.0dp'
 
     .line 188
     goto :goto_1
 
     .line 191
     :cond_7
-    const v1, 0x7f07098d    # @dimen/small_screen_required_visible_empty_space_in_header '12.0dp'
+    const v1, 0x7f0709e4    # @dimen/small_screen_required_visible_empty_space_in_header '12.0dp'
 
     .line 192
     :goto_1
@@ -414,7 +414,7 @@
     move-result-object v4
 
     .line 210
-    const v5, 0x7f070169    # @dimen/caption_right_buttons_width '126.0dp'
+    const v5, 0x7f07016f    # @dimen/caption_right_buttons_width '126.0dp'
 
     .line 211
     invoke-static {v5, v4}, Lcom/android/wm/shell/windowdecor/WindowDecoration;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
@@ -630,7 +630,7 @@
     move-result p1
 
     .line 5
-    const v0, 0x7f0b01df    # @id/close_window
+    const v0, 0x7f0a01ea    # @id/close_window
 
     .line 6
     if-ne p1, v0, :cond_1
@@ -698,7 +698,7 @@
 
     .line 53
     :cond_1
-    const v0, 0x7f0b00ef    # @id/back_button
+    const v0, 0x7f0a00f3    # @id/back_button
 
     .line 55
     const/4 v1, 0x1
@@ -729,7 +729,7 @@
 
     .line 74
     :cond_2
-    const v0, 0x7f0b04d4    # @id/minimize_window
+    const v0, 0x7f0a04f8    # @id/minimize_window
 
     .line 76
     if-ne p1, v0, :cond_4
@@ -797,7 +797,7 @@
 
     .line 123
     :cond_4
-    const v0, 0x7f0b049b    # @id/maximize_window
+    const v0, 0x7f0a04bf    # @id/maximize_window
 
     .line 125
     if-ne p1, v0, :cond_b
@@ -1023,7 +1023,7 @@
     move-result p1
 
     .line 5
-    const v0, 0x7f0b01a7    # @id/caption
+    const v0, 0x7f0a01ad    # @id/caption
 
     .line 6
     if-eq p1, v0, :cond_0

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder;
@@ -21,7 +21,7 @@
 
 .field public final logger:Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;
 
-.field public final notifLayoutInflaterFactoryProvider:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;
+.field public final notifLayoutInflaterFactoryProvider:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;
 
 .field public final remoteInputManager:Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
 
@@ -48,7 +48,7 @@
     .line 9
 .end method
 
-.method public constructor <init>(Lcom/android/systemui/statusbar/notification/row/NotifRemoteViewCache;Lcom/android/systemui/statusbar/NotificationRemoteInputManager;Lcom/android/systemui/statusbar/notification/ConversationNotificationProcessor;Ljava/util/concurrent/Executor;Lcom/android/systemui/statusbar/policy/SmartReplyStateInflaterImpl;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;Lcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;)V
+.method public constructor <init>(Lcom/android/systemui/statusbar/notification/row/NotifRemoteViewCache;Lcom/android/systemui/statusbar/NotificationRemoteInputManager;Lcom/android/systemui/statusbar/notification/ConversationNotificationProcessor;Ljava/util/concurrent/Executor;Lcom/android/systemui/statusbar/policy/SmartReplyStateInflaterImpl;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;Lcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;)V
     .locals 0
 
     .line 1
@@ -70,7 +70,7 @@
     iput-object p5, p0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->smartReplyStateInflater:Lcom/android/systemui/statusbar/policy/SmartReplyStateInflater;
 
     .line 13
-    iput-object p6, p0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->notifLayoutInflaterFactoryProvider:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;
+    iput-object p6, p0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->notifLayoutInflaterFactoryProvider:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;
 
     .line 15
     iput-object p7, p0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->headsUpStyleProvider:Lcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;
@@ -79,88 +79,76 @@
     iput-object p8, p0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->logger:Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;
 
     .line 19
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationRowContentBinderRefactor()Z
-
-    .line 21
-    move-result p0
-
-    .line 24
-    xor-int/lit8 p0, p0, 0x1
-
-    .line 25
-    if-eqz p0, :cond_2
-
-    .line 27
     const/4 p0, 0x7
 
-    .line 29
+    .line 21
     const-string p1, "RefactorFlagAssert"
 
-    .line 30
+    .line 22
     invoke-static {p1, p0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    .line 24
+    move-result p0
+
+    .line 27
+    const-string p2, "New code path expects com.android.systemui.notification_row_content_binder_refactor to be enabled."
+
+    .line 28
+    if-eqz p0, :cond_1
+
+    .line 30
+    invoke-static {}, Landroid/os/Build;->isDebuggable()Z
 
     .line 32
     move-result p0
 
     .line 35
-    const-string p2, "New code path expects com.android.systemui.notification_row_content_binder_refactor to be enabled."
-
-    .line 36
-    if-eqz p0, :cond_1
-
-    .line 38
-    invoke-static {}, Landroid/os/Build;->isDebuggable()Z
-
-    .line 40
-    move-result p0
-
-    .line 43
     if-eqz p0, :cond_0
 
-    .line 44
+    .line 36
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 46
+    .line 38
     invoke-direct {p0, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 48
+    .line 40
     goto :goto_0
 
-    .line 51
+    .line 43
     :cond_0
     const/4 p0, 0x0
 
-    .line 52
+    .line 44
     :goto_0
     invoke-static {p1, p2, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 53
+    .line 45
     goto :goto_1
 
-    .line 56
+    .line 48
     :cond_1
     const/4 p0, 0x5
 
-    .line 57
+    .line 49
     const-string p1, "RefactorFlag"
 
-    .line 58
+    .line 50
     invoke-static {p1, p0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    .line 60
+    .line 52
     move-result p0
 
-    .line 63
+    .line 55
     if-eqz p0, :cond_2
 
-    .line 64
+    .line 56
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
+    .line 58
     :cond_2
     :goto_1
     return-void
-    .line 69
+    .line 61
 .end method
 
 
@@ -344,161 +332,136 @@
 
     .line 113
     :cond_5
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncHybridViewInflation()Z
-
-    .line 116
-    move-result v2
-
-    .line 119
-    if-eqz v2, :cond_6
-
-    .line 120
-    and-int/lit8 v2, v4, 0x10
-
-    .line 122
-    if-eqz v2, :cond_6
-
-    .line 124
-    iget-object v2, v8, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
-
-    .line 126
-    const/4 v3, 0x3
-
-    .line 128
-    invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->removeContentInactiveRunnable(I)V
-
-    .line 129
-    :cond_6
     new-instance v12, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$AsyncInflationTask;
 
-    .line 132
+    .line 116
     iget-object v2, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->inflationExecutor:Ljava/util/concurrent/Executor;
 
-    .line 134
+    .line 118
     iget-boolean v3, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->inflateSynchronously:Z
 
-    .line 136
+    .line 120
     iget-boolean v9, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->isMinimized:Z
 
-    .line 138
+    .line 122
     iget-boolean v10, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->usesIncreasedHeight:Z
 
-    .line 140
+    .line 124
     iget-boolean v11, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->usesIncreasedHeadsUpHeight:Z
 
-    .line 142
+    .line 126
     iget-object v1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->remoteInputManager:Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
 
-    .line 144
+    .line 128
     iget-object v1, v1, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->mInteractionHandler:Lcom/android/systemui/statusbar/NotificationRemoteInputManager$1;
 
-    .line 146
-    iget-object v15, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->notifLayoutInflaterFactoryProvider:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;
+    .line 130
+    iget-object v15, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->notifLayoutInflaterFactoryProvider:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;
 
-    .line 148
+    .line 132
     iget-object v5, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->smartReplyStateInflater:Lcom/android/systemui/statusbar/policy/SmartReplyStateInflater;
 
-    .line 150
+    .line 134
     move-object v14, v5
 
-    .line 152
+    .line 136
     check-cast v14, Lcom/android/systemui/statusbar/policy/SmartReplyStateInflaterImpl;
 
-    .line 153
+    .line 137
     iget-object v5, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->remoteViewCache:Lcom/android/systemui/statusbar/notification/row/NotifRemoteViewCache;
 
-    .line 155
+    .line 139
     iget-object v7, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->conversationProcessor:Lcom/android/systemui/statusbar/notification/ConversationNotificationProcessor;
 
-    .line 157
+    .line 141
     iget-object v13, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->headsUpStyleProvider:Lcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;
 
-    .line 159
+    .line 143
     move-object/from16 v16, v13
 
-    .line 161
+    .line 145
     iget-object v13, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->logger:Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;
 
-    .line 163
+    .line 147
     move-object/from16 v17, v13
 
-    .line 165
+    .line 149
     move-object v13, v1
 
-    .line 167
+    .line 151
     move-object v1, v12
 
-    .line 168
+    .line 152
     move/from16 v4, p3
 
-    .line 169
+    .line 153
     move-object/from16 v6, p1
 
-    .line 171
+    .line 155
     move-object/from16 v8, p2
 
-    .line 173
+    .line 157
     move-object/from16 p1, v12
 
-    .line 175
+    .line 159
     move-object/from16 v12, p6
 
-    .line 177
-    invoke-direct/range {v1 .. v17}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$AsyncInflationTask;-><init>(Ljava/util/concurrent/Executor;ZILcom/android/systemui/statusbar/notification/row/NotifRemoteViewCache;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/ConversationNotificationProcessor;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;ZZZLcom/android/systemui/statusbar/notification/row/RowContentBindStage$1;Lcom/android/systemui/statusbar/NotificationRemoteInputManager$1;Lcom/android/systemui/statusbar/policy/SmartReplyStateInflaterImpl;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;Lcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;)V
+    .line 161
+    invoke-direct/range {v1 .. v17}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$AsyncInflationTask;-><init>(Ljava/util/concurrent/Executor;ZILcom/android/systemui/statusbar/notification/row/NotifRemoteViewCache;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/ConversationNotificationProcessor;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;ZZZLcom/android/systemui/statusbar/notification/row/RowContentBindStage$1;Lcom/android/systemui/statusbar/NotificationRemoteInputManager$1;Lcom/android/systemui/statusbar/policy/SmartReplyStateInflaterImpl;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;Lcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;)V
 
-    .line 179
+    .line 163
     iget-boolean v1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->inflateSynchronously:Z
 
-    .line 182
-    if-eqz v1, :cond_7
+    .line 166
+    if-eqz v1, :cond_6
 
-    .line 184
+    .line 168
     const/4 v1, 0x0
 
-    .line 186
+    .line 170
     new-array v0, v1, [Ljava/lang/Void;
 
-    .line 187
+    .line 171
     invoke-virtual/range {p1 .. p1}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$AsyncInflationTask;->doInBackground-IoAF18A()Ljava/lang/Object;
 
-    .line 189
+    .line 173
     move-result-object v0
 
-    .line 192
+    .line 176
     new-instance v1, Lkotlin/Result;
 
-    .line 193
+    .line 177
     invoke-direct {v1, v0}, Lkotlin/Result;-><init>(Ljava/lang/Object;)V
 
-    .line 195
+    .line 179
     move-object/from16 v2, p1
 
-    .line 198
+    .line 182
     invoke-virtual {v2, v1}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$AsyncInflationTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 200
+    .line 184
     goto :goto_1
 
-    .line 203
-    :cond_7
+    .line 187
+    :cond_6
     move-object/from16 v2, p1
 
-    .line 204
+    .line 188
     const/4 v1, 0x0
 
-    .line 206
+    .line 190
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->inflationExecutor:Ljava/util/concurrent/Executor;
 
-    .line 207
+    .line 191
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 209
+    .line 193
     invoke-virtual {v2, v0, v1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 211
+    .line 195
     :goto_1
     return-void
-    .line 214
+    .line 198
 .end method
 
 .method public final cancelBind(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
@@ -577,224 +540,146 @@
     invoke-virtual/range {p2 .. p2}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     .line 6
-    move-result-object v15
+    move-result-object v5
 
     .line 9
-    iget-boolean v5, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->isMinimized:Z
+    iget-boolean v9, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->isMinimized:Z
 
     .line 10
-    iget-boolean v6, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->usesIncreasedHeight:Z
+    iget-boolean v10, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->usesIncreasedHeight:Z
 
     .line 12
-    iget-boolean v7, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->usesIncreasedHeadsUpHeight:Z
+    iget-boolean v11, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->usesIncreasedHeadsUpHeight:Z
 
     .line 14
-    invoke-static {v15}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 16
-    iget-object v11, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->notifLayoutInflaterFactoryProvider:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;
+    iget-object v14, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->notifLayoutInflaterFactoryProvider:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;
 
     .line 19
-    iget-object v12, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->headsUpStyleProvider:Lcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;
+    iget-object v15, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->headsUpStyleProvider:Lcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;
 
     .line 21
-    iget-object v13, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->conversationProcessor:Lcom/android/systemui/statusbar/notification/ConversationNotificationProcessor;
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->conversationProcessor:Lcom/android/systemui/statusbar/notification/ConversationNotificationProcessor;
 
     .line 23
-    iget-object v14, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->logger:Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;
-
-    .line 25
-    move/from16 v2, p5
-
-    .line 27
-    move-object/from16 v3, p1
-
-    .line 29
-    move-object/from16 v4, p6
-
-    .line 31
-    move-object v8, v15
-
-    .line 33
-    move-object/from16 v9, p7
-
-    .line 34
-    move-object/from16 v10, p2
-
-    .line 36
-    invoke-static/range {v2 .. v14}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$Companion;->access$beginInflationAsync(ILcom/android/systemui/statusbar/notification/collection/NotificationEntry;Landroid/app/Notification$Builder;ZZZLandroid/content/Context;Landroid/content/Context;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;Lcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;Lcom/android/systemui/statusbar/notification/ConversationNotificationProcessor;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;)Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$InflationProgress;
-
-    .line 38
-    move-result-object v10
-
-    .line 41
-    move-object/from16 v11, p2
-
-    .line 42
-    iget-object v2, v11, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
-
-    .line 44
-    iget-object v7, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mCurrentSmartReplyState:Lcom/android/systemui/statusbar/policy/InflatedSmartReplyState;
-
-    .line 46
-    iget-object v9, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->logger:Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;
-
-    .line 48
-    move-object v2, v10
-
-    .line 50
-    move/from16 v3, p5
-
-    .line 51
-    move-object/from16 v4, p1
-
-    .line 53
-    move-object v5, v15
-
-    .line 55
-    move-object/from16 v6, p7
-
-    .line 56
-    move-object/from16 v8, p8
-
-    .line 58
-    invoke-static/range {v2 .. v9}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$Companion;->access$inflateSmartReplyViews(Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$InflationProgress;ILcom/android/systemui/statusbar/notification/collection/NotificationEntry;Landroid/content/Context;Landroid/content/Context;Lcom/android/systemui/statusbar/policy/InflatedSmartReplyState;Lcom/android/systemui/statusbar/policy/SmartReplyStateInflater;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;)V
-
-    .line 60
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncHybridViewInflation()Z
-
-    .line 63
-    move-result v2
-
-    .line 66
-    if-eqz v2, :cond_2
-
-    .line 67
-    iget-object v2, v10, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$InflationProgress;->contentModel:Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;
-
-    .line 69
-    iget-object v2, v2, Lcom/android/systemui/statusbar/notification/row/shared/NotificationContentModel;->singleLineViewModel:Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/SingleLineViewModel;
-
-    .line 71
-    if-eqz v2, :cond_1
-
-    .line 73
-    iget-object v2, v2, Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/SingleLineViewModel;->conversationData:Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/ConversationData;
-
-    .line 75
-    if-eqz v2, :cond_0
-
-    .line 77
-    const/4 v2, 0x1
-
-    .line 79
-    goto :goto_0
-
-    .line 80
-    :cond_0
-    const/4 v2, 0x0
-
-    .line 81
-    :goto_0
     iget-object v3, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->logger:Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;
 
-    .line 82
-    move-object/from16 v4, p1
+    .line 25
+    move/from16 v6, p5
 
-    .line 84
-    move/from16 v5, p5
+    .line 27
+    move-object/from16 v7, p1
 
-    .line 86
-    invoke-static {v2, v5, v4, v15, v3}, Lcom/android/systemui/statusbar/notification/row/SingleLineViewInflater;->inflateSingleLineViewHolder(ZILcom/android/systemui/statusbar/notification/collection/NotificationEntry;Landroid/content/Context;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;)Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
+    .line 29
+    move-object/from16 v8, p6
 
-    .line 88
-    move-result-object v2
+    .line 31
+    move-object/from16 v12, p7
 
-    .line 91
-    goto :goto_1
+    .line 33
+    move-object/from16 v13, p2
 
-    .line 92
-    :cond_1
-    move-object/from16 v4, p1
-
-    .line 93
-    move/from16 v5, p5
-
-    .line 95
-    const/4 v2, 0x0
-
-    .line 97
-    :goto_1
-    iput-object v2, v10, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$InflationProgress;->inflatedSingleLineView:Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
-
-    .line 98
-    goto :goto_2
-
-    .line 100
-    :cond_2
-    move-object/from16 v4, p1
-
-    .line 101
-    move/from16 v5, p5
-
-    .line 103
-    :goto_2
-    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->inflationExecutor:Ljava/util/concurrent/Executor;
-
-    .line 105
-    iget-boolean v1, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->isMinimized:Z
-
-    .line 107
-    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->remoteInputManager:Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
-
-    .line 109
-    iget-object v3, v3, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->mInteractionHandler:Lcom/android/systemui/statusbar/NotificationRemoteInputManager$1;
-
-    .line 111
-    iget-object v6, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->logger:Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;
-
-    .line 113
-    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->remoteViewCache:Lcom/android/systemui/statusbar/notification/row/NotifRemoteViewCache;
-
-    .line 115
-    const/16 v25, 0x0
-
-    .line 117
+    .line 35
     move-object/from16 v16, v2
 
-    .line 119
+    .line 37
+    move-object/from16 v17, v3
+
+    .line 39
+    invoke-static/range {v6 .. v17}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$Companion;->access$beginInflationAsync(ILcom/android/systemui/statusbar/notification/collection/NotificationEntry;Landroid/app/Notification$Builder;ZZZLandroid/content/Context;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;Lcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;Lcom/android/systemui/statusbar/notification/ConversationNotificationProcessor;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;)Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$InflationProgress;
+
+    .line 41
+    move-result-object v10
+
+    .line 44
+    move-object/from16 v11, p2
+
+    .line 45
+    iget-object v2, v11, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
+
+    .line 47
+    iget-object v7, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->mCurrentSmartReplyState:Lcom/android/systemui/statusbar/policy/InflatedSmartReplyState;
+
+    .line 49
+    iget-object v9, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->logger:Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;
+
+    .line 51
+    move-object v2, v10
+
+    .line 53
+    move/from16 v3, p5
+
+    .line 54
+    move-object/from16 v4, p1
+
+    .line 56
+    move-object/from16 v6, p7
+
+    .line 58
+    move-object/from16 v8, p8
+
+    .line 60
+    invoke-static/range {v2 .. v9}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$Companion;->access$inflateSmartReplyViews(Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$InflationProgress;ILcom/android/systemui/statusbar/notification/collection/NotificationEntry;Landroid/content/Context;Landroid/content/Context;Lcom/android/systemui/statusbar/policy/InflatedSmartReplyState;Lcom/android/systemui/statusbar/policy/SmartReplyStateInflater;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;)V
+
+    .line 62
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->inflationExecutor:Ljava/util/concurrent/Executor;
+
+    .line 65
+    iget-boolean v1, v1, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$BindParams;->isMinimized:Z
+
+    .line 67
+    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->remoteInputManager:Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
+
+    .line 69
+    iget-object v3, v3, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->mInteractionHandler:Lcom/android/systemui/statusbar/NotificationRemoteInputManager$1;
+
+    .line 71
+    iget-object v4, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->logger:Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;
+
+    .line 73
+    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;->remoteViewCache:Lcom/android/systemui/statusbar/notification/row/NotifRemoteViewCache;
+
+    .line 75
+    const/16 v25, 0x0
+
+    .line 77
+    move-object/from16 v16, v2
+
+    .line 79
     move/from16 v17, p4
 
-    .line 121
+    .line 81
     move/from16 v18, v1
 
-    .line 123
+    .line 83
     move-object/from16 v19, v10
 
-    .line 125
+    .line 85
     move/from16 v20, p5
 
-    .line 127
+    .line 87
     move-object/from16 v21, v0
 
-    .line 129
+    .line 89
     move-object/from16 v22, p1
 
-    .line 131
+    .line 91
     move-object/from16 v23, p2
 
-    .line 133
+    .line 93
     move-object/from16 v24, v3
 
-    .line 135
-    move-object/from16 v26, v6
+    .line 95
+    move-object/from16 v26, v4
 
-    .line 137
+    .line 97
     invoke-static/range {v16 .. v26}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$Companion;->access$apply(Ljava/util/concurrent/Executor;ZZLcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$InflationProgress;ILcom/android/systemui/statusbar/notification/row/NotifRemoteViewCache;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Landroid/widget/RemoteViews$InteractionHandler;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinder$InflationCallback;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;)Landroid/os/CancellationSignal;
 
-    .line 139
+    .line 99
     return-object v10
-    .line 142
+    .line 102
 .end method
 
 .method public setInflateSynchronously(Z)V
@@ -867,164 +752,130 @@
 
     .line 35
     :goto_0
-    if-eqz p3, :cond_6
+    if-eqz p3, :cond_5
 
     .line 36
     and-int v2, p3, v1
 
     .line 38
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_4
 
     .line 40
     const/4 v2, 0x0
 
     .line 42
-    if-eq v1, v0, :cond_4
+    if-eq v1, v0, :cond_3
 
     .line 43
     const/4 v3, 0x2
 
     .line 45
-    if-eq v1, v3, :cond_3
+    if-eq v1, v3, :cond_2
 
     .line 46
     const/4 v4, 0x4
 
     .line 48
-    if-eq v1, v4, :cond_2
+    if-eq v1, v4, :cond_1
 
     .line 49
     const/16 v3, 0x8
 
     .line 51
-    if-eq v1, v3, :cond_1
+    if-eq v1, v3, :cond_0
 
     .line 53
-    const/16 v2, 0x10
+    goto :goto_1
 
     .line 55
-    if-eq v1, v2, :cond_0
-
-    .line 57
-    goto :goto_1
-
-    .line 59
     :cond_0
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncHybridViewInflation()Z
-
-    .line 60
-    move-result v2
-
-    .line 63
-    if-eqz v2, :cond_5
-
-    .line 64
-    iget-object v2, p2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
-
-    .line 66
-    new-instance v3, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$5;
-
-    .line 68
-    invoke-direct {v3, p2}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$5;-><init>(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;)V
-
-    .line 70
-    const/4 v4, 0x3
-
-    .line 73
-    invoke-virtual {v2, v4, v3}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->performWhenContentInactive(ILjava/lang/Runnable;)V
-
-    .line 74
-    goto :goto_1
-
-    .line 77
-    :cond_1
     iget-object v3, p2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPublicLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
-    .line 78
+    .line 56
     new-instance v4, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$1;
 
-    .line 80
+    .line 58
     const/4 v5, 0x3
 
-    .line 82
+    .line 60
     invoke-direct {v4, p2, p0, p1, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$1;-><init>(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;I)V
 
-    .line 83
+    .line 61
     invoke-virtual {v3, v2, v4}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->performWhenContentInactive(ILjava/lang/Runnable;)V
 
-    .line 86
+    .line 64
     goto :goto_1
 
-    .line 89
+    .line 67
+    :cond_1
+    iget-object v2, p2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
+
+    .line 68
+    new-instance v4, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$1;
+
+    .line 70
+    const/4 v5, 0x2
+
+    .line 72
+    invoke-direct {v4, p2, p0, p1, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$1;-><init>(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;I)V
+
+    .line 73
+    invoke-virtual {v2, v3, v4}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->performWhenContentInactive(ILjava/lang/Runnable;)V
+
+    .line 76
+    goto :goto_1
+
+    .line 79
     :cond_2
     iget-object v2, p2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
-    .line 90
-    new-instance v4, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$1;
-
-    .line 92
-    const/4 v5, 0x2
-
-    .line 94
-    invoke-direct {v4, p2, p0, p1, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$1;-><init>(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;I)V
-
-    .line 95
-    invoke-virtual {v2, v3, v4}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->performWhenContentInactive(ILjava/lang/Runnable;)V
-
-    .line 98
-    goto :goto_1
-
-    .line 101
-    :cond_3
-    iget-object v2, p2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
-
-    .line 102
+    .line 80
     new-instance v3, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$1;
 
-    .line 104
+    .line 82
     const/4 v4, 0x1
 
-    .line 106
+    .line 84
     invoke-direct {v3, p2, p0, p1, v4}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$1;-><init>(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;I)V
 
-    .line 107
+    .line 85
     invoke-virtual {v2, v0, v3}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->performWhenContentInactive(ILjava/lang/Runnable;)V
 
-    .line 110
+    .line 88
     goto :goto_1
 
-    .line 113
-    :cond_4
+    .line 91
+    :cond_3
     iget-object v3, p2, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
-    .line 114
+    .line 92
     new-instance v4, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$1;
 
-    .line 116
+    .line 94
     const/4 v5, 0x0
 
-    .line 118
+    .line 96
     invoke-direct {v4, p2, p0, p1, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl$freeNotificationView$1;-><init>(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderImpl;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;I)V
 
-    .line 119
+    .line 97
     invoke-virtual {v3, v2, v4}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->performWhenContentInactive(ILjava/lang/Runnable;)V
 
-    .line 122
-    :cond_5
+    .line 100
+    :cond_4
     :goto_1
     not-int v2, v1
 
-    .line 125
+    .line 103
     and-int/2addr p3, v2
 
-    .line 126
+    .line 104
     shl-int/lit8 v1, v1, 0x1
 
-    .line 127
+    .line 105
     goto :goto_0
 
-    .line 129
-    :cond_6
+    .line 107
+    :cond_5
     return-void
-    .line 130
+    .line 108
 .end method

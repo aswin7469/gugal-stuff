@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/bubbles/bar/BubbleBarMenuView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -86,7 +86,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b016a    # @id/bubble_bar_manage_menu_bubble_section
+    const v0, 0x7f0a0170    # @id/bubble_bar_manage_menu_bubble_section
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -101,7 +101,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/bubbles/bar/BubbleBarMenuView;->mBubbleSectionView:Landroid/view/ViewGroup;
 
     .line 14
-    const v0, 0x7f0b0168    # @id/bubble_bar_manage_menu_actions_section
+    const v0, 0x7f0a016e    # @id/bubble_bar_manage_menu_actions_section
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -116,7 +116,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/bubbles/bar/BubbleBarMenuView;->mActionsSectionView:Landroid/view/ViewGroup;
 
     .line 25
-    const v0, 0x7f0b0169    # @id/bubble_bar_manage_menu_bubble_icon
+    const v0, 0x7f0a016f    # @id/bubble_bar_manage_menu_bubble_icon
 
     .line 27
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -131,7 +131,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/bubbles/bar/BubbleBarMenuView;->mBubbleIconView:Landroid/widget/ImageView;
 
     .line 36
-    const v0, 0x7f0b016b    # @id/bubble_bar_manage_menu_bubble_title
+    const v0, 0x7f0a0171    # @id/bubble_bar_manage_menu_bubble_title
 
     .line 38
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -217,7 +217,7 @@
     iget-object v2, p0, Lcom/android/wm/shell/bubbles/bar/BubbleBarMenuView;->mActionsSectionView:Landroid/view/ViewGroup;
 
     .line 29
-    const v3, 0x7f0e005f    # @layout/bubble_bar_menu_item 'res/layout/bubble_bar_menu_item.xml'
+    const v3, 0x7f0d0064    # @layout/bubble_bar_menu_item 'res/layout/bubble_bar_menu_item.xml'
 
     .line 31
     const/4 v4, 0x0

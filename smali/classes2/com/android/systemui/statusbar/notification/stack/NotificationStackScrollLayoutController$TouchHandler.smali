@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$TouchHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Gefingerpoken;
@@ -561,312 +561,306 @@
     if-nez v8, :cond_4
 
     .line 94
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 96
-    iget-object v8, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
-
-    .line 99
-    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 101
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    .line 104
-    move-result-object v9
+    .line 99
+    move-result-object v8
 
-    .line 107
-    invoke-virtual {v9, v4}, Landroid/view/MotionEvent;->setAction(I)V
+    .line 102
+    invoke-virtual {v8, v4}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 108
-    invoke-virtual {v8, v9}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->onScrollTouch(Landroid/view/MotionEvent;)Z
+    .line 103
+    invoke-virtual {v9, v8}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->onScrollTouch(Landroid/view/MotionEvent;)Z
 
-    .line 111
-    invoke-virtual {v9}, Landroid/view/MotionEvent;->recycle()V
+    .line 106
+    invoke-virtual {v8}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 114
+    .line 109
     :cond_4
     move v8, v10
 
-    .line 117
+    .line 112
     goto :goto_3
 
-    .line 118
+    .line 113
     :cond_5
     move v6, v4
 
-    .line 119
+    .line 114
     :goto_3
     iget-object v9, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mLongPressedView:Landroid/view/View;
 
-    .line 120
+    .line 115
     if-nez v9, :cond_6
 
-    .line 122
+    .line 117
     iget-object v9, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 124
+    .line 119
     iget-boolean v10, v9, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mIsBeingDragged:Z
 
-    .line 126
+    .line 121
     if-nez v10, :cond_6
 
-    .line 128
+    .line 123
     if-nez v8, :cond_6
 
-    .line 130
+    .line 125
     iget-boolean v10, v9, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mExpandedInThisMotion:Z
 
-    .line 132
+    .line 127
     if-nez v10, :cond_6
 
-    .line 134
+    .line 129
     if-nez v7, :cond_6
 
-    .line 136
+    .line 131
     iget-boolean v7, v9, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mDisallowDismissInThisMotion:Z
 
-    .line 138
+    .line 133
     if-nez v7, :cond_6
 
-    .line 140
+    .line 135
     iget-object v7, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSwipeHelper:Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;
 
-    .line 142
+    .line 137
     invoke-virtual {v7, p1}, Lcom/android/systemui/SwipeHelper;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 144
+    .line 139
     move-result v7
 
-    .line 147
+    .line 142
     goto :goto_4
 
-    .line 148
+    .line 143
     :cond_6
     move v7, v4
 
-    .line 149
+    .line 144
     :goto_4
     iget-object v9, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mLongPressedView:Landroid/view/View;
 
-    .line 150
+    .line 145
     if-nez v9, :cond_7
 
-    .line 152
+    .line 147
     iget-object v9, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 154
+    .line 149
     iget-boolean v10, v9, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mIsExpanded:Z
 
-    .line 156
+    .line 151
     if-eqz v10, :cond_7
 
-    .line 158
+    .line 153
     iget-object v10, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSwipeHelper:Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;
 
-    .line 160
+    .line 155
     iget-boolean v10, v10, Lcom/android/systemui/SwipeHelper;->mIsSwiping:Z
 
-    .line 162
+    .line 157
     if-nez v10, :cond_7
 
-    .line 164
+    .line 159
     if-nez v8, :cond_7
 
-    .line 166
+    .line 161
     iget-boolean v8, v9, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mDisallowScrollingInThisMotion:Z
 
-    .line 168
+    .line 163
     if-nez v8, :cond_7
 
-    .line 170
+    .line 165
     invoke-virtual {v9, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->onScrollTouch(Landroid/view/MotionEvent;)Z
 
-    .line 172
+    .line 167
     move-result v8
 
-    .line 175
+    .line 170
     goto :goto_5
 
-    .line 176
+    .line 171
     :cond_7
     move v8, v4
 
-    .line 177
+    .line 172
     :goto_5
     if-eqz v0, :cond_a
 
-    .line 178
+    .line 173
     invoke-static {v0, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;->isTouchInView(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
-    .line 180
+    .line 175
     move-result v9
 
-    .line 183
+    .line 178
     if-nez v9, :cond_a
 
-    .line 184
+    .line 179
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationGuts;->mGutsContent:Lcom/android/systemui/statusbar/notification/row/NotificationGuts$GutsContent;
 
-    .line 186
+    .line 181
     instance-of v9, v0, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze;
 
-    .line 188
+    .line 183
     if-eqz v9, :cond_a
 
-    .line 190
+    .line 185
     check-cast v0, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze;
 
-    .line 192
+    .line 187
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze;->mExpanded:Z
 
-    .line 194
+    .line 189
     if-eqz v0, :cond_8
 
-    .line 196
+    .line 191
     if-nez v1, :cond_9
 
-    .line 198
+    .line 193
     :cond_8
     if-nez v7, :cond_a
 
-    .line 200
+    .line 195
     if-eqz v8, :cond_a
 
-    .line 202
+    .line 197
     :cond_9
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->checkSnoozeLeavebehind()V
 
-    .line 204
+    .line 199
     :cond_a
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    .line 207
+    .line 202
     move-result v0
 
-    .line 210
+    .line 205
     if-ne v0, v3, :cond_c
 
-    .line 211
+    .line 206
     if-nez v7, :cond_b
 
-    .line 213
-    const/16 v0, 0xb
+    .line 208
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
 
-    .line 215
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
+    .line 210
+    const/16 v1, 0xb
 
-    .line 217
-    invoke-interface {v1, v0}, Lcom/android/systemui/plugins/FalsingManager;->isFalseTouch(I)Z
+    .line 212
+    invoke-interface {v0, v1}, Lcom/android/systemui/plugins/FalsingManager;->isFalseTouch(I)Z
 
-    .line 219
+    .line 214
     :cond_b
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 222
+    .line 217
     iput-boolean v3, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mCheckForLeavebehind:Z
 
-    .line 224
+    .line 219
     :cond_c
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    .line 226
+    .line 221
     move-result p1
 
-    .line 229
+    .line 224
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 230
+    .line 225
     if-nez v0, :cond_d
 
-    .line 232
+    .line 227
     const-string p0, "StackScrollerController"
 
-    .line 234
+    .line 229
     const-string p1, "traceJankOnTouchEvent, mJankMonitor is null"
 
-    .line 236
+    .line 231
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
+    .line 233
     goto :goto_6
 
-    .line 241
+    .line 236
     :cond_d
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 242
+    .line 237
     const/4 v1, 0x2
 
-    .line 244
+    .line 239
     if-eqz p1, :cond_10
 
-    .line 245
+    .line 240
     if-eq p1, v3, :cond_f
 
-    .line 247
+    .line 242
     if-eq p1, v2, :cond_e
+
+    .line 244
+    goto :goto_6
+
+    .line 246
+    :cond_e
+    if-eqz v8, :cond_11
+
+    .line 247
+    invoke-virtual {v0, v1}, Lcom/android/internal/jank/InteractionJankMonitor;->cancel(I)Z
 
     .line 249
     goto :goto_6
 
-    .line 251
-    :cond_e
-    if-eqz v8, :cond_11
-
     .line 252
-    invoke-virtual {v0, v1}, Lcom/android/internal/jank/InteractionJankMonitor;->cancel(I)Z
-
-    .line 254
-    goto :goto_6
-
-    .line 257
     :cond_f
     if-eqz v8, :cond_11
 
-    .line 258
+    .line 253
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mFlingAfterUpEvent:Z
 
-    .line 260
+    .line 255
     if-nez p0, :cond_11
 
-    .line 262
+    .line 257
     invoke-virtual {v0, v1}, Lcom/android/internal/jank/InteractionJankMonitor;->end(I)Z
 
-    .line 264
+    .line 259
     goto :goto_6
 
-    .line 267
+    .line 262
     :cond_10
     if-eqz v8, :cond_11
 
-    .line 268
+    .line 263
     invoke-virtual {v0, p0, v1}, Lcom/android/internal/jank/InteractionJankMonitor;->begin(Landroid/view/View;I)Z
 
-    .line 270
+    .line 265
     :cond_11
     :goto_6
     if-nez v7, :cond_13
 
-    .line 273
+    .line 268
     if-nez v8, :cond_13
 
-    .line 275
+    .line 270
     if-nez v6, :cond_13
 
-    .line 277
+    .line 272
     if-eqz v5, :cond_12
 
-    .line 279
+    .line 274
     goto :goto_7
 
-    .line 281
+    .line 276
     :cond_12
     move v3, v4
 
-    .line 282
+    .line 277
     :cond_13
     :goto_7
     return v3
-    .line 283
+    .line 278
 .end method

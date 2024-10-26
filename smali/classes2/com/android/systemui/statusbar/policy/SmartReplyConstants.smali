@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/SmartReplyConstants;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -75,7 +75,7 @@
     move-result-object p1
 
     .line 22
-    const p2, 0x7f050045    # @bool/config_smart_replies_in_notifications_enabled 'true'
+    const p2, 0x7f050051    # @bool/config_smart_replies_in_notifications_enabled 'true'
 
     .line 23
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -87,7 +87,7 @@
     iput-boolean p2, p0, Lcom/android/systemui/statusbar/policy/SmartReplyConstants;->mDefaultEnabled:Z
 
     .line 30
-    const p2, 0x7f050046    # @bool/config_smart_replies_in_notifications_requires_targeting_p 'true'
+    const p2, 0x7f050052    # @bool/config_smart_replies_in_notifications_requires_targeting_p 'true'
 
     .line 32
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -99,7 +99,7 @@
     iput-boolean p2, p0, Lcom/android/systemui/statusbar/policy/SmartReplyConstants;->mDefaultRequiresP:Z
 
     .line 39
-    const p2, 0x7f0c003c    # @integer/config_smart_replies_in_notifications_max_squeeze_remeasure_attempts '3'
+    const p2, 0x7f0b0041    # @integer/config_smart_replies_in_notifications_max_squeeze_remeasure_attempts '3'
 
     .line 41
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -111,7 +111,7 @@
     iput p2, p0, Lcom/android/systemui/statusbar/policy/SmartReplyConstants;->mDefaultMaxSqueezeRemeasureAttempts:I
 
     .line 48
-    const p2, 0x7f050044    # @bool/config_smart_replies_in_notifications_edit_choices_before_sending 'false'
+    const p2, 0x7f050050    # @bool/config_smart_replies_in_notifications_edit_choices_before_sending 'false'
 
     .line 50
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -123,7 +123,7 @@
     iput-boolean p2, p0, Lcom/android/systemui/statusbar/policy/SmartReplyConstants;->mDefaultEditChoicesBeforeSending:Z
 
     .line 57
-    const p2, 0x7f050047    # @bool/config_smart_replies_in_notifications_show_in_heads_up 'true'
+    const p2, 0x7f050053    # @bool/config_smart_replies_in_notifications_show_in_heads_up 'true'
 
     .line 59
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -135,7 +135,7 @@
     iput-boolean p2, p0, Lcom/android/systemui/statusbar/policy/SmartReplyConstants;->mDefaultShowInHeadsUp:Z
 
     .line 66
-    const p2, 0x7f0c003d    # @integer/config_smart_replies_in_notifications_min_num_system_generated_replies '0'
+    const p2, 0x7f0b0042    # @integer/config_smart_replies_in_notifications_min_num_system_generated_replies '0'
 
     .line 68
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -147,7 +147,7 @@
     iput p2, p0, Lcom/android/systemui/statusbar/policy/SmartReplyConstants;->mDefaultMinNumSystemGeneratedReplies:I
 
     .line 75
-    const p2, 0x7f0c003b    # @integer/config_smart_replies_in_notifications_max_num_actions '-1'
+    const p2, 0x7f0b0040    # @integer/config_smart_replies_in_notifications_max_num_actions '-1'
 
     .line 77
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -159,7 +159,7 @@
     iput p2, p0, Lcom/android/systemui/statusbar/policy/SmartReplyConstants;->mDefaultMaxNumActions:I
 
     .line 84
-    const p2, 0x7f0c003e    # @integer/config_smart_replies_in_notifications_onclick_init_delay '200'
+    const p2, 0x7f0b0043    # @integer/config_smart_replies_in_notifications_onclick_init_delay '200'
 
     .line 86
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I

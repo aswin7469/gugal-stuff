@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -48,7 +48,7 @@
 
 .field public mIsArtworkBound:Z
 
-.field public mIsCurrentBroadcastedApp:Z
+.field public final mIsCurrentBroadcastedApp:Z
 
 .field public mIsImpressed:Z
 
@@ -59,8 +59,6 @@
 .field public mKey:Ljava/lang/String;
 
 .field public final mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
-
-.field public mLoadingEffect:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;
 
 .field public final mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
@@ -138,7 +136,7 @@
     sput-object v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->SETTINGS_INTENT:Landroid/content/Intent;
 
     .line 9
-    const v0, 0x7f0b0059    # @id/actionPlayPause
+    const v0, 0x7f0a0059    # @id/actionPlayPause
 
     .line 11
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -147,7 +145,7 @@
     move-result-object v0
 
     .line 17
-    const v1, 0x7f0b005a    # @id/actionPrev
+    const v1, 0x7f0a005a    # @id/actionPrev
 
     .line 18
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -156,7 +154,7 @@
     move-result-object v1
 
     .line 24
-    const v2, 0x7f0b0058    # @id/actionNext
+    const v2, 0x7f0a0058    # @id/actionNext
 
     .line 25
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -183,7 +181,7 @@
     sput-object v3, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->SEMANTIC_ACTIONS_HIDE_WHEN_SCRUBBING:Ljava/util/List;
 
     .line 42
-    const v3, 0x7f0b0050    # @id/action0
+    const v3, 0x7f0a0050    # @id/action0
 
     .line 44
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -192,7 +190,7 @@
     move-result-object v3
 
     .line 50
-    const v4, 0x7f0b0051    # @id/action1
+    const v4, 0x7f0a0051    # @id/action1
 
     .line 51
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -299,192 +297,186 @@
     invoke-direct {v3, p0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$1;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;)V
 
     .line 52
-    iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mNoiseDrawCallback:Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$1;
-
-    .line 55
     new-instance v3, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$1;
 
-    .line 57
+    .line 55
     invoke-direct {v3, p0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$1;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;)V
 
-    .line 59
-    iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mStateChangedCallback:Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$1;
-
-    .line 62
+    .line 57
     move-object v3, p1
 
-    .line 64
+    .line 60
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
-    .line 65
+    .line 61
     move-object v3, p2
 
-    .line 67
+    .line 63
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
 
-    .line 68
+    .line 64
     move-object v3, p3
 
-    .line 70
+    .line 66
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMainExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
-    .line 71
+    .line 67
     move-object v3, p4
 
-    .line 73
+    .line 69
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
 
-    .line 74
+    .line 70
     move-object v3, p5
 
-    .line 76
+    .line 72
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mBroadcastSender:Lcom/android/systemui/broadcast/BroadcastSender;
 
-    .line 77
+    .line 73
     iput-object v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mSeekBarViewModel:Lcom/android/systemui/media/controls/ui/viewmodel/SeekBarViewModel;
 
-    .line 79
+    .line 75
     move-object v3, p6
 
-    .line 81
+    .line 77
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewController:Lcom/android/systemui/media/controls/ui/controller/MediaViewController;
 
-    .line 82
+    .line 78
     move-object v3, p8
 
-    .line 84
+    .line 80
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaDataManagerLazy:Ldagger/Lazy;
 
-    .line 85
+    .line 81
     move-object v3, p9
 
-    .line 87
+    .line 83
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaOutputDialogManager:Lcom/android/systemui/media/dialog/MediaOutputDialogManager;
 
-    .line 88
+    .line 84
     move-object/from16 v3, p10
 
-    .line 90
+    .line 86
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaCarouselController:Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;
 
-    .line 92
+    .line 88
     move-object/from16 v3, p11
 
-    .line 94
+    .line 90
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
 
-    .line 96
+    .line 92
     move-object/from16 v3, p12
 
-    .line 98
+    .line 94
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mSystemClock:Lcom/android/systemui/util/time/SystemClock;
 
-    .line 100
+    .line 96
     move-object/from16 v3, p13
 
-    .line 102
+    .line 98
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mLogger:Lcom/android/systemui/media/controls/util/MediaUiEventLogger;
 
-    .line 104
+    .line 100
     move-object/from16 v3, p14
 
-    .line 106
+    .line 102
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 108
+    .line 104
     move-object/from16 v3, p15
 
-    .line 110
+    .line 106
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mActivityIntentHelper:Lcom/android/systemui/ActivityIntentHelper;
 
-    .line 112
+    .line 108
     move-object/from16 v3, p16
 
-    .line 114
+    .line 110
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
-    .line 116
+    .line 112
     move-object/from16 v3, p17
 
-    .line 118
+    .line 114
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mBroadcastDialogController:Lcom/android/systemui/bluetooth/BroadcastDialogController;
 
-    .line 120
+    .line 116
     move-object/from16 v3, p19
 
-    .line 122
+    .line 118
     iput-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaFlags:Lcom/android/systemui/media/controls/util/MediaFlags;
 
-    .line 124
+    .line 120
     new-instance v3, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda2;
 
-    .line 126
+    .line 122
     const/4 v5, 0x0
 
-    .line 128
+    .line 124
     invoke-direct {v3, p0, v5}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;I)V
 
-    .line 129
+    .line 125
     iput-object v3, v1, Lcom/android/systemui/media/controls/ui/viewmodel/SeekBarViewModel;->logSeek:Lkotlin/jvm/functions/Function0;
 
-    .line 132
+    .line 128
     iput-object v2, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mGlobalSettings:Lcom/android/systemui/util/settings/GlobalSettings;
 
-    .line 134
+    .line 130
     iget-object v0, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mSeekBarObserver:Lcom/android/systemui/media/controls/ui/binder/SeekBarObserver;
 
-    .line 136
+    .line 132
     if-eqz v0, :cond_2
 
-    .line 138
+    .line 134
     const-string v1, "animator_duration_scale"
 
-    .line 140
+    .line 136
     check-cast v2, Lcom/android/systemui/util/settings/GlobalSettingsImpl;
 
-    .line 142
+    .line 138
     invoke-virtual {v2, v1}, Lcom/android/systemui/util/settings/GlobalSettingsImpl;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 144
+    .line 140
     move-result-object v1
 
-    .line 147
+    .line 143
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 148
+    .line 144
     if-eqz v1, :cond_0
 
-    .line 150
+    .line 146
     :try_start_0
     invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    .line 152
+    .line 148
     move-result v2
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 155
+    .line 151
     :catch_0
     :cond_0
     const/4 v1, 0x0
 
-    .line 156
+    .line 152
     cmpl-float v1, v2, v1
 
-    .line 157
+    .line 153
     if-lez v1, :cond_1
 
-    .line 159
+    .line 155
     const/4 v4, 0x1
 
-    .line 161
+    .line 157
     :cond_1
     iput-boolean v4, v0, Lcom/android/systemui/media/controls/ui/binder/SeekBarObserver;->animationEnabled:Z
 
-    .line 162
+    .line 158
     :cond_2
     return-void
-    .line 164
+    .line 160
 .end method
 
 .method public static scaleTransitionDrawableLayer(Landroid/graphics/drawable/TransitionDrawable;III)V
@@ -723,7 +715,7 @@
     iget-object p0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
     .line 6
-    const p3, 0x7f080ae6    # @drawable/qs_media_scrim 'res/drawable/qs_media_scrim.xml'
+    const p3, 0x7f080b24    # @drawable/qs_media_scrim 'res/drawable/qs_media_scrim.xml'
 
     .line 8
     invoke-virtual {p0, p3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -856,7 +848,7 @@
     iget-object p0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
     .line 57
-    const p1, 0x7f080ae3    # @drawable/qs_media_rec_scrim 'res/drawable/qs_media_rec_scrim.xml'
+    const p1, 0x7f080b21    # @drawable/qs_media_rec_scrim 'res/drawable/qs_media_rec_scrim.xml'
 
     .line 59
     invoke-virtual {p0, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1020,7 +1012,7 @@
     aput-object v1, v7, v2
 
     .line 91
-    const v9, 0x7f0101e2    # @anim/media_metadata_enter 'res/anim/media_metadata_enter.xml'
+    const v9, 0x7f010248    # @anim/media_metadata_enter 'res/anim/media_metadata_enter.xml'
 
     .line 93
     invoke-virtual {p0, v9, v5, v7}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->loadAnimator(ILandroid/view/animation/Interpolator;[Landroid/view/View;)Landroid/animation/AnimatorSet;
@@ -1044,7 +1036,7 @@
     aput-object v1, v6, v2
 
     .line 108
-    const v0, 0x7f0101e3    # @anim/media_metadata_exit 'res/anim/media_metadata_exit.xml'
+    const v0, 0x7f010249    # @anim/media_metadata_exit 'res/anim/media_metadata_exit.xml'
 
     .line 110
     invoke-virtual {p0, v0, v7, v6}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->loadAnimator(ILandroid/view/animation/Interpolator;[Landroid/view/View;)Landroid/animation/AnimatorSet;
@@ -1176,7 +1168,7 @@
     invoke-virtual {p1, p2}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
     .line 29
-    new-instance p2, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda15;
+    new-instance p2, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda14;
 
     .line 32
     move-object v1, p2
@@ -1188,7 +1180,7 @@
     move-object v3, p1
 
     .line 36
-    invoke-direct/range {v1 .. v6}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda15;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroid/widget/ImageButton;Ljava/lang/Runnable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct/range {v1 .. v6}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda14;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroid/widget/ImageButton;Ljava/lang/Runnable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     .line 37
     invoke-virtual {p1, p2}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -1231,7 +1223,7 @@
     iget-object v1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
     .line 5
-    const v2, 0x7f1402d1    # @string/controls_media_close_session 'Hide this media control for %1$s?'
+    const v2, 0x7f1302ed    # @string/controls_media_close_session 'Hide this media control for %1$s?'
 
     .line 7
     filled-new-array {p2}, [Ljava/lang/Object;
@@ -1253,7 +1245,7 @@
     iget-object p2, p0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
     .line 19
-    const v1, 0x7f1402cb    # @string/controls_media_active_session 'The current media session cannot be hidden.'
+    const v1, 0x7f1302e7    # @string/controls_media_active_session 'The current media session cannot be hidden.'
 
     .line 21
     invoke-virtual {p2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1298,10 +1290,10 @@
     iget-object p2, p3, Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;->dismiss:Landroid/view/ViewGroup;
 
     .line 49
-    new-instance v1, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda28;
+    new-instance v1, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda27;
 
     .line 51
-    invoke-direct {v1, p0, p4}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda28;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Ljava/lang/Runnable;)V
+    invoke-direct {v1, p0, p4}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda27;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Ljava/lang/Runnable;)V
 
     .line 53
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -1316,7 +1308,7 @@
     iget-object p4, p0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
     .line 63
-    const v1, 0x7f080ae1    # @drawable/qs_media_outline_button 'res/drawable/qs_media_outline_button.xml'
+    const v1, 0x7f080b1f    # @drawable/qs_media_outline_button 'res/drawable/qs_media_outline_button.xml'
 
     .line 65
     invoke-virtual {p4, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1335,7 +1327,7 @@
     iget-object p4, p0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
     .line 76
-    const v1, 0x7f080ae8    # @drawable/qs_media_solid_button 'res/drawable/qs_media_solid_button.xml'
+    const v1, 0x7f080b26    # @drawable/qs_media_solid_button 'res/drawable/qs_media_solid_button.xml'
 
     .line 78
     invoke-virtual {p4, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1351,10 +1343,10 @@
     iget-object p2, p3, Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;->cancel:Landroid/view/View;
 
     .line 88
-    new-instance p4, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda29;
+    new-instance p4, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda28;
 
     .line 90
-    invoke-direct {p4, p0, v0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda29;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;I)V
+    invoke-direct {p4, p0, v0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda28;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;I)V
 
     .line 92
     invoke-virtual {p2, p4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -1423,13 +1415,13 @@
     iget-object p1, p3, Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;->settings:Landroid/widget/ImageButton;
 
     .line 138
-    new-instance p2, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda29;
+    new-instance p2, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda28;
 
     .line 140
     const/4 p3, 0x1
 
     .line 142
-    invoke-direct {p2, p0, p3}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda29;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;I)V
+    invoke-direct {p2, p0, p3}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda28;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;I)V
 
     .line 143
     invoke-virtual {p1, p2}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -1440,7 +1432,7 @@
 .end method
 
 .method public final bindPlayer(Lcom/android/systemui/media/controls/shared/model/MediaData;Ljava/lang/String;)V
-    .locals 27
+    .locals 26
 
     .line 1
     move-object/from16 v9, p0
@@ -1452,10 +1444,10 @@
     move-object/from16 v8, p2
 
     .line 6
-    const/4 v11, 0x0
+    const/4 v10, 0x0
 
     .line 8
-    const/4 v12, 0x1
+    const/4 v11, 0x1
 
     .line 9
     iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
@@ -1474,7 +1466,7 @@
     move-result v0
 
     .line 18
-    const-string v13, ">"
+    const-string v12, ">"
 
     .line 19
     if-eqz v0, :cond_1
@@ -1492,7 +1484,7 @@
     invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 30
-    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 33
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1700,1514 +1692,1199 @@
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 164
-    move-result-object v19
+    move-result-object v18
 
     .line 167
-    const/16 v17, 0x0
-
-    .line 168
-    const/16 v18, 0x0
-
-    .line 170
-    const/4 v15, 0x1
-
-    .line 172
     const/16 v16, 0x0
 
+    .line 168
+    const/16 v17, 0x0
+
+    .line 170
+    const/4 v14, 0x1
+
+    .line 172
+    const/4 v15, 0x0
+
     .line 173
-    const/16 v20, 0x64
+    const/16 v19, 0x64
 
-    .line 175
-    const/16 v21, 0x0
+    .line 174
+    const/16 v20, 0x0
 
-    .line 177
-    move-object v14, v3
+    .line 176
+    move-object v13, v3
+
+    .line 178
+    invoke-direct/range {v13 .. v20}, Lcom/android/systemui/media/controls/ui/viewmodel/SeekBarViewModel$Progress;-><init>(ZZZZLjava/lang/Integer;IZ)V
 
     .line 179
-    invoke-direct/range {v14 .. v21}, Lcom/android/systemui/media/controls/ui/viewmodel/SeekBarViewModel$Progress;-><init>(ZZZZLjava/lang/Integer;IZ)V
-
-    .line 180
     invoke-virtual {v4, v3}, Lcom/android/systemui/media/controls/ui/viewmodel/SeekBarViewModel;->set_data(Lcom/android/systemui/media/controls/ui/viewmodel/SeekBarViewModel$Progress;)V
 
-    .line 183
+    .line 182
     goto :goto_1
 
-    .line 186
+    .line 185
     :cond_7
     iget-object v2, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mController:Landroid/media/session/MediaController;
 
-    .line 187
+    .line 186
     iget-object v3, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
 
-    .line 189
+    .line 188
     new-instance v4, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;
 
-    .line 191
-    invoke-direct {v4, v9, v2, v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Ljava/lang/Object;I)V
+    .line 190
+    invoke-direct {v4, v9, v2, v10}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Ljava/lang/Object;I)V
 
-    .line 193
+    .line 192
     invoke-interface {v3, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 196
+    .line 195
     :goto_1
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->legacyLeAudioSharing()Z
+    iget-object v2, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
 
-    .line 199
-    move-result v2
+    .line 198
+    iget-object v2, v2, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->seamless:Landroid/view/ViewGroup;
+
+    .line 200
+    invoke-virtual {v2, v10}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     .line 202
-    iget-object v3, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->device:Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
-
-    .line 203
-    if-eqz v2, :cond_8
+    iget-object v3, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
 
     .line 205
-    if-eqz v3, :cond_8
+    iget-object v4, v3, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->seamlessIcon:Landroid/widget/ImageView;
 
     .line 207
-    iget-boolean v2, v3, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->showBroadcastButton:Z
+    iget-object v3, v3, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->seamlessText:Landroid/widget/TextView;
 
     .line 209
-    if-eqz v2, :cond_8
+    iget-object v5, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->device:Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
 
     .line 211
-    move v2, v12
+    if-eqz v5, :cond_8
 
     .line 213
-    goto :goto_2
-
-    .line 214
-    :cond_8
-    move v2, v11
+    iget-boolean v6, v5, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->enabled:Z
 
     .line 215
-    :goto_2
-    iget-object v4, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
+    if-eqz v6, :cond_9
 
-    .line 216
-    iget-object v4, v4, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->seamless:Landroid/view/ViewGroup;
+    .line 217
+    :cond_8
+    if-eqz v0, :cond_a
 
-    .line 218
-    invoke-virtual {v4, v11}, Landroid/view/ViewGroup;->setVisibility(I)V
-
-    .line 220
-    iget-object v5, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
-
-    .line 223
-    iget-object v6, v5, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->seamlessIcon:Landroid/widget/ImageView;
-
-    .line 225
-    iget-object v5, v5, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->seamlessText:Landroid/widget/TextView;
-
-    .line 227
-    if-eqz v2, :cond_a
-
-    .line 229
-    if-eqz v3, :cond_9
-
-    .line 231
-    iget-object v0, v3, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->name:Ljava/lang/CharSequence;
-
-    .line 233
-    iget-object v14, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
-
-    .line 235
-    const v15, 0x7f140211    # @string/broadcasting_description_is_broadcasting 'Broadcasting'
-
-    .line 237
-    invoke-virtual {v14, v15}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 240
-    move-result-object v14
-
-    .line 243
-    invoke-static {v0, v14}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    .line 244
-    move-result v0
-
-    .line 247
-    if-eqz v0, :cond_9
-
-    .line 248
-    move v0, v12
-
-    .line 250
-    goto :goto_3
-
-    .line 251
+    .line 219
     :cond_9
     move v0, v11
 
-    .line 252
+    .line 221
+    goto :goto_2
+
+    .line 222
+    :cond_a
+    move v0, v10
+
+    .line 223
+    :goto_2
+    xor-int/lit8 v6, v0, 0x1
+
+    .line 224
+    iget-object v13, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
+
+    .line 226
+    const v14, 0x7f130675    # @string/media_seamless_other_device 'Other device'
+
+    .line 228
+    invoke-virtual {v13, v14}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 231
+    move-result-object v13
+
+    .line 234
+    iget-object v14, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
+
+    .line 235
+    iget-object v14, v14, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->seamlessButton:Landroid/view/View;
+
+    .line 237
+    if-eqz v0, :cond_b
+
+    .line 239
+    const v0, 0x3ec28f5c    # 0.38f
+
+    .line 241
+    goto :goto_3
+
+    .line 244
+    :cond_b
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 245
     :goto_3
-    iput-boolean v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mIsCurrentBroadcastedApp:Z
+    invoke-virtual {v14, v0}, Landroid/view/View;->setAlpha(F)V
+
+    .line 247
+    invoke-virtual {v2, v6}, Landroid/view/ViewGroup;->setEnabled(Z)V
+
+    .line 250
+    if-eqz v5, :cond_d
 
     .line 253
-    xor-int/2addr v0, v12
+    iget-object v0, v5, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->icon:Landroid/graphics/drawable/Drawable;
 
     .line 255
-    iget-object v14, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
+    instance-of v6, v0, Lcom/android/settingslib/widget/AdaptiveIcon;
 
-    .line 256
-    const v15, 0x7f140219    # @string/bt_le_audio_broadcast_dialog_unknown_name 'Unknown'
+    .line 257
+    if-eqz v6, :cond_c
 
-    .line 258
-    invoke-virtual {v14, v15}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 261
-    move-result-object v14
-
-    .line 264
-    const v15, 0x7f080b15    # @drawable/settings_input_antenna 'res/drawable/settings_input_antenna.xml'
-
-    .line 265
-    move-object v10, v14
-
-    .line 268
-    move v14, v12
-
-    .line 269
-    goto :goto_5
-
-    .line 270
-    :cond_a
-    if-eqz v3, :cond_b
-
-    .line 271
-    iget-boolean v14, v3, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->enabled:Z
-
-    .line 273
-    if-eqz v14, :cond_c
-
-    .line 275
-    :cond_b
-    if-eqz v0, :cond_d
-
-    .line 277
-    :cond_c
-    move v0, v12
-
-    .line 279
-    goto :goto_4
-
-    .line 280
-    :cond_d
-    move v0, v11
-
-    .line 281
-    :goto_4
-    xor-int/lit8 v14, v0, 0x1
-
-    .line 282
-    iget-object v15, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
-
-    .line 284
-    const v10, 0x7f14061b    # @string/media_seamless_other_device 'Other device'
-
-    .line 286
-    invoke-virtual {v15, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 289
-    move-result-object v10
-
-    .line 292
-    const v15, 0x7f08081b    # @drawable/ic_media_home_devices 'res/drawable/ic_media_home_devices.xml'
-
-    .line 293
-    :goto_5
-    iget-object v1, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
-
-    .line 296
-    iget-object v1, v1, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->seamlessButton:Landroid/view/View;
-
-    .line 298
-    const/high16 v18, 0x3f800000    # 1.0f
-
-    .line 300
-    if-eqz v0, :cond_e
-
-    .line 302
-    const v18, 0x3ec28f5c    # 0.38f
-
-    .line 304
-    :cond_e
-    move/from16 v0, v18
-
-    .line 307
-    invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    .line 309
-    invoke-virtual {v4, v14}, Landroid/view/ViewGroup;->setEnabled(Z)V
-
-    .line 312
-    if-eqz v3, :cond_10
-
-    .line 315
-    iget-object v0, v3, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->icon:Landroid/graphics/drawable/Drawable;
-
-    .line 317
-    instance-of v1, v0, Lcom/android/settingslib/widget/AdaptiveIcon;
-
-    .line 319
-    if-eqz v1, :cond_f
-
-    .line 321
+    .line 259
     check-cast v0, Lcom/android/settingslib/widget/AdaptiveIcon;
 
+    .line 261
+    iget-object v6, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mColorSchemeTransition:Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;
+
+    .line 263
+    iget v6, v6, Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;->bgColor:I
+
+    .line 265
+    invoke-virtual {v0, v6}, Lcom/android/settingslib/widget/AdaptiveIcon;->setBackgroundColor(I)V
+
+    .line 267
+    invoke-virtual {v4, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 270
+    goto :goto_4
+
+    .line 273
+    :cond_c
+    invoke-virtual {v4, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 274
+    :goto_4
+    iget-object v0, v5, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->name:Ljava/lang/CharSequence;
+
+    .line 277
+    if-eqz v0, :cond_e
+
+    .line 279
+    move-object v13, v0
+
+    .line 281
+    goto :goto_5
+
+    .line 282
+    :cond_d
+    const v0, 0x7f08083e    # @drawable/ic_media_home_devices 'res/drawable/ic_media_home_devices.xml'
+
+    .line 283
+    invoke-virtual {v4, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 286
+    :cond_e
+    :goto_5
+    invoke-virtual {v3, v13}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 289
+    invoke-virtual {v2, v13}, Landroid/view/ViewGroup;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 292
+    new-instance v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda10;
+
+    .line 295
+    invoke-direct {v0, v9, v5}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda10;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;)V
+
+    .line 297
+    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 300
+    new-instance v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;
+
+    .line 303
+    const/4 v2, 0x4
+
+    .line 305
+    invoke-direct {v0, v9, v7, v2}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Ljava/lang/Object;I)V
+
+    .line 306
+    iget-object v2, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
+
+    .line 309
+    iget-object v2, v2, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->gutsViewHolder:Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;
+
+    .line 311
+    iget-object v3, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->app:Ljava/lang/String;
+
+    .line 313
+    iget-boolean v4, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->isClearable:Z
+
+    .line 315
+    invoke-virtual {v9, v4, v3, v2, v0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindGutsMenuCommon(ZLjava/lang/String;Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;Ljava/lang/Runnable;)V
+
+    .line 317
+    invoke-virtual/range {p0 .. p1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindPlayerContentDescription(Lcom/android/systemui/media/controls/shared/model/MediaData;)V
+
+    .line 320
+    invoke-virtual/range {p0 .. p1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindScrubbingTime(Lcom/android/systemui/media/controls/shared/model/MediaData;)V
+
     .line 323
-    iget-object v1, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mColorSchemeTransition:Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;
+    new-instance v0, Ljava/util/ArrayList;
 
-    .line 325
-    iget v1, v1, Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;->bgColor:I
+    .line 326
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 327
-    invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/AdaptiveIcon;->setBackgroundColor(I)V
+    .line 328
+    sget-object v2, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->genericButtonIds:Ljava/util/Set;
 
-    .line 329
-    invoke-virtual {v6, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    .line 331
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    .line 332
-    goto :goto_6
-
-    .line 335
-    :cond_f
-    invoke-virtual {v6, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    .line 333
+    move-result-object v2
 
     .line 336
     :goto_6
-    iget-object v0, v3, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->name:Ljava/lang/CharSequence;
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 339
-    if-eqz v0, :cond_11
+    .line 337
+    move-result v3
+
+    .line 340
+    if-eqz v3, :cond_f
 
     .line 341
-    move-object v10, v0
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 343
-    goto :goto_7
+    move-result-object v3
 
-    .line 344
-    :cond_10
-    invoke-virtual {v6, v15}, Landroid/widget/ImageView;->setImageResource(I)V
+    .line 346
+    check-cast v3, Ljava/lang/Integer;
 
-    .line 345
-    :cond_11
-    :goto_7
-    invoke-virtual {v5, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    .line 347
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    .line 348
-    invoke-virtual {v4, v10}, Landroid/view/ViewGroup;->setContentDescription(Ljava/lang/CharSequence;)V
+    .line 349
+    move-result v3
 
-    .line 351
-    new-instance v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda11;
+    .line 352
+    iget-object v4, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
 
-    .line 354
-    invoke-direct {v0, v9, v2, v3}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda11;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;ZLcom/android/systemui/media/controls/shared/model/MediaDeviceData;)V
+    .line 353
+    invoke-virtual {v4, v3}, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->getAction(I)Landroid/widget/ImageButton;
 
-    .line 356
-    invoke-virtual {v4, v0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 355
+    move-result-object v3
+
+    .line 358
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 359
-    new-instance v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;
+    goto :goto_6
 
     .line 362
-    invoke-direct {v0, v9, v7, v12}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Ljava/lang/Object;I)V
+    :cond_f
+    iget-object v13, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewController:Lcom/android/systemui/media/controls/ui/controller/MediaViewController;
 
-    .line 364
-    iget-object v1, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
+    .line 363
+    iget-object v2, v13, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->expandedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
+
+    .line 365
+    iget-object v3, v13, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->collapsedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
 
     .line 367
-    iget-object v1, v1, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->gutsViewHolder:Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;
-
-    .line 369
-    iget-object v2, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->app:Ljava/lang/String;
-
-    .line 371
-    iget-boolean v3, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->isClearable:Z
-
-    .line 373
-    invoke-virtual {v9, v3, v2, v1, v0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindGutsMenuCommon(ZLjava/lang/String;Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;Ljava/lang/Runnable;)V
-
-    .line 375
-    invoke-virtual/range {p0 .. p1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindPlayerContentDescription(Lcom/android/systemui/media/controls/shared/model/MediaData;)V
-
-    .line 378
-    invoke-virtual/range {p0 .. p1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindScrubbingTime(Lcom/android/systemui/media/controls/shared/model/MediaData;)V
-
-    .line 381
-    new-instance v0, Ljava/util/ArrayList;
-
-    .line 384
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 386
-    sget-object v1, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->genericButtonIds:Ljava/util/Set;
-
-    .line 389
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    .line 391
-    move-result-object v1
-
-    .line 394
-    :goto_8
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 395
-    move-result v2
-
-    .line 398
-    if-eqz v2, :cond_12
-
-    .line 399
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 401
-    move-result-object v2
-
-    .line 404
-    check-cast v2, Ljava/lang/Integer;
-
-    .line 405
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    .line 407
-    move-result v2
-
-    .line 410
-    iget-object v3, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
-
-    .line 411
-    invoke-virtual {v3, v2}, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->getAction(I)Landroid/widget/ImageButton;
-
-    .line 413
-    move-result-object v2
-
-    .line 416
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 417
-    goto :goto_8
-
-    .line 420
-    :cond_12
-    iget-object v10, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewController:Lcom/android/systemui/media/controls/ui/controller/MediaViewController;
-
-    .line 421
-    iget-object v1, v10, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->expandedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
-
-    .line 423
-    iget-object v2, v10, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->collapsedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
-
-    .line 425
     iget-object v6, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->semanticActions:Lcom/android/systemui/media/controls/shared/model/MediaButton;
 
-    .line 427
-    if-eqz v6, :cond_16
+    .line 369
+    if-eqz v6, :cond_13
 
-    .line 429
+    .line 371
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    .line 431
+    .line 373
     move-result-object v0
 
-    .line 434
-    :goto_9
+    .line 376
+    :goto_7
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 435
-    move-result v3
+    .line 377
+    move-result v1
 
-    .line 438
-    if-eqz v3, :cond_13
+    .line 380
+    if-eqz v1, :cond_10
 
-    .line 439
+    .line 381
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 441
-    move-result-object v3
+    .line 383
+    move-result-object v1
 
-    .line 444
-    check-cast v3, Landroid/widget/ImageButton;
+    .line 386
+    check-cast v1, Landroid/widget/ImageButton;
 
-    .line 445
-    invoke-virtual {v3}, Landroid/widget/ImageButton;->getId()I
+    .line 387
+    invoke-virtual {v1}, Landroid/widget/ImageButton;->getId()I
 
-    .line 447
+    .line 389
     move-result v4
 
-    .line 450
-    invoke-static {v2, v4, v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
+    .line 392
+    invoke-static {v3, v4, v10}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
 
-    .line 451
-    invoke-virtual {v3}, Landroid/widget/ImageButton;->getId()I
+    .line 393
+    invoke-virtual {v1}, Landroid/widget/ImageButton;->getId()I
 
-    .line 454
-    move-result v3
+    .line 396
+    move-result v1
 
-    .line 457
-    invoke-static {v1, v3, v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
+    .line 399
+    invoke-static {v2, v1, v10}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
 
-    .line 458
-    goto :goto_9
+    .line 400
+    goto :goto_7
 
-    .line 461
-    :cond_13
+    .line 403
+    :cond_10
     sget-object v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->SEMANTIC_ACTIONS_ALL:Ljava/util/List;
 
-    .line 462
+    .line 404
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    .line 464
+    .line 406
     move-result-object v14
 
-    .line 467
-    :goto_a
+    .line 409
+    :goto_8
     invoke-interface {v14}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 468
+    .line 410
     move-result v0
 
-    .line 471
-    if-eqz v0, :cond_1b
+    .line 413
+    if-eqz v0, :cond_18
 
-    .line 472
+    .line 414
     invoke-interface {v14}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 474
+    .line 416
     move-result-object v0
 
-    .line 477
+    .line 419
     check-cast v0, Ljava/lang/Integer;
 
-    .line 478
+    .line 420
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    .line 480
+    .line 422
     move-result v0
 
-    .line 483
+    .line 425
     iget-object v1, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
 
-    .line 484
+    .line 426
     invoke-virtual {v1, v0}, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->getAction(I)Landroid/widget/ImageButton;
 
-    .line 486
+    .line 428
     move-result-object v2
 
-    .line 489
+    .line 431
     invoke-virtual {v6, v0}, Lcom/android/systemui/media/controls/shared/model/MediaButton;->getActionById(I)Lcom/android/systemui/media/controls/shared/model/MediaAction;
 
-    .line 490
+    .line 432
     move-result-object v3
 
-    .line 493
+    .line 435
     invoke-virtual {v2}, Landroid/widget/ImageButton;->getTag()Ljava/lang/Object;
 
-    .line 494
+    .line 436
     move-result-object v0
 
-    .line 497
-    if-nez v0, :cond_14
+    .line 439
+    if-nez v0, :cond_11
 
-    .line 498
+    .line 440
     new-instance v0, Lcom/android/systemui/media/controls/ui/animation/AnimationBindHandler;
 
-    .line 500
+    .line 442
     invoke-direct {v0}, Lcom/android/systemui/media/controls/ui/animation/AnimationBindHandler;-><init>()V
 
-    .line 502
+    .line 444
     invoke-virtual {v2, v0}, Landroid/widget/ImageButton;->setTag(Ljava/lang/Object;)V
 
-    .line 505
-    :goto_b
+    .line 447
+    :goto_9
     move-object v15, v0
 
-    .line 508
-    goto :goto_c
-
-    .line 509
-    :cond_14
-    invoke-virtual {v2}, Landroid/widget/ImageButton;->getTag()Ljava/lang/Object;
-
-    .line 510
-    move-result-object v0
-
-    .line 513
-    check-cast v0, Lcom/android/systemui/media/controls/ui/animation/AnimationBindHandler;
-
-    .line 514
-    goto :goto_b
-
-    .line 516
-    :goto_c
-    new-instance v5, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda21;
-
-    .line 517
-    move-object v0, v5
-
-    .line 519
-    move-object/from16 v1, p0
-
-    .line 520
-    move-object v4, v15
-
-    .line 522
-    move-object v12, v5
-
-    .line 523
-    move-object v5, v6
-
-    .line 524
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda21;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroid/widget/ImageButton;Lcom/android/systemui/media/controls/shared/model/MediaAction;Lcom/android/systemui/media/controls/ui/animation/AnimationBindHandler;Lcom/android/systemui/media/controls/shared/model/MediaButton;)V
-
-    .line 525
-    invoke-virtual {v15}, Lcom/android/systemui/media/controls/ui/animation/AnimationBindHandler;->isAnimationRunning()Z
-
-    .line 528
-    move-result v0
-
-    .line 531
-    if-eqz v0, :cond_15
-
-    .line 532
-    iget-object v0, v15, Lcom/android/systemui/media/controls/ui/animation/AnimationBindHandler;->onAnimationsComplete:Ljava/util/List;
-
-    .line 534
-    invoke-interface {v0, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 536
-    goto :goto_d
-
-    .line 539
-    :cond_15
-    invoke-virtual {v12}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda21;->invoke()Ljava/lang/Object;
-
-    .line 540
-    :goto_d
-    const/4 v12, 0x1
-
-    .line 543
+    .line 450
     goto :goto_a
 
-    .line 544
-    :cond_16
-    sget-object v3, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->SEMANTIC_ACTIONS_COMPACT:Ljava/util/List;
+    .line 451
+    :cond_11
+    invoke-virtual {v2}, Landroid/widget/ImageButton;->getTag()Ljava/lang/Object;
 
-    .line 545
-    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    .line 452
+    move-result-object v0
 
-    .line 547
-    move-result-object v3
+    .line 455
+    check-cast v0, Lcom/android/systemui/media/controls/ui/animation/AnimationBindHandler;
 
-    .line 550
-    :goto_e
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    .line 456
+    goto :goto_9
 
-    .line 551
-    move-result v4
+    .line 458
+    :goto_a
+    new-instance v5, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda20;
 
-    .line 554
-    if-eqz v4, :cond_17
+    .line 459
+    move-object v0, v5
 
-    .line 555
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 461
+    move-object/from16 v1, p0
 
-    .line 557
+    .line 462
+    move-object v4, v15
+
+    .line 464
+    move-object v11, v5
+
+    .line 465
+    move-object v5, v6
+
+    .line 466
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda20;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroid/widget/ImageButton;Lcom/android/systemui/media/controls/shared/model/MediaAction;Lcom/android/systemui/media/controls/ui/animation/AnimationBindHandler;Lcom/android/systemui/media/controls/shared/model/MediaButton;)V
+
+    .line 467
+    invoke-virtual {v15}, Lcom/android/systemui/media/controls/ui/animation/AnimationBindHandler;->isAnimationRunning()Z
+
+    .line 470
+    move-result v0
+
+    .line 473
+    if-eqz v0, :cond_12
+
+    .line 474
+    iget-object v0, v15, Lcom/android/systemui/media/controls/ui/animation/AnimationBindHandler;->onAnimationsComplete:Ljava/util/List;
+
+    .line 476
+    invoke-interface {v0, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 478
+    goto :goto_b
+
+    .line 481
+    :cond_12
+    invoke-virtual {v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda20;->invoke()Ljava/lang/Object;
+
+    .line 482
+    :goto_b
+    const/4 v11, 0x1
+
+    .line 485
+    goto :goto_8
+
+    .line 486
+    :cond_13
+    sget-object v4, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->SEMANTIC_ACTIONS_COMPACT:Ljava/util/List;
+
+    .line 487
+    invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 489
     move-result-object v4
 
-    .line 560
-    check-cast v4, Ljava/lang/Integer;
+    .line 492
+    :goto_c
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 561
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+    .line 493
+    move-result v5
 
-    .line 563
-    move-result v4
+    .line 496
+    if-eqz v5, :cond_14
 
-    .line 566
-    invoke-static {v2, v4, v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
+    .line 497
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 567
-    invoke-static {v1, v4, v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
+    .line 499
+    move-result-object v5
 
-    .line 570
+    .line 502
+    check-cast v5, Ljava/lang/Integer;
+
+    .line 503
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    .line 505
+    move-result v5
+
+    .line 508
+    invoke-static {v3, v5, v10}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
+
+    .line 509
+    invoke-static {v2, v5, v10}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
+
+    .line 512
+    goto :goto_c
+
+    .line 515
+    :cond_14
+    iget-object v4, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->actionsToShowInCompact:Ljava/util/List;
+
+    .line 516
+    iget-object v5, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->actions:Ljava/util/List;
+
+    .line 518
+    move v6, v10
+
+    .line 520
+    :goto_d
+    invoke-interface {v5}, Ljava/util/List;->size()I
+
+    .line 521
+    move-result v11
+
+    .line 524
+    if-ge v6, v11, :cond_17
+
+    .line 525
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    .line 527
+    move-result v11
+
+    .line 530
+    if-ge v6, v11, :cond_17
+
+    .line 531
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 533
+    move-result-object v11
+
+    .line 536
+    invoke-interface {v4, v11}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    .line 537
+    move-result v11
+
+    .line 540
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    .line 541
+    move-result-object v14
+
+    .line 544
+    check-cast v14, Landroid/widget/ImageButton;
+
+    .line 545
+    invoke-interface {v5, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 547
+    move-result-object v15
+
+    .line 550
+    check-cast v15, Lcom/android/systemui/media/controls/shared/model/MediaAction;
+
+    .line 551
+    invoke-virtual {v9, v14, v15}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindButtonCommon(Landroid/widget/ImageButton;Lcom/android/systemui/media/controls/shared/model/MediaAction;)V
+
+    .line 553
+    if-eqz v15, :cond_15
+
+    .line 556
+    const/4 v15, 0x1
+
+    .line 558
     goto :goto_e
 
-    .line 573
-    :cond_17
-    iget-object v3, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->actionsToShowInCompact:Ljava/util/List;
+    .line 559
+    :cond_15
+    move v15, v10
+
+    .line 560
+    :goto_e
+    invoke-virtual {v14}, Landroid/widget/ImageButton;->getId()I
+
+    .line 561
+    move-result v10
+
+    .line 564
+    invoke-static {v2, v10, v15}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
+
+    .line 565
+    invoke-virtual {v14}, Landroid/widget/ImageButton;->getId()I
+
+    .line 568
+    move-result v10
+
+    .line 571
+    if-eqz v15, :cond_16
+
+    .line 572
+    if-eqz v11, :cond_16
 
     .line 574
-    iget-object v4, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->actions:Ljava/util/List;
+    const/4 v11, 0x1
 
     .line 576
-    move v5, v11
+    goto :goto_f
+
+    .line 577
+    :cond_16
+    const/4 v11, 0x0
 
     .line 578
     :goto_f
-    invoke-interface {v4}, Ljava/util/List;->size()I
+    invoke-static {v3, v10, v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
 
     .line 579
-    move-result v6
+    const/4 v10, 0x1
 
     .line 582
-    if-ge v5, v6, :cond_1a
+    add-int/2addr v6, v10
 
     .line 583
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    const/4 v10, 0x0
+
+    .line 584
+    goto :goto_d
 
     .line 585
-    move-result v6
-
-    .line 588
-    if-ge v5, v6, :cond_1a
-
-    .line 589
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 591
-    move-result-object v6
-
-    .line 594
-    invoke-interface {v3, v6}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    .line 595
-    move-result v6
-
-    .line 598
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    .line 599
-    move-result-object v12
-
-    .line 602
-    check-cast v12, Landroid/widget/ImageButton;
-
-    .line 603
-    invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 605
-    move-result-object v14
-
-    .line 608
-    check-cast v14, Lcom/android/systemui/media/controls/shared/model/MediaAction;
-
-    .line 609
-    invoke-virtual {v9, v12, v14}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindButtonCommon(Landroid/widget/ImageButton;Lcom/android/systemui/media/controls/shared/model/MediaAction;)V
-
-    .line 611
-    if-eqz v14, :cond_18
-
-    .line 614
-    const/4 v14, 0x1
-
-    .line 616
-    goto :goto_10
-
-    .line 617
-    :cond_18
-    move v14, v11
-
-    .line 618
+    :cond_17
     :goto_10
-    invoke-virtual {v12}, Landroid/widget/ImageButton;->getId()I
-
-    .line 619
-    move-result v15
-
-    .line 622
-    invoke-static {v1, v15, v14}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
-
-    .line 623
-    invoke-virtual {v12}, Landroid/widget/ImageButton;->getId()I
-
-    .line 626
-    move-result v12
-
-    .line 629
-    if-eqz v14, :cond_19
-
-    .line 630
-    if-eqz v6, :cond_19
-
-    .line 632
-    const/4 v6, 0x1
-
-    .line 634
-    goto :goto_11
-
-    .line 635
-    :cond_19
-    move v6, v11
-
-    .line 636
-    :goto_11
-    invoke-static {v2, v12, v6}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
-
-    .line 637
-    const/4 v6, 0x1
-
-    .line 640
-    add-int/2addr v5, v6
-
-    .line 641
-    goto :goto_f
-
-    .line 642
-    :cond_1a
-    :goto_12
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    .line 643
-    move-result v3
-
-    .line 646
-    if-ge v5, v3, :cond_1b
-
-    .line 647
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    .line 649
-    move-result-object v3
-
-    .line 652
-    check-cast v3, Landroid/widget/ImageButton;
-
-    .line 653
-    const/4 v4, 0x0
-
-    .line 655
-    invoke-virtual {v9, v3, v4}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindButtonCommon(Landroid/widget/ImageButton;Lcom/android/systemui/media/controls/shared/model/MediaAction;)V
-
-    .line 656
-    invoke-virtual {v3}, Landroid/widget/ImageButton;->getId()I
-
-    .line 659
-    move-result v6
-
-    .line 662
-    invoke-static {v1, v6, v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
-
-    .line 663
-    invoke-virtual {v3}, Landroid/widget/ImageButton;->getId()I
-
-    .line 666
-    move-result v3
-
-    .line 669
-    invoke-static {v2, v3, v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
-
-    .line 670
-    const/4 v3, 0x1
-
-    .line 673
-    add-int/2addr v5, v3
-
-    .line 674
-    goto :goto_12
-
-    .line 675
-    :cond_1b
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->updateSeekBarVisibility()V
-
-    .line 676
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
-
-    .line 679
-    iget-object v2, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->titleText:Landroid/widget/TextView;
-
-    .line 681
-    iget-object v4, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->artistText:Landroid/widget/TextView;
-
-    .line 683
-    iget-object v5, v10, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->expandedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
-
-    .line 685
-    iget-object v6, v10, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->collapsedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
-
-    .line 687
-    iget-object v12, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMetadataAnimationHandler:Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;
-
-    .line 689
-    new-instance v14, Lkotlin/Triple;
-
-    .line 691
-    iget-object v0, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->song:Ljava/lang/CharSequence;
-
-    .line 693
-    iget-object v1, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->artist:Ljava/lang/CharSequence;
-
-    .line 695
-    iget-boolean v3, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->isExplicit:Z
-
-    .line 697
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 699
-    move-result-object v3
-
-    .line 702
-    invoke-direct {v14, v0, v1, v3}, Lkotlin/Triple;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 703
-    new-instance v15, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda8;
-
-    .line 706
-    move-object v0, v15
-
-    .line 708
-    move-object/from16 v1, p0
-
-    .line 709
-    move-object/from16 v3, p1
-
-    .line 711
-    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroid/widget/TextView;Lcom/android/systemui/media/controls/shared/model/MediaData;Landroid/widget/TextView;Landroidx/constraintlayout/widget/ConstraintSet;Landroidx/constraintlayout/widget/ConstraintSet;)V
-
-    .line 713
-    new-instance v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda2;
-
-    .line 716
-    const/4 v1, 0x2
-
-    .line 718
-    invoke-direct {v0, v9, v1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;I)V
-
-    .line 719
-    iget-object v1, v12, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->targetData:Ljava/lang/Object;
-
-    .line 722
-    invoke-virtual {v14, v1}, Lkotlin/Triple;->equals(Ljava/lang/Object;)Z
-
-    .line 724
-    move-result v1
-
-    .line 727
-    if-nez v1, :cond_1d
-
-    .line 728
-    iput-object v14, v12, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->targetData:Ljava/lang/Object;
-
-    .line 730
-    iput-object v15, v12, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->postExitUpdate:Lkotlin/jvm/functions/Function0;
-
-    .line 732
-    iput-object v0, v12, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->postEnterUpdate:Lkotlin/jvm/functions/Function0;
-
-    .line 734
-    invoke-virtual {v12}, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->isRunning()Z
-
-    .line 736
-    move-result v0
-
-    .line 739
-    if-nez v0, :cond_1c
-
-    .line 740
-    iget-object v0, v12, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->exitAnimator:Landroid/animation/Animator;
-
-    .line 742
-    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
-
-    .line 744
-    :cond_1c
-    const/4 v12, 0x1
-
-    .line 747
-    goto :goto_13
-
-    .line 748
-    :cond_1d
-    move v12, v11
-
-    .line 749
-    :goto_13
-    invoke-virtual/range {p1 .. p1}, Lcom/android/systemui/media/controls/shared/model/MediaData;->hashCode()I
-
-    .line 750
-    move-result v14
-
-    .line 753
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 754
-    const-string v1, "MediaControlPanel#bindArtworkAndColors<"
-
-    .line 756
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 758
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 761
-    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 764
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 767
-    move-result-object v6
-
-    .line 770
-    invoke-static {v6, v14}, Landroid/os/Trace;->beginAsyncSection(Ljava/lang/String;I)V
-
-    .line 771
-    iget v5, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mArtworkNextBindRequestId:I
-
-    .line 774
-    const/4 v0, 0x1
-
-    .line 776
-    add-int/lit8 v1, v5, 0x1
-
-    .line 777
-    iput v1, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mArtworkNextBindRequestId:I
-
-    .line 779
-    if-eqz v12, :cond_1e
-
-    .line 781
-    iput-boolean v11, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mIsArtworkBound:Z
-
-    .line 783
-    :cond_1e
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
-
-    .line 785
-    iget-object v0, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->albumView:Landroid/widget/ImageView;
-
-    .line 787
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getMeasuredWidth()I
-
-    .line 789
-    move-result v3
-
-    .line 792
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
-
-    .line 793
-    iget-object v0, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->albumView:Landroid/widget/ImageView;
-
-    .line 795
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getMeasuredHeight()I
-
-    .line 797
+    .line 586
     move-result v4
 
-    .line 800
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaFlags:Lcom/android/systemui/media/controls/util/MediaFlags;
+    .line 589
+    if-ge v6, v4, :cond_18
 
-    .line 801
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 590
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 803
-    invoke-static {}, Lcom/android/systemui/media/controls/util/MediaFlags;->isSceneContainerEnabled()V
+    .line 592
+    move-result-object v4
 
-    .line 806
-    iget-object v13, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
+    .line 595
+    check-cast v4, Landroid/widget/ImageButton;
 
-    .line 809
-    new-instance v15, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda16;
+    .line 596
+    invoke-virtual {v9, v4, v1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindButtonCommon(Landroid/widget/ImageButton;Lcom/android/systemui/media/controls/shared/model/MediaAction;)V
 
-    .line 811
-    move-object v0, v15
+    .line 598
+    invoke-virtual {v4}, Landroid/widget/ImageButton;->getId()I
 
-    .line 813
+    .line 601
+    move-result v5
+
+    .line 604
+    const/4 v10, 0x0
+
+    .line 605
+    invoke-static {v2, v5, v10}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
+
+    .line 606
+    invoke-virtual {v4}, Landroid/widget/ImageButton;->getId()I
+
+    .line 609
+    move-result v4
+
+    .line 612
+    invoke-static {v3, v4, v10}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setVisibleAndAlpha(Landroidx/constraintlayout/widget/ConstraintSet;IZ)V
+
+    .line 613
+    const/4 v4, 0x1
+
+    .line 616
+    add-int/2addr v6, v4
+
+    .line 617
+    goto :goto_10
+
+    .line 618
+    :cond_18
+    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->updateSeekBarVisibility()V
+
+    .line 619
+    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
+
+    .line 622
+    iget-object v2, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->titleText:Landroid/widget/TextView;
+
+    .line 624
+    iget-object v4, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->artistText:Landroid/widget/TextView;
+
+    .line 626
+    iget-object v5, v13, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->expandedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
+
+    .line 628
+    iget-object v6, v13, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->collapsedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
+
+    .line 630
+    iget-object v10, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMetadataAnimationHandler:Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;
+
+    .line 632
+    new-instance v11, Lkotlin/Triple;
+
+    .line 634
+    iget-object v0, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->song:Ljava/lang/CharSequence;
+
+    .line 636
+    iget-object v1, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->artist:Ljava/lang/CharSequence;
+
+    .line 638
+    iget-boolean v3, v7, Lcom/android/systemui/media/controls/shared/model/MediaData;->isExplicit:Z
+
+    .line 640
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 642
+    move-result-object v3
+
+    .line 645
+    invoke-direct {v11, v0, v1, v3}, Lkotlin/Triple;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 646
+    new-instance v14, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda7;
+
+    .line 649
+    move-object v0, v14
+
+    .line 651
     move-object/from16 v1, p0
 
-    .line 814
-    move-object/from16 v2, p1
+    .line 652
+    move-object/from16 v3, p1
 
-    .line 816
-    move v7, v14
+    .line 654
+    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda7;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroid/widget/TextView;Lcom/android/systemui/media/controls/shared/model/MediaData;Landroid/widget/TextView;Landroidx/constraintlayout/widget/ConstraintSet;Landroidx/constraintlayout/widget/ConstraintSet;)V
 
-    .line 818
-    move v8, v12
+    .line 656
+    new-instance v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda2;
 
-    .line 819
-    invoke-direct/range {v0 .. v8}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda16;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Lcom/android/systemui/media/controls/shared/model/MediaData;IIILjava/lang/String;IZ)V
+    .line 659
+    const/4 v1, 0x2
 
-    .line 820
-    invoke-interface {v13, v15}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    .line 661
+    invoke-direct {v0, v9, v1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;I)V
 
-    .line 823
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMetadataAnimationHandler:Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;
+    .line 662
+    iget-object v1, v10, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->targetData:Ljava/lang/Object;
 
-    .line 826
-    invoke-virtual {v0}, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->isRunning()Z
+    .line 665
+    invoke-virtual {v11, v1}, Lkotlin/Triple;->equals(Ljava/lang/Object;)Z
 
-    .line 828
-    move-result v0
-
-    .line 831
-    if-nez v0, :cond_1f
-
-    .line 832
-    invoke-static {}, Lcom/android/systemui/media/controls/util/MediaFlags;->isSceneContainerEnabled()V
-
-    .line 834
-    invoke-virtual {v10}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->refreshState()V
-
-    .line 837
-    :cond_1f
-    iget-boolean v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mButtonClicked:Z
-
-    .line 840
-    if-eqz v0, :cond_2a
-
-    .line 842
-    iget-boolean v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mWasPlaying:Z
-
-    .line 844
-    if-nez v0, :cond_2a
-
-    .line 846
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->isPlaying()Z
-
-    .line 848
-    move-result v0
-
-    .line 851
-    if-eqz v0, :cond_2a
-
-    .line 852
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseAnimationConfig:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
-
-    .line 854
-    if-nez v0, :cond_22
-
-    .line 856
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 858
-    if-nez v0, :cond_20
-
-    .line 860
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 862
-    :cond_20
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->shaderlibLoadingEffectRefactor:Z
-
-    .line 865
-    if-eqz v0, :cond_21
-
-    .line 867
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
-
-    .line 869
-    iget-object v0, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->loadingEffectView:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffectView;
-
-    .line 871
-    goto :goto_14
-
-    .line 873
-    :cond_21
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
-
-    .line 874
-    iget-object v0, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->turbulenceNoiseView:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;
-
-    .line 876
-    :goto_14
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    .line 878
+    .line 667
     move-result v1
 
-    .line 881
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    .line 670
+    if-nez v1, :cond_1a
 
-    .line 882
+    .line 671
+    iput-object v11, v10, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->targetData:Ljava/lang/Object;
+
+    .line 673
+    iput-object v14, v10, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->postExitUpdate:Lkotlin/jvm/functions/Function0;
+
+    .line 675
+    iput-object v0, v10, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->postEnterUpdate:Lkotlin/jvm/functions/Function0;
+
+    .line 677
+    invoke-virtual {v10}, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->isRunning()Z
+
+    .line 679
     move-result v0
 
-    .line 885
-    new-instance v2, Ljava/util/Random;
+    .line 682
+    if-nez v0, :cond_19
 
-    .line 886
-    invoke-direct {v2}, Ljava/util/Random;-><init>()V
+    .line 683
+    iget-object v0, v10, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->exitAnimator:Landroid/animation/Animator;
 
-    .line 888
-    new-instance v3, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
+    .line 685
+    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
-    .line 891
-    invoke-virtual {v2}, Ljava/util/Random;->nextFloat()F
+    .line 687
+    :cond_19
+    const/4 v10, 0x1
 
-    .line 893
-    move-result v20
+    .line 690
+    goto :goto_11
 
-    .line 896
-    invoke-virtual {v2}, Ljava/util/Random;->nextFloat()F
+    .line 691
+    :cond_1a
+    const/4 v10, 0x0
 
-    .line 897
-    move-result v21
+    .line 692
+    :goto_11
+    invoke-virtual/range {p1 .. p1}, Lcom/android/systemui/media/controls/shared/model/MediaData;->hashCode()I
 
-    .line 900
-    invoke-virtual {v2}, Ljava/util/Random;->nextFloat()F
+    .line 693
+    move-result v11
 
-    .line 901
-    move-result v22
+    .line 696
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 904
-    iget-object v2, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mColorSchemeTransition:Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;
+    .line 697
+    const-string v1, "MediaControlPanel#bindArtworkAndColors<"
 
-    .line 905
-    iget-object v2, v2, Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;->accentPrimary:Lcom/android/systemui/media/controls/ui/animation/AnimatingColorTransition;
+    .line 699
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 907
-    iget v2, v2, Lcom/android/systemui/media/controls/ui/animation/AnimatingColorTransition;->currentColor:I
+    .line 701
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 909
-    int-to-float v1, v1
+    .line 704
+    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 911
-    int-to-float v0, v0
+    .line 707
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 912
-    iget-object v4, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
+    .line 710
+    move-result-object v6
 
-    .line 913
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 713
+    invoke-static {v6, v11}, Landroid/os/Trace;->beginAsyncSection(Ljava/lang/String;I)V
 
-    .line 915
-    move-result-object v4
+    .line 714
+    iget v5, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mArtworkNextBindRequestId:I
 
-    .line 918
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    .line 717
+    const/4 v0, 0x1
 
-    .line 919
-    move-result-object v4
+    .line 719
+    add-int/lit8 v1, v5, 0x1
 
-    .line 922
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    .line 720
+    iput v1, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mArtworkNextBindRequestId:I
 
-    .line 923
-    move-object/from16 v19, v3
+    .line 722
+    if-eqz v10, :cond_1b
 
-    .line 925
-    move/from16 v23, v1
+    .line 724
+    const/4 v0, 0x0
 
-    .line 927
-    move/from16 v24, v0
+    .line 726
+    iput-boolean v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mIsArtworkBound:Z
 
-    .line 929
-    move/from16 v25, v4
+    .line 727
+    :cond_1b
+    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
 
-    .line 931
-    move/from16 v26, v2
+    .line 729
+    iget-object v0, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->albumView:Landroid/widget/ImageView;
 
-    .line 933
-    invoke-direct/range {v19 .. v26}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;-><init>(FFFFFFI)V
+    .line 731
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getMeasuredWidth()I
 
-    .line 935
-    iput-object v3, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseAnimationConfig:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
+    .line 733
+    move-result v3
 
-    .line 938
-    :cond_22
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
+    .line 736
+    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
 
-    .line 940
-    if-nez v0, :cond_23
+    .line 737
+    iget-object v0, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->albumView:Landroid/widget/ImageView;
 
-    .line 942
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
+    .line 739
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getMeasuredHeight()I
 
-    .line 944
-    :cond_23
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->shaderlibLoadingEffectRefactor:Z
+    .line 741
+    move-result v4
 
-    .line 947
-    const-wide/16 v1, 0x1d4c
+    .line 744
+    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaFlags:Lcom/android/systemui/media/controls/util/MediaFlags;
 
-    .line 949
-    iget-object v3, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMainExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
-
-    .line 951
-    if-eqz v0, :cond_27
-
-    .line 953
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mLoadingEffect:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;
-
-    .line 955
-    if-nez v0, :cond_24
-
-    .line 957
-    new-instance v0, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;
-
-    .line 959
-    sget-object v4, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;->SIMPLEX_NOISE:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;
-
-    .line 961
-    iget-object v4, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseAnimationConfig:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
-
-    .line 963
-    iget-object v5, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mNoiseDrawCallback:Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$1;
-
-    .line 965
-    iget-object v6, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mStateChangedCallback:Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$1;
-
-    .line 967
-    invoke-direct {v0, v4, v5, v6}, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;-><init>(Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;Lcom/android/systemui/surfaceeffects/PaintDrawCallback;Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$1;)V
-
-    .line 969
-    iput-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mLoadingEffect:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;
-
-    .line 972
-    iget-object v4, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mColorSchemeTransition:Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;
-
-    .line 974
-    iput-object v0, v4, Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;->loadingEffect:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;
-
-    .line 976
-    :cond_24
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mLoadingEffect:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;
-
-    .line 978
-    iget-object v4, v0, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;->state:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect$AnimationState;
-
-    .line 980
-    sget-object v5, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect$AnimationState;->NOT_PLAYING:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect$AnimationState;
-
-    .line 982
-    if-eq v4, v5, :cond_25
-
-    .line 984
-    goto :goto_15
-
-    .line 986
-    :cond_25
-    if-eq v4, v5, :cond_26
-
-    .line 987
-    goto :goto_15
-
-    .line 989
-    :cond_26
-    sget-object v4, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect$AnimationState;->EASE_IN:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect$AnimationState;
-
-    .line 990
-    invoke-virtual {v0, v4}, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;->setState(Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect$AnimationState;)V
-
-    .line 992
-    const/4 v4, 0x2
-
-    .line 995
-    new-array v4, v4, [F
-
-    .line 996
-    fill-array-data v4, :array_0
-
-    .line 998
-    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    .line 1001
-    move-result-object v4
-
-    .line 1004
-    iget-object v5, v0, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;->config:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
-
-    .line 1005
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 1007
-    const v5, 0x44a8c000    # 1350.0f
-
-    .line 1010
-    float-to-long v5, v5
-
-    .line 1013
-    invoke-virtual {v4, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    .line 1014
-    iget-object v5, v0, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;->turbulenceNoiseShader:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader;
-
-    .line 1017
-    iget v6, v5, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader;->noiseOffsetX:F
-
-    .line 1019
-    iget v7, v5, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader;->noiseOffsetY:F
-
-    .line 1021
-    iget v5, v5, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader;->noiseOffsetZ:F
-
-    .line 1023
-    new-instance v8, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect$playMain$1;
-
-    .line 1025
-    const/16 v24, 0x1
-
-    .line 1027
-    move-object/from16 v19, v8
-
-    .line 1029
-    move-object/from16 v20, v0
-
-    .line 1031
-    move/from16 v21, v6
-
-    .line 1033
-    move/from16 v22, v7
-
-    .line 1035
-    move/from16 v23, v5
-
-    .line 1037
-    invoke-direct/range {v19 .. v24}, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect$playMain$1;-><init>(Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;FFFI)V
-
-    .line 1039
-    invoke-virtual {v4, v8}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    .line 1042
-    new-instance v5, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect$playMain$2;
-
-    .line 1045
-    const/4 v6, 0x1
-
-    .line 1047
-    invoke-direct {v5, v0, v6}, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect$playMain$2;-><init>(Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;I)V
-
-    .line 1048
-    invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    .line 1051
-    invoke-virtual {v4}, Landroid/animation/ValueAnimator;->start()V
-
-    .line 1054
-    iput-object v4, v0, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;->currentAnimator:Landroid/animation/ValueAnimator;
-
-    .line 1057
-    :goto_15
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mLoadingEffect:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;
-
-    .line 1059
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 1061
-    new-instance v4, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda6;
-
-    .line 1064
-    invoke-direct {v4, v11, v0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda6;-><init>(ILjava/lang/Object;)V
-
-    .line 1066
-    invoke-interface {v3, v4, v1, v2}, Lcom/android/systemui/util/concurrency/DelayableExecutor;->executeDelayed(Ljava/lang/Runnable;J)Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
-    .line 1069
-    goto :goto_17
-
-    .line 1072
-    :cond_27
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseController:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;
-
-    .line 1073
-    sget-object v4, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;->SIMPLEX_NOISE:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;
-
-    .line 1075
-    iget-object v4, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseAnimationConfig:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
-
-    .line 1077
+    .line 745
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1079
-    sget-object v5, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;->SIMPLEX_NOISE:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;
+    .line 747
+    iget-object v12, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
 
-    .line 1082
-    iget-object v6, v0, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;->state:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;
+    .line 750
+    new-instance v14, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda15;
 
-    .line 1084
-    sget-object v7, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;->NOT_PLAYING:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;
+    .line 752
+    move-object v0, v14
 
-    .line 1086
-    if-eq v6, v7, :cond_28
+    .line 754
+    move-object/from16 v1, p0
 
-    .line 1088
-    goto :goto_16
+    .line 755
+    move-object/from16 v2, p1
 
-    .line 1090
-    :cond_28
-    iget-object v6, v0, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;->turbulenceNoiseView:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;
+    .line 757
+    move v7, v11
 
-    .line 1091
-    invoke-virtual {v6, v5, v4}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;->initShader(Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;)V
+    .line 759
+    move v8, v10
 
-    .line 1093
-    iget-object v4, v0, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;->state:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;
+    .line 760
+    invoke-direct/range {v0 .. v8}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda15;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Lcom/android/systemui/media/controls/shared/model/MediaData;IIILjava/lang/String;IZ)V
 
-    .line 1096
-    if-eq v4, v7, :cond_29
+    .line 761
+    invoke-interface {v12, v14}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 1098
-    goto :goto_16
+    .line 764
+    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMetadataAnimationHandler:Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;
 
-    .line 1100
-    :cond_29
-    sget-object v4, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;->EASE_IN:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;
+    .line 767
+    invoke-virtual {v0}, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->isRunning()Z
 
-    .line 1101
-    invoke-virtual {v0, v4}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;->setState(Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;)V
-
-    .line 1103
-    new-instance v4, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$finish$1;
-
-    .line 1106
-    const/4 v5, 0x1
-
-    .line 1108
-    invoke-direct {v4, v0, v5}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$finish$1;-><init>(Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;I)V
-
-    .line 1109
-    invoke-virtual {v6, v4}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;->playEaseIn(Ljava/lang/Runnable;)V
-
-    .line 1112
-    :goto_16
-    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseController:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;
-
-    .line 1115
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 1117
-    new-instance v4, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda6;
-
-    .line 1120
-    const/4 v5, 0x2
-
-    .line 1122
-    invoke-direct {v4, v5, v0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda6;-><init>(ILjava/lang/Object;)V
-
-    .line 1123
-    invoke-interface {v3, v4, v1, v2}, Lcom/android/systemui/util/concurrency/DelayableExecutor;->executeDelayed(Ljava/lang/Runnable;J)Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
-    .line 1126
-    :cond_2a
-    :goto_17
-    iput-boolean v11, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mButtonClicked:Z
-
-    .line 1129
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->isPlaying()Z
-
-    .line 1131
+    .line 769
     move-result v0
 
-    .line 1134
+    .line 772
+    if-nez v0, :cond_1c
+
+    .line 773
+    invoke-virtual {v13}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->refreshState()V
+
+    .line 775
+    :cond_1c
+    iget-boolean v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mButtonClicked:Z
+
+    .line 778
+    if-eqz v0, :cond_20
+
+    .line 780
+    iget-boolean v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mWasPlaying:Z
+
+    .line 782
+    if-nez v0, :cond_20
+
+    .line 784
+    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->isPlaying()Z
+
+    .line 786
+    move-result v0
+
+    .line 789
+    if-eqz v0, :cond_20
+
+    .line 790
+    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseAnimationConfig:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
+
+    .line 792
+    if-nez v0, :cond_1d
+
+    .line 794
+    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
+
+    .line 796
+    iget-object v0, v0, Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;->turbulenceNoiseView:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;
+
+    .line 798
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    .line 800
+    move-result v1
+
+    .line 803
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    .line 804
+    move-result v0
+
+    .line 807
+    new-instance v2, Ljava/util/Random;
+
+    .line 808
+    invoke-direct {v2}, Ljava/util/Random;-><init>()V
+
+    .line 810
+    new-instance v3, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
+
+    .line 813
+    invoke-virtual {v2}, Ljava/util/Random;->nextFloat()F
+
+    .line 815
+    move-result v19
+
+    .line 818
+    invoke-virtual {v2}, Ljava/util/Random;->nextFloat()F
+
+    .line 819
+    move-result v20
+
+    .line 822
+    invoke-virtual {v2}, Ljava/util/Random;->nextFloat()F
+
+    .line 823
+    move-result v21
+
+    .line 826
+    iget-object v2, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mColorSchemeTransition:Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;
+
+    .line 827
+    iget-object v2, v2, Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;->accentPrimary:Lcom/android/systemui/media/controls/ui/animation/AnimatingColorTransition;
+
+    .line 829
+    iget v2, v2, Lcom/android/systemui/media/controls/ui/animation/AnimatingColorTransition;->currentColor:I
+
+    .line 831
+    int-to-float v1, v1
+
+    .line 833
+    int-to-float v0, v0
+
+    .line 834
+    iget-object v4, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
+
+    .line 835
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 837
+    move-result-object v4
+
+    .line 840
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    .line 841
+    move-result-object v4
+
+    .line 844
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    .line 845
+    move-object/from16 v18, v3
+
+    .line 847
+    move/from16 v22, v1
+
+    .line 849
+    move/from16 v23, v0
+
+    .line 851
+    move/from16 v24, v4
+
+    .line 853
+    move/from16 v25, v2
+
+    .line 855
+    invoke-direct/range {v18 .. v25}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;-><init>(FFFFFFI)V
+
+    .line 857
+    iput-object v3, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseAnimationConfig:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
+
+    .line 860
+    :cond_1d
+    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseController:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;
+
+    .line 862
+    sget-object v1, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;->SIMPLEX_NOISE:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;
+
+    .line 864
+    iget-object v1, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseAnimationConfig:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;
+
+    .line 866
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 868
+    sget-object v2, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;->SIMPLEX_NOISE:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;
+
+    .line 871
+    iget-object v3, v0, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;->state:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;
+
+    .line 873
+    sget-object v4, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;->NOT_PLAYING:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;
+
+    .line 875
+    if-eq v3, v4, :cond_1e
+
+    .line 877
+    goto :goto_12
+
+    .line 879
+    :cond_1e
+    iget-object v3, v0, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;->turbulenceNoiseView:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;
+
+    .line 880
+    invoke-virtual {v3, v2, v1}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;->initShader(Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader$Companion$Type;Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseAnimationConfig;)V
+
+    .line 882
+    iget-object v1, v0, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;->state:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;
+
+    .line 885
+    if-eq v1, v4, :cond_1f
+
+    .line 887
+    goto :goto_12
+
+    .line 889
+    :cond_1f
+    sget-object v1, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;->EASE_IN:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;
+
+    .line 890
+    invoke-virtual {v0, v1}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;->setState(Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;)V
+
+    .line 892
+    new-instance v1, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$finish$1;
+
+    .line 895
+    const/4 v2, 0x1
+
+    .line 897
+    invoke-direct {v1, v0, v2}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$finish$1;-><init>(Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;I)V
+
+    .line 898
+    invoke-virtual {v3, v1}, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;->playEaseIn(Ljava/lang/Runnable;)V
+
+    .line 901
+    :goto_12
+    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mTurbulenceNoiseController:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;
+
+    .line 904
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 906
+    new-instance v1, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda6;
+
+    .line 909
+    const/4 v2, 0x0
+
+    .line 911
+    invoke-direct {v1, v2, v0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda6;-><init>(ILjava/lang/Object;)V
+
+    .line 912
+    const-wide/16 v3, 0x1d4c
+
+    .line 915
+    iget-object v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMainExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
+
+    .line 917
+    invoke-interface {v0, v1, v3, v4}, Lcom/android/systemui/util/concurrency/DelayableExecutor;->executeDelayed(Ljava/lang/Runnable;J)Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
+
+    .line 919
+    goto :goto_13
+
+    .line 922
+    :cond_20
+    const/4 v2, 0x0
+
+    .line 923
+    :goto_13
+    iput-boolean v2, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mButtonClicked:Z
+
+    .line 924
+    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->isPlaying()Z
+
+    .line 926
+    move-result v0
+
+    .line 929
     iput-boolean v0, v9, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mWasPlaying:Z
 
-    .line 1135
+    .line 930
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 1137
+    .line 932
     return-void
-
-    .line 1140
-    nop
-
-    .line 1141
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-    .line 1142
+    .line 935
 .end method
 
 .method public final bindPlayerContentDescription(Lcom/android/systemui/media/controls/shared/model/MediaData;)V
@@ -3270,7 +2947,7 @@
     move-result-object p1
 
     .line 35
-    const v1, 0x7f1402d4    # @string/controls_media_playing_item_description '%1$s by %2$s is playing from %3$s'
+    const v1, 0x7f1302f0    # @string/controls_media_playing_item_description '%1$s by %2$s is playing from %3$s'
 
     .line 36
     invoke-virtual {v0, v1, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -3310,7 +2987,7 @@
     move-object/from16 v10, p1
 
     .line 4
-    const/4 v13, 0x3
+    const/4 v11, 0x2
 
     .line 6
     iget-object v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mRecommendationViewHolder:Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;
@@ -3351,7 +3028,7 @@
     move-result v1
 
     .line 29
-    const-string v14, ">"
+    const-string v13, ">"
 
     .line 30
     iget-object v3, v10, Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaData;->packageName:Ljava/lang/String;
@@ -3372,7 +3049,7 @@
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 43
-    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 46
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -3437,10 +3114,10 @@
     move-result-object v1
 
     .line 89
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
     .line 90
-    invoke-virtual {v1, v3, v15}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {v1, v3, v14}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     .line 91
     move-result-object v1
@@ -3460,10 +3137,10 @@
     invoke-virtual {v10, v3}, Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaData;->getAppName(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     .line 101
-    move-result-object v9
+    move-result-object v15
 
     .line 104
-    if-nez v9, :cond_3
+    if-nez v15, :cond_3
 
     .line 105
     const-string v0, "Fail to get media recommendation\'s app name"
@@ -3500,7 +3177,7 @@
     new-instance v3, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;
 
     .line 128
-    invoke-direct {v3, v0, v1, v13}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Ljava/lang/Object;I)V
+    invoke-direct {v3, v0, v1, v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Ljava/lang/Object;I)V
 
     .line 130
     invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -3527,10 +3204,10 @@
     iget-object v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mRecommendationViewHolder:Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;
 
     .line 149
-    iget-object v8, v1, Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;->mediaCoverItems:Ljava/util/List;
+    iget-object v9, v1, Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;->mediaCoverItems:Ljava/util/List;
 
     .line 151
-    iget-object v7, v1, Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;->mediaCoverContainers:Ljava/util/List;
+    iget-object v8, v1, Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;->mediaCoverContainers:Ljava/util/List;
 
     .line 153
     invoke-virtual/range {p1 .. p1}, Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaData;->getValidRecommendations()Ljava/util/List;
@@ -3542,164 +3219,164 @@
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->getNumberOfFittedRecommendations()I
 
     .line 159
-    move-result v6
+    move-result v7
 
     .line 162
-    move v5, v15
+    move v6, v14
 
     .line 163
-    move/from16 v17, v5
+    move/from16 v17, v6
 
     .line 164
     move/from16 v18, v17
 
     .line 166
     :goto_0
-    if-ge v5, v13, :cond_8
+    const/4 v1, 0x3
 
     .line 168
+    if-ge v6, v1, :cond_8
+
+    .line 169
     move-object/from16 v1, v16
 
-    .line 170
+    .line 171
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 172
-    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 173
+    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 174
+    .line 175
     move-result-object v1
-
-    .line 177
-    move-object v4, v1
 
     .line 178
-    check-cast v4, Landroid/app/smartspace/SmartspaceAction;
+    move-object v5, v1
 
     .line 179
-    move-object v1, v8
+    check-cast v5, Landroid/app/smartspace/SmartspaceAction;
 
-    .line 181
-    check-cast v1, Ljava/util/ArrayList;
+    .line 180
+    move-object v1, v9
 
     .line 182
-    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    check-cast v1, Ljava/util/ArrayList;
 
-    .line 184
+    .line 183
+    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    .line 185
     move-result-object v1
-
-    .line 187
-    move-object v3, v1
 
     .line 188
-    check-cast v3, Landroid/widget/ImageView;
+    move-object v4, v1
 
     .line 189
-    invoke-virtual {v4}, Landroid/app/smartspace/SmartspaceAction;->hashCode()I
+    check-cast v4, Landroid/widget/ImageView;
 
-    .line 191
-    move-result v2
+    .line 190
+    invoke-virtual {v5}, Landroid/app/smartspace/SmartspaceAction;->hashCode()I
 
-    .line 194
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 192
+    move-result v3
 
     .line 195
-    const-string v13, "MediaControlPanel#bindRecommendationArtwork<"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 197
-    invoke-direct {v1, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 196
+    const-string v2, "MediaControlPanel#bindRecommendationArtwork<"
 
-    .line 199
-    iget-object v13, v10, Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaData;->packageName:Ljava/lang/String;
+    .line 198
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 202
+    .line 200
+    iget-object v2, v10, Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaData;->packageName:Ljava/lang/String;
+
+    .line 203
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 205
     invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 204
-    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 207
+    .line 208
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 210
+    .line 211
     move-result-object v1
 
-    .line 213
-    invoke-static {v1, v2}, Landroid/os/Trace;->beginAsyncSection(Ljava/lang/String;I)V
-
     .line 214
-    iget-object v15, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
+    invoke-static {v1, v3}, Landroid/os/Trace;->beginAsyncSection(Ljava/lang/String;I)V
 
-    .line 217
-    invoke-virtual {v15}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 215
+    iget-object v14, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
-    .line 219
-    move-result-object v15
+    .line 218
+    invoke-virtual {v14}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 222
-    const v12, 0x7f0708ec    # @dimen/qs_media_rec_album_width '110.0dp'
+    .line 220
+    move-result-object v14
 
     .line 223
-    invoke-virtual {v15, v12}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    const v12, 0x7f07093c    # @dimen/qs_media_rec_album_width '110.0dp'
 
-    .line 226
+    .line 224
+    invoke-virtual {v14, v12}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 227
     move-result v12
 
-    .line 229
-    iget-object v15, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
-
     .line 230
-    invoke-virtual {v15}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    iget-object v14, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
-    .line 232
-    move-result-object v15
+    .line 231
+    invoke-virtual {v14}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 235
-    const v11, 0x7f0708e6    # @dimen/qs_media_rec_album_height_expanded '108.0dp'
+    .line 233
+    move-result-object v14
 
     .line 236
-    invoke-virtual {v15, v11}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    const v11, 0x7f070936    # @dimen/qs_media_rec_album_height_expanded '108.0dp'
 
-    .line 239
+    .line 237
+    invoke-virtual {v14, v11}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 240
     move-result v11
 
-    .line 242
-    iget-object v15, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
-
     .line 243
-    move-object/from16 v19, v14
+    iget-object v14, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
 
-    .line 245
-    new-instance v14, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda26;
+    .line 244
+    move-object/from16 v19, v13
 
-    .line 247
+    .line 246
+    new-instance v13, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda25;
+
+    .line 248
     move-object/from16 v20, v1
 
-    .line 249
-    move-object v1, v14
-
-    .line 251
-    move/from16 v21, v2
+    .line 250
+    move-object v1, v13
 
     .line 252
+    move-object/from16 v21, v2
+
+    .line 253
     move-object/from16 v2, p0
 
-    .line 254
-    move-object v10, v3
-
-    .line 256
-    move-object v3, v4
+    .line 255
+    move/from16 v22, v3
 
     .line 257
-    move-object/from16 v22, v10
+    move-object v3, v5
 
-    .line 258
+    .line 259
     move-object v10, v4
 
     .line 260
     move v4, v12
 
     .line 261
-    move v12, v5
+    move-object v12, v5
 
     .line 262
     move v5, v11
@@ -3708,40 +3385,34 @@
     move v11, v6
 
     .line 264
-    move v6, v12
+    move/from16 v23, v7
 
     .line 265
-    move/from16 v23, v11
+    move-object/from16 v7, v21
 
-    .line 266
-    move-object v11, v7
-
-    .line 268
-    move-object v7, v13
+    .line 267
+    move-object/from16 v21, v10
 
     .line 269
-    move-object v13, v8
-
-    .line 270
-    move-object/from16 v8, v20
+    move-object v10, v8
 
     .line 271
-    move-object/from16 v20, v13
+    move-object/from16 v8, v20
 
-    .line 273
-    move-object v13, v9
+    .line 272
+    move-object/from16 v20, v9
 
-    .line 275
-    move/from16 v9, v21
+    .line 274
+    move/from16 v9, v22
 
     .line 276
-    invoke-direct/range {v1 .. v9}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda26;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroid/app/smartspace/SmartspaceAction;IIILjava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v1 .. v9}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda25;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroid/app/smartspace/SmartspaceAction;IIILjava/lang/String;Ljava/lang/String;I)V
 
     .line 278
-    invoke-interface {v15, v14}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v14, v13}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     .line 281
-    invoke-interface {v11, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v10, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     .line 284
     move-result-object v1
@@ -3750,7 +3421,7 @@
     check-cast v1, Landroid/view/ViewGroup;
 
     .line 288
-    invoke-virtual {v0, v1, v10, v12}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setSmartspaceRecItemOnClickListener(Landroid/view/View;Landroid/app/smartspace/SmartspaceAction;I)V
+    invoke-virtual {v0, v1, v12, v11}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setSmartspaceRecItemOnClickListener(Landroid/view/View;Landroid/app/smartspace/SmartspaceAction;I)V
 
     .line 290
     new-instance v2, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda3;
@@ -3765,7 +3436,7 @@
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 299
-    invoke-virtual {v10}, Landroid/app/smartspace/SmartspaceAction;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v12}, Landroid/app/smartspace/SmartspaceAction;->getExtras()Landroid/os/Bundle;
 
     .line 302
     move-result-object v1
@@ -3774,10 +3445,10 @@
     const-string v2, "artist_name"
 
     .line 306
-    const-string v3, ""
+    const-string v4, ""
 
     .line 308
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 310
     move-result-object v1
@@ -3795,28 +3466,28 @@
     iget-object v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
     .line 320
-    invoke-virtual {v10}, Landroid/app/smartspace/SmartspaceAction;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {v12}, Landroid/app/smartspace/SmartspaceAction;->getTitle()Ljava/lang/CharSequence;
 
     .line 322
     move-result-object v2
 
     .line 325
-    filled-new-array {v2, v13}, [Ljava/lang/Object;
+    filled-new-array {v2, v15}, [Ljava/lang/Object;
 
     .line 326
     move-result-object v2
 
     .line 329
-    const v4, 0x7f1402db    # @string/controls_media_smartspace_rec_item_no_artist_description 'Play %1$s from %2$s'
+    const v5, 0x7f1302f7    # @string/controls_media_smartspace_rec_item_no_artist_description 'Play %1$s from %2$s'
 
     .line 330
-    invoke-virtual {v1, v4, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v5, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 333
     move-result-object v1
 
     .line 336
-    move-object/from16 v2, v22
+    move-object/from16 v2, v21
 
     .line 337
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
@@ -3826,28 +3497,28 @@
 
     .line 342
     :cond_4
-    move-object/from16 v2, v22
+    move-object/from16 v2, v21
 
     .line 343
-    iget-object v4, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
+    iget-object v5, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
     .line 345
-    invoke-virtual {v10}, Landroid/app/smartspace/SmartspaceAction;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {v12}, Landroid/app/smartspace/SmartspaceAction;->getTitle()Ljava/lang/CharSequence;
 
     .line 347
-    move-result-object v5
+    move-result-object v6
 
     .line 350
-    filled-new-array {v5, v1, v13}, [Ljava/lang/Object;
+    filled-new-array {v6, v1, v15}, [Ljava/lang/Object;
 
     .line 351
     move-result-object v1
 
     .line 354
-    const v5, 0x7f1402da    # @string/controls_media_smartspace_rec_item_description 'Play %1$s by %2$s from %3$s'
+    const v6, 0x7f1302f6    # @string/controls_media_smartspace_rec_item_description 'Play %1$s by %2$s from %3$s'
 
     .line 355
-    invoke-virtual {v4, v5, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v5, v6, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 358
     move-result-object v1
@@ -3857,7 +3528,7 @@
 
     .line 362
     :goto_1
-    invoke-virtual {v10}, Landroid/app/smartspace/SmartspaceAction;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {v12}, Landroid/app/smartspace/SmartspaceAction;->getTitle()Ljava/lang/CharSequence;
 
     .line 365
     move-result-object v1
@@ -3869,10 +3540,10 @@
     move-result v2
 
     .line 372
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
     .line 373
-    xor-int/2addr v2, v4
+    xor-int/2addr v2, v5
 
     .line 374
     or-int v17, v17, v2
@@ -3887,7 +3558,7 @@
     check-cast v2, Ljava/util/ArrayList;
 
     .line 381
-    invoke-virtual {v2, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     .line 383
     move-result-object v2
@@ -3914,14 +3585,14 @@
     if-eqz v1, :cond_5
 
     .line 398
-    invoke-virtual {v10}, Landroid/app/smartspace/SmartspaceAction;->getSubtitle()Ljava/lang/CharSequence;
+    invoke-virtual {v12}, Landroid/app/smartspace/SmartspaceAction;->getSubtitle()Ljava/lang/CharSequence;
 
     .line 400
-    move-result-object v3
+    move-result-object v4
 
     .line 403
     :cond_5
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     .line 404
     move-result v1
@@ -3942,7 +3613,7 @@
     check-cast v1, Ljava/util/ArrayList;
 
     .line 415
-    invoke-virtual {v1, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v1, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     .line 417
     move-result-object v1
@@ -3951,7 +3622,7 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 421
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 423
     iget-object v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mRecommendationViewHolder:Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;
@@ -3963,7 +3634,7 @@
     check-cast v1, Ljava/util/ArrayList;
 
     .line 430
-    invoke-virtual {v1, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v1, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     .line 432
     move-result-object v1
@@ -3981,7 +3652,7 @@
     check-cast v2, Ljava/util/ArrayList;
 
     .line 442
-    invoke-virtual {v2, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     .line 444
     move-result-object v2
@@ -3990,72 +3661,72 @@
     check-cast v2, Landroid/widget/TextView;
 
     .line 448
-    invoke-virtual {v10}, Landroid/app/smartspace/SmartspaceAction;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v12}, Landroid/app/smartspace/SmartspaceAction;->getExtras()Landroid/os/Bundle;
 
     .line 450
-    move-result-object v3
+    move-result-object v4
 
     .line 453
-    invoke-static {v3}, Lcom/android/systemui/media/controls/util/MediaDataUtils;->getDescriptionProgress(Landroid/os/Bundle;)Ljava/lang/Double;
+    invoke-static {v4}, Lcom/android/systemui/media/controls/util/MediaDataUtils;->getDescriptionProgress(Landroid/os/Bundle;)Ljava/lang/Double;
 
     .line 454
-    move-result-object v3
+    move-result-object v4
 
     .line 457
-    const/16 v4, 0x8
+    const/16 v5, 0x8
 
     .line 458
-    if-eqz v3, :cond_6
+    if-eqz v4, :cond_6
 
     .line 460
-    invoke-virtual {v3}, Ljava/lang/Double;->doubleValue()D
+    invoke-virtual {v4}, Ljava/lang/Double;->doubleValue()D
 
     .line 462
-    move-result-wide v5
+    move-result-wide v6
 
     .line 465
-    const-wide/16 v7, 0x0
+    const-wide/16 v8, 0x0
 
     .line 466
-    cmpg-double v5, v5, v7
+    cmpg-double v6, v6, v8
 
     .line 468
-    if-gtz v5, :cond_7
+    if-gtz v6, :cond_7
 
     .line 470
     :cond_6
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 472
     goto :goto_3
 
     .line 473
     :cond_7
-    invoke-virtual {v3}, Ljava/lang/Double;->doubleValue()D
+    invoke-virtual {v4}, Ljava/lang/Double;->doubleValue()D
 
     .line 474
-    move-result-wide v5
+    move-result-wide v6
 
     .line 477
-    const-wide/high16 v7, 0x4059000000000000L    # 100.0
+    const-wide/high16 v8, 0x4059000000000000L    # 100.0
 
     .line 478
-    mul-double/2addr v5, v7
+    mul-double/2addr v6, v8
 
     .line 480
-    double-to-int v3, v5
+    double-to-int v4, v6
 
     .line 481
-    invoke-virtual {v1, v3}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v1, v4}, Landroid/widget/SeekBar;->setProgress(I)V
 
     .line 482
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 485
-    invoke-virtual {v1, v3}, Landroid/widget/SeekBar;->setVisibility(I)V
+    invoke-virtual {v1, v4}, Landroid/widget/SeekBar;->setVisibility(I)V
 
     .line 486
-    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 489
     :goto_2
@@ -4066,223 +3737,211 @@
 
     .line 493
     :goto_3
-    invoke-virtual {v1, v4}, Landroid/widget/SeekBar;->setVisibility(I)V
+    invoke-virtual {v1, v5}, Landroid/widget/SeekBar;->setVisibility(I)V
 
     .line 494
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 497
     goto :goto_2
 
     .line 500
     :goto_4
-    add-int/lit8 v5, v12, 0x1
+    add-int/lit8 v6, v11, 0x1
 
     .line 501
-    move-object/from16 v10, p1
+    move v11, v3
 
     .line 503
-    move v15, v3
+    move v14, v4
+
+    .line 504
+    move-object v8, v10
 
     .line 505
-    move-object v7, v11
+    move-object/from16 v13, v19
 
     .line 506
-    move-object v9, v13
-
-    .line 507
-    move-object/from16 v14, v19
+    move-object/from16 v9, v20
 
     .line 508
-    move-object/from16 v8, v20
+    move/from16 v7, v23
 
     .line 510
-    move/from16 v6, v23
+    move-object/from16 v10, p1
 
     .line 512
-    const/4 v13, 0x3
-
-    .line 514
     goto/16 :goto_0
 
-    .line 515
+    .line 514
     :cond_8
-    move/from16 v23, v6
+    move/from16 v23, v7
 
-    .line 517
-    move v1, v13
-
-    .line 519
-    move-object v13, v9
-
-    .line 520
+    .line 516
     iput v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mSmartspaceMediaItemsCount:I
 
-    .line 521
+    .line 518
     iget-object v7, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMediaViewController:Lcom/android/systemui/media/controls/ui/controller/MediaViewController;
 
-    .line 523
+    .line 520
     iget-object v8, v7, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->expandedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
 
-    .line 525
+    .line 522
     iget-object v9, v7, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->collapsedLayout:Landroidx/constraintlayout/widget/ConstraintSet;
 
-    .line 527
+    .line 524
     iget-object v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mRecommendationViewHolder:Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;
 
-    .line 529
+    .line 526
     iget-object v10, v1, Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;->mediaTitles:Ljava/util/List;
 
-    .line 531
-    new-instance v11, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda18;
+    .line 528
+    new-instance v11, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda17;
 
-    .line 533
+    .line 530
     const/4 v6, 0x0
 
-    .line 535
+    .line 532
     move-object v1, v11
+
+    .line 533
+    move-object/from16 v2, p0
+
+    .line 534
+    move-object v3, v8
 
     .line 536
-    move-object/from16 v2, p0
-
-    .line 537
-    move-object v3, v8
-
-    .line 539
     move/from16 v4, v17
 
-    .line 540
+    .line 537
     move-object v5, v9
 
-    .line 542
-    invoke-direct/range {v1 .. v6}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda18;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroidx/constraintlayout/widget/ConstraintSet;ZLandroidx/constraintlayout/widget/ConstraintSet;I)V
+    .line 539
+    invoke-direct/range {v1 .. v6}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda17;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroidx/constraintlayout/widget/ConstraintSet;ZLandroidx/constraintlayout/widget/ConstraintSet;I)V
+
+    .line 540
+    check-cast v10, Ljava/util/ArrayList;
 
     .line 543
-    check-cast v10, Ljava/util/ArrayList;
-
-    .line 546
     invoke-virtual {v10, v11}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 548
+    .line 545
     iget-object v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mRecommendationViewHolder:Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;
 
-    .line 551
+    .line 548
     iget-object v10, v1, Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;->mediaSubtitles:Ljava/util/List;
 
-    .line 553
-    new-instance v11, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda18;
+    .line 550
+    new-instance v11, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda17;
 
-    .line 555
+    .line 552
     const/4 v6, 0x1
 
-    .line 557
+    .line 554
     move-object v1, v11
 
-    .line 558
+    .line 555
     move-object/from16 v2, p0
 
-    .line 559
+    .line 556
     move-object v3, v8
 
-    .line 561
+    .line 558
     move/from16 v4, v18
 
-    .line 562
+    .line 559
     move-object v5, v9
 
-    .line 564
-    invoke-direct/range {v1 .. v6}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda18;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroidx/constraintlayout/widget/ConstraintSet;ZLandroidx/constraintlayout/widget/ConstraintSet;I)V
+    .line 561
+    invoke-direct/range {v1 .. v6}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda17;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Landroidx/constraintlayout/widget/ConstraintSet;ZLandroidx/constraintlayout/widget/ConstraintSet;I)V
 
-    .line 565
+    .line 562
     check-cast v10, Ljava/util/ArrayList;
 
-    .line 568
+    .line 565
     invoke-virtual {v10, v11}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 570
+    .line 567
     move/from16 v1, v23
 
-    .line 573
+    .line 570
     invoke-virtual {v0, v1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->setMediaCoversVisibility(I)V
 
-    .line 575
+    .line 572
     new-instance v1, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;
 
-    .line 578
+    .line 575
     move-object/from16 v2, p1
 
-    .line 580
-    const/4 v3, 0x2
+    .line 577
+    const/4 v3, 0x1
 
-    .line 582
+    .line 579
     invoke-direct {v1, v0, v2, v3}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;Ljava/lang/Object;I)V
 
-    .line 583
-    invoke-interface {v13}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    .line 580
+    invoke-interface {v15}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    .line 586
+    .line 583
     move-result-object v2
 
+    .line 586
+    iget-object v4, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mRecommendationViewHolder:Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;
+
+    .line 587
+    iget-object v4, v4, Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;->gutsViewHolder:Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;
+
     .line 589
-    iget-object v3, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mRecommendationViewHolder:Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;
+    invoke-virtual {v0, v3, v2, v4, v1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindGutsMenuCommon(ZLjava/lang/String;Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;Ljava/lang/Runnable;)V
 
-    .line 590
-    iget-object v3, v3, Lcom/android/systemui/media/controls/ui/view/RecommendationViewHolder;->gutsViewHolder:Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;
-
-    .line 592
-    const/4 v4, 0x1
-
-    .line 594
-    invoke-virtual {v0, v4, v2, v3, v1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->bindGutsMenuCommon(ZLjava/lang/String;Lcom/android/systemui/media/controls/ui/view/GutsViewHolder;Ljava/lang/Runnable;)V
-
-    .line 595
+    .line 591
     const/4 v1, 0x0
 
-    .line 598
+    .line 594
     iput-object v1, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mController:Landroid/media/session/MediaController;
 
-    .line 599
+    .line 595
     iget-object v0, v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mMetadataAnimationHandler:Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;
 
-    .line 601
+    .line 597
     if-eqz v0, :cond_9
 
-    .line 603
+    .line 599
     invoke-virtual {v0}, Lcom/android/systemui/media/controls/ui/animation/MetadataAnimationHandler;->isRunning()Z
 
-    .line 605
+    .line 601
     move-result v0
 
-    .line 608
+    .line 604
     if-nez v0, :cond_a
 
-    .line 609
+    .line 605
     :cond_9
     invoke-virtual {v7}, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->refreshState()V
 
-    .line 611
+    .line 607
     :cond_a
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 614
+    .line 610
     return-void
 
-    .line 617
+    .line 613
     :catch_0
     move-exception v0
 
-    .line 618
+    .line 614
     const-string v1, "Fail to get media recommendation\'s app info"
 
-    .line 619
+    .line 615
     invoke-static {v2, v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 621
+    .line 617
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 624
+    .line 620
     return-void
-    .line 627
+    .line 623
 .end method
 
 .method public final bindRecommendationContentDescription(Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaData;)V
@@ -4330,7 +3989,7 @@
     iget-object p1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;->mContext:Landroid/content/Context;
 
     .line 24
-    const v0, 0x7f1402d9    # @string/controls_media_smartspace_rec_header 'For You'
+    const v0, 0x7f1302f5    # @string/controls_media_smartspace_rec_header 'For You'
 
     .line 26
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -4409,10 +4068,10 @@
     move-result-object v3
 
     .line 31
-    new-instance v4, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda12;
+    new-instance v4, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda11;
 
     .line 32
-    invoke-direct {v4, p1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda12;-><init>(Lcom/android/systemui/media/controls/shared/model/MediaButton;)V
+    invoke-direct {v4, p1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda11;-><init>(Lcom/android/systemui/media/controls/shared/model/MediaButton;)V
 
     .line 34
     invoke-interface {v3, v4}, Ljava/util/stream/Stream;->allMatch(Ljava/util/function/Predicate;)Z
@@ -4740,7 +4399,7 @@
     move-result-object v0
 
     .line 11
-    const v1, 0x7f0c0047    # @integer/default_qs_media_rec_width_dp '380'
+    const v1, 0x7f0b004c    # @integer/default_qs_media_rec_width_dp '380'
 
     .line 12
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -4749,7 +4408,7 @@
     move-result v1
 
     .line 18
-    const v2, 0x7f0708ec    # @dimen/qs_media_rec_album_width '110.0dp'
+    const v2, 0x7f07093c    # @dimen/qs_media_rec_album_width '110.0dp'
 
     .line 19
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -4758,7 +4417,7 @@
     move-result v2
 
     .line 25
-    const v3, 0x7f0708e2    # @dimen/qs_media_info_spacing '8.0dp'
+    const v3, 0x7f070932    # @dimen/qs_media_info_spacing '8.0dp'
 
     .line 26
     invoke-virtual {p0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -4792,7 +4451,7 @@
     if-le v2, v1, :cond_1
 
     .line 43
-    const v0, 0x7f0708ed    # @dimen/qs_media_rec_default_width '380.0dp'
+    const v0, 0x7f07093d    # @dimen/qs_media_rec_default_width '380.0dp'
 
     .line 45
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -5011,7 +4670,6 @@
 
     .line 23
     return p0
-    .line 24
 .end method
 
 .method public getWallpaperColor(Landroid/graphics/drawable/Icon;)Landroid/app/WallpaperColors;
@@ -5391,32 +5049,29 @@
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 53
-    invoke-static {}, Lcom/android/systemui/media/controls/util/MediaFlags;->isSceneContainerEnabled()V
-
-    .line 56
     iget-object v0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->mediaHostStatesManager:Lcom/android/systemui/media/controls/ui/controller/MediaHostStatesManager;
 
-    .line 59
+    .line 56
     iget-object v0, v0, Lcom/android/systemui/media/controls/ui/controller/MediaHostStatesManager;->controllers:Ljava/util/Set;
 
-    .line 61
+    .line 58
     invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 63
+    .line 60
     iget-object v0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
-    .line 66
+    .line 63
     check-cast v0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
 
-    .line 68
+    .line 65
     iget-object p0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaViewController;->configurationListener:Lcom/android/systemui/media/controls/ui/controller/MediaViewController$configurationListener$1;
 
-    .line 70
+    .line 67
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->removeCallback(Ljava/lang/Object;)V
 
-    .line 72
+    .line 69
     return-void
-    .line 75
+    .line 72
 .end method
 
 .method public final openGuts()V
@@ -5803,10 +5458,10 @@
     move-result-object v3
 
     .line 35
-    new-instance v7, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda12;
+    new-instance v7, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda11;
 
     .line 36
-    invoke-direct {v7, p3}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda12;-><init>(Lcom/android/systemui/media/controls/shared/model/MediaButton;)V
+    invoke-direct {v7, p3}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda11;-><init>(Lcom/android/systemui/media/controls/shared/model/MediaButton;)V
 
     .line 38
     invoke-interface {v3, v7}, Ljava/util/stream/Stream;->allMatch(Ljava/util/function/Predicate;)Z
@@ -5869,7 +5524,7 @@
 
     .line 67
     :goto_2
-    const v3, 0x7f0b005a    # @id/actionPrev
+    const v3, 0x7f0a005a    # @id/actionPrev
 
     .line 68
     if-ne p1, v3, :cond_3
@@ -5882,7 +5537,7 @@
 
     .line 75
     :cond_3
-    const v3, 0x7f0b0058    # @id/actionNext
+    const v3, 0x7f0a0058    # @id/actionNext
 
     .line 77
     if-ne p1, v3, :cond_5
@@ -5988,10 +5643,10 @@
 
     .line 22
     :cond_0
-    new-instance v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda24;
+    new-instance v0, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda23;
 
     .line 23
-    invoke-direct {v0, p0, p3, p2, p1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda24;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;ILandroid/app/smartspace/SmartspaceAction;Landroid/view/View;)V
+    invoke-direct {v0, p0, p3, p2, p1}, Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel$$ExternalSyntheticLambda23;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaControlPanel;ILandroid/app/smartspace/SmartspaceAction;Landroid/view/View;)V
 
     .line 25
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -6042,7 +5697,7 @@
 
     .line 12
     :goto_0
-    const v2, 0x7f0b04b7    # @id/media_progress_bar
+    const v2, 0x7f0a04db    # @id/media_progress_bar
 
     .line 13
     invoke-virtual {v0, v2, v1}, Landroidx/constraintlayout/widget/ConstraintSet;->setVisibility(II)V

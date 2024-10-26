@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel$getRecCoverBackground$2;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -395,7 +395,7 @@
     iget-object p0, v1, Lcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel;->applicationContext:Landroid/content/Context;
 
     .line 167
-    const p1, 0x7f080ae3    # @drawable/qs_media_rec_scrim 'res/drawable/qs_media_rec_scrim.xml'
+    const p1, 0x7f080b21    # @drawable/qs_media_rec_scrim 'res/drawable/qs_media_rec_scrim.xml'
 
     .line 169
     invoke-static {p1, p0}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(ILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
@@ -487,7 +487,7 @@
     const-string p1, "Height must be a positive number but was "
 
     .line 229
-    invoke-static {p0, p1}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 231
     move-result-object p0
@@ -512,7 +512,7 @@
     const-string p0, "Width must be a positive number but was "
 
     .line 245
-    invoke-static {v4, p0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, p0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 247
     move-result-object p0

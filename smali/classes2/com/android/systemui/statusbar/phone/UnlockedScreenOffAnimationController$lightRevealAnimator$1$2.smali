@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController$lightRevealAnimator$1$2;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -28,66 +28,54 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->lightRevealMigration()Z
-
-    .line 2
-    move-result p1
-
-    .line 5
-    if-eqz p1, :cond_0
-
-    .line 6
-    return-void
-
-    .line 8
-    :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController$lightRevealAnimator$1$2;->this$0:Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;
 
-    .line 9
+    .line 2
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;->lightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
-    .line 11
+    .line 4
     const/4 p1, 0x0
 
-    .line 13
-    if-nez p0, :cond_1
+    .line 6
+    if-nez p0, :cond_0
 
-    .line 14
+    .line 7
     move-object v0, p1
 
-    .line 16
+    .line 9
     goto :goto_0
 
-    .line 17
-    :cond_1
+    .line 10
+    :cond_0
     move-object v0, p0
 
-    .line 18
+    .line 11
     :goto_0
     iget-object v0, v0, Lcom/android/systemui/statusbar/LightRevealScrim;->revealEffect:Lcom/android/systemui/statusbar/LightRevealEffect;
 
-    .line 19
+    .line 12
     instance-of v0, v0, Lcom/android/systemui/statusbar/CircleReveal;
 
-    .line 21
-    if-nez v0, :cond_3
+    .line 14
+    if-nez v0, :cond_2
 
-    .line 23
-    if-nez p0, :cond_2
+    .line 16
+    if-nez p0, :cond_1
 
-    .line 25
+    .line 18
     move-object p0, p1
 
-    .line 27
-    :cond_2
+    .line 20
+    :cond_1
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 28
+    .line 21
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/LightRevealScrim;->setRevealAmount(F)V
 
-    .line 30
-    :cond_3
+    .line 23
+    :cond_2
     return-void
+    .line 26
 .end method
 
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
@@ -141,7 +129,7 @@
     check-cast p0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
 
     .line 14
-    iget-object p0, p0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
+    iget-object p0, p0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
     .line 16
     const/16 v0, 0x28

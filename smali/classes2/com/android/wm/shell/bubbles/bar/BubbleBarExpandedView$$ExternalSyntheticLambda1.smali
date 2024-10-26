@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/bubbles/bar/BubbleBarExpandedView$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -74,7 +74,7 @@
     iget-object v4, p0, Lcom/android/wm/shell/bubbles/bar/BubbleBarMenuViewController;->mRootView:Landroid/view/ViewGroup;
 
     .line 24
-    const v5, 0x7f0e0060    # @layout/bubble_bar_menu_view 'res/layout/bubble_bar_menu_view.xml'
+    const v5, 0x7f0d0065    # @layout/bubble_bar_menu_view 'res/layout/bubble_bar_menu_view.xml'
 
     .line 26
     invoke-virtual {v2, v5, v4, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -211,7 +211,7 @@
     iget-object v8, p0, Lcom/android/wm/shell/bubbles/bar/BubbleBarMenuViewController;->mContext:Landroid/content/Context;
 
     .line 124
-    const v9, 0x7f080640    # @drawable/bubble_ic_stop_bubble 'res/drawable/bubble_ic_stop_bubble.xml'
+    const v9, 0x7f080641    # @drawable/bubble_ic_stop_bubble 'res/drawable/bubble_ic_stop_bubble.xml'
 
     .line 126
     invoke-static {v8, v9}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
@@ -220,7 +220,7 @@
     move-result-object v8
 
     .line 132
-    const v9, 0x7f14022e    # @string/bubbles_dont_bubble_conversation 'Don’t bubble conversation'
+    const v9, 0x7f130235    # @string/bubbles_dont_bubble_conversation 'Don’t bubble conversation'
 
     .line 133
     invoke-virtual {v6, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -273,7 +273,7 @@
     move-result-object v9
 
     .line 168
-    const v10, 0x7f14022d    # @string/bubbles_app_settings '%1$s settings'
+    const v10, 0x7f130234    # @string/bubbles_app_settings '%1$s settings'
 
     .line 169
     invoke-virtual {v6, v10, v9}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -298,7 +298,7 @@
     new-instance v7, Lcom/android/wm/shell/bubbles/bar/BubbleBarMenuView$MenuAction;
 
     .line 187
-    const v8, 0x7f08090a    # @drawable/ic_remove_no_shadow 'res/drawable/ic_remove_no_shadow.xml'
+    const v8, 0x7f080933    # @drawable/ic_remove_no_shadow 'res/drawable/ic_remove_no_shadow.xml'
 
     .line 189
     invoke-static {v6, v8}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Icon;
@@ -307,7 +307,7 @@
     move-result-object v8
 
     .line 195
-    const v9, 0x7f140227    # @string/bubble_dismiss_text 'Dismiss bubble'
+    const v9, 0x7f13022e    # @string/bubble_dismiss_text 'Dismiss bubble'
 
     .line 196
     invoke-virtual {v6, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

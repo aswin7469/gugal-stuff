@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/ui/ChallengeDialogs$createPinDialog$2$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -53,89 +53,92 @@
     iget-object p0, p0, Lcom/android/systemui/controls/ui/ChallengeDialogs$createPinDialog$2$1;->$lastAction:Landroid/service/controls/actions/ControlAction;
 
     .line 9
-    const-string v0, "true"
+    const-string/jumbo v0, "true"
 
     .line 11
     invoke-static {p0, v0}, Lcom/android/systemui/controls/ui/ChallengeDialogs;->access$addChallengeValue(Landroid/service/controls/actions/ControlAction;Ljava/lang/String;)Landroid/service/controls/actions/ControlAction;
 
-    .line 13
+    .line 14
     move-result-object p0
 
-    .line 16
+    .line 17
     invoke-virtual {p2, p0}, Lcom/android/systemui/controls/ui/ControlViewHolder;->action(Landroid/service/controls/actions/ControlAction;)V
 
-    .line 17
+    .line 18
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 20
+    .line 21
     return-void
 
-    .line 23
+    .line 24
     :pswitch_0
     instance-of p2, p1, Landroid/app/Dialog;
 
-    .line 24
+    .line 25
     if-eqz p2, :cond_0
 
-    .line 26
+    .line 27
     move-object p2, p1
 
-    .line 28
+    .line 29
     check-cast p2, Landroid/app/Dialog;
 
-    .line 29
-    const v0, 0x7f0b021c    # @id/controls_pin_input
+    .line 30
+    const v0, 0x7f0a0227    # @id/controls_pin_input
 
-    .line 31
+    .line 32
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;
 
-    .line 34
+    .line 35
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;
 
-    .line 37
+    .line 38
     move-result-object p2
-
-    .line 40
-    check-cast p2, Landroid/widget/EditText;
 
     .line 41
+    check-cast p2, Landroid/widget/EditText;
+
+    .line 42
     invoke-virtual {p2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    .line 43
+    .line 44
     move-result-object p2
-
-    .line 46
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 47
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 48
     move-result-object p2
 
-    .line 50
+    .line 51
     iget-object v0, p0, Lcom/android/systemui/controls/ui/ChallengeDialogs$createPinDialog$2$1;->$cvh:Lcom/android/systemui/controls/ui/ControlViewHolder;
 
-    .line 51
+    .line 52
     iget-object p0, p0, Lcom/android/systemui/controls/ui/ChallengeDialogs$createPinDialog$2$1;->$lastAction:Landroid/service/controls/actions/ControlAction;
 
-    .line 53
+    .line 54
     invoke-static {p0, p2}, Lcom/android/systemui/controls/ui/ChallengeDialogs;->access$addChallengeValue(Landroid/service/controls/actions/ControlAction;Ljava/lang/String;)Landroid/service/controls/actions/ControlAction;
 
-    .line 55
+    .line 56
     move-result-object p0
 
-    .line 58
+    .line 59
     invoke-virtual {v0, p0}, Lcom/android/systemui/controls/ui/ControlViewHolder;->action(Landroid/service/controls/actions/ControlAction;)V
 
-    .line 59
+    .line 60
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 62
+    .line 63
     :cond_0
     return-void
 
-    .line 65
+    .line 66
+    nop
+
+    .line 67
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 66
+    .line 68
 .end method

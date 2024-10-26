@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/KeyboardShortcutAppItemLayout;
 .super Landroid/widget/RelativeLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -40,7 +40,7 @@
     if-ne v0, v1, :cond_1
 
     .line 8
-    const v0, 0x7f0b03c4    # @id/keyboard_shortcuts_icon
+    const v0, 0x7f0a03e5    # @id/keyboard_shortcuts_icon
 
     .line 10
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -52,7 +52,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 17
-    const v1, 0x7f0b03c6    # @id/keyboard_shortcuts_keyword
+    const v1, 0x7f0a03e7    # @id/keyboard_shortcuts_keyword
 
     .line 19
     invoke-virtual {p0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;

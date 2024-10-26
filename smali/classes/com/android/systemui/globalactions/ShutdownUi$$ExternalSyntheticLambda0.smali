@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/globalactions/ShutdownUi$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnShowListener;
@@ -117,7 +117,7 @@
     move-result-object p0
 
     .line 50
-    const p1, 0x7f070985    # @dimen/shutdown_scrim_behind_alpha '0.95'
+    const p1, 0x7f0709dc    # @dimen/shutdown_scrim_behind_alpha '0.95'
 
     .line 51
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getFloat(I)F
@@ -140,5 +140,4 @@
     .line 62
     :goto_0
     return-void
-    .line 65
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/monet/CustomDynamicColors;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -80,23 +80,23 @@
     const/4 v6, 0x0
 
     .line 33
-    const-string v1, "theme_app_ring"
+    const-string/jumbo v1, "theme_app_ring"
 
     .line 34
     const/4 v4, 0x1
 
-    .line 36
+    .line 37
     const/4 v8, 0x0
 
-    .line 37
+    .line 38
     move-object v0, v9
 
-    .line 38
+    .line 39
     invoke-direct/range {v0 .. v8}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 39
+    .line 40
     return-object v9
-    .line 42
+    .line 43
 .end method
 
 .method public static underSurface()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
@@ -1380,21 +1380,21 @@
     invoke-direct {v8, v0, v1}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/monet/CustomDynamicColors;I)V
 
     .line 44
-    const-string v1, "theme_notif"
+    const-string/jumbo v1, "theme_notif"
 
     .line 47
     const/4 v4, 0x0
 
-    .line 49
+    .line 50
     const/4 v6, 0x0
 
-    .line 50
+    .line 51
     move-object v0, v9
 
-    .line 51
+    .line 52
     invoke-direct/range {v0 .. v8}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 52
+    .line 53
     return-object v9
-    .line 55
+    .line 56
 .end method

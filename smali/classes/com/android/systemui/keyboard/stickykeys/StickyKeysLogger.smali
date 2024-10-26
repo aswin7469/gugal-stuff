@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyboard/stickykeys/StickyKeysLogger;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -40,29 +40,29 @@
     iget-object p0, p0, Lcom/android/systemui/keyboard/stickykeys/StickyKeysLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
 
     .line 7
-    const-string v3, "stickyKeys"
+    const-string/jumbo v3, "stickyKeys"
 
     .line 9
     invoke-virtual {p0, v3, v0, v1, v2}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
 
-    .line 11
+    .line 12
     move-result-object v0
 
-    .line 14
+    .line 15
     move-object v1, v0
 
-    .line 15
+    .line 16
     check-cast v1, Lcom/android/systemui/log/LogMessageImpl;
 
-    .line 16
+    .line 17
     iput-boolean p1, v1, Lcom/android/systemui/log/LogMessageImpl;->bool1:Z
 
-    .line 18
+    .line 19
     invoke-virtual {p0, v0}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
 
-    .line 20
+    .line 21
     return-void
-    .line 23
+    .line 24
 .end method
 
 .method public final logNewStickyKeysReceived(Ljava/util/Map;)V
@@ -81,34 +81,35 @@
     iget-object p0, p0, Lcom/android/systemui/keyboard/stickykeys/StickyKeysLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
 
     .line 7
-    const-string v3, "stickyKeys"
+    const-string/jumbo v3, "stickyKeys"
 
     .line 9
     invoke-virtual {p0, v3, v0, v1, v2}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
 
-    .line 11
+    .line 12
     move-result-object v0
 
-    .line 14
+    .line 15
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 15
+    .line 16
     move-result-object p1
 
-    .line 18
+    .line 19
     move-object v1, v0
 
-    .line 19
+    .line 20
     check-cast v1, Lcom/android/systemui/log/LogMessageImpl;
 
-    .line 20
+    .line 21
     iput-object p1, v1, Lcom/android/systemui/log/LogMessageImpl;->str1:Ljava/lang/String;
 
-    .line 22
+    .line 23
     invoke-virtual {p0, v0}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
 
-    .line 24
+    .line 25
     return-void
+    .line 28
 .end method
 
 .method public final logNewUiState(Ljava/util/Map;)V
@@ -127,32 +128,33 @@
     iget-object p0, p0, Lcom/android/systemui/keyboard/stickykeys/StickyKeysLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
 
     .line 7
-    const-string v3, "stickyKeys"
+    const-string/jumbo v3, "stickyKeys"
 
     .line 9
     invoke-virtual {p0, v3, v0, v1, v2}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
 
-    .line 11
+    .line 12
     move-result-object v0
 
-    .line 14
+    .line 15
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 15
+    .line 16
     move-result-object p1
 
-    .line 18
+    .line 19
     move-object v1, v0
 
-    .line 19
+    .line 20
     check-cast v1, Lcom/android/systemui/log/LogMessageImpl;
 
-    .line 20
+    .line 21
     iput-object p1, v1, Lcom/android/systemui/log/LogMessageImpl;->str1:Ljava/lang/String;
 
-    .line 22
+    .line 23
     invoke-virtual {p0, v0}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
 
-    .line 24
+    .line 25
     return-void
+    .line 28
 .end method

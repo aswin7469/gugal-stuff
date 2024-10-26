@@ -1,6 +1,6 @@
-.class public final Lcom/android/systemui/theme/ThemeOverlayController;
+.class public abstract Lcom/android/systemui/theme/ThemeOverlayController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -43,10 +43,6 @@
 .field public mDynamicOverlay:Landroid/content/om/FabricatedOverlay;
 
 .field public final mIsMonetEnabled:Z
-
-.field public final mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
-
-.field public final mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
 .field public mLightColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
@@ -279,44 +275,32 @@
     iput-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
     .line 120
-    move-object/from16 v1, p16
-
-    .line 122
-    iput-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
-
-    .line 124
-    move-object/from16 v1, p17
-
-    .line 126
-    iput-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
-
-    .line 128
     move-object/from16 v1, p18
 
-    .line 130
+    .line 122
     iput-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mUiModeManager:Landroid/app/UiModeManager;
 
-    .line 132
+    .line 124
     move-object/from16 v1, p19
 
-    .line 134
+    .line 126
     iput-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 136
+    .line 128
     invoke-virtual {p12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 138
+    .line 130
     const-string v1, "ThemeOverlayController"
 
-    .line 141
+    .line 133
     move-object v2, p12
 
-    .line 143
+    .line 135
     invoke-static {p12, v1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
 
-    .line 144
+    .line 136
     return-void
-    .line 147
+    .line 139
 .end method
 
 .method public static assignTonalPaletteToOverlay(Ljava/lang/String;Landroid/content/om/FabricatedOverlay;Lcom/android/systemui/monet/TonalPalette;)V
@@ -335,10 +319,10 @@
     iget-object p2, p2, Lcom/android/systemui/monet/TonalPalette;->allShadesMapped:Ljava/util/Map;
 
     .line 8
-    new-instance v0, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda6;
+    new-instance v0, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda5;
 
     .line 10
-    invoke-direct {v0, p0, p1}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda6;-><init>(Ljava/lang/String;Landroid/content/om/FabricatedOverlay;)V
+    invoke-direct {v0, p0, p1}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda5;-><init>(Ljava/lang/String;Landroid/content/om/FabricatedOverlay;)V
 
     .line 12
     invoke-interface {p2, v0}, Ljava/util/Map;->forEach(Ljava/util/function/BiConsumer;)V
@@ -471,3662 +455,2600 @@
 .method public final createOverlays(I)V
     .locals 23
 
-    .line 1
     move-object/from16 v0, p0
 
-    .line 2
+    .line 1
     new-instance v7, Lcom/android/systemui/monet/ColorScheme;
 
-    .line 4
     iget-object v4, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mThemeStyle:Lcom/android/systemui/monet/Style;
 
-    .line 6
     iget-wide v5, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mContrast:D
 
-    .line 8
     const/4 v3, 0x1
 
-    .line 10
     move-object v1, v7
 
-    .line 11
     move/from16 v2, p1
 
-    .line 12
     invoke-direct/range {v1 .. v6}, Lcom/android/systemui/monet/ColorScheme;-><init>(IZLcom/android/systemui/monet/Style;D)V
 
-    .line 14
     iput-object v7, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mDarkColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 17
+    .line 2
     new-instance v1, Lcom/android/systemui/monet/ColorScheme;
 
-    .line 19
     iget-object v11, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mThemeStyle:Lcom/android/systemui/monet/Style;
 
-    .line 21
     iget-wide v12, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mContrast:D
 
-    .line 23
     const/4 v10, 0x0
 
-    .line 25
     move-object v8, v1
 
-    .line 26
     move/from16 v9, p1
 
-    .line 27
     invoke-direct/range {v8 .. v13}, Lcom/android/systemui/monet/ColorScheme;-><init>(IZLcom/android/systemui/monet/Style;D)V
 
-    .line 29
     iput-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mLightColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 32
+    .line 3
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/theme/ThemeOverlayController;->isNightMode()Z
 
-    .line 34
     move-result v1
 
-    .line 37
     if-eqz v1, :cond_0
 
-    .line 38
     iget-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mDarkColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 40
     goto :goto_0
 
-    .line 42
     :cond_0
     iget-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mLightColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 43
     :goto_0
     iput-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 45
+    .line 4
     const-string v1, "neutral"
 
-    .line 47
     invoke-virtual {v0, v1}, Lcom/android/systemui/theme/ThemeOverlayController;->newFabricatedOverlay(Ljava/lang/String;)Landroid/content/om/FabricatedOverlay;
 
-    .line 49
     move-result-object v1
 
-    .line 52
+    .line 5
     iget-object v2, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 53
+    .line 6
     iget-object v2, v2, Lcom/android/systemui/monet/ColorScheme;->mNeutral1:Lcom/android/systemui/monet/TonalPalette;
 
-    .line 55
+    .line 7
     const-string v3, "neutral1"
 
-    .line 57
     invoke-static {v3, v1, v2}, Lcom/android/systemui/theme/ThemeOverlayController;->assignTonalPaletteToOverlay(Ljava/lang/String;Landroid/content/om/FabricatedOverlay;Lcom/android/systemui/monet/TonalPalette;)V
 
-    .line 59
+    .line 8
     iget-object v2, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 62
+    .line 9
     iget-object v2, v2, Lcom/android/systemui/monet/ColorScheme;->mNeutral2:Lcom/android/systemui/monet/TonalPalette;
 
-    .line 64
+    .line 10
     const-string v3, "neutral2"
 
-    .line 66
     invoke-static {v3, v1, v2}, Lcom/android/systemui/theme/ThemeOverlayController;->assignTonalPaletteToOverlay(Ljava/lang/String;Landroid/content/om/FabricatedOverlay;Lcom/android/systemui/monet/TonalPalette;)V
 
-    .line 68
+    .line 11
     iput-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mNeutralOverlay:Landroid/content/om/FabricatedOverlay;
 
-    .line 71
+    .line 12
     const-string v1, "accent"
 
-    .line 73
     invoke-virtual {v0, v1}, Lcom/android/systemui/theme/ThemeOverlayController;->newFabricatedOverlay(Ljava/lang/String;)Landroid/content/om/FabricatedOverlay;
 
-    .line 75
     move-result-object v1
 
-    .line 78
+    .line 13
     iget-object v2, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 79
+    .line 14
     iget-object v2, v2, Lcom/android/systemui/monet/ColorScheme;->mAccent1:Lcom/android/systemui/monet/TonalPalette;
 
-    .line 81
+    .line 15
     const-string v3, "accent1"
 
-    .line 83
     invoke-static {v3, v1, v2}, Lcom/android/systemui/theme/ThemeOverlayController;->assignTonalPaletteToOverlay(Ljava/lang/String;Landroid/content/om/FabricatedOverlay;Lcom/android/systemui/monet/TonalPalette;)V
 
-    .line 85
+    .line 16
     iget-object v2, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 88
+    .line 17
     iget-object v2, v2, Lcom/android/systemui/monet/ColorScheme;->mAccent2:Lcom/android/systemui/monet/TonalPalette;
 
-    .line 90
+    .line 18
     const-string v3, "accent2"
 
-    .line 92
     invoke-static {v3, v1, v2}, Lcom/android/systemui/theme/ThemeOverlayController;->assignTonalPaletteToOverlay(Ljava/lang/String;Landroid/content/om/FabricatedOverlay;Lcom/android/systemui/monet/TonalPalette;)V
 
-    .line 94
+    .line 19
     iget-object v2, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 97
+    .line 20
     iget-object v2, v2, Lcom/android/systemui/monet/ColorScheme;->mAccent3:Lcom/android/systemui/monet/TonalPalette;
 
-    .line 99
+    .line 21
     const-string v3, "accent3"
 
-    .line 101
     invoke-static {v3, v1, v2}, Lcom/android/systemui/theme/ThemeOverlayController;->assignTonalPaletteToOverlay(Ljava/lang/String;Landroid/content/om/FabricatedOverlay;Lcom/android/systemui/monet/TonalPalette;)V
 
-    .line 103
+    .line 22
     iput-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mSecondaryOverlay:Landroid/content/om/FabricatedOverlay;
 
-    .line 106
+    .line 23
     const-string v1, "dynamic"
 
-    .line 108
     invoke-virtual {v0, v1}, Lcom/android/systemui/theme/ThemeOverlayController;->newFabricatedOverlay(Ljava/lang/String;)Landroid/content/om/FabricatedOverlay;
 
-    .line 110
     move-result-object v1
 
-    .line 113
+    .line 24
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;
 
-    .line 114
     invoke-direct {v2}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;-><init>()V
 
-    .line 116
+    .line 25
     new-instance v3, Ljava/util/ArrayList;
 
-    .line 119
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 121
+    .line 26
     invoke-virtual {v2}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->primaryContainer()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 124
     move-result-object v4
 
-    .line 127
     const-string v5, "primary_container"
 
-    .line 128
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 130
     move-result-object v4
 
-    .line 133
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 134
+    .line 27
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 137
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 139
     const/4 v5, 0x1
 
-    .line 141
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 142
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 145
     const/4 v5, 0x2
 
-    .line 147
     invoke-direct {v8, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 148
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 151
     const/4 v5, 0x3
 
-    .line 153
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 154
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 157
     const-wide/high16 v16, 0x4026000000000000L    # 11.0
 
-    .line 159
     const-wide/high16 v18, 0x4035000000000000L    # 21.0
 
-    .line 161
     const-wide/high16 v12, 0x4012000000000000L    # 4.5
 
-    .line 163
     const-wide/high16 v14, 0x401c000000000000L    # 7.0
 
-    .line 165
     move-object/from16 v11, v20
 
-    .line 167
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 169
     const-string v6, "on_primary_container"
 
-    .line 172
     const/4 v13, 0x0
 
-    .line 174
     const/4 v9, 0x0
 
-    .line 175
     const/4 v11, 0x0
 
-    .line 176
     move-object v5, v4
 
-    .line 177
     move-object/from16 v12, v20
 
-    .line 178
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 180
+    .line 28
     const-string v5, "on_primary_container"
 
-    .line 183
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 185
     move-result-object v4
 
-    .line 188
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 189
+    .line 29
     invoke-virtual {v2}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->primary()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 192
     move-result-object v4
 
-    .line 195
     const-string v5, "primary"
 
-    .line 196
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 198
     move-result-object v4
 
-    .line 201
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 202
+    .line 30
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 205
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 207
     const/16 v5, 0x14
 
-    .line 209
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 211
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 214
     const/16 v5, 0x1c
 
-    .line 216
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 218
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 221
     const/4 v5, 0x0
 
-    .line 223
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 224
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 227
     const-wide/high16 v16, 0x4026000000000000L    # 11.0
 
-    .line 229
     const-wide/high16 v18, 0x4035000000000000L    # 21.0
 
-    .line 231
     const-wide/high16 v12, 0x4012000000000000L    # 4.5
 
-    .line 233
     const-wide/high16 v14, 0x401c000000000000L    # 7.0
 
-    .line 235
     move-object/from16 v11, v20
 
-    .line 237
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 239
     const-string v6, "on_primary"
 
-    .line 242
     const/4 v13, 0x0
 
-    .line 244
     const/4 v9, 0x0
 
-    .line 245
     const/4 v11, 0x0
 
-    .line 246
     move-object v5, v4
 
-    .line 247
     move-object/from16 v12, v20
 
-    .line 248
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 250
+    .line 31
     const-string v5, "on_primary"
 
-    .line 253
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 255
     move-result-object v4
 
-    .line 258
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 259
+    .line 32
     invoke-virtual {v2}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->secondaryContainer()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 262
     move-result-object v4
 
-    .line 265
     const-string v5, "secondary_container"
 
-    .line 266
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 268
     move-result-object v4
 
-    .line 271
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 272
+    .line 33
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 275
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 277
     const/16 v5, 0x1c
 
-    .line 279
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 281
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 284
     const/16 v5, 0xf
 
-    .line 286
     invoke-direct {v8, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 288
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 291
     const/16 v5, 0x10
 
-    .line 293
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 295
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 298
     const-wide/high16 v16, 0x4026000000000000L    # 11.0
 
-    .line 300
     const-wide/high16 v18, 0x4035000000000000L    # 21.0
 
-    .line 302
     const-wide/high16 v12, 0x4012000000000000L    # 4.5
 
-    .line 304
     const-wide/high16 v14, 0x401c000000000000L    # 7.0
 
-    .line 306
     move-object/from16 v11, v20
 
-    .line 308
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 310
     const-string v6, "on_secondary_container"
 
-    .line 313
     const/4 v13, 0x0
 
-    .line 315
     const/4 v9, 0x0
 
-    .line 316
     const/4 v11, 0x0
 
-    .line 317
     move-object v5, v4
 
-    .line 318
     move-object/from16 v12, v20
 
-    .line 319
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 321
+    .line 34
     const-string v5, "on_secondary_container"
 
-    .line 324
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 326
     move-result-object v4
 
-    .line 329
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 330
+    .line 35
     invoke-virtual {v2}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->secondary()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 333
     move-result-object v4
 
-    .line 336
     const-string v5, "secondary"
 
-    .line 337
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 339
     move-result-object v4
 
-    .line 342
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 343
+    .line 36
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 346
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 348
     const/16 v5, 0x13
 
-    .line 350
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 352
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 355
     const/16 v5, 0x15
 
-    .line 357
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 359
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 362
     const/16 v5, 0x15
 
-    .line 364
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 366
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 369
     const-wide/high16 v16, 0x4026000000000000L    # 11.0
 
-    .line 371
     const-wide/high16 v18, 0x4035000000000000L    # 21.0
 
-    .line 373
     const-wide/high16 v12, 0x4012000000000000L    # 4.5
 
-    .line 375
     const-wide/high16 v14, 0x401c000000000000L    # 7.0
 
-    .line 377
     move-object/from16 v11, v20
 
-    .line 379
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 381
     const-string v6, "on_secondary"
 
-    .line 384
     const/4 v13, 0x0
 
-    .line 386
     const/4 v9, 0x0
 
-    .line 387
     const/4 v11, 0x0
 
-    .line 388
     move-object v5, v4
 
-    .line 389
     move-object/from16 v12, v20
 
-    .line 390
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 392
+    .line 37
     const-string v5, "on_secondary"
 
-    .line 395
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 397
     move-result-object v4
 
-    .line 400
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 401
+    .line 38
     invoke-virtual {v2}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->tertiaryContainer()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 404
     move-result-object v4
 
-    .line 407
     const-string v5, "tertiary_container"
 
-    .line 408
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 410
     move-result-object v4
 
-    .line 413
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 414
+    .line 39
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 417
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;
 
-    .line 419
     const/4 v5, 0x5
 
-    .line 421
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;-><init>(I)V
 
-    .line 422
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;
 
-    .line 425
     const/4 v5, 0x6
 
-    .line 427
     invoke-direct {v8, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 428
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;
 
-    .line 431
     const/4 v5, 0x7
 
-    .line 433
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 434
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 437
     const-wide/high16 v16, 0x4026000000000000L    # 11.0
 
-    .line 439
     const-wide/high16 v18, 0x4035000000000000L    # 21.0
 
-    .line 441
     const-wide/high16 v12, 0x4012000000000000L    # 4.5
 
-    .line 443
     const-wide/high16 v14, 0x401c000000000000L    # 7.0
 
-    .line 445
     move-object/from16 v11, v20
 
-    .line 447
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 449
     const-string v6, "on_tertiary_container"
 
-    .line 452
     const/4 v13, 0x0
 
-    .line 454
     const/4 v9, 0x0
 
-    .line 455
     const/4 v11, 0x0
 
-    .line 456
     move-object v5, v4
 
-    .line 457
     move-object/from16 v12, v20
 
-    .line 458
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 460
+    .line 40
     const-string v5, "on_tertiary_container"
 
-    .line 463
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 465
     move-result-object v4
 
-    .line 468
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 469
+    .line 41
     invoke-virtual {v2}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->tertiary()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 472
     move-result-object v4
 
-    .line 475
     const-string v5, "tertiary"
 
-    .line 476
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 478
     move-result-object v4
 
-    .line 481
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 482
+    .line 42
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 485
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 487
     const/16 v5, 0x11
 
-    .line 489
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 491
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 494
     const/16 v5, 0x12
 
-    .line 496
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 498
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;
 
-    .line 501
     const/4 v5, 0x2
 
-    .line 503
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 504
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 507
     const-wide/high16 v16, 0x4026000000000000L    # 11.0
 
-    .line 509
     const-wide/high16 v18, 0x4035000000000000L    # 21.0
 
-    .line 511
     const-wide/high16 v12, 0x4012000000000000L    # 4.5
 
-    .line 513
     const-wide/high16 v14, 0x401c000000000000L    # 7.0
 
-    .line 515
     move-object/from16 v11, v20
 
-    .line 517
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 519
     const-string v6, "on_tertiary"
 
-    .line 522
     const/4 v13, 0x0
 
-    .line 524
     const/4 v9, 0x0
 
-    .line 525
     const/4 v11, 0x0
 
-    .line 526
     move-object v5, v4
 
-    .line 527
     move-object/from16 v12, v20
 
-    .line 528
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 530
+    .line 43
     const-string v5, "on_tertiary"
 
-    .line 533
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 535
     move-result-object v4
 
-    .line 538
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 539
+    .line 44
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 542
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 544
     const/4 v5, 0x1
 
-    .line 546
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 547
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 550
     const/4 v5, 0x2
 
-    .line 552
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 553
     const/4 v12, 0x0
 
-    .line 556
     const/4 v13, 0x0
 
-    .line 557
     const-string v6, "background"
 
-    .line 558
     const/4 v9, 0x1
 
-    .line 560
     const/4 v10, 0x0
 
-    .line 561
     const/4 v11, 0x0
 
-    .line 562
     move-object v5, v4
 
-    .line 563
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 564
+    .line 45
     const-string v5, "background"
 
-    .line 567
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 569
     move-result-object v4
 
-    .line 572
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 573
+    .line 46
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 576
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;
 
-    .line 578
     const/16 v5, 0xe
 
-    .line 580
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;-><init>(I)V
 
-    .line 582
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;
 
-    .line 585
     const/16 v5, 0xf
 
-    .line 587
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;-><init>(I)V
 
-    .line 589
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 592
     const/4 v5, 0x1
 
-    .line 594
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 595
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 598
     const-wide/high16 v16, 0x4012000000000000L    # 4.5
 
-    .line 600
     const-wide/high16 v18, 0x401c000000000000L    # 7.0
 
-    .line 602
     const-wide/high16 v12, 0x4008000000000000L    # 3.0
 
-    .line 604
     const-wide/high16 v14, 0x4008000000000000L    # 3.0
 
-    .line 606
     move-object/from16 v11, v20
 
-    .line 608
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 610
     const-string v6, "on_background"
 
-    .line 613
     const/4 v13, 0x0
 
-    .line 615
     const/4 v9, 0x0
 
-    .line 616
     const/4 v11, 0x0
 
-    .line 617
     move-object v5, v4
 
-    .line 618
     move-object/from16 v12, v20
 
-    .line 619
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 621
+    .line 47
     const-string v5, "on_background"
 
-    .line 624
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 626
     move-result-object v4
 
-    .line 629
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 630
+    .line 48
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 633
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 635
     const/4 v5, 0x7
 
-    .line 637
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 638
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 641
     const/16 v5, 0x8
 
-    .line 643
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 645
     const/4 v12, 0x0
 
-    .line 648
     const/4 v13, 0x0
 
-    .line 649
     const-string v6, "surface"
 
-    .line 650
     const/4 v9, 0x1
 
-    .line 652
     const/4 v10, 0x0
 
-    .line 653
     const/4 v11, 0x0
 
-    .line 654
     move-object v5, v4
 
-    .line 655
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 656
+    .line 49
     const-string v5, "surface"
 
-    .line 659
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 661
     move-result-object v4
 
-    .line 664
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 665
+    .line 50
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 668
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 670
     const/16 v5, 0x18
 
-    .line 672
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 674
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 677
     const/16 v5, 0x19
 
-    .line 679
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 681
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 684
     const/16 v5, 0x16
 
-    .line 686
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 688
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 691
     const-wide/high16 v16, 0x4026000000000000L    # 11.0
 
-    .line 693
     const-wide/high16 v18, 0x4035000000000000L    # 21.0
 
-    .line 695
     const-wide/high16 v12, 0x4012000000000000L    # 4.5
 
-    .line 697
     const-wide/high16 v14, 0x401c000000000000L    # 7.0
 
-    .line 699
     move-object/from16 v11, v20
 
-    .line 701
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 703
     const-string v6, "on_surface"
 
-    .line 706
     const/4 v13, 0x0
 
-    .line 708
     const/4 v9, 0x0
 
-    .line 709
     const/4 v11, 0x0
 
-    .line 710
     move-object v5, v4
 
-    .line 711
     move-object/from16 v12, v20
 
-    .line 712
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 714
+    .line 51
     const-string v5, "on_surface"
 
-    .line 717
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 719
     move-result-object v4
 
-    .line 722
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 723
+    .line 52
     invoke-static {}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->surfaceContainerLow()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 726
     move-result-object v4
 
-    .line 729
     const-string v5, "surface_container_low"
 
-    .line 730
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 732
     move-result-object v4
 
-    .line 735
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 736
+    .line 53
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 739
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 741
     const/16 v5, 0x16
 
-    .line 743
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 745
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 748
     const/16 v5, 0x1d
 
-    .line 750
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 752
     const/4 v12, 0x0
 
-    .line 755
     const/4 v13, 0x0
 
-    .line 756
     const-string v6, "surface_container_lowest"
 
-    .line 757
     const/4 v9, 0x1
 
-    .line 759
     const/4 v10, 0x0
 
-    .line 760
     const/4 v11, 0x0
 
-    .line 761
     move-object v5, v4
 
-    .line 762
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 763
+    .line 54
     const-string v5, "surface_container_lowest"
 
-    .line 766
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 768
     move-result-object v4
 
-    .line 771
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 772
+    .line 55
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 775
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 777
     const/4 v5, 0x4
 
-    .line 779
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 780
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 783
     const/4 v5, 0x5
 
-    .line 785
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 786
     const/4 v12, 0x0
 
-    .line 789
     const/4 v13, 0x0
 
-    .line 790
     const-string v6, "surface_container"
 
-    .line 791
     const/4 v9, 0x1
 
-    .line 793
     const/4 v10, 0x0
 
-    .line 794
     const/4 v11, 0x0
 
-    .line 795
     move-object v5, v4
 
-    .line 796
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 797
+    .line 56
     const-string v5, "surface_container"
 
-    .line 800
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 802
     move-result-object v4
 
-    .line 805
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 806
+    .line 57
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 809
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 811
     const/16 v5, 0x13
 
-    .line 813
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 815
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 818
     const/16 v5, 0x14
 
-    .line 820
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 822
     const/4 v12, 0x0
 
-    .line 825
     const/4 v13, 0x0
 
-    .line 826
     const-string v6, "surface_container_high"
 
-    .line 827
     const/4 v9, 0x1
 
-    .line 829
     const/4 v10, 0x0
 
-    .line 830
     const/4 v11, 0x0
 
-    .line 831
     move-object v5, v4
 
-    .line 832
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 833
+    .line 58
     const-string v5, "surface_container_high"
 
-    .line 836
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 838
     move-result-object v4
 
-    .line 841
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 842
+    .line 59
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 845
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 847
     const/16 v5, 0xf
 
-    .line 849
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 851
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 854
     const/16 v5, 0x10
 
-    .line 856
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 858
     const/4 v12, 0x0
 
-    .line 861
     const/4 v13, 0x0
 
-    .line 862
     const-string v6, "surface_container_highest"
 
-    .line 863
     const/4 v9, 0x1
 
-    .line 865
     const/4 v10, 0x0
 
-    .line 866
     const/4 v11, 0x0
 
-    .line 867
     move-object v5, v4
 
-    .line 868
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 869
+    .line 60
     const-string v5, "surface_container_highest"
 
-    .line 872
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 874
     move-result-object v4
 
-    .line 877
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 878
+    .line 61
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 881
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 883
     const/16 v5, 0xf
 
-    .line 885
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 887
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 890
     const/16 v5, 0x10
 
-    .line 892
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 894
     const/4 v12, 0x0
 
-    .line 897
     const/4 v13, 0x0
 
-    .line 898
     const-string v6, "surface_bright"
 
-    .line 899
     const/4 v9, 0x1
 
-    .line 901
     const/4 v10, 0x0
 
-    .line 902
     const/4 v11, 0x0
 
-    .line 903
     move-object v5, v4
 
-    .line 904
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 905
+    .line 62
     const-string v5, "surface_bright"
 
-    .line 908
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 910
     move-result-object v4
 
-    .line 913
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 914
+    .line 63
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 917
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 919
     const/16 v5, 0x13
 
-    .line 921
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 923
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 926
     const/16 v5, 0x14
 
-    .line 928
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 930
     const/4 v12, 0x0
 
-    .line 933
     const/4 v13, 0x0
 
-    .line 934
     const-string v6, "surface_dim"
 
-    .line 935
     const/4 v9, 0x1
 
-    .line 937
     const/4 v10, 0x0
 
-    .line 938
     const/4 v11, 0x0
 
-    .line 939
     move-object v5, v4
 
-    .line 940
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 941
+    .line 64
     const-string v5, "surface_dim"
 
-    .line 944
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 946
     move-result-object v4
 
-    .line 949
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 950
+    .line 65
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 953
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 955
     const/16 v5, 0xd
 
-    .line 957
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 959
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 962
     const/16 v5, 0xe
 
-    .line 964
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 966
     const/4 v12, 0x0
 
-    .line 969
     const/4 v13, 0x0
 
-    .line 970
     const-string v6, "surface_variant"
 
-    .line 971
     const/4 v9, 0x1
 
-    .line 973
     const/4 v10, 0x0
 
-    .line 974
     const/4 v11, 0x0
 
-    .line 975
     move-object v5, v4
 
-    .line 976
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 977
+    .line 66
     const-string v5, "surface_variant"
 
-    .line 980
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 982
     move-result-object v4
 
-    .line 985
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 986
+    .line 67
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 989
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;
 
-    .line 991
     const/4 v5, 0x6
 
-    .line 993
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;-><init>(I)V
 
-    .line 994
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;
 
-    .line 997
     const/4 v5, 0x7
 
-    .line 999
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;-><init>(I)V
 
-    .line 1000
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 1003
     const/16 v5, 0x16
 
-    .line 1005
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1007
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 1010
     const-wide/high16 v16, 0x401c000000000000L    # 7.0
 
-    .line 1012
     const-wide/high16 v18, 0x4026000000000000L    # 11.0
 
-    .line 1014
     const-wide/high16 v12, 0x4008000000000000L    # 3.0
 
-    .line 1016
     const-wide/high16 v14, 0x4012000000000000L    # 4.5
 
-    .line 1018
     move-object/from16 v11, v20
 
-    .line 1020
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 1022
     const-string v6, "on_surface_variant"
 
-    .line 1025
     const/4 v13, 0x0
 
-    .line 1027
     const/4 v9, 0x0
 
-    .line 1028
     const/4 v11, 0x0
 
-    .line 1029
     move-object v5, v4
 
-    .line 1030
     move-object/from16 v12, v20
 
-    .line 1031
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 1033
+    .line 68
     const-string v5, "on_surface_variant"
 
-    .line 1036
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1038
     move-result-object v4
 
-    .line 1041
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1042
+    .line 69
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1045
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1047
     const/4 v5, 0x3
 
-    .line 1049
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1050
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1053
     const/4 v5, 0x4
 
-    .line 1055
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1056
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 1059
     const/16 v5, 0x16
 
-    .line 1061
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1063
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 1066
     const-wide/high16 v16, 0x4012000000000000L    # 4.5
 
-    .line 1068
     const-wide/high16 v18, 0x401c000000000000L    # 7.0
 
-    .line 1070
     const-wide/high16 v12, 0x3ff8000000000000L    # 1.5
 
-    .line 1072
     const-wide/high16 v14, 0x4008000000000000L    # 3.0
 
-    .line 1074
     move-object/from16 v11, v20
 
-    .line 1076
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 1078
     const-string v6, "outline"
 
-    .line 1081
     const/4 v13, 0x0
 
-    .line 1083
     const/4 v9, 0x0
 
-    .line 1084
     const/4 v11, 0x0
 
-    .line 1085
     move-object v5, v4
 
-    .line 1086
     move-object/from16 v12, v20
 
-    .line 1087
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 1089
+    .line 70
     const-string v5, "outline"
 
-    .line 1092
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1094
     move-result-object v4
 
-    .line 1097
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1098
+    .line 71
     invoke-virtual {v2}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->outlineVariant()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1101
     move-result-object v4
 
-    .line 1104
     const-string v5, "outline_variant"
 
-    .line 1105
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1107
     move-result-object v4
 
-    .line 1110
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1111
+    .line 72
     invoke-virtual {v2}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->error()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1114
     move-result-object v4
 
-    .line 1117
     const-string v5, "error"
 
-    .line 1118
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1120
     move-result-object v4
 
-    .line 1123
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1124
+    .line 73
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1127
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1129
     const/16 v5, 0x17
 
-    .line 1131
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1133
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1136
     const/16 v5, 0x18
 
-    .line 1138
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1140
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 1143
     const/16 v5, 0xc
 
-    .line 1145
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1147
     new-instance v20, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 1150
     const-wide/high16 v16, 0x4026000000000000L    # 11.0
 
-    .line 1152
     const-wide/high16 v18, 0x4035000000000000L    # 21.0
 
-    .line 1154
     const-wide/high16 v12, 0x4012000000000000L    # 4.5
 
-    .line 1156
     const-wide/high16 v14, 0x401c000000000000L    # 7.0
 
-    .line 1158
     move-object/from16 v11, v20
 
-    .line 1160
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 1162
     const-string v6, "on_error"
 
-    .line 1165
     const/4 v13, 0x0
 
-    .line 1167
     const/4 v9, 0x0
 
-    .line 1168
     const/4 v11, 0x0
 
-    .line 1169
     move-object v5, v4
 
-    .line 1170
     move-object/from16 v12, v20
 
-    .line 1171
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 1173
+    .line 74
     const-string v5, "on_error"
 
-    .line 1176
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1178
     move-result-object v4
 
-    .line 1181
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1182
+    .line 75
     invoke-virtual {v2}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->errorContainer()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1185
     move-result-object v4
 
-    .line 1188
     const-string v5, "error_container"
 
-    .line 1189
     invoke-static {v5, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1191
     move-result-object v4
 
-    .line 1194
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1195
+    .line 76
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1198
     new-instance v7, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1200
     const/16 v5, 0xd
 
-    .line 1202
     invoke-direct {v7, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1204
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1207
     const/16 v5, 0xe
 
-    .line 1209
     invoke-direct {v8, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1211
     new-instance v10, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 1214
     const/16 v5, 0x14
 
-    .line 1216
     invoke-direct {v10, v2, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1218
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 1221
     const-wide/high16 v16, 0x4026000000000000L    # 11.0
 
-    .line 1223
     const-wide/high16 v18, 0x4035000000000000L    # 21.0
 
-    .line 1225
     const-wide/high16 v12, 0x4012000000000000L    # 4.5
 
-    .line 1227
     const-wide/high16 v14, 0x401c000000000000L    # 7.0
 
-    .line 1229
     move-object v11, v2
 
-    .line 1231
     invoke-direct/range {v11 .. v19}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 1232
     const-string v6, "on_error_container"
 
-    .line 1235
     const/4 v13, 0x0
 
-    .line 1237
     const/4 v9, 0x0
 
-    .line 1238
     const/4 v11, 0x0
 
-    .line 1239
     move-object v5, v4
 
-    .line 1240
     move-object v12, v2
 
-    .line 1241
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 1242
+    .line 77
     const-string v2, "on_error_container"
 
-    .line 1245
     invoke-static {v2, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1247
     move-result-object v2
 
-    .line 1250
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1251
+    .line 78
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1254
     const/16 v4, 0x18
 
-    .line 1256
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1258
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1261
     const/16 v5, 0x19
 
-    .line 1263
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1265
     const-string v5, "control_activated"
 
-    .line 1268
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1270
     move-result-object v2
 
-    .line 1273
+    .line 79
     invoke-static {v5, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1274
     move-result-object v2
 
-    .line 1277
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1278
+    .line 80
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1281
     const/4 v4, 0x6
 
-    .line 1283
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1284
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1287
     const/4 v5, 0x7
 
-    .line 1289
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1290
     const-string v5, "control_normal"
 
-    .line 1293
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1295
     move-result-object v2
 
-    .line 1298
+    .line 81
     invoke-static {v5, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1299
     move-result-object v2
 
-    .line 1302
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1303
+    .line 82
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1306
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1308
     const/16 v5, 0xc
 
-    .line 1310
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1312
     new-instance v5, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1315
     const/16 v6, 0xd
 
-    .line 1317
     invoke-direct {v5, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1319
     new-instance v6, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1322
     const/16 v7, 0xe
 
-    .line 1324
     invoke-direct {v6, v7}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1326
     invoke-direct {v2, v4, v5, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;)V
 
-    .line 1329
+    .line 83
     const-string v4, "control_highlight"
 
-    .line 1332
     invoke-static {v4, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1334
     move-result-object v2
 
-    .line 1337
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1338
+    .line 84
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1341
     const/4 v4, 0x7
 
-    .line 1343
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1344
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1347
     const/16 v5, 0x8
 
-    .line 1349
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1351
     const-string v5, "text_primary_inverse"
 
-    .line 1354
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1356
     move-result-object v2
 
-    .line 1359
+    .line 85
     invoke-static {v5, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1360
     move-result-object v2
 
-    .line 1363
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1364
+    .line 86
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1367
     const/16 v4, 0x19
 
-    .line 1369
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1371
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1374
     const/16 v5, 0x1a
 
-    .line 1376
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1378
     const-string v5, "text_secondary_and_tertiary_inverse"
 
-    .line 1381
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1383
     move-result-object v2
 
-    .line 1386
+    .line 87
     invoke-static {v5, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1387
     move-result-object v2
 
-    .line 1390
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1391
+    .line 88
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1394
     const/4 v4, 0x5
 
-    .line 1396
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1397
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1400
     const/4 v5, 0x6
 
-    .line 1402
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1403
     const-string v5, "text_primary_inverse_disable_only"
 
-    .line 1406
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1408
     move-result-object v2
 
-    .line 1411
+    .line 89
     invoke-static {v5, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1412
     move-result-object v2
 
-    .line 1415
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1416
+    .line 90
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1419
     const/4 v4, 0x0
 
-    .line 1421
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1422
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1425
     const/4 v5, 0x0
 
-    .line 1427
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1428
     const-string v5, "text_secondary_and_tertiary_inverse_disabled"
 
-    .line 1431
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1433
     move-result-object v2
 
-    .line 1436
+    .line 91
     invoke-static {v5, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1437
     move-result-object v2
 
-    .line 1440
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1441
+    .line 92
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1444
     const/16 v4, 0x16
 
-    .line 1446
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1448
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1451
     const/16 v5, 0x17
 
-    .line 1453
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1455
     const-string v5, "text_hint_inverse"
 
-    .line 1458
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1460
     move-result-object v2
 
-    .line 1463
+    .line 93
     invoke-static {v5, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1464
     move-result-object v2
 
-    .line 1467
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1468
+    .line 94
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;
 
-    .line 1471
     const/4 v4, 0x1
 
-    .line 1473
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;-><init>(I)V
 
-    .line 1474
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;
 
-    .line 1477
     const/4 v5, 0x2
 
-    .line 1479
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;-><init>(I)V
 
-    .line 1480
     const-string v5, "primary_palette_key_color"
 
-    .line 1483
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1485
     move-result-object v2
 
-    .line 1488
+    .line 95
     const-string v4, "palette_key_color_primary"
 
-    .line 1489
     invoke-static {v4, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1491
     move-result-object v2
 
-    .line 1494
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1495
+    .line 96
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1498
     const/16 v4, 0xb
 
-    .line 1500
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1502
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1505
     const/16 v5, 0xc
 
-    .line 1507
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1509
     const-string v5, "secondary_palette_key_color"
 
-    .line 1512
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1514
     move-result-object v2
 
-    .line 1517
+    .line 97
     const-string v4, "palette_key_color_secondary"
 
-    .line 1518
     invoke-static {v4, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1520
     move-result-object v2
 
-    .line 1523
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1524
+    .line 98
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;
 
-    .line 1527
     const/4 v4, 0x3
 
-    .line 1529
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;-><init>(I)V
 
-    .line 1530
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;
 
-    .line 1533
     const/4 v5, 0x4
 
-    .line 1535
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;-><init>(I)V
 
-    .line 1536
     const-string v5, "tertiary_palette_key_color"
 
-    .line 1539
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1541
     move-result-object v2
 
-    .line 1544
+    .line 99
     const-string v4, "palette_key_color_tertiary"
 
-    .line 1545
     invoke-static {v4, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1547
     move-result-object v2
 
-    .line 1550
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1551
+    .line 100
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1554
     const/16 v4, 0x1a
 
-    .line 1556
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1558
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1561
     const/16 v5, 0x1b
 
-    .line 1563
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1565
     const-string v5, "neutral_palette_key_color"
 
-    .line 1568
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1570
     move-result-object v2
 
-    .line 1573
+    .line 101
     const-string v4, "palette_key_color_neutral"
 
-    .line 1574
     invoke-static {v4, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1576
     move-result-object v2
 
-    .line 1579
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1580
+    .line 102
     new-instance v2, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1583
     const/16 v4, 0xa
 
-    .line 1585
     invoke-direct {v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1587
     new-instance v4, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 1590
     const/16 v5, 0xb
 
-    .line 1592
     invoke-direct {v4, v5}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 1594
     const-string v5, "neutral_variant_palette_key_color"
 
-    .line 1597
     invoke-static {v5, v2, v4}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;->fromPalette(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1599
     move-result-object v2
 
-    .line 1602
+    .line 103
     const-string v4, "palette_key_color_neutral_variant"
 
-    .line 1603
     invoke-static {v4, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1605
     move-result-object v2
 
-    .line 1608
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1609
+    .line 104
     sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 1612
+    .line 105
     new-instance v4, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda7;
 
-    .line 1614
     invoke-direct {v4, v0, v2, v1}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda7;-><init>(Lcom/android/systemui/theme/ThemeOverlayController;Ljava/lang/Boolean;Landroid/content/om/FabricatedOverlay;)V
 
-    .line 1616
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 1619
+    .line 106
     new-instance v3, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;
 
-    .line 1622
     invoke-direct {v3}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;-><init>()V
 
-    .line 1624
+    .line 107
     new-instance v4, Ljava/util/ArrayList;
 
-    .line 1627
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1629
+    .line 108
     invoke-virtual {v3}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->primaryFixed()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1632
     move-result-object v5
 
-    .line 1635
     const-string v6, "primary_fixed"
 
-    .line 1636
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1638
     move-result-object v5
 
-    .line 1641
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1642
+    .line 109
     invoke-virtual {v3}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->primaryFixedDim()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1645
     move-result-object v5
 
-    .line 1648
     const-string v6, "primary_fixed_dim"
 
-    .line 1649
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1651
     move-result-object v5
 
-    .line 1654
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1655
+    .line 110
     new-instance v5, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1658
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1660
     const/16 v6, 0x1a
 
-    .line 1662
     invoke-direct {v8, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1664
     new-instance v9, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 1667
     const/16 v6, 0x1b
 
-    .line 1669
     invoke-direct {v9, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1671
     new-instance v11, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 1674
     const/16 v6, 0x17
 
-    .line 1676
     invoke-direct {v11, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1678
     new-instance v12, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 1681
     const/16 v6, 0x18
 
-    .line 1683
     invoke-direct {v12, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1685
     new-instance v22, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 1688
     const-wide/high16 v18, 0x4026000000000000L    # 11.0
 
-    .line 1690
     const-wide/high16 v20, 0x4035000000000000L    # 21.0
 
-    .line 1692
     const-wide/high16 v14, 0x4012000000000000L    # 4.5
 
-    .line 1694
     const-wide/high16 v16, 0x401c000000000000L    # 7.0
 
-    .line 1696
     move-object/from16 v13, v22
 
-    .line 1698
     invoke-direct/range {v13 .. v21}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 1700
     const-string v7, "on_primary_fixed"
 
-    .line 1703
     const/4 v10, 0x0
 
-    .line 1705
     const/4 v14, 0x0
 
-    .line 1706
     move-object v6, v5
 
-    .line 1707
     invoke-direct/range {v6 .. v14}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 1708
+    .line 111
     const-string v6, "on_primary_fixed"
 
-    .line 1711
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1713
     move-result-object v5
 
-    .line 1716
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1717
+    .line 112
     new-instance v5, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1720
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1722
     const/4 v6, 0x0
 
-    .line 1724
     invoke-direct {v8, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1725
     new-instance v9, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1728
     const/16 v6, 0x16
 
-    .line 1730
     invoke-direct {v9, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1732
     new-instance v11, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;
 
-    .line 1735
     const/4 v6, 0x0
 
-    .line 1737
     invoke-direct {v11, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1738
     new-instance v12, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;
 
-    .line 1741
     const/16 v6, 0x8
 
-    .line 1743
     invoke-direct {v12, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1745
     new-instance v22, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 1748
     const-wide/high16 v18, 0x401c000000000000L    # 7.0
 
-    .line 1750
     const-wide/high16 v20, 0x4026000000000000L    # 11.0
 
-    .line 1752
     const-wide/high16 v14, 0x4008000000000000L    # 3.0
 
-    .line 1754
     const-wide/high16 v16, 0x4012000000000000L    # 4.5
 
-    .line 1756
     move-object/from16 v13, v22
 
-    .line 1758
     invoke-direct/range {v13 .. v21}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 1760
     const-string v7, "on_primary_fixed_variant"
 
-    .line 1763
     const/4 v10, 0x0
 
-    .line 1765
     const/4 v14, 0x0
 
-    .line 1766
     move-object v6, v5
 
-    .line 1767
     invoke-direct/range {v6 .. v14}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 1768
+    .line 113
     const-string v6, "on_primary_fixed_variant"
 
-    .line 1771
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1773
     move-result-object v5
 
-    .line 1776
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1777
+    .line 114
     invoke-virtual {v3}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->secondaryFixed()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1780
     move-result-object v5
 
-    .line 1783
     const-string v6, "secondary_fixed"
 
-    .line 1784
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1786
     move-result-object v5
 
-    .line 1789
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1790
+    .line 115
     invoke-virtual {v3}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->secondaryFixedDim()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1793
     move-result-object v5
 
-    .line 1796
     const-string v6, "secondary_fixed_dim"
 
-    .line 1797
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1799
     move-result-object v5
 
-    .line 1802
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1803
+    .line 116
     new-instance v5, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1806
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;
 
-    .line 1808
     const/4 v6, 0x0
 
-    .line 1810
     invoke-direct {v8, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda9;-><init>(I)V
 
-    .line 1811
     new-instance v9, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1814
     const/16 v6, 0x8
 
-    .line 1816
     invoke-direct {v9, v6}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1818
     new-instance v11, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 1821
     const/4 v6, 0x5
 
-    .line 1823
     invoke-direct {v11, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1824
     new-instance v12, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 1827
     const/4 v6, 0x7
 
-    .line 1829
     invoke-direct {v12, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1830
     new-instance v22, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 1833
     const-wide/high16 v18, 0x4026000000000000L    # 11.0
 
-    .line 1835
     const-wide/high16 v20, 0x4035000000000000L    # 21.0
 
-    .line 1837
     const-wide/high16 v14, 0x4012000000000000L    # 4.5
 
-    .line 1839
     const-wide/high16 v16, 0x401c000000000000L    # 7.0
 
-    .line 1841
     move-object/from16 v13, v22
 
-    .line 1843
     invoke-direct/range {v13 .. v21}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 1845
     const-string v7, "on_secondary_fixed"
 
-    .line 1848
     const/4 v10, 0x0
 
-    .line 1850
     const/4 v14, 0x0
 
-    .line 1851
     move-object v6, v5
 
-    .line 1852
     invoke-direct/range {v6 .. v14}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 1853
+    .line 117
     const-string v6, "on_secondary_fixed"
 
-    .line 1856
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1858
     move-result-object v5
 
-    .line 1861
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1862
+    .line 118
     new-instance v5, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1865
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1867
     const/16 v6, 0x1c
 
-    .line 1869
     invoke-direct {v8, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1871
     new-instance v9, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1874
     const/16 v6, 0x1d
 
-    .line 1876
     invoke-direct {v9, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1878
     new-instance v11, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;
 
-    .line 1881
     const/4 v6, 0x4
 
-    .line 1883
     invoke-direct {v11, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1884
     new-instance v12, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;
 
-    .line 1887
     const/4 v6, 0x5
 
-    .line 1889
     invoke-direct {v12, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda7;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1890
     new-instance v22, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 1893
     const-wide/high16 v18, 0x401c000000000000L    # 7.0
 
-    .line 1895
     const-wide/high16 v20, 0x4026000000000000L    # 11.0
 
-    .line 1897
     const-wide/high16 v14, 0x4008000000000000L    # 3.0
 
-    .line 1899
     const-wide/high16 v16, 0x4012000000000000L    # 4.5
 
-    .line 1901
     move-object/from16 v13, v22
 
-    .line 1903
     invoke-direct/range {v13 .. v21}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 1905
     const-string v7, "on_secondary_fixed_variant"
 
-    .line 1908
     const/4 v10, 0x0
 
-    .line 1910
     const/4 v14, 0x0
 
-    .line 1911
     move-object v6, v5
 
-    .line 1912
     invoke-direct/range {v6 .. v14}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 1913
+    .line 119
     const-string v6, "on_secondary_fixed_variant"
 
-    .line 1916
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1918
     move-result-object v5
 
-    .line 1921
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1922
+    .line 120
     invoke-virtual {v3}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->tertiaryFixed()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1925
     move-result-object v5
 
-    .line 1928
     const-string v6, "tertiary_fixed"
 
-    .line 1929
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1931
     move-result-object v5
 
-    .line 1934
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1935
+    .line 121
     invoke-virtual {v3}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->tertiaryFixedDim()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1938
     move-result-object v5
 
-    .line 1941
     const-string v6, "tertiary_fixed_dim"
 
-    .line 1942
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 1944
     move-result-object v5
 
-    .line 1947
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1948
+    .line 122
     new-instance v5, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 1951
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1953
     const/4 v6, 0x3
 
-    .line 1955
     invoke-direct {v8, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1956
     new-instance v9, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 1959
     const/4 v6, 0x4
 
-    .line 1961
     invoke-direct {v9, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 1962
     new-instance v11, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 1965
     const/16 v6, 0x1b
 
-    .line 1967
     invoke-direct {v11, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1969
     new-instance v12, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 1972
     const/16 v6, 0x1c
 
-    .line 1974
     invoke-direct {v12, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 1976
     new-instance v22, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 1979
     const-wide/high16 v18, 0x4026000000000000L    # 11.0
 
-    .line 1981
     const-wide/high16 v20, 0x4035000000000000L    # 21.0
 
-    .line 1983
     const-wide/high16 v14, 0x4012000000000000L    # 4.5
 
-    .line 1985
     const-wide/high16 v16, 0x401c000000000000L    # 7.0
 
-    .line 1987
     move-object/from16 v13, v22
 
-    .line 1989
     invoke-direct/range {v13 .. v21}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 1991
     const-string v7, "on_tertiary_fixed"
 
-    .line 1994
     const/4 v10, 0x0
 
-    .line 1996
     const/4 v14, 0x0
 
-    .line 1997
     move-object v6, v5
 
-    .line 1998
     invoke-direct/range {v6 .. v14}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 1999
+    .line 123
     const-string v6, "on_tertiary_fixed"
 
-    .line 2002
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2004
     move-result-object v5
 
-    .line 2007
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2008
+    .line 124
     new-instance v5, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2011
     new-instance v8, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 2013
     const/16 v6, 0x9
 
-    .line 2015
     invoke-direct {v8, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 2017
     new-instance v9, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;
 
-    .line 2020
     const/16 v6, 0xa
 
-    .line 2022
     invoke-direct {v9, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 2024
     new-instance v11, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 2027
     const/16 v6, 0x12
 
-    .line 2029
     invoke-direct {v11, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 2031
     new-instance v12, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;
 
-    .line 2034
     const/16 v6, 0x13
 
-    .line 2036
     invoke-direct {v12, v3, v6}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors$$ExternalSyntheticLambda4;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;I)V
 
-    .line 2038
     new-instance v3, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 2041
     const-wide/high16 v18, 0x401c000000000000L    # 7.0
 
-    .line 2043
     const-wide/high16 v20, 0x4026000000000000L    # 11.0
 
-    .line 2045
     const-wide/high16 v14, 0x4008000000000000L    # 3.0
 
-    .line 2047
     const-wide/high16 v16, 0x4012000000000000L    # 4.5
 
-    .line 2049
     move-object v13, v3
 
-    .line 2051
     invoke-direct/range {v13 .. v21}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 2052
     const-string v7, "on_tertiary_fixed_variant"
 
-    .line 2055
     const/4 v10, 0x0
 
-    .line 2057
     const/4 v14, 0x0
 
-    .line 2058
     move-object v6, v5
 
-    .line 2059
     invoke-direct/range {v6 .. v14}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 2060
+    .line 125
     const-string v3, "on_tertiary_fixed_variant"
 
-    .line 2063
     invoke-static {v3, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2065
     move-result-object v3
 
-    .line 2068
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2069
+    .line 126
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 2072
+    .line 127
     new-instance v5, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda7;
 
-    .line 2074
     invoke-direct {v5, v0, v3, v1}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda7;-><init>(Lcom/android/systemui/theme/ThemeOverlayController;Ljava/lang/Boolean;Landroid/content/om/FabricatedOverlay;)V
 
-    .line 2076
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 2079
+    .line 128
     new-instance v3, Lcom/android/systemui/monet/CustomDynamicColors;
 
-    .line 2082
     invoke-direct {v3}, Lcom/android/systemui/monet/CustomDynamicColors;-><init>()V
 
-    .line 2084
+    .line 129
     new-instance v4, Ljava/util/ArrayList;
 
-    .line 2087
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2089
+    .line 130
     invoke-static {}, Lcom/android/systemui/monet/CustomDynamicColors;->widgetBackground()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2092
     move-result-object v5
 
-    .line 2095
     const-string v6, "widget_background"
 
-    .line 2096
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2098
     move-result-object v5
 
-    .line 2101
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2102
+    .line 131
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->clockHour()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2105
     move-result-object v5
 
-    .line 2108
     const-string v6, "clock_hour"
 
-    .line 2109
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2111
     move-result-object v5
 
-    .line 2114
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2115
+    .line 132
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->clockMinute()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2118
     move-result-object v5
 
-    .line 2121
     const-string v6, "clock_minute"
 
-    .line 2122
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2124
     move-result-object v5
 
-    .line 2127
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2128
+    .line 133
     new-instance v5, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2131
     new-instance v8, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 2133
     const/4 v6, 0x5
 
-    .line 2135
     invoke-direct {v8, v6}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 2136
     new-instance v9, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 2139
     const/4 v6, 0x6
 
-    .line 2141
     invoke-direct {v9, v6}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 2142
     new-instance v11, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda2;
 
-    .line 2145
     const/16 v6, 0x17
 
-    .line 2147
     invoke-direct {v11, v3, v6}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/monet/CustomDynamicColors;I)V
 
-    .line 2149
     new-instance v21, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 2152
     const-wide v17, 0x4051800000000000L    # 70.0
 
-    .line 2154
     const-wide/high16 v19, 0x4026000000000000L    # 11.0
 
-    .line 2159
     const-wide/high16 v13, 0x3ff0000000000000L    # 1.0
 
-    .line 2161
     const-wide/high16 v15, 0x4014000000000000L    # 5.0
 
-    .line 2163
     move-object/from16 v12, v21
 
-    .line 2165
     invoke-direct/range {v12 .. v20}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 2167
     const-string v7, "clock_second"
 
-    .line 2170
     const/4 v14, 0x0
 
-    .line 2172
     const/4 v10, 0x0
 
-    .line 2173
     const/4 v12, 0x0
 
-    .line 2174
     move-object v6, v5
 
-    .line 2175
     move-object/from16 v13, v21
 
-    .line 2176
     invoke-direct/range {v6 .. v14}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 2178
+    .line 134
     const-string v6, "clock_second"
 
-    .line 2181
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2183
     move-result-object v5
 
-    .line 2186
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2187
+    .line 135
     new-instance v5, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2190
     new-instance v8, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 2192
     const/4 v6, 0x1
 
-    .line 2194
     invoke-direct {v8, v6}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 2195
     new-instance v9, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 2198
     const/4 v6, 0x2
 
-    .line 2200
     invoke-direct {v9, v6}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 2201
     const/4 v13, 0x0
 
-    .line 2204
     const/4 v14, 0x0
 
-    .line 2205
     const-string v7, "theme_app"
 
-    .line 2206
     const/4 v10, 0x1
 
-    .line 2208
     const/4 v11, 0x0
 
-    .line 2209
     const/4 v12, 0x0
 
-    .line 2210
     move-object v6, v5
 
-    .line 2211
     invoke-direct/range {v6 .. v14}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 2212
+    .line 136
     const-string v6, "theme_app"
 
-    .line 2215
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2217
     move-result-object v5
 
-    .line 2220
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2221
+    .line 137
     new-instance v5, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2224
     new-instance v8, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 2226
     const/16 v6, 0x15
 
-    .line 2228
     invoke-direct {v8, v6}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 2230
     new-instance v9, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda0;
 
-    .line 2233
     const/16 v6, 0x16
 
-    .line 2235
     invoke-direct {v9, v6}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 2237
     new-instance v11, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda2;
 
-    .line 2240
     const/16 v6, 0x12
 
-    .line 2242
     invoke-direct {v11, v3, v6}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/monet/CustomDynamicColors;I)V
 
-    .line 2244
     new-instance v21, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;
 
-    .line 2247
     const-wide/high16 v17, 0x401c000000000000L    # 7.0
 
-    .line 2249
     const-wide/high16 v19, 0x4024000000000000L    # 10.0
 
-    .line 2251
     const-wide/high16 v13, 0x3ff0000000000000L    # 1.0
 
-    .line 2253
     const-wide/high16 v15, 0x4008000000000000L    # 3.0
 
-    .line 2255
     move-object/from16 v12, v21
 
-    .line 2257
     invoke-direct/range {v12 .. v20}, Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;-><init>(DDDD)V
 
-    .line 2259
     const-string v7, "on_theme_app"
 
-    .line 2262
     const/4 v14, 0x0
 
-    .line 2264
     const/4 v10, 0x0
 
-    .line 2265
     const/4 v12, 0x0
 
-    .line 2266
     move-object v6, v5
 
-    .line 2267
     move-object/from16 v13, v21
 
-    .line 2268
     invoke-direct/range {v6 .. v14}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 2270
+    .line 138
     const-string v6, "on_theme_app"
 
-    .line 2273
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2275
     move-result-object v5
 
-    .line 2278
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2279
+    .line 139
     invoke-static {}, Lcom/android/systemui/monet/CustomDynamicColors;->themeAppRing()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2282
     move-result-object v5
 
-    .line 2285
     const-string v6, "theme_app_ring"
 
-    .line 2286
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2288
     move-result-object v5
 
-    .line 2291
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2292
+    .line 140
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->themeNotif()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2295
     move-result-object v5
 
-    .line 2298
     const-string v6, "on_theme_app_ring"
 
-    .line 2299
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2301
     move-result-object v5
 
-    .line 2304
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2305
+    .line 141
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->brandA()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2308
     move-result-object v5
 
-    .line 2311
     const-string v6, "brand_a"
 
-    .line 2312
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2314
     move-result-object v5
 
-    .line 2317
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2318
+    .line 142
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->brandB()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2321
     move-result-object v5
 
-    .line 2324
     const-string v6, "brand_b"
 
-    .line 2325
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2327
     move-result-object v5
 
-    .line 2330
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2331
+    .line 143
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->brandC()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2334
     move-result-object v5
 
-    .line 2337
     const-string v6, "brand_c"
 
-    .line 2338
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2340
     move-result-object v5
 
-    .line 2343
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2344
+    .line 144
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->brandD()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2347
     move-result-object v5
 
-    .line 2350
     const-string v6, "brand_d"
 
-    .line 2351
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2353
     move-result-object v5
 
-    .line 2356
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2357
+    .line 145
     invoke-static {}, Lcom/android/systemui/monet/CustomDynamicColors;->underSurface()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2360
     move-result-object v5
 
-    .line 2363
     const-string v6, "under_surface"
 
-    .line 2364
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2366
     move-result-object v5
 
-    .line 2369
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2370
+    .line 146
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->shadeActive()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2373
     move-result-object v5
 
-    .line 2376
     const-string v6, "shade_active"
 
-    .line 2377
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2379
     move-result-object v5
 
-    .line 2382
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2383
+    .line 147
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->onShadeActive()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2386
     move-result-object v5
 
-    .line 2389
     const-string v6, "on_shade_active"
 
-    .line 2390
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2392
     move-result-object v5
 
-    .line 2395
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2396
+    .line 148
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->onShadeActiveVariant()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2399
     move-result-object v5
 
-    .line 2402
     const-string v6, "on_shade_active_variant"
 
-    .line 2403
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2405
     move-result-object v5
 
-    .line 2408
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2409
+    .line 149
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->shadeInactive()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2412
     move-result-object v5
 
-    .line 2415
     const-string v6, "shade_inactive"
 
-    .line 2416
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2418
     move-result-object v5
 
-    .line 2421
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2422
+    .line 150
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->onShadeInactive()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2425
     move-result-object v5
 
-    .line 2428
     const-string v6, "on_shade_inactive"
 
-    .line 2429
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2431
     move-result-object v5
 
-    .line 2434
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2435
+    .line 151
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->onShadeInactiveVariant()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2438
     move-result-object v5
 
-    .line 2441
     const-string v6, "on_shade_inactive_variant"
 
-    .line 2442
     invoke-static {v6, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2444
     move-result-object v5
 
-    .line 2447
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2448
+    .line 152
     invoke-virtual {v3}, Lcom/android/systemui/monet/CustomDynamicColors;->shadeDisabled()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2451
     move-result-object v3
 
-    .line 2454
     const-string v5, "shade_disabled"
 
-    .line 2455
     invoke-static {v5, v3}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2457
     move-result-object v3
 
-    .line 2460
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2461
+    .line 153
     new-instance v3, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 2464
     new-instance v7, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 2466
     const/4 v5, 0x3
 
-    .line 2468
     invoke-direct {v7, v5}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 2469
     new-instance v8, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;
 
-    .line 2472
     const/4 v5, 0x4
 
-    .line 2474
     invoke-direct {v8, v5}, Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 2475
     const/4 v12, 0x0
 
-    .line 2478
     const/4 v13, 0x0
 
-    .line 2479
     const-string v6, "overview_background"
 
-    .line 2480
     const/4 v9, 0x1
 
-    .line 2482
     const/4 v10, 0x0
 
-    .line 2483
     const/4 v11, 0x0
 
-    .line 2484
     move-object v5, v3
 
-    .line 2485
     invoke-direct/range {v5 .. v13}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 2486
+    .line 154
     const-string v5, "overview_background"
 
-    .line 2489
     invoke-static {v5, v3}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    .line 2491
     move-result-object v3
 
-    .line 2494
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2495
+    .line 155
     new-instance v3, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda7;
 
-    .line 2498
     invoke-direct {v3, v0, v2, v1}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda7;-><init>(Lcom/android/systemui/theme/ThemeOverlayController;Ljava/lang/Boolean;Landroid/content/om/FabricatedOverlay;)V
 
-    .line 2500
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 2503
+    .line 156
     iput-object v1, v0, Lcom/android/systemui/theme/ThemeOverlayController;->mDynamicOverlay:Landroid/content/om/FabricatedOverlay;
 
-    .line 2506
     return-void
-    .line 2508
 .end method
 
-.method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
+.method public dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 2
 
     .line 1
@@ -5855,10 +4777,10 @@
 
     .line 475
     :cond_e
-    new-instance v2, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda4;
+    new-instance v2, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;
 
     .line 476
-    invoke-direct {v2, v1, v15}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/theme/ThemeOverlayController;I)V
+    invoke-direct {v2, v1, v15}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/theme/ThemeOverlayController;I)V
 
     .line 478
     new-instance v5, Landroid/util/ArraySet;
@@ -6237,10 +5159,10 @@
     move-result-object v6
 
     .line 741
-    new-instance v7, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda5;
+    new-instance v7, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda4;
 
     .line 742
-    invoke-direct {v7, v13}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda5;-><init>(Ljava/util/Map;)V
+    invoke-direct {v7, v13}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda4;-><init>(Ljava/util/Map;)V
 
     .line 744
     invoke-interface {v6, v7}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
@@ -6267,126 +5189,117 @@
     check-cast v6, Ljava/lang/String;
 
     .line 761
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v6, v9}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 763
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 766
-    move-result-object v5
-
-    .line 769
-    invoke-static {v9, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 770
     iget-boolean v5, v1, Lcom/android/systemui/theme/ThemeOverlayController;->mNeedsOverlayCreation:Z
 
-    .line 773
+    .line 766
     if-eqz v5, :cond_12
 
-    .line 775
+    .line 768
     iput-boolean v3, v1, Lcom/android/systemui/theme/ThemeOverlayController;->mNeedsOverlayCreation:Z
 
-    .line 777
+    .line 770
     const/4 v5, 0x3
 
-    .line 779
+    .line 772
     new-array v5, v5, [Landroid/content/om/FabricatedOverlay;
 
-    .line 780
+    .line 773
     iget-object v6, v1, Lcom/android/systemui/theme/ThemeOverlayController;->mSecondaryOverlay:Landroid/content/om/FabricatedOverlay;
 
-    .line 782
+    .line 775
     aput-object v6, v5, v3
 
-    .line 784
+    .line 777
     iget-object v3, v1, Lcom/android/systemui/theme/ThemeOverlayController;->mNeutralOverlay:Landroid/content/om/FabricatedOverlay;
 
-    .line 786
+    .line 779
     aput-object v3, v5, v4
 
-    .line 788
+    .line 781
     const/4 v3, 0x2
 
-    .line 790
+    .line 783
     iget-object v4, v1, Lcom/android/systemui/theme/ThemeOverlayController;->mDynamicOverlay:Landroid/content/om/FabricatedOverlay;
 
-    .line 791
+    .line 784
     aput-object v4, v5, v3
 
-    .line 793
+    .line 786
     move-object v14, v5
 
-    .line 795
+    .line 788
     goto :goto_9
 
-    .line 796
+    .line 789
     :cond_12
     const/4 v3, 0x0
 
-    .line 797
+    .line 790
     move-object v14, v3
 
-    .line 798
+    .line 791
     :goto_9
     iget-object v12, v1, Lcom/android/systemui/theme/ThemeOverlayController;->mThemeManager:Lcom/android/systemui/theme/ThemeOverlayApplier;
 
-    .line 799
+    .line 792
     iget-object v1, v12, Lcom/android/systemui/theme/ThemeOverlayApplier;->mBgExecutor:Ljava/util/concurrent/Executor;
 
-    .line 801
+    .line 794
     new-instance v3, Lcom/android/systemui/theme/ThemeOverlayApplier$$ExternalSyntheticLambda0;
 
-    .line 803
+    .line 796
     move-object v11, v3
 
-    .line 805
+    .line 798
     move-object/from16 v16, v0
 
-    .line 806
+    .line 799
     move-object/from16 v17, v2
 
-    .line 808
-    invoke-direct/range {v11 .. v17}, Lcom/android/systemui/theme/ThemeOverlayApplier$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/theme/ThemeOverlayApplier;Ljava/util/Map;[Landroid/content/om/FabricatedOverlay;ILjava/util/Set;Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda4;)V
+    .line 801
+    invoke-direct/range {v11 .. v17}, Lcom/android/systemui/theme/ThemeOverlayApplier$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/theme/ThemeOverlayApplier;Ljava/util/Map;[Landroid/content/om/FabricatedOverlay;ILjava/util/Set;Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;)V
 
-    .line 810
+    .line 803
     invoke-interface {v1, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 813
+    .line 806
     goto :goto_a
 
-    .line 816
+    .line 809
     :cond_13
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 817
+    .line 810
     const-string v3, "Skipping overlay creation. Theme was already: "
 
-    .line 819
+    .line 812
     invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 821
+    .line 814
     iget-object v1, v1, Lcom/android/systemui/theme/ThemeOverlayController;->mColorScheme:Lcom/android/systemui/monet/ColorScheme;
 
-    .line 824
+    .line 817
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 826
+    .line 819
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 829
+    .line 822
     move-result-object v0
 
-    .line 832
+    .line 825
     invoke-static {v9, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 833
-    invoke-virtual {v2}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda4;->run()V
+    .line 826
+    invoke-virtual {v2}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;->run()V
 
-    .line 836
+    .line 829
     :goto_a
     return-void
-    .line 839
+    .line 832
 .end method
 
 .method public final start()V
@@ -6579,66 +5492,21 @@
     invoke-direct {v0, p0, v1}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/theme/ThemeOverlayController;I)V
 
     .line 129
-    sget-boolean v1, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 132
-    if-nez v1, :cond_2
-
-    .line 134
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 136
-    :cond_2
-    sget-boolean v1, Lcom/android/systemui/FeatureFlagsImpl;->themeOverlayControllerWakefulnessDeprecation:Z
-
-    .line 139
-    if-eqz v1, :cond_3
-
-    .line 141
-    sget-object v1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->DOZING:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
-
-    .line 143
-    iget-object v2, p0, Lcom/android/systemui/theme/ThemeOverlayController;->mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
-
-    .line 145
-    invoke-virtual {v2, v1}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->isFinishedInState(Lcom/android/systemui/keyguard/shared/model/KeyguardState;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 147
-    move-result-object v1
-
-    .line 150
-    new-instance v2, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;
-
-    .line 151
-    invoke-direct {v2, v0}, Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda1;)V
-
-    .line 153
-    iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayController;->mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
-
-    .line 156
-    invoke-virtual {p0, v1, v2}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 158
-    goto :goto_1
-
-    .line 161
-    :cond_3
     new-instance v1, Lcom/android/systemui/theme/ThemeOverlayController$6;
 
-    .line 162
+    .line 132
     invoke-direct {v1, v0}, Lcom/android/systemui/theme/ThemeOverlayController$6;-><init>(Lcom/android/systemui/theme/ThemeOverlayController$$ExternalSyntheticLambda1;)V
 
-    .line 164
+    .line 134
     iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayController;->mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
-    .line 167
+    .line 137
     iget-object p0, p0, Lcom/android/systemui/keyguard/Lifecycle;->mObservers:Ljava/util/ArrayList;
 
-    .line 169
+    .line 139
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 171
-    :goto_1
+    .line 141
     return-void
-    .line 174
+    .line 144
 .end method

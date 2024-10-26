@@ -1,6 +1,6 @@
 .class public final Lcom/android/compose/animation/scene/SwipeToSceneNode;
 .super Landroidx/compose/ui/node/DelegatingNode;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/node/PointerInputModifierNode;
@@ -53,89 +53,89 @@
     new-instance v9, Lcom/android/compose/animation/scene/SwipeToSceneNode$delegate$2;
 
     .line 22
-    const-string v5, "startDragImmediately-k-4lQ0M(J)Z"
+    const-string/jumbo v5, "startDragImmediately-k-4lQ0M(J)Z"
 
     .line 24
     const/4 v6, 0x0
 
-    .line 26
+    .line 27
     const/4 v1, 0x1
 
-    .line 27
+    .line 28
     const-class v3, Lcom/android/compose/animation/scene/SwipeToSceneNode;
 
-    .line 28
-    const-string v4, "startDragImmediately"
+    .line 29
+    const-string/jumbo v4, "startDragImmediately"
 
-    .line 30
+    .line 31
     move-object v0, v9
 
-    .line 32
+    .line 34
     move-object v2, p0
 
-    .line 33
+    .line 35
     invoke-direct/range {v0 .. v6}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 34
+    .line 36
     new-instance v10, Lcom/android/compose/animation/scene/SwipeToSceneNode$delegate$3;
 
-    .line 37
+    .line 39
     const-string v5, "onDragStarted-MjzGXtM(Landroidx/compose/ui/geometry/Offset;FI)Lcom/android/compose/animation/scene/DragController;"
 
-    .line 39
+    .line 41
     const/4 v6, 0x0
 
-    .line 41
+    .line 43
     const/4 v1, 0x3
 
-    .line 42
+    .line 44
     const-class v3, Lcom/android/compose/animation/scene/DraggableHandlerImpl;
 
-    .line 43
+    .line 45
     const-string v4, "onDragStarted"
 
-    .line 45
+    .line 47
     move-object v0, v10
 
-    .line 47
+    .line 49
     move-object v2, p1
 
-    .line 48
+    .line 50
     invoke-direct/range {v0 .. v6}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 49
+    .line 51
     iget-object v1, p1, Lcom/android/compose/animation/scene/DraggableHandlerImpl;->orientation:Landroidx/compose/foundation/gestures/Orientation;
 
-    .line 52
+    .line 54
     move-object v0, v7
 
-    .line 54
+    .line 56
     move-object v2, v8
 
-    .line 55
+    .line 57
     move-object v3, v9
 
-    .line 56
+    .line 58
     move-object v4, v10
 
-    .line 57
+    .line 59
     move-object v5, p2
 
-    .line 58
+    .line 60
     invoke-direct/range {v0 .. v5}, Lcom/android/compose/animation/scene/MultiPointerDraggableNode;-><init>(Landroidx/compose/foundation/gestures/Orientation;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function3;Lcom/android/compose/animation/scene/SwipeDetector;)V
 
-    .line 59
+    .line 61
     invoke-virtual {p0, v7}, Landroidx/compose/ui/node/DelegatingNode;->delegate(Landroidx/compose/ui/node/DelegatableNode;)Landroidx/compose/ui/node/DelegatableNode;
 
-    .line 62
+    .line 64
     iput-object v7, p0, Lcom/android/compose/animation/scene/SwipeToSceneNode;->delegate:Lcom/android/compose/animation/scene/MultiPointerDraggableNode;
 
-    .line 65
+    .line 67
     iput-object p1, p0, Lcom/android/compose/animation/scene/SwipeToSceneNode;->_draggableHandler:Lcom/android/compose/animation/scene/DraggableHandlerImpl;
 
-    .line 67
-    return-void
     .line 69
+    return-void
+    .line 71
 .end method
 
 .method public static shouldEnableSwipes(Lcom/android/compose/animation/scene/Scene;Landroidx/compose/foundation/gestures/Orientation;)Z

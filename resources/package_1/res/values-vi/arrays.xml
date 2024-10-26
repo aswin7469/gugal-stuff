@@ -5,7 +5,9 @@
     <item>Hiển thị phần trăm khi sạc (mặc định)</item>
     <item>Không hiển thị biểu tượng này</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Hiển thị giờ, phút và giây</item>
     <item>Hiển thị giờ và phút (mặc định)</item>

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/accessibility/hearingaid/HearingDevicesDialogManager$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -54,7 +54,7 @@
 
     .line 8
     :try_start_0
-    iget-object v2, v0, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesDialogManager;->mDialogFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$25;
+    iget-object v2, v0, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesDialogManager;->mDialogFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$26;
 
     .line 11
     invoke-interface {v1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
@@ -78,7 +78,7 @@
     xor-int/2addr v1, v3
 
     .line 24
-    invoke-virtual {v2, v1}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$25;->create(Z)Lcom/android/systemui/accessibility/hearingaid/HearingDevicesDialogDelegate;
+    invoke-virtual {v2, v1}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$26;->create(Z)Lcom/android/systemui/accessibility/hearingaid/HearingDevicesDialogDelegate;
 
     .line 25
     move-result-object v1

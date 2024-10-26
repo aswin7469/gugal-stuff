@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 .super Lcom/android/systemui/keyguard/Lifecycle;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -154,7 +154,7 @@
     const/4 v1, 0x1
 
     .line 14
-    const v2, 0x7f070870    # @dimen/physical_power_button_center_screen_location_y '620.0px'
+    const v2, 0x7f0708c0    # @dimen/physical_power_button_center_screen_location_y '620.0px'
 
     .line 15
     if-ne v0, v1, :cond_0

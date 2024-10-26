@@ -1,6 +1,6 @@
 .class public Lcom/google/android/systemui/smartspace/BcSmartspaceCardFlight;
 .super Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -35,7 +35,7 @@
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b0311    # @id/flight_qr_code
+    const v0, 0x7f0a032d    # @id/flight_qr_code
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -101,7 +101,7 @@
     const/4 p2, 0x0
 
     .line 14
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
     .line 15
     const-string p3, "qrCodeBitmap"
@@ -113,61 +113,56 @@
     move-result v0
 
     .line 22
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_2
 
     .line 23
-    goto :goto_2
-
-    .line 25
-    :cond_1
     invoke-virtual {p1, p3}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 26
+    .line 25
     move-result-object p1
 
-    .line 29
+    .line 28
     check-cast p1, Landroid/graphics/Bitmap;
 
-    .line 30
+    .line 29
     iget-object p3, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardFlight;->mQrCodeView:Landroid/widget/ImageView;
 
-    .line 32
-    if-nez p3, :cond_2
+    .line 31
+    if-nez p3, :cond_1
 
-    .line 34
+    .line 33
     const-string p1, "BcSmartspaceCardFlight"
 
-    .line 36
+    .line 35
     const-string p3, "No flight QR code view to update"
 
-    .line 38
+    .line 37
     invoke-static {p1, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
+    .line 39
     goto :goto_1
 
-    .line 43
-    :cond_2
+    .line 42
+    :cond_1
     invoke-virtual {p3, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 44
+    .line 43
     :goto_1
     iget-object p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardFlight;->mQrCodeView:Landroid/widget/ImageView;
 
-    .line 47
+    .line 46
     invoke-static {p0, p2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
-    .line 49
+    .line 48
     const/4 p0, 0x1
 
-    .line 52
+    .line 51
     return p0
 
-    .line 53
-    :cond_3
-    :goto_2
+    .line 52
+    :cond_2
     return p2
-    .line 54
+    .line 53
 .end method
 
 .method public final setTextColor(I)V

@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/compose/animation/Easings;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -33,81 +33,63 @@
     invoke-direct {v1, v0}, Lcom/android/compose/animation/Easings$fromInterpolator$1;-><init>(Landroidx/core/animation/Interpolator;)V
 
     .line 6
-    sput-object v1, Lcom/android/compose/animation/Easings;->Standard:Lcom/android/compose/animation/Easings$fromInterpolator$1;
-
-    .line 9
     sget-object v0, Lcom/android/app/animation/InterpolatorsAndroidX;->STANDARD_ACCELERATE:Landroidx/core/animation/PathInterpolator;
 
-    .line 11
+    .line 9
     new-instance v1, Lcom/android/compose/animation/Easings$fromInterpolator$1;
+
+    .line 11
+    invoke-direct {v1, v0}, Lcom/android/compose/animation/Easings$fromInterpolator$1;-><init>(Landroidx/core/animation/Interpolator;)V
 
     .line 13
-    invoke-direct {v1, v0}, Lcom/android/compose/animation/Easings$fromInterpolator$1;-><init>(Landroidx/core/animation/Interpolator;)V
-
-    .line 15
-    sput-object v1, Lcom/android/compose/animation/Easings;->StandardAccelerate:Lcom/android/compose/animation/Easings$fromInterpolator$1;
-
-    .line 18
     sget-object v0, Lcom/android/app/animation/InterpolatorsAndroidX;->STANDARD_DECELERATE:Landroidx/core/animation/PathInterpolator;
 
-    .line 20
+    .line 16
     new-instance v1, Lcom/android/compose/animation/Easings$fromInterpolator$1;
 
-    .line 22
+    .line 18
     invoke-direct {v1, v0}, Lcom/android/compose/animation/Easings$fromInterpolator$1;-><init>(Landroidx/core/animation/Interpolator;)V
 
-    .line 24
-    sput-object v1, Lcom/android/compose/animation/Easings;->StandardDecelerate:Lcom/android/compose/animation/Easings$fromInterpolator$1;
-
-    .line 27
+    .line 20
     sget-object v0, Lcom/android/app/animation/InterpolatorsAndroidX;->EMPHASIZED:Landroidx/core/animation/PathInterpolator;
 
-    .line 29
+    .line 23
     new-instance v1, Lcom/android/compose/animation/Easings$fromInterpolator$1;
 
-    .line 31
+    .line 25
     invoke-direct {v1, v0}, Lcom/android/compose/animation/Easings$fromInterpolator$1;-><init>(Landroidx/core/animation/Interpolator;)V
 
-    .line 33
+    .line 27
     sput-object v1, Lcom/android/compose/animation/Easings;->Emphasized:Lcom/android/compose/animation/Easings$fromInterpolator$1;
 
-    .line 36
+    .line 30
     sget-object v0, Lcom/android/app/animation/InterpolatorsAndroidX;->LINEAR:Landroidx/core/animation/LinearInterpolator;
 
-    .line 38
+    .line 32
     new-instance v1, Lcom/android/compose/animation/Easings$fromInterpolator$1;
 
-    .line 40
+    .line 34
     invoke-direct {v1, v0}, Lcom/android/compose/animation/Easings$fromInterpolator$1;-><init>(Landroidx/core/animation/Interpolator;)V
 
-    .line 42
-    sput-object v1, Lcom/android/compose/animation/Easings;->Linear:Lcom/android/compose/animation/Easings$fromInterpolator$1;
-
-    .line 45
+    .line 36
     sget-object v0, Lcom/android/app/animation/InterpolatorsAndroidX;->LEGACY:Landroidx/core/animation/PathInterpolator;
 
-    .line 47
+    .line 39
     new-instance v1, Lcom/android/compose/animation/Easings$fromInterpolator$1;
 
-    .line 49
+    .line 41
     invoke-direct {v1, v0}, Lcom/android/compose/animation/Easings$fromInterpolator$1;-><init>(Landroidx/core/animation/Interpolator;)V
 
-    .line 51
-    sput-object v1, Lcom/android/compose/animation/Easings;->Legacy:Lcom/android/compose/animation/Easings$fromInterpolator$1;
-
-    .line 54
+    .line 43
     sget-object v0, Lcom/android/app/animation/InterpolatorsAndroidX;->LEGACY_DECELERATE:Landroidx/core/animation/PathInterpolator;
 
-    .line 56
+    .line 46
     new-instance v1, Lcom/android/compose/animation/Easings$fromInterpolator$1;
 
-    .line 58
+    .line 48
     invoke-direct {v1, v0}, Lcom/android/compose/animation/Easings$fromInterpolator$1;-><init>(Landroidx/core/animation/Interpolator;)V
 
-    .line 60
-    sput-object v1, Lcom/android/compose/animation/Easings;->LegacyDecelerate:Lcom/android/compose/animation/Easings$fromInterpolator$1;
-
-    .line 63
+    .line 50
     return-void
-    .line 65
+    .line 53
 .end method

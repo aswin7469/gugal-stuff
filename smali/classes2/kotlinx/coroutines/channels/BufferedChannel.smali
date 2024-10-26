@@ -1,6 +1,6 @@
 .class public Lkotlinx/coroutines/channels/BufferedChannel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/channels/Channel;
@@ -230,7 +230,7 @@
     const-string p2, ", should be >=0"
 
     .line 130
-    invoke-static {p0, p2, p1}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p0, p2, p1}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 132
     move-result-object p0
@@ -3814,7 +3814,7 @@
     const-string p0, "unexpected close status: "
 
     .line 235
-    invoke-static {v0, p0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 237
     move-result-object p0
@@ -5435,7 +5435,6 @@
 
     .line 285
     throw p0
-    .line 288
 .end method
 
 .method public final resumeWaiterOnClosedChannel(Lkotlinx/coroutines/Waiter;Z)V

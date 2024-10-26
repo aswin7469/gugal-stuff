@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">đặt tiện ích đã chọn vào vị trí</string>
   <string name="accessibility_action_label_remove_widget">xoá tiện ích</string>
   <string name="accessibility_action_label_select_widget">chọn tiện ích</string>
-  <string name="accessibility_action_open_communal_hub">Các tiện ích trên màn hình khoá</string>
   <string name="accessibility_action_pip_resize">Đổi kích thước</string>
   <string name="accessibility_action_pip_stash">Ẩn</string>
   <string name="accessibility_action_pip_unstash">Hiện</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Thoát khỏi chế độ một tay</string>
   <string name="accessibility_airplane_mode">Chế độ trên máy bay.</string>
   <string name="accessibility_allow_diagonal_scrolling">Cho phép cuộn chéo</string>
+  <string name="accessibility_assistant_poodle">Tìm kiếm bằng giọng nói</string>
   <string name="accessibility_authenticate_hint">xác thực</string>
   <string name="accessibility_back">Quay lại</string>
   <string name="accessibility_banner_message_dismiss">Đóng</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">truy cập thiết bị</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Đã ngắt kết nối Ethernet.</string>
-  <string name="accessibility_fingerprint_bouncer">Bạn cần phải xác thực. Hãy chạm vào cảm biến vân tay để xác thực.</string>
   <string name="accessibility_fingerprint_label">Cảm biến vân tay</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">bật/tắt</string>
   <string name="accessibility_floating_button_action_edit">Chỉnh sửa</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menu</string>
   <string name="accessibility_multi_user_list_switcher">trình đơn kéo xuống</string>
   <string name="accessibility_multi_user_switch_switcher">Chuyển đổi người dùng</string>
+  <string name="accessibility_next_alarm">Chuông báo tiếp theo lúc %s</string>
   <string name="accessibility_no_calling">Không thể gọi điện.</string>
   <string name="accessibility_no_phone">Không có điện thoại nào.</string>
   <string name="accessibility_no_wifi">Đã ngắt kết nối Wi-Fi.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Màn hình hiện bị khóa theo hướng dọc.</string>
   <string name="accessibility_send_smart_reply">Gửi</string>
   <string name="accessibility_sensors_off_active">Tùy chọn tắt cảm biến đang hoạt động</string>
+  <string name="accessibility_settings_gear">Cài đặt Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Hãy chạm vào cảm biến vân tay. Đó là nút ngắn ở cạnh bên của điện thoại</string>
+  <string name="accessibility_smartspace_page">Trang %1$d/%2$d</string>
   <string name="accessibility_split_bottom">Chia đôi màn hình xuống dưới cùng</string>
   <string name="accessibility_split_left">Chia đôi màn hình về bên trái</string>
   <string name="accessibility_split_right">Chia đôi màn hình về bên phải</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">Tín hiệu Wi-Fi ba vạch.</string>
   <string name="accessibility_wifi_two_bars">Tín hiệu Wi-Fi hai vạch.</string>
   <string name="accesssibility_keyguard_retry">Vuốt lên để thử dùng lại tính năng Mở khoá bằng khuôn mặt</string>
+  <string name="adaptive_charging_notify_des">Đến %1$s pin sẽ đầy. Đang sạc đều đặn để kéo dài thời lượng pin.</string>
+  <string name="adaptive_charging_notify_title">Tính năng Sạc thích ứng đang bật</string>
+  <string name="adaptive_charging_notify_turn_off_once">Tắt một lần</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Đang sạc thích ứng • Đến %2$s pin sẽ đầy</string>
   <string name="add">Thêm</string>
   <string name="add_guest_failed">Không tạo được khách mới</string>
   <string name="airplane_mode">Chế độ trên máy bay</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Thông tin ứng dụng</string>
   <string name="app_label">Giao diện người dùng hệ thống</string>
   <string name="assistant_attention_content_description">Phát hiện thấy người dùng đang hiện diện</string>
+  <string name="assistant_scrim_label">Đang nghe, nhấn để hủy</string>
   <string name="audio_sharing_description">Đang chia sẻ âm thanh</string>
   <string name="audio_status">Đang nghe</string>
   <string name="auto_data_switch_dialog_negative_button">Không, cảm ơn</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Quay lại</string>
   <string name="battery">Pin</string>
   <string name="battery_detail_switch_title">Trình tiết kiệm pin</string>
-  <string name="battery_low_description">Bạn còn %s pin. Trình tiết kiệm pin sẽ bật Giao diện tối, giới hạn hoạt động trong nền và trì hoãn thông báo.</string>
+  <string name="battery_health_notify_learn_more">Tìm hiểu thêm</string>
   <string name="battery_low_intro">Trình tiết kiệm pin sẽ bật Giao diện tối, giới hạn hoạt động trong nền và trì hoãn thông báo.</string>
-  <string name="battery_low_title">Bật Trình tiết kiệm pin?</string>
   <string name="battery_saver_confirmation_ok">Bật</string>
   <string name="battery_saver_confirmation_title">Bật trình tiết kiệm pin?</string>
   <string name="battery_saver_confirmation_title_generic">Giới thiệu về Trình tiết kiệm pin</string>
-  <string name="battery_saver_dismiss_action">Không, cảm ơn</string>
   <string name="battery_saver_start_action">Bật</string>
   <string name="battery_state_unknown_notification_text">Nhấn để biết thêm thông tin</string>
   <string name="battery_state_unknown_notification_title">Đã xảy ra vấn đề khi đọc dung lượng pin của bạn</string>
@@ -296,14 +301,9 @@ Hãy thử lại sau %d giây.</string>
   <string name="bluetooth_active_battery_level_untethered">Đang hoạt động. Bên trái: Còn %1$s pin. Bên phải: Còn %2$s pin.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Đang hoạt động. Trái: %1$s pin.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Đang hoạt động. Phải: %1$s pin.</string>
-  <string name="bluetooth_active_media_only_battery_level">Đang hoạt động (chỉ phát nội dung đa phương tiện). Còn %1$s pin.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Đang hoạt động (chỉ phát nội dung đa phương tiện). Bên trái: Còn %1$s pin. Bên phải: Còn %2$s pin.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Đang hoạt động (chỉ phát nội dung đa phương tiện)</string>
   <string name="bluetooth_active_no_battery_level">Đang hoạt động</string>
   <string name="bluetooth_battery_level">Mức pin %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Đã kết nối (có hỗ trợ tính năng chia sẻ âm thanh). Còn %1$s pin.</string>
   <string name="bluetooth_battery_level_untethered">Bên trái: Còn %1$s pin. Bên phải: Còn %2$s pin.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Đã kết nối (có hỗ trợ tính năng chia sẻ âm thanh). Bên trái: Còn %1$s pin. Bên phải: Còn %2$s pin.</string>
   <string name="bluetooth_connected">Đã kết nối %1$s</string>
   <string name="bluetooth_connecting">Đang kết nối…</string>
   <string name="bluetooth_disconnected">Đã ngắt kết nối</string>
@@ -311,13 +311,11 @@ Hãy thử lại sau %d giây.</string>
   <string name="bluetooth_hearing_aid_left_active">Đang hoạt động (chỉ tai trái)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Đang hoạt động (cả tai phải và tai trái)</string>
   <string name="bluetooth_hearing_aid_right_active">Đang hoạt động (chỉ tai phải)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Đã kết nối (có hỗ trợ tính năng chia sẻ âm thanh).</string>
   <string name="bluetooth_pairing">Đang ghép nối…</string>
   <string name="bluetooth_pairing_device_down_error_message">Không thể kết nối với %1$s.</string>
   <string name="bluetooth_pairing_error_message">Không thể ghép nối với %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Không thể ghép nối với %1$s do mã PIN hoặc mã truy cập không đúng.</string>
   <string name="bluetooth_pairing_rejected_error_message">Ghép nối bị %1$s từ chối.</string>
-  <string name="bluetooth_saved_device_lea_support">Hỗ trợ tính năng chia sẻ âm thanh</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Máy tính</string>
   <string name="bluetooth_talkback_headphone">Tai nghe</string>
@@ -356,8 +354,6 @@ Hãy thử lại sau %d giây.</string>
   <string name="bubble_overflow_button_content_description">Trình đơn mục bổ sung</string>
   <string name="bubble_overflow_empty_subtitle">Bong bóng trò chuyện đã đóng và bong bóng trò chuyện gần đây sẽ xuất hiện ở đây</string>
   <string name="bubble_overflow_empty_title">Không có bong bóng trò chuyện nào gần đây</string>
-  <string name="bubble_shortcut_label">Bong bóng</string>
-  <string name="bubble_shortcut_long_label">Hiện bong bóng</string>
   <string name="bubbles_app_settings">Cài đặt %1$s</string>
   <string name="bubbles_dont_bubble_conversation">Dừng sử dụng bong bóng cho cuộc trò chuyện</string>
   <string name="bubbles_settings_button_description">Tùy chọn cài đặt cho bong bóng trò chuyện %1$s</string>
@@ -387,6 +383,10 @@ Hãy nhấn để sửa lỗi</string>
   <string name="cast_to_other_device_stop_dialog_button">Dừng truyền</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Bạn sẽ dừng truyền nội dung của &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">Đã tắt dữ liệu di động</string>
+  <string name="charge_limit_discovery_notification_enable_button">Bật ngay</string>
+  <string name="charge_limit_discovery_notification_text">Hãy thử bật tính năng giới hạn ở mức 80% để bảo vệ tình trạng và tuổi thọ của pin. Bạn có thể quản lý tính năng này trong phần Cài đặt bất cứ lúc nào.</string>
+  <string name="charge_limit_discovery_notification_title">Bảo vệ pin của bạn trong quá trình sạc</string>
+  <string name="charging_reverse_text">Chia sẻ pin</string>
   <string name="clear_all_notifications_text">Xóa tất cả</string>
   <string name="clipboard">Bảng nhớ tạm</string>
   <string name="clipboard_content_copied">Đã sao chép nội dung</string>
@@ -406,6 +406,11 @@ Hãy nhấn để sửa lỗi</string>
   <string name="close_button_text">Đóng</string>
   <string name="close_dialog_button">Đóng</string>
   <string name="collapse_menu_text">Đóng trình đơn</string>
+  <string name="columbus_bouncer_message">Mở khóa để hoàn tất thao tác Chạm nhanh</string>
+  <string name="columbus_target_request_dialog_allow">Cho phép</string>
+  <string name="columbus_target_request_dialog_deny">Không cho phép</string>
+  <string name="columbus_target_request_dialog_summary">Nhấn hai lần vào mặt sau của điện thoại để mở %1$s. Bạn có thể thay đổi tùy chọn này bất kỳ lúc nào trong phần Cài đặt.</string>
+  <string name="columbus_target_request_dialog_title">Cho phép cử chỉ Chạm nhanh mở %1$s?</string>
   <string name="communal_tutorial_indicator_text">Vuốt sang trái để bắt đầu xem hướng dẫn chung</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Màn hình trong của bạn sẽ được phản chiếu. Màn hình ngoài của bạn sẽ tắt.</string>
   <string name="connected_display_dialog_start_mirroring">Phản chiếu sang màn hình ngoài?</string>
@@ -511,8 +516,11 @@ Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu.</st
   <string name="data_usage_disabled_dialog_mobile_title">Dữ liệu di động đã bị tạm dừng</string>
   <string name="data_usage_disabled_dialog_title">Đã tạm dừng dữ liệu</string>
   <string name="days_timestamp">%1$s ngày trước</string>
-  <string name="default_error_message">Giá trị nhập không hợp lệ</string>
   <string name="default_popup_window_title">Cửa sổ bật lên</string>
+  <string name="defender_notify_resume_charge">Ghi đè</string>
+  <string name="defender_notify_title">Bảo vệ pin</string>
+  <string name="defender_post_notify_des">Để giúp kéo dài tuổi thọ pin, quá trình sạc đã được tối ưu hoá cho khoảng thời gian từ %1$s đến %2$s</string>
+  <string name="defender_post_notify_title">Đã tối ưu hoá quá trình sạc</string>
   <string name="demo_mode">Chế độ thử nghiệm giao diện người dùng hệ thống</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Mở rộng màn hình</string>
   <string name="desktop_mode_maximize_menu_snap_text">Điều chỉnh kích thước màn hình</string>
@@ -532,20 +540,32 @@ Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu.</st
   <string name="do_disclosure_generic">Thiết bị này thuộc về tổ chức của bạn</string>
   <string name="do_disclosure_with_name">Thiết bị này thuộc về %s</string>
   <string name="do_financed_disclosure_with_name">Thiết bị này do %s cung cấp</string>
+  <string name="dock_a11y_action_show_photo_text">Hiển thị khung ảnh</string>
+  <string name="dock_alignment_not_charging">Điều chỉnh lại vị trí điện thoại để sạc không dây</string>
+  <string name="dock_alignment_slow_charging">Điều chỉnh lại vị trí điện thoại để sạc nhanh hơn</string>
+  <string name="dock_defender_first_run_des">Để giúp kéo dài thời lượng pin, khi được gắn vào đế sạc thì máy tính bảng sẽ sạc đến 90% rồi tạm ngưng. Chuyển đến phần Cài đặt bất cứ lúc nào để ghi đè.</string>
+  <string name="dock_defender_first_run_settings">Cài đặt</string>
+  <string name="dock_defender_first_run_title">Đang tạm ngưng sạc để bảo vệ pin</string>
   <string name="dock_multi_instances_not_supported_text">Ứng dụng này chỉ có thể mở trong 1 cửa sổ</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Ứng dụng không hỗ trợ chế độ chia đôi màn hình</string>
+  <string name="dock_photo_preview_text">Đang mở tính năng Khung ảnh...</string>
+  <string name="dock_promo_text">Vuốt sang trái để mở khung ảnh</string>
   <string name="done">Xong</string>
   <string name="drag_split_not_supported">Thông báo này không hỗ trợ thao tác kéo để chia đôi màn hình</string>
   <string name="drag_to_add_tiles">Giữ và kéo để thêm ô</string>
   <string name="drag_to_rearrange_tiles">Giữ và kéo để sắp xếp lại các ô</string>
   <string name="drag_to_remove_disabled">Bạn cần ít nhất %1$d ô</string>
   <string name="drag_to_remove_tiles">Kéo vào đây để xóa</string>
+  <string name="dream_lockscreen_wallpaper_description">Dùng hình nền màn hình khoá hiện tại</string>
+  <string name="dream_lockscreen_wallpaper_label">Hình nền</string>
   <string name="dream_overlay_status_bar_alarm_set">Đã đặt chuông báo</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Máy ảnh và micrô đang tắt</string>
   <string name="dream_overlay_status_bar_camera_off">Camera đang tắt</string>
   <string name="dream_overlay_status_bar_mic_off">Micrô đã bị tắt</string>
   <string name="dream_overlay_status_bar_priority_mode">Chế độ ưu tiên</string>
   <string name="dream_overlay_status_bar_wifi_off">Không có Wi‑Fi</string>
+  <string name="dwell_defender_notify_des">Tính năng này giúp kéo dài thời lượng pin khi bạn sạc điện thoại quá lâu</string>
+  <string name="dwell_defender_notify_title">Đang tạm ngưng sạc để bảo vệ pin</string>
   <string name="edit_user_info_message">Bất kỳ ai dùng thiết bị này đều sẽ nhìn thấy tên và hình ảnh bạn chọn.</string>
   <string name="edit_widget">Chỉnh sửa tiện ích</string>
   <string name="empty_shade_text">Không có thông báo nào</string>
@@ -561,13 +581,17 @@ Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu.</st
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Nâng cao</string>
   <string name="expand_menu_text">Mở Trình đơn</string>
+  <string name="extreme_battery_saver_text">Siêu tiết kiệm</string>
+  <string name="extreme_low_battery_notification_text">Điện thoại của bạn sẽ tắt nếu không được sạc sớm</string>
+  <string name="extreme_low_battery_notification_title">Pin rất yếu</string>
   <string name="face_re_enroll_dialog_content">Để thiết lập lại tính năng Mở khoá bằng khuôn mặt, hệ thống sẽ xoá mẫu khuôn mặt bạn đang dùng.
 
 Bạn sẽ cần thiết lập lại tính năng này để mở khoá điện thoại bằng khuôn mặt.</string>
   <string name="face_re_enroll_dialog_title">Thiết lập tính năng Mở khoá bằng khuôn mặt</string>
   <string name="face_re_enroll_notification_name">Mở khoá bằng khuôn mặt</string>
   <string name="face_re_enroll_notification_title">Thiết lập lại tính năng Mở khoá bằng khuôn mặt</string>
-  <string name="face_reenroll_failure_dialog_content">Không thiết lập được tính năng Mở khoá bằng khuôn mặt. Hãy chuyển đến phần Cài đặt để thử lại.</string>
+  <string name="face_reenroll_dialog_confirm">Thiết lập</string>
+  <string name="face_reenroll_failure_dialog_content">Không thể thiết lập tính năng mở khóa bằng khuôn mặt. Hãy chuyển đến phần Cài đặt để thử lại.</string>
   <string name="failed_attempts_now_wiping_device">Quá nhiều lần thử không chính xác. Dữ liệu trên thiết bị này sẽ bị xoá.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Đóng</string>
   <string name="failed_attempts_now_wiping_profile">Quá nhiều lần thử không chính xác. Hồ sơ công việc này và dữ liệu của hồ sơ công việc sẽ bị xoá.</string>
@@ -604,6 +628,7 @@ Sau khi chúng bị xoá, bạn sẽ cần thiết lập lại tính năng Mở 
   <string name="font_scaling_smaller">Thu nhỏ</string>
   <string name="fullscreen_text">Toàn màn hình</string>
   <string name="game_status">Đang chơi</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Đã tắt tính năng Kéo dài trạng thái mở khoá</string>
   <string name="go_to_web">Đi tới trình duyệt</string>
   <string name="got_it">OK</string>
@@ -640,6 +665,7 @@ Sau khi chúng bị xoá, bạn sẽ cần thiết lập lại tính năng Mở 
   <string name="guest_reset_and_restart_dialog_title">Đặt lại phiên khách?</string>
   <string name="guest_reset_guest_confirm_button">Đặt lại</string>
   <string name="guest_resetting">Đang đặt lại phiên khách…</string>
+  <string name="handle_invocation_prompt">Vuốt để trò chuyện</string>
   <string name="handle_text">Xử lý</string>
   <string name="headset">Tai nghe</string>
   <string name="hearing_devices_preset_label">Chế độ đặt sẵn</string>
@@ -656,6 +682,7 @@ Hãy nhấn để biết thêm thông tin</string>
   <string name="high_temp_title">Điện thoại đang nóng lên</string>
   <string name="home_controls_dream_description">Điều khiển nhà nhanh bằng trình bảo vệ màn hình</string>
   <string name="home_controls_dream_label">Điều khiển nhà</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Ít nhất phải có một thiết bị hoặc bảng điều khiển thiết bị</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Để tạo lối tắt cho ứng dụng Home, hãy đảm bảo bạn đã cài đặt ứng dụng đó</string>
   <string name="hub_mode_add_widget_button_text">Thêm tiện ích</string>
@@ -669,12 +696,16 @@ Hãy nhấn để biết thêm thông tin</string>
   <string name="in_progress">Đang thực hiện</string>
   <string name="inattentive_sleep_warning_message">Thiết bị sắp tắt. Hãy nhấn vào một nút để duy trì trạng thái bật.</string>
   <string name="inattentive_sleep_warning_title">Chế độ chờ</string>
+  <string name="incompatible_charging_learn_more">Tìm hiểu thêm</string>
+  <string name="incompatible_charging_notify_des">Điện thoại của bạn có thể sạc chậm hoặc không sạc được. Để sạc nhanh hơn, hãy dùng bộ sạc và cáp sạc được đề xuất.</string>
+  <string name="incompatible_charging_notify_title">Hãy kiểm tra phụ kiện dùng để sạc</string>
   <string name="indeterminate">Đã kiểm tra một phần</string>
   <string name="inline_done_button">Xong</string>
   <string name="inline_ok_button">Áp dụng</string>
   <string name="inline_turn_off_notifications">Tắt thông báo</string>
   <string name="input_switch_input_language_next">Chuyển sang ngôn ngữ tiếp theo</string>
   <string name="input_switch_input_language_previous">Chuyển về ngôn ngữ trước</string>
+  <string name="install_app">Cài đặt ứng dụng</string>
   <string name="install_dialer_on_work_profile_action">Cài đặt ứng dụng điện thoại cho công việc</string>
   <string name="install_type_instant">Ứng dụng tức thì</string>
   <string name="instant_apps">Ứng dụng tức thì</string>
@@ -683,8 +714,6 @@ Hãy nhấn để biết thêm thông tin</string>
   <string name="instant_apps_title">%1$s đang chạy</string>
   <string name="interruption_level_none">Hoàn toàn tắt tiếng</string>
   <string name="interruption_level_priority">Chỉ cho các mục ưu tiên</string>
-  <string name="invalid_charger_text">Sử dụng bộ sạc đi kèm với thiết bị</string>
-  <string name="invalid_charger_title">Không thể sạc qua USB</string>
   <string name="issuerecord_background_processing_label">Đang xử lý bản ghi sự cố</string>
   <string name="issuerecord_ongoing_screen_only">Ghi sự cố</string>
   <string name="issuerecord_save_title">Đã lưu bản ghi sự cố</string>
@@ -766,21 +795,33 @@ Hãy nhấn để biết thêm thông tin</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Thiết bị đã bị khoá
 Không xác thực được</string>
   <string name="keyguard_indication_charging_time">%2$s • Đang sạc • Sẽ đầy sau %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Đến %1$s sẽ sạc xong</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Đang sạc • Sẽ đầy sau %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Đến %1$s pin sẽ đầy</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Đang sạc nhanh • Sẽ đầy sau %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Đang sạc nhanh • Đến %1$s pin sẽ đầy</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Sạc xong</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Đang sạc chậm • Sẽ đầy sau %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Đến %1$s pin sẽ đầy</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Đến %1$s pin sẽ đầy</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Đang sạc không dây • Sẽ đầy sau %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Luôn được TrustAgent mở khóa</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Đến %1$s pin sẽ đầy</string>
+  <string name="keyguard_indication_trust_unlocked">Tiếp tục mở khoá bằng chế độ Kéo dài trạng thái mở khoá</string>
   <string name="keyguard_missing_sim_message_short">Không có SIM</string>
   <string name="keyguard_network_locked_message">Mạng đã bị khóa</string>
   <string name="keyguard_permanent_disabled_sim_message_short">SIM không sử dụng được.</string>
   <string name="keyguard_plugged_in">%s • Đang sạc</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Đang sạc nhanh</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Đang sạc nhanh</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Đang tạm ngưng sạc để bảo vệ pin</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Đang sạc chậm</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Đang sạc</string>
   <string name="keyguard_plugged_in_dock">%s • Đang sạc</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Đang sạc</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Hãy kiểm tra phụ kiện sạc</string>
+  <string name="keyguard_plugged_in_v2">%s • Đang sạc</string>
   <string name="keyguard_plugged_in_wireless">%s • Đang sạc không dây</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Đang sạc</string>
   <string name="keyguard_retry">Vuốt lên để thử lại</string>
   <string name="keyguard_sim_error_message_short">Thẻ không hợp lệ.</string>
   <string name="keyguard_sim_locked_message">SIM này đang bị khoá.</string>
@@ -811,7 +852,6 @@ Không xác thực được</string>
   <string name="kg_invalid_confirm_pin_hint">Mã PIN không khớp</string>
   <string name="kg_invalid_sim_pin_hint">Nhập mã PIN có từ 4 đến 8 số.</string>
   <string name="kg_invalid_sim_puk_hint">Mã PUK phải có từ 8 số trở lên.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Hãy nhập mã PIN của SIM. Bạn còn # lần thử trước khi phải liên hệ với nhà cung cấp dịch vụ để mở khóa thiết bị của mình.}other{Nhập mã PIN của SIM. Bạn còn # lần thử.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM hiện đã bị tắt. Hãy nhập mã PUK để tiếp tục. Bạn còn # lần thử trước khi SIM vĩnh viễn không thể sử dụng được. Hãy liên hệ với nhà cung cấp dịch vụ để biết thông tin chi tiết.}other{SIM hiện đã bị tắt. Hãy nhập mã PUK để tiếp tục. Bạn còn # lần thử trước khi SIM vĩnh viễn không thể sử dụng được. Hãy liên hệ với nhà cung cấp dịch vụ để biết thông tin chi tiết.}}</string>
   <string name="kg_password_pin_failed">Thao tác mã PIN của SIM không thành công!</string>
   <string name="kg_password_puk_failed">Thao tác mã PUK của SIM không thành công!</string>
@@ -852,7 +892,7 @@ Không xác thực được</string>
   <string name="kg_sim_pin_instructions_multi">Nhập mã PIN của SIM dành cho "%1$s".</string>
   <string name="kg_sim_unlock_progress_dialog_message">Đang mở khoá SIM…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Hãy thử lại sau # giây.}other{Hãy thử lại sau # giây.}}</string>
-  <string name="kg_trust_agent_disabled">Không dùng được tác nhân tin cậy</string>
+  <string name="kg_trust_agent_disabled">Không dùng được tính năng Kéo dài trạng thái mở khoá</string>
   <string name="kg_unlock_with_password_or_fp">Mở khoá bằng mật khẩu hoặc vân tay</string>
   <string name="kg_unlock_with_pattern_or_fp">Mở khoá bằng hình mở khoá hoặc vân tay</string>
   <string name="kg_unlock_with_pin_or_fp">Mở khoá bằng mã PIN hoặc vân tay</string>
@@ -900,6 +940,10 @@ Nếu bạn không cho phép ứng dụng này truy cập vào mọi nhật ký 
   <string name="log_access_confirmation_learn_more">Tìm hiểu thêm</string>
   <string name="log_access_confirmation_learn_more_at">Tìm hiểu thêm tại %s</string>
   <string name="log_access_confirmation_title">Cho phép %s truy cập vào mọi nhật ký thiết bị?</string>
+  <string name="low_battery_label">Pin yếu</string>
+  <string name="low_battery_notification_text">Bật Trình tiết kiệm pin thông thường để kéo dài thời lượng pin</string>
+  <string name="low_battery_notification_text_ebs">Bật Trình siêu tiết kiệm pin để kéo dài thời lượng pin</string>
+  <string name="low_battery_notification_title">Còn %s pin</string>
   <string name="m3c_search_bar_search">Tìm kiếm</string>
   <string name="m3c_suggestions_available">Các đề xuất ở bên dưới</string>
   <string name="magnification_close_settings_click_label">Đóng bảng cài đặt tính năng phóng to</string>
@@ -939,8 +983,6 @@ Nếu bạn không cho phép ứng dụng này truy cập vào mọi nhật ký 
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Dừng</string>
   <string name="media_output_end_session_dialog_summary">Dừng phiên chia sẻ của bạn để chuyển nội dung nghe nhìn sang thiết bị khác</string>
-  <string name="media_output_first_broadcast_title">Cách tính năng truyền hoạt động</string>
-  <string name="media_output_first_notify_broadcast_message">Những người ở gần có thiết bị Bluetooth tương thích có thể nghe nội dung nghe nhìn bạn đang truyền</string>
   <string name="media_output_group_title_speakers_and_displays">Loa và màn hình</string>
   <string name="media_output_group_title_suggested_device">Thiết bị được đề xuất</string>
   <string name="media_output_label_title">Đang phát %s trên</string>
@@ -967,9 +1009,6 @@ Nếu bạn không cho phép ứng dụng này truy cập vào mọi nhật ký 
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Khi bạn truyền một ứng dụng, Android sẽ có quyền truy cập vào mọi nội dung xuất hiện hoặc phát trên ứng dụng đó. Vì vậy, hãy thận trọng để không làm lộ các thông tin như mật khẩu, thông tin thanh toán, tin nhắn, ảnh, âm thanh và video.</string>
   <string name="media_projection_sys_service_dialog_title">Bắt đầu ghi hoặc truyền?</string>
   <string name="media_projection_sys_service_dialog_warning">Dịch vụ cung cấp chức năng này có quyền truy cập vào tất cả thông tin xuất hiện trên màn hình của bạn hoặc phát trên thiết bị của bạn trong khi ghi hoặc truyền, bao gồm cả thông tin như mật khẩu, thông tin thanh toán, ảnh, tin nhắn và âm thanh mà bạn phát.</string>
-  <string name="media_projection_task_switcher_action_back">Chuyển trở lại</string>
-  <string name="media_projection_task_switcher_action_switch">Chia sẻ ứng dụng này</string>
-  <string name="media_projection_task_switcher_text">Quá trình chia sẻ sẽ tạm dừng khi bạn chuyển đổi ứng dụng</string>
   <string name="media_seamless_other_device">Thiết bị khác</string>
   <string name="media_transfer_default_device_name">Thiết bị đã kết nối</string>
   <string name="media_transfer_dock_speaker_device_name">Loa có gắn đế</string>
@@ -1138,7 +1177,7 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
   <string name="pip_skip_to_prev">Chuyển về mục trước</string>
   <string name="popup_on_dismiss_cta_tile_text">Nhấn và giữ để tuỳ chỉnh tiện ích</string>
   <string name="power_discharge_by_only_short">Cho đến %1$s</string>
-  <string name="preference_summary_default_combination">%1$s/%2$s</string>
+  <string name="preference_summary_default_combination">%1$s / %2$s</string>
   <string name="priority_conversations">Cuộc trò chuyện ưu tiên</string>
   <string name="priority_mode_dream_overlay_content_description">Không làm phiền</string>
   <string name="privacy_dialog_active_app_usage">%1$s đang dùng</string>
@@ -1280,12 +1319,17 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Để có độ phân giải cao hơn, hãy lật điện thoại</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Chuyển đổi màn hình?</string>
   <string name="recent_conversations">Cuộc trò chuyện gần đây</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">đã gửi hình ảnh</string>
   <string name="remove_from_settings">Xóa khỏi Cài đặt</string>
   <string name="remove_from_settings_prompt">Xóa Bộ điều hướng giao diện người dùng hệ thống khỏi Cài đặt và ngừng sử dụng tất cả tính năng của ứng dụng này?</string>
   <string name="require_unlock_for_nfc">Mở khóa để sử dụng NFC</string>
   <string name="restart_button_description">Nhấn nút khởi động lại ứng dụng này để xem dễ hơn</string>
   <string name="retry_face">Thử xác thực lại khuôn mặt</string>
+  <string name="reverse_charging_device_name_text">Thiết bị Pixel phía bên kia</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s đang chia sẻ pin (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Tính năng Chia sẻ pin đang bật</string>
+  <string name="reverse_charging_title">Chia sẻ pin</string>
   <string name="right_icon">Biểu tượng bên phải</string>
   <string name="right_keycode">Mã phím bên phải</string>
   <string name="right_nav_bar_button_type">Loại nút bổ sung bên phải</string>
@@ -1293,8 +1337,15 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">Nhấn để biết chi tiết về mức sử dụng dữ liệu và pin</string>
   <string name="running_foreground_services_title">Ứng dụng đang chạy trong nền</string>
-  <string name="satellite_connected_carrier_text">Liên lạc khẩn cấp qua vệ tinh</string>
+  <string name="satellite_connected_carrier_text">Liên lạc khẩn cấp qua vệ tinh trên Pixel</string>
   <string name="save">Lưu</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Huỷ</string>
+  <string name="saver_confirmation_dialog_subtitle">Chọn chế độ để sử dụng</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Chế độ này sẽ thực hiện mọi thay đổi nêu trên. Đồng thời tạm dừng các ứng dụng không thiết yếu và thông báo của những ứng dụng đó.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Giới hạn hiệu ứng hình ảnh và hoạt động ở chế độ nền. Bật Giao diện tối nếu chưa bật.</string>
+  <string name="saver_confirmation_dialog_title">Chào mừng bạn đến với Trình tiết kiệm pin</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Trình siêu tiết kiệm pin</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Trình tiết kiệm pin tiêu chuẩn</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Tính năng chụp ảnh màn hình đã bị tắt theo chính sách thiết bị</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Bị quản trị viên CNTT chặn</string>
   <string name="screen_pinning_can_open_other_apps">Ứng dụng đã ghim có thể mở các ứng dụng khác.</string>
@@ -1312,6 +1363,12 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
   <string name="screen_pinning_toast">Để bỏ ghim ứng dụng này, hãy chạm và giữ nút Quay lại và nút Tổng quan</string>
   <string name="screen_pinning_toast_gesture_nav">Để bỏ ghim ứng dụng này, hãy vuốt lên và giữ</string>
   <string name="screen_pinning_toast_recents_invisible">Để bỏ ghim ứng dụng này, hãy chạm và giữ nút Quay lại và nút Màn hình chính</string>
+  <string name="screen_protector_absent_message">Việc tắt chế độ này sẽ cải thiện độ nhạy thao tác chạm khi không dùng miếng bảo vệ màn hình.</string>
+  <string name="screen_protector_disable_notification">Tắt thông báo</string>
+  <string name="screen_protector_go_to_settings">Chuyển đến phần cài đặt</string>
+  <string name="screen_protector_got_it">Tôi hiểu</string>
+  <string name="screen_protector_mode_title">Chế độ miếng bảo vệ màn hình</string>
+  <string name="screen_protector_present_message">Việc bật chế độ này sẽ cải thiện độ nhạy của thao tác chạm khi dùng miếng bảo vệ màn hình.</string>
   <string name="screen_share_permission_app_selector_title">Chia sẻ hoặc ghi màn hình ứng dụng</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Toàn màn hình</string>
   <string name="screen_share_permission_dialog_option_single_app">Một ứng dụng</string>
@@ -1364,9 +1421,9 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
   <string name="screenshot_saving_work_profile_title">Đang lưu ảnh chụp màn hình vào hồ sơ công việc…</string>
   <string name="screenshot_scroll_label">Chụp thêm</string>
   <string name="screenshot_share_description">Chia sẻ ảnh chụp màn hình</string>
-  <string name="screenshot_share_label">Chia sẻ</string>
   <string name="screenshot_text">Ảnh chụp màn hình</string>
   <string name="screenshot_top_boundary_pct">Cạnh trên cùng %1$d%%</string>
+  <string name="screenshot_view_description">Xem ảnh chụp màn hình</string>
   <string name="screenshot_work_profile_notification">Đã lưu vào %1$s trong hồ sơ công việc</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Cảm biến vân tay nằm trên nút nguồn. Đó là nút phẳng cạnh nút âm lượng nhô lên trên cạnh của điện thoại.</string>
   <string name="see_all_bluetooth_devices">Xem tất cả</string>
@@ -1384,6 +1441,12 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
   <string name="set_default_notes_app_toast_content">Đặt ứng dụng ghi chú mặc định trong phần Cài đặt</string>
   <string name="settings_label">Cài đặt</string>
   <string name="settingslib_learn_more_text">Tìm hiểu thêm</string>
+  <string name="severe_battery_notification_switch_text">Chuyển sang Trình siêu tiết kiệm pin? 
+
+Tính năng này sẽ tạm dừng mọi ứng dụng không thiết yếu cùng các thông báo tương ứng</string>
+  <string name="severe_battery_notification_text">Hãy bật Trình siêu tiết kiệm pin. Tính năng này sẽ tạm dừng mọi ứng dụng không thiết yếu</string>
+  <string name="severe_battery_notification_title">Còn %s pin</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Chuyển</string>
   <string name="share_to_app_stop_dialog_button">Dừng chia sẻ</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Bạn sẽ dừng chia sẻ nội dung của &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Dừng chia sẻ màn hình?</string>
@@ -1406,6 +1469,9 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
   <string name="slice_permission_text_1">- Có thể đọc thông tin từ %1$s</string>
   <string name="slice_permission_text_2">- Có thể thực hiện hành động bên trong %1$s</string>
   <string name="slice_permission_title">Cho phép %1$s hiển thị các lát của %2$s?</string>
+  <string name="smartspace_content_desc">Xem nhanh</string>
+  <string name="smartspace_flight_qr_code">Mã QR</string>
+  <string name="smartspace_role_desc">Xem</string>
   <string name="snoozeHourOptions">{count,plural, =1{# giờ}=2{# giờ}other{# giờ}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# phút}other{# phút}}</string>
   <string name="snooze_undo">Hủy</string>
@@ -1416,6 +1482,8 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
   <string name="speed_label_slow">Chậm</string>
   <string name="speed_label_very_fast">Rất nhanh</string>
   <string name="split_screen_text">Chia đôi màn hình</string>
+  <string name="squeeze_invocation_prompt">Bóp vào hai cạnh để trò chuyện</string>
+  <string name="standard_battery_saver_text">Tiêu chuẩn</string>
   <string name="start_dreams">Trình bảo vệ m.hình</string>
   <string name="state_empty">Trống</string>
   <string name="state_off">Đang tắt</string>
@@ -1453,6 +1521,8 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
   <string name="tab">Thẻ</string>
   <string name="tap_a_network_to_connect">Nhấn vào một mạng để kết nối</string>
   <string name="tap_again">Nhấn lại</string>
+  <string name="temp_defender_notify_des">Quá trình sạc sẽ tiếp tục khi điện thoại của bạn trở lại nhiệt độ bình thường</string>
+  <string name="temp_defender_notify_title">Đang tạm ngưng sạc để bảo vệ pin</string>
   <string name="template_percent">%1$d%%.</string>
   <string name="thermal">Nhiệt</string>
   <string name="thermal_shutdown_dialog_help_text">Xem các bước chăm sóc</string>
@@ -1469,6 +1539,7 @@ Hãy nhấn để biết thêm thông tin</string>
   <string name="title_for_empty_state_cta">Truy cập nhanh vào các tiện ích ứng dụng bạn yêu thích mà không cần mở khoá máy tính bảng.</string>
   <string name="title_usb_accessory">Phụ kiện USB</string>
   <string name="to_switch_networks_disconnect_ethernet">Để chuyển mạng, hãy rút cáp Ethernet</string>
+  <string name="too_hot_label">Điện thoại Pixel quá nóng</string>
   <string name="touch_filtered_warning">Vì ứng dụng đang che khuất yêu cầu cấp quyền nên Cài đặt không thể xác minh câu trả lời của bạn.</string>
   <string name="touchpad_tutorial_action_key_button">Phím hành động</string>
   <string name="touchpad_tutorial_back_gesture_button">Cử chỉ quay lại</string>
@@ -1483,17 +1554,18 @@ Hãy nhấn để biết thêm thông tin</string>
   <string name="tuner_menu">Menu</string>
   <string name="tuner_minus">Dấu trừ</string>
   <string name="tuner_other_apps">Ứng dụng khác</string>
+  <string name="tuner_persistent_warning">Những tính năng thử nghiệm này có thể thay đổi, hỏng hoặc biến mất trong các phiên bản tương lai. Hãy thận trọng khi tiếp tục.</string>
   <string name="tuner_plus">Dấu cộng</string>
   <string name="tuner_right">Bên phải</string>
   <string name="tuner_time">Thời gian</string>
+  <string name="tuner_warning">Bộ điều hướng giao diện người dùng hệ thống cung cấp thêm cho bạn những cách chỉnh sửa và tùy chỉnh giao diện người dùng Android. Những tính năng thử nghiệm này có thể thay đổi, hỏng hoặc biến mất trong các phiên bản tương lai. Hãy thận trọng khi tiếp tục.</string>
+  <string name="tuner_warning_title">Thú vị đối với một số người nhưng không phải tất cả</string>
   <string name="turn_off_airplane_mode">Tắt chế độ trên máy bay</string>
   <string name="turn_on_bluetooth">Bật Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Các tính năng như Chia sẻ nhanh và Tìm thiết bị của tôi đều sử dụng Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth sẽ bật vào sáng mai</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Tự động bật vào ngày mai</string>
   <string name="turn_on_wifi">Wi‑Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Chế độ mặc định của TV</string>
   <string name="two_weeks_timestamp">2 tuần trước</string>
   <string name="unknown">Không xác định</string>
   <string name="unlock_to_see_notif_text">Mở khoá để xem thông báo cũ</string>
@@ -1552,7 +1624,9 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
   <string name="volume_odi_captions_hint_enable">bật</string>
   <string name="volume_odi_captions_tip">Tự động tạo phụ đề cho nội dung nghe nhìn</string>
   <string name="volume_panel_captioning_title">Phụ đề trực tiếp</string>
+  <string name="volume_panel_clear_calling_title">Khử tiếng ồn</string>
   <string name="volume_panel_collapsed_sliders">Đã thu gọn thanh trượt âm lượng</string>
+  <string name="volume_panel_device_settings_title">Cài đặt thiết bị</string>
   <string name="volume_panel_dialog_settings_button">Cài đặt</string>
   <string name="volume_panel_enter_media_output_settings">Mở phần cài đặt thiết bị đầu ra</string>
   <string name="volume_panel_expanded_sliders">Đã mở rộng thanh trượt âm lượng</string>
@@ -1667,10 +1741,13 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
   <string name="wifitrackerlib_wifi_standard_unknown">Không xác định</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Không đo lượng dữ liệu</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Tạm thời, Wi-Fi sẽ không tự động kết nối</string>
+  <string name="wireless_charging_label">Sạc không dây</string>
+  <string name="wireless_charging_notification_text">Việc dùng sạc không dây có thể tốn nhiều năng lượng hơn sạc có dây. Để tiết kiệm điện và thời gian, hãy thử chuyển sang dùng bộ sạc có dây.</string>
+  <string name="wireless_charging_notification_title">Sạc không dây</string>
   <string name="work_challenge_emergency_button_text">Khẩn cấp</string>
   <string name="work_mode_off_title">Tiếp tục dùng ứng dụng công việc?</string>
   <string name="work_mode_turn_on">Tiếp tục dùng</string>
-  <string name="zen_alarm_warning">Bạn sẽ không nghe thấy chuông báo tiếp theo lúc %1$s của mình</string>
+  <string name="zen_alarm_warning">Bạn sẽ không nghe thấy báo thức tiếp theo lúc %1$s của mình</string>
   <string name="zen_alarm_warning_indef">Bạn sẽ không nghe thấy báo thức tiếp theo lúc %1$s của mình trừ phi bạn tắt chức năng này trước</string>
   <string name="zen_mode_enable_dialog_turn_on">Bật</string>
   <string name="zen_mode_settings_turn_on_dialog_title">Bật chế độ Không làm phiền</string>

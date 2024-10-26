@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/BiometricNotificationService$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/KeyguardStateController$Callback;
@@ -115,7 +115,7 @@
     const-wide/16 v8, 0x1388
 
     .line 47
-    const v10, 0x7f140198    # @string/biometric_re_enroll_notification_content 'This is required to improve security and performance'
+    const v10, 0x7f13019f    # @string/biometric_re_enroll_notification_content 'This is required to improve security and performance'
 
     .line 49
     const-string v11, "BiometricNotificationService"
@@ -148,7 +148,7 @@
     iget-object p0, v6, Lcom/android/systemui/biometrics/BiometricNotificationService;->mContext:Landroid/content/Context;
 
     .line 71
-    const v0, 0x7f140394    # @string/face_re_enroll_notification_title 'Set up Face Unlock again'
+    const v0, 0x7f1303cf    # @string/face_re_enroll_notification_title 'Set up Face Unlock again'
 
     .line 73
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -169,7 +169,7 @@
     iget-object p0, v6, Lcom/android/systemui/biometrics/BiometricNotificationService;->mContext:Landroid/content/Context;
 
     .line 86
-    const v0, 0x7f140393    # @string/face_re_enroll_notification_name 'Face Unlock'
+    const v0, 0x7f1303ce    # @string/face_re_enroll_notification_name 'Face Unlock'
 
     .line 88
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -230,7 +230,7 @@
     iget-object p0, v6, Lcom/android/systemui/biometrics/BiometricNotificationService;->mContext:Landroid/content/Context;
 
     .line 128
-    const v0, 0x7f1403af    # @string/fingerprint_re_enroll_notification_title 'Set up Fingerprint Unlock again'
+    const v0, 0x7f1303f1    # @string/fingerprint_re_enroll_notification_title 'Set up Fingerprint Unlock again'
 
     .line 130
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -251,7 +251,7 @@
     iget-object p0, v6, Lcom/android/systemui/biometrics/BiometricNotificationService;->mContext:Landroid/content/Context;
 
     .line 143
-    const v0, 0x7f1403ae    # @string/fingerprint_re_enroll_notification_name 'Fingerprint Unlock'
+    const v0, 0x7f1303f0    # @string/fingerprint_re_enroll_notification_name 'Fingerprint Unlock'
 
     .line 145
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

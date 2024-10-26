@@ -1,10 +1,10 @@
 .class public abstract Landroidx/compose/runtime/ComposerKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
-.field public static final InvalidationLocationAscending:Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticLambda1;
+.field public static final InvalidationLocationAscending:Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticLambda0;
 
 .field public static final compositionLocalMap:Landroidx/compose/runtime/OpaqueKey;
 
@@ -79,13 +79,13 @@
     sput-object v0, Landroidx/compose/runtime/ComposerKt;->reference:Landroidx/compose/runtime/OpaqueKey;
 
     .line 43
-    new-instance v0, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticLambda1;
+    new-instance v0, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticLambda0;
 
     .line 45
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     .line 47
-    sput-object v0, Landroidx/compose/runtime/ComposerKt;->InvalidationLocationAscending:Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticLambda1;
+    sput-object v0, Landroidx/compose/runtime/ComposerKt;->InvalidationLocationAscending:Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticLambda0;
 
     .line 50
     return-void
@@ -230,7 +230,7 @@
     const-string v2, "). Please report to Google or use https://goo.gle/compose-feedback"
 
     .line 6
-    invoke-static {v1, p0, v2}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 8
     move-result-object p0
@@ -256,7 +256,7 @@
     const-string v2, "). Please report to Google or use https://goo.gle/compose-feedback"
 
     .line 6
-    invoke-static {v1, p0, v2}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 8
     move-result-object p0
@@ -696,89 +696,6 @@
     .line 40
     return p0
     .line 41
-.end method
-
-.method public static final getKey(Ljava/lang/Object;Ljava/lang/Object;Landroidx/compose/animation/graphics/vector/AnimatedImageVector;)Ljava/lang/Object;
-    .locals 3
-
-    .line 1
-    instance-of v0, p0, Landroidx/compose/runtime/JoinedKey;
-
-    .line 2
-    const/4 v1, 0x0
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    move-object v0, p0
-
-    .line 7
-    check-cast v0, Landroidx/compose/runtime/JoinedKey;
-
-    .line 8
-    goto :goto_0
-
-    .line 10
-    :cond_0
-    move-object v0, v1
-
-    .line 11
-    :goto_0
-    if-eqz v0, :cond_3
-
-    .line 12
-    iget-object v1, v0, Landroidx/compose/runtime/JoinedKey;->left:Ljava/lang/Object;
-
-    .line 14
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 16
-    move-result v2
-
-    .line 19
-    iget-object v0, v0, Landroidx/compose/runtime/JoinedKey;->right:Ljava/lang/Object;
-
-    .line 20
-    if-eqz v2, :cond_1
-
-    .line 22
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 24
-    move-result v2
-
-    .line 27
-    if-eqz v2, :cond_1
-
-    .line 28
-    goto :goto_1
-
-    .line 30
-    :cond_1
-    invoke-static {v1, p1, p2}, Landroidx/compose/runtime/ComposerKt;->getKey(Ljava/lang/Object;Ljava/lang/Object;Landroidx/compose/animation/graphics/vector/AnimatedImageVector;)Ljava/lang/Object;
-
-    .line 31
-    move-result-object p0
-
-    .line 34
-    if-nez p0, :cond_2
-
-    .line 35
-    invoke-static {v0, p1, p2}, Landroidx/compose/runtime/ComposerKt;->getKey(Ljava/lang/Object;Ljava/lang/Object;Landroidx/compose/animation/graphics/vector/AnimatedImageVector;)Ljava/lang/Object;
-
-    .line 37
-    move-result-object p0
-
-    .line 40
-    :cond_2
-    :goto_1
-    move-object v1, p0
-
-    .line 41
-    :cond_3
-    return-object v1
-    .line 42
 .end method
 
 .method public static final removeCurrentGroup(Landroidx/compose/runtime/SlotWriter;Landroidx/compose/runtime/CompositionImpl$RememberEventDispatcher;)V

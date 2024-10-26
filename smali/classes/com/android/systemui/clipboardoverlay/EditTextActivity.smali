@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/clipboardoverlay/EditTextActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/ClipboardManager$OnPrimaryClipChangedListener;
@@ -41,13 +41,13 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    const p1, 0x7f0e0070    # @layout/clipboard_edit_text_activity 'res/layout/clipboard_edit_text_activity.xml'
+    const p1, 0x7f0d0077    # @layout/clipboard_edit_text_activity 'res/layout/clipboard_edit_text_activity.xml'
 
     .line 5
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setContentView(I)V
 
     .line 8
-    const p1, 0x7f0b0294    # @id/done_button
+    const p1, 0x7f0a02a3    # @id/done_button
 
     .line 11
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -65,7 +65,7 @@
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 23
-    const p1, 0x7f0b02b9    # @id/edit_text
+    const p1, 0x7f0a02cc    # @id/edit_text
 
     .line 26
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -80,7 +80,7 @@
     iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/EditTextActivity;->mEditText:Landroid/widget/EditText;
 
     .line 35
-    const p1, 0x7f0b00da    # @id/attribution
+    const p1, 0x7f0a00de    # @id/attribution
 
     .line 37
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -119,7 +119,7 @@
     iput-object p1, p0, Lcom/android/systemui/clipboardoverlay/EditTextActivity;->mClipboardManager:Landroid/content/ClipboardManager;
 
     .line 62
-    const p1, 0x7f0b02bc    # @id/editor_root
+    const p1, 0x7f0a02cf    # @id/editor_root
 
     .line 64
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -280,7 +280,7 @@
     move-result-object v1
 
     .line 54
-    const v4, 0x7f14026e    # @string/clipboard_edit_source 'From %1$s'
+    const v4, 0x7f13027b    # @string/clipboard_edit_source 'From %1$s'
 
     .line 55
     invoke-virtual {v3, v4, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

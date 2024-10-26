@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/compatui/RestartDialogWindowManager;
 .super Lcom/android/wm/shell/compatui/CompatUIWindowManagerAbstract;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -50,7 +50,7 @@
     move-result-object p1
 
     .line 18
-    const p2, 0x7f07047f    # @dimen/letterbox_restart_dialog_margin '24.0dp'
+    const p2, 0x7f0704bb    # @dimen/letterbox_restart_dialog_margin '24.0dp'
 
     .line 19
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -87,7 +87,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f0e0147    # @layout/letterbox_restart_dialog_layout 'res/layout/letterbox_restart_dialog_layout.xml'
+    const v1, 0x7f0d0152    # @layout/letterbox_restart_dialog_layout 'res/layout/letterbox_restart_dialog_layout.xml'
 
     .line 8
     const/4 v2, 0x0
@@ -127,7 +127,6 @@
 
     .line 34
     return-object p0
-    .line 36
 .end method
 
 .method public final eligibleToShowLayout()Z

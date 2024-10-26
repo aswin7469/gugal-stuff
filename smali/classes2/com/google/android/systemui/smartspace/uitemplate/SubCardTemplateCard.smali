@@ -1,6 +1,6 @@
 .class public Lcom/google/android/systemui/smartspace/uitemplate/SubCardTemplateCard;
 .super Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -37,7 +37,7 @@
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b0391    # @id/image_view
+    const v0, 0x7f0a03b1    # @id/image_view
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -52,7 +52,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/uitemplate/SubCardTemplateCard;->mImageView:Landroid/widget/ImageView;
 
     .line 14
-    const v0, 0x7f0b01ad    # @id/card_prompt
+    const v0, 0x7f0a01b3    # @id/card_prompt
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -95,7 +95,7 @@
 .end method
 
 .method public final setSmartspaceActions(Landroid/app/smartspace/SmartspaceTarget;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;)Z
-    .locals 11
+    .locals 10
 
     .line 1
     invoke-virtual {p1}, Landroid/app/smartspace/SmartspaceTarget;->getTemplateData()Landroid/app/smartspace/uitemplatedata/BaseTemplateData;
@@ -107,149 +107,152 @@
     check-cast v0, Landroid/app/smartspace/uitemplatedata/SubCardTemplateData;
 
     .line 6
-    const/4 v1, 0x0
+    invoke-static {v0}, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggerUtil;->containsValidTemplateType(Landroid/app/smartspace/uitemplatedata/BaseTemplateData;)Z
 
     .line 8
-    if-nez v0, :cond_0
-
-    .line 9
-    const-string p0, "SubCardTemplateCard"
+    move-result v1
 
     .line 11
-    const-string p1, "SubCardTemplateData is null"
+    const/4 v2, 0x0
+
+    .line 12
+    if-nez v1, :cond_0
 
     .line 13
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    const-string p0, "SubCardTemplateCard"
 
     .line 15
-    return v1
+    const-string p1, "SubCardTemplateData is null or invalid template type"
 
-    .line 18
+    .line 17
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 19
+    return v2
+
+    .line 22
     :cond_0
     invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/SubCardTemplateData;->getSubCardIcon()Landroid/app/smartspace/uitemplatedata/Icon;
 
-    .line 19
-    move-result-object v2
-
-    .line 22
-    const/4 v3, 0x1
-
     .line 23
-    if-eqz v2, :cond_1
-
-    .line 24
-    iget-object v2, p0, Lcom/google/android/systemui/smartspace/uitemplate/SubCardTemplateCard;->mImageView:Landroid/widget/ImageView;
+    move-result-object v1
 
     .line 26
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/SubCardTemplateData;->getSubCardIcon()Landroid/app/smartspace/uitemplatedata/Icon;
+    const/4 v3, 0x1
+
+    .line 27
+    if-eqz v1, :cond_1
 
     .line 28
-    move-result-object v4
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/SubCardTemplateCard;->mImageView:Landroid/widget/ImageView;
 
-    .line 31
-    invoke-static {v2, v4}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setIcon(Landroid/widget/ImageView;Landroid/app/smartspace/uitemplatedata/Icon;)V
+    .line 30
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/SubCardTemplateData;->getSubCardIcon()Landroid/app/smartspace/uitemplatedata/Icon;
 
     .line 32
-    iget-object v2, p0, Lcom/google/android/systemui/smartspace/uitemplate/SubCardTemplateCard;->mImageView:Landroid/widget/ImageView;
+    move-result-object v4
 
     .line 35
-    invoke-static {v2, v1}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
+    invoke-static {v1, v4}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setIcon(Landroid/widget/ImageView;Landroid/app/smartspace/uitemplatedata/Icon;)V
 
-    .line 37
-    move v2, v3
+    .line 36
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/SubCardTemplateCard;->mImageView:Landroid/widget/ImageView;
 
-    .line 40
-    goto :goto_0
+    .line 39
+    invoke-static {v1, v2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
     .line 41
-    :cond_1
-    move v2, v1
+    move v1, v3
 
-    .line 42
+    .line 44
+    goto :goto_0
+
+    .line 45
+    :cond_1
+    move v1, v2
+
+    .line 46
     :goto_0
     invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/SubCardTemplateData;->getSubCardText()Landroid/app/smartspace/uitemplatedata/Text;
 
-    .line 43
-    move-result-object v4
-
-    .line 46
-    invoke-static {v4}, Landroid/app/smartspace/SmartspaceUtils;->isEmpty(Landroid/app/smartspace/uitemplatedata/Text;)Z
-
     .line 47
-    move-result v4
+    move-result-object v4
 
     .line 50
-    if-nez v4, :cond_2
+    invoke-static {v4}, Landroid/app/smartspace/SmartspaceUtils;->isEmpty(Landroid/app/smartspace/uitemplatedata/Text;)Z
 
     .line 51
-    iget-object v2, p0, Lcom/google/android/systemui/smartspace/uitemplate/SubCardTemplateCard;->mTextView:Landroid/widget/TextView;
+    move-result v4
 
-    .line 53
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/SubCardTemplateData;->getSubCardText()Landroid/app/smartspace/uitemplatedata/Text;
+    .line 54
+    if-nez v4, :cond_2
 
     .line 55
-    move-result-object v4
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/SubCardTemplateCard;->mTextView:Landroid/widget/TextView;
 
-    .line 58
-    invoke-static {v2, v4}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setText(Landroid/widget/TextView;Landroid/app/smartspace/uitemplatedata/Text;)V
+    .line 57
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/SubCardTemplateData;->getSubCardText()Landroid/app/smartspace/uitemplatedata/Text;
 
     .line 59
-    iget-object v2, p0, Lcom/google/android/systemui/smartspace/uitemplate/SubCardTemplateCard;->mTextView:Landroid/widget/TextView;
+    move-result-object v4
 
     .line 62
-    invoke-static {v2, v1}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
+    invoke-static {v1, v4}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setText(Landroid/widget/TextView;Landroid/app/smartspace/uitemplatedata/Text;)V
 
-    .line 64
-    goto :goto_1
+    .line 63
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/SubCardTemplateCard;->mTextView:Landroid/widget/TextView;
 
-    .line 67
-    :cond_2
-    move v3, v2
+    .line 66
+    invoke-static {v1, v2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
     .line 68
+    goto :goto_1
+
+    .line 71
+    :cond_2
+    move v3, v1
+
+    .line 72
     :goto_1
     if-eqz v3, :cond_3
 
-    .line 69
+    .line 73
     invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/SubCardTemplateData;->getSubCardAction()Landroid/app/smartspace/uitemplatedata/TapAction;
-
-    .line 71
-    move-result-object v1
-
-    .line 74
-    if-eqz v1, :cond_3
 
     .line 75
+    move-result-object v1
+
+    .line 78
+    if-eqz v1, :cond_3
+
+    .line 79
     invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/SubCardTemplateData;->getSubCardAction()Landroid/app/smartspace/uitemplatedata/TapAction;
 
-    .line 77
+    .line 81
     move-result-object v6
 
-    .line 80
-    const/4 v10, 0x0
-
-    .line 81
+    .line 84
     const-string v8, "SubCardTemplateCard"
 
-    .line 82
+    .line 85
     move-object v4, p0
 
-    .line 84
+    .line 87
     move-object v5, p1
 
-    .line 85
+    .line 88
     move-object v7, p2
 
-    .line 86
+    .line 89
     move-object v9, p3
 
-    .line 87
-    invoke-static/range {v4 .. v10}, Lcom/google/android/systemui/smartspace/BcSmartSpaceUtil;->setOnClickListener(Landroid/view/View;Landroid/app/smartspace/SmartspaceTarget;Landroid/app/smartspace/uitemplatedata/TapAction;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Ljava/lang/String;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;I)V
+    .line 90
+    invoke-static/range {v4 .. v9}, Lcom/google/android/systemui/smartspace/BcSmartSpaceUtil;->setOnClickListener(Landroid/view/View;Landroid/app/smartspace/SmartspaceTarget;Landroid/app/smartspace/uitemplatedata/TapAction;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Ljava/lang/String;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;)V
 
-    .line 88
+    .line 91
     :cond_3
     return v3
-    .line 91
+    .line 94
 .end method
 
 .method public final setTextColor(I)V

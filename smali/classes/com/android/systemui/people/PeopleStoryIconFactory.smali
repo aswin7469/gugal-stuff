@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/people/PeopleStoryIconFactory;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/AutoCloseable;
@@ -96,7 +96,7 @@
     iput-object p2, p0, Lcom/android/systemui/people/PeopleStoryIconFactory;->mPackageManager:Landroid/content/pm/PackageManager;
 
     .line 45
-    const p1, 0x7f0600f8    # @color/important_conversation '#f9ab00'
+    const p1, 0x7f060101    # @color/important_conversation '#f9ab00'
 
     .line 47
     invoke-virtual {v0, p1}, Landroid/content/Context;->getColor(I)I

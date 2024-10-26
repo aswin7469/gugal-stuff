@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/util/wakelock/KeepAwakeAnimationListener;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/animation/Animation$AnimationListener;
@@ -39,12 +39,12 @@
     move-result-object p0
 
     .line 18
-    const-wide/16 v0, 0x4e20
-
-    .line 19
     const/4 p1, 0x0
 
-    .line 21
+    .line 19
+    const-wide/16 v0, 0x4e20
+
+    .line 20
     invoke-static {p0, p1, v0, v1}, Lcom/android/systemui/util/wakelock/WakeLock;->wrap(Landroid/os/PowerManager$WakeLock;Lcom/android/systemui/util/wakelock/WakeLockLogger;J)Lcom/android/systemui/util/wakelock/WakeLock;
 
     .line 22

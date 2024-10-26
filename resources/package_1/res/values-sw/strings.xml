@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">weka wijeti uliyochagua</string>
   <string name="accessibility_action_label_remove_widget">ondoa wijeti</string>
   <string name="accessibility_action_label_select_widget">chagua wijeti</string>
-  <string name="accessibility_action_open_communal_hub">Wijeti kwenye skrini iliyofungwa</string>
   <string name="accessibility_action_pip_resize">Badilisha ukubwa</string>
   <string name="accessibility_action_pip_stash">Ficha</string>
   <string name="accessibility_action_pip_unstash">Fichua</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Funga hali ya kutumia kwa mkono mmoja</string>
   <string name="accessibility_airplane_mode">Hali ya ndegeni.</string>
   <string name="accessibility_allow_diagonal_scrolling">Ruhusu usogezaji wa kimshazari</string>
+  <string name="accessibility_assistant_poodle">Kutafuta kwa kutamka</string>
   <string name="accessibility_authenticate_hint">thibitisha</string>
   <string name="accessibility_back">Nyuma</string>
   <string name="accessibility_banner_message_dismiss">Ondoa</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">weka kifaa</string>
   <string name="accessibility_ethernet_connected">Ethaneti.</string>
   <string name="accessibility_ethernet_disconnected">Ethaneti imeondolewa.</string>
-  <string name="accessibility_fingerprint_bouncer">Uthibitishaji unahitajika. Gusa kitambua alama ya kidole ili uthibitishe.</string>
   <string name="accessibility_fingerprint_label">Kitambua alama ya kidole</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">geuza</string>
   <string name="accessibility_floating_button_action_edit">Badilisha</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menyu</string>
   <string name="accessibility_multi_user_list_switcher">menyu ya kuvuta chini</string>
   <string name="accessibility_multi_user_switch_switcher">Badili mtumiaji</string>
+  <string name="accessibility_next_alarm">Kengele inayofuata saa %s</string>
   <string name="accessibility_no_calling">Huwezi kupiga wala kupokea simu.</string>
   <string name="accessibility_no_phone">Hakuna simu</string>
   <string name="accessibility_no_wifi">Wifi imeondolewa.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Skrini imefungwa katika uelekeo wa picha.</string>
   <string name="accessibility_send_smart_reply">Tuma</string>
   <string name="accessibility_sensors_off_active">Kipengele cha kuzima vitambuzi kimewashwa</string>
+  <string name="accessibility_settings_gear">Mipangilio ya Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Gusa kitambuzi cha alama ya kidole. Ni kitufe kifupi zaidi kilicho pembeni mwa simu</string>
+  <string name="accessibility_smartspace_page">Ukurasa wa %1$d kati ya %2$d</string>
   <string name="accessibility_split_bottom">Gawanya sehemu ya chini</string>
   <string name="accessibility_split_left">Gawanya sehemu ya kushoto</string>
   <string name="accessibility_split_right">Gawanya sehemu ya kulia</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">Vipima mtandao vitatu vya Wifi.</string>
   <string name="accessibility_wifi_two_bars">Vipima mtandao viwili vya Wifi.</string>
   <string name="accesssibility_keyguard_retry">Telezesha kidole juu ili ujaribu Kufungua kwa Uso tena</string>
+  <string name="adaptive_charging_notify_des">Betri itajaa kufikia %1$s. Inachaji kwa utaratibu ili kuongeza muda wa matumizi ya betri.</string>
+  <string name="adaptive_charging_notify_title">Hali ya kuchaji inayojirekebisha imewashwa</string>
+  <string name="adaptive_charging_notify_turn_off_once">Zima mara moja</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Hali ya Kuchaji Inayojirekebisha • Itajaa chaji kufikia %2$s</string>
   <string name="add">Weka</string>
   <string name="add_guest_failed">Imeshindwa kuunda wasifu mpya wa mgeni</string>
   <string name="airplane_mode">Hali ya ndegeni</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Maelezo ya programu</string>
   <string name="app_label">Kiolesura</string>
   <string name="assistant_attention_content_description">Imetambua uwepo wa mtumiaji</string>
+  <string name="assistant_scrim_label">Inasikiliza, gusa ili ughairi</string>
   <string name="audio_sharing_description">Watu wengine wanasikia sauti</string>
   <string name="audio_status">Unasikiliza</string>
   <string name="auto_data_switch_dialog_negative_button">Hapana</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Rudi nyuma</string>
   <string name="battery">Betri</string>
   <string name="battery_detail_switch_title">Kiokoa Betri</string>
-  <string name="battery_low_description">Umebakiza asilimia %s ya betri. Kiokoa Betri kinawasha Mandhari meusi, kinazuia shughuli za chinichini na kuchelewesha arifa.</string>
+  <string name="battery_health_notify_learn_more">Pata maelezo zaidi</string>
   <string name="battery_low_intro">Kiokoa Betri kinawasha Mandhari meusi, kinazuia shughuli za chinichini na kuchelewesha arifa.</string>
-  <string name="battery_low_title">Ungependa Kuwasha Kiokoa Betri?</string>
   <string name="battery_saver_confirmation_ok">Washa</string>
   <string name="battery_saver_confirmation_title">Ungependa Kuwasha Kiokoa Betri?</string>
   <string name="battery_saver_confirmation_title_generic">Kuhusu Kiokoa betri</string>
-  <string name="battery_saver_dismiss_action">Hapana</string>
   <string name="battery_saver_start_action">Washa</string>
   <string name="battery_state_unknown_notification_text">Gusa ili upate maelezo zaidi</string>
   <string name="battery_state_unknown_notification_title">Tatizo la kusoma mita ya betri yako</string>
@@ -296,14 +301,9 @@ Jaribu tena baada ya sekunde %d.</string>
   <string name="bluetooth_active_battery_level_untethered">Inatumika. Kushoto: chaji ya betri imefika %1$s, Kulia: chaji ya betri imefika %2$s.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Inatumika. Kushoto: chaji %1$s.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Inatumika. Kulia: chaji ya betri imefika %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level">Inatumika (maudhui pekee). Chaji ya betri imefika %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Inatumika (maudhui pekee), Kushoto: chaji ya betri imefika %1$s, Kulia: chaji ya betri imefika %2$s.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Inatumika (maudhui pekee)</string>
   <string name="bluetooth_active_no_battery_level">Kimeunganishwa</string>
   <string name="bluetooth_battery_level">Chaji ya betri ni %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Imeunganishwa (inaweza kutumia kipengele cha kusikiliza pamoja). Chaji ya betri imefika %1$s.</string>
   <string name="bluetooth_battery_level_untethered">Kushoto: chaji ya betri imefika %1$s, Kulia: chaji ya betri imefika %2$s.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Imeunganishwa (inaweza kutumia kipengele cha kusikiliza pamoja). Kushoto: chaji ya betri imefika %1$s, Kulia: chaji ya betri imefika %2$s.</string>
   <string name="bluetooth_connected">Imeunganishwa%1$s</string>
   <string name="bluetooth_connecting">Inaunganisha…</string>
   <string name="bluetooth_disconnected">Haijaunganishwa</string>
@@ -311,13 +311,11 @@ Jaribu tena baada ya sekunde %d.</string>
   <string name="bluetooth_hearing_aid_left_active">Inatumika (kushoto pekee)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Inatumika (kushoto na kulia)</string>
   <string name="bluetooth_hearing_aid_right_active">Inatumika (kulia pekee)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Imeunganishwa (inaweza kutumia kipengele cha kusikiliza pamoja)</string>
   <string name="bluetooth_pairing">Inaoanisha...</string>
   <string name="bluetooth_pairing_device_down_error_message">Haiwezi kuanzisha mawasiliano na %1$s.</string>
   <string name="bluetooth_pairing_error_message">Haikuwezakulinganisha na %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Imeshindwa kuoanisha na %1$s kwa sababu ya PIN au nenosiri lisilo sahihi.</string>
   <string name="bluetooth_pairing_rejected_error_message">Ulinganishaji umekataliwa na %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">Inaweza kutumia kipengele cha kusikiliza pamoja</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Kompyuta</string>
   <string name="bluetooth_talkback_headphone">Kifaa cha sauti</string>
@@ -356,8 +354,6 @@ Jaribu tena baada ya sekunde %d.</string>
   <string name="bubble_overflow_button_content_description">Vipengee vya ziada</string>
   <string name="bubble_overflow_empty_subtitle">Viputo vya hivi karibuni na vile vilivyoondolewa vitaonekana hapa</string>
   <string name="bubble_overflow_empty_title">Hakuna viputo vya hivi majuzi</string>
-  <string name="bubble_shortcut_label">Viputo</string>
-  <string name="bubble_shortcut_long_label">Onyesha Viputo</string>
   <string name="bubbles_app_settings">Mipangilio ya %1$s</string>
   <string name="bubbles_dont_bubble_conversation">Usiweke viputo kwenye mazungumzo</string>
   <string name="bubbles_settings_button_description">Mipangilio ya viputo vya %1$s</string>
@@ -387,6 +383,10 @@ Gusa ili urekebishe</string>
   <string name="cast_to_other_device_stop_dialog_button">Acha kutuma maudhui</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Utaacha kutuma maudhui ya &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">Umezima data ya mtandao wa simu</string>
+  <string name="charge_limit_discovery_notification_enable_button">Washa sasa</string>
+  <string name="charge_limit_discovery_notification_text">Jaribu kuwasha kipengele cha kuweka kikomo cha chaji kuwa asilimia 80 ili ulinde betri yako na idumu zaidi. Unaweza kudhibiti hali hii katika mipangilio wakati wowote</string>
+  <string name="charge_limit_discovery_notification_title">Linda betri yako wakati inachaji</string>
+  <string name="charging_reverse_text">Kinashiriki betri</string>
   <string name="clear_all_notifications_text">Futa zote</string>
   <string name="clipboard">Ubao klipu</string>
   <string name="clipboard_content_copied">Maudhui yamenakiliwa</string>
@@ -406,6 +406,11 @@ Gusa ili urekebishe</string>
   <string name="close_button_text">Funga</string>
   <string name="close_dialog_button">Funga</string>
   <string name="collapse_menu_text">Funga Menyu</string>
+  <string name="columbus_bouncer_message">Fungua ili umalize Kugusa Haraka</string>
+  <string name="columbus_target_request_dialog_allow">Ruhusu</string>
+  <string name="columbus_target_request_dialog_deny">Usiruhusu</string>
+  <string name="columbus_target_request_dialog_summary">Gusa nyuma ya simu yako mara mbili ili ufungue %1$s. Unaweza kubadilisha hali hii wakati wowote katika Mipangilio.</string>
+  <string name="columbus_target_request_dialog_title">Ungependa kuruhusu ishara ya Kugusa Haraka ifungue %1$s?</string>
   <string name="communal_tutorial_indicator_text">Telezesha kidole kushoto ili uanze mafunzo ya pamoja</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Mwonekano wa ndani wa kifaa chako utaakisiwa. Mwonekano wa mbele wa kifaa chako utazimwa.</string>
   <string name="connected_display_dialog_start_mirroring">Ungependa kuonyesha kwenye skrini ya nje?</string>
@@ -511,8 +516,11 @@ Ukiendelea, huenda ukatozwa ada ya matumizi ya data.</string>
   <string name="data_usage_disabled_dialog_mobile_title">Data ya mtandao wa simu imesitishwa</string>
   <string name="data_usage_disabled_dialog_title">Data imesitishwa</string>
   <string name="days_timestamp">Siku %1$s zilizopita</string>
-  <string name="default_error_message">Ulichoweka si sahihi</string>
   <string name="default_popup_window_title">Dirisha Ibukizi</string>
+  <string name="defender_notify_resume_charge">Batilisha</string>
+  <string name="defender_notify_title">Kulinda betri yako</string>
+  <string name="defender_post_notify_des">Ili usaidie kuongeza muda wa matumizi ya betri yako, hali ya kuchaji iliboreshwa kuanzia %1$s hadi %2$s</string>
+  <string name="defender_post_notify_title">Hali ya kuchaji iliboreshwa</string>
   <string name="demo_mode">Hali ya onyesho la kirekebishi cha kiolesura cha mfumo</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Panua Dirisha kwenye Skrini</string>
   <string name="desktop_mode_maximize_menu_snap_text">Panga Madirisha kwenye Skrini</string>
@@ -532,20 +540,32 @@ Ukiendelea, huenda ukatozwa ada ya matumizi ya data.</string>
   <string name="do_disclosure_generic">Kifaa hiki kinamilikiwa na shirika lako</string>
   <string name="do_disclosure_with_name">Kifaa hiki kinamilikiwa na %s</string>
   <string name="do_financed_disclosure_with_name">Kifaa hiki kimetolewa na %s</string>
+  <string name="dock_a11y_action_show_photo_text">Onyesha fremu ya picha</string>
+  <string name="dock_alignment_not_charging">Pangilia tena simu ili ichaji bila kutumia waya</string>
+  <string name="dock_alignment_slow_charging">Pangilia tena simu ili ichaji kwa kasi</string>
+  <string name="dock_defender_first_run_des">Ili kusaidia kuongeza muda wa matumizi ya betri, shughuli ya kuchaji imesitishwa chaji ya betri ikiwa asilimia 90 kishikwambi chako kikiwa kimepachikwa. Nenda kwenye Mipangilio wakati wowote ili ubatilishe.</string>
+  <string name="dock_defender_first_run_settings">Mipangilio</string>
+  <string name="dock_defender_first_run_title">Shughuli ya kuchaji imesitishwa ili kulinda betri</string>
   <string name="dock_multi_instances_not_supported_text">Programu hii inaweza kufunguliwa katika dirisha 1 pekee</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Programu haifanyi kazi kwenye skrini iliyogawanywa</string>
+  <string name="dock_photo_preview_text">Inaanza kuweka fremu ya picha...</string>
+  <string name="dock_promo_text">Telezesha kidole kushoto ili upate fremu ya picha</string>
   <string name="done">Nimemaliza</string>
   <string name="drag_split_not_supported">Arifa hii haitumii utaratibu wa kuburuta ili kugawa skrini</string>
   <string name="drag_to_add_tiles">Shikilia na uburute ili uongeze vigae</string>
   <string name="drag_to_rearrange_tiles">Shikilia na uburute ili upange vigae upya</string>
   <string name="drag_to_remove_disabled">Unahitaji angalau vigae %1$d</string>
   <string name="drag_to_remove_tiles">Buruta hapa ili uondoe</string>
+  <string name="dream_lockscreen_wallpaper_description">Tumia mandhari ya sasa ya skrini iliyofungwa</string>
+  <string name="dream_lockscreen_wallpaper_label">Mandhari</string>
   <string name="dream_overlay_status_bar_alarm_set">Kengele imewekwa</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Kamera na maikrofoni zimezimwa</string>
   <string name="dream_overlay_status_bar_camera_off">Kamera imezimwa</string>
   <string name="dream_overlay_status_bar_mic_off">Maikrofoni imezimwa</string>
   <string name="dream_overlay_status_bar_priority_mode">Hali ya kipaumbele</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi-Fi haipatikani</string>
+  <string name="dwell_defender_notify_des">Hatua hii husaidia kuongeza muda wa matumizi ya betri wakati simu yako imebaki ikichaji kwa muda mrefu mno</string>
+  <string name="dwell_defender_notify_title">Imesitisha kuchaji ili kulinda betri yako</string>
   <string name="edit_user_info_message">Jina na picha unayochagua itaonwa na mtu yeyote anayetumia kifaa hiki.</string>
   <string name="edit_widget">Badilisha wijeti</string>
   <string name="empty_shade_text">Hakuna arifa</string>
@@ -561,12 +581,16 @@ Ukiendelea, huenda ukatozwa ada ya matumizi ya data.</string>
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Mipangilio ya Kina</string>
   <string name="expand_menu_text">Fungua Menyu</string>
+  <string name="extreme_battery_saver_text">Kwa kina</string>
+  <string name="extreme_low_battery_notification_text">Simu yako itazimika usipoichaji hivi karibuni</string>
+  <string name="extreme_low_battery_notification_title">Chaji imepungua sana</string>
   <string name="face_re_enroll_dialog_content">Ili uweke tena mipangilio ya Kufungua kwa Uso, muundo wa uso wako unaotumika kwa sasa utafutwa.
 
 Utahitaji kuweka upya mipangilio ya kipengele hiki ili uweze kutumia uso wako kufungua simu yako.</string>
   <string name="face_re_enroll_dialog_title">Weka mipangilio ya kipengele cha Kufungua kwa Uso</string>
   <string name="face_re_enroll_notification_name">Kufungua kwa Uso</string>
   <string name="face_re_enroll_notification_title">Weka tena mipangilio ya Kufungua kwa Uso</string>
+  <string name="face_reenroll_dialog_confirm">Weka mipangilio</string>
   <string name="face_reenroll_failure_dialog_content">Imeshindwa kuweka mipangilio ya kufungua kwa uso. Nenda kwenye Mipangilio ili ujaribu tena.</string>
   <string name="failed_attempts_now_wiping_device">Umejaribu kufungua mara nyingi mno kwa njia isiyo sahihi. Data iliyo kwenye kifaa hiki itafutwa.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Ondoa</string>
@@ -604,6 +628,7 @@ Baada ya kufutwa, utahitaji kuweka upya mipangilio ya Kufungua kwa Alama ya Kido
   <string name="font_scaling_smaller">Punguza</string>
   <string name="fullscreen_text">Skrini nzima</string>
   <string name="game_status">Unacheza</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Kiongeza Muda wa Kutofunga Skrini kimezimwa</string>
   <string name="go_to_web">Tumia kivinjari</string>
   <string name="got_it">Nimeelewa</string>
@@ -640,6 +665,7 @@ Baada ya kufutwa, utahitaji kuweka upya mipangilio ya Kufungua kwa Alama ya Kido
   <string name="guest_reset_and_restart_dialog_title">Ungependa kuweka upya kipindi cha mgeni?</string>
   <string name="guest_reset_guest_confirm_button">Weka upya</string>
   <string name="guest_resetting">Inabadilisha kipindi cha mgeni…</string>
+  <string name="handle_invocation_prompt">Telezesha kidole ili uzungumze</string>
   <string name="handle_text">Ncha</string>
   <string name="headset">Vifaa vya sauti</string>
   <string name="hearing_devices_preset_label">Mipangilio iliyowekwa mapema</string>
@@ -656,6 +682,7 @@ Gusa ili upate maelezo zaidi</string>
   <string name="high_temp_title">Simu inapata joto</string>
   <string name="home_controls_dream_description">Fikia haraka vidhibiti vya vifaa nyumbani vikiwa taswira ya skrini</string>
   <string name="home_controls_dream_label">Dhibiti Vifaa Nyumbani</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Angalau kifaa kimoja au kidirisha cha kifaa kinapatikana</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Ili uweke programu ya Google Home kuwa njia ya mkato, hakikisha umesakinisha programu hiyo</string>
   <string name="hub_mode_add_widget_button_text">Ongeza wijeti</string>
@@ -669,12 +696,16 @@ Gusa ili upate maelezo zaidi</string>
   <string name="in_progress">Inaendelea</string>
   <string name="inattentive_sleep_warning_message">Kifaa kitazima hivi karibuni; bonyeza ili kisizime.</string>
   <string name="inattentive_sleep_warning_title">Hali tuli</string>
+  <string name="incompatible_charging_learn_more">Pata maelezo zaidi</string>
+  <string name="incompatible_charging_notify_des">Huenda simu yako inachaji polepole au haichaji. Ili uchaji kwa kasi, tumia kebo na adapta inayopendekezwa.</string>
+  <string name="incompatible_charging_notify_title">Kagua kifaa cha kuchaji</string>
   <string name="indeterminate">Imekaguliwa kwa kiasi fulani</string>
   <string name="inline_done_button">Nimemaliza</string>
   <string name="inline_ok_button">Tumia</string>
   <string name="inline_turn_off_notifications">Zima arifa</string>
   <string name="input_switch_input_language_next">Badilisha utumie lugha inayofuata</string>
   <string name="input_switch_input_language_previous">Badilisha utumie lugha iliyotangulia</string>
+  <string name="install_app">Sakinisha programu</string>
   <string name="install_dialer_on_work_profile_action">Sakinisha programu ya simu ya kazini</string>
   <string name="install_type_instant">Programu inayofunguka papo hapo</string>
   <string name="instant_apps">Programu Zinazofunguka Papo Hapo</string>
@@ -683,8 +714,6 @@ Gusa ili upate maelezo zaidi</string>
   <string name="instant_apps_title">Programu ya %1$s inatumika</string>
   <string name="interruption_level_none">Kimya kabisa</string>
   <string name="interruption_level_priority">Kipaumbele tu</string>
-  <string name="invalid_charger_text">Tumia chaja ambayo ilikuja na kifaa chako</string>
-  <string name="invalid_charger_title">Haiwezi kuchaji kupitia USB</string>
   <string name="issuerecord_background_processing_label">Mchakato wa kurekodi hitilafu unaendelea</string>
   <string name="issuerecord_ongoing_screen_only">Inarekodi hitilafu</string>
   <string name="issuerecord_save_title">Imehifadhi rekodi ya hitilafu</string>
@@ -766,21 +795,33 @@ Gusa ili upate maelezo zaidi</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Kifaa kimefungwa
 Imeshindwa kuthibitisha</string>
   <string name="keyguard_indication_charging_time">%2$s • Inachaji • Itajaa baada ya %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Itamaliza kuchaji kufikia %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Inachaji • Itajaa baada ya %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Itajaa chaji kufikia %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Inachaji kwa kasi • Itajaa baada ya %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Inachaji kwa kasi • Itajaa chaji kufikia %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Imemaliza kuchaji</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Inachaji polepole • Itajaa baada ya %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Itajaa chaji kufikia %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Itajaa chaji kufikia %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s Inachaji bila kutumia waya • Itajaa baada ya %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Imefunguliwa na kipengele cha kutathmini hali ya kuaminika</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Itajaa chaji kufikia %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Imefunguliwa kwa Kiongeza Muda wa Kutofunga Skrini</string>
   <string name="keyguard_missing_sim_message_short">Hakuna SIM</string>
   <string name="keyguard_network_locked_message">Mtandao umefungwa</string>
   <string name="keyguard_permanent_disabled_sim_message_short">SIM haiwezi kutumika.</string>
   <string name="keyguard_plugged_in">%s • Inachaji</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Inachaji kwa kasi</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Inachaji kwa kasi</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Imesitisha kuchaji ili kulinda betri yako</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Inachaji pole pole</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Inachaji</string>
   <string name="keyguard_plugged_in_dock">%s • Inachaji</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Inachaji</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Kagua kifaa cha kuchaji</string>
+  <string name="keyguard_plugged_in_v2">%s • Inachaji</string>
   <string name="keyguard_plugged_in_wireless">%s • Inachaji bila kutumia waya</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Inachaji</string>
   <string name="keyguard_retry">Telezesha kidole juu ili ujaribu tena</string>
   <string name="keyguard_sim_error_message_short">Kadi si Sahihi.</string>
   <string name="keyguard_sim_locked_message">SIM imefungwa.</string>
@@ -811,7 +852,6 @@ Imeshindwa kuthibitisha</string>
   <string name="kg_invalid_confirm_pin_hint">Misimbo ya PIN haifanani</string>
   <string name="kg_invalid_sim_pin_hint">Andika PIN ya tarakimu 4 hadi 8.</string>
   <string name="kg_invalid_sim_puk_hint">Nambari ya PUK inafaa kuwa na tarakimu 8 au zaidi.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Weka PIN ya SIM. Unaweza kujaribu mara # kuweka PIN ya SIM kabla ya kulazimika kuwasiliana na mtoa huduma wako ili afungue kifaa chako endapo kitafungwa.}other{Weka PIN ya SIM. Unaweza kujaribu mara #.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{Sasa SIM imefungwa. Weka msimbo wa PUK ili uendelee. Unaweza kujaribu mara # kabla ya SIM kuacha kutumika kabisa. Wasiliana na mtoa huduma kwa maelezo.}other{Sasa SIM imefungwa. Weka msimbo wa PUK ili uendelee. Unaweza kujaribu mara # kabla ya SIM kuacha kutumika kabisa. Wasiliana na mtoa huduma kwa maelezo.}}</string>
   <string name="kg_password_pin_failed">Utendakazi wa PIN ya SIM haujafanikiwa!</string>
   <string name="kg_password_puk_failed">Utendakazi wa PUK ya SIM haujafanikiwa!</string>
@@ -852,7 +892,7 @@ Imeshindwa kuthibitisha</string>
   <string name="kg_sim_pin_instructions_multi">Weka PIN ya SIM ya "%1$s".</string>
   <string name="kg_sim_unlock_progress_dialog_message">Inafungua SIM…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Jaribu tena baada ya sekunde #.}other{Jaribu tena baada ya sekunde #.}}</string>
-  <string name="kg_trust_agent_disabled">Kipengele cha kutathmini hali ya kuaminika hakipatikani</string>
+  <string name="kg_trust_agent_disabled">Kiongeza Muda wa Kutofunga Skrini hakipatikani</string>
   <string name="kg_unlock_with_password_or_fp">Fungua kwa nenosiri au alama ya kidole</string>
   <string name="kg_unlock_with_pattern_or_fp">Fungua kwa mchoro au alama ya kidole</string>
   <string name="kg_unlock_with_pin_or_fp">Fungua kwa PIN au alama ya kidole</string>
@@ -900,6 +940,10 @@ Iwapo hutaruhusu programu hii ifikie kumbukumbu zote za kifaa, bado inaweza kufi
   <string name="log_access_confirmation_learn_more">Pata maelezo zaidi</string>
   <string name="log_access_confirmation_learn_more_at">Pata maelezo zaidi katika %s</string>
   <string name="log_access_confirmation_title">Ungependa kuruhusu %s ifikie kumbukumbu zote za kifaa?</string>
+  <string name="low_battery_label">Chaji ya betri imepungua</string>
+  <string name="low_battery_notification_text">Washa Kiokoa Betri kwa Wastani ili uongeze muda wa matumizi ya betri</string>
+  <string name="low_battery_notification_text_ebs">Washa Kiokoa Betri kwa Kina ili uongeze muda wa matumizi ya betri</string>
+  <string name="low_battery_notification_title">Imebaki %s ya chaji ya betri</string>
   <string name="m3c_search_bar_search">Tafuta</string>
   <string name="m3c_suggestions_available">Mapendekezo yaliyo hapa chini</string>
   <string name="magnification_close_settings_click_label">Funga mipangilio ya ukuzaji</string>
@@ -939,8 +983,6 @@ Iwapo hutaruhusu programu hii ifikie kumbukumbu zote za kifaa, bado inaweza kufi
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Simamisha</string>
   <string name="media_output_end_session_dialog_summary">Simamisha kipindi unachoshiriki ili uhamishie maudhui kwenye kifaa kingine</string>
-  <string name="media_output_first_broadcast_title">Jinsi utangazaji unavyofanya kazi</string>
-  <string name="media_output_first_notify_broadcast_message">Watu walio karibu nawe wenye vifaa oanifu vya Bluetooth wanaweza kusikiliza maudhui unayoyatangaza</string>
   <string name="media_output_group_title_speakers_and_displays">Spika na Skrini</string>
   <string name="media_output_group_title_suggested_device">Vifaa Vilivyopendekezwa</string>
   <string name="media_output_label_title">Inacheza %s kwenye</string>
@@ -967,9 +1009,6 @@ Iwapo hutaruhusu programu hii ifikie kumbukumbu zote za kifaa, bado inaweza kufi
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Unapotuma programu, Android inaweza kufikia kitu chochote kitakachoonekana au kuchezwa kwenye programu hiyo. Kwa hivyo kuwa mwangalifu na vitu kama vile manenosiri, maelezo ya malipo, ujumbe, picha na sauti na video.</string>
   <string name="media_projection_sys_service_dialog_title">Ungependa kuanza kurekodi au kutuma?</string>
   <string name="media_projection_sys_service_dialog_warning">Huduma inayotoa utendaji huu itaweza kufikia maelezo yote yanayoonekana kwenye skrini yako au yanayochezwa kwenye kifaa chako wakati wa kurekodi au kutuma. Hii ni pamoja na maelezo kama vile manenosiri, maelezo ya malipo, picha, ujumbe na sauti unayocheza.</string>
-  <string name="media_projection_task_switcher_action_back">Rejea</string>
-  <string name="media_projection_task_switcher_action_switch">Shiriki programu hii badala yake</string>
-  <string name="media_projection_task_switcher_text">Itasitisha kushiriki unapobadilisha programu</string>
   <string name="media_seamless_other_device">Kifaa kingine</string>
   <string name="media_transfer_default_device_name">Kifaa kilichounganishwa</string>
   <string name="media_transfer_dock_speaker_device_name">Spika ya kituo</string>
@@ -1280,12 +1319,17 @@ Ikiwa una maswali yoyote, wasiliana na %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Kwa ubora wa juu, geuza simu</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Ungependa kubadilisha skrini?</string>
   <string name="recent_conversations">Mazungumzo ya hivi majuzi</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">imetuma picha</string>
   <string name="remove_from_settings">Ondoa kwenye Mipangilio</string>
   <string name="remove_from_settings_prompt">Je, ungependa kuondoa Kirekebishi cha kiolesura cha mfumo kwenye mipangilio na uache kutumia vipengele vyake vyote?</string>
   <string name="require_unlock_for_nfc">Fungua ili utumie NFC</string>
   <string name="restart_button_description">Gusa ili uzime kisha uwashe programu hii, ili upate mwonekano bora</string>
   <string name="retry_face">Jaribu uthibitishaji kutumia uso</string>
+  <string name="reverse_charging_device_name_text">Pixel nyingine</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s inatoa chaji (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Kipengele cha Kushiriki Betri kimewashwa</string>
+  <string name="reverse_charging_title">Kushiriki Betri</string>
   <string name="right_icon">Aikoni ya kulia</string>
   <string name="right_keycode">Msimbo wa ufunguo wa kulia</string>
   <string name="right_nav_bar_button_type">Aina ya kitufe cha kulia cha ziada</string>
@@ -1293,8 +1337,15 @@ Ikiwa una maswali yoyote, wasiliana na %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">Gusa ili upate maelezo kuhusu betri na matumizi ya data</string>
   <string name="running_foreground_services_title">Programu zinatumika chinichini</string>
-  <string name="satellite_connected_carrier_text">Msaada kupitia Setilaiti</string>
+  <string name="satellite_connected_carrier_text">Msaada kupitia Setilaiti kwenye Pixel</string>
   <string name="save">Hifadhi</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Ghairi</string>
+  <string name="saver_confirmation_dialog_subtitle">Chagua hali ya kutumia</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Inajumuisha mabadiliko yote yaliyoorodheshwa hapo juu. Pia husitisha programu zisizo muhimu na arifa zake.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Hupunguza madoido yanayoonekana, na shughuli za chinichini. Huwasha hali ya Mandhari meusi, iwapo haijawashwa.</string>
+  <string name="saver_confirmation_dialog_title">Karibu katika kipengele cha Kiokoa Betri</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Kiokoa Betri kwa Kina</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Kiokoa Betri kwa Wastani</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Mchakato wa kurekodi skrini umezimwa na sera ya kifaa</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Umezuiwa na msimamizi wako wa TEHAMA</string>
   <string name="screen_pinning_can_open_other_apps">Programu iliyobandikwa inaweza kufungua programu zingine.</string>
@@ -1312,6 +1363,12 @@ Ikiwa una maswali yoyote, wasiliana na %2$s.</string>
   <string name="screen_pinning_toast">Ili ubandue programu hii, gusa na ushikilie vitufe vya Nyuma na Muhtasari</string>
   <string name="screen_pinning_toast_gesture_nav">Ili ubandue programu hii, telezesha kidole juu na ushikilie</string>
   <string name="screen_pinning_toast_recents_invisible">Ili ubandue programu hii, gusa na ushikilie vitufe vya Nyuma na Ukurasa wa Mwanzo</string>
+  <string name="screen_protector_absent_message">Kuzima hali ya ulinzi wa skrini huboresha ugusaji wakati ulinzi wa skrini hautumiki.</string>
+  <string name="screen_protector_disable_notification">Zima arifa</string>
+  <string name="screen_protector_go_to_settings">Nenda kwenye mipangilio</string>
+  <string name="screen_protector_got_it">Nimeelewa</string>
+  <string name="screen_protector_mode_title">Hali ya ulinzi wa skrini</string>
+  <string name="screen_protector_present_message">Kuwasha hali ya ulinzi wa skrini huboresha ugusaji wakati unatumia ulinzi wa skrini.</string>
   <string name="screen_share_permission_app_selector_title">Shiriki au rekodi programu</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Skrini nzima</string>
   <string name="screen_share_permission_dialog_option_single_app">Programu moja</string>
@@ -1364,9 +1421,9 @@ Ikiwa una maswali yoyote, wasiliana na %2$s.</string>
   <string name="screenshot_saving_work_profile_title">Inahifadhi picha ya skrini kwenye wasifu wa kazini…</string>
   <string name="screenshot_scroll_label">Nasa zaidi</string>
   <string name="screenshot_share_description">Shiriki picha ya skrini</string>
-  <string name="screenshot_share_label">Tuma</string>
   <string name="screenshot_text">Picha ya skrini</string>
   <string name="screenshot_top_boundary_pct">Mpaka wa sehemu ya juu wa asilimia %1$d</string>
+  <string name="screenshot_view_description">Angalia picha ya skrini</string>
   <string name="screenshot_work_profile_notification">Imehifadhiwa kwenye %1$s katika wasifu wa kazini</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Kitambuzi cha alama ya kidole kinapatikana kwenye kitufe cha kuwasha/kuzima. Ni kitufe bapa pembeni pa kitufe cha sauti kilichoinuka kwenye ukingo wa simu.</string>
   <string name="see_all_bluetooth_devices">Angalia vyote</string>
@@ -1384,6 +1441,12 @@ Ikiwa una maswali yoyote, wasiliana na %2$s.</string>
   <string name="set_default_notes_app_toast_content">Teua programu chaguomsingi ya madokezo katika Mipangilio</string>
   <string name="settings_label">Mipangilio</string>
   <string name="settingslib_learn_more_text">Pata maelezo zaidi</string>
+  <string name="severe_battery_notification_switch_text">Ungependa kutumia Kiokoa Betri kwa Kina? 
+
+Hatua hii itasitisha programu zote zisizo muhimu na arifa zake</string>
+  <string name="severe_battery_notification_text">Washa kipengele cha Kiokoa Betri kwa Kina. Hatua hii itasitisha programu zote zisizo muhimu</string>
+  <string name="severe_battery_notification_title">Chaji ya betri imebaki %s</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Badilisha</string>
   <string name="share_to_app_stop_dialog_button">Acha kuonyesha skrini</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Utakomesha ufikiaji wa maudhui ya &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Ungependa kuacha kuonyesha skrini?</string>
@@ -1406,6 +1469,9 @@ Ikiwa una maswali yoyote, wasiliana na %2$s.</string>
   <string name="slice_permission_text_1">- Inaweza kusoma maelezo kutoka %1$s</string>
   <string name="slice_permission_text_2">- Inaweza kuchukua hatua ndani ya %1$s</string>
   <string name="slice_permission_title">Ungependa kuruhusu %1$s ionyeshe vipengee %2$s?</string>
+  <string name="smartspace_content_desc">Kwa muhtasari</string>
+  <string name="smartspace_flight_qr_code">Msimbo wa QR</string>
+  <string name="smartspace_role_desc">Angalia</string>
   <string name="snoozeHourOptions">{count,plural, =1{Saa #}=2{Saa #}other{Saa #}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{Dakika #}other{Dakika #}}</string>
   <string name="snooze_undo">Tendua</string>
@@ -1416,6 +1482,8 @@ Ikiwa una maswali yoyote, wasiliana na %2$s.</string>
   <string name="speed_label_slow">Polepole</string>
   <string name="speed_label_very_fast">Haraka Sana</string>
   <string name="split_screen_text">Gawa Skrini</string>
+  <string name="squeeze_invocation_prompt">Bana ili uzungumze</string>
+  <string name="standard_battery_saver_text">Kawaida</string>
   <string name="start_dreams">Taswira ya skrini</string>
   <string name="state_empty">Tupu</string>
   <string name="state_off">Imezimwa</string>
@@ -1453,6 +1521,8 @@ Ikiwa una maswali yoyote, wasiliana na %2$s.</string>
   <string name="tab">Kichupo</string>
   <string name="tap_a_network_to_connect">Gusa mtandao ili uunganishe</string>
   <string name="tap_again">Gusa tena</string>
+  <string name="temp_defender_notify_des">Itaendelea kuchaji wakati halijoto ya simu yako itakuwa ya kawaida</string>
+  <string name="temp_defender_notify_title">Imesitisha kuchaji ili kulinda betri yako</string>
   <string name="template_percent">Asilimia %1$d.</string>
   <string name="thermal">Joto</string>
   <string name="thermal_shutdown_dialog_help_text">Angalia hatua za utunzaji</string>
@@ -1469,6 +1539,7 @@ Gusa ili upate maelezo zaidi</string>
   <string name="title_for_empty_state_cta">Fikia haraka wijeti za programu unazopenda bila kufungua kishikwambi chako.</string>
   <string name="title_usb_accessory">Kifaa cha Usb</string>
   <string name="to_switch_networks_disconnect_ethernet">Ili kubadili mitandao, tenganisha ethaneti</string>
+  <string name="too_hot_label">Pixel ina joto jingi</string>
   <string name="touch_filtered_warning">Kwa sababu programu nyingine inazuia ombi la ruhusa, hatuwezi kuthibitisha jibu lako katika Mipangilio.</string>
   <string name="touchpad_tutorial_action_key_button">Kitufe cha vitendo</string>
   <string name="touchpad_tutorial_back_gesture_button">Ishara ya kurudi nyuma</string>
@@ -1483,17 +1554,18 @@ Gusa ili upate maelezo zaidi</string>
   <string name="tuner_menu">Menyu</string>
   <string name="tuner_minus">Alama ya kuondoa</string>
   <string name="tuner_other_apps">Programu zingine</string>
+  <string name="tuner_persistent_warning">Vipengele hivi vya majaribio vinaweza kubadilika, kuharibika, au kupotea katika matoleo ya siku zijazo. Endelea kwa uangalifu.</string>
   <string name="tuner_plus">Alama ya kuongeza</string>
   <string name="tuner_right">Kulia</string>
   <string name="tuner_time">Wakati</string>
+  <string name="tuner_warning">Kirekebishi cha kiolesura cha mfumo kinakupa njia zaidi za kugeuza na kubadilisha kiolesura cha Android ili kikufae. Vipengele hivi vya majaribio vinaweza kubadilika, kuharibika au kupotea katika matoleo ya siku zijazo. Endelea kwa uangalifu.</string>
+  <string name="tuner_warning_title">Kinafurahisha kwa baadhi ya watu lakini si wote</string>
   <string name="turn_off_airplane_mode">Zima hali ya ndegeni</string>
   <string name="turn_on_bluetooth">Tumia Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Vipengele kama vile Kutuma Haraka na Tafuta Kifaa Changu hutumia Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth itawaka kesho asubuhi</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Washa kesho kiotomatiki</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Mipangilio Chaguomsingi ya TV</string>
   <string name="two_weeks_timestamp">Wiki mbili zilizopita</string>
   <string name="unknown">Haijulikani</string>
   <string name="unlock_to_see_notif_text">Fungua ili uone arifa za zamani</string>
@@ -1552,7 +1624,9 @@ Mtumiaji yoyote anaweza kusasisha programu kwa niaba ya wengine wote.</string>
   <string name="volume_odi_captions_hint_enable">washa</string>
   <string name="volume_odi_captions_tip">Wekea maudhui manukuu kiotomatiki</string>
   <string name="volume_panel_captioning_title">Manukuu Papo Hapo</string>
+  <string name="volume_panel_clear_calling_title">Usikivu Murua</string>
   <string name="volume_panel_collapsed_sliders">Vitelezi vya kiwango cha sauti vimekunjwa</string>
+  <string name="volume_panel_device_settings_title">Mipangilio ya Kifaa</string>
   <string name="volume_panel_dialog_settings_button">Mipangilio</string>
   <string name="volume_panel_enter_media_output_settings">Weka mipangilio ya sauti inayotoka</string>
   <string name="volume_panel_expanded_sliders">Vitelezi vya sauti vimepanuliwa</string>
@@ -1667,10 +1741,13 @@ Anwani ya Wi-Fi (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Haijulikani</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Mtandao usiopima data</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi haitaunganishwa kiotomatiki kwa sasa</string>
+  <string name="wireless_charging_label">Inachaji bila kutumia waya</string>
+  <string name="wireless_charging_notification_text">Kuchaji bila kutumia waya kunaweza kutumia nishati zaidi kuliko kuchaji kwa kutumia waya. Ili uokoe muda na umeme, jaribu kubadilisha uchaji ukitumia waya.</string>
+  <string name="wireless_charging_notification_title">Inachaji bila kutumia waya</string>
   <string name="work_challenge_emergency_button_text">Simu za dharura</string>
   <string name="work_mode_off_title">Je, ungependa kuacha kusitisha programu za kazini?</string>
   <string name="work_mode_turn_on">Acha kusitisha</string>
-  <string name="zen_alarm_warning">Hutasikia kengele yako inayofuata ya saa %1$s</string>
+  <string name="zen_alarm_warning">Hutasikia kengele inayofuata ya saa %1$s</string>
   <string name="zen_alarm_warning_indef">Hutasikia kengele inayofuata ya saa %1$s isipokuwa uzime mipangilio hii kabla ya wakati huo</string>
   <string name="zen_mode_enable_dialog_turn_on">Washa</string>
   <string name="zen_mode_settings_turn_on_dialog_title">Washa kipengele cha Usinisumbue</string>

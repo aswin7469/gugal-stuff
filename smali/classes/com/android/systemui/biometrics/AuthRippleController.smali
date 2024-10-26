@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/AuthRippleController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -67,8 +67,8 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/biometrics/AuthController;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/statusbar/commandline/CommandRegistry;Lcom/android/systemui/statusbar/NotificationShadeWindowController;Ldagger/internal/Provider;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Landroid/util/DisplayMetrics;Lcom/android/keyguard/logging/KeyguardLogger;Lcom/android/systemui/statusbar/phone/BiometricUnlockController;Lcom/android/systemui/statusbar/LightRevealScrim;Lcom/android/systemui/deviceentry/domain/interactor/AuthRippleInteractor;Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;Lcom/android/systemui/biometrics/AuthRippleView;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/biometrics/AuthController;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/statusbar/commandline/CommandRegistry;Lcom/android/systemui/statusbar/NotificationShadeWindowController;Ldagger/internal/DelegateFactory;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Landroid/util/DisplayMetrics;Lcom/android/keyguard/logging/KeyguardLogger;Lcom/android/systemui/statusbar/phone/BiometricUnlockController;Lcom/android/systemui/statusbar/LightRevealScrim;Lcom/android/systemui/deviceentry/domain/interactor/AuthRippleInteractor;Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;Lcom/android/systemui/biometrics/AuthRippleView;)V
+    .locals 4
 
     .line 1
     move-object v0, p0
@@ -80,149 +80,171 @@
     invoke-direct {p0, v1}, Lcom/android/systemui/util/ViewController;-><init>(Landroid/view/View;)V
 
     .line 5
-    move-object v1, p1
+    move-object v2, p1
 
     .line 8
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->sysuiContext:Landroid/content/Context;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->sysuiContext:Landroid/content/Context;
 
     .line 9
-    move-object v1, p2
+    move-object v2, p2
 
     .line 11
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->authController:Lcom/android/systemui/biometrics/AuthController;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->authController:Lcom/android/systemui/biometrics/AuthController;
 
     .line 12
-    move-object v1, p3
+    move-object v2, p3
 
     .line 14
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
     .line 15
-    move-object v1, p4
+    move-object v2, p4
 
     .line 17
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     .line 18
-    move-object v1, p5
+    move-object v2, p5
 
     .line 20
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
     .line 21
-    move-object v1, p6
+    move-object v2, p6
 
     .line 23
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->wakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->wakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
     .line 24
-    move-object v1, p7
+    move-object v2, p7
 
     .line 26
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->commandRegistry:Lcom/android/systemui/statusbar/commandline/CommandRegistry;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->commandRegistry:Lcom/android/systemui/statusbar/commandline/CommandRegistry;
 
     .line 27
-    move-object v1, p8
+    move-object v2, p8
 
     .line 29
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->notificationShadeWindowController:Lcom/android/systemui/statusbar/NotificationShadeWindowController;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->notificationShadeWindowController:Lcom/android/systemui/statusbar/NotificationShadeWindowController;
 
     .line 30
-    move-object v1, p9
+    move-object v2, p9
 
     .line 32
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->udfpsControllerProvider:Ljavax/inject/Provider;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->udfpsControllerProvider:Ljavax/inject/Provider;
 
     .line 33
-    move-object v1, p10
+    move-object v2, p10
 
     .line 35
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
     .line 36
-    move-object v1, p11
+    move-object v2, p11
 
     .line 38
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->displayMetrics:Landroid/util/DisplayMetrics;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->displayMetrics:Landroid/util/DisplayMetrics;
 
     .line 39
-    move-object v1, p12
+    move-object/from16 v2, p12
 
     .line 41
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->logger:Lcom/android/keyguard/logging/KeyguardLogger;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->logger:Lcom/android/keyguard/logging/KeyguardLogger;
 
-    .line 42
-    move-object v1, p13
-
-    .line 44
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->biometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+    .line 43
+    move-object/from16 v2, p13
 
     .line 45
-    move-object/from16 v1, p14
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->biometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
     .line 47
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->lightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
+    move-object/from16 v2, p14
 
     .line 49
-    move-object/from16 v1, p16
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->lightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
     .line 51
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->facePropertyRepository:Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;
+    move-object/from16 v2, p15
 
     .line 53
-    const/high16 v1, -0x40800000    # -1.0f
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->authRippleInteractor:Lcom/android/systemui/deviceentry/domain/interactor/AuthRippleInteractor;
 
     .line 55
-    iput v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->udfpsRadius:F
+    move-object/from16 v2, p16
 
     .line 57
-    new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$biometricModeListener$1;
+    iput-object v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->facePropertyRepository:Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;
 
     .line 59
-    invoke-direct {v1, p0}, Lcom/android/systemui/biometrics/AuthRippleController$biometricModeListener$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
+    const/high16 v2, -0x40800000    # -1.0f
 
     .line 61
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->biometricModeListener:Lcom/android/systemui/biometrics/AuthRippleController$biometricModeListener$1;
+    iput v2, v0, Lcom/android/systemui/biometrics/AuthRippleController;->udfpsRadius:F
 
-    .line 64
-    new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$keyguardUpdateMonitorCallback$1;
+    .line 63
+    if-eqz v1, :cond_0
 
-    .line 66
-    invoke-direct {v1, p0}, Lcom/android/systemui/biometrics/AuthRippleController$keyguardUpdateMonitorCallback$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
+    .line 65
+    new-instance v2, Lcom/android/systemui/biometrics/AuthRippleController$1;
 
-    .line 68
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->keyguardUpdateMonitorCallback:Lcom/android/systemui/biometrics/AuthRippleController$keyguardUpdateMonitorCallback$1;
+    .line 67
+    const/4 v3, 0x0
 
-    .line 71
-    new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$configurationChangedListener$1;
+    .line 69
+    invoke-direct {v2, p0, v3}, Lcom/android/systemui/biometrics/AuthRippleController$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;Lkotlin/coroutines/Continuation;)V
+
+    .line 70
+    invoke-static {v1, v2}, Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt;->repeatWhenAttached$default(Landroid/view/View;Lkotlin/jvm/functions/Function3;)Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt$repeatWhenAttached$1;
 
     .line 73
-    invoke-direct {v1, p0}, Lcom/android/systemui/biometrics/AuthRippleController$configurationChangedListener$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
+    :cond_0
+    new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$biometricModeListener$1;
 
-    .line 75
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->configurationChangedListener:Lcom/android/systemui/biometrics/AuthRippleController$configurationChangedListener$1;
+    .line 76
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     .line 78
-    new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$udfpsControllerCallback$1;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->biometricModeListener:Lcom/android/systemui/biometrics/AuthRippleController$biometricModeListener$1;
 
-    .line 80
-    invoke-direct {v1, p0}, Lcom/android/systemui/biometrics/AuthRippleController$udfpsControllerCallback$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
+    .line 81
+    new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$keyguardUpdateMonitorCallback$1;
 
-    .line 82
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->udfpsControllerCallback:Lcom/android/systemui/biometrics/AuthRippleController$udfpsControllerCallback$1;
+    .line 83
+    invoke-direct {v1, p0}, Lcom/android/systemui/biometrics/AuthRippleController$keyguardUpdateMonitorCallback$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
 
     .line 85
-    new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$authControllerCallback$1;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->keyguardUpdateMonitorCallback:Lcom/android/systemui/biometrics/AuthRippleController$keyguardUpdateMonitorCallback$1;
 
-    .line 87
-    invoke-direct {v1, p0}, Lcom/android/systemui/biometrics/AuthRippleController$authControllerCallback$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
+    .line 88
+    new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$configurationChangedListener$1;
 
-    .line 89
-    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->authControllerCallback:Lcom/android/systemui/biometrics/AuthRippleController$authControllerCallback$1;
+    .line 90
+    invoke-direct {v1, p0}, Lcom/android/systemui/biometrics/AuthRippleController$configurationChangedListener$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
 
     .line 92
+    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->configurationChangedListener:Lcom/android/systemui/biometrics/AuthRippleController$configurationChangedListener$1;
+
+    .line 95
+    new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$udfpsControllerCallback$1;
+
+    .line 97
+    invoke-direct {v1, p0}, Lcom/android/systemui/biometrics/AuthRippleController$udfpsControllerCallback$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
+
+    .line 99
+    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->udfpsControllerCallback:Lcom/android/systemui/biometrics/AuthRippleController$udfpsControllerCallback$1;
+
+    .line 102
+    new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$authControllerCallback$1;
+
+    .line 104
+    invoke-direct {v1, p0}, Lcom/android/systemui/biometrics/AuthRippleController$authControllerCallback$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
+
+    .line 106
+    iput-object v1, v0, Lcom/android/systemui/biometrics/AuthRippleController;->authControllerCallback:Lcom/android/systemui/biometrics/AuthRippleController$authControllerCallback$1;
+
+    .line 109
     return-void
-    .line 94
+    .line 111
 .end method
 
 .method public static final access$showDwellRipple(Lcom/android/systemui/biometrics/AuthRippleController;)V
@@ -522,129 +544,113 @@
     .locals 4
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->lightRevealMigration()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    return-void
-
-    .line 8
-    :cond_0
     iget-object v0, p0, Lcom/android/systemui/biometrics/AuthRippleController;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 9
+    .line 2
     move-object v1, v0
 
-    .line 11
+    .line 4
     check-cast v1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 12
+    .line 5
     iget-boolean v1, v1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardFadingAway:Z
 
-    .line 14
-    if-eqz v1, :cond_2
-
-    .line 16
-    iget-boolean v1, p0, Lcom/android/systemui/biometrics/AuthRippleController;->startLightRevealScrimOnKeyguardFadingAway:Z
-
-    .line 18
-    if-eqz v1, :cond_2
-
-    .line 20
-    iget-object v1, p0, Lcom/android/systemui/biometrics/AuthRippleController;->lightRevealScrimAnimator:Landroid/animation/ValueAnimator;
-
-    .line 22
+    .line 7
     if-eqz v1, :cond_1
 
-    .line 24
+    .line 9
+    iget-boolean v1, p0, Lcom/android/systemui/biometrics/AuthRippleController;->startLightRevealScrimOnKeyguardFadingAway:Z
+
+    .line 11
+    if-eqz v1, :cond_1
+
+    .line 13
+    iget-object v1, p0, Lcom/android/systemui/biometrics/AuthRippleController;->lightRevealScrimAnimator:Landroid/animation/ValueAnimator;
+
+    .line 15
+    if-eqz v1, :cond_0
+
+    .line 17
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 26
-    :cond_1
+    .line 19
+    :cond_0
     const/4 v1, 0x2
 
-    .line 29
+    .line 22
     new-array v1, v1, [F
 
-    .line 30
+    .line 23
     fill-array-data v1, :array_0
 
-    .line 32
+    .line 25
     invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    .line 35
+    .line 28
     move-result-object v1
 
-    .line 38
+    .line 31
     sget-object v2, Lcom/android/app/animation/Interpolators;->LINEAR_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
-    .line 39
+    .line 32
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 41
+    .line 34
     const-wide/16 v2, 0x320
 
-    .line 44
+    .line 37
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 46
+    .line 39
     check-cast v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 49
+    .line 42
     iget-wide v2, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardFadingAwayDelay:J
 
-    .line 51
+    .line 44
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
-    .line 53
+    .line 46
     new-instance v0, Lcom/android/systemui/biometrics/AuthRippleController$onKeyguardFadingAwayChanged$1$1;
 
-    .line 56
+    .line 49
     invoke-direct {v0, p0, v1}, Lcom/android/systemui/biometrics/AuthRippleController$onKeyguardFadingAwayChanged$1$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;Landroid/animation/ValueAnimator;)V
 
-    .line 58
+    .line 51
     invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 61
+    .line 54
     new-instance v0, Lcom/android/systemui/biometrics/AuthRippleController$onKeyguardFadingAwayChanged$1$2;
 
-    .line 64
+    .line 57
     invoke-direct {v0, p0}, Lcom/android/systemui/biometrics/AuthRippleController$onKeyguardFadingAwayChanged$1$2;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
 
-    .line 66
+    .line 59
     invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 69
+    .line 62
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 72
+    .line 65
     iput-object v1, p0, Lcom/android/systemui/biometrics/AuthRippleController;->lightRevealScrimAnimator:Landroid/animation/ValueAnimator;
 
-    .line 75
+    .line 68
     const/4 v0, 0x0
 
-    .line 77
+    .line 70
     iput-boolean v0, p0, Lcom/android/systemui/biometrics/AuthRippleController;->startLightRevealScrimOnKeyguardFadingAway:Z
 
-    .line 78
-    :cond_2
+    .line 71
+    :cond_1
     return-void
 
-    .line 80
-    nop
-
-    .line 81
+    .line 73
     :array_0
     .array-data 4
         0x3dcccccd    # 0.1f
         0x3f800000    # 1.0f
     .end array-data
-    .line 82
+    .line 74
 .end method
 
 .method public final onStartedGoingToSleep()V
@@ -662,7 +668,7 @@
 .end method
 
 .method public onViewAttached()V
-    .locals 3
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/biometrics/AuthRippleController;->authController:Lcom/android/systemui/biometrics/AuthController;
@@ -741,29 +747,17 @@
     invoke-direct {v0, p0}, Lcom/android/systemui/biometrics/AuthRippleController$onViewAttached$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
 
     .line 58
-    iget-object v1, p0, Lcom/android/systemui/biometrics/AuthRippleController;->commandRegistry:Lcom/android/systemui/statusbar/commandline/CommandRegistry;
+    iget-object p0, p0, Lcom/android/systemui/biometrics/AuthRippleController;->commandRegistry:Lcom/android/systemui/statusbar/commandline/CommandRegistry;
 
     .line 61
-    const-string v2, "auth-ripple"
+    const-string v1, "auth-ripple"
 
     .line 63
-    invoke-virtual {v1, v2, v0}, Lcom/android/systemui/statusbar/commandline/CommandRegistry;->registerCommand(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
+    invoke-virtual {p0, v1, v0}, Lcom/android/systemui/statusbar/commandline/CommandRegistry;->registerCommand(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
 
     .line 65
-    iget-object v0, p0, Lcom/android/systemui/biometrics/AuthRippleController;->biometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
-
-    .line 68
-    iget-object v0, v0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mBiometricUnlockEventsListeners:Ljava/util/Set;
-
-    .line 70
-    iget-object p0, p0, Lcom/android/systemui/biometrics/AuthRippleController;->biometricModeListener:Lcom/android/systemui/biometrics/AuthRippleController$biometricModeListener$1;
-
-    .line 72
-    invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 74
     return-void
-    .line 77
+    .line 68
 .end method
 
 .method public onViewDetached()V
@@ -1193,144 +1187,135 @@
     invoke-virtual {v0, p0, v1}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->setForcePluginOpen(Ljava/lang/Object;Z)V
 
     .line 7
-    invoke-static {}, Lcom/android/systemui/Flags;->lightRevealMigration()Z
-
-    .line 10
-    move-result v0
-
-    .line 13
-    const/4 v2, 0x0
-
-    .line 14
-    if-nez v0, :cond_1
-
-    .line 15
     iget-object v0, p0, Lcom/android/systemui/biometrics/AuthRippleController;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
-    .line 17
+    .line 10
     invoke-interface {v0}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->isDozing()Z
 
-    .line 19
+    .line 12
     move-result v0
 
-    .line 22
+    .line 15
+    const/4 v2, 0x0
+
+    .line 16
     if-nez v0, :cond_0
 
-    .line 23
+    .line 17
     iget-object v0, p0, Lcom/android/systemui/biometrics/AuthRippleController;->biometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 25
+    .line 19
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->isWakeAndUnlock()Z
 
-    .line 27
+    .line 21
     move-result v0
 
-    .line 30
+    .line 24
     if-eqz v0, :cond_1
 
-    .line 31
+    .line 25
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/biometrics/AuthRippleController;->circleReveal:Lcom/android/systemui/statusbar/CircleReveal;
 
-    .line 33
+    .line 27
     if-eqz v0, :cond_1
 
-    .line 35
+    .line 29
     iget-object v3, p0, Lcom/android/systemui/biometrics/AuthRippleController;->lightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
-    .line 37
+    .line 31
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/LightRevealScrim;->setRevealAmount(F)V
 
-    .line 39
+    .line 33
     invoke-virtual {v3, v0}, Lcom/android/systemui/statusbar/LightRevealScrim;->setRevealEffect(Lcom/android/systemui/statusbar/LightRevealEffect;)V
 
-    .line 42
+    .line 36
     iput-boolean v1, p0, Lcom/android/systemui/biometrics/AuthRippleController;->startLightRevealScrimOnKeyguardFadingAway:Z
 
-    .line 45
+    .line 39
     :cond_1
     iget-object v0, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    .line 47
+    .line 41
     check-cast v0, Lcom/android/systemui/biometrics/AuthRippleView;
 
-    .line 49
+    .line 43
     new-instance v1, Lcom/android/systemui/biometrics/AuthRippleController$showUnlockedRipple$2;
 
-    .line 51
+    .line 45
     invoke-direct {v1, p0}, Lcom/android/systemui/biometrics/AuthRippleController$showUnlockedRipple$2;-><init>(Lcom/android/systemui/biometrics/AuthRippleController;)V
 
-    .line 53
+    .line 47
     iget-object p0, v0, Lcom/android/systemui/biometrics/AuthRippleView;->unlockedRippleAnimator:Landroid/animation/Animator;
 
-    .line 56
+    .line 50
     if-eqz p0, :cond_2
 
-    .line 58
+    .line 52
     invoke-virtual {p0}, Landroid/animation/Animator;->cancel()V
 
-    .line 60
+    .line 54
     :cond_2
     const/4 p0, 0x2
 
-    .line 63
+    .line 57
     new-array p0, p0, [F
 
-    .line 64
+    .line 58
     fill-array-data p0, :array_0
 
-    .line 66
+    .line 60
     invoke-static {p0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    .line 69
+    .line 63
     move-result-object p0
 
-    .line 72
+    .line 66
     const-wide/16 v2, 0x320
 
-    .line 73
+    .line 67
     invoke-virtual {p0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 75
+    .line 69
     new-instance v2, Lcom/android/systemui/biometrics/AuthRippleView$fadeDwellRipple$1$1;
 
-    .line 78
+    .line 72
     const/4 v3, 0x5
 
-    .line 80
+    .line 74
     invoke-direct {v2, v0, v3}, Lcom/android/systemui/biometrics/AuthRippleView$fadeDwellRipple$1$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleView;I)V
 
-    .line 81
+    .line 75
     invoke-virtual {p0, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 84
+    .line 78
     new-instance v2, Lcom/android/systemui/biometrics/AuthRippleView$startUnlockedRipple$1$1;
 
-    .line 87
+    .line 81
     invoke-direct {v2, v0, v1}, Lcom/android/systemui/biometrics/AuthRippleView$startUnlockedRipple$1$1;-><init>(Lcom/android/systemui/biometrics/AuthRippleView;Lcom/android/systemui/biometrics/AuthRippleController$showUnlockedRipple$2;)V
 
-    .line 89
+    .line 83
     invoke-virtual {p0, v2}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 92
+    .line 86
     iput-object p0, v0, Lcom/android/systemui/biometrics/AuthRippleView;->unlockedRippleAnimator:Landroid/animation/Animator;
 
-    .line 95
+    .line 89
     invoke-virtual {p0}, Landroid/animation/Animator;->start()V
 
-    .line 97
+    .line 91
     return-void
 
-    .line 100
+    .line 94
     nop
 
-    .line 101
+    .line 95
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
-    .line 102
+    .line 96
 .end method
 
 .method public final updateRippleColor()V
@@ -1349,7 +1334,7 @@
     const/4 v1, 0x0
 
     .line 8
-    const v2, 0x7f04073c    # @attr/wallpaperTextColorAccent
+    const v2, 0x7f040742    # @attr/wallpaperTextColorAccent
 
     .line 9
     invoke-static {v2, v1, p0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I

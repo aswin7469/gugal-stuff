@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/classifier/DiagonalClassifier;
 .super Lcom/android/systemui/classifier/FalsingClassifier;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -20,35 +20,35 @@
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 5
-    const-string p1, "systemui"
+    const-string/jumbo p1, "systemui"
 
     .line 8
     const-string p2, "brightline_falsing_diagonal_horizontal_angle_range"
 
-    .line 10
+    .line 11
     const v0, 0x3db2b8c2
 
-    .line 12
+    .line 13
     invoke-static {p1, p2, v0}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 15
+    .line 16
     move-result v1
 
-    .line 18
+    .line 19
     iput v1, p0, Lcom/android/systemui/classifier/DiagonalClassifier;->mHorizontalAngleRange:F
 
-    .line 19
+    .line 20
     invoke-static {p1, p2, v0}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 21
+    .line 22
     move-result p1
 
-    .line 24
+    .line 25
     iput p1, p0, Lcom/android/systemui/classifier/DiagonalClassifier;->mVerticalAngleRange:F
 
-    .line 25
+    .line 26
     return-void
-    .line 27
+    .line 28
 .end method
 
 .method public static angleBetween(FFF)Z

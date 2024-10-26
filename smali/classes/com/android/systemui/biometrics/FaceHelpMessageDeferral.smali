@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -147,50 +147,50 @@
     new-instance v0, Ljava/lang/StringBuilder;
 
     .line 23
-    const-string v1, "totalFrames="
+    const-string/jumbo v1, "totalFrames="
 
     .line 25
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 27
+    .line 28
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 30
+    .line 31
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 33
+    .line 34
     move-result-object p2
 
-    .line 36
+    .line 37
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 37
+    .line 38
     new-instance p2, Ljava/lang/StringBuilder;
 
-    .line 40
-    const-string v0, "threshold="
+    .line 41
+    const-string/jumbo v0, "threshold="
 
-    .line 42
+    .line 43
     invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 44
+    .line 46
     iget p0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->threshold:F
 
-    .line 47
+    .line 49
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 49
+    .line 51
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 52
+    .line 54
     move-result-object p0
 
-    .line 55
+    .line 57
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 56
+    .line 58
     return-void
-    .line 59
+    .line 61
 .end method
 
 .method public final getDeferredMessage()Ljava/lang/CharSequence;
@@ -295,6 +295,218 @@
     .line 58
 .end method
 
+.method public final processFrame(I)V
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->messagesToDefer:Ljava/util/Set;
+
+    .line 2
+    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
+
+    .line 4
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    return-void
+
+    .line 10
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->acquiredInfoToIgnore:Ljava/util/Set;
+
+    .line 11
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 13
+    move-result-object v1
+
+    .line 16
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    .line 17
+    move-result v0
+
+    .line 20
+    iget-object v1, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->logBuffer:Lcom/android/keyguard/logging/BiometricMessageDeferralLogger;
+
+    .line 21
+    if-eqz v0, :cond_1
+
+    .line 23
+    invoke-virtual {v1, p1}, Lcom/android/keyguard/logging/BiometricMessageDeferralLogger;->logFrameIgnored(I)V
+
+    .line 25
+    return-void
+
+    .line 28
+    :cond_1
+    iget v0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->totalFrames:I
+
+    .line 29
+    add-int/lit8 v0, v0, 0x1
+
+    .line 31
+    iput v0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->totalFrames:I
+
+    .line 33
+    iget-object v0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->acquiredInfoToFrequency:Ljava/util/Map;
+
+    .line 35
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 37
+    move-result-object v2
+
+    .line 40
+    const/4 v3, 0x0
+
+    .line 41
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 42
+    move-result-object v4
+
+    .line 45
+    check-cast v0, Ljava/util/HashMap;
+
+    .line 46
+    invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 48
+    move-result-object v0
+
+    .line 51
+    check-cast v0, Ljava/lang/Number;
+
+    .line 52
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    .line 54
+    move-result v0
+
+    .line 57
+    add-int/lit8 v0, v0, 0x1
+
+    .line 58
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 60
+    move-result-object v2
+
+    .line 63
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 64
+    move-result-object v4
+
+    .line 67
+    iget-object v5, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->acquiredInfoToFrequency:Ljava/util/Map;
+
+    .line 68
+    invoke-interface {v5, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 70
+    iget-object v2, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->messagesToDefer:Ljava/util/Set;
+
+    .line 73
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 75
+    move-result-object v4
+
+    .line 78
+    invoke-interface {v2, v4}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    .line 79
+    move-result v2
+
+    .line 82
+    if-eqz v2, :cond_3
+
+    .line 83
+    iget-object v2, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->mostFrequentAcquiredInfoToDefer:Ljava/lang/Integer;
+
+    .line 85
+    if-eqz v2, :cond_2
+
+    .line 87
+    iget-object v4, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->acquiredInfoToFrequency:Ljava/util/Map;
+
+    .line 89
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    .line 91
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 94
+    move-result-object v3
+
+    .line 97
+    check-cast v4, Ljava/util/HashMap;
+
+    .line 98
+    invoke-virtual {v4, v2, v3}, Ljava/util/HashMap;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 100
+    move-result-object v2
+
+    .line 103
+    check-cast v2, Ljava/lang/Number;
+
+    .line 104
+    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+
+    .line 106
+    move-result v2
+
+    .line 109
+    if-le v0, v2, :cond_3
+
+    .line 110
+    :cond_2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 112
+    move-result-object v0
+
+    .line 115
+    iput-object v0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->mostFrequentAcquiredInfoToDefer:Ljava/lang/Integer;
+
+    .line 116
+    :cond_3
+    iget v0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->totalFrames:I
+
+    .line 118
+    iget-object p0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->mostFrequentAcquiredInfoToDefer:Ljava/lang/Integer;
+
+    .line 120
+    if-eqz p0, :cond_4
+
+    .line 122
+    invoke-virtual {p0}, Ljava/lang/Integer;->toString()Ljava/lang/String;
+
+    .line 124
+    move-result-object p0
+
+    .line 127
+    goto :goto_0
+
+    .line 128
+    :cond_4
+    const/4 p0, 0x0
+
+    .line 129
+    :goto_0
+    invoke-virtual {v1, p0, p1, v0}, Lcom/android/keyguard/logging/BiometricMessageDeferralLogger;->logFrameProcessed(Ljava/lang/String;II)V
+
+    .line 130
+    return-void
+    .line 133
+.end method
+
 .method public final reset$1()V
     .locals 4
 
@@ -346,4 +558,77 @@
     .line 31
     return-void
     .line 34
+.end method
+
+.method public final updateMessage(ILjava/lang/String;)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->messagesToDefer:Ljava/util/Set;
+
+    .line 2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 4
+    move-result-object v1
+
+    .line 7
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    .line 8
+    move-result v0
+
+    .line 11
+    if-nez v0, :cond_0
+
+    .line 12
+    return-void
+
+    .line 14
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->acquiredInfoToHelpString:Ljava/util/Map;
+
+    .line 15
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 17
+    move-result-object v1
+
+    .line 20
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 21
+    move-result-object v0
+
+    .line 24
+    invoke-static {v0, p2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 25
+    move-result v0
+
+    .line 28
+    if-nez v0, :cond_1
+
+    .line 29
+    iget-object v0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->logBuffer:Lcom/android/keyguard/logging/BiometricMessageDeferralLogger;
+
+    .line 31
+    invoke-virtual {v0, p1, p2}, Lcom/android/keyguard/logging/BiometricMessageDeferralLogger;->logUpdateMessage(ILjava/lang/String;)V
+
+    .line 33
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 36
+    move-result-object p1
+
+    .line 39
+    iget-object p0, p0, Lcom/android/systemui/biometrics/FaceHelpMessageDeferral;->acquiredInfoToHelpString:Ljava/util/Map;
+
+    .line 40
+    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 42
+    :cond_1
+    return-void
+    .line 45
 .end method

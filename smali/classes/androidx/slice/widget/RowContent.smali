@@ -1,6 +1,6 @@
 .class public final Landroidx/slice/widget/RowContent;
 .super Landroidx/slice/widget/SliceContent;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -126,992 +126,992 @@
 
     .line 55
     :cond_2
-    const-string p2, "title"
+    const-string/jumbo p2, "title"
 
     .line 57
     filled-new-array {p2}, [Ljava/lang/String;
 
-    .line 59
+    .line 60
     move-result-object v2
-
-    .line 62
-    const/4 v3, 0x0
 
     .line 63
-    filled-new-array {v3}, [Ljava/lang/String;
+    const/4 v3, 0x0
 
     .line 64
-    move-result-object v4
+    filled-new-array {v3}, [Ljava/lang/String;
 
-    .line 67
-    invoke-static {p1, v3, v2, v4}, Landroidx/slice/core/SliceQuery;->findAll(Landroidx/slice/SliceItem;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;
+    .line 65
+    move-result-object v4
 
     .line 68
+    invoke-static {p1, v3, v2, v4}, Landroidx/slice/core/SliceQuery;->findAll(Landroidx/slice/SliceItem;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;
+
+    .line 69
     move-result-object v2
 
-    .line 71
+    .line 72
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 72
+    .line 73
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    .line 74
+    .line 75
     move-result v4
 
-    .line 77
+    .line 78
     const-string v5, "slice"
 
-    .line 78
+    .line 79
     const-string v6, "long"
 
-    .line 80
+    .line 81
     const-string v7, "action"
 
-    .line 82
+    .line 83
     if-lez v4, :cond_5
 
-    .line 84
+    .line 85
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 86
+    .line 87
     move-result-object v4
 
-    .line 89
+    .line 90
     check-cast v4, Landroidx/slice/SliceItem;
 
-    .line 90
+    .line 91
     iget-object v4, v4, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
-    .line 92
+    .line 93
     invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 94
+    .line 95
     move-result v8
 
-    .line 97
+    .line 98
     const-string v9, "image"
 
-    .line 98
+    .line 99
     if-eqz v8, :cond_3
 
-    .line 100
+    .line 101
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 102
+    .line 103
     move-result-object v8
-
-    .line 105
-    check-cast v8, Landroidx/slice/SliceItem;
 
     .line 106
+    check-cast v8, Landroidx/slice/SliceItem;
+
+    .line 107
     invoke-static {v8, v9, v3, v3}, Landroidx/slice/core/SliceQuery;->find(Landroidx/slice/SliceItem;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Landroidx/slice/SliceItem;
 
-    .line 108
+    .line 109
     move-result-object v8
 
-    .line 111
+    .line 112
     if-nez v8, :cond_4
 
-    .line 112
+    .line 113
     :cond_3
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 114
+    .line 115
     move-result v8
-
-    .line 117
-    if-nez v8, :cond_4
 
     .line 118
-    invoke-virtual {v6, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 120
-    move-result v8
-
-    .line 123
     if-nez v8, :cond_4
 
+    .line 119
+    invoke-virtual {v6, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 121
+    move-result v8
+
     .line 124
+    if-nez v8, :cond_4
+
+    .line 125
     invoke-virtual {v9, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 126
+    .line 127
     move-result v4
 
-    .line 129
+    .line 130
     if-eqz v4, :cond_5
 
-    .line 130
+    .line 131
     :cond_4
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 132
+    .line 133
     move-result-object v2
 
-    .line 135
+    .line 136
     check-cast v2, Landroidx/slice/SliceItem;
 
-    .line 136
+    .line 137
     iput-object v2, p0, Landroidx/slice/widget/RowContent;->mStartItem:Landroidx/slice/SliceItem;
 
-    .line 138
+    .line 139
     :cond_5
     const-string v2, "shortcut"
 
-    .line 140
+    .line 141
     filled-new-array {v2, p2}, [Ljava/lang/String;
 
-    .line 142
+    .line 143
     move-result-object v4
-
-    .line 145
-    invoke-static {p1, v5, v4, v3}, Landroidx/slice/core/SliceQuery;->findAll(Landroidx/slice/SliceItem;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;
 
     .line 146
+    invoke-static {p1, v5, v4, v3}, Landroidx/slice/core/SliceQuery;->findAll(Landroidx/slice/SliceItem;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;
+
+    .line 147
     move-result-object v8
 
-    .line 149
+    .line 150
     invoke-static {p1, v7, v4, v3}, Landroidx/slice/core/SliceQuery;->findAll(Landroidx/slice/SliceItem;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 150
+    .line 151
     move-result-object v4
-
-    .line 153
-    invoke-interface {v8, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 154
+    invoke-interface {v8, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 155
     invoke-interface {v8}, Ljava/util/List;->isEmpty()Z
 
-    .line 157
+    .line 158
     move-result v4
-
-    .line 160
-    if-eqz v4, :cond_6
 
     .line 161
-    iget-object v4, p1, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
-
-    .line 163
-    invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 165
-    move-result v4
-
-    .line 168
     if-eqz v4, :cond_6
 
-    .line 169
-    invoke-virtual {p1}, Landroidx/slice/SliceItem;->getSlice()Landroidx/slice/Slice;
+    .line 162
+    iget-object v4, p1, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
-    .line 171
-    move-result-object v4
+    .line 164
+    invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 174
-    iget-object v4, v4, Landroidx/slice/Slice;->mItems:[Landroidx/slice/SliceItem;
-
-    .line 175
-    invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    .line 177
-    move-result-object v4
-
-    .line 180
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    .line 181
+    .line 166
     move-result v4
 
-    .line 184
-    if-ne v4, v1, :cond_6
+    .line 169
+    if-eqz v4, :cond_6
+
+    .line 170
+    invoke-virtual {p1}, Landroidx/slice/SliceItem;->getSlice()Landroidx/slice/Slice;
+
+    .line 172
+    move-result-object v4
+
+    .line 175
+    iget-object v4, v4, Landroidx/slice/Slice;->mItems:[Landroidx/slice/SliceItem;
+
+    .line 176
+    invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    .line 178
+    move-result-object v4
+
+    .line 181
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    .line 182
+    move-result v4
 
     .line 185
+    if-ne v4, v1, :cond_6
+
+    .line 186
     iput-object p1, p0, Landroidx/slice/widget/RowContent;->mPrimaryAction:Landroidx/slice/SliceItem;
 
-    .line 187
+    .line 188
     goto :goto_1
 
-    .line 189
+    .line 190
     :cond_6
     iget-object v4, p0, Landroidx/slice/widget/RowContent;->mStartItem:Landroidx/slice/SliceItem;
 
-    .line 190
+    .line 191
     if-eqz v4, :cond_7
 
-    .line 192
+    .line 193
     move-object v4, v8
 
-    .line 194
+    .line 195
     check-cast v4, Ljava/util/ArrayList;
 
-    .line 195
+    .line 196
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    .line 197
+    .line 198
     move-result v9
 
-    .line 200
+    .line 201
     if-le v9, v1, :cond_7
 
-    .line 201
+    .line 202
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 203
+    .line 204
     move-result-object v9
 
-    .line 206
+    .line 207
     iget-object v10, p0, Landroidx/slice/widget/RowContent;->mStartItem:Landroidx/slice/SliceItem;
 
-    .line 207
+    .line 208
     if-ne v9, v10, :cond_7
 
-    .line 209
+    .line 210
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 211
+    .line 212
     move-result-object v4
 
-    .line 214
+    .line 215
     check-cast v4, Landroidx/slice/SliceItem;
 
-    .line 215
+    .line 216
     iput-object v4, p0, Landroidx/slice/widget/RowContent;->mPrimaryAction:Landroidx/slice/SliceItem;
 
-    .line 217
+    .line 218
     goto :goto_1
 
-    .line 219
+    .line 220
     :cond_7
     check-cast v8, Ljava/util/ArrayList;
 
-    .line 220
+    .line 221
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
-    .line 222
+    .line 223
     move-result v4
 
-    .line 225
+    .line 226
     if-lez v4, :cond_8
 
-    .line 226
+    .line 227
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 228
+    .line 229
     move-result-object v4
 
-    .line 231
+    .line 232
     check-cast v4, Landroidx/slice/SliceItem;
 
-    .line 232
+    .line 233
     iput-object v4, p0, Landroidx/slice/widget/RowContent;->mPrimaryAction:Landroidx/slice/SliceItem;
 
-    .line 234
+    .line 235
     :cond_8
     :goto_1
     invoke-static {p1}, Landroidx/slice/widget/RowContent;->filterInvalidItems(Landroidx/slice/SliceItem;)Ljava/util/ArrayList;
 
-    .line 236
+    .line 237
     move-result-object v4
 
-    .line 239
+    .line 240
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    .line 240
+    .line 241
     move-result v8
-
-    .line 243
-    if-ne v8, v1, :cond_a
 
     .line 244
+    if-ne v8, v1, :cond_a
+
+    .line 245
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 246
+    .line 247
     move-result-object v8
-
-    .line 249
-    check-cast v8, Landroidx/slice/SliceItem;
 
     .line 250
-    iget-object v8, v8, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
-
-    .line 252
-    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 254
-    move-result v8
-
-    .line 257
-    if-nez v8, :cond_9
-
-    .line 258
-    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    .line 260
-    move-result-object v8
-
-    .line 263
     check-cast v8, Landroidx/slice/SliceItem;
 
-    .line 264
+    .line 251
     iget-object v8, v8, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
-    .line 266
+    .line 253
+    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 255
+    move-result v8
+
+    .line 258
+    if-nez v8, :cond_9
+
+    .line 259
+    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    .line 261
+    move-result-object v8
+
+    .line 264
+    check-cast v8, Landroidx/slice/SliceItem;
+
+    .line 265
+    iget-object v8, v8, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
+
+    .line 267
     invoke-virtual {v5, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 268
+    .line 269
     move-result v5
 
-    .line 271
+    .line 272
     if-eqz v5, :cond_a
 
-    .line 272
+    .line 273
     :cond_9
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 274
+    .line 275
     move-result-object v5
 
-    .line 277
+    .line 278
     check-cast v5, Landroidx/slice/SliceItem;
 
-    .line 278
+    .line 279
     filled-new-array {v2, p2}, [Ljava/lang/String;
 
-    .line 280
+    .line 281
     move-result-object v2
-
-    .line 283
-    invoke-virtual {v5, v2}, Landroidx/slice/SliceItem;->hasAnyHints([Ljava/lang/String;)Z
 
     .line 284
-    move-result v2
+    invoke-virtual {v5, v2}, Landroidx/slice/SliceItem;->hasAnyHints([Ljava/lang/String;)Z
 
-    .line 287
-    if-nez v2, :cond_a
+    .line 285
+    move-result v2
 
     .line 288
+    if-nez v2, :cond_a
+
+    .line 289
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 290
+    .line 291
     move-result-object v2
 
-    .line 293
+    .line 294
     check-cast v2, Landroidx/slice/SliceItem;
 
-    .line 294
+    .line 295
     invoke-static {v2}, Landroidx/slice/widget/RowContent;->isValidRow(Landroidx/slice/SliceItem;)Z
 
-    .line 296
+    .line 297
     move-result v2
 
-    .line 299
+    .line 300
     if-eqz v2, :cond_a
 
-    .line 300
+    .line 301
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 302
+    .line 303
     move-result-object p1
 
-    .line 305
+    .line 306
     check-cast p1, Landroidx/slice/SliceItem;
 
-    .line 306
+    .line 307
     invoke-static {p1}, Landroidx/slice/widget/RowContent;->filterInvalidItems(Landroidx/slice/SliceItem;)Ljava/util/ArrayList;
 
-    .line 308
+    .line 309
     move-result-object v4
 
-    .line 311
+    .line 312
     move v2, v1
 
-    .line 312
+    .line 313
     goto :goto_2
 
-    .line 313
+    .line 314
     :cond_a
     move v2, v0
 
-    .line 314
+    .line 315
     :goto_2
     iget-object v5, p1, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 315
+    .line 316
     const-string v8, "range"
 
-    .line 317
+    .line 318
     invoke-virtual {v8, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 319
+    .line 320
     move-result v5
 
-    .line 322
+    .line 323
     if-eqz v5, :cond_e
 
-    .line 323
+    .line 324
     invoke-static {p1, v7, v8}, Landroidx/slice/core/SliceQuery;->findSubtype(Landroidx/slice/SliceItem;Ljava/lang/String;Ljava/lang/String;)Landroidx/slice/SliceItem;
 
-    .line 325
+    .line 326
     move-result-object v5
 
-    .line 328
+    .line 329
     if-eqz v5, :cond_d
 
-    .line 329
+    .line 330
     if-eqz v2, :cond_b
 
-    .line 331
+    .line 332
     goto :goto_3
 
-    .line 333
+    .line 334
     :cond_b
     iget-object v2, p0, Landroidx/slice/widget/RowContent;->mStartItem:Landroidx/slice/SliceItem;
 
-    .line 334
+    .line 335
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 336
+    .line 337
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    .line 339
+    .line 340
     move-result v2
-
-    .line 342
-    if-ne v2, v1, :cond_c
 
     .line 343
+    if-ne v2, v1, :cond_c
+
+    .line 344
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 345
+    .line 346
     move-result-object v2
-
-    .line 348
-    check-cast v2, Landroidx/slice/SliceItem;
 
     .line 349
+    check-cast v2, Landroidx/slice/SliceItem;
+
+    .line 350
     invoke-static {v2}, Landroidx/slice/widget/RowContent;->isValidRow(Landroidx/slice/SliceItem;)Z
 
-    .line 351
+    .line 352
     move-result v2
 
-    .line 354
+    .line 355
     if-eqz v2, :cond_e
 
-    .line 355
+    .line 356
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 357
+    .line 358
     move-result-object p1
 
-    .line 360
+    .line 361
     check-cast p1, Landroidx/slice/SliceItem;
 
-    .line 361
+    .line 362
     invoke-static {p1}, Landroidx/slice/widget/RowContent;->filterInvalidItems(Landroidx/slice/SliceItem;)Ljava/util/ArrayList;
 
-    .line 363
+    .line 364
     move-result-object v4
 
-    .line 366
+    .line 367
     iput-object p1, p0, Landroidx/slice/widget/RowContent;->mRange:Landroidx/slice/SliceItem;
 
-    .line 367
+    .line 368
     invoke-virtual {p0}, Landroidx/slice/widget/RowContent;->getInputRangeThumb()Landroidx/slice/SliceItem;
 
-    .line 369
+    .line 370
     move-result-object v2
 
-    .line 372
+    .line 373
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 373
+    .line 374
     goto :goto_4
 
-    .line 376
+    .line 377
     :cond_c
     invoke-static {p1, v7, v8}, Landroidx/slice/core/SliceQuery;->findSubtype(Landroidx/slice/SliceItem;Ljava/lang/String;Ljava/lang/String;)Landroidx/slice/SliceItem;
 
-    .line 377
+    .line 378
     move-result-object v2
-
-    .line 380
-    iput-object v2, p0, Landroidx/slice/widget/RowContent;->mRange:Landroidx/slice/SliceItem;
 
     .line 381
+    iput-object v2, p0, Landroidx/slice/widget/RowContent;->mRange:Landroidx/slice/SliceItem;
+
+    .line 382
     invoke-static {v2}, Landroidx/slice/widget/RowContent;->filterInvalidItems(Landroidx/slice/SliceItem;)Ljava/util/ArrayList;
 
-    .line 383
+    .line 384
     move-result-object v2
 
-    .line 386
+    .line 387
     invoke-virtual {p0}, Landroidx/slice/widget/RowContent;->getInputRangeThumb()Landroidx/slice/SliceItem;
 
-    .line 387
+    .line 388
     move-result-object v5
 
-    .line 390
+    .line 391
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 391
+    .line 392
     iget-object v5, p0, Landroidx/slice/widget/RowContent;->mRange:Landroidx/slice/SliceItem;
 
-    .line 394
+    .line 395
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 396
+    .line 397
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 399
+    .line 400
     goto :goto_4
 
-    .line 402
+    .line 403
     :cond_d
     :goto_3
     iput-object p1, p0, Landroidx/slice/widget/RowContent;->mRange:Landroidx/slice/SliceItem;
 
-    .line 403
+    .line 404
     :cond_e
     :goto_4
     iget-object v2, p1, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 405
+    .line 406
     const-string v5, "selection"
 
-    .line 407
+    .line 408
     invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 409
+    .line 410
     move-result v2
 
-    .line 412
+    .line 413
     if-eqz v2, :cond_f
 
-    .line 413
+    .line 414
     iput-object p1, p0, Landroidx/slice/widget/RowContent;->mSelection:Landroidx/slice/SliceItem;
 
-    .line 415
+    .line 416
     :cond_f
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    .line 417
+    .line 418
     move-result p1
 
-    .line 420
+    .line 421
     if-lez p1, :cond_21
 
-    .line 421
+    .line 422
     iget-object p1, p0, Landroidx/slice/widget/RowContent;->mStartItem:Landroidx/slice/SliceItem;
 
-    .line 423
+    .line 424
     if-eqz p1, :cond_10
 
-    .line 425
+    .line 426
     invoke-virtual {v4, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 427
+    .line 428
     :cond_10
     iget-object p1, p0, Landroidx/slice/widget/RowContent;->mPrimaryAction:Landroidx/slice/SliceItem;
 
-    .line 430
+    .line 431
     if-eqz p1, :cond_11
 
-    .line 432
+    .line 433
     invoke-virtual {v4, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 434
+    .line 435
     :cond_11
     new-instance p1, Ljava/util/ArrayList;
 
-    .line 437
+    .line 438
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 439
+    .line 440
     move v2, v0
 
-    .line 442
+    .line 443
     :goto_5
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    .line 443
+    .line 444
     move-result v5
 
-    .line 446
+    .line 447
     if-ge v2, v5, :cond_17
 
-    .line 447
+    .line 448
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 449
+    .line 450
     move-result-object v5
 
-    .line 452
+    .line 453
     check-cast v5, Landroidx/slice/SliceItem;
 
-    .line 453
+    .line 454
     iget-object v8, v5, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
-    .line 455
-    const-string v9, "text"
+    .line 456
+    const-string/jumbo v9, "text"
 
-    .line 457
+    .line 458
     invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 459
+    .line 461
     move-result v8
 
-    .line 462
+    .line 464
     if-eqz v8, :cond_15
 
-    .line 463
+    .line 465
     iget-object v8, p0, Landroidx/slice/widget/RowContent;->mTitleItem:Landroidx/slice/SliceItem;
 
-    .line 465
-    const-string v9, "summary"
-
     .line 467
-    if-eqz v8, :cond_12
+    const-string/jumbo v9, "summary"
 
     .line 469
+    if-eqz v8, :cond_12
+
+    .line 472
     iget-object v8, v8, Landroidx/slice/SliceItem;->mHints:[Ljava/lang/String;
 
-    .line 471
+    .line 474
     invoke-static {v8, p2}, Landroidx/slice/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 473
+    .line 476
     move-result v8
 
-    .line 476
+    .line 479
     if-nez v8, :cond_13
 
-    .line 477
+    .line 480
     :cond_12
     iget-object v8, v5, Landroidx/slice/SliceItem;->mHints:[Ljava/lang/String;
 
-    .line 479
+    .line 482
     invoke-static {v8, p2}, Landroidx/slice/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 481
-    move-result v8
-
     .line 484
-    if-eqz v8, :cond_13
-
-    .line 485
-    iget-object v8, v5, Landroidx/slice/SliceItem;->mHints:[Ljava/lang/String;
+    move-result v8
 
     .line 487
+    if-eqz v8, :cond_13
+
+    .line 488
+    iget-object v8, v5, Landroidx/slice/SliceItem;->mHints:[Ljava/lang/String;
+
+    .line 490
     invoke-static {v8, v9}, Landroidx/slice/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 489
+    .line 492
     move-result v8
 
-    .line 492
+    .line 495
     if-nez v8, :cond_13
 
-    .line 493
+    .line 496
     iput-object v5, p0, Landroidx/slice/widget/RowContent;->mTitleItem:Landroidx/slice/SliceItem;
 
-    .line 495
+    .line 498
     goto :goto_6
 
-    .line 497
+    .line 500
     :cond_13
     iget-object v8, p0, Landroidx/slice/widget/RowContent;->mSubtitleItem:Landroidx/slice/SliceItem;
 
-    .line 498
+    .line 501
     if-nez v8, :cond_14
 
-    .line 500
+    .line 503
     iget-object v8, v5, Landroidx/slice/SliceItem;->mHints:[Ljava/lang/String;
 
-    .line 502
+    .line 505
     invoke-static {v8, v9}, Landroidx/slice/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 504
+    .line 507
     move-result v8
 
-    .line 507
+    .line 510
     if-nez v8, :cond_14
 
-    .line 508
+    .line 511
     iput-object v5, p0, Landroidx/slice/widget/RowContent;->mSubtitleItem:Landroidx/slice/SliceItem;
 
-    .line 510
+    .line 513
     goto :goto_6
 
-    .line 512
+    .line 515
     :cond_14
     iget-object v8, p0, Landroidx/slice/widget/RowContent;->mSummaryItem:Landroidx/slice/SliceItem;
 
-    .line 513
+    .line 516
     if-nez v8, :cond_16
 
-    .line 515
+    .line 518
     iget-object v8, v5, Landroidx/slice/SliceItem;->mHints:[Ljava/lang/String;
 
-    .line 517
+    .line 520
     invoke-static {v8, v9}, Landroidx/slice/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 519
+    .line 522
     move-result v8
 
-    .line 522
+    .line 525
     if-eqz v8, :cond_16
 
-    .line 523
+    .line 526
     iput-object v5, p0, Landroidx/slice/widget/RowContent;->mSummaryItem:Landroidx/slice/SliceItem;
 
-    .line 525
+    .line 528
     goto :goto_6
 
-    .line 527
+    .line 530
     :cond_15
     invoke-virtual {p1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 528
+    .line 531
     :cond_16
     :goto_6
     add-int/lit8 v2, v2, 0x1
 
-    .line 531
+    .line 534
     goto :goto_5
 
-    .line 533
+    .line 536
     :cond_17
     iget-object p2, p0, Landroidx/slice/widget/RowContent;->mTitleItem:Landroidx/slice/SliceItem;
 
-    .line 534
+    .line 537
     const-string v2, "partial"
 
-    .line 536
+    .line 539
     if-eqz p2, :cond_19
 
-    .line 538
+    .line 541
     iget-object v4, p2, Landroidx/slice/SliceItem;->mHints:[Ljava/lang/String;
 
-    .line 540
+    .line 543
     invoke-static {v4, v2}, Landroidx/slice/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 542
+    .line 545
     move-result v4
 
-    .line 545
+    .line 548
     if-nez v4, :cond_18
 
-    .line 546
+    .line 549
     iget-object p2, p2, Landroidx/slice/SliceItem;->mObj:Ljava/lang/Object;
 
-    .line 548
+    .line 551
     check-cast p2, Ljava/lang/CharSequence;
 
-    .line 550
+    .line 553
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 552
+    .line 555
     move-result p2
 
-    .line 555
+    .line 558
     if-nez p2, :cond_19
 
-    .line 556
+    .line 559
     :cond_18
     iget p2, p0, Landroidx/slice/widget/RowContent;->mLineCount:I
 
-    .line 558
+    .line 561
     add-int/2addr p2, v1
 
-    .line 560
+    .line 563
     iput p2, p0, Landroidx/slice/widget/RowContent;->mLineCount:I
 
-    .line 561
+    .line 564
     :cond_19
     iget-object p2, p0, Landroidx/slice/widget/RowContent;->mSubtitleItem:Landroidx/slice/SliceItem;
 
-    .line 563
+    .line 566
     if-eqz p2, :cond_1b
 
-    .line 565
+    .line 568
     iget-object v4, p2, Landroidx/slice/SliceItem;->mHints:[Ljava/lang/String;
 
-    .line 567
+    .line 570
     invoke-static {v4, v2}, Landroidx/slice/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 569
+    .line 572
     move-result v2
 
-    .line 572
+    .line 575
     if-nez v2, :cond_1a
 
-    .line 573
+    .line 576
     iget-object p2, p2, Landroidx/slice/SliceItem;->mObj:Ljava/lang/Object;
 
-    .line 575
+    .line 578
     check-cast p2, Ljava/lang/CharSequence;
 
-    .line 577
+    .line 580
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 579
+    .line 582
     move-result p2
 
-    .line 582
+    .line 585
     if-nez p2, :cond_1b
 
-    .line 583
+    .line 586
     :cond_1a
     iget p2, p0, Landroidx/slice/widget/RowContent;->mLineCount:I
 
-    .line 585
+    .line 588
     add-int/2addr p2, v1
 
-    .line 587
+    .line 590
     iput p2, p0, Landroidx/slice/widget/RowContent;->mLineCount:I
 
-    .line 588
+    .line 591
     :cond_1b
     iget-object p2, p0, Landroidx/slice/widget/RowContent;->mStartItem:Landroidx/slice/SliceItem;
 
-    .line 590
+    .line 593
     if-eqz p2, :cond_1c
 
-    .line 592
+    .line 595
     iget-object p2, p2, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
-    .line 594
+    .line 597
     invoke-virtual {v6, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 596
+    .line 599
     move-result p2
 
-    .line 599
+    .line 602
     if-eqz p2, :cond_1c
 
-    .line 600
+    .line 603
     move p2, v1
 
-    .line 602
+    .line 605
     goto :goto_7
 
-    .line 603
+    .line 606
     :cond_1c
     move p2, v0
 
-    .line 604
+    .line 607
     :goto_7
     move v2, v0
 
-    .line 605
+    .line 608
     :goto_8
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    .line 606
+    .line 609
     move-result v4
 
-    .line 609
+    .line 612
     if-ge v2, v4, :cond_21
 
-    .line 610
+    .line 613
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 612
+    .line 615
     move-result-object v4
 
-    .line 615
+    .line 618
     check-cast v4, Landroidx/slice/SliceItem;
 
-    .line 616
+    .line 619
     invoke-static {v4, v7, v3, v3}, Landroidx/slice/core/SliceQuery;->find(Landroidx/slice/SliceItem;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Landroidx/slice/SliceItem;
 
-    .line 618
+    .line 621
     move-result-object v5
 
-    .line 621
+    .line 624
     if-eqz v5, :cond_1d
 
-    .line 622
+    .line 625
     move v5, v1
 
-    .line 624
+    .line 627
     goto :goto_9
 
-    .line 625
+    .line 628
     :cond_1d
     move v5, v0
 
-    .line 626
+    .line 629
     :goto_9
     iget-object v8, v4, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
-    .line 627
+    .line 630
     invoke-virtual {v6, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 629
+    .line 632
     move-result v8
 
-    .line 632
+    .line 635
     if-eqz v8, :cond_1e
 
-    .line 633
+    .line 636
     if-nez p2, :cond_20
 
-    .line 635
+    .line 638
     iget-object p2, p0, Landroidx/slice/widget/RowContent;->mEndItems:Ljava/util/ArrayList;
 
-    .line 637
+    .line 640
     invoke-virtual {p2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 639
+    .line 642
     move p2, v1
 
-    .line 642
+    .line 645
     goto :goto_a
 
-    .line 643
+    .line 646
     :cond_1e
     if-eqz v5, :cond_1f
 
-    .line 644
+    .line 647
     new-instance v5, Landroidx/slice/core/SliceActionImpl;
 
-    .line 646
+    .line 649
     invoke-direct {v5, v4}, Landroidx/slice/core/SliceActionImpl;-><init>(Landroidx/slice/SliceItem;)V
 
-    .line 648
+    .line 651
     invoke-virtual {v5}, Landroidx/slice/core/SliceActionImpl;->isToggle()Z
 
-    .line 651
+    .line 654
     move-result v8
 
-    .line 654
+    .line 657
     if-eqz v8, :cond_1f
 
-    .line 655
+    .line 658
     iget-object v8, p0, Landroidx/slice/widget/RowContent;->mToggleItems:Ljava/util/ArrayList;
 
-    .line 657
+    .line 660
     invoke-virtual {v8, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 659
+    .line 662
     :cond_1f
     iget-object v5, p0, Landroidx/slice/widget/RowContent;->mEndItems:Ljava/util/ArrayList;
 
-    .line 662
+    .line 665
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 664
+    .line 667
     :cond_20
     :goto_a
     add-int/lit8 v2, v2, 0x1
 
-    .line 667
+    .line 670
     goto :goto_8
 
-    .line 669
+    .line 672
     :cond_21
     invoke-virtual {p0}, Landroidx/slice/widget/RowContent;->isValid()Z
 
-    .line 670
+    .line 673
     :goto_b
     return-void
-    .line 673
+    .line 676
 .end method
 
 .method public static filterInvalidItems(Landroidx/slice/SliceItem;)Ljava/util/ArrayList;
@@ -1335,186 +1335,186 @@
     const-string v2, "keywords"
 
     .line 6
-    const-string v3, "ttl"
+    const-string/jumbo v3, "ttl"
 
     .line 8
     filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
 
-    .line 10
+    .line 11
     move-result-object v0
 
-    .line 13
+    .line 14
     invoke-virtual {p1, v0}, Landroidx/slice/SliceItem;->hasAnyHints([Ljava/lang/String;)Z
 
-    .line 14
+    .line 15
     move-result v0
-
-    .line 17
-    const/4 v1, 0x0
 
     .line 18
-    if-nez v0, :cond_2
+    const/4 v1, 0x0
 
     .line 19
+    if-nez v0, :cond_2
+
+    .line 20
     iget-object v0, p1, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 21
+    .line 22
     const-string v2, "content_description"
 
-    .line 23
+    .line 24
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 25
+    .line 26
     move-result v0
-
-    .line 28
-    if-nez v0, :cond_2
 
     .line 29
-    iget-object v0, p1, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
-
-    .line 31
-    const-string v2, "selection_option_key"
-
-    .line 33
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 35
-    move-result v0
-
-    .line 38
     if-nez v0, :cond_2
 
-    .line 39
+    .line 30
     iget-object v0, p1, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 41
-    const-string v2, "selection_option_value"
+    .line 32
+    const-string v2, "selection_option_key"
 
-    .line 43
+    .line 34
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 45
+    .line 36
     move-result v0
 
-    .line 48
-    if-eqz v0, :cond_0
+    .line 39
+    if-nez v0, :cond_2
+
+    .line 40
+    iget-object v0, p1, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
+
+    .line 42
+    const-string v2, "selection_option_value"
+
+    .line 44
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 46
+    move-result v0
 
     .line 49
+    if-eqz v0, :cond_0
+
+    .line 50
     goto :goto_0
 
-    .line 51
+    .line 52
     :cond_0
     iget-object p1, p1, Landroidx/slice/SliceItem;->mFormat:Ljava/lang/String;
 
-    .line 52
+    .line 53
     const-string v0, "image"
 
-    .line 54
+    .line 55
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 56
+    .line 57
     move-result v0
-
-    .line 59
-    if-nez v0, :cond_1
 
     .line 60
-    const-string v0, "text"
-
-    .line 62
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 64
-    move-result v0
-
-    .line 67
     if-nez v0, :cond_1
 
-    .line 68
-    const-string v0, "long"
+    .line 61
+    const-string/jumbo v0, "text"
+
+    .line 63
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 66
+    move-result v0
+
+    .line 69
+    if-nez v0, :cond_1
 
     .line 70
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v0, "long"
 
     .line 72
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 74
     move-result v0
 
-    .line 75
+    .line 77
     if-nez v0, :cond_1
-
-    .line 76
-    const-string v0, "action"
 
     .line 78
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v0, "action"
 
     .line 80
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 82
     move-result v0
 
-    .line 83
+    .line 85
     if-nez v0, :cond_1
-
-    .line 84
-    const-string v0, "input"
 
     .line 86
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v0, "input"
 
     .line 88
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 90
     move-result v0
 
-    .line 91
+    .line 93
     if-nez v0, :cond_1
-
-    .line 92
-    const-string v0, "slice"
 
     .line 94
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v0, "slice"
 
     .line 96
-    move-result v0
-
-    .line 99
-    if-nez v0, :cond_1
-
-    .line 100
-    const-string v0, "int"
-
-    .line 102
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 98
+    move-result v0
+
+    .line 101
+    if-nez v0, :cond_1
+
+    .line 102
+    const-string v0, "int"
+
     .line 104
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 106
     move-result p1
 
-    .line 107
+    .line 109
     if-eqz p1, :cond_2
 
-    .line 108
+    .line 110
     iget-object p0, p0, Landroidx/slice/SliceItem;->mSubType:Ljava/lang/String;
 
-    .line 110
+    .line 112
     const-string p1, "range"
 
-    .line 112
+    .line 114
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 114
+    .line 116
     move-result p0
 
-    .line 117
+    .line 119
     if-eqz p0, :cond_2
 
-    .line 118
+    .line 120
     :cond_1
     const/4 v1, 0x1
 
-    .line 120
+    .line 122
     :cond_2
     :goto_0
     return v1
-    .line 121
+    .line 123
 .end method
 
 

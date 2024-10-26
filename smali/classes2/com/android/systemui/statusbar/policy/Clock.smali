@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/policy/Clock;
 .super Landroid/widget/TextView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/demomode/DemoModeCommandReceiver;
@@ -847,7 +847,7 @@
 .end method
 
 .method public final onAttachedToWindow()V
-    .locals 7
+    .locals 8
 
     .line 1
     invoke-super {p0}, Landroid/widget/TextView;->onAttachedToWindow()V
@@ -925,123 +925,126 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 54
-    const/16 v6, 0x30
+    const/16 v7, 0x30
 
     .line 57
-    invoke-static/range {v1 .. v6}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;I)V
+    const/4 v6, 0x0
 
     .line 59
+    invoke-static/range {v1 .. v7}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;II)V
+
+    .line 60
     sget-object v0, Lcom/android/systemui/Dependency;->sDependency:Lcom/android/systemui/Dependency;
 
-    .line 62
+    .line 63
     const-class v1, Lcom/android/systemui/tuner/TunerService;
 
-    .line 64
+    .line 65
     invoke-virtual {v0, v1}, Lcom/android/systemui/Dependency;->getDependencyInner(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 66
+    .line 67
     move-result-object v0
 
-    .line 69
+    .line 70
     check-cast v0, Lcom/android/systemui/tuner/TunerService;
 
-    .line 70
+    .line 71
     const-string v1, "clock_seconds"
 
-    .line 72
+    .line 73
     const-string v2, "icon_blacklist"
 
-    .line 74
+    .line 75
     filled-new-array {v1, v2}, [Ljava/lang/String;
 
-    .line 76
+    .line 77
     move-result-object v1
 
-    .line 79
+    .line 80
     invoke-virtual {v0, p0, v1}, Lcom/android/systemui/tuner/TunerService;->addTunable(Lcom/android/systemui/tuner/TunerService$Tunable;[Ljava/lang/String;)V
 
-    .line 80
+    .line 81
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mCommandQueue:Lcom/android/systemui/statusbar/CommandQueue;
 
-    .line 83
+    .line 84
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/CommandQueue;->addCallback(Lcom/android/systemui/statusbar/CommandQueue$Callbacks;)V
 
-    .line 85
+    .line 86
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 88
+    .line 89
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mUserChangedCallback:Lcom/android/systemui/settings/UserTracker$Callback;
 
-    .line 90
+    .line 91
     iget-object v2, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
 
-    .line 92
+    .line 93
     invoke-virtual {v2}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
-    .line 94
+    .line 95
     move-result-object v2
 
-    .line 97
+    .line 98
     check-cast v0, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 98
+    .line 99
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/settings/UserTrackerImpl;->addCallback(Lcom/android/systemui/settings/UserTracker$Callback;Ljava/util/concurrent/Executor;)V
 
-    .line 100
+    .line 101
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 103
+    .line 104
     check-cast v0, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 105
+    .line 106
     invoke-virtual {v0}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 107
+    .line 108
     move-result v0
 
-    .line 110
+    .line 111
     iput v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mCurrentUserId:I
 
-    .line 111
+    .line 112
     :cond_0
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
-    .line 113
+    .line 114
     move-result-object v0
-
-    .line 116
-    invoke-static {v0}, Ljava/util/Calendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
 
     .line 117
+    invoke-static {v0}, Ljava/util/Calendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
+
+    .line 118
     move-result-object v0
 
-    .line 120
+    .line 121
     iput-object v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mCalendar:Ljava/util/Calendar;
 
-    .line 121
+    .line 122
     const-string v0, ""
 
-    .line 123
+    .line 124
     iput-object v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mContentDescriptionFormatString:Ljava/lang/String;
 
-    .line 125
+    .line 126
     const/4 v0, 0x0
 
-    .line 127
+    .line 128
     iput-object v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mDateTimePatternGenerator:Landroid/icu/text/DateTimePatternGenerator;
 
-    .line 128
+    .line 129
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClock()V
 
-    .line 130
+    .line 131
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
 
-    .line 133
+    .line 134
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateShowSeconds()V
 
-    .line 136
+    .line 137
     return-void
-    .line 139
+    .line 140
 .end method
 
 .method public final onDarkChanged(Ljava/util/ArrayList;FI)V
@@ -1102,7 +1105,7 @@
     iput v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mCachedWidth:I
 
     .line 3
-    const v0, 0x7f0709c0    # @dimen/status_bar_clock_size '14.0sp'
+    const v0, 0x7f070a18    # @dimen/status_bar_clock_size '14.0sp'
 
     .line 5
     invoke-static {p0, v0}, Lcom/android/systemui/FontSizeUtils;->updateFontSize(Landroid/widget/TextView;I)V
@@ -1117,7 +1120,7 @@
     move-result-object v0
 
     .line 16
-    const v1, 0x7f0709c1    # @dimen/status_bar_clock_starting_padding '4.0dp'
+    const v1, 0x7f070a19    # @dimen/status_bar_clock_starting_padding '4.0dp'
 
     .line 17
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1135,7 +1138,7 @@
     move-result-object v1
 
     .line 29
-    const v2, 0x7f0709bf    # @dimen/status_bar_clock_end_padding '0.0dp'
+    const v2, 0x7f070a17    # @dimen/status_bar_clock_end_padding '0.0dp'
 
     .line 30
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1380,6 +1383,7 @@
     .line 42
     :goto_0
     return-void
+    .line 44
 .end method
 
 .method public final onRestoreInstanceState(Landroid/os/Parcelable;)V

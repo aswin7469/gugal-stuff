@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/animation/core/KeyframesSpec$KeyframesSpecConfig;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -17,26 +17,20 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    const/16 v0, 0x12c
-
-    .line 5
-    iput v0, p0, Landroidx/compose/animation/core/KeyframesSpec$KeyframesSpecConfig;->durationMillis:I
-
-    .line 7
     sget-object v0, Landroidx/collection/IntObjectMapKt;->EmptyIntObjectMap:Landroidx/collection/MutableIntObjectMap;
 
-    .line 9
+    .line 5
     new-instance v0, Landroidx/collection/MutableIntObjectMap;
 
-    .line 11
+    .line 7
     invoke-direct {v0}, Landroidx/collection/MutableIntObjectMap;-><init>()V
 
-    .line 13
+    .line 9
     iput-object v0, p0, Landroidx/compose/animation/core/KeyframesSpec$KeyframesSpecConfig;->keyframes:Landroidx/collection/MutableIntObjectMap;
 
-    .line 16
+    .line 12
     return-void
-    .line 18
+    .line 14
 .end method
 
 

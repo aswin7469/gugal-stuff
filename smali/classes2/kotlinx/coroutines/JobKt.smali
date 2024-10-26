@@ -1,6 +1,6 @@
 .class public abstract Lkotlinx/coroutines/JobKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -35,23 +35,20 @@
     .locals 1
 
     .line 1
-    new-instance v0, Ljava/util/concurrent/CancellationException;
+    const/4 v0, 0x0
 
     .line 2
-    invoke-direct {v0, p0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlinx/coroutines/ExceptionsKt;->CancellationException(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/util/concurrent/CancellationException;
 
-    .line 4
-    const/4 p0, 0x0
+    .line 3
+    move-result-object p0
+
+    .line 6
+    invoke-interface {p1, p0}, Lkotlinx/coroutines/Job;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     .line 7
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/CancellationException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    .line 8
-    invoke-interface {p1, v0}, Lkotlinx/coroutines/Job;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    .line 11
     return-void
-    .line 14
+    .line 10
 .end method
 
 .method public static final cancelAndJoin(Lkotlinx/coroutines/Job;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;

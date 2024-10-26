@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernShadeCarrierGroupMobileView$Companion;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -14,7 +14,7 @@
     move-result-object p0
 
     .line 5
-    const v0, 0x7f0e024f    # @layout/shade_carrier_new 'res/layout/shade_carrier_new.xml'
+    const v0, 0x7f0d0260    # @layout/shade_carrier_new 'res/layout/shade_carrier_new.xml'
 
     .line 6
     const/4 v1, 0x0
@@ -41,7 +41,7 @@
     iput v0, p0, Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernShadeCarrierGroupMobileView;->subId:I
 
     .line 22
-    const v0, 0x7f0b04d8    # @id/mobile_combo
+    const v0, 0x7f0a04fc    # @id/mobile_combo
 
     .line 24
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;
@@ -68,7 +68,7 @@
     invoke-virtual {p1, p0, p2}, Lcom/android/systemui/statusbar/pipeline/mobile/ui/MobileViewLogger;->logNewViewBinding(Landroid/view/View;Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/LocationBasedMobileViewModel;)V
 
     .line 43
-    const p1, 0x7f0b04d7    # @id/mobile_carrier_text
+    const p1, 0x7f0a04fb    # @id/mobile_carrier_text
 
     .line 46
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/AutoTileManager$7$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -76,88 +76,94 @@
     const/4 p0, 0x0
 
     .line 28
-    throw p0
+    const/4 v0, 0x0
 
     .line 29
+    invoke-virtual {p0, v0}, Landroid/hardware/display/NightDisplayListener;->setCallback(Landroid/hardware/display/NightDisplayListener$Callback;)V
+
+    .line 30
+    return-void
+
+    .line 33
     :pswitch_1
     check-cast p0, Lcom/android/systemui/statusbar/phone/AutoTileManager$4;
 
-    .line 30
+    .line 34
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager$4;->this$0:Lcom/android/systemui/statusbar/phone/AutoTileManager;
 
-    .line 32
+    .line 36
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mDeviceControlsController:Lcom/android/systemui/statusbar/policy/DeviceControlsControllerImpl;
 
-    .line 34
+    .line 38
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/DeviceControlsControllerImpl;->removeCallback()V
 
-    .line 36
+    .line 40
     return-void
 
-    .line 39
+    .line 43
     :pswitch_2
     check-cast p0, Lcom/android/systemui/statusbar/phone/AutoTileManager$3;
 
-    .line 40
+    .line 44
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager$3;->this$0:Lcom/android/systemui/statusbar/phone/AutoTileManager;
 
-    .line 42
+    .line 46
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mHotspotController:Lcom/android/systemui/statusbar/policy/HotspotController;
 
-    .line 44
+    .line 48
     check-cast v0, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
 
-    .line 46
+    .line 50
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mHotspotCallback:Lcom/android/systemui/statusbar/phone/AutoTileManager$3;
 
-    .line 48
+    .line 52
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->removeCallback(Ljava/lang/Object;)V
 
-    .line 50
+    .line 54
     return-void
 
-    .line 53
+    .line 57
     :pswitch_3
     check-cast p0, Lcom/android/systemui/statusbar/phone/AutoTileManager$2;
 
-    .line 54
+    .line 58
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager$2;->this$0:Lcom/android/systemui/statusbar/phone/AutoTileManager;
 
-    .line 56
+    .line 60
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mDataSaverController:Lcom/android/systemui/statusbar/policy/DataSaverControllerImpl;
 
-    .line 58
+    .line 62
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mDataSaverListener:Lcom/android/systemui/statusbar/phone/AutoTileManager$2;
 
-    .line 60
+    .line 64
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/policy/DataSaverControllerImpl;->removeCallback(Ljava/lang/Object;)V
 
-    .line 62
+    .line 66
     return-void
 
-    .line 65
+    .line 69
     :pswitch_4
     check-cast p0, Lcom/android/systemui/statusbar/phone/AutoTileManager$7;
 
-    .line 66
+    .line 70
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager$7;->this$0:Lcom/android/systemui/statusbar/phone/AutoTileManager;
 
-    .line 68
+    .line 72
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mCastController:Lcom/android/systemui/statusbar/policy/CastController;
 
-    .line 70
+    .line 74
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mCastCallback:Lcom/android/systemui/statusbar/policy/CastController$Callback;
 
-    .line 72
+    .line 76
     check-cast v0, Lcom/android/systemui/statusbar/policy/CastControllerImpl;
 
-    .line 74
+    .line 78
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/policy/CastControllerImpl;->removeCallback(Ljava/lang/Object;)V
 
-    .line 76
+    .line 80
     return-void
 
-    .line 79
+    .line 83
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_4
@@ -166,5 +172,5 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 80
+    .line 84
 .end method

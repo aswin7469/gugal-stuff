@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/ui/ChallengeDialogs$createPinDialog$2$3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnShowListener;
@@ -44,7 +44,7 @@
     iget-object p1, p0, Lcom/android/systemui/controls/ui/ChallengeDialogs$createPinDialog$2$3;->$this_apply:Lcom/android/systemui/controls/ui/ChallengeDialogs$createPinDialog$1;
 
     .line 2
-    const v0, 0x7f0b021c    # @id/controls_pin_input
+    const v0, 0x7f0a0227    # @id/controls_pin_input
 
     .line 4
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
@@ -65,7 +65,7 @@
     iget-object v0, p0, Lcom/android/systemui/controls/ui/ChallengeDialogs$createPinDialog$2$3;->$this_apply:Lcom/android/systemui/controls/ui/ChallengeDialogs$createPinDialog$1;
 
     .line 18
-    const v1, 0x7f0b021d    # @id/controls_pin_use_alpha
+    const v1, 0x7f0a0228    # @id/controls_pin_use_alpha
 
     .line 20
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;

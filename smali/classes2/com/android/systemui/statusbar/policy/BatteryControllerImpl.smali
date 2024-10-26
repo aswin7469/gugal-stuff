@@ -1,6 +1,6 @@
-.class public final Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
+.class public Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/BatteryController;
@@ -205,99 +205,90 @@
 
 
 # virtual methods
-.method public final addCallback(Ljava/lang/Object;)V
+.method public addCallback(Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;)V
     .locals 3
-
-    .line 1
-    check-cast p1, Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;
 
     .line 2
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mChangeCallbacks:Ljava/util/ArrayList;
 
-    .line 4
     monitor-enter v0
 
-    .line 6
+    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mChangeCallbacks:Ljava/util/ArrayList;
 
-    .line 7
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 9
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12
+    .line 5
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mHasReceivedBattery:Z
 
-    .line 13
     if-nez v0, :cond_0
 
-    .line 15
-    goto :goto_0
+    return-void
 
-    .line 17
+    .line 6
     :cond_0
     iget v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mLevel:I
 
-    .line 18
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mPluggedIn:Z
 
-    .line 20
     iget-boolean v2, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mCharging:Z
 
-    .line 22
     invoke-interface {p1, v0, v1, v2}, Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;->onBatteryLevelChanged(IZZ)V
 
-    .line 24
+    .line 7
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mPowerSave:Z
 
-    .line 27
     invoke-interface {p1, v0}, Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;->onPowerSaveChanged(Z)V
 
-    .line 29
+    .line 8
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mStateUnknown:Z
 
-    .line 32
     invoke-interface {p1, v0}, Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;->onBatteryUnknownStateChanged(Z)V
 
-    .line 34
+    .line 9
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mWirelessCharging:Z
 
-    .line 37
     invoke-interface {p1, v0}, Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;->onWirelessChargingChanged(Z)V
 
-    .line 39
+    .line 10
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mIsBatteryDefender:Z
 
-    .line 42
     invoke-interface {p1, v0}, Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;->onIsBatteryDefenderChanged(Z)V
 
-    .line 44
+    .line 11
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mIsIncompatibleCharging:Z
 
-    .line 47
     invoke-interface {p1, p0}, Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;->onIsIncompatibleChargingChanged(Z)V
 
-    .line 49
-    :goto_0
     return-void
 
-    .line 52
     :catchall_0
     move-exception p0
 
-    .line 53
+    .line 12
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 54
     throw p0
-    .line 55
+.end method
+
+.method public bridge synthetic addCallback(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    check-cast p1, Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->addCallback(Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;)V
+
+    return-void
 .end method
 
 .method public final demoCommands()Ljava/util/List;
@@ -613,7 +604,7 @@
     .line 35
 .end method
 
-.method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
+.method public dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 4
 
     .line 1
@@ -965,6 +956,161 @@
     .line 39
 .end method
 
+.method public init$10()V
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mLogger:Lcom/android/systemui/statusbar/policy/BatteryControllerLogger;
+
+    .line 2
+    iget-boolean v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mHasReceivedBattery:Z
+
+    .line 4
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 6
+    sget-object v2, Lcom/android/systemui/log/core/LogLevel;->DEBUG:Lcom/android/systemui/log/core/LogLevel;
+
+    .line 9
+    sget-object v3, Lcom/android/systemui/statusbar/policy/BatteryControllerLogger$logBatteryControllerInit$2;->INSTANCE:Lcom/android/systemui/statusbar/policy/BatteryControllerLogger$logBatteryControllerInit$2;
+
+    .line 11
+    iget-object v0, v0, Lcom/android/systemui/statusbar/policy/BatteryControllerLogger;->logBuffer:Lcom/android/systemui/log/LogBuffer;
+
+    .line 13
+    const-string v4, "BatteryControllerLog"
+
+    .line 15
+    const/4 v5, 0x0
+
+    .line 17
+    invoke-virtual {v0, v4, v2, v3, v5}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
+
+    .line 18
+    move-result-object v2
+
+    .line 21
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    .line 22
+    move-result v3
+
+    .line 25
+    move-object v4, v2
+
+    .line 26
+    check-cast v4, Lcom/android/systemui/log/LogMessageImpl;
+
+    .line 27
+    iput v3, v4, Lcom/android/systemui/log/LogMessageImpl;->int1:I
+
+    .line 29
+    iput-boolean v1, v4, Lcom/android/systemui/log/LogMessageImpl;->bool1:Z
+
+    .line 31
+    invoke-virtual {v0, v2}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
+
+    .line 33
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->registerReceiver$1()V
+
+    .line 36
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mHasReceivedBattery:Z
+
+    .line 39
+    if-nez v0, :cond_0
+
+    .line 41
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mContext:Landroid/content/Context;
+
+    .line 43
+    new-instance v1, Landroid/content/IntentFilter;
+
+    .line 45
+    const-string v2, "android.intent.action.BATTERY_CHANGED"
+
+    .line 47
+    invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    .line 49
+    invoke-virtual {v0, v5, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 52
+    move-result-object v0
+
+    .line 55
+    if-eqz v0, :cond_0
+
+    .line 56
+    iget-boolean v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mHasReceivedBattery:Z
+
+    .line 58
+    if-nez v1, :cond_0
+
+    .line 60
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mContext:Landroid/content/Context;
+
+    .line 62
+    invoke-virtual {p0, v1, v0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+
+    .line 64
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mDemoModeController:Lcom/android/systemui/demomode/DemoModeController;
+
+    .line 67
+    invoke-virtual {v0, p0}, Lcom/android/systemui/demomode/DemoModeController;->addCallback(Lcom/android/systemui/demomode/DemoMode;)V
+
+    .line 69
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mDumpManager:Lcom/android/systemui/dump/DumpManager;
+
+    .line 72
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 74
+    const-string v1, "BatteryController"
+
+    .line 77
+    invoke-static {v0, v1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
+
+    .line 79
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->updatePowerSave()V
+
+    .line 82
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchingEstimate:Z
+
+    .line 85
+    if-eqz v0, :cond_1
+
+    .line 87
+    goto :goto_0
+
+    .line 89
+    :cond_1
+    const/4 v0, 0x1
+
+    .line 90
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mFetchingEstimate:Z
+
+    .line 91
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mBgHandler:Landroid/os/Handler;
+
+    .line 93
+    new-instance v1, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl$$ExternalSyntheticLambda0;
+
+    .line 95
+    const/4 v2, 0x0
+
+    .line 97
+    invoke-direct {v1, p0, v2}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;I)V
+
+    .line 98
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 101
+    :goto_0
+    return-void
+    .line 104
+.end method
+
 .method public final onDemoModeFinished()V
     .locals 0
 
@@ -993,7 +1139,7 @@
     .line 7
 .end method
 
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
 
     .line 1
@@ -1672,6 +1818,174 @@
     .line 15
     throw p0
     .line 16
+.end method
+
+.method public final updateEstimate()V
+    .locals 10
+
+    .line 1
+    invoke-static {}, Lcom/android/systemui/util/Assert;->isNotMainThread()V
+
+    .line 2
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mContext:Landroid/content/Context;
+
+    .line 5
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    .line 7
+    move-result-object v1
+
+    .line 10
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    .line 11
+    move-result-object v0
+
+    .line 14
+    const-string v2, "battery_estimates_last_update_time"
+
+    .line 15
+    const-wide/16 v3, -0x1
+
+    .line 17
+    invoke-static {v0, v2, v3, v4}, Landroid/provider/Settings$Global;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
+
+    .line 19
+    move-result-wide v5
+
+    .line 22
+    invoke-static {v5, v6}, Ljava/time/Instant;->ofEpochMilli(J)Ljava/time/Instant;
+
+    .line 23
+    move-result-object v0
+
+    .line 26
+    invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
+
+    .line 27
+    move-result-object v2
+
+    .line 30
+    invoke-static {v0, v2}, Ljava/time/Duration;->between(Ljava/time/temporal/Temporal;Ljava/time/temporal/Temporal;)Ljava/time/Duration;
+
+    .line 31
+    move-result-object v0
+
+    .line 34
+    const-wide/16 v5, 0x1
+
+    .line 35
+    invoke-static {v5, v6}, Ljava/time/Duration;->ofMinutes(J)Ljava/time/Duration;
+
+    .line 37
+    move-result-object v2
+
+    .line 40
+    invoke-virtual {v0, v2}, Ljava/time/Duration;->compareTo(Ljava/time/Duration;)I
+
+    .line 41
+    move-result v0
+
+    .line 44
+    if-lez v0, :cond_0
+
+    .line 45
+    const/4 v0, 0x0
+
+    .line 47
+    goto :goto_0
+
+    .line 48
+    :cond_0
+    new-instance v0, Lcom/android/settingslib/fuelgauge/Estimate;
+
+    .line 49
+    const-string v2, "time_remaining_estimate_millis"
+
+    .line 51
+    invoke-static {v1, v2, v3, v4}, Landroid/provider/Settings$Global;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
+
+    .line 53
+    move-result-wide v5
+
+    .line 56
+    const-string v2, "time_remaining_estimate_based_on_usage"
+
+    .line 57
+    const/4 v7, 0x0
+
+    .line 59
+    invoke-static {v1, v2, v7}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    .line 60
+    move-result v2
+
+    .line 63
+    const/4 v8, 0x1
+
+    .line 64
+    if-ne v2, v8, :cond_1
+
+    .line 65
+    move v7, v8
+
+    .line 67
+    :cond_1
+    const-string v2, "average_time_to_discharge"
+
+    .line 68
+    invoke-static {v1, v2, v3, v4}, Landroid/provider/Settings$Global;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
+
+    .line 70
+    move-result-wide v8
+
+    .line 73
+    move-object v1, v0
+
+    .line 74
+    move-wide v2, v5
+
+    .line 75
+    move-wide v4, v8
+
+    .line 76
+    move v6, v7
+
+    .line 77
+    invoke-direct/range {v1 .. v6}, Lcom/android/settingslib/fuelgauge/Estimate;-><init>(JJZ)V
+
+    .line 78
+    :goto_0
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mEstimate:Lcom/android/settingslib/fuelgauge/Estimate;
+
+    .line 81
+    if-nez v0, :cond_2
+
+    .line 83
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mEstimates:Lcom/android/systemui/power/EnhancedEstimates;
+
+    .line 85
+    check-cast v0, Lcom/google/android/systemui/power/EnhancedEstimatesGoogleImpl;
+
+    .line 87
+    invoke-virtual {v0}, Lcom/google/android/systemui/power/EnhancedEstimatesGoogleImpl;->getEstimate()Lcom/android/settingslib/fuelgauge/Estimate;
+
+    .line 89
+    move-result-object v0
+
+    .line 92
+    iput-object v0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mEstimate:Lcom/android/settingslib/fuelgauge/Estimate;
+
+    .line 93
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->mContext:Landroid/content/Context;
+
+    .line 95
+    invoke-static {p0, v0}, Lcom/android/settingslib/fuelgauge/Estimate;->storeCachedEstimate(Landroid/content/Context;Lcom/android/settingslib/fuelgauge/Estimate;)V
+
+    .line 97
+    :cond_2
+    return-void
+    .line 100
 .end method
 
 .method public final updatePowerSave()V

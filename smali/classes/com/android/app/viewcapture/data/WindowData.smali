@@ -1,6 +1,6 @@
 .class public final Lcom/android/app/viewcapture/data/WindowData;
 .super Lcom/google/protobuf/GeneratedMessageLite;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -281,50 +281,53 @@
     const-class v0, Lcom/android/app/viewcapture/data/FrameData;
 
     .line 62
-    const-string v1, "title_"
+    const-string/jumbo v1, "title_"
 
     .line 64
     filled-new-array {p0, p1, v0, v1}, [Ljava/lang/Object;
 
-    .line 66
+    .line 67
     move-result-object p0
 
-    .line 69
+    .line 70
     const-string p1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u1008\u0000"
 
-    .line 70
+    .line 71
     sget-object v0, Lcom/android/app/viewcapture/data/WindowData;->DEFAULT_INSTANCE:Lcom/android/app/viewcapture/data/WindowData;
 
-    .line 72
+    .line 73
     new-instance v1, Lcom/google/protobuf/RawMessageInfo;
 
-    .line 74
+    .line 75
     invoke-direct {v1, v0, p1, p0}, Lcom/google/protobuf/RawMessageInfo;-><init>(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 76
+    .line 77
     return-object v1
 
-    .line 79
+    .line 80
     :pswitch_5
     const/4 p0, 0x0
 
-    .line 80
+    .line 81
     return-object p0
 
-    .line 81
+    .line 82
     :pswitch_6
     const/4 p0, 0x1
 
-    .line 82
+    .line 83
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    .line 83
+    .line 84
     move-result-object p0
 
-    .line 86
+    .line 87
     return-object p0
 
-    .line 87
+    .line 88
+    nop
+
+    .line 89
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_6
@@ -335,7 +338,7 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 88
+    .line 90
 .end method
 
 .method public final getFrameDataList()Lcom/google/protobuf/Internal$ProtobufList;

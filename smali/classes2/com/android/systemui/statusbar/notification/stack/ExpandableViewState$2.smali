@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState$2;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -107,7 +107,7 @@
     sget v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->$r8$clinit:I
 
     .line 14
-    const v1, 0x7f0b0815    # @id/top_inset_animator_tag
+    const v1, 0x7f0a0844    # @id/top_inset_animator_tag
 
     .line 16
     goto :goto_0
@@ -117,7 +117,7 @@
     sget v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->$r8$clinit:I
 
     .line 20
-    const v1, 0x7f0b0139    # @id/bottom_inset_animator_tag
+    const v1, 0x7f0a013f    # @id/bottom_inset_animator_tag
 
     .line 22
     :goto_0
@@ -133,14 +133,14 @@
     if-eqz v1, :cond_1
 
     .line 32
-    const v1, 0x7f0b0814    # @id/top_inset_animator_start_value_tag
+    const v1, 0x7f0a0843    # @id/top_inset_animator_start_value_tag
 
     .line 34
     goto :goto_1
 
     .line 37
     :cond_1
-    const v1, 0x7f0b0138    # @id/bottom_inset_animator_start_value_tag
+    const v1, 0x7f0a013e    # @id/bottom_inset_animator_start_value_tag
 
     .line 38
     :goto_1
@@ -156,14 +156,14 @@
     if-eqz p0, :cond_2
 
     .line 48
-    const p0, 0x7f0b0813    # @id/top_inset_animator_end_value_tag
+    const p0, 0x7f0a0842    # @id/top_inset_animator_end_value_tag
 
     .line 50
     goto :goto_2
 
     .line 53
     :cond_2
-    const p0, 0x7f0b0137    # @id/bottom_inset_animator_end_value_tag
+    const p0, 0x7f0a013d    # @id/bottom_inset_animator_end_value_tag
 
     .line 54
     :goto_2
@@ -180,7 +180,7 @@
     sget v1, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;->$r8$clinit:I
 
     .line 63
-    const v1, 0x7f0b0368    # @id/height_animator_tag
+    const v1, 0x7f0a0387    # @id/height_animator_tag
 
     .line 65
     invoke-virtual {v0, v1, p1}, Landroid/widget/FrameLayout;->setTag(ILjava/lang/Object;)V
@@ -189,7 +189,7 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState$2;->val$child:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
     .line 71
-    const v1, 0x7f0b0367    # @id/height_animator_start_value_tag
+    const v1, 0x7f0a0386    # @id/height_animator_start_value_tag
 
     .line 73
     invoke-virtual {v0, v1, p1}, Landroid/widget/FrameLayout;->setTag(ILjava/lang/Object;)V
@@ -198,7 +198,7 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState$2;->val$child:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
     .line 79
-    const v1, 0x7f0b0366    # @id/height_animator_end_value_tag
+    const v1, 0x7f0a0385    # @id/height_animator_end_value_tag
 
     .line 81
     invoke-virtual {v0, v1, p1}, Landroid/widget/FrameLayout;->setTag(ILjava/lang/Object;)V

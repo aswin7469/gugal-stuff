@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/notetask/quickaffordance/NoteTaskQuickAffordanceConfig;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig;
@@ -124,7 +124,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f0808db    # @drawable/ic_note_task_shortcut_keyguard 'res/drawable/ic_note_task_shortcut_keyguard.xml'
+    const p0, 0x7f080900    # @drawable/ic_note_task_shortcut_keyguard 'res/drawable/ic_note_task_shortcut_keyguard.xml'
 
     .line 2
     return p0
@@ -197,7 +197,7 @@
     iget-object p1, p0, Lcom/android/systemui/notetask/quickaffordance/NoteTaskQuickAffordanceConfig;->context:Landroid/content/Context;
 
     .line 37
-    const v0, 0x7f1406cf    # @string/notes_app_quick_affordance_unavailable_explanation 'Select a default notes app to use the notetaking shortcut'
+    const v0, 0x7f13072a    # @string/notes_app_quick_affordance_unavailable_explanation 'Select a default notes app to use the notetaking shortcut'
 
     .line 39
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -209,7 +209,7 @@
     iget-object v0, p0, Lcom/android/systemui/notetask/quickaffordance/NoteTaskQuickAffordanceConfig;->context:Landroid/content/Context;
 
     .line 46
-    const v1, 0x7f14048f    # @string/keyguard_affordance_enablement_dialog_notes_app_action 'Select app'
+    const v1, 0x7f1304d9    # @string/keyguard_affordance_enablement_dialog_notes_app_action 'Select app'
 
     .line 48
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -301,7 +301,7 @@
     iget-object p0, p0, Lcom/android/systemui/notetask/quickaffordance/NoteTaskQuickAffordanceConfig;->context:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1406cd    # @string/note_task_button_label 'Note-taking'
+    const v0, 0x7f130728    # @string/note_task_button_label 'Note-taking'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

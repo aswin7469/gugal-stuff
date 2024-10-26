@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/compatui/RestartDialogLayout;
 .super Landroidx/constraintlayout/widget/ConstraintLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/compatui/DialogContainerSupplier;
@@ -92,7 +92,7 @@
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b042a    # @id/letterbox_restart_dialog_checkbox_container
+    const v0, 0x7f0a044b    # @id/letterbox_restart_dialog_checkbox_container
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -101,7 +101,7 @@
     move-result-object v0
 
     .line 11
-    const v1, 0x7f0b0429    # @id/letterbox_restart_dialog_checkbox
+    const v1, 0x7f0a044a    # @id/letterbox_restart_dialog_checkbox
 
     .line 12
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -113,7 +113,7 @@
     check-cast v1, Landroid/widget/CheckBox;
 
     .line 19
-    const v2, 0x7f0b042c    # @id/letterbox_restart_dialog_container
+    const v2, 0x7f0a044d    # @id/letterbox_restart_dialog_container
 
     .line 21
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -125,7 +125,7 @@
     iput-object v2, p0, Lcom/android/wm/shell/compatui/RestartDialogLayout;->mDialogContainer:Landroid/view/View;
 
     .line 28
-    const v2, 0x7f0b0430    # @id/letterbox_restart_dialog_title
+    const v2, 0x7f0a0451    # @id/letterbox_restart_dialog_title
 
     .line 30
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -216,7 +216,7 @@
 
     .line 14
     :goto_0
-    const v0, 0x7f0b042e    # @id/letterbox_restart_dialog_dismiss_button
+    const v0, 0x7f0a044f    # @id/letterbox_restart_dialog_dismiss_button
 
     .line 15
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;

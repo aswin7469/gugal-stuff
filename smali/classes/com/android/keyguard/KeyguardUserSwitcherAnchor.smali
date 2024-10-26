@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardUserSwitcherAnchor;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -60,7 +60,7 @@
     move-result-object p0
 
     .line 9
-    const v1, 0x7f1400af    # @string/accessibility_multi_user_list_switcher 'pulldown menu'
+    const v1, 0x7f1300b0    # @string/accessibility_multi_user_list_switcher 'pulldown menu'
 
     .line 10
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

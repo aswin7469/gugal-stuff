@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -34,7 +34,7 @@
 
 .field public onFinishListener:Lcom/android/systemui/statusbar/notification/row/OnChannelEditorDialogFinishedListener;
 
-.field public onSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+.field public onSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
 .field public packageName:Ljava/lang/String;
 
@@ -393,7 +393,7 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->onSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->onSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 2
     if-eqz p1, :cond_0
@@ -414,7 +414,7 @@
     move-result p0
 
     .line 16
-    invoke-virtual {p1, v0, p0}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;->onClick(Landroid/app/NotificationChannel;I)V
+    invoke-virtual {p1, v0, p0}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;->onClick(Landroid/app/NotificationChannel;I)V
 
     .line 17
     :cond_0
@@ -422,7 +422,7 @@
     .line 20
 .end method
 
-.method public final prepareDialogForApp(Ljava/lang/String;Ljava/lang/String;ILandroid/app/NotificationChannel;Landroid/graphics/drawable/Drawable;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;)V
+.method public final prepareDialogForApp(Ljava/lang/String;Ljava/lang/String;ILandroid/app/NotificationChannel;Landroid/graphics/drawable/Drawable;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;)V
     .locals 3
 
     .line 1
@@ -503,7 +503,7 @@
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->appNotificationsEnabled:Z
 
     .line 46
-    iput-object p6, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->onSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    iput-object p6, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->onSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 48
     iput-object p4, p0, Lcom/android/systemui/statusbar/notification/row/ChannelEditorDialogController;->channel:Landroid/app/NotificationChannel;
@@ -786,7 +786,7 @@
 
     .line 236
     :cond_5
-    const p4, 0x7f1504be    # @style/Theme.SystemUI.Dialog
+    const p4, 0x7f1404c6    # @style/Theme.SystemUI.Dialog
 
     .line 237
     invoke-direct {p1, p3, p4}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
@@ -838,7 +838,7 @@
 
     .line 269
     :goto_4
-    const p1, 0x7f0e01a8    # @layout/notif_half_shelf 'res/layout/notif_half_shelf.xml'
+    const p1, 0x7f0d01b5    # @layout/notif_half_shelf 'res/layout/notif_half_shelf.xml'
 
     .line 270
     invoke-virtual {p2, p1}, Landroid/app/Dialog;->setContentView(I)V
@@ -856,7 +856,7 @@
     invoke-virtual {p2, p1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 284
-    const p1, 0x7f0b0355    # @id/half_shelf_container
+    const p1, 0x7f0a0374    # @id/half_shelf_container
 
     .line 287
     invoke-virtual {p2, p1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
@@ -905,7 +905,7 @@
     invoke-virtual {p2, p3}, Landroid/app/Dialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
 
     .line 320
-    const p1, 0x7f0b0294    # @id/done_button
+    const p1, 0x7f0a02a3    # @id/done_button
 
     .line 323
     invoke-virtual {p2, p1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
@@ -930,7 +930,7 @@
 
     .line 339
     :cond_a
-    const p1, 0x7f0b06e6    # @id/see_more_button
+    const p1, 0x7f0a070f    # @id/see_more_button
 
     .line 342
     invoke-virtual {p2, p1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;

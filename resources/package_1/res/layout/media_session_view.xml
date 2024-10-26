@@ -95,16 +95,16 @@
                  android:id="@id/media_seamless_image"
                  android:layout_width="@dimen/qs_seamless_icon_size"
                  android:layout_height="@dimen/qs_seamless_icon_size"
-                 android:src="@android:drawable/ic_media_route_on_holo_dark"
+                 android:src="@android:drawable/ic_media_route_on_2_holo_dark"
                  android:tint="?android:attr/textColorPrimary" />
       <TextView android:textSize="12.0sp"
                 android:layout_gravity="center_vertical"
                 android:id="@id/media_seamless_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@android:string/face_acquired_sensor_dirty"
+                android:text="@android:string/face_acquired_mouth_covering_detected"
                 android:singleLine="true"
-                android:fontFamily="@android:string/config_networkOverLimitComponent"
+                android:fontFamily="@android:string/config_misprovisionedBrandValue"
                 android:textDirection="locale"
                 android:layout_marginStart="4.0dp"
                 android:lineHeight="16.0sp" />
@@ -115,7 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:fontFamily="@android:string/config_networkOverLimitComponent" />
+            android:fontFamily="@android:string/config_misprovisionedBrandValue" />
   <com.android.internal.widget.CachingIconView android:id="@id/media_explicit_indicator"
                         android:layout_width="@dimen/qs_media_explicit_indicator_icon_size"
                         android:layout_height="@dimen/qs_media_explicit_indicator_icon_size"
@@ -125,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:fontFamily="@android:string/config_networkLocationProviderPackageName"
+            android:fontFamily="@android:string/config_mediaProjectionPermissionDialogComponent"
             style="@style/MediaPlayer.Subtitle" />
   <ImageButton android:id="@id/actionPlayPause"
                android:layout_width="48.0dp"

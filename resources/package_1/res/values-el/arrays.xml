@@ -5,7 +5,9 @@
     <item>Να εμφανίζεται ποσοστό κατά τη φόρτιση (προεπιλογή)</item>
     <item>Να μην εμφανίζεται αυτό το εικονίδιο</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Να εμφανίζονται ώρες, λεπτά και δευτερόλεπτα</item>
     <item>Να εμφανίζονται ώρες και λεπτά (προεπιλογή)</item>

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/classifier/FalsingDataProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -248,13 +248,13 @@
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingDataProvider;->mGestureFinalizedListeners:Ljava/util/List;
 
     .line 12
-    new-instance v1, Lcom/android/systemui/classifier/FalsingDataProvider$$ExternalSyntheticLambda1;
+    new-instance v1, Lcom/android/systemui/classifier/FalsingDataProvider$$ExternalSyntheticLambda2;
 
     .line 14
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     .line 16
-    invoke-direct {v1, v2, p0}, Lcom/android/systemui/classifier/FalsingDataProvider$$ExternalSyntheticLambda1;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lcom/android/systemui/classifier/FalsingDataProvider$$ExternalSyntheticLambda2;-><init>(ILjava/lang/Object;)V
 
     .line 17
     check-cast v0, Ljava/util/ArrayList;
@@ -467,107 +467,107 @@
     move-object/from16 v1, p1
 
     .line 4
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     .line 6
-    new-instance v3, Ljava/util/ArrayList;
+    const/4 v3, 0x1
 
     .line 7
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    .line 9
     new-instance v4, Ljava/util/ArrayList;
 
-    .line 12
+    .line 8
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 14
+    .line 10
+    new-instance v5, Ljava/util/ArrayList;
+
+    .line 13
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    .line 15
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
-    .line 17
-    move-result v11
-
-    .line 20
-    const/4 v10, 0x0
+    .line 18
+    move-result v12
 
     .line 21
-    move v5, v10
+    move v6, v2
 
     .line 22
     :goto_0
-    if-ge v5, v11, :cond_0
+    if-ge v6, v12, :cond_0
 
     .line 23
-    new-instance v6, Landroid/view/MotionEvent$PointerProperties;
+    new-instance v7, Landroid/view/MotionEvent$PointerProperties;
 
     .line 25
-    invoke-direct {v6}, Landroid/view/MotionEvent$PointerProperties;-><init>()V
+    invoke-direct {v7}, Landroid/view/MotionEvent$PointerProperties;-><init>()V
 
     .line 27
-    invoke-virtual {v1, v5, v6}, Landroid/view/MotionEvent;->getPointerProperties(ILandroid/view/MotionEvent$PointerProperties;)V
+    invoke-virtual {v1, v6, v7}, Landroid/view/MotionEvent;->getPointerProperties(ILandroid/view/MotionEvent$PointerProperties;)V
 
     .line 30
-    invoke-interface {v4, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 33
-    add-int/2addr v5, v2
+    add-int/2addr v6, v3
 
     .line 36
     goto :goto_0
 
     .line 37
     :cond_0
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     .line 38
-    move-result v5
+    move-result v6
 
     .line 41
-    new-array v15, v5, [Landroid/view/MotionEvent$PointerProperties;
+    new-array v11, v6, [Landroid/view/MotionEvent$PointerProperties;
 
     .line 42
-    invoke-interface {v4, v15}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-interface {v5, v11}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 44
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getHistorySize()I
 
     .line 47
-    move-result v4
+    move-result v5
 
     .line 50
-    move v14, v10
+    move v15, v2
 
     .line 51
     :goto_1
-    if-ge v14, v4, :cond_2
+    if-ge v15, v5, :cond_2
 
     .line 52
-    new-instance v12, Ljava/util/ArrayList;
+    new-instance v13, Ljava/util/ArrayList;
 
     .line 54
-    invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
     .line 56
-    move v5, v10
+    move v6, v2
 
     .line 59
     :goto_2
-    if-ge v5, v11, :cond_1
+    if-ge v6, v12, :cond_1
 
     .line 60
-    new-instance v6, Landroid/view/MotionEvent$PointerCoords;
+    new-instance v7, Landroid/view/MotionEvent$PointerCoords;
 
     .line 62
-    invoke-direct {v6}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
+    invoke-direct {v7}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
 
     .line 64
-    invoke-virtual {v1, v5, v14, v6}, Landroid/view/MotionEvent;->getHistoricalPointerCoords(IILandroid/view/MotionEvent$PointerCoords;)V
+    invoke-virtual {v1, v6, v15, v7}, Landroid/view/MotionEvent;->getHistoricalPointerCoords(IILandroid/view/MotionEvent$PointerCoords;)V
 
     .line 67
-    invoke-interface {v12, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v13, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 70
-    add-int/2addr v5, v2
+    add-int/2addr v6, v3
 
     .line 73
     goto :goto_2
@@ -577,37 +577,37 @@
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getDownTime()J
 
     .line 75
-    move-result-wide v5
+    move-result-wide v6
 
     .line 78
-    invoke-virtual {v1, v14}, Landroid/view/MotionEvent;->getHistoricalEventTime(I)J
+    invoke-virtual {v1, v15}, Landroid/view/MotionEvent;->getHistoricalEventTime(I)J
 
     .line 79
-    move-result-wide v7
+    move-result-wide v8
 
     .line 82
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     .line 83
-    move-result v9
+    move-result v10
 
     .line 86
-    new-array v13, v10, [Landroid/view/MotionEvent$PointerCoords;
+    new-array v14, v2, [Landroid/view/MotionEvent$PointerCoords;
 
     .line 87
-    invoke-interface {v12, v13}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-interface {v13, v14}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 89
-    move-result-object v12
+    move-result-object v13
 
     .line 92
-    check-cast v12, [Landroid/view/MotionEvent$PointerCoords;
+    check-cast v13, [Landroid/view/MotionEvent$PointerCoords;
 
     .line 93
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     .line 95
-    move-result v13
+    move-result v14
 
     .line 98
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getButtonState()I
@@ -616,10 +616,10 @@
     move-result v16
 
     .line 102
-    move/from16 v23, v14
+    move/from16 v24, v15
 
     .line 103
-    move/from16 v14, v16
+    move/from16 v15, v16
 
     .line 105
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getXPrecision()F
@@ -628,397 +628,385 @@
     move-result v16
 
     .line 110
-    move-object/from16 v24, v15
-
-    .line 111
-    move/from16 v15, v16
-
-    .line 113
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getYPrecision()F
 
-    .line 115
-    move-result v16
-
-    .line 118
-    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getDeviceId()I
-
-    .line 119
+    .line 111
     move-result v17
 
-    .line 122
-    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getEdgeFlags()I
+    .line 114
+    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getDeviceId()I
 
-    .line 123
+    .line 115
     move-result v18
 
-    .line 126
-    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getSource()I
+    .line 118
+    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getEdgeFlags()I
 
-    .line 127
+    .line 119
     move-result v19
 
-    .line 130
-    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getDisplayId()I
+    .line 122
+    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getSource()I
 
-    .line 131
+    .line 123
     move-result v20
 
-    .line 134
-    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getFlags()I
+    .line 126
+    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getDisplayId()I
 
-    .line 135
+    .line 127
     move-result v21
 
-    .line 138
-    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getClassification()I
+    .line 130
+    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getFlags()I
 
-    .line 139
+    .line 131
     move-result v22
 
+    .line 134
+    invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getClassification()I
+
+    .line 135
+    move-result v23
+
+    .line 138
+    move-object/from16 v25, v11
+
+    .line 139
+    move v11, v12
+
+    .line 141
+    move/from16 v26, v12
+
     .line 142
-    move/from16 v25, v10
+    move-object/from16 v12, v25
 
-    .line 143
-    move v10, v11
-
-    .line 145
-    move/from16 v26, v11
+    .line 144
+    invoke-static/range {v6 .. v23}, Landroid/view/MotionEvent;->obtain(JJII[Landroid/view/MotionEvent$PointerProperties;[Landroid/view/MotionEvent$PointerCoords;IIFFIIIIII)Landroid/view/MotionEvent;
 
     .line 146
-    move-object/from16 v11, v24
+    move-result-object v6
 
-    .line 148
-    invoke-static/range {v5 .. v22}, Landroid/view/MotionEvent;->obtain(JJII[Landroid/view/MotionEvent$PointerProperties;[Landroid/view/MotionEvent$PointerCoords;IIFFIIIIII)Landroid/view/MotionEvent;
+    .line 149
+    invoke-interface {v4, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 150
-    move-result-object v5
+    add-int/lit8 v15, v24, 0x1
 
     .line 153
-    invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-object/from16 v11, v25
 
-    .line 154
-    add-int/lit8 v14, v23, 0x1
+    .line 155
+    move/from16 v12, v26
 
     .line 157
-    move-object/from16 v15, v24
-
-    .line 159
-    move/from16 v10, v25
-
-    .line 161
-    move/from16 v11, v26
-
-    .line 163
     goto :goto_1
 
-    .line 165
+    .line 159
     :cond_2
-    move/from16 v25, v10
-
-    .line 166
     invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtainNoHistory(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    .line 168
-    move-result-object v4
-
-    .line 171
-    invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 172
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    .line 175
-    sget-boolean v4, Lcom/android/systemui/classifier/BrightLineFalsingManager;->DEBUG:Z
-
-    .line 178
-    if-eqz v4, :cond_3
-
-    .line 180
-    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 182
-    move-result-object v4
-
-    .line 185
-    :goto_3
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 186
-    move-result v5
-
-    .line 189
-    if-eqz v5, :cond_3
-
-    .line 190
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 192
+    .line 160
     move-result-object v5
 
-    .line 195
-    check-cast v5, Landroid/view/MotionEvent;
+    .line 163
+    invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 196
-    invoke-virtual {v5}, Landroid/view/MotionEvent;->getX()F
+    .line 164
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    .line 198
-    invoke-virtual {v5}, Landroid/view/MotionEvent;->getY()F
-
-    .line 201
-    invoke-virtual {v5}, Landroid/view/MotionEvent;->getEventTime()J
-
-    .line 204
+    .line 167
     sget-boolean v5, Lcom/android/systemui/classifier/BrightLineFalsingManager;->DEBUG:Z
 
-    .line 207
+    .line 170
+    if-eqz v5, :cond_3
+
+    .line 172
+    invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 174
+    move-result-object v5
+
+    .line 177
+    :goto_3
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 178
+    move-result v6
+
+    .line 181
+    if-eqz v6, :cond_3
+
+    .line 182
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 184
+    move-result-object v6
+
+    .line 187
+    check-cast v6, Landroid/view/MotionEvent;
+
+    .line 188
+    invoke-virtual {v6}, Landroid/view/MotionEvent;->getX()F
+
+    .line 190
+    invoke-virtual {v6}, Landroid/view/MotionEvent;->getY()F
+
+    .line 193
+    invoke-virtual {v6}, Landroid/view/MotionEvent;->getEventTime()J
+
+    .line 196
+    sget-boolean v6, Lcom/android/systemui/classifier/BrightLineFalsingManager;->DEBUG:Z
+
+    .line 199
     goto :goto_3
 
-    .line 209
+    .line 201
     :cond_3
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    .line 210
-    move-result v4
+    .line 202
+    move-result v5
 
-    .line 213
-    if-nez v4, :cond_4
+    .line 205
+    if-nez v5, :cond_4
 
-    .line 214
+    .line 206
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/classifier/FalsingDataProvider;->completePriorGesture()V
 
-    .line 216
+    .line 208
     :cond_4
-    iget-object v4, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
+    iget-object v5, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
 
-    .line 219
-    invoke-virtual {v4}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->size()I
+    .line 211
+    invoke-virtual {v5}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->size()I
 
-    .line 221
-    move-result v4
+    .line 213
+    move-result v5
 
-    .line 224
-    const/4 v5, 0x3
+    .line 216
+    const/4 v6, 0x3
 
-    .line 225
-    if-ge v4, v5, :cond_6
+    .line 217
+    if-ge v5, v6, :cond_6
 
-    .line 226
+    .line 218
     :cond_5
-    move/from16 v10, v25
+    move v5, v2
 
-    .line 228
+    .line 220
     goto :goto_6
 
-    .line 230
+    .line 221
     :cond_6
-    iget-object v4, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
+    iget-object v5, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
+
+    .line 222
+    invoke-virtual {v5}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->size()I
+
+    .line 224
+    move-result v6
+
+    .line 227
+    sub-int/2addr v6, v3
+
+    .line 228
+    iget-object v5, v5, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
+
+    .line 229
+    check-cast v5, Ljava/util/ArrayList;
 
     .line 231
-    invoke-virtual {v4}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->size()I
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     .line 233
-    move-result v5
+    move-result-object v5
 
     .line 236
-    sub-int/2addr v5, v2
+    check-cast v5, Landroid/view/InputEvent;
 
     .line 237
-    iget-object v4, v4, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
+    check-cast v5, Landroid/view/MotionEvent;
 
-    .line 238
-    check-cast v4, Ljava/util/ArrayList;
-
-    .line 240
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    .line 242
-    move-result-object v4
-
-    .line 245
-    check-cast v4, Landroid/view/InputEvent;
-
-    .line 246
-    check-cast v4, Landroid/view/MotionEvent;
-
-    .line 248
+    .line 239
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    .line 250
-    move-result v5
+    .line 241
+    move-result v6
 
-    .line 253
-    if-ne v5, v2, :cond_7
+    .line 244
+    if-ne v6, v3, :cond_7
+
+    .line 245
+    invoke-virtual {v5}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    .line 247
+    move-result v6
+
+    .line 250
+    const/4 v7, 0x2
+
+    .line 251
+    if-ne v6, v7, :cond_7
+
+    .line 252
+    move v6, v3
 
     .line 254
-    invoke-virtual {v4}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    .line 256
-    move-result v5
-
-    .line 259
-    const/4 v6, 0x2
-
-    .line 260
-    if-ne v5, v6, :cond_7
-
-    .line 261
-    move v10, v2
-
-    .line 263
     goto :goto_4
 
-    .line 264
+    .line 255
     :cond_7
-    move/from16 v10, v25
+    move v6, v2
 
-    .line 265
+    .line 256
     :goto_4
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getEventTime()J
 
-    .line 267
-    move-result-wide v5
-
-    .line 270
-    invoke-virtual {v4}, Landroid/view/MotionEvent;->getEventTime()J
-
-    .line 271
+    .line 257
     move-result-wide v7
 
-    .line 274
-    sub-long/2addr v5, v7
+    .line 260
+    invoke-virtual {v5}, Landroid/view/MotionEvent;->getEventTime()J
 
-    .line 275
-    const-wide/16 v7, 0x32
+    .line 261
+    move-result-wide v9
 
-    .line 276
-    cmp-long v4, v5, v7
+    .line 264
+    sub-long/2addr v7, v9
 
-    .line 278
-    if-gez v4, :cond_8
+    .line 265
+    const-wide/16 v9, 0x32
 
-    .line 280
-    move v4, v2
+    .line 266
+    cmp-long v5, v7, v9
 
-    .line 282
+    .line 268
+    if-gez v5, :cond_8
+
+    .line 270
+    move v5, v3
+
+    .line 272
     goto :goto_5
 
-    .line 283
+    .line 273
     :cond_8
-    move/from16 v4, v25
+    move v5, v2
 
-    .line 284
+    .line 274
     :goto_5
-    if-eqz v10, :cond_5
+    if-eqz v6, :cond_5
 
-    .line 286
-    if-eqz v4, :cond_5
+    .line 275
+    if-eqz v5, :cond_5
 
-    .line 288
-    move v10, v2
+    .line 277
+    move v5, v3
 
-    .line 290
+    .line 279
     :goto_6
-    iput-boolean v10, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mDropLastEvent:Z
+    iput-boolean v5, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mDropLastEvent:Z
 
-    .line 291
-    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
+    .line 280
+    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
-    .line 293
-    move-result v4
-
-    .line 296
-    if-nez v4, :cond_a
-
-    .line 297
-    iget-object v4, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentKeyEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
-
-    .line 299
-    iget-object v5, v4, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
-
-    .line 301
-    invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
-
-    .line 303
+    .line 282
     move-result v5
 
-    .line 306
+    .line 285
     if-nez v5, :cond_a
 
-    .line 307
-    iget-object v5, v4, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
+    .line 286
+    iget-object v5, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentKeyEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
 
-    .line 309
-    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    .line 288
+    iget-object v6, v5, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
 
-    .line 311
-    move-result-object v5
+    .line 290
+    invoke-interface {v6}, Ljava/util/List;->isEmpty()Z
 
-    .line 314
-    :goto_7
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 315
+    .line 292
     move-result v6
 
-    .line 318
-    if-eqz v6, :cond_9
+    .line 295
+    if-nez v6, :cond_a
 
-    .line 319
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 296
+    iget-object v6, v5, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
 
-    .line 321
+    .line 298
+    invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 300
     move-result-object v6
 
-    .line 324
-    check-cast v6, Landroid/view/KeyEvent;
+    .line 303
+    :goto_7
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 325
-    invoke-virtual {v6}, Landroid/view/KeyEvent;->recycle()V
+    .line 304
+    move-result v7
 
-    .line 327
+    .line 307
+    if-eqz v7, :cond_9
+
+    .line 308
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 310
+    move-result-object v7
+
+    .line 313
+    check-cast v7, Landroid/view/KeyEvent;
+
+    .line 314
+    invoke-virtual {v7}, Landroid/view/KeyEvent;->recycle()V
+
+    .line 316
     goto :goto_7
 
-    .line 330
+    .line 319
     :cond_9
-    invoke-virtual {v4}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->clear()V
+    invoke-virtual {v5}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->clear()V
 
-    .line 331
+    .line 320
     :cond_a
+    iget-object v5, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
+
+    .line 323
+    invoke-virtual {v5, v4}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->addAll(Ljava/util/Collection;)Z
+
+    .line 325
     iget-object v4, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
 
-    .line 334
-    invoke-virtual {v4, v3}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->addAll(Ljava/util/Collection;)Z
+    .line 328
+    invoke-virtual {v4}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->size()I
 
-    .line 336
-    iget-object v3, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
+    .line 330
+    sget-boolean v4, Lcom/android/systemui/classifier/BrightLineFalsingManager;->DEBUG:Z
+
+    .line 333
+    iget-object v4, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mMotionEventListeners:Ljava/util/List;
+
+    .line 335
+    new-instance v5, Lcom/android/systemui/classifier/FalsingDataProvider$$ExternalSyntheticLambda2;
+
+    .line 337
+    invoke-direct {v5, v2, v1}, Lcom/android/systemui/classifier/FalsingDataProvider$$ExternalSyntheticLambda2;-><init>(ILjava/lang/Object;)V
 
     .line 339
-    invoke-virtual {v3}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->size()I
+    check-cast v4, Ljava/util/ArrayList;
 
-    .line 341
-    sget-boolean v3, Lcom/android/systemui/classifier/BrightLineFalsingManager;->DEBUG:Z
+    .line 342
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
     .line 344
-    iget-object v3, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mMotionEventListeners:Ljava/util/List;
+    iput-boolean v3, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mDirty:Z
 
-    .line 346
-    new-instance v4, Lcom/android/systemui/classifier/FalsingDataProvider$$ExternalSyntheticLambda1;
-
-    .line 348
-    invoke-direct {v4, v2, v1}, Lcom/android/systemui/classifier/FalsingDataProvider$$ExternalSyntheticLambda1;-><init>(ILjava/lang/Object;)V
-
-    .line 350
-    check-cast v3, Ljava/util/ArrayList;
-
-    .line 353
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
-
-    .line 355
-    iput-boolean v2, v0, Lcom/android/systemui/classifier/FalsingDataProvider;->mDirty:Z
-
-    .line 358
+    .line 347
     return-void
-    .line 360
+    .line 349
 .end method
 
 .method public final recalculateData()V

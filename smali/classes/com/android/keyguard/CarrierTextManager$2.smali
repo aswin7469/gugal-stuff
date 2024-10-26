@@ -1,6 +1,6 @@
 .class Lcom/android/keyguard/CarrierTextManager$2;
 .super Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -147,7 +147,7 @@
     const-string p3, " mTelephonyCapable: "
 
     .line 59
-    invoke-static {p1, p3, p2}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {p1, p3, p2}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 61
     move-result-object p1

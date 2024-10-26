@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/domain/interactor/KeyguardBottomAreaInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -67,4 +67,35 @@
     .line 32
     return-void
     .line 34
+.end method
+
+
+# virtual methods
+.method public final setAlpha(F)V
+    .locals 1
+
+    .line 1
+    iget-object p0, p0, Lcom/android/systemui/keyguard/domain/interactor/KeyguardBottomAreaInteractor;->repository:Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;
+
+    .line 2
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 4
+    move-result-object p1
+
+    .line 7
+    iget-object p0, p0, Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;->_bottomAreaAlpha:Lkotlinx/coroutines/flow/StateFlowImpl;
+
+    .line 8
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 10
+    const/4 v0, 0x0
+
+    .line 13
+    invoke-virtual {p0, v0, p1}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 14
+    return-void
+    .line 17
 .end method

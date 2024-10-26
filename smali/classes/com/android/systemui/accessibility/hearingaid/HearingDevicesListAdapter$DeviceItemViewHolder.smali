@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/hearingaid/HearingDevicesListAdapter$DeviceItemViewHolder;
 .super Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -28,7 +28,7 @@
     iput-object p1, p0, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesListAdapter$DeviceItemViewHolder;->mContext:Landroid/content/Context;
 
     .line 5
-    const p1, 0x7f0b0127    # @id/bluetooth_device_row
+    const p1, 0x7f0a012d    # @id/bluetooth_device_row
 
     .line 7
     invoke-virtual {p2, p1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -40,7 +40,7 @@
     iput-object p1, p0, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesListAdapter$DeviceItemViewHolder;->mContainer:Landroid/view/View;
 
     .line 14
-    const p1, 0x7f0b0126    # @id/bluetooth_device_name
+    const p1, 0x7f0a012c    # @id/bluetooth_device_name
 
     .line 16
     invoke-virtual {p2, p1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -55,7 +55,7 @@
     iput-object p1, p0, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesListAdapter$DeviceItemViewHolder;->mNameView:Landroid/widget/TextView;
 
     .line 25
-    const p1, 0x7f0b0128    # @id/bluetooth_device_summary
+    const p1, 0x7f0a012e    # @id/bluetooth_device_summary
 
     .line 27
     invoke-virtual {p2, p1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -70,7 +70,7 @@
     iput-object p1, p0, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesListAdapter$DeviceItemViewHolder;->mSummaryView:Landroid/widget/TextView;
 
     .line 36
-    const p1, 0x7f0b0125    # @id/bluetooth_device_icon
+    const p1, 0x7f0a012b    # @id/bluetooth_device_icon
 
     .line 38
     invoke-virtual {p2, p1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -85,7 +85,7 @@
     iput-object p1, p0, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesListAdapter$DeviceItemViewHolder;->mIconView:Landroid/widget/ImageView;
 
     .line 47
-    const p1, 0x7f0b0321    # @id/gear_icon
+    const p1, 0x7f0a033d    # @id/gear_icon
 
     .line 49
     invoke-virtual {p2, p1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;

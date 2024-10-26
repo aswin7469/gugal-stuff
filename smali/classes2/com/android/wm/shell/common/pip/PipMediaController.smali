@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/pip/PipMediaController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -154,10 +154,10 @@
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverForAllUsers(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
     .line 86
-    const p2, 0x7f14073f    # @string/pip_pause 'Pause'
+    const p2, 0x7f13079b    # @string/pip_pause 'Pause'
 
     .line 89
-    const v1, 0x7f080a95    # @drawable/pip_ic_pause_white 'res/drawable/pip_ic_pause_white.xml'
+    const v1, 0x7f080ad0    # @drawable/pip_ic_pause_white 'res/drawable/pip_ic_pause_white.xml'
 
     .line 92
     invoke-virtual {p0, v7, p2, v1}, Lcom/android/wm/shell/common/pip/PipMediaController;->getDefaultRemoteAction(Ljava/lang/String;II)Landroid/app/RemoteAction;
@@ -169,10 +169,10 @@
     iput-object p2, p0, Lcom/android/wm/shell/common/pip/PipMediaController;->mPauseAction:Landroid/app/RemoteAction;
 
     .line 99
-    const p2, 0x7f140745    # @string/pip_play 'Play'
+    const p2, 0x7f1307a1    # @string/pip_play 'Play'
 
     .line 101
-    const v1, 0x7f080a96    # @drawable/pip_ic_play_arrow_white 'res/drawable/pip_ic_play_arrow_white.xml'
+    const v1, 0x7f080ad1    # @drawable/pip_ic_play_arrow_white 'res/drawable/pip_ic_play_arrow_white.xml'
 
     .line 104
     invoke-virtual {p0, v0, p2, v1}, Lcom/android/wm/shell/common/pip/PipMediaController;->getDefaultRemoteAction(Ljava/lang/String;II)Landroid/app/RemoteAction;
@@ -184,10 +184,10 @@
     iput-object p2, p0, Lcom/android/wm/shell/common/pip/PipMediaController;->mPlayAction:Landroid/app/RemoteAction;
 
     .line 111
-    const p2, 0x7f140747    # @string/pip_skip_to_next 'Skip to next'
+    const p2, 0x7f1307a3    # @string/pip_skip_to_next 'Skip to next'
 
     .line 113
-    const v0, 0x7f080a98    # @drawable/pip_ic_skip_next_white 'res/drawable/pip_ic_skip_next_white.xml'
+    const v0, 0x7f080ad3    # @drawable/pip_ic_skip_next_white 'res/drawable/pip_ic_skip_next_white.xml'
 
     .line 116
     invoke-virtual {p0, v8, p2, v0}, Lcom/android/wm/shell/common/pip/PipMediaController;->getDefaultRemoteAction(Ljava/lang/String;II)Landroid/app/RemoteAction;
@@ -199,10 +199,10 @@
     iput-object p2, p0, Lcom/android/wm/shell/common/pip/PipMediaController;->mNextAction:Landroid/app/RemoteAction;
 
     .line 123
-    const p2, 0x7f140748    # @string/pip_skip_to_prev 'Skip to previous'
+    const p2, 0x7f1307a4    # @string/pip_skip_to_prev 'Skip to previous'
 
     .line 125
-    const v0, 0x7f080a99    # @drawable/pip_ic_skip_previous_white 'res/drawable/pip_ic_skip_previous_white.xml'
+    const v0, 0x7f080ad4    # @drawable/pip_ic_skip_previous_white 'res/drawable/pip_ic_skip_previous_white.xml'
 
     .line 128
     invoke-virtual {p0, v9, p2, v0}, Lcom/android/wm/shell/common/pip/PipMediaController;->getDefaultRemoteAction(Ljava/lang/String;II)Landroid/app/RemoteAction;

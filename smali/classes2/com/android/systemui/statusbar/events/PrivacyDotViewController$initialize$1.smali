@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/events/PrivacyDotViewController$initialize$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -308,7 +308,7 @@
     iput v14, v11, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     .line 150
-    const v11, 0x7f0b0609    # @id/privacy_dot
+    const v11, 0x7f0a0632    # @id/privacy_dot
 
     .line 152
     invoke-virtual {v9, v11}, Landroid/view/View;->requireViewById(I)Landroid/view/View;

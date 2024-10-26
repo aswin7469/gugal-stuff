@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/InternetTileViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -38,13 +38,13 @@
     new-instance v2, Lcom/android/systemui/common/shared/model/Text$Resource;
 
     .line 4
-    const v0, 0x7f1407f6    # @string/quick_settings_networks_unavailable 'Networks unavailable'
+    const v0, 0x7f130851    # @string/quick_settings_networks_unavailable 'Networks unavailable'
 
     .line 6
     invoke-direct {v2, v0}, Lcom/android/systemui/common/shared/model/Text$Resource;-><init>(I)V
 
     .line 9
-    const v1, 0x7f0808ff    # @drawable/ic_qs_no_internet_unavailable 'res/drawable/ic_qs_no_internet_unavailable.xml'
+    const v1, 0x7f080923    # @drawable/ic_qs_no_internet_unavailable 'res/drawable/ic_qs_no_internet_unavailable.xml'
 
     .line 12
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -91,7 +91,7 @@
     iput-object p6, p0, Lcom/android/systemui/statusbar/pipeline/shared/ui/viewmodel/InternetTileViewModel;->context:Landroid/content/Context;
 
     .line 5
-    const v0, 0x7f1407ef    # @string/quick_settings_internet_label 'Internet'
+    const v0, 0x7f13084a    # @string/quick_settings_internet_label 'Internet'
 
     .line 7
     invoke-virtual {p6, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public final Lkotlin/properties/NotNullVar;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -8,8 +8,8 @@
 
 
 # virtual methods
-.method public final getValue(Lkotlin/reflect/KProperty;)Ljava/lang/Object;
-    .locals 2
+.method public final getValue(Ljava/lang/Object;Lkotlin/reflect/KProperty;)Ljava/lang/Object;
+    .locals 1
 
     .line 1
     iget-object p0, p0, Lkotlin/properties/NotNullVar;->value:Ljava/lang/Object;
@@ -25,34 +25,34 @@
     new-instance p0, Ljava/lang/IllegalStateException;
 
     .line 7
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/StringBuilder;
 
     .line 9
-    const-string v1, "Property "
+    const-string v0, "Property "
 
     .line 11
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 13
-    check-cast p1, Lkotlin/jvm/internal/CallableReference;
+    check-cast p2, Lkotlin/jvm/internal/CallableReference;
 
     .line 16
-    invoke-virtual {p1}, Lkotlin/jvm/internal/CallableReference;->getName()Ljava/lang/String;
+    invoke-virtual {p2}, Lkotlin/jvm/internal/CallableReference;->getName()Ljava/lang/String;
 
     .line 18
-    move-result-object p1
+    move-result-object p2
 
     .line 21
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 22
-    const-string p1, " should be initialized before get."
+    const-string p2, " should be initialized before get."
 
     .line 25
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 27
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 30
     move-result-object p1

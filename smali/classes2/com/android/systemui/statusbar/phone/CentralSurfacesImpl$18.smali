@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$18;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;
@@ -31,42 +31,48 @@
     .locals 0
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->lightRevealMigration()Z
-
-    .line 2
-    move-result p2
-
-    .line 5
-    if-nez p2, :cond_0
-
-    .line 6
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$18;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 8
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
+    .line 2
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
-    .line 10
-    iget-object p2, p0, Lcom/android/systemui/statusbar/LightRevealScrim;->revealEffect:Lcom/android/systemui/statusbar/LightRevealEffect;
+    .line 4
+    iget-object p2, p2, Lcom/android/systemui/statusbar/LightRevealScrim;->revealEffect:Lcom/android/systemui/statusbar/LightRevealEffect;
 
-    .line 12
+    .line 6
     instance-of p2, p2, Lcom/android/systemui/statusbar/CircleReveal;
 
-    .line 14
+    .line 8
     if-nez p2, :cond_0
 
-    .line 16
-    const/high16 p2, 0x3f800000    # 1.0f
+    .line 10
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+
+    .line 12
+    invoke-virtual {p2}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->isWakeAndUnlock()Z
+
+    .line 14
+    move-result p2
+
+    .line 17
+    if-nez p2, :cond_0
 
     .line 18
-    sub-float/2addr p2, p1
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
     .line 20
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    .line 22
+    sub-float/2addr p2, p1
+
+    .line 24
     invoke-virtual {p0, p2}, Lcom/android/systemui/statusbar/LightRevealScrim;->setRevealAmount(F)V
 
-    .line 21
+    .line 25
     :cond_0
     return-void
-    .line 24
+    .line 28
 .end method
 
 .method public final onDozingChanged(Z)V
@@ -393,5 +399,4 @@
     .line 48
     :cond_2
     return-void
-    .line 51
 .end method

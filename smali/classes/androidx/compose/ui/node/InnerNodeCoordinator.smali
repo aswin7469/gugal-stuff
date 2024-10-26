@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/node/InnerNodeCoordinator;
 .super Landroidx/compose/ui/node/NodeCoordinator;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -49,7 +49,6 @@
 
     .line 22
     return-void
-    .line 24
 .end method
 
 .method public constructor <init>(Landroidx/compose/ui/node/LayoutNode;)V
@@ -593,7 +592,6 @@
 
     .line 25
     return p0
-    .line 26
 .end method
 
 .method public final maxIntrinsicWidth(I)I
@@ -637,7 +635,6 @@
 
     .line 25
     return p0
-    .line 26
 .end method
 
 .method public final measure-BRTryo0(J)Landroidx/compose/ui/layout/Placeable;
@@ -776,7 +773,6 @@
 
     .line 25
     return p0
-    .line 26
 .end method
 
 .method public final minIntrinsicWidth(I)I
@@ -820,7 +816,6 @@
 
     .line 25
     return p0
-    .line 26
 .end method
 
 .method public final performDraw(Landroidx/compose/ui/graphics/Canvas;Landroidx/compose/ui/graphics/layer/GraphicsLayer;)V

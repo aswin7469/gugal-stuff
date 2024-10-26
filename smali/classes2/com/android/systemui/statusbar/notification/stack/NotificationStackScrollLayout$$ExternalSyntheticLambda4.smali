@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$$ExternalSyntheticLambda4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -61,39 +61,36 @@
 
     .line 16
     :cond_0
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 19
     iget-object v0, p1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mController:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 22
+    .line 19
     const/4 v1, 0x2
 
-    .line 24
+    .line 21
     const/4 v2, 0x0
 
-    .line 25
+    .line 22
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->hasNotifications(IZ)Z
 
-    .line 26
+    .line 23
     move-result v0
 
-    .line 29
+    .line 26
     const/4 v1, 0x1
 
-    .line 30
+    .line 27
     xor-int/2addr v0, v1
 
-    .line 31
+    .line 28
     invoke-virtual {p1, v2, v1, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->clearNotifications(IZZ)V
 
-    .line 32
+    .line 29
     const/4 p1, 0x0
 
-    .line 35
+    .line 32
     invoke-virtual {p0, v2, v1, p1}, Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;->setSecondaryVisible(ZZLcom/android/systemui/statusbar/notification/footer/ui/viewbinder/FooterViewBinder$bindClearAllButton$2$3$1$1;)V
 
-    .line 36
+    .line 33
     return-void
-    .line 39
+    .line 36
 .end method

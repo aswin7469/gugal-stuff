@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/DozeServiceHost;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -347,7 +347,7 @@
     iget-object v0, p1, Lcom/android/systemui/statusbar/phone/DozeScrimController;->mPulseCallback:Lcom/android/systemui/doze/DozeHost$PulseCallback;
 
     .line 14
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     .line 16
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
@@ -365,92 +365,63 @@
     move-result v0
 
     .line 26
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     .line 27
     check-cast p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
     .line 29
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 31
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 34
-    move-result p1
-
-    .line 37
-    if-eqz p1, :cond_1
-
-    .line 38
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mTopHeadsUpRow:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 40
-    invoke-virtual {p0}, Lkotlinx/coroutines/flow/StateFlowImpl;->getValue()Ljava/lang/Object;
-
-    .line 42
-    move-result-object p0
-
-    .line 45
-    check-cast p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;
-
-    .line 46
-    goto :goto_0
-
-    .line 48
-    :cond_1
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->getTopHeadsUpEntry()Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;
 
-    .line 49
+    .line 31
     move-result-object p0
 
-    .line 52
+    .line 34
     check-cast p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;
 
-    .line 53
-    :goto_0
-    if-nez p0, :cond_2
+    .line 35
+    if-nez p0, :cond_1
 
-    .line 55
-    goto :goto_1
+    .line 37
+    goto :goto_0
 
-    .line 57
-    :cond_2
+    .line 39
+    :cond_1
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;->extended:Z
 
-    .line 58
-    if-nez p1, :cond_4
+    .line 40
+    if-nez p1, :cond_3
 
-    .line 60
+    .line 42
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;->extended:Z
 
-    .line 62
+    .line 44
     const/4 p1, 0x0
 
-    .line 64
+    .line 46
     const-string v0, "extendPulse()"
 
-    .line 65
+    .line 47
     invoke-virtual {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;->updateEntry(Ljava/lang/String;Z)V
 
-    .line 67
-    goto :goto_1
+    .line 49
+    goto :goto_0
 
-    .line 70
-    :cond_3
+    .line 52
+    :cond_2
     iget-object p0, p1, Lcom/android/systemui/statusbar/phone/DozeScrimController;->mHandler:Landroid/os/Handler;
 
-    .line 71
+    .line 53
     iget-object p1, p1, Lcom/android/systemui/statusbar/phone/DozeScrimController;->mPulseOut:Lcom/android/systemui/statusbar/phone/DozeScrimController$2;
 
-    .line 73
+    .line 55
     invoke-virtual {p0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 75
-    :cond_4
-    :goto_1
+    .line 57
+    :cond_3
+    :goto_0
     return-void
-    .line 78
+    .line 60
 .end method
 
 .method public final pulseWhileDozing(Lcom/android/systemui/doze/DozeUi$2;I)V
@@ -490,7 +461,7 @@
     move-result-object p0
 
     .line 22
-    check-cast p0, Lcom/android/systemui/assist/AssistManager;
+    check-cast p0, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 23
     new-instance p1, Landroid/os/Bundle;
@@ -499,7 +470,7 @@
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
     .line 27
-    invoke-virtual {p0, p1}, Lcom/android/systemui/assist/AssistManager;->startAssist(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/systemui/assist/AssistManagerGoogle;->startAssist(Landroid/os/Bundle;)V
 
     .line 30
     return-void
@@ -690,32 +661,45 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
     .line 31
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Lcom/google/android/systemui/dreamliner/DockObserver;
 
     .line 33
+    invoke-virtual {v0}, Lcom/google/android/systemui/dreamliner/DockObserver;->isDocked()Z
+
+    .line 35
+    move-result v0
+
+    .line 38
+    if-eqz v0, :cond_0
+
+    .line 39
+    goto :goto_0
+
+    .line 41
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 36
+    .line 42
     if-ne v0, v1, :cond_2
 
-    .line 38
+    .line 44
     :cond_1
+    :goto_0
     iput p1, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mInFrontAlpha:F
 
-    .line 40
+    .line 46
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrims()V
 
-    .line 42
+    .line 48
     :cond_2
     iput p1, v2, Lcom/android/systemui/statusbar/phone/ScrimState;->mAodFrontScrimAlpha:F
 
-    .line 45
+    .line 51
     iput p1, v1, Lcom/android/systemui/statusbar/phone/ScrimState;->mAodFrontScrimAlpha:F
 
-    .line 47
+    .line 53
     return-void
-    .line 49
+    .line 55
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -769,234 +753,231 @@
     invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
 
     .line 2
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 5
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mDozingRequested:Z
 
-    .line 8
+    .line 5
     const/4 v1, 0x0
 
-    .line 10
+    .line 7
     const/4 v2, 0x1
 
-    .line 11
+    .line 8
     if-eqz v0, :cond_0
 
-    .line 12
+    .line 9
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 14
+    .line 11
     check-cast v0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 16
+    .line 13
     iget v0, v0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
 
-    .line 18
+    .line 15
     if-ne v0, v2, :cond_0
 
-    .line 20
+    .line 17
     move v0, v2
 
-    .line 22
+    .line 19
     goto :goto_0
 
-    .line 23
+    .line 20
     :cond_0
     move v0, v1
 
-    .line 24
+    .line 21
     :goto_0
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mBiometricUnlockControllerLazy:Ldagger/Lazy;
 
-    .line 25
+    .line 22
     invoke-interface {v3}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 27
+    .line 24
     move-result-object v3
 
-    .line 30
+    .line 27
     check-cast v3, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 31
+    .line 28
     iget v3, v3, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mMode:I
 
-    .line 33
+    .line 30
     if-ne v3, v2, :cond_1
 
-    .line 35
+    .line 32
     goto :goto_1
 
-    .line 37
+    .line 34
     :cond_1
     move v1, v0
 
-    .line 38
+    .line 35
     :goto_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mCallbacks:Lcom/android/systemui/util/CopyOnLoopListenerSet;
 
-    .line 39
+    .line 36
     invoke-virtual {v0}, Lcom/android/systemui/util/CopyOnLoopListenerSet;->iterator()Ljava/util/Iterator;
 
-    .line 41
+    .line 38
     move-result-object v0
 
-    .line 44
+    .line 41
     :goto_2
     move-object v2, v0
 
-    .line 45
+    .line 42
     check-cast v2, Lkotlin/jvm/internal/ArrayIterator;
 
-    .line 46
+    .line 43
     invoke-virtual {v2}, Lkotlin/jvm/internal/ArrayIterator;->hasNext()Z
 
-    .line 48
+    .line 45
     move-result v3
 
-    .line 51
+    .line 48
     if-eqz v3, :cond_2
 
-    .line 52
+    .line 49
     invoke-virtual {v2}, Lkotlin/jvm/internal/ArrayIterator;->next()Ljava/lang/Object;
 
-    .line 54
+    .line 51
     move-result-object v2
 
-    .line 57
+    .line 54
     check-cast v2, Lcom/android/systemui/doze/DozeHost$Callback;
 
-    .line 58
+    .line 55
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 60
+    .line 57
     goto :goto_2
 
-    .line 63
+    .line 60
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mDozeInteractor:Lcom/android/systemui/keyguard/domain/interactor/DozeInteractor;
 
-    .line 64
+    .line 61
     iget-object v0, v0, Lcom/android/systemui/keyguard/domain/interactor/DozeInteractor;->keyguardRepository:Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;
 
-    .line 66
+    .line 63
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 68
+    .line 65
     move-result-object v2
 
-    .line 71
+    .line 68
     iget-object v0, v0, Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;->_isDozing:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 72
+    .line 69
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 74
+    .line 71
     const/4 v3, 0x0
 
-    .line 77
+    .line 74
     invoke-virtual {v0, v3, v2}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 78
+    .line 75
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 81
+    .line 78
     check-cast p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 83
+    .line 80
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mIsDozing:Z
 
-    .line 85
+    .line 82
     if-ne v0, v1, :cond_3
 
-    .line 87
+    .line 84
     goto :goto_4
 
-    .line 89
+    .line 86
     :cond_3
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mIsDozing:Z
 
-    .line 90
+    .line 87
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mListeners:Ljava/util/ArrayList;
 
-    .line 92
+    .line 89
     monitor-enter v0
 
-    .line 94
+    .line 91
     :try_start_0
     const-string v2, "StatusBarStateControllerImpl#setIsDozing"
 
-    .line 95
+    .line 92
     invoke-static {v2}, Lcom/android/systemui/DejankUtils;->startDetectingBlockingIpcs(Ljava/lang/String;)V
 
-    .line 97
+    .line 94
     new-instance v3, Ljava/util/ArrayList;
 
-    .line 100
+    .line 97
     iget-object p0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mListeners:Ljava/util/ArrayList;
 
-    .line 102
+    .line 99
     invoke-direct {v3, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 104
+    .line 101
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 107
+    .line 104
     move-result-object p0
 
-    .line 110
+    .line 107
     :goto_3
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 111
+    .line 108
     move-result v3
 
-    .line 114
+    .line 111
     if-eqz v3, :cond_4
 
-    .line 115
+    .line 112
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 117
+    .line 114
     move-result-object v3
 
-    .line 120
+    .line 117
     check-cast v3, Lcom/android/systemui/statusbar/SysuiStatusBarStateController$RankedListener;
 
-    .line 121
+    .line 118
     iget-object v3, v3, Lcom/android/systemui/statusbar/SysuiStatusBarStateController$RankedListener;->mListener:Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;
 
-    .line 123
+    .line 120
     invoke-interface {v3, v1}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;->onDozingChanged(Z)V
 
-    .line 125
+    .line 122
     goto :goto_3
 
-    .line 128
+    .line 125
     :catchall_0
     move-exception p0
 
-    .line 129
+    .line 126
     goto :goto_5
 
-    .line 130
+    .line 127
     :cond_4
     invoke-static {v2}, Lcom/android/systemui/DejankUtils;->stopDetectingBlockingIpcs(Ljava/lang/String;)V
 
-    .line 131
+    .line 128
     monitor-exit v0
 
-    .line 134
+    .line 131
     :goto_4
     return-void
 
-    .line 135
+    .line 132
     :goto_5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 136
+    .line 133
     throw p0
-    .line 137
+    .line 134
 .end method

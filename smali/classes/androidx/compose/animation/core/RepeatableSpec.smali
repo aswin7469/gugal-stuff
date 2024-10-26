@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/animation/core/RepeatableSpec;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/animation/core/FiniteAnimationSpec;
@@ -167,40 +167,37 @@
     .line 31
 .end method
 
-.method public final bridge synthetic vectorize(Landroidx/compose/animation/core/TwoWayConverter;)Landroidx/compose/animation/core/VectorizedAnimationSpec;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Landroidx/compose/animation/core/RepeatableSpec;->vectorize(Landroidx/compose/animation/core/TwoWayConverter;)Landroidx/compose/animation/core/VectorizedFiniteAnimationSpec;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final vectorize(Landroidx/compose/animation/core/TwoWayConverter;)Landroidx/compose/animation/core/VectorizedFiniteAnimationSpec;
+.method public final vectorize(Landroidx/compose/animation/core/TwoWayConverter;)Landroidx/compose/animation/core/VectorizedAnimationSpec;
     .locals 7
 
-    .line 2
+    .line 1
     new-instance v6, Landroidx/compose/animation/core/VectorizedRepeatableSpec;
 
-    .line 3
+    .line 2
     iget-object v0, p0, Landroidx/compose/animation/core/RepeatableSpec;->animation:Landroidx/compose/animation/core/DurationBasedAnimationSpec;
 
+    .line 4
     invoke-interface {v0, p1}, Landroidx/compose/animation/core/DurationBasedAnimationSpec;->vectorize(Landroidx/compose/animation/core/TwoWayConverter;)Landroidx/compose/animation/core/VectorizedDurationBasedAnimationSpec;
 
+    .line 6
     move-result-object v2
 
-    .line 4
+    .line 9
     iget v1, p0, Landroidx/compose/animation/core/RepeatableSpec;->iterations:I
 
+    .line 10
     iget-object v3, p0, Landroidx/compose/animation/core/RepeatableSpec;->repeatMode:Landroidx/compose/animation/core/RepeatMode;
 
+    .line 12
     iget-wide v4, p0, Landroidx/compose/animation/core/RepeatableSpec;->initialStartOffset:J
 
+    .line 14
     move-object v0, v6
 
+    .line 16
     invoke-direct/range {v0 .. v5}, Landroidx/compose/animation/core/VectorizedRepeatableSpec;-><init>(ILandroidx/compose/animation/core/VectorizedDurationBasedAnimationSpec;Landroidx/compose/animation/core/RepeatMode;J)V
 
+    .line 17
     return-object v6
+    .line 20
 .end method

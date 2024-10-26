@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/LocationControllerImpl;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/LocationController;
@@ -41,205 +41,244 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/appops/AppOpsController;Lcom/android/systemui/util/DeviceConfigProxy;Landroid/os/Looper;Landroid/os/Handler;Lcom/android/systemui/broadcast/BroadcastDispatcher;Lcom/android/systemui/BootCompleteCacheImpl;Lcom/android/systemui/settings/UserTracker;Landroid/content/pm/PackageManager;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/util/settings/SecureSettings;)V
-    .locals 2
+    .locals 12
 
     .line 1
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    move-object v7, p0
 
     .line 2
-    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mContext:Landroid/content/Context;
+    move-object v8, p2
 
-    .line 5
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mAppOpsController:Lcom/android/systemui/appops/AppOpsController;
+    .line 3
+    move-object/from16 v9, p5
 
-    .line 7
-    iput-object p3, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mDeviceConfigProxy:Lcom/android/systemui/util/DeviceConfigProxy;
+    .line 4
+    move-object/from16 v0, p11
 
-    .line 9
-    iput-object p7, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mBootCompleteCache:Lcom/android/systemui/BootCompleteCacheImpl;
+    .line 6
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    .line 8
+    move-object v1, p1
 
     .line 11
-    new-instance p1, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$H;
+    iput-object v1, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mContext:Landroid/content/Context;
 
-    .line 13
-    invoke-direct {p1, p0, p4}, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$H;-><init>(Lcom/android/systemui/statusbar/policy/LocationControllerImpl;Landroid/os/Looper;)V
+    .line 12
+    iput-object v8, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mAppOpsController:Lcom/android/systemui/appops/AppOpsController;
 
-    .line 15
-    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mHandler:Lcom/android/systemui/statusbar/policy/LocationControllerImpl$H;
+    .line 14
+    move-object v1, p3
 
-    .line 18
-    iput-object p8, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
+    .line 16
+    iput-object v1, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mDeviceConfigProxy:Lcom/android/systemui/util/DeviceConfigProxy;
 
-    .line 20
-    iput-object p10, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
+    .line 17
+    move-object/from16 v2, p7
 
-    .line 22
-    iput-object p11, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mSecureSettings:Lcom/android/systemui/util/settings/SecureSettings;
+    .line 19
+    iput-object v2, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mBootCompleteCache:Lcom/android/systemui/BootCompleteCacheImpl;
 
-    .line 24
-    iput-object p5, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mBackgroundHandler:Landroid/os/Handler;
+    .line 21
+    new-instance v3, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$H;
 
-    .line 26
-    iput-object p9, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mPackageManager:Landroid/content/pm/PackageManager;
+    .line 23
+    move-object/from16 v2, p4
 
-    .line 28
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 25
+    invoke-direct {v3, p0, v2}, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$H;-><init>(Lcom/android/systemui/statusbar/policy/LocationControllerImpl;Landroid/os/Looper;)V
+
+    .line 27
+    iput-object v3, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mHandler:Lcom/android/systemui/statusbar/policy/LocationControllerImpl$H;
 
     .line 30
-    const-string p4, "location_indicators_small_enabled"
+    move-object/from16 v2, p8
 
-    .line 33
-    const-string p7, "privacy"
+    .line 32
+    iput-object v2, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 35
-    const/4 v0, 0x0
+    .line 34
+    move-object/from16 v2, p10
 
-    .line 37
-    invoke-static {p7, p4, v0}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
+    .line 36
+    iput-object v2, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
     .line 38
-    move-result p4
+    iput-object v0, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mSecureSettings:Lcom/android/systemui/util/settings/SecureSettings;
 
-    .line 41
-    iput-boolean p4, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mShouldDisplayAllAccesses:Z
+    .line 40
+    iput-object v9, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mBackgroundHandler:Landroid/os/Handler;
 
     .line 42
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object/from16 v2, p9
 
     .line 44
-    const-string p3, "location_indicators_show_system"
+    iput-object v2, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 47
-    invoke-static {p7, p3, v0}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
+    .line 46
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 49
-    move-result p3
+    .line 48
+    const-string v2, "location_indicators_small_enabled"
 
-    .line 52
-    iput-boolean p3, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mShowSystemAccessesFlag:Z
+    .line 51
+    const-string v4, "privacy"
 
     .line 53
-    const/4 p3, -0x2
+    const/4 v10, 0x0
 
     .line 55
-    const-string p4, "locationShowSystemOps"
+    invoke-static {v4, v2, v10}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     .line 56
-    invoke-interface {p11, p4, v0, p3}, Lcom/android/systemui/util/settings/UserSettingsProxy;->getIntForUser(Ljava/lang/String;II)I
+    move-result v2
 
-    .line 58
-    move-result p3
+    .line 59
+    iput-boolean v2, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mShouldDisplayAllAccesses:Z
 
-    .line 61
-    const/4 v1, 0x1
+    .line 60
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 62
-    if-ne p3, v1, :cond_0
-
-    .line 63
-    move p3, v1
+    const-string v1, "location_indicators_show_system"
 
     .line 65
-    goto :goto_0
-
-    .line 66
-    :cond_0
-    move p3, v0
+    invoke-static {v4, v1, v10}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     .line 67
-    :goto_0
-    iput-boolean p3, p0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mShowSystemAccessesSetting:Z
-
-    .line 68
-    new-instance p3, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$1;
+    move-result v1
 
     .line 70
-    invoke-direct {p3, p0, p5}, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$1;-><init>(Lcom/android/systemui/statusbar/policy/LocationControllerImpl;Landroid/os/Handler;)V
+    iput-boolean v1, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mShowSystemAccessesFlag:Z
 
-    .line 72
-    const/4 p8, -0x1
+    .line 71
+    const/4 v1, -0x2
 
-    .line 75
-    invoke-interface {p11, p4, p3, p8}, Lcom/android/systemui/util/settings/UserSettingsProxy;->registerContentObserverForUserSync(Ljava/lang/String;Landroid/database/ContentObserver;I)V
+    .line 73
+    const-string v2, "locationShowSystemOps"
+
+    .line 74
+    invoke-interface {v0, v2, v10, v1}, Lcom/android/systemui/util/settings/UserSettingsProxy;->getIntForUser(Ljava/lang/String;II)I
 
     .line 76
-    invoke-static {p5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v1
 
     .line 79
-    new-instance p3, Landroidx/emoji2/text/ConcurrencyHelpers$$ExternalSyntheticLambda0;
+    const/4 v11, 0x1
 
-    .line 82
-    invoke-direct {p3, p5}, Landroidx/emoji2/text/ConcurrencyHelpers$$ExternalSyntheticLambda0;-><init>(Landroid/os/Handler;)V
+    .line 80
+    if-ne v1, v11, :cond_0
+
+    .line 81
+    move v1, v11
+
+    .line 83
+    goto :goto_0
 
     .line 84
-    new-instance p4, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$$ExternalSyntheticLambda0;
+    :cond_0
+    move v1, v10
 
-    .line 87
-    invoke-direct {p4, p0}, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/policy/LocationControllerImpl;)V
+    .line 85
+    :goto_0
+    iput-boolean v1, v7, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->mShowSystemAccessesSetting:Z
 
-    .line 89
-    invoke-static {p7, p3, p4}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
+    .line 86
+    new-instance v1, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$1;
 
-    .line 92
-    new-instance p8, Landroid/content/IntentFilter;
+    .line 88
+    invoke-direct {v1, p0, v9}, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$1;-><init>(Lcom/android/systemui/statusbar/policy/LocationControllerImpl;Landroid/os/Handler;)V
 
-    .line 95
-    invoke-direct {p8}, Landroid/content/IntentFilter;-><init>()V
+    .line 90
+    const/4 v5, -0x1
+
+    .line 93
+    invoke-interface {v0, v2, v1, v5}, Lcom/android/systemui/util/settings/UserSettingsProxy;->registerContentObserverForUserSync(Ljava/lang/String;Landroid/database/ContentObserver;I)V
+
+    .line 94
+    invoke-static/range {p5 .. p5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 97
-    const-string p3, "android.location.MODE_CHANGED"
+    new-instance v0, Landroidx/emoji2/text/ConcurrencyHelpers$$ExternalSyntheticLambda0;
 
     .line 100
-    invoke-virtual {p8, p3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-direct {v0, v9}, Landroidx/emoji2/text/ConcurrencyHelpers$$ExternalSyntheticLambda0;-><init>(Landroid/os/Handler;)V
 
     .line 102
-    sget-object p10, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+    new-instance v1, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$$ExternalSyntheticLambda0;
 
     .line 105
-    invoke-virtual {p6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/policy/LocationControllerImpl;)V
 
     .line 107
-    const/16 p11, 0x30
+    invoke-static {v4, v0, v1}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
     .line 110
-    move-object p7, p0
-
-    .line 112
-    move-object p9, p1
+    new-instance v2, Landroid/content/IntentFilter;
 
     .line 113
-    invoke-static/range {p6 .. p11}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;I)V
+    invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 114
-    const/16 p1, 0x2a
+    .line 115
+    const-string v0, "android.location.MODE_CHANGED"
 
-    .line 117
-    filled-new-array {v0, v1, p1}, [I
+    .line 118
+    invoke-virtual {v2, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 119
-    move-result-object p1
-
-    .line 122
-    check-cast p2, Lcom/android/systemui/appops/AppOpsControllerImpl;
+    .line 120
+    sget-object v4, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     .line 123
-    invoke-virtual {p2, p1, p0}, Lcom/android/systemui/appops/AppOpsControllerImpl;->addCallback([ILcom/android/systemui/appops/AppOpsController$Callback;)V
+    invoke-virtual/range {p6 .. p6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 125
-    new-instance p1, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$$ExternalSyntheticLambda1;
+    const/16 v6, 0x30
 
     .line 128
-    const/4 p2, 0x0
+    const/4 v5, 0x0
 
     .line 130
-    invoke-direct {p1, p0, p2}, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/policy/LocationControllerImpl;I)V
+    move-object/from16 v0, p6
 
     .line 131
-    invoke-virtual {p5, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-object v1, p0
+
+    .line 133
+    invoke-static/range {v0 .. v6}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;II)V
 
     .line 134
-    return-void
+    const/16 v0, 0x2a
+
     .line 137
+    filled-new-array {v10, v11, v0}, [I
+
+    .line 139
+    move-result-object v0
+
+    .line 142
+    move-object v1, v8
+
+    .line 143
+    check-cast v1, Lcom/android/systemui/appops/AppOpsControllerImpl;
+
+    .line 144
+    invoke-virtual {v1, v0, p0}, Lcom/android/systemui/appops/AppOpsControllerImpl;->addCallback([ILcom/android/systemui/appops/AppOpsController$Callback;)V
+
+    .line 146
+    new-instance v0, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$$ExternalSyntheticLambda1;
+
+    .line 149
+    const/4 v1, 0x0
+
+    .line 151
+    invoke-direct {v0, p0, v1}, Lcom/android/systemui/statusbar/policy/LocationControllerImpl$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/policy/LocationControllerImpl;I)V
+
+    .line 152
+    invoke-virtual {v9, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 155
+    return-void
+    .line 158
 .end method
 
 

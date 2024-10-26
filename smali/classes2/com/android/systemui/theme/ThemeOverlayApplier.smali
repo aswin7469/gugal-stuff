@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/theme/ThemeOverlayApplier;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -195,10 +195,10 @@
     iput-object p4, p0, Lcom/android/systemui/theme/ThemeOverlayApplier;->mThemePickerPackage:Ljava/lang/String;
 
     .line 27
-    const-string v6, "android.theme.customization.adaptive_icon_shape"
+    const-string v4, "android.theme.customization.dynamic_color"
 
     .line 29
-    const-string v7, "android.theme.customization.icon_pack.android"
+    const-string v5, "android.theme.customization.font"
 
     .line 31
     const-string v2, "android.theme.customization.system_palette"
@@ -207,10 +207,10 @@
     const-string v3, "android.theme.customization.accent_color"
 
     .line 35
-    const-string v4, "android.theme.customization.dynamic_color"
+    const-string v6, "android.theme.customization.adaptive_icon_shape"
 
     .line 37
-    const-string v5, "android.theme.customization.font"
+    const-string v7, "android.theme.customization.icon_pack.android"
 
     .line 39
     filled-new-array/range {v2 .. v7}, [Ljava/lang/String;
@@ -228,7 +228,7 @@
     const-string p2, "android"
 
     .line 49
-    invoke-interface {v0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p2, p1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 51
     const-string p1, "android.theme.customization.icon_pack.systemui"
@@ -249,7 +249,7 @@
     const-string v2, "com.android.systemui"
 
     .line 64
-    invoke-interface {v0, v2, p6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, p6}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 66
     const-string p6, "android.theme.customization.icon_pack.settings"
@@ -270,7 +270,7 @@
     const-string v4, "com.android.settings"
 
     .line 79
-    invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v4, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 81
     const-string v3, "android.theme.customization.icon_pack.launcher"
@@ -288,7 +288,7 @@
     move-result-object v5
 
     .line 93
-    invoke-interface {v0, p3, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p3, v5}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 94
     const-string v5, "android.theme.customization.icon_pack.themepicker"
@@ -306,59 +306,62 @@
     move-result-object v6
 
     .line 106
-    invoke-interface {v0, p4, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p4, v6}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 107
     const-string v0, "android.theme.customization.accent_color"
 
     .line 110
-    invoke-interface {v1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 112
     const-string v0, "android.theme.customization.dynamic_color"
 
     .line 115
-    invoke-interface {v1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 117
     const-string v0, "android.theme.customization.font"
 
     .line 120
-    invoke-interface {v1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 122
     const-string v0, "android.theme.customization.adaptive_icon_shape"
 
     .line 125
-    invoke-interface {v1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 127
     const-string v0, "android.theme.customization.icon_pack.android"
 
     .line 130
-    invoke-interface {v1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 132
-    invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 135
-    invoke-interface {v1, p6, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p6, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 138
-    invoke-interface {v1, v3, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v3, p3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 141
-    invoke-interface {v1, v5, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v5, p4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 144
-    const-string p1, "ThemeOverlayApplier"
+    invoke-virtual {p5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 147
-    invoke-virtual {p5, p1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
+    const-string p1, "ThemeOverlayApplier"
 
-    .line 149
-    return-void
+    .line 150
+    invoke-static {p5, p1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
+
     .line 152
+    return-void
+    .line 155
 .end method
 
 
@@ -479,199 +482,190 @@
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 32
-    invoke-virtual {v0, p6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v0, p6, v1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)V
 
     .line 35
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 38
-    move-result-object v0
-
-    .line 41
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 42
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/theme/ThemeOverlayApplier;->mOverlayManager:Landroid/content/om/OverlayManager;
 
-    .line 45
+    .line 38
     invoke-static {p4}, Landroid/os/UserHandle;->of(I)Landroid/os/UserHandle;
 
-    .line 47
+    .line 40
     move-result-object v2
 
-    .line 50
+    .line 43
     invoke-virtual {v0, p2, v2}, Landroid/content/om/OverlayManager;->getOverlayInfo(Landroid/content/om/OverlayIdentifier;Landroid/os/UserHandle;)Landroid/content/om/OverlayInfo;
 
-    .line 51
+    .line 44
     move-result-object v0
 
-    .line 54
+    .line 47
     if-nez v0, :cond_1
 
-    .line 55
+    .line 48
     if-nez p7, :cond_1
 
-    .line 57
+    .line 50
     new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 59
+    .line 52
     const-string p1, "Won\'t enable "
 
-    .line 61
+    .line 54
     invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 63
+    .line 56
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 66
+    .line 59
     const-string p1, ", it doesn\'t exist for user"
 
-    .line 69
+    .line 62
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 71
+    .line 64
     invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 74
+    .line 67
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 77
+    .line 70
     move-result-object p0
 
-    .line 80
+    .line 73
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
+    .line 74
     return-void
 
-    .line 84
+    .line 77
     :cond_1
     invoke-virtual {p1, p2, p6, p4}, Landroid/content/om/OverlayManagerTransaction$Builder;->setEnabled(Landroid/content/om/OverlayIdentifier;ZI)Landroid/content/om/OverlayManagerTransaction$Builder;
 
-    .line 85
+    .line 78
     sget-object p7, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
 
-    .line 88
+    .line 81
     invoke-virtual {p7}, Landroid/os/UserHandle;->getIdentifier()I
 
-    .line 90
+    .line 83
     move-result v0
 
-    .line 93
+    .line 86
     if-eq p4, v0, :cond_2
 
-    .line 94
+    .line 87
     sget-object p4, Lcom/android/systemui/theme/ThemeOverlayApplier;->SYSTEM_USER_CATEGORIES:Ljava/util/Set;
 
-    .line 96
+    .line 89
     invoke-interface {p4, p3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    .line 98
+    .line 91
     move-result p3
 
-    .line 101
+    .line 94
     if-eqz p3, :cond_2
 
-    .line 102
+    .line 95
     invoke-virtual {p7}, Landroid/os/UserHandle;->getIdentifier()I
 
-    .line 104
+    .line 97
     move-result p3
 
-    .line 107
+    .line 100
     invoke-virtual {p1, p2, p6, p3}, Landroid/content/om/OverlayManagerTransaction$Builder;->setEnabled(Landroid/content/om/OverlayIdentifier;ZI)Landroid/content/om/OverlayManagerTransaction$Builder;
 
-    .line 108
+    .line 101
     :cond_2
     iget-object p3, p0, Lcom/android/systemui/theme/ThemeOverlayApplier;->mOverlayManager:Landroid/content/om/OverlayManager;
 
-    .line 111
+    .line 104
     invoke-virtual {p3, p2, p7}, Landroid/content/om/OverlayManager;->getOverlayInfo(Landroid/content/om/OverlayIdentifier;Landroid/os/UserHandle;)Landroid/content/om/OverlayInfo;
 
-    .line 113
+    .line 106
     move-result-object p3
 
-    .line 116
+    .line 109
     if-eqz p3, :cond_4
 
-    .line 117
+    .line 110
     iget-object p4, p3, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
 
-    .line 119
+    .line 112
     iget-object p7, p0, Lcom/android/systemui/theme/ThemeOverlayApplier;->mLauncherPackage:Ljava/lang/String;
 
-    .line 121
+    .line 114
     invoke-virtual {p4, p7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 123
+    .line 116
     move-result p4
 
-    .line 126
+    .line 119
     if-nez p4, :cond_4
 
-    .line 127
+    .line 120
     iget-object p3, p3, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
 
-    .line 129
+    .line 122
     iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayApplier;->mThemePickerPackage:Ljava/lang/String;
 
-    .line 131
+    .line 124
     invoke-virtual {p3, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 133
+    .line 126
     move-result p0
 
-    .line 136
+    .line 129
     if-eqz p0, :cond_3
 
-    .line 137
+    .line 130
     goto :goto_1
 
-    .line 139
+    .line 132
     :cond_3
     check-cast p5, Ljava/util/HashSet;
 
-    .line 140
+    .line 133
     invoke-virtual {p5}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    .line 142
+    .line 135
     move-result-object p0
 
-    .line 145
+    .line 138
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 146
+    .line 139
     move-result p3
 
-    .line 149
+    .line 142
     if-eqz p3, :cond_4
 
-    .line 150
+    .line 143
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 152
+    .line 145
     move-result-object p3
 
-    .line 155
+    .line 148
     check-cast p3, Landroid/os/UserHandle;
 
-    .line 156
+    .line 149
     invoke-virtual {p3}, Landroid/os/UserHandle;->getIdentifier()I
 
-    .line 158
+    .line 151
     move-result p3
 
-    .line 161
+    .line 154
     invoke-virtual {p1, p2, p6, p3}, Landroid/content/om/OverlayManagerTransaction$Builder;->setEnabled(Landroid/content/om/OverlayIdentifier;ZI)Landroid/content/om/OverlayManagerTransaction$Builder;
 
-    .line 162
+    .line 155
     goto :goto_0
 
-    .line 165
+    .line 158
     :cond_4
     :goto_1
     return-void
-    .line 166
+    .line 159
 .end method

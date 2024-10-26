@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardActiveUnlockModel;
 .super Lcom/android/keyguard/KeyguardListenModel;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -36,56 +36,56 @@
     .locals 11
 
     .line 1
-    const-string v9, "triggerActiveUnlockForAssistant"
+    const-string/jumbo v9, "triggerActiveUnlockForAssistant"
 
     .line 2
     const-string/jumbo v10, "userCanDismissLockScreen"
 
-    .line 4
-    const-string v0, "timestamp"
+    .line 5
+    const-string/jumbo v0, "timestamp"
 
-    .line 7
-    const-string v1, "time_millis"
-
-    .line 9
-    const-string/jumbo v2, "userId"
+    .line 8
+    const-string/jumbo v1, "time_millis"
 
     .line 11
-    const-string v3, "listening"
+    const-string/jumbo v2, "userId"
 
     .line 14
+    const-string v3, "listening"
+
+    .line 17
     const-string v4, "awakeKeyguard"
 
-    .line 16
+    .line 19
     const-string v5, "authInterruptActive"
 
-    .line 18
+    .line 21
     const-string v6, "fpLockedOut"
 
-    .line 20
+    .line 23
     const-string v7, "primaryAuthRequired"
 
-    .line 22
-    const-string v8, "switchingUser"
+    .line 25
+    const-string/jumbo v8, "switchingUser"
 
-    .line 24
+    .line 27
     filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
-
-    .line 26
-    move-result-object v0
-
-    .line 29
-    invoke-static {v0}, Lkotlin/collections/CollectionsKt__CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
 
     .line 30
     move-result-object v0
 
     .line 33
-    sput-object v0, Lcom/android/keyguard/KeyguardActiveUnlockModel;->TABLE_HEADERS:Ljava/util/List;
+    invoke-static {v0}, Lkotlin/collections/CollectionsKt__CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
 
     .line 34
+    move-result-object v0
+
+    .line 37
+    sput-object v0, Lcom/android/keyguard/KeyguardActiveUnlockModel;->TABLE_HEADERS:Ljava/util/List;
+
+    .line 38
     return-void
-    .line 36
+    .line 40
 .end method
 
 .method public constructor <init>(JIZZZZZZZZ)V

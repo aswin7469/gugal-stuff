@@ -1,13 +1,9 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
-.field public final isChildInGroup:Z
-
-.field public final isGroupSummary:Z
-
 .field public final isMinimized:Z
 
 .field public final needsRedaction:Z
@@ -34,15 +30,9 @@
     iput-boolean p3, p0, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;->showSnooze:Z
 
     .line 9
-    iput-boolean p4, p0, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;->isChildInGroup:Z
-
-    .line 11
-    iput-boolean p5, p0, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;->isGroupSummary:Z
-
-    .line 13
     iput-boolean p6, p0, Lcom/android/systemui/statusbar/notification/collection/inflation/NotifInflater$Params;->needsRedaction:Z
 
-    .line 15
+    .line 11
     return-void
-    .line 17
+    .line 13
 .end method

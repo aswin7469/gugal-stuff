@@ -1,6 +1,6 @@
 .class public Landroidx/recyclerview/widget/RecyclerView;
 .super Landroid/view/ViewGroup;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -303,7 +303,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const v0, 0x7f040516    # @attr/recyclerViewStyle
+    const v0, 0x7f040519    # @attr/recyclerViewStyle
 
     .line 2
     invoke-direct {p0, p1, p2, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -1303,7 +1303,7 @@
     .line 118
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    const v1, 0x7f0b03b0    # @id/is_pooling_container_tag
+    const v1, 0x7f0a03d1    # @id/is_pooling_container_tag
 
     invoke-virtual {v8, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
@@ -7475,7 +7475,6 @@
     .line 25
     :goto_1
     return-object p1
-    .line 26
 .end method
 
 .method public final findInterceptingOnItemTouchListener(Landroid/view/MotionEvent;)Z
@@ -10356,7 +10355,7 @@
     new-instance v1, Landroidx/recyclerview/widget/FastScroller;
 
     .line 18
-    const v2, 0x7f0702da    # @dimen/fastscroll_default_thickness '8.0dp'
+    const v2, 0x7f07030a    # @dimen/fastscroll_default_thickness '8.0dp'
 
     .line 20
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -10365,7 +10364,7 @@
     move-result v7
 
     .line 26
-    const v2, 0x7f0702dc    # @dimen/fastscroll_minimum_range '50.0dp'
+    const v2, 0x7f07030c    # @dimen/fastscroll_minimum_range '50.0dp'
 
     .line 27
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -10374,7 +10373,7 @@
     move-result v8
 
     .line 33
-    const v2, 0x7f0702db    # @dimen/fastscroll_margin '0.0dp'
+    const v2, 0x7f07030b    # @dimen/fastscroll_margin '0.0dp'
 
     .line 34
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -17133,116 +17132,116 @@
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/AdapterHelper;->recycleUpdateOpsAndClearList(Ljava/util/List;)V
 
     .line 34
-    iput v0, v1, Landroidx/recyclerview/widget/AdapterHelper;->mExistingUpdateTypes:I
+    const/4 v2, 0x0
 
     .line 37
+    iput v2, v1, Landroidx/recyclerview/widget/AdapterHelper;->mExistingUpdateTypes:I
+
+    .line 38
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
-    .line 39
+    .line 40
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
-    .line 41
+    .line 42
     if-eqz p1, :cond_1
 
-    .line 43
-    iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView;->mObserver:Landroidx/recyclerview/widget/RecyclerView$RecyclerViewDataObserver;
+    .line 44
+    iget-object v3, p0, Landroidx/recyclerview/widget/RecyclerView;->mObserver:Landroidx/recyclerview/widget/RecyclerView$RecyclerViewDataObserver;
 
-    .line 45
-    iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView$Adapter;->mObservable:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
+    .line 46
+    iget-object v4, p1, Landroidx/recyclerview/widget/RecyclerView$Adapter;->mObservable:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
 
-    .line 47
-    invoke-virtual {v3, v2}, Landroid/database/Observable;->registerObserver(Ljava/lang/Object;)V
+    .line 48
+    invoke-virtual {v4, v3}, Landroid/database/Observable;->registerObserver(Ljava/lang/Object;)V
 
-    .line 49
+    .line 50
     invoke-virtual {p1, p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 52
+    .line 53
     :cond_1
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView;->mLayout:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
-    .line 55
+    .line 56
     if-eqz p1, :cond_2
 
-    .line 57
+    .line 58
     invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->onAdapterChanged(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 59
+    .line 60
     :cond_2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView;->mRecycler:Landroidx/recyclerview/widget/RecyclerView$Recycler;
 
-    .line 62
-    iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    .line 63
+    iget-object v3, p0, Landroidx/recyclerview/widget/RecyclerView;->mAdapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
-    .line 64
-    iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView$Recycler;->mAttachedScrap:Ljava/util/ArrayList;
+    .line 65
+    iget-object v4, p1, Landroidx/recyclerview/widget/RecyclerView$Recycler;->mAttachedScrap:Ljava/util/ArrayList;
 
-    .line 66
-    invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
+    .line 67
+    invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 68
+    .line 69
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->recycleAndClearCachedViews()V
 
-    .line 71
-    const/4 v3, 0x1
-
-    .line 74
-    invoke-virtual {p1, v1, v3}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->poolingContainerDetach(Landroidx/recyclerview/widget/RecyclerView$Adapter;Z)V
+    .line 72
+    const/4 v4, 0x1
 
     .line 75
+    invoke-virtual {p1, v1, v4}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->poolingContainerDetach(Landroidx/recyclerview/widget/RecyclerView$Adapter;Z)V
+
+    .line 76
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->getRecycledViewPool()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
-    .line 78
-    move-result-object v4
-
-    .line 81
-    if-eqz v1, :cond_3
-
-    .line 82
-    iget v1, v4, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mAttachCountForClearing:I
-
-    .line 84
-    sub-int/2addr v1, v3
-
-    .line 86
-    iput v1, v4, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mAttachCountForClearing:I
-
-    .line 87
-    :cond_3
-    iget v1, v4, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mAttachCountForClearing:I
-
-    .line 89
-    if-nez v1, :cond_5
-
-    .line 91
-    move v1, v0
-
-    .line 93
-    :goto_0
-    iget-object v5, v4, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
-
-    .line 94
-    invoke-virtual {v5}, Landroid/util/SparseArray;->size()I
-
-    .line 96
-    move-result v5
-
-    .line 99
-    if-ge v1, v5, :cond_5
-
-    .line 100
-    iget-object v5, v4, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
-
-    .line 102
-    invoke-virtual {v5, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
-
-    .line 104
+    .line 79
     move-result-object v5
 
+    .line 82
+    if-eqz v1, :cond_3
+
+    .line 83
+    iget v1, v5, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mAttachCountForClearing:I
+
+    .line 85
+    sub-int/2addr v1, v4
+
+    .line 87
+    iput v1, v5, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mAttachCountForClearing:I
+
+    .line 88
+    :cond_3
+    iget v1, v5, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mAttachCountForClearing:I
+
+    .line 90
+    if-nez v1, :cond_5
+
+    .line 92
+    :goto_0
+    iget-object v1, v5, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
+
+    .line 94
+    invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
+
+    .line 96
+    move-result v1
+
+    .line 99
+    if-ge v2, v1, :cond_5
+
+    .line 100
+    iget-object v1, v5, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
+
+    .line 102
+    invoke-virtual {v1, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    .line 104
+    move-result-object v1
+
     .line 107
-    check-cast v5, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;
+    check-cast v1, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;
 
     .line 108
-    iget-object v6, v5, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;->mScrapHeap:Ljava/util/ArrayList;
+    iget-object v6, v1, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;->mScrapHeap:Ljava/util/ArrayList;
 
     .line 110
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -17280,49 +17279,56 @@
 
     .line 133
     :cond_4
-    iget-object v5, v5, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;->mScrapHeap:Ljava/util/ArrayList;
+    iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;->mScrapHeap:Ljava/util/ArrayList;
 
     .line 134
-    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
     .line 136
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     .line 139
     goto :goto_0
 
     .line 141
     :cond_5
-    if-eqz v2, :cond_6
+    if-eqz v3, :cond_6
 
     .line 142
-    iget v1, v4, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mAttachCountForClearing:I
+    iget v1, v5, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mAttachCountForClearing:I
 
     .line 144
-    add-int/2addr v1, v3
+    add-int/2addr v1, v4
 
     .line 146
-    iput v1, v4, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mAttachCountForClearing:I
+    iput v1, v5, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->mAttachCountForClearing:I
 
     .line 147
-    :cond_6
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->maybeSendPoolingContainerAttach()V
+    goto :goto_2
 
     .line 149
+    :cond_6
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 150
+    :goto_2
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->maybeSendPoolingContainerAttach()V
+
+    .line 153
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView;->mState:Landroidx/recyclerview/widget/RecyclerView$State;
 
-    .line 152
-    iput-boolean v3, p1, Landroidx/recyclerview/widget/RecyclerView$State;->mStructureChanged:Z
+    .line 156
+    iput-boolean v4, p1, Landroidx/recyclerview/widget/RecyclerView$State;->mStructureChanged:Z
 
-    .line 154
+    .line 158
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->processDataSetCompletelyChanged(Z)V
 
-    .line 156
+    .line 160
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->requestLayout()V
 
-    .line 159
+    .line 163
     return-void
-    .line 162
+    .line 166
 .end method
 
 .method public setChildImportantForAccessibilityInternal(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)Z
@@ -17410,6 +17416,7 @@
     .line 24
     :cond_1
     return-void
+    .line 27
 .end method
 
 .method public final setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V

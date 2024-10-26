@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/animation/core/SnapSpec;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/animation/core/DurationBasedAnimationSpec;
@@ -85,7 +85,7 @@
 .method public final vectorize(Landroidx/compose/animation/core/TwoWayConverter;)Landroidx/compose/animation/core/VectorizedDurationBasedAnimationSpec;
     .locals 0
 
-    .line 3
+    .line 2
     new-instance p1, Landroidx/compose/animation/core/VectorizedSnapSpec;
 
     iget p0, p0, Landroidx/compose/animation/core/SnapSpec;->delay:I
@@ -93,15 +93,4 @@
     invoke-direct {p1, p0}, Landroidx/compose/animation/core/VectorizedSnapSpec;-><init>(I)V
 
     return-object p1
-.end method
-
-.method public final bridge synthetic vectorize(Landroidx/compose/animation/core/TwoWayConverter;)Landroidx/compose/animation/core/VectorizedFiniteAnimationSpec;
-    .locals 0
-
-    .line 2
-    invoke-virtual {p0, p1}, Landroidx/compose/animation/core/SnapSpec;->vectorize(Landroidx/compose/animation/core/TwoWayConverter;)Landroidx/compose/animation/core/VectorizedDurationBasedAnimationSpec;
-
-    move-result-object p0
-
-    return-object p0
 .end method

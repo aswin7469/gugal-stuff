@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/lazy/grid/LazyGridState;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/foundation/gestures/ScrollableState;
@@ -1243,7 +1243,7 @@
     iget-wide v0, v0, Landroidx/compose/ui/unit/Constraints;->value:J
 
     .line 228
-    invoke-virtual {v6, v5, v0, v1}, Landroidx/compose/foundation/lazy/layout/LazyLayoutPrefetchState;->schedulePrefetch-0kLqBqw(IJ)Landroidx/compose/foundation/lazy/layout/LazyLayoutPrefetchState$PrefetchHandle;
+    invoke-virtual {v6, v0, v1, v5}, Landroidx/compose/foundation/lazy/layout/LazyLayoutPrefetchState;->schedulePrefetch-0kLqBqw(JI)Landroidx/compose/foundation/lazy/layout/LazyLayoutPrefetchState$PrefetchHandle;
 
     .line 230
     move-result-object v0

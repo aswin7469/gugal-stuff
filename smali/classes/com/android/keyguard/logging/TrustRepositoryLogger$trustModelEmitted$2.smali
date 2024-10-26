@@ -1,6 +1,6 @@
 .class final Lcom/android/keyguard/logging/TrustRepositoryLogger$trustModelEmitted$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -66,30 +66,30 @@
     new-instance v0, Ljava/lang/StringBuilder;
 
     .line 12
-    const-string v1, "trustModel emitted: userId: "
+    const-string/jumbo v1, "trustModel emitted: userId: "
 
     .line 14
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 16
+    .line 17
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 19
+    .line 20
     const-string p0, " isTrusted: "
 
-    .line 22
+    .line 23
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 24
+    .line 25
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 27
+    .line 28
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 30
+    .line 31
     move-result-object p0
 
-    .line 33
-    return-object p0
     .line 34
+    return-object p0
+    .line 35
 .end method

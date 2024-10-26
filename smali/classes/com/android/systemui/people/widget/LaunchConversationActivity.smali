@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/people/widget/LaunchConversationActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -332,187 +332,187 @@
     if-nez p1, :cond_4
 
     .line 153
-    const-string p1, "statusbar"
+    const-string/jumbo p1, "statusbar"
 
     .line 155
     invoke-static {p1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
-    .line 157
+    .line 158
     move-result-object p1
-
-    .line 160
-    invoke-static {p1}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/statusbar/IStatusBarService;
 
     .line 161
+    invoke-static {p1}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/statusbar/IStatusBarService;
+
+    .line 162
     move-result-object p1
 
-    .line 164
+    .line 165
     iput-object p1, p0, Lcom/android/systemui/people/widget/LaunchConversationActivity;->mIStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
-    .line 165
+    .line 166
     :cond_4
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 167
+    .line 168
     move-result p1
 
-    .line 170
+    .line 171
     if-eqz p1, :cond_5
 
-    .line 171
+    .line 172
     goto :goto_0
 
-    .line 173
+    .line 174
     :cond_5
     iget-object p1, p0, Lcom/android/systemui/people/widget/LaunchConversationActivity;->mIStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
-    .line 174
+    .line 175
     if-eqz p1, :cond_8
 
-    .line 176
+    .line 177
     iget-object p1, p0, Lcom/android/systemui/people/widget/LaunchConversationActivity;->mCommonNotifCollection:Lcom/android/systemui/statusbar/notification/collection/notifcollection/CommonNotifCollection;
 
-    .line 178
+    .line 179
     if-nez p1, :cond_6
 
-    .line 180
+    .line 181
     goto :goto_0
 
-    .line 182
+    .line 183
     :cond_6
     check-cast p1, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
 
-    .line 183
+    .line 184
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->mNotifCollection:Lcom/android/systemui/statusbar/notification/collection/NotifCollection;
 
-    .line 185
+    .line 186
     invoke-virtual {p1, v8}, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;->getEntry(Ljava/lang/String;)Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 187
+    .line 188
     move-result-object p1
 
-    .line 190
+    .line 191
     if-eqz p1, :cond_8
 
-    .line 191
+    .line 192
     iget-object v1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mRanking:Landroid/service/notification/NotificationListenerService$Ranking;
 
-    .line 193
+    .line 194
     if-nez v1, :cond_7
 
-    .line 195
+    .line 196
     goto :goto_0
 
-    .line 197
+    .line 198
     :cond_7
     iget-object v1, p0, Lcom/android/systemui/people/widget/LaunchConversationActivity;->mVisibilityProvider:Lcom/android/systemui/statusbar/notification/collection/render/NotificationVisibilityProvider;
 
-    .line 198
+    .line 199
     check-cast v1, Lcom/android/systemui/statusbar/notification/collection/provider/NotificationVisibilityProviderImpl;
 
-    .line 200
+    .line 201
     invoke-virtual {v1, p1}, Lcom/android/systemui/statusbar/notification/collection/provider/NotificationVisibilityProviderImpl;->obtain(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lcom/android/internal/statusbar/NotificationVisibility;
 
-    .line 202
+    .line 203
     move-result-object v9
 
-    .line 205
+    .line 206
     iget-object p1, p0, Lcom/android/systemui/people/widget/LaunchConversationActivity;->mBgExecutor:Ljava/util/concurrent/Executor;
 
-    .line 206
+    .line 207
     new-instance v1, Lcom/android/systemui/people/widget/LaunchConversationActivity$$ExternalSyntheticLambda0;
 
-    .line 208
+    .line 209
     move-object v4, v1
 
-    .line 210
+    .line 211
     move-object v5, p0
 
-    .line 211
+    .line 212
     move-object v6, v2
 
-    .line 212
+    .line 213
     move-object v7, v0
 
-    .line 213
+    .line 214
     invoke-direct/range {v4 .. v9}, Lcom/android/systemui/people/widget/LaunchConversationActivity$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/people/widget/LaunchConversationActivity;Ljava/lang/String;Landroid/os/UserHandle;Ljava/lang/String;Lcom/android/internal/statusbar/NotificationVisibility;)V
 
-    .line 214
+    .line 215
     invoke-interface {p1, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 217
+    .line 218
     :cond_8
     :goto_0
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
-    .line 220
+    .line 221
     move-result-object p1
-
-    .line 223
-    const-class v1, Landroid/content/pm/LauncherApps;
 
     .line 224
+    const-class v1, Landroid/content/pm/LauncherApps;
+
+    .line 225
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    .line 226
+    .line 227
     move-result-object p1
 
-    .line 229
+    .line 230
     move-object v1, p1
 
-    .line 230
+    .line 231
     check-cast v1, Landroid/content/pm/LauncherApps;
 
-    .line 231
+    .line 232
     const/4 v4, 0x0
 
-    .line 233
+    .line 234
     const/4 v5, 0x0
 
-    .line 234
+    .line 235
     move-object v6, v0
 
-    .line 235
+    .line 236
     invoke-virtual/range {v1 .. v6}, Landroid/content/pm/LauncherApps;->startShortcut(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Rect;Landroid/os/Bundle;Landroid/os/UserHandle;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 236
+    .line 237
     goto :goto_2
 
-    .line 239
+    .line 240
     :goto_1
     const-string v0, "PeopleSpaceLaunchConv"
 
-    .line 240
+    .line 241
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 242
+    .line 243
     const-string v2, "Exception launching shortcut:"
 
-    .line 244
+    .line 245
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 246
+    .line 247
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 249
+    .line 250
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 252
+    .line 253
     move-result-object p1
 
-    .line 255
+    .line 256
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
+    .line 257
     :cond_9
     :goto_2
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 259
+    .line 260
     return-void
-    .line 262
+    .line 263
 .end method
 
 .method public setIsForTesting(ZLcom/android/internal/statusbar/IStatusBarService;)V

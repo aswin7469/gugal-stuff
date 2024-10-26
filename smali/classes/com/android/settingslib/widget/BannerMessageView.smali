@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/BannerMessageView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -63,7 +63,7 @@
 
     .line 9
     :cond_0
-    const p1, 0x7f0b081c    # @id/top_row
+    const p1, 0x7f0a084a    # @id/top_row
 
     .line 11
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -72,7 +72,7 @@
     move-result-object p1
 
     .line 17
-    const p2, 0x7f0b00f9    # @id/banner_dismiss_btn
+    const p2, 0x7f0a00fd    # @id/banner_dismiss_btn
 
     .line 18
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -106,7 +106,7 @@
     move-result-object p3
 
     .line 40
-    const p4, 0x7f07096a    # @dimen/settingslib_preferred_minimum_touch_target '48.0dp'
+    const p4, 0x7f0709bf    # @dimen/settingslib_preferred_minimum_touch_target '48.0dp'
 
     .line 41
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

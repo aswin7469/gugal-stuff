@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/text/input/EditingBuffer;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -151,7 +151,7 @@
     const-string v0, "end ("
 
     .line 86
-    invoke-static {v0, p3, p2}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v0, p3, p2}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 88
     move-result-object p2
@@ -185,38 +185,38 @@
     new-instance p2, Ljava/lang/IndexOutOfBoundsException;
 
     .line 109
-    const-string v0, "start ("
+    const-string/jumbo v0, "start ("
 
     .line 111
-    invoke-static {v0, p3, p0}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v0, p3, p0}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
-    .line 113
+    .line 114
     move-result-object p0
-
-    .line 116
-    iget-object p1, p1, Landroidx/compose/ui/text/AnnotatedString;->text:Ljava/lang/String;
 
     .line 117
+    iget-object p1, p1, Landroidx/compose/ui/text/AnnotatedString;->text:Ljava/lang/String;
+
+    .line 118
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    .line 119
+    .line 120
     move-result p1
 
-    .line 122
+    .line 123
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 123
+    .line 124
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 126
+    .line 127
     move-result-object p0
 
-    .line 129
+    .line 130
     invoke-direct {p2, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    .line 130
+    .line 131
     throw p2
-    .line 133
+    .line 134
 .end method
 
 
@@ -470,6 +470,7 @@
     .line 68
     :goto_0
     return p0
+    .line 69
 .end method
 
 .method public final getComposition-MzsxiRA$ui_text_release()Landroidx/compose/ui/text/TextRange;
@@ -617,7 +618,7 @@
     const-string p1, "end ("
 
     .line 65
-    invoke-static {p1, v0, p3}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0, p3}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 67
     move-result-object p1
@@ -648,35 +649,35 @@
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
     .line 86
-    const-string p1, "start ("
+    const-string/jumbo p1, "start ("
 
     .line 88
-    invoke-static {p1, v0, p2}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0, p2}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
-    .line 90
+    .line 91
     move-result-object p1
-
-    .line 93
-    invoke-virtual {v1}, Landroidx/compose/ui/text/input/PartialGapBuffer;->getLength()I
 
     .line 94
+    invoke-virtual {v1}, Landroidx/compose/ui/text/input/PartialGapBuffer;->getLength()I
+
+    .line 95
     move-result p2
 
-    .line 97
+    .line 98
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 98
+    .line 99
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 101
+    .line 102
     move-result-object p1
 
-    .line 104
+    .line 105
     invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    .line 105
+    .line 106
     throw p0
-    .line 108
+    .line 109
 .end method
 
 .method public final setComposition$ui_text_release(II)V
@@ -754,7 +755,7 @@
     const-string p1, "end ("
 
     .line 45
-    invoke-static {p1, v0, p2}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0, p2}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 47
     move-result-object p1
@@ -785,35 +786,35 @@
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
     .line 66
-    const-string p2, "start ("
+    const-string/jumbo p2, "start ("
 
     .line 68
-    invoke-static {p2, v0, p1}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {p2, v0, p1}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
-    .line 70
+    .line 71
     move-result-object p1
-
-    .line 73
-    invoke-virtual {v1}, Landroidx/compose/ui/text/input/PartialGapBuffer;->getLength()I
 
     .line 74
+    invoke-virtual {v1}, Landroidx/compose/ui/text/input/PartialGapBuffer;->getLength()I
+
+    .line 75
     move-result p2
 
-    .line 77
+    .line 78
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 78
+    .line 79
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 81
+    .line 82
     move-result-object p1
 
-    .line 84
+    .line 85
     invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    .line 85
+    .line 86
     throw p0
-    .line 88
+    .line 89
 .end method
 
 .method public final setSelection$ui_text_release(II)V
@@ -891,7 +892,7 @@
     const-string p1, "end ("
 
     .line 47
-    invoke-static {p1, v0, p2}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0, p2}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 49
     move-result-object p1
@@ -922,35 +923,35 @@
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
     .line 68
-    const-string p2, "start ("
+    const-string/jumbo p2, "start ("
 
     .line 70
-    invoke-static {p2, v0, p1}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {p2, v0, p1}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
-    .line 72
+    .line 73
     move-result-object p1
-
-    .line 75
-    invoke-virtual {v1}, Landroidx/compose/ui/text/input/PartialGapBuffer;->getLength()I
 
     .line 76
+    invoke-virtual {v1}, Landroidx/compose/ui/text/input/PartialGapBuffer;->getLength()I
+
+    .line 77
     move-result p2
 
-    .line 79
+    .line 80
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 80
+    .line 81
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 83
+    .line 84
     move-result-object p1
 
-    .line 86
+    .line 87
     invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    .line 87
+    .line 88
     throw p0
-    .line 90
+    .line 91
 .end method
 
 .method public final setSelectionEnd(I)V
@@ -970,7 +971,7 @@
     const-string p0, "Cannot set selectionEnd to a negative value: "
 
     .line 7
-    invoke-static {p1, p0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 9
     move-result-object p0
@@ -1009,7 +1010,7 @@
     const-string p0, "Cannot set selectionStart to a negative value: "
 
     .line 7
-    invoke-static {p1, p0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 9
     move-result-object p0

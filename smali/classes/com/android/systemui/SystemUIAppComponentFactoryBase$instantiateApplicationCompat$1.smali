@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/SystemUIAppComponentFactoryBase$instantiateApplicationCompat$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextAvailableCallback;
@@ -27,14 +27,14 @@
 
 
 # virtual methods
-.method public final onContextAvailable(Landroid/content/Context;)Lcom/android/systemui/SystemUIInitializerImpl;
+.method public final onContextAvailable(Landroid/content/Context;)Lcom/google/android/systemui/SystemUIGoogleInitializer;
     .locals 0
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/SystemUIAppComponentFactoryBase$instantiateApplicationCompat$1;->this$0:Lcom/android/systemui/SystemUIAppComponentFactoryBase;
 
     .line 2
-    invoke-static {p0, p1}, Lcom/android/systemui/SystemUIAppComponentFactoryBase;->access$createSystemUIInitializerInternal(Lcom/android/systemui/SystemUIAppComponentFactoryBase;Landroid/content/Context;)Lcom/android/systemui/SystemUIInitializerImpl;
+    invoke-static {p0, p1}, Lcom/android/systemui/SystemUIAppComponentFactoryBase;->access$createSystemUIInitializerInternal(Lcom/android/systemui/SystemUIAppComponentFactoryBase;Landroid/content/Context;)Lcom/google/android/systemui/SystemUIGoogleInitializer;
 
     .line 4
     move-result-object p0

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/KeyguardViewMediator$15;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/IRemoteAnimationFinishedCallback;
@@ -53,81 +53,71 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-nez v0, :cond_0
-
-    .line 6
     :try_start_0
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$15;->val$finishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
 
-    .line 8
+    .line 2
     invoke-interface {v0}, Landroid/view/IRemoteAnimationFinishedCallback;->onAnimationFinished()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10
+    .line 4
     goto :goto_0
 
-    .line 13
+    .line 7
     :catch_0
     move-exception v0
 
-    .line 14
+    .line 8
     const-string v1, "KeyguardViewMediator"
 
-    .line 15
+    .line 9
     const-string v2, "Failed to call onAnimationFinished"
 
-    .line 17
+    .line 11
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 19
-    :cond_0
+    .line 13
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$15;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 22
+    .line 16
     invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->onKeyguardExitFinished()V
 
-    .line 24
+    .line 18
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$15;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 27
+    .line 21
     iget-object v0, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardViewControllerLazy:Ldagger/Lazy;
 
-    .line 29
+    .line 23
     invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 31
+    .line 25
     move-result-object v0
 
-    .line 34
+    .line 28
     check-cast v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 35
+    .line 29
     const-wide/16 v1, 0x0
 
-    .line 37
+    .line 31
     invoke-virtual {v0, v1, v2, v1, v2}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->hide(JJ)V
 
-    .line 39
+    .line 33
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$15;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 42
+    .line 36
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 44
+    .line 38
     const/16 v0, 0x1d
 
-    .line 46
+    .line 40
     invoke-virtual {p0, v0}, Lcom/android/internal/jank/InteractionJankMonitor;->end(I)Z
 
-    .line 48
+    .line 42
     return-void
-    .line 51
+    .line 45
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/events/SystemEventChipAnimationController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/events/SystemStatusAnimationCallback;
@@ -70,7 +70,7 @@
     move-result-object p2
 
     .line 24
-    const p3, 0x7f070839    # @dimen/ongoing_appops_chip_min_animation_width '10.0dp'
+    const p3, 0x7f07087c    # @dimen/ongoing_appops_chip_min_animation_width '10.0dp'
 
     .line 25
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -88,7 +88,7 @@
     move-result-object p1
 
     .line 37
-    const p2, 0x7f070840    # @dimen/ongoing_appops_dot_diameter '6.0dp'
+    const p2, 0x7f070883    # @dimen/ongoing_appops_dot_diameter '6.0dp'
 
     .line 38
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

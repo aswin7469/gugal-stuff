@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/compatui/CompatUILayout;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -63,7 +63,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b0723    # @id/size_compat_restart_button
+    const v0, 0x7f0a074f    # @id/size_compat_restart_button
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -99,7 +99,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 29
-    const v0, 0x7f0b0722    # @id/size_compat_hint
+    const v0, 0x7f0a074e    # @id/size_compat_hint
 
     .line 32
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -111,7 +111,7 @@
     check-cast v0, Landroid/widget/LinearLayout;
 
     .line 39
-    const v1, 0x7f0b01e8    # @id/compat_mode_hint_text
+    const v1, 0x7f0a01f3    # @id/compat_mode_hint_text
 
     .line 41
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -123,7 +123,7 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 48
-    const v4, 0x7f14082b    # @string/restart_button_description 'Tap to restart this app for a better view'
+    const v4, 0x7f130883    # @string/restart_button_description 'Tap to restart this app for a better view'
 
     .line 50
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(I)V
@@ -141,7 +141,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 62
-    const v0, 0x7f0b01a2    # @id/camera_compat_treatment_button
+    const v0, 0x7f0a01a8    # @id/camera_compat_treatment_button
 
     .line 65
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -174,7 +174,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 88
-    const v0, 0x7f0b01a0    # @id/camera_compat_dismiss_button
+    const v0, 0x7f0a01a6    # @id/camera_compat_dismiss_button
 
     .line 91
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -204,7 +204,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 113
-    const v0, 0x7f0b01a1    # @id/camera_compat_hint
+    const v0, 0x7f0a01a7    # @id/camera_compat_hint
 
     .line 116
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -323,32 +323,32 @@
     if-ne p1, v0, :cond_0
 
     .line 3
-    const v1, 0x7f080651    # @drawable/camera_compat_treatment_suggested_ripple 'res/drawable/camera_compat_treatment_suggested_ripple.xml'
+    const v1, 0x7f080652    # @drawable/camera_compat_treatment_suggested_ripple 'res/drawable/camera_compat_treatment_suggested_ripple.xml'
 
     .line 5
     goto :goto_0
 
     .line 8
     :cond_0
-    const v1, 0x7f08064f    # @drawable/camera_compat_treatment_applied_ripple 'res/drawable/camera_compat_treatment_applied_ripple.xml'
+    const v1, 0x7f080650    # @drawable/camera_compat_treatment_applied_ripple 'res/drawable/camera_compat_treatment_applied_ripple.xml'
 
     .line 9
     :goto_0
     if-ne p1, v0, :cond_1
 
     .line 12
-    const p1, 0x7f140251    # @string/camera_compat_treatment_suggested_button_description 'Camera issues?\nTap to refit'
+    const p1, 0x7f130258    # @string/camera_compat_treatment_suggested_button_description 'Camera issues?\nTap to refit'
 
     .line 14
     goto :goto_1
 
     .line 17
     :cond_1
-    const p1, 0x7f140250    # @string/camera_compat_treatment_applied_button_description 'Didn’t fix it?\nTap to revert'
+    const p1, 0x7f130257    # @string/camera_compat_treatment_applied_button_description 'Didn’t fix it?\nTap to revert'
 
     .line 18
     :goto_1
-    const v0, 0x7f0b01a2    # @id/camera_compat_treatment_button
+    const v0, 0x7f0a01a8    # @id/camera_compat_treatment_button
 
     .line 21
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -378,7 +378,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 41
-    const v0, 0x7f0b01a1    # @id/camera_compat_hint
+    const v0, 0x7f0a01a7    # @id/camera_compat_hint
 
     .line 44
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -390,7 +390,7 @@
     check-cast p0, Landroid/widget/LinearLayout;
 
     .line 51
-    const v0, 0x7f0b01e8    # @id/compat_mode_hint_text
+    const v0, 0x7f0a01f3    # @id/compat_mode_hint_text
 
     .line 53
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;

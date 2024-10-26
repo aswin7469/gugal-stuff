@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$special$$inlined$map$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -33,7 +33,7 @@
 
 # virtual methods
 .method public final emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 23
+    .locals 28
 
     .line 1
     move-object/from16 v0, p0
@@ -104,7 +104,7 @@
     invoke-static {v1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     .line 41
-    goto/16 :goto_7
+    goto/16 :goto_6
 
     .line 44
     :cond_1
@@ -142,6 +142,7 @@
     move-result-object v1
 
     .line 69
+    :cond_3
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -170,7 +171,7 @@
     iget-boolean v9, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->allowReorder:Z
 
     .line 85
-    if-eqz v9, :cond_3
+    if-eqz v9, :cond_4
 
     .line 87
     iget-object v9, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->modelsPendingRemoval:Ljava/util/Set;
@@ -182,14 +183,14 @@
     move-result v9
 
     .line 94
-    if-nez v9, :cond_9
+    if-nez v9, :cond_3
 
     .line 95
-    :cond_3
+    :cond_4
     instance-of v9, v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaControl;
 
     .line 97
-    if-eqz v9, :cond_5
+    if-eqz v9, :cond_6
 
     .line 99
     check-cast v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaControl;
@@ -216,7 +217,7 @@
     iget-object v10, v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaControl;->mediaLoadedModel:Lcom/android/systemui/media/controls/shared/model/MediaDataLoadingModel$Loaded;
 
     .line 115
-    if-eqz v9, :cond_4
+    if-eqz v9, :cond_5
 
     .line 117
     iget-boolean v13, v10, Lcom/android/systemui/media/controls/shared/model/MediaDataLoadingModel$Loaded;->immediatelyUpdateUi:Z
@@ -258,361 +259,533 @@
     invoke-direct/range {v11 .. v18}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaControl;-><init>(Lcom/android/internal/logging/InstanceId;ZLcom/android/systemui/media/controls/ui/viewmodel/MediaControlViewModel;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Z)V
 
     .line 142
-    goto :goto_2
+    goto/16 :goto_2
 
     .line 145
-    :cond_4
+    :cond_5
     new-instance v15, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaControl;
 
-    .line 146
-    iget-boolean v11, v10, Lcom/android/systemui/media/controls/shared/model/MediaDataLoadingModel$Loaded;->immediatelyUpdateUi:Z
+    .line 147
+    iget-boolean v14, v10, Lcom/android/systemui/media/controls/shared/model/MediaDataLoadingModel$Loaded;->immediatelyUpdateUi:Z
 
-    .line 148
-    new-instance v12, Lcom/android/systemui/media/controls/ui/viewmodel/MediaControlViewModel;
+    .line 149
+    new-instance v22, Lcom/android/systemui/media/controls/ui/viewmodel/MediaControlViewModel;
 
-    .line 150
-    iget-object v9, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->applicationContext:Landroid/content/Context;
+    .line 151
+    iget-object v13, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->applicationContext:Landroid/content/Context;
 
-    .line 152
-    iget-object v10, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->backgroundExecutor:Ljava/util/concurrent/Executor;
+    .line 153
+    iget-object v12, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->backgroundExecutor:Ljava/util/concurrent/Executor;
 
-    .line 154
-    iget-object v13, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->controlInteractorFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$7;
+    .line 155
+    iget-object v9, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->controlInteractorFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$6;
 
-    .line 156
-    invoke-virtual {v13, v7}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$7;->create(Lcom/android/internal/logging/InstanceId;)Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaControlInteractor;
+    .line 157
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 158
-    move-result-object v20
-
-    .line 161
-    iget-object v13, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->logger:Lcom/android/systemui/media/controls/util/MediaUiEventLogger;
+    .line 159
+    new-instance v20, Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaControlInteractor;
 
     .line 162
-    iget-object v14, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->backgroundDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
+    iget-object v9, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$6;->this$0:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;
 
     .line 164
-    move-object/from16 v16, v12
+    iget-object v10, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
 
     .line 166
-    move-object/from16 v17, v9
+    iget-object v10, v10, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->provideApplicationContextProvider:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$KeyguardStatusBarViewComponentImpl$SwitchingProvider;
 
     .line 168
-    move-object/from16 v18, v14
+    invoke-virtual {v10}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$KeyguardStatusBarViewComponentImpl$SwitchingProvider;->get()Ljava/lang/Object;
 
     .line 170
-    move-object/from16 v19, v10
+    move-result-object v10
 
-    .line 172
-    move-object/from16 v21, v13
+    .line 173
+    check-cast v10, Landroid/content/Context;
 
     .line 174
-    invoke-direct/range {v16 .. v21}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaControlViewModel;-><init>(Landroid/content/Context;Lkotlinx/coroutines/CoroutineDispatcher;Ljava/util/concurrent/Executor;Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaControlInteractor;Lcom/android/systemui/media/controls/util/MediaUiEventLogger;)V
+    iget-object v9, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->wMComponentImpl:Ljava/lang/Object;
 
     .line 176
-    new-instance v13, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$1;
+    check-cast v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
-    .line 179
-    invoke-direct {v13, v8, v6}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$1;-><init>(Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaControl;)V
+    .line 178
+    iget-object v10, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->mediaFilterRepositoryProvider:Ldagger/internal/Provider;
 
-    .line 181
-    new-instance v14, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$2;
+    .line 180
+    invoke-interface {v10}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 184
-    invoke-direct {v14, v8, v7}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$2;-><init>(Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;Lcom/android/internal/logging/InstanceId;)V
+    .line 182
+    move-result-object v10
+
+    .line 185
+    move-object v11, v10
 
     .line 186
-    new-instance v10, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$3;
+    check-cast v11, Lcom/android/systemui/media/controls/data/repository/MediaFilterRepository;
+
+    .line 187
+    iget-object v10, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->mediaDataProcessorProvider:Ldagger/internal/Provider;
 
     .line 189
-    invoke-direct {v10, v8, v6}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$3;-><init>(Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaControl;)V
+    invoke-interface {v10}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 191
-    iget-boolean v6, v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaControl;->isMediaFromRec:Z
+    move-result-object v10
 
     .line 194
-    move-object v9, v15
-
-    .line 196
     move-object/from16 v16, v10
 
+    .line 195
+    check-cast v16, Lcom/android/systemui/media/controls/domain/pipeline/MediaDataProcessor;
+
     .line 197
-    move-object v10, v7
+    iget-object v10, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->keyguardStateControllerImplProvider:Ldagger/internal/DelegateFactory;
 
     .line 199
-    move-object v5, v15
-
-    .line 200
-    move-object/from16 v15, v16
+    invoke-virtual {v10}, Ldagger/internal/DelegateFactory;->get()Ljava/lang/Object;
 
     .line 201
-    move/from16 v16, v6
+    move-result-object v10
 
-    .line 203
-    invoke-direct/range {v9 .. v16}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaControl;-><init>(Lcom/android/internal/logging/InstanceId;ZLcom/android/systemui/media/controls/ui/viewmodel/MediaControlViewModel;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Z)V
+    .line 204
+    move-object/from16 v17, v10
 
     .line 205
+    check-cast v17, Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+
+    .line 207
+    iget-object v10, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->activityStarterImplProvider:Ldagger/internal/DelegateFactory;
+
+    .line 209
+    invoke-virtual {v10}, Ldagger/internal/DelegateFactory;->get()Ljava/lang/Object;
+
+    .line 211
+    move-result-object v10
+
+    .line 214
+    move-object/from16 v18, v10
+
+    .line 215
+    check-cast v18, Lcom/android/systemui/plugins/ActivityStarter;
+
+    .line 217
+    iget-object v10, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->activityIntentHelperProvider:Ldagger/internal/Provider;
+
+    .line 219
+    invoke-interface {v10}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 221
+    move-result-object v10
+
+    .line 224
+    move-object/from16 v19, v10
+
+    .line 225
+    check-cast v19, Lcom/android/systemui/ActivityIntentHelper;
+
+    .line 227
+    iget-object v10, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->notificationLockscreenUserManagerImplProvider:Ldagger/internal/DelegateFactory;
+
+    .line 229
+    invoke-virtual {v10}, Ldagger/internal/DelegateFactory;->get()Ljava/lang/Object;
+
+    .line 231
+    move-result-object v10
+
+    .line 234
+    move-object/from16 v21, v10
+
+    .line 235
+    check-cast v21, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+
+    .line 237
+    invoke-virtual {v9}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->mediaOutputDialogManager()Lcom/android/systemui/media/dialog/MediaOutputDialogManager;
+
+    .line 239
+    move-result-object v23
+
+    .line 242
+    iget-object v9, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->broadcastDialogControllerProvider:Ldagger/internal/Provider;
+
+    .line 243
+    invoke-interface {v9}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 245
+    move-result-object v9
+
+    .line 248
+    move-object/from16 v24, v9
+
+    .line 249
+    check-cast v24, Lcom/android/systemui/bluetooth/BroadcastDialogController;
+
+    .line 251
+    move-object/from16 v9, v20
+
+    .line 253
+    move-object v10, v7
+
+    .line 255
+    move-object/from16 v25, v12
+
+    .line 256
+    move-object/from16 v12, v16
+
+    .line 258
+    move-object/from16 v26, v13
+
+    .line 260
+    move-object/from16 v13, v17
+
+    .line 262
+    move/from16 v27, v14
+
+    .line 264
+    move-object/from16 v14, v18
+
+    .line 266
+    move-object/from16 p1, v15
+
+    .line 268
+    move-object/from16 v15, v19
+
+    .line 270
+    move-object/from16 v16, v21
+
+    .line 272
+    move-object/from16 v17, v23
+
+    .line 274
+    move-object/from16 v18, v24
+
+    .line 276
+    invoke-direct/range {v9 .. v18}, Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaControlInteractor;-><init>(Lcom/android/internal/logging/InstanceId;Lcom/android/systemui/media/controls/data/repository/MediaFilterRepository;Lcom/android/systemui/media/controls/domain/pipeline/MediaDataProcessor;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/ActivityIntentHelper;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Lcom/android/systemui/media/dialog/MediaOutputDialogManager;Lcom/android/systemui/bluetooth/BroadcastDialogController;)V
+
+    .line 278
+    iget-object v9, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->logger:Lcom/android/systemui/media/controls/util/MediaUiEventLogger;
+
+    .line 281
+    iget-object v10, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->backgroundDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
+
+    .line 283
+    move-object/from16 v16, v22
+
+    .line 285
+    move-object/from16 v17, v26
+
+    .line 287
+    move-object/from16 v18, v10
+
+    .line 289
+    move-object/from16 v19, v25
+
+    .line 291
+    move-object/from16 v21, v9
+
+    .line 293
+    invoke-direct/range {v16 .. v21}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaControlViewModel;-><init>(Landroid/content/Context;Lkotlinx/coroutines/CoroutineDispatcher;Ljava/util/concurrent/Executor;Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaControlInteractor;Lcom/android/systemui/media/controls/util/MediaUiEventLogger;)V
+
+    .line 295
+    new-instance v13, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$1;
+
+    .line 298
+    invoke-direct {v13, v8, v6}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$1;-><init>(Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaControl;)V
+
+    .line 300
+    new-instance v14, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$2;
+
+    .line 303
+    invoke-direct {v14, v8, v7}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$2;-><init>(Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;Lcom/android/internal/logging/InstanceId;)V
+
+    .line 305
+    new-instance v15, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$3;
+
+    .line 308
+    invoke-direct {v15, v8, v6}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$3;-><init>(Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaControl;)V
+
+    .line 310
+    iget-boolean v6, v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaControl;->isMediaFromRec:Z
+
+    .line 313
+    move-object/from16 v9, p1
+
+    .line 315
+    move-object v10, v7
+
+    .line 317
+    move/from16 v11, v27
+
+    .line 318
+    move-object/from16 v12, v22
+
+    .line 320
+    move/from16 v16, v6
+
+    .line 322
+    invoke-direct/range {v9 .. v16}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaControl;-><init>(Lcom/android/internal/logging/InstanceId;ZLcom/android/systemui/media/controls/ui/viewmodel/MediaControlViewModel;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Z)V
+
+    .line 324
     iget-object v6, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->mediaControlByInstanceId:Ljava/util/Map;
 
-    .line 208
-    invoke-interface {v6, v7, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 327
+    move-object/from16 v8, p1
 
-    .line 210
-    move-object v6, v5
+    .line 329
+    invoke-interface {v6, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 213
+    .line 331
+    move-object v6, v8
+
+    .line 334
     :goto_2
     invoke-virtual {v4, v6}, Lkotlin/collections/builders/ListBuilder;->add(Ljava/lang/Object;)Z
 
-    .line 214
-    goto/16 :goto_6
+    .line 335
+    goto/16 :goto_1
 
-    .line 217
-    :cond_5
-    instance-of v5, v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaRecommendations;
+    .line 338
+    :cond_6
+    instance-of v9, v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaRecommendations;
 
-    .line 219
-    if-eqz v5, :cond_9
+    .line 340
+    if-eqz v9, :cond_3
 
-    .line 221
+    .line 342
     check-cast v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaRecommendations;
 
-    .line 223
-    iget-object v5, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->mediaRecs:Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;
+    .line 344
+    iget-object v9, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->mediaRecs:Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;
 
-    .line 225
-    iget-object v9, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->mediaFlags:Lcom/android/systemui/media/controls/util/MediaFlags;
+    .line 346
+    iget-object v10, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->mediaFlags:Lcom/android/systemui/media/controls/util/MediaFlags;
 
-    .line 227
-    iget-object v10, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->interactor:Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaCarouselInteractor;
+    .line 348
+    iget-object v11, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->interactor:Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaCarouselInteractor;
 
-    .line 229
-    if-eqz v5, :cond_7
+    .line 350
+    if-eqz v9, :cond_8
 
-    .line 231
+    .line 352
     iget-object v6, v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaRecommendations;->recsLoadingModel:Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaLoadingModel;
 
-    .line 233
+    .line 354
     invoke-virtual {v6}, Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaLoadingModel;->getKey()Ljava/lang/String;
 
-    .line 235
-    move-result-object v12
+    .line 356
+    move-result-object v13
 
-    .line 238
-    invoke-virtual {v10}, Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaCarouselInteractor;->isRecommendationActive()Z
+    .line 359
+    invoke-virtual {v11}, Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaCarouselInteractor;->isRecommendationActive()Z
 
-    .line 239
+    .line 360
     move-result v6
 
-    .line 242
-    if-nez v6, :cond_6
+    .line 363
+    if-nez v6, :cond_7
 
-    .line 243
-    invoke-virtual {v9}, Lcom/android/systemui/media/controls/util/MediaFlags;->isPersistentSsCardEnabled()V
+    .line 364
+    invoke-virtual {v10}, Lcom/android/systemui/media/controls/util/MediaFlags;->isPersistentSsCardEnabled()V
 
-    .line 245
-    move v13, v7
+    .line 366
+    move v14, v7
 
-    .line 248
+    .line 369
     goto :goto_3
 
-    .line 249
-    :cond_6
-    const/4 v13, 0x1
+    .line 370
+    :cond_7
+    move v14, v5
 
-    .line 250
+    .line 371
     :goto_3
     new-instance v6, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;
 
-    .line 251
-    iget-object v7, v5, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;->onRemoved:Lkotlin/jvm/functions/Function1;
+    .line 372
+    iget-object v7, v9, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;->onRemoved:Lkotlin/jvm/functions/Function1;
 
-    .line 253
-    iget-object v8, v5, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;->onUpdated:Lkotlin/jvm/functions/Function1;
+    .line 374
+    iget-object v8, v9, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;->onUpdated:Lkotlin/jvm/functions/Function1;
 
-    .line 255
-    iget-object v14, v5, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;->recsViewModel:Lcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel;
+    .line 376
+    iget-object v15, v9, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;->recsViewModel:Lcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel;
 
-    .line 257
-    iget-object v15, v5, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;->onAdded:Lkotlin/jvm/functions/Function1;
+    .line 378
+    iget-object v9, v9, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;->onAdded:Lkotlin/jvm/functions/Function1;
 
-    .line 259
-    move-object v11, v6
+    .line 380
+    move-object v12, v6
 
-    .line 261
-    move-object/from16 v16, v7
+    .line 382
+    move-object/from16 v16, v9
 
-    .line 262
-    move-object/from16 v17, v8
+    .line 383
+    move-object/from16 v17, v7
 
-    .line 264
-    invoke-direct/range {v11 .. v17}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;-><init>(Ljava/lang/String;ZLcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)V
+    .line 385
+    move-object/from16 v18, v8
 
-    .line 266
+    .line 387
+    invoke-direct/range {v12 .. v18}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;-><init>(Ljava/lang/String;ZLcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)V
+
+    .line 389
     goto :goto_5
 
-    .line 269
-    :cond_7
-    new-instance v5, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;
+    .line 392
+    :cond_8
+    new-instance v9, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;
 
-    .line 270
-    iget-object v11, v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaRecommendations;->recsLoadingModel:Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaLoadingModel;
+    .line 393
+    iget-object v12, v6, Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaRecommendations;->recsLoadingModel:Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaLoadingModel;
 
-    .line 272
-    invoke-virtual {v11}, Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaLoadingModel;->getKey()Ljava/lang/String;
+    .line 395
+    invoke-virtual {v12}, Lcom/android/systemui/media/controls/shared/model/SmartspaceMediaLoadingModel;->getKey()Ljava/lang/String;
 
-    .line 274
+    .line 397
     move-result-object v17
 
-    .line 277
-    invoke-virtual {v10}, Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaCarouselInteractor;->isRecommendationActive()Z
+    .line 400
+    invoke-virtual {v11}, Lcom/android/systemui/media/controls/domain/pipeline/interactor/MediaCarouselInteractor;->isRecommendationActive()Z
 
-    .line 278
-    move-result v10
+    .line 401
+    move-result v11
 
-    .line 281
-    if-nez v10, :cond_8
+    .line 404
+    if-nez v11, :cond_9
 
-    .line 282
-    invoke-virtual {v9}, Lcom/android/systemui/media/controls/util/MediaFlags;->isPersistentSsCardEnabled()V
+    .line 405
+    invoke-virtual {v10}, Lcom/android/systemui/media/controls/util/MediaFlags;->isPersistentSsCardEnabled()V
 
-    .line 284
+    .line 407
     move/from16 v18, v7
 
-    .line 287
+    .line 410
     goto :goto_4
 
-    .line 289
-    :cond_8
-    const/16 v18, 0x1
+    .line 412
+    :cond_9
+    move/from16 v18, v5
 
-    .line 290
+    .line 413
     :goto_4
     new-instance v7, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$5;
 
-    .line 292
+    .line 415
     invoke-direct {v7, v8}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$5;-><init>(Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;)V
 
-    .line 294
-    new-instance v9, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$6;
+    .line 417
+    new-instance v10, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$6;
 
-    .line 297
-    invoke-direct {v9, v8, v6}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$6;-><init>(Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaRecommendations;)V
+    .line 420
+    invoke-direct {v10, v8, v6}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$6;-><init>(Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;Lcom/android/systemui/media/controls/shared/model/MediaCommonModel$MediaRecommendations;)V
 
-    .line 299
+    .line 422
     new-instance v6, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$7;
 
-    .line 302
+    .line 425
     invoke-direct {v6, v8}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$toViewModel$7;-><init>(Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;)V
 
-    .line 304
-    iget-object v10, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->recommendationsViewModel:Lcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel;
+    .line 427
+    iget-object v11, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->recommendationsViewModel:Lcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel;
 
-    .line 307
-    move-object/from16 v16, v5
+    .line 430
+    move-object/from16 v16, v9
 
-    .line 309
-    move-object/from16 v19, v10
+    .line 432
+    move-object/from16 v19, v11
 
-    .line 311
+    .line 434
     move-object/from16 v20, v7
 
-    .line 313
-    move-object/from16 v21, v9
+    .line 436
+    move-object/from16 v21, v10
 
-    .line 315
+    .line 438
     move-object/from16 v22, v6
 
-    .line 317
+    .line 440
     invoke-direct/range {v16 .. v22}, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;-><init>(Ljava/lang/String;ZLcom/android/systemui/media/controls/ui/viewmodel/MediaRecommendationsViewModel;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)V
 
-    .line 319
-    iput-object v5, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->mediaRecs:Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;
+    .line 442
+    iput-object v9, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->mediaRecs:Lcom/android/systemui/media/controls/ui/viewmodel/MediaCommonViewModel$MediaRecommendations;
 
-    .line 322
-    move-object v6, v5
+    .line 445
+    move-object v6, v9
 
-    .line 324
+    .line 447
     :goto_5
     invoke-virtual {v4, v6}, Lkotlin/collections/builders/ListBuilder;->add(Ljava/lang/Object;)Z
 
-    .line 325
-    :cond_9
-    :goto_6
-    const/4 v5, 0x1
-
-    .line 328
+    .line 448
     goto/16 :goto_1
 
-    .line 329
+    .line 451
     :cond_a
     invoke-virtual {v4}, Lkotlin/collections/builders/ListBuilder;->build()Lkotlin/collections/builders/ListBuilder;
 
-    .line 331
+    .line 453
     move-result-object v1
 
-    .line 334
+    .line 456
     iget-boolean v4, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->allowReorder:Z
 
-    .line 335
+    .line 457
     if-eqz v4, :cond_c
 
-    .line 337
+    .line 459
     iget-object v4, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->modelsPendingRemoval:Ljava/util/Set;
 
-    .line 339
+    .line 461
     invoke-interface {v4}, Ljava/util/Set;->size()I
 
-    .line 341
+    .line 463
     move-result v4
 
-    .line 344
+    .line 466
     if-lez v4, :cond_b
 
-    .line 345
+    .line 467
     iget-object v4, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->updateHostVisibility:Lkotlin/jvm/functions/Function0;
 
-    .line 347
+    .line 469
     invoke-interface {v4}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
-    .line 349
+    .line 471
     :cond_b
     iget-object v4, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->modelsPendingRemoval:Ljava/util/Set;
 
-    .line 352
+    .line 474
     invoke-interface {v4}, Ljava/util/Set;->clear()V
 
-    .line 354
+    .line 476
     :cond_c
     iput-boolean v7, v8, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel;->allowReorder:Z
 
-    .line 357
-    const/4 v4, 0x1
+    .line 479
+    iput v5, v2, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$special$$inlined$map$1$2$1;->label:I
 
-    .line 359
-    iput v4, v2, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$special$$inlined$map$1$2$1;->label:I
-
-    .line 360
+    .line 481
     iget-object v0, v0, Lcom/android/systemui/media/controls/ui/viewmodel/MediaCarouselViewModel$special$$inlined$map$1$2;->$this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
 
-    .line 362
+    .line 483
     invoke-interface {v0, v1, v2}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 364
+    .line 485
     move-result-object v0
 
-    .line 367
+    .line 488
     if-ne v0, v3, :cond_d
 
-    .line 368
+    .line 489
     return-object v3
 
-    .line 370
+    .line 491
     :cond_d
-    :goto_7
+    :goto_6
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 371
+    .line 492
     return-object v0
-    .line 373
+    .line 494
 .end method

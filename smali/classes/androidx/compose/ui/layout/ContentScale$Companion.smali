@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/layout/ContentScale$Companion;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -27,30 +27,27 @@
     invoke-direct {v0, v1}, Landroidx/compose/ui/layout/ContentScale$Companion$Fit$1;-><init>(I)V
 
     .line 5
-    sput-object v0, Landroidx/compose/ui/layout/ContentScale$Companion;->Crop:Landroidx/compose/ui/layout/ContentScale$Companion$Fit$1;
+    new-instance v0, Landroidx/compose/ui/layout/ContentScale$Companion$Fit$1;
 
     .line 8
-    new-instance v0, Landroidx/compose/ui/layout/ContentScale$Companion$Fit$1;
-
-    .line 10
     const/4 v1, 0x0
 
-    .line 12
+    .line 10
     invoke-direct {v0, v1}, Landroidx/compose/ui/layout/ContentScale$Companion$Fit$1;-><init>(I)V
 
-    .line 13
+    .line 11
     sput-object v0, Landroidx/compose/ui/layout/ContentScale$Companion;->Fit:Landroidx/compose/ui/layout/ContentScale$Companion$Fit$1;
 
-    .line 16
+    .line 14
     new-instance v0, Landroidx/compose/ui/layout/ContentScale$Companion$Fit$1;
 
-    .line 18
+    .line 16
     const/4 v1, 0x2
 
-    .line 20
+    .line 18
     invoke-direct {v0, v1}, Landroidx/compose/ui/layout/ContentScale$Companion$Fit$1;-><init>(I)V
 
-    .line 21
+    .line 19
     return-void
-    .line 24
+    .line 22
 .end method

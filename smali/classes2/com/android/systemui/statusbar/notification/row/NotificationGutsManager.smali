@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -37,7 +37,7 @@
 
 .field public final mLauncherApps:Landroid/content/pm/LauncherApps;
 
-.field public mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
+.field public mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
 .field public final mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
@@ -601,33 +601,30 @@
     if-eqz p4, :cond_3
 
     .line 45
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
     .line 47
     if-eqz p0, :cond_3
 
     .line 49
-    check-cast p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
-
-    .line 51
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 53
+    .line 51
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSwipeHelper:Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;
 
-    .line 55
+    .line 53
     const/4 p1, 0x0
 
-    .line 57
+    .line 55
     const/4 p2, 0x1
 
-    .line 58
+    .line 56
     invoke-virtual {p0, p1, p2}, Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;->resetExposedMenuView(ZZ)V
 
-    .line 59
+    .line 57
     :cond_3
     return-void
-    .line 62
+    .line 60
 .end method
 
 .method public initializeConversationNotificationInfo(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;)V
@@ -720,7 +717,7 @@
     .line 50
     :cond_1
     :goto_0
-    new-instance v8, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    new-instance v8, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 51
     const/4 v6, 0x1
@@ -738,7 +735,7 @@
     move-object/from16 v5, p1
 
     .line 58
-    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/row/NotificationGuts;Landroid/service/notification/StatusBarNotification;Ljava/lang/String;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/row/NotificationGuts;Landroid/service/notification/StatusBarNotification;Ljava/lang/String;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)V
 
     .line 60
     move-object/from16 v18, v8
@@ -769,7 +766,7 @@
     move-result-object v3
 
     .line 80
-    const v4, 0x7f0707ea    # @dimen/notification_guts_conversation_icon_size '56.0dp'
+    const v4, 0x7f07082d    # @dimen/notification_guts_conversation_icon_size '56.0dp'
 
     .line 81
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -871,7 +868,7 @@
     move-object/from16 v19, v0
 
     .line 148
-    invoke-virtual/range {v8 .. v24}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->bindNotification(Landroid/content/pm/PackageManager;Landroid/os/UserManager;Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;Landroid/app/INotificationManager;Lcom/android/systemui/statusbar/notification/collection/inflation/OnUserInteractionCallbackImpl;Ljava/lang/String;Landroid/app/NotificationChannel;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Landroid/app/Notification$BubbleMetadata;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;Lcom/android/settingslib/notification/ConversationIconFactory;ZLandroid/os/Handler;Landroid/os/Handler;Ljava/util/Optional;Lcom/android/systemui/shade/ShadeController;)V
+    invoke-virtual/range {v8 .. v24}, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->bindNotification(Landroid/content/pm/PackageManager;Landroid/os/UserManager;Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;Landroid/app/INotificationManager;Lcom/android/systemui/statusbar/notification/collection/inflation/OnUserInteractionCallbackImpl;Ljava/lang/String;Landroid/app/NotificationChannel;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Landroid/app/Notification$BubbleMetadata;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;Lcom/android/settingslib/notification/ConversationIconFactory;ZLandroid/os/Handler;Landroid/os/Handler;Ljava/util/Optional;Lcom/android/systemui/shade/ShadeController;)V
 
     .line 150
     return-void
@@ -932,10 +929,10 @@
     move-result-object v11
 
     .line 31
-    new-instance v12, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda3;
+    new-instance v12, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda4;
 
     .line 32
-    invoke-direct {v12, v7, v2, v3, v8}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/row/NotificationGuts;Landroid/service/notification/StatusBarNotification;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;)V
+    invoke-direct {v12, v7, v2, v3, v8}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/row/NotificationGuts;Landroid/service/notification/StatusBarNotification;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;)V
 
     .line 34
     sget-object v1, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -974,7 +971,7 @@
     .line 55
     :cond_1
     :goto_0
-    new-instance v14, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    new-instance v14, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 56
     const/4 v6, 0x2
@@ -992,7 +989,7 @@
     move-object/from16 v5, p1
 
     .line 63
-    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/row/NotificationGuts;Landroid/service/notification/StatusBarNotification;Ljava/lang/String;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/row/NotificationGuts;Landroid/service/notification/StatusBarNotification;Ljava/lang/String;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)V
 
     .line 65
     :goto_1
@@ -1112,13 +1109,13 @@
     iput-object v11, v9, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mPm:Landroid/content/pm/PackageManager;
 
     .line 138
-    iput-object v12, v9, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAppSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda3;
+    iput-object v12, v9, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAppSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda4;
 
     .line 140
     iput-object v10, v9, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mAppName:Ljava/lang/String;
 
     .line 142
-    iput-object v14, v9, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    iput-object v14, v9, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 144
     iput-object v3, v9, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mSingleNotificationChannel:Landroid/app/NotificationChannel;
@@ -1415,7 +1412,7 @@
 
     .line 320
     :cond_7
-    const v2, 0x7f0b05e0    # @id/pkg_icon
+    const v2, 0x7f0a0608    # @id/pkg_icon
 
     .line 322
     invoke-virtual {v9, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1433,7 +1430,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 333
-    const v2, 0x7f0b05e1    # @id/pkg_name
+    const v2, 0x7f0a0609    # @id/pkg_name
 
     .line 336
     invoke-virtual {v9, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1451,7 +1448,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 347
-    const v2, 0x7f0b024d    # @id/delegate_name
+    const v2, 0x7f0a0259    # @id/delegate_name
 
     .line 350
     invoke-virtual {v9, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1492,7 +1489,7 @@
 
     .line 375
     :goto_6
-    const v2, 0x7f0b00ca    # @id/app_settings
+    const v2, 0x7f0a00cd    # @id/app_settings
 
     .line 378
     invoke-virtual {v9, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1691,7 +1688,7 @@
 
     .line 509
     :goto_9
-    const v2, 0x7f0b039d    # @id/info
+    const v2, 0x7f0a03bd    # @id/info
 
     .line 512
     invoke-virtual {v9, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1706,7 +1703,7 @@
     if-ltz v3, :cond_d
 
     .line 521
-    iget-object v5, v9, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    iget-object v5, v9, Lcom/android/systemui/statusbar/notification/row/NotificationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 523
     if-eqz v5, :cond_d
@@ -1758,7 +1755,7 @@
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 550
-    const v2, 0x7f0b01c6    # @id/channel_name
+    const v2, 0x7f0a01cc    # @id/channel_name
 
     .line 553
     invoke-virtual {v9, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1852,7 +1849,7 @@
 
     .line 612
     :goto_d
-    const v0, 0x7f0b0336    # @id/group_name
+    const v0, 0x7f0a0355    # @id/group_name
 
     .line 613
     invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2040,7 +2037,7 @@
     .line 46
     :cond_1
     :goto_0
-    new-instance v11, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    new-instance v11, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 47
     const/4 v7, 0x0
@@ -2058,7 +2055,7 @@
     move-object v6, p1
 
     .line 53
-    invoke-direct/range {v1 .. v7}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/row/NotificationGuts;Landroid/service/notification/StatusBarNotification;Ljava/lang/String;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)V
+    invoke-direct/range {v1 .. v7}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/row/NotificationGuts;Landroid/service/notification/StatusBarNotification;Ljava/lang/String;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)V
 
     .line 54
     :goto_1
@@ -2127,7 +2124,7 @@
     iput-object v8, p2, Lcom/android/systemui/statusbar/notification/row/PartialConversationInfo;->mAppName:Ljava/lang/String;
 
     .line 94
-    iput-object v11, p2, Lcom/android/systemui/statusbar/notification/row/PartialConversationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    iput-object v11, p2, Lcom/android/systemui/statusbar/notification/row/PartialConversationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 96
     iput-object v1, p2, Lcom/android/systemui/statusbar/notification/row/PartialConversationInfo;->mNotificationChannel:Landroid/app/NotificationChannel;
@@ -2235,7 +2232,7 @@
     .line 162
     :cond_3
     :goto_3
-    const p0, 0x7f0b054a    # @id/name
+    const p0, 0x7f0a056e    # @id/name
 
     .line 164
     invoke-virtual {p2, p0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2253,7 +2250,7 @@
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 175
-    const p0, 0x7f0b0379    # @id/icon
+    const p0, 0x7f0a0399    # @id/icon
 
     .line 178
     invoke-virtual {p2, p0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2271,7 +2268,7 @@
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 189
-    const p0, 0x7f0b024d    # @id/delegate_name
+    const p0, 0x7f0a0259    # @id/delegate_name
 
     .line 192
     invoke-virtual {p2, p0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2321,7 +2318,7 @@
     if-ltz p0, :cond_5
 
     .line 223
-    iget-object p1, p2, Lcom/android/systemui/statusbar/notification/row/PartialConversationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+    iget-object p1, p2, Lcom/android/systemui/statusbar/notification/row/PartialConversationInfo;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
     .line 225
     if-eqz p1, :cond_5
@@ -2340,7 +2337,7 @@
 
     .line 235
     :cond_5
-    const p0, 0x7f0b039d    # @id/info
+    const p0, 0x7f0a03bd    # @id/info
 
     .line 238
     invoke-virtual {p2, p0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2375,7 +2372,7 @@
     invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     .line 257
-    const p0, 0x7f0b06fa    # @id/settings_link
+    const p0, 0x7f0a0725    # @id/settings_link
 
     .line 260
     invoke-virtual {p2, p0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2387,7 +2384,7 @@
     invoke-virtual {p0, v10}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 267
-    const p0, 0x7f0b056c    # @id/non_configurable_text
+    const p0, 0x7f0a0591    # @id/non_configurable_text
 
     .line 270
     invoke-virtual {p2, p0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2414,7 +2411,7 @@
     move-result-object v3
 
     .line 288
-    const v4, 0x7f1406c5    # @string/no_shortcut '%1$s doesn’t support conversation features'
+    const v4, 0x7f130720    # @string/no_shortcut '%1$s doesn’t support conversation features'
 
     .line 289
     invoke-virtual {p1, v4, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -2426,7 +2423,7 @@
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 296
-    const p0, 0x7f0b084e    # @id/turn_off_notifications
+    const p0, 0x7f0a087c    # @id/turn_off_notifications
 
     .line 299
     invoke-virtual {p2, p0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2466,7 +2463,7 @@
     invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 325
-    const p0, 0x7f0b0293    # @id/done
+    const p0, 0x7f0a02a2    # @id/done
 
     .line 328
     invoke-virtual {p2, p0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2513,153 +2510,150 @@
     iget-object v3, v2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
 
     .line 7
-    iget-object v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
+    iget-object v4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
     .line 9
-    check-cast v4, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
-
-    .line 11
     iget-object v4, v4, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 13
+    .line 11
     iget-object v4, v4, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSwipeHelper:Lcom/android/systemui/statusbar/notification/stack/NotificationSwipeHelper;
 
-    .line 15
+    .line 13
     iput-object v4, p2, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze;->mSnoozeListener:Lcom/android/systemui/plugins/statusbar/NotificationSwipeActionHelper;
 
-    .line 17
+    .line 15
     iput-object v3, p2, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze;->mSbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 19
+    .line 17
     iget-object v2, v2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mRanking:Landroid/service/notification/NotificationListenerService$Ranking;
 
-    .line 21
+    .line 19
     invoke-virtual {v2}, Landroid/service/notification/NotificationListenerService$Ranking;->getSnoozeCriteria()Ljava/util/List;
 
-    .line 23
+    .line 21
     move-result-object v2
 
-    .line 26
+    .line 24
     if-nez v2, :cond_0
 
-    .line 27
+    .line 25
     goto :goto_1
 
-    .line 29
+    .line 27
     :cond_0
     iget-object v3, p2, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze;->mSnoozeOptions:Ljava/util/List;
 
-    .line 30
+    .line 28
     invoke-interface {v3}, Ljava/util/List;->clear()V
 
-    .line 32
+    .line 30
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze;->getDefaultSnoozeOptions()Ljava/util/ArrayList;
 
-    .line 35
+    .line 33
     move-result-object v3
 
-    .line 38
+    .line 36
     iput-object v3, p2, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze;->mSnoozeOptions:Ljava/util/List;
 
-    .line 39
+    .line 37
     invoke-interface {v2}, Ljava/util/List;->size()I
 
-    .line 41
+    .line 39
     move-result v3
 
-    .line 44
+    .line 42
     invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
 
-    .line 45
+    .line 43
     move-result v3
 
-    .line 48
+    .line 46
     const/4 v4, 0x0
 
-    .line 49
+    .line 47
     :goto_0
     if-ge v4, v3, :cond_1
 
-    .line 50
+    .line 48
     invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 52
+    .line 50
     move-result-object v5
 
-    .line 55
+    .line 53
     move-object v7, v5
 
-    .line 56
+    .line 54
     check-cast v7, Landroid/service/notification/SnoozeCriterion;
 
-    .line 57
+    .line 55
     new-instance v11, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
-    .line 59
+    .line 57
     invoke-virtual {v7}, Landroid/service/notification/SnoozeCriterion;->getExplanation()Ljava/lang/CharSequence;
 
-    .line 61
+    .line 59
     move-result-object v5
 
-    .line 64
-    const v6, 0x7f0b0082    # @id/action_snooze_assistant_suggestion_1
+    .line 62
+    const v6, 0x7f0a0082    # @id/action_snooze_assistant_suggestion_1
 
-    .line 65
+    .line 63
     invoke-direct {v11, v6, v5}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 68
+    .line 66
     iget-object v5, p2, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze;->mSnoozeOptions:Ljava/util/List;
 
-    .line 71
+    .line 69
     new-instance v12, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze$NotificationSnoozeOption;
 
-    .line 73
+    .line 71
     invoke-virtual {v7}, Landroid/service/notification/SnoozeCriterion;->getExplanation()Ljava/lang/CharSequence;
 
-    .line 75
+    .line 73
     move-result-object v9
 
-    .line 78
+    .line 76
     invoke-virtual {v7}, Landroid/service/notification/SnoozeCriterion;->getConfirmation()Ljava/lang/CharSequence;
 
-    .line 79
+    .line 77
     move-result-object v10
 
-    .line 82
+    .line 80
     const/4 v8, 0x0
 
-    .line 83
+    .line 81
     move-object v6, v12
 
-    .line 84
+    .line 82
     invoke-direct/range {v6 .. v11}, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze$NotificationSnoozeOption;-><init>(Landroid/service/notification/SnoozeCriterion;ILjava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
-    .line 85
+    .line 83
     invoke-interface {v5, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 88
+    .line 86
     add-int/2addr v4, v0
 
-    .line 91
+    .line 89
     goto :goto_0
 
-    .line 92
+    .line 90
     :cond_1
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/row/NotificationSnooze;->createOptionViews()V
 
-    .line 93
+    .line 91
     :goto_1
     new-instance p2, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda6;
 
-    .line 96
+    .line 94
     invoke-direct {p2, p0, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;)V
 
-    .line 98
+    .line 96
     iput-object p2, v1, Lcom/android/systemui/statusbar/notification/row/NotificationGuts;->mHeightListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda6;
 
-    .line 101
+    .line 99
     return-void
-    .line 103
+    .line 101
 .end method
 
 .method public final openGuts(Landroid/view/View;IILcom/android/systemui/plugins/statusbar/NotificationMenuRowPlugin$MenuItem;)Z
@@ -3008,10 +3002,10 @@
     iget-object v0, v0, Lcom/android/systemui/scene/domain/interactor/WindowRootViewVisibilityInteractor;->isLockscreenOrShadeVisible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 4
-    new-instance v1, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda5;
+    new-instance v1, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
 
     .line 6
-    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;)V
 
     .line 8
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;

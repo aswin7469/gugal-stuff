@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/lazy/grid/LazyGridKt$rememberLazyGridMeasurePolicy$1$1$measuredItemProvider$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/foundation/lazy/layout/LazyLayoutMeasuredItemProvider;
@@ -141,7 +141,7 @@
     move-wide/from16 v5, p2
 
     .line 22
-    invoke-virtual {v1, v2, v5, v6}, Landroidx/compose/foundation/lazy/layout/LazyLayoutMeasureScopeImpl;->measure-0kLqBqw(IJ)Ljava/util/List;
+    invoke-virtual {v1, v5, v6, v2}, Landroidx/compose/foundation/lazy/layout/LazyLayoutMeasureScopeImpl;->measure-0kLqBqw(JI)Ljava/util/List;
 
     .line 24
     move-result-object v11

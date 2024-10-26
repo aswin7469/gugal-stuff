@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/unfold/FoldAodAnimationController$onScreenTurningOn$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -77,19 +77,19 @@
     iget-boolean v1, v0, Lcom/android/systemui/unfold/FoldAodAnimationController;->isFolded:Z
 
     .line 24
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
     .line 26
     iget-boolean v1, v0, Lcom/android/systemui/unfold/FoldAodAnimationController;->isFoldHandled:Z
 
     .line 28
-    if-nez v1, :cond_3
+    if-nez v1, :cond_2
 
     .line 30
     iget-boolean v1, v0, Lcom/android/systemui/unfold/FoldAodAnimationController;->alwaysOnEnabled:Z
 
     .line 32
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
     .line 34
     iget-object v0, v0, Lcom/android/systemui/unfold/FoldAodAnimationController;->keyguardInteractor:Ldagger/Lazy;
@@ -122,7 +122,7 @@
     move-result v0
 
     .line 55
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     .line 56
     iget-object v0, p0, Lcom/android/systemui/unfold/FoldAodAnimationController$onScreenTurningOn$1;->this$0:Lcom/android/systemui/unfold/FoldAodAnimationController;
@@ -143,74 +143,55 @@
     invoke-interface {v0}, Lcom/android/systemui/shade/ShadeFoldAnimator;->prepareFoldToAodAnimation()V
 
     .line 69
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 72
-    move-result v0
-
-    .line 75
-    if-nez v0, :cond_2
-
-    .line 76
     iget-object v0, p0, Lcom/android/systemui/unfold/FoldAodAnimationController$onScreenTurningOn$1;->this$0:Lcom/android/systemui/unfold/FoldAodAnimationController;
 
-    .line 78
+    .line 72
     invoke-virtual {v0}, Lcom/android/systemui/unfold/FoldAodAnimationController;->getShadeFoldAnimator()Lcom/android/systemui/shade/ShadeFoldAnimator;
 
-    .line 80
+    .line 74
     move-result-object v0
 
-    .line 83
+    .line 77
     invoke-interface {v0}, Lcom/android/systemui/shade/ShadeFoldAnimator;->getView()Landroid/view/ViewGroup;
 
-    .line 84
+    .line 78
     move-result-object v0
 
-    .line 87
-    if-eqz v0, :cond_4
+    .line 81
+    if-eqz v0, :cond_3
 
-    .line 88
+    .line 82
     iget-object v1, p0, Lcom/android/systemui/unfold/FoldAodAnimationController$onScreenTurningOn$1;->$onReady:Ljava/lang/Runnable;
 
-    .line 90
+    .line 84
     invoke-static {v0, v1}, Landroidx/core/view/OneShotPreDrawListener;->add(Landroid/view/View;Ljava/lang/Runnable;)V
 
-    .line 92
+    .line 86
     goto :goto_0
 
-    .line 95
+    .line 89
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/unfold/FoldAodAnimationController$onScreenTurningOn$1;->$onReady:Ljava/lang/Runnable;
 
-    .line 96
+    .line 90
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 98
-    goto :goto_0
-
-    .line 101
+    .line 92
     :cond_3
-    iget-object v0, p0, Lcom/android/systemui/unfold/FoldAodAnimationController$onScreenTurningOn$1;->$onReady:Ljava/lang/Runnable;
-
-    .line 102
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    .line 104
-    :cond_4
     :goto_0
     iget-object p0, p0, Lcom/android/systemui/unfold/FoldAodAnimationController$onScreenTurningOn$1;->this$0:Lcom/android/systemui/unfold/FoldAodAnimationController;
 
-    .line 107
+    .line 95
     iget-boolean v0, p0, Lcom/android/systemui/unfold/FoldAodAnimationController;->isFolded:Z
 
-    .line 109
-    if-eqz v0, :cond_5
+    .line 97
+    if-eqz v0, :cond_4
 
-    .line 111
+    .line 99
     iput-boolean v2, p0, Lcom/android/systemui/unfold/FoldAodAnimationController;->isFoldHandled:Z
 
-    .line 113
-    :cond_5
+    .line 101
+    :cond_4
     return-void
-    .line 115
+    .line 103
 .end method

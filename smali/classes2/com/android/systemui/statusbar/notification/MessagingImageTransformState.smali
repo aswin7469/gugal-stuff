@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;
 .super Lcom/android/systemui/statusbar/notification/ImageTransformState;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -32,13 +32,13 @@
     sput-object v0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->sInstancePool:Landroid/util/Pools$SimplePool;
 
     .line 9
-    const v0, 0x7f0b0822    # @id/transformation_start_actual_width
+    const v0, 0x7f0a0850    # @id/transformation_start_actual_width
 
     .line 11
     sput v0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->START_ACTUAL_WIDTH:I
 
     .line 14
-    const v0, 0x7f0b0821    # @id/transformation_start_actual_height
+    const v0, 0x7f0a084f    # @id/transformation_start_actual_height
 
     .line 16
     sput v0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->START_ACTUAL_HEIGHT:I

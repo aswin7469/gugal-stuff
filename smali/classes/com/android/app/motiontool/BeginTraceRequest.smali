@@ -1,6 +1,6 @@
 .class public final Lcom/android/app/motiontool/BeginTraceRequest;
 .super Lcom/google/protobuf/GeneratedMessageLite;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -39,17 +39,6 @@
     .line 11
     return-void
     .line 14
-.end method
-
-.method public static synthetic access$000()Lcom/android/app/motiontool/BeginTraceRequest;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lcom/android/app/motiontool/BeginTraceRequest;->DEFAULT_INSTANCE:Lcom/android/app/motiontool/BeginTraceRequest;
-
-    .line 2
-    return-object v0
-    .line 4
 .end method
 
 .method public static getDefaultInstance()Lcom/android/app/motiontool/BeginTraceRequest;
@@ -159,79 +148,76 @@
     new-instance p0, Lcom/android/app/motiontool/BeginTraceRequest$Builder;
 
     .line 44
-    invoke-static {}, Lcom/android/app/motiontool/BeginTraceRequest;->access$000()Lcom/android/app/motiontool/BeginTraceRequest;
+    sget-object p1, Lcom/android/app/motiontool/BeginTraceRequest;->DEFAULT_INSTANCE:Lcom/android/app/motiontool/BeginTraceRequest;
 
     .line 46
-    move-result-object p1
-
-    .line 49
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageLite$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
-    .line 50
+    .line 48
     return-object p0
 
-    .line 53
+    .line 51
     :pswitch_3
     new-instance p0, Lcom/android/app/motiontool/BeginTraceRequest;
 
-    .line 54
+    .line 52
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
-    .line 56
+    .line 54
     return-object p0
 
-    .line 59
+    .line 57
     :pswitch_4
     const-string p0, "bitField0_"
 
-    .line 60
+    .line 58
     const-string/jumbo p1, "window_"
 
-    .line 62
+    .line 60
     filled-new-array {p0, p1}, [Ljava/lang/Object;
 
-    .line 65
+    .line 63
     move-result-object p0
 
-    .line 68
+    .line 66
     const-string p1, "\u0001\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000"
 
-    .line 69
+    .line 67
     sget-object v0, Lcom/android/app/motiontool/BeginTraceRequest;->DEFAULT_INSTANCE:Lcom/android/app/motiontool/BeginTraceRequest;
 
-    .line 71
+    .line 69
     new-instance v1, Lcom/google/protobuf/RawMessageInfo;
 
-    .line 73
+    .line 71
     invoke-direct {v1, v0, p1, p0}, Lcom/google/protobuf/RawMessageInfo;-><init>(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 75
+    .line 73
     return-object v1
 
-    .line 78
+    .line 76
     :pswitch_5
     const/4 p0, 0x0
 
-    .line 79
+    .line 77
     return-object p0
 
-    .line 80
+    .line 78
     :pswitch_6
     const/4 p0, 0x1
 
-    .line 81
+    .line 79
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    .line 82
+    .line 80
     move-result-object p0
 
-    .line 85
+    .line 83
     return-object p0
 
-    .line 86
+    .line 84
     nop
 
-    .line 87
+    .line 85
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_6
@@ -242,7 +228,7 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 88
+    .line 86
 .end method
 
 .method public final getWindow()Lcom/android/app/motiontool/WindowIdentifier;

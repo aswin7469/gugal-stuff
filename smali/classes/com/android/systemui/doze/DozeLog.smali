@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/doze/DozeLog;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -226,7 +226,7 @@
     const-string v1, "invalid reason: "
 
     .line 7
-    invoke-static {p0, v1}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 9
     move-result-object p0
@@ -253,82 +253,82 @@
 
     .line 22
     :pswitch_2
-    const-string p0, "udfps"
+    const-string/jumbo p0, "udfps"
 
     .line 23
     return-object p0
 
-    .line 25
-    :pswitch_3
-    const-string p0, "tap"
-
     .line 26
+    :pswitch_3
+    const-string/jumbo p0, "tap"
+
+    .line 27
     return-object p0
 
-    .line 28
+    .line 30
     :pswitch_4
     const-string p0, "reach-wakelockscreen"
 
-    .line 29
+    .line 31
     return-object p0
 
-    .line 31
+    .line 33
     :pswitch_5
     const-string p0, "presence-wakeup"
 
-    .line 32
+    .line 34
     return-object p0
 
-    .line 34
+    .line 36
     :pswitch_6
     const-string p0, "docking"
 
-    .line 35
+    .line 37
     return-object p0
 
-    .line 37
+    .line 39
     :pswitch_7
     const-string p0, "longpress"
 
-    .line 38
+    .line 40
     return-object p0
 
-    .line 40
+    .line 42
     :pswitch_8
     const-string p0, "doubletap"
 
-    .line 41
+    .line 43
     return-object p0
 
-    .line 43
+    .line 45
     :pswitch_9
     const-string p0, "pickup"
 
-    .line 44
+    .line 46
     return-object p0
 
-    .line 46
+    .line 48
     :pswitch_a
     const-string p0, "sigmotion"
 
-    .line 47
+    .line 49
     return-object p0
 
-    .line 49
+    .line 51
     :pswitch_b
     const-string p0, "notification"
 
-    .line 50
+    .line 52
     return-object p0
 
-    .line 52
+    .line 54
     :pswitch_c
     const-string p0, "intent"
 
-    .line 53
+    .line 55
     return-object p0
 
-    .line 55
+    .line 57
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_c
@@ -345,7 +345,7 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 56
+    .line 58
 .end method
 
 

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/BiometricNotificationService;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -21,7 +21,7 @@
 
 .field public mFingerprintNotificationQueued:Z
 
-.field public final mFingerprintReEnrollNotification:Lcom/android/systemui/biometrics/FingerprintReEnrollNotificationImpl;
+.field public final mFingerprintReEnrollNotification:Lcom/android/systemui/biometrics/FingerprintReEnrollNotification;
 
 .field public mFingerprintReenrollRequired:Z
 
@@ -124,10 +124,10 @@
     move-result-object p1
 
     .line 55
-    check-cast p1, Lcom/android/systemui/biometrics/FingerprintReEnrollNotificationImpl;
+    check-cast p1, Lcom/android/systemui/biometrics/FingerprintReEnrollNotification;
 
     .line 56
-    iput-object p1, p0, Lcom/android/systemui/biometrics/BiometricNotificationService;->mFingerprintReEnrollNotification:Lcom/android/systemui/biometrics/FingerprintReEnrollNotificationImpl;
+    iput-object p1, p0, Lcom/android/systemui/biometrics/BiometricNotificationService;->mFingerprintReEnrollNotification:Lcom/android/systemui/biometrics/FingerprintReEnrollNotification;
 
     .line 58
     iput-object p8, p0, Lcom/android/systemui/biometrics/BiometricNotificationService;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
@@ -252,98 +252,98 @@
     invoke-direct {v0, v2, v4}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 69
-    const-string v2, "sys"
+    const-string/jumbo v2, "sys"
 
     .line 72
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setCategory(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
-    .line 74
+    .line 75
     move-result-object v0
-
-    .line 77
-    const v2, 0x1080426    # @android:drawable/ic_jog_dial_vibrate_on
 
     .line 78
+    const v2, 0x1080424    # @android:drawable/ic_jog_dial_sound_on
+
+    .line 79
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
-    .line 81
+    .line 82
     move-result-object v0
 
-    .line 84
+    .line 85
     invoke-virtual {v0, p2}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 85
+    .line 86
     move-result-object p2
-
-    .line 88
-    invoke-virtual {p2, p3}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     .line 89
-    move-result-object p2
+    invoke-virtual {p2, p3}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    .line 92
-    invoke-virtual {p2, p4}, Landroid/app/Notification$Builder;->setSubText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    .line 90
+    move-result-object p2
 
     .line 93
+    invoke-virtual {p2, p4}, Landroid/app/Notification$Builder;->setSubText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+
+    .line 94
     move-result-object p2
 
-    .line 96
+    .line 97
     invoke-virtual {p2, p1}, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
-    .line 97
+    .line 98
     move-result-object p1
-
-    .line 100
-    invoke-virtual {p1, v1}, Landroid/app/Notification$Builder;->setAutoCancel(Z)Landroid/app/Notification$Builder;
 
     .line 101
-    move-result-object p1
+    invoke-virtual {p1, v1}, Landroid/app/Notification$Builder;->setAutoCancel(Z)Landroid/app/Notification$Builder;
 
-    .line 104
-    invoke-virtual {p1, v1}, Landroid/app/Notification$Builder;->setLocalOnly(Z)Landroid/app/Notification$Builder;
+    .line 102
+    move-result-object p1
 
     .line 105
-    move-result-object p1
+    invoke-virtual {p1, v1}, Landroid/app/Notification$Builder;->setLocalOnly(Z)Landroid/app/Notification$Builder;
 
-    .line 108
-    invoke-virtual {p1, v1}, Landroid/app/Notification$Builder;->setOnlyAlertOnce(Z)Landroid/app/Notification$Builder;
+    .line 106
+    move-result-object p1
 
     .line 109
-    move-result-object p1
+    invoke-virtual {p1, v1}, Landroid/app/Notification$Builder;->setOnlyAlertOnce(Z)Landroid/app/Notification$Builder;
 
-    .line 112
-    const/4 p2, -0x1
+    .line 110
+    move-result-object p1
 
     .line 113
-    invoke-virtual {p1, p2}, Landroid/app/Notification$Builder;->setVisibility(I)Landroid/app/Notification$Builder;
+    const/4 p2, -0x1
 
     .line 114
-    move-result-object p1
+    invoke-virtual {p1, p2}, Landroid/app/Notification$Builder;->setVisibility(I)Landroid/app/Notification$Builder;
 
-    .line 117
-    invoke-virtual {p1}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
+    .line 115
+    move-result-object p1
 
     .line 118
+    invoke-virtual {p1}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
+
+    .line 119
     move-result-object p1
 
-    .line 121
+    .line 122
     iget-object p2, p0, Lcom/android/systemui/biometrics/BiometricNotificationService;->mNotificationManager:Landroid/app/NotificationManager;
 
-    .line 122
+    .line 123
     iget-object p3, p0, Lcom/android/systemui/biometrics/BiometricNotificationService;->mNotificationChannel:Landroid/app/NotificationChannel;
 
-    .line 124
+    .line 125
     invoke-virtual {p2, p3}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
 
-    .line 126
+    .line 127
     iget-object p0, p0, Lcom/android/systemui/biometrics/BiometricNotificationService;->mNotificationManager:Landroid/app/NotificationManager;
 
-    .line 129
+    .line 130
     invoke-virtual {p0, v3, p5, p1, p6}, Landroid/app/NotificationManager;->notifyAsUser(Ljava/lang/String;ILandroid/app/Notification;Landroid/os/UserHandle;)V
 
-    .line 131
+    .line 132
     return-void
-    .line 134
+    .line 135
 .end method
 
 .method public final start()V

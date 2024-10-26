@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/keyguard/ui/preview/KeyguardPreviewRenderer$fetchThemeStyleFromSetting$overlayPackageJson$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -103,28 +103,28 @@
     iget-object p0, p0, Lcom/android/systemui/keyguard/ui/preview/KeyguardPreviewRenderer;->secureSettings:Lcom/android/systemui/util/settings/SecureSettings;
 
     .line 13
-    const-string p1, "theme_customization_overlay_packages"
+    const-string/jumbo p1, "theme_customization_overlay_packages"
 
     .line 15
     invoke-interface {p0, p1}, Lcom/android/systemui/util/settings/UserSettingsProxy;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 17
+    .line 18
     move-result-object p0
 
-    .line 20
+    .line 21
     return-object p0
 
-    .line 21
+    .line 22
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 22
+    .line 23
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    .line 24
+    .line 25
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 26
+    .line 27
     throw p0
-    .line 29
+    .line 30
 .end method

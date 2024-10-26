@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/WindowMagnificationController$MirrorWindowA11yDelegate;
 .super Landroid/view/View$AccessibilityDelegate;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -61,7 +61,7 @@
     move-result-object v1
 
     .line 24
-    const v2, 0x7f1405b6    # @string/magnification_exit_edit_mode_click_label 'Exit edit mode'
+    const v2, 0x7f130610    # @string/magnification_exit_edit_mode_click_label 'Exit edit mode'
 
     .line 25
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -89,7 +89,7 @@
     move-result-object v1
 
     .line 42
-    const v2, 0x7f1405b3    # @string/magnification_close_settings_click_label 'Close magnification settings'
+    const v2, 0x7f13060d    # @string/magnification_close_settings_click_label 'Close magnification settings'
 
     .line 43
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -111,7 +111,7 @@
     move-result-object v1
 
     .line 56
-    const v2, 0x7f1405ba    # @string/magnification_open_settings_click_label 'Open magnification settings'
+    const v2, 0x7f130614    # @string/magnification_open_settings_click_label 'Open magnification settings'
 
     .line 57
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -142,7 +142,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 78
-    const v1, 0x7f14006e    # @string/accessibility_control_zoom_in 'Zoom in'
+    const v1, 0x7f13006f    # @string/accessibility_control_zoom_in 'Zoom in'
 
     .line 80
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -151,7 +151,7 @@
     move-result-object v0
 
     .line 86
-    const v1, 0x7f0b002c    # @id/accessibility_action_zoom_in
+    const v1, 0x7f0a002c    # @id/accessibility_action_zoom_in
 
     .line 87
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -169,7 +169,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 100
-    const v1, 0x7f14006f    # @string/accessibility_control_zoom_out 'Zoom out'
+    const v1, 0x7f130070    # @string/accessibility_control_zoom_out 'Zoom out'
 
     .line 102
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -178,7 +178,7 @@
     move-result-object v0
 
     .line 108
-    const v1, 0x7f0b002d    # @id/accessibility_action_zoom_out
+    const v1, 0x7f0a002d    # @id/accessibility_action_zoom_out
 
     .line 109
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -205,7 +205,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 128
-    const v1, 0x7f14006c    # @string/accessibility_control_move_up 'Move up'
+    const v1, 0x7f13006d    # @string/accessibility_control_move_up 'Move up'
 
     .line 130
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -214,7 +214,7 @@
     move-result-object v0
 
     .line 136
-    const v1, 0x7f0b0028    # @id/accessibility_action_move_up
+    const v1, 0x7f0a0028    # @id/accessibility_action_move_up
 
     .line 137
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -232,7 +232,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 150
-    const v1, 0x7f140069    # @string/accessibility_control_move_down 'Move down'
+    const v1, 0x7f13006a    # @string/accessibility_control_move_down 'Move down'
 
     .line 152
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -241,7 +241,7 @@
     move-result-object v0
 
     .line 158
-    const v1, 0x7f0b0025    # @id/accessibility_action_move_down
+    const v1, 0x7f0a0025    # @id/accessibility_action_move_down
 
     .line 159
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -259,7 +259,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 172
-    const v1, 0x7f14006a    # @string/accessibility_control_move_left 'Move left'
+    const v1, 0x7f13006b    # @string/accessibility_control_move_left 'Move left'
 
     .line 174
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -268,7 +268,7 @@
     move-result-object v0
 
     .line 180
-    const v1, 0x7f0b0026    # @id/accessibility_action_move_left
+    const v1, 0x7f0a0026    # @id/accessibility_action_move_left
 
     .line 181
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -286,7 +286,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 194
-    const v1, 0x7f14006b    # @string/accessibility_control_move_right 'Move right'
+    const v1, 0x7f13006c    # @string/accessibility_control_move_right 'Move right'
 
     .line 196
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -295,7 +295,7 @@
     move-result-object v0
 
     .line 202
-    const v1, 0x7f0b0027    # @id/accessibility_action_move_right
+    const v1, 0x7f0a0027    # @id/accessibility_action_move_right
 
     .line 203
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -350,7 +350,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 239
-    const v1, 0x7f140067    # @string/accessibility_control_increase_window_width 'Increase width of magnifier'
+    const v1, 0x7f130068    # @string/accessibility_control_increase_window_width 'Increase width of magnifier'
 
     .line 241
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -359,7 +359,7 @@
     move-result-object v0
 
     .line 247
-    const v1, 0x7f0b0024    # @id/accessibility_action_increase_window_width
+    const v1, 0x7f0a0024    # @id/accessibility_action_increase_window_width
 
     .line 248
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -414,7 +414,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 284
-    const v1, 0x7f140066    # @string/accessibility_control_increase_window_height 'Increase height of magnifier'
+    const v1, 0x7f130067    # @string/accessibility_control_increase_window_height 'Increase height of magnifier'
 
     .line 286
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -423,7 +423,7 @@
     move-result-object v0
 
     .line 292
-    const v1, 0x7f0b0023    # @id/accessibility_action_increase_window_height
+    const v1, 0x7f0a0023    # @id/accessibility_action_increase_window_height
 
     .line 293
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -472,7 +472,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 325
-    const v1, 0x7f140063    # @string/accessibility_control_decrease_window_width 'Decrease width of magnifier'
+    const v1, 0x7f130064    # @string/accessibility_control_decrease_window_width 'Decrease width of magnifier'
 
     .line 327
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -481,7 +481,7 @@
     move-result-object v0
 
     .line 333
-    const v1, 0x7f0b0022    # @id/accessibility_action_decrease_window_width
+    const v1, 0x7f0a0022    # @id/accessibility_action_decrease_window_width
 
     .line 334
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -530,7 +530,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 366
-    const v1, 0x7f140062    # @string/accessibility_control_decrease_window_height 'Decrease height of magnifier'
+    const v1, 0x7f130063    # @string/accessibility_control_decrease_window_height 'Decrease height of magnifier'
 
     .line 368
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -539,7 +539,7 @@
     move-result-object v0
 
     .line 374
-    const v1, 0x7f0b0021    # @id/accessibility_action_decrease_window_height
+    const v1, 0x7f0a0021    # @id/accessibility_action_decrease_window_height
 
     .line 375
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -556,7 +556,7 @@
     iget-object p1, p1, Lcom/android/systemui/accessibility/WindowMagnificationController;->mContext:Landroid/content/Context;
 
     .line 386
-    const v0, 0x7f1405bb    # @string/magnification_window_title 'Magnification Window'
+    const v0, 0x7f130615    # @string/magnification_window_title 'Magnification Window'
 
     .line 388
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -601,6 +601,7 @@
 
     .line 415
     return-void
+    .line 418
 .end method
 
 .method public final performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
@@ -619,7 +620,7 @@
     move-result-object v0
 
     .line 9
-    const v1, 0x7f0a0016    # @fraction/magnification_resize_window_size_amount '10.0%'
+    const v1, 0x7f090016    # @fraction/magnification_resize_window_size_amount '10.0%'
 
     .line 10
     const/4 v2, 0x1
@@ -672,7 +673,7 @@
 
     .line 43
     :cond_1
-    const v1, 0x7f0b002c    # @id/accessibility_action_zoom_in
+    const v1, 0x7f0a002c    # @id/accessibility_action_zoom_in
 
     .line 45
     const/high16 v4, 0x3f800000    # 1.0f
@@ -697,7 +698,7 @@
 
     .line 60
     :cond_2
-    const v1, 0x7f0b002d    # @id/accessibility_action_zoom_out
+    const v1, 0x7f0a002d    # @id/accessibility_action_zoom_out
 
     .line 62
     if-ne p2, v1, :cond_3
@@ -719,7 +720,7 @@
 
     .line 75
     :cond_3
-    const v1, 0x7f0b0028    # @id/accessibility_action_move_up
+    const v1, 0x7f0a0028    # @id/accessibility_action_move_up
 
     .line 77
     if-ne p2, v1, :cond_4
@@ -747,7 +748,7 @@
 
     .line 94
     :cond_4
-    const v1, 0x7f0b0025    # @id/accessibility_action_move_down
+    const v1, 0x7f0a0025    # @id/accessibility_action_move_down
 
     .line 96
     if-ne p2, v1, :cond_5
@@ -772,7 +773,7 @@
 
     .line 112
     :cond_5
-    const v1, 0x7f0b0026    # @id/accessibility_action_move_left
+    const v1, 0x7f0a0026    # @id/accessibility_action_move_left
 
     .line 114
     if-ne p2, v1, :cond_6
@@ -800,7 +801,7 @@
 
     .line 131
     :cond_6
-    const v1, 0x7f0b0027    # @id/accessibility_action_move_right
+    const v1, 0x7f0a0027    # @id/accessibility_action_move_right
 
     .line 133
     if-ne p2, v1, :cond_7
@@ -825,7 +826,7 @@
 
     .line 149
     :cond_7
-    const v1, 0x7f0b0024    # @id/accessibility_action_increase_window_width
+    const v1, 0x7f0a0024    # @id/accessibility_action_increase_window_width
 
     .line 151
     if-ne p2, v1, :cond_8
@@ -874,7 +875,7 @@
 
     .line 179
     :cond_8
-    const v1, 0x7f0b0023    # @id/accessibility_action_increase_window_height
+    const v1, 0x7f0a0023    # @id/accessibility_action_increase_window_height
 
     .line 180
     if-ne p2, v1, :cond_9
@@ -923,7 +924,7 @@
 
     .line 208
     :cond_9
-    const v1, 0x7f0b0022    # @id/accessibility_action_decrease_window_width
+    const v1, 0x7f0a0022    # @id/accessibility_action_decrease_window_width
 
     .line 209
     if-ne p2, v1, :cond_a
@@ -972,7 +973,7 @@
 
     .line 237
     :cond_a
-    const v1, 0x7f0b0021    # @id/accessibility_action_decrease_window_height
+    const v1, 0x7f0a0021    # @id/accessibility_action_decrease_window_height
 
     .line 238
     if-ne p2, v1, :cond_c

@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/animation/core/AnimationSpecKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -41,58 +41,6 @@
     .line 19
 .end method
 
-.method public static repeatable-91I0pcU$default(ILandroidx/compose/animation/core/DurationBasedAnimationSpec;Landroidx/compose/animation/core/RepeatMode;JI)Landroidx/compose/animation/core/RepeatableSpec;
-    .locals 6
-
-    .line 1
-    and-int/lit8 v0, p5, 0x4
-
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 4
-    sget-object p2, Landroidx/compose/animation/core/RepeatMode;->Restart:Landroidx/compose/animation/core/RepeatMode;
-
-    .line 6
-    :cond_0
-    move-object v3, p2
-
-    .line 8
-    and-int/lit8 p2, p5, 0x8
-
-    .line 9
-    if-eqz p2, :cond_1
-
-    .line 11
-    const/4 p2, 0x0
-
-    .line 13
-    int-to-long p3, p2
-
-    .line 14
-    :cond_1
-    move-wide v4, p3
-
-    .line 15
-    new-instance p2, Landroidx/compose/animation/core/RepeatableSpec;
-
-    .line 16
-    move-object v0, p2
-
-    .line 18
-    move v1, p0
-
-    .line 19
-    move-object v2, p1
-
-    .line 20
-    invoke-direct/range {v0 .. v5}, Landroidx/compose/animation/core/RepeatableSpec;-><init>(ILandroidx/compose/animation/core/DurationBasedAnimationSpec;Landroidx/compose/animation/core/RepeatMode;J)V
-
-    .line 21
-    return-object p2
-    .line 24
-.end method
-
 .method public static snap$default()Landroidx/compose/animation/core/SnapSpec;
     .locals 2
 
@@ -110,41 +58,48 @@
     .line 8
 .end method
 
-.method public static spring$default(FLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
+.method public static spring$default(FFLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
     .locals 1
 
     .line 1
-    and-int/lit8 v0, p2, 0x2
+    and-int/lit8 v0, p3, 0x1
 
     .line 2
     if-eqz v0, :cond_0
 
     .line 4
-    const p0, 0x44bb8000    # 1500.0f
+    const/high16 p0, 0x3f800000    # 1.0f
 
     .line 6
     :cond_0
-    and-int/lit8 p2, p2, 0x4
+    and-int/lit8 v0, p3, 0x2
 
-    .line 9
-    if-eqz p2, :cond_1
+    .line 8
+    if-eqz v0, :cond_1
 
-    .line 11
-    const/4 p1, 0x0
+    .line 10
+    const p1, 0x44bb8000    # 1500.0f
 
-    .line 13
+    .line 12
     :cond_1
-    new-instance p2, Landroidx/compose/animation/core/SpringSpec;
+    and-int/lit8 p3, p3, 0x4
 
-    .line 14
-    const/high16 v0, 0x3f800000    # 1.0f
+    .line 15
+    if-eqz p3, :cond_2
 
-    .line 16
-    invoke-direct {p2, v0, p0, p1}, Landroidx/compose/animation/core/SpringSpec;-><init>(FFLjava/lang/Object;)V
+    .line 17
+    const/4 p2, 0x0
 
-    .line 18
-    return-object p2
-    .line 21
+    .line 19
+    :cond_2
+    new-instance p3, Landroidx/compose/animation/core/SpringSpec;
+
+    .line 20
+    invoke-direct {p3, p0, p1, p2}, Landroidx/compose/animation/core/SpringSpec;-><init>(FFLjava/lang/Object;)V
+
+    .line 22
+    return-object p3
+    .line 25
 .end method
 
 .method public static tween$default(IILandroidx/compose/animation/core/Easing;I)Landroidx/compose/animation/core/TweenSpec;

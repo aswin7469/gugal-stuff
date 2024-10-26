@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/MagnificationModeSwitch$1;
 .super Landroid/view/View$AccessibilityDelegate;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -43,14 +43,14 @@
     if-ne v0, v1, :cond_0
 
     .line 10
-    const v0, 0x7f1405b9    # @string/magnification_mode_switch_state_window 'Magnify part of screen'
+    const v0, 0x7f130613    # @string/magnification_mode_switch_state_window 'Magnify part of screen'
 
     .line 12
     goto :goto_0
 
     .line 15
     :cond_0
-    const v0, 0x7f1405b8    # @string/magnification_mode_switch_state_full_screen 'Magnify full screen'
+    const v0, 0x7f130612    # @string/magnification_mode_switch_state_full_screen 'Magnify full screen'
 
     .line 16
     :goto_0
@@ -84,7 +84,7 @@
     move-result-object p1
 
     .line 39
-    const v0, 0x7f1405b7    # @string/magnification_mode_switch_description 'Magnification switch'
+    const v0, 0x7f130611    # @string/magnification_mode_switch_description 'Magnification switch'
 
     .line 40
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -120,7 +120,7 @@
     move-result-object v1
 
     .line 65
-    const v2, 0x7f1405ba    # @string/magnification_open_settings_click_label 'Open magnification settings'
+    const v2, 0x7f130614    # @string/magnification_open_settings_click_label 'Open magnification settings'
 
     .line 66
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -150,7 +150,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/MagnificationModeSwitch;->mContext:Landroid/content/Context;
 
     .line 87
-    const v1, 0x7f14006c    # @string/accessibility_control_move_up 'Move up'
+    const v1, 0x7f13006d    # @string/accessibility_control_move_up 'Move up'
 
     .line 89
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -159,7 +159,7 @@
     move-result-object v0
 
     .line 95
-    const v1, 0x7f0b0028    # @id/accessibility_action_move_up
+    const v1, 0x7f0a0028    # @id/accessibility_action_move_up
 
     .line 96
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -177,7 +177,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/MagnificationModeSwitch;->mContext:Landroid/content/Context;
 
     .line 109
-    const v1, 0x7f140069    # @string/accessibility_control_move_down 'Move down'
+    const v1, 0x7f13006a    # @string/accessibility_control_move_down 'Move down'
 
     .line 111
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -186,7 +186,7 @@
     move-result-object v0
 
     .line 117
-    const v1, 0x7f0b0025    # @id/accessibility_action_move_down
+    const v1, 0x7f0a0025    # @id/accessibility_action_move_down
 
     .line 118
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -204,7 +204,7 @@
     iget-object v0, v0, Lcom/android/systemui/accessibility/MagnificationModeSwitch;->mContext:Landroid/content/Context;
 
     .line 131
-    const v1, 0x7f14006a    # @string/accessibility_control_move_left 'Move left'
+    const v1, 0x7f13006b    # @string/accessibility_control_move_left 'Move left'
 
     .line 133
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -213,7 +213,7 @@
     move-result-object v0
 
     .line 139
-    const v1, 0x7f0b0026    # @id/accessibility_action_move_left
+    const v1, 0x7f0a0026    # @id/accessibility_action_move_left
 
     .line 140
     invoke-direct {p1, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -231,7 +231,7 @@
     iget-object p0, p0, Lcom/android/systemui/accessibility/MagnificationModeSwitch;->mContext:Landroid/content/Context;
 
     .line 153
-    const v0, 0x7f14006b    # @string/accessibility_control_move_right 'Move right'
+    const v0, 0x7f13006c    # @string/accessibility_control_move_right 'Move right'
 
     .line 155
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -240,7 +240,7 @@
     move-result-object p0
 
     .line 161
-    const v0, 0x7f0b0027    # @id/accessibility_action_move_right
+    const v0, 0x7f0a0027    # @id/accessibility_action_move_right
 
     .line 162
     invoke-direct {p1, v0, p0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -312,7 +312,7 @@
 
     .line 38
     :cond_0
-    const v1, 0x7f0b0028    # @id/accessibility_action_move_up
+    const v1, 0x7f0a0028    # @id/accessibility_action_move_up
 
     .line 39
     const/4 v2, 0x0
@@ -343,7 +343,7 @@
 
     .line 56
     :cond_1
-    const v1, 0x7f0b0025    # @id/accessibility_action_move_down
+    const v1, 0x7f0a0025    # @id/accessibility_action_move_down
 
     .line 57
     if-ne p2, v1, :cond_2
@@ -368,7 +368,7 @@
 
     .line 72
     :cond_2
-    const v1, 0x7f0b0026    # @id/accessibility_action_move_left
+    const v1, 0x7f0a0026    # @id/accessibility_action_move_left
 
     .line 73
     if-ne p2, v1, :cond_3
@@ -396,7 +396,7 @@
 
     .line 89
     :cond_3
-    const v1, 0x7f0b0027    # @id/accessibility_action_move_right
+    const v1, 0x7f0a0027    # @id/accessibility_action_move_right
 
     .line 90
     if-ne p2, v1, :cond_4

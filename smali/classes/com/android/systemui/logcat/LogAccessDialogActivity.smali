@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/logcat/LogAccessDialogActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -130,7 +130,7 @@
     move-result v0
 
     .line 5
-    const v1, 0x7f0b0452    # @id/log_access_dialog_allow_button
+    const v1, 0x7f0a0474    # @id/log_access_dialog_allow_button
 
     .line 6
     if-ne v0, v1, :cond_0
@@ -165,7 +165,7 @@
     move-result p1
 
     .line 26
-    const v0, 0x7f0b0454    # @id/log_access_dialog_deny_button
+    const v0, 0x7f0a0476    # @id/log_access_dialog_deny_button
 
     .line 27
     if-ne p1, v0, :cond_1
@@ -369,7 +369,7 @@
     move-result-object p1
 
     .line 108
-    const v1, 0x7f140569    # @string/log_access_confirmation_title 'Allow %s to access all device logs?'
+    const v1, 0x7f1305bf    # @string/log_access_confirmation_title 'Allow %s to access all device logs?'
 
     .line 109
     invoke-virtual {p0, v1, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -383,7 +383,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 116
-    const p1, 0x7f140564    # @string/log_access_confirmation_body 'Device logs record what happens on your device. Apps can use these logs to find and fix issues.\n\nSom ...'
+    const p1, 0x7f1305ba    # @string/log_access_confirmation_body 'Device logs record what happens on your device. Apps can use these logs to find and fix issues.\n\nSom ...'
 
     .line 118
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -401,7 +401,7 @@
     move-result-object p1
 
     .line 130
-    const v0, 0x7f05006d    # @bool/log_access_confirmation_learn_more_as_link 'true'
+    const v0, 0x7f05007b    # @bool/log_access_confirmation_learn_more_as_link 'true'
 
     .line 131
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -413,7 +413,7 @@
     iput-boolean p1, p0, Lcom/android/systemui/logcat/LogAccessDialogActivity;->mAlertLearnMoreLink:Z
 
     .line 138
-    const v0, 0x7f140568    # @string/log_access_confirmation_learn_more_url 'https://support.google.com/android/answer/12986432'
+    const v0, 0x7f1305be    # @string/log_access_confirmation_learn_more_url 'https://support.google.com/android/answer/12986432'
 
     .line 140
     if-eqz p1, :cond_4
@@ -422,7 +422,7 @@
     new-instance p1, Landroid/text/SpannableString;
 
     .line 145
-    const v1, 0x7f140566    # @string/log_access_confirmation_learn_more 'Learn more'
+    const v1, 0x7f1305bc    # @string/log_access_confirmation_learn_more 'Learn more'
 
     .line 147
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -483,7 +483,7 @@
     move-result-object v0
 
     .line 189
-    const v1, 0x7f140567    # @string/log_access_confirmation_learn_more_at 'Learn more at %s'
+    const v1, 0x7f1305bd    # @string/log_access_confirmation_learn_more_at 'Learn more at %s'
 
     .line 190
     invoke-virtual {p0, v1, v0}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -502,7 +502,7 @@
     new-instance p1, Landroid/view/ContextThemeWrapper;
 
     .line 202
-    const v0, 0x7f1501a7    # @style/LogAccessDialogTheme
+    const v0, 0x7f1401ab    # @style/LogAccessDialogTheme
 
     .line 204
     invoke-direct {p1, p0, v0}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
@@ -514,7 +514,7 @@
     move-result-object p1
 
     .line 213
-    const v1, 0x7f0e0148    # @layout/log_access_user_consent_dialog_permission 'res/layout/log_access_user_consent_dialog_permission.xml'
+    const v1, 0x7f0d0153    # @layout/log_access_user_consent_dialog_permission 'res/layout/log_access_user_consent_dialog_permission.xml'
 
     .line 214
     const/4 v3, 0x0
@@ -529,7 +529,7 @@
     if-eqz p1, :cond_7
 
     .line 222
-    const v1, 0x7f0b0455    # @id/log_access_dialog_title
+    const v1, 0x7f0a0477    # @id/log_access_dialog_title
 
     .line 224
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -559,7 +559,7 @@
     const/4 v3, 0x1
 
     .line 244
-    const v4, 0x7f0b0453    # @id/log_access_dialog_body
+    const v4, 0x7f0a0475    # @id/log_access_dialog_body
 
     .line 245
     if-nez v1, :cond_5
@@ -655,7 +655,7 @@
     .line 305
     :cond_6
     :goto_1
-    const v1, 0x7f0b0452    # @id/log_access_dialog_allow_button
+    const v1, 0x7f0a0474    # @id/log_access_dialog_allow_button
 
     .line 308
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -670,7 +670,7 @@
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 317
-    const v1, 0x7f0b0454    # @id/log_access_dialog_deny_button
+    const v1, 0x7f0a0476    # @id/log_access_dialog_deny_button
 
     .line 320
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/PhoneStatusBarTransitions;
 .super Lcom/android/systemui/statusbar/phone/BarTransitions;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -22,7 +22,7 @@
     .locals 2
 
     .line 1
-    const v0, 0x7f080b63    # @drawable/status_background 'res/drawable-hdpi/status_background.9.png'
+    const v0, 0x7f080baa    # @drawable/status_background 'res/drawable-hdpi/status_background.9.png'
 
     .line 2
     invoke-direct {p0, p2, v0}, Lcom/android/systemui/statusbar/phone/BarTransitions;-><init>(Landroid/view/View;I)V
@@ -40,7 +40,7 @@
     move-result-object p2
 
     .line 15
-    const v0, 0x7f0709c7    # @dimen/status_bar_icon_drawing_alpha '90.0%'
+    const v0, 0x7f070a1f    # @dimen/status_bar_icon_drawing_alpha '90.0%'
 
     .line 16
     const/4 v1, 0x1
@@ -55,7 +55,7 @@
     iput p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarTransitions;->mIconAlphaWhenOpaque:F
 
     .line 24
-    const p2, 0x7f0b076e    # @id/status_bar_start_side_except_heads_up
+    const p2, 0x7f0a079d    # @id/status_bar_start_side_except_heads_up
 
     .line 26
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -67,7 +67,7 @@
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarTransitions;->mStartSide:Landroid/view/View;
 
     .line 33
-    const p2, 0x7f0b0763    # @id/statusIcons
+    const p2, 0x7f0a0792    # @id/statusIcons
 
     .line 35
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -79,7 +79,7 @@
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarTransitions;->mStatusIcons:Landroid/view/View;
 
     .line 42
-    const p2, 0x7f0b0110    # @id/battery
+    const p2, 0x7f0a0115    # @id/battery
 
     .line 44
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;

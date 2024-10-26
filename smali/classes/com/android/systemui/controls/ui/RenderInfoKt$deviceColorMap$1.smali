@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/controls/ui/RenderInfoKt$deviceColorMap$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -57,7 +57,7 @@
     new-instance p0, Lkotlin/Pair;
 
     .line 7
-    const p1, 0x7f06008e    # @color/control_foreground 'res/color/control_foreground.xml'
+    const p1, 0x7f06008f    # @color/control_foreground 'res/color/control_foreground.xml'
 
     .line 9
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -66,7 +66,7 @@
     move-result-object p1
 
     .line 15
-    const v0, 0x7f060088    # @color/control_enabled_default_background '#3c3d40'
+    const v0, 0x7f060089    # @color/control_enabled_default_background '#3c3d40'
 
     .line 16
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -79,5 +79,4 @@
 
     .line 23
     return-object p0
-    .line 26
 .end method

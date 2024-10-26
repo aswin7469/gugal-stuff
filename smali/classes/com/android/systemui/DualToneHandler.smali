@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/DualToneHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -75,7 +75,7 @@
     new-instance v1, Landroid/view/ContextThemeWrapper;
 
     .line 14
-    const v2, 0x7f0403b2    # @attr/lightIconTheme
+    const v2, 0x7f0403b4    # @attr/lightIconTheme
 
     .line 16
     invoke-static {v2, p1}, Lcom/android/settingslib/Utils;->getThemeAttr(ILandroid/content/Context;)I
@@ -87,134 +87,72 @@
     invoke-direct {v1, p1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
     .line 23
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
+    new-instance p1, Lcom/android/systemui/DualToneHandler$Color;
 
     .line 26
-    move-result p1
+    const v2, 0x7f04058e    # @attr/singleToneColor
 
-    .line 29
-    const v2, 0x7f040250    # @attr/fillColor
+    .line 28
+    const/4 v3, 0x0
 
-    .line 30
-    const v3, 0x7f0402ff    # @attr/iconBackgroundColor
+    .line 31
+    invoke-static {v2, v3, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
 
-    .line 33
-    const/4 v4, 0x0
+    .line 32
+    move-result v4
+
+    .line 35
+    const v5, 0x7f040301    # @attr/iconBackgroundColor
 
     .line 36
-    if-eqz p1, :cond_0
-
-    .line 37
-    new-instance p1, Lcom/android/systemui/DualToneHandler$Color;
+    invoke-static {v5, v3, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
 
     .line 39
-    invoke-static {v3, v4, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
-
-    .line 41
-    move-result v5
-
-    .line 44
-    invoke-static {v2, v4, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
-
-    .line 45
-    move-result v0
-
-    .line 48
-    const/high16 v6, -0x1000000
-
-    .line 49
-    invoke-direct {p1, v6, v5, v0}, Lcom/android/systemui/DualToneHandler$Color;-><init>(III)V
-
-    .line 51
-    iput-object p1, p0, Lcom/android/systemui/DualToneHandler;->darkColor:Lcom/android/systemui/DualToneHandler$Color;
-
-    .line 54
-    new-instance p1, Lcom/android/systemui/DualToneHandler$Color;
-
-    .line 56
-    invoke-static {v3, v4, v1}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
-
-    .line 58
-    move-result v0
-
-    .line 61
-    invoke-static {v2, v4, v1}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
-
-    .line 62
-    move-result v1
-
-    .line 65
-    const/4 v2, -0x1
-
-    .line 66
-    invoke-direct {p1, v2, v0, v1}, Lcom/android/systemui/DualToneHandler$Color;-><init>(III)V
-
-    .line 67
-    iput-object p1, p0, Lcom/android/systemui/DualToneHandler;->lightColor:Lcom/android/systemui/DualToneHandler$Color;
-
-    .line 70
-    goto :goto_0
-
-    .line 72
-    :cond_0
-    new-instance p1, Lcom/android/systemui/DualToneHandler$Color;
-
-    .line 73
-    const v5, 0x7f04058a    # @attr/singleToneColor
-
-    .line 75
-    invoke-static {v5, v4, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
-
-    .line 78
     move-result v6
 
-    .line 81
-    invoke-static {v3, v4, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
+    .line 42
+    const v7, 0x7f040252    # @attr/fillColor
 
-    .line 82
-    move-result v7
+    .line 43
+    invoke-static {v7, v3, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
 
-    .line 85
-    invoke-static {v2, v4, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
-
-    .line 86
+    .line 46
     move-result v0
 
-    .line 89
-    invoke-direct {p1, v6, v7, v0}, Lcom/android/systemui/DualToneHandler$Color;-><init>(III)V
+    .line 49
+    invoke-direct {p1, v4, v6, v0}, Lcom/android/systemui/DualToneHandler$Color;-><init>(III)V
 
-    .line 90
+    .line 50
     iput-object p1, p0, Lcom/android/systemui/DualToneHandler;->darkColor:Lcom/android/systemui/DualToneHandler$Color;
 
-    .line 93
+    .line 53
     new-instance p1, Lcom/android/systemui/DualToneHandler$Color;
 
-    .line 95
-    invoke-static {v5, v4, v1}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
+    .line 55
+    invoke-static {v2, v3, v1}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
 
-    .line 97
+    .line 57
     move-result v0
 
-    .line 100
-    invoke-static {v3, v4, v1}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
+    .line 60
+    invoke-static {v5, v3, v1}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
 
-    .line 101
-    move-result v3
+    .line 61
+    move-result v2
 
-    .line 104
-    invoke-static {v2, v4, v1}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
+    .line 64
+    invoke-static {v7, v3, v1}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
 
-    .line 105
+    .line 65
     move-result v1
 
-    .line 108
-    invoke-direct {p1, v0, v3, v1}, Lcom/android/systemui/DualToneHandler$Color;-><init>(III)V
+    .line 68
+    invoke-direct {p1, v0, v2, v1}, Lcom/android/systemui/DualToneHandler$Color;-><init>(III)V
 
-    .line 109
+    .line 69
     iput-object p1, p0, Lcom/android/systemui/DualToneHandler;->lightColor:Lcom/android/systemui/DualToneHandler$Color;
 
-    .line 112
-    :goto_0
+    .line 72
     return-void
-    .line 114
+    .line 74
 .end method

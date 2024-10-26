@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/StackEducationView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -8,7 +8,7 @@
 
 .field public isHiding:Z
 
-.field public final manager:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda14;
+.field public final manager:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda24;
 
 .field public final positioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
 
@@ -18,7 +18,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/wm/shell/bubbles/BubblePositioner;Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda14;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/wm/shell/bubbles/BubblePositioner;Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda24;)V
     .locals 0
 
     .line 1
@@ -28,7 +28,7 @@
     iput-object p2, p0, Lcom/android/wm/shell/bubbles/StackEducationView;->positioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
 
     .line 5
-    iput-object p3, p0, Lcom/android/wm/shell/bubbles/StackEducationView;->manager:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda14;
+    iput-object p3, p0, Lcom/android/wm/shell/bubbles/StackEducationView;->manager:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda24;
 
     .line 7
     new-instance p2, Lcom/android/wm/shell/bubbles/StackEducationView$view$2;
@@ -82,7 +82,7 @@
     move-result-object p1
 
     .line 45
-    const p2, 0x7f0e006a    # @layout/bubble_stack_user_education 'res/layout/bubble_stack_user_education.xml'
+    const p2, 0x7f0d006f    # @layout/bubble_stack_user_education 'res/layout/bubble_stack_user_education.xml'
 
     .line 46
     invoke-virtual {p1, p2, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -100,7 +100,7 @@
     move-result-object p1
 
     .line 60
-    const p2, 0x7f070125    # @dimen/bubble_elevation '1.0dp'
+    const p2, 0x7f07012b    # @dimen/bubble_elevation '1.0dp'
 
     .line 61
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -156,13 +156,13 @@
     iput-boolean v0, p0, Lcom/android/wm/shell/bubbles/StackEducationView;->isHiding:Z
 
     .line 14
-    iget-object v0, p0, Lcom/android/wm/shell/bubbles/StackEducationView;->manager:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda14;
+    iget-object v0, p0, Lcom/android/wm/shell/bubbles/StackEducationView;->manager:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda24;
 
     .line 16
     const/4 v1, 0x0
 
     .line 18
-    invoke-virtual {v0, v1}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda14;->updateWindowFlagsForBackpress(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda24;->updateWindowFlagsForBackpress(Z)V
 
     .line 19
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -254,13 +254,13 @@
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 6
-    iget-object p0, p0, Lcom/android/wm/shell/bubbles/StackEducationView;->manager:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda14;
+    iget-object p0, p0, Lcom/android/wm/shell/bubbles/StackEducationView;->manager:Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda24;
 
     .line 9
     const/4 v0, 0x0
 
     .line 11
-    invoke-virtual {p0, v0}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda14;->updateWindowFlagsForBackpress(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda24;->updateWindowFlagsForBackpress(Z)V
 
     .line 12
     return-void
@@ -419,14 +419,14 @@
     if-eqz p1, :cond_1
 
     .line 18
-    const p1, 0x7f080646    # @drawable/bubble_stack_user_education_bg 'res/drawable/bubble_stack_user_education_bg.xml'
+    const p1, 0x7f080647    # @drawable/bubble_stack_user_education_bg 'res/drawable/bubble_stack_user_education_bg.xml'
 
     .line 20
     goto :goto_1
 
     .line 23
     :cond_1
-    const p1, 0x7f080647    # @drawable/bubble_stack_user_education_bg_rtl 'res/drawable/bubble_stack_user_education_bg_rtl.xml'
+    const p1, 0x7f080648    # @drawable/bubble_stack_user_education_bg_rtl 'res/drawable/bubble_stack_user_education_bg_rtl.xml'
 
     .line 24
     :goto_1

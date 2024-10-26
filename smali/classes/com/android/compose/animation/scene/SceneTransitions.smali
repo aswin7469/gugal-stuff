@@ -1,6 +1,6 @@
 .class public final Lcom/android/compose/animation/scene/SceneTransitions;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -37,35 +37,38 @@
     move-result-object v0
 
     .line 7
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     .line 8
     const/high16 v2, 0x43c80000    # 400.0f
 
     .line 9
-    invoke-static {v2, v0, v1}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
+    const/4 v3, 0x1
 
     .line 11
+    invoke-static {v1, v2, v0, v3}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FFLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
+
+    .line 12
     move-result-object v0
 
-    .line 14
+    .line 15
     sput-object v0, Lcom/android/compose/animation/scene/SceneTransitions;->DefaultSwipeSpec:Landroidx/compose/animation/core/SpringSpec;
 
-    .line 15
+    .line 16
     new-instance v1, Lcom/android/compose/animation/scene/SceneTransitions;
 
-    .line 17
+    .line 18
     sget-object v2, Lkotlin/collections/EmptyList;->INSTANCE:Lkotlin/collections/EmptyList;
 
-    .line 19
+    .line 20
     sget-object v3, Lcom/android/compose/animation/scene/DefaultInterruptionHandler;->INSTANCE:Lcom/android/compose/animation/scene/DefaultInterruptionHandler;
 
-    .line 21
+    .line 22
     invoke-direct {v1, v0, v2, v2, v3}, Lcom/android/compose/animation/scene/SceneTransitions;-><init>(Landroidx/compose/animation/core/SpringSpec;Ljava/util/List;Ljava/util/List;Lcom/android/compose/animation/scene/DefaultInterruptionHandler;)V
 
-    .line 23
+    .line 24
     return-void
-    .line 26
+    .line 27
 .end method
 
 .method public constructor <init>(Landroidx/compose/animation/core/SpringSpec;Ljava/util/List;Ljava/util/List;Lcom/android/compose/animation/scene/DefaultInterruptionHandler;)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -98,13 +98,13 @@
     invoke-direct {p6}, Ljava/util/ArrayList;-><init>()V
 
     .line 45
-    const v1, 0x7f14029a    # @string/config_protectedCameraId ''
+    const v1, 0x7f1302b7    # @string/config_protectedCameraId ''
 
     .line 48
-    const v2, 0x7f14029e    # @string/config_protectedPhysicalCameraId ''
+    const v2, 0x7f1302bb    # @string/config_protectedPhysicalCameraId ''
 
     .line 51
-    const v3, 0x7f030036    # @array/config_face_auth_props
+    const v3, 0x7f03003b    # @array/config_face_auth_props
 
     .line 54
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;->loadCameraInfo(III)Lcom/android/systemui/biometrics/data/repository/CameraInfo;
@@ -120,13 +120,13 @@
 
     .line 63
     :cond_0
-    const v1, 0x7f14029b    # @string/config_protectedInnerCameraId ''
+    const v1, 0x7f1302b8    # @string/config_protectedInnerCameraId ''
 
     .line 66
-    const v2, 0x7f14029c    # @string/config_protectedInnerPhysicalCameraId ''
+    const v2, 0x7f1302b9    # @string/config_protectedInnerPhysicalCameraId ''
 
     .line 69
-    const v3, 0x7f03003d    # @array/config_inner_face_auth_props
+    const v3, 0x7f030042    # @array/config_inner_face_auth_props
 
     .line 72
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;->loadCameraInfo(III)Lcom/android/systemui/biometrics/data/repository/CameraInfo;
@@ -210,7 +210,7 @@
     move-result-object p1
 
     .line 125
-    const p6, 0x7f0c0026    # @integer/config_face_auth_supported_posture '0'
+    const p6, 0x7f0b002b    # @integer/config_face_auth_supported_posture '0'
 
     .line 126
     invoke-virtual {p1, p6}, Landroid/content/res/Resources;->getInteger(I)I

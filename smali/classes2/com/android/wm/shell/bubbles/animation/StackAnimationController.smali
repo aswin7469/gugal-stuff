@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/animation/StackAnimationController;
 .super Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -50,7 +50,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/wm/shell/common/FloatingContentCoordinator;Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda10;Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda0;Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda0;Lcom/android/wm/shell/bubbles/BubblePositioner;)V
+.method public constructor <init>(Lcom/android/wm/shell/common/FloatingContentCoordinator;Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda20;Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda2;Lcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda2;Lcom/android/wm/shell/bubbles/BubblePositioner;)V
     .locals 3
 
     .line 1
@@ -327,7 +327,7 @@
     move-result-object p0
 
     .line 109
-    const v2, 0x7f0b064c    # @id/reorder_animator_tag
+    const v2, 0x7f0a0676    # @id/reorder_animator_tag
 
     .line 110
     invoke-virtual {p1, v2, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -1163,7 +1163,6 @@
 
     .line 31
     return-object p1
-    .line 34
 .end method
 
 .method public final isStackOnLeftSide()Z
@@ -1349,7 +1348,7 @@
     .line 79
 .end method
 
-.method public final moveToFinalIndex(Landroid/view/View;ILcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda16;)V
+.method public final moveToFinalIndex(Landroid/view/View;ILcom/android/wm/shell/bubbles/BubbleStackView$$ExternalSyntheticLambda26;)V
     .locals 3
 
     .line 1
@@ -1413,7 +1412,7 @@
     move-result-object p0
 
     .line 38
-    const p2, 0x7f0b064c    # @id/reorder_animator_tag
+    const p2, 0x7f0a0676    # @id/reorder_animator_tag
 
     .line 39
     invoke-virtual {p1, p2, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -1480,7 +1479,7 @@
     iput v1, p0, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mStackOffset:F
 
     .line 11
-    const v1, 0x7f070158    # @dimen/bubble_swap_animation_offset '15.0dp'
+    const v1, 0x7f07015e    # @dimen/bubble_swap_animation_offset '15.0dp'
 
     .line 13
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1495,7 +1494,7 @@
     iput v1, p0, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mSwapAnimationOffset:F
 
     .line 21
-    const v1, 0x7f0c000b    # @integer/bubbles_max_rendered '5'
+    const v1, 0x7f0b000b    # @integer/bubbles_max_rendered '5'
 
     .line 23
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -1507,7 +1506,7 @@
     iput v1, p0, Lcom/android/wm/shell/bubbles/animation/StackAnimationController;->mMaxBubbles:I
 
     .line 30
-    const v1, 0x7f070125    # @dimen/bubble_elevation '1.0dp'
+    const v1, 0x7f07012b    # @dimen/bubble_elevation '1.0dp'
 
     .line 32
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

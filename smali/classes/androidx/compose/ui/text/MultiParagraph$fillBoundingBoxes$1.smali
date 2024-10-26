@@ -1,6 +1,6 @@
 .class final Landroidx/compose/ui/text/MultiParagraph$fillBoundingBoxes$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -672,37 +672,37 @@
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     .line 376
-    const-string v1, "startOffset must be less than text length"
+    const-string/jumbo v1, "startOffset must be less than text length"
 
     .line 378
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 380
+    .line 381
     move-result-object v1
 
-    .line 383
+    .line 384
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 384
+    .line 385
     throw v0
 
-    .line 387
+    .line 388
     :cond_d
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 388
-    const-string v1, "startOffset must be > 0"
+    .line 389
+    const-string/jumbo v1, "startOffset must be > 0"
 
-    .line 390
+    .line 391
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 392
+    .line 394
     move-result-object v1
 
-    .line 395
+    .line 397
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 396
+    .line 398
     throw v0
-    .line 399
+    .line 401
 .end method

@@ -1,285 +1,274 @@
 .class public final synthetic Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/BiConsumer;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
+.field public final synthetic $r8$classId:I
+
 .field public final synthetic f$0:Lcom/android/wm/shell/back/BackAnimationController;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/wm/shell/back/BackAnimationController;)V
+.method public synthetic constructor <init>(Lcom/android/wm/shell/back/BackAnimationController;I)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;->$r8$classId:I
 
     .line 2
     iput-object p1, p0, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;->f$0:Lcom/android/wm/shell/back/BackAnimationController;
 
-    .line 5
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
     return-void
-    .line 7
+    .line 9
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+.method public final run()V
+    .locals 8
 
     .line 1
-    iget-object p0, p0, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;->f$0:Lcom/android/wm/shell/back/BackAnimationController;
+    iget v0, p0, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;->$r8$classId:I
 
     .line 2
-    check-cast p1, Ljava/io/PrintWriter;
+    iget-object p0, p0, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;->f$0:Lcom/android/wm/shell/back/BackAnimationController;
 
     .line 4
-    check-cast p2, Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
     .line 6
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 8
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 9
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
-    .line 11
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 12
+    const/4 v1, 0x3
 
-    .line 13
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 14
+    aget-boolean v0, v0, v1
 
-    .line 16
-    const-string v1, "BackAnimationController state:"
+    .line 15
+    if-eqz v0, :cond_0
+
+    .line 17
+    sget-object v1, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_BACK_PREVIEW:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
     .line 19
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide/16 v2, 0x7d0
 
     .line 21
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 24
+    .line 23
     move-result-object v0
+
+    .line 26
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     .line 27
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v6
 
-    .line 28
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 30
+    const-string v5, "Animation didn\'t finish in %d ms. Resetting..."
 
     .line 31
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-wide v2, -0x6217c3807c07ca09L
 
     .line 33
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x1
 
-    .line 36
-    const-string v1, "  mEnableAnimations="
+    .line 38
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->w(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 39
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/wm/shell/back/BackAnimationController;->finishBackAnimation()V
 
-    .line 41
-    iget-object v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mEnableAnimations:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 42
+    return-void
 
-    .line 44
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    .line 45
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/android/wm/shell/back/BackAnimationController;->onBackAnimationFinished()V
 
     .line 46
-    move-result v1
+    return-void
 
     .line 49
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    :pswitch_1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 50
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v0, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;
 
     .line 53
-    move-result-object v0
+    const/4 v1, 0x2
+
+    .line 55
+    invoke-direct {v0, p0, v1}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda4;-><init>(Lcom/android/wm/shell/back/BackAnimationController;I)V
 
     .line 56
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    iget-object p0, p0, Lcom/android/wm/shell/back/BackAnimationController;->mShellExecutor:Lcom/android/wm/shell/common/ShellExecutor;
 
-    .line 57
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 59
+    check-cast p0, Lcom/android/wm/shell/common/HandlerExecutor;
 
-    .line 60
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 61
+    invoke-virtual {p0, v0}, Lcom/android/wm/shell/common/HandlerExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 62
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 63
+    return-void
 
-    .line 65
-    const-string v1, "  mBackGestureStarted="
+    .line 66
+    :pswitch_2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 68
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 67
+    invoke-static {}, Lcom/android/window/flags/Flags;->predictiveBackSystemAnims()Z
 
     .line 70
-    iget-boolean v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mBackGestureStarted:Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
     .line 73
-    const-string v2, "  mPostCommitAnimationInProgress="
+    const/4 v1, 0x0
 
     .line 75
-    invoke-static {v0, v1, p1, p2, v2}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aget-boolean v0, v0, v1
 
-    .line 77
-    move-result-object v0
+    .line 76
+    if-eqz v0, :cond_1
+
+    .line 78
+    sget-object v2, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_BACK_PREVIEW:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
     .line 80
-    iget-boolean v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mPostCommitAnimationInProgress:Z
+    const-string v6, "Back animation aconfig flag is enabled, therefore developer settings flag is ignored and no content observer registered"
 
-    .line 81
-    const-string v2, "  mShouldStartOnNextMoveEvent="
+    .line 82
+    const/4 v7, 0x0
 
-    .line 83
-    invoke-static {v0, v1, p1, p2, v2}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 84
+    const-wide v3, 0x44f77ef2a1b9319fL    # 1.775299237090247E24
 
     .line 85
-    move-result-object v0
+    const/4 v5, 0x0
 
-    .line 88
-    iget-boolean v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mShouldStartOnNextMoveEvent:Z
-
-    .line 89
-    const-string v2, "  mPointerPilfered="
+    .line 90
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 91
-    invoke-static {v0, v1, p1, p2, v2}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    invoke-static {}, Lcom/android/window/flags/Flags;->predictiveBackSystemAnims()Z
 
-    .line 93
-    move-result-object v0
-
-    .line 96
-    iget-boolean v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mThresholdCrossed:Z
+    .line 94
+    iget-object v0, p0, Lcom/android/wm/shell/back/BackAnimationController;->mEnableAnimations:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 97
-    const-string v2, "  mRequirePointerPilfer="
+    const/4 v2, 0x1
 
     .line 99
-    invoke-static {v0, v1, p1, p2, v2}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 101
-    move-result-object v0
+    .line 100
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_BACK_PREVIEW_enabled:[Z
 
-    .line 104
-    iget-boolean v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mRequirePointerPilfer:Z
+    .line 103
+    aget-boolean v0, v0, v1
 
     .line 105
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_2
 
     .line 107
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
-    .line 110
+    .line 109
     move-result-object v0
+
+    .line 112
+    sget-object v1, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_BACK_PREVIEW:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
     .line 113
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    .line 114
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 115
+    move-result-object v6
 
-    .line 117
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 118
+    const-wide v2, -0x18e6b5776b4bcaacL    # -4.401754544292948E188
 
     .line 119
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x0
 
-    .line 122
-    const-string v1, "  mCurrentTracker state:"
+    .line 124
+    const-string v5, "Back animation enabled=%s"
 
     .line 125
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 127
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_2
+    new-instance v0, Lcom/android/wm/shell/back/BackAnimationController$3;
 
     .line 130
-    move-result-object v0
+    invoke-direct {v0, p0}, Lcom/android/wm/shell/back/BackAnimationController$3;-><init>(Lcom/android/wm/shell/back/BackAnimationController;)V
 
-    .line 133
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    .line 132
+    new-instance v1, Landroid/window/BackAnimationAdapter;
 
-    .line 134
-    iget-object v0, p0, Lcom/android/wm/shell/back/BackAnimationController;->mCurrentTracker:Landroid/window/BackTouchTracker;
+    .line 135
+    invoke-direct {v1, v0}, Landroid/window/BackAnimationAdapter;-><init>(Landroid/window/IBackAnimationRunner;)V
 
     .line 137
-    new-instance v1, Ljava/lang/StringBuilder;
+    iput-object v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mBackAnimationAdapter:Landroid/window/BackAnimationAdapter;
 
-    .line 139
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    .line 140
+    new-instance v0, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda5;
 
-    .line 141
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 142
+    invoke-direct {v0, p0}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda5;-><init>(Lcom/android/wm/shell/back/BackAnimationController;)V
 
     .line 144
-    const-string v2, "    "
+    const-string v1, "extra_shell_back_animation"
 
     .line 147
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lcom/android/wm/shell/back/BackAnimationController;->mShellController:Lcom/android/wm/shell/sysui/ShellController;
 
     .line 149
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v1, v0, p0}, Lcom/android/wm/shell/sysui/ShellController;->addExternalInterface(Ljava/lang/String;Ljava/util/function/Supplier;Ljava/lang/Object;)V
 
-    .line 152
-    move-result-object v1
+    .line 151
+    new-instance v0, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda6;
 
-    .line 155
-    invoke-virtual {v0, p1, v1}, Landroid/window/BackTouchTracker;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
+    .line 154
+    invoke-direct {v0, p0}, Lcom/android/wm/shell/back/BackAnimationController$$ExternalSyntheticLambda6;-><init>(Lcom/android/wm/shell/back/BackAnimationController;)V
 
     .line 156
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/android/wm/shell/back/BackAnimationController;->mShellCommandHandler:Lcom/android/wm/shell/sysui/ShellCommandHandler;
 
     .line 159
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v1, v0, p0}, Lcom/android/wm/shell/sysui/ShellCommandHandler;->addDumpCallback(Ljava/util/function/BiConsumer;Ljava/lang/Object;)V
 
     .line 161
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Lcom/android/wm/shell/sysui/ShellController;->addConfigurationChangeListener(Lcom/android/wm/shell/sysui/ConfigurationChangeListener;)V
 
     .line 164
-    const-string v1, "  mQueuedTracker state:"
+    return-void
 
     .line 167
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 169
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 172
-    move-result-object v0
-
-    .line 175
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 176
-    iget-object p0, p0, Lcom/android/wm/shell/back/BackAnimationController;->mQueuedTracker:Landroid/window/BackTouchTracker;
-
-    .line 179
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 181
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 183
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 186
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 189
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 192
-    move-result-object p2
-
-    .line 195
-    invoke-virtual {p0, p1, p2}, Landroid/window/BackTouchTracker;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
-
-    .line 196
-    return-void
-    .line 199
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+    .line 168
 .end method

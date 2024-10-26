@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/provider/DeviceConfig$OnPropertiesChangedListener;
@@ -43,46 +43,46 @@
     move-result-object v0
 
     .line 10
-    const-string v1, "systemui"
+    const-string/jumbo v1, "systemui"
 
     .line 11
     invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 13
+    .line 14
     move-result v0
 
-    .line 16
+    .line 17
     if-eqz v0, :cond_0
 
-    .line 17
+    .line 18
     invoke-virtual {p1}, Landroid/provider/DeviceConfig$Properties;->getKeyset()Ljava/util/Set;
 
-    .line 19
+    .line 20
     move-result-object p1
 
-    .line 22
+    .line 23
     const-string v0, "default_qr_code_scanner"
 
-    .line 23
+    .line 24
     invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    .line 25
+    .line 26
     move-result p1
 
-    .line 28
+    .line 29
     if-eqz p1, :cond_0
 
-    .line 29
+    .line 30
     invoke-virtual {p0}, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->updateQRCodeScannerActivityDetails()V
 
-    .line 31
+    .line 32
     const/4 p1, 0x1
 
-    .line 34
+    .line 35
     invoke-virtual {p0, p1}, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->updateQRCodeScannerPreferenceDetails(Z)V
 
-    .line 35
+    .line 36
     :cond_0
     return-void
-    .line 38
+    .line 39
 .end method

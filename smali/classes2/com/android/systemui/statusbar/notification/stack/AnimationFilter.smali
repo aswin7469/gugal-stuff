@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/stack/AnimationFilter;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -54,7 +54,7 @@
 
 # virtual methods
 .method public final combineFilter(Lcom/android/systemui/statusbar/notification/stack/AnimationFilter;)V
-    .locals 5
+    .locals 2
 
     .line 1
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/notification/stack/AnimationFilter;->animateAlpha:Z
@@ -156,103 +156,14 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/AnimationFilter;->mAnimatedProperties:Landroidx/collection/ArraySet;
 
     .line 58
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 60
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationFilter;->mAnimatedProperties:Landroidx/collection/ArraySet;
 
-    .line 63
-    iget v0, p1, Landroidx/collection/ArraySet;->_size:I
+    .line 60
+    invoke-virtual {p0, p1}, Landroidx/collection/ArraySet;->addAll(Landroidx/collection/ArraySet;)V
 
-    .line 65
-    iget v1, p0, Landroidx/collection/ArraySet;->_size:I
-
-    .line 67
-    add-int/2addr v1, v0
-
-    .line 69
-    invoke-virtual {p0, v1}, Landroidx/collection/ArraySet;->ensureCapacity(I)V
-
-    .line 70
-    iget v1, p0, Landroidx/collection/ArraySet;->_size:I
-
-    .line 73
-    const/4 v2, 0x0
-
-    .line 75
-    if-nez v1, :cond_1
-
-    .line 76
-    if-lez v0, :cond_2
-
-    .line 78
-    iget-object v1, p1, Landroidx/collection/ArraySet;->hashes:[I
-
-    .line 80
-    iget-object v3, p0, Landroidx/collection/ArraySet;->hashes:[I
-
-    .line 82
-    const/4 v4, 0x6
-
-    .line 84
-    invoke-static {v2, v0, v4, v1, v3}, Lkotlin/collections/ArraysKt;->copyInto$default(III[I[I)V
-
-    .line 85
-    iget-object p1, p1, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
-
-    .line 88
-    iget-object v1, p0, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
-
-    .line 90
-    invoke-static {p1, v1, v2, v0, v4}, Lkotlin/collections/ArraysKt;->copyInto$default([Ljava/lang/Object;[Ljava/lang/Object;III)V
-
-    .line 92
-    iget p1, p0, Landroidx/collection/ArraySet;->_size:I
-
-    .line 95
-    if-nez p1, :cond_0
-
-    .line 97
-    iput v0, p0, Landroidx/collection/ArraySet;->_size:I
-
-    .line 99
-    goto :goto_1
-
-    .line 101
-    :cond_0
-    new-instance p0, Ljava/util/ConcurrentModificationException;
-
-    .line 102
-    invoke-direct {p0}, Ljava/util/ConcurrentModificationException;-><init>()V
-
-    .line 104
-    throw p0
-
-    .line 107
-    :cond_1
-    :goto_0
-    if-ge v2, v0, :cond_2
-
-    .line 108
-    iget-object v1, p1, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
-
-    .line 110
-    aget-object v1, v1, v2
-
-    .line 112
-    invoke-virtual {p0, v1}, Landroidx/collection/ArraySet;->add(Ljava/lang/Object;)Z
-
-    .line 114
-    add-int/lit8 v2, v2, 0x1
-
-    .line 117
-    goto :goto_0
-
-    .line 119
-    :cond_2
-    :goto_1
+    .line 62
     return-void
-    .line 120
+    .line 65
 .end method
 
 .method public final reset()V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/tuner/DemoModeFragment;
 .super Landroidx/preference/PreferenceFragment;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/preference/Preference$OnPreferenceChangeListener;
@@ -97,7 +97,7 @@
     iput-object v0, p0, Lcom/android/systemui/tuner/DemoModeFragment;->mEnabledSwitch:Landroidx/preference/SwitchPreference;
 
     .line 12
-    const v2, 0x7f140378    # @string/enable_demo_mode 'Enable demo mode'
+    const v2, 0x7f1303b0    # @string/enable_demo_mode 'Enable demo mode'
 
     .line 14
     invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setTitle(I)V
@@ -118,7 +118,7 @@
     iput-object v0, p0, Lcom/android/systemui/tuner/DemoModeFragment;->mOnSwitch:Landroidx/preference/SwitchPreference;
 
     .line 29
-    const v2, 0x7f1408e1    # @string/show_demo_mode 'Show demo mode'
+    const v2, 0x7f13095c    # @string/show_demo_mode 'Show demo mode'
 
     .line 31
     invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setTitle(I)V

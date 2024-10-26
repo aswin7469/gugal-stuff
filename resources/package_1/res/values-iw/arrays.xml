@@ -5,7 +5,9 @@
     <item>הצגת אחוזים בזמן הטעינה (ברירת מחדל)</item>
     <item>אל תציגו את הסמל הזה</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>הצגת שעות, דקות ושניות</item>
     <item>הצגת שעות ודקות (ברירת מחדל)</item>

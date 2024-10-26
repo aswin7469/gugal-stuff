@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$13;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -90,7 +90,7 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 4
 
     .line 1
     sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
@@ -140,44 +140,41 @@
     iget-object p1, p1, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;->isAnyFullyExpanded:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 30
-    new-instance v1, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$2$1;
+    new-instance v1, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$3$1;
 
     .line 32
     iget-object v3, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$13;->$view:Landroid/view/ViewGroup;
 
     .line 34
-    const/4 v4, 0x1
+    invoke-direct {v1, v3}, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$3$1;-><init>(Landroid/view/ViewGroup;)V
 
     .line 36
-    invoke-direct {v1, v4, v3}, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$2$1;-><init>(ILjava/lang/Object;)V
-
-    .line 37
     iput v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$13;->label:I
 
-    .line 40
+    .line 39
     iget-object p1, p1, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 42
+    .line 41
     invoke-interface {p1, v1, p0}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 44
+    .line 43
     move-result-object p0
 
-    .line 47
+    .line 46
     if-ne p0, v0, :cond_2
 
-    .line 48
+    .line 47
     return-object v0
 
-    .line 50
+    .line 49
     :cond_2
     :goto_0
     new-instance p0, Lkotlin/KotlinNothingValueException;
 
-    .line 51
+    .line 50
     invoke-direct {p0}, Lkotlin/KotlinNothingValueException;-><init>()V
 
-    .line 53
+    .line 52
     throw p0
-    .line 56
+    .line 55
 .end method

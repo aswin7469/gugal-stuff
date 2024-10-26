@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/keyguard/KeyguardViewMediator$9$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -161,219 +161,203 @@
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
 
     .line 77
-    goto/16 :goto_5
+    goto :goto_5
 
     .line 80
     :cond_2
     :goto_0
     array-length p0, v4
 
-    .line 82
+    .line 81
     const/4 v1, 0x0
 
-    .line 83
+    .line 82
     :goto_1
     if-ge v1, p0, :cond_4
 
-    .line 84
+    .line 83
     aget-object v7, v4, v1
 
-    .line 86
+    .line 85
     iget v8, v7, Landroid/view/RemoteAnimationTarget;->mode:I
 
-    .line 88
+    .line 87
     if-eqz v8, :cond_3
 
-    .line 90
+    .line 89
     goto :goto_2
 
-    .line 92
+    .line 91
     :cond_3
     new-instance v8, Landroid/view/SurfaceControl$Transaction;
 
-    .line 93
+    .line 92
     invoke-direct {v8}, Landroid/view/SurfaceControl$Transaction;-><init>()V
 
-    .line 95
+    .line 94
     :try_start_0
     iget-object v7, v7, Landroid/view/RemoteAnimationTarget;->leash:Landroid/view/SurfaceControl;
 
-    .line 98
+    .line 97
     invoke-virtual {v8, v7, v6}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 100
+    .line 99
     invoke-virtual {v8}, Landroid/view/SurfaceControl$Transaction;->apply()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 103
+    .line 102
     invoke-virtual {v8}, Landroid/view/SurfaceControl$Transaction;->close()V
 
-    .line 106
+    .line 105
     :goto_2
     add-int/2addr v1, v0
 
-    .line 109
+    .line 108
     goto :goto_1
 
-    .line 110
+    .line 109
     :catchall_0
     move-exception p0
 
-    .line 111
+    .line 110
     :try_start_1
     invoke-virtual {v8}, Landroid/view/SurfaceControl$Transaction;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 112
+    .line 111
     goto :goto_3
 
-    .line 115
+    .line 114
     :catchall_1
     move-exception v0
 
-    .line 116
+    .line 115
     invoke-virtual {p0, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    .line 117
+    .line 116
     :goto_3
     throw p0
 
-    .line 120
+    .line 119
     :cond_4
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_6
 
-    .line 121
+    .line 120
     iget-object p0, v2, Lcom/android/systemui/keyguard/KeyguardViewMediator$9;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 123
+    .line 122
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mDreamViewModel:Ldagger/Lazy;
 
-    .line 125
+    .line 124
     invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 127
+    .line 126
     move-result-object p0
 
-    .line 130
+    .line 129
     check-cast p0, Lcom/android/systemui/dreams/ui/viewmodel/DreamViewModel;
 
-    .line 131
+    .line 130
     iget-object v0, p0, Lcom/android/systemui/dreams/ui/viewmodel/DreamViewModel;->communalInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;
 
-    .line 133
+    .line 132
     iget-object v1, v0, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;->isCommunalEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 135
+    .line 134
     iget-object v1, v1, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 137
+    .line 136
     invoke-interface {v1}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
-    .line 139
+    .line 138
     move-result-object v1
 
-    .line 142
+    .line 141
     check-cast v1, Ljava/lang/Boolean;
 
-    .line 143
+    .line 142
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 145
+    .line 144
     move-result v1
+
+    .line 147
+    if-eqz v1, :cond_5
 
     .line 148
-    if-eqz v1, :cond_6
-
-    .line 149
     iget-object v1, p0, Lcom/android/systemui/dreams/ui/viewmodel/DreamViewModel;->userTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 151
+    .line 150
     check-cast v1, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 153
+    .line 152
     invoke-virtual {v1}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 155
+    .line 154
     move-result v1
 
-    .line 158
+    .line 157
     iget-object v3, p0, Lcom/android/systemui/dreams/ui/viewmodel/DreamViewModel;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 159
+    .line 158
     invoke-virtual {v3, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isEncryptedOrLockdown(I)Z
 
-    .line 161
+    .line 160
     move-result v1
 
-    .line 164
-    if-nez v1, :cond_6
-
-    .line 165
-    sget-boolean v1, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 167
+    .line 163
     if-nez v1, :cond_5
 
-    .line 169
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 171
-    :cond_5
-    sget-boolean v1, Lcom/android/systemui/FeatureFlagsImpl;->glanceableHubAllowKeyguardWhenDreaming:Z
-
-    .line 174
-    if-nez v1, :cond_6
-
-    .line 176
+    .line 164
     sget-object p0, Lcom/android/systemui/communal/shared/model/CommunalScenes;->Communal:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 178
+    .line 166
     iget-object v0, v0, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;->communalSceneInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;
 
-    .line 180
+    .line 168
     iget-object v0, v0, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor;->communalSceneRepository:Lcom/android/systemui/communal/data/repository/CommunalSceneRepositoryImpl;
 
-    .line 182
+    .line 170
     const/4 v1, 0x0
 
-    .line 184
+    .line 172
     invoke-virtual {v0, p0, v1}, Lcom/android/systemui/communal/data/repository/CommunalSceneRepositoryImpl;->changeScene(Lcom/android/compose/animation/scene/SceneKey;Lcom/android/compose/animation/scene/TransitionKey;)V
 
-    .line 185
+    .line 173
     goto :goto_4
 
-    .line 188
-    :cond_6
+    .line 176
+    :cond_5
     iget-object p0, p0, Lcom/android/systemui/dreams/ui/viewmodel/DreamViewModel;->toLockscreenTransitionViewModel:Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;
 
-    .line 189
+    .line 177
     iget-object p0, p0, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;->fromDreamingTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/FromDreamingTransitionInteractor;
 
-    .line 191
+    .line 179
     invoke-virtual {p0}, Lcom/android/systemui/keyguard/domain/interactor/FromDreamingTransitionInteractor;->startToLockscreenTransition()V
 
-    .line 193
-    :cond_7
+    .line 181
+    :cond_6
     :goto_4
     iget-object p0, v2, Lcom/android/systemui/keyguard/KeyguardViewMediator$9;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 196
+    .line 184
     iput-object v5, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mUnoccludeFinishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
 
-    .line 198
+    .line 186
     :goto_5
     return-void
 
-    .line 200
+    .line 188
     nop
 
-    .line 201
+    .line 189
     :array_0
     .array-data 4
         0x3f800000    # 1.0f
         0x0
     .end array-data
-    .line 202
+    .line 190
 .end method

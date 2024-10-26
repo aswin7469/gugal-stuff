@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/pip2/phone/PipMotionHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/pip/PipAppOpsListener$Callback;
@@ -43,7 +43,7 @@
 
 .field public final mPipTransitionState:Lcom/android/wm/shell/pip2/phone/PipTransitionState;
 
-.field public final mResizePipUpdateListener:Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda2;
+.field public final mResizePipUpdateListener:Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda3;
 
 .field public final mSnapAlgorithm:Lcom/android/wm/shell/common/pip/PipSnapAlgorithm;
 
@@ -172,13 +172,13 @@
     iput-object p1, p0, Lcom/android/wm/shell/pip2/phone/PipMotionHelper;->mPipPerfHintController:Lcom/android/wm/shell/common/pip/PipPerfHintController;
 
     .line 80
-    new-instance p1, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda2;
+    new-instance p1, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda3;
 
     .line 82
-    invoke-direct {p1, p0}, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda2;-><init>(Lcom/android/wm/shell/pip2/phone/PipMotionHelper;)V
+    invoke-direct {p1, p0}, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda3;-><init>(Lcom/android/wm/shell/pip2/phone/PipMotionHelper;)V
 
     .line 84
-    iput-object p1, p0, Lcom/android/wm/shell/pip2/phone/PipMotionHelper;->mResizePipUpdateListener:Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda2;
+    iput-object p1, p0, Lcom/android/wm/shell/pip2/phone/PipMotionHelper;->mResizePipUpdateListener:Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda3;
 
     .line 87
     iput-object p9, p0, Lcom/android/wm/shell/pip2/phone/PipMotionHelper;->mPipTransitionState:Lcom/android/wm/shell/pip2/phone/PipTransitionState;
@@ -993,10 +993,10 @@
     if-eqz p1, :cond_1
 
     .line 58
-    new-instance p2, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda0;
+    new-instance p2, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda1;
 
     .line 60
-    invoke-direct {p2, p0}, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/pip2/phone/PipMotionHelper;)V
+    invoke-direct {p2, p0}, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/pip2/phone/PipMotionHelper;)V
 
     .line 62
     const-string v0, "startBoundsAnimator"
@@ -1018,7 +1018,7 @@
     const/4 p2, 0x0
 
     .line 74
-    iget-object v0, p0, Lcom/android/wm/shell/pip2/phone/PipMotionHelper;->mResizePipUpdateListener:Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda2;
+    iget-object v0, p0, Lcom/android/wm/shell/pip2/phone/PipMotionHelper;->mResizePipUpdateListener:Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda3;
 
     .line 75
     if-eqz p3, :cond_2
@@ -1039,13 +1039,13 @@
     new-array v0, v0, [Ljava/lang/Runnable;
 
     .line 87
-    new-instance v2, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda1;
+    new-instance v2, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda0;
 
     .line 89
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
     .line 91
-    invoke-direct {v2, p0, v3}, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/pip2/phone/PipMotionHelper;I)V
+    invoke-direct {v2, p0, v3}, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/pip2/phone/PipMotionHelper;I)V
 
     .line 92
     aput-object v2, v0, p2
@@ -1073,13 +1073,13 @@
     new-array p1, p1, [Ljava/lang/Runnable;
 
     .line 110
-    new-instance v0, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda1;
+    new-instance v0, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda0;
 
     .line 112
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
     .line 114
-    invoke-direct {v0, p0, v1}, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/pip2/phone/PipMotionHelper;I)V
+    invoke-direct {v0, p0, v1}, Lcom/android/wm/shell/pip2/phone/PipMotionHelper$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/pip2/phone/PipMotionHelper;I)V
 
     .line 115
     aput-object v0, p1, p2

@@ -12,5 +12,5 @@
         android:id="@id/icon"
         android:height="@dimen/ongoing_appops_dialog_icon_size"
         android:width="@dimen/ongoing_appops_dialog_icon_size"
-        android:drawable="@android:drawable/perm_group_shortrange_network" />
+        android:drawable="@android:drawable/perm_group_screenlock" />
 </layer-list>

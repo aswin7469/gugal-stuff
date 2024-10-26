@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableMap/TrieNode;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -351,13 +351,13 @@
     const/4 v8, 0x6
 
     .line 49
-    invoke-static {v0, v7, v2, p1, v8}, Lkotlin/collections/ArraysKt;->copyInto$default([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v2, p1, v8, v0, v7}, Lkotlin/collections/ArraysKt;->copyInto$default(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 50
     add-int/lit8 v2, v1, 0x2
 
     .line 53
-    invoke-static {v0, v7, p1, v2, v5}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {p1, v2, v5, v0, v7}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 55
     aput-object v3, v7, v6
@@ -366,7 +366,7 @@
     array-length v1, v0
 
     .line 60
-    invoke-static {v0, v7, v4, v5, v1}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v4, v5, v1, v0, v7}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 61
     return-object v7
@@ -4196,13 +4196,13 @@
     array-length v1, v1
 
     .line 45
-    invoke-static {v5, v5, v6, v7, v1}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v6, v7, v1, v5, v5}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 46
     add-int/lit8 v1, p3, 0x2
 
     .line 49
-    invoke-static {v5, v5, v1, p3, p1}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v1, p3, p1, v5, v5}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 51
     aput-object v4, v5, p3
@@ -4264,6 +4264,7 @@
 
     .line 86
     return-object p1
+    .line 89
 .end method
 
 .method public final valueAtKeyIndex(I)Ljava/lang/Object;

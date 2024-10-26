@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/bluetooth/BluetoothLeBroadcast$Callback;
@@ -125,62 +125,41 @@
 .end method
 
 .method public final onBroadcastStarted(II)V
-    .locals 2
+    .locals 3
 
     .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "onBroadcastStarted(), reason = "
 
     .line 2
-    const-string v1, "onBroadcastStarted(), reason = "
+    const-string v1, ", broadcastId = "
 
     .line 4
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "MediaOutputDialog"
 
     .line 6
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2, v0, v1, v2}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
-    const-string p1, ", broadcastId = "
-
-    .line 12
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 14
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 17
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 20
-    move-result-object p1
-
-    .line 23
-    const-string p2, "MediaOutputDialog"
-
-    .line 24
-    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 26
+    .line 8
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1;->this$0:Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;
 
-    .line 29
+    .line 11
     iget-object p1, p1, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMainThreadHandler:Landroid/os/Handler;
 
-    .line 31
+    .line 13
     new-instance p2, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1$$ExternalSyntheticLambda0;
 
-    .line 33
+    .line 15
     const/4 v0, 0x1
 
-    .line 35
+    .line 17
     invoke-direct {p2, p0, v0}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1;I)V
 
-    .line 36
+    .line 18
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 39
+    .line 21
     return-void
-    .line 42
+    .line 24
 .end method
 
 .method public final onBroadcastStopFailed(I)V
@@ -219,180 +198,117 @@
 .end method
 
 .method public final onBroadcastStopped(II)V
-    .locals 2
+    .locals 3
 
     .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "onBroadcastStopped(), reason = "
 
     .line 2
-    const-string v1, "onBroadcastStopped(), reason = "
+    const-string v1, ", broadcastId = "
 
     .line 4
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "MediaOutputDialog"
 
     .line 6
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2, v0, v1, v2}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
-    const-string p1, ", broadcastId = "
-
-    .line 12
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 14
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 17
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 20
-    move-result-object p1
-
-    .line 23
-    const-string p2, "MediaOutputDialog"
-
-    .line 24
-    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 26
+    .line 8
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1;->this$0:Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;
 
-    .line 29
+    .line 11
     iget-object p1, p1, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMainThreadHandler:Landroid/os/Handler;
 
-    .line 31
+    .line 13
     new-instance p2, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1$$ExternalSyntheticLambda0;
 
-    .line 33
+    .line 15
     const/4 v0, 0x2
 
-    .line 35
+    .line 17
     invoke-direct {p2, p0, v0}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1;I)V
 
-    .line 36
+    .line 18
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 39
+    .line 21
     return-void
-    .line 42
+    .line 24
 .end method
 
 .method public final onBroadcastUpdateFailed(II)V
-    .locals 2
+    .locals 3
 
     .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "onBroadcastUpdateFailed(), reason = "
 
     .line 2
-    const-string v1, "onBroadcastUpdateFailed(), reason = "
+    const-string v1, ", broadcastId = "
 
     .line 4
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "MediaOutputDialog"
 
     .line 6
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2, v0, v1, v2}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
-    const-string p1, ", broadcastId = "
-
-    .line 12
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 14
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 17
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 20
-    move-result-object p1
-
-    .line 23
-    const-string p2, "MediaOutputDialog"
-
-    .line 24
-    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 26
+    .line 8
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1;->this$0:Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;
 
-    .line 29
+    .line 11
     iget-object p1, p1, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMainThreadHandler:Landroid/os/Handler;
 
-    .line 31
+    .line 13
     new-instance p2, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1$$ExternalSyntheticLambda0;
 
-    .line 33
+    .line 15
     const/4 v0, 0x3
 
-    .line 35
+    .line 17
     invoke-direct {p2, p0, v0}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1;I)V
 
-    .line 36
+    .line 18
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 39
+    .line 21
     return-void
-    .line 42
+    .line 24
 .end method
 
 .method public final onBroadcastUpdated(II)V
-    .locals 2
+    .locals 3
 
     .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "onBroadcastUpdated(), reason = "
 
     .line 2
-    const-string v1, "onBroadcastUpdated(), reason = "
+    const-string v1, ", broadcastId = "
 
     .line 4
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "MediaOutputDialog"
 
     .line 6
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2, v0, v1, v2}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
-    const-string p1, ", broadcastId = "
-
-    .line 12
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 14
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 17
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 20
-    move-result-object p1
-
-    .line 23
-    const-string p2, "MediaOutputDialog"
-
-    .line 24
-    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 26
+    .line 8
     iget-object p1, p0, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1;->this$0:Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;
 
-    .line 29
+    .line 11
     iget-object p1, p1, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog;->mMainThreadHandler:Landroid/os/Handler;
 
-    .line 31
+    .line 13
     new-instance p2, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1$$ExternalSyntheticLambda0;
 
-    .line 33
+    .line 15
     const/4 v0, 0x0
 
-    .line 35
+    .line 17
     invoke-direct {p2, p0, v0}, Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/media/dialog/MediaOutputBaseDialog$1;I)V
 
-    .line 36
+    .line 18
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 39
+    .line 21
     return-void
-    .line 42
+    .line 24
 .end method
 
 .method public final onPlaybackStarted(II)V

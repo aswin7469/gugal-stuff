@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/ui/transitions/DeviceEntryIconTransition;
@@ -85,246 +85,197 @@
     invoke-direct {v3, v1, v2}, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;-><init>(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;)V
 
     .line 22
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 25
-    move-result v1
-
-    .line 28
-    if-eqz v1, :cond_0
-
-    .line 29
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 31
-    move-result v1
-
-    .line 34
-    if-eqz v1, :cond_0
-
-    .line 35
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 37
-    move-result v1
-
-    .line 40
-    if-eqz v1, :cond_0
-
-    .line 41
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 43
-    move-result v1
-
-    .line 46
-    if-eqz v1, :cond_0
-
-    .line 47
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 49
-    move-result v1
-
-    .line 52
-    if-eqz v1, :cond_0
-
-    .line 53
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 55
-    :cond_0
     new-instance v1, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;
 
-    .line 58
+    .line 25
     sget-wide v14, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel;->TO_GLANCEABLE_HUB_DURATION:J
 
-    .line 60
+    .line 27
     move-object/from16 v2, p2
 
-    .line 62
+    .line 29
     invoke-direct {v1, v2, v14, v15, v3}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;-><init>(Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow;JLcom/android/systemui/keyguard/shared/model/Edge;)V
 
-    .line 64
+    .line 31
     iput-object v1, v0, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel;->transitionAnimation:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;
 
-    .line 67
-    const v2, 0x7f0702bf    # @dimen/dreaming_to_hub_transition_dream_overlay_translation_x '-824.0dp'
+    .line 34
+    const v2, 0x7f0702eb    # @dimen/dreaming_to_hub_transition_dream_overlay_translation_x '-824.0dp'
 
-    .line 69
+    .line 36
     move-object/from16 v3, p1
 
-    .line 72
+    .line 39
     invoke-virtual {v3, v2}, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;->dimensionPixelSize(I)Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 74
+    .line 41
     move-result-object v2
 
-    .line 77
+    .line 44
     new-instance v3, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$special$$inlined$flatMapLatest$1;
 
-    .line 78
+    .line 45
     const/4 v4, 0x0
 
-    .line 80
+    .line 47
     invoke-direct {v3, v4, v0}, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$special$$inlined$flatMapLatest$1;-><init>(Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel;)V
 
-    .line 81
+    .line 48
     invoke-static {v2, v3}, Lkotlinx/coroutines/flow/FlowKt;->transformLatest(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 84
+    .line 51
     move-result-object v2
 
-    .line 87
+    .line 54
     iput-object v2, v0, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel;->dreamOverlayTranslationX:Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 88
+    .line 55
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 90
+    .line 57
     invoke-virtual {v1, v2}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;->immediatelyTransitionTo(F)Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 92
+    .line 59
     move-result-object v2
 
-    .line 95
+    .line 62
     iput-object v2, v0, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel;->dreamAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 96
+    .line 63
     sget v2, Lkotlin/time/Duration;->$r8$clinit:I
 
-    .line 98
+    .line 65
     sget-object v2, Lkotlin/time/DurationUnit;->MILLISECONDS:Lkotlin/time/DurationUnit;
 
-    .line 100
+    .line 67
     const/16 v3, 0xa7
 
-    .line 102
+    .line 69
     invoke-static {v3, v2}, Lkotlin/time/DurationKt;->toDuration(ILkotlin/time/DurationUnit;)J
 
-    .line 104
+    .line 71
     move-result-wide v5
 
-    .line 107
+    .line 74
     sget-object v7, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$dreamOverlayAlpha$1;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$dreamOverlayAlpha$1;
 
-    .line 108
+    .line 75
     const/4 v13, 0x0
 
-    .line 110
+    .line 77
     const-string v16, "DREAMING->GLANCEABLE_HUB: dreamOverlayAlpha"
 
-    .line 111
+    .line 78
     const-wide/16 v8, 0x0
 
-    .line 113
+    .line 80
     const/4 v10, 0x0
 
-    .line 115
+    .line 82
     const/4 v11, 0x0
 
-    .line 116
+    .line 83
     const/4 v12, 0x0
 
-    .line 117
+    .line 84
     const/16 v17, 0x7c
 
-    .line 118
+    .line 85
     move-object v4, v1
 
-    .line 120
+    .line 87
     move-wide/from16 v18, v14
 
-    .line 121
+    .line 88
     move-object/from16 v14, v16
 
-    .line 123
+    .line 90
     move/from16 v15, v17
 
-    .line 125
+    .line 92
     invoke-static/range {v4 .. v15}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;->sharedFlow-74qcysc$default(Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;JLkotlin/jvm/functions/Function1;JLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroid/view/animation/Interpolator;Ljava/lang/String;I)Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 127
+    .line 94
     move-result-object v4
 
-    .line 130
+    .line 97
     iput-object v4, v0, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel;->dreamOverlayAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 131
+    .line 98
     sget-object v7, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$showUmo$1;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$showUmo$1;
 
-    .line 133
+    .line 100
     sget-object v11, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$showUmo$2;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$showUmo$2;
 
-    .line 135
+    .line 102
     sget-object v12, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$showUmo$3;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$showUmo$3;
 
-    .line 137
+    .line 104
     const/4 v14, 0x0
 
-    .line 139
+    .line 106
     const/16 v15, 0xcc
 
-    .line 140
+    .line 107
     move-object v4, v1
 
-    .line 142
+    .line 109
     move-wide/from16 v5, v18
 
-    .line 143
+    .line 110
     invoke-static/range {v4 .. v15}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;->sharedFlow-74qcysc$default(Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;JLkotlin/jvm/functions/Function1;JLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroid/view/animation/Interpolator;Ljava/lang/String;I)Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 145
+    .line 112
     move-result-object v4
 
-    .line 148
+    .line 115
     new-instance v5, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$special$$inlined$map$1;
 
-    .line 149
+    .line 116
     invoke-direct {v5, v4}, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$special$$inlined$map$1;-><init>(Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;)V
 
-    .line 151
+    .line 118
     iput-object v5, v0, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel;->showUmo:Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$special$$inlined$map$1;
 
-    .line 154
+    .line 121
     invoke-static {v3, v2}, Lkotlin/time/DurationKt;->toDuration(ILkotlin/time/DurationUnit;)J
 
-    .line 156
+    .line 123
     move-result-wide v8
 
-    .line 159
+    .line 126
     invoke-static {v3, v2}, Lkotlin/time/DurationKt;->toDuration(ILkotlin/time/DurationUnit;)J
 
-    .line 160
+    .line 127
     move-result-wide v5
 
-    .line 163
+    .line 130
     sget-object v7, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$deviceEntryParentViewAlpha$1;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$deviceEntryParentViewAlpha$1;
 
-    .line 164
+    .line 131
     sget-object v11, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$deviceEntryParentViewAlpha$2;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$deviceEntryParentViewAlpha$2;
 
-    .line 166
+    .line 133
     sget-object v12, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$deviceEntryParentViewAlpha$3;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel$deviceEntryParentViewAlpha$3;
 
-    .line 168
+    .line 135
     const/16 v15, 0xc8
 
-    .line 170
+    .line 137
     move-object v4, v1
 
-    .line 172
+    .line 139
     invoke-static/range {v4 .. v15}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;->sharedFlow-74qcysc$default(Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;JLkotlin/jvm/functions/Function1;JLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroid/view/animation/Interpolator;Ljava/lang/String;I)Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 173
+    .line 140
     move-result-object v1
 
-    .line 176
+    .line 143
     iput-object v1, v0, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToGlanceableHubTransitionViewModel;->deviceEntryParentViewAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 177
+    .line 144
     return-void
-    .line 179
+    .line 146
 .end method
 
 

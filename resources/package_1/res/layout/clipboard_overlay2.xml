@@ -123,7 +123,7 @@
                android:tint="?attr/overlayButtonTextColor" />
     <ImageView android:layout_width="24.0dp"
                android:layout_height="24.0dp"
-               android:src="@android:drawable/ic_check_24dp"
+               android:src="@android:drawable/ic_camera_blocked"
                android:tint="?attr/overlayButtonTextColor"
                android:paddingStart="-4.0dp"
                android:paddingEnd="-8.0dp" />

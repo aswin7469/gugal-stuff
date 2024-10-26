@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/StatusBarInsetsCommand;
 .super Lcom/android/systemui/statusbar/commandline/ParseableCommand;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -52,38 +52,39 @@
 
     .line 23
     return-void
+    .line 25
 .end method
 
 .method public constructor <init>(Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider$1$1;)V
     .locals 1
 
     .line 1
-    const-string v0, "status-bar-insets"
+    const-string/jumbo v0, "status-bar-insets"
 
     .line 2
     invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/commandline/ParseableCommand;-><init>(Ljava/lang/String;)V
 
-    .line 4
+    .line 5
     iput-object p1, p0, Lcom/android/systemui/StatusBarInsetsCommand;->callback:Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider$1$1;
 
-    .line 7
+    .line 8
     new-instance p1, Lcom/android/systemui/BottomMarginCommand;
 
-    .line 9
+    .line 10
     invoke-direct {p1}, Lcom/android/systemui/BottomMarginCommand;-><init>()V
 
-    .line 11
+    .line 12
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/commandline/ParseableCommand;->subCommand(Lcom/android/systemui/statusbar/commandline/ParseableCommand;)Lcom/android/systemui/statusbar/commandline/OptionalSubCommand;
 
-    .line 14
+    .line 15
     move-result-object p1
 
-    .line 17
+    .line 18
     iput-object p1, p0, Lcom/android/systemui/StatusBarInsetsCommand;->bottomMargin$delegate:Lcom/android/systemui/statusbar/commandline/OptionalSubCommand;
 
-    .line 18
+    .line 19
     return-void
-    .line 20
+    .line 21
 .end method
 
 

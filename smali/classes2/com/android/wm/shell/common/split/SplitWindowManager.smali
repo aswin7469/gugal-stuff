@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/split/SplitWindowManager;
 .super Landroid/view/WindowlessWindowManager;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -243,7 +243,7 @@
     move-result-object v0
 
     .line 30
-    const v1, 0x7f0e0277    # @layout/split_divider 'res/layout/split_divider.xml'
+    const v1, 0x7f0d0288    # @layout/split_divider 'res/layout/split_divider.xml'
 
     .line 31
     const/4 v2, 0x0
@@ -339,7 +339,7 @@
     move-result-object v0
 
     .line 98
-    const v2, 0x7f14007f    # @string/accessibility_divider 'Split screen divider'
+    const v2, 0x7f130080    # @string/accessibility_divider 'Split screen divider'
 
     .line 99
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -417,10 +417,10 @@
     move-result-object p2
 
     .line 154
-    const v1, 0x7f0709a5    # @dimen/split_divider_handle_region_width '96.0dp'
+    const v1, 0x7f0709fd    # @dimen/split_divider_handle_region_width '96.0dp'
 
     .line 155
-    const v2, 0x7f0709a4    # @dimen/split_divider_handle_region_height '48.0dp'
+    const v2, 0x7f0709fc    # @dimen/split_divider_handle_region_height '48.0dp'
 
     .line 158
     if-eqz p1, :cond_0

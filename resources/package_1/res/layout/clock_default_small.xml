@@ -6,7 +6,7 @@
                       android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
                       android:singleLine="true"
-                      android:fontFamily="@android:string/config_datause_iface"
+                      android:fontFamily="@android:string/config_customAdbWifiNetworkConfirmationComponent"
                       android:elegantTextHeight="false"
                       android:fontFeatureSettings="pnum"
                       chargeAnimationDelay="350"

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/classifier/FalsingManagerProxy$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/provider/DeviceConfig$OnPropertiesChangedListener;
@@ -43,26 +43,26 @@
     move-result-object p1
 
     .line 10
-    const-string v0, "systemui"
+    const-string/jumbo v0, "systemui"
 
     .line 11
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 13
+    .line 14
     move-result p1
 
-    .line 16
+    .line 17
     if-nez p1, :cond_0
 
-    .line 17
+    .line 18
     goto :goto_0
 
-    .line 19
+    .line 20
     :cond_0
     invoke-virtual {p0}, Lcom/android/systemui/classifier/FalsingManagerProxy;->setupFalsingManager()V
 
-    .line 20
+    .line 21
     :goto_0
     return-void
-    .line 23
+    .line 24
 .end method

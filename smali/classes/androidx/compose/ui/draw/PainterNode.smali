@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/draw/PainterNode;
 .super Landroidx/compose/ui/Modifier$Node;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/node/LayoutModifierNode;
@@ -578,7 +578,6 @@
     .line 23
     :goto_0
     return p0
-    .line 24
 .end method
 
 .method public final maxIntrinsicHeight(Landroidx/compose/ui/layout/IntrinsicMeasureScope;Landroidx/compose/ui/layout/Measurable;I)I
@@ -1060,13 +1059,13 @@
 
     .line 103
     :goto_2
-    invoke-static {v2, p1, p2}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainWidth-K40F9xA(IJ)I
+    invoke-static {p1, p2, v2}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainWidth-K40F9xA(JI)I
 
     .line 104
     move-result v1
 
     .line 107
-    invoke-static {v0, p1, p2}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainHeight-K40F9xA(IJ)I
+    invoke-static {p1, p2, v0}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainHeight-K40F9xA(JI)I
 
     .line 108
     move-result v0
@@ -1258,7 +1257,7 @@
     move-result p0
 
     .line 221
-    invoke-static {p0, p1, p2}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainWidth-K40F9xA(IJ)I
+    invoke-static {p1, p2, p0}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainWidth-K40F9xA(JI)I
 
     .line 222
     move-result v4
@@ -1276,7 +1275,7 @@
     move-result p0
 
     .line 233
-    invoke-static {p0, p1, p2}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainHeight-K40F9xA(IJ)I
+    invoke-static {p1, p2, p0}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainHeight-K40F9xA(JI)I
 
     .line 234
     move-result v6

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/controls/ui/ControlsActivity;
 .super Landroidx/activity/ComponentActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -287,13 +287,13 @@
     invoke-virtual {p1, v0}, Landroid/view/Window;->addPrivateFlags(I)V
 
     .line 24
-    const p1, 0x7f0e0084    # @layout/controls_fullscreen 'res/layout/controls_fullscreen.xml'
+    const p1, 0x7f0d008c    # @layout/controls_fullscreen 'res/layout/controls_fullscreen.xml'
 
     .line 27
     invoke-virtual {p0, p1}, Landroidx/activity/ComponentActivity;->setContentView(I)V
 
     .line 30
-    const p1, 0x7f0b020b    # @id/control_detail_root
+    const p1, 0x7f0a0216    # @id/control_detail_root
 
     .line 33
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -481,7 +481,7 @@
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
     .line 3
-    const v1, 0x7f0b020b    # @id/control_detail_root
+    const v1, 0x7f0a0216    # @id/control_detail_root
 
     .line 6
     invoke-virtual {p0, v1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -654,7 +654,7 @@
     invoke-direct {v7, v3, v4, v5, v1}, Lcom/android/systemui/controls/settings/ControlsSettingsDialogManagerImpl$DialogListener;-><init>(Lcom/android/systemui/controls/settings/ControlsSettingsDialogManagerImpl;Landroid/content/SharedPreferences;ILkotlin/jvm/functions/Function0;)V
 
     .line 117
-    const v1, 0x7f1504be    # @style/Theme.SystemUI.Dialog
+    const v1, 0x7f1404c6    # @style/Theme.SystemUI.Dialog
 
     .line 120
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -675,7 +675,7 @@
     check-cast v1, Landroid/app/AlertDialog;
 
     .line 133
-    const v4, 0x7f080802    # @drawable/ic_lock_locked 'res/drawable/ic_lock_locked.xml'
+    const v4, 0x7f080824    # @drawable/ic_lock_locked 'res/drawable/ic_lock_locked.xml'
 
     .line 135
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog;->setIcon(I)V
@@ -690,7 +690,7 @@
     move-result-object v4
 
     .line 147
-    const v5, 0x7f1402ef    # @string/controls_settings_dialog_neutral_button 'No thanks'
+    const v5, 0x7f13030b    # @string/controls_settings_dialog_neutral_button 'No thanks'
 
     .line 148
     invoke-virtual {v4, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -711,7 +711,7 @@
     move-result-object v4
 
     .line 162
-    const v5, 0x7f1402f0    # @string/controls_settings_dialog_positive_button 'Yes'
+    const v5, 0x7f13030c    # @string/controls_settings_dialog_positive_button 'Yes'
 
     .line 163
     invoke-virtual {v4, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -753,7 +753,7 @@
     if-eqz v4, :cond_2
 
     .line 190
-    const v4, 0x7f1402f4    # @string/controls_settings_trivial_controls_dialog_title 'Control devices from lock screen?'
+    const v4, 0x7f130310    # @string/controls_settings_trivial_controls_dialog_title 'Control devices from lock screen?'
 
     .line 192
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog;->setTitle(I)V
@@ -765,7 +765,7 @@
     move-result-object v4
 
     .line 201
-    const v5, 0x7f1402f3    # @string/controls_settings_trivial_controls_dialog_message 'You can control some devices without unlocking your phone or tablet. Your device app determines whic ...'
+    const v5, 0x7f13030f    # @string/controls_settings_trivial_controls_dialog_message 'You can control some devices without unlocking your phone or tablet. Your device app determines whic ...'
 
     .line 202
     invoke-virtual {v4, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -781,7 +781,7 @@
 
     .line 212
     :cond_2
-    const v4, 0x7f1402f2    # @string/controls_settings_show_controls_dialog_title 'Show and control devices from lock screen?'
+    const v4, 0x7f13030e    # @string/controls_settings_show_controls_dialog_title 'Show and control devices from lock screen?'
 
     .line 213
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog;->setTitle(I)V
@@ -793,7 +793,7 @@
     move-result-object v4
 
     .line 222
-    const v5, 0x7f1402f1    # @string/controls_settings_show_controls_dialog_message 'You can add controls for your external devices to the lock screen.\n\nYour device app may allow you to ...'
+    const v5, 0x7f13030d    # @string/controls_settings_show_controls_dialog_message 'You can add controls for your external devices to the lock screen.\n\nYour device app may allow you to ...'
 
     .line 223
     invoke-virtual {v4, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -1314,4 +1314,5 @@
     .line 258
     :cond_13
     return-void
+    .line 261
 .end method

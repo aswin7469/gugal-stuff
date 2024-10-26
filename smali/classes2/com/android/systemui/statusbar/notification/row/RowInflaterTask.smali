@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/RowInflaterTask;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/InflationTask;
@@ -142,80 +142,77 @@
     iput-object p0, p3, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mRunningTask:Lcom/android/systemui/statusbar/InflationTask;
 
     .line 62
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 64
     sget-object p1, Lcom/android/systemui/log/core/LogLevel;->DEBUG:Lcom/android/systemui/log/core/LogLevel;
 
-    .line 67
+    .line 64
     sget-object p5, Lcom/android/systemui/statusbar/notification/row/RowInflaterTaskLogger$logInflateStart$2;->INSTANCE:Lcom/android/systemui/statusbar/notification/row/RowInflaterTaskLogger$logInflateStart$2;
 
-    .line 69
+    .line 66
     const/4 v3, 0x0
 
-    .line 71
+    .line 68
     iget-object v1, v1, Lcom/android/systemui/statusbar/notification/row/RowInflaterTaskLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
 
-    .line 72
+    .line 69
     const-string v4, "RowInflaterTask"
 
-    .line 74
+    .line 71
     invoke-virtual {v1, v4, p1, p5, v3}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
 
-    .line 76
+    .line 73
     move-result-object p1
 
-    .line 79
+    .line 76
     invoke-static {p3}, Lcom/android/systemui/statusbar/notification/NotificationUtilsKt;->getLogKey(Lcom/android/systemui/statusbar/notification/collection/ListEntry;)Ljava/lang/String;
 
-    .line 80
+    .line 77
     move-result-object p3
 
-    .line 83
+    .line 80
     move-object p5, p1
 
-    .line 84
+    .line 81
     check-cast p5, Lcom/android/systemui/log/LogMessageImpl;
 
-    .line 85
+    .line 82
     iput-object p3, p5, Lcom/android/systemui/log/LogMessageImpl;->str1:Ljava/lang/String;
 
-    .line 87
+    .line 84
     invoke-virtual {v1, p1}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
 
-    .line 89
+    .line 86
     check-cast v0, Lcom/android/systemui/util/time/SystemClockImpl;
 
-    .line 92
+    .line 89
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 94
+    .line 91
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    .line 97
+    .line 94
     move-result-wide v0
 
-    .line 100
+    .line 97
     iput-wide v0, p0, Lcom/android/systemui/statusbar/notification/row/RowInflaterTask;->mInflateStartTimeMs:J
 
-    .line 101
-    const v3, 0x7f0e0280    # @layout/status_bar_notification_row 'res/layout/status_bar_notification_row.xml'
+    .line 98
+    const v3, 0x7f0d0291    # @layout/status_bar_notification_row 'res/layout/status_bar_notification_row.xml'
 
-    .line 103
+    .line 100
     move-object v4, p2
 
-    .line 106
+    .line 103
     move-object v5, p0
 
-    .line 107
+    .line 104
     move-object v7, p4
 
-    .line 108
+    .line 105
     invoke-virtual/range {v2 .. v7}, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater;->inflateInternal(ILandroid/view/ViewGroup;Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$OnInflateFinishedListener;Landroid/view/LayoutInflater;Ljava/util/concurrent/Executor;)V
 
-    .line 109
+    .line 106
     return-void
-    .line 112
+    .line 109
 .end method
 
 .method public final onInflateFinished(Landroid/view/View;Landroid/view/ViewGroup;)V

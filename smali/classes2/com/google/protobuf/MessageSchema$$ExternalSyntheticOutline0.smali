@@ -1,6 +1,6 @@
 .class public abstract synthetic Lcom/google/protobuf/MessageSchema$$ExternalSyntheticOutline0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     move-result p0
 
@@ -23,7 +23,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
     move-result p0
 

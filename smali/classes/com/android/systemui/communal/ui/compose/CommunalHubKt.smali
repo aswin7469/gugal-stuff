@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/communal/ui/compose/CommunalHubKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -2220,7 +2220,7 @@
     move-result v8
 
     .line 1207
-    const v0, 0x7f140343    # @string/dialog_title_to_allow_any_widget 'Allow any widget on lock screen?'
+    const v0, 0x7f130368    # @string/dialog_title_to_allow_any_widget 'Allow any widget on lock screen?'
 
     .line 1208
     invoke-static {v0, v4}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -2229,7 +2229,7 @@
     move-result-object v10
 
     .line 1214
-    const v0, 0x7f140239    # @string/button_text_to_open_settings 'Open settings'
+    const v0, 0x7f130240    # @string/button_text_to_open_settings 'Open settings'
 
     .line 1215
     invoke-static {v0, v4}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -2346,7 +2346,7 @@
     move-result v8
 
     .line 1280
-    const v0, 0x7f140ad5    # @string/work_mode_off_title 'Unpause work apps?'
+    const v0, 0x7f130b66    # @string/work_mode_off_title 'Unpause work apps?'
 
     .line 1281
     invoke-static {v0, v5}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -2355,7 +2355,7 @@
     move-result-object v10
 
     .line 1287
-    const v0, 0x7f140ad6    # @string/work_mode_turn_on 'Unpause'
+    const v0, 0x7f130b67    # @string/work_mode_turn_on 'Unpause'
 
     .line 1288
     invoke-static {v0, v5}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -3087,7 +3087,7 @@
     move-result-object v0
 
     .line 227
-    const v2, 0x7f140412    # @string/icon_description_for_disabled_widget 'App icon for disabled widget'
+    const v2, 0x7f130457    # @string/icon_description_for_disabled_widget 'App icon for disabled widget'
 
     .line 228
     invoke-static {v2, v10}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -3679,7 +3679,7 @@
     move-result-object v0
 
     .line 166
-    const v2, 0x7f140413    # @string/icon_description_for_pending_widget 'App icon for a widget being installed'
+    const v2, 0x7f130458    # @string/icon_description_for_pending_widget 'App icon for a widget being installed'
 
     .line 167
     invoke-static {v2, p2}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -5275,7 +5275,7 @@
     invoke-virtual {v12, v7}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
     .line 103
-    const v0, 0x7f14003e    # @string/accessibility_action_label_select_widget 'select widget'
+    const v0, 0x7f13003e    # @string/accessibility_action_label_select_widget 'select widget'
 
     .line 106
     invoke-static {v0, v12}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -5284,7 +5284,7 @@
     move-result-object v2
 
     .line 112
-    const v0, 0x7f14003d    # @string/accessibility_action_label_remove_widget 'remove widget'
+    const v0, 0x7f13003d    # @string/accessibility_action_label_remove_widget 'remove widget'
 
     .line 113
     invoke-static {v0, v12}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -5293,7 +5293,7 @@
     move-result-object v3
 
     .line 119
-    const v0, 0x7f14003c    # @string/accessibility_action_label_place_widget 'place selected widget'
+    const v0, 0x7f13003c    # @string/accessibility_action_label_place_widget 'place selected widget'
 
     .line 120
     invoke-static {v0, v12}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;
@@ -7978,7 +7978,7 @@
     and-int/lit16 v1, v13, 0x380
 
     .line 54
-    const/16 v6, 0x100
+    const/16 v7, 0x100
 
     .line 56
     if-nez v1, :cond_5
@@ -7993,7 +7993,7 @@
     if-eqz v1, :cond_4
 
     .line 64
-    move v1, v6
+    move v1, v7
 
     .line 66
     goto :goto_3
@@ -8080,13 +8080,13 @@
     and-int/2addr v1, v13
 
     .line 109
-    move-object/from16 v7, p5
+    move-object/from16 v6, p5
 
     .line 110
     if-nez v1, :cond_b
 
     .line 112
-    invoke-virtual {v15, v7}, Landroidx/compose/runtime/ComposerImpl;->changedInstance(Ljava/lang/Object;)Z
+    invoke-virtual {v15, v6}, Landroidx/compose/runtime/ComposerImpl;->changedInstance(Ljava/lang/Object;)Z
 
     .line 114
     move-result v1
@@ -8172,487 +8172,493 @@
     const/16 v17, 0x16
 
     .line 160
-    const-string v1, "RemoveButtonAlphaAnimation"
+    const/4 v1, 0x0
 
     .line 162
-    const/4 v2, 0x0
+    const-string v2, "RemoveButtonAlphaAnimation"
 
-    .line 164
-    move-object v3, v15
+    .line 163
+    const/4 v3, 0x0
 
     .line 165
     move v14, v4
 
     .line 166
-    move/from16 v4, v16
+    move-object v4, v15
 
     .line 167
     move v8, v5
 
+    .line 168
+    move/from16 v5, v16
+
     .line 169
-    move/from16 v5, v17
+    move/from16 v6, v17
 
-    .line 170
-    invoke-static/range {v0 .. v5}, Landroidx/compose/animation/core/AnimateAsStateKt;->animateFloatAsState(FLjava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)Landroidx/compose/runtime/State;
+    .line 171
+    invoke-static/range {v0 .. v6}, Landroidx/compose/animation/core/AnimateAsStateKt;->animateFloatAsState(FLandroidx/compose/animation/core/SpringSpec;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)Landroidx/compose/runtime/State;
 
-    .line 172
-    move-result-object v5
-
-    .line 175
-    sget-object v4, Landroidx/compose/ui/Modifier$Companion;->$$INSTANCE:Landroidx/compose/ui/Modifier$Companion;
+    .line 173
+    move-result-object v6
 
     .line 176
-    invoke-static {v4, v14}, Landroidx/compose/foundation/layout/SizeKt;->fillMaxWidth(Landroidx/compose/ui/Modifier;F)Landroidx/compose/ui/Modifier;
+    sget-object v5, Landroidx/compose/ui/Modifier$Companion;->$$INSTANCE:Landroidx/compose/ui/Modifier$Companion;
 
-    .line 178
+    .line 177
+    invoke-static {v5, v14}, Landroidx/compose/foundation/layout/SizeKt;->fillMaxWidth(Landroidx/compose/ui/Modifier;F)Landroidx/compose/ui/Modifier;
+
+    .line 179
     move-result-object v18
 
-    .line 181
+    .line 182
     sget v20, Lcom/android/systemui/communal/ui/compose/Dimensions;->ToolbarPaddingTop:F
 
-    .line 182
+    .line 183
     sget v21, Lcom/android/systemui/communal/ui/compose/Dimensions;->ToolbarPaddingHorizontal:F
 
-    .line 184
+    .line 185
     const/16 v22, 0x0
 
-    .line 186
+    .line 187
     const/16 v23, 0x8
 
-    .line 188
+    .line 189
     move/from16 v19, v21
 
-    .line 190
+    .line 191
     invoke-static/range {v18 .. v23}, Landroidx/compose/foundation/layout/PaddingKt;->padding-qDBjuR0$default(Landroidx/compose/ui/Modifier;FFFFI)Landroidx/compose/ui/Modifier;
 
-    .line 192
+    .line 193
     move-result-object v0
 
-    .line 195
+    .line 196
     const v1, -0x70e60947    # -7.5909995E-30f
 
-    .line 196
+    .line 197
     invoke-virtual {v15, v1}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
 
-    .line 199
+    .line 200
     and-int/lit16 v1, v8, 0x380
 
-    .line 202
+    .line 203
     const/4 v2, 0x0
 
-    .line 204
-    if-ne v1, v6, :cond_f
-
     .line 205
+    if-ne v1, v7, :cond_f
+
+    .line 206
     const/4 v1, 0x1
 
-    .line 207
+    .line 208
     goto :goto_9
 
-    .line 208
+    .line 209
     :cond_f
     move v1, v2
 
-    .line 209
+    .line 210
     :goto_9
     invoke-virtual {v15}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
 
-    .line 210
+    .line 211
     move-result-object v3
 
-    .line 213
+    .line 214
     if-nez v1, :cond_10
 
-    .line 214
+    .line 215
     sget-object v1, Landroidx/compose/runtime/Composer$Companion;->Empty:Landroidx/compose/runtime/Composer$Companion$Empty$1;
 
-    .line 216
+    .line 217
     if-ne v3, v1, :cond_11
 
-    .line 218
+    .line 219
     :cond_10
     new-instance v3, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$Toolbar$1$1;
 
-    .line 220
+    .line 221
     invoke-direct {v3, v11}, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$Toolbar$1$1;-><init>(Lkotlin/jvm/functions/Function1;)V
 
-    .line 222
+    .line 223
     invoke-virtual {v15, v3}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 225
+    .line 226
     :cond_11
     check-cast v3, Lkotlin/jvm/functions/Function1;
 
-    .line 228
+    .line 229
     invoke-virtual {v15, v2}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 230
+    .line 231
     invoke-static {v0, v3}, Landroidx/compose/ui/layout/OnRemeasuredModifierKt;->onSizeChanged(Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;)Landroidx/compose/ui/Modifier;
 
-    .line 233
+    .line 234
     move-result-object v0
-
-    .line 236
-    sget-object v1, Landroidx/compose/ui/Alignment$Companion;->TopStart:Landroidx/compose/ui/BiasAlignment;
 
     .line 237
+    sget-object v1, Landroidx/compose/ui/Alignment$Companion;->TopStart:Landroidx/compose/ui/BiasAlignment;
+
+    .line 238
     invoke-static {v1, v2}, Landroidx/compose/foundation/layout/BoxKt;->maybeCachedBoxMeasurePolicy(Landroidx/compose/ui/Alignment;Z)Landroidx/compose/ui/layout/MeasurePolicy;
 
-    .line 239
+    .line 240
     move-result-object v1
 
-    .line 242
+    .line 243
     iget v2, v15, Landroidx/compose/runtime/ComposerImpl;->compoundKeyHash:I
 
-    .line 243
+    .line 244
     invoke-virtual {v15}, Landroidx/compose/runtime/ComposerImpl;->currentCompositionLocalScope()Landroidx/compose/runtime/PersistentCompositionLocalMap;
 
-    .line 245
+    .line 246
     move-result-object v3
 
-    .line 248
+    .line 249
     invoke-static {v15, v0}, Landroidx/compose/ui/ComposedModifierKt;->materializeModifier(Landroidx/compose/runtime/Composer;Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
 
-    .line 249
+    .line 250
     move-result-object v0
 
-    .line 252
-    sget-object v6, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
-
     .line 253
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v4, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
-    .line 255
-    sget-object v6, Landroidx/compose/ui/node/ComposeUiNode$Companion;->Constructor:Lkotlin/jvm/functions/Function0;
+    .line 254
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 258
-    iget-object v14, v15, Landroidx/compose/runtime/ComposerImpl;->applier:Landroidx/compose/runtime/Applier;
+    .line 256
+    sget-object v4, Landroidx/compose/ui/node/ComposeUiNode$Companion;->Constructor:Lkotlin/jvm/functions/Function0;
 
-    .line 260
-    instance-of v14, v14, Landroidx/compose/runtime/Applier;
+    .line 259
+    iget-object v7, v15, Landroidx/compose/runtime/ComposerImpl;->applier:Landroidx/compose/runtime/Applier;
 
-    .line 262
-    if-eqz v14, :cond_16
+    .line 261
+    instance-of v7, v7, Landroidx/compose/runtime/Applier;
 
-    .line 264
+    .line 263
+    if-eqz v7, :cond_16
+
+    .line 265
     invoke-virtual {v15}, Landroidx/compose/runtime/ComposerImpl;->startReusableNode()V
 
-    .line 266
-    iget-boolean v14, v15, Landroidx/compose/runtime/ComposerImpl;->inserting:Z
+    .line 267
+    iget-boolean v7, v15, Landroidx/compose/runtime/ComposerImpl;->inserting:Z
 
-    .line 269
-    if-eqz v14, :cond_12
+    .line 270
+    if-eqz v7, :cond_12
 
-    .line 271
-    invoke-virtual {v15, v6}, Landroidx/compose/runtime/ComposerImpl;->createNode(Lkotlin/jvm/functions/Function0;)V
+    .line 272
+    invoke-virtual {v15, v4}, Landroidx/compose/runtime/ComposerImpl;->createNode(Lkotlin/jvm/functions/Function0;)V
 
-    .line 273
+    .line 274
     goto :goto_a
 
-    .line 276
+    .line 277
     :cond_12
     invoke-virtual {v15}, Landroidx/compose/runtime/ComposerImpl;->useNode()V
 
-    .line 277
+    .line 278
     :goto_a
-    sget-object v6, Landroidx/compose/ui/node/ComposeUiNode$Companion;->SetMeasurePolicy:Lkotlin/jvm/functions/Function2;
+    sget-object v4, Landroidx/compose/ui/node/ComposeUiNode$Companion;->SetMeasurePolicy:Lkotlin/jvm/functions/Function2;
 
-    .line 280
-    invoke-static {v15, v1, v6}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
+    .line 281
+    invoke-static {v15, v1, v4}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 282
+    .line 283
     sget-object v1, Landroidx/compose/ui/node/ComposeUiNode$Companion;->SetResolvedCompositionLocals:Lkotlin/jvm/functions/Function2;
 
-    .line 285
+    .line 286
     invoke-static {v15, v3, v1}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 287
+    .line 288
     sget-object v1, Landroidx/compose/ui/node/ComposeUiNode$Companion;->SetCompositeKeyHash:Lkotlin/jvm/functions/Function2;
 
-    .line 290
+    .line 291
     iget-boolean v3, v15, Landroidx/compose/runtime/ComposerImpl;->inserting:Z
 
-    .line 292
+    .line 293
     if-nez v3, :cond_13
 
-    .line 294
+    .line 295
     invoke-virtual {v15}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
 
-    .line 296
+    .line 297
     move-result-object v3
 
-    .line 299
+    .line 300
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 300
-    move-result-object v6
-
-    .line 303
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 301
+    move-result-object v4
 
     .line 304
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 305
     move-result v3
 
-    .line 307
+    .line 308
     if-nez v3, :cond_14
 
-    .line 308
+    .line 309
     :cond_13
     invoke-static {v2, v15, v2, v1}, Landroidx/compose/animation/AnimatedContentKt$$ExternalSyntheticOutline0;->m(ILandroidx/compose/runtime/ComposerImpl;ILkotlin/jvm/functions/Function2;)V
 
-    .line 310
+    .line 311
     :cond_14
     sget-object v1, Landroidx/compose/ui/node/ComposeUiNode$Companion;->SetModifier:Lkotlin/jvm/functions/Function2;
 
-    .line 313
+    .line 314
     invoke-static {v15, v0, v1}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 315
-    sget-object v14, Landroidx/compose/foundation/layout/BoxScopeInstance;->INSTANCE:Landroidx/compose/foundation/layout/BoxScopeInstance;
+    .line 316
+    sget-object v7, Landroidx/compose/foundation/layout/BoxScopeInstance;->INSTANCE:Landroidx/compose/foundation/layout/BoxScopeInstance;
 
-    .line 318
+    .line 319
     const/4 v0, 0x1
-
-    .line 320
-    xor-int/lit8 v16, v9, 0x1
 
     .line 321
+    xor-int/lit8 v16, v9, 0x1
+
+    .line 322
     sget-object v0, Landroidx/compose/ui/Alignment$Companion;->CenterStart:Landroidx/compose/ui/BiasAlignment;
 
-    .line 323
-    invoke-virtual {v14, v4, v0}, Landroidx/compose/foundation/layout/BoxScopeInstance;->align(Landroidx/compose/ui/Modifier;Landroidx/compose/ui/BiasAlignment;)Landroidx/compose/ui/Modifier;
+    .line 324
+    invoke-virtual {v7, v5, v0}, Landroidx/compose/foundation/layout/BoxScopeInstance;->align(Landroidx/compose/ui/Modifier;Landroidx/compose/ui/BiasAlignment;)Landroidx/compose/ui/Modifier;
 
-    .line 325
+    .line 326
     move-result-object v2
-
-    .line 328
-    sget-object v3, Lcom/android/systemui/communal/ui/compose/ComposableSingletons$CommunalHubKt;->lambda-2:Landroidx/compose/runtime/internal/ComposableLambdaImpl;
 
     .line 329
+    sget-object v3, Lcom/android/systemui/communal/ui/compose/ComposableSingletons$CommunalHubKt;->lambda-2:Landroidx/compose/runtime/internal/ComposableLambdaImpl;
+
+    .line 330
     shr-int/lit8 v0, v8, 0x9
 
-    .line 331
+    .line 332
     and-int/lit8 v0, v0, 0x70
 
-    .line 333
-    or-int/lit16 v6, v0, 0xc00
+    .line 334
+    or-int/lit16 v4, v0, 0xc00
 
-    .line 335
+    .line 336
     const/16 v17, 0x0
 
-    .line 337
+    .line 338
     move/from16 v0, v16
 
-    .line 339
+    .line 340
     move-object/from16 v1, p4
 
-    .line 341
-    move-object v7, v4
-
-    .line 343
-    move-object v4, v15
+    .line 342
+    move/from16 v18, v4
 
     .line 344
-    move-object v9, v5
-
-    .line 345
-    move v5, v6
-
-    .line 346
-    move/from16 v6, v17
-
-    .line 347
-    invoke-static/range {v0 .. v6}, Lcom/android/systemui/communal/ui/compose/CommunalHubKt;->ToolbarButton(ZLkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
-
-    .line 349
-    sget-object v0, Landroidx/compose/ui/Alignment$Companion;->Center:Landroidx/compose/ui/BiasAlignment;
-
-    .line 352
-    invoke-virtual {v14, v7, v0}, Landroidx/compose/foundation/layout/BoxScopeInstance;->align(Landroidx/compose/ui/Modifier;Landroidx/compose/ui/BiasAlignment;)Landroidx/compose/ui/Modifier;
-
-    .line 354
-    move-result-object v1
-
-    .line 357
-    const/4 v0, 0x3
-
-    .line 358
-    const/4 v2, 0x0
-
-    .line 359
-    invoke-static {v2, v0}, Landroidx/compose/animation/EnterExitTransitionKt;->fadeIn$default(Landroidx/compose/animation/core/DurationBasedAnimationSpec;I)Landroidx/compose/animation/EnterTransitionImpl;
-
-    .line 360
-    move-result-object v3
-
-    .line 363
-    invoke-static {v2, v0}, Landroidx/compose/animation/EnterExitTransitionKt;->fadeOut$default(Landroidx/compose/animation/core/DurationBasedAnimationSpec;I)Landroidx/compose/animation/ExitTransitionImpl;
-
-    .line 364
-    move-result-object v4
-
-    .line 367
-    new-instance v0, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$Toolbar$2$1;
-
-    .line 368
-    invoke-direct {v0, v9, v12, v10}, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$Toolbar$2$1;-><init>(Landroidx/compose/runtime/State;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;)V
-
-    .line 370
-    const v2, 0x208217b7
-
-    .line 373
-    invoke-static {v2, v0, v15}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->rememberComposableLambda(ILkotlin/jvm/internal/Lambda;Landroidx/compose/runtime/Composer;)Landroidx/compose/runtime/internal/ComposableLambdaImpl;
-
-    .line 376
-    move-result-object v5
-
-    .line 379
-    const v0, 0x30d80
-
-    .line 380
-    and-int/lit8 v2, v8, 0xe
-
-    .line 383
-    or-int v9, v2, v0
-
-    .line 385
-    const/16 v17, 0x10
-
-    .line 387
-    const/4 v6, 0x0
-
-    .line 389
-    move/from16 v0, p0
-
-    .line 390
-    move-object v2, v3
-
-    .line 392
-    move-object v3, v4
-
-    .line 393
-    move-object v4, v6
-
-    .line 394
-    move-object v6, v15
-
-    .line 395
-    move-object/from16 v24, v7
-
-    .line 396
-    move v7, v9
-
-    .line 398
-    move v9, v8
-
-    .line 399
-    move/from16 v8, v17
-
-    .line 400
-    invoke-static/range {v0 .. v8}, Landroidx/compose/animation/AnimatedVisibilityKt;->AnimatedVisibility(ZLandroidx/compose/ui/Modifier;Landroidx/compose/animation/EnterTransition;Landroidx/compose/animation/ExitTransition;Ljava/lang/String;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
-
-    .line 402
-    sget-object v0, Landroidx/compose/ui/Alignment$Companion;->CenterEnd:Landroidx/compose/ui/BiasAlignment;
-
-    .line 405
-    move-object/from16 v1, v24
-
-    .line 407
-    invoke-virtual {v14, v1, v0}, Landroidx/compose/foundation/layout/BoxScopeInstance;->align(Landroidx/compose/ui/Modifier;Landroidx/compose/ui/BiasAlignment;)Landroidx/compose/ui/Modifier;
-
-    .line 409
-    move-result-object v2
-
-    .line 412
-    sget-object v3, Lcom/android/systemui/communal/ui/compose/ComposableSingletons$CommunalHubKt;->lambda-4:Landroidx/compose/runtime/internal/ComposableLambdaImpl;
-
-    .line 413
-    shr-int/lit8 v0, v9, 0xc
-
-    .line 415
-    and-int/lit8 v0, v0, 0x70
-
-    .line 417
-    or-int/lit16 v5, v0, 0xc00
-
-    .line 419
-    const/4 v6, 0x0
-
-    .line 421
-    move/from16 v0, v16
-
-    .line 422
-    move-object/from16 v1, p5
-
-    .line 424
     move-object v4, v15
 
-    .line 426
+    .line 346
+    move-object v14, v5
+
+    .line 347
+    move/from16 v5, v18
+
+    .line 348
+    move-object v9, v6
+
+    .line 350
+    move/from16 v6, v17
+
+    .line 351
     invoke-static/range {v0 .. v6}, Lcom/android/systemui/communal/ui/compose/CommunalHubKt;->ToolbarButton(ZLkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
 
-    .line 427
-    const/4 v0, 0x1
+    .line 353
+    sget-object v0, Landroidx/compose/ui/Alignment$Companion;->Center:Landroidx/compose/ui/BiasAlignment;
+
+    .line 356
+    invoke-virtual {v7, v14, v0}, Landroidx/compose/foundation/layout/BoxScopeInstance;->align(Landroidx/compose/ui/Modifier;Landroidx/compose/ui/BiasAlignment;)Landroidx/compose/ui/Modifier;
+
+    .line 358
+    move-result-object v1
+
+    .line 361
+    const/4 v0, 0x3
+
+    .line 362
+    const/4 v2, 0x0
+
+    .line 363
+    invoke-static {v2, v0}, Landroidx/compose/animation/EnterExitTransitionKt;->fadeIn$default(Landroidx/compose/animation/core/DurationBasedAnimationSpec;I)Landroidx/compose/animation/EnterTransitionImpl;
+
+    .line 364
+    move-result-object v3
+
+    .line 367
+    invoke-static {v2, v0}, Landroidx/compose/animation/EnterExitTransitionKt;->fadeOut$default(Landroidx/compose/animation/core/DurationBasedAnimationSpec;I)Landroidx/compose/animation/ExitTransitionImpl;
+
+    .line 368
+    move-result-object v4
+
+    .line 371
+    new-instance v0, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$Toolbar$2$1;
+
+    .line 372
+    invoke-direct {v0, v9, v12, v10}, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$Toolbar$2$1;-><init>(Landroidx/compose/runtime/State;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;)V
+
+    .line 374
+    const v2, 0x208217b7
+
+    .line 377
+    invoke-static {v2, v0, v15}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->rememberComposableLambda(ILkotlin/jvm/internal/Lambda;Landroidx/compose/runtime/Composer;)Landroidx/compose/runtime/internal/ComposableLambdaImpl;
+
+    .line 380
+    move-result-object v5
+
+    .line 383
+    const v0, 0x30d80
+
+    .line 384
+    and-int/lit8 v2, v8, 0xe
+
+    .line 387
+    or-int v9, v2, v0
+
+    .line 389
+    const/16 v17, 0x10
+
+    .line 391
+    const/4 v6, 0x0
+
+    .line 393
+    move/from16 v0, p0
+
+    .line 394
+    move-object v2, v3
+
+    .line 396
+    move-object v3, v4
+
+    .line 397
+    move-object v4, v6
+
+    .line 398
+    move-object v6, v15
+
+    .line 399
+    move-object/from16 v24, v7
+
+    .line 400
+    move v7, v9
+
+    .line 402
+    move v9, v8
+
+    .line 403
+    move/from16 v8, v17
+
+    .line 404
+    invoke-static/range {v0 .. v8}, Landroidx/compose/animation/AnimatedVisibilityKt;->AnimatedVisibility(ZLandroidx/compose/ui/Modifier;Landroidx/compose/animation/EnterTransition;Landroidx/compose/animation/ExitTransition;Ljava/lang/String;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+
+    .line 406
+    sget-object v0, Landroidx/compose/ui/Alignment$Companion;->CenterEnd:Landroidx/compose/ui/BiasAlignment;
+
+    .line 409
+    move-object/from16 v1, v24
+
+    .line 411
+    invoke-virtual {v1, v14, v0}, Landroidx/compose/foundation/layout/BoxScopeInstance;->align(Landroidx/compose/ui/Modifier;Landroidx/compose/ui/BiasAlignment;)Landroidx/compose/ui/Modifier;
+
+    .line 413
+    move-result-object v2
+
+    .line 416
+    sget-object v3, Lcom/android/systemui/communal/ui/compose/ComposableSingletons$CommunalHubKt;->lambda-4:Landroidx/compose/runtime/internal/ComposableLambdaImpl;
+
+    .line 417
+    shr-int/lit8 v0, v9, 0xc
+
+    .line 419
+    and-int/lit8 v0, v0, 0x70
+
+    .line 421
+    or-int/lit16 v5, v0, 0xc00
+
+    .line 423
+    const/4 v6, 0x0
+
+    .line 425
+    move/from16 v0, v16
+
+    .line 426
+    move-object/from16 v1, p5
+
+    .line 428
+    move-object v4, v15
 
     .line 430
-    invoke-virtual {v15, v0}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
+    invoke-static/range {v0 .. v6}, Lcom/android/systemui/communal/ui/compose/CommunalHubKt;->ToolbarButton(ZLkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
 
     .line 431
+    const/4 v0, 0x1
+
+    .line 434
+    invoke-virtual {v15, v0}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
+
+    .line 435
     :goto_b
     invoke-virtual {v15}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
 
-    .line 434
+    .line 438
     move-result-object v8
 
-    .line 437
+    .line 441
     if-eqz v8, :cond_15
 
-    .line 438
+    .line 442
     new-instance v9, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$Toolbar$3;
 
-    .line 440
+    .line 444
     move-object v0, v9
 
-    .line 442
+    .line 446
     move/from16 v1, p0
 
-    .line 443
+    .line 447
     move-object/from16 v2, p1
 
-    .line 445
+    .line 449
     move-object/from16 v3, p2
 
-    .line 447
+    .line 451
     move-object/from16 v4, p3
 
-    .line 449
+    .line 453
     move-object/from16 v5, p4
 
-    .line 451
+    .line 455
     move-object/from16 v6, p5
 
-    .line 453
+    .line 457
     move/from16 v7, p7
 
-    .line 455
+    .line 459
     invoke-direct/range {v0 .. v7}, Lcom/android/systemui/communal/ui/compose/CommunalHubKt$Toolbar$3;-><init>(ZLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;I)V
 
-    .line 457
+    .line 461
     iput-object v9, v8, Landroidx/compose/runtime/RecomposeScopeImpl;->block:Lkotlin/jvm/functions/Function2;
 
-    .line 460
+    .line 464
     :cond_15
     return-void
 
-    .line 462
+    .line 466
     :cond_16
     invoke-static {}, Landroidx/compose/runtime/ComposablesKt;->invalidApplier()V
 
-    .line 463
+    .line 467
     const/4 v0, 0x0
 
-    .line 466
+    .line 470
     throw v0
-    .line 467
+    .line 471
 .end method
 
 .method public static final access$filledButtonColors(Landroidx/compose/runtime/Composer;)Landroidx/compose/material3/ButtonColors;
@@ -8778,6 +8784,7 @@
     .line 34
     :goto_0
     return-object p0
+    .line 35
 .end method
 
 .method public static final isPointerWithinEnabledRemoveButton-_UaWb3I(ZLandroidx/compose/ui/geometry/Offset;Landroidx/compose/ui/layout/LayoutCoordinates;)Z

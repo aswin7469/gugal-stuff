@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/toast/SystemUIToast;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/ToastPlugin$Toast;
@@ -74,10 +74,10 @@
     move-result v10
 
     .line 30
-    const v11, 0x7f0b0379    # @id/icon
+    const v11, 0x7f0a0399    # @id/icon
 
     .line 31
-    const v12, 0x7f0b07e0    # @id/text
+    const v12, 0x7f0a080f    # @id/text
 
     .line 34
     const/4 v13, 0x0
@@ -105,7 +105,7 @@
 
     .line 50
     :cond_0
-    const v8, 0x7f0e02f1    # @layout/text_toast 'res/layout/text_toast.xml'
+    const v8, 0x7f0d0303    # @layout/text_toast 'res/layout/text_toast.xml'
 
     .line 52
     move-object/from16 v10, p1
@@ -792,7 +792,7 @@
 
     .line 514
     :cond_b
-    const v2, 0x7f0b0379    # @id/icon
+    const v2, 0x7f0a0399    # @id/icon
 
     .line 516
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -801,7 +801,7 @@
     move-result-object v2
 
     .line 522
-    const v3, 0x7f0b07e0    # @id/text
+    const v3, 0x7f0a080f    # @id/text
 
     .line 523
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1069,30 +1069,35 @@
     .line 706
     return-void
 
+    .line 709
     :array_0
     .array-data 4
         0x3f666666    # 0.9f
         0x3f800000    # 1.0f
     .end array-data
 
+    .line 710
     :array_1
     .array-data 4
         0x3f666666    # 0.9f
         0x3f800000    # 1.0f
     .end array-data
 
+    .line 718
     :array_2
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
+    .line 726
     :array_3
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
+    .line 734
     :array_4
     .array-data 4
         0x0
@@ -1474,7 +1479,7 @@
     move-result-object p1
 
     .line 29
-    const v0, 0x10e0130    # @android:integer/config_wait_for_satellite_enabling_response_timeout_millis
+    const v0, 0x10e012a    # @android:integer/config_veryLongPressTimeout
 
     .line 30
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I

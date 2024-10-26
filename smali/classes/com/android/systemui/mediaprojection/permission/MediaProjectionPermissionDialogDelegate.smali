@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/mediaprojection/permission/MediaProjectionPermissionDialogDelegate;
 .super Lcom/android/systemui/mediaprojection/permission/BaseMediaProjectionPermissionDialogDelegate;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -25,28 +25,28 @@
     if-nez v9, :cond_0
 
     .line 5
-    const v0, 0x7f140610    # @string/media_projection_entry_cast_permission_dialog_warning_single_app 'When you’re casting an app, Android has access to anything shown or played on that app. So be carefu ...'
+    const v0, 0x7f13066a    # @string/media_projection_entry_cast_permission_dialog_warning_single_app 'When you’re casting an app, Android has access to anything shown or played on that app. So be carefu ...'
 
     .line 7
     goto :goto_0
 
     .line 10
     :cond_0
-    const v0, 0x7f14060c    # @string/media_projection_entry_app_permission_dialog_warning_single_app 'When you’re sharing, recording, or casting an app, %s has access to anything shown or played on that ...'
+    const v0, 0x7f130666    # @string/media_projection_entry_app_permission_dialog_warning_single_app 'When you’re sharing, recording, or casting an app, %s has access to anything shown or played on that ...'
 
     .line 11
     :goto_0
     if-nez v9, :cond_1
 
     .line 14
-    const v1, 0x7f14060f    # @string/media_projection_entry_cast_permission_dialog_warning_entire_screen 'When you’re casting, Android has access to anything visible on your screen or played on your device. ...'
+    const v1, 0x7f130669    # @string/media_projection_entry_cast_permission_dialog_warning_entire_screen 'When you’re casting, Android has access to anything visible on your screen or played on your device. ...'
 
     .line 16
     goto :goto_1
 
     .line 19
     :cond_1
-    const v1, 0x7f14060b    # @string/media_projection_entry_app_permission_dialog_warning_entire_screen 'When you’re sharing, recording, or casting, %s has access to anything visible on your screen or play ...'
+    const v1, 0x7f130665    # @string/media_projection_entry_app_permission_dialog_warning_entire_screen 'When you’re sharing, recording, or casting, %s has access to anything visible on your screen or play ...'
 
     .line 20
     :goto_1
@@ -91,7 +91,7 @@
     if-eqz v4, :cond_3
 
     .line 41
-    const v6, 0x7f140609    # @string/media_projection_entry_app_permission_dialog_single_app_disabled '%1$s has disabled this option'
+    const v6, 0x7f130663    # @string/media_projection_entry_app_permission_dialog_single_app_disabled '%1$s has disabled this option'
 
     .line 43
     filled-new-array/range {p5 .. p5}, [Ljava/lang/Object;
@@ -120,7 +120,7 @@
     new-instance v7, Lcom/android/systemui/mediaprojection/permission/ScreenShareOption;
 
     .line 57
-    const v10, 0x7f140851    # @string/screen_share_permission_dialog_option_single_app 'A single app'
+    const v10, 0x7f1308bf    # @string/screen_share_permission_dialog_option_single_app 'A single app'
 
     .line 59
     invoke-direct {v7, v6, v3, v10, v0}, Lcom/android/systemui/mediaprojection/permission/ScreenShareOption;-><init>(Ljava/lang/String;III)V
@@ -129,7 +129,7 @@
     new-instance v0, Lcom/android/systemui/mediaprojection/permission/ScreenShareOption;
 
     .line 65
-    const v3, 0x7f140850    # @string/screen_share_permission_dialog_option_entire_screen 'Entire screen'
+    const v3, 0x7f1308be    # @string/screen_share_permission_dialog_option_entire_screen 'Entire screen'
 
     .line 67
     invoke-direct {v0, v5, v2, v3, v1}, Lcom/android/systemui/mediaprojection/permission/ScreenShareOption;-><init>(Ljava/lang/String;III)V
@@ -267,7 +267,7 @@
 
     if-nez p2, :cond_1
 
-    const p2, 0x7f14060e    # @string/media_projection_entry_cast_permission_dialog_title 'Start casting?'
+    const p2, 0x7f130668    # @string/media_projection_entry_cast_permission_dialog_title 'Start casting?'
 
     .line 4
     invoke-virtual {p0, p2}, Lcom/android/systemui/mediaprojection/permission/BaseMediaProjectionPermissionDialogDelegate;->setDialogTitle(I)V
@@ -280,14 +280,14 @@
     move-object p2, v0
 
     :cond_0
-    const v1, 0x7f14060d    # @string/media_projection_entry_cast_permission_dialog_continue 'Start casting'
+    const v1, 0x7f130667    # @string/media_projection_entry_cast_permission_dialog_continue 'Start casting'
 
     invoke-virtual {p2, v1}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 
     :cond_1
-    const p2, 0x7f14060a    # @string/media_projection_entry_app_permission_dialog_title 'Start recording or casting with %s?'
+    const p2, 0x7f130664    # @string/media_projection_entry_app_permission_dialog_title 'Start recording or casting with %s?'
 
     .line 6
     invoke-virtual {p0, p2}, Lcom/android/systemui/mediaprojection/permission/BaseMediaProjectionPermissionDialogDelegate;->setDialogTitle(I)V
@@ -300,7 +300,7 @@
     move-object p2, v0
 
     :cond_2
-    const v1, 0x7f140608    # @string/media_projection_entry_app_permission_dialog_continue 'Start'
+    const v1, 0x7f130662    # @string/media_projection_entry_app_permission_dialog_continue 'Start'
 
     invoke-virtual {p2, v1}, Landroid/widget/TextView;->setText(I)V
 

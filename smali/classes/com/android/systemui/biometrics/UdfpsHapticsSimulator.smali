@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/UdfpsHapticsSimulator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/commandline/Command;
@@ -64,14 +64,14 @@
     invoke-direct {p2, p0}, Lcom/android/systemui/biometrics/UdfpsHapticsSimulator$1;-><init>(Lcom/android/systemui/biometrics/UdfpsHapticsSimulator;)V
 
     .line 31
-    const-string p0, "udfps-haptic"
+    const-string/jumbo p0, "udfps-haptic"
 
     .line 34
     invoke-virtual {p1, p0, p2}, Lcom/android/systemui/statusbar/commandline/CommandRegistry;->registerCommand(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
 
-    .line 36
+    .line 37
     return-void
-    .line 39
+    .line 40
 .end method
 
 .method public static invalidCommand$1(Ljava/io/PrintWriter;)V
@@ -183,104 +183,104 @@
 
     .line 40
     :cond_1
-    const-string v0, "start"
+    const-string/jumbo v0, "start"
 
     .line 41
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 43
+    .line 44
     move-result p2
 
-    .line 46
+    .line 47
     if-nez p2, :cond_2
 
-    .line 47
+    .line 48
     goto :goto_0
 
-    .line 49
+    .line 50
     :cond_2
     iget-object p0, p0, Lcom/android/systemui/biometrics/UdfpsHapticsSimulator;->udfpsController:Lcom/android/systemui/biometrics/UdfpsController;
 
-    .line 50
+    .line 51
     if-eqz p0, :cond_7
 
-    .line 52
+    .line 53
     invoke-virtual {p0}, Lcom/android/systemui/biometrics/UdfpsController;->playStartHaptic()V
 
-    .line 54
+    .line 55
     goto :goto_1
 
-    .line 57
+    .line 58
     :cond_3
     const-string v0, "error"
 
-    .line 58
+    .line 59
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 60
+    .line 61
     move-result p2
 
-    .line 63
+    .line 64
     if-nez p2, :cond_4
 
-    .line 64
+    .line 65
     goto :goto_0
 
-    .line 66
+    .line 67
     :cond_4
     const/4 p1, 0x1
 
-    .line 67
+    .line 68
     invoke-static {p1}, Landroid/os/VibrationEffect;->get(I)Landroid/os/VibrationEffect;
 
-    .line 68
+    .line 69
     move-result-object p1
 
-    .line 71
+    .line 72
     iget-object p0, p0, Lcom/android/systemui/biometrics/UdfpsHapticsSimulator;->sonificationEffects:Landroid/media/AudioAttributes;
 
-    .line 72
+    .line 73
     invoke-virtual {v3, p1, p0}, Lcom/android/systemui/statusbar/VibratorHelper;->vibrate(Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;)V
 
-    .line 74
+    .line 75
     goto :goto_1
 
-    .line 77
-    :cond_5
-    const-string v1, "success"
-
     .line 78
+    :cond_5
+    const-string/jumbo v1, "success"
+
+    .line 79
     invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 80
+    .line 82
     move-result p2
 
-    .line 83
+    .line 85
     if-nez p2, :cond_6
 
-    .line 84
+    .line 86
     :goto_0
     invoke-static {p1}, Lcom/android/systemui/biometrics/UdfpsHapticsSimulator;->invalidCommand$1(Ljava/io/PrintWriter;)V
 
-    .line 86
+    .line 88
     goto :goto_1
 
-    .line 89
+    .line 91
     :cond_6
     invoke-static {v0}, Landroid/os/VibrationEffect;->get(I)Landroid/os/VibrationEffect;
 
-    .line 90
+    .line 92
     move-result-object p1
 
-    .line 93
+    .line 95
     iget-object p0, p0, Lcom/android/systemui/biometrics/UdfpsHapticsSimulator;->sonificationEffects:Landroid/media/AudioAttributes;
 
-    .line 94
+    .line 96
     invoke-virtual {v3, p1, p0}, Lcom/android/systemui/statusbar/VibratorHelper;->vibrate(Landroid/os/VibrationEffect;Landroid/media/AudioAttributes;)V
 
-    .line 96
+    .line 98
     :cond_7
     :goto_1
     return-void
-    .line 99
+    .line 101
 .end method

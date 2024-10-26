@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/stack/ExpandableViewState;
 .super Lcom/android/systemui/statusbar/notification/stack/ViewState;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -73,7 +73,7 @@
     const/4 v7, 0x0
 
     .line 27
-    const v8, 0x7f0b0368    # @id/height_animator_tag
+    const v8, 0x7f0a0387    # @id/height_animator_tag
 
     .line 28
     const/4 v11, 0x1
@@ -82,7 +82,7 @@
     if-eq v5, v6, :cond_7
 
     .line 32
-    const v5, 0x7f0b0367    # @id/height_animator_start_value_tag
+    const v5, 0x7f0a0386    # @id/height_animator_start_value_tag
 
     .line 34
     invoke-virtual {v3, v5}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -94,7 +94,7 @@
     check-cast v6, Ljava/lang/Integer;
 
     .line 41
-    const v9, 0x7f0b0366    # @id/height_animator_end_value_tag
+    const v9, 0x7f0a0385    # @id/height_animator_end_value_tag
 
     .line 43
     invoke-virtual {v3, v9}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -382,7 +382,7 @@
 
     .line 242
     :cond_8
-    const v5, 0x7f0b0815    # @id/top_inset_animator_tag
+    const v5, 0x7f0a0844    # @id/top_inset_animator_tag
 
     .line 243
     invoke-static {v1, v5}, Lcom/android/systemui/statusbar/notification/stack/ViewState;->abortAnimation(Landroid/view/View;I)V
@@ -405,7 +405,7 @@
 
     .line 258
     :cond_9
-    const v5, 0x7f0b0139    # @id/bottom_inset_animator_tag
+    const v5, 0x7f0a013f    # @id/bottom_inset_animator_tag
 
     .line 259
     invoke-static {v1, v5}, Lcom/android/systemui/statusbar/notification/stack/ViewState;->abortAnimation(Landroid/view/View;I)V
@@ -615,7 +615,7 @@
     invoke-super {p0, p1}, Lcom/android/systemui/statusbar/notification/stack/ViewState;->cancelAnimations(Landroid/view/View;)V
 
     .line 2
-    const p0, 0x7f0b0368    # @id/height_animator_tag
+    const p0, 0x7f0a0387    # @id/height_animator_tag
 
     .line 5
     invoke-virtual {p1, p0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -634,7 +634,7 @@
 
     .line 16
     :cond_0
-    const p0, 0x7f0b0815    # @id/top_inset_animator_tag
+    const p0, 0x7f0a0844    # @id/top_inset_animator_tag
 
     .line 19
     invoke-virtual {p1, p0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -654,6 +654,7 @@
     .line 30
     :cond_1
     return-void
+    .line 33
 .end method
 
 .method public copyFrom(Lcom/android/systemui/statusbar/notification/stack/ViewState;)V
@@ -729,10 +730,10 @@
     move/from16 v3, p3
 
     .line 8
-    const v4, 0x7f0b0138    # @id/bottom_inset_animator_start_value_tag
+    const v4, 0x7f0a013e    # @id/bottom_inset_animator_start_value_tag
 
     .line 10
-    const v5, 0x7f0b0814    # @id/top_inset_animator_start_value_tag
+    const v5, 0x7f0a0843    # @id/top_inset_animator_start_value_tag
 
     .line 13
     if-eqz v3, :cond_0
@@ -758,10 +759,10 @@
     check-cast v6, Ljava/lang/Integer;
 
     .line 25
-    const v7, 0x7f0b0137    # @id/bottom_inset_animator_end_value_tag
+    const v7, 0x7f0a013d    # @id/bottom_inset_animator_end_value_tag
 
     .line 27
-    const v8, 0x7f0b0813    # @id/top_inset_animator_end_value_tag
+    const v8, 0x7f0a0842    # @id/top_inset_animator_end_value_tag
 
     .line 30
     if-eqz v3, :cond_1
@@ -817,10 +818,10 @@
 
     .line 59
     :cond_3
-    const v10, 0x7f0b0139    # @id/bottom_inset_animator_tag
+    const v10, 0x7f0a013f    # @id/bottom_inset_animator_tag
 
     .line 60
-    const v11, 0x7f0b0815    # @id/top_inset_animator_tag
+    const v11, 0x7f0a0844    # @id/top_inset_animator_tag
 
     .line 63
     if-eqz v3, :cond_4

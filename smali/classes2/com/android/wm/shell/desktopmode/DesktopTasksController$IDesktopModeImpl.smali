@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl;
 .super Landroid/os/Binder;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/ExternalInterfaceBinder;
@@ -327,295 +327,295 @@
     iget-object p2, p0, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl;->controller:Lcom/android/wm/shell/desktopmode/DesktopTasksController;
 
     .line 135
-    new-instance p3, Lcom/android/wm/shell/desktopmode/DesktopTasksController$addPendingMinimizeTransition$1;
+    new-instance p3, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl$setTaskListener$1;
 
     .line 137
-    const/4 p4, 0x1
+    invoke-direct {p3, p1, p0}, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl$setTaskListener$1;-><init>(Lcom/android/wm/shell/desktopmode/IDesktopTaskListener$Stub$Proxy;Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl;)V
 
     .line 139
-    invoke-direct {p3, p4, p1, p0}, Lcom/android/wm/shell/desktopmode/DesktopTasksController$addPendingMinimizeTransition$1;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
-
-    .line 140
     const-string p0, "setTaskListener"
 
-    .line 143
+    .line 142
     invoke-static {p2, p0, p3, v0}, Lcom/android/wm/shell/common/ExternalInterfaceBinder;->executeRemoteCallWithTaskPermission(Lcom/android/wm/shell/common/RemoteCallable;Ljava/lang/String;Ljava/util/function/Consumer;Z)V
 
-    .line 145
+    .line 144
     goto/16 :goto_2
 
-    .line 148
+    .line 147
     :pswitch_2
     sget-object p1, Landroid/app/ActivityManager$RunningTaskInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 150
+    .line 149
     invoke-virtual {p2, p1}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
 
-    .line 152
+    .line 151
     move-result-object p1
 
-    .line 155
+    .line 154
     check-cast p1, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 156
+    .line 155
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 158
+    .line 157
     iget-object p0, p0, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl;->controller:Lcom/android/wm/shell/desktopmode/DesktopTasksController;
 
-    .line 161
+    .line 160
     new-instance p2, Lcom/android/wm/shell/desktopmode/DesktopTasksController$mOnAnimationFinishedCallback$1;
 
-    .line 163
+    .line 162
     const/4 p3, 0x1
 
-    .line 165
+    .line 164
     invoke-direct {p2, p3, p1}, Lcom/android/wm/shell/desktopmode/DesktopTasksController$mOnAnimationFinishedCallback$1;-><init>(ILjava/lang/Object;)V
 
-    .line 166
+    .line 165
     const-string p1, "onDesktopSplitSelectAnimComplete"
 
-    .line 169
+    .line 168
     invoke-static {p0, p1, p2, v0}, Lcom/android/wm/shell/common/ExternalInterfaceBinder;->executeRemoteCallWithTaskPermission(Lcom/android/wm/shell/common/RemoteCallable;Ljava/lang/String;Ljava/util/function/Consumer;Z)V
 
-    .line 171
+    .line 170
     goto/16 :goto_2
 
-    .line 174
+    .line 173
     :pswitch_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 176
+    .line 175
     move-result p1
 
-    .line 179
+    .line 178
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 180
+    .line 179
     new-array p2, v1, [I
 
-    .line 183
+    .line 182
     iget-object p0, p0, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl;->controller:Lcom/android/wm/shell/desktopmode/DesktopTasksController;
 
-    .line 185
+    .line 184
     new-instance p4, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl$moveToDesktop$1;
 
-    .line 187
+    .line 186
     invoke-direct {p4, p2, p1}, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl$moveToDesktop$1;-><init>([II)V
 
-    .line 189
+    .line 188
     const-string p1, "getVisibleTaskCount"
 
-    .line 192
+    .line 191
     invoke-static {p0, p1, p4, v1}, Lcom/android/wm/shell/common/ExternalInterfaceBinder;->executeRemoteCallWithTaskPermission(Lcom/android/wm/shell/common/RemoteCallable;Ljava/lang/String;Ljava/util/function/Consumer;Z)V
 
-    .line 194
+    .line 193
     aget p0, p2, v0
 
-    .line 197
+    .line 196
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 199
+    .line 198
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 202
+    .line 201
     goto/16 :goto_2
 
-    .line 205
+    .line 204
     :pswitch_4
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 207
+    .line 206
     move-result p1
 
-    .line 210
+    .line 209
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 211
+    .line 210
     iget-object p0, p0, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl;->controller:Lcom/android/wm/shell/desktopmode/DesktopTasksController;
 
-    .line 214
+    .line 213
     new-instance p2, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl$showDesktopApp$1;
 
-    .line 216
+    .line 215
     invoke-direct {p2, p1}, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl$showDesktopApp$1;-><init>(I)V
 
-    .line 218
+    .line 217
     const-string p1, "showDesktopApp"
 
-    .line 221
+    .line 220
     invoke-static {p0, p1, p2, v0}, Lcom/android/wm/shell/common/ExternalInterfaceBinder;->executeRemoteCallWithTaskPermission(Lcom/android/wm/shell/common/RemoteCallable;Ljava/lang/String;Ljava/util/function/Consumer;Z)V
 
-    .line 223
+    .line 222
     goto :goto_2
 
-    .line 226
+    .line 225
     :pswitch_5
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 227
+    .line 226
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 230
+    .line 229
     sget-object p0, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_DESKTOP_MODE:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 233
+    .line 232
     new-array p1, v0, [Ljava/lang/Object;
 
-    .line 235
+    .line 234
     invoke-interface {p0}, Lcom/android/internal/protolog/common/IProtoLogGroup;->isLogToLogcat()Z
 
-    .line 237
+    .line 236
     move-result p2
 
-    .line 240
+    .line 239
     if-eqz p2, :cond_6
 
-    .line 241
+    .line 240
     invoke-interface {p0}, Lcom/android/internal/protolog/common/IProtoLogGroup;->getTag()Ljava/lang/String;
 
-    .line 243
+    .line 242
     move-result-object p0
 
-    .line 246
+    .line 245
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    .line 247
+    .line 246
     move-result-object p1
 
-    .line 250
+    .line 249
     array-length p2, p1
 
-    .line 251
+    .line 250
     invoke-static {p1, p2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    .line 252
+    .line 251
     move-result-object p1
 
-    .line 255
+    .line 254
     const-string p2, "IDesktopModeImpl: hideStashedDesktopApps is deprecated"
 
-    .line 256
+    .line 255
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 258
+    .line 257
     move-result-object p1
 
-    .line 261
+    .line 260
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
+    .line 261
     :cond_6
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 265
+    .line 264
     goto :goto_2
 
-    .line 268
+    .line 267
     :pswitch_6
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 269
+    .line 268
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 272
+    .line 271
     sget-object p0, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_DESKTOP_MODE:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 275
+    .line 274
     new-array p1, v0, [Ljava/lang/Object;
 
-    .line 277
+    .line 276
     invoke-interface {p0}, Lcom/android/internal/protolog/common/IProtoLogGroup;->isLogToLogcat()Z
 
-    .line 279
+    .line 278
     move-result p2
 
-    .line 282
+    .line 281
     if-eqz p2, :cond_7
 
-    .line 283
+    .line 282
     invoke-interface {p0}, Lcom/android/internal/protolog/common/IProtoLogGroup;->getTag()Ljava/lang/String;
 
-    .line 285
+    .line 284
     move-result-object p0
 
-    .line 288
+    .line 287
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    .line 289
+    .line 288
     move-result-object p1
 
-    .line 292
+    .line 291
     array-length p2, p1
 
-    .line 293
+    .line 292
     invoke-static {p1, p2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    .line 294
+    .line 293
     move-result-object p1
 
-    .line 297
+    .line 296
     const-string p2, "IDesktopModeImpl: stashDesktopApps is deprecated"
 
-    .line 298
+    .line 297
     invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 300
+    .line 299
     move-result-object p1
 
-    .line 303
+    .line 302
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
+    .line 303
     :cond_7
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 307
+    .line 306
     goto :goto_2
 
-    .line 310
+    .line 309
     :pswitch_7
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 311
+    .line 310
     move-result p1
 
-    .line 314
+    .line 313
     sget-object p4, Landroid/window/RemoteTransition;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 315
+    .line 314
     invoke-virtual {p2, p4}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
 
-    .line 317
+    .line 316
     move-result-object p4
 
-    .line 320
+    .line 319
     check-cast p4, Landroid/window/RemoteTransition;
 
-    .line 321
+    .line 320
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 323
+    .line 322
     iget-object p0, p0, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl;->controller:Lcom/android/wm/shell/desktopmode/DesktopTasksController;
 
-    .line 326
+    .line 325
     new-instance p2, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl$moveToDesktop$1;
 
-    .line 328
+    .line 327
     invoke-direct {p2, p1, p4}, Lcom/android/wm/shell/desktopmode/DesktopTasksController$IDesktopModeImpl$moveToDesktop$1;-><init>(ILandroid/window/RemoteTransition;)V
 
-    .line 330
+    .line 329
     const-string p1, "showDesktopApps"
 
-    .line 333
+    .line 332
     invoke-static {p0, p1, p2, v0}, Lcom/android/wm/shell/common/ExternalInterfaceBinder;->executeRemoteCallWithTaskPermission(Lcom/android/wm/shell/common/RemoteCallable;Ljava/lang/String;Ljava/util/function/Consumer;Z)V
 
-    .line 335
+    .line 334
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 338
+    .line 337
     :goto_2
     return v1
+
+    .line 340
+    nop
 
     .line 341
     :pswitch_data_0

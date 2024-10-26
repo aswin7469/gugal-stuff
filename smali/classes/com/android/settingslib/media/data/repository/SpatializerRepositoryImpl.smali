@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/media/data/repository/SpatializerRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -10,7 +10,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/Spatializer;Lkotlin/coroutines/CoroutineContext;)V
+.method public constructor <init>(Lcom/google/android/systemui/volume/panel/SpatializerWrapper;Lkotlin/coroutines/CoroutineContext;)V
     .locals 0
 
     .line 1
@@ -184,6 +184,7 @@
     :cond_3
     :goto_1
     return-object p1
+    .line 69
 .end method
 
 .method public final isHeadTrackingAvailableForDevice(Landroid/media/AudioDeviceAttributes;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;

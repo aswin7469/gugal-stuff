@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/layout/WindowInsetsHolder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -158,287 +158,287 @@
     iput-object v6, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->navigationBars:Landroidx/compose/foundation/layout/AndroidWindowInsets;
 
     .line 53
-    const-string v6, "statusBars"
+    const-string/jumbo v6, "statusBars"
 
     .line 55
     const/4 v8, 0x1
 
-    .line 57
+    .line 58
     invoke-static {v8, v6}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$systemInsets(ILjava/lang/String;)Landroidx/compose/foundation/layout/AndroidWindowInsets;
 
-    .line 58
+    .line 59
     move-result-object v6
-
-    .line 61
-    iput-object v6, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->statusBars:Landroidx/compose/foundation/layout/AndroidWindowInsets;
 
     .line 62
-    const-string v6, "systemBars"
+    iput-object v6, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->statusBars:Landroidx/compose/foundation/layout/AndroidWindowInsets;
 
-    .line 64
+    .line 63
+    const-string/jumbo v6, "systemBars"
+
+    .line 65
     const/4 v9, 0x7
 
-    .line 66
+    .line 68
     invoke-static {v9, v6}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$systemInsets(ILjava/lang/String;)Landroidx/compose/foundation/layout/AndroidWindowInsets;
 
-    .line 67
+    .line 69
     move-result-object v6
 
-    .line 70
+    .line 72
     iput-object v6, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->systemBars:Landroidx/compose/foundation/layout/AndroidWindowInsets;
 
-    .line 71
+    .line 73
     const/16 v10, 0x10
 
-    .line 73
-    const-string v11, "systemGestures"
-
     .line 75
-    invoke-static {v10, v11}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$systemInsets(ILjava/lang/String;)Landroidx/compose/foundation/layout/AndroidWindowInsets;
+    const-string/jumbo v11, "systemGestures"
 
     .line 77
-    move-result-object v10
+    invoke-static {v10, v11}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$systemInsets(ILjava/lang/String;)Landroidx/compose/foundation/layout/AndroidWindowInsets;
 
     .line 80
-    iput-object v10, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->systemGestures:Landroidx/compose/foundation/layout/AndroidWindowInsets;
-
-    .line 81
-    const-string v11, "tappableElement"
+    move-result-object v10
 
     .line 83
+    iput-object v10, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->systemGestures:Landroidx/compose/foundation/layout/AndroidWindowInsets;
+
+    .line 84
+    const-string/jumbo v11, "tappableElement"
+
+    .line 86
     const/16 v12, 0x40
 
-    .line 85
+    .line 89
     invoke-static {v12, v11}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$systemInsets(ILjava/lang/String;)Landroidx/compose/foundation/layout/AndroidWindowInsets;
 
-    .line 87
+    .line 91
     move-result-object v11
 
-    .line 90
+    .line 94
     iput-object v11, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->tappableElement:Landroidx/compose/foundation/layout/AndroidWindowInsets;
 
-    .line 91
+    .line 95
     new-instance v13, Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 93
+    .line 97
     new-instance v14, Landroidx/compose/foundation/layout/InsetsValues;
 
-    .line 95
+    .line 99
     const/4 v15, 0x0
 
-    .line 97
+    .line 101
     invoke-direct {v14, v15, v15, v15, v15}, Landroidx/compose/foundation/layout/InsetsValues;-><init>(IIII)V
 
-    .line 98
+    .line 102
     const-string/jumbo v15, "waterfall"
 
-    .line 101
+    .line 105
     invoke-direct {v13, v14, v15}, Landroidx/compose/foundation/layout/ValueInsets;-><init>(Landroidx/compose/foundation/layout/InsetsValues;Ljava/lang/String;)V
 
-    .line 104
+    .line 108
     iput-object v13, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->waterfall:Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 107
+    .line 111
     new-instance v14, Landroidx/compose/foundation/layout/UnionInsets;
 
-    .line 109
+    .line 113
     invoke-direct {v14, v6, v3}, Landroidx/compose/foundation/layout/UnionInsets;-><init>(Landroidx/compose/foundation/layout/WindowInsets;Landroidx/compose/foundation/layout/WindowInsets;)V
 
-    .line 111
+    .line 115
     new-instance v3, Landroidx/compose/foundation/layout/UnionInsets;
 
-    .line 114
+    .line 118
     invoke-direct {v3, v14, v1}, Landroidx/compose/foundation/layout/UnionInsets;-><init>(Landroidx/compose/foundation/layout/WindowInsets;Landroidx/compose/foundation/layout/WindowInsets;)V
 
-    .line 116
+    .line 120
     iput-object v3, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->safeDrawing:Landroidx/compose/foundation/layout/UnionInsets;
 
-    .line 119
+    .line 123
     new-instance v1, Landroidx/compose/foundation/layout/UnionInsets;
 
-    .line 121
+    .line 125
     invoke-direct {v1, v11, v5}, Landroidx/compose/foundation/layout/UnionInsets;-><init>(Landroidx/compose/foundation/layout/WindowInsets;Landroidx/compose/foundation/layout/WindowInsets;)V
 
-    .line 123
+    .line 127
     new-instance v3, Landroidx/compose/foundation/layout/UnionInsets;
 
-    .line 126
+    .line 130
     invoke-direct {v3, v1, v10}, Landroidx/compose/foundation/layout/UnionInsets;-><init>(Landroidx/compose/foundation/layout/WindowInsets;Landroidx/compose/foundation/layout/WindowInsets;)V
 
-    .line 128
+    .line 132
     new-instance v1, Landroidx/compose/foundation/layout/UnionInsets;
 
-    .line 131
+    .line 135
     invoke-direct {v1, v3, v13}, Landroidx/compose/foundation/layout/UnionInsets;-><init>(Landroidx/compose/foundation/layout/WindowInsets;Landroidx/compose/foundation/layout/WindowInsets;)V
 
-    .line 133
+    .line 137
     const-string v1, "captionBarIgnoringVisibility"
 
-    .line 136
+    .line 140
     invoke-static {v2, v1}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$valueInsetsIgnoringVisibility(ILjava/lang/String;)Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 138
+    .line 142
     move-result-object v1
 
-    .line 141
+    .line 145
     iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->captionBarIgnoringVisibility:Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 142
+    .line 146
     const-string v1, "navigationBarsIgnoringVisibility"
 
-    .line 144
+    .line 148
     invoke-static {v7, v1}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$valueInsetsIgnoringVisibility(ILjava/lang/String;)Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 146
+    .line 150
     move-result-object v1
 
-    .line 149
+    .line 153
     iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->navigationBarsIgnoringVisibility:Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 150
-    const-string v1, "statusBarsIgnoringVisibility"
+    .line 154
+    const-string/jumbo v1, "statusBarsIgnoringVisibility"
 
-    .line 152
+    .line 156
     invoke-static {v8, v1}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$valueInsetsIgnoringVisibility(ILjava/lang/String;)Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 154
+    .line 159
     move-result-object v1
-
-    .line 157
-    iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->statusBarsIgnoringVisibility:Landroidx/compose/foundation/layout/ValueInsets;
-
-    .line 158
-    const-string v1, "systemBarsIgnoringVisibility"
-
-    .line 160
-    invoke-static {v9, v1}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$valueInsetsIgnoringVisibility(ILjava/lang/String;)Landroidx/compose/foundation/layout/ValueInsets;
 
     .line 162
-    move-result-object v1
+    iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->statusBarsIgnoringVisibility:Landroidx/compose/foundation/layout/ValueInsets;
+
+    .line 163
+    const-string/jumbo v1, "systemBarsIgnoringVisibility"
 
     .line 165
-    iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->systemBarsIgnoringVisibility:Landroidx/compose/foundation/layout/ValueInsets;
-
-    .line 166
-    const-string v1, "tappableElementIgnoringVisibility"
+    invoke-static {v9, v1}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$valueInsetsIgnoringVisibility(ILjava/lang/String;)Landroidx/compose/foundation/layout/ValueInsets;
 
     .line 168
-    invoke-static {v12, v1}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$valueInsetsIgnoringVisibility(ILjava/lang/String;)Landroidx/compose/foundation/layout/ValueInsets;
-
-    .line 170
     move-result-object v1
 
-    .line 173
-    iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->tappableElementIgnoringVisibility:Landroidx/compose/foundation/layout/ValueInsets;
+    .line 171
+    iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->systemBarsIgnoringVisibility:Landroidx/compose/foundation/layout/ValueInsets;
+
+    .line 172
+    const-string/jumbo v1, "tappableElementIgnoringVisibility"
 
     .line 174
-    const-string v1, "imeAnimationTarget"
+    invoke-static {v12, v1}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$valueInsetsIgnoringVisibility(ILjava/lang/String;)Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 176
-    invoke-static {v4, v1}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$valueInsetsIgnoringVisibility(ILjava/lang/String;)Landroidx/compose/foundation/layout/ValueInsets;
-
-    .line 178
+    .line 177
     move-result-object v1
+
+    .line 180
+    iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->tappableElementIgnoringVisibility:Landroidx/compose/foundation/layout/ValueInsets;
 
     .line 181
-    iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->imeAnimationTarget:Landroidx/compose/foundation/layout/ValueInsets;
+    const-string v1, "imeAnimationTarget"
 
-    .line 182
-    const-string v1, "imeAnimationSource"
-
-    .line 184
+    .line 183
     invoke-static {v4, v1}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$valueInsetsIgnoringVisibility(ILjava/lang/String;)Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 186
+    .line 185
     move-result-object v1
+
+    .line 188
+    iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->imeAnimationTarget:Landroidx/compose/foundation/layout/ValueInsets;
 
     .line 189
-    iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->imeAnimationSource:Landroidx/compose/foundation/layout/ValueInsets;
+    const-string v1, "imeAnimationSource"
 
-    .line 190
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    .line 191
+    invoke-static {v4, v1}, Landroidx/compose/foundation/layout/WindowInsetsHolder$Companion;->access$valueInsetsIgnoringVisibility(ILjava/lang/String;)Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 192
+    .line 193
     move-result-object v1
 
-    .line 195
-    instance-of v2, v1, Landroid/view/View;
-
     .line 196
-    const/4 v3, 0x0
+    iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->imeAnimationSource:Landroidx/compose/foundation/layout/ValueInsets;
 
-    .line 198
-    if-eqz v2, :cond_0
+    .line 197
+    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     .line 199
-    check-cast v1, Landroid/view/View;
+    move-result-object v1
 
-    .line 201
-    goto :goto_0
+    .line 202
+    instance-of v2, v1, Landroid/view/View;
 
     .line 203
+    const/4 v3, 0x0
+
+    .line 205
+    if-eqz v2, :cond_0
+
+    .line 206
+    check-cast v1, Landroid/view/View;
+
+    .line 208
+    goto :goto_0
+
+    .line 210
     :cond_0
     move-object v1, v3
 
-    .line 204
+    .line 211
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 205
-    const v2, 0x7f0b01f7    # @id/consume_window_insets_tag
-
-    .line 207
-    invoke-virtual {v1, v2}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    .line 210
-    move-result-object v1
-
-    .line 213
-    goto :goto_1
+    .line 212
+    const v2, 0x7f0a0202    # @id/consume_window_insets_tag
 
     .line 214
+    invoke-virtual {v1, v2}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    .line 217
+    move-result-object v1
+
+    .line 220
+    goto :goto_1
+
+    .line 221
     :cond_1
     move-object v1, v3
 
-    .line 215
+    .line 222
     :goto_1
     instance-of v2, v1, Ljava/lang/Boolean;
 
-    .line 216
+    .line 223
     if-eqz v2, :cond_2
 
-    .line 218
+    .line 225
     move-object v3, v1
 
-    .line 220
+    .line 227
     check-cast v3, Ljava/lang/Boolean;
 
-    .line 221
+    .line 228
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 223
+    .line 230
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 225
+    .line 232
     move-result v8
 
-    .line 228
+    .line 235
     :cond_3
     iput-boolean v8, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->consumes:Z
 
-    .line 229
+    .line 236
     new-instance v1, Landroidx/compose/foundation/layout/InsetsListener;
 
-    .line 231
+    .line 238
     invoke-direct {v1, v0}, Landroidx/compose/foundation/layout/InsetsListener;-><init>(Landroidx/compose/foundation/layout/WindowInsetsHolder;)V
 
-    .line 233
+    .line 240
     iput-object v1, v0, Landroidx/compose/foundation/layout/WindowInsetsHolder;->insetsListener:Landroidx/compose/foundation/layout/InsetsListener;
 
-    .line 236
+    .line 243
     return-void
-    .line 238
+    .line 245
 .end method
 
 .method public static update$default(Landroidx/compose/foundation/layout/WindowInsetsHolder;Landroidx/core/view/WindowInsetsCompat;)V

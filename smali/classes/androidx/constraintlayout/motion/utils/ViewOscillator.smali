@@ -1,6 +1,6 @@
 .class public abstract Landroidx/constraintlayout/motion/utils/ViewOscillator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -177,434 +177,434 @@
 
     .line 69
     :sswitch_2
-    const-string v11, "transitionPathRotate"
+    const-string/jumbo v11, "transitionPathRotate"
 
     .line 71
     invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 73
+    .line 74
     move-result p0
 
-    .line 76
+    .line 77
     if-nez p0, :cond_3
 
-    .line 77
+    .line 78
     goto/16 :goto_0
 
-    .line 79
+    .line 80
     :cond_3
     const/16 v10, 0xb
 
-    .line 81
+    .line 82
     goto/16 :goto_0
 
-    .line 83
+    .line 84
     :sswitch_3
     const-string v11, "elevation"
 
-    .line 85
+    .line 86
     invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 87
+    .line 88
     move-result p0
 
-    .line 90
+    .line 91
     if-nez p0, :cond_4
 
-    .line 91
+    .line 92
     goto/16 :goto_0
 
-    .line 93
+    .line 94
     :cond_4
     const/16 v10, 0xa
 
-    .line 95
+    .line 96
     goto/16 :goto_0
 
-    .line 97
+    .line 98
     :sswitch_4
     const-string v11, "rotation"
 
-    .line 99
+    .line 100
     invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 101
+    .line 102
     move-result p0
 
-    .line 104
+    .line 105
     if-nez p0, :cond_5
 
-    .line 105
+    .line 106
     goto/16 :goto_0
 
-    .line 107
+    .line 108
     :cond_5
     move v10, v0
 
-    .line 109
+    .line 110
     goto/16 :goto_0
 
-    .line 110
+    .line 111
     :sswitch_5
     const-string/jumbo v11, "waveVariesBy"
 
-    .line 112
+    .line 113
     invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 115
+    .line 116
     move-result p0
 
-    .line 118
+    .line 119
     if-nez p0, :cond_6
 
-    .line 119
+    .line 120
     goto/16 :goto_0
 
-    .line 121
+    .line 122
     :cond_6
     move v10, v1
 
-    .line 123
+    .line 124
     goto/16 :goto_0
 
-    .line 124
+    .line 125
     :sswitch_6
     const-string v11, "scaleY"
 
-    .line 126
+    .line 127
     invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 128
+    .line 129
     move-result p0
 
-    .line 131
+    .line 132
     if-nez p0, :cond_7
 
-    .line 132
+    .line 133
     goto/16 :goto_0
 
-    .line 134
+    .line 135
     :cond_7
     move v10, v2
 
-    .line 136
+    .line 137
     goto :goto_0
 
-    .line 137
+    .line 138
     :sswitch_7
     const-string v11, "scaleX"
 
-    .line 138
+    .line 139
     invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 140
+    .line 141
     move-result p0
 
-    .line 143
+    .line 144
     if-nez p0, :cond_8
 
-    .line 144
+    .line 145
     goto :goto_0
 
-    .line 146
+    .line 147
     :cond_8
     move v10, v3
 
-    .line 147
+    .line 148
     goto :goto_0
 
-    .line 148
+    .line 149
     :sswitch_8
     const-string v11, "progress"
 
-    .line 149
+    .line 150
     invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 151
+    .line 152
     move-result p0
 
-    .line 154
+    .line 155
     if-nez p0, :cond_9
 
-    .line 155
+    .line 156
     goto :goto_0
 
-    .line 157
+    .line 158
     :cond_9
     move v10, v4
 
-    .line 158
-    goto :goto_0
-
     .line 159
-    :sswitch_9
-    const-string v11, "translationZ"
+    goto :goto_0
 
     .line 160
+    :sswitch_9
+    const-string/jumbo v11, "translationZ"
+
+    .line 161
     invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 162
+    .line 164
     move-result p0
 
-    .line 165
+    .line 167
     if-nez p0, :cond_a
 
-    .line 166
-    goto :goto_0
-
     .line 168
-    :cond_a
-    move v10, v5
-
-    .line 169
     goto :goto_0
 
     .line 170
-    :sswitch_a
-    const-string v11, "translationY"
+    :cond_a
+    move v10, v5
 
     .line 171
-    invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 173
-    move-result p0
-
-    .line 176
-    if-nez p0, :cond_b
-
-    .line 177
     goto :goto_0
 
+    .line 172
+    :sswitch_a
+    const-string/jumbo v11, "translationY"
+
+    .line 173
+    invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 176
+    move-result p0
+
     .line 179
-    :cond_b
-    move v10, v6
+    if-nez p0, :cond_b
 
     .line 180
     goto :goto_0
 
-    .line 181
-    :sswitch_b
-    const-string v11, "translationX"
-
     .line 182
-    invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_b
+    move v10, v6
 
-    .line 184
-    move-result p0
-
-    .line 187
-    if-nez p0, :cond_c
-
-    .line 188
+    .line 183
     goto :goto_0
 
-    .line 190
+    .line 184
+    :sswitch_b
+    const-string/jumbo v11, "translationX"
+
+    .line 185
+    invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 188
+    move-result p0
+
+    .line 191
+    if-nez p0, :cond_c
+
+    .line 192
+    goto :goto_0
+
+    .line 194
     :cond_c
     move v10, v7
 
-    .line 191
+    .line 195
     goto :goto_0
 
-    .line 192
+    .line 196
     :sswitch_c
     const-string v11, "rotationY"
 
-    .line 193
+    .line 197
     invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 195
+    .line 199
     move-result p0
 
-    .line 198
+    .line 202
     if-nez p0, :cond_d
 
-    .line 199
+    .line 203
     goto :goto_0
 
-    .line 201
+    .line 205
     :cond_d
     move v10, v8
 
-    .line 202
+    .line 206
     goto :goto_0
 
-    .line 203
+    .line 207
     :sswitch_d
     const-string v11, "rotationX"
 
-    .line 204
+    .line 208
     invoke-virtual {p0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 206
+    .line 210
     move-result p0
 
-    .line 209
+    .line 213
     if-nez p0, :cond_e
 
-    .line 210
+    .line 214
     goto :goto_0
 
-    .line 212
+    .line 216
     :cond_e
     move v10, v9
 
-    .line 213
+    .line 217
     :goto_0
     packed-switch v10, :pswitch_data_0
 
-    .line 214
-    const/4 p0, 0x0
-
-    .line 217
-    return-object p0
-
     .line 218
-    :pswitch_0
-    new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
-
-    .line 219
-    invoke-direct {p0, v9}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
+    const/4 p0, 0x0
 
     .line 221
     return-object p0
 
-    .line 224
+    .line 222
+    :pswitch_0
+    new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
+
+    .line 223
+    invoke-direct {p0, v9}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
+
+    .line 225
+    return-object p0
+
+    .line 228
     :pswitch_1
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 225
+    .line 229
     invoke-direct {p0, v9}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 227
+    .line 231
     return-object p0
 
-    .line 230
+    .line 234
     :pswitch_2
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$PathRotateSet;
 
-    .line 231
+    .line 235
     invoke-direct {p0}, Landroidx/constraintlayout/motion/utils/ViewOscillator;-><init>()V
 
-    .line 233
+    .line 237
     return-object p0
 
-    .line 236
+    .line 240
     :pswitch_3
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 237
+    .line 241
     invoke-direct {p0, v8}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 239
+    .line 243
     return-object p0
 
-    .line 242
+    .line 246
     :pswitch_4
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 243
+    .line 247
     invoke-direct {p0, v7}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 245
+    .line 249
     return-object p0
 
-    .line 248
+    .line 252
     :pswitch_5
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 249
+    .line 253
     invoke-direct {p0, v9}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 251
+    .line 255
     return-object p0
 
-    .line 254
+    .line 258
     :pswitch_6
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 255
+    .line 259
     invoke-direct {p0, v3}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 257
+    .line 261
     return-object p0
 
-    .line 260
+    .line 264
     :pswitch_7
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 261
+    .line 265
     invoke-direct {p0, v4}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 263
+    .line 267
     return-object p0
 
-    .line 266
+    .line 270
     :pswitch_8
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$ProgressSet;
 
-    .line 267
+    .line 271
     invoke-direct {p0}, Landroidx/constraintlayout/motion/utils/ViewOscillator;-><init>()V
 
-    .line 269
+    .line 273
     iput-boolean v9, p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$ProgressSet;->mNoMethod:Z
 
-    .line 272
+    .line 276
     return-object p0
 
-    .line 274
+    .line 278
     :pswitch_9
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 275
+    .line 279
     invoke-direct {p0, v0}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 277
+    .line 281
     return-object p0
 
-    .line 280
+    .line 284
     :pswitch_a
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 281
+    .line 285
     invoke-direct {p0, v1}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 283
+    .line 287
     return-object p0
 
-    .line 286
+    .line 290
     :pswitch_b
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 287
+    .line 291
     invoke-direct {p0, v2}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 289
+    .line 293
     return-object p0
 
-    .line 292
+    .line 296
     :pswitch_c
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 293
+    .line 297
     invoke-direct {p0, v5}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 295
+    .line 299
     return-object p0
 
-    .line 298
+    .line 302
     :pswitch_d
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
-    .line 299
+    .line 303
     invoke-direct {p0, v6}, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;-><init>(I)V
 
-    .line 301
+    .line 305
     return-object p0
 
-    .line 304
+    .line 308
     nop
 
-    .line 305
+    .line 309
     :sswitch_data_0
     .sparse-switch
         -0x4a771f66 -> :sswitch_d
@@ -623,7 +623,7 @@
         0x94e04ec -> :sswitch_0
     .end sparse-switch
 
-    .line 306
+    .line 310
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_d
@@ -641,7 +641,6 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 364
 .end method
 
 

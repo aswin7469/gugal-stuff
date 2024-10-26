@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/user/CreateUserActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -270,7 +270,7 @@
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setShowWhenLocked(Z)V
 
     .line 6
-    const v1, 0x7f0e0032    # @layout/activity_create_new_user 'res/layout/activity_create_new_user.xml'
+    const v1, 0x7f0d0032    # @layout/activity_create_new_user 'res/layout/activity_create_new_user.xml'
 
     .line 9
     invoke-virtual {p0, v1}, Landroid/app/Activity;->setContentView(I)V
@@ -365,7 +365,7 @@
 
     .line 71
     :cond_1
-    const p1, 0x7f1409ed    # @string/user_new_user_name 'New user'
+    const p1, 0x7f130a76    # @string/user_new_user_name 'New user'
 
     .line 73
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -460,7 +460,7 @@
     move-result-object v8
 
     .line 138
-    const v9, 0x7f0e00ac    # @layout/dialog_with_icon 'res/layout/dialog_with_icon.xml'
+    const v9, 0x7f0d00b5    # @layout/dialog_with_icon 'res/layout/dialog_with_icon.xml'
 
     .line 139
     const/4 v10, 0x0
@@ -472,7 +472,7 @@
     move-result-object v8
 
     .line 146
-    const v9, 0x7f0b0276    # @id/dialog_with_icon_icon
+    const v9, 0x7f0a0282    # @id/dialog_with_icon_icon
 
     .line 147
     invoke-virtual {v8, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -487,7 +487,7 @@
     iput-object v9, v7, Lcom/android/settingslib/utils/CustomDialogHelper;->mDialogIcon:Landroid/widget/ImageView;
 
     .line 156
-    const v9, 0x7f0b0278    # @id/dialog_with_icon_title
+    const v9, 0x7f0a0284    # @id/dialog_with_icon_title
 
     .line 158
     invoke-virtual {v8, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -502,7 +502,7 @@
     iput-object v9, v7, Lcom/android/settingslib/utils/CustomDialogHelper;->mDialogTitle:Landroid/widget/TextView;
 
     .line 167
-    const v9, 0x7f0b0277    # @id/dialog_with_icon_message
+    const v9, 0x7f0a0283    # @id/dialog_with_icon_message
 
     .line 169
     invoke-virtual {v8, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -517,7 +517,7 @@
     iput-object v9, v7, Lcom/android/settingslib/utils/CustomDialogHelper;->mDialogMessage:Landroid/widget/TextView;
 
     .line 178
-    const v9, 0x7f0b0238    # @id/custom_layout
+    const v9, 0x7f0a0243    # @id/custom_layout
 
     .line 180
     invoke-virtual {v8, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -532,7 +532,7 @@
     iput-object v9, v7, Lcom/android/settingslib/utils/CustomDialogHelper;->mCustomLayout:Landroid/widget/LinearLayout;
 
     .line 189
-    const v9, 0x7f0b0195    # @id/button_ok
+    const v9, 0x7f0a019b    # @id/button_ok
 
     .line 191
     invoke-virtual {v8, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -547,7 +547,7 @@
     iput-object v9, v7, Lcom/android/settingslib/utils/CustomDialogHelper;->mPositiveButton:Landroid/widget/Button;
 
     .line 200
-    const v9, 0x7f0b0190    # @id/button_cancel
+    const v9, 0x7f0a0196    # @id/button_cancel
 
     .line 202
     invoke-virtual {v8, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -562,7 +562,7 @@
     iput-object v9, v7, Lcom/android/settingslib/utils/CustomDialogHelper;->mNegativeButton:Landroid/widget/Button;
 
     .line 211
-    const v9, 0x7f0b018e    # @id/button_back
+    const v9, 0x7f0a0194    # @id/button_back
 
     .line 213
     invoke-virtual {v8, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -631,7 +631,7 @@
     iget-object v4, v1, Lcom/android/settingslib/users/CreateUserDialogController;->mActivity:Landroid/app/Activity;
 
     .line 259
-    const v5, 0x7f0e00ca    # @layout/grant_admin_dialog_content 'res/layout/grant_admin_dialog_content.xml'
+    const v5, 0x7f0d00d3    # @layout/grant_admin_dialog_content 'res/layout/grant_admin_dialog_content.xml'
 
     .line 261
     invoke-static {v4, v5, v10}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -655,7 +655,7 @@
     iget-object v4, v1, Lcom/android/settingslib/users/CreateUserDialogController;->mGrantAdminView:Landroid/view/View;
 
     .line 277
-    const v5, 0x7f0b01d0    # @id/choose_admin
+    const v5, 0x7f0a01db    # @id/choose_admin
 
     .line 279
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -691,7 +691,7 @@
     if-eqz v5, :cond_3
 
     .line 304
-    const v5, 0x7f0b0330    # @id/grant_admin_yes
+    const v5, 0x7f0a034e    # @id/grant_admin_yes
 
     .line 306
     invoke-virtual {v4, v5}, Landroid/widget/RadioGroup;->findViewById(I)Landroid/view/View;
@@ -725,7 +725,7 @@
     if-eqz v5, :cond_4
 
     .line 327
-    const v5, 0x7f0b032e    # @id/grant_admin_no
+    const v5, 0x7f0a034c    # @id/grant_admin_no
 
     .line 329
     invoke-virtual {v4, v5}, Landroid/widget/RadioGroup;->findViewById(I)Landroid/view/View;
@@ -745,7 +745,7 @@
     iget-object v4, v1, Lcom/android/settingslib/users/CreateUserDialogController;->mActivity:Landroid/app/Activity;
 
     .line 341
-    const v5, 0x7f0e00b7    # @layout/edit_user_info_dialog_content 'res/layout/edit_user_info_dialog_content.xml'
+    const v5, 0x7f0d00c0    # @layout/edit_user_info_dialog_content 'res/layout/edit_user_info_dialog_content.xml'
 
     .line 343
     invoke-static {v4, v5, v10}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -769,7 +769,7 @@
     iget-object v4, v1, Lcom/android/settingslib/users/CreateUserDialogController;->mEditUserInfoView:Landroid/view/View;
 
     .line 359
-    const v5, 0x7f0b088e    # @id/user_name
+    const v5, 0x7f0a08c1    # @id/user_name
 
     .line 361
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -804,7 +804,7 @@
     iget-object p1, v1, Lcom/android/settingslib/users/CreateUserDialogController;->mEditUserInfoView:Landroid/view/View;
 
     .line 383
-    const v4, 0x7f0b088f    # @id/user_photo
+    const v4, 0x7f0a08c2    # @id/user_photo
 
     .line 385
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -908,7 +908,7 @@
     iget-object p1, v1, Lcom/android/settingslib/users/CreateUserDialogController;->mEditUserInfoView:Landroid/view/View;
 
     .line 456
-    const v4, 0x7f0b0092    # @id/add_a_photo_icon
+    const v4, 0x7f0a0092    # @id/add_a_photo_icon
 
     .line 458
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -974,7 +974,7 @@
     const/4 v5, 0x6
 
     .line 501
-    const v6, 0x7f1406c1    # @string/next 'Next'
+    const v6, 0x7f13071b    # @string/next 'Next'
 
     .line 502
     invoke-virtual {p1, v5, v6, v4}, Lcom/android/settingslib/utils/CustomDialogHelper;->setButton(IILandroid/view/View$OnClickListener;)V
@@ -992,7 +992,7 @@
     const/4 v3, 0x5
 
     .line 515
-    const v5, 0x7f140151    # @string/back 'Back'
+    const v5, 0x7f130157    # @string/back 'Back'
 
     .line 516
     invoke-virtual {p1, v3, v5, v4}, Lcom/android/settingslib/utils/CustomDialogHelper;->setButton(IILandroid/view/View$OnClickListener;)V

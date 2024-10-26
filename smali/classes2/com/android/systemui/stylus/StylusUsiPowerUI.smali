@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/stylus/StylusUsiPowerUI;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -48,7 +48,7 @@
     invoke-virtual {v0}, Lkotlin/jvm/internal/ClassReference;->getSimpleName()Ljava/lang/String;
 
     .line 8
-    const v0, 0x7f14092f    # @string/stylus_battery_low_percentage 'Stylus battery %s'
+    const v0, 0x7f1309ab    # @string/stylus_battery_low_percentage 'Stylus battery %s'
 
     .line 11
     sput v0, Lcom/android/systemui/stylus/StylusUsiPowerUI;->USI_NOTIFICATION_ID:I

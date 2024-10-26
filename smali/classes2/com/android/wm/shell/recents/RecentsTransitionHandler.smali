@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/recents/RecentsTransitionHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
@@ -102,17 +102,14 @@
     new-instance p4, Lcom/android/wm/shell/recents/RecentsTransitionHandler$$ExternalSyntheticLambda0;
 
     .line 47
-    const/4 v0, 0x0
+    invoke-direct {p4, p0, p3, p2}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/recents/RecentsTransitionHandler;Lcom/android/wm/shell/recents/RecentTasksController;Lcom/android/wm/shell/transition/Transitions;)V
 
     .line 49
-    invoke-direct {p4, p0, p3, v0, p2}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$$ExternalSyntheticLambda0;-><init>(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
-
-    .line 50
     invoke-virtual {p1, p4, p0}, Lcom/android/wm/shell/sysui/ShellInit;->addInitCallback(Ljava/lang/Runnable;Ljava/lang/Object;)V
 
-    .line 53
+    .line 52
     return-void
-    .line 56
+    .line 55
 .end method
 
 
@@ -256,7 +253,7 @@
     if-eq v1, p2, :cond_2
 
     .line 49
-    sget-object p2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object p2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 51
     aget-boolean p1, p2, p1
@@ -295,7 +292,7 @@
     const-wide v2, 0x2057e7d96a513a95L    # 7.131862678565032E-153
 
     .line 73
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 78
     :cond_1
@@ -338,7 +335,7 @@
     if-gez v1, :cond_1
 
     .line 13
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 15
     aget-boolean v0, v0, v7
@@ -377,7 +374,7 @@
     move-object/from16 p5, v5
 
     .line 40
-    invoke-static/range {p0 .. p5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {p0 .. p5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 42
     :cond_0
@@ -406,7 +403,7 @@
     if-nez v0, :cond_2
 
     .line 57
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 59
     aget-boolean v0, v0, v7
@@ -460,7 +457,7 @@
     move-object/from16 p5, v0
 
     .line 94
-    invoke-static/range {p0 .. p5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {p0 .. p5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 96
     goto/16 :goto_20
@@ -479,7 +476,7 @@
     if-ne v0, v1, :cond_4
 
     .line 107
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 109
     aget-boolean v0, v0, v7
@@ -533,7 +530,7 @@
     move-object/from16 p5, v0
 
     .line 144
-    invoke-static/range {p0 .. p5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {p0 .. p5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 146
     :cond_3
@@ -576,7 +573,7 @@
 
     .line 170
     :cond_6
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 172
     aget-boolean v0, v0, v7
@@ -615,7 +612,7 @@
     const/4 v13, 0x1
 
     .line 198
-    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 199
     :cond_7
@@ -1192,7 +1189,7 @@
     new-instance v1, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda0;
 
     .line 539
-    const/4 v2, 0x1
+    const/4 v2, 0x2
 
     .line 541
     invoke-direct {v1, v8, v2}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;I)V
@@ -1342,7 +1339,7 @@
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 637
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 640
     const/4 v3, 0x1
@@ -1390,7 +1387,7 @@
     const/16 v19, 0x1
 
     .line 671
-    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 673
     :cond_24
@@ -1466,7 +1463,7 @@
     check-cast v1, Lcom/android/wm/shell/recents/RecentsTransitionHandler$TaskState;
 
     .line 718
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 720
     const/4 v3, 0x1
@@ -1531,7 +1528,7 @@
     const/16 v21, 0x4
 
     .line 758
-    invoke-static/range {v18 .. v23}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v18 .. v23}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 760
     move-object/from16 v7, v16
@@ -1795,7 +1792,7 @@
     check-cast v1, Lcom/android/wm/shell/recents/RecentsTransitionHandler$TaskState;
 
     .line 907
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 909
     const/4 v3, 0x1
@@ -1854,7 +1851,7 @@
     const/16 v22, 0x4
 
     .line 943
-    invoke-static/range {v19 .. v24}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v19 .. v24}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 945
     :cond_31
@@ -2037,7 +2034,7 @@
 
     .line 1064
     :goto_16
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 1067
     const/4 v2, 0x1
@@ -2085,7 +2082,7 @@
     const/16 v25, 0xd
 
     .line 1098
-    invoke-static/range {v22 .. v27}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v22 .. v27}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 1100
     :cond_35
@@ -2117,7 +2114,7 @@
     move/from16 v21, v5
 
     .line 1119
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 1121
     const/4 v1, 0x1
@@ -2165,7 +2162,7 @@
     const/16 v25, 0x1
 
     .line 1152
-    invoke-static/range {v22 .. v27}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v22 .. v27}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 1154
     :cond_37
@@ -2245,7 +2242,7 @@
     if-eqz v3, :cond_3a
 
     .line 1201
-    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 1203
     aget-boolean v3, v3, v0
@@ -2284,7 +2281,7 @@
     const/16 v21, 0x1
 
     .line 1229
-    invoke-static/range {v18 .. v23}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v18 .. v23}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 1231
     :cond_3a
@@ -2479,7 +2476,7 @@
 
     .line 1361
     :try_start_0
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 1363
     const/4 v1, 0x1
@@ -2521,7 +2518,7 @@
     const/4 v13, 0x1
 
     .line 1390
-    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 1391
     goto :goto_1b
@@ -2573,7 +2570,7 @@
 
     .line 1415
     :goto_1f
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 1416
     const/4 v1, 0x1
@@ -2615,7 +2612,7 @@
     const/4 v11, 0x1
 
     .line 1443
-    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 1444
     :cond_42
@@ -2714,7 +2711,7 @@
     if-gez v1, :cond_1
 
     .line 14
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 16
     aget-boolean v0, v0, v9
@@ -2753,7 +2750,7 @@
     move-object/from16 p5, v5
 
     .line 41
-    invoke-static/range {p0 .. p5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {p0 .. p5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 43
     :cond_0
@@ -2788,7 +2785,7 @@
     invoke-virtual {v15}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 61
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 64
     aget-boolean v0, v0, v9
@@ -2827,7 +2824,7 @@
     const/16 v19, 0x1
 
     .line 90
-    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 92
     :cond_2
@@ -2856,7 +2853,7 @@
     move-object v3, v15
 
     .line 107
-    goto/16 :goto_10
+    goto/16 :goto_e
 
     .line 108
     :cond_4
@@ -3023,7 +3020,7 @@
     move-object v2, v14
 
     .line 205
-    goto/16 :goto_15
+    goto/16 :goto_13
 
     .line 206
     :cond_a
@@ -3185,10 +3182,10 @@
     move-result-object v0
 
     .line 315
-    new-instance v1, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda9;
+    new-instance v1, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda8;
 
     .line 316
-    invoke-direct {v1, v6}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda9;-><init>(Landroid/window/TransitionInfo;)V
+    invoke-direct {v1, v6}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda8;-><init>(Landroid/window/TransitionInfo;)V
 
     .line 318
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
@@ -3203,10 +3200,10 @@
     move-result-object v0
 
     .line 328
-    new-instance v1, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda10;
+    new-instance v1, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda9;
 
     .line 329
-    invoke-direct {v1, v6}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda10;-><init>(Landroid/window/TransitionInfo;)V
+    invoke-direct {v1, v6}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda9;-><init>(Landroid/window/TransitionInfo;)V
 
     .line 331
     invoke-interface {v0, v1}, Ljava/util/stream/IntStream;->mapToObj(Ljava/util/function/IntFunction;)Ljava/util/stream/Stream;
@@ -3215,10 +3212,10 @@
     move-result-object v0
 
     .line 337
-    new-instance v1, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda11;
+    new-instance v1, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda10;
 
     .line 338
-    invoke-direct {v1, v15, v7, v2}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda11;-><init>(Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;Landroid/view/SurfaceControl$Transaction;I)V
+    invoke-direct {v1, v15, v7, v2}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda10;-><init>(Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;Landroid/view/SurfaceControl$Transaction;I)V
 
     .line 340
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
@@ -3503,7 +3500,7 @@
     if-ne v1, v2, :cond_11
 
     .line 514
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 516
     aget-boolean v0, v0, v9
@@ -3542,7 +3539,7 @@
     const/16 v27, 0x1
 
     .line 542
-    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 544
     :cond_10
@@ -3559,7 +3556,7 @@
     sub-int v1, v17, v21
 
     .line 551
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 553
     aget-boolean v2, v2, v9
@@ -3610,7 +3607,7 @@
     const/16 v27, 0x5
 
     .line 586
-    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 588
     goto :goto_5
@@ -3681,7 +3678,7 @@
     sub-int v2, v23, v21
 
     .line 628
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 630
     const/4 v3, 0x1
@@ -3720,7 +3717,7 @@
     const/16 v27, 0x1
 
     .line 655
-    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 657
     :cond_15
@@ -3769,7 +3766,7 @@
     if-eqz v2, :cond_1a
 
     .line 683
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 685
     const/4 v3, 0x1
@@ -3811,7 +3808,7 @@
     const/16 v27, 0x1
 
     .line 712
-    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 714
     :cond_19
@@ -3881,7 +3878,7 @@
     sub-int v0, v17, v21
 
     .line 755
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 757
     const/4 v3, 0x1
@@ -3932,7 +3929,7 @@
     const/16 v27, 0x5
 
     .line 789
-    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 791
     :cond_1c
@@ -3982,7 +3979,7 @@
     sub-int v0, v16, v21
 
     .line 823
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 825
     const/4 v3, 0x1
@@ -4033,7 +4030,7 @@
     const/16 v27, 0x5
 
     .line 857
-    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 859
     :cond_1e
@@ -4068,7 +4065,7 @@
     const/4 v9, 0x0
 
     .line 882
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 883
     const/4 v2, 0x1
@@ -4110,7 +4107,7 @@
     const/16 v27, 0x1
 
     .line 910
-    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 912
     goto/16 :goto_7
@@ -4169,7 +4166,7 @@
     move-object v9, v5
 
     .line 944
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 945
     const/4 v2, 0x1
@@ -4222,7 +4219,7 @@
     const/16 v27, 0x1
 
     .line 977
-    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v24 .. v29}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 979
     :cond_23
@@ -4264,7 +4261,7 @@
     move-object v9, v5
 
     .line 996
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 997
     const/4 v1, 0x1
@@ -4306,7 +4303,7 @@
     const/16 v26, 0x1
 
     .line 1025
-    invoke-static/range {v23 .. v28}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v23 .. v28}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 1027
     :cond_25
@@ -4319,618 +4316,544 @@
     iget-object v0, v0, Lcom/android/wm/shell/recents/RecentsTransitionHandler;->mTransitions:Lcom/android/wm/shell/transition/Transitions;
 
     .line 1035
-    iget-object v1, v15, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mTransition:Landroid/os/IBinder;
-
-    .line 1037
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1039
-    invoke-static {}, Lcom/android/systemui/shared/Flags;->returnAnimationFrameworkLibrary()Z
+    .line 1037
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+
+    .line 1040
+    const/4 v1, 0x1
 
     .line 1042
-    move-result v2
-
-    .line 1045
-    if-nez v2, :cond_27
-
-    .line 1046
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
-
-    .line 1048
-    const/4 v1, 0x1
-
-    .line 1050
     aget-boolean v0, v0, v1
 
-    .line 1051
+    .line 1043
     if-eqz v0, :cond_26
 
-    .line 1053
+    .line 1045
     sget-object v2, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_RECENTS_TRANSITION:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 1055
+    .line 1047
     const-wide v3, -0x569fa30e43c9c278L    # -2.177289612833512E-109
 
-    .line 1057
+    .line 1049
     const/4 v5, 0x0
 
-    .line 1062
+    .line 1054
     const-string v6, "Trying to get a handler for takeover but the flag is disabled"
 
-    .line 1063
+    .line 1055
     const/4 v7, 0x0
 
-    .line 1065
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    .line 1057
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1066
+    .line 1058
     :cond_26
-    const/4 v2, 0x0
-
-    .line 1069
-    goto :goto_a
-
-    .line 1070
-    :cond_27
-    iget-object v0, v0, Lcom/android/wm/shell/transition/Transitions;->mHandlers:Ljava/util/ArrayList;
-
-    .line 1071
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    .line 1073
-    move-result-object v0
-
-    .line 1076
-    :cond_28
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 1077
-    move-result v2
-
-    .line 1080
-    if-eqz v2, :cond_26
-
-    .line 1081
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 1083
-    move-result-object v2
-
-    .line 1086
-    check-cast v2, Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
-
-    .line 1087
-    invoke-interface {v2, v1, v6}, Lcom/android/wm/shell/transition/Transitions$TransitionHandler;->getHandlerForTakeover(Landroid/os/IBinder;Landroid/window/TransitionInfo;)Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
-
-    .line 1089
-    move-result-object v2
-
-    .line 1092
-    if-eqz v2, :cond_28
-
-    .line 1093
-    :goto_a
-    iput-object v2, v15, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mTakeoverHandler:Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
-
-    .line 1095
     new-instance v0, Landroid/os/Bundle;
 
-    .line 1097
+    .line 1061
     const/4 v1, 0x2
 
-    .line 1099
+    .line 1063
     invoke-direct {v0, v1}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 1100
+    .line 1064
     iget-object v1, v15, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->this$0:Lcom/android/wm/shell/recents/RecentsTransitionHandler;
 
-    .line 1103
+    .line 1067
     iget-object v1, v1, Lcom/android/wm/shell/recents/RecentsTransitionHandler;->mRecentTasksController:Lcom/android/wm/shell/recents/RecentTasksController;
 
-    .line 1105
+    .line 1069
     const/4 v2, -0x1
 
-    .line 1107
-    if-ne v8, v2, :cond_29
+    .line 1071
+    if-ne v8, v2, :cond_27
 
-    .line 1108
+    .line 1072
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1110
+    .line 1074
     const/4 v10, 0x0
 
-    .line 1113
-    goto :goto_b
+    .line 1077
+    goto :goto_a
 
-    .line 1114
-    :cond_29
+    .line 1078
+    :cond_27
     iget-object v1, v1, Lcom/android/wm/shell/recents/RecentTasksController;->mTaskSplitBoundsMap:Ljava/util/Map;
 
-    .line 1115
+    .line 1079
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 1117
+    .line 1081
     move-result-object v2
 
-    .line 1120
+    .line 1084
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1121
+    .line 1085
     move-result-object v1
 
-    .line 1124
+    .line 1088
     move-object v10, v1
 
-    .line 1125
+    .line 1089
     check-cast v10, Lcom/android/wm/shell/util/SplitBounds;
 
-    .line 1126
-    :goto_b
+    .line 1090
+    :goto_a
     const-string v1, "key_SplitBounds"
 
-    .line 1128
+    .line 1092
     invoke-virtual {v0, v1, v10}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 1130
-    iget-object v1, v15, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mTakeoverHandler:Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
+    .line 1094
+    const-string v1, "extra_shell_can_hand_off_animation"
 
-    .line 1133
-    if-eqz v1, :cond_2a
+    .line 1097
+    const/4 v2, 0x0
 
-    .line 1135
-    const/4 v1, 0x1
+    .line 1099
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1137
-    goto :goto_c
-
-    .line 1138
-    :cond_2a
-    const/4 v1, 0x0
-
-    .line 1139
-    :goto_c
-    const-string v2, "extra_shell_can_hand_off_animation"
-
-    .line 1140
-    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
-
-    .line 1142
+    .line 1100
     :try_start_0
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
-    .line 1145
+    .line 1103
     const/4 v2, 0x1
 
-    .line 1147
+    .line 1105
     aget-boolean v1, v1, v2
 
-    .line 1148
-    if-eqz v1, :cond_2b
+    .line 1106
+    if-eqz v1, :cond_28
 
-    .line 1150
+    .line 1108
     iget v1, v15, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mInstanceId:I
 
-    .line 1152
+    .line 1110
     int-to-long v1, v1
 
-    .line 1154
+    .line 1112
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
-    .line 1155
+    .line 1113
     move-result v3
 
-    .line 1158
+    .line 1116
     int-to-long v3, v3
 
-    .line 1159
+    .line 1117
     sget-object v21, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_RECENTS_TRANSITION:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 1160
+    .line 1118
     const-string v25, "[%d] RecentsController.start: calling onAnimationStart with %d apps"
 
-    .line 1162
+    .line 1120
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 1164
+    .line 1122
     move-result-object v1
 
-    .line 1167
+    .line 1125
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 1168
+    .line 1126
     move-result-object v2
 
-    .line 1171
+    .line 1129
     filled-new-array {v1, v2}, [Ljava/lang/Object;
 
-    .line 1172
+    .line 1130
     move-result-object v26
 
-    .line 1175
+    .line 1133
     const-wide v22, 0x405c0a72f3f533baL    # 112.16326617188943
 
-    .line 1176
+    .line 1134
     const/16 v24, 0x5
 
-    .line 1181
-    invoke-static/range {v21 .. v26}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    .line 1139
+    invoke-static/range {v21 .. v26}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1183
-    goto :goto_d
+    .line 1141
+    goto :goto_b
 
-    .line 1186
+    .line 1144
     :catch_0
     move-exception v0
 
-    .line 1187
+    .line 1145
     move-object v1, v13
 
-    .line 1188
+    .line 1146
     move-object v2, v14
 
-    .line 1189
+    .line 1147
     move-object v3, v15
 
-    .line 1190
-    goto :goto_f
+    .line 1148
+    goto :goto_d
 
-    .line 1191
-    :cond_2b
-    :goto_d
+    .line 1149
+    :cond_28
+    :goto_b
     iget-object v10, v15, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mListener:Landroid/view/IRecentsAnimationRunner;
 
-    .line 1192
+    .line 1150
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
-    .line 1194
+    .line 1152
     move-result v1
 
-    .line 1197
+    .line 1155
     new-array v1, v1, [Landroid/view/RemoteAnimationTarget;
 
-    .line 1198
+    .line 1156
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 1200
+    .line 1158
     move-result-object v1
 
-    .line 1203
+    .line 1161
     check-cast v1, [Landroid/view/RemoteAnimationTarget;
 
-    .line 1204
+    .line 1162
     invoke-virtual {v12}, Ljava/util/ArrayList;->size()I
 
-    .line 1206
+    .line 1164
     move-result v2
 
-    .line 1209
+    .line 1167
     new-array v2, v2, [Landroid/view/RemoteAnimationTarget;
 
-    .line 1210
+    .line 1168
     invoke-virtual {v12, v2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 1212
+    .line 1170
     move-result-object v2
 
-    .line 1215
+    .line 1173
     check-cast v2, [Landroid/view/RemoteAnimationTarget;
 
-    .line 1216
+    .line 1174
     new-instance v3, Landroid/graphics/Rect;
 
-    .line 1218
+    .line 1176
     const/4 v4, 0x0
 
-    .line 1220
+    .line 1178
     invoke-direct {v3, v4, v4, v4, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 1221
+    .line 1179
     new-instance v4, Landroid/graphics/Rect;
 
-    .line 1224
+    .line 1182
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1226
+    .line 1184
     move-object v11, v15
 
-    .line 1229
+    .line 1187
     move-object v12, v1
 
-    .line 1230
+    .line 1188
     move-object v1, v13
 
-    .line 1231
+    .line 1189
     move-object v13, v2
 
-    .line 1232
+    .line 1190
     move-object v2, v14
 
-    .line 1233
+    .line 1191
     move-object v14, v3
 
-    .line 1234
+    .line 1192
     move-object v3, v15
 
-    .line 1235
+    .line 1193
     move-object v15, v4
 
-    .line 1236
+    .line 1194
     move-object/from16 v16, v0
 
-    .line 1237
+    .line 1195
     :try_start_1
     invoke-interface/range {v10 .. v16}, Landroid/view/IRecentsAnimationRunner;->onAnimationStart(Landroid/view/IRecentsAnimationController;[Landroid/view/RemoteAnimationTarget;[Landroid/view/RemoteAnimationTarget;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/os/Bundle;)V
 
-    .line 1239
-    const/4 v4, 0x0
+    .line 1197
+    const/4 v0, 0x0
 
-    .line 1242
-    :goto_e
-    iget-object v0, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->this$0:Lcom/android/wm/shell/recents/RecentsTransitionHandler;
+    .line 1200
+    :goto_c
+    iget-object v4, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->this$0:Lcom/android/wm/shell/recents/RecentsTransitionHandler;
 
-    .line 1243
-    iget-object v0, v0, Lcom/android/wm/shell/recents/RecentsTransitionHandler;->mStateListeners:Ljava/util/ArrayList;
+    .line 1201
+    iget-object v4, v4, Lcom/android/wm/shell/recents/RecentsTransitionHandler;->mStateListeners:Ljava/util/ArrayList;
 
-    .line 1245
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    .line 1203
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    .line 1247
-    move-result v0
+    .line 1205
+    move-result v4
 
-    .line 1250
-    if-ge v4, v0, :cond_2c
+    .line 1208
+    if-ge v0, v4, :cond_29
 
-    .line 1251
-    iget-object v0, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->this$0:Lcom/android/wm/shell/recents/RecentsTransitionHandler;
+    .line 1209
+    iget-object v4, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->this$0:Lcom/android/wm/shell/recents/RecentsTransitionHandler;
 
-    .line 1253
-    iget-object v0, v0, Lcom/android/wm/shell/recents/RecentsTransitionHandler;->mStateListeners:Ljava/util/ArrayList;
+    .line 1211
+    iget-object v4, v4, Lcom/android/wm/shell/recents/RecentsTransitionHandler;->mStateListeners:Ljava/util/ArrayList;
 
-    .line 1255
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 1213
+    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 1257
-    move-result-object v0
+    .line 1215
+    move-result-object v4
 
-    .line 1260
-    check-cast v0, Lcom/android/wm/shell/recents/RecentsTransitionStateListener;
+    .line 1218
+    check-cast v4, Lcom/android/wm/shell/recents/RecentsTransitionStateListener;
 
-    .line 1261
+    .line 1219
     const/4 v5, 0x1
 
-    .line 1263
-    invoke-interface {v0, v5}, Lcom/android/wm/shell/recents/RecentsTransitionStateListener;->onAnimationStateChanged(Z)V
+    .line 1221
+    invoke-interface {v4, v5}, Lcom/android/wm/shell/recents/RecentsTransitionStateListener;->onAnimationStateChanged(Z)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1264
-    add-int/lit8 v4, v4, 0x1
+    .line 1222
+    add-int/lit8 v0, v0, 0x1
 
-    .line 1267
-    goto :goto_e
+    .line 1225
+    goto :goto_c
 
-    .line 1269
+    .line 1227
     :catch_1
     move-exception v0
 
-    .line 1270
-    :goto_f
+    .line 1228
+    :goto_d
     const-string v4, "Error starting recents animation"
 
-    .line 1271
+    .line 1229
     invoke-static {v1, v4, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1273
+    .line 1231
     const-string v0, "onAnimationStart() failed"
 
-    .line 1276
+    .line 1234
     invoke-virtual {v3, v0}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->cancel(Ljava/lang/String;)V
 
-    .line 1278
-    :cond_2c
+    .line 1236
+    :cond_29
     const/4 v8, 0x1
 
-    .line 1281
-    goto :goto_15
-
-    .line 1282
-    :goto_10
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 1283
-    const-string v4, "Missing listener or transition, hasListener="
-
-    .line 1285
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 1287
-    iget-object v4, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mListener:Landroid/view/IRecentsAnimationRunner;
-
-    .line 1290
-    if-eqz v4, :cond_2d
-
-    .line 1292
-    const/4 v4, 0x1
-
-    .line 1294
-    goto :goto_11
-
-    .line 1295
-    :cond_2d
-    const/4 v4, 0x0
-
-    .line 1296
-    :goto_11
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 1297
-    const-string v4, " hasTransition="
-
-    .line 1300
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1302
-    iget-object v4, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mTransition:Landroid/os/IBinder;
-
-    .line 1305
-    if-eqz v4, :cond_2e
-
-    .line 1307
-    const/4 v4, 0x1
-
-    .line 1309
-    goto :goto_12
-
-    .line 1310
-    :cond_2e
-    const/4 v4, 0x0
-
-    .line 1311
-    :goto_12
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 1312
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 1315
-    move-result-object v0
-
-    .line 1318
-    invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1319
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 1322
-    const-string v1, "No listener ("
-
-    .line 1324
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 1326
-    iget-object v1, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mListener:Landroid/view/IRecentsAnimationRunner;
-
-    .line 1329
-    if-nez v1, :cond_2f
-
-    .line 1331
-    const/4 v1, 0x1
-
-    .line 1333
+    .line 1239
     goto :goto_13
 
-    .line 1334
-    :cond_2f
-    const/4 v1, 0x0
+    .line 1240
+    :goto_e
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 1335
-    :goto_13
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    .line 1241
+    const-string v4, "Missing listener or transition, hasListener="
 
-    .line 1336
-    const-string v1, ") or no transition ("
+    .line 1243
+    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1339
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 1245
+    iget-object v4, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mListener:Landroid/view/IRecentsAnimationRunner;
 
-    .line 1341
-    iget-object v1, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mTransition:Landroid/os/IBinder;
+    .line 1248
+    if-eqz v4, :cond_2a
 
-    .line 1344
-    if-nez v1, :cond_30
+    .line 1250
+    const/4 v4, 0x1
 
-    .line 1346
-    const/4 v1, 0x1
+    .line 1252
+    goto :goto_f
 
-    .line 1348
-    goto :goto_14
-
-    .line 1349
-    :cond_30
-    const/4 v1, 0x0
-
-    .line 1350
-    :goto_14
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 1351
-    const-string v1, ")"
-
-    .line 1354
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1356
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 1359
-    move-result-object v0
-
-    .line 1362
-    invoke-virtual {v3, v0}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->cancel(Ljava/lang/String;)V
-
-    .line 1363
-    const/4 v8, 0x0
-
-    .line 1366
-    :goto_15
-    if-nez v8, :cond_32
-
-    .line 1367
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
-
-    .line 1369
-    const/4 v1, 0x1
-
-    .line 1371
-    aget-boolean v0, v0, v1
-
-    .line 1372
-    if-eqz v0, :cond_31
-
-    .line 1374
-    sget-object v1, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_RECENTS_TRANSITION:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
-
-    .line 1376
-    const-wide v2, -0x7745de03dacccecaL
-
-    .line 1378
+    .line 1253
+    :cond_2a
     const/4 v4, 0x0
 
-    .line 1383
-    const-string v5, "RecentsTransitionHandler.startAnimation: failed to start animation"
+    .line 1254
+    :goto_f
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 1384
-    const/4 v6, 0x0
+    .line 1255
+    const-string v4, " hasTransition="
 
-    .line 1386
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    .line 1258
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1387
-    :cond_31
-    const/4 v1, 0x0
+    .line 1260
+    iget-object v4, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mTransition:Landroid/os/IBinder;
 
-    .line 1390
-    return v1
+    .line 1263
+    if-eqz v4, :cond_2b
 
-    .line 1391
-    :cond_32
-    invoke-static {v2}, Lcom/android/wm/shell/transition/Transitions;->setRunningRemoteTransitionDelegate(Landroid/app/IApplicationThread;)V
+    .line 1265
+    const/4 v4, 0x1
 
-    .line 1392
+    .line 1267
+    goto :goto_10
+
+    .line 1268
+    :cond_2b
+    const/4 v4, 0x0
+
+    .line 1269
+    :goto_10
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 1270
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 1273
+    move-result-object v0
+
+    .line 1276
+    invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1277
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 1280
+    const-string v1, "No listener ("
+
+    .line 1282
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 1284
+    iget-object v1, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mListener:Landroid/view/IRecentsAnimationRunner;
+
+    .line 1287
+    if-nez v1, :cond_2c
+
+    .line 1289
     const/4 v1, 0x1
 
-    .line 1395
+    .line 1291
+    goto :goto_11
+
+    .line 1292
+    :cond_2c
+    const/4 v1, 0x0
+
+    .line 1293
+    :goto_11
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 1294
+    const-string v1, ") or no transition ("
+
+    .line 1297
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1299
+    iget-object v1, v3, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->mTransition:Landroid/os/IBinder;
+
+    .line 1302
+    if-nez v1, :cond_2d
+
+    .line 1304
+    const/4 v1, 0x1
+
+    .line 1306
+    goto :goto_12
+
+    .line 1307
+    :cond_2d
+    const/4 v1, 0x0
+
+    .line 1308
+    :goto_12
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 1309
+    const-string v1, ")"
+
+    .line 1312
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1314
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 1317
+    move-result-object v0
+
+    .line 1320
+    invoke-virtual {v3, v0}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController;->cancel(Ljava/lang/String;)V
+
+    .line 1321
+    const/4 v8, 0x0
+
+    .line 1324
+    :goto_13
+    if-nez v8, :cond_2f
+
+    .line 1325
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+
+    .line 1327
+    const/4 v1, 0x1
+
+    .line 1329
+    aget-boolean v0, v0, v1
+
+    .line 1330
+    if-eqz v0, :cond_2e
+
+    .line 1332
+    sget-object v1, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_RECENTS_TRANSITION:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
+
+    .line 1334
+    const-wide v2, -0x7745de03dacccecaL
+
+    .line 1336
+    const/4 v4, 0x0
+
+    .line 1341
+    const-string v5, "RecentsTransitionHandler.startAnimation: failed to start animation"
+
+    .line 1342
+    const/4 v6, 0x0
+
+    .line 1344
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+
+    .line 1345
+    :cond_2e
+    const/4 v1, 0x0
+
+    .line 1348
     return v1
-    .line 1396
+
+    .line 1349
+    :cond_2f
+    invoke-static {v2}, Lcom/android/wm/shell/transition/Transitions;->setRunningRemoteTransitionDelegate(Landroid/app/IApplicationThread;)V
+
+    .line 1350
+    const/4 v1, 0x1
+
+    .line 1353
+    return v1
+    .line 1354
 .end method
 
 .method public startRecentsTransition(Landroid/app/PendingIntent;Landroid/content/Intent;Landroid/os/Bundle;Landroid/app/IApplicationThread;Landroid/view/IRecentsAnimationRunner;)Landroid/os/IBinder;
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 2
     const/4 v1, 0x1
@@ -4957,7 +4880,7 @@
     const/4 v5, 0x0
 
     .line 19
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 20
     :cond_0
@@ -5206,7 +5129,7 @@
     if-eqz p4, :cond_a
 
     .line 164
-    sget-object p2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
+    sget-object p2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
 
     .line 166
     aget-boolean p2, p2, v1
@@ -5251,7 +5174,7 @@
     const-wide v1, -0x38833d3ad56c4f6L
 
     .line 192
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 197
     :cond_9

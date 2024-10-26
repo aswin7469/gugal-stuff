@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;
 .super Landroid/service/wallpaper/WallpaperService$Engine;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/hardware/display/DisplayManager$DisplayListener;
@@ -66,66 +66,57 @@
     iput-object v0, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mLock:Ljava/lang/Object;
 
     .line 19
-    new-instance v1, Ljava/lang/Object;
-
-    .line 21
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    .line 23
-    iput-object v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mSurfaceLock:Ljava/lang/Object;
-
-    .line 26
     const/4 v1, 0x1
 
-    .line 28
+    .line 21
     invoke-virtual {p0, v1}, Landroid/service/wallpaper/WallpaperService$Engine;->setFixedSizeAllowed(Z)V
 
-    .line 29
+    .line 22
     invoke-virtual {p0, v1}, Landroid/service/wallpaper/WallpaperService$Engine;->setShowForAllUsers(Z)V
 
-    .line 32
+    .line 25
     new-instance v1, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;
 
-    .line 35
+    .line 28
     iget-object v2, p1, Lcom/android/systemui/wallpapers/ImageWallpaper;->mLongExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
-    .line 37
+    .line 30
     new-instance v3, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$1;
 
-    .line 39
+    .line 32
     invoke-direct {v3, p0}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$1;-><init>(Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;)V
 
-    .line 41
+    .line 34
     invoke-direct {v1, v2, v0, v3}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;-><init>(Ljava/util/concurrent/Executor;Ljava/lang/Object;Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$1;)V
 
-    .line 44
+    .line 37
     iput-object v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWallpaperLocalColorExtractor:Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;
 
-    .line 47
+    .line 40
     iget-boolean p0, p1, Lcom/android/systemui/wallpapers/ImageWallpaper;->mPagesComputed:Z
 
-    .line 49
+    .line 42
     if-eqz p0, :cond_0
 
-    .line 51
+    .line 44
     iget p0, p1, Lcom/android/systemui/wallpapers/ImageWallpaper;->mPages:I
 
-    .line 53
+    .line 46
     iget-object p1, v1, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLongExecutor:Ljava/util/concurrent/Executor;
 
-    .line 55
-    new-instance v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda3;
+    .line 48
+    new-instance v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;
 
-    .line 57
-    invoke-direct {v0, v1, p0}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;I)V
+    .line 50
+    invoke-direct {v0, v1, p0}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;I)V
 
-    .line 59
+    .line 52
     invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 62
+    .line 55
     :cond_0
     return-void
-    .line 65
+    .line 58
 .end method
 
 
@@ -152,13 +143,13 @@
     iget-object v0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLongExecutor:Ljava/util/concurrent/Executor;
 
     .line 13
-    new-instance v1, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda4;
+    new-instance v1, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda3;
 
     .line 15
     const/4 v2, 0x0
 
     .line 17
-    invoke-direct {v1, p0, p1, v2}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;Ljava/lang/Object;I)V
+    invoke-direct {v1, p0, p1, v2}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;Ljava/lang/Object;I)V
 
     .line 18
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -192,617 +183,520 @@
     iget-object v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     .line 3
-    if-nez v1, :cond_0
+    const-string v2, "ImageWallpaper"
 
     .line 5
-    invoke-static {}, Lcom/android/systemui/Flags;->fixImageWallpaperCrashSurfaceAlreadyReleased()Z
-
-    .line 7
-    move-result v1
-
-    .line 10
     if-nez v1, :cond_0
 
-    .line 11
+    .line 7
     sget p0, Lcom/android/systemui/wallpapers/ImageWallpaper;->$r8$clinit:I
 
+    .line 9
+    const-string p0, "attempt to draw a frame without a valid surface"
+
+    .line 11
+    invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 13
-    const-string p0, "ImageWallpaper"
-
-    .line 15
-    const-string v0, "attempt to draw a frame without a valid surface"
-
-    .line 17
-    invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 19
     return-void
 
-    .line 22
+    .line 16
     :cond_0
     invoke-virtual {p0}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->isBitmapLoaded()Z
 
-    .line 23
+    .line 17
     move-result v1
 
-    .line 26
-    const/4 v2, 0x1
+    .line 20
+    const/4 v3, 0x1
 
-    .line 27
+    .line 21
     if-nez v1, :cond_a
 
-    .line 28
-    const-string v1, "ImageWallpaper"
+    .line 22
+    const-string v1, "WPMS.ImageWallpaper.CanvasEngine#loadWallpaper"
 
-    .line 30
-    const-string v3, "WPMS.ImageWallpaper.CanvasEngine#loadWallpaper"
+    .line 24
+    invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 32
-    invoke-static {v3}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    .line 26
+    const/4 v1, 0x2
 
-    .line 34
-    const/4 v3, 0x2
-
-    .line 37
+    .line 29
     :try_start_0
     const-string v4, "WPMS.getBitmapAsUser"
 
-    .line 38
+    .line 30
     invoke-static {v4}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 40
+    .line 32
     iget-object v4, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWallpaperManager:Landroid/app/WallpaperManager;
 
-    .line 43
+    .line 35
     iget-object v5, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->this$0:Lcom/android/systemui/wallpapers/ImageWallpaper;
 
-    .line 45
+    .line 37
     iget-object v5, v5, Lcom/android/systemui/wallpapers/ImageWallpaper;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 47
+    .line 39
     check-cast v5, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 49
+    .line 41
     invoke-virtual {v5}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 51
+    .line 43
     move-result v5
 
-    .line 54
+    .line 46
     invoke-virtual {p0}, Landroid/service/wallpaper/WallpaperService$Engine;->getWallpaperFlags()I
 
-    .line 55
+    .line 47
     move-result v6
 
-    .line 58
-    if-ne v6, v3, :cond_1
+    .line 50
+    if-ne v6, v1, :cond_1
 
-    .line 59
-    move v6, v3
+    .line 51
+    move v6, v1
 
-    .line 61
+    .line 53
     goto :goto_0
 
-    .line 62
+    .line 54
     :cond_1
-    move v6, v2
+    move v6, v3
 
-    .line 63
+    .line 55
     :goto_0
-    invoke-virtual {v4, v5, v0, v6, v2}, Landroid/app/WallpaperManager;->getBitmapAsUser(IZIZ)Landroid/graphics/Bitmap;
+    invoke-virtual {v4, v5, v0, v6, v3}, Landroid/app/WallpaperManager;->getBitmapAsUser(IZIZ)Landroid/graphics/Bitmap;
 
-    .line 64
+    .line 56
     move-result-object v4
 
-    .line 67
+    .line 59
     if-eqz v4, :cond_3
 
-    .line 68
+    .line 60
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getByteCount()I
 
-    .line 70
+    .line 62
     move-result v5
 
-    .line 73
+    .line 65
     sget v6, Landroid/graphics/RecordingCanvas;->MAX_BITMAP_SIZE:I
 
-    .line 74
+    .line 66
     if-gt v5, v6, :cond_2
 
-    .line 76
+    .line 68
     goto :goto_1
 
-    .line 78
+    .line 70
     :cond_2
     new-instance v4, Ljava/lang/RuntimeException;
 
-    .line 79
+    .line 71
     const-string v5, "Wallpaper is too large to draw!"
 
-    .line 81
+    .line 73
     invoke-direct {v4, v5}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 83
+    .line 75
     throw v4
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 86
+    .line 78
     :catchall_0
     move-exception p0
 
-    .line 87
+    .line 79
     goto/16 :goto_8
 
-    .line 88
+    .line 80
     :catch_0
     move-exception v4
 
-    .line 90
+    .line 82
     goto :goto_2
 
-    .line 91
+    .line 83
     :cond_3
     :goto_1
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 92
+    .line 84
     goto :goto_4
 
-    .line 95
+    .line 87
     :goto_2
     :try_start_1
     sget v5, Lcom/android/systemui/wallpapers/ImageWallpaper;->$r8$clinit:I
 
-    .line 96
+    .line 88
     const-string v5, "Unable to load wallpaper!"
 
-    .line 98
-    invoke-static {v1, v5, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    .line 90
+    invoke-static {v2, v5, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 100
+    .line 92
     const-string v4, "WPMS.clearWallpaper"
 
-    .line 103
+    .line 95
     invoke-static {v4}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 105
+    .line 97
     iget-object v4, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWallpaperManager:Landroid/app/WallpaperManager;
 
-    .line 108
+    .line 100
     invoke-virtual {p0}, Landroid/service/wallpaper/WallpaperService$Engine;->getWallpaperFlags()I
 
-    .line 110
+    .line 102
     move-result v5
 
-    .line 113
+    .line 105
     iget-object v6, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->this$0:Lcom/android/systemui/wallpapers/ImageWallpaper;
 
-    .line 114
+    .line 106
     iget-object v6, v6, Lcom/android/systemui/wallpapers/ImageWallpaper;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 116
+    .line 108
     check-cast v6, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 118
+    .line 110
     invoke-virtual {v6}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 120
+    .line 112
     move-result v6
 
-    .line 123
+    .line 115
     invoke-virtual {v4, v5, v6}, Landroid/app/WallpaperManager;->clearWallpaper(II)V
 
-    .line 124
+    .line 116
     invoke-static {}, Landroid/os/Trace;->endSection()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 127
+    .line 119
     :try_start_2
     const-string v4, "WPMS.getBitmapAsUser_defaultWallpaper"
 
-    .line 130
+    .line 122
     invoke-static {v4}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 132
+    .line 124
     iget-object v4, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWallpaperManager:Landroid/app/WallpaperManager;
 
-    .line 135
+    .line 127
     iget-object v5, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->this$0:Lcom/android/systemui/wallpapers/ImageWallpaper;
 
-    .line 137
+    .line 129
     iget-object v5, v5, Lcom/android/systemui/wallpapers/ImageWallpaper;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 139
+    .line 131
     check-cast v5, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 141
+    .line 133
     invoke-virtual {v5}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 143
+    .line 135
     move-result v5
 
-    .line 146
+    .line 138
     invoke-virtual {p0}, Landroid/service/wallpaper/WallpaperService$Engine;->getWallpaperFlags()I
 
-    .line 147
+    .line 139
     move-result v6
 
-    .line 150
-    if-ne v6, v3, :cond_4
+    .line 142
+    if-ne v6, v1, :cond_4
 
-    .line 151
-    move v6, v3
+    .line 143
+    move v6, v1
 
-    .line 153
+    .line 145
     goto :goto_3
 
-    .line 154
+    .line 146
     :cond_4
-    move v6, v2
+    move v6, v3
 
-    .line 155
+    .line 147
     :goto_3
-    invoke-virtual {v4, v5, v0, v6, v2}, Landroid/app/WallpaperManager;->getBitmapAsUser(IZIZ)Landroid/graphics/Bitmap;
+    invoke-virtual {v4, v5, v0, v6, v3}, Landroid/app/WallpaperManager;->getBitmapAsUser(IZIZ)Landroid/graphics/Bitmap;
 
-    .line 156
+    .line 148
     move-result-object v4
     :try_end_2
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 159
+    .line 151
     :try_start_3
     invoke-static {}, Landroid/os/Trace;->endSection()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 160
+    .line 152
     goto :goto_1
 
-    .line 163
+    .line 155
     :catchall_1
     move-exception p0
 
-    .line 164
+    .line 156
     goto/16 :goto_7
 
-    .line 165
+    .line 157
     :catch_1
     move-exception v4
 
-    .line 167
+    .line 159
     :try_start_4
     sget v5, Lcom/android/systemui/wallpapers/ImageWallpaper;->$r8$clinit:I
 
-    .line 168
+    .line 160
     const-string v5, "Unable to load default wallpaper!"
 
-    .line 170
-    invoke-static {v1, v5, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    .line 162
+    invoke-static {v2, v5, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 172
+    .line 164
     :try_start_5
     invoke-static {}, Landroid/os/Trace;->endSection()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 175
+    .line 167
     const/4 v4, 0x0
 
-    .line 178
+    .line 170
     goto :goto_1
 
-    .line 179
+    .line 171
     :goto_4
     if-nez v4, :cond_5
 
-    .line 180
-    sget v2, Lcom/android/systemui/wallpapers/ImageWallpaper;->$r8$clinit:I
+    .line 172
+    sget v1, Lcom/android/systemui/wallpapers/ImageWallpaper;->$r8$clinit:I
 
-    .line 182
-    const-string v2, "Could not load bitmap"
+    .line 174
+    const-string v1, "Could not load bitmap"
 
-    .line 184
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    .line 176
+    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
+    .line 178
     goto :goto_5
 
-    .line 189
+    .line 181
     :cond_5
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->isRecycled()Z
 
-    .line 190
+    .line 182
     move-result v5
 
-    .line 193
+    .line 185
     if-eqz v5, :cond_6
 
-    .line 194
-    sget v2, Lcom/android/systemui/wallpapers/ImageWallpaper;->$r8$clinit:I
+    .line 186
+    sget v1, Lcom/android/systemui/wallpapers/ImageWallpaper;->$r8$clinit:I
 
-    .line 196
-    const-string v2, "Attempt to load a recycled bitmap"
+    .line 188
+    const-string v1, "Attempt to load a recycled bitmap"
 
-    .line 198
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    .line 190
+    invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
+    .line 192
     goto :goto_5
 
-    .line 203
+    .line 195
     :cond_6
     iget-object v5, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 204
+    .line 196
     if-ne v5, v4, :cond_7
 
-    .line 206
-    sget v2, Lcom/android/systemui/wallpapers/ImageWallpaper;->$r8$clinit:I
+    .line 198
+    sget v1, Lcom/android/systemui/wallpapers/ImageWallpaper;->$r8$clinit:I
 
-    .line 208
-    const-string v2, "Loaded a bitmap that was already loaded"
+    .line 200
+    const-string v1, "Loaded a bitmap that was already loaded"
 
-    .line 210
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    .line 202
+    invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
+    .line 204
     :goto_5
     invoke-virtual {p0, v0}, Landroid/service/wallpaper/WallpaperService$Engine;->reportEngineShown(Z)V
 
-    .line 215
+    .line 207
     goto :goto_6
 
-    .line 218
+    .line 210
     :cond_7
     if-eqz v5, :cond_8
 
-    .line 219
-    const-string v1, "WPMS.mBitmap.recycle"
+    .line 211
+    const-string v2, "WPMS.mBitmap.recycle"
 
-    .line 221
-    invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    .line 213
+    invoke-static {v2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 223
-    iget-object v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmap:Landroid/graphics/Bitmap;
+    .line 215
+    iget-object v2, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 226
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
+    .line 218
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 228
+    .line 220
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 231
+    .line 223
     :cond_8
     iput-object v4, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 234
-    const-string v1, "WPMS.wallpaperSupportsWcg"
+    .line 226
+    const-string v2, "WPMS.wallpaperSupportsWcg"
 
-    .line 236
-    invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    .line 228
+    invoke-static {v2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 238
-    iget-object v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWallpaperManager:Landroid/app/WallpaperManager;
+    .line 230
+    iget-object v2, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWallpaperManager:Landroid/app/WallpaperManager;
 
-    .line 241
+    .line 233
     invoke-virtual {p0}, Landroid/service/wallpaper/WallpaperService$Engine;->getWallpaperFlags()I
 
-    .line 243
+    .line 235
     move-result v4
 
-    .line 246
-    if-ne v4, v3, :cond_9
+    .line 238
+    if-ne v4, v1, :cond_9
 
-    .line 247
-    move v2, v3
+    .line 239
+    move v3, v1
 
-    .line 249
+    .line 241
     :cond_9
-    invoke-virtual {v1, v2}, Landroid/app/WallpaperManager;->wallpaperSupportsWcg(I)Z
+    invoke-virtual {v2, v3}, Landroid/app/WallpaperManager;->wallpaperSupportsWcg(I)Z
 
-    .line 250
-    move-result v1
+    .line 242
+    move-result v2
+
+    .line 245
+    iput-boolean v2, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWideColorGamut:Z
+
+    .line 246
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    .line 248
+    iget v2, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmapUsages:I
+
+    .line 251
+    add-int/2addr v2, v1
 
     .line 253
-    iput-boolean v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWideColorGamut:Z
+    iput v2, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmapUsages:I
 
     .line 254
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    .line 256
-    iget v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmapUsages:I
-
-    .line 259
-    add-int/2addr v1, v3
-
-    .line 261
-    iput v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmapUsages:I
-
-    .line 262
     const-string v1, "WPMS.recomputeColorExtractorMiniBitmap"
 
-    .line 264
+    .line 256
     invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 266
+    .line 258
     invoke-virtual {p0}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->recomputeColorExtractorMiniBitmap()V
 
-    .line 269
+    .line 261
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 272
+    .line 264
     const-string v1, "WPMS.drawFrameInternal"
 
-    .line 275
+    .line 267
     invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 277
+    .line 269
     invoke-virtual {p0}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->drawFrameInternal()V
 
-    .line 280
+    .line 272
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 283
+    .line 275
     iget-object v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->this$0:Lcom/android/systemui/wallpapers/ImageWallpaper;
 
-    .line 286
+    .line 278
     iget-object v1, v1, Lcom/android/systemui/wallpapers/ImageWallpaper;->mLongExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
-    .line 288
+    .line 280
     new-instance v2, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$$ExternalSyntheticLambda0;
 
-    .line 290
+    .line 282
     invoke-direct {v2, p0, v0}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;I)V
 
-    .line 292
+    .line 284
     const-wide/16 v3, 0x7d0
 
-    .line 295
+    .line 287
     invoke-interface {v1, v2, v3, v4}, Lcom/android/systemui/util/concurrency/DelayableExecutor;->executeDelayed(Ljava/lang/Runnable;J)Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
 
-    .line 297
+    .line 289
     :goto_6
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 300
-    goto :goto_a
+    .line 292
+    goto :goto_9
 
-    .line 303
+    .line 295
     :goto_7
     :try_start_6
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 304
+    .line 296
     throw p0
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 307
+    .line 299
     :goto_8
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 308
+    .line 300
     throw p0
 
-    .line 311
+    .line 303
     :cond_a
-    invoke-static {}, Lcom/android/systemui/Flags;->fixImageWallpaperCrashSurfaceAlreadyReleased()Z
-
-    .line 312
-    move-result v1
-
-    .line 315
-    if-eqz v1, :cond_c
-
-    .line 316
-    iget-object v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mSurfaceLock:Ljava/lang/Object;
-
-    .line 318
-    monitor-enter v1
-
-    .line 320
-    :try_start_7
-    iget-object v3, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mSurfaceHolder:Landroid/view/SurfaceHolder;
-
-    .line 321
-    if-nez v3, :cond_b
-
-    .line 323
-    sget p0, Lcom/android/systemui/wallpapers/ImageWallpaper;->$r8$clinit:I
-
-    .line 325
-    const-string p0, "ImageWallpaper"
-
-    .line 327
-    const-string v0, "Surface released before the image could be drawn"
-
-    .line 329
-    invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 331
-    monitor-exit v1
-
-    .line 334
-    return-void
-
-    .line 335
-    :catchall_2
-    move-exception p0
-
-    .line 336
-    goto :goto_9
-
-    .line 337
-    :cond_b
-    iget v3, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmapUsages:I
-
-    .line 338
-    add-int/2addr v3, v2
-
-    .line 340
-    iput v3, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmapUsages:I
-
-    .line 341
-    iget-object v2, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmap:Landroid/graphics/Bitmap;
-
-    .line 343
-    invoke-virtual {p0, v2}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->drawFrameOnCanvas(Landroid/graphics/Bitmap;)V
-
-    .line 345
-    invoke-virtual {p0, v0}, Landroid/service/wallpaper/WallpaperService$Engine;->reportEngineShown(Z)V
-
-    .line 348
-    invoke-virtual {p0}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->unloadBitmapIfNotUsedInternal()V
-
-    .line 351
-    monitor-exit v1
-
-    .line 354
-    return-void
-
-    .line 355
-    :goto_9
-    monitor-exit v1
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    .line 356
-    throw p0
-
-    .line 357
-    :cond_c
     iget v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmapUsages:I
 
-    .line 358
-    add-int/2addr v1, v2
+    .line 304
+    add-int/2addr v1, v3
 
-    .line 360
+    .line 306
     iput v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmapUsages:I
 
-    .line 361
+    .line 307
     iget-object v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 363
+    .line 309
     invoke-virtual {p0, v1}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->drawFrameOnCanvas(Landroid/graphics/Bitmap;)V
 
-    .line 365
+    .line 311
     invoke-virtual {p0, v0}, Landroid/service/wallpaper/WallpaperService$Engine;->reportEngineShown(Z)V
 
-    .line 368
+    .line 314
     invoke-virtual {p0}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->unloadBitmapIfNotUsedInternal()V
 
-    .line 371
-    :goto_a
+    .line 317
+    :goto_9
     return-void
-    .line 374
+    .line 320
 .end method
 
 .method public drawFrameOnCanvas(Landroid/graphics/Bitmap;)V
@@ -1424,10 +1318,10 @@
     iget-object v2, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLongExecutor:Ljava/util/concurrent/Executor;
 
     .line 32
-    new-instance v3, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda5;
+    new-instance v3, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda4;
 
     .line 34
-    invoke-direct {v3, p0, v1, v0}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;II)V
+    invoke-direct {v3, p0, v1, v0}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;II)V
 
     .line 36
     invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -1472,48 +1366,17 @@
 .end method
 
 .method public final onComputeColors()Landroid/app/WallpaperColors;
-    .locals 3
+    .locals 0
 
     .line 1
     invoke-static {}, Lcom/android/window/flags/Flags;->offloadColorExtraction()Z
 
     .line 2
-    move-result v0
-
-    .line 5
-    if-nez v0, :cond_0
-
-    .line 6
     const/4 p0, 0x0
 
-    .line 8
+    .line 5
     return-object p0
-
-    .line 9
-    :cond_0
-    iget-object p0, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWallpaperLocalColorExtractor:Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;
-
-    .line 10
-    iget-object v0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLongExecutor:Ljava/util/concurrent/Executor;
-
-    .line 12
-    new-instance v1, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda1;
-
-    .line 14
-    const/4 v2, 0x1
-
-    .line 16
-    invoke-direct {v1, p0, v2}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;I)V
-
-    .line 17
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 20
-    iget-object p0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mWallpaperColors:Landroid/app/WallpaperColors;
-
-    .line 23
-    return-object p0
-    .line 25
+    .line 6
 .end method
 
 .method public final onCreate(Landroid/view/SurfaceHolder;)V
@@ -1647,7 +1510,7 @@
 .end method
 
 .method public final onDestroy()V
-    .locals 3
+    .locals 2
 
     .line 1
     invoke-virtual {p0}, Landroid/service/wallpaper/WallpaperService$Engine;->getDisplayContext()Landroid/content/Context;
@@ -1687,53 +1550,25 @@
     new-instance v1, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda1;
 
     .line 25
-    const/4 v2, 0x0
+    invoke-direct {v1, p0}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;)V
 
     .line 27
-    invoke-direct {v1, p0, v2}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;I)V
-
-    .line 28
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 31
+    .line 30
     return-void
-    .line 34
+    .line 33
 .end method
 
 .method public final onDimAmountChanged(F)V
-    .locals 2
+    .locals 0
 
     .line 1
     invoke-static {}, Lcom/android/window/flags/Flags;->offloadColorExtraction()Z
 
     .line 2
-    move-result v0
-
+    return-void
     .line 5
-    if-nez v0, :cond_0
-
-    .line 6
-    return-void
-
-    .line 8
-    :cond_0
-    iget-object p0, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWallpaperLocalColorExtractor:Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;
-
-    .line 9
-    iget-object v0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLongExecutor:Ljava/util/concurrent/Executor;
-
-    .line 11
-    new-instance v1, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;
-
-    .line 13
-    invoke-direct {v1, p0, p1}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;F)V
-
-    .line 15
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 18
-    return-void
-    .line 21
 .end method
 
 .method public final onDisplayAdded(I)V
@@ -1923,10 +1758,10 @@
     iget-object p2, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLongExecutor:Ljava/util/concurrent/Executor;
 
     .line 46
-    new-instance p3, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda3;
+    new-instance p3, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;
 
     .line 48
-    invoke-direct {p3, p0, p1}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;I)V
+    invoke-direct {p3, p0, p1}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;I)V
 
     .line 50
     invoke-interface {p2, p3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -1957,70 +1792,29 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->fixImageWallpaperCrashSurfaceAlreadyReleased()Z
+    iget-object p1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->this$0:Lcom/android/systemui/wallpapers/ImageWallpaper;
 
     .line 2
-    move-result p1
+    iget-object p1, p1, Lcom/android/systemui/wallpapers/ImageWallpaper;->mLongExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
-    .line 5
-    if-eqz p1, :cond_0
+    .line 4
+    new-instance v0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$$ExternalSyntheticLambda0;
 
     .line 6
-    iget-object p1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mSurfaceLock:Ljava/lang/Object;
+    const/4 v1, 0x2
 
     .line 8
-    monitor-enter p1
+    invoke-direct {v0, p0, v1}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;I)V
 
-    .line 10
-    const/4 v0, 0x0
-
-    .line 11
-    :try_start_0
-    iput-object v0, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mSurfaceHolder:Landroid/view/SurfaceHolder;
+    .line 9
+    check-cast p1, Lcom/android/systemui/util/concurrency/ExecutorImpl;
 
     .line 12
-    monitor-exit p1
+    invoke-virtual {p1, v0}, Lcom/android/systemui/util/concurrency/ExecutorImpl;->execute(Ljava/lang/Runnable;)V
 
     .line 14
     return-void
-
-    .line 15
-    :catchall_0
-    move-exception p0
-
-    .line 16
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 17
-    throw p0
-
-    .line 18
-    :cond_0
-    iget-object p1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->this$0:Lcom/android/systemui/wallpapers/ImageWallpaper;
-
-    .line 19
-    iget-object p1, p1, Lcom/android/systemui/wallpapers/ImageWallpaper;->mLongExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
-
-    .line 21
-    new-instance v0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$$ExternalSyntheticLambda0;
-
-    .line 23
-    const/4 v1, 0x2
-
-    .line 25
-    invoke-direct {v0, p0, v1}, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;I)V
-
-    .line 26
-    check-cast p1, Lcom/android/systemui/util/concurrency/ExecutorImpl;
-
-    .line 29
-    invoke-virtual {p1, v0}, Lcom/android/systemui/util/concurrency/ExecutorImpl;->execute(Ljava/lang/Runnable;)V
-
-    .line 31
-    return-void
-    .line 34
 .end method
 
 .method public final onSurfaceRedrawNeeded(Landroid/view/SurfaceHolder;)V
@@ -2065,13 +1859,13 @@
     iget-object v1, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLongExecutor:Ljava/util/concurrent/Executor;
 
     .line 6
-    new-instance v2, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda4;
+    new-instance v2, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda3;
 
     .line 8
     const/4 v3, 0x2
 
     .line 10
-    invoke-direct {v2, v0, p0, v3}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;Ljava/lang/Object;I)V
+    invoke-direct {v2, v0, p0, v3}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;Ljava/lang/Object;I)V
 
     .line 11
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -2091,13 +1885,13 @@
     iget-object v0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLongExecutor:Ljava/util/concurrent/Executor;
 
     .line 4
-    new-instance v1, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda4;
+    new-instance v1, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda3;
 
     .line 6
     const/4 v2, 0x1
 
     .line 8
-    invoke-direct {v1, p0, p1, v2}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;Ljava/lang/Object;I)V
+    invoke-direct {v1, p0, p1, v2}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;Ljava/lang/Object;I)V
 
     .line 9
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -2141,7 +1935,7 @@
 .end method
 
 .method public final unloadBitmapIfNotUsedInternal()V
-    .locals 2
+    .locals 1
 
     .line 1
     iget v0, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmapUsages:I
@@ -2153,7 +1947,7 @@
     iput v0, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmapUsages:I
 
     .line 6
-    if-gtz v0, :cond_3
+    if-gtz v0, :cond_1
 
     .line 8
     const/4 v0, 0x0
@@ -2184,91 +1978,31 @@
     iput-object v0, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mBitmap:Landroid/graphics/Bitmap;
 
     .line 26
-    invoke-static {}, Lcom/android/systemui/Flags;->fixImageWallpaperCrashSurfaceAlreadyReleased()Z
-
-    .line 28
-    move-result v0
-
-    .line 31
-    if-eqz v0, :cond_2
-
-    .line 32
-    iget-object v0, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mSurfaceLock:Ljava/lang/Object;
-
-    .line 34
-    monitor-enter v0
-
-    .line 36
-    :try_start_0
-    iget-object v1, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mSurfaceHolder:Landroid/view/SurfaceHolder;
-
-    .line 37
-    if-eqz v1, :cond_1
-
-    .line 39
-    invoke-interface {v1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
-
-    .line 41
-    move-result-object v1
-
-    .line 44
-    invoke-virtual {v1}, Landroid/view/Surface;->hwuiDestroy()V
-
-    .line 45
-    goto :goto_0
-
-    .line 48
-    :catchall_0
-    move-exception p0
-
-    .line 49
-    goto :goto_1
-
-    .line 50
-    :cond_1
-    :goto_0
-    monitor-exit v0
-
-    .line 51
-    goto :goto_2
-
-    .line 52
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 53
-    throw p0
-
-    .line 54
-    :cond_2
     invoke-virtual {p0}, Landroid/service/wallpaper/WallpaperService$Engine;->getSurfaceHolder()Landroid/view/SurfaceHolder;
 
-    .line 55
+    .line 28
     move-result-object v0
 
-    .line 58
+    .line 31
     invoke-interface {v0}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
 
-    .line 59
+    .line 32
     move-result-object v0
 
-    .line 62
+    .line 35
     invoke-virtual {v0}, Landroid/view/Surface;->hwuiDestroy()V
 
-    .line 63
-    :goto_2
+    .line 36
     iget-object p0, p0, Lcom/android/systemui/wallpapers/ImageWallpaper$CanvasEngine;->mWallpaperManager:Landroid/app/WallpaperManager;
 
-    .line 66
+    .line 39
     invoke-virtual {p0}, Landroid/app/WallpaperManager;->forgetLoadedWallpaper()V
 
-    .line 68
+    .line 41
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 71
-    :cond_3
+    .line 44
+    :cond_1
     return-void
-    .line 74
+    .line 47
 .end method

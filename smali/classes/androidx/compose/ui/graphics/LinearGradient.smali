@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/graphics/LinearGradient;
 .super Landroidx/compose/ui/graphics/ShaderBrush;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -483,135 +483,135 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     .line 14
-    const-string v5, "start="
+    const-string/jumbo v5, "start="
 
     .line 16
     invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 18
+    .line 19
     invoke-static {v0, v1}, Landroidx/compose/ui/geometry/Offset;->toString-impl(J)Ljava/lang/String;
 
-    .line 21
+    .line 22
     move-result-object v0
-
-    .line 24
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 25
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 26
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 28
+    .line 29
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 31
+    .line 32
     move-result-object v0
 
-    .line 34
+    .line 35
     goto :goto_0
 
-    .line 35
+    .line 36
     :cond_0
     move-object v0, v3
 
-    .line 36
+    .line 37
     :goto_0
     iget-wide v1, p0, Landroidx/compose/ui/graphics/LinearGradient;->end:J
 
-    .line 37
+    .line 38
     invoke-static {v1, v2}, Landroidx/compose/ui/geometry/OffsetKt;->isFinite-k-4lQ0M(J)Z
 
-    .line 39
+    .line 40
     move-result v5
 
-    .line 42
+    .line 43
     if-eqz v5, :cond_1
 
-    .line 43
+    .line 44
     new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 45
+    .line 46
     const-string v5, "end="
 
-    .line 47
+    .line 48
     invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 49
+    .line 50
     invoke-static {v1, v2}, Landroidx/compose/ui/geometry/Offset;->toString-impl(J)Ljava/lang/String;
 
-    .line 52
+    .line 53
     move-result-object v1
 
-    .line 55
+    .line 56
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 56
+    .line 57
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 59
+    .line 60
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 62
+    .line 63
     move-result-object v3
 
-    .line 65
+    .line 66
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 66
+    .line 67
     const-string v2, "LinearGradient(colors="
 
-    .line 68
+    .line 69
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 70
+    .line 71
     iget-object v2, p0, Landroidx/compose/ui/graphics/LinearGradient;->colors:Ljava/util/List;
 
-    .line 73
+    .line 74
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 75
+    .line 76
     const-string v2, ", stops=null, "
 
-    .line 78
+    .line 79
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 80
+    .line 81
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 83
+    .line 84
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 86
-    const-string v0, "tileMode="
+    .line 87
+    const-string/jumbo v0, "tileMode="
 
-    .line 89
+    .line 90
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 91
+    .line 93
     iget p0, p0, Landroidx/compose/ui/graphics/LinearGradient;->tileMode:I
 
-    .line 94
+    .line 96
     invoke-static {p0}, Landroidx/compose/ui/graphics/TileMode;->toString-impl(I)Ljava/lang/String;
 
-    .line 96
+    .line 98
     move-result-object p0
 
-    .line 99
+    .line 101
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 100
+    .line 102
     const/16 p0, 0x29
 
-    .line 103
+    .line 105
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 105
+    .line 107
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 108
+    .line 110
     move-result-object p0
 
-    .line 111
+    .line 113
     return-object p0
-    .line 112
+    .line 114
 .end method

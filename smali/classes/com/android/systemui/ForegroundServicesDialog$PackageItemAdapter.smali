@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/ForegroundServicesDialog$PackageItemAdapter;
 .super Landroid/widget/ArrayAdapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -16,7 +16,7 @@
     .locals 1
 
     .line 1
-    const v0, 0x7f0e00bd    # @layout/foreground_service_item 'res/layout/foreground_service_item.xml'
+    const v0, 0x7f0d00c6    # @layout/foreground_service_item 'res/layout/foreground_service_item.xml'
 
     .line 2
     invoke-direct {p0, p1, v0}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I)V
@@ -53,6 +53,7 @@
 
     .line 25
     return-void
+    .line 27
 .end method
 
 
@@ -67,7 +68,7 @@
     iget-object p2, p0, Lcom/android/systemui/ForegroundServicesDialog$PackageItemAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     .line 4
-    const v0, 0x7f0e00bd    # @layout/foreground_service_item 'res/layout/foreground_service_item.xml'
+    const v0, 0x7f0d00c6    # @layout/foreground_service_item 'res/layout/foreground_service_item.xml'
 
     .line 6
     const/4 v1, 0x0
@@ -80,7 +81,7 @@
 
     .line 13
     :cond_0
-    const p3, 0x7f0b00c2    # @id/app_icon
+    const p3, 0x7f0a00c5    # @id/app_icon
 
     .line 14
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -113,7 +114,7 @@
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 35
-    const p3, 0x7f0b00c8    # @id/app_name
+    const p3, 0x7f0a00cb    # @id/app_name
 
     .line 38
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

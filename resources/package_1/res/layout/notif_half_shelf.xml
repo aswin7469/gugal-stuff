@@ -40,7 +40,7 @@
                   android:layout_height="wrap_content"
                   android:maxLines="2"
                   android:layout_weight="1.0"
-                  android:fontFamily="@android:string/config_networkOverLimitComponent" />
+                  android:fontFamily="@android:string/config_misprovisionedBrandValue" />
         <Switch android:theme="@style/MainSwitch.Settingslib"
                 android:layout_gravity="center_vertical"
                 android:id="@id/toggle"

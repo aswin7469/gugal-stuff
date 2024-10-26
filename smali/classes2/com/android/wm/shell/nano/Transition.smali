@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/nano/Transition;
 .super Lcom/google/protobuf/nano/MessageNano;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -180,7 +180,7 @@
     const/4 v5, 0x2
 
     .line 17
-    invoke-static {v5, v1, v2}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeInt64Size(IJ)I
+    invoke-static {v1, v2, v5}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeInt64Size(JI)I
 
     .line 18
     move-result v1
@@ -221,7 +221,7 @@
     const/4 v5, 0x4
 
     .line 39
-    invoke-static {v5, v1, v2}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeInt64Size(IJ)I
+    invoke-static {v1, v2, v5}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeInt64Size(JI)I
 
     .line 40
     move-result v1
@@ -243,7 +243,7 @@
     const/4 v5, 0x5
 
     .line 51
-    invoke-static {v5, v1, v2}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeInt64Size(IJ)I
+    invoke-static {v1, v2, v5}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeInt64Size(JI)I
 
     .line 52
     move-result v1
@@ -284,7 +284,7 @@
     const/4 p0, 0x7
 
     .line 73
-    invoke-static {p0, v1, v2}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeInt64Size(IJ)I
+    invoke-static {v1, v2, p0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->computeInt64Size(JI)I
 
     .line 74
     move-result p0
@@ -354,73 +354,77 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readInt64()J
+    invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readRawVarint64()J
 
     move-result-wide v0
 
+    .line 5
     iput-wide v0, p0, Lcom/android/wm/shell/nano/Transition;->abortTimeNs:J
 
     goto :goto_0
 
-    .line 5
+    .line 6
     :cond_2
     invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readRawVarint32()I
 
     move-result v0
 
-    .line 6
+    .line 7
     iput v0, p0, Lcom/android/wm/shell/nano/Transition;->mergeTarget:I
 
     goto :goto_0
 
-    .line 7
+    .line 8
     :cond_3
-    invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readInt64()J
+    invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readRawVarint64()J
 
     move-result-wide v0
 
+    .line 9
     iput-wide v0, p0, Lcom/android/wm/shell/nano/Transition;->mergeRequestTimeNs:J
 
     goto :goto_0
 
-    .line 8
+    .line 10
     :cond_4
-    invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readInt64()J
+    invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readRawVarint64()J
 
     move-result-wide v0
 
+    .line 11
     iput-wide v0, p0, Lcom/android/wm/shell/nano/Transition;->mergeTimeNs:J
 
     goto :goto_0
 
-    .line 9
+    .line 12
     :cond_5
     invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readRawVarint32()I
 
     move-result v0
 
-    .line 10
+    .line 13
     iput v0, p0, Lcom/android/wm/shell/nano/Transition;->handler:I
 
     goto :goto_0
 
-    .line 11
+    .line 14
     :cond_6
-    invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readInt64()J
+    invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readRawVarint64()J
 
     move-result-wide v0
 
+    .line 15
     iput-wide v0, p0, Lcom/android/wm/shell/nano/Transition;->dispatchTimeNs:J
 
     goto :goto_0
 
-    .line 12
+    .line 16
     :cond_7
     invoke-virtual {p1}, Lcom/google/protobuf/nano/CodedInputByteBufferNano;->readRawVarint32()I
 
     move-result v0
 
-    .line 13
+    .line 17
     iput v0, p0, Lcom/android/wm/shell/nano/Transition;->id:I
 
     goto :goto_0
@@ -446,7 +450,7 @@
 .end method
 
 .method public writeTo(Lcom/google/protobuf/nano/CodedOutputByteBufferNano;)V
-    .locals 6
+    .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -472,105 +476,90 @@
     cmp-long v4, v0, v2
 
     .line 12
-    const/4 v5, 0x0
-
-    .line 14
     if-eqz v4, :cond_0
 
-    .line 15
+    .line 14
     const/4 v4, 0x2
 
+    .line 16
+    invoke-virtual {p1, v0, v1, v4}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeInt64(JI)V
+
     .line 17
-    invoke-virtual {p1, v4, v5}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeTag(II)V
-
-    .line 18
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeRawVarint64(J)V
-
-    .line 21
     :cond_0
     iget v0, p0, Lcom/android/wm/shell/nano/Transition;->handler:I
 
-    .line 24
+    .line 20
     if-eqz v0, :cond_1
 
-    .line 26
+    .line 22
     const/4 v1, 0x3
 
-    .line 28
+    .line 24
     invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeInt32(II)V
 
-    .line 29
+    .line 25
     :cond_1
     iget-wide v0, p0, Lcom/android/wm/shell/nano/Transition;->mergeTimeNs:J
 
-    .line 32
+    .line 28
     cmp-long v4, v0, v2
 
-    .line 34
+    .line 30
     if-eqz v4, :cond_2
 
-    .line 36
+    .line 32
     const/4 v4, 0x4
 
-    .line 38
-    invoke-virtual {p1, v4, v5}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeTag(II)V
+    .line 34
+    invoke-virtual {p1, v0, v1, v4}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeInt64(JI)V
 
-    .line 39
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeRawVarint64(J)V
-
-    .line 42
+    .line 35
     :cond_2
     iget-wide v0, p0, Lcom/android/wm/shell/nano/Transition;->mergeRequestTimeNs:J
 
-    .line 45
+    .line 38
     cmp-long v4, v0, v2
 
-    .line 47
+    .line 40
     if-eqz v4, :cond_3
 
-    .line 49
+    .line 42
     const/4 v4, 0x5
 
-    .line 51
-    invoke-virtual {p1, v4, v5}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeTag(II)V
+    .line 44
+    invoke-virtual {p1, v0, v1, v4}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeInt64(JI)V
 
-    .line 52
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeRawVarint64(J)V
-
-    .line 55
+    .line 45
     :cond_3
     iget v0, p0, Lcom/android/wm/shell/nano/Transition;->mergeTarget:I
 
-    .line 58
+    .line 48
     if-eqz v0, :cond_4
 
-    .line 60
+    .line 50
     const/4 v1, 0x6
 
-    .line 62
+    .line 52
     invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeInt32(II)V
 
-    .line 63
+    .line 53
     :cond_4
     iget-wide v0, p0, Lcom/android/wm/shell/nano/Transition;->abortTimeNs:J
 
-    .line 66
+    .line 56
     cmp-long p0, v0, v2
 
-    .line 68
+    .line 58
     if-eqz p0, :cond_5
 
-    .line 70
+    .line 60
     const/4 p0, 0x7
 
-    .line 72
-    invoke-virtual {p1, p0, v5}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeTag(II)V
+    .line 62
+    invoke-virtual {p1, v0, v1, p0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeInt64(JI)V
 
-    .line 73
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeRawVarint64(J)V
-
-    .line 76
+    .line 63
     :cond_5
     return-void
-    .line 79
+    .line 66
 .end method

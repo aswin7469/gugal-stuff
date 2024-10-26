@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/RemoteInputController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -173,71 +173,60 @@
 
     .line 58
     :cond_2
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
-
-    .line 61
-    move-result p1
-
-    .line 64
-    if-nez p1, :cond_3
-
-    .line 65
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->updateFooter()V
 
-    .line 67
-    :cond_3
+    .line 61
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/RemoteInputController;->isRemoteInputActive$1()Z
 
-    .line 70
+    .line 64
     move-result p1
 
-    .line 73
+    .line 67
     iget-object v0, p0, Lcom/android/systemui/statusbar/RemoteInputController;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 74
+    .line 68
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    .line 76
+    .line 70
     move-result v0
 
-    .line 79
+    .line 73
     :goto_1
-    if-ge v4, v0, :cond_4
+    if-ge v4, v0, :cond_3
 
-    .line 80
+    .line 74
     iget-object v1, p0, Lcom/android/systemui/statusbar/RemoteInputController;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 82
+    .line 76
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 84
+    .line 78
     move-result-object v1
 
-    .line 87
+    .line 81
     check-cast v1, Lcom/android/systemui/statusbar/RemoteInputController$Callback;
 
-    .line 88
+    .line 82
     invoke-interface {v1, p1}, Lcom/android/systemui/statusbar/RemoteInputController$Callback;->onRemoteInputActive(Z)V
 
-    .line 90
+    .line 84
     add-int/lit8 v4, v4, 0x1
 
-    .line 93
+    .line 87
     goto :goto_1
 
-    .line 95
-    :cond_4
+    .line 89
+    :cond_3
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 96
+    .line 90
     move-result-object p1
 
-    .line 99
+    .line 93
     iput-object p1, p0, Lcom/android/systemui/statusbar/RemoteInputController;->mLastAppliedRemoteInputActive:Ljava/lang/Boolean;
 
-    .line 100
+    .line 94
     return-void
-    .line 102
 .end method
 
 .method public final isRemoteInputActive$1()Z

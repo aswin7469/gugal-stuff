@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast$ItemUpdateFunction;
@@ -9,18 +9,18 @@
 # instance fields
 .field public final synthetic $r8$classId:I
 
-.field public final synthetic f$0:I
+.field public final synthetic f$0:[Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
+.method public synthetic constructor <init>(I[Ljava/lang/Object;)V
     .locals 0
 
     .line 1
-    iput p2, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast$$ExternalSyntheticLambda0;->$r8$classId:I
+    iput p1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast$$ExternalSyntheticLambda0;->$r8$classId:I
 
     .line 2
-    iput p1, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast$$ExternalSyntheticLambda0;->f$0:I
+    iput-object p2, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast$$ExternalSyntheticLambda0;->f$0:[Ljava/lang/Object;
 
     .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,10 +33,10 @@
 
 # virtual methods
 .method public final update(Landroid/view/View;I)V
-    .locals 0
+    .locals 1
 
     .line 1
-    iget p2, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast$$ExternalSyntheticLambda0;->f$0:I
+    iget-object v0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast$$ExternalSyntheticLambda0;->f$0:[Ljava/lang/Object;
 
     .line 2
     iget p0, p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast$$ExternalSyntheticLambda0;->$r8$classId:I
@@ -45,37 +45,69 @@
     packed-switch p0, :pswitch_data_0
 
     .line 6
-    sget p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast;->$r8$clinit:I
+    check-cast v0, [Landroid/graphics/Bitmap;
 
     .line 9
-    check-cast p1, Landroid/widget/TextView;
+    sget p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast;->$r8$clinit:I
 
     .line 11
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
+    check-cast p1, Landroid/widget/ImageView;
 
     .line 13
+    aget-object p0, v0, p2
+
+    .line 15
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    .line 17
     return-void
 
-    .line 16
+    .line 20
     :pswitch_0
     sget p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast;->$r8$clinit:I
 
-    .line 17
+    .line 21
     check-cast p1, Landroid/widget/TextView;
 
-    .line 19
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 21
-    return-void
-
-    .line 24
-    nop
+    .line 23
+    check-cast v0, [Ljava/lang/String;
 
     .line 25
+    aget-object p0, v0, p2
+
+    .line 27
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 29
+    return-void
+
+    .line 32
+    :pswitch_1
+    sget p0, Lcom/google/android/systemui/smartspace/BcSmartspaceCardWeatherForecast;->$r8$clinit:I
+
+    .line 33
+    check-cast p1, Landroid/widget/TextView;
+
+    .line 35
+    check-cast v0, [Ljava/lang/String;
+
+    .line 37
+    aget-object p0, v0, p2
+
+    .line 39
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 41
+    return-void
+
+    .line 44
+    nop
+
+    .line 45
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 26
+    .line 46
 .end method

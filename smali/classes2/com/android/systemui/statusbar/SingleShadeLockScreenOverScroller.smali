@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/SingleShadeLockScreenOverScroller;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/LockScreenShadeOverScroller;
@@ -43,7 +43,7 @@
     move-result-object p2
 
     .line 14
-    const p3, 0x7f070495    # @dimen/lockscreen_shade_qs_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
+    const p3, 0x7f0704d1    # @dimen/lockscreen_shade_qs_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
 
     .line 15
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -55,7 +55,7 @@
     iput p3, p0, Lcom/android/systemui/statusbar/SingleShadeLockScreenOverScroller;->totalDistanceForFullShadeTransition:I
 
     .line 22
-    const p3, 0x7f07048c    # @dimen/lockscreen_shade_max_over_scroll_amount '24.0dp'
+    const p3, 0x7f0704c8    # @dimen/lockscreen_shade_max_over_scroll_amount '24.0dp'
 
     .line 24
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

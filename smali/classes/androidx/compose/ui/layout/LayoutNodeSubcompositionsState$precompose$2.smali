@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/layout/LayoutNodeSubcompositionsState$precompose$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/layout/SubcomposeLayoutState$PrecomposedSlotHandle;
@@ -255,7 +255,7 @@
     .line 26
 .end method
 
-.method public final premeasure-0kLqBqw(IJ)V
+.method public final premeasure-0kLqBqw(JI)V
     .locals 3
 
     .line 1
@@ -301,10 +301,10 @@
     move-result v1
 
     .line 29
-    if-ltz p1, :cond_1
+    if-ltz p3, :cond_1
 
     .line 30
-    if-ge p1, v1, :cond_1
+    if-ge p3, v1, :cond_1
 
     .line 32
     invoke-virtual {p0}, Landroidx/compose/ui/node/LayoutNode;->isPlaced()Z
@@ -340,7 +340,7 @@
     move-result-object p0
 
     .line 53
-    invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p0, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     .line 54
     move-result-object p0
@@ -352,7 +352,7 @@
     check-cast v1, Landroidx/compose/ui/platform/AndroidComposeView;
 
     .line 60
-    invoke-virtual {v1, p0, p2, p3}, Landroidx/compose/ui/platform/AndroidComposeView;->measureAndLayout-0kLqBqw(Landroidx/compose/ui/node/LayoutNode;J)V
+    invoke-virtual {v1, p0, p1, p2}, Landroidx/compose/ui/platform/AndroidComposeView;->measureAndLayout-0kLqBqw(Landroidx/compose/ui/node/LayoutNode;J)V
 
     .line 62
     const/4 p0, 0x0
@@ -387,34 +387,34 @@
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
     .line 81
-    new-instance p2, Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/StringBuilder;
 
     .line 83
-    const-string p3, "Index ("
+    const-string p2, "Index ("
 
     .line 85
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 87
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 90
-    const-string p1, ") is out of bound of [0, "
+    const-string p2, ") is out of bound of [0, "
 
     .line 93
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 95
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 98
-    const/16 p1, 0x29
+    const/16 p2, 0x29
 
     .line 101
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 103
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 106
     move-result-object p1

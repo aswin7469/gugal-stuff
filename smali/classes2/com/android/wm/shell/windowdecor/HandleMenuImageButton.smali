@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/HandleMenuImageButton;
 .super Landroid/widget/ImageButton;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -28,53 +28,42 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->enableAdditionalWindowsAboveStatusBar()Z
 
     .line 2
-    move-result v0
-
-    .line 5
-    if-nez v0, :cond_2
-
-    .line 6
     iget-object v0, p0, Lcom/android/wm/shell/windowdecor/HandleMenuImageButton;->taskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 8
+    .line 5
     if-eqz v0, :cond_0
 
-    .line 10
+    .line 7
     goto :goto_0
 
-    .line 12
+    .line 9
     :cond_0
     const/4 v0, 0x0
 
-    .line 13
+    .line 10
     :goto_0
     invoke-virtual {v0}, Landroid/app/ActivityManager$RunningTaskInfo;->isFreeform()Z
 
-    .line 14
+    .line 11
     move-result v0
 
-    .line 17
+    .line 14
     if-eqz v0, :cond_1
 
-    .line 18
-    goto :goto_1
+    .line 15
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->onHoverEvent(Landroid/view/MotionEvent;)Z
+
+    .line 17
+    move-result p0
 
     .line 20
+    return p0
+
+    .line 21
     :cond_1
     const/4 p0, 0x0
 
-    .line 21
-    return p0
-
     .line 22
-    :cond_2
-    :goto_1
-    invoke-super {p0, p1}, Landroid/widget/ImageButton;->onHoverEvent(Landroid/view/MotionEvent;)Z
-
-    .line 23
-    move-result p0
-
-    .line 26
     return p0
-    .line 27
+    .line 23
 .end method

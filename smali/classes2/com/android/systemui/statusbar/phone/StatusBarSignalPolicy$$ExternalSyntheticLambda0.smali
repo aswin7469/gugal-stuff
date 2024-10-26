@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -210,14 +210,14 @@
     if-eqz v0, :cond_6
 
     .line 95
-    const v0, 0x7f080b49    # @drawable/stat_sys_branded_vpn 'res/drawable/stat_sys_branded_vpn.xml'
+    const v0, 0x7f080b90    # @drawable/stat_sys_branded_vpn 'res/drawable/stat_sys_branded_vpn.xml'
 
     .line 97
     goto :goto_5
 
     .line 100
     :cond_6
-    const v0, 0x7f080b54    # @drawable/stat_sys_no_internet_branded_vpn 'res/drawable/stat_sys_no_internet_branded_vpn.xml'
+    const v0, 0x7f080b9b    # @drawable/stat_sys_no_internet_branded_vpn 'res/drawable/stat_sys_no_internet_branded_vpn.xml'
 
     .line 101
     goto :goto_5
@@ -227,14 +227,14 @@
     if-eqz v0, :cond_8
 
     .line 105
-    const v0, 0x7f080b62    # @drawable/stat_sys_vpn_ic 'res/drawable/stat_sys_vpn_ic.xml'
+    const v0, 0x7f080ba9    # @drawable/stat_sys_vpn_ic 'res/drawable/stat_sys_vpn_ic.xml'
 
     .line 107
     goto :goto_5
 
     .line 110
     :cond_8
-    const v0, 0x7f080b55    # @drawable/stat_sys_no_internet_vpn_ic 'res/drawable/stat_sys_no_internet_vpn_ic.xml'
+    const v0, 0x7f080b9c    # @drawable/stat_sys_no_internet_vpn_ic 'res/drawable/stat_sys_no_internet_vpn_ic.xml'
 
     .line 111
     :goto_5
@@ -247,7 +247,7 @@
     move-result-object v1
 
     .line 119
-    const v3, 0x7f1400fc    # @string/accessibility_vpn_on 'VPN on.'
+    const v3, 0x7f1300fc    # @string/accessibility_vpn_on 'VPN on.'
 
     .line 120
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

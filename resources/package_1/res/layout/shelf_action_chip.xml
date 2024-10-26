@@ -15,5 +15,5 @@
             android:id="@id/overlay_action_chip_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@android:string/config_networkOverLimitComponent" />
+            android:fontFamily="@android:string/config_misprovisionedBrandValue" />
 </LinearLayout>

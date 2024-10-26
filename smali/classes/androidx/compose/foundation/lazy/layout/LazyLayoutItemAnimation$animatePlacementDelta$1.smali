@@ -1,6 +1,6 @@
 .class final Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation$animatePlacementDelta$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -315,116 +315,110 @@
     iget-object p1, p1, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation;->placementDeltaAnimation:Landroidx/compose/animation/core/Animatable;
 
     .line 122
-    iget-object p1, p1, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {p1}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 124
-    iget-object p1, p1, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 126
-    invoke-virtual {p1}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 128
     move-result-object p1
 
-    .line 131
+    .line 127
     check-cast p1, Landroidx/compose/ui/unit/IntOffset;
 
-    .line 132
+    .line 128
     iget-wide v3, p1, Landroidx/compose/ui/unit/IntOffset;->packedValue:J
 
-    .line 134
+    .line 130
     iget-wide v6, p0, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation$animatePlacementDelta$1;->$totalDelta:J
 
-    .line 136
+    .line 132
     invoke-static {v3, v4, v6, v7}, Landroidx/compose/ui/unit/IntOffset;->minus-qkQi6aY(JJ)J
 
-    .line 138
+    .line 134
     move-result-wide v3
 
-    .line 141
+    .line 137
     iget-object p1, p0, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation$animatePlacementDelta$1;->this$0:Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation;
 
-    .line 142
+    .line 138
     iget-object v1, p1, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation;->placementDeltaAnimation:Landroidx/compose/animation/core/Animatable;
 
-    .line 144
+    .line 140
     new-instance v6, Landroidx/compose/ui/unit/IntOffset;
 
-    .line 146
+    .line 142
     invoke-direct {v6, v3, v4}, Landroidx/compose/ui/unit/IntOffset;-><init>(J)V
 
-    .line 148
+    .line 144
     new-instance v7, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation$animatePlacementDelta$1$1;
 
-    .line 151
+    .line 147
     invoke-direct {v7, p1, v3, v4}, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation$animatePlacementDelta$1$1;-><init>(Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation;J)V
 
-    .line 153
+    .line 149
     const/4 p1, 0x0
 
-    .line 156
+    .line 152
     iput-object p1, p0, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation$animatePlacementDelta$1;->L$0:Ljava/lang/Object;
 
-    .line 157
+    .line 153
     iput v2, p0, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation$animatePlacementDelta$1;->label:I
 
-    .line 159
+    .line 155
     const/4 p1, 0x0
 
-    .line 161
+    .line 157
     const/4 v9, 0x4
 
-    .line 162
+    .line 158
     move-object v3, v1
 
-    .line 163
+    .line 159
     move-object v4, v6
 
-    .line 164
+    .line 160
     move-object v6, p1
 
-    .line 165
+    .line 161
     move-object v8, p0
 
-    .line 166
+    .line 162
     invoke-static/range {v3 .. v9}, Landroidx/compose/animation/core/Animatable;->animateTo$default(Landroidx/compose/animation/core/Animatable;Ljava/lang/Object;Landroidx/compose/animation/core/AnimationSpec;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;I)Ljava/lang/Object;
 
-    .line 167
+    .line 163
     move-result-object p1
 
-    .line 170
+    .line 166
     if-ne p1, v0, :cond_7
 
-    .line 171
+    .line 167
     return-object v0
 
-    .line 173
+    .line 169
     :cond_7
     :goto_3
     iget-object p1, p0, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation$animatePlacementDelta$1;->this$0:Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation;
 
-    .line 174
+    .line 170
     sget v0, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation;->$r8$clinit:I
 
-    .line 176
+    .line 172
     const/4 v0, 0x0
 
-    .line 178
+    .line 174
     invoke-virtual {p1, v0}, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation;->setPlacementAnimationInProgress(Z)V
 
-    .line 179
+    .line 175
     iget-object p0, p0, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation$animatePlacementDelta$1;->this$0:Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation;
 
-    .line 182
+    .line 178
     iput-boolean v0, p0, Landroidx/compose/foundation/lazy/layout/LazyLayoutItemAnimation;->isRunningMovingAwayAnimation:Z
     :try_end_2
     .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 184
+    .line 180
     :catch_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 186
+    .line 182
     return-object p0
-    .line 188
+    .line 184
 .end method

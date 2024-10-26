@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/quickaffordance/FlashlightQuickAffordanceConfig;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig;
@@ -78,7 +78,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f0807b8    # @drawable/ic_flashlight_off 'res/drawable/ic_flashlight_off.xml'
+    const p0, 0x7f0807d7    # @drawable/ic_flashlight_off 'res/drawable/ic_flashlight_off.xml'
 
     .line 2
     return p0
@@ -151,7 +151,7 @@
     :try_start_0
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/policy/FlashlightControllerImpl;->mTorchAvailable:Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 5
     monitor-exit p0
@@ -160,16 +160,10 @@
     if-eqz p1, :cond_0
 
     .line 8
-    monitor-enter p0
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/FlashlightControllerImpl;->isEnabled()Z
 
     .line 10
-    :try_start_1
-    iget-boolean p1, p0, Lcom/android/systemui/statusbar/policy/FlashlightControllerImpl;->mFlashlightEnabled:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 11
-    monitor-exit p0
+    move-result p1
 
     .line 13
     if-nez p1, :cond_0
@@ -181,39 +175,29 @@
     goto :goto_0
 
     .line 17
-    :catchall_0
-    move-exception p1
-
-    .line 18
-    monitor-exit p0
-
-    .line 19
-    throw p1
-
-    .line 20
     :cond_0
     const/4 p1, 0x0
 
-    .line 21
+    .line 18
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/policy/FlashlightControllerImpl;->setFlashlight(Z)V
 
-    .line 22
+    .line 19
     sget-object p0, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$OnTriggeredResult$Handled;->INSTANCE:Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig$OnTriggeredResult$Handled;
 
-    .line 25
+    .line 22
     return-object p0
 
-    .line 27
-    :catchall_1
+    .line 24
+    :catchall_0
     move-exception p1
 
-    .line 28
+    .line 25
     monitor-exit p0
 
-    .line 29
+    .line 26
     throw p1
-    .line 30
+    .line 27
 .end method
 
 .method public final pickerName()Ljava/lang/String;
@@ -223,7 +207,7 @@
     iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/FlashlightQuickAffordanceConfig;->context:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1407e5    # @string/quick_settings_flashlight_label 'Flashlight'
+    const v0, 0x7f130840    # @string/quick_settings_flashlight_label 'Flashlight'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/keyguard/data/repository/TrustRepositoryImpl$isCurrentUserActiveUnlockRunning$5;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -87,7 +87,7 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 5
 
     .line 1
     sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
@@ -152,57 +152,63 @@
     iget v1, v1, Landroid/content/pm/UserInfo;->id:I
 
     .line 40
-    invoke-static {v1, v3}, Lcom/android/systemui/communal/data/repository/CommunalWidgetRepositoryImpl$restoreWidgets$1$$ExternalSyntheticOutline0;->m(ILjava/util/Map;)Ljava/lang/Object;
+    new-instance v4, Ljava/lang/Integer;
 
     .line 42
+    invoke-direct {v4, v1}, Ljava/lang/Integer;-><init>(I)V
+
+    .line 44
+    invoke-interface {v3, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 47
     move-result-object v1
 
-    .line 45
+    .line 50
     check-cast v1, Lcom/android/systemui/keyguard/shared/model/ActiveUnlockModel;
 
-    .line 46
+    .line 51
     const/4 v3, 0x0
 
-    .line 48
+    .line 53
     if-eqz v1, :cond_2
 
-    .line 49
+    .line 54
     iget-boolean v1, v1, Lcom/android/systemui/keyguard/shared/model/ActiveUnlockModel;->isRunning:Z
 
-    .line 51
+    .line 56
     if-eqz v1, :cond_2
 
-    .line 53
+    .line 58
     move v3, v2
 
-    .line 55
+    .line 60
     :cond_2
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 56
+    .line 61
     move-result-object v1
 
-    .line 59
+    .line 64
     iput v2, p0, Lcom/android/systemui/keyguard/data/repository/TrustRepositoryImpl$isCurrentUserActiveUnlockRunning$5;->label:I
 
-    .line 60
+    .line 65
     invoke-interface {p1, v1, p0}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 62
+    .line 67
     move-result-object p0
 
-    .line 65
+    .line 70
     if-ne p0, v0, :cond_3
 
-    .line 66
+    .line 71
     return-object v0
 
-    .line 68
+    .line 73
     :cond_3
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 69
+    .line 74
     return-object p0
-    .line 71
+    .line 76
 .end method

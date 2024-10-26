@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -262,7 +262,7 @@
     move-result-object p1
 
     .line 8
-    const v0, 0x7f07027f    # @dimen/display_cutout_margin_consumption '0.0px'
+    const v0, 0x7f0702a1    # @dimen/display_cutout_margin_consumption '0.0px'
 
     .line 9
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -411,7 +411,6 @@
 
     .line 34
     return-void
-    .line 36
 .end method
 
 .method public final onFinishInflate()V
@@ -421,7 +420,7 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b0110    # @id/battery
+    const v0, 0x7f0a0115    # @id/battery
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -436,7 +435,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mBattery:Lcom/android/systemui/plugins/DarkIconDispatcher$DarkReceiver;
 
     .line 14
-    const v0, 0x7f0b01dc    # @id/clock
+    const v0, 0x7f0a01e7    # @id/clock
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -451,7 +450,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mClock:Lcom/android/systemui/statusbar/policy/Clock;
 
     .line 25
-    const v0, 0x7f0b0240    # @id/cutout_space_view
+    const v0, 0x7f0a024b    # @id/cutout_space_view
 
     .line 27
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -469,7 +468,7 @@
     move-result-object v0
 
     .line 39
-    const v1, 0x7f07027f    # @dimen/display_cutout_margin_consumption '0.0px'
+    const v1, 0x7f0702a1    # @dimen/display_cutout_margin_consumption '0.0px'
 
     .line 40
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1007,7 +1006,7 @@
     iput v3, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 26
-    const v0, 0x7f0b07c0    # @id/system_icons
+    const v0, 0x7f0a07ef    # @id/system_icons
 
     .line 28
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1028,7 +1027,7 @@
     move-result-object v5
 
     .line 42
-    const v6, 0x7f0709df    # @dimen/status_bar_system_icons_height '@dimen/status_bar_icon_size_sp'
+    const v6, 0x7f070a37    # @dimen/status_bar_system_icons_height '@dimen/status_bar_icon_size_sp'
 
     .line 43
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1056,7 +1055,7 @@
     move-result-object v3
 
     .line 62
-    const v4, 0x7f0709dc    # @dimen/status_bar_padding_start '4.0dp'
+    const v4, 0x7f070a34    # @dimen/status_bar_padding_start '4.0dp'
 
     .line 63
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1065,7 +1064,7 @@
     move-result v3
 
     .line 69
-    const v4, 0x7f0b0766    # @id/status_bar_contents
+    const v4, 0x7f0a0795    # @id/status_bar_contents
 
     .line 70
     invoke-virtual {p0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1080,7 +1079,7 @@
     move-result-object v5
 
     .line 80
-    const v6, 0x7f0709dd    # @dimen/status_bar_padding_top '0.0dp'
+    const v6, 0x7f070a35    # @dimen/status_bar_padding_top '0.0dp'
 
     .line 81
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1095,7 +1094,7 @@
     move-result-object v6
 
     .line 91
-    const v7, 0x7f0709db    # @dimen/status_bar_padding_end '4.0dp'
+    const v7, 0x7f070a33    # @dimen/status_bar_padding_end '4.0dp'
 
     .line 92
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1107,7 +1106,7 @@
     invoke-virtual {v4, v3, v5, v6, v1}, Landroid/view/View;->setPaddingRelative(IIII)V
 
     .line 99
-    const v4, 0x7f0b0579    # @id/notification_lights_out
+    const v4, 0x7f0a059e    # @id/notification_lights_out
 
     .line 102
     invoke-virtual {p0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1131,7 +1130,7 @@
     move-result-object v1
 
     .line 119
-    const v3, 0x7f0709d0    # @dimen/status_bar_icons_padding_start '3.0dp'
+    const v3, 0x7f070a28    # @dimen/status_bar_icons_padding_start '3.0dp'
 
     .line 120
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1146,7 +1145,7 @@
     move-result-object v3
 
     .line 130
-    const v4, 0x7f0709d1    # @dimen/status_bar_icons_padding_top '0.0dp'
+    const v4, 0x7f070a29    # @dimen/status_bar_icons_padding_top '0.0dp'
 
     .line 131
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1161,7 +1160,7 @@
     move-result-object v4
 
     .line 141
-    const v5, 0x7f0709cf    # @dimen/status_bar_icons_padding_end '4.0dp'
+    const v5, 0x7f070a27    # @dimen/status_bar_icons_padding_end '4.0dp'
 
     .line 142
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1176,7 +1175,7 @@
     move-result-object v5
 
     .line 152
-    const v6, 0x7f0709ce    # @dimen/status_bar_icons_padding_bottom '0.0dp'
+    const v6, 0x7f070a26    # @dimen/status_bar_icons_padding_bottom '0.0dp'
 
     .line 153
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

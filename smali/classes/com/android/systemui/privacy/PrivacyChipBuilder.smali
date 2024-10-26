@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/privacy/PrivacyChipBuilder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -24,7 +24,7 @@
     iput-object p1, p0, Lcom/android/systemui/privacy/PrivacyChipBuilder;->context:Landroid/content/Context;
 
     .line 5
-    const v0, 0x7f140718    # @string/ongoing_privacy_dialog_separator ', '
+    const v0, 0x7f130773    # @string/ongoing_privacy_dialog_separator ', '
 
     .line 7
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -36,7 +36,7 @@
     iput-object v0, p0, Lcom/android/systemui/privacy/PrivacyChipBuilder;->separator:Ljava/lang/String;
 
     .line 14
-    const v0, 0x7f140715    # @string/ongoing_privacy_dialog_last_separator ' and '
+    const v0, 0x7f130770    # @string/ongoing_privacy_dialog_last_separator ' and '
 
     .line 16
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

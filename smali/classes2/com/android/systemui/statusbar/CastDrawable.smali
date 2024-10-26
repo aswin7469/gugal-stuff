@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/CastDrawable;
 .super Landroid/graphics/drawable/DrawableWrapper;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -144,7 +144,7 @@
     invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/DrawableWrapper;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
     .line 2
-    const p2, 0x7f080702    # @drawable/ic_cast 'res/drawable/ic_cast.xml'
+    const p2, 0x7f080718    # @drawable/ic_cast 'res/drawable/ic_cast.xml'
 
     .line 5
     invoke-virtual {p1, p2, p4}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -162,7 +162,7 @@
     invoke-virtual {p0, p2}, Landroid/graphics/drawable/DrawableWrapper;->setDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 16
-    const p2, 0x7f080704    # @drawable/ic_cast_connected_fill 'res/drawable/ic_cast_connected_fill.xml'
+    const p2, 0x7f08071a    # @drawable/ic_cast_connected_fill 'res/drawable/ic_cast_connected_fill.xml'
 
     .line 19
     invoke-virtual {p1, p2, p4}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -180,7 +180,7 @@
     iput-object p2, p0, Lcom/android/systemui/statusbar/CastDrawable;->mFillDrawable:Landroid/graphics/drawable/Drawable;
 
     .line 30
-    const p2, 0x7f0709c6    # @dimen/status_bar_horizontal_padding '2.5sp'
+    const p2, 0x7f070a1e    # @dimen/status_bar_horizontal_padding '2.5sp'
 
     .line 32
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

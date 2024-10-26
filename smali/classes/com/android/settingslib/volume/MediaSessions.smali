@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/volume/MediaSessions;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -532,40 +532,31 @@
     iget-boolean v5, v2, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->sentRemote:Z
 
     .line 209
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v4, v5, v1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)V
 
     .line 211
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 214
-    move-result-object v4
-
-    .line 217
-    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 218
     :cond_6
     iget-boolean v4, v2, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->sentRemote:Z
 
-    .line 221
+    .line 214
     if-eqz v4, :cond_5
 
-    .line 223
+    .line 216
     iget-object v4, p0, Lcom/android/settingslib/volume/MediaSessions;->mCallbacks:Lcom/android/systemui/volume/VolumeDialogControllerImpl$MediaSessionsCallbacks;
 
-    .line 225
+    .line 218
     invoke-virtual {v4, v0}, Lcom/android/systemui/volume/VolumeDialogControllerImpl$MediaSessionsCallbacks;->onRemoteRemoved(Landroid/media/session/MediaSession$Token;)V
 
-    .line 227
+    .line 220
     iput-boolean v3, v2, Lcom/android/settingslib/volume/MediaSessions$MediaControllerRecord;->sentRemote:Z
 
-    .line 230
+    .line 223
     goto :goto_1
 
-    .line 232
+    .line 225
     :cond_7
     return-void
-    .line 233
+    .line 226
 .end method
 
 .method public final updateRemoteH(Landroid/media/session/MediaSession$Token;Ljava/lang/String;Landroid/media/session/MediaController$PlaybackInfo;)V
@@ -632,7 +623,7 @@
     const-string v2, " volume: "
 
     .line 37
-    invoke-static {v1, v2, p1}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, p1}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 39
     move-result-object v1

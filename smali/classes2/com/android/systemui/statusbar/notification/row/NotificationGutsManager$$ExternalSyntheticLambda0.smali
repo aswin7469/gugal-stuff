@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -82,7 +82,7 @@
     if-nez v4, :cond_1
 
     .line 26
-    iget-object v4, v0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
+    iget-object v4, v0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
     .line 28
     iget-object v5, v0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mPresenter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
@@ -100,54 +100,51 @@
     xor-int/2addr v2, v5
 
     .line 38
-    check-cast v4, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
-
-    .line 39
     invoke-virtual {v4, v1, v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;->onHeightChanged(Lcom/android/systemui/statusbar/notification/row/ExpandableView;Z)V
 
-    .line 41
+    .line 39
     :cond_1
     iget-object v2, v0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mNotificationGutsExposed:Lcom/android/systemui/statusbar/notification/row/NotificationGuts;
 
-    .line 44
+    .line 42
     if-ne v2, p1, :cond_2
 
-    .line 46
+    .line 44
     const/4 p1, 0x0
 
-    .line 48
+    .line 46
     iput-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mNotificationGutsExposed:Lcom/android/systemui/statusbar/notification/row/NotificationGuts;
 
-    .line 49
+    .line 47
     iput-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mGutsMenuItem:Lcom/android/systemui/plugins/statusbar/NotificationMenuRowPlugin$MenuItem;
 
-    .line 51
+    .line 49
     :cond_2
     iget-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mGutsListener:Lcom/android/systemui/statusbar/notification/collection/coordinator/GutsCoordinator$mGutsListener$1;
 
-    .line 53
+    .line 51
     if-eqz p1, :cond_3
 
-    .line 55
+    .line 53
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda0;->f$2:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 57
+    .line 55
     invoke-virtual {p1, p0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/GutsCoordinator$mGutsListener$1;->onGutsClose(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
 
-    .line 59
+    .line 57
     :cond_3
     iget-object p0, v1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 62
+    .line 60
     iget-object p1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
 
-    .line 64
+    .line 62
     check-cast p1, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
-    .line 66
+    .line 64
     invoke-virtual {p1, p0, v3}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->setGutsShown(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
 
-    .line 68
+    .line 66
     return-void
-    .line 71
+    .line 69
 .end method

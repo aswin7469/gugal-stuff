@@ -1,6 +1,6 @@
 .class final Lcom/android/keyguard/logging/BiometricUnlockLogger$logStartWakeAndUnlock$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -66,7 +66,7 @@
     const-string/jumbo v0, "}"
 
     .line 13
-    invoke-static {p1, v0, p0}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p1, v0, p0}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 16
     move-result-object p0
@@ -129,22 +129,19 @@
 
     .line 42
     :goto_0
-    const-string p1, "startWakeAndUnlock("
+    const-string/jumbo p1, "startWakeAndUnlock("
 
     .line 44
     const-string v0, ")"
 
-    .line 46
-    invoke-static {p1, p0, v0}, Landroidx/compose/runtime/ComposerKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 47
+    invoke-static {p1, p0, v0}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 48
+    .line 49
     move-result-object p0
 
-    .line 51
-    return-object p0
-
     .line 52
-    nop
+    return-object p0
 
     .line 53
     :pswitch_data_0

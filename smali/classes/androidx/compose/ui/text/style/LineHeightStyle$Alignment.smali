@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/text/style/LineHeightStyle$Alignment;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -96,18 +96,18 @@
     new-instance p0, Ljava/lang/IllegalStateException;
 
     .line 21
-    const-string v0, "topRatio should be in [0..1] range or -1"
+    const-string/jumbo v0, "topRatio should be in [0..1] range or -1"
 
     .line 23
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 25
+    .line 26
     move-result-object v0
 
-    .line 28
+    .line 29
     invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 29
+    .line 30
     throw p0
-    .line 32
+    .line 33
 .end method

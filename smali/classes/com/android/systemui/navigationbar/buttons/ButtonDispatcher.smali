@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/navigationbar/buttons/ButtonDispatcher;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -184,7 +184,7 @@
     instance-of v0, p1, Lcom/android/systemui/navigationbar/buttons/ButtonInterface;
 
     .line 66
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     .line 68
     check-cast p1, Lcom/android/systemui/navigationbar/buttons/ButtonInterface;
@@ -206,18 +206,25 @@
 
     .line 80
     :cond_4
-    iget-object p0, p0, Lcom/android/systemui/navigationbar/buttons/ButtonDispatcher;->mImageDrawable:Lcom/android/systemui/navigationbar/buttons/KeyButtonDrawable;
+    iget-object v0, p0, Lcom/android/systemui/navigationbar/buttons/ButtonDispatcher;->mImageDrawable:Lcom/android/systemui/navigationbar/buttons/KeyButtonDrawable;
 
     .line 83
-    if-eqz p0, :cond_5
+    if-eqz v0, :cond_5
 
     .line 85
-    invoke-interface {p1, p0}, Lcom/android/systemui/navigationbar/buttons/ButtonInterface;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-interface {p1, v0}, Lcom/android/systemui/navigationbar/buttons/ButtonInterface;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 87
     :cond_5
-    return-void
+    iget-boolean p0, p0, Lcom/android/systemui/navigationbar/buttons/ButtonDispatcher;->mVertical:Z
+
     .line 90
+    invoke-interface {p1, p0}, Lcom/android/systemui/navigationbar/buttons/ButtonInterface;->setVertical(Z)V
+
+    .line 92
+    :cond_6
+    return-void
+    .line 95
 .end method
 
 .method public final getAlpha()F

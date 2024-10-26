@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/common/shared/model/NotificationContainerBounds;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -57,51 +57,34 @@
     return-void
 .end method
 
-.method public static copy$default(Lcom/android/systemui/common/shared/model/NotificationContainerBounds;FFZI)Lcom/android/systemui/common/shared/model/NotificationContainerBounds;
+.method public static copy$default(Lcom/android/systemui/common/shared/model/NotificationContainerBounds;FZI)Lcom/android/systemui/common/shared/model/NotificationContainerBounds;
     .locals 1
 
     .line 1
-    and-int/lit8 v0, p4, 0x1
+    iget v0, p0, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;->bottom:F
 
     .line 2
-    if-eqz v0, :cond_0
+    and-int/lit8 p3, p3, 0x4
 
     .line 4
-    iget p1, p0, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;->top:F
+    if-eqz p3, :cond_0
 
     .line 6
-    :cond_0
-    and-int/lit8 v0, p4, 0x2
+    iget-boolean p2, p0, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;->isAnimated:Z
 
     .line 8
-    if-eqz v0, :cond_1
-
-    .line 10
-    iget p2, p0, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;->bottom:F
-
-    .line 12
-    :cond_1
-    and-int/lit8 p4, p4, 0x4
-
-    .line 14
-    if-eqz p4, :cond_2
-
-    .line 16
-    iget-boolean p3, p0, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;->isAnimated:Z
-
-    .line 18
-    :cond_2
+    :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 20
+    .line 10
     new-instance p0, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;
 
-    .line 23
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;-><init>(FFZ)V
+    .line 13
+    invoke-direct {p0, p1, v0, p2}, Lcom/android/systemui/common/shared/model/NotificationContainerBounds;-><init>(FFZ)V
 
-    .line 25
+    .line 15
     return-object p0
-    .line 28
+    .line 18
 .end method
 
 
@@ -232,7 +215,6 @@
 
     .line 23
     return p0
-    .line 24
 .end method
 
 .method public final toString()Ljava/lang/String;

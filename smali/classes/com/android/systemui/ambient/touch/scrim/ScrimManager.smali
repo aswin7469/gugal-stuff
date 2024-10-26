@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/ambient/touch/scrim/ScrimManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/android/systemui/ambient/touch/scrim/ScrimController;Lcom/android/systemui/ambient/touch/scrim/ScrimController;Lcom/android/systemui/statusbar/policy/KeyguardStateController;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/android/systemui/ambient/touch/scrim/BouncerScrimController;Lcom/android/systemui/ambient/touch/scrim/BouncerlessScrimController;Lcom/android/systemui/statusbar/policy/KeyguardStateController;)V
     .locals 1
 
     .line 1
@@ -112,10 +112,10 @@
     iget-object v0, p0, Lcom/android/systemui/ambient/touch/scrim/ScrimManager;->mCallbacks:Ljava/util/HashSet;
 
     .line 22
-    new-instance v1, Lcom/android/systemui/ambient/touch/scrim/ScrimManager$$ExternalSyntheticLambda0;
+    new-instance v1, Lcom/android/systemui/ambient/touch/scrim/ScrimManager$$ExternalSyntheticLambda2;
 
     .line 24
-    invoke-direct {v1, p0}, Lcom/android/systemui/ambient/touch/scrim/ScrimManager$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/ambient/touch/scrim/ScrimManager;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/ambient/touch/scrim/ScrimManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/ambient/touch/scrim/ScrimManager;)V
 
     .line 26
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->forEach(Ljava/util/function/Consumer;)V

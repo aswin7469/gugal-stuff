@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/dialog/MediaOutputAdapter$MediaDeviceViewHolder;
 .super Lcom/android/systemui/media/dialog/MediaOutputBaseAdapter$MediaDeviceBaseViewHolder;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -67,6 +67,7 @@
     .line 24
     :goto_0
     return-void
+    .line 27
 .end method
 
 .method public final setUpContentDescriptionForView(Landroid/view/View;Lcom/android/settingslib/media/MediaDevice;)V
@@ -91,14 +92,14 @@
     if-ne v0, v1, :cond_0
 
     .line 11
-    const v0, 0x7f140055    # @string/accessibility_bluetooth_name 'Connected to %s.'
+    const v0, 0x7f130056    # @string/accessibility_bluetooth_name 'Connected to %s.'
 
     .line 13
     goto :goto_0
 
     .line 16
     :cond_0
-    const v0, 0x7f14005a    # @string/accessibility_cast_name 'Connected to %s.'
+    const v0, 0x7f13005b    # @string/accessibility_cast_name 'Connected to %s.'
 
     .line 17
     :goto_0

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/privacy/PrivacyDialogV2$setItemExpansionBehavior$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -68,7 +68,7 @@
     iget-object v0, p0, Lcom/android/systemui/privacy/PrivacyDialogV2$setItemExpansionBehavior$2;->$expandToggle:Landroid/widget/ImageView;
 
     .line 18
-    const v2, 0x7f080aa7    # @drawable/privacy_dialog_expand_toggle_down 'res/drawable/privacy_dialog_expand_toggle_down.xml'
+    const v2, 0x7f080ae2    # @drawable/privacy_dialog_expand_toggle_down 'res/drawable/privacy_dialog_expand_toggle_down.xml'
 
     .line 20
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -89,7 +89,7 @@
     move-result-object v2
 
     .line 36
-    const v3, 0x7f140774    # @string/privacy_dialog_expand_action 'Expand and show options'
+    const v3, 0x7f1307d0    # @string/privacy_dialog_expand_action 'Expand and show options'
 
     .line 37
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -117,7 +117,7 @@
     iget-object v0, p0, Lcom/android/systemui/privacy/PrivacyDialogV2$setItemExpansionBehavior$2;->$expandToggle:Landroid/widget/ImageView;
 
     .line 54
-    const v2, 0x7f080aa8    # @drawable/privacy_dialog_expand_toggle_up 'res/drawable/privacy_dialog_expand_toggle_up.xml'
+    const v2, 0x7f080ae3    # @drawable/privacy_dialog_expand_toggle_up 'res/drawable/privacy_dialog_expand_toggle_up.xml'
 
     .line 56
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -138,7 +138,7 @@
     move-result-object v2
 
     .line 72
-    const v3, 0x7f140772    # @string/privacy_dialog_collapse_action 'Collapse'
+    const v3, 0x7f1307ce    # @string/privacy_dialog_collapse_action 'Collapse'
 
     .line 73
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/AppControlView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -29,7 +29,7 @@
     .locals 1
 
     .line 1
-    const v0, 0x7f0b0379    # @id/icon
+    const v0, 0x7f0a0399    # @id/icon
 
     .line 2
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;
@@ -44,7 +44,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/AppControlView;->iconView:Landroid/widget/ImageView;
 
     .line 11
-    const v0, 0x7f0b00c8    # @id/app_name
+    const v0, 0x7f0a00cb    # @id/app_name
 
     .line 13
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;
@@ -59,7 +59,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/AppControlView;->channelName:Landroid/widget/TextView;
 
     .line 22
-    const v0, 0x7f0b0806    # @id/toggle
+    const v0, 0x7f0a0835    # @id/toggle
 
     .line 24
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;

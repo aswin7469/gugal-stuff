@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/bottomsheet/BottomSheetDialog;
 .super Landroidx/appcompat/app/AppCompatDialog;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -65,7 +65,7 @@
     move-result-object v0
 
     .line 9
-    const v1, 0x7f0e0099    # @layout/design_bottom_sheet_dialog 'res/layout/design_bottom_sheet_dialog.xml'
+    const v1, 0x7f0d00a2    # @layout/design_bottom_sheet_dialog 'res/layout/design_bottom_sheet_dialog.xml'
 
     .line 10
     const/4 v2, 0x0
@@ -83,7 +83,7 @@
     iput-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog;->container:Landroid/widget/FrameLayout;
 
     .line 20
-    const v1, 0x7f0b0229    # @id/coordinator
+    const v1, 0x7f0a0234    # @id/coordinator
 
     .line 22
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -101,7 +101,7 @@
     iget-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog;->container:Landroid/widget/FrameLayout;
 
     .line 33
-    const v1, 0x7f0b0254    # @id/design_bottom_sheet
+    const v1, 0x7f0a0260    # @id/design_bottom_sheet
 
     .line 35
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -639,7 +639,7 @@
     iget-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog;->container:Landroid/widget/FrameLayout;
 
     .line 5
-    const v1, 0x7f0b0229    # @id/coordinator
+    const v1, 0x7f0a0234    # @id/coordinator
 
     .line 7
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -721,7 +721,7 @@
 
     .line 60
     :goto_0
-    const p1, 0x7f0b081f    # @id/touch_outside
+    const p1, 0x7f0a084d    # @id/touch_outside
 
     .line 63
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;

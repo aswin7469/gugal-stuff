@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/privacy/PrivacyDialogV2$onCreate$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -132,7 +132,7 @@
     invoke-interface {v1, p1, v3}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 62
-    const v1, 0x7f0b0606    # @id/privacy_dialog_items_container
+    const v1, 0x7f0a062f    # @id/privacy_dialog_items_container
 
     .line 65
     invoke-virtual {p0, v1}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;
@@ -169,7 +169,7 @@
     move-result-object v7
 
     .line 86
-    const v8, 0x7f0b05fd    # @id/privacy_dialog_close_app_button
+    const v8, 0x7f0a0626    # @id/privacy_dialog_close_app_button
 
     .line 87
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -231,7 +231,7 @@
     invoke-virtual {v7, v4}, Landroid/view/View;->setEnabled(Z)V
 
     .line 124
-    const v9, 0x7f0b0601    # @id/privacy_dialog_item_header_expand_toggle
+    const v9, 0x7f0a062a    # @id/privacy_dialog_item_header_expand_toggle
 
     .line 127
     invoke-virtual {v7, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -255,7 +255,7 @@
     iget-object v8, v8, Lcom/android/systemui/privacy/PrivacyDialogV2$PrivacyElement;->applicationName:Ljava/lang/CharSequence;
 
     .line 144
-    const v9, 0x7f0b0603    # @id/privacy_dialog_item_header_icon
+    const v9, 0x7f0a062c    # @id/privacy_dialog_item_header_icon
 
     .line 146
     invoke-virtual {v7, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -270,7 +270,7 @@
     check-cast v9, Landroid/widget/ImageView;
 
     .line 156
-    const v11, 0x7f080aa5    # @drawable/privacy_dialog_check_icon 'res/drawable/privacy_dialog_check_icon.xml'
+    const v11, 0x7f080ae0    # @drawable/privacy_dialog_check_icon 'res/drawable/privacy_dialog_check_icon.xml'
 
     .line 158
     invoke-virtual {p0, v11}, Lcom/android/systemui/privacy/PrivacyDialogV2;->getMutableDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -288,7 +288,7 @@
     move-result-object v9
 
     .line 171
-    const v11, 0x7f140771    # @string/privacy_dialog_close_app_message '%1$s closed'
+    const v11, 0x7f1307cd    # @string/privacy_dialog_close_app_message '%1$s closed'
 
     .line 172
     filled-new-array {v8}, [Ljava/lang/Object;
@@ -303,7 +303,7 @@
     move-result-object v8
 
     .line 182
-    const v9, 0x7f0b0604    # @id/privacy_dialog_item_header_summary
+    const v9, 0x7f0a062d    # @id/privacy_dialog_item_header_summary
 
     .line 183
     invoke-virtual {v7, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -324,7 +324,7 @@
     invoke-virtual {v9, v8}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 198
-    const v8, 0x7f0b0602    # @id/privacy_dialog_item_header_expanded_layout
+    const v8, 0x7f0a062b    # @id/privacy_dialog_item_header_expanded_layout
 
     .line 201
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;

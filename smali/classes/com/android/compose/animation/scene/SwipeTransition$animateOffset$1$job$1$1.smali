@@ -1,6 +1,6 @@
 .class final Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -69,161 +69,146 @@
     iget-boolean v0, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->$isTargetGreater:Z
 
     .line 10
-    iget-object p1, p1, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
-
-    .line 12
     if-eqz v0, :cond_1
 
-    .line 14
+    .line 12
     iget-boolean v0, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->$startedWhenOvercrollingTargetScene:Z
 
-    .line 16
+    .line 14
     if-eqz v0, :cond_0
 
-    .line 18
-    iget-object p1, p1, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
+    .line 16
+    invoke-virtual {p1}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
-    .line 20
-    invoke-virtual {p1}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
+    .line 18
+    move-result-object p1
+
+    .line 21
+    check-cast p1, Ljava/lang/Number;
 
     .line 22
-    move-result-object p1
-
-    .line 25
-    check-cast p1, Ljava/lang/Number;
-
-    .line 26
     invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
+
+    .line 24
+    move-result p1
+
+    .line 27
+    iget v0, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->$targetOffset:F
 
     .line 28
-    move-result p1
-
-    .line 31
-    iget v0, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->$targetOffset:F
-
-    .line 32
     cmpl-float p1, p1, v0
 
-    .line 34
+    .line 30
     if-ltz p1, :cond_3
 
-    .line 36
+    .line 32
     goto :goto_0
 
-    .line 38
+    .line 34
     :cond_0
-    iget-object p1, p1, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
+    invoke-virtual {p1}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
-    .line 39
-    invoke-virtual {p1}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 41
+    .line 35
     move-result-object p1
 
-    .line 44
+    .line 38
     check-cast p1, Ljava/lang/Number;
 
-    .line 45
+    .line 39
     invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
-    .line 47
+    .line 41
     move-result p1
 
-    .line 50
+    .line 44
     iget v0, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->$targetOffset:F
 
-    .line 51
+    .line 45
     cmpl-float p1, p1, v0
 
-    .line 53
+    .line 47
     if-lez p1, :cond_3
 
-    .line 55
+    .line 49
     goto :goto_0
 
-    .line 57
+    .line 51
     :cond_1
     iget-boolean v0, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->$startedWhenOvercrollingTargetScene:Z
 
-    .line 58
+    .line 52
     if-eqz v0, :cond_2
 
+    .line 54
+    invoke-virtual {p1}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
+
+    .line 56
+    move-result-object p1
+
+    .line 59
+    check-cast p1, Ljava/lang/Number;
+
     .line 60
-    iget-object p1, p1, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
+    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
     .line 62
-    invoke-virtual {p1}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
+    move-result p1
 
-    .line 64
-    move-result-object p1
+    .line 65
+    iget v0, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->$targetOffset:F
 
-    .line 67
-    check-cast p1, Ljava/lang/Number;
+    .line 66
+    cmpg-float p1, p1, v0
 
     .line 68
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
-
-    .line 70
-    move-result p1
-
-    .line 73
-    iget v0, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->$targetOffset:F
-
-    .line 74
-    cmpg-float p1, p1, v0
-
-    .line 76
     if-gtz p1, :cond_3
 
-    .line 78
+    .line 70
     goto :goto_0
 
-    .line 80
+    .line 72
     :cond_2
-    iget-object p1, p1, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
+    invoke-virtual {p1}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
-    .line 81
-    invoke-virtual {p1}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 83
+    .line 73
     move-result-object p1
 
-    .line 86
+    .line 76
     check-cast p1, Ljava/lang/Number;
 
-    .line 87
+    .line 77
     invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
-    .line 89
+    .line 79
     move-result p1
 
-    .line 92
+    .line 82
     iget v0, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->$targetOffset:F
 
-    .line 93
+    .line 83
     cmpg-float p1, p1, v0
 
-    .line 95
+    .line 85
     if-gez p1, :cond_3
 
-    .line 97
+    .line 87
     :goto_0
     iget-object p1, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->this$0:Lcom/android/compose/animation/scene/SwipeTransition;
 
-    .line 99
+    .line 89
     iget-object p0, p0, Lcom/android/compose/animation/scene/SwipeTransition$animateOffset$1$job$1$1;->$targetScene:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 101
+    .line 91
     iput-object p0, p1, Lcom/android/compose/animation/scene/SwipeTransition;->bouncingScene:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 103
+    .line 93
     invoke-virtual {p1}, Lcom/android/compose/animation/scene/TransitionState$Transition;->getCurrentOverscrollSpec$frameworks__base__packages__SystemUI__compose__scene__android_common__PlatformComposeSceneTransitionLayout()Lcom/android/compose/animation/scene/OverscrollSpecImpl;
 
-    .line 105
+    .line 95
     :cond_3
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 108
+    .line 98
     return-object p0
-    .line 110
+    .line 100
 .end method

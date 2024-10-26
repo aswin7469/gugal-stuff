@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/NotifBindPipeline;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -64,23 +64,20 @@
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/row/NotifBindPipeline$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/notification/row/NotifBindPipeline;)V
 
     .line 33
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 36
     new-instance p2, Lcom/android/systemui/statusbar/notification/row/NotificationEntryProcessorFactoryLooperImpl$HandlerProcessor;
 
-    .line 39
+    .line 36
     iget-object p3, p3, Lcom/android/systemui/statusbar/notification/row/NotificationEntryProcessorFactoryLooperImpl;->mMainLooper:Landroid/os/Looper;
 
-    .line 41
+    .line 38
     invoke-direct {p2, p3, p1}, Lcom/android/systemui/statusbar/notification/row/NotificationEntryProcessorFactoryLooperImpl$HandlerProcessor;-><init>(Landroid/os/Looper;Lcom/android/systemui/statusbar/notification/row/NotifBindPipeline$$ExternalSyntheticLambda0;)V
 
-    .line 43
+    .line 40
     iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotifBindPipeline;->mStartProcessor:Lcom/android/systemui/statusbar/notification/row/NotificationEntryProcessorFactoryLooperImpl$HandlerProcessor;
 
-    .line 46
+    .line 43
     return-void
-    .line 48
+    .line 45
 .end method
 
 

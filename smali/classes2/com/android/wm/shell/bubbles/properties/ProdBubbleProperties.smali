@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/properties/ProdBubbleProperties;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/bubbles/properties/BubbleProperties;
@@ -29,38 +29,24 @@
     sget-object v0, Lcom/android/wm/shell/Flags;->FEATURE_FLAGS:Lcom/android/wm/shell/FeatureFlagsImpl;
 
     .line 9
-    invoke-virtual {v0}, Lcom/android/wm/shell/FeatureFlagsImpl;->enableBubbleBar()Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 11
-    move-result v0
-
-    .line 14
-    if-nez v0, :cond_0
-
-    .line 15
     const-string v0, "persist.wm.debug.bubble_bar"
 
-    .line 17
+    .line 14
     const/4 v1, 0x0
 
-    .line 19
+    .line 16
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    .line 20
+    .line 17
     move-result v0
 
-    .line 23
-    if-eqz v0, :cond_1
+    .line 20
+    sput-boolean v0, Lcom/android/wm/shell/bubbles/properties/ProdBubbleProperties;->_isBubbleBarEnabled:Z
 
-    .line 24
-    :cond_0
-    const/4 v1, 0x1
-
-    .line 26
-    :cond_1
-    sput-boolean v1, Lcom/android/wm/shell/bubbles/properties/ProdBubbleProperties;->_isBubbleBarEnabled:Z
-
-    .line 27
+    .line 21
     return-void
-    .line 29
+    .line 23
 .end method

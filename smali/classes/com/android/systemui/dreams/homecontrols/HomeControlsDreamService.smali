@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;
 .super Landroid/service/dreams/DreamService;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -432,7 +432,7 @@
 .end method
 
 .method public final onAttachedToWindow()V
-    .locals 11
+    .locals 12
 
     .line 1
     invoke-super {p0}, Landroid/service/dreams/DreamService;->onAttachedToWindow()V
@@ -474,155 +474,182 @@
     iget-object v1, p0, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;->taskFragmentFactory:Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent$Factory;
 
     .line 28
-    new-instance v2, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService$onAttachedToWindow$2;
+    new-instance v3, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService$onAttachedToWindow$2;
 
     .line 30
-    invoke-direct {v2, p0}, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService$onAttachedToWindow$2;-><init>(Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;)V
+    invoke-direct {v3, p0}, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService$onAttachedToWindow$2;-><init>(Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;)V
 
     .line 32
-    new-instance v10, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService$onAttachedToWindow$3;
+    new-instance v11, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService$onAttachedToWindow$3;
 
     .line 35
-    const-class v6, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;
+    const-class v7, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;
 
     .line 37
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
     .line 39
-    const-string v7, "onTaskFragmentInfoChanged"
+    const-string v8, "onTaskFragmentInfoChanged"
 
     .line 40
-    const-string v8, "onTaskFragmentInfoChanged(Landroid/window/TaskFragmentInfo;)V"
+    const-string v9, "onTaskFragmentInfoChanged(Landroid/window/TaskFragmentInfo;)V"
 
     .line 42
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     .line 44
-    move-object v3, v10
+    move-object v4, v11
 
     .line 45
-    move-object v5, p0
+    move-object v6, p0
 
     .line 46
-    invoke-direct/range {v3 .. v9}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v4 .. v10}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 47
-    new-instance v3, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService$onAttachedToWindow$4;
+    new-instance v5, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService$onAttachedToWindow$4;
 
     .line 50
-    invoke-direct {v3, p0}, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService$onAttachedToWindow$4;-><init>(Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;)V
+    invoke-direct {v5, p0}, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService$onAttachedToWindow$4;-><init>(Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;)V
 
     .line 52
-    invoke-interface {v1, v0, v2, v10, v3}, Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent$Factory;->create(Landroid/app/Activity;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;)Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent;
+    check-cast v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$36;
 
     .line 55
-    move-result-object v0
+    new-instance v7, Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent;
 
-    .line 58
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 57
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$36;->this$0:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;
 
     .line 59
-    new-instance v1, Landroid/window/TaskFragmentCreationParams$Builder;
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
 
-    .line 62
-    iget-object v2, v0, Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent;->organizer:Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent$organizer$1;
+    .line 61
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->provideMainDelayableExecutorProvider:Ldagger/internal/Provider;
 
-    .line 64
-    invoke-virtual {v2}, Landroid/window/TaskFragmentOrganizer;->getOrganizerToken()Landroid/window/TaskFragmentOrganizerToken;
+    .line 63
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 66
-    move-result-object v3
+    .line 65
+    move-result-object v1
+
+    .line 68
+    move-object v6, v1
 
     .line 69
-    iget-object v4, v0, Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent;->fragmentToken:Landroid/os/Binder;
+    check-cast v6, Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
     .line 70
-    iget-object v5, v0, Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent;->activity:Landroid/app/Activity;
+    move-object v1, v7
 
     .line 72
-    invoke-virtual {v5}, Landroid/app/Activity;->getActivityToken()Landroid/os/IBinder;
+    move-object v2, v0
+
+    .line 73
+    move-object v4, v11
 
     .line 74
-    move-result-object v5
+    invoke-direct/range {v1 .. v6}, Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent;-><init>(Landroid/app/Activity;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lcom/android/systemui/util/concurrency/DelayableExecutor;)V
 
-    .line 77
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+    .line 75
+    new-instance v1, Landroid/window/TaskFragmentCreationParams$Builder;
 
     .line 78
-    invoke-direct {v1, v3, v4, v5}, Landroid/window/TaskFragmentCreationParams$Builder;-><init>(Landroid/window/TaskFragmentOrganizerToken;Landroid/os/IBinder;Landroid/os/IBinder;)V
+    iget-object v2, v7, Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent;->organizer:Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent$organizer$1;
 
-    .line 81
-    new-instance v3, Landroid/graphics/Rect;
+    .line 80
+    invoke-virtual {v2}, Landroid/window/TaskFragmentOrganizer;->getOrganizerToken()Landroid/window/TaskFragmentOrganizerToken;
 
-    .line 84
-    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
+    .line 82
+    move-result-object v3
+
+    .line 85
+    iget-object v4, v7, Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent;->fragmentToken:Landroid/os/Binder;
 
     .line 86
-    invoke-virtual {v1, v3}, Landroid/window/TaskFragmentCreationParams$Builder;->setInitialRelativeBounds(Landroid/graphics/Rect;)Landroid/window/TaskFragmentCreationParams$Builder;
+    invoke-virtual {v0}, Landroid/app/Activity;->getActivityToken()Landroid/os/IBinder;
 
-    .line 89
-    move-result-object v1
+    .line 88
+    move-result-object v0
+
+    .line 91
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 92
-    const/4 v3, 0x1
+    invoke-direct {v1, v3, v4, v0}, Landroid/window/TaskFragmentCreationParams$Builder;-><init>(Landroid/window/TaskFragmentOrganizerToken;Landroid/os/IBinder;Landroid/os/IBinder;)V
 
-    .line 93
-    invoke-virtual {v1, v3}, Landroid/window/TaskFragmentCreationParams$Builder;->setWindowingMode(I)Landroid/window/TaskFragmentCreationParams$Builder;
-
-    .line 94
-    move-result-object v1
-
-    .line 97
-    invoke-virtual {v1}, Landroid/window/TaskFragmentCreationParams$Builder;->build()Landroid/window/TaskFragmentCreationParams;
+    .line 95
+    new-instance v0, Landroid/graphics/Rect;
 
     .line 98
-    move-result-object v1
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 101
-    new-instance v3, Landroid/window/WindowContainerTransaction;
+    .line 100
+    invoke-virtual {v1, v0}, Landroid/window/TaskFragmentCreationParams$Builder;->setInitialRelativeBounds(Landroid/graphics/Rect;)Landroid/window/TaskFragmentCreationParams$Builder;
 
-    .line 102
-    invoke-direct {v3}, Landroid/window/WindowContainerTransaction;-><init>()V
+    .line 103
+    move-result-object v0
 
-    .line 104
-    invoke-virtual {v3, v1}, Landroid/window/WindowContainerTransaction;->createTaskFragment(Landroid/window/TaskFragmentCreationParams;)Landroid/window/WindowContainerTransaction;
+    .line 106
+    const/4 v1, 0x1
 
     .line 107
-    move-result-object v1
+    invoke-virtual {v0, v1}, Landroid/window/TaskFragmentCreationParams$Builder;->setWindowingMode(I)Landroid/window/TaskFragmentCreationParams$Builder;
 
-    .line 110
-    const/4 v3, 0x6
+    .line 108
+    move-result-object v0
 
     .line 111
-    const/4 v4, 0x0
+    invoke-virtual {v0}, Landroid/window/TaskFragmentCreationParams$Builder;->build()Landroid/window/TaskFragmentCreationParams;
 
     .line 112
-    invoke-virtual {v2, v1, v3, v4}, Landroid/window/TaskFragmentOrganizer;->applyTransaction(Landroid/window/WindowContainerTransaction;IZ)V
+    move-result-object v0
 
-    .line 113
-    iput-object v0, p0, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;->taskFragmentComponent:Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent;
+    .line 115
+    new-instance v1, Landroid/window/WindowContainerTransaction;
 
     .line 116
-    iget-object p0, p0, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;->wakeLock$delegate:Lkotlin/Lazy;
+    invoke-direct {v1}, Landroid/window/WindowContainerTransaction;-><init>()V
 
     .line 118
-    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroid/window/WindowContainerTransaction;->createTaskFragment(Landroid/window/TaskFragmentCreationParams;)Landroid/window/WindowContainerTransaction;
 
-    .line 120
-    move-result-object p0
-
-    .line 123
-    check-cast p0, Lcom/android/systemui/util/wakelock/WakeLock;
+    .line 121
+    move-result-object v0
 
     .line 124
-    const-string v0, "HomeControlsDreamService"
+    const/4 v1, 0x6
+
+    .line 125
+    const/4 v3, 0x0
 
     .line 126
+    invoke-virtual {v2, v0, v1, v3}, Landroid/window/TaskFragmentOrganizer;->applyTransaction(Landroid/window/WindowContainerTransaction;IZ)V
+
+    .line 127
+    iput-object v7, p0, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;->taskFragmentComponent:Lcom/android/systemui/dreams/homecontrols/TaskFragmentComponent;
+
+    .line 130
+    iget-object p0, p0, Lcom/android/systemui/dreams/homecontrols/HomeControlsDreamService;->wakeLock$delegate:Lkotlin/Lazy;
+
+    .line 132
+    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    .line 134
+    move-result-object p0
+
+    .line 137
+    check-cast p0, Lcom/android/systemui/util/wakelock/WakeLock;
+
+    .line 138
+    const-string v0, "HomeControlsDreamService"
+
+    .line 140
     invoke-interface {p0, v0}, Lcom/android/systemui/util/wakelock/WakeLock;->acquire(Ljava/lang/String;)V
 
-    .line 128
+    .line 142
     return-void
-    .line 131
+    .line 145
 .end method
 
 .method public final onDetachedFromWindow()V

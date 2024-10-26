@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/wallet/ui/WalletCardCarousel$WalletCardCarouselAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -199,7 +199,7 @@
     move-result-object p1
 
     .line 9
-    const v0, 0x7f0e0312    # @layout/wallet_card_view 'res/layout/wallet_card_view.xml'
+    const v0, 0x7f0d0325    # @layout/wallet_card_view 'res/layout/wallet_card_view.xml'
 
     .line 10
     const/4 v1, 0x0

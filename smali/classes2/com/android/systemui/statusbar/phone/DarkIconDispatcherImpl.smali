@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/DarkIconDispatcherImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/phone/LightBarTransitionsController$DarkIntensityApplier;
@@ -33,8 +33,8 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$11;Lcom/android/systemui/dump/DumpManager;)V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$8;Lcom/android/systemui/dump/DumpManager;)V
+    .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -76,82 +76,62 @@
     iput v1, p0, Lcom/android/systemui/statusbar/phone/DarkIconDispatcherImpl;->mLightModeContrastColor:I
 
     .line 28
-    sget-object v2, Lcom/android/systemui/statusbar/phone/SysuiDarkIconDispatcher$DarkChange;->EMPTY:Lcom/android/systemui/statusbar/phone/SysuiDarkIconDispatcher$DarkChange;
+    sget-object v0, Lcom/android/systemui/statusbar/phone/SysuiDarkIconDispatcher$DarkChange;->EMPTY:Lcom/android/systemui/statusbar/phone/SysuiDarkIconDispatcher$DarkChange;
 
     .line 30
-    invoke-static {v2}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
+    invoke-static {v0}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 32
-    move-result-object v2
+    move-result-object v0
 
     .line 35
-    iput-object v2, p0, Lcom/android/systemui/statusbar/phone/DarkIconDispatcherImpl;->mDarkChangeFlow:Lkotlinx/coroutines/flow/StateFlowImpl;
+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/DarkIconDispatcherImpl;->mDarkChangeFlow:Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 36
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
+    const v0, 0x7f06009a    # @color/dark_mode_icon_color_single_tone '#99000000'
 
     .line 38
-    move-result v2
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getColor(I)I
 
     .line 41
-    if-eqz v2, :cond_0
-
-    .line 42
-    iput v1, p0, Lcom/android/systemui/statusbar/phone/DarkIconDispatcherImpl;->mDarkModeIconColorSingleTone:I
-
-    .line 44
-    iput v0, p0, Lcom/android/systemui/statusbar/phone/DarkIconDispatcherImpl;->mLightModeIconColorSingleTone:I
-
-    .line 46
-    goto :goto_0
-
-    .line 48
-    :cond_0
-    const v0, 0x7f060099    # @color/dark_mode_icon_color_single_tone '#99000000'
-
-    .line 49
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getColor(I)I
-
-    .line 52
     move-result v0
 
-    .line 55
+    .line 44
     iput v0, p0, Lcom/android/systemui/statusbar/phone/DarkIconDispatcherImpl;->mDarkModeIconColorSingleTone:I
 
-    .line 56
-    const v0, 0x7f060142    # @color/light_mode_icon_color_single_tone '#ffffff'
+    .line 45
+    const v0, 0x7f06014c    # @color/light_mode_icon_color_single_tone '#ffffff'
 
-    .line 58
+    .line 47
     invoke-virtual {p1, v0}, Landroid/content/Context;->getColor(I)I
 
-    .line 61
+    .line 50
     move-result p1
 
-    .line 64
+    .line 53
     iput p1, p0, Lcom/android/systemui/statusbar/phone/DarkIconDispatcherImpl;->mLightModeIconColorSingleTone:I
 
-    .line 65
-    :goto_0
-    invoke-virtual {p2, p0}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$11;->create(Lcom/android/systemui/statusbar/phone/LightBarTransitionsController$DarkIntensityApplier;)Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;
+    .line 54
+    invoke-virtual {p2, p0}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$8;->create(Lcom/android/systemui/statusbar/phone/LightBarTransitionsController$DarkIntensityApplier;)Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;
 
-    .line 67
+    .line 56
     move-result-object p1
 
-    .line 70
+    .line 59
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/DarkIconDispatcherImpl;->mTransitionsController:Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;
 
-    .line 71
+    .line 60
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 73
+    .line 62
     const-string p1, "DarkIconDispatcherImpl"
 
-    .line 76
+    .line 65
     invoke-static {p3, p1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
 
-    .line 78
+    .line 67
     return-void
-    .line 81
+    .line 70
 .end method
 
 

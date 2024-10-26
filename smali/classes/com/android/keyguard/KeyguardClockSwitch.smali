@@ -1,6 +1,6 @@
 .class public Lcom/android/keyguard/KeyguardClockSwitch;
 .super Landroid/widget/RelativeLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -149,7 +149,7 @@
     move-result-object v0
 
     .line 5
-    const v1, 0x7f07034a    # @dimen/keyguard_large_clock_top_margin '-60.0dp'
+    const v1, 0x7f070386    # @dimen/keyguard_large_clock_top_margin '-60.0dp'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -164,7 +164,7 @@
     move-result-object v1
 
     .line 16
-    const v2, 0x7f070373    # @dimen/large_clock_text_size '150.0dp'
+    const v2, 0x7f0703af    # @dimen/large_clock_text_size '150.0dp'
 
     .line 17
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -232,7 +232,7 @@
     move-result-object v0
 
     .line 5
-    const v1, 0x7f07098c    # @dimen/small_clock_text_size '86.0dp'
+    const v1, 0x7f0709e3    # @dimen/small_clock_text_size '86.0dp'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -497,7 +497,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f07033d    # @dimen/keyguard_clock_switch_y_shift '14.0dp'
+    const v1, 0x7f070379    # @dimen/keyguard_clock_switch_y_shift '14.0dp'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -518,7 +518,7 @@
     move-result-object v0
 
     .line 22
-    const v1, 0x7f07035e    # @dimen/keyguard_smartspace_top_offset '12.0dp'
+    const v1, 0x7f07039a    # @dimen/keyguard_smartspace_top_offset '12.0dp'
 
     .line 23
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -596,7 +596,7 @@
     sget-object v1, Landroidx/core/content/res/ResourcesCompat;->sTempTypedValue:Ljava/lang/ThreadLocal;
 
     .line 69
-    const v1, 0x7f070af8    # @dimen/weather_clock_smartspace_scale '1.0'
+    const v1, 0x7f070b56    # @dimen/weather_clock_smartspace_scale '1.0'
 
     .line 71
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F
@@ -617,7 +617,7 @@
     move-result-object v0
 
     .line 85
-    const v1, 0x7f070af9    # @dimen/weather_clock_smartspace_translateX '0.0dp'
+    const v1, 0x7f070b57    # @dimen/weather_clock_smartspace_translateX '0.0dp'
 
     .line 86
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -638,7 +638,7 @@
     move-result-object v0
 
     .line 100
-    const v1, 0x7f070afa    # @dimen/weather_clock_smartspace_translateY '0.0dp'
+    const v1, 0x7f070b58    # @dimen/weather_clock_smartspace_translateY '0.0dp'
 
     .line 101
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -659,7 +659,7 @@
     move-result-object v0
 
     .line 115
-    const v1, 0x7f0709c5    # @dimen/status_bar_height '@android:dimen/text_size_body_2_material'
+    const v1, 0x7f070a1d    # @dimen/status_bar_height '@android:dimen/text_size_body_2_material'
 
     .line 116
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -682,94 +682,62 @@
 .end method
 
 .method public final onFinishInflate()V
-    .locals 3
+    .locals 1
 
     .line 1
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
     .line 2
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
+    const v0, 0x7f0a0471    # @id/lockscreen_clock_view
 
     .line 5
-    move-result v0
-
-    .line 8
-    const v1, 0x7f0b0451    # @id/lockscreen_clock_view_large
-
-    .line 9
-    const v2, 0x7f0b0450    # @id/lockscreen_clock_view
-
-    .line 12
-    if-nez v0, :cond_0
-
-    .line 15
-    invoke-virtual {p0, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
-
-    .line 17
-    move-result-object v0
-
-    .line 20
-    check-cast v0, Lcom/android/keyguard/KeyguardClockFrame;
-
-    .line 21
-    iput-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mSmallClockFrame:Lcom/android/keyguard/KeyguardClockFrame;
-
-    .line 23
-    invoke-virtual {p0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
-
-    .line 25
-    move-result-object v0
-
-    .line 28
-    check-cast v0, Lcom/android/keyguard/KeyguardClockFrame;
-
-    .line 29
-    iput-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mLargeClockFrame:Lcom/android/keyguard/KeyguardClockFrame;
-
-    .line 31
-    const v0, 0x7f0b03e9    # @id/keyguard_status_area
-
-    .line 33
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
-    .line 36
+    .line 8
     move-result-object v0
 
-    .line 39
+    .line 11
+    check-cast v0, Lcom/android/keyguard/KeyguardClockFrame;
+
+    .line 12
+    iput-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mSmallClockFrame:Lcom/android/keyguard/KeyguardClockFrame;
+
+    .line 14
+    const v0, 0x7f0a0472    # @id/lockscreen_clock_view_large
+
+    .line 16
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    .line 19
+    move-result-object v0
+
+    .line 22
+    check-cast v0, Lcom/android/keyguard/KeyguardClockFrame;
+
+    .line 23
+    iput-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mLargeClockFrame:Lcom/android/keyguard/KeyguardClockFrame;
+
+    .line 25
+    const v0, 0x7f0a040a    # @id/keyguard_status_area
+
+    .line 27
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    .line 30
+    move-result-object v0
+
+    .line 33
     check-cast v0, Lcom/android/keyguard/KeyguardStatusAreaView;
 
-    .line 40
+    .line 34
     iput-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mStatusArea:Lcom/android/keyguard/KeyguardStatusAreaView;
 
-    .line 42
-    goto :goto_0
-
-    .line 44
-    :cond_0
-    invoke-virtual {p0, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
-
-    .line 45
-    move-result-object v0
-
-    .line 48
-    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
-
-    .line 49
-    invoke-virtual {p0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
-
-    .line 52
-    move-result-object v0
-
-    .line 55
-    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
-
-    .line 56
-    :goto_0
+    .line 36
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardClockSwitch;->onConfigChanged()V
 
-    .line 59
+    .line 38
     return-void
-    .line 62
+    .line 41
 .end method
 
 .method public final onLayout(ZIIII)V
@@ -949,160 +917,147 @@
     .locals 6
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    return-void
-
-    .line 8
-    :cond_0
     iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClock:Lcom/android/systemui/plugins/clocks/ClockController;
 
-    .line 9
-    if-eqz v0, :cond_3
+    .line 2
+    if-eqz v0, :cond_2
+
+    .line 4
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mSmallClockFrame:Lcom/android/keyguard/KeyguardClockFrame;
+
+    .line 6
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->isLaidOut()Z
+
+    .line 8
+    move-result v0
 
     .line 11
+    if-eqz v0, :cond_0
+
+    .line 12
     iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mSmallClockFrame:Lcom/android/keyguard/KeyguardClockFrame;
 
-    .line 13
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->isLaidOut()Z
-
-    .line 15
-    move-result v0
-
-    .line 18
-    if-eqz v0, :cond_1
-
-    .line 19
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mSmallClockFrame:Lcom/android/keyguard/KeyguardClockFrame;
-
-    .line 21
+    .line 14
     invoke-static {v0}, Lcom/android/keyguard/KeyguardClockSwitch;->getSmallClockRegion(Landroid/view/ViewGroup;)Landroid/graphics/Rect;
 
-    .line 23
+    .line 16
     move-result-object v0
 
-    .line 26
+    .line 19
     iget-object v1, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClock:Lcom/android/systemui/plugins/clocks/ClockController;
 
-    .line 27
+    .line 20
     invoke-interface {v1}, Lcom/android/systemui/plugins/clocks/ClockController;->getSmallClock()Lcom/android/systemui/plugins/clocks/ClockFaceController;
 
-    .line 29
+    .line 22
     move-result-object v1
 
-    .line 32
+    .line 25
     invoke-interface {v1}, Lcom/android/systemui/plugins/clocks/ClockFaceController;->getEvents()Lcom/android/systemui/plugins/clocks/ClockFaceEvents;
 
-    .line 33
+    .line 26
     move-result-object v1
 
-    .line 36
+    .line 29
     invoke-interface {v1, v0}, Lcom/android/systemui/plugins/clocks/ClockFaceEvents;->onTargetRegionChanged(Landroid/graphics/Rect;)V
 
-    .line 37
-    :cond_1
+    .line 30
+    :cond_0
     iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mLargeClockFrame:Lcom/android/keyguard/KeyguardClockFrame;
 
-    .line 40
+    .line 33
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->isLaidOut()Z
 
-    .line 42
+    .line 35
     move-result v0
 
-    .line 45
-    if-eqz v0, :cond_3
+    .line 38
+    if-eqz v0, :cond_2
 
-    .line 46
+    .line 39
     iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mLargeClockFrame:Lcom/android/keyguard/KeyguardClockFrame;
 
-    .line 48
+    .line 41
     invoke-static {v0}, Lcom/android/keyguard/KeyguardClockSwitch;->getLargeClockRegion(Landroid/view/ViewGroup;)Landroid/graphics/Rect;
 
-    .line 50
+    .line 43
     move-result-object v0
 
-    .line 53
+    .line 46
     iget-object v1, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClock:Lcom/android/systemui/plugins/clocks/ClockController;
 
-    .line 54
+    .line 47
     instance-of v2, v1, Lcom/android/systemui/shared/clocks/DefaultClockController;
 
-    .line 56
-    if-eqz v2, :cond_2
+    .line 49
+    if-eqz v2, :cond_1
 
-    .line 58
+    .line 51
     invoke-interface {v1}, Lcom/android/systemui/plugins/clocks/ClockController;->getLargeClock()Lcom/android/systemui/plugins/clocks/ClockFaceController;
 
-    .line 60
+    .line 53
     move-result-object p0
 
-    .line 63
+    .line 56
     invoke-interface {p0}, Lcom/android/systemui/plugins/clocks/ClockFaceController;->getEvents()Lcom/android/systemui/plugins/clocks/ClockFaceEvents;
 
-    .line 64
+    .line 57
     move-result-object p0
 
-    .line 67
+    .line 60
     invoke-interface {p0, v0}, Lcom/android/systemui/plugins/clocks/ClockFaceEvents;->onTargetRegionChanged(Landroid/graphics/Rect;)V
 
-    .line 68
+    .line 61
     goto :goto_0
 
-    .line 71
-    :cond_2
+    .line 64
+    :cond_1
     invoke-interface {v1}, Lcom/android/systemui/plugins/clocks/ClockController;->getLargeClock()Lcom/android/systemui/plugins/clocks/ClockFaceController;
 
-    .line 72
+    .line 65
     move-result-object v1
 
-    .line 75
+    .line 68
     invoke-interface {v1}, Lcom/android/systemui/plugins/clocks/ClockFaceController;->getEvents()Lcom/android/systemui/plugins/clocks/ClockFaceEvents;
 
-    .line 76
+    .line 69
     move-result-object v1
 
-    .line 79
+    .line 72
     new-instance v2, Landroid/graphics/Rect;
 
-    .line 80
+    .line 73
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
-    .line 82
+    .line 75
     iget v4, v0, Landroid/graphics/Rect;->top:I
 
-    .line 84
+    .line 77
     iget p0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->screenOffsetYPadding:I
 
-    .line 86
+    .line 79
     sub-int/2addr v4, p0
 
-    .line 88
+    .line 81
     iget v5, v0, Landroid/graphics/Rect;->right:I
 
-    .line 89
+    .line 82
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 91
+    .line 84
     sub-int/2addr v0, p0
 
-    .line 93
+    .line 86
     invoke-direct {v2, v3, v4, v5, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 94
+    .line 87
     invoke-interface {v1, v2}, Lcom/android/systemui/plugins/clocks/ClockFaceEvents;->onTargetRegionChanged(Landroid/graphics/Rect;)V
 
-    .line 97
-    :cond_3
+    .line 90
+    :cond_2
     :goto_0
     return-void
-    .line 100
+    .line 93
 .end method
 
 .method public final updateClockViews(ZZ)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/WakefulnessLifecycle$Observer;
@@ -32,36 +32,45 @@
     move-result-object p1
 
     .line 11
-    check-cast p1, Lcom/android/systemui/unfold/SysUIUnfoldComponent;
+    check-cast p1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl;
 
     .line 12
     if-eqz p1, :cond_0
 
     .line 14
-    invoke-interface {p1}, Lcom/android/systemui/unfold/SysUIUnfoldComponent;->getFoldAodAnimationController()Lcom/android/systemui/unfold/FoldAodAnimationController;
+    iget-object p1, p1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl;->foldAodAnimationControllerProvider:Ldagger/internal/Provider;
 
     .line 16
-    move-result-object p3
+    invoke-interface {p1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 19
+    .line 18
+    move-result-object p1
+
+    .line 21
+    move-object p3, p1
+
+    .line 22
+    check-cast p3, Lcom/android/systemui/unfold/FoldAodAnimationController;
+
+    .line 23
     :cond_0
     filled-new-array {p3, p2}, [Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;
 
-    .line 20
+    .line 25
     move-result-object p1
-
-    .line 23
-    invoke-static {p1}, Lkotlin/collections/ArraysKt;->filterNotNull([Ljava/lang/Object;)Ljava/util/List;
-
-    .line 24
-    move-result-object p1
-
-    .line 27
-    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;->animations:Ljava/util/List;
 
     .line 28
+    invoke-static {p1}, Lkotlin/collections/ArraysKt;->filterNotNull([Ljava/lang/Object;)Ljava/util/List;
+
+    .line 29
+    move-result-object p1
+
+    .line 32
+    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;->animations:Ljava/util/List;
+
+    .line 33
     return-void
-    .line 30
+    .line 35
 .end method
 
 

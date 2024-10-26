@@ -1,6 +1,6 @@
 .class public final Lcom/airbnb/lottie/animation/keyframe/TransformKeyframeAnimation;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -486,7 +486,6 @@
     .line 62
     :cond_8
     return-void
-    .line 65
 .end method
 
 .method public final applyValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;Ljava/lang/Object;)Z

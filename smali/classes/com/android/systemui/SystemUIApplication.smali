@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/SystemUIApplication;
 .super Landroid/app/Application;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextInitializer;
@@ -11,7 +11,7 @@
 
 .field public mContextAvailableCallback:Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextAvailableCallback;
 
-.field public mInitializer:Lcom/android/systemui/SystemUIInitializer;
+.field public mInitializer:Lcom/google/android/systemui/SystemUIGoogleInitializer;
 
 .field public mProcessWrapper:Lcom/android/systemui/process/ProcessWrapper;
 
@@ -19,7 +19,7 @@
 
 .field public mServicesStarted:Z
 
-.field public mSysUIComponent:Lcom/android/systemui/dagger/SysUIComponent;
+.field public mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
 
 # direct methods
@@ -107,7 +107,7 @@
     if-eqz p2, :cond_0
 
     .line 7
-    const p2, 0x104066c    # @android:string/notification_feedback_indicator_promoted
+    const p2, 0x1040663    # @android:string/notification_channel_usb
 
     .line 9
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -120,7 +120,7 @@
 
     .line 16
     :cond_0
-    const p2, 0x104066b    # @android:string/notification_feedback_indicator_demoted
+    const p2, 0x1040662    # @android:string/notification_channel_updates
 
     .line 17
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -322,414 +322,415 @@
     if-eqz v0, :cond_1
 
     .line 4
-    iget-object p0, p0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/android/systemui/dagger/SysUIComponent;
+    iget-object p0, p0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
     .line 6
-    invoke-interface {p0}, Lcom/android/systemui/dagger/SysUIComponent;->getConfigurationController()Lcom/android/systemui/statusbar/policy/ConfigurationController;
+    iget-object p0, p0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->configurationControllerImplProvider:Ldagger/internal/Provider;
 
     .line 8
+    invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 10
     move-result-object p0
 
-    .line 11
+    .line 13
+    check-cast p0, Lcom/android/systemui/statusbar/policy/ConfigurationController;
+
+    .line 14
     invoke-static {}, Landroid/os/Trace;->isEnabled()Z
 
-    .line 12
+    .line 16
     move-result v0
 
-    .line 15
+    .line 19
     if-eqz v0, :cond_0
 
-    .line 16
+    .line 20
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 18
-    move-result-object v0
-
-    .line 21
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     .line 22
     move-result-object v0
 
     .line 25
-    const-string v1, ".onConfigurationChanged()"
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     .line 26
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 28
     move-result-object v0
 
-    .line 31
-    const-wide/16 v1, 0x1000
+    .line 29
+    const-string v1, ".onConfigurationChanged()"
+
+    .line 30
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     .line 32
+    move-result-object v0
+
+    .line 35
+    const-wide/16 v1, 0x1000
+
+    .line 36
     invoke-static {v1, v2, v0}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 34
+    .line 38
     :cond_0
     check-cast p0, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
 
-    .line 37
+    .line 41
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 39
+    .line 43
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 42
+    .line 46
     :cond_1
     return-void
-    .line 45
+    .line 49
 .end method
 
 .method public final onCreate()V
-    .locals 6
+    .locals 5
 
     .line 1
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     .line 2
-    const/4 v1, 0x0
-
-    .line 3
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
-    .line 4
-    new-instance v2, Landroid/util/TimingsTraceLog;
+    .line 3
+    new-instance v1, Landroid/util/TimingsTraceLog;
 
-    .line 7
-    const-string v3, "SystemUIBootTiming"
+    .line 6
+    const-string v2, "SystemUIBootTiming"
 
-    .line 9
-    const-wide/16 v4, 0x1000
+    .line 8
+    const-wide/16 v3, 0x1000
 
-    .line 11
-    invoke-direct {v2, v3, v4, v5}, Landroid/util/TimingsTraceLog;-><init>(Ljava/lang/String;J)V
+    .line 10
+    invoke-direct {v1, v2, v3, v4}, Landroid/util/TimingsTraceLog;-><init>(Ljava/lang/String;J)V
 
-    .line 13
-    const-string v3, "DependencyInjection"
+    .line 12
+    const-string v2, "DependencyInjection"
 
-    .line 16
-    invoke-virtual {v2, v3}, Landroid/util/TimingsTraceLog;->traceBegin(Ljava/lang/String;)V
+    .line 15
+    invoke-virtual {v1, v2}, Landroid/util/TimingsTraceLog;->traceBegin(Ljava/lang/String;)V
 
-    .line 18
-    iget-object v3, p0, Lcom/android/systemui/SystemUIApplication;->mContextAvailableCallback:Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextAvailableCallback;
+    .line 17
+    iget-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mContextAvailableCallback:Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextAvailableCallback;
 
-    .line 21
-    invoke-interface {v3, p0}, Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextAvailableCallback;->onContextAvailable(Landroid/content/Context;)Lcom/android/systemui/SystemUIInitializerImpl;
+    .line 20
+    invoke-interface {v2, p0}, Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextAvailableCallback;->onContextAvailable(Landroid/content/Context;)Lcom/google/android/systemui/SystemUIGoogleInitializer;
 
-    .line 23
-    move-result-object v3
+    .line 22
+    move-result-object v2
+
+    .line 25
+    iput-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mInitializer:Lcom/google/android/systemui/SystemUIGoogleInitializer;
 
     .line 26
-    iput-object v3, p0, Lcom/android/systemui/SystemUIApplication;->mInitializer:Lcom/android/systemui/SystemUIInitializer;
+    iget-object v2, v2, Lcom/google/android/systemui/SystemUIGoogleInitializer;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
-    .line 27
-    invoke-virtual {v3}, Lcom/android/systemui/SystemUIInitializer;->getSysUIComponent()Lcom/android/systemui/dagger/SysUIComponent;
+    .line 28
+    iput-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
-    .line 29
-    move-result-object v3
+    .line 30
+    iget-object v2, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->bootCompleteCacheImplProvider:Ldagger/internal/Provider;
 
     .line 32
-    iput-object v3, p0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/android/systemui/dagger/SysUIComponent;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 33
-    invoke-interface {v3}, Lcom/android/systemui/dagger/SysUIComponent;->provideBootCacheImpl()Lcom/android/systemui/BootCompleteCacheImpl;
+    .line 34
+    move-result-object v2
 
-    .line 35
-    move-result-object v3
+    .line 37
+    check-cast v2, Lcom/android/systemui/BootCompleteCacheImpl;
 
     .line 38
-    iput-object v3, p0, Lcom/android/systemui/SystemUIApplication;->mBootCompleteCache:Lcom/android/systemui/BootCompleteCacheImpl;
+    iput-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mBootCompleteCache:Lcom/android/systemui/BootCompleteCacheImpl;
 
-    .line 39
-    invoke-virtual {v2}, Landroid/util/TimingsTraceLog;->traceEnd()V
+    .line 40
+    invoke-virtual {v1}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
-    .line 41
-    iget-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mInitializer:Lcom/android/systemui/SystemUIInitializer;
+    .line 42
+    iget-object v1, p0, Lcom/android/systemui/SystemUIApplication;->mInitializer:Lcom/google/android/systemui/SystemUIGoogleInitializer;
 
-    .line 44
-    invoke-virtual {v2}, Lcom/android/systemui/SystemUIInitializer;->getRootComponent()Lcom/android/systemui/dagger/GlobalRootComponent;
+    .line 45
+    iget-object v1, v1, Lcom/google/android/systemui/SystemUIGoogleInitializer;->mRootComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
 
-    .line 46
-    move-result-object v2
+    .line 47
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 49
-    invoke-interface {v2}, Lcom/android/systemui/dagger/GlobalRootComponent;->getMainLooper()Landroid/os/Looper;
+    invoke-static {}, Lcom/android/systemui/util/concurrency/GlobalConcurrencyModule_ProvideMainLooperFactory;->provideMainLooper()Landroid/os/Looper;
 
-    .line 50
-    move-result-object v3
+    .line 52
+    move-result-object v2
 
-    .line 53
-    invoke-virtual {v3, v4, v5}, Landroid/os/Looper;->setTraceTag(J)V
+    .line 55
+    invoke-virtual {v2, v3, v4}, Landroid/os/Looper;->setTraceTag(J)V
 
-    .line 54
-    invoke-interface {v2}, Lcom/android/systemui/dagger/GlobalRootComponent;->getProcessWrapper()Lcom/android/systemui/process/ProcessWrapper;
+    .line 56
+    new-instance v2, Lcom/android/systemui/process/ProcessWrapper;
 
-    .line 57
-    move-result-object v3
-
-    .line 60
-    iput-object v3, p0, Lcom/android/systemui/SystemUIApplication;->mProcessWrapper:Lcom/android/systemui/process/ProcessWrapper;
+    .line 59
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
     .line 61
-    const v3, 0x7f1504bb    # @style/Theme.SystemUI
+    iput-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mProcessWrapper:Lcom/android/systemui/process/ProcessWrapper;
 
-    .line 63
-    invoke-virtual {p0, v3}, Landroid/app/Application;->setTheme(I)V
+    .line 64
+    const v2, 0x7f1404c3    # @style/Theme.SystemUI
 
     .line 66
-    invoke-interface {v2}, Lcom/android/systemui/dagger/GlobalRootComponent;->getSystemPropertiesHelper()Lcom/android/systemui/flags/SystemPropertiesHelper;
+    invoke-virtual {p0, v2}, Landroid/app/Application;->setTheme(I)V
 
     .line 69
-    move-result-object v3
+    iget-object v2, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->systemPropertiesHelperProvider:Ldagger/internal/Provider;
 
     .line 72
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 73
-    const-string v3, "persist.debug.trace_layouts"
+    .line 74
+    move-result-object v2
 
-    .line 76
-    invoke-static {v3, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    .line 77
+    check-cast v2, Lcom/android/systemui/flags/SystemPropertiesHelper;
 
     .line 78
-    move-result v3
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 81
-    invoke-static {v3}, Landroid/view/View;->setTraceLayoutSteps(Z)V
+    .line 80
+    const-string v2, "persist.debug.trace_layouts"
 
-    .line 82
-    invoke-interface {v2}, Lcom/android/systemui/dagger/GlobalRootComponent;->getSystemPropertiesHelper()Lcom/android/systemui/flags/SystemPropertiesHelper;
+    .line 83
+    invoke-static {v2, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     .line 85
-    move-result-object v2
-
-    .line 88
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 89
-    const-string v2, "persist.debug.trace_request_layout_class"
-
-    .line 92
-    const/4 v3, 0x0
-
-    .line 94
-    invoke-static {v2, v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 95
-    move-result-object v2
-
-    .line 98
-    invoke-static {v2}, Landroid/view/View;->setTracedRequestLayoutClassClass(Ljava/lang/String;)V
-
-    .line 99
-    sget-boolean v2, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 102
-    if-nez v2, :cond_0
-
-    .line 104
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 106
-    :cond_0
-    sget-boolean v2, Lcom/android/systemui/FeatureFlagsImpl;->enableLayoutTracing:Z
-
-    .line 109
-    if-eqz v2, :cond_1
-
-    .line 111
-    invoke-static {v0}, Landroid/view/View;->setTraceLayoutSteps(Z)V
-
-    .line 113
-    :cond_1
-    iget-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mProcessWrapper:Lcom/android/systemui/process/ProcessWrapper;
-
-    .line 116
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 118
-    invoke-static {}, Lcom/android/systemui/process/ProcessWrapper;->isSystemUser()Z
-
-    .line 121
     move-result v2
 
-    .line 124
-    if-eqz v2, :cond_3
+    .line 88
+    invoke-static {v2}, Landroid/view/View;->setTraceLayoutSteps(Z)V
 
-    .line 125
-    new-instance v2, Landroid/content/IntentFilter;
+    .line 89
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->systemPropertiesHelperProvider:Ldagger/internal/Provider;
 
-    .line 127
-    const-string v3, "android.intent.action.LOCKED_BOOT_COMPLETED"
+    .line 92
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 129
-    invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    .line 94
+    move-result-object v1
 
-    .line 131
-    const/16 v3, 0x3e8
+    .line 97
+    check-cast v1, Lcom/android/systemui/flags/SystemPropertiesHelper;
 
-    .line 134
-    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->setPriority(I)V
+    .line 98
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 136
-    invoke-static {}, Landroid/view/SurfaceControl;->getGPUContextPriority()I
+    .line 100
+    const-string v1, "persist.debug.trace_request_layout_class"
 
-    .line 139
-    move-result v3
+    .line 103
+    const/4 v2, 0x0
 
-    .line 142
-    new-instance v4, Ljava/lang/StringBuilder;
+    .line 105
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 143
-    const-string v5, "Found SurfaceFlinger\'s GPU Priority: "
+    .line 106
+    move-result-object v1
 
-    .line 145
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 109
+    invoke-static {v1}, Landroid/view/View;->setTracedRequestLayoutClassClass(Ljava/lang/String;)V
 
-    .line 147
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 110
+    iget-object v1, p0, Lcom/android/systemui/SystemUIApplication;->mProcessWrapper:Lcom/android/systemui/process/ProcessWrapper;
 
-    .line 150
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 113
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 153
-    move-result-object v4
+    .line 115
+    invoke-static {}, Lcom/android/systemui/process/ProcessWrapper;->isSystemUser()Z
 
-    .line 156
-    const-string v5, "SystemUIService"
+    .line 118
+    move-result v1
 
-    .line 157
-    invoke-static {v5, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    .line 121
+    if-eqz v1, :cond_1
 
-    .line 159
-    sget v4, Landroid/view/ThreadedRenderer;->EGL_CONTEXT_PRIORITY_REALTIME_NV:I
-
-    .line 162
-    if-ne v3, v4, :cond_2
-
-    .line 164
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    .line 166
-    const-string v4, "Setting SysUI\'s GPU Context priority to: "
-
-    .line 168
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 170
-    sget v4, Landroid/view/ThreadedRenderer;->EGL_CONTEXT_PRIORITY_HIGH_IMG:I
-
-    .line 173
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 175
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 178
-    move-result-object v3
-
-    .line 181
-    invoke-static {v5, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 182
-    sget v3, Landroid/view/ThreadedRenderer;->EGL_CONTEXT_PRIORITY_HIGH_IMG:I
-
-    .line 185
-    invoke-static {v3}, Landroid/view/ThreadedRenderer;->setContextPriority(I)V
-
-    .line 187
-    :cond_2
-    new-instance v3, Lcom/android/systemui/SystemUIApplication$1;
-
-    .line 190
-    invoke-direct {v3, p0, v1}, Lcom/android/systemui/SystemUIApplication$1;-><init>(Lcom/android/systemui/SystemUIApplication;I)V
-
-    .line 192
-    invoke-virtual {p0, v3, v2}, Landroid/app/Application;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    .line 195
+    .line 122
     new-instance v1, Landroid/content/IntentFilter;
 
-    .line 198
-    const-string v2, "android.intent.action.LOCALE_CHANGED"
+    .line 124
+    const-string v2, "android.intent.action.LOCKED_BOOT_COMPLETED"
 
-    .line 200
+    .line 126
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 202
-    new-instance v2, Lcom/android/systemui/SystemUIApplication$1;
+    .line 128
+    const/16 v2, 0x3e8
 
-    .line 205
-    invoke-direct {v2, p0, v0}, Lcom/android/systemui/SystemUIApplication$1;-><init>(Lcom/android/systemui/SystemUIApplication;I)V
+    .line 131
+    invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 207
-    invoke-virtual {p0, v2, v1}, Landroid/app/Application;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    .line 133
+    invoke-static {}, Landroid/view/SurfaceControl;->getGPUContextPriority()I
 
-    .line 210
-    goto :goto_0
+    .line 136
+    move-result v2
 
-    .line 213
-    :cond_3
-    invoke-static {}, Landroid/app/ActivityThread;->currentProcessName()Ljava/lang/String;
+    .line 139
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 214
-    move-result-object v0
+    .line 140
+    const-string v4, "Found SurfaceFlinger\'s GPU Priority: "
 
-    .line 217
-    invoke-virtual {p0}, Landroid/app/Application;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    .line 142
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 218
-    move-result-object v1
+    .line 144
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 221
-    if-eqz v0, :cond_4
+    .line 147
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 222
+    .line 150
+    move-result-object v3
+
+    .line 153
+    const-string v4, "SystemUIService"
+
+    .line 154
+    invoke-static {v4, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 156
+    sget v3, Landroid/view/ThreadedRenderer;->EGL_CONTEXT_PRIORITY_REALTIME_NV:I
+
+    .line 159
+    if-ne v2, v3, :cond_0
+
+    .line 161
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 224
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    .line 163
+    const-string v3, "Setting SysUI\'s GPU Context priority to: "
 
-    .line 226
-    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
+    .line 165
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 229
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 167
+    sget v3, Landroid/view/ThreadedRenderer;->EGL_CONTEXT_PRIORITY_HIGH_IMG:I
 
-    .line 231
-    const-string v1, ":"
+    .line 170
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 234
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 236
+    .line 172
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 239
+    .line 175
+    move-result-object v2
+
+    .line 178
+    invoke-static {v4, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 179
+    sget v2, Landroid/view/ThreadedRenderer;->EGL_CONTEXT_PRIORITY_HIGH_IMG:I
+
+    .line 182
+    invoke-static {v2}, Landroid/view/ThreadedRenderer;->setContextPriority(I)V
+
+    .line 184
+    :cond_0
+    new-instance v2, Lcom/android/systemui/SystemUIApplication$1;
+
+    .line 187
+    invoke-direct {v2, p0, v0}, Lcom/android/systemui/SystemUIApplication$1;-><init>(Lcom/android/systemui/SystemUIApplication;I)V
+
+    .line 189
+    invoke-virtual {p0, v2, v1}, Landroid/app/Application;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 192
+    new-instance v0, Landroid/content/IntentFilter;
+
+    .line 195
+    const-string v1, "android.intent.action.LOCALE_CHANGED"
+
+    .line 197
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    .line 199
+    new-instance v1, Lcom/android/systemui/SystemUIApplication$1;
+
+    .line 202
+    const/4 v2, 0x1
+
+    .line 204
+    invoke-direct {v1, p0, v2}, Lcom/android/systemui/SystemUIApplication$1;-><init>(Lcom/android/systemui/SystemUIApplication;I)V
+
+    .line 205
+    invoke-virtual {p0, v1, v0}, Landroid/app/Application;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 208
+    goto :goto_0
+
+    .line 211
+    :cond_1
+    invoke-static {}, Landroid/app/ActivityThread;->currentProcessName()Ljava/lang/String;
+
+    .line 212
+    move-result-object v0
+
+    .line 215
+    invoke-virtual {p0}, Landroid/app/Application;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    .line 216
     move-result-object v1
 
-    .line 242
+    .line 219
+    if-eqz v0, :cond_2
+
+    .line 220
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    .line 222
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 224
+    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
+
+    .line 227
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 229
+    const-string v1, ":"
+
+    .line 232
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 234
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 237
+    move-result-object v1
+
+    .line 240
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    .line 243
+    .line 241
     move-result v0
 
-    .line 246
-    if-eqz v0, :cond_4
+    .line 244
+    if-eqz v0, :cond_2
+
+    .line 245
+    return-void
 
     .line 247
-    return-void
-
-    .line 249
-    :cond_4
+    :cond_2
     invoke-virtual {p0}, Lcom/android/systemui/SystemUIApplication;->startSecondaryUserServicesIfNeeded()V
 
-    .line 250
+    .line 248
     :goto_0
     return-void
-    .line 253
+    .line 251
 .end method
 
 .method public final setContextAvailableCallback(Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextAvailableCallback;)V
@@ -772,7 +773,7 @@
     new-instance v0, Ljava/util/TreeMap;
 
     .line 16
-    new-instance v1, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda7;
+    new-instance v1, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda9;
 
     .line 18
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
@@ -787,33 +788,39 @@
     invoke-direct {v0, v1}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
     .line 27
-    iget-object v1, p0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/android/systemui/dagger/SysUIComponent;
+    iget-object v1, p0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
     .line 30
-    invoke-interface {v1}, Lcom/android/systemui/dagger/SysUIComponent;->getPerUserStartables()Ljava/util/Map;
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->notificationChannelsProvider:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;
 
     .line 32
-    move-result-object v1
+    const-class v2, Lcom/android/systemui/util/NotificationChannels;
 
-    .line 35
-    invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    .line 34
+    invoke-static {v2, v1}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
     .line 36
-    const-string v1, "StartSecondaryServices"
+    move-result-object v1
 
     .line 39
+    invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+
+    .line 40
+    const-string v1, "StartSecondaryServices"
+
+    .line 43
     const/4 v2, 0x0
 
-    .line 41
+    .line 45
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/systemui/SystemUIApplication;->startServicesIfNeeded(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 42
+    .line 46
     return-void
-    .line 45
+    .line 49
 .end method
 
 .method public final startServicesIfNeeded(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 16
+    .locals 17
 
     .line 1
     move-object/from16 v0, p0
@@ -841,656 +848,716 @@
     move-result v3
 
     .line 16
-    const/4 v4, 0x1
-
-    .line 17
-    const/4 v5, 0x0
-
-    .line 18
     if-nez v2, :cond_1
 
-    .line 19
-    move v6, v5
+    .line 17
+    const/4 v6, 0x0
 
-    .line 21
+    .line 19
     goto :goto_0
 
-    .line 22
+    .line 20
     :cond_1
-    move v6, v4
+    const/4 v6, 0x1
 
-    .line 23
+    .line 21
     :goto_0
     add-int/2addr v3, v6
 
-    .line 24
+    .line 22
     new-array v3, v3, [Lcom/android/systemui/CoreStartable;
 
-    .line 25
+    .line 23
     iput-object v3, v0, Lcom/android/systemui/SystemUIApplication;->mServices:[Lcom/android/systemui/CoreStartable;
 
-    .line 27
+    .line 25
     iget-object v3, v0, Lcom/android/systemui/SystemUIApplication;->mBootCompleteCache:Lcom/android/systemui/BootCompleteCacheImpl;
 
-    .line 29
+    .line 27
     iget-object v3, v3, Lcom/android/systemui/BootCompleteCacheImpl;->bootComplete:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 31
+    .line 29
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    .line 33
+    .line 31
     move-result v3
 
-    .line 36
+    .line 34
     if-nez v3, :cond_2
 
+    .line 35
+    iget-object v3, v0, Lcom/android/systemui/SystemUIApplication;->mInitializer:Lcom/google/android/systemui/SystemUIGoogleInitializer;
+
     .line 37
-    iget-object v3, v0, Lcom/android/systemui/SystemUIApplication;->mInitializer:Lcom/android/systemui/SystemUIInitializer;
+    iget-object v3, v3, Lcom/google/android/systemui/SystemUIGoogleInitializer;->mRootComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
 
     .line 39
-    invoke-virtual {v3}, Lcom/android/systemui/SystemUIInitializer;->getRootComponent()Lcom/android/systemui/dagger/GlobalRootComponent;
+    iget-object v3, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->systemPropertiesHelperProvider:Ldagger/internal/Provider;
 
     .line 41
+    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 43
     move-result-object v3
 
-    .line 44
-    invoke-interface {v3}, Lcom/android/systemui/dagger/GlobalRootComponent;->getSystemPropertiesHelper()Lcom/android/systemui/flags/SystemPropertiesHelper;
+    .line 46
+    check-cast v3, Lcom/android/systemui/flags/SystemPropertiesHelper;
 
-    .line 45
-    move-result-object v3
-
-    .line 48
+    .line 47
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 49
-    const-string v3, "sys.boot_completed"
+    const-string/jumbo v3, "sys.boot_completed"
 
     .line 52
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 54
+    .line 55
     move-result-object v3
-
-    .line 57
-    const-string v6, "1"
 
     .line 58
+    const-string v6, "1"
+
+    .line 59
     invoke-virtual {v6, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 60
+    .line 61
     move-result v3
 
-    .line 63
+    .line 64
     if-eqz v3, :cond_2
 
-    .line 64
+    .line 65
     iget-object v3, v0, Lcom/android/systemui/SystemUIApplication;->mBootCompleteCache:Lcom/android/systemui/BootCompleteCacheImpl;
 
-    .line 66
+    .line 67
     invoke-virtual {v3}, Lcom/android/systemui/BootCompleteCacheImpl;->setBootComplete()V
 
-    .line 68
+    .line 69
     :cond_2
-    iget-object v3, v0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/android/systemui/dagger/SysUIComponent;
+    iget-object v3, v0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
-    .line 71
-    invoke-interface {v3}, Lcom/android/systemui/dagger/SysUIComponent;->createDumpManager()Lcom/android/systemui/dump/DumpManager;
+    .line 72
+    iget-object v3, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
 
-    .line 73
-    move-result-object v3
+    .line 74
+    iget-object v3, v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->dumpManagerProvider:Ldagger/internal/Provider;
 
     .line 76
-    invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
+    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 77
-    move-result-object v6
-
-    .line 80
-    invoke-virtual {v6}, Landroid/os/UserHandle;->getIdentifier()I
+    .line 78
+    move-result-object v3
 
     .line 81
-    new-instance v6, Landroid/util/TimingsTraceLog;
+    check-cast v3, Lcom/android/systemui/dump/DumpManager;
+
+    .line 82
+    invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     .line 84
-    const-string v7, "SystemUIBootTiming"
+    move-result-object v6
 
-    .line 86
-    const-wide/16 v8, 0x1000
+    .line 87
+    invoke-virtual {v6}, Landroid/os/UserHandle;->getIdentifier()I
 
     .line 88
-    invoke-direct {v6, v7, v8, v9}, Landroid/util/TimingsTraceLog;-><init>(Ljava/lang/String;J)V
+    new-instance v6, Landroid/util/TimingsTraceLog;
 
-    .line 90
-    invoke-virtual {v6, v1}, Landroid/util/TimingsTraceLog;->traceBegin(Ljava/lang/String;)V
+    .line 91
+    const-string v7, "SystemUIBootTiming"
 
     .line 93
+    const-wide/16 v8, 0x1000
+
+    .line 95
+    invoke-direct {v6, v7, v8, v9}, Landroid/util/TimingsTraceLog;-><init>(Ljava/lang/String;J)V
+
+    .line 97
+    invoke-virtual {v6, v1}, Landroid/util/TimingsTraceLog;->traceBegin(Ljava/lang/String;)V
+
+    .line 100
     new-instance v7, Ljava/util/HashSet;
 
-    .line 96
+    .line 103
     invoke-direct {v7}, Ljava/util/HashSet;-><init>()V
 
-    .line 98
+    .line 105
     const-string v8, "Topologically start Core Startables"
 
-    .line 101
+    .line 108
     invoke-virtual {v6, v8}, Landroid/util/TimingsTraceLog;->traceBegin(Ljava/lang/String;)V
 
-    .line 103
+    .line 110
     new-instance v8, Ljava/util/ArrayDeque;
 
-    .line 106
+    .line 113
     move-object/from16 v9, p1
 
-    .line 108
+    .line 115
     check-cast v9, Ljava/util/TreeMap;
 
-    .line 110
+    .line 117
     invoke-virtual {v9}, Ljava/util/TreeMap;->entrySet()Ljava/util/Set;
 
-    .line 112
+    .line 119
     move-result-object v9
 
-    .line 115
+    .line 122
     invoke-direct {v8, v9}, Ljava/util/ArrayDeque;-><init>(Ljava/util/Collection;)V
 
-    .line 116
-    move v9, v5
+    .line 123
+    const/4 v9, 0x0
 
-    .line 119
-    move v10, v9
+    .line 126
+    const/4 v10, 0x0
 
-    .line 120
+    .line 127
     :goto_1
     new-instance v11, Ljava/util/ArrayDeque;
 
-    .line 121
+    .line 128
     invoke-interface/range {p1 .. p1}, Ljava/util/Map;->size()I
 
-    .line 123
+    .line 130
     move-result v12
 
-    .line 126
+    .line 133
     invoke-direct {v11, v12}, Ljava/util/ArrayDeque;-><init>(I)V
 
-    .line 127
-    move v12, v5
+    .line 134
+    const/4 v12, 0x0
 
-    .line 130
+    .line 137
     :goto_2
     invoke-virtual {v8}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    .line 131
+    .line 138
     move-result v13
 
-    .line 134
+    .line 141
+    const-class v14, Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
+
+    .line 142
+    const-class v15, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
+
+    .line 144
     if-nez v13, :cond_5
 
-    .line 135
+    .line 146
     invoke-virtual {v8}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
 
-    .line 137
+    .line 148
     move-result-object v13
 
-    .line 140
+    .line 151
     check-cast v13, Ljava/util/Map$Entry;
 
-    .line 141
+    .line 152
     invoke-interface {v13}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    .line 143
-    move-result-object v14
-
-    .line 146
-    check-cast v14, Ljava/lang/Class;
-
-    .line 147
-    iget-object v15, v0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/android/systemui/dagger/SysUIComponent;
-
-    .line 149
-    invoke-interface {v15}, Lcom/android/systemui/dagger/SysUIComponent;->getStartableDependencies()Ljava/util/Map;
-
-    .line 151
-    move-result-object v15
-
     .line 154
-    invoke-interface {v15, v14}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v16
 
-    .line 155
-    move-result-object v15
+    .line 157
+    move-object/from16 v5, v16
 
     .line 158
-    check-cast v15, Ljava/util/Set;
+    check-cast v5, Ljava/lang/Class;
 
-    .line 159
-    if-eqz v15, :cond_4
+    .line 160
+    iget-object v4, v0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
-    .line 161
-    invoke-virtual {v7, v15}, Ljava/util/HashSet;->containsAll(Ljava/util/Collection;)Z
+    .line 162
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 163
-    move-result v15
-
-    .line 166
-    if-eqz v15, :cond_3
+    .line 164
+    invoke-static {v15}, Ljava/util/Set;->of(Ljava/lang/Object;)Ljava/util/Set;
 
     .line 167
+    move-result-object v4
+
+    .line 170
+    invoke-static {v4}, Ldagger/internal/Preconditions;->checkNotNullFromProvides(Ljava/lang/Object;)V
+
+    .line 171
+    check-cast v4, Ljava/util/Set;
+
+    .line 174
+    invoke-static {v14, v4}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+
+    .line 176
+    move-result-object v4
+
+    .line 179
+    invoke-interface {v4, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 180
+    move-result-object v4
+
+    .line 183
+    check-cast v4, Ljava/util/Set;
+
+    .line 184
+    if-eqz v4, :cond_4
+
+    .line 186
+    invoke-virtual {v7, v4}, Ljava/util/HashSet;->containsAll(Ljava/util/Collection;)Z
+
+    .line 188
+    move-result v4
+
+    .line 191
+    if-eqz v4, :cond_3
+
+    .line 192
     goto :goto_3
 
-    .line 169
+    .line 194
     :cond_3
     invoke-virtual {v11, v13}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    .line 170
+    .line 195
     goto :goto_2
 
-    .line 173
+    .line 198
     :cond_4
     :goto_3
-    invoke-virtual {v14}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    .line 174
-    move-result-object v12
-
-    .line 177
-    new-instance v15, Lcom/android/systemui/SystemUIApplication$$ExternalSyntheticLambda0;
-
-    .line 178
-    invoke-direct {v15, v0, v10, v12, v13}, Lcom/android/systemui/SystemUIApplication$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/SystemUIApplication;ILjava/lang/String;Ljava/util/Map$Entry;)V
-
-    .line 180
-    invoke-static {v12, v15, v6, v1}, Lcom/android/systemui/SystemUIApplication;->timeInitialization(Ljava/lang/String;Ljava/lang/Runnable;Landroid/util/TimingsTraceLog;Ljava/lang/String;)V
-
-    .line 183
-    invoke-virtual {v7, v14}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    .line 186
-    add-int/lit8 v10, v10, 0x1
-
-    .line 189
-    move v12, v4
-
-    .line 191
-    goto :goto_2
-
-    .line 192
-    :cond_5
-    add-int/2addr v9, v4
-
-    .line 193
-    if-eqz v12, :cond_7
-
-    .line 194
-    invoke-virtual {v11}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    .line 196
-    move-result v8
+    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     .line 199
-    if-eqz v8, :cond_6
-
-    .line 200
-    goto :goto_4
+    move-result-object v4
 
     .line 202
+    new-instance v12, Lcom/android/systemui/SystemUIApplication$$ExternalSyntheticLambda0;
+
+    .line 203
+    invoke-direct {v12, v0, v10, v4, v13}, Lcom/android/systemui/SystemUIApplication$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/SystemUIApplication;ILjava/lang/String;Ljava/util/Map$Entry;)V
+
+    .line 205
+    invoke-static {v4, v12, v6, v1}, Lcom/android/systemui/SystemUIApplication;->timeInitialization(Ljava/lang/String;Ljava/lang/Runnable;Landroid/util/TimingsTraceLog;Ljava/lang/String;)V
+
+    .line 208
+    invoke-virtual {v7, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 211
+    add-int/lit8 v10, v10, 0x1
+
+    .line 214
+    const/4 v12, 0x1
+
+    .line 216
+    goto :goto_2
+
+    .line 217
+    :cond_5
+    const/4 v4, 0x1
+
+    .line 218
+    add-int/2addr v9, v4
+
+    .line 219
+    if-eqz v12, :cond_7
+
+    .line 220
+    invoke-virtual {v11}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    .line 222
+    move-result v4
+
+    .line 225
+    if-eqz v4, :cond_6
+
+    .line 226
+    goto :goto_4
+
+    .line 228
     :cond_6
     move-object v8, v11
 
-    .line 203
+    .line 229
     goto :goto_1
 
-    .line 204
+    .line 230
     :cond_7
     :goto_4
     invoke-virtual {v11}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    .line 205
-    move-result v8
+    .line 231
+    move-result v4
 
-    .line 208
-    const-string v10, "SystemUIService"
+    .line 234
+    const-string v5, "SystemUIService"
 
-    .line 209
-    if-nez v8, :cond_b
+    .line 235
+    if-nez v4, :cond_b
 
-    .line 211
+    .line 237
     :goto_5
     invoke-virtual {v11}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    .line 213
+    .line 239
     move-result v1
 
-    .line 216
+    .line 242
     if-nez v1, :cond_a
 
-    .line 217
+    .line 243
     invoke-virtual {v11}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
 
-    .line 219
+    .line 245
     move-result-object v1
 
-    .line 222
+    .line 248
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 223
+    .line 249
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    .line 225
+    .line 251
     move-result-object v1
 
-    .line 228
+    .line 254
     check-cast v1, Ljava/lang/Class;
 
-    .line 229
-    iget-object v2, v0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/android/systemui/dagger/SysUIComponent;
+    .line 255
+    iget-object v2, v0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
-    .line 231
-    invoke-interface {v2}, Lcom/android/systemui/dagger/SysUIComponent;->getStartableDependencies()Ljava/util/Map;
+    .line 257
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 233
+    .line 259
+    invoke-static {v15}, Ljava/util/Set;->of(Ljava/lang/Object;)Ljava/util/Set;
+
+    .line 262
     move-result-object v2
 
-    .line 236
-    invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 265
+    invoke-static {v2}, Ldagger/internal/Preconditions;->checkNotNullFromProvides(Ljava/lang/Object;)V
 
-    .line 237
-    move-result-object v2
-
-    .line 240
+    .line 266
     check-cast v2, Ljava/util/Set;
 
-    .line 241
-    new-instance v3, Ljava/util/StringJoiner;
+    .line 269
+    invoke-static {v14, v2}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
-    .line 243
-    const-string v4, ", "
-
-    .line 245
-    invoke-direct {v3, v4}, Ljava/util/StringJoiner;-><init>(Ljava/lang/CharSequence;)V
-
-    .line 247
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    .line 250
+    .line 271
     move-result-object v2
 
-    .line 253
+    .line 274
+    invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 275
+    move-result-object v2
+
+    .line 278
+    check-cast v2, Ljava/util/Set;
+
+    .line 279
+    new-instance v3, Ljava/util/StringJoiner;
+
+    .line 281
+    const-string v4, ", "
+
+    .line 283
+    invoke-direct {v3, v4}, Ljava/util/StringJoiner;-><init>(Ljava/lang/CharSequence;)V
+
+    .line 285
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 288
+    move-result-object v2
+
+    .line 291
     :cond_8
     :goto_6
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 254
+    .line 292
     move-result v4
 
-    .line 257
+    .line 295
     if-eqz v4, :cond_9
 
-    .line 258
+    .line 296
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 260
+    .line 298
     move-result-object v4
 
-    .line 263
+    .line 301
     check-cast v4, Ljava/lang/Class;
 
-    .line 264
+    .line 302
     invoke-virtual {v7, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    .line 266
-    move-result v5
+    .line 304
+    move-result v6
 
-    .line 269
-    if-nez v5, :cond_8
+    .line 307
+    if-nez v6, :cond_8
 
-    .line 270
+    .line 308
     invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    .line 272
+    .line 310
     move-result-object v4
 
-    .line 275
+    .line 313
     invoke-virtual {v3, v4}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 
-    .line 276
+    .line 314
     goto :goto_6
 
-    .line 279
+    .line 317
     :cond_9
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 280
+    .line 318
     const-string v4, "Failed to start "
 
-    .line 282
+    .line 320
     invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 284
+    .line 322
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    .line 287
+    .line 325
     move-result-object v1
 
-    .line 290
+    .line 328
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 291
+    .line 329
     const-string v1, ". Missing dependencies: ["
 
-    .line 294
+    .line 332
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 296
+    .line 334
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 299
+    .line 337
     const-string v1, "]"
 
-    .line 302
+    .line 340
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 304
+    .line 342
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 307
+    .line 345
     move-result-object v1
 
-    .line 310
-    invoke-static {v10, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    .line 348
+    invoke-static {v5, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 311
+    .line 349
     goto :goto_5
 
-    .line 314
+    .line 352
     :cond_a
     new-instance v0, Ljava/lang/RuntimeException;
 
-    .line 315
+    .line 353
     const-string v1, "Failed to start all CoreStartables. Check logcat!"
 
-    .line 317
+    .line 355
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 319
+    .line 357
     throw v0
 
-    .line 322
+    .line 360
     :cond_b
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    .line 323
-    const-string v8, "Topological CoreStartables completed in "
+    .line 361
+    const-string v7, "Topological CoreStartables completed in "
 
-    .line 325
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 363
+    invoke-direct {v4, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 327
-    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 365
+    invoke-virtual {v4, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 330
-    const-string v8, " iterations"
+    .line 368
+    const-string v7, " iterations"
 
-    .line 333
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 371
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 335
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 373
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 338
-    move-result-object v7
+    .line 376
+    move-result-object v4
 
-    .line 341
-    invoke-static {v10, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    .line 379
+    invoke-static {v5, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
+    .line 380
     invoke-virtual {v6}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
-    .line 345
+    .line 383
     if-eqz v2, :cond_c
 
-    .line 348
-    new-instance v7, Lcom/android/systemui/SystemUIApplication$$ExternalSyntheticLambda1;
+    .line 386
+    new-instance v4, Lcom/android/systemui/SystemUIApplication$$ExternalSyntheticLambda1;
 
-    .line 350
-    invoke-direct {v7, v0, v2}, Lcom/android/systemui/SystemUIApplication$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/SystemUIApplication;Ljava/lang/String;)V
+    .line 388
+    invoke-direct {v4, v0, v2}, Lcom/android/systemui/SystemUIApplication$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/SystemUIApplication;Ljava/lang/String;)V
 
-    .line 352
-    invoke-static {v2, v7, v6, v1}, Lcom/android/systemui/SystemUIApplication;->timeInitialization(Ljava/lang/String;Ljava/lang/Runnable;Landroid/util/TimingsTraceLog;Ljava/lang/String;)V
+    .line 390
+    invoke-static {v2, v4, v6, v1}, Lcom/android/systemui/SystemUIApplication;->timeInitialization(Ljava/lang/String;Ljava/lang/Runnable;Landroid/util/TimingsTraceLog;Ljava/lang/String;)V
 
-    .line 355
+    .line 393
     :cond_c
-    move v1, v5
+    const/4 v1, 0x0
 
-    .line 358
+    .line 396
     :goto_7
     iget-object v2, v0, Lcom/android/systemui/SystemUIApplication;->mServices:[Lcom/android/systemui/CoreStartable;
 
-    .line 359
-    array-length v7, v2
+    .line 397
+    array-length v4, v2
 
-    .line 361
-    if-ge v1, v7, :cond_f
+    .line 399
+    if-ge v1, v4, :cond_f
 
-    .line 362
+    .line 400
     aget-object v2, v2, v1
 
-    .line 364
-    iget-object v7, v0, Lcom/android/systemui/SystemUIApplication;->mBootCompleteCache:Lcom/android/systemui/BootCompleteCacheImpl;
+    .line 402
+    iget-object v4, v0, Lcom/android/systemui/SystemUIApplication;->mBootCompleteCache:Lcom/android/systemui/BootCompleteCacheImpl;
 
-    .line 366
-    iget-object v7, v7, Lcom/android/systemui/BootCompleteCacheImpl;->bootComplete:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 404
+    iget-object v4, v4, Lcom/android/systemui/BootCompleteCacheImpl;->bootComplete:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 368
-    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    .line 406
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    .line 370
-    move-result v7
+    .line 408
+    move-result v4
 
-    .line 373
-    if-eqz v7, :cond_d
+    .line 411
+    if-eqz v4, :cond_d
 
-    .line 374
+    .line 412
     invoke-static {v2}, Lcom/android/systemui/SystemUIApplication;->notifyBootCompleted(Lcom/android/systemui/CoreStartable;)V
 
-    .line 376
+    .line 414
     :cond_d
     invoke-interface {v2}, Lcom/android/systemui/CoreStartable;->isDumpCritical()Z
 
-    .line 379
-    move-result v7
+    .line 417
+    move-result v4
 
-    .line 382
-    if-eqz v7, :cond_e
+    .line 420
+    if-eqz v4, :cond_e
 
-    .line 383
+    .line 421
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 385
+    .line 423
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 388
-    move-result-object v7
+    .line 426
+    move-result-object v4
 
-    .line 391
-    invoke-virtual {v7}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    .line 429
+    invoke-virtual {v4}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
-    .line 392
-    move-result-object v7
+    .line 430
+    move-result-object v4
 
-    .line 395
-    invoke-virtual {v3, v7, v2}, Lcom/android/systemui/dump/DumpManager;->registerCriticalDumpable(Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
+    .line 433
+    invoke-virtual {v3, v4, v2}, Lcom/android/systemui/dump/DumpManager;->registerCriticalDumpable(Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
 
-    .line 396
+    .line 434
     goto :goto_8
 
-    .line 399
+    .line 437
     :cond_e
     invoke-virtual {v3, v2}, Lcom/android/systemui/dump/DumpManager;->registerNormalDumpable(Lcom/android/systemui/Dumpable;)V
 
-    .line 400
+    .line 438
     :goto_8
     add-int/lit8 v1, v1, 0x1
 
-    .line 403
+    .line 441
     goto :goto_7
 
-    .line 405
+    .line 443
     :cond_f
-    iget-object v1, v0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/android/systemui/dagger/SysUIComponent;
+    iget-object v1, v0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
-    .line 406
-    invoke-interface {v1}, Lcom/android/systemui/dagger/SysUIComponent;->getInitController()Lcom/android/systemui/InitController;
+    .line 444
+    iget-object v1, v1, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->initControllerProvider:Ldagger/internal/Provider;
 
-    .line 408
+    .line 446
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 448
     move-result-object v1
 
-    .line 411
+    .line 451
+    check-cast v1, Lcom/android/systemui/InitController;
+
+    .line 452
     :goto_9
     iget-object v2, v1, Lcom/android/systemui/InitController;->mTasks:Ljava/util/ArrayList;
 
-    .line 412
+    .line 454
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
-    .line 414
+    .line 456
     move-result v2
 
-    .line 417
+    .line 459
     if-nez v2, :cond_10
 
-    .line 418
+    .line 460
     iget-object v2, v1, Lcom/android/systemui/InitController;->mTasks:Ljava/util/ArrayList;
 
-    .line 420
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    .line 462
+    const/4 v3, 0x0
 
-    .line 422
+    .line 464
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    .line 465
     move-result-object v2
 
-    .line 425
+    .line 468
     check-cast v2, Ljava/lang/Runnable;
 
-    .line 426
+    .line 469
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    .line 428
+    .line 471
     goto :goto_9
 
-    .line 431
+    .line 474
     :cond_10
-    iput-boolean v4, v1, Lcom/android/systemui/InitController;->mTasksExecuted:Z
+    const/4 v2, 0x1
 
-    .line 432
+    .line 475
+    iput-boolean v2, v1, Lcom/android/systemui/InitController;->mTasksExecuted:Z
+
+    .line 476
     invoke-virtual {v6}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
-    .line 434
-    iput-boolean v4, v0, Lcom/android/systemui/SystemUIApplication;->mServicesStarted:Z
+    .line 478
+    iput-boolean v2, v0, Lcom/android/systemui/SystemUIApplication;->mServicesStarted:Z
 
-    .line 437
+    .line 481
     return-void
-    .line 439
+    .line 483
 .end method
 
 .method public final startSystemUserServicesIfNeeded()V
-    .locals 3
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/SystemUIApplication;->mProcessWrapper:Lcom/android/systemui/process/ProcessWrapper;
@@ -1521,7 +1588,7 @@
 
     .line 20
     :cond_0
-    iget-object v0, p0, Lcom/android/systemui/SystemUIApplication;->mInitializer:Lcom/android/systemui/SystemUIInitializer;
+    iget-object v0, p0, Lcom/android/systemui/SystemUIApplication;->mInitializer:Lcom/google/android/systemui/SystemUIGoogleInitializer;
 
     .line 21
     invoke-virtual {p0}, Landroid/app/Application;->getResources()Landroid/content/res/Resources;
@@ -1530,60 +1597,72 @@
     move-result-object v1
 
     .line 26
-    invoke-virtual {v0, v1}, Lcom/android/systemui/SystemUIInitializer;->getVendorComponent(Landroid/content/res/Resources;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 27
-    move-result-object v0
+    const v0, 0x7f1302c4    # @string/config_systemUIVendorServiceComponent 'com.android.systemui.VendorServices'
 
     .line 30
-    new-instance v1, Ljava/util/TreeMap;
-
-    .line 31
-    new-instance v2, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda7;
+    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     .line 33
+    move-result-object v0
+
+    .line 36
+    new-instance v1, Ljava/util/TreeMap;
+
+    .line 37
+    new-instance v2, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda9;
+
+    .line 39
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    .line 35
+    .line 41
     invoke-static {v2}, Ljava/util/Comparator;->comparing(Ljava/util/function/Function;)Ljava/util/Comparator;
 
-    .line 38
+    .line 44
     move-result-object v2
-
-    .line 41
-    invoke-direct {v1, v2}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
-
-    .line 42
-    iget-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/android/systemui/dagger/SysUIComponent;
-
-    .line 45
-    invoke-interface {v2}, Lcom/android/systemui/dagger/SysUIComponent;->getStartables()Ljava/util/Map;
 
     .line 47
-    move-result-object v2
+    invoke-direct {v1, v2}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
-    .line 50
-    invoke-interface {v1, v2}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    .line 48
+    iget-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
     .line 51
-    iget-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/android/systemui/dagger/SysUIComponent;
+    invoke-virtual {v2}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->getStartables()Ljava/util/Map;
 
-    .line 54
-    invoke-interface {v2}, Lcom/android/systemui/dagger/SysUIComponent;->getPerUserStartables()Ljava/util/Map;
-
-    .line 56
+    .line 53
     move-result-object v2
 
-    .line 59
+    .line 56
     invoke-interface {v1, v2}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
+    .line 57
+    iget-object v2, p0, Lcom/android/systemui/SystemUIApplication;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
+
     .line 60
+    iget-object v2, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->notificationChannelsProvider:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;
+
+    .line 62
+    const-class v3, Lcom/android/systemui/util/NotificationChannels;
+
+    .line 64
+    invoke-static {v3, v2}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+
+    .line 66
+    move-result-object v2
+
+    .line 69
+    invoke-interface {v1, v2}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+
+    .line 70
     const-string v2, "StartServices"
 
-    .line 63
+    .line 73
     invoke-virtual {p0, v1, v2, v0}, Lcom/android/systemui/SystemUIApplication;->startServicesIfNeeded(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 65
+    .line 75
     return-void
-    .line 68
+    .line 78
 .end method

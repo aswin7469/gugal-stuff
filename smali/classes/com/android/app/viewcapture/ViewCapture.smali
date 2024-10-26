@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/app/viewcapture/ViewCapture;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -12,7 +12,7 @@
 # instance fields
 .field public final mBgExecutor:Ljava/util/concurrent/Executor;
 
-.field public mIsEnabled:Z
+.field public final mIsEnabled:Z
 
 .field public final mListeners:Ljava/util/List;
 
@@ -131,91 +131,8 @@
     .line 34
 .end method
 
-.method public static createAndStartNewLooperExecutor(ILjava/lang/String;)Lcom/android/app/viewcapture/LooperExecutor;
-    .locals 1
-
-    .line 1
-    new-instance v0, Landroid/os/HandlerThread;
-
-    .line 2
-    invoke-direct {v0, p1, p0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
-
-    .line 4
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
-
-    .line 7
-    new-instance p0, Lcom/android/app/viewcapture/LooperExecutor;
-
-    .line 10
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    .line 12
-    move-result-object p1
-
-    .line 15
-    invoke-direct {p0, p1}, Lcom/android/app/viewcapture/LooperExecutor;-><init>(Landroid/os/Looper;)V
-
-    .line 16
-    return-object p0
-    .line 19
-.end method
-
 
 # virtual methods
-.method public final enableOrDisableWindowListeners(Z)V
-    .locals 2
-
-    .line 1
-    iput-boolean p1, p0, Lcom/android/app/viewcapture/ViewCapture;->mIsEnabled:Z
-
-    .line 2
-    iget-object p1, p0, Lcom/android/app/viewcapture/ViewCapture;->mListeners:Ljava/util/List;
-
-    .line 4
-    new-instance v0, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda13;
-
-    .line 6
-    const/4 v1, 0x0
-
-    .line 8
-    invoke-direct {v0, v1}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda13;-><init>(I)V
-
-    .line 9
-    check-cast p1, Ljava/util/ArrayList;
-
-    .line 12
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
-
-    .line 14
-    iget-boolean p1, p0, Lcom/android/app/viewcapture/ViewCapture;->mIsEnabled:Z
-
-    .line 17
-    if-eqz p1, :cond_0
-
-    .line 19
-    iget-object p0, p0, Lcom/android/app/viewcapture/ViewCapture;->mListeners:Ljava/util/List;
-
-    .line 21
-    new-instance p1, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda13;
-
-    .line 23
-    const/4 v0, 0x1
-
-    .line 25
-    invoke-direct {p1, v0}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda13;-><init>(I)V
-
-    .line 26
-    check-cast p0, Ljava/util/ArrayList;
-
-    .line 29
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
-
-    .line 31
-    :cond_0
-    return-void
-    .line 34
-.end method
-
 .method public getExportedData(Landroid/content/Context;)Lcom/android/app/viewcapture/data/ExportedData;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
@@ -310,7 +227,7 @@
     move-result-object p0
 
     .line 65
-    new-instance p1, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda7;
+    new-instance p1, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda9;
 
     .line 66
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
@@ -405,10 +322,10 @@
     invoke-direct {v0, p1}, Lcom/android/app/viewcapture/ViewCapture$ViewIdProvider;-><init>(Landroid/content/res/Resources;)V
 
     .line 8
-    new-instance p1, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda8;
+    new-instance p1, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;
 
     .line 11
-    invoke-direct {p1, p0, p3}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda8;-><init>(Lcom/android/app/viewcapture/ViewCapture;Ljava/util/function/Predicate;)V
+    invoke-direct {p1, p0, p3}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;-><init>(Lcom/android/app/viewcapture/ViewCapture;Ljava/util/function/Predicate;)V
 
     .line 13
     sget-object p3, Lcom/android/app/viewcapture/ViewCapture;->MAIN_EXECUTOR:Lcom/android/app/viewcapture/LooperExecutor;
@@ -420,13 +337,13 @@
     move-result-object p1
 
     .line 21
-    new-instance p3, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda9;
+    new-instance p3, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda11;
 
     .line 22
     const/4 v1, 0x0
 
     .line 24
-    invoke-direct {p3, v0, p2, v1}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda9;-><init>(Lcom/android/app/viewcapture/ViewCapture$ViewIdProvider;Ljava/util/ArrayList;I)V
+    invoke-direct {p3, v0, p2, v1}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda11;-><init>(Lcom/android/app/viewcapture/ViewCapture$ViewIdProvider;Ljava/util/ArrayList;I)V
 
     .line 25
     iget-object p0, p0, Lcom/android/app/viewcapture/ViewCapture;->mBgExecutor:Ljava/util/concurrent/Executor;
@@ -448,60 +365,6 @@
     .line 1
     return-void
     .line 2
-.end method
-
-.method public startCapture(Landroid/view/View;Ljava/lang/String;)Landroid/media/permission/SafeCloseable;
-    .locals 2
-
-    .line 1
-    new-instance v0, Lcom/android/app/viewcapture/ViewCapture$WindowListener;
-
-    .line 2
-    invoke-direct {v0, p0, p1, p2}, Lcom/android/app/viewcapture/ViewCapture$WindowListener;-><init>(Lcom/android/app/viewcapture/ViewCapture;Landroid/view/View;Ljava/lang/String;)V
-
-    .line 4
-    iget-boolean p2, p0, Lcom/android/app/viewcapture/ViewCapture;->mIsEnabled:Z
-
-    .line 7
-    if-eqz p2, :cond_0
-
-    .line 9
-    new-instance p2, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;
-
-    .line 11
-    invoke-direct {p2, v0}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda10;-><init>(Lcom/android/app/viewcapture/ViewCapture$WindowListener;)V
-
-    .line 13
-    sget-object v1, Lcom/android/app/viewcapture/ViewCapture;->MAIN_EXECUTOR:Lcom/android/app/viewcapture/LooperExecutor;
-
-    .line 16
-    invoke-virtual {v1, p2}, Lcom/android/app/viewcapture/LooperExecutor;->execute(Ljava/lang/Runnable;)V
-
-    .line 18
-    :cond_0
-    iget-object p2, p0, Lcom/android/app/viewcapture/ViewCapture;->mListeners:Ljava/util/List;
-
-    .line 21
-    invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 23
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    .line 26
-    move-result-object p1
-
-    .line 29
-    invoke-virtual {p1, v0}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
-
-    .line 30
-    new-instance p1, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda11;
-
-    .line 33
-    invoke-direct {p1, p0, v0}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda11;-><init>(Lcom/android/app/viewcapture/ViewCapture;Lcom/android/app/viewcapture/ViewCapture$WindowListener;)V
-
-    .line 35
-    return-object p1
-    .line 38
 .end method
 
 .method public stopCapture(Landroid/view/View;)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator$1;
 .super Lcom/android/systemui/statusbar/notification/collection/listbuilder/pluggable/NotifSectioner;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -349,159 +349,153 @@
     or-int/2addr p1, v1
 
     .line 49
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator;->mSilentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator;->mSilentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
     .line 50
-    check-cast p0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 52
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->clearAllButtonEnabled:Z
 
-    .line 54
+    .line 52
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
 
-    .line 56
+    .line 54
     if-eqz p0, :cond_3
 
-    .line 58
+    .line 56
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->mClearAllButton:Landroid/widget/ImageView;
 
-    .line 60
+    .line 58
     if-eqz p1, :cond_2
 
-    .line 62
+    .line 60
     goto :goto_2
 
-    .line 64
+    .line 62
     :cond_2
     const/16 v0, 0x8
 
-    .line 65
+    .line 63
     :goto_2
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 67
+    .line 65
     :cond_3
     return-void
 
-    .line 70
+    .line 68
     :pswitch_1
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator;
 
-    .line 71
+    .line 69
     const/4 v0, 0x0
 
-    .line 73
+    .line 71
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator;->mHasSilentEntries:Z
 
-    .line 74
+    .line 72
     move v1, v0
 
-    .line 76
+    .line 74
     :goto_3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
-    .line 77
+    .line 75
     move-result v2
 
-    .line 80
+    .line 78
     if-ge v1, v2, :cond_5
 
-    .line 81
+    .line 79
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 83
+    .line 81
     move-result-object v2
 
-    .line 86
+    .line 84
     check-cast v2, Lcom/android/systemui/statusbar/notification/collection/ListEntry;
 
-    .line 87
+    .line 85
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/notification/collection/ListEntry;->getRepresentativeEntry()Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 89
+    .line 87
     move-result-object v2
 
-    .line 92
+    .line 90
     iget-object v2, v2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 93
+    .line 91
     invoke-virtual {v2}, Landroid/service/notification/StatusBarNotification;->isClearable()Z
 
-    .line 95
+    .line 93
     move-result v2
 
-    .line 98
+    .line 96
     if-eqz v2, :cond_4
 
-    .line 99
+    .line 97
     const/4 p1, 0x1
 
-    .line 101
+    .line 99
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator;->mHasSilentEntries:Z
 
-    .line 102
+    .line 100
     goto :goto_4
 
-    .line 104
+    .line 102
     :cond_4
     add-int/lit8 v1, v1, 0x1
 
-    .line 105
+    .line 103
     goto :goto_3
 
-    .line 107
+    .line 105
     :cond_5
     :goto_4
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator;->mHasSilentEntries:Z
 
-    .line 108
+    .line 106
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator;->mHasMinimizedEntries:Z
 
-    .line 110
+    .line 108
     or-int/2addr p1, v1
 
-    .line 112
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator;->mSilentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    .line 110
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/RankingCoordinator;->mSilentHeaderController:Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
 
-    .line 113
-    check-cast p0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;
-
-    .line 115
+    .line 111
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->clearAllButtonEnabled:Z
 
-    .line 117
+    .line 113
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderNodeControllerImpl;->_view:Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;
 
-    .line 119
+    .line 115
     if-eqz p0, :cond_7
 
-    .line 121
+    .line 117
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/SectionHeaderView;->mClearAllButton:Landroid/widget/ImageView;
 
-    .line 123
+    .line 119
     if-eqz p1, :cond_6
 
-    .line 125
+    .line 121
     goto :goto_5
 
-    .line 127
+    .line 123
     :cond_6
     const/16 v0, 0x8
 
-    .line 128
+    .line 124
     :goto_5
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 130
+    .line 126
     :cond_7
     return-void
 
-    .line 133
+    .line 129
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 134
+    .line 130
 .end method

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/splitscreen/SplitScreenController$ISplitScreenImpl$$ExternalSyntheticLambda16;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/Consumer;
@@ -267,7 +267,7 @@
     invoke-virtual {v5, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 103
-    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
+    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
 
     .line 106
     const/4 v6, 0x1
@@ -294,7 +294,7 @@
     const/16 v19, 0x0
 
     .line 124
-    invoke-static/range {v14 .. v19}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v14 .. v19}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 126
     :cond_1
@@ -311,7 +311,7 @@
 
     .line 134
     :cond_2
-    sget-object v9, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
+    sget-object v9, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
 
     .line 135
     const/4 v12, 0x1
@@ -338,7 +338,7 @@
     const/16 v30, 0x0
 
     .line 153
-    invoke-static/range {v25 .. v30}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v25 .. v30}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 155
     :cond_3
@@ -375,7 +375,7 @@
     iget-object v3, v7, Lcom/android/wm/shell/splitscreen/SplitScreenController;->mContext:Landroid/content/Context;
 
     .line 182
-    const v4, 0x7f140358    # @string/dock_multi_instances_not_supported_text 'This app can only be opened in 1 window'
+    const v4, 0x7f130382    # @string/dock_multi_instances_not_supported_text 'This app can only be opened in 1 window'
 
     .line 184
     const/4 v5, 0x0
@@ -748,7 +748,7 @@
 
     .line 415
     :cond_c
-    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
+    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
 
     .line 418
     aget-boolean v3, v3, v2
@@ -772,7 +772,7 @@
     const/16 v33, 0x0
 
     .line 435
-    invoke-static/range {v28 .. v33}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v28 .. v33}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 437
     :cond_d
@@ -786,7 +786,7 @@
 
     .line 443
     :cond_e
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
 
     .line 444
     const/4 v9, 0x1
@@ -813,7 +813,7 @@
     const/16 v33, 0x0
 
     .line 462
-    invoke-static/range {v28 .. v33}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v28 .. v33}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 464
     :cond_f
@@ -850,7 +850,7 @@
     iget-object v0, v15, Lcom/android/wm/shell/splitscreen/SplitScreenController;->mContext:Landroid/content/Context;
 
     .line 491
-    const v2, 0x7f140358    # @string/dock_multi_instances_not_supported_text 'This app can only be opened in 1 window'
+    const v2, 0x7f130382    # @string/dock_multi_instances_not_supported_text 'This app can only be opened in 1 window'
 
     .line 493
     const/4 v3, 0x0
@@ -975,7 +975,7 @@
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 562
-    sget-object v8, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
+    sget-object v8, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_SPLIT_SCREEN_enabled:[Z
 
     .line 565
     const/4 v9, 0x0
@@ -1061,7 +1061,7 @@
     const-string v32, "startIntents: intent1=%s intent2=%s position=%d snapPosition=%d"
 
     .line 618
-    invoke-static/range {v28 .. v33}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v28 .. v33}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 620
     goto :goto_f

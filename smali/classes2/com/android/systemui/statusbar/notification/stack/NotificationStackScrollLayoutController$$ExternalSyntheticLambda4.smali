@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$$ExternalSyntheticLambda4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -54,106 +54,106 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     .line 13
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 15
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 18
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mFooterView:Lcom/android/systemui/statusbar/notification/footer/ui/view/FooterView;
 
-    .line 21
+    .line 15
     if-eqz p0, :cond_0
 
-    .line 23
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 25
+    .line 17
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/notification/footer/ui/view/FooterView;->mShowHistory:Z
 
-    .line 28
+    .line 19
     if-eqz p0, :cond_0
 
-    .line 30
+    .line 21
     const/4 p0, 0x1
 
-    .line 32
+    .line 23
     goto :goto_0
 
-    .line 33
+    .line 24
     :cond_0
     const/4 p0, 0x0
 
-    .line 34
+    .line 25
     :goto_0
-    invoke-virtual {v0, p1, p0}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;->startHistoryIntent(Landroid/view/View;Z)V
+    const/4 v1, 0x1
+
+    .line 26
+    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;->mActivityStarter:Lcom/android/systemui/plugins/ActivityStarter;
+
+    .line 27
+    invoke-interface {v2, v1}, Lcom/android/systemui/plugins/ActivityStarter;->shouldAnimateLaunch(Z)Z
+
+    .line 29
+    move-result v1
+
+    .line 32
+    new-instance v3, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter$3;
+
+    .line 33
+    invoke-direct {v3, v0, p0, p1, v1}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter$3;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;ZLandroid/view/View;Z)V
 
     .line 35
+    const/4 p0, 0x0
+
+    .line 38
+    const/4 p1, 0x0
+
+    .line 39
+    invoke-interface {v2, v3, p0, p1}, Lcom/android/systemui/plugins/ActivityStarter;->dismissKeyguardThenExecute(Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;Ljava/lang/Runnable;Z)V
+
+    .line 40
     :cond_1
     return-void
 
-    .line 38
+    .line 43
     :pswitch_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 39
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 42
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 45
     const/4 p1, 0x1
 
-    .line 48
+    .line 44
     invoke-virtual {p0, p1, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->hasNotifications(IZ)Z
 
-    .line 49
+    .line 45
     move-result v0
 
-    .line 52
+    .line 48
     xor-int/2addr v0, p1
 
-    .line 53
+    .line 49
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 54
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 56
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/footer/shared/FooterViewRefactor;->assertInLegacyMode()V
-
-    .line 59
+    .line 50
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mController:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 62
+    .line 52
     const/4 v2, 0x0
 
-    .line 64
+    .line 54
     const/4 v3, 0x2
 
-    .line 65
+    .line 55
     invoke-virtual {v1, v3, v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->hasNotifications(IZ)Z
 
-    .line 66
+    .line 56
     move-result v1
 
-    .line 69
+    .line 59
     xor-int/2addr p1, v1
 
-    .line 70
+    .line 60
     invoke-virtual {p0, v3, v0, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->clearNotifications(IZZ)V
 
-    .line 71
+    .line 61
     return-void
 
-    .line 74
+    .line 64
     nop
 
-    .line 75
+    .line 65
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 76
+    .line 66
 .end method

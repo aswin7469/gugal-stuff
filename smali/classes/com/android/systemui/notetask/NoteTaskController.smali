@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/notetask/NoteTaskController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -524,7 +524,7 @@
     iget-object v1, v0, Lcom/android/systemui/notetask/NoteTaskController;->context:Landroid/content/Context;
 
     .line 238
-    const v4, 0x7f0808dc    # @drawable/ic_note_task_shortcut_widget 'res/drawable/ic_note_task_shortcut_widget.xml'
+    const v4, 0x7f080901    # @drawable/ic_note_task_shortcut_widget 'res/drawable/ic_note_task_shortcut_widget.xml'
 
     .line 240
     invoke-static {v1, v4}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
@@ -1185,7 +1185,7 @@
     iget-object p0, p0, Lcom/android/systemui/notetask/NoteTaskController;->context:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1408c2    # @string/set_default_notes_app_toast_content 'Set default notes app in Settings'
+    const v0, 0x7f130933    # @string/set_default_notes_app_toast_content 'Set default notes app in Settings'
 
     .line 4
     const/4 v1, 0x0

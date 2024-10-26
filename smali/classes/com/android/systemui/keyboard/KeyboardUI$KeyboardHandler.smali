@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyboard/KeyboardUI$KeyboardHandler;
 .super Landroid/os/Handler;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -135,7 +135,7 @@
     iput-object v1, p0, Lcom/android/systemui/keyboard/KeyboardUI;->mDialog:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
 
     .line 49
-    const v2, 0x7f140377    # @string/enable_bluetooth_title 'Turn on Bluetooth?'
+    const v2, 0x7f1303af    # @string/enable_bluetooth_title 'Turn on Bluetooth?'
 
     .line 51
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setTitle(I)V
@@ -144,7 +144,7 @@
     iget-object v1, p0, Lcom/android/systemui/keyboard/KeyboardUI;->mDialog:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
 
     .line 57
-    const v2, 0x7f140376    # @string/enable_bluetooth_message 'To connect your keyboard with your tablet, you first have to turn on Bluetooth.'
+    const v2, 0x7f1303ae    # @string/enable_bluetooth_message 'To connect your keyboard with your tablet, you first have to turn on Bluetooth.'
 
     .line 59
     invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setMessage(I)V
@@ -153,7 +153,7 @@
     iget-object v1, p0, Lcom/android/systemui/keyboard/KeyboardUI;->mDialog:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
 
     .line 65
-    const v2, 0x7f140375    # @string/enable_bluetooth_confirmation_ok 'Turn on'
+    const v2, 0x7f1303ad    # @string/enable_bluetooth_confirmation_ok 'Turn on'
 
     .line 67
     invoke-virtual {v1, v2, p1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
@@ -577,7 +577,7 @@
     iget-object p1, p0, Lcom/android/systemui/keyboard/KeyboardUI;->mContext:Landroid/content/Context;
 
     .line 338
-    const v0, 0x1040295    # @android:string/config_satellite_sim_plmn_identifier
+    const v0, 0x104028d    # @android:string/config_rawContactsLocalAccountType
 
     .line 340
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

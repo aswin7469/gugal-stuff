@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/BootCompleteCacheImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -53,6 +53,92 @@
 
 
 # virtual methods
+.method public final addListener(Lcom/android/systemui/BootCompleteCache$BootCompleteListener;)Z
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lcom/android/systemui/BootCompleteCacheImpl;->bootComplete:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    .line 2
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    .line 4
+    move-result v0
+
+    .line 7
+    const/4 v1, 0x1
+
+    .line 8
+    if-eqz v0, :cond_0
+
+    .line 9
+    return v1
+
+    .line 11
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/BootCompleteCacheImpl;->listeners:Ljava/util/List;
+
+    .line 12
+    monitor-enter v0
+
+    .line 14
+    :try_start_0
+    iget-object v2, p0, Lcom/android/systemui/BootCompleteCacheImpl;->bootComplete:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    .line 15
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    .line 17
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 20
+    if-eqz v2, :cond_1
+
+    .line 21
+    monitor-exit v0
+
+    .line 23
+    return v1
+
+    .line 24
+    :cond_1
+    :try_start_1
+    iget-object p0, p0, Lcom/android/systemui/BootCompleteCacheImpl;->listeners:Ljava/util/List;
+
+    .line 25
+    new-instance v1, Ljava/lang/ref/WeakReference;
+
+    .line 27
+    invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    .line 29
+    invoke-interface {p0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 32
+    monitor-exit v0
+
+    .line 35
+    const/4 p0, 0x0
+
+    .line 36
+    return p0
+
+    .line 37
+    :catchall_0
+    move-exception p0
+
+    .line 38
+    monitor-exit v0
+
+    .line 39
+    throw p0
+    .line 40
+.end method
+
 .method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 3
 
@@ -188,7 +274,7 @@
 .end method
 
 .method public final setBootComplete()V
-    .locals 4
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/BootCompleteCacheImpl;->bootComplete:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -251,61 +337,49 @@
     move-result-object v2
 
     .line 36
-    check-cast v2, Lcom/android/systemui/assist/PhoneStateMonitor$$ExternalSyntheticLambda0;
+    check-cast v2, Lcom/android/systemui/BootCompleteCache$BootCompleteListener;
 
     .line 37
     if-eqz v2, :cond_0
 
     .line 39
-    iget-object v2, v2, Lcom/android/systemui/assist/PhoneStateMonitor$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/assist/PhoneStateMonitor;
+    invoke-interface {v2}, Lcom/android/systemui/BootCompleteCache$BootCompleteListener;->onBootComplete()V
 
     .line 41
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 43
-    invoke-static {}, Lcom/android/systemui/assist/PhoneStateMonitor;->getCurrentDefaultHome()Landroid/content/ComponentName;
-
-    .line 46
-    move-result-object v3
-
-    .line 49
-    iput-object v3, v2, Lcom/android/systemui/assist/PhoneStateMonitor;->mDefaultHome:Landroid/content/ComponentName;
-
-    .line 50
     goto :goto_0
 
-    .line 52
+    .line 44
     :catchall_0
     move-exception p0
 
-    .line 53
+    .line 45
     goto :goto_1
 
-    .line 54
+    .line 46
     :cond_1
     iget-object p0, p0, Lcom/android/systemui/BootCompleteCacheImpl;->listeners:Ljava/util/List;
 
-    .line 55
+    .line 47
     invoke-interface {p0}, Ljava/util/List;->clear()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 57
+    .line 49
     monitor-exit v0
 
-    .line 60
+    .line 52
     goto :goto_2
 
-    .line 61
+    .line 53
     :goto_1
     monitor-exit v0
 
-    .line 62
+    .line 54
     throw p0
 
-    .line 63
+    .line 55
     :cond_2
     :goto_2
     return-void
-    .line 64
+    .line 56
 .end method

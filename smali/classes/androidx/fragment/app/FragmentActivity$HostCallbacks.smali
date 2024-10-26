@@ -1,6 +1,6 @@
 .class public final Landroidx/fragment/app/FragmentActivity$HostCallbacks;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/core/content/OnConfigurationChangedProvider;
@@ -62,20 +62,6 @@
 
 
 # virtual methods
-.method public final addOnConfigurationChangedListener(Landroidx/core/util/Consumer;)V
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/slice/compat/SlicePermissionActivity;
-
-    .line 2
-    invoke-virtual {p0, p1}, Landroidx/activity/ComponentActivity;->addOnConfigurationChangedListener(Landroidx/core/util/Consumer;)V
-
-    .line 4
-    return-void
-    .line 7
-.end method
-
 .method public final getLifecycle()Landroidx/lifecycle/Lifecycle;
     .locals 0
 
@@ -139,18 +125,4 @@
     .line 7
     return-object p0
     .line 8
-.end method
-
-.method public final removeOnConfigurationChangedListener(Landroidx/core/util/Consumer;)V
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/slice/compat/SlicePermissionActivity;
-
-    .line 2
-    invoke-virtual {p0, p1}, Landroidx/activity/ComponentActivity;->removeOnConfigurationChangedListener(Landroidx/core/util/Consumer;)V
-
-    .line 4
-    return-void
-    .line 7
 .end method

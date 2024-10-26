@@ -1,6 +1,6 @@
 .class Lcom/android/keyguard/LegacyLockIconViewController$4;
 .super Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -50,7 +50,7 @@
     if-eq v0, p1, :cond_1
 
     .line 14
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$3()V
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$5()V
 
     .line 16
     :cond_1
@@ -68,7 +68,7 @@
     iput-boolean p1, p0, Lcom/android/keyguard/LegacyLockIconViewController;->mIsBouncerShowing:Z
 
     .line 4
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$3()V
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateVisibility$5()V
 
     .line 6
     return-void

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/keyguard/LegacyLockIconViewController$$ExternalSyntheticLambda7;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -45,17 +45,17 @@
     packed-switch v0, :pswitch_data_0
 
     .line 6
-    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->onLongPress()V
-
-    .line 9
-    return-void
-
-    .line 12
-    :pswitch_0
     invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateIsUdfpsEnrolled()V
 
-    .line 13
+    .line 9
     invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->updateConfiguration$2()V
+
+    .line 12
+    return-void
+
+    .line 15
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/android/keyguard/LegacyLockIconViewController;->onLongPress()V
 
     .line 16
     return-void

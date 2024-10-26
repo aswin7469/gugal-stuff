@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/panel/component/spatial/ui/viewmodel/SpatialAudioViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -46,7 +46,7 @@
     new-instance p1, Lcom/android/systemui/common/shared/model/Icon$Resource;
 
     .line 13
-    const p5, 0x7f080930    # @drawable/ic_spatial_speaker 'res/drawable/ic_spatial_speaker.xml'
+    const p5, 0x7f08095d    # @drawable/ic_spatial_speaker 'res/drawable/ic_spatial_speaker.xml'
 
     .line 15
     const/4 v0, 0x0
@@ -177,7 +177,7 @@
     new-instance v1, Lcom/android/systemui/common/shared/model/Icon$Resource;
 
     .line 14
-    const p1, 0x7f0807e1    # @drawable/ic_head_tracking 'res/drawable/ic_head_tracking.xml'
+    const p1, 0x7f080803    # @drawable/ic_head_tracking 'res/drawable/ic_head_tracking.xml'
 
     .line 16
     invoke-direct {v1, p1, v2}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V
@@ -187,7 +187,7 @@
     iget-object p0, p0, Lcom/android/systemui/volume/panel/component/spatial/ui/viewmodel/SpatialAudioViewModel;->context:Landroid/content/Context;
 
     .line 22
-    const p1, 0x7f140a15    # @string/volume_panel_spatial_audio_tracking 'Head Tracking'
+    const p1, 0x7f130aa2    # @string/volume_panel_spatial_audio_tracking 'Head Tracking'
 
     .line 24
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -221,7 +221,7 @@
     new-instance v1, Lcom/android/systemui/common/shared/model/Icon$Resource;
 
     .line 46
-    const p1, 0x7f08092e    # @drawable/ic_spatial_audio 'res/drawable/ic_spatial_audio.xml'
+    const p1, 0x7f08095b    # @drawable/ic_spatial_audio 'res/drawable/ic_spatial_audio.xml'
 
     .line 48
     invoke-direct {v1, p1, v2}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V
@@ -231,7 +231,7 @@
     iget-object p0, p0, Lcom/android/systemui/volume/panel/component/spatial/ui/viewmodel/SpatialAudioViewModel;->context:Landroid/content/Context;
 
     .line 54
-    const p1, 0x7f140a12    # @string/volume_panel_spatial_audio_fixed 'Fixed'
+    const p1, 0x7f130a9f    # @string/volume_panel_spatial_audio_fixed 'Fixed'
 
     .line 56
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -265,7 +265,7 @@
     new-instance v1, Lcom/android/systemui/common/shared/model/Icon$Resource;
 
     .line 78
-    const p1, 0x7f08092f    # @drawable/ic_spatial_audio_off 'res/drawable/ic_spatial_audio_off.xml'
+    const p1, 0x7f08095c    # @drawable/ic_spatial_audio_off 'res/drawable/ic_spatial_audio_off.xml'
 
     .line 80
     invoke-direct {v1, p1, v2}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V
@@ -275,7 +275,7 @@
     iget-object p0, p0, Lcom/android/systemui/volume/panel/component/spatial/ui/viewmodel/SpatialAudioViewModel;->context:Landroid/content/Context;
 
     .line 86
-    const p1, 0x7f140a13    # @string/volume_panel_spatial_audio_off 'Off'
+    const p1, 0x7f130aa0    # @string/volume_panel_spatial_audio_off 'Off'
 
     .line 88
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

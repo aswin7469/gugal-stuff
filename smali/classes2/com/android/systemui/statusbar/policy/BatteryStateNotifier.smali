@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/BatteryStateNotifier;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;
@@ -81,7 +81,7 @@
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/BatteryStateNotifier;->context:Landroid/content/Context;
 
     .line 23
-    const v2, 0x7f14028a    # @string/config_batteryStateUnknownUrl ''
+    const v2, 0x7f13029d    # @string/config_batteryStateUnknownUrl ''
 
     .line 25
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -141,7 +141,7 @@
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/BatteryStateNotifier;->context:Landroid/content/Context;
 
     .line 65
-    const v2, 0x7f140171    # @string/battery_state_unknown_notification_title 'Problem reading your battery meter'
+    const v2, 0x7f130178    # @string/battery_state_unknown_notification_title 'Problem reading your battery meter'
 
     .line 67
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -159,7 +159,7 @@
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/BatteryStateNotifier;->context:Landroid/content/Context;
 
     .line 78
-    const v2, 0x7f140170    # @string/battery_state_unknown_notification_text 'Tap for more information'
+    const v2, 0x7f130177    # @string/battery_state_unknown_notification_text 'Tap for more information'
 
     .line 80
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -174,7 +174,7 @@
     move-result-object p1
 
     .line 90
-    const v1, 0x108093f    # @android:drawable/switch_thumb_material_anim
+    const v1, 0x108093d    # @android:drawable/switch_thumb_holo_light
 
     .line 91
     invoke-virtual {p1, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/mobile/dataservice/MobileNetworkDatabase_Impl$1;
 .super Landroidx/room/RoomOpenDelegate;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -181,1455 +181,1455 @@
     const/4 v9, 0x1
 
     .line 14
-    const-string v4, "sudId"
+    const-string/jumbo v4, "sudId"
 
     .line 15
     const-string v5, "TEXT"
 
-    .line 17
+    .line 18
     const/4 v6, 0x1
 
-    .line 19
+    .line 20
     const/4 v7, 0x1
 
-    .line 20
+    .line 21
     move-object v3, v2
 
-    .line 21
+    .line 22
     invoke-direct/range {v3 .. v9}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 22
-    const-string v3, "sudId"
+    .line 23
+    const-string/jumbo v3, "sudId"
 
-    .line 25
+    .line 26
     invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
+    .line 29
     new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 30
-    const/4 v9, 0x0
 
     .line 32
-    const/4 v10, 0x1
-
-    .line 33
-    const-string v5, "simSlotIndex"
-
-    .line 34
-    const-string v6, "INTEGER"
-
-    .line 36
-    const/4 v8, 0x0
-
-    .line 38
-    move-object v4, v2
-
-    .line 39
-    invoke-direct/range {v4 .. v10}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 40
-    const-string v4, "simSlotIndex"
-
-    .line 43
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 45
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 48
-    const/4 v10, 0x0
-
-    .line 50
-    const/4 v11, 0x1
-
-    .line 51
-    const-string v6, "carrierId"
-
-    .line 52
-    const-string v7, "INTEGER"
-
-    .line 54
-    const/4 v8, 0x1
-
-    .line 56
     const/4 v9, 0x0
 
-    .line 57
-    move-object v5, v2
+    .line 34
+    const/4 v10, 0x1
+
+    .line 35
+    const-string v5, "simSlotIndex"
+
+    .line 36
+    const-string v6, "INTEGER"
+
+    .line 38
+    const/4 v8, 0x0
+
+    .line 40
+    move-object v4, v2
+
+    .line 41
+    invoke-direct/range {v4 .. v10}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 42
+    const-string v4, "simSlotIndex"
+
+    .line 45
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 47
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 50
+    const/4 v10, 0x0
+
+    .line 52
+    const/4 v11, 0x1
+
+    .line 53
+    const-string v6, "carrierId"
+
+    .line 54
+    const-string v7, "INTEGER"
+
+    .line 56
+    const/4 v8, 0x1
 
     .line 58
-    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+    const/4 v9, 0x0
 
     .line 59
+    move-object v5, v2
+
+    .line 60
+    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 61
     const-string v4, "carrierId"
 
-    .line 62
+    .line 64
     invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 64
+    .line 66
     new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 67
-    const-string v6, "displayName"
 
     .line 69
-    const-string v7, "TEXT"
+    const-string v6, "displayName"
 
     .line 71
-    const/4 v8, 0x0
+    const-string v7, "TEXT"
 
     .line 73
-    move-object v5, v2
-
-    .line 74
-    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 75
-    const-string v4, "displayName"
-
-    .line 78
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 80
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 83
-    const-string v6, "carrierName"
-
-    .line 85
-    const-string v7, "TEXT"
-
-    .line 87
-    move-object v5, v2
-
-    .line 89
-    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 90
-    const-string v4, "carrierName"
-
-    .line 93
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 95
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 98
-    const-string v6, "dataRoaming"
-
-    .line 100
-    const-string v7, "INTEGER"
-
-    .line 102
-    const/4 v8, 0x1
-
-    .line 104
-    move-object v5, v2
-
-    .line 105
-    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 106
-    const-string v4, "dataRoaming"
-
-    .line 109
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 111
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 114
-    const-string v6, "mcc"
-
-    .line 116
-    const-string v7, "TEXT"
-
-    .line 118
     const/4 v8, 0x0
 
-    .line 120
+    .line 75
     move-object v5, v2
 
-    .line 121
+    .line 76
     invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 77
+    const-string v4, "displayName"
+
+    .line 80
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 82
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 85
+    const-string v6, "carrierName"
+
+    .line 87
+    const-string v7, "TEXT"
+
+    .line 89
+    move-object v5, v2
+
+    .line 91
+    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 92
+    const-string v4, "carrierName"
+
+    .line 95
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 97
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 100
+    const-string v6, "dataRoaming"
+
+    .line 102
+    const-string v7, "INTEGER"
+
+    .line 104
+    const/4 v8, 0x1
+
+    .line 106
+    move-object v5, v2
+
+    .line 107
+    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 108
+    const-string v4, "dataRoaming"
+
+    .line 111
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 113
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 116
+    const-string v6, "mcc"
+
+    .line 118
+    const-string v7, "TEXT"
+
+    .line 120
+    const/4 v8, 0x0
 
     .line 122
+    move-object v5, v2
+
+    .line 123
+    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 124
     const-string v4, "mcc"
 
-    .line 125
+    .line 127
     invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 127
+    .line 129
     new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 130
-    const-string v6, "mnc"
 
     .line 132
-    const-string v7, "TEXT"
+    const-string v6, "mnc"
 
     .line 134
-    move-object v5, v2
-
-    .line 136
-    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 137
-    const-string v4, "mnc"
-
-    .line 140
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 142
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 145
-    const-string v6, "countryIso"
-
-    .line 147
     const-string v7, "TEXT"
 
-    .line 149
+    .line 136
     move-object v5, v2
+
+    .line 138
+    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 139
+    const-string v4, "mnc"
+
+    .line 142
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 144
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 147
+    const-string v6, "countryIso"
+
+    .line 149
+    const-string v7, "TEXT"
 
     .line 151
+    move-object v5, v2
+
+    .line 153
     invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 152
+    .line 154
     const-string v4, "countryIso"
 
-    .line 155
+    .line 157
     invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 157
+    .line 159
     new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 160
-    const-string v6, "isEmbedded"
 
     .line 162
-    const-string v7, "INTEGER"
+    const-string v6, "isEmbedded"
 
     .line 164
-    const/4 v8, 0x1
+    const-string v7, "INTEGER"
 
     .line 166
-    move-object v5, v2
-
-    .line 167
-    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 168
-    const-string v4, "isEmbedded"
-
-    .line 171
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 173
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 176
-    const-string v6, "cardId"
-
-    .line 178
-    const-string v7, "INTEGER"
-
-    .line 180
-    move-object v5, v2
-
-    .line 182
-    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 183
-    const-string v4, "cardId"
-
-    .line 186
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 188
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 191
-    const-string v6, "portIndex"
-
-    .line 193
-    const-string v7, "INTEGER"
-
-    .line 195
-    move-object v5, v2
-
-    .line 197
-    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 198
-    const-string v5, "portIndex"
-
-    .line 201
-    invoke-interface {v1, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 203
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 206
-    const/4 v11, 0x0
-
-    .line 208
-    const/4 v12, 0x1
-
-    .line 209
-    const-string v7, "isOpportunistic"
-
-    .line 210
-    const-string v8, "INTEGER"
-
-    .line 212
-    const/4 v9, 0x1
-
-    .line 214
-    const/4 v10, 0x0
-
-    .line 215
-    move-object v6, v2
-
-    .line 216
-    invoke-direct/range {v6 .. v12}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 217
-    const-string v6, "isOpportunistic"
-
-    .line 220
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 222
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 225
-    const/4 v12, 0x0
-
-    .line 227
-    const/4 v13, 0x1
-
-    .line 228
-    const-string v8, "groupUUID"
-
-    .line 229
-    const-string v9, "TEXT"
-
-    .line 231
-    const/4 v11, 0x0
-
-    .line 233
-    move-object v7, v2
-
-    .line 234
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 235
-    const-string v6, "groupUUID"
-
-    .line 238
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 240
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 243
-    const-string v8, "subscriptionType"
-
-    .line 245
-    const-string v9, "INTEGER"
-
-    .line 247
-    const/4 v10, 0x1
-
-    .line 249
-    move-object v7, v2
-
-    .line 250
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 251
-    const-string v6, "subscriptionType"
-
-    .line 254
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 256
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 259
-    const-string/jumbo v8, "uniqueName"
-
-    .line 261
-    const-string v9, "TEXT"
-
-    .line 264
-    const/4 v10, 0x0
-
-    .line 266
-    move-object v7, v2
-
-    .line 267
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 268
-    const-string/jumbo v6, "uniqueName"
-
-    .line 271
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 274
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 277
-    const-string v8, "isSubscriptionVisible"
-
-    .line 279
-    const-string v9, "INTEGER"
-
-    .line 281
-    const/4 v10, 0x1
-
-    .line 283
-    move-object v7, v2
-
-    .line 284
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 285
-    const-string v6, "isSubscriptionVisible"
-
-    .line 288
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 290
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 293
-    const-string v8, "getFormattedPhoneNumber"
-
-    .line 295
-    const-string v9, "TEXT"
-
-    .line 297
-    const/4 v10, 0x0
-
-    .line 299
-    move-object v7, v2
-
-    .line 300
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 301
-    const-string v6, "getFormattedPhoneNumber"
-
-    .line 304
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 306
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 309
-    const-string v8, "isFirstRemovableSubscription"
-
-    .line 311
-    const-string v9, "INTEGER"
-
-    .line 313
-    const/4 v10, 0x1
-
-    .line 315
-    move-object v7, v2
-
-    .line 316
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 317
-    const-string v6, "isFirstRemovableSubscription"
-
-    .line 320
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 322
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 325
-    const-string v8, "isDefaultSubscriptionSelection"
-
-    .line 327
-    const-string v9, "INTEGER"
-
-    .line 329
-    move-object v7, v2
-
-    .line 331
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 332
-    const-string v6, "isDefaultSubscriptionSelection"
-
-    .line 335
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 337
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 340
-    const-string v8, "isValidSubscription"
-
-    .line 342
-    const-string v9, "INTEGER"
-
-    .line 344
-    move-object v7, v2
-
-    .line 346
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 347
-    const-string v6, "isValidSubscription"
-
-    .line 350
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 352
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 355
-    const-string v8, "isUsableSubscription"
-
-    .line 357
-    const-string v9, "INTEGER"
-
-    .line 359
-    move-object v7, v2
-
-    .line 361
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 362
-    const-string v6, "isUsableSubscription"
-
-    .line 365
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 367
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 370
-    const-string v8, "isActiveSubscription"
-
-    .line 372
-    const-string v9, "INTEGER"
-
-    .line 374
-    move-object v7, v2
-
-    .line 376
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 377
-    const-string v6, "isActiveSubscription"
-
-    .line 380
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 382
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 385
-    const-string v8, "isAvailableSubscription"
-
-    .line 387
-    const-string v9, "INTEGER"
-
-    .line 389
-    move-object v7, v2
-
-    .line 391
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 392
-    const-string v6, "isAvailableSubscription"
-
-    .line 395
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 397
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 400
-    const-string v8, "isActiveDataSubscriptionId"
-
-    .line 402
-    const-string v9, "INTEGER"
-
-    .line 404
-    move-object v7, v2
-
-    .line 406
-    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 407
-    const-string v6, "isActiveDataSubscriptionId"
-
-    .line 410
-    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 412
-    new-instance v2, Ljava/util/HashSet;
-
-    .line 415
-    const/4 v6, 0x0
-
-    .line 417
-    invoke-direct {v2, v6}, Ljava/util/HashSet;-><init>(I)V
-
-    .line 418
-    new-instance v7, Ljava/util/HashSet;
-
-    .line 421
     const/4 v8, 0x1
 
-    .line 423
-    invoke-direct {v7, v8}, Ljava/util/HashSet;-><init>(I)V
+    .line 168
+    move-object v5, v2
 
-    .line 424
-    new-instance v9, Landroidx/room/util/TableInfo$Index;
+    .line 169
+    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 170
+    const-string v4, "isEmbedded"
+
+    .line 173
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 175
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 178
+    const-string v6, "cardId"
+
+    .line 180
+    const-string v7, "INTEGER"
+
+    .line 182
+    move-object v5, v2
+
+    .line 184
+    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 185
+    const-string v4, "cardId"
+
+    .line 188
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 190
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 193
+    const-string v6, "portIndex"
+
+    .line 195
+    const-string v7, "INTEGER"
+
+    .line 197
+    move-object v5, v2
+
+    .line 199
+    invoke-direct/range {v5 .. v11}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 200
+    const-string v5, "portIndex"
+
+    .line 203
+    invoke-interface {v1, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 205
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 208
+    const/4 v11, 0x0
+
+    .line 210
+    const/4 v12, 0x1
+
+    .line 211
+    const-string v7, "isOpportunistic"
+
+    .line 212
+    const-string v8, "INTEGER"
+
+    .line 214
+    const/4 v9, 0x1
+
+    .line 216
+    const/4 v10, 0x0
+
+    .line 217
+    move-object v6, v2
+
+    .line 218
+    invoke-direct/range {v6 .. v12}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 219
+    const-string v6, "isOpportunistic"
+
+    .line 222
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 224
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 227
+    const/4 v12, 0x0
+
+    .line 229
+    const/4 v13, 0x1
+
+    .line 230
+    const-string v8, "groupUUID"
+
+    .line 231
+    const-string v9, "TEXT"
+
+    .line 233
+    const/4 v11, 0x0
+
+    .line 235
+    move-object v7, v2
+
+    .line 236
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 237
+    const-string v6, "groupUUID"
+
+    .line 240
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 242
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 245
+    const-string/jumbo v8, "subscriptionType"
+
+    .line 247
+    const-string v9, "INTEGER"
+
+    .line 250
+    const/4 v10, 0x1
+
+    .line 252
+    move-object v7, v2
+
+    .line 253
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 254
+    const-string/jumbo v6, "subscriptionType"
+
+    .line 257
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 260
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 263
+    const-string/jumbo v8, "uniqueName"
+
+    .line 265
+    const-string v9, "TEXT"
+
+    .line 268
+    const/4 v10, 0x0
+
+    .line 270
+    move-object v7, v2
+
+    .line 271
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 272
+    const-string/jumbo v6, "uniqueName"
+
+    .line 275
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 278
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 281
+    const-string v8, "isSubscriptionVisible"
+
+    .line 283
+    const-string v9, "INTEGER"
+
+    .line 285
+    const/4 v10, 0x1
+
+    .line 287
+    move-object v7, v2
+
+    .line 288
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 289
+    const-string v6, "isSubscriptionVisible"
+
+    .line 292
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 294
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 297
+    const-string v8, "getFormattedPhoneNumber"
+
+    .line 299
+    const-string v9, "TEXT"
+
+    .line 301
+    const/4 v10, 0x0
+
+    .line 303
+    move-object v7, v2
+
+    .line 304
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 305
+    const-string v6, "getFormattedPhoneNumber"
+
+    .line 308
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 310
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 313
+    const-string v8, "isFirstRemovableSubscription"
+
+    .line 315
+    const-string v9, "INTEGER"
+
+    .line 317
+    const/4 v10, 0x1
+
+    .line 319
+    move-object v7, v2
+
+    .line 320
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 321
+    const-string v6, "isFirstRemovableSubscription"
+
+    .line 324
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 326
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 329
+    const-string v8, "isDefaultSubscriptionSelection"
+
+    .line 331
+    const-string v9, "INTEGER"
+
+    .line 333
+    move-object v7, v2
+
+    .line 335
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 336
+    const-string v6, "isDefaultSubscriptionSelection"
+
+    .line 339
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 341
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 344
+    const-string v8, "isValidSubscription"
+
+    .line 346
+    const-string v9, "INTEGER"
+
+    .line 348
+    move-object v7, v2
+
+    .line 350
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 351
+    const-string v6, "isValidSubscription"
+
+    .line 354
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 356
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 359
+    const-string v8, "isUsableSubscription"
+
+    .line 361
+    const-string v9, "INTEGER"
+
+    .line 363
+    move-object v7, v2
+
+    .line 365
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 366
+    const-string v6, "isUsableSubscription"
+
+    .line 369
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 371
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 374
+    const-string v8, "isActiveSubscription"
+
+    .line 376
+    const-string v9, "INTEGER"
+
+    .line 378
+    move-object v7, v2
+
+    .line 380
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 381
+    const-string v6, "isActiveSubscription"
+
+    .line 384
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 386
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 389
+    const-string v8, "isAvailableSubscription"
+
+    .line 391
+    const-string v9, "INTEGER"
+
+    .line 393
+    move-object v7, v2
+
+    .line 395
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 396
+    const-string v6, "isAvailableSubscription"
+
+    .line 399
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 401
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 404
+    const-string v8, "isActiveDataSubscriptionId"
+
+    .line 406
+    const-string v9, "INTEGER"
+
+    .line 408
+    move-object v7, v2
+
+    .line 410
+    invoke-direct/range {v7 .. v13}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 411
+    const-string v6, "isActiveDataSubscriptionId"
+
+    .line 414
+    invoke-interface {v1, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 416
+    new-instance v2, Ljava/util/HashSet;
+
+    .line 419
+    const/4 v6, 0x0
+
+    .line 421
+    invoke-direct {v2, v6}, Ljava/util/HashSet;-><init>(I)V
+
+    .line 422
+    new-instance v7, Ljava/util/HashSet;
+
+    .line 425
+    const/4 v8, 0x1
 
     .line 427
+    invoke-direct {v7, v8}, Ljava/util/HashSet;-><init>(I)V
+
+    .line 428
+    new-instance v9, Landroidx/room/util/TableInfo$Index;
+
+    .line 431
     filled-new-array {v3}, [Ljava/lang/String;
-
-    .line 429
-    move-result-object v10
-
-    .line 432
-    invoke-static {v10}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     .line 433
     move-result-object v10
 
     .line 436
-    const-string v11, "ASC"
+    invoke-static {v10}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     .line 437
+    move-result-object v10
+
+    .line 440
+    const-string v11, "ASC"
+
+    .line 441
     filled-new-array {v11}, [Ljava/lang/String;
-
-    .line 439
-    move-result-object v12
-
-    .line 442
-    invoke-static {v12}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     .line 443
     move-result-object v12
 
     .line 446
-    const-string v13, "index_subscriptionInfo_sudId"
+    invoke-static {v12}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     .line 447
+    move-result-object v12
+
+    .line 450
+    const-string v13, "index_subscriptionInfo_sudId"
+
+    .line 451
     invoke-direct {v9, v13, v6, v10, v12}, Landroidx/room/util/TableInfo$Index;-><init>(Ljava/lang/String;ZLjava/util/List;Ljava/util/List;)V
 
-    .line 449
+    .line 453
     invoke-interface {v7, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 452
+    .line 456
     new-instance v9, Landroidx/room/util/TableInfo;
 
-    .line 455
-    const-string v10, "subscriptionInfo"
+    .line 459
+    const-string/jumbo v10, "subscriptionInfo"
 
-    .line 457
+    .line 461
     invoke-direct {v9, v10, v1, v2, v7}, Landroidx/room/util/TableInfo;-><init>(Ljava/lang/String;Ljava/util/Map;Ljava/util/Set;Ljava/util/Set;)V
 
-    .line 459
+    .line 464
     invoke-static {v0, v10}, Landroidx/room/util/TableInfo;->read(Landroidx/sqlite/SQLiteConnection;Ljava/lang/String;)Landroidx/room/util/TableInfo;
 
-    .line 462
+    .line 467
     move-result-object v1
-
-    .line 465
-    invoke-virtual {v9, v1}, Landroidx/room/util/TableInfo;->equals(Ljava/lang/Object;)Z
-
-    .line 466
-    move-result v2
-
-    .line 469
-    const-string v7, "\n Found:\n"
 
     .line 470
-    if-nez v2, :cond_0
+    invoke-virtual {v9, v1}, Landroidx/room/util/TableInfo;->equals(Ljava/lang/Object;)Z
 
-    .line 472
-    new-instance v0, Landroidx/room/RoomOpenDelegate$ValidationResult;
+    .line 471
+    move-result v2
 
     .line 474
+    const-string v7, "\n Found:\n"
+
+    .line 475
+    if-nez v2, :cond_0
+
+    .line 477
+    new-instance v0, Landroidx/room/RoomOpenDelegate$ValidationResult;
+
+    .line 479
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 476
-    const-string v3, "subscriptionInfo(com.android.settingslib.mobile.dataservice.SubscriptionInfoEntity).\n Expected:\n"
-
-    .line 478
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 480
-    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 481
+    const-string/jumbo v3, "subscriptionInfo(com.android.settingslib.mobile.dataservice.SubscriptionInfoEntity).\n Expected:\n"
 
     .line 483
-    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 486
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 489
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 492
-    move-result-object v1
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 495
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 498
+    move-result-object v1
+
+    .line 501
     invoke-direct {v0, v1, v6}, Landroidx/room/RoomOpenDelegate$ValidationResult;-><init>(Ljava/lang/String;Z)V
 
-    .line 496
+    .line 502
     return-object v0
 
-    .line 499
+    .line 505
     :cond_0
     new-instance v1, Ljava/util/HashMap;
 
-    .line 500
+    .line 506
     const/16 v2, 0xa
 
-    .line 502
+    .line 508
     invoke-direct {v1, v2}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 504
+    .line 510
     new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 507
-    const/16 v17, 0x0
-
-    .line 509
-    const/16 v18, 0x1
-
-    .line 511
-    const-string v13, "sudId"
 
     .line 513
-    const-string v14, "TEXT"
+    const/16 v17, 0x0
 
     .line 515
-    const/4 v15, 0x1
+    const/16 v18, 0x1
 
     .line 517
-    const/16 v16, 0x1
+    const-string/jumbo v13, "sudId"
 
-    .line 518
-    move-object v12, v2
+    .line 519
+    const-string v14, "TEXT"
 
-    .line 520
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 521
-    invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 522
+    const/4 v15, 0x1
 
     .line 524
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
+    const/16 v16, 0x1
+
+    .line 525
+    move-object v12, v2
 
     .line 527
-    const/16 v24, 0x0
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 529
-    const/16 v25, 0x1
+    .line 528
+    invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 531
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 534
+    const/16 v24, 0x0
+
+    .line 536
+    const/16 v25, 0x1
+
+    .line 538
     const-string v20, "physicalSlotIndex"
 
-    .line 533
+    .line 540
     const-string v21, "TEXT"
 
-    .line 535
+    .line 542
     const/16 v22, 0x1
 
-    .line 537
+    .line 544
     const/16 v23, 0x0
 
-    .line 539
-    move-object/from16 v19, v2
-
-    .line 541
-    invoke-direct/range {v19 .. v25}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 543
-    const-string v9, "physicalSlotIndex"
-
     .line 546
-    invoke-interface {v1, v9, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-object/from16 v19, v2
 
     .line 548
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 551
-    const-string v13, "logicalSlotIndex"
-
-    .line 553
-    const-string v14, "INTEGER"
-
-    .line 555
-    const/16 v16, 0x0
-
-    .line 557
-    move-object v12, v2
-
-    .line 559
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 560
-    const-string v9, "logicalSlotIndex"
-
-    .line 563
-    invoke-interface {v1, v9, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 565
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 568
-    const-string v13, "cardId"
-
-    .line 570
-    const-string v14, "INTEGER"
-
-    .line 572
-    move-object v12, v2
-
-    .line 574
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 575
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 578
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 581
-    const-string v20, "isEuicc"
-
-    .line 583
-    const-string v21, "INTEGER"
-
-    .line 585
-    move-object/from16 v19, v2
-
-    .line 587
     invoke-direct/range {v19 .. v25}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 589
-    const-string v4, "isEuicc"
+    .line 550
+    const-string v9, "physicalSlotIndex"
+
+    .line 553
+    invoke-interface {v1, v9, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 555
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 558
+    const-string v13, "logicalSlotIndex"
+
+    .line 560
+    const-string v14, "INTEGER"
+
+    .line 562
+    const/16 v16, 0x0
+
+    .line 564
+    move-object v12, v2
+
+    .line 566
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 567
+    const-string v9, "logicalSlotIndex"
+
+    .line 570
+    invoke-interface {v1, v9, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 572
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 575
+    const-string v13, "cardId"
+
+    .line 577
+    const-string v14, "INTEGER"
+
+    .line 579
+    move-object v12, v2
+
+    .line 581
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 582
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 585
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 588
+    const-string v20, "isEuicc"
+
+    .line 590
+    const-string v21, "INTEGER"
 
     .line 592
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-object/from16 v19, v2
 
     .line 594
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
+    invoke-direct/range {v19 .. v25}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 597
-    const-string v13, "isMultipleEnabledProfilesSupported"
+    .line 596
+    const-string v4, "isEuicc"
 
     .line 599
-    const-string v14, "INTEGER"
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 601
-    move-object v12, v2
-
-    .line 603
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
 
     .line 604
+    const-string v13, "isMultipleEnabledProfilesSupported"
+
+    .line 606
+    const-string v14, "INTEGER"
+
+    .line 608
+    move-object v12, v2
+
+    .line 610
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 611
     const-string v4, "isMultipleEnabledProfilesSupported"
 
-    .line 607
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 609
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 612
-    const-string v13, "cardState"
-
     .line 614
-    const-string v14, "INTEGER"
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 616
-    move-object v12, v2
-
-    .line 618
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
 
     .line 619
+    const-string v13, "cardState"
+
+    .line 621
+    const-string v14, "INTEGER"
+
+    .line 623
+    move-object v12, v2
+
+    .line 625
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 626
     const-string v4, "cardState"
 
-    .line 622
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 624
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 627
-    const-string v13, "isRemovable"
-
     .line 629
-    const-string v14, "INTEGER"
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 631
-    move-object v12, v2
-
-    .line 633
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
 
     .line 634
+    const-string v13, "isRemovable"
+
+    .line 636
+    const-string v14, "INTEGER"
+
+    .line 638
+    move-object v12, v2
+
+    .line 640
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 641
     const-string v4, "isRemovable"
 
-    .line 637
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 639
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 642
-    const-string v13, "isActive"
-
     .line 644
-    const-string v14, "INTEGER"
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 646
-    move-object v12, v2
-
-    .line 648
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 649
-    const-string v4, "isActive"
-
-    .line 652
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 654
     new-instance v2, Landroidx/room/util/TableInfo$Column;
 
-    .line 657
-    const-string v13, "portIndex"
+    .line 649
+    const-string v13, "isActive"
 
-    .line 659
+    .line 651
     const-string v14, "INTEGER"
 
-    .line 661
+    .line 653
     move-object v12, v2
 
-    .line 663
+    .line 655
     invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 664
-    invoke-interface {v1, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 656
+    const-string v4, "isActive"
 
-    .line 667
-    new-instance v2, Ljava/util/HashSet;
+    .line 659
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 661
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 664
+    const-string v13, "portIndex"
+
+    .line 666
+    const-string v14, "INTEGER"
+
+    .line 668
+    move-object v12, v2
 
     .line 670
-    invoke-direct {v2, v6}, Ljava/util/HashSet;-><init>(I)V
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 672
-    new-instance v4, Ljava/util/HashSet;
+    .line 671
+    invoke-interface {v1, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 675
-    invoke-direct {v4, v8}, Ljava/util/HashSet;-><init>(I)V
+    .line 674
+    new-instance v2, Ljava/util/HashSet;
 
     .line 677
-    new-instance v5, Landroidx/room/util/TableInfo$Index;
+    invoke-direct {v2, v6}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 680
-    filled-new-array {v3}, [Ljava/lang/String;
+    .line 679
+    new-instance v4, Ljava/util/HashSet;
 
     .line 682
-    move-result-object v3
+    invoke-direct {v4, v8}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 685
-    invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    .line 684
+    new-instance v5, Landroidx/room/util/TableInfo$Index;
 
-    .line 686
-    move-result-object v3
+    .line 687
+    filled-new-array {v3}, [Ljava/lang/String;
 
     .line 689
-    filled-new-array {v11}, [Ljava/lang/String;
+    move-result-object v3
 
-    .line 690
-    move-result-object v9
+    .line 692
+    invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     .line 693
-    invoke-static {v9}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    move-result-object v3
 
-    .line 694
-    move-result-object v9
+    .line 696
+    filled-new-array {v11}, [Ljava/lang/String;
 
     .line 697
-    const-string v10, "index_uiccInfo_sudId"
-
-    .line 698
-    invoke-direct {v5, v10, v6, v3, v9}, Landroidx/room/util/TableInfo$Index;-><init>(Ljava/lang/String;ZLjava/util/List;Ljava/util/List;)V
+    move-result-object v9
 
     .line 700
+    invoke-static {v9}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    .line 701
+    move-result-object v9
+
+    .line 704
+    const-string v10, "index_uiccInfo_sudId"
+
+    .line 705
+    invoke-direct {v5, v10, v6, v3, v9}, Landroidx/room/util/TableInfo$Index;-><init>(Ljava/lang/String;ZLjava/util/List;Ljava/util/List;)V
+
+    .line 707
     invoke-interface {v4, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 703
+    .line 710
     new-instance v3, Landroidx/room/util/TableInfo;
 
-    .line 706
+    .line 713
     const-string/jumbo v5, "uiccInfo"
 
-    .line 708
+    .line 715
     invoke-direct {v3, v5, v1, v2, v4}, Landroidx/room/util/TableInfo;-><init>(Ljava/lang/String;Ljava/util/Map;Ljava/util/Set;Ljava/util/Set;)V
 
-    .line 711
+    .line 718
     invoke-static {v0, v5}, Landroidx/room/util/TableInfo;->read(Landroidx/sqlite/SQLiteConnection;Ljava/lang/String;)Landroidx/room/util/TableInfo;
 
-    .line 714
-    move-result-object v1
-
-    .line 717
-    invoke-virtual {v3, v1}, Landroidx/room/util/TableInfo;->equals(Ljava/lang/Object;)Z
-
-    .line 718
-    move-result v2
-
     .line 721
-    if-nez v2, :cond_1
-
-    .line 722
-    new-instance v0, Landroidx/room/RoomOpenDelegate$ValidationResult;
+    move-result-object v1
 
     .line 724
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Landroidx/room/util/TableInfo;->equals(Ljava/lang/Object;)Z
 
-    .line 726
-    const-string/jumbo v4, "uiccInfo(com.android.settingslib.mobile.dataservice.UiccInfoEntity).\n Expected:\n"
+    .line 725
+    move-result v2
 
     .line 728
-    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v2, :cond_1
+
+    .line 729
+    new-instance v0, Landroidx/room/RoomOpenDelegate$ValidationResult;
 
     .line 731
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    .line 733
+    const-string/jumbo v4, "uiccInfo(com.android.settingslib.mobile.dataservice.UiccInfoEntity).\n Expected:\n"
+
+    .line 735
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 738
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 734
+    .line 741
     invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 737
+    .line 744
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 740
+    .line 747
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 743
+    .line 750
     move-result-object v1
 
-    .line 746
+    .line 753
     invoke-direct {v0, v1, v6}, Landroidx/room/RoomOpenDelegate$ValidationResult;-><init>(Ljava/lang/String;Z)V
 
-    .line 747
+    .line 754
     return-object v0
 
-    .line 750
+    .line 757
     :cond_1
     new-instance v1, Ljava/util/HashMap;
 
-    .line 751
+    .line 758
     const/16 v2, 0xc
 
-    .line 753
+    .line 760
     invoke-direct {v1, v2}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 755
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
-
-    .line 758
-    const/16 v17, 0x0
-
-    .line 760
-    const/16 v18, 0x1
-
     .line 762
-    const/4 v15, 0x1
-
-    .line 764
-    const/16 v16, 0x1
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
 
     .line 765
-    const-string v13, "subId"
+    const/16 v17, 0x0
 
     .line 767
-    const-string v14, "TEXT"
+    const/16 v18, 0x1
 
     .line 769
-    move-object v12, v2
+    const/4 v15, 0x1
 
     .line 771
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+    const/16 v16, 0x1
 
     .line 772
-    const-string v3, "subId"
+    const-string/jumbo v13, "subId"
 
-    .line 775
-    invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 774
+    const-string v14, "TEXT"
 
     .line 777
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
+    move-object v12, v2
+
+    .line 779
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
     .line 780
-    const/16 v16, 0x0
+    const-string/jumbo v3, "subId"
 
-    .line 782
-    const-string v13, "isContactDiscoveryEnabled"
-
-    .line 784
-    const-string v14, "INTEGER"
+    .line 783
+    invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 786
-    move-object v12, v2
-
-    .line 788
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
 
     .line 789
-    const-string v4, "isContactDiscoveryEnabled"
+    const/16 v16, 0x0
 
-    .line 792
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 791
+    const-string v13, "isContactDiscoveryEnabled"
 
-    .line 794
-    new-instance v2, Landroidx/room/util/TableInfo$Column;
+    .line 793
+    const-string v14, "INTEGER"
+
+    .line 795
+    move-object v12, v2
 
     .line 797
-    const-string v13, "isContactDiscoveryVisible"
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 799
-    const-string v14, "INTEGER"
+    .line 798
+    const-string v4, "isContactDiscoveryEnabled"
 
     .line 801
-    move-object v12, v2
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 803
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 804
-    const-string v4, "isContactDiscoveryVisible"
-
-    .line 807
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 809
     new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 806
+    const-string v13, "isContactDiscoveryVisible"
+
+    .line 808
+    const-string v14, "INTEGER"
+
+    .line 810
+    move-object v12, v2
 
     .line 812
-    const-string v13, "isMobileDataEnabled"
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 814
-    const-string v14, "INTEGER"
+    .line 813
+    const-string v4, "isContactDiscoveryVisible"
 
     .line 816
-    move-object v12, v2
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 818
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 819
-    const-string v4, "isMobileDataEnabled"
-
-    .line 822
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 824
     new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 821
+    const-string v13, "isMobileDataEnabled"
+
+    .line 823
+    const-string v14, "INTEGER"
+
+    .line 825
+    move-object v12, v2
 
     .line 827
-    const-string v13, "isCdmaOptions"
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 829
-    const-string v14, "INTEGER"
+    .line 828
+    const-string v4, "isMobileDataEnabled"
 
     .line 831
-    move-object v12, v2
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 833
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 834
-    const-string v4, "isCdmaOptions"
-
-    .line 837
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 839
     new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 836
+    const-string v13, "isCdmaOptions"
+
+    .line 838
+    const-string v14, "INTEGER"
+
+    .line 840
+    move-object v12, v2
 
     .line 842
-    const-string v13, "isGsmOptions"
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 844
-    const-string v14, "INTEGER"
+    .line 843
+    const-string v4, "isCdmaOptions"
 
     .line 846
-    move-object v12, v2
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 848
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 849
-    const-string v4, "isGsmOptions"
-
-    .line 852
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 854
     new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 851
+    const-string v13, "isGsmOptions"
+
+    .line 853
+    const-string v14, "INTEGER"
+
+    .line 855
+    move-object v12, v2
 
     .line 857
-    const-string v13, "isWorldMode"
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 859
-    const-string v14, "INTEGER"
+    .line 858
+    const-string v4, "isGsmOptions"
 
     .line 861
-    move-object v12, v2
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 863
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 864
-    const-string v4, "isWorldMode"
-
-    .line 867
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 869
     new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 866
+    const-string v13, "isWorldMode"
+
+    .line 868
+    const-string v14, "INTEGER"
+
+    .line 870
+    move-object v12, v2
 
     .line 872
-    const-string v13, "shouldDisplayNetworkSelectOptions"
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 874
-    const-string v14, "INTEGER"
+    .line 873
+    const-string v4, "isWorldMode"
 
     .line 876
-    move-object v12, v2
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 878
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 879
-    const-string v4, "shouldDisplayNetworkSelectOptions"
-
-    .line 882
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 884
     new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 881
+    const-string v13, "shouldDisplayNetworkSelectOptions"
+
+    .line 883
+    const-string v14, "INTEGER"
+
+    .line 885
+    move-object v12, v2
 
     .line 887
-    const-string v13, "isTdscdmaSupported"
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 889
-    const-string v14, "INTEGER"
+    .line 888
+    const-string v4, "shouldDisplayNetworkSelectOptions"
 
     .line 891
-    move-object v12, v2
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 893
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 894
-    const-string v4, "isTdscdmaSupported"
-
-    .line 897
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 899
     new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 896
+    const-string v13, "isTdscdmaSupported"
+
+    .line 898
+    const-string v14, "INTEGER"
+
+    .line 900
+    move-object v12, v2
 
     .line 902
-    const-string v13, "activeNetworkIsCellular"
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 904
-    const-string v14, "INTEGER"
+    .line 903
+    const-string v4, "isTdscdmaSupported"
 
     .line 906
-    move-object v12, v2
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 908
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 909
-    const-string v4, "activeNetworkIsCellular"
-
-    .line 912
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 914
     new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 911
+    const-string v13, "activeNetworkIsCellular"
+
+    .line 913
+    const-string v14, "INTEGER"
+
+    .line 915
+    move-object v12, v2
 
     .line 917
-    const-string v13, "showToggleForPhysicalSim"
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 919
-    const-string v14, "INTEGER"
+    .line 918
+    const-string v4, "activeNetworkIsCellular"
 
     .line 921
-    move-object v12, v2
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 923
-    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
-
-    .line 924
-    const-string v4, "showToggleForPhysicalSim"
-
-    .line 927
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 929
     new-instance v2, Landroidx/room/util/TableInfo$Column;
 
-    .line 932
-    const-string v13, "isDataRoamingEnabled"
+    .line 926
+    const-string v13, "showToggleForPhysicalSim"
 
-    .line 934
+    .line 928
     const-string v14, "INTEGER"
 
-    .line 936
+    .line 930
     move-object v12, v2
 
-    .line 938
+    .line 932
     invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
-    .line 939
-    const-string v4, "isDataRoamingEnabled"
+    .line 933
+    const-string v4, "showToggleForPhysicalSim"
 
-    .line 942
+    .line 936
     invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 944
-    new-instance v2, Ljava/util/HashSet;
+    .line 938
+    new-instance v2, Landroidx/room/util/TableInfo$Column;
+
+    .line 941
+    const-string v13, "isDataRoamingEnabled"
+
+    .line 943
+    const-string v14, "INTEGER"
+
+    .line 945
+    move-object v12, v2
 
     .line 947
+    invoke-direct/range {v12 .. v18}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
+
+    .line 948
+    const-string v4, "isDataRoamingEnabled"
+
+    .line 951
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 953
+    new-instance v2, Ljava/util/HashSet;
+
+    .line 956
     invoke-direct {v2, v6}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 949
+    .line 958
     new-instance v4, Ljava/util/HashSet;
 
-    .line 952
+    .line 961
     invoke-direct {v4, v8}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 954
+    .line 963
     new-instance v5, Landroidx/room/util/TableInfo$Index;
 
-    .line 957
+    .line 966
     filled-new-array {v3}, [Ljava/lang/String;
 
-    .line 959
+    .line 968
     move-result-object v3
-
-    .line 962
-    invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    .line 963
-    move-result-object v3
-
-    .line 966
-    filled-new-array {v11}, [Ljava/lang/String;
-
-    .line 967
-    move-result-object v9
-
-    .line 970
-    invoke-static {v9}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     .line 971
-    move-result-object v9
+    invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    .line 974
-    const-string v10, "index_MobileNetworkInfo_subId"
+    .line 972
+    move-result-object v3
 
     .line 975
-    invoke-direct {v5, v10, v6, v3, v9}, Landroidx/room/util/TableInfo$Index;-><init>(Ljava/lang/String;ZLjava/util/List;Ljava/util/List;)V
+    filled-new-array {v11}, [Ljava/lang/String;
 
-    .line 977
-    invoke-interface {v4, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    .line 976
+    move-result-object v9
+
+    .line 979
+    invoke-static {v9}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     .line 980
-    new-instance v3, Landroidx/room/util/TableInfo;
+    move-result-object v9
 
     .line 983
+    const-string v10, "index_MobileNetworkInfo_subId"
+
+    .line 984
+    invoke-direct {v5, v10, v6, v3, v9}, Landroidx/room/util/TableInfo$Index;-><init>(Ljava/lang/String;ZLjava/util/List;Ljava/util/List;)V
+
+    .line 986
+    invoke-interface {v4, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 989
+    new-instance v3, Landroidx/room/util/TableInfo;
+
+    .line 992
     const-string v5, "MobileNetworkInfo"
 
-    .line 985
+    .line 994
     invoke-direct {v3, v5, v1, v2, v4}, Landroidx/room/util/TableInfo;-><init>(Ljava/lang/String;Ljava/util/Map;Ljava/util/Set;Ljava/util/Set;)V
 
-    .line 987
+    .line 996
     invoke-static {v0, v5}, Landroidx/room/util/TableInfo;->read(Landroidx/sqlite/SQLiteConnection;Ljava/lang/String;)Landroidx/room/util/TableInfo;
 
-    .line 990
+    .line 999
     move-result-object v0
-
-    .line 993
-    invoke-virtual {v3, v0}, Landroidx/room/util/TableInfo;->equals(Ljava/lang/Object;)Z
-
-    .line 994
-    move-result v1
-
-    .line 997
-    if-nez v1, :cond_2
-
-    .line 998
-    new-instance v1, Landroidx/room/RoomOpenDelegate$ValidationResult;
-
-    .line 1000
-    new-instance v2, Ljava/lang/StringBuilder;
 
     .line 1002
-    const-string v4, "MobileNetworkInfo(com.android.settingslib.mobile.dataservice.MobileNetworkInfoEntity).\n Expected:\n"
+    invoke-virtual {v3, v0}, Landroidx/room/util/TableInfo;->equals(Ljava/lang/Object;)Z
 
-    .line 1004
-    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 1003
+    move-result v1
 
     .line 1006
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_2
+
+    .line 1007
+    new-instance v1, Landroidx/room/RoomOpenDelegate$ValidationResult;
 
     .line 1009
-    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 1012
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 1011
+    const-string v4, "MobileNetworkInfo(com.android.settingslib.mobile.dataservice.MobileNetworkInfoEntity).\n Expected:\n"
+
+    .line 1013
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 1015
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 1018
-    move-result-object v0
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 1021
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 1024
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 1027
+    move-result-object v0
+
+    .line 1030
     invoke-direct {v1, v0, v6}, Landroidx/room/RoomOpenDelegate$ValidationResult;-><init>(Ljava/lang/String;Z)V
 
-    .line 1022
+    .line 1031
     return-object v1
 
-    .line 1025
+    .line 1034
     :cond_2
     new-instance v0, Landroidx/room/RoomOpenDelegate$ValidationResult;
 
-    .line 1026
+    .line 1035
     const/4 v1, 0x0
 
-    .line 1028
+    .line 1037
     invoke-direct {v0, v1, v8}, Landroidx/room/RoomOpenDelegate$ValidationResult;-><init>(Ljava/lang/String;Z)V
 
-    .line 1029
+    .line 1038
     return-object v0
-    .line 1032
+    .line 1041
 .end method

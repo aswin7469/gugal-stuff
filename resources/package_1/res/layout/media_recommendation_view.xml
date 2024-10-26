@@ -25,7 +25,7 @@
             android:layout_marginBottom="@dimen/qs_media_rec_album_title_bottom_margin"
             android:singleLine="true"
             android:importantForAccessibility="no"
-            android:fontFamily="@android:string/config_networkOverLimitComponent"
+            android:fontFamily="@android:string/config_misprovisionedBrandValue"
             android:layout_marginStart="@dimen/qs_media_info_spacing"
             android:layout_marginEnd="@dimen/qs_media_info_spacing" />
   <TextView android:textSize="11.0sp"
@@ -37,7 +37,7 @@
             android:layout_marginBottom="@dimen/qs_media_info_spacing"
             android:singleLine="true"
             android:importantForAccessibility="no"
-            android:fontFamily="@android:string/config_networkLocationProviderPackageName"
+            android:fontFamily="@android:string/config_mediaProjectionPermissionDialogComponent"
             android:layout_marginStart="@dimen/qs_media_info_spacing"
             android:layout_marginEnd="@dimen/qs_media_info_spacing" />
   <SeekBar android:layout_gravity="bottom"

@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcast$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -15,7 +15,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/broadcast/BroadcastSender;Landroid/content/Intent;)V
+.method public constructor <init>(Lcom/android/systemui/broadcast/BroadcastSender;Landroid/content/Intent;Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -25,20 +25,17 @@
     iput-object p2, p0, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcast$2;->$intent:Landroid/content/Intent;
 
     .line 4
-    const-string p1, "com.android.systemui.permission.SELF"
+    iput-object p3, p0, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcast$2;->$receiverPermission:Ljava/lang/String;
 
     .line 6
-    iput-object p1, p0, Lcom/android/systemui/broadcast/BroadcastSender$sendBroadcast$2;->$receiverPermission:Ljava/lang/String;
-
-    .line 8
     const/4 p1, 0x0
 
-    .line 10
+    .line 8
     invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
 
-    .line 11
+    .line 9
     return-void
-    .line 14
+    .line 12
 .end method
 
 

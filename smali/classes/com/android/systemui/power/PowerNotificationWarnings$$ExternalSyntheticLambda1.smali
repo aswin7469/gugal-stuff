@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/power/PowerNotificationWarnings$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -83,7 +83,7 @@
     iget-object v0, p0, Lcom/android/systemui/power/PowerNotificationWarnings;->mContext:Landroid/content/Context;
 
     .line 31
-    const v1, 0x7f140402    # @string/high_temp_alarm_help_url 'help_uri_usb_warm'
+    const v1, 0x7f130446    # @string/high_temp_alarm_help_url 'help_uri_usb_warm'
 
     .line 33
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

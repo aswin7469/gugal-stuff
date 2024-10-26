@@ -1,6 +1,6 @@
 .class public Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;
 .super Lcom/google/android/systemui/smartspace/BcSmartspaceCardSecondary;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -43,7 +43,7 @@
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b035a    # @id/head_to_head_title
+    const v0, 0x7f0a0379    # @id/head_to_head_title
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -58,7 +58,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mHeadToHeadTitle:Landroid/widget/TextView;
 
     .line 14
-    const v0, 0x7f0b0308    # @id/first_competitor_text
+    const v0, 0x7f0a0324    # @id/first_competitor_text
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -73,7 +73,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mFirstCompetitorText:Landroid/widget/TextView;
 
     .line 25
-    const v0, 0x7f0b06d7    # @id/second_competitor_text
+    const v0, 0x7f0a0700    # @id/second_competitor_text
 
     .line 27
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -88,7 +88,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mSecondCompetitorText:Landroid/widget/TextView;
 
     .line 36
-    const v0, 0x7f0b0305    # @id/first_competitor_icon
+    const v0, 0x7f0a0321    # @id/first_competitor_icon
 
     .line 38
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -103,7 +103,7 @@
     iput-object v0, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mFirstCompetitorIcon:Landroid/widget/ImageView;
 
     .line 47
-    const v0, 0x7f0b06d4    # @id/second_competitor_icon
+    const v0, 0x7f0a06fd    # @id/second_competitor_icon
 
     .line 49
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -176,280 +176,345 @@
     check-cast v0, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;
 
     .line 6
-    const-string v1, "HeadToHeadTemplateCard"
+    invoke-static {v0}, Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggerUtil;->containsValidTemplateType(Landroid/app/smartspace/uitemplatedata/BaseTemplateData;)Z
 
     .line 8
-    const/4 v2, 0x0
-
-    .line 10
-    if-nez v0, :cond_0
+    move-result v1
 
     .line 11
-    const-string p0, "HeadToHeadTemplateData is null"
+    const-string v2, "HeadToHeadTemplateCard"
 
-    .line 13
-    invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    .line 12
+    const/4 v3, 0x0
+
+    .line 14
+    if-nez v1, :cond_0
 
     .line 15
-    return v2
+    const-string p0, "HeadToHeadTemplateData is null or invalid template type"
 
-    .line 18
+    .line 17
+    invoke-static {v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 19
+    return v3
+
+    .line 22
     :cond_0
     invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadTitle()Landroid/app/smartspace/uitemplatedata/Text;
 
-    .line 19
-    move-result-object v3
-
-    .line 22
-    if-eqz v3, :cond_b
-
     .line 23
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadTitle()Landroid/app/smartspace/uitemplatedata/Text;
-
-    .line 25
-    move-result-object v3
-
-    .line 28
-    iget-object v4, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mHeadToHeadTitle:Landroid/widget/TextView;
-
-    .line 29
-    if-nez v4, :cond_1
-
-    .line 31
-    const-string p0, "No head-to-head title view to update"
-
-    .line 33
-    invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 35
-    goto/16 :goto_4
-
-    .line 38
-    :cond_1
-    invoke-static {v4, v3}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setText(Landroid/widget/TextView;Landroid/app/smartspace/uitemplatedata/Text;)V
-
-    .line 40
-    iget-object v3, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mHeadToHeadTitle:Landroid/widget/TextView;
-
-    .line 43
-    invoke-static {v3, v2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
-
-    .line 45
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadFirstCompetitorText()Landroid/app/smartspace/uitemplatedata/Text;
-
-    .line 48
-    move-result-object v3
-
-    .line 51
-    if-eqz v3, :cond_3
-
-    .line 52
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadFirstCompetitorText()Landroid/app/smartspace/uitemplatedata/Text;
-
-    .line 54
-    move-result-object v3
-
-    .line 57
-    iget-object v4, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mFirstCompetitorText:Landroid/widget/TextView;
-
-    .line 58
-    if-nez v4, :cond_2
-
-    .line 60
-    const-string v3, "No first competitor text view to update"
-
-    .line 62
-    invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 64
-    goto :goto_0
-
-    .line 67
-    :cond_2
-    invoke-static {v4, v3}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setText(Landroid/widget/TextView;Landroid/app/smartspace/uitemplatedata/Text;)V
-
-    .line 68
-    iget-object v3, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mFirstCompetitorText:Landroid/widget/TextView;
-
-    .line 71
-    invoke-static {v3, v2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
-
-    .line 73
-    :cond_3
-    :goto_0
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadSecondCompetitorText()Landroid/app/smartspace/uitemplatedata/Text;
-
-    .line 76
-    move-result-object v3
-
-    .line 79
-    if-eqz v3, :cond_5
-
-    .line 80
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadSecondCompetitorText()Landroid/app/smartspace/uitemplatedata/Text;
-
-    .line 82
-    move-result-object v3
-
-    .line 85
-    iget-object v4, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mSecondCompetitorText:Landroid/widget/TextView;
-
-    .line 86
-    if-nez v4, :cond_4
-
-    .line 88
-    const-string v3, "No second competitor text view to update"
-
-    .line 90
-    invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 92
-    goto :goto_1
-
-    .line 95
-    :cond_4
-    invoke-static {v4, v3}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setText(Landroid/widget/TextView;Landroid/app/smartspace/uitemplatedata/Text;)V
-
-    .line 96
-    iget-object v3, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mSecondCompetitorText:Landroid/widget/TextView;
-
-    .line 99
-    invoke-static {v3, v2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
-
-    .line 101
-    :cond_5
-    :goto_1
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadFirstCompetitorIcon()Landroid/app/smartspace/uitemplatedata/Icon;
-
-    .line 104
-    move-result-object v3
-
-    .line 107
-    if-eqz v3, :cond_7
-
-    .line 108
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadFirstCompetitorIcon()Landroid/app/smartspace/uitemplatedata/Icon;
-
-    .line 110
-    move-result-object v3
-
-    .line 113
-    iget-object v4, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mFirstCompetitorIcon:Landroid/widget/ImageView;
-
-    .line 114
-    if-nez v4, :cond_6
-
-    .line 116
-    const-string v3, "No first competitor icon view to update"
-
-    .line 118
-    invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 120
-    goto :goto_2
-
-    .line 123
-    :cond_6
-    invoke-static {v4, v3}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setIcon(Landroid/widget/ImageView;Landroid/app/smartspace/uitemplatedata/Icon;)V
-
-    .line 124
-    iget-object v3, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mFirstCompetitorIcon:Landroid/widget/ImageView;
-
-    .line 127
-    invoke-static {v3, v2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
-
-    .line 129
-    :cond_7
-    :goto_2
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadSecondCompetitorIcon()Landroid/app/smartspace/uitemplatedata/Icon;
-
-    .line 132
-    move-result-object v3
-
-    .line 135
-    if-eqz v3, :cond_9
-
-    .line 136
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadSecondCompetitorIcon()Landroid/app/smartspace/uitemplatedata/Icon;
-
-    .line 138
-    move-result-object v3
-
-    .line 141
-    iget-object v4, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mSecondCompetitorIcon:Landroid/widget/ImageView;
-
-    .line 142
-    if-nez v4, :cond_8
-
-    .line 144
-    const-string v2, "No second competitor icon view to update"
-
-    .line 146
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 148
-    goto :goto_3
-
-    .line 151
-    :cond_8
-    invoke-static {v4, v3}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setIcon(Landroid/widget/ImageView;Landroid/app/smartspace/uitemplatedata/Icon;)V
-
-    .line 152
-    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mSecondCompetitorIcon:Landroid/widget/ImageView;
-
-    .line 155
-    invoke-static {v1, v2}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
-
-    .line 157
-    :cond_9
-    :goto_3
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadAction()Landroid/app/smartspace/uitemplatedata/TapAction;
-
-    .line 160
     move-result-object v1
 
+    .line 26
+    const/4 v4, 0x1
+
+    .line 27
+    if-eqz v1, :cond_2
+
+    .line 28
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadTitle()Landroid/app/smartspace/uitemplatedata/Text;
+
+    .line 30
+    move-result-object v1
+
+    .line 33
+    iget-object v5, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mHeadToHeadTitle:Landroid/widget/TextView;
+
+    .line 34
+    if-nez v5, :cond_1
+
+    .line 36
+    const-string v1, "No head-to-head title view to update"
+
+    .line 38
+    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 40
+    goto :goto_0
+
+    .line 43
+    :cond_1
+    invoke-static {v5, v1}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setText(Landroid/widget/TextView;Landroid/app/smartspace/uitemplatedata/Text;)V
+
+    .line 44
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mHeadToHeadTitle:Landroid/widget/TextView;
+
+    .line 47
+    invoke-static {v1, v3}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
+
+    .line 49
+    move v1, v4
+
+    .line 52
+    goto :goto_1
+
+    .line 53
+    :cond_2
+    :goto_0
+    move v1, v3
+
+    .line 54
+    :goto_1
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadFirstCompetitorText()Landroid/app/smartspace/uitemplatedata/Text;
+
+    .line 55
+    move-result-object v5
+
+    .line 58
+    if-eqz v5, :cond_5
+
+    .line 59
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadFirstCompetitorText()Landroid/app/smartspace/uitemplatedata/Text;
+
+    .line 61
+    move-result-object v5
+
+    .line 64
+    iget-object v6, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mFirstCompetitorText:Landroid/widget/TextView;
+
+    .line 65
+    if-nez v6, :cond_4
+
+    .line 67
+    const-string v5, "No first competitor text view to update"
+
+    .line 69
+    invoke-static {v2, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 71
+    if-eqz v1, :cond_3
+
+    .line 74
+    goto :goto_2
+
+    .line 76
+    :cond_3
+    move v1, v3
+
+    .line 77
+    goto :goto_3
+
+    .line 78
+    :cond_4
+    invoke-static {v6, v5}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setText(Landroid/widget/TextView;Landroid/app/smartspace/uitemplatedata/Text;)V
+
+    .line 79
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mFirstCompetitorText:Landroid/widget/TextView;
+
+    .line 82
+    invoke-static {v1, v3}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
+
+    .line 84
+    :goto_2
+    move v1, v4
+
+    .line 87
+    :cond_5
+    :goto_3
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadSecondCompetitorText()Landroid/app/smartspace/uitemplatedata/Text;
+
+    .line 88
+    move-result-object v5
+
+    .line 91
+    if-eqz v5, :cond_8
+
+    .line 92
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadSecondCompetitorText()Landroid/app/smartspace/uitemplatedata/Text;
+
+    .line 94
+    move-result-object v5
+
+    .line 97
+    iget-object v6, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mSecondCompetitorText:Landroid/widget/TextView;
+
+    .line 98
+    if-nez v6, :cond_7
+
+    .line 100
+    const-string v5, "No second competitor text view to update"
+
+    .line 102
+    invoke-static {v2, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 104
+    if-eqz v1, :cond_6
+
+    .line 107
+    goto :goto_4
+
+    .line 109
+    :cond_6
+    move v1, v3
+
+    .line 110
+    goto :goto_5
+
+    .line 111
+    :cond_7
+    invoke-static {v6, v5}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setText(Landroid/widget/TextView;Landroid/app/smartspace/uitemplatedata/Text;)V
+
+    .line 112
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mSecondCompetitorText:Landroid/widget/TextView;
+
+    .line 115
+    invoke-static {v1, v3}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
+
+    .line 117
+    :goto_4
+    move v1, v4
+
+    .line 120
+    :cond_8
+    :goto_5
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadFirstCompetitorIcon()Landroid/app/smartspace/uitemplatedata/Icon;
+
+    .line 121
+    move-result-object v5
+
+    .line 124
+    if-eqz v5, :cond_b
+
+    .line 125
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadFirstCompetitorIcon()Landroid/app/smartspace/uitemplatedata/Icon;
+
+    .line 127
+    move-result-object v5
+
+    .line 130
+    iget-object v6, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mFirstCompetitorIcon:Landroid/widget/ImageView;
+
+    .line 131
+    if-nez v6, :cond_a
+
+    .line 133
+    const-string v5, "No first competitor icon view to update"
+
+    .line 135
+    invoke-static {v2, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 137
+    if-eqz v1, :cond_9
+
+    .line 140
+    goto :goto_6
+
+    .line 142
+    :cond_9
+    move v1, v3
+
+    .line 143
+    goto :goto_7
+
+    .line 144
+    :cond_a
+    invoke-static {v6, v5}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setIcon(Landroid/widget/ImageView;Landroid/app/smartspace/uitemplatedata/Icon;)V
+
+    .line 145
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mFirstCompetitorIcon:Landroid/widget/ImageView;
+
+    .line 148
+    invoke-static {v1, v3}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
+
+    .line 150
+    :goto_6
+    move v1, v4
+
+    .line 153
+    :cond_b
+    :goto_7
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadSecondCompetitorIcon()Landroid/app/smartspace/uitemplatedata/Icon;
+
+    .line 154
+    move-result-object v5
+
+    .line 157
+    if-eqz v5, :cond_e
+
+    .line 158
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadSecondCompetitorIcon()Landroid/app/smartspace/uitemplatedata/Icon;
+
+    .line 160
+    move-result-object v5
+
     .line 163
-    if-eqz v1, :cond_a
+    iget-object v6, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mSecondCompetitorIcon:Landroid/widget/ImageView;
 
     .line 164
-    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadAction()Landroid/app/smartspace/uitemplatedata/TapAction;
+    if-nez v6, :cond_c
 
     .line 166
-    move-result-object v4
+    const-string v5, "No second competitor icon view to update"
 
-    .line 169
-    const/4 v8, 0x0
+    .line 168
+    invoke-static {v2, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 170
-    const-string v6, "HeadToHeadTemplateCard"
-
-    .line 171
-    move-object v2, p0
+    if-eqz v1, :cond_d
 
     .line 173
-    move-object v3, p1
-
-    .line 174
-    move-object v5, p2
+    goto :goto_8
 
     .line 175
-    move-object v7, p3
+    :cond_c
+    invoke-static {v6, v5}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->setIcon(Landroid/widget/ImageView;Landroid/app/smartspace/uitemplatedata/Icon;)V
 
     .line 176
-    invoke-static/range {v2 .. v8}, Lcom/google/android/systemui/smartspace/BcSmartSpaceUtil;->setOnClickListener(Landroid/view/View;Landroid/app/smartspace/SmartspaceTarget;Landroid/app/smartspace/uitemplatedata/TapAction;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Ljava/lang/String;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;I)V
+    iget-object v1, p0, Lcom/google/android/systemui/smartspace/uitemplate/HeadToHeadTemplateCard;->mSecondCompetitorIcon:Landroid/widget/ImageView;
 
-    .line 177
-    :cond_a
-    const/4 p0, 0x1
-
-    .line 180
-    return p0
+    .line 179
+    invoke-static {v1, v3}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
     .line 181
-    :cond_b
-    :goto_4
-    return v2
-    .line 182
+    :goto_8
+    move v3, v4
+
+    .line 184
+    :cond_d
+    move v1, v3
+
+    .line 185
+    :cond_e
+    if-eqz v1, :cond_f
+
+    .line 186
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadAction()Landroid/app/smartspace/uitemplatedata/TapAction;
+
+    .line 188
+    move-result-object v2
+
+    .line 191
+    if-eqz v2, :cond_f
+
+    .line 192
+    invoke-virtual {v0}, Landroid/app/smartspace/uitemplatedata/HeadToHeadTemplateData;->getHeadToHeadAction()Landroid/app/smartspace/uitemplatedata/TapAction;
+
+    .line 194
+    move-result-object v5
+
+    .line 197
+    const-string v7, "HeadToHeadTemplateCard"
+
+    .line 198
+    move-object v3, p0
+
+    .line 200
+    move-object v4, p1
+
+    .line 201
+    move-object v6, p2
+
+    .line 202
+    move-object v8, p3
+
+    .line 203
+    invoke-static/range {v3 .. v8}, Lcom/google/android/systemui/smartspace/BcSmartSpaceUtil;->setOnClickListener(Landroid/view/View;Landroid/app/smartspace/SmartspaceTarget;Landroid/app/smartspace/uitemplatedata/TapAction;Lcom/android/systemui/plugins/BcSmartspaceDataPlugin$SmartspaceEventNotifier;Ljava/lang/String;Lcom/google/android/systemui/smartspace/logging/BcSmartspaceCardLoggingInfo;)V
+
+    .line 204
+    :cond_f
+    return v1
+    .line 207
 .end method
 
 .method public final setTextColor(I)V

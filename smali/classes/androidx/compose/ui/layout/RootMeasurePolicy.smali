@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/layout/RootMeasurePolicy;
 .super Landroidx/compose/ui/node/LayoutNode$NoIntrinsicsMeasurePolicy;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -101,7 +101,7 @@
     iget p2, p0, Landroidx/compose/ui/layout/Placeable;->width:I
 
     .line 42
-    invoke-static {p2, p3, p4}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainWidth-K40F9xA(IJ)I
+    invoke-static {p3, p4, p2}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainWidth-K40F9xA(JI)I
 
     .line 44
     move-result p2
@@ -110,7 +110,7 @@
     iget v0, p0, Landroidx/compose/ui/layout/Placeable;->height:I
 
     .line 48
-    invoke-static {v0, p3, p4}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainHeight-K40F9xA(IJ)I
+    invoke-static {p3, p4, v0}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainHeight-K40F9xA(JI)I
 
     .line 50
     move-result p3
@@ -232,13 +232,13 @@
 
     .line 124
     :cond_3
-    invoke-static {v0, p3, p4}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainWidth-K40F9xA(IJ)I
+    invoke-static {p3, p4, v0}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainWidth-K40F9xA(JI)I
 
     .line 125
     move-result p2
 
     .line 128
-    invoke-static {v2, p3, p4}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainHeight-K40F9xA(IJ)I
+    invoke-static {p3, p4, v2}, Landroidx/compose/ui/unit/ConstraintsKt;->constrainHeight-K40F9xA(JI)I
 
     .line 129
     move-result p3

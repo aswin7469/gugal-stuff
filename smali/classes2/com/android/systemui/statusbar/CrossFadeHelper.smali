@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/statusbar/CrossFadeHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -275,9 +275,9 @@
 
     move-result-object p1
 
-    new-instance p2, Lcom/android/systemui/statusbar/CrossFadeHelper$$ExternalSyntheticLambda0;
+    new-instance p2, Lcom/android/systemui/statusbar/CrossFadeHelper$$ExternalSyntheticLambda1;
 
-    invoke-direct {p2, p0, p3}, Lcom/android/systemui/statusbar/CrossFadeHelper$$ExternalSyntheticLambda0;-><init>(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-direct {p2, p0, p3}, Lcom/android/systemui/statusbar/CrossFadeHelper$$ExternalSyntheticLambda1;-><init>(Landroid/view/View;Ljava/lang/Runnable;)V
 
     .line 7
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
@@ -310,7 +310,7 @@
     move-result v0
 
     .line 5
-    const v1, 0x7f0b022e    # @id/cross_fade_layer_type_changed_tag
+    const v1, 0x7f0a0239    # @id/cross_fade_layer_type_changed_tag
 
     .line 6
     const/4 v2, 0x0

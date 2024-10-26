@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardVisibilityHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -127,618 +127,539 @@
     .locals 9
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    const-string p1, "Ignoring KeyguardVisibilityelper, migrateClocksToBlueprint flag on"
-
-    .line 8
-    invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
-
-    .line 10
-    return-void
-
-    .line 13
-    :cond_0
     invoke-static {}, Lcom/android/systemui/util/Assert;->isMainThread()V
 
-    .line 14
+    .line 2
     iget-object v0, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 17
+    .line 5
     sget-object v1, Lcom/android/systemui/statusbar/notification/AnimatableProperty;->ALPHA:Lcom/android/systemui/statusbar/notification/AnimatableProperty$7;
 
-    .line 19
+    .line 7
     invoke-static {v0, v1}, Lcom/android/systemui/statusbar/notification/PropertyAnimator;->cancelAnimation(Landroid/view/View;Lcom/android/systemui/statusbar/notification/AnimatableProperty;)V
 
-    .line 21
+    .line 9
     iget-object v0, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 24
+    .line 12
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 26
+    .line 14
     const/4 v2, 0x0
 
-    .line 29
+    .line 17
     iput-boolean v2, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mKeyguardViewVisibilityAnimating:Z
 
-    .line 30
+    .line 18
     const/4 v3, 0x0
 
-    .line 32
+    .line 20
     const-wide/16 v4, 0x0
 
-    .line 33
+    .line 21
     const/4 v6, 0x1
 
-    .line 35
-    if-nez p3, :cond_1
+    .line 23
+    if-nez p3, :cond_0
 
-    .line 36
-    if-ne p2, v6, :cond_1
+    .line 24
+    if-ne p2, v6, :cond_0
 
-    .line 38
-    if-ne p1, v6, :cond_2
+    .line 26
+    if-ne p1, v6, :cond_1
 
-    .line 40
+    .line 28
+    :cond_0
+    if-eqz p4, :cond_3
+
+    .line 30
     :cond_1
-    if-eqz p4, :cond_5
-
-    .line 42
-    :cond_2
     iput-boolean v6, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mKeyguardViewVisibilityAnimating:Z
 
-    .line 44
+    .line 32
     new-instance p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;
 
-    .line 46
+    .line 34
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    .line 48
+    .line 36
     sget-object p2, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    .line 51
+    .line 39
     sget-object p4, Lcom/android/app/animation/Interpolators;->ALPHA_OUT:Landroid/view/animation/Interpolator;
 
-    .line 53
+    .line 41
     invoke-virtual {p1, p2, p4}, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->setCustomInterpolator(Landroid/util/Property;Landroid/view/animation/Interpolator;)V
 
-    .line 55
+    .line 43
     iget-object p2, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mSetGoneEndAction:Lcom/android/keyguard/KeyguardVisibilityHelper$1;
 
-    .line 58
+    .line 46
     iput-object p2, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->mAnimationEndAction:Ljava/util/function/Consumer;
 
-    .line 60
-    if-eqz p3, :cond_3
+    .line 48
+    if-eqz p3, :cond_2
 
-    .line 62
+    .line 50
     check-cast v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 64
+    .line 52
     iget-wide p2, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardFadingAwayDelay:J
 
-    .line 66
+    .line 54
     iput-wide p2, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->delay:J
 
-    .line 68
+    .line 56
     iget-wide p2, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardFadingAwayDuration:J
 
-    .line 70
+    .line 58
     const-wide/16 v4, 0x2
 
-    .line 72
+    .line 60
     div-long/2addr p2, v4
 
-    .line 74
+    .line 62
+    iput-wide p2, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->duration:J
+
+    .line 63
+    const-string p2, "goingToFullShade && keyguardFadingAway"
+
+    .line 65
+    invoke-virtual {p0, p2}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
+
+    .line 67
+    goto :goto_0
+
+    .line 70
+    :cond_2
+    iput-wide v4, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->delay:J
+
+    .line 71
+    const-wide/16 p2, 0xa0
+
+    .line 73
     iput-wide p2, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->duration:J
 
     .line 75
-    const-string p2, "goingToFullShade && keyguardFadingAway"
+    const-string p2, "goingToFullShade && !keyguardFadingAway"
 
     .line 77
     invoke-virtual {p0, p2}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
 
     .line 79
-    goto :goto_0
-
-    .line 82
-    :cond_3
-    iput-wide v4, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->delay:J
-
-    .line 83
-    const-wide/16 p2, 0xa0
-
-    .line 85
-    iput-wide p2, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->duration:J
-
-    .line 87
-    const-string p2, "goingToFullShade && !keyguardFadingAway"
-
-    .line 89
-    invoke-virtual {p0, p2}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
-
-    .line 91
     :goto_0
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 94
-    move-result p2
-
-    .line 97
-    if-eqz p2, :cond_4
-
-    .line 98
-    const-string p1, "Using LockscreenToGoneTransition 1"
-
-    .line 100
-    invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
-
-    .line 102
-    goto/16 :goto_5
-
-    .line 105
-    :cond_4
     iget-object p0, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 107
+    .line 82
     invoke-static {p0, v1, v3, p1, v6}, Lcom/android/systemui/statusbar/notification/PropertyAnimator;->setProperty(Landroid/view/View;Lcom/android/systemui/statusbar/notification/AnimatableProperty;FLcom/android/systemui/statusbar/notification/stack/AnimationProperties;Z)V
 
-    .line 109
+    .line 84
     goto/16 :goto_5
 
-    .line 112
-    :cond_5
+    .line 87
+    :cond_3
     const/4 p4, 0x2
 
-    .line 114
+    .line 89
     const-string v0, "keyguardFadingAway transition w/ Y Aniamtion"
 
-    .line 115
+    .line 90
     const/high16 v7, 0x3f800000    # 1.0f
 
-    .line 117
-    if-ne p2, p4, :cond_6
+    .line 92
+    if-ne p2, p4, :cond_4
 
-    .line 119
-    if-ne p1, v6, :cond_6
+    .line 94
+    if-ne p1, v6, :cond_4
 
-    .line 121
+    .line 96
     iget-object p1, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 123
+    .line 98
     invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 125
+    .line 100
     iput-boolean v6, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mKeyguardViewVisibilityAnimating:Z
 
-    .line 128
+    .line 103
     iget-object p1, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 130
+    .line 105
     invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 132
+    .line 107
     iget-object p1, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 135
+    .line 110
     new-instance p2, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;
 
-    .line 137
+    .line 112
     invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
-    .line 139
+    .line 114
     iput-wide v4, p2, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->delay:J
 
-    .line 142
+    .line 117
     const-wide/16 p3, 0x140
 
-    .line 144
+    .line 119
     iput-wide p3, p2, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->duration:J
 
-    .line 146
+    .line 121
     sget-object p3, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    .line 148
+    .line 123
     sget-object p4, Lcom/android/app/animation/Interpolators;->ALPHA_IN:Landroid/view/animation/Interpolator;
 
-    .line 150
+    .line 125
     invoke-virtual {p2, p3, p4}, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->setCustomInterpolator(Landroid/util/Property;Landroid/view/animation/Interpolator;)V
 
-    .line 152
+    .line 127
     new-instance p3, Lcom/android/keyguard/KeyguardVisibilityHelper$$ExternalSyntheticLambda1;
 
-    .line 155
+    .line 130
     invoke-direct {p3, p0}, Lcom/android/keyguard/KeyguardVisibilityHelper$$ExternalSyntheticLambda1;-><init>(Lcom/android/keyguard/KeyguardVisibilityHelper;)V
 
-    .line 157
+    .line 132
     iput-object p3, p2, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->mAnimationEndAction:Ljava/util/function/Consumer;
 
-    .line 160
+    .line 135
     invoke-static {p1, v1, v7, p2, v6}, Lcom/android/systemui/statusbar/notification/PropertyAnimator;->setProperty(Landroid/view/View;Lcom/android/systemui/statusbar/notification/AnimatableProperty;FLcom/android/systemui/statusbar/notification/stack/AnimationProperties;Z)V
 
-    .line 162
+    .line 137
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
 
-    .line 165
+    .line 140
     goto/16 :goto_5
 
-    .line 168
-    :cond_6
-    if-ne p1, v6, :cond_10
+    .line 143
+    :cond_4
+    if-ne p1, v6, :cond_d
 
-    .line 170
-    if-eqz p2, :cond_7
+    .line 145
+    if-eqz p2, :cond_5
 
-    .line 172
-    const-string p1, "statusBarState == KEYGUARD && oldStatusBarState != SHADE"
+    .line 147
+    const-string/jumbo p1, "statusBarState == KEYGUARD && oldStatusBarState != SHADE"
 
-    .line 174
+    .line 149
     invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
 
-    .line 176
+    .line 152
     goto :goto_1
 
-    .line 179
-    :cond_7
-    const-string p1, "statusBarState == KEYGUARD && oldStatusBarState == SHADE"
+    .line 155
+    :cond_5
+    const-string/jumbo p1, "statusBarState == KEYGUARD && oldStatusBarState == SHADE"
 
-    .line 180
+    .line 156
     invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
 
-    .line 182
+    .line 159
     :goto_1
-    if-eqz p3, :cond_9
+    if-eqz p3, :cond_7
 
-    .line 185
-    if-eqz p2, :cond_9
+    .line 162
+    if-eqz p2, :cond_7
 
-    .line 187
+    .line 164
     iput-boolean v6, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mKeyguardViewVisibilityAnimating:Z
 
-    .line 189
+    .line 166
     new-instance p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;
 
-    .line 191
+    .line 168
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    .line 193
+    .line 170
     iput-wide v4, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->delay:J
 
-    .line 196
+    .line 173
     sget-object p2, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    .line 198
+    .line 175
     sget-object p3, Lcom/android/app/animation/Interpolators;->FAST_OUT_LINEAR_IN:Landroid/view/animation/Interpolator;
 
-    .line 200
+    .line 177
     invoke-virtual {p1, p2, p3}, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->setCustomInterpolator(Landroid/util/Property;Landroid/view/animation/Interpolator;)V
 
-    .line 202
+    .line 179
     iget-object p2, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mSetInvisibleEndAction:Lcom/android/keyguard/KeyguardVisibilityHelper$1;
 
-    .line 205
+    .line 182
     iput-object p2, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->mAnimationEndAction:Ljava/util/function/Consumer;
 
-    .line 207
+    .line 184
     iget-boolean p2, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mAnimateYPos:Z
 
-    .line 209
-    if-eqz p2, :cond_8
+    .line 186
+    if-eqz p2, :cond_6
 
-    .line 211
+    .line 188
     iget-object p2, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 213
+    .line 190
     invoke-virtual {p2}, Landroid/view/View;->getY()F
 
-    .line 215
+    .line 192
     move-result p2
 
-    .line 218
+    .line 195
     iget-object p3, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 219
+    .line 196
     invoke-virtual {p3}, Landroid/view/View;->getHeight()I
 
-    .line 221
+    .line 198
     move-result p3
 
-    .line 224
+    .line 201
     int-to-float p3, p3
 
-    .line 225
+    .line 202
     const p4, 0x3d4ccccd    # 0.05f
 
-    .line 226
+    .line 203
     mul-float/2addr p3, p4
 
-    .line 229
+    .line 206
     sub-float/2addr p2, p3
 
-    .line 230
+    .line 207
     const/16 p3, 0x7d
 
-    .line 231
+    .line 208
     int-to-long p3, p3
 
-    .line 233
+    .line 210
     iget-object v4, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mAnimationProperties:Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;
 
-    .line 234
+    .line 211
     iput-wide p3, v4, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->duration:J
 
-    .line 236
+    .line 213
     int-to-long v7, v2
 
-    .line 238
+    .line 215
     iput-wide v7, v4, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->delay:J
 
-    .line 239
+    .line 216
     iget-object v2, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 241
+    .line 218
     sget-object v5, Lcom/android/systemui/statusbar/notification/AnimatableProperty;->Y:Lcom/android/systemui/statusbar/notification/AnimatableProperty$7;
 
-    .line 243
+    .line 220
     invoke-static {v2, v5}, Lcom/android/systemui/statusbar/notification/PropertyAnimator;->cancelAnimation(Landroid/view/View;Lcom/android/systemui/statusbar/notification/AnimatableProperty;)V
 
-    .line 245
+    .line 222
     iget-object v2, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 248
+    .line 225
     invoke-static {v2, v5, p2, v4, v6}, Lcom/android/systemui/statusbar/notification/PropertyAnimator;->setProperty(Landroid/view/View;Lcom/android/systemui/statusbar/notification/AnimatableProperty;FLcom/android/systemui/statusbar/notification/stack/AnimationProperties;Z)V
 
-    .line 250
+    .line 227
     iput-wide p3, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->duration:J
 
-    .line 253
+    .line 230
     iput-wide v7, p1, Lcom/android/systemui/statusbar/notification/stack/AnimationProperties;->delay:J
 
-    .line 255
+    .line 232
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
 
-    .line 257
+    .line 234
     goto :goto_2
 
-    .line 260
-    :cond_8
+    .line 237
+    :cond_6
     const-string p2, "keyguardFadingAway transition w/o Y Animation"
 
-    .line 261
+    .line 238
     invoke-virtual {p0, p2}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
 
-    .line 263
+    .line 240
     :goto_2
     iget-object p0, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 266
+    .line 243
     invoke-static {p0, v1, v3, p1, v6}, Lcom/android/systemui/statusbar/notification/PropertyAnimator;->setProperty(Landroid/view/View;Lcom/android/systemui/statusbar/notification/AnimatableProperty;FLcom/android/systemui/statusbar/notification/stack/AnimationProperties;Z)V
 
-    .line 268
-    goto/16 :goto_5
-
-    .line 271
-    :cond_9
-    iget-object p1, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mScreenOffAnimationController:Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;
-
-    .line 273
-    iget-object p2, p1, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;->animations:Ljava/util/List;
-
-    .line 275
-    instance-of p3, p2, Ljava/util/Collection;
-
-    .line 277
-    if-eqz p3, :cond_a
-
-    .line 279
-    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
-
-    .line 281
-    move-result p3
-
-    .line 284
-    if-eqz p3, :cond_a
-
-    .line 285
-    goto :goto_4
-
-    .line 287
-    :cond_a
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    .line 288
-    move-result-object p2
-
-    .line 291
-    :cond_b
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 292
-    move-result p3
-
-    .line 295
-    if-eqz p3, :cond_f
-
-    .line 296
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 298
-    move-result-object p3
-
-    .line 301
-    check-cast p3, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;
-
-    .line 302
-    invoke-interface {p3}, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;->shouldAnimateInKeyguard()Z
-
-    .line 304
-    move-result p3
-
-    .line 307
-    if-eqz p3, :cond_b
-
-    .line 308
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 310
-    move-result p2
-
-    .line 313
-    if-eqz p2, :cond_c
-
-    .line 314
-    const-string p1, "Using GoneToAodTransition"
-
-    .line 316
-    invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
-
-    .line 318
-    iput-boolean v2, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mKeyguardViewVisibilityAnimating:Z
-
-    .line 321
+    .line 245
     goto :goto_5
 
-    .line 323
-    :cond_c
-    const-string p2, "ScreenOff transition"
+    .line 248
+    :cond_7
+    iget-object p1, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mScreenOffAnimationController:Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;
 
-    .line 324
-    invoke-virtual {p0, p2}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
+    .line 249
+    iget-object p2, p1, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;->animations:Ljava/util/List;
 
-    .line 326
-    iput-boolean v6, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mKeyguardViewVisibilityAnimating:Z
+    .line 251
+    instance-of p3, p2, Ljava/util/Collection;
 
-    .line 329
-    iget-object p2, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
+    .line 253
+    if-eqz p3, :cond_8
 
-    .line 331
-    iget-object p1, p1, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;->animations:Ljava/util/List;
+    .line 255
+    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
 
-    .line 333
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    .line 335
-    move-result-object p1
-
-    .line 338
-    :cond_d
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 339
+    .line 257
     move-result p3
 
-    .line 342
-    if-eqz p3, :cond_e
+    .line 260
+    if-eqz p3, :cond_8
 
-    .line 343
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 261
+    goto :goto_4
 
-    .line 345
+    .line 263
+    :cond_8
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    .line 264
+    move-result-object p2
+
+    .line 267
+    :cond_9
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 268
+    move-result p3
+
+    .line 271
+    if-eqz p3, :cond_c
+
+    .line 272
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 274
     move-result-object p3
 
-    .line 348
+    .line 277
+    check-cast p3, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;
+
+    .line 278
+    invoke-interface {p3}, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;->shouldAnimateInKeyguard()Z
+
+    .line 280
+    move-result p3
+
+    .line 283
+    if-eqz p3, :cond_9
+
+    .line 284
+    const-string p2, "ScreenOff transition"
+
+    .line 286
+    invoke-virtual {p0, p2}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
+
+    .line 288
+    iput-boolean v6, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mKeyguardViewVisibilityAnimating:Z
+
+    .line 291
+    iget-object p2, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
+
+    .line 293
+    iget-object p1, p1, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;->animations:Ljava/util/List;
+
+    .line 295
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    .line 297
+    move-result-object p1
+
+    .line 300
+    :cond_a
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 301
+    move-result p3
+
+    .line 304
+    if-eqz p3, :cond_b
+
+    .line 305
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 307
+    move-result-object p3
+
+    .line 310
     move-object p4, p3
 
-    .line 349
+    .line 311
     check-cast p4, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;
 
-    .line 350
+    .line 312
     invoke-interface {p4}, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;->shouldAnimateInKeyguard()Z
 
-    .line 352
+    .line 314
     move-result v0
 
-    .line 355
-    if-eqz v0, :cond_d
+    .line 317
+    if-eqz v0, :cond_a
 
-    .line 356
+    .line 318
     iget-object p0, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mSetVisibleEndRunnable:Lcom/android/keyguard/KeyguardVisibilityHelper$$ExternalSyntheticLambda0;
 
-    .line 358
+    .line 320
     invoke-interface {p4, p2, p0}, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;->animateInKeyguard(Landroid/view/View;Lcom/android/keyguard/KeyguardVisibilityHelper$$ExternalSyntheticLambda0;)V
 
-    .line 360
+    .line 322
     goto :goto_3
 
-    .line 363
-    :cond_e
+    .line 325
+    :cond_b
     const/4 p3, 0x0
 
-    .line 364
+    .line 326
     :goto_3
     check-cast p3, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;
 
-    .line 365
+    .line 327
     goto :goto_5
 
-    .line 367
-    :cond_f
+    .line 329
+    :cond_c
     :goto_4
     const-string p1, "Direct set Visibility to VISIBLE"
 
-    .line 368
+    .line 330
     invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
 
-    .line 370
+    .line 332
     iget-object p0, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 373
+    .line 335
     invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 375
+    .line 337
     goto :goto_5
 
-    .line 378
-    :cond_10
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 379
-    move-result p1
-
-    .line 382
-    if-eqz p1, :cond_11
-
-    .line 383
-    const-string p1, "Using LockscreenToGoneTransition 2"
-
-    .line 385
-    invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
-
-    .line 387
-    goto :goto_5
-
-    .line 390
-    :cond_11
+    .line 340
+    :cond_d
     const-string p1, "Direct set Visibility to GONE"
 
-    .line 391
+    .line 341
     invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardVisibilityHelper;->log(Ljava/lang/String;)V
 
-    .line 393
+    .line 343
     iget-object p1, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 396
+    .line 346
     const/16 p2, 0x8
 
-    .line 398
+    .line 348
     invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 400
+    .line 350
     iget-object p0, p0, Lcom/android/keyguard/KeyguardVisibilityHelper;->mView:Landroid/view/View;
 
-    .line 403
+    .line 353
     invoke-virtual {p0, v7}, Landroid/view/View;->setAlpha(F)V
 
-    .line 405
+    .line 355
     :goto_5
     return-void
-    .line 408
+    .line 358
 .end method

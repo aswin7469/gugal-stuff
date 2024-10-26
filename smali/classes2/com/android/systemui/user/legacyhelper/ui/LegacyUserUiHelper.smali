@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/user/legacyhelper/ui/LegacyUserUiHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -20,7 +20,7 @@
     if-eqz v1, :cond_0
 
     .line 8
-    const v0, 0x7f1403de    # @string/guest_exit_quick_settings_button 'Exit guest'
+    const v0, 0x7f130421    # @string/guest_exit_quick_settings_button 'Exit guest'
 
     .line 10
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -42,7 +42,7 @@
     if-eqz v0, :cond_1
 
     .line 22
-    const v0, 0x1040468    # @android:string/imTypeHome
+    const v0, 0x104045f    # @android:string/imProtocolGoogleTalk
 
     .line 24
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -200,7 +200,7 @@
     if-eqz p2, :cond_2
 
     .line 27
-    const p0, 0x7f1403ee    # @string/guest_resetting 'Resetting guest…'
+    const p0, 0x7f130431    # @string/guest_resetting 'Resetting guest…'
 
     .line 29
     goto :goto_2
@@ -213,14 +213,14 @@
     if-eqz p5, :cond_3
 
     .line 35
-    const p0, 0x7f1403e0    # @string/guest_new_guest 'Add guest'
+    const p0, 0x7f130423    # @string/guest_new_guest 'Add guest'
 
     .line 37
     goto :goto_2
 
     .line 40
     :cond_3
-    const p2, 0x1040468    # @android:string/imTypeHome
+    const p2, 0x104045f    # @android:string/imProtocolGoogleTalk
 
     .line 41
     if-eqz p0, :cond_4
@@ -247,7 +247,7 @@
     if-eqz p3, :cond_6
 
     .line 53
-    const p0, 0x7f1409d9    # @string/user_add_user 'Add user'
+    const p0, 0x7f130a62    # @string/user_add_user 'Add user'
 
     .line 55
     goto :goto_2
@@ -257,7 +257,7 @@
     if-eqz p4, :cond_7
 
     .line 59
-    const p0, 0x7f14012e    # @string/add_user_supervised '@android:string/unsupported_display_size_show'
+    const p0, 0x7f130133    # @string/add_user_supervised '@android:string/ui_translation_accessibility_translation_finished'
 
     .line 61
     goto :goto_2
@@ -267,7 +267,7 @@
     if-eqz p6, :cond_8
 
     .line 65
-    const p0, 0x7f1405bf    # @string/manage_users 'Manage users'
+    const p0, 0x7f130619    # @string/manage_users 'Manage users'
 
     .line 67
     :goto_2

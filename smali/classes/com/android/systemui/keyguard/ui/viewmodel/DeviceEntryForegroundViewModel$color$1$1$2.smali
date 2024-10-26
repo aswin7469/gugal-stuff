@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/keyguard/ui/viewmodel/DeviceEntryForegroundViewModel$color$1$1$2;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -173,7 +173,7 @@
     iget-object v1, v1, Lcom/android/systemui/keyguard/ui/viewmodel/DeviceEntryForegroundViewModel;->context:Landroid/content/Context;
 
     .line 47
-    const v3, 0x7f04073c    # @attr/wallpaperTextColorAccent
+    const v3, 0x7f040742    # @attr/wallpaperTextColorAccent
 
     .line 49
     invoke-static {v3, v4, v1}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I

@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/common/util/concurrent/AbstractFuture;
 .super Lcom/google/common/util/concurrent/internal/InternalFutureFailureAccess;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/google/common/util/concurrent/ListenableFuture;
@@ -660,78 +660,68 @@
     .locals 4
 
     .line 1
-    if-eqz p2, :cond_3
+    const-string v0, "Executor was null."
 
     .line 2
-    invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractFuture;->isDone()Z
+    invoke-static {p2, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 4
-    move-result v0
+    invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractFuture;->isDone()Z
 
     .line 7
-    if-nez v0, :cond_2
-
-    .line 8
-    iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractFuture;->listeners:Lcom/google/common/util/concurrent/AbstractFuture$Listener;
+    move-result v0
 
     .line 10
+    if-nez v0, :cond_2
+
+    .line 11
+    iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractFuture;->listeners:Lcom/google/common/util/concurrent/AbstractFuture$Listener;
+
+    .line 13
     sget-object v1, Lcom/google/common/util/concurrent/AbstractFuture$Listener;->TOMBSTONE:Lcom/google/common/util/concurrent/AbstractFuture$Listener;
 
-    .line 12
+    .line 15
     if-eq v0, v1, :cond_2
 
-    .line 14
+    .line 17
     new-instance v2, Lcom/google/common/util/concurrent/AbstractFuture$Listener;
 
-    .line 16
+    .line 19
     invoke-direct {v2, p1, p2}, Lcom/google/common/util/concurrent/AbstractFuture$Listener;-><init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 18
+    .line 21
     :cond_0
     iput-object v0, v2, Lcom/google/common/util/concurrent/AbstractFuture$Listener;->next:Lcom/google/common/util/concurrent/AbstractFuture$Listener;
 
-    .line 21
+    .line 24
     sget-object v3, Lcom/google/common/util/concurrent/AbstractFuture;->ATOMIC_HELPER:Lcom/google/common/util/concurrent/AbstractFuture$AtomicHelper;
 
-    .line 23
+    .line 26
     invoke-virtual {v3, p0, v0, v2}, Lcom/google/common/util/concurrent/AbstractFuture$AtomicHelper;->casListeners(Lcom/google/common/util/concurrent/AbstractFuture;Lcom/google/common/util/concurrent/AbstractFuture$Listener;Lcom/google/common/util/concurrent/AbstractFuture$Listener;)Z
 
-    .line 25
+    .line 28
     move-result v0
 
-    .line 28
+    .line 31
     if-eqz v0, :cond_1
 
-    .line 29
+    .line 32
     return-void
 
-    .line 31
+    .line 34
     :cond_1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractFuture;->listeners:Lcom/google/common/util/concurrent/AbstractFuture$Listener;
 
-    .line 32
+    .line 35
     if-ne v0, v1, :cond_0
 
-    .line 34
+    .line 37
     :cond_2
     invoke-static {p1, p2}, Lcom/google/common/util/concurrent/AbstractFuture;->executeListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 36
-    return-void
-
     .line 39
-    :cond_3
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    .line 40
-    const-string p1, "Executor was null."
-
+    return-void
     .line 42
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    .line 44
-    throw p0
-    .line 47
 .end method
 
 .method public afterDone()V
@@ -1262,7 +1252,7 @@
     const-string v8, " (plus "
 
     .line 31
-    invoke-static {p2, v8}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v8}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1327,13 +1317,13 @@
     const-string p3, ","
 
     .line 36
-    invoke-static {p2, p3}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p3}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     .line 37
     :cond_e
-    invoke-static {p2, p1}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1362,7 +1352,7 @@
     const-string p1, "delay)"
 
     .line 40
-    invoke-static {p2, p1}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1380,7 +1370,7 @@
     const-string p1, " but future completed as timeout expired"
 
     .line 43
-    invoke-static {p2, p1}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1396,7 +1386,7 @@
     const-string p1, " for "
 
     .line 46
-    invoke-static {p2, p1, v4}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1, v4}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m$1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

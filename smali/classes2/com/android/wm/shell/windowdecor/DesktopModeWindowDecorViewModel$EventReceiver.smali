@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel$EventReceiver;
 .super Landroid/view/InputEventReceiver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -65,7 +65,7 @@
 .end method
 
 .method public final onInputEvent(Landroid/view/InputEvent;)V
-    .locals 17
+    .locals 16
 
     .line 1
     move-object/from16 v0, p0
@@ -80,7 +80,7 @@
     const/4 v3, 0x0
 
     .line 8
-    if-eqz v2, :cond_2e
+    if-eqz v2, :cond_2f
 
     .line 9
     iget-object v2, v0, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel$EventReceiver;->this$0:Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;
@@ -124,10 +124,10 @@
 
     .line 32
     :goto_0
-    const/4 v9, 0x1
+    const/4 v9, 0x0
 
     .line 33
-    const/4 v10, 0x0
+    const/4 v10, 0x1
 
     .line 34
     if-eq v7, v8, :cond_1
@@ -158,7 +158,7 @@
     if-nez v7, :cond_2
 
     .line 51
-    move-object v7, v10
+    move-object v7, v9
 
     .line 53
     goto/16 :goto_4
@@ -180,7 +180,7 @@
     if-eqz v11, :cond_3
 
     .line 64
-    move v11, v9
+    move v11, v10
 
     .line 66
     goto :goto_1
@@ -212,7 +212,7 @@
     if-eqz v7, :cond_4
 
     .line 81
-    move v7, v9
+    move v7, v10
 
     .line 83
     goto :goto_2
@@ -241,7 +241,7 @@
     iget-object v11, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mSplitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
     .line 96
-    invoke-virtual {v11, v9}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
+    invoke-virtual {v11, v10}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 98
     move-result-object v11
@@ -411,7 +411,7 @@
 
     .line 200
     :cond_6
-    move-object v7, v10
+    move-object v7, v9
 
     .line 201
     :goto_3
@@ -448,19 +448,19 @@
     const/4 v12, 0x3
 
     .line 219
-    if-eqz v11, :cond_9
+    if-eqz v11, :cond_2a
 
     .line 220
     iget-boolean v11, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mInImmersiveMode:Z
 
     .line 222
-    if-nez v11, :cond_9
+    if-nez v11, :cond_2a
 
     .line 224
     const/4 v11, 0x5
 
     .line 226
-    if-eqz v7, :cond_a
+    if-eqz v7, :cond_9
 
     .line 227
     iget-object v13, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
@@ -472,117 +472,105 @@
     move-result v13
 
     .line 234
-    if-ne v13, v11, :cond_a
+    if-ne v13, v11, :cond_9
 
     .line 235
     iget-boolean v13, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
 
     .line 237
-    if-eqz v13, :cond_9
+    if-eqz v13, :cond_2a
 
     .line 239
-    goto :goto_6
+    :cond_9
+    if-nez v7, :cond_a
 
     .line 241
-    :cond_9
-    :goto_5
-    move-object v13, v4
-
-    .line 242
-    goto/16 :goto_e
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getActionMasked()I
 
     .line 243
-    :cond_a
-    :goto_6
-    if-nez v7, :cond_b
-
-    .line 245
-    invoke-virtual {v4}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    .line 247
     move-result v6
 
-    .line 250
-    if-ne v6, v9, :cond_9
+    .line 246
+    if-ne v6, v10, :cond_2a
+
+    .line 247
+    iput-object v9, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
+
+    .line 249
+    iput-boolean v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
 
     .line 251
-    iput-object v10, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
+    goto/16 :goto_b
 
     .line 253
-    iput-boolean v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
-
-    .line 255
-    goto :goto_5
-
-    .line 257
-    :cond_b
+    :cond_a
     invoke-virtual {v4}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    .line 258
+    .line 255
     move-result v13
 
-    .line 261
-    if-eqz v13, :cond_27
+    .line 258
+    if-eqz v13, :cond_28
 
-    .line 262
+    .line 259
     iget-object v14, v6, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->dragToDesktopTransitionHandler:Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;
 
-    .line 264
+    .line 261
     const/4 v15, 0x2
 
+    .line 263
+    if-eq v13, v10, :cond_1b
+
+    .line 264
+    if-eq v13, v15, :cond_d
+
     .line 266
-    if-eq v13, v9, :cond_1c
+    if-eq v13, v12, :cond_c
 
-    .line 267
-    if-eq v13, v15, :cond_e
-
-    .line 269
-    if-eq v13, v12, :cond_d
-
-    .line 271
+    .line 268
     const/4 v3, 0x7
 
-    .line 273
-    if-eq v13, v3, :cond_c
+    .line 270
+    if-eq v13, v3, :cond_b
 
-    .line 274
+    .line 271
     const/16 v3, 0x9
 
-    .line 276
-    if-eq v13, v3, :cond_c
+    .line 273
+    if-eq v13, v3, :cond_b
 
-    .line 278
+    .line 275
     const/16 v3, 0xa
 
-    .line 280
-    if-eq v13, v3, :cond_c
+    .line 277
+    if-eq v13, v3, :cond_b
 
-    .line 282
-    goto :goto_5
+    .line 279
+    goto/16 :goto_b
 
-    .line 284
-    :cond_c
+    .line 281
+    :cond_b
     invoke-virtual {v7, v4}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->updateHoverAndPressStatus(Landroid/view/MotionEvent;)V
 
-    .line 285
-    goto :goto_5
+    .line 283
+    goto/16 :goto_b
 
-    .line 288
-    :cond_d
+    .line 286
+    :cond_c
     iput-boolean v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
 
-    .line 289
-    iput-object v10, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
+    .line 288
+    iput-object v9, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
 
-    .line 291
-    goto :goto_5
+    .line 290
+    goto/16 :goto_b
 
-    .line 293
-    :cond_e
+    .line 292
+    :cond_d
     iget-boolean v13, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
 
     .line 294
-    if-eqz v13, :cond_9
+    if-eqz v13, :cond_2a
 
     .line 296
     iget-object v13, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
@@ -591,13 +579,13 @@
     iget v13, v13, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
     .line 300
-    iget-object v10, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
+    iget-object v9, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
 
     .line 302
-    invoke-virtual {v10, v13}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
+    invoke-virtual {v9, v13}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
 
     .line 304
-    move-result-object v10
+    move-result-object v9
 
     .line 307
     invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawY()F
@@ -606,244 +594,241 @@
     move-result v13
 
     .line 311
-    iget-object v10, v10, Lcom/android/wm/shell/common/DisplayLayout;->mStableInsets:Landroid/graphics/Rect;
+    iget-object v9, v9, Lcom/android/wm/shell/common/DisplayLayout;->mStableInsets:Landroid/graphics/Rect;
 
     .line 312
-    iget v10, v10, Landroid/graphics/Rect;->top:I
+    iget v9, v9, Landroid/graphics/Rect;->top:I
 
     .line 314
-    mul-int/2addr v10, v15
+    mul-int/2addr v9, v15
 
     .line 316
-    int-to-float v10, v10
+    int-to-float v9, v9
 
     .line 317
-    cmpg-float v10, v13, v10
+    cmpg-float v9, v13, v9
 
     .line 318
-    if-gez v10, :cond_f
+    if-gez v9, :cond_e
 
     .line 320
-    iget-object v10, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
+    iget-object v9, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
 
     .line 322
-    if-nez v10, :cond_f
+    if-nez v9, :cond_e
 
     .line 324
-    goto :goto_5
+    goto/16 :goto_b
 
     .line 326
-    :cond_f
-    iget-object v10, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    :cond_e
+    iget-object v9, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 327
+    .line 328
     iget-object v13, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
-    .line 329
+    .line 330
     invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawX()F
 
-    .line 331
+    .line 332
     move-result v15
-
-    .line 334
-    invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawY()F
 
     .line 335
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawY()F
+
+    .line 336
     move-result v12
 
-    .line 338
-    invoke-virtual {v6, v10, v13, v15, v12}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->updateVisualIndicator(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;FF)Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator$IndicatorType;
-
     .line 339
+    invoke-virtual {v6, v9, v13, v15, v12}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->updateVisualIndicator(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;FF)Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator$IndicatorType;
+
+    .line 340
     move-result-object v6
 
-    .line 342
-    sget-object v10, Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator$IndicatorType;->TO_FULLSCREEN_INDICATOR:Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator$IndicatorType;
-
     .line 343
-    if-eq v6, v10, :cond_1a
+    sget-object v9, Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator$IndicatorType;->TO_FULLSCREEN_INDICATOR:Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator$IndicatorType;
 
-    .line 345
+    .line 344
+    if-eq v6, v9, :cond_19
+
+    .line 346
     iget-object v6, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
 
-    .line 347
-    if-nez v6, :cond_1a
+    .line 348
+    if-nez v6, :cond_19
 
-    .line 349
+    .line 350
     new-instance v6, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
 
-    .line 351
-    iget-object v10, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mContext:Landroid/content/Context;
+    .line 352
+    iget-object v9, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mContext:Landroid/content/Context;
 
-    .line 353
+    .line 354
     iget-object v12, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mDragToDesktopAnimationStartBounds:Landroid/graphics/Rect;
 
-    .line 355
+    .line 356
     iget-object v13, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
-    .line 357
-    invoke-direct {v6, v10, v12, v13}, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;-><init>(Landroid/content/Context;Landroid/graphics/Rect;Landroid/view/SurfaceControl;)V
+    .line 358
+    invoke-direct {v6, v9, v12, v13}, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;-><init>(Landroid/content/Context;Landroid/graphics/Rect;Landroid/view/SurfaceControl;)V
 
-    .line 359
+    .line 360
     iput-object v6, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
 
-    .line 362
-    iget-object v10, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    .line 363
+    iget-object v9, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 364
+    .line 365
     sget-object v12, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_DESKTOP_MODE:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 366
-    iget v13, v10, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    .line 367
+    iget v13, v9, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 368
+    .line 369
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 370
+    .line 371
     move-result-object v13
-
-    .line 373
-    filled-new-array {v13}, [Ljava/lang/Object;
 
     .line 374
-    move-result-object v13
+    filled-new-array {v13}, [Ljava/lang/Object;
 
-    .line 377
-    invoke-interface {v12}, Lcom/android/internal/protolog/common/IProtoLogGroup;->isLogToLogcat()Z
+    .line 375
+    move-result-object v13
 
     .line 378
-    move-result v15
-
-    .line 381
-    if-eqz v15, :cond_10
-
-    .line 382
-    invoke-interface {v12}, Lcom/android/internal/protolog/common/IProtoLogGroup;->getTag()Ljava/lang/String;
-
-    .line 384
-    invoke-static {v13, v9}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    .line 387
-    move-result-object v13
-
-    .line 390
-    array-length v15, v13
-
-    .line 391
-    invoke-static {v13, v15}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    .line 392
-    move-result-object v13
-
-    .line 395
-    const-string v15, "DesktopTasksController: startDragToDesktop taskId=%d"
-
-    .line 396
-    invoke-static {v15, v13}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 398
-    :cond_10
-    iget v10, v10, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 401
-    iget-object v13, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->transitionState:Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState;
-
-    .line 403
-    if-eqz v13, :cond_11
-
-    .line 405
-    new-array v6, v3, [Ljava/lang/Object;
-
-    .line 407
     invoke-interface {v12}, Lcom/android/internal/protolog/common/IProtoLogGroup;->isLogToLogcat()Z
 
-    .line 409
-    move-result v8
+    .line 379
+    move-result v15
 
-    .line 412
-    if-eqz v8, :cond_1a
+    .line 382
+    if-eqz v15, :cond_f
 
-    .line 413
+    .line 383
     invoke-interface {v12}, Lcom/android/internal/protolog/common/IProtoLogGroup;->getTag()Ljava/lang/String;
 
-    .line 415
+    .line 385
+    invoke-static {v13, v10}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    .line 388
+    move-result-object v13
+
+    .line 391
+    array-length v15, v13
+
+    .line 392
+    invoke-static {v13, v15}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    .line 393
+    move-result-object v13
+
+    .line 396
+    const-string v15, "DesktopTasksController: startDragToDesktop taskId=%d"
+
+    .line 397
+    invoke-static {v15, v13}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 399
+    :cond_f
+    iget v9, v9, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 402
+    iget-object v13, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->transitionState:Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState;
+
+    .line 404
+    if-eqz v13, :cond_10
+
+    .line 406
+    new-array v6, v3, [Ljava/lang/Object;
+
+    .line 408
+    invoke-interface {v12}, Lcom/android/internal/protolog/common/IProtoLogGroup;->isLogToLogcat()Z
+
+    .line 410
+    move-result v8
+
+    .line 413
+    if-eqz v8, :cond_19
+
+    .line 414
+    invoke-interface {v12}, Lcom/android/internal/protolog/common/IProtoLogGroup;->getTag()Ljava/lang/String;
+
+    .line 416
     invoke-static {v6, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    .line 418
+    .line 419
     move-result-object v3
-
-    .line 421
-    array-length v6, v3
 
     .line 422
-    invoke-static {v3, v6}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    array-length v6, v3
 
     .line 423
-    move-result-object v3
+    invoke-static {v3, v6}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    .line 426
-    const-string v6, "DragToDesktop: Drag to desktop transition already in progress."
+    .line 424
+    move-result-object v3
 
     .line 427
+    const-string v6, "DragToDesktop: Drag to desktop transition already in progress."
+
+    .line 428
     invoke-static {v6, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 429
-    goto/16 :goto_a
+    .line 430
+    goto/16 :goto_8
 
-    .line 432
-    :cond_11
+    .line 433
+    :cond_10
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
-    .line 434
+    .line 435
     move-result-object v12
-
-    .line 437
-    invoke-virtual {v12}, Landroid/app/ActivityOptions;->setTransientLaunch()Landroid/app/ActivityOptions;
 
     .line 438
-    move-object v13, v4
+    invoke-virtual {v12}, Landroid/app/ActivityOptions;->setTransientLaunch()Landroid/app/ActivityOptions;
 
-    .line 441
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    .line 439
+    move v15, v9
 
     .line 442
-    move-result-wide v3
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    .line 445
-    invoke-virtual {v12, v11, v3, v4}, Landroid/app/ActivityOptions;->setSourceInfo(IJ)V
+    .line 443
+    move-result-wide v8
 
     .line 446
-    invoke-virtual {v12, v9}, Landroid/app/ActivityOptions;->setPendingIntentCreatorBackgroundActivityStartMode(I)Landroid/app/ActivityOptions;
+    invoke-virtual {v12, v11, v8, v9}, Landroid/app/ActivityOptions;->setSourceInfo(IJ)V
 
-    .line 449
-    iget-object v3, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->context:Landroid/content/Context;
+    .line 447
+    invoke-virtual {v12, v10}, Landroid/app/ActivityOptions;->setPendingIntentCreatorBackgroundActivityStartMode(I)Landroid/app/ActivityOptions;
 
-    .line 452
-    iget-object v4, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->launchHomeIntent:Landroid/content/Intent;
+    .line 450
+    iget-object v8, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->context:Landroid/content/Context;
 
-    .line 454
+    .line 453
+    iget-object v9, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->launchHomeIntent:Landroid/content/Intent;
+
+    .line 455
     const v11, 0x3000008
 
-    .line 456
+    .line 457
     invoke-virtual {v12}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
-    .line 459
+    .line 460
     move-result-object v12
 
-    .line 462
-    const/4 v15, 0x0
-
     .line 463
-    invoke-static {v3, v15, v4, v11, v12}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/PendingIntent;
+    invoke-static {v8, v3, v9, v11, v12}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/PendingIntent;
 
     .line 464
-    move-result-object v3
+    move-result-object v8
 
     .line 467
-    new-instance v4, Landroid/window/WindowContainerTransaction;
+    new-instance v9, Landroid/window/WindowContainerTransaction;
 
     .line 468
-    invoke-direct {v4}, Landroid/window/WindowContainerTransaction;-><init>()V
+    invoke-direct {v9}, Landroid/window/WindowContainerTransaction;-><init>()V
 
     .line 470
     iget-object v11, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->launchHomeIntent:Landroid/content/Intent;
@@ -855,697 +840,785 @@
     invoke-direct {v12}, Landroid/os/Bundle;-><init>()V
 
     .line 477
-    invoke-virtual {v4, v3, v11, v12}, Landroid/window/WindowContainerTransaction;->sendPendingIntent(Landroid/app/PendingIntent;Landroid/content/Intent;Landroid/os/Bundle;)Landroid/window/WindowContainerTransaction;
+    invoke-virtual {v9, v8, v11, v12}, Landroid/window/WindowContainerTransaction;->sendPendingIntent(Landroid/app/PendingIntent;Landroid/content/Intent;Landroid/os/Bundle;)Landroid/window/WindowContainerTransaction;
 
     .line 480
-    iget-object v3, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->transitions:Lcom/android/wm/shell/transition/Transitions;
+    iget-object v8, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->transitions:Lcom/android/wm/shell/transition/Transitions;
 
     .line 483
     const/16 v11, 0x3f2
 
     .line 485
-    invoke-virtual {v3, v11, v4, v14}, Lcom/android/wm/shell/transition/Transitions;->startTransition(ILandroid/window/WindowContainerTransaction;Lcom/android/wm/shell/transition/Transitions$TransitionHandler;)Landroid/os/IBinder;
+    invoke-virtual {v8, v11, v9, v14}, Lcom/android/wm/shell/transition/Transitions;->startTransition(ILandroid/window/WindowContainerTransaction;Lcom/android/wm/shell/transition/Transitions$TransitionHandler;)Landroid/os/IBinder;
 
     .line 487
-    move-result-object v3
-
-    .line 490
-    iget-object v4, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->splitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
-
-    .line 491
-    if-nez v4, :cond_12
-
-    .line 493
-    const/4 v4, 0x0
-
-    .line 495
-    :cond_12
-    invoke-virtual {v4, v10}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->isTaskInSplitScreen(I)Z
-
-    .line 496
-    move-result v4
-
-    .line 499
-    if-eqz v4, :cond_19
-
-    .line 500
-    iget-object v4, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->splitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
-
-    .line 502
-    if-nez v4, :cond_13
-
-    .line 504
-    const/4 v4, 0x0
-
-    .line 506
-    :cond_13
-    invoke-virtual {v4, v10}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getSplitPosition(I)I
-
-    .line 507
-    move-result v4
-
-    .line 510
-    if-ne v4, v8, :cond_15
-
-    .line 511
-    :cond_14
-    const/16 v16, 0x0
-
-    .line 513
-    goto :goto_8
-
-    .line 515
-    :cond_15
-    if-ne v4, v9, :cond_16
-
-    .line 516
-    const/4 v4, 0x0
-
-    .line 518
-    goto :goto_7
-
-    .line 519
-    :cond_16
-    move v4, v9
-
-    .line 520
-    :goto_7
-    iget-object v8, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->splitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
-
-    .line 521
-    if-nez v8, :cond_17
-
-    .line 523
-    const/4 v8, 0x0
-
-    .line 525
-    :cond_17
-    invoke-virtual {v8, v4}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 526
-    move-result-object v4
-
-    .line 529
-    if-eqz v4, :cond_14
-
-    .line 530
-    iget v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 532
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 534
-    move-result-object v4
-
-    .line 537
-    move-object/from16 v16, v4
-
-    .line 538
-    :goto_8
-    if-eqz v16, :cond_18
-
-    .line 540
-    invoke-virtual/range {v16 .. v16}, Ljava/lang/Integer;->intValue()I
-
-    .line 542
-    move-result v4
-
-    .line 545
-    new-instance v8, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState$FromSplit;
-
-    .line 546
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
-
-    .line 548
-    invoke-direct {v8, v10, v6, v3, v4}, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState$FromSplit;-><init>(ILcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;Landroid/os/IBinder;I)V
-
-    .line 551
-    goto :goto_9
-
-    .line 554
-    :cond_18
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    .line 555
-    const-string v1, "Expected split task to have a counterpart."
-
-    .line 557
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    .line 559
-    throw v0
-
-    .line 562
-    :cond_19
-    new-instance v8, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState$FromFullscreen;
-
-    .line 563
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
-
-    .line 565
-    invoke-direct {v8, v10, v6, v3}, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState$FromFullscreen;-><init>(ILcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;Landroid/os/IBinder;)V
-
-    .line 568
-    :goto_9
-    iput-object v8, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->transitionState:Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState;
-
-    .line 571
-    goto :goto_b
-
-    .line 573
-    :cond_1a
-    :goto_a
-    move-object v13, v4
-
-    .line 574
-    :goto_b
-    iget-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
-
-    .line 575
-    if-eqz v3, :cond_29
-
-    .line 577
-    iget-object v4, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->mostRecentInput:Landroid/graphics/PointF;
-
-    .line 579
-    invoke-virtual {v13}, Landroid/view/MotionEvent;->getRawX()F
-
-    .line 581
-    move-result v6
-
-    .line 584
-    invoke-virtual {v13}, Landroid/view/MotionEvent;->getRawY()F
-
-    .line 585
-    move-result v8
-
-    .line 588
-    invoke-virtual {v4, v6, v8}, Landroid/graphics/PointF;->set(FF)V
-
-    .line 589
-    iget-boolean v4, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->allowSurfaceChangesOnMove:Z
-
-    .line 592
-    if-eqz v4, :cond_29
-
-    .line 594
-    iget-object v4, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->dragToDesktopAnimator:Landroid/animation/ValueAnimator;
-
-    .line 596
-    invoke-virtual {v4}, Landroid/animation/ValueAnimator;->isRunning()Z
-
-    .line 598
-    move-result v4
-
-    .line 601
-    if-eqz v4, :cond_1b
-
-    .line 602
-    goto/16 :goto_e
-
-    .line 604
-    :cond_1b
-    invoke-virtual {v13}, Landroid/view/MotionEvent;->getRawX()F
-
-    .line 606
-    move-result v4
-
-    .line 609
-    invoke-virtual {v13}, Landroid/view/MotionEvent;->getRawY()F
-
-    .line 610
-    move-result v6
-
-    .line 613
-    invoke-virtual {v3, v4, v6}, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->setTaskPosition(FF)V
-
-    .line 614
-    iget-object v4, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->transactionFactory:Lkotlin/jvm/functions/Function0;
-
-    .line 617
-    invoke-interface {v4}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
-
-    .line 619
-    move-result-object v4
-
-    .line 622
-    check-cast v4, Landroid/view/SurfaceControl$Transaction;
-
-    .line 623
-    iget-object v6, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->taskSurface:Landroid/view/SurfaceControl;
-
-    .line 625
-    iget-object v3, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->position:Landroid/graphics/PointF;
-
-    .line 627
-    iget v8, v3, Landroid/graphics/PointF;->x:F
-
-    .line 629
-    iget v3, v3, Landroid/graphics/PointF;->y:F
-
-    .line 631
-    invoke-virtual {v4, v6, v8, v3}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
-
-    .line 633
-    invoke-virtual {v4}, Landroid/view/SurfaceControl$Transaction;->apply()V
-
-    .line 636
-    goto/16 :goto_e
-
-    .line 639
-    :cond_1c
-    move-object v13, v4
-
-    .line 641
-    iget-boolean v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
-
-    .line 642
-    if-eqz v3, :cond_26
-
-    .line 644
-    iget-object v3, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 646
-    iget-object v4, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
-
-    .line 648
-    invoke-virtual {v13}, Landroid/view/MotionEvent;->getRawX()F
-
-    .line 650
-    move-result v8
-
-    .line 653
-    invoke-virtual {v13}, Landroid/view/MotionEvent;->getRawY()F
-
-    .line 654
-    move-result v10
-
-    .line 657
-    invoke-virtual {v6, v3, v4, v8, v10}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->updateVisualIndicator(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;FF)Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator$IndicatorType;
-
-    .line 658
-    const/4 v3, 0x0
-
-    .line 661
-    iput-boolean v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
-
-    .line 662
-    iget-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
-
-    .line 664
-    if-eqz v3, :cond_25
-
-    .line 666
-    invoke-virtual {v7, v13}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->updateHoverAndPressStatus(Landroid/view/MotionEvent;)V
-
-    .line 668
-    new-instance v3, Landroid/graphics/PointF;
-
-    .line 671
-    invoke-virtual {v13}, Landroid/view/MotionEvent;->getRawX()F
-
-    .line 673
-    move-result v4
-
-    .line 676
-    invoke-virtual {v13}, Landroid/view/MotionEvent;->getRawY()F
-
-    .line 677
-    move-result v8
-
-    .line 680
-    invoke-direct {v3, v4, v8}, Landroid/graphics/PointF;-><init>(FF)V
-
-    .line 681
-    iget-object v4, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 684
-    invoke-virtual {v6}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->getVisualIndicator()Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator;
-
-    .line 686
     move-result-object v8
 
-    .line 689
-    if-nez v8, :cond_1d
+    .line 490
+    iget-object v9, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->splitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
-    .line 690
-    :goto_c
-    const/4 v3, 0x0
+    .line 491
+    move v11, v15
 
-    .line 692
-    goto/16 :goto_d
+    .line 493
+    if-nez v9, :cond_11
 
-    .line 693
-    :cond_1d
-    invoke-virtual {v4}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
+    .line 494
+    const/4 v9, 0x0
 
-    .line 695
-    move-result v10
+    .line 496
+    :cond_11
+    invoke-virtual {v9, v11}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->isTaskInSplitScreen(I)Z
 
-    .line 698
-    invoke-virtual {v8, v3, v10}, Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator;->updateIndicatorType(Landroid/graphics/PointF;I)Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator$IndicatorType;
+    .line 497
+    move-result v9
 
-    .line 699
+    .line 500
+    if-eqz v9, :cond_18
+
+    .line 501
+    iget-object v9, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->splitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
+
+    .line 503
+    if-nez v9, :cond_12
+
+    .line 505
+    const/4 v9, 0x0
+
+    .line 507
+    :cond_12
+    invoke-virtual {v9, v11}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getSplitPosition(I)I
+
+    .line 508
+    move-result v9
+
+    .line 511
+    const/4 v12, -0x1
+
+    .line 512
+    if-ne v9, v12, :cond_14
+
+    .line 513
+    :cond_13
+    const/4 v9, 0x0
+
+    .line 515
+    goto :goto_6
+
+    .line 516
+    :cond_14
+    if-ne v9, v10, :cond_15
+
+    .line 517
+    goto :goto_5
+
+    .line 519
+    :cond_15
+    move v3, v10
+
+    .line 520
+    :goto_5
+    iget-object v9, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->splitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
+
+    .line 521
+    if-nez v9, :cond_16
+
+    .line 523
+    const/4 v9, 0x0
+
+    .line 525
+    :cond_16
+    invoke-virtual {v9, v3}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 526
     move-result-object v3
 
-    .line 702
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+    .line 529
+    if-eqz v3, :cond_13
 
-    .line 703
+    .line 530
+    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 532
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 534
+    move-result-object v9
+
+    .line 537
+    :goto_6
+    if-eqz v9, :cond_17
+
+    .line 538
+    invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
+
+    .line 540
     move-result v3
 
-    .line 706
-    if-eqz v3, :cond_23
+    .line 543
+    new-instance v9, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState$FromSplit;
 
-    .line 707
-    if-eq v3, v9, :cond_20
+    .line 544
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 709
-    if-eq v3, v15, :cond_23
+    .line 546
+    invoke-direct {v9, v11, v6, v8, v3}, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState$FromSplit;-><init>(ILcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;Landroid/os/IBinder;I)V
 
-    .line 711
-    const/4 v8, 0x3
+    .line 549
+    goto :goto_7
 
-    .line 713
-    if-eq v3, v8, :cond_1f
+    .line 552
+    :cond_17
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 714
-    const/4 v8, 0x4
+    .line 553
+    const-string v1, "Expected split task to have a counterpart."
 
-    .line 716
-    if-eq v3, v8, :cond_1e
+    .line 555
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 717
-    goto :goto_c
+    .line 557
+    throw v0
 
-    .line 719
-    :cond_1e
+    .line 560
+    :cond_18
+    new-instance v9, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState$FromFullscreen;
+
+    .line 561
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    .line 563
+    invoke-direct {v9, v11, v6, v8}, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState$FromFullscreen;-><init>(ILcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;Landroid/os/IBinder;)V
+
+    .line 566
+    :goto_7
+    iput-object v9, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->transitionState:Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState;
+
+    .line 569
+    :cond_19
+    :goto_8
+    iget-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
+
+    .line 571
+    if-eqz v3, :cond_2a
+
+    .line 573
+    iget-object v6, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->mostRecentInput:Landroid/graphics/PointF;
+
+    .line 575
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawX()F
+
+    .line 577
+    move-result v8
+
+    .line 580
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawY()F
+
+    .line 581
+    move-result v9
+
+    .line 584
+    invoke-virtual {v6, v8, v9}, Landroid/graphics/PointF;->set(FF)V
+
+    .line 585
+    iget-boolean v6, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->allowSurfaceChangesOnMove:Z
+
+    .line 588
+    if-eqz v6, :cond_2a
+
+    .line 590
+    iget-object v6, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->dragToDesktopAnimator:Landroid/animation/ValueAnimator;
+
+    .line 592
+    invoke-virtual {v6}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    .line 594
+    move-result v6
+
+    .line 597
+    if-eqz v6, :cond_1a
+
+    .line 598
+    goto/16 :goto_b
+
+    .line 600
+    :cond_1a
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawX()F
+
+    .line 602
+    move-result v6
+
+    .line 605
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawY()F
+
+    .line 606
+    move-result v8
+
+    .line 609
+    invoke-virtual {v3, v6, v8}, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->setTaskPosition(FF)V
+
+    .line 610
+    iget-object v6, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->transactionFactory:Lkotlin/jvm/functions/Function0;
+
+    .line 613
+    invoke-interface {v6}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
+
+    .line 615
+    move-result-object v6
+
+    .line 618
+    check-cast v6, Landroid/view/SurfaceControl$Transaction;
+
+    .line 619
+    iget-object v8, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->taskSurface:Landroid/view/SurfaceControl;
+
+    .line 621
+    iget-object v3, v3, Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;->position:Landroid/graphics/PointF;
+
+    .line 623
+    iget v9, v3, Landroid/graphics/PointF;->x:F
+
+    .line 625
+    iget v3, v3, Landroid/graphics/PointF;->y:F
+
+    .line 627
+    invoke-virtual {v6, v8, v9, v3}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
+
+    .line 629
+    invoke-virtual {v6}, Landroid/view/SurfaceControl$Transaction;->apply()V
+
+    .line 632
+    goto/16 :goto_b
+
+    .line 635
+    :cond_1b
+    iget-boolean v8, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
+
+    .line 637
+    if-eqz v8, :cond_27
+
+    .line 639
+    iget-object v8, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 641
+    iget-object v9, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
+
+    .line 643
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawX()F
+
+    .line 645
+    move-result v11
+
+    .line 648
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawY()F
+
+    .line 649
+    move-result v12
+
+    .line 652
+    invoke-virtual {v6, v8, v9, v11, v12}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->updateVisualIndicator(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;FF)Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator$IndicatorType;
+
+    .line 653
+    iput-boolean v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
+
+    .line 656
+    iget-object v8, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
+
+    .line 658
+    if-eqz v8, :cond_26
+
+    .line 660
+    invoke-virtual {v7, v4}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->updateHoverAndPressStatus(Landroid/view/MotionEvent;)V
+
+    .line 662
+    new-instance v8, Landroid/graphics/PointF;
+
+    .line 665
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawX()F
+
+    .line 667
+    move-result v9
+
+    .line 670
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getRawY()F
+
+    .line 671
+    move-result v11
+
+    .line 674
+    invoke-direct {v8, v9, v11}, Landroid/graphics/PointF;-><init>(FF)V
+
+    .line 675
+    iget-object v9, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 678
+    invoke-virtual {v6}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->getVisualIndicator()Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator;
+
+    .line 680
+    move-result-object v11
+
+    .line 683
+    if-nez v11, :cond_1d
+
+    .line 684
+    :cond_1c
+    :goto_9
     const/4 v3, 0x0
 
-    .line 720
-    invoke-virtual {v6, v4, v3}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->requestSplit(Landroid/app/ActivityManager$RunningTaskInfo;Z)V
+    .line 686
+    goto/16 :goto_a
+
+    .line 687
+    :cond_1d
+    invoke-virtual {v9}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
+
+    .line 689
+    move-result v12
+
+    .line 692
+    invoke-virtual {v11, v8, v12}, Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator;->updateIndicatorType(Landroid/graphics/PointF;I)Lcom/android/wm/shell/desktopmode/DesktopModeVisualIndicator$IndicatorType;
+
+    .line 693
+    move-result-object v8
+
+    .line 696
+    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
+
+    .line 697
+    move-result v8
+
+    .line 700
+    if-eqz v8, :cond_24
+
+    .line 701
+    if-eq v8, v10, :cond_20
+
+    .line 703
+    if-eq v8, v15, :cond_24
+
+    .line 705
+    const/4 v11, 0x3
+
+    .line 707
+    if-eq v8, v11, :cond_1f
+
+    .line 708
+    const/4 v11, 0x4
+
+    .line 710
+    if-eq v8, v11, :cond_1e
+
+    .line 711
+    goto :goto_9
+
+    .line 713
+    :cond_1e
+    invoke-virtual {v6, v9, v3}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->requestSplit(Landroid/app/ActivityManager$RunningTaskInfo;Z)V
+
+    .line 714
+    goto :goto_9
+
+    .line 717
+    :cond_1f
+    invoke-virtual {v6, v9, v10}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->requestSplit(Landroid/app/ActivityManager$RunningTaskInfo;Z)V
+
+    .line 718
+    goto :goto_9
 
     .line 721
-    goto :goto_c
-
-    .line 724
-    :cond_1f
-    invoke-virtual {v6, v4, v9}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->requestSplit(Landroid/app/ActivityManager$RunningTaskInfo;Z)V
-
-    .line 725
-    goto :goto_c
-
-    .line 728
     :cond_20
     iget-object v3, v6, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->displayController:Lcom/android/wm/shell/common/DisplayController;
 
-    .line 729
-    iget v8, v4, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
+    .line 722
+    iget v8, v9, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
-    .line 731
+    .line 724
     invoke-virtual {v3, v8}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
 
-    .line 733
+    .line 726
     move-result-object v3
 
-    .line 736
+    .line 729
     if-nez v3, :cond_21
 
-    .line 737
-    goto :goto_c
+    .line 730
+    goto :goto_9
 
-    .line 739
+    .line 732
     :cond_21
     invoke-static {}, Lcom/android/window/flags/Flags;->enableWindowingDynamicInitialBounds()Z
 
-    .line 740
-    move-result v8
-
-    .line 743
-    if-eqz v8, :cond_22
-
-    .line 744
-    invoke-static {v3, v4}, Lcom/android/wm/shell/desktopmode/DesktopModeUtils;->calculateInitialBounds$default(Lcom/android/wm/shell/common/DisplayLayout;Landroid/app/ActivityManager$RunningTaskInfo;)Landroid/graphics/Rect;
-
-    .line 746
-    move-result-object v3
-
-    .line 749
-    invoke-virtual {v6, v4, v3}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->finalizeDragToDesktop(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/graphics/Rect;)V
-
-    .line 750
-    goto :goto_c
-
-    .line 753
-    :cond_22
+    .line 733
     invoke-static {v3}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->getDefaultDesktopTaskBounds(Lcom/android/wm/shell/common/DisplayLayout;)Landroid/graphics/Rect;
 
-    .line 754
+    .line 736
     move-result-object v3
 
-    .line 757
-    invoke-virtual {v6, v4, v3}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->finalizeDragToDesktop(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/graphics/Rect;)V
+    .line 739
+    sget-object v8, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_DESKTOP_MODE:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
+
+    .line 740
+    iget v11, v9, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 742
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 744
+    move-result-object v11
+
+    .line 747
+    filled-new-array {v11}, [Ljava/lang/Object;
+
+    .line 748
+    move-result-object v11
+
+    .line 751
+    invoke-interface {v8}, Lcom/android/internal/protolog/common/IProtoLogGroup;->isLogToLogcat()Z
+
+    .line 752
+    move-result v12
+
+    .line 755
+    if-eqz v12, :cond_22
+
+    .line 756
+    invoke-interface {v8}, Lcom/android/internal/protolog/common/IProtoLogGroup;->getTag()Ljava/lang/String;
 
     .line 758
-    goto :goto_c
+    invoke-static {v11, v10}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 761
-    :cond_23
-    sget-object v3, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_DESKTOP_MODE:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
-
-    .line 762
-    iget v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    move-result-object v8
 
     .line 764
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    array-length v11, v8
+
+    .line 765
+    invoke-static {v8, v11}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 766
-    move-result-object v4
+    move-result-object v8
 
     .line 769
-    filled-new-array {v4}, [Ljava/lang/Object;
+    const-string v11, "DesktopTasksController: finalizeDragToDesktop taskId=%d"
 
     .line 770
-    move-result-object v4
+    invoke-static {v11, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 773
-    invoke-interface {v3}, Lcom/android/internal/protolog/common/IProtoLogGroup;->isLogToLogcat()Z
+    .line 772
+    :cond_22
+    new-instance v8, Landroid/window/WindowContainerTransaction;
 
-    .line 774
-    move-result v6
+    .line 775
+    invoke-direct {v8}, Landroid/window/WindowContainerTransaction;-><init>()V
 
     .line 777
-    if-eqz v6, :cond_24
-
-    .line 778
-    invoke-interface {v3}, Lcom/android/internal/protolog/common/IProtoLogGroup;->getTag()Ljava/lang/String;
+    invoke-virtual {v6, v8, v9}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->exitSplitIfApplicable(Landroid/window/WindowContainerTransaction;Landroid/app/ActivityManager$RunningTaskInfo;)V
 
     .line 780
-    invoke-static {v4, v9}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-virtual {v6, v8}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->moveHomeTaskToFront(Landroid/window/WindowContainerTransaction;)V
 
     .line 783
-    move-result-object v3
+    iget v11, v9, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
     .line 786
-    array-length v4, v3
-
-    .line 787
-    invoke-static {v3, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    iget v12, v9, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 788
-    move-result-object v3
+    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 791
-    const-string v4, "DesktopTasksController: cancelDragToDesktop taskId=%d"
+    .line 790
+    move-result-object v12
 
-    .line 792
-    invoke-static {v4, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .line 793
+    invoke-virtual {v6, v11, v8, v12}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->bringDesktopAppsToFront(ILandroid/window/WindowContainerTransaction;Ljava/lang/Integer;)V
 
     .line 794
-    :cond_24
-    sget-object v3, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$CancelState;->STANDARD_CANCEL:Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$CancelState;
+    invoke-virtual {v6, v8, v9}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->addMoveToDesktopChanges(Landroid/window/WindowContainerTransaction;Landroid/app/ActivityManager$RunningTaskInfo;)V
 
     .line 797
-    invoke-virtual {v14, v3}, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->cancelDragToDesktopTransition(Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$CancelState;)V
+    iget-object v6, v9, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 799
-    goto :goto_c
+    .line 800
+    invoke-virtual {v8, v6, v3}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
 
     .line 802
-    :goto_d
-    iput-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
-
-    .line 803
-    goto :goto_e
+    iget-object v3, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->transitionState:Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState;
 
     .line 805
-    :cond_25
-    invoke-virtual {v6}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->releaseVisualIndicator()V
+    if-eqz v3, :cond_1c
 
-    .line 806
-    :cond_26
-    invoke-virtual {v7, v13}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->checkTouchEvent(Landroid/view/MotionEvent;)V
+    .line 807
+    invoke-virtual {v14}, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->requireTransitionState()Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState;
 
     .line 809
-    goto :goto_e
+    move-result-object v3
 
     .line 812
-    :cond_27
-    move-object v13, v4
+    invoke-virtual {v3}, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState;->getStartAborted()Z
 
     .line 813
-    invoke-virtual {v7, v13}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->checkTouchEvent(Landroid/view/MotionEvent;)V
+    move-result v3
 
-    .line 814
-    invoke-virtual {v7, v13}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->updateHoverAndPressStatus(Landroid/view/MotionEvent;)V
+    .line 816
+    if-eqz v3, :cond_23
 
     .line 817
-    iget-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mDragToDesktopAnimationStartBounds:Landroid/graphics/Rect;
+    const/4 v3, 0x0
+
+    .line 819
+    iput-object v3, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->transitionState:Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$TransitionState;
 
     .line 820
-    iget-object v4, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    goto/16 :goto_9
 
     .line 822
-    iget-object v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
+    :cond_23
+    iget-object v3, v14, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->transitions:Lcom/android/wm/shell/transition/Transitions;
 
     .line 824
-    iget-object v4, v4, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    const/16 v6, 0x3f3
 
     .line 826
-    invoke-virtual {v4}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {v3, v6, v8, v14}, Lcom/android/wm/shell/transition/Transitions;->startTransition(ILandroid/window/WindowContainerTransaction;Lcom/android/wm/shell/transition/Transitions$TransitionHandler;)Landroid/os/IBinder;
 
     .line 828
-    move-result-object v4
+    goto/16 :goto_9
 
     .line 831
-    invoke-virtual {v3, v4}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    :cond_24
+    sget-object v3, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_DESKTOP_MODE:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 832
-    iget-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mContext:Landroid/content/Context;
+    .line 833
+    iget v6, v9, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 835
-    invoke-static {v3}, Lcom/android/wm/shell/shared/DesktopModeStatus;->canEnterDesktopMode(Landroid/content/Context;)Z
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 837
-    move-result v3
+    move-result-object v6
 
     .line 840
-    if-eqz v3, :cond_29
+    filled-new-array {v6}, [Ljava/lang/Object;
 
     .line 841
-    iget-object v3, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    move-result-object v6
 
-    .line 843
-    invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
+    .line 844
+    invoke-interface {v3}, Lcom/android/internal/protolog/common/IProtoLogGroup;->isLogToLogcat()Z
 
     .line 845
-    move-result v3
+    move-result v8
 
     .line 848
-    if-eq v3, v9, :cond_28
+    if-eqz v8, :cond_25
 
     .line 849
-    const/4 v4, 0x6
+    invoke-interface {v3}, Lcom/android/internal/protolog/common/IProtoLogGroup;->getTag()Ljava/lang/String;
 
     .line 851
-    if-ne v3, v4, :cond_29
-
-    .line 852
-    :cond_28
-    invoke-virtual {v7, v13}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->checkTouchEventInFocusedCaptionHandle(Landroid/view/MotionEvent;)Z
+    invoke-static {v6, v10}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     .line 854
-    move-result v3
+    move-result-object v3
 
     .line 857
-    if-eqz v3, :cond_29
+    array-length v6, v3
 
     .line 858
-    iput-boolean v9, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
+    invoke-static {v3, v6}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    .line 860
-    :cond_29
-    :goto_e
-    if-eqz v7, :cond_2c
+    .line 859
+    move-result-object v3
 
     .line 862
-    invoke-virtual {v7, v13}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->checkTouchEventInCaption(Landroid/view/MotionEvent;)Z
+    const-string v6, "DesktopTasksController: cancelDragToDesktop taskId=%d"
 
-    .line 864
-    move-result v3
+    .line 863
+    invoke-static {v6, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 867
-    if-eqz v3, :cond_2a
+    .line 865
+    :cond_25
+    sget-object v3, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$CancelState;->STANDARD_CANCEL:Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$CancelState;
 
     .line 868
-    goto :goto_f
+    invoke-virtual {v14, v3}, Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler;->cancelDragToDesktopTransition(Lcom/android/wm/shell/desktopmode/DragToDesktopTransitionHandler$CancelState;)V
 
     .line 870
-    :cond_2a
-    invoke-virtual {v7, v13}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->updateHoverAndPressStatus(Landroid/view/MotionEvent;)V
+    goto/16 :goto_9
 
-    .line 871
-    invoke-virtual {v13}, Landroid/view/MotionEvent;->getActionMasked()I
+    .line 873
+    :goto_a
+    iput-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mMoveToDesktopAnimator:Lcom/android/wm/shell/windowdecor/MoveToDesktopAnimator;
 
-    .line 874
-    move-result v3
+    .line 875
+    goto :goto_b
 
     .line 877
-    if-eq v3, v9, :cond_2b
+    :cond_26
+    invoke-virtual {v6}, Lcom/android/wm/shell/desktopmode/DesktopTasksController;->releaseVisualIndicator()V
 
     .line 878
-    const/4 v4, 0x3
-
-    .line 880
-    if-ne v3, v4, :cond_2c
+    :cond_27
+    invoke-virtual {v7, v4}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->checkTouchEvent(Landroid/view/MotionEvent;)V
 
     .line 881
-    :cond_2b
-    iget-boolean v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
+    goto :goto_b
 
-    .line 883
-    if-nez v3, :cond_2c
+    .line 884
+    :cond_28
+    invoke-virtual {v7, v4}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->checkTouchEvent(Landroid/view/MotionEvent;)V
 
     .line 885
-    invoke-virtual {v7, v13}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->closeHandleMenuIfNeeded(Landroid/view/MotionEvent;)V
+    invoke-virtual {v7, v4}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->updateHoverAndPressStatus(Landroid/view/MotionEvent;)V
 
-    .line 887
-    invoke-virtual {v7, v13}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->closeMaximizeMenuIfNeeded(Landroid/view/MotionEvent;)V
+    .line 888
+    iget-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mDragToDesktopAnimationStartBounds:Landroid/graphics/Rect;
 
-    .line 890
-    :cond_2c
-    :goto_f
-    iget-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mContext:Landroid/content/Context;
+    .line 891
+    iget-object v6, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 893
-    invoke-static {v3}, Lcom/android/wm/shell/shared/DesktopModeStatus;->canEnterDesktopMode(Landroid/content/Context;)Z
+    iget-object v6, v6, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
 
     .line 895
-    move-result v3
+    iget-object v6, v6, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    .line 898
-    if-eqz v3, :cond_2d
+    .line 897
+    invoke-virtual {v6}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
 
     .line 899
-    iget-boolean v2, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
+    move-result-object v6
 
-    .line 901
-    if-eqz v2, :cond_2d
+    .line 902
+    invoke-virtual {v3, v6}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     .line 903
-    invoke-virtual {v5}, Landroid/view/InputMonitor;->pilferPointers()V
+    iget-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mContext:Landroid/content/Context;
 
-    .line 905
-    :cond_2d
-    move v3, v9
+    .line 906
+    invoke-static {v3}, Lcom/android/wm/shell/shared/DesktopModeStatus;->canEnterDesktopMode(Landroid/content/Context;)Z
 
     .line 908
+    move-result v3
+
+    .line 911
+    if-eqz v3, :cond_2a
+
+    .line 912
+    iget-object v3, v7, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 914
+    invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
+
+    .line 916
+    move-result v3
+
+    .line 919
+    if-eq v3, v10, :cond_29
+
+    .line 920
+    const/4 v6, 0x6
+
+    .line 922
+    if-ne v3, v6, :cond_2a
+
+    .line 923
+    :cond_29
+    invoke-virtual {v7, v4}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->checkTouchEventInFocusedCaptionHandle(Landroid/view/MotionEvent;)Z
+
+    .line 925
+    move-result v3
+
+    .line 928
+    if-eqz v3, :cond_2a
+
+    .line 929
+    iput-boolean v10, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
+
+    .line 931
+    :cond_2a
+    :goto_b
+    if-eqz v7, :cond_2d
+
+    .line 933
+    invoke-virtual {v7, v4}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->checkTouchEventInCaption(Landroid/view/MotionEvent;)Z
+
+    .line 935
+    move-result v3
+
+    .line 938
+    if-eqz v3, :cond_2b
+
+    .line 939
+    goto :goto_c
+
+    .line 941
+    :cond_2b
+    invoke-virtual {v7, v4}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->updateHoverAndPressStatus(Landroid/view/MotionEvent;)V
+
+    .line 942
+    invoke-virtual {v4}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    .line 945
+    move-result v3
+
+    .line 948
+    if-eq v3, v10, :cond_2c
+
+    .line 949
+    const/4 v6, 0x3
+
+    .line 951
+    if-ne v3, v6, :cond_2d
+
+    .line 952
+    :cond_2c
+    iget-boolean v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
+
+    .line 954
+    if-nez v3, :cond_2d
+
+    .line 956
+    invoke-virtual {v7, v4}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->closeHandleMenuIfNeeded(Landroid/view/MotionEvent;)V
+
+    .line 958
+    invoke-virtual {v7, v4}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->closeMaximizeMenuIfNeeded(Landroid/view/MotionEvent;)V
+
+    .line 961
+    :cond_2d
+    :goto_c
+    iget-object v3, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mContext:Landroid/content/Context;
+
+    .line 964
+    invoke-static {v3}, Lcom/android/wm/shell/shared/DesktopModeStatus;->canEnterDesktopMode(Landroid/content/Context;)Z
+
+    .line 966
+    move-result v3
+
+    .line 969
+    if-eqz v3, :cond_2e
+
+    .line 970
+    iget-boolean v2, v2, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mTransitionDragActive:Z
+
+    .line 972
+    if-eqz v2, :cond_2e
+
+    .line 974
+    invoke-virtual {v5}, Landroid/view/InputMonitor;->pilferPointers()V
+
+    .line 976
     :cond_2e
+    move v3, v10
+
+    .line 979
+    :cond_2f
     invoke-virtual {v0, v1, v3}, Landroid/view/InputEventReceiver;->finishInputEvent(Landroid/view/InputEvent;Z)V
 
-    .line 909
+    .line 980
     return-void
-    .line 912
+    .line 983
 .end method
 
 .method public final toString()Ljava/lang/String;

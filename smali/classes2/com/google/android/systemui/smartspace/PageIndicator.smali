@@ -1,6 +1,6 @@
 .class public Lcom/google/android/systemui/smartspace/PageIndicator;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -13,85 +13,34 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+    .locals 1
+
+    const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    .line 2
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/android/systemui/smartspace/PageIndicator;->getAttrColor(Landroid/content/Context;)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mPrimaryColor:I
-
-    const/4 p1, -0x1
-
-    .line 3
-    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
-
-    .line 4
-    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
+    invoke-direct {p0, p1, v0}, Lcom/google/android/systemui/smartspace/PageIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
+    .locals 1
 
-    .line 5
-    invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/4 v0, 0x0
 
-    .line 6
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/android/systemui/smartspace/PageIndicator;->getAttrColor(Landroid/content/Context;)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mPrimaryColor:I
-
-    const/4 p1, -0x1
-
-    .line 7
-    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
-
-    .line 8
-    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
+    .line 2
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/systemui/smartspace/PageIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
+    .locals 1
 
-    .line 9
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    const/4 v0, 0x0
 
-    .line 10
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/android/systemui/smartspace/PageIndicator;->getAttrColor(Landroid/content/Context;)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mPrimaryColor:I
-
-    const/4 p1, -0x1
-
-    .line 11
-    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
-
-    .line 12
-    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
+    .line 3
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/systemui/smartspace/PageIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
 .end method
@@ -99,70 +48,53 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
-    .line 13
+    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 14
+    .line 5
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/systemui/smartspace/PageIndicator;->getAttrColor(Landroid/content/Context;)I
+    const p2, 0x1010036    # @android:attr/textColorPrimary
 
-    move-result p1
+    .line 6
+    filled-new-array {p2}, [I
 
-    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mPrimaryColor:I
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    .line 7
+    invoke-virtual {p1, p2, p2}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p2
+
+    .line 8
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 9
+    iput p2, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mPrimaryColor:I
 
     const/4 p1, -0x1
 
-    .line 15
+    .line 10
     iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
 
-    .line 16
+    .line 11
     iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
 
     return-void
 .end method
 
-.method public static getAttrColor(Landroid/content/Context;)I
-    .locals 1
-
-    .line 1
-    const v0, 0x1010036    # @android:attr/textColorPrimary
-
-    .line 2
-    filled-new-array {v0}, [I
-
-    .line 5
-    move-result-object v0
-
-    .line 8
-    invoke-virtual {p0, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
-
-    .line 9
-    move-result-object p0
-
-    .line 12
-    const/4 v0, 0x0
-
-    .line 13
-    invoke-virtual {p0, v0, v0}, Landroid/content/res/TypedArray;->getColor(II)I
-
-    .line 14
-    move-result v0
-
-    .line 17
-    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 18
-    return v0
-    .line 21
-.end method
-
 
 # virtual methods
-.method public final setNumPages(I)V
-    .locals 8
+.method public final setNumPages(IZ)V
+    .locals 6
 
     .line 1
     const/4 v0, 0x1
@@ -230,331 +162,335 @@
     iget v2, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
 
     .line 43
-    if-eq p1, v2, :cond_c
+    if-eq p1, v2, :cond_e
 
     .line 45
     iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
 
     .line 47
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
+    iget v2, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
 
     .line 49
-    move-result p1
+    if-gez v2, :cond_3
 
-    .line 52
-    iget v2, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
+    .line 51
+    if-eqz p2, :cond_2
 
     .line 53
-    sub-int/2addr p1, v2
+    sub-int/2addr p1, v0
 
     .line 55
-    move v2, v1
-
-    .line 56
-    :goto_0
-    if-ge v2, p1, :cond_2
-
-    .line 57
-    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->removeViewAt(I)V
-
-    .line 59
-    add-int/2addr v2, v0
-
-    .line 62
     goto :goto_0
 
-    .line 63
+    .line 56
     :cond_2
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+    move p1, v1
 
-    .line 64
-    move-result-object p1
+    .line 57
+    :goto_0
+    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
 
-    .line 67
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 68
-    move-result-object p1
-
-    .line 71
-    const v2, 0x7f07085f    # @dimen/page_indicator_dot_margin '3.0dp'
-
-    .line 72
-    invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 75
-    move-result p1
-
-    .line 78
-    move v2, v1
-
-    .line 79
-    :goto_1
-    iget v3, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
-
-    .line 80
-    if-ge v2, v3, :cond_b
-
-    .line 82
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
-
-    .line 84
-    move-result v3
-
-    .line 87
-    if-ge v2, v3, :cond_3
-
-    .line 88
-    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
-
-    .line 90
-    move-result-object v3
-
-    .line 93
-    check-cast v3, Landroid/widget/ImageView;
-
-    .line 94
+    .line 58
     goto :goto_2
 
-    .line 96
+    .line 60
     :cond_3
-    new-instance v3, Landroid/widget/ImageView;
+    if-lt v2, p1, :cond_5
 
-    .line 97
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+    .line 61
+    if-eqz p2, :cond_4
 
-    .line 99
-    move-result-object v4
+    .line 63
+    move p1, v1
 
-    .line 102
-    invoke-direct {v3, v4}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    .line 65
+    goto :goto_1
 
-    .line 103
+    .line 66
+    :cond_4
+    sub-int/2addr p1, v0
+
+    .line 67
+    :goto_1
+    iput p1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
+
+    .line 68
+    :cond_5
     :goto_2
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
-    .line 106
-    move-result v4
+    .line 70
+    move-result p1
 
-    .line 109
-    if-ge v2, v4, :cond_4
+    .line 73
+    iget p2, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
 
-    .line 110
-    invoke-virtual {v3}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 74
+    sub-int/2addr p1, p2
 
-    .line 112
-    move-result-object v4
+    .line 76
+    move p2, v1
 
-    .line 115
-    check-cast v4, Landroid/widget/LinearLayout$LayoutParams;
+    .line 77
+    :goto_3
+    if-ge p2, p1, :cond_6
 
-    .line 116
+    .line 78
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->removeViewAt(I)V
+
+    .line 80
+    add-int/2addr p2, v0
+
+    .line 83
     goto :goto_3
 
-    .line 118
-    :cond_4
-    new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
+    .line 84
+    :cond_6
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
-    .line 119
-    const/4 v5, -0x2
+    .line 85
+    move-result-object p1
 
-    .line 121
-    invoke-direct {v4, v5, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    .line 88
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 122
-    :goto_3
-    if-nez v2, :cond_5
+    .line 89
+    move-result-object p1
 
-    .line 125
-    invoke-virtual {v4, v1}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
+    .line 92
+    const p2, 0x7f0708af    # @dimen/page_indicator_dot_margin '3.0dp'
 
-    .line 127
-    goto :goto_4
+    .line 93
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 130
-    :cond_5
-    invoke-virtual {v4, p1}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
+    .line 96
+    move-result p1
 
-    .line 131
+    .line 99
+    move p2, v1
+
+    .line 100
     :goto_4
-    iget v5, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
+    iget v2, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
 
-    .line 134
-    sub-int/2addr v5, v0
+    .line 101
+    if-ge p2, v2, :cond_d
 
-    .line 136
-    if-ne v2, v5, :cond_6
+    .line 103
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
-    .line 137
-    invoke-virtual {v4, v1}, Landroid/widget/LinearLayout$LayoutParams;->setMarginEnd(I)V
+    .line 105
+    move-result v2
 
-    .line 139
+    .line 108
+    if-ge p2, v2, :cond_7
+
+    .line 109
+    invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    .line 111
+    move-result-object v2
+
+    .line 114
+    check-cast v2, Landroid/widget/ImageView;
+
+    .line 115
     goto :goto_5
 
-    .line 142
-    :cond_6
-    invoke-virtual {v4, p1}, Landroid/widget/LinearLayout$LayoutParams;->setMarginEnd(I)V
+    .line 117
+    :cond_7
+    new-instance v2, Landroid/widget/ImageView;
 
-    .line 143
+    .line 118
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    .line 120
+    move-result-object v3
+
+    .line 123
+    invoke-direct {v2, v3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    .line 124
     :goto_5
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
-    .line 146
-    move-result v5
+    .line 127
+    move-result v3
 
-    .line 149
-    if-ge v2, v5, :cond_7
+    .line 130
+    if-ge p2, v3, :cond_8
 
-    .line 150
-    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 131
+    invoke-virtual {v2}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    .line 152
+    .line 133
+    move-result-object v3
+
+    .line 136
+    check-cast v3, Landroid/widget/LinearLayout$LayoutParams;
+
+    .line 137
     goto :goto_6
 
-    .line 155
-    :cond_7
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+    .line 139
+    :cond_8
+    new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 156
-    move-result-object v5
+    .line 140
+    const/4 v4, -0x2
 
-    .line 159
-    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 142
+    invoke-direct {v3, v4, v4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 160
-    move-result-object v5
-
-    .line 163
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    .line 164
-    move-result-object v6
-
-    .line 167
-    invoke-virtual {v6}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    .line 168
-    move-result-object v6
-
-    .line 171
-    const v7, 0x7f080a7c    # @drawable/page_indicator_dot 'res/drawable/page_indicator_dot.xml'
-
-    .line 172
-    invoke-virtual {v5, v7, v6}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-
-    .line 175
-    move-result-object v5
-
-    .line 178
-    iget v6, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mPrimaryColor:I
-
-    .line 179
-    invoke-virtual {v5, v6}, Landroid/graphics/drawable/Drawable;->setTint(I)V
-
-    .line 181
-    invoke-virtual {v3, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 184
-    invoke-virtual {p0, v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 187
+    .line 143
     :goto_6
-    iget v4, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
+    if-nez p2, :cond_9
 
-    .line 190
-    if-gez v4, :cond_8
+    .line 146
+    invoke-virtual {v3, v1}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
 
-    .line 192
-    iput v1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
-
-    .line 194
+    .line 148
     goto :goto_7
 
-    .line 196
-    :cond_8
-    iget v5, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
-
-    .line 197
-    if-lt v4, v5, :cond_9
-
-    .line 199
-    sub-int/2addr v5, v0
-
-    .line 201
-    iput v5, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
-
-    .line 202
+    .line 151
     :cond_9
+    invoke-virtual {v3, p1}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
+
+    .line 152
     :goto_7
-    iget v4, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
+    iget v4, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
 
-    .line 204
-    if-ne v2, v4, :cond_a
+    .line 155
+    sub-int/2addr v4, v0
 
-    .line 206
-    const/high16 v4, 0x3f800000    # 1.0f
+    .line 157
+    if-ne p2, v4, :cond_a
 
-    .line 208
+    .line 158
+    invoke-virtual {v3, v1}, Landroid/widget/LinearLayout$LayoutParams;->setMarginEnd(I)V
+
+    .line 160
     goto :goto_8
 
-    .line 210
+    .line 163
     :cond_a
-    const v4, 0x3ecccccd    # 0.4f
+    invoke-virtual {v3, p1}, Landroid/widget/LinearLayout$LayoutParams;->setMarginEnd(I)V
 
-    .line 211
+    .line 164
     :goto_8
-    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setAlpha(F)V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
-    .line 214
-    add-int/2addr v2, v0
+    .line 167
+    move-result v4
 
-    .line 217
-    goto/16 :goto_1
+    .line 170
+    if-ge p2, v4, :cond_b
 
-    .line 218
+    .line 171
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 173
+    goto :goto_9
+
+    .line 176
     :cond_b
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
-    .line 220
+    .line 177
+    move-result-object v4
+
+    .line 180
+    const v5, 0x7f080ab6    # @drawable/page_indicator_dot 'res/drawable/page_indicator_dot.xml'
+
+    .line 181
+    invoke-static {v5, v4}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(ILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
+
+    .line 184
+    move-result-object v4
+
+    .line 187
+    iget v5, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mPrimaryColor:I
+
+    .line 188
+    invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    .line 190
+    invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 193
+    invoke-virtual {p0, v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 196
+    :goto_9
+    iget v3, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
+
+    .line 199
+    if-ne p2, v3, :cond_c
+
+    .line 201
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    .line 203
+    goto :goto_a
+
+    .line 205
+    :cond_c
+    const v3, 0x3ecccccd    # 0.4f
+
+    .line 206
+    :goto_a
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setAlpha(F)V
+
+    .line 209
+    add-int/2addr p2, v0
+
+    .line 212
+    goto :goto_4
+
+    .line 213
+    :cond_d
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    .line 214
     move-result-object p1
 
-    .line 223
+    .line 217
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 218
+    move-result-object p2
+
+    .line 221
+    iget v0, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
+
+    .line 222
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 224
     move-result-object v0
 
     .line 227
-    iget v1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
+    filled-new-array {p2, v0}, [Ljava/lang/Object;
 
     .line 228
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object p2
 
-    .line 230
-    move-result-object v1
+    .line 231
+    const v0, 0x7f1300ea    # @string/accessibility_smartspace_page 'Page %1$d of %2$d'
 
-    .line 233
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    .line 232
+    invoke-virtual {p1, v0, p2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 234
-    move-result-object v0
-
-    .line 237
-    const v1, 0x7f1400ea    # @string/accessibility_smartspace_page 'Page %1$d of %2$d'
-
-    .line 238
-    invoke-virtual {p1, v1, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 241
+    .line 235
     move-result-object p1
 
-    .line 244
+    .line 238
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 245
-    :cond_c
+    .line 239
+    :cond_e
     return-void
-    .line 248
+    .line 242
 .end method
 
 .method public final setPageOffset(IF)V
@@ -564,209 +500,213 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-static {p2, v0}, Ljava/lang/Float;->compare(FF)I
+    cmpl-float v0, p2, v0
 
     .line 3
-    move-result v0
-
-    .line 6
     if-nez v0, :cond_0
 
-    .line 7
+    .line 5
     iget v1, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
 
+    .line 7
+    if-ne p1, v1, :cond_0
+
     .line 9
-    if-eq p1, v1, :cond_6
+    return-void
 
     .line 11
     :cond_0
-    if-ltz p1, :cond_6
+    if-ltz p1, :cond_8
 
-    .line 13
+    .line 12
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
-    .line 15
+    .line 14
     move-result v1
 
+    .line 17
+    if-lt p1, v1, :cond_1
+
     .line 18
-    add-int/lit8 v1, v1, -0x1
+    goto :goto_2
 
-    .line 19
-    if-ge p1, v1, :cond_6
-
-    .line 21
+    .line 20
+    :cond_1
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 23
+    .line 21
     move-result-object v1
 
-    .line 26
+    .line 24
     check-cast v1, Landroid/widget/ImageView;
 
-    .line 27
+    .line 25
     add-int/lit8 v2, p1, 0x1
 
-    .line 29
+    .line 27
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 31
+    .line 29
     move-result-object v3
 
-    .line 34
+    .line 32
     check-cast v3, Landroid/widget/ImageView;
 
-    .line 35
-    if-eqz v1, :cond_6
-
-    .line 37
-    if-eqz v3, :cond_6
-
-    .line 39
+    .line 33
     const v4, 0x3ecccccd    # 0.4f
 
-    .line 41
-    if-eqz v0, :cond_1
+    .line 35
+    if-eqz v0, :cond_2
 
-    .line 44
+    .line 38
     const v5, 0x3f7d70a4    # 0.99f
 
-    .line 46
+    .line 40
     cmpl-float v5, p2, v5
 
-    .line 49
-    if-ltz v5, :cond_4
+    .line 43
+    if-ltz v5, :cond_5
 
-    .line 51
-    :cond_1
+    .line 45
+    :cond_2
     iget v5, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
 
-    .line 53
-    if-ltz v5, :cond_2
+    .line 47
+    if-ltz v5, :cond_3
 
-    .line 55
+    .line 49
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
-    .line 57
+    .line 51
     move-result v6
 
-    .line 60
-    if-ge v5, v6, :cond_2
+    .line 54
+    if-ge v5, v6, :cond_3
 
-    .line 61
+    .line 55
     iget v5, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
 
-    .line 63
+    .line 57
     invoke-virtual {p0, v5}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 65
+    .line 59
     move-result-object v5
 
-    .line 68
+    .line 62
     invoke-virtual {v5, v4}, Landroid/view/View;->setAlpha(F)V
 
-    .line 69
-    :cond_2
-    if-nez v0, :cond_3
+    .line 63
+    :cond_3
+    if-nez v0, :cond_4
 
-    .line 72
+    .line 66
     move v0, p1
 
-    .line 74
+    .line 68
     goto :goto_0
 
-    .line 75
-    :cond_3
+    .line 69
+    :cond_4
     move v0, v2
 
-    .line 76
+    .line 70
     :goto_0
     iput v0, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mCurrentPageIndex:I
 
-    .line 77
-    :cond_4
+    .line 71
+    :cond_5
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 79
+    .line 73
     sub-float/2addr v0, p2
 
-    .line 81
+    .line 75
     const v5, 0x3f19999a    # 0.6f
 
-    .line 82
+    .line 76
     mul-float/2addr v0, v5
 
-    .line 85
+    .line 79
     add-float/2addr v0, v4
 
-    .line 86
+    .line 80
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 87
+    .line 81
+    if-eqz v3, :cond_6
+
+    .line 84
     mul-float/2addr v5, p2
 
-    .line 90
+    .line 86
     add-float/2addr v5, v4
 
-    .line 91
+    .line 87
     invoke-virtual {v3, v5}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 92
-    float-to-double v0, p2
-
-    .line 95
-    const-wide/high16 v3, 0x3fe0000000000000L    # 0.5
-
-    .line 96
-    cmpl-double p2, v0, v3
-
-    .line 98
-    if-ltz p2, :cond_5
-
-    .line 100
-    add-int/lit8 v2, p1, 0x2
-
-    .line 102
-    :cond_5
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 104
-    move-result-object p1
-
-    .line 107
-    iget p2, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
-
-    .line 108
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 110
-    move-result-object p2
-
-    .line 113
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
-
-    .line 114
-    move-result-object p1
-
-    .line 117
+    .line 88
+    :cond_6
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
-    .line 118
-    move-result-object p2
+    .line 91
+    move-result-object v0
 
-    .line 121
-    const v0, 0x7f1400ea    # @string/accessibility_smartspace_page 'Page %1$d of %2$d'
+    .line 94
+    float-to-double v3, p2
 
-    .line 122
-    invoke-virtual {p2, v0, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    .line 95
+    const-wide/high16 v5, 0x3fe0000000000000L    # 0.5
 
-    .line 125
+    .line 96
+    cmpg-double p2, v3, v5
+
+    .line 98
+    if-gez p2, :cond_7
+
+    .line 100
+    goto :goto_1
+
+    .line 102
+    :cond_7
+    add-int/lit8 v2, p1, 0x2
+
+    .line 103
+    :goto_1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 105
     move-result-object p1
 
-    .line 128
+    .line 108
+    iget p2, p0, Lcom/google/android/systemui/smartspace/PageIndicator;->mNumPages:I
+
+    .line 109
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 111
+    move-result-object p2
+
+    .line 114
+    filled-new-array {p1, p2}, [Ljava/lang/Object;
+
+    .line 115
+    move-result-object p1
+
+    .line 118
+    const p2, 0x7f1300ea    # @string/accessibility_smartspace_page 'Page %1$d of %2$d'
+
+    .line 119
+    invoke-virtual {v0, p2, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 122
+    move-result-object p1
+
+    .line 125
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 129
-    :cond_6
+    .line 126
+    :cond_8
+    :goto_2
     return-void
-    .line 132
+    .line 129
 .end method

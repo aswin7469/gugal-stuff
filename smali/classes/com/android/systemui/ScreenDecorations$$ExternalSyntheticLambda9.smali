@@ -1,9 +1,9 @@
 .class public final synthetic Lcom/android/systemui/ScreenDecorations$$ExternalSyntheticLambda9;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Lkotlin/jvm/functions/Function0;
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
@@ -27,25 +27,19 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 0
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/ScreenDecorations$$ExternalSyntheticLambda9;->f$0:Lcom/android/systemui/ScreenDecorations;
 
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Landroid/graphics/Point;
 
     .line 4
-    new-instance v0, Lcom/android/systemui/decor/ScreenDecorCommand;
+    invoke-virtual {p0, p1}, Lcom/android/systemui/ScreenDecorations;->onFaceSensorLocationChanged(Landroid/graphics/Point;)V
 
-    .line 7
-    iget-object p0, p0, Lcom/android/systemui/ScreenDecorations;->mScreenDecorCommandCallback:Lcom/android/systemui/ScreenDecorations$$ExternalSyntheticLambda5;
-
+    .line 6
+    return-void
     .line 9
-    invoke-direct {v0, p0}, Lcom/android/systemui/decor/ScreenDecorCommand;-><init>(Lcom/android/systemui/ScreenDecorations$$ExternalSyntheticLambda5;)V
-
-    .line 11
-    return-object v0
-    .line 14
 .end method

@@ -1,11 +1,9 @@
 .class public final Lcom/android/systemui/statusbar/notification/icon/IconManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
-.field public final applicationCoroutineScope:Lkotlinx/coroutines/CoroutineScope;
-
 .field public final bgCoroutineContext:Lkotlin/coroutines/CoroutineContext;
 
 .field public final entryListener:Lcom/android/systemui/statusbar/notification/icon/IconManager$entryListener$1;
@@ -42,50 +40,38 @@
     iput-object p3, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->iconBuilder:Lcom/android/systemui/statusbar/notification/icon/IconBuilder;
 
     .line 9
-    iput-object p4, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->applicationCoroutineScope:Lkotlinx/coroutines/CoroutineScope;
-
-    .line 11
-    iput-object p5, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->bgCoroutineContext:Lkotlin/coroutines/CoroutineContext;
-
-    .line 13
-    iput-object p6, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->mainCoroutineContext:Lkotlin/coroutines/CoroutineContext;
-
-    .line 15
     sget-object p1, Lkotlin/collections/EmptySet;->INSTANCE:Lkotlin/collections/EmptySet;
 
-    .line 17
+    .line 11
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->unimportantConversationKeys:Ljava/util/Set;
 
-    .line 19
+    .line 13
     new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 21
+    .line 15
     invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    .line 23
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->launcherPeopleAvatarIconJobs:Ljava/util/concurrent/ConcurrentHashMap;
-
-    .line 26
+    .line 17
     new-instance p1, Lcom/android/systemui/statusbar/notification/icon/IconManager$entryListener$1;
 
-    .line 28
+    .line 20
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/icon/IconManager$entryListener$1;-><init>(Lcom/android/systemui/statusbar/notification/icon/IconManager;)V
 
-    .line 30
+    .line 22
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->entryListener:Lcom/android/systemui/statusbar/notification/icon/IconManager$entryListener$1;
 
-    .line 33
+    .line 25
     new-instance p1, Lcom/android/systemui/statusbar/notification/icon/IconManager$sensitivityListener$1;
 
-    .line 35
+    .line 27
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/notification/icon/IconManager$sensitivityListener$1;-><init>(Lcom/android/systemui/statusbar/notification/icon/IconManager;)V
 
-    .line 37
+    .line 29
     iput-object p1, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->sensitivityListener:Lcom/android/systemui/statusbar/notification/icon/IconManager$sensitivityListener$1;
 
-    .line 40
+    .line 32
     return-void
-    .line 42
+    .line 34
 .end method
 
 
@@ -283,7 +269,7 @@
 .end method
 
 .method public final getIconDescriptor(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)Lcom/android/internal/statusbar/StatusBarIcon;
-    .locals 8
+    .locals 12
 
     .line 1
     const/4 v0, 0x1
@@ -392,527 +378,512 @@
     const-string v3, "No icon in notification from "
 
     .line 53
-    if-eqz p2, :cond_e
+    if-eqz p2, :cond_c
 
     .line 55
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsBackgroundIcons()Z
-
-    .line 57
-    move-result p2
-
-    .line 60
-    if-eqz p2, :cond_6
-
-    .line 61
-    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->launcherPeopleAvatarIconJobs:Ljava/util/concurrent/ConcurrentHashMap;
-
-    .line 63
-    iget-object v1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mKey:Ljava/lang/String;
-
-    .line 65
-    invoke-virtual {p2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 67
-    move-result-object p2
-
-    .line 70
-    check-cast p2, Lkotlinx/coroutines/Job;
-
-    .line 71
-    if-eqz p2, :cond_5
-
-    .line 73
-    invoke-interface {p2, v4}, Lkotlinx/coroutines/Job;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    .line 75
-    :cond_5
-    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->launcherPeopleAvatarIconJobs:Ljava/util/concurrent/ConcurrentHashMap;
-
-    .line 78
-    new-instance v5, Lcom/android/systemui/statusbar/notification/icon/IconManager$createPeopleAvatar$1;
-
-    .line 80
-    invoke-direct {v5, p1, p0, v4}, Lcom/android/systemui/statusbar/notification/icon/IconManager$createPeopleAvatar$1;-><init>(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/icon/IconManager;Lkotlin/coroutines/Continuation;)V
-
-    .line 82
-    iget-object v6, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->applicationCoroutineScope:Lkotlinx/coroutines/CoroutineScope;
-
-    .line 85
-    const/4 v7, 0x3
-
-    .line 87
-    invoke-static {v6, v4, v4, v5, v7}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 88
-    move-result-object v5
-
-    .line 91
-    new-instance v6, Lcom/android/systemui/statusbar/notification/icon/IconManager$createPeopleAvatar$2$1;
-
-    .line 92
-    invoke-direct {v6, p0, p1}, Lcom/android/systemui/statusbar/notification/icon/IconManager$createPeopleAvatar$2$1;-><init>(Lcom/android/systemui/statusbar/notification/icon/IconManager;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
-
-    .line 94
-    invoke-virtual {v5, v6}, Lkotlinx/coroutines/JobSupport;->invokeOnCompletion(Lkotlin/jvm/functions/Function1;)Lkotlinx/coroutines/DisposableHandle;
-
-    .line 97
-    invoke-interface {p2, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 100
-    goto :goto_2
-
-    .line 103
-    :cond_6
     iget-object p2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mRanking:Landroid/service/notification/NotificationListenerService$Ranking;
 
-    .line 104
+    .line 57
     invoke-virtual {p2}, Landroid/service/notification/NotificationListenerService$Ranking;->getConversationShortcutInfo()Landroid/content/pm/ShortcutInfo;
 
-    .line 106
+    .line 59
     move-result-object p2
 
-    .line 109
-    if-eqz p2, :cond_7
+    .line 62
+    if-eqz p2, :cond_5
 
-    .line 110
+    .line 63
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->launcherApps:Landroid/content/pm/LauncherApps;
 
-    .line 112
+    .line 65
     invoke-virtual {v1, p2}, Landroid/content/pm/LauncherApps;->getShortcutIcon(Landroid/content/pm/ShortcutInfo;)Landroid/graphics/drawable/Icon;
 
-    .line 114
+    .line 67
     move-result-object v4
 
-    .line 117
-    :cond_7
-    :goto_2
-    if-nez v4, :cond_a
+    .line 70
+    :cond_5
+    if-nez v4, :cond_8
 
-    .line 118
+    .line 71
     iget-object p2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 120
+    .line 73
     invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    .line 75
+    move-result-object p2
+
+    .line 78
+    iget-object p2, p2, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+
+    .line 79
+    const-string v1, "android.messages"
+
+    .line 81
+    invoke-virtual {p2, v1}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
+
+    .line 83
+    move-result-object v1
+
+    .line 86
+    invoke-static {v1}, Landroid/app/Notification$MessagingStyle$Message;->getMessagesFromBundleArray([Landroid/os/Parcelable;)Ljava/util/List;
+
+    .line 87
+    move-result-object v1
+
+    .line 90
+    const-string v5, "android.messagingUser"
+
+    .line 91
+    invoke-virtual {p2, v5}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    .line 93
+    move-result-object p2
+
+    .line 96
+    check-cast p2, Landroid/app/Person;
+
+    .line 97
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    .line 99
+    move-result v5
+
+    .line 102
+    add-int/2addr v5, v2
+
+    .line 103
+    if-ltz v5, :cond_8
+
+    .line 104
+    :goto_2
+    add-int/lit8 v6, v5, -0x1
+
+    .line 106
+    invoke-interface {v1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    .line 108
+    move-result-object v5
+
+    .line 111
+    check-cast v5, Landroid/app/Notification$MessagingStyle$Message;
+
+    .line 112
+    invoke-virtual {v5}, Landroid/app/Notification$MessagingStyle$Message;->getSenderPerson()Landroid/app/Person;
+
+    .line 114
+    move-result-object v7
+
+    .line 117
+    if-eqz v7, :cond_6
+
+    .line 118
+    if-eq v7, p2, :cond_6
+
+    .line 120
+    invoke-virtual {v5}, Landroid/app/Notification$MessagingStyle$Message;->getSenderPerson()Landroid/app/Person;
 
     .line 122
     move-result-object p2
 
     .line 125
-    iget-object p2, p2, Landroid/app/Notification;->extras:Landroid/os/Bundle;
-
-    .line 126
-    const-string v1, "android.messages"
-
-    .line 128
-    invoke-virtual {p2, v1}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
-
-    .line 130
-    move-result-object v1
-
-    .line 133
-    invoke-static {v1}, Landroid/app/Notification$MessagingStyle$Message;->getMessagesFromBundleArray([Landroid/os/Parcelable;)Ljava/util/List;
-
-    .line 134
-    move-result-object v1
-
-    .line 137
-    const-string v5, "android.messagingUser"
-
-    .line 138
-    invoke-virtual {p2, v5}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    .line 140
-    move-result-object p2
-
-    .line 143
-    check-cast p2, Landroid/app/Person;
-
-    .line 144
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    .line 146
-    move-result v5
-
-    .line 149
-    add-int/2addr v5, v2
-
-    .line 150
-    if-ltz v5, :cond_a
-
-    .line 151
-    :goto_3
-    add-int/lit8 v6, v5, -0x1
-
-    .line 153
-    invoke-interface {v1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 155
-    move-result-object v5
-
-    .line 158
-    check-cast v5, Landroid/app/Notification$MessagingStyle$Message;
-
-    .line 159
-    invoke-virtual {v5}, Landroid/app/Notification$MessagingStyle$Message;->getSenderPerson()Landroid/app/Person;
-
-    .line 161
-    move-result-object v7
-
-    .line 164
-    if-eqz v7, :cond_8
-
-    .line 165
-    if-eq v7, p2, :cond_8
-
-    .line 167
-    invoke-virtual {v5}, Landroid/app/Notification$MessagingStyle$Message;->getSenderPerson()Landroid/app/Person;
-
-    .line 169
-    move-result-object p2
-
-    .line 172
     invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 173
+    .line 126
     invoke-virtual {p2}, Landroid/app/Person;->getIcon()Landroid/graphics/drawable/Icon;
 
-    .line 176
+    .line 129
     move-result-object v4
 
-    .line 179
-    goto :goto_4
-
-    .line 180
-    :cond_8
-    if-gez v6, :cond_9
-
-    .line 181
-    goto :goto_4
-
-    .line 183
-    :cond_9
-    move v5, v6
-
-    .line 184
+    .line 132
     goto :goto_3
 
-    .line 185
-    :cond_a
-    :goto_4
-    if-nez v4, :cond_b
+    .line 133
+    :cond_6
+    if-gez v6, :cond_7
 
-    .line 186
+    .line 134
+    goto :goto_3
+
+    .line 136
+    :cond_7
+    move v5, v6
+
+    .line 137
+    goto :goto_2
+
+    .line 138
+    :cond_8
+    :goto_3
+    if-nez v4, :cond_9
+
+    .line 139
     iget-object p2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 188
+    .line 141
     invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    .line 190
+    .line 143
     move-result-object p2
 
-    .line 193
+    .line 146
     invoke-virtual {p2}, Landroid/app/Notification;->getLargeIcon()Landroid/graphics/drawable/Icon;
 
-    .line 194
+    .line 147
     move-result-object v4
 
-    .line 197
-    :cond_b
-    if-nez v4, :cond_c
+    .line 150
+    :cond_9
+    if-nez v4, :cond_a
 
-    .line 198
+    .line 151
     iget-object p2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 200
+    .line 153
     invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    .line 202
+    .line 155
     move-result-object p2
 
-    .line 205
+    .line 158
     invoke-virtual {p2}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
 
-    .line 206
+    .line 159
     move-result-object v4
 
-    .line 209
-    :cond_c
-    if-eqz v4, :cond_d
+    .line 162
+    :cond_a
+    if-eqz v4, :cond_b
 
-    .line 210
+    .line 163
     sget-object p2, Lcom/android/internal/statusbar/StatusBarIcon$Type;->PeopleAvatar:Lcom/android/internal/statusbar/StatusBarIcon$Type;
 
-    .line 212
+    .line 165
     new-instance v1, Lkotlin/Pair;
 
-    .line 214
+    .line 167
     invoke-direct {v1, v4, p2}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 216
-    goto :goto_6
-
-    .line 219
-    :cond_d
-    new-instance p0, Lcom/android/systemui/statusbar/notification/InflationException;
-
-    .line 220
-    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
-
-    .line 222
-    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
-
-    .line 224
-    move-result-object p1
-
-    .line 227
-    invoke-static {v3, p1}, Landroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 228
-    move-result-object p1
-
-    .line 231
-    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/notification/InflationException;-><init>(Ljava/lang/String;)V
-
-    .line 232
-    throw p0
-
-    .line 235
-    :cond_e
-    invoke-static {}, Landroid/app/Flags;->notificationsUseMonochromeAppIcon()Z
-
-    .line 236
-    move-result p2
-
-    .line 239
-    if-eqz p2, :cond_f
-
-    .line 240
-    invoke-virtual {v1}, Landroid/app/Notification;->shouldUseAppIcon()Z
-
-    .line 242
-    move-result p2
-
-    .line 245
-    if-eqz p2, :cond_f
-
-    .line 246
-    invoke-virtual {v1}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
-
-    .line 248
-    move-result-object p2
-
-    .line 251
-    sget-object v1, Lcom/android/internal/statusbar/StatusBarIcon$Type;->MaybeMonochromeAppIcon:Lcom/android/internal/statusbar/StatusBarIcon$Type;
-
-    .line 252
-    new-instance v4, Lkotlin/Pair;
-
-    .line 254
-    invoke-direct {v4, p2, v1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 256
-    :goto_5
-    move-object v1, v4
-
-    .line 259
-    goto :goto_6
-
-    .line 260
-    :cond_f
-    invoke-virtual {v1}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
-
-    .line 261
-    move-result-object p2
-
-    .line 264
-    sget-object v1, Lcom/android/internal/statusbar/StatusBarIcon$Type;->NotifSmallIcon:Lcom/android/internal/statusbar/StatusBarIcon$Type;
-
-    .line 265
-    new-instance v4, Lkotlin/Pair;
-
-    .line 267
-    invoke-direct {v4, p2, v1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 269
+    .line 169
     goto :goto_5
 
-    .line 272
-    :goto_6
-    invoke-virtual {v1}, Lkotlin/Pair;->component1()Ljava/lang/Object;
-
-    .line 273
-    move-result-object p2
-
-    .line 276
-    check-cast p2, Landroid/graphics/drawable/Icon;
-
-    .line 277
-    invoke-virtual {v1}, Lkotlin/Pair;->component2()Ljava/lang/Object;
-
-    .line 279
-    move-result-object v1
-
-    .line 282
-    check-cast v1, Lcom/android/internal/statusbar/StatusBarIcon$Type;
-
-    .line 283
-    if-eqz p2, :cond_17
-
-    .line 285
-    invoke-virtual {p0, p2, p1, v1}, Lcom/android/systemui/statusbar/notification/icon/IconManager;->toStatusBarIcon(Landroid/graphics/drawable/Icon;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/internal/statusbar/StatusBarIcon$Type;)Lcom/android/internal/statusbar/StatusBarIcon;
-
-    .line 287
-    move-result-object p2
-
-    .line 290
-    invoke-static {}, Landroid/app/Flags;->notificationsUseAppIcon()Z
-
-    .line 291
-    move-result v1
-
-    .line 294
-    if-nez v1, :cond_12
-
-    .line 295
-    invoke-static {}, Landroid/app/Flags;->notificationsUseMonochromeAppIcon()Z
-
-    .line 297
-    move-result v1
-
-    .line 300
-    if-eqz v1, :cond_10
-
-    .line 301
-    goto :goto_7
-
-    .line 303
-    :cond_10
-    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/icon/IconManager;->isImportantConversation(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
-
-    .line 304
-    move-result p0
-
-    .line 307
-    if-eqz p0, :cond_16
-
-    .line 308
-    iget-object p0, p2, Lcom/android/internal/statusbar/StatusBarIcon;->type:Lcom/android/internal/statusbar/StatusBarIcon$Type;
-
-    .line 310
-    sget-object v0, Lcom/android/internal/statusbar/StatusBarIcon$Type;->PeopleAvatar:Lcom/android/internal/statusbar/StatusBarIcon$Type;
-
-    .line 312
-    if-ne p0, v0, :cond_11
-
-    .line 314
-    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
-
-    .line 316
-    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mPeopleAvatarDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
-
-    .line 318
-    goto :goto_9
-
-    .line 320
-    :cond_11
-    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
-
-    .line 321
-    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mSmallIconDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
-
-    .line 323
-    goto :goto_9
-
-    .line 325
-    :cond_12
-    :goto_7
-    iget-object p0, p2, Lcom/android/internal/statusbar/StatusBarIcon;->type:Lcom/android/internal/statusbar/StatusBarIcon$Type;
-
-    .line 326
-    if-nez p0, :cond_13
-
-    .line 328
-    goto :goto_8
-
-    .line 330
-    :cond_13
-    sget-object v1, Lcom/android/systemui/statusbar/notification/icon/IconManager$WhenMappings;->$EnumSwitchMapping$0:[I
-
-    .line 331
-    invoke-virtual {p0}, Lcom/android/internal/statusbar/StatusBarIcon$Type;->ordinal()I
-
-    .line 333
-    move-result p0
-
-    .line 336
-    aget v2, v1, p0
-
-    .line 337
-    :goto_8
-    if-eq v2, v0, :cond_15
-
-    .line 339
-    const/4 p0, 0x2
-
-    .line 341
-    if-eq v2, p0, :cond_14
-
-    .line 342
-    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
-
-    .line 344
-    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mSmallIconDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
-
-    .line 346
-    goto :goto_9
-
-    .line 348
-    :cond_14
-    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
-
-    .line 349
-    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mAppIconDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
-
-    .line 351
-    goto :goto_9
-
-    .line 353
-    :cond_15
-    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
-
-    .line 354
-    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mPeopleAvatarDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
-
-    .line 356
-    :cond_16
-    :goto_9
-    return-object p2
-
-    .line 358
-    :cond_17
+    .line 172
+    :cond_b
     new-instance p0, Lcom/android/systemui/statusbar/notification/InflationException;
 
-    .line 359
+    .line 173
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 361
+    .line 175
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
-    .line 363
+    .line 177
     move-result-object p1
 
-    .line 366
-    invoke-static {v3, p1}, Landroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 180
+    invoke-static {v3, p1}, Landroidx/appsearch/app/AppSearchSchema$Builder$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 367
+    .line 181
     move-result-object p1
 
-    .line 370
+    .line 184
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/notification/InflationException;-><init>(Ljava/lang/String;)V
 
-    .line 371
+    .line 185
     throw p0
-    .line 374
+
+    .line 188
+    :cond_c
+    invoke-static {}, Landroid/app/Flags;->notificationsUseMonochromeAppIcon()Z
+
+    .line 189
+    move-result p2
+
+    .line 192
+    if-eqz p2, :cond_d
+
+    .line 193
+    invoke-virtual {v1}, Landroid/app/Notification;->shouldUseAppIcon()Z
+
+    .line 195
+    move-result p2
+
+    .line 198
+    if-eqz p2, :cond_d
+
+    .line 199
+    invoke-virtual {v1}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
+
+    .line 201
+    move-result-object p2
+
+    .line 204
+    sget-object v1, Lcom/android/internal/statusbar/StatusBarIcon$Type;->MaybeMonochromeAppIcon:Lcom/android/internal/statusbar/StatusBarIcon$Type;
+
+    .line 205
+    new-instance v4, Lkotlin/Pair;
+
+    .line 207
+    invoke-direct {v4, p2, v1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 209
+    :goto_4
+    move-object v1, v4
+
+    .line 212
+    goto :goto_5
+
+    .line 213
+    :cond_d
+    invoke-virtual {v1}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
+
+    .line 214
+    move-result-object p2
+
+    .line 217
+    sget-object v1, Lcom/android/internal/statusbar/StatusBarIcon$Type;->NotifSmallIcon:Lcom/android/internal/statusbar/StatusBarIcon$Type;
+
+    .line 218
+    new-instance v4, Lkotlin/Pair;
+
+    .line 220
+    invoke-direct {v4, p2, v1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 222
+    goto :goto_4
+
+    .line 225
+    :goto_5
+    invoke-virtual {v1}, Lkotlin/Pair;->component1()Ljava/lang/Object;
+
+    .line 226
+    move-result-object p2
+
+    .line 229
+    move-object v7, p2
+
+    .line 230
+    check-cast v7, Landroid/graphics/drawable/Icon;
+
+    .line 231
+    invoke-virtual {v1}, Lkotlin/Pair;->component2()Ljava/lang/Object;
+
+    .line 233
+    move-result-object p2
+
+    .line 236
+    move-object v11, p2
+
+    .line 237
+    check-cast v11, Lcom/android/internal/statusbar/StatusBarIcon$Type;
+
+    .line 238
+    if-eqz v7, :cond_15
+
+    .line 240
+    iget-object p2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
+
+    .line 242
+    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    .line 244
+    move-result-object p2
+
+    .line 247
+    new-instance v1, Lcom/android/internal/statusbar/StatusBarIcon;
+
+    .line 248
+    iget-object v3, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
+
+    .line 250
+    invoke-virtual {v3}, Landroid/service/notification/StatusBarNotification;->getUser()Landroid/os/UserHandle;
+
+    .line 252
+    move-result-object v5
+
+    .line 255
+    iget-object v3, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
+
+    .line 256
+    invoke-virtual {v3}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
+
+    .line 258
+    move-result-object v6
+
+    .line 261
+    iget v8, p2, Landroid/app/Notification;->iconLevel:I
+
+    .line 262
+    iget v9, p2, Landroid/app/Notification;->number:I
+
+    .line 264
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->iconBuilder:Lcom/android/systemui/statusbar/notification/icon/IconBuilder;
+
+    .line 266
+    iget-object v3, v3, Lcom/android/systemui/statusbar/notification/icon/IconBuilder;->context:Landroid/content/Context;
+
+    .line 268
+    invoke-static {v3, p2}, Lcom/android/systemui/statusbar/notification/NotificationContentDescription;->contentDescForNotification(Landroid/content/Context;Landroid/app/Notification;)Ljava/lang/CharSequence;
+
+    .line 270
+    move-result-object v10
+
+    .line 273
+    move-object v4, v1
+
+    .line 274
+    invoke-direct/range {v4 .. v11}, Lcom/android/internal/statusbar/StatusBarIcon;-><init>(Landroid/os/UserHandle;Ljava/lang/String;Landroid/graphics/drawable/Icon;IILjava/lang/CharSequence;Lcom/android/internal/statusbar/StatusBarIcon$Type;)V
+
+    .line 275
+    invoke-static {}, Landroid/app/Flags;->notificationsUseAppIcon()Z
+
+    .line 278
+    move-result p2
+
+    .line 281
+    if-nez p2, :cond_10
+
+    .line 282
+    invoke-static {}, Landroid/app/Flags;->notificationsUseMonochromeAppIcon()Z
+
+    .line 284
+    move-result p2
+
+    .line 287
+    if-eqz p2, :cond_e
+
+    .line 288
+    goto :goto_6
+
+    .line 290
+    :cond_e
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/icon/IconManager;->isImportantConversation(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
+
+    .line 291
+    move-result p0
+
+    .line 294
+    if-eqz p0, :cond_14
+
+    .line 295
+    iget-object p0, v1, Lcom/android/internal/statusbar/StatusBarIcon;->type:Lcom/android/internal/statusbar/StatusBarIcon$Type;
+
+    .line 297
+    sget-object p2, Lcom/android/internal/statusbar/StatusBarIcon$Type;->PeopleAvatar:Lcom/android/internal/statusbar/StatusBarIcon$Type;
+
+    .line 299
+    if-ne p0, p2, :cond_f
+
+    .line 301
+    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
+
+    .line 303
+    iput-object v1, p0, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mPeopleAvatarDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
+
+    .line 305
+    goto :goto_8
+
+    .line 307
+    :cond_f
+    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
+
+    .line 308
+    iput-object v1, p0, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mSmallIconDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
+
+    .line 310
+    goto :goto_8
+
+    .line 312
+    :cond_10
+    :goto_6
+    iget-object p0, v1, Lcom/android/internal/statusbar/StatusBarIcon;->type:Lcom/android/internal/statusbar/StatusBarIcon$Type;
+
+    .line 313
+    if-nez p0, :cond_11
+
+    .line 315
+    goto :goto_7
+
+    .line 317
+    :cond_11
+    sget-object p2, Lcom/android/systemui/statusbar/notification/icon/IconManager$WhenMappings;->$EnumSwitchMapping$0:[I
+
+    .line 318
+    invoke-virtual {p0}, Lcom/android/internal/statusbar/StatusBarIcon$Type;->ordinal()I
+
+    .line 320
+    move-result p0
+
+    .line 323
+    aget v2, p2, p0
+
+    .line 324
+    :goto_7
+    if-eq v2, v0, :cond_13
+
+    .line 326
+    const/4 p0, 0x2
+
+    .line 328
+    if-eq v2, p0, :cond_12
+
+    .line 329
+    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
+
+    .line 331
+    iput-object v1, p0, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mSmallIconDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
+
+    .line 333
+    goto :goto_8
+
+    .line 335
+    :cond_12
+    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
+
+    .line 336
+    iput-object v1, p0, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mAppIconDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
+
+    .line 338
+    goto :goto_8
+
+    .line 340
+    :cond_13
+    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
+
+    .line 341
+    iput-object v1, p0, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mPeopleAvatarDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
+
+    .line 343
+    :cond_14
+    :goto_8
+    return-object v1
+
+    .line 345
+    :cond_15
+    new-instance p0, Lcom/android/systemui/statusbar/notification/InflationException;
+
+    .line 346
+    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
+
+    .line 348
+    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
+
+    .line 350
+    move-result-object p1
+
+    .line 353
+    invoke-static {v3, p1}, Landroidx/appsearch/app/AppSearchSchema$Builder$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 354
+    move-result-object p1
+
+    .line 357
+    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/notification/InflationException;-><init>(Ljava/lang/String;)V
+
+    .line 358
+    throw p0
+    .line 361
 .end method
 
 .method public final getIconDescriptors(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lkotlin/Pair;
@@ -973,6 +944,7 @@
 
     .line 30
     return-object p1
+    .line 33
 .end method
 
 .method public final isImportantConversation(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
@@ -1311,7 +1283,7 @@
     move-result-object p0
 
     .line 80
-    const p1, 0x7f0b0383    # @id/icon_is_pre_L
+    const p1, 0x7f0a03a3    # @id/icon_is_pre_L
 
     .line 81
     invoke-virtual {p3, p1, p0}, Landroid/widget/ImageView;->setTag(ILjava/lang/Object;)V
@@ -1358,74 +1330,6 @@
     .line 113
 .end method
 
-.method public final toStatusBarIcon(Landroid/graphics/drawable/Icon;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/internal/statusbar/StatusBarIcon$Type;)Lcom/android/internal/statusbar/StatusBarIcon;
-    .locals 10
-
-    .line 1
-    iget-object v0, p2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
-
-    .line 2
-    invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
-
-    .line 4
-    move-result-object v0
-
-    .line 7
-    new-instance v9, Lcom/android/internal/statusbar/StatusBarIcon;
-
-    .line 8
-    iget-object v1, p2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
-
-    .line 10
-    invoke-virtual {v1}, Landroid/service/notification/StatusBarNotification;->getUser()Landroid/os/UserHandle;
-
-    .line 12
-    move-result-object v2
-
-    .line 15
-    iget-object p2, p2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
-
-    .line 16
-    invoke-virtual {p2}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
-
-    .line 18
-    move-result-object v3
-
-    .line 21
-    iget v5, v0, Landroid/app/Notification;->iconLevel:I
-
-    .line 22
-    iget v6, v0, Landroid/app/Notification;->number:I
-
-    .line 24
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->iconBuilder:Lcom/android/systemui/statusbar/notification/icon/IconBuilder;
-
-    .line 26
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/icon/IconBuilder;->context:Landroid/content/Context;
-
-    .line 28
-    invoke-static {p0, v0}, Lcom/android/systemui/statusbar/notification/NotificationContentDescription;->contentDescForNotification(Landroid/content/Context;Landroid/app/Notification;)Ljava/lang/CharSequence;
-
-    .line 30
-    move-result-object v7
-
-    .line 33
-    move-object v1, v9
-
-    .line 34
-    move-object v4, p1
-
-    .line 35
-    move-object v8, p3
-
-    .line 36
-    invoke-direct/range {v1 .. v8}, Lcom/android/internal/statusbar/StatusBarIcon;-><init>(Landroid/os/UserHandle;Ljava/lang/String;Landroid/graphics/drawable/Icon;IILjava/lang/CharSequence;Lcom/android/internal/statusbar/StatusBarIcon$Type;)V
-
-    .line 37
-    return-object v9
-    .line 40
-.end method
-
 .method public final updateIcons(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
     .locals 5
 
@@ -1463,137 +1367,133 @@
     if-eqz p2, :cond_2
 
     .line 20
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsBackgroundIcons()Z
+    const-string p2, "IconManager"
 
     .line 22
-    move-result v1
+    const-string v1, "Updating using the cache is not supported when the notifications_background_icons flag is off"
 
-    .line 25
-    if-nez v1, :cond_2
+    .line 24
+    invoke-static {p2, v1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 26
-    const-string v1, "IconManager"
-
-    .line 28
-    const-string v2, "Updating using the cache is not supported when the notifications_background_icons flag is off"
-
-    .line 30
-    invoke-static {v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 32
     goto :goto_0
 
-    .line 35
+    .line 29
     :catchall_0
     move-exception p0
 
-    .line 36
+    .line 30
     goto :goto_2
 
-    .line 37
+    .line 31
     :cond_2
     :goto_0
-    const/4 v1, 0x0
-
-    .line 38
-    if-eqz p2, :cond_3
-
-    .line 39
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsBackgroundIcons()Z
-
-    .line 41
-    move-result p2
-
-    .line 44
-    if-nez p2, :cond_4
-
-    .line 45
-    :cond_3
     iget-object p2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
 
-    .line 47
+    .line 32
+    const/4 v1, 0x0
+
+    .line 34
     iput-object v1, p2, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mSmallIconDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
 
-    .line 49
+    .line 35
     iput-object v1, p2, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mPeopleAvatarDescriptor:Lcom/android/internal/statusbar/StatusBarIcon;
 
-    .line 51
-    :cond_4
+    .line 37
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/icon/IconManager;->getIconDescriptors(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Lkotlin/Pair;
 
-    .line 53
+    .line 39
     move-result-object p2
 
-    .line 56
+    .line 42
     invoke-virtual {p2}, Lkotlin/Pair;->component1()Ljava/lang/Object;
 
-    .line 57
+    .line 43
     move-result-object v2
 
-    .line 60
+    .line 46
     check-cast v2, Lcom/android/internal/statusbar/StatusBarIcon;
 
-    .line 61
+    .line 47
     invoke-virtual {p2}, Lkotlin/Pair;->component2()Ljava/lang/Object;
 
-    .line 63
+    .line 49
     move-result-object p2
 
-    .line 66
+    .line 52
     check-cast p2, Lcom/android/internal/statusbar/StatusBarIcon;
 
-    .line 67
+    .line 53
     iget-object v3, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 69
+    .line 55
     invoke-virtual {v3}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    .line 71
+    .line 57
     move-result-object v3
 
-    .line 74
-    if-eqz v3, :cond_5
+    .line 60
+    if-eqz v3, :cond_3
 
-    .line 75
+    .line 61
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/icon/IconManager;->iconBuilder:Lcom/android/systemui/statusbar/notification/icon/IconBuilder;
 
-    .line 77
+    .line 63
     iget-object v1, v1, Lcom/android/systemui/statusbar/notification/icon/IconBuilder;->context:Landroid/content/Context;
 
-    .line 79
+    .line 65
     invoke-static {v1, v3}, Lcom/android/systemui/statusbar/notification/NotificationContentDescription;->contentDescForNotification(Landroid/content/Context;Landroid/app/Notification;)Ljava/lang/CharSequence;
 
-    .line 81
+    .line 67
     move-result-object v1
 
-    .line 84
-    :cond_5
+    .line 70
+    :cond_3
     iget-object v3, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
 
-    .line 85
+    .line 71
     iget-object v3, v3, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mStatusBarIcon:Lcom/android/systemui/statusbar/StatusBarIconView;
 
-    .line 87
-    if-eqz v3, :cond_6
+    .line 73
+    if-eqz v3, :cond_4
 
-    .line 89
+    .line 75
     iget-object v4, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 91
+    .line 77
     invoke-virtual {v3, v4, v1}, Lcom/android/systemui/statusbar/StatusBarIconView;->setNotification(Landroid/service/notification/StatusBarNotification;Ljava/lang/CharSequence;)V
 
-    .line 93
+    .line 79
     invoke-virtual {p0, p1, v2, v3}, Lcom/android/systemui/statusbar/notification/icon/IconManager;->setIcon(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/internal/statusbar/StatusBarIcon;Lcom/android/systemui/statusbar/StatusBarIconView;)V
 
+    .line 82
+    :cond_4
+    iget-object v2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
+
+    .line 85
+    iget-object v2, v2, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mShelfIcon:Lcom/android/systemui/statusbar/StatusBarIconView;
+
+    .line 87
+    if-eqz v2, :cond_5
+
+    .line 89
+    iget-object v3, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
+
+    .line 91
+    invoke-virtual {v2, v3, v1}, Lcom/android/systemui/statusbar/StatusBarIconView;->setNotification(Landroid/service/notification/StatusBarNotification;Ljava/lang/CharSequence;)V
+
+    .line 93
+    invoke-virtual {p0, p1, p2, v2}, Lcom/android/systemui/statusbar/notification/icon/IconManager;->setIcon(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/internal/statusbar/StatusBarIcon;Lcom/android/systemui/statusbar/StatusBarIconView;)V
+
     .line 96
-    :cond_6
+    :cond_5
     iget-object v2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
 
     .line 99
-    iget-object v2, v2, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mShelfIcon:Lcom/android/systemui/statusbar/StatusBarIconView;
+    iget-object v2, v2, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mAodIcon:Lcom/android/systemui/statusbar/StatusBarIconView;
 
     .line 101
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_6
 
     .line 103
     iget-object v3, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
@@ -1603,49 +1503,30 @@
 
     .line 107
     invoke-virtual {p0, p1, p2, v2}, Lcom/android/systemui/statusbar/notification/icon/IconManager;->setIcon(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/internal/statusbar/StatusBarIcon;Lcom/android/systemui/statusbar/StatusBarIconView;)V
-
-    .line 110
-    :cond_7
-    iget-object v2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mIcons:Lcom/android/systemui/statusbar/notification/icon/IconPack;
-
-    .line 113
-    iget-object v2, v2, Lcom/android/systemui/statusbar/notification/icon/IconPack;->mAodIcon:Lcom/android/systemui/statusbar/StatusBarIconView;
-
-    .line 115
-    if-eqz v2, :cond_8
-
-    .line 117
-    iget-object v3, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
-
-    .line 119
-    invoke-virtual {v2, v3, v1}, Lcom/android/systemui/statusbar/StatusBarIconView;->setNotification(Landroid/service/notification/StatusBarNotification;Ljava/lang/CharSequence;)V
-
-    .line 121
-    invoke-virtual {p0, p1, p2, v2}, Lcom/android/systemui/statusbar/notification/icon/IconManager;->setIcon(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/internal/statusbar/StatusBarIcon;Lcom/android/systemui/statusbar/StatusBarIconView;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 124
-    :cond_8
+    .line 110
+    :cond_6
     :goto_1
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_7
 
-    .line 127
+    .line 113
     invoke-static {}, Lcom/android/app/tracing/TraceUtilsKt;->endSlice()V
 
-    .line 129
-    :cond_9
+    .line 115
+    :cond_7
     return-void
 
-    .line 132
+    .line 118
     :goto_2
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_8
 
-    .line 133
+    .line 119
     invoke-static {}, Lcom/android/app/tracing/TraceUtilsKt;->endSlice()V
 
-    .line 135
-    :cond_a
+    .line 121
+    :cond_8
     throw p0
-    .line 138
+    .line 124
 .end method

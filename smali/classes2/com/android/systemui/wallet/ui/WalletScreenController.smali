@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/wallet/ui/WalletScreenController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/wallet/ui/WalletCardCarousel$OnSelectionListener;
@@ -162,7 +162,7 @@
     move-result-object p1
 
     .line 61
-    const p3, 0x7f0706ab    # @dimen/min_wallet_empty_height '208.0dp'
+    const p3, 0x7f0706ed    # @dimen/min_wallet_empty_height '208.0dp'
 
     .line 62
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -471,7 +471,7 @@
     move-result-object v2
 
     .line 38
-    const v3, 0x7f070af4    # @dimen/wallet_screen_header_icon_size '56.0dp'
+    const v3, 0x7f070b52    # @dimen/wallet_screen_header_icon_size '56.0dp'
 
     .line 39
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

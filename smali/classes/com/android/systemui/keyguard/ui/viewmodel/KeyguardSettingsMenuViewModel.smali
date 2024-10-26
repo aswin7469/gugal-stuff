@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSettingsMenuViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -8,9 +8,9 @@
 
 .field public final interactor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardLongPressInteractor;
 
-.field public final isVisible:Lkotlinx/coroutines/flow/StateFlow;
+.field public final isVisible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-.field public final shouldOpenSettings:Lkotlinx/coroutines/flow/StateFlow;
+.field public final shouldOpenSettings:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
 .field public final text:Lcom/android/systemui/common/shared/model/Text$Resource;
 
@@ -29,19 +29,19 @@
     iget-object v0, p1, Lcom/android/systemui/keyguard/domain/interactor/KeyguardLongPressInteractor;->isMenuVisible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 7
-    iput-object v0, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSettingsMenuViewModel;->isVisible:Lkotlinx/coroutines/flow/StateFlow;
+    iput-object v0, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSettingsMenuViewModel;->isVisible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 9
     iget-object p1, p1, Lcom/android/systemui/keyguard/domain/interactor/KeyguardLongPressInteractor;->shouldOpenSettings:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 11
-    iput-object p1, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSettingsMenuViewModel;->shouldOpenSettings:Lkotlinx/coroutines/flow/StateFlow;
+    iput-object p1, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSettingsMenuViewModel;->shouldOpenSettings:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 13
     new-instance p1, Lcom/android/systemui/common/shared/model/Icon$Resource;
 
     .line 15
-    const v0, 0x7f0808e7    # @drawable/ic_palette 'res/drawable/ic_palette.xml'
+    const v0, 0x7f08090c    # @drawable/ic_palette 'res/drawable/ic_palette.xml'
 
     .line 17
     const/4 v1, 0x0
@@ -56,7 +56,7 @@
     new-instance p1, Lcom/android/systemui/common/shared/model/Text$Resource;
 
     .line 26
-    const v0, 0x7f14055c    # @string/lock_screen_settings 'Customize lock screen'
+    const v0, 0x7f1305b2    # @string/lock_screen_settings 'Customize lock screen'
 
     .line 28
     invoke-direct {p1, v0}, Lcom/android/systemui/common/shared/model/Text$Resource;-><init>(I)V

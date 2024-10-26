@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/binder/KeyguardIndicationAreaBinder$bind$disposableHandle$1$1$5$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -85,7 +85,7 @@
     move-result-object p1
 
     .line 22
-    const v2, 0x7f070208    # @dimen/default_burn_in_prevention_offset '15.0dp'
+    const v2, 0x7f07022a    # @dimen/default_burn_in_prevention_offset '15.0dp'
 
     .line 23
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -100,7 +100,7 @@
     move-result-object v2
 
     .line 33
-    const v3, 0x7f070344    # @dimen/keyguard_indication_area_padding '82.0dp'
+    const v3, 0x7f070380    # @dimen/keyguard_indication_area_padding '82.0dp'
 
     .line 34
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I

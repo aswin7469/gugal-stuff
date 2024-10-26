@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/policy/RemoteInputView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -57,7 +57,7 @@
 
 .field public final mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
-.field public mViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewController;
+.field public mViewController:Lcom/android/systemui/statusbar/policy/RemoteInputViewControllerImpl;
 
 .field public mWrapper:Lcom/android/systemui/statusbar/notification/row/wrapper/NotificationViewWrapper;
 
@@ -686,6 +686,7 @@
     .line 32
     :cond_0
     return-void
+    .line 33
 .end method
 
 .method public onDefocus(ZZLjava/lang/Runnable;)V
@@ -1239,7 +1240,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b0648    # @id/remote_input_progress
+    const v0, 0x7f0a0672    # @id/remote_input_progress
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1254,7 +1255,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mProgressBar:Landroid/widget/ProgressBar;
 
     .line 14
-    const v0, 0x7f0b0649    # @id/remote_input_send
+    const v0, 0x7f0a0673    # @id/remote_input_send
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1275,7 +1276,7 @@
     iget-object v0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     .line 30
-    const v1, 0x7f080af8    # @drawable/remote_input_view_text_bg 'res/drawable/remote_input_view_text_bg.xml'
+    const v1, 0x7f080b36    # @drawable/remote_input_view_text_bg 'res/drawable/remote_input_view_text_bg.xml'
 
     .line 32
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1296,7 +1297,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mContentBackground:Landroid/graphics/drawable/GradientDrawable;
 
     .line 45
-    const v0, 0x7f0b0646    # @id/remote_input_delete
+    const v0, 0x7f0a0670    # @id/remote_input_delete
 
     .line 47
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1311,7 +1312,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/policy/RemoteInputView;->mDelete:Landroid/widget/ImageView;
 
     .line 56
-    const v0, 0x7f0b0647    # @id/remote_input_delete_bg
+    const v0, 0x7f0a0671    # @id/remote_input_delete_bg
 
     .line 58
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1350,7 +1351,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 86
-    const v0, 0x7f0b0644    # @id/remote_input_content
+    const v0, 0x7f0a066e    # @id/remote_input_content
 
     .line 89
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1371,7 +1372,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 102
-    const v0, 0x7f0b064a    # @id/remote_input_text
+    const v0, 0x7f0a0674    # @id/remote_input_text
 
     .line 105
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1417,7 +1418,6 @@
 
     .line 138
     return-void
-    .line 141
 .end method
 
 .method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
@@ -1972,7 +1972,7 @@
 
     .line 48
     :cond_1
-    const v0, 0x7f0b0645    # @id/remote_input_content_container
+    const v0, 0x7f0a066f    # @id/remote_input_content_container
 
     .line 50
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1981,7 +1981,7 @@
     move-result-object v0
 
     .line 56
-    const v2, 0x7f0b0643    # @id/remote_input_attachment_image
+    const v2, 0x7f0a066d    # @id/remote_input_attachment_image
 
     .line 57
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -2146,7 +2146,7 @@
     move-result-object v1
 
     .line 23
-    const v2, 0x7f07091f    # @dimen/remote_input_view_text_stroke '2.0dp'
+    const v2, 0x7f07096f    # @dimen/remote_input_view_text_stroke '2.0dp'
 
     .line 24
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2297,7 +2297,7 @@
     iget-object p2, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     .line 111
-    const v2, 0x7f06043f    # @color/remote_input_send 'res/color/remote_input_send.xml'
+    const v2, 0x7f06044b    # @color/remote_input_send 'res/color/remote_input_send.xml'
 
     .line 113
     invoke-virtual {p2, v2}, Landroid/content/Context;->getColorStateList(I)Landroid/content/res/ColorStateList;
@@ -2309,7 +2309,7 @@
     iget-object v2, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     .line 120
-    const v3, 0x7f060440    # @color/remote_input_text 'res/color/remote_input_text.xml'
+    const v3, 0x7f06044c    # @color/remote_input_text 'res/color/remote_input_text.xml'
 
     .line 122
     invoke-virtual {v2, v3}, Landroid/content/Context;->getColorStateList(I)Landroid/content/res/ColorStateList;
@@ -2321,7 +2321,7 @@
     iget-object v2, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     .line 129
-    const v3, 0x7f06043e    # @color/remote_input_hint 'res/color/remote_input_hint.xml'
+    const v3, 0x7f06044a    # @color/remote_input_hint 'res/color/remote_input_hint.xml'
 
     .line 131
     invoke-virtual {v2, v3}, Landroid/content/Context;->getColor(I)I

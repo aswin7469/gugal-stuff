@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/VolumeUI;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -169,7 +169,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f05005b    # @bool/enable_volume_ui 'true'
+    const v1, 0x7f05006b    # @bool/enable_volume_ui 'true'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -187,7 +187,7 @@
     move-result-object v1
 
     .line 20
-    const v2, 0x7f05005a    # @bool/enable_safety_warning 'true'
+    const v2, 0x7f05006a    # @bool/enable_safety_warning 'true'
 
     .line 21
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/VolumeDialogImpl$7;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/VolumeDialogController$Callbacks;
@@ -198,7 +198,7 @@
     move-result-object p1
 
     .line 39
-    const v1, 0x7f140a05    # @string/volume_odi_captions_hint_disable 'disable'
+    const v1, 0x7f130a90    # @string/volume_odi_captions_hint_disable 'disable'
 
     .line 40
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -217,7 +217,7 @@
     move-result-object p1
 
     .line 51
-    const v1, 0x7f140a06    # @string/volume_odi_captions_hint_enable 'enable'
+    const v1, 0x7f130a91    # @string/volume_odi_captions_hint_enable 'enable'
 
     .line 52
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -242,14 +242,14 @@
     if-eqz p1, :cond_2
 
     .line 69
-    const p1, 0x7f080961    # @drawable/ic_volume_odi_captions 'res/drawable/ic_volume_odi_captions.xml'
+    const p1, 0x7f080994    # @drawable/ic_volume_odi_captions 'res/drawable/ic_volume_odi_captions.xml'
 
     .line 71
     goto :goto_1
 
     .line 74
     :cond_2
-    const p1, 0x7f080962    # @drawable/ic_volume_odi_captions_disabled 'res/drawable/ic_volume_odi_captions_disabled.xml'
+    const p1, 0x7f080995    # @drawable/ic_volume_odi_captions_disabled 'res/drawable/ic_volume_odi_captions_disabled.xml'
 
     .line 75
     :goto_1
@@ -309,8 +309,17 @@
     .locals 0
 
     .line 1
-    return-void
+    iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl$7;->this$0:Lcom/android/systemui/volume/VolumeDialogImpl;
+
     .line 2
+    iget-object p0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDialogView:Landroid/view/ViewGroup;
+
+    .line 4
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setLayoutDirection(I)V
+
+    .line 6
+    return-void
+    .line 9
 .end method
 
 .method public final onScreenOff()V

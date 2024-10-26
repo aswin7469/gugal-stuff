@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/nano/WmShellTransitionTraceProto;
 .super Lcom/google/protobuf/nano/MessageNano;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -464,7 +464,7 @@
     iget-wide v1, p0, Lcom/android/wm/shell/nano/WmShellTransitionTraceProto;->magicNumber:J
 
     .line 3
-    invoke-virtual {p1, v0, v1, v2}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeFixed64(IJ)V
+    invoke-virtual {p1, v1, v2, v0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeFixed64(JI)V
 
     .line 5
     iget-object v0, p0, Lcom/android/wm/shell/nano/WmShellTransitionTraceProto;->transitions:[Lcom/android/wm/shell/nano/Transition;
@@ -572,7 +572,7 @@
     const/4 p0, 0x4
 
     .line 64
-    invoke-virtual {p1, p0, v0, v1}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeFixed64(IJ)V
+    invoke-virtual {p1, v0, v1, p0}, Lcom/google/protobuf/nano/CodedOutputByteBufferNano;->writeFixed64(JI)V
 
     .line 65
     :cond_4

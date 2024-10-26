@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;
 .super Landroid/media/session/MediaController$Callback;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/settingslib/media/LocalMediaManager$DeviceCallback;
@@ -9,8 +9,6 @@
 
 # instance fields
 .field public aboutToConnectDeviceOverride:Lcom/android/systemui/media/controls/domain/pipeline/AboutToConnectDevice;
-
-.field public broadcastDescription:Ljava/lang/String;
 
 .field public final configListener:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry$configListener$1;
 
@@ -265,47 +263,26 @@
 .end method
 
 .method public final onBroadcastStarted(II)V
-    .locals 2
+    .locals 3
 
     .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "onBroadcastStarted(), reason = "
 
     .line 2
-    const-string v1, "onBroadcastStarted(), reason = "
+    const-string v1, " , broadcastId = "
 
     .line 4
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "MediaDeviceManager"
 
     .line 6
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2, v0, v1, v2}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
-    const-string p1, " , broadcastId = "
-
-    .line 12
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 14
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 17
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 20
-    move-result-object p1
-
-    .line 23
-    const-string p2, "MediaDeviceManager"
-
-    .line 24
-    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 26
+    .line 8
     invoke-virtual {p0}, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->updateCurrent()V
 
-    .line 29
+    .line 11
     return-void
-    .line 32
+    .line 14
 .end method
 
 .method public final onBroadcastStopFailed(I)V
@@ -326,132 +303,69 @@
 .end method
 
 .method public final onBroadcastStopped(II)V
-    .locals 2
+    .locals 3
 
     .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "onBroadcastStopped(), reason = "
 
     .line 2
-    const-string v1, "onBroadcastStopped(), reason = "
+    const-string v1, " , broadcastId = "
 
     .line 4
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "MediaDeviceManager"
 
     .line 6
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2, v0, v1, v2}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
-    const-string p1, " , broadcastId = "
-
-    .line 12
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 14
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 17
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 20
-    move-result-object p1
-
-    .line 23
-    const-string p2, "MediaDeviceManager"
-
-    .line 24
-    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 26
+    .line 8
     invoke-virtual {p0}, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->updateCurrent()V
 
-    .line 29
+    .line 11
     return-void
-    .line 32
+    .line 14
 .end method
 
 .method public final onBroadcastUpdateFailed(II)V
-    .locals 1
-
-    .line 1
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    .line 2
-    const-string v0, "onBroadcastUpdateFailed(), reason = "
-
-    .line 4
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 6
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 9
-    const-string p1, " , broadcastId = "
-
-    .line 12
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 14
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 17
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 20
-    move-result-object p0
-
-    .line 23
-    const-string p1, "MediaDeviceManager"
-
-    .line 24
-    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 26
-    return-void
-    .line 29
-.end method
-
-.method public final onBroadcastUpdated(II)V
     .locals 2
 
     .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string p0, "onBroadcastUpdateFailed(), reason = "
 
     .line 2
-    const-string v1, "onBroadcastUpdated(), reason = "
+    const-string v0, " , broadcastId = "
 
     .line 4
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "MediaDeviceManager"
 
     .line 6
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p1, p2, p0, v0, v1}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
-    const-string p1, " , broadcastId = "
+    .line 8
+    return-void
+    .line 11
+.end method
 
-    .line 12
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final onBroadcastUpdated(II)V
+    .locals 3
 
-    .line 14
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 1
+    const-string v0, "onBroadcastUpdated(), reason = "
 
-    .line 17
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 2
+    const-string v1, " , broadcastId = "
 
-    .line 20
-    move-result-object p1
+    .line 4
+    const-string v2, "MediaDeviceManager"
 
-    .line 23
-    const-string p2, "MediaDeviceManager"
+    .line 6
+    invoke-static {p1, p2, v0, v1, v2}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 24
-    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 26
+    .line 8
     invoke-virtual {p0}, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->updateCurrent()V
 
-    .line 29
+    .line 11
     return-void
-    .line 32
+    .line 14
 .end method
 
 .method public final onDeviceListUpdate(Ljava/util/List;)V
@@ -522,730 +436,442 @@
     .line 15
 .end method
 
-.method public final setCurrent(Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;)V
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->current:Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
-
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 4
-    goto :goto_0
-
-    .line 6
-    :cond_0
-    iget-boolean v1, p1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->enabled:Z
-
-    .line 7
-    iget-boolean v2, v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->enabled:Z
-
-    .line 9
-    if-ne v1, v2, :cond_1
-
-    .line 11
-    iget-object v1, p1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->name:Ljava/lang/CharSequence;
-
-    .line 13
-    iget-object v2, v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->name:Ljava/lang/CharSequence;
-
-    .line 15
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 17
-    move-result v1
-
-    .line 20
-    if-eqz v1, :cond_1
-
-    .line 21
-    iget-object v1, p1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->intent:Landroid/app/PendingIntent;
-
-    .line 23
-    iget-object v2, v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->intent:Landroid/app/PendingIntent;
-
-    .line 25
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 27
-    move-result v1
-
-    .line 30
-    if-eqz v1, :cond_1
-
-    .line 31
-    iget-object v1, p1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->id:Ljava/lang/String;
-
-    .line 33
-    iget-object v2, v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->id:Ljava/lang/String;
-
-    .line 35
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 37
-    move-result v1
-
-    .line 40
-    if-eqz v1, :cond_1
-
-    .line 41
-    iget-boolean v1, p1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->showBroadcastButton:Z
-
-    .line 43
-    iget-boolean v0, v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->showBroadcastButton:Z
-
-    .line 45
-    if-ne v1, v0, :cond_1
-
-    .line 47
-    const/4 v0, 0x1
-
-    .line 49
-    goto :goto_1
-
-    .line 50
-    :cond_1
-    :goto_0
-    const/4 v0, 0x0
-
-    .line 51
-    :goto_1
-    iget-boolean v1, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->started:Z
-
-    .line 52
-    if-eqz v1, :cond_2
-
-    .line 54
-    if-nez v0, :cond_3
-
-    .line 56
-    :cond_2
-    iput-object p1, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->current:Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
-
-    .line 58
-    iget-object v0, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
-
-    .line 60
-    iget-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->fgExecutor:Ljava/util/concurrent/Executor;
-
-    .line 62
-    new-instance v2, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry$current$1;
-
-    .line 64
-    invoke-direct {v2, v0, p0, p1}, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry$current$1;-><init>(Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;)V
-
-    .line 66
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 69
-    :cond_3
-    return-void
-    .line 72
-.end method
-
 .method public final updateCurrent()V
-    .locals 18
+    .locals 11
 
     .line 1
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->localMediaManager:Lcom/android/settingslib/media/LocalMediaManager;
 
     .line 2
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->enableLeAudioSharing()Z
+    invoke-virtual {v0}, Lcom/android/settingslib/media/LocalMediaManager;->getCurrentConnectedDevice()Lcom/android/settingslib/media/MediaDevice;
 
     .line 4
-    move-result v1
+    move-result-object v0
 
     .line 7
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     .line 8
-    if-nez v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 9
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->legacyLeAudioSharing()Z
+    new-instance v10, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
 
     .line 11
-    move-result v1
+    invoke-virtual {v0}, Lcom/android/settingslib/media/MediaDevice;->getIconWithoutBackground()Landroid/graphics/drawable/Drawable;
 
-    .line 14
-    if-nez v1, :cond_0
+    .line 13
+    move-result-object v4
 
-    .line 15
-    goto/16 :goto_2
+    .line 16
+    invoke-virtual {v0}, Lcom/android/settingslib/media/MediaDevice;->getName()Ljava/lang/String;
 
     .line 17
-    :cond_0
-    iget-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
+    move-result-object v5
 
-    .line 19
-    iget-object v1, v1, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->localBluetoothManager:Ldagger/Lazy;
+    .line 20
+    invoke-virtual {v0}, Lcom/android/settingslib/media/MediaDevice;->getId()Ljava/lang/String;
 
     .line 21
-    invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    move-result-object v7
 
-    .line 23
-    move-result-object v1
+    .line 24
+    const/4 v3, 0x1
+
+    .line 25
+    const/16 v9, 0x8
 
     .line 26
-    check-cast v1, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-    .line 27
-    const-string v3, "MediaDeviceManager"
-
-    .line 29
-    if-eqz v1, :cond_5
-
-    .line 31
-    iget-object v1, v1, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
-
-    .line 33
-    if-eqz v1, :cond_4
-
-    .line 35
-    iget-object v1, v1, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->mLeAudioBroadcast:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;
-
-    .line 37
-    if-eqz v1, :cond_3
-
-    .line 39
-    invoke-virtual {v1, v2}, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->isEnabled(Landroid/bluetooth/BluetoothDevice;)Z
-
-    .line 41
-    move-result v4
-
-    .line 44
-    if-eqz v4, :cond_3
-
-    .line 45
-    iget-object v1, v1, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcast;->mAppSourceName:Ljava/lang/String;
-
-    .line 47
-    iget-object v2, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
-
-    .line 49
-    iget-object v2, v2, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->context:Landroid/content/Context;
-
-    .line 51
-    iget-object v3, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->localMediaManager:Lcom/android/settingslib/media/LocalMediaManager;
-
-    .line 53
-    iget-object v3, v3, Lcom/android/settingslib/media/LocalMediaManager;->mPackageName:Ljava/lang/String;
-
-    .line 55
-    const v4, 0x7f140219    # @string/bt_le_audio_broadcast_dialog_unknown_name 'Unknown'
-
-    .line 57
-    invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 60
-    move-result-object v4
-
-    .line 63
-    invoke-static {v2, v3, v4}, Lcom/android/systemui/media/controls/util/MediaDataUtils;->getAppLabel(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 64
-    move-result-object v2
-
-    .line 67
-    invoke-static {v2, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    .line 68
-    move-result v2
-
-    .line 71
-    if-eqz v2, :cond_1
-
-    .line 72
-    iget-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
-
-    .line 74
-    iget-object v1, v1, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->context:Landroid/content/Context;
-
-    .line 76
-    const v2, 0x7f140211    # @string/broadcasting_description_is_broadcasting 'Broadcasting'
-
-    .line 78
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 81
-    move-result-object v1
-
-    .line 84
-    iput-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->broadcastDescription:Ljava/lang/String;
-
-    .line 85
-    goto :goto_0
-
-    .line 87
-    :cond_1
-    iput-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->broadcastDescription:Ljava/lang/String;
-
-    .line 88
-    :goto_0
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->enableLeAudioSharing()Z
-
-    .line 90
-    move-result v1
-
-    .line 93
-    if-eqz v1, :cond_2
-
-    .line 94
-    new-instance v1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
-
-    .line 96
-    iget-object v2, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
-
-    .line 98
-    iget-object v2, v2, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->context:Landroid/content/Context;
-
-    .line 100
-    const v3, 0x7f0806ef    # @drawable/ic_bt_le_audio_sharing 'res/drawable/ic_bt_le_audio_sharing.xml'
-
-    .line 102
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    .line 105
-    move-result-object v4
-
-    .line 108
-    iget-object v2, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
-
-    .line 109
-    iget-object v2, v2, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->context:Landroid/content/Context;
-
-    .line 111
-    const v3, 0x7f140149    # @string/audio_sharing_description 'Sharing audio'
-
-    .line 113
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 116
-    move-result-object v5
-
-    .line 119
     const/4 v6, 0x0
 
-    .line 120
-    const/16 v9, 0x10
-
-    .line 121
-    const/4 v3, 0x0
-
-    .line 123
-    const/4 v7, 0x0
-
-    .line 124
+    .line 28
     const/4 v8, 0x0
 
-    .line 125
-    move-object v2, v1
+    .line 29
+    move-object v2, v10
 
-    .line 126
+    .line 30
     invoke-direct/range {v2 .. v9}, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;-><init>(ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Ljava/lang/String;ZI)V
 
-    .line 127
-    goto :goto_1
+    .line 31
+    goto :goto_0
 
-    .line 130
-    :cond_2
-    new-instance v1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
-
-    .line 131
-    iget-object v2, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
-
-    .line 133
-    iget-object v2, v2, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->context:Landroid/content/Context;
-
-    .line 135
-    const v3, 0x7f080b15    # @drawable/settings_input_antenna 'res/drawable/settings_input_antenna.xml'
-
-    .line 137
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    .line 140
-    move-result-object v12
-
-    .line 143
-    iget-object v13, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->broadcastDescription:Ljava/lang/String;
-
-    .line 144
-    const/4 v14, 0x0
-
-    .line 146
-    const/16 v17, 0x10
-
-    .line 147
-    const/4 v11, 0x1
-
-    .line 149
-    const/4 v15, 0x0
-
-    .line 150
-    const/16 v16, 0x1
-
-    .line 151
+    .line 34
+    :cond_0
     move-object v10, v1
 
-    .line 153
-    invoke-direct/range {v10 .. v17}, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;-><init>(ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Ljava/lang/String;ZI)V
+    .line 35
+    :goto_0
+    iget-object v0, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->controller:Landroid/media/session/MediaController;
 
-    .line 154
-    :goto_1
-    invoke-virtual {v0, v1}, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->setCurrent(Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;)V
+    .line 36
+    if-eqz v0, :cond_4
 
-    .line 157
-    goto/16 :goto_8
+    .line 38
+    invoke-virtual {v0}, Landroid/media/session/MediaController;->getPlaybackInfo()Landroid/media/session/MediaController$PlaybackInfo;
 
-    .line 160
+    .line 40
+    move-result-object v0
+
+    .line 43
+    if-eqz v0, :cond_4
+
+    .line 44
+    invoke-virtual {v0}, Landroid/media/session/MediaController$PlaybackInfo;->getPlaybackType()I
+
+    .line 46
+    move-result v0
+
+    .line 49
+    const/4 v2, 0x2
+
+    .line 50
+    if-ne v0, v2, :cond_4
+
+    .line 51
+    iget-object v0, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
+
+    .line 53
+    iget-object v0, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->mr2manager:Ldagger/Lazy;
+
+    .line 55
+    invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    .line 57
+    move-result-object v0
+
+    .line 60
+    check-cast v0, Landroid/media/MediaRouter2Manager;
+
+    .line 61
+    iget-object v2, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->controller:Landroid/media/session/MediaController;
+
+    .line 63
+    invoke-virtual {v0, v2}, Landroid/media/MediaRouter2Manager;->getRoutingSessionForMediaController(Landroid/media/session/MediaController;)Landroid/media/RoutingSessionInfo;
+
+    .line 65
+    move-result-object v0
+
+    .line 68
+    if-eqz v0, :cond_3
+
+    .line 69
+    if-eqz v10, :cond_2
+
+    .line 71
+    invoke-virtual {v0}, Landroid/media/RoutingSessionInfo;->getName()Ljava/lang/CharSequence;
+
+    .line 73
+    move-result-object v0
+
+    .line 76
+    if-nez v0, :cond_1
+
+    .line 77
+    iget-object v0, v10, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->name:Ljava/lang/CharSequence;
+
+    .line 79
+    :cond_1
+    move-object v4, v0
+
+    .line 81
+    iget-object v3, v10, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->icon:Landroid/graphics/drawable/Drawable;
+
+    .line 82
+    iget-object v5, v10, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->intent:Landroid/app/PendingIntent;
+
+    .line 84
+    new-instance v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
+
+    .line 86
+    iget-object v6, v10, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->id:Ljava/lang/String;
+
+    .line 88
+    iget-boolean v7, v10, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->showBroadcastButton:Z
+
+    .line 90
+    iget-boolean v2, v10, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->enabled:Z
+
+    .line 92
+    move-object v1, v0
+
+    .line 94
+    invoke-direct/range {v1 .. v7}, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;-><init>(ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Ljava/lang/String;Z)V
+
+    .line 95
+    move-object v1, v0
+
+    .line 98
+    :cond_2
+    if-nez v1, :cond_8
+
+    .line 99
     :cond_3
-    const-string v1, "Can not get LocalBluetoothLeBroadcast"
-
-    .line 162
-    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 164
-    goto :goto_2
-
-    .line 167
-    :cond_4
-    const-string v1, "Can not get LocalBluetoothProfileManager"
-
-    .line 168
-    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 170
-    goto :goto_2
-
-    .line 173
-    :cond_5
-    const-string v1, "Can not get LocalBluetoothManager"
-
-    .line 174
-    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 176
-    :goto_2
-    iget-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->localMediaManager:Lcom/android/settingslib/media/LocalMediaManager;
-
-    .line 179
-    invoke-virtual {v1}, Lcom/android/settingslib/media/LocalMediaManager;->getCurrentConnectedDevice()Lcom/android/settingslib/media/MediaDevice;
-
-    .line 181
-    move-result-object v1
-
-    .line 184
-    if-eqz v1, :cond_6
-
-    .line 185
-    new-instance v11, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
-
-    .line 187
-    invoke-virtual {v1}, Lcom/android/settingslib/media/MediaDevice;->getIconWithoutBackground()Landroid/graphics/drawable/Drawable;
-
-    .line 189
-    move-result-object v5
-
-    .line 192
-    invoke-virtual {v1}, Lcom/android/settingslib/media/MediaDevice;->getName()Ljava/lang/String;
-
-    .line 193
-    move-result-object v6
-
-    .line 196
-    invoke-virtual {v1}, Lcom/android/settingslib/media/MediaDevice;->getId()Ljava/lang/String;
-
-    .line 197
-    move-result-object v8
-
-    .line 200
-    const/4 v4, 0x1
-
-    .line 201
-    const/16 v10, 0x8
-
-    .line 202
-    const/4 v7, 0x0
-
-    .line 204
-    const/4 v9, 0x0
-
-    .line 205
-    move-object v3, v11
-
-    .line 206
-    invoke-direct/range {v3 .. v10}, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;-><init>(ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Ljava/lang/String;ZI)V
-
-    .line 207
-    goto :goto_3
-
-    .line 210
-    :cond_6
-    move-object v11, v2
-
-    .line 211
-    :goto_3
-    iget-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->controller:Landroid/media/session/MediaController;
-
-    .line 212
-    if-eqz v1, :cond_a
-
-    .line 214
-    invoke-virtual {v1}, Landroid/media/session/MediaController;->getPlaybackInfo()Landroid/media/session/MediaController$PlaybackInfo;
-
-    .line 216
-    move-result-object v1
-
-    .line 219
-    if-eqz v1, :cond_a
-
-    .line 220
-    invoke-virtual {v1}, Landroid/media/session/MediaController$PlaybackInfo;->getPlaybackType()I
-
-    .line 222
-    move-result v1
-
-    .line 225
-    const/4 v3, 0x2
-
-    .line 226
-    if-ne v1, v3, :cond_a
-
-    .line 227
-    iget-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
-
-    .line 229
-    iget-object v1, v1, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->mr2manager:Ldagger/Lazy;
-
-    .line 231
-    invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
-
-    .line 233
-    move-result-object v1
-
-    .line 236
-    check-cast v1, Landroid/media/MediaRouter2Manager;
-
-    .line 237
-    iget-object v3, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->controller:Landroid/media/session/MediaController;
-
-    .line 239
-    invoke-virtual {v1, v3}, Landroid/media/MediaRouter2Manager;->getRoutingSessionForMediaController(Landroid/media/session/MediaController;)Landroid/media/RoutingSessionInfo;
-
-    .line 241
-    move-result-object v1
-
-    .line 244
-    if-eqz v1, :cond_9
-
-    .line 245
-    if-eqz v11, :cond_8
-
-    .line 247
-    invoke-virtual {v1}, Landroid/media/RoutingSessionInfo;->getName()Ljava/lang/CharSequence;
-
-    .line 249
-    move-result-object v1
-
-    .line 252
-    if-nez v1, :cond_7
-
-    .line 253
-    iget-object v1, v11, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->name:Ljava/lang/CharSequence;
-
-    .line 255
-    :cond_7
-    move-object v5, v1
-
-    .line 257
-    iget-object v4, v11, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->icon:Landroid/graphics/drawable/Drawable;
-
-    .line 258
-    iget-object v6, v11, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->intent:Landroid/app/PendingIntent;
-
-    .line 260
     new-instance v1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
 
-    .line 262
-    iget-object v7, v11, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->id:Ljava/lang/String;
+    .line 101
+    iget-object v0, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
 
-    .line 264
-    iget-boolean v8, v11, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->showBroadcastButton:Z
+    .line 103
+    iget-object v0, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->context:Landroid/content/Context;
 
-    .line 266
-    iget-boolean v3, v11, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->enabled:Z
+    .line 105
+    const v2, 0x7f08083e    # @drawable/ic_media_home_devices 'res/drawable/ic_media_home_devices.xml'
 
-    .line 268
-    move-object v2, v1
+    .line 107
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    .line 270
-    invoke-direct/range {v2 .. v8}, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;-><init>(ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Ljava/lang/String;Z)V
+    .line 110
+    move-result-object v4
 
-    .line 271
-    move-object v2, v1
+    .line 113
+    iget-object v0, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
 
-    .line 274
-    :cond_8
-    if-nez v2, :cond_e
+    .line 114
+    iget-object v0, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->context:Landroid/content/Context;
 
-    .line 275
-    :cond_9
-    new-instance v2, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
+    .line 116
+    const v2, 0x7f130675    # @string/media_seamless_other_device 'Other device'
 
-    .line 277
-    iget-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
+    .line 118
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 279
-    iget-object v1, v1, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->context:Landroid/content/Context;
-
-    .line 281
-    const v3, 0x7f08081b    # @drawable/ic_media_home_devices 'res/drawable/ic_media_home_devices.xml'
-
-    .line 283
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    .line 286
+    .line 121
     move-result-object v5
 
-    .line 289
-    iget-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
+    .line 124
+    const/4 v7, 0x0
 
-    .line 290
-    iget-object v1, v1, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->context:Landroid/content/Context;
-
-    .line 292
-    const v3, 0x7f14061b    # @string/media_seamless_other_device 'Other device'
-
-    .line 294
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 297
-    move-result-object v6
-
-    .line 300
+    .line 125
     const/4 v8, 0x0
 
-    .line 301
-    const/4 v9, 0x0
+    .line 126
+    const/4 v3, 0x0
 
-    .line 302
-    const/4 v4, 0x0
+    .line 127
+    const/4 v6, 0x0
 
-    .line 303
-    const/4 v7, 0x0
+    .line 128
+    const/16 v9, 0x18
 
-    .line 304
-    const/16 v10, 0x18
-
-    .line 305
-    move-object v3, v2
-
-    .line 307
-    invoke-direct/range {v3 .. v10}, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;-><init>(ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Ljava/lang/String;ZI)V
-
-    .line 308
-    goto :goto_7
-
-    .line 311
-    :cond_a
-    iget-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->aboutToConnectDeviceOverride:Lcom/android/systemui/media/controls/domain/pipeline/AboutToConnectDevice;
-
-    .line 312
-    if-nez v1, :cond_b
-
-    .line 314
-    goto :goto_5
-
-    .line 316
-    :cond_b
-    iget-object v2, v1, Lcom/android/systemui/media/controls/domain/pipeline/AboutToConnectDevice;->fullMediaDevice:Lcom/android/settingslib/media/MediaDevice;
-
-    .line 317
-    if-eqz v2, :cond_c
-
-    .line 319
-    new-instance v1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
-
-    .line 321
-    invoke-virtual {v2}, Lcom/android/settingslib/media/MediaDevice;->getIconWithoutBackground()Landroid/graphics/drawable/Drawable;
-
-    .line 323
-    move-result-object v5
-
-    .line 326
-    invoke-virtual {v2}, Lcom/android/settingslib/media/MediaDevice;->getName()Ljava/lang/String;
-
-    .line 327
-    move-result-object v6
-
-    .line 330
-    invoke-virtual {v2}, Lcom/android/settingslib/media/MediaDevice;->getId()Ljava/lang/String;
-
-    .line 331
-    move-result-object v8
-
-    .line 334
-    const/4 v4, 0x1
-
-    .line 335
-    const/16 v10, 0x8
-
-    .line 336
-    const/4 v7, 0x0
-
-    .line 338
-    const/4 v9, 0x0
-
-    .line 339
-    move-object v3, v1
-
-    .line 340
-    invoke-direct/range {v3 .. v10}, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;-><init>(ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Ljava/lang/String;ZI)V
-
-    .line 341
-    :goto_4
+    .line 129
     move-object v2, v1
 
-    .line 344
-    goto :goto_5
+    .line 131
+    invoke-direct/range {v2 .. v9}, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;-><init>(ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Ljava/lang/String;ZI)V
 
-    .line 345
-    :cond_c
-    iget-object v1, v1, Lcom/android/systemui/media/controls/domain/pipeline/AboutToConnectDevice;->backupMediaDeviceData:Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
-
-    .line 346
+    .line 132
     goto :goto_4
 
-    .line 348
-    :goto_5
-    if-nez v2, :cond_d
+    .line 135
+    :cond_4
+    iget-object v0, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->aboutToConnectDeviceOverride:Lcom/android/systemui/media/controls/domain/pipeline/AboutToConnectDevice;
 
-    .line 349
+    .line 136
+    if-nez v0, :cond_5
+
+    .line 138
+    goto :goto_2
+
+    .line 140
+    :cond_5
+    iget-object v1, v0, Lcom/android/systemui/media/controls/domain/pipeline/AboutToConnectDevice;->fullMediaDevice:Lcom/android/settingslib/media/MediaDevice;
+
+    .line 141
+    if-eqz v1, :cond_6
+
+    .line 143
+    new-instance v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
+
+    .line 145
+    invoke-virtual {v1}, Lcom/android/settingslib/media/MediaDevice;->getIconWithoutBackground()Landroid/graphics/drawable/Drawable;
+
+    .line 147
+    move-result-object v4
+
+    .line 150
+    invoke-virtual {v1}, Lcom/android/settingslib/media/MediaDevice;->getName()Ljava/lang/String;
+
+    .line 151
+    move-result-object v5
+
+    .line 154
+    invoke-virtual {v1}, Lcom/android/settingslib/media/MediaDevice;->getId()Ljava/lang/String;
+
+    .line 155
+    move-result-object v7
+
+    .line 158
+    const/4 v3, 0x1
+
+    .line 159
+    const/16 v9, 0x8
+
+    .line 160
+    const/4 v6, 0x0
+
+    .line 162
+    const/4 v8, 0x0
+
+    .line 163
+    move-object v2, v0
+
+    .line 164
+    invoke-direct/range {v2 .. v9}, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;-><init>(ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Ljava/lang/String;ZI)V
+
+    .line 165
+    :goto_1
+    move-object v1, v0
+
+    .line 168
+    goto :goto_2
+
+    .line 169
+    :cond_6
+    iget-object v0, v0, Lcom/android/systemui/media/controls/domain/pipeline/AboutToConnectDevice;->backupMediaDeviceData:Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
+
+    .line 170
+    goto :goto_1
+
+    .line 172
+    :goto_2
+    if-nez v1, :cond_7
+
+    .line 173
+    goto :goto_3
+
+    .line 175
+    :cond_7
+    move-object v10, v1
+
+    .line 176
+    :goto_3
+    move-object v1, v10
+
+    .line 177
+    :cond_8
+    :goto_4
+    if-nez v1, :cond_9
+
+    .line 178
+    sget-object v1, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->EMPTY_AND_DISABLED_MEDIA_DEVICE_DATA:Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
+
+    .line 180
+    :cond_9
+    iget-object v0, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->current:Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
+
+    .line 182
+    if-nez v0, :cond_a
+
+    .line 184
+    goto :goto_5
+
+    .line 186
+    :cond_a
+    iget-boolean v2, v1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->enabled:Z
+
+    .line 187
+    iget-boolean v3, v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->enabled:Z
+
+    .line 189
+    if-ne v2, v3, :cond_b
+
+    .line 191
+    iget-object v2, v1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->name:Ljava/lang/CharSequence;
+
+    .line 193
+    iget-object v3, v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->name:Ljava/lang/CharSequence;
+
+    .line 195
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 197
+    move-result v2
+
+    .line 200
+    if-eqz v2, :cond_b
+
+    .line 201
+    iget-object v2, v1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->intent:Landroid/app/PendingIntent;
+
+    .line 203
+    iget-object v3, v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->intent:Landroid/app/PendingIntent;
+
+    .line 205
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 207
+    move-result v2
+
+    .line 210
+    if-eqz v2, :cond_b
+
+    .line 211
+    iget-object v2, v1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->id:Ljava/lang/String;
+
+    .line 213
+    iget-object v3, v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->id:Ljava/lang/String;
+
+    .line 215
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 217
+    move-result v2
+
+    .line 220
+    if-eqz v2, :cond_b
+
+    .line 221
+    iget-boolean v2, v1, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->showBroadcastButton:Z
+
+    .line 223
+    iget-boolean v0, v0, Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;->showBroadcastButton:Z
+
+    .line 225
+    if-ne v2, v0, :cond_b
+
+    .line 227
+    const/4 v0, 0x1
+
+    .line 229
     goto :goto_6
 
-    .line 351
-    :cond_d
-    move-object v11, v2
+    .line 230
+    :cond_b
+    :goto_5
+    const/4 v0, 0x0
 
-    .line 352
+    .line 231
     :goto_6
-    move-object v2, v11
+    iget-boolean v2, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->started:Z
 
-    .line 353
-    :cond_e
-    :goto_7
-    if-nez v2, :cond_f
+    .line 232
+    if-eqz v2, :cond_c
 
-    .line 354
-    sget-object v2, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->EMPTY_AND_DISABLED_MEDIA_DEVICE_DATA:Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
+    .line 234
+    if-nez v0, :cond_d
 
-    .line 356
-    :cond_f
-    invoke-virtual {v0, v2}, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->setCurrent(Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;)V
+    .line 236
+    :cond_c
+    iput-object v1, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->current:Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;
 
-    .line 358
-    :goto_8
+    .line 238
+    iget-object v0, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;->this$0:Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
+
+    .line 240
+    iget-object v2, v0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->fgExecutor:Ljava/util/concurrent/Executor;
+
+    .line 242
+    new-instance v3, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry$current$1;
+
+    .line 244
+    invoke-direct {v3, v0, p0, v1}, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry$current$1;-><init>(Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager$Entry;Lcom/android/systemui/media/controls/shared/model/MediaDeviceData;)V
+
+    .line 246
+    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 249
+    :cond_d
     return-void
-    .line 361
+    .line 252
 .end method

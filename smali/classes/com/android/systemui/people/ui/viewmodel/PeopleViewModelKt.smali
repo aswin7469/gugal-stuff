@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/people/ui/viewmodel/PeopleViewModelKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -210,7 +210,7 @@
     move-result-object v1
 
     .line 17
-    const v2, 0x7f0700a1    # @dimen/avatar_size_for_medium '52.0dp'
+    const v2, 0x7f0700a7    # @dimen/avatar_size_for_medium '52.0dp'
 
     .line 18
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F

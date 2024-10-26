@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/material3/SliderDefaults;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -1114,7 +1114,7 @@
 .end method
 
 .method public final Track-4EFweAY(Landroidx/compose/material3/SliderState;Landroidx/compose/ui/Modifier;ZLandroidx/compose/material3/SliderColors;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;FFLandroidx/compose/runtime/Composer;II)V
-    .locals 34
+    .locals 39
 
     .line 1
     move-object/from16 v14, p1
@@ -1749,7 +1749,7 @@
     move-object/from16 v19, v6
 
     .line 343
-    move-object/from16 v33, v11
+    move-object/from16 v38, v11
 
     .line 345
     move-object v11, v8
@@ -1761,7 +1761,7 @@
     move v10, v9
 
     .line 349
-    move-object/from16 v9, v33
+    move-object/from16 v9, v38
 
     .line 350
     goto/16 :goto_1a
@@ -2070,18 +2070,18 @@
     const/high16 v6, 0x43340000    # 180.0f
 
     .line 520
-    move/from16 v28, v6
+    move/from16 v32, v6
 
     .line 522
     goto :goto_1d
 
     .line 524
     :cond_30
-    move/from16 v28, v26
+    move/from16 v32, v26
 
     .line 525
     :goto_1d
-    cmpg-float v6, v28, v26
+    cmpg-float v6, v32, v26
 
     .line 527
     if-nez v6, :cond_31
@@ -2095,10 +2095,10 @@
 
     .line 533
     :cond_31
-    const/16 v30, 0x0
+    const/16 v35, 0x0
 
     .line 534
-    const v32, 0x1feff
+    const v37, 0x1feff
 
     .line 536
     const/16 v26, 0x0
@@ -2107,368 +2107,383 @@
     const/16 v27, 0x0
 
     .line 541
-    const/16 v29, 0x0
+    const/16 v28, 0x0
 
     .line 543
-    const/16 v31, 0x0
+    const/16 v29, 0x0
 
     .line 545
-    invoke-static/range {v25 .. v32}, Landroidx/compose/ui/graphics/GraphicsLayerModifierKt;->graphicsLayer-Ap8cVGQ$default(Landroidx/compose/ui/Modifier;FFFLandroidx/compose/ui/graphics/Shape;ZII)Landroidx/compose/ui/Modifier;
+    const/16 v30, 0x0
 
     .line 547
-    move-result-object v25
+    const/16 v31, 0x0
 
-    .line 550
-    goto :goto_1e
+    .line 549
+    const/16 v33, 0x0
 
     .line 551
+    const/16 v34, 0x0
+
+    .line 553
+    const/16 v36, 0x0
+
+    .line 555
+    invoke-static/range {v25 .. v37}, Landroidx/compose/ui/graphics/GraphicsLayerModifierKt;->graphicsLayer-Ap8cVGQ$default(Landroidx/compose/ui/Modifier;FFFFFFFLandroidx/compose/ui/graphics/Shape;ZLandroidx/compose/ui/graphics/AndroidRenderEffect;II)Landroidx/compose/ui/Modifier;
+
+    .line 557
+    move-result-object v25
+
+    .line 560
+    goto :goto_1e
+
+    .line 561
     :goto_1f
     invoke-virtual {v12, v14}, Landroidx/compose/runtime/ComposerImpl;->changedInstance(Ljava/lang/Object;)Z
 
-    .line 552
+    .line 562
     move-result v6
 
-    .line 555
+    .line 565
     invoke-virtual {v12, v2, v3}, Landroidx/compose/runtime/ComposerImpl;->changed(J)Z
 
-    .line 556
+    .line 566
     move-result v25
 
-    .line 559
+    .line 569
     or-int v6, v6, v25
 
-    .line 560
+    .line 570
     invoke-virtual {v12, v4, v5}, Landroidx/compose/runtime/ComposerImpl;->changed(J)Z
 
-    .line 562
+    .line 572
     move-result v25
 
-    .line 565
+    .line 575
     or-int v6, v6, v25
 
-    .line 566
+    .line 576
     invoke-virtual {v12, v0, v1}, Landroidx/compose/runtime/ComposerImpl;->changed(J)Z
 
-    .line 568
-    move-result v25
-
-    .line 571
-    or-int v6, v6, v25
-
-    .line 572
-    invoke-virtual {v12, v9, v10}, Landroidx/compose/runtime/ComposerImpl;->changed(J)Z
-
-    .line 574
-    move-result v25
-
-    .line 577
-    or-int v6, v6, v25
-
     .line 578
-    const/high16 v25, 0x380000
+    move-result v25
 
-    .line 580
-    move-wide/from16 v26, v0
+    .line 581
+    or-int v6, v6, v25
 
     .line 582
-    and-int v0, v7, v25
+    invoke-virtual {v12, v9, v10}, Landroidx/compose/runtime/ComposerImpl;->changed(J)Z
 
     .line 584
-    const/high16 v1, 0x100000
+    move-result v25
 
-    .line 586
-    if-ne v0, v1, :cond_32
+    .line 587
+    or-int v6, v6, v25
 
     .line 588
-    const/4 v1, 0x1
+    const/high16 v25, 0x380000
 
     .line 590
+    move-wide/from16 v26, v0
+
+    .line 592
+    and-int v0, v7, v25
+
+    .line 594
+    const/high16 v1, 0x100000
+
+    .line 596
+    if-ne v0, v1, :cond_32
+
+    .line 598
+    const/4 v1, 0x1
+
+    .line 600
     goto :goto_20
 
-    .line 591
+    .line 601
     :cond_32
     const/4 v1, 0x0
 
-    .line 592
+    .line 602
     :goto_20
     or-int v0, v6, v1
 
-    .line 593
+    .line 603
     const/high16 v1, 0x1c00000
 
-    .line 595
+    .line 605
     and-int/2addr v1, v7
 
-    .line 597
+    .line 607
     const/high16 v6, 0x800000
 
-    .line 598
+    .line 608
     if-ne v1, v6, :cond_33
 
-    .line 600
+    .line 610
     const/4 v1, 0x1
 
-    .line 602
+    .line 612
     goto :goto_21
 
-    .line 603
+    .line 613
     :cond_33
     const/4 v1, 0x0
 
-    .line 604
+    .line 614
     :goto_21
     or-int/2addr v0, v1
 
-    .line 605
+    .line 615
     const v1, 0xe000
 
-    .line 606
+    .line 616
     and-int/2addr v1, v7
 
-    .line 609
+    .line 619
     xor-int/lit16 v1, v1, 0x6000
 
-    .line 610
+    .line 620
     const/16 v6, 0x4000
 
-    .line 612
+    .line 622
     if-le v1, v6, :cond_34
 
-    .line 614
+    .line 624
     move-object/from16 v1, p2
 
-    .line 616
+    .line 626
     invoke-virtual {v12, v1}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
 
-    .line 618
+    .line 628
     move-result v17
 
-    .line 621
+    .line 631
     if-nez v17, :cond_35
 
-    .line 622
+    .line 632
     :cond_34
     and-int/lit16 v1, v7, 0x6000
 
-    .line 624
+    .line 634
     if-ne v1, v6, :cond_36
 
-    .line 626
+    .line 636
     :cond_35
     const/4 v1, 0x1
 
-    .line 628
+    .line 638
     goto :goto_22
 
-    .line 629
+    .line 639
     :cond_36
     const/4 v1, 0x0
 
-    .line 630
+    .line 640
     :goto_22
     or-int/2addr v0, v1
 
-    .line 631
+    .line 641
     const/high16 v1, 0x70000
 
-    .line 632
+    .line 642
     and-int/2addr v1, v7
 
-    .line 634
+    .line 644
     const/high16 v6, 0x20000
 
-    .line 635
+    .line 645
     if-ne v1, v6, :cond_37
 
-    .line 637
+    .line 647
     const/4 v6, 0x1
 
-    .line 639
+    .line 649
     goto :goto_23
 
-    .line 640
+    .line 650
     :cond_37
     const/4 v6, 0x0
 
-    .line 641
+    .line 651
     :goto_23
     or-int/2addr v0, v6
 
-    .line 642
+    .line 652
     invoke-virtual {v12}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
 
-    .line 643
+    .line 653
     move-result-object v1
 
-    .line 646
+    .line 656
     if-nez v0, :cond_39
 
-    .line 647
+    .line 657
     move-object/from16 v0, p9
 
-    .line 649
+    .line 659
     if-ne v1, v0, :cond_38
 
-    .line 651
+    .line 661
     goto :goto_24
 
-    .line 653
+    .line 663
     :cond_38
     move-object/from16 v17, p2
 
-    .line 654
+    .line 664
     move-object/from16 v16, v8
 
-    .line 656
+    .line 666
     move-object/from16 v21, v11
 
-    .line 658
+    .line 668
     move-object/from16 v23, v15
 
-    .line 660
+    .line 670
     move/from16 v18, v24
 
-    .line 662
+    .line 672
     move-object v15, v12
 
-    .line 664
+    .line 674
     goto :goto_25
 
-    .line 665
+    .line 675
     :cond_39
     :goto_24
     new-instance v6, Landroidx/compose/material3/SliderDefaults$Track$6$1;
 
-    .line 666
+    .line 676
     move-wide/from16 v16, v26
 
-    .line 668
+    .line 678
     move-object v0, v6
 
-    .line 670
+    .line 680
     move-object/from16 v18, p2
 
-    .line 671
+    .line 681
     move-object/from16 v1, p1
 
-    .line 673
+    .line 683
     move-object v14, v6
 
-    .line 675
+    .line 685
     move-wide/from16 v6, v16
 
-    .line 676
+    .line 686
     move-object/from16 v16, v8
 
-    .line 678
+    .line 688
     move-object/from16 v17, v18
 
-    .line 680
+    .line 690
     move-wide v8, v9
 
-    .line 682
+    .line 692
     move/from16 v18, v24
 
-    .line 683
+    .line 693
     move/from16 v10, v20
 
-    .line 685
+    .line 695
     move-object/from16 v21, v11
 
-    .line 687
+    .line 697
     move/from16 v11, v22
 
-    .line 689
+    .line 699
     move-object/from16 v23, v15
 
-    .line 691
+    .line 701
     move-object v15, v12
 
-    .line 693
+    .line 703
     move-object/from16 v12, v17
 
-    .line 694
+    .line 704
     move-object/from16 v13, v19
 
-    .line 696
+    .line 706
     invoke-direct/range {v0 .. v13}, Landroidx/compose/material3/SliderDefaults$Track$6$1;-><init>(Landroidx/compose/material3/SliderState;JJJJFFLkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;)V
 
-    .line 698
+    .line 708
     invoke-virtual {v15, v14}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 701
+    .line 711
     move-object v1, v14
 
-    .line 704
+    .line 714
     :goto_25
     check-cast v1, Lkotlin/jvm/functions/Function1;
 
-    .line 705
+    .line 715
     move-object/from16 v2, v23
 
-    .line 707
+    .line 717
     const/4 v0, 0x0
 
-    .line 709
+    .line 719
     invoke-static {v2, v1, v15, v0}, Landroidx/compose/foundation/CanvasKt;->Canvas(Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
 
-    .line 710
+    .line 720
     move-object/from16 v5, v16
 
-    .line 713
+    .line 723
     move-object/from16 v6, v17
 
-    .line 715
+    .line 725
     move/from16 v4, v18
 
-    .line 717
+    .line 727
     move-object/from16 v7, v19
 
-    .line 719
+    .line 729
     move/from16 v8, v20
 
-    .line 721
+    .line 731
     move-object/from16 v3, v21
 
-    .line 723
+    .line 733
     move/from16 v9, v22
 
-    .line 725
+    .line 735
     :goto_26
     invoke-virtual {v15}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
 
-    .line 727
+    .line 737
     move-result-object v12
 
-    .line 730
+    .line 740
     if-eqz v12, :cond_3a
 
-    .line 731
+    .line 741
     new-instance v13, Landroidx/compose/material3/SliderDefaults$Track$7;
 
-    .line 733
+    .line 743
     move-object v0, v13
 
-    .line 735
+    .line 745
     move-object/from16 v1, p0
 
-    .line 736
+    .line 746
     move-object/from16 v2, p1
 
-    .line 738
+    .line 748
     move/from16 v10, p10
 
-    .line 740
+    .line 750
     move/from16 v11, p11
 
-    .line 742
+    .line 752
     invoke-direct/range {v0 .. v11}, Landroidx/compose/material3/SliderDefaults$Track$7;-><init>(Landroidx/compose/material3/SliderDefaults;Landroidx/compose/material3/SliderState;Landroidx/compose/ui/Modifier;ZLandroidx/compose/material3/SliderColors;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;FFII)V
 
-    .line 744
+    .line 754
     iput-object v13, v12, Landroidx/compose/runtime/RecomposeScopeImpl;->block:Lkotlin/jvm/functions/Function2;
 
-    .line 747
+    .line 757
     :cond_3a
     return-void
-    .line 749
+    .line 759
 .end method

@@ -1,6 +1,6 @@
 .class final Landroidx/compose/ui/platform/WindowRecomposerPolicy$createAndInstallWindowRecomposer$unsetJob$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -99,7 +99,7 @@
     iget v1, p0, Landroidx/compose/ui/platform/WindowRecomposerPolicy$createAndInstallWindowRecomposer$unsetJob$1;->label:I
 
     .line 4
-    const v2, 0x7f0b00b3    # @id/androidx_compose_ui_view_composition_context
+    const v2, 0x7f0a00b6    # @id/androidx_compose_ui_view_composition_context
 
     .line 6
     const/4 v3, 0x0

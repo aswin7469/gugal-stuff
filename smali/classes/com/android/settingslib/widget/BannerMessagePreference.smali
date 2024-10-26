@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/BannerMessagePreference;
 .super Landroidx/preference/Preference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -62,7 +62,7 @@
     invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setSelectable(Z)V
 
     .line 31
-    const v1, 0x7f0e0244    # @layout/settingslib_banner_message 'res/layout/settingslib_banner_message.xml'
+    const v1, 0x7f0d0254    # @layout/settingslib_banner_message 'res/layout/settingslib_banner_message.xml'
 
     .line 34
     iput v1, p0, Landroidx/preference/Preference;->mLayoutResId:I
@@ -127,7 +127,7 @@
     iget-object v0, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
     .line 5
-    const v1, 0x7f0b00ff    # @id/banner_title
+    const v1, 0x7f0a0103    # @id/banner_title
 
     .line 7
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -168,7 +168,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 29
-    const v1, 0x7f0b00fe    # @id/banner_summary
+    const v1, 0x7f0a0102    # @id/banner_summary
 
     .line 32
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -192,7 +192,7 @@
     iget-object v1, p0, Lcom/android/settingslib/widget/BannerMessagePreference;->mPositiveButtonInfo:Lcom/android/settingslib/widget/BannerMessagePreference$ButtonInfo;
 
     .line 48
-    const v2, 0x7f0b00fc    # @id/banner_positive_btn
+    const v2, 0x7f0a0100    # @id/banner_positive_btn
 
     .line 50
     invoke-virtual {p1, v2}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -210,7 +210,7 @@
     iget-object v1, p0, Lcom/android/settingslib/widget/BannerMessagePreference;->mNegativeButtonInfo:Lcom/android/settingslib/widget/BannerMessagePreference$ButtonInfo;
 
     .line 61
-    const v2, 0x7f0b00fb    # @id/banner_negative_btn
+    const v2, 0x7f0a00ff    # @id/banner_negative_btn
 
     .line 63
     invoke-virtual {p1, v2}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -252,7 +252,7 @@
     move-result v2
 
     .line 91
-    const v5, 0x7f0b00fa    # @id/banner_icon
+    const v5, 0x7f0a00fe    # @id/banner_icon
 
     .line 92
     invoke-virtual {p1, v5}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -279,7 +279,7 @@
     iget-object v6, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
     .line 109
-    const v7, 0x7f08096c    # @drawable/ic_warning 'res/drawable/ic_warning.xml'
+    const v7, 0x7f08099f    # @drawable/ic_warning 'res/drawable/ic_warning.xml'
 
     .line 111
     invoke-virtual {v6, v7}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -359,7 +359,7 @@
     iget-object v0, p0, Lcom/android/settingslib/widget/BannerMessagePreference;->mDismissButtonInfo:Lcom/android/settingslib/widget/BannerMessagePreference$DismissButtonInfo;
 
     .line 166
-    const v1, 0x7f0b00f9    # @id/banner_dismiss_btn
+    const v1, 0x7f0a00fd    # @id/banner_dismiss_btn
 
     .line 168
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -392,7 +392,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
 
     .line 189
-    const v0, 0x7f0b00fd    # @id/banner_subtitle
+    const v0, 0x7f0a0101    # @id/banner_subtitle
 
     .line 192
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

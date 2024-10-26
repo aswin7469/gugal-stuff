@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/domain/interactor/LightRevealScrimInteractor$listenForStartedKeyguardTransitionStep$1$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -156,22 +156,25 @@
     sget-object p2, Lcom/android/systemui/keyguard/data/repository/LightRevealScrimRepositoryImpl;->TAG:Ljava/lang/String;
 
     .line 80
-    const-string v0, "startRevealAmountAnimator, reveal"
+    const-string/jumbo v0, "startRevealAmountAnimator, reveal"
 
     .line 82
     iget-object p0, p0, Lcom/android/systemui/keyguard/data/repository/LightRevealScrimRepositoryImpl;->scrimLogger:Lcom/android/keyguard/logging/ScrimLogger;
 
-    .line 84
+    .line 85
     invoke-virtual {p0, p2, v0, p1}, Lcom/android/keyguard/logging/ScrimLogger;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 86
+    .line 87
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 89
+    .line 90
     return-object p0
 
-    .line 91
+    .line 92
+    nop
+
+    .line 93
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -187,5 +190,5 @@
         :pswitch_1
         :pswitch_1
     .end packed-switch
-    .line 92
+    .line 94
 .end method

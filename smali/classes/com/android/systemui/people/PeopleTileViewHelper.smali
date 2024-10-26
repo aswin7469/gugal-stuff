@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/people/PeopleTileViewHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -146,7 +146,7 @@
     move-result-object v1
 
     .line 30
-    const v2, 0x7f07020f    # @dimen/default_width '146.0dp'
+    const v2, 0x7f070231    # @dimen/default_width '146.0dp'
 
     .line 31
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -167,7 +167,7 @@
     move-result-object v2
 
     .line 43
-    const v3, 0x7f07020c    # @dimen/default_height '92.0dp'
+    const v3, 0x7f07022e    # @dimen/default_height '92.0dp'
 
     .line 44
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -320,7 +320,7 @@
     if-nez p3, :cond_0
 
     .line 4
-    const p1, 0x7f0806e2    # @drawable/ic_avatar_with_badge 'res/drawable/ic_avatar_with_badge.xml'
+    const p1, 0x7f0806f3    # @drawable/ic_avatar_with_badge 'res/drawable/ic_avatar_with_badge.xml'
 
     .line 6
     invoke-virtual {p0, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -706,7 +706,7 @@
     move-result v0
 
     .line 5
-    const v1, 0x7f0b02c5    # @id/emojis
+    const v1, 0x7f0a02de    # @id/emojis
 
     .line 6
     if-eqz v0, :cond_0
@@ -722,19 +722,19 @@
 
     .line 16
     :cond_0
-    const v0, 0x7f0b02c2    # @id/emoji1
+    const v0, 0x7f0a02db    # @id/emoji1
 
     .line 17
     invoke-virtual {p0, v0, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 20
-    const v0, 0x7f0b02c3    # @id/emoji2
+    const v0, 0x7f0a02dc    # @id/emoji2
 
     .line 23
     invoke-virtual {p0, v0, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 26
-    const v0, 0x7f0b02c4    # @id/emoji3
+    const v0, 0x7f0a02dd    # @id/emoji3
 
     .line 29
     invoke-virtual {p0, v0, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
@@ -760,7 +760,7 @@
     move-result v0
 
     .line 5
-    const v1, 0x7f0b061e    # @id/punctuations
+    const v1, 0x7f0a0647    # @id/punctuations
 
     .line 6
     if-eqz v0, :cond_0
@@ -776,37 +776,37 @@
 
     .line 16
     :cond_0
-    const v0, 0x7f0b0618    # @id/punctuation1
+    const v0, 0x7f0a0641    # @id/punctuation1
 
     .line 17
     invoke-virtual {p0, v0, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 20
-    const v0, 0x7f0b0619    # @id/punctuation2
+    const v0, 0x7f0a0642    # @id/punctuation2
 
     .line 23
     invoke-virtual {p0, v0, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 26
-    const v0, 0x7f0b061a    # @id/punctuation3
+    const v0, 0x7f0a0643    # @id/punctuation3
 
     .line 29
     invoke-virtual {p0, v0, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 32
-    const v0, 0x7f0b061b    # @id/punctuation4
+    const v0, 0x7f0a0644    # @id/punctuation4
 
     .line 35
     invoke-virtual {p0, v0, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 38
-    const v0, 0x7f0b061c    # @id/punctuation5
+    const v0, 0x7f0a0645    # @id/punctuation5
 
     .line 41
     invoke-virtual {p0, v0, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 44
-    const v0, 0x7f0b061d    # @id/punctuation6
+    const v0, 0x7f0a0646    # @id/punctuation6
 
     .line 47
     invoke-virtual {p0, v0, p1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
@@ -858,7 +858,7 @@
     if-eq v2, v4, :cond_1
 
     .line 18
-    const v5, 0x7f070921    # @dimen/required_height_for_medium '80.0dp'
+    const v5, 0x7f070971    # @dimen/required_height_for_medium '80.0dp'
 
     .line 20
     invoke-virtual {v1, v5}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -873,35 +873,35 @@
     if-lt v6, v5, :cond_0
 
     .line 29
-    const v5, 0x7f0e01d7    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
+    const v5, 0x7f0d01e4    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
 
     .line 31
     goto :goto_0
 
     .line 34
     :cond_0
-    const v5, 0x7f0e01d8    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
+    const v5, 0x7f0d01e5    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
 
     .line 35
     goto :goto_0
 
     .line 38
     :cond_1
-    const v5, 0x7f0e01db    # @layout/people_tile_with_suppression_detail_content_vertical 'res/layout/people_tile_with_suppression_detail_content_vertical.xml'
+    const v5, 0x7f0d01e8    # @layout/people_tile_with_suppression_detail_content_vertical 'res/layout/people_tile_with_suppression_detail_content_vertical.xml'
 
     .line 39
     goto :goto_0
 
     .line 42
     :cond_2
-    const v5, 0x7f0e01da    # @layout/people_tile_with_suppression_detail_content_horizontal 'res/layout/people_tile_with_suppression_detail_content_horizontal.xml'
+    const v5, 0x7f0d01e7    # @layout/people_tile_with_suppression_detail_content_horizontal 'res/layout/people_tile_with_suppression_detail_content_horizontal.xml'
 
     .line 43
     :goto_0
     invoke-direct {v7, v0, v5}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     .line 46
-    const v0, 0x7f0700a2    # @dimen/avatar_size_for_medium_empty '64.0dp'
+    const v0, 0x7f0700a8    # @dimen/avatar_size_for_medium_empty '64.0dp'
 
     .line 49
     invoke-virtual {v1, v0}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -910,7 +910,7 @@
     move-result v0
 
     .line 55
-    const v5, 0x7f07067a    # @dimen/max_people_avatar_size '108.0dp'
+    const v5, 0x7f0706bc    # @dimen/max_people_avatar_size '108.0dp'
 
     .line 56
     invoke-virtual {v1, v5}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -922,7 +922,7 @@
     iget-object v6, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 63
-    const v9, 0x7f14072a    # @string/paused_by_dnd 'Paused by Do Not Disturb'
+    const v9, 0x7f130785    # @string/paused_by_dnd 'Paused by Do Not Disturb'
 
     .line 65
     invoke-virtual {v6, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -931,7 +931,7 @@
     move-result-object v6
 
     .line 71
-    const v9, 0x7f0b07e8    # @id/text_content
+    const v9, 0x7f0a0817    # @id/text_content
 
     .line 72
     invoke-virtual {v7, v9, v6}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
@@ -940,14 +940,14 @@
     if-ne v2, v4, :cond_3
 
     .line 78
-    const v10, 0x7f0701b0    # @dimen/content_text_size_for_large '14.0sp'
+    const v10, 0x7f0701d1    # @dimen/content_text_size_for_large '14.0sp'
 
     .line 80
     goto :goto_1
 
     .line 83
     :cond_3
-    const v10, 0x7f0701b1    # @dimen/content_text_size_for_medium '12.0sp'
+    const v10, 0x7f0701d2    # @dimen/content_text_size_for_medium '12.0sp'
 
     .line 84
     :goto_1
@@ -1030,7 +1030,7 @@
     if-nez v2, :cond_5
 
     .line 130
-    const v16, 0x7f07091d    # @dimen/regular_predefined_icon '18.0dp'
+    const v16, 0x7f07096d    # @dimen/regular_predefined_icon '18.0dp'
 
     .line 132
     :goto_2
@@ -1041,7 +1041,7 @@
 
     .line 137
     :cond_5
-    const v16, 0x7f070379    # @dimen/largest_predefined_icon '32.0dp'
+    const v16, 0x7f0703b5    # @dimen/largest_predefined_icon '32.0dp'
 
     .line 138
     goto :goto_2
@@ -1060,7 +1060,7 @@
     sub-int/2addr v13, v9
 
     .line 148
-    const v12, 0x7f07085e    # @dimen/padding_between_suppressed_layout_items '8.0dp'
+    const v12, 0x7f0708ae    # @dimen/padding_between_suppressed_layout_items '8.0dp'
 
     .line 149
     invoke-virtual {v1, v12}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -1235,7 +1235,7 @@
 
     .line 257
     :goto_5
-    const v8, 0x7f0b05ee    # @id/predefined_icon
+    const v8, 0x7f0a0617    # @id/predefined_icon
 
     .line 258
     if-gt v0, v9, :cond_7
@@ -1253,7 +1253,7 @@
     sub-int/2addr v13, v12
 
     .line 267
-    const v1, 0x7f0b07e8    # @id/text_content
+    const v1, 0x7f0a0817    # @id/text_content
 
     .line 268
     const/4 v2, 0x0
@@ -1357,7 +1357,7 @@
     move-result-object v0
 
     .line 329
-    const v2, 0x7f0e01d7    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
+    const v2, 0x7f0d01e4    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
 
     .line 330
     invoke-direct {v7, v0, v2}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
@@ -1377,7 +1377,7 @@
     move-result v0
 
     .line 342
-    const v1, 0x7f0b04cd    # @id/messages_count
+    const v1, 0x7f0a04f1    # @id/messages_count
 
     .line 343
     const/16 v2, 0x8
@@ -1386,7 +1386,7 @@
     invoke-virtual {v7, v1, v2}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 348
-    const v1, 0x7f0b054a    # @id/name
+    const v1, 0x7f0a056e    # @id/name
 
     .line 351
     invoke-virtual {v7, v1, v2}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
@@ -1402,7 +1402,7 @@
     invoke-virtual {v7, v8, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 361
-    const v1, 0x7f0808fa    # @drawable/ic_qs_dnd_on 'res/drawable/ic_qs_dnd_on.xml'
+    const v1, 0x7f08091e    # @drawable/ic_qs_dnd_on 'res/drawable/ic_qs_dnd_on.xml'
 
     .line 364
     invoke-virtual {v7, v8, v1}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
@@ -1453,7 +1453,7 @@
     if-eq v3, v4, :cond_1
 
     .line 18
-    const v3, 0x7f070921    # @dimen/required_height_for_medium '80.0dp'
+    const v3, 0x7f070971    # @dimen/required_height_for_medium '80.0dp'
 
     .line 20
     invoke-virtual {v0, v3}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -1468,28 +1468,28 @@
     if-lt v6, v3, :cond_0
 
     .line 29
-    const v3, 0x7f0e01d7    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
+    const v3, 0x7f0d01e4    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
 
     .line 31
     goto :goto_0
 
     .line 34
     :cond_0
-    const v3, 0x7f0e01d8    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
+    const v3, 0x7f0d01e5    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
 
     .line 35
     goto :goto_0
 
     .line 38
     :cond_1
-    const v3, 0x7f0e01d2    # @layout/people_tile_large_with_status_content 'res/layout/people_tile_large_with_status_content.xml'
+    const v3, 0x7f0d01df    # @layout/people_tile_large_with_status_content 'res/layout/people_tile_large_with_status_content.xml'
 
     .line 39
     goto :goto_0
 
     .line 42
     :cond_2
-    const v3, 0x7f0e01d4    # @layout/people_tile_medium_with_content 'res/layout/people_tile_medium_with_content.xml'
+    const v3, 0x7f0d01e1    # @layout/people_tile_medium_with_content 'res/layout/people_tile_medium_with_content.xml'
 
     .line 43
     :goto_0
@@ -1511,13 +1511,13 @@
     move-result v3
 
     .line 59
-    const v6, 0x7f14014a    # @string/audio_status 'Listening'
+    const v6, 0x7f130150    # @string/audio_status 'Listening'
 
     .line 60
-    const v7, 0x7f1409fe    # @string/video_status 'Watching'
+    const v7, 0x7f130a87    # @string/video_status 'Watching'
 
     .line 63
-    const v8, 0x7f1403c0    # @string/game_status 'Playing'
+    const v8, 0x7f130402    # @string/game_status 'Playing'
 
     .line 66
     const-string v9, ""
@@ -1545,7 +1545,7 @@
     iget-object v2, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 82
-    const v3, 0x7f1409bd    # @string/upcoming_birthday_status 'Birthday soon'
+    const v3, 0x7f130a44    # @string/upcoming_birthday_status 'Birthday soon'
 
     .line 84
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1561,7 +1561,7 @@
     iget-object v2, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 92
-    const v3, 0x7f14055a    # @string/location_status 'Sharing location'
+    const v3, 0x7f1305b0    # @string/location_status 'Sharing location'
 
     .line 94
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1616,7 +1616,7 @@
     iget-object v2, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 123
-    const v3, 0x7f1406bf    # @string/new_story_status 'New story'
+    const v3, 0x7f130719    # @string/new_story_status 'New story'
 
     .line 125
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1632,7 +1632,7 @@
     iget-object v2, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 133
-    const v3, 0x7f14013f    # @string/anniversary_status 'Anniversary'
+    const v3, 0x7f130144    # @string/anniversary_status 'Anniversary'
 
     .line 135
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1648,7 +1648,7 @@
     iget-object v2, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 143
-    const v3, 0x7f140199    # @string/birthday_status 'Birthday'
+    const v3, 0x7f1301a0    # @string/birthday_status 'Birthday'
 
     .line 145
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1662,7 +1662,7 @@
     invoke-virtual {v0, v1}, Lcom/android/systemui/people/PeopleTileViewHelper;->setPredefinedIconVisible(Landroid/widget/RemoteViews;)V
 
     .line 152
-    const v3, 0x7f0b07e8    # @id/text_content
+    const v3, 0x7f0a0817    # @id/text_content
 
     .line 155
     invoke-virtual {v1, v3, v2}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
@@ -1715,19 +1715,19 @@
     const/4 v14, 0x0
 
     .line 191
-    const v15, 0x7f0b054a    # @id/name
+    const v15, 0x7f0a056e    # @id/name
 
     .line 192
     if-eqz v10, :cond_7
 
     .line 195
-    const v6, 0x7f0b06bf    # @id/scrim_layout
+    const v6, 0x7f0a06e8    # @id/scrim_layout
 
     .line 197
     invoke-virtual {v1, v6, v14}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 200
-    const v6, 0x7f0b0770    # @id/status_icon
+    const v6, 0x7f0a079f    # @id/status_icon
 
     .line 203
     invoke-virtual {v1, v6, v10}, Landroid/widget/RemoteViews;->setImageViewIcon(ILandroid/graphics/drawable/Icon;)V
@@ -1739,7 +1739,7 @@
     const/16 v2, 0x50
 
     .line 211
-    const v6, 0x7f0b01fb    # @id/content
+    const v6, 0x7f0a0206    # @id/content
 
     .line 213
     const-string v14, "setGravity"
@@ -1785,7 +1785,7 @@
     .line 246
     :cond_8
     :goto_2
-    const v2, 0x7f07009e    # @dimen/availability_dot_status_padding '8.0dp'
+    const v2, 0x7f0700a4    # @dimen/availability_dot_status_padding '8.0dp'
 
     .line 249
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/people/PeopleTileViewHelper;->setAvailabilityDotPadding(Landroid/widget/RemoteViews;I)V
@@ -1800,67 +1800,67 @@
     packed-switch v2, :pswitch_data_1
 
     .line 259
-    const v2, 0x7f0808e8    # @drawable/ic_person 'res/drawable/ic_person.xml'
+    const v2, 0x7f08090d    # @drawable/ic_person 'res/drawable/ic_person.xml'
 
     .line 262
     goto :goto_3
 
     .line 265
     :pswitch_8
-    const v2, 0x7f0807bd    # @drawable/ic_gift 'res/drawable/ic_gift.xml'
+    const v2, 0x7f0807df    # @drawable/ic_gift 'res/drawable/ic_gift.xml'
 
     .line 266
     goto :goto_3
 
     .line 269
     :pswitch_9
-    const v2, 0x7f0807ff    # @drawable/ic_location 'res/drawable/ic_location.xml'
+    const v2, 0x7f080821    # @drawable/ic_location 'res/drawable/ic_location.xml'
 
     .line 270
     goto :goto_3
 
     .line 273
     :pswitch_a
-    const v2, 0x7f0808eb    # @drawable/ic_play_games 'res/drawable/ic_play_games.xml'
+    const v2, 0x7f080910    # @drawable/ic_play_games 'res/drawable/ic_play_games.xml'
 
     .line 274
     goto :goto_3
 
     .line 277
     :pswitch_b
-    const v2, 0x7f08094a    # @drawable/ic_video 'res/drawable/ic_video.xml'
+    const v2, 0x7f08097d    # @drawable/ic_video 'res/drawable/ic_video.xml'
 
     .line 278
     goto :goto_3
 
     .line 281
     :pswitch_c
-    const v2, 0x7f0808d3    # @drawable/ic_music_note 'res/drawable/ic_music_note.xml'
+    const v2, 0x7f0808f7    # @drawable/ic_music_note 'res/drawable/ic_music_note.xml'
 
     .line 282
     goto :goto_3
 
     .line 285
     :pswitch_d
-    const v2, 0x7f0808e6    # @drawable/ic_pages 'res/drawable/ic_pages.xml'
+    const v2, 0x7f08090b    # @drawable/ic_pages 'res/drawable/ic_pages.xml'
 
     .line 286
     goto :goto_3
 
     .line 289
     :pswitch_e
-    const v2, 0x7f080705    # @drawable/ic_celebration 'res/drawable/ic_celebration.xml'
+    const v2, 0x7f08071b    # @drawable/ic_celebration 'res/drawable/ic_celebration.xml'
 
     .line 290
     goto :goto_3
 
     .line 293
     :pswitch_f
-    const v2, 0x7f0806f7    # @drawable/ic_cake 'res/drawable/ic_cake.xml'
+    const v2, 0x7f08070d    # @drawable/ic_cake 'res/drawable/ic_cake.xml'
 
     .line 294
     :goto_3
-    const v6, 0x7f0b05ee    # @id/predefined_icon
+    const v6, 0x7f0a0617    # @id/predefined_icon
 
     .line 297
     invoke-virtual {v1, v6, v2}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
@@ -1916,7 +1916,7 @@
     iget-object v7, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 332
-    const v8, 0x7f1409be    # @string/upcoming_birthday_status_content_description 'It's %1$s’s birthday soon'
+    const v8, 0x7f130a45    # @string/upcoming_birthday_status_content_description 'It's %1$s’s birthday soon'
 
     .line 334
     filled-new-array {v2}, [Ljava/lang/Object;
@@ -1938,7 +1938,7 @@
     iget-object v7, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 346
-    const v8, 0x7f14055b    # @string/location_status_content_description '%1$s is sharing location'
+    const v8, 0x7f1305b1    # @string/location_status_content_description '%1$s is sharing location'
 
     .line 348
     filled-new-array {v2}, [Ljava/lang/Object;
@@ -1986,7 +1986,7 @@
     iget-object v2, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 374
-    const v7, 0x7f14014a    # @string/audio_status 'Listening'
+    const v7, 0x7f130150    # @string/audio_status 'Listening'
 
     .line 376
     invoke-virtual {v2, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2002,7 +2002,7 @@
     iget-object v7, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 384
-    const v8, 0x7f1406c0    # @string/new_story_status_content_description '%1$s shared a new story'
+    const v8, 0x7f13071a    # @string/new_story_status_content_description '%1$s shared a new story'
 
     .line 386
     filled-new-array {v2}, [Ljava/lang/Object;
@@ -2024,7 +2024,7 @@
     iget-object v7, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 398
-    const v8, 0x7f140140    # @string/anniversary_status_content_description 'It's %1$s’s anniversary'
+    const v8, 0x7f130145    # @string/anniversary_status_content_description 'It's %1$s’s anniversary'
 
     .line 400
     filled-new-array {v2}, [Ljava/lang/Object;
@@ -2046,7 +2046,7 @@
     iget-object v7, v0, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 412
-    const v8, 0x7f14019a    # @string/birthday_status_content_description 'It's %1$s’s birthday'
+    const v8, 0x7f1301a1    # @string/birthday_status_content_description 'It's %1$s’s birthday'
 
     .line 414
     filled-new-array {v2}, [Ljava/lang/Object;
@@ -2080,7 +2080,7 @@
     move-result-object v0
 
     .line 436
-    const v7, 0x7f1406be    # @string/new_status_content_description '%1$s has a status update: %2$s'
+    const v7, 0x7f130718    # @string/new_status_content_description '%1$s has a status update: %2$s'
 
     .line 437
     invoke-virtual {v2, v7, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -2590,7 +2590,7 @@
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 56
-    const p1, 0x7f0701b1    # @dimen/content_text_size_for_medium '12.0sp'
+    const p1, 0x7f0701d2    # @dimen/content_text_size_for_medium '12.0sp'
 
     .line 59
     invoke-virtual {p0, p1}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -2613,7 +2613,7 @@
     move-result p1
 
     .line 5
-    const v0, 0x7f0700a1    # @dimen/avatar_size_for_medium '52.0dp'
+    const v0, 0x7f0700a7    # @dimen/avatar_size_for_medium '52.0dp'
 
     .line 6
     invoke-virtual {p0, v0}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -2622,10 +2622,10 @@
     move-result v1
 
     .line 12
-    const v2, 0x7f0e01d3    # @layout/people_tile_medium_empty 'res/layout/people_tile_medium_empty.xml'
+    const v2, 0x7f0d01e0    # @layout/people_tile_medium_empty 'res/layout/people_tile_medium_empty.xml'
 
     .line 13
-    const v3, 0x7f07067b    # @dimen/max_people_avatar_size_for_large_content '64.0dp'
+    const v3, 0x7f0706bd    # @dimen/max_people_avatar_size_for_large_content '64.0dp'
 
     .line 16
     if-ne p1, v2, :cond_0
@@ -2641,7 +2641,7 @@
 
     .line 25
     :cond_0
-    const v2, 0x7f0e01d4    # @layout/people_tile_medium_with_content 'res/layout/people_tile_medium_with_content.xml'
+    const v2, 0x7f0d01e1    # @layout/people_tile_medium_with_content 'res/layout/people_tile_medium_with_content.xml'
 
     .line 26
     if-ne p1, v2, :cond_1
@@ -2657,7 +2657,7 @@
 
     .line 35
     :cond_1
-    const v0, 0x7f0e01d7    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
+    const v0, 0x7f0d01e4    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
 
     .line 36
     iget v2, p0, Lcom/android/systemui/people/PeopleTileViewHelper;->mWidth:I
@@ -2669,7 +2669,7 @@
     if-ne p1, v0, :cond_2
 
     .line 43
-    const v0, 0x7f070787    # @dimen/name_text_size_for_small '14.0sp'
+    const v0, 0x7f0707c9    # @dimen/name_text_size_for_small '14.0sp'
 
     .line 45
     invoke-virtual {p0, v0}, Lcom/android/systemui/people/PeopleTileViewHelper;->getLineHeightFromResource(I)I
@@ -2703,7 +2703,7 @@
 
     .line 66
     :cond_2
-    const v0, 0x7f0e01d8    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
+    const v0, 0x7f0d01e5    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
 
     .line 67
     if-ne p1, v0, :cond_3
@@ -2722,10 +2722,10 @@
 
     .line 79
     :cond_3
-    const v0, 0x7f0e01d1    # @layout/people_tile_large_with_notification_content 'res/layout/people_tile_large_with_notification_content.xml'
+    const v0, 0x7f0d01de    # @layout/people_tile_large_with_notification_content 'res/layout/people_tile_large_with_notification_content.xml'
 
     .line 80
-    const v5, 0x7f0701b0    # @dimen/content_text_size_for_large '14.0sp'
+    const v5, 0x7f0701d1    # @dimen/content_text_size_for_large '14.0sp'
 
     .line 83
     if-ne p1, v0, :cond_4
@@ -2762,7 +2762,7 @@
 
     .line 105
     :cond_4
-    const v0, 0x7f0e01d2    # @layout/people_tile_large_with_status_content 'res/layout/people_tile_large_with_status_content.xml'
+    const v0, 0x7f0d01df    # @layout/people_tile_large_with_status_content 'res/layout/people_tile_large_with_status_content.xml'
 
     .line 106
     if-ne p1, v0, :cond_5
@@ -2799,13 +2799,13 @@
 
     .line 128
     :cond_5
-    const v0, 0x7f0e01cf    # @layout/people_tile_large_empty 'res/layout/people_tile_large_empty.xml'
+    const v0, 0x7f0d01dc    # @layout/people_tile_large_empty 'res/layout/people_tile_large_empty.xml'
 
     .line 129
     if-ne p1, v0, :cond_6
 
     .line 132
-    const p1, 0x7f070784    # @dimen/name_text_size_for_large '16.0sp'
+    const p1, 0x7f0707c6    # @dimen/name_text_size_for_large '16.0sp'
 
     .line 134
     invoke-virtual {p0, p1}, Lcom/android/systemui/people/PeopleTileViewHelper;->getLineHeightFromResource(I)I
@@ -2870,7 +2870,7 @@
 
     .line 173
     :cond_7
-    const p1, 0x7f07067a    # @dimen/max_people_avatar_size '108.0dp'
+    const p1, 0x7f0706bc    # @dimen/max_people_avatar_size '108.0dp'
 
     .line 175
     invoke-virtual {p0, p1}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -2928,16 +2928,16 @@
     move-object/from16 v1, p0
 
     .line 2
-    const/4 v0, 0x2
+    const/4 v2, 0x2
 
     .line 4
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     .line 5
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 6
-    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 7
     const/16 v6, 0x8
@@ -2946,44 +2946,44 @@
     const-string v7, "PeopleTileView"
 
     .line 11
-    if-eqz v4, :cond_2a
+    if-eqz v0, :cond_2a
 
     .line 13
-    invoke-virtual {v4}, Landroid/app/people/PeopleSpaceTile;->isPackageSuspended()Z
+    invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->isPackageSuspended()Z
 
     .line 15
-    move-result v4
+    move-result v0
 
     .line 18
-    if-nez v4, :cond_2a
+    if-nez v0, :cond_2a
 
     .line 19
-    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 21
-    invoke-virtual {v4}, Landroid/app/people/PeopleSpaceTile;->isUserQuieted()Z
+    invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->isUserQuieted()Z
 
     .line 23
-    move-result v4
+    move-result v0
 
     .line 26
-    if-eqz v4, :cond_0
+    if-eqz v0, :cond_0
 
     .line 27
-    goto/16 :goto_14
+    goto/16 :goto_13
 
     .line 29
     :cond_0
-    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 31
-    invoke-static {v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->isDndBlockingTileData(Landroid/app/people/PeopleSpaceTile;)Z
+    invoke-static {v0}, Lcom/android/systemui/people/PeopleTileViewHelper;->isDndBlockingTileData(Landroid/app/people/PeopleSpaceTile;)Z
 
     .line 33
-    move-result v4
+    move-result v0
 
     .line 36
-    if-eqz v4, :cond_1
+    if-eqz v0, :cond_2
 
     .line 37
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/people/PeopleTileViewHelper;->createDndRemoteViews()Lcom/android/systemui/people/PeopleTileViewHelper$RemoteViewsAndSizes;
@@ -2995,57 +2995,58 @@
     iget-object v0, v0, Lcom/android/systemui/people/PeopleTileViewHelper$RemoteViewsAndSizes;->mRemoteViews:Landroid/widget/RemoteViews;
 
     .line 43
+    :cond_1
     :goto_0
-    move-object v4, v0
+    move-object v5, v0
 
     .line 45
-    goto/16 :goto_16
+    goto/16 :goto_15
 
     .line 46
-    :cond_1
-    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    :cond_2
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 48
-    invoke-virtual {v4}, Landroid/app/people/PeopleSpaceTile;->getNotificationCategory()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->getNotificationCategory()Ljava/lang/String;
 
     .line 50
-    move-result-object v4
+    move-result-object v0
 
     .line 53
     const-string v8, "missed_call"
 
     .line 54
-    invoke-static {v4, v8}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v8}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 56
-    move-result v4
+    move-result v0
 
     .line 59
     iget v8, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mLayoutSize:I
 
     .line 60
-    const v9, 0x7f1406bd    # @string/new_notification_text_content_description '%1$s sent a message: %2$s'
+    const v9, 0x7f130717    # @string/new_notification_text_content_description '%1$s sent a message: %2$s'
 
     .line 62
-    const v13, 0x7f070921    # @dimen/required_height_for_medium '80.0dp'
+    const v13, 0x7f070971    # @dimen/required_height_for_medium '80.0dp'
 
     .line 65
-    const v14, 0x7f0b05ee    # @id/predefined_icon
+    const v14, 0x7f0a0617    # @id/predefined_icon
 
     .line 68
-    const v15, 0x7f0b07e8    # @id/text_content
+    const v15, 0x7f0a0817    # @id/text_content
 
     .line 71
     const-string v11, "setTextColor"
 
     .line 74
-    const v12, 0x7f0b04cd    # @id/messages_count
+    const v12, 0x7f0a04f1    # @id/messages_count
 
     .line 76
-    if-eqz v4, :cond_7
+    if-eqz v0, :cond_8
 
     .line 79
-    new-instance v4, Landroid/widget/RemoteViews;
+    new-instance v0, Landroid/widget/RemoteViews;
 
     .line 81
     iget-object v5, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
@@ -3060,10 +3061,10 @@
     iget v10, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mLayoutSize:I
 
     .line 89
-    if-eq v10, v2, :cond_4
+    if-eq v10, v3, :cond_5
 
     .line 91
-    if-eq v10, v0, :cond_3
+    if-eq v10, v2, :cond_4
 
     .line 93
     invoke-virtual {v1, v13}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -3075,50 +3076,50 @@
     iget v13, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mHeight:I
 
     .line 99
-    if-lt v13, v10, :cond_2
+    if-lt v13, v10, :cond_3
 
     .line 101
-    const v10, 0x7f0e01d7    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
+    const v10, 0x7f0d01e4    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
 
     .line 103
     goto :goto_1
 
     .line 106
-    :cond_2
-    const v10, 0x7f0e01d8    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
+    :cond_3
+    const v10, 0x7f0d01e5    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
 
     .line 107
     goto :goto_1
 
     .line 110
-    :cond_3
-    const v10, 0x7f0e01d2    # @layout/people_tile_large_with_status_content 'res/layout/people_tile_large_with_status_content.xml'
+    :cond_4
+    const v10, 0x7f0d01df    # @layout/people_tile_large_with_status_content 'res/layout/people_tile_large_with_status_content.xml'
 
     .line 111
     goto :goto_1
 
     .line 114
-    :cond_4
-    const v10, 0x7f0e01d4    # @layout/people_tile_medium_with_content 'res/layout/people_tile_medium_with_content.xml'
+    :cond_5
+    const v10, 0x7f0d01e1    # @layout/people_tile_medium_with_content 'res/layout/people_tile_medium_with_content.xml'
 
     .line 115
     :goto_1
-    invoke-direct {v4, v5, v10}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v5, v10}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     .line 118
-    invoke-virtual {v1, v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->setViewForContentLayout(Landroid/widget/RemoteViews;)Landroid/widget/RemoteViews;
+    invoke-virtual {v1, v0}, Lcom/android/systemui/people/PeopleTileViewHelper;->setViewForContentLayout(Landroid/widget/RemoteViews;)Landroid/widget/RemoteViews;
 
     .line 121
-    invoke-virtual {v1, v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->setPredefinedIconVisible(Landroid/widget/RemoteViews;)V
+    invoke-virtual {v1, v0}, Lcom/android/systemui/people/PeopleTileViewHelper;->setPredefinedIconVisible(Landroid/widget/RemoteViews;)V
 
     .line 124
-    invoke-virtual {v4, v15, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v0, v15, v4}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 127
-    invoke-virtual {v4, v12, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v0, v12, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 130
-    invoke-virtual {v1, v4, v3}, Lcom/android/systemui/people/PeopleTileViewHelper;->setMaxLines(Landroid/widget/RemoteViews;Z)V
+    invoke-virtual {v1, v0, v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->setMaxLines(Landroid/widget/RemoteViews;Z)V
 
     .line 133
     iget-object v5, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
@@ -3130,7 +3131,7 @@
     move-result-object v5
 
     .line 141
-    invoke-virtual {v4, v15, v5}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+    invoke-virtual {v0, v15, v5}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 142
     iget-object v10, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
@@ -3160,7 +3161,7 @@
     iget v9, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mLayoutSize:I
 
     .line 161
-    if-nez v9, :cond_5
+    if-nez v9, :cond_6
 
     .line 163
     move v9, v14
@@ -3169,95 +3170,95 @@
     goto :goto_2
 
     .line 166
-    :cond_5
+    :cond_6
     move v9, v15
 
     .line 167
     :goto_2
-    invoke-virtual {v4, v9, v5}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
+    invoke-virtual {v0, v9, v5}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
 
     .line 168
     const v5, 0x1010543    # @android:attr/colorError
 
     .line 171
-    invoke-virtual {v4, v15, v11, v5}, Landroid/widget/RemoteViews;->setColorAttr(ILjava/lang/String;I)V
+    invoke-virtual {v0, v15, v11, v5}, Landroid/widget/RemoteViews;->setColorAttr(ILjava/lang/String;I)V
 
     .line 174
     const-string v9, "setColorFilter"
 
     .line 177
-    invoke-virtual {v4, v14, v9, v5}, Landroid/widget/RemoteViews;->setColorAttr(ILjava/lang/String;I)V
+    invoke-virtual {v0, v14, v9, v5}, Landroid/widget/RemoteViews;->setColorAttr(ILjava/lang/String;I)V
 
     .line 179
-    const v5, 0x7f0808ea    # @drawable/ic_phone_missed 'res/drawable/ic_phone_missed.xml'
+    const v5, 0x7f08090f    # @drawable/ic_phone_missed 'res/drawable/ic_phone_missed.xml'
 
     .line 182
-    invoke-virtual {v4, v14, v5}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
+    invoke-virtual {v0, v14, v5}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     .line 185
-    if-ne v8, v0, :cond_6
+    if-ne v8, v2, :cond_7
 
     .line 188
-    const-string v0, "setGravity"
+    const-string v5, "setGravity"
 
     .line 190
-    const/16 v5, 0x50
+    const/16 v8, 0x50
 
     .line 192
-    const v8, 0x7f0b01fb    # @id/content
+    const v9, 0x7f0a0206    # @id/content
 
     .line 194
-    invoke-virtual {v4, v8, v0, v5}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
+    invoke-virtual {v0, v9, v5, v8}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
     .line 197
-    const v0, 0x7f070378    # @dimen/larger_predefined_icon '24.0dp'
+    const v5, 0x7f0703b4    # @dimen/larger_predefined_icon '24.0dp'
 
     .line 200
-    invoke-virtual {v4, v14, v0}, Landroid/widget/RemoteViews;->setViewLayoutHeightDimen(II)V
+    invoke-virtual {v0, v14, v5}, Landroid/widget/RemoteViews;->setViewLayoutHeightDimen(II)V
 
     .line 203
-    invoke-virtual {v4, v14, v0}, Landroid/widget/RemoteViews;->setViewLayoutWidthDimen(II)V
+    invoke-virtual {v0, v14, v5}, Landroid/widget/RemoteViews;->setViewLayoutWidthDimen(II)V
 
     .line 206
-    :cond_6
-    const v5, 0x7f07009c    # @dimen/availability_dot_notification_padding '12.0dp'
+    :cond_7
+    const v5, 0x7f0700a2    # @dimen/availability_dot_notification_padding '12.0dp'
 
     .line 209
-    invoke-virtual {v1, v4, v5}, Lcom/android/systemui/people/PeopleTileViewHelper;->setAvailabilityDotPadding(Landroid/widget/RemoteViews;I)V
+    invoke-virtual {v1, v0, v5}, Lcom/android/systemui/people/PeopleTileViewHelper;->setAvailabilityDotPadding(Landroid/widget/RemoteViews;I)V
 
     .line 212
-    goto/16 :goto_16
+    goto/16 :goto_0
 
     .line 215
-    :cond_7
-    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    :cond_8
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 217
-    invoke-virtual {v4}, Landroid/app/people/PeopleSpaceTile;->getNotificationKey()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->getNotificationKey()Ljava/lang/String;
 
     .line 219
-    move-result-object v4
+    move-result-object v0
 
     .line 222
-    if-eqz v4, :cond_17
+    if-eqz v0, :cond_18
 
     .line 223
-    new-instance v4, Landroid/widget/RemoteViews;
+    new-instance v5, Landroid/widget/RemoteViews;
 
     .line 225
-    iget-object v5, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 227
-    invoke-virtual {v5}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     .line 229
-    move-result-object v5
+    move-result-object v0
 
     .line 232
-    if-eq v8, v2, :cond_a
+    if-eq v8, v3, :cond_b
 
     .line 233
-    if-eq v8, v0, :cond_9
+    if-eq v8, v2, :cond_a
 
     .line 235
     invoke-virtual {v1, v13}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -3269,123 +3270,123 @@
     iget v13, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mHeight:I
 
     .line 241
-    if-lt v13, v10, :cond_8
+    if-lt v13, v10, :cond_9
 
     .line 243
-    const v10, 0x7f0e01d7    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
+    const v10, 0x7f0d01e4    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
 
     .line 245
     goto :goto_3
 
     .line 248
-    :cond_8
-    const v10, 0x7f0e01d8    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
+    :cond_9
+    const v10, 0x7f0d01e5    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
 
     .line 249
     goto :goto_3
 
     .line 252
-    :cond_9
-    const v10, 0x7f0e01d1    # @layout/people_tile_large_with_notification_content 'res/layout/people_tile_large_with_notification_content.xml'
+    :cond_a
+    const v10, 0x7f0d01de    # @layout/people_tile_large_with_notification_content 'res/layout/people_tile_large_with_notification_content.xml'
 
     .line 253
     goto :goto_3
 
     .line 256
-    :cond_a
-    const v10, 0x7f0e01d4    # @layout/people_tile_medium_with_content 'res/layout/people_tile_medium_with_content.xml'
+    :cond_b
+    const v10, 0x7f0d01e1    # @layout/people_tile_medium_with_content 'res/layout/people_tile_medium_with_content.xml'
 
     .line 257
     :goto_3
-    invoke-direct {v4, v5, v10}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v5, v0, v10}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     .line 260
-    invoke-virtual {v1, v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->setViewForContentLayout(Landroid/widget/RemoteViews;)Landroid/widget/RemoteViews;
+    invoke-virtual {v1, v5}, Lcom/android/systemui/people/PeopleTileViewHelper;->setViewForContentLayout(Landroid/widget/RemoteViews;)Landroid/widget/RemoteViews;
 
     .line 263
-    iget-object v5, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 266
-    invoke-virtual {v5}, Landroid/app/people/PeopleSpaceTile;->getNotificationSender()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->getNotificationSender()Ljava/lang/CharSequence;
 
     .line 268
-    move-result-object v5
-
-    .line 271
-    iget-object v10, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
-
-    .line 272
-    invoke-virtual {v10}, Landroid/app/people/PeopleSpaceTile;->getNotificationDataUri()Landroid/net/Uri;
-
-    .line 274
     move-result-object v10
 
+    .line 271
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+
+    .line 272
+    invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->getNotificationDataUri()Landroid/net/Uri;
+
+    .line 274
+    move-result-object v0
+
     .line 277
-    const v13, 0x7f0b038e    # @id/image
+    const v13, 0x7f0a03ae    # @id/image
 
     .line 278
-    if-eqz v10, :cond_b
+    if-eqz v0, :cond_c
 
     .line 281
-    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+    iget-object v9, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 283
-    iget-object v9, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    iget-object v11, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 285
-    invoke-virtual {v9}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
+    invoke-virtual {v11}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
 
     .line 287
-    move-result-object v9
+    move-result-object v11
 
     .line 290
-    filled-new-array {v9}, [Ljava/lang/Object;
+    filled-new-array {v11}, [Ljava/lang/Object;
 
     .line 291
-    move-result-object v9
+    move-result-object v11
 
     .line 294
-    const v11, 0x7f1406bc    # @string/new_notification_image_content_description '%1$s sent an image'
+    const v12, 0x7f130716    # @string/new_notification_image_content_description '%1$s sent an image'
 
     .line 295
-    invoke-virtual {v0, v11, v9}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v9, v12, v11}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 298
     move-result-object v9
 
     .line 301
-    invoke-virtual {v4, v13, v9}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
+    invoke-virtual {v5, v13, v9}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
 
     .line 302
-    invoke-virtual {v4, v13, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v5, v13, v4}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 305
-    invoke-virtual {v4, v15, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v5, v15, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 308
     :try_start_0
-    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+    iget-object v11, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 311
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v11}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     .line 313
-    move-result-object v0
+    move-result-object v11
 
     .line 316
-    invoke-static {v0, v10}, Landroid/graphics/ImageDecoder;->createSource(Landroid/content/ContentResolver;Landroid/net/Uri;)Landroid/graphics/ImageDecoder$Source;
+    invoke-static {v11, v0}, Landroid/graphics/ImageDecoder;->createSource(Landroid/content/ContentResolver;Landroid/net/Uri;)Landroid/graphics/ImageDecoder$Source;
 
     .line 317
     move-result-object v0
 
     .line 320
-    new-instance v10, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda5;
+    new-instance v11, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda4;
 
     .line 321
-    invoke-direct {v10, v1}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/people/PeopleTileViewHelper;)V
+    invoke-direct {v11, v1}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/people/PeopleTileViewHelper;)V
 
     .line 323
-    invoke-static {v0, v10}, Landroid/graphics/ImageDecoder;->decodeDrawable(Landroid/graphics/ImageDecoder$Source;Landroid/graphics/ImageDecoder$OnHeaderDecodedListener;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v11}, Landroid/graphics/ImageDecoder;->decodeDrawable(Landroid/graphics/ImageDecoder$Source;Landroid/graphics/ImageDecoder$OnHeaderDecodedListener;)Landroid/graphics/drawable/Drawable;
 
     .line 326
     move-result-object v0
@@ -3397,7 +3398,7 @@
     move-result-object v0
 
     .line 333
-    invoke-virtual {v4, v13, v0}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
+    invoke-virtual {v5, v13, v0}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
@@ -3410,19 +3411,19 @@
     move-exception v0
 
     .line 339
-    new-instance v10, Ljava/lang/StringBuilder;
+    new-instance v11, Ljava/lang/StringBuilder;
 
     .line 340
-    const-string v11, "Could not decode image: "
+    const-string v12, "Could not decode image: "
 
     .line 342
-    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v11, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 344
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 347
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 350
     move-result-object v0
@@ -3431,79 +3432,79 @@
     invoke-static {v7, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 354
-    invoke-virtual {v4, v15, v9}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+    invoke-virtual {v5, v15, v9}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 357
-    invoke-virtual {v4, v15, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v5, v15, v4}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 360
-    invoke-virtual {v4, v13, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v5, v13, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 363
     goto/16 :goto_7
 
     .line 366
-    :cond_b
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    :cond_c
+    invoke-static {v10}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     .line 368
-    move-result v10
+    move-result v0
 
     .line 371
-    xor-int/2addr v10, v2
+    xor-int/2addr v0, v3
 
     .line 372
-    invoke-virtual {v1, v4, v10}, Lcom/android/systemui/people/PeopleTileViewHelper;->setMaxLines(Landroid/widget/RemoteViews;Z)V
+    invoke-virtual {v1, v5, v0}, Lcom/android/systemui/people/PeopleTileViewHelper;->setMaxLines(Landroid/widget/RemoteViews;Z)V
 
     .line 373
-    iget-object v10, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 376
-    invoke-virtual {v10}, Landroid/app/people/PeopleSpaceTile;->getNotificationContent()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->getNotificationContent()Ljava/lang/CharSequence;
 
     .line 378
-    move-result-object v10
+    move-result-object v0
 
     .line 381
-    if-eqz v5, :cond_c
+    if-eqz v10, :cond_d
 
     .line 382
-    move-object v3, v5
+    move-object v12, v10
 
     .line 384
     goto :goto_4
 
     .line 385
-    :cond_c
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    :cond_d
+    iget-object v12, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 386
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
+    invoke-virtual {v12}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
 
     .line 388
-    move-result-object v3
+    move-result-object v12
 
     .line 391
     :goto_4
-    iget-object v12, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 392
-    filled-new-array {v3, v10}, [Ljava/lang/Object;
+    filled-new-array {v12, v0}, [Ljava/lang/Object;
 
     .line 394
-    move-result-object v3
+    move-result-object v12
 
     .line 397
-    invoke-virtual {v12, v9, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v4, v9, v12}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 398
-    move-result-object v3
+    move-result-object v4
 
     .line 401
     iget v9, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mLayoutSize:I
 
     .line 402
-    if-nez v9, :cond_d
+    if-nez v9, :cond_e
 
     .line 404
     move v9, v14
@@ -3512,77 +3513,77 @@
     goto :goto_5
 
     .line 407
-    :cond_d
+    :cond_e
     move v9, v15
 
     .line 408
     :goto_5
-    invoke-virtual {v4, v9, v3}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
+    invoke-virtual {v5, v9, v4}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
 
     .line 409
-    invoke-virtual {v1, v10}, Lcom/android/systemui/people/PeopleTileViewHelper;->getDoubleEmoji(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v0}, Lcom/android/systemui/people/PeopleTileViewHelper;->getDoubleEmoji(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     .line 412
-    move-result-object v3
+    move-result-object v4
 
     .line 415
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     .line 416
     move-result v9
 
     .line 419
-    if-nez v9, :cond_e
+    if-nez v9, :cond_f
 
     .line 420
-    invoke-static {v4, v3}, Lcom/android/systemui/people/PeopleTileViewHelper;->setEmojiBackground(Landroid/widget/RemoteViews;Ljava/lang/CharSequence;)V
+    invoke-static {v5, v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->setEmojiBackground(Landroid/widget/RemoteViews;Ljava/lang/CharSequence;)V
 
     .line 422
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 425
-    invoke-static {v4, v3}, Lcom/android/systemui/people/PeopleTileViewHelper;->setPunctuationBackground(Landroid/widget/RemoteViews;Ljava/lang/CharSequence;)V
+    invoke-static {v5, v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->setPunctuationBackground(Landroid/widget/RemoteViews;Ljava/lang/CharSequence;)V
 
     .line 426
     goto :goto_6
 
     .line 429
-    :cond_e
-    const/4 v3, 0x0
+    :cond_f
+    const/4 v4, 0x0
 
     .line 430
-    invoke-virtual {v1, v10}, Lcom/android/systemui/people/PeopleTileViewHelper;->getDoublePunctuation(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v0}, Lcom/android/systemui/people/PeopleTileViewHelper;->getDoublePunctuation(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     .line 431
-    move-result-object v9
+    move-result-object v0
 
     .line 434
-    invoke-static {v4, v3}, Lcom/android/systemui/people/PeopleTileViewHelper;->setEmojiBackground(Landroid/widget/RemoteViews;Ljava/lang/CharSequence;)V
+    invoke-static {v5, v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->setEmojiBackground(Landroid/widget/RemoteViews;Ljava/lang/CharSequence;)V
 
     .line 435
-    invoke-static {v4, v9}, Lcom/android/systemui/people/PeopleTileViewHelper;->setPunctuationBackground(Landroid/widget/RemoteViews;Ljava/lang/CharSequence;)V
+    invoke-static {v5, v0}, Lcom/android/systemui/people/PeopleTileViewHelper;->setPunctuationBackground(Landroid/widget/RemoteViews;Ljava/lang/CharSequence;)V
 
     .line 438
     :goto_6
-    const v3, 0x1010036    # @android:attr/textColorPrimary
+    const v0, 0x1010036    # @android:attr/textColorPrimary
 
     .line 441
-    invoke-virtual {v4, v15, v11, v3}, Landroid/widget/RemoteViews;->setColorAttr(ILjava/lang/String;I)V
+    invoke-virtual {v5, v15, v11, v0}, Landroid/widget/RemoteViews;->setColorAttr(ILjava/lang/String;I)V
 
     .line 444
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 447
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getNotificationContent()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->getNotificationContent()Ljava/lang/CharSequence;
 
     .line 449
-    move-result-object v3
+    move-result-object v0
 
     .line 452
-    invoke-virtual {v4, v15, v3}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+    invoke-virtual {v5, v15, v0}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 453
-    if-ne v8, v0, :cond_f
+    if-ne v8, v2, :cond_10
 
     .line 456
     iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
@@ -3594,10 +3595,10 @@
     move-result-object v0
 
     .line 463
-    const v3, 0x7f07006f    # @dimen/above_notification_text_padding '22.0dp'
+    const v4, 0x7f070070    # @dimen/above_notification_text_padding '22.0dp'
 
     .line 464
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 467
     move-result v21
@@ -3609,26 +3610,26 @@
     const/16 v20, 0x0
 
     .line 473
-    const v17, 0x7f0b054a    # @id/name
+    const v17, 0x7f0a056e    # @id/name
 
     .line 475
     const/16 v18, 0x0
 
     .line 478
-    move-object/from16 v16, v4
+    move-object/from16 v16, v5
 
     .line 480
     invoke-virtual/range {v16 .. v21}, Landroid/widget/RemoteViews;->setViewPadding(IIIII)V
 
     .line 482
-    :cond_f
-    invoke-virtual {v4, v13, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    :cond_10
+    invoke-virtual {v5, v13, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 485
-    const v0, 0x7f08082d    # @drawable/ic_message 'res/drawable/ic_message.xml'
+    const v0, 0x7f080850    # @drawable/ic_message 'res/drawable/ic_message.xml'
 
     .line 488
-    invoke-virtual {v4, v14, v0}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
+    invoke-virtual {v5, v14, v0}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     .line 491
     :goto_7
@@ -3641,10 +3642,10 @@
     move-result v0
 
     .line 499
-    if-le v0, v2, :cond_15
+    if-le v0, v3, :cond_16
 
     .line 500
-    if-ne v8, v2, :cond_12
+    if-ne v8, v3, :cond_13
 
     .line 502
     iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
@@ -3656,19 +3657,19 @@
     move-result-object v0
 
     .line 509
-    const v3, 0x7f0700b5    # @dimen/before_messages_count_padding '40.0dp'
+    const v4, 0x7f0700bb    # @dimen/before_messages_count_padding '40.0dp'
 
     .line 510
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 513
     move-result v0
 
     .line 516
-    iget-boolean v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mIsLeftToRight:Z
+    iget-boolean v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mIsLeftToRight:Z
 
     .line 517
-    if-eqz v3, :cond_10
+    if-eqz v4, :cond_11
 
     .line 519
     const/16 v18, 0x0
@@ -3677,12 +3678,12 @@
     goto :goto_8
 
     .line 523
-    :cond_10
+    :cond_11
     move/from16 v18, v0
 
     .line 524
     :goto_8
-    if-eqz v3, :cond_11
+    if-eqz v4, :cond_12
 
     .line 526
     move/from16 v20, v0
@@ -3691,7 +3692,7 @@
     goto :goto_9
 
     .line 530
-    :cond_11
+    :cond_12
     const/16 v20, 0x0
 
     .line 531
@@ -3699,26 +3700,26 @@
     const/16 v21, 0x0
 
     .line 533
-    const v17, 0x7f0b054a    # @id/name
+    const v17, 0x7f0a056e    # @id/name
 
     .line 535
     const/16 v19, 0x0
 
     .line 538
-    move-object/from16 v16, v4
+    move-object/from16 v16, v5
 
     .line 540
     invoke-virtual/range {v16 .. v21}, Landroid/widget/RemoteViews;->setViewPadding(IIIII)V
 
     .line 542
-    :cond_12
-    const v3, 0x7f0b04cd    # @id/messages_count
+    :cond_13
+    const v4, 0x7f0a04f1    # @id/messages_count
 
     .line 545
     const/4 v9, 0x0
 
     .line 548
-    invoke-virtual {v4, v3, v9}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v5, v4, v9}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 549
     iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
@@ -3730,10 +3731,10 @@
     move-result v0
 
     .line 557
-    const/4 v3, 0x6
+    const/4 v4, 0x6
 
     .line 558
-    if-lt v0, v3, :cond_13
+    if-lt v0, v4, :cond_14
 
     .line 559
     iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
@@ -3745,97 +3746,97 @@
     move-result-object v0
 
     .line 566
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 567
-    move-result-object v3
+    move-result-object v4
 
     .line 570
-    filled-new-array {v3}, [Ljava/lang/Object;
+    filled-new-array {v4}, [Ljava/lang/Object;
 
     .line 571
-    move-result-object v3
+    move-result-object v4
 
     .line 574
-    const v9, 0x7f14062d    # @string/messages_count_overflow_indicator '%d+'
+    const v9, 0x7f130687    # @string/messages_count_overflow_indicator '%d+'
 
     .line 575
-    invoke-virtual {v0, v9, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v9, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 578
     move-result-object v0
 
     .line 581
     :goto_a
-    const v3, 0x7f0b04cd    # @id/messages_count
+    const v4, 0x7f0a04f1    # @id/messages_count
 
     .line 582
     goto :goto_b
 
     .line 585
-    :cond_13
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+    :cond_14
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 586
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     .line 588
-    move-result-object v3
+    move-result-object v4
 
     .line 591
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     .line 592
-    move-result-object v3
+    move-result-object v4
 
     .line 595
-    invoke-virtual {v3}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    invoke-virtual {v4}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
 
     .line 596
-    move-result-object v3
+    move-result-object v4
 
     .line 599
     const/4 v9, 0x0
 
     .line 600
-    invoke-virtual {v3, v9}, Landroid/os/LocaleList;->get(I)Ljava/util/Locale;
+    invoke-virtual {v4, v9}, Landroid/os/LocaleList;->get(I)Ljava/util/Locale;
 
     .line 601
-    move-result-object v3
+    move-result-object v4
 
     .line 604
     iget-object v9, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mLocale:Ljava/util/Locale;
 
     .line 605
-    invoke-virtual {v3, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 607
     move-result v9
 
     .line 610
-    if-nez v9, :cond_14
+    if-nez v9, :cond_15
 
     .line 611
-    iput-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mLocale:Ljava/util/Locale;
+    iput-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mLocale:Ljava/util/Locale;
 
     .line 613
-    invoke-static {v3}, Ljava/text/NumberFormat;->getIntegerInstance(Ljava/util/Locale;)Ljava/text/NumberFormat;
+    invoke-static {v4}, Ljava/text/NumberFormat;->getIntegerInstance(Ljava/util/Locale;)Ljava/text/NumberFormat;
 
     .line 615
-    move-result-object v3
+    move-result-object v4
 
     .line 618
-    iput-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mIntegerFormat:Ljava/text/NumberFormat;
+    iput-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mIntegerFormat:Ljava/text/NumberFormat;
 
     .line 619
-    :cond_14
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mIntegerFormat:Ljava/text/NumberFormat;
+    :cond_15
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mIntegerFormat:Ljava/text/NumberFormat;
 
     .line 621
-    int-to-long v9, v0
+    int-to-long v11, v0
 
     .line 623
-    invoke-virtual {v3, v9, v10}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
+    invoke-virtual {v4, v11, v12}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
 
     .line 624
     move-result-object v0
@@ -3845,115 +3846,115 @@
 
     .line 628
     :goto_b
-    invoke-virtual {v4, v3, v0}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+    invoke-virtual {v5, v4, v0}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 629
-    if-nez v8, :cond_15
+    if-nez v8, :cond_16
 
     .line 632
-    invoke-virtual {v4, v14, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v5, v14, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 634
-    :cond_15
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    :cond_16
+    invoke-static {v10}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     .line 637
     move-result v0
 
     .line 640
-    const v3, 0x7f0b0781    # @id/subtext
+    const v4, 0x7f0a07b0    # @id/subtext
 
     .line 641
-    if-nez v0, :cond_16
+    if-nez v0, :cond_17
 
     .line 644
     const/4 v9, 0x0
 
     .line 646
-    invoke-virtual {v4, v3, v9}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v5, v4, v9}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 647
-    invoke-virtual {v4, v3, v5}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+    invoke-virtual {v5, v4, v10}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 650
     :goto_c
-    const v3, 0x7f07009c    # @dimen/availability_dot_notification_padding '12.0dp'
+    const v4, 0x7f0700a2    # @dimen/availability_dot_notification_padding '12.0dp'
 
     .line 653
     goto :goto_d
 
     .line 656
-    :cond_16
+    :cond_17
     const/4 v9, 0x0
 
     .line 657
-    invoke-virtual {v4, v3, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v5, v4, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 658
     goto :goto_c
 
     .line 661
     :goto_d
-    invoke-virtual {v1, v4, v3}, Lcom/android/systemui/people/PeopleTileViewHelper;->setAvailabilityDotPadding(Landroid/widget/RemoteViews;I)V
+    invoke-virtual {v1, v5, v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->setAvailabilityDotPadding(Landroid/widget/RemoteViews;I)V
 
     .line 662
-    goto/16 :goto_16
+    goto/16 :goto_15
 
     .line 665
-    :cond_17
-    move v9, v3
+    :cond_18
+    move v9, v4
 
     .line 667
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 668
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
+    invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
 
     .line 670
-    move-result-object v3
+    move-result-object v0
 
     .line 673
-    if-nez v3, :cond_18
+    if-nez v0, :cond_19
 
     .line 674
-    new-array v3, v9, [Landroid/app/people/ConversationStatus;
+    new-array v0, v9, [Landroid/app/people/ConversationStatus;
 
     .line 676
-    invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     .line 678
-    move-result-object v3
+    move-result-object v0
 
     .line 681
     goto :goto_e
 
     .line 682
-    :cond_18
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    :cond_19
+    iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 683
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
+    invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
 
     .line 685
-    move-result-object v3
+    move-result-object v0
 
     .line 688
-    invoke-interface {v3}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
+    invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     .line 689
-    move-result-object v3
+    move-result-object v0
 
     .line 692
-    new-instance v4, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda3;
+    new-instance v4, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda2;
 
     .line 693
-    invoke-direct {v4, v1}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/people/PeopleTileViewHelper;)V
+    invoke-direct {v4, v1}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/people/PeopleTileViewHelper;)V
 
     .line 695
-    invoke-interface {v3, v4}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+    invoke-interface {v0, v4}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     .line 698
-    move-result-object v3
+    move-result-object v0
 
     .line 701
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
@@ -3962,17 +3963,17 @@
     move-result-object v4
 
     .line 705
-    invoke-interface {v3, v4}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
+    invoke-interface {v0, v4}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
 
     .line 706
-    move-result-object v3
+    move-result-object v0
 
     .line 709
-    check-cast v3, Ljava/util/List;
+    check-cast v0, Ljava/util/List;
 
     .line 710
     :goto_e
-    invoke-interface {v3}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
+    invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     .line 712
     move-result-object v4
@@ -3981,7 +3982,7 @@
     new-instance v5, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;
 
     .line 716
-    invoke-direct {v5, v0}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;-><init>(I)V
+    invoke-direct {v5, v3}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;-><init>(I)V
 
     .line 718
     invoke-interface {v4, v5}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
@@ -4002,7 +4003,7 @@
     move-result v5
 
     .line 732
-    if-eqz v5, :cond_19
+    if-eqz v5, :cond_1a
 
     .line 733
     invoke-virtual {v4}, Ljava/util/Optional;->get()Ljava/lang/Object;
@@ -4017,7 +4018,7 @@
     goto :goto_f
 
     .line 741
-    :cond_19
+    :cond_1a
     iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 742
@@ -4033,7 +4034,7 @@
     move-result v4
 
     .line 751
-    if-nez v4, :cond_1a
+    if-nez v4, :cond_1b
 
     .line 752
     new-instance v4, Landroid/app/people/ConversationStatus$Builder;
@@ -4048,7 +4049,7 @@
     move-result-object v5
 
     .line 761
-    invoke-direct {v4, v5, v2}, Landroid/app/people/ConversationStatus$Builder;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v4, v5, v3}, Landroid/app/people/ConversationStatus$Builder;-><init>(Ljava/lang/String;I)V
 
     .line 762
     invoke-virtual {v4}, Landroid/app/people/ConversationStatus$Builder;->build()Landroid/app/people/ConversationStatus;
@@ -4060,12 +4061,12 @@
     goto :goto_f
 
     .line 769
-    :cond_1a
+    :cond_1b
     const/4 v4, 0x0
 
     .line 770
     :goto_f
-    if-eqz v4, :cond_1b
+    if-eqz v4, :cond_1c
 
     .line 771
     invoke-virtual {v1, v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->createStatusRemoteViews(Landroid/app/people/ConversationStatus;)Landroid/widget/RemoteViews;
@@ -4077,35 +4078,35 @@
     goto/16 :goto_0
 
     .line 777
-    :cond_1b
-    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
+    :cond_1c
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     .line 779
     move-result v4
 
     .line 782
-    if-nez v4, :cond_1c
+    if-nez v4, :cond_1d
 
     .line 783
-    invoke-interface {v3}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
+    invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     .line 785
     move-result-object v0
 
     .line 788
-    new-instance v3, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda4;
+    new-instance v4, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda3;
 
     .line 789
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
 
     .line 791
-    invoke-static {v3}, Ljava/util/Comparator;->comparing(Ljava/util/function/Function;)Ljava/util/Comparator;
+    invoke-static {v4}, Ljava/util/Comparator;->comparing(Ljava/util/function/Function;)Ljava/util/Comparator;
 
     .line 794
-    move-result-object v3
+    move-result-object v4
 
     .line 797
-    invoke-interface {v0, v3}, Ljava/util/stream/Stream;->max(Ljava/util/Comparator;)Ljava/util/Optional;
+    invoke-interface {v0, v4}, Ljava/util/stream/Stream;->max(Ljava/util/Comparator;)Ljava/util/Optional;
 
     .line 798
     move-result-object v0
@@ -4129,8 +4130,8 @@
     goto/16 :goto_0
 
     .line 812
-    :cond_1c
-    new-instance v3, Landroid/widget/RemoteViews;
+    :cond_1d
+    new-instance v0, Landroid/widget/RemoteViews;
 
     .line 814
     iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
@@ -4142,752 +4143,744 @@
     move-result-object v4
 
     .line 821
-    if-eq v8, v2, :cond_1f
+    if-eq v8, v3, :cond_20
 
     .line 822
-    if-eq v8, v0, :cond_1e
+    if-eq v8, v2, :cond_1f
 
     .line 824
     invoke-virtual {v1, v13}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
 
     .line 826
-    move-result v0
+    move-result v5
 
     .line 829
-    iget v5, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mHeight:I
+    iget v9, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mHeight:I
 
     .line 830
-    if-lt v5, v0, :cond_1d
+    if-lt v9, v5, :cond_1e
 
     .line 832
-    const v11, 0x7f0e01d7    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
+    const v11, 0x7f0d01e4    # @layout/people_tile_small 'res/layout/people_tile_small.xml'
 
     .line 834
     goto :goto_10
 
     .line 837
-    :cond_1d
-    const v11, 0x7f0e01d8    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
+    :cond_1e
+    const v11, 0x7f0d01e5    # @layout/people_tile_small_horizontal 'res/layout/people_tile_small_horizontal.xml'
 
     .line 838
     goto :goto_10
 
     .line 841
-    :cond_1e
-    const v11, 0x7f0e01cf    # @layout/people_tile_large_empty 'res/layout/people_tile_large_empty.xml'
+    :cond_1f
+    const v11, 0x7f0d01dc    # @layout/people_tile_large_empty 'res/layout/people_tile_large_empty.xml'
 
     .line 842
     goto :goto_10
 
     .line 845
-    :cond_1f
-    const v11, 0x7f0e01d3    # @layout/people_tile_medium_empty 'res/layout/people_tile_medium_empty.xml'
+    :cond_20
+    const v11, 0x7f0d01e0    # @layout/people_tile_medium_empty 'res/layout/people_tile_medium_empty.xml'
 
     .line 846
     :goto_10
-    invoke-direct {v3, v4, v11}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v4, v11}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     .line 849
-    const v0, 0x7f0b054a    # @id/name
+    const v4, 0x7f0a056e    # @id/name
 
     .line 852
-    const-string v4, "setMaxLines"
+    const-string v5, "setMaxLines"
 
     .line 855
-    invoke-virtual {v3, v0, v4, v2}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
+    invoke-virtual {v0, v4, v5, v3}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
     .line 857
-    if-nez v8, :cond_20
+    if-nez v8, :cond_21
 
     .line 860
-    const/4 v5, 0x0
+    const/4 v9, 0x0
 
     .line 862
-    invoke-virtual {v3, v0, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v0, v4, v9}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 863
-    invoke-virtual {v3, v14, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v0, v14, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 866
-    const v5, 0x7f0b04cd    # @id/messages_count
+    const v9, 0x7f0a04f1    # @id/messages_count
 
     .line 869
-    invoke-virtual {v3, v5, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v0, v9, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 872
-    :cond_20
-    iget-object v5, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
-
-    .line 875
-    invoke-virtual {v5}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
-
-    .line 877
-    move-result-object v5
-
-    .line 880
-    if-eqz v5, :cond_21
-
-    .line 881
-    iget-object v5, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
-
-    .line 883
-    invoke-virtual {v5}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
-
-    .line 885
-    move-result-object v5
-
-    .line 888
-    invoke-virtual {v3, v0, v5}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
-
-    .line 889
     :cond_21
-    iget-object v5, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
-
-    .line 892
     iget-object v9, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
+    .line 875
+    invoke-virtual {v9}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
+
+    .line 877
+    move-result-object v9
+
+    .line 880
+    if-eqz v9, :cond_22
+
+    .line 881
+    iget-object v9, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+
+    .line 883
+    invoke-virtual {v9}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
+
+    .line 885
+    move-result-object v9
+
+    .line 888
+    invoke-virtual {v0, v4, v9}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+
+    .line 889
+    :cond_22
+    iget-object v9, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+
+    .line 892
+    iget-object v10, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+
     .line 894
-    invoke-virtual {v9}, Landroid/app/people/PeopleSpaceTile;->getLastInteractionTimestamp()J
+    invoke-virtual {v10}, Landroid/app/people/PeopleSpaceTile;->getLastInteractionTimestamp()J
 
     .line 896
-    move-result-wide v9
+    move-result-wide v10
 
     .line 899
-    const-wide/16 v11, 0x0
+    const-wide/16 v12, 0x0
 
     .line 900
-    cmp-long v11, v9, v11
+    cmp-long v12, v10, v12
 
     .line 902
-    if-nez v11, :cond_22
+    if-nez v12, :cond_23
 
     .line 904
-    const-string v5, "Could not get valid last interaction"
+    const-string v9, "Could not get valid last interaction"
 
     .line 906
-    invoke-static {v7, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v7, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 908
     :goto_11
-    const/4 v5, 0x0
+    const/4 v9, 0x0
 
     .line 911
     goto :goto_12
 
     .line 912
-    :cond_22
+    :cond_23
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     .line 913
-    move-result-wide v11
+    move-result-wide v12
 
     .line 916
-    sub-long/2addr v11, v9
+    sub-long/2addr v12, v10
 
     .line 917
-    invoke-static {v11, v12}, Ljava/time/Duration;->ofMillis(J)Ljava/time/Duration;
+    invoke-static {v12, v13}, Ljava/time/Duration;->ofMillis(J)Ljava/time/Duration;
 
     .line 918
-    move-result-object v9
+    move-result-object v10
 
     .line 921
-    invoke-virtual {v9}, Ljava/time/Duration;->toDays()J
+    invoke-virtual {v10}, Ljava/time/Duration;->toDays()J
 
     .line 922
-    move-result-wide v10
+    move-result-wide v11
 
     .line 925
-    const-wide/16 v12, 0x1
+    const-wide/16 v13, 0x1
 
     .line 926
-    cmp-long v10, v10, v12
+    cmp-long v11, v11, v13
 
     .line 928
-    if-gtz v10, :cond_23
+    if-gtz v11, :cond_24
 
     .line 930
     goto :goto_11
 
     .line 932
-    :cond_23
-    invoke-virtual {v9}, Ljava/time/Duration;->toDays()J
+    :cond_24
+    invoke-virtual {v10}, Ljava/time/Duration;->toDays()J
 
     .line 933
-    move-result-wide v10
+    move-result-wide v11
 
     .line 936
-    const-wide/16 v12, 0x7
+    const-wide/16 v13, 0x7
 
     .line 937
-    cmp-long v10, v10, v12
+    cmp-long v11, v11, v13
 
     .line 939
-    if-gez v10, :cond_24
+    if-gez v11, :cond_25
 
     .line 941
-    invoke-virtual {v9}, Ljava/time/Duration;->toDays()J
+    invoke-virtual {v10}, Ljava/time/Duration;->toDays()J
 
     .line 943
-    move-result-wide v9
+    move-result-wide v10
 
     .line 946
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     .line 947
-    move-result-object v9
+    move-result-object v10
 
     .line 950
-    filled-new-array {v9}, [Ljava/lang/Object;
+    filled-new-array {v10}, [Ljava/lang/Object;
 
     .line 951
-    move-result-object v9
+    move-result-object v10
 
     .line 954
-    const v10, 0x7f140323    # @string/days_timestamp '%1$s days ago'
+    const v11, 0x7f130341    # @string/days_timestamp '%1$s days ago'
 
     .line 955
-    invoke-virtual {v5, v10, v9}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v9, v11, v10}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 958
-    move-result-object v5
+    move-result-object v9
 
     .line 961
     goto :goto_12
 
     .line 962
-    :cond_24
-    invoke-virtual {v9}, Ljava/time/Duration;->toDays()J
+    :cond_25
+    invoke-virtual {v10}, Ljava/time/Duration;->toDays()J
 
     .line 963
-    move-result-wide v10
+    move-result-wide v11
 
     .line 966
-    cmp-long v10, v10, v12
+    cmp-long v11, v11, v13
 
     .line 967
-    if-nez v10, :cond_25
+    if-nez v11, :cond_26
 
     .line 969
-    const v9, 0x7f14070d    # @string/one_week_timestamp '1 week ago'
+    const v10, 0x7f130768    # @string/one_week_timestamp '1 week ago'
 
     .line 971
-    invoke-virtual {v5, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     .line 974
-    move-result-object v5
+    move-result-object v9
 
     .line 977
     goto :goto_12
 
     .line 978
-    :cond_25
-    invoke-virtual {v9}, Ljava/time/Duration;->toDays()J
+    :cond_26
+    invoke-virtual {v10}, Ljava/time/Duration;->toDays()J
 
     .line 979
-    move-result-wide v10
+    move-result-wide v11
 
     .line 982
-    const-wide/16 v12, 0xe
+    const-wide/16 v13, 0xe
 
     .line 983
-    cmp-long v10, v10, v12
+    cmp-long v11, v11, v13
 
     .line 985
-    if-gez v10, :cond_26
+    if-gez v11, :cond_27
 
     .line 987
-    const v9, 0x7f140721    # @string/over_one_week_timestamp 'Over 1 week ago'
+    const v10, 0x7f13077c    # @string/over_one_week_timestamp 'Over 1 week ago'
 
     .line 989
-    invoke-virtual {v5, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     .line 992
-    move-result-object v5
+    move-result-object v9
 
     .line 995
     goto :goto_12
 
     .line 996
-    :cond_26
-    invoke-virtual {v9}, Ljava/time/Duration;->toDays()J
+    :cond_27
+    invoke-virtual {v10}, Ljava/time/Duration;->toDays()J
 
     .line 997
-    move-result-wide v9
+    move-result-wide v10
 
     .line 1000
-    cmp-long v9, v9, v12
+    cmp-long v10, v10, v13
 
     .line 1001
-    if-nez v9, :cond_27
+    if-nez v10, :cond_28
 
     .line 1003
-    const v9, 0x7f1409b5    # @string/two_weeks_timestamp '2 weeks ago'
+    const v10, 0x7f130a3b    # @string/two_weeks_timestamp '2 weeks ago'
 
     .line 1005
-    invoke-virtual {v5, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     .line 1008
-    move-result-object v5
+    move-result-object v9
 
     .line 1011
     goto :goto_12
 
     .line 1012
-    :cond_27
-    const v9, 0x7f140722    # @string/over_two_weeks_timestamp 'Over 2 weeks ago'
+    :cond_28
+    const v10, 0x7f13077d    # @string/over_two_weeks_timestamp 'Over 2 weeks ago'
 
     .line 1013
-    invoke-virtual {v5, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     .line 1016
-    move-result-object v5
+    move-result-object v9
 
     .line 1019
     :goto_12
-    const v9, 0x7f0b03f5    # @id/last_interaction
+    const v10, 0x7f0a0416    # @id/last_interaction
 
     .line 1020
-    if-eqz v5, :cond_28
+    if-eqz v9, :cond_29
 
     .line 1023
-    const/4 v10, 0x0
+    const/4 v11, 0x0
 
     .line 1025
-    invoke-virtual {v3, v9, v10}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v0, v10, v11}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 1026
-    invoke-virtual {v3, v9, v5}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+    invoke-virtual {v0, v10, v9}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 1029
-    goto :goto_13
+    goto/16 :goto_0
 
     .line 1032
-    :cond_28
-    invoke-virtual {v3, v9, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    :cond_29
+    invoke-virtual {v0, v10, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 1033
-    if-ne v8, v2, :cond_29
+    .line 1034
+    if-ne v8, v3, :cond_1
 
-    .line 1036
-    const/4 v5, 0x3
-
-    .line 1038
-    invoke-virtual {v3, v0, v4, v5}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
+    .line 1037
+    const/4 v8, 0x3
 
     .line 1039
-    :cond_29
-    :goto_13
-    move-object v4, v3
+    invoke-virtual {v0, v4, v5, v8}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
-    .line 1042
-    goto :goto_16
+    .line 1040
+    goto/16 :goto_0
 
     .line 1043
     :cond_2a
-    :goto_14
+    :goto_13
     iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
-    .line 1044
+    .line 1045
     if-eqz v0, :cond_2b
 
-    .line 1046
+    .line 1047
     invoke-virtual {v0}, Landroid/app/people/PeopleSpaceTile;->isUserQuieted()Z
 
-    .line 1048
+    .line 1049
     move-result v0
 
-    .line 1051
+    .line 1052
     if-eqz v0, :cond_2b
 
-    .line 1052
+    .line 1053
     new-instance v0, Landroid/widget/RemoteViews;
 
-    .line 1054
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+    .line 1055
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
-    .line 1056
-    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    .line 1057
+    invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    .line 1058
-    move-result-object v3
-
-    .line 1061
-    const v4, 0x7f0e01dc    # @layout/people_tile_work_profile_quiet_layout 'res/layout/people_tile_work_profile_quiet_layout.xml'
+    .line 1059
+    move-result-object v4
 
     .line 1062
-    invoke-direct {v0, v3, v4}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
+    const v5, 0x7f0d01e9    # @layout/people_tile_work_profile_quiet_layout 'res/layout/people_tile_work_profile_quiet_layout.xml'
 
-    .line 1065
-    goto :goto_15
+    .line 1063
+    invoke-direct {v0, v4, v5}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    .line 1068
+    .line 1066
+    goto :goto_14
+
+    .line 1069
     :cond_2b
     new-instance v0, Landroid/widget/RemoteViews;
 
-    .line 1069
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+    .line 1070
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
-    .line 1071
-    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    .line 1072
+    invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    .line 1073
-    move-result-object v3
-
-    .line 1076
-    const v4, 0x7f0e01d9    # @layout/people_tile_suppressed_layout 'res/layout/people_tile_suppressed_layout.xml'
-
-    .line 1077
-    invoke-direct {v0, v3, v4}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
-
-    .line 1080
-    :goto_15
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
-
-    .line 1083
-    const v4, 0x7f080715    # @drawable/ic_conversation_icon 'res/drawable/ic_conversation_icon.xml'
-
-    .line 1085
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    .line 1088
-    move-result-object v3
-
-    .line 1091
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    .line 1092
-    move-result-object v3
-
-    .line 1095
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    .line 1096
-    invoke-static {v4}, Lcom/android/launcher3/icons/FastBitmapDrawable;->getDisabledColorFilter(F)Landroid/graphics/ColorFilter;
-
-    .line 1098
+    .line 1074
     move-result-object v4
 
-    .line 1101
-    invoke-virtual {v3, v4}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    .line 1077
+    const v5, 0x7f0d01e6    # @layout/people_tile_suppressed_layout 'res/layout/people_tile_suppressed_layout.xml'
+
+    .line 1078
+    invoke-direct {v0, v4, v5}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
+
+    .line 1081
+    :goto_14
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+
+    .line 1084
+    const v5, 0x7f08072d    # @drawable/ic_conversation_icon 'res/drawable/ic_conversation_icon.xml'
+
+    .line 1086
+    invoke-virtual {v4, v5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    .line 1089
+    move-result-object v4
+
+    .line 1092
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    .line 1093
+    move-result-object v4
+
+    .line 1096
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    .line 1097
+    invoke-static {v5}, Lcom/android/launcher3/icons/FastBitmapDrawable;->getDisabledColorFilter(F)Landroid/graphics/ColorFilter;
+
+    .line 1099
+    move-result-object v5
 
     .line 1102
-    invoke-static {v3}, Lcom/android/systemui/people/PeopleSpaceUtils;->convertDrawableToBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
+    invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 1105
-    move-result-object v3
+    .line 1103
+    invoke-static {v4}, Lcom/android/systemui/people/PeopleSpaceUtils;->convertDrawableToBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
-    .line 1108
-    const v4, 0x7f0b0379    # @id/icon
+    .line 1106
+    move-result-object v4
 
     .line 1109
-    invoke-virtual {v0, v4, v3}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
+    const v5, 0x7f0a0399    # @id/icon
 
-    .line 1112
+    .line 1110
+    invoke-virtual {v0, v5, v4}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
+
+    .line 1113
     goto/16 :goto_0
 
-    .line 1115
-    :goto_16
-    invoke-virtual {v1, v4}, Lcom/android/systemui/people/PeopleTileViewHelper;->getMaxAvatarSize(Landroid/widget/RemoteViews;)I
+    .line 1116
+    :goto_15
+    invoke-virtual {v1, v5}, Lcom/android/systemui/people/PeopleTileViewHelper;->getMaxAvatarSize(Landroid/widget/RemoteViews;)I
 
-    .line 1117
+    .line 1118
     move-result v0
 
-    .line 1120
-    :try_start_1
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
-
     .line 1121
-    if-nez v3, :cond_2c
+    :try_start_1
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
-    .line 1123
-    goto/16 :goto_1e
+    .line 1122
+    if-nez v4, :cond_2c
 
-    .line 1125
+    .line 1124
+    goto/16 :goto_1d
+
+    .line 1126
     :cond_2c
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
+    invoke-virtual {v4}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
 
-    .line 1127
-    move-result-object v3
-
-    .line 1130
-    const v5, 0x7f0b00ec    # @id/availability
+    .line 1128
+    move-result-object v4
 
     .line 1131
-    if-eqz v3, :cond_2d
+    const v8, 0x7f0a00f0    # @id/availability
 
-    .line 1134
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    .line 1132
+    if-eqz v4, :cond_2d
 
-    .line 1136
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
+    .line 1135
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
-    .line 1138
-    move-result-object v3
+    .line 1137
+    invoke-virtual {v4}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
 
-    .line 1141
-    invoke-interface {v3}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
+    .line 1139
+    move-result-object v4
 
     .line 1142
-    move-result-object v3
+    invoke-interface {v4}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
-    .line 1145
-    new-instance v8, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;
+    .line 1143
+    move-result-object v4
 
     .line 1146
-    invoke-direct {v8, v2}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;-><init>(I)V
+    new-instance v9, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;
 
-    .line 1148
-    invoke-interface {v3, v8}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
+    .line 1147
+    const/4 v14, 0x0
 
-    .line 1151
-    move-result v3
+    .line 1149
+    invoke-direct {v9, v14}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1154
-    if-eqz v3, :cond_2d
+    .line 1150
+    invoke-interface {v4, v9}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
-    .line 1155
-    const/4 v3, 0x0
+    .line 1153
+    move-result v4
+
+    .line 1156
+    if-eqz v4, :cond_2e
 
     .line 1157
-    invoke-virtual {v4, v5, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    invoke-virtual {v5, v8, v14}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 1158
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+    .line 1159
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
-    .line 1161
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 1162
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 1163
-    move-result-object v3
-
-    .line 1166
-    const v6, 0x7f07009d    # @dimen/availability_dot_shown_padding '4.0dp'
+    .line 1164
+    move-result-object v4
 
     .line 1167
-    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    const v6, 0x7f0700a3    # @dimen/availability_dot_shown_padding '4.0dp'
 
-    .line 1170
-    move-result v3
+    .line 1168
+    invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 1173
-    iget-object v6, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+    .line 1171
+    move-result v4
 
     .line 1174
-    const v8, 0x7f14072e    # @string/person_available 'Available'
+    iget-object v6, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
-    .line 1176
-    invoke-virtual {v6, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    .line 1175
+    const v9, 0x7f130789    # @string/person_available 'Available'
 
-    .line 1179
+    .line 1177
+    invoke-virtual {v6, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    .line 1180
     move-result-object v6
 
-    .line 1182
-    invoke-virtual {v4, v5, v6}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
-
     .line 1183
-    :goto_17
-    move v9, v3
+    invoke-virtual {v5, v8, v6}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
 
-    .line 1186
-    goto :goto_18
+    .line 1184
+    :goto_16
+    move v9, v4
 
     .line 1187
+    goto :goto_17
+
+    .line 1188
     :catch_1
     move-exception v0
 
-    .line 1188
-    goto/16 :goto_1d
-
     .line 1189
+    goto/16 :goto_1c
+
+    .line 1190
     :cond_2d
-    invoke-virtual {v4, v5, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+    const/4 v14, 0x0
 
-    .line 1191
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
+    .line 1192
+    :cond_2e
+    invoke-virtual {v5, v8, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 1194
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 1193
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 1196
-    move-result-object v3
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 1199
-    const v5, 0x7f07009b    # @dimen/availability_dot_missing_padding '12.0dp'
+    .line 1198
+    move-result-object v4
 
-    .line 1200
-    invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    .line 1201
+    const v6, 0x7f0700a1    # @dimen/availability_dot_missing_padding '12.0dp'
 
-    .line 1203
-    move-result v3
+    .line 1202
+    invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 1206
-    goto :goto_17
-
-    .line 1207
-    :goto_18
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    .line 1205
+    move-result v4
 
     .line 1208
-    move-result-object v3
+    goto :goto_16
 
-    .line 1211
-    invoke-static {v3}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+    .line 1209
+    :goto_17
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
-    .line 1212
-    move-result v3
+    .line 1210
+    move-result-object v4
 
-    .line 1215
-    if-nez v3, :cond_2e
+    .line 1213
+    invoke-static {v4}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
 
-    .line 1216
-    move v3, v2
+    .line 1214
+    move-result v4
+
+    .line 1217
+    if-nez v4, :cond_2f
 
     .line 1218
-    goto :goto_19
-
-    .line 1219
-    :cond_2e
-    const/4 v3, 0x0
+    move v4, v3
 
     .line 1220
-    :goto_19
-    if-eqz v3, :cond_2f
+    goto :goto_18
 
     .line 1221
-    move v10, v9
+    :cond_2f
+    move v4, v14
+
+    .line 1222
+    :goto_18
+    if-eqz v4, :cond_30
 
     .line 1223
-    goto :goto_1a
-
-    .line 1224
-    :cond_2f
-    const/4 v10, 0x0
+    move v10, v9
 
     .line 1225
-    :goto_1a
-    if-eqz v3, :cond_30
+    goto :goto_19
 
     .line 1226
-    const/4 v12, 0x0
+    :cond_30
+    move v10, v14
+
+    .line 1227
+    :goto_19
+    if-eqz v4, :cond_31
 
     .line 1228
-    goto :goto_1b
-
-    .line 1229
-    :cond_30
-    move v12, v9
+    move v12, v14
 
     .line 1230
-    :goto_1b
-    const/4 v11, 0x0
+    goto :goto_1a
 
     .line 1231
-    const/4 v13, 0x0
+    :cond_31
+    move v12, v9
 
     .line 1232
-    const v9, 0x7f0b05b6    # @id/padding_before_availability
+    :goto_1a
+    const/4 v11, 0x0
 
     .line 1233
-    move-object v8, v4
+    const/4 v13, 0x0
 
-    .line 1236
+    .line 1234
+    const v9, 0x7f0a05db    # @id/padding_before_availability
+
+    .line 1235
+    move-object v8, v5
+
+    .line 1238
     invoke-virtual/range {v8 .. v13}, Landroid/widget/RemoteViews;->setViewPadding(IIIII)V
 
-    .line 1237
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
-
-    .line 1240
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
+    .line 1239
+    iget-object v4, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 1242
-    move-result-object v5
+    invoke-virtual {v4}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
 
-    .line 1245
-    if-eqz v5, :cond_31
+    .line 1244
+    move-result-object v6
 
-    .line 1246
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
+    .line 1247
+    if-eqz v6, :cond_32
 
     .line 1248
-    move-result-object v3
+    invoke-virtual {v4}, Landroid/app/people/PeopleSpaceTile;->getStatuses()Ljava/util/List;
 
-    .line 1251
-    invoke-interface {v3}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
+    .line 1250
+    move-result-object v4
 
-    .line 1252
-    move-result-object v3
+    .line 1253
+    invoke-interface {v4}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
-    .line 1255
-    new-instance v5, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;
+    .line 1254
+    move-result-object v4
 
-    .line 1256
-    const/4 v6, 0x0
+    .line 1257
+    new-instance v6, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;
 
     .line 1258
-    invoke-direct {v5, v6}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;-><init>(I)V
+    invoke-direct {v6, v2}, Lcom/android/systemui/people/PeopleTileViewHelper$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1259
-    invoke-interface {v3, v5}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
+    .line 1260
+    invoke-interface {v4, v6}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
-    .line 1262
-    move-result v3
-
-    .line 1265
-    if-eqz v3, :cond_32
+    .line 1263
+    move-result v2
 
     .line 1266
-    goto :goto_1c
+    if-eqz v2, :cond_32
 
-    .line 1268
-    :cond_31
-    const/4 v6, 0x0
+    .line 1267
+    goto :goto_1b
 
     .line 1269
     :cond_32
-    move v2, v6
+    move v3, v14
 
     .line 1270
-    :goto_1c
+    :goto_1b
     iget-object v8, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 1271
-    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    iget-object v2, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 1273
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getUserIcon()Landroid/graphics/drawable/Icon;
+    invoke-virtual {v2}, Landroid/app/people/PeopleSpaceTile;->getUserIcon()Landroid/graphics/drawable/Icon;
 
     .line 1275
     move-result-object v11
 
     .line 1278
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/app/people/PeopleSpaceTile;->getPackageName()Ljava/lang/String;
 
     .line 1279
     move-result-object v12
 
     .line 1282
-    sget-object v5, Lcom/android/systemui/people/PeopleSpaceUtils;->EMPTY_KEY:Lcom/android/systemui/people/widget/PeopleTileKey;
+    sget-object v4, Lcom/android/systemui/people/PeopleSpaceUtils;->EMPTY_KEY:Lcom/android/systemui/people/widget/PeopleTileKey;
 
     .line 1283
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getUserHandle()Landroid/os/UserHandle;
+    invoke-virtual {v2}, Landroid/app/people/PeopleSpaceTile;->getUserHandle()Landroid/os/UserHandle;
 
     .line 1285
-    move-result-object v5
+    move-result-object v4
 
     .line 1288
-    invoke-virtual {v5}, Landroid/os/UserHandle;->getIdentifier()I
+    invoke-virtual {v4}, Landroid/os/UserHandle;->getIdentifier()I
 
     .line 1289
     move-result v13
 
     .line 1292
-    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->isImportantConversation()Z
+    invoke-virtual {v2}, Landroid/app/people/PeopleSpaceTile;->isImportantConversation()Z
 
     .line 1293
     move-result v14
 
     .line 1296
-    invoke-static {v3}, Lcom/android/systemui/people/PeopleTileViewHelper;->isDndBlockingTileData(Landroid/app/people/PeopleSpaceTile;)Z
+    invoke-static {v2}, Lcom/android/systemui/people/PeopleTileViewHelper;->isDndBlockingTileData(Landroid/app/people/PeopleSpaceTile;)Z
 
     .line 1297
     move-result v15
@@ -4896,7 +4889,7 @@
     move v9, v0
 
     .line 1301
-    move v10, v2
+    move v10, v3
 
     .line 1302
     invoke-static/range {v8 .. v15}, Lcom/android/systemui/people/PeopleTileViewHelper;->getPersonIconBitmap(Landroid/content/Context;IZLandroid/graphics/drawable/Icon;Ljava/lang/String;IZZ)Landroid/graphics/Bitmap;
@@ -4905,61 +4898,61 @@
     move-result-object v0
 
     .line 1306
-    const v3, 0x7f0b05d6    # @id/person_icon
+    const v2, 0x7f0a05fb    # @id/person_icon
 
     .line 1307
-    invoke-virtual {v4, v3, v0}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
+    invoke-virtual {v5, v2, v0}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
 
     .line 1310
-    if-eqz v2, :cond_33
+    if-eqz v3, :cond_33
 
     .line 1313
     iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 1315
-    iget-object v2, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
+    iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
 
     .line 1317
-    invoke-virtual {v2}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
+    invoke-virtual {v3}, Landroid/app/people/PeopleSpaceTile;->getUserName()Ljava/lang/CharSequence;
 
     .line 1319
-    move-result-object v2
+    move-result-object v3
 
     .line 1322
-    filled-new-array {v2}, [Ljava/lang/Object;
+    filled-new-array {v3}, [Ljava/lang/Object;
 
     .line 1323
-    move-result-object v2
+    move-result-object v3
 
     .line 1326
-    const v5, 0x7f1406c0    # @string/new_story_status_content_description '%1$s shared a new story'
+    const v4, 0x7f13071a    # @string/new_story_status_content_description '%1$s shared a new story'
 
     .line 1327
-    invoke-virtual {v0, v5, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v4, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     .line 1330
     move-result-object v0
 
     .line 1333
-    invoke-virtual {v4, v3, v0}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
+    invoke-virtual {v5, v2, v0}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
 
     .line 1334
-    goto :goto_1e
+    goto :goto_1d
 
     .line 1337
     :cond_33
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     .line 1338
-    invoke-virtual {v4, v3, v2}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
+    invoke-virtual {v5, v2, v3}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 1339
-    goto :goto_1e
+    goto :goto_1d
 
     .line 1342
-    :goto_1d
+    :goto_1c
     new-instance v2, Ljava/lang/StringBuilder;
 
     .line 1343
@@ -4981,7 +4974,7 @@
     invoke-static {v7, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1357
-    :goto_1e
+    :goto_1d
     iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mKey:Lcom/android/systemui/people/widget/PeopleTileKey;
 
     .line 1360
@@ -5000,7 +4993,7 @@
     if-nez v2, :cond_34
 
     .line 1370
-    goto :goto_21
+    goto :goto_20
 
     .line 1372
     :cond_34
@@ -5011,10 +5004,10 @@
     iget-object v3, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 1375
-    const-class v5, Lcom/android/systemui/people/widget/LaunchConversationActivity;
+    const-class v4, Lcom/android/systemui/people/widget/LaunchConversationActivity;
 
     .line 1377
-    invoke-direct {v2, v3, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 1379
     const v3, 0x50808000
@@ -5026,34 +5019,34 @@
     const-string v3, "extra_tile_id"
 
     .line 1388
-    iget-object v5, v0, Lcom/android/systemui/people/widget/PeopleTileKey;->mShortcutId:Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/systemui/people/widget/PeopleTileKey;->mShortcutId:Ljava/lang/String;
 
     .line 1390
-    invoke-virtual {v2, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1392
     const-string v3, "extra_package_name"
 
     .line 1395
-    iget-object v5, v0, Lcom/android/systemui/people/widget/PeopleTileKey;->mPackageName:Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/systemui/people/widget/PeopleTileKey;->mPackageName:Ljava/lang/String;
 
     .line 1397
-    invoke-virtual {v2, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1399
     const-string v3, "extra_user_handle"
 
     .line 1402
-    new-instance v5, Landroid/os/UserHandle;
+    new-instance v4, Landroid/os/UserHandle;
 
     .line 1404
     iget v0, v0, Lcom/android/systemui/people/widget/PeopleTileKey;->mUserId:I
 
     .line 1406
-    invoke-direct {v5, v0}, Landroid/os/UserHandle;-><init>(I)V
+    invoke-direct {v4, v0}, Landroid/os/UserHandle;-><init>(I)V
 
     .line 1408
-    invoke-virtual {v2, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 1411
     iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mTile:Landroid/app/people/PeopleSpaceTile;
@@ -5074,18 +5067,18 @@
     invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1424
-    goto :goto_1f
+    goto :goto_1e
 
     .line 1427
     :catch_2
     move-exception v0
 
     .line 1428
-    goto :goto_20
+    goto :goto_1f
 
     .line 1429
     :cond_35
-    :goto_1f
+    :goto_1e
     iget-object v0, v1, Lcom/android/systemui/people/PeopleTileViewHelper;->mContext:Landroid/content/Context;
 
     .line 1430
@@ -5104,15 +5097,15 @@
     const/high16 v1, 0x1020000    # @android:id/background
 
     .line 1440
-    invoke-virtual {v4, v1, v0}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
+    invoke-virtual {v5, v1, v0}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
     .line 1442
-    goto :goto_21
+    goto :goto_20
 
     .line 1445
-    :goto_20
+    :goto_1f
     new-instance v1, Ljava/lang/StringBuilder;
 
     .line 1446
@@ -5135,8 +5128,8 @@
 
     .line 1460
     :cond_36
-    :goto_21
-    return-object v4
+    :goto_20
+    return-object v5
     .line 1463
 .end method
 
@@ -5168,7 +5161,7 @@
     move-result-object v0
 
     .line 17
-    const v1, 0x7f0706a4    # @dimen/medium_content_padding_above_name '4.0dp'
+    const v1, 0x7f0706e6    # @dimen/medium_content_padding_above_name '4.0dp'
 
     .line 18
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -5211,7 +5204,7 @@
 
     .line 37
     :goto_1
-    const v3, 0x7f0b04c8    # @id/medium_content
+    const v3, 0x7f0a04ec    # @id/medium_content
 
     .line 38
     const/4 v5, 0x0
@@ -5243,7 +5236,7 @@
     if-ne v1, v2, :cond_0
 
     .line 6
-    const v3, 0x7f070785    # @dimen/name_text_size_for_large_content '14.0sp'
+    const v3, 0x7f0707c7    # @dimen/name_text_size_for_large_content '14.0sp'
 
     .line 8
     invoke-virtual {p0, v3}, Lcom/android/systemui/people/PeopleTileViewHelper;->getLineHeightFromResource(I)I
@@ -5252,14 +5245,14 @@
     move-result v3
 
     .line 14
-    const v4, 0x7f0701b0    # @dimen/content_text_size_for_large '14.0sp'
+    const v4, 0x7f0701d1    # @dimen/content_text_size_for_large '14.0sp'
 
     .line 15
     goto :goto_0
 
     .line 18
     :cond_0
-    const v3, 0x7f070786    # @dimen/name_text_size_for_medium_content '12.0sp'
+    const v3, 0x7f0707c8    # @dimen/name_text_size_for_medium_content '12.0sp'
 
     .line 19
     invoke-virtual {p0, v3}, Lcom/android/systemui/people/PeopleTileViewHelper;->getLineHeightFromResource(I)I
@@ -5268,7 +5261,7 @@
     move-result v3
 
     .line 25
-    const v4, 0x7f0701b1    # @dimen/content_text_size_for_medium '12.0sp'
+    const v4, 0x7f0701d2    # @dimen/content_text_size_for_medium '12.0sp'
 
     .line 26
     :goto_0
@@ -5278,7 +5271,7 @@
     move-result v5
 
     .line 32
-    const v6, 0x7f0e01d2    # @layout/people_tile_large_with_status_content 'res/layout/people_tile_large_with_status_content.xml'
+    const v6, 0x7f0d01df    # @layout/people_tile_large_with_status_content 'res/layout/people_tile_large_with_status_content.xml'
 
     .line 33
     const/4 v7, 0x1
@@ -5328,7 +5321,7 @@
 
     .line 55
     :goto_2
-    const v5, 0x7f07067b    # @dimen/max_people_avatar_size_for_large_content '64.0dp'
+    const v5, 0x7f0706bd    # @dimen/max_people_avatar_size_for_large_content '64.0dp'
 
     .line 57
     invoke-virtual {p0, v5}, Lcom/android/systemui/people/PeopleTileViewHelper;->getSizeInDp(I)I
@@ -5391,7 +5384,7 @@
 
     .line 89
     :cond_5
-    const p2, 0x7f0b07e8    # @id/text_content
+    const p2, 0x7f0a0817    # @id/text_content
 
     .line 90
     const-string v0, "setMaxLines"
@@ -5408,7 +5401,7 @@
     .locals 8
 
     .line 1
-    const v0, 0x7f0b05ee    # @id/predefined_icon
+    const v0, 0x7f0a0617    # @id/predefined_icon
 
     .line 2
     const/4 v1, 0x0
@@ -5435,7 +5428,7 @@
     move-result-object v0
 
     .line 19
-    const v2, 0x7f0700b6    # @dimen/before_predefined_icon_padding '30.0dp'
+    const v2, 0x7f0700bc    # @dimen/before_predefined_icon_padding '30.0dp'
 
     .line 20
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -5475,7 +5468,7 @@
 
     .line 38
     :goto_1
-    const v3, 0x7f0b054a    # @id/name
+    const v3, 0x7f0a056e    # @id/name
 
     .line 39
     const/4 v5, 0x0
@@ -5543,25 +5536,25 @@
 
     .line 29
     :goto_0
-    const v7, 0x7f0b05ee    # @id/predefined_icon
+    const v7, 0x7f0a0617    # @id/predefined_icon
 
     .line 32
     invoke-virtual {p1, v7, v4}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
 
     .line 35
-    const v1, 0x7f0b07e8    # @id/text_content
+    const v1, 0x7f0a0817    # @id/text_content
 
     .line 38
     invoke-virtual {p1, v1, v4}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
 
     .line 41
-    const v8, 0x7f0b054a    # @id/name
+    const v8, 0x7f0a056e    # @id/name
 
     .line 44
     invoke-virtual {p1, v8, v4}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
 
     .line 47
-    const v2, 0x7f0b038e    # @id/image
+    const v2, 0x7f0a03ae    # @id/image
 
     .line 50
     invoke-virtual {p1, v2, v4}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
@@ -5601,7 +5594,7 @@
     invoke-virtual {p1, v1, v10}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 79
-    const v1, 0x7f0b0781    # @id/subtext
+    const v1, 0x7f0a07b0    # @id/subtext
 
     .line 82
     invoke-virtual {p1, v1, v11}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
@@ -5610,7 +5603,7 @@
     invoke-virtual {p1, v2, v11}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 88
-    const v1, 0x7f0b06bf    # @id/scrim_layout
+    const v1, 0x7f0a06e8    # @id/scrim_layout
 
     .line 91
     invoke-virtual {p1, v1, v11}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
@@ -5665,7 +5658,7 @@
     double-to-int v6, v1
 
     .line 120
-    const v2, 0x7f0b01fb    # @id/content
+    const v2, 0x7f0a0206    # @id/content
 
     .line 121
     move-object v1, p1
@@ -5686,7 +5679,7 @@
     const/4 v4, 0x0
 
     .line 131
-    const v2, 0x7f0b054a    # @id/name
+    const v2, 0x7f0a056e    # @id/name
 
     .line 132
     const/4 v5, 0x0
@@ -5707,7 +5700,7 @@
     move-result-object v1
 
     .line 145
-    const v2, 0x7f0706a5    # @dimen/medium_height_for_max_name_text_size '104.0dp'
+    const v2, 0x7f0706e7    # @dimen/medium_height_for_max_name_text_size '104.0dp'
 
     .line 146
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -5737,7 +5730,7 @@
     move-result-object v1
 
     .line 164
-    const v2, 0x7f070679    # @dimen/max_name_text_size_for_medium '14.0sp'
+    const v2, 0x7f0706bb    # @dimen/max_name_text_size_for_medium '14.0sp'
 
     .line 165
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -5771,7 +5764,7 @@
     move-result-object v1
 
     .line 185
-    const v2, 0x7f0700ba    # @dimen/below_name_text_padding '16.0dp'
+    const v2, 0x7f0700c0    # @dimen/below_name_text_padding '16.0dp'
 
     .line 186
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -5786,7 +5779,7 @@
     const/4 v5, 0x0
 
     .line 194
-    const v2, 0x7f0b054a    # @id/name
+    const v2, 0x7f0a056e    # @id/name
 
     .line 195
     const/4 v3, 0x0
@@ -5801,7 +5794,7 @@
     const/16 v1, 0x30
 
     .line 203
-    const v2, 0x7f0b01fb    # @id/content
+    const v2, 0x7f0a0206    # @id/content
 
     .line 205
     const-string v3, "setGravity"
@@ -5811,7 +5804,7 @@
 
     .line 210
     :cond_3
-    const v1, 0x7f07091d    # @dimen/regular_predefined_icon '18.0dp'
+    const v1, 0x7f07096d    # @dimen/regular_predefined_icon '18.0dp'
 
     .line 213
     invoke-virtual {p1, v7, v1}, Landroid/widget/RemoteViews;->setViewLayoutHeightDimen(II)V
@@ -5820,7 +5813,7 @@
     invoke-virtual {p1, v7, v1}, Landroid/widget/RemoteViews;->setViewLayoutWidthDimen(II)V
 
     .line 219
-    const v1, 0x7f0b04cd    # @id/messages_count
+    const v1, 0x7f0a04f1    # @id/messages_count
 
     .line 222
     invoke-virtual {p1, v1, v11}, Landroid/widget/RemoteViews;->setViewVisibility(II)V

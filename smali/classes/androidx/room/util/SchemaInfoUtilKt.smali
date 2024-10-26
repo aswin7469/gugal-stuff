@@ -1,6 +1,6 @@
 .class public abstract Landroidx/room/util/SchemaInfoUtilKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -35,88 +35,88 @@
     move-result v2
 
     .line 19
-    const-string v3, "to"
+    const-string/jumbo v3, "to"
 
     .line 20
     invoke-static {p0, v3}, Landroidx/room/util/SQLiteStatementUtil;->columnIndexOf(Landroidx/sqlite/SQLiteStatement;Ljava/lang/String;)I
 
-    .line 22
+    .line 23
     move-result v3
 
-    .line 25
+    .line 26
     new-instance v4, Lkotlin/collections/builders/ListBuilder;
 
-    .line 26
+    .line 27
     invoke-direct {v4}, Lkotlin/collections/builders/ListBuilder;-><init>()V
 
-    .line 28
+    .line 29
     :goto_0
     invoke-interface {p0}, Landroidx/sqlite/SQLiteStatement;->step()Z
 
-    .line 31
+    .line 32
     move-result v5
 
-    .line 34
+    .line 35
     if-eqz v5, :cond_0
 
-    .line 35
+    .line 36
     new-instance v5, Landroidx/room/util/ForeignKeyWithSequence;
 
-    .line 37
+    .line 38
     invoke-interface {p0, v0}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
 
-    .line 39
+    .line 40
     move-result-wide v6
 
-    .line 42
+    .line 43
     long-to-int v6, v6
 
-    .line 43
+    .line 44
     invoke-interface {p0, v1}, Landroidx/sqlite/SQLiteStatement;->getLong(I)J
 
-    .line 44
+    .line 45
     move-result-wide v7
 
-    .line 47
+    .line 48
     long-to-int v7, v7
 
-    .line 48
+    .line 49
     invoke-interface {p0, v2}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
 
-    .line 49
+    .line 50
     move-result-object v8
 
-    .line 52
+    .line 53
     invoke-interface {p0, v3}, Landroidx/sqlite/SQLiteStatement;->getText(I)Ljava/lang/String;
 
-    .line 53
+    .line 54
     move-result-object v9
 
-    .line 56
+    .line 57
     invoke-direct {v5, v8, v6, v7, v9}, Landroidx/room/util/ForeignKeyWithSequence;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 57
+    .line 58
     invoke-virtual {v4, v5}, Lkotlin/collections/builders/ListBuilder;->add(Ljava/lang/Object;)Z
 
-    .line 60
+    .line 61
     goto :goto_0
 
-    .line 63
+    .line 64
     :cond_0
     invoke-virtual {v4}, Lkotlin/collections/builders/ListBuilder;->build()Lkotlin/collections/builders/ListBuilder;
 
-    .line 64
+    .line 65
     move-result-object p0
-
-    .line 67
-    invoke-static {p0}, Lkotlin/collections/CollectionsKt;->sorted(Ljava/lang/Iterable;)Ljava/util/List;
 
     .line 68
+    invoke-static {p0}, Lkotlin/collections/CollectionsKt;->sorted(Ljava/lang/Iterable;)Ljava/util/List;
+
+    .line 69
     move-result-object p0
 
-    .line 71
-    return-object p0
     .line 72
+    return-object p0
+    .line 73
 .end method
 
 .method public static final readIndex(Landroidx/sqlite/SQLiteConnection;Ljava/lang/String;Z)Landroidx/room/util/TableInfo$Index;

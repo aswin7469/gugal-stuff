@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/AssistantFeedbackController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -75,10 +75,10 @@
     new-instance p0, Lcom/android/systemui/statusbar/notification/FeedbackIcon;
 
     .line 42
-    const v0, 0x10803fb    # @android:drawable/ic_faster_emergency
+    const v0, 0x10803f9    # @android:drawable/ic_expand_more_48dp
 
     .line 44
-    const v1, 0x1040694    # @android:string/pasted_from_clipboard
+    const v1, 0x104068b    # @android:string/other_networks_no_internet
 
     .line 47
     invoke-direct {p0, v0, v1}, Lcom/android/systemui/statusbar/notification/FeedbackIcon;-><init>(II)V
@@ -93,10 +93,10 @@
     new-instance p0, Lcom/android/systemui/statusbar/notification/FeedbackIcon;
 
     .line 57
-    const v0, 0x10803fe    # @android:drawable/ic_feedback_downrank
+    const v0, 0x10803fc    # @android:drawable/ic_feedback
 
     .line 59
-    const v1, 0x1040697    # @android:string/peerTtyModeOff
+    const v1, 0x104068e    # @android:string/package_installed_device_owner
 
     .line 62
     invoke-direct {p0, v0, v1}, Lcom/android/systemui/statusbar/notification/FeedbackIcon;-><init>(II)V
@@ -111,10 +111,10 @@
     new-instance p0, Lcom/android/systemui/statusbar/notification/FeedbackIcon;
 
     .line 72
-    const v0, 0x10803ff    # @android:drawable/ic_feedback_indicator
+    const v0, 0x10803fd    # @android:drawable/ic_feedback_alerted
 
     .line 74
-    const v1, 0x1040696    # @android:string/peerTtyModeHco
+    const v1, 0x104068d    # @android:string/package_deleted_device_owner
 
     .line 77
     invoke-direct {p0, v0, v1}, Lcom/android/systemui/statusbar/notification/FeedbackIcon;-><init>(II)V
@@ -129,10 +129,10 @@
     new-instance p0, Lcom/android/systemui/statusbar/notification/FeedbackIcon;
 
     .line 87
-    const v0, 0x10803fc    # @android:drawable/ic_feedback
+    const v0, 0x10803fa    # @android:drawable/ic_expand_notification
 
     .line 89
-    const v1, 0x1040695    # @android:string/peerTtyModeFull
+    const v1, 0x104068c    # @android:string/owner_name
 
     .line 92
     invoke-direct {p0, v0, v1}, Lcom/android/systemui/statusbar/notification/FeedbackIcon;-><init>(II)V

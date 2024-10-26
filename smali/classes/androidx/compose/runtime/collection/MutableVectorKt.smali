@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/runtime/collection/MutableVectorKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -78,86 +78,86 @@
     new-instance v0, Ljava/lang/StringBuilder;
 
     .line 15
-    const-string v1, "toIndex ("
+    const-string/jumbo v1, "toIndex ("
 
     .line 17
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 19
+    .line 20
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 22
+    .line 23
     const-string p1, ") is more than than the list size ("
 
-    .line 25
+    .line 26
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 27
+    .line 28
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 30
+    .line 31
     const/16 p1, 0x29
 
-    .line 33
+    .line 34
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 35
+    .line 36
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 38
+    .line 39
     move-result-object p1
 
-    .line 41
+    .line 42
     invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    .line 42
+    .line 43
     throw p0
 
-    .line 45
+    .line 46
     :cond_1
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    .line 46
+    .line 47
     const-string p2, "fromIndex ("
 
-    .line 48
+    .line 49
     const-string v0, ") is less than 0."
 
-    .line 50
-    invoke-static {p2, v0, p0}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    .line 51
+    invoke-static {p2, v0, p0}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
-    .line 52
+    .line 53
     move-result-object p0
 
-    .line 55
+    .line 56
     invoke-direct {p1, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    .line 56
+    .line 57
     throw p1
 
-    .line 59
+    .line 60
     :cond_2
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    .line 60
+    .line 61
     const-string v0, "Indices are out of order. fromIndex ("
 
-    .line 62
+    .line 63
     const-string v1, ") is greater than toIndex ("
 
-    .line 64
+    .line 65
     const-string v2, ")."
 
-    .line 66
+    .line 67
     invoke-static {p0, p1, v0, v1, v2}, Landroidx/compose/foundation/text/HeightInLinesModifierKt$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 68
+    .line 69
     move-result-object p0
 
-    .line 71
+    .line 72
     invoke-direct {p2, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 72
+    .line 73
     throw p2
-    .line 75
+    .line 76
 .end method

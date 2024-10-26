@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/communal/ui/compose/CommunalContainerKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -11,36 +11,57 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
     .line 1
     sget-object v0, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$sceneTransitions$1;->INSTANCE:Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$sceneTransitions$1;
 
     .line 2
-    invoke-static {v0}, Lcom/android/compose/animation/scene/TransitionDslKt;->transitions(Lkotlin/jvm/functions/Function1;)Lcom/android/compose/animation/scene/SceneTransitions;
+    new-instance v1, Lcom/android/compose/animation/scene/SceneTransitionsBuilderImpl;
 
     .line 4
-    move-result-object v0
+    invoke-direct {v1}, Lcom/android/compose/animation/scene/SceneTransitionsBuilderImpl;-><init>()V
 
-    .line 7
-    sput-object v0, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt;->sceneTransitions:Lcom/android/compose/animation/scene/SceneTransitions;
+    .line 6
+    invoke-interface {v0, v1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
-    const/16 v0, 0x80
-
-    .line 10
-    int-to-float v0, v0
+    .line 9
+    new-instance v0, Lcom/android/compose/animation/scene/SceneTransitions;
 
     .line 12
+    iget-object v2, v1, Lcom/android/compose/animation/scene/SceneTransitionsBuilderImpl;->defaultSwipeSpec:Landroidx/compose/animation/core/SpringSpec;
+
+    .line 14
+    iget-object v3, v1, Lcom/android/compose/animation/scene/SceneTransitionsBuilderImpl;->transitionSpecs:Ljava/util/List;
+
+    .line 16
+    iget-object v4, v1, Lcom/android/compose/animation/scene/SceneTransitionsBuilderImpl;->transitionOverscrollSpecs:Ljava/util/List;
+
+    .line 18
+    iget-object v1, v1, Lcom/android/compose/animation/scene/SceneTransitionsBuilderImpl;->interruptionHandler:Lcom/android/compose/animation/scene/DefaultInterruptionHandler;
+
+    .line 20
+    invoke-direct {v0, v2, v3, v4, v1}, Lcom/android/compose/animation/scene/SceneTransitions;-><init>(Landroidx/compose/animation/core/SpringSpec;Ljava/util/List;Ljava/util/List;Lcom/android/compose/animation/scene/DefaultInterruptionHandler;)V
+
+    .line 22
+    sput-object v0, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt;->sceneTransitions:Lcom/android/compose/animation/scene/SceneTransitions;
+
+    .line 25
+    const/16 v0, 0x80
+
+    .line 27
+    int-to-float v0, v0
+
+    .line 29
     sput v0, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt;->ANIMATION_OFFSCREEN_OFFSET:F
 
-    .line 13
+    .line 30
     return-void
-    .line 15
+    .line 32
 .end method
 
 .method public static final AnimatedLinearGradient(Landroidx/compose/foundation/layout/BoxScope;Landroidx/compose/runtime/Composer;I)V
-    .locals 18
+    .locals 21
 
     .line 1
     move-object/from16 v0, p0
@@ -49,429 +70,460 @@
     move/from16 v1, p2
 
     .line 4
-    move-object/from16 v2, p1
+    const/4 v2, 0x0
 
     .line 6
-    check-cast v2, Landroidx/compose/runtime/ComposerImpl;
+    sget-object v3, Landroidx/compose/runtime/Composer$Companion;->Empty:Landroidx/compose/runtime/Composer$Companion$Empty$1;
 
-    .line 8
-    const v3, -0x6e4b5a05
+    .line 7
+    move-object/from16 v10, p1
 
-    .line 10
-    invoke-virtual {v2, v3}, Landroidx/compose/runtime/ComposerImpl;->startRestartGroup(I)Landroidx/compose/runtime/ComposerImpl;
+    .line 9
+    check-cast v10, Landroidx/compose/runtime/ComposerImpl;
+
+    .line 11
+    const v4, -0x6e4b5a05
 
     .line 13
-    and-int/lit8 v3, v1, 0xe
+    invoke-virtual {v10, v4}, Landroidx/compose/runtime/ComposerImpl;->startRestartGroup(I)Landroidx/compose/runtime/ComposerImpl;
 
     .line 16
-    const/4 v5, 0x2
-
-    .line 18
-    if-nez v3, :cond_1
+    and-int/lit8 v4, v1, 0xe
 
     .line 19
-    invoke-virtual {v2, v0}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
+    const/4 v6, 0x2
 
     .line 21
-    move-result v3
+    if-nez v4, :cond_1
+
+    .line 22
+    invoke-virtual {v10, v0}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
 
     .line 24
-    if-eqz v3, :cond_0
-
-    .line 25
-    const/4 v3, 0x4
+    move-result v4
 
     .line 27
-    goto :goto_0
+    if-eqz v4, :cond_0
 
     .line 28
-    :cond_0
-    move v3, v5
-
-    .line 29
-    :goto_0
-    or-int/2addr v3, v1
+    const/4 v4, 0x4
 
     .line 30
-    goto :goto_1
+    goto :goto_0
 
     .line 31
-    :cond_1
-    move v3, v1
+    :cond_0
+    move v4, v6
 
     .line 32
-    :goto_1
-    and-int/lit8 v6, v3, 0xb
+    :goto_0
+    or-int/2addr v4, v1
 
     .line 33
-    if-ne v6, v5, :cond_3
+    move v11, v4
+
+    .line 34
+    goto :goto_1
 
     .line 35
-    invoke-virtual {v2}, Landroidx/compose/runtime/ComposerImpl;->getSkipping()Z
+    :cond_1
+    move v11, v1
+
+    .line 36
+    :goto_1
+    and-int/lit8 v4, v11, 0xb
 
     .line 37
-    move-result v6
+    if-ne v4, v6, :cond_3
 
-    .line 40
-    if-nez v6, :cond_2
+    .line 39
+    invoke-virtual {v10}, Landroidx/compose/runtime/ComposerImpl;->getSkipping()Z
 
     .line 41
-    goto :goto_2
-
-    .line 43
-    :cond_2
-    invoke-virtual {v2}, Landroidx/compose/runtime/ComposerImpl;->skipToGroupEnd()V
+    move-result v4
 
     .line 44
-    goto/16 :goto_5
+    if-nez v4, :cond_2
+
+    .line 45
+    goto :goto_2
 
     .line 47
-    :cond_3
-    :goto_2
-    sget-object v6, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
+    :cond_2
+    invoke-virtual {v10}, Landroidx/compose/runtime/ComposerImpl;->skipToGroupEnd()V
 
-    .line 49
-    sget-object v6, Lcom/android/compose/theme/AndroidColorSchemeKt;->LocalAndroidColorScheme:Landroidx/compose/runtime/StaticProvidableCompositionLocal;
+    .line 48
+    goto/16 :goto_3
 
     .line 51
-    invoke-virtual {v2, v6}, Landroidx/compose/runtime/ComposerImpl;->consume(Landroidx/compose/runtime/ProvidableCompositionLocal;)Ljava/lang/Object;
+    :cond_3
+    :goto_2
+    sget-object v4, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
 
     .line 53
-    move-result-object v6
+    sget-object v4, Lcom/android/compose/theme/AndroidColorSchemeKt;->LocalAndroidColorScheme:Landroidx/compose/runtime/StaticProvidableCompositionLocal;
 
-    .line 56
-    check-cast v6, Lcom/android/compose/theme/AndroidColorScheme;
+    .line 55
+    invoke-virtual {v10, v4}, Landroidx/compose/runtime/ComposerImpl;->consume(Landroidx/compose/runtime/ProvidableCompositionLocal;)Ljava/lang/Object;
 
     .line 57
-    sget-object v7, Landroidx/compose/ui/Modifier$Companion;->$$INSTANCE:Landroidx/compose/ui/Modifier$Companion;
+    move-result-object v4
 
-    .line 59
-    invoke-interface {v0, v7}, Landroidx/compose/foundation/layout/BoxScope;->matchParentSize(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
+    .line 60
+    move-object v12, v4
 
     .line 61
-    move-result-object v7
+    check-cast v12, Lcom/android/compose/theme/AndroidColorScheme;
+
+    .line 62
+    sget-object v4, Landroidx/compose/ui/Modifier$Companion;->$$INSTANCE:Landroidx/compose/ui/Modifier$Companion;
 
     .line 64
-    iget-wide v8, v6, Lcom/android/compose/theme/AndroidColorScheme;->primary:J
+    invoke-interface {v0, v4}, Landroidx/compose/foundation/layout/BoxScope;->matchParentSize(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
 
-    .line 65
-    sget-object v10, Landroidx/compose/ui/graphics/RectangleShapeKt;->RectangleShape:Landroidx/compose/ui/graphics/RectangleShapeKt$RectangleShape$1;
-
-    .line 67
-    invoke-static {v7, v8, v9, v10}, Landroidx/compose/foundation/BackgroundKt;->background-bw27NRU(Landroidx/compose/ui/Modifier;JLandroidx/compose/ui/graphics/Shape;)Landroidx/compose/ui/Modifier;
+    .line 66
+    move-result-object v4
 
     .line 69
-    move-result-object v7
+    iget-wide v7, v12, Lcom/android/compose/theme/AndroidColorScheme;->primary:J
+
+    .line 70
+    sget-object v9, Landroidx/compose/ui/graphics/RectangleShapeKt;->RectangleShape:Landroidx/compose/ui/graphics/RectangleShapeKt$RectangleShape$1;
 
     .line 72
-    iget-wide v8, v6, Lcom/android/compose/theme/AndroidColorScheme;->primaryContainer:J
+    invoke-static {v4, v7, v8, v9}, Landroidx/compose/foundation/BackgroundKt;->background-bw27NRU(Landroidx/compose/ui/Modifier;JLandroidx/compose/ui/graphics/Shape;)Landroidx/compose/ui/Modifier;
 
-    .line 73
-    const v10, 0x3f19999a    # 0.6f
+    .line 74
+    move-result-object v13
 
-    .line 75
-    invoke-static {v10, v8, v9}, Landroidx/compose/ui/graphics/Color;->copy-wmQWz5c$default(FJ)J
+    .line 77
+    iget-wide v7, v12, Lcom/android/compose/theme/AndroidColorScheme;->primaryContainer:J
 
     .line 78
-    move-result-wide v13
+    const v4, 0x3f19999a    # 0.6f
 
-    .line 81
-    const v8, -0x2e84bad6
+    .line 80
+    invoke-static {v4, v7, v8}, Landroidx/compose/ui/graphics/Color;->copy-wmQWz5c$default(FJ)J
 
-    .line 82
-    invoke-virtual {v2, v8}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
+    .line 83
+    move-result-wide v14
 
-    .line 85
-    sget-object v8, Landroidx/compose/ui/platform/CompositionLocalsKt;->LocalDensity:Landroidx/compose/runtime/StaticProvidableCompositionLocal;
+    .line 86
+    const v4, -0x2e84bad6
 
-    .line 88
-    invoke-virtual {v2, v8}, Landroidx/compose/runtime/ComposerImpl;->consume(Landroidx/compose/runtime/ProvidableCompositionLocal;)Ljava/lang/Object;
+    .line 87
+    invoke-virtual {v10, v4}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
 
     .line 90
-    move-result-object v8
+    sget-object v4, Landroidx/compose/ui/platform/CompositionLocalsKt;->LocalDensity:Landroidx/compose/runtime/StaticProvidableCompositionLocal;
 
     .line 93
-    check-cast v8, Landroidx/compose/ui/unit/Density;
+    invoke-virtual {v10, v4}, Landroidx/compose/runtime/ComposerImpl;->consume(Landroidx/compose/runtime/ProvidableCompositionLocal;)Ljava/lang/Object;
 
-    .line 94
-    invoke-virtual {v2}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
+    .line 95
+    move-result-object v4
 
-    .line 96
-    move-result-object v9
+    .line 98
+    move-object v9, v4
 
     .line 99
-    sget-object v10, Landroidx/compose/runtime/Composer$Companion;->Empty:Landroidx/compose/runtime/Composer$Companion$Empty$1;
+    check-cast v9, Landroidx/compose/ui/unit/Density;
 
     .line 100
-    if-ne v9, v10, :cond_4
+    sget-object v4, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
 
     .line 102
-    new-instance v9, Landroidx/compose/animation/core/InfiniteTransition;
+    invoke-virtual {v10}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
 
     .line 104
-    invoke-direct {v9}, Landroidx/compose/animation/core/InfiniteTransition;-><init>()V
+    move-result-object v4
 
-    .line 106
-    invoke-virtual {v2, v9}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
+    .line 107
+    if-ne v4, v3, :cond_4
 
-    .line 109
-    :cond_4
-    check-cast v9, Landroidx/compose/animation/core/InfiniteTransition;
+    .line 108
+    new-instance v4, Landroidx/compose/animation/core/InfiniteTransition;
+
+    .line 110
+    invoke-direct {v4}, Landroidx/compose/animation/core/InfiniteTransition;-><init>()V
 
     .line 112
-    const/4 v15, 0x0
-
-    .line 114
-    invoke-virtual {v9, v15, v2}, Landroidx/compose/animation/core/InfiniteTransition;->run$animation_core_release(ILandroidx/compose/runtime/Composer;)V
+    invoke-virtual {v10, v4}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
 
     .line 115
-    new-instance v11, Landroidx/compose/animation/core/CubicBezierEasing;
+    :cond_4
+    check-cast v4, Landroidx/compose/animation/core/InfiniteTransition;
 
     .line 118
-    const v12, 0x3f2b851f    # 0.67f
+    invoke-virtual {v4, v2, v10}, Landroidx/compose/animation/core/InfiniteTransition;->run$animation_core_release(ILandroidx/compose/runtime/Composer;)V
 
     .line 120
-    const/high16 v4, 0x3f800000    # 1.0f
+    new-instance v7, Landroidx/compose/animation/core/CubicBezierEasing;
 
     .line 123
-    const v5, 0x3ea8f5c3    # 0.33f
+    const v8, 0x3f2b851f    # 0.67f
 
     .line 125
-    const/4 v15, 0x0
+    const/high16 v5, 0x3f800000    # 1.0f
 
     .line 128
-    invoke-direct {v11, v5, v15, v12, v4}, Landroidx/compose/animation/core/CubicBezierEasing;-><init>(FFFF)V
+    const v2, 0x3ea8f5c3    # 0.33f
 
-    .line 129
-    const/16 v4, 0x2710
+    .line 130
+    const/4 v6, 0x0
 
-    .line 132
-    const/4 v5, 0x2
+    .line 133
+    invoke-direct {v7, v2, v6, v8, v5}, Landroidx/compose/animation/core/CubicBezierEasing;-><init>(FFFF)V
 
     .line 134
-    const/4 v12, 0x0
+    const/16 v2, 0x2710
 
-    .line 135
-    invoke-static {v4, v12, v11, v5}, Landroidx/compose/animation/core/AnimationSpecKt;->tween$default(IILandroidx/compose/animation/core/Easing;I)Landroidx/compose/animation/core/TweenSpec;
-
-    .line 136
-    move-result-object v4
+    .line 137
+    const/4 v5, 0x2
 
     .line 139
-    sget-object v5, Landroidx/compose/animation/core/RepeatMode;->Reverse:Landroidx/compose/animation/core/RepeatMode;
+    const/4 v6, 0x0
 
     .line 140
-    const-wide/16 v11, 0x0
+    invoke-static {v2, v6, v7, v5}, Landroidx/compose/animation/core/AnimationSpecKt;->tween$default(IILandroidx/compose/animation/core/Easing;I)Landroidx/compose/animation/core/TweenSpec;
 
-    .line 142
-    const/4 v15, 0x4
-
-    .line 144
-    invoke-static {v4, v5, v11, v12, v15}, Landroidx/compose/animation/core/AnimationSpecKt;->infiniteRepeatable-9IiC70o$default(Landroidx/compose/animation/core/TweenSpec;Landroidx/compose/animation/core/RepeatMode;JI)Landroidx/compose/animation/core/InfiniteRepeatableSpec;
-
-    .line 145
-    move-result-object v4
-
-    .line 148
-    invoke-static {v9, v4, v2}, Landroidx/compose/animation/core/InfiniteTransitionKt;->animateFloat(Landroidx/compose/animation/core/InfiniteTransition;Landroidx/compose/animation/core/InfiniteRepeatableSpec;Landroidx/compose/runtime/Composer;)Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;
-
-    .line 149
-    move-result-object v4
-
-    .line 152
-    const v5, -0x1dabe2aa
-
-    .line 153
-    invoke-virtual {v2, v5}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
-
-    .line 156
-    invoke-virtual {v2, v8}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
-
-    .line 159
-    move-result v5
-
-    .line 162
-    invoke-virtual {v2}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
-
-    .line 163
-    move-result-object v9
-
-    .line 166
-    if-nez v5, :cond_5
-
-    .line 167
-    if-ne v9, v10, :cond_6
-
-    .line 169
-    :cond_5
-    sget v5, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt;->ANIMATION_OFFSCREEN_OFFSET:F
-
-    .line 171
-    invoke-interface {v8, v5}, Landroidx/compose/ui/unit/Density;->toPx-0680j_4(F)F
-
-    .line 173
-    move-result v5
-
-    .line 176
-    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 177
-    move-result-object v9
-
-    .line 180
-    invoke-virtual {v2, v9}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
-
-    .line 181
-    :cond_6
-    check-cast v9, Ljava/lang/Number;
-
-    .line 184
-    invoke-virtual {v9}, Ljava/lang/Number;->floatValue()F
-
-    .line 186
-    move-result v12
-
-    .line 189
-    const/4 v5, 0x0
-
-    .line 190
-    invoke-virtual {v2, v5}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
-
-    .line 191
-    const v8, -0x1dabe249
-
-    .line 194
-    invoke-virtual {v2, v8}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
-
-    .line 197
-    invoke-virtual {v2, v12}, Landroidx/compose/runtime/ComposerImpl;->changed(F)Z
-
-    .line 200
-    move-result v8
-
-    .line 203
-    invoke-virtual {v2, v4}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
-
-    .line 204
-    move-result v9
-
-    .line 207
-    or-int/2addr v8, v9
-
-    .line 208
-    invoke-virtual {v2, v13, v14}, Landroidx/compose/runtime/ComposerImpl;->changed(J)Z
-
-    .line 209
-    move-result v9
-
-    .line 212
-    or-int/2addr v8, v9
-
-    .line 213
-    iget-wide v5, v6, Lcom/android/compose/theme/AndroidColorScheme;->primary:J
-
-    .line 214
-    invoke-virtual {v2, v5, v6}, Landroidx/compose/runtime/ComposerImpl;->changed(J)Z
-
-    .line 216
-    move-result v9
-
-    .line 219
-    or-int/2addr v8, v9
-
-    .line 220
-    invoke-virtual {v2}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
-
-    .line 221
-    move-result-object v9
-
-    .line 224
-    if-nez v8, :cond_8
-
-    .line 225
-    if-ne v9, v10, :cond_7
-
-    .line 227
-    goto :goto_3
-
-    .line 229
-    :cond_7
-    const/4 v8, 0x0
-
-    .line 230
-    goto :goto_4
-
-    .line 231
-    :cond_8
-    :goto_3
-    new-instance v9, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$animatedRadialGradientBackground$1$1;
-
-    .line 232
-    move-object v11, v9
-
-    .line 234
-    const/4 v8, 0x0
-
-    .line 235
-    move-wide v15, v5
-
-    .line 236
-    move-object/from16 v17, v4
-
-    .line 237
-    invoke-direct/range {v11 .. v17}, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$animatedRadialGradientBackground$1$1;-><init>(FJJLandroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;)V
-
-    .line 239
-    invoke-virtual {v2, v9}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
-
-    .line 242
-    :goto_4
-    check-cast v9, Lkotlin/jvm/functions/Function1;
-
-    .line 245
-    invoke-virtual {v2, v8}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
-
-    .line 247
-    invoke-static {v7, v9}, Landroidx/compose/ui/draw/DrawModifierKt;->drawBehind(Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;)Landroidx/compose/ui/Modifier;
-
-    .line 250
-    move-result-object v4
-
-    .line 253
-    invoke-virtual {v2, v8}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
-
-    .line 254
-    invoke-static {v4, v2, v8}, Landroidx/compose/foundation/layout/BoxKt;->Box(Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
-
-    .line 257
-    and-int/lit8 v3, v3, 0xe
-
-    .line 260
-    invoke-static {v0, v2, v3}, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt;->BackgroundTopScrim(Landroidx/compose/foundation/layout/BoxScope;Landroidx/compose/runtime/Composer;I)V
-
-    .line 262
-    :goto_5
-    invoke-virtual {v2}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
-
-    .line 265
+    .line 141
     move-result-object v2
 
-    .line 268
-    if-eqz v2, :cond_9
+    .line 144
+    sget-object v5, Landroidx/compose/animation/core/RepeatMode;->Reverse:Landroidx/compose/animation/core/RepeatMode;
+
+    .line 145
+    const-wide/16 v6, 0x0
+
+    .line 147
+    const/4 v8, 0x4
+
+    .line 149
+    invoke-static {v2, v5, v6, v7, v8}, Landroidx/compose/animation/core/AnimationSpecKt;->infiniteRepeatable-9IiC70o$default(Landroidx/compose/animation/core/TweenSpec;Landroidx/compose/animation/core/RepeatMode;JI)Landroidx/compose/animation/core/InfiniteRepeatableSpec;
+
+    .line 150
+    move-result-object v6
+
+    .line 153
+    const-string v7, "radial gradient center fraction"
+
+    .line 154
+    const/16 v2, 0x71b8
+
+    .line 156
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    .line 158
+    move-object v8, v10
+
+    .line 160
+    move-object v1, v9
+
+    .line 161
+    move v9, v2
+
+    .line 162
+    invoke-static/range {v4 .. v9}, Landroidx/compose/animation/core/InfiniteTransitionKt;->animateFloat(Landroidx/compose/animation/core/InfiniteTransition;FLandroidx/compose/animation/core/InfiniteRepeatableSpec;Ljava/lang/String;Landroidx/compose/runtime/Composer;I)Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;
+
+    .line 163
+    move-result-object v2
+
+    .line 166
+    const v4, -0x1dabe2aa
+
+    .line 167
+    invoke-virtual {v10, v4}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
+
+    .line 170
+    invoke-virtual {v10, v1}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
+
+    .line 173
+    move-result v4
+
+    .line 176
+    invoke-virtual {v10}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
+
+    .line 177
+    move-result-object v5
+
+    .line 180
+    if-nez v4, :cond_5
+
+    .line 181
+    if-ne v5, v3, :cond_6
+
+    .line 183
+    :cond_5
+    sget v4, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt;->ANIMATION_OFFSCREEN_OFFSET:F
+
+    .line 185
+    invoke-interface {v1, v4}, Landroidx/compose/ui/unit/Density;->toPx-0680j_4(F)F
+
+    .line 187
+    move-result v1
+
+    .line 190
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 191
+    move-result-object v5
+
+    .line 194
+    invoke-virtual {v10, v5}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
+
+    .line 195
+    :cond_6
+    check-cast v5, Ljava/lang/Number;
+
+    .line 198
+    invoke-virtual {v5}, Ljava/lang/Number;->floatValue()F
+
+    .line 200
+    move-result v1
+
+    .line 203
+    const/4 v4, 0x0
+
+    .line 204
+    invoke-virtual {v10, v4}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
+
+    .line 205
+    const v4, -0x1dabe249
+
+    .line 208
+    invoke-virtual {v10, v4}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
+
+    .line 211
+    invoke-virtual {v10, v1}, Landroidx/compose/runtime/ComposerImpl;->changed(F)Z
+
+    .line 214
+    move-result v4
+
+    .line 217
+    invoke-virtual {v10, v2}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
+
+    .line 218
+    move-result v5
+
+    .line 221
+    or-int/2addr v4, v5
+
+    .line 222
+    invoke-virtual {v10, v14, v15}, Landroidx/compose/runtime/ComposerImpl;->changed(J)Z
+
+    .line 223
+    move-result v5
+
+    .line 226
+    or-int/2addr v4, v5
+
+    .line 227
+    iget-wide v5, v12, Lcom/android/compose/theme/AndroidColorScheme;->primary:J
+
+    .line 228
+    invoke-virtual {v10, v5, v6}, Landroidx/compose/runtime/ComposerImpl;->changed(J)Z
+
+    .line 230
+    move-result v7
+
+    .line 233
+    or-int/2addr v4, v7
+
+    .line 234
+    invoke-virtual {v10}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
+
+    .line 235
+    move-result-object v7
+
+    .line 238
+    if-nez v4, :cond_7
+
+    .line 239
+    if-ne v7, v3, :cond_8
+
+    .line 241
+    :cond_7
+    new-instance v7, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$animatedRadialGradientBackground$1$1;
+
+    .line 243
+    move-wide v3, v14
+
+    .line 245
+    move-object v14, v7
+
+    .line 246
+    move v15, v1
+
+    .line 247
+    move-wide/from16 v16, v3
+
+    .line 248
+    move-wide/from16 v18, v5
+
+    .line 250
+    move-object/from16 v20, v2
+
+    .line 252
+    invoke-direct/range {v14 .. v20}, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$animatedRadialGradientBackground$1$1;-><init>(FJJLandroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;)V
+
+    .line 254
+    invoke-virtual {v10, v7}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
+
+    .line 257
+    :cond_8
+    check-cast v7, Lkotlin/jvm/functions/Function1;
+
+    .line 260
+    const/4 v1, 0x0
+
+    .line 262
+    invoke-virtual {v10, v1}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
+
+    .line 263
+    invoke-static {v13, v7}, Landroidx/compose/ui/draw/DrawModifierKt;->drawBehind(Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;)Landroidx/compose/ui/Modifier;
+
+    .line 266
+    move-result-object v2
 
     .line 269
-    new-instance v3, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$AnimatedLinearGradient$1;
+    invoke-virtual {v10, v1}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 271
-    invoke-direct {v3, v0, v1}, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$AnimatedLinearGradient$1;-><init>(Landroidx/compose/foundation/layout/BoxScope;I)V
+    .line 270
+    invoke-static {v2, v10, v1}, Landroidx/compose/foundation/layout/BoxKt;->Box(Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
 
     .line 273
-    iput-object v3, v2, Landroidx/compose/runtime/RecomposeScopeImpl;->block:Lkotlin/jvm/functions/Function2;
+    and-int/lit8 v1, v11, 0xe
 
     .line 276
+    invoke-static {v0, v10, v1}, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt;->BackgroundTopScrim(Landroidx/compose/foundation/layout/BoxScope;Landroidx/compose/runtime/Composer;I)V
+
+    .line 278
+    :goto_3
+    invoke-virtual {v10}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
+
+    .line 281
+    move-result-object v1
+
+    .line 284
+    if-eqz v1, :cond_9
+
+    .line 285
+    new-instance v2, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$AnimatedLinearGradient$1;
+
+    .line 287
+    move/from16 v3, p2
+
+    .line 289
+    invoke-direct {v2, v0, v3}, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$AnimatedLinearGradient$1;-><init>(Landroidx/compose/foundation/layout/BoxScope;I)V
+
+    .line 291
+    iput-object v2, v1, Landroidx/compose/runtime/RecomposeScopeImpl;->block:Lkotlin/jvm/functions/Function2;
+
+    .line 294
     :cond_9
     return-void
-    .line 278
+    .line 296
 .end method
 
 .method public static final BackgroundTopScrim(Landroidx/compose/foundation/layout/BoxScope;Landroidx/compose/runtime/Composer;I)V
@@ -901,184 +953,147 @@
     invoke-virtual {v0, v3}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
 
     .line 172
-    invoke-static {}, Lcom/android/systemui/Flags;->glanceableHubFullscreenSwipe()Z
+    new-instance v8, Lcom/android/compose/animation/scene/FixedSizeEdgeDetector;
 
     .line 175
+    const v3, 0x7f0701a7    # @dimen/communal_gesture_initiation_width '68.0dp'
+
+    .line 177
+    invoke-static {v3, v0}, Landroidx/compose/ui/res/PrimitiveResources_androidKt;->dimensionResource(ILandroidx/compose/runtime/Composer;)F
+
+    .line 180
     move-result v3
-
-    .line 178
-    if-eqz v3, :cond_4
-
-    .line 179
-    move-object v9, v8
-
-    .line 181
-    goto :goto_1
-
-    .line 182
-    :cond_4
-    new-instance v3, Lcom/android/compose/animation/scene/FixedSizeEdgeDetector;
 
     .line 183
-    const v4, 0x7f070186    # @dimen/communal_gesture_initiation_width '68.0dp'
+    invoke-direct {v8, v3}, Lcom/android/compose/animation/scene/FixedSizeEdgeDetector;-><init>(F)V
 
-    .line 185
-    invoke-static {v4, v0}, Landroidx/compose/ui/res/PrimitiveResources_androidKt;->dimensionResource(ILandroidx/compose/runtime/Composer;)F
-
-    .line 188
-    move-result v4
-
-    .line 191
-    invoke-direct {v3, v4}, Lcom/android/compose/animation/scene/FixedSizeEdgeDetector;-><init>(F)V
-
-    .line 192
-    move-object v9, v3
-
-    .line 195
-    :goto_1
+    .line 184
     invoke-virtual {v0, v13}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 196
-    invoke-static {}, Lcom/android/systemui/Flags;->glanceableHubFullscreenSwipe()Z
+    .line 187
+    sget-object v9, Lcom/android/compose/animation/scene/SwipeDetectorKt;->DefaultSwipeDetector:Lcom/android/compose/animation/scene/PassthroughSwipeDetector;
 
-    .line 199
-    move-result v3
-
-    .line 202
-    if-eqz v3, :cond_5
-
-    .line 203
-    goto :goto_2
-
-    .line 205
-    :cond_5
-    sget-object v3, Lcom/android/compose/animation/scene/SwipeDetectorKt;->DefaultSwipeDetector:Lcom/android/compose/animation/scene/PassthroughSwipeDetector;
-
-    .line 206
-    move-object v8, v3
-
-    .line 208
-    :goto_2
+    .line 190
     sget-object v15, Landroidx/compose/foundation/layout/SizeKt;->FillWholeMaxSize:Landroidx/compose/foundation/layout/FillElement;
 
-    .line 209
+    .line 192
     invoke-interface {v1, v15}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
 
-    .line 211
+    .line 194
     move-result-object v4
 
-    .line 214
+    .line 197
     new-instance v10, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$CommunalContainer$3;
 
-    .line 215
+    .line 198
     move-object/from16 v11, p3
 
-    .line 217
+    .line 200
     move-object/from16 v3, p4
 
-    .line 219
+    .line 202
     invoke-direct {v10, v6, v11, v3, v7}, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$CommunalContainer$3;-><init>(Landroidx/compose/runtime/MutableState;Lcom/android/systemui/communal/util/CommunalColors;Lcom/android/systemui/communal/ui/compose/CommunalContent;Landroidx/compose/runtime/MutableState;)V
 
-    .line 221
+    .line 204
     const/16 v16, 0x10
 
-    .line 224
+    .line 207
     const/4 v7, 0x0
 
-    .line 226
+    .line 209
     const/16 v17, 0x206
 
-    .line 227
+    .line 210
     move-object v3, v5
 
-    .line 229
-    move-object v5, v9
+    .line 212
+    move-object v5, v8
 
-    .line 230
-    move-object v6, v8
+    .line 213
+    move-object v6, v9
 
-    .line 231
+    .line 214
     move-object v8, v10
 
-    .line 232
+    .line 215
     move-object v9, v0
 
-    .line 233
+    .line 216
     move/from16 v10, v17
 
-    .line 234
+    .line 217
     move/from16 v11, v16
 
-    .line 236
+    .line 219
     invoke-static/range {v3 .. v11}, Lcom/android/compose/animation/scene/SceneTransitionLayoutKt;->SceneTransitionLayout(Lcom/android/compose/animation/scene/SceneTransitionLayoutState;Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/SwipeSourceDetector;Lcom/android/compose/animation/scene/SwipeDetector;FLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 
-    .line 238
+    .line 221
     invoke-interface {v12}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
-    .line 241
+    .line 224
     move-result-object v3
 
-    .line 244
+    .line 227
     check-cast v3, Ljava/lang/Boolean;
 
-    .line 245
+    .line 228
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 247
+    .line 230
     move-result v3
 
-    .line 250
+    .line 233
     invoke-static {v15, v3}, Lcom/android/systemui/communal/ui/compose/extensions/ModifierExtKt;->allowGestures(Landroidx/compose/ui/Modifier;Z)Landroidx/compose/ui/Modifier;
 
-    .line 251
+    .line 234
     move-result-object v3
 
-    .line 254
+    .line 237
     invoke-static {v3, v0, v13}, Landroidx/compose/foundation/layout/BoxKt;->Box(Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
 
-    .line 255
+    .line 238
     invoke-virtual {v0}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
 
-    .line 258
+    .line 241
     move-result-object v8
 
-    .line 261
-    if-eqz v8, :cond_6
+    .line 244
+    if-eqz v8, :cond_4
 
-    .line 262
+    .line 245
     new-instance v9, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$CommunalContainer$4;
 
-    .line 264
+    .line 247
     move-object v0, v9
 
-    .line 266
+    .line 249
     move-object/from16 v2, p1
 
-    .line 267
+    .line 250
     move-object/from16 v3, p2
 
-    .line 269
+    .line 252
     move-object/from16 v4, p3
 
-    .line 271
+    .line 254
     move-object/from16 v5, p4
 
-    .line 273
+    .line 256
     move/from16 v6, p6
 
-    .line 275
+    .line 258
     move/from16 v7, p7
 
-    .line 277
+    .line 260
     invoke-direct/range {v0 .. v7}, Lcom/android/systemui/communal/ui/compose/CommunalContainerKt$CommunalContainer$4;-><init>(Landroidx/compose/ui/Modifier;Lcom/android/systemui/communal/ui/viewmodel/CommunalViewModel;Lcom/android/systemui/scene/shared/model/SceneDataSourceDelegator;Lcom/android/systemui/communal/util/CommunalColors;Lcom/android/systemui/communal/ui/compose/CommunalContent;II)V
 
-    .line 279
+    .line 262
     iput-object v9, v8, Landroidx/compose/runtime/RecomposeScopeImpl;->block:Lkotlin/jvm/functions/Function2;
 
-    .line 282
-    :cond_6
+    .line 265
+    :cond_4
     return-void
-    .line 284
+    .line 267
 .end method
 
 .method public static final DefaultBackground(Landroidx/compose/foundation/layout/BoxScope;Lcom/android/systemui/communal/util/CommunalColors;Landroidx/compose/runtime/Composer;I)V
@@ -1520,7 +1535,7 @@
     move-object v9, p0
 
     .line 27
-    invoke-interface {p0, v2, v1}, Lcom/android/compose/animation/scene/BaseSceneScope;->element(Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/ElementKey;)Landroidx/compose/ui/Modifier;
+    invoke-interface {p0, v2, v1}, Lcom/android/compose/animation/scene/SceneScope;->element(Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/ElementKey;)Landroidx/compose/ui/Modifier;
 
     .line 28
     move-result-object v1

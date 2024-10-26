@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/bouncer/ui/binder/KeyguardBouncerViewBinder$bind$1$1$1$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -95,7 +95,7 @@
     check-cast p1, Lcom/android/keyguard/KeyguardSecurityContainer;
 
     .line 25
-    const v0, 0x7f0b03cd    # @id/keyguard_bouncer_user_switcher
+    const v0, 0x7f0a03ee    # @id/keyguard_bouncer_user_switcher
 
     .line 27
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -151,88 +151,85 @@
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setScaleY(F)V
 
     .line 64
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 67
     iget-object p0, p2, Lcom/android/keyguard/KeyguardSecurityContainerController;->mCancelAction:Ljava/lang/Runnable;
 
-    .line 70
+    .line 67
     if-eqz p0, :cond_3
 
-    .line 72
+    .line 69
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
-    .line 74
+    .line 71
     :cond_3
     const/4 p0, 0x0
 
-    .line 77
+    .line 74
     iput-object p0, p2, Lcom/android/keyguard/KeyguardSecurityContainerController;->mDismissAction:Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;
 
-    .line 78
+    .line 75
     iput-object p0, p2, Lcom/android/keyguard/KeyguardSecurityContainerController;->mCancelAction:Ljava/lang/Runnable;
 
-    .line 80
+    .line 77
     iget-object p0, p2, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    .line 82
+    .line 79
     check-cast p0, Lcom/android/keyguard/KeyguardSecurityContainer;
 
-    .line 84
+    .line 81
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mViewMode:Lcom/android/keyguard/KeyguardSecurityContainer$ViewMode;
 
-    .line 86
+    .line 83
     invoke-interface {p1}, Lcom/android/keyguard/KeyguardSecurityContainer$ViewMode;->reset()V
 
-    .line 88
+    .line 85
     iput-boolean v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mDisappearAnimRunning:Z
 
-    .line 91
+    .line 88
     iget-object p0, p2, Lcom/android/keyguard/KeyguardSecurityContainerController;->mSecurityViewFlipperController:Lcom/android/keyguard/KeyguardSecurityViewFlipperController;
 
-    .line 93
+    .line 90
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityViewFlipperController;->mChildren:Ljava/util/List;
 
-    .line 95
+    .line 92
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    .line 97
+    .line 94
     move-result-object p0
 
-    .line 100
+    .line 97
     :goto_1
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 101
+    .line 98
     move-result p1
 
-    .line 104
+    .line 101
     if-eqz p1, :cond_4
 
-    .line 105
+    .line 102
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 107
+    .line 104
     move-result-object p1
 
-    .line 110
+    .line 107
     check-cast p1, Lcom/android/keyguard/KeyguardInputViewController;
 
-    .line 111
+    .line 108
     invoke-virtual {p1}, Lcom/android/keyguard/KeyguardInputViewController;->reset$1()V
 
-    .line 113
+    .line 110
     goto :goto_1
 
-    .line 116
+    .line 113
     :cond_4
     invoke-virtual {p2}, Lcom/android/keyguard/KeyguardSecurityContainerController;->onPause()V
 
-    .line 117
+    .line 114
     :goto_2
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 120
+    .line 117
     return-object p0
-    .line 122
+    .line 119
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/controls/ui/ControlsUiController;
@@ -229,7 +229,7 @@
     new-instance v2, Landroid/view/ContextThemeWrapper;
 
     .line 84
-    const v3, 0x7f150172    # @style/Control.ListPopupWindow
+    const v3, 0x7f140172    # @style/Control.ListPopupWindow
 
     .line 86
     invoke-direct {v2, p2, v3}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
@@ -524,7 +524,7 @@
     move-result-object v4
 
     .line 31
-    const v5, 0x7f0c0045    # @integer/controls_max_columns '2'
+    const v5, 0x7f0b004a    # @integer/controls_max_columns '2'
 
     .line 32
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getInteger(I)I
@@ -533,7 +533,7 @@
     move-result v5
 
     .line 38
-    const v6, 0x7f0c0046    # @integer/controls_max_columns_adjust_below_width_dp '320'
+    const v6, 0x7f0b004b    # @integer/controls_max_columns_adjust_below_width_dp '320'
 
     .line 39
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getInteger(I)I
@@ -548,7 +548,7 @@
     invoke-direct {v7}, Landroid/util/TypedValue;-><init>()V
 
     .line 48
-    const v8, 0x7f0701f0    # @dimen/controls_max_columns_adjust_above_font_scale '1.25'
+    const v8, 0x7f070211    # @dimen/controls_max_columns_adjust_above_font_scale '1.25'
 
     .line 51
     const/4 v9, 0x1
@@ -611,7 +611,7 @@
 
     .line 89
     :goto_0
-    const v4, 0x7f0b0216    # @id/controls_list
+    const v4, 0x7f0a0221    # @id/controls_list
 
     .line 90
     invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -629,7 +629,7 @@
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 102
-    const v4, 0x7f0e008e    # @layout/controls_row 'res/layout/controls_row.xml'
+    const v4, 0x7f0d0096    # @layout/controls_row 'res/layout/controls_row.xml'
 
     .line 105
     const/4 v6, 0x0
@@ -727,7 +727,7 @@
 
     .line 169
     :cond_5
-    const v12, 0x7f0e0080    # @layout/controls_base_item 'res/layout/controls_base_item.xml'
+    const v12, 0x7f0d0088    # @layout/controls_base_item 'res/layout/controls_base_item.xml'
 
     .line 172
     invoke-virtual {v2, v12, v7, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -880,7 +880,7 @@
     move-object/from16 v3, v23
 
     .line 272
-    const v4, 0x7f0e008e    # @layout/controls_row 'res/layout/controls_row.xml'
+    const v4, 0x7f0d0096    # @layout/controls_row 'res/layout/controls_row.xml'
 
     .line 274
     const/4 v6, 0x0
@@ -928,7 +928,7 @@
     move-result-object v1
 
     .line 299
-    const v3, 0x7f0701c9    # @dimen/control_spacing '8.0dp'
+    const v3, 0x7f0701ea    # @dimen/control_spacing '8.0dp'
 
     .line 300
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2908,7 +2908,7 @@
 
     .line 376
     :cond_13
-    const v8, 0x7f0e0091    # @layout/controls_with_favorites 'res/layout/controls_with_favorites.xml'
+    const v8, 0x7f0d0099    # @layout/controls_with_favorites 'res/layout/controls_with_favorites.xml'
 
     .line 377
     invoke-virtual {v1, v8, v2, v9}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -2924,7 +2924,7 @@
 
     .line 387
     :cond_14
-    const v2, 0x7f0b0211    # @id/controls_close
+    const v2, 0x7f0a021c    # @id/controls_close
 
     .line 388
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -3085,7 +3085,7 @@
 
     .line 500
     :cond_16
-    const v8, 0x7f0b021e    # @id/controls_scroll_view
+    const v8, 0x7f0a0229    # @id/controls_scroll_view
 
     .line 501
     invoke-virtual {v2, v8}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -3110,7 +3110,7 @@
 
     .line 517
     :cond_17
-    const v8, 0x7f0b021b    # @id/controls_panel
+    const v8, 0x7f0a0226    # @id/controls_panel
 
     .line 518
     invoke-virtual {v2, v8}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -3337,7 +3337,7 @@
     move-result-object v2
 
     .line 675
-    const v8, 0x7f0701da    # @dimen/controls_header_app_icon_size '24.0dp'
+    const v8, 0x7f0701fb    # @dimen/controls_header_app_icon_size '24.0dp'
 
     .line 676
     invoke-virtual {v2, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3356,7 +3356,7 @@
 
     .line 687
     :cond_1d
-    const v10, 0x7f0b00c9    # @id/app_or_structure_spinner
+    const v10, 0x7f0a00cc    # @id/app_or_structure_spinner
 
     .line 688
     invoke-virtual {v8, v10}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -3404,7 +3404,7 @@
     move-result-object v12
 
     .line 721
-    const v13, 0x7f060093    # @color/control_spinner_dropdown '@android:color/holo_button_normal'
+    const v13, 0x7f060094    # @color/control_spinner_dropdown '@android:color/holo_button_normal'
 
     .line 722
     invoke-virtual {v12, v13, v7}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
@@ -3503,7 +3503,7 @@
     move-result-object v0
 
     .line 788
-    const v10, 0x7f080665    # @drawable/control_spinner_background 'res/drawable/control_spinner_background.xml'
+    const v10, 0x7f08066d    # @drawable/control_spinner_background 'res/drawable/control_spinner_background.xml'
 
     .line 789
     invoke-virtual {v0, v10}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -3737,7 +3737,7 @@
     iget-object v8, v6, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->context:Landroid/content/Context;
 
     .line 935
-    const v9, 0x7f1402e3    # @string/controls_open_app 'Open app'
+    const v9, 0x7f1302ff    # @string/controls_open_app 'Open app'
 
     .line 937
     invoke-virtual {v8, v9}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -3764,7 +3764,7 @@
     iget-object v3, v6, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->context:Landroid/content/Context;
 
     .line 956
-    const v8, 0x7f1402df    # @string/controls_menu_add_another_app 'Add app'
+    const v8, 0x7f1302fb    # @string/controls_menu_add_another_app 'Add app'
 
     .line 958
     invoke-virtual {v3, v8}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -3789,7 +3789,7 @@
     iget-object v3, v6, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->context:Landroid/content/Context;
 
     .line 975
-    const v8, 0x7f1402e1    # @string/controls_menu_remove 'Remove app'
+    const v8, 0x7f1302fd    # @string/controls_menu_remove 'Remove app'
 
     .line 977
     invoke-virtual {v3, v8}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -3816,7 +3816,7 @@
     iget-object v2, v6, Lcom/android/systemui/controls/ui/ControlsUiControllerImpl;->context:Landroid/content/Context;
 
     .line 996
-    const v3, 0x7f1402e0    # @string/controls_menu_edit 'Edit controls'
+    const v3, 0x7f1302fc    # @string/controls_menu_edit 'Edit controls'
 
     .line 998
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -3870,7 +3870,7 @@
 
     .line 1034
     :goto_15
-    const v0, 0x7f0b0218    # @id/controls_more
+    const v0, 0x7f0a0223    # @id/controls_more
 
     .line 1035
     invoke-virtual {v7, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;

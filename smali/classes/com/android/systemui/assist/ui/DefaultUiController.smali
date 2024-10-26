@@ -1,6 +1,9 @@
-.class public final Lcom/android/systemui/assist/ui/DefaultUiController;
+.class public Lcom/android/systemui/assist/ui/DefaultUiController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
+
+# interfaces
+.implements Lcom/android/systemui/assist/AssistManager$UiController;
 
 
 # instance fields
@@ -14,7 +17,7 @@
 
 .field public mInvocationInProgress:Z
 
-.field public final mInvocationLightsView:Lcom/android/systemui/assist/ui/InvocationLightsView;
+.field public mInvocationLightsView:Lcom/google/android/systemui/assist/uihints/AssistantInvocationLightsView;
 
 .field public mLastInvocationProgress:F
 
@@ -205,7 +208,7 @@
     move-result-object p1
 
     .line 86
-    const p3, 0x7f0e00de    # @layout/invocation_lights 'res/layout/invocation_lights.xml'
+    const p3, 0x7f0d00e9    # @layout/invocation_lights 'res/layout/invocation_lights.xml'
 
     .line 87
     invoke-virtual {p1, p3, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -214,13 +217,13 @@
     move-result-object p1
 
     .line 93
-    check-cast p1, Lcom/android/systemui/assist/ui/InvocationLightsView;
+    check-cast p1, Lcom/google/android/systemui/assist/uihints/AssistantInvocationLightsView;
 
     .line 94
-    iput-object p1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationLightsView:Lcom/android/systemui/assist/ui/InvocationLightsView;
+    iput-object p1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationLightsView:Lcom/google/android/systemui/assist/uihints/AssistantInvocationLightsView;
 
     .line 96
-    iput-object p6, p1, Lcom/android/systemui/assist/ui/InvocationLightsView;->mNavigationBarController:Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;
+    iput-object p6, p1, Lcom/google/android/systemui/assist/uihints/AssistantInvocationLightsView;->mNavigationBarController:Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;
 
     .line 98
     invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
@@ -232,7 +235,7 @@
 
 
 # virtual methods
-.method public final animateInvocationCompletion()V
+.method public final animateInvocationCompletion(I)V
     .locals 3
 
     .line 1
@@ -290,22 +293,22 @@
     new-instance v1, Lcom/android/systemui/assist/ui/DefaultUiController$$ExternalSyntheticLambda0;
 
     .line 35
-    invoke-direct {v1, p0}, Lcom/android/systemui/assist/ui/DefaultUiController$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/assist/ui/DefaultUiController;)V
+    invoke-direct {v1, p0, p1}, Lcom/android/systemui/assist/ui/DefaultUiController$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/assist/ui/DefaultUiController;I)V
 
     .line 37
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 40
-    iget-object v0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationAnimator:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationAnimator:Landroid/animation/ValueAnimator;
 
     .line 43
-    new-instance v1, Lcom/android/systemui/assist/ui/DefaultUiController$1;
+    new-instance v0, Lcom/android/systemui/assist/ui/DefaultUiController$1;
 
     .line 45
-    invoke-direct {v1, p0}, Lcom/android/systemui/assist/ui/DefaultUiController$1;-><init>(Lcom/android/systemui/assist/ui/DefaultUiController;)V
+    invoke-direct {v0, p0}, Lcom/android/systemui/assist/ui/DefaultUiController$1;-><init>(Lcom/android/systemui/assist/ui/DefaultUiController;)V
 
     .line 47
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     .line 50
     iget-object p0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationAnimator:Landroid/animation/ValueAnimator;
@@ -319,7 +322,7 @@
 .end method
 
 .method public final hide()V
-    .locals 5
+    .locals 3
 
     .line 1
     iget-boolean v0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mAttached:Z
@@ -363,105 +366,21 @@
 
     .line 26
     :cond_1
-    iget-object v0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationLightsView:Lcom/android/systemui/assist/ui/InvocationLightsView;
+    iget-object v0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationLightsView:Lcom/google/android/systemui/assist/uihints/AssistantInvocationLightsView;
 
     .line 29
-    const/16 v2, 0x8
+    invoke-virtual {v0}, Lcom/google/android/systemui/assist/uihints/AssistantInvocationLightsView;->hide()V
 
     .line 31
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 33
-    iget-object v2, v0, Lcom/android/systemui/assist/ui/InvocationLightsView;->mAssistInvocationLights:Ljava/util/ArrayList;
-
-    .line 36
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    .line 38
-    move-result-object v2
-
-    .line 41
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 42
-    move-result v3
-
-    .line 45
-    if-eqz v3, :cond_2
-
-    .line 46
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 48
-    move-result-object v3
-
-    .line 51
-    check-cast v3, Lcom/android/systemui/assist/ui/EdgeLight;
-
-    .line 52
-    const/4 v4, 0x0
-
-    .line 54
-    invoke-virtual {v3, v4, v4}, Lcom/android/systemui/assist/ui/EdgeLight;->setEndpoints(FF)V
-
-    .line 55
-    goto :goto_0
-
-    .line 58
-    :cond_2
-    iget-boolean v2, v0, Lcom/android/systemui/assist/ui/InvocationLightsView;->mRegistered:Z
-
-    .line 59
-    if-eqz v2, :cond_5
-
-    .line 61
-    iget-object v2, v0, Lcom/android/systemui/assist/ui/InvocationLightsView;->mNavigationBarController:Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;
-
-    .line 63
-    if-nez v2, :cond_3
-
-    .line 65
-    goto :goto_1
-
-    .line 67
-    :cond_3
-    invoke-virtual {v2}, Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;->getDefaultNavigationBar()Lcom/android/systemui/navigationbar/NavigationBar;
-
-    .line 68
-    move-result-object v2
-
-    .line 71
-    if-nez v2, :cond_4
-
-    .line 72
-    goto :goto_1
-
-    .line 74
-    :cond_4
-    iget-object v2, v2, Lcom/android/systemui/navigationbar/NavigationBar;->mNavigationBarTransitions:Lcom/android/systemui/navigationbar/NavigationBarTransitions;
-
-    .line 75
-    iget-object v2, v2, Lcom/android/systemui/navigationbar/NavigationBarTransitions;->mDarkIntensityListeners:Ljava/util/List;
-
-    .line 77
-    invoke-interface {v2, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    .line 79
-    iput-boolean v1, v0, Lcom/android/systemui/assist/ui/InvocationLightsView;->mRegistered:Z
-
-    .line 82
-    :cond_5
-    :goto_1
     iput-boolean v1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationInProgress:Z
 
-    .line 84
+    .line 34
     return-void
-    .line 86
+    .line 36
 .end method
 
-.method public final logInvocationProgressMetrics(FZ)V
-    .locals 9
+.method public final logInvocationProgressMetrics$1(FZI)V
+    .locals 8
 
     .line 1
     const/4 v0, 0x1
@@ -491,7 +410,7 @@
     const/4 v5, 0x0
 
     .line 15
-    invoke-virtual {v2, v0, v4, v5, v5}, Lcom/android/systemui/assist/AssistLogger;->reportAssistantInvocationEventFromLegacy(IZLandroid/content/ComponentName;Ljava/lang/Integer;)V
+    invoke-virtual {v2, p3, v4, v5, v5}, Lcom/android/systemui/assist/AssistLogger;->reportAssistantInvocationEventFromLegacy(IZLandroid/content/ComponentName;Ljava/lang/Integer;)V
 
     .line 16
     iget-object v4, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mMetricsLogger:Lcom/android/internal/logging/MetricsLogger;
@@ -521,10 +440,10 @@
     move-result-object v7
 
     .line 36
-    check-cast v7, Lcom/android/systemui/assist/AssistManager;
+    check-cast v7, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 37
-    iget-object v7, v7, Lcom/android/systemui/assist/AssistManager;->mPhoneStateMonitor:Lcom/android/systemui/assist/PhoneStateMonitor;
+    iget-object v7, v7, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mPhoneStateMonitor:Lcom/android/systemui/assist/PhoneStateMonitor;
 
     .line 39
     invoke-virtual {v7}, Lcom/android/systemui/assist/PhoneStateMonitor;->getPhoneState()I
@@ -533,22 +452,22 @@
     move-result v7
 
     .line 44
-    const/4 v8, 0x2
+    shl-int/2addr p3, v0
 
     .line 45
     shl-int/lit8 v6, v7, 0x4
 
     .line 46
-    or-int/2addr v6, v8
+    or-int/2addr p3, v6
 
     .line 48
-    invoke-virtual {v5, v6}, Landroid/metrics/LogMaker;->setSubtype(I)Landroid/metrics/LogMaker;
+    invoke-virtual {v5, p3}, Landroid/metrics/LogMaker;->setSubtype(I)Landroid/metrics/LogMaker;
 
     .line 49
-    move-result-object v5
+    move-result-object p3
 
     .line 52
-    invoke-virtual {v4, v5}, Lcom/android/internal/logging/MetricsLogger;->write(Landroid/metrics/LogMaker;)V
+    invoke-virtual {v4, p3}, Lcom/android/internal/logging/MetricsLogger;->write(Landroid/metrics/LogMaker;)V
 
     .line 53
     :cond_0
@@ -612,220 +531,122 @@
     .line 94
 .end method
 
-.method public final setProgressInternal(F)V
-    .locals 8
+.method public final onGestureCompletion(F)V
+    .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mProgressInterpolator:Landroid/view/animation/PathInterpolator;
+    const/4 p1, 0x1
 
     .line 2
-    invoke-virtual {v0, p1}, Landroid/view/animation/PathInterpolator;->getInterpolation(F)F
+    invoke-virtual {p0, p1}, Lcom/android/systemui/assist/ui/DefaultUiController;->animateInvocationCompletion(I)V
 
-    .line 4
-    move-result p1
+    .line 3
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 7
-    const/4 v0, 0x0
+    .line 6
+    iget-boolean v1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationInProgress:Z
 
     .line 8
-    cmpl-float v1, p1, v0
+    invoke-virtual {p0, v0, v1, p1}, Lcom/android/systemui/assist/ui/DefaultUiController;->logInvocationProgressMetrics$1(FZI)V
 
-    .line 9
-    iget-object p0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationLightsView:Lcom/android/systemui/assist/ui/InvocationLightsView;
+    .line 10
+    return-void
+    .line 13
+.end method
 
-    .line 11
+.method public final onInvocationProgress(IF)V
+    .locals 5
+
+    .line 1
+    iget-boolean v0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationInProgress:Z
+
+    .line 2
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    .line 4
+    cmpl-float v1, p2, v1
+
+    .line 6
     if-nez v1, :cond_0
 
+    .line 8
+    invoke-virtual {p0, p1}, Lcom/android/systemui/assist/ui/DefaultUiController;->animateInvocationCompletion(I)V
+
+    .line 10
+    goto :goto_0
+
     .line 13
-    const/16 p1, 0x8
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 14
+    cmpl-float v1, p2, v1
 
     .line 15
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 17
-    goto :goto_1
-
-    .line 20
-    :cond_0
-    iget-boolean v1, p0, Lcom/android/systemui/assist/ui/InvocationLightsView;->mRegistered:Z
-
-    .line 21
-    const/4 v2, 0x1
-
-    .line 23
-    if-nez v1, :cond_3
-
-    .line 24
-    iget-object v1, p0, Lcom/android/systemui/assist/ui/InvocationLightsView;->mNavigationBarController:Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;
-
-    .line 26
     if-nez v1, :cond_1
 
-    .line 28
+    .line 17
+    invoke-virtual {p0}, Lcom/android/systemui/assist/ui/DefaultUiController;->hide()V
+
+    .line 19
     goto :goto_0
 
-    .line 30
+    .line 22
     :cond_1
-    invoke-virtual {v1}, Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;->getDefaultNavigationBar()Lcom/android/systemui/navigationbar/NavigationBar;
+    if-nez v0, :cond_3
 
-    .line 31
-    move-result-object v1
+    .line 23
+    iget-boolean v1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mAttached:Z
 
-    .line 34
+    .line 25
+    const/4 v2, 0x1
+
+    .line 27
     if-nez v1, :cond_2
 
-    .line 35
-    goto :goto_0
+    .line 28
+    iget-object v1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 37
+    .line 30
+    iget-object v3, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mRoot:Landroid/widget/FrameLayout;
+
+    .line 32
+    iget-object v4, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
+
+    .line 34
+    invoke-interface {v1, v3, v4}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 36
+    iput-boolean v2, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mAttached:Z
+
+    .line 39
     :cond_2
-    iget-object v1, v1, Lcom/android/systemui/navigationbar/NavigationBar;->mNavigationBarTransitions:Lcom/android/systemui/navigationbar/NavigationBarTransitions;
+    iput-boolean v2, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationInProgress:Z
 
-    .line 38
-    iget-object v3, v1, Lcom/android/systemui/navigationbar/NavigationBarTransitions;->mDarkIntensityListeners:Ljava/util/List;
+    .line 41
+    :cond_3
+    iget-object v1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationLightsView:Lcom/google/android/systemui/assist/uihints/AssistantInvocationLightsView;
 
-    .line 40
-    invoke-interface {v3, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 42
-    iget-object v1, v1, Lcom/android/systemui/navigationbar/NavigationBarTransitions;->mLightTransitionsController:Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;
+    .line 43
+    iget-object v2, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mProgressInterpolator:Landroid/view/animation/PathInterpolator;
 
     .line 45
-    iget v1, v1, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mDarkIntensity:F
+    invoke-virtual {v2, p2}, Landroid/view/animation/PathInterpolator;->getInterpolation(F)F
 
     .line 47
-    invoke-virtual {p0, v1}, Lcom/android/systemui/assist/ui/InvocationLightsView;->updateDarkness(F)V
+    move-result v2
 
-    .line 49
-    iput-boolean v2, p0, Lcom/android/systemui/assist/ui/InvocationLightsView;->mRegistered:Z
+    .line 50
+    invoke-virtual {v1, v2}, Lcom/google/android/systemui/assist/uihints/AssistantInvocationLightsView;->onInvocationProgress(F)V
 
-    .line 52
-    :cond_3
+    .line 51
     :goto_0
-    iget-object v1, p0, Lcom/android/systemui/assist/ui/InvocationLightsView;->mGuide:Lcom/android/systemui/assist/ui/PerimeterPathGuide;
+    iput p2, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mLastInvocationProgress:F
 
     .line 54
-    iget-object v1, v1, Lcom/android/systemui/assist/ui/PerimeterPathGuide;->mRegions:[Lcom/android/systemui/assist/ui/PerimeterPathGuide$RegionAttributes;
+    invoke-virtual {p0, p2, v0, p1}, Lcom/android/systemui/assist/ui/DefaultUiController;->logInvocationProgressMetrics$1(FZI)V
 
     .line 56
-    const/4 v3, 0x7
-
-    .line 58
-    aget-object v3, v1, v3
-
-    .line 59
-    iget v3, v3, Lcom/android/systemui/assist/ui/PerimeterPathGuide$RegionAttributes;->normalizedLength:F
-
-    .line 61
-    const v4, 0x3f19999a    # 0.6f
-
-    .line 63
-    mul-float/2addr v4, v3
-
-    .line 66
-    sub-float v4, v3, v4
-
-    .line 67
-    const/high16 v5, 0x40000000    # 2.0f
-
-    .line 69
-    div-float/2addr v4, v5
-
-    .line 71
-    const/4 v6, 0x0
-
-    .line 72
-    aget-object v1, v1, v6
-
-    .line 73
-    iget v1, v1, Lcom/android/systemui/assist/ui/PerimeterPathGuide$RegionAttributes;->normalizedLength:F
-
-    .line 75
-    const/high16 v7, 0x40800000    # 4.0f
-
-    .line 77
-    div-float/2addr v1, v7
-
-    .line 79
-    invoke-static {v0, v1, p1}, Landroid/util/MathUtils;->lerp(FFF)F
-
-    .line 80
-    move-result v0
-
-    .line 83
-    neg-float v1, v3
-
-    .line 84
-    add-float/2addr v1, v4
-
-    .line 85
-    const/high16 v7, 0x3f800000    # 1.0f
-
-    .line 86
-    sub-float/2addr v7, p1
-
-    .line 88
-    mul-float/2addr v1, v7
-
-    .line 89
-    iget-object p1, p0, Lcom/android/systemui/assist/ui/InvocationLightsView;->mGuide:Lcom/android/systemui/assist/ui/PerimeterPathGuide;
-
-    .line 90
-    iget-object p1, p1, Lcom/android/systemui/assist/ui/PerimeterPathGuide;->mRegions:[Lcom/android/systemui/assist/ui/PerimeterPathGuide$RegionAttributes;
-
-    .line 92
-    aget-object p1, p1, v6
-
-    .line 94
-    iget p1, p1, Lcom/android/systemui/assist/ui/PerimeterPathGuide$RegionAttributes;->normalizedLength:F
-
-    .line 96
-    invoke-static {v3, v4, v7, p1}, Landroidx/compose/animation/AndroidFlingSpline$$ExternalSyntheticOutline0;->m(FFFF)F
-
-    .line 98
-    move-result p1
-
-    .line 101
-    add-float v3, v1, v0
-
-    .line 102
-    invoke-virtual {p0, v6, v1, v3}, Lcom/android/systemui/assist/ui/InvocationLightsView;->setLight(IFF)V
-
-    .line 104
-    mul-float/2addr v5, v0
-
-    .line 107
-    add-float/2addr v1, v5
-
-    .line 108
-    invoke-virtual {p0, v2, v3, v1}, Lcom/android/systemui/assist/ui/InvocationLightsView;->setLight(IFF)V
-
-    .line 109
-    sub-float v1, p1, v5
-
-    .line 112
-    sub-float v0, p1, v0
-
-    .line 114
-    const/4 v2, 0x2
-
-    .line 116
-    invoke-virtual {p0, v2, v1, v0}, Lcom/android/systemui/assist/ui/InvocationLightsView;->setLight(IFF)V
-
-    .line 117
-    const/4 v1, 0x3
-
-    .line 120
-    invoke-virtual {p0, v1, v0, p1}, Lcom/android/systemui/assist/ui/InvocationLightsView;->setLight(IFF)V
-
-    .line 121
-    invoke-virtual {p0, v6}, Landroid/view/View;->setVisibility(I)V
-
-    .line 124
-    :goto_1
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    .line 127
     return-void
-    .line 130
+    .line 59
 .end method

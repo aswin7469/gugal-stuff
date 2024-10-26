@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/privacy/PrivacyDialogController$showDialog$1$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -393,127 +393,127 @@
     const-class v7, Lcom/android/systemui/privacy/PrivacyDialogController;
 
     .line 223
-    const-string v8, "startActivity"
+    const-string/jumbo v8, "startActivity"
 
     .line 225
     const/4 v5, 0x4
 
-    .line 227
-    const-string v9, "startActivity(Ljava/lang/String;ILjava/lang/CharSequence;Landroid/content/Intent;)V"
-
     .line 228
+    const-string/jumbo v9, "startActivity(Ljava/lang/String;ILjava/lang/CharSequence;Landroid/content/Intent;)V"
+
+    .line 229
     const/4 v10, 0x0
 
-    .line 230
+    .line 232
     move-object v4, v11
 
-    .line 231
+    .line 233
     invoke-direct/range {v4 .. v10}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 232
+    .line 234
     check-cast v1, Lcom/android/systemui/privacy/PrivacyDialogControllerKt$defaultDialogProvider$1;
 
-    .line 235
+    .line 237
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 237
+    .line 239
     new-instance v1, Lcom/android/systemui/privacy/PrivacyDialog;
 
-    .line 240
+    .line 242
     invoke-direct {v1, v2, v0, v11}, Lcom/android/systemui/privacy/PrivacyDialog;-><init>(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/functions/Function4;)V
 
-    .line 242
+    .line 244
     invoke-static {v1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setShowForAllUsers(Landroid/app/Dialog;)V
 
-    .line 245
+    .line 247
     iget-object v2, p0, Lcom/android/systemui/privacy/PrivacyDialogController$showDialog$1$1;->this$0:Lcom/android/systemui/privacy/PrivacyDialogController;
 
-    .line 248
+    .line 250
     iget-object v2, v2, Lcom/android/systemui/privacy/PrivacyDialogController;->onDialogDismissed:Lcom/android/systemui/privacy/PrivacyDialogController$onDialogDismissed$1;
 
-    .line 250
+    .line 252
     iget-object v4, v1, Lcom/android/systemui/privacy/PrivacyDialog;->dismissed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 252
+    .line 254
     invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    .line 254
+    .line 256
     move-result v4
 
-    .line 257
+    .line 259
     if-eqz v4, :cond_b
 
-    .line 258
+    .line 260
     iget-object v2, v2, Lcom/android/systemui/privacy/PrivacyDialogController$onDialogDismissed$1;->this$0:Lcom/android/systemui/privacy/PrivacyDialogController;
 
-    .line 260
+    .line 262
     iget-object v4, v2, Lcom/android/systemui/privacy/PrivacyDialogController;->privacyLogger:Lcom/android/systemui/privacy/logging/PrivacyLogger;
 
-    .line 262
+    .line 264
     invoke-virtual {v4}, Lcom/android/systemui/privacy/logging/PrivacyLogger;->logPrivacyDialogDismissed()V
 
-    .line 264
+    .line 266
     iget-object v4, v2, Lcom/android/systemui/privacy/PrivacyDialogController;->uiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
-    .line 267
+    .line 269
     sget-object v5, Lcom/android/systemui/privacy/PrivacyDialogEvent;->PRIVACY_DIALOG_DISMISSED:Lcom/android/systemui/privacy/PrivacyDialogEvent;
 
-    .line 269
+    .line 271
     invoke-interface {v4, v5}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
 
-    .line 271
+    .line 273
     iput-object v3, v2, Lcom/android/systemui/privacy/PrivacyDialogController;->dialog:Landroid/app/Dialog;
 
-    .line 274
+    .line 276
     goto :goto_5
 
-    .line 276
+    .line 278
     :cond_b
     iget-object v3, v1, Lcom/android/systemui/privacy/PrivacyDialog;->dismissListeners:Ljava/util/List;
 
-    .line 277
+    .line 279
     new-instance v4, Ljava/lang/ref/WeakReference;
 
-    .line 279
+    .line 281
     invoke-direct {v4, v2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    .line 281
+    .line 283
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 284
+    .line 286
     :goto_5
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 287
+    .line 289
     iget-object v2, p0, Lcom/android/systemui/privacy/PrivacyDialogController$showDialog$1$1;->this$0:Lcom/android/systemui/privacy/PrivacyDialogController;
 
-    .line 290
+    .line 292
     iget-object v2, v2, Lcom/android/systemui/privacy/PrivacyDialogController;->privacyLogger:Lcom/android/systemui/privacy/logging/PrivacyLogger;
 
-    .line 292
+    .line 294
     invoke-virtual {v2, v0}, Lcom/android/systemui/privacy/logging/PrivacyLogger;->logShowDialogContents(Ljava/util/List;)V
 
-    .line 294
+    .line 296
     iget-object p0, p0, Lcom/android/systemui/privacy/PrivacyDialogController$showDialog$1$1;->this$0:Lcom/android/systemui/privacy/PrivacyDialogController;
 
-    .line 297
+    .line 299
     iput-object v1, p0, Lcom/android/systemui/privacy/PrivacyDialogController;->dialog:Landroid/app/Dialog;
 
-    .line 299
+    .line 301
     goto :goto_6
 
-    .line 301
+    .line 303
     :cond_c
     const-string p0, "PrivacyDialogController"
 
-    .line 302
+    .line 304
     const-string v0, "Trying to show empty dialog"
 
-    .line 304
+    .line 306
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
+    .line 308
     :goto_6
     return-void
-    .line 309
+    .line 311
 .end method

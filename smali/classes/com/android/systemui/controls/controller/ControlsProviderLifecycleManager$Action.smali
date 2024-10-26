@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager$Action;
 .super Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager$ServiceMethod;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -67,193 +67,196 @@
     new-instance v4, Ljava/lang/StringBuilder;
 
     .line 17
-    const-string v5, "subscribe "
+    const-string/jumbo v5, "subscribe "
 
     .line 19
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 21
+    .line 22
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 24
+    .line 25
     const-string v2, " - "
 
-    .line 27
+    .line 28
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 29
+    .line 30
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 32
+    .line 33
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 35
+    .line 36
     move-result-object v2
 
-    .line 38
+    .line 39
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
+    .line 40
     iget-object v0, v0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager;->wrapper:Lcom/android/systemui/controls/controller/ServiceWrapper;
 
-    .line 42
+    .line 43
     const/4 v1, 0x0
 
-    .line 44
+    .line 45
     if-eqz v0, :cond_0
 
-    .line 45
+    .line 46
     iget-object v2, p0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager$Action;->id:Ljava/lang/Object;
 
-    .line 47
+    .line 48
     check-cast v2, Ljava/util/List;
 
-    .line 49
+    .line 50
     iget-object p0, p0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager$Action;->action:Ljava/lang/Object;
 
-    .line 51
+    .line 52
     check-cast p0, Landroid/service/controls/IControlsSubscriber;
 
-    .line 53
+    .line 54
     :try_start_0
     iget-object v0, v0, Lcom/android/systemui/controls/controller/ServiceWrapper;->service:Landroid/service/controls/IControlsProvider;
 
-    .line 55
+    .line 56
     invoke-interface {v0, v2, p0}, Landroid/service/controls/IControlsProvider;->subscribe(Ljava/util/List;Landroid/service/controls/IControlsSubscriber;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
+    .line 58
     const/4 v1, 0x1
 
-    .line 60
+    .line 61
     goto :goto_0
 
-    .line 61
+    .line 62
     :catch_0
     move-exception p0
 
-    .line 62
+    .line 63
     const-string v0, "ServiceWrapper"
 
-    .line 63
+    .line 64
     const-string v2, "Caught exception from ControlsProviderService"
 
-    .line 65
+    .line 66
     invoke-static {v0, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 67
+    .line 68
     :cond_0
     :goto_0
     return v1
 
-    .line 70
+    .line 71
     :pswitch_0
     iget-object v0, p0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager$Action;->this$0:Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager;
 
-    .line 71
+    .line 72
     iget-object v1, v0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager;->TAG:Ljava/lang/String;
 
-    .line 73
+    .line 74
     iget-object v2, v0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager;->componentName:Landroid/content/ComponentName;
 
-    .line 75
+    .line 76
     new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 77
+    .line 78
     const-string v4, "onAction "
 
-    .line 79
+    .line 80
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 81
+    .line 82
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 84
+    .line 85
     const-string v2, " - "
 
-    .line 87
+    .line 88
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 89
+    .line 90
     iget-object v2, p0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager$Action;->id:Ljava/lang/Object;
 
-    .line 92
+    .line 93
     check-cast v2, Ljava/lang/String;
 
-    .line 94
+    .line 95
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 96
+    .line 97
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 99
+    .line 100
     move-result-object v3
 
-    .line 102
+    .line 103
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
+    .line 104
     iget-object v1, v0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager;->wrapper:Lcom/android/systemui/controls/controller/ServiceWrapper;
 
-    .line 106
+    .line 107
     const/4 v3, 0x0
 
-    .line 108
+    .line 109
     if-eqz v1, :cond_1
 
-    .line 109
+    .line 110
     iget-object p0, p0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager$Action;->action:Ljava/lang/Object;
 
-    .line 111
+    .line 112
     check-cast p0, Landroid/service/controls/actions/ControlAction;
 
-    .line 113
+    .line 114
     iget-object v0, v0, Lcom/android/systemui/controls/controller/ControlsProviderLifecycleManager;->actionCallbackService:Landroid/service/controls/IControlsActionCallback$Stub;
 
-    .line 115
+    .line 116
     :try_start_1
     iget-object v1, v1, Lcom/android/systemui/controls/controller/ServiceWrapper;->service:Landroid/service/controls/IControlsProvider;
 
-    .line 117
+    .line 118
     new-instance v4, Landroid/service/controls/actions/ControlActionWrapper;
 
-    .line 119
+    .line 120
     invoke-direct {v4, p0}, Landroid/service/controls/actions/ControlActionWrapper;-><init>(Landroid/service/controls/actions/ControlAction;)V
 
-    .line 121
+    .line 122
     invoke-interface {v1, v2, v4, v0}, Landroid/service/controls/IControlsProvider;->action(Ljava/lang/String;Landroid/service/controls/actions/ControlActionWrapper;Landroid/service/controls/IControlsActionCallback;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 124
+    .line 125
     const/4 v3, 0x1
 
-    .line 127
+    .line 128
     goto :goto_1
 
-    .line 128
+    .line 129
     :catch_1
     move-exception p0
 
-    .line 129
+    .line 130
     const-string v0, "ServiceWrapper"
 
-    .line 130
+    .line 131
     const-string v1, "Caught exception from ControlsProviderService"
 
-    .line 132
+    .line 133
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 134
+    .line 135
     :cond_1
     :goto_1
     return v3
 
-    .line 137
+    .line 138
+    nop
+
+    .line 139
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 138
+    .line 140
 .end method

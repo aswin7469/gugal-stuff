@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor$special$$inlined$flatMapLatest$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -150,7 +150,7 @@
     move-result v1
 
     .line 37
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
     .line 38
     iget-object v1, p0, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor$special$$inlined$flatMapLatest$1;->$keyguardTransitionInteractor$inlined:Ldagger/Lazy;
@@ -168,128 +168,79 @@
     iget-object v1, v1, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->currentKeyguardState:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 48
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 50
-    move-result v3
-
-    .line 53
-    if-eqz v3, :cond_2
-
-    .line 54
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 56
-    move-result v3
-
-    .line 59
-    if-eqz v3, :cond_2
-
-    .line 60
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 62
-    move-result v3
-
-    .line 65
-    if-eqz v3, :cond_2
-
-    .line 66
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 68
-    move-result v3
-
-    .line 71
-    if-eqz v3, :cond_2
-
-    .line 72
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 74
-    move-result v3
-
-    .line 77
-    if-eqz v3, :cond_2
-
-    .line 78
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 80
-    :cond_2
     sget-object v3, Lcom/android/systemui/scene/shared/model/Scenes;->Lockscreen:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 83
+    .line 50
     new-instance v4, Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;
 
-    .line 85
+    .line 52
     invoke-direct {v4, v3}, Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;-><init>(Ljava/lang/Object;)V
 
-    .line 87
+    .line 54
     sget-object v3, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor$canShowAlternateBouncer$1$2;->INSTANCE:Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor$canShowAlternateBouncer$1$2;
 
-    .line 90
+    .line 57
     new-instance v5, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 92
+    .line 59
     invoke-direct {v5, v1, v4, v3}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 94
+    .line 61
     new-instance v1, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor$canShowAlternateBouncer$lambda$5$$inlined$flatMapLatest$1;
 
-    .line 97
+    .line 64
     const/4 v3, 0x0
 
-    .line 99
+    .line 66
     iget-object v4, p0, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor$special$$inlined$flatMapLatest$1;->this$0:Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;
 
-    .line 100
+    .line 67
     invoke-direct {v1, v3, v4}, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor$canShowAlternateBouncer$lambda$5$$inlined$flatMapLatest$1;-><init>(Lkotlin/coroutines/Continuation;Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;)V
 
-    .line 102
+    .line 69
     invoke-static {v5, v1}, Lkotlinx/coroutines/flow/FlowKt;->transformLatest(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 105
+    .line 72
     move-result-object v1
 
-    .line 108
+    .line 75
     goto :goto_0
 
-    .line 109
-    :cond_3
+    .line 76
+    :cond_2
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 110
+    .line 77
     new-instance v3, Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;
 
-    .line 112
+    .line 79
     invoke-direct {v3, v1}, Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;-><init>(Ljava/lang/Object;)V
 
-    .line 114
+    .line 81
     move-object v1, v3
 
-    .line 117
+    .line 84
     :goto_0
     iput v2, p0, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor$special$$inlined$flatMapLatest$1;->label:I
 
-    .line 118
+    .line 85
     invoke-static {p0, v1, p1}, Lkotlinx/coroutines/flow/FlowKt;->emitAll(Lkotlin/coroutines/Continuation;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/FlowCollector;)Ljava/lang/Object;
 
-    .line 120
+    .line 87
     move-result-object p0
 
-    .line 123
-    if-ne p0, v0, :cond_4
+    .line 90
+    if-ne p0, v0, :cond_3
 
-    .line 124
+    .line 91
     return-object v0
 
-    .line 126
-    :cond_4
+    .line 93
+    :cond_3
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 127
+    .line 94
     return-object p0
-    .line 129
+    .line 96
 .end method

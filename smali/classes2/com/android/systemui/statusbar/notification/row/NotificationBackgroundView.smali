@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/row/NotificationBackgroundView;
 .super Landroid/view/View;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -110,7 +110,7 @@
     move-result-object p1
 
     .line 37
-    const p2, 0x7f05000a    # @bool/config_clipNotificationsToOutline 'false'
+    const p2, 0x7f050010    # @bool/config_clipNotificationsToOutline 'false'
 
     .line 38
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -128,7 +128,7 @@
     move-result-object p1
 
     .line 50
-    const p2, 0x7f060414    # @color/notification_state_color_light 'res/color/notification_state_color_light.xml'
+    const p2, 0x7f060420    # @color/notification_state_color_light 'res/color/notification_state_color_light.xml'
 
     .line 51
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
@@ -146,7 +146,7 @@
     move-result-object p1
 
     .line 63
-    const p2, 0x7f060412    # @color/notification_state_color_dark 'res/color/notification_state_color_dark.xml'
+    const p2, 0x7f06041e    # @color/notification_state_color_dark 'res/color/notification_state_color_dark.xml'
 
     .line 64
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
@@ -182,7 +182,7 @@
     move-result-object p1
 
     .line 88
-    const p2, 0x7f0707e7    # @dimen/notification_focus_stroke_width '3.0dp'
+    const p2, 0x7f07082a    # @dimen/notification_focus_stroke_width '3.0dp'
 
     .line 89
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -734,7 +734,7 @@
     .locals 3
 
     .line 1
-    const v0, 0x7f080a6b    # @drawable/notification_material_bg 'res/drawable/notification_material_bg.xml'
+    const v0, 0x7f080aa5    # @drawable/notification_material_bg 'res/drawable/notification_material_bg.xml'
 
     .line 2
     iget-object v1, p0, Landroid/view/View;->mContext:Landroid/content/Context;
@@ -981,7 +981,7 @@
 
     .line 36
     :cond_1
-    const v1, 0x7f0b0575    # @id/notification_focus_overlay
+    const v1, 0x7f0a059a    # @id/notification_focus_overlay
 
     .line 37
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;

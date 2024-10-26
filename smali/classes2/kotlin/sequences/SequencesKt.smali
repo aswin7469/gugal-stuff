@@ -1,6 +1,6 @@
 .class public abstract Lkotlin/sequences/SequencesKt;
 .super Lkotlin/sequences/SequencesKt__SequencesJVMKt;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -136,23 +136,6 @@
 
     .line 2
     sget-object v1, Lkotlin/sequences/SequencesKt___SequencesKt$flatMap$2;->INSTANCE:Lkotlin/sequences/SequencesKt___SequencesKt$flatMap$2;
-
-    .line 4
-    invoke-direct {v0, p0, p1, v1}, Lkotlin/sequences/FlatteningSequence;-><init>(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)V
-
-    .line 6
-    return-object v0
-    .line 9
-.end method
-
-.method public static flatMapIterable(Lkotlin/collections/CollectionsKt___CollectionsKt$asSequence$$inlined$Sequence$1;Lkotlin/jvm/functions/Function1;)Lkotlin/sequences/FlatteningSequence;
-    .locals 2
-
-    .line 1
-    new-instance v0, Lkotlin/sequences/FlatteningSequence;
-
-    .line 2
-    sget-object v1, Lkotlin/sequences/SequencesKt___SequencesKt$flatMap$1;->INSTANCE:Lkotlin/sequences/SequencesKt___SequencesKt$flatMap$1;
 
     .line 4
     invoke-direct {v0, p0, p1, v1}, Lkotlin/sequences/FlatteningSequence;-><init>(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)V

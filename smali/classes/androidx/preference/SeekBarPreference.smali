@@ -1,6 +1,6 @@
 .class public Landroidx/preference/SeekBarPreference;
 .super Landroidx/preference/Preference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -37,7 +37,7 @@
     const/4 v0, 0x1
 
     .line 2
-    const v1, 0x7f040553    # @attr/seekBarPreferenceStyle
+    const v1, 0x7f040557    # @attr/seekBarPreferenceStyle
 
     .line 3
     const/4 v2, 0x0
@@ -221,7 +221,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 9
-    const v0, 0x7f0b06e7    # @id/seekbar
+    const v0, 0x7f0a0710    # @id/seekbar
 
     .line 12
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -236,7 +236,7 @@
     iput-object v0, p0, Landroidx/preference/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     .line 21
-    const v0, 0x7f0b06e9    # @id/seekbar_value
+    const v0, 0x7f0a0712    # @id/seekbar_value
 
     .line 23
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

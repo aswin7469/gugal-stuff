@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/usb/UsbContaminantActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -54,7 +54,7 @@
     invoke-virtual {p1, v0}, Landroid/hardware/usb/UsbPort;->enableContaminantDetection(Z)V
 
     .line 9
-    const p1, 0x7f1409d5    # @string/usb_port_enabled 'USB port enabled to detect chargers and accessories'
+    const p1, 0x7f130a5e    # @string/usb_port_enabled 'USB port enabled to detect chargers and accessories'
 
     .line 12
     invoke-static {p0, p1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
@@ -161,7 +161,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 20
-    const p1, 0x7f0e007d    # @layout/contaminant_dialog 'res/layout/contaminant_dialog.xml'
+    const p1, 0x7f0d0085    # @layout/contaminant_dialog 'res/layout/contaminant_dialog.xml'
 
     .line 23
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setContentView(I)V
@@ -206,7 +206,7 @@
     iput-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mUsbPort:Landroid/hardware/usb/UsbPort;
 
     .line 53
-    const p1, 0x7f0b041a    # @id/learnMore
+    const p1, 0x7f0a043b    # @id/learnMore
 
     .line 55
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -221,7 +221,7 @@
     iput-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mLearnMore:Landroid/widget/TextView;
 
     .line 64
-    const p1, 0x7f0b02cb    # @id/enableUsb
+    const p1, 0x7f0a02e4    # @id/enableUsb
 
     .line 66
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -236,7 +236,7 @@
     iput-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mEnableUsb:Landroid/widget/TextView;
 
     .line 75
-    const p1, 0x7f0b032c    # @id/gotIt
+    const p1, 0x7f0a034a    # @id/gotIt
 
     .line 77
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -251,7 +251,7 @@
     iput-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mGotIt:Landroid/widget/TextView;
 
     .line 86
-    const p1, 0x7f0b07ff    # @id/title
+    const p1, 0x7f0a082e    # @id/title
 
     .line 88
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -266,7 +266,7 @@
     iput-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mTitle:Landroid/widget/TextView;
 
     .line 97
-    const p1, 0x7f0b04cb    # @id/message
+    const p1, 0x7f0a04ef    # @id/message
 
     .line 99
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -284,7 +284,7 @@
     iget-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mTitle:Landroid/widget/TextView;
 
     .line 110
-    const v0, 0x7f1409c9    # @string/usb_contaminant_title 'USB port disabled'
+    const v0, 0x7f130a52    # @string/usb_contaminant_title 'USB port disabled'
 
     .line 112
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -299,7 +299,7 @@
     iget-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mMessage:Landroid/widget/TextView;
 
     .line 122
-    const v0, 0x7f1409c8    # @string/usb_contaminant_message 'To protect your device from liquid or debris, the USB port is disabled and won’t detect any accessor ...'
+    const v0, 0x7f130a51    # @string/usb_contaminant_message 'To protect your device from liquid or debris, the USB port is disabled and won’t detect any accessor ...'
 
     .line 124
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -314,7 +314,7 @@
     iget-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mEnableUsb:Landroid/widget/TextView;
 
     .line 134
-    const v0, 0x7f1409d4    # @string/usb_disable_contaminant_detection 'Enable USB'
+    const v0, 0x7f130a5d    # @string/usb_disable_contaminant_detection 'Enable USB'
 
     .line 136
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -329,7 +329,7 @@
     iget-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mGotIt:Landroid/widget/TextView;
 
     .line 146
-    const v0, 0x7f1403c6    # @string/got_it 'Got it'
+    const v0, 0x7f130409    # @string/got_it 'Got it'
 
     .line 148
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -344,7 +344,7 @@
     iget-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mLearnMore:Landroid/widget/TextView;
 
     .line 158
-    const v0, 0x7f140542    # @string/learn_more 'Learn more'
+    const v0, 0x7f130598    # @string/learn_more 'Learn more'
 
     .line 160
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -362,7 +362,7 @@
     move-result-object p1
 
     .line 173
-    const v0, 0x111020f    # @android:bool/config_showNavigationBar
+    const v0, 0x111020e    # @android:bool/config_showMenuShortcutsWhenKeyboardPresent
 
     .line 174
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getBoolean(I)Z

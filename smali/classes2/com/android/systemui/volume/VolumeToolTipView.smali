@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/volume/VolumeToolTipView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -49,7 +49,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b00d4    # @id/arrow
+    const v0, 0x7f0a00d7    # @id/arrow
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -151,7 +151,7 @@
     move-result-object p0
 
     .line 74
-    const v4, 0x7f070aea    # @dimen/volume_tool_tip_arrow_corner_radius '2.0dp'
+    const v4, 0x7f070b49    # @dimen/volume_tool_tip_arrow_corner_radius '2.0dp'
 
     .line 75
     invoke-virtual {p0, v4}, Landroid/content/res/Resources;->getDimension(I)F

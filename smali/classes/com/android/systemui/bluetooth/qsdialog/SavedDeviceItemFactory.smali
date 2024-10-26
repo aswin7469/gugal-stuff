@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/bluetooth/qsdialog/SavedDeviceItemFactory;
 .super Lcom/android/systemui/bluetooth/qsdialog/DeviceItemFactory;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # virtual methods
@@ -37,7 +37,7 @@
     if-nez p0, :cond_2
 
     .line 17
-    const p0, 0x7f1407aa    # @string/quick_settings_bluetooth_device_saved 'Saved'
+    const p0, 0x7f130806    # @string/quick_settings_bluetooth_device_saved 'Saved'
 
     .line 19
     invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -59,18 +59,18 @@
     if-eqz p0, :cond_3
 
     .line 31
-    const p0, 0x7f080625    # @drawable/bluetooth_tile_dialog_bg_off_busy 'res/drawable/bluetooth_tile_dialog_bg_off_busy.xml'
+    const p0, 0x7f080626    # @drawable/bluetooth_tile_dialog_bg_off_busy 'res/drawable/bluetooth_tile_dialog_bg_off_busy.xml'
 
     .line 33
     goto :goto_0
 
     .line 36
     :cond_3
-    const p0, 0x7f080624    # @drawable/bluetooth_tile_dialog_bg_off 'res/drawable/bluetooth_tile_dialog_bg_off.xml'
+    const p0, 0x7f080625    # @drawable/bluetooth_tile_dialog_bg_off 'res/drawable/bluetooth_tile_dialog_bg_off.xml'
 
     .line 37
     :goto_0
-    const v0, 0x7f1400cb    # @string/accessibility_quick_settings_bluetooth_device_tap_to_activate 'activate'
+    const v0, 0x7f1300cc    # @string/accessibility_quick_settings_bluetooth_device_tap_to_activate 'activate'
 
     .line 40
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

@@ -5,7 +5,9 @@
     <item>အားသွင်းနေစဉ်တွင် ရာခိုင်နှုန်းကိုပြပါ (ပုံသေ)</item>
     <item>ဤသင်္ကေတပုံကို မပြပါနှင့်</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>နာရီ၊ မိနစ်နှင့် စက္ကန့်ကိုပြပါ</item>
     <item>နာရီနှင့် မိနစ်ကိုပြပါ (ပုံသေ)</item>

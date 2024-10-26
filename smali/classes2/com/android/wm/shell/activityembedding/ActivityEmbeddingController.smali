@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/activityembedding/ActivityEmbeddingController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
@@ -385,178 +385,101 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->moveAnimationOptionsToChange()Z
 
     .line 187
-    move-result v0
-
-    .line 190
-    if-nez v0, :cond_c
-
-    .line 191
     invoke-virtual {p0}, Landroid/window/TransitionInfo;->getAnimationOptions()Landroid/window/TransitionInfo$AnimationOptions;
 
-    .line 193
+    .line 190
     move-result-object p0
 
-    .line 196
-    invoke-static {p0}, Lcom/android/wm/shell/activityembedding/ActivityEmbeddingController;->shouldAnimateAnimationOptions(Landroid/window/TransitionInfo$AnimationOptions;)Z
+    .line 193
+    if-nez p0, :cond_c
 
-    .line 197
-    move-result v2
-
-    .line 200
+    .line 194
     goto :goto_4
 
-    .line 201
+    .line 196
     :cond_c
-    invoke-virtual {p0}, Landroid/window/TransitionInfo;->getChanges()Ljava/util/List;
+    invoke-virtual {p0}, Landroid/window/TransitionInfo$AnimationOptions;->getType()I
+
+    .line 197
+    move-result v0
+
+    .line 200
+    const/4 v3, 0x5
+
+    .line 201
+    if-ne v0, v3, :cond_d
 
     .line 202
-    move-result-object p0
-
-    .line 205
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    .line 206
-    move-result-object p0
-
-    .line 209
-    :cond_d
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 210
-    move-result v0
-
-    .line 213
-    if-eqz v0, :cond_e
-
-    .line 214
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 216
-    move-result-object v0
-
-    .line 219
-    check-cast v0, Landroid/window/TransitionInfo$Change;
-
-    .line 220
-    invoke-virtual {v0}, Landroid/window/TransitionInfo$Change;->getAnimationOptions()Landroid/window/TransitionInfo$AnimationOptions;
-
-    .line 222
-    move-result-object v0
-
-    .line 225
-    invoke-static {v0}, Lcom/android/wm/shell/activityembedding/ActivityEmbeddingController;->shouldAnimateAnimationOptions(Landroid/window/TransitionInfo$AnimationOptions;)Z
-
-    .line 226
-    move-result v0
-
-    .line 229
-    if-nez v0, :cond_d
-
-    .line 230
     move v2, v1
 
-    .line 232
+    .line 204
+    goto :goto_4
+
+    .line 205
+    :cond_d
+    invoke-virtual {p0}, Landroid/window/TransitionInfo$AnimationOptions;->getType()I
+
+    .line 206
+    move-result v0
+
+    .line 209
+    if-ne v0, v2, :cond_e
+
+    .line 210
+    goto :goto_4
+
+    .line 212
     :cond_e
-    :goto_4
-    return v2
-    .line 233
-.end method
-
-.method public static shouldAnimateAnimationOptions(Landroid/window/TransitionInfo$AnimationOptions;)Z
-    .locals 4
-
-    .line 1
-    const/4 v0, 0x1
-
-    .line 2
-    if-nez p0, :cond_0
-
-    .line 3
-    return v0
-
-    .line 5
-    :cond_0
     invoke-virtual {p0}, Landroid/window/TransitionInfo$AnimationOptions;->getType()I
 
-    .line 6
-    move-result v1
-
-    .line 9
-    const/4 v2, 0x5
-
-    .line 10
-    const/4 v3, 0x0
-
-    .line 11
-    if-ne v1, v2, :cond_1
-
-    .line 12
-    return v3
-
-    .line 14
-    :cond_1
-    invoke-virtual {p0}, Landroid/window/TransitionInfo$AnimationOptions;->getType()I
-
-    .line 15
-    move-result v1
-
-    .line 18
-    if-ne v1, v0, :cond_2
-
-    .line 19
-    return v0
-
-    .line 21
-    :cond_2
-    invoke-virtual {p0}, Landroid/window/TransitionInfo$AnimationOptions;->getType()I
-
-    .line 22
+    .line 213
     move-result p0
 
-    .line 25
-    if-eq p0, v0, :cond_3
+    .line 216
+    if-eq p0, v2, :cond_f
 
-    .line 26
-    const/4 v1, 0x2
+    .line 217
+    const/4 v0, 0x2
 
-    .line 28
-    if-eq p0, v1, :cond_3
+    .line 219
+    if-eq p0, v0, :cond_f
 
-    .line 29
-    const/4 v1, 0x3
+    .line 220
+    const/4 v0, 0x3
 
-    .line 31
-    if-eq p0, v1, :cond_3
+    .line 222
+    if-eq p0, v0, :cond_f
 
-    .line 32
-    const/4 v1, 0x4
+    .line 223
+    const/4 v0, 0x4
 
-    .line 34
-    if-eq p0, v1, :cond_3
+    .line 225
+    if-eq p0, v0, :cond_f
 
-    .line 35
-    const/16 v1, 0xb
+    .line 226
+    const/16 v0, 0xb
 
-    .line 37
-    if-eq p0, v1, :cond_3
+    .line 228
+    if-eq p0, v0, :cond_f
 
-    .line 39
-    const/16 v1, 0xc
+    .line 230
+    const/16 v0, 0xc
 
-    .line 41
-    if-ne p0, v1, :cond_4
+    .line 232
+    if-ne p0, v0, :cond_10
 
-    .line 43
-    :cond_3
-    move v3, v0
+    .line 234
+    :cond_f
+    move v1, v2
 
-    .line 45
-    :cond_4
-    xor-int/lit8 p0, v3, 0x1
+    .line 236
+    :cond_10
+    xor-int/2addr v2, v1
 
-    .line 46
-    return p0
-    .line 48
+    .line 237
+    :goto_4
+    return v2
+    .line 238
 .end method
 
 

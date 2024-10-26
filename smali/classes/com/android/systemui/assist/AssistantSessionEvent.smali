@@ -1,6 +1,6 @@
 .class public final enum Lcom/android/systemui/assist/AssistantSessionEvent;
 .super Ljava/lang/Enum;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/internal/logging/UiEventLogger$UiEventEnum;
@@ -13,7 +13,11 @@
 
 .field public static final enum ASSISTANT_SESSION_INVOCATION_CANCELLED:Lcom/android/systemui/assist/AssistantSessionEvent;
 
+.field public static final enum ASSISTANT_SESSION_TIMEOUT_DISMISS:Lcom/android/systemui/assist/AssistantSessionEvent;
+
 .field public static final enum ASSISTANT_SESSION_UPDATE:Lcom/android/systemui/assist/AssistantSessionEvent;
+
+.field public static final enum ASSISTANT_SESSION_USER_DISMISS:Lcom/android/systemui/assist/AssistantSessionEvent;
 
 
 # instance fields
@@ -100,56 +104,59 @@
     invoke-direct {v4, v6, v7, v5}, Lcom/android/systemui/assist/AssistantSessionEvent;-><init>(Ljava/lang/String;II)V
 
     .line 49
-    new-instance v5, Lcom/android/systemui/assist/AssistantSessionEvent;
+    sput-object v4, Lcom/android/systemui/assist/AssistantSessionEvent;->ASSISTANT_SESSION_USER_DISMISS:Lcom/android/systemui/assist/AssistantSessionEvent;
 
     .line 52
-    const/16 v6, 0x210
+    new-instance v5, Lcom/android/systemui/assist/AssistantSessionEvent;
 
     .line 54
-    const-string v7, "ASSISTANT_SESSION_UPDATE"
+    const/16 v6, 0x210
 
     .line 56
-    const/4 v8, 0x5
+    const-string v7, "ASSISTANT_SESSION_UPDATE"
 
     .line 58
+    const/4 v8, 0x5
+
+    .line 60
     invoke-direct {v5, v7, v8, v6}, Lcom/android/systemui/assist/AssistantSessionEvent;-><init>(Ljava/lang/String;II)V
 
-    .line 59
+    .line 61
     sput-object v5, Lcom/android/systemui/assist/AssistantSessionEvent;->ASSISTANT_SESSION_UPDATE:Lcom/android/systemui/assist/AssistantSessionEvent;
 
-    .line 62
+    .line 64
     new-instance v6, Lcom/android/systemui/assist/AssistantSessionEvent;
 
-    .line 64
+    .line 66
     const/16 v7, 0x211
 
-    .line 66
+    .line 68
     const-string v8, "ASSISTANT_SESSION_CLOSE"
 
-    .line 68
+    .line 70
     const/4 v9, 0x6
 
-    .line 70
+    .line 72
     invoke-direct {v6, v8, v9, v7}, Lcom/android/systemui/assist/AssistantSessionEvent;-><init>(Ljava/lang/String;II)V
 
-    .line 71
+    .line 73
     sput-object v6, Lcom/android/systemui/assist/AssistantSessionEvent;->ASSISTANT_SESSION_CLOSE:Lcom/android/systemui/assist/AssistantSessionEvent;
 
-    .line 74
+    .line 76
     filled-new-array/range {v0 .. v6}, [Lcom/android/systemui/assist/AssistantSessionEvent;
 
-    .line 76
+    .line 78
     move-result-object v0
 
-    .line 79
+    .line 81
     sput-object v0, Lcom/android/systemui/assist/AssistantSessionEvent;->$VALUES:[Lcom/android/systemui/assist/AssistantSessionEvent;
 
-    .line 80
+    .line 82
     invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;->enumEntries([Ljava/lang/Enum;)Lkotlin/enums/EnumEntries;
 
-    .line 82
+    .line 84
     return-void
-    .line 85
+    .line 87
 .end method
 
 .method public constructor <init>(Ljava/lang/String;II)V

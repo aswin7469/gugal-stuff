@@ -1,6 +1,6 @@
 .class public final Lcom/android/compose/animation/scene/OneOffTransition;
 .super Lcom/android/compose/animation/scene/TransitionState$Transition;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -108,26 +108,23 @@
 
     .line 7
     :goto_0
-    iget-object p0, p0, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {p0}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 8
-    invoke-virtual {p0}, Landroidx/compose/animation/core/AnimationState;->getValue()Ljava/lang/Object;
-
-    .line 10
     move-result-object p0
 
-    .line 13
+    .line 11
     check-cast p0, Ljava/lang/Number;
 
-    .line 14
+    .line 12
     invoke-virtual {p0}, Ljava/lang/Number;->floatValue()F
 
-    .line 16
+    .line 14
     move-result p0
 
-    .line 19
+    .line 17
     return p0
-    .line 20
+    .line 18
 .end method
 
 .method public final getProgressVelocity()F

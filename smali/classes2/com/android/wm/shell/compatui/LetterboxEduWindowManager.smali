@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/compatui/LetterboxEduWindowManager;
 .super Lcom/android/wm/shell/compatui/CompatUIWindowManagerAbstract;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -55,7 +55,7 @@
     move-result-object p1
 
     .line 20
-    const p3, 0x7f07046f    # @dimen/letterbox_education_dialog_margin '16.0dp'
+    const p3, 0x7f0704ab    # @dimen/letterbox_education_dialog_margin '16.0dp'
 
     .line 21
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -104,7 +104,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f0e0146    # @layout/letterbox_education_dialog_layout 'res/layout/letterbox_education_dialog_layout.xml'
+    const v1, 0x7f0d0151    # @layout/letterbox_education_dialog_layout 'res/layout/letterbox_education_dialog_layout.xml'
 
     .line 8
     const/4 v2, 0x0
@@ -144,7 +144,6 @@
 
     .line 34
     return-object p0
-    .line 36
 .end method
 
 .method public final eligibleToShowLayout()Z

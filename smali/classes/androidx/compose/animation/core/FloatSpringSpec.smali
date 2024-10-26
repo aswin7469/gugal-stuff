@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/animation/core/FloatSpringSpec;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/animation/core/FloatAnimationSpec;
@@ -1363,23 +1363,23 @@
     .line 3
 .end method
 
-.method public final getValueFromNanos(JFFF)F
+.method public final getValueFromNanos(FFFJ)F
     .locals 2
 
     .line 1
     const-wide/32 v0, 0xf4240
 
     .line 2
-    div-long/2addr p1, v0
+    div-long/2addr p4, v0
 
     .line 5
     iget-object p0, p0, Landroidx/compose/animation/core/FloatSpringSpec;->spring:Landroidx/compose/animation/core/SpringSimulation;
 
     .line 6
-    iput p4, p0, Landroidx/compose/animation/core/SpringSimulation;->finalPosition:F
+    iput p2, p0, Landroidx/compose/animation/core/SpringSimulation;->finalPosition:F
 
     .line 8
-    invoke-virtual {p0, p3, p5, p1, p2}, Landroidx/compose/animation/core/SpringSimulation;->updateValues-IJZedt4$animation_core_release(FFJ)J
+    invoke-virtual {p0, p1, p3, p4, p5}, Landroidx/compose/animation/core/SpringSimulation;->updateValues-IJZedt4$animation_core_release(FFJ)J
 
     .line 10
     move-result-wide p0
@@ -1404,23 +1404,23 @@
     .line 22
 .end method
 
-.method public final getVelocityFromNanos(JFFF)F
+.method public final getVelocityFromNanos(FFFJ)F
     .locals 2
 
     .line 1
     const-wide/32 v0, 0xf4240
 
     .line 2
-    div-long/2addr p1, v0
+    div-long/2addr p4, v0
 
     .line 5
     iget-object p0, p0, Landroidx/compose/animation/core/FloatSpringSpec;->spring:Landroidx/compose/animation/core/SpringSimulation;
 
     .line 6
-    iput p4, p0, Landroidx/compose/animation/core/SpringSimulation;->finalPosition:F
+    iput p2, p0, Landroidx/compose/animation/core/SpringSimulation;->finalPosition:F
 
     .line 8
-    invoke-virtual {p0, p3, p5, p1, p2}, Landroidx/compose/animation/core/SpringSimulation;->updateValues-IJZedt4$animation_core_release(FFJ)J
+    invoke-virtual {p0, p1, p3, p4, p5}, Landroidx/compose/animation/core/SpringSimulation;->updateValues-IJZedt4$animation_core_release(FFJ)J
 
     .line 10
     move-result-wide p0

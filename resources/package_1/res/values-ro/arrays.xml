@@ -5,7 +5,9 @@
     <item>Afișează procentajul când se încarcă (prestabilit)</item>
     <item>Nu afișa această pictogramă</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Afișează orele, minutele și secundele</item>
     <item>Afișează orele și minutele (prestabilit)</item>

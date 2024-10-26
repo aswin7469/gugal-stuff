@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/pip/PhoneSizeSpecSource;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -873,7 +873,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f07020e    # @dimen/default_minimal_size_pip_resizable_task '108.0dp'
+    const v1, 0x7f070230    # @dimen/default_minimal_size_pip_resizable_task '108.0dp'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -885,7 +885,7 @@
     iput v1, p0, Lcom/android/wm/shell/common/pip/PhoneSizeSpecSource;->mDefaultMinSize:I
 
     .line 15
-    const v1, 0x7f07085c    # @dimen/overridable_minimal_size_pip_resizable_task '48.0dp'
+    const v1, 0x7f0708ac    # @dimen/overridable_minimal_size_pip_resizable_task '48.0dp'
 
     .line 17
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -897,7 +897,7 @@
     iput v1, p0, Lcom/android/wm/shell/common/pip/PhoneSizeSpecSource;->mOverridableMinSize:I
 
     .line 24
-    const v1, 0x7f0701a6    # @dimen/config_pipSystemPreferredDefaultSizePercent '0.6'
+    const v1, 0x7f0701c7    # @dimen/config_pipSystemPreferredDefaultSizePercent '0.6'
 
     .line 26
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F
@@ -909,7 +909,7 @@
     iput v1, p0, Lcom/android/wm/shell/common/pip/PhoneSizeSpecSource;->mSystemPreferredDefaultSizePercent:F
 
     .line 33
-    const v1, 0x7f0701a8    # @dimen/config_pipSystemPreferredMinimumSizePercent '0.5'
+    const v1, 0x7f0701c9    # @dimen/config_pipSystemPreferredMinimumSizePercent '0.5'
 
     .line 35
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F
@@ -921,7 +921,7 @@
     iput v1, p0, Lcom/android/wm/shell/common/pip/PhoneSizeSpecSource;->mSystemPreferredMinimumSizePercent:F
 
     .line 42
-    const v1, 0x7f0701a5    # @dimen/config_pipSquareDisplayThresholdForSystemPreferredSize '0.95'
+    const v1, 0x7f0701c6    # @dimen/config_pipSquareDisplayThresholdForSystemPreferredSize '0.95'
 
     .line 44
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F
@@ -933,7 +933,7 @@
     iput v1, p0, Lcom/android/wm/shell/common/pip/PhoneSizeSpecSource;->mSquareDisplayThresholdForSystemPreferredSize:F
 
     .line 51
-    const v1, 0x7f0701a7    # @dimen/config_pipSystemPreferredDefaultSizePercentForSquareDisplay '0.5'
+    const v1, 0x7f0701c8    # @dimen/config_pipSystemPreferredDefaultSizePercentForSquareDisplay '0.5'
 
     .line 53
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F
@@ -945,7 +945,7 @@
     iput v1, p0, Lcom/android/wm/shell/common/pip/PhoneSizeSpecSource;->mSystemPreferredDefaultSizePercentForSquareDisplay:F
 
     .line 60
-    const v1, 0x7f0701a9    # @dimen/config_pipSystemPreferredMinimumSizePercentForSquareDisplay '0.4'
+    const v1, 0x7f0701ca    # @dimen/config_pipSystemPreferredMinimumSizePercentForSquareDisplay '0.4'
 
     .line 62
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F
@@ -957,7 +957,7 @@
     iput v1, p0, Lcom/android/wm/shell/common/pip/PhoneSizeSpecSource;->mSystemPreferredMinimumSizePercentForSquareDisplay:F
 
     .line 69
-    const v1, 0x7f0701a4    # @dimen/config_pipLargeScreenOptimizedAspectRatio '0.5625'
+    const v1, 0x7f0701c5    # @dimen/config_pipLargeScreenOptimizedAspectRatio '0.5625'
 
     .line 71
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getFloat(I)F

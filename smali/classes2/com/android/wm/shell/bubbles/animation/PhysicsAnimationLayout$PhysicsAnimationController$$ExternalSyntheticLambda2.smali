@@ -1,21 +1,18 @@
 .class public final synthetic Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final synthetic f$0:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;
 
-.field public final synthetic f$1:[Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.field public final synthetic f$1:Ljava/util/Set;
 
-.field public final synthetic f$2:Ljava/lang/Runnable;
+.field public final synthetic f$2:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;[Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;Ljava/lang/Runnable;)V
+.method public synthetic constructor <init>(Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;Ljava/util/Set;Ljava/util/List;)V
     .locals 0
 
     .line 1
@@ -25,10 +22,10 @@
     iput-object p1, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$0:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;
 
     .line 5
-    iput-object p2, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$1:[Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+    iput-object p2, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$1:Ljava/util/Set;
 
     .line 7
-    iput-object p3, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$2:Ljava/lang/Runnable;
+    iput-object p3, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$2:Ljava/util/List;
 
     .line 9
     return-void
@@ -37,94 +34,136 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final startAll([Ljava/lang/Runnable;)V
+    .locals 7
 
     .line 1
-    iget-object v0, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$0:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;
+    iget-object v0, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$1:Ljava/util/Set;
 
     .line 2
-    iget-object v1, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$1:[Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+    iget-object v1, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$2:Ljava/util/List;
 
     .line 4
-    iget-object p0, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$2:Ljava/lang/Runnable;
+    iget-object p0, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda2;->f$0:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;
 
     .line 6
-    iget-object v2, v0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;->mLayout:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 8
-    const/4 v3, 0x0
-
-    .line 10
-    move v4, v3
+    new-instance v2, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsPropertyAnimator$$ExternalSyntheticLambda3;
 
     .line 11
-    :goto_0
-    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getChildCount()I
+    const/4 v3, 0x1
 
-    .line 12
-    move-result v5
+    .line 13
+    invoke-direct {v2, v3, p1}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsPropertyAnimator$$ExternalSyntheticLambda3;-><init>(ILjava/lang/Object;)V
 
-    .line 15
-    if-ge v4, v5, :cond_1
+    .line 14
+    iget-object p1, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;->mLayout:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
 
-    .line 16
-    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+    .line 17
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getChildCount()I
 
-    .line 18
-    move-result-object v5
-
-    .line 21
-    invoke-static {v5, v1}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->arePropertiesAnimatingOnView(Landroid/view/View;[Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;)Z
+    .line 19
+    move-result p1
 
     .line 22
-    move-result v5
+    if-nez p1, :cond_0
+
+    .line 23
+    invoke-virtual {v2}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsPropertyAnimator$$ExternalSyntheticLambda3;->run()V
 
     .line 25
-    if-eqz v5, :cond_0
-
-    .line 26
     goto :goto_2
 
     .line 28
     :cond_0
-    add-int/lit8 v4, v4, 0x1
+    const/4 p1, 0x0
 
     .line 29
-    goto :goto_0
+    new-array v3, p1, [Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 31
-    :cond_1
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    .line 30
+    invoke-interface {v0, v3}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 32
-    array-length p0, v1
+    move-result-object v0
 
     .line 35
-    :goto_1
-    if-ge v3, p0, :cond_2
+    check-cast v0, [Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
     .line 36
-    aget-object v2, v1, v3
+    new-instance v3, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda1;
 
     .line 38
-    iget-object v4, v0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;->mLayout:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
+    invoke-direct {v3, p0, v0, v2}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;[Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;Ljava/lang/Runnable;)V
 
     .line 40
-    iget-object v4, v4, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->mEndActionForProperty:Ljava/util/HashMap;
+    array-length v2, v0
 
-    .line 42
-    invoke-virtual {v4, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 43
+    move v4, p1
 
     .line 44
-    add-int/lit8 v3, v3, 0x1
+    :goto_0
+    if-ge v4, v2, :cond_1
+
+    .line 45
+    aget-object v5, v0, v4
 
     .line 47
-    goto :goto_1
+    iget-object v6, p0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsAnimationController;->mLayout:Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;
 
     .line 49
+    iget-object v6, v6, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout;->mEndActionForProperty:Ljava/util/HashMap;
+
+    .line 51
+    invoke-virtual {v6, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 53
+    add-int/lit8 v4, v4, 0x1
+
+    .line 56
+    goto :goto_0
+
+    .line 58
+    :cond_1
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 59
+    move-result-object p0
+
+    .line 62
+    :goto_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 63
+    move-result v0
+
+    .line 66
+    if-eqz v0, :cond_2
+
+    .line 67
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 69
+    move-result-object v0
+
+    .line 72
+    check-cast v0, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsPropertyAnimator;
+
+    .line 73
+    new-array v1, p1, [Ljava/lang/Runnable;
+
+    .line 75
+    invoke-virtual {v0, v1}, Lcom/android/wm/shell/bubbles/animation/PhysicsAnimationLayout$PhysicsPropertyAnimator;->start([Ljava/lang/Runnable;)V
+
+    .line 77
+    goto :goto_1
+
+    .line 80
     :cond_2
     :goto_2
     return-void
-    .line 50
+    .line 81
 .end method

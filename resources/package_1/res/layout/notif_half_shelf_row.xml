@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:fontFamily="@android:string/config_networkLocationProviderPackageName"
+                android:fontFamily="@android:string/config_mediaProjectionPermissionDialogComponent"
                 android:paddingStart="8.0dp"
                 android:paddingEnd="8.0dp" />
       <TextView android:textSize="14.0sp"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:layout_below="@id/channel_name"
-                android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent"
+                android:fontFamily="@android:string/config_chooseTypeAndAccountActivity"
                 android:paddingStart="8.0dp"
                 android:paddingEnd="8.0dp" />
     </RelativeLayout>

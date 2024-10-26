@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$6;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -287,14 +287,14 @@
     if-eqz p2, :cond_3
 
     .line 139
-    const p1, 0x7f1400f0    # @string/accessibility_status_bar_headset 'Headset connected'
+    const p1, 0x7f1300f0    # @string/accessibility_status_bar_headset 'Headset connected'
 
     .line 141
     goto :goto_4
 
     .line 144
     :cond_3
-    const p1, 0x7f1400ef    # @string/accessibility_status_bar_headphones 'Headphones connected'
+    const p1, 0x7f1300ef    # @string/accessibility_status_bar_headphones 'Headphones connected'
 
     .line 145
     :goto_4
@@ -307,14 +307,14 @@
     if-eqz p2, :cond_4
 
     .line 152
-    const p1, 0x7f080b52    # @drawable/stat_sys_headset_mic 'res/drawable/stat_sys_headset_mic.xml'
+    const p1, 0x7f080b99    # @drawable/stat_sys_headset_mic 'res/drawable/stat_sys_headset_mic.xml'
 
     .line 154
     goto :goto_5
 
     .line 157
     :cond_4
-    const p1, 0x7f080b51    # @drawable/stat_sys_headset 'res/drawable/stat_sys_headset.xml'
+    const p1, 0x7f080b98    # @drawable/stat_sys_headset 'res/drawable/stat_sys_headset.xml'
 
     .line 158
     :goto_5
@@ -410,5 +410,4 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 238
 .end method

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/bluetooth/qsdialog/ActiveMediaDeviceItemFactory;
 .super Lcom/android/systemui/bluetooth/qsdialog/DeviceItemFactory;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # virtual methods
@@ -27,7 +27,7 @@
     move-object v4, p0
 
     .line 12
-    const p0, 0x7f1400cc    # @string/accessibility_quick_settings_bluetooth_device_tap_to_disconnect 'disconnect'
+    const p0, 0x7f1300cd    # @string/accessibility_quick_settings_bluetooth_device_tap_to_disconnect 'disconnect'
 
     .line 13
     invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -60,7 +60,7 @@
     invoke-direct {v5, p1, p0}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 34
-    const p0, 0x7f080b29    # @drawable/settingslib_switch_bar_bg_on 'res/drawable/settingslib_switch_bar_bg_on.xml'
+    const p0, 0x7f080b6e    # @drawable/settingslib_switch_bar_bg_on 'res/drawable/settingslib_switch_bar_bg_on.xml'
 
     .line 37
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">tanlangan vidjetni joylash</string>
   <string name="accessibility_action_label_remove_widget">vidjetni olib tashlash</string>
   <string name="accessibility_action_label_select_widget">vidjet tanlash</string>
-  <string name="accessibility_action_open_communal_hub">Ekran qulfidagi vidjetlar</string>
   <string name="accessibility_action_pip_resize">Oʻlchamini oʻzgartirish</string>
   <string name="accessibility_action_pip_stash">Berkitish</string>
   <string name="accessibility_action_pip_unstash">Chiqarish</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Ixcham rejimdan chiqish</string>
   <string name="accessibility_airplane_mode">Parvoz rejimi</string>
   <string name="accessibility_allow_diagonal_scrolling">Diagonal aylantirishga ruxsat berish</string>
+  <string name="accessibility_assistant_poodle">Ovozli qidiruv</string>
   <string name="accessibility_authenticate_hint">autentifikatsiya</string>
   <string name="accessibility_back">Orqaga</string>
   <string name="accessibility_banner_message_dismiss">Yopish</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">qurilmani ochish</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Qurilma Ethernet tarmog‘idan uzildi.</string>
-  <string name="accessibility_fingerprint_bouncer">Haqiqiylikni tekshirish talab etiladi. Autentifikatsiya uchun barmoq izi skaneriga tegining.</string>
   <string name="accessibility_fingerprint_label">Barmoq izi skaneri</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">oʻzgartirish</string>
   <string name="accessibility_floating_button_action_edit">Tahrirlash</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menyu</string>
   <string name="accessibility_multi_user_list_switcher">tortib tushiriladigan menyu</string>
   <string name="accessibility_multi_user_switch_switcher">Foydalanuvchini almashtirish</string>
+  <string name="accessibility_next_alarm">Keyingi signal: %s</string>
   <string name="accessibility_no_calling">Chaqiruv imkonsiz.</string>
   <string name="accessibility_no_phone">Signal yo‘q.</string>
   <string name="accessibility_no_wifi">Wi-Fi o‘chiq.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Ekran bo‘yiga holatida qulflandi.</string>
   <string name="accessibility_send_smart_reply">Yuborish</string>
   <string name="accessibility_sensors_off_active">Sensorlar nofaol ishlayapti</string>
+  <string name="accessibility_settings_gear">Pixel Stand sozlamalari</string>
   <string name="accessibility_side_fingerprint_indicator_label">Barmoq izi skaneriga tegining. Bu – telefonning yon tomonidagi qisqa tugma</string>
+  <string name="accessibility_smartspace_page">Sahifa: %1$d / %2$d</string>
   <string name="accessibility_split_bottom">Pastga ajratish</string>
   <string name="accessibility_split_left">Chapga ajratish</string>
   <string name="accessibility_split_right">Oʻngga ajratish</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi: uchta ustun</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi: ikkita ustun</string>
   <string name="accesssibility_keyguard_retry">Tepaga suring va yana Yuz bilan oching</string>
+  <string name="adaptive_charging_notify_des">Batareya toʻliq quvvat olishiga %1$s qoldi. Batareyaning ishlash muddatini uzaytirish uchun doimo quvvatlang.</string>
+  <string name="adaptive_charging_notify_title">Moslashuvchan quvvatlash yoniq</string>
+  <string name="adaptive_charging_notify_turn_off_once">Bir marta faolsizlantirish</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Moslashuvchan quvvatlash • %2$s qoldi</string>
   <string name="add">Kiritish</string>
   <string name="add_guest_failed">Yangi mehmon yaratilmadi</string>
   <string name="airplane_mode">Parvoz rejimi</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Ilova haqida</string>
   <string name="app_label">Tizim interfeysi</string>
   <string name="assistant_attention_content_description">Foydalanuvchi aniqlandi</string>
+  <string name="assistant_scrim_label">Tinglanmoqda, bekor qilish uchun bosing</string>
   <string name="audio_sharing_description">Audio ulashuvi</string>
   <string name="audio_status">Tinglamoqda</string>
   <string name="auto_data_switch_dialog_negative_button">Kerak emas</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Orqaga</string>
   <string name="battery">Batareya</string>
   <string name="battery_detail_switch_title">Quvvat tejash</string>
-  <string name="battery_low_description">Batareya quvvati %s qoldi. Quvvat tejash funksiyasi Tungi mavzuni yoqadi va fondagi faollikni cheklaydi. Buning natijasida bildirishnomalar kechikishi mumkin.</string>
+  <string name="battery_health_notify_learn_more">Batafsil</string>
   <string name="battery_low_intro">Quvvat tejash funksiyasi Tungi mavzuni yoqadi va fondagi faollikni cheklaydi. Buning natijasida bildirishnomalar kechikishi mumkin.</string>
-  <string name="battery_low_title">Quvvat tejash yoqilsinmi?</string>
   <string name="battery_saver_confirmation_ok">Yoqish</string>
   <string name="battery_saver_confirmation_title">Quvvat tejash yoqilsinmi?</string>
   <string name="battery_saver_confirmation_title_generic">Quvvat tejash funksiyasi haqida</string>
-  <string name="battery_saver_dismiss_action">Kerak emas</string>
   <string name="battery_saver_start_action">Yoqish</string>
   <string name="battery_state_unknown_notification_text">Batafsil axborot olish uchun bosing</string>
   <string name="battery_state_unknown_notification_title">Batareya quvvati aniqlanmadi</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">Faol. Quvvat: %1$s (L), %2$s (R).</string>
   <string name="bluetooth_active_battery_level_untethered_left">Faol. L: %1$s quvvat</string>
   <string name="bluetooth_active_battery_level_untethered_right">Faol. R: %1$s quvvat</string>
-  <string name="bluetooth_active_media_only_battery_level">Faol (faqat media uchun) Quvvat: %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Faol (faqat media uchun), quvvat: %1$s (L), %2$s (R)</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Faol (faqat media uchun)</string>
   <string name="bluetooth_active_no_battery_level">Faol</string>
   <string name="bluetooth_battery_level">Batareya quvvati: %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Ulangan (audio yuborish mumkin), quvvat: %1$s</string>
   <string name="bluetooth_battery_level_untethered">Quvvat: %1$s (L), %2$s (R).</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Ulangan (audio yuborish mumkin), quvvat: %1$s (L), %2$s (R)</string>
   <string name="bluetooth_connected">%1$s ulandi</string>
   <string name="bluetooth_connecting">Ulanmoqda…</string>
   <string name="bluetooth_disconnected">Uzildi</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">Faol (faqat chap)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Faol (chap va oʻng)</string>
   <string name="bluetooth_hearing_aid_right_active">Faol (faqat oʻng)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Ulangan (audio yuborish mumkin)</string>
   <string name="bluetooth_pairing">Juftlanmoqda…</string>
   <string name="bluetooth_pairing_device_down_error_message">“%1$s” qurilmasi bilan aloqa o‘rnatib bo‘lmayapti.</string>
   <string name="bluetooth_pairing_error_message">%1$s bilan biriktirib bo‘lmadi.</string>
   <string name="bluetooth_pairing_pin_error_message">PIN kod yoki parol xato kiritilgani sababli %1$s qurilmasiga juftlanmadi.</string>
   <string name="bluetooth_pairing_rejected_error_message">%1$s biriktirish so‘rovini rad qildi.</string>
-  <string name="bluetooth_saved_device_lea_support">Audio yuborishi mumkin</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Kompyuter</string>
   <string name="bluetooth_talkback_headphone">Quloqchin</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">Kengaytirilgan</string>
   <string name="bubble_overflow_empty_subtitle">Eng oxirgi va yopilgan bulutchali chatlar shu yerda chiqadi</string>
   <string name="bubble_overflow_empty_title">Hech qanday bulutcha topilmadi</string>
-  <string name="bubble_shortcut_label">Bulutchalar</string>
-  <string name="bubble_shortcut_long_label">Bulutchalarni chiqarish</string>
   <string name="bubbles_app_settings">%1$s sozlamalari</string>
   <string name="bubbles_dont_bubble_conversation">Suhbatlar bulutchalar shaklida chiqmasin</string>
   <string name="bubbles_settings_button_description">%1$s bulutchalari uchun sozlamalar</string>
@@ -387,6 +383,10 @@ Qayta moslash uchun bosing</string>
   <string name="cast_to_other_device_stop_dialog_button">Toʻxtatish</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; translatsiyasini toʻxtatasiz</string>
   <string name="cell_data_off_content_description">Mobil internet yoqilmagan</string>
+  <string name="charge_limit_discovery_notification_enable_button">Yoqish</string>
+  <string name="charge_limit_discovery_notification_text">Xizmat davrini uzaytirish va himoyalash uchun batareyani 80% quvvat bilan cheklang. Buni istalgan vaqt sozlamalar orqali boshqarish mumkin.</string>
+  <string name="charge_limit_discovery_notification_title">Quvvatlashda batareyani himoyalang</string>
+  <string name="charging_reverse_text">Batareya quvvati ulashilmoqda</string>
   <string name="clear_all_notifications_text">Hammasini tozalash</string>
   <string name="clipboard">Vaqtinchalik xotira</string>
   <string name="clipboard_content_copied">Kontentdan nusxa olindi.</string>
@@ -406,6 +406,11 @@ Qayta moslash uchun bosing</string>
   <string name="close_button_text">Yopish</string>
   <string name="close_dialog_button">Yopish</string>
   <string name="collapse_menu_text">Menyuni yopish</string>
+  <string name="columbus_bouncer_message">Qisqa teginish uchun qulfni oching</string>
+  <string name="columbus_target_request_dialog_allow">Ruxsat</string>
+  <string name="columbus_target_request_dialog_deny">Rad etish</string>
+  <string name="columbus_target_request_dialog_summary">%1$s ilovasini ochish uchun telefonning orqa tomoniga ikki marta tegining. Buni istalgan vaqtda sozlamalardan oʻzgartirish mumkin.</string>
+  <string name="columbus_target_request_dialog_title">%1$s ilovasini qisqa teginish yordamida ochishga ruxsat berilsinmi?</string>
   <string name="communal_tutorial_indicator_text">Qoʻllanma bilan tanishish uchun chapga suring</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Ichki ekran uchun aks ettirish yoqiladi. Old ekran oʻchiriladi.</string>
   <string name="connected_display_dialog_start_mirroring">Tashqi displeyda aks ettirilsinmi?</string>
@@ -511,8 +516,11 @@ Davom ettiradigan bo‘lsangiz, trafik uchun to‘lov olinishi mumkin.</string>
   <string name="data_usage_disabled_dialog_mobile_title">Mobil internet pauza qilindi</string>
   <string name="data_usage_disabled_dialog_title">Internetdan foydalanish to‘xtatib qo‘yildi</string>
   <string name="days_timestamp">%1$s kun oldin</string>
-  <string name="default_error_message">Kiritilgan axborot xato</string>
   <string name="default_popup_window_title">Qalqib chiquvchi oyna</string>
+  <string name="defender_notify_resume_charge">Eʼtiborsiz qoldirish</string>
+  <string name="defender_notify_title">Batareyangizni himoyalash</string>
+  <string name="defender_post_notify_des">Batareyaning ishlash muddatini kengaytirishga yordam berish maqsadida quvvatlash %1$s dan %2$s gacha optimallashtirildi</string>
+  <string name="defender_post_notify_title">Quvvatlash optimallashtirildi</string>
   <string name="demo_mode">Tizim interfeysi demo rejimi</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Ekranni yoyish</string>
   <string name="desktop_mode_maximize_menu_snap_text">Ekranni biriktirish</string>
@@ -532,20 +540,32 @@ Davom ettiradigan bo‘lsangiz, trafik uchun to‘lov olinishi mumkin.</string>
   <string name="do_disclosure_generic">Bu qurilma tashkilotingizga tegishli</string>
   <string name="do_disclosure_with_name">Bu qurilma %s tashkilotiga tegishli</string>
   <string name="do_financed_disclosure_with_name">Bu qurilma %s tomonidan berilgan.</string>
+  <string name="dock_a11y_action_show_photo_text">Fotoramkani koʻrsatish</string>
+  <string name="dock_alignment_not_charging">Telefon quvvat olishi uchun uni dok-stansiyaga joylang</string>
+  <string name="dock_alignment_slow_charging">Tezkor quvvatlanishi uchun telefonni dok-stansiyaga joylang</string>
+  <string name="dock_defender_first_run_des">Batareyaning ishlash muddatini kengaytirishga yordam berish maqsadida planshet dokka ulanganda quvvatlash 90% da tutib turiladi. Almashtirish uchun istalgan vaqt Sozlamalarga kiring.</string>
+  <string name="dock_defender_first_run_settings">Sozlamalar</string>
+  <string name="dock_defender_first_run_title">Batareyani himoyalash uchun quvvatlash toʻxtatildi</string>
   <string name="dock_multi_instances_not_supported_text">Bu ilovani faqat 1 ta oynada ochish mumkin</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Bu ilovada ekranni ikkiga ajratish ishlamaydi.</string>
+  <string name="dock_photo_preview_text">Fotoramka yasalmoqda...</string>
+  <string name="dock_promo_text">Fotoramkadan foydalanish uchun chapga suring</string>
   <string name="done">Tayyor</string>
   <string name="drag_split_not_supported">Bu bildirishnoma ikkiga ajratilgan ekranda ishlamaydi.</string>
   <string name="drag_to_add_tiles">Keraklisini ushlab torting</string>
   <string name="drag_to_rearrange_tiles">Qayta tartiblash uchun ushlab torting</string>
   <string name="drag_to_remove_disabled">Kamida %1$d ta katakcha lozim</string>
   <string name="drag_to_remove_tiles">O‘chirish uchun bu yerga torting</string>
+  <string name="dream_lockscreen_wallpaper_description">Ekran qulfi uchun fon rasmidan foydalanish</string>
+  <string name="dream_lockscreen_wallpaper_label">Fon rasmi</string>
   <string name="dream_overlay_status_bar_alarm_set">Signal oʻrnatildi</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Kamera va mikrofon yoqilmagan</string>
   <string name="dream_overlay_status_bar_camera_off">Kamera yoqilmagan</string>
   <string name="dream_overlay_status_bar_mic_off">Mikrofon yoqilmagan</string>
   <string name="dream_overlay_status_bar_priority_mode">Imtiyozli rejim</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi ishlamayapti</string>
+  <string name="dwell_defender_notify_des">Bu telefoningiz juda uzoq vaqt quvvatlanganda batareyaning ishlash muddatini uzaytirishga yordam beradi</string>
+  <string name="dwell_defender_notify_title">Batareyani himoyalash uchun quvvatlash toʻxtatildi</string>
   <string name="edit_user_info_message">Tanlangan nom va rasm bu qurilmaning barcha foydalanuvchilariga koʻrinadi</string>
   <string name="edit_widget">Vidjetni tahrirlash</string>
   <string name="empty_shade_text">Bildirishnomalar yo‘q</string>
@@ -561,12 +581,16 @@ Davom ettiradigan bo‘lsangiz, trafik uchun to‘lov olinishi mumkin.</string>
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Kengaytirilgan</string>
   <string name="expand_menu_text">Menyuni ochish</string>
+  <string name="extreme_battery_saver_text">Qattiq tejash</string>
+  <string name="extreme_low_battery_notification_text">Tez orada quvvatlanmasa, telefon oʻchadi</string>
+  <string name="extreme_low_battery_notification_title">Batareya quvvati juda kam</string>
   <string name="face_re_enroll_dialog_content">Yuz bilan ochish funksiyasini qayta sozlash uchun joriy yuz modelingiz oʻchirib tashlanadi.
 
 Telefonni qulfdan chiqarish maqsadida yuzingizdan foydalanish uchun bu funksiyani qayta sozlashingiz kerak.</string>
   <string name="face_re_enroll_dialog_title">Yuz bilan ochishni sozlash</string>
   <string name="face_re_enroll_notification_name">Yuz bilan ochish</string>
   <string name="face_re_enroll_notification_title">Yuz bilan ochishni qayta sozlash</string>
+  <string name="face_reenroll_dialog_confirm">Sozlash</string>
   <string name="face_reenroll_failure_dialog_content">Yuz bilan ochish sozlanmadimi. Sozlamalarni ochib, qaytadan urining.</string>
   <string name="failed_attempts_now_wiping_device">Juda koʻp marta muvaffaqiyatsiz urinishlar amalga oshirildi. Bu qurilmadagi maʼlumotlar o‘chirib tashlanadi.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Yopish</string>
@@ -604,6 +628,7 @@ Ular oʻchirilgandan keyin, barmoq izi orqali telefonni qulfdan chiqarish yoki s
   <string name="font_scaling_smaller">Kichiklashtirish</string>
   <string name="fullscreen_text">Butun ekran</string>
   <string name="game_status">Oʻynamoqda</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Extend Unlock yoniq emas</string>
   <string name="go_to_web">Brauzerni ochish</string>
   <string name="got_it">OK</string>
@@ -640,6 +665,7 @@ Ular oʻchirilgandan keyin, barmoq izi orqali telefonni qulfdan chiqarish yoki s
   <string name="guest_reset_and_restart_dialog_title">Mehmon seansi tiklansinmi?</string>
   <string name="guest_reset_guest_confirm_button">Tiklash</string>
   <string name="guest_resetting">Mehmon seansi tiklanmoqda…</string>
+  <string name="handle_invocation_prompt">Assistentni ochish uchun suring</string>
   <string name="handle_text">Identifikator</string>
   <string name="headset">Audio moslama</string>
   <string name="hearing_devices_preset_label">Andoza</string>
@@ -656,6 +682,7 @@ Batafsil axborot uchun bosing</string>
   <string name="high_temp_title">Telefon qizimoqda</string>
   <string name="home_controls_dream_description">Uy boshqaruvi tugmalarini ekran lavhasida tezkor oching</string>
   <string name="home_controls_dream_label">Uy boshqaruvi</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Kamida bitta qurilma yoki qurilma paneli mavjud</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Home ilovasini yorliq sifatida qoʻshish uchun ilova oʻrnatilganiga ishonch hosil qiling</string>
   <string name="hub_mode_add_widget_button_text">Vidjet kiritish</string>
@@ -669,12 +696,16 @@ Batafsil axborot uchun bosing</string>
   <string name="in_progress">Bajarilmoqda</string>
   <string name="inattentive_sleep_warning_message">Qurilma oʻchish arafasida, yoniq qolishi uchun istalgan tugmani bosing</string>
   <string name="inattentive_sleep_warning_title">Kutib turing</string>
+  <string name="incompatible_charging_learn_more">Batafsil</string>
+  <string name="incompatible_charging_notify_des">Telefoningiz sekin quvvat olyapti yoki umuman olmayapti. Tezroq quvvatlash uchun tavsiya etiladigan quvvat kabel va adapterdan foydalaning.</string>
+  <string name="incompatible_charging_notify_title">Quvvatlash aksessuarini tekshiring</string>
   <string name="indeterminate">Qisman belgilandi</string>
   <string name="inline_done_button">Tayyor</string>
   <string name="inline_ok_button">Tatbiq etish</string>
   <string name="inline_turn_off_notifications">Bildirishnoma kelmasin</string>
   <string name="input_switch_input_language_next">Keyingi tilga almashtirish</string>
   <string name="input_switch_input_language_previous">Avvalgi tilga almashtirish</string>
+  <string name="install_app">Ilovani oʻrnatish</string>
   <string name="install_dialer_on_work_profile_action">Ishga oid telefon ilovasini oʻrnatish</string>
   <string name="install_type_instant">Darhol ochiladigan ilova</string>
   <string name="instant_apps">Darhol ochiladigan ilovalar</string>
@@ -683,8 +714,6 @@ Batafsil axborot uchun bosing</string>
   <string name="instant_apps_title">%1$s ishlayapti</string>
   <string name="interruption_level_none">Jimjitlik</string>
   <string name="interruption_level_priority">Faqat muhimlari</string>
-  <string name="invalid_charger_text">Qurilmangiz bilan kelgan quvvatlash moslamasidan foydalaning</string>
-  <string name="invalid_charger_title">USB orqali quvvatlash imkonsiz</string>
   <string name="issuerecord_background_processing_label">Yozuv qayta ishlanmoqda</string>
   <string name="issuerecord_ongoing_screen_only">Muammo yozib olinmoqda</string>
   <string name="issuerecord_save_title">Muammo yozuvi saqlandi</string>
@@ -766,21 +795,33 @@ Batafsil axborot uchun bosing</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Qurilma qulflandi
 Hisob tekshiruvi amalga oshmadi</string>
   <string name="keyguard_indication_charging_time">%2$s • Quvvat olmoqda • %1$s qoldi</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Quvvatlanishiga %1$s qoldi</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Quvvat olmoqda • %1$s qoldi</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Toʻliq quvvatlananishiga %1$s qoldi</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Tez quvvat olmoqda • %1$s qoldi</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Tezkor quvvatlash • Toʻlishiga %1$s qoldi</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Quvvatlandi</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Sekin quvvat olmoqda • %1$s qoldi</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Toʻliq quvvatlananishiga %1$s qoldi</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Toʻliq quvvatlananishiga %1$s qoldi</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Simsiz quvvat olmoqda • %1$s qoldi</string>
-  <string name="keyguard_indication_trust_unlocked">TrustAgent tomonidan ochilgan</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Toʻliq quvvatlananishiga %1$s qoldi</string>
+  <string name="keyguard_indication_trust_unlocked">Extend Unlock yoniq</string>
   <string name="keyguard_missing_sim_message_short">SIM kartasiz</string>
   <string name="keyguard_network_locked_message">Tarmoq qulflangan</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Ishlamaydigan SIM.</string>
   <string name="keyguard_plugged_in">%s • Quvvat olmoqda</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Tezkor quvvat olmoqda</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Tezkor quvvatlash</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Batareyani himoyalash uchun quvvatlash toʻxtatildi</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Sekin quvvat olmoqda</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Quvvatlanmoqda</string>
   <string name="keyguard_plugged_in_dock">%s • Quvvat olmoqda</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Quvvatlanmoqda</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Quvvatlash aksessuarini tekshiring</string>
+  <string name="keyguard_plugged_in_v2">%s • Quvvatlanmoqda</string>
   <string name="keyguard_plugged_in_wireless">%s • Simsiz quvvatlanyapti</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Quvvatlanmoqda</string>
   <string name="keyguard_retry">Qayta urinish uchun tepaga suring</string>
   <string name="keyguard_sim_error_message_short">SIM karta yaroqsiz.</string>
   <string name="keyguard_sim_locked_message">SIM karta qulflandi.</string>
@@ -811,7 +852,6 @@ Hisob tekshiruvi amalga oshmadi</string>
   <string name="kg_invalid_confirm_pin_hint">PIN kod mos kelmadi</string>
   <string name="kg_invalid_sim_pin_hint">4-8 ta raqamdan iborat PIN kodni kiriting.</string>
   <string name="kg_invalid_sim_puk_hint">PUK kod kamida 8 ta raqamdan iborat bo‘lishi shart.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{SIM PIN kodini kiriting, qurilmani qulfdan chiqarish uchun sizda # ta urinish bor.}other{SIM karta PIN kodini kiriting. Sizda # ta urinish qoldi.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM karta faolsizlantirildi. Davom etish uchun PUK kodni kiriting. Yana # marta xato qilsangiz, SIM kartangiz butunlay qulflanadi. Batafsil axborot olish uchun aloqa operatoriga murojaat qiling.}other{SIM karta faolsizlantirildi. Davom etish uchun PUK kodni kiriting. Yana # marta xato qilsangiz, SIM kartangiz butunlay qulflanadi. Batafsil axborot olish uchun aloqa operatoriga murojaat qiling.}}</string>
   <string name="kg_password_pin_failed">SIM kartani qulfdan chiqarib bo‘lmadi!</string>
   <string name="kg_password_puk_failed">SIM kartani qulfdan chiqarib bo‘lmadi!</string>
@@ -852,7 +892,7 @@ Hisob tekshiruvi amalga oshmadi</string>
   <string name="kg_sim_pin_instructions_multi">“%1$s” SIM kartasi PIN kodini kiriting.</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM karta qulfdan chiqarilmoqda…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{# soniyadan keyin qaytadan urining.}other{# soniyadan keyin qayta urining.}}</string>
-  <string name="kg_trust_agent_disabled">Ishonchli agent mavjud emas</string>
+  <string name="kg_trust_agent_disabled">Extend Unlock mavjud emas</string>
   <string name="kg_unlock_with_password_or_fp">Parol/barmoq izi bilan oching</string>
   <string name="kg_unlock_with_pattern_or_fp">Grafik kalit/barmoq izi bilan oching</string>
   <string name="kg_unlock_with_pin_or_fp">PIN/barmoq izi bilan oching</string>
@@ -900,6 +940,10 @@ Bu ilovaga qurilmadagi barcha jurnal qaydlariga ruxsat berilmasa ham, u oʻzinin
   <string name="log_access_confirmation_learn_more">Batafsil</string>
   <string name="log_access_confirmation_learn_more_at">Batafsil: %s</string>
   <string name="log_access_confirmation_title">%s uchun qurilmadagi barcha jurnallarga kirish ruxsati berilsinmi?</string>
+  <string name="low_battery_label">Batareya quvvati kam</string>
+  <string name="low_battery_notification_text">Batareya quvvatini tejash uchun Standart quvvat tejash funksiyasini yoqing</string>
+  <string name="low_battery_notification_text_ebs">Batareya quvvatini tejash uchun Batareyani qattiq tejash funksiyasini yoqing</string>
+  <string name="low_battery_notification_title">Batareya quvvati %s qoldi</string>
   <string name="m3c_search_bar_search">Qidiruv</string>
   <string name="m3c_suggestions_available">Takliflar quyida</string>
   <string name="magnification_close_settings_click_label">Kattalashtirish sozlamalarini yopish</string>
@@ -939,8 +983,6 @@ Bu ilovaga qurilmadagi barcha jurnal qaydlariga ruxsat berilmasa ham, u oʻzinin
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Toʻxtatish</string>
   <string name="media_output_end_session_dialog_summary">Mediani boshqa qurilmaga koʻchirish uchun umumiy seansingizni toʻxtating</string>
-  <string name="media_output_first_broadcast_title">Translatsiya qanday ishlaydi</string>
-  <string name="media_output_first_notify_broadcast_message">Atrofingizdagi mos Bluetooth qurilmasiga ega foydalanuvchilar siz translatsiya qilayotgan mediani tinglay olishadi</string>
   <string name="media_output_group_title_speakers_and_displays">Karnaylar va displeylar</string>
   <string name="media_output_group_title_suggested_device">Taklif qilingan qurilmalar</string>
   <string name="media_output_label_title">%sda ijro etilmoqda</string>
@@ -967,9 +1009,6 @@ Bu ilovaga qurilmadagi barcha jurnal qaydlariga ruxsat berilmasa ham, u oʻzinin
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Translatsiya qilayotganingizda Android ekranda chiqadigan yoki qurilmada ijro qilinadigan kontentni koʻra oladi. Shu sababli parollar, toʻlov tafsilotlari, xabarlar, suratlar, audio va video chiqmasligi uchun ehtiyot boʻling.</string>
   <string name="media_projection_sys_service_dialog_title">Yozib olish yoki translatsiya boshlansinmi?</string>
   <string name="media_projection_sys_service_dialog_warning">Bu funksiyani taʼminlovchi xizmat ekranda chiqqan yoki yozib olish va translatsiya vaqtida ijro etilgan barcha axborotlarga ruxsat oladi. Bu axborotlar parollar, toʻlov tafsilotlari, rasmlar, xabarlar va ijro etilgan audiolardan iborat boʻlishi mumkin.</string>
-  <string name="media_projection_task_switcher_action_back">Ortga qaytarish</string>
-  <string name="media_projection_task_switcher_action_switch">Bu ilovani ulashish</string>
-  <string name="media_projection_task_switcher_text">Ilovalarni almashtirsangiz, ulashuv toʻxtatiladi</string>
   <string name="media_seamless_other_device">Boshqa qurilma</string>
   <string name="media_transfer_default_device_name">Ulangan qurilma</string>
   <string name="media_transfer_dock_speaker_device_name">Dok-stansiyali karnay</string>
@@ -1280,12 +1319,17 @@ Savollaringiz boʻlsa %2$s bilan bogʻlaning.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Yuqori aniqlik uchun telefonni aylantiring</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Ekranlar almashtirilsinmi?</string>
   <string name="recent_conversations">Oxirgi suhbatlar</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">rasm yuborildi</string>
   <string name="remove_from_settings">Sozlamalardan olib tashlash</string>
   <string name="remove_from_settings_prompt">System UI Tuner Sozlamalardan olib tashlanib, uning barcha funksiyalaridan foydalanish to‘xtatilsinmi?</string>
   <string name="require_unlock_for_nfc">NFC ishlatish uchun qurilma qulfini oching</string>
   <string name="restart_button_description">Yaxshiroq koʻrish maqsadida bu ilovani qayta ishga tushirish uchun bosing</string>
   <string name="retry_face">Yuz autentifikatsiyasi uchun qayta urining</string>
+  <string name="reverse_charging_device_name_text">Boshqa Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s quvvatlamoqda (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Quvvat ulashish yoniq</string>
+  <string name="reverse_charging_title">Quvvat ulashish</string>
   <string name="right_icon">O‘ngga belgisi</string>
   <string name="right_keycode">O‘ngga tugmasi kodi</string>
   <string name="right_nav_bar_button_type">Qo‘shimcha O‘ngga tugmasi turi</string>
@@ -1293,8 +1337,15 @@ Savollaringiz boʻlsa %2$s bilan bogʻlaning.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">Batareya va trafik sarfi tafsilotlari uchun ustiga bosing</string>
   <string name="running_foreground_services_title">Fonda ishlayotgan ilovalar</string>
-  <string name="satellite_connected_carrier_text">Sputnik SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel Sputnik SOS</string>
   <string name="save">Saqlash</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Bekor qilish</string>
+  <string name="saver_confirmation_dialog_subtitle">Foydalanish rejimini tanlang</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Yuqorida roʻyxatga kiritilgan barcha oʻzgartirishlarni oʻz ichiga oladi. Shuningdek, muhim boʻlmagan ilovalar va ularning bildirishnomalarini pauza qiladi.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Vizual effektlar va fondagi faollikni cheklaydi. Agar allaqachon yoqilmagan boʻlsa, Tungi mavzuni yoqadi.</string>
+  <string name="saver_confirmation_dialog_title">Quvvat tejashga xush kelibsiz</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Batareyani qattiq tejash</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Standart quvvat tejash</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Ekranni tasvirga olish qurilmadan foydalanish tartibi tomonidan faolsizlantirilgan</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">AT administratoringiz tomonidan bloklangan</string>
   <string name="screen_pinning_can_open_other_apps">Mahkamlangan ilova boshqa ilovalarni ochishi mumkin.</string>
@@ -1312,6 +1363,12 @@ Savollaringiz boʻlsa %2$s bilan bogʻlaning.</string>
   <string name="screen_pinning_toast">Bu ilovadan chiqish uchun Orqaga va Menyu tugmalarini bosib turing</string>
   <string name="screen_pinning_toast_gesture_nav">Bu ilovani olib tashlash uchun tepaga surib, bosib turing</string>
   <string name="screen_pinning_toast_recents_invisible">Bu ilovani olib tashlash uchun Orqaga va Bosh ekran tugmalarini bosib turing</string>
+  <string name="screen_protector_absent_message">Ekran himoyasi jildi ishlatmasangiz, ekran himoyasi rejimini faolsizlantiring.</string>
+  <string name="screen_protector_disable_notification">Bildirishnomani faolsizlantirish</string>
+  <string name="screen_protector_go_to_settings">Sozlamalarni ochish</string>
+  <string name="screen_protector_got_it">OK</string>
+  <string name="screen_protector_mode_title">Ekran himoyasi rejimi</string>
+  <string name="screen_protector_present_message">Ekran himoyasi jildi ishlatsangiz, ekran himoyasi rejimini yoqing.</string>
   <string name="screen_share_permission_app_selector_title">Ilovada ulashish yoki yozib olish</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Butun ekran</string>
   <string name="screen_share_permission_dialog_option_single_app">Bitta ilova</string>
@@ -1364,9 +1421,9 @@ Savollaringiz boʻlsa %2$s bilan bogʻlaning.</string>
   <string name="screenshot_saving_work_profile_title">Skrinshot ish profiliga saqlanmoqda…</string>
   <string name="screenshot_scroll_label">Skrinshot sohasini kengaytirish</string>
   <string name="screenshot_share_description">Skrinshot yuborish</string>
-  <string name="screenshot_share_label">Ulashish</string>
   <string name="screenshot_text">Skrinshot</string>
   <string name="screenshot_top_boundary_pct">Yuqori chegara %1$d foiz</string>
+  <string name="screenshot_view_description">Skrinshotni ochish</string>
   <string name="screenshot_work_profile_notification">Ish profilidagi %1$s ilovasiga saqlandi</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Barmoq izi sensori quvvat tugmasida joylashgan. U tekis tugma telefonning yon chekkasida tovush balandligi tugmasining yonida joylashgan.</string>
   <string name="see_all_bluetooth_devices">Hammasi</string>
@@ -1384,6 +1441,12 @@ Savollaringiz boʻlsa %2$s bilan bogʻlaning.</string>
   <string name="set_default_notes_app_toast_content">Standart qaydlar ilovasini Sozlamalar orqali tanlang</string>
   <string name="settings_label">Sozlamalar</string>
   <string name="settingslib_learn_more_text">Batafsil</string>
+  <string name="severe_battery_notification_switch_text">Batareyani qattiq tejash rejimiga almashilsinmi? 
+
+Bunda barcha keraksiz ilovalar va ularning bildirishnomalari pauza qilinadi</string>
+  <string name="severe_battery_notification_text">Batareyani qattiq tejash rejimini yoqish. Barcha asosiy boʻlmagan ilovalar pauza qilinadi.</string>
+  <string name="severe_battery_notification_title">Batareya quvvati %s qoldi</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Almashish</string>
   <string name="share_to_app_stop_dialog_button">Namoyishni toʻxtatish</string>
   <string name="share_to_app_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; ulashuvini toʻxtatasiz</string>
   <string name="share_to_app_stop_dialog_title">Ekran namoyishi toʻxtatilsinmi?</string>
@@ -1406,6 +1469,9 @@ Savollaringiz boʻlsa %2$s bilan bogʻlaning.</string>
   <string name="slice_permission_text_1">– %1$s ma’lumotlarini o‘qiy oladi</string>
   <string name="slice_permission_text_2">– %1$s ichida amallar bajara oladi</string>
   <string name="slice_permission_title">%1$s ilovasiga %2$s ilovasidan fragmentlar ko‘rsatishga ruxsat berilsinmi?</string>
+  <string name="smartspace_content_desc">Eng asosiy</string>
+  <string name="smartspace_flight_qr_code">QR kod</string>
+  <string name="smartspace_role_desc">Koʻrish</string>
   <string name="snoozeHourOptions">{count,plural, =1{# soat}=2{# soat}other{# soat}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# daqiqa}other{# daqiqa}}</string>
   <string name="snooze_undo">Qaytarish</string>
@@ -1416,6 +1482,8 @@ Savollaringiz boʻlsa %2$s bilan bogʻlaning.</string>
   <string name="speed_label_slow">Sekin</string>
   <string name="speed_label_very_fast">Juda tez</string>
   <string name="split_screen_text">Ekranni ikkiga ajratish</string>
+  <string name="squeeze_invocation_prompt">Assistentni ishga tushirish uchun telefonni siqing</string>
+  <string name="standard_battery_saver_text">Standart</string>
   <string name="start_dreams">Ekran lavhasi</string>
   <string name="state_empty">Boʻsh</string>
   <string name="state_off">Oʻchiq</string>
@@ -1453,6 +1521,8 @@ Savollaringiz boʻlsa %2$s bilan bogʻlaning.</string>
   <string name="tab">Varaq</string>
   <string name="tap_a_network_to_connect">Ulanish uchun tarmoq ustiga bosing</string>
   <string name="tap_again">Yana bosing</string>
+  <string name="temp_defender_notify_des">Telefoningiz normal haroratga qaytganda quvvatlash davom ettiriladi</string>
+  <string name="temp_defender_notify_title">Batareyani himoyalash uchun quvvatlash toʻxtatildi</string>
   <string name="template_percent">%1$d foiz.</string>
   <string name="thermal">Termal</string>
   <string name="thermal_shutdown_dialog_help_text">Batafsil axborot</string>
@@ -1469,6 +1539,7 @@ Batafsil axborot uchun bosing</string>
   <string name="title_for_empty_state_cta">Planshetingiz qulflangan boʻlsa ham sevimli ilova vidjetlariga tezkor kira olasiz</string>
   <string name="title_usb_accessory">USB jihoz</string>
   <string name="to_switch_networks_disconnect_ethernet">Boshqa tarmoqqa almashish uchun Ethernet tarmogʻini uzing</string>
+  <string name="too_hot_label">Pixel juda qizib ketdi</string>
   <string name="touch_filtered_warning">Ilova ruxsatnoma so‘roviga xalaqit qilayotgani tufayli, “Sozlamalar” ilovasi javobingizni tekshira olmaydi.</string>
   <string name="touchpad_tutorial_action_key_button">Amal tugmasi</string>
   <string name="touchpad_tutorial_back_gesture_button">Orqaga qaytish ishorasi</string>
@@ -1483,17 +1554,18 @@ Batafsil axborot uchun bosing</string>
   <string name="tuner_menu">Menyu</string>
   <string name="tuner_minus">Minus</string>
   <string name="tuner_other_apps">Boshqa ilovalar</string>
+  <string name="tuner_persistent_warning">Ushbu tajribaviy funksiyalar o‘zgarishi, buzilishi yoki keyingi versiyalarda olib tashlanishi mumkin. Ehtiyot bo‘lib davom eting.</string>
   <string name="tuner_plus">Plus</string>
   <string name="tuner_right">O‘ngga</string>
   <string name="tuner_time">Vaqt</string>
+  <string name="tuner_warning">System UI Tuner yordamida siz Android foydalanuvchi interfeysini tuzatish va o‘zingizga moslashtirishingiz mumkin. Ushbu tajribaviy funksiyalar o‘zgarishi, buzilishi yoki keyingi versiyalarda olib tashlanishi mumkin. Ehtiyot bo‘lib davom eting.</string>
+  <string name="tuner_warning_title">Diqqat!</string>
   <string name="turn_off_airplane_mode">Parvoz rejimini faolsizlantirish</string>
   <string name="turn_on_bluetooth">Bluetooth ishlatish</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Tezkor ulashuv va Qurilmamni top kabi funksiyalar Bluetooth ishlatadi</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth ertaga ertalab yoqiladi</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Ertaga avtomatik yoqilsin</string>
   <string name="turn_on_wifi">Wi‑Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Televizorda birlamchi</string>
   <string name="two_weeks_timestamp">2 hafta oldin</string>
   <string name="unknown">Noma’lum</string>
   <string name="unlock_to_see_notif_text">Eskilarini koʻrish uchun qulfni yeching</string>
@@ -1552,7 +1624,9 @@ Qurilmaning istalgan foydalanuvchisi ilovalarni barcha hisoblar uchun yangilashi
   <string name="volume_odi_captions_hint_enable">faollashtirish</string>
   <string name="volume_odi_captions_tip">Avtomatik taglavha yaratish</string>
   <string name="volume_panel_captioning_title">Jonli izoh</string>
+  <string name="volume_panel_clear_calling_title">Tiniq ovoz</string>
   <string name="volume_panel_collapsed_sliders">Tovush slayderlari yigʻilgan</string>
+  <string name="volume_panel_device_settings_title">Qurilma sozlamalari</string>
   <string name="volume_panel_dialog_settings_button">Sozlamalar</string>
   <string name="volume_panel_enter_media_output_settings">Chiqarish sozlamalarini kiritish</string>
   <string name="volume_panel_expanded_sliders">Tovush slayderlari yoyilgan</string>
@@ -1667,6 +1741,9 @@ Wi‑Fi Manzil (BSSID):
   <string name="wifitrackerlib_wifi_standard_unknown">Noaniq</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Trafik hisoblanmaydi</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi hozir avtomatik ulanmaydi</string>
+  <string name="wireless_charging_label">Simsiz quvvat olmoqda</string>
+  <string name="wireless_charging_notification_text">Simsiz quvvatlash simli quvvatlashdan koʻra koʻproq quvvat sarflashi mumkin. Elektr quvvati va vaqtni tejash uchun simli quvvatlagichni ulang.</string>
+  <string name="wireless_charging_notification_title">Simsiz quvvat olmoqda</string>
   <string name="work_challenge_emergency_button_text">Favqulodda holat</string>
   <string name="work_mode_off_title">Ishga oid ilovalar qaytarilsinmi?</string>
   <string name="work_mode_turn_on">Davom ettirish</string>

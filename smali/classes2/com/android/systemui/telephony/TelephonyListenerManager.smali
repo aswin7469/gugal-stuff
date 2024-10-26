@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/telephony/TelephonyListenerManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -42,6 +42,46 @@
 
 
 # virtual methods
+.method public final addCallStateListener(Landroid/telephony/TelephonyCallback$CallStateListener;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/android/systemui/telephony/TelephonyListenerManager;->mTelephonyCallback:Lcom/android/systemui/telephony/TelephonyCallback;
+
+    .line 2
+    iget-object v0, v0, Lcom/android/systemui/telephony/TelephonyCallback;->mCallStateListeners:Ljava/util/List;
+
+    .line 4
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 6
+    invoke-virtual {p0}, Lcom/android/systemui/telephony/TelephonyListenerManager;->updateListening()V
+
+    .line 9
+    return-void
+    .line 12
+.end method
+
+.method public final removeCallStateListener(Landroid/telephony/TelephonyCallback$CallStateListener;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/android/systemui/telephony/TelephonyListenerManager;->mTelephonyCallback:Lcom/android/systemui/telephony/TelephonyCallback;
+
+    .line 2
+    iget-object v0, v0, Lcom/android/systemui/telephony/TelephonyCallback;->mCallStateListeners:Ljava/util/List;
+
+    .line 4
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    .line 6
+    invoke-virtual {p0}, Lcom/android/systemui/telephony/TelephonyListenerManager;->updateListening()V
+
+    .line 9
+    return-void
+    .line 12
+.end method
+
 .method public final updateListening()V
     .locals 2
 

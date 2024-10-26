@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/AutoTileManager$4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/DeviceControlsController$Callback;
@@ -146,4 +146,24 @@
     .line 72
     return-void
     .line 75
+.end method
+
+.method public final removeControlsAutoTracker()V
+    .locals 1
+
+    .line 1
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager$4;->this$0:Lcom/android/systemui/statusbar/phone/AutoTileManager;
+
+    .line 2
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mAutoTracker:Lcom/android/systemui/qs/AutoAddTracker;
+
+    .line 4
+    const-string v0, "controls"
+
+    .line 6
+    invoke-virtual {p0, v0}, Lcom/android/systemui/qs/AutoAddTracker;->setTileRemoved(Ljava/lang/String;)V
+
+    .line 8
+    return-void
+    .line 11
 .end method

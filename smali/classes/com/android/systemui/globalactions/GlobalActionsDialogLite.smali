@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/globalactions/GlobalActionsDialogLite;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnDismissListener;
@@ -179,47 +179,47 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 27
-    const-string v1, "state"
+    const-string/jumbo v1, "state"
 
     .line 30
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 32
+    .line 33
     iget-object v1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mContext:Landroid/content/Context;
 
-    .line 35
+    .line 36
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    .line 37
+    .line 38
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 39
+    .line 40
     iget-boolean v0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mHasTelephony:Z
 
-    .line 42
+    .line 43
     if-nez v0, :cond_1
 
-    .line 44
+    .line 45
     if-eqz p1, :cond_0
 
-    .line 46
+    .line 47
     sget-object p1, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$ToggleState;->On:Lcom/android/systemui/globalactions/GlobalActionsDialogLite$ToggleState;
 
-    .line 48
+    .line 49
     goto :goto_0
 
-    .line 50
+    .line 51
     :cond_0
     sget-object p1, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$ToggleState;->Off:Lcom/android/systemui/globalactions/GlobalActionsDialogLite$ToggleState;
 
-    .line 51
+    .line 52
     :goto_0
     iput-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mAirplaneState:Lcom/android/systemui/globalactions/GlobalActionsDialogLite$ToggleState;
 
-    .line 53
+    .line 54
     :cond_1
     return-void
-    .line 55
+    .line 56
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/plugins/GlobalActions$GlobalActionsManager;Landroid/media/AudioManager;Landroid/service/dreams/IDreamManager;Landroid/app/admin/DevicePolicyManager;Lcom/android/internal/widget/LockPatternUtils;Lcom/android/systemui/broadcast/BroadcastDispatcher;Lcom/android/systemui/telephony/TelephonyListenerManager;Lcom/android/systemui/util/settings/GlobalSettings;Lcom/android/systemui/util/settings/SecureSettings;Lcom/android/systemui/statusbar/VibratorHelper;Landroid/content/res/Resources;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/settings/UserTracker;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Landroid/os/UserManager;Landroid/app/trust/TrustManager;Landroid/app/IActivityManager;Landroid/telecom/TelecomManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/colorextraction/SysuiColorExtractor;Lcom/android/internal/statusbar/IStatusBarService;Lcom/android/systemui/statusbar/phone/LightBarController;Lcom/android/systemui/statusbar/NotificationShadeWindowController;Lcom/android/systemui/statusbar/window/StatusBarWindowController;Landroid/view/IWindowManager;Ljava/util/concurrent/Executor;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/util/RingerModeTrackerImpl;Landroid/os/Handler;Landroid/content/pm/PackageManager;Lcom/android/systemui/shade/ShadeController;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/animation/DialogTransitionAnimator;Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;Lcom/android/systemui/globalactions/domain/interactor/GlobalActionsInteractor;)V
@@ -563,7 +563,7 @@
 
     iput-boolean v2, v0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mHasVibrator:Z
 
-    const v2, 0x1110266    # @android:bool/config_use_strict_phone_number_comparation_for_russia
+    const v2, 0x1110264    # @android:bool/config_use_strict_phone_number_comparation
 
     .line 65
     invoke-virtual {v5, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -1429,218 +1429,218 @@
 
     .line 505
     :cond_1b
-    const-string v1, "system_update"
+    const-string/jumbo v1, "system_update"
 
     .line 506
     invoke-virtual {v1, v12}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 508
+    .line 509
     move-result v1
 
-    .line 511
+    .line 512
     if-eqz v1, :cond_1c
 
-    .line 512
+    .line 513
     new-instance v1, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SystemUpdateAction;
 
-    .line 514
+    .line 515
     invoke-direct {v1, v0}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SystemUpdateAction;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialogLite;)V
 
-    .line 516
+    .line 517
     invoke-virtual {v0, v5, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->addIfShouldShowAction(Ljava/util/List;Lcom/android/systemui/globalactions/GlobalActionsDialogLite$Action;)V
 
-    .line 519
+    .line 520
     goto :goto_a
 
-    .line 522
+    .line 523
     :cond_1c
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 523
+    .line 524
     const-string v6, "Invalid global action key "
 
-    .line 525
+    .line 526
     invoke-direct {v1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 527
+    .line 528
     invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 530
+    .line 531
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 533
+    .line 534
     move-result-object v1
 
-    .line 536
+    .line 537
     const-string v6, "GlobalActionsDialogLite"
 
-    .line 537
+    .line 538
     invoke-static {v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 539
+    .line 540
     :cond_1d
     :goto_a
     invoke-virtual {v4, v12}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 542
+    .line 543
     :goto_b
     add-int/lit8 v9, v9, 0x1
 
-    .line 545
+    .line 546
     move-object/from16 v1, v17
 
-    .line 547
+    .line 548
     const/4 v6, 0x0
 
-    .line 549
+    .line 550
     goto/16 :goto_1
 
-    .line 550
+    .line 551
     :cond_1e
     invoke-interface {v5, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    .line 552
+    .line 553
     move-result v1
-
-    .line 555
-    if-eqz v1, :cond_1f
 
     .line 556
-    invoke-interface {v5, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    .line 558
-    move-result v1
-
-    .line 561
     if-eqz v1, :cond_1f
 
+    .line 557
+    invoke-interface {v5, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    .line 559
+    move-result v1
+
     .line 562
+    if-eqz v1, :cond_1f
+
+    .line 563
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    .line 564
+    .line 565
     move-result v1
-
-    .line 567
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->getMaxShownPowerItems()I
 
     .line 568
-    move-result v4
+    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->getMaxShownPowerItems()I
 
-    .line 571
-    if-le v1, v4, :cond_1f
+    .line 569
+    move-result v4
 
     .line 572
+    if-le v1, v4, :cond_1f
+
+    .line 573
     invoke-interface {v5, v3}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
-    .line 574
+    .line 575
     move-result v1
-
-    .line 577
-    invoke-interface {v5, v2}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     .line 578
+    invoke-interface {v5, v2}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
+
+    .line 579
     move-result v4
 
-    .line 581
+    .line 582
     invoke-static {v1, v4}, Ljava/lang/Math;->min(II)I
 
-    .line 582
+    .line 583
     move-result v1
 
-    .line 585
+    .line 586
     invoke-interface {v5, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 586
+    .line 587
     invoke-interface {v5, v3}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 589
+    .line 590
     iget-object v4, v0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mPowerItems:Ljava/util/ArrayList;
 
-    .line 592
+    .line 593
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 594
+    .line 595
     iget-object v2, v0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mPowerItems:Ljava/util/ArrayList;
 
-    .line 597
+    .line 598
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 599
+    .line 600
     new-instance v2, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$PowerOptionsAction;
 
-    .line 602
+    .line 603
     invoke-direct {v2, v0}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$PowerOptionsAction;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialogLite;)V
 
-    .line 604
+    .line 605
     invoke-interface {v5, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 607
+    .line 608
     :cond_1f
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    .line 610
+    .line 611
     move-result-object v1
 
-    .line 613
+    .line 614
     :goto_c
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 614
+    .line 615
     move-result v2
 
-    .line 617
+    .line 618
     if-eqz v2, :cond_21
 
-    .line 618
+    .line 619
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 620
+    .line 621
     move-result-object v2
 
-    .line 623
+    .line 624
     check-cast v2, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$Action;
 
-    .line 624
+    .line 625
     iget-object v3, v0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mItems:Ljava/util/ArrayList;
 
-    .line 626
+    .line 627
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
-    .line 628
+    .line 629
     move-result v3
 
-    .line 631
+    .line 632
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->getMaxShownPowerItems()I
 
-    .line 632
+    .line 633
     move-result v4
 
-    .line 635
+    .line 636
     if-ge v3, v4, :cond_20
 
-    .line 636
+    .line 637
     iget-object v3, v0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mItems:Ljava/util/ArrayList;
 
-    .line 638
+    .line 639
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 640
+    .line 641
     goto :goto_c
 
-    .line 643
+    .line 644
     :cond_20
     iget-object v3, v0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mOverflowItems:Ljava/util/ArrayList;
 
-    .line 644
+    .line 645
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 646
+    .line 647
     goto :goto_c
 
-    .line 649
+    .line 650
     :cond_21
     return-void
-    .line 650
+    .line 651
 .end method
 
 .method public final destroy()V
@@ -1746,7 +1746,7 @@
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mResources:Landroid/content/res/Resources;
 
     .line 2
-    const v0, 0x1070082    # @android:array/config_localPrivateDisplayPorts
+    const v0, 0x107007b    # @android:array/config_healthConnectRestoreKnownSigners
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
@@ -1777,7 +1777,7 @@
     iget-object v0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mResources:Landroid/content/res/Resources;
 
     .line 2
-    const v1, 0x7f0c00cb    # @integer/power_menu_lite_max_columns '2'
+    const v1, 0x7f0b00e0    # @integer/power_menu_lite_max_columns '2'
 
     .line 4
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -1789,7 +1789,7 @@
     iget-object p0, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite;->mResources:Landroid/content/res/Resources;
 
     .line 11
-    const v1, 0x7f0c00cc    # @integer/power_menu_lite_max_rows '4'
+    const v1, 0x7f0b00e1    # @integer/power_menu_lite_max_rows '4'
 
     .line 13
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getInteger(I)I

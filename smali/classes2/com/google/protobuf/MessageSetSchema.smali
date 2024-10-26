@@ -1,6 +1,6 @@
 .class public final Lcom/google/protobuf/MessageSetSchema;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/google/protobuf/Schema;
@@ -154,7 +154,7 @@
     const/4 v4, 0x1
 
     .line 35
-    invoke-static {v4}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 36
     move-result v4
@@ -166,13 +166,13 @@
     mul-int/2addr v4, v5
 
     .line 41
-    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 42
     move-result v5
 
     .line 45
-    invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
     .line 46
     move-result v1
@@ -184,7 +184,7 @@
     add-int/2addr v1, v4
 
     .line 51
-    invoke-static {v2, v3}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+    invoke-static {v2, v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
     .line 52
     move-result v2

@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/material/ripple/CommonRippleNode;
 .super Landroidx/compose/material/ripple/RippleNode;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -598,450 +598,426 @@
     iget-object v0, v13, Landroidx/compose/material/ripple/RippleAnimation;->animatedAlpha:Landroidx/compose/animation/core/Animatable;
 
     .line 209
-    iget-object v0, v0, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {v0}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 211
-    iget-object v0, v0, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 213
-    invoke-virtual {v0}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 215
     move-result-object v0
 
-    .line 218
+    .line 214
     check-cast v0, Ljava/lang/Number;
 
-    .line 219
+    .line 215
     invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
 
-    .line 221
+    .line 217
     move-result v0
 
-    .line 224
+    .line 220
     :goto_3
     iget-object v1, v13, Landroidx/compose/material/ripple/RippleAnimation;->startRadius:Ljava/lang/Float;
 
-    .line 225
+    .line 221
     invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 227
+    .line 223
     invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
 
-    .line 230
+    .line 226
     move-result v1
 
-    .line 233
+    .line 229
     iget-object v11, v13, Landroidx/compose/material/ripple/RippleAnimation;->animatedRadiusPercent:Landroidx/compose/animation/core/Animatable;
 
-    .line 234
-    iget-object v11, v11, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    .line 230
+    invoke-virtual {v11}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
-    .line 236
-    iget-object v11, v11, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 238
-    invoke-virtual {v11}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 240
+    .line 232
     move-result-object v11
 
-    .line 243
+    .line 235
     check-cast v11, Ljava/lang/Number;
 
-    .line 244
+    .line 236
     invoke-virtual {v11}, Ljava/lang/Number;->floatValue()F
 
-    .line 246
+    .line 238
     move-result v11
 
-    .line 249
+    .line 241
     move-object/from16 v17, v2
 
-    .line 250
+    .line 242
     iget v2, v13, Landroidx/compose/material/ripple/RippleAnimation;->radius:F
 
-    .line 252
+    .line 244
     invoke-static {v1, v2, v11}, Landroidx/compose/ui/util/MathHelpersKt;->lerp(FFF)F
 
-    .line 254
+    .line 246
     move-result v22
 
-    .line 257
+    .line 249
     iget-object v1, v13, Landroidx/compose/material/ripple/RippleAnimation;->origin:Landroidx/compose/ui/geometry/Offset;
 
-    .line 258
+    .line 250
     invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 260
+    .line 252
     iget-wide v1, v1, Landroidx/compose/ui/geometry/Offset;->packedValue:J
 
-    .line 263
+    .line 255
     invoke-static {v1, v2}, Landroidx/compose/ui/geometry/Offset;->getX-impl(J)F
 
-    .line 265
+    .line 257
     move-result v1
 
-    .line 268
+    .line 260
     iget-object v2, v13, Landroidx/compose/material/ripple/RippleAnimation;->targetCenter:Landroidx/compose/ui/geometry/Offset;
 
-    .line 269
+    .line 261
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 271
+    .line 263
     move-object v11, v3
 
-    .line 274
+    .line 266
     iget-wide v2, v2, Landroidx/compose/ui/geometry/Offset;->packedValue:J
 
-    .line 275
+    .line 267
     invoke-static {v2, v3}, Landroidx/compose/ui/geometry/Offset;->getX-impl(J)F
 
-    .line 277
+    .line 269
     move-result v2
 
-    .line 280
+    .line 272
     iget-object v3, v13, Landroidx/compose/material/ripple/RippleAnimation;->animatedCenterPercent:Landroidx/compose/animation/core/Animatable;
 
+    .line 273
+    invoke-virtual {v3}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
+
+    .line 275
+    move-result-object v18
+
+    .line 278
+    check-cast v18, Ljava/lang/Number;
+
+    .line 279
+    move-object/from16 v26, v4
+
     .line 281
-    move-object/from16 v18, v4
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/Number;->floatValue()F
 
     .line 283
-    iget-object v4, v3, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
-
-    .line 285
-    iget-object v4, v4, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 287
-    invoke-virtual {v4}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 289
-    move-result-object v4
-
-    .line 292
-    check-cast v4, Ljava/lang/Number;
-
-    .line 293
-    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
-
-    .line 295
     move-result v4
 
-    .line 298
+    .line 286
     invoke-static {v1, v2, v4}, Landroidx/compose/ui/util/MathHelpersKt;->lerp(FFF)F
 
-    .line 299
+    .line 287
     move-result v1
 
-    .line 302
+    .line 290
     iget-object v2, v13, Landroidx/compose/material/ripple/RippleAnimation;->origin:Landroidx/compose/ui/geometry/Offset;
 
-    .line 303
+    .line 291
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 305
-    move/from16 v26, v5
+    .line 293
+    move/from16 v18, v5
 
-    .line 308
+    .line 296
     iget-wide v4, v2, Landroidx/compose/ui/geometry/Offset;->packedValue:J
 
-    .line 310
+    .line 298
     invoke-static {v4, v5}, Landroidx/compose/ui/geometry/Offset;->getY-impl(J)F
 
-    .line 312
+    .line 300
     move-result v2
 
-    .line 315
+    .line 303
     iget-object v4, v13, Landroidx/compose/material/ripple/RippleAnimation;->targetCenter:Landroidx/compose/ui/geometry/Offset;
 
-    .line 316
+    .line 304
     invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 318
+    .line 306
     iget-wide v4, v4, Landroidx/compose/ui/geometry/Offset;->packedValue:J
 
-    .line 321
+    .line 309
     invoke-static {v4, v5}, Landroidx/compose/ui/geometry/Offset;->getY-impl(J)F
 
-    .line 323
+    .line 311
     move-result v4
 
-    .line 326
-    iget-object v3, v3, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    .line 314
+    invoke-virtual {v3}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
-    .line 327
-    iget-object v3, v3, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 329
-    invoke-virtual {v3}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 331
+    .line 315
     move-result-object v3
 
-    .line 334
+    .line 318
     check-cast v3, Ljava/lang/Number;
 
-    .line 335
+    .line 319
     invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
 
-    .line 337
+    .line 321
     move-result v3
 
-    .line 340
+    .line 324
     invoke-static {v2, v4, v3}, Landroidx/compose/ui/util/MathHelpersKt;->lerp(FFF)F
 
-    .line 341
+    .line 325
     move-result v2
 
-    .line 344
+    .line 328
     invoke-static {v1, v2}, Landroidx/compose/ui/geometry/OffsetKt;->Offset(FF)J
 
-    .line 345
+    .line 329
     move-result-wide v23
 
-    .line 348
+    .line 332
     invoke-static {v14, v15}, Landroidx/compose/ui/graphics/Color;->getAlpha-impl(J)F
 
-    .line 349
+    .line 333
     move-result v1
 
-    .line 352
+    .line 336
     mul-float/2addr v1, v0
 
-    .line 353
+    .line 337
     invoke-static {v1, v14, v15}, Landroidx/compose/ui/graphics/Color;->copy-wmQWz5c$default(FJ)J
 
-    .line 354
+    .line 338
     move-result-wide v20
 
-    .line 357
+    .line 341
     iget-boolean v0, v13, Landroidx/compose/material/ripple/RippleAnimation;->bounded:Z
 
-    .line 358
+    .line 342
     if-eqz v0, :cond_5
 
-    .line 360
+    .line 344
     invoke-interface/range {p1 .. p1}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getSize-NH-jbRc()J
 
-    .line 362
+    .line 346
     move-result-wide v0
 
-    .line 365
+    .line 349
     invoke-static {v0, v1}, Landroidx/compose/ui/geometry/Size;->getWidth-impl(J)F
 
-    .line 366
+    .line 350
     move-result v30
 
-    .line 369
+    .line 353
     invoke-interface/range {p1 .. p1}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getSize-NH-jbRc()J
 
-    .line 370
+    .line 354
     move-result-wide v0
 
-    .line 373
+    .line 357
     invoke-static {v0, v1}, Landroidx/compose/ui/geometry/Size;->getHeight-impl(J)F
 
-    .line 374
+    .line 358
     move-result v31
 
-    .line 377
+    .line 361
     invoke-interface/range {p1 .. p1}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getDrawContext()Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;
 
-    .line 378
+    .line 362
     move-result-object v0
 
-    .line 381
+    .line 365
     invoke-virtual {v0}, Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;->getSize-NH-jbRc()J
 
-    .line 382
+    .line 366
     move-result-wide v1
 
-    .line 385
+    .line 369
     invoke-virtual {v0}, Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
 
-    .line 386
+    .line 370
     move-result-object v3
 
-    .line 389
+    .line 373
     invoke-interface {v3}, Landroidx/compose/ui/graphics/Canvas;->save()V
 
-    .line 390
+    .line 374
     iget-object v3, v0, Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;->transform:Landroidx/compose/ui/graphics/drawscope/CanvasDrawScopeKt$asDrawTransform$1;
 
-    .line 393
+    .line 377
     iget-object v3, v3, Landroidx/compose/ui/graphics/drawscope/CanvasDrawScopeKt$asDrawTransform$1;->$this_asDrawTransform:Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;
 
-    .line 395
+    .line 379
     invoke-virtual {v3}, Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;->getCanvas()Landroidx/compose/ui/graphics/Canvas;
 
-    .line 397
+    .line 381
     move-result-object v27
 
-    .line 400
+    .line 384
     const/16 v28, 0x0
 
-    .line 401
+    .line 385
     const/16 v29, 0x0
 
-    .line 403
+    .line 387
     const/16 v32, 0x1
 
-    .line 405
+    .line 389
     invoke-interface/range {v27 .. v32}, Landroidx/compose/ui/graphics/Canvas;->clipRect-N_I0leg(FFFFI)V
 
-    .line 407
+    .line 391
     const/16 v25, 0x78
 
-    .line 410
+    .line 394
     move-object/from16 v19, p1
 
-    .line 412
+    .line 396
     invoke-static/range {v19 .. v25}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawCircle-VaOC9Bg$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;JFJI)V
 
-    .line 414
+    .line 398
     invoke-static {v0, v1, v2}, Landroidx/compose/foundation/BorderModifierNode$drawRoundRectBorder$1$$ExternalSyntheticOutline0;->m(Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope$drawContext$1;J)V
 
-    .line 417
+    .line 401
     goto :goto_4
 
-    .line 420
+    .line 404
     :cond_5
     const/16 v25, 0x78
 
-    .line 421
+    .line 405
     move-object/from16 v19, p1
 
-    .line 423
+    .line 407
     invoke-static/range {v19 .. v25}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawCircle-VaOC9Bg$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;JFJI)V
 
-    .line 425
+    .line 409
     :goto_4
     const/16 v0, 0x8
 
-    .line 428
+    .line 412
     goto :goto_5
 
-    .line 430
+    .line 414
     :cond_6
     move v6, v1
 
-    .line 431
+    .line 415
     move-object/from16 v17, v2
 
-    .line 432
+    .line 416
     move-object v11, v3
 
-    .line 434
-    move-object/from16 v18, v4
+    .line 418
+    move-object/from16 v26, v4
 
-    .line 435
-    move/from16 v26, v5
+    .line 419
+    move/from16 v18, v5
 
-    .line 437
+    .line 421
     goto :goto_4
 
-    .line 439
+    .line 423
     :goto_5
     shr-long/2addr v8, v0
 
-    .line 440
+    .line 424
     add-int/lit8 v12, v12, 0x1
 
-    .line 441
+    .line 425
     move v1, v6
 
-    .line 443
+    .line 427
     move-object v3, v11
 
-    .line 444
+    .line 428
     move-object/from16 v2, v17
 
-    .line 445
-    move-object/from16 v4, v18
+    .line 429
+    move/from16 v5, v18
 
-    .line 447
-    move/from16 v5, v26
+    .line 431
+    move-object/from16 v4, v26
 
-    .line 449
+    .line 433
     move v11, v0
 
-    .line 451
+    .line 435
     move-object/from16 v0, p0
 
-    .line 452
+    .line 436
     goto/16 :goto_1
 
-    .line 454
+    .line 438
     :cond_7
     move v6, v1
 
-    .line 456
+    .line 440
     move-object/from16 v17, v2
 
-    .line 457
-    move-object/from16 v18, v4
+    .line 441
+    move-object/from16 v26, v4
 
-    .line 459
-    move/from16 v26, v5
+    .line 443
+    move/from16 v18, v5
 
-    .line 461
+    .line 445
     move v0, v11
 
-    .line 463
+    .line 447
     move-object v11, v3
 
-    .line 464
+    .line 448
     if-ne v10, v0, :cond_9
 
-    .line 465
-    move/from16 v5, v26
+    .line 449
+    move/from16 v5, v18
 
-    .line 467
+    .line 451
     goto :goto_6
 
-    .line 469
+    .line 453
     :cond_8
     move v6, v1
 
-    .line 470
+    .line 454
     move-object/from16 v17, v2
 
-    .line 471
+    .line 455
     move-object v11, v3
 
-    .line 473
-    move-object/from16 v18, v4
+    .line 457
+    move-object/from16 v26, v4
 
-    .line 474
+    .line 458
     :goto_6
     if-eq v7, v5, :cond_9
 
-    .line 476
+    .line 460
     add-int/lit8 v7, v7, 0x1
 
-    .line 478
+    .line 462
     move-object/from16 v0, p0
 
-    .line 480
+    .line 464
     move v1, v6
 
-    .line 482
+    .line 466
     move-object v3, v11
 
-    .line 483
+    .line 467
     move-object/from16 v2, v17
 
-    .line 484
-    move-object/from16 v4, v18
+    .line 468
+    move-object/from16 v4, v26
 
-    .line 486
+    .line 470
     goto/16 :goto_0
 
-    .line 488
+    .line 472
     :cond_9
     :goto_7
     return-void
-    .line 490
+    .line 474
 .end method
 
 .method public final onDetach()V
@@ -1097,5 +1073,4 @@
     .line 23
     :cond_0
     return-void
-    .line 26
 .end method

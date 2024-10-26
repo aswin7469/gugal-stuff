@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/quickaffordance/QuickAccessWalletKeyguardQuickAffordanceConfig;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceConfig;
@@ -100,7 +100,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f08096b    # @drawable/ic_wallet_lockscreen 'res/drawable/ic_wallet_lockscreen.xml'
+    const p0, 0x7f08099e    # @drawable/ic_wallet_lockscreen 'res/drawable/ic_wallet_lockscreen.xml'
 
     .line 2
     return p0
@@ -290,7 +290,7 @@
     iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/QuickAccessWalletKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
 
     .line 109
-    const v0, 0x7f140a2a    # @string/wallet_quick_affordance_unavailable_install_the_app 'To add the Wallet app as a shortcut, make sure the app is installed'
+    const v0, 0x7f130ab7    # @string/wallet_quick_affordance_unavailable_install_the_app 'To add the Wallet app as a shortcut, make sure the app is installed'
 
     .line 111
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -360,7 +360,7 @@
     iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/QuickAccessWalletKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
 
     .line 154
-    const v0, 0x7f140a29    # @string/wallet_quick_affordance_unavailable_configure_the_app 'To add the Wallet app as a shortcut, make sure at least one card has been added'
+    const v0, 0x7f130ab6    # @string/wallet_quick_affordance_unavailable_configure_the_app 'To add the Wallet app as a shortcut, make sure at least one card has been added'
 
     .line 156
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -428,7 +428,6 @@
 
     .line 24
     return-object p0
-    .line 26
 .end method
 
 .method public final pickerName()Ljava/lang/String;
@@ -438,7 +437,7 @@
     iget-object p0, p0, Lcom/android/systemui/keyguard/data/quickaffordance/QuickAccessWalletKeyguardQuickAffordanceConfig;->context:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1400fd    # @string/accessibility_wallet_button 'Wallet'
+    const v0, 0x7f1300fd    # @string/accessibility_wallet_button 'Wallet'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

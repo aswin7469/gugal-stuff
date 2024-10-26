@@ -1,108 +1,112 @@
 .class public final synthetic Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic $r8$classId:I
-
-.field public final synthetic f$0:Lcom/android/systemui/classifier/FalsingCollectorImpl;
+.field public final synthetic f$0:Lcom/android/systemui/classifier/FalsingDataProvider;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/classifier/FalsingCollectorImpl;I)V
+.method public synthetic constructor <init>(Lcom/android/systemui/classifier/FalsingDataProvider;)V
     .locals 0
 
     .line 1
-    iput p2, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;->$r8$classId:I
-
-    .line 2
-    iput-object p1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/classifier/FalsingCollectorImpl;
-
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
+    .line 2
+    iput-object p1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/classifier/FalsingDataProvider;
+
+    .line 5
     return-void
-    .line 9
+    .line 7
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final run()V
+    .locals 3
 
     .line 1
-    iget v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;->$r8$classId:I
+    iget-object p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/classifier/FalsingDataProvider;
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/classifier/FalsingCollectorImpl;
+    iget-object v0, p0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
 
     .line 4
-    check-cast p1, Ljava/lang/Boolean;
+    iget-object v0, v0, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
 
     .line 6
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     .line 8
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result v0
 
     .line 11
-    move-result p1
+    if-eqz v0, :cond_0
+
+    .line 12
+    goto :goto_0
 
     .line 14
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/classifier/FalsingDataProvider;->mRecentMotionEvents:Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;
 
     .line 15
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->size()I
 
-    .line 18
-    const-string v1, "REAL: onShowingCommunalHubChanged("
+    .line 17
+    move-result v1
 
     .line 20
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x1
+
+    .line 21
+    sub-int/2addr v1, v2
 
     .line 22
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lcom/android/systemui/classifier/TimeLimitedInputEventBuffer;->mInputEvents:Ljava/util/List;
+
+    .line 23
+    check-cast v0, Ljava/util/ArrayList;
 
     .line 25
-    const-string v1, ")"
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 28
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 30
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 33
+    .line 27
     move-result-object v0
 
-    .line 36
-    invoke-static {v0}, Lcom/android/systemui/classifier/FalsingCollectorImpl;->logDebug(Ljava/lang/String;)V
+    .line 30
+    check-cast v0, Landroid/view/InputEvent;
 
-    .line 37
-    iput-boolean p1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mShowingCommunalHub:Z
+    .line 31
+    check-cast v0, Landroid/view/MotionEvent;
 
-    .line 40
-    invoke-virtual {p0}, Lcom/android/systemui/classifier/FalsingCollectorImpl;->updateSessionActive()V
+    .line 33
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    .line 35
+    move-result v0
+
+    .line 38
+    if-eq v0, v2, :cond_1
+
+    .line 39
+    const/4 v1, 0x3
+
+    .line 41
+    if-ne v0, v1, :cond_2
 
     .line 42
+    :cond_1
+    invoke-virtual {p0}, Lcom/android/systemui/classifier/FalsingDataProvider;->completePriorGesture()V
+
+    .line 44
+    :cond_2
+    :goto_0
     return-void
-
-    .line 45
-    :pswitch_0
-    invoke-virtual {p0, p1}, Lcom/android/systemui/classifier/FalsingCollectorImpl;->onQsExpansionChanged(Ljava/lang/Boolean;)V
-
-    .line 46
-    return-void
-
-    .line 49
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-    .line 50
+    .line 47
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/unfold/progress/FixedTimingTransitionProgressProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/unfold/UnfoldTransitionProgressProvider;
@@ -16,7 +16,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/unfold/updates/FoldStateProvider;)V
+.method public constructor <init>(Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;)V
     .locals 4
 
     .line 1
@@ -68,24 +68,21 @@
     iput-object v0, p0, Lcom/android/systemui/unfold/progress/FixedTimingTransitionProgressProvider;->listeners:Ljava/util/List;
 
     .line 37
-    check-cast p1, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;
-
-    .line 39
     invoke-virtual {p1, p0}, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->addCallback(Ljava/lang/Object;)V
 
-    .line 41
+    .line 39
     invoke-virtual {p1}, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->start()V
 
-    .line 44
+    .line 42
     return-void
 
-    .line 47
+    .line 45
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
-    .line 48
+    .line 46
 .end method
 
 

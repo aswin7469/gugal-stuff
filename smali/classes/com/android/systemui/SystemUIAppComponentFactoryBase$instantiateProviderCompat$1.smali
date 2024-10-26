@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/SystemUIAppComponentFactoryBase$instantiateProviderCompat$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextAvailableCallback;
@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method public final onContextAvailable(Landroid/content/Context;)Lcom/android/systemui/SystemUIInitializerImpl;
+.method public final onContextAvailable(Landroid/content/Context;)Lcom/google/android/systemui/SystemUIGoogleInitializer;
     .locals 8
 
     .line 1
@@ -45,186 +45,183 @@
     iget-object v2, p0, Lcom/android/systemui/SystemUIAppComponentFactoryBase$instantiateProviderCompat$1;->this$0:Lcom/android/systemui/SystemUIAppComponentFactoryBase;
 
     .line 6
-    invoke-static {v2, p1}, Lcom/android/systemui/SystemUIAppComponentFactoryBase;->access$createSystemUIInitializerInternal(Lcom/android/systemui/SystemUIAppComponentFactoryBase;Landroid/content/Context;)Lcom/android/systemui/SystemUIInitializerImpl;
+    invoke-static {v2, p1}, Lcom/android/systemui/SystemUIAppComponentFactoryBase;->access$createSystemUIInitializerInternal(Lcom/android/systemui/SystemUIAppComponentFactoryBase;Landroid/content/Context;)Lcom/google/android/systemui/SystemUIGoogleInitializer;
 
     .line 8
     move-result-object p1
 
     .line 11
-    invoke-virtual {p1}, Lcom/android/systemui/SystemUIInitializer;->getSysUIComponent()Lcom/android/systemui/dagger/SysUIComponent;
+    iget-object v2, p1, Lcom/google/android/systemui/SystemUIGoogleInitializer;->mSysUIComponent:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
     .line 12
-    move-result-object v2
-
-    .line 15
     :try_start_0
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 16
+    .line 14
     move-result-object v3
 
-    .line 19
+    .line 17
     const-string v4, "inject"
 
-    .line 20
+    .line 18
     const/4 v5, 0x1
 
-    .line 22
+    .line 20
     new-array v5, v5, [Ljava/lang/Class;
 
-    .line 23
+    .line 21
     iget-object v6, p0, Lcom/android/systemui/SystemUIAppComponentFactoryBase$instantiateProviderCompat$1;->$contentProvider:Landroid/content/ContentProvider;
 
-    .line 25
+    .line 23
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 27
+    .line 25
     move-result-object v6
 
-    .line 30
+    .line 28
     const/4 v7, 0x0
 
-    .line 31
+    .line 29
     aput-object v6, v5, v7
 
-    .line 32
+    .line 30
     invoke-virtual {v3, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    .line 34
+    .line 32
     move-result-object v3
 
-    .line 37
+    .line 35
     iget-object v4, p0, Lcom/android/systemui/SystemUIAppComponentFactoryBase$instantiateProviderCompat$1;->$contentProvider:Landroid/content/ContentProvider;
 
-    .line 38
+    .line 36
     filled-new-array {v4}, [Ljava/lang/Object;
 
-    .line 40
+    .line 38
     move-result-object v4
 
-    .line 43
+    .line 41
     invoke-virtual {v3, v2, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
+    .line 42
     goto :goto_3
 
-    .line 47
+    .line 45
     :catch_0
     move-exception v2
 
-    .line 48
+    .line 46
     goto :goto_0
 
-    .line 49
+    .line 47
     :catch_1
     move-exception v2
 
-    .line 50
+    .line 48
     goto :goto_1
 
-    .line 51
+    .line 49
     :catch_2
     move-exception v2
 
-    .line 52
+    .line 50
     goto :goto_2
 
-    .line 53
+    .line 51
     :goto_0
     iget-object p0, p0, Lcom/android/systemui/SystemUIAppComponentFactoryBase$instantiateProviderCompat$1;->$contentProvider:Landroid/content/ContentProvider;
 
-    .line 54
+    .line 52
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 56
+    .line 54
     move-result-object p0
 
-    .line 59
+    .line 57
     new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 60
+    .line 58
     invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 62
+    .line 60
     invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 65
+    .line 63
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 68
+    .line 66
     move-result-object p0
 
-    .line 71
+    .line 69
     invoke-static {v1, p0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 72
+    .line 70
     goto :goto_3
 
-    .line 75
+    .line 73
     :goto_1
     iget-object p0, p0, Lcom/android/systemui/SystemUIAppComponentFactoryBase$instantiateProviderCompat$1;->$contentProvider:Landroid/content/ContentProvider;
 
-    .line 76
+    .line 74
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 78
+    .line 76
     move-result-object p0
 
-    .line 81
+    .line 79
     new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 82
+    .line 80
     invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 84
+    .line 82
     invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 87
+    .line 85
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 90
+    .line 88
     move-result-object p0
 
-    .line 93
+    .line 91
     invoke-static {v1, p0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 94
+    .line 92
     goto :goto_3
 
-    .line 97
+    .line 95
     :goto_2
     iget-object p0, p0, Lcom/android/systemui/SystemUIAppComponentFactoryBase$instantiateProviderCompat$1;->$contentProvider:Landroid/content/ContentProvider;
 
-    .line 98
+    .line 96
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 100
+    .line 98
     move-result-object p0
 
-    .line 103
+    .line 101
     new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 104
+    .line 102
     invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 106
+    .line 104
     invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 109
+    .line 107
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 112
+    .line 110
     move-result-object p0
 
-    .line 115
+    .line 113
     invoke-static {v1, p0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 116
+    .line 114
     :goto_3
     return-object p1
-    .line 119
+    .line 117
 .end method

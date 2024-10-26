@@ -1,6 +1,6 @@
 .class public final Landroidx/collection/ArraySet;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/Collection;
@@ -27,34 +27,46 @@
     .line 2
     sget-object v0, Landroidx/collection/internal/ContainerHelpersKt;->EMPTY_INTS:[I
 
+    iput-object v0, p0, Landroidx/collection/ArraySet;->hashes:[I
+
+    .line 3
+    sget-object v0, Landroidx/collection/internal/ContainerHelpersKt;->EMPTY_OBJECTS:[Ljava/lang/Object;
+
+    iput-object v0, p0, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
+
+    if-lez p1, :cond_0
+
+    .line 4
+    new-array v0, p1, [I
+
     .line 5
     iput-object v0, p0, Landroidx/collection/ArraySet;->hashes:[I
 
-    .line 7
-    sget-object v0, Landroidx/collection/internal/ContainerHelpersKt;->EMPTY_OBJECTS:[Ljava/lang/Object;
-
-    .line 9
-    iput-object v0, p0, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
-
-    .line 11
-    if-lez p1, :cond_0
-
-    .line 13
-    new-array v0, p1, [I
-
-    .line 15
-    iput-object v0, p0, Landroidx/collection/ArraySet;->hashes:[I
-
-    .line 17
+    .line 6
     new-array p1, p1, [Ljava/lang/Object;
 
-    .line 19
+    .line 7
     iput-object p1, p0, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
 
-    .line 21
     :cond_0
     return-void
-    .line 23
+.end method
+
+.method public constructor <init>(Ljava/util/Collection;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 8
+    invoke-direct {p0, v0}, Landroidx/collection/ArraySet;-><init>(I)V
+
+    if-eqz p1, :cond_0
+
+    .line 9
+    invoke-virtual {p0, p1}, Landroidx/collection/ArraySet;->addAll(Ljava/util/Collection;)Z
+
+    :cond_0
+    return-void
 .end method
 
 
@@ -221,7 +233,7 @@
     array-length v5, v7
 
     .line 78
-    invoke-static {v7, v4, v1, v5, v9}, Lkotlin/collections/ArraysKt;->copyInto$default([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v1, v5, v9, v7, v4}, Lkotlin/collections/ArraysKt;->copyInto$default(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 79
     goto :goto_3
@@ -254,7 +266,7 @@
     iget-object v1, p0, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
 
     .line 98
-    invoke-static {v1, v1, v4, v2, v0}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v4, v2, v0, v1, v1}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 100
     :cond_7
@@ -306,65 +318,131 @@
     .line 128
 .end method
 
+.method public final addAll(Landroidx/collection/ArraySet;)V
+    .locals 5
+
+    .line 1
+    iget v0, p1, Landroidx/collection/ArraySet;->_size:I
+
+    .line 2
+    iget v1, p0, Landroidx/collection/ArraySet;->_size:I
+
+    add-int/2addr v1, v0
+
+    .line 3
+    invoke-virtual {p0, v1}, Landroidx/collection/ArraySet;->ensureCapacity(I)V
+
+    .line 4
+    iget v1, p0, Landroidx/collection/ArraySet;->_size:I
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    if-lez v0, :cond_2
+
+    .line 5
+    iget-object v1, p1, Landroidx/collection/ArraySet;->hashes:[I
+
+    iget-object v3, p0, Landroidx/collection/ArraySet;->hashes:[I
+
+    const/4 v4, 0x6
+
+    .line 6
+    invoke-static {v2, v0, v4, v1, v3}, Lkotlin/collections/ArraysKt;->copyInto$default(III[I[I)V
+
+    .line 7
+    iget-object p1, p1, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
+
+    iget-object v1, p0, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
+
+    .line 8
+    invoke-static {v2, v0, v4, p1, v1}, Lkotlin/collections/ArraysKt;->copyInto$default(III[Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 9
+    iget p1, p0, Landroidx/collection/ArraySet;->_size:I
+
+    if-nez p1, :cond_0
+
+    .line 10
+    iput v0, p0, Landroidx/collection/ArraySet;->_size:I
+
+    goto :goto_1
+
+    .line 11
+    :cond_0
+    new-instance p0, Ljava/util/ConcurrentModificationException;
+
+    invoke-direct {p0}, Ljava/util/ConcurrentModificationException;-><init>()V
+
+    throw p0
+
+    :cond_1
+    :goto_0
+    if-ge v2, v0, :cond_2
+
+    .line 12
+    iget-object v1, p1, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
+
+    .line 13
+    aget-object v1, v1, v2
+
+    .line 14
+    invoke-virtual {p0, v1}, Landroidx/collection/ArraySet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-void
+.end method
+
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 2
 
-    .line 1
+    .line 15
     iget v0, p0, Landroidx/collection/ArraySet;->_size:I
 
-    .line 2
+    .line 16
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
-    .line 4
     move-result v1
 
-    .line 7
     add-int/2addr v1, v0
 
-    .line 8
     invoke-virtual {p0, v1}, Landroidx/collection/ArraySet;->ensureCapacity(I)V
 
-    .line 9
+    .line 17
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    .line 12
     move-result-object p1
 
-    .line 15
     const/4 v0, 0x0
 
-    .line 16
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 17
     move-result v1
 
-    .line 20
     if-eqz v1, :cond_0
 
-    .line 21
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 23
     move-result-object v1
 
-    .line 26
+    .line 18
     invoke-virtual {p0, v1}, Landroidx/collection/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 27
     move-result v1
 
-    .line 30
     or-int/2addr v0, v1
 
-    .line 31
     goto :goto_0
 
-    .line 32
     :cond_0
     return v0
-    .line 33
 .end method
 
 .method public final clear()V
@@ -562,7 +640,7 @@
     iget v3, p0, Landroidx/collection/ArraySet;->_size:I
 
     .line 28
-    invoke-static {v2, v1, p1, v3, v4}, Lkotlin/collections/ArraysKt;->copyInto$default([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {p1, v3, v4, v2, v1}, Lkotlin/collections/ArraysKt;->copyInto$default(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 30
     :cond_0
@@ -947,7 +1025,7 @@
     iget-object v5, p0, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
 
     .line 50
-    invoke-static {v1, v5, v6, p1, v7}, Lkotlin/collections/ArraysKt;->copyInto$default([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v6, p1, v7, v1, v5}, Lkotlin/collections/ArraysKt;->copyInto$default(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 52
     :cond_2
@@ -966,7 +1044,7 @@
     iget-object v4, p0, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
 
     .line 64
-    invoke-static {v1, v4, p1, v6, v0}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {p1, v6, v0, v1, v4}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 66
     goto :goto_0
@@ -985,7 +1063,7 @@
     iget-object v4, p0, Landroidx/collection/ArraySet;->array:[Ljava/lang/Object;
 
     .line 77
-    invoke-static {v4, v4, p1, v1, v0}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {p1, v1, v0, v4, v4}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 79
     :cond_4
@@ -1168,7 +1246,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, p1, v1, v1, p0}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v1, v1, p0, v0, p1}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     return-object p1
 .end method

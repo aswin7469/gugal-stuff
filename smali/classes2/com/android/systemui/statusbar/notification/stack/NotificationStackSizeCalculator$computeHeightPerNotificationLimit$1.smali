@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;
 .super Lkotlin/coroutines/jvm/internal/RestrictedSuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -122,7 +122,7 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 25
+    .locals 24
 
     .line 1
     move-object/from16 v0, p0
@@ -137,16 +137,16 @@
     iget v3, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->label:I
 
     .line 7
-    const/4 v6, 0x2
+    if-eqz v3, :cond_7
 
     .line 9
-    if-eqz v3, :cond_13
+    const/4 v7, 0x2
 
-    .line 10
+    .line 11
     if-eq v3, v1, :cond_1
 
     .line 12
-    if-ne v3, v6, :cond_0
+    if-ne v3, v7, :cond_0
 
     .line 14
     iget v3, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->I$0:I
@@ -200,16 +200,16 @@
     check-cast v5, Lkotlin/jvm/internal/Ref$FloatRef;
 
     .line 48
-    iget-object v7, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$1:Ljava/lang/Object;
+    iget-object v4, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$1:Ljava/lang/Object;
 
     .line 50
-    check-cast v7, Ljava/util/List;
+    check-cast v4, Ljava/util/List;
 
     .line 52
-    iget-object v4, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$0:Ljava/lang/Object;
+    iget-object v7, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$0:Ljava/lang/Object;
 
     .line 54
-    check-cast v4, Lkotlin/sequences/SequenceBuilderIterator;
+    check-cast v7, Lkotlin/sequences/SequenceBuilderIterator;
 
     .line 56
     invoke-static/range {p1 .. p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
@@ -274,19 +274,19 @@
     iget-object v3, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$1:Ljava/lang/Object;
 
     .line 92
-    move-object v7, v3
+    move-object v4, v3
 
     .line 94
-    check-cast v7, Ljava/util/List;
+    check-cast v4, Ljava/util/List;
 
     .line 95
     iget-object v3, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$0:Ljava/lang/Object;
 
     .line 97
-    move-object v4, v3
+    move-object v7, v3
 
     .line 99
-    check-cast v4, Lkotlin/sequences/SequenceBuilderIterator;
+    check-cast v7, Lkotlin/sequences/SequenceBuilderIterator;
 
     .line 100
     invoke-static/range {p1 .. p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
@@ -301,7 +301,7 @@
     iget v8, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->$shelfHeight:F
 
     .line 109
-    invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     .line 111
     move-result-object v10
@@ -314,58 +314,58 @@
     invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
 
     .line 116
-    move-result v18
+    move-result v17
 
     .line 119
-    if-eqz v18, :cond_12
+    if-eqz v17, :cond_6
 
     .line 120
     invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     .line 122
-    move-result-object v18
+    move-result-object v17
 
     .line 125
     add-int/lit8 v6, v3, 0x1
 
     .line 126
-    if-ltz v3, :cond_11
+    if-ltz v3, :cond_5
 
     .line 128
-    move-object/from16 v1, v18
+    move-object/from16 v1, v17
 
     .line 130
     check-cast v1, Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
     .line 132
-    move-object/from16 v24, v2
+    move-object/from16 v23, v2
 
     .line 134
     iget-object v2, v14, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     .line 136
-    move-object/from16 v21, v2
+    move-object/from16 v20, v2
 
     .line 138
-    check-cast v21, Lcom/android/systemui/statusbar/notification/row/ExpandableView;
+    check-cast v20, Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
     .line 140
-    move-object/from16 v18, v12
+    move-object/from16 v17, v12
 
     .line 142
-    move-object/from16 v19, v1
+    move-object/from16 v18, v1
 
     .line 144
-    move/from16 v20, v3
+    move/from16 v19, v3
 
     .line 146
-    move-object/from16 v22, v11
+    move-object/from16 v21, v11
 
     .line 148
-    move/from16 v23, v9
+    move/from16 v22, v9
 
     .line 150
-    invoke-virtual/range {v18 .. v23}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->getSpaceNeeded(Lcom/android/systemui/statusbar/notification/row/ExpandableView;ILcom/android/systemui/statusbar/notification/row/ExpandableView;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;Z)Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$SpaceNeeded;
+    invoke-virtual/range {v17 .. v22}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->getSpaceNeeded(Lcom/android/systemui/statusbar/notification/row/ExpandableView;ILcom/android/systemui/statusbar/notification/row/ExpandableView;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;Z)Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$SpaceNeeded;
 
     .line 152
     move-result-object v2
@@ -377,7 +377,7 @@
     iget v9, v5, Lkotlin/jvm/internal/Ref$FloatRef;->element:F
 
     .line 158
-    move-object/from16 v18, v10
+    move-object/from16 v17, v10
 
     .line 160
     iget v10, v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$SpaceNeeded;->whenEnoughSpace:F
@@ -404,7 +404,7 @@
     iput-object v1, v14, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     .line 174
-    invoke-static {v7}, Lkotlin/collections/CollectionsKt__CollectionsKt;->getLastIndex(Ljava/util/List;)I
+    invoke-static {v4}, Lkotlin/collections/CollectionsKt__CollectionsKt;->getLastIndex(Ljava/util/List;)I
 
     .line 176
     move-result v2
@@ -413,17 +413,17 @@
     if-ne v3, v2, :cond_2
 
     .line 180
-    move-object/from16 v19, v11
+    move-object/from16 v18, v11
 
     .line 182
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     .line 184
     goto :goto_3
 
     .line 185
     :cond_2
-    invoke-interface {v7, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     .line 186
     move-result-object v2
@@ -435,7 +435,7 @@
     if-nez v6, :cond_3
 
     .line 192
-    move-object/from16 v19, v11
+    move-object/from16 v18, v11
 
     .line 194
     const/16 v16, 0x0
@@ -454,7 +454,7 @@
     iget-object v10, v11, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mAmbientState:Lcom/android/systemui/statusbar/notification/stack/AmbientState;
 
     .line 203
-    move-object/from16 v19, v11
+    move-object/from16 v18, v11
 
     .line 205
     iget v11, v10, Lcom/android/systemui/statusbar/notification/stack/AmbientState;->mFractionToShade:F
@@ -472,19 +472,19 @@
     invoke-static {v9, v6, v2, v1}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->childNeedsGapHeight(Lcom/android/systemui/statusbar/notification/stack/NotificationSectionsManager;ILandroid/view/View;Landroid/view/View;)Z
 
     .line 216
-    move-result v2
+    move-result v1
 
     .line 219
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_4
 
     .line 220
     invoke-virtual {v3, v11, v10}, Lcom/android/systemui/statusbar/notification/stack/StackScrollAlgorithm;->getGapForLocation(FZ)F
 
     .line 222
-    move-result v2
+    move-result v1
 
     .line 225
-    move/from16 v16, v2
+    move/from16 v16, v1
 
     .line 226
     goto :goto_1
@@ -495,533 +495,272 @@
 
     .line 229
     :goto_1
-    sget-object v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->$$delegatedProperties:[Lkotlin/reflect/KProperty;
+    sget-object v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->$$delegatedProperties:[Lkotlin/reflect/KProperty;
 
     .line 231
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
     .line 233
-    aget-object v2, v2, v3
+    aget-object v1, v1, v2
 
     .line 234
-    iget-object v3, v12, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->dividerHeight$delegate:Lkotlin/properties/NotNullVar;
+    iget-object v2, v12, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->dividerHeight$delegate:Lkotlin/properties/NotNullVar;
 
     .line 236
-    invoke-virtual {v3, v2}, Lkotlin/properties/NotNullVar;->getValue(Lkotlin/reflect/KProperty;)Ljava/lang/Object;
+    invoke-virtual {v2, v12, v1}, Lkotlin/properties/NotNullVar;->getValue(Ljava/lang/Object;Lkotlin/reflect/KProperty;)Ljava/lang/Object;
 
     .line 238
-    move-result-object v2
+    move-result-object v1
 
     .line 241
-    check-cast v2, Ljava/lang/Number;
+    check-cast v1, Ljava/lang/Number;
 
     .line 242
-    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
+    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
 
     .line 244
-    move-result v2
+    move-result v1
 
     .line 247
-    add-float v2, v2, v16
+    add-float v1, v1, v16
 
     .line 248
-    move/from16 v16, v2
+    move/from16 v16, v1
 
     .line 250
     :goto_2
-    add-float v2, v16, v8
+    add-float v1, v16, v8
 
     .line 252
     :goto_3
-    if-eqz v13, :cond_e
+    new-instance v2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$StackHeight;
 
     .line 254
-    instance-of v3, v1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
+    iget v3, v5, Lkotlin/jvm/internal/Ref$FloatRef;->element:F
 
     .line 256
-    if-eqz v3, :cond_5
+    iget v9, v15, Lkotlin/jvm/internal/Ref$FloatRef;->element:F
 
     .line 258
-    check-cast v1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
+    const/4 v10, 0x0
 
     .line 260
-    goto :goto_4
+    invoke-direct {v2, v10, v3, v9, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$StackHeight;-><init>(ZFFF)V
 
-    .line 262
-    :cond_5
-    const/4 v1, 0x0
-
-    .line 263
-    :goto_4
-    if-eqz v1, :cond_6
+    .line 261
+    iput-object v7, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$0:Ljava/lang/Object;
 
     .line 264
-    iget-object v1, v1, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
+    iput-object v4, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$1:Ljava/lang/Object;
 
     .line 266
-    goto :goto_5
-
-    .line 268
-    :cond_6
-    const/4 v1, 0x0
-
-    .line 269
-    :goto_5
-    if-eqz v1, :cond_7
-
-    .line 270
-    iget v1, v1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mBucket:I
-
-    .line 272
-    new-instance v3, Ljava/lang/Integer;
-
-    .line 274
-    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
-
-    .line 276
-    move-object/from16 v17, v3
-
-    .line 279
-    goto :goto_6
-
-    .line 281
-    :cond_7
-    const/16 v17, 0x0
-
-    .line 282
-    :goto_6
-    if-nez v17, :cond_8
-
-    .line 284
-    const/4 v3, 0x1
-
-    .line 286
-    goto :goto_7
-
-    .line 287
-    :cond_8
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/Integer;->intValue()I
-
-    .line 288
-    move-result v1
-
-    .line 291
-    const/4 v3, 0x1
-
-    .line 292
-    if-ne v1, v3, :cond_9
-
-    .line 293
-    goto :goto_8
-
-    .line 295
-    :cond_9
-    :goto_7
-    if-nez v17, :cond_a
-
-    .line 296
-    goto :goto_8
-
-    .line 298
-    :cond_a
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/Integer;->intValue()I
-
-    .line 299
-    move-result v1
-
-    .line 302
-    const/16 v9, 0x8
-
-    .line 303
-    if-ne v1, v9, :cond_b
-
-    .line 305
-    iget v1, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->ongoing:I
-
-    .line 307
-    add-int/2addr v1, v3
-
-    .line 309
-    iput v1, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->ongoing:I
-
-    .line 310
-    goto :goto_8
-
-    .line 312
-    :cond_b
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/Integer;->intValue()I
-
-    .line 313
-    move-result v1
-
-    .line 316
-    const/4 v9, 0x2
-
-    .line 317
-    if-ne v1, v9, :cond_c
-
-    .line 318
-    iget v1, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->important:I
-
-    .line 320
-    add-int/2addr v1, v3
-
-    .line 322
-    iput v1, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->important:I
-
-    .line 323
-    goto :goto_8
-
-    .line 325
-    :cond_c
-    invoke-virtual/range {v17 .. v17}, Ljava/lang/Integer;->intValue()I
-
-    .line 326
-    move-result v1
-
-    .line 329
-    const/16 v9, 0x9
-
-    .line 330
-    if-ne v1, v9, :cond_d
-
-    .line 332
-    iget v1, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->important:I
-
-    .line 334
-    add-int/2addr v1, v3
-
-    .line 336
-    iput v1, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->important:I
-
-    .line 337
-    goto :goto_8
-
-    .line 339
-    :cond_d
-    iget v1, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->other:I
-
-    .line 340
-    add-int/2addr v1, v3
-
-    .line 342
-    iput v1, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->other:I
-
-    .line 343
-    goto :goto_8
-
-    .line 345
-    :cond_e
-    const/4 v3, 0x1
-
-    .line 346
-    :goto_8
-    new-instance v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$StackHeight;
-
-    .line 347
-    iget v9, v5, Lkotlin/jvm/internal/Ref$FloatRef;->element:F
-
-    .line 349
-    iget v10, v15, Lkotlin/jvm/internal/Ref$FloatRef;->element:F
-
-    .line 351
-    if-eqz v13, :cond_f
-
-    .line 353
-    iget v11, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->ongoing:I
-
-    .line 355
-    if-gt v11, v3, :cond_10
-
-    .line 357
-    iget v11, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->important:I
-
-    .line 359
-    if-gt v11, v3, :cond_10
-
-    .line 361
-    iget v3, v13, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->other:I
-
-    .line 363
-    if-lez v3, :cond_f
-
-    .line 365
-    goto :goto_9
-
-    .line 367
-    :cond_f
-    const/4 v3, 0x0
-
-    .line 368
-    goto :goto_a
-
-    .line 369
-    :cond_10
-    :goto_9
-    const/4 v3, 0x1
-
-    .line 370
-    :goto_a
-    invoke-direct {v1, v3, v9, v10, v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$StackHeight;-><init>(ZFFF)V
-
-    .line 371
-    iput-object v4, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$0:Ljava/lang/Object;
-
-    .line 374
-    iput-object v7, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$1:Ljava/lang/Object;
-
-    .line 376
     iput-object v5, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$2:Ljava/lang/Object;
 
-    .line 378
+    .line 268
     iput-object v15, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$3:Ljava/lang/Object;
 
-    .line 380
+    .line 270
     iput-object v14, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$4:Ljava/lang/Object;
 
-    .line 382
+    .line 272
     iput-object v13, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$5:Ljava/lang/Object;
 
-    .line 384
+    .line 274
     iput-object v12, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$6:Ljava/lang/Object;
 
-    .line 386
-    move-object/from16 v11, v19
+    .line 276
+    move-object/from16 v11, v18
 
-    .line 388
+    .line 278
     iput-object v11, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$7:Ljava/lang/Object;
 
-    .line 390
-    move-object/from16 v10, v18
+    .line 280
+    move-object/from16 v10, v17
 
-    .line 392
+    .line 282
     iput-object v10, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$8:Ljava/lang/Object;
 
-    .line 394
+    .line 284
     move/from16 v9, p1
 
-    .line 396
+    .line 286
     iput-boolean v9, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->Z$0:Z
 
-    .line 398
+    .line 288
     iput v8, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->F$0:F
 
-    .line 400
+    .line 290
     iput v6, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->I$0:I
 
-    .line 402
-    const/4 v2, 0x2
+    .line 292
+    const/4 v1, 0x2
 
-    .line 404
-    iput v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->label:I
-
-    .line 405
-    invoke-virtual {v4, v1, v0}, Lkotlin/sequences/SequenceBuilderIterator;->yield(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
-
-    .line 407
-    return-object v24
-
-    .line 410
-    :cond_11
-    invoke-static {}, Lkotlin/collections/CollectionsKt__CollectionsKt;->throwIndexOverflow()V
-
-    .line 411
-    const/4 v1, 0x0
-
-    .line 414
-    throw v1
-
-    .line 415
-    :cond_12
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    .line 416
-    return-object v0
-
-    .line 418
-    :cond_13
-    move-object/from16 v24, v2
-
-    .line 419
-    const/4 v1, 0x0
-
-    .line 421
-    invoke-static/range {p1 .. p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
-
-    .line 422
-    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$0:Ljava/lang/Object;
-
-    .line 425
-    check-cast v2, Lkotlin/sequences/SequenceBuilderIterator;
-
-    .line 427
-    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
-
-    .line 429
-    iget-object v4, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->$stack:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
-
-    .line 431
-    sget-object v5, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->$$delegatedProperties:[Lkotlin/reflect/KProperty;
-
-    .line 433
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 435
-    invoke-static {v4}, Lcom/android/systemui/util/ConvenienceExtensionsKt;->getChildren(Landroid/view/ViewGroup;)Lkotlin/sequences/SequencesKt__SequenceBuilderKt$sequence$$inlined$Sequence$1;
-
-    .line 438
-    move-result-object v4
-
-    .line 441
-    sget-object v5, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$childrenSequence$1;->INSTANCE:Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$childrenSequence$1;
-
-    .line 442
-    new-instance v6, Lkotlin/sequences/TransformingSequence;
-
-    .line 444
-    invoke-direct {v6, v4, v5}, Lkotlin/sequences/TransformingSequence;-><init>(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)V
-
-    .line 446
-    new-instance v4, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$showableChildren$1;
-
-    .line 449
-    invoke-direct {v4, v3}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$showableChildren$1;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;)V
-
-    .line 451
-    invoke-static {v6, v4}, Lkotlin/sequences/SequencesKt;->filter(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)Lkotlin/sequences/FilteringSequence;
-
-    .line 454
-    move-result-object v3
-
-    .line 457
-    invoke-static {v3}, Lkotlin/sequences/SequencesKt;->toList(Lkotlin/sequences/Sequence;)Ljava/util/List;
-
-    .line 458
-    move-result-object v3
-
-    .line 461
-    new-instance v4, Lkotlin/jvm/internal/Ref$FloatRef;
-
-    .line 462
-    invoke-direct {v4}, Lkotlin/jvm/internal/Ref$FloatRef;-><init>()V
-
-    .line 464
-    new-instance v5, Lkotlin/jvm/internal/Ref$FloatRef;
-
-    .line 467
-    invoke-direct {v5}, Lkotlin/jvm/internal/Ref$FloatRef;-><init>()V
-
-    .line 469
-    new-instance v6, Lkotlin/jvm/internal/Ref$ObjectRef;
-
-    .line 472
-    invoke-direct {v6}, Lkotlin/jvm/internal/Ref$ObjectRef;-><init>()V
-
-    .line 474
-    iget-object v7, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
-
-    .line 477
-    invoke-virtual {v7}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->onLockscreen()Z
-
-    .line 479
-    move-result v7
-
-    .line 482
-    iget-object v8, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
-
-    .line 483
-    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 485
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationMinimalismPrototype()Z
-
-    .line 488
-    move-result v8
-
-    .line 491
-    if-eqz v8, :cond_14
-
-    .line 492
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/shared/NotificationMinimalismPrototype;->getVersion()I
-
-    .line 494
-    move-result v8
-
-    .line 497
-    const/4 v9, 0x2
-
-    .line 498
-    if-ne v8, v9, :cond_14
-
-    .line 499
-    new-instance v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;
-
-    .line 501
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    .line 503
-    const/4 v8, 0x0
-
-    .line 506
-    iput v8, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->ongoing:I
-
-    .line 507
-    iput v8, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->important:I
-
-    .line 509
-    iput v8, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$BucketTypeCounter;->other:I
-
-    .line 511
-    goto :goto_b
-
-    .line 513
-    :cond_14
-    const/4 v8, 0x0
-
-    .line 514
-    :goto_b
-    new-instance v9, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$StackHeight;
-
-    .line 515
-    iget v10, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->$shelfHeight:F
-
-    .line 517
-    const/4 v11, 0x0
-
-    .line 519
-    invoke-direct {v9, v8, v11, v11, v10}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$StackHeight;-><init>(ZFFF)V
-
-    .line 520
-    iput-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$0:Ljava/lang/Object;
-
-    .line 523
-    iput-object v3, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$1:Ljava/lang/Object;
-
-    .line 525
-    iput-object v4, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$2:Ljava/lang/Object;
-
-    .line 527
-    iput-object v5, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$3:Ljava/lang/Object;
-
-    .line 529
-    iput-object v6, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$4:Ljava/lang/Object;
-
-    .line 531
-    iput-object v1, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$5:Ljava/lang/Object;
-
-    .line 533
-    iput-boolean v7, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->Z$0:Z
-
-    .line 535
-    const/4 v1, 0x1
-
-    .line 537
+    .line 294
     iput v1, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->label:I
 
-    .line 538
-    invoke-virtual {v2, v9, v0}, Lkotlin/sequences/SequenceBuilderIterator;->yield(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+    .line 295
+    invoke-virtual {v7, v2, v0}, Lkotlin/sequences/SequenceBuilderIterator;->yield(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
 
-    .line 540
-    return-object v24
-    .line 543
+    .line 297
+    return-object v23
+
+    .line 300
+    :cond_5
+    invoke-static {}, Lkotlin/collections/CollectionsKt__CollectionsKt;->throwIndexOverflow()V
+
+    .line 301
+    const/4 v0, 0x0
+
+    .line 304
+    throw v0
+
+    .line 305
+    :cond_6
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    .line 306
+    return-object v0
+
+    .line 308
+    :cond_7
+    move-object/from16 v23, v2
+
+    .line 309
+    invoke-static/range {p1 .. p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    .line 311
+    iget-object v1, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$0:Ljava/lang/Object;
+
+    .line 314
+    check-cast v1, Lkotlin/sequences/SequenceBuilderIterator;
+
+    .line 316
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
+
+    .line 318
+    iget-object v3, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->$stack:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+
+    .line 320
+    sget-object v4, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->$$delegatedProperties:[Lkotlin/reflect/KProperty;
+
+    .line 322
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 324
+    invoke-static {v3}, Lcom/android/systemui/util/ConvenienceExtensionsKt;->getChildren(Landroid/view/ViewGroup;)Lkotlin/sequences/SequencesKt__SequenceBuilderKt$sequence$$inlined$Sequence$1;
+
+    .line 327
+    move-result-object v3
+
+    .line 330
+    sget-object v4, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$childrenSequence$1;->INSTANCE:Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$childrenSequence$1;
+
+    .line 331
+    new-instance v5, Lkotlin/sequences/TransformingSequence;
+
+    .line 333
+    invoke-direct {v5, v3, v4}, Lkotlin/sequences/TransformingSequence;-><init>(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)V
+
+    .line 335
+    new-instance v3, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$showableChildren$1;
+
+    .line 338
+    invoke-direct {v3, v2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$showableChildren$1;-><init>(Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;)V
+
+    .line 340
+    invoke-static {v5, v3}, Lkotlin/sequences/SequencesKt;->filter(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)Lkotlin/sequences/FilteringSequence;
+
+    .line 343
+    move-result-object v2
+
+    .line 346
+    invoke-static {v2}, Lkotlin/sequences/SequencesKt;->toList(Lkotlin/sequences/Sequence;)Ljava/util/List;
+
+    .line 347
+    move-result-object v2
+
+    .line 350
+    new-instance v3, Lkotlin/jvm/internal/Ref$FloatRef;
+
+    .line 351
+    invoke-direct {v3}, Lkotlin/jvm/internal/Ref$FloatRef;-><init>()V
+
+    .line 353
+    new-instance v4, Lkotlin/jvm/internal/Ref$FloatRef;
+
+    .line 356
+    invoke-direct {v4}, Lkotlin/jvm/internal/Ref$FloatRef;-><init>()V
+
+    .line 358
+    new-instance v5, Lkotlin/jvm/internal/Ref$ObjectRef;
+
+    .line 361
+    invoke-direct {v5}, Lkotlin/jvm/internal/Ref$ObjectRef;-><init>()V
+
+    .line 363
+    iget-object v6, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
+
+    .line 366
+    invoke-virtual {v6}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;->onLockscreen()Z
+
+    .line 368
+    move-result v6
+
+    .line 371
+    iget-object v7, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
+
+    .line 372
+    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 374
+    new-instance v7, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$StackHeight;
+
+    .line 377
+    iget v8, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->$shelfHeight:F
+
+    .line 379
+    const/4 v9, 0x0
+
+    .line 381
+    const/4 v10, 0x0
+
+    .line 382
+    invoke-direct {v7, v10, v9, v9, v8}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$StackHeight;-><init>(ZFFF)V
+
+    .line 383
+    iput-object v1, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$0:Ljava/lang/Object;
+
+    .line 386
+    iput-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$1:Ljava/lang/Object;
+
+    .line 388
+    iput-object v3, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$2:Ljava/lang/Object;
+
+    .line 390
+    iput-object v4, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$3:Ljava/lang/Object;
+
+    .line 392
+    iput-object v5, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$4:Ljava/lang/Object;
+
+    .line 394
+    const/4 v2, 0x0
+
+    .line 396
+    iput-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->L$5:Ljava/lang/Object;
+
+    .line 397
+    iput-boolean v6, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->Z$0:Z
+
+    .line 399
+    const/4 v2, 0x1
+
+    .line 401
+    iput v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator$computeHeightPerNotificationLimit$1;->label:I
+
+    .line 402
+    invoke-virtual {v1, v7, v0}, Lkotlin/sequences/SequenceBuilderIterator;->yield(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+
+    .line 404
+    return-object v23
+    .line 407
 .end method

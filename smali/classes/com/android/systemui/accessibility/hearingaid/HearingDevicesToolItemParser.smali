@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/accessibility/hearingaid/HearingDevicesToolItemParser;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -328,7 +328,7 @@
 
     .line 186
     :goto_5
-    if-ge v4, p0, :cond_a
+    if-ge v4, p0, :cond_7
 
     .line 187
     new-instance v5, Lcom/android/systemui/accessibility/hearingaid/ToolItem;
@@ -426,87 +426,44 @@
     array-length v8, v3
 
     .line 250
-    if-ge v8, v7, :cond_9
+    if-ge v8, v7, :cond_6
 
     .line 251
     array-length v8, v3
 
     .line 253
-    if-ltz v7, :cond_8
+    invoke-static {v8, v7}, Lcom/google/common/collect/ImmutableCollection$Builder;->expandedCapacity(II)I
 
     .line 254
-    shr-int/lit8 v9, v8, 0x1
-
-    .line 256
-    add-int/2addr v8, v9
-
-    .line 258
-    add-int/2addr v8, v0
-
-    .line 259
-    if-ge v8, v7, :cond_6
-
-    .line 260
-    invoke-static {v2}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    .line 262
     move-result v8
 
-    .line 265
-    shl-int/2addr v8, v0
-
-    .line 266
-    :cond_6
-    if-gez v8, :cond_7
-
-    .line 267
-    const v8, 0x7fffffff
-
-    .line 269
-    :cond_7
+    .line 257
     invoke-static {v3, v8}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    .line 272
+    .line 258
     move-result-object v3
 
-    .line 275
-    goto :goto_7
-
-    .line 276
-    :cond_8
-    new-instance p0, Ljava/lang/AssertionError;
-
-    .line 277
-    const-string p1, "cannot store more than MAX_VALUE elements"
-
-    .line 279
-    invoke-direct {p0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    .line 281
-    throw p0
-
-    .line 284
-    :cond_9
-    :goto_7
+    .line 261
+    :cond_6
     aput-object v5, v3, v2
 
-    .line 285
+    .line 262
     add-int/2addr v4, v0
 
-    .line 287
+    .line 264
     move v2, v7
 
-    .line 288
+    .line 265
     goto :goto_5
 
-    .line 289
-    :cond_a
+    .line 266
+    :cond_7
     invoke-static {v2, v3}, Lcom/google/common/collect/ImmutableList;->asImmutableList(I[Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    .line 290
+    .line 267
     move-result-object p0
 
-    .line 293
+    .line 270
     return-object p0
-    .line 294
+    .line 271
 .end method

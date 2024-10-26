@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder$start$1$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -136,74 +136,75 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     .line 68
-    const-string v3, "systemServerAuthReason = "
+    const-string/jumbo v3, "systemServerAuthReason = "
 
     .line 70
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 72
+    .line 73
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 75
+    .line 76
     const-string v3, ", showIndicatorForDeviceEntry = "
 
-    .line 78
+    .line 79
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 80
+    .line 81
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 83
+    .line 84
     const-string v3, ", progressBarIsVisible = "
 
-    .line 86
+    .line 87
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 88
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 91
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 94
-    move-result-object v2
-
-    .line 97
+    .line 89
     const-string v3, "SideFpsOverlayViewBinder"
 
-    .line 98
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 92
+    invoke-static {v2, p2, v3}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)V
 
-    .line 100
+    .line 94
     if-nez p1, :cond_3
 
-    .line 103
+    .line 97
     iget-object p0, p0, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder$start$1$1;->this$0:Ljava/lang/Object;
 
-    .line 105
+    .line 99
     check-cast p0, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;
 
-    .line 107
+    .line 101
     if-eqz p2, :cond_0
 
-    .line 109
+    .line 103
     invoke-static {p0}, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;->access$hide(Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;)V
 
-    .line 111
+    .line 105
     goto :goto_0
 
-    .line 114
+    .line 108
     :cond_0
     sget-object p1, Lcom/android/systemui/biometrics/shared/model/AuthenticationReason$NotRunning;->INSTANCE:Lcom/android/systemui/biometrics/shared/model/AuthenticationReason$NotRunning;
 
-    .line 115
+    .line 109
     invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 117
+    .line 111
     move-result p1
 
-    .line 120
+    .line 114
     if-nez p1, :cond_1
+
+    .line 115
+    invoke-static {p0}, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;->access$show(Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;)V
+
+    .line 117
+    goto :goto_0
+
+    .line 120
+    :cond_1
+    if-eqz v1, :cond_2
 
     .line 121
     invoke-static {p0}, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;->access$show(Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;)V
@@ -212,163 +213,153 @@
     goto :goto_0
 
     .line 126
-    :cond_1
-    if-eqz v1, :cond_2
-
-    .line 127
-    invoke-static {p0}, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;->access$show(Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;)V
-
-    .line 129
-    goto :goto_0
-
-    .line 132
     :cond_2
     invoke-static {p0}, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;->access$hide(Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;)V
 
-    .line 133
+    .line 127
     :cond_3
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 136
+    .line 130
     return-object p0
 
-    .line 138
+    .line 132
     :pswitch_1
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 139
+    .line 133
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 141
+    .line 135
     move-result p1
 
-    .line 144
+    .line 138
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 145
+    .line 139
     if-eqz p1, :cond_4
 
-    .line 147
+    .line 141
     iget-object p0, p0, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder$start$1$1;->this$0:Ljava/lang/Object;
 
-    .line 149
+    .line 143
     check-cast p0, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;
 
-    .line 151
+    .line 145
     iget-object p1, p0, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;->biometricStatusInteractor:Ldagger/Lazy;
 
-    .line 153
+    .line 147
     invoke-interface {p1}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 155
+    .line 149
     move-result-object p1
 
-    .line 158
+    .line 152
     check-cast p1, Lcom/android/systemui/biometrics/domain/interactor/BiometricStatusInteractorImpl;
 
-    .line 159
+    .line 153
     iget-object p1, p1, Lcom/android/systemui/biometrics/domain/interactor/BiometricStatusInteractorImpl;->sfpsAuthenticationReason:Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 161
+    .line 155
     iget-object v1, p0, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;->deviceEntrySideFpsOverlayInteractor:Ldagger/Lazy;
 
-    .line 163
+    .line 157
     invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 165
+    .line 159
     move-result-object v1
 
-    .line 168
+    .line 162
     check-cast v1, Lcom/android/systemui/keyguard/domain/interactor/DeviceEntrySideFpsOverlayInteractor;
 
-    .line 169
+    .line 163
     iget-object v1, v1, Lcom/android/systemui/keyguard/domain/interactor/DeviceEntrySideFpsOverlayInteractor;->showIndicatorForDeviceEntry:Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 171
+    .line 165
     iget-object v2, p0, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;->sideFpsProgressBarViewModel:Ldagger/Lazy;
 
-    .line 173
+    .line 167
     invoke-interface {v2}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 175
+    .line 169
     move-result-object v2
 
-    .line 178
+    .line 172
     check-cast v2, Lcom/android/systemui/keyguard/ui/viewmodel/SideFpsProgressBarViewModel;
 
-    .line 179
+    .line 173
     iget-object v2, v2, Lcom/android/systemui/keyguard/ui/viewmodel/SideFpsProgressBarViewModel;->isVisible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 181
+    .line 175
     sget-object v3, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder$start$1$1$2;->INSTANCE:Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder$start$1$1$2;
 
-    .line 183
+    .line 177
     invoke-static {p1, v1, v2, v3}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function4;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
 
-    .line 185
+    .line 179
     move-result-object p1
 
-    .line 188
+    .line 182
     iget-object v1, p0, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder;->displayStateInteractor:Ldagger/Lazy;
 
-    .line 189
+    .line 183
     invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 191
+    .line 185
     move-result-object v1
 
-    .line 194
+    .line 188
     check-cast v1, Lcom/android/systemui/biometrics/domain/interactor/DisplayStateInteractorImpl;
 
-    .line 195
+    .line 189
     iget-object v1, v1, Lcom/android/systemui/biometrics/domain/interactor/DisplayStateInteractorImpl;->isInRearDisplayMode:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 197
+    .line 191
     sget-object v2, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder$start$1$1$4;->INSTANCE:Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder$start$1$1$4;
 
-    .line 199
+    .line 193
     invoke-static {p1, v1, v2}, Lcom/android/systemui/util/kotlin/FlowKt;->sample(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/SafeFlow;
 
-    .line 201
+    .line 195
     move-result-object p1
 
-    .line 204
+    .line 198
     new-instance v1, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder$start$1$1;
 
-    .line 205
+    .line 199
     const/4 v2, 0x1
 
-    .line 207
+    .line 201
     invoke-direct {v1, v2, p0}, Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder$start$1$1;-><init>(ILjava/lang/Object;)V
 
-    .line 208
+    .line 202
     invoke-virtual {p1, v1, p2}, Lkotlinx/coroutines/flow/AbstractFlow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 211
+    .line 205
     move-result-object p0
 
-    .line 214
+    .line 208
     sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
 
-    .line 215
+    .line 209
     if-ne p0, p1, :cond_4
 
-    .line 217
+    .line 211
     move-object v0, p0
 
-    .line 219
+    .line 213
     :cond_4
     return-object v0
 
-    .line 220
+    .line 214
     nop
 
-    .line 221
+    .line 215
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 222
+    .line 216
 .end method

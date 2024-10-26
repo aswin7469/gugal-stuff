@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:fontFamily="@android:string/config_networkOverLimitComponent" />
+                android:fontFamily="@android:string/config_misprovisionedBrandValue" />
       <TextView android:textSize="14.0sp"
                 android:textColor="?android:attr/textColorSecondary"
                 android:ellipsize="end"
@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent" />
+                android:fontFamily="@android:string/config_chooseTypeAndAccountActivity" />
     </LinearLayout>
   </LinearLayout>
   <ViewStub android:id="@id/broadcast_qrcode"
@@ -98,7 +98,7 @@
               android:layout_height="wrap_content"
               android:text="@string/media_output_dialog_launch_app_text"
               android:maxLines="1"
-              android:fontFamily="@android:string/config_networkOverLimitComponent" />
+              android:fontFamily="@android:string/config_misprovisionedBrandValue" />
     <Button android:id="@id/launch_app_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

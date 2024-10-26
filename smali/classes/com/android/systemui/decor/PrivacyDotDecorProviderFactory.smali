@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/decor/PrivacyDotDecorProviderFactory;
 .super Lcom/android/systemui/decor/DecorProviderFactory;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -31,7 +31,7 @@
     iget-object p0, p0, Lcom/android/systemui/decor/PrivacyDotDecorProviderFactory;->res:Landroid/content/res/Resources;
 
     .line 2
-    const v0, 0x7f050019    # @bool/config_enablePrivacyDot 'true'
+    const v0, 0x7f05001f    # @bool/config_enablePrivacyDot 'true'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -60,7 +60,7 @@
     new-instance p0, Lcom/android/systemui/decor/PrivacyDotCornerDecorProviderImpl;
 
     .line 8
-    const v0, 0x7f0b060c    # @id/privacy_dot_top_left_container
+    const v0, 0x7f0a0635    # @id/privacy_dot_top_left_container
 
     .line 10
     const/4 v1, 0x1
@@ -69,7 +69,7 @@
     const/4 v2, 0x0
 
     .line 14
-    const v3, 0x7f0e0202    # @layout/privacy_dot_top_left 'res/layout/privacy_dot_top_left.xml'
+    const v3, 0x7f0d0210    # @layout/privacy_dot_top_left 'res/layout/privacy_dot_top_left.xml'
 
     .line 15
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/android/systemui/decor/PrivacyDotCornerDecorProviderImpl;-><init>(IIII)V
@@ -78,13 +78,13 @@
     new-instance v0, Lcom/android/systemui/decor/PrivacyDotCornerDecorProviderImpl;
 
     .line 21
-    const v3, 0x7f0b060d    # @id/privacy_dot_top_right_container
+    const v3, 0x7f0a0636    # @id/privacy_dot_top_right_container
 
     .line 23
     const/4 v4, 0x2
 
     .line 26
-    const v5, 0x7f0e0203    # @layout/privacy_dot_top_right 'res/layout/privacy_dot_top_right.xml'
+    const v5, 0x7f0d0211    # @layout/privacy_dot_top_right 'res/layout/privacy_dot_top_right.xml'
 
     .line 27
     invoke-direct {v0, v3, v1, v4, v5}, Lcom/android/systemui/decor/PrivacyDotCornerDecorProviderImpl;-><init>(IIII)V
@@ -93,13 +93,13 @@
     new-instance v1, Lcom/android/systemui/decor/PrivacyDotCornerDecorProviderImpl;
 
     .line 33
-    const v3, 0x7f0b060a    # @id/privacy_dot_bottom_left_container
+    const v3, 0x7f0a0633    # @id/privacy_dot_bottom_left_container
 
     .line 35
     const/4 v5, 0x3
 
     .line 38
-    const v6, 0x7f0e0200    # @layout/privacy_dot_bottom_left 'res/layout/privacy_dot_bottom_left.xml'
+    const v6, 0x7f0d020e    # @layout/privacy_dot_bottom_left 'res/layout/privacy_dot_bottom_left.xml'
 
     .line 39
     invoke-direct {v1, v3, v5, v2, v6}, Lcom/android/systemui/decor/PrivacyDotCornerDecorProviderImpl;-><init>(IIII)V
@@ -108,10 +108,10 @@
     new-instance v2, Lcom/android/systemui/decor/PrivacyDotCornerDecorProviderImpl;
 
     .line 45
-    const v3, 0x7f0b060b    # @id/privacy_dot_bottom_right_container
+    const v3, 0x7f0a0634    # @id/privacy_dot_bottom_right_container
 
     .line 47
-    const v6, 0x7f0e0201    # @layout/privacy_dot_bottom_right 'res/layout/privacy_dot_bottom_right.xml'
+    const v6, 0x7f0d020f    # @layout/privacy_dot_bottom_right 'res/layout/privacy_dot_bottom_right.xml'
 
     .line 50
     invoke-direct {v2, v3, v5, v4, v6}, Lcom/android/systemui/decor/PrivacyDotCornerDecorProviderImpl;-><init>(IIII)V

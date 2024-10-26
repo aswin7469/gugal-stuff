@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/draganddrop/DragAndDropController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/RemoteCallable;
@@ -126,7 +126,7 @@
     .locals 10
 
     .line 1
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
 
     .line 2
     const/4 v1, 0x1
@@ -177,7 +177,7 @@
     const-string v8, "Set drop target window visibility: displayId=%d visibility=%d"
 
     .line 33
-    invoke-static/range {v4 .. v9}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v4 .. v9}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 35
     :cond_0
@@ -405,7 +405,7 @@
     .locals 13
 
     .line 1
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
 
     .line 2
     const/4 v1, 0x1
@@ -444,7 +444,7 @@
     const-wide v3, 0x1dd67e866ccc3be9L    # 6.103426001009872E-165
 
     .line 23
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 28
     :cond_0
@@ -551,7 +551,7 @@
     move-result-object v3
 
     .line 93
-    const v4, 0x7f0e00c9    # @layout/global_drop_target 'res/layout/global_drop_target.xml'
+    const v4, 0x7f0d00d2    # @layout/global_drop_target 'res/layout/global_drop_target.xml'
 
     .line 94
     invoke-virtual {v3, v4, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -657,7 +657,7 @@
     .locals 8
 
     .line 1
-    sget-object p2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
+    sget-object p2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
 
     .line 2
     const/4 v0, 0x1
@@ -696,7 +696,7 @@
     const-wide v3, -0x1ae1a6ea0762cc4aL    # -1.2297799143210909E179
 
     .line 23
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 28
     :cond_0
@@ -733,7 +733,7 @@
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
 
     .line 2
     const/4 v1, 0x1
@@ -772,7 +772,7 @@
     const-wide v3, 0x5158406548dc3388L    # 7.361362967713055E83
 
     .line 23
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 28
     :cond_0
@@ -833,7 +833,7 @@
     const/4 v2, 0x0
 
     .line 6
-    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
+    sget-object v3, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
 
     .line 7
     const/4 v4, 0x1
@@ -941,7 +941,7 @@
     const-wide v14, 0x5580d23864bd3467L    # 7.53502675532649E103
 
     .line 72
-    invoke-static/range {v13 .. v18}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v13 .. v18}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 77
     :cond_0
@@ -1093,7 +1093,7 @@
     iput-boolean v7, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->isHandlingDrag:Z
 
     .line 168
-    sget-object v11, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
+    sget-object v11, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_DRAG_AND_DROP_enabled:[Z
 
     .line 170
     aget-boolean v11, v11, v4
@@ -1139,1011 +1139,1014 @@
     const-string v15, ", "
 
     .line 196
-    invoke-static {v13, v15}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v13, v15}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 198
     move-result-object v13
 
     .line 201
     :cond_6
-    invoke-static {v13}, Landroidx/compose/ui/text/input/EditProcessor$generateBatchErrorMessage$1$1$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v15, Ljava/lang/StringBuilder;
 
     .line 202
-    move-result-object v13
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 205
+    .line 204
+    invoke-virtual {v15, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 207
     invoke-virtual {v6, v14}, Landroid/content/ClipDescription;->getMimeType(I)Ljava/lang/String;
 
-    .line 206
-    move-result-object v15
-
-    .line 209
-    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 210
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 213
     move-result-object v13
 
-    .line 216
-    add-int/2addr v14, v4
+    .line 213
+    invoke-virtual {v15, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 214
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 217
+    move-result-object v13
+
+    .line 220
+    add-int/2addr v14, v4
+
+    .line 221
     goto :goto_2
 
-    .line 218
+    .line 222
     :cond_7
     invoke-static {v13}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 219
+    .line 223
     move-result-object v6
 
-    .line 222
+    .line 226
     sget-object v13, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_DRAG_AND_DROP:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 223
+    .line 227
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 225
+    .line 229
     move-result-object v7
 
-    .line 228
+    .line 232
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 229
+    .line 233
     move-result-object v11
 
-    .line 232
+    .line 236
     filled-new-array {v7, v11, v6}, [Ljava/lang/Object;
 
-    .line 233
+    .line 237
     move-result-object v18
 
-    .line 236
+    .line 240
     const/16 v16, 0x7
 
-    .line 237
+    .line 241
     const-string v17, "Clip description: handlingDrag=%b itemCount=%d mimeTypes=%s"
 
-    .line 239
+    .line 243
     const-wide v14, 0x5814261a5236364eL
 
-    .line 241
-    invoke-static/range {v13 .. v18}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    .line 245
+    invoke-static/range {v13 .. v18}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 246
+    .line 250
     :cond_8
     iget-boolean v6, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->isHandlingDrag:Z
 
-    .line 249
+    .line 253
     if-nez v6, :cond_9
 
-    .line 251
+    .line 255
     return v2
 
-    .line 253
+    .line 257
     :cond_9
     invoke-virtual/range {p2 .. p2}, Landroid/view/DragEvent;->getAction()I
 
-    .line 254
+    .line 258
     move-result v6
 
-    .line 257
+    .line 261
     const/high16 v7, 0x3f800000    # 1.0f
 
-    .line 258
+    .line 262
     const/4 v11, 0x0
 
-    .line 260
+    .line 264
     const/4 v12, 0x0
 
-    .line 261
+    .line 265
     packed-switch v6, :pswitch_data_0
 
-    .line 262
+    .line 266
     goto/16 :goto_a
 
-    .line 265
+    .line 269
     :pswitch_0
     iget-object v0, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->dragLayout:Lcom/android/wm/shell/draganddrop/DragLayout;
 
-    .line 267
+    .line 271
     invoke-virtual {v0, v1, v12}, Lcom/android/wm/shell/draganddrop/DragLayout;->hide(Landroid/view/DragEvent;Ljava/lang/Runnable;)V
 
-    .line 269
+    .line 273
     goto/16 :goto_a
 
-    .line 272
+    .line 276
     :pswitch_1
     iget-object v0, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->dragLayout:Lcom/android/wm/shell/draganddrop/DragLayout;
 
-    .line 274
+    .line 278
     iput-boolean v4, v0, Lcom/android/wm/shell/draganddrop/DragLayout;->mIsShowing:Z
 
-    .line 276
+    .line 280
     invoke-virtual {v0}, Lcom/android/wm/shell/draganddrop/DragLayout;->recomputeDropTargets()V
 
-    .line 278
+    .line 282
     goto/16 :goto_a
 
-    .line 281
+    .line 285
     :pswitch_2
     iget-object v3, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->dragLayout:Lcom/android/wm/shell/draganddrop/DragLayout;
 
-    .line 283
+    .line 287
     iget-boolean v6, v3, Lcom/android/wm/shell/draganddrop/DragLayout;->mHasDropped:Z
 
-    .line 285
+    .line 289
     if-eqz v6, :cond_a
 
-    .line 287
+    .line 291
     iget-object v1, v0, Lcom/android/wm/shell/draganddrop/DragAndDropController;->mLogger:Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;
 
-    .line 289
+    .line 293
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 291
+    .line 295
     sget-object v2, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;->GLOBAL_APP_DRAG_DROPPED:Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;
 
-    .line 294
+    .line 298
     iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 296
+    .line 300
     invoke-virtual {v1, v2, v3}, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;Landroid/content/pm/ActivityInfo;)V
 
-    .line 298
+    .line 302
     goto :goto_3
 
-    .line 301
+    .line 305
     :cond_a
     iget v6, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->activeDragCount:I
 
-    .line 302
+    .line 306
     sub-int/2addr v6, v4
 
-    .line 304
+    .line 308
     iput v6, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->activeDragCount:I
 
-    .line 305
+    .line 309
     new-instance v6, Lcom/android/wm/shell/draganddrop/DragAndDropController$$ExternalSyntheticLambda3;
 
-    .line 307
+    .line 311
     invoke-direct {v6, v0, v5, v2}, Lcom/android/wm/shell/draganddrop/DragAndDropController$$ExternalSyntheticLambda3;-><init>(Lcom/android/wm/shell/draganddrop/DragAndDropController;Ljava/lang/Object;I)V
 
-    .line 309
+    .line 313
     invoke-virtual {v3, v1, v6}, Lcom/android/wm/shell/draganddrop/DragLayout;->hide(Landroid/view/DragEvent;Ljava/lang/Runnable;)V
 
-    .line 312
+    .line 316
     :goto_3
     iget-object v1, v0, Lcom/android/wm/shell/draganddrop/DragAndDropController;->mLogger:Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;
 
-    .line 315
+    .line 319
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 317
+    .line 321
     sget-object v2, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;->GLOBAL_APP_DRAG_END:Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;
 
-    .line 320
+    .line 324
     iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 322
+    .line 326
     invoke-virtual {v1, v2, v3}, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;Landroid/content/pm/ActivityInfo;)V
 
-    .line 324
+    .line 328
     new-instance v1, Lcom/android/wm/shell/draganddrop/DragAndDropController$$ExternalSyntheticLambda2;
 
-    .line 327
+    .line 331
     invoke-direct {v1, v4}, Lcom/android/wm/shell/draganddrop/DragAndDropController$$ExternalSyntheticLambda2;-><init>(I)V
 
-    .line 329
+    .line 333
     invoke-virtual {v0, v1}, Lcom/android/wm/shell/draganddrop/DragAndDropController;->notifyListeners(Ljava/util/function/Function;)Z
 
-    .line 332
+    .line 336
     goto/16 :goto_a
 
-    .line 335
+    .line 339
     :pswitch_3
     iget-object v3, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->dragLayout:Lcom/android/wm/shell/draganddrop/DragLayout;
 
-    .line 337
+    .line 341
     invoke-virtual {v3, v1}, Lcom/android/wm/shell/draganddrop/DragLayout;->update(Landroid/view/DragEvent;)V
 
-    .line 339
+    .line 343
     invoke-virtual/range {p2 .. p2}, Landroid/view/DragEvent;->getDragSurface()Landroid/view/SurfaceControl;
 
-    .line 342
+    .line 346
     move-result-object v3
 
-    .line 345
+    .line 349
     iget v6, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->activeDragCount:I
 
-    .line 346
+    .line 350
     sub-int/2addr v6, v4
 
-    .line 348
+    .line 352
     iput v6, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->activeDragCount:I
 
-    .line 349
+    .line 353
     iget-object v6, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->dragLayout:Lcom/android/wm/shell/draganddrop/DragLayout;
 
-    .line 351
+    .line 355
     new-instance v7, Lcom/android/wm/shell/draganddrop/DragAndDropController$$ExternalSyntheticLambda3;
 
-    .line 353
+    .line 357
     invoke-direct {v7, v0, v5, v4}, Lcom/android/wm/shell/draganddrop/DragAndDropController$$ExternalSyntheticLambda3;-><init>(Lcom/android/wm/shell/draganddrop/DragAndDropController;Ljava/lang/Object;I)V
 
-    .line 355
+    .line 359
     iget-object v0, v6, Lcom/android/wm/shell/draganddrop/DragLayout;->mCurrentTarget:Lcom/android/wm/shell/draganddrop/DragAndDropPolicy$Target;
 
-    .line 358
+    .line 362
     if-eqz v0, :cond_b
 
-    .line 360
+    .line 364
     move v2, v4
 
-    .line 362
+    .line 366
     :cond_b
     iput-boolean v4, v6, Lcom/android/wm/shell/draganddrop/DragLayout;->mHasDropped:Z
 
-    .line 363
+    .line 367
     iget-object v4, v6, Lcom/android/wm/shell/draganddrop/DragLayout;->mPolicy:Lcom/android/wm/shell/draganddrop/DragAndDropPolicy;
 
-    .line 365
+    .line 369
     invoke-virtual {v4, v0}, Lcom/android/wm/shell/draganddrop/DragAndDropPolicy;->handleDrop(Lcom/android/wm/shell/draganddrop/DragAndDropPolicy$Target;)V
 
-    .line 367
+    .line 371
     invoke-virtual {v6, v1, v7}, Lcom/android/wm/shell/draganddrop/DragLayout;->hide(Landroid/view/DragEvent;Ljava/lang/Runnable;)V
 
-    .line 370
+    .line 374
     if-eqz v2, :cond_c
 
-    .line 373
+    .line 377
     new-instance v0, Landroid/view/SurfaceControl$Transaction;
 
-    .line 375
+    .line 379
     invoke-direct {v0}, Landroid/view/SurfaceControl$Transaction;-><init>()V
 
-    .line 377
+    .line 381
     const/4 v1, 0x2
 
-    .line 380
+    .line 384
     new-array v1, v1, [F
 
-    .line 381
+    .line 385
     fill-array-data v1, :array_0
 
-    .line 383
+    .line 387
     invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    .line 386
+    .line 390
     move-result-object v1
 
-    .line 389
+    .line 393
     const-wide/16 v4, 0x12c
 
-    .line 390
+    .line 394
     invoke-virtual {v1, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 392
+    .line 396
     sget-object v4, Lcom/android/wm/shell/animation/Interpolators;->FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
-    .line 395
+    .line 399
     invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 397
+    .line 401
     new-instance v4, Lcom/android/wm/shell/draganddrop/DragLayout$$ExternalSyntheticLambda1;
 
-    .line 400
+    .line 404
     invoke-direct {v4, v0, v3}, Lcom/android/wm/shell/draganddrop/DragLayout$$ExternalSyntheticLambda1;-><init>(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;)V
 
-    .line 402
+    .line 406
     invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 405
+    .line 409
     new-instance v4, Lcom/android/wm/shell/draganddrop/DragLayout$1;
 
-    .line 408
+    .line 412
     invoke-direct {v4, v0, v3}, Lcom/android/wm/shell/draganddrop/DragLayout$1;-><init>(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;)V
 
-    .line 410
+    .line 414
     invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 413
+    .line 417
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 416
+    .line 420
     :cond_c
     return v2
 
-    .line 419
+    .line 423
     :pswitch_4
     iget-object v0, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->dragLayout:Lcom/android/wm/shell/draganddrop/DragLayout;
 
-    .line 420
+    .line 424
     invoke-virtual {v0, v1}, Lcom/android/wm/shell/draganddrop/DragLayout;->update(Landroid/view/DragEvent;)V
 
-    .line 422
+    .line 426
     goto/16 :goto_a
 
-    .line 425
+    .line 429
     :pswitch_5
     iget v6, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->activeDragCount:I
 
-    .line 427
+    .line 431
     if-eqz v6, :cond_d
 
-    .line 429
+    .line 433
     const-string v0, "DragAndDropController"
 
-    .line 431
+    .line 435
     const-string v1, "Unexpected drag start during an active drag"
 
-    .line 433
+    .line 437
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 435
+    .line 439
     return v2
 
-    .line 438
+    .line 442
     :cond_d
     new-instance v6, Lcom/android/wm/shell/draganddrop/DragSession;
 
-    .line 439
+    .line 443
     invoke-static {}, Landroid/app/ActivityTaskManager;->getInstance()Landroid/app/ActivityTaskManager;
 
-    .line 441
+    .line 445
     move-result-object v13
 
-    .line 444
+    .line 448
     iget-object v14, v0, Lcom/android/wm/shell/draganddrop/DragAndDropController;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
 
-    .line 445
+    .line 449
     invoke-virtual {v14, v3}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
 
-    .line 447
-    move-result-object v3
-
-    .line 450
-    invoke-virtual/range {p2 .. p2}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
-
     .line 451
-    move-result-object v14
+    move-result-object v3
 
     .line 454
-    invoke-virtual/range {p2 .. p2}, Landroid/view/DragEvent;->getDragFlags()I
+    invoke-virtual/range {p2 .. p2}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
 
     .line 455
-    move-result v1
+    move-result-object v14
 
     .line 458
-    invoke-direct {v6, v13, v3, v14, v1}, Lcom/android/wm/shell/draganddrop/DragSession;-><init>(Landroid/app/ActivityTaskManager;Lcom/android/wm/shell/common/DisplayLayout;Landroid/content/ClipData;I)V
+    invoke-virtual/range {p2 .. p2}, Landroid/view/DragEvent;->getDragFlags()I
 
     .line 459
-    iput-object v6, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->dragSession:Lcom/android/wm/shell/draganddrop/DragSession;
+    move-result v1
 
     .line 462
+    invoke-direct {v6, v13, v3, v14, v1}, Lcom/android/wm/shell/draganddrop/DragSession;-><init>(Landroid/app/ActivityTaskManager;Lcom/android/wm/shell/common/DisplayLayout;Landroid/content/ClipData;I)V
+
+    .line 463
+    iput-object v6, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->dragSession:Lcom/android/wm/shell/draganddrop/DragSession;
+
+    .line 466
     invoke-virtual {v13, v4, v2}, Landroid/app/ActivityTaskManager;->getTasks(IZ)Ljava/util/List;
 
-    .line 464
-    move-result-object v3
-
-    .line 467
-    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
-
     .line 468
-    move-result v13
+    move-result-object v3
 
     .line 471
-    if-nez v13, :cond_e
+    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
     .line 472
-    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    .line 474
-    move-result-object v3
-
-    .line 477
-    check-cast v3, Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 478
-    iput-object v3, v6, Lcom/android/wm/shell/draganddrop/DragSession;->runningTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 480
-    invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
-
-    .line 482
     move-result v13
 
-    .line 485
-    iput v13, v6, Lcom/android/wm/shell/draganddrop/DragSession;->runningTaskWinMode:I
+    .line 475
+    if-nez v13, :cond_e
 
-    .line 486
-    invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->getActivityType()I
+    .line 476
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 488
-    move-result v3
-
-    .line 491
-    iput v3, v6, Lcom/android/wm/shell/draganddrop/DragSession;->runningTaskActType:I
-
-    .line 492
-    :cond_e
-    invoke-virtual {v14, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
-
-    .line 494
+    .line 478
     move-result-object v3
 
-    .line 497
-    invoke-virtual {v3}, Landroid/content/ClipData$Item;->getActivityInfo()Landroid/content/pm/ActivityInfo;
+    .line 481
+    check-cast v3, Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 482
+    iput-object v3, v6, Lcom/android/wm/shell/draganddrop/DragSession;->runningTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 484
+    invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
+
+    .line 486
+    move-result v13
+
+    .line 489
+    iput v13, v6, Lcom/android/wm/shell/draganddrop/DragSession;->runningTaskWinMode:I
+
+    .line 490
+    invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->getActivityType()I
+
+    .line 492
+    move-result v3
+
+    .line 495
+    iput v3, v6, Lcom/android/wm/shell/draganddrop/DragSession;->runningTaskActType:I
+
+    .line 496
+    :cond_e
+    invoke-virtual {v14, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
     .line 498
     move-result-object v3
 
     .line 501
-    iput-object v3, v6, Lcom/android/wm/shell/draganddrop/DragSession;->activityInfo:Landroid/content/pm/ActivityInfo;
+    invoke-virtual {v3}, Landroid/content/ClipData$Item;->getActivityInfo()Landroid/content/pm/ActivityInfo;
 
     .line 502
-    if-eqz v3, :cond_f
-
-    .line 504
-    iget v3, v3, Landroid/content/pm/ActivityInfo;->resizeMode:I
-
-    .line 506
-    invoke-static {v3}, Landroid/content/pm/ActivityInfo;->isResizeableMode(I)Z
-
-    .line 508
-    move-result v3
-
-    .line 511
-    :cond_f
-    invoke-virtual {v14, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
-
-    .line 512
     move-result-object v3
 
+    .line 505
+    iput-object v3, v6, Lcom/android/wm/shell/draganddrop/DragSession;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    .line 506
+    if-eqz v3, :cond_f
+
+    .line 508
+    iget v3, v3, Landroid/content/pm/ActivityInfo;->resizeMode:I
+
+    .line 510
+    invoke-static {v3}, Landroid/content/pm/ActivityInfo;->isResizeableMode(I)Z
+
+    .line 512
+    move-result v3
+
     .line 515
-    invoke-virtual {v3}, Landroid/content/ClipData$Item;->getIntent()Landroid/content/Intent;
+    :cond_f
+    invoke-virtual {v14, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
     .line 516
     move-result-object v3
 
     .line 519
-    iput-object v3, v6, Lcom/android/wm/shell/draganddrop/DragSession;->appData:Landroid/content/Intent;
+    invoke-virtual {v3}, Landroid/content/ClipData$Item;->getIntent()Landroid/content/Intent;
 
     .line 520
+    move-result-object v3
+
+    .line 523
+    iput-object v3, v6, Lcom/android/wm/shell/draganddrop/DragSession;->appData:Landroid/content/Intent;
+
+    .line 524
     invoke-static {v14, v1}, Lcom/android/wm/shell/draganddrop/DragUtils;->getLaunchIntent(Landroid/content/ClipData;I)Landroid/app/PendingIntent;
 
-    .line 522
+    .line 526
     move-result-object v1
 
-    .line 525
+    .line 529
     iput-object v1, v6, Lcom/android/wm/shell/draganddrop/DragSession;->launchableIntent:Landroid/app/PendingIntent;
 
-    .line 526
+    .line 530
     iget v1, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->activeDragCount:I
 
-    .line 528
+    .line 532
     add-int/2addr v1, v4
 
-    .line 530
+    .line 534
     iput v1, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->activeDragCount:I
 
-    .line 531
+    .line 535
     iget-object v1, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->dragLayout:Lcom/android/wm/shell/draganddrop/DragLayout;
 
-    .line 533
+    .line 537
     iget-object v3, v5, Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;->dragSession:Lcom/android/wm/shell/draganddrop/DragSession;
 
-    .line 535
+    .line 539
     iget-object v6, v0, Lcom/android/wm/shell/draganddrop/DragAndDropController;->mLogger:Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;
 
-    .line 537
+    .line 541
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 539
+    .line 543
     iget-object v13, v3, Lcom/android/wm/shell/draganddrop/DragSession;->appData:Landroid/content/Intent;
 
-    .line 542
+    .line 546
     if-eqz v13, :cond_10
 
-    .line 544
+    .line 548
     const-string v14, "android.intent.extra.LOGGING_INSTANCE_ID"
 
-    .line 546
+    .line 550
     const-class v15, Lcom/android/internal/logging/InstanceId;
 
-    .line 548
+    .line 552
     invoke-virtual {v13, v14, v15}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    .line 550
+    .line 554
     move-result-object v13
 
-    .line 553
+    .line 557
     check-cast v13, Lcom/android/internal/logging/InstanceId;
 
-    .line 554
+    .line 558
     goto :goto_4
 
-    .line 556
+    .line 560
     :cond_10
     move-object v13, v12
 
-    .line 557
+    .line 561
     :goto_4
     iput-object v13, v6, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->mInstanceId:Lcom/android/internal/logging/InstanceId;
 
-    .line 558
+    .line 562
     if-nez v13, :cond_11
 
-    .line 560
+    .line 564
     iget-object v13, v6, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->mIdSequence:Lcom/android/internal/logging/InstanceIdSequence;
 
-    .line 562
+    .line 566
     invoke-virtual {v13}, Lcom/android/internal/logging/InstanceIdSequence;->newInstanceId()Lcom/android/internal/logging/InstanceId;
 
-    .line 564
+    .line 568
     move-result-object v13
 
-    .line 567
+    .line 571
     iput-object v13, v6, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->mInstanceId:Lcom/android/internal/logging/InstanceId;
 
-    .line 568
+    .line 572
     :cond_11
     iget-object v13, v3, Lcom/android/wm/shell/draganddrop/DragSession;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 570
+    .line 574
     iput-object v13, v6, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 572
+    .line 576
     iget-object v14, v3, Lcom/android/wm/shell/draganddrop/DragSession;->appData:Landroid/content/Intent;
 
-    .line 574
+    .line 578
     if-eqz v14, :cond_15
 
-    .line 576
+    .line 580
     iget-object v13, v3, Lcom/android/wm/shell/draganddrop/DragSession;->mInitialDragData:Landroid/content/ClipData;
 
-    .line 578
+    .line 582
     invoke-virtual {v13}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
-    .line 580
+    .line 584
     move-result-object v13
 
-    .line 583
+    .line 587
     invoke-virtual {v13, v10}, Landroid/content/ClipDescription;->hasMimeType(Ljava/lang/String;)Z
 
-    .line 584
+    .line 588
     move-result v10
 
-    .line 587
+    .line 591
     if-eqz v10, :cond_12
 
-    .line 588
+    .line 592
     sget-object v8, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;->GLOBAL_APP_DRAG_START_ACTIVITY:Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;
 
-    .line 590
+    .line 594
     goto :goto_5
 
-    .line 592
+    .line 596
     :cond_12
     invoke-virtual {v13, v9}, Landroid/content/ClipDescription;->hasMimeType(Ljava/lang/String;)Z
 
-    .line 593
+    .line 597
     move-result v9
 
-    .line 596
+    .line 600
     if-eqz v9, :cond_13
 
-    .line 597
+    .line 601
     sget-object v8, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;->GLOBAL_APP_DRAG_START_SHORTCUT:Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;
 
-    .line 599
+    .line 603
     goto :goto_5
 
-    .line 601
+    .line 605
     :cond_13
     invoke-virtual {v13, v8}, Landroid/content/ClipDescription;->hasMimeType(Ljava/lang/String;)Z
 
-    .line 602
+    .line 606
     move-result v8
 
-    .line 605
+    .line 609
     if-eqz v8, :cond_14
 
-    .line 606
+    .line 610
     sget-object v8, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;->GLOBAL_APP_DRAG_START_TASK:Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;
 
-    .line 608
+    .line 612
     :goto_5
     iget-object v9, v6, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 610
+    .line 614
     invoke-virtual {v6, v8, v9}, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;Landroid/content/pm/ActivityInfo;)V
 
-    .line 612
+    .line 616
     goto :goto_6
 
-    .line 615
+    .line 619
     :cond_14
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 616
+    .line 620
     const-string v1, "Not an app drag"
 
-    .line 618
+    .line 622
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 620
+    .line 624
     throw v0
 
-    .line 623
+    .line 627
     :cond_15
     sget-object v8, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;->GLOBAL_APP_DRAG_START_ACTIVITY:Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger$DragAndDropUiEventEnum;
 
-    .line 624
+    .line 628
     invoke-virtual {v6, v8, v13}, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;Landroid/content/pm/ActivityInfo;)V
 
-    .line 626
+    .line 630
     :goto_6
     iget-object v6, v6, Lcom/android/wm/shell/draganddrop/DragAndDropEventLogger;->mInstanceId:Lcom/android/internal/logging/InstanceId;
 
-    .line 629
+    .line 633
     iget-object v8, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mPolicy:Lcom/android/wm/shell/draganddrop/DragAndDropPolicy;
 
-    .line 631
+    .line 635
     iput-object v6, v8, Lcom/android/wm/shell/draganddrop/DragAndDropPolicy;->mLoggerSessionId:Lcom/android/internal/logging/InstanceId;
 
-    .line 633
+    .line 637
     iput-object v3, v8, Lcom/android/wm/shell/draganddrop/DragAndDropPolicy;->mSession:Lcom/android/wm/shell/draganddrop/DragSession;
 
-    .line 635
+    .line 639
     iget-object v6, v3, Lcom/android/wm/shell/draganddrop/DragSession;->appData:Landroid/content/Intent;
 
-    .line 637
+    .line 641
     if-eqz v6, :cond_16
 
-    .line 639
+    .line 643
     const-string v9, "DISALLOW_HIT_REGION"
 
-    .line 641
+    .line 645
     invoke-virtual {v6, v9}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 643
+    .line 647
     move-result-object v6
 
-    .line 646
+    .line 650
     check-cast v6, Landroid/graphics/RectF;
 
-    .line 647
+    .line 651
     goto :goto_7
 
-    .line 649
+    .line 653
     :cond_16
     move-object v6, v12
 
-    .line 650
+    .line 654
     :goto_7
     if-nez v6, :cond_17
 
-    .line 651
+    .line 655
     iget-object v6, v8, Lcom/android/wm/shell/draganddrop/DragAndDropPolicy;->mDisallowHitRegion:Landroid/graphics/RectF;
 
-    .line 653
+    .line 657
     invoke-virtual {v6}, Landroid/graphics/RectF;->setEmpty()V
 
-    .line 655
+    .line 659
     goto :goto_8
 
-    .line 658
+    .line 662
     :cond_17
     iget-object v8, v8, Lcom/android/wm/shell/draganddrop/DragAndDropPolicy;->mDisallowHitRegion:Landroid/graphics/RectF;
 
-    .line 659
+    .line 663
     invoke-virtual {v8, v6}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 661
+    .line 665
     :goto_8
     iput-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mSession:Lcom/android/wm/shell/draganddrop/DragSession;
 
-    .line 664
+    .line 668
     iput-boolean v2, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mHasDropped:Z
 
-    .line 666
+    .line 670
     iput-object v12, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mCurrentTarget:Lcom/android/wm/shell/draganddrop/DragAndDropPolicy$Target;
 
-    .line 668
-    iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mSplitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
-
-    .line 670
-    if-eqz v3, :cond_19
-
     .line 672
-    invoke-virtual {v3}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->isSplitScreenVisible()Z
+    iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mSplitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
     .line 674
-    move-result v3
-
-    .line 677
     if-eqz v3, :cond_19
 
+    .line 676
+    invoke-virtual {v3}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->isSplitScreenVisible()Z
+
     .line 678
-    iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mSplitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
-
-    .line 680
-    invoke-virtual {v3, v2}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 682
-    move-result-object v3
-
-    .line 685
-    iget-object v6, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mSplitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
-
-    .line 686
-    invoke-virtual {v6, v4}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 688
-    move-result-object v6
-
-    .line 691
-    if-eqz v3, :cond_18
-
-    .line 692
-    if-eqz v6, :cond_18
-
-    .line 694
-    iget-object v7, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mIconProvider:Lcom/android/launcher3/icons/IconProvider;
-
-    .line 696
-    iget-object v8, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
-
-    .line 698
-    invoke-virtual {v7, v8}, Lcom/android/launcher3/icons/IconProvider;->getIcon(Landroid/content/pm/ActivityInfo;)Landroid/graphics/drawable/Drawable;
-
-    .line 700
-    move-result-object v7
-
-    .line 703
-    invoke-static {v3}, Lcom/android/wm/shell/common/split/SplitScreenUtils;->getResizingBackgroundColor(Landroid/app/ActivityManager$RunningTaskInfo;)Landroid/graphics/Color;
-
-    .line 704
-    move-result-object v3
-
-    .line 707
-    invoke-virtual {v3}, Landroid/graphics/Color;->toArgb()I
-
-    .line 708
     move-result v3
 
-    .line 711
-    iget-object v8, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mIconProvider:Lcom/android/launcher3/icons/IconProvider;
+    .line 681
+    if-eqz v3, :cond_19
 
-    .line 712
-    iget-object v9, v6, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    .line 682
+    iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mSplitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
-    .line 714
-    invoke-virtual {v8, v9}, Lcom/android/launcher3/icons/IconProvider;->getIcon(Landroid/content/pm/ActivityInfo;)Landroid/graphics/drawable/Drawable;
+    .line 684
+    invoke-virtual {v3, v2}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 716
-    move-result-object v8
+    .line 686
+    move-result-object v3
 
-    .line 719
-    invoke-static {v6}, Lcom/android/wm/shell/common/split/SplitScreenUtils;->getResizingBackgroundColor(Landroid/app/ActivityManager$RunningTaskInfo;)Landroid/graphics/Color;
+    .line 689
+    iget-object v6, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mSplitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
-    .line 720
+    .line 690
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 692
     move-result-object v6
 
+    .line 695
+    if-eqz v3, :cond_18
+
+    .line 696
+    if-eqz v6, :cond_18
+
+    .line 698
+    iget-object v7, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mIconProvider:Lcom/android/launcher3/icons/IconProvider;
+
+    .line 700
+    iget-object v8, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+
+    .line 702
+    invoke-virtual {v7, v8}, Lcom/android/launcher3/icons/IconProvider;->getIcon(Landroid/content/pm/ActivityInfo;)Landroid/graphics/drawable/Drawable;
+
+    .line 704
+    move-result-object v7
+
+    .line 707
+    invoke-static {v3}, Lcom/android/wm/shell/common/split/SplitScreenUtils;->getResizingBackgroundColor(Landroid/app/ActivityManager$RunningTaskInfo;)Landroid/graphics/Color;
+
+    .line 708
+    move-result-object v3
+
+    .line 711
+    invoke-virtual {v3}, Landroid/graphics/Color;->toArgb()I
+
+    .line 712
+    move-result v3
+
+    .line 715
+    iget-object v8, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mIconProvider:Lcom/android/launcher3/icons/IconProvider;
+
+    .line 716
+    iget-object v9, v6, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+
+    .line 718
+    invoke-virtual {v8, v9}, Lcom/android/launcher3/icons/IconProvider;->getIcon(Landroid/content/pm/ActivityInfo;)Landroid/graphics/drawable/Drawable;
+
+    .line 720
+    move-result-object v8
+
     .line 723
-    invoke-virtual {v6}, Landroid/graphics/Color;->toArgb()I
+    invoke-static {v6}, Lcom/android/wm/shell/common/split/SplitScreenUtils;->getResizingBackgroundColor(Landroid/app/ActivityManager$RunningTaskInfo;)Landroid/graphics/Color;
 
     .line 724
-    move-result v6
+    move-result-object v6
 
     .line 727
-    iget-object v9, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView1:Lcom/android/wm/shell/draganddrop/DropZoneView;
+    invoke-virtual {v6}, Landroid/graphics/Color;->toArgb()I
 
     .line 728
+    move-result v6
+
+    .line 731
+    iget-object v9, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView1:Lcom/android/wm/shell/draganddrop/DropZoneView;
+
+    .line 732
     invoke-virtual {v9, v3, v7}, Lcom/android/wm/shell/draganddrop/DropZoneView;->setAppInfo(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 730
+    .line 734
     iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView2:Lcom/android/wm/shell/draganddrop/DropZoneView;
 
-    .line 733
+    .line 737
     invoke-virtual {v3, v6, v8}, Lcom/android/wm/shell/draganddrop/DropZoneView;->setAppInfo(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 735
+    .line 739
     :cond_18
     new-instance v3, Landroid/graphics/Rect;
 
-    .line 738
+    .line 742
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    .line 740
+    .line 744
     new-instance v6, Landroid/graphics/Rect;
 
-    .line 743
+    .line 747
     invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
 
-    .line 745
+    .line 749
     iget-object v7, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mSplitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
-    .line 748
+    .line 752
     invoke-virtual {v7, v3, v6}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getStageBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 750
+    .line 754
     invoke-virtual {v1, v3, v6}, Lcom/android/wm/shell/draganddrop/DragLayout;->updateDropZoneSizes(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 753
+    .line 757
     goto :goto_9
 
-    .line 756
+    .line 760
     :cond_19
     iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mSession:Lcom/android/wm/shell/draganddrop/DragSession;
 
-    .line 757
+    .line 761
     iget-object v3, v3, Lcom/android/wm/shell/draganddrop/DragSession;->runningTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 759
+    .line 763
     if-eqz v3, :cond_1b
 
-    .line 761
+    .line 765
     invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->getActivityType()I
 
-    .line 763
+    .line 767
     move-result v6
 
-    .line 766
+    .line 770
     if-ne v6, v4, :cond_1a
 
-    .line 767
+    .line 771
     iget-object v6, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mIconProvider:Lcom/android/launcher3/icons/IconProvider;
 
-    .line 769
+    .line 773
     iget-object v7, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 771
+    .line 775
     invoke-virtual {v6, v7}, Lcom/android/launcher3/icons/IconProvider;->getIcon(Landroid/content/pm/ActivityInfo;)Landroid/graphics/drawable/Drawable;
 
-    .line 773
+    .line 777
     move-result-object v6
 
-    .line 776
+    .line 780
     invoke-static {v3}, Lcom/android/wm/shell/common/split/SplitScreenUtils;->getResizingBackgroundColor(Landroid/app/ActivityManager$RunningTaskInfo;)Landroid/graphics/Color;
 
-    .line 777
+    .line 781
     move-result-object v3
 
-    .line 780
+    .line 784
     invoke-virtual {v3}, Landroid/graphics/Color;->toArgb()I
 
-    .line 781
+    .line 785
     move-result v3
 
-    .line 784
+    .line 788
     iget-object v7, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView1:Lcom/android/wm/shell/draganddrop/DropZoneView;
 
-    .line 785
+    .line 789
     invoke-virtual {v7, v3, v6}, Lcom/android/wm/shell/draganddrop/DropZoneView;->setAppInfo(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 787
+    .line 791
     iget-object v7, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView2:Lcom/android/wm/shell/draganddrop/DropZoneView;
 
-    .line 790
+    .line 794
     invoke-virtual {v7, v3, v6}, Lcom/android/wm/shell/draganddrop/DropZoneView;->setAppInfo(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 792
+    .line 796
     invoke-virtual {v1, v12, v12}, Lcom/android/wm/shell/draganddrop/DragLayout;->updateDropZoneSizes(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 795
+    .line 799
     goto :goto_9
 
-    .line 798
+    .line 802
     :cond_1a
     iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView1:Lcom/android/wm/shell/draganddrop/DropZoneView;
 
-    .line 799
+    .line 803
     invoke-virtual {v3, v4}, Lcom/android/wm/shell/draganddrop/DropZoneView;->setForceIgnoreBottomMargin(Z)V
 
-    .line 801
+    .line 805
     iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView1:Lcom/android/wm/shell/draganddrop/DropZoneView;
 
-    .line 804
+    .line 808
     invoke-virtual {v3}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    .line 806
+    .line 810
     move-result-object v3
 
-    .line 809
+    .line 813
     check-cast v3, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 810
+    .line 814
     iget-object v6, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView2:Lcom/android/wm/shell/draganddrop/DropZoneView;
 
-    .line 812
+    .line 816
     invoke-virtual {v6}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    .line 814
+    .line 818
     move-result-object v6
 
-    .line 817
+    .line 821
     check-cast v6, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 818
+    .line 822
     const/4 v8, -0x1
 
-    .line 820
+    .line 824
     iput v8, v3, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    .line 821
+    .line 825
     iput v8, v3, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 823
+    .line 827
     iput v2, v6, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    .line 825
+    .line 829
     iput v2, v6, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 827
+    .line 831
     iput v7, v3, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    .line 829
+    .line 833
     iput v11, v6, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    .line 831
+    .line 835
     iget-object v7, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView1:Lcom/android/wm/shell/draganddrop/DropZoneView;
 
-    .line 833
+    .line 837
     invoke-virtual {v7, v3}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 835
+    .line 839
     iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView2:Lcom/android/wm/shell/draganddrop/DropZoneView;
 
-    .line 838
+    .line 842
     invoke-virtual {v3, v6}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 840
+    .line 844
     iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView1:Lcom/android/wm/shell/draganddrop/DropZoneView;
 
-    .line 843
+    .line 847
     iget v6, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDisplayMargin:I
 
-    .line 845
+    .line 849
     int-to-float v6, v6
 
-    .line 847
+    .line 851
     invoke-virtual {v3, v6, v6, v6, v6}, Lcom/android/wm/shell/draganddrop/DropZoneView;->setContainerMargin(FFFF)V
 
-    .line 848
+    .line 852
     iget-object v3, v1, Lcom/android/wm/shell/draganddrop/DragLayout;->mDropZoneView2:Lcom/android/wm/shell/draganddrop/DropZoneView;
 
-    .line 851
+    .line 855
     invoke-virtual {v3, v11, v11, v11, v11}, Lcom/android/wm/shell/draganddrop/DropZoneView;->setContainerMargin(FFFF)V
 
-    .line 853
+    .line 857
     :cond_1b
     :goto_9
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->requestLayout()V
 
-    .line 856
+    .line 860
     invoke-static {v5, v2}, Lcom/android/wm/shell/draganddrop/DragAndDropController;->setDropTargetWindowVisibility(Lcom/android/wm/shell/draganddrop/DragAndDropController$PerDisplay;I)V
 
-    .line 859
+    .line 863
     new-instance v1, Lcom/android/wm/shell/draganddrop/DragAndDropController$$ExternalSyntheticLambda2;
 
-    .line 862
+    .line 866
     invoke-direct {v1, v2}, Lcom/android/wm/shell/draganddrop/DragAndDropController$$ExternalSyntheticLambda2;-><init>(I)V
 
-    .line 864
+    .line 868
     invoke-virtual {v0, v1}, Lcom/android/wm/shell/draganddrop/DragAndDropController;->notifyListeners(Ljava/util/function/Function;)Z
 
-    .line 867
+    .line 871
     :goto_a
     return v4
 
-    .line 870
+    .line 874
     nop
 
-    .line 871
+    .line 875
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_5
@@ -2154,13 +2157,13 @@
         :pswitch_0
     .end packed-switch
 
-    .line 872
+    .line 876
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
-    .line 888
+    .line 892
 .end method
 
 .method public final onLowMemory()V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/privacy/PrivacyDialogV2$PrivacyElement;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -143,248 +143,248 @@
     new-instance v14, Ljava/lang/StringBuilder;
 
     .line 72
-    const-string v13, "type="
+    const-string/jumbo v13, "type="
 
     .line 74
     invoke-direct {v14, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 76
+    .line 77
     invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 79
+    .line 80
     invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 82
+    .line 83
     move-result-object v0
-
-    .line 85
-    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 86
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 87
     const-string v0, ", packageName="
 
-    .line 89
+    .line 90
     invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 91
+    .line 92
     move-result-object v0
-
-    .line 94
-    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 95
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 96
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 98
+    .line 99
     const-string v1, ", userId="
 
-    .line 100
+    .line 101
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 102
+    .line 103
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 105
+    .line 106
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 108
+    .line 109
     move-result-object v0
-
-    .line 111
-    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 112
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 113
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 115
+    .line 116
     const-string v1, ", appName="
 
-    .line 117
+    .line 118
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 119
+    .line 120
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 122
+    .line 123
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 125
+    .line 126
     move-result-object v0
-
-    .line 128
-    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 129
-    if-eqz v4, :cond_0
-
-    .line 132
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 134
-    const-string v1, ", attributionTag="
-
-    .line 136
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 138
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 141
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 144
-    move-result-object v0
-
-    .line 147
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 130
+    if-eqz v4, :cond_0
+
+    .line 133
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 135
+    const-string v1, ", attributionTag="
+
+    .line 137
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 139
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 142
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 145
+    move-result-object v0
+
     .line 148
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 149
     :cond_0
     if-eqz v5, :cond_1
 
-    .line 151
+    .line 152
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 153
+    .line 154
     const-string v1, ", attributionLabel="
 
-    .line 155
+    .line 156
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 157
+    .line 158
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 160
+    .line 161
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 163
+    .line 164
     move-result-object v0
 
-    .line 166
+    .line 167
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 167
+    .line 168
     :cond_1
     if-eqz v6, :cond_2
 
-    .line 170
+    .line 171
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 172
+    .line 173
     const-string v1, ", proxyLabel="
 
-    .line 174
+    .line 175
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 176
+    .line 177
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 179
+    .line 180
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 182
+    .line 183
     move-result-object v0
 
-    .line 185
+    .line 186
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 186
+    .line 187
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 189
+    .line 190
     const-string v1, ", lastActive="
 
-    .line 191
+    .line 192
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 193
+    .line 194
     invoke-virtual {v0, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 196
+    .line 197
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 199
+    .line 200
     move-result-object v0
 
-    .line 202
+    .line 203
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 203
+    .line 204
     if-eqz v9, :cond_3
 
-    .line 206
+    .line 207
     const-string v0, ", active"
 
-    .line 208
+    .line 209
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 210
+    .line 211
     :cond_3
     if-eqz v10, :cond_4
 
-    .line 213
+    .line 214
     const-string v0, ", phoneCall"
 
-    .line 215
+    .line 216
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 217
+    .line 218
     :cond_4
     if-eqz v11, :cond_5
 
-    .line 220
+    .line 221
     const-string v0, ", service"
 
-    .line 222
+    .line 223
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 224
+    .line 225
     :cond_5
     const-string v0, ", permGroupName="
 
-    .line 227
+    .line 228
     invoke-virtual {v0, v12}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 229
+    .line 230
     move-result-object v0
-
-    .line 232
-    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 233
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 236
-    const-string v1, ", navigationIntent="
-
-    .line 238
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 240
-    move-object/from16 v1, p14
-
-    .line 243
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 245
-    const-string v1, ")"
-
-    .line 248
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 250
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 253
-    move-result-object v0
-
-    .line 256
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 234
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 237
+    const-string v1, ", navigationIntent="
+
+    .line 239
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 241
+    move-object/from16 v1, p14
+
+    .line 244
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 246
+    const-string v1, ")"
+
+    .line 249
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 251
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 254
+    move-result-object v0
+
     .line 257
+    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 258
     return-void
-    .line 260
+    .line 261
 .end method
 
 

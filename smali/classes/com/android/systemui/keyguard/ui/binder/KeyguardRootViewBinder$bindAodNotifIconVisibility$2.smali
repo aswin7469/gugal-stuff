@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -117,28 +117,28 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 6
 
     .line 1
-    const/4 v0, 0x1
+    sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
 
     .line 2
-    sget-object v1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+    iget v1, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->label:I
 
-    .line 3
-    iget v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->label:I
+    .line 4
+    const/4 v2, 0x2
 
-    .line 5
-    const/4 v3, 0x2
+    .line 6
+    const/4 v3, 0x1
 
     .line 7
-    if-eqz v2, :cond_2
+    if-eqz v1, :cond_2
 
     .line 8
-    if-eq v2, v0, :cond_1
+    if-eq v1, v3, :cond_1
 
     .line 10
-    if-ne v2, v3, :cond_0
+    if-ne v1, v2, :cond_0
 
     .line 12
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
@@ -177,31 +177,31 @@
     check-cast p1, Lkotlinx/coroutines/CoroutineScope;
 
     .line 35
-    iget-object v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->$configuration:Lcom/android/systemui/common/ui/ConfigurationState;
+    iget-object v1, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->$configuration:Lcom/android/systemui/common/ui/ConfigurationState;
 
     .line 37
-    const v4, 0x7f070981    # @dimen/shelf_appear_translation '42.0dp'
+    const v4, 0x7f0709d8    # @dimen/shelf_appear_translation '42.0dp'
 
     .line 39
-    invoke-virtual {v2, v4}, Lcom/android/systemui/common/ui/ConfigurationState;->getDimensionPixelSize(I)Lcom/android/systemui/common/ui/ConfigurationState$getDimensionPixelSize$$inlined$map$1;
+    invoke-virtual {v1, v4}, Lcom/android/systemui/common/ui/ConfigurationState;->getDimensionPixelSize(I)Lcom/android/systemui/common/ui/ConfigurationState$getDimensionPixelSize$$inlined$map$1;
 
     .line 42
-    move-result-object v2
+    move-result-object v1
 
     .line 45
-    iput v0, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->label:I
+    iput v3, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->label:I
 
     .line 46
-    invoke-static {v2, p1, p0}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v1, p1, p0}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     .line 48
     move-result-object p1
 
     .line 51
-    if-ne p1, v1, :cond_3
+    if-ne p1, v0, :cond_3
 
     .line 52
-    return-object v1
+    return-object v0
 
     .line 54
     :cond_3
@@ -209,34 +209,34 @@
     check-cast p1, Lkotlinx/coroutines/flow/StateFlow;
 
     .line 55
-    iget-object v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->$isVisible:Lkotlinx/coroutines/flow/Flow;
+    iget-object v1, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->$isVisible:Lkotlinx/coroutines/flow/Flow;
 
     .line 57
-    new-instance v4, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$11$1;
+    new-instance v3, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2$1;
 
     .line 59
-    iget-object v5, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->$view:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->$view:Landroid/view/View;
 
     .line 61
-    iget-object v6, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->$screenOffAnimationController:Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;
+    iget-object v5, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->$screenOffAnimationController:Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;
 
     .line 63
-    invoke-direct {v4, v5, p1, v6, v0}, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$11$1;-><init>(Ljava/lang/Object;Lkotlinx/coroutines/flow/StateFlow;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;I)V
+    invoke-direct {v3, v4, p1, v5}, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2$1;-><init>(Landroid/view/View;Lkotlinx/coroutines/flow/StateFlow;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;)V
 
     .line 65
-    iput v3, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->label:I
+    iput v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bindAodNotifIconVisibility$2;->label:I
 
     .line 68
-    invoke-interface {v2, v4, p0}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {v1, v3, p0}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     .line 70
     move-result-object p0
 
     .line 73
-    if-ne p0, v1, :cond_4
+    if-ne p0, v0, :cond_4
 
     .line 74
-    return-object v1
+    return-object v0
 
     .line 76
     :cond_4

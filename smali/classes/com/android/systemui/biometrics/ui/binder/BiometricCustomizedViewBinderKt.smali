@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/biometrics/ui/binder/BiometricCustomizedViewBinderKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -20,7 +20,7 @@
     check-cast p0, Landroid/widget/LinearLayout;
 
     .line 7
-    const p1, 0x7f0b023c    # @id/customized_view_description
+    const p1, 0x7f0a0247    # @id/customized_view_description
 
     .line 9
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->requireViewById(I)Landroid/view/View;

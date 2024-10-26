@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/biometrics/ui/viewmodel/PromptIconViewModel$iconAsset$1$2;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function5;
@@ -157,7 +157,7 @@
     if-eqz v1, :cond_0
 
     .line 30
-    const p0, 0x7f0806a4    # @drawable/face_dialog_wink_from_dark 'res/drawable/face_dialog_wink_from_dark.xml'
+    const p0, 0x7f0806ae    # @drawable/face_dialog_wink_from_dark 'res/drawable/face_dialog_wink_from_dark.xml'
 
     .line 32
     goto :goto_0
@@ -167,7 +167,7 @@
     if-eqz p1, :cond_1
 
     .line 36
-    const p0, 0x7f08069e    # @drawable/face_dialog_dark_to_checkmark 'res/drawable/face_dialog_dark_to_checkmark.xml'
+    const p0, 0x7f0806a8    # @drawable/face_dialog_dark_to_checkmark 'res/drawable/face_dialog_dark_to_checkmark.xml'
 
     .line 38
     goto :goto_0
@@ -177,7 +177,7 @@
     if-eqz v0, :cond_2
 
     .line 42
-    const p0, 0x7f130015    # @raw/face_dialog_authenticating 'res/raw/face_dialog_authenticating.json'
+    const p0, 0x7f120016    # @raw/face_dialog_authenticating 'res/raw/face_dialog_authenticating.json'
 
     .line 44
     goto :goto_0
@@ -187,7 +187,7 @@
     if-eqz v2, :cond_3
 
     .line 48
-    const p0, 0x7f08069f    # @drawable/face_dialog_dark_to_error 'res/drawable/face_dialog_dark_to_error.xml'
+    const p0, 0x7f0806a9    # @drawable/face_dialog_dark_to_error 'res/drawable/face_dialog_dark_to_error.xml'
 
     .line 50
     goto :goto_0
@@ -215,14 +215,14 @@
     if-eqz p0, :cond_4
 
     .line 66
-    const p0, 0x7f0806a0    # @drawable/face_dialog_error_to_idle 'res/drawable/face_dialog_error_to_idle.xml'
+    const p0, 0x7f0806aa    # @drawable/face_dialog_error_to_idle 'res/drawable/face_dialog_error_to_idle.xml'
 
     .line 68
     goto :goto_0
 
     .line 71
     :cond_4
-    const p0, 0x7f0806a1    # @drawable/face_dialog_idle_static 'res/drawable/face_dialog_idle_static.xml'
+    const p0, 0x7f0806ab    # @drawable/face_dialog_idle_static 'res/drawable/face_dialog_idle_static.xml'
 
     .line 72
     :goto_0

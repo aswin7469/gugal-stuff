@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardStatusAreaView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -48,13 +48,13 @@
     new-instance v1, Lcom/android/systemui/statusbar/notification/AnimatableProperty$7;
 
     .line 12
-    const v2, 0x7f0b0836    # @id/translate_x_clock_design_animator_end_tag
+    const v2, 0x7f0a0864    # @id/translate_x_clock_design_animator_end_tag
 
     .line 14
-    const v3, 0x7f0b0838    # @id/translate_x_clock_design_animator_tag
+    const v3, 0x7f0a0866    # @id/translate_x_clock_design_animator_tag
 
     .line 17
-    const v4, 0x7f0b0837    # @id/translate_x_clock_design_animator_start_tag
+    const v4, 0x7f0a0865    # @id/translate_x_clock_design_animator_start_tag
 
     .line 20
     invoke-direct {v1, v4, v2, v3, v0}, Lcom/android/systemui/statusbar/notification/AnimatableProperty$7;-><init>(IIILandroid/util/Property;)V
@@ -78,13 +78,13 @@
     new-instance v1, Lcom/android/systemui/statusbar/notification/AnimatableProperty$7;
 
     .line 36
-    const v2, 0x7f0b0833    # @id/translate_x_aod_animator_end_tag
+    const v2, 0x7f0a0861    # @id/translate_x_aod_animator_end_tag
 
     .line 38
-    const v3, 0x7f0b0835    # @id/translate_x_aod_animator_tag
+    const v3, 0x7f0a0863    # @id/translate_x_aod_animator_tag
 
     .line 41
-    const v4, 0x7f0b0834    # @id/translate_x_aod_animator_start_tag
+    const v4, 0x7f0a0862    # @id/translate_x_aod_animator_start_tag
 
     .line 44
     invoke-direct {v1, v4, v2, v3, v0}, Lcom/android/systemui/statusbar/notification/AnimatableProperty$7;-><init>(IIILandroid/util/Property;)V
@@ -108,13 +108,13 @@
     new-instance v1, Lcom/android/systemui/statusbar/notification/AnimatableProperty$7;
 
     .line 60
-    const v2, 0x7f0b083c    # @id/translate_y_clock_size_animator_end_tag
+    const v2, 0x7f0a086a    # @id/translate_y_clock_size_animator_end_tag
 
     .line 62
-    const v3, 0x7f0b083e    # @id/translate_y_clock_size_animator_tag
+    const v3, 0x7f0a086c    # @id/translate_y_clock_size_animator_tag
 
     .line 65
-    const v4, 0x7f0b083d    # @id/translate_y_clock_size_animator_start_tag
+    const v4, 0x7f0a086b    # @id/translate_y_clock_size_animator_start_tag
 
     .line 68
     invoke-direct {v1, v4, v2, v3, v0}, Lcom/android/systemui/statusbar/notification/AnimatableProperty$7;-><init>(IIILandroid/util/Property;)V
@@ -138,13 +138,13 @@
     new-instance v1, Lcom/android/systemui/statusbar/notification/AnimatableProperty$7;
 
     .line 84
-    const v2, 0x7f0b0839    # @id/translate_y_clock_design_animator_end_tag
+    const v2, 0x7f0a0867    # @id/translate_y_clock_design_animator_end_tag
 
     .line 86
-    const v3, 0x7f0b083b    # @id/translate_y_clock_design_animator_tag
+    const v3, 0x7f0a0869    # @id/translate_y_clock_design_animator_tag
 
     .line 89
-    const v4, 0x7f0b083a    # @id/translate_y_clock_design_animator_start_tag
+    const v4, 0x7f0a0868    # @id/translate_y_clock_design_animator_start_tag
 
     .line 92
     invoke-direct {v1, v4, v2, v3, v0}, Lcom/android/systemui/statusbar/notification/AnimatableProperty$7;-><init>(IIILandroid/util/Property;)V

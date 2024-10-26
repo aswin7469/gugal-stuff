@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/communal/data/repository/CommunalWidgetRepositoryImpl$widgetEntries$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -148,41 +148,47 @@
     iget v2, v2, Lcom/android/systemui/communal/data/db/CommunalItemRank;->rank:I
 
     .line 60
-    invoke-static {v4, p0}, Lcom/android/systemui/communal/data/repository/CommunalWidgetRepositoryImpl$restoreWidgets$1$$ExternalSyntheticOutline0;->m(ILjava/util/Map;)Ljava/lang/Object;
+    new-instance v5, Ljava/lang/Integer;
 
     .line 62
+    invoke-direct {v5, v4}, Ljava/lang/Integer;-><init>(I)V
+
+    .line 64
+    invoke-interface {p0, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 67
     move-result-object v5
 
-    .line 65
+    .line 70
     check-cast v5, Landroid/appwidget/AppWidgetProviderInfo;
 
-    .line 66
+    .line 71
     iget-object v1, v1, Lcom/android/systemui/communal/data/db/CommunalWidgetItem;->componentName:Ljava/lang/String;
 
-    .line 68
+    .line 73
     invoke-direct {v3, v4, v1, v2, v5}, Lcom/android/systemui/communal/data/repository/CommunalWidgetRepositoryImpl$CommunalWidgetEntry;-><init>(ILjava/lang/String;ILandroid/appwidget/AppWidgetProviderInfo;)V
 
-    .line 70
+    .line 75
     invoke-interface {v0, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 73
+    .line 78
     goto :goto_0
 
-    .line 76
+    .line 81
     :cond_0
     return-object v0
 
-    .line 77
+    .line 82
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 78
+    .line 83
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    .line 80
+    .line 85
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 82
+    .line 87
     throw p0
-    .line 85
+    .line 90
 .end method

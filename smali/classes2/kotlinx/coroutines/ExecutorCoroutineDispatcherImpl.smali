@@ -1,6 +1,6 @@
 .class public final Lkotlinx/coroutines/ExecutorCoroutineDispatcherImpl;
 .super Lkotlinx/coroutines/ExecutorCoroutineDispatcher;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/Delay;
@@ -76,7 +76,6 @@
     :catchall_0
     :goto_1
     return-void
-    .line 34
 .end method
 
 
@@ -117,7 +116,7 @@
 .end method
 
 .method public final dispatch(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V
-    .locals 2
+    .locals 1
 
     .line 1
     :try_start_0
@@ -136,30 +135,27 @@
     move-exception p0
 
     .line 8
-    new-instance v0, Ljava/util/concurrent/CancellationException;
+    const-string v0, "The task was rejected"
 
     .line 9
-    const-string v1, "The task was rejected"
+    invoke-static {v0, p0}, Lkotlinx/coroutines/ExceptionsKt;->CancellationException(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/util/concurrent/CancellationException;
 
     .line 11
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    .line 13
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/CancellationException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    .line 14
+    invoke-static {p1, p0}, Lkotlinx/coroutines/JobKt;->cancel(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;)V
 
-    .line 16
-    invoke-static {p1, v0}, Lkotlinx/coroutines/JobKt;->cancel(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;)V
-
-    .line 19
+    .line 15
     sget-object p0, Lkotlinx/coroutines/Dispatchers;->IO:Lkotlinx/coroutines/scheduling/DefaultIoScheduler;
 
-    .line 22
+    .line 18
     invoke-virtual {p0, p1, p2}, Lkotlinx/coroutines/scheduling/DefaultIoScheduler;->dispatch(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V
 
-    .line 24
+    .line 20
     :goto_0
     return-void
-    .line 27
+    .line 23
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
@@ -228,7 +224,7 @@
 .end method
 
 .method public final invokeOnTimeout(JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/DisposableHandle;
-    .locals 3
+    .locals 2
 
     .line 1
     iget-object p0, p0, Lkotlinx/coroutines/ExecutorCoroutineDispatcherImpl;->executor:Ljava/util/concurrent/Executor;
@@ -276,48 +272,45 @@
     move-exception p0
 
     .line 22
-    new-instance v0, Ljava/util/concurrent/CancellationException;
+    const-string v0, "The task was rejected"
 
     .line 23
-    const-string v2, "The task was rejected"
+    invoke-static {v0, p0}, Lkotlinx/coroutines/ExceptionsKt;->CancellationException(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/util/concurrent/CancellationException;
 
     .line 25
-    invoke-direct {v0, v2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    .line 27
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/CancellationException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    .line 28
+    invoke-static {p4, p0}, Lkotlinx/coroutines/JobKt;->cancel(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;)V
 
-    .line 30
-    invoke-static {p4, v0}, Lkotlinx/coroutines/JobKt;->cancel(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;)V
-
-    .line 33
+    .line 29
     :cond_1
     :goto_1
     if-eqz v1, :cond_2
 
-    .line 36
+    .line 32
     new-instance p0, Lkotlinx/coroutines/DisposableFutureHandle;
 
-    .line 38
+    .line 34
     invoke-direct {p0, v1}, Lkotlinx/coroutines/DisposableFutureHandle;-><init>(Ljava/util/concurrent/Future;)V
 
-    .line 40
+    .line 36
     goto :goto_2
 
-    .line 43
+    .line 39
     :cond_2
     sget-object p0, Lkotlinx/coroutines/DefaultExecutor;->INSTANCE:Lkotlinx/coroutines/DefaultExecutor;
 
-    .line 44
+    .line 40
     invoke-virtual {p0, p1, p2, p3, p4}, Lkotlinx/coroutines/DefaultExecutor;->invokeOnTimeout(JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/DisposableHandle;
 
-    .line 46
+    .line 42
     move-result-object p0
 
-    .line 49
+    .line 45
     :goto_2
     return-object p0
-    .line 50
+    .line 46
 .end method
 
 .method public final scheduleResumeAfterDelay(JLkotlinx/coroutines/CancellableContinuationImpl;)V
@@ -378,47 +371,44 @@
     move-exception v0
 
     .line 29
-    new-instance v1, Ljava/util/concurrent/CancellationException;
+    const-string v1, "The task was rejected"
 
     .line 30
-    const-string v3, "The task was rejected"
+    invoke-static {v1, v0}, Lkotlinx/coroutines/ExceptionsKt;->CancellationException(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/util/concurrent/CancellationException;
 
     .line 32
-    invoke-direct {v1, v3}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 34
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/CancellationException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    .line 35
+    invoke-static {p0, v0}, Lkotlinx/coroutines/JobKt;->cancel(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;)V
 
-    .line 37
-    invoke-static {p0, v1}, Lkotlinx/coroutines/JobKt;->cancel(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;)V
-
-    .line 40
+    .line 36
     :cond_1
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 43
+    .line 39
     new-instance p0, Lkotlinx/coroutines/CancelFutureOnCancel;
 
-    .line 45
+    .line 41
     invoke-direct {p0, v2}, Lkotlinx/coroutines/CancelFutureOnCancel;-><init>(Ljava/util/concurrent/Future;)V
 
-    .line 47
+    .line 43
     invoke-virtual {p3, p0}, Lkotlinx/coroutines/CancellableContinuationImpl;->invokeOnCancellation(Lkotlin/jvm/functions/Function1;)V
 
-    .line 50
+    .line 46
     return-void
 
-    .line 53
+    .line 49
     :cond_2
     sget-object p0, Lkotlinx/coroutines/DefaultExecutor;->INSTANCE:Lkotlinx/coroutines/DefaultExecutor;
 
-    .line 54
+    .line 50
     invoke-virtual {p0, p1, p2, p3}, Lkotlinx/coroutines/EventLoopImplBase;->scheduleResumeAfterDelay(JLkotlinx/coroutines/CancellableContinuationImpl;)V
 
-    .line 56
+    .line 52
     return-void
-    .line 59
+    .line 55
 .end method
 
 .method public final toString()Ljava/lang/String;

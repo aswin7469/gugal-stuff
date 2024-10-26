@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/motion/MaterialBottomContainerBackHelper;
 .super Lcom/google/android/material/motion/MaterialBackAnimationHelper;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -23,7 +23,7 @@
     move-result-object p1
 
     .line 8
-    const v0, 0x7f0704ae    # @dimen/m3_back_progress_bottom_container_max_scale_x_distance '48.0dp'
+    const v0, 0x7f0704f0    # @dimen/m3_back_progress_bottom_container_max_scale_x_distance '48.0dp'
 
     .line 9
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
@@ -35,7 +35,7 @@
     iput v0, p0, Lcom/google/android/material/motion/MaterialBottomContainerBackHelper;->maxScaleXDistance:F
 
     .line 16
-    const v0, 0x7f0704af    # @dimen/m3_back_progress_bottom_container_max_scale_y_distance '24.0dp'
+    const v0, 0x7f0704f1    # @dimen/m3_back_progress_bottom_container_max_scale_y_distance '24.0dp'
 
     .line 18
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F

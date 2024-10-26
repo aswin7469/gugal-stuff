@@ -7,7 +7,7 @@
   </style>
   <style name="AllowLogAccess">
     <item name="android:textSize">24.0sp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="Animation" parent="" />
   <style name="Animation.AppCompat.Dialog" parent="@style/Base.Animation.AppCompat.Dialog" />
@@ -45,7 +45,7 @@
     <item name="android:maxWidth">@dimen/m3_btn_max_width</item>
     <item name="android:minWidth">48.0dp</item>
     <item name="android:height">40.0dp</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooserActivity</item>
     <item name="enforceTextAppearance">false</item>
   </style>
   <style name="AuthCredentialContentViewStyle">
@@ -55,7 +55,7 @@
   <style name="AuthCredentialNegativeButtonStyle" parent="@style/TextAppearance.Material3.LabelLarge">
     <item name="android:textColor">?android:^attr-private/materialColorTertiary</item>
     <item name="android:background">@color/transparent</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooserActivity</item>
   </style>
   <style name="AuthCredentialPanelStyle" parent="@style/AuthNonCredentialPanelStyle">
     <item name="android:visibility">visible</item>
@@ -913,7 +913,7 @@
   </style>
   <style name="BrightnessDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
     <item name="android:windowBackground">@android:color/transparent</item>
-    <item name="android:windowAnimationStyle">@0x7f150008</item>
+    <item name="android:windowAnimationStyle">@0x7f140008</item>
   </style>
   <style name="BroadcastDialog">
     <item name="android:layout_gravity">center|start</item>
@@ -945,7 +945,7 @@
     <item name="android:clickable">true</item>
     <item name="android:layout_width">@dimen/media_output_broadcast_info_edit</item>
     <item name="android:layout_height">@dimen/media_output_broadcast_info_edit</item>
-    <item name="android:src">@android:drawable/ic_mic_blocked</item>
+    <item name="android:src">@android:drawable/ic_mic</item>
     <item name="android:tint">?android:attr/textColorPrimary</item>
   </style>
   <style name="BroadcastDialog.InfoItem.Summary" parent="@style/BroadcastDialog.InfoItem">
@@ -1012,13 +1012,13 @@
     <item name="android:gravity">center_vertical</item>
     <item name="android:minHeight">@dimen/control_menu_item_height</item>
     <item name="android:singleLine">true</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="Control.Spinner" parent="@style/Control">
     <item name="android:textColor">@color/control_primary_text</item>
     <item name="android:ellipsize">end</item>
     <item name="android:singleLine">true</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="Control.Spinner.Header" parent="@style/Control.Spinner">
     <item name="android:textSize">@dimen/control_header_text_size</item>
@@ -1026,7 +1026,11 @@
   </style>
   <style name="Control.Spinner.Item" parent="@style/Control.Spinner">
     <item name="android:textSize">@dimen/control_item_text_size</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
+  </style>
+  <style name="DateWeatherText" parent="@style/EnhancedSmartspaceTextTitle">
+    <item name="android:textSize">?attr/smartspaceSubtitleTextSize</item>
+    <item name="android:fontFamily">google-sans-text</item>
   </style>
   <style name="DesktopModeHandleMenuActionButton">
     <item name="android:textSize">14.0sp</item>
@@ -1061,7 +1065,7 @@
     <item name="android:textColor">?android:attr/textColorPrimary</item>
     <item name="android:background">@drawable/dialog_btn_outline</item>
     <item name="android:minWidth">0.0dp</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooserActivity</item>
     <item name="android:stateListAnimator">@null</item>
     <item name="android:lineHeight">20.0sp</item>
   </style>
@@ -1070,7 +1074,7 @@
     <item name="android:textColor">?android:^attr-private/updatableSystem</item>
     <item name="android:background">@drawable/dialog_btn_filled</item>
     <item name="android:minWidth">0.0dp</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooserActivity</item>
     <item name="android:stateListAnimator">@null</item>
     <item name="android:lineHeight">20.0sp</item>
   </style>
@@ -1082,6 +1086,13 @@
     <item name="android:textColor">?android:attr/textColorPrimary</item>
     <item name="android:ellipsize">end</item>
     <item name="android:textDirection">locale</item>
+  </style>
+  <style name="DotStyle">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_centerHorizontal">true</item>
+    <item name="android:layout_centerVertical">true</item>
+    <item name="android:alpha">0.0</item>
   </style>
   <style name="DualToneDarkTheme">
     <item name="fillColor">@color/dark_mode_icon_color_dual_tone_fill</item>
@@ -1105,21 +1116,19 @@
     <item name="android:textColor">?android:attr/textColorPrimary</item>
   </style>
   <style name="EnhancedSmartspaceTextSubtitle" parent="@style/EnhancedSmartspaceTextTitle">
-    <item name="android:textSize">@dimen/enhanced_smartspace_subtitle_size</item>
-    <item name="android:textColor">?android:attr/textColorSecondary</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:textSize">?attr/smartspaceSubtitleTextSize</item>
+    <item name="android:fontFamily">google-sans-text</item>
     <item name="android:letterSpacing">@dimen/smartspaceLetterSpacing</item>
-    <item name="android:lineHeight">20.0sp</item>
   </style>
   <style name="EnhancedSmartspaceTextTitle" parent="@android:style/Theme.DeviceDefault.DayNight">
-    <item name="android:textSize">@dimen/enhanced_smartspace_title_size</item>
+    <item name="android:textSize">?attr/smartspaceTitleTextSize</item>
     <item name="android:textColor">?android:attr/textColorPrimary</item>
     <item name="android:ellipsize">end</item>
     <item name="android:gravity">center_vertical</item>
     <item name="android:maxLines">1</item>
     <item name="android:includeFontPadding">false</item>
     <item name="android:drawablePadding">@dimen/enhanced_smartspace_icon_margin</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">google-sans</item>
     <item name="android:lineHeight">24.0sp</item>
   </style>
   <style name="FgsManagerAppDuration">
@@ -1188,7 +1197,7 @@
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
     <item name="android:ellipsize">marquee</item>
     <item name="android:singleLine">true</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
     <item name="android:textAlignment">center</item>
     <item name="android:lineHeight">24.0dp</item>
   </style>
@@ -1198,13 +1207,13 @@
     <item name="android:ellipsize">end</item>
     <item name="android:maxLines">@integer/bouncer_secondary_message_lines</item>
     <item name="android:lines">@integer/bouncer_secondary_message_lines</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
     <item name="android:textAlignment">center</item>
   </style>
   <style name="Keyguard.TextView" parent="@android:style/Widget.DeviceDefault.TextView">
     <item name="android:textSize">@dimen/kg_status_line_font_size</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="Keyguard.TextView.EmergencyButton" parent="@style/Theme.SystemUI">
     <item name="android:textSize">16.0sp</item>
@@ -1212,7 +1221,7 @@
     <item name="android:background">@drawable/kg_emergency_button_background</item>
     <item name="android:paddingLeft">26.0dp</item>
     <item name="android:paddingRight">26.0dp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
     <item name="android:stateListAnimator">@null</item>
   </style>
   <style name="LetterboxDialog" parent="@android:style/Theme.Holo">
@@ -1231,6 +1240,11 @@
   </style>
   <style name="LockPinPasswordContainerStyle" parent="@style/AuthNonBioCredentialStyle">
     <item name="containerStyle">@style/AuthNonBioCredentialPinPasswordContainerStyle</item>
+  </style>
+  <style name="LockscreenDotStyle" parent="@style/DotStyle">
+    <item name="android:alpha">0.0</item>
+    <item name="android:scaleX">0.8</item>
+    <item name="android:scaleY">0.8</item>
   </style>
   <style name="LogAccessDialogTheme" parent="@style/Theme.SystemUI.Dialog.Alert">
     <item name="permissionGrantButtonBottomStyle">@style/PermissionGrantButtonBottom</item>
@@ -1262,7 +1276,7 @@
     <item name="android:layout_gravity">center</item>
     <item name="android:background">@drawable/qs_media_outline_button</item>
     <item name="android:singleLine">true</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
     <item name="android:backgroundTint">@color/media_player_outline_button_bg</item>
   </style>
   <style name="MediaPlayer.ProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
@@ -1301,7 +1315,7 @@
   <style name="MediaPlayer.ScrubbingTime" parent="@style/MediaPlayer">
     <item name="android:textSize">12.0sp</item>
     <item name="android:gravity">center</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="MediaPlayer.SessionAction" parent="@android:style/Widget.Material.Button.Borderless.Small">
     <item name="android:background">@drawable/qs_media_light_source</item>
@@ -1357,7 +1371,7 @@
   <style name="PermissionGrantButtonTextAppearance">
     <item name="android:textSize">14.0sp</item>
     <item name="android:textColor">@android:color/system_neutral1_900</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="PermissionGrantButtonTop" parent="@android:style/Widget.DeviceDefault.Button.Borderless.Colored">
     <item name="android:background">@drawable/grant_permissions_buttons_top</item>
@@ -1517,7 +1531,7 @@
   </style>
   <style name="PrimaryAllowLogAccess">
     <item name="android:textSize">14.0sp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="PrivacyDialog" parent="@style/Theme.SystemUI.QuickSettings.Dialog">
     <item name="android:windowBackground">@android:color/transparent</item>
@@ -1553,7 +1567,7 @@
   </style>
   <style name="RestartDialogBodyStyle">
     <item name="android:textSize">14.0sp</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="RestartDialogBodyText" parent="@style/RestartDialogBodyStyle">
     <item name="android:textColor">?android:attr/textColorSecondary</item>
@@ -1576,7 +1590,7 @@
     <item name="android:textSize">24.0sp</item>
     <item name="android:textColor">?android:attr/textColorPrimary</item>
     <item name="android:lineSpacingExtra">8.0sp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="RtlOverlay.DialogWindowTitle.AppCompat" parent="@style/Base.DialogWindowTitle.AppCompat">
     <item name="android:textAlignment">viewStart</item>
@@ -1629,6 +1643,21 @@
   <style name="ScreenPinningRequestTheme" parent="@android:style/ThemeOverlay.Material.Dialog.TimePicker">
     <item name="singleToneColor">@color/light_mode_icon_color_single_tone</item>
   </style>
+  <style name="ScreenProtectorNotification" parent="" />
+  <style name="ScreenProtectorNotification.UserAction" parent="@style/ScreenProtectorNotification">
+    <item name="android:textSize">16.0sp</item>
+    <item name="android:textColor">?android:attr/textColorPrimary</item>
+    <item name="android:background">?android:attr/selectableItemBackground</item>
+    <item name="android:paddingLeft">16.0dp</item>
+    <item name="android:paddingTop">16.0dp</item>
+    <item name="android:paddingRight">24.0dp</item>
+    <item name="android:paddingBottom">16.0dp</item>
+    <item name="android:clickable">true</item>
+    <item name="android:layout_width">fill_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:fontFamily">roboto-regular</item>
+    <item name="android:textAlignment">viewStart</item>
+  </style>
   <style name="ScreenRecord" parent="@android:style/Theme.DeviceDefault.DayNight">
     <item name="android:windowBackground">@android:color/transparent</item>
     <item name="android:windowNoTitle">true</item>
@@ -1643,7 +1672,7 @@
     <item name="android:thumb">@drawable/settingslib_switch_thumb</item>
     <item name="android:track">@drawable/settingslib_switch_track</item>
     <item name="android:switchMinWidth">52.0dp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="ScrollableAlertDialogStyle" parent="@android:style/AlertDialog.DeviceDefault.Light">
     <item name="android:layout">@layout/scrollable_alert_dialog_systemui</item>
@@ -1770,6 +1799,10 @@
     <item name="titleItemEndPadding">0.0dp</item>
     <item name="titleItemStartPadding">2.0dp</item>
   </style>
+  <style name="Smartspace">
+    <item name="smartspaceSubtitleTextSize">@dimen/enhanced_smartspace_text_size_medium</item>
+    <item name="smartspaceTitleTextSize">@dimen/enhanced_smartspace_text_size_regular</item>
+  </style>
   <style name="SudBase.ProgressBarLarge" parent="@android:style/Widget.Material.ProgressBar.Large" />
   <style name="SudButtonItem" parent="" />
   <style name="SudFourColorIndeterminateProgressBar" parent="@style/SudBase.ProgressBarLarge">
@@ -1833,39 +1866,39 @@
   <style name="TextAppearance.AuthCredential.ContentViewListItem" parent="@style/TextAppearance.Material3.BodySmall">
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceContainerHigh</item>
     <item name="android:paddingTop">@dimen/biometric_prompt_content_list_item_padding_top</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
     <item name="android:breakStrategy">high_quality</item>
   </style>
   <style name="TextAppearance.AuthCredential.ContentViewWithButtonDescription" parent="@style/TextAppearance.AuthCredential.Description" />
   <style name="TextAppearance.AuthCredential.Description" parent="@style/TextAppearance.Material3.BodyMedium">
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="TextAppearance.AuthCredential.Indicator" parent="@style/TextAppearance.Material3.BodyMedium">
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
     <item name="android:ellipsize">marquee</item>
     <item name="android:singleLine">true</item>
     <item name="android:marqueeRepeatLimit">marquee_forever</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="TextAppearance.AuthCredential.LogoDescription" parent="@style/TextAppearance.Material3.LabelLarge">
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceContainerHigh</item>
     <item name="android:ellipsize">end</item>
     <item name="android:gravity">@integer/biometric_dialog_text_gravity</item>
     <item name="android:maxLines">1</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooserActivity</item>
   </style>
   <style name="TextAppearance.AuthCredential.Subtitle" parent="@style/TextAppearance.Material3.BodyMedium">
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="TextAppearance.AuthCredential.Title" parent="@style/TextAppearance.Material3.HeadlineSmall">
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.AuthCredential.VerticalListContentViewDescription" parent="@style/TextAppearance.Material3.TitleSmall">
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooserActivity</item>
   </style>
   <style name="TextAppearance.AuthNonBioCredential" parent="@android:style/TextAppearance.DeviceDefault">
     <item name="android:textColor">?android:attr/textColorPrimary</item>
@@ -1877,7 +1910,7 @@
     <item name="android:textSize">18.0sp</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
     <item name="android:layout_marginTop">20.0dp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.AuthNonBioCredential.Error" parent="@style/TextAppearance.AuthNonBioCredential">
     <item name="android:textSize">14.0sp</item>
@@ -1903,19 +1936,19 @@
     <item name="android:textSize">18.0sp</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
     <item name="android:layout_marginTop">20.0dp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.AuthNonBioCredential.Title" parent="@style/TextAppearance.AuthNonBioCredential">
     <item name="android:textSize">36.0dp</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
     <item name="android:focusable">true</item>
     <item name="android:layout_marginTop">24.0dp</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.BroadcastDialog" parent="@style/TextAppearance">
     <item name="android:textSize">16.0sp</item>
     <item name="android:textColor">?android:attr/textColorPrimary</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
     <item name="android:textDirection">locale</item>
   </style>
   <style name="TextAppearance.BroadcastDialog.Secondary" parent="@style/TextAppearance.BroadcastDialog">
@@ -1923,41 +1956,41 @@
     <item name="android:textColor">?android:attr/textColorSecondary</item>
   </style>
   <style name="TextAppearance.CastItem" parent="@android:style/TextAppearance.DeviceDefault.Medium">
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.Control" parent="@style/TextAppearance">
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="TextAppearance.Control.Management" parent="@style/TextAppearance.Control">
     <item name="android:textColor">?android:attr/textColorPrimary</item>
   </style>
   <style name="TextAppearance.Control.Management.Subtitle" parent="@style/TextAppearance.Control.Management">
     <item name="android:textSize">@dimen/controls_subtitle_size</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.Control.Management.Title" parent="@style/TextAppearance.Control.Management">
     <item name="android:textSize">@dimen/controls_title_size</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="TextAppearance.Control.Status" parent="@style/TextAppearance.Control">
     <item name="android:textSize">@dimen/control_status_normal</item>
     <item name="android:textColor">@color/control_primary_text</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="TextAppearance.Control.Subtitle" parent="@style/TextAppearance.Control">
     <item name="android:textSize">@dimen/control_text_size</item>
     <item name="android:textColor">@color/control_secondary_text</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="TextAppearance.Control.Title" parent="@style/TextAppearance.Control">
     <item name="android:textSize">@dimen/control_text_size</item>
     <item name="android:textColor">@color/control_primary_text</item>
     <item name="android:lineSpacingExtra">6.0sp</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="TextAppearance.ControlSetup" parent="@style/TextAppearance">
     <item name="android:textColor">@color/control_primary_text</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.ControlSetup.Subtitle" parent="@style/TextAppearance.ControlSetup">
     <item name="android:textSize">@dimen/controls_setup_subtitle</item>
@@ -1971,7 +2004,7 @@
   <style name="TextAppearance.Dialog.Body" parent="@android:style/TextAppearance.DeviceDefault.Medium">
     <item name="android:textSize">14.0sp</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceContainerHigh</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
     <item name="android:lineHeight">20.0sp</item>
   </style>
   <style name="TextAppearance.Dialog.Body.Message" parent="@style/TextAppearance.Dialog.Body">
@@ -1982,7 +2015,7 @@
     <item name="android:textSize">@dimen/dialog_title_text_size</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
     <item name="android:gravity">center</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
     <item name="android:textAlignment">center</item>
     <item name="android:hyphenationFrequency">full</item>
     <item name="android:lineHeight">32.0sp</item>
@@ -2008,7 +2041,7 @@
   <style name="TextAppearance.InternetDialog" parent="@style/TextAppearance">
     <item name="android:textSize">16.0sp</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
     <item name="android:textDirection">locale</item>
   </style>
   <style name="TextAppearance.InternetDialog.Active" parent="@style/TextAppearance.InternetDialog">
@@ -2028,7 +2061,7 @@
     <item name="android:maxLines">2</item>
     <item name="android:shadowColor">@color/keyguard_shadow_color</item>
     <item name="android:shadowRadius">?attr/shadowRadius</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
     <item name="android:lineHeight">@dimen/widget_title_line_height</item>
   </style>
   <style name="TextAppearance.Keyguard.BottomArea" parent="@style/TextAppearance.Keyguard">
@@ -2130,39 +2163,39 @@
     <item name="android:textSize">@dimen/notification_importance_channel_group_text</item>
     <item name="android:textSize">@dimen/notification_importance_channel_group_text</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceContainerHigh</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.NotificationImportanceButton" parent="@style/TextAppearance">
     <item name="android:textSize">@dimen/notification_importance_button_text</item>
     <item name="android:textColor">@color/notification_guts_priority_contents</item>
     <item name="android:gravity">center</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="TextAppearance.NotificationImportanceChannel" parent="@style/TextAppearance">
     <item name="android:textSize">@dimen/notification_importance_channel_text</item>
     <item name="android:textSize">@dimen/notification_importance_channel_text</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="TextAppearance.NotificationImportanceChannelGroup" parent="@style/TextAppearance">
     <item name="android:textSize">@dimen/notification_importance_channel_group_text</item>
     <item name="android:textSize">@dimen/notification_importance_channel_group_text</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.NotificationImportanceDetail" parent="@style/TextAppearance">
     <item name="android:textSize">@dimen/notification_importance_description_text</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceContainerHigh</item>
     <item name="android:gravity">center</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="TextAppearance.NotificationImportanceHeader" parent="@style/TextAppearance">
     <item name="android:textSize">@dimen/notification_importance_header_text</item>
     <item name="android:textColor">?android:^attr-private/materialColorSurfaceBright</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.NotificationInfo" parent="@style/TextAppearance">
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.NotificationInfo.Button" parent="@style/TextAppearance.NotificationInfo">
     <item name="android:textSize">14.0sp</item>
@@ -2170,7 +2203,7 @@
     <item name="android:gravity">center_vertical</item>
     <item name="android:background">@drawable/btn_borderless_rect</item>
     <item name="android:focusable">true</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="TextAppearance.NotificationSectionHeaderLabel" parent="@android:style/Widget.DeviceDefault.Button.Borderless">
     <item name="android:textSize">14.0sp</item>
@@ -2181,7 +2214,7 @@
   <style name="TextAppearance.PrivacyDialog" parent="@style/TextAppearance">
     <item name="android:textSize">14.0sp</item>
     <item name="android:textColor">?android:attr/textColorPrimary</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.PrivacyDialog.Item.Summary" parent="@android:style/TextAppearance.DeviceDefault.Small">
     <item name="android:textSize">14.0sp</item>
@@ -2196,12 +2229,12 @@
   <style name="TextAppearance.QS" parent="@style/TextAppearance">
     <item name="android:textStyle">normal</item>
     <item name="android:textColor">?attr/onShadeInactive</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="TextAppearance.QS.Status" parent="@style/TextAppearance.QS">
     <item name="android:textSize">14.0sp</item>
     <item name="android:textColor">?attr/onSurface</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
     <item name="android:letterSpacing">0.01</item>
   </style>
   <style name="TextAppearance.QS.Status.Build" parent="@style/TextAppearance.QS.Status">
@@ -2213,12 +2246,12 @@
   </style>
   <style name="TextAppearance.QS.TileLabel" parent="@style/TextAppearance.QS">
     <item name="android:textSize">@dimen/qs_tile_text_size</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooserActivity</item>
     <item name="android:letterSpacing">0.01</item>
     <item name="android:lineHeight">20.0sp</item>
   </style>
   <style name="TextAppearance.QS.TileLabel.Secondary" parent="@style/TextAppearance.QS.TileLabel">
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="TextAppearance.QS.UserSwitcher" parent="@style/TextAppearance.QS">
     <item name="android:textSize">@dimen/qs_tile_text_size</item>
@@ -2227,14 +2260,14 @@
   <style name="TextAppearance.QSEdit" parent="@style/TextAppearance">
     <item name="android:textSize">14.0sp</item>
     <item name="android:textColor">?attr/onSurfaceVariant</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
     <item name="android:letterSpacing">0.01</item>
     <item name="android:lineHeight">20.0sp</item>
   </style>
   <style name="TextAppearance.StatusBar.Clock" parent="@android:style/TextAppearance.StatusBar.Icon">
     <item name="android:textSize">@dimen/status_bar_clock_size</item>
     <item name="android:textColor">@color/status_bar_clock_color</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="TextAppearance.StatusBar.Expanded" parent="@android:style/TextAppearance.Toast">
     <item name="android:textColor">?android:attr/textColorTertiary</item>
@@ -2243,12 +2276,12 @@
     <item name="android:textSize">@dimen/kg_user_switcher_text_size</item>
     <item name="android:textStyle">normal</item>
     <item name="android:textColor">?attr/wallpaperTextColor</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="TextAppearance.StatusBar.UserChip" parent="@android:style/TextAppearance.StatusBar.Icon">
     <item name="android:textSize">@dimen/status_bar_user_chip_text_size</item>
     <item name="android:textColor">@color/status_bar_clock_color</item>
-    <item name="android:fontFamily">@android:string/config_networkOverLimitComponent</item>
+    <item name="android:fontFamily">@android:string/config_misprovisionedBrandValue</item>
   </style>
   <style name="TextAppearance.TopIntroText" parent="@android:style/TextAppearance.DeviceDefault">
     <item name="android:textSize">14.0sp</item>
@@ -2257,7 +2290,7 @@
   <style name="TextAppearance.Volume" parent="@style/TextAppearance">
     <item name="android:textStyle">normal</item>
     <item name="android:textColor">?android:attr/textColorPrimary</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="TextAppearance.Volume.Header" parent="@style/TextAppearance.Volume">
     <item name="android:textSize">12.0sp</item>
@@ -2433,6 +2466,10 @@
     <item name="android:alertDialogTheme">@style/Theme.SystemUI.Dialog.Alert</item>
   </style>
   <style name="Theme.SystemUI.MediaProjectionAppSelector" parent="@android:style/Theme.DeviceDefault.Light.Autofill" />
+  <style name="Theme.SystemUI.QSActivity" parent="@style/Theme.SystemUI.QuickSettings">
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:windowActionBar">false</item>
+  </style>
   <style name="Theme.SystemUI.QuickSettings" parent="@android:style/Theme.DeviceDefault">
     <item name="android:colorBackground">?attr/surfaceBright</item>
     <item name="android:windowIsFloating">true</item>
@@ -2476,13 +2513,13 @@
   <style name="ThemeOverlay.AppCompat.Dialog" parent="@style/Base.ThemeOverlay.AppCompat.Dialog" />
   <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="@style/Base.ThemeOverlay.AppCompat.Dialog.Alert" />
   <style name="TrimmedHorizontalProgressBar" parent="@android:style/Widget.Material.ProgressBar.Horizontal">
-    <item name="android:maxHeight">4.0dp</item>
+    <item name="android:maxHeight">3.0dp</item>
     <item name="android:indeterminateDrawable">@drawable/progress_indeterminate_horizontal_material_trimmed</item>
-    <item name="android:minHeight">4.0dp</item>
+    <item name="android:minHeight">3.0dp</item>
   </style>
   <style name="TunerSettings" parent="@android:style/Theme.DeviceDefault.Settings">
     <item name="android:windowActionBar">false</item>
-    <item name="preferenceTheme">@0x7f150546</item>
+    <item name="preferenceTheme">@0x7f14054f</item>
   </style>
   <style name="USBContaminant" parent="" />
   <style name="USBContaminant.UserAction" parent="@style/USBContaminant">
@@ -2507,7 +2544,7 @@
     <item name="android:textSize">14.0sp</item>
     <item name="android:textColor">?android:attr/textColorPrimary</item>
     <item name="android:singleLine">true</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="Wallet.Theme" parent="@android:style/Theme.DeviceDefault">
     <item name="android:colorBackground">@color/material_dynamic_neutral10</item>
@@ -2597,7 +2634,7 @@
     <item name="android:textColor">@color/qs_dialog_btn_filled_text_color</item>
     <item name="android:background">@drawable/qs_dialog_btn_filled</item>
     <item name="android:minWidth">0.0dp</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooserActivity</item>
     <item name="android:stateListAnimator">@null</item>
     <item name="android:buttonCornerRadius">28.0dp</item>
     <item name="android:lineHeight">20.0sp</item>
@@ -2718,20 +2755,20 @@
     <item name="android:background">@null</item>
     <item name="android:paddingBottom">-16.0dp</item>
     <item name="android:singleLine">true</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="Widget.TextView.NumPadKey.Klondike" parent="@android:style/Widget.DeviceDefault.TextView">
     <item name="android:textSize">12.0sp</item>
     <item name="android:textColor">?android:attr/textColorSecondary</item>
     <item name="android:background">@null</item>
     <item name="android:paddingBottom">0.0dp</item>
-    <item name="android:fontFamily">@android:string/config_customAdbPublicKeyConfirmationComponent</item>
+    <item name="android:fontFamily">@android:string/config_chooseTypeAndAccountActivity</item>
   </style>
   <style name="Widget.TextView.Password" parent="@android:style/Widget.TextView">
     <item name="android:textColor">?android:attr/textColorPrimary</item>
     <item name="android:gravity">center</item>
     <item name="android:background">@drawable/bouncer_pin_view_focused_background</item>
-    <item name="android:fontFamily">@android:string/config_networkLocationProviderPackageName</item>
+    <item name="android:fontFamily">@android:string/config_mediaProjectionPermissionDialogComponent</item>
   </style>
   <style name="volume_dialog_theme" parent="@style/Theme.SystemUI">
     <item name="android:windowIsFloating">true</item>

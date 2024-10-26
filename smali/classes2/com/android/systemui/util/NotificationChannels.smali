@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/util/NotificationChannels;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -44,7 +44,7 @@
     new-instance v1, Landroid/app/NotificationChannel;
 
     .line 10
-    const v2, 0x7f1406d8    # @string/notification_channel_battery 'Battery'
+    const v2, 0x7f130733    # @string/notification_channel_battery 'Battery'
 
     .line 12
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -143,7 +143,7 @@
     new-instance v3, Landroid/app/NotificationChannel;
 
     .line 80
-    const v6, 0x7f1406d7    # @string/notification_channel_alerts 'Alerts'
+    const v6, 0x7f130732    # @string/notification_channel_alerts 'Alerts'
 
     .line 82
     invoke-virtual {p0, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -161,7 +161,7 @@
     new-instance v6, Landroid/app/NotificationChannel;
 
     .line 94
-    const v7, 0x7f1406dd    # @string/notification_channel_instant 'Instant Apps'
+    const v7, 0x7f130738    # @string/notification_channel_instant 'Instant Apps'
 
     .line 96
     invoke-virtual {p0, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -179,7 +179,7 @@
     new-instance v7, Landroid/app/NotificationChannel;
 
     .line 108
-    const v8, 0x7f1406df    # @string/notification_channel_setup 'Setup'
+    const v8, 0x7f13073a    # @string/notification_channel_setup 'Setup'
 
     .line 110
     invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -206,7 +206,7 @@
     new-instance v8, Landroid/app/NotificationChannel;
 
     .line 127
-    const v9, 0x7f1406e0    # @string/notification_channel_storage 'Storage'
+    const v9, 0x7f13073b    # @string/notification_channel_storage 'Storage'
 
     .line 129
     invoke-virtual {p0, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -256,7 +256,7 @@
     new-instance v9, Landroid/app/NotificationChannel;
 
     .line 157
-    const v11, 0x7f1406dc    # @string/notification_channel_hints 'Hints'
+    const v11, 0x7f130737    # @string/notification_channel_hints 'Hints'
 
     .line 159
     invoke-virtual {p0, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -292,7 +292,7 @@
     aput-object v8, v11, v10
 
     .line 181
-    const v2, 0x7f1406de    # @string/notification_channel_screenshot 'Screenshots'
+    const v2, 0x7f130739    # @string/notification_channel_screenshot 'Screenshots'
 
     .line 183
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -346,7 +346,7 @@
     new-instance v1, Landroid/app/NotificationChannel;
 
     .line 218
-    const v2, 0x7f1406ed    # @string/notification_channel_tv_pip 'Picture-in-Picture'
+    const v2, 0x7f130748    # @string/notification_channel_tv_pip 'Picture-in-Picture'
 
     .line 220
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

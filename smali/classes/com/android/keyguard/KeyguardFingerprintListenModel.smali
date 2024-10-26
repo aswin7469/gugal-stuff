@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardFingerprintListenModel;
 .super Lcom/android/keyguard/KeyguardListenModel;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -72,98 +72,98 @@
     const-string/jumbo v26, "userDoesNotHaveTrust"
 
     .line 5
-    const-string v0, "timestamp"
+    const-string/jumbo v0, "timestamp"
 
     .line 8
-    const-string v1, "time_millis"
+    const-string/jumbo v1, "time_millis"
 
-    .line 10
+    .line 11
     const-string/jumbo v2, "userId"
 
-    .line 12
+    .line 14
     const-string v3, "listening"
 
-    .line 15
+    .line 17
     const-string v4, "allowOnCurrentOccludingActivity"
 
-    .line 17
+    .line 19
     const-string v5, "alternateBouncerShowing"
 
-    .line 19
+    .line 21
     const-string v6, "biometricAllowedForUser"
 
-    .line 21
+    .line 23
     const-string v7, "biometricPromptShowing"
 
-    .line 23
+    .line 25
     const-string v8, "bouncerIsOrWillShow"
 
-    .line 25
+    .line 27
     const-string v9, "canSkipBouncer"
 
-    .line 27
+    .line 29
     const-string v10, "credentialAttempted"
 
-    .line 29
+    .line 31
     const-string v11, "deviceInteractive"
 
-    .line 31
+    .line 33
     const-string v12, "dreaming"
 
-    .line 33
+    .line 35
     const-string v13, "fingerprintDisabled"
 
-    .line 35
+    .line 37
     const-string v14, "fingerprintLockedOut"
 
-    .line 37
+    .line 39
     const-string v15, "goingToSleep"
 
-    .line 39
+    .line 41
     const-string v16, "keyguardGoingAway"
 
-    .line 41
+    .line 43
     const-string v17, "keyguardIsVisible"
 
-    .line 43
+    .line 45
     const-string v18, "keyguardOccluded"
 
-    .line 45
+    .line 47
     const-string v19, "occludingAppRequestingFp"
 
-    .line 47
+    .line 49
     const-string v20, "shouldListenSidFingerprintState"
 
-    .line 49
+    .line 51
     const-string v21, "shouldListenForFingerprintAssistant"
 
-    .line 51
-    const-string v22, "strongAuthRequired"
-
     .line 53
-    const-string v23, "switchingUser"
+    const-string/jumbo v22, "strongAuthRequired"
 
     .line 55
-    const-string v24, "systemUser"
+    const-string/jumbo v23, "switchingUser"
 
-    .line 57
+    .line 58
+    const-string/jumbo v24, "systemUser"
+
+    .line 61
     filled-new-array/range {v0 .. v26}, [Ljava/lang/String;
 
-    .line 59
+    .line 64
     move-result-object v0
-
-    .line 62
-    invoke-static {v0}, Lkotlin/collections/CollectionsKt__CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
-
-    .line 63
-    move-result-object v0
-
-    .line 66
-    sput-object v0, Lcom/android/keyguard/KeyguardFingerprintListenModel;->TABLE_HEADERS:Ljava/util/List;
 
     .line 67
+    invoke-static {v0}, Lkotlin/collections/CollectionsKt__CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
+
+    .line 68
+    move-result-object v0
+
+    .line 71
+    sput-object v0, Lcom/android/keyguard/KeyguardFingerprintListenModel;->TABLE_HEADERS:Ljava/util/List;
+
+    .line 72
     return-void
-    .line 69
+    .line 74
 .end method
 
 .method public constructor <init>(JIZZZZZZZZZZZZZZZZZZZZZZZ)V

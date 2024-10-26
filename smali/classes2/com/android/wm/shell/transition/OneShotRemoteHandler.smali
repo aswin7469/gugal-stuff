@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/transition/OneShotRemoteHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
@@ -89,7 +89,7 @@
     iput-object p1, p0, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mTransition:Landroid/os/IBinder;
 
     .line 24
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 26
     const/4 v0, 0x1
@@ -131,7 +131,7 @@
     const/4 v3, 0x0
 
     .line 54
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 55
     :cond_2
@@ -155,7 +155,7 @@
     move-object/from16 v1, p3
 
     .line 4
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 6
     const/4 v3, 0x1
@@ -209,7 +209,7 @@
     const-wide v6, -0x6fd5bb2eac0cc518L    # -8.460068588251583E-231
 
     .line 37
-    invoke-static/range {v5 .. v10}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v5 .. v10}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 42
     :cond_0
@@ -374,7 +374,7 @@
 
     .line 15
     :cond_0
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 16
     const/4 v11, 0x1
@@ -428,7 +428,7 @@
     const-wide v13, 0x3a9ffb46a9ac3f74L    # 2.5834487910243018E-26
 
     .line 47
-    invoke-static/range {v12 .. v17}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v12 .. v17}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 52
     :cond_1
@@ -612,294 +612,6 @@
     .line 166
 .end method
 
-.method public final takeOverAnimation(Landroid/os/IBinder;Landroid/window/TransitionInfo;Landroid/view/SurfaceControl$Transaction;Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda7;[Landroid/window/WindowAnimationState;)Z
-    .locals 23
-
-    .line 1
-    move-object/from16 v7, p0
-
-    .line 2
-    move-object/from16 v0, p3
-
-    .line 4
-    move-object/from16 v8, p4
-
-    .line 6
-    iget-object v1, v7, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mTransition:Landroid/os/IBinder;
-
-    .line 8
-    const/4 v9, 0x0
-
-    .line 10
-    move-object/from16 v11, p1
-
-    .line 11
-    if-eq v1, v11, :cond_0
-
-    .line 13
-    return v9
-
-    .line 15
-    :cond_0
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENTS_TRANSITION_enabled:[Z
-
-    .line 16
-    const/16 v16, 0x1
-
-    .line 18
-    aget-boolean v1, v1, v16
-
-    .line 20
-    if-eqz v1, :cond_1
-
-    .line 22
-    iget-object v1, v7, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mRemote:Landroid/window/RemoteTransition;
-
-    .line 24
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 26
-    move-result-object v1
-
-    .line 29
-    invoke-virtual/range {p2 .. p2}, Landroid/window/TransitionInfo;->getDebugId()I
-
-    .line 30
-    move-result v2
-
-    .line 33
-    int-to-long v2, v2
-
-    .line 34
-    sget-object v17, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_RECENTS_TRANSITION:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
-
-    .line 35
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    .line 37
-    move-result-object v2
-
-    .line 40
-    filled-new-array {v1, v2}, [Ljava/lang/Object;
-
-    .line 41
-    move-result-object v22
-
-    .line 44
-    const/16 v20, 0x4
-
-    .line 45
-    const-string v21, "Using registered One-shot remote transition %s to take over (#%d)."
-
-    .line 47
-    const-wide v18, 0x141f5d78de183544L    # 9.316871194490664E-212
-
-    .line 49
-    invoke-static/range {v17 .. v22}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 54
-    :cond_1
-    new-instance v15, Lcom/android/wm/shell/transition/OneShotRemoteHandler$$ExternalSyntheticLambda0;
-
-    .line 57
-    invoke-direct {v15, v7, v8}, Lcom/android/wm/shell/transition/OneShotRemoteHandler$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/transition/OneShotRemoteHandler;Lcom/android/wm/shell/transition/Transitions$TransitionFinishCallback;)V
-
-    .line 59
-    new-instance v14, Lcom/android/wm/shell/transition/OneShotRemoteHandler$2;
-
-    .line 62
-    const/4 v5, 0x0
-
-    .line 64
-    move-object v1, v14
-
-    .line 65
-    move-object/from16 v2, p0
-
-    .line 66
-    move-object/from16 v3, p2
-
-    .line 68
-    move-object v4, v15
-
-    .line 70
-    move-object/from16 v6, p4
-
-    .line 71
-    invoke-direct/range {v1 .. v6}, Lcom/android/wm/shell/transition/OneShotRemoteHandler$2;-><init>(Lcom/android/wm/shell/transition/OneShotRemoteHandler;Landroid/window/TransitionInfo;Lcom/android/wm/shell/transition/OneShotRemoteHandler$$ExternalSyntheticLambda0;Landroid/view/SurfaceControl$Transaction;Lcom/android/wm/shell/transition/Transitions$TransitionFinishCallback;)V
-
-    .line 73
-    iget-object v1, v7, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mRemote:Landroid/window/RemoteTransition;
-
-    .line 76
-    invoke-virtual {v1}, Landroid/window/RemoteTransition;->getAppThread()Landroid/app/IApplicationThread;
-
-    .line 78
-    move-result-object v1
-
-    .line 81
-    invoke-static {v1}, Lcom/android/wm/shell/transition/Transitions;->setRunningRemoteTransitionDelegate(Landroid/app/IApplicationThread;)V
-
-    .line 82
-    :try_start_0
-    iget-object v1, v7, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mRemote:Landroid/window/RemoteTransition;
-
-    .line 85
-    invoke-virtual {v1}, Landroid/window/RemoteTransition;->asBinder()Landroid/os/IBinder;
-
-    .line 87
-    move-result-object v1
-
-    .line 90
-    if-eqz v1, :cond_2
-
-    .line 91
-    iget-object v1, v7, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mRemote:Landroid/window/RemoteTransition;
-
-    .line 93
-    invoke-virtual {v1}, Landroid/window/RemoteTransition;->asBinder()Landroid/os/IBinder;
-
-    .line 95
-    move-result-object v1
-
-    .line 98
-    invoke-interface {v1, v15, v9}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
-
-    .line 99
-    goto :goto_0
-
-    .line 102
-    :catch_0
-    move-exception v0
-
-    .line 103
-    move-object v1, v15
-
-    .line 104
-    goto :goto_2
-
-    .line 105
-    :cond_2
-    :goto_0
-    iget-object v1, v7, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mRemote:Landroid/window/RemoteTransition;
-
-    .line 106
-    invoke-virtual {v1}, Landroid/window/RemoteTransition;->getRemoteTransition()Landroid/window/IRemoteTransition;
-
-    .line 108
-    move-result-object v1
-
-    .line 111
-    invoke-static {v0, v1}, Lcom/android/wm/shell/transition/RemoteTransitionHandler;->copyIfLocal(Landroid/view/SurfaceControl$Transaction;Landroid/window/IRemoteTransition;)Landroid/view/SurfaceControl$Transaction;
-
-    .line 112
-    move-result-object v13
-
-    .line 115
-    if-ne v13, v0, :cond_3
-
-    .line 116
-    move-object/from16 v12, p2
-
-    .line 118
-    goto :goto_1
-
-    .line 120
-    :cond_3
-    invoke-virtual/range {p2 .. p2}, Landroid/window/TransitionInfo;->localRemoteCopy()Landroid/window/TransitionInfo;
-
-    .line 121
-    move-result-object v1
-
-    .line 124
-    move-object v12, v1
-
-    .line 125
-    :goto_1
-    iget-object v1, v7, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mRemote:Landroid/window/RemoteTransition;
-
-    .line 126
-    invoke-virtual {v1}, Landroid/window/RemoteTransition;->getRemoteTransition()Landroid/window/IRemoteTransition;
-
-    .line 128
-    move-result-object v10
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 131
-    move-object/from16 v11, p1
-
-    .line 132
-    move-object v1, v15
-
-    .line 134
-    move-object/from16 v15, p5
-
-    .line 135
-    :try_start_1
-    invoke-interface/range {v10 .. v15}, Landroid/window/IRemoteTransition;->takeOverAnimation(Landroid/os/IBinder;Landroid/window/TransitionInfo;Landroid/view/SurfaceControl$Transaction;Landroid/window/IRemoteTransitionFinishedCallback;[Landroid/window/WindowAnimationState;)V
-
-    .line 137
-    invoke-virtual/range {p3 .. p3}, Landroid/view/SurfaceControl$Transaction;->clear()V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
-
-    .line 140
-    return v16
-
-    .line 143
-    :catch_1
-    move-exception v0
-
-    .line 144
-    :goto_2
-    const-string v2, "ShellTransitions"
-
-    .line 145
-    const-string v3, "Error running remote transition takeover."
-
-    .line 147
-    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 149
-    iget-object v0, v7, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mRemote:Landroid/window/RemoteTransition;
-
-    .line 152
-    invoke-virtual {v0}, Landroid/window/RemoteTransition;->asBinder()Landroid/os/IBinder;
-
-    .line 154
-    move-result-object v0
-
-    .line 157
-    if-eqz v0, :cond_4
-
-    .line 158
-    iget-object v0, v7, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mRemote:Landroid/window/RemoteTransition;
-
-    .line 160
-    invoke-virtual {v0}, Landroid/window/RemoteTransition;->asBinder()Landroid/os/IBinder;
-
-    .line 162
-    move-result-object v0
-
-    .line 165
-    invoke-interface {v0, v1, v9}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
-
-    .line 166
-    :cond_4
-    const/4 v0, 0x0
-
-    .line 169
-    invoke-virtual {v8, v0}, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda7;->onTransitionFinished(Landroid/window/WindowContainerTransaction;)V
-
-    .line 170
-    iput-object v0, v7, Lcom/android/wm/shell/transition/OneShotRemoteHandler;->mRemote:Landroid/window/RemoteTransition;
-
-    .line 173
-    return v9
-    .line 175
-.end method
-
 .method public final toString()Ljava/lang/String;
     .locals 2
 
@@ -950,5 +662,4 @@
 
     .line 35
     return-object p0
-    .line 36
 .end method

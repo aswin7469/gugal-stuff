@@ -1,6 +1,6 @@
-.class public final Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
+.class public abstract Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -114,7 +114,7 @@
 
 .field public final mDreamManager:Landroid/service/dreams/IDreamManager;
 
-.field public final mEmergencyGestureIntentFactory:Lcom/android/systemui/emergency/EmergencyGestureModule$EmergencyGestureIntentFactory;
+.field public final mEmergencyGestureIntentFactory:Lcom/android/systemui/emergency/EmergencyGestureModule$emergencyGestureIntentFactory$1;
 
 .field public final mExtensionController:Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl;
 
@@ -166,7 +166,7 @@
 
 .field public final mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-.field public final mKeyguardViewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+.field public final mKeyguardViewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
 .field public mLastCameraLaunchSource:I
 
@@ -190,8 +190,6 @@
 
 .field public final mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
-.field public final mLightRevealScrimViewModelLazy:Ldagger/Lazy;
-
 .field public final mLockscreenShadeTransitionController:Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
 
 .field public final mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
@@ -200,7 +198,7 @@
 
 .field public final mMediaManager:Lcom/android/systemui/statusbar/NotificationMediaManager;
 
-.field public final mMessageRouter:Lcom/android/systemui/util/concurrency/MessageRouter;
+.field public final mMessageRouter:Lcom/android/systemui/util/concurrency/MessageRouterImpl;
 
 .field public final mMetricsLogger:Lcom/android/internal/logging/MetricsLogger;
 
@@ -362,7 +360,7 @@
     move-result-object v1
 
     .line 13
-    new-instance v2, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$$ExternalSyntheticLambda2;
+    new-instance v2, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$$ExternalSyntheticLambda1;
 
     .line 14
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
@@ -407,147 +405,134 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lcom/android/systemui/Flags;->lightRevealMigration()Z
-
-    .line 7
-    move-result v1
-
-    .line 10
-    if-eqz v1, :cond_1
-
-    .line 11
-    goto :goto_2
-
-    .line 13
-    :cond_1
     const/4 v1, 0x0
 
-    .line 14
+    .line 7
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mWakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
-    .line 15
+    .line 8
     const/4 v3, 0x1
 
-    .line 17
-    if-eqz p1, :cond_2
+    .line 10
+    if-eqz p1, :cond_1
 
-    .line 18
+    .line 11
     iget-object v4, v0, Lcom/android/systemui/statusbar/LightRevealScrim;->revealEffect:Lcom/android/systemui/statusbar/LightRevealEffect;
 
-    .line 20
+    .line 13
     instance-of v4, v4, Lcom/android/systemui/statusbar/CircleReveal;
 
-    .line 22
-    if-nez v4, :cond_2
+    .line 15
+    if-nez v4, :cond_1
 
-    .line 24
+    .line 17
     iget v4, v2, Lcom/android/systemui/keyguard/WakefulnessLifecycle;->mLastWakeReason:I
 
-    .line 26
-    if-ne v4, v3, :cond_2
+    .line 19
+    if-ne v4, v3, :cond_1
 
-    .line 28
+    .line 21
     move v4, v3
 
-    .line 30
+    .line 23
     goto :goto_0
 
-    .line 31
-    :cond_2
+    .line 24
+    :cond_1
     move v4, v1
 
-    .line 32
+    .line 25
     :goto_0
-    if-nez p1, :cond_3
+    if-nez p1, :cond_2
 
-    .line 33
+    .line 26
     iget v2, v2, Lcom/android/systemui/keyguard/WakefulnessLifecycle;->mLastSleepReason:I
 
-    .line 35
+    .line 28
     const/4 v5, 0x4
 
-    .line 37
-    if-ne v2, v5, :cond_3
+    .line 30
+    if-ne v2, v5, :cond_2
 
-    .line 38
+    .line 31
     move v1, v3
 
-    .line 40
-    :cond_3
+    .line 33
+    :cond_2
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 41
+    .line 34
     const/high16 v3, 0x3f800000    # 1.0f
 
+    .line 36
+    if-nez v4, :cond_5
+
+    .line 38
+    if-eqz v1, :cond_3
+
+    .line 40
+    goto :goto_1
+
+    .line 42
+    :cond_3
+    if-eqz p1, :cond_4
+
     .line 43
-    if-nez v4, :cond_6
+    iget-object p0, v0, Lcom/android/systemui/statusbar/LightRevealScrim;->revealEffect:Lcom/android/systemui/statusbar/LightRevealEffect;
 
     .line 45
-    if-eqz v1, :cond_4
+    instance-of p0, p0, Lcom/android/systemui/statusbar/CircleReveal;
 
     .line 47
-    goto :goto_1
+    if-nez p0, :cond_6
 
     .line 49
     :cond_4
-    if-eqz p1, :cond_5
-
-    .line 50
-    iget-object p0, v0, Lcom/android/systemui/statusbar/LightRevealScrim;->revealEffect:Lcom/android/systemui/statusbar/LightRevealEffect;
-
-    .line 52
-    instance-of p0, p0, Lcom/android/systemui/statusbar/CircleReveal;
-
-    .line 54
-    if-nez p0, :cond_7
-
-    .line 56
-    :cond_5
     sget-object p0, Lcom/android/systemui/statusbar/LiftReveal;->INSTANCE:Lcom/android/systemui/statusbar/LiftReveal;
 
-    .line 58
+    .line 51
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/LightRevealScrim;->setRevealEffect(Lcom/android/systemui/statusbar/LightRevealEffect;)V
 
-    .line 60
+    .line 53
     check-cast v2, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 63
+    .line 56
     iget p0, v2, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mDozeAmount:F
 
-    .line 65
+    .line 58
     sub-float/2addr v3, p0
 
-    .line 67
+    .line 60
     invoke-virtual {v0, v3}, Lcom/android/systemui/statusbar/LightRevealScrim;->setRevealAmount(F)V
 
-    .line 68
+    .line 61
     goto :goto_2
 
-    .line 71
-    :cond_6
+    .line 64
+    :cond_5
     :goto_1
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mPowerButtonReveal:Lcom/android/systemui/statusbar/PowerButtonReveal;
 
-    .line 72
+    .line 65
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/LightRevealScrim;->setRevealEffect(Lcom/android/systemui/statusbar/LightRevealEffect;)V
 
-    .line 74
+    .line 67
     check-cast v2, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 77
+    .line 70
     iget p0, v2, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mDozeAmount:F
 
-    .line 79
+    .line 72
     sub-float/2addr v3, p0
 
-    .line 81
+    .line 74
     invoke-virtual {v0, v3}, Lcom/android/systemui/statusbar/LightRevealScrim;->setRevealAmount(F)V
 
-    .line 82
-    :cond_7
+    .line 75
+    :cond_6
     :goto_2
     return-void
-    .line 85
+    .line 78
 .end method
 
 .method static constructor <clinit>()V
@@ -567,7 +552,7 @@
     .line 9
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/statusbar/notification/init/NotificationsController;Lcom/android/systemui/fragments/FragmentService;Lcom/android/systemui/statusbar/phone/LightBarController;Lcom/android/systemui/statusbar/phone/AutoHideController;Lcom/android/systemui/statusbar/core/StatusBarInitializer;Lcom/android/systemui/statusbar/window/StatusBarWindowController;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/systemui/statusbar/data/repository/StatusBarModeRepositoryImpl;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;Lcom/android/systemui/statusbar/PulseExpansionHandler;Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/statusbar/policy/HeadsUpManager;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/broadcast/BroadcastDispatcher;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/shade/ShadeExpansionStateManager;Lcom/android/systemui/keyguard/KeyguardViewMediator;Landroid/util/DisplayMetrics;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/shade/ShadeLogger;Lcom/android/systemui/util/kotlin/JavaAdapter;Ljava/util/concurrent/Executor;Lcom/android/systemui/shade/ShadeSurface;Lcom/android/systemui/statusbar/NotificationMediaManager;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Lcom/android/systemui/statusbar/NotificationRemoteInputManager;Lcom/android/systemui/shade/QuickSettingsController;Lcom/android/systemui/statusbar/policy/BatteryController;Lcom/android/systemui/colorextraction/SysuiColorExtractor;Lcom/android/systemui/keyguard/ScreenLifecycle;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Ljava/util/Optional;Ldagger/Lazy;Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;Lcom/android/systemui/accessibility/floatingmenu/AccessibilityFloatingMenuController;Ldagger/Lazy;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/statusbar/NotificationShadeWindowController;Ldagger/Lazy;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;Ldagger/Lazy;Ldagger/Lazy;Lcom/android/systemui/statusbar/notification/NotificationLaunchAnimatorControllerProvider;Lcom/android/systemui/statusbar/phone/DozeParameters;Lcom/android/systemui/statusbar/phone/ScrimController;Ldagger/Lazy;Lcom/android/systemui/biometrics/AuthRippleController;Lcom/android/systemui/statusbar/phone/DozeServiceHost;Lcom/android/systemui/back/domain/interactor/BackActionInteractor;Landroid/os/PowerManager;Lcom/android/systemui/statusbar/phone/DozeScrimController;Lcom/android/systemui/volume/VolumeComponent;Lcom/android/systemui/statusbar/CommandQueue;Ldagger/Lazy;Lcom/android/systemui/plugins/PluginManager;Lcom/android/systemui/shade/ShadeController;Lcom/android/systemui/scene/domain/interactor/WindowRootViewVisibilityInteractor;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/keyguard/ViewMediatorCallback;Lcom/android/systemui/InitController;Landroid/os/Handler;Lcom/android/systemui/plugins/PluginDependencyProvider;Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl;Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;Lcom/android/systemui/statusbar/KeyguardIndicationController;Lcom/android/systemui/demomode/DemoModeController;Ldagger/Lazy;Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;Lcom/android/systemui/settings/brightness/BrightnessSliderController$Factory;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;Lcom/android/systemui/util/WallpaperController;Lcom/android/systemui/statusbar/phone/StatusBarHideIconsForBouncerManager;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/util/concurrency/MessageRouter;Landroid/app/WallpaperManager;Ljava/util/Optional;Lcom/android/systemui/animation/ActivityTransitionAnimator;Landroid/hardware/devicestate/DeviceStateManager;Lcom/android/systemui/charging/WiredChargingRippleController;Landroid/service/dreams/IDreamManager;Ldagger/Lazy;Ldagger/Lazy;Lcom/android/systemui/statusbar/LightRevealScrim;Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;Lcom/android/systemui/settings/UserTracker;Ldagger/internal/Provider;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/settings/brightness/domain/interactor/BrightnessMirrorShowingInteractor;Lcom/android/systemui/shade/GlanceableHubContainerController;Lcom/android/systemui/emergency/EmergencyGestureModule$EmergencyGestureIntentFactory;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/statusbar/notification/init/NotificationsController;Lcom/android/systemui/fragments/FragmentService;Lcom/android/systemui/statusbar/phone/LightBarController;Lcom/android/systemui/statusbar/phone/AutoHideController;Lcom/android/systemui/statusbar/core/StatusBarInitializer;Lcom/android/systemui/statusbar/window/StatusBarWindowController;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/systemui/statusbar/data/repository/StatusBarModeRepositoryImpl;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;Lcom/android/systemui/statusbar/PulseExpansionHandler;Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/statusbar/policy/HeadsUpManager;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/broadcast/BroadcastDispatcher;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/shade/ShadeExpansionStateManager;Lcom/android/systemui/keyguard/KeyguardViewMediator;Landroid/util/DisplayMetrics;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/shade/ShadeLogger;Lcom/android/systemui/util/kotlin/JavaAdapter;Ljava/util/concurrent/Executor;Lcom/android/systemui/shade/ShadeSurface;Lcom/android/systemui/statusbar/NotificationMediaManager;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Lcom/android/systemui/statusbar/NotificationRemoteInputManager;Lcom/android/systemui/shade/QuickSettingsController;Lcom/android/systemui/statusbar/policy/BatteryController;Lcom/android/systemui/colorextraction/SysuiColorExtractor;Lcom/android/systemui/keyguard/ScreenLifecycle;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Ljava/util/Optional;Ldagger/Lazy;Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;Lcom/android/systemui/accessibility/floatingmenu/AccessibilityFloatingMenuController;Ldagger/Lazy;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/statusbar/NotificationShadeWindowController;Ldagger/Lazy;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;Ldagger/Lazy;Ldagger/Lazy;Lcom/android/systemui/statusbar/notification/NotificationLaunchAnimatorControllerProvider;Lcom/android/systemui/statusbar/phone/DozeParameters;Lcom/android/systemui/statusbar/phone/ScrimController;Ldagger/Lazy;Lcom/android/systemui/biometrics/AuthRippleController;Lcom/android/systemui/statusbar/phone/DozeServiceHost;Lcom/android/systemui/back/domain/interactor/BackActionInteractor;Landroid/os/PowerManager;Lcom/android/systemui/statusbar/phone/DozeScrimController;Lcom/android/systemui/volume/VolumeComponent;Lcom/android/systemui/statusbar/CommandQueue;Ldagger/Lazy;Lcom/android/systemui/plugins/PluginManager;Lcom/android/systemui/shade/ShadeController;Lcom/android/systemui/scene/domain/interactor/WindowRootViewVisibilityInteractor;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/keyguard/KeyguardViewMediator$4;Lcom/android/systemui/InitController;Landroid/os/Handler;Lcom/android/systemui/plugins/PluginDependencyProvider;Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl;Lcom/android/systemui/statusbar/policy/UserInfoControllerImpl;Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;Lcom/android/systemui/statusbar/KeyguardIndicationController;Lcom/android/systemui/demomode/DemoModeController;Ldagger/Lazy;Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;Lcom/android/systemui/settings/brightness/BrightnessSliderController$Factory;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;Lcom/android/systemui/util/WallpaperController;Lcom/android/systemui/statusbar/phone/StatusBarHideIconsForBouncerManager;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/util/concurrency/MessageRouterImpl;Landroid/app/WallpaperManager;Ljava/util/Optional;Lcom/android/systemui/animation/ActivityTransitionAnimator;Landroid/hardware/devicestate/DeviceStateManager;Lcom/android/systemui/charging/WiredChargingRippleController;Landroid/service/dreams/IDreamManager;Ldagger/Lazy;Ldagger/Lazy;Lcom/android/systemui/statusbar/LightRevealScrim;Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;Lcom/android/systemui/settings/UserTracker;Ldagger/internal/Provider;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/settings/brightness/domain/interactor/BrightnessMirrorShowingInteractor;Lcom/android/systemui/shade/GlanceableHubContainerController;Lcom/android/systemui/emergency/EmergencyGestureModule$emergencyGestureIntentFactory$1;)V
     .locals 8
 
     move-object v0, p0
@@ -1112,7 +1097,7 @@
     move-object/from16 v2, p68
 
     .line 100
-    iput-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardViewMediatorCallback:Lcom/android/keyguard/ViewMediatorCallback;
+    iput-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardViewMediatorCallback:Lcom/android/systemui/keyguard/KeyguardViewMediator$4;
 
     move-object/from16 v2, p69
 
@@ -1180,7 +1165,7 @@
     iput-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mMainExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
     .line 114
-    iput-object v4, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mMessageRouter:Lcom/android/systemui/util/concurrency/MessageRouter;
+    iput-object v4, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mMessageRouter:Lcom/android/systemui/util/concurrency/MessageRouterImpl;
 
     move-object/from16 v2, p89
 
@@ -1220,7 +1205,7 @@
     move-object/from16 v2, p104
 
     .line 122
-    iput-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mEmergencyGestureIntentFactory:Lcom/android/systemui/emergency/EmergencyGestureModule$EmergencyGestureIntentFactory;
+    iput-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mEmergencyGestureIntentFactory:Lcom/android/systemui/emergency/EmergencyGestureModule$emergencyGestureIntentFactory$1;
 
     .line 123
     iput-object v3, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLockscreenShadeTransitionController:Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
@@ -1280,108 +1265,85 @@
     invoke-static/range {p70 .. p70}, Landroid/widget/DateTimeView;->setReceiverHandler(Landroid/os/Handler;)V
 
     .line 136
-    invoke-static {}, Lcom/android/systemui/Flags;->keyboardShortcutHelperRewrite()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 137
     new-instance v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda8;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, p0, v2}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
 
-    move-object v2, v4
+    const-class v2, Lcom/android/systemui/statusbar/phone/CentralSurfaces$KeyboardShortcutsMessage;
 
-    check-cast v2, Lcom/android/systemui/util/concurrency/MessageRouterImpl;
+    invoke-virtual {v4, v2, v1}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->subscribeTo(Ljava/lang/Class;Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda8;)V
 
-    const-class v3, Lcom/android/systemui/statusbar/phone/CentralSurfaces$KeyboardShortcutsMessage;
-
-    invoke-virtual {v2, v3, v1}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->subscribeTo(Ljava/lang/Class;Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda8;)V
-
-    .line 138
+    .line 137
     new-instance v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda9;
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v3}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda9;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
+    invoke-direct {v1, p0, v2}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda9;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
 
-    const/16 v3, 0x403
+    const/16 v2, 0x403
 
-    invoke-virtual {v2, v3, v1}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->subscribeTo(ILcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda9;)V
+    invoke-virtual {v4, v2, v1}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->subscribeTo(ILcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda9;)V
 
-    .line 139
-    :cond_0
+    .line 138
     new-instance v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda8;
 
     const/4 v2, 0x1
 
     invoke-direct {v1, p0, v2}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda8;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
 
-    move-object v2, v4
+    const-class v2, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$AnimateExpandSettingsPanelMessage;
 
-    check-cast v2, Lcom/android/systemui/util/concurrency/MessageRouterImpl;
+    invoke-virtual {v4, v2, v1}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->subscribeTo(Ljava/lang/Class;Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda8;)V
 
-    const-class v3, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$AnimateExpandSettingsPanelMessage;
-
-    invoke-virtual {v2, v3, v1}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->subscribeTo(Ljava/lang/Class;Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda8;)V
-
-    .line 140
+    .line 139
     new-instance v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda9;
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v3}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda9;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
+    invoke-direct {v1, p0, v2}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda9;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
 
-    const/16 v3, 0x3eb
+    const/16 v2, 0x3eb
 
-    invoke-virtual {v2, v3, v1}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->subscribeTo(ILcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda9;)V
+    invoke-virtual {v4, v2, v1}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->subscribeTo(ILcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda9;)V
 
     move-object/from16 v1, p92
 
-    .line 141
+    .line 140
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDeviceStateManager:Landroid/hardware/devicestate/DeviceStateManager;
 
-    .line 142
+    .line 141
     invoke-virtual/range {p93 .. p93}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 143
+    .line 142
     new-instance v1, Lcom/android/systemui/charging/WiredChargingRippleController$registerCallbacks$batteryStateChangeCallback$1;
 
     invoke-direct {v1, v5}, Lcom/android/systemui/charging/WiredChargingRippleController$registerCallbacks$batteryStateChangeCallback$1;-><init>(Lcom/android/systemui/charging/WiredChargingRippleController;)V
 
-    .line 144
+    .line 143
     iget-object v2, v5, Lcom/android/systemui/charging/WiredChargingRippleController;->batteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
-    check-cast v2, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
+    invoke-interface {v2, v1}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
-    invoke-virtual {v2, v1}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->addCallback(Ljava/lang/Object;)V
-
-    .line 145
+    .line 144
     new-instance v1, Lcom/android/systemui/charging/WiredChargingRippleController$registerCallbacks$configurationChangedListener$1;
 
     invoke-direct {v1, v5}, Lcom/android/systemui/charging/WiredChargingRippleController$registerCallbacks$configurationChangedListener$1;-><init>(Lcom/android/systemui/charging/WiredChargingRippleController;)V
 
-    .line 146
+    .line 145
     iget-object v2, v5, Lcom/android/systemui/charging/WiredChargingRippleController;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
     check-cast v2, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
 
     invoke-virtual {v2, v1}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    move-object/from16 v1, p96
-
-    .line 147
-    iput-object v1, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrimViewModelLazy:Ldagger/Lazy;
-
     move-object/from16 v1, p97
 
-    .line 148
+    .line 146
     iput-object v1, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
-    .line 149
+    .line 147
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
@@ -1933,7 +1895,7 @@
     move-result v0
 
     .line 294
-    const v1, 0x7f1504c9    # @style/Theme.SystemUI.LightWallpaper
+    const v1, 0x7f1404d1    # @style/Theme.SystemUI.LightWallpaper
 
     .line 295
     if-ne v0, v1, :cond_2
@@ -1974,1163 +1936,1171 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardIndicationController:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     .line 320
-    if-eqz v0, :cond_4
+    const/4 v1, 0x0
 
     .line 322
-    const-string v1, "KeyguardIndicationController:"
+    if-eqz v0, :cond_4
 
-    .line 324
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    .line 323
+    check-cast v0, Lcom/google/android/systemui/statusbar/KeyguardIndicationControllerGoogle;
 
-    .line 326
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 325
+    const-string v2, "KeyguardIndicationController:"
+
+    .line 327
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 329
-    const-string v2, "  mInitialTextColorState: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 331
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 332
+    const-string v3, "  mInitialTextColorState: "
 
-    .line 333
-    iget-object v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mInitialTextColorState:Landroid/content/res/ColorStateList;
+    .line 334
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 336
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mInitialTextColorState:Landroid/content/res/ColorStateList;
 
-    .line 338
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 339
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 341
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 344
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 345
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 347
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 348
-    const-string v2, "  mPowerPluggedInWired: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 350
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 351
+    const-string v3, "  mPowerPluggedInWired: "
 
-    .line 352
-    iget-boolean v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedInWired:Z
+    .line 353
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 355
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-boolean v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedInWired:Z
 
-    .line 357
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 358
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 360
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 363
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 364
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 366
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 367
-    const-string v2, "  mPowerPluggedIn: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 369
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 370
+    const-string v3, "  mPowerPluggedIn: "
 
-    .line 371
-    iget-boolean v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedIn:Z
+    .line 372
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 374
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-boolean v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerPluggedIn:Z
 
-    .line 376
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 377
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 379
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 382
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 383
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 385
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 386
-    const-string v2, "  mPowerCharged: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 388
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 389
+    const-string v3, "  mPowerCharged: "
 
-    .line 390
-    iget-boolean v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerCharged:Z
+    .line 391
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 393
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-boolean v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mPowerCharged:Z
 
-    .line 395
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 396
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 398
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 401
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 402
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 404
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 405
-    const-string v2, "  mChargingSpeed: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 407
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 408
+    const-string v3, "  mChargingSpeed: "
 
-    .line 409
-    iget v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingSpeed:I
+    .line 410
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 412
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingSpeed:I
 
-    .line 414
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 415
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 417
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 420
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 421
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 423
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 424
-    const-string v2, "  mChargingWattage: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 426
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 427
+    const-string v3, "  mChargingWattage: "
 
-    .line 428
-    iget v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingWattage:I
+    .line 429
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 431
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mChargingWattage:I
 
-    .line 433
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 434
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 436
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 439
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 440
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 442
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 443
-    const-string v2, "  mMessageToShowOnScreenOn: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 445
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 446
+    const-string v3, "  mMessageToShowOnScreenOn: "
 
-    .line 447
-    iget-object v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBiometricErrorMessageToShowOnScreenOn:Landroid/util/Pair;
+    .line 448
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 450
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBiometricErrorMessageToShowOnScreenOn:Landroid/util/Pair;
 
-    .line 452
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 453
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 455
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 458
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 459
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 461
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 462
-    const-string v2, "  mDozing: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 464
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 465
+    const-string v3, "  mDozing: "
 
-    .line 466
-    iget-boolean v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDozing:Z
+    .line 467
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 469
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-boolean v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mDozing:Z
 
-    .line 471
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 472
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 474
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 477
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 478
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 480
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 481
-    const-string v2, "  mTransientIndication: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 483
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 484
+    const-string v3, "  mTransientIndication: "
 
-    .line 485
-    iget-object v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mTransientIndication:Ljava/lang/CharSequence;
+    .line 486
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 488
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mTransientIndication:Ljava/lang/CharSequence;
 
-    .line 490
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 491
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 493
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 496
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 497
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 499
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 500
-    const-string v2, "  mBiometricMessage: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 502
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 503
+    const-string v3, "  mBiometricMessage: "
 
-    .line 504
-    iget-object v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBiometricMessage:Ljava/lang/CharSequence;
+    .line 505
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 507
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBiometricMessage:Ljava/lang/CharSequence;
 
-    .line 509
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 510
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 512
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 515
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 516
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 518
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 519
-    const-string v2, "  mBiometricMessageFollowUp: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 521
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 522
+    const-string v3, "  mBiometricMessageFollowUp: "
 
-    .line 523
-    iget-object v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBiometricMessageFollowUp:Ljava/lang/CharSequence;
+    .line 524
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 526
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBiometricMessageFollowUp:Ljava/lang/CharSequence;
 
-    .line 528
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 529
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 531
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 534
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 535
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 537
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 538
-    const-string v2, "  mBatteryLevel: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 540
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 541
+    const-string v3, "  mBatteryLevel: "
 
-    .line 542
-    iget v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBatteryLevel:I
+    .line 543
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 545
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBatteryLevel:I
 
-    .line 547
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 548
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 550
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 553
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 554
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 556
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 557
-    const-string v2, "  mBatteryPresent: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 559
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 560
+    const-string v3, "  mBatteryPresent: "
 
-    .line 561
-    iget-boolean v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBatteryPresent:Z
+    .line 562
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 564
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-boolean v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mBatteryPresent:Z
 
-    .line 566
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 567
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 569
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 572
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 573
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 575
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 576
-    const-string v2, "  mIsActiveDreamLockscreenHosted: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 578
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 579
+    const-string v3, "  mIsActiveDreamLockscreenHosted: "
 
-    .line 580
-    iget-boolean v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mIsActiveDreamLockscreenHosted:Z
+    .line 581
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 583
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-boolean v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mIsActiveDreamLockscreenHosted:Z
 
-    .line 585
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 586
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 588
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 591
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 592
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 594
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     .line 595
-    const-string v2, "  AOD text: "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 597
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 598
+    const-string v3, "  AOD text: "
 
-    .line 599
-    iget-object v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mTopIndicationView:Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;
+    .line 600
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 602
-    if-nez v2, :cond_3
+    iget-object v3, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mTopIndicationView:Lcom/android/systemui/statusbar/phone/KeyguardIndicationTextView;
 
-    .line 604
-    const/4 v2, 0x0
-
-    .line 606
-    goto :goto_2
+    .line 605
+    if-nez v3, :cond_3
 
     .line 607
+    goto :goto_2
+
+    .line 609
     :cond_3
-    invoke-virtual {v2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v3}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    .line 608
-    move-result-object v2
-
-    .line 611
-    :goto_2
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 612
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 615
+    .line 610
     move-result-object v1
 
-    .line 618
+    .line 613
+    :goto_2
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 614
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 617
+    move-result-object v1
+
+    .line 620
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 619
+    .line 621
     new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 622
-    const-string v2, "  computePowerIndication(): "
 
     .line 624
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "  computePowerIndication(): "
 
     .line 626
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->computePowerIndication()Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 629
+    .line 628
+    invoke-virtual {v0}, Lcom/google/android/systemui/statusbar/KeyguardIndicationControllerGoogle;->computePowerIndication()Ljava/lang/String;
+
+    .line 631
     move-result-object v2
 
-    .line 632
+    .line 634
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 633
+    .line 635
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 636
+    .line 638
     move-result-object v1
 
-    .line 639
+    .line 641
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 640
+    .line 642
     new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 643
-    const-string v2, "  trustGrantedIndication: "
 
     .line 645
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "  trustGrantedIndication: "
 
     .line 647
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->getTrustGrantedIndication()Ljava/lang/String;
-
-    .line 650
-    move-result-object v2
-
-    .line 653
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 654
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 657
-    move-result-object v1
-
-    .line 660
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 661
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 664
-    const-string v2, "    mCoExFaceHelpMsgIdsToShow="
-
-    .line 666
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 668
-    iget-object v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mCoExFaceAcquisitionMsgIdsToShow:Ljava/util/Set;
+    .line 649
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->getTrustGrantedIndication()Ljava/lang/String;
 
-    .line 671
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 652
+    move-result-object v2
 
-    .line 673
+    .line 655
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 656
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 676
+    .line 659
     move-result-object v1
 
-    .line 679
+    .line 662
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 680
-    iget-object v0, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mRotateTextViewController:Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController;
+    .line 663
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 683
-    invoke-virtual {v0, p1, p2}, Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController;->dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    .line 666
+    const-string v2, "    mCoExFaceHelpMsgIdsToShow="
+
+    .line 668
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 670
+    iget-object v2, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mCoExFaceAcquisitionMsgIdsToShow:Ljava/util/Set;
+
+    .line 673
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 675
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 678
+    move-result-object v1
+
+    .line 681
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 682
+    iget-object v1, v0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mRotateTextViewController:Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController;
 
     .line 685
+    invoke-virtual {v1, p1, p2}, Lcom/android/systemui/keyguard/KeyguardIndicationRotateTextViewController;->dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
+
+    .line 687
+    const-string v1, "KeyguardIndicationControllerGoogle:"
+
+    .line 690
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 692
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 695
+    const-string v2, "\tisChargingStringV2Enabled: "
+
+    .line 697
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 699
+    invoke-virtual {v0}, Lcom/google/android/systemui/statusbar/KeyguardIndicationControllerGoogle;->isChargingStringV2Enabled()Z
+
+    .line 702
+    move-result v0
+
+    .line 705
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 706
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 709
+    move-result-object v0
+
+    .line 712
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 713
     :cond_4
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
 
-    .line 688
+    .line 716
     if-eqz v0, :cond_5
 
-    .line 690
+    .line 718
     invoke-virtual {v0, p1, p2}, Lcom/android/systemui/statusbar/phone/ScrimController;->dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 692
+    .line 720
     :cond_5
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
-    .line 695
+    .line 723
     if-eqz v0, :cond_6
 
-    .line 697
+    .line 725
     new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 699
-    const-string v1, "mLightRevealScrim.getRevealEffect(): "
-
-    .line 701
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 703
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
-
-    .line 706
-    iget-object v1, v1, Lcom/android/systemui/statusbar/LightRevealScrim;->revealEffect:Lcom/android/systemui/statusbar/LightRevealEffect;
-
-    .line 708
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 710
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 713
-    move-result-object v0
-
-    .line 716
-    invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
-
-    .line 717
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 720
-    const-string v1, "mLightRevealScrim.getRevealAmount(): "
-
-    .line 722
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 724
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
     .line 727
-    iget v1, v1, Lcom/android/systemui/statusbar/LightRevealScrim;->revealAmount:F
+    const-string v1, "mLightRevealScrim.getRevealEffect(): "
 
     .line 729
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 731
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
     .line 734
-    move-result-object v0
+    iget-object v1, v1, Lcom/android/systemui/statusbar/LightRevealScrim;->revealEffect:Lcom/android/systemui/statusbar/LightRevealEffect;
 
-    .line 737
-    invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+    .line 736
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 738
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 741
+    move-result-object v0
+
+    .line 744
+    invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+
+    .line 745
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 748
+    const-string v1, "mLightRevealScrim.getRevealAmount(): "
+
+    .line 750
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 752
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
+
+    .line 755
+    iget v1, v1, Lcom/android/systemui/statusbar/LightRevealScrim;->revealAmount:F
+
+    .line 757
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 759
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 762
+    move-result-object v0
+
+    .line 765
+    invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+
+    .line 766
     :cond_6
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 741
+    .line 769
     if-eqz v0, :cond_8
 
-    .line 743
+    .line 771
     const-string v1, "StatusBarKeyguardViewManager:"
 
-    .line 745
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 747
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 750
-    const-string v2, "  mRemoteInputActive: "
-
-    .line 752
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 754
-    iget-boolean v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mRemoteInputActive:Z
-
-    .line 757
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 759
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 762
-    move-result-object v1
-
-    .line 765
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 766
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 769
-    const-string v2, "  mDozing: "
-
-    .line 771
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
     .line 773
-    iget-boolean v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mDozing:Z
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 776
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    .line 775
+    new-instance v1, Ljava/lang/StringBuilder;
 
     .line 778
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v2, "  mRemoteInputActive: "
 
-    .line 781
-    move-result-object v1
+    .line 780
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 784
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    .line 782
+    iget-boolean v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mRemoteInputActive:Z
 
     .line 785
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 788
-    const-string v2, "  mAfterKeyguardGoneAction: "
+    .line 787
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 790
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    .line 792
-    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mAfterKeyguardGoneAction:Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;
+    .line 793
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 795
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 794
+    new-instance v1, Ljava/lang/StringBuilder;
 
     .line 797
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v2, "  mDozing: "
 
-    .line 800
-    move-result-object v1
+    .line 799
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 803
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    .line 801
+    iget-boolean v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mDozing:Z
 
     .line 804
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 807
-    const-string v2, "  mAfterKeyguardGoneRunnables: "
+    .line 806
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 809
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    .line 811
-    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mAfterKeyguardGoneRunnables:Ljava/util/ArrayList;
+    .line 812
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 814
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 813
+    new-instance v1, Ljava/lang/StringBuilder;
 
     .line 816
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v2, "  mAfterKeyguardGoneAction: "
 
-    .line 819
-    move-result-object v1
+    .line 818
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 822
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    .line 820
+    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mAfterKeyguardGoneAction:Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;
 
     .line 823
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 826
-    const-string v2, "  mPendingWakeupAction: "
-
-    .line 828
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 830
-    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mPendingWakeupAction:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$DismissWithActionRequest;
-
-    .line 833
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 835
+    .line 825
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 838
+    .line 828
     move-result-object v1
 
-    .line 841
+    .line 831
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 832
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 835
+    const-string v2, "  mAfterKeyguardGoneRunnables: "
+
+    .line 837
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 839
+    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mAfterKeyguardGoneRunnables:Ljava/util/ArrayList;
 
     .line 842
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 845
-    const-string v2, "  isBouncerShowing(): "
+    .line 844
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 847
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 849
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->isBouncerShowing()Z
-
-    .line 852
-    move-result v2
-
-    .line 855
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 856
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 859
     move-result-object v1
 
-    .line 862
+    .line 850
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 863
+    .line 851
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 866
-    const-string v2, "  bouncerIsOrWillBeShowing(): "
+    .line 854
+    const-string v2, "  mPendingWakeupAction: "
 
-    .line 868
+    .line 856
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 870
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->primaryBouncerIsOrWillBeShowing()Z
+    .line 858
+    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mPendingWakeupAction:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$DismissWithActionRequest;
 
-    .line 873
-    move-result v2
+    .line 861
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 876
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 877
+    .line 863
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 880
+    .line 866
     move-result-object v1
+
+    .line 869
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 870
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 873
+    const-string v2, "  isBouncerShowing(): "
+
+    .line 875
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 877
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->isBouncerShowing()Z
+
+    .line 880
+    move-result v2
 
     .line 883
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 884
-    const-string v1, "  Registered KeyguardViewManagerCallbacks:"
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 887
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 889
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 892
-    const-string v1, " SceneContainerFlag enabled:false"
-
-    .line 895
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 897
-    iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mCallbacks:Ljava/util/Set;
-
-    .line 900
-    check-cast v1, Ljava/util/HashSet;
-
-    .line 902
-    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    .line 904
     move-result-object v1
 
-    .line 907
+    .line 890
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 891
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 894
+    const-string v2, "  bouncerIsOrWillBeShowing(): "
+
+    .line 896
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 898
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->primaryBouncerIsOrWillBeShowing()Z
+
+    .line 901
+    move-result v2
+
+    .line 904
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 905
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 908
+    move-result-object v1
+
+    .line 911
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 912
+    const-string v1, "  Registered KeyguardViewManagerCallbacks:"
+
+    .line 915
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 917
+    const-string v1, " SceneContainerFlag enabled:false"
+
+    .line 920
+    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 922
+    iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mCallbacks:Ljava/util/Set;
+
+    .line 925
+    check-cast v1, Ljava/util/HashSet;
+
+    .line 927
+    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    .line 929
+    move-result-object v1
+
+    .line 932
     :goto_3
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 908
+    .line 933
     move-result v2
 
-    .line 911
+    .line 936
     if-eqz v2, :cond_7
 
-    .line 912
+    .line 937
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 914
+    .line 939
     move-result-object v2
-
-    .line 917
-    check-cast v2, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy$statusBarKeyguardViewManagerCallback$1;
-
-    .line 918
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    .line 920
-    const-string v4, "      "
-
-    .line 922
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 924
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 927
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 930
-    move-result-object v2
-
-    .line 933
-    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 934
-    goto :goto_3
-
-    .line 937
-    :cond_7
-    iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mOccludingAppBiometricUI:Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy$occludingAppBiometricUI$1;
-
-    .line 938
-    if-eqz v1, :cond_8
-
-    .line 940
-    const-string v1, "mOccludingAppBiometricUI:"
 
     .line 942
-    invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    check-cast v2, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy$statusBarKeyguardViewManagerCallback$1;
 
-    .line 944
-    iget-object v0, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mOccludingAppBiometricUI:Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy$occludingAppBiometricUI$1;
+    .line 943
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    .line 945
+    const-string v4, "      "
 
     .line 947
-    iget-object v0, v0, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy$occludingAppBiometricUI$1;->this$0:Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 949
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 951
-    const-string v0, "UdfpsKeyguardViewController"
+    .line 952
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 954
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    .line 955
+    move-result-object v2
 
-    .line 956
+    .line 958
+    invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 959
+    goto :goto_3
+
+    .line 962
+    :cond_7
+    iget-object v0, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mOccludingAppBiometricUI:Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy$occludingAppBiometricUI$1;
+
+    .line 963
     :cond_8
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
 
-    .line 959
+    .line 965
     if-eqz v0, :cond_9
 
-    .line 961
+    .line 967
     check-cast v0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
-    .line 963
+    .line 969
     invoke-virtual {v0, p1, p2}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 965
+    .line 971
     goto :goto_4
 
-    .line 968
+    .line 974
     :cond_9
     const-string v0, "  mHeadsUpManager: null"
 
-    .line 969
+    .line 975
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 971
+    .line 977
     :goto_4
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarTouchableRegionManager:Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;
 
-    .line 974
+    .line 980
     if-eqz v0, :cond_a
 
-    .line 976
+    .line 982
     invoke-virtual {v0, p1, p2}, Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;->dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 978
+    .line 984
     goto :goto_5
 
-    .line 981
+    .line 987
     :cond_a
     const-string v0, "  mStatusBarTouchableRegionManager: null"
 
-    .line 982
+    .line 988
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 984
+    .line 990
     :goto_5
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightBarController:Lcom/android/systemui/statusbar/phone/LightBarController;
 
-    .line 987
+    .line 993
     if-eqz v0, :cond_b
 
-    .line 989
+    .line 995
     invoke-virtual {v0, p1, p2}, Lcom/android/systemui/statusbar/phone/LightBarController;->dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 991
+    .line 997
     :cond_b
     const-string p2, "SharedPreferences:"
 
-    .line 994
+    .line 1000
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 996
+    .line 1002
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mContext:Landroid/content/Context;
 
-    .line 999
+    .line 1005
     invoke-static {p2}, Lcom/android/systemui/Prefs;->get(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    .line 1001
+    .line 1007
     move-result-object p2
 
-    .line 1004
+    .line 1010
     invoke-interface {p2}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
-    .line 1005
+    .line 1011
     move-result-object p2
 
-    .line 1008
+    .line 1014
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    .line 1009
+    .line 1015
     move-result-object p2
 
-    .line 1012
+    .line 1018
     invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    .line 1013
+    .line 1019
     move-result-object p2
 
-    .line 1016
+    .line 1022
     :goto_6
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 1017
+    .line 1023
     move-result v0
 
-    .line 1020
+    .line 1026
     if-eqz v0, :cond_c
 
-    .line 1021
+    .line 1027
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 1023
+    .line 1029
     move-result-object v0
 
-    .line 1026
+    .line 1032
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 1027
+    .line 1033
     const-string v1, "  "
 
-    .line 1029
+    .line 1035
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
-
-    .line 1031
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    .line 1034
-    move-result-object v1
 
     .line 1037
-    check-cast v1, Ljava/lang/String;
-
-    .line 1038
-    invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     .line 1040
-    const-string v1, "="
+    move-result-object v1
 
     .line 1043
+    check-cast v1, Ljava/lang/String;
+
+    .line 1044
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1045
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    .line 1046
+    const-string v1, "="
 
-    .line 1048
-    move-result-object v0
+    .line 1049
+    invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     .line 1051
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    .line 1054
+    move-result-object v0
+
+    .line 1057
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 1052
+    .line 1058
     goto :goto_6
 
-    .line 1055
+    .line 1061
     :cond_c
     const-string p2, "Camera gesture intents:"
 
-    .line 1056
+    .line 1062
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1058
+    .line 1064
     new-instance p2, Ljava/lang/StringBuilder;
 
-    .line 1061
+    .line 1067
     const-string v0, "   Insecure camera: "
 
-    .line 1063
+    .line 1069
     invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1065
+    .line 1071
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mContext:Landroid/content/Context;
 
-    .line 1068
+    .line 1074
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 1070
+    .line 1076
     check-cast v1, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 1072
+    .line 1078
     invoke-virtual {v1}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 1074
+    .line 1080
     move-result v1
 
-    .line 1077
+    .line 1083
     new-instance v2, Landroid/content/Intent;
 
-    .line 1078
+    .line 1084
     const-string v3, "android.media.action.STILL_IMAGE_CAMERA"
 
-    .line 1080
+    .line 1086
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1082
+    .line 1088
     invoke-static {v1, v0}, Lcom/android/systemui/camera/CameraIntents$Companion;->getOverrideCameraPackage(ILandroid/content/Context;)Ljava/lang/String;
 
-    .line 1085
+    .line 1091
     move-result-object v0
 
-    .line 1088
+    .line 1094
     if-eqz v0, :cond_d
 
-    .line 1089
+    .line 1095
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1091
+    .line 1097
     :cond_d
     invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 1094
+    .line 1100
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 1097
+    .line 1103
     move-result-object p2
 
-    .line 1100
+    .line 1106
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1101
+    .line 1107
     new-instance p2, Ljava/lang/StringBuilder;
 
-    .line 1104
+    .line 1110
     const-string v0, "   Secure camera: "
 
-    .line 1106
+    .line 1112
     invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1108
+    .line 1114
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mContext:Landroid/content/Context;
 
-    .line 1111
+    .line 1117
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 1113
+    .line 1119
     check-cast v1, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 1115
+    .line 1121
     invoke-virtual {v1}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 1117
+    .line 1123
     move-result v1
 
-    .line 1120
+    .line 1126
     new-instance v2, Landroid/content/Intent;
 
-    .line 1121
+    .line 1127
     const-string v3, "android.media.action.STILL_IMAGE_CAMERA_SECURE"
 
-    .line 1123
+    .line 1129
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1125
+    .line 1131
     invoke-static {v1, v0}, Lcom/android/systemui/camera/CameraIntents$Companion;->getOverrideCameraPackage(ILandroid/content/Context;)Ljava/lang/String;
 
-    .line 1128
+    .line 1134
     move-result-object v0
 
-    .line 1131
+    .line 1137
     if-eqz v0, :cond_e
 
-    .line 1132
+    .line 1138
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1134
+    .line 1140
     :cond_e
     const/high16 v0, 0x800000
 
-    .line 1137
+    .line 1143
     invoke-virtual {v2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1139
+    .line 1145
     move-result-object v0
 
-    .line 1142
+    .line 1148
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 1143
+    .line 1149
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 1146
+    .line 1152
     move-result-object p2
 
-    .line 1149
+    .line 1155
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1150
+    .line 1156
     new-instance p2, Ljava/lang/StringBuilder;
 
-    .line 1153
+    .line 1159
     const-string v0, "   Override package: "
 
-    .line 1155
+    .line 1161
     invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1157
+    .line 1163
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mContext:Landroid/content/Context;
 
-    .line 1160
+    .line 1166
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 1162
+    .line 1168
     check-cast p0, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 1164
+    .line 1170
     invoke-virtual {p0}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 1166
+    .line 1172
     move-result p0
 
-    .line 1169
+    .line 1175
     invoke-static {p0, v0}, Lcom/android/systemui/camera/CameraIntents$Companion;->getOverrideCameraPackage(ILandroid/content/Context;)Ljava/lang/String;
 
-    .line 1170
+    .line 1176
     move-result-object p0
 
-    .line 1173
+    .line 1179
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1174
+    .line 1180
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 1177
+    .line 1183
     move-result-object p0
 
-    .line 1180
+    .line 1186
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1181
+    .line 1187
     return-void
 
-    .line 1184
+    .line 1190
     :catchall_0
     move-exception p0
 
-    .line 1185
+    .line 1191
     :try_start_1
     monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1186
+    .line 1192
     throw p0
-    .line 1187
 .end method
 
 .method public final finishKeyguardFadingAway()V
@@ -3826,11 +3796,8 @@
     invoke-virtual {p0, v0, v1}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
 
     .line 29
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 32
     return-void
-    .line 35
+    .line 32
 .end method
 
 .method public final releaseGestureWakeLock()V
@@ -4276,7 +4243,141 @@
     .line 25
 .end method
 
-.method public final start()V
+.method public final showChargingAnimation(IIJ)V
+    .locals 6
+
+    .line 1
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mContext:Landroid/content/Context;
+
+    .line 2
+    new-instance v4, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;
+
+    .line 4
+    invoke-direct {v4, p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;)V
+
+    .line 6
+    sget-object p0, Lcom/android/systemui/surfaceeffects/ripple/RippleShader$RippleShape;->CIRCLE:Lcom/android/systemui/surfaceeffects/ripple/RippleShader$RippleShape;
+
+    .line 9
+    sget-object v5, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->sUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
+
+    .line 11
+    new-instance p0, Lcom/android/systemui/charging/WirelessChargingAnimation;
+
+    .line 13
+    move-object v0, p0
+
+    .line 15
+    move v2, p2
+
+    .line 16
+    move v3, p1
+
+    .line 17
+    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/charging/WirelessChargingAnimation;-><init>(Landroid/content/Context;IILcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;Lcom/android/internal/logging/UiEventLogger;)V
+
+    .line 18
+    iget-object p0, p0, Lcom/android/systemui/charging/WirelessChargingAnimation;->mCurrentWirelessChargingView:Lcom/android/systemui/charging/WirelessChargingAnimation$WirelessChargingView;
+
+    .line 21
+    if-eqz p0, :cond_2
+
+    .line 23
+    iget-object p1, p0, Lcom/android/systemui/charging/WirelessChargingAnimation$WirelessChargingView;->mNextView:Lcom/android/systemui/charging/WirelessChargingLayout;
+
+    .line 25
+    if-eqz p1, :cond_2
+
+    .line 27
+    sget-object p1, Lcom/android/systemui/charging/WirelessChargingAnimation;->mPreviousWirelessChargingView:Lcom/android/systemui/charging/WirelessChargingAnimation$WirelessChargingView;
+
+    .line 29
+    if-eqz p1, :cond_0
+
+    .line 31
+    const-wide/16 v0, 0x0
+
+    .line 33
+    invoke-virtual {p1, v0, v1}, Lcom/android/systemui/charging/WirelessChargingAnimation$WirelessChargingView;->hide(J)V
+
+    .line 35
+    :cond_0
+    sput-object p0, Lcom/android/systemui/charging/WirelessChargingAnimation;->mPreviousWirelessChargingView:Lcom/android/systemui/charging/WirelessChargingAnimation$WirelessChargingView;
+
+    .line 38
+    sget-boolean p1, Lcom/android/systemui/charging/WirelessChargingAnimation;->DEBUG:Z
+
+    .line 40
+    if-eqz p1, :cond_1
+
+    .line 42
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    .line 44
+    const-string p2, "SHOW: "
+
+    .line 46
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 48
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 51
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 54
+    move-result-object p1
+
+    .line 57
+    const-string p2, "WirelessChargingView"
+
+    .line 58
+    invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 60
+    :cond_1
+    const/4 p1, 0x0
+
+    .line 63
+    iget-object p2, p0, Lcom/android/systemui/charging/WirelessChargingAnimation$WirelessChargingView;->mHandler:Lcom/android/systemui/charging/WirelessChargingAnimation$WirelessChargingView$1;
+
+    .line 64
+    invoke-static {p2, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
+
+    .line 66
+    move-result-object p1
+
+    .line 69
+    invoke-virtual {p2, p1, p3, p4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    .line 70
+    const-wide/16 p1, 0x5dc
+
+    .line 73
+    add-long/2addr p3, p1
+
+    .line 75
+    invoke-virtual {p0, p3, p4}, Lcom/android/systemui/charging/WirelessChargingAnimation$WirelessChargingView;->hide(J)V
+
+    .line 76
+    return-void
+
+    .line 79
+    :cond_2
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    .line 80
+    const-string p1, "setView must have been called"
+
+    .line 82
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    .line 84
+    throw p0
+    .line 87
+.end method
+
+.method public start()V
     .locals 18
 
     .line 1
@@ -4647,3747 +4748,3629 @@
     check-cast v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
 
     .line 251
-    iget-object v9, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootViewComponentFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$WindowRootViewComponentFactory;
+    iget-object v9, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootViewComponentFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WindowRootViewComponentFactory;
 
     .line 253
-    invoke-virtual {v9}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$WindowRootViewComponentFactory;->create()Lcom/android/systemui/scene/ui/view/WindowRootViewComponent;
+    iget-object v9, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WindowRootViewComponentFactory;->sysUIGoogleSysUIComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
     .line 255
-    move-result-object v9
+    iget-object v9, v9, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->providesWindowRootViewProvider:Ldagger/internal/DelegateFactory;
 
-    .line 258
-    invoke-interface {v9}, Lcom/android/systemui/scene/ui/view/WindowRootViewComponent;->getWindowRootView()Lcom/android/systemui/scene/ui/view/WindowRootView;
+    .line 257
+    invoke-virtual {v9}, Ldagger/internal/DelegateFactory;->get()Ljava/lang/Object;
 
     .line 259
     move-result-object v9
 
     .line 262
-    iput-object v9, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
+    check-cast v9, Lcom/android/systemui/shade/NotificationShadeWindowView;
 
     .line 263
-    iget-object v10, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mShadeInteractorLazy:Ldagger/Lazy;
+    iput-object v9, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
     .line 265
-    invoke-interface {v10}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    iget-object v10, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mShadeInteractorLazy:Ldagger/Lazy;
 
     .line 267
+    invoke-interface {v10}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    .line 269
     move-result-object v11
 
-    .line 270
+    .line 272
     check-cast v11, Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
 
-    .line 271
+    .line 273
     check-cast v11, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;
 
-    .line 273
+    .line 275
     iget-object v11, v11, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;->baseShadeInteractor:Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;
 
-    .line 275
+    .line 277
     invoke-interface {v11}, Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;->isAnyExpanded()Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 277
+    .line 279
     move-result-object v11
 
-    .line 280
+    .line 282
     new-instance v12, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl$$ExternalSyntheticLambda3;
 
-    .line 281
+    .line 283
     invoke-direct {v12, v6, v4}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;I)V
 
-    .line 283
+    .line 285
     invoke-static {v9, v11, v12}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)V
 
-    .line 286
-    iget-object v9, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
-
-    .line 289
-    invoke-interface {v10}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    .line 288
+    iget-object v9, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
     .line 291
-    move-result-object v10
-
-    .line 294
-    check-cast v10, Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
-
-    .line 295
-    check-cast v10, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;
-
-    .line 297
-    iget-object v10, v10, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;->baseShadeInteractor:Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;
-
-    .line 299
-    invoke-interface {v10}, Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;->isQsExpanded()Lkotlinx/coroutines/flow/StateFlow;
-
-    .line 301
-    move-result-object v10
-
-    .line 304
-    new-instance v11, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl$$ExternalSyntheticLambda3;
-
-    .line 305
-    invoke-direct {v11, v6, v7}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;I)V
-
-    .line 307
-    invoke-static {v9, v10, v11}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)V
-
-    .line 310
-    iget-object v9, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
-
-    .line 313
-    iget-object v10, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mCommunalInteractor:Ldagger/Lazy;
-
-    .line 315
     invoke-interface {v10}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 317
+    .line 293
     move-result-object v10
 
-    .line 320
-    check-cast v10, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;
+    .line 296
+    check-cast v10, Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
 
-    .line 321
-    iget-object v10, v10, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;->isCommunalVisible:Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1;
+    .line 297
+    check-cast v10, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;
 
-    .line 323
+    .line 299
+    iget-object v10, v10, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;->baseShadeInteractor:Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;
+
+    .line 301
+    invoke-interface {v10}, Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;->isQsExpanded()Lkotlinx/coroutines/flow/StateFlow;
+
+    .line 303
+    move-result-object v10
+
+    .line 306
     new-instance v11, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl$$ExternalSyntheticLambda3;
 
-    .line 325
-    invoke-direct {v11, v6, v5}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;I)V
+    .line 307
+    invoke-direct {v11, v6, v7}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;I)V
 
-    .line 327
+    .line 309
     invoke-static {v9, v10, v11}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)V
 
-    .line 330
+    .line 312
+    iget-object v9, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
+
+    .line 315
+    iget-object v10, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mCommunalInteractor:Ldagger/Lazy;
+
+    .line 317
+    invoke-interface {v10}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    .line 319
+    move-result-object v10
+
+    .line 322
+    check-cast v10, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;
+
+    .line 323
+    iget-object v10, v10, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;->isCommunalVisible:Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1;
+
+    .line 325
+    new-instance v11, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl$$ExternalSyntheticLambda3;
+
+    .line 327
+    invoke-direct {v11, v6, v5}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;I)V
+
+    .line 329
+    invoke-static {v9, v10, v11}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)V
+
+    .line 332
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 333
+    .line 335
     move-result-object v9
 
-    .line 336
+    .line 338
     iget-object v10, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 337
-    const v11, 0x7f0b057f    # @id/notification_stack_scroller
-
     .line 339
+    const v11, 0x7f0a05a4    # @id/notification_stack_scroller
+
+    .line 341
     invoke-virtual {v10, v11}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
-    .line 342
+    .line 344
     move-result-object v11
 
-    .line 345
+    .line 347
     check-cast v11, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 346
+    .line 348
     iput-object v11, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mStackScrollLayout:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 348
+    .line 350
     new-instance v11, Landroid/view/GestureDetector;
 
-    .line 350
+    .line 352
     invoke-virtual {v10}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
-    .line 352
+    .line 354
     move-result-object v12
 
-    .line 355
+    .line 357
     iget-object v13, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mPulsingGestureListener:Lcom/android/systemui/shade/PulsingGestureListener;
 
-    .line 356
+    .line 358
     invoke-direct {v11, v12, v13}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    .line 358
+    .line 360
     iput-object v11, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mPulsingWakeupGestureHandler:Landroid/view/GestureDetector;
 
-    .line 361
+    .line 363
     sget-object v11, Lcom/android/systemui/flags/Flags;->NULL_FLAG:Lcom/android/systemui/flags/UnreleasedFlag;
 
-    .line 363
+    .line 365
     iget-object v11, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mFeatureFlagsClassic:Lcom/android/systemui/flags/FeatureFlagsClassic;
 
-    .line 365
+    .line 367
     invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 367
+    .line 369
     iget-object v11, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mNotificationInsetsController:Lcom/android/systemui/statusbar/NotificationInsetsImpl;
 
-    .line 370
-    iput-object v11, v10, Lcom/android/systemui/scene/ui/view/WindowRootView;->layoutInsetsController:Lcom/android/systemui/statusbar/NotificationInsetsImpl;
-
     .line 372
-    new-instance v11, Lcom/android/systemui/shade/NotificationShadeWindowViewController$1;
+    iput-object v11, v10, Lcom/android/systemui/shade/NotificationShadeWindowView;->layoutInsetsController:Lcom/android/systemui/statusbar/NotificationInsetsImpl;
 
     .line 374
-    invoke-direct {v11, v9}, Lcom/android/systemui/shade/NotificationShadeWindowViewController$1;-><init>(Lcom/android/systemui/shade/NotificationShadeWindowViewController;)V
+    new-instance v11, Lcom/android/systemui/shade/NotificationShadeWindowViewController$1;
 
     .line 376
+    invoke-direct {v11, v9}, Lcom/android/systemui/shade/NotificationShadeWindowViewController$1;-><init>(Lcom/android/systemui/shade/NotificationShadeWindowViewController;)V
+
+    .line 378
     iput-object v11, v10, Lcom/android/systemui/shade/NotificationShadeWindowView;->mInteractionEventHandler:Lcom/android/systemui/shade/NotificationShadeWindowViewController$1;
 
-    .line 379
+    .line 381
     new-instance v11, Lcom/android/systemui/shade/NotificationShadeWindowViewController$2;
 
-    .line 381
+    .line 383
     invoke-direct {v11, v9}, Lcom/android/systemui/shade/NotificationShadeWindowViewController$2;-><init>(Lcom/android/systemui/shade/NotificationShadeWindowViewController;)V
 
-    .line 383
+    .line 385
     invoke-virtual {v10, v11}, Landroid/widget/FrameLayout;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
 
-    .line 386
+    .line 388
     iget-object v11, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mLockscreenShadeTransitionController:Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
 
-    .line 389
+    .line 391
     iget-object v11, v11, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->touchHelper:Lcom/android/systemui/statusbar/DragDownHelper;
 
-    .line 391
+    .line 393
     invoke-virtual {v9, v11}, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->setDragDownHelper(Lcom/android/systemui/statusbar/DragDownHelper;)V
 
-    .line 393
+    .line 395
     iget-object v11, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mDepthController:Lcom/android/systemui/statusbar/NotificationShadeDepthController;
 
-    .line 396
+    .line 398
     iput-object v10, v11, Lcom/android/systemui/statusbar/NotificationShadeDepthController;->root:Landroid/view/View;
 
-    .line 398
+    .line 400
     iget-object v9, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mShadeExpansionStateManager:Lcom/android/systemui/shade/ShadeExpansionStateManager;
 
-    .line 400
+    .line 402
     invoke-virtual {v9, v11}, Lcom/android/systemui/shade/ShadeExpansionStateManager;->addExpansionListener(Lcom/android/systemui/shade/ShadeExpansionListener;)Lcom/android/systemui/shade/ShadeExpansionChangeEvent;
 
-    .line 402
+    .line 404
     move-result-object v9
 
-    .line 405
+    .line 407
     invoke-virtual {v11, v9}, Lcom/android/systemui/statusbar/NotificationShadeDepthController;->onPanelExpansionChanged(Lcom/android/systemui/shade/ShadeExpansionChangeEvent;)V
 
-    .line 406
+    .line 408
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 409
+    .line 411
     move-result-object v9
 
-    .line 412
-    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 413
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 416
+    .line 414
     iget-object v10, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mGlanceableHubContainerController:Lcom/android/systemui/shade/GlanceableHubContainerController;
 
-    .line 419
+    .line 415
     iget-object v10, v10, Lcom/android/systemui/shade/GlanceableHubContainerController;->communalInteractor:Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;
 
-    .line 421
+    .line 417
     iget-object v11, v10, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;->isCommunalAvailable:Lkotlinx/coroutines/flow/ReadonlySharedFlow;
 
-    .line 423
+    .line 419
     iget-object v10, v10, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;->editModeOpen:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 425
+    .line 421
     filled-new-array {v11, v10}, [Lkotlinx/coroutines/flow/Flow;
+
+    .line 423
+    move-result-object v10
+
+    .line 426
+    invoke-static {v10}, Lkotlin/collections/ArraysKt;->asIterable([Ljava/lang/Object;)Ljava/lang/Iterable;
 
     .line 427
     move-result-object v10
 
     .line 430
-    invoke-static {v10}, Lkotlin/collections/ArraysKt;->asIterable([Ljava/lang/Object;)Ljava/lang/Iterable;
+    invoke-static {v10}, Lkotlin/collections/CollectionsKt;->toList(Ljava/lang/Iterable;)Ljava/util/List;
 
     .line 431
     move-result-object v10
 
     .line 434
-    invoke-static {v10}, Lkotlin/collections/CollectionsKt;->toList(Ljava/lang/Iterable;)Ljava/util/List;
-
-    .line 435
-    move-result-object v10
-
-    .line 438
     new-array v11, v4, [Lkotlinx/coroutines/flow/Flow;
 
-    .line 439
+    .line 435
     invoke-interface {v10, v11}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 441
+    .line 437
     move-result-object v10
 
-    .line 444
+    .line 440
     check-cast v10, [Lkotlinx/coroutines/flow/Flow;
 
-    .line 445
+    .line 441
     new-instance v11, Lcom/android/systemui/util/kotlin/BooleanFlowOperators$not$$inlined$map$1;
 
-    .line 447
+    .line 443
     invoke-direct {v11, v5, v10}, Lcom/android/systemui/util/kotlin/BooleanFlowOperators$not$$inlined$map$1;-><init>(ILjava/lang/Object;)V
 
-    .line 449
+    .line 445
     invoke-static {v11}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 452
+    .line 448
     move-result-object v10
 
-    .line 455
+    .line 451
     new-instance v11, Lcom/android/systemui/shade/NotificationShadeWindowViewController$$ExternalSyntheticLambda5;
 
-    .line 456
+    .line 452
     invoke-direct {v11, v9, v4}, Lcom/android/systemui/shade/NotificationShadeWindowViewController$$ExternalSyntheticLambda5;-><init>(Lcom/android/systemui/shade/NotificationShadeWindowViewController;I)V
 
-    .line 458
+    .line 454
     iget-object v9, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 461
+    .line 457
     invoke-static {v9, v10, v11}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)V
 
-    .line 463
+    .line 459
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 466
+    .line 462
     move-result-object v9
 
-    .line 469
+    .line 465
     iget-object v10, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeController:Lcom/android/systemui/shade/ShadeController;
 
-    .line 470
+    .line 466
     invoke-interface {v10, v9}, Lcom/android/systemui/shade/ShadeController;->setNotificationShadeWindowViewController(Lcom/android/systemui/shade/NotificationShadeWindowViewController;)V
 
-    .line 472
+    .line 468
     iget-object v9, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBackActionInteractor:Lcom/android/systemui/back/domain/interactor/BackActionInteractor;
 
-    .line 475
+    .line 471
     iget-object v11, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mQsController:Lcom/android/systemui/shade/QuickSettingsController;
 
-    .line 477
+    .line 473
     iput-object v11, v9, Lcom/android/systemui/back/domain/interactor/BackActionInteractor;->qsController:Lcom/android/systemui/shade/QuickSettingsController;
 
-    .line 479
+    .line 475
     iget-object v11, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeSurface:Lcom/android/systemui/shade/ShadeSurface;
 
-    .line 481
+    .line 477
     iput-object v11, v9, Lcom/android/systemui/back/domain/interactor/BackActionInteractor;->shadeBackActionInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeBackActionInteractor;
 
-    .line 483
+    .line 479
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
+
+    .line 481
+    move-result-object v9
+
+    .line 484
+    iget-object v9, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
     .line 485
-    move-result-object v9
-
-    .line 488
-    iget-object v9, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
-
-    .line 489
     new-instance v12, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda30;
 
-    .line 491
+    .line 487
     invoke-direct {v12, v1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda30;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;)V
 
-    .line 493
+    .line 489
     invoke-virtual {v9, v12}, Landroid/widget/FrameLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 496
+    .line 492
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 499
+    .line 495
     move-result-object v9
 
-    .line 502
+    .line 498
     iget-object v9, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 503
+    .line 499
     iget-object v12, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mWallpaperController:Lcom/android/systemui/util/WallpaperController;
 
-    .line 505
+    .line 501
     iput-object v9, v12, Lcom/android/systemui/util/WallpaperController;->rootView:Landroid/view/View;
 
-    .line 507
+    .line 503
     iget-object v9, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDemoModeCallback:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$22;
 
-    .line 509
+    .line 505
     iget-object v12, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDemoModeController:Lcom/android/systemui/demomode/DemoModeController;
 
-    .line 511
+    .line 507
     invoke-virtual {v12, v9}, Lcom/android/systemui/demomode/DemoModeController;->addCallback(Lcom/android/systemui/demomode/DemoMode;)V
 
-    .line 513
+    .line 509
     iget-object v9, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarModeRepository:Lcom/android/systemui/statusbar/data/repository/StatusBarModeRepositoryImpl;
 
-    .line 516
+    .line 512
     iget-object v12, v9, Lcom/android/systemui/statusbar/data/repository/StatusBarModeRepositoryImpl;->defaultDisplay:Lcom/android/systemui/statusbar/data/repository/StatusBarModePerDisplayRepositoryImpl;
 
-    .line 518
+    .line 514
     iget-object v12, v12, Lcom/android/systemui/statusbar/data/repository/StatusBarModePerDisplayRepositoryImpl;->isTransientShown:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 520
+    .line 516
     new-instance v13, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;
 
-    .line 522
+    .line 518
     invoke-direct {v13, v1, v3}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
 
-    .line 524
+    .line 520
     iget-object v14, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
 
-    .line 527
+    .line 523
     invoke-virtual {v14, v12, v13}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 529
+    .line 525
     iget-object v9, v9, Lcom/android/systemui/statusbar/data/repository/StatusBarModeRepositoryImpl;->defaultDisplay:Lcom/android/systemui/statusbar/data/repository/StatusBarModePerDisplayRepositoryImpl;
 
-    .line 532
+    .line 528
     iget-object v9, v9, Lcom/android/systemui/statusbar/data/repository/StatusBarModePerDisplayRepositoryImpl;->statusBarMode:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 534
+    .line 530
     new-instance v12, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;
 
-    .line 536
+    .line 532
     invoke-direct {v12, v1, v2}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
 
-    .line 538
+    .line 534
     invoke-virtual {v14, v9, v12}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 541
+    .line 537
     iget-object v9, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mCommandQueueCallbacksLazy:Ldagger/Lazy;
 
-    .line 544
+    .line 540
     invoke-interface {v9}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 546
+    .line 542
     move-result-object v9
 
-    .line 549
+    .line 545
     check-cast v9, Lcom/android/systemui/statusbar/phone/CentralSurfacesCommandQueueCallbacks;
 
-    .line 550
+    .line 546
     iput-object v9, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mCommandQueueCallbacks:Lcom/android/systemui/statusbar/phone/CentralSurfacesCommandQueueCallbacks;
 
-    .line 552
+    .line 548
     iget-object v12, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mCommandQueue:Lcom/android/systemui/statusbar/CommandQueue;
 
-    .line 554
+    .line 550
     invoke-virtual {v12, v9}, Lcom/android/systemui/statusbar/CommandQueue;->addCallback(Lcom/android/systemui/statusbar/CommandQueue$Callbacks;)V
 
-    .line 556
+    .line 552
     iget-object v9, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeExpansionStateManager:Lcom/android/systemui/shade/ShadeExpansionStateManager;
 
-    .line 559
+    .line 555
     iget-object v12, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mWakeUpCoordinator:Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;
 
-    .line 561
+    .line 557
     invoke-virtual {v9, v12}, Lcom/android/systemui/shade/ShadeExpansionStateManager;->addExpansionListener(Lcom/android/systemui/shade/ShadeExpansionListener;)Lcom/android/systemui/shade/ShadeExpansionChangeEvent;
 
-    .line 563
+    .line 559
     move-result-object v9
 
-    .line 566
+    .line 562
     invoke-virtual {v12, v9}, Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;->onPanelExpansionChanged(Lcom/android/systemui/shade/ShadeExpansionChangeEvent;)V
 
-    .line 567
+    .line 563
     iget-object v9, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mPluginDependencyProvider:Lcom/android/systemui/plugins/PluginDependencyProvider;
 
-    .line 570
+    .line 566
     const-class v12, Lcom/android/systemui/plugins/DarkIconDispatcher;
 
-    .line 572
+    .line 568
     invoke-virtual {v9, v12}, Lcom/android/systemui/plugins/PluginDependencyProvider;->allowPluginDependency(Ljava/lang/Class;)V
 
-    .line 574
+    .line 570
     const-class v12, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
-    .line 577
+    .line 573
     invoke-virtual {v9, v12}, Lcom/android/systemui/plugins/PluginDependencyProvider;->allowPluginDependency(Ljava/lang/Class;)V
 
-    .line 579
+    .line 575
     new-instance v9, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda1;
 
-    .line 582
+    .line 578
     invoke-direct {v9, v1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda1;-><init>(Ljava/lang/Object;)V
 
-    .line 584
+    .line 580
     iget-object v12, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarInitializer:Lcom/android/systemui/statusbar/core/StatusBarInitializer;
 
-    .line 587
+    .line 583
     iput-object v9, v12, Lcom/android/systemui/statusbar/core/StatusBarInitializer;->statusBarViewUpdatedListener:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda1;
 
-    .line 589
+    .line 585
     iget-object v9, v12, Lcom/android/systemui/statusbar/core/StatusBarInitializer;->windowController:Lcom/android/systemui/statusbar/window/StatusBarWindowController;
 
-    .line 591
+    .line 587
     iget-object v13, v9, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mStatusBarWindowView:Lcom/android/systemui/statusbar/window/StatusBarWindowView;
 
-    .line 593
+    .line 589
     iget-object v9, v9, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mFragmentService:Lcom/android/systemui/fragments/FragmentService;
 
-    .line 595
+    .line 591
     invoke-virtual {v9, v13}, Lcom/android/systemui/fragments/FragmentService;->getFragmentHostManager(Landroid/view/View;)Lcom/android/systemui/fragments/FragmentHostManager;
 
-    .line 597
+    .line 593
     move-result-object v9
 
-    .line 600
+    .line 596
     new-instance v13, Lcom/android/systemui/statusbar/core/StatusBarInitializer$initializeStatusBar$1;
 
-    .line 601
+    .line 597
     invoke-direct {v13, v12}, Lcom/android/systemui/statusbar/core/StatusBarInitializer$initializeStatusBar$1;-><init>(Lcom/android/systemui/statusbar/core/StatusBarInitializer;)V
 
-    .line 603
+    .line 599
     const-string v14, "CollapsedStatusBarFragment"
 
-    .line 606
+    .line 602
     invoke-virtual {v9, v14, v13}, Lcom/android/systemui/fragments/FragmentHostManager;->addTagListener(Ljava/lang/String;Lcom/android/systemui/fragments/FragmentHostManager$FragmentListener;)V
 
-    .line 608
+    .line 604
     iget-object v9, v9, Lcom/android/systemui/fragments/FragmentHostManager;->mFragments:Landroid/app/FragmentController;
 
-    .line 611
+    .line 607
     invoke-virtual {v9}, Landroid/app/FragmentController;->getFragmentManager()Landroid/app/FragmentManager;
+
+    .line 609
+    move-result-object v9
+
+    .line 612
+    invoke-virtual {v9}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
 
     .line 613
     move-result-object v9
 
     .line 616
-    invoke-virtual {v9}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
-
-    .line 617
-    move-result-object v9
-
-    .line 620
     iget-object v12, v12, Lcom/android/systemui/statusbar/core/StatusBarInitializer;->collapsedStatusBarFragmentProvider:Ljavax/inject/Provider;
 
-    .line 621
+    .line 617
     invoke-interface {v12}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 623
+    .line 619
     move-result-object v12
 
-    .line 626
+    .line 622
     check-cast v12, Landroid/app/Fragment;
 
-    .line 627
-    const v13, 0x7f0b0765    # @id/status_bar_container
+    .line 623
+    const v13, 0x7f0a0794    # @id/status_bar_container
 
-    .line 629
+    .line 625
     invoke-virtual {v9, v13, v12, v14}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
 
-    .line 632
+    .line 628
     move-result-object v9
 
-    .line 635
+    .line 631
     invoke-virtual {v9}, Landroid/app/FragmentTransaction;->commit()I
 
-    .line 636
+    .line 632
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 639
+    .line 635
     move-result-object v9
 
-    .line 642
+    .line 638
     iget-object v9, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 643
+    .line 639
     iget-object v12, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarTouchableRegionManager:Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;
 
-    .line 645
+    .line 641
     iput-object v9, v12, Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;->mNotificationShadeWindowView:Landroid/view/View;
 
-    .line 647
-    const v13, 0x7f0b057d    # @id/notification_panel
+    .line 643
+    const v13, 0x7f0a05a2    # @id/notification_panel
 
-    .line 649
+    .line 645
     invoke-virtual {v9, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 652
+    .line 648
     move-result-object v9
 
-    .line 655
+    .line 651
     iput-object v9, v12, Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;->mNotificationPanelView:Landroid/view/View;
 
-    .line 656
+    .line 652
     iget-object v9, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNavigationBarController:Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;
 
-    .line 658
+    .line 654
     invoke-virtual {v9}, Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;->updateAccessibilityButtonModeIfNeeded()V
 
-    .line 660
+    .line 656
     invoke-virtual {v9}, Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;->initializeTaskbarIfNecessary()Z
 
-    .line 663
+    .line 659
     move-result v12
 
-    .line 666
+    .line 662
     xor-int/2addr v12, v7
 
-    .line 667
+    .line 663
     iget-object v13, v9, Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;->mDisplayTracker:Lcom/android/systemui/settings/DisplayTracker;
 
-    .line 668
+    .line 664
     move-object v14, v13
 
-    .line 670
+    .line 666
     check-cast v14, Lcom/android/systemui/settings/DisplayTrackerImpl;
 
-    .line 671
+    .line 667
     iget-object v14, v14, Lcom/android/systemui/settings/DisplayTrackerImpl;->displayManager:Landroid/hardware/display/DisplayManager;
 
-    .line 673
+    .line 669
     invoke-virtual {v14}, Landroid/hardware/display/DisplayManager;->getDisplays()[Landroid/view/Display;
 
-    .line 675
+    .line 671
     move-result-object v14
 
-    .line 678
+    .line 674
     array-length v15, v14
 
-    .line 679
+    .line 675
     move v2, v4
 
-    .line 680
+    .line 676
     :goto_2
     if-ge v2, v15, :cond_3
 
-    .line 681
+    .line 677
     aget-object v3, v14, v2
 
-    .line 683
+    .line 679
     if-nez v12, :cond_1
 
-    .line 685
+    .line 681
     invoke-virtual {v3}, Landroid/view/Display;->getDisplayId()I
 
-    .line 687
+    .line 683
     move-result v16
 
-    .line 690
+    .line 686
     invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 691
+    .line 687
     if-eqz v16, :cond_2
 
-    .line 694
+    .line 690
     :cond_1
     invoke-virtual {v9, v3, v8, v0}, Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;->createNavigationBar(Landroid/view/Display;Landroid/os/Bundle;Lcom/android/internal/statusbar/RegisterStatusBarResult;)V
 
-    .line 696
+    .line 692
     :cond_2
     add-int/2addr v2, v7
 
-    .line 699
+    .line 695
     const/4 v3, 0x3
 
-    .line 700
+    .line 696
     goto :goto_2
 
-    .line 701
+    .line 697
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 702
+    .line 698
     move-result-object v2
 
-    .line 705
+    .line 701
     iget-object v2, v2, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 706
-    const v3, 0x7f0b00b1    # @id/ambient_indication_container
+    .line 702
+    const v3, 0x7f0a00b1    # @id/ambient_indication_container
 
-    .line 708
+    .line 704
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
-    .line 711
+    .line 707
     move-result-object v2
 
-    .line 714
+    .line 710
     iput-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mAmbientIndicationContainer:Landroid/view/View;
 
-    .line 715
+    .line 711
     new-instance v2, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;
 
-    .line 717
+    .line 713
     invoke-direct {v2, v1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;)V
 
-    .line 719
+    .line 715
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mAutoHideController:Lcom/android/systemui/statusbar/phone/AutoHideController;
 
-    .line 722
+    .line 718
     iput-object v2, v3, Lcom/android/systemui/statusbar/phone/AutoHideController;->mStatusBar:Lcom/android/systemui/statusbar/AutoHideUiElement;
 
-    .line 724
+    .line 720
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 726
+    .line 722
     move-result-object v2
 
-    .line 729
+    .line 725
     iget-object v2, v2, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 730
-    const v3, 0x7f0b06bd    # @id/scrim_behind
+    .line 726
+    const v3, 0x7f0a06e6    # @id/scrim_behind
 
-    .line 732
+    .line 728
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
-    .line 735
+    .line 731
     move-result-object v2
 
-    .line 738
+    .line 734
     check-cast v2, Lcom/android/systemui/scrim/ScrimView;
 
-    .line 739
+    .line 735
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 741
+    .line 737
     move-result-object v3
 
-    .line 744
+    .line 740
     iget-object v3, v3, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 745
-    const v9, 0x7f0b06c0    # @id/scrim_notifications
+    .line 741
+    const v9, 0x7f0a06e9    # @id/scrim_notifications
 
-    .line 747
+    .line 743
     invoke-virtual {v3, v9}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
-    .line 750
+    .line 746
     move-result-object v3
 
-    .line 753
+    .line 749
     check-cast v3, Lcom/android/systemui/scrim/ScrimView;
 
-    .line 754
+    .line 750
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 756
+    .line 752
     move-result-object v9
 
-    .line 759
+    .line 755
     iget-object v9, v9, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 760
-    const v12, 0x7f0b06be    # @id/scrim_in_front
+    .line 756
+    const v12, 0x7f0a06e7    # @id/scrim_in_front
 
-    .line 762
+    .line 758
     invoke-virtual {v9, v12}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
-    .line 765
+    .line 761
     move-result-object v9
 
-    .line 768
+    .line 764
     check-cast v9, Lcom/android/systemui/scrim/ScrimView;
 
-    .line 769
+    .line 765
     new-instance v12, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;
 
-    .line 771
+    .line 767
     const/4 v13, 0x5
 
-    .line 773
+    .line 769
     invoke-direct {v12, v1, v13}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
 
-    .line 774
+    .line 770
     iget-object v13, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
 
-    .line 777
+    .line 773
     iput-object v12, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimVisibleListener:Ljava/util/function/Consumer;
 
-    .line 779
+    .line 775
     iput-object v3, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mNotificationsScrim:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 781
+    .line 777
     iput-object v2, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 783
+    .line 779
     iput-object v9, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimInFront:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 785
+    .line 781
     invoke-virtual {v13}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateThemeColors()V
 
-    .line 787
+    .line 783
     iget-object v9, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mNotificationsScrim:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 790
+    .line 786
     invoke-virtual {v13, v9}, Lcom/android/systemui/statusbar/phone/ScrimController;->getScrimName(Lcom/android/systemui/scrim/ScrimView;)Ljava/lang/String;
+
+    .line 788
+    move-result-object v12
+
+    .line 791
+    iput-object v12, v9, Lcom/android/systemui/scrim/ScrimView;->mScrimName:Ljava/lang/String;
 
     .line 792
-    move-result-object v12
-
-    .line 795
-    iput-object v12, v9, Lcom/android/systemui/scrim/ScrimView;->mScrimName:Ljava/lang/String;
-
-    .line 796
     iget-object v9, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 798
+    .line 794
     invoke-virtual {v13, v9}, Lcom/android/systemui/statusbar/phone/ScrimController;->getScrimName(Lcom/android/systemui/scrim/ScrimView;)Ljava/lang/String;
+
+    .line 796
+    move-result-object v12
+
+    .line 799
+    iput-object v12, v9, Lcom/android/systemui/scrim/ScrimView;->mScrimName:Ljava/lang/String;
 
     .line 800
-    move-result-object v12
-
-    .line 803
-    iput-object v12, v9, Lcom/android/systemui/scrim/ScrimView;->mScrimName:Ljava/lang/String;
-
-    .line 804
     iget-object v9, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimInFront:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 806
+    .line 802
     invoke-virtual {v13, v9}, Lcom/android/systemui/statusbar/phone/ScrimController;->getScrimName(Lcom/android/systemui/scrim/ScrimView;)Ljava/lang/String;
 
-    .line 808
+    .line 804
     move-result-object v12
 
-    .line 811
+    .line 807
     iput-object v12, v9, Lcom/android/systemui/scrim/ScrimView;->mScrimName:Ljava/lang/String;
 
-    .line 812
+    .line 808
     iget-boolean v9, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mClipsQsScrim:Z
 
-    .line 814
+    .line 810
     invoke-virtual {v2, v9}, Lcom/android/systemui/scrim/ScrimView;->enableBottomEdgeConcave(Z)V
 
-    .line 816
+    .line 812
     iget-object v9, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mNotificationsScrim:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 819
+    .line 815
     iget-object v9, v9, Lcom/android/systemui/scrim/ScrimView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 821
+    .line 817
     instance-of v12, v9, Lcom/android/systemui/scrim/ScrimDrawable;
 
-    .line 823
+    .line 819
     if-eqz v12, :cond_5
 
-    .line 825
+    .line 821
     check-cast v9, Lcom/android/systemui/scrim/ScrimDrawable;
 
-    .line 827
+    .line 823
     iget-boolean v12, v9, Lcom/android/systemui/scrim/ScrimDrawable;->mCornerRadiusEnabled:Z
 
-    .line 829
+    .line 825
     if-ne v12, v7, :cond_4
 
-    .line 831
+    .line 827
     goto :goto_3
 
-    .line 833
+    .line 829
     :cond_4
     iput-boolean v7, v9, Lcom/android/systemui/scrim/ScrimDrawable;->mCornerRadiusEnabled:Z
 
-    .line 834
+    .line 830
     invoke-virtual {v9}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    .line 836
+    .line 832
     :cond_5
     :goto_3
     invoke-static {}, Lcom/android/systemui/statusbar/phone/ScrimState;->values()[Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 839
+    .line 835
     move-result-object v9
 
-    .line 842
+    .line 838
     move v12, v4
 
-    .line 843
+    .line 839
     :goto_4
     array-length v14, v9
 
-    .line 844
+    .line 840
     if-ge v12, v14, :cond_6
 
-    .line 845
+    .line 841
     aget-object v14, v9, v12
 
-    .line 847
+    .line 843
     iget-object v15, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimInFront:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 849
+    .line 845
     iget-object v8, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehind:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 851
+    .line 847
     iget-object v4, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
-    .line 853
+    .line 849
     iget-object v5, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
-    .line 855
+    .line 851
     invoke-virtual {v14}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 857
+    .line 853
     invoke-virtual {v8}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    .line 860
+    .line 856
     move-result-object v7
 
-    .line 863
+    .line 859
     move-object/from16 v17, v0
 
-    .line 864
-    const v0, 0x7f0604e5    # @color/shade_scrim_background_dark '@android:color/black'
+    .line 860
+    const v0, 0x7f0604f3    # @color/shade_scrim_background_dark '@android:color/black'
 
-    .line 866
+    .line 862
     invoke-virtual {v7, v0}, Landroid/content/Context;->getColor(I)I
 
-    .line 869
+    .line 865
     move-result v0
 
-    .line 872
+    .line 868
     iput v0, v14, Lcom/android/systemui/statusbar/phone/ScrimState;->mBackgroundColor:I
 
-    .line 873
+    .line 869
     iput-object v15, v14, Lcom/android/systemui/statusbar/phone/ScrimState;->mScrimInFront:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 875
+    .line 871
     iput-object v8, v14, Lcom/android/systemui/statusbar/phone/ScrimState;->mScrimBehind:Lcom/android/systemui/scrim/ScrimView;
 
-    .line 877
+    .line 873
     iput-object v4, v14, Lcom/android/systemui/statusbar/phone/ScrimState;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
-    .line 879
+    .line 875
     iput-object v5, v14, Lcom/android/systemui/statusbar/phone/ScrimState;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
-    .line 881
+    .line 877
     invoke-virtual {v4}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getDisplayNeedsBlanking()Z
 
-    .line 883
+    .line 879
     move-result v0
 
-    .line 886
+    .line 882
     iput-boolean v0, v14, Lcom/android/systemui/statusbar/phone/ScrimState;->mDisplayRequiresBlanking:Z
 
-    .line 887
+    .line 883
     aget-object v0, v9, v12
 
-    .line 889
+    .line 885
     iget v4, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimBehindAlphaKeyguard:F
 
-    .line 891
+    .line 887
     iput v4, v0, Lcom/android/systemui/statusbar/phone/ScrimState;->mScrimBehindAlphaKeyguard:F
 
-    .line 893
+    .line 889
     iget v4, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mDefaultScrimAlpha:F
 
-    .line 895
+    .line 891
     iput v4, v0, Lcom/android/systemui/statusbar/phone/ScrimState;->mDefaultScrimAlpha:F
 
-    .line 897
+    .line 893
     const/4 v4, 0x1
 
-    .line 899
+    .line 895
     add-int/2addr v12, v4
 
-    .line 900
+    .line 896
     move v7, v4
 
-    .line 901
+    .line 897
     move-object/from16 v0, v17
 
-    .line 902
+    .line 898
     const/4 v4, 0x0
 
-    .line 904
+    .line 900
     const/4 v5, 0x2
 
-    .line 905
+    .line 901
     const/4 v8, 0x0
 
-    .line 906
+    .line 902
     goto :goto_4
 
-    .line 907
+    .line 903
     :cond_6
     move-object/from16 v17, v0
 
-    .line 908
+    .line 904
     invoke-virtual {v3}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    .line 910
+    .line 906
     move-result-object v0
 
-    .line 913
-    const v3, 0x7f050071    # @bool/notification_scrim_transparent 'false'
+    .line 909
+    const v3, 0x7f05007f    # @bool/notification_scrim_transparent 'false'
 
-    .line 914
+    .line 910
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
-    .line 917
+    .line 913
     move-result v0
 
-    .line 920
+    .line 916
     iput-boolean v0, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mTransparentScrimBackground:Z
 
-    .line 921
+    .line 917
     invoke-virtual {v13}, Lcom/android/systemui/statusbar/phone/ScrimController;->updateScrims()V
 
-    .line 923
+    .line 919
     iget-object v0, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 926
+    .line 922
     iget-object v3, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mKeyguardVisibilityCallback:Lcom/android/systemui/statusbar/phone/ScrimController$KeyguardVisibilityCallback;
 
-    .line 928
+    .line 924
     invoke-virtual {v0, v3}, Lcom/android/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 930
+    .line 926
     invoke-static {}, Lcom/android/systemui/statusbar/phone/ScrimState;->values()[Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 933
+    .line 929
     move-result-object v0
 
-    .line 936
+    .line 932
     array-length v3, v0
 
-    .line 937
+    .line 933
     const/4 v4, 0x0
 
-    .line 938
+    .line 934
     :goto_5
     if-ge v4, v3, :cond_7
 
-    .line 939
+    .line 935
     aget-object v5, v0, v4
 
-    .line 941
+    .line 937
     invoke-virtual {v5, v5}, Lcom/android/systemui/statusbar/phone/ScrimState;->prepare(Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 943
+    .line 939
     const/4 v5, 0x1
 
-    .line 946
+    .line 942
     add-int/2addr v4, v5
 
-    .line 947
+    .line 943
     goto :goto_5
 
-    .line 948
+    .line 944
     :cond_7
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
+    new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
-    .line 949
-    new-instance v0, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
-
-    .line 952
+    .line 945
     const/4 v3, 0x2
 
-    .line 954
-    invoke-direct {v0, v13, v3}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;I)V
+    .line 947
+    invoke-direct {v0, v13, v3}, Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/phone/ScrimController;I)V
 
-    .line 955
+    .line 948
     iput-object v0, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mBouncerToGoneTransition:Ljava/util/function/Consumer;
 
-    .line 958
+    .line 951
     iget-object v0, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
-    .line 960
+    .line 953
     sget-object v3, Lcom/android/systemui/keyguard/shared/model/Edge;->Companion:Lcom/android/systemui/keyguard/shared/model/Edge$Companion;
 
-    .line 962
+    .line 955
     sget-object v3, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->PRIMARY_BOUNCER:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 964
+    .line 957
     sget-object v4, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GONE:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 966
+    .line 959
     new-instance v5, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;
 
-    .line 968
+    .line 961
     invoke-direct {v5, v3, v4}, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;-><init>(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;)V
 
-    .line 970
+    .line 963
     invoke-virtual {v0, v5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->transition(Lcom/android/systemui/keyguard/shared/model/Edge;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 973
+    .line 966
     move-result-object v0
 
-    .line 976
+    .line 969
     iget-object v3, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mBouncerToGoneTransition:Ljava/util/function/Consumer;
 
-    .line 977
+    .line 970
     iget-object v5, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mMainDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 979
+    .line 972
     invoke-static {v2, v0, v3, v5}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;Lkotlin/coroutines/CoroutineContext;)V
 
-    .line 981
+    .line 974
     iget-object v0, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mPrimaryBouncerToGoneTransitionViewModel:Lcom/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModel;
 
-    .line 984
+    .line 977
     iget-object v0, v0, Lcom/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModel;->scrimAlpha:Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 986
-    iget-object v3, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimAlphaConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+    .line 979
+    iget-object v3, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimAlphaConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
-    .line 988
+    .line 981
     iget-object v5, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mMainDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 990
+    .line 983
     invoke-static {v2, v0, v3, v5}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;Lkotlin/coroutines/CoroutineContext;)V
 
-    .line 992
+    .line 985
     iget-object v0, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
-    .line 995
+    .line 988
     sget-object v3, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->ALTERNATE_BOUNCER:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 997
+    .line 990
     sget-object v5, Lcom/android/systemui/scene/shared/model/Scenes;->Bouncer:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 999
+    .line 992
     new-instance v5, Lcom/android/systemui/keyguard/shared/model/Edge$StateToScene;
 
-    .line 1001
+    .line 994
     new-instance v5, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;
 
-    .line 1003
+    .line 996
     invoke-direct {v5, v3, v4}, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;-><init>(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;)V
 
-    .line 1005
-    invoke-virtual {v0, v5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->transition(Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;)Lkotlinx/coroutines/flow/Flow;
+    .line 998
+    invoke-virtual {v0, v5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->transition(Lcom/android/systemui/keyguard/shared/model/Edge;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 1008
+    .line 1001
     move-result-object v0
 
-    .line 1011
+    .line 1004
     iget-object v3, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mBouncerToGoneTransition:Ljava/util/function/Consumer;
 
-    .line 1012
+    .line 1005
     iget-object v4, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mMainDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 1014
+    .line 1007
     invoke-static {v2, v0, v3, v4}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;Lkotlin/coroutines/CoroutineContext;)V
 
-    .line 1016
+    .line 1009
     iget-object v0, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mAlternateBouncerToGoneTransitionViewModel:Lcom/android/systemui/keyguard/ui/viewmodel/AlternateBouncerToGoneTransitionViewModel;
 
-    .line 1019
+    .line 1012
     iget-object v0, v0, Lcom/android/systemui/keyguard/ui/viewmodel/AlternateBouncerToGoneTransitionViewModel;->scrimAlpha:Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 1021
-    iget-object v3, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimAlphaConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+    .line 1014
+    iget-object v3, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mScrimAlphaConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
+
+    .line 1016
+    iget-object v4, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mMainDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
+
+    .line 1018
+    invoke-static {v2, v0, v3, v4}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;Lkotlin/coroutines/CoroutineContext;)V
+
+    .line 1020
+    iget-object v0, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
     .line 1023
-    iget-object v4, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mMainDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
-
-    .line 1025
-    invoke-static {v2, v0, v3, v4}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;Lkotlin/coroutines/CoroutineContext;)V
-
-    .line 1027
-    iget-object v0, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
-
-    .line 1030
     sget-object v3, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->LOCKSCREEN:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 1032
-    sget-object v4, Lcom/android/systemui/scene/shared/model/Scenes;->Bouncer:Lcom/android/compose/animation/scene/SceneKey;
-
-    .line 1034
+    .line 1025
     new-instance v4, Lcom/android/systemui/keyguard/shared/model/Edge$StateToScene;
 
-    .line 1036
+    .line 1027
     sget-object v4, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GLANCEABLE_HUB:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 1038
+    .line 1029
     new-instance v5, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;
 
-    .line 1040
+    .line 1031
     invoke-direct {v5, v3, v4}, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;-><init>(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;)V
 
-    .line 1042
-    invoke-virtual {v0, v5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->transition(Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;)Lkotlinx/coroutines/flow/Flow;
+    .line 1033
+    invoke-virtual {v0, v5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->transition(Lcom/android/systemui/keyguard/shared/model/Edge;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 1045
+    .line 1036
     move-result-object v0
 
-    .line 1048
-    iget-object v5, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mGlanceableHubConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+    .line 1039
+    iget-object v5, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mGlanceableHubConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
-    .line 1049
+    .line 1040
     iget-object v7, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mMainDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 1051
+    .line 1042
     invoke-static {v2, v0, v5, v7}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;Lkotlin/coroutines/CoroutineContext;)V
 
-    .line 1053
+    .line 1044
     iget-object v0, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
-    .line 1056
+    .line 1047
     new-instance v5, Lcom/android/systemui/keyguard/shared/model/Edge$SceneToState;
 
-    .line 1058
+    .line 1049
     new-instance v5, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;
 
-    .line 1060
+    .line 1051
     invoke-direct {v5, v4, v3}, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;-><init>(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;)V
 
-    .line 1062
-    invoke-virtual {v0, v5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->transition(Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;)Lkotlinx/coroutines/flow/Flow;
+    .line 1053
+    invoke-virtual {v0, v5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->transition(Lcom/android/systemui/keyguard/shared/model/Edge;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 1065
+    .line 1056
     move-result-object v0
 
-    .line 1068
-    iget-object v3, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mGlanceableHubConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda3;
+    .line 1059
+    iget-object v3, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mGlanceableHubConsumer:Lcom/android/systemui/statusbar/phone/ScrimController$$ExternalSyntheticLambda1;
 
-    .line 1069
+    .line 1060
     iget-object v4, v13, Lcom/android/systemui/statusbar/phone/ScrimController;->mMainDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 1071
+    .line 1062
     invoke-static {v2, v0, v3, v4}, Lcom/android/systemui/util/kotlin/JavaAdapterKt;->collectFlow(Landroid/view/View;Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;Lkotlin/coroutines/CoroutineContext;)V
 
-    .line 1073
-    invoke-static {}, Lcom/android/systemui/Flags;->lightRevealMigration()Z
-
-    .line 1076
-    move-result v0
-
-    .line 1079
-    iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
-
-    .line 1080
-    if-eqz v0, :cond_8
-
-    .line 1082
-    iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrimViewModelLazy:Ldagger/Lazy;
-
-    .line 1084
-    invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
-
-    .line 1086
-    move-result-object v0
-
-    .line 1089
-    check-cast v0, Lcom/android/systemui/keyguard/ui/viewmodel/LightRevealScrimViewModel;
-
-    .line 1090
-    invoke-static {v2, v0}, Lcom/android/systemui/keyguard/ui/binder/LightRevealScrimViewBinder;->bind(Lcom/android/systemui/statusbar/LightRevealScrim;Lcom/android/systemui/keyguard/ui/viewmodel/LightRevealScrimViewModel;)V
-
-    .line 1092
-    :cond_8
+    .line 1064
     new-instance v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;
 
-    .line 1095
-    const/4 v3, 0x6
+    .line 1067
+    const/4 v2, 0x6
 
-    .line 1097
-    invoke-direct {v0, v1, v3}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
+    .line 1069
+    invoke-direct {v0, v1, v2}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
 
-    .line 1098
+    .line 1070
+    iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
+
+    .line 1073
     iput-object v0, v2, Lcom/android/systemui/statusbar/LightRevealScrim;->isScrimOpaqueChangedListener:Ljava/util/function/Consumer;
 
-    .line 1101
+    .line 1075
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mScreenOffAnimationController:Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;
 
-    .line 1103
+    .line 1077
     iget-object v3, v0, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;->animations:Ljava/util/List;
 
-    .line 1105
+    .line 1079
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 1107
+    .line 1081
     move-result-object v3
 
-    .line 1110
+    .line 1084
     :goto_6
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 1111
+    .line 1085
     move-result v4
 
-    .line 1114
-    if-eqz v4, :cond_9
+    .line 1088
+    if-eqz v4, :cond_8
 
-    .line 1115
+    .line 1089
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 1117
+    .line 1091
     move-result-object v4
 
-    .line 1120
+    .line 1094
     check-cast v4, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;
 
-    .line 1121
+    .line 1095
     invoke-interface {v4, v1, v11, v2}, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;->initialize(Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/shade/ShadeViewController;Lcom/android/systemui/statusbar/LightRevealScrim;)V
 
-    .line 1123
+    .line 1097
     goto :goto_6
 
-    .line 1126
-    :cond_9
+    .line 1100
+    :cond_8
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;->wakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
-    .line 1127
+    .line 1101
     iget-object v2, v2, Lcom/android/systemui/keyguard/Lifecycle;->mObservers:Ljava/util/ArrayList;
 
-    .line 1129
+    .line 1103
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1131
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->updateLightRevealScrimVisibility()V
+    .line 1105
+    iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
-    .line 1134
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
+    .line 1108
+    if-nez v0, :cond_9
 
-    .line 1137
+    .line 1110
+    goto :goto_7
+
+    .line 1112
+    :cond_9
+    iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
+
+    .line 1113
+    iget-object v2, v2, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    .line 1115
+    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/ScrimState;->getMaxLightRevealScrimAlpha()F
+
+    .line 1117
+    move-result v2
+
+    .line 1120
+    invoke-virtual {v0, v2}, Lcom/android/systemui/statusbar/LightRevealScrim;->setAlpha(F)V
+
+    .line 1121
+    :goto_7
     new-instance v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda24;
 
-    .line 1140
+    .line 1124
     const/4 v2, 0x0
 
-    .line 1142
+    .line 1126
     invoke-direct {v0, v2, v10}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda24;-><init>(ILjava/lang/Object;)V
 
-    .line 1143
+    .line 1127
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
 
-    .line 1146
+    .line 1130
     invoke-interface {v11, v1, v0, v2}, Lcom/android/systemui/shade/ShadeSurface;->initDependencies(Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda24;Lcom/android/systemui/statusbar/policy/HeadsUpManager;)V
 
-    .line 1148
+    .line 1132
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 1151
+    .line 1135
     move-result-object v0
 
-    .line 1154
+    .line 1138
     iget-object v0, v0, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 1155
-    const v2, 0x7f0b0627    # @id/qs_frame
+    .line 1139
+    const v2, 0x7f0a0650    # @id/qs_frame
 
-    .line 1157
+    .line 1141
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
-    .line 1160
+    .line 1144
     move-result-object v0
 
-    .line 1163
+    .line 1147
     if-eqz v0, :cond_a
 
-    .line 1164
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 1166
+    .line 1148
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mFragmentService:Lcom/android/systemui/fragments/FragmentService;
 
-    .line 1169
+    .line 1150
     invoke-virtual {v2, v0}, Lcom/android/systemui/fragments/FragmentService;->getFragmentHostManager(Landroid/view/View;)Lcom/android/systemui/fragments/FragmentHostManager;
 
-    .line 1171
+    .line 1152
     move-result-object v2
 
-    .line 1174
+    .line 1155
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mExtensionController:Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl;
 
-    .line 1175
+    .line 1156
     const-class v4, Lcom/android/systemui/plugins/qs/QS;
 
-    .line 1177
+    .line 1158
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1179
+    .line 1160
     new-instance v5, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;
 
-    .line 1182
+    .line 1163
     invoke-direct {v5, v3}, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;-><init>(Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl;)V
 
-    .line 1184
+    .line 1165
     invoke-static {v4}, Lcom/android/systemui/plugins/PluginManager$Helper;->getAction(Ljava/lang/Class;)Ljava/lang/String;
 
-    .line 1187
+    .line 1168
     move-result-object v3
 
-    .line 1190
+    .line 1171
     iget-object v7, v5, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;->mProducers:Ljava/util/ArrayList;
 
-    .line 1191
+    .line 1172
     new-instance v8, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl$PluginItem;
 
-    .line 1193
+    .line 1174
     invoke-direct {v8, v5, v3, v4}, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl$PluginItem;-><init>(Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 1195
+    .line 1176
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1198
+    .line 1179
     new-instance v3, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda25;
 
-    .line 1201
+    .line 1182
     invoke-direct {v3, v1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda25;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;)V
 
-    .line 1203
+    .line 1184
     iget-object v4, v5, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;->mProducers:Ljava/util/ArrayList;
 
-    .line 1206
+    .line 1187
     new-instance v7, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl$Default;
 
-    .line 1208
+    .line 1189
     invoke-direct {v7, v3}, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl$Default;-><init>(Ljava/util/function/Supplier;)V
 
-    .line 1210
+    .line 1191
     invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1213
+    .line 1194
     iget-object v3, v5, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;->mProducers:Ljava/util/ArrayList;
 
-    .line 1216
+    .line 1197
     new-instance v4, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionBuilder$$ExternalSyntheticLambda0;
 
-    .line 1218
+    .line 1199
     invoke-direct {v4}, Ljava/lang/Object;-><init>()V
 
-    .line 1220
+    .line 1201
     invoke-static {v4}, Ljava/util/Comparator;->comparingInt(Ljava/util/function/ToIntFunction;)Ljava/util/Comparator;
 
-    .line 1223
+    .line 1204
     move-result-object v4
 
-    .line 1226
+    .line 1207
     invoke-static {v3, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1227
+    .line 1208
     invoke-static {v5}, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;->-$$Nest$mnotifyChanged(Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;)V
 
-    .line 1230
+    .line 1211
     new-instance v3, Lcom/android/systemui/fragments/ExtensionFragmentListener;
 
-    .line 1233
+    .line 1214
     iget-object v4, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mFragmentService:Lcom/android/systemui/fragments/FragmentService;
 
-    .line 1235
+    .line 1216
     invoke-direct {v3, v4, v0, v5}, Lcom/android/systemui/fragments/ExtensionFragmentListener;-><init>(Lcom/android/systemui/fragments/FragmentService;Landroid/view/View;Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;)V
 
-    .line 1237
+    .line 1218
     iget-object v0, v5, Lcom/android/systemui/statusbar/policy/ExtensionControllerImpl$ExtensionImpl;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 1240
+    .line 1221
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1242
+    .line 1223
     new-instance v0, Lcom/android/systemui/statusbar/policy/BrightnessMirrorController;
 
-    .line 1245
+    .line 1226
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 1247
+    .line 1228
     move-result-object v3
 
-    .line 1250
+    .line 1231
     iget-object v8, v3, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 1251
+    .line 1232
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNotificationShadeDepthControllerLazy:Ldagger/Lazy;
 
-    .line 1253
+    .line 1234
     invoke-interface {v3}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 1255
+    .line 1236
     move-result-object v3
 
-    .line 1258
+    .line 1239
     move-object v10, v3
 
-    .line 1259
+    .line 1240
     check-cast v10, Lcom/android/systemui/statusbar/NotificationShadeDepthController;
 
-    .line 1260
+    .line 1241
     new-instance v12, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;
 
-    .line 1262
+    .line 1243
     const/4 v3, 0x7
 
-    .line 1264
+    .line 1245
     invoke-direct {v12, v1, v3}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
 
-    .line 1265
+    .line 1246
     iget-object v9, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeSurface:Lcom/android/systemui/shade/ShadeSurface;
 
-    .line 1268
+    .line 1249
     iget-object v11, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBrightnessSliderFactory:Lcom/android/systemui/settings/brightness/BrightnessSliderController$Factory;
 
-    .line 1270
+    .line 1251
     move-object v7, v0
 
-    .line 1272
+    .line 1253
     invoke-direct/range {v7 .. v12}, Lcom/android/systemui/statusbar/policy/BrightnessMirrorController;-><init>(Lcom/android/systemui/shade/NotificationShadeWindowView;Lcom/android/systemui/shade/ShadeViewController;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Lcom/android/systemui/settings/brightness/BrightnessSliderController$Factory;Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;)V
 
-    .line 1273
+    .line 1254
     iput-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBrightnessMirrorController:Lcom/android/systemui/statusbar/policy/BrightnessMirrorController;
 
-    .line 1276
+    .line 1257
     new-instance v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda27;
 
-    .line 1278
+    .line 1259
     invoke-direct {v0, v1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda27;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;)V
 
-    .line 1280
+    .line 1261
     const-string v3, "QS"
 
-    .line 1283
+    .line 1264
     invoke-virtual {v2, v3, v0}, Lcom/android/systemui/fragments/FragmentHostManager;->addTagListener(Ljava/lang/String;Lcom/android/systemui/fragments/FragmentHostManager$FragmentListener;)V
 
-    .line 1285
+    .line 1266
     :cond_a
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 1288
+    .line 1269
     move-result-object v0
 
-    .line 1291
+    .line 1272
     iget-object v0, v0, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 1292
-    const v2, 0x7f0b064e    # @id/report_rejected_touch
+    .line 1273
+    const v2, 0x7f0a0678    # @id/report_rejected_touch
 
-    .line 1294
+    .line 1275
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
-    .line 1297
+    .line 1278
     move-result-object v0
 
-    .line 1300
+    .line 1281
     iput-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mReportRejectedTouch:Landroid/view/View;
 
-    .line 1301
+    .line 1282
     if-eqz v0, :cond_b
 
-    .line 1303
+    .line 1284
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->updateReportRejectedTouchVisibility()V
 
-    .line 1305
+    .line 1286
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mReportRejectedTouch:Landroid/view/View;
 
-    .line 1308
+    .line 1289
     new-instance v2, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda28;
 
-    .line 1310
+    .line 1291
     invoke-direct {v2, v1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda28;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;)V
 
-    .line 1312
+    .line 1293
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1315
+    .line 1296
     :cond_b
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 1318
+    .line 1299
     invoke-virtual {v0}, Landroid/os/PowerManager;->isInteractive()Z
 
-    .line 1320
+    .line 1301
     move-result v0
 
-    .line 1323
+    .line 1304
     if-nez v0, :cond_c
 
-    .line 1324
+    .line 1305
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBroadcastReceiver:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;
 
-    .line 1326
+    .line 1307
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mContext:Landroid/content/Context;
 
-    .line 1328
+    .line 1309
     new-instance v3, Landroid/content/Intent;
 
-    .line 1330
+    .line 1311
     const-string v4, "android.intent.action.SCREEN_OFF"
 
-    .line 1332
+    .line 1313
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1334
+    .line 1315
     invoke-virtual {v0, v2, v3}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 1337
+    .line 1318
     :cond_c
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 1340
+    .line 1321
     const/16 v2, 0xa
 
-    .line 1342
+    .line 1323
     const-string v3, "sysui:GestureWakeLock"
 
-    .line 1344
+    .line 1325
     invoke-virtual {v0, v2, v3}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
-    .line 1346
+    .line 1327
     move-result-object v0
 
-    .line 1349
+    .line 1330
     iput-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mGestureWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 1350
+    .line 1331
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->registerBroadcastReceiver()V
 
-    .line 1352
+    .line 1333
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mUserSetupObserver:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$16;
 
-    .line 1355
+    .line 1336
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDeviceProvisionedController:Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
-    .line 1357
+    .line 1338
     check-cast v2, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;
 
-    .line 1359
+    .line 1340
     invoke-virtual {v2, v0}, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 1361
+    .line 1342
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$16;->onUserSetupChanged()V
 
-    .line 1364
+    .line 1345
     const-string v0, "disableProfileBars"
 
-    .line 1367
+    .line 1348
     const-string v2, "true"
 
-    .line 1369
+    .line 1350
     invoke-static {v0, v2}, Landroid/view/ThreadedRenderer;->overrideProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1371
+    .line 1352
     const/high16 v0, 0x3fc00000    # 1.5f
 
-    .line 1374
+    .line 1355
     invoke-static {v0}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
-    .line 1376
+    .line 1357
     move-result-object v0
 
-    .line 1379
+    .line 1360
     const-string v2, "ambientRatio"
 
-    .line 1380
+    .line 1361
     invoke-static {v2, v0}, Landroid/view/ThreadedRenderer;->overrideProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1382
+    .line 1363
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
-    .line 1385
+    .line 1366
     const/4 v9, -0x1
 
-    .line 1387
+    .line 1368
     const/16 v10, 0x7f8
 
-    .line 1388
+    .line 1369
     const/4 v8, -0x1
 
-    .line 1390
+    .line 1371
     const v11, -0x7f7bffb8
 
-    .line 1391
+    .line 1372
     const/4 v12, -0x3
 
-    .line 1394
+    .line 1375
     move-object v7, v0
 
-    .line 1395
+    .line 1376
     invoke-direct/range {v7 .. v12}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
 
-    .line 1396
+    .line 1377
     iput-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1399
+    .line 1380
     new-instance v2, Landroid/os/Binder;
 
-    .line 1401
+    .line 1382
     invoke-direct {v2}, Landroid/os/Binder;-><init>()V
 
-    .line 1403
+    .line 1384
     iput-object v2, v0, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 1406
+    .line 1387
     iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1408
+    .line 1389
     const/16 v2, 0x30
 
-    .line 1410
+    .line 1391
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 1412
+    .line 1393
     const/4 v2, 0x0
 
-    .line 1414
+    .line 1395
     invoke-virtual {v0, v2}, Landroid/view/WindowManager$LayoutParams;->setFitInsetsTypes(I)V
 
-    .line 1415
+    .line 1396
     iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1418
+    .line 1399
     const-string v2, "NotificationShade"
 
-    .line 1420
+    .line 1401
     invoke-virtual {v0, v2}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 1422
+    .line 1403
     iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1425
+    .line 1406
     iget-object v2, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mContext:Landroid/content/Context;
 
-    .line 1427
+    .line 1408
     invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    .line 1429
+    .line 1410
     move-result-object v2
 
-    .line 1432
+    .line 1413
     iput-object v2, v0, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
-    .line 1433
+    .line 1414
     iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1435
+    .line 1416
     const/4 v2, 0x3
 
-    .line 1437
+    .line 1418
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
 
-    .line 1438
+    .line 1419
     iget v2, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 1440
+    .line 1421
     or-int/lit16 v2, v2, 0x200
 
-    .line 1442
+    .line 1423
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 1444
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
+    .line 1425
+    iget-object v2, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 1446
-    iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowManager:Landroid/view/WindowManager;
+    .line 1427
+    iget-object v3, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 1449
-    iget-object v2, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
+    .line 1429
+    invoke-interface {v2, v3, v0}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1451
-    iget-object v3, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mLp:Landroid/view/WindowManager$LayoutParams;
+    .line 1431
+    iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 1453
-    invoke-interface {v0, v2, v3}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 1455
-    iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
-
-    .line 1458
+    .line 1434
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getWindowInsetsController()Landroid/view/WindowInsetsController;
 
-    .line 1460
+    .line 1436
     move-result-object v0
 
-    .line 1463
+    .line 1439
     if-eqz v0, :cond_d
 
-    .line 1464
-    iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
+    .line 1440
+    iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
-    .line 1466
+    .line 1442
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getWindowInsetsController()Landroid/view/WindowInsetsController;
 
-    .line 1468
+    .line 1444
     move-result-object v0
 
-    .line 1471
+    .line 1447
     const/4 v2, 0x2
 
-    .line 1472
+    .line 1448
     invoke-interface {v0, v2}, Landroid/view/WindowInsetsController;->setSystemBarsBehavior(I)V
 
-    .line 1473
+    .line 1449
     :cond_d
     iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mLpChanged:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1476
+    .line 1452
     iget-object v2, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1478
+    .line 1454
     invoke-virtual {v0, v2}, Landroid/view/WindowManager$LayoutParams;->copyFrom(Landroid/view/WindowManager$LayoutParams;)I
 
-    .line 1480
+    .line 1456
     invoke-virtual {v6}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->onThemeChanged()V
 
-    .line 1483
+    .line 1459
     iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 1486
-    iget-boolean v2, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mShowing:Z
+    .line 1462
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->isShowingAndNotOccluded()Z
 
-    .line 1488
-    if-eqz v2, :cond_e
+    .line 1464
+    move-result v0
 
-    .line 1490
-    iget-boolean v0, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mOccluded:Z
+    .line 1467
+    if-eqz v0, :cond_e
 
-    .line 1492
-    if-nez v0, :cond_e
-
-    .line 1494
+    .line 1468
     iget-object v0, v6, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mCurrentState:Lcom/android/systemui/shade/NotificationShadeWindowState;
 
-    .line 1496
+    .line 1470
     const/4 v2, 0x1
 
-    .line 1498
+    .line 1472
     iput-boolean v2, v0, Lcom/android/systemui/shade/NotificationShadeWindowState;->keyguardShowing:Z
 
-    .line 1499
+    .line 1473
     invoke-virtual {v6, v0}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->apply(Lcom/android/systemui/shade/NotificationShadeWindowState;)V
 
-    .line 1501
+    .line 1475
     :cond_e
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarWindowController:Lcom/android/systemui/statusbar/window/StatusBarWindowController;
 
-    .line 1504
+    .line 1478
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1506
+    .line 1480
     const-string v2, "StatusBarWindowController.getBarLayoutParams"
 
-    .line 1509
+    .line 1483
     invoke-static {v2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 1511
+    .line 1485
     iget-object v2, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mContext:Landroid/content/Context;
 
-    .line 1514
+    .line 1488
     invoke-virtual {v2}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
 
-    .line 1516
+    .line 1490
     move-result-object v2
 
-    .line 1519
+    .line 1493
     invoke-virtual {v2}, Landroid/view/Display;->getRotation()I
 
-    .line 1520
+    .line 1494
     move-result v2
 
-    .line 1523
+    .line 1497
     invoke-virtual {v0, v2}, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->getBarLayoutParamsForRotation(I)Landroid/view/WindowManager$LayoutParams;
 
-    .line 1524
+    .line 1498
     move-result-object v2
 
-    .line 1527
+    .line 1501
     const/4 v3, 0x4
 
-    .line 1528
+    .line 1502
     new-array v3, v3, [Landroid/view/WindowManager$LayoutParams;
 
-    .line 1529
+    .line 1503
     iput-object v3, v2, Landroid/view/WindowManager$LayoutParams;->paramsForRotation:[Landroid/view/WindowManager$LayoutParams;
 
-    .line 1531
+    .line 1505
     const/4 v3, 0x0
 
-    .line 1533
-    :goto_7
+    .line 1507
     const/4 v4, 0x3
 
-    .line 1534
+    .line 1508
+    :goto_8
     if-gt v3, v4, :cond_f
 
-    .line 1535
-    iget-object v4, v2, Landroid/view/WindowManager$LayoutParams;->paramsForRotation:[Landroid/view/WindowManager$LayoutParams;
+    .line 1509
+    iget-object v5, v2, Landroid/view/WindowManager$LayoutParams;->paramsForRotation:[Landroid/view/WindowManager$LayoutParams;
 
-    .line 1537
+    .line 1511
     invoke-virtual {v0, v3}, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->getBarLayoutParamsForRotation(I)Landroid/view/WindowManager$LayoutParams;
 
-    .line 1539
-    move-result-object v5
+    .line 1513
+    move-result-object v6
 
-    .line 1542
-    aput-object v5, v4, v3
+    .line 1516
+    aput-object v6, v5, v3
 
-    .line 1543
-    const/4 v4, 0x1
+    .line 1517
+    const/4 v5, 0x1
 
-    .line 1545
-    add-int/2addr v3, v4
+    .line 1519
+    add-int/2addr v3, v5
 
-    .line 1546
-    goto :goto_7
+    .line 1520
+    goto :goto_8
 
-    .line 1547
+    .line 1521
     :cond_f
     iput-object v2, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1548
+    .line 1522
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 1550
+    .line 1524
     iget-object v2, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 1553
+    .line 1527
     iget-object v3, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mStatusBarWindowView:Lcom/android/systemui/statusbar/window/StatusBarWindowView;
 
-    .line 1555
+    .line 1529
     iget-object v4, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1557
+    .line 1531
     invoke-interface {v2, v3, v4}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1559
+    .line 1533
     iget-object v2, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mLpChanged:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1562
+    .line 1536
     iget-object v3, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1564
+    .line 1538
     invoke-virtual {v2, v3}, Landroid/view/WindowManager$LayoutParams;->copyFrom(Landroid/view/WindowManager$LayoutParams;)I
 
-    .line 1566
+    .line 1540
     new-instance v2, Lcom/android/systemui/statusbar/window/StatusBarWindowController$$ExternalSyntheticLambda2;
 
-    .line 1569
+    .line 1543
     invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/window/StatusBarWindowController$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/window/StatusBarWindowController;)V
 
-    .line 1571
+    .line 1545
     iget-object v3, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mContentInsetsProvider:Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider;
 
-    .line 1574
+    .line 1548
     iget-object v3, v3, Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider;->listeners:Ljava/util/Set;
 
-    .line 1576
+    .line 1550
     invoke-interface {v3, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1578
+    .line 1552
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->calculateStatusBarLocationsForAllRotations()V
 
-    .line 1581
+    .line 1555
     const/4 v2, 0x1
 
-    .line 1584
+    .line 1558
     iput-boolean v2, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mIsAttached:Z
 
-    .line 1585
+    .line 1559
     iget-object v2, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mCurrentState:Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;
 
-    .line 1587
+    .line 1561
     invoke-virtual {v0, v2}, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->apply(Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;)V
 
-    .line 1589
+    .line 1563
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mActivityTransitionAnimator:Lcom/android/systemui/animation/ActivityTransitionAnimator;
 
-    .line 1592
+    .line 1566
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mActivityTransitionAnimatorCallback:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;
 
-    .line 1594
+    .line 1568
     iput-object v2, v0, Lcom/android/systemui/animation/ActivityTransitionAnimator;->callback:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;
 
-    .line 1596
+    .line 1570
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mActivityTransitionAnimatorListener:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$21;
 
-    .line 1598
+    .line 1572
     iget-object v0, v0, Lcom/android/systemui/animation/ActivityTransitionAnimator;->listeners:Ljava/util/LinkedHashSet;
 
-    .line 1600
+    .line 1574
     invoke-virtual {v0, v2}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1602
+    .line 1576
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mRemoteInputManager:Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
 
-    .line 1605
+    .line 1579
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNotificationShadeWindowController:Lcom/android/systemui/statusbar/NotificationShadeWindowController;
 
-    .line 1607
+    .line 1581
     invoke-virtual {v0, v2}, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->addControllerCallback(Lcom/android/systemui/statusbar/RemoteInputController$Callback;)V
 
-    .line 1609
+    .line 1583
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNotificationActivityStarterLazy:Ldagger/Lazy;
 
-    .line 1612
+    .line 1586
     invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 1614
+    .line 1588
     move-result-object v2
 
-    .line 1617
+    .line 1591
     check-cast v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;
 
-    .line 1618
+    .line 1592
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStackScrollerController:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 1620
+    .line 1594
     iput-object v2, v3, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotificationActivityStarter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;
 
-    .line 1622
+    .line 1596
     invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 1624
+    .line 1598
     move-result-object v2
 
-    .line 1627
+    .line 1601
     check-cast v2, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;
 
-    .line 1628
+    .line 1602
     iget-object v4, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mGutsManager:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;
 
-    .line 1630
+    .line 1604
     iput-object v2, v4, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mNotificationActivityStarter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;
 
-    .line 1632
+    .line 1606
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mPresenterLazy:Ldagger/Lazy;
 
-    .line 1634
+    .line 1608
     invoke-interface {v2}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 1636
+    .line 1610
     move-result-object v4
 
-    .line 1639
+    .line 1613
     check-cast v4, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
-    .line 1640
+    .line 1614
     iget-object v5, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeController:Lcom/android/systemui/shade/ShadeController;
 
-    .line 1642
+    .line 1616
     check-cast v5, Lcom/android/systemui/shade/BaseShadeControllerImpl;
 
-    .line 1644
+    .line 1618
     iput-object v4, v5, Lcom/android/systemui/shade/BaseShadeControllerImpl;->notifPresenter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
-    .line 1646
+    .line 1620
     invoke-interface {v2}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 1648
+    .line 1622
     move-result-object v4
 
-    .line 1651
+    .line 1625
     check-cast v4, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
-    .line 1652
-    iget-object v5, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNotifListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
-
-    .line 1654
+    .line 1626
     iget-object v3, v3, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotifStackController:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;
 
-    .line 1656
+    .line 1628
     invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 1658
+    .line 1630
     move-result-object v0
 
-    .line 1661
+    .line 1633
     check-cast v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;
 
-    .line 1662
-    iget-object v6, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNotificationsController:Lcom/android/systemui/statusbar/notification/init/NotificationsController;
+    .line 1634
+    iget-object v5, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNotificationsController:Lcom/android/systemui/statusbar/notification/init/NotificationsController;
 
-    .line 1664
-    invoke-interface {v6, v4, v5, v3, v0}, Lcom/android/systemui/statusbar/notification/init/NotificationsController;->initialize(Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;)V
+    .line 1636
+    iget-object v6, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNotifListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
-    .line 1666
+    .line 1638
+    invoke-interface {v5, v4, v6, v3, v0}, Lcom/android/systemui/statusbar/notification/init/NotificationsController;->initialize(Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;)V
+
+    .line 1640
     invoke-interface {v2}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 1669
+    .line 1643
     move-result-object v0
 
-    .line 1672
+    .line 1646
     check-cast v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
-    .line 1673
+    .line 1647
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mWindowRootViewVisibilityInteractor:Lcom/android/systemui/scene/domain/interactor/WindowRootViewVisibilityInteractor;
 
-    .line 1675
+    .line 1649
     iput-object v0, v2, Lcom/android/systemui/scene/domain/interactor/WindowRootViewVisibilityInteractor;->notificationPresenter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
-    .line 1677
-    iput-object v6, v2, Lcom/android/systemui/scene/domain/interactor/WindowRootViewVisibilityInteractor;->notificationsController:Lcom/android/systemui/statusbar/notification/init/NotificationsController;
+    .line 1651
+    iput-object v5, v2, Lcom/android/systemui/scene/domain/interactor/WindowRootViewVisibilityInteractor;->notificationsController:Lcom/android/systemui/statusbar/notification/init/NotificationsController;
 
-    .line 1679
+    .line 1653
     move-object/from16 v0, v17
 
-    .line 1681
+    .line 1655
     iget v2, v0, Lcom/android/internal/statusbar/RegisterStatusBarResult;->mTransientBarTypes:I
 
-    .line 1683
+    .line 1657
     invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
 
-    .line 1685
+    .line 1659
     move-result v3
 
-    .line 1688
+    .line 1662
     and-int/2addr v2, v3
 
-    .line 1689
+    .line 1663
     if-eqz v2, :cond_10
 
-    .line 1690
+    .line 1664
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarModeRepository:Lcom/android/systemui/statusbar/data/repository/StatusBarModeRepositoryImpl;
 
-    .line 1692
+    .line 1666
     iget-object v2, v2, Lcom/android/systemui/statusbar/data/repository/StatusBarModeRepositoryImpl;->defaultDisplay:Lcom/android/systemui/statusbar/data/repository/StatusBarModePerDisplayRepositoryImpl;
 
-    .line 1694
+    .line 1668
     iget-object v2, v2, Lcom/android/systemui/statusbar/data/repository/StatusBarModePerDisplayRepositoryImpl;->_isTransientShown:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 1696
+    .line 1670
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 1698
+    .line 1672
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1700
+    .line 1674
     const/4 v4, 0x0
 
-    .line 1703
+    .line 1677
     invoke-virtual {v2, v4, v3}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 1704
+    .line 1678
     :cond_10
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mCommandQueueCallbacks:Lcom/android/systemui/statusbar/phone/CentralSurfacesCommandQueueCallbacks;
 
-    .line 1707
+    .line 1681
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1709
+    .line 1683
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mCommandQueueCallbacks:Lcom/android/systemui/statusbar/phone/CentralSurfacesCommandQueueCallbacks;
 
-    .line 1712
+    .line 1686
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1714
+    .line 1688
     iget-object v2, v0, Lcom/android/internal/statusbar/RegisterStatusBarResult;->mIcons:Landroid/util/ArrayMap;
 
-    .line 1717
+    .line 1691
     invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
 
-    .line 1719
+    .line 1693
     move-result v2
 
-    .line 1722
+    .line 1696
     const/4 v3, 0x0
 
-    .line 1723
-    :goto_8
+    .line 1697
+    :goto_9
     if-ge v3, v2, :cond_11
 
-    .line 1724
+    .line 1698
     iget-object v4, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mCommandQueue:Lcom/android/systemui/statusbar/CommandQueue;
 
-    .line 1726
+    .line 1700
     iget-object v5, v0, Lcom/android/internal/statusbar/RegisterStatusBarResult;->mIcons:Landroid/util/ArrayMap;
 
-    .line 1728
+    .line 1702
     invoke-virtual {v5, v3}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
-    .line 1730
+    .line 1704
     move-result-object v5
 
-    .line 1733
+    .line 1707
     check-cast v5, Ljava/lang/String;
 
-    .line 1734
+    .line 1708
     iget-object v6, v0, Lcom/android/internal/statusbar/RegisterStatusBarResult;->mIcons:Landroid/util/ArrayMap;
 
-    .line 1736
+    .line 1710
     invoke-virtual {v6, v3}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
-    .line 1738
+    .line 1712
     move-result-object v6
 
-    .line 1741
+    .line 1715
     check-cast v6, Lcom/android/internal/statusbar/StatusBarIcon;
 
-    .line 1742
+    .line 1716
     invoke-virtual {v4, v5, v6}, Lcom/android/systemui/statusbar/CommandQueue;->setIcon(Ljava/lang/String;Lcom/android/internal/statusbar/StatusBarIcon;)V
 
-    .line 1744
+    .line 1718
     const/4 v4, 0x1
 
-    .line 1747
+    .line 1721
     add-int/2addr v3, v4
 
-    .line 1748
-    goto :goto_8
+    .line 1722
+    goto :goto_9
 
-    .line 1749
+    .line 1723
     :cond_11
     new-instance v7, Landroid/content/IntentFilter;
 
-    .line 1750
+    .line 1724
     invoke-direct {v7}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1752
+    .line 1726
     const-string v2, "com.android.systemui.statusbar.banner_action_cancel"
 
-    .line 1755
+    .line 1729
     invoke-virtual {v7, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1757
+    .line 1731
     const-string v2, "com.android.systemui.statusbar.banner_action_setup"
 
-    .line 1760
+    .line 1734
     invoke-virtual {v7, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1762
+    .line 1736
     iget-object v5, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mContext:Landroid/content/Context;
 
-    .line 1765
+    .line 1739
     iget-object v6, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBannerActionBroadcastReceiver:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;
 
-    .line 1767
+    .line 1741
     const-string v8, "com.android.systemui.permission.SELF"
 
-    .line 1769
+    .line 1743
     const/4 v9, 0x0
 
-    .line 1771
+    .line 1745
     const/4 v10, 0x2
 
-    .line 1772
+    .line 1746
     invoke-virtual/range {v5 .. v10}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
-    .line 1773
+    .line 1747
     iget-boolean v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mWallpaperSupported:Z
 
-    .line 1776
+    .line 1750
     if-eqz v2, :cond_12
 
-    .line 1778
+    .line 1752
     const-string v2, "wallpaper"
 
-    .line 1780
+    .line 1754
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
-    .line 1782
+    .line 1756
     move-result-object v2
 
-    .line 1785
+    .line 1759
     invoke-static {v2}, Landroid/app/IWallpaperManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/IWallpaperManager;
 
-    .line 1786
+    .line 1760
     move-result-object v2
 
-    .line 1789
+    .line 1763
     const-wide/16 v3, 0x0
 
-    .line 1790
+    .line 1764
     const/4 v5, 0x0
 
-    .line 1792
+    .line 1766
     :try_start_1
     invoke-interface {v2, v5, v3, v4}, Landroid/app/IWallpaperManager;->setInAmbientMode(ZJ)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1793
+    .line 1767
     :catch_1
     :cond_12
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mIconPolicy:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;
 
-    .line 1796
+    .line 1770
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1798
+    .line 1772
     new-instance v3, Landroid/content/IntentFilter;
 
-    .line 1801
+    .line 1775
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1803
+    .line 1777
     const-string v4, "android.intent.action.HEADSET_PLUG"
 
-    .line 1806
+    .line 1780
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1808
+    .line 1782
     const-string v4, "android.intent.action.SIM_STATE_CHANGED"
 
-    .line 1811
+    .line 1785
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1813
+    .line 1787
     const-string v4, "android.telecom.action.CURRENT_TTY_MODE_CHANGED"
 
-    .line 1816
+    .line 1790
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1818
+    .line 1792
     const-string v4, "android.intent.action.MANAGED_PROFILE_AVAILABLE"
 
-    .line 1821
+    .line 1795
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1823
+    .line 1797
     const-string v4, "android.intent.action.MANAGED_PROFILE_UNAVAILABLE"
 
-    .line 1826
+    .line 1800
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1828
+    .line 1802
     const-string v4, "android.intent.action.PROFILE_REMOVED"
 
-    .line 1831
+    .line 1805
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1833
+    .line 1807
     const-string v4, "android.intent.action.PROFILE_ACCESSIBLE"
 
-    .line 1836
+    .line 1810
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1838
+    .line 1812
     const-string v4, "android.intent.action.PROFILE_INACCESSIBLE"
 
-    .line 1841
+    .line 1815
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1843
+    .line 1817
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
-    .line 1846
+    .line 1820
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIntentReceiver:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$6;
 
-    .line 1848
+    .line 1822
     iget-object v6, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mHandler:Landroid/os/Handler;
 
-    .line 1850
+    .line 1824
     invoke-virtual {v4, v5, v3, v6}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;)V
 
-    .line 1852
+    .line 1826
     new-instance v3, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$$ExternalSyntheticLambda6;
 
-    .line 1855
+    .line 1829
     invoke-direct {v3, v2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$$ExternalSyntheticLambda6;-><init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)V
 
-    .line 1857
+    .line 1831
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mRingerModeTracker:Lcom/android/systemui/util/RingerModeTrackerImpl;
 
-    .line 1860
+    .line 1834
     iget-object v4, v4, Lcom/android/systemui/util/RingerModeTrackerImpl;->ringerMode:Lcom/android/systemui/util/RingerModeLiveData;
 
-    .line 1862
+    .line 1836
     invoke-virtual {v4, v3}, Landroidx/lifecycle/LiveData;->observeForever(Landroidx/lifecycle/Observer;)V
 
-    .line 1864
+    .line 1838
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mRingerModeTracker:Lcom/android/systemui/util/RingerModeTrackerImpl;
 
-    .line 1867
+    .line 1841
     iget-object v4, v4, Lcom/android/systemui/util/RingerModeTrackerImpl;->ringerModeInternal:Lcom/android/systemui/util/RingerModeLiveData;
 
-    .line 1869
+    .line 1843
     invoke-virtual {v4, v3}, Landroidx/lifecycle/LiveData;->observeForever(Landroidx/lifecycle/Observer;)V
 
-    .line 1871
+    .line 1845
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 1874
+    .line 1848
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mUserSwitchListener:Lcom/android/systemui/settings/UserTracker$Callback;
 
-    .line 1876
+    .line 1850
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mMainExecutor:Ljava/util/concurrent/Executor;
 
-    .line 1878
+    .line 1852
     check-cast v3, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 1880
+    .line 1854
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/settings/UserTrackerImpl;->addCallback(Lcom/android/systemui/settings/UserTracker$Callback;Ljava/util/concurrent/Executor;)V
 
-    .line 1882
+    .line 1856
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mTelecomManager:Landroid/telecom/TelecomManager;
 
-    .line 1885
+    .line 1859
     if-nez v3, :cond_13
 
-    .line 1887
+    .line 1861
     const/4 v4, 0x0
 
-    .line 1889
+    .line 1863
     invoke-virtual {v2, v4}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateTTY(I)V
 
-    .line 1890
-    goto :goto_9
+    .line 1864
+    goto :goto_a
 
-    .line 1893
+    .line 1867
     :cond_13
     invoke-virtual {v3}, Landroid/telecom/TelecomManager;->getCurrentTtyMode()I
 
-    .line 1894
+    .line 1868
     move-result v3
 
-    .line 1897
+    .line 1871
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateTTY(I)V
 
-    .line 1898
-    :goto_9
+    .line 1872
+    :goto_a
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateBluetooth()V
 
-    .line 1901
+    .line 1875
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 1904
+    .line 1878
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotAlarmClock:Ljava/lang/String;
 
-    .line 1906
-    const v5, 0x7f080b47    # @drawable/stat_sys_alarm 'res/drawable/stat_sys_alarm.xml'
+    .line 1880
+    const v5, 0x7f080b8e    # @drawable/stat_sys_alarm 'res/drawable/stat_sys_alarm.xml'
 
-    .line 1908
+    .line 1882
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 1911
+    .line 1885
     const/4 v6, 0x0
 
-    .line 1913
+    .line 1887
     invoke-virtual {v3, v6, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 1914
+    .line 1888
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 1917
+    .line 1891
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotAlarmClock:Ljava/lang/String;
 
-    .line 1919
+    .line 1893
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 1921
+    .line 1895
     const/4 v5, 0x0
 
-    .line 1923
+    .line 1897
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 1924
+    .line 1898
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 1927
+    .line 1901
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotZen:Ljava/lang/String;
 
-    .line 1929
-    const v7, 0x7f080b4e    # @drawable/stat_sys_dnd 'res/drawable/stat_sys_dnd.xml'
+    .line 1903
+    const v7, 0x7f080b95    # @drawable/stat_sys_dnd 'res/drawable/stat_sys_dnd.xml'
 
-    .line 1931
+    .line 1905
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 1934
+    .line 1908
     invoke-virtual {v3, v6, v4, v7}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 1936
+    .line 1910
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 1939
+    .line 1913
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotZen:Ljava/lang/String;
 
-    .line 1941
+    .line 1915
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 1943
+    .line 1917
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 1945
+    .line 1919
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 1948
+    .line 1922
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotVibrate:Ljava/lang/String;
 
-    .line 1950
+    .line 1924
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    .line 1952
-    const v6, 0x7f1400e2    # @string/accessibility_ringer_vibrate 'Ringer vibrate.'
+    .line 1926
+    const v6, 0x7f1300e1    # @string/accessibility_ringer_vibrate 'Ringer vibrate.'
 
-    .line 1954
+    .line 1928
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 1957
+    .line 1931
     move-result-object v5
 
-    .line 1960
+    .line 1934
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 1961
-    const v6, 0x7f080b57    # @drawable/stat_sys_ringer_vibrate 'res/drawable/stat_sys_ringer_vibrate.xml'
+    .line 1935
+    const v6, 0x7f080b9e    # @drawable/stat_sys_ringer_vibrate 'res/drawable/stat_sys_ringer_vibrate.xml'
 
-    .line 1963
+    .line 1937
     invoke-virtual {v3, v5, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 1966
+    .line 1940
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 1969
+    .line 1943
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotVibrate:Ljava/lang/String;
 
-    .line 1971
+    .line 1945
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 1973
+    .line 1947
     const/4 v5, 0x0
 
-    .line 1975
+    .line 1949
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 1976
+    .line 1950
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 1979
+    .line 1953
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotMute:Ljava/lang/String;
 
-    .line 1981
+    .line 1955
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    .line 1983
-    const v6, 0x7f1400e1    # @string/accessibility_ringer_silent 'Ringer silent.'
+    .line 1957
+    const v6, 0x7f1300e0    # @string/accessibility_ringer_silent 'Ringer silent.'
 
-    .line 1985
+    .line 1959
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 1988
+    .line 1962
     move-result-object v5
+
+    .line 1965
+    check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
+
+    .line 1966
+    const v6, 0x7f080b9d    # @drawable/stat_sys_ringer_silent 'res/drawable/stat_sys_ringer_silent.xml'
+
+    .line 1968
+    invoke-virtual {v3, v5, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
+
+    .line 1971
+    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
+
+    .line 1974
+    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotMute:Ljava/lang/String;
+
+    .line 1976
+    check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
+
+    .line 1978
+    const/4 v5, 0x0
+
+    .line 1980
+    invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
+
+    .line 1981
+    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateVolumeZen()V
+
+    .line 1984
+    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
+
+    .line 1987
+    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotCast:Ljava/lang/String;
+
+    .line 1989
+    const v6, 0x7f080b91    # @drawable/stat_sys_cast 'res/drawable/stat_sys_cast.xml'
 
     .line 1991
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 1992
-    const v6, 0x7f080b56    # @drawable/stat_sys_ringer_silent 'res/drawable/stat_sys_ringer_silent.xml'
-
     .line 1994
-    invoke-virtual {v3, v5, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
+    const/4 v7, 0x0
+
+    .line 1996
+    invoke-virtual {v3, v7, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
     .line 1997
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
     .line 2000
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotMute:Ljava/lang/String;
+    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotCast:Ljava/lang/String;
 
     .line 2002
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
     .line 2004
-    const/4 v5, 0x0
+    invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
     .line 2006
-    invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
-
-    .line 2007
-    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateVolumeZen()V
-
-    .line 2010
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
+
+    .line 2009
+    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotConnectedDisplay:Ljava/lang/String;
+
+    .line 2011
+    iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
     .line 2013
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotCast:Ljava/lang/String;
+    const v6, 0x7f1302cb    # @string/connected_display_icon_desc 'Display connected'
 
     .line 2015
-    const v6, 0x7f080b4a    # @drawable/stat_sys_cast 'res/drawable/stat_sys_cast.xml'
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 2017
+    .line 2018
+    move-result-object v5
+
+    .line 2021
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
-
-    .line 2020
-    const/4 v7, 0x0
 
     .line 2022
-    invoke-virtual {v3, v7, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
+    const v6, 0x7f080b92    # @drawable/stat_sys_connected_display 'res/drawable/stat_sys_connected_display.xml'
 
-    .line 2023
+    .line 2024
+    invoke-virtual {v3, v5, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
+
+    .line 2027
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
-
-    .line 2026
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotCast:Ljava/lang/String;
-
-    .line 2028
-    check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
     .line 2030
-    invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
+    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotConnectedDisplay:Ljava/lang/String;
 
     .line 2032
-    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
+    check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2035
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotConnectedDisplay:Ljava/lang/String;
+    .line 2034
+    const/4 v5, 0x0
+
+    .line 2036
+    invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
     .line 2037
+    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
+
+    .line 2040
+    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
+
+    .line 2042
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
-
-    .line 2039
-    const v6, 0x7f1402af    # @string/connected_display_icon_desc 'Display connected'
-
-    .line 2041
-    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     .line 2044
+    const v6, 0x7f1300f1    # @string/accessibility_status_bar_hotspot 'Hotspot'
+
+    .line 2046
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 2049
     move-result-object v5
 
-    .line 2047
+    .line 2052
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
-
-    .line 2048
-    const v6, 0x7f080b4b    # @drawable/stat_sys_connected_display 'res/drawable/stat_sys_connected_display.xml'
-
-    .line 2050
-    invoke-virtual {v3, v5, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
     .line 2053
-    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
+    const v6, 0x7f080b9a    # @drawable/stat_sys_hotspot 'res/drawable/stat_sys_hotspot.xml'
 
-    .line 2056
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotConnectedDisplay:Ljava/lang/String;
+    .line 2055
+    invoke-virtual {v3, v5, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
     .line 2058
-    check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
+    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2060
-    const/4 v5, 0x0
-
-    .line 2062
-    invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
+    .line 2061
+    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
 
     .line 2063
-    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
-
-    .line 2066
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
-
-    .line 2068
-    iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
-
-    .line 2070
-    const v6, 0x7f1400f1    # @string/accessibility_status_bar_hotspot 'Hotspot'
-
-    .line 2072
-    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    .line 2075
-    move-result-object v5
-
-    .line 2078
-    check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
-
-    .line 2079
-    const v6, 0x7f080b53    # @drawable/stat_sys_hotspot 'res/drawable/stat_sys_hotspot.xml'
-
-    .line 2081
-    invoke-virtual {v3, v5, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
-
-    .line 2084
-    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
-
-    .line 2087
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotHotspot:Ljava/lang/String;
-
-    .line 2089
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mHotspot:Lcom/android/systemui/statusbar/policy/HotspotController;
 
-    .line 2091
+    .line 2065
     check-cast v5, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
 
-    .line 2093
+    .line 2067
     invoke-virtual {v5}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->isHotspotEnabled()Z
 
-    .line 2095
+    .line 2069
     move-result v5
 
-    .line 2098
+    .line 2072
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2099
+    .line 2073
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 2101
+    .line 2075
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->updateProfileIcon()V
 
-    .line 2104
+    .line 2078
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2107
+    .line 2081
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotDataSaver:Ljava/lang/String;
+
+    .line 2083
+    iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
+
+    .line 2085
+    const v6, 0x7f130072    # @string/accessibility_data_saver_on 'Data Saver is on'
+
+    .line 2087
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 2090
+    move-result-object v5
+
+    .line 2093
+    check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
+
+    .line 2094
+    const v6, 0x7f080b94    # @drawable/stat_sys_data_saver 'res/drawable/stat_sys_data_saver.xml'
+
+    .line 2096
+    invoke-virtual {v3, v5, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
+
+    .line 2099
+    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
+
+    .line 2102
+    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotDataSaver:Ljava/lang/String;
+
+    .line 2104
+    check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
+
+    .line 2106
+    const/4 v5, 0x0
+
+    .line 2108
+    invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
     .line 2109
-    iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
-
-    .line 2111
-    const v6, 0x7f140071    # @string/accessibility_data_saver_on 'Data Saver is on'
-
-    .line 2113
-    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    .line 2116
-    move-result-object v5
-
-    .line 2119
-    check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
-
-    .line 2120
-    const v6, 0x7f080b4d    # @drawable/stat_sys_data_saver 'res/drawable/stat_sys_data_saver.xml'
-
-    .line 2122
-    invoke-virtual {v3, v5, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
-
-    .line 2125
-    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
-
-    .line 2128
-    iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotDataSaver:Ljava/lang/String;
-
-    .line 2130
-    check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
-
-    .line 2132
-    const/4 v5, 0x0
-
-    .line 2134
-    invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
-
-    .line 2135
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    .line 2138
+    .line 2112
     sget-object v4, Lcom/android/systemui/privacy/PrivacyType;->TYPE_MICROPHONE:Lcom/android/systemui/privacy/PrivacyType;
 
-    .line 2140
+    .line 2114
     invoke-virtual {v4}, Lcom/android/systemui/privacy/PrivacyType;->getNameId()I
 
-    .line 2142
+    .line 2116
     move-result v5
 
-    .line 2145
+    .line 2119
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 2146
+    .line 2120
     move-result-object v3
 
-    .line 2149
+    .line 2123
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    .line 2150
+    .line 2124
     filled-new-array {v3}, [Ljava/lang/Object;
 
-    .line 2152
+    .line 2126
     move-result-object v3
 
-    .line 2155
-    const v6, 0x7f14070f    # @string/ongoing_privacy_chip_content_multiple_apps 'Applications are using your %s.'
+    .line 2129
+    const v6, 0x7f13076a    # @string/ongoing_privacy_chip_content_multiple_apps 'Applications are using your %s.'
 
-    .line 2156
+    .line 2130
     invoke-virtual {v5, v6, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 2159
+    .line 2133
     move-result-object v3
 
-    .line 2162
+    .line 2136
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2163
+    .line 2137
     iget-object v7, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotMicrophone:Ljava/lang/String;
 
-    .line 2165
+    .line 2139
     invoke-virtual {v4}, Lcom/android/systemui/privacy/PrivacyType;->getIconId()I
 
-    .line 2167
+    .line 2141
     move-result v4
 
-    .line 2170
+    .line 2144
     check-cast v5, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2171
+    .line 2145
     invoke-virtual {v5, v3, v7, v4}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 2173
+    .line 2147
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2176
+    .line 2150
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotMicrophone:Ljava/lang/String;
 
-    .line 2178
+    .line 2152
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2180
+    .line 2154
     const/4 v5, 0x0
 
-    .line 2182
+    .line 2156
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 2183
+    .line 2157
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    .line 2186
+    .line 2160
     sget-object v4, Lcom/android/systemui/privacy/PrivacyType;->TYPE_CAMERA:Lcom/android/systemui/privacy/PrivacyType;
 
-    .line 2188
+    .line 2162
     invoke-virtual {v4}, Lcom/android/systemui/privacy/PrivacyType;->getNameId()I
 
-    .line 2190
+    .line 2164
     move-result v5
 
-    .line 2193
+    .line 2167
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 2194
+    .line 2168
     move-result-object v3
 
-    .line 2197
+    .line 2171
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    .line 2198
+    .line 2172
     filled-new-array {v3}, [Ljava/lang/Object;
 
-    .line 2200
+    .line 2174
     move-result-object v3
 
-    .line 2203
+    .line 2177
     invoke-virtual {v5, v6, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 2204
+    .line 2178
     move-result-object v3
 
-    .line 2207
+    .line 2181
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2208
+    .line 2182
     iget-object v6, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotCamera:Ljava/lang/String;
 
-    .line 2210
+    .line 2184
     invoke-virtual {v4}, Lcom/android/systemui/privacy/PrivacyType;->getIconId()I
 
-    .line 2212
+    .line 2186
     move-result v4
 
-    .line 2215
+    .line 2189
     check-cast v5, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2216
+    .line 2190
     invoke-virtual {v5, v3, v6, v4}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 2218
+    .line 2192
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2221
+    .line 2195
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotCamera:Ljava/lang/String;
 
-    .line 2223
+    .line 2197
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2225
+    .line 2199
     const/4 v5, 0x0
 
-    .line 2227
+    .line 2201
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 2228
+    .line 2202
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2231
+    .line 2205
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotLocation:Ljava/lang/String;
 
-    .line 2233
+    .line 2207
     sget v5, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->LOCATION_STATUS_ICON_ID:I
 
-    .line 2235
+    .line 2209
     iget-object v6, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    .line 2237
-    const v7, 0x7f140099    # @string/accessibility_location_active 'Location requests active'
+    .line 2211
+    const v7, 0x7f13009a    # @string/accessibility_location_active 'Location requests active'
 
-    .line 2239
+    .line 2213
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 2242
+    .line 2216
     move-result-object v6
 
-    .line 2245
+    .line 2219
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2246
+    .line 2220
     invoke-virtual {v3, v6, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 2248
+    .line 2222
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2251
+    .line 2225
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotLocation:Ljava/lang/String;
 
-    .line 2253
+    .line 2227
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2255
+    .line 2229
     const/4 v5, 0x0
 
-    .line 2257
+    .line 2231
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 2258
+    .line 2232
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2261
+    .line 2235
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotSensorsOff:Ljava/lang/String;
 
-    .line 2263
+    .line 2237
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mResources:Landroid/content/res/Resources;
 
-    .line 2265
-    const v6, 0x7f1400e8    # @string/accessibility_sensors_off_active 'Sensors off active'
+    .line 2239
+    const v6, 0x7f1300e7    # @string/accessibility_sensors_off_active 'Sensors off active'
 
-    .line 2267
+    .line 2241
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 2270
+    .line 2244
     move-result-object v5
 
-    .line 2273
+    .line 2247
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2274
-    const v6, 0x7f080b60    # @drawable/stat_sys_sensors_off 'res/drawable/stat_sys_sensors_off.xml'
+    .line 2248
+    const v6, 0x7f080ba7    # @drawable/stat_sys_sensors_off 'res/drawable/stat_sys_sensors_off.xml'
 
-    .line 2276
+    .line 2250
     invoke-virtual {v3, v5, v4, v6}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 2279
+    .line 2253
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2282
+    .line 2256
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotSensorsOff:Ljava/lang/String;
 
-    .line 2284
+    .line 2258
     iget-object v5, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSensorPrivacyController:Lcom/android/systemui/statusbar/policy/SensorPrivacyControllerImpl;
 
-    .line 2286
+    .line 2260
     iget-object v6, v5, Lcom/android/systemui/statusbar/policy/SensorPrivacyControllerImpl;->mLock:Ljava/lang/Object;
 
-    .line 2288
+    .line 2262
     monitor-enter v6
 
-    .line 2290
+    .line 2264
     :try_start_2
     iget-boolean v5, v5, Lcom/android/systemui/statusbar/policy/SensorPrivacyControllerImpl;->mSensorPrivacyEnabled:Z
 
-    .line 2291
+    .line 2265
     monitor-exit v6
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 2293
+    .line 2267
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2294
+    .line 2268
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 2296
+    .line 2270
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2299
+    .line 2273
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotScreenRecord:Ljava/lang/String;
 
-    .line 2301
-    const v5, 0x7f080b5c    # @drawable/stat_sys_screen_record 'res/drawable/stat_sys_screen_record.xml'
+    .line 2275
+    const v5, 0x7f080ba3    # @drawable/stat_sys_screen_record 'res/drawable/stat_sys_screen_record.xml'
 
-    .line 2303
+    .line 2277
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2306
+    .line 2280
     const/4 v6, 0x0
 
-    .line 2308
+    .line 2282
     invoke-virtual {v3, v6, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIcon(Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 2309
+    .line 2283
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/ui/StatusBarIconController;
 
-    .line 2312
+    .line 2286
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSlotScreenRecord:Ljava/lang/String;
 
-    .line 2314
+    .line 2288
     check-cast v3, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;
 
-    .line 2316
+    .line 2290
     const/4 v5, 0x0
 
-    .line 2318
+    .line 2292
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/statusbar/phone/ui/StatusBarIconControllerImpl;->setIconVisibility(Ljava/lang/String;Z)V
 
-    .line 2319
+    .line 2293
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mRotationLockController:Lcom/android/systemui/statusbar/policy/RotationLockController;
 
-    .line 2322
+    .line 2296
     check-cast v3, Lcom/android/systemui/statusbar/policy/RotationLockControllerImpl;
 
-    .line 2324
+    .line 2298
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/RotationLockControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2326
+    .line 2300
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mBluetooth:Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;
 
-    .line 2329
+    .line 2303
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/BluetoothControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2331
+    .line 2305
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mProvisionedController:Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
-    .line 2334
+    .line 2308
     check-cast v3, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;
 
-    .line 2336
+    .line 2310
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2338
+    .line 2312
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mProvisionedController:Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
-    .line 2341
+    .line 2315
     check-cast v3, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;
 
-    .line 2343
+    .line 2317
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/policy/DeviceProvisionedControllerImpl;->isCurrentUserSetup()Z
 
-    .line 2345
+    .line 2319
     move-result v3
 
-    .line 2348
+    .line 2322
     iput-boolean v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mCurrentUserSetup:Z
 
-    .line 2349
+    .line 2323
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mZenController:Lcom/android/systemui/statusbar/policy/ZenModeController;
 
-    .line 2351
+    .line 2325
     check-cast v3, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;
 
-    .line 2353
+    .line 2327
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2355
+    .line 2329
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mCast:Lcom/android/systemui/statusbar/policy/CastController;
 
-    .line 2358
+    .line 2332
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mCastCallback:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$3;
 
-    .line 2360
+    .line 2334
     check-cast v3, Lcom/android/systemui/statusbar/policy/CastControllerImpl;
 
-    .line 2362
+    .line 2336
     invoke-virtual {v3, v4}, Lcom/android/systemui/statusbar/policy/CastControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2364
+    .line 2338
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mHotspot:Lcom/android/systemui/statusbar/policy/HotspotController;
 
-    .line 2367
+    .line 2341
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mHotspotCallback:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$2;
 
-    .line 2369
+    .line 2343
     check-cast v3, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;
 
-    .line 2371
+    .line 2345
     invoke-virtual {v3, v4}, Lcom/android/systemui/statusbar/policy/HotspotControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2373
+    .line 2347
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mNextAlarmController:Lcom/android/systemui/statusbar/policy/NextAlarmController;
 
-    .line 2376
+    .line 2350
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mNextAlarmCallback:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$4;
 
-    .line 2378
+    .line 2352
     check-cast v3, Lcom/android/systemui/statusbar/policy/NextAlarmControllerImpl;
 
-    .line 2380
+    .line 2354
     invoke-virtual {v3, v4}, Lcom/android/systemui/statusbar/policy/NextAlarmControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2382
+    .line 2356
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mDataSaver:Lcom/android/systemui/statusbar/policy/DataSaverControllerImpl;
 
-    .line 2385
+    .line 2359
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/DataSaverControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2387
+    .line 2361
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 2390
+    .line 2364
     check-cast v3, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 2392
+    .line 2366
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2394
+    .line 2368
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mPrivacyItemController:Lcom/android/systemui/privacy/PrivacyItemController;
 
-    .line 2397
+    .line 2371
     invoke-virtual {v3, v2}, Lcom/android/systemui/privacy/PrivacyItemController;->addCallback(Lcom/android/systemui/privacy/PrivacyItemController$Callback;)V
 
-    .line 2399
+    .line 2373
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSensorPrivacyController:Lcom/android/systemui/statusbar/policy/SensorPrivacyControllerImpl;
 
-    .line 2402
+    .line 2376
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mSensorPrivacyListener:Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$5;
 
-    .line 2404
+    .line 2378
     invoke-virtual {v3, v4}, Lcom/android/systemui/statusbar/policy/SensorPrivacyControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2406
+    .line 2380
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mLocationController:Lcom/android/systemui/statusbar/policy/LocationController;
 
-    .line 2409
+    .line 2383
     check-cast v3, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;
 
-    .line 2411
+    .line 2385
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/LocationControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2413
+    .line 2387
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mRecordingController:Lcom/android/systemui/screenrecord/RecordingController;
 
-    .line 2416
+    .line 2390
     iget-object v3, v3, Lcom/android/systemui/screenrecord/RecordingController;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 2418
+    .line 2392
     invoke-virtual {v3, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2420
+    .line 2394
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
 
-    .line 2423
+    .line 2397
     iget-object v4, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mConnectedDisplayInteractor:Lcom/android/systemui/display/domain/interactor/ConnectedDisplayInteractorImpl;
 
-    .line 2425
+    .line 2399
     iget-object v4, v4, Lcom/android/systemui/display/domain/interactor/ConnectedDisplayInteractorImpl;->connectedDisplayState:Lkotlinx/coroutines/flow/Flow;
 
-    .line 2427
+    .line 2401
     new-instance v5, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$$ExternalSyntheticLambda7;
 
-    .line 2429
+    .line 2403
     invoke-direct {v5, v2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy$$ExternalSyntheticLambda7;-><init>(Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;)V
 
-    .line 2431
+    .line 2405
     invoke-virtual {v3, v4, v5}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 2434
+    .line 2408
     iget-object v3, v2, Lcom/android/systemui/statusbar/phone/PhoneStatusBarPolicy;->mCommandQueue:Lcom/android/systemui/statusbar/CommandQueue;
 
-    .line 2437
+    .line 2411
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/CommandQueue;->addCallback(Lcom/android/systemui/statusbar/CommandQueue$Callbacks;)V
 
-    .line 2439
+    .line 2413
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 2442
+    .line 2416
     new-instance v3, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$2;
 
-    .line 2444
+    .line 2418
     invoke-direct {v3, v1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$2;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;)V
 
-    .line 2446
+    .line 2420
     check-cast v2, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 2449
+    .line 2423
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2451
+    .line 2425
     const-string v2, "CentralSurfaces#startKeyguard"
 
-    .line 2454
+    .line 2428
     invoke-static {v2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 2456
+    .line 2430
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStateListener:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$18;
 
-    .line 2459
+    .line 2433
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 2461
+    .line 2435
     check-cast v3, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 2463
+    .line 2437
     iget-object v4, v3, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mListeners:Ljava/util/ArrayList;
 
-    .line 2465
+    .line 2439
     monitor-enter v4
 
-    .line 2467
+    .line 2441
     const/4 v5, 0x0
 
-    .line 2468
+    .line 2442
     :try_start_3
     invoke-virtual {v3, v2, v5}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->addListenerInternalLocked(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;I)V
 
-    .line 2469
+    .line 2443
     monitor-exit v4
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2472
+    .line 2446
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBiometricUnlockControllerLazy:Ldagger/Lazy;
 
-    .line 2473
+    .line 2447
     invoke-interface {v2}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 2475
+    .line 2449
     move-result-object v2
 
-    .line 2478
+    .line 2452
     check-cast v2, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 2479
+    .line 2453
     iput-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 2481
+    .line 2455
     new-instance v3, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$6;
 
-    .line 2483
+    .line 2457
     invoke-direct {v3, v1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$6;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;)V
 
-    .line 2485
+    .line 2459
     iget-object v2, v2, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mBiometricUnlockEventsListeners:Ljava/util/Set;
 
-    .line 2488
+    .line 2462
     invoke-interface {v2, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2490
+    .line 2464
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 2493
+    .line 2467
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 2495
+    .line 2469
     iput-object v1, v3, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mCentralSurfaces:Lcom/android/systemui/statusbar/phone/CentralSurfaces;
 
-    .line 2497
+    .line 2471
     iget-object v3, v3, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardViewControllerLazy:Ldagger/Lazy;
 
-    .line 2499
+    .line 2473
     invoke-interface {v3}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 2501
+    .line 2475
     move-result-object v4
 
-    .line 2504
+    .line 2478
     check-cast v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 2505
+    .line 2479
     iput-object v1, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mCentralSurfaces:Lcom/android/systemui/statusbar/phone/CentralSurfaces;
 
-    .line 2507
+    .line 2481
     iput-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 2509
+    .line 2483
     iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mExpansionCallback:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$1;
 
-    .line 2511
+    .line 2485
     iget-object v5, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mPrimaryBouncerCallbackInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerCallbackInteractor;
 
-    .line 2513
+    .line 2487
     iget-object v6, v5, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerCallbackInteractor;->expansionCallbacks:Ljava/util/ArrayList;
 
-    .line 2515
+    .line 2489
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    .line 2517
+    .line 2491
     move-result v6
 
-    .line 2520
+    .line 2494
     if-nez v6, :cond_14
 
-    .line 2521
+    .line 2495
     iget-object v5, v5, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerCallbackInteractor;->expansionCallbacks:Ljava/util/ArrayList;
 
-    .line 2523
+    .line 2497
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2525
+    .line 2499
     :cond_14
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeSurface:Lcom/android/systemui/shade/ShadeSurface;
 
-    .line 2528
+    .line 2502
     iput-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mShadeLockscreenInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeLockscreenInteractor;
 
-    .line 2530
+    .line 2504
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeExpansionStateManager:Lcom/android/systemui/shade/ShadeExpansionStateManager;
 
-    .line 2532
+    .line 2506
     if-eqz v2, :cond_15
 
-    .line 2534
+    .line 2508
     invoke-virtual {v2, v4}, Lcom/android/systemui/shade/ShadeExpansionStateManager;->addExpansionListener(Lcom/android/systemui/shade/ShadeExpansionListener;)Lcom/android/systemui/shade/ShadeExpansionChangeEvent;
 
-    .line 2536
+    .line 2510
     move-result-object v2
 
-    .line 2539
+    .line 2513
     invoke-virtual {v4, v2}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->onPanelExpansionChanged(Lcom/android/systemui/shade/ShadeExpansionChangeEvent;)V
 
-    .line 2540
+    .line 2514
     :cond_15
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 2543
+    .line 2517
     iput-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mNotificationContainer:Landroid/view/View;
 
-    .line 2545
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
-
-    .line 2547
-    move-result-object v2
-
-    .line 2550
-    iget-object v2, v2, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
-
-    .line 2551
-    const v5, 0x7f0b03da    # @id/keyguard_message_area
-
-    .line 2553
-    invoke-virtual {v2, v5}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
-
-    .line 2556
-    move-result-object v2
-
-    .line 2559
-    check-cast v2, Lcom/android/keyguard/AuthKeyguardMessageArea;
-
-    .line 2560
-    iget-object v5, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mKeyguardMessageAreaFactory:Lcom/android/keyguard/KeyguardMessageAreaController$Factory;
-
-    .line 2562
-    new-instance v6, Lcom/android/keyguard/KeyguardMessageAreaController;
-
-    .line 2564
-    iget-object v7, v5, Lcom/android/keyguard/KeyguardMessageAreaController$Factory;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    .line 2566
-    iget-object v5, v5, Lcom/android/keyguard/KeyguardMessageAreaController$Factory;->mConfigurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
-
-    .line 2568
-    invoke-direct {v6, v2, v7, v5}, Lcom/android/keyguard/KeyguardMessageAreaController;-><init>(Lcom/android/keyguard/KeyguardMessageArea;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/statusbar/policy/ConfigurationController;)V
-
-    .line 2570
-    iput-object v6, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mKeyguardMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
-
-    .line 2573
+    .line 2519
     const/4 v2, 0x1
 
-    .line 2575
+    .line 2521
     iput-boolean v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mCentralSurfacesRegistered:Z
 
-    .line 2576
+    .line 2522
     iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mKeyguardUpdateManager:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 2578
+    .line 2524
     iget-object v5, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 2580
+    .line 2526
     invoke-virtual {v2, v5}, Lcom/android/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 2582
+    .line 2528
     iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 2585
+    .line 2531
     check-cast v2, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 2587
+    .line 2533
     invoke-virtual {v2, v4}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->addCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
 
-    .line 2589
+    .line 2535
     iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mConfigurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
-    .line 2592
+    .line 2538
     check-cast v2, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
 
-    .line 2594
+    .line 2540
     invoke-virtual {v2, v4}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2596
+    .line 2542
     iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mNavigationModeController:Lcom/android/systemui/navigationbar/NavigationModeController;
 
-    .line 2599
+    .line 2545
     invoke-virtual {v2, v4}, Lcom/android/systemui/navigationbar/NavigationModeController;->addListener(Lcom/android/systemui/navigationbar/NavigationModeController$ModeChangedListener;)I
 
-    .line 2601
+    .line 2547
     move-result v2
 
-    .line 2604
+    .line 2550
     invoke-static {v2}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
 
-    .line 2605
+    .line 2551
     move-result v2
 
-    .line 2608
+    .line 2554
     iput-boolean v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mGesturalNav:Z
 
-    .line 2609
+    .line 2555
     iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mFoldAodAnimationController:Lcom/android/systemui/unfold/FoldAodAnimationController;
 
-    .line 2611
+    .line 2557
     if-eqz v2, :cond_16
 
-    .line 2613
+    .line 2559
     iget-object v2, v2, Lcom/android/systemui/unfold/FoldAodAnimationController;->statusListeners:Ljava/util/ArrayList;
 
-    .line 2615
+    .line 2561
     invoke-interface {v2, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 2617
+    .line 2563
     :cond_16
-    iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mListenForAlternateBouncerTransitionSteps:Lkotlinx/coroutines/StandaloneCoroutine;
+    iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
-    .line 2620
-    const/4 v5, 0x0
-
-    .line 2622
+    .line 2566
     if-eqz v2, :cond_17
 
-    .line 2623
-    invoke-virtual {v2, v5}, Lkotlinx/coroutines/JobSupport;->cancel(Ljava/util/concurrent/CancellationException;)V
+    .line 2568
+    iget-object v5, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mDockEventListener:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$3;
 
-    .line 2625
-    :cond_17
-    iput-object v5, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mListenForAlternateBouncerTransitionSteps:Lkotlinx/coroutines/StandaloneCoroutine;
+    .line 2570
+    check-cast v2, Lcom/google/android/systemui/dreamliner/DockObserver;
 
-    .line 2628
-    iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mListenForKeyguardAuthenticatedBiometricsHandled:Lkotlinx/coroutines/StandaloneCoroutine;
+    .line 2572
+    invoke-virtual {v2, v5}, Lcom/google/android/systemui/dreamliner/DockObserver;->addListener(Lcom/android/systemui/dock/DockManager$DockEventListener;)V
 
-    .line 2630
-    if-eqz v2, :cond_18
+    .line 2574
+    invoke-virtual {v2}, Lcom/google/android/systemui/dreamliner/DockObserver;->isDocked()Z
 
-    .line 2632
-    invoke-virtual {v2, v5}, Lkotlinx/coroutines/JobSupport;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    .line 2634
-    :cond_18
-    iput-object v5, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mListenForKeyguardAuthenticatedBiometricsHandled:Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 2637
-    sget-object v2, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->ALTERNATE_BOUNCER:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
-
-    .line 2639
-    sget-object v6, Lcom/android/systemui/keyguard/shared/model/Edge;->Companion:Lcom/android/systemui/keyguard/shared/model/Edge$Companion;
-
-    .line 2641
-    const/4 v6, 0x2
-
-    .line 2643
-    invoke-static {v2, v5, v6}, Lcom/android/systemui/keyguard/shared/model/Edge$Companion;->create$default(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;I)Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;
-
-    .line 2644
-    move-result-object v2
-
-    .line 2647
-    iget-object v5, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mKeyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
-
-    .line 2648
-    invoke-virtual {v5, v2}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->transition(Lcom/android/systemui/keyguard/shared/model/Edge;)Lkotlinx/coroutines/flow/Flow;
-
-    .line 2650
-    move-result-object v2
-
-    .line 2653
-    new-instance v5, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$$ExternalSyntheticLambda2;
-
-    .line 2654
-    const/4 v6, 0x0
-
-    .line 2656
-    invoke-direct {v5, v4, v6}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;I)V
-
-    .line 2657
-    iget-object v6, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
-
-    .line 2660
-    invoke-virtual {v6, v2, v5}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 2662
-    move-result-object v2
-
-    .line 2665
-    iput-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mListenForAlternateBouncerTransitionSteps:Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 2666
-    iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mPrimaryBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;
-
-    .line 2668
-    iget-object v2, v2, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->keyguardAuthenticatedBiometricsHandled:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor$special$$inlined$map$1;
-
-    .line 2670
-    new-instance v5, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$$ExternalSyntheticLambda2;
-
-    .line 2672
-    const/4 v7, 0x1
-
-    .line 2674
-    invoke-direct {v5, v4, v7}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;I)V
-
-    .line 2675
-    invoke-virtual {v6, v2, v5}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 2678
-    move-result-object v2
-
-    .line 2681
-    iput-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mListenForKeyguardAuthenticatedBiometricsHandled:Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 2682
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 2684
+    .line 2577
     move-result v2
 
-    .line 2687
-    if-eqz v2, :cond_19
+    .line 2580
+    iput-boolean v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mIsDocked:Z
 
-    .line 2688
-    iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBarKeyguardViewManagerInteractor:Lcom/android/systemui/statusbar/domain/interactor/StatusBarKeyguardViewManagerInteractor;
+    .line 2581
+    :cond_17
+    iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mListenForCanShowAlternateBouncer:Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 2690
-    iget-object v5, v2, Lcom/android/systemui/statusbar/domain/interactor/StatusBarKeyguardViewManagerInteractor;->keyguardViewVisibility:Lkotlinx/coroutines/flow/Flow;
+    .line 2583
+    const/4 v5, 0x0
 
-    .line 2692
-    new-instance v7, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$$ExternalSyntheticLambda2;
+    .line 2585
+    if-eqz v2, :cond_18
 
-    .line 2694
-    const/4 v8, 0x2
+    .line 2586
+    invoke-virtual {v2, v5}, Lkotlinx/coroutines/JobSupport;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    .line 2696
-    invoke-direct {v7, v4, v8}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;I)V
+    .line 2588
+    :cond_18
+    iput-object v5, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mListenForCanShowAlternateBouncer:Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 2697
-    invoke-virtual {v6, v5, v7}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
+    .line 2591
+    iget-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mAlternateBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;
 
-    .line 2700
-    iget-object v2, v2, Lcom/android/systemui/statusbar/domain/interactor/StatusBarKeyguardViewManagerInteractor;->keyguardViewOcclusionState:Lkotlinx/coroutines/flow/DistinctFlowImpl;
+    .line 2593
+    iget-object v2, v2, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->canShowAlternateBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 2703
+    .line 2595
     new-instance v5, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$$ExternalSyntheticLambda2;
 
-    .line 2705
-    const/4 v7, 0x3
+    .line 2597
+    invoke-direct {v5, v4}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;)V
 
-    .line 2707
-    invoke-direct {v5, v4, v7}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;I)V
+    .line 2599
+    iget-object v6, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
 
-    .line 2708
+    .line 2602
     invoke-virtual {v6, v2, v5}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 2711
-    :cond_19
-    invoke-interface {v3}, Ldagger/Lazy;->get()Ljava/lang/Object;
-
-    .line 2714
+    .line 2604
     move-result-object v2
 
-    .line 2717
+    .line 2607
+    iput-object v2, v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mListenForCanShowAlternateBouncer:Lkotlinx/coroutines/StandaloneCoroutine;
+
+    .line 2608
+    invoke-interface {v3}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    .line 2610
+    move-result-object v2
+
+    .line 2613
     check-cast v2, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 2718
+    .line 2614
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardStateControllerCallback:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$1;
 
-    .line 2720
+    .line 2616
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 2722
+    .line 2618
     check-cast v3, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 2724
+    .line 2620
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2726
+    .line 2622
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardIndicationController:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    .line 2729
+    .line 2625
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 2731
+    .line 2627
     iput-object v3, v2, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 2733
+    .line 2629
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 2735
+    .line 2631
     iput-object v3, v2, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mKeyguardViewController:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 2737
+    .line 2633
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mRemoteInputManager:Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
 
-    .line 2739
+    .line 2635
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->addControllerCallback(Lcom/android/systemui/statusbar/RemoteInputController$Callback;)V
 
-    .line 2741
+    .line 2637
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 2744
+    .line 2640
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightBarController:Lcom/android/systemui/statusbar/phone/LightBarController;
 
-    .line 2746
+    .line 2642
     iput-object v2, v3, Lcom/android/systemui/statusbar/phone/LightBarController;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 2748
+    .line 2644
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 2750
+    .line 2646
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 2753
+    .line 2649
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mUpdateCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 2755
+    .line 2651
     invoke-virtual {v2, v3}, Lcom/android/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 2757
+    .line 2653
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDozeServiceHost:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
 
-    .line 2760
+    .line 2656
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 2762
+    .line 2658
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 2764
+    .line 2660
     move-result-object v4
 
-    .line 2767
+    .line 2663
     iget-object v5, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mAmbientIndicationContainer:Landroid/view/View;
 
-    .line 2768
+    .line 2664
     iput-object v1, v2, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mCentralSurfaces:Lcom/android/systemui/statusbar/phone/CentralSurfaces;
 
-    .line 2770
+    .line 2666
     iput-object v3, v2, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 2772
+    .line 2668
     iput-object v4, v2, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mNotificationShadeWindowViewController:Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 2774
+    .line 2670
     iput-object v5, v2, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mAmbientIndicationContainer:Landroid/view/View;
 
-    .line 2776
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->updateLightRevealScrimVisibility()V
+    .line 2672
+    iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
-    .line 2778
+    .line 2674
+    if-nez v2, :cond_19
+
+    .line 2676
+    goto :goto_b
+
+    .line 2678
+    :cond_19
+    iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
+
+    .line 2679
+    iget-object v3, v3, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    .line 2681
+    invoke-virtual {v3}, Lcom/android/systemui/statusbar/phone/ScrimState;->getMaxLightRevealScrimAlpha()F
+
+    .line 2683
+    move-result v3
+
+    .line 2686
+    invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/LightRevealScrim;->setAlpha(F)V
+
+    .line 2687
+    :goto_b
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mConfigurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
-    .line 2781
+    .line 2690
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mConfigurationListener:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$17;
 
-    .line 2783
+    .line 2692
     check-cast v2, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
 
-    .line 2785
+    .line 2694
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 2787
+    .line 2696
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
-    .line 2790
+    .line 2699
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLifecycle:Landroidx/lifecycle/LifecycleRegistry;
 
-    .line 2792
+    .line 2701
     iget-object v4, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBatteryStateChangeCallback:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$19;
 
-    .line 2794
-    invoke-interface {v2, v3, v4}, Lcom/android/systemui/statusbar/policy/CallbackController;->observe(Landroidx/lifecycle/Lifecycle;Ljava/lang/Object;)V
+    .line 2703
+    invoke-interface {v2, v3, v4}, Lcom/android/systemui/statusbar/policy/CallbackController;->observe(Landroidx/lifecycle/Lifecycle;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2796
+    .line 2705
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLifecycle:Landroidx/lifecycle/LifecycleRegistry;
 
-    .line 2799
+    .line 2708
     sget-object v3, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
 
-    .line 2801
+    .line 2710
     invoke-virtual {v2, v3}, Landroidx/lifecycle/LifecycleRegistry;->setCurrentState(Landroidx/lifecycle/Lifecycle$State;)V
 
-    .line 2803
+    .line 2712
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mAccessibilityFloatingMenuController:Lcom/android/systemui/accessibility/floatingmenu/AccessibilityFloatingMenuController;
 
-    .line 2806
+    .line 2715
     invoke-virtual {v2}, Lcom/android/systemui/accessibility/floatingmenu/AccessibilityFloatingMenuController;->init$10()V
 
-    .line 2808
+    .line 2717
     iget v2, v0, Lcom/android/internal/statusbar/RegisterStatusBarResult;->mDisabledFlags1:I
 
-    .line 2811
+    .line 2720
     iget v0, v0, Lcom/android/internal/statusbar/RegisterStatusBarResult;->mDisabledFlags2:I
 
-    .line 2813
+    .line 2722
     iget-object v3, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mInitController:Lcom/android/systemui/InitController;
 
-    .line 2815
+    .line 2724
     new-instance v4, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda15;
 
-    .line 2817
+    .line 2726
     invoke-direct {v4, v1, v2, v0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda15;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;II)V
 
-    .line 2819
+    .line 2728
     iget-boolean v0, v3, Lcom/android/systemui/InitController;->mTasksExecuted:Z
 
-    .line 2822
+    .line 2731
     if-nez v0, :cond_1a
 
-    .line 2824
+    .line 2733
     iget-object v0, v3, Lcom/android/systemui/InitController;->mTasks:Ljava/util/ArrayList;
 
-    .line 2826
+    .line 2735
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2828
+    .line 2737
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->registerCallbacks()V
 
-    .line 2831
+    .line 2740
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
 
-    .line 2834
+    .line 2743
     iget-object v2, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mFalsingBeliefListener:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$14;
 
-    .line 2836
+    .line 2745
     invoke-interface {v0, v2}, Lcom/android/systemui/plugins/FalsingManager;->addFalsingBeliefListener(Lcom/android/systemui/plugins/FalsingManager$FalsingBeliefListener;)V
 
-    .line 2838
+    .line 2747
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mPluginManager:Lcom/android/systemui/plugins/PluginManager;
 
-    .line 2841
+    .line 2750
     new-instance v2, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$3;
 
-    .line 2843
+    .line 2752
     invoke-direct {v2, v1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$3;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;)V
 
-    .line 2845
+    .line 2754
     const-class v3, Lcom/android/systemui/plugins/OverlayPlugin;
 
-    .line 2848
+    .line 2757
     const/4 v4, 0x1
 
-    .line 2850
+    .line 2759
     invoke-interface {v0, v2, v3, v4}, Lcom/android/systemui/plugins/PluginManager;->addPluginListener(Lcom/android/systemui/plugins/PluginListener;Ljava/lang/Class;Z)V
 
-    .line 2851
+    .line 2760
     iget-object v0, v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStartingSurfaceOptional:Ljava/util/Optional;
 
-    .line 2854
+    .line 2763
     new-instance v2, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;
 
-    .line 2856
+    .line 2765
     const/4 v3, 0x2
 
-    .line 2858
+    .line 2767
     invoke-direct {v2, v1, v3}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;I)V
 
-    .line 2859
+    .line 2768
     invoke-virtual {v0, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 2862
+    .line 2771
     return-void
 
-    .line 2865
+    .line 2774
     :cond_1a
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 2866
+    .line 2775
     const-string v1, "post init tasks have already been executed!"
 
-    .line 2868
+    .line 2777
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 2870
+    .line 2779
     throw v0
 
-    .line 2873
+    .line 2782
     :catchall_0
     move-exception v0
 
-    .line 2874
+    .line 2783
     :try_start_4
     monitor-exit v4
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 2875
+    .line 2784
     throw v0
 
-    .line 2876
+    .line 2785
     :catchall_1
     move-exception v0
 
-    .line 2877
+    .line 2786
     :try_start_5
     monitor-exit v6
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 2878
+    .line 2787
     throw v0
-    .line 2879
+    .line 2788
 .end method
 
 .method public final updateDozingState()V
@@ -8750,10 +8733,10 @@
     iget-object v13, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLockscreenShadeTransitionController:Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
 
     .line 95
-    iget-object v14, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mMessageRouter:Lcom/android/systemui/util/concurrency/MessageRouter;
+    const/16 v14, 0x3eb
 
     .line 97
-    const/16 v15, 0x3eb
+    iget-object v15, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mMessageRouter:Lcom/android/systemui/util/concurrency/MessageRouterImpl;
 
     .line 99
     iget-object v9, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeSurface:Lcom/android/systemui/shade/ShadeSurface;
@@ -8820,502 +8803,444 @@
 
     .line 139
     :cond_b
-    check-cast v14, Lcom/android/systemui/util/concurrency/MessageRouterImpl;
+    invoke-virtual {v15, v14}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->cancelMessages(I)V
 
     .line 142
-    invoke-virtual {v14, v15}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->cancelMessages(I)V
-
-    .line 144
     iget-boolean v1, v13, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->isWakingToShadeLocked:Z
 
-    .line 147
+    .line 145
     if-nez v1, :cond_c
 
-    .line 149
+    .line 147
     invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 151
+    .line 149
     check-cast v10, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 154
+    .line 152
     const/4 v1, 0x0
 
-    .line 156
+    .line 154
     invoke-virtual {v10, v6, v1}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->setState(IZ)Z
 
-    .line 157
+    .line 155
     :cond_c
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->updatePanelExpansionForKeyguard()V
 
-    .line 160
+    .line 158
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 163
+    .line 161
     goto :goto_5
 
-    .line 166
+    .line 164
     :cond_d
     new-instance v6, Ljava/lang/StringBuilder;
 
-    .line 167
+    .line 165
     const-string v8, "!shouldBeKeyguard mStatusBarStateController.isKeyguardRequested() "
 
-    .line 169
+    .line 167
     invoke-direct {v6, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 171
+    .line 169
     iget-boolean v8, v11, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mKeyguardRequested:Z
 
-    .line 174
+    .line 172
     invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 176
+    .line 174
     const-string v8, " keyguardForDozing "
 
-    .line 179
+    .line 177
     invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 181
+    .line 179
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 184
+    .line 182
     const-string v4, " wakeAndUnlocking "
 
-    .line 187
+    .line 185
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 189
+    .line 187
     invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 192
+    .line 190
     const-string v2, " isWakingAndOccluded "
 
-    .line 195
+    .line 193
     invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 197
+    .line 195
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 200
+    .line 198
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 203
+    .line 201
     move-result-object v2
 
-    .line 206
+    .line 204
     const-string v4, "CentralSurfaces"
 
-    .line 207
+    .line 205
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
+    .line 207
     iget-object v2, v5, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;->animations:Ljava/util/List;
 
-    .line 212
+    .line 210
     instance-of v5, v2, Ljava/util/Collection;
 
-    .line 214
+    .line 212
     if-eqz v5, :cond_e
 
-    .line 216
+    .line 214
     invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
 
-    .line 218
+    .line 216
     move-result v5
 
-    .line 221
+    .line 219
     if-eqz v5, :cond_e
 
-    .line 222
+    .line 220
     goto :goto_6
 
-    .line 224
+    .line 222
     :cond_e
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 225
+    .line 223
     move-result-object v2
 
-    .line 228
+    .line 226
     :cond_f
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 229
+    .line 227
     move-result v5
 
-    .line 232
+    .line 230
     if-eqz v5, :cond_10
 
-    .line 233
+    .line 231
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 235
+    .line 233
     move-result-object v5
 
-    .line 238
+    .line 236
     check-cast v5, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;
 
-    .line 239
+    .line 237
     invoke-interface {v5}, Lcom/android/systemui/statusbar/phone/ScreenOffAnimation;->isKeyguardHideDelayed()Z
 
-    .line 241
+    .line 239
     move-result v5
 
-    .line 244
+    .line 242
     if-eqz v5, :cond_f
 
-    .line 245
+    .line 243
     goto :goto_5
 
-    .line 247
+    .line 245
     :cond_10
     :goto_6
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 248
+    .line 246
     iget-boolean v2, v2, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mOccludeAnimationPlaying:Z
 
-    .line 250
+    .line 248
     if-nez v2, :cond_9
 
-    .line 252
+    .line 250
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 254
+    .line 252
     const-string v5, "hideKeyguardImpl "
 
-    .line 256
+    .line 254
     invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 258
+    .line 256
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 261
+    .line 259
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 264
+    .line 262
     move-result-object v2
 
-    .line 267
+    .line 265
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
+    .line 266
     const-string v2, "CentralSurfaces#hideKeyguard"
 
-    .line 271
+    .line 269
     invoke-static {v2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 273
+    .line 271
     iget-boolean v2, v11, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mLeaveOpenOnKeyguardHide:Z
 
-    .line 276
+    .line 274
     iget v4, v11, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
 
-    .line 278
+    .line 276
     const/4 v5, 0x0
 
-    .line 280
+    .line 278
     invoke-virtual {v11, v5, v1}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->setState(IZ)Z
 
-    .line 281
+    .line 279
     move-result v1
 
-    .line 284
+    .line 282
     if-nez v1, :cond_11
 
-    .line 285
+    .line 283
     iget-object v1, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
-    .line 287
+    .line 285
     check-cast v1, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 289
+    .line 287
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->updatePublicMode()V
 
-    .line 291
+    .line 289
     :cond_11
     iget-boolean v1, v11, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mLeaveOpenOnKeyguardHide:Z
 
-    .line 294
+    .line 292
     if-eqz v1, :cond_18
 
-    .line 296
+    .line 294
     iget-boolean v1, v11, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mKeyguardRequested:Z
 
+    .line 296
+    if-nez v1, :cond_12
+
     .line 298
-    if-nez v1, :cond_12
-
-    .line 300
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 302
-    move-result v1
-
-    .line 305
-    if-nez v1, :cond_12
-
-    .line 306
     const/4 v1, 0x0
 
-    .line 308
+    .line 300
     iput-boolean v1, v11, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mLeaveOpenOnKeyguardHide:Z
 
-    .line 309
+    .line 301
     :cond_12
     iget-wide v5, v3, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardFadingAwayDelay:J
 
-    .line 311
+    .line 303
     iget-wide v7, v3, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardFadingAwayDuration:J
 
-    .line 313
+    .line 305
     add-long/2addr v5, v7
 
-    .line 315
+    .line 307
     iget-object v1, v13, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->logger:Lcom/android/systemui/statusbar/phone/LSShadeTransitionLogger;
 
-    .line 316
+    .line 308
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 318
+    .line 310
     sget-object v3, Lcom/android/systemui/log/core/LogLevel;->INFO:Lcom/android/systemui/log/core/LogLevel;
 
-    .line 321
+    .line 313
     sget-object v7, Lcom/android/systemui/statusbar/phone/LSShadeTransitionLogger$logOnHideKeyguard$2;->INSTANCE:Lcom/android/systemui/statusbar/phone/LSShadeTransitionLogger$logOnHideKeyguard$2;
 
-    .line 323
+    .line 315
     const/4 v8, 0x0
 
-    .line 325
+    .line 317
     iget-object v1, v1, Lcom/android/systemui/statusbar/phone/LSShadeTransitionLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
 
-    .line 326
+    .line 318
     const-string v10, "LockscreenShadeTransitionController"
 
-    .line 328
+    .line 320
     invoke-virtual {v1, v10, v3, v7, v8}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
 
-    .line 330
+    .line 322
     move-result-object v3
 
-    .line 333
+    .line 325
     invoke-virtual {v1, v3}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
 
-    .line 334
+    .line 326
     iget-object v1, v13, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->animationHandlerOnKeyguardDismiss:Lkotlin/jvm/functions/Function1;
 
-    .line 337
+    .line 329
     const/4 v3, 0x0
 
-    .line 339
+    .line 331
     if-eqz v1, :cond_13
 
-    .line 340
+    .line 332
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 342
+    .line 334
     move-result-object v4
 
-    .line 345
+    .line 337
     invoke-interface {v1, v4}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 346
+    .line 338
     iput-object v3, v13, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->animationHandlerOnKeyguardDismiss:Lkotlin/jvm/functions/Function1;
 
-    .line 349
+    .line 341
     const/4 v1, 0x0
 
-    .line 351
+    .line 343
     goto :goto_7
 
-    .line 352
+    .line 344
     :cond_13
     iget-boolean v1, v13, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->nextHideKeyguardNeedsNoAnimation:Z
 
-    .line 353
+    .line 345
     if-eqz v1, :cond_14
 
-    .line 355
+    .line 347
     const/4 v1, 0x0
 
-    .line 357
+    .line 349
     iput-boolean v1, v13, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->nextHideKeyguardNeedsNoAnimation:Z
 
-    .line 358
+    .line 350
     goto :goto_7
 
-    .line 360
+    .line 352
     :cond_14
     const/4 v1, 0x0
 
-    .line 361
+    .line 353
     const/4 v7, 0x2
 
-    .line 362
+    .line 354
     if-eq v4, v7, :cond_15
 
-    .line 363
+    .line 355
     invoke-virtual {v13, v5, v6}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->performDefaultGoToFullShadeAnimation(J)V
 
-    .line 365
+    .line 357
     :cond_15
     :goto_7
     iget-object v4, v13, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->draggedDownEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 368
+    .line 360
     if-eqz v4, :cond_17
 
-    .line 370
+    .line 362
     iget-object v4, v4, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->row:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 372
+    .line 364
     if-eqz v4, :cond_16
 
-    .line 374
+    .line 366
     invoke-virtual {v4, v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setUserLocked(Z)V
 
-    .line 376
+    .line 368
     :cond_16
     iput-object v3, v13, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->draggedDownEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 379
+    .line 371
     :cond_17
     iget v1, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDisplayId:I
 
-    .line 381
+    .line 373
     iget-object v3, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNavigationBarController:Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;
 
-    .line 383
-    invoke-virtual {v3, v1, v5, v6}, Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;->disableAnimationsDuringHide(IJ)V
+    .line 375
+    invoke-virtual {v3, v5, v6, v1}, Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;->disableAnimationsDuringHide(JI)V
 
-    .line 385
+    .line 377
     goto :goto_8
 
-    .line 388
+    .line 380
     :cond_18
     invoke-interface {v9}, Lcom/android/systemui/shade/domain/interactor/PanelExpansionInteractor;->isCollapsing()Z
 
-    .line 389
+    .line 381
     move-result v1
 
-    .line 392
+    .line 384
     if-nez v1, :cond_19
 
-    .line 393
+    .line 385
     iget-object v1, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeController:Lcom/android/systemui/shade/ShadeController;
 
-    .line 395
+    .line 387
     invoke-interface {v1}, Lcom/android/systemui/shade/ShadeController;->instantCollapseShade()V
 
-    .line 397
+    .line 389
     :cond_19
     :goto_8
     iget-object v1, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mQSPanelController:Lcom/android/systemui/qs/QSPanelController;
 
-    .line 400
+    .line 392
     if-eqz v1, :cond_1a
 
-    .line 402
+    .line 394
     invoke-virtual {v1}, Lcom/android/systemui/qs/QSPanelController;->refreshAllTiles()V
 
-    .line 404
+    .line 396
     :cond_1a
-    check-cast v14, Lcom/android/systemui/util/concurrency/MessageRouterImpl;
+    invoke-virtual {v15, v14}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->cancelMessages(I)V
 
-    .line 407
-    invoke-virtual {v14, v15}, Lcom/android/systemui/util/concurrency/MessageRouterImpl;->cancelMessages(I)V
-
-    .line 409
+    .line 399
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->releaseGestureWakeLock()V
 
-    .line 412
+    .line 402
     iget-object v1, v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mCameraLauncherLazy:Ldagger/Lazy;
 
-    .line 415
+    .line 405
     invoke-interface {v1}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 417
+    .line 407
     move-result-object v1
 
-    .line 420
+    .line 410
     check-cast v1, Lcom/android/systemui/shade/CameraLauncher;
 
-    .line 421
+    .line 411
     iget-object v1, v1, Lcom/android/systemui/shade/CameraLauncher;->mKeyguardBypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
 
-    .line 423
+    .line 413
     const/4 v3, 0x0
 
-    .line 425
+    .line 415
     iput-boolean v3, v1, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->launchingAffordance:Z
 
-    .line 426
+    .line 416
     invoke-interface {v9}, Lcom/android/systemui/shade/ShadeSurface;->resetAlpha()V
 
-    .line 428
+    .line 418
     invoke-interface {v9}, Lcom/android/systemui/shade/ShadeSurface;->resetTranslation()V
 
-    .line 431
+    .line 421
     invoke-interface {v9}, Lcom/android/systemui/shade/domain/interactor/ShadeLockscreenInteractor;->resetViewGroupFade()V
 
-    .line 434
+    .line 424
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->updateDozingState()V
 
-    .line 437
+    .line 427
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->updateScrimController()V
 
-    .line 440
+    .line 430
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 443
+    .line 433
     return v2
 
-    .line 446
+    .line 436
     :goto_9
     return v3
-    .line 447
-.end method
-
-.method public final updateLightRevealScrimVisibility()V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
-
-    .line 2
-    if-nez v0, :cond_0
-
-    .line 4
-    return-void
-
-    .line 6
-    :cond_0
-    invoke-static {}, Lcom/android/systemui/Flags;->lightRevealMigration()Z
-
-    .line 7
-    move-result v1
-
-    .line 10
-    if-nez v1, :cond_1
-
-    .line 11
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
-
-    .line 13
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
-
-    .line 15
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ScrimState;->getMaxLightRevealScrimAlpha()F
-
-    .line 17
-    move-result p0
-
-    .line 20
-    invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/LightRevealScrim;->setAlpha(F)V
-
-    .line 21
-    :cond_1
-    return-void
-    .line 24
+    .line 437
 .end method
 
 .method public final updateNotificationPanelTouchState()V
@@ -9592,7 +9517,7 @@
     move-result-object v1
 
     .line 53
-    const v2, 0x7f070870    # @dimen/physical_power_button_center_screen_location_y '620.0px'
+    const v2, 0x7f0708c0    # @dimen/physical_power_button_center_screen_location_y '620.0px'
 
     .line 54
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -9615,137 +9540,140 @@
 .end method
 
 .method public updateScrimController()V
-    .locals 7
+    .locals 9
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 2
     const-string v0, "CentralSurfaces#updateScrimController"
 
-    .line 5
+    .line 2
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 7
+    .line 4
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 10
+    .line 7
     check-cast v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 12
+    .line 9
     iget-boolean v1, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mShowing:Z
 
-    .line 14
+    .line 11
     const/4 v2, 0x1
 
-    .line 16
+    .line 13
     const/4 v3, 0x0
 
-    .line 17
+    .line 14
     if-eqz v1, :cond_1
 
-    .line 18
+    .line 15
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    .line 20
+    .line 17
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->isWakeAndUnlock()Z
 
-    .line 22
+    .line 19
     move-result v1
+
+    .line 22
+    if-nez v1, :cond_0
+
+    .line 23
+    iget-boolean v1, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardFadingAway:Z
 
     .line 25
     if-nez v1, :cond_0
 
-    .line 26
-    iget-boolean v1, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardFadingAway:Z
-
-    .line 28
-    if-nez v1, :cond_0
-
-    .line 30
+    .line 27
     iget-boolean v1, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardGoingAway:Z
 
-    .line 32
+    .line 29
     if-nez v1, :cond_0
 
-    .line 34
+    .line 31
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 36
+    .line 33
     iget-boolean v4, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mSurfaceBehindRemoteAnimationRequested:Z
 
-    .line 38
+    .line 35
     if-nez v4, :cond_0
 
-    .line 40
+    .line 37
     iget-boolean v1, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mSurfaceBehindRemoteAnimationRunning:Z
 
-    .line 42
+    .line 39
     if-eqz v1, :cond_1
 
-    .line 44
+    .line 41
     :cond_0
     move v1, v2
 
-    .line 46
+    .line 43
     goto :goto_0
 
-    .line 47
+    .line 44
     :cond_1
     move v1, v3
 
-    .line 48
+    .line 45
     :goto_0
     iget-boolean v4, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mShowing:Z
 
-    .line 49
+    .line 46
     if-eqz v4, :cond_2
 
-    .line 51
+    .line 48
     iget-object v4, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 53
+    .line 50
     iget-boolean v4, v4, Lcom/android/keyguard/KeyguardUpdateMonitor;->mIsDreaming:Z
 
-    .line 55
+    .line 52
     if-eqz v4, :cond_2
 
-    .line 57
+    .line 54
     if-nez v1, :cond_2
 
-    .line 59
+    .line 56
     goto :goto_1
 
-    .line 61
+    .line 58
     :cond_2
     move v2, v3
 
-    .line 62
+    .line 59
     :goto_1
     xor-int/lit8 v3, v1, 0x1
 
-    .line 63
+    .line 60
     iget-object v4, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mScrimController:Lcom/android/systemui/statusbar/phone/ScrimController;
 
-    .line 65
+    .line 62
     iput-boolean v3, v4, Lcom/android/systemui/statusbar/phone/ScrimController;->mExpansionAffectsAlpha:Z
 
-    .line 67
+    .line 64
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mAlternateBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;
 
-    .line 69
+    .line 66
     invoke-virtual {v3}, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->isVisibleState()Z
 
-    .line 71
+    .line 68
     move-result v3
 
+    .line 71
+    sget-object v5, Lcom/android/systemui/statusbar/phone/ScrimState;->KEYGUARD:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    .line 72
+    const/4 v6, 0x2
+
     .line 74
-    const/4 v5, 0x2
+    iget-object v7, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mUnlockScrimCallback:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;
 
     .line 75
-    iget-object v6, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mUnlockScrimCallback:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;
+    const/4 v8, 0x0
 
-    .line 76
+    .line 77
     if-eqz v3, :cond_6
 
     .line 78
@@ -9774,7 +9702,7 @@
     if-eqz v0, :cond_5
 
     .line 94
-    if-eq v0, v5, :cond_5
+    if-eq v0, v6, :cond_5
 
     .line 96
     iget v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mTransitionToFullShadeProgress:F
@@ -9793,262 +9721,257 @@
 
     .line 105
     :cond_4
-    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->AUTH_SCRIMMED:Lcom/android/systemui/statusbar/phone/ScrimState;
+    invoke-virtual {v4, v8, v5}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
     .line 106
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
-
-    .line 108
-    goto :goto_3
-
-    .line 111
     :cond_5
     :goto_2
-    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->AUTH_SCRIMMED_SHADE:Lcom/android/systemui/statusbar/phone/ScrimState;
+    invoke-virtual {v7}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;->onFinished()V
+
+    .line 109
+    goto/16 :goto_4
 
     .line 112
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
-
-    .line 114
-    :goto_3
-    invoke-virtual {v6}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;->onFinished()V
-
-    .line 117
-    goto/16 :goto_5
-
-    .line 120
     :cond_6
     iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBouncerShowing:Z
 
-    .line 122
+    .line 114
     if-eqz v3, :cond_8
 
-    .line 124
+    .line 116
     if-nez v1, :cond_8
 
-    .line 126
+    .line 118
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 128
+    .line 120
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->primaryBouncerNeedsScrimming()Z
 
-    .line 130
+    .line 122
     move-result v0
 
-    .line 133
+    .line 125
     if-eqz v0, :cond_7
 
-    .line 134
+    .line 126
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER_SCRIMMED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 136
-    goto :goto_4
+    .line 128
+    goto :goto_3
 
-    .line 138
+    .line 130
     :cond_7
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BOUNCER:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 139
-    :goto_4
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    .line 131
+    :goto_3
+    invoke-virtual {v4, v8, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 141
-    goto/16 :goto_5
+    .line 133
+    goto/16 :goto_4
 
-    .line 144
+    .line 136
     :cond_8
     iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mBrightnessMirrorVisible:Z
 
-    .line 146
+    .line 138
     if-eqz v3, :cond_9
 
-    .line 148
+    .line 140
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->BRIGHTNESS_MIRROR:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 150
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    .line 142
+    invoke-virtual {v4, v8, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 152
-    goto/16 :goto_5
+    .line 144
+    goto/16 :goto_4
 
-    .line 155
+    .line 147
     :cond_9
     iget v3, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mState:I
 
-    .line 157
-    if-ne v3, v5, :cond_a
+    .line 149
+    if-ne v3, v6, :cond_a
 
-    .line 159
+    .line 151
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->SHADE_LOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 161
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    .line 153
+    invoke-virtual {v4, v8, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 163
-    goto/16 :goto_5
+    .line 155
+    goto :goto_4
 
-    .line 166
+    .line 158
     :cond_a
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDozeServiceHost:Lcom/android/systemui/statusbar/phone/DozeServiceHost;
 
-    .line 168
-    iget-boolean v5, v3, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mPulsing:Z
+    .line 159
+    iget-boolean v6, v3, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mPulsing:Z
 
-    .line 170
-    if-eqz v5, :cond_b
+    .line 161
+    if-eqz v6, :cond_b
 
-    .line 172
+    .line 163
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->PULSING:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 174
+    .line 165
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDozeScrimController:Lcom/android/systemui/statusbar/phone/DozeScrimController;
 
-    .line 176
+    .line 167
     iget-object v1, v1, Lcom/android/systemui/statusbar/phone/DozeScrimController;->mScrimCallback:Lcom/android/systemui/statusbar/phone/DozeScrimController$1;
 
-    .line 178
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->assertInLegacyMode()V
-
-    .line 180
+    .line 169
     invoke-virtual {v4, v1, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 183
-    goto :goto_5
+    .line 171
+    goto :goto_4
 
-    .line 186
+    .line 174
     :cond_b
     iget-object v3, v3, Lcom/android/systemui/statusbar/phone/DozeServiceHost;->mPendingScreenOffCallback:Ljava/lang/Runnable;
 
-    .line 187
+    .line 175
     if-eqz v3, :cond_c
 
-    .line 189
+    .line 177
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->OFF:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 191
+    .line 179
     new-instance v1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$11;
 
-    .line 193
+    .line 181
     invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$11;-><init>(Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;)V
 
-    .line 195
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->assertInLegacyMode()V
-
-    .line 198
+    .line 183
     invoke-virtual {v4, v1, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 201
-    goto :goto_5
+    .line 186
+    goto :goto_4
 
-    .line 204
+    .line 189
     :cond_c
     iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDozing:Z
 
-    .line 205
+    .line 190
     if-eqz v3, :cond_d
 
-    .line 207
+    .line 192
     if-nez v1, :cond_d
 
-    .line 209
+    .line 194
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->AOD:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 211
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    .line 196
+    invoke-virtual {v4, v8, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 213
-    invoke-virtual {v6}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;->onFinished()V
+    .line 198
+    invoke-virtual {v7}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;->onFinished()V
 
-    .line 216
-    goto :goto_5
+    .line 201
+    goto :goto_4
 
-    .line 219
+    .line 204
     :cond_d
     iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mIsIdleOnCommunal:Z
 
-    .line 220
+    .line 205
     if-eqz v3, :cond_f
 
-    .line 222
+    .line 207
     if-eqz v2, :cond_e
 
-    .line 224
+    .line 209
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->GLANCEABLE_HUB_OVER_DREAM:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 226
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    .line 211
+    invoke-virtual {v4, v8, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 228
-    goto :goto_5
+    .line 213
+    goto :goto_4
 
-    .line 231
+    .line 216
     :cond_e
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->GLANCEABLE_HUB:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 232
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    .line 217
+    invoke-virtual {v4, v8, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 234
-    goto :goto_5
+    .line 219
+    goto :goto_4
 
-    .line 237
+    .line 222
     :cond_f
     iget-boolean v3, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mShowing:Z
 
-    .line 238
+    .line 223
     if-eqz v3, :cond_10
 
-    .line 240
+    .line 225
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mOccluded:Z
 
-    .line 242
+    .line 227
     if-nez v0, :cond_10
 
-    .line 244
+    .line 229
     if-nez v1, :cond_10
 
-    .line 246
-    sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->KEYGUARD:Lcom/android/systemui/statusbar/phone/ScrimState;
+    .line 231
+    invoke-virtual {v4, v8, v5}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 248
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    .line 233
+    goto :goto_4
 
-    .line 250
-    goto :goto_5
-
-    .line 253
+    .line 236
     :cond_10
     if-eqz v2, :cond_11
 
-    .line 254
+    .line 237
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->DREAMING:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 256
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->legacyTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    .line 239
+    invoke-virtual {v4, v8, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 258
-    goto :goto_5
+    .line 241
+    goto :goto_4
 
-    .line 261
+    .line 244
     :cond_11
     sget-object v0, Lcom/android/systemui/statusbar/phone/ScrimState;->UNLOCKED:Lcom/android/systemui/statusbar/phone/ScrimState;
 
-    .line 262
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->assertInLegacyMode()V
+    .line 245
+    invoke-virtual {v4, v7, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
 
-    .line 264
-    invoke-virtual {v4, v6, v0}, Lcom/android/systemui/statusbar/phone/ScrimController;->internalTransitionTo(Lcom/android/systemui/statusbar/phone/ScrimController$Callback;Lcom/android/systemui/statusbar/phone/ScrimState;)V
+    .line 247
+    :goto_4
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLightRevealScrim:Lcom/android/systemui/statusbar/LightRevealScrim;
 
-    .line 267
+    .line 250
+    if-nez p0, :cond_12
+
+    .line 252
+    goto :goto_5
+
+    .line 254
+    :cond_12
+    iget-object v0, v4, Lcom/android/systemui/statusbar/phone/ScrimController;->mState:Lcom/android/systemui/statusbar/phone/ScrimState;
+
+    .line 255
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/ScrimState;->getMaxLightRevealScrimAlpha()F
+
+    .line 257
+    move-result v0
+
+    .line 260
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/LightRevealScrim;->setAlpha(F)V
+
+    .line 261
     :goto_5
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->updateLightRevealScrimVisibility()V
-
-    .line 270
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 273
+    .line 264
     return-void
-    .line 276
+    .line 267
 .end method
 
 .method public final updateTheme()V
@@ -10085,14 +10008,14 @@
     if-eqz v0, :cond_0
 
     .line 21
-    const v0, 0x7f1504c9    # @style/Theme.SystemUI.LightWallpaper
+    const v0, 0x7f1404d1    # @style/Theme.SystemUI.LightWallpaper
 
     .line 23
     goto :goto_0
 
     .line 26
     :cond_0
-    const v0, 0x7f1504bb    # @style/Theme.SystemUI
+    const v0, 0x7f1404c3    # @style/Theme.SystemUI
 
     .line 27
     :goto_0

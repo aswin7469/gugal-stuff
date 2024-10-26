@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/mediaprojection/appselector/view/RecentTaskViewHolder$bind$1$1$2;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -189,7 +189,7 @@
     move-result-object p1
 
     .line 56
-    const v0, 0x7f1409ba    # @string/unknown 'Unknown'
+    const v0, 0x7f130a40    # @string/unknown 'Unknown'
 
     .line 57
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -206,4 +206,5 @@
 
     .line 67
     return-object p0
+    .line 69
 .end method

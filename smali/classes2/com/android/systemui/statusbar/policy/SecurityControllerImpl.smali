@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/SecurityControllerImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/SecurityController;
@@ -38,6 +38,8 @@
 .field public final mUserChangedCallback:Lcom/android/systemui/settings/UserTracker$Callback;
 
 .field public final mUserManager:Landroid/os/UserManager;
+
+.field public final mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
 .field public final mVpnManager:Landroid/net/VpnManager;
 
@@ -217,7 +219,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/settings/UserTracker;Landroid/os/Handler;Lcom/android/systemui/broadcast/BroadcastDispatcher;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lcom/android/systemui/dump/DumpManager;)V
-    .locals 11
+    .locals 12
 
     .line 1
     move-object v0, p0
@@ -313,10 +315,10 @@
     move-result-object v4
 
     .line 69
-    move-object v10, v4
+    move-object v11, v4
 
     .line 70
-    check-cast v10, Landroid/net/ConnectivityManager;
+    check-cast v11, Landroid/net/ConnectivityManager;
 
     .line 71
     const-class v4, Landroid/net/VpnManager;
@@ -397,85 +399,88 @@
     sget-object v8, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     .line 128
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual/range {p4 .. p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 130
-    const/16 v9, 0x30
+    const/16 v10, 0x30
 
     .line 133
-    move-object v4, p4
+    const/4 v9, 0x0
 
     .line 135
-    move-object v7, p3
+    move-object/from16 v4, p4
 
     .line 136
-    invoke-static/range {v4 .. v9}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;I)V
+    move-object v7, p3
 
-    .line 137
+    .line 138
+    invoke-static/range {v4 .. v10}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;II)V
+
+    .line 139
     sget-object v4, Lcom/android/systemui/statusbar/policy/SecurityControllerImpl;->REQUEST:Landroid/net/NetworkRequest;
 
-    .line 140
-    invoke-virtual {v10, v4, v3}, Landroid/net/ConnectivityManager;->registerNetworkCallback(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager$NetworkCallback;)V
-
     .line 142
+    invoke-virtual {v11, v4, v3}, Landroid/net/ConnectivityManager;->registerNetworkCallback(Landroid/net/NetworkRequest;Landroid/net/ConnectivityManager$NetworkCallback;)V
+
+    .line 144
     move-object v3, p2
 
-    .line 145
+    .line 147
     check-cast v3, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 146
+    .line 148
     invoke-virtual {v3}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 148
+    .line 150
     move-result v4
 
-    .line 151
+    .line 153
     iput v4, v0, Lcom/android/systemui/statusbar/policy/SecurityControllerImpl;->mCurrentUserId:I
 
-    .line 152
+    .line 154
     invoke-virtual {v1, v4}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
-    .line 154
+    .line 156
     move-result-object v1
 
-    .line 157
+    .line 159
     invoke-virtual {v1}, Landroid/content/pm/UserInfo;->isRestricted()Z
 
-    .line 158
+    .line 160
     move-result v4
 
-    .line 161
+    .line 163
     if-eqz v4, :cond_0
 
-    .line 162
+    .line 164
     iget v1, v1, Landroid/content/pm/UserInfo;->restrictedProfileParentId:I
 
-    .line 164
+    .line 166
     iput v1, v0, Lcom/android/systemui/statusbar/policy/SecurityControllerImpl;->mVpnUserId:I
 
-    .line 166
+    .line 168
     goto :goto_0
 
-    .line 168
+    .line 170
     :cond_0
     iget v1, v0, Lcom/android/systemui/statusbar/policy/SecurityControllerImpl;->mCurrentUserId:I
 
-    .line 169
+    .line 171
     iput v1, v0, Lcom/android/systemui/statusbar/policy/SecurityControllerImpl;->mVpnUserId:I
 
-    .line 171
+    .line 173
     :goto_0
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/SecurityControllerImpl;->fireCallbacks()V
 
-    .line 173
+    .line 175
     move-object/from16 v0, p5
 
-    .line 176
+    .line 178
     invoke-virtual {v3, v2, v0}, Lcom/android/systemui/settings/UserTrackerImpl;->addCallback(Lcom/android/systemui/settings/UserTracker$Callback;Ljava/util/concurrent/Executor;)V
 
-    .line 178
+    .line 180
     return-void
-    .line 181
+    .line 183
 .end method
 
 
@@ -896,7 +901,6 @@
 
     .line 35
     throw p0
-    .line 36
 .end method
 
 .method public final getDeviceAdminInfo()Landroid/app/admin/DeviceAdminInfo;
@@ -981,7 +985,7 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/SecurityControllerImpl;->mContext:Landroid/content/Context;
 
     .line 6
-    const p1, 0x7f140546    # @string/legacy_vpn_name 'VPN'
+    const p1, 0x7f13059c    # @string/legacy_vpn_name 'VPN'
 
     .line 8
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

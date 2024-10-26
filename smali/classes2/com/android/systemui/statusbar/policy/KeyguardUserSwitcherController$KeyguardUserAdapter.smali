@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcherController$KeyguardUserAdapter;
 .super Lcom/android/systemui/statusbar/policy/BaseUserSwitcherAdapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -99,7 +99,7 @@
     iget-object p2, p0, Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcherController$KeyguardUserAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
     .line 19
-    const v0, 0x7f0e0107    # @layout/keyguard_user_switcher_item 'res/layout/keyguard_user_switcher_item.xml'
+    const v0, 0x7f0d0112    # @layout/keyguard_user_switcher_item 'res/layout/keyguard_user_switcher_item.xml'
 
     .line 21
     invoke-virtual {p2, v0, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -151,7 +151,7 @@
     iget-object v5, p0, Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcherController$KeyguardUserAdapter;->mContext:Landroid/content/Context;
 
     .line 54
-    const v6, 0x7f0806df    # @drawable/ic_avatar_guest_user 'res/drawable/ic_avatar_guest_user.xml'
+    const v6, 0x7f0806f0    # @drawable/ic_avatar_guest_user 'res/drawable/ic_avatar_guest_user.xml'
 
     .line 56
     invoke-virtual {v5, v6}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -177,14 +177,14 @@
     if-eqz v4, :cond_3
 
     .line 70
-    const v6, 0x7f0600ff    # @color/kg_user_switcher_avatar_icon_color '@color/GM2_grey_800'
+    const v6, 0x7f060109    # @color/kg_user_switcher_avatar_icon_color '@color/GM2_grey_800'
 
     .line 72
     goto :goto_1
 
     .line 75
     :cond_3
-    const v6, 0x7f060100    # @color/kg_user_switcher_restricted_avatar_icon_color '@color/GM2_grey_600'
+    const v6, 0x7f06010a    # @color/kg_user_switcher_restricted_avatar_icon_color '@color/GM2_grey_600'
 
     .line 76
     :goto_1
@@ -212,7 +212,7 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcherController$KeyguardUserAdapter;->mContext:Landroid/content/Context;
 
     .line 94
-    const v6, 0x7f080ba5    # @drawable/user_avatar_bg 'res/drawable/user_avatar_bg.xml'
+    const v6, 0x7f080bee    # @drawable/user_avatar_bg 'res/drawable/user_avatar_bg.xml'
 
     .line 96
     invoke-virtual {p0, v6}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -289,7 +289,7 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/KeyguardUserSwitcherController$KeyguardUserAdapter;->mResources:Landroid/content/res/Resources;
 
     .line 142
-    const v0, 0x7f070363    # @dimen/kg_framed_avatar_size '32.0dp'
+    const v0, 0x7f07039f    # @dimen/kg_framed_avatar_size '32.0dp'
 
     .line 144
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimension(I)F

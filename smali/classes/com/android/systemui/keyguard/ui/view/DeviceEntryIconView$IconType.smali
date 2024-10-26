@@ -1,6 +1,6 @@
 .class public final enum Lcom/android/systemui/keyguard/ui/view/DeviceEntryIconView$IconType;
 .super Ljava/lang/Enum;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -30,7 +30,7 @@
     const/4 v1, 0x0
 
     .line 4
-    const v2, 0x7f14009a    # @string/accessibility_lock_icon 'Device locked'
+    const v2, 0x7f13009b    # @string/accessibility_lock_icon 'Device locked'
 
     .line 5
     const-string v3, "LOCK"
@@ -48,7 +48,7 @@
     const/4 v2, 0x1
 
     .line 17
-    const v3, 0x7f1400f8    # @string/accessibility_unlock_button 'Unlocked'
+    const v3, 0x7f1300f8    # @string/accessibility_unlock_button 'Unlocked'
 
     .line 18
     const-string v4, "UNLOCK"
@@ -66,7 +66,7 @@
     const/4 v3, 0x2
 
     .line 30
-    const v4, 0x7f140084    # @string/accessibility_fingerprint_label 'Fingerprint sensor'
+    const v4, 0x7f130085    # @string/accessibility_fingerprint_label 'Fingerprint sensor'
 
     .line 31
     const-string v5, "FINGERPRINT"
@@ -164,4 +164,17 @@
     .line 8
     return-object v0
     .line 10
+.end method
+
+
+# virtual methods
+.method public final getContentDescriptionResId()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/android/systemui/keyguard/ui/view/DeviceEntryIconView$IconType;->contentDescriptionResId:I
+
+    .line 2
+    return p0
+    .line 4
 .end method

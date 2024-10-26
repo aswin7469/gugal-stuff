@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -31,107 +31,107 @@
     iput-object p2, p0, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;->globalSettings:Lcom/android/systemui/util/settings/GlobalSettings;
 
     .line 7
-    const-string p1, "sysui_tuner_demo_on"
+    const-string/jumbo p1, "sysui_tuner_demo_on"
 
     .line 9
     const/4 v0, 0x0
 
-    .line 11
+    .line 12
     invoke-interface {p2, v0, p1}, Lcom/android/systemui/util/settings/SettingsProxy;->getInt(ILjava/lang/String;)I
 
-    .line 12
+    .line 13
     move-result p1
 
-    .line 15
+    .line 16
     const/4 v1, 0x1
 
-    .line 16
+    .line 17
     if-eqz p1, :cond_0
 
-    .line 17
+    .line 18
     move p1, v1
 
-    .line 19
+    .line 20
     goto :goto_0
 
-    .line 20
+    .line 21
     :cond_0
     move p1, v0
 
-    .line 21
+    .line 22
     :goto_0
     iput-boolean p1, p0, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;->isInDemoMode:Z
 
-    .line 22
-    const-string p1, "sysui_demo_allowed"
+    .line 23
+    const-string/jumbo p1, "sysui_demo_allowed"
 
-    .line 24
+    .line 25
     invoke-interface {p2, v0, p1}, Lcom/android/systemui/util/settings/SettingsProxy;->getInt(ILjava/lang/String;)I
 
-    .line 26
+    .line 28
     move-result p1
 
-    .line 29
+    .line 31
     if-eqz p1, :cond_1
 
-    .line 30
+    .line 32
     move v0, v1
 
-    .line 32
+    .line 34
     :cond_1
     iput-boolean v0, p0, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;->isDemoModeAvailable:Z
 
-    .line 33
-    new-instance p1, Landroid/os/Handler;
-
     .line 35
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    new-instance p1, Landroid/os/Handler;
 
     .line 37
-    move-result-object p2
-
-    .line 40
-    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    .line 41
-    new-instance p2, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;
-
-    .line 44
-    const/4 v0, 0x1
-
-    .line 46
-    invoke-direct {p2, p0, p1, v0}, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;-><init>(Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;Landroid/os/Handler;I)V
-
-    .line 47
-    iput-object p2, p0, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;->allowedObserver:Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;
-
-    .line 50
-    new-instance p1, Landroid/os/Handler;
-
-    .line 52
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    .line 54
+    .line 39
     move-result-object p2
 
-    .line 57
+    .line 42
     invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 58
+    .line 43
     new-instance p2, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;
 
-    .line 61
-    const/4 v0, 0x0
+    .line 46
+    const/4 v0, 0x1
 
-    .line 63
+    .line 48
     invoke-direct {p2, p0, p1, v0}, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;-><init>(Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;Landroid/os/Handler;I)V
 
-    .line 64
+    .line 49
+    iput-object p2, p0, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;->allowedObserver:Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;
+
+    .line 52
+    new-instance p1, Landroid/os/Handler;
+
+    .line 54
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    .line 56
+    move-result-object p2
+
+    .line 59
+    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    .line 60
+    new-instance p2, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;
+
+    .line 63
+    const/4 v0, 0x0
+
+    .line 65
+    invoke-direct {p2, p0, p1, v0}, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;-><init>(Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;Landroid/os/Handler;I)V
+
+    .line 66
     iput-object p2, p0, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;->onObserver:Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;
 
-    .line 67
-    return-void
     .line 69
+    return-void
+    .line 71
 .end method
 
 
@@ -170,45 +170,45 @@
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 13
-    const-string v2, "sysui_demo_allowed"
+    const-string/jumbo v2, "sysui_demo_allowed"
 
     .line 16
     invoke-static {v2}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 18
+    .line 19
     move-result-object v2
 
-    .line 21
+    .line 22
     iget-object v3, p0, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;->allowedObserver:Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;
 
-    .line 22
+    .line 23
     const/4 v4, 0x0
 
-    .line 24
+    .line 25
     invoke-virtual {v0, v2, v4, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 25
+    .line 26
     check-cast v1, Lcom/android/systemui/util/settings/GlobalSettingsImpl;
 
-    .line 28
+    .line 29
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 30
-    const-string v1, "sysui_tuner_demo_on"
+    .line 31
+    const-string/jumbo v1, "sysui_tuner_demo_on"
 
-    .line 33
+    .line 34
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 35
+    .line 37
     move-result-object v1
 
-    .line 38
+    .line 40
     iget-object p0, p0, Lcom/android/systemui/demomode/DemoModeAvailabilityTracker;->onObserver:Lcom/android/systemui/demomode/DemoModeAvailabilityTracker$onObserver$1;
 
-    .line 39
+    .line 41
     invoke-virtual {v0, v1, v4, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 41
+    .line 43
     return-void
-    .line 44
+    .line 46
 .end method

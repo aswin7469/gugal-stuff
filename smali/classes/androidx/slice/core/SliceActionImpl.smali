@@ -1,6 +1,6 @@
 .class public final Landroidx/slice/core/SliceActionImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/slice/core/SliceAction;
@@ -159,9 +159,9 @@
 
     move-result-object v3
 
-    const-string v4, "text"
+    const-string/jumbo v4, "text"
 
-    const-string v5, "title"
+    const-string/jumbo v5, "title"
 
     invoke-static {v3, v4, v5}, Landroidx/slice/core/SliceQuery;->find(Landroidx/slice/Slice;Ljava/lang/String;Ljava/lang/String;)Landroidx/slice/SliceItem;
 
@@ -243,7 +243,7 @@
     goto :goto_1
 
     :sswitch_1
-    const-string v7, "time_picker"
+    const-string/jumbo v7, "time_picker"
 
     invoke-virtual {v3, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -259,7 +259,7 @@
     goto :goto_1
 
     :sswitch_2
-    const-string v7, "toggle"
+    const-string/jumbo v7, "toggle"
 
     invoke-virtual {v3, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -621,159 +621,159 @@
     if-eqz v1, :cond_3
 
     .line 42
-    const-string v4, "title"
+    const-string/jumbo v4, "title"
 
     .line 44
     filled-new-array {v4}, [Ljava/lang/String;
 
-    .line 46
+    .line 47
     move-result-object v4
 
-    .line 49
+    .line 50
     invoke-virtual {v0, v1, v2, v4}, Landroidx/slice/Slice$Builder;->addText(Ljava/lang/CharSequence;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 50
+    .line 51
     :cond_3
     iget-object v1, p0, Landroidx/slice/core/SliceActionImpl;->mContentDescription:Ljava/lang/CharSequence;
 
-    .line 53
+    .line 54
     if-eqz v1, :cond_4
 
-    .line 55
+    .line 56
     const-string v2, "content_description"
 
-    .line 57
+    .line 58
     new-array v4, v3, [Ljava/lang/String;
 
-    .line 59
+    .line 60
     invoke-virtual {v0, v1, v2, v4}, Landroidx/slice/Slice$Builder;->addText(Ljava/lang/CharSequence;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 61
+    .line 62
     :cond_4
     iget-wide v1, p0, Landroidx/slice/core/SliceActionImpl;->mDateTimeMillis:J
 
-    .line 64
+    .line 65
     const-wide/16 v4, -0x1
 
-    .line 66
+    .line 67
     cmp-long v4, v1, v4
 
-    .line 68
+    .line 69
     if-eqz v4, :cond_5
 
-    .line 70
+    .line 71
     new-array v4, v3, [Ljava/lang/String;
 
-    .line 72
+    .line 73
     iget-object v5, v0, Landroidx/slice/Slice$Builder;->mItems:Ljava/util/ArrayList;
 
-    .line 74
+    .line 75
     new-instance v6, Landroidx/slice/SliceItem;
 
-    .line 76
+    .line 77
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 78
+    .line 79
     move-result-object v1
 
-    .line 81
+    .line 82
     const-string v2, "long"
 
-    .line 82
+    .line 83
     const-string v7, "millis"
 
-    .line 84
+    .line 85
     invoke-direct {v6, v1, v2, v7, v4}, Landroidx/slice/SliceItem;-><init>(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 86
+    .line 87
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 89
+    .line 90
     :cond_5
     sget-object v1, Landroidx/slice/core/SliceActionImpl$ActionType;->TOGGLE:Landroidx/slice/core/SliceActionImpl$ActionType;
 
-    .line 92
+    .line 93
     iget-object v2, p0, Landroidx/slice/core/SliceActionImpl;->mActionType:Landroidx/slice/core/SliceActionImpl$ActionType;
 
-    .line 94
+    .line 95
     if-ne v2, v1, :cond_6
 
-    .line 96
+    .line 97
     iget-boolean v1, p0, Landroidx/slice/core/SliceActionImpl;->mIsChecked:Z
 
-    .line 98
+    .line 99
     if-eqz v1, :cond_6
 
-    .line 100
+    .line 101
     const-string v1, "selected"
 
-    .line 102
+    .line 103
     filled-new-array {v1}, [Ljava/lang/String;
 
-    .line 104
+    .line 105
     move-result-object v1
 
-    .line 107
+    .line 108
     invoke-virtual {v0, v1}, Landroidx/slice/Slice$Builder;->addHints([Ljava/lang/String;)V
 
-    .line 108
+    .line 109
     :cond_6
     iget v1, p0, Landroidx/slice/core/SliceActionImpl;->mPriority:I
 
-    .line 111
+    .line 112
     const/4 v2, -0x1
 
-    .line 113
+    .line 114
     if-eq v1, v2, :cond_7
 
-    .line 114
+    .line 115
     const-string v2, "priority"
 
-    .line 116
+    .line 117
     new-array v4, v3, [Ljava/lang/String;
 
-    .line 118
+    .line 119
     invoke-virtual {v0, v2, v1, v4}, Landroidx/slice/Slice$Builder;->addInt(Ljava/lang/String;I[Ljava/lang/String;)V
 
-    .line 120
+    .line 121
     :cond_7
     iget-object v1, p0, Landroidx/slice/core/SliceActionImpl;->mActionKey:Ljava/lang/String;
 
-    .line 123
+    .line 124
     if-eqz v1, :cond_8
 
-    .line 125
+    .line 126
     const-string v2, "action_key"
 
-    .line 127
+    .line 128
     new-array v3, v3, [Ljava/lang/String;
 
-    .line 129
+    .line 130
     invoke-virtual {v0, v1, v2, v3}, Landroidx/slice/Slice$Builder;->addText(Ljava/lang/CharSequence;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 131
+    .line 132
     :cond_8
     iget-boolean p0, p0, Landroidx/slice/core/SliceActionImpl;->mIsActivity:Z
 
-    .line 134
+    .line 135
     if-eqz p0, :cond_9
 
-    .line 136
+    .line 137
     const-string p0, "activity"
 
-    .line 138
+    .line 139
     filled-new-array {p0}, [Ljava/lang/String;
 
-    .line 140
+    .line 141
     move-result-object p0
 
-    .line 143
+    .line 144
     invoke-virtual {p1, p0}, Landroidx/slice/Slice$Builder;->addHints([Ljava/lang/String;)V
 
-    .line 144
+    .line 145
     :cond_9
     return-object v0
-    .line 147
+    .line 148
 .end method
 
 .method public final getPriority()I
@@ -825,25 +825,25 @@
 
     .line 18
     :cond_0
-    const-string p0, "time_picker"
+    const-string/jumbo p0, "time_picker"
 
     .line 19
     return-object p0
 
-    .line 21
+    .line 22
     :cond_1
     const-string p0, "date_picker"
 
-    .line 22
+    .line 23
     return-object p0
-
-    .line 24
-    :cond_2
-    const-string p0, "toggle"
 
     .line 25
+    :cond_2
+    const-string/jumbo p0, "toggle"
+
+    .line 26
     return-object p0
-    .line 27
+    .line 29
 .end method
 
 .method public final isDefaultToggle()Z

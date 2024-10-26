@@ -18,7 +18,7 @@
                           android:key="cameratoggle" />
     <com.android.systemui.tuner.StatusBarSwitch android:title="@string/quick_settings_dnd_label"
                           android:key="zen" />
-    <com.android.systemui.tuner.StatusBarSwitch android:title="@android:string/whichOpenLinksWithApp"
+    <com.android.systemui.tuner.StatusBarSwitch android:title="@android:string/whichHomeApplication"
                           android:key="volume" />
     <com.android.systemui.tuner.StatusBarSwitch android:title="@string/quick_settings_wifi_label"
                           android:key="wifi" />
@@ -62,4 +62,6 @@
   <Preference android:title="@string/plugins"
               android:key="plugins"
               android:fragment="com.android.systemui.tuner.PluginFragment" />
+  <Preference android:selectable="false"
+              android:summary="@string/tuner_persistent_warning" />
 </PreferenceScreen>

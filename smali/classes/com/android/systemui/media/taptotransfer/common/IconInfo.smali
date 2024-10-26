@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/taptotransfer/common/IconInfo;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -381,7 +381,7 @@
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 28
-    const v0, 0x7f080702    # @drawable/ic_cast 'res/drawable/ic_cast.xml'
+    const v0, 0x7f080718    # @drawable/ic_cast 'res/drawable/ic_cast.xml'
 
     .line 31
     invoke-direct {v1, v0, v2}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V

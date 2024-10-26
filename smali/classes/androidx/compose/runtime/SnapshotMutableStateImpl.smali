@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/runtime/SnapshotMutableStateImpl;
 .super Landroidx/compose/runtime/snapshots/StateObjectImpl;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/runtime/snapshots/SnapshotMutableState;
@@ -80,34 +80,6 @@
 
 
 # virtual methods
-.method public final component1()Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 2
-    move-result-object p0
-
-    .line 5
-    return-object p0
-    .line 6
-.end method
-
-.method public final component2()Lkotlin/jvm/functions/Function1;
-    .locals 1
-
-    .line 1
-    new-instance v0, Landroidx/compose/runtime/SnapshotMutableStateImpl$component2$1;
-
-    .line 2
-    invoke-direct {v0, p0}, Landroidx/compose/runtime/SnapshotMutableStateImpl$component2$1;-><init>(Landroidx/compose/runtime/SnapshotMutableStateImpl;)V
-
-    .line 4
-    return-object v0
-    .line 7
-.end method
-
 .method public final getFirstStateRecord()Landroidx/compose/runtime/snapshots/StateRecord;
     .locals 0
 

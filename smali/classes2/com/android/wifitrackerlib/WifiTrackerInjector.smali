@@ -1,6 +1,6 @@
 .class public final Lcom/android/wifitrackerlib/WifiTrackerInjector;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -104,7 +104,7 @@
     iput-object v2, p0, Lcom/android/wifitrackerlib/WifiTrackerInjector;->mNoAttributionAnnotationPackages:Ljava/util/Set;
 
     .line 52
-    const v2, 0x7f140a93    # @string/wifitrackerlib_no_attribution_annotation_packages 'com.google.android.setupwizard,com.google.android.gms'
+    const v2, 0x7f130b20    # @string/wifitrackerlib_no_attribution_annotation_packages 'com.google.android.setupwizard,com.google.android.gms'
 
     .line 54
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -154,7 +154,7 @@
     move-result-object p1
 
     .line 83
-    const v2, 0x7f05007d    # @bool/wifitrackerlib_enable_verbose_logging_for_userdebug 'true'
+    const v2, 0x7f05008b    # @bool/wifitrackerlib_enable_verbose_logging_for_userdebug 'true'
 
     .line 84
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z

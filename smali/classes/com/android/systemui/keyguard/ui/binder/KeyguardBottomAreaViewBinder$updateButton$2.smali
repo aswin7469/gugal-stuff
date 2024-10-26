@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$updateButton$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -38,13 +38,13 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 4
+    .locals 6
 
     .line 1
     iget-object p1, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$updateButton$2;->$messageDisplayer:Lkotlin/jvm/functions/Function1;
 
     .line 2
-    const v0, 0x7f140490    # @string/keyguard_affordance_press_too_short 'Touch & hold shortcut'
+    const v0, 0x7f1304da    # @string/keyguard_affordance_press_too_short 'Touch & hold shortcut'
 
     .line 4
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -71,7 +71,7 @@
     move-result-object p1
 
     .line 23
-    const v0, 0x7f070338    # @dimen/keyguard_affordance_shake_amplitude '8.0dp'
+    const v0, 0x7f070374    # @dimen/keyguard_affordance_shake_amplitude '8.0dp'
 
     .line 24
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -116,61 +116,104 @@
     aput p1, v2, v1
 
     .line 45
-    invoke-static {v0, v2}, Landroidx/core/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;[F)Landroidx/core/animation/ObjectAnimator;
+    new-instance p1, Landroidx/core/animation/ObjectAnimator;
 
     .line 47
-    move-result-object p1
+    invoke-direct {p1}, Landroidx/core/animation/ValueAnimator;-><init>()V
 
-    .line 50
-    sget-wide v0, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaVibrations;->ShakeAnimationDuration:J
+    .line 49
+    invoke-virtual {p1, v0}, Landroidx/core/animation/ObjectAnimator;->setTarget(Ljava/lang/Object;)V
 
-    .line 51
-    invoke-static {v0, v1}, Lkotlin/time/Duration;->getInWholeMilliseconds-impl(J)J
+    .line 52
+    iget-object v0, p1, Landroidx/core/animation/ValueAnimator;->mValues:[Landroidx/core/animation/PropertyValuesHolder;
 
-    .line 53
-    move-result-wide v0
-
-    .line 56
-    invoke-virtual {p1, v0, v1}, Landroidx/core/animation/ObjectAnimator;->setDuration(J)V
+    .line 55
+    const-string/jumbo v1, "translationX"
 
     .line 57
-    new-instance v0, Landroidx/core/animation/CycleInterpolator;
+    if-eqz v0, :cond_0
 
     .line 60
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    aget-object v0, v0, v3
 
     .line 62
-    iput-object v0, p1, Landroidx/core/animation/ValueAnimator;->mInterpolator:Landroidx/core/animation/Interpolator;
+    iget-object v4, v0, Landroidx/core/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
-    .line 65
-    iget-object v0, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$updateButton$2;->$view:Landroid/widget/ImageView;
+    .line 64
+    iput-object v1, v0, Landroidx/core/animation/PropertyValuesHolder;->mPropertyName:Ljava/lang/String;
 
-    .line 67
-    new-instance v1, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$updateButton$2$onClick$$inlined$doOnEnd$1;
+    .line 66
+    iget-object v5, p1, Landroidx/core/animation/ValueAnimator;->mValuesMap:Ljava/util/HashMap;
 
-    .line 69
-    invoke-direct {v1, v0}, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$updateButton$2$onClick$$inlined$doOnEnd$1;-><init>(Landroid/widget/ImageView;)V
+    .line 68
+    invoke-virtual {v5, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 71
-    invoke-virtual {p1, v1}, Landroidx/core/animation/Animator;->addListener(Landroidx/core/animation/Animator$AnimatorListener;)V
+    .line 70
+    iget-object v4, p1, Landroidx/core/animation/ValueAnimator;->mValuesMap:Ljava/util/HashMap;
 
-    .line 74
-    invoke-virtual {p1}, Landroidx/core/animation/ObjectAnimator;->start()V
+    .line 73
+    invoke-virtual {v4, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 77
-    iget-object p0, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$updateButton$2;->$vibratorHelper:Lcom/android/systemui/statusbar/VibratorHelper;
+    .line 75
+    :cond_0
+    iput-object v1, p1, Landroidx/core/animation/ObjectAnimator;->mPropertyName:Ljava/lang/String;
+
+    .line 78
+    iput-boolean v3, p1, Landroidx/core/animation/ValueAnimator;->mInitialized:Z
 
     .line 80
-    if-eqz p0, :cond_0
+    invoke-virtual {p1, v2}, Landroidx/core/animation/ObjectAnimator;->setFloatValues([F)V
 
     .line 82
-    sget-object p1, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaVibrations;->ShakeAlt:Landroid/os/VibrationEffect;
+    sget-wide v0, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaVibrations;->ShakeAnimationDuration:J
 
-    .line 84
+    .line 85
+    invoke-static {v0, v1}, Lkotlin/time/Duration;->getInWholeMilliseconds-impl(J)J
+
+    .line 87
+    move-result-wide v0
+
+    .line 90
+    invoke-virtual {p1, v0, v1}, Landroidx/core/animation/ObjectAnimator;->setDuration(J)V
+
+    .line 91
+    new-instance v0, Landroidx/core/animation/CycleInterpolator;
+
+    .line 94
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 96
+    iput-object v0, p1, Landroidx/core/animation/ValueAnimator;->mInterpolator:Landroidx/core/animation/Interpolator;
+
+    .line 99
+    iget-object v0, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$updateButton$2;->$view:Landroid/widget/ImageView;
+
+    .line 101
+    new-instance v1, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$updateButton$2$onClick$$inlined$doOnEnd$1;
+
+    .line 103
+    invoke-direct {v1, v0}, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$updateButton$2$onClick$$inlined$doOnEnd$1;-><init>(Landroid/widget/ImageView;)V
+
+    .line 105
+    invoke-virtual {p1, v1}, Landroidx/core/animation/Animator;->addListener(Landroidx/core/animation/Animator$AnimatorListener;)V
+
+    .line 108
+    invoke-virtual {p1}, Landroidx/core/animation/ObjectAnimator;->start()V
+
+    .line 111
+    iget-object p0, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaViewBinder$updateButton$2;->$vibratorHelper:Lcom/android/systemui/statusbar/VibratorHelper;
+
+    .line 114
+    if-eqz p0, :cond_1
+
+    .line 116
+    sget-object p1, Lcom/android/systemui/keyguard/ui/binder/KeyguardBottomAreaVibrations;->Shake:Landroid/os/VibrationEffect;
+
+    .line 118
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/VibratorHelper;->vibrate(Landroid/os/VibrationEffect;)V
 
-    .line 86
-    :cond_0
+    .line 120
+    :cond_1
     return-void
-    .line 89
+    .line 123
 .end method

@@ -1,6 +1,6 @@
 .class public abstract Lcom/airbnb/lottie/parser/AnimatableTextPropertiesParser;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -32,33 +32,33 @@
     sput-object v0, Lcom/airbnb/lottie/parser/AnimatableTextPropertiesParser;->PROPERTIES_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     .line 12
-    const-string v0, "sw"
+    const-string/jumbo v0, "sw"
 
     .line 14
-    const-string v1, "t"
+    const-string/jumbo v1, "t"
 
-    .line 16
+    .line 17
     const-string v2, "fc"
 
-    .line 18
+    .line 20
     const-string v3, "sc"
 
-    .line 20
+    .line 22
     filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
 
-    .line 22
+    .line 24
     move-result-object v0
 
-    .line 25
+    .line 27
     invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
-    .line 26
+    .line 28
     move-result-object v0
 
-    .line 29
+    .line 31
     sput-object v0, Lcom/airbnb/lottie/parser/AnimatableTextPropertiesParser;->ANIMATABLE_PROPERTIES_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
-    .line 30
-    return-void
     .line 32
+    return-void
+    .line 34
 .end method

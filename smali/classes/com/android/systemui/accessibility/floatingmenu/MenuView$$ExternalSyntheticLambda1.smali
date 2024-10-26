@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/accessibility/floatingmenu/MenuView$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/lifecycle/Observer;
@@ -239,7 +239,7 @@
     iget-object p0, v3, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mFeaturesChangeListener:Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer$$ExternalSyntheticLambda4;
 
     .line 133
-    if-eqz p0, :cond_8
+    if-eqz p0, :cond_7
 
     .line 135
     iget-object p0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer$$ExternalSyntheticLambda4;->f$0:Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;
@@ -248,425 +248,400 @@
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 139
-    invoke-static {}, Lcom/android/systemui/Flags;->floatingMenuDragToHide()Z
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
     .line 142
     move-result v1
 
     .line 145
-    if-eqz v1, :cond_3
+    if-ge v1, v0, :cond_3
 
     .line 146
-    invoke-virtual {p0}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->dismissNotification()V
+    goto :goto_4
 
     .line 148
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    :cond_3
+    iget-object v1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mMessageView:Lcom/android/systemui/accessibility/floatingmenu/MenuMessageView;
+
+    .line 149
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getVisibility()I
 
     .line 151
-    move-result p1
+    move-result v1
 
     .line 154
-    if-lez p1, :cond_8
+    if-nez v1, :cond_4
 
     .line 155
     invoke-virtual {p0}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->undo()V
 
     .line 157
-    goto :goto_4
-
-    .line 160
-    :cond_3
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    .line 161
-    move-result v1
-
-    .line 164
-    if-ge v1, v0, :cond_4
-
-    .line 165
-    goto :goto_4
-
-    .line 167
     :cond_4
     iget-object v1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mMessageView:Lcom/android/systemui/accessibility/floatingmenu/MenuMessageView;
 
-    .line 168
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getVisibility()I
-
-    .line 170
-    move-result v1
-
-    .line 173
-    if-nez v1, :cond_5
-
-    .line 174
-    invoke-virtual {p0}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->undo()V
-
-    .line 176
-    :cond_5
-    iget-object v1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mMessageView:Lcom/android/systemui/accessibility/floatingmenu/MenuMessageView;
-
-    .line 179
+    .line 160
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 181
+    .line 162
     move-result-object v1
 
-    .line 184
+    .line 165
     check-cast v1, Landroid/widget/TextView;
 
-    .line 185
+    .line 166
     invoke-interface {p1}, Ljava/util/List;->size()I
 
-    .line 187
+    .line 168
     move-result v4
 
-    .line 190
-    if-lez v4, :cond_6
+    .line 171
+    if-lez v4, :cond_5
 
-    .line 191
+    .line 172
     move v4, v0
 
-    .line 193
+    .line 174
     goto :goto_2
 
-    .line 194
-    :cond_6
+    .line 175
+    :cond_5
     move v4, v2
 
-    .line 195
+    .line 176
     :goto_2
     const-string v5, "The list should at least have one feature."
 
-    .line 196
+    .line 177
     invoke-static {v4, v5}, Lcom/android/internal/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 198
+    .line 179
     invoke-interface {p1}, Ljava/util/List;->size()I
 
-    .line 201
+    .line 182
     move-result v4
 
-    .line 204
+    .line 185
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
-    .line 205
+    .line 186
     move-result-object p0
 
-    .line 208
-    if-ne v4, v0, :cond_7
+    .line 189
+    if-ne v4, v0, :cond_6
 
-    .line 209
+    .line 190
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 211
+    .line 192
     move-result-object p1
 
-    .line 214
+    .line 195
     check-cast p1, Lcom/android/internal/accessibility/dialog/AccessibilityTarget;
 
-    .line 215
+    .line 196
     invoke-virtual {p1}, Lcom/android/internal/accessibility/dialog/AccessibilityTarget;->getLabel()Ljava/lang/CharSequence;
 
-    .line 217
+    .line 198
     move-result-object p1
 
-    .line 220
+    .line 201
     filled-new-array {p1}, [Ljava/lang/Object;
 
-    .line 221
+    .line 202
     move-result-object p1
 
-    .line 224
-    const v0, 0x7f140093    # @string/accessibility_floating_button_undo_message_label_text '%s shortcut removed'
+    .line 205
+    const v0, 0x7f130094    # @string/accessibility_floating_button_undo_message_label_text '%s shortcut removed'
 
-    .line 225
+    .line 206
     invoke-virtual {p0, v0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 228
+    .line 209
     move-result-object p0
 
-    .line 231
+    .line 212
     goto :goto_3
 
-    .line 232
-    :cond_7
-    const p1, 0x7f140094    # @string/accessibility_floating_button_undo_message_number_text '{count, plural, =1 {# shortcut removed} other {# shortcuts removed} }'
+    .line 213
+    :cond_6
+    const p1, 0x7f130095    # @string/accessibility_floating_button_undo_message_number_text '{count, plural, =1 {# shortcut removed} other {# shortcuts removed} }'
 
-    .line 233
+    .line 214
     invoke-static {p0, p1, v4}, Lcom/android/systemui/util/PluralMessageFormaterKt;->icuMessageFormat(Landroid/content/res/Resources;II)Ljava/lang/String;
 
-    .line 236
+    .line 217
     move-result-object p0
 
-    .line 239
+    .line 220
     :goto_3
     invoke-virtual {v1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 240
-    :cond_8
+    .line 221
+    :cond_7
     :goto_4
     iget-object p0, v3, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mMenuAnimationController:Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;
 
-    .line 243
+    .line 224
     invoke-virtual {p0}, Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;->fadeOutIfEnabled()V
 
-    .line 245
+    .line 226
     return-void
 
-    .line 248
+    .line 229
     :pswitch_0
     check-cast p1, Ljava/lang/Integer;
 
-    .line 249
+    .line 230
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    .line 251
+    .line 232
     move-result p0
 
-    .line 254
+    .line 235
     iget-object p1, v3, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mMenuAnimationController:Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;
 
-    .line 255
+    .line 236
     invoke-virtual {p1}, Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;->fadeInNowIfEnabled()V
 
-    .line 257
+    .line 238
     iget-object p1, v3, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mMenuViewAppearance:Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;
 
-    .line 260
+    .line 241
     iput p0, p1, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mSizeType:I
 
-    .line 262
+    .line 243
     invoke-virtual {p1}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->isMenuOnLeftSide()Z
 
-    .line 264
+    .line 245
     move-result p0
 
-    .line 267
+    .line 248
     iget v0, p1, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mTargetFeaturesSize:I
 
-    .line 268
+    .line 249
     invoke-virtual {p1, v0}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->getMenuRadius(I)I
 
-    .line 270
+    .line 251
     move-result v0
 
-    .line 273
+    .line 254
     int-to-float v0, v0
 
-    .line 274
+    .line 255
     invoke-static {v0, p0}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->createRadii(FZ)[F
 
-    .line 275
+    .line 256
     move-result-object p0
 
-    .line 278
+    .line 259
     iput-object p0, p1, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRadii:[F
 
-    .line 279
+    .line 260
     iget-object p0, v3, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mAdapter:Lcom/android/systemui/accessibility/floatingmenu/AccessibilityTargetAdapter;
 
-    .line 281
+    .line 262
     iget-object p1, v3, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mMenuViewAppearance:Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;
 
-    .line 283
+    .line 264
     iget v0, p1, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mSizeType:I
 
-    .line 285
-    if-nez v0, :cond_9
+    .line 266
+    if-nez v0, :cond_8
 
-    .line 287
+    .line 268
     iget v1, p1, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mSmallPadding:I
 
-    .line 289
+    .line 270
     goto :goto_5
 
-    .line 291
-    :cond_9
+    .line 272
+    :cond_8
     iget v1, p1, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mLargePadding:I
 
-    .line 292
+    .line 273
     :goto_5
     iput v1, p0, Lcom/android/systemui/accessibility/floatingmenu/AccessibilityTargetAdapter;->mItemPadding:I
 
-    .line 294
-    if-nez v0, :cond_a
+    .line 275
+    if-nez v0, :cond_9
 
-    .line 296
+    .line 277
     iget p1, p1, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mSmallIconSize:I
 
-    .line 298
+    .line 279
     goto :goto_6
 
-    .line 300
-    :cond_a
+    .line 281
+    :cond_9
     iget p1, p1, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mLargeIconSize:I
 
-    .line 301
+    .line 282
     :goto_6
     iput p1, p0, Lcom/android/systemui/accessibility/floatingmenu/AccessibilityTargetAdapter;->mIconWidthHeight:I
 
-    .line 303
+    .line 284
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 305
+    .line 286
     invoke-virtual {v3}, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->onSizeChanged()V
 
-    .line 308
+    .line 289
     invoke-virtual {v3}, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->onEdgeChanged()V
 
-    .line 311
+    .line 292
     invoke-virtual {v3, v2}, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->onPositionChanged(Z)V
 
-    .line 314
+    .line 295
     iget-object p0, v3, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mMenuAnimationController:Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;
 
-    .line 317
+    .line 298
     invoke-virtual {p0}, Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;->fadeOutIfEnabled()V
 
-    .line 319
+    .line 300
     return-void
 
-    .line 322
+    .line 303
     :pswitch_1
     check-cast p1, Lcom/android/systemui/accessibility/floatingmenu/Position;
 
-    .line 323
+    .line 304
     iget-object p0, v3, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mMenuViewAppearance:Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;
 
-    .line 325
+    .line 306
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mPercentagePosition:Lcom/android/systemui/accessibility/floatingmenu/Position;
 
-    .line 327
+    .line 308
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 329
+    .line 310
     iget v1, p1, Lcom/android/systemui/accessibility/floatingmenu/Position;->mPercentageX:F
 
-    .line 332
+    .line 313
     iget p1, p1, Lcom/android/systemui/accessibility/floatingmenu/Position;->mPercentageY:F
 
-    .line 334
+    .line 315
     iput v1, v0, Lcom/android/systemui/accessibility/floatingmenu/Position;->mPercentageX:F
 
-    .line 336
+    .line 317
     iput p1, v0, Lcom/android/systemui/accessibility/floatingmenu/Position;->mPercentageY:F
 
-    .line 338
+    .line 319
     invoke-virtual {p0}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->isMenuOnLeftSide()Z
 
-    .line 340
+    .line 321
     move-result p1
 
-    .line 343
+    .line 324
     iget v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mTargetFeaturesSize:I
 
-    .line 344
+    .line 325
     invoke-virtual {p0, v0}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->getMenuRadius(I)I
 
-    .line 346
+    .line 327
     move-result v0
 
-    .line 349
+    .line 330
     int-to-float v0, v0
 
-    .line 350
+    .line 331
     invoke-static {v0, p1}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->createRadii(FZ)[F
 
-    .line 351
+    .line 332
     move-result-object p1
 
-    .line 354
+    .line 335
     iput-object p1, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRadii:[F
 
-    .line 355
+    .line 336
     invoke-virtual {v3, v2}, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->onPositionChanged(Z)V
 
-    .line 357
+    .line 338
     return-void
 
-    .line 360
+    .line 341
     :pswitch_2
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 361
+    .line 342
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 363
+    .line 344
     move-result p0
 
-    .line 366
+    .line 347
     iput-boolean p0, v3, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mIsMoveToTucked:Z
 
-    .line 367
+    .line 348
     invoke-virtual {v3, v2}, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->onPositionChanged(Z)V
 
-    .line 369
+    .line 350
     return-void
 
-    .line 372
+    .line 353
     :pswitch_3
     check-cast p1, Lcom/android/systemui/accessibility/floatingmenu/MenuFadeEffectInfo;
 
-    .line 373
+    .line 354
     iget-object p0, v3, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mMenuAnimationController:Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;
 
-    .line 375
+    .line 356
     iget-boolean v3, p1, Lcom/android/systemui/accessibility/floatingmenu/MenuFadeEffectInfo;->isFadeEffectEnabled:Z
 
-    .line 377
+    .line 358
     iput-boolean v3, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;->mIsFadeEffectEnabled:Z
 
-    .line 379
+    .line 360
     iget-object v3, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;->mHandler:Landroid/os/Handler;
 
-    .line 381
+    .line 362
     const/4 v4, 0x0
 
-    .line 383
+    .line 364
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 384
+    .line 365
     iget-object v4, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;->mFadeOutAnimator:Landroid/animation/ValueAnimator;
 
-    .line 387
+    .line 368
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 389
+    .line 370
     iget-object v4, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;->mFadeOutAnimator:Landroid/animation/ValueAnimator;
 
-    .line 392
+    .line 373
     iget p1, p1, Lcom/android/systemui/accessibility/floatingmenu/MenuFadeEffectInfo;->opacity:F
 
-    .line 394
+    .line 375
     new-array v1, v1, [F
 
-    .line 396
+    .line 377
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 398
+    .line 379
     aput v5, v1, v2
 
-    .line 400
+    .line 381
     aput p1, v1, v0
 
-    .line 402
+    .line 383
     invoke-virtual {v4, v1}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 404
+    .line 385
     new-instance v0, Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController$$ExternalSyntheticLambda3;
 
-    .line 407
+    .line 388
     invoke-direct {v0, p0, p1}, Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;F)V
 
-    .line 409
+    .line 390
     invoke-virtual {v3, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 412
+    .line 393
     return-void
 
-    .line 415
+    .line 396
+    nop
+
+    .line 397
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_3
@@ -674,5 +649,5 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 416
+    .line 398
 .end method

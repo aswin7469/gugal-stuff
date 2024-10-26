@@ -1,9 +1,9 @@
 .class public final synthetic Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda9;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/ToIntFunction;
+.implements Ljava/util/function/IntFunction;
 
 
 # instance fields
@@ -27,22 +27,25 @@
 
 
 # virtual methods
-.method public final applyAsInt(Ljava/lang/Object;)I
+.method public final apply(I)Ljava/lang/Object;
     .locals 0
 
     .line 1
     iget-object p0, p0, Lcom/android/wm/shell/recents/RecentsTransitionHandler$RecentsController$$ExternalSyntheticLambda9;->f$0:Landroid/window/TransitionInfo;
 
     .line 2
-    check-cast p1, Landroid/window/TransitionInfo$Change;
+    invoke-virtual {p0, p1}, Landroid/window/TransitionInfo;->getRoot(I)Landroid/window/TransitionInfo$Root;
 
     .line 4
-    invoke-static {p1, p0}, Lcom/android/wm/shell/shared/TransitionUtil;->rootIndexFor(Landroid/window/TransitionInfo$Change;Landroid/window/TransitionInfo;)I
+    move-result-object p0
 
-    .line 6
-    move-result p0
+    .line 7
+    invoke-virtual {p0}, Landroid/window/TransitionInfo$Root;->getLeash()Landroid/view/SurfaceControl;
 
-    .line 9
-    return p0
-    .line 10
+    .line 8
+    move-result-object p0
+
+    .line 11
+    return-object p0
+    .line 12
 .end method

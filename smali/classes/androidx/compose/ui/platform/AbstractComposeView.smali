@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/platform/AbstractComposeView;
 .super Landroid/view/ViewGroup;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -1238,7 +1238,7 @@
     invoke-virtual {v0, v11}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
     .line 316
-    const v0, 0x7f0b00b3    # @id/androidx_compose_ui_view_composition_context
+    const v0, 0x7f0a00b6    # @id/androidx_compose_ui_view_composition_context
 
     .line 319
     invoke-virtual {v8, v0, v10}, Landroid/view/View;->setTag(ILjava/lang/Object;)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/brightness/shared/model/GammaBrightness;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -20,48 +20,6 @@
     .line 5
     return-void
     .line 7
-.end method
-
-.method public static constructor-impl(I)V
-    .locals 1
-
-    .line 1
-    sget v0, Lcom/android/settingslib/display/BrightnessUtils;->GAMMA_SPACE_MAX:I
-
-    .line 2
-    if-ltz p0, :cond_0
-
-    .line 4
-    if-gt p0, v0, :cond_0
-
-    .line 6
-    return-void
-
-    .line 8
-    :cond_0
-    const-string p0, "Value must be in range 0 to "
-
-    .line 9
-    invoke-static {v0, p0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
-
-    .line 11
-    move-result-object p0
-
-    .line 14
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    .line 15
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 17
-    move-result-object p0
-
-    .line 20
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    .line 21
-    throw v0
-    .line 24
 .end method
 
 
@@ -137,7 +95,7 @@
     const-string v1, ")"
 
     .line 6
-    invoke-static {v0, v1, p0}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v1, p0}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 8
     move-result-object p0

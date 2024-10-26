@@ -1,6 +1,6 @@
 .class final Landroidx/compose/ui/text/MultiParagraph$getPathForRange$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -253,57 +253,57 @@
 
     .line 145
     :cond_3
-    const-string p1, "start("
+    const-string/jumbo p1, "start("
 
     .line 146
     const-string v0, ") or end("
 
-    .line 148
+    .line 149
     const-string v3, ") is out of range [0.."
 
-    .line 150
+    .line 151
     invoke-static {v1, p0, p1, v0, v3}, Landroidx/compose/foundation/layout/RowColumnMeasurePolicyKt$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 152
+    .line 153
     move-result-object p0
-
-    .line 155
-    iget-object p1, v2, Landroidx/compose/ui/text/AndroidParagraph;->charSequence:Ljava/lang/CharSequence;
 
     .line 156
+    iget-object p1, v2, Landroidx/compose/ui/text/AndroidParagraph;->charSequence:Ljava/lang/CharSequence;
+
+    .line 157
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    .line 158
+    .line 159
     move-result p1
 
-    .line 161
+    .line 162
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 162
+    .line 163
     const-string p1, "], or start > end!"
 
-    .line 165
+    .line 166
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 167
+    .line 168
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 170
+    .line 171
     move-result-object p0
-
-    .line 173
-    new-instance p1, Ljava/lang/IllegalArgumentException;
 
     .line 174
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    .line 175
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 176
+    .line 177
     move-result-object p0
 
-    .line 179
+    .line 180
     invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 180
+    .line 181
     throw p1
-    .line 183
+    .line 184
 .end method

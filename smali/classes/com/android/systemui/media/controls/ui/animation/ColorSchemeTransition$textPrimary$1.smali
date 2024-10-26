@@ -1,6 +1,6 @@
 .class final synthetic Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition$textPrimary$1;
 .super Lkotlin/jvm/internal/FunctionReferenceImpl;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -32,29 +32,29 @@
     .locals 6
 
     .line 1
-    const-string v4, "textPrimaryFromScheme(Lcom/android/systemui/monet/ColorScheme;)I"
+    const-string/jumbo v4, "textPrimaryFromScheme(Lcom/android/systemui/monet/ColorScheme;)I"
 
     .line 2
     const/4 v5, 0x1
 
-    .line 4
+    .line 5
     const/4 v1, 0x1
 
-    .line 5
+    .line 6
     const-class v2, Lcom/android/systemui/media/controls/ui/animation/MediaColorSchemesKt;
 
-    .line 6
-    const-string v3, "textPrimaryFromScheme"
+    .line 7
+    const-string/jumbo v3, "textPrimaryFromScheme"
 
-    .line 8
+    .line 9
     move-object v0, p0
 
-    .line 10
+    .line 12
     invoke-direct/range {v0 .. v5}, Lkotlin/jvm/internal/FunctionReferenceImpl;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 11
+    .line 13
     return-void
-    .line 14
+    .line 16
 .end method
 
 

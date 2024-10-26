@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/compose/animation/scene/BaseSceneTransitionLayoutState;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/compose/animation/scene/SceneTransitionLayoutState;
@@ -11,11 +11,11 @@
 
 .field public final creationThread:Ljava/lang/Thread;
 
-.field public enableInterruptions:Z
+.field public final enableInterruptions:Z
 
 .field public final finishedTransitions:Ljava/util/Map;
 
-.field public stateLinks:Ljava/util/List;
+.field public final stateLinks:Ljava/util/List;
 
 .field public final transitionStates$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
 
@@ -456,204 +456,204 @@
     move-result-object p0
 
     .line 164
-    invoke-static {p0}, Landroidx/appcompat/app/WindowDecorActionBar$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
+    check-cast p0, Lcom/android/compose/animation/scene/transition/link/LinkedTransition;
 
     .line 165
     iget-object p0, p1, Lcom/android/compose/animation/scene/TransitionState$Transition;->fromScene:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 168
+    .line 167
     invoke-static {p0, p2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 170
+    .line 169
     move-result p0
 
-    .line 173
+    .line 172
     if-nez p0, :cond_8
 
-    .line 174
+    .line 173
     iget-object p0, p1, Lcom/android/compose/animation/scene/TransitionState$Transition;->toScene:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 176
+    .line 175
     invoke-static {p0, p2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 178
+    .line 177
     move-result p0
 
-    .line 181
+    .line 180
     if-eqz p0, :cond_7
 
-    .line 182
+    .line 181
     throw v3
 
-    .line 184
+    .line 183
     :cond_7
     throw v3
 
-    .line 185
+    .line 184
     :cond_8
     throw v3
 
-    .line 186
+    .line 185
     :cond_9
     iget-object p1, p0, Lcom/android/compose/animation/scene/BaseSceneTransitionLayoutState;->activeTransitionLinks:Ljava/util/Map;
 
-    .line 187
+    .line 186
     invoke-interface {p1}, Ljava/util/Map;->clear()V
 
-    .line 189
+    .line 188
     :goto_2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
-    .line 192
+    .line 191
     move-result p1
 
-    .line 195
+    .line 194
     :goto_3
     if-ge v2, p1, :cond_b
 
-    .line 196
+    .line 195
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 198
+    .line 197
     move-result-object p2
 
-    .line 201
+    .line 200
     check-cast p2, Lcom/android/compose/animation/scene/TransitionState;
 
-    .line 202
+    .line 201
     iget-object v1, p0, Lcom/android/compose/animation/scene/BaseSceneTransitionLayoutState;->finishedTransitions:Ljava/util/Map;
 
-    .line 204
+    .line 203
     invoke-interface {v1, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 206
+    .line 205
     move-result v1
 
-    .line 209
+    .line 208
     if-nez v1, :cond_a
 
-    .line 210
+    .line 209
     goto :goto_4
 
-    .line 212
+    .line 211
     :cond_a
     iget-object v1, p0, Lcom/android/compose/animation/scene/BaseSceneTransitionLayoutState;->finishedTransitions:Ljava/util/Map;
 
-    .line 213
+    .line 212
     invoke-static {v1}, Lkotlin/jvm/internal/TypeIntrinsics;->asMutableMap(Ljava/lang/Object;)Ljava/util/Map;
 
-    .line 215
+    .line 214
     move-result-object v1
 
-    .line 218
+    .line 217
     invoke-interface {v1, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 219
+    .line 218
     move-result-object p2
 
-    .line 222
+    .line 221
     move-object v3, p2
 
-    .line 223
+    .line 222
     check-cast v3, Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 224
+    .line 223
     add-int/lit8 v2, v2, 0x1
 
-    .line 226
+    .line 225
     goto :goto_3
 
-    .line 228
+    .line 227
     :cond_b
     :goto_4
     if-ne v2, p1, :cond_e
 
-    .line 229
+    .line 228
     iget-object p1, p0, Lcom/android/compose/animation/scene/BaseSceneTransitionLayoutState;->finishedTransitions:Ljava/util/Map;
 
-    .line 231
+    .line 230
     invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
 
-    .line 233
+    .line 232
     move-result p1
 
-    .line 236
+    .line 235
     if-eqz p1, :cond_d
 
-    .line 237
+    .line 236
     new-instance p1, Lcom/android/compose/animation/scene/TransitionState$Idle;
 
-    .line 239
+    .line 238
     if-eqz v3, :cond_c
 
-    .line 241
+    .line 240
     invoke-direct {p1, v3}, Lcom/android/compose/animation/scene/TransitionState$Idle;-><init>(Lcom/android/compose/animation/scene/SceneKey;)V
 
-    .line 243
+    .line 242
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    .line 246
+    .line 245
     move-result-object p1
 
-    .line 249
+    .line 248
     invoke-virtual {p0, p1}, Lcom/android/compose/animation/scene/BaseSceneTransitionLayoutState;->setTransitionStates(Ljava/util/List;)V
 
-    .line 250
+    .line 249
     goto :goto_5
 
-    .line 253
+    .line 252
     :cond_c
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 254
+    .line 253
     const-string p1, "Required value was null."
 
-    .line 256
+    .line 255
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 258
+    .line 257
     move-result-object p1
 
-    .line 261
+    .line 260
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 262
+    .line 261
     throw p0
 
-    .line 265
+    .line 264
     :cond_d
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 266
+    .line 265
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 268
+    .line 267
     move-result-object p1
 
-    .line 271
+    .line 270
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 272
+    .line 271
     throw p0
 
-    .line 275
+    .line 274
     :cond_e
     if-lez v2, :cond_f
 
-    .line 276
+    .line 275
     invoke-interface {v0, v2, p1}, Ljava/util/List;->subList(II)Ljava/util/List;
 
-    .line 278
+    .line 277
     move-result-object p1
 
-    .line 281
+    .line 280
     invoke-virtual {p0, p1}, Lcom/android/compose/animation/scene/BaseSceneTransitionLayoutState;->setTransitionStates(Ljava/util/List;)V
 
-    .line 282
+    .line 281
     :cond_f
     :goto_5
     return-void
-    .line 285
+    .line 284
 .end method
 
 .method public final getCurrentTransitions()Ljava/util/List;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/communal/ui/view/layout/sections/CommunalTutorialIndicatorSection;
 .super Lcom/android/systemui/keyguard/shared/model/KeyguardSection;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -77,7 +77,7 @@
     move-result-object p0
 
     .line 24
-    const v0, 0x7f07018f    # @dimen/communal_tutorial_indicator_padding '24.0dp'
+    const v0, 0x7f0701b0    # @dimen/communal_tutorial_indicator_padding '24.0dp'
 
     .line 25
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -98,7 +98,7 @@
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     .line 38
-    const v1, 0x7f0b01e6    # @id/communal_tutorial_indicator
+    const v1, 0x7f0a01f1    # @id/communal_tutorial_indicator
 
     .line 41
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setId(I)V
@@ -137,7 +137,7 @@
     sget-object v3, Landroidx/core/content/res/ResourcesCompat;->sTempTypedValue:Ljava/lang/ThreadLocal;
 
     .line 68
-    const v3, 0x7f080988    # @drawable/keyguard_bottom_affordance_bg 'res/drawable/keyguard_bottom_affordance_bg.xml'
+    const v3, 0x7f0809c1    # @drawable/keyguard_bottom_affordance_bg 'res/drawable/keyguard_bottom_affordance_bg.xml'
 
     .line 70
     invoke-virtual {v1, v3, v2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -173,7 +173,7 @@
     move-result-object v2
 
     .line 95
-    const v3, 0x7f080989    # @drawable/keyguard_bottom_affordance_selected_border 'res/drawable/keyguard_bottom_affordance_selected_border.xml'
+    const v3, 0x7f0809c2    # @drawable/keyguard_bottom_affordance_selected_border 'res/drawable/keyguard_bottom_affordance_selected_border.xml'
 
     .line 96
     invoke-virtual {v1, v3, v2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -212,7 +212,7 @@
     move-result-object v1
 
     .line 124
-    const v2, 0x7f140287    # @string/communal_tutorial_indicator_text 'Swipe left to start the communal tutorial'
+    const v2, 0x7f130299    # @string/communal_tutorial_indicator_text 'Swipe left to start the communal tutorial'
 
     .line 125
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -272,7 +272,7 @@
     iget-object v0, p0, Lcom/android/systemui/communal/ui/view/layout/sections/CommunalTutorialIndicatorSection;->resources:Landroid/content/res/Resources;
 
     .line 21
-    const v1, 0x7f07018d    # @dimen/communal_tutorial_indicator_fixed_width '168.0dp'
+    const v1, 0x7f0701ae    # @dimen/communal_tutorial_indicator_fixed_width '168.0dp'
 
     .line 23
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -284,7 +284,7 @@
     iget-object p0, p0, Lcom/android/systemui/communal/ui/view/layout/sections/CommunalTutorialIndicatorSection;->resources:Landroid/content/res/Resources;
 
     .line 30
-    const v1, 0x7f07018e    # @dimen/communal_tutorial_indicator_horizontal_offset '32.0dp'
+    const v1, 0x7f0701af    # @dimen/communal_tutorial_indicator_horizontal_offset '32.0dp'
 
     .line 32
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -293,7 +293,7 @@
     move-result v7
 
     .line 38
-    const p0, 0x7f0b01e6    # @id/communal_tutorial_indicator
+    const p0, 0x7f0a01f1    # @id/communal_tutorial_indicator
 
     .line 39
     invoke-virtual {p1, p0, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->constrainWidth(II)V
@@ -383,7 +383,7 @@
 
     .line 20
     :cond_0
-    const v0, 0x7f0b01e6    # @id/communal_tutorial_indicator
+    const v0, 0x7f0a01f1    # @id/communal_tutorial_indicator
 
     .line 21
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -428,7 +428,7 @@
 
     .line 6
     :cond_0
-    const p0, 0x7f0b01e6    # @id/communal_tutorial_indicator
+    const p0, 0x7f0a01f1    # @id/communal_tutorial_indicator
 
     .line 9
     invoke-static {p1, p0}, Lcom/android/systemui/keyguard/ui/view/layout/sections/ExtensionsKt;->removeView(Landroidx/constraintlayout/widget/ConstraintLayout;I)V

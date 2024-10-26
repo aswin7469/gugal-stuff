@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/SwipeHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Gefingerpoken;
@@ -214,7 +214,7 @@
     iput p1, p0, Lcom/android/systemui/SwipeHelper;->mDensityScale:F
 
     .line 95
-    const p1, 0x7f070aa4    # @dimen/swipe_helper_falsing_threshold '70.0dp'
+    const p1, 0x7f070afe    # @dimen/swipe_helper_falsing_threshold '70.0dp'
 
     .line 97
     invoke-virtual {p2, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -226,7 +226,7 @@
     iput p1, p0, Lcom/android/systemui/SwipeHelper;->mFalsingThreshold:I
 
     .line 104
-    const p1, 0x7f05001f    # @bool/config_fadeDependingOnAmountSwiped 'false'
+    const p1, 0x7f050025    # @bool/config_fadeDependingOnAmountSwiped 'false'
 
     .line 106
     invoke-virtual {p2, p1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -525,7 +525,7 @@
 
     move-result v2
 
-    const/high16 v3, 0x43fa0000    # 500.0f
+    const/high16 v3, 0x447a0000    # 1000.0f
 
     mul-float/2addr v2, v3
 

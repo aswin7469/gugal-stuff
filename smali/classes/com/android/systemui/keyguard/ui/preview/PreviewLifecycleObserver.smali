@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/preview/PreviewLifecycleObserver;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/os/Handler$Callback;
@@ -99,7 +99,7 @@
     iget-object v0, p0, Lcom/android/systemui/keyguard/ui/preview/PreviewLifecycleObserver;->renderer:Lcom/android/systemui/keyguard/ui/preview/KeyguardPreviewRenderer;
 
     .line 8
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_6
 
     .line 10
     iget-object v2, p0, Lcom/android/systemui/keyguard/ui/preview/PreviewLifecycleObserver;->onDestroy:Lkotlin/jvm/functions/Function1;
@@ -118,7 +118,7 @@
     const/16 v4, 0x457
 
     .line 19
-    if-eq v3, v4, :cond_5
+    if-eq v3, v4, :cond_4
 
     .line 21
     const/16 v0, 0x539
@@ -149,121 +149,96 @@
     move-result-object p1
 
     .line 40
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_5
 
     .line 41
     iget-object p0, p0, Lcom/android/systemui/keyguard/ui/preview/PreviewLifecycleObserver;->renderer:Lcom/android/systemui/keyguard/ui/preview/KeyguardPreviewRenderer;
 
     .line 43
-    if-eqz p0, :cond_4
+    if-eqz p0, :cond_3
 
     .line 45
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 47
-    move-result v0
-
-    .line 50
-    const/4 v2, 0x0
-
-    .line 51
-    if-eqz v0, :cond_3
-
-    .line 52
-    iget-object p0, p0, Lcom/android/systemui/keyguard/ui/preview/KeyguardPreviewRenderer;->quickAffordancesCombinedViewModel:Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;
-
-    .line 54
-    iget-object p0, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardQuickAffordancesCombinedViewModel;->selectedPreviewSlotId:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 56
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 58
-    invoke-virtual {p0, v2, p1}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 61
-    goto :goto_0
-
-    .line 64
-    :cond_3
     iget-object p0, p0, Lcom/android/systemui/keyguard/ui/preview/KeyguardPreviewRenderer;->bottomAreaViewModel:Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;
 
-    .line 65
+    .line 47
     iget-object p0, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;->selectedPreviewSlotId:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 67
+    .line 49
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 69
-    invoke-virtual {p0, v2, p1}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 51
+    const/4 v0, 0x0
 
-    .line 72
+    .line 54
+    invoke-virtual {p0, v0, p1}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 55
     goto :goto_0
 
-    .line 75
-    :cond_4
+    .line 58
+    :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 76
+    .line 59
     const-string p1, "Required value was null."
 
-    .line 78
+    .line 61
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 80
+    .line 63
     move-result-object p1
 
-    .line 83
+    .line 66
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 84
+    .line 67
     throw p0
 
-    .line 87
-    :cond_5
+    .line 70
+    :cond_4
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
-    .line 88
+    .line 71
     move-result-object p0
 
-    .line 91
+    .line 74
     const-string p1, "hide_smart_space"
 
-    .line 92
+    .line 75
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
-    .line 94
+    .line 77
     move-result p0
 
-    .line 97
+    .line 80
     new-instance p1, Lcom/android/systemui/keyguard/ui/preview/KeyguardPreviewRenderer$hideSmartspace$1;
 
-    .line 98
+    .line 81
     invoke-direct {p1, v0, p0}, Lcom/android/systemui/keyguard/ui/preview/KeyguardPreviewRenderer$hideSmartspace$1;-><init>(Lcom/android/systemui/keyguard/ui/preview/KeyguardPreviewRenderer;Z)V
 
-    .line 100
+    .line 83
     iget-object p0, v0, Lcom/android/systemui/keyguard/ui/preview/KeyguardPreviewRenderer;->mainHandler:Landroid/os/Handler;
 
-    .line 103
+    .line 86
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 105
-    :cond_6
+    .line 88
+    :cond_5
     :goto_0
     return v1
 
-    .line 108
-    :cond_7
+    .line 91
+    :cond_6
     :goto_1
     const-string p0, "KeyguardRemotePreviewManager"
 
-    .line 109
+    .line 92
     const-string p1, "Renderer/onDestroy should not be null."
 
-    .line 111
+    .line 94
     invoke-static {p0, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
+    .line 96
     return v1
-    .line 116
+    .line 99
 .end method

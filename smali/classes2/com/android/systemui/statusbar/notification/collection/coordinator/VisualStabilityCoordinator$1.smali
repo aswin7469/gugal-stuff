@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/coordinator/VisualStabilityCoordinator$1;
 .super Lcom/android/systemui/statusbar/notification/collection/listbuilder/pluggable/NotifStabilityManager;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -41,83 +41,45 @@
 
     .line 5
     :cond_0
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationMinimalismPrototype()Z
-
-    .line 6
-    move-result v1
-
-    .line 9
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/VisualStabilityCoordinator$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/VisualStabilityCoordinator;
 
+    .line 6
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/VisualStabilityCoordinator;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
+
+    .line 8
+    check-cast v1, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;
+
     .line 10
-    if-eqz v1, :cond_1
+    iget-object v2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mKey:Ljava/lang/String;
 
     .line 12
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/shared/NotificationMinimalismPrototype;->getVersion()I
+    invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->isHeadsUpEntry(Ljava/lang/String;)Z
 
     .line 14
     move-result v1
 
     .line 17
-    const/4 v2, 0x2
-
-    .line 18
-    if-ne v1, v2, :cond_1
-
-    .line 19
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/VisualStabilityCoordinator;->mSeenNotificationsInteractor:Lcom/android/systemui/statusbar/notification/domain/interactor/SeenNotificationsInteractor;
-
-    .line 21
-    invoke-virtual {v1, p1}, Lcom/android/systemui/statusbar/notification/domain/interactor/SeenNotificationsInteractor;->isTopUnseenNotification(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
-
-    .line 23
-    move-result v1
-
-    .line 26
     if-eqz v1, :cond_1
 
-    .line 27
-    goto :goto_0
-
-    .line 29
-    :cond_1
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/VisualStabilityCoordinator;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
-
-    .line 30
-    check-cast v1, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;
-
-    .line 32
-    iget-object v2, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mKey:Ljava/lang/String;
-
-    .line 34
-    invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->isHeadsUpEntry(Ljava/lang/String;)Z
-
-    .line 36
-    move-result v1
-
-    .line 39
-    if-eqz v1, :cond_2
-
-    .line 40
-    :goto_0
+    .line 18
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/VisualStabilityCoordinator;->mVisibilityLocationProvider:Lcom/android/systemui/statusbar/notification/VisibilityLocationProvider;
 
-    .line 42
+    .line 20
     invoke-interface {p0, p1}, Lcom/android/systemui/statusbar/notification/VisibilityLocationProvider;->isInVisibleLocation(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
-    .line 44
+    .line 22
     move-result p0
 
-    .line 47
+    .line 25
     xor-int/lit8 p0, p0, 0x1
 
-    .line 48
+    .line 26
     return p0
 
-    .line 50
-    :cond_2
+    .line 28
+    :cond_1
     return v0
-    .line 51
+    .line 29
 .end method
 
 .method public final isEntryReorderingAllowed(Lcom/android/systemui/statusbar/notification/collection/ListEntry;)Z

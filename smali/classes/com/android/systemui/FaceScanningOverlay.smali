@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/FaceScanningOverlay;
 .super Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -410,29 +410,29 @@
     new-instance v0, Ljava/lang/StringBuilder;
 
     .line 55
-    const-string v1, "this="
+    const-string/jumbo v1, "this="
 
     .line 57
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 59
+    .line 60
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 62
+    .line 63
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 65
+    .line 66
     move-result-object p0
 
-    .line 68
+    .line 69
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 69
+    .line 70
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 72
+    .line 73
     return-void
-    .line 75
+    .line 76
 .end method
 
 .method public final enableShowProtection(Z)V

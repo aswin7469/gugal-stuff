@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -143,44 +143,41 @@
     iget-object v3, p0, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1;->this$0:Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl;
 
     .line 35
-    iget-object v3, v3, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl;->foldStateProvider:Lcom/android/systemui/unfold/updates/FoldStateProvider;
+    iget-object v3, v3, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl;->foldStateProvider:Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;
 
     .line 37
-    check-cast v3, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;
-
-    .line 39
     invoke-virtual {v3, v1}, Lcom/android/systemui/unfold/updates/DeviceFoldStateProvider;->addCallback(Ljava/lang/Object;)V
 
-    .line 41
+    .line 39
     new-instance v3, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1$1;
 
-    .line 44
+    .line 42
     iget-object v4, p0, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1;->this$0:Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl;
 
-    .line 46
+    .line 44
     invoke-direct {v3, v4, v1}, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1$1;-><init>(Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl;Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1$callback$1;)V
 
-    .line 48
+    .line 46
     iput v2, p0, Lcom/android/systemui/unfold/data/repository/FoldStateRepositoryImpl$hingeAngle$1;->label:I
 
-    .line 51
+    .line 49
     invoke-static {p1, v3, p0}, Lkotlinx/coroutines/channels/ProduceKt;->awaitClose(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/jvm/functions/Function0;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 53
+    .line 51
     move-result-object p0
 
-    .line 56
+    .line 54
     if-ne p0, v0, :cond_2
 
-    .line 57
+    .line 55
     return-object v0
 
-    .line 59
+    .line 57
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 60
+    .line 58
     return-object p0
-    .line 62
+    .line 60
 .end method

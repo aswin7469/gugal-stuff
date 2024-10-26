@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/Flow;
@@ -42,10 +42,10 @@
     packed-switch v0, :pswitch_data_0
 
     .line 4
-    new-instance v0, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$transitionProgressToScene$lambda$1$$inlined$map$1$2;
+    new-instance v0, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$2$2;
 
     .line 7
-    invoke-direct {v0, p1}, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$transitionProgressToScene$lambda$1$$inlined$map$1$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;)V
+    invoke-direct {v0, p1}, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$2$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;)V
 
     .line 9
     iget-object p0, p0, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1;->$this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
@@ -75,10 +75,10 @@
 
     .line 25
     :pswitch_0
-    new-instance v0, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$2$2;
+    new-instance v0, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1$2;
 
     .line 26
-    invoke-direct {v0, p1}, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$2$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;)V
+    invoke-direct {v0, p1}, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;)V
 
     .line 28
     iget-object p0, p0, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1;->$this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
@@ -107,43 +107,12 @@
     return-object p0
 
     .line 44
-    :pswitch_1
-    new-instance v0, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1$2;
+    nop
 
     .line 45
-    invoke-direct {v0, p1}, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;)V
-
-    .line 47
-    iget-object p0, p0, Lcom/android/systemui/communal/domain/interactor/CommunalSceneInteractor$special$$inlined$map$1;->$this_unsafeTransform$inlined:Lkotlinx/coroutines/flow/Flow;
-
-    .line 50
-    invoke-interface {p0, v0, p2}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    .line 52
-    move-result-object p0
-
-    .line 55
-    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
-
-    .line 56
-    if-ne p0, p1, :cond_2
-
-    .line 58
-    goto :goto_2
-
-    .line 60
-    :cond_2
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    .line 61
-    :goto_2
-    return-object p0
-
-    .line 63
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 64
+    .line 46
 .end method

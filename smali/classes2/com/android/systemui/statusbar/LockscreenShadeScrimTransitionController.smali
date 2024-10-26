@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/LockscreenShadeScrimTransitionController;
 .super Lcom/android/systemui/statusbar/AbstractLockscreenShadeTransitionController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -255,7 +255,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f070496    # @dimen/lockscreen_shade_scrim_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
+    const v1, 0x7f0704d2    # @dimen/lockscreen_shade_scrim_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -276,7 +276,7 @@
     move-result-object v0
 
     .line 22
-    const v1, 0x7f07048f    # @dimen/lockscreen_shade_notifications_scrim_transition_delay '0.0dp'
+    const v1, 0x7f0704cb    # @dimen/lockscreen_shade_notifications_scrim_transition_delay '0.0dp'
 
     .line 23
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -297,7 +297,7 @@
     move-result-object v0
 
     .line 37
-    const v1, 0x7f070490    # @dimen/lockscreen_shade_notifications_scrim_transition_distance '@dimen/lockscreen_shade_scrim_transition_distance'
+    const v1, 0x7f0704cc    # @dimen/lockscreen_shade_notifications_scrim_transition_distance '@dimen/lockscreen_shade_scrim_transition_distance'
 
     .line 38
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

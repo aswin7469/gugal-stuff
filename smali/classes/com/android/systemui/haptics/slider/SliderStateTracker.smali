@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/haptics/slider/SliderStateTracker;
 .super Lcom/android/systemui/haptics/slider/SliderTracker;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -165,10 +165,10 @@
     iget-object v4, v3, Lcom/android/systemui/statusbar/VibratorHelper;->mExecutor:Ljava/util/concurrent/Executor;
 
     .line 56
-    new-instance v5, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda0;
+    new-instance v5, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda1;
 
     .line 58
-    invoke-direct {v5, v3, v0, v2}, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/VibratorHelper;Landroid/os/VibrationEffect;Landroid/os/VibrationAttributes;)V
+    invoke-direct {v5, v3, v0, v2}, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/VibratorHelper;Landroid/os/VibrationEffect;Landroid/os/VibrationAttributes;)V
 
     .line 60
     invoke-interface {v4, v5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -249,10 +249,10 @@
     iget-object v4, v3, Lcom/android/systemui/statusbar/VibratorHelper;->mExecutor:Ljava/util/concurrent/Executor;
 
     .line 110
-    new-instance v5, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda0;
+    new-instance v5, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda1;
 
     .line 112
-    invoke-direct {v5, v3, v0, v2}, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/VibratorHelper;Landroid/os/VibrationEffect;Landroid/os/VibrationAttributes;)V
+    invoke-direct {v5, v3, v0, v2}, Lcom/android/systemui/statusbar/VibratorHelper$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/VibratorHelper;Landroid/os/VibrationEffect;Landroid/os/VibrationAttributes;)V
 
     .line 114
     invoke-interface {v4, v5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V

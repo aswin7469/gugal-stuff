@@ -1,6 +1,6 @@
 .class public Landroidx/preference/SwitchPreference;
 .super Landroidx/preference/TwoStatePreference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -19,7 +19,7 @@
     const/4 v0, 0x0
 
     .line 2
-    const v1, 0x7f04065c    # @attr/switchPreferenceStyle
+    const v1, 0x7f040662    # @attr/switchPreferenceStyle
 
     .line 3
     const v2, 0x101036d    # @android:attr/switchPreferenceStyle

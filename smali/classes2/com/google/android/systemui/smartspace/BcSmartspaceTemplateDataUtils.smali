@@ -1,48 +1,9 @@
 .class public abstract Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
-.method public static offsetImageViewForIcon(Landroid/widget/ImageView;Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;)V
-    .locals 0
-
-    .line 1
-    if-nez p1, :cond_0
-
-    .line 2
-    const/4 p1, 0x0
-
-    .line 4
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setTranslationX(F)V
-
-    .line 5
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setTranslationY(F)V
-
-    .line 8
-    return-void
-
-    .line 11
-    :cond_0
-    iget p1, p1, Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;->mIconInsetSize:I
-
-    .line 12
-    neg-int p1, p1
-
-    .line 14
-    int-to-float p1, p1
-
-    .line 15
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setTranslationX(F)V
-
-    .line 16
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setTranslationY(F)V
-
-    .line 19
-    return-void
-    .line 22
-.end method
-
 .method public static offsetTextViewForIcon(Landroid/widget/TextView;Lcom/google/android/systemui/smartspace/DoubleShadowIconDrawable;Z)V
     .locals 0
 
@@ -155,6 +116,7 @@
     .line 41
     :cond_2
     return-void
+    .line 44
 .end method
 
 .method public static setText(Landroid/widget/TextView;Landroid/app/smartspace/uitemplatedata/Text;)V
@@ -186,55 +148,58 @@
     if-eqz v1, :cond_1
 
     .line 16
-    const-string v1, "Cannot set. The given text is empty"
+    const-string p1, "Cannot set. The given text is empty"
 
     .line 18
-    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 20
-    const/16 v0, 0x8
+    const/16 p1, 0x8
 
     .line 23
-    invoke-static {p0, v0}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
+    invoke-static {p0, p1}, Lcom/google/android/systemui/smartspace/BcSmartspaceTemplateDataUtils;->updateVisibility(Landroid/view/View;I)V
 
     .line 25
+    return-void
+
+    .line 28
     :cond_1
     invoke-virtual {p1}, Landroid/app/smartspace/uitemplatedata/Text;->getText()Ljava/lang/CharSequence;
 
-    .line 28
+    .line 29
     move-result-object v0
-
-    .line 31
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 32
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 33
     invoke-virtual {p1}, Landroid/app/smartspace/uitemplatedata/Text;->getTruncateAtType()Landroid/text/TextUtils$TruncateAt;
 
-    .line 35
+    .line 36
     move-result-object v0
 
-    .line 38
+    .line 39
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 39
+    .line 40
     invoke-virtual {p1}, Landroid/app/smartspace/uitemplatedata/Text;->getMaxLines()I
 
-    .line 42
+    .line 43
     move-result p1
 
-    .line 45
+    .line 46
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 46
+    .line 47
     return-void
-    .line 49
+    .line 50
 .end method
 
 .method public static updateVisibility(Landroid/view/View;I)V
     .locals 1
 
     .line 1
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
     .line 2
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
@@ -243,13 +208,18 @@
     move-result v0
 
     .line 7
-    if-eq v0, p1, :cond_0
+    if-ne v0, p1, :cond_0
 
     .line 8
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    goto :goto_0
 
     .line 10
     :cond_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 11
+    :cond_1
+    :goto_0
     return-void
-    .line 13
+    .line 14
 .end method

@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">තෝරන ලද විජට්ටුව තබන්න</string>
   <string name="accessibility_action_label_remove_widget">විජට්ටුව ඉවත් කරන්න</string>
   <string name="accessibility_action_label_select_widget">විජට්ටුව තෝරන්න</string>
-  <string name="accessibility_action_open_communal_hub">අගුළු තිරයෙහි විජට්</string>
   <string name="accessibility_action_pip_resize">ප්‍රතිප්‍රමාණ කරන්න</string>
   <string name="accessibility_action_pip_stash">සඟවා තබන්න</string>
   <string name="accessibility_action_pip_unstash">සඟවා තැබීම ඉවත් කරන්න</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">තනි අත් ප්‍රකාරයෙන් පිටවන්න</string>
   <string name="accessibility_airplane_mode">අහස්යානා ආකාරය.</string>
   <string name="accessibility_allow_diagonal_scrolling">විකර්ණ අනුචලනයට ඉඩ දෙන්න</string>
+  <string name="accessibility_assistant_poodle">හඬ සෙවීම</string>
   <string name="accessibility_authenticate_hint">සත්‍යාපනය කරන්න</string>
   <string name="accessibility_back">ආපසු</string>
   <string name="accessibility_banner_message_dismiss">ඉවත ලන්න</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">උපාංගය ඇතුළු කරන්න</string>
   <string name="accessibility_ethernet_connected">ඊතර්නෙට්.</string>
   <string name="accessibility_ethernet_disconnected">ඊතර්නෙට් විසන්ධි කරන ලදී.</string>
-  <string name="accessibility_fingerprint_bouncer">සත්‍යාපනය අවශ්‍යයි. සත්‍යාපනය කිරීමට ඇඟිලි සලකුණු සංවේදකය ස්පර්ශ කරන්න.</string>
   <string name="accessibility_fingerprint_label">ඇඟිලි සලකුණු සංවේදකය</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">ටොගල් කරන්න</string>
   <string name="accessibility_floating_button_action_edit">සංස්කරණ කරන්න</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">මෙනුව</string>
   <string name="accessibility_multi_user_list_switcher">නිපතන මෙනුව</string>
   <string name="accessibility_multi_user_switch_switcher">පරිශීලක මාරුව</string>
+  <string name="accessibility_next_alarm">ඊළඟ එලාමය %sට</string>
   <string name="accessibility_no_calling">ඇමතුම් නැත.</string>
   <string name="accessibility_no_phone">දුරකථනයක් නැත.</string>
   <string name="accessibility_no_wifi">Wifi සම්බන්ධ කර නොමැත.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">තිරය සිරස් දිශානතිය තුළ අගුළු වැටී ඇත.</string>
   <string name="accessibility_send_smart_reply">යවන්න</string>
   <string name="accessibility_sensors_off_active">සංවේදක ක්‍රියාවිරහිතය සක්‍රියයි</string>
+  <string name="accessibility_settings_gear">Pixel Stand සැකසීම්</string>
   <string name="accessibility_side_fingerprint_indicator_label">ඇඟිලි සලකුණු සංවේදකය ස්පර්ශ කරන්න. එය දුරකථනයේ පැත්තේ ඇති කෙටි බොත්තමයි</string>
+  <string name="accessibility_smartspace_page">පිටු %2$dහි %1$d</string>
   <string name="accessibility_split_bottom">පහළ බෙදන්න</string>
   <string name="accessibility_split_left">වම බෙදන්න</string>
   <string name="accessibility_split_right">දකුණ බෙදන්න</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">WiFi තීරු තුනයි.</string>
   <string name="accessibility_wifi_two_bars">Wifi තීරු දෙකයි.</string>
   <string name="accesssibility_keyguard_retry">මුහුණෙන් අගුළු හැරීම නැවත උත්සාහ කිරීමට ඉහළට ස්වයිප් කරන්න</string>
+  <string name="adaptive_charging_notify_des">%1$s වන විට බැටරිය පිරෙනු ඇත. බැටරි ආයු කාලය දීර්ඝ කිරීමට ස්ථාවර ලෙස ආරෝපණය කිරීම.</string>
+  <string name="adaptive_charging_notify_title">අනුවර්තී ආරෝපණය ක්‍රියාත්මකයි</string>
+  <string name="adaptive_charging_notify_turn_off_once">එක් වරක් ක්‍රියාවිරහිත කරන්න</string>
+  <string name="adaptive_charging_time_estimate">%1$s • අනුවර්තී ආරෝපණය%2$s • වන විට සම්පූර්ණයි</string>
   <string name="add">එක් කරන්න</string>
   <string name="add_guest_failed">නව අමුත්තකු තැනීම අසාර්ථක විය</string>
   <string name="airplane_mode">ගුවන් යානා ප්‍රකාරය</string>
-  <string name="alarm_template">%1$s ට</string>
-  <string name="alarm_template_far">%1$s දී</string>
+  <string name="alarm_template">%1$sට</string>
+  <string name="alarm_template_far">%1$sහිදී</string>
   <string name="all_network_unavailable">ජාලය නොතිබේ</string>
   <string name="always_use_accessory">%2$s සම්බන්ධ විට %1$s සැම විටම විවෘත කරන්න</string>
   <string name="always_use_device">%2$s සම්බන්ධ විට %1$s සැම විටම විවෘත කරන්න</string>
@@ -233,6 +239,7 @@
   <string name="app_info">යෙදුම් තොරතුරු</string>
   <string name="app_label">පද්ධති UI</string>
   <string name="assistant_attention_content_description">පරිශීලක රූපාකාරය අනාවරණය වේ</string>
+  <string name="assistant_scrim_label">සවන් දෙනු ලැබේ, අවලංගු කිරීමට තට්ටු කරන්න</string>
   <string name="audio_sharing_description">ශ්‍රව්‍ය බෙදා ගැනීම</string>
   <string name="audio_status">සවන් දෙමින්</string>
   <string name="auto_data_switch_dialog_negative_button">එපා ස්තුතියි</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">ආපසු</string>
   <string name="battery">බැටරිය</string>
   <string name="battery_detail_switch_title">බැටරි සුරැකුම</string>
-  <string name="battery_low_description">ඔබට බැටරිය %s ඉතිරිව ඇත. බැටරි සුරැකුම අඳුරු තේමාව ක්‍රියාත්මක කරයි, පසුබිම් ක්‍රියාකාරකම සීමා කරයි, සහ දැනුම්දීම් ප්‍රමාද කරයි.</string>
+  <string name="battery_health_notify_learn_more">තව දැන ගන්න</string>
   <string name="battery_low_intro">බැටරි සුරැකුම අඳුරු තේමාව ක්‍රියාත්මක කරයි, පසුබිම් ක්‍රියාකාරකම සීමා කරයි, සහ දැනුම්දීම් ප්‍රමාද කරයි.</string>
-  <string name="battery_low_title">බැටරි සුරැකුම ක්‍රියාත්මක කරන්නද?</string>
   <string name="battery_saver_confirmation_ok">ක්‍රියාත්මක කරන්න</string>
   <string name="battery_saver_confirmation_title">බැටරි සුරැකුම ක්‍රියාත්මක කරන්නද?</string>
   <string name="battery_saver_confirmation_title_generic">බැටරි සුරැකුම ගැන</string>
-  <string name="battery_saver_dismiss_action">එපා ස්තුතියි</string>
   <string name="battery_saver_start_action">ක්‍රියාත්මක කරන්න</string>
   <string name="battery_state_unknown_notification_text">තවත් තොරතුරු සඳහා තට්ටු කරන්න</string>
   <string name="battery_state_unknown_notification_title">ඔබගේ බැටරි මනුව කියවීමේ දෝෂයකි</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">ක්‍රියාත්මකයි. බැටරිය ව: %1$s, ද: %2$s.</string>
   <string name="bluetooth_active_battery_level_untethered_left">ක්‍රියාත්මකයි. ව: %1$s බැටරිය.</string>
   <string name="bluetooth_active_battery_level_untethered_right">ක්‍රියාත්මකයි. ද: %1$s බැටරිය.</string>
-  <string name="bluetooth_active_media_only_battery_level">ක්‍රියාත්මකයි (මාධ්‍ය පමණයි). බැටරිය %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">ක්‍රියාත්මකයි (මාධ්‍ය පමණයි), බැටරිය ව: %1$s, ද: %2$s.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">සක්‍රිය (මාධ්‍ය පමණි)</string>
   <string name="bluetooth_active_no_battery_level">ක්‍රියාකාරී</string>
   <string name="bluetooth_battery_level">බැටරිය %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">සම්බන්‍ධයි (ශ්‍රව්‍ය බෙදා ගැනීමට සහය දක්වයි). බැටරිය %1$s.</string>
   <string name="bluetooth_battery_level_untethered">බැටරිය ව: %1$s, ද: %2$s.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">සම්බන්‍ධයි (ශ්‍රව්‍ය බෙදා ගැනීමට සහය දක්වයි). බැටරිය ව: %1$s, ද: %2$s.</string>
   <string name="bluetooth_connected">සම්බන්ධිත%1$s</string>
   <string name="bluetooth_connecting">සම්බන්ධ වෙමින්…</string>
   <string name="bluetooth_disconnected">විසන්ධි වුණි</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">සක්‍රිය (වම පමණි)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">සක්‍රිය (වම සහ දකුණ)</string>
   <string name="bluetooth_hearing_aid_right_active">සක්‍රිය (දකුණ පමණි)</string>
-  <string name="bluetooth_no_battery_level_lea_support">සම්බන්‍ධයි (ශ්‍රව්‍ය බෙදා ගැනීමට සහය දක්වයි)</string>
   <string name="bluetooth_pairing">යුගල කරමින්…</string>
   <string name="bluetooth_pairing_device_down_error_message">%1$s සමඟ සන්නිවේදනය කළ නොහැක.</string>
   <string name="bluetooth_pairing_error_message">%1$s සමඟ යුගල කළ නොහැකි විය.</string>
   <string name="bluetooth_pairing_pin_error_message">වැරදි PIN එකක් හෝ පාස් යතුරක් නිසා %1$s සමඟ යුගල කිරීමට නොහැකිය.</string>
   <string name="bluetooth_pairing_rejected_error_message">%1$s විසින් යුගල කිරීම ප්‍රතික්ෂේප කරන ලදි.</string>
-  <string name="bluetooth_saved_device_lea_support">ශ්‍රව්‍ය බෙදා ගැනීම සහය දක්වයි</string>
   <string name="bluetooth_talkback_bluetooth">බ්ලූටූත්</string>
   <string name="bluetooth_talkback_computer">පරිගණකය</string>
   <string name="bluetooth_talkback_headphone">හෙඩ්ෆෝන්</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">පිටාර යාම</string>
   <string name="bubble_overflow_empty_subtitle">මෑත බුබුලු සහ ඉවත ලූ බුබුලු මෙහි දිස් වනු ඇත</string>
   <string name="bubble_overflow_empty_title">මෑත බුබුලු නැත</string>
-  <string name="bubble_shortcut_label">බුබුළු</string>
-  <string name="bubble_shortcut_long_label">බුබුළු පෙන්වන්න</string>
   <string name="bubbles_app_settings">%1$s සැකසීම්</string>
   <string name="bubbles_dont_bubble_conversation">සංවාදය බුබුලු නොදමන්න</string>
   <string name="bubbles_settings_button_description">%1$s බුබුළු සඳහා සැකසීම්</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">විකාශය නවතන්න</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">ඔබ &lt;b&gt;%1$s&lt;/b&gt; විකාශය නතර කරනු ඇත</string>
   <string name="cell_data_off_content_description">ජංගම දත්ත ක්‍රියාවිරහිතයි</string>
+  <string name="charge_limit_discovery_notification_enable_button">දැන් සබල කරන්න</string>
+  <string name="charge_limit_discovery_notification_text">බැටරි සෞඛ්‍යය සහ ආයු කාලය ආරක්ෂා කිරීමට 80% සීමා කිරීමේ විශේෂාංගය ක්‍රියාත්මක කිරීමට උත්සාහ කරන්න. ඔබට මෙය ඕනෑම වේලාවක සැකසීම් තුළ කළමනාකරණය කළ හැක</string>
+  <string name="charge_limit_discovery_notification_title">ආරෝපණය කිරීමේ දී ඔබේ බැටරිය ආරක්ෂා කරන්න</string>
+  <string name="charging_reverse_text">බැටරිය බෙදා ගනිමින්</string>
   <string name="clear_all_notifications_text">සියල්ල හිස් කරන්න</string>
   <string name="clipboard">පසුරු පුවරුව</string>
   <string name="clipboard_content_copied">අන්තර්ගතය පිටපත් කරන ලදි</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">වසන්න</string>
   <string name="close_dialog_button">වසන්න</string>
   <string name="collapse_menu_text">මෙනුව වසන්න</string>
+  <string name="columbus_bouncer_message">ඉක්මන් තට්ටු කිරීම සම්පූර්ණ කිරීමට අගුලු හරින්න</string>
+  <string name="columbus_target_request_dialog_allow">ඉඩ දෙන්න</string>
+  <string name="columbus_target_request_dialog_deny">ඉඩ නොදෙන්න</string>
+  <string name="columbus_target_request_dialog_summary">%1$s විවෘත කිරීමට ඔබගේ දුරකථනයෙහි පසුපසට තට්ටු කරන්න. ඔබට සැකසීම් තුළ මෙය ඕනෑම වේලාවක වෙනස් කළ හැකිය.</string>
+  <string name="columbus_target_request_dialog_title">%1$s විවෘත කිරීමට ඉක්මන් තට්ටු කිරීමට ඉඩ දෙන්නද?</string>
   <string name="communal_tutorial_indicator_text">පොදු නිබන්ධනය ආරම්භ කිරීමට වමට ස්වයිප් කරන්න</string>
   <string name="connected_display_dialog_dual_display_stop_warning">ඔබේ අභ්‍යන්තර සංදර්ශකය පිළිබිඹු වනු ඇත. ඔබේ ඉදිරිපස සංදර්ශකය ක්‍රියාවිරහිත වනු ඇත.</string>
   <string name="connected_display_dialog_start_mirroring">බාහිර සංදර්ශකයට දර්පණය කරන්න ද?</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">ජංගම දත්ත විරාම කර ඇත</string>
   <string name="data_usage_disabled_dialog_title">දත්ත විරාම කර ඇත</string>
   <string name="days_timestamp">දින %1$sකට පෙර</string>
-  <string name="default_error_message">වලංගු නොවන ආදානයකි</string>
   <string name="default_popup_window_title">උත්පතන කවුළුව</string>
+  <string name="defender_notify_resume_charge">ඉක්මවා යන්න</string>
+  <string name="defender_notify_title">ඔබේ බැටරිය ආරක්ෂා කිරීම</string>
+  <string name="defender_post_notify_des">බැටරි ආයු කාලය දීර්ඝ කිරීමට උදවු කිරීම සඳහා, ආරෝපණය %1$s සිට %2$s දක්වා ප්‍රශස්ත කර ඇත</string>
+  <string name="defender_post_notify_title">ආරෝපණය ප්‍රශස්ත කර තිබුණි</string>
   <string name="demo_mode">පද්ධති UI ආදර්ශන ප්‍රකාරය</string>
   <string name="desktop_mode_maximize_menu_maximize_text">තිරය උපරිම කරන්න</string>
   <string name="desktop_mode_maximize_menu_snap_text">ස්නැප් තිරය</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">මෙම උපාංගය ඔබේ සංවිධානයට අයිතිය</string>
   <string name="do_disclosure_with_name">මෙම උපාංගය %s සංවිධානයට අයිතිය</string>
   <string name="do_financed_disclosure_with_name">මෙම උපාංගය %s මගින් සැපයේ.</string>
+  <string name="dock_a11y_action_show_photo_text">ඡායාරූප රාමුව පෙන්වන්න</string>
+  <string name="dock_alignment_not_charging">නොරැහැන්ව ආරෝපණය කිරීමට දුරකථනය යළි සකසන්න</string>
+  <string name="dock_alignment_slow_charging">වඩා වේගවත් ආරෝපණය සඳහා දුරකථනය යළි සකසන්න</string>
+  <string name="dock_defender_first_run_des">බැටරි ආයු කාලය දීර්ඝ කිරීමට උදවු කිරීමට, ඔබේ ටැබ්ලටය ඩොක් කර ඇති අතරේ ආරෝපණය 90% හි රඳවා ඇත. ප්‍රතික්ෂේප කිරීමට ඕනෑම වේලාවක සැකසීම් වෙත යන්න.</string>
+  <string name="dock_defender_first_run_settings">සැකසීම්</string>
+  <string name="dock_defender_first_run_title">බැටරිය ආරක්ෂා කිරීම සඳහා ආරෝපණය රඳවා ගෙන ඇත</string>
   <string name="dock_multi_instances_not_supported_text">මෙම යෙදුම විවෘත කළ හැක්කේ 1 කවුළුවක පමණයි</string>
   <string name="dock_non_resizeble_failed_to_dock_text">යෙදුම බෙදුම් තිරයට සහාය නොදක්වයි</string>
+  <string name="dock_photo_preview_text">පින්තූර රාමුව ආරම්භ වෙමින්...</string>
+  <string name="dock_promo_text">ඡායාරූප රාමුව සඳහා වමට ස්වයිප් කරන්න</string>
   <string name="done">නිමයි</string>
   <string name="drag_split_not_supported">මෙම දැනුම්දීම බෙදුම් තිරය වෙත ඇද ගෙන යාමට සහාය නොදක්වයි.</string>
   <string name="drag_to_add_tiles">ටයිල් එක් කිරීමට අල්ලාගෙන සිට අදින්න</string>
   <string name="drag_to_rearrange_tiles">ටයිල් නැවත සකස් කිරීමට අල්ලාගෙන සිට අදින්න</string>
   <string name="drag_to_remove_disabled">ඔබ අවම වශයෙන් ටයිල් %1$d ක් අවශ්‍ය වෙයි</string>
   <string name="drag_to_remove_tiles">ඉවත් කිරීමට මෙතැනට අදින්න</string>
+  <string name="dream_lockscreen_wallpaper_description">ඔබේ වත්මන් අගුළු තිර වෝල්පේපරය භාවිතය</string>
+  <string name="dream_lockscreen_wallpaper_label">වෝල්පේපරය</string>
   <string name="dream_overlay_status_bar_alarm_set">සීනුව සකසන ලදි</string>
   <string name="dream_overlay_status_bar_camera_mic_off">කැමරාව සහ මයික් ක්‍රියාවිරහිතයි</string>
   <string name="dream_overlay_status_bar_camera_off">කැමරාව ක්‍රියා විරහිතයි</string>
   <string name="dream_overlay_status_bar_mic_off">මයිකය ක්‍රියා විරහිතයි</string>
   <string name="dream_overlay_status_bar_priority_mode">ප්‍රමුඛතා ප්‍රකාරය</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi ලබා ගත නොහැකිය</string>
+  <string name="dwell_defender_notify_des">මෙය ඔබේ දුරකථනය දිගු කාලයක් ආරෝපණය කිරීමට ඉතිරිව ඇති විට බැටරි ආයු කාලය දීර්ඝ කිරීමට උදවු වේ</string>
+  <string name="dwell_defender_notify_title">බැටරිය ආරක්ෂා කිරීම සඳහා ආරෝපණය රඳවා තබා ඇත</string>
   <string name="edit_user_info_message">ඔබ තෝරා ගන්නා නම සහ පින්තූරය මෙම උපාංගය භාවිතා කරන ඕනෑම කෙනෙකුට දෘශ්‍යමාන වනු ඇත.</string>
   <string name="edit_widget">විජට්ටු සංස්කරණ කරන්න</string>
   <string name="empty_shade_text">දැනුම්දීම් නැත</string>
@@ -561,13 +581,17 @@
   <string name="ethernet_label">ඊතර නෙට්</string>
   <string name="expand_button_title">උසස්</string>
   <string name="expand_menu_text">මෙනුව විවෘත කරන්න</string>
+  <string name="extreme_battery_saver_text">අතිශය</string>
+  <string name="extreme_low_battery_notification_text">ඔබේ දුරකථනය එය ඉක්මනින් ආරෝපණය නොකරන්නේ නම් වසා දමනු ඇත</string>
+  <string name="extreme_low_battery_notification_title">බැටරිය ඉතා අඩුයි</string>
   <string name="face_re_enroll_dialog_content">මුහුණෙන් අගුළු හැරීම නැවත පිහිටුවීම සඳහා, ඔබේ වත්මන් මුහුණු ආකෘතිය මකනු ඇත.
 
 ඔබේ දුරකථනය අගුළු හැරීමට ඔබේ මුහුණ භාවිතා කිරීමට ඔබට මෙම විශේෂාංගය නැවත පිහිටුවීමට අවශ්‍ය වනු ඇත.</string>
   <string name="face_re_enroll_dialog_title">මුහුණෙන් අගුළු හැරීම පිහිටුවන්න</string>
   <string name="face_re_enroll_notification_name">මුහුණෙන් අගුළු හැරීම</string>
   <string name="face_re_enroll_notification_title">මුහුණෙන් අගුළු හැරීම නැවත පිහිටුවන්න</string>
-  <string name="face_reenroll_failure_dialog_content">මුහුණෙන් අගුළු හැරීම පිහිටුවිය නොහැකි විය. නැවත උත්සාහ කිරීමට සැකසීම් වෙත යන්න.</string>
+  <string name="face_reenroll_dialog_confirm">පිහිටුවන්න</string>
+  <string name="face_reenroll_failure_dialog_content">මුහුණෙන් අගුළු හැරීම පිහිටුවිය නොහැකි විය නැවත උත්සාහ කිරීමට සැකසීම් වෙත යන්න.</string>
   <string name="failed_attempts_now_wiping_device">වැරදි උත්සාහයන් ඉතා වැඩි ගණනකි. මෙම උපාංගයෙහි දත්ත මකනු ඇත.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">ඉවත ලන්න</string>
   <string name="failed_attempts_now_wiping_profile">වැරදි උත්සාහයන් ඉතා වැඩි ගණනකි. මෙම කාර්යාල පැතිකඩ සහ එහි දත්ත මකනු ඇත.</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">වඩා කුඩා කරන්න</string>
   <string name="fullscreen_text">පූර්ණ තිරය</string>
   <string name="game_status">ක්‍රීඩා කරමින්</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">දිගු අගුළු හැරීම අබල කර ඇත</string>
   <string name="go_to_web">බ්‍රවුසරය වෙත යන්න</string>
   <string name="got_it">තේරුණා</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">ආගන්තුක සැසිය යළි සකසන්නද?</string>
   <string name="guest_reset_guest_confirm_button">යළි සකසන්න</string>
   <string name="guest_resetting">අමුත්තා යළි සකසමින්…</string>
+  <string name="handle_invocation_prompt">කතා කිරීමට ස්වයිප් කරන්න</string>
   <string name="handle_text">හැඬලය</string>
   <string name="headset">හෙඩ්සෙට්</string>
   <string name="hearing_devices_preset_label">පෙරසැකසුම</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">දුරකථනය උණුසුම් වෙමින්</string>
   <string name="home_controls_dream_description">තිර සුරැකුමක් ලෙස ඔබේ නිවසේ පාලන වෙත ඉක්මනින් ප්‍රවේශ වන්න</string>
   <string name="home_controls_dream_label">නිවෙස් පාලන</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• අවම වශයෙන් එක් උපාංගයක් හෝ උපාංග පැනලයක් තිබේ</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Home යෙදුම කෙටිමඟක් ලෙස එක් කිරීම සඳහා, යෙදුම ස්ථාපනය කර ඇති බව සහතික කර ගන්න</string>
   <string name="hub_mode_add_widget_button_text">විජට්ටුව එක් කරන්න</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">ප්‍රගතියේ පවතී</string>
   <string name="inattentive_sleep_warning_message">උපාංගය ඉක්මනින් ක්‍රියා විරහිත වනු ඇත; එය දිගටම ක්‍රියාත්මක කර තැබීමට ඔබන්න.</string>
   <string name="inattentive_sleep_warning_title">පොරොත්තු</string>
+  <string name="incompatible_charging_learn_more">තව දැන ගන්න</string>
+  <string name="incompatible_charging_notify_des">ඔබේ දුරකථනය සෙමින් ආරෝපණය වෙමින් හෝ ආරෝපණය නොවීමට ඉඩ ඇත. වේගවත් ආරෝපණය සඳහා, නිර්දේශිත කේබලයක් සහ ඇඩප්ටරයක් භාවිතා කරන්න.</string>
+  <string name="incompatible_charging_notify_title">ආරෝපණ ආයිත්තම පරීක්ෂා කරන්න</string>
   <string name="indeterminate">අඩ වශයෙන් ලකුණු කළ</string>
   <string name="inline_done_button">නිමයි</string>
   <string name="inline_ok_button">යොදන්න</string>
   <string name="inline_turn_off_notifications">දැනුම්දීම් අක්‍රිය කරන්න</string>
   <string name="input_switch_input_language_next">මීළඟ භාෂාවට මාරු වන්න</string>
   <string name="input_switch_input_language_previous">පෙර භාෂාවට මාරු වන්න</string>
+  <string name="install_app">යෙදුම ස්ථාපනය කරන්න</string>
   <string name="install_dialer_on_work_profile_action">කාර්යාල දුරකථන යෙදුමක් ස්ථාපනය කරන්න</string>
   <string name="install_type_instant">ක්ෂණික යෙදුම</string>
   <string name="instant_apps">ක්ෂණික යෙදුම්</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">%1$s ධාවනය වෙමින්</string>
   <string name="interruption_level_none">සම්පූර්ණ නිහඬතාව</string>
   <string name="interruption_level_priority">ප්‍රමුඛතාව පමණයි</string>
-  <string name="invalid_charger_text">ඔබේ උපාංගය සමඟ පැමිණි ආරෝපකය භාවිත කරන්න</string>
-  <string name="invalid_charger_title">USB හරහා ආරෝපණය කළ නොහැකිය</string>
   <string name="issuerecord_background_processing_label">ගැටලු වාර්තාව සැකසුම් කිරීම</string>
   <string name="issuerecord_ongoing_screen_only">ගැටලුව සටහන් කිරීම</string>
   <string name="issuerecord_save_title">ගැටලු පටිගත කිරීම සුරැකිණි</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">උපාංගය අගුළු දමා ඇත
 සත්‍යාපනය අසමත් විය</string>
   <string name="keyguard_indication_charging_time">%2$s • ආරෝපණය වෙමින් • %1$sකින් සම්පූර්ණ වේ</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • නිමයි, %1$s වන විට ආරෝපිතයි</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • ආරෝපණය වෙමින් • %1$sකින් සම්පූර්ණ වේ</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • %1$s හට පෙර සම්පූර්ණයෙන් ආරෝපණ වෙයි</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • වේගයෙන් ආරෝපණය වෙමින් • %1$sකින් සම්පූර්ණ වේ</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • වේගවත් ආරෝපණය • %1$s හට පෙර සම්පූර්ණයි</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • ආරෝපණය අවසන්</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • සෙමින් ආරෝපණය වෙමින් • %1$sකින් සම්පූර්ණ වේ</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • %1$s හට පෙර සම්පූර්ණයෙන් ආරෝපණ වෙයි</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • %1$s හට පෙර සම්පූර්ණයෙන් ආරෝපණ වෙයි</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • නොරැහැන්ව ආරෝපණය වෙමින් • %1$sකින් සම්පූර්ණ වේ</string>
-  <string name="keyguard_indication_trust_unlocked">TrustAgent මඟින් අඟුලු දමා තබා ගන්න</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • %1$s හට පෙර සම්පූර්ණයෙන් ආරෝපණ වෙයි</string>
+  <string name="keyguard_indication_trust_unlocked">දීර්ඝ අගුලු හැරීම මගින් අගුලු හැර තැබේ</string>
   <string name="keyguard_missing_sim_message_short">SIM නැත</string>
   <string name="keyguard_network_locked_message">ජාලය අගුළු දමා ඇත</string>
   <string name="keyguard_permanent_disabled_sim_message_short">භාවිත කළ නොහැකි SIM.</string>
   <string name="keyguard_plugged_in">%s • ආරෝපණය වෙමින්</string>
   <string name="keyguard_plugged_in_charging_fast">%s • වේගයෙන් ආරෝපණය වෙමින්</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • වේගවත් ආරෝපණය</string>
   <string name="keyguard_plugged_in_charging_limited">%s • බැටරිය ආරක්ෂා කිරීම සඳහා ආරෝපණය රඳවා තබා ඇත</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • සෙමින් ආරෝපණය වෙමින්</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • ආරෝපණ කෙරේ</string>
   <string name="keyguard_plugged_in_dock">%s • ආරෝපණය වෙමින්</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • ආරෝපණ කෙරේ</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • ආරෝපණ ආයිත්තම පරීක්ෂා කරන්න</string>
+  <string name="keyguard_plugged_in_v2">%s • ආරෝපණ කෙරේ</string>
   <string name="keyguard_plugged_in_wireless">%s • නොරැහැන්ව ආරෝපණ කෙරේ</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • ආරෝපණ කෙරේ</string>
   <string name="keyguard_retry">නැවත උත්සාහ කිරීමට ඉහළට ස්වයිප් කරන්න</string>
   <string name="keyguard_sim_error_message_short">වලංගු නොවන කාඩ්පත.</string>
   <string name="keyguard_sim_locked_message">SIM අගුළු දමා ඇත.</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">PIN කේත නොගැළපේ.</string>
   <string name="kg_invalid_sim_pin_hint">4 සිට 8 දක්වා අංක සහිත PIN එකක් ටයිප් කරන්න.</string>
   <string name="kg_invalid_sim_puk_hint">PUK කේතය සංඛ්‍යා 8 ක් හෝ වැඩි විය යුතුය.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{SIM PIN ඇතුළු කරන්න, ඔබේ උපාංගය අගුළු හැරීමට ඔබේ වාහකය සම්බන්ධ කර ගැනීමට පෙර ඔබ සතුව # උත්සාහයක් ඉතිරිව ඇත.}one{SIM PIN ඇතුළු කරන්න. ඔබ සතුව උත්සාහයන් #ක් ඉතිරිව ඇත.}other{SIM PIN ඇතුළු කරන්න. ඔබ සතුව උත්සාහයන් #ක් ඉතිරිව ඇත.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM දැන් අබල කර ඇත. ඉදිරියට යාමට PUK කේතය ඇතුළු කරන්න. SIM ස්ථිරවම භාවිත කළ නොහැකි බවට පත් වීමට පෙර ඔබ සතුව # උත්සාහයක් ඉතිරිව ඇත. විස්තර සඳහා වාහකය සම්බන්ධ කර ගන්න.}one{SIM දැන් අබල කර ඇත. ඉදිරියට යාමට PUK කේතය ඇතුළු කරන්න. SIM ස්ථිරවම භාවිත කළ නොහැකි බවට පත් වීමට පෙර ඔබ සතුව උත්සාහයන් #ක් ඉතිරිව ඇත. විස්තර සඳහා වාහකය සම්බන්ධ කර ගන්න.}other{SIM දැන් අබල කර ඇත. ඉදිරියට යාමට PUK කේතය ඇතුළු කරන්න. SIM ස්ථිරවම භාවිත කළ නොහැකි බවට පත් වීමට පෙර ඔබ සතුව උත්සාහයන් #ක් ඉතිරිව ඇත. විස්තර සඳහා වාහකය සම්බන්ධ කර ගන්න.}}</string>
   <string name="kg_password_pin_failed">SIM PIN මෙහෙයුම අසාර්ථක විය!</string>
   <string name="kg_password_puk_failed">SIM PUK මෙහෙයුම අසාර්ථක විය!</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">"%1$s" සඳහා SIM PIN ඇතුළු කරන්න</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM අගුළු අරිමින්…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{තත්පර #කින් නැවත උත්සාහ කරන්න.}one{තත්පර #කින් නැවත උත්සාහ කරන්න.}other{තත්පර #කින් නැවත උත්සාහ කරන්න.}}</string>
-  <string name="kg_trust_agent_disabled">විශ්වාස නියෝජිතයා නොමැත</string>
+  <string name="kg_trust_agent_disabled">දිගු අගුළු හැරීම නොමැත</string>
   <string name="kg_unlock_with_password_or_fp">මුරපදය හෝ ඇඟිලි සලකුණ සමග අගුළු හරින්න</string>
   <string name="kg_unlock_with_pattern_or_fp">රටාව හෝ ඇඟිලි සලකුණ සමග අගුළු හරින්න</string>
   <string name="kg_unlock_with_pin_or_fp">PIN හෝ ඇඟිලි සලකුණ සමග අගුළු හරින්න</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">තව දැන ගන්න</string>
   <string name="log_access_confirmation_learn_more_at">%s තුළින් තව දැන ගන්න</string>
   <string name="log_access_confirmation_title">%s හට සියලු උපාංග ලොග ප්‍රවේශ වීමට ඉඩ දෙන්න ද?</string>
+  <string name="low_battery_label">බැටරි බලය අඩුයි</string>
+  <string name="low_battery_notification_text">බැටරි ආයු කාලය දිගු කිරීමට සම්මත බැටරි සුරැකුම ක්‍රියාත්මක කරන්න</string>
+  <string name="low_battery_notification_text_ebs">බැටරි ආයු කාලය දිගු කිරීමට උපරිම බැටරි සුරැකුම ක්‍රියාත්මක කරන්න</string>
+  <string name="low_battery_notification_title">%s බැටරිය ඉතිරියි</string>
   <string name="m3c_search_bar_search">සෙවීම</string>
   <string name="m3c_suggestions_available">පහත යෝජනා</string>
   <string name="magnification_close_settings_click_label">විශාලන සැකසීම් වසන්න</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">නවත්වන්න</string>
   <string name="media_output_end_session_dialog_summary">මාධ්‍ය වෙනත් උපාංගයකට ගෙන යාමට ඔබේ බෙදා ගත් සැසිය නවත්වන්න</string>
-  <string name="media_output_first_broadcast_title">විකාශනය ක්‍රියා කරන ආකාරය</string>
-  <string name="media_output_first_notify_broadcast_message">ගැළපෙන බ්ලූටූත් උපාංග සහිත ඔබ අවට සිටින පුද්ගලයින්ට ඔබ විකාශනය කරන මාධ්‍යයට සවන් දිය හැකිය</string>
   <string name="media_output_group_title_speakers_and_displays">ස්පීකර් සහ සංදර්ශක</string>
   <string name="media_output_group_title_suggested_device">යෝජිත උපාංග</string>
   <string name="media_output_label_title">%s වාදනය කරන්නේ</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">ඔබ යෙදුමක් විකාශය කරන විට, Android හට එම යෙදුමේ පෙන්වන හෝ වාදනය කරන ඕනෑම දෙයකට ප්‍රවේශය ඇත. ඒ නිසා මුරපද, ගෙවීම් විස්තර, පණිවුඩ, ඡායාරූප, සහ ශ්‍රව්‍ය සහ දෘශ්‍ය වැනි දේවල් පිළිබඳ ප්‍රවේශම් වන්න.</string>
   <string name="media_projection_sys_service_dialog_title">පටිගත කිරීම හෝ විකාශය කිරීම ආරම්භ කරන්න ද?</string>
   <string name="media_projection_sys_service_dialog_warning">මෙම කාර්යය සපයන සේවාවට තිරයේ පෙනෙන හෝ පටිගත කිරීමේ දී හෝ විකාශනය කිරීමේ දී ඔබේ උපාංගයේ වාදනය වන සියලු තොරතුරු වෙත ප්‍රවේශය ඇත. මෙයට මුරපද, ගෙවීම් විස්තර, ඡායාරූප, පණිවුඩ, සහ ඔබ වාදනය කරන ශ්‍රව්‍ය වැනි තොරතුරු ඇතුළත් වේ.</string>
-  <string name="media_projection_task_switcher_action_back">ආපසු මාරු වන්න</string>
-  <string name="media_projection_task_switcher_action_switch">ඒ වෙනුවට මෙම යෙදුම බෙදා ගන්න</string>
-  <string name="media_projection_task_switcher_text">ඔබ යෙදුම් මාරු කරන විට බෙදා ගැනීම විරාම වේ</string>
   <string name="media_seamless_other_device">වෙනත් උපාංගය</string>
   <string name="media_transfer_default_device_name">සම්බන්ධ කළ උපාංගය</string>
   <string name="media_transfer_dock_speaker_device_name">ඩොක් ස්පීකරය</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">ඉහළ විභේදනය සඳහා, දුරකථනය හරවන්න</string>
   <string name="rear_display_unfolded_bottom_sheet_title">තිර මාරු කරන්න ද?</string>
   <string name="recent_conversations">මෑත සංවාද</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">රූපයක් එවන ලදී</string>
   <string name="remove_from_settings">සැකසීම් වෙතින් ඉවත් කරන්න</string>
   <string name="remove_from_settings_prompt">සැකසීම් වෙතින් පද්ධති UI සුසරකය ඉවත් කර සහ එහි සියලු අංග භාවිතය නවත් වන්නද?</string>
   <string name="require_unlock_for_nfc">NFC භාවිත කිරීමට අගුලු හරින්න</string>
   <string name="restart_button_description">වඩා හොඳ දසුනක් සඳහා මෙම යෙදුම යළි ඇරඹීමට තට්ටු කරන්න</string>
   <string name="retry_face">මුහුණු සත්‍යාපනය නැවත උත්සාහ කරන්න</string>
+  <string name="reverse_charging_device_name_text">වෙනත් Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s ආරෝපණය ලබා දෙමින් (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">බැටරිය බෙදා ගැනීම ක්‍රියාත්මකයි</string>
+  <string name="reverse_charging_title">බැටරි බලය බෙදා ගැනීම</string>
   <string name="right_icon">දකුණු නිරූපකය</string>
   <string name="right_keycode">දකුණු යතුරු කේතය</string>
   <string name="right_nav_bar_button_type">අමතර දකුණු බොත්තම් වර්ගය</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">බැටරි හා දත්ත භාවිතය පිළිබඳව විස්තර සඳහා තට්ටු කරන්න</string>
   <string name="running_foreground_services_title">පසුබිමින් ධාවනය වන යෙදුම්</string>
-  <string name="satellite_connected_carrier_text">චන්ද්‍රිකා SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel චන්‍ද්‍රිකා SOS</string>
   <string name="save">සුරකින්න</string>
+  <string name="saver_confirmation_dialog_dismiss_text">අවලංගු කරන්න</string>
+  <string name="saver_confirmation_dialog_subtitle">භාවිතා කිරීමට ප්‍රකාරය තෝරන්න</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">ඉහත ලැයිස්තුගත කර ඇති සියලුම වෙනස්කම් ඇතුළත් වේ. අත්‍යවශ්‍ය නොවන යෙදුම් සහ ඒවායේ දැනුම්දීම් ද විරාම කරයි.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">දෘශ්‍ය ප්‍රයෝග සහ පසුබිම් ක්‍රියාකාරකම් සීමා කරයි. දැනටමත් ක්‍රියාත්මක නොවේ නම්, අඳුරු තේමාව ක්‍රියාත්මක කරයි.</string>
+  <string name="saver_confirmation_dialog_title">බැටරි සුරැකුම වෙත සාදරයෙන් පිළිගනිමු</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">උපරිම බැටරි සුරැකුම</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">සම්මත බැටරි සුරැකුම</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">උපාංග ප්‍රතිපත්තිය මගින් තිර ග්‍රහණය කිරීම අබල කර ඇත</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">ඔබේ IT පරිපාලක විසින් අවහිර කර ඇත</string>
   <string name="screen_pinning_can_open_other_apps">ඇමිණූ යෙදුම වෙනත් යෙදුම් විවෘත කළ හැකිය.</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">මෙම යෙදුම ගැලවීමට, දළ විශ්ලේෂණය බොත්තම් ස්පර්ශ කර අල්ලා ගෙන සිටින්න</string>
   <string name="screen_pinning_toast_gesture_nav">මෙම යෙදුම ගැලවීමට, ඉහළට ස්වයිප් කර අල්ලාගෙන සිටින්න</string>
   <string name="screen_pinning_toast_recents_invisible">මෙම යෙදුම ගැලවීමට, මුල් පිටුව බොත්තම් ස්පර්ශ කර අල්ලා ගෙන සිටින්න</string>
+  <string name="screen_protector_absent_message">තිර ආරක්ෂක ප්‍රකාරය අබල කිරීම තිර ආරක්ෂකයක් භාවිතා නොකරන විට ස්පර්ශය වැඩි දියුණු කරයි.</string>
+  <string name="screen_protector_disable_notification">දැනුම්දීම අබල කරන්න</string>
+  <string name="screen_protector_go_to_settings">සැකසීම් වෙත යන්න</string>
+  <string name="screen_protector_got_it">තේරුණා</string>
+  <string name="screen_protector_mode_title">තිර ආරක්ෂක ප්‍රකාරය</string>
+  <string name="screen_protector_present_message">තිර ආරක්ෂක ප්‍රකාරය සබල කිරීම තිර ආරක්ෂණයක් භාවිතා කරන විට ස්පර්ශය වැඩි දියුණු කරයි.</string>
   <string name="screen_share_permission_app_selector_title">යෙදුමක් බෙදා ගන්න හෝ පටිගත කරන්න</string>
   <string name="screen_share_permission_dialog_option_entire_screen">සම්පූර්ණ තිරය</string>
   <string name="screen_share_permission_dialog_option_single_app">තනි යෙදුමක්</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">කාර්යාල පැතිකඩ වෙත තිර රුව සුරකිමින්…</string>
   <string name="screenshot_scroll_label">තව ග්‍රහණය කරන්න</string>
   <string name="screenshot_share_description">තිර රුව බෙදා ගන්න</string>
-  <string name="screenshot_share_label">බෙදා ගන්න</string>
   <string name="screenshot_text">තිර රුව</string>
   <string name="screenshot_top_boundary_pct">ඉහළ සීමාව සියයට %1$d</string>
+  <string name="screenshot_view_description">තිර රුව බලන්න</string>
   <string name="screenshot_work_profile_notification">කාර්යාල පැතිකඩේ %1$s තුළ සුරකින ලදි</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">ඇඟිලි සලකුණු සංවේදකය බල බොත්තම මත ඇත. එය දුරකථනයෙහි කෙළවර ඇති ඉහළ හඬ පරිමා බොත්තම අසල ඇති පැතලි බොත්තමයි.</string>
   <string name="see_all_bluetooth_devices">සියල්ල බලන්න</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">සැකසීම් තුළ පෙරනිමි සටහන් යෙදුම සකසන්න</string>
   <string name="settings_label">සැකසීම්</string>
   <string name="settingslib_learn_more_text">තව දැන ගන්න</string>
+  <string name="severe_battery_notification_switch_text">උපරිම බැටරි ඉතිරි කරන්නා වෙත මාරු වෙනවා ද? 
+
+මෙය සියලු අත්‍යවශ්‍ය නොවන යෙදුම් සහ ඒවායේ දැනුම්දීම් විරාම කරයි</string>
+  <string name="severe_battery_notification_text">උපරිම බැටරි ඉතිරි කරන්නා සක්‍රීය කරන්න. මෙය සියලු අත්‍යවශ්‍ය නොවන යෙදුම් විරාම කරයි</string>
+  <string name="severe_battery_notification_title">%s බැටරිය ඉතිරියි</string>
+  <string name="severe_low_battery_dialog_switch_action_text">මාරු කරන්න</string>
   <string name="share_to_app_stop_dialog_button">බෙදා ගැනීම නවත්වන්න</string>
   <string name="share_to_app_stop_dialog_message_specific_app">ඔබ &lt;b&gt;%1$s&lt;/b&gt; බෙදා ගැනීම නතර කරනු ඇත</string>
   <string name="share_to_app_stop_dialog_title">තිරය ​​බෙදා ගැනීම නවත්වන්න ද?</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- එයට %1$s වෙතින් තොරතුරු කියවිය හැකිය</string>
   <string name="slice_permission_text_2">- එයට %1$s ඇතුළත ක්‍රියාමාර්ග ගත හැකිය</string>
   <string name="slice_permission_title">%1$s හට කොටස් %2$sක් පෙන්වීමට ඉඩ දෙන්නද?</string>
+  <string name="smartspace_content_desc">එක් බැල්මකින්</string>
+  <string name="smartspace_flight_qr_code">QR කේතය</string>
+  <string name="smartspace_role_desc">බලන්න</string>
   <string name="snoozeHourOptions">{count,plural, =1{පැය #ක්}=2{පැය #ක්}one{පැය #ක්}other{පැය #ක්}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{මිනිත්තු #ක්}one{මිනිත්තු #ක්}other{මිනිත්තු #ක්}}</string>
   <string name="snooze_undo">පසුගමනය කරන්න</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">මන්දගාමී</string>
   <string name="speed_label_very_fast">ඉතා වේගවත්</string>
   <string name="split_screen_text">බෙදුම් තිරය</string>
+  <string name="squeeze_invocation_prompt">කථා කිරීමට මිරිකන්න</string>
+  <string name="standard_battery_saver_text">සම්මත</string>
   <string name="start_dreams">තිර සුරැකුම</string>
   <string name="state_empty">හිස්</string>
   <string name="state_off">ක්‍රියාවිරහිතයි</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">ටැබය</string>
   <string name="tap_a_network_to_connect">සම්බන්ධ වීමට ජාලයක් තට්ටු කරන්න</string>
   <string name="tap_again">නැවත තට්ටු කරන්න</string>
+  <string name="temp_defender_notify_des">ඔබේ දුරකථනය සාමාන්‍ය උෂ්ණත්වයට පැමිණි විට ආරෝපණය නැවත ආරම්භ වනු ඇත</string>
+  <string name="temp_defender_notify_title">බැටරිය ආරක්ෂා කිරීම සඳහා ආරෝපණය රඳවා තබා ඇත</string>
   <string name="template_percent">සියයට %1$d.</string>
   <string name="thermal">තාප</string>
   <string name="thermal_shutdown_dialog_help_text">රැකවරණ පියවර බලන්න</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">ඔබේ ටැබ්ලටය අගුළු හැරීමෙන් තොරව ඔබේ ප්‍රියතම යෙදුම් විජට් වෙත ඉක්මන් ප්‍රවේශය ලබා ගන්න.</string>
   <string name="title_usb_accessory">USB මෙවලම</string>
   <string name="to_switch_networks_disconnect_ethernet">ජාල මාරු කිරීමට, ඊතර්නෙට් විසන්ධි කරන්න</string>
+  <string name="too_hot_label">Pixel උණුසුම් වැඩිය</string>
   <string name="touch_filtered_warning">යෙදුමක් අවසර ඉල්ලීමක් කරන නිසා, සැකසීම්වලට ඔබගේ ප්‍රතිචාරය සත්‍යාපනය කළ නොහැකිය.</string>
   <string name="touchpad_tutorial_action_key_button">ක්‍රියා යතුර</string>
   <string name="touchpad_tutorial_back_gesture_button">ආපසු අභිනය</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">මෙනුව</string>
   <string name="tuner_minus">ඍණ</string>
   <string name="tuner_other_apps">වෙනත් යෙදුම්</string>
+  <string name="tuner_persistent_warning">මෙම පර්යේෂණාත්මක අංග ඉදිරි නිකුත් වීම් වල වෙනස් වීමට, වැඩ නොකිරීමට, හෝ නැතිවීමට හැක. ප්‍රවේශමෙන් ඉදිරියට යන්න.</string>
   <string name="tuner_plus">ධන</string>
   <string name="tuner_right">දකුණු</string>
   <string name="tuner_time">වේලාව</string>
+  <string name="tuner_warning">පද්ධති UI සුසරකය ඔබට Android පරිශීලක අතුරු මුහුණත වෙනස් කිරීමට හෝ අභිරුචිකරණය කිරීමට අමතර ක්‍රම ලබා දේ. මෙම පර්යේෂණාත්මක අංග ඉදිරි නිකුත් වීම් වල වෙනස් වීමට, වැඩ නොකිරීමට, හෝ නැතිවීමට හැක. ප්‍රවේශමෙන් ඉදිරියට යන්න.</string>
+  <string name="tuner_warning_title">සමහරක් දේවල් වලට විනෝදයි, නමුත් සියල්ලටම නොවේ</string>
   <string name="turn_off_airplane_mode">ගුවන් යානා ප්‍රකාරය ක්‍රියාවිරහිත කරන්න</string>
   <string name="turn_on_bluetooth">බ්ලූටූත් භාවිතා කරන්න</string>
   <string name="turn_on_bluetooth_auto_info_disabled">ඉක්මන් බෙදා ගැනීම සහ මගේ උපාංගය සෙවීම වැනි විශේෂාංග බ්ලූටූත් භාවිත කරයි</string>
   <string name="turn_on_bluetooth_auto_info_enabled">බ්ලූටූත් හෙට උදේ සක්‍රීය වෙයි</string>
   <string name="turn_on_bluetooth_auto_tomorrow">හෙට ස්වයංක්‍රීයව ක්‍රියාත්මක කරන්න</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">රූපවාහිනී පෙරනිමිය</string>
   <string name="two_weeks_timestamp">සති 2කට පෙර</string>
   <string name="unknown">නොදනී</string>
   <string name="unlock_to_see_notif_text">පැරණි දැනුම්දීම් බැලීමට අගුළු හරින්න</string>
@@ -1552,7 +1624,9 @@
   <string name="volume_odi_captions_hint_enable">සබල කරන්න</string>
   <string name="volume_odi_captions_tip">මාධ්‍ය ස්වයංක්‍රීයව සිරස්තල</string>
   <string name="volume_panel_captioning_title">සජීවී සිරස්තල</string>
+  <string name="volume_panel_clear_calling_title">පැහැදිලි ඇමතීම</string>
   <string name="volume_panel_collapsed_sliders">හඬ ස්ලයිඩර හකුළා ඇත</string>
+  <string name="volume_panel_device_settings_title">උපාංග සැකසීම්</string>
   <string name="volume_panel_dialog_settings_button">සැකසීම්</string>
   <string name="volume_panel_enter_media_output_settings">ප්‍රතිදාන සැකසීම් ඇතුල් කරන්න</string>
   <string name="volume_panel_expanded_sliders">හඬ ස්ලයිඩර දිගහැර ඇත</string>
@@ -1667,10 +1741,13 @@ Wi‑Fi ලිපිනය (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">නොදනී</string>
   <string name="wifitrackerlib_wifi_unmetered_label">මනුගත නොකළ</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi දැනට ස්වයංක්‍රියව සබැඳි නොවනු ඇත</string>
+  <string name="wireless_charging_label">රැහැන් රහිතව ආරෝපණය වෙමින්</string>
+  <string name="wireless_charging_notification_text">රැහැන් රහිත ආරෝපණය රැහැන්ගත ආරෝපණයට වඩා වැඩි ශක්තියක් භාවිතා කළ හැක. විදුලිය සහ කාලය ඉතිරි කර ගැනීම සඳහා, රැහැන්ගත චාජරයකට මාරු වීමට උත්සාහ කරන්න.</string>
+  <string name="wireless_charging_notification_title">රැහැන් රහිත ආරෝපණය</string>
   <string name="work_challenge_emergency_button_text">හදිසි අවස්ථාව</string>
   <string name="work_mode_off_title">කාර්ය යෙදුම් විරාම නොකරන්න ද?</string>
   <string name="work_mode_turn_on">විරාම නොකරන්න</string>
-  <string name="zen_alarm_warning">ඔබට ඔබේ ඊළඟ එලාමය %1$s නොඇසෙනු ඇත</string>
+  <string name="zen_alarm_warning">ඔබට ඔබේ ඊළඟ එලාමය %1$s තෙක් නොඇසෙනු ඇත</string>
   <string name="zen_alarm_warning_indef">ඔබට ඔබේ ඊළඟ එලාමය %1$s ඔබ එයට පෙර මෙය ක්‍රියාවිරහිත නොකළේ නම් නොඇසෙනු ඇත</string>
   <string name="zen_mode_enable_dialog_turn_on">ක්‍රියාත්මක කරන්න</string>
   <string name="zen_mode_settings_turn_on_dialog_title">බාධා නොකරන්න ක්‍රියාත්මක කරන්න</string>

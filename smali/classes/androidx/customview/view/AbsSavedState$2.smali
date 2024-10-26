@@ -1,6 +1,6 @@
 .class public final Landroidx/customview/view/AbsSavedState$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/os/Parcelable$ClassLoaderCreator;
@@ -28,7 +28,7 @@
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string p1, "superState must be null"
+    const-string/jumbo p1, "superState must be null"
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
@@ -54,7 +54,7 @@
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string p1, "superState must be null"
+    const-string/jumbo p1, "superState must be null"
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

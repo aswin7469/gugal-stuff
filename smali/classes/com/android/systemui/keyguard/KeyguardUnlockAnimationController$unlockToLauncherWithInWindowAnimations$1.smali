@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController$unlockToLauncherWithInWindowAnimations$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -46,135 +46,153 @@
     check-cast v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
     .line 10
-    iget-boolean v1, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mShowing:Z
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->isShowingAndNotOccluded()Z
 
     .line 12
-    const/4 v2, 0x0
-
-    .line 14
-    const/4 v3, 0x1
+    move-result v0
 
     .line 15
-    if-eqz v1, :cond_0
-
-    .line 16
-    iget-boolean v0, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mOccluded:Z
-
-    .line 18
-    if-nez v0, :cond_0
-
-    .line 20
-    move v0, v3
-
-    .line 22
-    goto :goto_0
-
-    .line 23
-    :cond_0
-    move v0, v2
-
-    .line 24
-    :goto_0
     const-string v1, "KeyguardUnlock"
 
-    .line 25
-    if-eqz v0, :cond_1
+    .line 16
+    if-eqz v0, :cond_0
 
-    .line 27
+    .line 18
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController$unlockToLauncherWithInWindowAnimations$1;->this$0:Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;
 
-    .line 29
+    .line 20
     iget-object v0, v0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 31
+    .line 22
     check-cast v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 33
+    .line 24
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mKeyguardGoingAway:Z
 
-    .line 35
-    if-nez v0, :cond_1
+    .line 26
+    if-nez v0, :cond_0
 
-    .line 37
+    .line 28
     const-string p0, "Finish keyguard exit animation delayed Runnable ran, but we are showing and not going away."
 
-    .line 39
+    .line 30
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
+    .line 32
     return-void
 
-    .line 44
-    :cond_1
+    .line 35
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController$unlockToLauncherWithInWindowAnimations$1;->this$0:Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;
 
-    .line 45
-    iget-object v4, v0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->wallpaperTargets:[Landroid/view/RemoteAnimationTarget;
+    .line 36
+    iget-object v2, v0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->wallpaperTargets:[Landroid/view/RemoteAnimationTarget;
 
-    .line 47
-    if-eqz v4, :cond_3
+    .line 38
+    if-eqz v2, :cond_3
 
-    .line 49
-    array-length v4, v4
+    .line 40
+    array-length v2, v2
 
-    .line 51
-    if-nez v4, :cond_2
+    .line 42
+    const/4 v3, 0x1
 
-    .line 52
+    .line 43
+    if-nez v2, :cond_1
+
+    .line 44
     move v2, v3
 
-    .line 54
-    :cond_2
+    .line 46
+    goto :goto_0
+
+    .line 47
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 48
+    :goto_0
     xor-int/2addr v2, v3
 
-    .line 55
+    .line 49
     if-ne v2, v3, :cond_3
 
-    .line 56
+    .line 50
     const-string v2, "fadeInWallpaper"
 
-    .line 58
+    .line 52
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
-    iget-object v1, v0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->wallpaperCannedUnlockAnimator:Landroid/animation/ValueAnimator;
+    .line 54
+    iget-object v2, v0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->wallpaperCannedUnlockAnimator:Landroid/animation/ValueAnimator;
 
-    .line 63
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
+    .line 57
+    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 65
+    .line 59
     iget-object v0, v0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->wallpaperCannedUnlockAnimator:Landroid/animation/ValueAnimator;
 
-    .line 68
+    .line 62
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 70
+    .line 64
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController$unlockToLauncherWithInWindowAnimations$1;->this$0:Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;
 
+    .line 67
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+
+    .line 69
+    check-cast v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
+
+    .line 71
+    iget-boolean v0, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mShowing:Z
+
     .line 73
-    invoke-virtual {p0}, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->hideKeyguardViewAfterRemoteAnimation()V
+    if-eqz v0, :cond_2
 
     .line 75
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->keyguardViewController:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
+
+    .line 77
+    iget-wide v1, p0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->surfaceBehindRemoteAnimationStartTime:J
+
+    .line 79
+    const-wide/16 v3, 0x0
+
+    .line 81
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->hide(JJ)V
+
+    .line 83
     goto :goto_1
 
-    .line 78
+    .line 86
+    :cond_2
+    const-string p0, "#hideKeyguardViewAfterRemoteAnimation called when keyguard view is not showing. Ignoring..."
+
+    .line 87
+    invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 89
+    goto :goto_1
+
+    .line 92
     :cond_3
     iget-object p0, v0, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->keyguardViewMediator:Ldagger/Lazy;
 
-    .line 79
+    .line 93
     invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 81
+    .line 95
     move-result-object p0
 
-    .line 84
+    .line 98
     check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 85
+    .line 99
     invoke-virtual {p0}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->exitKeyguardAndFinishSurfaceBehindRemoteAnimation()V
 
-    .line 87
+    .line 101
     :goto_1
     return-void
-    .line 90
+    .line 104
 .end method

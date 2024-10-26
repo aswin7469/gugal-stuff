@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/common/split/DividerRoundedCorner;
 .super Landroid/view/View;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -44,7 +44,7 @@
     move-result-object p1
 
     .line 15
-    const p2, 0x7f0709a1    # @dimen/split_divider_bar_width '10.0dp'
+    const p2, 0x7f0709f9    # @dimen/split_divider_bar_width '10.0dp'
 
     .line 16
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -71,7 +71,7 @@
     move-result-object p0
 
     .line 35
-    const p2, 0x7f0604ef    # @color/split_divider_background '@color/taskbar_background_dark'
+    const p2, 0x7f0604fd    # @color/split_divider_background '@color/taskbar_background_dark'
 
     .line 36
     const/4 v0, 0x0

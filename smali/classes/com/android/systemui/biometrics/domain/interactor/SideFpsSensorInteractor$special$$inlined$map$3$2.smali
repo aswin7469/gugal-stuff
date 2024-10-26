@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/domain/interactor/SideFpsSensorInteractor$special$$inlined$map$3$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -148,7 +148,7 @@
     if-eqz p1, :cond_4
 
     .line 69
-    const p2, 0x7f0c0037    # @integer/config_restToUnlockDurationScreenOff '500'
+    const p2, 0x7f0b003c    # @integer/config_restToUnlockDurationScreenOff '500'
 
     .line 71
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -186,7 +186,7 @@
     if-eqz p1, :cond_4
 
     .line 92
-    const p2, 0x7f0c0036    # @integer/config_restToUnlockDurationDefault '300'
+    const p2, 0x7f0b003b    # @integer/config_restToUnlockDurationDefault '300'
 
     .line 94
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I

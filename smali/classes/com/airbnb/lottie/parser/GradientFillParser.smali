@@ -1,6 +1,6 @@
 .class public abstract Lcom/airbnb/lottie/parser/GradientFillParser;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -29,51 +29,51 @@
     const-string v2, "o"
 
     .line 10
-    const-string v3, "t"
+    const-string/jumbo v3, "t"
 
     .line 12
     const-string v4, "s"
 
-    .line 14
+    .line 15
     const-string v5, "e"
 
-    .line 16
+    .line 17
     filled-new-array/range {v0 .. v7}, [Ljava/lang/String;
 
-    .line 18
+    .line 19
     move-result-object v0
-
-    .line 21
-    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     .line 22
-    move-result-object v0
-
-    .line 25
-    sput-object v0, Lcom/airbnb/lottie/parser/GradientFillParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
-
-    .line 26
-    const-string v0, "p"
-
-    .line 28
-    const-string v1, "k"
-
-    .line 30
-    filled-new-array {v0, v1}, [Ljava/lang/String;
-
-    .line 32
-    move-result-object v0
-
-    .line 35
     invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
-    .line 36
+    .line 23
     move-result-object v0
 
-    .line 39
-    sput-object v0, Lcom/airbnb/lottie/parser/GradientFillParser;->GRADIENT_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+    .line 26
+    sput-object v0, Lcom/airbnb/lottie/parser/GradientFillParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+
+    .line 27
+    const-string v0, "p"
+
+    .line 29
+    const-string v1, "k"
+
+    .line 31
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    .line 33
+    move-result-object v0
+
+    .line 36
+    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+
+    .line 37
+    move-result-object v0
 
     .line 40
+    sput-object v0, Lcom/airbnb/lottie/parser/GradientFillParser;->GRADIENT_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+
+    .line 41
     return-void
-    .line 42
+    .line 43
 .end method

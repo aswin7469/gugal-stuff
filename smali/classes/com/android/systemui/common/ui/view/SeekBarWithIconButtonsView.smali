@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/common/ui/view/SeekBarWithIconButtonsView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -86,11 +86,11 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e0237    # @layout/seekbar_with_icon_buttons 'res/layout/seekbar_with_icon_buttons.xml'
+    const v4, 0x7f0d0247    # @layout/seekbar_with_icon_buttons 'res/layout/seekbar_with_icon_buttons.xml'
 
     invoke-virtual {v3, v4, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    const v3, 0x7f0b0386    # @id/icon_start_frame
+    const v3, 0x7f0a03a6    # @id/icon_start_frame
 
     .line 10
     invoke-virtual {p0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -99,7 +99,7 @@
 
     check-cast v3, Landroid/view/ViewGroup;
 
-    const v4, 0x7f0b037e    # @id/icon_end_frame
+    const v4, 0x7f0a039e    # @id/icon_end_frame
 
     .line 11
     invoke-virtual {p0, v4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -108,7 +108,7 @@
 
     check-cast v4, Landroid/view/ViewGroup;
 
-    const v5, 0x7f0b0385    # @id/icon_start
+    const v5, 0x7f0a03a5    # @id/icon_start
 
     .line 12
     invoke-virtual {p0, v5}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -119,7 +119,7 @@
 
     iput-object v5, p0, Lcom/android/systemui/common/ui/view/SeekBarWithIconButtonsView;->mIconStart:Landroid/widget/ImageView;
 
-    const v5, 0x7f0b037d    # @id/icon_end
+    const v5, 0x7f0a039d    # @id/icon_end
 
     .line 13
     invoke-virtual {p0, v5}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -130,7 +130,7 @@
 
     iput-object v5, p0, Lcom/android/systemui/common/ui/view/SeekBarWithIconButtonsView;->mIconEnd:Landroid/widget/ImageView;
 
-    const v5, 0x7f0b06e7    # @id/seekbar
+    const v5, 0x7f0a0710    # @id/seekbar
 
     .line 14
     invoke-virtual {p0, v5}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -83,57 +83,54 @@
     iput-object v2, v0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mLogger:Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptLogger;
 
     .line 23
-    iput-object v1, v0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mGlobalSettings:Lcom/android/systemui/util/settings/GlobalSettings;
+    move-object v2, p11
 
     .line 25
+    iput-object v2, v0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
+
+    .line 26
+    iput-object v1, v0, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;->mGlobalSettings:Lcom/android/systemui/util/settings/GlobalSettings;
+
+    .line 28
     new-instance v2, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl$1;
 
-    .line 27
+    .line 30
     move-object v3, p8
 
-    .line 29
+    .line 32
     invoke-direct {v2, p0, p8}, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl$1;-><init>(Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl;Landroid/os/Handler;)V
 
-    .line 30
-    move-object v0, v1
-
     .line 33
-    check-cast v0, Lcom/android/systemui/util/settings/GlobalSettingsImpl;
-
-    .line 34
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 36
     const-string v0, "heads_up_notifications_enabled"
 
-    .line 39
+    .line 36
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    .line 38
+    move-result-object v0
 
     .line 41
-    move-result-object v0
-
-    .line 44
     const/4 v3, 0x1
 
-    .line 45
+    .line 42
     invoke-interface {v1, v0, v3, v2}, Lcom/android/systemui/util/settings/SettingsProxy;->registerContentObserverSync(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 46
+    .line 43
     const-string v0, "ticker_gets_heads_up"
 
-    .line 49
+    .line 46
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 51
+    .line 48
     move-result-object v0
 
-    .line 54
+    .line 51
     invoke-interface {v1, v0, v3, v2}, Lcom/android/systemui/util/settings/SettingsProxy;->registerContentObserverSync(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 55
+    .line 52
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/notification/interruption/NotificationInterruptStateProviderImpl$1;->onChange(Z)V
 
-    .line 58
+    .line 55
     return-void
-    .line 61
+    .line 58
 .end method

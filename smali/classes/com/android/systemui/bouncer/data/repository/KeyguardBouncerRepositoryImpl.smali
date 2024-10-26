@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -52,8 +52,6 @@
 
 .field public final keyguardPosition:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-.field public lastAlternateBouncerVisibleTime:J
-
 .field public final lastShownSecurityMode:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
 .field public final panelExpansionAmount:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
@@ -77,7 +75,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/systemui/util/time/SystemClock;Lkotlinx/coroutines/CoroutineScope;Lcom/android/systemui/log/table/TableLogBuffer;)V
-    .locals 19
+    .locals 18
 
     .line 1
     move-object/from16 v0, p0
@@ -392,319 +390,307 @@
     iput-object v15, v0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->alternateBouncerVisible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 220
-    move-object/from16 v17, v15
-
-    .line 222
-    const-wide/16 v14, -0x1
-
-    .line 224
-    iput-wide v14, v0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->lastAlternateBouncerVisibleTime:J
-
-    .line 226
     invoke-static {v3}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
 
+    .line 222
+    move-result-object v0
+
+    .line 225
+    new-instance v3, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 226
+    invoke-direct {v3, v0}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
+
     .line 228
-    move-result-object v3
-
-    .line 231
-    iput-object v3, v0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->_alternateBouncerUIAvailable:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 232
-    new-instance v14, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 234
-    invoke-direct {v14, v3}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
-
-    .line 236
-    iput-object v14, v0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->alternateBouncerUIAvailable:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 239
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
-    .line 241
+    .line 231
     if-nez v0, :cond_0
 
-    .line 243
+    .line 233
     goto/16 :goto_0
 
-    .line 245
+    .line 235
     :cond_0
     const-string v0, "PrimaryBouncerShow"
 
-    .line 247
-    const-string v3, ""
+    .line 237
+    const-string v14, ""
 
-    .line 249
+    .line 239
+    move-object/from16 v17, v15
+
+    .line 241
     const/4 v15, 0x0
 
-    .line 251
-    invoke-static {v5, v2, v3, v0, v15}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
+    .line 243
+    invoke-static {v5, v2, v14, v0, v15}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
 
-    .line 252
+    .line 244
     move-result-object v0
 
-    .line 255
+    .line 247
     new-instance v5, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$1;
 
-    .line 256
+    .line 248
     const/4 v15, 0x2
 
-    .line 258
-    move-object/from16 v18, v14
+    .line 250
+    move-object/from16 p0, v3
 
-    .line 259
-    const/4 v14, 0x0
+    .line 251
+    const/4 v3, 0x0
 
-    .line 261
-    invoke-direct {v5, v15, v14}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 253
+    invoke-direct {v5, v15, v3}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 262
-    new-instance v14, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
+    .line 254
+    new-instance v3, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 265
+    .line 257
     const/4 v15, 0x0
 
-    .line 267
-    invoke-direct {v14, v0, v5, v15}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
+    .line 259
+    invoke-direct {v3, v0, v5, v15}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 268
-    invoke-static {v14, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
+    .line 260
+    invoke-static {v3, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 271
+    .line 263
     const-string v0, "PrimaryBouncerShowingSoon"
 
-    .line 274
-    const/4 v5, 0x0
+    .line 266
+    const/4 v3, 0x0
 
-    .line 276
-    invoke-static {v6, v2, v3, v0, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
+    .line 268
+    invoke-static {v6, v2, v14, v0, v3}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
 
-    .line 277
+    .line 269
     move-result-object v0
 
-    .line 280
+    .line 272
     invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 281
+    .line 273
     const-string v0, "PrimaryBouncerStartingToHide"
 
-    .line 284
-    invoke-static {v7, v2, v3, v0, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
+    .line 276
+    invoke-static {v7, v2, v14, v0, v3}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
 
-    .line 286
+    .line 278
     move-result-object v0
 
-    .line 289
+    .line 281
     invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 290
+    .line 282
     new-instance v0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;
 
-    .line 293
-    const/4 v6, 0x0
-
-    .line 295
-    invoke-direct {v0, v9, v6}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
-
-    .line 296
-    const-string v6, "PrimaryBouncerStartingDisappearAnimation"
-
-    .line 299
-    invoke-static {v0, v2, v3, v6, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
-
-    .line 301
-    move-result-object v0
-
-    .line 304
-    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 305
-    const-string v0, "PrimaryBouncerScrimmed"
-
-    .line 308
-    invoke-static {v10, v2, v3, v0, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
-
-    .line 310
-    move-result-object v0
-
-    .line 313
-    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 314
-    new-instance v0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;
-
-    .line 317
-    const/4 v5, 0x1
-
-    .line 319
-    invoke-direct {v0, v11, v5}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
-
-    .line 320
-    const-string v5, "PanelExpansionAmountMillis"
-
-    .line 323
-    const/4 v6, -0x1
-
-    .line 325
-    invoke-static {v0, v2, v3, v5, v6}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;I)Lkotlinx/coroutines/flow/SafeFlow;
-
-    .line 326
-    move-result-object v0
-
-    .line 329
-    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 330
-    new-instance v0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;
-
-    .line 333
-    invoke-direct {v0, v12}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
-
-    .line 335
-    new-instance v5, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;
-
-    .line 338
-    const/4 v7, 0x2
-
-    .line 340
-    invoke-direct {v5, v0, v7}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
-
-    .line 341
-    const-string v0, "KeyguardPosition"
-
-    .line 344
-    invoke-static {v5, v2, v3, v0, v6}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;I)Lkotlinx/coroutines/flow/SafeFlow;
-
-    .line 346
-    move-result-object v0
-
-    .line 349
-    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 350
-    new-instance v0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;
-
-    .line 353
-    invoke-direct {v0, v13}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
-
-    .line 355
-    const-string v5, "IsBackButtonEnabled"
-
-    .line 358
-    const/4 v6, 0x0
-
-    .line 360
-    invoke-static {v0, v2, v3, v5, v6}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
-
-    .line 361
-    move-result-object v0
-
-    .line 364
-    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 365
-    new-instance v0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;
-
-    .line 368
-    const/4 v5, 0x3
-
-    .line 370
-    invoke-direct {v0, v4, v5}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
-
-    .line 371
-    const-string v4, "ShowMessage"
-
-    .line 374
+    .line 285
     const/4 v5, 0x0
 
-    .line 376
-    invoke-static {v0, v2, v4, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;)Lkotlinx/coroutines/flow/SafeFlow;
+    .line 287
+    invoke-direct {v0, v9, v5}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 377
+    .line 288
+    const-string v5, "PrimaryBouncerStartingDisappearAnimation"
+
+    .line 291
+    invoke-static {v0, v2, v14, v5, v3}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
+
+    .line 293
     move-result-object v0
 
-    .line 380
+    .line 296
     invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 381
-    const-string v0, "ResourceUpdateRequests"
+    .line 297
+    const-string v0, "PrimaryBouncerScrimmed"
 
-    .line 384
-    invoke-static {v8, v2, v3, v0, v6}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
+    .line 300
+    invoke-static {v10, v2, v14, v0, v3}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
 
-    .line 386
+    .line 302
     move-result-object v0
 
-    .line 389
+    .line 305
     invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 390
-    const-string v0, "IsAlternateBouncerUIAvailable"
-
-    .line 393
-    move-object/from16 v4, v18
-
-    .line 395
-    invoke-static {v4, v2, v3, v0, v6}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
-
-    .line 397
-    move-result-object v0
-
-    .line 400
-    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 401
-    const-string v0, "AlternateBouncerVisible"
-
-    .line 404
-    move-object/from16 v4, v17
-
-    .line 406
-    invoke-static {v4, v2, v3, v0, v6}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
-
-    .line 408
-    move-result-object v0
-
-    .line 411
-    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 412
+    .line 306
     new-instance v0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;
 
-    .line 415
-    const/4 v3, 0x4
+    .line 309
+    const/4 v3, 0x1
 
-    .line 417
-    move-object/from16 v4, v16
+    .line 311
+    invoke-direct {v0, v11, v3}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 418
-    invoke-direct {v0, v4, v3}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    .line 312
+    const-string v3, "PanelExpansionAmountMillis"
 
-    .line 420
-    const-string v3, "lastShownSecurityMode"
+    .line 315
+    const/4 v5, -0x1
 
-    .line 423
-    const/4 v4, 0x0
+    .line 317
+    invoke-static {v0, v2, v14, v3, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;I)Lkotlinx/coroutines/flow/SafeFlow;
 
-    .line 425
-    invoke-static {v0, v2, v3, v4}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;)Lkotlinx/coroutines/flow/SafeFlow;
-
-    .line 426
+    .line 318
     move-result-object v0
 
-    .line 429
+    .line 321
     invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 430
+    .line 322
+    new-instance v0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;
+
+    .line 325
+    invoke-direct {v0, v12}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
+
+    .line 327
+    new-instance v3, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;
+
+    .line 330
+    const/4 v6, 0x2
+
+    .line 332
+    invoke-direct {v3, v0, v6}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+
+    .line 333
+    const-string v0, "KeyguardPosition"
+
+    .line 336
+    invoke-static {v3, v2, v14, v0, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;I)Lkotlinx/coroutines/flow/SafeFlow;
+
+    .line 338
+    move-result-object v0
+
+    .line 341
+    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
+
+    .line 342
+    new-instance v0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;
+
+    .line 345
+    invoke-direct {v0, v13}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
+
+    .line 347
+    const-string v3, "IsBackButtonEnabled"
+
+    .line 350
+    const/4 v5, 0x0
+
+    .line 352
+    invoke-static {v0, v2, v14, v3, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
+
+    .line 353
+    move-result-object v0
+
+    .line 356
+    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
+
+    .line 357
+    new-instance v0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;
+
+    .line 360
+    const/4 v3, 0x3
+
+    .line 362
+    invoke-direct {v0, v4, v3}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+
+    .line 363
+    const-string v3, "ShowMessage"
+
+    .line 366
+    const/4 v4, 0x0
+
+    .line 368
+    invoke-static {v0, v2, v3, v4}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;)Lkotlinx/coroutines/flow/SafeFlow;
+
+    .line 369
+    move-result-object v0
+
+    .line 372
+    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
+
+    .line 373
+    const-string v0, "ResourceUpdateRequests"
+
+    .line 376
+    invoke-static {v8, v2, v14, v0, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
+
+    .line 378
+    move-result-object v0
+
+    .line 381
+    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
+
+    .line 382
+    const-string v0, "IsAlternateBouncerUIAvailable"
+
+    .line 385
+    move-object/from16 v3, p0
+
+    .line 387
+    invoke-static {v3, v2, v14, v0, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
+
+    .line 389
+    move-result-object v0
+
+    .line 392
+    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
+
+    .line 393
+    const-string v0, "AlternateBouncerVisible"
+
+    .line 396
+    move-object/from16 v3, v17
+
+    .line 398
+    invoke-static {v3, v2, v14, v0, v5}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;Z)Lkotlinx/coroutines/flow/SafeFlow;
+
+    .line 400
+    move-result-object v0
+
+    .line 403
+    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
+
+    .line 404
+    new-instance v0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;
+
+    .line 407
+    const/4 v3, 0x4
+
+    .line 409
+    move-object/from16 v4, v16
+
+    .line 410
+    invoke-direct {v0, v4, v3}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl$setUpLogging$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+
+    .line 412
+    const-string v3, "lastShownSecurityMode"
+
+    .line 415
+    const/4 v4, 0x0
+
+    .line 417
+    invoke-static {v0, v2, v3, v4}, Lcom/android/systemui/log/table/DiffableKt;->logDiffsForTable(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/log/table/TableLogBuffer;Ljava/lang/String;Ljava/lang/String;)Lkotlinx/coroutines/flow/SafeFlow;
+
+    .line 418
+    move-result-object v0
+
+    .line 421
+    invoke-static {v0, v1}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
+
+    .line 422
     :goto_0
     return-void
-    .line 433
+    .line 425
 .end method
 
 
 # virtual methods
 .method public final setAlternateVisible(Z)V
-    .locals 3
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->_alternateBouncerVisible:Lkotlinx/coroutines/flow/StateFlowImpl;
@@ -731,45 +717,25 @@
     if-nez v1, :cond_0
 
     .line 16
-    iget-object v1, p0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->clock:Lcom/android/systemui/util/time/SystemClock;
+    iget-object p0, p0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->clock:Lcom/android/systemui/util/time/SystemClock;
 
     .line 18
-    check-cast v1, Lcom/android/systemui/util/time/SystemClockImpl;
+    check-cast p0, Lcom/android/systemui/util/time/SystemClockImpl;
 
     .line 20
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 22
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     .line 25
-    move-result-wide v1
-
-    .line 28
-    iput-wide v1, p0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->lastAlternateBouncerVisibleTime:J
-
-    .line 29
-    goto :goto_0
-
-    .line 31
     :cond_0
-    if-nez p1, :cond_1
-
-    .line 32
-    const-wide/16 v1, -0x1
-
-    .line 34
-    iput-wide v1, p0, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->lastAlternateBouncerVisibleTime:J
-
-    .line 36
-    :cond_1
-    :goto_0
     const/4 p0, 0x0
 
-    .line 38
+    .line 28
     invoke-static {p1, v0, p0}, Lcom/android/systemui/biometrics/AuthContainerView$$ExternalSyntheticOutline0;->m(ZLkotlinx/coroutines/flow/StateFlowImpl;Ljava/lang/Object;)V
 
-    .line 39
+    .line 29
     return-void
-    .line 42
+    .line 32
 .end method

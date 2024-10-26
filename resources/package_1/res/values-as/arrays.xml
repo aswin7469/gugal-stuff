@@ -5,7 +5,9 @@
     <item>চাৰ্জ কৰি থকাৰ সময়ত শতাংশ দেখুৱাওক (ডিফ'ল্ট)</item>
     <item>এই আইকনটো নেদেখুৱাব</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>ঘন্টা, মিনিট আৰু ছেকেণ্ড দেখুৱাওক</item>
     <item>ঘন্টা আৰু মিনিট দেখুৱাওক (ডিফ'ল্ট)</item>

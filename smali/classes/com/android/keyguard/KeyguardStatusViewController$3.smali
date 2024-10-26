@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardStatusViewController$3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
@@ -58,7 +58,7 @@
     move-result-object p1
 
     .line 20
-    const v0, 0x7f07033e    # @dimen/keyguard_clock_top_margin '18.0dp'
+    const v0, 0x7f07037a    # @dimen/keyguard_clock_top_margin '18.0dp'
 
     .line 21
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -82,7 +82,7 @@
     move-result-object p1
 
     .line 37
-    const v0, 0x7f07034a    # @dimen/keyguard_large_clock_top_margin '-60.0dp'
+    const v0, 0x7f070386    # @dimen/keyguard_large_clock_top_margin '-60.0dp'
 
     .line 38
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -106,7 +106,7 @@
     move-result-object p1
 
     .line 54
-    const v0, 0x7f0c0058    # @integer/keyguard_date_weather_view_invisibility '4'
+    const v0, 0x7f0b0069    # @integer/keyguard_date_weather_view_invisibility '4'
 
     .line 55
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I

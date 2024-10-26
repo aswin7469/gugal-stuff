@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/ui/ControlViewHolder;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -189,7 +189,7 @@
     move-result-object p2
 
     .line 35
-    const p3, 0x7f0a0008    # @fraction/controls_toggle_bg_intensity '5.0%'
+    const p3, 0x7f090008    # @fraction/controls_toggle_bg_intensity '5.0%'
 
     .line 36
     const/4 p4, 0x1
@@ -204,7 +204,7 @@
     iput p2, p0, Lcom/android/systemui/controls/ui/ControlViewHolder;->toggleBackgroundIntensity:F
 
     .line 44
-    const p2, 0x7f0b0379    # @id/icon
+    const p2, 0x7f0a0399    # @id/icon
 
     .line 46
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -219,7 +219,7 @@
     iput-object p2, p0, Lcom/android/systemui/controls/ui/ControlViewHolder;->icon:Landroid/widget/ImageView;
 
     .line 55
-    const p2, 0x7f0b0762    # @id/status
+    const p2, 0x7f0a0791    # @id/status
 
     .line 57
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -240,7 +240,7 @@
     iput-object p3, p0, Lcom/android/systemui/controls/ui/ControlViewHolder;->nextStatusText:Ljava/lang/CharSequence;
 
     .line 70
-    const p3, 0x7f0b07ff    # @id/title
+    const p3, 0x7f0a082e    # @id/title
 
     .line 72
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -255,7 +255,7 @@
     iput-object p3, p0, Lcom/android/systemui/controls/ui/ControlViewHolder;->title:Landroid/widget/TextView;
 
     .line 81
-    const p3, 0x7f0b0782    # @id/subtitle
+    const p3, 0x7f0a07b1    # @id/subtitle
 
     .line 83
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -270,7 +270,7 @@
     iput-object p3, p0, Lcom/android/systemui/controls/ui/ControlViewHolder;->subtitle:Landroid/widget/TextView;
 
     .line 92
-    const p3, 0x7f0b01cc    # @id/chevron_icon
+    const p3, 0x7f0a01d3    # @id/chevron_icon
 
     .line 94
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->requireViewById(I)Landroid/view/View;
@@ -315,7 +315,7 @@
     invoke-virtual {p1}, Landroid/graphics/drawable/LayerDrawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     .line 124
-    const p3, 0x7f0b01d6    # @id/clip_layer
+    const p3, 0x7f0a01e1    # @id/clip_layer
 
     .line 127
     invoke-virtual {p1, p3}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
@@ -330,7 +330,7 @@
     iput-object p3, p0, Lcom/android/systemui/controls/ui/ControlViewHolder;->clipLayer:Landroid/graphics/drawable/ClipDrawable;
 
     .line 136
-    const p3, 0x7f0b00f0    # @id/background
+    const p3, 0x7f0a00f4    # @id/background
 
     .line 138
     invoke-virtual {p1, p3}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
@@ -468,7 +468,6 @@
     .line 62
     :goto_2
     return-void
-    .line 65
 .end method
 
 .method public final animateStatusChange(Lkotlin/jvm/functions/Function0;Z)V
@@ -859,7 +858,7 @@
     move-result-object v3
 
     .line 105
-    const v5, 0x7f060085    # @color/control_default_background '#303134'
+    const v5, 0x7f060086    # @color/control_default_background '#303134'
 
     .line 106
     invoke-virtual {v0, v5, v3}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
@@ -1927,7 +1926,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f1402b9    # @string/controls_error_failed 'Error, try again'
+    const v1, 0x7f1302d5    # @string/controls_error_failed 'Error, try again'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1949,7 +1948,6 @@
 
     .line 21
     return-void
-    .line 24
 .end method
 
 .method public final setStatusText(Ljava/lang/CharSequence;Z)V

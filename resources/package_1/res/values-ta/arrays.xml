@@ -5,7 +5,9 @@
     <item>சார்ஜ் செய்யும் போது சதவீதத்தைக் காட்டு (இயல்பு)</item>
     <item>இந்த ஐகானைக் காட்டாதே</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>மணிநேரம், நிமிடங்கள், வினாடிகளைக் காட்டு</item>
     <item>மணிநேரம், நிமிடங்களைக் காட்டு (இயல்பு)</item>

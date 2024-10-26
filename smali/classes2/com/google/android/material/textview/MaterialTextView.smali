@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/textview/MaterialTextView;
 .super Landroidx/appcompat/widget/AppCompatTextView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -129,7 +129,7 @@
     invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->setTextAppearance(Landroid/content/Context;I)V
 
     .line 3
-    const v1, 0x7f04069f    # @attr/textAppearanceLineHeightEnabled
+    const v1, 0x7f0406a5    # @attr/textAppearanceLineHeightEnabled
 
     .line 6
     invoke-static {p1, v1, v0}, Lcom/google/android/material/resources/MaterialAttributes;->resolveBoolean(Landroid/content/Context;IZ)Z

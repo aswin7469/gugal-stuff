@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/animation/TransitionAnimator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -578,7 +578,7 @@
 .end method
 
 .method public final startAnimation(Lcom/android/systemui/animation/TransitionAnimator$Controller;Lcom/android/systemui/animation/TransitionAnimator$State;IZZ)Lcom/android/systemui/animation/TransitionAnimator$startAnimation$1;
-    .locals 6
+    .locals 7
 
     .line 1
     invoke-interface {p1}, Lcom/android/systemui/animation/TransitionAnimator$Controller;->isLaunching()Z
@@ -587,87 +587,73 @@
     move-result v0
 
     .line 5
-    if-nez v0, :cond_1
-
-    .line 6
-    invoke-static {}, Lcom/android/systemui/shared/Flags;->returnAnimationFrameworkLibrary()Z
-
-    .line 8
-    move-result v0
-
-    .line 11
     if-eqz v0, :cond_0
 
-    .line 12
-    goto :goto_0
+    .line 6
+    new-instance v4, Landroid/graphics/drawable/GradientDrawable;
 
-    .line 14
+    .line 8
+    invoke-direct {v4}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    .line 10
+    invoke-virtual {v4, p3}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    .line 13
+    const/4 p3, 0x0
+
+    .line 16
+    invoke-virtual {v4, p3}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
+
+    .line 17
+    move-object v1, p0
+
+    .line 20
+    move-object v2, p1
+
+    .line 21
+    move-object v3, p2
+
+    .line 22
+    move v5, p4
+
+    .line 23
+    move v6, p5
+
+    .line 24
+    invoke-virtual/range {v1 .. v6}, Lcom/android/systemui/animation/TransitionAnimator;->createAnimator(Lcom/android/systemui/animation/TransitionAnimator$Controller;Lcom/android/systemui/animation/TransitionAnimator$State;Landroid/graphics/drawable/GradientDrawable;ZZ)Landroid/animation/ValueAnimator;
+
+    .line 25
+    move-result-object p0
+
+    .line 28
+    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
+
+    .line 29
+    new-instance p1, Lcom/android/systemui/animation/TransitionAnimator$startAnimation$1;
+
+    .line 32
+    invoke-direct {p1, p0}, Lcom/android/systemui/animation/TransitionAnimator$startAnimation$1;-><init>(Landroid/animation/ValueAnimator;)V
+
+    .line 34
+    return-object p1
+
+    .line 37
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 15
+    .line 38
     const-string p1, "isLaunching cannot be false when the returnAnimationFrameworkLibrary flag is disabled"
 
-    .line 17
+    .line 40
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 19
+    .line 42
     move-result-object p1
 
-    .line 22
+    .line 45
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 23
+    .line 46
     throw p0
-
-    .line 26
-    :cond_1
-    :goto_0
-    new-instance v3, Landroid/graphics/drawable/GradientDrawable;
-
-    .line 27
-    invoke-direct {v3}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    .line 29
-    invoke-virtual {v3, p3}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    .line 32
-    const/4 p3, 0x0
-
-    .line 35
-    invoke-virtual {v3, p3}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
-
-    .line 36
-    move-object v0, p0
-
-    .line 39
-    move-object v1, p1
-
-    .line 40
-    move-object v2, p2
-
-    .line 41
-    move v4, p4
-
-    .line 42
-    move v5, p5
-
-    .line 43
-    invoke-virtual/range {v0 .. v5}, Lcom/android/systemui/animation/TransitionAnimator;->createAnimator(Lcom/android/systemui/animation/TransitionAnimator$Controller;Lcom/android/systemui/animation/TransitionAnimator$State;Landroid/graphics/drawable/GradientDrawable;ZZ)Landroid/animation/ValueAnimator;
-
-    .line 44
-    move-result-object p0
-
-    .line 47
-    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
-
-    .line 48
-    new-instance p1, Lcom/android/systemui/animation/TransitionAnimator$startAnimation$1;
-
-    .line 51
-    invoke-direct {p1, p0}, Lcom/android/systemui/animation/TransitionAnimator$startAnimation$1;-><init>(Landroid/animation/ValueAnimator;)V
-
-    .line 53
-    return-object p1
-    .line 56
+    .line 49
 .end method

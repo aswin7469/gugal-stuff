@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/phone/StatusIconContainer;
 .super Lcom/android/keyguard/AlphaOptimizedLinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -428,7 +428,7 @@
     move-result p4
 
     .line 47
-    const v0, 0x7f0b076f    # @id/status_bar_view_state_tag
+    const v0, 0x7f0a079e    # @id/status_bar_view_state_tag
 
     .line 48
     if-ge p3, p4, :cond_2
@@ -1487,7 +1487,7 @@
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/StatusIconContainer$StatusIconState;->justAdded:Z
 
     .line 20
-    const v0, 0x7f0b076f    # @id/status_bar_view_state_tag
+    const v0, 0x7f0a079e    # @id/status_bar_view_state_tag
 
     .line 22
     invoke-virtual {p1, v0, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -1504,7 +1504,7 @@
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onViewRemoved(Landroid/view/View;)V
 
     .line 2
-    const p0, 0x7f0b076f    # @id/status_bar_view_state_tag
+    const p0, 0x7f0a079e    # @id/status_bar_view_state_tag
 
     .line 5
     const/4 v0, 0x0
@@ -1545,7 +1545,7 @@
     move-result-object v0
 
     .line 18
-    const v1, 0x7f070843    # @dimen/overflow_icon_dot_padding '3.0sp'
+    const v1, 0x7f070893    # @dimen/overflow_icon_dot_padding '3.0sp'
 
     .line 19
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1563,7 +1563,7 @@
     move-result-object v0
 
     .line 31
-    const v1, 0x7f0709de    # @dimen/status_bar_system_icon_spacing '0.0sp'
+    const v1, 0x7f070a36    # @dimen/status_bar_system_icon_spacing '0.0sp'
 
     .line 32
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1581,7 +1581,7 @@
     move-result-object v0
 
     .line 44
-    const v1, 0x7f070842    # @dimen/overflow_dot_radius '2.0sp'
+    const v1, 0x7f070892    # @dimen/overflow_dot_radius '2.0sp'
 
     .line 45
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/ForegroundServicesDialog;
 .super Lcom/android/internal/app/AlertActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemSelectedListener;
@@ -97,7 +97,7 @@
     iget-object p1, p0, Lcom/android/systemui/ForegroundServicesDialog;->mInflater:Landroid/view/LayoutInflater;
 
     .line 26
-    const v1, 0x7f0e00be    # @layout/foreground_service_title 'res/layout/foreground_service_title.xml'
+    const v1, 0x7f0d00c7    # @layout/foreground_service_title 'res/layout/foreground_service_title.xml'
 
     .line 28
     const/4 v2, 0x0
@@ -121,7 +121,7 @@
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     .line 41
-    const p1, 0x1040352    # @android:string/dynamic_mode_notification_title
+    const p1, 0x1040349    # @android:string/duration_minutes_relative_future
 
     .line 43
     invoke-virtual {p0, p1}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;

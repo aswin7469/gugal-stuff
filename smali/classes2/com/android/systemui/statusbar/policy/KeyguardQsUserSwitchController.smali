@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/KeyguardQsUserSwitchController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -270,7 +270,7 @@
     check-cast v0, Landroid/widget/FrameLayout;
 
     .line 15
-    const v1, 0x7f0b03ee    # @id/kg_multi_user_avatar
+    const v1, 0x7f0a040f    # @id/kg_multi_user_avatar
 
     .line 17
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -291,7 +291,7 @@
     check-cast v0, Landroid/widget/FrameLayout;
 
     .line 30
-    const v1, 0x7f0b03ef    # @id/kg_multi_user_avatar_with_background
+    const v1, 0x7f0a0410    # @id/kg_multi_user_avatar_with_background
 
     .line 32
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -723,6 +723,7 @@
     .line 85
     :goto_2
     return-void
+    .line 88
 .end method
 
 .method public final updateView$2()V
@@ -790,7 +791,7 @@
     move-result-object v2
 
     .line 42
-    const v3, 0x7f1400de    # @string/accessibility_quick_settings_user 'Signed in as %s'
+    const v3, 0x7f1300dd    # @string/accessibility_quick_settings_user 'Signed in as %s'
 
     .line 43
     invoke-virtual {v1, v3, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -806,7 +807,7 @@
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/KeyguardQsUserSwitchController;->mContext:Landroid/content/Context;
 
     .line 51
-    const v2, 0x7f1400b0    # @string/accessibility_multi_user_switch_switcher 'Switch user'
+    const v2, 0x7f1300b1    # @string/accessibility_multi_user_switch_switcher 'Switch user'
 
     .line 53
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -868,7 +869,7 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/KeyguardQsUserSwitchController;->mResources:Landroid/content/res/Resources;
 
     .line 89
-    const v3, 0x7f070363    # @dimen/kg_framed_avatar_size '32.0dp'
+    const v3, 0x7f07039f    # @dimen/kg_framed_avatar_size '32.0dp'
 
     .line 91
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -909,7 +910,7 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/KeyguardQsUserSwitchController;->mContext:Landroid/content/Context;
 
     .line 115
-    const v3, 0x7f0806df    # @drawable/ic_avatar_guest_user 'res/drawable/ic_avatar_guest_user.xml'
+    const v3, 0x7f0806f0    # @drawable/ic_avatar_guest_user 'res/drawable/ic_avatar_guest_user.xml'
 
     .line 117
     invoke-virtual {v0, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -929,7 +930,7 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/KeyguardQsUserSwitchController;->mContext:Landroid/content/Context;
 
     .line 126
-    const v3, 0x7f0806e1    # @drawable/ic_avatar_user 'res/drawable/ic_avatar_user.xml'
+    const v3, 0x7f0806f2    # @drawable/ic_avatar_user 'res/drawable/ic_avatar_user.xml'
 
     .line 128
     invoke-virtual {v0, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -954,7 +955,7 @@
     move-result-object v4
 
     .line 143
-    const v5, 0x7f0600ff    # @color/kg_user_switcher_avatar_icon_color '@color/GM2_grey_800'
+    const v5, 0x7f060109    # @color/kg_user_switcher_avatar_icon_color '@color/GM2_grey_800'
 
     .line 144
     invoke-virtual {v0, v5, v4}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
@@ -970,7 +971,7 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/KeyguardQsUserSwitchController;->mContext:Landroid/content/Context;
 
     .line 154
-    const v0, 0x7f080ba5    # @drawable/user_avatar_bg 'res/drawable/user_avatar_bg.xml'
+    const v0, 0x7f080bee    # @drawable/user_avatar_bg 'res/drawable/user_avatar_bg.xml'
 
     .line 156
     invoke-virtual {p0, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;

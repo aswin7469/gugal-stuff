@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/chips/casttootherdevice/ui/viewmodel/CastToOtherDeviceChipViewModel$special$$inlined$map$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -187,13 +187,13 @@
     new-instance v8, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
     .line 93
-    const v9, 0x7f14005b    # @string/accessibility_casting '@string/quick_settings_casting'
+    const v9, 0x7f13005c    # @string/accessibility_casting '@string/quick_settings_casting'
 
     .line 95
     invoke-direct {v8, v9}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V
 
     .line 98
-    const v9, 0x7f080703    # @drawable/ic_cast_connected 'res/drawable/ic_cast_connected.xml'
+    const v9, 0x7f080719    # @drawable/ic_cast_connected 'res/drawable/ic_cast_connected.xml'
 
     .line 101
     invoke-direct {v7, v9, v8}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V

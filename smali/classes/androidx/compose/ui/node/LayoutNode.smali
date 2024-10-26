@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/node/LayoutNode;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/runtime/ComposeNodeLifecycleCallback;
@@ -1185,332 +1185,332 @@
 
     .line 200
     :cond_f
-    const-string p0, "structuralUpdate requires a non-null tail"
+    const-string/jumbo p0, "structuralUpdate requires a non-null tail"
 
     .line 202
     invoke-static {p0}, Landroidx/compose/ui/internal/InlineClassHelperKt;->throwIllegalStateExceptionForNullCheck(Ljava/lang/String;)V
 
-    .line 204
+    .line 205
     throw v7
 
-    .line 207
+    .line 208
     :cond_10
     invoke-static {v2}, Landroidx/compose/ui/internal/InlineClassHelperKt;->throwIllegalStateExceptionForNullCheck(Ljava/lang/String;)V
 
-    .line 208
+    .line 209
     throw v7
 
-    .line 211
+    .line 212
     :cond_11
     iget-object v12, v5, Landroidx/compose/ui/node/LayoutNode;->pendingModifier:Landroidx/compose/ui/Modifier;
 
-    .line 212
+    .line 213
     if-eqz v12, :cond_13
 
-    .line 214
+    .line 215
     if-nez v1, :cond_13
 
-    .line 216
+    .line 217
     move p1, v0
 
-    .line 218
+    .line 219
     :goto_7
     iget v1, v9, Landroidx/compose/runtime/collection/MutableVector;->size:I
 
-    .line 219
+    .line 220
     if-ge p1, v1, :cond_12
 
-    .line 221
+    .line 222
     iget-object v1, v9, Landroidx/compose/runtime/collection/MutableVector;->content:[Ljava/lang/Object;
 
-    .line 223
+    .line 224
     aget-object v1, v1, p1
 
-    .line 225
+    .line 226
     check-cast v1, Landroidx/compose/ui/Modifier$Element;
 
-    .line 227
+    .line 228
     invoke-static {v1, v4}, Landroidx/compose/ui/node/NodeChain;->createAndInsertNodeAsChild(Landroidx/compose/ui/Modifier$Element;Landroidx/compose/ui/Modifier$Node;)Landroidx/compose/ui/Modifier$Node;
 
-    .line 229
+    .line 230
     move-result-object v4
 
-    .line 232
+    .line 233
     add-int/lit8 p1, p1, 0x1
 
-    .line 233
+    .line 234
     goto :goto_7
 
-    .line 235
+    .line 236
     :cond_12
     iget-object p1, v11, Landroidx/compose/ui/Modifier$Node;->parent:Landroidx/compose/ui/Modifier$Node;
 
-    .line 236
+    .line 237
     :goto_8
     if-eqz p1, :cond_e
 
-    .line 238
+    .line 239
     sget-object v1, Landroidx/compose/ui/node/NodeChainKt;->SentinelHead:Landroidx/compose/ui/node/NodeChainKt$SentinelHead$1;
 
-    .line 240
+    .line 241
     if-eq p1, v1, :cond_e
 
-    .line 242
+    .line 243
     iget v1, p1, Landroidx/compose/ui/Modifier$Node;->kindSet:I
 
-    .line 244
+    .line 245
     or-int/2addr v0, v1
 
-    .line 246
+    .line 247
     iput v0, p1, Landroidx/compose/ui/Modifier$Node;->aggregateChildKindSet:I
 
-    .line 247
+    .line 248
     iget-object p1, p1, Landroidx/compose/ui/Modifier$Node;->parent:Landroidx/compose/ui/Modifier$Node;
 
-    .line 249
+    .line 250
     goto :goto_8
 
-    .line 251
+    .line 252
     :cond_13
     if-nez p1, :cond_17
 
-    .line 252
+    .line 253
     if-eqz v8, :cond_16
 
-    .line 254
+    .line 255
     iget-object p1, v4, Landroidx/compose/ui/Modifier$Node;->child:Landroidx/compose/ui/Modifier$Node;
 
-    .line 256
+    .line 257
     move v1, v0
 
-    .line 258
+    .line 259
     :goto_9
     if-eqz p1, :cond_14
 
-    .line 259
+    .line 260
     iget v2, v8, Landroidx/compose/runtime/collection/MutableVector;->size:I
 
-    .line 261
+    .line 262
     if-ge v1, v2, :cond_14
 
-    .line 263
+    .line 264
     invoke-static {p1}, Landroidx/compose/ui/node/NodeChain;->detachAndRemoveNode(Landroidx/compose/ui/Modifier$Node;)Landroidx/compose/ui/Modifier$Node;
 
-    .line 265
+    .line 266
     move-result-object p1
 
-    .line 268
+    .line 269
     iget-object p1, p1, Landroidx/compose/ui/Modifier$Node;->child:Landroidx/compose/ui/Modifier$Node;
 
-    .line 269
+    .line 270
     add-int/lit8 v1, v1, 0x1
 
-    .line 271
+    .line 272
     goto :goto_9
 
-    .line 273
+    .line 274
     :cond_14
     invoke-virtual {v5}, Landroidx/compose/ui/node/LayoutNode;->getParent$ui_release()Landroidx/compose/ui/node/LayoutNode;
 
-    .line 274
+    .line 275
     move-result-object p1
 
-    .line 277
+    .line 278
     if-eqz p1, :cond_15
 
-    .line 278
+    .line 279
     iget-object p1, p1, Landroidx/compose/ui/node/LayoutNode;->nodes:Landroidx/compose/ui/node/NodeChain;
 
-    .line 280
+    .line 281
     iget-object p1, p1, Landroidx/compose/ui/node/NodeChain;->innerCoordinator:Landroidx/compose/ui/node/InnerNodeCoordinator;
 
-    .line 282
+    .line 283
     goto :goto_a
 
-    .line 284
+    .line 285
     :cond_15
     move-object p1, v7
 
-    .line 285
+    .line 286
     :goto_a
     iget-object v1, v6, Landroidx/compose/ui/node/NodeChain;->innerCoordinator:Landroidx/compose/ui/node/InnerNodeCoordinator;
 
-    .line 286
+    .line 287
     iput-object p1, v1, Landroidx/compose/ui/node/NodeCoordinator;->wrappedBy:Landroidx/compose/ui/node/NodeCoordinator;
 
-    .line 288
+    .line 289
     iput-object v1, v6, Landroidx/compose/ui/node/NodeChain;->outerCoordinator:Landroidx/compose/ui/node/NodeCoordinator;
 
-    .line 290
+    .line 291
     goto :goto_b
 
-    .line 292
+    .line 293
     :cond_16
     invoke-static {v2}, Landroidx/compose/ui/internal/InlineClassHelperKt;->throwIllegalStateExceptionForNullCheck(Ljava/lang/String;)V
 
-    .line 293
+    .line 294
     throw v7
 
-    .line 296
+    .line 297
     :cond_17
     if-nez v8, :cond_18
 
-    .line 297
+    .line 298
     new-instance v8, Landroidx/compose/runtime/collection/MutableVector;
 
-    .line 299
+    .line 300
     new-array p1, v3, [Landroidx/compose/ui/Modifier$Element;
 
-    .line 301
+    .line 302
     invoke-direct {v8, p1}, Landroidx/compose/runtime/collection/MutableVector;-><init>([Ljava/lang/Object;)V
 
-    .line 303
+    .line 304
     :cond_18
     if-eqz v12, :cond_19
 
-    .line 306
+    .line 307
     move v0, v10
 
-    .line 308
+    .line 309
     :cond_19
     xor-int/lit8 v5, v0, 0x1
 
-    .line 309
+    .line 310
     const/4 v1, 0x0
 
-    .line 311
+    .line 312
     move-object v0, v6
 
-    .line 312
+    .line 313
     move-object v2, v8
 
-    .line 313
+    .line 314
     move-object v3, v9
 
-    .line 314
+    .line 315
     invoke-virtual/range {v0 .. v5}, Landroidx/compose/ui/node/NodeChain;->structuralUpdate(ILandroidx/compose/runtime/collection/MutableVector;Landroidx/compose/runtime/collection/MutableVector;Landroidx/compose/ui/Modifier$Node;Z)V
 
-    .line 315
+    .line 316
     goto :goto_6
 
-    .line 318
+    .line 319
     :cond_1a
     :goto_b
     iput-object v9, v6, Landroidx/compose/ui/node/NodeChain;->current:Landroidx/compose/runtime/collection/MutableVector;
 
-    .line 319
+    .line 320
     if-eqz v8, :cond_1b
 
-    .line 321
+    .line 322
     invoke-virtual {v8}, Landroidx/compose/runtime/collection/MutableVector;->clear()V
 
-    .line 323
+    .line 324
     goto :goto_c
 
-    .line 326
+    .line 327
     :cond_1b
     move-object v8, v7
 
-    .line 327
+    .line 328
     :goto_c
     iput-object v8, v6, Landroidx/compose/ui/node/NodeChain;->buffer:Landroidx/compose/runtime/collection/MutableVector;
 
-    .line 328
+    .line 329
     sget-object p1, Landroidx/compose/ui/node/NodeChainKt;->SentinelHead:Landroidx/compose/ui/node/NodeChainKt$SentinelHead$1;
 
-    .line 330
+    .line 331
     iget-object v1, p1, Landroidx/compose/ui/Modifier$Node;->child:Landroidx/compose/ui/Modifier$Node;
 
-    .line 332
+    .line 333
     if-nez v1, :cond_1c
 
-    .line 334
+    .line 335
     goto :goto_d
 
-    .line 336
+    .line 337
     :cond_1c
     move-object v11, v1
 
-    .line 337
+    .line 338
     :goto_d
     iput-object v7, v11, Landroidx/compose/ui/Modifier$Node;->parent:Landroidx/compose/ui/Modifier$Node;
 
-    .line 338
+    .line 339
     iput-object v7, p1, Landroidx/compose/ui/Modifier$Node;->child:Landroidx/compose/ui/Modifier$Node;
 
-    .line 340
+    .line 341
     const/4 v1, -0x1
 
-    .line 342
+    .line 343
     iput v1, p1, Landroidx/compose/ui/Modifier$Node;->aggregateChildKindSet:I
 
-    .line 343
+    .line 344
     iput-object v7, p1, Landroidx/compose/ui/Modifier$Node;->coordinator:Landroidx/compose/ui/node/NodeCoordinator;
 
-    .line 345
+    .line 346
     if-eq v11, p1, :cond_1f
 
-    .line 347
+    .line 348
     iput-object v11, v6, Landroidx/compose/ui/node/NodeChain;->head:Landroidx/compose/ui/Modifier$Node;
 
-    .line 349
+    .line 350
     if-eqz v0, :cond_1d
 
-    .line 351
+    .line 352
     invoke-virtual {v6}, Landroidx/compose/ui/node/NodeChain;->syncCoordinators()V
 
-    .line 353
+    .line 354
     :cond_1d
     iget-object p1, p0, Landroidx/compose/ui/node/LayoutNode;->layoutDelegate:Landroidx/compose/ui/node/LayoutNodeLayoutDelegate;
 
-    .line 356
+    .line 357
     invoke-virtual {p1}, Landroidx/compose/ui/node/LayoutNodeLayoutDelegate;->updateParentData()V
 
-    .line 358
+    .line 359
     iget-object p1, p0, Landroidx/compose/ui/node/LayoutNode;->lookaheadRoot:Landroidx/compose/ui/node/LayoutNode;
 
-    .line 361
+    .line 362
     if-nez p1, :cond_1e
 
-    .line 363
+    .line 364
     const/16 p1, 0x200
 
-    .line 365
+    .line 366
     invoke-virtual {v6, p1}, Landroidx/compose/ui/node/NodeChain;->has-H91voCI$ui_release(I)Z
 
-    .line 367
+    .line 368
     move-result p1
 
-    .line 370
+    .line 371
     if-eqz p1, :cond_1e
 
-    .line 371
+    .line 372
     invoke-virtual {p0, p0}, Landroidx/compose/ui/node/LayoutNode;->setLookaheadRoot(Landroidx/compose/ui/node/LayoutNode;)V
 
-    .line 373
+    .line 374
     :cond_1e
     return-void
 
-    .line 376
-    :cond_1f
-    const-string p0, "trimChain did not update the head"
-
     .line 377
+    :cond_1f
+    const-string/jumbo p0, "trimChain did not update the head"
+
+    .line 378
     invoke-static {p0}, Landroidx/compose/ui/internal/InlineClassHelperKt;->throwIllegalStateException(Ljava/lang/String;)V
 
-    .line 379
+    .line 381
     throw v7
 
-    .line 382
+    .line 384
     :cond_20
     const-string p0, "padChain called on already padded chain"
 
-    .line 383
+    .line 385
     invoke-static {p0}, Landroidx/compose/ui/internal/InlineClassHelperKt;->throwIllegalStateException(Ljava/lang/String;)V
 
-    .line 385
+    .line 387
     throw v7
-    .line 388
+    .line 390
 .end method
 
 .method public final attach$ui_release(Landroidx/compose/ui/node/Owner;)V
@@ -3154,7 +3154,6 @@
 
     .line 73
     throw p0
-    .line 76
 .end method
 
 .method public final getFoldedChildren$ui_release()Ljava/util/List;

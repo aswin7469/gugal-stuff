@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/quickaffordance/QuickAccessWalletKeyguardQuickAffordanceConfig$special$$inlined$flatMapLatest$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -281,7 +281,7 @@
     new-instance v1, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
     .line 126
-    const v5, 0x7f1400fd    # @string/accessibility_wallet_button 'Wallet'
+    const v5, 0x7f1300fd    # @string/accessibility_wallet_button 'Wallet'
 
     .line 128
     invoke-direct {v1, v5}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V

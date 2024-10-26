@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/foundation/layout/SizeKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -157,29 +157,23 @@
     invoke-direct {v1, v4, v6, v2, v0}, Landroidx/compose/foundation/layout/WrapContentElement;-><init>(Landroidx/compose/foundation/layout/Direction;ZLkotlin/jvm/functions/Function2;Ljava/lang/Object;)V
 
     .line 97
-    sput-object v1, Landroidx/compose/foundation/layout/SizeKt;->WrapContentSizeCenter:Landroidx/compose/foundation/layout/WrapContentElement;
-
-    .line 100
     sget-object v0, Landroidx/compose/ui/Alignment$Companion;->TopStart:Landroidx/compose/ui/BiasAlignment;
 
-    .line 102
+    .line 100
     new-instance v1, Landroidx/compose/foundation/layout/WrapContentElement;
 
-    .line 104
+    .line 102
     new-instance v2, Landroidx/compose/foundation/layout/WrapContentElement$Companion$size$1;
 
-    .line 106
+    .line 104
     invoke-direct {v2, v0}, Landroidx/compose/foundation/layout/WrapContentElement$Companion$size$1;-><init>(Landroidx/compose/ui/Alignment;)V
 
-    .line 108
+    .line 106
     invoke-direct {v1, v4, v6, v2, v0}, Landroidx/compose/foundation/layout/WrapContentElement;-><init>(Landroidx/compose/foundation/layout/Direction;ZLkotlin/jvm/functions/Function2;Ljava/lang/Object;)V
 
-    .line 111
-    sput-object v1, Landroidx/compose/foundation/layout/SizeKt;->WrapContentSizeTopStart:Landroidx/compose/foundation/layout/WrapContentElement;
-
-    .line 114
+    .line 109
     return-void
-    .line 116
+    .line 112
 .end method
 
 .method public static final defaultMinSize-VpY3zN4(Landroidx/compose/ui/Modifier;FF)Landroidx/compose/ui/Modifier;
@@ -200,43 +194,6 @@
     .line 10
     return-object p0
     .line 11
-.end method
-
-.method public static synthetic defaultMinSize-VpY3zN4$default(Landroidx/compose/ui/Modifier;FFI)Landroidx/compose/ui/Modifier;
-    .locals 2
-
-    .line 1
-    and-int/lit8 v0, p3, 0x1
-
-    .line 2
-    const/high16 v1, 0x7fc00000    # Float.NaN
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 6
-    move p1, v1
-
-    .line 8
-    :cond_0
-    and-int/lit8 p3, p3, 0x2
-
-    .line 9
-    if-eqz p3, :cond_1
-
-    .line 11
-    move p2, v1
-
-    .line 13
-    :cond_1
-    invoke-static {p0, p1, p2}, Landroidx/compose/foundation/layout/SizeKt;->defaultMinSize-VpY3zN4(Landroidx/compose/ui/Modifier;FF)Landroidx/compose/ui/Modifier;
-
-    .line 14
-    move-result-object p0
-
-    .line 17
-    return-object p0
-    .line 18
 .end method
 
 .method public static final fillMaxWidth(Landroidx/compose/ui/Modifier;F)Landroidx/compose/ui/Modifier;
@@ -280,23 +237,6 @@
     .line 22
     return-object p0
     .line 23
-.end method
-
-.method public static synthetic fillMaxWidth$default(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
-    .locals 1
-
-    .line 1
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    .line 2
-    invoke-static {p0, v0}, Landroidx/compose/foundation/layout/SizeKt;->fillMaxWidth(Landroidx/compose/ui/Modifier;F)Landroidx/compose/ui/Modifier;
-
-    .line 4
-    move-result-object p0
-
-    .line 7
-    return-object p0
-    .line 8
 .end method
 
 .method public static final height-3ABfNKs(Landroidx/compose/ui/Modifier;F)Landroidx/compose/ui/Modifier;
@@ -882,103 +822,6 @@
     .line 49
     return-object p0
     .line 50
-.end method
-
-.method public static wrapContentSize$default(Landroidx/compose/ui/Modifier;Landroidx/compose/ui/BiasAlignment;ZI)Landroidx/compose/ui/Modifier;
-    .locals 2
-
-    .line 1
-    and-int/lit8 v0, p3, 0x1
-
-    .line 2
-    sget-object v1, Landroidx/compose/ui/Alignment$Companion;->Center:Landroidx/compose/ui/BiasAlignment;
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 6
-    move-object p1, v1
-
-    .line 8
-    :cond_0
-    and-int/lit8 p3, p3, 0x2
-
-    .line 9
-    if-eqz p3, :cond_1
-
-    .line 11
-    const/4 p2, 0x0
-
-    .line 13
-    :cond_1
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 14
-    move-result p3
-
-    .line 17
-    if-eqz p3, :cond_2
-
-    .line 18
-    if-nez p2, :cond_2
-
-    .line 20
-    sget-object p1, Landroidx/compose/foundation/layout/SizeKt;->WrapContentSizeCenter:Landroidx/compose/foundation/layout/WrapContentElement;
-
-    .line 22
-    goto :goto_0
-
-    .line 24
-    :cond_2
-    sget-object p3, Landroidx/compose/ui/Alignment$Companion;->TopStart:Landroidx/compose/ui/BiasAlignment;
-
-    .line 25
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 27
-    move-result p3
-
-    .line 30
-    if-eqz p3, :cond_3
-
-    .line 31
-    if-nez p2, :cond_3
-
-    .line 33
-    sget-object p1, Landroidx/compose/foundation/layout/SizeKt;->WrapContentSizeTopStart:Landroidx/compose/foundation/layout/WrapContentElement;
-
-    .line 35
-    goto :goto_0
-
-    .line 37
-    :cond_3
-    new-instance p3, Landroidx/compose/foundation/layout/WrapContentElement;
-
-    .line 38
-    sget-object v0, Landroidx/compose/foundation/layout/Direction;->Both:Landroidx/compose/foundation/layout/Direction;
-
-    .line 40
-    new-instance v1, Landroidx/compose/foundation/layout/WrapContentElement$Companion$size$1;
-
-    .line 42
-    invoke-direct {v1, p1}, Landroidx/compose/foundation/layout/WrapContentElement$Companion$size$1;-><init>(Landroidx/compose/ui/Alignment;)V
-
-    .line 44
-    invoke-direct {p3, v0, p2, v1, p1}, Landroidx/compose/foundation/layout/WrapContentElement;-><init>(Landroidx/compose/foundation/layout/Direction;ZLkotlin/jvm/functions/Function2;Ljava/lang/Object;)V
-
-    .line 47
-    move-object p1, p3
-
-    .line 50
-    :goto_0
-    invoke-interface {p0, p1}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
-
-    .line 51
-    move-result-object p0
-
-    .line 54
-    return-object p0
-    .line 55
 .end method
 
 .method public static wrapContentWidth$default(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;

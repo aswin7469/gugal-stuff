@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -66,7 +66,7 @@
     move-result-object p1
 
     .line 22
-    const p2, 0x7f0c0055    # @integer/heads_up_notification_decay '5000'
+    const p2, 0x7f0b0066    # @integer/heads_up_notification_decay '5000'
 
     .line 23
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -584,399 +584,399 @@
     move-result-object v1
 
     .line 284
-    const-string v2, "transferStatus="
+    const-string/jumbo v2, "transferStatus="
 
     .line 285
-    invoke-static {v2, v1}, Landroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1}, Landroidx/appsearch/app/AppSearchSchema$Builder$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 287
+    .line 288
     move-result-object v1
 
-    .line 290
+    .line 291
     sget-object v2, Lcom/android/systemui/log/core/LogLevel;->DEBUG:Lcom/android/systemui/log/core/LogLevel;
 
-    .line 291
+    .line 292
     sget-object v3, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderLogger$logRemovalBypass$2;->INSTANCE:Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderLogger$logRemovalBypass$2;
 
-    .line 293
+    .line 294
     invoke-virtual {v0, v11, v2, v3, v4}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
 
-    .line 295
+    .line 296
     move-result-object v2
 
-    .line 298
+    .line 299
     move-object v3, v2
 
-    .line 299
+    .line 300
     check-cast v3, Lcom/android/systemui/log/LogMessageImpl;
 
-    .line 300
+    .line 301
     iput-object v7, v3, Lcom/android/systemui/log/LogMessageImpl;->str1:Ljava/lang/String;
 
-    .line 302
+    .line 303
     iput-object v1, v3, Lcom/android/systemui/log/LogMessageImpl;->str2:Ljava/lang/String;
 
-    .line 304
+    .line 305
     invoke-virtual {v0, v2}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
 
-    .line 306
+    .line 307
     goto/16 :goto_d
 
-    .line 309
+    .line 310
     :cond_10
     iget-object v1, v2, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator;->stateMap:Ljava/util/Map;
 
-    .line 311
+    .line 312
     invoke-virtual/range {p2 .. p2}, Landroid/media/MediaRoute2Info;->getId()Ljava/lang/String;
 
-    .line 313
+    .line 314
     move-result-object v6
-
-    .line 316
-    new-instance v7, Lkotlin/Pair;
 
     .line 317
+    new-instance v7, Lkotlin/Pair;
+
+    .line 318
     invoke-direct {v7, v15, v8}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 319
+    .line 320
     invoke-interface {v1, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 322
+    .line 323
     iget-object v1, v2, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator;->stateMap:Ljava/util/Map;
 
-    .line 325
+    .line 326
     sget-object v6, Lcom/android/systemui/log/core/LogLevel;->DEBUG:Lcom/android/systemui/log/core/LogLevel;
 
-    .line 327
+    .line 328
     sget-object v7, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderLogger$logStateMap$2;->INSTANCE:Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderLogger$logStateMap$2;
 
-    .line 329
+    .line 330
     invoke-virtual {v0, v11, v6, v7, v4}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/core/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/core/LogMessage;
 
-    .line 331
+    .line 332
     move-result-object v6
-
-    .line 334
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 335
-    move-result-object v1
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 338
-    move-object v7, v6
+    .line 336
+    move-result-object v1
 
     .line 339
-    check-cast v7, Lcom/android/systemui/log/LogMessageImpl;
+    move-object v7, v6
 
     .line 340
+    check-cast v7, Lcom/android/systemui/log/LogMessageImpl;
+
+    .line 341
     iput-object v1, v7, Lcom/android/systemui/log/LogMessageImpl;->str1:Ljava/lang/String;
 
-    .line 342
+    .line 343
     invoke-virtual {v0, v6}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/core/LogMessage;)V
 
-    .line 344
+    .line 345
     iget-object v0, v10, Lcom/android/systemui/temporarydisplay/TemporaryViewDisplayController;->listeners:Ljava/util/Set;
 
-    .line 347
+    .line 348
     iget-object v1, v2, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator;->displayListener:Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator$displayListener$1;
 
-    .line 349
+    .line 350
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 351
+    .line 352
     iget-object v0, v2, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator;->context:Landroid/content/Context;
 
-    .line 354
+    .line 355
     invoke-virtual/range {p2 .. p2}, Landroid/media/MediaRoute2Info;->getClientPackageName()Ljava/lang/String;
 
-    .line 356
+    .line 357
     move-result-object v1
 
-    .line 359
+    .line 360
     invoke-virtual/range {p2 .. p2}, Landroid/media/MediaRoute2Info;->getName()Ljava/lang/CharSequence;
 
-    .line 360
+    .line 361
     move-result-object v6
-
-    .line 363
-    invoke-static {v6}, Lkotlin/text/StringsKt__StringsJVMKt;->isBlank(Ljava/lang/CharSequence;)Z
 
     .line 364
+    invoke-static {v6}, Lkotlin/text/StringsKt__StringsJVMKt;->isBlank(Ljava/lang/CharSequence;)Z
+
+    .line 365
     move-result v6
 
-    .line 367
+    .line 368
     if-eqz v6, :cond_11
 
-    .line 368
-    const v6, 0x7f14062c    # @string/media_ttt_default_device_type 'tablet'
+    .line 369
+    const v6, 0x7f130686    # @string/media_ttt_default_device_type 'tablet'
 
-    .line 370
+    .line 371
     invoke-virtual {v0, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 373
+    .line 374
     move-result-object v6
 
-    .line 376
+    .line 377
     goto :goto_a
 
-    .line 377
+    .line 378
     :cond_11
     invoke-virtual/range {p2 .. p2}, Landroid/media/MediaRoute2Info;->getName()Ljava/lang/CharSequence;
 
-    .line 378
+    .line 379
     move-result-object v6
-
-    .line 381
-    invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 382
+    invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 383
     move-result-object v6
 
-    .line 385
+    .line 386
     :goto_a
     invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 386
+    .line 387
     new-instance v7, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator$createChipbarInfo$icon$1;
 
-    .line 389
+    .line 390
     invoke-direct {v7, v1, v9}, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator$createChipbarInfo$icon$1;-><init>(Ljava/lang/String;Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderLogger;)V
 
-    .line 391
+    .line 392
     invoke-static {v0, v1, v5, v7}, Lcom/android/systemui/media/taptotransfer/common/MediaTttUtils$Companion;->getIconInfoFromPackageName(Landroid/content/Context;Ljava/lang/String;ZLkotlin/jvm/functions/Function0;)Lcom/android/systemui/media/taptotransfer/common/IconInfo;
 
-    .line 394
+    .line 395
     move-result-object v1
 
-    .line 397
+    .line 398
     invoke-virtual {v8}, Lcom/android/systemui/media/taptotransfer/sender/ChipStateSender;->getTimeoutLength()Lcom/android/systemui/media/taptotransfer/sender/TimeoutLength;
 
-    .line 398
+    .line 399
     move-result-object v5
 
-    .line 401
+    .line 402
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
-    .line 402
+    .line 403
     move-result v5
 
-    .line 405
+    .line 406
     iget v7, v2, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator;->defaultTimeout:I
 
-    .line 406
+    .line 407
     if-eqz v5, :cond_12
 
-    .line 408
+    .line 409
     if-ne v5, v3, :cond_13
 
-    .line 410
+    .line 411
     mul-int/lit8 v7, v7, 0x2
 
-    .line 412
+    .line 413
     :cond_12
     move/from16 v20, v7
 
-    .line 414
+    .line 415
     goto :goto_b
 
-    .line 416
+    .line 417
     :cond_13
     new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    .line 417
+    .line 418
     invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    .line 419
+    .line 420
     throw v0
 
-    .line 422
+    .line 423
     :goto_b
     new-instance v9, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;
 
-    .line 423
+    .line 424
     invoke-virtual {v1}, Lcom/android/systemui/media/taptotransfer/common/IconInfo;->toTintedIcon()Lcom/android/systemui/common/shared/model/TintedIcon;
 
-    .line 425
+    .line 426
     move-result-object v13
 
-    .line 428
+    .line 429
     invoke-virtual {v8, v0, v6}, Lcom/android/systemui/media/taptotransfer/sender/ChipStateSender;->getChipTextString(Landroid/content/Context;Ljava/lang/String;)Lcom/android/systemui/common/shared/model/Text;
 
-    .line 429
+    .line 430
     move-result-object v14
 
-    .line 432
+    .line 433
     invoke-virtual {v8}, Lcom/android/systemui/media/taptotransfer/sender/ChipStateSender;->getEndItem()Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem;
 
-    .line 433
+    .line 434
     move-result-object v0
 
-    .line 436
+    .line 437
     if-nez v0, :cond_14
 
-    .line 437
+    .line 438
     goto :goto_c
 
-    .line 439
+    .line 440
     :cond_14
     instance-of v1, v0, Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem$Loading;
 
-    .line 440
+    .line 441
     if-eqz v1, :cond_15
 
-    .line 442
+    .line 443
     sget-object v4, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem$Loading;->INSTANCE:Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem$Loading;
 
-    .line 444
+    .line 445
     goto :goto_c
 
-    .line 446
+    .line 447
     :cond_15
     instance-of v1, v0, Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem$Error;
 
-    .line 447
+    .line 448
     if-eqz v1, :cond_16
 
-    .line 449
+    .line 450
     sget-object v4, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem$Error;->INSTANCE:Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem$Error;
 
-    .line 451
+    .line 452
     goto :goto_c
 
-    .line 453
+    .line 454
     :cond_16
     instance-of v0, v0, Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem$UndoButton;
 
-    .line 454
+    .line 455
     if-eqz v0, :cond_18
 
-    .line 456
+    .line 457
     if-eqz p3, :cond_17
 
-    .line 458
+    .line 459
     invoke-virtual {v8}, Lcom/android/systemui/media/taptotransfer/sender/ChipStateSender;->getEndItem()Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem;
 
-    .line 460
+    .line 461
     move-result-object v0
-
-    .line 463
-    check-cast v0, Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem$UndoButton;
 
     .line 464
-    iget-object v3, v0, Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem$UndoButton;->uiEventOnClick:Lcom/android/internal/logging/UiEventLogger$UiEventEnum;
-
-    .line 466
-    invoke-virtual {v8}, Lcom/android/systemui/media/taptotransfer/sender/ChipStateSender;->getEndItem()Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem;
-
-    .line 468
-    move-result-object v0
-
-    .line 471
     check-cast v0, Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem$UndoButton;
 
+    .line 465
+    iget-object v3, v0, Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem$UndoButton;->uiEventOnClick:Lcom/android/internal/logging/UiEventLogger$UiEventEnum;
+
+    .line 467
+    invoke-virtual {v8}, Lcom/android/systemui/media/taptotransfer/sender/ChipStateSender;->getEndItem()Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem;
+
+    .line 469
+    move-result-object v0
+
     .line 472
+    check-cast v0, Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem$UndoButton;
+
+    .line 473
     iget v6, v0, Lcom/android/systemui/media/taptotransfer/sender/SenderEndItem$UndoButton;->newState:I
 
-    .line 474
+    .line 475
     new-instance v0, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator$getUndoButton$onClickListener$1;
 
-    .line 476
+    .line 477
     move-object v1, v0
 
-    .line 478
+    .line 479
     move-object/from16 v2, p0
 
-    .line 479
+    .line 480
     move-object v4, v15
 
-    .line 481
+    .line 482
     move-object/from16 v5, p3
 
-    .line 482
+    .line 483
     move-object/from16 v7, p2
 
-    .line 484
+    .line 485
     invoke-direct/range {v1 .. v7}, Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator$getUndoButton$onClickListener$1;-><init>(Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator;Lcom/android/internal/logging/UiEventLogger$UiEventEnum;Lcom/android/internal/logging/InstanceId;Lcom/android/internal/statusbar/IUndoMediaTransferCallback;ILandroid/media/MediaRoute2Info;)V
 
-    .line 486
+    .line 487
     new-instance v4, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem$Button;
 
-    .line 489
+    .line 490
     new-instance v1, Lcom/android/systemui/common/shared/model/Text$Resource;
 
-    .line 491
-    const v2, 0x7f140629    # @string/media_transfer_undo 'Undo'
+    .line 492
+    const v2, 0x7f130683    # @string/media_transfer_undo 'Undo'
 
-    .line 493
+    .line 494
     invoke-direct {v1, v2}, Lcom/android/systemui/common/shared/model/Text$Resource;-><init>(I)V
 
-    .line 496
+    .line 497
     invoke-direct {v4, v1, v0}, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem$Button;-><init>(Lcom/android/systemui/common/shared/model/Text$Resource;Lcom/android/systemui/media/taptotransfer/sender/MediaTttSenderCoordinator$getUndoButton$onClickListener$1;)V
 
-    .line 499
+    .line 500
     :cond_17
     :goto_c
     invoke-virtual {v8}, Lcom/android/systemui/media/taptotransfer/sender/ChipStateSender;->getTransferStatus()Lcom/android/systemui/media/taptotransfer/sender/TransferStatus;
 
-    .line 502
+    .line 503
     move-result-object v0
 
-    .line 505
+    .line 506
     invoke-virtual {v0}, Lcom/android/systemui/media/taptotransfer/sender/TransferStatus;->getVibrationEffect()Landroid/os/VibrationEffect;
 
-    .line 506
+    .line 507
     move-result-object v16
 
-    .line 509
+    .line 510
     invoke-virtual/range {p2 .. p2}, Landroid/media/MediaRoute2Info;->getId()Ljava/lang/String;
 
-    .line 510
+    .line 511
     move-result-object v21
 
-    .line 513
+    .line 514
     sget-object v22, Lcom/android/systemui/temporarydisplay/ViewPriority;->NORMAL:Lcom/android/systemui/temporarydisplay/ViewPriority;
 
-    .line 514
+    .line 515
     const/16 v17, 0x1
 
-    .line 516
+    .line 517
     const-string v18, "Media Transfer Chip View (Sender)"
 
-    .line 518
+    .line 519
     const-string v19, "MEDIA_TRANSFER_ACTIVATED_SENDER"
 
-    .line 520
+    .line 521
     move-object v12, v9
 
-    .line 522
+    .line 523
     move-object v6, v15
 
-    .line 523
+    .line 524
     move-object v15, v4
 
-    .line 524
+    .line 525
     move-object/from16 v23, v6
 
-    .line 525
+    .line 526
     invoke-direct/range {v12 .. v23}, Lcom/android/systemui/temporarydisplay/chipbar/ChipbarInfo;-><init>(Lcom/android/systemui/common/shared/model/TintedIcon;Lcom/android/systemui/common/shared/model/Text;Lcom/android/systemui/temporarydisplay/chipbar/ChipbarEndItem;Landroid/os/VibrationEffect;ZLjava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/android/systemui/temporarydisplay/ViewPriority;Lcom/android/internal/logging/InstanceId;)V
 
-    .line 527
+    .line 528
     invoke-virtual {v10, v9}, Lcom/android/systemui/temporarydisplay/TemporaryViewDisplayController;->displayView(Lcom/android/systemui/temporarydisplay/TemporaryViewInfo;)V
 
-    .line 530
+    .line 531
     :goto_d
     return-void
 
-    .line 533
+    .line 534
     :cond_18
     new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    .line 534
+    .line 535
     invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    .line 536
+    .line 537
     throw v0
-    .line 539
+    .line 540
 .end method
 
 

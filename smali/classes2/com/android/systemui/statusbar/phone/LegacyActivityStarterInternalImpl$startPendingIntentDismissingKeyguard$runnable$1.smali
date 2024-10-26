@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$startPendingIntentDismissingKeyguard$runnable$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -200,76 +200,73 @@
     move-result-object v0
 
     .line 87
-    check-cast v0, Lcom/android/systemui/assist/AssistManager;
+    check-cast v0, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 88
-    iget-object v0, v0, Lcom/android/systemui/assist/AssistManager;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
+    invoke-virtual {v0}, Lcom/google/android/systemui/assist/AssistManagerGoogle;->hideAssist()V
 
     .line 90
-    invoke-virtual {v0}, Lcom/android/internal/app/AssistUtils;->hideCurrentSession()V
-
-    .line 92
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$startPendingIntentDismissingKeyguard$runnable$1;->this$0:Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;
 
-    .line 95
+    .line 93
     iget-object v0, v0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 97
+    .line 95
     iget-boolean v1, v0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mIsDreaming:Z
 
-    .line 99
+    .line 97
     if-eqz v1, :cond_1
 
-    .line 101
+    .line 99
     :try_start_1
     iget-object v1, v0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mDreamManager:Landroid/service/dreams/IDreamManager;
 
-    .line 103
+    .line 101
     invoke-interface {v1}, Landroid/service/dreams/IDreamManager;->awaken()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 105
+    .line 103
     goto :goto_1
 
-    .line 108
+    .line 106
     :catch_1
     move-exception v1
 
-    .line 109
+    .line 107
     iget-object v0, v0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mLogger:Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;
 
-    .line 110
+    .line 108
     const-string v2, "Unable to awaken from dream"
 
-    .line 112
+    .line 110
     invoke-virtual {v0, v1, v2}, Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;->logException(Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 114
+    .line 112
     :cond_1
     :goto_1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$startPendingIntentDismissingKeyguard$runnable$1;->$intentSentUiThreadCallback:Ljava/lang/Runnable;
 
-    .line 117
+    .line 115
     if-eqz v0, :cond_2
 
-    .line 119
+    .line 117
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl$startPendingIntentDismissingKeyguard$runnable$1;->this$0:Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;
 
-    .line 121
+    .line 119
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/LegacyActivityStarterInternalImpl;->mainExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
-    .line 123
+    .line 121
     const/4 v1, 0x0
 
-    .line 125
+    .line 123
     int-to-long v1, v1
 
-    .line 126
+    .line 124
     invoke-interface {p0, v0, v1, v2}, Lcom/android/systemui/util/concurrency/DelayableExecutor;->executeDelayed(Ljava/lang/Runnable;J)Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
 
-    .line 127
+    .line 125
     :cond_2
     return-void
-    .line 130
+    .line 128
 .end method

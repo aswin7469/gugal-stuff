@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/events/SystemEventCoordinator$privacyStateListener$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/privacy/PrivacyItemController$Callback;
@@ -460,7 +460,7 @@
     move-result-object p1
 
     .line 144
-    const v4, 0x7f050018    # @bool/config_enablePrivacyChipAnimation 'true'
+    const v4, 0x7f05001e    # @bool/config_enablePrivacyChipAnimation 'true'
 
     .line 145
     invoke-virtual {p1, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -571,7 +571,7 @@
     iget-object v0, v1, Lcom/android/systemui/statusbar/events/SystemEventCoordinator;->context:Landroid/content/Context;
 
     .line 216
-    const v2, 0x7f14070f    # @string/ongoing_privacy_chip_content_multiple_apps 'Applications are using your %s.'
+    const v2, 0x7f13076a    # @string/ongoing_privacy_chip_content_multiple_apps 'Applications are using your %s.'
 
     .line 218
     filled-new-array {p1}, [Ljava/lang/Object;

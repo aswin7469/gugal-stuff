@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/ui/transitions/DeviceEntryIconTransition;
@@ -56,183 +56,128 @@
     invoke-direct {v5, v4, v3}, Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;-><init>(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;)V
 
     .line 24
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 27
-    move-result v3
-
-    .line 30
-    if-eqz v3, :cond_0
-
-    .line 31
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 33
-    move-result v3
-
-    .line 36
-    if-eqz v3, :cond_0
-
-    .line 37
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 39
-    move-result v3
-
-    .line 42
-    if-eqz v3, :cond_0
-
-    .line 43
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 45
-    move-result v3
-
-    .line 48
-    if-eqz v3, :cond_0
-
-    .line 49
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 51
-    move-result v3
-
-    .line 54
-    if-eqz v3, :cond_0
-
-    .line 55
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 57
-    :cond_0
     new-instance v3, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;
 
-    .line 60
+    .line 27
     move-object/from16 v4, p2
 
-    .line 62
+    .line 29
     invoke-direct {v3, v4, v1, v2, v5}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;-><init>(Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow;JLcom/android/systemui/keyguard/shared/model/Edge;)V
 
-    .line 64
+    .line 31
     iput-object v3, v0, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel;->transitionAnimation:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;
 
-    .line 67
+    .line 34
     sget v1, Lkotlin/time/Duration;->$r8$clinit:I
 
-    .line 69
+    .line 36
     sget-object v1, Lkotlin/time/DurationUnit;->MILLISECONDS:Lkotlin/time/DurationUnit;
 
-    .line 71
+    .line 38
     const/16 v2, 0x1f4
 
-    .line 73
+    .line 40
     invoke-static {v2, v1}, Lkotlin/time/DurationKt;->toDuration(ILkotlin/time/DurationUnit;)J
 
-    .line 75
+    .line 42
     move-result-wide v7
 
-    .line 78
+    .line 45
     sget-object v9, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$lockscreenAlpha$1;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$lockscreenAlpha$1;
 
-    .line 79
+    .line 46
     sget-object v13, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$lockscreenAlpha$2;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$lockscreenAlpha$2;
 
-    .line 81
+    .line 48
     sget-object v14, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$lockscreenAlpha$3;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$lockscreenAlpha$3;
 
-    .line 83
+    .line 50
     const/4 v15, 0x0
 
-    .line 85
+    .line 52
     const/16 v16, 0x0
 
-    .line 86
+    .line 53
     const-wide/16 v10, 0x0
 
-    .line 88
+    .line 55
     const/4 v12, 0x0
 
-    .line 90
+    .line 57
     const/16 v17, 0xcc
 
-    .line 91
+    .line 58
     move-object v6, v3
 
-    .line 93
+    .line 60
     invoke-static/range {v6 .. v17}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;->sharedFlow-74qcysc$default(Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;JLkotlin/jvm/functions/Function1;JLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroid/view/animation/Interpolator;Ljava/lang/String;I)Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 94
+    .line 61
     move-result-object v4
 
-    .line 97
+    .line 64
     iput-object v4, v0, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel;->lockscreenAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 98
+    .line 65
     invoke-static {v2, v1}, Lkotlin/time/DurationKt;->toDuration(ILkotlin/time/DurationUnit;)J
 
-    .line 100
+    .line 67
     move-result-wide v7
 
-    .line 103
+    .line 70
     sget-object v9, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$notificationAlpha$1;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$notificationAlpha$1;
 
-    .line 104
+    .line 71
     sget-object v14, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$notificationAlpha$2;->INSTANCE:Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$notificationAlpha$2;
 
-    .line 106
+    .line 73
     const/4 v13, 0x0
 
-    .line 108
+    .line 75
     const/16 v17, 0xdc
 
-    .line 109
+    .line 76
     invoke-static/range {v6 .. v17}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;->sharedFlow-74qcysc$default(Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;JLkotlin/jvm/functions/Function1;JLkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroid/view/animation/Interpolator;Ljava/lang/String;I)Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 111
-    move-result-object v1
-
-    .line 114
-    iput-object v1, v0, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel;->notificationAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
-
-    .line 115
+    .line 78
     const/4 v1, 0x0
 
-    .line 117
+    .line 81
     invoke-virtual {v3, v1}, Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder;->immediatelyTransitionTo(F)Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 118
+    .line 82
     move-result-object v1
 
-    .line 121
+    .line 85
     iput-object v1, v0, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel;->deviceEntryBackgroundViewAlpha:Lcom/android/systemui/keyguard/ui/KeyguardTransitionAnimationFlow$FlowBuilder$sharedFlow-74qcysc$$inlined$mapNotNull$1;
 
-    .line 122
+    .line 86
     move-object/from16 v1, p1
 
-    .line 124
+    .line 88
     iget-object v1, v1, Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryUdfpsInteractor;->isUdfpsEnrolledAndEnabled:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 126
+    .line 90
     new-instance v2, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$special$$inlined$flatMapLatest$1;
 
-    .line 128
+    .line 92
     const/4 v3, 0x0
 
-    .line 130
+    .line 94
     invoke-direct {v2, v3, v0}, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel$special$$inlined$flatMapLatest$1;-><init>(Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel;)V
 
-    .line 131
+    .line 95
     invoke-static {v1, v2}, Lkotlinx/coroutines/flow/FlowKt;->transformLatest(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 134
+    .line 98
     move-result-object v1
 
-    .line 137
+    .line 101
     iput-object v1, v0, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDozingTransitionViewModel;->deviceEntryParentViewAlpha:Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 138
+    .line 102
     return-void
-    .line 140
+    .line 104
 .end method
 
 

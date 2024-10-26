@@ -1,6 +1,6 @@
 .class Lcom/android/keyguard/KeyguardSliceView$KeyguardSliceTextView;
 .super Landroid/widget/TextView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # virtual methods
@@ -118,6 +118,7 @@
     .line 26
     :cond_1
     return-void
+    .line 27
 .end method
 
 .method public final updatePadding()V
@@ -151,7 +152,7 @@
     move-result-object v1
 
     .line 19
-    const v2, 0x7f070afc    # @dimen/widget_horizontal_padding '8.0dp'
+    const v2, 0x7f070b5f    # @dimen/widget_horizontal_padding '8.0dp'
 
     .line 20
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -195,7 +196,7 @@
     move-result-object v0
 
     .line 44
-    const v1, 0x7f070afd    # @dimen/widget_icon_padding '8.0dp'
+    const v1, 0x7f070b60    # @dimen/widget_icon_padding '8.0dp'
 
     .line 45
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/KeyguardViewMediator$5;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/animation/ActivityTransitionAnimator$Controller;
@@ -288,7 +288,7 @@
 .end method
 
 .method public final onTransitionAnimationCancelled(Ljava/lang/Boolean;)V
-    .locals 1
+    .locals 2
 
     .line 1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -306,53 +306,44 @@
     iget-boolean v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mOccluded:Z
 
     .line 11
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const-string v1, "KeyguardViewMediator"
 
     .line 13
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)V
 
-    .line 16
-    move-result-object p1
-
-    .line 19
-    const-string v0, "KeyguardViewMediator"
-
-    .line 20
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 22
+    .line 15
     const/4 p1, 0x0
 
-    .line 25
+    .line 18
     iput-boolean p1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mOccludeAnimationPlaying:Z
 
-    .line 26
+    .line 19
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mCentralSurfaces:Lcom/android/systemui/statusbar/phone/CentralSurfaces;
 
-    .line 28
+    .line 21
     check-cast v0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 30
+    .line 23
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->updateIsKeyguard(Z)Z
 
-    .line 32
+    .line 25
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mScrimControllerLazy:Ldagger/Lazy;
 
-    .line 35
+    .line 28
     invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 37
+    .line 30
     move-result-object p0
 
-    .line 40
+    .line 33
     check-cast p0, Lcom/android/systemui/statusbar/phone/ScrimController;
 
-    .line 41
+    .line 34
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/ScrimController;->setOccludeAnimationPlaying(Z)V
 
-    .line 43
+    .line 36
     return-void
-    .line 46
+    .line 39
 .end method
 
 .method public final onTransitionAnimationEnd(Z)V

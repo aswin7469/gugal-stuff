@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/CallbackController;
@@ -136,69 +136,59 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->callNotificationInfo:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallNotificationInfo;
 
     .line 3
-    invoke-static {}, Lcom/android/systemui/Flags;->statusBarScreenSharingChips()Z
-
-    .line 5
-    move-result v1
-
-    .line 8
-    if-nez v1, :cond_0
-
-    .line 9
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->tearDownChipView()Lkotlin/Unit;
 
-    .line 11
-    :cond_0
+    .line 5
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->statusBarWindowController:Lcom/android/systemui/statusbar/window/StatusBarWindowController;
 
-    .line 14
+    .line 8
     iget-object v2, v1, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mCurrentState:Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;
 
-    .line 16
+    .line 10
     const/4 v3, 0x0
 
-    .line 18
+    .line 12
     iput-boolean v3, v2, Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;->mOngoingProcessRequiresStatusBarVisible:Z
 
-    .line 19
+    .line 13
     invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->apply(Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;)V
 
-    .line 21
+    .line 15
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->swipeStatusBarAwayGestureHandler:Lcom/android/systemui/statusbar/gesture/SwipeStatusBarAwayGestureHandler;
 
-    .line 24
+    .line 18
     const-string v2, "OngoingCallController"
 
-    .line 26
+    .line 20
     invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/gesture/GenericGestureDetector;->removeOnGestureDetectedCallback(Ljava/lang/String;)V
 
-    .line 28
+    .line 22
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->sendStateChangeEvent()V
 
-    .line 31
+    .line 25
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->uidObserver:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;
 
-    .line 34
+    .line 28
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->callAppUid:Ljava/lang/Integer;
 
-    .line 36
+    .line 30
     iput-boolean v3, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->isRegistered:Z
 
-    .line 38
+    .line 32
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->this$0:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;
 
-    .line 40
+    .line 34
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->iActivityManager:Landroid/app/IActivityManager;
 
-    .line 42
+    .line 36
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->uidObserver:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;
 
-    .line 44
+    .line 38
     invoke-interface {v0, p0}, Landroid/app/IActivityManager;->unregisterUidObserver(Landroid/app/IUidObserver;)V
 
-    .line 46
+    .line 40
     return-void
-    .line 49
+    .line 43
 .end method
 
 
@@ -496,7 +486,7 @@
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->chipView:Landroid/view/View;
 
     .line 5
-    const v0, 0x7f0b0594    # @id/ongoing_activity_chip_background
+    const v0, 0x7f0a05b9    # @id/ongoing_activity_chip_background
 
     .line 7
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -596,7 +586,7 @@
     if-eqz p0, :cond_0
 
     .line 4
-    const v0, 0x7f0b0596    # @id/ongoing_activity_chip_time
+    const v0, 0x7f0a05bb    # @id/ongoing_activity_chip_time
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -652,7 +642,7 @@
     if-eqz v1, :cond_1
 
     .line 10
-    const v3, 0x7f0b0596    # @id/ongoing_activity_chip_time
+    const v3, 0x7f0a05bb    # @id/ongoing_activity_chip_time
 
     .line 12
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -675,375 +665,352 @@
     const-string v4, "OngoingCallController"
 
     .line 23
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_8
 
     .line 25
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_8
 
     .line 27
-    invoke-static {}, Lcom/android/systemui/Flags;->statusBarScreenSharingChips()Z
+    iget-wide v1, v0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallNotificationInfo;->callStartTime:J
 
     .line 29
-    move-result v1
+    const-wide/16 v5, 0x0
 
-    .line 32
-    const/4 v2, 0x0
+    .line 31
+    cmp-long v5, v1, v5
 
     .line 33
-    const/4 v5, 0x1
-
-    .line 34
-    if-nez v1, :cond_3
+    const/4 v6, 0x0
 
     .line 35
-    iget-wide v6, v0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallNotificationInfo;->callStartTime:J
+    const/4 v7, 0x1
+
+    .line 36
+    if-lez v5, :cond_2
 
     .line 37
-    const-wide/16 v8, 0x0
+    iput-boolean v6, v3, Lcom/android/systemui/statusbar/chips/ui/view/ChipChronometer;->shouldHideText:Z
 
     .line 39
-    cmp-long v1, v6, v8
+    invoke-virtual {v3}, Landroid/widget/Chronometer;->requestLayout()V
 
     .line 41
-    if-lez v1, :cond_2
+    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->systemClock:Lcom/android/systemui/util/time/SystemClock;
 
-    .line 43
-    iput-boolean v2, v3, Lcom/android/systemui/statusbar/chips/ui/view/ChipChronometer;->shouldHideText:Z
+    .line 44
+    check-cast v5, Lcom/android/systemui/util/time/SystemClockImpl;
 
-    .line 45
-    invoke-virtual {v3}, Landroid/widget/Chronometer;->requestLayout()V
+    .line 46
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 47
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->systemClock:Lcom/android/systemui/util/time/SystemClock;
-
-    .line 50
-    check-cast v1, Lcom/android/systemui/util/time/SystemClockImpl;
-
-    .line 52
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 54
+    .line 48
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 57
+    .line 51
     move-result-wide v8
 
-    .line 60
-    sub-long/2addr v6, v8
+    .line 54
+    sub-long/2addr v1, v8
 
-    .line 61
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 55
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 62
+    .line 56
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    .line 65
+    .line 59
     move-result-wide v8
 
-    .line 68
-    add-long/2addr v8, v6
+    .line 62
+    add-long/2addr v8, v1
 
-    .line 69
+    .line 63
     invoke-virtual {v3, v8, v9}, Lcom/android/systemui/statusbar/chips/ui/view/ChipChronometer;->setBase(J)V
 
-    .line 70
+    .line 64
     invoke-virtual {v3}, Landroid/widget/Chronometer;->start()V
 
-    .line 73
+    .line 67
     goto :goto_1
 
-    .line 76
+    .line 70
     :cond_2
-    iput-boolean v5, v3, Lcom/android/systemui/statusbar/chips/ui/view/ChipChronometer;->shouldHideText:Z
+    iput-boolean v7, v3, Lcom/android/systemui/statusbar/chips/ui/view/ChipChronometer;->shouldHideText:Z
 
-    .line 77
+    .line 71
     invoke-virtual {v3}, Landroid/widget/Chronometer;->requestLayout()V
 
-    .line 79
+    .line 73
     invoke-virtual {v3}, Landroid/widget/Chronometer;->stop()V
 
-    .line 82
+    .line 76
     :goto_1
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->updateChipClickListener()V
 
-    .line 85
-    :cond_3
+    .line 79
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->uidObserver:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;
 
+    .line 82
+    iget-object v2, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->callAppUid:Ljava/lang/Integer;
+
+    .line 84
+    iget v3, v0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallNotificationInfo;->uid:I
+
+    .line 86
+    if-nez v2, :cond_3
+
     .line 88
-    iget-object v3, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->callAppUid:Ljava/lang/Integer;
-
-    .line 90
-    iget v6, v0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallNotificationInfo;->uid:I
-
-    .line 92
-    if-nez v3, :cond_4
-
-    .line 94
     goto :goto_2
 
-    .line 96
-    :cond_4
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+    .line 90
+    :cond_3
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    .line 91
+    move-result v2
+
+    .line 94
+    if-ne v2, v3, :cond_4
+
+    .line 95
+    goto :goto_3
 
     .line 97
-    move-result v3
-
-    .line 100
-    if-ne v3, v6, :cond_5
-
-    .line 101
-    goto :goto_3
-
-    .line 103
-    :cond_5
+    :cond_4
     :goto_2
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 104
-    move-result-object v3
-
-    .line 107
-    iput-object v3, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->callAppUid:Ljava/lang/Integer;
-
-    .line 108
-    :try_start_0
-    iget-object v3, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->this$0:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;
-
-    .line 110
-    iget-object v7, v3, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->iActivityManager:Landroid/app/IActivityManager;
-
-    .line 112
-    iget-object v3, v3, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->context:Landroid/content/Context;
-
-    .line 114
-    invoke-virtual {v3}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
-
-    .line 116
-    move-result-object v3
-
-    .line 119
-    invoke-interface {v7, v6, v3}, Landroid/app/IActivityManager;->getUidProcessState(ILjava/lang/String;)I
-
-    .line 120
-    move-result v3
-
-    .line 123
-    const/4 v6, 0x2
-
-    .line 124
-    if-gt v3, v6, :cond_6
-
-    .line 125
-    move v2, v5
-
-    .line 127
-    :cond_6
-    iput-boolean v2, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->isCallAppVisible:Z
-
-    .line 128
-    iget-boolean v2, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->isRegistered:Z
-
-    .line 130
-    if-eqz v2, :cond_7
-
-    .line 132
-    goto :goto_3
-
-    .line 134
-    :cond_7
-    iget-object v2, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->this$0:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;
-
-    .line 135
-    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->iActivityManager:Landroid/app/IActivityManager;
-
-    .line 137
-    iget-object v6, v2, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->uidObserver:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;
-
-    .line 139
-    iget-object v2, v2, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->context:Landroid/content/Context;
-
-    .line 141
-    invoke-virtual {v2}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
-
-    .line 143
+    .line 98
     move-result-object v2
 
-    .line 146
-    const/4 v7, -0x1
+    .line 101
+    iput-object v2, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->callAppUid:Ljava/lang/Integer;
 
-    .line 147
-    invoke-interface {v3, v6, v5, v7, v2}, Landroid/app/IActivityManager;->registerUidObserver(Landroid/app/IUidObserver;IILjava/lang/String;)V
+    .line 102
+    :try_start_0
+    iget-object v2, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->this$0:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;
 
-    .line 148
-    iput-boolean v5, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->isRegistered:Z
+    .line 104
+    iget-object v5, v2, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->iActivityManager:Landroid/app/IActivityManager;
+
+    .line 106
+    iget-object v2, v2, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->context:Landroid/content/Context;
+
+    .line 108
+    invoke-virtual {v2}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
+
+    .line 110
+    move-result-object v2
+
+    .line 113
+    invoke-interface {v5, v3, v2}, Landroid/app/IActivityManager;->getUidProcessState(ILjava/lang/String;)I
+
+    .line 114
+    move-result v2
+
+    .line 117
+    const/4 v3, 0x2
+
+    .line 118
+    if-gt v2, v3, :cond_5
+
+    .line 119
+    move v6, v7
+
+    .line 121
+    :cond_5
+    iput-boolean v6, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->isCallAppVisible:Z
+
+    .line 122
+    iget-boolean v2, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->isRegistered:Z
+
+    .line 124
+    if-eqz v2, :cond_6
+
+    .line 126
+    goto :goto_3
+
+    .line 128
+    :cond_6
+    iget-object v2, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->this$0:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;
+
+    .line 129
+    iget-object v3, v2, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->iActivityManager:Landroid/app/IActivityManager;
+
+    .line 131
+    iget-object v5, v2, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->uidObserver:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;
+
+    .line 133
+    iget-object v2, v2, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->context:Landroid/content/Context;
+
+    .line 135
+    invoke-virtual {v2}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
+
+    .line 137
+    move-result-object v2
+
+    .line 140
+    const/4 v6, -0x1
+
+    .line 141
+    invoke-interface {v3, v5, v7, v6, v2}, Landroid/app/IActivityManager;->registerUidObserver(Landroid/app/IUidObserver;IILjava/lang/String;)V
+
+    .line 142
+    iput-boolean v7, v1, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallAppUidObserver;->isRegistered:Z
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 151
+    .line 145
     goto :goto_3
 
-    .line 153
+    .line 147
     :catch_0
     move-exception v1
 
-    .line 154
+    .line 148
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 155
+    .line 149
     const-string v3, "Security exception when trying to set up uid observer: "
 
-    .line 157
+    .line 151
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 159
+    .line 153
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 162
+    .line 156
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 165
+    .line 159
     move-result-object v1
 
-    .line 168
+    .line 162
     invoke-static {v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
+    .line 163
     :goto_3
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallNotificationInfo;->statusBarSwipedAway:Z
 
-    .line 172
-    if-nez v0, :cond_8
+    .line 166
+    if-nez v0, :cond_7
 
-    .line 174
+    .line 168
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->statusBarWindowController:Lcom/android/systemui/statusbar/window/StatusBarWindowController;
 
-    .line 176
+    .line 170
     iget-object v1, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mCurrentState:Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;
 
-    .line 178
-    iput-boolean v5, v1, Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;->mOngoingProcessRequiresStatusBarVisible:Z
+    .line 172
+    iput-boolean v7, v1, Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;->mOngoingProcessRequiresStatusBarVisible:Z
 
-    .line 180
+    .line 174
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->apply(Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;)V
 
-    .line 182
-    :cond_8
+    .line 176
+    :cond_7
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->updateGestureListening()V
 
-    .line 185
+    .line 179
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->sendStateChangeEvent()V
 
-    .line 188
+    .line 182
     goto :goto_4
 
-    .line 191
-    :cond_9
+    .line 185
+    :cond_8
     iput-object v2, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->callNotificationInfo:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallNotificationInfo;
 
-    .line 192
+    .line 186
     sget-boolean p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallControllerKt;->DEBUG:Z
 
-    .line 194
-    if-eqz p0, :cond_a
+    .line 188
+    if-eqz p0, :cond_9
 
-    .line 196
+    .line 190
     const-string p0, "Ongoing call chip view could not be found; Not displaying chip in status bar"
 
-    .line 198
+    .line 192
     invoke-static {v4, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
-    :cond_a
+    .line 194
+    :cond_9
     :goto_4
     return-void
-    .line 203
+    .line 197
 .end method
 
 .method public final updateChipClickListener()V
     .locals 4
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->statusBarScreenSharingChips()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    return-void
-
-    .line 8
-    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->callNotificationInfo:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallNotificationInfo;
 
-    .line 9
-    if-nez v0, :cond_1
+    .line 2
+    if-nez v0, :cond_0
 
-    .line 11
+    .line 4
     return-void
 
-    .line 13
-    :cond_1
+    .line 6
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->chipView:Landroid/view/View;
 
-    .line 14
+    .line 7
     const/4 v1, 0x0
 
-    .line 16
-    if-eqz v0, :cond_2
+    .line 9
+    if-eqz v0, :cond_1
 
-    .line 17
-    const v2, 0x7f0b0594    # @id/ongoing_activity_chip_background
+    .line 10
+    const v2, 0x7f0a05b9    # @id/ongoing_activity_chip_background
 
-    .line 19
+    .line 12
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 22
+    .line 15
     move-result-object v2
 
-    .line 25
+    .line 18
     goto :goto_0
 
-    .line 26
-    :cond_2
+    .line 19
+    :cond_1
     move-object v2, v1
 
-    .line 27
+    .line 20
     :goto_0
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;->callNotificationInfo:Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallNotificationInfo;
 
-    .line 28
-    if-eqz v3, :cond_3
+    .line 21
+    if-eqz v3, :cond_2
 
-    .line 30
+    .line 23
     iget-object v1, v3, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$CallNotificationInfo;->intent:Landroid/app/PendingIntent;
 
-    .line 32
-    :cond_3
-    if-eqz v0, :cond_4
+    .line 25
+    :cond_2
+    if-eqz v0, :cond_3
 
-    .line 34
-    if-eqz v2, :cond_4
+    .line 27
+    if-eqz v2, :cond_3
 
-    .line 36
-    if-eqz v1, :cond_4
+    .line 29
+    if-eqz v1, :cond_3
 
-    .line 38
+    .line 31
     new-instance v3, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$updateChipClickListener$1;
 
-    .line 40
+    .line 33
     invoke-direct {v3, p0, v1, v2}, Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController$updateChipClickListener$1;-><init>(Lcom/android/systemui/statusbar/phone/ongoingcall/OngoingCallController;Landroid/app/PendingIntent;Landroid/view/View;)V
 
-    .line 42
+    .line 35
     invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 45
-    :cond_4
+    .line 38
+    :cond_3
     return-void
-    .line 48
+    .line 41
 .end method
 
 .method public final updateGestureListening()V

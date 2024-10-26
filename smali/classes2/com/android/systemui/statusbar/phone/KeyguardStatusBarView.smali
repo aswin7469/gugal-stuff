@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;
 .super Landroid/widget/RelativeLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -151,7 +151,7 @@
     move-result-object v0
 
     .line 5
-    const v1, 0x7f070aa6    # @dimen/system_icons_switcher_hidden_expanded_margin '16.0dp'
+    const v1, 0x7f070b00    # @dimen/system_icons_switcher_hidden_expanded_margin '16.0dp'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -163,7 +163,7 @@
     iput v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mSystemIconsSwitcherHiddenExpandedMargin:I
 
     .line 13
-    const v1, 0x7f0709db    # @dimen/status_bar_padding_end '4.0dp'
+    const v1, 0x7f070a33    # @dimen/status_bar_padding_end '4.0dp'
 
     .line 15
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -175,7 +175,7 @@
     iput v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mStatusBarPaddingEnd:I
 
     .line 22
-    const v1, 0x7f070841    # @dimen/ongoing_appops_dot_min_padding '20.0dp'
+    const v1, 0x7f070884    # @dimen/ongoing_appops_dot_min_padding '20.0dp'
 
     .line 24
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -193,7 +193,7 @@
     move-result-object v1
 
     .line 36
-    const v2, 0x7f07027f    # @dimen/display_cutout_margin_consumption '0.0px'
+    const v2, 0x7f0702a1    # @dimen/display_cutout_margin_consumption '0.0px'
 
     .line 37
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -229,7 +229,7 @@
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mShowPercentAvailable:Z
 
     .line 61
-    const p0, 0x7f070928    # @dimen/rounded_corner_content_padding '8.0dp'
+    const p0, 0x7f070978    # @dimen/rounded_corner_content_padding '@android:dimen/secondary_rounded_corner_radius_top'
 
     .line 63
     invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -267,7 +267,7 @@
     move-result-object v0
 
     .line 19
-    const v1, 0x7f070783    # @dimen/multi_user_avatar_keyguard_size '22.0dp'
+    const v1, 0x7f0707c5    # @dimen/multi_user_avatar_keyguard_size '22.0dp'
 
     .line 20
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -306,7 +306,7 @@
     move-result-object v1
 
     .line 48
-    const v2, 0x7f0709dd    # @dimen/status_bar_padding_top '0.0dp'
+    const v2, 0x7f070a35    # @dimen/status_bar_padding_top '0.0dp'
 
     .line 49
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -360,7 +360,7 @@
     move-result-object v2
 
     .line 86
-    const v3, 0x7f070986    # @dimen/signal_cluster_battery_padding '6.0dp'
+    const v3, 0x7f0709dd    # @dimen/signal_cluster_battery_padding '6.0dp'
 
     .line 87
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -390,7 +390,7 @@
     move-result-object v0
 
     .line 108
-    const v1, 0x7f0709d0    # @dimen/status_bar_icons_padding_start '3.0dp'
+    const v1, 0x7f070a28    # @dimen/status_bar_icons_padding_start '3.0dp'
 
     .line 109
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -405,7 +405,7 @@
     move-result-object v1
 
     .line 119
-    const v2, 0x7f0709d1    # @dimen/status_bar_icons_padding_top '0.0dp'
+    const v2, 0x7f070a29    # @dimen/status_bar_icons_padding_top '0.0dp'
 
     .line 120
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -420,7 +420,7 @@
     move-result-object v2
 
     .line 130
-    const v3, 0x7f0709cf    # @dimen/status_bar_icons_padding_end '4.0dp'
+    const v3, 0x7f070a27    # @dimen/status_bar_icons_padding_end '4.0dp'
 
     .line 131
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -435,7 +435,7 @@
     move-result-object v3
 
     .line 141
-    const v4, 0x7f0709ce    # @dimen/status_bar_icons_padding_bottom '0.0dp'
+    const v4, 0x7f070a26    # @dimen/status_bar_icons_padding_bottom '0.0dp'
 
     .line 142
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -492,7 +492,7 @@
     move-result-object v0
 
     .line 181
-    const v2, 0x7f07033a    # @dimen/keyguard_carrier_text_margin '@dimen/status_bar_padding_start'
+    const v2, 0x7f070376    # @dimen/keyguard_carrier_text_margin '16.0dp'
 
     .line 182
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -559,7 +559,7 @@
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b07c1    # @id/system_icons_container
+    const v0, 0x7f0a07f0    # @id/system_icons_container
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -571,7 +571,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mSystemIconsContainer:Landroid/view/View;
 
     .line 12
-    const v0, 0x7f0b07c0    # @id/system_icons
+    const v0, 0x7f0a07ef    # @id/system_icons
 
     .line 14
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -583,7 +583,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mSystemIcons:Landroid/view/View;
 
     .line 21
-    const v0, 0x7f0b0547    # @id/multi_user_avatar
+    const v0, 0x7f0a056b    # @id/multi_user_avatar
 
     .line 23
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -598,7 +598,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mMultiUserAvatar:Landroid/widget/ImageView;
 
     .line 32
-    const v0, 0x7f0b03ce    # @id/keyguard_carrier_text
+    const v0, 0x7f0a03ef    # @id/keyguard_carrier_text
 
     .line 34
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -616,7 +616,7 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mSystemIconsContainer:Landroid/view/View;
 
     .line 45
-    const v1, 0x7f0b0110    # @id/battery
+    const v1, 0x7f0a0115    # @id/battery
 
     .line 47
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -631,7 +631,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mBatteryView:Lcom/android/systemui/battery/BatteryMeterView;
 
     .line 56
-    const v0, 0x7f0b0240    # @id/cutout_space_view
+    const v0, 0x7f0a024b    # @id/cutout_space_view
 
     .line 58
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -643,7 +643,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCutoutSpace:Landroid/view/View;
 
     .line 65
-    const v0, 0x7f0b0772    # @id/status_icon_area
+    const v0, 0x7f0a07a1    # @id/status_icon_area
 
     .line 67
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -658,7 +658,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mStatusIconArea:Landroid/view/ViewGroup;
 
     .line 76
-    const v0, 0x7f0b0763    # @id/statusIcons
+    const v0, 0x7f0a0792    # @id/statusIcons
 
     .line 78
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -673,7 +673,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mStatusIconContainer:Lcom/android/systemui/statusbar/phone/StatusIconContainer;
 
     .line 87
-    const v0, 0x7f0b0892    # @id/user_switcher_container
+    const v0, 0x7f0a08c5    # @id/user_switcher_container
 
     .line 89
     invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -697,7 +697,7 @@
     move-result-object v0
 
     .line 105
-    const v1, 0x7f050019    # @bool/config_enablePrivacyDot 'true'
+    const v1, 0x7f05001f    # @bool/config_enablePrivacyDot 'true'
 
     .line 106
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -824,7 +824,7 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mUserSwitcherContainer:Lcom/android/systemui/statusbar/phone/userswitcher/StatusBarUserSwitcherContainer;
 
     .line 31
-    const v1, 0x7f0b0232    # @id/current_user_name
+    const v1, 0x7f0a023d    # @id/current_user_name
 
     .line 33
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -880,7 +880,7 @@
     const/4 v1, 0x0
 
     .line 19
-    const v2, 0x7f04073b    # @attr/wallpaperTextColor
+    const v2, 0x7f040741    # @attr/wallpaperTextColor
 
     .line 20
     invoke-static {v2, v1, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
@@ -907,13 +907,13 @@
     cmpg-double v1, v3, v5
 
     .line 36
-    const v3, 0x7f060142    # @color/light_mode_icon_color_single_tone '#ffffff'
+    const v3, 0x7f06014c    # @color/light_mode_icon_color_single_tone '#ffffff'
 
     .line 38
     if-gez v1, :cond_1
 
     .line 41
-    const v4, 0x7f060099    # @color/dark_mode_icon_color_single_tone '#99000000'
+    const v4, 0x7f06009a    # @color/dark_mode_icon_color_single_tone '#99000000'
 
     .line 43
     goto :goto_1
@@ -970,7 +970,7 @@
     iget-object v4, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mUserSwitcherContainer:Lcom/android/systemui/statusbar/phone/userswitcher/StatusBarUserSwitcherContainer;
 
     .line 70
-    const v5, 0x7f0b0232    # @id/current_user_name
+    const v5, 0x7f0a023d    # @id/current_user_name
 
     .line 72
     invoke-virtual {v4, v5}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -1029,7 +1029,7 @@
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mEmptyTintRect:Ljava/util/ArrayList;
 
     .line 113
-    const v1, 0x7f0b0110    # @id/battery
+    const v1, 0x7f0a0115    # @id/battery
 
     .line 115
     invoke-virtual {p0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -1054,7 +1054,7 @@
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mEmptyTintRect:Ljava/util/ArrayList;
 
     .line 131
-    const v1, 0x7f0b01dc    # @id/clock
+    const v1, 0x7f0a01e7    # @id/clock
 
     .line 133
     invoke-virtual {p0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -1078,350 +1078,6 @@
     :cond_7
     return-void
     .line 149
-.end method
-
-.method public final setDisplayCutout(Landroid/view/DisplayCutout;Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider;)Z
-    .locals 4
-
-    .line 1
-    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
-
-    .line 2
-    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 4
-    move-result-object p1
-
-    .line 7
-    iget-object v0, p0, Landroid/widget/RelativeLayout;->mContext:Landroid/content/Context;
-
-    .line 8
-    invoke-static {v0}, Lcom/android/systemui/util/Utils;->getStatusBarHeaderHeightKeyguard(Landroid/content/Context;)I
-
-    .line 10
-    move-result v0
-
-    .line 13
-    iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 14
-    invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 16
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
-
-    .line 19
-    const/4 v0, 0x0
-
-    .line 21
-    if-nez p1, :cond_0
-
-    .line 22
-    move p1, v0
-
-    .line 24
-    goto :goto_0
-
-    .line 25
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/DisplayCutout;->getWaterfallInsets()Landroid/graphics/Insets;
-
-    .line 26
-    move-result-object p1
-
-    .line 29
-    iget p1, p1, Landroid/graphics/Insets;->top:I
-
-    .line 30
-    :goto_0
-    invoke-virtual {p2}, Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider;->getStatusBarContentInsetsForCurrentRotation()Landroid/graphics/Insets;
-
-    .line 32
-    move-result-object v1
-
-    .line 35
-    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
-
-    .line 36
-    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->isLayoutRtl()Z
-
-    .line 38
-    move-result v1
-
-    .line 41
-    if-eqz v1, :cond_1
-
-    .line 42
-    iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mIsPrivacyDotEnabled:Z
-
-    .line 44
-    if-eqz v1, :cond_1
-
-    .line 46
-    iget v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mMinDotWidth:I
-
-    .line 48
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
-
-    .line 50
-    iget v2, v2, Landroid/graphics/Insets;->left:I
-
-    .line 52
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
-
-    .line 54
-    move-result v1
-
-    .line 57
-    goto :goto_1
-
-    .line 58
-    :cond_1
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
-
-    .line 59
-    iget v1, v1, Landroid/graphics/Insets;->left:I
-
-    .line 61
-    :goto_1
-    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->isLayoutRtl()Z
-
-    .line 63
-    move-result v2
-
-    .line 66
-    if-nez v2, :cond_2
-
-    .line 67
-    iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mIsPrivacyDotEnabled:Z
-
-    .line 69
-    if-eqz v2, :cond_2
-
-    .line 71
-    iget v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mMinDotWidth:I
-
-    .line 73
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
-
-    .line 75
-    iget v3, v3, Landroid/graphics/Insets;->right:I
-
-    .line 77
-    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
-
-    .line 79
-    move-result v2
-
-    .line 82
-    goto :goto_2
-
-    .line 83
-    :cond_2
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
-
-    .line 84
-    iget v2, v2, Landroid/graphics/Insets;->right:I
-
-    .line 86
-    :goto_2
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
-
-    .line 88
-    iget v3, v3, Landroid/graphics/Insets;->top:I
-
-    .line 90
-    add-int/2addr p1, v3
-
-    .line 92
-    invoke-virtual {p0, v1, p1, v2, v0}, Landroid/widget/RelativeLayout;->setPadding(IIII)V
-
-    .line 93
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
-
-    .line 96
-    if-eqz p1, :cond_6
-
-    .line 98
-    invoke-virtual {p2}, Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider;->currentRotationHasCornerCutout()Z
-
-    .line 100
-    move-result p1
-
-    .line 103
-    if-eqz p1, :cond_3
-
-    .line 104
-    goto :goto_4
-
-    .line 106
-    :cond_3
-    iget p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mLayoutState:I
-
-    .line 107
-    const/4 p2, 0x1
-
-    .line 109
-    if-ne p1, p2, :cond_4
-
-    .line 110
-    goto :goto_3
-
-    .line 112
-    :cond_4
-    iput p2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mLayoutState:I
-
-    .line 113
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCutoutSpace:Landroid/view/View;
-
-    .line 115
-    if-nez p1, :cond_5
-
-    .line 117
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->updateLayoutParamsNoCutout()Z
-
-    .line 119
-    :cond_5
-    new-instance p1, Landroid/graphics/Rect;
-
-    .line 122
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
-
-    .line 124
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
-
-    .line 127
-    const/16 v2, 0x30
-
-    .line 129
-    invoke-static {v2, p1, v1}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->boundsFromDirection(ILandroid/graphics/Rect;Landroid/view/DisplayCutout;)V
-
-    .line 131
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCutoutSpace:Landroid/view/View;
-
-    .line 134
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 136
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCutoutSpace:Landroid/view/View;
-
-    .line 139
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 141
-    move-result-object v1
-
-    .line 144
-    check-cast v1, Landroid/widget/RelativeLayout$LayoutParams;
-
-    .line 145
-    iget v2, p1, Landroid/graphics/Rect;->left:I
-
-    .line 147
-    iget v3, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCutoutSideNudge:I
-
-    .line 149
-    add-int/2addr v2, v3
-
-    .line 151
-    iput v2, p1, Landroid/graphics/Rect;->left:I
-
-    .line 152
-    iget v2, p1, Landroid/graphics/Rect;->right:I
-
-    .line 154
-    sub-int/2addr v2, v3
-
-    .line 156
-    iput v2, p1, Landroid/graphics/Rect;->right:I
-
-    .line 157
-    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
-
-    .line 159
-    move-result v2
-
-    .line 162
-    iput v2, v1, Landroid/widget/RelativeLayout$LayoutParams;->width:I
-
-    .line 163
-    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
-
-    .line 165
-    move-result p1
-
-    .line 168
-    iput p1, v1, Landroid/widget/RelativeLayout$LayoutParams;->height:I
-
-    .line 169
-    const/16 p1, 0xd
-
-    .line 171
-    invoke-virtual {v1, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
-
-    .line 173
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
-
-    .line 176
-    invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 178
-    move-result-object p1
-
-    .line 181
-    check-cast p1, Landroid/widget/RelativeLayout$LayoutParams;
-
-    .line 182
-    const/16 v1, 0x10
-
-    .line 184
-    const v2, 0x7f0b0240    # @id/cutout_space_view
-
-    .line 186
-    invoke-virtual {p1, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
-
-    .line 189
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mStatusIconArea:Landroid/view/ViewGroup;
-
-    .line 192
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 194
-    move-result-object p0
-
-    .line 197
-    check-cast p0, Landroid/widget/RelativeLayout$LayoutParams;
-
-    .line 198
-    invoke-virtual {p0, p2, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
-
-    .line 200
-    const/4 p1, -0x1
-
-    .line 203
-    iput p1, p0, Landroid/widget/RelativeLayout$LayoutParams;->width:I
-
-    .line 204
-    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout$LayoutParams;->setMarginStart(I)V
-
-    .line 206
-    move v0, p2
-
-    .line 209
-    :goto_3
-    return v0
-
-    .line 210
-    :cond_6
-    :goto_4
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->updateLayoutParamsNoCutout()Z
-
-    .line 211
-    move-result p0
-
-    .line 214
-    return p0
-    .line 215
 .end method
 
 .method public final setVisibility(I)V
@@ -1542,7 +1198,7 @@
     const/16 v1, 0x10
 
     .line 28
-    const v2, 0x7f0b0772    # @id/status_icon_area
+    const v2, 0x7f0a07a1    # @id/status_icon_area
 
     .line 30
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
@@ -1578,7 +1234,7 @@
     move-result-object p0
 
     .line 54
-    const v2, 0x7f070aa5    # @dimen/system_icons_super_container_margin_start '16.0dp'
+    const v2, 0x7f070aff    # @dimen/system_icons_super_container_margin_start '16.0dp'
 
     .line 55
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1862,7 +1518,7 @@
 .end method
 
 .method public final updateWindowInsets(Landroid/view/WindowInsets;Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider;)Landroid/view/WindowInsets;
-    .locals 1
+    .locals 5
 
     .line 1
     const/4 v0, 0x0
@@ -1874,34 +1530,361 @@
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getRootWindowInsets()Landroid/view/WindowInsets;
 
     .line 5
-    move-result-object v0
+    move-result-object v1
 
     .line 8
-    invoke-virtual {v0}, Landroid/view/WindowInsets;->getDisplayCutout()Landroid/view/DisplayCutout;
+    invoke-virtual {v1}, Landroid/view/WindowInsets;->getDisplayCutout()Landroid/view/DisplayCutout;
 
     .line 9
-    move-result-object v0
+    move-result-object v1
 
     .line 12
-    invoke-virtual {p0, v0, p2}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->setDisplayCutout(Landroid/view/DisplayCutout;Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider;)Z
+    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
 
     .line 13
-    move-result p2
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    .line 16
-    if-eqz p2, :cond_0
+    .line 15
+    move-result-object v1
 
-    .line 17
-    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->requestLayout()V
+    .line 18
+    iget-object v2, p0, Landroid/widget/RelativeLayout;->mContext:Landroid/content/Context;
 
     .line 19
-    :cond_0
-    invoke-super {p0, p1}, Landroid/widget/RelativeLayout;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    invoke-static {v2}, Lcom/android/systemui/util/Utils;->getStatusBarHeaderHeightKeyguard(Landroid/content/Context;)I
 
-    .line 22
-    move-result-object p0
+    .line 21
+    move-result v2
+
+    .line 24
+    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 25
+    invoke-virtual {p0, v1}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 27
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
+
+    .line 30
+    if-nez v1, :cond_0
+
+    .line 32
+    move v1, v0
+
+    .line 34
+    goto :goto_0
+
+    .line 35
+    :cond_0
+    invoke-virtual {v1}, Landroid/view/DisplayCutout;->getWaterfallInsets()Landroid/graphics/Insets;
+
+    .line 36
+    move-result-object v1
+
+    .line 39
+    iget v1, v1, Landroid/graphics/Insets;->top:I
+
+    .line 40
+    :goto_0
+    invoke-virtual {p2}, Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider;->getStatusBarContentInsetsForCurrentRotation()Landroid/graphics/Insets;
+
+    .line 42
+    move-result-object v2
+
+    .line 45
+    iput-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
+
+    .line 46
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->isLayoutRtl()Z
+
+    .line 48
+    move-result v2
+
+    .line 51
+    if-eqz v2, :cond_1
+
+    .line 52
+    iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mIsPrivacyDotEnabled:Z
+
+    .line 54
+    if-eqz v2, :cond_1
+
+    .line 56
+    iget v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mMinDotWidth:I
+
+    .line 58
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
+
+    .line 60
+    iget v3, v3, Landroid/graphics/Insets;->left:I
+
+    .line 62
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    .line 64
+    move-result v2
+
+    .line 67
+    goto :goto_1
+
+    .line 68
+    :cond_1
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
+
+    .line 69
+    iget v2, v2, Landroid/graphics/Insets;->left:I
+
+    .line 71
+    :goto_1
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->isLayoutRtl()Z
+
+    .line 73
+    move-result v3
+
+    .line 76
+    if-nez v3, :cond_2
+
+    .line 77
+    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mIsPrivacyDotEnabled:Z
+
+    .line 79
+    if-eqz v3, :cond_2
+
+    .line 81
+    iget v3, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mMinDotWidth:I
+
+    .line 83
+    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
+
+    .line 85
+    iget v4, v4, Landroid/graphics/Insets;->right:I
+
+    .line 87
+    invoke-static {v3, v4}, Ljava/lang/Math;->max(II)I
+
+    .line 89
+    move-result v3
+
+    .line 92
+    goto :goto_2
+
+    .line 93
+    :cond_2
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
+
+    .line 94
+    iget v3, v3, Landroid/graphics/Insets;->right:I
+
+    .line 96
+    :goto_2
+    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mPadding:Landroid/graphics/Insets;
+
+    .line 98
+    iget v4, v4, Landroid/graphics/Insets;->top:I
+
+    .line 100
+    add-int/2addr v1, v4
+
+    .line 102
+    invoke-virtual {p0, v2, v1, v3, v0}, Landroid/widget/RelativeLayout;->setPadding(IIII)V
+
+    .line 103
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
+
+    .line 106
+    if-eqz v1, :cond_6
+
+    .line 108
+    invoke-virtual {p2}, Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider;->currentRotationHasCornerCutout()Z
+
+    .line 110
+    move-result p2
+
+    .line 113
+    if-eqz p2, :cond_3
+
+    .line 114
+    goto :goto_3
+
+    .line 116
+    :cond_3
+    iget p2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mLayoutState:I
+
+    .line 117
+    const/4 v1, 0x1
+
+    .line 119
+    if-ne p2, v1, :cond_4
+
+    .line 120
+    goto :goto_4
+
+    .line 122
+    :cond_4
+    iput v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mLayoutState:I
+
+    .line 123
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCutoutSpace:Landroid/view/View;
+
+    .line 125
+    if-nez p2, :cond_5
+
+    .line 127
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->updateLayoutParamsNoCutout()Z
+
+    .line 129
+    :cond_5
+    new-instance p2, Landroid/graphics/Rect;
+
+    .line 132
+    invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
+
+    .line 134
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mDisplayCutout:Landroid/view/DisplayCutout;
+
+    .line 137
+    const/16 v3, 0x30
+
+    .line 139
+    invoke-static {v3, p2, v2}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->boundsFromDirection(ILandroid/graphics/Rect;Landroid/view/DisplayCutout;)V
+
+    .line 141
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCutoutSpace:Landroid/view/View;
+
+    .line 144
+    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 146
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCutoutSpace:Landroid/view/View;
+
+    .line 149
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    .line 151
+    move-result-object v2
+
+    .line 154
+    check-cast v2, Landroid/widget/RelativeLayout$LayoutParams;
+
+    .line 155
+    iget v3, p2, Landroid/graphics/Rect;->left:I
+
+    .line 157
+    iget v4, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCutoutSideNudge:I
+
+    .line 159
+    add-int/2addr v3, v4
+
+    .line 161
+    iput v3, p2, Landroid/graphics/Rect;->left:I
+
+    .line 162
+    iget v3, p2, Landroid/graphics/Rect;->right:I
+
+    .line 164
+    sub-int/2addr v3, v4
+
+    .line 166
+    iput v3, p2, Landroid/graphics/Rect;->right:I
+
+    .line 167
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
+
+    .line 169
+    move-result v3
+
+    .line 172
+    iput v3, v2, Landroid/widget/RelativeLayout$LayoutParams;->width:I
+
+    .line 173
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+
+    .line 175
+    move-result p2
+
+    .line 178
+    iput p2, v2, Landroid/widget/RelativeLayout$LayoutParams;->height:I
+
+    .line 179
+    const/16 p2, 0xd
+
+    .line 181
+    invoke-virtual {v2, p2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    .line 183
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mCarrierLabel:Landroid/widget/TextView;
+
+    .line 186
+    invoke-virtual {p2}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    .line 188
+    move-result-object p2
+
+    .line 191
+    check-cast p2, Landroid/widget/RelativeLayout$LayoutParams;
+
+    .line 192
+    const/16 v2, 0x10
+
+    .line 194
+    const v3, 0x7f0a024b    # @id/cutout_space_view
+
+    .line 196
+    invoke-virtual {p2, v2, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 199
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mStatusIconArea:Landroid/view/ViewGroup;
+
+    .line 202
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    .line 204
+    move-result-object p2
+
+    .line 207
+    check-cast p2, Landroid/widget/RelativeLayout$LayoutParams;
+
+    .line 208
+    invoke-virtual {p2, v1, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 210
+    const/4 v2, -0x1
+
+    .line 213
+    iput v2, p2, Landroid/widget/RelativeLayout$LayoutParams;->width:I
+
+    .line 214
+    invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->setMarginStart(I)V
+
+    .line 216
+    move v0, v1
+
+    .line 219
+    goto :goto_4
+
+    .line 220
+    :cond_6
+    :goto_3
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->updateLayoutParamsNoCutout()Z
+
+    .line 221
+    move-result v0
+
+    .line 224
+    :goto_4
+    if-eqz v0, :cond_7
+
+    .line 225
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->requestLayout()V
+
+    .line 227
+    :cond_7
+    invoke-super {p0, p1}, Landroid/widget/RelativeLayout;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+
+    .line 230
+    move-result-object p0
+
+    .line 233
     return-object p0
-    .line 26
+    .line 234
 .end method

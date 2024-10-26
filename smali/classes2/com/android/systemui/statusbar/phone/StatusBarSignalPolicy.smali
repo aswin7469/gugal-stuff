@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/connectivity/SignalCallback;
@@ -103,7 +103,7 @@
     iput-object p5, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mTunerService:Lcom/android/systemui/tuner/TunerService;
 
     .line 24
-    const p2, 0x1040968    # @android:string/storage_usb_drive
+    const p2, 0x104095f    # @android:string/stk_cc_ss_to_ussd
 
     .line 26
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -115,7 +115,7 @@
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mSlotAirplane:Ljava/lang/String;
 
     .line 33
-    const p2, 0x104097b    # @android:string/time_of_day
+    const p2, 0x1040972    # @android:string/sync_undo_deletes
 
     .line 35
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -127,7 +127,7 @@
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mSlotMobile:Ljava/lang/String;
 
     .line 42
-    const p2, 0x1040974    # @android:string/system_error_wipe_data
+    const p2, 0x104096b    # @android:string/supervised_user_creation_label
 
     .line 44
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -139,7 +139,7 @@
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mSlotEthernet:Ljava/lang/String;
 
     .line 51
-    const p2, 0x104098b    # @android:string/time_placeholder
+    const p2, 0x1040982    # @android:string/time_picker_increment_hour_button
 
     .line 53
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -151,13 +151,13 @@
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mSlotVpn:Ljava/lang/String;
 
     .line 60
-    const p0, 0x104097e    # @android:string/time_picker_decrement_set_am_button
+    const p0, 0x1040975    # @android:string/system_locale_title
 
     .line 62
     invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     .line 65
-    const p0, 0x104096c    # @android:string/suspended_widget_accessibility
+    const p0, 0x1040963    # @android:string/stk_cc_ussd_to_ussd
 
     .line 68
     invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -169,7 +169,7 @@
     move-result-object p0
 
     .line 77
-    const p1, 0x7f050036    # @bool/config_showActivity 'false'
+    const p1, 0x7f050041    # @bool/config_showActivity 'false'
 
     .line 78
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getBoolean(I)Z

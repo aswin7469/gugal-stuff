@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/recents/RecentTasksController$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/BiConsumer;
@@ -173,37 +173,40 @@
     if-ge p2, v1, :cond_0
 
     .line 110
-    invoke-static {v0}, Landroidx/compose/ui/text/input/EditProcessor$generateBatchErrorMessage$1$1$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
     .line 112
-    move-result-object v1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 115
+    .line 114
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 117
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 116
+    .line 120
     move-result-object v2
 
-    .line 119
+    .line 123
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 120
+    .line 124
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 123
+    .line 127
     move-result-object v1
 
-    .line 126
+    .line 130
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 127
+    .line 131
     add-int/lit8 p2, p2, 0x1
 
-    .line 130
+    .line 134
     goto :goto_0
 
-    .line 132
+    .line 136
     :cond_0
     return-void
-    .line 133
+    .line 137
 .end method

@@ -1,21 +1,16 @@
 .class public final Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
-
-# interfaces
-.implements Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final activityStarter:Lcom/android/systemui/plugins/ActivityStarter;
 
-.field public final audioSharingInteractor:Lcom/android/systemui/bluetooth/qsdialog/AudioSharingInteractor;
-
 .field public final backgroundDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
 .field public final bluetoothAutoOnInteractor:Lcom/android/systemui/bluetooth/qsdialog/BluetoothAutoOnInteractor;
 
-.field public final bluetoothDialogDelegateFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$26;
+.field public final bluetoothDialogDelegateFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$27;
 
 .field public final bluetoothStateInteractor:Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;
 
@@ -37,7 +32,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor;Lcom/android/systemui/bluetooth/qsdialog/DeviceItemActionInteractor;Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;Lcom/android/systemui/bluetooth/qsdialog/BluetoothAutoOnInteractor;Lcom/android/systemui/bluetooth/qsdialog/AudioSharingInteractor;Lcom/android/systemui/animation/DialogTransitionAnimator;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/internal/logging/UiEventLogger;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/CoroutineDispatcher;Lkotlinx/coroutines/CoroutineDispatcher;Landroid/content/SharedPreferences;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$26;)V
+.method public constructor <init>(Lcom/android/systemui/bluetooth/qsdialog/DeviceItemInteractor;Lcom/android/systemui/bluetooth/qsdialog/DeviceItemActionInteractor;Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;Lcom/android/systemui/bluetooth/qsdialog/BluetoothAutoOnInteractor;Lcom/android/systemui/bluetooth/qsdialog/AudioSharingInteractor;Lcom/android/systemui/animation/DialogTransitionAnimator;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/internal/logging/UiEventLogger;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/CoroutineDispatcher;Lkotlinx/coroutines/CoroutineDispatcher;Landroid/content/SharedPreferences;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$27;)V
     .locals 0
 
     .line 1
@@ -56,39 +51,36 @@
     iput-object p4, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->bluetoothAutoOnInteractor:Lcom/android/systemui/bluetooth/qsdialog/BluetoothAutoOnInteractor;
 
     .line 11
-    iput-object p5, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->audioSharingInteractor:Lcom/android/systemui/bluetooth/qsdialog/AudioSharingInteractor;
-
-    .line 13
     iput-object p6, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->dialogTransitionAnimator:Lcom/android/systemui/animation/DialogTransitionAnimator;
 
-    .line 15
+    .line 13
     iput-object p7, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->activityStarter:Lcom/android/systemui/plugins/ActivityStarter;
 
-    .line 17
+    .line 15
     iput-object p8, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->uiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
-    .line 19
+    .line 17
     iput-object p9, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->coroutineScope:Lkotlinx/coroutines/CoroutineScope;
 
-    .line 21
+    .line 19
     iput-object p10, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->mainDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 23
+    .line 21
     iput-object p11, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->backgroundDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 25
+    .line 23
     iput-object p12, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->sharedPreferences:Landroid/content/SharedPreferences;
 
-    .line 27
-    iput-object p13, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->bluetoothDialogDelegateFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$26;
+    .line 25
+    iput-object p13, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->bluetoothDialogDelegateFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$27;
 
-    .line 29
+    .line 27
     return-void
-    .line 31
+    .line 29
 .end method
 
 .method public static final access$createBluetoothTileDialog(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 9
+    .locals 11
 
     .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -183,7 +175,7 @@
     iget-object v3, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$1:Ljava/lang/Object;
 
     .line 55
-    check-cast v3, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$26;
+    check-cast v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$27;
 
     .line 57
     iget-object v0, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$0:Ljava/lang/Object;
@@ -195,313 +187,419 @@
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     .line 63
-    goto/16 :goto_3
+    move v4, v1
 
     .line 66
+    move-object v10, v3
+
+    .line 67
+    move-object v3, v0
+
+    .line 68
+    :goto_1
+    move-object v0, v10
+
+    .line 69
+    goto/16 :goto_4
+
+    .line 70
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 68
+    .line 72
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    .line 70
+    .line 74
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 72
+    .line 76
     throw p0
 
-    .line 75
+    .line 79
     :cond_2
     iget p0, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->I$0:I
 
-    .line 76
+    .line 80
     iget-object v2, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$2:Ljava/lang/Object;
 
-    .line 78
+    .line 82
     check-cast v2, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties$Companion;
 
-    .line 80
+    .line 84
     iget-object v3, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$1:Ljava/lang/Object;
 
-    .line 82
-    check-cast v3, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$26;
-
-    .line 84
-    iget-object v5, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$0:Ljava/lang/Object;
-
     .line 86
-    check-cast v5, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
+    check-cast v3, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$27;
 
     .line 88
-    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+    iget-object v5, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$0:Ljava/lang/Object;
 
     .line 90
-    move-object v6, v2
+    check-cast v5, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
-    .line 93
-    move v2, p0
+    .line 92
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     .line 94
+    move-object v6, v2
+
+    .line 97
+    move v2, p0
+
+    .line 98
     move-object p0, v5
 
-    .line 95
-    goto :goto_2
+    .line 99
+    goto :goto_3
 
-    .line 96
+    .line 100
     :cond_3
     iget-object p0, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$0:Ljava/lang/Object;
 
-    .line 97
+    .line 101
     check-cast p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
-    .line 99
-    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
-
-    .line 101
-    goto :goto_1
-
-    .line 104
-    :cond_4
+    .line 103
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     .line 105
-    new-instance p1, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$cachedContentHeight$1;
+    goto :goto_2
 
     .line 108
+    :cond_4
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    .line 109
+    new-instance p1, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$cachedContentHeight$1;
+
+    .line 112
     invoke-direct {p1, p0, v3}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$cachedContentHeight$1;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;Lkotlin/coroutines/Continuation;)V
 
-    .line 110
+    .line 114
     iput-object p0, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$0:Ljava/lang/Object;
-
-    .line 113
-    iput v6, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->label:I
-
-    .line 115
-    iget-object v2, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->backgroundDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
     .line 117
-    invoke-static {v2, p1, v0}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput v6, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->label:I
 
     .line 119
-    move-result-object p1
+    iget-object v2, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->backgroundDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 122
-    if-ne p1, v1, :cond_5
+    .line 121
+    invoke-static {v2, p1, v0}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     .line 123
-    goto/16 :goto_7
+    move-result-object p1
 
-    .line 125
-    :cond_5
-    :goto_1
-    check-cast p1, Ljava/lang/Number;
+    .line 126
+    if-ne p1, v1, :cond_5
 
     .line 127
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    goto/16 :goto_8
 
     .line 129
-    move-result p1
+    :cond_5
+    :goto_2
+    check-cast p1, Ljava/lang/Number;
 
-    .line 132
-    iget-object v2, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->bluetoothDialogDelegateFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$26;
+    .line 131
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
     .line 133
-    sget-object v6, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;->Companion:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties$Companion;
-
-    .line 135
-    iput-object p0, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$0:Ljava/lang/Object;
-
-    .line 137
-    iput-object v2, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$1:Ljava/lang/Object;
-
-    .line 139
-    iput-object v6, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$2:Ljava/lang/Object;
-
-    .line 141
-    iput p1, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->I$0:I
-
-    .line 143
-    iput v5, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->label:I
-
-    .line 145
-    iget-object v5, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->bluetoothStateInteractor:Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;
-
-    .line 147
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 149
-    new-instance v7, Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor$isBluetoothEnabled$2;
-
-    .line 152
-    invoke-direct {v7, v5, v3}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor$isBluetoothEnabled$2;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;Lkotlin/coroutines/Continuation;)V
-
-    .line 154
-    iget-object v3, v5, Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;->backgroundDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
-
-    .line 157
-    invoke-static {v3, v7, v0}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    .line 159
-    move-result-object v3
-
-    .line 162
-    if-ne v3, v1, :cond_6
-
-    .line 163
-    goto :goto_7
-
-    .line 165
-    :cond_6
-    move-object v8, v2
-
-    .line 166
-    move v2, p1
-
-    .line 167
-    move-object p1, v3
-
-    .line 168
-    move-object v3, v8
-
-    .line 169
-    :goto_2
-    check-cast p1, Ljava/lang/Boolean;
-
-    .line 170
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 172
     move-result p1
 
-    .line 175
+    .line 136
+    iget-object v2, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->bluetoothDialogDelegateFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$27;
+
+    .line 137
+    sget-object v6, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;->Companion:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties$Companion;
+
+    .line 139
     iput-object p0, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$0:Ljava/lang/Object;
 
-    .line 176
-    iput-object v3, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$1:Ljava/lang/Object;
+    .line 141
+    iput-object v2, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$1:Ljava/lang/Object;
 
-    .line 178
+    .line 143
     iput-object v6, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$2:Ljava/lang/Object;
 
-    .line 180
-    iput v2, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->I$0:I
+    .line 145
+    iput p1, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->I$0:I
 
-    .line 182
-    iput-boolean p1, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->Z$0:Z
+    .line 147
+    iput v5, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->label:I
 
-    .line 184
-    iput v4, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->label:I
+    .line 149
+    iget-object v5, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->bluetoothStateInteractor:Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;
 
-    .line 186
-    invoke-virtual {p0, v0}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->isAutoOnToggleFeatureAvailable$frameworks__base__packages__SystemUI__android_common__SystemUI_core(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .line 151
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 188
-    move-result-object v0
+    .line 153
+    new-instance v7, Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor$isBluetoothEnabled$2;
 
-    .line 191
-    if-ne v0, v1, :cond_7
+    .line 156
+    invoke-direct {v7, v5, v3}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor$isBluetoothEnabled$2;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;Lkotlin/coroutines/Continuation;)V
 
-    .line 192
-    goto :goto_7
+    .line 158
+    iget-object v3, v5, Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;->backgroundDispatcher:Lkotlinx/coroutines/CoroutineDispatcher;
 
-    .line 194
-    :cond_7
-    move v1, v2
+    .line 161
+    invoke-static {v3, v7, v0}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 195
-    move-object v2, v6
+    .line 163
+    move-result-object v3
 
-    .line 196
-    move-object v8, v0
+    .line 166
+    if-ne v3, v1, :cond_6
 
-    .line 197
-    move-object v0, p0
+    .line 167
+    goto/16 :goto_8
 
-    .line 198
-    move p0, p1
+    .line 169
+    :cond_6
+    move-object v10, v2
 
-    .line 199
-    move-object p1, v8
+    .line 171
+    move v2, p1
 
-    .line 200
+    .line 172
+    move-object p1, v3
+
+    .line 173
+    move-object v3, v10
+
+    .line 174
     :goto_3
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 201
+    .line 175
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 203
+    .line 177
     move-result p1
 
+    .line 180
+    iput-object p0, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$0:Ljava/lang/Object;
+
+    .line 181
+    iput-object v3, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$1:Ljava/lang/Object;
+
+    .line 183
+    iput-object v6, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->L$2:Ljava/lang/Object;
+
+    .line 185
+    iput v2, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->I$0:I
+
+    .line 187
+    iput-boolean p1, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->Z$0:Z
+
+    .line 189
+    iput v4, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$1;->label:I
+
+    .line 191
+    invoke-virtual {p0, v0}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->isAutoOnToggleFeatureAvailable$frameworks__base__packages__SystemUI__android_common__SystemUI_core(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 193
+    move-result-object v0
+
+    .line 196
+    if-ne v0, v1, :cond_7
+
+    .line 197
+    goto/16 :goto_8
+
+    .line 199
+    :cond_7
+    move v4, v2
+
+    .line 201
+    move-object v2, v6
+
+    .line 202
+    move-object v10, v3
+
+    .line 203
+    move-object v3, p0
+
+    .line 204
+    move p0, p1
+
+    .line 205
+    move-object p1, v0
+
     .line 206
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto/16 :goto_1
 
     .line 207
-    new-instance v2, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;
+    :goto_4
+    check-cast p1, Ljava/lang/Boolean;
 
-    .line 210
-    if-eqz p0, :cond_8
+    .line 209
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 212
-    const v4, 0x7f1407b2    # @string/quick_settings_bluetooth_tile_subtitle 'Tap to connect or disconnect a device'
+    .line 211
+    move-result p1
 
     .line 214
-    goto :goto_4
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 217
-    :cond_8
-    const v4, 0x7f140214    # @string/bt_is_off 'Bluetooth is off'
+    .line 215
+    new-instance v1, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;
 
     .line 218
-    :goto_4
-    if-eqz p1, :cond_9
+    if-eqz p0, :cond_8
 
-    .line 221
-    if-nez p0, :cond_9
+    .line 220
+    const v2, 0x7f13080e    # @string/quick_settings_bluetooth_tile_subtitle 'Tap to connect or disconnect a device'
 
-    .line 223
-    const/4 p0, 0x0
-
-    .line 225
+    .line 222
     goto :goto_5
 
-    .line 226
-    :cond_9
-    const/16 p0, 0x8
+    .line 225
+    :cond_8
+    const v2, 0x7f13021b    # @string/bt_is_off 'Bluetooth is off'
 
-    .line 227
+    .line 226
     :goto_5
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_9
 
     .line 229
-    const p1, 0x7f0700ea    # @dimen/bluetooth_dialog_scroll_view_min_height_with_auto_on '350.0dp'
+    if-nez p0, :cond_9
 
     .line 231
+    const/4 p0, 0x0
+
+    .line 233
     goto :goto_6
 
     .line 234
-    :cond_a
-    const p1, 0x7f0700e9    # @dimen/bluetooth_dialog_scroll_view_min_height '145.0dp'
+    :cond_9
+    const/16 p0, 0x8
 
     .line 235
     :goto_6
-    invoke-direct {v2, v4, p0, p1}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;-><init>(III)V
+    if-eqz p1, :cond_a
 
-    .line 238
-    new-instance p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$2;
+    .line 237
+    const p1, 0x7f0700f0    # @dimen/bluetooth_dialog_scroll_view_min_height_with_auto_on '350.0dp'
 
-    .line 241
-    invoke-direct {p0, v0}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$2;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;)V
+    .line 239
+    goto :goto_7
+
+    .line 242
+    :cond_a
+    const p1, 0x7f0700ef    # @dimen/bluetooth_dialog_scroll_view_min_height '145.0dp'
 
     .line 243
-    invoke-virtual {v3, v2, v1, v0, p0}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$26;->create(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;ILcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;Ljava/lang/Runnable;)Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;
+    :goto_7
+    invoke-direct {v1, v2, p0, p1}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;-><init>(III)V
 
     .line 246
-    move-result-object v1
+    new-instance p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$2;
 
     .line 249
-    :goto_7
+    invoke-direct {p0, v3}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$2;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;)V
+
+    .line 251
+    new-instance p1, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;
+
+    .line 254
+    iget-object v0, v0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$27;->this$0:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;
+
+    .line 256
+    iget-object v2, v0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
+
+    .line 258
+    iget-object v2, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->mainDispatcherProvider:Ldagger/internal/Provider;
+
+    .line 260
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 262
+    move-result-object v2
+
+    .line 265
+    move-object v5, v2
+
+    .line 266
+    check-cast v5, Lkotlinx/coroutines/CoroutineDispatcher;
+
+    .line 267
+    iget-object v2, v0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->wMComponentImpl:Ljava/lang/Object;
+
+    .line 269
+    check-cast v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
+
+    .line 271
+    iget-object v6, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->bindSystemClockProvider:Ldagger/internal/Provider;
+
+    .line 273
+    invoke-interface {v6}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 275
+    move-result-object v6
+
+    .line 278
+    check-cast v6, Lcom/android/systemui/util/time/SystemClock;
+
+    .line 279
+    iget-object v0, v0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
+
+    .line 281
+    iget-object v0, v0, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->provideUiEventLoggerProvider:Ldagger/internal/Provider;
+
+    .line 283
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 285
+    move-result-object v0
+
+    .line 288
+    move-object v7, v0
+
+    .line 289
+    check-cast v7, Lcom/android/internal/logging/UiEventLogger;
+
+    .line 290
+    invoke-static {v2}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->-$$Nest$mbluetoothTileDialogLogger(Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;)Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogLogger;
+
+    .line 292
+    move-result-object v8
+
+    .line 295
+    iget-object v0, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->factoryProvider4:Ldagger/internal/DelegateFactory;
+
+    .line 296
+    invoke-virtual {v0}, Ldagger/internal/DelegateFactory;->get()Ljava/lang/Object;
+
+    .line 298
+    move-result-object v0
+
+    .line 301
+    move-object v9, v0
+
+    .line 302
+    check-cast v9, Lcom/android/systemui/statusbar/phone/SystemUIDialog$Factory;
+
+    .line 303
+    move-object v0, p1
+
+    .line 305
+    move v2, v4
+
+    .line 306
+    move-object v4, p0
+
+    .line 307
+    invoke-direct/range {v0 .. v9}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$UiProperties;ILcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$createBluetoothTileDialog$2;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/util/time/SystemClock;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogLogger;Lcom/android/systemui/statusbar/phone/SystemUIDialog$Factory;)V
+
+    .line 308
+    move-object v1, p1
+
+    .line 311
+    :goto_8
     return-object v1
-    .line 250
+    .line 312
 .end method
 
 

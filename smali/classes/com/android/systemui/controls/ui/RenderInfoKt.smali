@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/controls/ui/RenderInfoKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -26,7 +26,7 @@
     new-instance v1, Lkotlin/Pair;
 
     .line 9
-    const v2, 0x7f060086    # @color/control_default_foreground '@color/GM2_grey_500'
+    const v2, 0x7f060087    # @color/control_default_foreground '@color/GM2_grey_500'
 
     .line 11
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -35,7 +35,7 @@
     move-result-object v2
 
     .line 17
-    const v3, 0x7f060085    # @color/control_default_background '#303134'
+    const v3, 0x7f060086    # @color/control_default_background '#303134'
 
     .line 18
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -65,7 +65,7 @@
     new-instance v4, Lkotlin/Pair;
 
     .line 40
-    const v5, 0x7f060579    # @color/thermo_heat_foreground 'res/color/thermo_heat_foreground.xml'
+    const v5, 0x7f06058f    # @color/thermo_heat_foreground 'res/color/thermo_heat_foreground.xml'
 
     .line 42
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -74,7 +74,7 @@
     move-result-object v5
 
     .line 48
-    const v6, 0x7f06008d    # @color/control_enabled_thermo_heat_background '#41312e'
+    const v6, 0x7f06008e    # @color/control_enabled_thermo_heat_background '#41312e'
 
     .line 49
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -104,7 +104,7 @@
     new-instance v6, Lkotlin/Pair;
 
     .line 71
-    const v7, 0x7f060578    # @color/thermo_cool_foreground 'res/color/thermo_cool_foreground.xml'
+    const v7, 0x7f06058e    # @color/thermo_cool_foreground 'res/color/thermo_cool_foreground.xml'
 
     .line 73
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -113,7 +113,7 @@
     move-result-object v7
 
     .line 79
-    const v8, 0x7f06008c    # @color/control_enabled_thermo_cool_background '#303744'
+    const v8, 0x7f06008d    # @color/control_enabled_thermo_cool_background '#303744'
 
     .line 80
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -143,7 +143,7 @@
     new-instance v8, Lkotlin/Pair;
 
     .line 101
-    const v9, 0x7f06013f    # @color/light_foreground 'res/color/light_foreground.xml'
+    const v9, 0x7f060149    # @color/light_foreground 'res/color/light_foreground.xml'
 
     .line 103
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -152,7 +152,7 @@
     move-result-object v9
 
     .line 109
-    const v10, 0x7f06008b    # @color/control_enabled_light_background '#413c2d'
+    const v10, 0x7f06008c    # @color/control_enabled_light_background '#413c2d'
 
     .line 110
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -191,7 +191,7 @@
     move-result-object v11
 
     .line 139
-    const v12, 0x7f060088    # @color/control_enabled_default_background '#3c3d40'
+    const v12, 0x7f060089    # @color/control_enabled_default_background '#3c3d40'
 
     .line 140
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -233,7 +233,7 @@
     sput-object v2, Lcom/android/systemui/controls/ui/RenderInfoKt;->deviceColorMap:Ljava/util/Map;
 
     .line 169
-    const v2, 0x7f080787    # @drawable/ic_device_thermostat_off 'res/drawable/ic_device_thermostat_off.xml'
+    const v2, 0x7f0807a0    # @drawable/ic_device_thermostat_off 'res/drawable/ic_device_thermostat_off.xml'
 
     .line 171
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -254,7 +254,7 @@
     move-result-object v0
 
     .line 186
-    const v1, 0x7f080785    # @drawable/ic_device_thermostat 'res/drawable/ic_device_thermostat.xml'
+    const v1, 0x7f08079e    # @drawable/ic_device_thermostat 'res/drawable/ic_device_thermostat.xml'
 
     .line 187
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -356,7 +356,7 @@
     move-result-object v0
 
     .line 262
-    const v2, 0x7f08074e    # @drawable/ic_device_light 'res/drawable/ic_device_light.xml'
+    const v2, 0x7f080766    # @drawable/ic_device_light 'res/drawable/ic_device_light.xml'
 
     .line 263
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -377,7 +377,7 @@
     move-result-object v0
 
     .line 278
-    const v2, 0x7f080724    # @drawable/ic_device_camera 'res/drawable/ic_device_camera.xml'
+    const v2, 0x7f08073c    # @drawable/ic_device_camera 'res/drawable/ic_device_camera.xml'
 
     .line 279
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -401,7 +401,7 @@
     move-result-object v0
 
     .line 296
-    const v2, 0x7f080753    # @drawable/ic_device_lock 'res/drawable/ic_device_lock.xml'
+    const v2, 0x7f08076b    # @drawable/ic_device_lock 'res/drawable/ic_device_lock.xml'
 
     .line 297
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -425,7 +425,7 @@
     move-result-object v0
 
     .line 314
-    const v2, 0x7f080780    # @drawable/ic_device_switch 'res/drawable/ic_device_switch.xml'
+    const v2, 0x7f080799    # @drawable/ic_device_switch 'res/drawable/ic_device_switch.xml'
 
     .line 315
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -449,7 +449,7 @@
     move-result-object v0
 
     .line 332
-    const v2, 0x7f080764    # @drawable/ic_device_outlet 'res/drawable/ic_device_outlet.xml'
+    const v2, 0x7f08077c    # @drawable/ic_device_outlet 'res/drawable/ic_device_outlet.xml'
 
     .line 333
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -473,7 +473,7 @@
     move-result-object v0
 
     .line 350
-    const v2, 0x7f080793    # @drawable/ic_device_vacuum 'res/drawable/ic_device_vacuum.xml'
+    const v2, 0x7f0807ac    # @drawable/ic_device_vacuum 'res/drawable/ic_device_vacuum.xml'
 
     .line 351
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -497,7 +497,7 @@
     move-result-object v0
 
     .line 368
-    const v2, 0x7f08075b    # @drawable/ic_device_mop 'res/drawable/ic_device_mop.xml'
+    const v2, 0x7f080773    # @drawable/ic_device_mop 'res/drawable/ic_device_mop.xml'
 
     .line 369
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -521,7 +521,7 @@
     move-result-object v0
 
     .line 385
-    const v2, 0x7f080719    # @drawable/ic_device_air_freshener 'res/drawable/ic_device_air_freshener.xml'
+    const v2, 0x7f080731    # @drawable/ic_device_air_freshener 'res/drawable/ic_device_air_freshener.xml'
 
     .line 386
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -545,7 +545,7 @@
     move-result-object v0
 
     .line 402
-    const v1, 0x7f08071c    # @drawable/ic_device_air_purifier 'res/drawable/ic_device_air_purifier.xml'
+    const v1, 0x7f080734    # @drawable/ic_device_air_purifier 'res/drawable/ic_device_air_purifier.xml'
 
     .line 403
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -572,7 +572,7 @@
     move-result-object v0
 
     .line 422
-    const v1, 0x7f08073b    # @drawable/ic_device_fan 'res/drawable/ic_device_fan.xml'
+    const v1, 0x7f080753    # @drawable/ic_device_fan 'res/drawable/ic_device_fan.xml'
 
     .line 423
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -599,7 +599,7 @@
     move-result-object v0
 
     .line 442
-    const v1, 0x7f080748    # @drawable/ic_device_hood 'res/drawable/ic_device_hood.xml'
+    const v1, 0x7f080760    # @drawable/ic_device_hood 'res/drawable/ic_device_hood.xml'
 
     .line 443
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -626,7 +626,7 @@
     move-result-object v0
 
     .line 462
-    const v1, 0x7f08074b    # @drawable/ic_device_kettle 'res/drawable/ic_device_kettle.xml'
+    const v1, 0x7f080763    # @drawable/ic_device_kettle 'res/drawable/ic_device_kettle.xml'
 
     .line 463
     move-object/from16 v23, v2
@@ -653,7 +653,7 @@
     move-result-object v0
 
     .line 482
-    const v2, 0x7f080758    # @drawable/ic_device_microwave 'res/drawable/ic_device_microwave.xml'
+    const v2, 0x7f080770    # @drawable/ic_device_microwave 'res/drawable/ic_device_microwave.xml'
 
     .line 483
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -680,7 +680,7 @@
     move-result-object v0
 
     .line 502
-    const v2, 0x7f08076f    # @drawable/ic_device_remote_control 'res/drawable/ic_device_remote_control.xml'
+    const v2, 0x7f080787    # @drawable/ic_device_remote_control 'res/drawable/ic_device_remote_control.xml'
 
     .line 503
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -707,7 +707,7 @@
     move-result-object v0
 
     .line 522
-    const v2, 0x7f080777    # @drawable/ic_device_set_top 'res/drawable/ic_device_set_top.xml'
+    const v2, 0x7f08078f    # @drawable/ic_device_set_top 'res/drawable/ic_device_set_top.xml'
 
     .line 523
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -734,7 +734,7 @@
     move-result-object v0
 
     .line 542
-    const v2, 0x7f08077d    # @drawable/ic_device_styler 'res/drawable/ic_device_styler.xml'
+    const v2, 0x7f080796    # @drawable/ic_device_styler 'res/drawable/ic_device_styler.xml'
 
     .line 543
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -761,7 +761,7 @@
     move-result-object v0
 
     .line 562
-    const v2, 0x7f08078b    # @drawable/ic_device_tv 'res/drawable/ic_device_tv.xml'
+    const v2, 0x7f0807a4    # @drawable/ic_device_tv 'res/drawable/ic_device_tv.xml'
 
     .line 563
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -788,7 +788,7 @@
     move-result-object v0
 
     .line 582
-    const v2, 0x7f08079f    # @drawable/ic_device_water_heater 'res/drawable/ic_device_water_heater.xml'
+    const v2, 0x7f0807b8    # @drawable/ic_device_water_heater 'res/drawable/ic_device_water_heater.xml'
 
     .line 583
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -815,7 +815,7 @@
     move-result-object v0
 
     .line 602
-    const v2, 0x7f08072c    # @drawable/ic_device_dishwasher 'res/drawable/ic_device_dishwasher.xml'
+    const v2, 0x7f080744    # @drawable/ic_device_dishwasher 'res/drawable/ic_device_dishwasher.xml'
 
     .line 603
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -842,7 +842,7 @@
     move-result-object v0
 
     .line 622
-    const v2, 0x7f08075e    # @drawable/ic_device_multicooker 'res/drawable/ic_device_multicooker.xml'
+    const v2, 0x7f080776    # @drawable/ic_device_multicooker 'res/drawable/ic_device_multicooker.xml'
 
     .line 623
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -869,7 +869,7 @@
     move-result-object v0
 
     .line 642
-    const v2, 0x7f08077a    # @drawable/ic_device_sprinkler 'res/drawable/ic_device_sprinkler.xml'
+    const v2, 0x7f080793    # @drawable/ic_device_sprinkler 'res/drawable/ic_device_sprinkler.xml'
 
     .line 643
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -896,7 +896,7 @@
     move-result-object v0
 
     .line 662
-    const v2, 0x7f08079b    # @drawable/ic_device_washer 'res/drawable/ic_device_washer.xml'
+    const v2, 0x7f0807b4    # @drawable/ic_device_washer 'res/drawable/ic_device_washer.xml'
 
     .line 663
     move-object/from16 v33, v1
@@ -923,7 +923,7 @@
     move-result-object v0
 
     .line 682
-    const v1, 0x7f08071f    # @drawable/ic_device_blinds 'res/drawable/ic_device_blinds.xml'
+    const v1, 0x7f080737    # @drawable/ic_device_blinds 'res/drawable/ic_device_blinds.xml'
 
     .line 683
     move-object/from16 v34, v2
@@ -950,7 +950,7 @@
     move-result-object v0
 
     .line 702
-    const v2, 0x7f080738    # @drawable/ic_device_drawer 'res/drawable/ic_device_drawer.xml'
+    const v2, 0x7f080750    # @drawable/ic_device_drawer 'res/drawable/ic_device_drawer.xml'
 
     .line 703
     move-object/from16 v36, v1
@@ -977,7 +977,7 @@
     move-result-object v0
 
     .line 722
-    const v1, 0x7f080740    # @drawable/ic_device_garage 'res/drawable/ic_device_garage.xml'
+    const v1, 0x7f080758    # @drawable/ic_device_garage 'res/drawable/ic_device_garage.xml'
 
     .line 723
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1004,7 +1004,7 @@
     move-result-object v0
 
     .line 742
-    const v1, 0x7f080745    # @drawable/ic_device_gate 'res/drawable/ic_device_gate.xml'
+    const v1, 0x7f08075d    # @drawable/ic_device_gate 'res/drawable/ic_device_gate.xml'
 
     .line 743
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1031,7 +1031,7 @@
     move-result-object v0
 
     .line 762
-    const v1, 0x7f080769    # @drawable/ic_device_pergola 'res/drawable/ic_device_pergola.xml'
+    const v1, 0x7f080781    # @drawable/ic_device_pergola 'res/drawable/ic_device_pergola.xml'
 
     .line 763
     move-object/from16 v40, v2
@@ -1058,7 +1058,7 @@
     move-result-object v0
 
     .line 782
-    const v2, 0x7f0807a4    # @drawable/ic_device_window 'res/drawable/ic_device_window.xml'
+    const v2, 0x7f0807bd    # @drawable/ic_device_window 'res/drawable/ic_device_window.xml'
 
     .line 783
     move-object/from16 v42, v1
@@ -1085,7 +1085,7 @@
     move-result-object v0
 
     .line 802
-    const v1, 0x7f080798    # @drawable/ic_device_valve 'res/drawable/ic_device_valve.xml'
+    const v1, 0x7f0807b1    # @drawable/ic_device_valve 'res/drawable/ic_device_valve.xml'
 
     .line 803
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1112,7 +1112,7 @@
     move-result-object v0
 
     .line 822
-    const v1, 0x7f080772    # @drawable/ic_device_security_system 'res/drawable/ic_device_security_system.xml'
+    const v1, 0x7f08078a    # @drawable/ic_device_security_system 'res/drawable/ic_device_security_system.xml'
 
     .line 823
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1139,7 +1139,7 @@
     move-result-object v0
 
     .line 842
-    const v1, 0x7f08076c    # @drawable/ic_device_refrigerator 'res/drawable/ic_device_refrigerator.xml'
+    const v1, 0x7f080784    # @drawable/ic_device_refrigerator 'res/drawable/ic_device_refrigerator.xml'
 
     .line 843
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1166,7 +1166,7 @@
     move-result-object v0
 
     .line 862
-    const v1, 0x7f080735    # @drawable/ic_device_doorbell 'res/drawable/ic_device_doorbell.xml'
+    const v1, 0x7f08074d    # @drawable/ic_device_doorbell 'res/drawable/ic_device_doorbell.xml'
 
     .line 863
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1223,7 +1223,7 @@
     move-object/from16 v49, v2
 
     .line 900
-    const v1, 0x7f080785    # @drawable/ic_device_thermostat 'res/drawable/ic_device_thermostat.xml'
+    const v1, 0x7f08079e    # @drawable/ic_device_thermostat 'res/drawable/ic_device_thermostat.xml'
 
     .line 902
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1250,7 +1250,7 @@
     move-object/from16 v50, v1
 
     .line 919
-    const v2, 0x7f080785    # @drawable/ic_device_thermostat 'res/drawable/ic_device_thermostat.xml'
+    const v2, 0x7f08079e    # @drawable/ic_device_thermostat 'res/drawable/ic_device_thermostat.xml'
 
     .line 921
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1274,7 +1274,7 @@
     move-result-object v0
 
     .line 937
-    const v1, 0x7f08074b    # @drawable/ic_device_kettle 'res/drawable/ic_device_kettle.xml'
+    const v1, 0x7f080763    # @drawable/ic_device_kettle 'res/drawable/ic_device_kettle.xml'
 
     .line 938
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1301,7 +1301,7 @@
     move-result-object v0
 
     .line 956
-    const v1, 0x7f080719    # @drawable/ic_device_air_freshener 'res/drawable/ic_device_air_freshener.xml'
+    const v1, 0x7f080731    # @drawable/ic_device_air_freshener 'res/drawable/ic_device_air_freshener.xml'
 
     .line 957
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1331,7 +1331,7 @@
     move-object/from16 v53, v2
 
     .line 977
-    const v1, 0x7f080785    # @drawable/ic_device_thermostat 'res/drawable/ic_device_thermostat.xml'
+    const v1, 0x7f08079e    # @drawable/ic_device_thermostat 'res/drawable/ic_device_thermostat.xml'
 
     .line 979
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1355,7 +1355,7 @@
     move-result-object v0
 
     .line 996
-    const v2, 0x7f080729    # @drawable/ic_device_cooking 'res/drawable/ic_device_cooking.xml'
+    const v2, 0x7f080741    # @drawable/ic_device_cooking 'res/drawable/ic_device_cooking.xml'
 
     .line 997
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1382,7 +1382,7 @@
     move-result-object v0
 
     .line 1015
-    const v2, 0x7f08072f    # @drawable/ic_device_display 'res/drawable/ic_device_display.xml'
+    const v2, 0x7f080747    # @drawable/ic_device_display 'res/drawable/ic_device_display.xml'
 
     .line 1016
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1409,7 +1409,7 @@
     move-result-object v0
 
     .line 1035
-    const v2, 0x7f08079b    # @drawable/ic_device_washer 'res/drawable/ic_device_washer.xml'
+    const v2, 0x7f0807b4    # @drawable/ic_device_washer 'res/drawable/ic_device_washer.xml'
 
     .line 1036
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1436,7 +1436,7 @@
     move-result-object v0
 
     .line 1055
-    const v2, 0x7f080761    # @drawable/ic_device_outdoor_garden 'res/drawable/ic_device_outdoor_garden.xml'
+    const v2, 0x7f080779    # @drawable/ic_device_outdoor_garden 'res/drawable/ic_device_outdoor_garden.xml'
 
     .line 1056
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1463,7 +1463,7 @@
     move-result-object v0
 
     .line 1075
-    const v2, 0x7f08079e    # @drawable/ic_device_water 'res/drawable/ic_device_water.xml'
+    const v2, 0x7f0807b7    # @drawable/ic_device_water 'res/drawable/ic_device_water.xml'
 
     .line 1076
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1490,7 +1490,7 @@
     move-result-object v0
 
     .line 1095
-    const v2, 0x7f080769    # @drawable/ic_device_pergola 'res/drawable/ic_device_pergola.xml'
+    const v2, 0x7f080781    # @drawable/ic_device_pergola 'res/drawable/ic_device_pergola.xml'
 
     .line 1096
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1517,7 +1517,7 @@
     move-result-object v0
 
     .line 1115
-    const v2, 0x7f080738    # @drawable/ic_device_drawer 'res/drawable/ic_device_drawer.xml'
+    const v2, 0x7f080750    # @drawable/ic_device_drawer 'res/drawable/ic_device_drawer.xml'
 
     .line 1116
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1544,7 +1544,7 @@
     move-result-object v0
 
     .line 1135
-    const v2, 0x7f08071f    # @drawable/ic_device_blinds 'res/drawable/ic_device_blinds.xml'
+    const v2, 0x7f080737    # @drawable/ic_device_blinds 'res/drawable/ic_device_blinds.xml'
 
     .line 1136
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1571,7 +1571,7 @@
     move-result-object v0
 
     .line 1155
-    const v2, 0x7f080732    # @drawable/ic_device_door 'res/drawable/ic_device_door.xml'
+    const v2, 0x7f08074a    # @drawable/ic_device_door 'res/drawable/ic_device_door.xml'
 
     .line 1156
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1598,7 +1598,7 @@
     move-result-object v0
 
     .line 1175
-    const v2, 0x7f0807a4    # @drawable/ic_device_window 'res/drawable/ic_device_window.xml'
+    const v2, 0x7f0807bd    # @drawable/ic_device_window 'res/drawable/ic_device_window.xml'
 
     .line 1176
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1625,7 +1625,7 @@
     move-result-object v0
 
     .line 1195
-    const v2, 0x7f080785    # @drawable/ic_device_thermostat 'res/drawable/ic_device_thermostat.xml'
+    const v2, 0x7f08079e    # @drawable/ic_device_thermostat 'res/drawable/ic_device_thermostat.xml'
 
     .line 1196
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1652,7 +1652,7 @@
     move-result-object v0
 
     .line 1215
-    const v2, 0x7f0807b0    # @drawable/ic_error_outline 'res/drawable/ic_error_outline.xml'
+    const v2, 0x7f0807cc    # @drawable/ic_error_outline 'res/drawable/ic_error_outline.xml'
 
     .line 1216
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

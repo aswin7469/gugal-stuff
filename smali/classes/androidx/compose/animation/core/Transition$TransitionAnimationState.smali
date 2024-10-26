@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/animation/core/Transition$TransitionAnimationState;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/runtime/State;
@@ -69,7 +69,7 @@
     const/4 v3, 0x7
 
     .line 19
-    invoke-static {v1, v2, v3}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
+    invoke-static {v1, v1, v2, v3}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FFLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
 
     .line 20
     move-result-object v3
@@ -267,7 +267,7 @@
     const/4 p1, 0x3
 
     .line 144
-    invoke-static {v1, v2, p1}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
+    invoke-static {v1, v1, v2, p1}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FFLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
 
     .line 145
     move-result-object p1

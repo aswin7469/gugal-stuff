@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -3541,552 +3541,552 @@
     if-eqz v4, :cond_3
 
     .line 115
-    const-string v7, "text/*"
+    const-string/jumbo v7, "text/*"
 
     .line 117
     invoke-virtual {v4, v7}, Landroid/content/ClipDescription;->hasMimeType(Ljava/lang/String;)Z
 
-    .line 119
+    .line 120
     move-result v4
 
-    .line 122
+    .line 123
     goto :goto_2
 
-    .line 123
+    .line 124
     :cond_3
     move v4, v5
 
-    .line 124
+    .line 125
     :goto_2
     if-ne v4, v6, :cond_4
 
-    .line 125
+    .line 126
     new-instance v4, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager$showSelectionToolbar$paste$1;
 
-    .line 127
+    .line 128
     invoke-direct {v4, v0}, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager$showSelectionToolbar$paste$1;-><init>(Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;)V
 
-    .line 129
+    .line 130
     goto :goto_3
 
-    .line 132
+    .line 133
     :cond_4
     move-object v4, v3
 
-    .line 133
+    .line 134
     :goto_3
     invoke-virtual/range {p0 .. p0}, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->getValue$foundation_release()Landroidx/compose/ui/text/input/TextFieldValue;
 
-    .line 134
+    .line 135
     move-result-object v7
 
-    .line 137
+    .line 138
     iget-wide v7, v7, Landroidx/compose/ui/text/input/TextFieldValue;->selection:J
 
-    .line 138
+    .line 139
     invoke-static {v7, v8}, Landroidx/compose/ui/text/TextRange;->getLength-impl(J)I
 
-    .line 140
+    .line 141
     move-result v7
 
-    .line 143
+    .line 144
     invoke-virtual/range {p0 .. p0}, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->getValue$foundation_release()Landroidx/compose/ui/text/input/TextFieldValue;
 
-    .line 144
+    .line 145
     move-result-object v8
 
-    .line 147
+    .line 148
     iget-object v8, v8, Landroidx/compose/ui/text/input/TextFieldValue;->annotatedString:Landroidx/compose/ui/text/AnnotatedString;
 
-    .line 148
+    .line 149
     iget-object v8, v8, Landroidx/compose/ui/text/AnnotatedString;->text:Ljava/lang/String;
 
-    .line 150
+    .line 151
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
-    .line 152
+    .line 153
     move-result v8
 
-    .line 155
+    .line 156
     if-eq v7, v8, :cond_5
 
-    .line 156
+    .line 157
     new-instance v7, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager$showSelectionToolbar$selectAll$1;
 
-    .line 158
+    .line 159
     invoke-direct {v7, v0}, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager$showSelectionToolbar$selectAll$1;-><init>(Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;)V
 
-    .line 160
+    .line 161
     goto :goto_4
 
-    .line 163
+    .line 164
     :cond_5
     move-object v7, v3
 
-    .line 164
+    .line 165
     :goto_4
     iget-object v8, v0, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->textToolbar:Landroidx/compose/ui/platform/AndroidTextToolbar;
 
-    .line 165
+    .line 166
     if-eqz v8, :cond_f
 
-    .line 167
+    .line 168
     iget-object v9, v0, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->state:Landroidx/compose/foundation/text/LegacyTextFieldState;
 
-    .line 169
+    .line 170
     if-eqz v9, :cond_d
 
-    .line 171
+    .line 172
     iget-boolean v10, v9, Landroidx/compose/foundation/text/LegacyTextFieldState;->isLayoutResultStale:Z
 
-    .line 173
+    .line 174
     xor-int/2addr v10, v6
 
-    .line 175
+    .line 176
     if-eqz v10, :cond_6
 
-    .line 176
+    .line 177
     move-object v3, v9
 
-    .line 178
+    .line 179
     :cond_6
     if-eqz v3, :cond_d
 
-    .line 179
+    .line 180
     iget-object v9, v0, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->offsetMapping:Landroidx/compose/ui/text/input/OffsetMapping;
 
-    .line 181
+    .line 182
     invoke-virtual/range {p0 .. p0}, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->getValue$foundation_release()Landroidx/compose/ui/text/input/TextFieldValue;
 
-    .line 183
+    .line 184
     move-result-object v10
 
-    .line 186
+    .line 187
     iget-wide v10, v10, Landroidx/compose/ui/text/input/TextFieldValue;->selection:J
 
-    .line 187
+    .line 188
     const/16 v12, 0x20
 
-    .line 189
+    .line 190
     shr-long/2addr v10, v12
 
-    .line 191
+    .line 192
     long-to-int v10, v10
 
-    .line 192
+    .line 193
     invoke-interface {v9, v10}, Landroidx/compose/ui/text/input/OffsetMapping;->originalToTransformed(I)I
 
-    .line 193
+    .line 194
     move-result v9
 
-    .line 196
+    .line 197
     iget-object v10, v0, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->offsetMapping:Landroidx/compose/ui/text/input/OffsetMapping;
 
-    .line 197
+    .line 198
     invoke-virtual/range {p0 .. p0}, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->getValue$foundation_release()Landroidx/compose/ui/text/input/TextFieldValue;
 
-    .line 199
+    .line 200
     move-result-object v11
-
-    .line 202
-    iget-wide v11, v11, Landroidx/compose/ui/text/input/TextFieldValue;->selection:J
 
     .line 203
+    iget-wide v11, v11, Landroidx/compose/ui/text/input/TextFieldValue;->selection:J
+
+    .line 204
     const-wide v13, 0xffffffffL
 
-    .line 205
+    .line 206
     and-long/2addr v11, v13
 
-    .line 210
+    .line 211
     long-to-int v11, v11
 
-    .line 211
+    .line 212
     invoke-interface {v10, v11}, Landroidx/compose/ui/text/input/OffsetMapping;->originalToTransformed(I)I
 
-    .line 212
+    .line 213
     move-result v10
 
-    .line 215
+    .line 216
     iget-object v11, v0, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->state:Landroidx/compose/foundation/text/LegacyTextFieldState;
 
-    .line 216
+    .line 217
     const-wide/16 v12, 0x0
 
-    .line 218
+    .line 219
     if-eqz v11, :cond_7
 
-    .line 220
+    .line 221
     invoke-virtual {v11}, Landroidx/compose/foundation/text/LegacyTextFieldState;->getLayoutCoordinates()Landroidx/compose/ui/layout/LayoutCoordinates;
 
-    .line 222
+    .line 223
     move-result-object v11
 
-    .line 225
+    .line 226
     if-eqz v11, :cond_7
 
-    .line 226
+    .line 227
     invoke-virtual {v0, v6}, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->getHandlePosition-tuRUvjQ$foundation_release(Z)J
 
-    .line 228
+    .line 229
     move-result-wide v14
-
-    .line 231
-    invoke-interface {v11, v14, v15}, Landroidx/compose/ui/layout/LayoutCoordinates;->localToRoot-MK-Hz9U(J)J
 
     .line 232
+    invoke-interface {v11, v14, v15}, Landroidx/compose/ui/layout/LayoutCoordinates;->localToRoot-MK-Hz9U(J)J
+
+    .line 233
     move-result-wide v14
 
-    .line 235
+    .line 236
     goto :goto_5
 
-    .line 236
+    .line 237
     :cond_7
     move-wide v14, v12
 
-    .line 237
+    .line 238
     :goto_5
     iget-object v11, v0, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->state:Landroidx/compose/foundation/text/LegacyTextFieldState;
 
-    .line 238
+    .line 239
     if-eqz v11, :cond_8
 
-    .line 240
+    .line 241
     invoke-virtual {v11}, Landroidx/compose/foundation/text/LegacyTextFieldState;->getLayoutCoordinates()Landroidx/compose/ui/layout/LayoutCoordinates;
 
-    .line 242
+    .line 243
     move-result-object v11
 
-    .line 245
+    .line 246
     if-eqz v11, :cond_8
 
-    .line 246
+    .line 247
     invoke-virtual {v0, v5}, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->getHandlePosition-tuRUvjQ$foundation_release(Z)J
 
-    .line 248
+    .line 249
     move-result-wide v12
-
-    .line 251
-    invoke-interface {v11, v12, v13}, Landroidx/compose/ui/layout/LayoutCoordinates;->localToRoot-MK-Hz9U(J)J
 
     .line 252
+    invoke-interface {v11, v12, v13}, Landroidx/compose/ui/layout/LayoutCoordinates;->localToRoot-MK-Hz9U(J)J
+
+    .line 253
     move-result-wide v12
 
-    .line 255
+    .line 256
     :cond_8
     iget-object v5, v0, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->state:Landroidx/compose/foundation/text/LegacyTextFieldState;
 
-    .line 256
+    .line 257
     const/4 v11, 0x0
 
-    .line 258
+    .line 259
     if-eqz v5, :cond_a
 
-    .line 259
+    .line 260
     invoke-virtual {v5}, Landroidx/compose/foundation/text/LegacyTextFieldState;->getLayoutCoordinates()Landroidx/compose/ui/layout/LayoutCoordinates;
 
-    .line 261
+    .line 262
     move-result-object v5
 
-    .line 264
+    .line 265
     if-eqz v5, :cond_a
 
-    .line 265
+    .line 266
     invoke-virtual {v3}, Landroidx/compose/foundation/text/LegacyTextFieldState;->getLayoutResult()Landroidx/compose/foundation/text/TextLayoutResultProxy;
 
-    .line 267
+    .line 268
     move-result-object v6
-
-    .line 270
-    if-eqz v6, :cond_9
 
     .line 271
-    iget-object v6, v6, Landroidx/compose/foundation/text/TextLayoutResultProxy;->value:Landroidx/compose/ui/text/TextLayoutResult;
-
-    .line 273
     if-eqz v6, :cond_9
 
-    .line 275
+    .line 272
+    iget-object v6, v6, Landroidx/compose/foundation/text/TextLayoutResultProxy;->value:Landroidx/compose/ui/text/TextLayoutResult;
+
+    .line 274
+    if-eqz v6, :cond_9
+
+    .line 276
     invoke-virtual {v6, v9}, Landroidx/compose/ui/text/TextLayoutResult;->getCursorRect(I)Landroidx/compose/ui/geometry/Rect;
 
-    .line 277
+    .line 278
     move-result-object v6
 
-    .line 280
+    .line 281
     iget v6, v6, Landroidx/compose/ui/geometry/Rect;->top:F
 
-    .line 281
+    .line 282
     move-object v9, v7
 
-    .line 283
+    .line 284
     goto :goto_6
 
-    .line 284
+    .line 285
     :cond_9
     move-object v9, v7
 
-    .line 285
+    .line 286
     move v6, v11
 
-    .line 286
+    .line 287
     :goto_6
     invoke-static {v11, v6}, Landroidx/compose/ui/geometry/OffsetKt;->Offset(FF)J
 
-    .line 287
+    .line 288
     move-result-wide v6
 
-    .line 290
+    .line 291
     invoke-interface {v5, v6, v7}, Landroidx/compose/ui/layout/LayoutCoordinates;->localToRoot-MK-Hz9U(J)J
 
-    .line 291
+    .line 292
     move-result-wide v5
 
-    .line 294
+    .line 295
     invoke-static {v5, v6}, Landroidx/compose/ui/geometry/Offset;->getY-impl(J)F
 
-    .line 295
+    .line 296
     move-result v5
 
-    .line 298
+    .line 299
     goto :goto_7
 
-    .line 299
+    .line 300
     :cond_a
     move-object v9, v7
 
-    .line 300
+    .line 301
     move v5, v11
 
-    .line 301
+    .line 302
     :goto_7
     iget-object v0, v0, Landroidx/compose/foundation/text/selection/TextFieldSelectionManager;->state:Landroidx/compose/foundation/text/LegacyTextFieldState;
 
-    .line 302
+    .line 303
     if-eqz v0, :cond_c
 
-    .line 304
+    .line 305
     invoke-virtual {v0}, Landroidx/compose/foundation/text/LegacyTextFieldState;->getLayoutCoordinates()Landroidx/compose/ui/layout/LayoutCoordinates;
 
-    .line 306
+    .line 307
     move-result-object v0
 
-    .line 309
+    .line 310
     if-eqz v0, :cond_c
 
-    .line 310
+    .line 311
     invoke-virtual {v3}, Landroidx/compose/foundation/text/LegacyTextFieldState;->getLayoutResult()Landroidx/compose/foundation/text/TextLayoutResultProxy;
 
-    .line 312
+    .line 313
     move-result-object v6
-
-    .line 315
-    if-eqz v6, :cond_b
 
     .line 316
-    iget-object v6, v6, Landroidx/compose/foundation/text/TextLayoutResultProxy;->value:Landroidx/compose/ui/text/TextLayoutResult;
-
-    .line 318
     if-eqz v6, :cond_b
 
-    .line 320
+    .line 317
+    iget-object v6, v6, Landroidx/compose/foundation/text/TextLayoutResultProxy;->value:Landroidx/compose/ui/text/TextLayoutResult;
+
+    .line 319
+    if-eqz v6, :cond_b
+
+    .line 321
     invoke-virtual {v6, v10}, Landroidx/compose/ui/text/TextLayoutResult;->getCursorRect(I)Landroidx/compose/ui/geometry/Rect;
 
-    .line 322
+    .line 323
     move-result-object v6
 
-    .line 325
+    .line 326
     iget v6, v6, Landroidx/compose/ui/geometry/Rect;->top:F
 
-    .line 326
+    .line 327
     goto :goto_8
 
-    .line 328
+    .line 329
     :cond_b
     move v6, v11
 
-    .line 329
+    .line 330
     :goto_8
     invoke-static {v11, v6}, Landroidx/compose/ui/geometry/OffsetKt;->Offset(FF)J
 
-    .line 330
+    .line 331
     move-result-wide v6
-
-    .line 333
-    invoke-interface {v0, v6, v7}, Landroidx/compose/ui/layout/LayoutCoordinates;->localToRoot-MK-Hz9U(J)J
 
     .line 334
+    invoke-interface {v0, v6, v7}, Landroidx/compose/ui/layout/LayoutCoordinates;->localToRoot-MK-Hz9U(J)J
+
+    .line 335
     move-result-wide v6
 
-    .line 337
+    .line 338
     invoke-static {v6, v7}, Landroidx/compose/ui/geometry/Offset;->getY-impl(J)F
 
-    .line 338
+    .line 339
     move-result v11
 
-    .line 341
+    .line 342
     :cond_c
     invoke-static {v14, v15}, Landroidx/compose/ui/geometry/Offset;->getX-impl(J)F
 
-    .line 342
+    .line 343
     move-result v0
-
-    .line 345
-    invoke-static {v12, v13}, Landroidx/compose/ui/geometry/Offset;->getX-impl(J)F
 
     .line 346
-    move-result v6
-
-    .line 349
-    invoke-static {v0, v6}, Ljava/lang/Math;->min(FF)F
-
-    .line 350
-    move-result v0
-
-    .line 353
-    invoke-static {v14, v15}, Landroidx/compose/ui/geometry/Offset;->getX-impl(J)F
-
-    .line 354
-    move-result v6
-
-    .line 357
     invoke-static {v12, v13}, Landroidx/compose/ui/geometry/Offset;->getX-impl(J)F
 
-    .line 358
-    move-result v7
-
-    .line 361
-    invoke-static {v6, v7}, Ljava/lang/Math;->max(FF)F
-
-    .line 362
+    .line 347
     move-result v6
 
-    .line 365
-    invoke-static {v5, v11}, Ljava/lang/Math;->min(FF)F
+    .line 350
+    invoke-static {v0, v6}, Ljava/lang/Math;->min(FF)F
+
+    .line 351
+    move-result v0
+
+    .line 354
+    invoke-static {v14, v15}, Landroidx/compose/ui/geometry/Offset;->getX-impl(J)F
+
+    .line 355
+    move-result v6
+
+    .line 358
+    invoke-static {v12, v13}, Landroidx/compose/ui/geometry/Offset;->getX-impl(J)F
+
+    .line 359
+    move-result v7
+
+    .line 362
+    invoke-static {v6, v7}, Ljava/lang/Math;->max(FF)F
+
+    .line 363
+    move-result v6
 
     .line 366
+    invoke-static {v5, v11}, Ljava/lang/Math;->min(FF)F
+
+    .line 367
     move-result v5
 
-    .line 369
+    .line 370
     invoke-static {v14, v15}, Landroidx/compose/ui/geometry/Offset;->getY-impl(J)F
 
-    .line 370
+    .line 371
     move-result v7
-
-    .line 373
-    invoke-static {v12, v13}, Landroidx/compose/ui/geometry/Offset;->getY-impl(J)F
 
     .line 374
+    invoke-static {v12, v13}, Landroidx/compose/ui/geometry/Offset;->getY-impl(J)F
+
+    .line 375
     move-result v10
 
-    .line 377
+    .line 378
     invoke-static {v7, v10}, Ljava/lang/Math;->max(FF)F
 
-    .line 378
+    .line 379
     move-result v7
 
-    .line 381
+    .line 382
     const/16 v10, 0x19
 
-    .line 382
+    .line 383
     int-to-float v10, v10
 
-    .line 384
+    .line 385
     iget-object v3, v3, Landroidx/compose/foundation/text/LegacyTextFieldState;->textDelegate:Landroidx/compose/foundation/text/TextDelegate;
 
-    .line 385
+    .line 386
     iget-object v3, v3, Landroidx/compose/foundation/text/TextDelegate;->density:Landroidx/compose/ui/unit/Density;
 
-    .line 387
+    .line 388
     invoke-interface {v3}, Landroidx/compose/ui/unit/Density;->getDensity()F
 
-    .line 389
+    .line 390
     move-result v3
 
-    .line 392
+    .line 393
     mul-float/2addr v3, v10
 
-    .line 393
+    .line 394
     add-float/2addr v3, v7
 
-    .line 394
+    .line 395
     new-instance v7, Landroidx/compose/ui/geometry/Rect;
 
-    .line 395
+    .line 396
     invoke-direct {v7, v0, v5, v6, v3}, Landroidx/compose/ui/geometry/Rect;-><init>(FFFF)V
 
-    .line 397
+    .line 398
     goto :goto_9
 
-    .line 400
+    .line 401
     :cond_d
     move-object v9, v7
 
-    .line 401
+    .line 402
     sget-object v7, Landroidx/compose/ui/geometry/Rect;->Zero:Landroidx/compose/ui/geometry/Rect;
 
-    .line 402
+    .line 403
     :goto_9
     iget-object v0, v8, Landroidx/compose/ui/platform/AndroidTextToolbar;->textActionModeCallback:Landroidx/compose/ui/platform/actionmodecallback/TextActionModeCallback;
 
-    .line 404
+    .line 405
     iput-object v7, v0, Landroidx/compose/ui/platform/actionmodecallback/TextActionModeCallback;->rect:Landroidx/compose/ui/geometry/Rect;
 
-    .line 406
+    .line 407
     iput-object v2, v0, Landroidx/compose/ui/platform/actionmodecallback/TextActionModeCallback;->onCopyRequested:Lkotlin/jvm/functions/Function0;
 
-    .line 408
+    .line 409
     iput-object v1, v0, Landroidx/compose/ui/platform/actionmodecallback/TextActionModeCallback;->onCutRequested:Lkotlin/jvm/functions/Function0;
 
-    .line 410
+    .line 411
     iput-object v4, v0, Landroidx/compose/ui/platform/actionmodecallback/TextActionModeCallback;->onPasteRequested:Lkotlin/jvm/functions/Function0;
 
-    .line 412
+    .line 413
     iput-object v9, v0, Landroidx/compose/ui/platform/actionmodecallback/TextActionModeCallback;->onSelectAllRequested:Lkotlin/jvm/functions/Function0;
 
-    .line 414
+    .line 415
     iget-object v1, v8, Landroidx/compose/ui/platform/AndroidTextToolbar;->actionMode:Landroid/view/ActionMode;
 
-    .line 416
+    .line 417
     if-nez v1, :cond_e
 
-    .line 418
+    .line 419
     sget-object v1, Landroidx/compose/ui/platform/TextToolbarStatus;->Shown:Landroidx/compose/ui/platform/TextToolbarStatus;
 
-    .line 420
+    .line 421
     iput-object v1, v8, Landroidx/compose/ui/platform/AndroidTextToolbar;->status:Landroidx/compose/ui/platform/TextToolbarStatus;
 
-    .line 422
+    .line 423
     iget-object v1, v8, Landroidx/compose/ui/platform/AndroidTextToolbar;->view:Landroid/view/View;
 
-    .line 424
+    .line 425
     new-instance v2, Landroidx/compose/ui/platform/actionmodecallback/FloatingTextActionModeCallback;
 
-    .line 426
+    .line 427
     invoke-direct {v2, v0}, Landroidx/compose/ui/platform/actionmodecallback/FloatingTextActionModeCallback;-><init>(Landroidx/compose/ui/platform/actionmodecallback/TextActionModeCallback;)V
 
-    .line 428
+    .line 429
     const/4 v0, 0x1
 
-    .line 431
+    .line 432
     invoke-virtual {v1, v2, v0}, Landroid/view/View;->startActionMode(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
 
-    .line 432
+    .line 433
     move-result-object v0
 
-    .line 435
+    .line 436
     iput-object v0, v8, Landroidx/compose/ui/platform/AndroidTextToolbar;->actionMode:Landroid/view/ActionMode;
 
-    .line 436
+    .line 437
     goto :goto_a
 
-    .line 438
+    .line 439
     :cond_e
     invoke-virtual {v1}, Landroid/view/ActionMode;->invalidate()V
 
-    .line 439
+    .line 440
     :cond_f
     :goto_a
     return-void
-    .line 442
+    .line 443
 .end method
 
 .method public final updateFloatingToolbar(Z)V

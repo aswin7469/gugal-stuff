@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/text/modifiers/TextAnnotatedStringNode;
 .super Landroidx/compose/ui/Modifier$Node;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/node/LayoutModifierNode;
@@ -941,7 +941,7 @@
     iget v4, v0, Landroidx/compose/foundation/text/modifiers/MultiParagraphLayoutCache;->minLines:I
 
     .line 32
-    invoke-virtual {v2, v4, p3, p4}, Landroidx/compose/foundation/text/modifiers/MinLinesConstrainer;->coerceMinLines-Oh53vG4$foundation_release(IJ)J
+    invoke-virtual {v2, p3, p4, v4}, Landroidx/compose/foundation/text/modifiers/MinLinesConstrainer;->coerceMinLines-Oh53vG4$foundation_release(JI)J
 
     .line 34
     move-result-wide p3

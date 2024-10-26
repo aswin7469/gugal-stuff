@@ -1,135 +1,187 @@
 .class public abstract Landroidx/compose/animation/core/InfiniteTransitionKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
-.method public static final animateFloat(Landroidx/compose/animation/core/InfiniteTransition;Landroidx/compose/animation/core/InfiniteRepeatableSpec;Landroidx/compose/runtime/Composer;)Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;
+.method public static final animateFloat(Landroidx/compose/animation/core/InfiniteTransition;FLandroidx/compose/animation/core/InfiniteRepeatableSpec;Ljava/lang/String;Landroidx/compose/runtime/Composer;I)Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;
     .locals 6
 
     .line 1
-    sget-object v0, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
+    sget-object p3, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
 
     .line 2
-    const/4 v0, 0x0
+    const/4 p3, 0x0
 
     .line 4
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {p3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 5
-    move-result-object v0
+    move-result-object p3
 
     .line 8
-    const/high16 v1, 0x3f800000    # 1.0f
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 9
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    move-result-object p1
 
-    .line 11
-    move-result-object v1
+    .line 12
+    sget-object v0, Landroidx/compose/animation/core/VectorConvertersKt;->FloatToVector:Landroidx/compose/animation/core/TwoWayConverterImpl;
 
-    .line 14
-    sget-object v2, Landroidx/compose/animation/core/VectorConvertersKt;->FloatToVector:Landroidx/compose/animation/core/TwoWayConverterImpl;
+    .line 13
+    and-int/lit16 p5, p5, 0x3fe
 
     .line 15
-    check-cast p2, Landroidx/compose/runtime/ComposerImpl;
+    const v0, 0x38000
 
     .line 17
-    invoke-virtual {p2}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
+    or-int/2addr p5, v0
 
-    .line 19
-    move-result-object v2
+    .line 20
+    check-cast p4, Landroidx/compose/runtime/ComposerImpl;
 
-    .line 22
-    sget-object v3, Landroidx/compose/runtime/Composer$Companion;->Empty:Landroidx/compose/runtime/Composer$Companion$Empty$1;
+    .line 21
+    invoke-virtual {p4}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
 
     .line 23
-    if-ne v2, v3, :cond_0
-
-    .line 25
-    new-instance v2, Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;
-
-    .line 27
-    invoke-direct {v2, p0, v0, v1, p1}, Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;-><init>(Landroidx/compose/animation/core/InfiniteTransition;Ljava/lang/Object;Ljava/lang/Object;Landroidx/compose/animation/core/AnimationSpec;)V
-
-    .line 29
-    invoke-virtual {p2, v2}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
-
-    .line 32
-    :cond_0
-    check-cast v2, Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;
-
-    .line 35
-    invoke-virtual {p2, p1}, Landroidx/compose/runtime/ComposerImpl;->changedInstance(Ljava/lang/Object;)Z
-
-    .line 37
-    move-result v4
-
-    .line 40
-    invoke-virtual {p2}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
-
-    .line 41
-    move-result-object v5
-
-    .line 44
-    if-nez v4, :cond_1
-
-    .line 45
-    if-ne v5, v3, :cond_2
-
-    .line 47
-    :cond_1
-    new-instance v5, Landroidx/compose/animation/core/InfiniteTransitionKt$animateValue$1$1;
-
-    .line 49
-    invoke-direct {v5, v0, v2, v1, p1}, Landroidx/compose/animation/core/InfiniteTransitionKt$animateValue$1$1;-><init>(Ljava/lang/Object;Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;Ljava/lang/Object;Landroidx/compose/animation/core/InfiniteRepeatableSpec;)V
-
-    .line 51
-    invoke-virtual {p2, v5}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
-
-    .line 54
-    :cond_2
-    check-cast v5, Lkotlin/jvm/functions/Function0;
-
-    .line 57
-    invoke-static {v5, p2}, Landroidx/compose/runtime/EffectsKt;->SideEffect(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;)V
-
-    .line 59
-    invoke-virtual {p2, p0}, Landroidx/compose/runtime/ComposerImpl;->changedInstance(Ljava/lang/Object;)Z
-
-    .line 62
-    move-result p1
-
-    .line 65
-    invoke-virtual {p2}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
-
-    .line 66
     move-result-object v0
 
-    .line 69
-    if-nez p1, :cond_3
+    .line 26
+    sget-object v1, Landroidx/compose/runtime/Composer$Companion;->Empty:Landroidx/compose/runtime/Composer$Companion$Empty$1;
 
-    .line 70
-    if-ne v0, v3, :cond_4
+    .line 27
+    if-ne v0, v1, :cond_0
+
+    .line 29
+    new-instance v0, Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;
+
+    .line 31
+    invoke-direct {v0, p0, p3, p1, p2}, Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;-><init>(Landroidx/compose/animation/core/InfiniteTransition;Ljava/lang/Object;Ljava/lang/Object;Landroidx/compose/animation/core/AnimationSpec;)V
+
+    .line 33
+    invoke-virtual {p4, v0}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
+
+    .line 36
+    :cond_0
+    check-cast v0, Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;
+
+    .line 39
+    and-int/lit16 v2, p5, 0x380
+
+    .line 41
+    xor-int/lit16 v2, v2, 0x180
+
+    .line 43
+    const/4 v3, 0x1
+
+    .line 45
+    const/4 v4, 0x0
+
+    .line 46
+    const/16 v5, 0x100
+
+    .line 47
+    if-le v2, v5, :cond_1
+
+    .line 49
+    invoke-virtual {p4, p1}, Landroidx/compose/runtime/ComposerImpl;->changedInstance(Ljava/lang/Object;)Z
+
+    .line 51
+    move-result v2
+
+    .line 54
+    if-nez v2, :cond_3
+
+    .line 55
+    :cond_1
+    and-int/lit16 p5, p5, 0x180
+
+    .line 57
+    if-ne p5, v5, :cond_2
+
+    .line 59
+    goto :goto_0
+
+    .line 61
+    :cond_2
+    move v3, v4
+
+    .line 62
+    :cond_3
+    :goto_0
+    invoke-virtual {p4, p2}, Landroidx/compose/runtime/ComposerImpl;->changedInstance(Ljava/lang/Object;)Z
+
+    .line 63
+    move-result p5
+
+    .line 66
+    or-int/2addr p5, v3
+
+    .line 67
+    invoke-virtual {p4}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
+
+    .line 68
+    move-result-object v2
+
+    .line 71
+    if-nez p5, :cond_4
 
     .line 72
-    :cond_3
-    new-instance v0, Landroidx/compose/animation/core/InfiniteTransitionKt$animateValue$2$1;
+    if-ne v2, v1, :cond_5
 
     .line 74
-    invoke-direct {v0, p0, v2}, Landroidx/compose/animation/core/InfiniteTransitionKt$animateValue$2$1;-><init>(Landroidx/compose/animation/core/InfiniteTransition;Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;)V
+    :cond_4
+    new-instance v2, Landroidx/compose/animation/core/InfiniteTransitionKt$animateValue$1$1;
 
     .line 76
-    invoke-virtual {p2, v0}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
+    invoke-direct {v2, p3, v0, p1, p2}, Landroidx/compose/animation/core/InfiniteTransitionKt$animateValue$1$1;-><init>(Ljava/lang/Object;Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;Ljava/lang/Object;Landroidx/compose/animation/core/InfiniteRepeatableSpec;)V
 
-    .line 79
-    :cond_4
-    check-cast v0, Lkotlin/jvm/functions/Function1;
+    .line 78
+    invoke-virtual {p4, v2}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 82
-    invoke-static {v2, v0, p2}, Landroidx/compose/runtime/EffectsKt;->DisposableEffect(Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;)V
+    .line 81
+    :cond_5
+    check-cast v2, Lkotlin/jvm/functions/Function0;
 
     .line 84
-    return-object v2
-    .line 87
+    invoke-static {v2, p4}, Landroidx/compose/runtime/EffectsKt;->SideEffect(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;)V
+
+    .line 86
+    invoke-virtual {p4, p0}, Landroidx/compose/runtime/ComposerImpl;->changedInstance(Ljava/lang/Object;)Z
+
+    .line 89
+    move-result p1
+
+    .line 92
+    invoke-virtual {p4}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
+
+    .line 93
+    move-result-object p2
+
+    .line 96
+    if-nez p1, :cond_6
+
+    .line 97
+    if-ne p2, v1, :cond_7
+
+    .line 99
+    :cond_6
+    new-instance p2, Landroidx/compose/animation/core/InfiniteTransitionKt$animateValue$2$1;
+
+    .line 101
+    invoke-direct {p2, p0, v0}, Landroidx/compose/animation/core/InfiniteTransitionKt$animateValue$2$1;-><init>(Landroidx/compose/animation/core/InfiniteTransition;Landroidx/compose/animation/core/InfiniteTransition$TransitionAnimationState;)V
+
+    .line 103
+    invoke-virtual {p4, p2}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
+
+    .line 106
+    :cond_7
+    check-cast p2, Lkotlin/jvm/functions/Function1;
+
+    .line 109
+    invoke-static {v0, p2, p4}, Landroidx/compose/runtime/EffectsKt;->DisposableEffect(Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;)V
+
+    .line 111
+    return-object v0
+    .line 114
 .end method

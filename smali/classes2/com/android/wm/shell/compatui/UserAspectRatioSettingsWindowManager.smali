@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/compatui/UserAspectRatioSettingsWindowManager;
 .super Lcom/android/wm/shell/compatui/CompatUIWindowManagerAbstract;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -52,7 +52,7 @@
     iget-object p0, p0, Lcom/android/wm/shell/compatui/UserAspectRatioSettingsWindowManager;->mLayout:Lcom/android/wm/shell/compatui/UserAspectRatioSettingsLayout;
 
     .line 16
-    const v0, 0x7f0b0886    # @id/user_aspect_ratio_settings_button
+    const v0, 0x7f0a08b9    # @id/user_aspect_ratio_settings_button
 
     .line 18
     const/4 v1, 0x0
@@ -61,7 +61,7 @@
     invoke-virtual {p0, v0, v1}, Lcom/android/wm/shell/compatui/UserAspectRatioSettingsLayout;->setViewVisibility(IZ)V
 
     .line 22
-    const v0, 0x7f0b0887    # @id/user_aspect_ratio_settings_hint
+    const v0, 0x7f0a08ba    # @id/user_aspect_ratio_settings_hint
 
     .line 25
     invoke-virtual {p0, v0, v1}, Lcom/android/wm/shell/compatui/UserAspectRatioSettingsLayout;->setViewVisibility(IZ)V
@@ -86,7 +86,7 @@
 
     .line 6
     :cond_0
-    const v1, 0x7f0b0886    # @id/user_aspect_ratio_settings_button
+    const v1, 0x7f0a08b9    # @id/user_aspect_ratio_settings_button
 
     .line 7
     const/4 v2, 0x1
@@ -116,7 +116,7 @@
     iget-object v0, p0, Lcom/android/wm/shell/compatui/UserAspectRatioSettingsWindowManager;->mLayout:Lcom/android/wm/shell/compatui/UserAspectRatioSettingsLayout;
 
     .line 27
-    const v1, 0x7f0b0887    # @id/user_aspect_ratio_settings_hint
+    const v1, 0x7f0a08ba    # @id/user_aspect_ratio_settings_hint
 
     .line 29
     invoke-virtual {v0, v1, v2}, Lcom/android/wm/shell/compatui/UserAspectRatioSettingsLayout;->setViewVisibility(IZ)V
@@ -258,7 +258,7 @@
     move-result-object p0
 
     .line 7
-    const v0, 0x7f0e0306    # @layout/user_aspect_ratio_settings_layout 'res/layout/user_aspect_ratio_settings_layout.xml'
+    const v0, 0x7f0d0319    # @layout/user_aspect_ratio_settings_layout 'res/layout/user_aspect_ratio_settings_layout.xml'
 
     .line 8
     const/4 v1, 0x0

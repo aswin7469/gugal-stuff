@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionListener;
@@ -28,45 +28,11 @@
 
 # virtual methods
 .method public final onEntryAdded(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
-    .locals 1
+    .locals 0
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsBackgroundIcons()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    iget-object v0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
-
-    .line 8
-    invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
-
-    .line 10
-    move-result-object v0
-
-    .line 13
-    invoke-virtual {v0}, Landroid/app/Notification;->isMediaNotification()Z
-
-    .line 14
-    move-result v0
-
-    .line 17
-    if-eqz v0, :cond_0
-
-    .line 18
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator$2;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator;
-
-    .line 20
-    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator;->-$$Nest$minflateOrUpdateIcons(Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
-
-    .line 22
-    :cond_0
     return-void
-    .line 25
+    .line 2
 .end method
 
 .method public final onEntryCleanUp(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
@@ -90,36 +56,26 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsBackgroundIcons()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-nez v0, :cond_0
-
-    .line 6
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator$2;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator;
 
-    .line 8
+    .line 2
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator;->mIconsState:Landroid/util/ArrayMap;
 
-    .line 10
+    .line 4
     const/4 v0, 0x0
 
-    .line 12
+    .line 6
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 13
+    .line 7
     move-result-object v0
 
-    .line 16
+    .line 10
     invoke-virtual {p0, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 17
-    :cond_0
+    .line 11
     return-void
-    .line 20
+    .line 14
 .end method
 
 .method public final onEntryUpdated(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
@@ -162,50 +118,19 @@
     if-ne v0, v2, :cond_0
 
     .line 22
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator;->mIconsState:Landroid/util/ArrayMap;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator;->mIconsState:Landroid/util/ArrayMap;
 
     .line 24
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 26
-    move-result-object v1
+    move-result-object v0
 
     .line 29
-    invoke-virtual {v0, p1, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 30
     :cond_0
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsBackgroundIcons()Z
-
-    .line 33
-    move-result v0
-
-    .line 36
-    if-eqz v0, :cond_1
-
-    .line 37
-    iget-object v0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Landroid/service/notification/StatusBarNotification;
-
-    .line 39
-    invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
-
-    .line 41
-    move-result-object v0
-
-    .line 44
-    invoke-virtual {v0}, Landroid/app/Notification;->isMediaNotification()Z
-
-    .line 45
-    move-result v0
-
-    .line 48
-    if-eqz v0, :cond_1
-
-    .line 49
-    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator;->-$$Nest$minflateOrUpdateIcons(Lcom/android/systemui/statusbar/notification/collection/coordinator/MediaCoordinator;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
-
-    .line 51
-    :cond_1
     return-void
-    .line 54
+    .line 33
 .end method

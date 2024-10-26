@@ -5,7 +5,9 @@
     <item>Shfaq përqindjen gjatë ngarkimit (e parazgjedhur)</item>
     <item>Mos e shfaq këtë ikonë</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Shfaq orët, minutat dhe sekondat</item>
     <item>Shfaq orët dhe minutat (e parazgjedhur)</item>

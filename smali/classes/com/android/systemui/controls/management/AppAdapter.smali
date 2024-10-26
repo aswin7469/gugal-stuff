@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/management/AppAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -52,7 +52,7 @@
     invoke-direct {p5, p1, p0, p2}, Lcom/android/systemui/controls/management/AppAdapter$callback$1;-><init>(Ljava/util/concurrent/Executor;Lcom/android/systemui/controls/management/AppAdapter;Ljava/util/concurrent/Executor;)V
 
     .line 21
-    invoke-interface {p4, p3, p5}, Lcom/android/systemui/statusbar/policy/CallbackController;->observe(Landroidx/lifecycle/Lifecycle;Ljava/lang/Object;)V
+    invoke-interface {p4, p3, p5}, Lcom/android/systemui/statusbar/policy/CallbackController;->observe(Landroidx/lifecycle/Lifecycle;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 24
     return-void
@@ -160,7 +160,7 @@
     iget-object v1, v1, Lcom/android/systemui/controls/management/FavoritesRenderer;->resources:Landroid/content/res/Resources;
 
     .line 53
-    const v2, 0x7f1402e2    # @string/controls_number_of_favorites '{count, plural, =1 {# control added.} other {# controls added.} }'
+    const v2, 0x7f1302fe    # @string/controls_number_of_favorites '{count, plural, =1 {# control added.} other {# controls added.} }'
 
     .line 55
     invoke-static {v1, v2, v0}, Lcom/android/systemui/util/PluralMessageFormaterKt;->icuMessageFormat(Landroid/content/res/Resources;II)Ljava/lang/String;
@@ -222,7 +222,7 @@
     iget-object v0, p0, Lcom/android/systemui/controls/management/AppAdapter;->layoutInflater:Landroid/view/LayoutInflater;
 
     .line 4
-    const v1, 0x7f0e007f    # @layout/controls_app_item 'res/layout/controls_app_item.xml'
+    const v1, 0x7f0d0087    # @layout/controls_app_item 'res/layout/controls_app_item.xml'
 
     .line 6
     const/4 v2, 0x0

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/controls/management/ControlsFavoritingActivity;
 .super Landroidx/activity/ComponentActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -207,7 +207,7 @@
     .locals 2
 
     .line 1
-    const v0, 0x7f0b0217    # @id/controls_management_root
+    const v0, 0x7f0a0222    # @id/controls_management_root
 
     .line 2
     invoke-virtual {p0, v0}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -463,13 +463,13 @@
     iput-byte p1, p0, Lcom/android/systemui/controls/management/ControlsFavoritingActivity;->openSource:B
 
     .line 84
-    const p1, 0x7f0e0087    # @layout/controls_management 'res/layout/controls_management.xml'
+    const p1, 0x7f0d008f    # @layout/controls_management 'res/layout/controls_management.xml'
 
     .line 86
     invoke-virtual {p0, p1}, Landroidx/activity/ComponentActivity;->setContentView(I)V
 
     .line 89
-    const p1, 0x7f0b0217    # @id/controls_management_root
+    const p1, 0x7f0a0222    # @id/controls_management_root
 
     .line 92
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -505,7 +505,7 @@
     invoke-virtual {v1, p1}, Landroidx/lifecycle/LifecycleRegistry;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
     .line 115
-    const p1, 0x7f0b077b    # @id/stub
+    const p1, 0x7f0a07aa    # @id/stub
 
     .line 118
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -517,7 +517,7 @@
     check-cast p1, Landroid/view/ViewStub;
 
     .line 125
-    const v1, 0x7f0e008a    # @layout/controls_management_favorites 'res/layout/controls_management_favorites.xml'
+    const v1, 0x7f0d0092    # @layout/controls_management_favorites 'res/layout/controls_management_favorites.xml'
 
     .line 127
     invoke-virtual {p1, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
@@ -526,7 +526,7 @@
     invoke-virtual {p1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     .line 133
-    const p1, 0x7f0b0773    # @id/status_message
+    const p1, 0x7f0a07a2    # @id/status_message
 
     .line 136
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -612,7 +612,7 @@
 
     .line 190
     :cond_1
-    const p1, 0x7f0b0779    # @id/structure_page_indicator
+    const p1, 0x7f0a07a8    # @id/structure_page_indicator
 
     .line 193
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -654,7 +654,7 @@
     move-result-object p1
 
     .line 222
-    const v2, 0x7f1402c1    # @string/controls_favorite_default_title 'Controls'
+    const v2, 0x7f1302dd    # @string/controls_favorite_default_title 'Controls'
 
     .line 223
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -664,7 +664,7 @@
 
     .line 229
     :cond_2
-    const v2, 0x7f0b07ff    # @id/title
+    const v2, 0x7f0a082e    # @id/title
 
     .line 230
     invoke-virtual {p0, v2}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -682,7 +682,7 @@
     iput-object v2, p0, Lcom/android/systemui/controls/management/ControlsFavoritingActivity;->titleView:Landroid/widget/TextView;
 
     .line 242
-    const p1, 0x7f0b0782    # @id/subtitle
+    const p1, 0x7f0a07b1    # @id/subtitle
 
     .line 244
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -700,7 +700,7 @@
     move-result-object v2
 
     .line 256
-    const v3, 0x7f1402c9    # @string/controls_favorite_subtitle 'Choose device controls to access quickly'
+    const v3, 0x7f1302e5    # @string/controls_favorite_subtitle 'Choose device controls to access quickly'
 
     .line 257
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -715,7 +715,7 @@
     iput-object p1, p0, Lcom/android/systemui/controls/management/ControlsFavoritingActivity;->subtitleView:Landroid/widget/TextView;
 
     .line 267
-    const p1, 0x7f0b077a    # @id/structure_pager
+    const p1, 0x7f0a07a9    # @id/structure_pager
 
     .line 269
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -745,7 +745,7 @@
     invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 289
-    const p1, 0x7f0b063b    # @id/rearrange
+    const p1, 0x7f0a0664    # @id/rearrange
 
     .line 292
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -763,7 +763,7 @@
     if-ne v2, v1, :cond_3
 
     .line 303
-    const v1, 0x7f1402c0    # @string/controls_favorite_back_to_editing 'Back to editing'
+    const v1, 0x7f1302dc    # @string/controls_favorite_back_to_editing 'Back to editing'
 
     .line 305
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -776,7 +776,7 @@
 
     .line 312
     :cond_3
-    const v1, 0x7f1402c6    # @string/controls_favorite_rearrange_button 'Rearrange'
+    const v1, 0x7f1302e2    # @string/controls_favorite_rearrange_button 'Rearrange'
 
     .line 313
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -807,7 +807,7 @@
     iput-object p1, p0, Lcom/android/systemui/controls/management/ControlsFavoritingActivity;->rearrangeButton:Landroid/widget/Button;
 
     .line 337
-    const p1, 0x7f0b0293    # @id/done
+    const p1, 0x7f0a02a2    # @id/done
 
     .line 339
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -1009,7 +1009,7 @@
     move-result-object v3
 
     .line 76
-    const v4, 0x104054c    # @android:string/lockscreen_pattern_correct
+    const v4, 0x1040543    # @android:string/lockscreen_glogin_username_hint
 
     .line 77
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -1027,7 +1027,7 @@
     move-result-object v2
 
     .line 90
-    const v3, 0x7f1402c4    # @string/controls_favorite_other_zone_header 'Other'
+    const v3, 0x7f1302e0    # @string/controls_favorite_other_zone_header 'Other'
 
     .line 91
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;

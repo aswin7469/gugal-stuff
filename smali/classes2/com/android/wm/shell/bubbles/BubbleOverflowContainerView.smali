@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/bubbles/BubbleOverflowContainerView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -185,7 +185,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b017f    # @id/bubble_overflow_recycler
+    const v0, 0x7f0a0185    # @id/bubble_overflow_recycler
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -200,7 +200,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/bubbles/BubbleOverflowContainerView;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 14
-    const v0, 0x7f0b017b    # @id/bubble_overflow_empty_state
+    const v0, 0x7f0a0181    # @id/bubble_overflow_empty_state
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -215,7 +215,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/bubbles/BubbleOverflowContainerView;->mEmptyState:Landroid/widget/LinearLayout;
 
     .line 25
-    const v0, 0x7f0b017e    # @id/bubble_overflow_empty_title
+    const v0, 0x7f0a0184    # @id/bubble_overflow_empty_title
 
     .line 27
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -230,7 +230,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/bubbles/BubbleOverflowContainerView;->mEmptyStateTitle:Landroid/widget/TextView;
 
     .line 36
-    const v0, 0x7f0b017d    # @id/bubble_overflow_empty_subtitle
+    const v0, 0x7f0a0183    # @id/bubble_overflow_empty_subtitle
 
     .line 38
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -245,7 +245,7 @@
     iput-object v0, p0, Lcom/android/wm/shell/bubbles/BubbleOverflowContainerView;->mEmptyStateSubtitle:Landroid/widget/TextView;
 
     .line 47
-    const v0, 0x7f0b017c    # @id/bubble_overflow_empty_state_image
+    const v0, 0x7f0a0182    # @id/bubble_overflow_empty_state_image
 
     .line 49
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -286,7 +286,7 @@
     int-to-float v1, v1
 
     .line 13
-    const v2, 0x7f07013e    # @dimen/bubble_name_width '90.0dp'
+    const v2, 0x7f070144    # @dimen/bubble_name_width '90.0dp'
 
     .line 14
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -311,7 +311,7 @@
 
     .line 28
     :cond_0
-    const v1, 0x7f0c000c    # @integer/bubbles_overflow_columns '4'
+    const v1, 0x7f0b000c    # @integer/bubbles_overflow_columns '4'
 
     .line 29
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -510,7 +510,7 @@
 
     .line 167
     :goto_1
-    const v2, 0x7f070143    # @dimen/bubble_overflow_item_padding_horizontal '5.0dp'
+    const v2, 0x7f070149    # @dimen/bubble_overflow_item_padding_horizontal '5.0dp'
 
     .line 168
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -522,7 +522,7 @@
     iput v2, p0, Lcom/android/wm/shell/bubbles/BubbleOverflowContainerView;->mHorizontalMargin:I
 
     .line 175
-    const v2, 0x7f070144    # @dimen/bubble_overflow_item_padding_vertical '16.0dp'
+    const v2, 0x7f07014a    # @dimen/bubble_overflow_item_padding_vertical '16.0dp'
 
     .line 177
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -550,7 +550,7 @@
     if-eqz v1, :cond_4
 
     .line 195
-    const v5, 0x7f08063d    # @drawable/bubble_ic_empty_overflow_dark 'res/drawable/bubble_ic_empty_overflow_dark.xml'
+    const v5, 0x7f08063e    # @drawable/bubble_ic_empty_overflow_dark 'res/drawable/bubble_ic_empty_overflow_dark.xml'
 
     .line 197
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -563,7 +563,7 @@
 
     .line 204
     :cond_4
-    const v5, 0x7f08063e    # @drawable/bubble_ic_empty_overflow_light 'res/drawable/bubble_ic_empty_overflow_light.xml'
+    const v5, 0x7f08063f    # @drawable/bubble_ic_empty_overflow_light 'res/drawable/bubble_ic_empty_overflow_light.xml'
 
     .line 205
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -576,7 +576,7 @@
     invoke-virtual {v2, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 212
-    const v2, 0x7f0b017a    # @id/bubble_overflow_container
+    const v2, 0x7f0a0180    # @id/bubble_overflow_container
 
     .line 215
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -731,73 +731,67 @@
     sget-object v0, Lcom/android/wm/shell/Flags;->FEATURE_FLAGS:Lcom/android/wm/shell/FeatureFlagsImpl;
 
     .line 11
-    invoke-virtual {v0}, Lcom/android/wm/shell/FeatureFlagsImpl;->enableOptionalBubbleOverflow()Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 13
-    move-result v0
-
-    .line 16
-    if-nez v0, :cond_0
-
-    .line 17
     const/4 v0, 0x1
 
-    .line 19
+    .line 16
     goto :goto_0
 
-    .line 20
+    .line 17
     :cond_0
     move v0, v1
 
-    .line 21
+    .line 18
     :goto_0
     iget-object v2, p0, Lcom/android/wm/shell/bubbles/BubbleOverflowContainerView;->mEmptyState:Landroid/widget/LinearLayout;
 
-    .line 22
+    .line 19
     const/16 v3, 0x8
 
-    .line 24
+    .line 21
     if-eqz v0, :cond_1
 
-    .line 26
+    .line 23
     move v0, v1
 
-    .line 28
+    .line 25
     goto :goto_1
 
-    .line 29
+    .line 26
     :cond_1
     move v0, v3
 
-    .line 30
+    .line 27
     :goto_1
     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 31
+    .line 28
     iget-object v0, p0, Lcom/android/wm/shell/bubbles/BubbleOverflowContainerView;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 34
+    .line 31
     iget-object p0, p0, Lcom/android/wm/shell/bubbles/BubbleOverflowContainerView;->mOverflowBubbles:Ljava/util/List;
 
-    .line 36
+    .line 33
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
-    .line 38
+    .line 35
     move-result p0
 
-    .line 41
+    .line 38
     if-eqz p0, :cond_2
 
-    .line 42
+    .line 39
     move v1, v3
 
-    .line 44
+    .line 41
     :cond_2
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 45
+    .line 42
     return-void
-    .line 48
+    .line 45
 .end method
 
 .method public final updateFontSize()V
@@ -854,7 +848,7 @@
     iget-object v1, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     .line 4
-    const v2, 0x7f14022a    # @string/bubble_overflow_empty_title 'No recent bubbles'
+    const v2, 0x7f130231    # @string/bubble_overflow_empty_title 'No recent bubbles'
 
     .line 6
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -872,7 +866,7 @@
     iget-object p0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     .line 18
-    const v1, 0x7f140229    # @string/bubble_overflow_empty_subtitle 'Recent bubbles and dismissed bubbles will appear here'
+    const v1, 0x7f130230    # @string/bubble_overflow_empty_subtitle 'Recent bubbles and dismissed bubbles will appear here'
 
     .line 20
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

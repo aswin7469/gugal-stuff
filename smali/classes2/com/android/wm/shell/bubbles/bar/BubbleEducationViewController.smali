@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/bar/BubbleEducationViewController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -398,7 +398,7 @@
     move-result v2
 
     .line 53
-    const v0, 0x7f070152    # @dimen/bubble_popup_padding '24.0dp'
+    const v0, 0x7f070158    # @dimen/bubble_popup_padding '24.0dp'
 
     .line 54
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -407,7 +407,7 @@
     move-result v7
 
     .line 60
-    const v0, 0x7f07014e    # @dimen/bubble_popup_arrow_width '12.0dp'
+    const v0, 0x7f070154    # @dimen/bubble_popup_arrow_width '12.0dp'
 
     .line 61
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimension(I)F
@@ -416,7 +416,7 @@
     move-result v3
 
     .line 67
-    const v0, 0x7f07014d    # @dimen/bubble_popup_arrow_height '10.0dp'
+    const v0, 0x7f070153    # @dimen/bubble_popup_arrow_height '10.0dp'
 
     .line 68
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimension(I)F
@@ -425,7 +425,7 @@
     move-result v4
 
     .line 74
-    const v0, 0x7f07014c    # @dimen/bubble_popup_arrow_corner_radius '2.0dp'
+    const v0, 0x7f070152    # @dimen/bubble_popup_arrow_corner_radius '2.0dp'
 
     .line 75
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimension(I)F

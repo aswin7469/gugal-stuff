@@ -1,6 +1,6 @@
 .class public abstract Landroidx/slice/widget/SliceContent;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -168,21 +168,21 @@
 
     .line 49
     :cond_1
-    const-string v0, "text"
+    const-string/jumbo v0, "text"
 
     .line 51
     const-string v1, "content_description"
 
-    .line 53
+    .line 54
     invoke-static {p1, v0, v1}, Landroidx/slice/core/SliceQuery;->findSubtype(Landroidx/slice/SliceItem;Ljava/lang/String;Ljava/lang/String;)Landroidx/slice/SliceItem;
 
-    .line 55
+    .line 56
     move-result-object p1
 
-    .line 58
+    .line 59
     iput-object p1, p0, Landroidx/slice/widget/SliceContent;->mContentDescr:Landroidx/slice/SliceItem;
 
-    .line 59
+    .line 60
     return-void
-    .line 61
+    .line 62
 .end method

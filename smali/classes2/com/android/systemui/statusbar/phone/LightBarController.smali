@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/LightBarController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;
@@ -101,54 +101,51 @@
     iput-object p3, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mStatusBarIconController:Lcom/android/systemui/statusbar/phone/DarkIconDispatcherImpl;
 
     .line 31
-    check-cast p4, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
+    invoke-interface {p4, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
     .line 33
-    invoke-virtual {p4, p0}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->addCallback(Ljava/lang/Object;)V
-
-    .line 35
     iput-object p6, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mStatusBarModeRepository:Lcom/android/systemui/statusbar/data/repository/StatusBarModeRepositoryImpl;
 
-    .line 38
+    .line 36
     new-instance p2, Lcom/android/systemui/statusbar/phone/LightBarController$$ExternalSyntheticLambda0;
 
-    .line 40
+    .line 38
     invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/phone/LightBarController$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/phone/LightBarController;)V
 
-    .line 42
+    .line 40
     invoke-virtual {p5, p2}, Lcom/android/systemui/navigationbar/NavigationModeController;->addListener(Lcom/android/systemui/navigationbar/NavigationModeController$ModeChangedListener;)I
 
-    .line 45
+    .line 43
     move-result p2
 
-    .line 48
+    .line 46
     iput p2, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mNavigationMode:I
 
-    .line 49
+    .line 47
     invoke-virtual {p1}, Landroid/content/Context;->getDisplayId()I
 
-    .line 51
+    .line 49
     move-result p1
 
-    .line 54
+    .line 52
     invoke-virtual {p8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 55
+    .line 53
     if-nez p1, :cond_0
 
-    .line 58
+    .line 56
     invoke-virtual {p7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 60
+    .line 58
     const-string p1, "LightBarController"
 
-    .line 63
+    .line 61
     invoke-static {p7, p1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable$default(Lcom/android/systemui/dump/DumpManager;Ljava/lang/String;Lcom/android/systemui/Dumpable;)V
 
-    .line 65
+    .line 63
     :cond_0
     return-void
-    .line 68
+    .line 66
 .end method
 
 .method public static isLight(III)Z
@@ -986,43 +983,47 @@
     iget v1, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mNavigationMode:I
 
     .line 6
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 8
     invoke-static {v1}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
 
-    .line 11
+    .line 8
     move-result v1
 
-    .line 14
+    .line 11
     if-eqz v1, :cond_0
 
-    .line 15
+    .line 12
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mNavigationButtonsForcedVisible:Z
 
-    .line 17
+    .line 14
     if-eqz v0, :cond_1
 
-    .line 19
+    .line 16
+    goto :goto_0
+
+    .line 18
     :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 19
+    :goto_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mNavigationBarController:Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;
 
-    .line 21
+    .line 22
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/LightBarController;->mNavigationLight:Z
 
-    .line 23
+    .line 24
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/LightBarController;->animateChange()Z
 
-    .line 25
+    .line 26
     move-result p0
 
-    .line 28
+    .line 29
     invoke-virtual {v0, v1, p0}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->setIconsDark(ZZ)V
 
-    .line 29
+    .line 30
     :cond_1
     return-void
-    .line 32
+    .line 33
 .end method
 
 .method public final updateStatus([Lcom/android/internal/view/AppearanceRegion;)V

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -23,13 +23,13 @@
 
 .field public final synthetic f$7:Z
 
-.field public final synthetic f$8:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;
+.field public final synthetic f$8:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;
 
 .field public final synthetic f$9:Landroid/content/Context;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;ILcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;Landroid/app/Notification$Builder;ZZLcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;ZLcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;Landroid/content/Context;)V
+.method public synthetic constructor <init>(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;ILcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;Landroid/app/Notification$Builder;ZZLcom/android/systemui/statusbar/notification/row/HeadsUpStyleProviderImpl;ZLcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;Landroid/content/Context;)V
     .locals 0
 
     .line 1
@@ -60,7 +60,7 @@
     iput-boolean p8, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$$ExternalSyntheticLambda0;->f$7:Z
 
     .line 19
-    iput-object p9, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$$ExternalSyntheticLambda0;->f$8:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;
+    iput-object p9, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$$ExternalSyntheticLambda0;->f$8:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;
 
     .line 21
     iput-object p10, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$$ExternalSyntheticLambda0;->f$9:Landroid/content/Context;
@@ -245,181 +245,128 @@
     .line 105
     :cond_6
     :goto_2
-    and-int/lit8 v6, v5, 0x8
+    const/16 v6, 0x8
 
     .line 107
-    if-eqz v6, :cond_7
+    and-int/2addr v5, v6
 
     .line 109
-    const-string v6, "creating public remote view"
+    if-eqz v5, :cond_7
 
-    .line 111
-    invoke-virtual {v7, v4, v6}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;->logAsyncTaskProgress(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Ljava/lang/String;)V
+    .line 110
+    const-string v5, "creating public remote view"
 
-    .line 113
-    invoke-virtual {v0, v8}, Landroid/app/Notification$Builder;->makePublicContentView(Z)Landroid/widget/RemoteViews;
-
-    .line 116
-    move-result-object v6
-
-    .line 119
-    iput-object v6, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->newPublicView:Landroid/widget/RemoteViews;
-
-    .line 120
-    :cond_7
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncGroupHeaderInflation()Z
-
-    .line 122
-    move-result v6
-
-    .line 125
-    const/4 v8, 0x1
-
-    .line 126
-    if-eqz v6, :cond_9
-
-    .line 127
-    and-int/lit8 v6, v5, 0x20
-
-    .line 129
-    if-eqz v6, :cond_8
-
-    .line 131
-    const-string v6, "creating group summary remote view"
-
-    .line 133
-    invoke-virtual {v7, v4, v6}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;->logAsyncTaskProgress(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Ljava/lang/String;)V
-
-    .line 135
-    invoke-virtual {v0}, Landroid/app/Notification$Builder;->makeNotificationGroupHeader()Landroid/widget/RemoteViews;
-
-    .line 138
-    move-result-object v6
-
-    .line 141
-    iput-object v6, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->mNewGroupHeaderView:Landroid/widget/RemoteViews;
-
-    .line 142
-    :cond_8
-    and-int/lit8 v5, v5, 0x40
-
-    .line 144
-    if-eqz v5, :cond_9
-
-    .line 146
-    const-string v5, "creating low-priority group summary remote view"
-
-    .line 148
+    .line 112
     invoke-virtual {v7, v4, v5}, Lcom/android/systemui/statusbar/notification/row/NotificationRowContentBinderLogger;->logAsyncTaskProgress(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Ljava/lang/String;)V
 
-    .line 150
-    invoke-virtual {v0, v8}, Landroid/app/Notification$Builder;->makeLowPriorityContentView(Z)Landroid/widget/RemoteViews;
+    .line 114
+    invoke-virtual {v0, v8}, Landroid/app/Notification$Builder;->makePublicContentView(Z)Landroid/widget/RemoteViews;
 
-    .line 153
+    .line 117
     move-result-object v4
 
-    .line 156
-    iput-object v4, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->mNewMinimizedGroupHeaderView:Landroid/widget/RemoteViews;
+    .line 120
+    iput-object v4, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->newPublicView:Landroid/widget/RemoteViews;
 
-    .line 157
-    :cond_9
+    .line 121
+    :cond_7
     iget-object v4, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->newContentView:Landroid/widget/RemoteViews;
 
-    .line 159
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$$ExternalSyntheticLambda0;->f$8:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;
+    .line 123
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$$ExternalSyntheticLambda0;->f$8:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;
 
-    .line 161
-    invoke-virtual {p0, v3, v8}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;->provide(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)Lcom/android/systemui/statusbar/notification/row/NotifLayoutInflaterFactory;
+    .line 125
+    const/4 v5, 0x1
 
-    .line 163
-    move-result-object v5
+    .line 127
+    invoke-virtual {p0, v3, v5}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;->provide(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)Lcom/android/systemui/statusbar/notification/row/NotifLayoutInflaterFactory;
 
-    .line 166
-    if-eqz v4, :cond_a
+    .line 128
+    move-result-object v7
 
-    .line 167
-    invoke-virtual {v4, v5}, Landroid/widget/RemoteViews;->setLayoutInflaterFactory(Landroid/view/LayoutInflater$Factory2;)V
+    .line 131
+    if-eqz v4, :cond_8
 
-    .line 169
-    :cond_a
+    .line 132
+    invoke-virtual {v4, v7}, Landroid/widget/RemoteViews;->setLayoutInflaterFactory(Landroid/view/LayoutInflater$Factory2;)V
+
+    .line 134
+    :cond_8
     iget-object v4, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->newExpandedView:Landroid/widget/RemoteViews;
 
-    .line 172
-    const/4 v5, 0x2
+    .line 137
+    const/4 v7, 0x2
 
-    .line 174
-    invoke-virtual {p0, v3, v5}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;->provide(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)Lcom/android/systemui/statusbar/notification/row/NotifLayoutInflaterFactory;
+    .line 139
+    invoke-virtual {p0, v3, v7}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;->provide(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)Lcom/android/systemui/statusbar/notification/row/NotifLayoutInflaterFactory;
 
-    .line 175
-    move-result-object v5
+    .line 140
+    move-result-object v7
 
-    .line 178
-    if-eqz v4, :cond_b
+    .line 143
+    if-eqz v4, :cond_9
 
-    .line 179
-    invoke-virtual {v4, v5}, Landroid/widget/RemoteViews;->setLayoutInflaterFactory(Landroid/view/LayoutInflater$Factory2;)V
+    .line 144
+    invoke-virtual {v4, v7}, Landroid/widget/RemoteViews;->setLayoutInflaterFactory(Landroid/view/LayoutInflater$Factory2;)V
 
-    .line 181
-    :cond_b
+    .line 146
+    :cond_9
     iget-object v4, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->newHeadsUpView:Landroid/widget/RemoteViews;
 
-    .line 184
-    const/4 v5, 0x4
+    .line 149
+    const/4 v7, 0x4
 
-    .line 186
-    invoke-virtual {p0, v3, v5}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;->provide(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)Lcom/android/systemui/statusbar/notification/row/NotifLayoutInflaterFactory;
+    .line 151
+    invoke-virtual {p0, v3, v7}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;->provide(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)Lcom/android/systemui/statusbar/notification/row/NotifLayoutInflaterFactory;
 
-    .line 187
-    move-result-object v5
+    .line 152
+    move-result-object v7
 
-    .line 190
-    if-eqz v4, :cond_c
+    .line 155
+    if-eqz v4, :cond_a
 
-    .line 191
-    invoke-virtual {v4, v5}, Landroid/widget/RemoteViews;->setLayoutInflaterFactory(Landroid/view/LayoutInflater$Factory2;)V
+    .line 156
+    invoke-virtual {v4, v7}, Landroid/widget/RemoteViews;->setLayoutInflaterFactory(Landroid/view/LayoutInflater$Factory2;)V
 
-    .line 193
-    :cond_c
+    .line 158
+    :cond_a
     iget-object v4, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->newPublicView:Landroid/widget/RemoteViews;
 
-    .line 196
-    const/16 v5, 0x8
+    .line 161
+    invoke-virtual {p0, v3, v6}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$18;->provide(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)Lcom/android/systemui/statusbar/notification/row/NotifLayoutInflaterFactory;
 
-    .line 198
-    invoke-virtual {p0, v3, v5}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$31;->provide(Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;I)Lcom/android/systemui/statusbar/notification/row/NotifLayoutInflaterFactory;
-
-    .line 200
+    .line 163
     move-result-object p0
 
-    .line 203
-    if-eqz v4, :cond_d
+    .line 166
+    if-eqz v4, :cond_b
 
-    .line 204
+    .line 167
     invoke-virtual {v4, p0}, Landroid/widget/RemoteViews;->setLayoutInflaterFactory(Landroid/view/LayoutInflater$Factory2;)V
 
-    .line 206
-    :cond_d
+    .line 169
+    :cond_b
     iput-object v1, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->packageContext:Landroid/content/Context;
 
-    .line 209
+    .line 172
     invoke-virtual {v0, v9}, Landroid/app/Notification$Builder;->getHeadsUpStatusBarText(Z)Ljava/lang/CharSequence;
 
-    .line 211
+    .line 174
     move-result-object p0
 
-    .line 214
+    .line 177
     iput-object p0, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->headsUpStatusBarText:Ljava/lang/CharSequence;
 
-    .line 215
-    invoke-virtual {v0, v8}, Landroid/app/Notification$Builder;->getHeadsUpStatusBarText(Z)Ljava/lang/CharSequence;
+    .line 178
+    invoke-virtual {v0, v5}, Landroid/app/Notification$Builder;->getHeadsUpStatusBarText(Z)Ljava/lang/CharSequence;
 
-    .line 217
+    .line 180
     move-result-object p0
 
-    .line 220
+    .line 183
     iput-object p0, v2, Lcom/android/systemui/statusbar/notification/row/NotificationContentInflater$InflationProgress;->headsUpStatusBarTextPublic:Ljava/lang/CharSequence;
 
-    .line 221
+    .line 184
     return-object v2
-    .line 223
+    .line 186
 .end method

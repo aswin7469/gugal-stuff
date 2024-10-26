@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/GuestResetOrExitSessionReceiver;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
 .field public mResetSessionDialog:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
 
-.field public final mResetSessionDialogFactory:Lcom/android/systemui/GuestResetOrExitSessionReceiver$ResetSessionDialogFactory;
+.field public final mResetSessionDialogFactory:Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;
 
 .field public final mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
@@ -29,7 +29,7 @@
     .line 4
 .end method
 
-.method public constructor <init>(Lcom/android/systemui/settings/UserTracker;Lcom/android/systemui/broadcast/BroadcastDispatcher;Lcom/android/systemui/GuestResetOrExitSessionReceiver$ResetSessionDialogFactory;Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;)V
+.method public constructor <init>(Lcom/android/systemui/settings/UserTracker;Lcom/android/systemui/broadcast/BroadcastDispatcher;Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;)V
     .locals 0
 
     .line 1
@@ -42,7 +42,7 @@
     iput-object p2, p0, Lcom/android/systemui/GuestResetOrExitSessionReceiver;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
     .line 7
-    iput-object p3, p0, Lcom/android/systemui/GuestResetOrExitSessionReceiver;->mResetSessionDialogFactory:Lcom/android/systemui/GuestResetOrExitSessionReceiver$ResetSessionDialogFactory;
+    iput-object p3, p0, Lcom/android/systemui/GuestResetOrExitSessionReceiver;->mResetSessionDialogFactory:Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;
 
     .line 9
     iput-object p4, p0, Lcom/android/systemui/GuestResetOrExitSessionReceiver;->mExitSessionDialogFactory:Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;
@@ -154,13 +154,13 @@
     if-eqz v0, :cond_3
 
     .line 62
-    iget-object p1, p0, Lcom/android/systemui/GuestResetOrExitSessionReceiver;->mResetSessionDialogFactory:Lcom/android/systemui/GuestResetOrExitSessionReceiver$ResetSessionDialogFactory;
+    iget-object p1, p0, Lcom/android/systemui/GuestResetOrExitSessionReceiver;->mResetSessionDialogFactory:Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;
 
     .line 64
     iget p2, p2, Landroid/content/pm/UserInfo;->id:I
 
     .line 66
-    invoke-virtual {p1, p2}, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ResetSessionDialogFactory;->create(I)Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+    invoke-virtual {p1, p2}, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->create(I)Lcom/android/systemui/statusbar/phone/SystemUIDialog;
 
     .line 68
     move-result-object p1
@@ -209,178 +209,205 @@
     move-result-object v1
 
     .line 100
-    iget-object v2, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mClickListenerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$4;
+    iget-object v2, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mClickListenerFactory:Ljava/lang/Object;
 
     .line 101
-    invoke-virtual {v2, v0, p2, v1}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$4;->create(ZILandroid/content/DialogInterface;)Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogClickListener;
+    check-cast v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$3;
 
     .line 103
-    move-result-object p2
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 106
-    const/4 v2, -0x1
-
-    .line 107
-    const/high16 v3, 0x1040000    # @android:string/cancel
+    .line 105
+    new-instance v3, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogClickListener;
 
     .line 108
-    const/4 v4, -0x3
+    iget-object v2, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$3;->this$0:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;
 
     .line 110
-    if-eqz v0, :cond_4
+    iget-object v2, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->wMComponentImpl:Ljava/lang/Object;
 
-    .line 111
-    iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
+    .line 112
+    check-cast v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
-    .line 113
-    const v5, 0x7f1403da    # @string/guest_exit_dialog_title 'Exit guest mode?'
+    .line 114
+    iget-object v2, v2, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->userSwitcherControllerProvider:Ldagger/internal/DelegateFactory;
 
-    .line 115
-    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    .line 116
+    invoke-virtual {v2}, Ldagger/internal/DelegateFactory;->get()Ljava/lang/Object;
 
     .line 118
-    move-result-object v0
+    move-result-object v2
 
     .line 121
-    invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
+    check-cast v2, Lcom/android/systemui/statusbar/policy/UserSwitcherController;
 
     .line 122
-    iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
+    invoke-direct {v3, v2, v0, p2, v1}, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogClickListener;-><init>(Lcom/android/systemui/statusbar/policy/UserSwitcherController;ZILcom/android/systemui/statusbar/phone/SystemUIDialog;)V
 
-    .line 125
-    const v5, 0x7f1403d8    # @string/guest_exit_dialog_message 'This will delete apps and data from the current guest session'
+    .line 124
+    const/4 p2, -0x1
 
     .line 127
-    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    const/high16 v2, 0x1040000    # @android:string/cancel
+
+    .line 128
+    const/4 v4, -0x3
 
     .line 130
-    move-result-object v0
+    if-eqz v0, :cond_4
 
-    .line 133
-    invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
-
-    .line 134
+    .line 131
     iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
 
-    .line 137
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    .line 133
+    const v5, 0x7f13041d    # @string/guest_exit_dialog_title 'Exit guest mode?'
 
-    .line 139
+    .line 135
+    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 138
     move-result-object v0
 
+    .line 141
+    invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
+
     .line 142
-    invoke-virtual {v1, v4, v0, p2}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
 
-    .line 143
-    iget-object p1, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
+    .line 145
+    const v5, 0x7f13041b    # @string/guest_exit_dialog_message 'This will delete apps and data from the current guest session'
 
-    .line 146
-    const v0, 0x7f1403d7    # @string/guest_exit_dialog_button 'Exit'
+    .line 147
+    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 148
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    .line 150
+    move-result-object v0
 
-    .line 151
-    move-result-object p1
+    .line 153
+    invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 154
-    invoke-virtual {v1, v2, p1, p2}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
 
-    .line 155
+    .line 157
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 159
+    move-result-object v0
+
+    .line 162
+    invoke-virtual {v1, v4, v0, v3}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    .line 163
+    iget-object p1, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
+
+    .line 166
+    const v0, 0x7f13041a    # @string/guest_exit_dialog_button 'Exit'
+
+    .line 168
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 171
+    move-result-object p1
+
+    .line 174
+    invoke-virtual {v1, p2, p1, v3}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    .line 175
     goto :goto_0
 
-    .line 158
+    .line 178
     :cond_4
     iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
 
-    .line 159
-    const v5, 0x7f1403db    # @string/guest_exit_dialog_title_non_ephemeral 'Save guest activity?'
+    .line 179
+    const v5, 0x7f13041e    # @string/guest_exit_dialog_title_non_ephemeral 'Save guest activity?'
 
-    .line 161
+    .line 181
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 164
+    .line 184
     move-result-object v0
 
-    .line 167
+    .line 187
     invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 168
+    .line 188
     iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
 
-    .line 171
-    const v5, 0x7f1403d9    # @string/guest_exit_dialog_message_non_ephemeral 'You can save activity from the current session or delete all apps and data'
+    .line 191
+    const v5, 0x7f13041c    # @string/guest_exit_dialog_message_non_ephemeral 'You can save activity from the current session or delete all apps and data'
 
-    .line 173
+    .line 193
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 176
+    .line 196
     move-result-object v0
 
-    .line 179
+    .line 199
     invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 180
-    iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
-
-    .line 183
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    .line 185
-    move-result-object v0
-
-    .line 188
-    invoke-virtual {v1, v4, v0, p2}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
-
-    .line 189
-    iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
-
-    .line 192
-    const v3, 0x7f1403d6    # @string/guest_exit_clear_data_button 'Delete'
-
-    .line 194
-    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    .line 197
-    move-result-object v0
-
     .line 200
-    const/4 v3, -0x2
+    iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
 
-    .line 201
-    invoke-virtual {v1, v3, v0, p2}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
-
-    .line 202
-    iget-object p1, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
+    .line 203
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     .line 205
-    const v0, 0x7f1403df    # @string/guest_exit_save_data_button 'Save'
+    move-result-object v0
 
-    .line 207
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    .line 208
+    invoke-virtual {v1, v4, v0, v3}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 210
-    move-result-object p1
+    .line 209
+    iget-object v0, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
 
-    .line 213
-    invoke-virtual {v1, v2, p1, p2}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    .line 212
+    const v2, 0x7f130419    # @string/guest_exit_clear_data_button 'Delete'
 
     .line 214
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 217
+    move-result-object v0
+
+    .line 220
+    const/4 v2, -0x2
+
+    .line 221
+    invoke-virtual {v1, v2, v0, v3}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    .line 222
+    iget-object p1, p1, Lcom/android/systemui/GuestResetOrExitSessionReceiver$ExitSessionDialogFactory;->mResources:Landroid/content/res/Resources;
+
+    .line 225
+    const v0, 0x7f130422    # @string/guest_exit_save_data_button 'Save'
+
+    .line 227
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 230
+    move-result-object p1
+
+    .line 233
+    invoke-virtual {v1, p2, p1, v3}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    .line 234
     :goto_0
     const/4 p1, 0x0
 
-    .line 217
+    .line 237
     invoke-virtual {v1, p1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 218
+    .line 238
     iput-object v1, p0, Lcom/android/systemui/GuestResetOrExitSessionReceiver;->mExitSessionDialog:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
 
-    .line 221
+    .line 241
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 223
+    .line 243
     :cond_5
     :goto_1
     return-void
-    .line 226
+    .line 246
 .end method

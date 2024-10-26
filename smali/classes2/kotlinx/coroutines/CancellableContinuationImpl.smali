@@ -1,6 +1,6 @@
 .class public Lkotlinx/coroutines/CancellableContinuationImpl;
 .super Lkotlinx/coroutines/DispatchedTask;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/CancellableContinuation;
@@ -2462,30 +2462,4 @@
     .line 41
     return-object p0
     .line 42
-.end method
-
-.method public final tryResumeWithException(Ljava/lang/Throwable;)Lkotlinx/coroutines/internal/Symbol;
-    .locals 2
-
-    .line 1
-    new-instance v0, Lkotlinx/coroutines/CompletedExceptionally;
-
-    .line 2
-    const/4 v1, 0x0
-
-    .line 4
-    invoke-direct {v0, p1, v1}, Lkotlinx/coroutines/CompletedExceptionally;-><init>(Ljava/lang/Throwable;Z)V
-
-    .line 5
-    const/4 p1, 0x0
-
-    .line 8
-    invoke-virtual {p0, v0, p1}, Lkotlinx/coroutines/CancellableContinuationImpl;->tryResumeImpl(Ljava/lang/Object;Lkotlin/jvm/functions/Function1;)Lkotlinx/coroutines/internal/Symbol;
-
-    .line 9
-    move-result-object p0
-
-    .line 12
-    return-object p0
-    .line 13
 .end method

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/navigationbar/buttons/KeyButtonView;
 .super Landroid/widget/ImageView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/navigationbar/buttons/ButtonInterface;
@@ -293,7 +293,7 @@
     sget-object v0, Lcom/android/systemui/Dependency;->sDependency:Lcom/android/systemui/Dependency;
 
     .line 24
-    const-class v2, Lcom/android/systemui/assist/AssistManager;
+    const-class v2, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 26
     invoke-virtual {v0, v2}, Lcom/android/systemui/Dependency;->getDependencyInner(Ljava/lang/Object;)Ljava/lang/Object;
@@ -302,13 +302,13 @@
     move-result-object v0
 
     .line 31
-    check-cast v0, Lcom/android/systemui/assist/AssistManager;
+    check-cast v0, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 32
     const/4 v2, 0x5
 
     .line 34
-    invoke-virtual {v0, v2}, Lcom/android/systemui/assist/AssistManager;->shouldOverrideAssist(I)Z
+    invoke-virtual {v0, v2}, Lcom/google/android/systemui/assist/AssistManagerGoogle;->shouldOverrideAssist(I)Z
 
     .line 35
     move-result v0
@@ -646,324 +646,321 @@
     move-result-object v1
 
     .line 70
-    sget-boolean v4, Lcom/android/systemui/shared/system/QuickStepContract;->ALLOW_BACK_GESTURE_IN_SHADE:Z
-
-    .line 71
     invoke-static {v1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
-    .line 73
+    .line 71
     move-result-object v1
 
-    .line 76
+    .line 74
     invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
-    .line 77
+    .line 75
     move-result v1
 
-    .line 80
+    .line 78
     int-to-float v1, v1
 
-    .line 81
+    .line 79
     const/high16 v4, 0x40400000    # 3.0f
 
-    .line 82
+    .line 80
     mul-float/2addr v1, v4
 
-    .line 84
+    .line 82
     iget v4, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mTouchDownX:I
 
-    .line 85
+    .line 83
     sub-int/2addr v0, v4
 
-    .line 87
+    .line 85
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
-    .line 88
+    .line 86
     move-result v0
 
-    .line 91
+    .line 89
     int-to-float v0, v0
 
-    .line 92
+    .line 90
     cmpl-float v0, v0, v1
 
-    .line 93
+    .line 91
     if-gtz v0, :cond_5
 
-    .line 95
+    .line 93
     iget v0, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mTouchDownY:I
 
-    .line 97
+    .line 95
     sub-int/2addr p1, v0
 
-    .line 99
+    .line 97
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
-    .line 100
+    .line 98
     move-result p1
 
-    .line 103
+    .line 101
     int-to-float p1, p1
 
-    .line 104
+    .line 102
     cmpl-float p1, p1, v1
 
-    .line 105
+    .line 103
     if-lez p1, :cond_11
 
-    .line 107
+    .line 105
     :cond_5
     invoke-virtual {p0, v2}, Landroid/widget/ImageView;->setPressed(Z)V
 
-    .line 109
+    .line 107
     iget-object p1, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mCheckLongPress:Lcom/android/systemui/navigationbar/buttons/KeyButtonView$1;
 
-    .line 112
+    .line 110
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 114
+    .line 112
     goto/16 :goto_5
 
-    .line 117
+    .line 115
     :cond_6
     invoke-virtual {p0}, Landroid/widget/ImageView;->isPressed()Z
 
-    .line 119
+    .line 117
     move-result p1
 
-    .line 122
+    .line 120
     if-eqz p1, :cond_7
 
-    .line 123
+    .line 121
     iget-boolean p1, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mLongClicked:Z
 
-    .line 125
+    .line 123
     if-nez p1, :cond_7
 
-    .line 127
+    .line 125
     move p1, v3
 
-    .line 129
+    .line 127
     goto :goto_0
 
-    .line 130
+    .line 128
     :cond_7
     move p1, v2
 
-    .line 131
+    .line 129
     :goto_0
     invoke-virtual {p0, v2}, Landroid/widget/ImageView;->setPressed(Z)V
 
-    .line 132
+    .line 130
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    .line 135
+    .line 133
     move-result-wide v5
 
-    .line 138
+    .line 136
     iget-wide v7, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mDownTime:J
 
-    .line 139
+    .line 137
     sub-long/2addr v5, v7
 
-    .line 141
+    .line 139
     const-wide/16 v7, 0x96
 
-    .line 142
+    .line 140
     cmp-long v1, v5, v7
 
-    .line 144
+    .line 142
     if-lez v1, :cond_8
 
-    .line 146
+    .line 144
     move v1, v3
 
-    .line 148
+    .line 146
     goto :goto_1
 
-    .line 149
+    .line 147
     :cond_8
     move v1, v2
 
-    .line 150
+    .line 148
     :goto_1
     if-eqz v0, :cond_9
 
-    .line 151
+    .line 149
     if-eqz p1, :cond_a
 
-    .line 153
+    .line 151
     invoke-virtual {p0, v3}, Landroid/widget/ImageView;->performHapticFeedback(I)Z
 
-    .line 155
+    .line 153
     invoke-virtual {p0, v2}, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->playSoundEffect(I)V
 
-    .line 158
+    .line 156
     goto :goto_2
 
-    .line 161
+    .line 159
     :cond_9
     if-eqz v1, :cond_a
 
-    .line 162
+    .line 160
     iget-boolean v0, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mLongClicked:Z
 
-    .line 164
+    .line 162
     if-nez v0, :cond_a
 
-    .line 166
+    .line 164
     const/16 v0, 0x8
 
-    .line 168
+    .line 166
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->performHapticFeedback(I)Z
 
-    .line 170
+    .line 168
     :cond_a
     :goto_2
     iget v0, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mCode:I
 
-    .line 173
+    .line 171
     if-eqz v0, :cond_c
 
-    .line 175
+    .line 173
     if-eqz p1, :cond_b
 
-    .line 177
+    .line 175
     invoke-virtual {p0, v3, v2}, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->sendEvent(II)V
 
-    .line 179
+    .line 177
     invoke-virtual {p0, v3}, Landroid/widget/ImageView;->sendAccessibilityEvent(I)V
 
-    .line 182
+    .line 180
     goto :goto_3
 
-    .line 185
+    .line 183
     :cond_b
     invoke-virtual {p0, v3, v4}, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->sendEvent(II)V
 
-    .line 186
+    .line 184
     goto :goto_3
 
-    .line 189
+    .line 187
     :cond_c
     if-eqz p1, :cond_d
 
-    .line 190
+    .line 188
     iget-object p1, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 192
+    .line 190
     if-eqz p1, :cond_d
 
-    .line 194
+    .line 192
     invoke-interface {p1, p0}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 196
+    .line 194
     invoke-virtual {p0, v3}, Landroid/widget/ImageView;->sendAccessibilityEvent(I)V
 
-    .line 199
+    .line 197
     :cond_d
     :goto_3
     iget-object p1, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mCheckLongPress:Lcom/android/systemui/navigationbar/buttons/KeyButtonView$1;
 
-    .line 202
+    .line 200
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 204
+    .line 202
     goto :goto_5
 
-    .line 207
+    .line 205
     :cond_e
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    .line 208
+    .line 206
     move-result-wide v4
 
-    .line 211
+    .line 209
     iput-wide v4, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mDownTime:J
 
-    .line 212
+    .line 210
     iput-boolean v2, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mLongClicked:Z
 
-    .line 214
+    .line 212
     invoke-virtual {p0, v3}, Landroid/widget/ImageView;->setPressed(Z)V
 
-    .line 216
+    .line 214
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    .line 219
+    .line 217
     move-result v1
 
-    .line 222
+    .line 220
     float-to-int v1, v1
 
-    .line 223
+    .line 221
     iput v1, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mTouchDownX:I
 
-    .line 224
+    .line 222
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    .line 226
+    .line 224
     move-result p1
 
-    .line 229
+    .line 227
     float-to-int p1, p1
 
-    .line 230
+    .line 228
     iput p1, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mTouchDownY:I
 
-    .line 231
+    .line 229
     iget p1, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mCode:I
 
-    .line 233
+    .line 231
     if-eqz p1, :cond_f
 
-    .line 235
+    .line 233
     iget-wide v4, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mDownTime:J
 
-    .line 237
+    .line 235
     invoke-virtual {p0, v2, v2, v4, v5}, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->sendEvent(IIJ)V
 
-    .line 239
+    .line 237
     goto :goto_4
 
-    .line 242
+    .line 240
     :cond_f
     invoke-virtual {p0, v3}, Landroid/widget/ImageView;->performHapticFeedback(I)Z
 
-    .line 243
+    .line 241
     :goto_4
     if-nez v0, :cond_10
 
-    .line 246
+    .line 244
     invoke-virtual {p0, v2}, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->playSoundEffect(I)V
 
-    .line 248
+    .line 246
     :cond_10
     iget-object p1, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mCheckLongPress:Lcom/android/systemui/navigationbar/buttons/KeyButtonView$1;
 
-    .line 251
+    .line 249
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 253
+    .line 251
     iget-object p1, p0, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mCheckLongPress:Lcom/android/systemui/navigationbar/buttons/KeyButtonView$1;
 
-    .line 256
+    .line 254
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
-    .line 258
+    .line 256
     move-result v0
 
-    .line 261
+    .line 259
     int-to-long v0, v0
 
-    .line 262
+    .line 260
     invoke-virtual {p0, p1, v0, v1}, Landroid/widget/ImageView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 263
+    .line 261
     :cond_11
     :goto_5
     return v3
-    .line 266
+    .line 264
 .end method
 
 .method public final onWindowVisibilityChanged(I)V
@@ -1562,4 +1559,12 @@
     .line 5
     return-void
     .line 7
+.end method
+
+.method public final setVertical(Z)V
+    .locals 0
+
+    .line 1
+    return-void
+    .line 2
 .end method

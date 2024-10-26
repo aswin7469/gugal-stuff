@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/view/layout/sections/DefaultUdfpsAccessibilityOverlaySection;
 .super Lcom/android/systemui/keyguard/shared/model/KeyguardSection;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -42,7 +42,7 @@
     invoke-direct {v0, p0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     .line 6
-    const p0, 0x7f0b0867    # @id/udfps_accessibility_overlay
+    const p0, 0x7f0a0895    # @id/udfps_accessibility_overlay
 
     .line 9
     invoke-virtual {v0, p0}, Landroid/view/View;->setId(I)V
@@ -59,7 +59,7 @@
     .locals 4
 
     .line 1
-    const p0, 0x7f0b0867    # @id/udfps_accessibility_overlay
+    const p0, 0x7f0a0895    # @id/udfps_accessibility_overlay
 
     .line 2
     const/4 v0, 0x6
@@ -77,7 +77,7 @@
     invoke-virtual {p1, p0, v0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIII)V
 
     .line 11
-    const v0, 0x7f0b0868    # @id/udfps_accessibility_overlay_top_guideline
+    const v0, 0x7f0a0896    # @id/udfps_accessibility_overlay_top_guideline
 
     .line 14
     invoke-virtual {p1, v0}, Landroidx/constraintlayout/widget/ConstraintSet;->get(I)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
@@ -113,38 +113,18 @@
     invoke-virtual {p1, p0, v2, v0, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIII)V
 
     .line 35
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 38
-    move-result v0
-
-    .line 41
-    if-eqz v0, :cond_0
-
-    .line 42
-    const v0, 0x7f0b03d6    # @id/keyguard_indication_area
-
-    .line 44
-    invoke-virtual {p1, p0, v3, v0, v2}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIII)V
-
-    .line 47
-    goto :goto_0
-
-    .line 50
-    :cond_0
     invoke-virtual {p1, p0, v3, v1, v3}, Landroidx/constraintlayout/widget/ConstraintSet;->connect(IIII)V
 
-    .line 51
-    :goto_0
+    .line 38
     return-void
-    .line 54
+    .line 41
 .end method
 
 .method public final bindData(Landroidx/constraintlayout/widget/ConstraintLayout;)V
     .locals 1
 
     .line 1
-    const v0, 0x7f0b0867    # @id/udfps_accessibility_overlay
+    const v0, 0x7f0a0895    # @id/udfps_accessibility_overlay
 
     .line 2
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -173,7 +153,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f0b0867    # @id/udfps_accessibility_overlay
+    const p0, 0x7f0a0895    # @id/udfps_accessibility_overlay
 
     .line 2
     invoke-static {p1, p0}, Lcom/android/systemui/keyguard/ui/view/layout/sections/ExtensionsKt;->removeView(Landroidx/constraintlayout/widget/ConstraintLayout;I)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -55,49 +55,49 @@
     invoke-direct {p5, p6, p3}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$2;-><init>(Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;Lcom/android/systemui/deviceentry/data/repository/DeviceEntryRepositoryImpl;)V
 
     .line 27
-    new-instance p3, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;
+    iget-object p3, p4, Lcom/android/systemui/keyguard/domain/interactor/TrustInteractor;->isTrusted:Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;
 
     .line 30
-    iget-object p4, p4, Lcom/android/systemui/keyguard/domain/interactor/TrustInteractor;->isTrusted:Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;
+    new-instance p4, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;
 
     .line 32
     const/4 p6, 0x3
 
     .line 34
-    invoke-direct {p3, p4, p6}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    invoke-direct {p4, p3, p6}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
     .line 35
-    new-instance p4, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;
+    new-instance p3, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;
 
     .line 38
     const/4 p6, 0x5
 
     .line 40
-    invoke-direct {p4, p3, p6}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    invoke-direct {p3, p4, p6}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
     .line 41
-    new-instance p3, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;
+    iget-object p4, p2, Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;->onAuthenticationResult:Lkotlinx/coroutines/flow/ReadonlySharedFlow;
 
     .line 44
-    iget-object p6, p2, Lcom/android/systemui/authentication/domain/interactor/AuthenticationInteractor;->onAuthenticationResult:Lkotlinx/coroutines/flow/ReadonlySharedFlow;
+    new-instance p6, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;
 
     .line 46
     const/4 v0, 0x4
 
     .line 48
-    invoke-direct {p3, p6, v0}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    invoke-direct {p6, p4, v0}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
     .line 49
-    new-instance p6, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;
+    new-instance p4, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;
 
     .line 52
     const/4 v0, 0x6
 
     .line 54
-    invoke-direct {p6, p3, v0}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    invoke-direct {p4, p6, v0}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceUnlockedInteractor$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
     .line 55
-    filled-new-array {p7, p5, p4, p6}, [Lkotlinx/coroutines/flow/Flow;
+    filled-new-array {p7, p5, p3, p4}, [Lkotlinx/coroutines/flow/Flow;
 
     .line 58
     move-result-object p3

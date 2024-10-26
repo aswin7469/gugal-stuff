@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/keyguard/KeyguardSliceProvider;
 .super Landroidx/slice/SliceProvider;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/NextAlarmController$NextAlarmChangeCallback;
@@ -670,7 +670,7 @@
     move-result v2
 
     .line 57
-    const v4, 0x7f0806c7    # @drawable/ic_access_alarms_big 'res/drawable/ic_access_alarms_big.xml'
+    const v4, 0x7f0806d6    # @drawable/ic_access_alarms_big 'res/drawable/ic_access_alarms_big.xml'
 
     .line 58
     if-eqz v2, :cond_1
@@ -753,7 +753,7 @@
     move-result-object v3
 
     .line 115
-    const v5, 0x7f1400d2    # @string/accessibility_quick_settings_dnd 'Do Not Disturb.'
+    const v5, 0x7f1300d1    # @string/accessibility_quick_settings_dnd 'Do Not Disturb.'
 
     .line 116
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -771,7 +771,7 @@
     move-result-object v3
 
     .line 128
-    const v5, 0x7f080b4e    # @drawable/stat_sys_dnd 'res/drawable/stat_sys_dnd.xml'
+    const v5, 0x7f080b95    # @drawable/stat_sys_dnd 'res/drawable/stat_sys_dnd.xml'
 
     .line 129
     invoke-static {v5, v3}, Landroidx/core/graphics/drawable/IconCompat;->createWithResource(ILandroid/content/Context;)Landroidx/core/graphics/drawable/IconCompat;
@@ -947,7 +947,7 @@
     move-result-object v1
 
     .line 7
-    invoke-interface {v0, v1}, Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextAvailableCallback;->onContextAvailable(Landroid/content/Context;)Lcom/android/systemui/SystemUIInitializerImpl;
+    invoke-interface {v0, v1}, Lcom/android/systemui/SystemUIAppComponentFactoryBase$ContextAvailableCallback;->onContextAvailable(Landroid/content/Context;)Lcom/google/android/systemui/SystemUIGoogleInitializer;
 
     .line 8
     new-instance v0, Lcom/android/systemui/util/wakelock/SettableWakeLock;
@@ -1026,7 +1026,7 @@
     move-result-object v1
 
     .line 55
-    const v2, 0x7f140946    # @string/system_ui_aod_date_pattern 'EEEMMMd'
+    const v2, 0x7f1309c8    # @string/system_ui_aod_date_pattern 'EEEMMMd'
 
     .line 56
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1303,6 +1303,7 @@
 
     .line 26
     throw p1
+    .line 27
 .end method
 
 .method public final onNextAlarmChanged(Landroid/app/AlarmManager$AlarmClockInfo;)V
@@ -1593,6 +1594,7 @@
 
     .line 26
     throw p1
+    .line 27
 .end method
 
 .method public final onZenChanged(I)V
@@ -1834,7 +1836,7 @@
     move-result-object v1
 
     .line 28
-    const v2, 0x7f1406b6    # @string/music_controls_no_title 'No title'
+    const v2, 0x7f130710    # @string/music_controls_no_title 'No title'
 
     .line 29
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

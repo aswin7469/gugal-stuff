@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -794,7 +794,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 2
-    const v1, 0x7f070076    # @dimen/accessibility_floating_menu_margin '16.0dp'
+    const v1, 0x7f070077    # @dimen/accessibility_floating_menu_margin '16.0dp'
 
     .line 4
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -809,7 +809,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 13
-    const v1, 0x7f07007f    # @dimen/accessibility_floating_menu_small_padding '6.0dp'
+    const v1, 0x7f070080    # @dimen/accessibility_floating_menu_small_padding '6.0dp'
 
     .line 15
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -824,7 +824,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 24
-    const v1, 0x7f070073    # @dimen/accessibility_floating_menu_large_padding '8.0dp'
+    const v1, 0x7f070074    # @dimen/accessibility_floating_menu_large_padding '8.0dp'
 
     .line 26
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -839,7 +839,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 35
-    const v1, 0x7f070081    # @dimen/accessibility_floating_menu_small_width_height '36.0dp'
+    const v1, 0x7f070082    # @dimen/accessibility_floating_menu_small_width_height '36.0dp'
 
     .line 37
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -854,7 +854,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 46
-    const v1, 0x7f070075    # @dimen/accessibility_floating_menu_large_width_height '56.0dp'
+    const v1, 0x7f070076    # @dimen/accessibility_floating_menu_large_width_height '56.0dp'
 
     .line 48
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -869,7 +869,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 57
-    const v1, 0x7f070080    # @dimen/accessibility_floating_menu_small_single_radius '25.0dp'
+    const v1, 0x7f070081    # @dimen/accessibility_floating_menu_small_single_radius '25.0dp'
 
     .line 59
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -884,7 +884,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 68
-    const v1, 0x7f07007e    # @dimen/accessibility_floating_menu_small_multiple_radius '20.0dp'
+    const v1, 0x7f07007f    # @dimen/accessibility_floating_menu_small_multiple_radius '20.0dp'
 
     .line 70
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -926,7 +926,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 96
-    const v1, 0x7f070074    # @dimen/accessibility_floating_menu_large_single_radius '35.0dp'
+    const v1, 0x7f070075    # @dimen/accessibility_floating_menu_large_single_radius '35.0dp'
 
     .line 98
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -941,7 +941,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 107
-    const v1, 0x7f070072    # @dimen/accessibility_floating_menu_large_multiple_radius '35.0dp'
+    const v1, 0x7f070073    # @dimen/accessibility_floating_menu_large_multiple_radius '35.0dp'
 
     .line 109
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -956,7 +956,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 118
-    const v1, 0x7f070083    # @dimen/accessibility_floating_menu_stroke_width '0.0dp'
+    const v1, 0x7f070084    # @dimen/accessibility_floating_menu_stroke_width '0.0dp'
 
     .line 120
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -986,7 +986,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 140
-    const v1, 0x7f070082    # @dimen/accessibility_floating_menu_stroke_inset '0.0dp'
+    const v1, 0x7f070083    # @dimen/accessibility_floating_menu_stroke_inset '0.0dp'
 
     .line 142
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1001,7 +1001,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 151
-    const v1, 0x7f070070    # @dimen/accessibility_floating_menu_elevation '3.0dp'
+    const v1, 0x7f070071    # @dimen/accessibility_floating_menu_elevation '3.0dp'
 
     .line 153
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1016,7 +1016,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 162
-    const v1, 0x7f070071    # @dimen/accessibility_floating_menu_ime_shifting_space '48.0dp'
+    const v1, 0x7f070072    # @dimen/accessibility_floating_menu_ime_shifting_space '48.0dp'
 
     .line 164
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1031,7 +1031,7 @@
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->mRes:Landroid/content/res/Resources;
 
     .line 173
-    const v1, 0x7f0805eb    # @drawable/accessibility_floating_menu_background 'res/drawable/accessibility_floating_menu_background.xml'
+    const v1, 0x7f0805ed    # @drawable/accessibility_floating_menu_background 'res/drawable/accessibility_floating_menu_background.xml'
 
     .line 175
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;

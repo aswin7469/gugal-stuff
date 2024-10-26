@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;
@@ -40,81 +40,78 @@
     if-nez v0, :cond_1
 
     .line 6
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 8
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;->mPrimaryBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;
 
-    .line 11
+    .line 8
     iget-object v0, v0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->isShowing:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 13
+    .line 10
     invoke-interface {v0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
-    .line 15
+    .line 12
     move-result-object v0
 
-    .line 18
+    .line 15
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 19
+    .line 16
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 21
+    .line 18
     move-result v0
 
-    .line 24
+    .line 21
     if-nez v0, :cond_1
 
-    .line 25
+    .line 22
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;->mAlternateBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;
 
-    .line 27
+    .line 24
     invoke-virtual {v0}, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->isVisibleState()Z
 
-    .line 29
+    .line 26
     move-result v0
 
-    .line 32
+    .line 29
     if-nez v0, :cond_1
 
-    .line 33
+    .line 30
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;->mUnlockedScreenOffAnimationController:Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;
 
-    .line 35
+    .line 32
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;->isAnimationPlaying()Z
 
-    .line 37
+    .line 34
     move-result v0
 
-    .line 40
+    .line 37
     if-eqz v0, :cond_0
 
-    .line 41
+    .line 38
     goto :goto_0
 
-    .line 43
+    .line 40
     :cond_0
     const/4 v0, 0x3
 
-    .line 44
+    .line 41
     invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->setTouchableInsets(I)V
 
-    .line 45
+    .line 42
     iget-object p1, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
 
-    .line 48
+    .line 45
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;->calculateTouchableRegion()Landroid/graphics/Region;
 
-    .line 50
+    .line 47
     move-result-object p0
 
-    .line 53
+    .line 50
     invoke-virtual {p1, p0}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
 
-    .line 54
+    .line 51
     :cond_1
     :goto_0
     return-void
-    .line 57
+    .line 54
 .end method

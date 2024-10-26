@@ -5,7 +5,9 @@
     <item>Tunjukkan peratusan semasa mengecas (lalai)</item>
     <item>Jangan tunjukkan ikon ini</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Tunjukkan jam, minit dan saat</item>
     <item>Tunjukkan jam dan minit (lalai)</item>

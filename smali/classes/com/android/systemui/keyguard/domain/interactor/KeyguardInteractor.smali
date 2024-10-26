@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -80,7 +80,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;Lcom/android/systemui/statusbar/CommandQueue;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;Lcom/android/systemui/shade/data/repository/ShadeRepository;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;Lkotlinx/coroutines/CoroutineScope;)V
+.method public constructor <init>(Lcom/android/systemui/keyguard/data/repository/KeyguardRepositoryImpl;Lcom/android/systemui/statusbar/CommandQueue;Lcom/android/systemui/power/domain/interactor/PowerInteractor;Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;Lcom/android/systemui/shade/data/repository/ShadeRepository;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Ldagger/internal/DelegateFactory;Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/DelegateFactory;Lkotlinx/coroutines/CoroutineScope;)V
     .locals 18
 
     .line 1
@@ -180,7 +180,7 @@
     move-object/from16 v8, p11
 
     .line 64
-    invoke-direct {v6, v0, v8, v5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor$notificationContainerBounds$2;-><init>(Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Ldagger/internal/Provider;Lkotlinx/coroutines/CoroutineScope;)V
+    invoke-direct {v6, v0, v8, v5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor$notificationContainerBounds$2;-><init>(Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Ldagger/internal/DelegateFactory;Lkotlinx/coroutines/CoroutineScope;)V
 
     .line 66
     invoke-static {v6}, Lkotlin/LazyKt__LazyJVMKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
@@ -546,7 +546,7 @@
     iput-object v2, v0, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;->dismissAlpha:Lkotlinx/coroutines/flow/Flow;
 
     .line 321
-    const v2, 0x7f070361    # @dimen/keyguard_translate_distance_on_swipe_up '-200.0dp'
+    const v2, 0x7f07039d    # @dimen/keyguard_translate_distance_on_swipe_up '-200.0dp'
 
     .line 323
     move-object/from16 v4, p5
@@ -603,7 +603,7 @@
     move-object/from16 v3, p8
 
     .line 361
-    invoke-direct {v2, v3, v0}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor$animateDozingTransitions$2;-><init>(Ldagger/internal/Provider;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;)V
+    invoke-direct {v2, v3, v0}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor$animateDozingTransitions$2;-><init>(Ldagger/internal/DelegateFactory;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;)V
 
     .line 363
     invoke-static {v2}, Lkotlin/LazyKt__LazyJVMKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;

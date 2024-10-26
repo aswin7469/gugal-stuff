@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/wm/shell/windowdecor/DragPositioningCallbackUtility;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -31,446 +31,390 @@
 .end method
 
 .method public static changeBounds(ILandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/PointF;Lcom/android/wm/shell/common/DisplayController;Lcom/android/wm/shell/windowdecor/WindowDecoration;)Z
-    .locals 7
+    .locals 6
 
     .line 1
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     .line 2
-    const/4 v1, 0x0
-
-    .line 3
     if-nez p0, :cond_0
 
-    .line 4
-    return v1
+    .line 3
+    return v0
+
+    .line 5
+    :cond_0
+    iget v1, p1, Landroid/graphics/Rect;->left:I
 
     .line 6
-    :cond_0
-    iget v2, p1, Landroid/graphics/Rect;->left:I
+    iget v2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 7
-    iget v3, p1, Landroid/graphics/Rect;->top:I
+    .line 8
+    iget v3, p1, Landroid/graphics/Rect;->right:I
 
-    .line 9
-    iget v4, p1, Landroid/graphics/Rect;->right:I
+    .line 10
+    iget v4, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 11
-    iget v5, p1, Landroid/graphics/Rect;->bottom:I
-
-    .line 13
+    .line 12
     invoke-virtual {p1, p2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 15
+    .line 14
     and-int/lit8 p2, p0, 0x1
 
-    .line 18
+    .line 17
     if-eqz p2, :cond_2
 
-    .line 20
+    .line 19
     iget p2, p1, Landroid/graphics/Rect;->left:I
 
-    .line 22
-    iget v6, p4, Landroid/graphics/PointF;->x:F
+    .line 21
+    iget v5, p4, Landroid/graphics/PointF;->x:F
 
-    .line 24
-    float-to-int v6, v6
+    .line 23
+    float-to-int v5, v5
+
+    .line 25
+    add-int/2addr p2, v5
 
     .line 26
-    add-int/2addr p2, v6
+    iget v5, p3, Landroid/graphics/Rect;->left:I
 
     .line 27
-    iget v6, p3, Landroid/graphics/Rect;->left:I
+    if-le p2, v5, :cond_1
 
-    .line 28
-    if-le p2, v6, :cond_1
-
-    .line 30
+    .line 29
     goto :goto_0
 
-    .line 32
+    .line 31
     :cond_1
-    move p2, v2
+    move p2, v1
 
-    .line 33
+    .line 32
     :goto_0
     iput p2, p1, Landroid/graphics/Rect;->left:I
 
-    .line 34
+    .line 33
     :cond_2
     and-int/lit8 p2, p0, 0x2
 
-    .line 36
+    .line 35
     if-eqz p2, :cond_4
 
-    .line 38
+    .line 37
     iget p2, p1, Landroid/graphics/Rect;->right:I
 
-    .line 40
-    iget v6, p4, Landroid/graphics/PointF;->x:F
+    .line 39
+    iget v5, p4, Landroid/graphics/PointF;->x:F
 
-    .line 42
-    float-to-int v6, v6
+    .line 41
+    float-to-int v5, v5
+
+    .line 43
+    add-int/2addr p2, v5
 
     .line 44
-    add-int/2addr p2, v6
+    iget v5, p3, Landroid/graphics/Rect;->right:I
 
     .line 45
-    iget v6, p3, Landroid/graphics/Rect;->right:I
+    if-ge p2, v5, :cond_3
 
-    .line 46
-    if-ge p2, v6, :cond_3
-
-    .line 48
+    .line 47
     goto :goto_1
 
-    .line 50
+    .line 49
     :cond_3
-    move p2, v4
+    move p2, v3
 
-    .line 51
+    .line 50
     :goto_1
     iput p2, p1, Landroid/graphics/Rect;->right:I
 
-    .line 52
+    .line 51
     :cond_4
     and-int/lit8 p2, p0, 0x4
 
-    .line 54
+    .line 53
     if-eqz p2, :cond_6
 
-    .line 56
+    .line 55
     iget p2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 58
-    iget v6, p4, Landroid/graphics/PointF;->y:F
+    .line 57
+    iget v5, p4, Landroid/graphics/PointF;->y:F
 
-    .line 60
-    float-to-int v6, v6
+    .line 59
+    float-to-int v5, v5
+
+    .line 61
+    add-int/2addr p2, v5
 
     .line 62
-    add-int/2addr p2, v6
+    iget v5, p3, Landroid/graphics/Rect;->top:I
 
     .line 63
-    iget v6, p3, Landroid/graphics/Rect;->top:I
+    if-le p2, v5, :cond_5
 
-    .line 64
-    if-le p2, v6, :cond_5
-
-    .line 66
+    .line 65
     goto :goto_2
 
-    .line 68
+    .line 67
     :cond_5
-    move p2, v3
+    move p2, v2
 
-    .line 69
+    .line 68
     :goto_2
     iput p2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 70
+    .line 69
     :cond_6
     and-int/lit8 p0, p0, 0x8
 
-    .line 72
+    .line 71
     if-eqz p0, :cond_8
 
-    .line 74
+    .line 73
     iget p0, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 76
+    .line 75
     iget p2, p4, Landroid/graphics/PointF;->y:F
 
-    .line 78
+    .line 77
     float-to-int p2, p2
 
-    .line 80
+    .line 79
     add-int/2addr p0, p2
 
-    .line 81
+    .line 80
     iget p2, p3, Landroid/graphics/Rect;->bottom:I
 
-    .line 82
+    .line 81
     if-ge p0, p2, :cond_7
 
-    .line 84
+    .line 83
     goto :goto_3
 
-    .line 86
+    .line 85
     :cond_7
-    move p0, v5
+    move p0, v4
 
-    .line 87
+    .line 86
     :goto_3
     iput p0, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 88
+    .line 87
     :cond_8
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
-    .line 90
+    .line 89
     move-result p0
 
-    .line 93
+    .line 92
     int-to-float p0, p0
 
-    .line 94
+    .line 93
     iget-object p2, p6, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 95
+    .line 94
     iget p2, p2, Landroid/app/ActivityManager$RunningTaskInfo;->minWidth:I
 
-    .line 97
+    .line 96
     const p3, 0x3bcccccd    # 0.00625f
 
-    .line 99
+    .line 98
     if-gez p2, :cond_a
 
-    .line 102
+    .line 101
     iget-object p2, p6, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
 
-    .line 104
+    .line 103
     invoke-static {p2}, Lcom/android/wm/shell/shared/DesktopModeStatus;->canEnterDesktopMode(Landroid/content/Context;)Z
 
-    .line 106
+    .line 105
     move-result p2
+
+    .line 108
+    if-eqz p2, :cond_9
 
     .line 109
-    if-eqz p2, :cond_9
-
-    .line 110
     invoke-static {}, Lcom/android/window/flags/Flags;->enableDesktopWindowingSizeConstraints()Z
 
-    .line 112
-    move-result p2
-
-    .line 115
-    if-eqz p2, :cond_9
-
-    .line 116
-    iget-object p2, p6, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
-
-    .line 118
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 120
-    move-result-object p2
-
-    .line 123
-    const p4, 0x7f07026a    # @dimen/desktop_mode_minimum_window_width '386.0dp'
-
-    .line 124
-    invoke-static {p4, p2}, Lcom/android/wm/shell/windowdecor/WindowDecoration;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
-
-    .line 127
-    move-result p2
-
-    .line 130
-    goto :goto_4
-
-    .line 131
+    .line 111
     :cond_9
     iget-object p2, p6, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 132
+    .line 114
     iget p2, p2, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
-    .line 134
+    .line 116
     invoke-virtual {p5, p2}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
 
-    .line 136
+    .line 118
     move-result-object p2
 
-    .line 139
+    .line 121
     iget p2, p2, Lcom/android/wm/shell/common/DisplayLayout;->mDensityDpi:I
 
-    .line 140
+    .line 122
     int-to-float p2, p2
 
-    .line 142
+    .line 124
     mul-float/2addr p2, p3
 
-    .line 143
+    .line 125
     iget-object p4, p6, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 144
+    .line 126
     iget p4, p4, Landroid/app/ActivityManager$RunningTaskInfo;->defaultMinSize:I
 
-    .line 146
+    .line 128
     int-to-float p4, p4
 
-    .line 148
-    mul-float/2addr p2, p4
+    .line 130
+    mul-float/2addr p4, p2
 
-    .line 149
-    goto :goto_5
+    .line 131
+    goto :goto_4
 
-    .line 150
+    .line 132
     :cond_a
+    int-to-float p4, p2
+
+    .line 133
     :goto_4
-    int-to-float p2, p2
+    cmpg-float p0, p0, p4
 
-    .line 151
-    :goto_5
-    cmpg-float p0, p0, p2
-
-    .line 152
+    .line 134
     if-gez p0, :cond_b
 
-    .line 154
-    iput v4, p1, Landroid/graphics/Rect;->right:I
+    .line 136
+    iput v3, p1, Landroid/graphics/Rect;->right:I
 
-    .line 156
-    iput v2, p1, Landroid/graphics/Rect;->left:I
+    .line 138
+    iput v1, p1, Landroid/graphics/Rect;->left:I
 
-    .line 158
+    .line 140
     :cond_b
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-    .line 160
+    .line 142
     move-result p0
 
-    .line 163
+    .line 145
     int-to-float p0, p0
 
-    .line 164
+    .line 146
     iget-object p2, p6, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 165
+    .line 147
     iget p2, p2, Landroid/app/ActivityManager$RunningTaskInfo;->minHeight:I
 
-    .line 167
+    .line 149
     if-gez p2, :cond_d
 
-    .line 169
+    .line 151
     iget-object p2, p6, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
 
-    .line 171
+    .line 153
     invoke-static {p2}, Lcom/android/wm/shell/shared/DesktopModeStatus;->canEnterDesktopMode(Landroid/content/Context;)Z
 
-    .line 173
+    .line 155
     move-result p2
 
-    .line 176
+    .line 158
     if-eqz p2, :cond_c
 
-    .line 177
+    .line 159
     invoke-static {}, Lcom/android/window/flags/Flags;->enableDesktopWindowingSizeConstraints()Z
 
-    .line 179
-    move-result p2
-
-    .line 182
-    if-eqz p2, :cond_c
-
-    .line 183
-    iget-object p2, p6, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
-
-    .line 185
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 187
-    move-result-object p2
-
-    .line 190
-    const p3, 0x7f070269    # @dimen/desktop_mode_minimum_window_height '352.0dp'
-
-    .line 191
-    invoke-static {p3, p2}, Lcom/android/wm/shell/windowdecor/WindowDecoration;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
-
-    .line 194
-    move-result p2
-
-    .line 197
-    goto :goto_6
-
-    .line 198
+    .line 161
     :cond_c
     iget-object p2, p6, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 199
+    .line 164
     iget p2, p2, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
-    .line 201
+    .line 166
     invoke-virtual {p5, p2}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
 
-    .line 203
+    .line 168
     move-result-object p2
 
-    .line 206
+    .line 171
     iget p2, p2, Lcom/android/wm/shell/common/DisplayLayout;->mDensityDpi:I
 
-    .line 207
+    .line 172
     int-to-float p2, p2
 
-    .line 209
+    .line 174
     mul-float/2addr p2, p3
 
-    .line 210
+    .line 175
     iget-object p3, p6, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 211
+    .line 176
     iget p3, p3, Landroid/app/ActivityManager$RunningTaskInfo;->defaultMinSize:I
 
-    .line 213
+    .line 178
     int-to-float p3, p3
 
-    .line 215
-    mul-float/2addr p2, p3
+    .line 180
+    mul-float/2addr p3, p2
 
-    .line 216
-    goto :goto_7
+    .line 181
+    goto :goto_5
 
-    .line 217
+    .line 182
     :cond_d
-    :goto_6
-    int-to-float p2, p2
+    int-to-float p3, p2
 
-    .line 218
-    :goto_7
-    cmpg-float p0, p0, p2
+    .line 183
+    :goto_5
+    cmpg-float p0, p0, p3
 
-    .line 219
+    .line 184
     if-gez p0, :cond_e
 
-    .line 221
-    iput v3, p1, Landroid/graphics/Rect;->top:I
+    .line 186
+    iput v2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 223
-    iput v5, p1, Landroid/graphics/Rect;->bottom:I
+    .line 188
+    iput v4, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 225
+    .line 190
     :cond_e
     iget p0, p1, Landroid/graphics/Rect;->left:I
 
-    .line 227
-    if-ne v2, p0, :cond_f
+    .line 192
+    if-ne v1, p0, :cond_f
 
-    .line 229
+    .line 194
     iget p0, p1, Landroid/graphics/Rect;->top:I
 
-    .line 231
-    if-ne v3, p0, :cond_f
+    .line 196
+    if-ne v2, p0, :cond_f
 
-    .line 233
+    .line 198
     iget p0, p1, Landroid/graphics/Rect;->right:I
 
-    .line 235
-    if-ne v4, p0, :cond_f
+    .line 200
+    if-ne v3, p0, :cond_f
 
-    .line 237
+    .line 202
     iget p0, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 239
-    if-ne v5, p0, :cond_f
+    .line 204
+    if-ne v4, p0, :cond_f
 
-    .line 241
-    return v1
-
-    .line 243
-    :cond_f
+    .line 206
     return v0
-    .line 244
+
+    .line 208
+    :cond_f
+    const/4 p0, 0x1
+
+    .line 209
+    return p0
+    .line 210
 .end method
 
 .method public static snapTaskBoundsIfNecessary(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z

@@ -1,11 +1,11 @@
 .class public abstract Landroidx/compose/foundation/text/BasicTextKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
 .method public static final BasicText-VhcvRP8(Ljava/lang/String;Landroidx/compose/ui/Modifier;Landroidx/compose/ui/text/TextStyle;Lkotlin/jvm/functions/Function1;IZIILandroidx/compose/ui/graphics/ColorProducer;Landroidx/compose/runtime/Composer;II)V
-    .locals 30
+    .locals 33
 
     .line 1
     move-object/from16 v1, p0
@@ -713,450 +713,437 @@
     invoke-virtual {v8, v15}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
 
     .line 382
-    const/4 v15, 0x0
+    const/16 v29, 0x0
 
     .line 385
-    const/16 v17, 0x0
+    const/16 v30, 0x0
 
-    .line 386
-    const/16 v18, 0x0
-
-    .line 388
-    const/16 v19, 0x0
-
-    .line 390
+    .line 387
     const/16 v20, 0x0
 
-    .line 392
+    .line 389
     const/16 v21, 0x0
 
-    .line 394
-    const v22, 0x1ffff
+    .line 391
+    const/16 v22, 0x0
 
-    .line 396
-    move-object/from16 p1, v13
+    .line 393
+    const/16 v23, 0x0
+
+    .line 395
+    const/16 v24, 0x0
+
+    .line 397
+    const/16 v25, 0x0
 
     .line 399
-    move/from16 p2, v18
+    const/16 v26, 0x0
 
     .line 401
-    move/from16 p3, v19
+    const/16 v27, 0x0
 
     .line 403
-    move/from16 p4, v20
+    const/16 v28, 0x0
 
     .line 405
-    move-object/from16 p5, v21
+    const v31, 0x1ffff
 
     .line 407
-    move/from16 p6, v15
+    move-object/from16 v19, v13
 
-    .line 409
-    move/from16 p7, v17
+    .line 410
+    invoke-static/range {v19 .. v31}, Landroidx/compose/ui/graphics/GraphicsLayerModifierKt;->graphicsLayer-Ap8cVGQ$default(Landroidx/compose/ui/Modifier;FFFFFFFLandroidx/compose/ui/graphics/Shape;ZLandroidx/compose/ui/graphics/AndroidRenderEffect;II)Landroidx/compose/ui/Modifier;
 
-    .line 411
-    move/from16 p8, v22
-
-    .line 413
-    invoke-static/range {p1 .. p8}, Landroidx/compose/ui/graphics/GraphicsLayerModifierKt;->graphicsLayer-Ap8cVGQ$default(Landroidx/compose/ui/Modifier;FFFLandroidx/compose/ui/graphics/Shape;ZII)Landroidx/compose/ui/Modifier;
-
-    .line 415
+    .line 412
     move-result-object v15
 
-    .line 418
+    .line 415
     new-instance v14, Landroidx/compose/ui/text/AnnotatedString;
 
-    .line 419
+    .line 416
     const/4 v10, 0x6
 
-    .line 421
+    .line 418
     invoke-direct {v14, v1, v6, v10}, Landroidx/compose/ui/text/AnnotatedString;-><init>(Ljava/lang/String;Ljava/util/List;I)V
 
-    .line 422
+    .line 419
     sget-object v10, Landroidx/compose/ui/platform/CompositionLocalsKt;->LocalFontFamilyResolver:Landroidx/compose/runtime/StaticProvidableCompositionLocal;
 
-    .line 425
+    .line 422
     invoke-virtual {v8, v10}, Landroidx/compose/runtime/ComposerImpl;->consume(Landroidx/compose/runtime/ProvidableCompositionLocal;)Ljava/lang/Object;
 
-    .line 427
+    .line 424
     move-result-object v10
 
-    .line 430
+    .line 427
     move-object/from16 v22, v10
 
-    .line 431
+    .line 428
     check-cast v22, Landroidx/compose/ui/text/font/FontFamilyResolverImpl;
 
-    .line 433
+    .line 430
     new-instance v10, Landroidx/compose/foundation/text/modifiers/TextAnnotatedStringElement;
 
-    .line 435
+    .line 432
     move-object/from16 v19, v10
 
-    .line 437
+    .line 434
     move-object/from16 v20, v14
 
-    .line 439
+    .line 436
     move-object/from16 v21, v5
 
-    .line 441
+    .line 438
     move-object/from16 v23, v9
 
-    .line 443
+    .line 440
     move/from16 v24, v3
 
-    .line 445
+    .line 442
     move/from16 v25, v4
 
-    .line 447
+    .line 444
     move/from16 v26, v12
 
-    .line 449
+    .line 446
     move/from16 v27, v0
 
-    .line 451
+    .line 448
     move-object/from16 v28, v2
 
-    .line 453
+    .line 450
     invoke-direct/range {v19 .. v28}, Landroidx/compose/foundation/text/modifiers/TextAnnotatedStringElement;-><init>(Landroidx/compose/ui/text/AnnotatedString;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/ui/text/font/FontFamilyResolverImpl;Lkotlin/jvm/functions/Function1;IZIILandroidx/compose/ui/graphics/ColorProducer;)V
 
-    .line 455
+    .line 452
     invoke-interface {v15, v7}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
 
-    .line 458
+    .line 455
     move-result-object v7
 
-    .line 461
+    .line 458
     invoke-interface {v7, v10}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
 
-    .line 462
+    .line 459
     move-result-object v7
 
-    .line 465
+    .line 462
     const/4 v10, 0x0
 
-    .line 466
+    .line 463
     invoke-virtual {v8, v10}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 467
+    .line 464
     goto :goto_1a
 
-    .line 470
+    .line 467
     :cond_25
     const v7, -0x5ea4eadf
 
-    .line 471
+    .line 468
     invoke-virtual {v8, v7}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
 
-    .line 474
-    const/4 v7, 0x0
+    .line 471
+    const/16 v29, 0x0
 
-    .line 477
-    const/4 v10, 0x0
+    .line 474
+    const/16 v30, 0x0
+
+    .line 476
+    const/16 v20, 0x0
 
     .line 478
-    const/4 v14, 0x0
-
-    .line 479
-    const/4 v15, 0x0
+    const/16 v21, 0x0
 
     .line 480
-    const/16 v16, 0x0
+    const/16 v22, 0x0
 
-    .line 481
-    const/16 v18, 0x0
+    .line 482
+    const/16 v23, 0x0
 
-    .line 483
-    const v19, 0x1ffff
+    .line 484
+    const/16 v24, 0x0
 
-    .line 485
-    move-object/from16 p1, v13
+    .line 486
+    const/16 v25, 0x0
 
     .line 488
-    move/from16 p2, v14
+    const/16 v26, 0x0
 
     .line 490
-    move/from16 p3, v15
+    const/16 v27, 0x0
 
     .line 492
-    move/from16 p4, v16
+    const/16 v28, 0x0
 
     .line 494
-    move-object/from16 p5, v18
+    const v31, 0x1ffff
 
     .line 496
-    move/from16 p6, v7
+    move-object/from16 v19, v13
 
-    .line 498
-    move/from16 p7, v10
+    .line 499
+    invoke-static/range {v19 .. v31}, Landroidx/compose/ui/graphics/GraphicsLayerModifierKt;->graphicsLayer-Ap8cVGQ$default(Landroidx/compose/ui/Modifier;FFFFFFFLandroidx/compose/ui/graphics/Shape;ZLandroidx/compose/ui/graphics/AndroidRenderEffect;II)Landroidx/compose/ui/Modifier;
 
-    .line 500
-    move/from16 p8, v19
-
-    .line 502
-    invoke-static/range {p1 .. p8}, Landroidx/compose/ui/graphics/GraphicsLayerModifierKt;->graphicsLayer-Ap8cVGQ$default(Landroidx/compose/ui/Modifier;FFFLandroidx/compose/ui/graphics/Shape;ZII)Landroidx/compose/ui/Modifier;
+    .line 501
+    move-result-object v7
 
     .line 504
-    move-result-object v7
-
-    .line 507
     new-instance v10, Landroidx/compose/foundation/text/modifiers/TextStringSimpleElement;
 
-    .line 508
+    .line 505
     sget-object v14, Landroidx/compose/ui/platform/CompositionLocalsKt;->LocalFontFamilyResolver:Landroidx/compose/runtime/StaticProvidableCompositionLocal;
 
-    .line 510
+    .line 507
     invoke-virtual {v8, v14}, Landroidx/compose/runtime/ComposerImpl;->consume(Landroidx/compose/runtime/ProvidableCompositionLocal;)Ljava/lang/Object;
 
-    .line 512
+    .line 509
     move-result-object v14
 
-    .line 515
+    .line 512
     check-cast v14, Landroidx/compose/ui/text/font/FontFamilyResolverImpl;
 
-    .line 516
+    .line 513
     move-object/from16 p1, v10
 
-    .line 518
+    .line 515
     move-object/from16 p2, p0
 
-    .line 520
+    .line 517
     move-object/from16 p3, v5
 
-    .line 522
+    .line 519
     move-object/from16 p4, v14
 
-    .line 524
+    .line 521
     move/from16 p5, v3
 
-    .line 526
+    .line 523
     move/from16 p6, v4
 
-    .line 528
+    .line 525
     move/from16 p7, v12
 
-    .line 530
+    .line 527
     move/from16 p8, v0
 
-    .line 532
+    .line 529
     move-object/from16 p9, v2
 
-    .line 534
+    .line 531
     invoke-direct/range {p1 .. p9}, Landroidx/compose/foundation/text/modifiers/TextStringSimpleElement;-><init>(Ljava/lang/String;Landroidx/compose/ui/text/TextStyle;Landroidx/compose/ui/text/font/FontFamilyResolverImpl;IZIILandroidx/compose/ui/graphics/ColorProducer;)V
 
-    .line 536
+    .line 533
     invoke-interface {v7, v10}, Landroidx/compose/ui/Modifier;->then(Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
 
-    .line 539
+    .line 536
     move-result-object v7
 
-    .line 542
+    .line 539
     const/4 v10, 0x0
 
-    .line 543
+    .line 540
     invoke-virtual {v8, v10}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 544
+    .line 541
     :goto_1a
     sget-object v10, Landroidx/compose/foundation/text/EmptyMeasurePolicy;->INSTANCE:Landroidx/compose/foundation/text/EmptyMeasurePolicy;
 
-    .line 547
+    .line 544
     iget v14, v8, Landroidx/compose/runtime/ComposerImpl;->compoundKeyHash:I
 
-    .line 549
+    .line 546
     invoke-static {v8, v7}, Landroidx/compose/ui/ComposedModifierKt;->materializeModifier(Landroidx/compose/runtime/Composer;Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
 
-    .line 551
+    .line 548
     move-result-object v7
 
-    .line 554
+    .line 551
     invoke-virtual {v8}, Landroidx/compose/runtime/ComposerImpl;->currentCompositionLocalScope()Landroidx/compose/runtime/PersistentCompositionLocalMap;
 
-    .line 555
+    .line 552
     move-result-object v15
 
-    .line 558
+    .line 555
     sget-object v16, Landroidx/compose/ui/node/ComposeUiNode;->Companion:Landroidx/compose/ui/node/ComposeUiNode$Companion;
 
-    .line 559
+    .line 556
     invoke-virtual/range {v16 .. v16}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 561
+    .line 558
     sget-object v6, Landroidx/compose/ui/node/ComposeUiNode$Companion;->Constructor:Lkotlin/jvm/functions/Function0;
 
-    .line 564
+    .line 561
     move/from16 v16, v0
 
-    .line 566
+    .line 563
     iget-object v0, v8, Landroidx/compose/runtime/ComposerImpl;->applier:Landroidx/compose/runtime/Applier;
 
-    .line 568
+    .line 565
     instance-of v0, v0, Landroidx/compose/runtime/Applier;
 
-    .line 570
+    .line 567
     if-eqz v0, :cond_2a
 
-    .line 572
+    .line 569
     invoke-virtual {v8}, Landroidx/compose/runtime/ComposerImpl;->startReusableNode()V
 
-    .line 574
+    .line 571
     iget-boolean v0, v8, Landroidx/compose/runtime/ComposerImpl;->inserting:Z
 
-    .line 577
+    .line 574
     if-eqz v0, :cond_26
 
-    .line 579
+    .line 576
     invoke-virtual {v8, v6}, Landroidx/compose/runtime/ComposerImpl;->createNode(Lkotlin/jvm/functions/Function0;)V
 
-    .line 581
+    .line 578
     goto :goto_1b
 
-    .line 584
+    .line 581
     :cond_26
     invoke-virtual {v8}, Landroidx/compose/runtime/ComposerImpl;->useNode()V
 
-    .line 585
+    .line 582
     :goto_1b
     sget-object v0, Landroidx/compose/ui/node/ComposeUiNode$Companion;->SetMeasurePolicy:Lkotlin/jvm/functions/Function2;
 
-    .line 588
+    .line 585
     invoke-static {v8, v10, v0}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 590
+    .line 587
     sget-object v0, Landroidx/compose/ui/node/ComposeUiNode$Companion;->SetResolvedCompositionLocals:Lkotlin/jvm/functions/Function2;
 
-    .line 593
+    .line 590
     invoke-static {v8, v15, v0}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 595
+    .line 592
     sget-object v0, Landroidx/compose/ui/node/ComposeUiNode$Companion;->SetModifier:Lkotlin/jvm/functions/Function2;
 
-    .line 598
+    .line 595
     invoke-static {v8, v7, v0}, Landroidx/compose/runtime/Updater;->set-impl(Landroidx/compose/runtime/Composer;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)V
 
-    .line 600
+    .line 597
     sget-object v0, Landroidx/compose/ui/node/ComposeUiNode$Companion;->SetCompositeKeyHash:Lkotlin/jvm/functions/Function2;
 
-    .line 603
+    .line 600
     iget-boolean v6, v8, Landroidx/compose/runtime/ComposerImpl;->inserting:Z
 
-    .line 605
+    .line 602
     if-nez v6, :cond_28
 
-    .line 607
+    .line 604
     invoke-virtual {v8}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
 
-    .line 609
+    .line 606
     move-result-object v6
 
-    .line 612
+    .line 609
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 613
+    .line 610
     move-result-object v7
 
-    .line 616
+    .line 613
     invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 617
+    .line 614
     move-result v6
 
-    .line 620
+    .line 617
     if-nez v6, :cond_27
 
-    .line 621
+    .line 618
     goto :goto_1d
 
-    .line 623
+    .line 620
     :cond_27
     :goto_1c
     const/4 v0, 0x1
 
-    .line 624
+    .line 621
     goto :goto_1e
 
-    .line 625
+    .line 622
     :cond_28
     :goto_1d
     invoke-static {v14, v8, v14, v0}, Landroidx/compose/animation/AnimatedContentKt$$ExternalSyntheticOutline0;->m(ILandroidx/compose/runtime/ComposerImpl;ILkotlin/jvm/functions/Function2;)V
 
-    .line 626
+    .line 623
     goto :goto_1c
 
-    .line 629
+    .line 626
     :goto_1e
     invoke-virtual {v8, v0}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 630
+    .line 627
     move v6, v4
 
-    .line 633
+    .line 630
     move-object v4, v9
 
-    .line 634
+    .line 631
     move v7, v12
 
-    .line 635
+    .line 632
     move-object v9, v2
 
-    .line 636
+    .line 633
     move-object v2, v13
 
-    .line 637
-    move-object/from16 v29, v5
+    .line 634
+    move-object/from16 v32, v5
 
-    .line 638
+    .line 635
     move v5, v3
 
-    .line 640
-    move-object/from16 v3, v29
+    .line 637
+    move-object/from16 v3, v32
 
-    .line 641
+    .line 638
     :goto_1f
     invoke-virtual {v8}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
 
-    .line 643
+    .line 640
     move-result-object v12
 
-    .line 646
+    .line 643
     if-eqz v12, :cond_29
 
-    .line 647
+    .line 644
     new-instance v13, Landroidx/compose/foundation/text/BasicTextKt$BasicText$1;
 
-    .line 649
+    .line 646
     move-object v0, v13
 
-    .line 651
+    .line 648
     move-object/from16 v1, p0
 
-    .line 652
+    .line 649
     move/from16 v8, v16
 
-    .line 654
+    .line 651
     move/from16 v10, p10
 
-    .line 656
+    .line 653
     move/from16 v11, p11
 
-    .line 658
+    .line 655
     invoke-direct/range {v0 .. v11}, Landroidx/compose/foundation/text/BasicTextKt$BasicText$1;-><init>(Ljava/lang/String;Landroidx/compose/ui/Modifier;Landroidx/compose/ui/text/TextStyle;Lkotlin/jvm/functions/Function1;IZIILandroidx/compose/ui/graphics/ColorProducer;II)V
 
-    .line 660
+    .line 657
     iput-object v13, v12, Landroidx/compose/runtime/RecomposeScopeImpl;->block:Lkotlin/jvm/functions/Function2;
 
-    .line 663
+    .line 660
     :cond_29
     return-void
 
-    .line 665
+    .line 662
     :cond_2a
     invoke-static {}, Landroidx/compose/runtime/ComposablesKt;->invalidApplier()V
 
-    .line 666
+    .line 663
     const/4 v0, 0x0
 
-    .line 669
+    .line 666
     throw v0
-    .line 670
 .end method

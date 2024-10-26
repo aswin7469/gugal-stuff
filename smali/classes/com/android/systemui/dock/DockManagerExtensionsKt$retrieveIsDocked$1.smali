@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -140,56 +140,68 @@
     iget-object v3, p0, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1;->$this_retrieveIsDocked:Lcom/android/systemui/dock/DockManager;
 
     .line 32
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1, p1, v3}, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1$callback$1;-><init>(Lkotlinx/coroutines/channels/ProducerScope;Lcom/android/systemui/dock/DockManager;)V
 
     .line 34
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v3, Lcom/google/android/systemui/dreamliner/DockObserver;
 
     .line 37
+    invoke-virtual {v3, v1}, Lcom/google/android/systemui/dreamliner/DockObserver;->addListener(Lcom/android/systemui/dock/DockManager$DockEventListener;)V
+
+    .line 39
     iget-object v3, p0, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1;->$this_retrieveIsDocked:Lcom/android/systemui/dock/DockManager;
 
-    .line 40
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     .line 42
-    sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    check-cast v3, Lcom/google/android/systemui/dreamliner/DockObserver;
 
-    .line 45
-    check-cast p1, Lkotlinx/coroutines/channels/ProducerCoroutine;
+    .line 44
+    invoke-virtual {v3}, Lcom/google/android/systemui/dreamliner/DockObserver;->isDocked()Z
 
-    .line 47
-    invoke-virtual {p1, v3}, Lkotlinx/coroutines/channels/ProducerCoroutine;->trySend-JP2dKIU(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 46
+    move-result v3
 
     .line 49
-    new-instance v3, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1$1;
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 52
-    iget-object v4, p0, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1;->$this_retrieveIsDocked:Lcom/android/systemui/dock/DockManager;
+    .line 50
+    move-result-object v3
+
+    .line 53
+    check-cast p1, Lkotlinx/coroutines/channels/ProducerCoroutine;
 
     .line 54
-    invoke-direct {v3, v4, v1}, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1$1;-><init>(Lcom/android/systemui/dock/DockManager;Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1$callback$1;)V
+    invoke-virtual {p1, v3}, Lkotlinx/coroutines/channels/ProducerCoroutine;->trySend-JP2dKIU(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 56
-    iput v2, p0, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1;->label:I
+    new-instance v3, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1$1;
 
     .line 59
-    invoke-static {p1, v3, p0}, Lkotlinx/coroutines/channels/ProduceKt;->awaitClose(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/jvm/functions/Function0;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v4, p0, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1;->$this_retrieveIsDocked:Lcom/android/systemui/dock/DockManager;
 
     .line 61
+    invoke-direct {v3, v4, v1}, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1$1;-><init>(Lcom/android/systemui/dock/DockManager;Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1$callback$1;)V
+
+    .line 63
+    iput v2, p0, Lcom/android/systemui/dock/DockManagerExtensionsKt$retrieveIsDocked$1;->label:I
+
+    .line 66
+    invoke-static {p1, v3, p0}, Lkotlinx/coroutines/channels/ProduceKt;->awaitClose(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/jvm/functions/Function0;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 68
     move-result-object p0
 
-    .line 64
+    .line 71
     if-ne p0, v0, :cond_2
 
-    .line 65
+    .line 72
     return-object v0
 
-    .line 67
+    .line 74
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 68
+    .line 75
     return-object p0
-    .line 70
+    .line 77
 .end method

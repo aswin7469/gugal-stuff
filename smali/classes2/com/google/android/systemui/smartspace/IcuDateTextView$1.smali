@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/systemui/smartspace/IcuDateTextView$1;
-.super Landroid/content/BroadcastReceiver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.super Landroid/database/ContentObserver;
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -8,14 +8,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/systemui/smartspace/IcuDateTextView;)V
+.method public constructor <init>(Lcom/google/android/systemui/smartspace/IcuDateTextView;Landroid/os/Handler;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/google/android/systemui/smartspace/IcuDateTextView$1;->this$0:Lcom/google/android/systemui/smartspace/IcuDateTextView;
 
     .line 2
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     .line 4
     return-void
@@ -24,34 +24,75 @@
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 0
+.method public final onChange(Z)V
+    .locals 3
 
     .line 1
-    iget-object p0, p0, Lcom/google/android/systemui/smartspace/IcuDateTextView$1;->this$0:Lcom/google/android/systemui/smartspace/IcuDateTextView;
+    iget-object p1, p0, Lcom/google/android/systemui/smartspace/IcuDateTextView$1;->this$0:Lcom/google/android/systemui/smartspace/IcuDateTextView;
 
     .line 2
-    const-string p1, "android.intent.action.TIME_TICK"
+    sget v0, Lcom/google/android/systemui/smartspace/IcuDateTextView;->$r8$clinit:I
 
     .line 4
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
     .line 6
-    move-result-object p2
+    move-result-object p1
 
     .line 9
-    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     .line 10
-    move-result p1
+    move-result-object v0
 
     .line 13
-    xor-int/lit8 p1, p1, 0x1
+    invoke-virtual {p1}, Landroid/content/Context;->getUserId()I
 
     .line 14
-    invoke-virtual {p0, p1}, Lcom/google/android/systemui/smartspace/IcuDateTextView;->onTimeChanged(Z)V
+    move-result p1
 
-    .line 16
+    .line 17
+    const-string v1, "doze_always_on"
+
+    .line 18
+    const/4 v2, 0x0
+
+    .line 20
+    invoke-static {v0, v1, v2, p1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    .line 21
+    move-result p1
+
+    .line 24
+    const/4 v0, 0x1
+
+    .line 25
+    if-ne p1, v0, :cond_0
+
+    .line 26
+    move v2, v0
+
+    .line 28
+    :cond_0
+    iget-object p0, p0, Lcom/google/android/systemui/smartspace/IcuDateTextView$1;->this$0:Lcom/google/android/systemui/smartspace/IcuDateTextView;
+
+    .line 29
+    iget-boolean p1, p0, Lcom/google/android/systemui/smartspace/IcuDateTextView;->mIsAodEnabled:Z
+
+    .line 31
+    if-ne p1, v2, :cond_1
+
+    .line 33
     return-void
-    .line 19
+
+    .line 35
+    :cond_1
+    iput-boolean v2, p0, Lcom/google/android/systemui/smartspace/IcuDateTextView;->mIsAodEnabled:Z
+
+    .line 36
+    invoke-virtual {p0}, Lcom/google/android/systemui/smartspace/IcuDateTextView;->rescheduleTicker()V
+
+    .line 38
+    return-void
+    .line 41
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/StatusBarHeadsUpChangeListener;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/OnHeadsUpChangedListener;
@@ -114,7 +114,7 @@
     move-result p1
 
     .line 30
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_4
 
     .line 31
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarHeadsUpChangeListener;->mShadeViewController:Lcom/android/systemui/shade/ShadeViewController;
@@ -171,7 +171,7 @@
     move-result v5
 
     .line 62
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_3
 
     .line 63
     invoke-interface {v2}, Lcom/android/systemui/shade/domain/interactor/PanelExpansionInteractor;->isTracking()Z
@@ -180,7 +180,7 @@
     move-result v2
 
     .line 68
-    if-nez v2, :cond_4
+    if-nez v2, :cond_3
 
     .line 69
     if-eqz p1, :cond_2
@@ -190,76 +190,66 @@
 
     .line 73
     :cond_2
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 74
-    move-result p1
-
-    .line 77
-    if-nez p1, :cond_3
-
-    .line 78
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBarHeadsUpChangeListener;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
 
-    .line 80
+    .line 74
     check-cast p1, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
-    .line 82
+    .line 76
     invoke-virtual {p1, v3}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->setHeadsUpAnimatingAway(Z)V
 
-    .line 84
-    :cond_3
+    .line 78
     new-instance p1, Lcom/android/systemui/statusbar/phone/StatusBarHeadsUpChangeListener$$ExternalSyntheticLambda0;
 
-    .line 87
+    .line 81
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/phone/StatusBarHeadsUpChangeListener$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarHeadsUpChangeListener;)V
 
-    .line 89
+    .line 83
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarHeadsUpChangeListener;->mNsslController:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
-    .line 92
+    .line 86
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 94
+    .line 88
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mAnimationFinishedRunnables:Ljava/util/HashSet;
 
-    .line 96
+    .line 90
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 98
+    .line 92
     goto :goto_2
 
-    .line 101
-    :cond_4
+    .line 95
+    :cond_3
     :goto_1
     check-cast v1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
 
-    .line 102
+    .line 96
     iget-object p0, v1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mCurrentState:Lcom/android/systemui/shade/NotificationShadeWindowState;
 
-    .line 104
+    .line 98
     iput-boolean v4, p0, Lcom/android/systemui/shade/NotificationShadeWindowState;->headsUpNotificationShowing:Z
 
-    .line 106
+    .line 100
     invoke-virtual {v1, p0}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->apply(Lcom/android/systemui/shade/NotificationShadeWindowState;)V
 
-    .line 108
-    if-eqz p1, :cond_5
+    .line 102
+    if-eqz p1, :cond_4
 
-    .line 111
+    .line 105
     iget-object p0, v0, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->mCurrentState:Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;
 
-    .line 113
+    .line 107
     iput-boolean v4, p0, Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;->mForceStatusBarVisible:Z
 
-    .line 115
+    .line 109
     invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/window/StatusBarWindowController;->apply(Lcom/android/systemui/statusbar/window/StatusBarWindowController$State;)V
 
-    .line 117
-    :cond_5
+    .line 111
+    :cond_4
     :goto_2
     return-void
-    .line 120
+    .line 114
 .end method
 
 .method public final start()V

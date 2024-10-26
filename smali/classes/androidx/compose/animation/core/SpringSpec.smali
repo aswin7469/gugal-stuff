@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/animation/core/SpringSpec;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/animation/core/FiniteAnimationSpec;
@@ -175,50 +175,13 @@
     .line 2
     iget-object v1, p0, Landroidx/compose/animation/core/SpringSpec;->visibilityThreshold:Ljava/lang/Object;
 
-    if-nez v1, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    check-cast p1, Landroidx/compose/animation/core/TwoWayConverterImpl;
-
     .line 4
-    iget-object p1, p1, Landroidx/compose/animation/core/TwoWayConverterImpl;->convertToVector:Lkotlin/jvm/functions/Function1;
-
-    .line 5
-    invoke-interface {p1, v1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/compose/animation/core/AnimationVector;
+    if-nez v1, :cond_0
 
     .line 6
-    :goto_0
-    iget v1, p0, Landroidx/compose/animation/core/SpringSpec;->dampingRatio:F
-
-    iget p0, p0, Landroidx/compose/animation/core/SpringSpec;->stiffness:F
-
-    invoke-direct {v0, v1, p0, p1}, Landroidx/compose/animation/core/VectorizedSpringSpec;-><init>(FFLandroidx/compose/animation/core/AnimationVector;)V
-
-    return-object v0
-.end method
-
-.method public final vectorize(Landroidx/compose/animation/core/TwoWayConverter;)Landroidx/compose/animation/core/VectorizedFiniteAnimationSpec;
-    .locals 2
-
-    .line 7
-    new-instance v0, Landroidx/compose/animation/core/VectorizedSpringSpec;
-
-    .line 8
-    iget-object v1, p0, Landroidx/compose/animation/core/SpringSpec;->visibilityThreshold:Ljava/lang/Object;
-
-    if-nez v1, :cond_0
-
     const/4 p1, 0x0
 
+    .line 8
     goto :goto_0
 
     .line 9
@@ -228,20 +191,26 @@
     .line 10
     iget-object p1, p1, Landroidx/compose/animation/core/TwoWayConverterImpl;->convertToVector:Lkotlin/jvm/functions/Function1;
 
-    .line 11
+    .line 12
     invoke-interface {p1, v1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 14
     move-result-object p1
 
+    .line 17
     check-cast p1, Landroidx/compose/animation/core/AnimationVector;
 
-    .line 12
+    .line 18
     :goto_0
     iget v1, p0, Landroidx/compose/animation/core/SpringSpec;->dampingRatio:F
 
+    .line 20
     iget p0, p0, Landroidx/compose/animation/core/SpringSpec;->stiffness:F
 
+    .line 22
     invoke-direct {v0, v1, p0, p1}, Landroidx/compose/animation/core/VectorizedSpringSpec;-><init>(FFLandroidx/compose/animation/core/AnimationVector;)V
 
+    .line 24
     return-object v0
+    .line 27
 .end method

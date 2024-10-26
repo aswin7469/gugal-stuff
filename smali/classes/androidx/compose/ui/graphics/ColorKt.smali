@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/graphics/ColorKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -754,43 +754,21 @@
     return-wide p0
 .end method
 
-.method public static Color$default(FFFFLandroidx/compose/ui/graphics/colorspace/Lab;I)J
-    .locals 1
-
-    and-int/lit8 v0, p5, 0x8
-
-    if-eqz v0, :cond_0
-
-    const/high16 p3, 0x3f800000    # 1.0f
-
-    :cond_0
-    and-int/lit8 p5, p5, 0x10
-
-    if-eqz p5, :cond_1
-
-    .line 1
-    sget-object p4, Landroidx/compose/ui/graphics/colorspace/ColorSpaces;->Srgb:Landroidx/compose/ui/graphics/colorspace/Rgb;
-
-    .line 2
-    :cond_1
-    invoke-static {p0, p1, p2, p3, p4}, Landroidx/compose/ui/graphics/ColorKt;->Color(FFFFLandroidx/compose/ui/graphics/colorspace/ColorSpace;)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
 .method public static synthetic Color$default(III)J
     .locals 1
 
+    .line 1
     const/16 v0, 0xff
 
-    .line 3
+    .line 2
     invoke-static {p0, p1, p2, v0}, Landroidx/compose/ui/graphics/ColorKt;->Color(IIII)J
 
+    .line 4
     move-result-wide p0
 
+    .line 7
     return-wide p0
+    .line 8
 .end method
 
 .method public static final UncheckedColor(FFFFLandroidx/compose/ui/graphics/colorspace/ColorSpace;)J
@@ -1792,7 +1770,6 @@
 
     .line 84
     return-wide p0
-    .line 85
 .end method
 
 .method public static final luminance-8_81llA(J)F

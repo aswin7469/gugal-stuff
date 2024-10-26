@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/animation/core/VectorizedFloatAnimationSpec;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/animation/core/VectorizedFiniteAnimationSpec;
@@ -335,7 +335,7 @@
     invoke-virtual {v5, v3}, Landroidx/compose/animation/core/AnimationVector;->get$animation_core_release(I)F
 
     .line 39
-    move-result v9
+    move-result v7
 
     .line 42
     move-object/from16 v12, p4
@@ -344,7 +344,7 @@
     invoke-virtual {v12, v3}, Landroidx/compose/animation/core/AnimationVector;->get$animation_core_release(I)F
 
     .line 45
-    move-result v10
+    move-result v8
 
     .line 48
     move-object/from16 v13, p5
@@ -353,13 +353,13 @@
     invoke-virtual {v13, v3}, Landroidx/compose/animation/core/AnimationVector;->get$animation_core_release(I)F
 
     .line 51
-    move-result v11
+    move-result v9
 
     .line 54
-    move-wide v7, p1
+    move-wide v10, p1
 
     .line 55
-    invoke-interface/range {v6 .. v11}, Landroidx/compose/animation/core/FloatAnimationSpec;->getValueFromNanos(JFFF)F
+    invoke-interface/range {v6 .. v11}, Landroidx/compose/animation/core/FloatAnimationSpec;->getValueFromNanos(FFFJ)F
 
     .line 56
     move-result v6
@@ -467,7 +467,7 @@
     invoke-virtual {v5, v3}, Landroidx/compose/animation/core/AnimationVector;->get$animation_core_release(I)F
 
     .line 39
-    move-result v9
+    move-result v7
 
     .line 42
     move-object/from16 v12, p4
@@ -476,7 +476,7 @@
     invoke-virtual {v12, v3}, Landroidx/compose/animation/core/AnimationVector;->get$animation_core_release(I)F
 
     .line 45
-    move-result v10
+    move-result v8
 
     .line 48
     move-object/from16 v13, p5
@@ -485,13 +485,13 @@
     invoke-virtual {v13, v3}, Landroidx/compose/animation/core/AnimationVector;->get$animation_core_release(I)F
 
     .line 51
-    move-result v11
+    move-result v9
 
     .line 54
-    move-wide v7, p1
+    move-wide v10, p1
 
     .line 55
-    invoke-interface/range {v6 .. v11}, Landroidx/compose/animation/core/FloatAnimationSpec;->getVelocityFromNanos(JFFF)F
+    invoke-interface/range {v6 .. v11}, Landroidx/compose/animation/core/FloatAnimationSpec;->getVelocityFromNanos(FFFJ)F
 
     .line 56
     move-result v6

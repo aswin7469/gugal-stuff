@@ -5,7 +5,9 @@
     <item>Tampilkan persentase saat mengisi daya (default)</item>
     <item>Jangan tampilkan ikon ini</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Tampilkan jam, menit, dan detik</item>
     <item>Tampilkan jam dan menit (default)</item>

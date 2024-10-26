@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/controller/ControlsFavoritePersistenceWrapper$storeFavorites$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -149,307 +149,307 @@
     invoke-interface {v4, v7, v5}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     .line 81
-    const-string v5, "structures"
+    const-string/jumbo v5, "structures"
 
     .line 84
     invoke-interface {v4, v7, v5}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 86
+    .line 87
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 89
+    .line 90
     move-result-object v2
 
-    .line 92
+    .line 93
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 93
+    .line 94
     move-result v5
 
-    .line 96
+    .line 97
     if-eqz v5, :cond_1
 
-    .line 97
+    .line 98
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 99
+    .line 100
     move-result-object v5
-
-    .line 102
-    check-cast v5, Lcom/android/systemui/controls/controller/StructureInfo;
 
     .line 103
-    const-string v8, "structure"
+    check-cast v5, Lcom/android/systemui/controls/controller/StructureInfo;
 
-    .line 105
+    .line 104
+    const-string/jumbo v8, "structure"
+
+    .line 106
     invoke-interface {v4, v7, v8}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 107
+    .line 109
     const-string v8, "component"
 
-    .line 110
+    .line 112
     iget-object v9, v5, Lcom/android/systemui/controls/controller/StructureInfo;->componentName:Landroid/content/ComponentName;
 
-    .line 112
+    .line 114
     invoke-virtual {v9}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
-    .line 114
+    .line 116
     move-result-object v9
 
-    .line 117
+    .line 119
     invoke-interface {v4, v7, v8, v9}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 118
-    const-string v8, "structure"
-
-    .line 121
-    iget-object v9, v5, Lcom/android/systemui/controls/controller/StructureInfo;->structure:Ljava/lang/CharSequence;
+    .line 120
+    const-string/jumbo v8, "structure"
 
     .line 123
+    iget-object v9, v5, Lcom/android/systemui/controls/controller/StructureInfo;->structure:Ljava/lang/CharSequence;
+
+    .line 126
     invoke-virtual {v9}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 125
+    .line 128
     move-result-object v9
 
-    .line 128
+    .line 131
     invoke-interface {v4, v7, v8, v9}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 129
+    .line 132
     const-string v8, "controls"
 
-    .line 132
+    .line 135
     invoke-interface {v4, v7, v8}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 134
+    .line 137
     iget-object v5, v5, Lcom/android/systemui/controls/controller/StructureInfo;->controls:Ljava/util/List;
 
-    .line 137
+    .line 140
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 139
+    .line 142
     move-result-object v5
 
-    .line 142
+    .line 145
     :goto_1
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 143
+    .line 146
     move-result v8
 
-    .line 146
+    .line 149
     if-eqz v8, :cond_0
 
-    .line 147
+    .line 150
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 149
-    move-result-object v8
-
     .line 152
-    check-cast v8, Lcom/android/systemui/controls/controller/ControlInfo;
-
-    .line 153
-    const-string v9, "control"
+    move-result-object v8
 
     .line 155
+    check-cast v8, Lcom/android/systemui/controls/controller/ControlInfo;
+
+    .line 156
+    const-string v9, "control"
+
+    .line 158
     invoke-interface {v4, v7, v9}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 157
+    .line 160
     const-string v9, "id"
 
-    .line 160
+    .line 163
     iget-object v10, v8, Lcom/android/systemui/controls/controller/ControlInfo;->controlId:Ljava/lang/String;
 
-    .line 162
+    .line 165
     invoke-interface {v4, v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
-
-    .line 164
-    const-string v9, "title"
 
     .line 167
+    const-string/jumbo v9, "title"
+
+    .line 170
     iget-object v10, v8, Lcom/android/systemui/controls/controller/ControlInfo;->controlTitle:Ljava/lang/CharSequence;
 
-    .line 169
+    .line 173
     invoke-virtual {v10}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 171
-    move-result-object v10
-
-    .line 174
-    invoke-interface {v4, v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     .line 175
-    const-string v9, "subtitle"
-
-    .line 178
-    iget-object v10, v8, Lcom/android/systemui/controls/controller/ControlInfo;->controlSubtitle:Ljava/lang/CharSequence;
-
-    .line 180
-    invoke-virtual {v10}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 182
     move-result-object v10
 
-    .line 185
+    .line 178
     invoke-interface {v4, v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 186
-    const-string v9, "type"
+    .line 179
+    const-string/jumbo v9, "subtitle"
 
-    .line 189
-    iget v8, v8, Lcom/android/systemui/controls/controller/ControlInfo;->deviceType:I
+    .line 182
+    iget-object v10, v8, Lcom/android/systemui/controls/controller/ControlInfo;->controlSubtitle:Ljava/lang/CharSequence;
+
+    .line 185
+    invoke-virtual {v10}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 187
+    move-result-object v10
+
+    .line 190
+    invoke-interface {v4, v7, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     .line 191
-    invoke-static {v8}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const-string/jumbo v9, "type"
 
-    .line 193
-    move-result-object v8
-
-    .line 196
-    invoke-interface {v4, v7, v9, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    .line 194
+    iget v8, v8, Lcom/android/systemui/controls/controller/ControlInfo;->deviceType:I
 
     .line 197
-    const-string v8, "control"
+    invoke-static {v8}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    .line 200
-    invoke-interface {v4, v7, v8}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+    .line 199
+    move-result-object v8
 
     .line 202
+    invoke-interface {v4, v7, v9, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+
+    .line 203
+    const-string v8, "control"
+
+    .line 206
+    invoke-interface {v4, v7, v8}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+
+    .line 208
     goto :goto_1
 
-    .line 205
+    .line 211
     :cond_0
     const-string v5, "controls"
 
-    .line 206
+    .line 212
     invoke-interface {v4, v7, v5}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 208
-    const-string v5, "structure"
-
-    .line 211
-    invoke-interface {v4, v7, v5}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
-
-    .line 213
-    goto :goto_0
-
-    .line 216
-    :cond_1
-    const-string v2, "structures"
+    .line 214
+    const-string/jumbo v5, "structure"
 
     .line 217
+    invoke-interface {v4, v7, v5}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
+
+    .line 220
+    goto/16 :goto_0
+
+    .line 223
+    :cond_1
+    const-string/jumbo v2, "structures"
+
+    .line 225
     invoke-interface {v4, v7, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 219
+    .line 228
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 222
+    .line 231
     invoke-virtual {v0, v3}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 225
+    .line 234
     :try_start_2
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 228
+    .line 237
     goto :goto_2
 
-    .line 231
+    .line 240
     :catchall_0
     move-exception p0
 
-    .line 232
+    .line 241
     goto :goto_3
 
-    .line 233
+    .line 242
     :catchall_1
     :try_start_3
     const-string v2, "ControlsFavoritePersistenceWrapper"
 
-    .line 234
+    .line 243
     const-string v4, "Failed to write file, reverting to previous version"
 
-    .line 236
+    .line 245
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
+    .line 247
     invoke-virtual {v0, v3}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 241
+    .line 250
     :try_start_4
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 244
+    .line 253
     const/4 v6, 0x0
 
-    .line 247
+    .line 256
     :goto_2
     monitor-exit v1
 
-    .line 248
+    .line 257
     if-eqz v6, :cond_2
 
-    .line 249
+    .line 258
     iget-object p0, p0, Lcom/android/systemui/controls/controller/ControlsFavoritePersistenceWrapper$storeFavorites$1;->this$0:Lcom/android/systemui/controls/controller/ControlsFavoritePersistenceWrapper;
 
-    .line 251
+    .line 260
     iget-object p0, p0, Lcom/android/systemui/controls/controller/ControlsFavoritePersistenceWrapper;->backupManager:Landroid/app/backup/BackupManager;
 
-    .line 253
+    .line 262
     if-eqz p0, :cond_2
 
-    .line 255
+    .line 264
     invoke-virtual {p0}, Landroid/app/backup/BackupManager;->dataChanged()V
 
-    .line 257
+    .line 266
     :cond_2
     return-void
 
-    .line 260
+    .line 269
     :catchall_2
     move-exception p0
 
-    .line 261
+    .line 270
     :try_start_5
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 262
+    .line 271
     throw p0
 
-    .line 265
+    .line 274
     :catch_0
     move-exception p0
 
-    .line 266
+    .line 275
     const-string v0, "ControlsFavoritePersistenceWrapper"
 
-    .line 267
+    .line 276
     const-string v2, "Failed to start write file"
 
-    .line 269
+    .line 278
     invoke-static {v0, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 271
+    .line 280
     monitor-exit v1
 
-    .line 274
+    .line 283
     return-void
 
-    .line 275
+    .line 284
     :goto_3
     monitor-exit v1
 
-    .line 276
+    .line 285
     throw p0
-    .line 277
+    .line 286
 .end method

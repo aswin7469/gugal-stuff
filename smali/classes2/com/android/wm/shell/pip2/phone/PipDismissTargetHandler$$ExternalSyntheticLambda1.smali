@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/pip2/phone/PipDismissTargetHandler$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function5;
@@ -88,7 +88,7 @@
     move-result-object p4
 
     .line 41
-    const v0, 0x7f07027c    # @dimen/dismiss_circle_size '96.0dp'
+    const v0, 0x7f07029e    # @dimen/dismiss_circle_size '96.0dp'
 
     .line 42
     invoke-virtual {p4, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

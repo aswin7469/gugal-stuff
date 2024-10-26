@@ -1,9 +1,9 @@
 .class public final synthetic Lcom/android/systemui/navigationbar/NavigationBarView$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Supplier;
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
@@ -27,22 +27,31 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/navigationbar/NavigationBarView$$ExternalSyntheticLambda1;->f$0:Lcom/android/systemui/navigationbar/NavigationBarView;
 
     .line 2
-    iget p0, p0, Lcom/android/systemui/navigationbar/NavigationBarView;->mCurrentRotation:I
+    check-cast p1, Landroid/graphics/Rect;
 
     .line 4
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget v0, Lcom/android/systemui/navigationbar/NavigationBarView;->$r8$clinit:I
 
     .line 6
-    move-result-object p0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 9
-    return-object p0
-    .line 10
+    .line 8
+    new-instance v0, Lcom/android/systemui/navigationbar/NavigationBarView$$ExternalSyntheticLambda3;
+
+    .line 11
+    invoke-direct {v0, p0, p1}, Lcom/android/systemui/navigationbar/NavigationBarView$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/navigationbar/NavigationBarView;Landroid/graphics/Rect;)V
+
+    .line 13
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->post(Ljava/lang/Runnable;)Z
+
+    .line 16
+    return-void
+    .line 19
 .end method

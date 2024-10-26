@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/ViewState$2;
 .super Lcom/android/systemui/statusbar/notification/AnimatableProperty;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -34,14 +34,14 @@
     packed-switch p0, :pswitch_data_0
 
     .line 4
-    const p0, 0x7f0b0681    # @id/scale_y_animator_end_value_tag
+    const p0, 0x7f0a06aa    # @id/scale_y_animator_end_value_tag
 
     .line 7
     return p0
 
     .line 10
     :pswitch_0
-    const p0, 0x7f0b067d    # @id/scale_x_animator_end_value_tag
+    const p0, 0x7f0a06a6    # @id/scale_x_animator_end_value_tag
 
     .line 11
     return p0
@@ -67,14 +67,14 @@
     packed-switch p0, :pswitch_data_0
 
     .line 4
-    const p0, 0x7f0b0682    # @id/scale_y_animator_start_value_tag
+    const p0, 0x7f0a06ab    # @id/scale_y_animator_start_value_tag
 
     .line 7
     return p0
 
     .line 10
     :pswitch_0
-    const p0, 0x7f0b067e    # @id/scale_x_animator_start_value_tag
+    const p0, 0x7f0a06a7    # @id/scale_x_animator_start_value_tag
 
     .line 11
     return p0
@@ -100,14 +100,14 @@
     packed-switch p0, :pswitch_data_0
 
     .line 4
-    const p0, 0x7f0b0683    # @id/scale_y_animator_tag
+    const p0, 0x7f0a06ac    # @id/scale_y_animator_tag
 
     .line 7
     return p0
 
     .line 10
     :pswitch_0
-    const p0, 0x7f0b067f    # @id/scale_x_animator_tag
+    const p0, 0x7f0a06a8    # @id/scale_x_animator_tag
 
     .line 11
     return p0

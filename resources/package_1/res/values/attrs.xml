@@ -408,6 +408,8 @@
   </attr>
   <attr name="drawableBottomCompat" formats="reference" />
   <attr name="drawableEndCompat" formats="reference" />
+  <attr name="drawableIconInsetSize" formats="dimension" />
+  <attr name="drawableIconSize" formats="dimension" />
   <attr name="drawableLeftCompat" formats="reference" />
   <attr name="drawableRightCompat" formats="reference" />
   <attr name="drawableSize" formats="dimension" />
@@ -1049,6 +1051,7 @@
   <attr name="region_widthLessThan" formats="dimension" />
   <attr name="region_widthMoreThan" formats="dimension" />
   <attr name="regularTextAppearance" formats="string" />
+  <attr name="removeTextDescent" formats="bool" />
   <attr name="restrictedSwitchSummary" formats="reference" />
   <attr name="reverseLayout" formats="bool" />
   <attr name="rippleColor" formats="color" />
@@ -1118,6 +1121,8 @@
   <attr name="singleToneColor" formats="integer" />
   <attr name="sizePercent" formats="float" />
   <attr name="sliceViewStyle" formats="reference" />
+  <attr name="smartspaceSubtitleTextSize" formats="dimension" />
+  <attr name="smartspaceTitleTextSize" formats="dimension" />
   <attr name="spacing" formats="dimension" />
   <attr name="spanCount" formats="integer" />
   <attr name="spinBars" formats="bool" />
@@ -1201,6 +1206,7 @@
   <attr name="textAppearanceSubtitle1" formats="reference" />
   <attr name="textColorAlertDialogListItem" formats="reference|color" />
   <attr name="textColorSearchUrl" formats="reference|color" />
+  <attr name="textDescentExtraPadding" formats="dimension" />
   <attr name="textLocale" formats="string" />
   <attr name="textVerticalPadding" formats="dimension" />
   <attr name="textView" formats="reference" />

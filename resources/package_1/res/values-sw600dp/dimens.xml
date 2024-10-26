@@ -21,6 +21,7 @@
   <dimen name="hover_system_icons_container_padding_start">3.0dp</dimen>
   <dimen name="hover_system_icons_container_padding_top">2.0dp</dimen>
   <dimen name="immersive_mode_cling_width">600.0dp</dimen>
+  <dimen name="keyguard_carrier_text_margin">24.0dp</dimen>
   <dimen name="keyguard_security_view_top_margin">12.0dp</dimen>
   <dimen name="keyguard_smartspace_top_offset">0.0dp</dimen>
   <dimen name="kg_framed_avatar_size">48.0dp</dimen>

@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/onehanded/OneHandedDisplayAreaOrganizer;
 .super Landroid/window/DisplayAreaOrganizer;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -119,7 +119,7 @@
     move-result-object p1
 
     .line 62
-    const p2, 0x7f0c002f    # @integer/config_one_handed_translate_animation_duration '600'
+    const p2, 0x7f0b0034    # @integer/config_one_handed_translate_animation_duration '600'
 
     .line 63
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getInteger(I)I

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/charging/WiredChargingRippleController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -94,7 +94,7 @@
     move-result-object p3
 
     .line 39
-    const p6, 0x7f07086c    # @dimen/physical_charger_port_location_normalized_x '0.5'
+    const p6, 0x7f0708bc    # @dimen/physical_charger_port_location_normalized_x '0.5'
 
     .line 40
     invoke-virtual {p3, p6}, Landroid/content/res/Resources;->getFloat(I)F
@@ -112,7 +112,7 @@
     move-result-object p3
 
     .line 52
-    const p6, 0x7f07086d    # @dimen/physical_charger_port_location_normalized_y '1.0'
+    const p6, 0x7f0708bd    # @dimen/physical_charger_port_location_normalized_y '1.0'
 
     .line 53
     invoke-virtual {p3, p6}, Landroid/content/res/Resources;->getFloat(I)F
@@ -349,5 +349,4 @@
 
     .line 21
     return-void
-    .line 24
 .end method

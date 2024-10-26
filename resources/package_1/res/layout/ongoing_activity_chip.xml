@@ -17,7 +17,7 @@
     <ImageView android:id="@id/ongoing_activity_chip_icon"
                android:layout_width="@dimen/ongoing_activity_chip_icon_size"
                android:layout_height="@dimen/ongoing_activity_chip_icon_size"
-               android:src="@android:drawable/ic_perm_group_wallpapewr"
+               android:src="@android:drawable/ic_perm_group_system_tools"
                android:tint="?android:attr/colorPrimary" />
     <com.android.systemui.statusbar.chips.ui.view.ChipChronometer android:textAppearance="@android:style/TextAppearance.Material.Small"
                           android:textColor="?android:attr/colorPrimary"
@@ -26,7 +26,7 @@
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:singleLine="true"
-                          android:fontFamily="@android:string/config_networkLocationProviderPackageName"
+                          android:fontFamily="@android:string/config_mediaProjectionPermissionDialogComponent"
                           android:paddingStart="@dimen/ongoing_activity_chip_icon_text_padding" />
   </com.android.systemui.statusbar.chips.ui.view.ChipBackgroundContainer>
 </FrameLayout>

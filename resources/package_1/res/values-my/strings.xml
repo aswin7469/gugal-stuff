@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">ရွေးချယ်ထားသော ဝိဂျက်ကို တင်ရန်</string>
   <string name="accessibility_action_label_remove_widget">ဝိဂျက် ဖယ်ရှားရန်</string>
   <string name="accessibility_action_label_select_widget">ဝိဂျက် ရွေးရန်</string>
-  <string name="accessibility_action_open_communal_hub">လော့ခ်မျက်နှာပြင်ရှိ ဝိဂျက်များ</string>
   <string name="accessibility_action_pip_resize">အရွယ်အစားပြောင်းရန်</string>
   <string name="accessibility_action_pip_stash">သိုဝှက်ရန်</string>
   <string name="accessibility_action_pip_unstash">မသိုဝှက်ရန်</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">လက်တစ်ဖက်သုံးမုဒ်မှ ထွက်လိုက်သည်</string>
   <string name="accessibility_airplane_mode">လေယာဉ်ပျံမုဒ်</string>
   <string name="accessibility_allow_diagonal_scrolling">ထောင့်ဖြတ် လှိမ့်ခွင့်ပြုရန်</string>
+  <string name="accessibility_assistant_poodle">အသံဖြင့် ရှာဖွေခြင်း</string>
   <string name="accessibility_authenticate_hint">အထောက်အထားစိစစ်ရန်</string>
   <string name="accessibility_back">နောက်သို့</string>
   <string name="accessibility_banner_message_dismiss">ပယ်ရန်</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">စက်ပစ္စည်းသို့ ဝင်ရန်</string>
   <string name="accessibility_ethernet_connected">အီသာနက်။</string>
   <string name="accessibility_ethernet_disconnected">Ethernet နှင့်ချိတ်ဆက်မှုပြတ်တောက်</string>
-  <string name="accessibility_fingerprint_bouncer">အထောက်အထားစိစစ်ခြင်း လိုအပ်သည်။ အထောက်အထားစိစစ်ရန် လက်ဗွေ အာရုံခံကိရိယာကို ထိပါ။</string>
   <string name="accessibility_fingerprint_label">လက်ဗွေ အာရုံခံကိရိယာ</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">ပြောင်းရန်</string>
   <string name="accessibility_floating_button_action_edit">တည်းဖြတ်ရန်</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">မီနူး</string>
   <string name="accessibility_multi_user_list_switcher">ဆွဲချမီနူး</string>
   <string name="accessibility_multi_user_switch_switcher">အသုံးပြုသူကို ပြောင်းလဲရန်</string>
+  <string name="accessibility_next_alarm">%s တွင် နောက်နှိုးစက်</string>
   <string name="accessibility_no_calling">ခေါ်ဆိုမှု မရှိပါ။</string>
   <string name="accessibility_no_phone">ဖုန်းလိုင်းမရှိပါ။</string>
   <string name="accessibility_no_wifi">Wi-Fi  ချိတ်ဆက်ထားမှု မရှိပါ</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">ဖန်သားပြင် အနေအထားက ဒေါင်လိုက်အဖြစ် ပုံသေ လုပ်ထားပါသည်</string>
   <string name="accessibility_send_smart_reply">ပို့ရန်</string>
   <string name="accessibility_sensors_off_active">အာရုံခံစနစ်များ ပိတ်ထားသည်</string>
+  <string name="accessibility_settings_gear">Pixel Stand ဆက်တင်များ</string>
   <string name="accessibility_side_fingerprint_indicator_label">လက်ဗွေ အာရုံခံကိရိယာကို တို့ပါ။ ၎င်းသည် ဖုန်းဘေးရှိ ခလုတ်အတို ဖြစ်သည်</string>
+  <string name="accessibility_smartspace_page">စာမျက်နှာ %2$d အနက် %1$d</string>
   <string name="accessibility_split_bottom">အောက်ခြေကို ခွဲရန်</string>
   <string name="accessibility_split_left">ဘယ်ဘက်ကို ခွဲရန်</string>
   <string name="accessibility_split_right">ညာဘက်ကို ခွဲရန်</string>
@@ -218,10 +220,14 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi  ၃ ဘား</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi  ၂ ဘား</string>
   <string name="accesssibility_keyguard_retry">‘မျက်နှာပြ လော့ခ်ဖွင့်ခြင်း’ ထပ်စမ်းရန် အပေါ်သို့ပွတ်ဆွဲပါ</string>
+  <string name="adaptive_charging_notify_des">%1$s အကြာတွင် ဘက်ထရီအားပြည့်မည်။ ဘက်ထရီသက်တမ်း ကြာရှည်စေရန် ပုံမှန်အားသွင်းပါ။</string>
+  <string name="adaptive_charging_notify_title">အလိုက်သင့်အားသွင်းခြင်းကို ဖွင့်ထားသည်</string>
+  <string name="adaptive_charging_notify_turn_off_once">တစ်ကြိမ်ပိတ်ရန်</string>
+  <string name="adaptive_charging_time_estimate">%1$s • အလိုက်သင့်အားသွင်းခြင်း • %2$s တွင် အားပြည့်မည်</string>
   <string name="add">ထည့်ရန်</string>
   <string name="add_guest_failed">ဧည့်သည်သစ် ပြုလုပ်၍မရပါ</string>
   <string name="airplane_mode">လေယာဉ်ပျံမုဒ်</string>
-  <string name="alarm_template">%1$s ၌</string>
+  <string name="alarm_template">%1$s တွင်</string>
   <string name="alarm_template_far">%1$s တွင်</string>
   <string name="all_network_unavailable">ကွန်ရက်များ မရှိပါ</string>
   <string name="always_use_accessory">%2$s ချိတ်ဆက်သည့်အခါ %1$s ကို အမြဲဖွင့်ပါ</string>
@@ -233,6 +239,7 @@
   <string name="app_info">အက်ပ် အချက်အလက်</string>
   <string name="app_label">စနစ်၏ UI</string>
   <string name="assistant_attention_content_description">အသုံးပြုသူရှိကြောင်း တွေ့ရသည်</string>
+  <string name="assistant_scrim_label">နားထောင်နေသည်၊ ပယ်ဖျက်ရန် တို့ပါ</string>
   <string name="audio_sharing_description">အသံမျှဝေခြင်း</string>
   <string name="audio_status">နားထောင်နေသည်</string>
   <string name="auto_data_switch_dialog_negative_button">မလိုပါ</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">နောက်သို့</string>
   <string name="battery">ဘက်ထရီ</string>
   <string name="battery_detail_switch_title">ဘက်ထရီ အားထိန်း</string>
-  <string name="battery_low_description">သင့်တွင် ဘက်ထရီ %s ကျန်သည်။ ‘ဘက်ထရီ အားထိန်း’ က ‘မှောင်သည့် အပြင်အဆင်’ ဖွင့်ပြီး နောက်ခံလုပ်ဆောင်ချက်ကို ကန့်သတ်ကာ အကြောင်းကြားချက်များကို နှောင့်နှေးစေသည်။</string>
+  <string name="battery_health_notify_learn_more">ပိုမိုလေ့လာရန်</string>
   <string name="battery_low_intro">‘ဘက်ထရီ အားထိန်း’ က ‘အမှောင်နောက်ခံ’ ကို ဖွင့်ပြီး နောက်ခံလုပ်ဆောင်ချက်ကို ကန့်သတ်ကာ အကြောင်းကြားချက်များကို နှောင့်နှေးစေသည်။</string>
-  <string name="battery_low_title">‘ဘက်ထရီ အားထိန်း’ ဖွင့်မလား။</string>
   <string name="battery_saver_confirmation_ok">ဖွင့်ရန်</string>
   <string name="battery_saver_confirmation_title">ဘက်ထရီအားထိန်းကို ဖွင့်မလား။</string>
   <string name="battery_saver_confirmation_title_generic">'ဘက်ထရီအားထိန်း' အကြောင်း</string>
-  <string name="battery_saver_dismiss_action">မလိုပါ</string>
   <string name="battery_saver_start_action">ဖွင့်ရန်</string>
   <string name="battery_state_unknown_notification_text">နောက်ထပ်အချက်အလက်များအတွက် တို့ပါ</string>
   <string name="battery_state_unknown_notification_title">သင်၏ ဘက်ထရီမီတာကို ဖတ်ရာတွင် ပြဿနာရှိနေသည်</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">အသုံးပြုနေသည်။ ဘက်ထရီ L- %1$s၊ R- %2$s။</string>
   <string name="bluetooth_active_battery_level_untethered_left">သုံးနေသည်။ ဘယ်ဘက်- ဘက်ထရီ %1$s။</string>
   <string name="bluetooth_active_battery_level_untethered_right">သုံးနေသည်။ ညာဘက်- ဘက်ထရီ %1$s။</string>
-  <string name="bluetooth_active_media_only_battery_level">အသုံးပြုနေသည် (မီဒီယာသီးသန့်)။ ဘက်ထရီ %1$s။</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">အသုံးပြုနေသည် (မီဒီယာသီးသန့်)။ ဘက်ထရီ L- %1$s၊ R- %2$s။</string>
-  <string name="bluetooth_active_media_only_no_battery_level">သုံးနေသည် (မီဒီယာသီးသန့်)</string>
   <string name="bluetooth_active_no_battery_level">ဖွင့်ထားသည်</string>
   <string name="bluetooth_battery_level">ဘက်ထရီ %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">ချိတ်ဆက်ထားသည် (အော်ဒီယို မျှဝေခြင်း ပံ့ပိုးသည်)။ ဘက်ထရီ %1$s။</string>
   <string name="bluetooth_battery_level_untethered">ဘက်ထရီ L- %1$s၊ R- %2$s။</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">ချိတ်ဆက်ထားသည် (အော်ဒီယို မျှဝေခြင်း ပံ့ပိုးသည်)။ ဘက်ထရီ L- %1$s၊ R- %2$s။</string>
   <string name="bluetooth_connected">%1$s ချိတ်ဆက်ပြီးပြီ</string>
   <string name="bluetooth_connecting">ချိတ်ဆက်နေသည်</string>
   <string name="bluetooth_disconnected">ချိတ်ဆက်မှုပြတ်တောက်သည်</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">သုံးနေသည် (ဘယ်ဘက်သီးသန့်)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">သုံးနေသည် (ဘယ်နှင့်ညာ)</string>
   <string name="bluetooth_hearing_aid_right_active">သုံးနေသည် (ညာဘက်သီးသန့်)</string>
-  <string name="bluetooth_no_battery_level_lea_support">ချိတ်ဆက်ထားသည် (အော်ဒီယို မျှဝေခြင်း ပံ့ပိုးသည်)</string>
   <string name="bluetooth_pairing">တွဲချိတ်နေသည်…</string>
   <string name="bluetooth_pairing_device_down_error_message">%1$sနှင့်ဆက်သွယ်မရပါ</string>
   <string name="bluetooth_pairing_error_message">%1$s နှင့် တွဲချိတ်မရပါ</string>
   <string name="bluetooth_pairing_pin_error_message">ပင်နံပါတ် (သို့) လျှို့ဝှက်ကီး မမှန်ကန်သောကြောင့် %1$s နှင့် တွဲချိတ်၍မရပါ။</string>
   <string name="bluetooth_pairing_rejected_error_message">%1$sနှင့်တွဲချိတ်ရန် ပယ်ချခံရသည်</string>
-  <string name="bluetooth_saved_device_lea_support">အော်ဒီယို မျှဝေခြင်း ပံ့ပိုးသည်</string>
   <string name="bluetooth_talkback_bluetooth">ဘလူးတုသ်</string>
   <string name="bluetooth_talkback_computer">ကွန်ပျူတာ</string>
   <string name="bluetooth_talkback_headphone">နားကြပ်</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">အပိုများပြရန်</string>
   <string name="bubble_overflow_empty_subtitle">လတ်တလော ပူဖောင်းကွက်များနှင့် ပိတ်လိုက်သော ပူဖောင်းကွက်များကို ဤနေရာတွင် မြင်ရပါမည်</string>
   <string name="bubble_overflow_empty_title">လတ်တလော ပူဖောင်းကွက်များ မရှိပါ</string>
-  <string name="bubble_shortcut_label">ပူဖောင်းကွက်</string>
-  <string name="bubble_shortcut_long_label">ပူဖောင်းကွက်များ ပြပါ</string>
   <string name="bubbles_app_settings">%1$s ဆက်တင်များ</string>
   <string name="bubbles_dont_bubble_conversation">စကားဝိုင်းကို ပူဖောင်းကွက် မပြုလုပ်ပါနှင့်</string>
   <string name="bubbles_settings_button_description">%1$s ပူဖောင်းကွက်အတွက် ဆက်တင်များ</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">ကာစ် ရပ်ရန်</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; ၏ အကြောင်းအရာ ကာစ်လုပ်ခြင်းကို ရပ်ပါမည်</string>
   <string name="cell_data_off_content_description">မိုဘိုင်းဒေတာ ပိတ်ထားသည်</string>
+  <string name="charge_limit_discovery_notification_enable_button">ယခုဖွင့်ရန်</string>
+  <string name="charge_limit_discovery_notification_text">ဘက်ထရီအခြေအနေနှင့် သက်တမ်းကို ကာကွယ်ရန် ၈၀% ကန့်သတ်ဝန်ဆောင်မှု ဖွင့်ကြည့်ပါ။ ၎င်းကို ဆက်တင်များတွင် အချိန်မရွေး စီမံနိုင်ပါသည်</string>
+  <string name="charge_limit_discovery_notification_title">အားသွင်းနေစဉ် သင့်ဘက်ထရီကို ကာကွယ်ခြင်း</string>
+  <string name="charging_reverse_text">ဘက်ထရီ မျှဝေခြင်း</string>
   <string name="clear_all_notifications_text">အားလုံးရှင်းရန်</string>
   <string name="clipboard">ကလစ်ဘုတ်</string>
   <string name="clipboard_content_copied">အကြောင်းအရာများကို ကူးယူပြီးပါပြီ</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">ပိတ်ရန်</string>
   <string name="close_dialog_button">ပိတ်ရန်</string>
   <string name="collapse_menu_text">မီနူး ပိတ်ရန်</string>
+  <string name="columbus_bouncer_message">‘အမြန်တို့’ ကို အပြီးသတ်ရန် ဖွင့်ပါ</string>
+  <string name="columbus_target_request_dialog_allow">ခွင့်ပြုရန်</string>
+  <string name="columbus_target_request_dialog_deny">ခွင့်မပြုပါ</string>
+  <string name="columbus_target_request_dialog_summary">%1$s ဖွင့်ရန် သင့်ဖုန်း၏နောက်ဘက်ကို နှစ်ချက်တို့ပါ။ ၎င်းကို ဆက်တင်များတွင် အချိန်မရွေး ပြောင်းနိုင်သည်။</string>
+  <string name="columbus_target_request_dialog_title">%1$s ဖွင့်ရန် ‘အမြန်တို့’ ကို ခွင့်ပြုမလား။</string>
   <string name="communal_tutorial_indicator_text">အများသုံးရှင်းလင်းပို့ချချက် စတင်ရန် ဘယ်သို့ပွတ်ဆွဲပါ</string>
   <string name="connected_display_dialog_dual_display_stop_warning">အတွင်းပြကွက်ကို စကရင်ပွားပါမည်။ ရှေ့မျက်နှာပြင်ပြကွက်ကို ပိတ်မည်။</string>
   <string name="connected_display_dialog_start_mirroring">ပြင်ပဖန်သားပြင်သို့ စကရင်ပွားမလား။</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">မိုဘိုင်းဒေတာကို ခေတ္တရပ်ထားသည်</string>
   <string name="data_usage_disabled_dialog_title">ဒေတာ ခေတ္တရပ်တန့်သည်</string>
   <string name="days_timestamp">ပြီးခဲ့သော %1$s ရက်</string>
-  <string name="default_error_message">ထည့်သွင်းမှု မမှန်ကန်ပါ</string>
   <string name="default_popup_window_title">ပေါ့ပ်အပ် ဝင်းဒိုး</string>
+  <string name="defender_notify_resume_charge">အစားထိုးရန်</string>
+  <string name="defender_notify_title">ဘက်ထရီကာကွယ်ခြင်း</string>
+  <string name="defender_post_notify_des">သင့်ဘက်ထရီသက်တမ်း ပိုရှည်စေရန် အားသွင်းခြင်းကို %1$s မှ %2$s အထိ အကောင်းဆုံးပြင်ဆင်ထားသည်</string>
+  <string name="defender_post_notify_title">အားသွင်းခြင်းကို အကောင်းဆုံးပြင်ဆင်ထားသည်</string>
   <string name="demo_mode">စနစ် UI စရုပ်ပြမုဒ်</string>
   <string name="desktop_mode_maximize_menu_maximize_text">စခရင်ကို ချဲ့မည်</string>
   <string name="desktop_mode_maximize_menu_snap_text">စခရင်ကို ချုံ့မည်</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">ဤစက်ကို သင့်အဖွဲ့အစည်းက ပိုင်ဆိုင်သည်</string>
   <string name="do_disclosure_with_name">ဤစက်ကို %s က ပိုင်ဆိုင်သည်</string>
   <string name="do_financed_disclosure_with_name">ဤစက်ပစ္စည်းကို %s က ပံ့ပိုးထားသည်</string>
+  <string name="dock_a11y_action_show_photo_text">ဓာတ်ပုံဖရိမ် ပြရန်</string>
+  <string name="dock_alignment_not_charging">ကြိုးမဲ့အားသွင်းရန် ဖုန်းကို ပြန်၍ချိန်ပါ</string>
+  <string name="dock_alignment_slow_charging">ဖုန်းကို မြန်ဆန်စွာ အားသွင်းနိုင်ရန် ပြန်၍ချိန်ပါ</string>
+  <string name="dock_defender_first_run_des">ဘက်ထရီသက်တမ်း ပိုရှည်စေရန် သင့်တက်ဘလက်ကို တပ်ဆင်ထားစဉ် အားသွင်းခြင်းကို ၉၀% တွင် ခဏရပ်သည်။ အစားထိုးရန် ဆက်တင်များသို့ အချိန်မရွေးသွားပါ။</string>
+  <string name="dock_defender_first_run_settings">ဆက်တင်များ</string>
+  <string name="dock_defender_first_run_title">ဘက်ထရီကာကွယ်ရန် အားသွင်းခြင်းကို ခဏရပ်ထားသည်</string>
   <string name="dock_multi_instances_not_supported_text">ဤအက်ပ်ကို ဝင်းဒိုး ၁ ခုတွင်သာ ဖွင့်နိုင်သည်</string>
   <string name="dock_non_resizeble_failed_to_dock_text">အက်ပ်တွင် မျက်နှာပြင် ခွဲ၍ပြသခြင်းကို မပံ့ပိုးပါ</string>
+  <string name="dock_photo_preview_text">ဓာတ်ပုံဖရိမ် စတင်နေသည်...</string>
+  <string name="dock_promo_text">ဓာတ်ပုံဖရိမ်အတွက် ဘယ်သို့ပွတ်ဆွဲပါ</string>
   <string name="done">ပြီးပြီ</string>
   <string name="drag_split_not_supported">ဤအကြောင်းကြားချက်သည် ‘မျက်နှာပြင် ခွဲ၍ပြသခြင်း’ သို့ ဖိဆွဲမှုကို မပံ့ပိုးပါ</string>
   <string name="drag_to_add_tiles">အကွက်များထည့်ရန် ဖိဆွဲပါ</string>
   <string name="drag_to_rearrange_tiles">အကွက်ငယ်များ ပြန်စီစဉ်ရန် ဖိပြီးဆွဲပါ</string>
   <string name="drag_to_remove_disabled">အနည်းဆုံး %1$d ကွက် ရှိရမည်</string>
   <string name="drag_to_remove_tiles">ဖယ်ရှားရန် ဤနေရာသို့ဖိဆွဲပါ</string>
+  <string name="dream_lockscreen_wallpaper_description">လက်ရှိ လော့ခ်မျက်နှာပြင်နောက်ခံ သုံးပါ</string>
+  <string name="dream_lockscreen_wallpaper_label">နောက်ခံ</string>
   <string name="dream_overlay_status_bar_alarm_set">နိုးစက် သတ်မှတ်ထားသည်</string>
   <string name="dream_overlay_status_bar_camera_mic_off">ကင်မရာနှင့် မိုက် ပိတ်ထားသည်</string>
   <string name="dream_overlay_status_bar_camera_off">ကင်မရာ ပိတ်ထားသည်</string>
   <string name="dream_overlay_status_bar_mic_off">မိုက်ပိတ်ထားသည်</string>
   <string name="dream_overlay_status_bar_priority_mode">ဦးစားပေးမုဒ်</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi မရပါ</string>
+  <string name="dwell_defender_notify_des">သင့်ဖုန်းကို အချိန်ကြာအားသွင်းရန် ထားရှိသည့်အခါ ၎င်းက ဘက်ထရီသက်တမ်းကို ရှည်စေသည်</string>
+  <string name="dwell_defender_notify_title">ဘက်ထရီကာကွယ်ရန် အားသွင်းခြင်းကို ခဏရပ်ထားသည်</string>
   <string name="edit_user_info_message">သင်ရွေးသော အမည်နှင့်ပုံကို ဤစက်သုံးသူ မည်သူမဆို မြင်နိုင်သည်။</string>
   <string name="edit_widget">ဝိဂျက်ပြင်ရန်</string>
   <string name="empty_shade_text">အကြောင်းကြားချက် မရှိပါ</string>
@@ -561,13 +581,17 @@
   <string name="ethernet_label">အီသာနက်</string>
   <string name="expand_button_title">အဆင့်မြင့်</string>
   <string name="expand_menu_text">မီနူး ဖွင့်ရန်</string>
+  <string name="extreme_battery_saver_text">လွန်ကဲ</string>
+  <string name="extreme_low_battery_notification_text">သင့်ဖုန်းကို မကြာမီ အားမသွင်းပါက စက်ပိတ်သွားပါမည်</string>
+  <string name="extreme_low_battery_notification_title">ဘက်ထရီ အလွန်အားနည်းနေသည်</string>
   <string name="face_re_enroll_dialog_content">‘မျက်နှာပြ လော့ခ်ဖွင့်ခြင်း’ ကို စနစ်ပြန်ထည့်ရန် သင်၏ လက်ရှိ မျက်နှာနမူနာကို ဖျက်လိုက်ပါမည်။
 
 ဖုန်းလော့ခ်ဖွင့်ရန်အတွက် သင့်မျက်နှာသုံးရန် ဤတူးလ်ကို စနစ်ပြန်ထည့်ရမည်။</string>
   <string name="face_re_enroll_dialog_title">‘မျက်နှာပြ လော့ခ်ဖွင့်ခြင်း’ ကို စနစ်ထည့်သွင်းပါ</string>
   <string name="face_re_enroll_notification_name">မျက်နှာပြ လော့ခ်ဖွင့်ခြင်း</string>
   <string name="face_re_enroll_notification_title">‘မျက်နှာပြ လော့ခ်ဖွင့်ခြင်း’ ကို စနစ်ပြန်ထည့်သွင်းပါ</string>
-  <string name="face_reenroll_failure_dialog_content">မျက်နှာပြ လော့ခ်ဖွင့်ခြင်းကို စနစ်ထည့်သွင်း၍မရပါ။ ဆက်တင်များသို့သွားပြီး ထပ်စမ်းကြည့်ပါ။</string>
+  <string name="face_reenroll_dialog_confirm">စနစ်ထည့်သွင်းရန်</string>
+  <string name="face_reenroll_failure_dialog_content">မျက်နှာပြ လော့ခ်ဖွင့်ခြင်းကို စနစ်ထည့်သွင်း၍မရပါ 'ဆက်တင်များ' သို့သွားပြီး ထပ်စမ်းကြည့်ပါ။</string>
   <string name="failed_attempts_now_wiping_device">မှားယွင်းသည့် အကြိမ်ရေ အလွန်များနေပါပြီ။ ဤစက်၏ ဒေတာကို ဖျက်လိုက်ပါမည်။</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">ပယ်ရန်</string>
   <string name="failed_attempts_now_wiping_profile">မှားယွင်းသည့် အကြိမ်ရေ အလွန်များနေပါပြီ။ ဤအလုပ်ပရိုဖိုင်နှင့် ၎င်း၏ဒေတာကို ဖျက်လိုက်ပါမည်။</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">ချုံ့ရန်</string>
   <string name="fullscreen_text">ဖန်သားပြင်အပြည့်</string>
   <string name="game_status">ကစားနေသည်</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s၊ %2$s</string>
   <string name="global_action_smart_lock_disabled">‘လော့ခ်ဖွင့်ချိန်တိုးခြင်း’ ပိတ်ထားသည်</string>
   <string name="go_to_web">ဘရောင်ဇာသို့ သွားပါ</string>
   <string name="got_it">ရပါပြီ</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">ဧည့်သည် စက်ရှင် ပြင်ဆင်သတ်မှတ်မလား။</string>
   <string name="guest_reset_guest_confirm_button">ပြင်ဆင်သတ်မှတ်ရန်</string>
   <string name="guest_resetting">ဧည့်သည်ကို ပြင်ဆင်သတ်မှတ်နေသည်…</string>
+  <string name="handle_invocation_prompt">စကားပြောရန် ပွတ်ဆွဲပါ</string>
   <string name="handle_text">သုံးသူအမည်</string>
   <string name="headset">မိုက်ခွက်ပါနားကြပ်</string>
   <string name="hearing_devices_preset_label">ကြိုတင်သတ်မှတ်ချက်</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">ဖုန်း ပူနွေးလာပါပြီ</string>
   <string name="home_controls_dream_description">အိမ်ထိန်းချုပ်မှုများကို စခရင်နားချိန်ပုံအဖြစ် အမြန်ဝင်ကြည့်ရန်</string>
   <string name="home_controls_dream_label">အိမ်ထိန်းချုပ်မှုများ</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• အနည်းဆုံး စက် (သို့) စက်အကန့် တစ်ခု သုံးနိုင်ရမည်</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Home အက်ပ်ကို ဖြတ်လမ်းလင့်ခ်အဖြစ်ထည့်ရန် ၎င်းအားထည့်သွင်းထားကြောင်း သေချာပါစေ</string>
   <string name="hub_mode_add_widget_button_text">ဝိဂျက်ထည့်ရန်</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">ဆောင်ရွက်နေဆဲ</string>
   <string name="inattentive_sleep_warning_message">စက်သည် မကြာမီ ပိတ်သွားပါမည်၊ ဆက်ဖွင့်ထားရန် နှိပ်ပါ။</string>
   <string name="inattentive_sleep_warning_title">အသင့်အနေအထား</string>
+  <string name="incompatible_charging_learn_more">ပိုမိုလေ့လာရန်</string>
+  <string name="incompatible_charging_notify_des">သင့်ဖုန်းသည် နှေးကွေးစွာ အားသွင်းနေသည် (သို့) ၎င်းကို အားသွင်းမနေပါ။ အမြန်အားသွင်းခြင်းအတွက် အကြံပြုထားသော ကြိုးနှင့် အဒက်တာ သုံးပါ။</string>
+  <string name="incompatible_charging_notify_title">အားသွင်းပစ္စည်းကို စစ်ခြင်း</string>
   <string name="indeterminate">တစ်ဝက်တစ်ပျက် စစ်ဆေးထားသည်</string>
   <string name="inline_done_button">ပြီးပြီ</string>
   <string name="inline_ok_button">အသုံးပြုရန်</string>
   <string name="inline_turn_off_notifications">အကြောင်းကြားချက်များ ပိတ်ရန်</string>
   <string name="input_switch_input_language_next">နောက်ဘာသာစကားသို့ ပြောင်းရန်</string>
   <string name="input_switch_input_language_previous">ယခင်ဘာသာစကားသို့ ပြောင်းရန်</string>
+  <string name="install_app">အက်ပ် ထည့်သွင်းရန်</string>
   <string name="install_dialer_on_work_profile_action">အလုပ်သုံး ဖုန်းအက်ပ် ထည့်သွင်းရန်</string>
   <string name="install_type_instant">အသင့်သုံးအက်ပ်</string>
   <string name="instant_apps">Instant Apps</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">%1$s လုပ်ဆောင်နေသည်</string>
   <string name="interruption_level_none">လုံးဝ တိတ်ဆိတ်ခြင်း</string>
   <string name="interruption_level_priority">ဦးစားပေးများသာ</string>
-  <string name="invalid_charger_text">သင့်စက်ပစ္စည်းနှင့် အတူပါလာသည့် အားသွင်းကိရိယာကို အသုံးပြုပါ</string>
-  <string name="invalid_charger_title">USB ဖြင့် အားသွင်း၍မရပါ</string>
   <string name="issuerecord_background_processing_label">ပြဿနာရိုက်ကူးမှု လုပ်နေသည်</string>
   <string name="issuerecord_ongoing_screen_only">ပြဿနာကို ရိုက်ကူးနေသည်</string>
   <string name="issuerecord_save_title">ပြဿနာရိုက်ကူးမှုကို သိမ်းလိုက်ပါပြီ</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">စက်လော့ခ်ကျနေသည်
 အထောက်အထားစိစစ်၍ မရပါ</string>
   <string name="keyguard_indication_charging_time">%2$s • အားသွင်းနေသည် • အားပြည့်ရန် %1$s လိုသည်</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • %1$s တွင် အားသွင်းမှုပြီးမည်</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • အားသွင်းနေသည် • အားပြည့်ရန် %1$s လိုသည်</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • %1$s တွင် အားပြည့်မည်</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • အမြန်အားသွင်းနေသည် • အားပြည့်ရန် %1$s လိုသည်</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • အမြန်အားသွင်းခြင်း • %1$s တွင် အားပြည့်မည်</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • အားသွင်းပြီးပါပြီ</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • နှေးကွေးစွာ အားသွင်းနေသည် • အားပြည့်ရန် %1$s လိုသည်</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • %1$s တွင် အားပြည့်မည်</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • %1$s တွင် အားပြည့်မည်</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • ကြိုးမဲ့အားသွင်းနေသည် • အားပြည့်ရန် %1$s လိုသည်</string>
-  <string name="keyguard_indication_trust_unlocked">TrustAgent ဖြင့် ဆက်ဖွင့်ထားရန်</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • %1$s တွင် အားပြည့်မည်</string>
+  <string name="keyguard_indication_trust_unlocked">‘လော့ခ်ဖွင့်ချိန်တိုးခြင်း’ ဖြင့် ဆက်ဖွင့်ထားသည်</string>
   <string name="keyguard_missing_sim_message_short">ဆင်းမ်ကတ် မရှိပါ</string>
   <string name="keyguard_network_locked_message">ကွန်ရက်ကို လော့ခ်ချထားသည်</string>
   <string name="keyguard_permanent_disabled_sim_message_short">ဆင်းမ်ကတ်ကို သုံး၍မရပါ။</string>
   <string name="keyguard_plugged_in">%s • အားသွင်းနေသည်</string>
   <string name="keyguard_plugged_in_charging_fast">%s • အမြန်အားသွင်းနေသည်</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • အမြန်အားသွင်းခြင်း</string>
   <string name="keyguard_plugged_in_charging_limited">%s • ဘက်ထရီကို ကာကွယ်ရန် အားသွင်းခြင်းကို ခဏရပ်ထားသည်</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • နှေးကွေးစွာ အားသွင်းနေသည်</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • အားသွင်းနေသည်</string>
   <string name="keyguard_plugged_in_dock">%s • အားသွင်းနေသည်</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • အားသွင်းနေသည်</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • အားသွင်းပစ္စည်းကို စစ်ပါ</string>
+  <string name="keyguard_plugged_in_v2">%s • အားသွင်းနေသည်</string>
   <string name="keyguard_plugged_in_wireless">%s • ကြိုးမဲ့ အားသွင်းနေသည်</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • အားသွင်းနေသည်</string>
   <string name="keyguard_retry">ထပ်စမ်းကြည့်ရန် အပေါ်သို့ပွတ်ဆွဲပါ</string>
   <string name="keyguard_sim_error_message_short">ကတ် မမှန်ကန်ပါ။</string>
   <string name="keyguard_sim_locked_message">ဆင်းမ်ကတ်ကို လော့ခ်ချထားသည်။</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">ပင်နံပါတ် ကိုက်ညီမှု မရှိပါ</string>
   <string name="kg_invalid_sim_pin_hint">ဂဏန်း ၄ လုံးမှ ၈ လုံးအထိ ရှိသော ပင်နံပါတ်ကို ထည့်ပါ။</string>
   <string name="kg_invalid_sim_puk_hint">ပင်နံပါတ် ပြန်ဖွင့်သည့်ကုဒ်သည် ဂဏန်း ၈ လုံးနှင့် အထက် ဖြစ်ရပါမည်။</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{ဆင်းမ်ပင်နံပါတ် ထည့်သွင်းပါ။ သင့်စက်ကို လော့ခ်ဖွင့်ရန် မိုဘိုင်းဖုန်းကုမ္ပဏီသို့ မဆက်သွယ်မီ # ကြိမ် ကြိုးစားခွင့်ရှိသေးသည်။}other{ဆင်းမ်ပင်နံပါတ် ထည့်သွင်းပါ။ သင့်တွင် # ကြိမ် ကြိုးစားခွင့်ရှိသေးသည်။}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{ဆင်းမ်ကတ်သည် ယခု ပိတ်သွားပါပြီ။ ရှေ့ဆက်ရန် PUK ကုဒ်ကို ထည့်ပါ။ ဆင်းမ်ကတ် အပြီးပိတ်မသွားမီ သင့်တွင် # ကြိမ် ကြိုးစားခွင့်ရှိသေးသည်။ အသေးစိတ်အတွက် မိုဘိုင်းဖုန်းကုမ္ပဏီကို ဆက်သွယ်ပါ။}other{ဆင်းမ်ကတ်သည် ယခု ပိတ်သွားပါပြီ။ ရှေ့ဆက်ရန် PUK ကုဒ်ကို ထည့်ပါ။ ဆင်းမ်ကတ် အပြီးပိတ်မသွားမီ သင့်တွင် # ကြိမ် ကြိုးစားခွင့်ရှိသေးသည်။ အသေးစိတ်အတွက် မိုဘိုင်းဖုန်းကုမ္ပဏီကို ဆက်သွယ်ပါ။}}</string>
   <string name="kg_password_pin_failed">ဆင်းမ်ကဒ်ပင်နံပါတ် လုပ်ဆောင်ချက် မအောင်မြင်ပါ။</string>
   <string name="kg_password_puk_failed">ဆင်းမ်ကတ် ပင်နံပါတ် ပြန်ဖွင့်သည့်ကုဒ် လုပ်ဆောင်ချက် မအောင်မြင်ပါ။</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">"%1$s" အတွက် ဆင်းမ်ကဒ်ပင်နံပါတ်ကို ထည့်ပါ။</string>
   <string name="kg_sim_unlock_progress_dialog_message">ဆင်းမ်ကိုဖွင့်နေသည်…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{# စက္ကန့်အကြာတွင် ထပ်စမ်းကြည့်နိုင်သည်။}other{# စက္ကန့်အကြာတွင် ထပ်စမ်းကြည့်နိုင်သည်။}}</string>
-  <string name="kg_trust_agent_disabled">ယုံကြည်မှု အေးဂျင့်ကို မရနိုင်ပါ</string>
+  <string name="kg_trust_agent_disabled">လော့ခ်ဖွင့်ချိန်တိုးခြင်းကို မရနိုင်ပါ</string>
   <string name="kg_unlock_with_password_or_fp">စကားဝှက် (သို့) လက်ဗွေဖြင့် ဖွင့်ပါ</string>
   <string name="kg_unlock_with_pattern_or_fp">ပုံဖော်ခြင်း (သို့) လက်ဗွေဖြင့် ဖွင့်ပါ</string>
   <string name="kg_unlock_with_pin_or_fp">ပင်နံပါတ် (သို့) လက်ဗွေဖြင့် ဖွင့်ပါ</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">ပိုမိုလေ့လာရန်</string>
   <string name="log_access_confirmation_learn_more_at">%s တွင် ပိုမိုလေ့လာရန်</string>
   <string name="log_access_confirmation_title">%s ကို စက်မှတ်တမ်းအားလုံး သုံးခွင့်ပြုမလား။</string>
+  <string name="low_battery_label">ဘက်ထရီ အားနည်းနေသည်</string>
+  <string name="low_battery_notification_text">ဘက်ထရီ သက်တမ်းရှည်စေရန် ‘ပုံမှန်ဘက်ထရီအားထိန်း’ ကို ဖွင့်ပါ</string>
+  <string name="low_battery_notification_text_ebs">ဘက်ထရီ သက်တမ်းရှည်စေရန် ‘လွန်ကဲဘက်ထရီအားထိန်း’ ကို ဖွင့်ပါ</string>
+  <string name="low_battery_notification_title">ဘက်ထရီ %s ကျန်သည်</string>
   <string name="m3c_search_bar_search">ရှာရန်</string>
   <string name="m3c_suggestions_available">အကြံပြုချက်များသည် အောက်တွင်ရှိသည်</string>
   <string name="magnification_close_settings_click_label">ချဲ့ခြင်း ဆက်တင်များ ပိတ်ရန်</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">ရပ်ရန်</string>
   <string name="media_output_end_session_dialog_summary">အခြားစက်သို့ မီဒီယာရွှေ့ပြောင်းရန် သင်၏မျှဝေထားသောစက်ရှင်ကို ရပ်ပါ</string>
-  <string name="media_output_first_broadcast_title">ထုတ်လွှင့်မှုဆောင်ရွက်ပုံ</string>
-  <string name="media_output_first_notify_broadcast_message">အနီးရှိတွဲသုံးနိုင်သော ဘလူးတုသ်သုံးစက် အသုံးပြုသူများက သင်ထုတ်လွှင့်နေသော မီဒီယာကို နားဆင်နိုင်သည်</string>
   <string name="media_output_group_title_speakers_and_displays">စပီကာနှင့် ဖန်သားပြင်များ</string>
   <string name="media_output_group_title_suggested_device">အကြံပြုထားသော စက်ပစ္စည်းများ</string>
   <string name="media_output_label_title">%s ဖွင့်မည့်နေရာ</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">အက်ပ်တစ်ခုကို ကာစ်လုပ်သည့်အခါ Android သည် ယင်းအက်ပ်တွင် ပြထားသည့် (သို့) ဖွင့်ထားသည့် အရာအားလုံးကို တွေ့နိုင်သည်။ ထို့ကြောင့် စကားဝှက်၊ ငွေပေးချေမှု အချက်အလက်၊ မက်ဆေ့ဂျ်၊ ဓာတ်ပုံ၊ အသံနှင့် ဗီဒီယိုကဲ့သို့ အရာများကို ဂရုစိုက်ပါ။</string>
   <string name="media_projection_sys_service_dialog_title">ရုပ်သံဖမ်းခြင်း (သို့) ကာစ်လုပ်ခြင်း စမလား။</string>
   <string name="media_projection_sys_service_dialog_warning">ဤလုပ်ဆောင်ချက်ကို ပေးအပ်သည့် ဝန်ဆောင်မှုသည် ရုပ်သံဖမ်းနေစဉ် (သို့) ကာစ်လုပ်နေစဉ် သင့်မျက်နှာပြင်တွင် မြင်ရသော (သို့) သင့်စက်တွင် ဖွင့်ထားသော အချက်အလက်မှန်သမျှကို သုံးနိုင်ပါမည်။ ၎င်းတွင် စကားဝှက်များ၊ ငွေပေးချေမှုအသေးစိတ်များ၊ ဓာတ်ပုံများ၊ မက်ဆေ့ဂျ်များနှင့် သင်ဖွင့်သည့်အသံကဲ့သို့သော အချက်အလက်များ ပါဝင်သည်။</string>
-  <string name="media_projection_task_switcher_action_back">ပြန်ပြောင်းရန်</string>
-  <string name="media_projection_task_switcher_action_switch">၎င်းအစား ဤအက်ပ်ကို မျှဝေရန်</string>
-  <string name="media_projection_task_switcher_text">အက်ပ်ပြောင်းချိန်တွင် မျှဝေခြင်းကို ခဏရပ်သည်</string>
   <string name="media_seamless_other_device">အခြားစက်ပစ္စည်း</string>
   <string name="media_transfer_default_device_name">ချိတ်ဆက်ကိရိယာ</string>
   <string name="media_transfer_dock_speaker_device_name">အထိုင် စပီကာ</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">ပုံရိပ် ပိုမိုပြတ်သားစေရန် ဖုန်းကို တစ်ဖက်သို့ လှန်လိုက်ပါ</string>
   <string name="rear_display_unfolded_bottom_sheet_title">စခရင်များ ပြောင်းမလား။</string>
   <string name="recent_conversations">မကြာသေးမီက စကားဝိုင်းများ</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">ပုံပို့ထားသည်</string>
   <string name="remove_from_settings">ဆက်တင် အထဲမှ ဖယ်ရှားရန်</string>
   <string name="remove_from_settings_prompt">ဆက်တင် အထဲမှ စနစ် UI ဖမ်းစက်ကို ဖယ်ရှားလျက် ၎င်း၏ အင်္ဂါရပ်များ အားလုံး အသုံးပြုမှု ရပ်တန့်ရမလား?</string>
   <string name="require_unlock_for_nfc">NFC ကို အသုံးပြုရန် လော့ခ်ဖွင့်ပါ</string>
   <string name="restart_button_description">ပိုကောင်းသောမြင်ကွင်းအတွက် ဤအက်ပ်ပြန်စရန် တို့ပါ</string>
   <string name="retry_face">မျက်နှာ အထောက်အထားစိစစ်ခြင်းကို ထပ်စမ်းရန်</string>
+  <string name="reverse_charging_device_name_text">အခြား Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s က အားသွင်းပေးနေသည် (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">'ဘက်ထရီမျှဝေခြင်း' ကို ဖွင့်ထားသည်</string>
+  <string name="reverse_charging_title">ဘက်ထရီ မျှဝေခြင်း</string>
   <string name="right_icon">လက်ယာသင်္ကေတ</string>
   <string name="right_keycode">လက်ယာကီးကုဒ်</string>
   <string name="right_nav_bar_button_type">လက်ယာခလုတ် အမျိုးအစားအပို</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">ဘက်ထရီနှင့် ဒေတာအသုံးပြုမှု အသေးစိတ်ကို ကြည့်ရန် တို့ပါ</string>
   <string name="running_foreground_services_title">နောက်ခံတွင် ပွင့်နေသော အက်ပ်များ</string>
-  <string name="satellite_connected_carrier_text">Satellite SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel Satellite SOS</string>
   <string name="save">သိမ်းရန်</string>
+  <string name="saver_confirmation_dialog_dismiss_text">မလုပ်တော့</string>
+  <string name="saver_confirmation_dialog_subtitle">သုံးမည့်မုဒ် ရွေးပါ</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">အထက်ဖော်ပြပါ အပြောင်းအလဲအားလုံး ပါဝင်သည်။ မရှိမဖြစ်မဟုတ်သည့် အက်ပ်များနှင့် ၎င်းတို့၏ အကြောင်းကြားချက်များကိုလည်း ခဏရပ်ပေးသည်။</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">နောက်ခံလုပ်ဆောင်ချက်နှင့် ဖန်တီးပြသချက်များကို ကန့်သတ်ပေးသည်။ ‘အမှောင်နောက်ခံ’ မဖွင့်ရသေးပါက ဖွင့်ပေးသည်။</string>
+  <string name="saver_confirmation_dialog_title">‘ဘက်ထရီ အားထိန်း’ က ကြိုဆိုပါသည်</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">လွန်ကဲ ဘက်ထရီအားထိန်း</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">ပုံမှန် ဘက်ထရီအားထိန်း</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">ကိရိယာ မူဝါဒက ဖန်သားပြင်ပုံဖမ်းခြင်းကို ပိတ်ထားသည်</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">သင်၏ IT စီမံခန့်ခွဲသူက ပိတ်ထားသည်</string>
   <string name="screen_pinning_can_open_other_apps">ပင်ထိုးထားသည့်အက်ပ်က အခြားအက်ပ်များကို ဖွင့်နိုင်သည်။</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">ဤအက်ပ်ကို ပင်ဖြုတ်ရန် 'နောက်သို့' နှင့် 'အနှစ်ချုပ်' ခလုတ်များကို ထိ၍နှိပ်ထားပါ</string>
   <string name="screen_pinning_toast_gesture_nav">ဤအက်ပ်ကို ပင်ဖြုတ်ရန် အပေါ်သို့ ပွတ်ဆွဲပြီး ဖိထားပါ</string>
   <string name="screen_pinning_toast_recents_invisible">ဤအက်ပ်ကို ပင်ဖြုတ်ရန် 'နောက်သို့' နှင့် 'ပင်မ' ခလုတ်တို့ကို ထိ၍နှိပ်ထားပါ</string>
+  <string name="screen_protector_absent_message">ဖန်သားပြင်အကာအကွယ်မုဒ် ပိတ်ထားခြင်းဖြင့် ၎င်းကို မသုံးသည့်အခါ တို့ထိမှုကို ပိုသိစေသည်။</string>
+  <string name="screen_protector_disable_notification">အကြောင်းကြားချက် ပိတ်ရန်</string>
+  <string name="screen_protector_go_to_settings">ဆက်တင်များသို့ သွားရန်</string>
+  <string name="screen_protector_got_it">ရပြီ</string>
+  <string name="screen_protector_mode_title">ဖန်သားပြင် အကာအကွယ်မုဒ်</string>
+  <string name="screen_protector_present_message">ဖန်သားပြင်အကာအကွယ်မုဒ် ဖွင့်ခြင်းဖြင့် ၎င်းကိုသုံးချိန်တွင် တို့ထိမှုကို ပိုသိစေသည်။</string>
   <string name="screen_share_permission_app_selector_title">အက်ပ် မျှဝေခြင်း (သို့) ရိုက်ကူးခြင်း</string>
   <string name="screen_share_permission_dialog_option_entire_screen">ဖန်သားပြင်တစ်ခုလုံး</string>
   <string name="screen_share_permission_dialog_option_single_app">အက်ပ်တစ်ခုတွင်</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">အလုပ်ပရိုဖိုင်တွင် ဖန်သားပြင်ဓာတ်ပုံ သိမ်းနေသည်…</string>
   <string name="screenshot_scroll_label">နောက်ထပ် ရိုက်ကူးရန်</string>
   <string name="screenshot_share_description">ဖန်သားပြင်ဓာတ်ပုံကို မျှဝေနိုင်သည်</string>
-  <string name="screenshot_share_label">မျှဝေရန်</string>
   <string name="screenshot_text">ဖန်သားပြင်ဓာတ်ပုံ</string>
   <string name="screenshot_top_boundary_pct">ထိပ်ပိုင်းအနားသတ် %1$d ရာခိုင်နှုန်း</string>
+  <string name="screenshot_view_description">ဖန်သားပြင်ဓာတ်ပုံကို ကြည့်နိုင်သည်</string>
   <string name="screenshot_work_profile_notification">အလုပ်ပရိုဖိုင်ရှိ %1$s တွင် သိမ်းထားသည်</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">လက်ဗွေ အာရုံခံကိရိယာသည် ဖွင့်ပိတ်ခလုတ်ပေါ်တွင် ရှိသည်။ ဖုန်း၏ဘေးဘက်ရှိ အသံထိန်းခလုတ်ဖုသီးနှင့် ကပ်လျက်မှ ခလုတ်ပြားဖြစ်သည်။</string>
   <string name="see_all_bluetooth_devices">အားလုံးကြည့်ရန်</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">ဆက်တင်များတွင် မူရင်းမှတ်စုများအက်ပ် သတ်မှတ်ပါ</string>
   <string name="settings_label">ဆက်တင်များ</string>
   <string name="settingslib_learn_more_text">ပိုမိုလေ့လာရန်</string>
+  <string name="severe_battery_notification_switch_text">‘လွန်ကဲ ဘက်ထရီအားထိန်း’ သို့ ပြောင်းမလား။ 
+
+၎င်းသည် မရှိမဖြစ်မဟုတ်သည့် အက်ပ်အားလုံးနှင့် ၎င်းတို့၏အကြောင်းကြားချက်များကို ခဏရပ်ပါမည်</string>
+  <string name="severe_battery_notification_text">‘လွန်ကဲ ဘက်ထရီအားထိန်း’ ဖွင့်ပါ။ ၎င်းသည် မရှိမဖြစ်မဟုတ်သော အက်ပ်အားလုံးကို ခဏရပ်ပါမည်</string>
+  <string name="severe_battery_notification_title">ဘက်ထရီ %s ကျန်သည်</string>
+  <string name="severe_low_battery_dialog_switch_action_text">ပြောင်းရန်</string>
   <string name="share_to_app_stop_dialog_button">မျှဝေခြင်း ရပ်ရန်</string>
   <string name="share_to_app_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; ၏ အကြောင်းအရာ မျှဝေခြင်းကို ရပ်ပါမည်</string>
   <string name="share_to_app_stop_dialog_title">ဖန်သားပြင်မျှဝေခြင်း ရပ်မလား။</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- ၎င်းသည် %1$s မှ အချက်အလက်ကို ဖတ်နိုင်သည်</string>
   <string name="slice_permission_text_2">- ၎င်းသည် %1$s အတွင်း လုပ်ဆောင်ချက်များ ပြုလုပ်နိုင်သည်</string>
   <string name="slice_permission_title">%1$s အား %2$s ၏အချပ်များ ပြသခွင့်ပြုပါသလား။</string>
+  <string name="smartspace_content_desc">တစ်ချက်ကြည့်ရုံမျှဖြင့်</string>
+  <string name="smartspace_flight_qr_code">QR ကုဒ်</string>
+  <string name="smartspace_role_desc">ကြည့်ရန်</string>
   <string name="snoozeHourOptions">{count,plural, =1{# နာရီ}=2{# နာရီ}other{# နာရီ}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# မိနစ်}other{# မိနစ်}}</string>
   <string name="snooze_undo">နောက်ပြန်ရန်</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">နှေး</string>
   <string name="speed_label_very_fast">အလွန်မြန်</string>
   <string name="split_screen_text">မျက်နှာပြင် ခွဲ၍ပြသရန်</string>
+  <string name="squeeze_invocation_prompt">စကားပြောရန် ဖျစ်ညှစ်ပါ</string>
+  <string name="standard_battery_saver_text">ပုံမှန်</string>
   <string name="start_dreams">စခရင်နားချိန်ပုံ</string>
   <string name="state_empty">မရှိပါ</string>
   <string name="state_off">ပိတ်</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">တဘ်</string>
   <string name="tap_a_network_to_connect">ချိတ်ဆက်ရန် ကွန်ရက်ကို တို့ပါ</string>
   <string name="tap_again">ထပ်တို့ပါ</string>
+  <string name="temp_defender_notify_des">သင့်ဖုန်းသည် ပုံမှန်အပူချိန်သို့ ပြန်လည်ရောက်ရှိသည့်အခါ အားသွင်းခြင်းကို ဆက်လုပ်ပါမည်</string>
+  <string name="temp_defender_notify_title">ဘက်ထရီကာကွယ်ရန် အားသွင်းခြင်းကို ခဏရပ်ထားသည်</string>
   <string name="template_percent">%1$d ရာခိုင်နှုန်း။</string>
   <string name="thermal">အပူဓာတ်</string>
   <string name="thermal_shutdown_dialog_help_text">ဂရုပြုစရာ အဆင့်များ ကြည့်ရန်</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">တက်ဘလက်မဖွင့်ဘဲ သင့်အကြိုက်ဆုံး အက်ပ်ဝိဂျက်များကို အမြန်သုံးခွင့် ရယူပါ။</string>
   <string name="title_usb_accessory">USBတွဲဖက်ပစ္စည်းများ</string>
   <string name="to_switch_networks_disconnect_ethernet">ကွန်ရက်ပြောင်းရန် အီသာနက်ကို ချိတ်ဆက်မှုဖြုတ်ပါ</string>
+  <string name="too_hot_label">Pixel အလွန်ပူနေသည်</string>
   <string name="touch_filtered_warning">အပလီကေးရှင်းတစ်ခုက ခွင့်ပြုချက်တောင်းခံမှုကို ပိတ်ထားသောကြောင့် ဆက်တင်များသည် သင်၏ လုပ်ဆောင်ကို တုံ့ပြန်နိုင်ခြင်းမရှိပါ။</string>
   <string name="touchpad_tutorial_action_key_button">လုပ်ဆောင်ချက်ကီး</string>
   <string name="touchpad_tutorial_back_gesture_button">နောက်သို့ လက်ဟန်</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">မီနူး</string>
   <string name="tuner_minus">အနုတ်</string>
   <string name="tuner_other_apps">အခြားအက်ပ်များ</string>
+  <string name="tuner_persistent_warning">အနာဂတ် ဗားရှင်းများတွင် ဤစမ်းသပ်အင်္ဂါရပ်များမှာ ပြောင်းလဲ၊ ပျက်စီး သို့မဟုတ် ပျောက်ကွယ်သွားနိုင်သည်။ သတိဖြင့် ရှေ့ဆက်ပါ။</string>
   <string name="tuner_plus">အပေါင်း</string>
   <string name="tuner_right">လက်ယာ</string>
   <string name="tuner_time">အချိန်</string>
+  <string name="tuner_warning">စနစ် UI Tuner က သင့်အတွက် Android အသုံးပြုသူ အင်တာဖေ့စ်ကို ပြောင်းရန်နှင့် စိတ်ကြိုက်ပြုလုပ်ရန် နည်းလမ်း အပိုများကို သင့်အတွက် စီစဉ်ပေးသည်။ အနာဂတ်ဗားရှင်းများတွင် ဤစမ်းသပ်အင်္ဂါရပ်များမှာ ပြောင်းလဲ၊ ပျက်စီး သို့မဟုတ် ပျောက်ကွယ်သွားနိုင်သည်။ သတိဖြင့် ရှေ့ဆက်ပါ။</string>
+  <string name="tuner_warning_title">အချို့သူများ အတွက် ပျော်စရာ ဖြစ်ပေမဲ့ အားလုံး အတွက် မဟုတ်ပါ</string>
   <string name="turn_off_airplane_mode">လေယာဉ်ပျံမုဒ်ကို ပိတ်ရန်</string>
   <string name="turn_on_bluetooth">ဘလူးတုသ်သုံးရန်</string>
   <string name="turn_on_bluetooth_auto_info_disabled">‘အမြန် မျှဝေပါ’ နှင့် Find My Device ကဲ့သို့ တူးလ်များသည် ဘလူးတုသ်သုံးသည်</string>
   <string name="turn_on_bluetooth_auto_info_enabled">မနက်ဖြန်နံနက်တွင် ဘလူးတုသ် ပွင့်ပါမည်</string>
   <string name="turn_on_bluetooth_auto_tomorrow">မနက်ဖြန် အလိုအလျောက်ဖွင့်ရန်</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">TV မူရင်း</string>
   <string name="two_weeks_timestamp">ပြီးခဲ့သော 2 ပတ်</string>
   <string name="unknown">မသိ</string>
   <string name="unlock_to_see_notif_text">အကြောင်းကြားချက်ဟောင်းကြည့်ရန် လော့ခ်ဖွင့်ပါ</string>
@@ -1552,7 +1624,9 @@ USB ပို့တ်ကို ပြန်အသုံးပြုနိုင
   <string name="volume_odi_captions_hint_enable">ဖွင့်ရန်</string>
   <string name="volume_odi_captions_tip">အလိုအလျောက် စာတန်းထိုးရန်</string>
   <string name="volume_panel_captioning_title">တိုက်ရိုက်စာတန်း</string>
+  <string name="volume_panel_clear_calling_title">ဖုန်းဆူညံသံဖျောက်ခြင်း</string>
   <string name="volume_panel_collapsed_sliders">အသံအတိုးအကျယ် ရွှေ့တုံးများ လျှော့ပြထားသည်</string>
+  <string name="volume_panel_device_settings_title">စက်ဆက်တင်များ</string>
   <string name="volume_panel_dialog_settings_button">ဆက်တင်များ</string>
   <string name="volume_panel_enter_media_output_settings">အထွက် ဆက်တင်များ ထည့်ရန်</string>
   <string name="volume_panel_expanded_sliders">အသံအတိုးအကျယ် ရွှေ့တုံးများ ပိုပြထားသည်</string>
@@ -1667,10 +1741,13 @@ Wi‑Fi လိပ်စာ (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">အမျိုးအမည်မသိ</string>
   <string name="wifitrackerlib_wifi_unmetered_label">အခမဲ့</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi က ယခု အလိုအလျောက် ချိတ်ဆက်မည်မဟုတ်ပါ</string>
+  <string name="wireless_charging_label">ကြိုးမဲ့ အားသွင်းနေသည်</string>
+  <string name="wireless_charging_notification_text">ကြိုးမဲ့အားသွင်းခြင်းသည် ကြိုးဖြင့်အားသွင်းခြင်းထက် စွမ်းအင်ပိုသုံးနိုင်သည်။ လျှပ်စစ်ဓာတ်အားနှင့် အချိန်ချွေတာရန် ကြိုးတပ်အားသွင်းကိရိယာသို့ ပြောင်းကြည့်ပါ။</string>
+  <string name="wireless_charging_notification_title">ကြိုးမဲ့ ဖုန်းအားသွင်းနေသည်</string>
   <string name="work_challenge_emergency_button_text">အရေးပေါ်</string>
   <string name="work_mode_off_title">အလုပ်သုံးအက်ပ် ပြန်ဖွင့်မလား။</string>
   <string name="work_mode_turn_on">ပြန်ဖွင့်ရန်</string>
-  <string name="zen_alarm_warning">%1$s ၌သင့်နောက်ထပ် နှိုးစက်ကို ကြားမည်မဟုတ်ပါ</string>
+  <string name="zen_alarm_warning">သင်၏ နောက်ထပ် %1$s နှိုးစက်ကို ကြားမည်မဟုတ်ပါ</string>
   <string name="zen_alarm_warning_indef">သင်၏ နောက်ထပ် %1$s နှိုးစက် မတိုင်မီ ၎င်းကိုမပိတ်လျှင် ကြားမည်မဟုတ်ပါ</string>
   <string name="zen_mode_enable_dialog_turn_on">ဖွင့်ရန်</string>
   <string name="zen_mode_settings_turn_on_dialog_title">'မနှောင့်ယှက်ရ' ဖွင့်ခြင်း</string>

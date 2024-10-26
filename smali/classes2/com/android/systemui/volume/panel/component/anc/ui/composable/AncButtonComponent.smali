@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/panel/component/anc/ui/composable/AncButtonComponent;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/volume/panel/ui/composable/ComposeVolumePanelUiComponent;
@@ -69,7 +69,7 @@
     move-result-object v2
 
     .line 25
-    const v3, 0x7f140a11    # @string/volume_panel_noise_control_title 'Noise Control'
+    const v3, 0x7f130a9e    # @string/volume_panel_noise_control_title 'Noise Control'
 
     .line 26
     invoke-static {v3, v15}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;

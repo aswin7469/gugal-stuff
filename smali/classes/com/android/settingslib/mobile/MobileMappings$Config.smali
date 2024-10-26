@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/mobile/MobileMappings$Config;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -62,7 +62,7 @@
     move-result-object v1
 
     .line 25
-    const v2, 0x7f05003b    # @bool/config_showMin3G 'false'
+    const v2, 0x7f050046    # @bool/config_showMin3G 'false'
 
     .line 26
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -86,7 +86,7 @@
     iput-boolean v2, v0, Lcom/android/settingslib/mobile/MobileMappings$Config;->alwaysShowCdmaRssi:Z
 
     .line 42
-    const v2, 0x7f050021    # @bool/config_hspa_data_distinguishable 'true'
+    const v2, 0x7f050027    # @bool/config_hspa_data_distinguishable 'false'
 
     .line 44
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z

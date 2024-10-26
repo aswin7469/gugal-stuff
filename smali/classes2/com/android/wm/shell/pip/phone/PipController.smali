@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/pip/phone/PipController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/pip/PipTransitionController$PipTransitionCallback;
@@ -319,7 +319,7 @@
     move-result-object v1
 
     .line 129
-    const v2, 0x7f0c0031    # @integer/config_pipEnterAnimationDuration '425'
+    const v2, 0x7f0b0036    # @integer/config_pipEnterAnimationDuration '425'
 
     .line 130
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -481,7 +481,7 @@
     move-result-object v0
 
     .line 36
-    const v1, 0x7f07087c    # @dimen/pip_bottom_offset_buffer '1.0dp'
+    const v1, 0x7f0708cc    # @dimen/pip_bottom_offset_buffer '1.0dp'
 
     .line 37
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -493,7 +493,7 @@
     iput v1, p1, Lcom/android/wm/shell/pip/phone/PipTouchHandler;->mBottomOffsetBufferPx:I
 
     .line 44
-    const v1, 0x7f070884    # @dimen/pip_ime_offset '48.0dp'
+    const v1, 0x7f0708d4    # @dimen/pip_ime_offset '48.0dp'
 
     .line 46
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -539,7 +539,7 @@
     move-result-object v0
 
     .line 78
-    const v1, 0x7f07089a    # @dimen/pip_stash_offset '32.0dp'
+    const v1, 0x7f0708ea    # @dimen/pip_stash_offset '32.0dp'
 
     .line 79
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -589,7 +589,7 @@
     move-result-object v2
 
     .line 14
-    const v3, 0x7f07087d    # @dimen/pip_corner_radius '16.0dp'
+    const v3, 0x7f0708cd    # @dimen/pip_corner_radius '16.0dp'
 
     .line 15
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -607,7 +607,7 @@
     move-result-object v0
 
     .line 27
-    const v2, 0x7f070899    # @dimen/pip_shadow_radius '5.0dp'
+    const v2, 0x7f0708e9    # @dimen/pip_shadow_radius '5.0dp'
 
     .line 28
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -979,7 +979,7 @@
     move-result-object v0
 
     .line 138
-    const v1, 0x7f0c0031    # @integer/config_pipEnterAnimationDuration '425'
+    const v1, 0x7f0b0036    # @integer/config_pipEnterAnimationDuration '425'
 
     .line 139
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -1509,7 +1509,7 @@
     .locals 10
 
     .line 1
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
 
     .line 2
     const/4 v1, 0x0
@@ -1554,7 +1554,7 @@
     const-wide v5, -0x28df3e7eb7afc868L    # -5.037042587108944E111
 
     .line 27
-    invoke-static/range {v4 .. v9}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v4 .. v9}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 32
     :cond_0
@@ -1670,7 +1670,7 @@
     move-result-object v0
 
     .line 11
-    const v1, 0x7f07087d    # @dimen/pip_corner_radius '16.0dp'
+    const v1, 0x7f0708cd    # @dimen/pip_corner_radius '16.0dp'
 
     .line 12
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1688,7 +1688,7 @@
     move-result-object p0
 
     .line 24
-    const v1, 0x7f070899    # @dimen/pip_shadow_radius '5.0dp'
+    const v1, 0x7f0708e9    # @dimen/pip_shadow_radius '5.0dp'
 
     .line 25
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1873,7 +1873,7 @@
     if-eqz p2, :cond_4
 
     .line 105
-    sget-object v8, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
+    sget-object v8, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:[Z
 
     .line 107
     aget-boolean v8, v8, v9
@@ -1927,7 +1927,7 @@
     const/16 v15, 0x7c
 
     .line 143
-    invoke-static/range {v12 .. v17}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v12 .. v17}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 145
     goto/16 :goto_4

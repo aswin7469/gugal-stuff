@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">placera vald widget</string>
   <string name="accessibility_action_label_remove_widget">ta bort widget</string>
   <string name="accessibility_action_label_select_widget">välj widget</string>
-  <string name="accessibility_action_open_communal_hub">Widgetar på låsskärmen</string>
   <string name="accessibility_action_pip_resize">Ändra storlek</string>
   <string name="accessibility_action_pip_stash">Utför stash</string>
   <string name="accessibility_action_pip_unstash">Återställ stash</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Avsluta enhandsläge</string>
   <string name="accessibility_airplane_mode">Flygplansläge</string>
   <string name="accessibility_allow_diagonal_scrolling">Tillåt diagonal scrollning</string>
+  <string name="accessibility_assistant_poodle">Röstsökning</string>
   <string name="accessibility_authenticate_hint">autentisera</string>
   <string name="accessibility_back">Tillbaka</string>
   <string name="accessibility_banner_message_dismiss">Ignorera</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">ange enhet</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Ethernet har kopplats från.</string>
-  <string name="accessibility_fingerprint_bouncer">Autentisering krävs. Identifiera dig genom att trycka på fingeravtryckssensorn.</string>
   <string name="accessibility_fingerprint_label">Fingeravtryckssensor</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">aktivera och inaktivera</string>
   <string name="accessibility_floating_button_action_edit">Redigera</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Meny</string>
   <string name="accessibility_multi_user_list_switcher">rullgardinsmeny</string>
   <string name="accessibility_multi_user_switch_switcher">Byt användare</string>
+  <string name="accessibility_next_alarm">Nästa alarm är kl. %s</string>
   <string name="accessibility_no_calling">Inga anrop.</string>
   <string name="accessibility_no_phone">Ingen telefon.</string>
   <string name="accessibility_no_wifi">Ingen wifi-anslutning.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Bildskärmens riktning är nu låst i stående format.</string>
   <string name="accessibility_send_smart_reply">Skicka</string>
   <string name="accessibility_sensors_off_active">Sensorer har inaktiverats</string>
+  <string name="accessibility_settings_gear">Inställningar för Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Tryck på fingeravtryckssensorn. Det är den mindre knappen på sidan av telefonen</string>
+  <string name="accessibility_smartspace_page">Sida %1$d av %2$d</string>
   <string name="accessibility_split_bottom">Nedtill på delad skärm</string>
   <string name="accessibility_split_left">Till vänster på delad skärm</string>
   <string name="accessibility_split_right">Till höger på delad skärm</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Wifi: tre staplar.</string>
   <string name="accessibility_wifi_two_bars">Wifi: två staplar.</string>
   <string name="accesssibility_keyguard_retry">Svep uppåt för att försöka använda ansiktslåset igen</string>
+  <string name="adaptive_charging_notify_des">Batteriet är fulladdat kl. %1$s. Laddas kontinuerligt för att förlänga batteriets livslängd.</string>
+  <string name="adaptive_charging_notify_title">Smart laddning har aktiverats</string>
+  <string name="adaptive_charging_notify_turn_off_once">Stäng av en gång</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Smart laddning • Fulladdat kl. %2$s</string>
   <string name="add">Lägg till</string>
   <string name="add_guest_failed">Det gick inte att skapa en ny gäst</string>
   <string name="airplane_mode">Flygplansläge</string>
   <string name="alarm_template">kl. %1$s</string>
-  <string name="alarm_template_far">kl. %1$s</string>
+  <string name="alarm_template_far">på %1$s</string>
   <string name="all_network_unavailable">Det finns inga tillgängliga nätverk</string>
   <string name="always_use_accessory">Öppna alltid %1$s när %2$s är ansluten</string>
   <string name="always_use_device">Öppna alltid %1$s när %2$s är ansluten</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Appinformation</string>
   <string name="app_label">Gränssnitt</string>
   <string name="assistant_attention_content_description">Användarnärvaro har upptäckts</string>
+  <string name="assistant_scrim_label">Lyssnar, tryck för att avbryta</string>
   <string name="audio_sharing_description">Delar ljud</string>
   <string name="audio_status">Lyssnar</string>
   <string name="auto_data_switch_dialog_negative_button">Nej tack</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Tillbaka</string>
   <string name="battery">Batteri</string>
   <string name="battery_detail_switch_title">Batterisparläge</string>
-  <string name="battery_low_description">%s av batteriet återstår. I batterisparläget aktiveras Mörkt tema, bakgrundsaktivitet begränsas och aviseringar skjuts upp.</string>
+  <string name="battery_health_notify_learn_more">Läs mer</string>
   <string name="battery_low_intro">I batterisparläget aktiveras Mörkt tema, bakgrundsaktivitet begränsas och aviseringar skjuts upp.</string>
-  <string name="battery_low_title">Vill du aktivera batterisparläget?</string>
   <string name="battery_saver_confirmation_ok">Aktivera</string>
   <string name="battery_saver_confirmation_title">Vill du aktivera batterisparläget?</string>
   <string name="battery_saver_confirmation_title_generic">Om batterisparläget</string>
-  <string name="battery_saver_dismiss_action">Nej tack</string>
   <string name="battery_saver_start_action">Aktivera</string>
   <string name="battery_state_unknown_notification_text">Tryck för mer information</string>
   <string name="battery_state_unknown_notification_title">Batteriindikatorn visas inte</string>
@@ -296,14 +301,9 @@ Försök igen om %d sekunder.</string>
   <string name="bluetooth_active_battery_level_untethered">Aktiv. V: %1$s, H: %2$s batteri.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Aktiv. V: %1$s batteri.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Aktiv. H: %1$s batteri.</string>
-  <string name="bluetooth_active_media_only_battery_level">Aktiv (endast media). %1$s batteri.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Aktiv (endast media). V: %1$s, H: %2$s batteri.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Aktiv (endast media)</string>
   <string name="bluetooth_active_no_battery_level">Aktiv</string>
   <string name="bluetooth_battery_level">%1$s batteri</string>
-  <string name="bluetooth_battery_level_lea_support">Ansluten (ljuddelning stöds). %1$s batteri.</string>
   <string name="bluetooth_battery_level_untethered">V: %1$s, H: %2$s batteri.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Ansluten (ljuddelning stöds). V: %1$s, H: %2$s batteri.</string>
   <string name="bluetooth_connected">Ansluten%1$s</string>
   <string name="bluetooth_connecting">Ansluter…</string>
   <string name="bluetooth_disconnected">Kopplas ifrån</string>
@@ -311,13 +311,11 @@ Försök igen om %d sekunder.</string>
   <string name="bluetooth_hearing_aid_left_active">Aktiv (endast vänster)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Aktiv (vänster och höger)</string>
   <string name="bluetooth_hearing_aid_right_active">Aktiv (endast höger)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Ansluten (ljuddelning stöds)</string>
   <string name="bluetooth_pairing">Parkopplar…</string>
   <string name="bluetooth_pairing_device_down_error_message">Det går inte att kommunicera med %1$s.</string>
   <string name="bluetooth_pairing_error_message">Det gick inte att koppla till %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Parkoppling med %1$s misslyckades på grund av fel PIN-kod eller nyckel.</string>
   <string name="bluetooth_pairing_rejected_error_message">Parkoppling avvisad av %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">Ljuddelning stöds</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Dator</string>
   <string name="bluetooth_talkback_headphone">Hörlur</string>
@@ -356,8 +354,6 @@ Försök igen om %d sekunder.</string>
   <string name="bubble_overflow_button_content_description">Fler menyalternativ</string>
   <string name="bubble_overflow_empty_subtitle">De senaste bubblorna och ignorerade bubblor visas här</string>
   <string name="bubble_overflow_empty_title">Inga nya bubblor</string>
-  <string name="bubble_shortcut_label">Bubblor</string>
-  <string name="bubble_shortcut_long_label">Visa bubblor</string>
   <string name="bubbles_app_settings">Inställningar för %1$s</string>
   <string name="bubbles_dont_bubble_conversation">Visa inte konversationen i bubblor</string>
   <string name="bubbles_settings_button_description">Inställningar för %1$s-bubblor</string>
@@ -387,6 +383,10 @@ Tryck för att anpassa på nytt</string>
   <string name="cast_to_other_device_stop_dialog_button">Sluta casta</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Du slutar att casta &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">Mobildata har inaktiverats</string>
+  <string name="charge_limit_discovery_notification_enable_button">Aktivera nu</string>
+  <string name="charge_limit_discovery_notification_text">Testa att aktivera begränsningsfunktionen på 80 % för att skydda batterihälsan och batteriets livslängd. Du kan hantera detta i inställningarna.</string>
+  <string name="charge_limit_discovery_notification_title">Skydda batteriet under laddning</string>
+  <string name="charging_reverse_text">Delar batteri</string>
   <string name="clear_all_notifications_text">Rensa alla</string>
   <string name="clipboard">Urklipp</string>
   <string name="clipboard_content_copied">Innehållet har kopierats</string>
@@ -406,6 +406,11 @@ Tryck för att anpassa på nytt</string>
   <string name="close_button_text">Stäng</string>
   <string name="close_dialog_button">Stäng</string>
   <string name="collapse_menu_text">Stäng menyn</string>
+  <string name="columbus_bouncer_message">Lås upp för att slutföra snabbtryck</string>
+  <string name="columbus_target_request_dialog_allow">Tillåt</string>
+  <string name="columbus_target_request_dialog_deny">Tillåt inte</string>
+  <string name="columbus_target_request_dialog_summary">Öppna %1$s genom att trycka snabbt två gånger på baksidan av telefonen. Du kan när som helst ändra detta i inställningarna.</string>
+  <string name="columbus_target_request_dialog_title">Vill du tillåta att %1$s öppnas med snabbtryck?</string>
   <string name="communal_tutorial_indicator_text">Svep åt vänster för att börja med gruppguiden</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Den inre skärmen speglas. Den främre skärmen stängs av.</string>
   <string name="connected_display_dialog_start_mirroring">Vill du spegla till extern skärm?</string>
@@ -511,8 +516,11 @@ Om du fortsätter kan avgifter för dataanvändning tillkomma.</string>
   <string name="data_usage_disabled_dialog_mobile_title">Mobildata har pausats</string>
   <string name="data_usage_disabled_dialog_title">Dataanvändningen har pausats</string>
   <string name="days_timestamp">%1$s dagar sedan</string>
-  <string name="default_error_message">Ogiltiga indata</string>
   <string name="default_popup_window_title">Popup-fönster</string>
+  <string name="defender_notify_resume_charge">Åsidosätt</string>
+  <string name="defender_notify_title">Skydda ditt batteri</string>
+  <string name="defender_post_notify_des">Laddningen optimerades från %1$s till %2$s så att batteriet räcker längre</string>
+  <string name="defender_post_notify_title">Laddningen har optimerats</string>
   <string name="demo_mode">Demoläge för systemgränssnitt</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Maximera skärmen</string>
   <string name="desktop_mode_maximize_menu_snap_text">Fäst skärmen</string>
@@ -532,20 +540,32 @@ Om du fortsätter kan avgifter för dataanvändning tillkomma.</string>
   <string name="do_disclosure_generic">Den här enheten tillhör organisationen</string>
   <string name="do_disclosure_with_name">Den här enheten tillhör %s</string>
   <string name="do_financed_disclosure_with_name">Enheten tillhandahålls av %s</string>
+  <string name="dock_a11y_action_show_photo_text">Visa fotoram</string>
+  <string name="dock_alignment_not_charging">Räta upp telefonen för att ladda trådlöst</string>
+  <string name="dock_alignment_slow_charging">Räta upp telefonen för att ladda snabbare</string>
+  <string name="dock_defender_first_run_des">För att förlänga batteriets livslängd har laddningen pausats vid 90 % medan surfplattan är dockad. Öppna inställningarna när som helst för att åsidosätta detta.</string>
+  <string name="dock_defender_first_run_settings">Inställningar</string>
+  <string name="dock_defender_first_run_title">Laddningen har pausats för att skydda batteriet</string>
   <string name="dock_multi_instances_not_supported_text">Denna app kan bara vara öppen i ett fönster</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Appen har inte stöd för delad skärm</string>
+  <string name="dock_photo_preview_text">Fotoram startas …</string>
+  <string name="dock_promo_text">Svep åt vänster för fotoram</string>
   <string name="done">Klar</string>
   <string name="drag_split_not_supported">Det går inte att dra den här aviseringen till delad skärm</string>
   <string name="drag_to_add_tiles">Lägg till rutor genom att trycka och dra</string>
   <string name="drag_to_rearrange_tiles">Ordna om rutor genom att trycka och dra</string>
   <string name="drag_to_remove_disabled">Minst %1$d rutor måste finnas kvar</string>
   <string name="drag_to_remove_tiles">Ta bort genom att dra här</string>
+  <string name="dream_lockscreen_wallpaper_description">Använd nuvarande bakgrund för låsskärmen</string>
+  <string name="dream_lockscreen_wallpaper_label">Bakgrund</string>
   <string name="dream_overlay_status_bar_alarm_set">Alarmet är aktiverat</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Kameran och mikrofonen är avstängda</string>
   <string name="dream_overlay_status_bar_camera_off">Kameran är av</string>
   <string name="dream_overlay_status_bar_mic_off">Mikrofonen är av</string>
   <string name="dream_overlay_status_bar_priority_mode">Prioritetsläge</string>
   <string name="dream_overlay_status_bar_wifi_off">Wifi är inte tillgängligt</string>
+  <string name="dwell_defender_notify_des">Detta hjälper till att förlänga batteriets livslängd när telefonen laddas för länge</string>
+  <string name="dwell_defender_notify_title">Laddningen har pausats för att skydda batteriet</string>
   <string name="edit_user_info_message">Namnet och bilden du väljer visas för alla som använder den här enheten.</string>
   <string name="edit_widget">Redigera widget</string>
   <string name="empty_shade_text">Inga aviseringar</string>
@@ -561,12 +581,16 @@ Om du fortsätter kan avgifter för dataanvändning tillkomma.</string>
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Avancerat</string>
   <string name="expand_menu_text">Öppna menyn</string>
+  <string name="extreme_battery_saver_text">Effektivare läget</string>
+  <string name="extreme_low_battery_notification_text">Telefonen stängs av om den inte laddas snart</string>
+  <string name="extreme_low_battery_notification_title">Mycket låg batterinivå</string>
   <string name="face_re_enroll_dialog_content">Din nuvarande ansiktsmodell raderas när du konfigurerar ansiktslås igen.
 
 Du måste konfigurera den här funktionen igen för att kunna låsa upp telefonen med ditt ansikte.</string>
   <string name="face_re_enroll_dialog_title">Konfigurera ansiktslås</string>
   <string name="face_re_enroll_notification_name">Ansiktslås</string>
   <string name="face_re_enroll_notification_title">Konfigurera ansiktslås på nytt</string>
+  <string name="face_reenroll_dialog_confirm">Konfigurera</string>
   <string name="face_reenroll_failure_dialog_content">Det gick inte att konfigurera ansiktslåset. Öppna inställningarna och försök igen.</string>
   <string name="failed_attempts_now_wiping_device">För många felaktiga försök. Enhetens data raderas.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Stäng</string>
@@ -604,6 +628,7 @@ När de har raderats måste du konfigurera fingeravtryckslås igen för att kunn
   <string name="font_scaling_smaller">Förminska</string>
   <string name="fullscreen_text">Helskärm</string>
   <string name="game_status">Spelar</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Håll olåst har inaktiverats</string>
   <string name="go_to_web">Öppna webbläsaren</string>
   <string name="got_it">OK</string>
@@ -640,6 +665,7 @@ När de har raderats måste du konfigurera fingeravtryckslås igen för att kunn
   <string name="guest_reset_and_restart_dialog_title">Vill du återställa gästsessionen?</string>
   <string name="guest_reset_guest_confirm_button">Återställ</string>
   <string name="guest_resetting">Gästsessionen återställs …</string>
+  <string name="handle_invocation_prompt">Svep och prata</string>
   <string name="handle_text">Handtag</string>
   <string name="headset">Headset</string>
   <string name="hearing_devices_preset_label">Förinställning</string>
@@ -656,6 +682,7 @@ Tryck för mer information</string>
   <string name="high_temp_title">Telefonen börjar bli varm</string>
   <string name="home_controls_dream_description">Kom snabbt åt hemstyrningen via skärmsläckaren</string>
   <string name="home_controls_dream_label">Hemstyrning</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Minst en enhet eller enhetspanel är tillgänglig</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Se till att Home-appen är installerad om du vill lägga till den som genväg</string>
   <string name="hub_mode_add_widget_button_text">Lägg till widget</string>
@@ -669,12 +696,16 @@ Tryck för mer information</string>
   <string name="in_progress">Pågår</string>
   <string name="inattentive_sleep_warning_message">Enheten stängs snart av. Tryck för att behålla den på.</string>
   <string name="inattentive_sleep_warning_title">Viloläge</string>
+  <string name="incompatible_charging_learn_more">Läs mer</string>
+  <string name="incompatible_charging_notify_des">Telefonen kanske laddas långsamt eller inte laddas alls. Använd en rekommenderad kabel och nätadapter för snabbare laddning.</string>
+  <string name="incompatible_charging_notify_title">Kontrollera laddningstillbehöret</string>
   <string name="indeterminate">Delvis markerad</string>
   <string name="inline_done_button">Klart</string>
   <string name="inline_ok_button">Tillämpa</string>
   <string name="inline_turn_off_notifications">Inaktivera aviseringar</string>
   <string name="input_switch_input_language_next">Byt till nästa språk</string>
   <string name="input_switch_input_language_previous">Byt till föregående språk</string>
+  <string name="install_app">Installera appen</string>
   <string name="install_dialer_on_work_profile_action">Installera en jobbapp</string>
   <string name="install_type_instant">Snabbapp</string>
   <string name="instant_apps">Snabbappar</string>
@@ -683,8 +714,6 @@ Tryck för mer information</string>
   <string name="instant_apps_title">%1$s körs</string>
   <string name="interruption_level_none">Helt tyst</string>
   <string name="interruption_level_priority">Bara prioriterade</string>
-  <string name="invalid_charger_text">Använd laddaren som följde med enheten.</string>
-  <string name="invalid_charger_title">Det går inte att ladda via USB</string>
   <string name="issuerecord_background_processing_label">Behandlar probleminspelning</string>
   <string name="issuerecord_ongoing_screen_only">Spelar in problem</string>
   <string name="issuerecord_save_title">Probleminspelning har sparats</string>
@@ -766,21 +795,33 @@ Tryck för mer information</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Enheten har låsts
 Autentiseringen misslyckades</string>
   <string name="keyguard_indication_charging_time">%2$s • Laddas • Fulladdat om %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Har laddats klart kl. %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Laddas • Fulladdat om %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Fulladdat kl. %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Laddas snabbt • Fulladdat om %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Snabbladdning • Fulladdat kl. %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • har laddats</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Laddas långsamt • Fulladdat om %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Fulladdat kl. %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Fulladdat kl. %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Laddas trådlöst • Fulladdat om %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Hålls olåst med TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Fulladdat kl. %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Hålls upplåst med Håll olåst</string>
   <string name="keyguard_missing_sim_message_short">Inget SIM-kort</string>
   <string name="keyguard_network_locked_message">Nätverk låst</string>
   <string name="keyguard_permanent_disabled_sim_message_short">SIM-kortet går inte att använda.</string>
   <string name="keyguard_plugged_in">%s • Laddas</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Laddas snabbt</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Snabbladdning</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Laddningen har pausats för att skydda batteriet</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Laddas långsamt</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Laddas</string>
   <string name="keyguard_plugged_in_dock">%s • Laddas</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Laddas</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Kontrollera laddningstillbehöret</string>
+  <string name="keyguard_plugged_in_v2">%s • Laddas</string>
   <string name="keyguard_plugged_in_wireless">%s • Laddas trådlöst</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Laddas</string>
   <string name="keyguard_retry">Svep uppåt om du vill försöka igen</string>
   <string name="keyguard_sim_error_message_short">Ogiltigt kort.</string>
   <string name="keyguard_sim_locked_message">SIM-kortet är låst.</string>
@@ -811,7 +852,6 @@ Autentiseringen misslyckades</string>
   <string name="kg_invalid_confirm_pin_hint">Pinkoderna stämmer inte överens</string>
   <string name="kg_invalid_sim_pin_hint">Ange en pinkod med fyra till åtta siffror.</string>
   <string name="kg_invalid_sim_puk_hint">PUK-koden ska vara minst åtta siffror.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Ange pinkod för SIM-kortet. # försök återstår innan du måste kontakta operatören för att låsa upp enheten.}other{Ange pinkod för SIM-kortet. # försök återstår.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM-kortet är inaktiverat. Ange PUK-koden om du vill fortsätta. # försök återstår innan SIM-kortet blir obrukbart. Kontakta operatören för mer information.}other{SIM-kortet är inaktiverat. Ange PUK-koden om du vill fortsätta. # försök återstår innan SIM-kortet blir obrukbart. Kontakta operatören för mer information.}}</string>
   <string name="kg_password_pin_failed">Det gick inte att låsa upp med pinkoden för SIM-kortet.</string>
   <string name="kg_password_puk_failed">Det gick inte att låsa upp med PUK-koden för SIM-kortet.</string>
@@ -852,7 +892,7 @@ Autentiseringen misslyckades</string>
   <string name="kg_sim_pin_instructions_multi">Ange pinkod för SIM-kortet för %1$s.</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM-kortet låses upp …</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Försök igen om # sekund.}other{Försök igen om # sekunder.}}</string>
-  <string name="kg_trust_agent_disabled">Betrodd agent är inte tillgänglig</string>
+  <string name="kg_trust_agent_disabled">Håll olåst är inte tillgängligt</string>
   <string name="kg_unlock_with_password_or_fp">Lås upp med lösenord eller fingeravtryck</string>
   <string name="kg_unlock_with_pattern_or_fp">Lås upp med mönster eller fingeravtryck</string>
   <string name="kg_unlock_with_pin_or_fp">Lås upp med pinkod eller fingeravtryck</string>
@@ -900,6 +940,10 @@ En app har åtkomst till sina egna loggar även om du inte ger den åtkomst till
   <string name="log_access_confirmation_learn_more">Läs mer</string>
   <string name="log_access_confirmation_learn_more_at">Läs mer på %s</string>
   <string name="log_access_confirmation_title">Vill du tillåta att %s får åtkomst till alla enhetsloggar?</string>
+  <string name="low_battery_label">Låg batterinivå</string>
+  <string name="low_battery_notification_text">Aktivera vanligt batterisparläge för att förlänga batteritiden</string>
+  <string name="low_battery_notification_text_ebs">Aktivera effektivare batterisparläge för att förlänga batteritiden</string>
+  <string name="low_battery_notification_title">%s av batteriet återstår</string>
   <string name="m3c_search_bar_search">Sök</string>
   <string name="m3c_suggestions_available">Se förslag nedan</string>
   <string name="magnification_close_settings_click_label">Stäng inställningarna för förstoring</string>
@@ -939,8 +983,6 @@ En app har åtkomst till sina egna loggar även om du inte ger den åtkomst till
   <string name="media_output_dialog_volume_percentage">%1$d %%</string>
   <string name="media_output_end_session_dialog_stop">Stoppa</string>
   <string name="media_output_end_session_dialog_summary">Stoppa din delade session för att flytta media till en annan enhet</string>
-  <string name="media_output_first_broadcast_title">Så fungerar utsändning</string>
-  <string name="media_output_first_notify_broadcast_message">Personer i närheten med kompatibla Bluetooth-enheter kan lyssna på medieinnehåll som du sänder ut</string>
   <string name="media_output_group_title_speakers_and_displays">Högtalare och skärmar</string>
   <string name="media_output_group_title_suggested_device">Förslag på enheter</string>
   <string name="media_output_label_title">Spelar upp %s på</string>
@@ -967,9 +1009,6 @@ En app har åtkomst till sina egna loggar även om du inte ger den åtkomst till
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">När du castar en app har Android åtkomst till allt som visas eller spelas upp i appen. Var försiktig med sådant som lösenord, betalningsuppgifter, meddelanden, foton och ljud och video.</string>
   <string name="media_projection_sys_service_dialog_title">Vill du börja spela in eller casta?</string>
   <string name="media_projection_sys_service_dialog_warning">Den tjänst som tillhandahåller funktionen får åtkomst till all information som visas på skärmen eller spelas upp från enheten när du spelar in eller castar. Detta omfattar till exempel lösenord, betalningsuppgifter, foton, meddelanden och ljud som du spelar upp.</string>
-  <string name="media_projection_task_switcher_action_back">Byt tillbaka</string>
-  <string name="media_projection_task_switcher_action_switch">Dela den här appen i stället</string>
-  <string name="media_projection_task_switcher_text">Delningen pausas när du byter appar</string>
   <string name="media_seamless_other_device">Annan enhet</string>
   <string name="media_transfer_default_device_name">Ansluten enhet</string>
   <string name="media_transfer_dock_speaker_device_name">Dockningsstationens högtalare</string>
@@ -1280,12 +1319,17 @@ Kontakta %2$s om du har frågor.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Vänd telefonen för högre upplösning</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Vill du byta skärm?</string>
   <string name="recent_conversations">Senaste konversationerna</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">har skickat en bild</string>
   <string name="remove_from_settings">Ta bort från inställningarna</string>
   <string name="remove_from_settings_prompt">Vill du ta bort inställningar för systemgränssnitt från inställningarna och sluta använda alla tillhörande funktioner?</string>
   <string name="require_unlock_for_nfc">Lås upp om du vill använda NFC</string>
   <string name="restart_button_description">Tryck för att starta om appen och få en bättre vy</string>
   <string name="retry_face">Försök med ansiktsautentisering igen</string>
+  <string name="reverse_charging_device_name_text">En annan Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s används för att ladda (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Batteridelning är på</string>
+  <string name="reverse_charging_title">Batteridelning</string>
   <string name="right_icon">Höger ikon</string>
   <string name="right_keycode">Höger tangentkod</string>
   <string name="right_nav_bar_button_type">Knapptyp för extra höger</string>
@@ -1293,8 +1337,15 @@ Kontakta %2$s om du har frågor.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">Tryck för information om batteri- och dataanvändning</string>
   <string name="running_foreground_services_title">Appar körs i bakgrunden</string>
-  <string name="satellite_connected_carrier_text">SOS-larm via satellit</string>
+  <string name="satellite_connected_carrier_text">SOS-larm via satellit på Pixel</string>
   <string name="save">Spara</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Avbryt</string>
+  <string name="saver_confirmation_dialog_subtitle">Välj vilket läge du vill använda</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Omfattar alla ändringar som anges ovan. Appar som inte är viktiga och deras aviseringar pausas också.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Begränsar visuella effekter och aktivitet i bakgrunden. Mörkt tema aktiveras om det inte redan är på.</string>
+  <string name="saver_confirmation_dialog_title">Välkommen till Batterisparläge</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Effektivare batterisparläge</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Standardbatterisparläge</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Skärminspelning är inaktiverat av enhetspolicyn</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Blockeras av IT-administratören</string>
   <string name="screen_pinning_can_open_other_apps">Den fästa appen kan öppna andra appar.</string>
@@ -1312,6 +1363,12 @@ Kontakta %2$s om du har frågor.</string>
   <string name="screen_pinning_toast">Om du vill lossa appen trycker du länge på knapparna Tillbaka och Översikt</string>
   <string name="screen_pinning_toast_gesture_nav">Svep uppåt och håll kvar fingret om du vill lossa appen</string>
   <string name="screen_pinning_toast_recents_invisible">Om du vill lossa appen trycker du länge på knapparna Tillbaka och Startsida</string>
+  <string name="screen_protector_absent_message">Inaktivera skärmskyddsläget för bättre tryckrespons när inget skärmskydd används.</string>
+  <string name="screen_protector_disable_notification">Inaktivera avisering</string>
+  <string name="screen_protector_go_to_settings">Öppna inställningar</string>
+  <string name="screen_protector_got_it">OK</string>
+  <string name="screen_protector_mode_title">Skärmskyddsläge</string>
+  <string name="screen_protector_present_message">Aktivera skärmskyddsläget för bättre tryckrespons när skärmskydd används.</string>
   <string name="screen_share_permission_app_selector_title">Dela eller spela in en app</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Hela skärmen</string>
   <string name="screen_share_permission_dialog_option_single_app">En enda app</string>
@@ -1364,9 +1421,9 @@ Kontakta %2$s om du har frågor.</string>
   <string name="screenshot_saving_work_profile_title">Sparar skärmbild i jobbprofilen …</string>
   <string name="screenshot_scroll_label">Fånga mer</string>
   <string name="screenshot_share_description">Dela skärmbild</string>
-  <string name="screenshot_share_label">Dela</string>
   <string name="screenshot_text">Skärmbild</string>
   <string name="screenshot_top_boundary_pct">Övre gräns: %1$d procent</string>
+  <string name="screenshot_view_description">Visa skärmbild</string>
   <string name="screenshot_work_profile_notification">Sparad i %1$s i jobbprofilen</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Fingeravtryckssensorn sitter på av/på-knappen. Det är den platta knappen bredvid den upphöjda volymknappen på telefonens kant.</string>
   <string name="see_all_bluetooth_devices">Se alla</string>
@@ -1384,6 +1441,12 @@ Kontakta %2$s om du har frågor.</string>
   <string name="set_default_notes_app_toast_content">Ställ in en standardapp för anteckningar i inställningarna</string>
   <string name="settings_label">Inställningar</string>
   <string name="settingslib_learn_more_text">Läs mer</string>
+  <string name="severe_battery_notification_switch_text">Vill du byta till effektivare batterisparläge? 
+
+Detta pausar alla appar som inte är viktiga och deras aviseringar</string>
+  <string name="severe_battery_notification_text">Aktivera det effektivare batterisparläget. Detta pausar alla appar som inte är viktiga</string>
+  <string name="severe_battery_notification_title">%s av batteriet återstår</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Byt</string>
   <string name="share_to_app_stop_dialog_button">Sluta dela</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Du slutar att dela &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Vill du sluta dela skärmen?</string>
@@ -1406,6 +1469,9 @@ Kontakta %2$s om du har frågor.</string>
   <string name="slice_permission_text_1">– Kan läsa information från %1$s</string>
   <string name="slice_permission_text_2">– Kan vidta åtgärder i %1$s</string>
   <string name="slice_permission_title">Tillåter du att bitar av %2$s visas i %1$s?</string>
+  <string name="smartspace_content_desc">Snabböversikt</string>
+  <string name="smartspace_flight_qr_code">QR-kod</string>
+  <string name="smartspace_role_desc">Vy</string>
   <string name="snoozeHourOptions">{count,plural, =1{# timme}=2{# timmar}other{# timmar}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minut}other{# minuter}}</string>
   <string name="snooze_undo">Ångra</string>
@@ -1416,6 +1482,8 @@ Kontakta %2$s om du har frågor.</string>
   <string name="speed_label_slow">Långsam</string>
   <string name="speed_label_very_fast">Mycket snabb</string>
   <string name="split_screen_text">Delad skärm</string>
+  <string name="squeeze_invocation_prompt">Kläm och prata</string>
+  <string name="standard_battery_saver_text">Standard</string>
   <string name="start_dreams">Skärmsläckare</string>
   <string name="state_empty">Tom</string>
   <string name="state_off">Av</string>
@@ -1453,6 +1521,8 @@ Kontakta %2$s om du har frågor.</string>
   <string name="tab">Flik</string>
   <string name="tap_a_network_to_connect">Tryck på ett nätverk för att ansluta</string>
   <string name="tap_again">Tryck igen</string>
+  <string name="temp_defender_notify_des">Laddningen återupptas när telefonens temperatur återgår till det normala</string>
+  <string name="temp_defender_notify_title">Laddningen har pausats för att skydda batteriet</string>
   <string name="template_percent">%1$d procent.</string>
   <string name="thermal">Termisk</string>
   <string name="thermal_shutdown_dialog_help_text">Visa alla skötselråd</string>
@@ -1469,6 +1539,7 @@ Tryck för mer information</string>
   <string name="title_for_empty_state_cta">Få snabbåtkomst till appwidgetar utan att låsa upp surfplattan.</string>
   <string name="title_usb_accessory">USB-tillbehör</string>
   <string name="to_switch_networks_disconnect_ethernet">Koppla bort Ethernet för att växla nätverk</string>
+  <string name="too_hot_label">Pixel är för varm</string>
   <string name="touch_filtered_warning">Svaret kan inte verifieras av Inställningar eftersom en app skymmer en begäran om behörighet.</string>
   <string name="touchpad_tutorial_action_key_button">Åtgärdstangent</string>
   <string name="touchpad_tutorial_back_gesture_button">Tillbaka-rörelse</string>
@@ -1483,17 +1554,18 @@ Tryck för mer information</string>
   <string name="tuner_menu">Meny</string>
   <string name="tuner_minus">Minus</string>
   <string name="tuner_other_apps">Andra appar</string>
+  <string name="tuner_persistent_warning">Dessa experimentfunktioner kan när som helst ändras, sluta fungera eller försvinna. Använd med försiktighet.</string>
   <string name="tuner_plus">Plus</string>
   <string name="tuner_right">Höger</string>
   <string name="tuner_time">Tid</string>
+  <string name="tuner_warning">Du kan använda inställningarna för systemgränssnitt för att justera användargränssnittet i Android. Dessa experimentfunktioner kan när som helst ändras, sluta fungera eller försvinna. Använd med försiktighet.</string>
+  <string name="tuner_warning_title">Kul för vissa, inte för alla</string>
   <string name="turn_off_airplane_mode">Inaktivera flygplansläge</string>
   <string name="turn_on_bluetooth">Använd Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Funktioner som Snabbdelning och Hitta min enhet använder Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth aktiveras i morgon bitti</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Aktivera automatiskt i morgon</string>
   <string name="turn_on_wifi">Wifi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Standardutgång för tv:n</string>
   <string name="two_weeks_timestamp">2 veckor sedan</string>
   <string name="unknown">Okänd</string>
   <string name="unlock_to_see_notif_text">Lås upp för att se äldre aviseringar</string>
@@ -1552,7 +1624,9 @@ Alla användare kan uppdatera appar för samtliga användare.</string>
   <string name="volume_odi_captions_hint_enable">aktivera</string>
   <string name="volume_odi_captions_tip">Texta media automatiskt</string>
   <string name="volume_panel_captioning_title">Live Caption</string>
+  <string name="volume_panel_clear_calling_title">Klart samtalsljud</string>
   <string name="volume_panel_collapsed_sliders">Volymreglagen har komprimerats</string>
+  <string name="volume_panel_device_settings_title">Enhetsinställningar</string>
   <string name="volume_panel_dialog_settings_button">Inställningar</string>
   <string name="volume_panel_enter_media_output_settings">Ange inställningar för utdata</string>
   <string name="volume_panel_expanded_sliders">Volymreglagen har utökats</string>
@@ -1667,6 +1741,9 @@ Wi‑Fi-adress (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Okänt</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Utan datapriser</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Du ansluts inte till wifi automatiskt för närvarande</string>
+  <string name="wireless_charging_label">Laddas trådlöst</string>
+  <string name="wireless_charging_notification_text">Trådlös laddning kan dra mer ström än laddning med kabel. Prova att byta till en laddningskabel för att spara el och tid.</string>
+  <string name="wireless_charging_notification_title">Laddas trådlöst</string>
   <string name="work_challenge_emergency_button_text">Nödsituation</string>
   <string name="work_mode_off_title">Vill du återuppta jobbappar?</string>
   <string name="work_mode_turn_on">Återuppta</string>

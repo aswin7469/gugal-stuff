@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/media/DeviceIconUtil;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -117,25 +117,9 @@
 
     invoke-virtual {p1, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 4
-    invoke-static {}, Lcom/android/settingslib/media/flags/Flags;->enableTvMediaOutputDialog()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
     const/4 p1, 0x0
 
-    :goto_0
+    .line 4
     iput-boolean p1, p0, Lcom/android/settingslib/media/DeviceIconUtil;->mIsTv:Z
 
     .line 5
@@ -156,7 +140,7 @@
 
     move-result-object p1
 
-    const-string v0, "tablet"
+    const-string/jumbo v0, "tablet"
 
     .line 7
     invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -199,10 +183,10 @@
     iget-boolean v0, p0, Lcom/android/settingslib/media/DeviceIconUtil;->mIsTv:Z
 
     .line 2
-    const v1, 0x7f0807e2    # @drawable/ic_headphone 'res/drawable/ic_headphone.xml'
+    const v1, 0x7f080804    # @drawable/ic_headphone 'res/drawable/ic_headphone.xml'
 
     .line 4
-    const v2, 0x7f0807ab    # @drawable/ic_dock_device 'res/drawable/ic_dock_device.xml'
+    const v2, 0x7f0807c5    # @drawable/ic_dock_device 'res/drawable/ic_dock_device.xml'
 
     .line 7
     const/16 v3, 0x1d
@@ -241,7 +225,7 @@
     packed-switch p1, :pswitch_data_0
 
     .line 29
-    const v1, 0x7f080828    # @drawable/ic_media_speaker_device 'res/drawable/ic_media_speaker_device.xml'
+    const v1, 0x7f08084b    # @drawable/ic_media_speaker_device 'res/drawable/ic_media_speaker_device.xml'
 
     .line 32
     goto :goto_1
@@ -255,7 +239,7 @@
 
     .line 37
     :pswitch_1
-    const v1, 0x7f080949    # @drawable/ic_usb 'res/drawable/ic_usb.xml'
+    const v1, 0x7f08097c    # @drawable/ic_usb 'res/drawable/ic_usb.xml'
 
     .line 38
     goto :goto_1
@@ -263,14 +247,14 @@
     .line 41
     :cond_0
     :pswitch_2
-    const v1, 0x7f0807e0    # @drawable/ic_hdmi 'res/drawable/ic_hdmi.xml'
+    const v1, 0x7f080802    # @drawable/ic_hdmi 'res/drawable/ic_hdmi.xml'
 
     .line 42
     goto :goto_1
 
     .line 45
     :cond_1
-    const v1, 0x7f08097e    # @drawable/ic_wired_device 'res/drawable/ic_wired_device.xml'
+    const v1, 0x7f0809b3    # @drawable/ic_wired_device 'res/drawable/ic_wired_device.xml'
 
     .line 46
     goto :goto_1
@@ -278,7 +262,7 @@
     .line 49
     :cond_2
     :pswitch_3
-    const v1, 0x7f080945    # @drawable/ic_tv 'res/drawable/ic_tv.xml'
+    const v1, 0x7f080978    # @drawable/ic_tv 'res/drawable/ic_tv.xml'
 
     .line 50
     goto :goto_1
@@ -291,14 +275,14 @@
     if-eqz p0, :cond_4
 
     .line 56
-    const p0, 0x7f08082b    # @drawable/ic_media_tablet 'res/drawable/ic_media_tablet.xml'
+    const p0, 0x7f08084e    # @drawable/ic_media_tablet 'res/drawable/ic_media_tablet.xml'
 
     .line 58
     goto :goto_0
 
     .line 61
     :cond_4
-    const p0, 0x7f08092b    # @drawable/ic_smartphone 'res/drawable/ic_smartphone.xml'
+    const p0, 0x7f080958    # @drawable/ic_smartphone 'res/drawable/ic_smartphone.xml'
 
     .line 62
     :goto_0
@@ -325,7 +309,7 @@
     .line 77
     :cond_5
     :pswitch_4
-    const v1, 0x7f0807b3    # @drawable/ic_external_display 'res/drawable/ic_external_display.xml'
+    const v1, 0x7f0807cf    # @drawable/ic_external_display 'res/drawable/ic_external_display.xml'
 
     .line 78
     :cond_6

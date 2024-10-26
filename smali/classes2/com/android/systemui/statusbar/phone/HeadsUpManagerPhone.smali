@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 .super Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/OnHeadsUpChangedListener;
@@ -211,7 +211,7 @@
     move-result-object v1
 
     .line 109
-    const v2, 0x7f0c0002    # @integer/ambient_notification_extension_time '10000'
+    const v2, 0x7f0b0002    # @integer/ambient_notification_extension_time '10000'
 
     .line 110
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -265,45 +265,35 @@
     invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
 
     .line 146
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 149
-    move-result v0
-
-    .line 152
-    if-nez v0, :cond_0
-
-    .line 153
     move-object/from16 v0, p15
 
-    .line 155
+    .line 149
     check-cast v0, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;
 
-    .line 157
+    .line 151
     iget-object v0, v0, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;->baseShadeInteractor:Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;
 
-    .line 159
+    .line 153
     invoke-interface {v0}, Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;->isAnyExpanded()Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 161
+    .line 155
     move-result-object v0
 
-    .line 164
+    .line 158
     new-instance v1, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$$ExternalSyntheticLambda1;
 
-    .line 165
+    .line 159
     invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;)V
 
-    .line 167
+    .line 161
     move-object/from16 v2, p14
 
-    .line 170
+    .line 164
     invoke-virtual {v2, v0, v1}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 172
-    :cond_0
+    .line 166
     return-void
-    .line 175
+    .line 169
 .end method
 
 
@@ -349,123 +339,97 @@
     check-cast v0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;
 
     .line 23
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 25
-    move-result v2
-
-    .line 28
-    if-eqz v2, :cond_1
-
-    .line 29
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mTopHeadsUpRow:Lkotlinx/coroutines/flow/StateFlowImpl;
-
-    .line 31
-    invoke-virtual {v2}, Lkotlinx/coroutines/flow/StateFlowImpl;->getValue()Ljava/lang/Object;
-
-    .line 33
-    move-result-object v2
-
-    .line 36
-    check-cast v2, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;
-
-    .line 37
-    goto :goto_0
-
-    .line 39
-    :cond_1
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->getTopHeadsUpEntry()Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;
 
-    .line 40
+    .line 25
     move-result-object v2
 
-    .line 43
+    .line 28
     check-cast v2, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;
 
-    .line 44
-    :goto_0
-    if-eqz v0, :cond_5
+    .line 29
+    if-eqz v0, :cond_4
 
-    .line 46
-    if-ne v0, v2, :cond_5
+    .line 31
+    if-ne v0, v2, :cond_4
 
-    .line 48
+    .line 33
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->getHeadsUpEntry(Ljava/lang/String;)Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;
 
-    .line 50
+    .line 35
     move-result-object p0
 
-    .line 53
-    if-eqz p0, :cond_2
+    .line 38
+    if-eqz p0, :cond_1
 
-    .line 54
+    .line 39
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;->mUserActionMayIndirectlyRemove:Z
 
-    .line 56
-    if-eqz p1, :cond_2
+    .line 41
+    if-eqz p1, :cond_1
 
-    .line 58
-    goto :goto_1
+    .line 43
+    goto :goto_0
 
-    .line 60
-    :cond_2
-    if-eqz p0, :cond_5
-
-    .line 61
-    iget-wide v2, p0, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;->mEarliestRemovalTime:J
-
-    .line 63
-    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;->this$0:Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;
-
-    .line 65
-    iget-object p1, p1, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->mSystemClock:Lcom/android/systemui/util/time/SystemClock;
-
-    .line 67
-    check-cast p1, Lcom/android/systemui/util/time/SystemClockImpl;
-
-    .line 69
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 71
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    .line 74
-    move-result-wide v4
-
-    .line 77
-    cmp-long p1, v2, v4
-
-    .line 78
-    if-gez p1, :cond_3
-
-    .line 80
-    goto :goto_1
-
-    .line 82
-    :cond_3
-    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
-
-    .line 83
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->isRowDismissed()Z
-
-    .line 85
-    move-result p0
-
-    .line 88
+    .line 45
+    :cond_1
     if-eqz p0, :cond_4
 
-    .line 89
-    goto :goto_1
+    .line 46
+    iget-wide v2, p0, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;->mEarliestRemovalTime:J
 
-    .line 91
-    :cond_4
+    .line 48
+    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;->this$0:Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;
+
+    .line 50
+    iget-object p1, p1, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->mSystemClock:Lcom/android/systemui/util/time/SystemClock;
+
+    .line 52
+    check-cast p1, Lcom/android/systemui/util/time/SystemClockImpl;
+
+    .line 54
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 56
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    .line 59
+    move-result-wide v4
+
+    .line 62
+    cmp-long p1, v2, v4
+
+    .line 63
+    if-gez p1, :cond_2
+
+    .line 65
+    goto :goto_0
+
+    .line 67
+    :cond_2
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
+
+    .line 68
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->isRowDismissed()Z
+
+    .line 70
+    move-result p0
+
+    .line 73
+    if-eqz p0, :cond_3
+
+    .line 74
+    goto :goto_0
+
+    .line 76
+    :cond_3
     const/4 v1, 0x0
 
-    .line 92
-    :cond_5
-    :goto_1
+    .line 77
+    :cond_4
+    :goto_0
     return v1
-    .line 93
+    .line 78
 .end method
 
 .method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
@@ -706,57 +670,47 @@
     invoke-super {p0, p1}, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->onEntryRemoved(Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager$HeadsUpEntry;)V
 
     .line 2
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 5
-    move-result v0
-
-    .line 8
-    if-nez v0, :cond_0
-
-    .line 9
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mEntryPool:Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$1;
 
-    .line 11
+    .line 5
     check-cast p1, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;
 
-    .line 13
+    .line 7
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$1;->release(Ljava/lang/Object;)Z
 
-    .line 15
-    :cond_0
+    .line 9
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->updateTopHeadsUpFlow()V
 
-    .line 18
+    .line 12
     new-instance p1, Ljava/util/HashSet;
 
-    .line 21
+    .line 15
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->mHeadsUpEntryMap:Landroid/util/ArrayMap;
 
-    .line 23
+    .line 17
     invoke-virtual {v0}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
-    .line 25
+    .line 19
     move-result-object v0
 
-    .line 28
+    .line 22
     invoke-direct {p1, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 29
+    .line 23
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;->mHeadsUpNotificationRows:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 32
+    .line 26
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 34
+    .line 28
     const/4 v0, 0x0
 
-    .line 37
+    .line 31
     invoke-virtual {p0, v0, p1}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 38
+    .line 32
     return-void
-    .line 41
+    .line 35
 .end method
 
 .method public final setGutsShown(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
@@ -836,6 +790,7 @@
     :cond_4
     :goto_0
     return-void
+    .line 44
 .end method
 
 .method public final setHeadsUpAnimatingAway(Z)V
@@ -1109,7 +1064,7 @@
     move-result v1
 
     .line 13
-    const v2, 0x7f07030b    # @dimen/heads_up_status_bar_padding '8.0dp'
+    const v2, 0x7f070340    # @dimen/heads_up_status_bar_padding '8.0dp'
 
     .line 14
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

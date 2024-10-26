@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/chips/ui/viewmodel/OngoingActivityChipViewModel$Companion$createDialogLaunchOnClickListener$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -45,7 +45,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f0b0594    # @id/ongoing_activity_chip_background
+    const v1, 0x7f0a05b9    # @id/ongoing_activity_chip_background
 
     .line 8
     invoke-virtual {p1, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyboard/shortcut/ui/view/ShortcutHelperActivity;
 .super Landroidx/activity/ComponentActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -32,7 +32,7 @@
     .locals 1
 
     .line 1
-    const v0, 0x7f0b070c    # @id/shortcut_helper_sheet
+    const v0, 0x7f0a0738    # @id/shortcut_helper_sheet
 
     .line 2
     invoke-virtual {p0, v0}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -70,7 +70,7 @@
     invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 10
-    const p1, 0x7f0e0033    # @layout/activity_keyboard_shortcut_helper 'res/layout/activity_keyboard_shortcut_helper.xml'
+    const p1, 0x7f0d0033    # @layout/activity_keyboard_shortcut_helper 'res/layout/activity_keyboard_shortcut_helper.xml'
 
     .line 13
     invoke-virtual {p0, p1}, Landroidx/activity/ComponentActivity;->setContentView(I)V
@@ -82,7 +82,7 @@
     move-result-object p1
 
     .line 22
-    const v0, 0x7f070984    # @dimen/shortcut_helper_screen_width_fraction '1.0'
+    const v0, 0x7f0709db    # @dimen/shortcut_helper_screen_width_fraction '1.0'
 
     .line 23
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getFloat(I)F
@@ -148,7 +148,7 @@
     iput-boolean v1, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->skipCollapsed:Z
 
     .line 62
-    const p1, 0x7f0b070d    # @id/shortcut_helper_sheet_container
+    const p1, 0x7f0a0739    # @id/shortcut_helper_sheet_container
 
     .line 64
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -211,7 +211,7 @@
     invoke-virtual {p1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 112
-    const p1, 0x7f0b070b    # @id/shortcut_helper_compose_container
+    const p1, 0x7f0a0737    # @id/shortcut_helper_compose_container
 
     .line 115
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -269,6 +269,7 @@
 
     .line 157
     return-void
+    .line 160
 .end method
 
 .method public final onDestroy()V

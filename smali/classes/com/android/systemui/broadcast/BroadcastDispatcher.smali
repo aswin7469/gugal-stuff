@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/broadcast/BroadcastDispatcher;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -286,14 +286,14 @@
     .line 38
 .end method
 
-.method public static registerReceiverWithHandler$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;I)V
+.method public static registerReceiverWithHandler$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;II)V
     .locals 7
 
     .line 1
-    and-int/lit8 p5, p5, 0x8
+    and-int/lit8 v0, p6, 0x8
 
     .line 2
-    if-eqz p5, :cond_0
+    if-eqz v0, :cond_0
 
     .line 4
     iget-object p4, p0, Lcom/android/systemui/broadcast/BroadcastDispatcher;->context:Landroid/content/Context;
@@ -309,35 +309,45 @@
     move-object v4, p4
 
     .line 12
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    and-int/lit8 p4, p6, 0x10
 
     .line 13
-    new-instance v3, Landroid/os/HandlerExecutor;
+    if-eqz p4, :cond_1
 
-    .line 16
-    invoke-direct {v3, p3}, Landroid/os/HandlerExecutor;-><init>(Landroid/os/Handler;)V
+    .line 15
+    const/4 p5, 0x2
+
+    .line 17
+    :cond_1
+    move v5, p5
 
     .line 18
-    const/4 v5, 0x2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 21
-    const/4 v6, 0x0
+    .line 19
+    new-instance v3, Landroid/os/HandlerExecutor;
 
     .line 22
-    move-object v0, p0
-
-    .line 23
-    move-object v1, p1
+    invoke-direct {v3, p3}, Landroid/os/HandlerExecutor;-><init>(Landroid/os/Handler;)V
 
     .line 24
+    const/4 v6, 0x0
+
+    .line 27
+    move-object v0, p0
+
+    .line 28
+    move-object v1, p1
+
+    .line 29
     move-object v2, p2
 
-    .line 25
+    .line 30
     invoke-virtual/range {v0 .. v6}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/util/concurrent/Executor;Landroid/os/UserHandle;ILjava/lang/String;)V
 
-    .line 26
+    .line 31
     return-void
-    .line 29
+    .line 34
 .end method
 
 
@@ -730,32 +740,35 @@
 .end method
 
 .method public final registerReceiverWithHandler(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;)V
-    .locals 6
+    .locals 7
 
     .line 1
-    const/16 v5, 0x38
+    const/4 v4, 0x0
 
     .line 2
-    const/4 v4, 0x0
+    const/4 v5, 0x0
+
+    .line 3
+    const/16 v6, 0x38
 
     .line 4
     move-object v0, p0
 
-    .line 5
+    .line 6
     move-object v1, p1
 
-    .line 6
+    .line 7
     move-object v2, p2
 
-    .line 7
+    .line 8
     move-object v3, p3
 
-    .line 8
-    invoke-static/range {v0 .. v5}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;I)V
-
     .line 9
+    invoke-static/range {v0 .. v6}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiverWithHandler$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/Handler;Landroid/os/UserHandle;II)V
+
+    .line 10
     return-void
-    .line 12
+    .line 13
 .end method
 
 .method public final unregisterReceiver(Landroid/content/BroadcastReceiver;)V
@@ -768,22 +781,22 @@
     iget-object v1, v0, Lcom/android/systemui/broadcast/PendingRemovalStore;->logger:Lcom/android/systemui/broadcast/logging/BroadcastDispatcherLogger;
 
     .line 4
-    invoke-virtual {v1, p1}, Lcom/android/systemui/broadcast/logging/BroadcastDispatcherLogger;->logTagForRemoval(Landroid/content/BroadcastReceiver;)V
+    const/4 v2, -0x1
 
     .line 6
+    invoke-virtual {v1, v2, p1}, Lcom/android/systemui/broadcast/logging/BroadcastDispatcherLogger;->logTagForRemoval(ILandroid/content/BroadcastReceiver;)V
+
+    .line 7
     iget-object v1, v0, Lcom/android/systemui/broadcast/PendingRemovalStore;->pendingRemoval:Landroid/util/SparseSetArray;
 
-    .line 9
+    .line 10
     monitor-enter v1
 
-    .line 11
+    .line 12
     :try_start_0
     iget-object v0, v0, Lcom/android/systemui/broadcast/PendingRemovalStore;->pendingRemoval:Landroid/util/SparseSetArray;
 
-    .line 12
-    const/4 v2, -0x1
-
-    .line 14
+    .line 13
     invoke-virtual {v0, v2, p1}, Landroid/util/SparseSetArray;->add(ILjava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

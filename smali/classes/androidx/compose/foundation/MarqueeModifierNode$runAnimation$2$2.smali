@@ -1,6 +1,6 @@
 .class final Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -205,304 +205,342 @@
     move-object v3, v0
 
     .line 67
-    goto :goto_1
+    goto/16 :goto_1
 
     .line 68
     :cond_4
     invoke-static/range {p1 .. p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 69
+    .line 70
     iget-object v0, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->L$0:Ljava/lang/Object;
 
-    .line 72
+    .line 73
     check-cast v0, Ljava/lang/Float;
 
-    .line 74
+    .line 75
     if-nez v0, :cond_5
 
-    .line 76
+    .line 77
     return-object v10
 
-    .line 78
+    .line 79
     :cond_5
     iget-object v3, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->this$0:Landroidx/compose/foundation/MarqueeModifierNode;
 
-    .line 79
-    iget v15, v3, Landroidx/compose/foundation/MarqueeModifierNode;->iterations:I
+    .line 80
+    iget v3, v3, Landroidx/compose/foundation/MarqueeModifierNode;->iterations:I
 
-    .line 81
+    .line 82
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
-    .line 83
-    move-result v3
-
-    .line 86
-    iget-object v4, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->this$0:Landroidx/compose/foundation/MarqueeModifierNode;
+    .line 84
+    move-result v4
 
     .line 87
-    iget v5, v4, Landroidx/compose/foundation/MarqueeModifierNode;->initialDelayMillis:I
+    iget-object v5, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->this$0:Landroidx/compose/foundation/MarqueeModifierNode;
 
-    .line 89
-    iget v6, v4, Landroidx/compose/foundation/MarqueeModifierNode;->delayMillis:I
+    .line 88
+    iget v6, v5, Landroidx/compose/foundation/MarqueeModifierNode;->initialDelayMillis:I
 
-    .line 91
-    iget v7, v4, Landroidx/compose/foundation/MarqueeModifierNode;->velocity:F
+    .line 90
+    iget v7, v5, Landroidx/compose/foundation/MarqueeModifierNode;->delayMillis:I
 
-    .line 93
-    invoke-static {v4}, Landroidx/compose/ui/node/DelegatableNodeKt;->requireLayoutNode(Landroidx/compose/ui/node/DelegatableNode;)Landroidx/compose/ui/node/LayoutNode;
+    .line 92
+    iget v15, v5, Landroidx/compose/foundation/MarqueeModifierNode;->velocity:F
 
-    .line 95
-    move-result-object v4
+    .line 94
+    invoke-static {v5}, Landroidx/compose/ui/node/DelegatableNodeKt;->requireLayoutNode(Landroidx/compose/ui/node/DelegatableNode;)Landroidx/compose/ui/node/LayoutNode;
 
-    .line 98
-    iget-object v4, v4, Landroidx/compose/ui/node/LayoutNode;->density:Landroidx/compose/ui/unit/Density;
+    .line 96
+    move-result-object v5
 
     .line 99
-    invoke-interface {v4, v7}, Landroidx/compose/ui/unit/Density;->toPx-0680j_4(F)F
+    iget-object v5, v5, Landroidx/compose/ui/node/LayoutNode;->density:Landroidx/compose/ui/unit/Density;
 
-    .line 101
-    move-result v4
+    .line 100
+    invoke-interface {v5, v15}, Landroidx/compose/ui/unit/Density;->toPx-0680j_4(F)F
 
-    .line 104
-    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
+    .line 102
+    move-result v5
 
     .line 105
-    move-result v4
+    invoke-static {v5}, Ljava/lang/Math;->abs(F)F
 
-    .line 108
-    const/high16 v7, 0x447a0000    # 1000.0f
+    .line 106
+    move-result v5
 
     .line 109
-    div-float/2addr v4, v7
+    const/high16 v15, 0x447a0000    # 1000.0f
 
-    .line 111
-    div-float/2addr v3, v4
+    .line 110
+    div-float/2addr v5, v15
 
     .line 112
-    float-to-double v3, v3
+    div-float/2addr v4, v5
 
     .line 113
-    invoke-static {v3, v4}, Ljava/lang/Math;->ceil(D)D
+    float-to-double v4, v4
 
     .line 114
-    move-result-wide v3
+    invoke-static {v4, v5}, Ljava/lang/Math;->ceil(D)D
 
-    .line 117
-    double-to-float v3, v3
+    .line 115
+    move-result-wide v4
 
     .line 118
-    float-to-int v3, v3
+    double-to-float v4, v4
 
     .line 119
-    sget-object v4, Landroidx/compose/animation/core/EasingKt;->LinearEasing:Landroidx/compose/animation/core/EasingKt$$ExternalSyntheticLambda0;
+    float-to-int v4, v4
 
     .line 120
-    new-instance v7, Landroidx/compose/animation/core/TweenSpec;
+    sget-object v5, Landroidx/compose/animation/core/EasingKt;->LinearEasing:Landroidx/compose/animation/core/EasingKt$$ExternalSyntheticLambda0;
 
-    .line 122
-    invoke-direct {v7, v3, v6, v4}, Landroidx/compose/animation/core/TweenSpec;-><init>(IILandroidx/compose/animation/core/Easing;)V
+    .line 121
+    new-instance v15, Landroidx/compose/animation/core/TweenSpec;
 
-    .line 124
-    neg-int v3, v6
+    .line 123
+    invoke-direct {v15, v4, v7, v5}, Landroidx/compose/animation/core/TweenSpec;-><init>(IILandroidx/compose/animation/core/Easing;)V
 
-    .line 127
-    add-int/2addr v3, v5
+    .line 125
+    neg-int v4, v7
 
     .line 128
-    mul-int/lit8 v3, v3, -0x1
+    add-int/2addr v4, v6
 
     .line 129
-    int-to-long v3, v3
+    mul-int/lit8 v4, v4, -0x1
 
-    .line 131
-    const v5, 0x7fffffff
+    .line 130
+    int-to-long v4, v4
 
     .line 132
-    if-ne v15, v5, :cond_6
+    const v6, 0x7fffffff
 
-    .line 135
-    invoke-static {v7, v11, v3, v4, v1}, Landroidx/compose/animation/core/AnimationSpecKt;->infiniteRepeatable-9IiC70o$default(Landroidx/compose/animation/core/TweenSpec;Landroidx/compose/animation/core/RepeatMode;JI)Landroidx/compose/animation/core/InfiniteRepeatableSpec;
+    .line 133
+    if-ne v3, v6, :cond_6
 
-    .line 137
+    .line 136
+    invoke-static {v15, v11, v4, v5, v1}, Landroidx/compose/animation/core/AnimationSpecKt;->infiniteRepeatable-9IiC70o$default(Landroidx/compose/animation/core/TweenSpec;Landroidx/compose/animation/core/RepeatMode;JI)Landroidx/compose/animation/core/InfiniteRepeatableSpec;
+
+    .line 138
     move-result-object v3
-
-    .line 140
-    goto :goto_0
 
     .line 141
-    :cond_6
-    const/16 v17, 0x0
+    goto :goto_0
 
     .line 142
-    const/16 v20, 0x4
+    :cond_6
+    const/4 v6, 0x0
+
+    .line 143
+    const/4 v7, 0x4
 
     .line 144
-    move-object/from16 v16, v7
+    and-int/lit8 v16, v7, 0x4
 
-    .line 146
-    move-wide/from16 v18, v3
+    .line 145
+    if-eqz v16, :cond_7
 
-    .line 148
-    invoke-static/range {v15 .. v20}, Landroidx/compose/animation/core/AnimationSpecKt;->repeatable-91I0pcU$default(ILandroidx/compose/animation/core/DurationBasedAnimationSpec;Landroidx/compose/animation/core/RepeatMode;JI)Landroidx/compose/animation/core/RepeatableSpec;
+    .line 147
+    sget-object v6, Landroidx/compose/animation/core/RepeatMode;->Restart:Landroidx/compose/animation/core/RepeatMode;
 
-    .line 150
-    move-result-object v3
+    .line 149
+    :cond_7
+    move-object/from16 v18, v6
+
+    .line 151
+    and-int/lit8 v6, v7, 0x8
 
     .line 153
+    if-eqz v6, :cond_8
+
+    .line 155
+    const/4 v4, 0x0
+
+    .line 157
+    int-to-long v4, v4
+
+    .line 158
+    :cond_8
+    move-wide/from16 v19, v4
+
+    .line 159
+    new-instance v4, Landroidx/compose/animation/core/RepeatableSpec;
+
+    .line 161
+    move-object v5, v15
+
+    .line 163
+    move-object v15, v4
+
+    .line 164
+    move/from16 v16, v3
+
+    .line 165
+    move-object/from16 v17, v5
+
+    .line 167
+    invoke-direct/range {v15 .. v20}, Landroidx/compose/animation/core/RepeatableSpec;-><init>(ILandroidx/compose/animation/core/DurationBasedAnimationSpec;Landroidx/compose/animation/core/RepeatMode;J)V
+
+    .line 169
+    move-object v3, v4
+
+    .line 172
     :goto_0
     iget-object v4, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->this$0:Landroidx/compose/foundation/MarqueeModifierNode;
 
-    .line 154
+    .line 173
     iget-object v4, v4, Landroidx/compose/foundation/MarqueeModifierNode;->offset:Landroidx/compose/animation/core/Animatable;
 
-    .line 156
+    .line 175
     new-instance v5, Ljava/lang/Float;
 
-    .line 158
+    .line 177
     invoke-direct {v5, v14}, Ljava/lang/Float;-><init>(F)V
 
-    .line 160
+    .line 179
     iput-object v0, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->L$0:Ljava/lang/Object;
 
-    .line 163
+    .line 182
     iput-object v3, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->L$1:Ljava/lang/Object;
 
-    .line 165
+    .line 184
     iput v2, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->label:I
 
-    .line 167
+    .line 186
     invoke-virtual {v4, v5, v8}, Landroidx/compose/animation/core/Animatable;->snapTo(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 169
+    .line 188
     move-result-object v2
 
-    .line 172
-    if-ne v2, v9, :cond_7
+    .line 191
+    if-ne v2, v9, :cond_9
 
-    .line 173
+    .line 192
     return-object v9
 
-    .line 175
-    :cond_7
+    .line 194
+    :cond_9
     move-object v2, v0
 
-    .line 176
+    .line 195
     :goto_1
     :try_start_1
     iget-object v0, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->this$0:Landroidx/compose/foundation/MarqueeModifierNode;
 
-    .line 177
+    .line 196
     iget-object v0, v0, Landroidx/compose/foundation/MarqueeModifierNode;->offset:Landroidx/compose/animation/core/Animatable;
 
-    .line 179
+    .line 198
     iput-object v11, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->L$0:Ljava/lang/Object;
 
-    .line 181
+    .line 200
     iput-object v11, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->L$1:Ljava/lang/Object;
 
-    .line 183
+    .line 202
     iput v1, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->label:I
 
-    .line 185
+    .line 204
     const/4 v5, 0x0
 
-    .line 187
+    .line 206
     const/16 v7, 0xc
 
-    .line 188
+    .line 207
     const/4 v4, 0x0
 
-    .line 190
+    .line 209
     move-object v1, v0
 
-    .line 191
+    .line 210
     move-object/from16 v6, p0
 
-    .line 192
+    .line 211
     invoke-static/range {v1 .. v7}, Landroidx/compose/animation/core/Animatable;->animateTo$default(Landroidx/compose/animation/core/Animatable;Ljava/lang/Object;Landroidx/compose/animation/core/AnimationSpec;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;I)Ljava/lang/Object;
 
-    .line 194
+    .line 213
     move-result-object v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 197
-    if-ne v0, v9, :cond_8
+    .line 216
+    if-ne v0, v9, :cond_a
 
-    .line 198
+    .line 217
     return-object v9
 
-    .line 200
-    :cond_8
+    .line 219
+    :cond_a
     :goto_2
     iget-object v0, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->this$0:Landroidx/compose/foundation/MarqueeModifierNode;
 
-    .line 201
+    .line 220
     iget-object v0, v0, Landroidx/compose/foundation/MarqueeModifierNode;->offset:Landroidx/compose/animation/core/Animatable;
 
-    .line 203
+    .line 222
     new-instance v1, Ljava/lang/Float;
 
-    .line 205
+    .line 224
     invoke-direct {v1, v14}, Ljava/lang/Float;-><init>(F)V
 
-    .line 207
+    .line 226
     iput v13, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->label:I
 
-    .line 210
+    .line 229
     invoke-virtual {v0, v1, v8}, Landroidx/compose/animation/core/Animatable;->snapTo(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 212
+    .line 231
     move-result-object v0
 
-    .line 215
-    if-ne v0, v9, :cond_9
+    .line 234
+    if-ne v0, v9, :cond_b
 
-    .line 216
+    .line 235
     return-object v9
 
-    .line 218
-    :cond_9
+    .line 237
+    :cond_b
     :goto_3
     return-object v10
 
-    .line 219
+    .line 238
     :goto_4
     iget-object v1, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->this$0:Landroidx/compose/foundation/MarqueeModifierNode;
 
-    .line 220
+    .line 239
     iget-object v1, v1, Landroidx/compose/foundation/MarqueeModifierNode;->offset:Landroidx/compose/animation/core/Animatable;
 
-    .line 222
+    .line 241
     new-instance v2, Ljava/lang/Float;
 
-    .line 224
+    .line 243
     invoke-direct {v2, v14}, Ljava/lang/Float;-><init>(F)V
 
-    .line 226
+    .line 245
     iput-object v0, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->L$0:Ljava/lang/Object;
 
-    .line 229
+    .line 248
     iput-object v11, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->L$1:Ljava/lang/Object;
 
-    .line 231
+    .line 250
     iput v12, v8, Landroidx/compose/foundation/MarqueeModifierNode$runAnimation$2$2;->label:I
 
-    .line 233
+    .line 252
     invoke-virtual {v1, v2, v8}, Landroidx/compose/animation/core/Animatable;->snapTo(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 235
+    .line 254
     move-result-object v1
 
-    .line 238
-    if-ne v1, v9, :cond_a
+    .line 257
+    if-ne v1, v9, :cond_c
 
-    .line 239
+    .line 258
     return-object v9
 
-    .line 241
-    :cond_a
+    .line 260
+    :cond_c
     :goto_5
     throw v0
-    .line 242
+    .line 261
 .end method

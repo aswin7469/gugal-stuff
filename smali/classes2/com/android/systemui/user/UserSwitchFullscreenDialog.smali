@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/user/UserSwitchFullscreenDialog;
 .super Lcom/android/systemui/statusbar/phone/SystemUIDialog;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -17,7 +17,7 @@
     const/4 v0, 0x1
 
     .line 2
-    const v1, 0x7f1504cf    # @style/Theme.UserSwitcherFullscreenDialog
+    const v1, 0x7f1404d8    # @style/Theme.UserSwitcherFullscreenDialog
 
     .line 3
     invoke-direct {p0, p1, v1, v0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;-><init>(Landroid/content/Context;IZ)V
@@ -183,7 +183,7 @@
     move-result-object p1
 
     .line 48
-    const v0, 0x7f0e0308    # @layout/user_switcher_fullscreen 'res/layout/user_switcher_fullscreen.xml'
+    const v0, 0x7f0d031b    # @layout/user_switcher_fullscreen 'res/layout/user_switcher_fullscreen.xml'
 
     .line 49
     const/4 v1, 0x0
@@ -198,7 +198,7 @@
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->setContentView(Landroid/view/View;)V
 
     .line 57
-    const p1, 0x7f0b0898    # @id/user_switcher_root
+    const p1, 0x7f0a08cb    # @id/user_switcher_root
 
     .line 60
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->requireViewById(I)Landroid/view/View;

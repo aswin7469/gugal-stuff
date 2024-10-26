@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -28,173 +28,146 @@
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->isEnabled()Z
 
     .line 5
-    move-result v0
-
-    .line 8
-    iput-boolean v0, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel;->isSmartspaceEnabled:Z
-
-    .line 9
     iget-object v0, p4, Lcom/android/systemui/keyguard/domain/interactor/KeyguardSmartspaceInteractor;->isWeatherEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 11
+    .line 8
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/lockscreen/LockscreenSmartspaceController;->isDateWeatherDecoupled()Z
 
-    .line 13
-    move-result p2
-
-    .line 16
-    iput-boolean p2, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel;->isDateWeatherDecoupled:Z
-
-    .line 17
+    .line 10
     iget-object p2, p3, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;->hasCustomWeatherDataDisplay:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 19
+    .line 13
     new-instance p3, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel$special$$inlined$map$1;
 
-    .line 21
+    .line 15
     invoke-direct {p3, p2}, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
 
-    .line 23
+    .line 17
     const/4 v1, 0x3
 
-    .line 26
+    .line 20
     invoke-static {v1}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 27
+    .line 21
     move-result-object v2
 
-    .line 30
+    .line 24
     iget-object v3, p2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 31
+    .line 25
     invoke-interface {v3}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
-    .line 33
+    .line 27
     move-result-object v3
 
-    .line 36
+    .line 30
     check-cast v3, Ljava/lang/Boolean;
 
-    .line 37
+    .line 31
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 39
+    .line 33
     move-result v3
 
-    .line 42
+    .line 36
     const/4 v4, 0x1
 
-    .line 43
+    .line 37
     xor-int/2addr v3, v4
 
-    .line 44
+    .line 38
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 45
+    .line 39
     move-result-object v3
 
-    .line 48
+    .line 42
     invoke-static {p3, p1, v2, v3}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 49
-    move-result-object p3
-
-    .line 52
-    iput-object p3, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel;->isDateVisible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 53
+    .line 43
     new-instance p3, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel$isWeatherVisible$1;
 
-    .line 55
+    .line 46
     const/4 v2, 0x0
 
-    .line 57
+    .line 48
     invoke-direct {p3, p0, v2}, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel$isWeatherVisible$1;-><init>(Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel;Lkotlin/coroutines/Continuation;)V
 
-    .line 58
-    new-instance v2, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+    .line 49
+    new-instance p0, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 61
-    invoke-direct {v2, v0, p2, p3}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    .line 52
+    invoke-direct {p0, v0, p2, p3}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 63
+    .line 54
     invoke-static {v1}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 66
+    .line 57
     move-result-object p3
 
-    .line 69
+    .line 60
     iget-object p2, p2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 70
+    .line 61
     invoke-interface {p2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
-    .line 72
+    .line 63
     move-result-object p2
 
-    .line 75
+    .line 66
     check-cast p2, Ljava/lang/Boolean;
 
-    .line 76
+    .line 67
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 78
+    .line 69
     move-result p2
 
-    .line 81
+    .line 72
     iget-object v0, v0, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 82
+    .line 73
     invoke-interface {v0}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
-    .line 84
+    .line 75
     move-result-object v0
 
-    .line 87
+    .line 78
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 88
+    .line 79
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 90
+    .line 81
     move-result v0
 
-    .line 93
+    .line 84
     if-nez p2, :cond_0
 
-    .line 94
+    .line 85
     if-eqz v0, :cond_0
 
-    .line 96
+    .line 87
     goto :goto_0
 
-    .line 98
+    .line 89
     :cond_0
     const/4 v4, 0x0
 
-    .line 99
+    .line 90
     :goto_0
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 100
+    .line 91
     move-result-object p2
 
-    .line 103
-    invoke-static {v2, p1, p3, p2}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 94
+    invoke-static {p0, p1, p3, p2}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 104
-    move-result-object p1
+    .line 95
+    iget-object p0, p4, Lcom/android/systemui/keyguard/domain/interactor/KeyguardSmartspaceInteractor;->bcSmartspaceVisibility:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 107
-    iput-object p1, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel;->isWeatherVisible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 108
-    iget-object p1, p4, Lcom/android/systemui/keyguard/domain/interactor/KeyguardSmartspaceInteractor;->bcSmartspaceVisibility:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 110
-    iput-object p1, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardSmartspaceViewModel;->bcSmartspaceVisibility:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 112
+    .line 98
     return-void
-    .line 114
+    .line 100
 .end method

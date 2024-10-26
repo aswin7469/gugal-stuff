@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/pip2/phone/PipController$IPipImpl$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/Consumer;
@@ -55,7 +55,7 @@
     move-result-object v0
 
     .line 17
-    const v1, 0x7f07087d    # @dimen/pip_corner_radius '16.0dp'
+    const v1, 0x7f0708cd    # @dimen/pip_corner_radius '16.0dp'
 
     .line 18
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -73,7 +73,7 @@
     move-result-object p1
 
     .line 30
-    const v1, 0x7f070899    # @dimen/pip_shadow_radius '5.0dp'
+    const v1, 0x7f0708e9    # @dimen/pip_shadow_radius '5.0dp'
 
     .line 31
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/foundation/layout/RowColumnMeasurePolicyKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -376,1031 +376,1031 @@
     const-string/jumbo v9, "weightUnitSpace "
 
     .line 212
-    const-string v3, "totalWeight "
+    const-string/jumbo v3, "totalWeight "
 
     .line 215
     move-object/from16 v17, v8
 
-    .line 217
+    .line 218
     const-string v8, "remainingToTarget "
 
-    .line 219
+    .line 220
     move-object/from16 v19, v9
 
-    .line 221
+    .line 222
     const-string v9, "arrangementSpacingTotal "
 
-    .line 223
+    .line 224
     move/from16 v27, v12
 
-    .line 225
+    .line 226
     const-string v12, "fixedSpace "
 
-    .line 227
+    .line 228
     move-object/from16 v28, v3
 
-    .line 229
+    .line 230
     const-string/jumbo v3, "weightChildrenCount "
 
-    .line 231
+    .line 232
     move-wide/from16 v29, v4
 
-    .line 234
+    .line 235
     const-string v4, "arrangementSpacingPx "
 
-    .line 236
-    const-string v5, "targetSpace "
+    .line 237
+    const-string/jumbo v5, "targetSpace "
 
-    .line 238
+    .line 239
     move-object/from16 v31, v8
 
-    .line 240
+    .line 242
     const-string v8, "mainAxisMin "
 
-    .line 242
+    .line 244
     if-ge v13, v10, :cond_9
 
-    .line 244
+    .line 246
     move-object/from16 v0, p7
 
-    .line 246
+    .line 248
     invoke-interface {v0, v13}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 248
+    .line 250
     move-result-object v32
 
-    .line 251
+    .line 253
     check-cast v32, Landroidx/compose/ui/layout/Measurable;
 
-    .line 252
+    .line 254
     invoke-static/range {v32 .. v32}, Landroidx/compose/foundation/layout/RowColumnImplKt;->getRowColumnParentData(Landroidx/compose/ui/layout/Measurable;)Landroidx/compose/foundation/layout/RowColumnParentData;
 
-    .line 254
+    .line 256
     move-result-object v32
 
-    .line 257
+    .line 259
     invoke-static/range {v32 .. v32}, Landroidx/compose/foundation/layout/RowColumnImplKt;->getWeight(Landroidx/compose/foundation/layout/RowColumnParentData;)F
 
-    .line 258
+    .line 260
     move-result v10
 
-    .line 261
+    .line 263
     move-wide/from16 v32, v6
 
-    .line 262
+    .line 264
     mul-float v6, v11, v10
 
-    .line 264
+    .line 266
     :try_start_0
     invoke-static {v6}, Ljava/lang/Math;->round(F)I
 
-    .line 266
+    .line 268
     move-result v3
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 269
+    .line 271
     int-to-long v3, v3
 
-    .line 270
+    .line 272
     sub-long v25, v25, v3
 
-    .line 271
+    .line 273
     add-int/lit8 v13, v13, 0x1
 
-    .line 273
+    .line 275
     move-object/from16 v0, p0
 
-    .line 275
+    .line 277
     move/from16 v3, p4
 
-    .line 277
+    .line 279
     move/from16 v10, p10
 
-    .line 279
+    .line 281
     move-object/from16 v9, v16
 
-    .line 281
+    .line 283
     move/from16 v12, v27
 
-    .line 283
+    .line 285
     move-wide/from16 v4, v29
 
-    .line 285
+    .line 287
     move-wide/from16 v6, v32
 
-    .line 287
+    .line 289
     goto :goto_7
 
-    .line 289
+    .line 291
     :catch_0
     move-exception v0
 
-    .line 290
+    .line 292
     move-object v7, v0
 
-    .line 291
+    .line 293
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 292
+    .line 294
     const-string v13, "This log indicates a hard-to-reproduce Compose issue, modified with additional debugging details. Please help us by adding your experiences to the bug link provided. Thank you for helping us improve Compose. https://issuetracker.google.com/issues/297974033 mainAxisMax "
 
-    .line 294
+    .line 296
     move-object/from16 v16, v7
 
-    .line 296
+    .line 298
     move/from16 v7, p1
 
-    .line 298
+    .line 300
     invoke-static {v2, v7, v13, v8, v5}, Landroidx/compose/foundation/layout/RowColumnMeasurePolicyKt$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 300
+    .line 302
     move-result-object v2
 
-    .line 303
+    .line 305
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 304
+    .line 306
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 307
+    .line 309
     move-wide/from16 v4, v21
 
-    .line 310
+    .line 312
     invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 312
+    .line 314
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 315
+    .line 317
     invoke-virtual {v2, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 318
+    .line 320
     invoke-virtual {v2, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 321
+    .line 323
     invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 324
+    .line 326
     invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 327
+    .line 329
     move-wide/from16 v3, v32
 
-    .line 330
+    .line 332
     invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 332
+    .line 334
     move-object/from16 v13, v31
 
-    .line 335
+    .line 337
     invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 337
+    .line 339
     move-wide/from16 v3, v29
 
-    .line 340
+    .line 342
     invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 342
+    .line 344
     move-object/from16 v1, v28
 
-    .line 345
+    .line 347
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 347
+    .line 349
     move/from16 v1, v27
 
-    .line 350
+    .line 352
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 352
+    .line 354
     move-object/from16 v1, v19
 
-    .line 355
+    .line 357
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 357
+    .line 359
     invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 360
+    .line 362
     const-string v1, "itemWeight "
 
-    .line 363
+    .line 365
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 365
+    .line 367
     invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 368
+    .line 370
     move-object/from16 v10, v17
 
-    .line 371
+    .line 373
     invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 373
+    .line 375
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 376
+    .line 378
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 379
+    .line 381
     move-result-object v1
 
-    .line 382
+    .line 384
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 383
+    .line 385
     move-object/from16 v1, v16
 
-    .line 386
+    .line 388
     invoke-virtual {v0, v1}, Ljava/lang/IllegalArgumentException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 388
+    .line 390
     move-result-object v0
 
-    .line 391
+    .line 393
     throw v0
 
-    .line 392
+    .line 394
     :cond_9
     move-object/from16 v0, p7
 
-    .line 393
+    .line 395
     move-wide/from16 v34, v6
 
-    .line 395
+    .line 397
     move-object/from16 v38, v19
 
-    .line 397
+    .line 399
     move-wide/from16 v36, v29
 
-    .line 399
+    .line 401
     move/from16 v7, p1
 
-    .line 401
+    .line 403
     move-object/from16 v19, v9
 
-    .line 403
+    .line 405
     move-wide/from16 v9, v21
 
-    .line 405
+    .line 407
     move-object/from16 v21, v28
 
-    .line 407
+    .line 409
     move/from16 v13, p5
 
-    .line 409
+    .line 411
     move-object/from16 p5, v12
 
-    .line 411
+    .line 413
     move/from16 v22, v15
 
-    .line 413
+    .line 415
     const/4 v6, 0x0
 
-    .line 415
+    .line 417
     move/from16 v12, p9
 
-    .line 416
+    .line 418
     move/from16 v15, p10
 
-    .line 418
+    .line 420
     :goto_8
     if-ge v12, v15, :cond_11
 
-    .line 420
+    .line 422
     aget-object v28, p8, v12
 
-    .line 422
+    .line 424
     if-nez v28, :cond_10
 
-    .line 424
+    .line 426
     invoke-interface {v0, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 426
+    .line 428
     move-result-object v28
 
-    .line 429
+    .line 431
     move-object/from16 v0, v28
 
-    .line 430
+    .line 432
     check-cast v0, Landroidx/compose/ui/layout/Measurable;
 
-    .line 432
+    .line 434
     invoke-static {v0}, Landroidx/compose/foundation/layout/RowColumnImplKt;->getRowColumnParentData(Landroidx/compose/ui/layout/Measurable;)Landroidx/compose/foundation/layout/RowColumnParentData;
 
-    .line 434
+    .line 436
     move-result-object v15
 
-    .line 437
+    .line 439
     move/from16 v28, v14
 
-    .line 438
+    .line 440
     invoke-static {v15}, Landroidx/compose/foundation/layout/RowColumnImplKt;->getWeight(Landroidx/compose/foundation/layout/RowColumnParentData;)F
 
-    .line 440
+    .line 442
     move-result v14
 
-    .line 443
+    .line 445
     const/16 v18, 0x0
 
-    .line 444
+    .line 446
     cmpl-float v29, v14, v18
 
-    .line 446
+    .line 448
     if-lez v29, :cond_f
 
-    .line 448
+    .line 450
     cmp-long v29, v25, v23
 
-    .line 450
+    .line 452
     move-object/from16 v30, v3
 
-    .line 452
+    .line 454
     if-gez v29, :cond_a
 
-    .line 454
+    .line 456
     const/16 v29, -0x1
 
-    .line 456
+    .line 458
     move-wide/from16 v32, v9
 
-    .line 458
+    .line 460
     move/from16 v3, v29
 
-    .line 460
+    .line 462
     goto :goto_9
 
-    .line 462
+    .line 464
     :cond_a
     if-lez v29, :cond_b
 
-    .line 463
+    .line 465
     move-wide/from16 v32, v9
 
-    .line 465
+    .line 467
     const/4 v3, 0x1
 
-    .line 467
+    .line 469
     goto :goto_9
 
-    .line 468
+    .line 470
     :cond_b
     move-wide/from16 v32, v9
 
-    .line 469
+    .line 471
     const/4 v3, 0x0
 
-    .line 471
+    .line 473
     :goto_9
     int-to-long v9, v3
 
-    .line 472
+    .line 474
     sub-long v25, v25, v9
 
-    .line 473
+    .line 475
     mul-float v9, v11, v14
 
-    .line 475
+    .line 477
     invoke-static {v9}, Ljava/lang/Math;->round(F)I
 
-    .line 477
+    .line 479
     move-result v10
-
-    .line 480
-    add-int/2addr v10, v3
-
-    .line 481
-    move/from16 v39, v3
 
     .line 482
-    const/4 v3, 0x0
+    add-int/2addr v10, v3
+
+    .line 483
+    move/from16 v39, v3
 
     .line 484
+    const/4 v3, 0x0
+
+    .line 486
     invoke-static {v3, v10}, Ljava/lang/Math;->max(II)I
 
-    .line 485
+    .line 487
     move-result v10
 
-    .line 488
+    .line 490
     if-eqz v15, :cond_c
 
-    .line 489
+    .line 491
     :try_start_1
     iget-boolean v3, v15, Landroidx/compose/foundation/layout/RowColumnParentData;->fill:Z
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 491
+    .line 493
     goto :goto_a
 
-    .line 493
+    .line 495
     :catch_1
     move-exception v0
 
-    .line 494
+    .line 496
     move/from16 v40, v11
 
-    .line 495
+    .line 497
     move/from16 v29, v14
 
-    .line 497
+    .line 499
     move-object/from16 v14, v21
 
-    .line 499
+    .line 501
     move/from16 v21, v9
 
-    .line 501
+    .line 503
     goto/16 :goto_d
 
-    .line 503
+    .line 505
     :cond_c
     const/4 v3, 0x1
 
-    .line 505
+    .line 507
     :goto_a
     if-eqz v3, :cond_d
 
-    .line 506
+    .line 508
     const v3, 0x7fffffff
 
-    .line 508
+    .line 510
     if-eq v10, v3, :cond_e
 
-    .line 511
+    .line 513
     move-object/from16 v3, p0
 
-    .line 513
+    .line 515
     move v15, v10
 
-    .line 515
+    .line 517
     move/from16 v40, v11
 
-    .line 516
+    .line 518
     move/from16 v29, v14
 
-    .line 518
+    .line 520
     move-object/from16 v14, v21
 
-    .line 520
+    .line 522
     const/4 v11, 0x1
 
-    .line 522
+    .line 524
     :goto_b
     move/from16 v21, v9
 
-    .line 523
+    .line 525
     move/from16 v9, p4
 
-    .line 525
+    .line 527
     goto :goto_c
 
-    .line 527
+    .line 529
     :cond_d
     const v3, 0x7fffffff
 
-    .line 528
+    .line 530
     :cond_e
     move-object/from16 v3, p0
 
-    .line 531
+    .line 533
     move/from16 v40, v11
 
-    .line 533
+    .line 535
     move/from16 v29, v14
 
-    .line 535
+    .line 537
     move-object/from16 v14, v21
 
-    .line 537
+    .line 539
     const/4 v11, 0x1
 
-    .line 539
+    .line 541
     const/4 v15, 0x0
 
-    .line 540
+    .line 542
     goto :goto_b
 
-    .line 541
+    .line 543
     :goto_c
     :try_start_2
     invoke-interface {v3, v15, v10, v9, v11}, Landroidx/compose/foundation/layout/RowColumnMeasurePolicy;->createConstraints-xF2OJ5Q(IIIZ)J
 
-    .line 542
+    .line 544
     move-result-wide v10
     :try_end_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 545
+    .line 547
     invoke-interface {v0, v10, v11}, Landroidx/compose/ui/layout/Measurable;->measure-BRTryo0(J)Landroidx/compose/ui/layout/Placeable;
 
-    .line 546
+    .line 548
     move-result-object v0
 
-    .line 549
+    .line 551
     invoke-interface {v3, v0}, Landroidx/compose/foundation/layout/RowColumnMeasurePolicy;->mainAxisSize(Landroidx/compose/ui/layout/Placeable;)I
 
-    .line 550
+    .line 552
     move-result v10
 
-    .line 553
+    .line 555
     invoke-interface {v3, v0}, Landroidx/compose/foundation/layout/RowColumnMeasurePolicy;->crossAxisSize(Landroidx/compose/ui/layout/Placeable;)I
 
-    .line 554
+    .line 556
     move-result v11
 
-    .line 557
+    .line 559
     sub-int v15, v12, p9
 
-    .line 558
+    .line 560
     aput v10, v16, v15
 
-    .line 560
+    .line 562
     add-int/2addr v6, v10
 
-    .line 562
+    .line 564
     invoke-static {v13, v11}, Ljava/lang/Math;->max(II)I
 
-    .line 563
+    .line 565
     move-result v10
 
-    .line 566
+    .line 568
     aput-object v0, p8, v12
 
-    .line 567
+    .line 569
     move v13, v10
 
-    .line 569
+    .line 571
     move/from16 v10, v22
 
-    .line 570
+    .line 572
     move/from16 v15, v28
 
-    .line 572
+    .line 574
     move-object/from16 v11, v30
 
-    .line 574
+    .line 576
     move-wide/from16 v21, v32
 
-    .line 576
+    .line 578
     move-wide/from16 v29, v36
 
-    .line 578
+    .line 580
     move-object/from16 v32, v38
 
-    .line 580
+    .line 582
     move-object/from16 v33, v31
 
-    .line 582
+    .line 584
     move-object/from16 v31, v17
 
-    .line 584
+    .line 586
     move/from16 v17, v27
 
-    .line 586
+    .line 588
     move-wide/from16 v27, v34
 
-    .line 588
+    .line 590
     move-object/from16 v35, p5
 
-    .line 590
+    .line 592
     move-object/from16 v34, v19
 
-    .line 592
+    .line 594
     move/from16 v19, v40
 
-    .line 594
+    .line 596
     goto/16 :goto_e
 
-    .line 596
+    .line 598
     :catch_2
     move-exception v0
 
-    .line 598
+    .line 600
     :goto_d
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
-    .line 599
+    .line 601
     const-string v6, "This log indicates a hard-to-reproduce Compose issue, modified with additional debugging details. Please help us by adding your experiences to the bug link provided. Thank you for helping us improve Compose. https://issuetracker.google.com/issues/300280216 mainAxisMax "
 
-    .line 601
+    .line 603
     invoke-static {v2, v7, v6, v8, v5}, Landroidx/compose/foundation/layout/RowColumnMeasurePolicyKt$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 603
+    .line 605
     move-result-object v2
 
-    .line 606
+    .line 608
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 607
+    .line 609
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 610
+    .line 612
     move-wide/from16 v4, v32
 
-    .line 613
+    .line 615
     invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 615
+    .line 617
     move-object/from16 v11, v30
 
-    .line 618
+    .line 620
     invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 620
+    .line 622
     move/from16 v15, v28
 
-    .line 623
+    .line 625
     invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 625
+    .line 627
     move-object/from16 v1, p5
 
-    .line 628
+    .line 630
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 630
+    .line 632
     move/from16 v1, v22
 
-    .line 633
+    .line 635
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 635
+    .line 637
     move-object/from16 v1, v19
 
-    .line 638
+    .line 640
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 640
+    .line 642
     move-wide/from16 v4, v34
 
-    .line 643
+    .line 645
     invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 645
+    .line 647
     move-object/from16 v1, v31
 
-    .line 648
+    .line 650
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 650
+    .line 652
     move-wide/from16 v4, v36
 
-    .line 653
+    .line 655
     invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 655
+    .line 657
     invoke-virtual {v2, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 658
+    .line 660
     move/from16 v1, v27
 
-    .line 661
+    .line 663
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 663
+    .line 665
     move-object/from16 v1, v38
 
-    .line 666
+    .line 668
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 668
+    .line 670
     move/from16 v1, v40
 
-    .line 671
+    .line 673
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 673
+    .line 675
     const-string/jumbo v1, "weight "
 
-    .line 676
+    .line 678
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 679
+    .line 681
     move/from16 v1, v29
 
-    .line 682
+    .line 684
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 684
+    .line 686
     move-object/from16 v1, v17
 
-    .line 687
+    .line 689
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 689
+    .line 691
     move/from16 v11, v21
 
-    .line 692
+    .line 694
     invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 694
+    .line 696
     const-string v1, "crossAxisDesiredSize nullremainderUnit "
 
-    .line 697
+    .line 699
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 699
+    .line 701
     move/from16 v1, v39
 
-    .line 702
+    .line 704
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 704
+    .line 706
     const-string v1, "childMainAxisSize "
 
-    .line 707
+    .line 709
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 709
+    .line 711
     invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 712
+    .line 714
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 715
+    .line 717
     move-result-object v1
 
-    .line 718
+    .line 720
     invoke-direct {v3, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 719
+    .line 721
     invoke-virtual {v3, v0}, Ljava/lang/IllegalArgumentException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 722
+    .line 724
     move-result-object v0
 
-    .line 725
+    .line 727
     throw v0
 
-    .line 726
+    .line 728
     :cond_f
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 727
+    .line 729
     const-string v1, "All weights <= 0 should have placeables"
 
-    .line 729
+    .line 731
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 731
+    .line 733
     move-result-object v1
 
-    .line 734
+    .line 736
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 735
+    .line 737
     throw v0
 
-    .line 738
+    .line 740
     :cond_10
     move v15, v14
 
-    .line 739
+    .line 741
     move-object/from16 v14, v21
 
-    .line 740
+    .line 742
     move-object/from16 v33, v31
 
-    .line 742
+    .line 744
     move-wide/from16 v29, v36
 
-    .line 744
+    .line 746
     move-object/from16 v32, v38
 
-    .line 746
+    .line 748
     const/16 v18, 0x0
 
-    .line 748
+    .line 750
     move-object/from16 v31, v17
 
-    .line 750
+    .line 752
     move/from16 v17, v27
 
-    .line 752
+    .line 754
     move-wide/from16 v27, v34
 
-    .line 754
+    .line 756
     move-object/from16 v35, p5
 
-    .line 756
+    .line 758
     move-object/from16 v34, v19
 
-    .line 758
+    .line 760
     move/from16 v19, v11
 
-    .line 760
+    .line 762
     move-object v11, v3
 
-    .line 762
+    .line 764
     move-object/from16 v3, p0
 
-    .line 763
+    .line 765
     move-wide/from16 v41, v9
 
-    .line 765
+    .line 767
     move/from16 v9, p4
 
-    .line 767
+    .line 769
     move/from16 v10, v22
 
-    .line 769
+    .line 771
     move-wide/from16 v21, v41
 
-    .line 771
+    .line 773
     :goto_e
     add-int/lit8 v12, v12, 0x1
 
-    .line 773
+    .line 775
     move-object/from16 v0, p7
 
-    .line 775
+    .line 777
     move-object v3, v11
 
-    .line 777
+    .line 779
     move/from16 v11, v19
 
-    .line 778
+    .line 780
     move-wide/from16 v36, v29
 
-    .line 780
+    .line 782
     move-object/from16 v38, v32
 
-    .line 782
+    .line 784
     move-object/from16 v19, v34
 
-    .line 784
+    .line 786
     move-object/from16 p5, v35
 
-    .line 786
+    .line 788
     move-wide/from16 v34, v27
 
-    .line 788
+    .line 790
     move/from16 v27, v17
 
-    .line 790
+    .line 792
     move-object/from16 v17, v31
 
-    .line 792
+    .line 794
     move-object/from16 v31, v33
 
-    .line 794
+    .line 796
     move/from16 v41, v15
 
-    .line 796
+    .line 798
     move/from16 v15, p10
 
-    .line 798
+    .line 800
     move-wide/from16 v42, v21
 
-    .line 800
+    .line 802
     move/from16 v22, v10
 
-    .line 802
+    .line 804
     move-object/from16 v21, v14
 
-    .line 804
+    .line 806
     move/from16 v14, v41
 
-    .line 806
+    .line 808
     move-wide/from16 v9, v42
 
-    .line 808
+    .line 810
     goto/16 :goto_8
 
-    .line 810
+    .line 812
     :cond_11
     move-object/from16 v3, p0
 
-    .line 812
+    .line 814
     move/from16 v10, v22
 
-    .line 814
+    .line 816
     move-wide/from16 v27, v34
 
-    .line 816
+    .line 818
     int-to-long v0, v6
 
-    .line 818
+    .line 820
     add-long v0, v0, v27
 
-    .line 819
+    .line 821
     long-to-int v0, v0
 
-    .line 821
+    .line 823
     sub-int v1, v2, v10
 
-    .line 822
+    .line 824
     const/4 v2, 0x0
 
-    .line 824
+    .line 826
     invoke-static {v0, v2, v1}, Lkotlin/ranges/RangesKt;->coerceIn(III)I
 
-    .line 825
+    .line 827
     move-result v1
 
-    .line 828
+    .line 830
     move v15, v10
 
-    .line 829
+    .line 831
     move v5, v13
 
-    .line 830
+    .line 832
     :goto_f
     add-int/2addr v1, v15
 
-    .line 831
+    .line 833
     if-gez v1, :cond_12
 
-    .line 832
+    .line 834
     move v1, v2
 
-    .line 834
+    .line 836
     :cond_12
     invoke-static {v1, v7}, Ljava/lang/Math;->max(II)I
 
-    .line 835
+    .line 837
     move-result v0
 
-    .line 838
+    .line 840
     move/from16 v1, p2
 
-    .line 839
+    .line 841
     invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
 
-    .line 841
+    .line 843
     move-result v1
 
-    .line 844
+    .line 846
     invoke-static {v5, v1}, Ljava/lang/Math;->max(II)I
 
-    .line 845
+    .line 847
     move-result v6
 
-    .line 848
+    .line 850
     move/from16 v1, v20
 
-    .line 849
+    .line 851
     new-array v4, v1, [I
 
-    .line 851
+    .line 853
     move v5, v2
 
-    .line 853
+    .line 855
     :goto_10
     if-ge v5, v1, :cond_13
 
-    .line 854
+    .line 856
     aput v2, v4, v5
 
-    .line 856
+    .line 858
     add-int/lit8 v5, v5, 0x1
 
-    .line 858
+    .line 860
     goto :goto_10
 
-    .line 860
+    .line 862
     :cond_13
     move-object/from16 v5, p6
 
-    .line 861
+    .line 863
     move-object/from16 v7, v16
 
-    .line 863
+    .line 865
     invoke-interface {v3, v0, v7, v4, v5}, Landroidx/compose/foundation/layout/RowColumnMeasurePolicy;->populateMainAxisPositions(I[I[ILandroidx/compose/ui/layout/MeasureScope;)V
 
-    .line 865
+    .line 867
     move-object/from16 v1, p0
 
-    .line 868
+    .line 870
     move-object/from16 v2, p8
 
-    .line 870
+    .line 872
     move-object/from16 v3, p6
 
-    .line 872
+    .line 874
     move v5, v0
 
-    .line 874
+    .line 876
     move-object/from16 v7, p11
 
-    .line 875
+    .line 877
     move/from16 v8, p12
 
-    .line 877
+    .line 879
     move/from16 v9, p9
 
-    .line 879
+    .line 881
     move/from16 v10, p10
 
-    .line 881
+    .line 883
     invoke-interface/range {v1 .. v10}, Landroidx/compose/foundation/layout/RowColumnMeasurePolicy;->placeHelper([Landroidx/compose/ui/layout/Placeable;Landroidx/compose/ui/layout/MeasureScope;[III[IIII)Landroidx/compose/ui/layout/MeasureResult;
 
-    .line 883
+    .line 885
     move-result-object v0
 
-    .line 886
+    .line 888
     return-object v0
-    .line 887
+    .line 889
 .end method

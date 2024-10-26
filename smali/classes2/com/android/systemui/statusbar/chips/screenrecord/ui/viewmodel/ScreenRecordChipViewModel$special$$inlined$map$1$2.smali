@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/chips/screenrecord/ui/viewmodel/ScreenRecordChipViewModel$special$$inlined$map$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -169,7 +169,7 @@
     new-instance v4, Lcom/android/systemui/common/shared/model/Icon$Resource;
 
     .line 80
-    const v7, 0x7f080914    # @drawable/ic_screenrecord 'res/drawable/ic_screenrecord.xml'
+    const v7, 0x7f08093e    # @drawable/ic_screenrecord 'res/drawable/ic_screenrecord.xml'
 
     .line 82
     const/4 v8, 0x0
@@ -300,4 +300,5 @@
 
     .line 164
     throw v0
+    .line 167
 .end method

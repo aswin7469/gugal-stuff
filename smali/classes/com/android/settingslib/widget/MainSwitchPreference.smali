@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/MainSwitchPreference;
 .super Landroidx/preference/TwoStatePreference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
@@ -29,7 +29,7 @@
     iput-object v0, p0, Lcom/android/settingslib/widget/MainSwitchPreference;->mSwitchChangeListeners:Ljava/util/List;
 
     .line 10
-    const v1, 0x7f0e0249    # @layout/settingslib_main_switch_layout 'res/layout/settingslib_main_switch_layout.xml'
+    const v1, 0x7f0d0259    # @layout/settingslib_main_switch_layout 'res/layout/settingslib_main_switch_layout.xml'
 
     .line 12
     iput v1, p0, Landroidx/preference/Preference;->mLayoutResId:I
@@ -106,7 +106,7 @@
     iput-boolean v0, p1, Landroidx/preference/PreferenceViewHolder;->mDividerAllowedBelow:Z
 
     .line 8
-    const v1, 0x7f0b06fd    # @id/settingslib_main_switch_bar
+    const v1, 0x7f0a0728    # @id/settingslib_main_switch_bar
 
     .line 10
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

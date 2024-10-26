@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -204,254 +204,244 @@
     const/4 v1, 0x0
 
     .line 115
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_6
 
     .line 116
-    invoke-static {}, Lcom/android/systemui/Flags;->keyboardShortcutHelperRewrite()Z
-
-    .line 118
-    move-result p1
-
-    .line 121
-    if-nez p1, :cond_3
-
-    .line 122
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 124
+    .line 118
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->shouldUseTabletKeyboardShortcuts()Z
 
-    .line 126
+    .line 120
     move-result p1
 
-    .line 129
+    .line 123
     if-eqz p1, :cond_2
 
-    .line 130
+    .line 124
     invoke-static {}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;->dismiss()V
 
-    .line 132
+    .line 126
     goto :goto_0
 
-    .line 135
+    .line 129
     :cond_2
     invoke-static {}, Lcom/android/systemui/statusbar/KeyboardShortcuts;->dismiss()V
 
-    .line 136
-    :cond_3
+    .line 130
     :goto_0
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 139
+    .line 133
     iget-object p1, p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mRemoteInputManager:Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
 
-    .line 141
+    .line 135
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->closeRemoteInputs()V
 
-    .line 143
+    .line 137
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 146
+    .line 140
     iget-object p1, p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
-    .line 148
+    .line 142
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getSendingUserId()I
 
-    .line 150
+    .line 144
     move-result v0
 
-    .line 153
+    .line 147
     check-cast p1, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 154
+    .line 148
     invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->isCurrentProfile(I)Z
 
-    .line 156
+    .line 150
     move-result p1
 
-    .line 159
-    if-eqz p1, :cond_6
+    .line 153
+    if-eqz p1, :cond_5
 
-    .line 160
+    .line 154
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 162
+    .line 156
     iget-object p1, p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeLogger:Lcom/android/systemui/shade/ShadeLogger;
 
-    .line 164
+    .line 158
     const-string v0, "ACTION_CLOSE_SYSTEM_DIALOGS intent: closing shade"
 
-    .line 166
+    .line 160
     invoke-virtual {p1, v0}, Lcom/android/systemui/shade/ShadeLogger;->d(Ljava/lang/String;)V
 
-    .line 168
-    if-eqz p2, :cond_5
+    .line 162
+    if-eqz p2, :cond_4
 
-    .line 171
+    .line 165
     const-string p1, "recentapps"
 
-    .line 173
+    .line 167
     invoke-virtual {p2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 175
+    .line 169
     move-result p1
 
-    .line 178
-    if-eqz p1, :cond_4
+    .line 172
+    if-eqz p1, :cond_3
 
-    .line 179
+    .line 173
     const/4 v1, 0x2
 
-    .line 181
-    :cond_4
+    .line 175
+    :cond_3
     const-string p1, "dream"
 
-    .line 182
+    .line 176
     invoke-virtual {p2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 184
+    .line 178
     move-result p1
 
-    .line 187
-    if-eqz p1, :cond_5
+    .line 181
+    if-eqz p1, :cond_4
 
-    .line 188
+    .line 182
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 190
+    .line 184
     iget-object p1, p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mScreenOffAnimationController:Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;
 
-    .line 192
+    .line 186
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;->shouldExpandNotifications()Z
 
-    .line 194
+    .line 188
     move-result p1
 
-    .line 197
-    if-eqz p1, :cond_5
+    .line 191
+    if-eqz p1, :cond_4
 
-    .line 198
+    .line 192
     or-int/lit8 v1, v1, 0x4
 
+    .line 194
+    :cond_4
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
+
+    .line 196
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeController:Lcom/android/systemui/shade/ShadeController;
+
+    .line 198
+    invoke-interface {p0, v1}, Lcom/android/systemui/shade/ShadeController;->animateCollapseShade(I)V
+
     .line 200
+    goto :goto_1
+
+    .line 203
     :cond_5
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 202
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeController:Lcom/android/systemui/shade/ShadeController;
-
     .line 204
-    invoke-interface {p0, v1}, Lcom/android/systemui/shade/ShadeController;->animateCollapseShade(I)V
-
-    .line 206
-    goto :goto_1
-
-    .line 209
-    :cond_6
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
-
-    .line 210
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mShadeLogger:Lcom/android/systemui/shade/ShadeLogger;
 
-    .line 212
+    .line 206
     const-string p1, "ACTION_CLOSE_SYSTEM_DIALOGS intent: non-matching user ID"
 
-    .line 214
+    .line 208
     invoke-virtual {p0, p1}, Lcom/android/systemui/shade/ShadeLogger;->d(Ljava/lang/String;)V
 
-    .line 216
+    .line 210
     goto :goto_1
 
-    .line 219
-    :cond_7
+    .line 213
+    :cond_6
     const-string p2, "android.intent.action.SCREEN_OFF"
 
-    .line 220
+    .line 214
     invoke-virtual {p2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 222
+    .line 216
     move-result p1
 
-    .line 225
-    if-eqz p1, :cond_a
+    .line 219
+    if-eqz p1, :cond_9
 
-    .line 226
+    .line 220
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 228
+    .line 222
     iget-object p1, p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNotificationShadeWindowController:Lcom/android/systemui/statusbar/NotificationShadeWindowController;
 
-    .line 230
-    if-eqz p1, :cond_8
+    .line 224
+    if-eqz p1, :cond_7
 
-    .line 232
+    .line 226
     check-cast p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
 
-    .line 234
+    .line 228
     iget-object p2, p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mCurrentState:Lcom/android/systemui/shade/NotificationShadeWindowState;
 
-    .line 236
+    .line 230
     iput-boolean v1, p2, Lcom/android/systemui/shade/NotificationShadeWindowState;->windowNotTouchable:Z
 
-    .line 238
+    .line 232
     invoke-virtual {p1, p2}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->apply(Lcom/android/systemui/shade/NotificationShadeWindowState;)V
 
-    .line 240
-    :cond_8
+    .line 234
+    :cond_7
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 243
+    .line 237
     iget-object p2, p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mStatusBarTransitions:Lcom/android/systemui/statusbar/phone/PhoneStatusBarTransitions;
 
-    .line 245
-    if-eqz p2, :cond_9
+    .line 239
+    if-eqz p2, :cond_8
 
-    .line 247
+    .line 241
     iget-object p2, p2, Lcom/android/systemui/statusbar/phone/BarTransitions;->mBarBackground:Lcom/android/systemui/statusbar/phone/BarTransitions$BarBackgroundDrawable;
 
-    .line 249
+    .line 243
     iget-boolean v0, p2, Lcom/android/systemui/statusbar/phone/BarTransitions$BarBackgroundDrawable;->mAnimating:Z
 
-    .line 251
-    if-eqz v0, :cond_9
+    .line 245
+    if-eqz v0, :cond_8
 
-    .line 253
+    .line 247
     iput-boolean v1, p2, Lcom/android/systemui/statusbar/phone/BarTransitions$BarBackgroundDrawable;->mAnimating:Z
 
-    .line 255
+    .line 249
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    .line 257
-    :cond_9
+    .line 251
+    :cond_8
     iget p2, p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mDisplayId:I
 
-    .line 260
+    .line 254
     iget-object p1, p1, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNavigationBarController:Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;
 
-    .line 262
+    .line 256
     invoke-virtual {p1, p2}, Lcom/android/systemui/navigationbar/NavigationBarControllerImpl;->finishBarAnimations(I)V
 
-    .line 264
+    .line 258
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$8;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 267
+    .line 261
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mNotificationsController:Lcom/android/systemui/statusbar/notification/init/NotificationsController;
 
-    .line 269
+    .line 263
     invoke-interface {p0}, Lcom/android/systemui/statusbar/notification/init/NotificationsController;->resetUserExpandedStates()V
 
-    .line 271
-    :cond_a
+    .line 265
+    :cond_9
     :goto_1
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 274
+    .line 268
     return-void
 
-    .line 277
+    .line 271
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 278
+    .line 272
 .end method

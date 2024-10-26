@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/globalactions/GlobalActionsDialogLite$EmergencyAction;
 .super Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -15,7 +15,7 @@
     iput-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$EmergencyAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialogLite;
 
     .line 2
-    const v0, 0x1040448    # @android:string/heavy_weight_notification_detail
+    const v0, 0x104043f    # @android:string/granularity_label_word
 
     .line 4
     invoke-direct {p0, p1, p2, v0}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialogLite;II)V
@@ -49,7 +49,7 @@
     move-result-object p0
 
     .line 14
-    const p3, 0x7f0600f1    # @color/global_actions_lite_text '@android:color/hint_foreground_material_light'
+    const p3, 0x7f0600fa    # @color/global_actions_lite_text '#f0f0f0'
 
     .line 15
     invoke-virtual {p0, p3}, Landroid/content/res/Resources;->getColor(I)I
@@ -64,7 +64,7 @@
     move-result-object p3
 
     .line 25
-    const p4, 0x7f0600f0    # @color/global_actions_lite_emergency_icon '@android:color/accessibility_magnification_background'
+    const p4, 0x7f0600f9    # @color/global_actions_lite_emergency_icon '@color/GM2_grey_900'
 
     .line 26
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getColor(I)I
@@ -79,7 +79,7 @@
     move-result-object p1
 
     .line 36
-    const p4, 0x7f0600ef    # @color/global_actions_lite_emergency_background '@android:color/tertiary_material_settings'
+    const p4, 0x7f0600f8    # @color/global_actions_lite_emergency_background '#f85d4d'
 
     .line 37
     invoke-virtual {p1, p4}, Landroid/content/res/Resources;->getColor(I)I

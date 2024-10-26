@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/HandleMenu;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -11,8 +11,6 @@
 .field public final mCaptionHeight:I
 
 .field public final mContext:Landroid/content/Context;
-
-.field public final mDisplayController:Lcom/android/wm/shell/common/DisplayController;
 
 .field public final mGlobalMenuPosition:Landroid/graphics/Point;
 
@@ -47,37 +45,37 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;ILcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel$DesktopModeTouchEventListener;Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel$DesktopModeTouchEventListener;Landroid/graphics/Bitmap;Ljava/lang/CharSequence;Lcom/android/wm/shell/common/DisplayController;Lcom/android/wm/shell/splitscreen/SplitScreenController;ZI)V
-    .locals 1
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Landroid/graphics/PointF;
+    new-instance p7, Landroid/graphics/PointF;
 
     .line 5
-    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
+    invoke-direct {p7}, Landroid/graphics/PointF;-><init>()V
 
     .line 7
-    iput-object v0, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mHandleMenuPosition:Landroid/graphics/PointF;
+    iput-object p7, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mHandleMenuPosition:Landroid/graphics/PointF;
 
     .line 10
-    new-instance v0, Landroid/graphics/Point;
+    new-instance p7, Landroid/graphics/Point;
 
     .line 12
-    invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
+    invoke-direct {p7}, Landroid/graphics/Point;-><init>()V
 
     .line 14
-    iput-object v0, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mGlobalMenuPosition:Landroid/graphics/Point;
+    iput-object p7, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mGlobalMenuPosition:Landroid/graphics/Point;
 
     .line 17
     iput-object p1, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mParentDecor:Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;
 
     .line 19
-    iget-object v0, p1, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
+    iget-object p7, p1, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
 
     .line 21
-    iput-object v0, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mContext:Landroid/content/Context;
+    iput-object p7, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mContext:Landroid/content/Context;
 
     .line 23
     iget-object p1, p1, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
@@ -86,120 +84,117 @@
     iput-object p1, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 27
-    iput-object p7, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
-
-    .line 29
     iput-object p8, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mSplitScreenController:Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
-    .line 31
+    .line 29
     iput p2, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mLayoutResId:I
 
-    .line 33
+    .line 31
     iput-object p3, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 35
+    .line 33
     iput-object p4, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mOnTouchListener:Landroid/view/View$OnTouchListener;
 
-    .line 37
+    .line 35
     iput-object p5, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mAppIconBitmap:Landroid/graphics/Bitmap;
 
-    .line 39
+    .line 37
     iput-object p6, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mAppName:Ljava/lang/CharSequence;
 
-    .line 41
+    .line 39
     iput-boolean p9, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mShouldShowWindowingPill:Z
 
-    .line 43
+    .line 41
     iput p10, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mCaptionHeight:I
 
-    .line 45
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 43
+    invoke-virtual {p7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 47
+    .line 45
     move-result-object p1
 
-    .line 50
-    const p2, 0x7f070254    # @dimen/desktop_mode_handle_menu_width '216.0dp'
+    .line 48
+    const p2, 0x7f070276    # @dimen/desktop_mode_handle_menu_width '216.0dp'
 
-    .line 51
+    .line 49
     invoke-static {p2, p1}, Lcom/android/wm/shell/windowdecor/HandleMenu;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
 
-    .line 54
+    .line 52
     move-result p2
 
-    .line 57
+    .line 55
     iput p2, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mMenuWidth:I
 
-    .line 58
-    const p2, 0x7f07024e    # @dimen/desktop_mode_handle_menu_height '328.0dp'
+    .line 56
+    const p2, 0x7f070270    # @dimen/desktop_mode_handle_menu_height '328.0dp'
 
-    .line 60
+    .line 58
     invoke-static {p2, p1}, Lcom/android/wm/shell/windowdecor/HandleMenu;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
 
-    .line 63
+    .line 61
     move-result p2
 
-    .line 66
+    .line 64
     if-nez p9, :cond_0
 
-    .line 67
-    const p3, 0x7f070255    # @dimen/desktop_mode_handle_menu_windowing_pill_height '52.0dp'
+    .line 65
+    const p3, 0x7f070277    # @dimen/desktop_mode_handle_menu_windowing_pill_height '52.0dp'
 
-    .line 69
+    .line 67
     invoke-static {p3, p1}, Lcom/android/wm/shell/windowdecor/HandleMenu;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
 
-    .line 72
+    .line 70
     move-result p3
+
+    .line 73
+    sub-int/2addr p2, p3
+
+    .line 74
+    :cond_0
+    const p3, 0x7f070273    # @dimen/desktop_mode_handle_menu_more_actions_pill_height '52.0dp'
 
     .line 75
-    sub-int/2addr p2, p3
-
-    .line 76
-    :cond_0
-    const p3, 0x7f070251    # @dimen/desktop_mode_handle_menu_more_actions_pill_height '52.0dp'
-
-    .line 77
     invoke-static {p3, p1}, Lcom/android/wm/shell/windowdecor/HandleMenu;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
 
-    .line 80
+    .line 78
     move-result p3
 
-    .line 83
+    .line 81
     sub-int/2addr p2, p3
 
-    .line 84
+    .line 82
     iput p2, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mMenuHeight:I
 
-    .line 85
-    const p2, 0x7f070250    # @dimen/desktop_mode_handle_menu_margin_top '4.0dp'
+    .line 83
+    const p2, 0x7f070272    # @dimen/desktop_mode_handle_menu_margin_top '4.0dp'
 
-    .line 87
+    .line 85
     invoke-static {p2, p1}, Lcom/android/wm/shell/windowdecor/HandleMenu;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
 
-    .line 90
+    .line 88
     move-result p2
 
-    .line 93
+    .line 91
     iput p2, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mMarginMenuTop:I
 
-    .line 94
-    const p2, 0x7f07024f    # @dimen/desktop_mode_handle_menu_margin_start '6.0dp'
+    .line 92
+    const p2, 0x7f070271    # @dimen/desktop_mode_handle_menu_margin_start '6.0dp'
 
-    .line 96
+    .line 94
     invoke-static {p2, p1}, Lcom/android/wm/shell/windowdecor/HandleMenu;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
 
-    .line 99
+    .line 97
     move-result p1
 
-    .line 102
+    .line 100
     iput p1, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mMarginMenuStart:I
 
-    .line 103
+    .line 101
     invoke-virtual {p0}, Lcom/android/wm/shell/windowdecor/HandleMenu;->updateHandleMenuPillPositions()V
 
-    .line 105
+    .line 103
     return-void
-    .line 108
+    .line 106
 .end method
 
 .method public static loadDimensionPixelSize(ILandroid/content/res/Resources;)I
@@ -317,154 +312,138 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->enableAdditionalWindowsAboveStatusBar()Z
 
     .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    iget-object v0, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 8
-    invoke-virtual {v0}, Landroid/app/ActivityManager$RunningTaskInfo;->isFreeform()Z
-
-    .line 10
-    move-result v0
-
-    .line 13
-    if-nez v0, :cond_0
-
-    .line 14
-    return-void
-
-    .line 16
-    :cond_0
     iget-object v0, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mHandleMenuViewContainer:Lcom/android/wm/shell/windowdecor/additionalviewcontainer/AdditionalViewContainer;
 
-    .line 17
-    invoke-virtual {v0}, Lcom/android/wm/shell/windowdecor/additionalviewcontainer/AdditionalViewContainer;->getView()Landroid/view/View;
+    .line 5
+    check-cast v0, Lcom/android/wm/shell/windowdecor/additionalviewcontainer/AdditionalViewHostViewContainer;
 
-    .line 19
+    .line 7
+    iget-object v0, v0, Lcom/android/wm/shell/windowdecor/additionalviewcontainer/AdditionalViewHostViewContainer;->windowViewHost:Landroid/view/SurfaceControlViewHost;
+
+    .line 9
+    invoke-virtual {v0}, Landroid/view/SurfaceControlViewHost;->getView()Landroid/view/View;
+
+    .line 11
     move-result-object v0
 
-    .line 22
-    const v1, 0x7f0b01e2    # @id/collapse_menu_button
+    .line 14
+    const v1, 0x7f0a01ed    # @id/collapse_menu_button
 
-    .line 23
+    .line 15
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 26
+    .line 18
     move-result-object v0
 
-    .line 29
+    .line 21
     check-cast v0, Lcom/android/wm/shell/windowdecor/HandleMenuImageButton;
 
-    .line 30
+    .line 22
     new-instance v1, Landroid/graphics/PointF;
 
-    .line 32
+    .line 24
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    .line 34
+    .line 26
     move-result v2
 
-    .line 37
+    .line 29
     iget-object v3, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mHandleMenuPosition:Landroid/graphics/PointF;
 
-    .line 38
+    .line 30
     iget v3, v3, Landroid/graphics/PointF;->x:F
 
-    .line 40
+    .line 32
     sub-float/2addr v2, v3
 
-    .line 42
+    .line 34
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    .line 43
+    .line 35
     move-result v3
 
-    .line 46
+    .line 38
     iget-object p0, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mHandleMenuPosition:Landroid/graphics/PointF;
 
-    .line 47
+    .line 39
     iget p0, p0, Landroid/graphics/PointF;->y:F
 
-    .line 49
+    .line 41
     sub-float/2addr v3, p0
 
-    .line 51
+    .line 43
     invoke-direct {v1, v2, v3}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 52
+    .line 44
     iget p0, v1, Landroid/graphics/PointF;->x:F
 
-    .line 55
+    .line 47
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
-    .line 57
+    .line 49
     invoke-static {v0, p0, v1}, Lcom/android/wm/shell/windowdecor/HandleMenu;->pointInView(Landroid/view/View;FF)Z
 
-    .line 59
+    .line 51
     move-result p0
 
-    .line 62
+    .line 54
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    .line 63
+    .line 55
     move-result p1
 
-    .line 66
+    .line 58
     const/4 v1, 0x0
 
-    .line 67
+    .line 59
     const/4 v2, 0x1
+
+    .line 60
+    if-eqz p0, :cond_0
+
+    .line 61
+    if-eq p1, v2, :cond_0
+
+    .line 63
+    move v3, v2
+
+    .line 65
+    goto :goto_0
+
+    .line 66
+    :cond_0
+    move v3, v1
+
+    .line 67
+    :goto_0
+    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setHovered(Z)V
 
     .line 68
     if-eqz p0, :cond_1
 
-    .line 69
-    if-eq p1, v2, :cond_1
-
     .line 71
-    move v3, v2
+    if-nez p1, :cond_1
 
     .line 73
-    goto :goto_0
-
-    .line 74
-    :cond_1
-    move v3, v1
+    move v1, v2
 
     .line 75
-    :goto_0
-    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setHovered(Z)V
+    :cond_1
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setPressed(Z)V
 
     .line 76
-    if-eqz p0, :cond_2
+    if-ne p1, v2, :cond_2
 
     .line 79
-    if-nez p1, :cond_2
+    if-eqz p0, :cond_2
 
     .line 81
-    move v1, v2
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->performClick()Z
 
     .line 83
     :cond_2
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setPressed(Z)V
-
-    .line 84
-    if-ne p1, v2, :cond_3
-
-    .line 87
-    if-eqz p0, :cond_3
-
-    .line 89
-    invoke-virtual {v0}, Landroid/widget/ImageButton;->performClick()Z
-
-    .line 91
-    :cond_3
     return-void
-    .line 94
+    .line 86
 .end method
 
 .method public final updateHandleMenuPillPositions()V
@@ -692,7 +671,7 @@
     iget v4, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mLayoutResId:I
 
     .line 137
-    const v5, 0x7f0e00a8    # @layout/desktop_mode_app_header 'res/layout/desktop_mode_app_header.xml'
+    const v5, 0x7f0d00b1    # @layout/desktop_mode_app_header 'res/layout/desktop_mode_app_header.xml'
 
     .line 139
     if-ne v4, v5, :cond_4
@@ -705,98 +684,34 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->enableAdditionalWindowsAboveStatusBar()Z
 
     .line 145
-    move-result v1
-
-    .line 148
-    if-eqz v1, :cond_5
-
-    .line 149
-    iget-object v1, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 151
-    iget v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
-
-    .line 153
-    iget-object v2, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
-
-    .line 155
-    invoke-virtual {v2, v1}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
-
-    .line 157
-    move-result-object v1
-
-    .line 160
-    iget-object v2, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mGlobalMenuPosition:Landroid/graphics/Point;
-
-    .line 161
-    iget v3, v2, Landroid/graphics/Point;->x:I
-
-    .line 163
-    iget v4, v1, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
-
-    .line 165
-    sub-int/2addr v0, v4
-
-    .line 167
-    div-int/lit8 v0, v0, 0x2
-
-    .line 168
-    add-int/2addr v0, v3
-
-    .line 170
-    iget v2, v2, Landroid/graphics/Point;->y:I
-
-    .line 171
-    iget v3, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mMenuHeight:I
-
-    .line 173
-    iget v1, v1, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
-
-    .line 175
-    sub-int/2addr v3, v1
-
-    .line 177
-    div-int/lit8 v3, v3, 0x2
-
-    .line 178
-    add-int/2addr v2, v3
-
-    .line 180
-    move v1, v0
-
-    .line 181
-    goto :goto_1
-
-    .line 182
-    :cond_5
     invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
-    .line 183
+    .line 148
     move-result v1
 
-    .line 186
+    .line 151
     div-int/lit8 v1, v1, 0x2
 
-    .line 187
+    .line 152
     div-int/lit8 v0, v0, 0x2
 
-    .line 189
+    .line 154
     sub-int/2addr v1, v0
 
-    .line 191
+    .line 156
     :goto_1
     iget-object p0, p0, Lcom/android/wm/shell/windowdecor/HandleMenu;->mHandleMenuPosition:Landroid/graphics/PointF;
 
-    .line 192
+    .line 157
     int-to-float v0, v1
 
-    .line 194
+    .line 159
     int-to-float v1, v2
 
-    .line 195
+    .line 160
     invoke-virtual {p0, v0, v1}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 196
+    .line 161
     return-void
-    .line 199
+    .line 164
 .end method

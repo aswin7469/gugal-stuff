@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/globalactions/GlobalActionsDialogLite$PowerOptionsAction;
 .super Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -15,10 +15,10 @@
     iput-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$PowerOptionsAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialogLite;
 
     .line 2
-    const v0, 0x7f08091f    # @drawable/ic_settings_power 'res/drawable/ic_settings_power.xml'
+    const v0, 0x7f08094c    # @drawable/ic_settings_power 'res/drawable/ic_settings_power.xml'
 
     .line 4
-    const v1, 0x104044d    # @android:string/hours
+    const v1, 0x1040444    # @android:string/harmful_app_warning_title
 
     .line 7
     invoke-direct {p0, p1, v0, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialogLite;II)V
@@ -58,7 +58,7 @@
     move-result-object v3
 
     .line 16
-    const v4, 0x7f0e00c5    # @layout/global_actions_power_dialog 'res/layout/global_actions_power_dialog.xml'
+    const v4, 0x7f0d00ce    # @layout/global_actions_power_dialog 'res/layout/global_actions_power_dialog.xml'
 
     .line 17
     const/4 v5, 0x0
@@ -138,7 +138,7 @@
     invoke-virtual {v0, v3}, Landroid/view/Window;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 69
-    const v3, 0x7f080661    # @drawable/control_background 'res/drawable/control_background.xml'
+    const v3, 0x7f080669    # @drawable/control_background 'res/drawable/control_background.xml'
 
     .line 72
     invoke-virtual {v1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;

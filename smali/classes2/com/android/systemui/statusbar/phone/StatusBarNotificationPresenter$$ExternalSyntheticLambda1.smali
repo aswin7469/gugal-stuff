@@ -1,31 +1,31 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic $r8$classId:I
-
 .field public final synthetic f$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
+
+.field public final synthetic f$1:Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProvider;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;I)V
+.method public synthetic constructor <init>(Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProvider;)V
     .locals 0
 
     .line 1
-    iput p2, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda1;->$r8$classId:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda1;->f$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 5
+    iput-object p2, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda1;->f$1:Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProvider;
 
-    .line 6
+    .line 7
     return-void
     .line 9
 .end method
@@ -33,138 +33,186 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 4
 
     .line 1
-    iget v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda1;->$r8$classId:I
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda1;->f$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda1;->f$0:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda1;->f$1:Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProvider;
 
     .line 4
-    packed-switch v0, :pswitch_data_0
-
-    .line 6
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mNsslController:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
-
-    .line 9
-    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotificationListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
-
-    .line 11
-    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
-
-    .line 13
-    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
-
-    .line 15
-    iget-boolean v0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mPulsing:Z
-
-    .line 17
-    if-eqz v0, :cond_0
-
-    .line 19
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
-
-    .line 21
-    check-cast v0, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;
-
-    .line 23
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->hasNotifications()Z
-
-    .line 25
-    move-result v0
-
-    .line 28
-    if-nez v0, :cond_0
-
-    .line 29
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mDozeScrimController:Lcom/android/systemui/statusbar/phone/DozeScrimController;
-
-    .line 31
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeScrimController;->mPulseOut:Lcom/android/systemui/statusbar/phone/DozeScrimController$2;
-
-    .line 33
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/DozeScrimController$2;->run()V
-
-    .line 35
-    :cond_0
-    return-void
-
-    .line 38
-    :pswitch_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mPanelExpansionInteractor:Lcom/android/systemui/shade/domain/interactor/PanelExpansionInteractor;
-
-    .line 39
-    invoke-interface {v0}, Lcom/android/systemui/shade/domain/interactor/PanelExpansionInteractor;->isTracking()Z
-
-    .line 41
-    move-result v0
-
-    .line 44
-    if-nez v0, :cond_1
-
-    .line 45
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mQsController:Lcom/android/systemui/shade/QuickSettingsController;
-
-    .line 47
-    invoke-interface {v0}, Lcom/android/systemui/shade/QuickSettingsController;->getExpanded()Z
-
-    .line 49
-    move-result v0
-
-    .line 52
-    if-nez v0, :cond_1
-
-    .line 53
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
-
-    .line 55
-    move-object v1, v0
-
-    .line 57
-    check-cast v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
-
-    .line 58
-    iget v1, v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
-
-    .line 60
-    const/4 v2, 0x2
-
-    .line 62
-    if-ne v1, v2, :cond_1
-
-    .line 63
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->isCollapsing()Z
-
-    .line 65
-    move-result p0
-
-    .line 68
-    if-nez p0, :cond_1
-
-    .line 69
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 71
-    const/4 p0, 0x0
+    .line 6
+    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda3;
+
+    .line 9
+    const/4 v2, 0x0
+
+    .line 11
+    invoke-direct {v1, v0, v2}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;I)V
+
+    .line 12
+    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mNotifShadeEventSource:Lcom/android/systemui/statusbar/notification/collection/coordinator/ShadeEventCoordinator;
+
+    .line 15
+    iget-object v3, v2, Lcom/android/systemui/statusbar/notification/collection/coordinator/ShadeEventCoordinator;->mShadeEmptiedCallback:Ljava/lang/Runnable;
+
+    .line 17
+    if-nez v3, :cond_2
+
+    .line 19
+    iput-object v1, v2, Lcom/android/systemui/statusbar/notification/collection/coordinator/ShadeEventCoordinator;->mShadeEmptiedCallback:Ljava/lang/Runnable;
+
+    .line 21
+    new-instance v1, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda3;
+
+    .line 23
+    const/4 v3, 0x1
+
+    .line 25
+    invoke-direct {v1, v0, v3}, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;I)V
+
+    .line 26
+    iget-object v3, v2, Lcom/android/systemui/statusbar/notification/collection/coordinator/ShadeEventCoordinator;->mNotifRemovedByUserCallback:Ljava/lang/Runnable;
+
+    .line 29
+    if-nez v3, :cond_1
+
+    .line 31
+    iput-object v1, v2, Lcom/android/systemui/statusbar/notification/collection/coordinator/ShadeEventCoordinator;->mNotifRemovedByUserCallback:Ljava/lang/Runnable;
+
+    .line 33
+    check-cast p0, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;
+
+    .line 35
+    iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mAlertsDisabledCondition:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$4;
+
+    .line 37
+    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addCondition(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionCondition;)V
+
+    .line 39
+    iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mVrModeCondition:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$4;
+
+    .line 42
+    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addCondition(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionCondition;)V
+
+    .line 44
+    iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mNeedsRedactionFilter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$6;
+
+    .line 47
+    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addFilter(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionFilter;)V
+
+    .line 49
+    iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mPanelsDisabledCondition:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$4;
+
+    .line 52
+    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionDecisionProviderImpl;->addCondition(Lcom/android/systemui/statusbar/notification/interruption/VisualInterruptionCondition;)V
+
+    .line 54
+    iget-object p0, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mLockscreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+
+    .line 57
+    check-cast p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
+
+    .line 59
+    iput-object v0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mPresenter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
+
+    .line 61
+    invoke-static {}, Landroid/app/Flags;->keyguardPrivateNotifications()Z
+
+    .line 63
+    move-result v1
+
+    .line 66
+    if-nez v1, :cond_0
+
+    .line 67
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->init$1$2()V
+
+    .line 69
+    :cond_0
+    iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mGutsManager:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;
+
+    .line 72
+    iput-object v0, v1, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mPresenter:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;
 
     .line 74
-    check-cast v0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
+    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mNotifListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
-    .line 75
-    const/4 v1, 0x1
-
-    .line 77
-    invoke-virtual {v0, v1, p0}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->setState(IZ)Z
+    .line 76
+    iput-object v2, v1, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mListContainer:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$NotificationListContainerImpl;
 
     .line 78
-    :cond_1
+    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$2;
+
+    .line 80
+    iput-object v2, v1, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;->mOnSettingsClickListener:Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter$2;
+
+    .line 82
+    iget p0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mCurrentUserId:I
+
+    .line 84
+    iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
+
+    .line 86
+    check-cast v1, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;
+
+    .line 88
+    iput p0, v1, Lcom/android/systemui/statusbar/policy/BaseHeadsUpManager;->mUser:I
+
+    .line 90
+    iget-object p0, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mCommandQueue:Lcom/android/systemui/statusbar/CommandQueue;
+
+    .line 92
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/CommandQueue;->animateCollapsePanels()V
+
+    .line 94
+    iget-object p0, v0, Lcom/android/systemui/statusbar/phone/StatusBarNotificationPresenter;->mMediaManager:Lcom/android/systemui/statusbar/NotificationMediaManager;
+
+    .line 97
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/NotificationMediaManager;->clearMediaNotification()V
+
+    .line 99
     return-void
 
-    .line 81
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-    .line 82
+    .line 102
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    .line 103
+    const-string v0, "mNotifRemovedByUserCallback already set"
+
+    .line 105
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 107
+    move-result-object v0
+
+    .line 110
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 111
+    throw p0
+
+    .line 114
+    :cond_2
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    .line 115
+    const-string v0, "mShadeEmptiedCallback already set"
+
+    .line 117
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 119
+    move-result-object v0
+
+    .line 122
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 123
+    throw p0
+    .line 126
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/classifier/ZigZagClassifier;
 .super Lcom/android/systemui/classifier/FalsingClassifier;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -32,71 +32,71 @@
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 5
-    const-string p1, "systemui"
+    const-string/jumbo p1, "systemui"
 
     .line 8
     const-string p2, "brightline_falsing_zigzag_x_primary_deviance"
 
-    .line 10
+    .line 11
     const v0, 0x3d4ccccd    # 0.05f
 
-    .line 12
+    .line 13
     invoke-static {p1, p2, v0}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 15
+    .line 16
     move-result p2
-
-    .line 18
-    iput p2, p0, Lcom/android/systemui/classifier/ZigZagClassifier;->mMaxXPrimaryDeviance:F
 
     .line 19
+    iput p2, p0, Lcom/android/systemui/classifier/ZigZagClassifier;->mMaxXPrimaryDeviance:F
+
+    .line 20
     const-string p2, "brightline_falsing_zigzag_y_primary_deviance"
 
-    .line 21
+    .line 22
     const v0, 0x3e19999a    # 0.15f
 
-    .line 23
+    .line 24
     invoke-static {p1, p2, v0}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 26
+    .line 27
     move-result p2
-
-    .line 29
-    iput p2, p0, Lcom/android/systemui/classifier/ZigZagClassifier;->mMaxYPrimaryDeviance:F
 
     .line 30
+    iput p2, p0, Lcom/android/systemui/classifier/ZigZagClassifier;->mMaxYPrimaryDeviance:F
+
+    .line 31
     const-string p2, "brightline_falsing_zigzag_x_secondary_deviance"
 
-    .line 32
+    .line 33
     const v0, 0x3ecccccd    # 0.4f
 
-    .line 34
+    .line 35
     invoke-static {p1, p2, v0}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 37
+    .line 38
     move-result p2
 
-    .line 40
+    .line 41
     iput p2, p0, Lcom/android/systemui/classifier/ZigZagClassifier;->mMaxXSecondaryDeviance:F
 
-    .line 41
+    .line 42
     const-string p2, "brightline_falsing_zigzag_y_secondary_deviance"
 
-    .line 43
+    .line 44
     const v0, 0x3e99999a    # 0.3f
 
-    .line 45
+    .line 46
     invoke-static {p1, p2, v0}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
-    .line 48
+    .line 49
     move-result p1
 
-    .line 51
+    .line 52
     iput p1, p0, Lcom/android/systemui/classifier/ZigZagClassifier;->mMaxYSecondaryDeviance:F
 
-    .line 52
+    .line 53
     return-void
-    .line 54
+    .line 55
 .end method
 
 .method public static rotateMotionEvents(Ljava/util/List;D)Ljava/util/List;

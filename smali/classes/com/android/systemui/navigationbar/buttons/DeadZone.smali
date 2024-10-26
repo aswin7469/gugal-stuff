@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/navigationbar/buttons/DeadZone;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -86,7 +86,7 @@
     move-result-object v0
 
     .line 18
-    const v1, 0x7f05004a    # @bool/config_useDeadZone 'true'
+    const v1, 0x7f050058    # @bool/config_useDeadZone 'true'
 
     .line 19
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -277,7 +277,7 @@
     move-result-object v1
 
     .line 14
-    const v2, 0x7f0c00c3    # @integer/navigation_bar_deadzone_hold '333'
+    const v2, 0x7f0b00d8    # @integer/navigation_bar_deadzone_hold '333'
 
     .line 15
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -289,7 +289,7 @@
     iput v2, p0, Lcom/android/systemui/navigationbar/buttons/DeadZone;->mHold:I
 
     .line 22
-    const v2, 0x7f0c00c2    # @integer/navigation_bar_deadzone_decay '333'
+    const v2, 0x7f0b00d7    # @integer/navigation_bar_deadzone_decay '333'
 
     .line 24
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -301,7 +301,7 @@
     iput v2, p0, Lcom/android/systemui/navigationbar/buttons/DeadZone;->mDecay:I
 
     .line 31
-    const v2, 0x7f07078d    # @dimen/navigation_bar_deadzone_size '12.0dp'
+    const v2, 0x7f0707cf    # @dimen/navigation_bar_deadzone_size '12.0dp'
 
     .line 33
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -313,7 +313,7 @@
     iput v2, p0, Lcom/android/systemui/navigationbar/buttons/DeadZone;->mSizeMin:I
 
     .line 40
-    const v2, 0x7f07078e    # @dimen/navigation_bar_deadzone_size_max '32.0dp'
+    const v2, 0x7f0707d0    # @dimen/navigation_bar_deadzone_size_max '32.0dp'
 
     .line 42
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -325,7 +325,7 @@
     iput v2, p0, Lcom/android/systemui/navigationbar/buttons/DeadZone;->mSizeMax:I
 
     .line 49
-    const v2, 0x7f0c00c4    # @integer/navigation_bar_deadzone_orientation '0'
+    const v2, 0x7f0b00d9    # @integer/navigation_bar_deadzone_orientation '0'
 
     .line 51
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -351,7 +351,7 @@
     iput-boolean v3, p0, Lcom/android/systemui/navigationbar/buttons/DeadZone;->mVertical:Z
 
     .line 63
-    const v2, 0x7f05000c    # @bool/config_dead_zone_flash 'false'
+    const v2, 0x7f050012    # @bool/config_dead_zone_flash 'false'
 
     .line 65
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z

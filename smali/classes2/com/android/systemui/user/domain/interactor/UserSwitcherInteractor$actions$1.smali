@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/user/domain/interactor/UserSwitcherInteractor$actions$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function5;
@@ -310,7 +310,7 @@
     iget-object v11, p0, Lcom/android/systemui/user/domain/interactor/UserSwitcherInteractor;->applicationContext:Landroid/content/Context;
 
     .line 132
-    const v12, 0x10402c4    # @android:string/config_wimaxServiceClassname
+    const v12, 0x10402bb    # @android:string/config_wearMediaSessionsPackage
 
     .line 134
     invoke-virtual {v11, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/launcher3/icons/IconFactory;
 .super Lcom/android/launcher3/icons/BaseIconFactory;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -122,7 +122,7 @@
     move-result-object v2
 
     .line 36
-    const v3, 0x7f07020d    # @dimen/default_icon_bitmap_size '56.0dp'
+    const v3, 0x7f07022f    # @dimen/default_icon_bitmap_size '56.0dp'
 
     .line 37
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -210,4 +210,5 @@
 
     .line 24
     throw p0
+    .line 25
 .end method

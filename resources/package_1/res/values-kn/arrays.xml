@@ -5,7 +5,9 @@
     <item>ಚಾರ್ಜ್‌ ಮಾಡುವಾಗ ಪ್ರತಿಶತವನ್ನು ತೋರಿಸು (ಡಿಫಾಲ್ಟ್‌)</item>
     <item>ಈ ಐಕಾನ್ ತೋರಿಸಬೇಡ</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>ಗಂಟೆಗಳು, ನಿಮಿಷಗಳು, ಸೆಕೆಂಡುಗಳನ್ನು ತೋರಿಸು</item>
     <item>ಗಂಟೆಗಳು ಮತ್ತು ನಿಮಿಷಗಳನ್ನು ತೋರಿಸು (ಡಿಫಾಲ್ಟ್‌)</item>

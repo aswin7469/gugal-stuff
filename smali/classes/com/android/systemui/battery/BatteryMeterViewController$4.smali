@@ -1,6 +1,6 @@
 .class Lcom/android/systemui/battery/BatteryMeterViewController$4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/settings/UserTracker$Callback;
@@ -46,30 +46,30 @@
     iget-object p2, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mContentResolver:Landroid/content/ContentResolver;
 
     .line 11
-    const-string v1, "status_bar_show_battery_percent"
+    const-string/jumbo v1, "status_bar_show_battery_percent"
 
     .line 13
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 15
+    .line 16
     move-result-object v1
 
-    .line 18
+    .line 19
     const/4 v2, 0x0
 
-    .line 19
+    .line 20
     invoke-virtual {p2, v1, v2, v0, p1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 20
+    .line 21
     iget-object p0, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    .line 23
+    .line 24
     check-cast p0, Lcom/android/systemui/battery/BatteryMeterView;
 
-    .line 25
+    .line 26
     invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->updateShowPercent()V
 
-    .line 27
+    .line 28
     return-void
-    .line 30
+    .line 31
 .end method

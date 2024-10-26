@@ -5,7 +5,9 @@
     <item>Mostra el percentatge quan es carregui (opció predeterminada)</item>
     <item>No mostris aquesta icona</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Mostra les hores, els minuts i els segons</item>
     <item>Mostra les hores i els minuts (opció predeterminada)</item>

@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/telephony/data/repository/TelephonyRepositoryImpl$callState$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -173,47 +173,38 @@
     iget-object v1, v1, Lcom/android/systemui/telephony/data/repository/TelephonyRepositoryImpl;->manager:Lcom/android/systemui/telephony/TelephonyListenerManager;
 
     .line 53
-    iget-object v4, v1, Lcom/android/systemui/telephony/TelephonyListenerManager;->mTelephonyCallback:Lcom/android/systemui/telephony/TelephonyCallback;
+    invoke-virtual {v1, v3}, Lcom/android/systemui/telephony/TelephonyListenerManager;->addCallStateListener(Landroid/telephony/TelephonyCallback$CallStateListener;)V
 
     .line 55
-    iget-object v4, v4, Lcom/android/systemui/telephony/TelephonyCallback;->mCallStateListeners:Ljava/util/List;
-
-    .line 57
-    invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 59
-    invoke-virtual {v1}, Lcom/android/systemui/telephony/TelephonyListenerManager;->updateListening()V
-
-    .line 62
     new-instance v1, Lcom/android/systemui/telephony/data/repository/TelephonyRepositoryImpl$callState$1$1;
 
-    .line 65
+    .line 58
     iget-object v4, p0, Lcom/android/systemui/telephony/data/repository/TelephonyRepositoryImpl$callState$1;->this$0:Lcom/android/systemui/telephony/data/repository/TelephonyRepositoryImpl;
 
-    .line 67
+    .line 60
     invoke-direct {v1, v4, v3}, Lcom/android/systemui/telephony/data/repository/TelephonyRepositoryImpl$callState$1$1;-><init>(Lcom/android/systemui/telephony/data/repository/TelephonyRepositoryImpl;Lcom/android/systemui/telephony/data/repository/TelephonyRepositoryImpl$sam$android_telephony_TelephonyCallback_CallStateListener$0;)V
 
-    .line 69
+    .line 62
     iput v2, p0, Lcom/android/systemui/telephony/data/repository/TelephonyRepositoryImpl$callState$1;->label:I
 
-    .line 72
+    .line 65
     invoke-static {p1, v1, p0}, Lkotlinx/coroutines/channels/ProduceKt;->awaitClose(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/jvm/functions/Function0;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 74
+    .line 67
     move-result-object p0
 
-    .line 77
+    .line 70
     if-ne p0, v0, :cond_2
 
-    .line 78
+    .line 71
     return-object v0
 
-    .line 80
+    .line 73
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 81
+    .line 74
     return-object p0
-    .line 83
+    .line 76
 .end method

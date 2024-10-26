@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView;
 .super Lcom/android/systemui/statusbar/pipeline/shared/ui/view/ModernStatusBarView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -26,102 +26,56 @@
 .end method
 
 .method public static final constructAndBind(Landroid/content/Context;Lcom/android/systemui/statusbar/pipeline/mobile/ui/MobileViewLogger;Ljava/lang/String;Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/LocationBasedMobileViewModel;)Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView;
-    .locals 3
+    .locals 2
 
     .line 1
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     .line 2
-    move-result-object v0
-
-    .line 5
-    const v1, 0x7f0e027d    # @layout/status_bar_mobile_signal_group_new 'res/layout/status_bar_mobile_signal_group_new.xml'
-
-    .line 6
-    const/4 v2, 0x0
-
-    .line 9
-    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    .line 10
-    move-result-object v0
-
-    .line 13
-    check-cast v0, Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView;
-
-    .line 14
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 16
-    move-result v1
-
-    .line 19
-    if-eqz v1, :cond_0
-
-    .line 20
-    const v1, 0x7f0b04df    # @id/mobile_signal
-
-    .line 22
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
-
-    .line 25
-    move-result-object v1
-
-    .line 28
-    check-cast v1, Landroid/widget/ImageView;
-
-    .line 29
-    invoke-virtual {v1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 31
-    move-result-object v1
-
-    .line 34
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 35
     move-result-object p0
 
-    .line 38
-    const v2, 0x7f0709d9    # @dimen/status_bar_mobile_signal_size_updated '14.0sp'
+    .line 5
+    const v0, 0x7f0d028e    # @layout/status_bar_mobile_signal_group_new 'res/layout/status_bar_mobile_signal_group_new.xml'
 
-    .line 39
-    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    .line 6
+    const/4 v1, 0x0
 
-    .line 42
-    move-result p0
+    .line 9
+    invoke-virtual {p0, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 45
-    iput p0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    .line 10
+    move-result-object p0
 
-    .line 46
-    :cond_0
-    iget-object p0, p3, Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/LocationBasedMobileViewModel;->commonImpl:Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/MobileIconViewModelCommon;
+    .line 13
+    check-cast p0, Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView;
 
-    .line 48
-    invoke-interface {p0}, Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/MobileIconViewModelCommon;->getSubscriptionId()I
+    .line 14
+    iget-object v0, p3, Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/LocationBasedMobileViewModel;->commonImpl:Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/MobileIconViewModelCommon;
 
-    .line 50
-    move-result p0
+    .line 16
+    invoke-interface {v0}, Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/MobileIconViewModelCommon;->getSubscriptionId()I
 
-    .line 53
-    iput p0, v0, Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView;->subId:I
+    .line 18
+    move-result v0
 
-    .line 54
-    new-instance p0, Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView$Companion$constructAndBind$1$1;
+    .line 21
+    iput v0, p0, Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView;->subId:I
 
-    .line 56
-    invoke-direct {p0, v0, p3, p1}, Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView$Companion$constructAndBind$1$1;-><init>(Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView;Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/LocationBasedMobileViewModel;Lcom/android/systemui/statusbar/pipeline/mobile/ui/MobileViewLogger;)V
+    .line 22
+    new-instance v0, Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView$Companion$constructAndBind$1$1;
 
-    .line 58
-    invoke-virtual {v0, p2, p0}, Lcom/android/systemui/statusbar/pipeline/shared/ui/view/ModernStatusBarView;->initView(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
+    .line 24
+    invoke-direct {v0, p0, p3, p1}, Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView$Companion$constructAndBind$1$1;-><init>(Lcom/android/systemui/statusbar/pipeline/mobile/ui/view/ModernStatusBarMobileView;Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/LocationBasedMobileViewModel;Lcom/android/systemui/statusbar/pipeline/mobile/ui/MobileViewLogger;)V
 
-    .line 61
-    invoke-virtual {p1, v0, p3}, Lcom/android/systemui/statusbar/pipeline/mobile/ui/MobileViewLogger;->logNewViewBinding(Landroid/view/View;Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/LocationBasedMobileViewModel;)V
+    .line 26
+    invoke-virtual {p0, p2, v0}, Lcom/android/systemui/statusbar/pipeline/shared/ui/view/ModernStatusBarView;->initView(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
 
-    .line 64
-    return-object v0
-    .line 67
+    .line 29
+    invoke-virtual {p1, p0, p3}, Lcom/android/systemui/statusbar/pipeline/mobile/ui/MobileViewLogger;->logNewViewBinding(Landroid/view/View;Lcom/android/systemui/statusbar/pipeline/mobile/ui/viewmodel/LocationBasedMobileViewModel;)V
+
+    .line 32
+    return-object p0
+    .line 35
 .end method
 
 
@@ -183,7 +137,7 @@
     const-string v6, ", isCollecting="
 
     .line 32
-    invoke-static {v4, v0, v5, v1, v6}, Lcom/android/systemui/common/data/repository/PackageUpdateLogger$logChange$2$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v0, v5, v1, v6}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 34
     move-result-object v0

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/domain/interactor/SideFpsSensorInteractor$special$$inlined$flatMapLatest$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -87,146 +87,125 @@
     const/4 v2, 0x1
 
     .line 6
-    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    .line 7
     if-eqz v1, :cond_1
 
-    .line 9
+    .line 7
     if-ne v1, v2, :cond_0
 
-    .line 11
+    .line 9
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 13
-    goto :goto_3
+    .line 11
+    goto :goto_2
 
-    .line 16
+    .line 14
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 17
+    .line 15
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    .line 19
+    .line 17
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 21
+    .line 19
     throw p0
 
-    .line 24
+    .line 22
     :cond_1
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 25
+    .line 23
     iget-object p1, p0, Lcom/android/systemui/biometrics/domain/interactor/SideFpsSensorInteractor$special$$inlined$flatMapLatest$1;->L$0:Ljava/lang/Object;
 
-    .line 28
+    .line 26
     check-cast p1, Lkotlinx/coroutines/flow/FlowCollector;
 
-    .line 30
+    .line 28
     iget-object v1, p0, Lcom/android/systemui/biometrics/domain/interactor/SideFpsSensorInteractor$special$$inlined$flatMapLatest$1;->L$1:Ljava/lang/Object;
 
-    .line 32
+    .line 30
     check-cast v1, Ljava/lang/Boolean;
 
-    .line 34
+    .line 32
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 36
+    .line 34
     move-result v1
 
-    .line 39
+    .line 37
     if-eqz v1, :cond_3
 
-    .line 40
+    .line 38
     iget-object v1, p0, Lcom/android/systemui/biometrics/domain/interactor/SideFpsSensorInteractor$special$$inlined$flatMapLatest$1;->$fingerprintInteractiveToAuthProvider$inlined:Ljava/util/Optional;
 
-    .line 42
+    .line 40
     invoke-virtual {v1}, Ljava/util/Optional;->isEmpty()Z
 
-    .line 44
+    .line 42
     move-result v1
 
-    .line 47
+    .line 45
     if-eqz v1, :cond_2
 
-    .line 48
+    .line 46
     goto :goto_0
 
-    .line 50
+    .line 48
     :cond_2
-    iget-object p0, p0, Lcom/android/systemui/biometrics/domain/interactor/SideFpsSensorInteractor$special$$inlined$flatMapLatest$1;->$fingerprintInteractiveToAuthProvider$inlined:Ljava/util/Optional;
+    iget-object v1, p0, Lcom/android/systemui/biometrics/domain/interactor/SideFpsSensorInteractor$special$$inlined$flatMapLatest$1;->$fingerprintInteractiveToAuthProvider$inlined:Ljava/util/Optional;
+
+    .line 49
+    invoke-virtual {v1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     .line 51
-    invoke-virtual {p0}, Ljava/util/Optional;->get()Ljava/lang/Object;
+    move-result-object v1
 
-    .line 53
-    move-result-object p0
+    .line 54
+    check-cast v1, Lcom/google/android/systemui/fingerprint/FingerprintInteractiveToAuthProviderGoogle;
 
-    .line 56
-    invoke-static {p0}, Landroidx/appcompat/app/WindowDecorActionBar$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
+    .line 55
+    iget-object v1, v1, Lcom/google/android/systemui/fingerprint/FingerprintInteractiveToAuthProviderGoogle;->enabledForCurrentUser:Lkotlinx/coroutines/flow/Flow;
 
     .line 57
-    const/4 p0, 0x0
+    goto :goto_1
 
-    .line 60
-    throw p0
-
-    .line 61
+    .line 59
     :cond_3
     :goto_0
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
+    .line 60
+    new-instance v3, Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;
+
     .line 62
-    iput v2, p0, Lcom/android/systemui/biometrics/domain/interactor/SideFpsSensorInteractor$special$$inlined$flatMapLatest$1;->label:I
+    invoke-direct {v3, v1}, Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;-><init>(Ljava/lang/Object;)V
 
     .line 64
-    invoke-static {p1}, Lkotlinx/coroutines/flow/FlowKt;->ensureActive(Lkotlinx/coroutines/flow/FlowCollector;)V
+    move-object v1, v3
 
-    .line 66
-    invoke-interface {p1, v1, p0}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .line 67
+    :goto_1
+    iput v2, p0, Lcom/android/systemui/biometrics/domain/interactor/SideFpsSensorInteractor$special$$inlined$flatMapLatest$1;->label:I
 
-    .line 69
+    .line 68
+    invoke-static {p0, v1, p1}, Lkotlinx/coroutines/flow/FlowKt;->emitAll(Lkotlin/coroutines/Continuation;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/FlowCollector;)Ljava/lang/Object;
+
+    .line 70
     move-result-object p0
 
-    .line 72
-    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
-
     .line 73
-    if-ne p0, p1, :cond_4
+    if-ne p0, v0, :cond_4
 
-    .line 75
-    goto :goto_1
-
-    .line 77
-    :cond_4
-    move-object p0, v3
-
-    .line 78
-    :goto_1
-    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
-
-    .line 79
-    if-ne p0, p1, :cond_5
-
-    .line 81
-    goto :goto_2
-
-    .line 83
-    :cond_5
-    move-object p0, v3
-
-    .line 84
-    :goto_2
-    if-ne p0, v0, :cond_6
-
-    .line 85
+    .line 74
     return-object v0
 
-    .line 87
-    :cond_6
-    :goto_3
-    return-object v3
-    .line 88
+    .line 76
+    :cond_4
+    :goto_2
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    .line 77
+    return-object p0
+    .line 79
 .end method

@@ -31,7 +31,9 @@
     <item>?android:attr/colorError</item>
     <item>@android:color/white</item>
   </array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <array name="bouncer_pin_shapes">
     <item>@drawable/pin_dot_shape_1_avd</item>
     <item>@drawable/pin_dot_shape_2_avd</item>
@@ -49,15 +51,40 @@
     <item>Show hours and minutes (default)</item>
     <item>Don't show this icon</item>
   </string-array>
-  <array name="config_appsSupportMultiInstancesSplit" />
+  <string-array name="columbus_sumatra_cert_allow_list">
+    <item>⼜꫼ꇭバ듣衣뺠焟꓏禸≑骂姙婘</item>
+    <item>괥仙胛ύꚾ샍洞恧㗆꯷咝ㅾ뿣鄖數</item>
+    <item>᥵닱煷벉ꗟ鹤ꛊꔽ쇑햛ᴔ翡젪切</item>
+    <item>္㣮䔷軧鋶呐侸㑯욳䛐믄䅟쌹ﳼ軁</item>
+  </string-array>
+  <string-array name="columbus_sumatra_package_allow_list">
+    <item>com.snapchat.android</item>
+    <item>com.snapchat.android.alpha</item>
+    <item>com.snapchat.android.perf</item>
+    <item>com.snapchat.android.master</item>
+    <item>com.snapchat.android.dev</item>
+    <item>com.snapchat.android.catalina</item>
+    <item>com.google.android.GoogleCamera</item>
+    <item>com.google.columbustest</item>
+  </string-array>
+  <string-array name="config_appsSupportMultiInstancesSplit">
+    <item>com.android.chrome</item>
+    <item>com.chrome.canary</item>
+    <item>com.chrome.dev</item>
+    <item>com.chrome.beta</item>
+    <item>com.google.android.apps.chrome</item>
+    <item>org.chromium.chrome</item>
+    <item>com.google.android.apps.docs</item>
+    <item>com.android.server.wm.flicker.testapp</item>
+  </string-array>
   <integer-array name="config_cameraLaunchGestureVibePattern">
     <item>0</item>
     <item>400</item>
   </integer-array>
   <array name="config_collapsed_statusbar_icon_blocklist">
-    <item>@android:string/time_picker_text_input_mode_description</item>
-    <item>@android:string/storage_usb_drive_label</item>
-    <item>@android:string/suspended_widget_accessibility</item>
+    <item>@android:string/time_picker_hour_label</item>
+    <item>@android:string/stk_cc_ussd_to_dial</item>
+    <item>@android:string/stk_cc_ussd_to_ussd</item>
   </array>
   <array name="config_communalWidgetAllowlist" />
   <array name="config_controlsPreferredPackages" />
@@ -75,7 +102,17 @@
     <item>0</item>
     <item>0</item>
   </integer-array>
-  <array name="config_face_acquire_device_entry_ignorelist" />
+  <integer-array name="config_face_acquire_device_entry_ignorelist">
+    <item>1</item>
+    <item>2</item>
+    <item>4</item>
+    <item>5</item>
+    <item>11</item>
+    <item>12</item>
+    <item>14</item>
+    <item>15</item>
+    <item>19</item>
+  </integer-array>
   <array name="config_face_auth_props" />
   <integer-array name="config_face_auth_wake_up_triggers">
     <item>1</item>
@@ -88,7 +125,9 @@
     <item>16</item>
     <item>17</item>
   </integer-array>
-  <array name="config_face_help_msgs_defer_until_timeout" />
+  <integer-array name="config_face_help_msgs_defer_until_timeout">
+    <item>3</item>
+  </integer-array>
   <integer-array name="config_face_help_msgs_ignore">
     <item>20</item>
     <item>23</item>
@@ -120,6 +159,8 @@
     <item>bottom_start:1</item>
     <item>bottom_end:1</item>
   </string-array>
+  <array name="config_nfc_conflict_with_usb_audio_productid" />
+  <array name="config_nfc_conflict_with_usb_audio_vendorid" />
   <integer-array name="config_notification_snooze_times">
     <item>15</item>
     <item>30</item>
@@ -131,9 +172,18 @@
   </string-array>
   <string-array name="config_quickSettingsAutoAdd">
     <item>accessibility_font_scaling_has_been_changed:font_scaling</item>
+    <item>wind_down_first_time_setup:custom(com.google.android.apps.wellbeing/.screen.ui.GrayscaleTileService)</item>
+    <item>focus_mode_first_time_setup:custom(com.google.android.apps.wellbeing/.focusmode.quicksettings.FocusModeTileService)</item>
+    <item>vpn_first_time_enabled:custom(com.google.android.apps.privacy.wildlife/.quicksettings.WildlifeVpnTileService)</item>
   </string-array>
-  <array name="config_quickSettingsHearingDevicesRelatedToolIcon" />
-  <array name="config_quickSettingsHearingDevicesRelatedToolName" />
+  <string-array name="config_quickSettingsHearingDevicesRelatedToolIcon">
+    <item>ic_scribe_qs_icon_tint_48dp</item>
+    <item>ic_dolphin_qs_icon_tint_48dp</item>
+  </string-array>
+  <string-array name="config_quickSettingsHearingDevicesRelatedToolName">
+    <item>com.google.audio.hearing.visualization.accessibility.scribe/com.google.audio.hearing.visualization.accessibility.scribe.MainActivity</item>
+    <item>com.google.audio.hearing.visualization.accessibility.scribe/com.google.audio.hearing.visualization.accessibility.dolphin.ui.visualizer.TimelineActivity</item>
+  </string-array>
   <array name="config_roundedCornerBottomDrawableArray">
     <item>@drawable/rounded_corner_bottom</item>
     <item>@drawable/rounded_corner_bottom_secondary</item>
@@ -143,8 +193,8 @@
     <item>@drawable/rounded_corner_top_secondary</item>
   </array>
   <array name="config_statusBarIconsToExclude">
-    <item>@android:string/time_picker_increment_hour_button</item>
-    <item>@android:string/system_locale_title</item>
+    <item>@android:string/test_harness_mode_notification_title</item>
+    <item>@android:string/suspended_widget_accessibility</item>
   </array>
   <string-array name="config_systemUIServiceComponentsPerUser">
     <item>com.android.systemui.util.NotificationChannels</item>
@@ -155,6 +205,11 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </integer-array>
+  <integer-array name="elmyra_blocking_system_keys">
+    <item>24</item>
+    <item>25</item>
+    <item>26</item>
   </integer-array>
   <string-array name="entryvalues_font_size">
     <item>0.85</item>
@@ -210,6 +265,7 @@
   <string-array name="system_ui_packages">
     <item>com.android.keyguard</item>
     <item>com.android.systemui</item>
+    <item>com.google.android.systemui</item>
   </string-array>
   <string-array name="tile_states_airplane">
     <item>Unavailable</item>

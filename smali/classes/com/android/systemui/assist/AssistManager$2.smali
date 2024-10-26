@@ -1,24 +1,24 @@
 .class public final Lcom/android/systemui/assist/AssistManager$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/recents/OverviewProxyService$OverviewProxyListener;
 
 
 # instance fields
-.field public final synthetic this$0:Lcom/android/systemui/assist/AssistManager;
+.field public final synthetic this$0:Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/assist/AssistManager;)V
+.method public constructor <init>(Lcom/google/android/systemui/assist/AssistManagerGoogle;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/android/systemui/assist/AssistManager$2;->this$0:Lcom/android/systemui/assist/AssistManager;
+    iput-object p1, p0, Lcom/android/systemui/assist/AssistManager$2;->this$0:Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 5
     return-void
@@ -31,115 +31,59 @@
     .locals 1
 
     .line 1
-    iget-object p0, p0, Lcom/android/systemui/assist/AssistManager$2;->this$0:Lcom/android/systemui/assist/AssistManager;
+    iget-object p0, p0, Lcom/android/systemui/assist/AssistManager$2;->this$0:Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/assist/AssistManager;->mUiController:Lcom/android/systemui/assist/ui/DefaultUiController;
+    const/4 v0, 0x1
 
     .line 4
-    invoke-virtual {p0}, Lcom/android/systemui/assist/ui/DefaultUiController;->animateInvocationCompletion()V
+    iput-boolean v0, p0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mCheckAssistantStatus:Z
 
-    .line 6
-    const/high16 p1, 0x3f800000    # 1.0f
+    .line 5
+    iget-object v0, p0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mContext:Landroid/content/Context;
+
+    .line 7
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     .line 9
-    iget-boolean v0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationInProgress:Z
+    move-result-object v0
 
-    .line 11
-    invoke-virtual {p0, p1, v0}, Lcom/android/systemui/assist/ui/DefaultUiController;->logInvocationProgressMetrics(FZ)V
+    .line 12
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     .line 13
-    return-void
+    move-result-object v0
+
     .line 16
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    .line 17
+    iget-object p0, p0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mUiController:Lcom/android/systemui/assist/AssistManager$UiController;
+
+    .line 19
+    div-float/2addr p1, v0
+
+    .line 21
+    invoke-interface {p0, p1}, Lcom/android/systemui/assist/AssistManager$UiController;->onGestureCompletion(F)V
+
+    .line 22
+    return-void
+    .line 25
 .end method
 
 .method public final onAssistantProgress(F)V
-    .locals 5
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lcom/android/systemui/assist/AssistManager$2;->this$0:Lcom/android/systemui/assist/AssistManager;
+    iget-object p0, p0, Lcom/android/systemui/assist/AssistManager$2;->this$0:Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/assist/AssistManager;->mUiController:Lcom/android/systemui/assist/ui/DefaultUiController;
+    const/4 v0, 0x1
 
     .line 4
-    iget-boolean v0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationInProgress:Z
+    invoke-virtual {p0, v0, p1}, Lcom/google/android/systemui/assist/AssistManagerGoogle;->onInvocationProgress(IF)V
 
-    .line 6
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    .line 8
-    cmpl-float v1, p1, v1
-
-    .line 10
-    if-nez v1, :cond_0
-
-    .line 12
-    invoke-virtual {p0}, Lcom/android/systemui/assist/ui/DefaultUiController;->animateInvocationCompletion()V
-
-    .line 14
-    goto :goto_0
-
-    .line 17
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 18
-    cmpl-float v1, p1, v1
-
-    .line 19
-    if-nez v1, :cond_1
-
-    .line 21
-    invoke-virtual {p0}, Lcom/android/systemui/assist/ui/DefaultUiController;->hide()V
-
-    .line 23
-    goto :goto_0
-
-    .line 26
-    :cond_1
-    if-nez v0, :cond_3
-
-    .line 27
-    iget-boolean v1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mAttached:Z
-
-    .line 29
-    const/4 v2, 0x1
-
-    .line 31
-    if-nez v1, :cond_2
-
-    .line 32
-    iget-object v1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mWindowManager:Landroid/view/WindowManager;
-
-    .line 34
-    iget-object v3, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mRoot:Landroid/widget/FrameLayout;
-
-    .line 36
-    iget-object v4, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
-
-    .line 38
-    invoke-interface {v1, v3, v4}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 40
-    iput-boolean v2, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mAttached:Z
-
-    .line 43
-    :cond_2
-    iput-boolean v2, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationInProgress:Z
-
-    .line 45
-    :cond_3
-    invoke-virtual {p0, p1}, Lcom/android/systemui/assist/ui/DefaultUiController;->setProgressInternal(F)V
-
-    .line 47
-    :goto_0
-    iput p1, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mLastInvocationProgress:F
-
-    .line 50
-    invoke-virtual {p0, p1, v0}, Lcom/android/systemui/assist/ui/DefaultUiController;->logInvocationProgressMetrics(FZ)V
-
-    .line 52
+    .line 5
     return-void
-    .line 55
+    .line 8
 .end method

@@ -1,20 +1,12 @@
 .class public final Lcom/android/systemui/biometrics/UdfpsControllerOverlay;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
-.field public final activityTransitionAnimator:Lcom/android/systemui/animation/ActivityTransitionAnimator;
-
 .field public addViewRunnable:Lcom/android/systemui/biometrics/UdfpsControllerOverlay$addViewNowOrLater$$inlined$Runnable$1;
-
-.field public final alternateBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;
-
-.field public final configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
-
-.field public final context:Landroid/content/Context;
 
 .field public final controllerCallback:Landroid/hardware/fingerprint/IUdfpsOverlayControllerCallback;
 
@@ -22,13 +14,11 @@
 
 .field public final currentStateUpdatedToOffAodOrDozing:Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;
 
-.field public final dialogManager:Lcom/android/systemui/statusbar/phone/SystemUIDialogManager;
+.field public final defaultUdfpsTouchOverlayViewModel:Ldagger/Lazy;
 
-.field public final dumpManager:Lcom/android/systemui/dump/DumpManager;
+.field public final deviceEntryUdfpsTouchOverlayViewModel:Ldagger/Lazy;
 
 .field public final inflater:Landroid/view/LayoutInflater;
-
-.field public final isDebuggable:Z
 
 .field public final keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
@@ -42,11 +32,9 @@
 
 .field public overlayTouchListener:Lcom/android/systemui/biometrics/UdfpsControllerOverlay$show$3$1;
 
-.field public overlayViewLegacy:Lcom/android/systemui/biometrics/UdfpsView;
+.field public overlayTouchView:Lcom/android/systemui/biometrics/ui/view/UdfpsTouchOverlay;
 
 .field public final powerInteractor:Lcom/android/systemui/power/domain/interactor/PowerInteractor;
-
-.field public final primaryBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;
 
 .field public final requestId:J
 
@@ -54,27 +42,13 @@
 
 .field public final scope:Lkotlinx/coroutines/CoroutineScope;
 
-.field public final selectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
-
 .field public sensorBounds:Landroid/graphics/Rect;
-
-.field public final shadeInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
-
-.field public final statusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
 .field public final statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
-.field public final transitionController:Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
-
-.field public final transitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
-
 .field public final udfpsDisplayModeProvider:Lcom/android/systemui/biometrics/UdfpsDisplayMode;
 
-.field public final udfpsKeyguardAccessibilityDelegate:Lcom/android/systemui/biometrics/UdfpsKeyguardAccessibilityDelegate;
-
 .field public final udfpsOverlayInteractor:Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;
-
-.field public final unlockedScreenOffAnimationController:Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;
 
 .field public final windowManager:Landroid/view/WindowManager;
 
@@ -85,189 +59,128 @@
 
     move-object v0, p0
 
-    move-object/from16 v1, p24
-
     .line 1
-    sget-boolean v2, Landroid/os/Build;->IS_DEBUGGABLE:Z
+    sget-boolean v1, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v3, p1
+    move-object v1, p2
 
     .line 3
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->context:Landroid/content/Context;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->inflater:Landroid/view/LayoutInflater;
 
-    move-object v3, p2
+    move-object v1, p3
 
     .line 4
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->inflater:Landroid/view/LayoutInflater;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->windowManager:Landroid/view/WindowManager;
 
-    move-object v3, p3
+    move-object v1, p4
 
     .line 5
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->windowManager:Landroid/view/WindowManager;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
-    move-object v3, p4
+    move-object v1, p5
 
     .line 6
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
-    move-object v3, p5
+    move-object v1, p7
 
     .line 7
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    move-object v3, p6
+    move-object/from16 v1, p12
 
     .line 8
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->statusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    move-object v3, p7
+    move-object/from16 v1, p14
 
     .line 9
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->udfpsDisplayModeProvider:Lcom/android/systemui/biometrics/UdfpsDisplayMode;
 
-    move-object v3, p8
+    move-wide/from16 v1, p15
 
     .line 10
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->dialogManager:Lcom/android/systemui/statusbar/phone/SystemUIDialogManager;
+    iput-wide v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->requestId:J
 
-    move-object v3, p9
+    move/from16 v1, p17
 
     .line 11
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->dumpManager:Lcom/android/systemui/dump/DumpManager;
+    iput v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->requestReason:I
 
-    move-object v3, p10
+    move-object/from16 v1, p18
 
     .line 12
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->transitionController:Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->controllerCallback:Landroid/hardware/fingerprint/IUdfpsOverlayControllerCallback;
 
-    move-object/from16 v3, p11
+    move-object/from16 v1, p19
 
     .line 13
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->onTouch:Lkotlin/jvm/functions/Function3;
 
-    move-object/from16 v3, p12
+    move-object/from16 v1, p26
 
     .line 14
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->deviceEntryUdfpsTouchOverlayViewModel:Ldagger/Lazy;
 
-    move-object/from16 v3, p13
+    move-object/from16 v1, p27
 
     .line 15
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->unlockedScreenOffAnimationController:Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->defaultUdfpsTouchOverlayViewModel:Ldagger/Lazy;
 
-    move-object/from16 v3, p14
+    move-object/from16 v1, p29
 
     .line 16
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->udfpsDisplayModeProvider:Lcom/android/systemui/biometrics/UdfpsDisplayMode;
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->udfpsOverlayInteractor:Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;
 
-    move-wide/from16 v3, p15
+    move-object/from16 v1, p30
 
     .line 17
-    iput-wide v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->requestId:J
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->powerInteractor:Lcom/android/systemui/power/domain/interactor/PowerInteractor;
 
-    move/from16 v3, p17
+    move-object/from16 v1, p31
 
     .line 18
-    iput v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->requestReason:I
-
-    move-object/from16 v3, p18
+    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->scope:Lkotlinx/coroutines/CoroutineScope;
 
     .line 19
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->controllerCallback:Landroid/hardware/fingerprint/IUdfpsOverlayControllerCallback;
+    new-instance v1, Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;
 
-    move-object/from16 v3, p19
+    move-object/from16 v2, p24
 
-    .line 20
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->onTouch:Lkotlin/jvm/functions/Function3;
-
-    move-object/from16 v3, p20
-
-    .line 21
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->activityTransitionAnimator:Lcom/android/systemui/animation/ActivityTransitionAnimator;
-
-    move-object/from16 v3, p21
-
-    .line 22
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->primaryBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;
-
-    move-object/from16 v3, p22
-
-    .line 23
-    iput-object v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->alternateBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;
-
-    .line 24
-    iput-boolean v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->isDebuggable:Z
-
-    move-object/from16 v2, p23
-
-    .line 25
-    iput-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->udfpsKeyguardAccessibilityDelegate:Lcom/android/systemui/biometrics/UdfpsKeyguardAccessibilityDelegate;
-
-    .line 26
-    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->transitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
-
-    move-object/from16 v2, p25
-
-    .line 27
-    iput-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->selectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
-
-    move-object/from16 v2, p28
-
-    .line 28
-    iput-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->shadeInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
-
-    move-object/from16 v2, p29
-
-    .line 29
-    iput-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->udfpsOverlayInteractor:Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;
-
-    move-object/from16 v2, p30
-
-    .line 30
-    iput-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->powerInteractor:Lcom/android/systemui/power/domain/interactor/PowerInteractor;
-
-    move-object/from16 v2, p31
-
-    .line 31
-    iput-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->scope:Lkotlinx/coroutines/CoroutineScope;
-
-    .line 32
-    new-instance v2, Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;
-
-    iget-object v1, v1, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->currentKeyguardState:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    iget-object v2, v2, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->currentKeyguardState:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v1, v3}, Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    invoke-direct {v1, v2, v3}, Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 33
-    new-instance v1, Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;
+    .line 20
+    new-instance v2, Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v2, v3}, Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
+    invoke-direct {v2, v1, v3}, Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 34
-    iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->currentStateUpdatedToOffAodOrDozing:Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;
+    .line 21
+    iput-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->currentStateUpdatedToOffAodOrDozing:Lcom/android/systemui/biometrics/UdfpsControllerOverlay$special$$inlined$map$1;
 
-    .line 35
+    .line 22
     new-instance v1, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
     invoke-direct {v1}, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;-><init>()V
 
     iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->overlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
-    .line 36
+    .line 23
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->sensorBounds:Landroid/graphics/Rect;
 
-    .line 37
+    .line 24
     new-instance v1, Landroid/view/WindowManager$LayoutParams;
 
     const/16 v2, 0x7e8
@@ -276,45 +189,45 @@
 
     invoke-direct {v1, v2, v3, v4}, Landroid/view/WindowManager$LayoutParams;-><init>(III)V
 
-    .line 38
+    .line 25
     const-string v2, "UdfpsControllerOverlay"
 
     invoke-virtual {v1, v2}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 39
+    .line 26
     invoke-virtual {v1, v3}, Landroid/view/WindowManager$LayoutParams;->setFitInsetsTypes(I)V
 
     const/16 v2, 0x33
 
-    .line 40
+    .line 27
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
     const/4 v2, 0x3
 
-    .line 41
+    .line 28
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
 
     const v2, 0x1800128
 
-    .line 42
+    .line 29
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const/high16 v2, 0x20200000
 
-    .line 43
+    .line 30
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 44
+    .line 31
     const-string v2, " "
 
     iput-object v2, v1, Landroid/view/WindowManager$LayoutParams;->accessibilityTitle:Ljava/lang/CharSequence;
 
     const/4 v2, 0x4
 
-    .line 45
+    .line 32
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->inputFeatures:I
 
-    .line 46
+    .line 33
     iput-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->coreLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     return-void
@@ -322,497 +235,211 @@
 
 
 # virtual methods
-.method public final inflateUdfpsAnimation(Lcom/android/systemui/biometrics/UdfpsView;Lcom/android/systemui/biometrics/UdfpsController;)Lcom/android/systemui/biometrics/UdfpsAnimationViewController;
-    .locals 23
+.method public final updateDimensions(Landroid/view/WindowManager$LayoutParams;)V
+    .locals 5
 
     .line 1
-    move-object/from16 v0, p0
+    const/4 v0, 0x0
 
     .line 2
-    move-object/from16 v1, p1
+    const/4 v1, 0x1
+
+    .line 3
+    iget v2, p0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->requestReason:I
 
     .line 4
-    const/4 v2, 0x1
+    if-eq v2, v1, :cond_0
 
     .line 6
-    iget v3, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->requestReason:I
+    const/4 v3, 0x2
 
-    .line 7
-    if-eq v3, v2, :cond_0
+    .line 8
+    if-eq v2, v3, :cond_0
 
     .line 9
-    const/4 v2, 0x2
+    move v2, v0
 
     .line 11
-    if-eq v3, v2, :cond_0
-
-    .line 12
     goto :goto_0
 
-    .line 14
+    .line 12
     :cond_0
-    iget-boolean v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->isDebuggable:Z
+    move v2, v1
 
-    .line 15
-    if-eqz v2, :cond_1
+    .line 13
+    :goto_0
+    iget-object v3, p0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
-    .line 17
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->context:Landroid/content/Context;
+    .line 14
+    invoke-virtual {v3}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+
+    .line 16
+    move-result v3
 
     .line 19
-    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    if-eqz v3, :cond_1
 
-    .line 21
-    move-result-object v2
-
-    .line 24
-    const-string/jumbo v4, "udfps_overlay_remove_enrollment_ui"
-
-    .line 25
-    const/4 v5, 0x0
-
-    .line 28
-    invoke-static {v2, v4, v5}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    .line 29
-    move-result v2
-
-    .line 32
+    .line 20
     if-eqz v2, :cond_1
 
-    .line 33
-    const/4 v2, 0x5
+    .line 22
+    new-instance v0, Landroid/graphics/Rect;
 
-    .line 35
+    .line 24
+    iget-object v2, p0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->overlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
+
+    .line 26
+    iget-object v2, v2, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->sensorBounds:Landroid/graphics/Rect;
+
+    .line 28
+    invoke-direct {v0, v2}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+
+    .line 30
     goto :goto_1
 
-    .line 36
+    .line 33
     :cond_1
-    :goto_0
-    move v2, v3
+    new-instance v2, Landroid/graphics/Rect;
 
-    .line 37
-    :goto_1
-    const-string v4, "null cannot be cast to non-null type com.android.systemui.biometrics.UdfpsFpmEmptyView"
+    .line 34
+    iget-object v3, p0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->overlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
+
+    .line 36
+    iget v4, v3, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->naturalDisplayWidth:I
 
     .line 38
-    const v5, 0x7f0e02ff    # @layout/udfps_fpm_empty_view 'res/layout/udfps_fpm_empty_view.xml'
+    iget v3, v3, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->naturalDisplayHeight:I
 
     .line 40
-    const/4 v6, 0x0
+    invoke-direct {v2, v0, v0, v4, v3}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 43
-    packed-switch v2, :pswitch_data_0
+    .line 42
+    move-object v0, v2
 
-    .line 44
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 45
+    :goto_1
+    iget-object v2, p0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->overlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
-    .line 47
-    const-string v1, "Animation for reason "
+    .line 46
+    iget v2, v2, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->rotation:I
 
-    .line 49
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 48
+    if-eq v2, v1, :cond_2
 
-    .line 51
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 50
+    const/4 v1, 0x3
 
-    .line 54
-    const-string v1, " not supported yet"
+    .line 52
+    if-eq v2, v1, :cond_2
 
-    .line 57
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 53
+    goto :goto_3
 
-    .line 59
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 55
+    :cond_2
+    iget-object v1, p0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+
+    .line 56
+    check-cast v1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
+
+    .line 58
+    iget-boolean v3, v1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mShowing:Z
+
+    .line 60
+    if-nez v3, :cond_3
 
     .line 62
-    move-result-object v0
-
-    .line 65
-    const-string v1, "UdfpsControllerOverlay"
-
-    .line 66
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 68
-    goto/16 :goto_3
-
-    .line 71
-    :pswitch_0
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->inflater:Landroid/view/LayoutInflater;
-
-    .line 73
-    invoke-virtual {v2, v5, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    .line 75
-    move-result-object v2
-
-    .line 78
-    if-eqz v2, :cond_2
-
-    .line 79
-    move-object v6, v2
-
-    .line 81
-    check-cast v6, Lcom/android/systemui/biometrics/UdfpsFpmEmptyView;
-
-    .line 82
-    invoke-virtual {v1, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
-
-    .line 84
-    new-instance v1, Lcom/android/systemui/biometrics/UdfpsFpmEmptyViewController;
-
-    .line 87
-    iget-object v10, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->dumpManager:Lcom/android/systemui/dump/DumpManager;
-
-    .line 89
-    iget-object v11, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->udfpsOverlayInteractor:Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;
-
-    .line 91
-    iget-object v7, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
-
-    .line 93
-    iget-object v8, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->shadeInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
-
-    .line 95
-    iget-object v9, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->dialogManager:Lcom/android/systemui/statusbar/phone/SystemUIDialogManager;
-
-    .line 97
-    move-object v5, v1
-
-    .line 99
-    invoke-direct/range {v5 .. v11}, Lcom/android/systemui/biometrics/UdfpsFpmEmptyViewController;-><init>(Lcom/android/systemui/biometrics/UdfpsFpmEmptyView;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;Lcom/android/systemui/statusbar/phone/SystemUIDialogManager;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;)V
-
-    .line 100
-    :goto_2
-    move-object v6, v1
-
-    .line 103
-    goto/16 :goto_3
-
-    .line 104
-    :cond_2
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    .line 106
-    invoke-direct {v0, v4}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    .line 108
-    throw v0
-
-    .line 111
-    :pswitch_1
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->inflater:Landroid/view/LayoutInflater;
-
-    .line 112
-    const v3, 0x7f0e0303    # @layout/udfps_keyguard_view_legacy 'res/layout/udfps_keyguard_view_legacy.xml'
-
-    .line 114
-    invoke-virtual {v2, v3, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    .line 117
-    move-result-object v2
-
-    .line 120
-    if-eqz v2, :cond_3
-
-    .line 121
-    move-object v4, v2
-
-    .line 123
-    check-cast v4, Lcom/android/systemui/biometrics/UdfpsKeyguardViewLegacy;
-
-    .line 124
-    invoke-virtual {v1, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
-
-    .line 126
-    iget-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->sensorBounds:Landroid/graphics/Rect;
-
-    .line 129
-    iget-object v2, v4, Lcom/android/systemui/biometrics/UdfpsKeyguardViewLegacy;->mSensorBounds:Landroid/graphics/Rect;
-
-    .line 131
-    invoke-virtual {v2, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    .line 133
-    new-instance v1, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;
-
-    .line 136
-    move-object v3, v1
-
-    .line 138
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->shadeInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
-
-    .line 139
-    move-object/from16 v21, v2
-
-    .line 141
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->udfpsOverlayInteractor:Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;
-
-    .line 143
-    move-object/from16 v22, v2
-
-    .line 145
-    iget-object v5, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
-
-    .line 147
-    iget-object v6, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->statusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
-
-    .line 149
-    iget-object v7, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    .line 151
-    iget-object v8, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->dumpManager:Lcom/android/systemui/dump/DumpManager;
-
-    .line 153
-    iget-object v9, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->transitionController:Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
-
-    .line 155
-    iget-object v10, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
-
-    .line 157
-    iget-object v11, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
-
-    .line 159
-    iget-object v12, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->unlockedScreenOffAnimationController:Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;
-
-    .line 161
-    iget-object v13, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->dialogManager:Lcom/android/systemui/statusbar/phone/SystemUIDialogManager;
-
-    .line 163
-    iget-object v15, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->activityTransitionAnimator:Lcom/android/systemui/animation/ActivityTransitionAnimator;
-
-    .line 165
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->primaryBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;
-
-    .line 167
-    move-object/from16 v16, v2
-
-    .line 169
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->alternateBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;
-
-    .line 171
-    move-object/from16 v17, v2
-
-    .line 173
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->udfpsKeyguardAccessibilityDelegate:Lcom/android/systemui/biometrics/UdfpsKeyguardAccessibilityDelegate;
-
-    .line 175
-    move-object/from16 v18, v2
-
-    .line 177
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->selectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
-
-    .line 179
-    move-object/from16 v19, v2
-
-    .line 181
-    iget-object v0, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->transitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
-
-    .line 183
-    move-object/from16 v20, v0
-
-    .line 185
-    move-object/from16 v14, p2
-
-    .line 187
-    invoke-direct/range {v3 .. v22}, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;-><init>(Lcom/android/systemui/biometrics/UdfpsKeyguardViewLegacy;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;Lcom/android/systemui/statusbar/phone/SystemUIDialogManager;Lcom/android/systemui/biometrics/UdfpsController;Lcom/android/systemui/animation/ActivityTransitionAnimator;Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;Lcom/android/systemui/biometrics/UdfpsKeyguardAccessibilityDelegate;Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;)V
-
-    .line 189
     goto :goto_2
 
-    .line 192
+    .line 64
     :cond_3
-    new-instance v0, Ljava/lang/NullPointerException;
+    iget-object v3, p0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 193
-    const-string v1, "null cannot be cast to non-null type com.android.systemui.biometrics.UdfpsKeyguardViewLegacy"
+    .line 65
+    iget-boolean v3, v3, Lcom/android/keyguard/KeyguardUpdateMonitor;->mGoingToSleep:Z
 
-    .line 195
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    .line 67
+    if-nez v3, :cond_4
 
-    .line 197
-    throw v0
+    .line 69
+    iget-boolean v3, v1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mOccluded:Z
 
-    .line 200
-    :pswitch_2
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->inflater:Landroid/view/LayoutInflater;
+    .line 71
+    if-eqz v3, :cond_4
 
-    .line 201
-    const v3, 0x7f0e02fd    # @layout/udfps_bp_view 'res/layout/udfps_bp_view.xml'
+    .line 73
+    :goto_2
+    invoke-static {v2}, Landroid/view/Surface;->rotationToString(I)Ljava/lang/String;
 
-    .line 203
-    invoke-virtual {v2, v3, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    .line 75
+    iget-object v1, p0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->overlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
-    .line 206
-    move-result-object v2
+    .line 78
+    iget v3, v1, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->naturalDisplayWidth:I
 
-    .line 209
-    if-eqz v2, :cond_4
+    .line 80
+    iget v1, v1, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->naturalDisplayHeight:I
 
-    .line 210
-    move-object v4, v2
+    .line 82
+    invoke-static {v0, v3, v1, v2}, Landroid/util/RotationUtils;->rotateBounds(Landroid/graphics/Rect;III)V
 
-    .line 212
-    check-cast v4, Lcom/android/systemui/biometrics/UdfpsBpView;
+    .line 84
+    iget-object v1, p0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->sensorBounds:Landroid/graphics/Rect;
 
-    .line 213
-    invoke-virtual {v1, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+    .line 87
+    iget-object p0, p0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->overlayParams:Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;
 
-    .line 215
-    new-instance v1, Lcom/android/systemui/biometrics/UdfpsBpViewController;
+    .line 89
+    iget v3, p0, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->naturalDisplayWidth:I
 
-    .line 218
-    iget-object v8, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->dumpManager:Lcom/android/systemui/dump/DumpManager;
+    .line 91
+    iget p0, p0, Lcom/android/systemui/biometrics/shared/model/UdfpsOverlayParams;->naturalDisplayHeight:I
 
-    .line 220
-    iget-object v9, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->udfpsOverlayInteractor:Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;
+    .line 93
+    invoke-static {v1, v3, p0, v2}, Landroid/util/RotationUtils;->rotateBounds(Landroid/graphics/Rect;III)V
 
-    .line 222
-    iget-object v5, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+    .line 95
+    goto :goto_3
 
-    .line 224
-    iget-object v6, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->shadeInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
-
-    .line 226
-    iget-object v7, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->dialogManager:Lcom/android/systemui/statusbar/phone/SystemUIDialogManager;
-
-    .line 228
-    move-object v3, v1
-
-    .line 230
-    invoke-direct/range {v3 .. v9}, Lcom/android/systemui/biometrics/UdfpsBpViewController;-><init>(Lcom/android/systemui/biometrics/UdfpsBpView;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;Lcom/android/systemui/statusbar/phone/SystemUIDialogManager;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;)V
-
-    .line 231
-    goto/16 :goto_2
-
-    .line 234
+    .line 98
     :cond_4
-    new-instance v0, Ljava/lang/NullPointerException;
+    invoke-static {v2}, Landroid/view/Surface;->rotationToString(I)Ljava/lang/String;
 
-    .line 236
-    const-string v1, "null cannot be cast to non-null type com.android.systemui.biometrics.UdfpsBpView"
+    .line 99
+    iget-boolean p0, v1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mOccluded:Z
 
-    .line 238
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    .line 240
-    throw v0
-
-    .line 243
-    :pswitch_3
-    iget-object v2, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->inflater:Landroid/view/LayoutInflater;
-
-    .line 244
-    invoke-virtual {v2, v5, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    .line 246
-    move-result-object v2
-
-    .line 249
-    if-eqz v2, :cond_5
-
-    .line 250
-    move-object v6, v2
-
-    .line 252
-    check-cast v6, Lcom/android/systemui/biometrics/UdfpsFpmEmptyView;
-
-    .line 253
-    invoke-virtual {v1, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
-
-    .line 255
-    iget-object v1, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->sensorBounds:Landroid/graphics/Rect;
-
-    .line 258
-    const v2, 0x7f0b086d    # @id/udfps_enroll_accessibility_view
-
-    .line 260
-    invoke-virtual {v6, v2}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
-
-    .line 263
-    move-result-object v2
-
-    .line 266
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 267
-    move-result-object v3
-
-    .line 270
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    .line 271
-    move-result v4
-
-    .line 274
-    iput v4, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    .line 275
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    .line 277
-    move-result v1
-
-    .line 280
-    iput v1, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 281
-    invoke-virtual {v2, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 283
-    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
-
-    .line 286
-    new-instance v1, Lcom/android/systemui/biometrics/UdfpsFpmEmptyViewController;
-
-    .line 289
-    iget-object v10, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->dumpManager:Lcom/android/systemui/dump/DumpManager;
-
-    .line 291
-    iget-object v11, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->udfpsOverlayInteractor:Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;
-
-    .line 293
-    iget-object v7, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->statusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
-
-    .line 295
-    iget-object v8, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->shadeInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
-
-    .line 297
-    iget-object v9, v0, Lcom/android/systemui/biometrics/UdfpsControllerOverlay;->dialogManager:Lcom/android/systemui/statusbar/phone/SystemUIDialogManager;
-
-    .line 299
-    move-object v5, v1
-
-    .line 301
-    invoke-direct/range {v5 .. v11}, Lcom/android/systemui/biometrics/UdfpsFpmEmptyViewController;-><init>(Lcom/android/systemui/biometrics/UdfpsFpmEmptyView;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;Lcom/android/systemui/statusbar/phone/SystemUIDialogManager;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/biometrics/domain/interactor/UdfpsOverlayInteractor;)V
-
-    .line 302
-    goto/16 :goto_2
-
-    .line 305
+    .line 102
     :goto_3
-    return-object v6
+    iget p0, v0, Landroid/graphics/Rect;->left:I
 
-    .line 307
-    :cond_5
-    new-instance v0, Ljava/lang/NullPointerException;
+    .line 104
+    iput p0, p1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 308
-    invoke-direct {v0, v4}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    .line 106
+    iget p0, v0, Landroid/graphics/Rect;->top:I
 
-    .line 310
-    throw v0
+    .line 108
+    iput p0, p1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 313
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
-    .line 314
+    .line 110
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    .line 112
+    move-result p0
+
+    .line 115
+    iput p0, p1, Landroid/view/WindowManager$LayoutParams;->height:I
+
+    .line 116
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    .line 118
+    move-result p0
+
+    .line 121
+    iput p0, p1, Landroid/view/WindowManager$LayoutParams;->width:I
+
+    .line 122
+    return-void
+    .line 124
 .end method

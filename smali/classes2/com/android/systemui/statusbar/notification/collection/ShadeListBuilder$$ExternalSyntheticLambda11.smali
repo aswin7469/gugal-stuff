@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$$ExternalSyntheticLambda11;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/Consumer;
@@ -39,12 +39,12 @@
     iget v0, p0, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$$ExternalSyntheticLambda11;->$r8$classId:I
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$$ExternalSyntheticLambda11;->f$0:Ljava/util/List;
-
-    .line 4
     packed-switch v0, :pswitch_data_0
 
-    .line 6
+    .line 4
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$$ExternalSyntheticLambda11;->f$0:Ljava/util/List;
+
+    .line 7
     check-cast p1, Lcom/android/systemui/statusbar/notification/collection/listbuilder/OnBeforeFinalizeFilterListener;
 
     .line 9
@@ -55,32 +55,35 @@
 
     .line 14
     :pswitch_0
-    check-cast p1, Lcom/android/systemui/statusbar/notification/collection/listbuilder/OnBeforeRenderListListener;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder$$ExternalSyntheticLambda11;->f$0:Ljava/util/List;
 
     .line 15
-    invoke-interface {p1, p0}, Lcom/android/systemui/statusbar/notification/collection/listbuilder/OnBeforeRenderListListener;->onBeforeRenderList$1(Ljava/util/List;)V
+    check-cast p1, Lcom/android/systemui/statusbar/notification/collection/listbuilder/OnBeforeRenderListListener;
 
     .line 17
+    invoke-interface {p1, p0}, Lcom/android/systemui/statusbar/notification/collection/listbuilder/OnBeforeRenderListListener;->onBeforeRenderList$1(Ljava/util/List;)V
+
+    .line 19
     return-void
 
-    .line 20
+    .line 22
     :pswitch_1
-    check-cast p1, Lcom/android/systemui/statusbar/notification/collection/listbuilder/OnBeforeTransformGroupsListener;
-
-    .line 21
-    invoke-interface {p1, p0}, Lcom/android/systemui/statusbar/notification/collection/listbuilder/OnBeforeTransformGroupsListener;->onBeforeTransformGroups(Ljava/util/List;)V
+    check-cast p1, Lcom/android/systemui/statusbar/notification/collection/coordinator/HeadsUpCoordinator$attach$1;
 
     .line 23
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/coordinator/HeadsUpCoordinator$attach$1;->onBeforeTransformGroups()V
+
+    .line 25
     return-void
 
-    .line 26
+    .line 28
     nop
 
-    .line 27
+    .line 29
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 28
+    .line 30
 .end method

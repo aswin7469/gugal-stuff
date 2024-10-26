@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">(M)‏‮place‬‏ ‏‮selected‬‏ ‏‮widget‬‏</string>
   <string name="accessibility_action_label_remove_widget">(M)‏‮remove‬‏ ‏‮widget‬‏</string>
   <string name="accessibility_action_label_select_widget">(M)‏‮select‬‏ ‏‮widget‬‏</string>
-  <string name="accessibility_action_open_communal_hub">(M)‏‮Widgets‬‏ ‏‮on‬‏ ‏‮lock‬‏ ‏‮screen‬‏</string>
   <string name="accessibility_action_pip_resize">(M)‏‮Resize‬‏</string>
   <string name="accessibility_action_pip_stash">(M)‏‮Stash‬‏</string>
   <string name="accessibility_action_pip_unstash">(M)‏‮Unstash‬‏</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">(M)‏‮Exit‬‏ ‏‮one-handed‬‏ ‏‮mode‬‏</string>
   <string name="accessibility_airplane_mode">(M)‏‮Airplane‬‏ ‏‮mode.‬‏</string>
   <string name="accessibility_allow_diagonal_scrolling">(M)‏‮Allow‬‏ ‏‮diagonal‬‏ ‏‮scrolling‬‏</string>
+  <string name="accessibility_assistant_poodle">(M)‏‮Voice‬‏ ‏‮search‬‏</string>
   <string name="accessibility_authenticate_hint">(M)‏‮authenticate‬‏</string>
   <string name="accessibility_back">(M)‏‮Back‬‏</string>
   <string name="accessibility_banner_message_dismiss">(M)‏‮Dismiss‬‏</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">(M)‏‮enter‬‏ ‏‮device‬‏</string>
   <string name="accessibility_ethernet_connected">(M)‏‮Ethernet.‬‏</string>
   <string name="accessibility_ethernet_disconnected">(M)‏‮Ethernet‬‏ ‏‮disconnected.‬‏</string>
-  <string name="accessibility_fingerprint_bouncer">(M)‏‮Authentication‬‏ ‏‮required.‬‏ ‏‮Touch‬‏ ‏‮the‬‏ ‏‮fingerprint‬‏ ‏‮sensor‬‏ ‏‮to‬‏ ‏‮authenticate.‬‏</string>
   <string name="accessibility_fingerprint_label">(M)‏‮Fingerprint‬‏ ‏‮sensor‬‏</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">(M)‏‮toggle‬‏</string>
   <string name="accessibility_floating_button_action_edit">(M)‏‮Edit‬‏</string>
@@ -146,7 +145,7 @@
   <string name="accessibility_menu">(M)‏‮Menu‬‏</string>
   <string name="accessibility_multi_user_list_switcher">(M)‏‮pulldown‬‏ ‏‮menu‬‏</string>
   <string name="accessibility_multi_user_switch_switcher">(M)‏‮Switch‬‏ ‏‮user‬‏</string>
-  <string name="accessibility_next_alarm">(M)‏‮Next‬‏ ‏‮alarm‬‏ ‏‮at‬‏ ‏‮%s‬‏</string>
+  <string name="accessibility_next_alarm">(M)‏‮Next‬‏ ‏‮alarm‬‏ ‏‮at‬‏ %s</string>
   <string name="accessibility_no_calling">(M)‏‮No‬‏ ‏‮calling.‬‏</string>
   <string name="accessibility_no_phone">(M)‏‮No‬‏ ‏‮phone.‬‏</string>
   <string name="accessibility_no_wifi">(M)‏‮Wifi‬‏ ‏‮disconnected.‬‏</string>
@@ -173,8 +172,6 @@
   <string name="accessibility_quick_settings_bluetooth_device_tap_to_activate">(M)‏‮activate‬‏</string>
   <string name="accessibility_quick_settings_bluetooth_device_tap_to_disconnect">(M)‏‮disconnect‬‏</string>
   <string name="accessibility_quick_settings_bluetooth_on">(M)‏‮Bluetooth‬‏ ‏‮on.‬‏</string>
-  <string name="accessibility_quick_settings_caffeine_off">(M)‏‮Caffeine‬‏ ‏‮off.‬‏</string>
-  <string name="accessibility_quick_settings_caffeine_on">(M)‏‮Caffeine‬‏ ‏‮on.‬‏</string>
   <string name="accessibility_quick_settings_choose_user_action">(M)‏‮choose‬‏ ‏‮user‬‏</string>
   <string name="accessibility_quick_settings_dnd">(M)‏‮Do‬‏ ‏‮Not‬‏ ‏‮Disturb.‬‏</string>
   <string name="accessibility_quick_settings_dnd_alarms_on">(M)‏‮alarms‬‏ ‏‮only‬‏</string>
@@ -194,8 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">(M)‏‮Screen‬‏ ‏‮is‬‏ ‏‮locked‬‏ ‏‮in‬‏ ‏‮portrait‬‏ ‏‮orientation.‬‏</string>
   <string name="accessibility_send_smart_reply">(M)‏‮Send‬‏</string>
   <string name="accessibility_sensors_off_active">(M)‏‮Sensors‬‏ ‏‮off‬‏ ‏‮active‬‏</string>
+  <string name="accessibility_settings_gear">(M)Pixel Stand ‏‮settings‬‏</string>
   <string name="accessibility_side_fingerprint_indicator_label">(M)‏‮Touch‬‏ ‏‮the‬‏ ‏‮fingerprint‬‏ ‏‮sensor.‬‏ ‏‮It’s‬‏ ‏‮the‬‏ ‏‮shorter‬‏ ‏‮button‬‏ ‏‮on‬‏ ‏‮the‬‏ ‏‮side‬‏ ‏‮of‬‏ ‏‮the‬‏ ‏‮phone‬‏</string>
-  <string name="accessibility_smartspace_page">(M)‏‮Page‬‏ ‏‮%1$d‬‏ ‏‮of‬‏ ‏‮%2$d‬‏</string>
+  <string name="accessibility_smartspace_page">(M)‏‮Page‬‏ %1$d ‏‮of‬‏ %2$d</string>
   <string name="accessibility_split_bottom">(M)‏‮Split‬‏ ‏‮bottom‬‏</string>
   <string name="accessibility_split_left">(M)‏‮Split‬‏ ‏‮left‬‏</string>
   <string name="accessibility_split_right">(M)‏‮Split‬‏ ‏‮right‬‏</string>
@@ -222,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">(M)‏‮Wifi‬‏ ‏‮three‬‏ ‏‮bars.‬‏</string>
   <string name="accessibility_wifi_two_bars">(M)‏‮Wifi‬‏ ‏‮two‬‏ ‏‮bars.‬‏</string>
   <string name="accesssibility_keyguard_retry">(M)‏‮Swipe‬‏ ‏‮up‬‏ ‏‮to‬‏ ‏‮try‬‏ ‏‮Face‬‏ ‏‮Unlock‬‏ ‏‮again‬‏</string>
+  <string name="adaptive_charging_notify_des">(M)‏‮Battery‬‏ ‏‮full‬‏ ‏‮by‬‏ %1$s‏‮.‬‏ ‏‮Charging‬‏ ‏‮steadily‬‏ ‏‮to‬‏ ‏‮extend‬‏ ‏‮battery‬‏ ‏‮lifespan.‬‏</string>
+  <string name="adaptive_charging_notify_title">(M)‏‮Adaptive‬‏ ‏‮Charging‬‏ ‏‮is‬‏ ‏‮on‬‏</string>
+  <string name="adaptive_charging_notify_turn_off_once">(M)‏‮Turn‬‏ ‏‮off‬‏ ‏‮once‬‏</string>
+  <string name="adaptive_charging_time_estimate">(M)%1$s ‏‮•‬‏ ‏‮Adaptive‬‏ ‏‮Charging‬‏ ‏‮•‬‏ ‏‮Full‬‏ ‏‮by‬‏ %2$s</string>
   <string name="add">(M)‏‮Add‬‏</string>
   <string name="add_guest_failed">(M)‏‮Failed‬‏ ‏‮to‬‏ ‏‮create‬‏ ‏‮a‬‏ ‏‮new‬‏ ‏‮guest‬‏</string>
   <string name="airplane_mode">(M)‏‮Airplane‬‏ ‏‮mode‬‏</string>
@@ -237,6 +239,7 @@
   <string name="app_info">(M)‏‮App‬‏ ‏‮info‬‏</string>
   <string name="app_label">(M)‏‮System‬‏ ‏‮UI‬‏</string>
   <string name="assistant_attention_content_description">(M)‏‮User‬‏ ‏‮presence‬‏ ‏‮is‬‏ ‏‮detected‬‏</string>
+  <string name="assistant_scrim_label">(M)‏‮Listening,‬‏ ‏‮tap‬‏ ‏‮to‬‏ ‏‮cancel‬‏</string>
   <string name="audio_sharing_description">(M)‏‮Sharing‬‏ ‏‮audio‬‏</string>
   <string name="audio_status">(M)‏‮Listening‬‏</string>
   <string name="auto_data_switch_dialog_negative_button">(M)‏‮No‬‏ ‏‮thanks‬‏</string>
@@ -249,13 +252,11 @@
   <string name="back_button_text">(M)‏‮Back‬‏</string>
   <string name="battery">(M)‏‮Battery‬‏</string>
   <string name="battery_detail_switch_title">(M)‏‮Battery‬‏ ‏‮Saver‬‏</string>
-  <string name="battery_low_description">(M)‏‮You‬‏ ‏‮have‬‏ %s ‏‮battery‬‏ ‏‮left.‬‏ ‏‮Battery‬‏ ‏‮Saver‬‏ ‏‮turns‬‏ ‏‮on‬‏ ‏‮Dark‬‏ ‏‮theme,‬‏ ‏‮restricts‬‏ ‏‮background‬‏ ‏‮activity,‬‏ ‏‮and‬‏ ‏‮delays‬‏ ‏‮notifications.‬‏</string>
+  <string name="battery_health_notify_learn_more">(M)‏‮Learn‬‏ ‏‮more‬‏</string>
   <string name="battery_low_intro">(M)‏‮Battery‬‏ ‏‮Saver‬‏ ‏‮turns‬‏ ‏‮on‬‏ ‏‮Dark‬‏ ‏‮theme,‬‏ ‏‮restricts‬‏ ‏‮background‬‏ ‏‮activity,‬‏ ‏‮and‬‏ ‏‮delays‬‏ ‏‮notifications.‬‏</string>
-  <string name="battery_low_title">(M)‏‮Turn‬‏ ‏‮on‬‏ ‏‮Battery‬‏ ‏‮Saver?‬‏</string>
   <string name="battery_saver_confirmation_ok">(M)‏‮Turn‬‏ ‏‮on‬‏</string>
   <string name="battery_saver_confirmation_title">(M)‏‮Turn‬‏ ‏‮on‬‏ ‏‮Battery‬‏ ‏‮Saver?‬‏</string>
   <string name="battery_saver_confirmation_title_generic">(M)‏‮About‬‏ ‏‮Battery‬‏ ‏‮Saver‬‏</string>
-  <string name="battery_saver_dismiss_action">(M)‏‮No‬‏ ‏‮thanks‬‏</string>
   <string name="battery_saver_start_action">(M)‏‮Turn‬‏ ‏‮on‬‏</string>
   <string name="battery_state_unknown_notification_text">(M)‏‮Tap‬‏ ‏‮for‬‏ ‏‮more‬‏ ‏‮information‬‏</string>
   <string name="battery_state_unknown_notification_title">(M)‏‮Problem‬‏ ‏‮reading‬‏ ‏‮your‬‏ ‏‮battery‬‏ ‏‮meter‬‏</string>
@@ -300,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">(M)‏‮Active.‬‏ ‏‮L:‬‏ %1$s‏‮,‬‏ ‏‮R:‬‏ %2$s ‏‮battery.‬‏</string>
   <string name="bluetooth_active_battery_level_untethered_left">(M)‏‮Active.‬‏ ‏‮L:‬‏ %1$s ‏‮battery.‬‏</string>
   <string name="bluetooth_active_battery_level_untethered_right">(M)‏‮Active.‬‏ ‏‮R:‬‏ %1$s ‏‮battery.‬‏</string>
-  <string name="bluetooth_active_media_only_battery_level">(M)‏‮Active‬‏ ‏‮(media‬‏ ‏‮only).‬‏ %1$s ‏‮battery.‬‏</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">(M)‏‮Active‬‏ ‏‮(media‬‏ ‏‮only).‬‏ ‏‮L:‬‏ %1$s‏‮,‬‏ ‏‮R:‬‏ %2$s ‏‮battery.‬‏</string>
-  <string name="bluetooth_active_media_only_no_battery_level">(M)‏‮Active‬‏ ‏‮(media‬‏ ‏‮only)‬‏</string>
   <string name="bluetooth_active_no_battery_level">(M)‏‮Active‬‏</string>
   <string name="bluetooth_battery_level">(M)%1$s ‏‮battery‬‏</string>
-  <string name="bluetooth_battery_level_lea_support">(M)‏‮Connected‬‏ ‏‮(supports‬‏ ‏‮audio‬‏ ‏‮sharing).‬‏ %1$s ‏‮battery.‬‏</string>
   <string name="bluetooth_battery_level_untethered">(M)‏‮L:‬‏ %1$s‏‮,‬‏ ‏‮R:‬‏ %2$s ‏‮battery.‬‏</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">(M)‏‮Connected‬‏ ‏‮(supports‬‏ ‏‮audio‬‏ ‏‮sharing).‬‏ ‏‮L:‬‏ %1$s‏‮,‬‏ ‏‮R:‬‏ %2$s ‏‮battery.‬‏</string>
   <string name="bluetooth_connected">(M)‏‮Connected‬‏%1$s</string>
   <string name="bluetooth_connecting">(M)‏‮Connecting…‬‏</string>
   <string name="bluetooth_disconnected">(M)‏‮Disconnected‬‏</string>
@@ -315,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">(M)‏‮Active‬‏ ‏‮(left‬‏ ‏‮only)‬‏</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">(M)‏‮Active‬‏ ‏‮(left‬‏ ‏‮and‬‏ ‏‮right)‬‏</string>
   <string name="bluetooth_hearing_aid_right_active">(M)‏‮Active‬‏ ‏‮(right‬‏ ‏‮only)‬‏</string>
-  <string name="bluetooth_no_battery_level_lea_support">(M)‏‮Connected‬‏ ‏‮(supports‬‏ ‏‮audio‬‏ ‏‮sharing)‬‏</string>
   <string name="bluetooth_pairing">(M)‏‮Pairing…‬‏</string>
   <string name="bluetooth_pairing_device_down_error_message">(M)‏‮Can't‬‏ ‏‮communicate‬‏ ‏‮with‬‏ %1$s‏‮.‬‏</string>
   <string name="bluetooth_pairing_error_message">(M)‏‮Couldn't‬‏ ‏‮pair‬‏ ‏‮with‬‏ %1$s‏‮.‬‏</string>
   <string name="bluetooth_pairing_pin_error_message">(M)‏‮Couldn't‬‏ ‏‮pair‬‏ ‏‮with‬‏ %1$s ‏‮because‬‏ ‏‮of‬‏ ‏‮an‬‏ ‏‮incorrect‬‏ ‏‮PIN‬‏ ‏‮or‬‏ ‏‮passkey.‬‏</string>
   <string name="bluetooth_pairing_rejected_error_message">(M)‏‮Pairing‬‏ ‏‮rejected‬‏ ‏‮by‬‏ %1$s‏‮.‬‏</string>
-  <string name="bluetooth_saved_device_lea_support">(M)‏‮Supports‬‏ ‏‮audio‬‏ ‏‮sharing‬‏</string>
   <string name="bluetooth_talkback_bluetooth">(M)‏‮Bluetooth‬‏</string>
   <string name="bluetooth_talkback_computer">(M)‏‮Computer‬‏</string>
   <string name="bluetooth_talkback_headphone">(M)‏‮Headphone‬‏</string>
@@ -360,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">(M)‏‮Overflow‬‏</string>
   <string name="bubble_overflow_empty_subtitle">(M)‏‮Recent‬‏ ‏‮bubbles‬‏ ‏‮and‬‏ ‏‮dismissed‬‏ ‏‮bubbles‬‏ ‏‮will‬‏ ‏‮appear‬‏ ‏‮here‬‏</string>
   <string name="bubble_overflow_empty_title">(M)‏‮No‬‏ ‏‮recent‬‏ ‏‮bubbles‬‏</string>
-  <string name="bubble_shortcut_label">(M)‏‮Bubbles‬‏</string>
-  <string name="bubble_shortcut_long_label">(M)‏‮Show‬‏ ‏‮Bubbles‬‏</string>
   <string name="bubbles_app_settings">(M)%1$s ‏‮settings‬‏</string>
   <string name="bubbles_dont_bubble_conversation">(M)‏‮Don’t‬‏ ‏‮bubble‬‏ ‏‮conversation‬‏</string>
   <string name="bubbles_settings_button_description">(M)‏‮Settings‬‏ ‏‮for‬‏ %1$s ‏‮bubbles‬‏</string>
@@ -393,6 +385,10 @@
   <string name="cast_to_other_device_stop_dialog_message_specific_app">(M)‏‮You‬‏ ‏‮will‬‏ ‏‮stop‬‏ ‏‮casting‬‏ ‏‮&lt;b&gt;‬‏%1$s‏‮&lt;/b&gt;‬‏</string>
   <string name="cast_to_other_device_stop_dialog_title">(M)‏‮Stop‬‏ ‏‮casting‬‏ ‏‮screen?‬‏</string>
   <string name="cell_data_off_content_description">(M)‏‮Mobile‬‏ ‏‮data‬‏ ‏‮off‬‏</string>
+  <string name="charge_limit_discovery_notification_enable_button">(M)‏‮Enable‬‏ ‏‮now‬‏</string>
+  <string name="charge_limit_discovery_notification_text">(M)‏‮Try‬‏ ‏‮turning‬‏ ‏‮on‬‏ ‏‮the‬‏ ‏‮80%‬‏ ‏‮limit‬‏ ‏‮feature‬‏ ‏‮to‬‏ ‏‮protect‬‏ ‏‮battery‬‏ ‏‮health‬‏ ‏‮and‬‏ ‏‮lifespan.‬‏ ‏‮You‬‏ ‏‮can‬‏ ‏‮manage‬‏ ‏‮this‬‏ ‏‮in‬‏ ‏‮settings‬‏ ‏‮anytime‬‏</string>
+  <string name="charge_limit_discovery_notification_title">(M)‏‮Protect‬‏ ‏‮your‬‏ ‏‮battery‬‏ ‏‮during‬‏ ‏‮charging‬‏</string>
+  <string name="charging_reverse_text">(M)‏‮Sharing‬‏ ‏‮battery‬‏</string>
   <string name="clear_all_notifications_text">(M)‏‮Clear‬‏ ‏‮all‬‏</string>
   <string name="clipboard">(M)‏‮Clipboard‬‏</string>
   <string name="clipboard_content_copied">(M)‏‮Content‬‏ ‏‮copied‬‏</string>
@@ -413,6 +409,11 @@
   <string name="close_button_text">(M)‏‮Close‬‏</string>
   <string name="close_dialog_button">(M)‏‮Close‬‏</string>
   <string name="collapse_menu_text">(M)‏‮Close‬‏ ‏‮Menu‬‏</string>
+  <string name="columbus_bouncer_message">(M)‏‮Unlock‬‏ ‏‮to‬‏ ‏‮complete‬‏ ‏‮Quick‬‏ ‏‮Tap‬‏</string>
+  <string name="columbus_target_request_dialog_allow">(M)‏‮Allow‬‏</string>
+  <string name="columbus_target_request_dialog_deny">(M)‏‮Don’t‬‏ ‏‮allow‬‏</string>
+  <string name="columbus_target_request_dialog_summary">(M)‏‮Tap‬‏ ‏‮the‬‏ ‏‮back‬‏ ‏‮of‬‏ ‏‮your‬‏ ‏‮phone‬‏ ‏‮twice‬‏ ‏‮to‬‏ ‏‮open‬‏ %1$s‏‮.‬‏ ‏‮You‬‏ ‏‮can‬‏ ‏‮change‬‏ ‏‮this‬‏ ‏‮anytime‬‏ ‏‮in‬‏ ‏‮Settings.‬‏</string>
+  <string name="columbus_target_request_dialog_title">(M)‏‮Allow‬‏ ‏‮Quick‬‏ ‏‮Tap‬‏ ‏‮to‬‏ ‏‮open‬‏ %1$s‏‮?‬‏</string>
   <string name="communal_tutorial_indicator_text">(M)‏‮Swipe‬‏ ‏‮left‬‏ ‏‮to‬‏ ‏‮start‬‏ ‏‮the‬‏ ‏‮communal‬‏ ‏‮tutorial‬‏</string>
   <string name="connected_display_dialog_dual_display_stop_warning">(M)‏‮Your‬‏ ‏‮inner‬‏ ‏‮display‬‏ ‏‮will‬‏ ‏‮be‬‏ ‏‮mirrored.‬‏ ‏‮Your‬‏ ‏‮front‬‏ ‏‮display‬‏ ‏‮will‬‏ ‏‮be‬‏ ‏‮turned‬‏ ‏‮off.‬‏</string>
   <string name="connected_display_dialog_start_mirroring">(M)‏‮Mirror‬‏ ‏‮to‬‏ ‏‮external‬‏ ‏‮display?‬‏</string>
@@ -519,8 +520,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">(M)‏‮Mobile‬‏ ‏‮data‬‏ ‏‮is‬‏ ‏‮paused‬‏</string>
   <string name="data_usage_disabled_dialog_title">(M)‏‮Data‬‏ ‏‮is‬‏ ‏‮paused‬‏</string>
   <string name="days_timestamp">(M)%1$s ‏‮days‬‏ ‏‮ago‬‏</string>
-  <string name="default_error_message">(M)‏‮Invalid‬‏ ‏‮input‬‏</string>
   <string name="default_popup_window_title">(M)‏‮Pop-Up‬‏ ‏‮Window‬‏</string>
+  <string name="defender_notify_resume_charge">(M)‏‮Override‬‏</string>
+  <string name="defender_notify_title">(M)‏‮Protecting‬‏ ‏‮your‬‏ ‏‮battery‬‏</string>
+  <string name="defender_post_notify_des">(M)‏‮To‬‏ ‏‮help‬‏ ‏‮extend‬‏ ‏‮battery‬‏ ‏‮lifespan,‬‏ ‏‮charging‬‏ ‏‮was‬‏ ‏‮optimized‬‏ ‏‮from‬‏ %1$s ‏‮to‬‏ %2$s</string>
+  <string name="defender_post_notify_title">(M)‏‮Charging‬‏ ‏‮was‬‏ ‏‮optimized‬‏</string>
   <string name="demo_mode">(M)‏‮System‬‏ ‏‮UI‬‏ ‏‮demo‬‏ ‏‮mode‬‏</string>
   <string name="desktop_mode_maximize_menu_maximize_text">(M)‏‮Maximize‬‏ ‏‮Screen‬‏</string>
   <string name="desktop_mode_maximize_menu_snap_text">(M)‏‮Snap‬‏ ‏‮Screen‬‏</string>
@@ -540,20 +544,32 @@
   <string name="do_disclosure_generic">(M)‏‮This‬‏ ‏‮device‬‏ ‏‮belongs‬‏ ‏‮to‬‏ ‏‮your‬‏ ‏‮organization‬‏</string>
   <string name="do_disclosure_with_name">(M)‏‮This‬‏ ‏‮device‬‏ ‏‮belongs‬‏ ‏‮to‬‏ %s</string>
   <string name="do_financed_disclosure_with_name">(M)‏‮This‬‏ ‏‮device‬‏ ‏‮is‬‏ ‏‮provided‬‏ ‏‮by‬‏ %s</string>
+  <string name="dock_a11y_action_show_photo_text">(M)‏‮Show‬‏ ‏‮photo‬‏ ‏‮frame‬‏</string>
+  <string name="dock_alignment_not_charging">(M)‏‮Realign‬‏ ‏‮phone‬‏ ‏‮to‬‏ ‏‮charge‬‏ ‏‮wirelessly‬‏</string>
+  <string name="dock_alignment_slow_charging">(M)‏‮Realign‬‏ ‏‮phone‬‏ ‏‮for‬‏ ‏‮faster‬‏ ‏‮charging‬‏</string>
+  <string name="dock_defender_first_run_des">(M)‏‮To‬‏ ‏‮help‬‏ ‏‮extend‬‏ ‏‮battery‬‏ ‏‮lifespan,‬‏ ‏‮charging‬‏ ‏‮is‬‏ ‏‮on‬‏ ‏‮hold‬‏ ‏‮at‬‏ ‏‮90%‬‏ ‏‮while‬‏ ‏‮your‬‏ ‏‮tablet‬‏ ‏‮is‬‏ ‏‮docked.‬‏ ‏‮Go‬‏ ‏‮to‬‏ ‏‮Settings‬‏ ‏‮anytime‬‏ ‏‮to‬‏ ‏‮override.‬‏</string>
+  <string name="dock_defender_first_run_settings">(M)‏‮Settings‬‏</string>
+  <string name="dock_defender_first_run_title">(M)‏‮Charging‬‏ ‏‮on‬‏ ‏‮hold‬‏ ‏‮to‬‏ ‏‮protect‬‏ ‏‮battery‬‏</string>
   <string name="dock_multi_instances_not_supported_text">(M)‏‮This‬‏ ‏‮app‬‏ ‏‮can‬‏ ‏‮only‬‏ ‏‮be‬‏ ‏‮opened‬‏ ‏‮in‬‏ ‏‮1‬‏ ‏‮window‬‏</string>
   <string name="dock_non_resizeble_failed_to_dock_text">(M)‏‮App‬‏ ‏‮does‬‏ ‏‮not‬‏ ‏‮support‬‏ ‏‮split‬‏ ‏‮screen‬‏</string>
+  <string name="dock_photo_preview_text">(M)‏‮Photo‬‏ ‏‮frame‬‏ ‏‮starting...‬‏</string>
+  <string name="dock_promo_text">(M)‏‮Swipe‬‏ ‏‮left‬‏ ‏‮for‬‏ ‏‮photo‬‏ ‏‮frame‬‏</string>
   <string name="done">(M)‏‮Done‬‏</string>
   <string name="drag_split_not_supported">(M)‏‮This‬‏ ‏‮notification‬‏ ‏‮does‬‏ ‏‮not‬‏ ‏‮support‬‏ ‏‮dragging‬‏ ‏‮to‬‏ ‏‮split‬‏ ‏‮screen‬‏</string>
   <string name="drag_to_add_tiles">(M)‏‮Hold‬‏ ‏‮and‬‏ ‏‮drag‬‏ ‏‮to‬‏ ‏‮add‬‏ ‏‮tiles‬‏</string>
   <string name="drag_to_rearrange_tiles">(M)‏‮Hold‬‏ ‏‮and‬‏ ‏‮drag‬‏ ‏‮to‬‏ ‏‮rearrange‬‏ ‏‮tiles‬‏</string>
   <string name="drag_to_remove_disabled">(M)‏‮You‬‏ ‏‮need‬‏ ‏‮at‬‏ ‏‮least‬‏ %1$d ‏‮tiles‬‏</string>
   <string name="drag_to_remove_tiles">(M)‏‮Drag‬‏ ‏‮here‬‏ ‏‮to‬‏ ‏‮remove‬‏</string>
+  <string name="dream_lockscreen_wallpaper_description">(M)‏‮Use‬‏ ‏‮your‬‏ ‏‮current‬‏ ‏‮lockscreen‬‏ ‏‮wallpaper‬‏</string>
+  <string name="dream_lockscreen_wallpaper_label">(M)‏‮Wallpaper‬‏</string>
   <string name="dream_overlay_status_bar_alarm_set">(M)‏‮Alarm‬‏ ‏‮set‬‏</string>
   <string name="dream_overlay_status_bar_camera_mic_off">(M)‏‮Camera‬‏ ‏‮and‬‏ ‏‮mic‬‏ ‏‮are‬‏ ‏‮off‬‏</string>
   <string name="dream_overlay_status_bar_camera_off">(M)‏‮Camera‬‏ ‏‮is‬‏ ‏‮off‬‏</string>
   <string name="dream_overlay_status_bar_mic_off">(M)‏‮Mic‬‏ ‏‮is‬‏ ‏‮off‬‏</string>
   <string name="dream_overlay_status_bar_priority_mode">(M)‏‮Priority‬‏ ‏‮mode‬‏</string>
   <string name="dream_overlay_status_bar_wifi_off">(M)‏‮Wi‑Fi‬‏ ‏‮unavailable‬‏</string>
+  <string name="dwell_defender_notify_des">(M)‏‮This‬‏ ‏‮helps‬‏ ‏‮extend‬‏ ‏‮battery‬‏ ‏‮lifespan‬‏ ‏‮when‬‏ ‏‮your‬‏ ‏‮phone‬‏ ‏‮is‬‏ ‏‮left‬‏ ‏‮to‬‏ ‏‮charge‬‏ ‏‮for‬‏ ‏‮too‬‏ ‏‮long‬‏</string>
+  <string name="dwell_defender_notify_title">(M)‏‮Charging‬‏ ‏‮on‬‏ ‏‮hold‬‏ ‏‮to‬‏ ‏‮protect‬‏ ‏‮battery‬‏</string>
   <string name="edit_user_info_message">(M)‏‮The‬‏ ‏‮name‬‏ ‏‮and‬‏ ‏‮picture‬‏ ‏‮you‬‏ ‏‮choose‬‏ ‏‮will‬‏ ‏‮be‬‏ ‏‮visible‬‏ ‏‮to‬‏ ‏‮anyone‬‏ ‏‮who‬‏ ‏‮uses‬‏ ‏‮this‬‏ ‏‮device.‬‏</string>
   <string name="edit_widget">(M)‏‮Edit‬‏ ‏‮widget‬‏</string>
   <string name="empty_shade_text">(M)‏‮No‬‏ ‏‮notifications‬‏</string>
@@ -569,12 +585,16 @@
   <string name="ethernet_label">(M)‏‮Ethernet‬‏</string>
   <string name="expand_button_title">(M)‏‮Advanced‬‏</string>
   <string name="expand_menu_text">(M)‏‮Open‬‏ ‏‮Menu‬‏</string>
+  <string name="extreme_battery_saver_text">(M)‏‮Extreme‬‏</string>
+  <string name="extreme_low_battery_notification_text">(M)‏‮Your‬‏ ‏‮phone‬‏ ‏‮will‬‏ ‏‮shut‬‏ ‏‮down‬‏ ‏‮if‬‏ ‏‮it’s‬‏ ‏‮not‬‏ ‏‮charged‬‏ ‏‮soon‬‏</string>
+  <string name="extreme_low_battery_notification_title">(M)‏‮Very‬‏ ‏‮low‬‏ ‏‮battery‬‏</string>
   <string name="face_re_enroll_dialog_content">(M)‏‮To‬‏ ‏‮set‬‏ ‏‮up‬‏ ‏‮Face‬‏ ‏‮Unlock‬‏ ‏‮again,‬‏ ‏‮your‬‏ ‏‮current‬‏ ‏‮face‬‏ ‏‮model‬‏ ‏‮will‬‏ ‏‮be‬‏ ‏‮deleted.‬‏
 
 ‏‮You’ll‬‏ ‏‮need‬‏ ‏‮to‬‏ ‏‮set‬‏ ‏‮up‬‏ ‏‮this‬‏ ‏‮feature‬‏ ‏‮again‬‏ ‏‮to‬‏ ‏‮use‬‏ ‏‮your‬‏ ‏‮face‬‏ ‏‮to‬‏ ‏‮unlock‬‏ ‏‮your‬‏ ‏‮phone.‬‏</string>
   <string name="face_re_enroll_dialog_title">(M)‏‮Set‬‏ ‏‮up‬‏ ‏‮Face‬‏ ‏‮Unlock‬‏</string>
   <string name="face_re_enroll_notification_name">(M)‏‮Face‬‏ ‏‮Unlock‬‏</string>
   <string name="face_re_enroll_notification_title">(M)‏‮Set‬‏ ‏‮up‬‏ ‏‮Face‬‏ ‏‮Unlock‬‏ ‏‮again‬‏</string>
+  <string name="face_reenroll_dialog_confirm">(M)‏‮Set‬‏ ‏‮up‬‏</string>
   <string name="face_reenroll_failure_dialog_content">(M)‏‮Couldn’t‬‏ ‏‮set‬‏ ‏‮up‬‏ ‏‮face‬‏ ‏‮unlock.‬‏ ‏‮Go‬‏ ‏‮to‬‏ ‏‮Settings‬‏ ‏‮to‬‏ ‏‮try‬‏ ‏‮again.‬‏</string>
   <string name="failed_attempts_now_wiping_device">(M)‏‮Too‬‏ ‏‮many‬‏ ‏‮incorrect‬‏ ‏‮attempts.‬‏ ‏‮This‬‏ ‏‮device's‬‏ ‏‮data‬‏ ‏‮will‬‏ ‏‮be‬‏ ‏‮deleted.‬‏</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">(M)‏‮Dismiss‬‏</string>
@@ -612,7 +632,7 @@
   <string name="font_scaling_smaller">(M)‏‮Make‬‏ ‏‮smaller‬‏</string>
   <string name="fullscreen_text">(M)‏‮Fullscreen‬‏</string>
   <string name="game_status">(M)‏‮Playing‬‏</string>
-  <string name="generic_smartspace_concatenated_desc">(M)‏‮%1$s,‬‏ ‏‮%2$s‬‏</string>
+  <string name="generic_smartspace_concatenated_desc">(M)%1$s‏‮,‬‏ %2$s</string>
   <string name="global_action_smart_lock_disabled">(M)‏‮Extend‬‏ ‏‮Unlock‬‏ ‏‮disabled‬‏</string>
   <string name="go_to_web">(M)‏‮Go‬‏ ‏‮to‬‏ ‏‮browser‬‏</string>
   <string name="got_it">(M)‏‮Got‬‏ ‏‮it‬‏</string>
@@ -649,6 +669,7 @@
   <string name="guest_reset_and_restart_dialog_title">(M)‏‮Reset‬‏ ‏‮guest‬‏ ‏‮session?‬‏</string>
   <string name="guest_reset_guest_confirm_button">(M)‏‮Reset‬‏</string>
   <string name="guest_resetting">(M)‏‮Resetting‬‏ ‏‮guest…‬‏</string>
+  <string name="handle_invocation_prompt">(M)‏‮Swipe‬‏ ‏‮to‬‏ ‏‮talk‬‏</string>
   <string name="handle_text">(M)‏‮Handle‬‏</string>
   <string name="headset">(M)‏‮Headset‬‏</string>
   <string name="hearing_devices_preset_label">(M)‏‮Preset‬‏</string>
@@ -665,6 +686,7 @@
   <string name="high_temp_title">(M)‏‮Phone‬‏ ‏‮is‬‏ ‏‮getting‬‏ ‏‮warm‬‏</string>
   <string name="home_controls_dream_description">(M)‏‮Quickly‬‏ ‏‮access‬‏ ‏‮your‬‏ ‏‮home‬‏ ‏‮controls‬‏ ‏‮as‬‏ ‏‮a‬‏ ‏‮screensaver‬‏</string>
   <string name="home_controls_dream_label">(M)‏‮Home‬‏ ‏‮Controls‬‏</string>
+  <string name="home_controls_tile_title">(M)‏‮Home‬‏</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">(M)‏‮•‬‏ ‏‮At‬‏ ‏‮least‬‏ ‏‮one‬‏ ‏‮device‬‏ ‏‮or‬‏ ‏‮device‬‏ ‏‮panel‬‏ ‏‮are‬‏ ‏‮available‬‏</string>
   <string name="home_quick_affordance_unavailable_install_the_app">(M)‏‮To‬‏ ‏‮add‬‏ ‏‮the‬‏ ‏‮Home‬‏ ‏‮app‬‏ ‏‮as‬‏ ‏‮a‬‏ ‏‮shortcut,‬‏ ‏‮make‬‏ ‏‮sure‬‏ ‏‮the‬‏ ‏‮app‬‏ ‏‮is‬‏ ‏‮installed‬‏</string>
   <string name="hub_mode_add_widget_button_text">(M)‏‮Add‬‏ ‏‮widget‬‏</string>
@@ -678,12 +700,16 @@
   <string name="in_progress">(M)‏‮In‬‏ ‏‮progress‬‏</string>
   <string name="inattentive_sleep_warning_message">(M)‏‮The‬‏ ‏‮device‬‏ ‏‮will‬‏ ‏‮soon‬‏ ‏‮turn‬‏ ‏‮off;‬‏ ‏‮press‬‏ ‏‮to‬‏ ‏‮keep‬‏ ‏‮it‬‏ ‏‮on.‬‏</string>
   <string name="inattentive_sleep_warning_title">(M)‏‮Standby‬‏</string>
+  <string name="incompatible_charging_learn_more">(M)‏‮Learn‬‏ ‏‮more‬‏</string>
+  <string name="incompatible_charging_notify_des">(M)‏‮Your‬‏ ‏‮phone‬‏ ‏‮may‬‏ ‏‮be‬‏ ‏‮charging‬‏ ‏‮slowly‬‏ ‏‮or‬‏ ‏‮not‬‏ ‏‮charging.‬‏ ‏‮For‬‏ ‏‮faster‬‏ ‏‮charging,‬‏ ‏‮use‬‏ ‏‮a‬‏ ‏‮recommended‬‏ ‏‮cable‬‏ ‏‮and‬‏ ‏‮adapter.‬‏</string>
+  <string name="incompatible_charging_notify_title">(M)‏‮Check‬‏ ‏‮charging‬‏ ‏‮accessory‬‏</string>
   <string name="indeterminate">(M)‏‮Partially‬‏ ‏‮checked‬‏</string>
   <string name="inline_done_button">(M)‏‮Done‬‏</string>
   <string name="inline_ok_button">(M)‏‮Apply‬‏</string>
   <string name="inline_turn_off_notifications">(M)‏‮Turn‬‏ ‏‮off‬‏ ‏‮notifications‬‏</string>
   <string name="input_switch_input_language_next">(M)‏‮Switch‬‏ ‏‮to‬‏ ‏‮next‬‏ ‏‮language‬‏</string>
   <string name="input_switch_input_language_previous">(M)‏‮Switch‬‏ ‏‮to‬‏ ‏‮previous‬‏ ‏‮language‬‏</string>
+  <string name="install_app">(M)‏‮Install‬‏ ‏‮app‬‏</string>
   <string name="install_dialer_on_work_profile_action">(M)‏‮Install‬‏ ‏‮a‬‏ ‏‮work‬‏ ‏‮phone‬‏ ‏‮app‬‏</string>
   <string name="install_type_instant">(M)‏‮Instant‬‏ ‏‮app‬‏</string>
   <string name="instant_apps">(M)‏‮Instant‬‏ ‏‮Apps‬‏</string>
@@ -692,8 +718,6 @@
   <string name="instant_apps_title">(M)%1$s ‏‮running‬‏</string>
   <string name="interruption_level_none">(M)‏‮Total‬‏ ‏‮silence‬‏</string>
   <string name="interruption_level_priority">(M)‏‮Priority‬‏ ‏‮only‬‏</string>
-  <string name="invalid_charger_text">(M)‏‮Use‬‏ ‏‮the‬‏ ‏‮charger‬‏ ‏‮that‬‏ ‏‮came‬‏ ‏‮with‬‏ ‏‮your‬‏ ‏‮device‬‏</string>
-  <string name="invalid_charger_title">(M)‏‮Can't‬‏ ‏‮charge‬‏ ‏‮via‬‏ ‏‮USB‬‏</string>
   <string name="issuerecord_background_processing_label">(M)‏‮Processing‬‏ ‏‮issue‬‏ ‏‮recording‬‏</string>
   <string name="issuerecord_ongoing_screen_only">(M)‏‮Recording‬‏ ‏‮issue‬‏</string>
   <string name="issuerecord_save_title">(M)‏‮Issue‬‏ ‏‮recording‬‏ ‏‮saved‬‏</string>
@@ -775,21 +799,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">(M)‏‮Device‬‏ ‏‮locked‬‏
 ‏‮Failed‬‏ ‏‮authentication‬‏</string>
   <string name="keyguard_indication_charging_time">(M)%2$s ‏‮•‬‏ ‏‮Charging‬‏ ‏‮•‬‏ ‏‮Full‬‏ ‏‮in‬‏ %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">(M)%2$s ‏‮•‬‏ ‏‮Done‬‏ ‏‮charging‬‏ ‏‮by‬‏ %1$s</string>
   <string name="keyguard_indication_charging_time_dock">(M)%2$s ‏‮•‬‏ ‏‮Charging‬‏ ‏‮•‬‏ ‏‮Full‬‏ ‏‮in‬‏ %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">(M)%2$s ‏‮•‬‏ ‏‮Fully‬‏ ‏‮charged‬‏ ‏‮by‬‏ %1$s</string>
   <string name="keyguard_indication_charging_time_fast">(M)%2$s ‏‮•‬‏ ‏‮Charging‬‏ ‏‮rapidly‬‏ ‏‮•‬‏ ‏‮Full‬‏ ‏‮in‬‏ %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">(M)%2$s ‏‮•‬‏ ‏‮Fast‬‏ ‏‮charging‬‏ ‏‮•‬‏ ‏‮Full‬‏ ‏‮by‬‏ %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">(M)%1$s ‏‮•‬‏ ‏‮Done‬‏ ‏‮charging‬‏</string>
   <string name="keyguard_indication_charging_time_slowly">(M)%2$s ‏‮•‬‏ ‏‮Charging‬‏ ‏‮slowly‬‏ ‏‮•‬‏ ‏‮Full‬‏ ‏‮in‬‏ %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">(M)%2$s ‏‮•‬‏ ‏‮Fully‬‏ ‏‮charged‬‏ ‏‮by‬‏ %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">(M)%2$s ‏‮•‬‏ ‏‮Fully‬‏ ‏‮charged‬‏ ‏‮by‬‏ %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">(M)%2$s ‏‮•‬‏ ‏‮Charging‬‏ ‏‮wirelessly‬‏ ‏‮•‬‏ ‏‮Full‬‏ ‏‮in‬‏ %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">(M)‏‮Kept‬‏ ‏‮unlocked‬‏ ‏‮by‬‏ ‏‮TrustAgent‬‏</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">(M)%2$s ‏‮•‬‏ ‏‮Fully‬‏ ‏‮charged‬‏ ‏‮by‬‏ %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">(M)‏‮Kept‬‏ ‏‮unlocked‬‏ ‏‮by‬‏ ‏‮Extend‬‏ ‏‮Unlock‬‏</string>
   <string name="keyguard_missing_sim_message_short">(M)‏‮No‬‏ ‏‮SIM‬‏</string>
   <string name="keyguard_network_locked_message">(M)‏‮Network‬‏ ‏‮locked‬‏</string>
   <string name="keyguard_permanent_disabled_sim_message_short">(M)‏‮Unusable‬‏ ‏‮SIM.‬‏</string>
   <string name="keyguard_plugged_in">(M)%s ‏‮•‬‏ ‏‮Charging‬‏</string>
   <string name="keyguard_plugged_in_charging_fast">(M)%s ‏‮•‬‏ ‏‮Charging‬‏ ‏‮rapidly‬‏</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">(M)%s ‏‮•‬‏ ‏‮Fast‬‏ ‏‮charging‬‏</string>
   <string name="keyguard_plugged_in_charging_limited">(M)%s ‏‮•‬‏ ‏‮Charging‬‏ ‏‮on‬‏ ‏‮hold‬‏ ‏‮to‬‏ ‏‮protect‬‏ ‏‮battery‬‏</string>
   <string name="keyguard_plugged_in_charging_slowly">(M)%s ‏‮•‬‏ ‏‮Charging‬‏ ‏‮slowly‬‏</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">(M)%s ‏‮•‬‏ ‏‮Charging‬‏</string>
   <string name="keyguard_plugged_in_dock">(M)%s ‏‮•‬‏ ‏‮Charging‬‏</string>
+  <string name="keyguard_plugged_in_dock_v2">(M)%s ‏‮•‬‏ ‏‮Charging‬‏</string>
   <string name="keyguard_plugged_in_incompatible_charger">(M)%s ‏‮•‬‏ ‏‮Check‬‏ ‏‮charging‬‏ ‏‮accessory‬‏</string>
+  <string name="keyguard_plugged_in_v2">(M)%s ‏‮•‬‏ ‏‮Charging‬‏</string>
   <string name="keyguard_plugged_in_wireless">(M)%s ‏‮•‬‏ ‏‮Charging‬‏ ‏‮wirelessly‬‏</string>
+  <string name="keyguard_plugged_in_wireless_v2">(M)%s ‏‮•‬‏ ‏‮Charging‬‏</string>
   <string name="keyguard_retry">(M)‏‮Swipe‬‏ ‏‮up‬‏ ‏‮to‬‏ ‏‮try‬‏ ‏‮again‬‏</string>
   <string name="keyguard_sim_error_message_short">(M)‏‮Invalid‬‏ ‏‮Card.‬‏</string>
   <string name="keyguard_sim_locked_message">(M)‏‮SIM‬‏ ‏‮is‬‏ ‏‮locked.‬‏</string>
@@ -820,7 +856,6 @@
   <string name="kg_invalid_confirm_pin_hint">(M)‏‮PIN‬‏ ‏‮codes‬‏ ‏‮does‬‏ ‏‮not‬‏ ‏‮match‬‏</string>
   <string name="kg_invalid_sim_pin_hint">(M)‏‮Type‬‏ ‏‮a‬‏ ‏‮PIN‬‏ ‏‮that‬‏ ‏‮is‬‏ ‏‮4‬‏ ‏‮to‬‏ ‏‮8‬‏ ‏‮numbers.‬‏</string>
   <string name="kg_invalid_sim_puk_hint">(M)‏‮PUK‬‏ ‏‮code‬‏ ‏‮should‬‏ ‏‮be‬‏ ‏‮8‬‏ ‏‮numbers‬‏ ‏‮or‬‏ ‏‮more.‬‏</string>
-  <string name="kg_password_default_pin_message">(M){count, plural, =1 {‏‮Enter‬‏ ‏‮SIM‬‏ ‏‮PIN.‬‏ ‏‮You‬‏ ‏‮have‬‏ ‏‮#‬‏ ‏‮remaining‬‏ ‏‮attempt‬‏ ‏‮before‬‏ ‏‮you‬‏ ‏‮must‬‏ ‏‮contact‬‏ ‏‮your‬‏ ‏‮carrier‬‏ ‏‮to‬‏ ‏‮unlock‬‏ ‏‮your‬‏ ‏‮device.‬‏} other {‏‮Enter‬‏ ‏‮SIM‬‏ ‏‮PIN.‬‏ ‏‮You‬‏ ‏‮have‬‏ ‏‮#‬‏ ‏‮remaining‬‏ ‏‮attempts.‬‏} }</string>
   <string name="kg_password_default_puk_message">(M){count, plural, =1 {‏‮SIM‬‏ ‏‮is‬‏ ‏‮now‬‏ ‏‮disabled.‬‏ ‏‮Enter‬‏ ‏‮PUK‬‏ ‏‮code‬‏ ‏‮to‬‏ ‏‮continue.‬‏ ‏‮You‬‏ ‏‮have‬‏ ‏‮#‬‏ ‏‮remaining‬‏ ‏‮attempt‬‏ ‏‮before‬‏ ‏‮SIM‬‏ ‏‮becomes‬‏ ‏‮permanently‬‏ ‏‮unusable.‬‏ ‏‮Contact‬‏ ‏‮carrier‬‏ ‏‮for‬‏ ‏‮details.‬‏} other {‏‮SIM‬‏ ‏‮is‬‏ ‏‮now‬‏ ‏‮disabled.‬‏ ‏‮Enter‬‏ ‏‮PUK‬‏ ‏‮code‬‏ ‏‮to‬‏ ‏‮continue.‬‏ ‏‮You‬‏ ‏‮have‬‏ ‏‮#‬‏ ‏‮remaining‬‏ ‏‮attempts‬‏ ‏‮before‬‏ ‏‮SIM‬‏ ‏‮becomes‬‏ ‏‮permanently‬‏ ‏‮unusable.‬‏ ‏‮Contact‬‏ ‏‮carrier‬‏ ‏‮for‬‏ ‏‮details.‬‏} }</string>
   <string name="kg_password_pin_failed">(M)‏‮SIM‬‏ ‏‮PIN‬‏ ‏‮operation‬‏ ‏‮failed!‬‏</string>
   <string name="kg_password_puk_failed">(M)‏‮SIM‬‏ ‏‮PUK‬‏ ‏‮operation‬‏ ‏‮failed!‬‏</string>
@@ -861,7 +896,7 @@
   <string name="kg_sim_pin_instructions_multi">(M)‏‮Enter‬‏ ‏‮SIM‬‏ ‏‮PIN‬‏ ‏‮for‬‏ ‏‮"‬‏%1$s‏‮".‬‏</string>
   <string name="kg_sim_unlock_progress_dialog_message">(M)‏‮Unlocking‬‏ ‏‮SIM…‬‏</string>
   <string name="kg_too_many_failed_attempts_countdown">(M){count, plural, =1 {‏‮Try‬‏ ‏‮again‬‏ ‏‮in‬‏ ‏‮#‬‏ ‏‮second.‬‏} other {‏‮Try‬‏ ‏‮again‬‏ ‏‮in‬‏ ‏‮#‬‏ ‏‮seconds.‬‏} }</string>
-  <string name="kg_trust_agent_disabled">(M)‏‮Trust‬‏ ‏‮agent‬‏ ‏‮is‬‏ ‏‮unavailable‬‏</string>
+  <string name="kg_trust_agent_disabled">(M)‏‮Extend‬‏ ‏‮Unlock‬‏ ‏‮is‬‏ ‏‮unavailable‬‏</string>
   <string name="kg_unlock_with_password_or_fp">(M)‏‮Unlock‬‏ ‏‮with‬‏ ‏‮password‬‏ ‏‮or‬‏ ‏‮fingerprint‬‏</string>
   <string name="kg_unlock_with_pattern_or_fp">(M)‏‮Unlock‬‏ ‏‮with‬‏ ‏‮pattern‬‏ ‏‮or‬‏ ‏‮fingerprint‬‏</string>
   <string name="kg_unlock_with_pin_or_fp">(M)‏‮Unlock‬‏ ‏‮with‬‏ ‏‮PIN‬‏ ‏‮or‬‏ ‏‮fingerprint‬‏</string>
@@ -909,6 +944,10 @@
   <string name="log_access_confirmation_learn_more">(M)‏‮Learn‬‏ ‏‮more‬‏</string>
   <string name="log_access_confirmation_learn_more_at">(M)‏‮Learn‬‏ ‏‮more‬‏ ‏‮at‬‏ %s</string>
   <string name="log_access_confirmation_title">(M)‏‮Allow‬‏ %s ‏‮to‬‏ ‏‮access‬‏ ‏‮all‬‏ ‏‮device‬‏ ‏‮logs?‬‏</string>
+  <string name="low_battery_label">(M)‏‮Low‬‏ ‏‮battery‬‏</string>
+  <string name="low_battery_notification_text">(M)‏‮Turn‬‏ ‏‮on‬‏ ‏‮Standard‬‏ ‏‮Battery‬‏ ‏‮Saver‬‏ ‏‮to‬‏ ‏‮extend‬‏ ‏‮battery‬‏ ‏‮life‬‏</string>
+  <string name="low_battery_notification_text_ebs">(M)‏‮Turn‬‏ ‏‮on‬‏ ‏‮Extreme‬‏ ‏‮Battery‬‏ ‏‮Saver‬‏ ‏‮to‬‏ ‏‮extend‬‏ ‏‮battery‬‏ ‏‮life‬‏</string>
+  <string name="low_battery_notification_title">(M)%s ‏‮battery‬‏ ‏‮left‬‏</string>
   <string name="m3c_search_bar_search">(M)‏‮Search‬‏</string>
   <string name="m3c_suggestions_available">(M)‏‮Suggestions‬‏ ‏‮below‬‏</string>
   <string name="magnification_close_settings_click_label">(M)‏‮Close‬‏ ‏‮magnification‬‏ ‏‮settings‬‏</string>
@@ -948,8 +987,6 @@
   <string name="media_output_dialog_volume_percentage">(M)%1$d‏‮%%‬‏</string>
   <string name="media_output_end_session_dialog_stop">(M)‏‮Stop‬‏</string>
   <string name="media_output_end_session_dialog_summary">(M)‏‮Stop‬‏ ‏‮your‬‏ ‏‮shared‬‏ ‏‮session‬‏ ‏‮to‬‏ ‏‮move‬‏ ‏‮media‬‏ ‏‮to‬‏ ‏‮another‬‏ ‏‮device‬‏</string>
-  <string name="media_output_first_broadcast_title">(M)‏‮How‬‏ ‏‮broadcasting‬‏ ‏‮works‬‏</string>
-  <string name="media_output_first_notify_broadcast_message">(M)‏‮People‬‏ ‏‮near‬‏ ‏‮you‬‏ ‏‮with‬‏ ‏‮compatible‬‏ ‏‮Bluetooth‬‏ ‏‮devices‬‏ ‏‮can‬‏ ‏‮listen‬‏ ‏‮to‬‏ ‏‮the‬‏ ‏‮media‬‏ ‏‮you're‬‏ ‏‮broadcasting‬‏</string>
   <string name="media_output_group_title_speakers_and_displays">(M)‏‮Speakers‬‏ ‏‮&amp;‬‏ ‏‮Displays‬‏</string>
   <string name="media_output_group_title_suggested_device">(M)‏‮Suggested‬‏ ‏‮Devices‬‏</string>
   <string name="media_output_label_title">(M)‏‮Playing‬‏ %s ‏‮on‬‏</string>
@@ -976,9 +1013,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">(M)‏‮When‬‏ ‏‮you’re‬‏ ‏‮casting‬‏ ‏‮an‬‏ ‏‮app,‬‏ ‏‮Android‬‏ ‏‮has‬‏ ‏‮access‬‏ ‏‮to‬‏ ‏‮anything‬‏ ‏‮shown‬‏ ‏‮or‬‏ ‏‮played‬‏ ‏‮on‬‏ ‏‮that‬‏ ‏‮app.‬‏ ‏‮So‬‏ ‏‮be‬‏ ‏‮careful‬‏ ‏‮with‬‏ ‏‮things‬‏ ‏‮like‬‏ ‏‮passwords,‬‏ ‏‮payment‬‏ ‏‮details,‬‏ ‏‮messages,‬‏ ‏‮photos,‬‏ ‏‮and‬‏ ‏‮audio‬‏ ‏‮and‬‏ ‏‮video.‬‏</string>
   <string name="media_projection_sys_service_dialog_title">(M)‏‮Start‬‏ ‏‮recording‬‏ ‏‮or‬‏ ‏‮casting?‬‏</string>
   <string name="media_projection_sys_service_dialog_warning">(M)‏‮The‬‏ ‏‮service‬‏ ‏‮providing‬‏ ‏‮this‬‏ ‏‮function‬‏ ‏‮will‬‏ ‏‮have‬‏ ‏‮access‬‏ ‏‮to‬‏ ‏‮all‬‏ ‏‮of‬‏ ‏‮the‬‏ ‏‮information‬‏ ‏‮that‬‏ ‏‮is‬‏ ‏‮visible‬‏ ‏‮on‬‏ ‏‮your‬‏ ‏‮screen‬‏ ‏‮or‬‏ ‏‮played‬‏ ‏‮from‬‏ ‏‮your‬‏ ‏‮device‬‏ ‏‮while‬‏ ‏‮recording‬‏ ‏‮or‬‏ ‏‮casting.‬‏ ‏‮This‬‏ ‏‮includes‬‏ ‏‮information‬‏ ‏‮such‬‏ ‏‮as‬‏ ‏‮passwords,‬‏ ‏‮payment‬‏ ‏‮details,‬‏ ‏‮photos,‬‏ ‏‮messages,‬‏ ‏‮and‬‏ ‏‮audio‬‏ ‏‮that‬‏ ‏‮you‬‏ ‏‮play.‬‏</string>
-  <string name="media_projection_task_switcher_action_back">(M)‏‮Switch‬‏ ‏‮back‬‏</string>
-  <string name="media_projection_task_switcher_action_switch">(M)‏‮Share‬‏ ‏‮this‬‏ ‏‮app‬‏ ‏‮instead‬‏</string>
-  <string name="media_projection_task_switcher_text">(M)‏‮Sharing‬‏ ‏‮pauses‬‏ ‏‮when‬‏ ‏‮you‬‏ ‏‮switch‬‏ ‏‮apps‬‏</string>
   <string name="media_seamless_other_device">(M)‏‮Other‬‏ ‏‮device‬‏</string>
   <string name="media_transfer_default_device_name">(M)‏‮Connected‬‏ ‏‮device‬‏</string>
   <string name="media_transfer_dock_speaker_device_name">(M)‏‮Dock‬‏ ‏‮speaker‬‏</string>
@@ -1207,7 +1241,6 @@
   <string name="quick_settings_bluetooth_secondary_label_transient">(M)‏‮Turning‬‏ ‏‮on…‬‏</string>
   <string name="quick_settings_bluetooth_tile_subtitle">(M)‏‮Tap‬‏ ‏‮to‬‏ ‏‮connect‬‏ ‏‮or‬‏ ‏‮disconnect‬‏ ‏‮a‬‏ ‏‮device‬‏</string>
   <string name="quick_settings_brightness_dialog_title">(M)‏‮Brightness‬‏</string>
-  <string name="quick_settings_caffeine_label">(M)‏‮Caffeine‬‏</string>
   <string name="quick_settings_camera_label">(M)‏‮Camera‬‏ ‏‮access‬‏</string>
   <string name="quick_settings_camera_mic_available">(M)‏‮Available‬‏</string>
   <string name="quick_settings_camera_mic_blocked">(M)‏‮Blocked‬‏</string>
@@ -1271,12 +1304,6 @@
   <string name="quick_settings_night_secondary_label_until_sunrise">(M)‏‮Until‬‏ ‏‮sunrise‬‏</string>
   <string name="quick_settings_onehanded_label">(M)‏‮One-handed‬‏ ‏‮mode‬‏</string>
   <string name="quick_settings_pair_hearing_devices">(M)‏‮Pair‬‏ ‏‮new‬‏ ‏‮device‬‏</string>
-  <string name="quick_settings_powershare_enabled_label">(M)‏‮Battery‬‏ ‏‮Share‬‏ ‏‮is‬‏ ‏‮enabled‬‏</string>
-  <string name="quick_settings_powershare_label">(M)‏‮Battery‬‏ ‏‮Share‬‏</string>
-  <string name="quick_settings_powershare_off_low_battery_label">(M)‏‮Battery‬‏ ‏‮Share‬‏ ‏‮off‬‏
-‏‮Battery‬‏ ‏‮too‬‏ ‏‮low‬‏</string>
-  <string name="quick_settings_powershare_off_powersave_label">(M)‏‮Battery‬‏ ‏‮Share‬‏ ‏‮off‬‏
-‏‮Battery‬‏ ‏‮saver‬‏</string>
   <string name="quick_settings_rotation_posture_folded">(M)‏‮folded‬‏</string>
   <string name="quick_settings_rotation_posture_unfolded">(M)‏‮unfolded‬‏</string>
   <string name="quick_settings_rotation_unlocked_label">(M)‏‮Auto-rotate‬‏</string>
@@ -1300,12 +1327,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">(M)‏‮For‬‏ ‏‮higher‬‏ ‏‮resolution,‬‏ ‏‮flip‬‏ ‏‮the‬‏ ‏‮phone‬‏</string>
   <string name="rear_display_unfolded_bottom_sheet_title">(M)‏‮Switch‬‏ ‏‮screens?‬‏</string>
   <string name="recent_conversations">(M)‏‮Recent‬‏ ‏‮conversations‬‏</string>
+  <string name="reminder_description">(M)</string>
   <string name="remote_input_image_insertion_text">(M)‏‮sent‬‏ ‏‮an‬‏ ‏‮image‬‏</string>
   <string name="remove_from_settings">(M)‏‮Remove‬‏ ‏‮from‬‏ ‏‮Settings‬‏</string>
   <string name="remove_from_settings_prompt">(M)‏‮Remove‬‏ ‏‮System‬‏ ‏‮UI‬‏ ‏‮Tuner‬‏ ‏‮from‬‏ ‏‮Settings‬‏ ‏‮and‬‏ ‏‮stop‬‏ ‏‮using‬‏ ‏‮all‬‏ ‏‮of‬‏ ‏‮its‬‏ ‏‮features?‬‏</string>
   <string name="require_unlock_for_nfc">(M)‏‮Unlock‬‏ ‏‮to‬‏ ‏‮use‬‏ ‏‮NFC‬‏</string>
   <string name="restart_button_description">(M)‏‮Tap‬‏ ‏‮to‬‏ ‏‮restart‬‏ ‏‮this‬‏ ‏‮app‬‏ ‏‮for‬‏ ‏‮a‬‏ ‏‮better‬‏ ‏‮view‬‏</string>
   <string name="retry_face">(M)‏‮Retry‬‏ ‏‮face‬‏ ‏‮authentication‬‏</string>
+  <string name="reverse_charging_device_name_text">(M)‏‮Other‬‏ ‏‮Pixel‬‏</string>
+  <string name="reverse_charging_device_providing_charge_text">(M)%1$s ‏‮providing‬‏ ‏‮charge‬‏ ‏‮(‬‏%2$s‏‮)‬‏</string>
+  <string name="reverse_charging_on_notification_title">(M)‏‮Battery‬‏ ‏‮Share‬‏ ‏‮is‬‏ ‏‮on‬‏</string>
+  <string name="reverse_charging_title">(M)‏‮Battery‬‏ ‏‮Share‬‏</string>
   <string name="right_icon">(M)‏‮Right‬‏ ‏‮icon‬‏</string>
   <string name="right_keycode">(M)‏‮Right‬‏ ‏‮keycode‬‏</string>
   <string name="right_nav_bar_button_type">(M)‏‮Extra‬‏ ‏‮right‬‏ ‏‮button‬‏ ‏‮type‬‏</string>
@@ -1313,8 +1345,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">(M)‏‮%1$s‬‏ ‏‮/‬‏ ‏‮%2$s‬‏</string>
   <string name="running_foreground_services_msg">(M)‏‮Tap‬‏ ‏‮for‬‏ ‏‮details‬‏ ‏‮on‬‏ ‏‮battery‬‏ ‏‮and‬‏ ‏‮data‬‏ ‏‮usage‬‏</string>
   <string name="running_foreground_services_title">(M)‏‮Apps‬‏ ‏‮running‬‏ ‏‮in‬‏ ‏‮background‬‏</string>
-  <string name="satellite_connected_carrier_text">(M)‏‮Satellite‬‏ ‏‮SOS‬‏</string>
+  <string name="satellite_connected_carrier_text">(M)‏‮Pixel‬‏ ‏‮Satellite‬‏ ‏‮SOS‬‏</string>
   <string name="save">(M)‏‮Save‬‏</string>
+  <string name="saver_confirmation_dialog_dismiss_text">(M)‏‮Cancel‬‏</string>
+  <string name="saver_confirmation_dialog_subtitle">(M)‏‮Select‬‏ ‏‮the‬‏ ‏‮mode‬‏ ‏‮to‬‏ ‏‮use‬‏</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">(M)‏‮Includes‬‏ ‏‮all‬‏ ‏‮changes‬‏ ‏‮listed‬‏ ‏‮above.‬‏ ‏‮Also‬‏ ‏‮pauses‬‏ ‏‮non-essential‬‏ ‏‮apps‬‏ ‏‮and‬‏ ‏‮their‬‏ ‏‮notifications.‬‏</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">(M)‏‮Limits‬‏ ‏‮visual‬‏ ‏‮effects‬‏ ‏‮and‬‏ ‏‮background‬‏ ‏‮activity.‬‏ ‏‮Turns‬‏ ‏‮on‬‏ ‏‮Dark‬‏ ‏‮theme,‬‏ ‏‮if‬‏ ‏‮not‬‏ ‏‮already‬‏ ‏‮on.‬‏</string>
+  <string name="saver_confirmation_dialog_title">(M)‏‮Welcome‬‏ ‏‮to‬‏ ‏‮Battery‬‏ ‏‮Saver‬‏</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">(M)‏‮Extreme‬‏ ‏‮Battery‬‏ ‏‮Saver‬‏</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">(M)‏‮Standard‬‏ ‏‮Battery‬‏ ‏‮Saver‬‏</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">(M)‏‮Screen‬‏ ‏‮capturing‬‏ ‏‮is‬‏ ‏‮disabled‬‏ ‏‮by‬‏ ‏‮device‬‏ ‏‮policy‬‏</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">(M)‏‮Blocked‬‏ ‏‮by‬‏ ‏‮your‬‏ ‏‮IT‬‏ ‏‮admin‬‏</string>
   <string name="screen_pinning_can_open_other_apps">(M)‏‮Pinned‬‏ ‏‮app‬‏ ‏‮may‬‏ ‏‮open‬‏ ‏‮other‬‏ ‏‮apps.‬‏</string>
@@ -1332,6 +1371,12 @@
   <string name="screen_pinning_toast">(M)‏‮To‬‏ ‏‮unpin‬‏ ‏‮this‬‏ ‏‮app,‬‏ ‏‮touch‬‏ ‏‮&amp;‬‏ ‏‮hold‬‏ ‏‮Back‬‏ ‏‮and‬‏ ‏‮Overview‬‏ ‏‮buttons‬‏</string>
   <string name="screen_pinning_toast_gesture_nav">(M)‏‮To‬‏ ‏‮unpin‬‏ ‏‮this‬‏ ‏‮app,‬‏ ‏‮swipe‬‏ ‏‮up‬‏ ‏‮&amp;‬‏ ‏‮hold‬‏</string>
   <string name="screen_pinning_toast_recents_invisible">(M)‏‮To‬‏ ‏‮unpin‬‏ ‏‮this‬‏ ‏‮app,‬‏ ‏‮touch‬‏ ‏‮&amp;‬‏ ‏‮hold‬‏ ‏‮Back‬‏ ‏‮and‬‏ ‏‮Home‬‏ ‏‮buttons‬‏</string>
+  <string name="screen_protector_absent_message">(M)‏‮Disabling‬‏ ‏‮screen‬‏ ‏‮protector‬‏ ‏‮mode‬‏ ‏‮improves‬‏ ‏‮touch‬‏ ‏‮when‬‏ ‏‮a‬‏ ‏‮screen‬‏ ‏‮protector‬‏ ‏‮is‬‏ ‏‮not‬‏ ‏‮used.‬‏</string>
+  <string name="screen_protector_disable_notification">(M)‏‮Disable‬‏ ‏‮notification‬‏</string>
+  <string name="screen_protector_go_to_settings">(M)‏‮Go‬‏ ‏‮to‬‏ ‏‮settings‬‏</string>
+  <string name="screen_protector_got_it">(M)‏‮Got‬‏ ‏‮it‬‏</string>
+  <string name="screen_protector_mode_title">(M)‏‮Screen‬‏ ‏‮protector‬‏ ‏‮mode‬‏</string>
+  <string name="screen_protector_present_message">(M)‏‮Enabling‬‏ ‏‮screen‬‏ ‏‮protector‬‏ ‏‮mode‬‏ ‏‮improves‬‏ ‏‮touch‬‏ ‏‮when‬‏ ‏‮using‬‏ ‏‮a‬‏ ‏‮screen‬‏ ‏‮protector.‬‏</string>
   <string name="screen_share_permission_app_selector_title">(M)‏‮Share‬‏ ‏‮or‬‏ ‏‮record‬‏ ‏‮an‬‏ ‏‮app‬‏</string>
   <string name="screen_share_permission_dialog_option_entire_screen">(M)‏‮Entire‬‏ ‏‮screen‬‏</string>
   <string name="screen_share_permission_dialog_option_single_app">(M)‏‮A‬‏ ‏‮single‬‏ ‏‮app‬‏</string>
@@ -1386,9 +1431,9 @@
   <string name="screenshot_saving_work_profile_title">(M)‏‮Saving‬‏ ‏‮screenshot‬‏ ‏‮to‬‏ ‏‮work‬‏ ‏‮profile…‬‏</string>
   <string name="screenshot_scroll_label">(M)‏‮Capture‬‏ ‏‮more‬‏</string>
   <string name="screenshot_share_description">(M)‏‮Share‬‏ ‏‮screenshot‬‏</string>
-  <string name="screenshot_share_label">(M)‏‮Share‬‏</string>
   <string name="screenshot_text">(M)‏‮Screenshot‬‏</string>
   <string name="screenshot_top_boundary_pct">(M)‏‮Top‬‏ ‏‮boundary‬‏ %1$d ‏‮percent‬‏</string>
+  <string name="screenshot_view_description">(M)‏‮View‬‏ ‏‮screenshot‬‏</string>
   <string name="screenshot_work_profile_notification">(M)‏‮Saved‬‏ ‏‮in‬‏ %1$s ‏‮in‬‏ ‏‮the‬‏ ‏‮work‬‏ ‏‮profile‬‏</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">(M)‏‮The‬‏ ‏‮fingerprint‬‏ ‏‮sensor‬‏ ‏‮is‬‏ ‏‮on‬‏ ‏‮the‬‏ ‏‮power‬‏ ‏‮button.‬‏ ‏‮It’s‬‏ ‏‮the‬‏ ‏‮flat‬‏ ‏‮button‬‏ ‏‮next‬‏ ‏‮to‬‏ ‏‮the‬‏ ‏‮raised‬‏ ‏‮volume‬‏ ‏‮button‬‏ ‏‮on‬‏ ‏‮the‬‏ ‏‮edge‬‏ ‏‮of‬‏ ‏‮the‬‏ ‏‮phone.‬‏</string>
   <string name="see_all_bluetooth_devices">(M)‏‮See‬‏ ‏‮all‬‏</string>
@@ -1406,6 +1451,12 @@
   <string name="set_default_notes_app_toast_content">(M)‏‮Set‬‏ ‏‮default‬‏ ‏‮notes‬‏ ‏‮app‬‏ ‏‮in‬‏ ‏‮Settings‬‏</string>
   <string name="settings_label">(M)‏‮Settings‬‏</string>
   <string name="settingslib_learn_more_text">(M)‏‮Learn‬‏ ‏‮more‬‏</string>
+  <string name="severe_battery_notification_switch_text">(M)‏‮Switch‬‏ ‏‮to‬‏ ‏‮Extreme‬‏ ‏‮Battery‬‏ ‏‮Saver?‬‏ 
+
+‏‮This‬‏ ‏‮will‬‏ ‏‮pause‬‏ ‏‮all‬‏ ‏‮non-essential‬‏ ‏‮apps‬‏ ‏‮and‬‏ ‏‮their‬‏ ‏‮notifications‬‏</string>
+  <string name="severe_battery_notification_text">(M)‏‮Turn‬‏ ‏‮on‬‏ ‏‮Extreme‬‏ ‏‮Battery‬‏ ‏‮Saver.‬‏ ‏‮This‬‏ ‏‮will‬‏ ‏‮pause‬‏ ‏‮all‬‏ ‏‮non-essential‬‏ ‏‮apps‬‏</string>
+  <string name="severe_battery_notification_title">(M)%s ‏‮battery‬‏ ‏‮left‬‏</string>
+  <string name="severe_low_battery_dialog_switch_action_text">(M)‏‮Switch‬‏</string>
   <string name="share_to_app_stop_dialog_button">(M)‏‮Stop‬‏ ‏‮sharing‬‏</string>
   <string name="share_to_app_stop_dialog_message">(M)‏‮You‬‏ ‏‮will‬‏ ‏‮stop‬‏ ‏‮sharing‬‏ ‏‮your‬‏ ‏‮screen‬‏</string>
   <string name="share_to_app_stop_dialog_message_specific_app">(M)‏‮You‬‏ ‏‮will‬‏ ‏‮stop‬‏ ‏‮sharing‬‏ ‏‮&lt;b&gt;‬‏%1$s‏‮&lt;/b&gt;‬‏</string>
@@ -1430,8 +1481,9 @@
   <string name="slice_permission_text_1">(M)‏‮-‬‏ ‏‮It‬‏ ‏‮can‬‏ ‏‮read‬‏ ‏‮information‬‏ ‏‮from‬‏ %1$s</string>
   <string name="slice_permission_text_2">(M)‏‮-‬‏ ‏‮It‬‏ ‏‮can‬‏ ‏‮take‬‏ ‏‮actions‬‏ ‏‮inside‬‏ %1$s</string>
   <string name="slice_permission_title">(M)‏‮Allow‬‏ %1$s ‏‮to‬‏ ‏‮show‬‏ %2$s ‏‮slices?‬‏</string>
+  <string name="smartspace_content_desc">(M)‏‮At‬‏ ‏‮a‬‏ ‏‮glance‬‏</string>
   <string name="smartspace_flight_qr_code">(M)‏‮QR‬‏ ‏‮code‬‏</string>
-  <string name="smartspace_icu_date_pattern">(M)‏‮EEEMMMd‬‏</string>
+  <string name="smartspace_role_desc">(M)‏‮View‬‏</string>
   <string name="snoozeHourOptions">(M){count, plural, =1 {‏‮#‬‏ ‏‮hour‬‏} =2 {‏‮#‬‏ ‏‮hours‬‏} few {‏‮#‬‏ ‏‮hours‬‏} other {‏‮#‬‏ ‏‮hours‬‏} }</string>
   <string name="snoozeMinuteOptions">(M){count, plural, =1 {‏‮#‬‏ ‏‮minute‬‏} few {‏‮#‬‏ ‏‮minutes‬‏} other {‏‮#‬‏ ‏‮minutes‬‏} }</string>
   <string name="snooze_undo">(M)‏‮Undo‬‏</string>
@@ -1442,6 +1494,8 @@
   <string name="speed_label_slow">(M)‏‮Slow‬‏</string>
   <string name="speed_label_very_fast">(M)‏‮Very‬‏ ‏‮Fast‬‏</string>
   <string name="split_screen_text">(M)‏‮Split‬‏ ‏‮Screen‬‏</string>
+  <string name="squeeze_invocation_prompt">(M)‏‮Squeeze‬‏ ‏‮to‬‏ ‏‮talk‬‏</string>
+  <string name="standard_battery_saver_text">(M)‏‮Standard‬‏</string>
   <string name="start_dreams">(M)‏‮Screen‬‏ ‏‮saver‬‏</string>
   <string name="state_empty">(M)‏‮Empty‬‏</string>
   <string name="state_off">(M)‏‮Off‬‏</string>
@@ -1479,6 +1533,8 @@
   <string name="tab">(M)‏‮Tab‬‏</string>
   <string name="tap_a_network_to_connect">(M)‏‮Tap‬‏ ‏‮a‬‏ ‏‮network‬‏ ‏‮to‬‏ ‏‮connect‬‏</string>
   <string name="tap_again">(M)‏‮Tap‬‏ ‏‮again‬‏</string>
+  <string name="temp_defender_notify_des">(M)‏‮Charging‬‏ ‏‮will‬‏ ‏‮resume‬‏ ‏‮when‬‏ ‏‮your‬‏ ‏‮phone‬‏ ‏‮returns‬‏ ‏‮to‬‏ ‏‮normal‬‏ ‏‮temperature‬‏</string>
+  <string name="temp_defender_notify_title">(M)‏‮Charging‬‏ ‏‮on‬‏ ‏‮hold‬‏ ‏‮to‬‏ ‏‮protect‬‏ ‏‮battery‬‏</string>
   <string name="template_percent">(M)%1$d ‏‮percent.‬‏</string>
   <string name="thermal">(M)‏‮Thermal‬‏</string>
   <string name="thermal_shutdown_dialog_help_text">(M)‏‮See‬‏ ‏‮care‬‏ ‏‮steps‬‏</string>
@@ -1495,6 +1551,7 @@
   <string name="title_for_empty_state_cta">(M)‏‮Get‬‏ ‏‮quick‬‏ ‏‮access‬‏ ‏‮to‬‏ ‏‮your‬‏ ‏‮favorite‬‏ ‏‮app‬‏ ‏‮widgets‬‏ ‏‮without‬‏ ‏‮unlocking‬‏ ‏‮your‬‏ ‏‮tablet.‬‏</string>
   <string name="title_usb_accessory">(M)‏‮USB‬‏ ‏‮accessory‬‏</string>
   <string name="to_switch_networks_disconnect_ethernet">(M)‏‮To‬‏ ‏‮switch‬‏ ‏‮networks,‬‏ ‏‮disconnect‬‏ ‏‮ethernet‬‏</string>
+  <string name="too_hot_label">(M)‏‮Pixel‬‏ ‏‮too‬‏ ‏‮hot‬‏</string>
   <string name="touch_filtered_warning">(M)‏‮Because‬‏ ‏‮an‬‏ ‏‮app‬‏ ‏‮is‬‏ ‏‮obscuring‬‏ ‏‮a‬‏ ‏‮permission‬‏ ‏‮request,‬‏ ‏‮Settings‬‏ ‏‮can’t‬‏ ‏‮verify‬‏ ‏‮your‬‏ ‏‮response.‬‏</string>
   <string name="touchpad_tutorial_action_key_button">(M)‏‮Action‬‏ ‏‮key‬‏</string>
   <string name="touchpad_tutorial_back_gesture_button">(M)‏‮Back‬‏ ‏‮gesture‬‏</string>
@@ -1509,17 +1566,18 @@
   <string name="tuner_menu">(M)‏‮Menu‬‏</string>
   <string name="tuner_minus">(M)‏‮Minus‬‏</string>
   <string name="tuner_other_apps">(M)‏‮Other‬‏ ‏‮apps‬‏</string>
+  <string name="tuner_persistent_warning">(M)‏‮These‬‏ ‏‮experimental‬‏ ‏‮features‬‏ ‏‮may‬‏ ‏‮change,‬‏ ‏‮break,‬‏ ‏‮or‬‏ ‏‮disappear‬‏ ‏‮in‬‏ ‏‮future‬‏ ‏‮releases.‬‏ ‏‮Proceed‬‏ ‏‮with‬‏ ‏‮caution.‬‏</string>
   <string name="tuner_plus">(M)‏‮Plus‬‏</string>
   <string name="tuner_right">(M)‏‮Right‬‏</string>
   <string name="tuner_time">(M)‏‮Time‬‏</string>
+  <string name="tuner_warning">(M)‏‮System‬‏ ‏‮UI‬‏ ‏‮Tuner‬‏ ‏‮gives‬‏ ‏‮you‬‏ ‏‮extra‬‏ ‏‮ways‬‏ ‏‮to‬‏ ‏‮tweak‬‏ ‏‮and‬‏ ‏‮customize‬‏ ‏‮the‬‏ ‏‮Android‬‏ ‏‮user‬‏ ‏‮interface.‬‏ ‏‮These‬‏ ‏‮experimental‬‏ ‏‮features‬‏ ‏‮may‬‏ ‏‮change,‬‏ ‏‮break,‬‏ ‏‮or‬‏ ‏‮disappear‬‏ ‏‮in‬‏ ‏‮future‬‏ ‏‮releases.‬‏ ‏‮Proceed‬‏ ‏‮with‬‏ ‏‮caution.‬‏</string>
+  <string name="tuner_warning_title">(M)‏‮Fun‬‏ ‏‮for‬‏ ‏‮some‬‏ ‏‮but‬‏ ‏‮not‬‏ ‏‮for‬‏ ‏‮all‬‏</string>
   <string name="turn_off_airplane_mode">(M)‏‮Turn‬‏ ‏‮off‬‏ ‏‮airplane‬‏ ‏‮mode‬‏</string>
   <string name="turn_on_bluetooth">(M)‏‮Use‬‏ ‏‮Bluetooth‬‏</string>
   <string name="turn_on_bluetooth_auto_info_disabled">(M)‏‮Features‬‏ ‏‮like‬‏ ‏‮Quick‬‏ ‏‮Share‬‏ ‏‮and‬‏ ‏‮Find‬‏ ‏‮My‬‏ ‏‮Device‬‏ ‏‮use‬‏ ‏‮Bluetooth‬‏</string>
   <string name="turn_on_bluetooth_auto_info_enabled">(M)‏‮Bluetooth‬‏ ‏‮will‬‏ ‏‮turn‬‏ ‏‮on‬‏ ‏‮tomorrow‬‏ ‏‮morning‬‏</string>
   <string name="turn_on_bluetooth_auto_tomorrow">(M)‏‮Automatically‬‏ ‏‮turn‬‏ ‏‮on‬‏ ‏‮tomorrow‬‏</string>
   <string name="turn_on_wifi">(M)‏‮Wi‑Fi‬‏</string>
-  <string name="tv_media_transfer_arc_fallback_title">(M)‏‮HDMI‬‏ ‏‮ARC‬‏</string>
-  <string name="tv_media_transfer_default">(M)‏‮TV‬‏ ‏‮default‬‏</string>
   <string name="two_weeks_timestamp">(M)‏‮2‬‏ ‏‮weeks‬‏ ‏‮ago‬‏</string>
   <string name="udfps_accessibility_touch_hints_down">(M)‏‮Move‬‏ ‏‮down‬‏</string>
   <string name="udfps_accessibility_touch_hints_left">(M)‏‮Move‬‏ ‏‮left‬‏</string>
@@ -1582,7 +1640,9 @@
   <string name="volume_odi_captions_hint_enable">(M)‏‮enable‬‏</string>
   <string name="volume_odi_captions_tip">(M)‏‮Automatically‬‏ ‏‮caption‬‏ ‏‮media‬‏</string>
   <string name="volume_panel_captioning_title">(M)‏‮Live‬‏ ‏‮Caption‬‏</string>
+  <string name="volume_panel_clear_calling_title">(M)‏‮Clear‬‏ ‏‮Calling‬‏</string>
   <string name="volume_panel_collapsed_sliders">(M)‏‮Volume‬‏ ‏‮sliders‬‏ ‏‮collapsed‬‏</string>
+  <string name="volume_panel_device_settings_title">(M)‏‮Device‬‏ ‏‮Settings‬‏</string>
   <string name="volume_panel_dialog_settings_button">(M)‏‮Settings‬‏</string>
   <string name="volume_panel_enter_media_output_settings">(M)‏‮Enter‬‏ ‏‮output‬‏ ‏‮settings‬‏</string>
   <string name="volume_panel_expanded_sliders">(M)‏‮Volume‬‏ ‏‮sliders‬‏ ‏‮expanded‬‏</string>
@@ -1698,6 +1758,9 @@
   <string name="wifitrackerlib_wifi_standard_unknown">(M)‏‮Unknown‬‏</string>
   <string name="wifitrackerlib_wifi_unmetered_label">(M)‏‮Unmetered‬‏</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">(M)‏‮Wi-Fi‬‏ ‏‮won’t‬‏ ‏‮auto-connect‬‏ ‏‮for‬‏ ‏‮now‬‏</string>
+  <string name="wireless_charging_label">(M)‏‮Charging‬‏ ‏‮wirelessly‬‏</string>
+  <string name="wireless_charging_notification_text">(M)‏‮Wireless‬‏ ‏‮charging‬‏ ‏‮may‬‏ ‏‮use‬‏ ‏‮more‬‏ ‏‮energy‬‏ ‏‮than‬‏ ‏‮wired‬‏ ‏‮charging.‬‏ ‏‮To‬‏ ‏‮save‬‏ ‏‮electricity‬‏ ‏‮and‬‏ ‏‮time,‬‏ ‏‮try‬‏ ‏‮switching‬‏ ‏‮to‬‏ ‏‮a‬‏ ‏‮wired‬‏ ‏‮charger.‬‏</string>
+  <string name="wireless_charging_notification_title">(M)‏‮Wirelessly‬‏ ‏‮charging‬‏</string>
   <string name="work_challenge_emergency_button_text">(M)‏‮Emergency‬‏</string>
   <string name="work_mode_off_title">(M)‏‮Unpause‬‏ ‏‮work‬‏ ‏‮apps?‬‏</string>
   <string name="work_mode_turn_on">(M)‏‮Unpause‬‏</string>

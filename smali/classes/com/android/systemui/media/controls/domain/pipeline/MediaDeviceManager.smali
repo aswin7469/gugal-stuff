@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/media/controls/domain/pipeline/MediaDataManager$Listener;
@@ -24,8 +24,6 @@
 .field public final fgExecutor:Ljava/util/concurrent/Executor;
 
 .field public final listeners:Ljava/util/Set;
-
-.field public final localBluetoothManager:Ldagger/Lazy;
 
 .field public final localMediaManagerFactory:Lcom/android/systemui/media/controls/util/LocalMediaManagerFactory;
 
@@ -101,35 +99,32 @@
     iput-object p6, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->configurationController:Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
     .line 15
-    iput-object p7, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->localBluetoothManager:Ldagger/Lazy;
-
-    .line 17
     iput-object p8, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->fgExecutor:Ljava/util/concurrent/Executor;
 
-    .line 19
+    .line 17
     iput-object p9, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->bgExecutor:Ljava/util/concurrent/Executor;
 
-    .line 21
+    .line 19
     new-instance p1, Ljava/util/LinkedHashSet;
 
-    .line 23
+    .line 21
     invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 25
+    .line 23
     iput-object p1, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->listeners:Ljava/util/Set;
 
-    .line 28
+    .line 26
     new-instance p1, Ljava/util/LinkedHashMap;
 
-    .line 30
+    .line 28
     invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 32
+    .line 30
     iput-object p1, p0, Lcom/android/systemui/media/controls/domain/pipeline/MediaDeviceManager;->entries:Ljava/util/Map;
 
-    .line 35
+    .line 33
     return-void
-    .line 37
+    .line 35
 .end method
 
 

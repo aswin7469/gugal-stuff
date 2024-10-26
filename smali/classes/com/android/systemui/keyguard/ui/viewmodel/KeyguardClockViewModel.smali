@@ -1,11 +1,9 @@
 .class public final Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
-.field public burnInLayer:Lcom/android/systemui/keyguard/ui/view/layout/sections/AodBurnInLayer;
-
 .field public final clockShouldBeCentered:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
 .field public final clockSize:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
@@ -212,152 +210,128 @@
     move-result-object p1
 
     .line 118
-    iput-object p1, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;->clockShouldBeCentered:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 119
     new-instance v2, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel$special$$inlined$map$1;
 
-    .line 121
+    .line 119
     iget-object p3, p3, Lcom/android/systemui/statusbar/notification/icon/ui/viewmodel/NotificationIconContainerAlwaysOnDisplayViewModel;->icons:Lkotlinx/coroutines/flow/Flow;
 
-    .line 123
+    .line 121
     const/4 v4, 0x1
 
-    .line 125
+    .line 123
     invoke-direct {v2, p3, v4}, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 126
-    iget-object p3, p4, Lcom/android/systemui/statusbar/notification/domain/interactor/NotificationsKeyguardInteractor;->areNotificationsFullyHidden:Lkotlinx/coroutines/flow/StateFlowImpl;
+    .line 124
+    new-instance p3, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel$isAodIconsVisible$2;
+
+    .line 127
+    invoke-direct {p3, v0, v1}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
     .line 129
-    new-instance p4, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel$isAodIconsVisible$2;
-
-    .line 131
-    invoke-direct {p4, v0, v1}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    .line 133
     new-instance v4, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 136
-    invoke-direct {v4, v2, p3, p4}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    .line 132
+    iget-object p4, p4, Lcom/android/systemui/statusbar/notification/domain/interactor/NotificationsKeyguardInteractor;->areNotificationsFullyHidden:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 138
+    .line 134
+    invoke-direct {v4, v2, p4, p3}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+
+    .line 136
     invoke-static {v0}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 141
+    .line 139
     move-result-object p3
 
-    .line 144
+    .line 142
     invoke-static {v4, p2, p3, v3}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 145
-    move-result-object p3
-
-    .line 148
-    iput-object p3, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;->isAodIconsVisible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 149
+    .line 143
     check-cast p5, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;
 
-    .line 151
+    .line 146
     iget-object p3, p5, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;->baseShadeInteractor:Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;
 
-    .line 153
+    .line 148
     invoke-interface {p3}, Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;->getShadeMode()Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 155
+    .line 150
     move-result-object p3
 
-    .line 158
+    .line 153
     new-instance p4, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel$currentClockLayout$1;
 
-    .line 159
+    .line 154
     const/4 v2, 0x5
 
-    .line 161
+    .line 156
     invoke-direct {p4, v2, v1}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 162
+    .line 157
     invoke-static {p6, p1, p3, p8, p4}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
 
-    .line 165
+    .line 160
     move-result-object p1
 
-    .line 168
+    .line 163
     invoke-static {v0}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 169
+    .line 164
     move-result-object p3
 
-    .line 172
+    .line 167
     sget-object p4, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel$ClockLayout;->SMALL_CLOCK:Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel$ClockLayout;
 
-    .line 173
+    .line 168
     invoke-static {p1, p2, p3, p4}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 175
-    move-result-object p1
-
-    .line 178
-    iput-object p1, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;->currentClockLayout:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 179
+    .line 170
     new-instance p1, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel$hasCustomPositionUpdatedAnimation$1;
 
-    .line 181
+    .line 173
     invoke-direct {p1, v0, v1}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 183
+    .line 175
     new-instance p3, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 186
+    .line 178
     invoke-direct {p3, p8, p6, p1}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 188
+    .line 180
     invoke-static {v0}, Lkotlinx/coroutines/flow/SharingStarted$Companion;->WhileSubscribed$default(I)Lkotlinx/coroutines/flow/StartedWhileSubscribed;
 
-    .line 191
+    .line 183
     move-result-object p1
 
-    .line 194
+    .line 186
     invoke-static {p3, p2, p1, v3}, Lkotlinx/coroutines/flow/FlowKt;->stateIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;Lkotlinx/coroutines/flow/SharingStarted;Ljava/lang/Object;)Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 195
-    move-result-object p1
-
-    .line 198
-    iput-object p1, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;->hasCustomPositionUpdatedAnimation:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 199
+    .line 187
     iget-object p1, p7, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;->onAnyConfigurationChange:Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;
 
-    .line 201
+    .line 190
     iget-object p2, p5, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;->baseShadeInteractor:Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;
 
-    .line 203
+    .line 192
     invoke-interface {p2}, Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;->getShadeMode()Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 205
+    .line 194
     move-result-object p2
 
-    .line 208
+    .line 197
     new-instance p3, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel$smallClockTopMargin$1;
 
-    .line 209
+    .line 198
     invoke-direct {p3, p0, v1}, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel$smallClockTopMargin$1;-><init>(Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;Lkotlin/coroutines/Continuation;)V
 
-    .line 211
-    new-instance p4, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
+    .line 200
+    new-instance p0, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 214
-    invoke-direct {p4, p1, p2, p3}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
+    .line 203
+    invoke-direct {p0, p1, p2, p3}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 216
-    iput-object p4, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;->smallClockTopMargin:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 219
+    .line 205
     return-void
-    .line 221
+    .line 208
 .end method
 
 
@@ -371,126 +345,4 @@
     .line 2
     return-object p0
     .line 4
-.end method
-
-.method public final getSmallClockTopMargin()I
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;->systemBarUtils:Lcom/android/systemui/statusbar/ui/SystemBarUtilsProxyImpl;
-
-    .line 2
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/ui/SystemBarUtilsProxyImpl;->getStatusBarHeaderHeightKeyguard()I
-
-    .line 4
-    move-result v0
-
-    .line 7
-    iget-object v1, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;->shadeInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
-
-    .line 8
-    check-cast v1, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;
-
-    .line 10
-    iget-object v1, v1, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;->baseShadeInteractor:Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;
-
-    .line 12
-    invoke-interface {v1}, Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;->getShadeMode()Lkotlinx/coroutines/flow/StateFlow;
-
-    .line 14
-    move-result-object v1
-
-    .line 17
-    invoke-interface {v1}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
-
-    .line 18
-    move-result-object v1
-
-    .line 21
-    sget-object v2, Lcom/android/systemui/shade/shared/model/ShadeMode$Split;->INSTANCE:Lcom/android/systemui/shade/shared/model/ShadeMode$Split;
-
-    .line 22
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 24
-    move-result v1
-
-    .line 27
-    const/4 v2, 0x0
-
-    .line 28
-    if-eqz v1, :cond_1
-
-    .line 29
-    iget-object p0, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;->resources:Landroid/content/res/Resources;
-
-    .line 31
-    const v1, 0x7f07035f    # @dimen/keyguard_split_shade_top_margin '68.0dp'
-
-    .line 33
-    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 36
-    move-result p0
-
-    .line 39
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 40
-    move-result v1
-
-    .line 43
-    if-eqz v1, :cond_0
-
-    .line 44
-    goto :goto_0
-
-    .line 46
-    :cond_0
-    move v0, v2
-
-    .line 47
-    :goto_0
-    sub-int/2addr p0, v0
-
-    .line 48
-    goto :goto_2
-
-    .line 49
-    :cond_1
-    iget-object p0, p0, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardClockViewModel;->resources:Landroid/content/res/Resources;
-
-    .line 50
-    const v1, 0x7f07033e    # @dimen/keyguard_clock_top_margin '18.0dp'
-
-    .line 52
-    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 55
-    move-result p0
-
-    .line 58
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 59
-    move-result v1
-
-    .line 62
-    if-nez v1, :cond_2
-
-    .line 63
-    goto :goto_1
-
-    .line 65
-    :cond_2
-    move v0, v2
-
-    .line 66
-    :goto_1
-    add-int/2addr p0, v0
-
-    .line 67
-    :goto_2
-    return p0
-    .line 68
 .end method

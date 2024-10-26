@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/AudioStreamSliderViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderViewModel;
@@ -136,7 +136,7 @@
     invoke-direct {v10, v9}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 63
-    const v11, 0x7f0808d3    # @drawable/ic_music_note 'res/drawable/ic_music_note.xml'
+    const v11, 0x7f0808f7    # @drawable/ic_music_note 'res/drawable/ic_music_note.xml'
 
     .line 66
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -160,7 +160,7 @@
     invoke-direct {v10, v3}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 83
-    const v11, 0x7f0806f8    # @drawable/ic_call 'res/drawable/ic_call.xml'
+    const v11, 0x7f08070e    # @drawable/ic_call 'res/drawable/ic_call.xml'
 
     .line 86
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -208,7 +208,7 @@
     invoke-direct {v11, v6}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 121
-    const v13, 0x7f08090d    # @drawable/ic_ring_volume 'res/drawable/ic_ring_volume.xml'
+    const v13, 0x7f080936    # @drawable/ic_ring_volume 'res/drawable/ic_ring_volume.xml'
 
     .line 124
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -232,7 +232,7 @@
     invoke-direct {v11, v8}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 141
-    const v13, 0x7f080966    # @drawable/ic_volume_ringer 'res/drawable/ic_volume_ringer.xml'
+    const v13, 0x7f080999    # @drawable/ic_volume_ringer 'res/drawable/ic_volume_ringer.xml'
 
     .line 144
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -259,7 +259,7 @@
     invoke-direct {v13, v11}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 162
-    const v16, 0x7f080956    # @drawable/ic_volume_alarm 'res/drawable/ic_volume_alarm.xml'
+    const v16, 0x7f080989    # @drawable/ic_volume_alarm 'res/drawable/ic_volume_alarm.xml'
 
     .line 165
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -313,7 +313,7 @@
     invoke-direct {v4, v9}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 199
-    const v6, 0x7f140924    # @string/stream_music 'Media'
+    const v6, 0x7f1309a0    # @string/stream_music 'Media'
 
     .line 202
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -337,7 +337,7 @@
     invoke-direct {v4, v3}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 219
-    const v6, 0x7f14092b    # @string/stream_voice_call 'Call'
+    const v6, 0x7f1309a7    # @string/stream_voice_call 'Call'
 
     .line 222
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -385,7 +385,7 @@
     invoke-direct {v6, v4}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 257
-    const v4, 0x7f140927    # @string/stream_ring 'Ring'
+    const v4, 0x7f1309a3    # @string/stream_ring 'Ring'
 
     .line 260
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -412,7 +412,7 @@
     invoke-direct {v6, v4}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 278
-    const v4, 0x7f140925    # @string/stream_notification 'Notification'
+    const v4, 0x7f1309a1    # @string/stream_notification 'Notification'
 
     .line 281
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -439,7 +439,7 @@
     invoke-direct {v6, v4}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 299
-    const v4, 0x7f14091f    # @string/stream_alarm 'Alarm'
+    const v4, 0x7f13099b    # @string/stream_alarm 'Alarm'
 
     .line 302
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -484,7 +484,7 @@
     invoke-direct {v6, v4}, Lcom/android/settingslib/volume/shared/model/AudioStream;-><init>(I)V
 
     .line 332
-    const v4, 0x7f140926    # @string/stream_notification_unavailable 'Unavailable because ring is muted'
+    const v4, 0x7f1309a2    # @string/stream_notification_unavailable 'Unavailable because ring is muted'
 
     .line 335
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

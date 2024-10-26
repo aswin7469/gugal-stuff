@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/notetask/quickaffordance/NoteTaskQuickAffordanceConfig$lockScreenState$2$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function5;
@@ -272,7 +272,7 @@
     new-instance p1, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
     .line 103
-    const v0, 0x7f1406cd    # @string/note_task_button_label 'Note-taking'
+    const v0, 0x7f130728    # @string/note_task_button_label 'Note-taking'
 
     .line 105
     invoke-direct {p1, v0}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V
@@ -284,7 +284,7 @@
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 113
-    const p0, 0x7f0808db    # @drawable/ic_note_task_shortcut_keyguard 'res/drawable/ic_note_task_shortcut_keyguard.xml'
+    const p0, 0x7f080900    # @drawable/ic_note_task_shortcut_keyguard 'res/drawable/ic_note_task_shortcut_keyguard.xml'
 
     .line 116
     invoke-direct {v0, p0, p1}, Lcom/android/systemui/common/shared/model/Icon$Resource;-><init>(ILcom/android/systemui/common/shared/model/ContentDescription;)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/people/widget/PeopleSpaceWidgetManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -415,6 +415,7 @@
 
     .line 33
     return-object p0
+    .line 35
 .end method
 
 
@@ -1299,7 +1300,7 @@
     if-nez v1, :cond_e
 
     .line 328
-    const p0, 0x7f140631    # @string/missed_call 'Missed call'
+    const p0, 0x7f13068b    # @string/missed_call 'Missed call'
 
     .line 330
     invoke-virtual {p3, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -3871,7 +3872,7 @@
     move-result-object v3
 
     .line 76
-    const v4, 0x7f0e01ca    # @layout/people_space_placeholder_layout 'res/layout/people_space_placeholder_layout.xml'
+    const v4, 0x7f0d01d7    # @layout/people_space_placeholder_layout 'res/layout/people_space_placeholder_layout.xml'
 
     .line 77
     invoke-direct {v2, v3, v4}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V

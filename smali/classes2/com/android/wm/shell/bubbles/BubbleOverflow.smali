@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/BubbleOverflow;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/bubbles/BubbleViewProvider;
@@ -170,7 +170,7 @@
     const/4 v2, 0x0
 
     .line 9
-    const v3, 0x7f0e0067    # @layout/bubble_overflow_button 'res/layout/bubble_overflow_button.xml'
+    const v3, 0x7f0d006c    # @layout/bubble_overflow_button 'res/layout/bubble_overflow_button.xml'
 
     .line 10
     invoke-virtual {v0, v3, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -210,7 +210,7 @@
     move-result-object v2
 
     .line 36
-    const v3, 0x7f140228    # @string/bubble_overflow_button_content_description 'Overflow'
+    const v3, 0x7f13022f    # @string/bubble_overflow_button_content_description 'Overflow'
 
     .line 37
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -421,7 +421,7 @@
     iget-object v5, p0, Lcom/android/wm/shell/bubbles/BubbleOverflow;->context:Landroid/content/Context;
 
     .line 59
-    const v3, 0x7f070153    # @dimen/bubble_size '60.0dp'
+    const v3, 0x7f070159    # @dimen/bubble_size '60.0dp'
 
     .line 61
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -430,7 +430,7 @@
     move-result v6
 
     .line 67
-    const v3, 0x7f07010f    # @dimen/bubble_badge_size '24.0dp'
+    const v3, 0x7f070115    # @dimen/bubble_badge_size '24.0dp'
 
     .line 68
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -442,7 +442,7 @@
     iget-object v3, p0, Lcom/android/wm/shell/bubbles/BubbleOverflow;->context:Landroid/content/Context;
 
     .line 75
-    const v4, 0x7f0600f8    # @color/important_conversation '#f9ab00'
+    const v4, 0x7f060101    # @color/important_conversation '#f9ab00'
 
     .line 77
     invoke-virtual {v3, v4}, Landroid/content/Context;->getColor(I)I
@@ -525,7 +525,7 @@
     iput-object v2, p0, Lcom/android/wm/shell/bubbles/BubbleOverflow;->bitmap:Landroid/graphics/Bitmap;
 
     .line 131
-    const v2, 0x1040279    # @android:string/config_oem_enabled_satellite_s2cell_file
+    const v2, 0x1040272    # @android:string/config_mobile_hotspot_provision_app_no_ui
 
     .line 133
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -642,7 +642,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f070142    # @dimen/bubble_overflow_icon_inset '30.0dp'
+    const v1, 0x7f070148    # @dimen/bubble_overflow_icon_inset '30.0dp'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

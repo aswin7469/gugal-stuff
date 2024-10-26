@@ -5,7 +5,9 @@
     <item>បង្ហាញភាគរយនៅពេលសាកថ្ម (លំនាំដើម)</item>
     <item>កុំបង្ហាញរូបតំណាងនេះ</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>បង្ហាញម៉ោង នាទី និងវិនាទី</item>
     <item>បង្ហាញម៉ោង នាទី (លំនាំដើម)</item>

@@ -1,18 +1,18 @@
 .class public final Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final asyncListDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
-.field public final onClickCallback:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;
+.field public final onClickCallback:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
 .field public final synthetic this$0:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;)V
+.method public constructor <init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;)V
     .locals 0
 
     .line 1
@@ -22,7 +22,7 @@
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
     .line 4
-    iput-object p2, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter;->onClickCallback:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;
+    iput-object p2, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter;->onClickCallback:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
     .line 7
     new-instance p1, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter$diffUtilCallback$1;
@@ -266,14 +266,14 @@
     if-eqz v2, :cond_5
 
     .line 133
-    const v3, 0x7f150150    # @style/BluetoothTileDialog.DeviceName.Active
+    const v3, 0x7f140150    # @style/BluetoothTileDialog.DeviceName.Active
 
     .line 135
     goto :goto_2
 
     .line 138
     :cond_5
-    const v3, 0x7f15014f    # @style/BluetoothTileDialog.DeviceName
+    const v3, 0x7f14014f    # @style/BluetoothTileDialog.DeviceName
 
     .line 139
     :goto_2
@@ -286,14 +286,14 @@
     if-eqz v2, :cond_6
 
     .line 147
-    const v2, 0x7f150152    # @style/BluetoothTileDialog.DeviceSummary.Active
+    const v2, 0x7f140152    # @style/BluetoothTileDialog.DeviceSummary.Active
 
     .line 149
     goto :goto_3
 
     .line 152
     :cond_6
-    const v2, 0x7f150151    # @style/BluetoothTileDialog.DeviceSummary
+    const v2, 0x7f140151    # @style/BluetoothTileDialog.DeviceSummary
 
     .line 153
     :goto_3
@@ -333,7 +333,7 @@
     new-instance v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter$DeviceItemViewHolder$bind$2;
 
     .line 183
-    iget-object p0, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter;->onClickCallback:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogCallback;
+    iget-object p0, p0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate$Adapter;->onClickCallback:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
     .line 185
     const/4 v1, 0x0
@@ -365,7 +365,7 @@
     move-result-object p1
 
     .line 9
-    const v0, 0x7f0e0057    # @layout/bluetooth_device_item 'res/layout/bluetooth_device_item.xml'
+    const v0, 0x7f0d005c    # @layout/bluetooth_device_item 'res/layout/bluetooth_device_item.xml'
 
     .line 10
     const/4 v1, 0x0

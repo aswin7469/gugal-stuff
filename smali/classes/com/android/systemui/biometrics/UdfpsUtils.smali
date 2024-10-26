@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/UdfpsUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -243,7 +243,7 @@
     move-result-object p0
 
     .line 11
-    const p1, 0x7f1409b7    # @string/udfps_accessibility_touch_hints_left 'Move left'
+    const p1, 0x7f130a3d    # @string/udfps_accessibility_touch_hints_left 'Move left'
 
     .line 12
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -252,7 +252,7 @@
     move-result-object p1
 
     .line 18
-    const v2, 0x7f1409b6    # @string/udfps_accessibility_touch_hints_down 'Move down'
+    const v2, 0x7f130a3c    # @string/udfps_accessibility_touch_hints_down 'Move down'
 
     .line 19
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -261,7 +261,7 @@
     move-result-object v2
 
     .line 25
-    const v3, 0x7f1409b8    # @string/udfps_accessibility_touch_hints_right 'Move right'
+    const v3, 0x7f130a3e    # @string/udfps_accessibility_touch_hints_right 'Move right'
 
     .line 26
     invoke-virtual {p0, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -270,7 +270,7 @@
     move-result-object v3
 
     .line 32
-    const v4, 0x7f1409b9    # @string/udfps_accessibility_touch_hints_up 'Move up'
+    const v4, 0x7f130a3f    # @string/udfps_accessibility_touch_hints_up 'Move up'
 
     .line 33
     invoke-virtual {p0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

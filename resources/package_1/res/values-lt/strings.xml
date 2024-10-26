@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">padėti pasirinktą valdiklį</string>
   <string name="accessibility_action_label_remove_widget">pašalinti valdiklį</string>
   <string name="accessibility_action_label_select_widget">pasirinkite valdiklį</string>
-  <string name="accessibility_action_open_communal_hub">Valdikliai užrakinimo ekrane</string>
   <string name="accessibility_action_pip_resize">Pakeisti dydį</string>
   <string name="accessibility_action_pip_stash">Paslėpti</string>
   <string name="accessibility_action_pip_unstash">Nebeslėpti</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Išeiti iš vienos rankos režimo</string>
   <string name="accessibility_airplane_mode">Lėktuvo režimas.</string>
   <string name="accessibility_allow_diagonal_scrolling">Slinkimo įstrižai leidimas</string>
+  <string name="accessibility_assistant_poodle">Paieška balsu</string>
   <string name="accessibility_authenticate_hint">nustatytumėte tapatybę</string>
   <string name="accessibility_back">Atgal</string>
   <string name="accessibility_banner_message_dismiss">Atsisakyti</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">pasiektumėte įrenginį</string>
   <string name="accessibility_ethernet_connected">Eternetas.</string>
   <string name="accessibility_ethernet_disconnected">Atsijungta nuo eterneto.</string>
-  <string name="accessibility_fingerprint_bouncer">Reikia nustatyti tapatybę. Nustatykite tapatybę palietę kontrolinio kodo jutiklį.</string>
   <string name="accessibility_fingerprint_label">Kontrolinio kodo jutiklis</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">perjungti</string>
   <string name="accessibility_floating_button_action_edit">Redaguoti</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Meniu</string>
   <string name="accessibility_multi_user_list_switcher">išplečiamasis meniu</string>
   <string name="accessibility_multi_user_switch_switcher">Perjungti naudotoją</string>
+  <string name="accessibility_next_alarm">Kitas signalas %s</string>
   <string name="accessibility_no_calling">Nekviečiama.</string>
   <string name="accessibility_no_phone">Nėra telefono.</string>
   <string name="accessibility_no_wifi">„Wi-Fi“ atjungtas.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Užrakintas ekranas yra vertikalios orientacijos.</string>
   <string name="accessibility_send_smart_reply">Siųsti</string>
   <string name="accessibility_sensors_off_active">Parinktis „Jutikliai išjungti“ aktyvi</string>
+  <string name="accessibility_settings_gear">„Pixel Stand“ nustatymai</string>
   <string name="accessibility_side_fingerprint_indicator_label">Palieskite piršto antspaudo jutiklį. Tai yra trumpesnis mygtukas telefono šone</string>
+  <string name="accessibility_smartspace_page">%1$d psl. iš %2$d</string>
   <string name="accessibility_split_bottom">Išskaidyti apačioje</string>
   <string name="accessibility_split_left">Išskaidyti kairėn</string>
   <string name="accessibility_split_right">Išskaidyti dešinėn</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">Trys „Wi-Fi“ signalo juostos.</string>
   <string name="accessibility_wifi_two_bars">Dvi „Wi-Fi“ signalo juostos.</string>
   <string name="accesssibility_keyguard_retry">Perbr. aukštyn, kad dar k. paband. naud. atraki. pagal veidą</string>
+  <string name="adaptive_charging_notify_des">Akumuliatorius bus visiškai įkrautas %1$s. Įkraunama stabiliai, kad akumuliatorius ilgiau veiktų.</string>
+  <string name="adaptive_charging_notify_title">Prisitaikantis įkrovimas įjungtas</string>
+  <string name="adaptive_charging_notify_turn_off_once">Išjungti kartą</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Prisitaikantis įkrovimas • Visiškai įkrauta bus %2$s</string>
   <string name="add">Pridėti</string>
   <string name="add_guest_failed">Nepavyko sukurti naujo gesto</string>
   <string name="airplane_mode">Lėktuvo režimas</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Progr. informacija</string>
   <string name="app_label">Sistemos NS</string>
   <string name="assistant_attention_content_description">Aptikta naudotojo veikla</string>
+  <string name="assistant_scrim_label">Klausoma; palieskite, kad atšauktumėte</string>
   <string name="audio_sharing_description">Bendrinamas garsas</string>
   <string name="audio_status">Klausoma</string>
   <string name="auto_data_switch_dialog_negative_button">Ne, ačiū</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Atgal</string>
   <string name="battery">Akumuliatorius</string>
   <string name="battery_detail_switch_title">Akum. taus. pr.</string>
-  <string name="battery_low_description">Liko %s akumuliatoriaus energijos. Kai naudojama Akumuliatoriaus tausojimo priemonė, įjungiama Tamsioji tema, apribojama veikla fone ir atidedami pranešimai.</string>
+  <string name="battery_health_notify_learn_more">Sužinokite daugiau</string>
   <string name="battery_low_intro">Kai naudojama Akumuliatoriaus tausojimo priemonė, įjungiama Tamsioji tema, apribojama veikla fone ir atidedami pranešimai.</string>
-  <string name="battery_low_title">Įjungti Akumuliatoriaus tausojimo priemonę?</string>
   <string name="battery_saver_confirmation_ok">Įjungti</string>
   <string name="battery_saver_confirmation_title">Įjungti Akumuliatoriaus tausojimo priemonę?</string>
   <string name="battery_saver_confirmation_title_generic">Apie Akumuliatoriaus tausojimo priemonę</string>
-  <string name="battery_saver_dismiss_action">Ne, ačiū</string>
   <string name="battery_saver_start_action">Įjungti</string>
   <string name="battery_state_unknown_notification_text">Palieskite, kad sužinotumėte daugiau informacijos</string>
   <string name="battery_state_unknown_notification_title">Nuskaitant akumuliatoriaus skaitiklį iškilo problema</string>
@@ -296,14 +301,9 @@ Bandykite dar kartą po %d sek.</string>
   <string name="bluetooth_active_battery_level_untethered">Aktyvus. Akumuliatoriaus lygis kairėje: %1$s, dešinėje: %2$s.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Aktyvus. K.: %1$s akumuliatoriaus įkrova.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Aktyvus. D.: %1$s akumuliatoriaus įkrova.</string>
-  <string name="bluetooth_active_media_only_battery_level">Aktyvus (tik medija). Akumuliatorius lygis: %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Aktyvus (tik medija), akumuliatoriaus lygis kairėje: %1$s, dešinėje: %2$s.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Aktyvus (tik medija)</string>
   <string name="bluetooth_active_no_battery_level">Aktyvus</string>
   <string name="bluetooth_battery_level">Akumuliatoriaus įkrova: %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Prijungta (palaikomas garso įrašų bendrinimas). Akumuliatoriaus lygis: %1$s.</string>
   <string name="bluetooth_battery_level_untethered">Akumuliatoriaus lygis kairėje: %1$s, dešinėje: %2$s.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Prijungta (palaikomas garso įrašų bendrinimas), akumuliatoriaus lygis kairėje: %1$s, dešinėje: %2$s.</string>
   <string name="bluetooth_connected">Prisijungta (%1$s)</string>
   <string name="bluetooth_connecting">Prisijungiama...</string>
   <string name="bluetooth_disconnected">Atsijungęs (-usi)</string>
@@ -311,13 +311,11 @@ Bandykite dar kartą po %d sek.</string>
   <string name="bluetooth_hearing_aid_left_active">Aktyvus (tik kairiojoje pusėje)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Aktyvus (kairiojoje ir dešiniojoje pusėse)</string>
   <string name="bluetooth_hearing_aid_right_active">Aktyvus (tik dešiniojoje pusėje)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Prijungta (palaikomas garso įrašų bendrinimas)</string>
   <string name="bluetooth_pairing">Susiejama...</string>
   <string name="bluetooth_pairing_device_down_error_message">Nepavyksta užmegzti ryšio su „%1$s“.</string>
   <string name="bluetooth_pairing_error_message">Nepavyko susieti su „%1$s“.</string>
   <string name="bluetooth_pairing_pin_error_message">Nepavyko susieti su „%1$s“ dėl netinkamo PIN kodo ar prieigos rakto.</string>
   <string name="bluetooth_pairing_rejected_error_message">Susiejimą atmetė %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">Palaikomas garso įrašų bendrinimas</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Kompiuteris</string>
   <string name="bluetooth_talkback_headphone">Ausinės</string>
@@ -356,8 +354,6 @@ Bandykite dar kartą po %d sek.</string>
   <string name="bubble_overflow_button_content_description">Perpildymas</string>
   <string name="bubble_overflow_empty_subtitle">Naujausi ir atsisakyti burbulai bus rodomi čia</string>
   <string name="bubble_overflow_empty_title">Nėra naujausių burbulų</string>
-  <string name="bubble_shortcut_label">Burbulai</string>
-  <string name="bubble_shortcut_long_label">Rodyti burbulus</string>
   <string name="bubbles_app_settings">„%1$s“ nustatymai</string>
   <string name="bubbles_dont_bubble_conversation">Nerodyti pokalbio burbule</string>
   <string name="bubbles_settings_button_description">„%1$s“ burbulų nustatymai</string>
@@ -387,6 +383,10 @@ Palieskite, kad pritaikytumėte iš naujo</string>
   <string name="cast_to_other_device_stop_dialog_button">Sustabdyti perdavimą</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Programos (&lt;b&gt;%1$s&lt;/b&gt;) turinio perdavimas bus sustabdytas.</string>
   <string name="cell_data_off_content_description">Mobiliojo ryšio duomenys išjungti</string>
+  <string name="charge_limit_discovery_notification_enable_button">Įgalinti dabar</string>
+  <string name="charge_limit_discovery_notification_text">Pabandykite įjungti 80 proc. apribojimo funkciją, kad apsaugotumėte akumuliatoriaus būseną ir naudojimo trukmę. Galite bet kada tvarkyti tai nustatymuose.</string>
+  <string name="charge_limit_discovery_notification_title">Akumuliatoriaus apsauga įkraunant</string>
+  <string name="charging_reverse_text">Bendrinamas akumuliatorius</string>
   <string name="clear_all_notifications_text">Viską išvalyti</string>
   <string name="clipboard">Iškarpinė</string>
   <string name="clipboard_content_copied">Turinys nukopijuotas</string>
@@ -406,6 +406,11 @@ Palieskite, kad pritaikytumėte iš naujo</string>
   <string name="close_button_text">Uždaryti</string>
   <string name="close_dialog_button">Uždaryti</string>
   <string name="collapse_menu_text">Uždaryti meniu</string>
+  <string name="columbus_bouncer_message">Atrakinkite, norėdami užbaigti „Quick Tap“ veiksmą</string>
+  <string name="columbus_target_request_dialog_allow">Leisti</string>
+  <string name="columbus_target_request_dialog_deny">Neleisti</string>
+  <string name="columbus_target_request_dialog_summary">Dukart palieskite telefono nugarėlę, kad atidarytumėte „%1$s“. Tai galite bet kada pakeisti skiltyje „Nustatymai“.</string>
+  <string name="columbus_target_request_dialog_title">Leisti naudoti „Quick Tap“, kad būtų galima atidaryti „%1$s“?</string>
   <string name="communal_tutorial_indicator_text">Perbraukite kairėn, paleistumėte bendruomenės mokomąją medžiagą</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Bus bendrinamas vidinio rodinio ekrano vaizdas. Priekinis rodinys bus išjungtas.</string>
   <string name="connected_display_dialog_start_mirroring">Bendrinti ekrano vaizdą išoriniame ekrane?</string>
@@ -511,8 +516,11 @@ Jei tęsite, gali būti taikomi duomenų naudojimo mokesčiai.</string>
   <string name="data_usage_disabled_dialog_mobile_title">Mobiliojo ryšio duomenys pristabdyti</string>
   <string name="data_usage_disabled_dialog_title">Duomenys pristabdyti</string>
   <string name="days_timestamp">Prieš %1$s d.</string>
-  <string name="default_error_message">Netinkama įvestis</string>
   <string name="default_popup_window_title">Iššokantysis langas</string>
+  <string name="defender_notify_resume_charge">Nepaisyti</string>
+  <string name="defender_notify_title">Akumuliatoriaus apsauga</string>
+  <string name="defender_post_notify_des">Kad akumuliatorius veiktų ilgiau, įkrovimas buvo optimizuotas nuo %1$s iki %2$s</string>
+  <string name="defender_post_notify_title">Įkrovimas buvo optimizuotas</string>
   <string name="demo_mode">Sistemos NS demonstracinis režimas</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Išskleisti ekraną</string>
   <string name="desktop_mode_maximize_menu_snap_text">Sutraukti ekraną</string>
@@ -532,20 +540,32 @@ Jei tęsite, gali būti taikomi duomenų naudojimo mokesčiai.</string>
   <string name="do_disclosure_generic">Šis įrenginys priklauso jūsų organizacijai</string>
   <string name="do_disclosure_with_name">Šis įrenginys priklauso „%s“</string>
   <string name="do_financed_disclosure_with_name">Šį įrenginį teikia „%s“</string>
+  <string name="dock_a11y_action_show_photo_text">Rodyti nuotraukų rėmelį</string>
+  <string name="dock_alignment_not_charging">Sulygiuokite telefoną iš naujo, kad gal. įkrauti be laidų</string>
+  <string name="dock_alignment_slow_charging">Sulygiuokite telefoną iš naujo, kad gal. sparčiau įkrauti</string>
+  <string name="dock_defender_first_run_des">Kad akumuliatorius veiktų ilgiau, įkrovimas sulaikomas pasiekus 90 proc., kai planšetinis kompiuteris prijungtas prie doko. Galite bet kada pakeisti skiltyje „Nustatymai“.</string>
+  <string name="dock_defender_first_run_settings">Nustatymai</string>
+  <string name="dock_defender_first_run_title">Įkraunama sulaikius, siekiant apsaugoti akumuliatorių</string>
   <string name="dock_multi_instances_not_supported_text">Šią programą galima atidaryti tik viename lange</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Programoje nepalaikomas išskaidyto ekrano režimas</string>
+  <string name="dock_photo_preview_text">Pradedamas nuotraukų rėminimas…</string>
+  <string name="dock_promo_text">Perbraukite kairėn, kad būtų parodytas nuotraukos rėmelis</string>
   <string name="done">Atlikta</string>
   <string name="drag_split_not_supported">Šio pranešimo vilkimas išskaidyto ekrano režimu nepalaikomas</string>
   <string name="drag_to_add_tiles">Jei norite pridėti išklotinių, laikykite nuspaudę ir vilkite</string>
   <string name="drag_to_rearrange_tiles">Norėdami pertvarkyti išklot., laikykite nuspaudę ir vilkite</string>
   <string name="drag_to_remove_disabled">Turi būti bent %1$d išklotinės elem.</string>
   <string name="drag_to_remove_tiles">Vilkite čia, jei norite pašalinti</string>
+  <string name="dream_lockscreen_wallpaper_description">Naudokite dabartinį užrakinimo ekrano foną</string>
+  <string name="dream_lockscreen_wallpaper_label">Ekrano fonas</string>
   <string name="dream_overlay_status_bar_alarm_set">Signalas nustatytas</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Vaizdo kamera ir mikrofonas išjungti</string>
   <string name="dream_overlay_status_bar_camera_off">Fotoaparatas išjungtas</string>
   <string name="dream_overlay_status_bar_mic_off">Mikrofonas išjungtas</string>
   <string name="dream_overlay_status_bar_priority_mode">Prioriteto režimas</string>
   <string name="dream_overlay_status_bar_wifi_off">„Wi‑Fi“ ryšys nepasiekiamas</string>
+  <string name="dwell_defender_notify_des">Tai padeda prailginti akumuliatoriaus veikimo laiką, kai telefonas paliekamas krautis per ilgai</string>
+  <string name="dwell_defender_notify_title">Įkrovimas pristabdytas, siekiant apsaugoti akumuliatorių</string>
   <string name="edit_user_info_message">Pasirinktas vardas ir nuotrauka bus matomi visiems šio įrenginio naudotojams.</string>
   <string name="edit_widget">Redaguoti valdiklį</string>
   <string name="empty_shade_text">Nėra įspėjimų</string>
@@ -561,13 +581,17 @@ Jei tęsite, gali būti taikomi duomenų naudojimo mokesčiai.</string>
   <string name="ethernet_label">Eternetas</string>
   <string name="expand_button_title">Išplėstiniai</string>
   <string name="expand_menu_text">Atidaryti meniu</string>
+  <string name="extreme_battery_saver_text">Ekstremalus</string>
+  <string name="extreme_low_battery_notification_text">Telefonas bus išjungtas, jei netrukus nebus įkrautas</string>
+  <string name="extreme_low_battery_notification_title">Akumuliatorius beveik išseko</string>
   <string name="face_re_enroll_dialog_content">Norint dar kartą nustatyti atrakinimą pagal veidą, dabartinis veido modelis bus ištrintas.
 
 Turite dar kartą nustatyti šią funkciją, kad galėtumėte atrakinti telefoną pagal veidą.</string>
   <string name="face_re_enroll_dialog_title">Atrakinimo pagal veidą nustatymas</string>
   <string name="face_re_enroll_notification_name">Atrakinimas pagal veidą</string>
   <string name="face_re_enroll_notification_title">Atrakinimo pagal veidą nustatymas iš naujo</string>
-  <string name="face_reenroll_failure_dialog_content">Nepavyko nustatyti atrakinimo pagal veidą. Eikite į skiltį „Nustatymai“ ir bandykite dar kartą.</string>
+  <string name="face_reenroll_dialog_confirm">Nustatyti</string>
+  <string name="face_reenroll_failure_dialog_content">Nepavyko nustatyti Atrakinimo pagal veidą. Eikite į skiltį „Nustatymai“ ir bandykite dar kartą.</string>
   <string name="failed_attempts_now_wiping_device">Per daug netinkamų bandymų. Šio įrenginio duomenys bus ištrinti.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Atsisakyti</string>
   <string name="failed_attempts_now_wiping_profile">Per daug netinkamų bandymų. Šis darbo profilis ir jo duomenys bus ištrinti.</string>
@@ -604,6 +628,7 @@ Kai jie bus ištrinti, turėsite dar kartą nustatyti atrakinimą piršto atspau
   <string name="font_scaling_smaller">Padaryti mažesnius</string>
   <string name="fullscreen_text">Visas ekranas</string>
   <string name="game_status">Leidžiama</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Išplėstinis atrakinimas išjungtas</string>
   <string name="go_to_web">Eiti į naršyklę</string>
   <string name="got_it">Supratau</string>
@@ -640,6 +665,7 @@ Kai jie bus ištrinti, turėsite dar kartą nustatyti atrakinimą piršto atspau
   <string name="guest_reset_and_restart_dialog_title">Nustatyti svečio sesiją iš naujo?</string>
   <string name="guest_reset_guest_confirm_button">Nustatyti iš naujo</string>
   <string name="guest_resetting">Svečias nustatomas iš naujo…</string>
+  <string name="handle_invocation_prompt">Perbraukite, jei norite kalbėti</string>
   <string name="handle_text">Rankenėlė</string>
   <string name="headset">Ausinės</string>
   <string name="hearing_devices_preset_label">Išankstiniai nustatymai</string>
@@ -656,6 +682,7 @@ Palietę gausite daugiau informacijos</string>
   <string name="high_temp_title">Telefonas kaista</string>
   <string name="home_controls_dream_description">Pasiekite namų sistemos valdymą ekrano užsklandoje</string>
   <string name="home_controls_dream_label">Namų sistemos valdymas</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Pasiekiamas bent vienas įrenginys arba įrenginio skydelis</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Jei norite pridėti programą „Home“ kaip šaukinį, įsitikinkite, kad programa įdiegta</string>
   <string name="hub_mode_add_widget_button_text">Pridėti valdiklį</string>
@@ -669,12 +696,16 @@ Palietę gausite daugiau informacijos</string>
   <string name="in_progress">Vyksta</string>
   <string name="inattentive_sleep_warning_message">Įrenginys netrukus išsijungs. Paspauskite, kad jis liktų įjungtas.</string>
   <string name="inattentive_sleep_warning_title">Budėjimo laikas</string>
+  <string name="incompatible_charging_learn_more">Sužinokite daugiau</string>
+  <string name="incompatible_charging_notify_des">Telefonas gali būti įkraunamas lėtai arba neįkraunamas. Kad greičiau įkrautumėte, naudokite rekomenduojamą laidą ir adapterį.</string>
+  <string name="incompatible_charging_notify_title">Įkrovimo priedo patikra</string>
   <string name="indeterminate">Iš dalies pažymėta</string>
   <string name="inline_done_button">Atlikta</string>
   <string name="inline_ok_button">Taikyti</string>
   <string name="inline_turn_off_notifications">Išjungti pranešimus</string>
   <string name="input_switch_input_language_next">Perjungti į kitą kalbą</string>
   <string name="input_switch_input_language_previous">Perjungti į ankstesnę kalbą</string>
+  <string name="install_app">Įdiegti programą</string>
   <string name="install_dialer_on_work_profile_action">Įdiegti darbo telefono programą</string>
   <string name="install_type_instant">Akimirksniu įkeliama programėlė</string>
   <string name="instant_apps">Akimirksniu įkeliamos programos</string>
@@ -683,8 +714,6 @@ Palietę gausite daugiau informacijos</string>
   <string name="instant_apps_title">Programa „%1$s“ paleista</string>
   <string name="interruption_level_none">Visiška tyla</string>
   <string name="interruption_level_priority">Tik prioritetiniai</string>
-  <string name="invalid_charger_text">Naudokite originalų su įrenginiu pateiktą įkroviklį</string>
-  <string name="invalid_charger_title">Negalima įkrauti naudojant USB</string>
   <string name="issuerecord_background_processing_label">Apdorojamas problemos įrašas</string>
   <string name="issuerecord_ongoing_screen_only">Įrašoma problema</string>
   <string name="issuerecord_save_title">Problemos įrašas išsaugotas</string>
@@ -766,21 +795,33 @@ Palietę gausite daugiau informacijos</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Įrenginys užrakintas
 Autentifikuoti nepavyko</string>
   <string name="keyguard_indication_charging_time">%2$s • Įkraunama • %1$s iki visiško įkrovimo</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Įkrovimas bus baigtas %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Įkraunama • %1$s iki visiško įkrovimo</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Bus visiškai įkrauta %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Sparčiai įkraunama • %1$s iki visiško įkrovimo</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Spartusis įkrovimas • Bus visiškai įkrauta %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Įkrovimas baigtas</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Lėtai įkraunama • %1$s iki visiško įkrovimo</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Bus visiškai įkrauta %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Bus visiškai įkrauta %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Įkraunama be laidų • %1$s iki visiško įkrovimo</string>
-  <string name="keyguard_indication_trust_unlocked">Atrakinta taikant „TrustAgent“</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Bus visiškai įkrauta %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Atrakinta taikant išplėstinį atrakinimą</string>
   <string name="keyguard_missing_sim_message_short">Nėra SIM kortelės</string>
   <string name="keyguard_network_locked_message">Tinklas užrakintas</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Nenaudojama SIM kortelė.</string>
   <string name="keyguard_plugged_in">%s • Įkraunama</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Greitai įkraunama</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Spartusis įkrovimas</string>
   <string name="keyguard_plugged_in_charging_limited">%s • įkrovimas pristabdytas, siekiant apsaugoti akumuliatorių</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Lėtai įkraunama</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Įkraunama</string>
   <string name="keyguard_plugged_in_dock">%s • Įkraunama</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Įkraunama</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • patikrinkite įkrovimo priedą</string>
+  <string name="keyguard_plugged_in_v2">%s • Įkraunama</string>
   <string name="keyguard_plugged_in_wireless">%s • Kraunama be laidų</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Įkraunama</string>
   <string name="keyguard_retry">Jei norite bandyti dar kartą, perbraukite aukštyn</string>
   <string name="keyguard_sim_error_message_short">Netinkama kortelė.</string>
   <string name="keyguard_sim_locked_message">SIM kortelė užrakinta.</string>
@@ -811,7 +852,6 @@ Autentifikuoti nepavyko</string>
   <string name="kg_invalid_confirm_pin_hint">PIN kodai nesutampa</string>
   <string name="kg_invalid_sim_pin_hint">Įveskite PIN kodą, sudarytą iš 4–8 skaičių.</string>
   <string name="kg_invalid_sim_puk_hint">PUK kodas turėtų būti sudarytas iš 8 ar daugiau skaitmenų.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Įveskite SIM kortelės PIN kodą. Jums liko # bandymas. Paskui reikės susisiekti su operatoriumi, kad atrakintumėte įrenginį.}one{Įveskite SIM kortelės PIN kodą. Jums liko # bandymas.}few{Įveskite SIM kortelės PIN kodą. Jums liko # bandymai.}many{Įveskite SIM kortelės PIN kodą. Jums liko # bandymo.}other{Įveskite SIM kortelės PIN kodą. Jums liko # bandymų.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM kortelė dabar yra išjungta. Jei norite tęsti, įveskite PUK kodą. Jums liko # bandymas. Paskui visiškai nebegalėsite naudoti SIM kortelės. Jei reikia išsamios informacijos, susisiekite su operatoriumi.}one{SIM kortelė dabar yra išjungta. Jei norite tęsti, įveskite PUK kodą. Jums liko # bandymas. Paskui visiškai nebegalėsite naudoti SIM kortelės. Jei reikia išsamios informacijos, susisiekite su operatoriumi.}few{SIM kortelė dabar yra išjungta. Jei norite tęsti, įveskite PUK kodą. Jums liko # bandymai. Paskui visiškai nebegalėsite naudoti SIM kortelės. Jei reikia išsamios informacijos, susisiekite su operatoriumi.}many{SIM kortelė dabar yra išjungta. Jei norite tęsti, įveskite PUK kodą. Jums liko # bandymo. Paskui visiškai nebegalėsite naudoti SIM kortelės. Jei reikia išsamios informacijos, susisiekite su operatoriumi.}other{SIM kortelė dabar yra išjungta. Jei norite tęsti, įveskite PUK kodą. Jums liko # bandymų. Paskui visiškai nebegalėsite naudoti SIM kortelės. Jei reikia išsamios informacijos, susisiekite su operatoriumi.}}</string>
   <string name="kg_password_pin_failed">Nepavyko atlikti SIM kortelės PIN kodo operacijos.</string>
   <string name="kg_password_puk_failed">Nepavyko atlikti SIM kortelės PUK kodo operacijos.</string>
@@ -852,7 +892,7 @@ Autentifikuoti nepavyko</string>
   <string name="kg_sim_pin_instructions_multi">Įveskite „%1$s“ SIM kortelės PIN kodą</string>
   <string name="kg_sim_unlock_progress_dialog_message">Atrakinama SIM…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Bandykite dar kartą po # sekundės.}one{Bandykite dar kartą po # sekundės.}few{Bandykite dar kartą po # sekundžių.}many{Bandykite dar kartą po # sekundės.}other{Bandykite dar kartą po # sekundžių.}}</string>
-  <string name="kg_trust_agent_disabled">Patikima priemonė nepasiekiama</string>
+  <string name="kg_trust_agent_disabled">Išplėstinis atrakinimas nepasiekiamas</string>
   <string name="kg_unlock_with_password_or_fp">Atrakinkite slaptažodžiu arba piršto atspaudu</string>
   <string name="kg_unlock_with_pattern_or_fp">Atrakinkite atrakinimo piešiniu arba piršto atspaudu</string>
   <string name="kg_unlock_with_pin_or_fp">Atrakinkite PIN kodu arba piršto atspaudu</string>
@@ -900,6 +940,10 @@ Jei neleisite šiai programai pasiekti visų įrenginio žurnalų, ji vis tiek g
   <string name="log_access_confirmation_learn_more">Sužinokite daugiau</string>
   <string name="log_access_confirmation_learn_more_at">Sužinokite daugiau adresu %s</string>
   <string name="log_access_confirmation_title">Leisti „%s“ pasiekti visus įrenginio žurnalus?</string>
+  <string name="low_battery_label">Senka akumuliatorius</string>
+  <string name="low_battery_notification_text">Įjungti akumuliatoriaus tausojimo priemonę, kad akumuliatorius veiktų ilgiau</string>
+  <string name="low_battery_notification_text_ebs">Įjungti akumuliatoriaus energijos taupymo didžiausiu režimu funkciją, kad akumuliatorius veiktų ilgiau</string>
+  <string name="low_battery_notification_title">Liko akumuliatoriaus energijos: %s</string>
   <string name="m3c_search_bar_search">Paieška</string>
   <string name="m3c_suggestions_available">Pasiūlymai pateikti toliau</string>
   <string name="magnification_close_settings_click_label">Uždaryti didinimo nustatymus</string>
@@ -939,8 +983,6 @@ Jei neleisite šiai programai pasiekti visų įrenginio žurnalų, ji vis tiek g
   <string name="media_output_dialog_volume_percentage">%1$d %%</string>
   <string name="media_output_end_session_dialog_stop">Sustabdyti</string>
   <string name="media_output_end_session_dialog_summary">Sustabdyti bendrinamą seansą norint perkelti mediją į kitą įrenginį</string>
-  <string name="media_output_first_broadcast_title">Kaip veikia transliacija</string>
-  <string name="media_output_first_notify_broadcast_message">Netoliese esantys žmonės, turintys suderinamus „Bluetooth“ įrenginius, gali klausyti jūsų transliuojamos medijos</string>
   <string name="media_output_group_title_speakers_and_displays">Garsiakalbiai ir ekranai</string>
   <string name="media_output_group_title_suggested_device">Siūlomi įrenginiai</string>
   <string name="media_output_label_title">Leidžiama „%s“</string>
@@ -967,9 +1009,6 @@ Jei neleisite šiai programai pasiekti visų įrenginio žurnalų, ji vis tiek g
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Kai perduodate programą, „Android“ gali pasiekti viską, kas rodoma ar leidžiama toje programoje. Todėl būkite atsargūs naudodami slaptažodžius, išsamią mokėjimo metodo informaciją, pranešimus, nuotraukas ir garso bei vaizdo įrašus.</string>
   <string name="media_projection_sys_service_dialog_title">Pradėti įrašyti ar perduoti turinį?</string>
   <string name="media_projection_sys_service_dialog_warning">Šią funkciją teikianti paslauga galės pasiekti visą informaciją, matomą ekrane ir leidžiamą iš įrenginio įrašant ar perduodant turinį. Tai apima įvairią informaciją, pvz., slaptažodžius, išsamią mokėjimo informaciją, nuotraukas, pranešimus ir leidžiamus garso įrašus.</string>
-  <string name="media_projection_task_switcher_action_back">Perjungti atgal</string>
-  <string name="media_projection_task_switcher_action_switch">Bendrinti šią programą</string>
-  <string name="media_projection_task_switcher_text">Bendrinimas pristabdomas, kai perjungiate programas</string>
   <string name="media_seamless_other_device">Kitas įrenginys</string>
   <string name="media_transfer_default_device_name">Prijungtas įrenginys</string>
   <string name="media_transfer_dock_speaker_device_name">Doko garsiakalbis</string>
@@ -1280,12 +1319,17 @@ Jei kyla klausimų, susisiekite su „%2$s“.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Kad raiška būtų geresnė, apverskite telefoną</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Perjungti ekranus?</string>
   <string name="recent_conversations">Paskutiniai pokalbiai</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">išsiuntė vaizdą</string>
   <string name="remove_from_settings">Pašalinti iš nustatymų</string>
   <string name="remove_from_settings_prompt">Ar norite pašalinti sistemos naudotojo sąsajos derinimo priemonę iš nustatymų ir nebenaudoti jokių jos funkcijų?</string>
   <string name="require_unlock_for_nfc">Norėdami naudoti NFC, atrakinkite</string>
   <string name="restart_button_description">Palieskite, kad iš naujo paleistumėte šią programą ir matytumėte aiškiau</string>
   <string name="retry_face">Bandyti iš naujo autentifikuoti veidą</string>
+  <string name="reverse_charging_device_name_text">Kitas „Pixel“</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s įkrauna (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Akumuliatoriaus bendrinimo funkcija įjungta</string>
+  <string name="reverse_charging_title">Akumuliatoriaus bendrinimas</string>
   <string name="right_icon">Piktograma dešinėje</string>
   <string name="right_keycode">Klavišo kodas dešinėje</string>
   <string name="right_nav_bar_button_type">Papildomo mygtuko dešinėje tipas</string>
@@ -1293,8 +1337,15 @@ Jei kyla klausimų, susisiekite su „%2$s“.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">Palieskite ir sužinokite išsamios informacijos apie akumuliatoriaus bei duomenų naudojimą</string>
   <string name="running_foreground_services_title">Programos, veikiančios fone</string>
-  <string name="satellite_connected_carrier_text">Prisijungimas prie palydovo kritiniu atveju</string>
+  <string name="satellite_connected_carrier_text">„Pixel“ prisijungimas prie palydovo kritiniu atveju</string>
   <string name="save">Išsaugoti</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Atšaukti</string>
+  <string name="saver_confirmation_dialog_subtitle">Pasirinkite norimą naudoti režimą</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Įtraukiami visi anksčiau pateikti pakeitimai. Taip pat pristabdomos nebūtinosios programos ir jų pranešimai.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Apribojami vaizdiniai efektai ir veikla fone. Įjungiama tamsioji tema (jei dar neįjungta).</string>
+  <string name="saver_confirmation_dialog_title">Sveiki, čia – akumuliatoriaus tausojimo priemonė</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Akumuliatoriaus energijos taupymas didžiausiu režimu</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Įprasta akumuliatoriaus tausojimo priemonė</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Ekrano fiksavimo funkcija išjungta vadovaujantis įrenginio politika</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Užblokavo jūsų IT administratorius</string>
   <string name="screen_pinning_can_open_other_apps">Prisegta programa gali atidaryti kitas programas.</string>
@@ -1312,6 +1363,12 @@ Jei kyla klausimų, susisiekite su „%2$s“.</string>
   <string name="screen_pinning_toast">Kad atsegtumėte šią programą, palieskite ir palaikykite mygtukus „Atgal“ ir „Apžvalga“</string>
   <string name="screen_pinning_toast_gesture_nav">Kad atsegtumėte šią programą, perbraukite aukštyn ir palaikykite</string>
   <string name="screen_pinning_toast_recents_invisible">Kad atsegtumėte šią programą, palieskite ir palaikykite mygtuką „Atgal“ ir pagrindinio ekrano mygtuką</string>
+  <string name="screen_protector_absent_message">Išjungus apsauginio ekrano stiklo režimą geriau veikia lietimo funkcija, kai nenaudojamas apsauginis ekrano stiklas.</string>
+  <string name="screen_protector_disable_notification">Neleisti pranešimo</string>
+  <string name="screen_protector_go_to_settings">Eiti į nustatymus</string>
+  <string name="screen_protector_got_it">Supratau</string>
+  <string name="screen_protector_mode_title">Apsauginio ekrano stiklo režimas</string>
+  <string name="screen_protector_present_message">Įgalinus apsauginio ekrano stiklo režimą geriau veikia lietimo funkcija, kai naudojamas apsauginis ekrano stiklas.</string>
   <string name="screen_share_permission_app_selector_title">Programos bendrinimas ar įrašymas</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Visas ekranas</string>
   <string name="screen_share_permission_dialog_option_single_app">Viena programa</string>
@@ -1364,9 +1421,9 @@ Jei kyla klausimų, susisiekite su „%2$s“.</string>
   <string name="screenshot_saving_work_profile_title">Išsaugoma ekrano kopija darbo profilyje…</string>
   <string name="screenshot_scroll_label">Fiksuoti daugiau</string>
   <string name="screenshot_share_description">Bendrinti ekrano kopiją</string>
-  <string name="screenshot_share_label">Bendrinti</string>
   <string name="screenshot_text">Ekrano kopija</string>
   <string name="screenshot_top_boundary_pct">Viršutinė riba – %1$d proc.</string>
+  <string name="screenshot_view_description">Žr. ekrano kopiją</string>
   <string name="screenshot_work_profile_notification">Išsaugota programoje „%1$s“ darbo profilyje</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Piršto atspaudo jutiklis yra ant maitinimo mygtuko. Tai yra plokščias mygtukas šalia iškilusio garsumo mygtuko ant telefono krašto.</string>
   <string name="see_all_bluetooth_devices">Žiūrėti viską</string>
@@ -1384,6 +1441,12 @@ Jei kyla klausimų, susisiekite su „%2$s“.</string>
   <string name="set_default_notes_app_toast_content">Nustatykite numatytąją užrašų programą Nustatymuose</string>
   <string name="settings_label">Nustatymai</string>
   <string name="settingslib_learn_more_text">Sužinokite daugiau</string>
+  <string name="severe_battery_notification_switch_text">Perjungti į akumuliatoriaus energijos taupymą didžiausiu režimu? 
+
+Bus pristabdytos visos nebūtinosios programos ir jų pranešimai.</string>
+  <string name="severe_battery_notification_text">Įjunkite akumuliatoriaus energijos taupymą didžiausiu režimu. Bus pristabdytos visos nebūtinosios programos</string>
+  <string name="severe_battery_notification_title">Liko akumuliatoriaus energijos: %s</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Perjungti</string>
   <string name="share_to_app_stop_dialog_button">Nebebendrinti</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Programos (&lt;b&gt;%1$s&lt;/b&gt;) turinio bendrinimas bus sustabdytas.</string>
   <string name="share_to_app_stop_dialog_title">Nebebendrinti ekrano?</string>
@@ -1406,6 +1469,9 @@ Jei kyla klausimų, susisiekite su „%2$s“.</string>
   <string name="slice_permission_text_1">- Gali nuskaityti informaciją iš „%1$s“</string>
   <string name="slice_permission_text_2">- Gali imtis veiksmų programoje „%1$s“</string>
   <string name="slice_permission_title">Leisti „%1$s“ rodyti „%2$s“ fragmentus?</string>
+  <string name="smartspace_content_desc">Apžvalga</string>
+  <string name="smartspace_flight_qr_code">QR kodas</string>
+  <string name="smartspace_role_desc">Peržiūrėti</string>
   <string name="snoozeHourOptions">{count,plural, =1{# valanda}=2{# valandos}one{# valanda}few{# valandos}many{# valandos}other{# valandų}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minutė}one{# minutė}few{# minutės}many{# minutės}other{# minučių}}</string>
   <string name="snooze_undo">Anuliuoti</string>
@@ -1416,6 +1482,8 @@ Jei kyla klausimų, susisiekite su „%2$s“.</string>
   <string name="speed_label_slow">Lėtas</string>
   <string name="speed_label_very_fast">Labai greitas</string>
   <string name="split_screen_text">Išskaidyto ekrano režimas</string>
+  <string name="squeeze_invocation_prompt">Suspauskite, jei norite kalbėti</string>
+  <string name="standard_battery_saver_text">Įprasta</string>
   <string name="start_dreams">Ekrano užsklanda</string>
   <string name="state_empty">Tuščia</string>
   <string name="state_off">Išjungta</string>
@@ -1453,6 +1521,8 @@ Jei kyla klausimų, susisiekite su „%2$s“.</string>
   <string name="tab">Tabuliavimo klavišas</string>
   <string name="tap_a_network_to_connect">Palieskite tinklą, kad prisijungtumėte</string>
   <string name="tap_again">Palieskite dar kartą</string>
+  <string name="temp_defender_notify_des">Įkrovimas bus atnaujintas, kai telefonas pasieks normalią temperatūrą</string>
+  <string name="temp_defender_notify_title">Įkrovimas pristabdytas, siekiant apsaugoti akumuliatorių</string>
   <string name="template_percent">Procentų: %1$d.</string>
   <string name="thermal">Šiluminis</string>
   <string name="thermal_shutdown_dialog_help_text">Žr. priežiūros veiksmus</string>
@@ -1469,6 +1539,7 @@ Palietę gausite daugiau informacijos</string>
   <string name="title_for_empty_state_cta">Sparčiai pasiekite mėgstamiausius programų valdiklius neatrakinę planšetinio kompiuterio.</string>
   <string name="title_usb_accessory">USB reikmuo</string>
   <string name="to_switch_networks_disconnect_ethernet">Norėdami perjungti tinklus, atjunkite eternetą</string>
+  <string name="too_hot_label">„Pixel“ per daug įkaito</string>
   <string name="touch_filtered_warning">Kadangi programa užstoja leidimo užklausą, nustatymuose negalima patvirtinti jūsų atsakymo.</string>
   <string name="touchpad_tutorial_action_key_button">Veiksmų klavišas</string>
   <string name="touchpad_tutorial_back_gesture_button">Grįžimo atgal gestas</string>
@@ -1483,17 +1554,18 @@ Palietę gausite daugiau informacijos</string>
   <string name="tuner_menu">Meniu</string>
   <string name="tuner_minus">Minusas</string>
   <string name="tuner_other_apps">Kitos programos</string>
+  <string name="tuner_persistent_warning">Šios eksperimentinės funkcijos gali pasikeisti, nutrūkti ar išnykti iš būsimų laidų. Tęskite atsargiai.</string>
   <string name="tuner_plus">Pliusas</string>
   <string name="tuner_right">Dešinėje</string>
   <string name="tuner_time">Laikas</string>
+  <string name="tuner_warning">Sistemos naudotojo sąsajos derinimo priemonė suteikia papildomų galimybių pagerinti ir tinkinti „Android“ naudotojo sąsają. Šios eksperimentinės funkcijos gali pasikeisti, nutrūkti ar išnykti iš būsimų laidų. Tęskite atsargiai.</string>
+  <string name="tuner_warning_title">Smagu, bet ne visada</string>
   <string name="turn_off_airplane_mode">Išjungti lėktuvo režimą</string>
   <string name="turn_on_bluetooth">„Bluetooth“ naudojimas</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Tokioms funkcijoms kaip „Spartusis bendrinimas“ ir „Rasti įrenginį“ naudojamas „Bluetooth“ ryšys</string>
   <string name="turn_on_bluetooth_auto_info_enabled">„Bluetooth“ ryšys bus įjungtas rytoj ryte</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Automatiškai įjungti rytoj</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">TV numatytoji išvestis</string>
   <string name="two_weeks_timestamp">Prieš 2 sav.</string>
   <string name="unknown">Nežinomas</string>
   <string name="unlock_to_see_notif_text">Atrakinę matykite senesnius pranešimus</string>
@@ -1552,7 +1624,9 @@ Bet kuris naudotojas gali atnaujinti visų kitų naudotojų programas.</string>
   <string name="volume_odi_captions_hint_enable">įgalinti</string>
   <string name="volume_odi_captions_tip">Taikyti aut. medij. subtitr.</string>
   <string name="volume_panel_captioning_title">Subtitrai realiuoju laiku</string>
+  <string name="volume_panel_clear_calling_title">Aiškus skambutis</string>
   <string name="volume_panel_collapsed_sliders">Garsumo šliaužikliai sutraukti</string>
+  <string name="volume_panel_device_settings_title">Įrenginio nustatymai</string>
   <string name="volume_panel_dialog_settings_button">Nustatymai</string>
   <string name="volume_panel_enter_media_output_settings">Įveskite išvesties nustatymus</string>
   <string name="volume_panel_expanded_sliders">Garsumo šliaužikliai išskleisti</string>
@@ -1667,6 +1741,9 @@ Bet kuris naudotojas gali atnaujinti visų kitų naudotojų programas.</string>
   <string name="wifitrackerlib_wifi_standard_unknown">Nežinoma</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Nematuojamas</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">„Wi-Fi“ šiuo metu nebus prijungtas automatiškai</string>
+  <string name="wireless_charging_label">Įkraunama be laidų</string>
+  <string name="wireless_charging_notification_text">Naudojant belaidį įkrovimą gali būti eikvojama daugiau energijos, nei įkraunant laidu. Norėdami sutaupyti elektros ir laiko, pabandykite įkrauti laidu.</string>
+  <string name="wireless_charging_notification_title">Belaidis įkrovimas</string>
   <string name="work_challenge_emergency_button_text">Skamb. pagalbos nr.</string>
   <string name="work_mode_off_title">Atš. darbo progr. pristabd.?</string>
   <string name="work_mode_turn_on">Atšaukti pristabdymą</string>

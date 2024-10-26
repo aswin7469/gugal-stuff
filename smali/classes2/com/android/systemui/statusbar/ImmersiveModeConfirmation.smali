@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/ImmersiveModeConfirmation;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -632,7 +632,7 @@
     move-result-object v1
 
     .line 22
-    const v2, 0x7f0c004a    # @integer/dock_enter_exit_duration '250'
+    const v2, 0x7f0b004f    # @integer/dock_enter_exit_duration '250'
 
     .line 23
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
@@ -653,7 +653,7 @@
     iput-wide v2, p0, Lcom/android/systemui/statusbar/ImmersiveModeConfirmation;->mShowDelayMs:J
 
     .line 34
-    const v2, 0x7f050032    # @bool/config_remoteInsetsControllerControlsSystemBars 'false'
+    const v2, 0x7f05003b    # @bool/config_remoteInsetsControllerControlsSystemBars 'false'
 
     .line 36
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -665,7 +665,7 @@
     if-eqz v2, :cond_2
 
     .line 43
-    const v2, 0x7f050033    # @bool/config_remoteInsetsControllerSystemBarsCanBeShownByUserAction 'false'
+    const v2, 0x7f05003c    # @bool/config_remoteInsetsControllerSystemBarsCanBeShownByUserAction 'false'
 
     .line 45
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z

@@ -1,6 +1,6 @@
 .class final Lcom/android/app/motiontool/DdmHandleMotionTool$handleBeginTraceRequest$1$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function0;
@@ -120,128 +120,171 @@
     move-result-object v3
 
     .line 53
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_1
 
     .line 54
     iget-object v5, v2, Lcom/android/app/motiontool/MotionToolManager;->viewCapture:Lcom/android/app/viewcapture/SimpleViewCapture;
 
     .line 56
-    invoke-virtual {v5, v3, p0}, Lcom/android/app/viewcapture/ViewCapture;->startCapture(Landroid/view/View;Ljava/lang/String;)Landroid/media/permission/SafeCloseable;
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 58
-    move-result-object v8
+    new-instance v6, Lcom/android/app/viewcapture/ViewCapture$WindowListener;
 
     .line 61
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v6, v5, v3, p0}, Lcom/android/app/viewcapture/ViewCapture$WindowListener;-><init>(Lcom/android/app/viewcapture/ViewCapture;Landroid/view/View;Ljava/lang/String;)V
 
-    .line 62
-    move-result-object v3
-
-    .line 65
-    iget-object v5, v2, Lcom/android/app/motiontool/MotionToolManager;->traces:Ljava/util/Map;
+    .line 63
+    iget-boolean v7, v5, Lcom/android/app/viewcapture/ViewCapture;->mIsEnabled:Z
 
     .line 66
-    new-instance v13, Lcom/android/app/motiontool/TraceMetadata;
+    if-eqz v7, :cond_0
 
     .line 68
-    new-instance v14, Lcom/android/app/motiontool/MotionToolManager$beginTrace$1;
+    new-instance v7, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda5;
 
     .line 70
-    const-class v9, Landroid/media/permission/SafeCloseable;
+    invoke-direct {v7, v6}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda5;-><init>(Lcom/android/app/viewcapture/ViewCapture$WindowListener;)V
 
     .line 72
-    const-string v10, "close"
+    sget-object v8, Lcom/android/app/viewcapture/ViewCapture;->MAIN_EXECUTOR:Lcom/android/app/viewcapture/LooperExecutor;
 
-    .line 74
-    const-string v11, "close()V"
+    .line 75
+    invoke-virtual {v8, v7}, Lcom/android/app/viewcapture/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 76
-    const/4 v12, 0x0
-
-    .line 78
-    const/4 v7, 0x0
-
-    .line 79
-    move-object v6, v14
+    .line 77
+    :cond_0
+    iget-object v7, v5, Lcom/android/app/viewcapture/ViewCapture;->mListeners:Ljava/util/List;
 
     .line 80
-    invoke-direct/range {v6 .. v12}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-interface {v7, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 81
-    invoke-direct {v13, p0, v14}, Lcom/android/app/motiontool/TraceMetadata;-><init>(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
+    .line 82
+    invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    .line 84
-    invoke-interface {v5, v3, v13}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 85
+    move-result-object v3
+
+    .line 88
+    invoke-virtual {v3, v6}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
+
+    .line 89
+    new-instance v9, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda6;
+
+    .line 92
+    invoke-direct {v9, v5, v6}, Lcom/android/app/viewcapture/ViewCapture$$ExternalSyntheticLambda6;-><init>(Lcom/android/app/viewcapture/ViewCapture;Lcom/android/app/viewcapture/ViewCapture$WindowListener;)V
+
+    .line 94
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 97
+    move-result-object v3
+
+    .line 100
+    iget-object v5, v2, Lcom/android/app/motiontool/MotionToolManager;->traces:Ljava/util/Map;
+
+    .line 101
+    new-instance v6, Lcom/android/app/motiontool/TraceMetadata;
+
+    .line 103
+    new-instance v14, Lcom/android/app/motiontool/MotionToolManager$beginTrace$1;
+
+    .line 105
+    const-class v10, Landroid/media/permission/SafeCloseable;
+
+    .line 107
+    const-string v11, "close"
+
+    .line 109
+    const-string v12, "close()V"
+
+    .line 111
+    const/4 v13, 0x0
+
+    .line 113
+    const/4 v8, 0x0
+
+    .line 114
+    move-object v7, v14
+
+    .line 115
+    invoke-direct/range {v7 .. v13}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 116
+    invoke-direct {v6, p0, v14}, Lcom/android/app/motiontool/TraceMetadata;-><init>(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
+
+    .line 119
+    invoke-interface {v5, v3, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 87
+    .line 122
     monitor-exit v2
 
-    .line 90
+    .line 125
     invoke-virtual {v1}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
-    .line 91
+    .line 126
     iget-object p0, v1, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
-    .line 94
+    .line 129
     check-cast p0, Lcom/android/app/motiontool/BeginTraceResponse;
 
-    .line 96
+    .line 131
     invoke-static {p0, v4}, Lcom/android/app/motiontool/BeginTraceResponse;->access$100(Lcom/android/app/motiontool/BeginTraceResponse;I)V
 
-    .line 98
+    .line 133
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
-    .line 101
+    .line 136
     iget-object p0, v0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
-    .line 104
+    .line 139
     check-cast p0, Lcom/android/app/motiontool/MotionToolsResponse;
 
-    .line 106
+    .line 141
     invoke-virtual {v1}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
-    .line 108
+    .line 143
     move-result-object v0
 
-    .line 111
+    .line 146
     check-cast v0, Lcom/android/app/motiontool/BeginTraceResponse;
 
-    .line 112
+    .line 147
     invoke-static {p0, v0}, Lcom/android/app/motiontool/MotionToolsResponse;->access$800(Lcom/android/app/motiontool/MotionToolsResponse;Lcom/android/app/motiontool/BeginTraceResponse;)V
 
-    .line 114
+    .line 149
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 117
+    .line 152
     return-object p0
 
-    .line 119
+    .line 154
     :catchall_0
     move-exception p0
 
-    .line 120
+    .line 155
     goto :goto_0
 
-    .line 121
-    :cond_0
+    .line 156
+    :cond_1
     :try_start_1
     new-instance v0, Lcom/android/app/motiontool/WindowNotFoundException;
 
-    .line 122
+    .line 157
     invoke-direct {v0, p0}, Lcom/android/app/motiontool/WindowNotFoundException;-><init>(Ljava/lang/String;)V
 
-    .line 124
+    .line 159
     throw v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 127
+    .line 162
     :goto_0
     monitor-exit v2
 
-    .line 128
+    .line 163
     throw p0
-    .line 129
+    .line 164
 .end method

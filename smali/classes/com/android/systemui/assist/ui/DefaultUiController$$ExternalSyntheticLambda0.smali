@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/assist/ui/DefaultUiController$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
@@ -13,7 +13,7 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/assist/ui/DefaultUiController;)V
+.method public synthetic constructor <init>(Lcom/android/systemui/assist/ui/DefaultUiController;I)V
     .locals 0
 
     .line 1
@@ -30,7 +30,7 @@
 
 # virtual methods
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 0
+    .locals 1
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/assist/ui/DefaultUiController$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/assist/ui/DefaultUiController;
@@ -54,9 +54,21 @@
     move-result p1
 
     .line 16
-    invoke-virtual {p0, p1}, Lcom/android/systemui/assist/ui/DefaultUiController;->setProgressInternal(F)V
+    iget-object v0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mInvocationLightsView:Lcom/google/android/systemui/assist/uihints/AssistantInvocationLightsView;
 
     .line 17
+    iget-object p0, p0, Lcom/android/systemui/assist/ui/DefaultUiController;->mProgressInterpolator:Landroid/view/animation/PathInterpolator;
+
+    .line 19
+    invoke-virtual {p0, p1}, Landroid/view/animation/PathInterpolator;->getInterpolation(F)F
+
+    .line 21
+    move-result p0
+
+    .line 24
+    invoke-virtual {v0, p0}, Lcom/google/android/systemui/assist/uihints/AssistantInvocationLightsView;->onInvocationProgress(F)V
+
+    .line 25
     return-void
-    .line 20
+    .line 28
 .end method

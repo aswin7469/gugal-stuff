@@ -5,7 +5,9 @@
     <item>चार्ज होते समय प्रतिशत दिखाएं (डिफ़ॉल्ट)</item>
     <item>इस आइकॉन को ना दिखाएं</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>घंटे, मिनट और सेकंड दिखाएं</item>
     <item>घंटे और मिनट दिखाएं (डिफ़ॉल्ट)</item>

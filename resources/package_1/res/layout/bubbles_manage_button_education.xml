@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:text="@string/bubbles_user_education_manage_title"
             android:maxLines="2"
-            android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent"
+            android:fontFamily="@android:string/config_chooserActivity"
             android:textAlignment="viewStart"
             android:paddingStart="16.0dp" />
   <TextView android:textAppearance="@android:style/TextAppearance.DeviceDefault.Notification.Info"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:text="@string/bubbles_user_education_manage"
             android:maxLines="2"
-            android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent"
+            android:fontFamily="@android:string/config_chooseTypeAndAccountActivity"
             android:textAlignment="viewStart"
             android:paddingStart="16.0dp" />
   <LinearLayout android:orientation="horizontal"

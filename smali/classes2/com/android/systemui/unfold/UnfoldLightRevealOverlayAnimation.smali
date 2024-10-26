@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/unfold/FullscreenLightRevealAnimation;
@@ -19,7 +19,7 @@
 
 .field public final featureFlags:Lcom/android/systemui/flags/FeatureFlagsClassic;
 
-.field public final fullscreenLightRevealAnimationControllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
+.field public final fullscreenLightRevealAnimationControllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
 
 .field public isFolded:Z
 
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/flags/FeatureFlagsClassic;Landroid/content/ContentResolver;Landroid/os/Handler;Ljavax/inject/Provider;Ljavax/inject/Provider;Landroid/hardware/devicestate/DeviceStateManager;Lcom/android/systemui/util/concurrency/ThreadFactoryImpl;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/flags/FeatureFlagsClassic;Landroid/content/ContentResolver;Landroid/os/Handler;Ldagger/internal/InstanceFactory;Ldagger/internal/InstanceFactory;Landroid/hardware/devicestate/DeviceStateManager;Lcom/android/systemui/util/concurrency/ThreadFactoryImpl;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;)V
     .locals 0
 
     .line 1
@@ -65,7 +65,7 @@
     iput-object p8, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->threadFactory:Lcom/android/systemui/util/concurrency/ThreadFactory;
 
     .line 17
-    iput-object p9, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->fullscreenLightRevealAnimationControllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
+    iput-object p9, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->fullscreenLightRevealAnimationControllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
 
     .line 19
     new-instance p1, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation$TransitionListener;
@@ -231,10 +231,10 @@
     const-string v2, "unfold-overlay-container"
 
     .line 6
-    iget-object v3, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->fullscreenLightRevealAnimationControllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
+    iget-object v3, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->fullscreenLightRevealAnimationControllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;
 
     .line 8
-    invoke-virtual {v3, v0, v1, v2}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;->create(Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Ljava/lang/String;)Lcom/android/systemui/unfold/FullscreenLightRevealAnimationController;
+    invoke-virtual {v3, v0, v1, v2}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIUnfoldComponentImpl$SwitchingProvider$1;->create(Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Ljava/lang/String;)Lcom/android/systemui/unfold/FullscreenLightRevealAnimationController;
 
     .line 10
     move-result-object v0
@@ -243,81 +243,74 @@
     iput-object v0, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->controller:Lcom/android/systemui/unfold/FullscreenLightRevealAnimationController;
 
     .line 14
-    if-nez v0, :cond_0
-
-    .line 16
-    const/4 v0, 0x0
-
-    .line 18
-    :cond_0
     invoke-virtual {v0}, Lcom/android/systemui/unfold/FullscreenLightRevealAnimationController;->init()V
 
-    .line 19
+    .line 16
     iget-object v0, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->threadFactory:Lcom/android/systemui/util/concurrency/ThreadFactory;
 
-    .line 22
+    .line 19
     check-cast v0, Lcom/android/systemui/util/concurrency/ThreadFactoryImpl;
 
-    .line 24
+    .line 21
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 26
+    .line 23
     iget-object v0, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->unfoldProgressHandler:Landroid/os/Handler;
 
-    .line 29
+    .line 26
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
-    .line 31
+    .line 28
     move-result-object v0
 
-    .line 34
+    .line 31
     new-instance v1, Lcom/android/systemui/util/concurrency/ExecutorImpl;
 
-    .line 35
+    .line 32
     invoke-direct {v1, v0}, Lcom/android/systemui/util/concurrency/ExecutorImpl;-><init>(Landroid/os/Looper;)V
 
-    .line 37
+    .line 34
     iget-object v0, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->deviceStateManager:Landroid/hardware/devicestate/DeviceStateManager;
 
-    .line 40
+    .line 37
     new-instance v2, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation$FoldListener;
 
-    .line 42
+    .line 39
     iget-object v3, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->context:Landroid/content/Context;
 
-    .line 44
+    .line 41
     new-instance v4, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation$FoldListener$1;
 
-    .line 46
+    .line 43
     invoke-direct {v4, p0}, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation$FoldListener$1;-><init>(Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;)V
 
-    .line 48
+    .line 45
     invoke-direct {v2, v3, v4}, Landroid/hardware/devicestate/DeviceStateManager$FoldStateListener;-><init>(Landroid/content/Context;Ljava/util/function/Consumer;)V
 
-    .line 51
+    .line 48
     invoke-virtual {v0, v1, v2}, Landroid/hardware/devicestate/DeviceStateManager;->registerCallback(Ljava/util/concurrent/Executor;Landroid/hardware/devicestate/DeviceStateManager$DeviceStateCallback;)V
 
-    .line 54
+    .line 51
     iget-object v0, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->unfoldTransitionBgProgressProvider:Ljavax/inject/Provider;
 
-    .line 57
+    .line 54
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 59
+    .line 56
     move-result-object v0
 
-    .line 62
+    .line 59
     check-cast v0, Lcom/android/systemui/unfold/UnfoldTransitionProgressProvider;
 
-    .line 63
+    .line 60
     iget-object p0, p0, Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation;->transitionListener:Lcom/android/systemui/unfold/UnfoldLightRevealOverlayAnimation$TransitionListener;
 
-    .line 65
+    .line 62
     invoke-interface {v0, p0}, Lcom/android/systemui/unfold/util/CallbackController;->addCallback(Ljava/lang/Object;)V
 
-    .line 67
+    .line 64
     return-void
-    .line 70
+    .line 67
 .end method
 
 .method public final onScreenTurningOn(Lcom/android/systemui/util/concurrency/PendingTasksContainer$registerTask$1;)V

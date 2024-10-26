@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">kokatu hautatutako widgeta</string>
   <string name="accessibility_action_label_remove_widget">kendu widgeta</string>
   <string name="accessibility_action_label_select_widget">hautatu widget bat</string>
-  <string name="accessibility_action_open_communal_hub">Pantaila blokeatuko widgetak</string>
   <string name="accessibility_action_pip_resize">Aldatu tamaina</string>
   <string name="accessibility_action_pip_stash">Gorde</string>
   <string name="accessibility_action_pip_unstash">Ez gorde</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Irten esku bakarreko modutik</string>
   <string name="accessibility_airplane_mode">Hegaldi-modua</string>
   <string name="accessibility_allow_diagonal_scrolling">Eman diagonalki gora eta behera egiteko aukera erabiltzeko baimena</string>
+  <string name="accessibility_assistant_poodle">Ahozko bilaketa</string>
   <string name="accessibility_authenticate_hint">autentifikatu</string>
   <string name="accessibility_back">Atzera</string>
   <string name="accessibility_banner_message_dismiss">Baztertu</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">sartu gailuan</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Ethernet bidezko konexioa eten da.</string>
-  <string name="accessibility_fingerprint_bouncer">Autentifikazioa behar da. Autentifikatzeko, ukitu hatz-marken sentsorea.</string>
   <string name="accessibility_fingerprint_label">Hatz-marken sentsorea</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">aldatu</string>
   <string name="accessibility_floating_button_action_edit">Editatu</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menua</string>
   <string name="accessibility_multi_user_list_switcher">zabaldu menua</string>
   <string name="accessibility_multi_user_switch_switcher">Aldatu erabiltzailea</string>
+  <string name="accessibility_next_alarm">Hurrengo alarma: %s</string>
   <string name="accessibility_no_calling">Deirik ez.</string>
   <string name="accessibility_no_phone">Ez dago telefono-zenbakirik.</string>
   <string name="accessibility_no_wifi">Deskonektatu egin da wifi-konexioa.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Pantaila bertikalki blokeatuta dago.</string>
   <string name="accessibility_send_smart_reply">Bidali</string>
   <string name="accessibility_sensors_off_active">Aktibo dago sentsore guztiak desaktibatzen dituen aukera</string>
+  <string name="accessibility_settings_gear">Pixel Stand ezarpenak</string>
   <string name="accessibility_side_fingerprint_indicator_label">Ukitu hatz-marken sentsorea. Telefonoaren albo batean dagoen botoi laburra da.</string>
+  <string name="accessibility_smartspace_page">%2$d orritik %1$dgarrena</string>
   <string name="accessibility_split_bottom">Zatitu behealdean</string>
   <string name="accessibility_split_left">Zatitu ezkerraldean</string>
   <string name="accessibility_split_right">Zatitu eskuinaldean</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi sarearen hiru barra.</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi sarearen bi barra.</string>
   <string name="accesssibility_keyguard_retry">Pasatu hatza gora aurpegi bidez berriro desblokeatzen saiatzeko</string>
+  <string name="adaptive_charging_notify_des">Ordu honetan egongo da guztiz kargatuta bateria: %1$s. Apurka-apurka ari da kargatzen, haren balio-bizitza luzatzeko.</string>
+  <string name="adaptive_charging_notify_title">Karga egokitua aktibatuta dago</string>
+  <string name="adaptive_charging_notify_turn_off_once">Desaktibatu behin</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Karga egokitua • Ordu honetan egongo da guztiz kargatuta: %2$s</string>
   <string name="add">Gehitu</string>
   <string name="add_guest_failed">Ezin izan da sortu beste gonbidatu bat</string>
   <string name="airplane_mode">Hegaldi modua</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Aplikazioari buruzko informazioa</string>
   <string name="app_label">Sistemaren interfazea</string>
   <string name="assistant_attention_content_description">Erabiltzailearen presentzia hauteman da</string>
+  <string name="assistant_scrim_label">Entzuten. Sakatu uzteko.</string>
   <string name="audio_sharing_description">Audioa partekatzen</string>
   <string name="audio_status">Entzuten</string>
   <string name="auto_data_switch_dialog_negative_button">Ez, eskerrik asko</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Atzera</string>
   <string name="battery">Bateria</string>
   <string name="battery_detail_switch_title">Bateria-aurreztailea</string>
-  <string name="battery_low_description">Bateriaren %s gelditzen zaizu. Bateria-aurreztaileak gai iluna aktibatzen du, atzeko planoko jarduerak murrizten, eta jakinarazpenak atzeratzen.</string>
+  <string name="battery_health_notify_learn_more">Lortu informazio gehiago</string>
   <string name="battery_low_intro">Bateria-aurreztaileak gai iluna aktibatzen du, atzeko planoko jarduerak murrizten, eta jakinarazpenak atzeratzen.</string>
-  <string name="battery_low_title">Bateria-aurreztailea aktibatu nahi duzu?</string>
   <string name="battery_saver_confirmation_ok">Aktibatu</string>
   <string name="battery_saver_confirmation_title">Bateria-aurreztailea aktibatu nahi duzu?</string>
   <string name="battery_saver_confirmation_title_generic">Bateria-aurreztaileari buruz</string>
-  <string name="battery_saver_dismiss_action">Ez, eskerrik asko</string>
   <string name="battery_saver_start_action">Aktibatu</string>
   <string name="battery_state_unknown_notification_text">Informazio gehiago lortzeko, sakatu hau</string>
   <string name="battery_state_unknown_notification_title">Arazo bat izan da bateria-neurgailua irakurtzean</string>
@@ -296,14 +301,9 @@ Saiatu berriro %d segundo barru.</string>
   <string name="bluetooth_active_battery_level_untethered">Aktibo. L aldearen bateria: %1$s. R aldearen bateria: %2$s.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Aktibo. Ezkerreko aldearen bateria: %1$s.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Aktibo. Eskuineko aldearen bateria: %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level">Aktibo (multimedia-edukia soilik). Bateria: %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Aktibo (multimedia-edukia soilik). L aldearen bateria: %1$s. R aldearen bateria: %2$s.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Aktibo (multimedia-edukia soilik)</string>
   <string name="bluetooth_active_no_battery_level">Aktibo</string>
   <string name="bluetooth_battery_level">Bateria: %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Konektatuta (audioa partekatzeko eginbidea onartzen du). Bateria: %1$s.</string>
   <string name="bluetooth_battery_level_untethered">L aldearen bateria: %1$s. R aldearen bateria: %2$s.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Konektatuta (audioa partekatzeko eginbidea onartzen du). L aldearen bateria: %1$s. R aldearen bateria: %2$s.</string>
   <string name="bluetooth_connected">Konektatuta%1$s</string>
   <string name="bluetooth_connecting">Konektatzen…</string>
   <string name="bluetooth_disconnected">Deskonektatuta</string>
@@ -311,13 +311,11 @@ Saiatu berriro %d segundo barru.</string>
   <string name="bluetooth_hearing_aid_left_active">Aktibo (ezkerrekoa soilik)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Aktibo (ezkerrekoa eta eskuinekoa)</string>
   <string name="bluetooth_hearing_aid_right_active">Aktibo (eskuinekoa soilik)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Konektatuta (audioa partekatzeko eginbidea onartzen du)</string>
   <string name="bluetooth_pairing">Parekatzen…</string>
   <string name="bluetooth_pairing_device_down_error_message">Ezin da %1$s gailuarekin komunikatu.</string>
   <string name="bluetooth_pairing_error_message">Ezin izan da %1$s gailuarekin parekatu.</string>
   <string name="bluetooth_pairing_pin_error_message">Ezin izan da parekatu %1$s gailuarekin, PIN edo sarbide-gako okerra idatzi delako.</string>
   <string name="bluetooth_pairing_rejected_error_message">%1$s gailuak bikotetzea ukatu du.</string>
-  <string name="bluetooth_saved_device_lea_support">Audioa partekatzeko eginbidea onartzen du</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth bidezko gailua</string>
   <string name="bluetooth_talkback_computer">Ordenagailua</string>
   <string name="bluetooth_talkback_headphone">Entzungailua</string>
@@ -335,7 +333,7 @@ Saiatu berriro %d segundo barru.</string>
   <string name="broadcasting_description_is_broadcasting">Igortzen</string>
   <string name="bt_is_off">Bluetootha desaktibatuta dago</string>
   <string name="bt_le_audio_broadcast_dialog_different_output">Aldatu audio-irteera</string>
-  <string name="bt_le_audio_broadcast_dialog_sub_title">%1$s aplikazioaren audioa igortzen baduzu, edo audio-irteera aldatzen baduzu, une hartako igorpena eten egingo da</string>
+  <string name="bt_le_audio_broadcast_dialog_sub_title">%1$s aplikazioaren audioa igortzen edo audio-irteera aldatzen baduzu, une hartako igorpena etengo da</string>
   <string name="bt_le_audio_broadcast_dialog_switch_app">Igorri %1$s aplikazioaren audioa</string>
   <string name="bt_le_audio_broadcast_dialog_title">%1$s aplikazioaren audioa igortzeari utzi nahi diozu?</string>
   <string name="bt_le_audio_broadcast_dialog_unknown_name">Ezezaguna</string>
@@ -356,8 +354,6 @@ Saiatu berriro %d segundo barru.</string>
   <string name="bubble_overflow_button_content_description">Gainezkatzea</string>
   <string name="bubble_overflow_empty_subtitle">Azken burbuilak eta baztertutakoak agertuko dira hemen</string>
   <string name="bubble_overflow_empty_title">Ez dago azkenaldiko burbuilarik</string>
-  <string name="bubble_shortcut_label">Burbuilak</string>
-  <string name="bubble_shortcut_long_label">Erakutsi burbuilak</string>
   <string name="bubbles_app_settings">%1$s aplikazioaren ezarpenak</string>
   <string name="bubbles_dont_bubble_conversation">Ez erakutsi elkarrizketak burbuila gisa</string>
   <string name="bubbles_settings_button_description">%1$s aplikazioaren ezarpenen burbuilak</string>
@@ -387,6 +383,10 @@ Berriro doitzeko, sakatu hau.</string>
   <string name="cast_to_other_device_stop_dialog_button">Utzi igortzeari</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; igortzeari utziko diozu</string>
   <string name="cell_data_off_content_description">Desaktibatuta dago datu-konexioa</string>
+  <string name="charge_limit_discovery_notification_enable_button">Gaitu</string>
+  <string name="charge_limit_discovery_notification_text">Aktibatu % 80ko mugaren eginbidea, bateriaren egoera eta balio-bizitza babesteko. Hori kudeatzeko, joan ezarpenetara.</string>
+  <string name="charge_limit_discovery_notification_title">Babestu bateria hura kargatu bitartean</string>
+  <string name="charging_reverse_text">Bateria partekatzen</string>
   <string name="clear_all_notifications_text">Garbitu guztiak</string>
   <string name="clipboard">Arbela</string>
   <string name="clipboard_content_copied">Kopiatu da edukia</string>
@@ -406,6 +406,11 @@ Berriro doitzeko, sakatu hau.</string>
   <string name="close_button_text">Itxi</string>
   <string name="close_dialog_button">Itxi</string>
   <string name="collapse_menu_text">Itxi menua</string>
+  <string name="columbus_bouncer_message">Sakatze bizkorra osatzeko, desblokeatu</string>
+  <string name="columbus_target_request_dialog_allow">Eman baimena</string>
+  <string name="columbus_target_request_dialog_deny">Ez eman baimenik</string>
+  <string name="columbus_target_request_dialog_summary">Sakatu birritan telefonoaren atzealdea %1$s irekitzeko. Ezarpenetan alda dezakezu aukera hori.</string>
+  <string name="columbus_target_request_dialog_title">%1$s irekitzeko baimena eman nahi diozu Sakatze bizkorra keinuari?</string>
   <string name="communal_tutorial_indicator_text">Tutorial komuna hasteko, pasatu hatza ezkerrera</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Barneko pantaila islatuko da. Aurreko pantaila desaktibatu egingo da.</string>
   <string name="connected_display_dialog_start_mirroring">Kanpoko pantailan islatu nahi duzu?</string>
@@ -511,8 +516,11 @@ Datu-konexioa erabiltzeari berrekiten badiozu, baliteke zerbait ordaindu behar i
   <string name="data_usage_disabled_dialog_mobile_title">Datu-konexioa pausatu egin da</string>
   <string name="data_usage_disabled_dialog_title">Datu-erabilera pausatu da</string>
   <string name="days_timestamp">Duela %1$s egun</string>
-  <string name="default_error_message">Sarrerak ez du balio</string>
   <string name="default_popup_window_title">Leiho gainerakorra</string>
+  <string name="defender_notify_resume_charge">Ordeztu</string>
+  <string name="defender_notify_title">Bateria babestea</string>
+  <string name="defender_post_notify_des">Bateriak gehiago iraun dezan, kargatzea optimizatu egin da %1$s eta %2$s artean</string>
+  <string name="defender_post_notify_title">Kargatzea optimizatu da</string>
   <string name="demo_mode">Sistemaren erabiltzaile-interfazearen demo modua</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Handitu pantaila</string>
   <string name="desktop_mode_maximize_menu_snap_text">Zatitu pantaila</string>
@@ -532,20 +540,32 @@ Datu-konexioa erabiltzeari berrekiten badiozu, baliteke zerbait ordaindu behar i
   <string name="do_disclosure_generic">Gailu hau zure erakundearena da</string>
   <string name="do_disclosure_with_name">Gailu hau %s erakundearena da</string>
   <string name="do_financed_disclosure_with_name">%s erakundeak eman du gailu hau</string>
+  <string name="dock_a11y_action_show_photo_text">Erakutsi argazki-markoa</string>
+  <string name="dock_alignment_not_charging">Jarri ondo telefonoa, haririk gabe karga dadin</string>
+  <string name="dock_alignment_slow_charging">Jarri ondo telefonoa, bizkorrago karga dadin</string>
+  <string name="dock_defender_first_run_des">Bateriaren balio-bizitza luzatzeko, kargatze-prozesua zain egongo da (% 90era iritsi baita) tableta oinarrian jarrita dagoen bitartean. Aukera hori aldatzeko, joan ezarpenetara.</string>
+  <string name="dock_defender_first_run_settings">Ezarpenak</string>
+  <string name="dock_defender_first_run_title">Kargatze-prozesua zain dago bateria babesteko</string>
   <string name="dock_multi_instances_not_supported_text">Leiho bakar batean ireki daiteke aplikazioa</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Aplikazioak ez du onartzen pantaila zatitua</string>
+  <string name="dock_photo_preview_text">Argazki-markoa abiarazten…</string>
+  <string name="dock_promo_text">Pasatu hatza ezkerretara argazki-markoa ager dadin</string>
   <string name="done">Eginda</string>
   <string name="drag_split_not_supported">Jakinarazpen hau ezin da arrastatu pantaila zatitura</string>
   <string name="drag_to_add_tiles">Lauzak gehitzeko, eduki itzazu sakatuta, eta arrastatu</string>
   <string name="drag_to_rearrange_tiles">Lauzak antolatzeko, eduki itzazu sakatuta, eta arrastatu</string>
   <string name="drag_to_remove_disabled">%1$d lauza behar dituzu gutxienez</string>
   <string name="drag_to_remove_tiles">Kentzeko, arrastatu hona</string>
+  <string name="dream_lockscreen_wallpaper_description">Erabili pantaila blokeatuko horma-papera</string>
+  <string name="dream_lockscreen_wallpaper_label">Horma-papera</string>
   <string name="dream_overlay_status_bar_alarm_set">Alarma ezarrita dago</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Kamera eta mikrofonoa desaktibatuta daude</string>
   <string name="dream_overlay_status_bar_camera_off">Kamera desaktibatuta dago</string>
   <string name="dream_overlay_status_bar_mic_off">Mikrofonoa desaktibatuta dago</string>
   <string name="dream_overlay_status_bar_priority_mode">Lehentasun modua</string>
   <string name="dream_overlay_status_bar_wifi_off">Wifi-konexioa ez dago erabilgarri</string>
+  <string name="dwell_defender_notify_des">Bateriaren balio-bizitza luzatzen laguntzen du horrek, telefonoa denbora gehiegiz kargatzen uzten baduzu</string>
+  <string name="dwell_defender_notify_title">Kargatze-prozesua zain dago bateria babesteko</string>
   <string name="edit_user_info_message">Gailua erabiltzen duten guztiek ikusi ahal izango dituzte aukeratu dituzun izena eta argazkia.</string>
   <string name="edit_widget">Editatu widgeta</string>
   <string name="empty_shade_text">Ez dago jakinarazpenik</string>
@@ -561,12 +581,16 @@ Datu-konexioa erabiltzeari berrekiten badiozu, baliteke zerbait ordaindu behar i
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Hobespen aurreratuak</string>
   <string name="expand_menu_text">Ireki menua</string>
+  <string name="extreme_battery_saver_text">Muturrekoa</string>
+  <string name="extreme_low_battery_notification_text">Telefonoa laster kargatzen ez baduzu, itzali egingo da</string>
+  <string name="extreme_low_battery_notification_title">Bateria oso gutxi</string>
   <string name="face_re_enroll_dialog_content">Aurpegi bidez desblokeatzeko eginbidea berriro konfiguratzeko, oraingo aurpegi-eredua ezabatu egingo da lehendabizi.
 
 Ezabatuz gero, eginbidea berriro konfiguratu beharko duzu telefonoa aurpegia erabilita desblokeatzeko.</string>
   <string name="face_re_enroll_dialog_title">Konfiguratu aurpegi bidez desblokeatzeko eginbidea</string>
   <string name="face_re_enroll_notification_name">Aurpegi bidez desblokeatzea</string>
   <string name="face_re_enroll_notification_title">Konfiguratu berriro aurpegi bidez desblokeatzeko eginbidea</string>
+  <string name="face_reenroll_dialog_confirm">Konfiguratu</string>
   <string name="face_reenroll_failure_dialog_content">Ezin izan da konfiguratu aurpegi bidez desblokeatzeko eginbidea. Berriro saiatzeko, joan ezarpenetara.</string>
   <string name="failed_attempts_now_wiping_device">Saiakera oker gehiegi egin dituzu. Gailu honetako datuak ezabatu egingo dira.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Baztertu</string>
@@ -604,6 +628,7 @@ Haiek ezabatuz gero, hatz-marka bidez desblokeatzeko eginbidea berriro konfigura
   <string name="font_scaling_smaller">Txikitu</string>
   <string name="fullscreen_text">Pantaila osoa</string>
   <string name="game_status">Jolasten</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s: %2$s</string>
   <string name="global_action_smart_lock_disabled">Desgaitu da desblokeatuta mantentzeko eginbidea</string>
   <string name="go_to_web">Joan arakatzailera</string>
   <string name="got_it">Ados</string>
@@ -640,6 +665,7 @@ Haiek ezabatuz gero, hatz-marka bidez desblokeatzeko eginbidea berriro konfigura
   <string name="guest_reset_and_restart_dialog_title">Gonbidatuentzako saioa berrezarri nahi duzu?</string>
   <string name="guest_reset_guest_confirm_button">Berrezarri</string>
   <string name="guest_resetting">Gonbidatuentzako saioa berrezartzen…</string>
+  <string name="handle_invocation_prompt">Pasatu hatza hitz egiteko</string>
   <string name="handle_text">Kontu-izena</string>
   <string name="headset">Mikrofonodun entzungailua</string>
   <string name="hearing_devices_preset_label">Aurrezarpena</string>
@@ -656,6 +682,7 @@ Informazio gehiago lortzeko, sakatu hau</string>
   <string name="high_temp_title">Telefonoa berotzen ari da</string>
   <string name="home_controls_dream_description">Kontrolatu etxeko gailuak pantaila-babesletik</string>
   <string name="home_controls_dream_label">Etxeko gailuen kontrola</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Gutxienez gailu bat edo gailu-panel bat erabilgarri dago.</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Home aplikazioa lasterbide gisa gehitzeko, ziurtatu aplikazioa instalatuta dagoela.</string>
   <string name="hub_mode_add_widget_button_text">Gehitu widget bat</string>
@@ -669,12 +696,16 @@ Informazio gehiago lortzeko, sakatu hau</string>
   <string name="in_progress">Abian</string>
   <string name="inattentive_sleep_warning_message">Gailua laster itzaliko da; sakatu piztuta mantentzeko.</string>
   <string name="inattentive_sleep_warning_title">Egonean</string>
+  <string name="incompatible_charging_learn_more">Lortu informazio gehiago</string>
+  <string name="incompatible_charging_notify_des">Agian telefonoa ez da kargatzen ari edo oso mantso kargatzen ari da. Bizkorrago karga dadin, erabili gomendatutako egokigailu bat eta kable bat.</string>
+  <string name="incompatible_charging_notify_title">Eman begiratu bat kargatzeko osagarriari</string>
   <string name="indeterminate">Erdi-markatuta</string>
   <string name="inline_done_button">Eginda</string>
   <string name="inline_ok_button">Aplikatu</string>
   <string name="inline_turn_off_notifications">Desaktibatu jakinarazpenak</string>
   <string name="input_switch_input_language_next">Aldatu hurrengo hizkuntzara</string>
   <string name="input_switch_input_language_previous">Aldatu aurreko hizkuntzara</string>
+  <string name="install_app">Instalatu aplikazioa</string>
   <string name="install_dialer_on_work_profile_action">Instalatu telefonoetarako aplikazio bat (lanerako)</string>
   <string name="install_type_instant">Zuzeneko aplikazioa</string>
   <string name="instant_apps">Zuzeneko aplikazioak</string>
@@ -683,8 +714,6 @@ Informazio gehiago lortzeko, sakatu hau</string>
   <string name="instant_apps_title">%1$s abian da</string>
   <string name="interruption_level_none">Isiltasun osoa</string>
   <string name="interruption_level_priority">Lehentasunezkoak soilik</string>
-  <string name="invalid_charger_text">Erabili gailuaren kargagailua</string>
-  <string name="invalid_charger_title">Ezin da USB bidez kargatu</string>
   <string name="issuerecord_background_processing_label">Arazoaren grabaketa prozesatzen</string>
   <string name="issuerecord_ongoing_screen_only">Arazoa grabatzen</string>
   <string name="issuerecord_save_title">Gorde da arazoaren grabaketa</string>
@@ -766,21 +795,33 @@ Informazio gehiago lortzeko, sakatu hau</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Gailua blokeatuta dago
 Ezin izan da autentifikatu</string>
   <string name="keyguard_indication_charging_time">%2$s • Kargatzen • %1$s guztiz kargatu arte</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Ordu honetan egongo da guztiz kargatuta: %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Kargatzen • %1$s guztiz kargatu arte</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Ordu honetan egongo da guztiz kargatuta: %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Bizkor kargatzen • %1$s guztiz kargatu arte</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Kargatze bizkorra • Ordu honetan egongo da guztiz kargatuta: %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Guztiz kargatu da</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Mantso kargatzen • %1$s guztiz kargatu arte</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Ordu honetan egongo da guztiz kargatuta: %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Ordu honetan egongo da guztiz kargatuta: %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Hari gabe kargatzen • %1$s guztiz kargatu arte</string>
-  <string name="keyguard_indication_trust_unlocked">TrustAgent bidez desblokeatuta</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Ordu honetan egongo da guztiz kargatuta: %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Desblokeatuta mantentzea erabilita</string>
   <string name="keyguard_missing_sim_message_short">Ez dago SIMik</string>
   <string name="keyguard_network_locked_message">Sarea blokeatuta dago</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Ezin da erabili SIMa.</string>
   <string name="keyguard_plugged_in">%s • Kargatzen</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Bizkor kargatzen</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Kargatze bizkorra</string>
   <string name="keyguard_plugged_in_charging_limited">%s • kargatze-prozesua zain dago bateria babesteko</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Mantso kargatzen</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Kargatzen</string>
   <string name="keyguard_plugged_in_dock">%s • Kargatzen</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Kargatzen</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Eman begiratu bat kargatzeko osagarriari</string>
+  <string name="keyguard_plugged_in_v2">%s • Kargatzen</string>
   <string name="keyguard_plugged_in_wireless">%s • Hari gabe kargatzen</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Kargatzen</string>
   <string name="keyguard_retry">Berriro saiatzeko, pasatu hatza gora</string>
   <string name="keyguard_sim_error_message_short">Txartelak ez du balio.</string>
   <string name="keyguard_sim_locked_message">SIMa blokeatuta dago.</string>
@@ -811,7 +852,6 @@ Ezin izan da autentifikatu</string>
   <string name="kg_invalid_confirm_pin_hint">PIN kodeak ez datoz bat</string>
   <string name="kg_invalid_sim_pin_hint">Idatzi 4 eta 8 zenbaki bitarteko PIN bat.</string>
   <string name="kg_invalid_sim_puk_hint">PUK kodeak 8 zenbaki izan behar ditu gutxienez.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Idatzi SIMaren PINa. # saiakera geratzen zaizu gailua desblokeatzeko operadorearekin harremanetan jarri behar izan aurretik.}other{Idatzi SIMaren PINa. # saiakera gelditzen zaizkizu.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{Orain, SIMa desgaituta dago. Aurrera egiteko, idatzi PUK kodea. # saiakera geratzen zaizu SIMa betiko ez-erabilgarri geratu aurretik. Xehetasunak lortzeko, jarri operadorearekin harremanetan.}other{Orain, SIMa desgaituta dago. Aurrera egiteko, idatzi PUK kodea. # saiakera geratzen zaizkizu SIMa betiko ez-erabilgarri geratu aurretik. Xehetasunak lortzeko, jarri operadorearekin harremanetan.}}</string>
   <string name="kg_password_pin_failed">Huts egin du SIM txartelaren PIN kodearen eragiketak!</string>
   <string name="kg_password_puk_failed">Huts egin du SIM txartelaren PUK kodearen eragiketak!</string>
@@ -852,7 +892,7 @@ Ezin izan da autentifikatu</string>
   <string name="kg_sim_pin_instructions_multi">Idatzi "%1$s" operadorearen SIM txartelaren PINa.</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIMa desblokeatzen…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Saiatu berriro # segundo barru.}other{Saiatu berriro # segundo barru.}}</string>
-  <string name="kg_trust_agent_disabled">Fidagarritasun-agentea ez dago erabilgarri</string>
+  <string name="kg_trust_agent_disabled">Desblokeatuta mantentzea ez dago erabilgarri</string>
   <string name="kg_unlock_with_password_or_fp">Desblokeatu pasahitz edo hatz-marka bidez</string>
   <string name="kg_unlock_with_pattern_or_fp">Desblokeatu eredu edo hatz-marka bidez</string>
   <string name="kg_unlock_with_pin_or_fp">Desblokeatu PIN edo hatz-marka bidez</string>
@@ -900,6 +940,10 @@ Nahiz eta gailuko erregistro guztiak erabiltzeko baimena ez eman aplikazio honi,
   <string name="log_access_confirmation_learn_more">Lortu informazio gehiago</string>
   <string name="log_access_confirmation_learn_more_at">Lortu informazio gehiago %s helbidean</string>
   <string name="log_access_confirmation_title">Gailuko erregistro guztiak erabiltzeko baimena eman nahi diozu %s aplikazioari?</string>
+  <string name="low_battery_label">Bateria gutxi</string>
+  <string name="low_battery_notification_text">Aktibatu Bateria-aurreztaile estandarra bateriaren iraupena luzatzeko</string>
+  <string name="low_battery_notification_text_ebs">Aktibatu Muturreko bateria-aurreztailea bateriaren iraupena luzatzeko</string>
+  <string name="low_battery_notification_title">%s gelditzen zaio bateriari</string>
   <string name="m3c_search_bar_search">Bilatu</string>
   <string name="m3c_suggestions_available">Iradokizunak daude behean</string>
   <string name="magnification_close_settings_click_label">Itxi luparen ezarpenak</string>
@@ -939,8 +983,6 @@ Nahiz eta gailuko erregistro guztiak erabiltzeko baimena ez eman aplikazio honi,
   <string name="media_output_dialog_volume_percentage">%% %1$d</string>
   <string name="media_output_end_session_dialog_stop">Gelditu</string>
   <string name="media_output_end_session_dialog_summary">Gelditu partekatutako saioa multimedia-edukia beste gailu batera eramateko</string>
-  <string name="media_output_first_broadcast_title">Nola funtzionatzen dute iragarpenek?</string>
-  <string name="media_output_first_notify_broadcast_message">Bluetooth bidezko gailu bateragarriak dituzten inguruko pertsonek iragartzen ari zaren multimedia-edukia entzun dezakete</string>
   <string name="media_output_group_title_speakers_and_displays">Bozgorailuak eta pantailak</string>
   <string name="media_output_group_title_suggested_device">Iradokitako gailuak</string>
   <string name="media_output_label_title">%s hemen erreproduzitzen:</string>
@@ -967,9 +1009,6 @@ Nahiz eta gailuko erregistro guztiak erabiltzeko baimena ez eman aplikazio honi,
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Aplikazio bat igortzen ari zarenean, aplikazio horretan ikusgai dagoen edo bertan erreproduzitzen ari den guztia atzi dezake Android-ek. Beraz, kontuz ibili pasahitzekin, ordainketen xehetasunekin, mezuekin, argazkiekin, audioekin eta bideoekin, besteak beste.</string>
   <string name="media_projection_sys_service_dialog_title">Grabatzen edo igortzen hasi nahi duzu?</string>
   <string name="media_projection_sys_service_dialog_warning">Zerbait grabatzen edo igortzen duzunean, pantailan ikusgai dagoen edo gailuak erreproduzitzen duen informazio guztia erabili ahalko du funtzio hori eskaintzen duen zerbitzuak. Pasahitzak, ordainketen xehetasunak, argazkiak, mezuak eta erreproduzitzen dituzun audioak sartzen dira informazio horretan.</string>
-  <string name="media_projection_task_switcher_action_back">Itzuli</string>
-  <string name="media_projection_task_switcher_action_switch">Partekatu aplikazioa</string>
-  <string name="media_projection_task_switcher_text">Partekatzea pausatu egiten da aplikazioz aldatzean</string>
   <string name="media_seamless_other_device">Beste gailu bat</string>
   <string name="media_transfer_default_device_name">Konektatutako gailua</string>
   <string name="media_transfer_dock_speaker_device_name">Oinarri bozgorailuduna</string>
@@ -1138,7 +1177,7 @@ Galderarik baduzu, jarri harremanetan %2$s erakundearekin.</string>
   <string name="pip_skip_to_prev">Joan aurrekora</string>
   <string name="popup_on_dismiss_cta_tile_text">Widgetak pertsonalizatzeko, sakatu luze</string>
   <string name="power_discharge_by_only_short">%1$s arte</string>
-  <string name="preference_summary_default_combination">%1$s (%2$s)</string>
+  <string name="preference_summary_default_combination">%1$s / %2$s</string>
   <string name="priority_conversations">Lehentasunezko elkarrizketak</string>
   <string name="priority_mode_dream_overlay_content_description">Ez molestatzeko modua</string>
   <string name="privacy_dialog_active_app_usage">%1$s aplikazioak darabil</string>
@@ -1280,12 +1319,17 @@ Galderarik baduzu, jarri harremanetan %2$s erakundearekin.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Irauli telefonoa bereizmen handiago a lortzeko</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Pantaila batetik bestera aldatu nahi duzu?</string>
   <string name="recent_conversations">Azken elkarrizketak</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">erabiltzaileak irudi bat bidali du</string>
   <string name="remove_from_settings">Kendu Ezarpenak ataletik</string>
   <string name="remove_from_settings_prompt">Sistemaren erabiltzaile-interfazearen konfiguratzailea ezarpenetatik kendu nahi duzu, eta haren eginbide guztiak erabiltzeari utzi nahi diozu?</string>
   <string name="require_unlock_for_nfc">Desblokea ezazu NFCa erabiltzeko</string>
   <string name="restart_button_description">Hobeto ikusteko, sakatu hau, eta aplikazioa berrabiarazi egingo da</string>
   <string name="retry_face">Saiatu berriro aurpegi bidez autentifikatzen</string>
+  <string name="reverse_charging_device_name_text">Beste Pixel gailu bat</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s bateria ematen ari da (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Bateria partekatzea aktibatuta dago</string>
+  <string name="reverse_charging_title">Bateria partekatzea</string>
   <string name="right_icon">Eskuineko ikonoa</string>
   <string name="right_keycode">Eskuineko teklaren kodea</string>
   <string name="right_nav_bar_button_type">Eskuineko botoi gehigarriaren mota</string>
@@ -1293,8 +1337,15 @@ Galderarik baduzu, jarri harremanetan %2$s erakundearekin.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">Sakatu bateria eta datu-erabilerari buruzko xehetasunak ikusteko</string>
   <string name="running_foreground_services_title">Aplikazioak abian dira atzeko planoan</string>
-  <string name="satellite_connected_carrier_text">Satelite bidezko SOS komunikazioa</string>
+  <string name="satellite_connected_carrier_text">Pixel-en satelite bidezko SOS komunikazioa</string>
   <string name="save">Gorde</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Utzi</string>
+  <string name="saver_confirmation_dialog_subtitle">Hautatu erabili nahi duzun modua</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Goiko aukeran aipatutakoa aplikatzen zaio. Horrez gain, ezinbestekoak ez diren aplikazioak eta haien jakinarazpenak pausatzen ditu.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Ikusizko efektuak eta atzeko planoko jarduerak mugatzen ditu. Halaber, gai iluna aktibatzen du, dagoeneko aktibatuta ez badago.</string>
+  <string name="saver_confirmation_dialog_title">Ongi etorri Bateria-aurreztailea eginbidera</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Muturreko bateria-aurreztailea</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Bateria-aurreztaile estandarra</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Pantaila-kapturak egiteko aukera desgaituta dago, gailu-gidalerroei jarraikiz</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">IKT saileko administratzaileak blokeatu du</string>
   <string name="screen_pinning_can_open_other_apps">Baliteke ainguratutako aplikazioa beste aplikazio batzuk irekitzeko gai izatea.</string>
@@ -1312,6 +1363,12 @@ Galderarik baduzu, jarri harremanetan %2$s erakundearekin.</string>
   <string name="screen_pinning_toast">Aplikazioari aingura kentzeko, eduki sakatuta Atzera eta Ikuspegi orokorra botoiak</string>
   <string name="screen_pinning_toast_gesture_nav">Aplikazioari aingura kentzeko, arrastatu aplikazioa gora eta eduki ezazu sakatuta</string>
   <string name="screen_pinning_toast_recents_invisible">Aplikazioari aingura kentzeko, eduki sakatuta Atzera eta Hasiera botoiak</string>
+  <string name="screen_protector_absent_message">Pantaila babesteko osagarririk erabiltzen ari ez zarenean, ukipena hobetzen da pantaila babesteko osagarriaren modua desgaituz gero.</string>
+  <string name="screen_protector_disable_notification">Desgaitu jakinarazpena</string>
+  <string name="screen_protector_go_to_settings">Joan ezarpenetara</string>
+  <string name="screen_protector_got_it">Ados</string>
+  <string name="screen_protector_mode_title">Pantaila babesteko osagarriaren modua</string>
+  <string name="screen_protector_present_message">Pantaila babesteko osagarri bat erabiltzen ari bazara, ukipena hobetzen da pantaila babesteko osagarriaren modua gaituz gero.</string>
   <string name="screen_share_permission_app_selector_title">Partekatu edo grabatu aplikazio bat</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Pantaila osoa</string>
   <string name="screen_share_permission_dialog_option_single_app">Aplikazio bakar bat</string>
@@ -1364,9 +1421,9 @@ Galderarik baduzu, jarri harremanetan %2$s erakundearekin.</string>
   <string name="screenshot_saving_work_profile_title">Pantaila-argazkia laneko profilean gordetzen…</string>
   <string name="screenshot_scroll_label">Kapturatu eduki gehiago</string>
   <string name="screenshot_share_description">Partekatu pantaila-argazkia</string>
-  <string name="screenshot_share_label">Partekatu</string>
   <string name="screenshot_text">Pantaila-argazkia</string>
   <string name="screenshot_top_boundary_pct">Goiko ertza: ehuneko %1$d</string>
+  <string name="screenshot_view_description">Ikusi pantaila-argazkia</string>
   <string name="screenshot_work_profile_notification">Laneko profilaren %1$s aplikazioan gorde da</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Hatz-marken sentsorea etengailuan dago. Telefonoaren ertzeko bolumen-botoi goratuaren ondoan dagoen botoi laua da.</string>
   <string name="see_all_bluetooth_devices">Ikusi guztiak</string>
@@ -1384,6 +1441,12 @@ Galderarik baduzu, jarri harremanetan %2$s erakundearekin.</string>
   <string name="set_default_notes_app_toast_content">Ezarri oharren aplikazio lehenetsia ezarpenetan</string>
   <string name="settings_label">Ezarpenak</string>
   <string name="settingslib_learn_more_text">Lortu informazio gehiago</string>
+  <string name="severe_battery_notification_switch_text">Muturreko bateria-aurreztailera aldatu nahi duzu? 
+
+Ezinbestekoak ez diren aplikazioak eta haien jakinarazpenak pausatuko dira.</string>
+  <string name="severe_battery_notification_text">Aktibatu Muturreko bateria-aurreztailea. Ezinbestekoak ez diren aplikazioak pausatuko dira.</string>
+  <string name="severe_battery_notification_title">%s gelditzen zaio bateriari</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Aldatu</string>
   <string name="share_to_app_stop_dialog_button">Utzi partekatzeari</string>
   <string name="share_to_app_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; partekatzeari utziko diozu</string>
   <string name="share_to_app_stop_dialog_title">Pantaila partekatzeari utzi nahi diozu?</string>
@@ -1406,6 +1469,9 @@ Galderarik baduzu, jarri harremanetan %2$s erakundearekin.</string>
   <string name="slice_permission_text_1">- %1$s aplikazioaren informazioa irakur dezake.</string>
   <string name="slice_permission_text_2">- %1$s aplikazioan ekintzak gauza ditzake.</string>
   <string name="slice_permission_title">%2$s aplikazioaren zatiak erakusteko baimena eman nahi diozu %1$s aplikazioari?</string>
+  <string name="smartspace_content_desc">Begi-kolpean</string>
+  <string name="smartspace_flight_qr_code">QR kodea</string>
+  <string name="smartspace_role_desc">Ikusi</string>
   <string name="snoozeHourOptions">{count,plural, =1{# ordu}=2{# ordu}other{# ordu}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minutu}other{# minutu}}</string>
   <string name="snooze_undo">Desegin</string>
@@ -1416,6 +1482,8 @@ Galderarik baduzu, jarri harremanetan %2$s erakundearekin.</string>
   <string name="speed_label_slow">Motela</string>
   <string name="speed_label_very_fast">Oso bizkorra</string>
   <string name="split_screen_text">Pantaila zatitzea</string>
+  <string name="squeeze_invocation_prompt">Estutu hitz egiteko</string>
+  <string name="standard_battery_saver_text">Arrunta</string>
   <string name="start_dreams">Pantaila-babeslea</string>
   <string name="state_empty">Hutsik</string>
   <string name="state_off">Desaktibatuta</string>
@@ -1453,6 +1521,8 @@ Galderarik baduzu, jarri harremanetan %2$s erakundearekin.</string>
   <string name="tab">Fitxa</string>
   <string name="tap_a_network_to_connect">Sakatu sare bat hartara konektatzeko</string>
   <string name="tap_again">Sakatu berriro</string>
+  <string name="temp_defender_notify_des">Telefonoa ohiko tenperaturara itzultzean berrekingo zaio kargatze-prozesuari</string>
+  <string name="temp_defender_notify_title">Kargatze-prozesua zain dago bateria babesteko</string>
   <string name="template_percent">Ehuneko %1$d.</string>
   <string name="thermal">Termikoa</string>
   <string name="thermal_shutdown_dialog_help_text">Ikusi zaintzeko urratsak</string>
@@ -1469,6 +1539,7 @@ Informazio gehiago lortzeko, sakatu hau</string>
   <string name="title_for_empty_state_cta">Atzitu gogoko aplikazioen widgetak bizkor, tableta desblokeatu gabe.</string>
   <string name="title_usb_accessory">USB osagarria</string>
   <string name="to_switch_networks_disconnect_ethernet">Sarea aldatzeko, deskonektatu Etherneta</string>
+  <string name="too_hot_label">Pixel beroegi dago</string>
   <string name="touch_filtered_warning">Aplikazio bat baimen-eskaera oztopatzen ari denez, ezarpenek ezin dute egiaztatu erantzuna.</string>
   <string name="touchpad_tutorial_action_key_button">Ekintza-tekla</string>
   <string name="touchpad_tutorial_back_gesture_button">Atzera egiteko keinua</string>
@@ -1483,17 +1554,18 @@ Informazio gehiago lortzeko, sakatu hau</string>
   <string name="tuner_menu">Menua</string>
   <string name="tuner_minus">Minus</string>
   <string name="tuner_other_apps">Beste aplikazio batzuk</string>
+  <string name="tuner_persistent_warning">Baliteke eginbide esperimental horiek hurrengo kaleratzeetan aldatuta, etenda edo desagertuta egotea. Kontuz erabili.</string>
   <string name="tuner_plus">Plus</string>
   <string name="tuner_right">Eskuinera</string>
   <string name="tuner_time">Ordua</string>
+  <string name="tuner_warning">Sistemaren erabiltzaile-interfazearen konfiguratzaileak Android erabiltzaile-interfazea moldatzeko eta pertsonalizatzeko modu gehiago eskaintzen dizkizu. Baliteke eginbide esperimental horiek hurrengo kaleratzeetan aldatuta, etenda edo desagertuta egotea. Kontuz erabili.</string>
+  <string name="tuner_warning_title">Dibertsioa batzuentzat, baina ez guztientzat</string>
   <string name="turn_off_airplane_mode">Desaktibatu hegaldi modua</string>
   <string name="turn_on_bluetooth">Erabili Bluetootha</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Quick Share, Bilatu nire gailua eta beste eginbide batzuek Bluetootha erabiltzen dute</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bihar goizean aktibatuko da Bluetootha</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Aktibatu automatikoki bihar</string>
   <string name="turn_on_wifi">Wifia</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Telebistaren audio-erreproduzigailu lehenetsia</string>
   <string name="two_weeks_timestamp">Duela bi aste</string>
   <string name="unknown">Ezezaguna</string>
   <string name="unlock_to_see_notif_text">Jakinarazpen zaharragoak ikusteko, desblokeatu</string>
@@ -1552,7 +1624,9 @@ Edozein erabiltzailek egunera ditzake beste erabiltzaile guztien aplikazioak.</s
   <string name="volume_odi_captions_hint_enable">gaitu</string>
   <string name="volume_odi_captions_tip">Ezarri azpitituluak automatikoki</string>
   <string name="volume_panel_captioning_title">Istanteko azpitituluak</string>
+  <string name="volume_panel_clear_calling_title">Dei garbiak</string>
   <string name="volume_panel_collapsed_sliders">Bolumenaren botoi lerrakorrak tolestuta daude</string>
+  <string name="volume_panel_device_settings_title">Gailuaren ezarpenak</string>
   <string name="volume_panel_dialog_settings_button">Ezarpenak</string>
   <string name="volume_panel_enter_media_output_settings">Ireki emaitzaren ezarpenak</string>
   <string name="volume_panel_expanded_sliders">Bolumenaren botoi lerrakorrak zabalduta daude</string>
@@ -1667,6 +1741,9 @@ Wifi-helbidea (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Ezezaguna</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Neurtu gabeko sarea</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Oraingoz ez da automatikoki konektatuko wifira</string>
+  <string name="wireless_charging_label">Hari gabe kargatzen</string>
+  <string name="wireless_charging_notification_text">Baliteke hari gabe kargatzean energia gehiago kontsumitzea kable bidez kargatzean baino. Elektrizitatea eta denbora aurrezteko, aldatu kargagailu kabledun batera.</string>
+  <string name="wireless_charging_notification_title">Hari gabe kargatzen</string>
   <string name="work_challenge_emergency_button_text">Larrialdi-deia</string>
   <string name="work_mode_off_title">Laneko aplikazioak berraktibatu?</string>
   <string name="work_mode_turn_on">Berraktibatu</string>

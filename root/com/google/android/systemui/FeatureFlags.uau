@@ -1,0 +1,3 @@
+signature,file,startline,startcol,endline,endcol,properties
+Lcom/google/android/systemui/FeatureFlags;->catwalkKeyguardBlueprint()Z,out/soong/.intermediates/vendor/unbundled_google/packages/SystemUIGoogle/aconfig/com_google_android_systemui_flags_lib/android_common/e18b8e8d84cb9f664aa09a397b08c165/javac/srcjars/com/google/android/systemui/FeatureFlags.java,9,5,9,25,
+Lcom/google/android/systemui/FeatureFlags;->volumePlusForPixel()Z,out/soong/.intermediates/vendor/unbundled_google/packages/SystemUIGoogle/aconfig/com_google_android_systemui_flags_lib/android_common/e18b8e8d84cb9f664aa09a397b08c165/javac/srcjars/com/google/android/systemui/FeatureFlags.java,13,5,13,25,

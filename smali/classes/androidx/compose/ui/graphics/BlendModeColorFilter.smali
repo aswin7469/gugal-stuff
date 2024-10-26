@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/graphics/BlendModeColorFilter;
 .super Landroidx/compose/ui/graphics/ColorFilter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -10,20 +10,20 @@
 
 
 # direct methods
-.method public constructor <init>(IJ)V
+.method public constructor <init>(JI)V
     .locals 3
 
     .line 1
     new-instance v0, Landroid/graphics/BlendModeColorFilter;
 
     .line 2
-    invoke-static {p2, p3}, Landroidx/compose/ui/graphics/ColorKt;->toArgb-8_81llA(J)I
+    invoke-static {p1, p2}, Landroidx/compose/ui/graphics/ColorKt;->toArgb-8_81llA(J)I
 
     .line 4
     move-result v1
 
     .line 7
-    invoke-static {p1}, Landroidx/compose/ui/graphics/AndroidBlendMode_androidKt;->toAndroidBlendMode-s9anfk8(I)Landroid/graphics/BlendMode;
+    invoke-static {p3}, Landroidx/compose/ui/graphics/AndroidBlendMode_androidKt;->toAndroidBlendMode-s9anfk8(I)Landroid/graphics/BlendMode;
 
     .line 8
     move-result-object v2
@@ -35,10 +35,10 @@
     invoke-direct {p0, v0}, Landroidx/compose/ui/graphics/ColorFilter;-><init>(Landroid/graphics/ColorFilter;)V
 
     .line 15
-    iput-wide p2, p0, Landroidx/compose/ui/graphics/BlendModeColorFilter;->color:J
+    iput-wide p1, p0, Landroidx/compose/ui/graphics/BlendModeColorFilter;->color:J
 
     .line 18
-    iput p1, p0, Landroidx/compose/ui/graphics/BlendModeColorFilter;->blendMode:I
+    iput p3, p0, Landroidx/compose/ui/graphics/BlendModeColorFilter;->blendMode:I
 
     .line 20
     return-void

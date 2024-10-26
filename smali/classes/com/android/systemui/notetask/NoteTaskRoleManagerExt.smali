@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/notetask/NoteTaskRoleManagerExt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -42,7 +42,7 @@
 
     .line 23
     :cond_0
-    const v0, 0x7f1406cd    # @string/note_task_button_label 'Note-taking'
+    const v0, 0x7f130728    # @string/note_task_button_label 'Note-taking'
 
     .line 26
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -139,7 +139,7 @@
 
     .line 77
     :cond_4
-    const p0, 0x7f1406ce    # @string/note_task_shortcut_long_label 'Note-taking, %1$s'
+    const p0, 0x7f130729    # @string/note_task_shortcut_long_label 'Note-taking, %1$s'
 
     .line 78
     filled-new-array {v2}, [Ljava/lang/Object;
@@ -158,7 +158,7 @@
 
     .line 89
     :goto_2
-    const v1, 0x7f0808dc    # @drawable/ic_note_task_shortcut_widget 'res/drawable/ic_note_task_shortcut_widget.xml'
+    const v1, 0x7f080901    # @drawable/ic_note_task_shortcut_widget 'res/drawable/ic_note_task_shortcut_widget.xml'
 
     .line 92
     invoke-static {p1, v1}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;

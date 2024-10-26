@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/VariableDateView;
 .super Landroid/widget/TextView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -46,7 +46,7 @@
     if-nez v0, :cond_0
 
     .line 20
-    const v0, 0x7f140947    # @string/system_ui_date_pattern '@android:string/usb_midi_peripheral_name'
+    const v0, 0x7f1309c9    # @string/system_ui_date_pattern '@android:string/usb_accessory_notification_title'
 
     .line 22
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -71,7 +71,7 @@
     if-nez v0, :cond_1
 
     .line 36
-    const v0, 0x7f140006    # @string/abbrev_month_day_no_year 'MMMd'
+    const v0, 0x7f130006    # @string/abbrev_month_day_no_year 'MMMd'
 
     .line 38
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

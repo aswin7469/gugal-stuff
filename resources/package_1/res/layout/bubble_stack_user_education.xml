@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:text="@string/bubbles_user_education_title"
             android:maxLines="2"
-            android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationSecondaryUserComponent"
+            android:fontFamily="@android:string/config_chooserActivity"
             android:textAlignment="viewStart" />
   <TextView android:textAppearance="@android:style/TextAppearance.DeviceDefault.Notification.Info"
             android:textColor="@android:color/system_neutral1_900"
@@ -28,6 +28,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bubbles_user_education_description"
-            android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent"
+            android:fontFamily="@android:string/config_chooseTypeAndAccountActivity"
             android:textAlignment="viewStart" />
 </LinearLayout>

@@ -1,6 +1,6 @@
 .class public final Landroidx/slice/builders/impl/ListBuilderBasicImpl;
 .super Landroidx/slice/builders/impl/TemplateBuilderImpl;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/slice/builders/impl/ListBuilder;
@@ -116,64 +116,64 @@
     iget-object v1, p0, Landroidx/slice/builders/impl/ListBuilderBasicImpl;->mTitle:Ljava/lang/CharSequence;
 
     .line 38
-    const-string v2, "title"
+    const-string/jumbo v2, "title"
 
     .line 40
     const/4 v3, 0x0
 
-    .line 42
+    .line 43
     if-eqz v1, :cond_3
 
-    .line 43
+    .line 44
     new-instance v4, Landroidx/slice/SliceItem;
 
-    .line 45
-    const-string v5, "text"
+    .line 46
+    const-string/jumbo v5, "text"
 
-    .line 47
+    .line 48
     filled-new-array {v2}, [Ljava/lang/String;
 
-    .line 49
+    .line 51
     move-result-object v6
 
-    .line 52
+    .line 54
     invoke-direct {v4, v1, v5, v3, v6}, Landroidx/slice/SliceItem;-><init>(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 53
+    .line 55
     invoke-virtual {v0, v4}, Landroidx/slice/Slice$Builder;->addItem(Landroidx/slice/SliceItem;)V
 
-    .line 56
+    .line 58
     :cond_3
     iget-object p0, p0, Landroidx/slice/builders/impl/ListBuilderBasicImpl;->mIconCompat:Landroidx/core/graphics/drawable/IconCompat;
 
-    .line 59
+    .line 61
     if-eqz p0, :cond_4
 
-    .line 61
+    .line 63
     filled-new-array {v2}, [Ljava/lang/String;
 
-    .line 63
+    .line 65
     move-result-object v1
 
-    .line 66
+    .line 68
     invoke-virtual {p1, p0, v3, v1}, Landroidx/slice/Slice$Builder;->addIcon(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 67
+    .line 69
     :cond_4
     invoke-virtual {v0}, Landroidx/slice/Slice$Builder;->build()Landroidx/slice/Slice;
 
-    .line 70
+    .line 72
     move-result-object p0
 
-    .line 73
+    .line 75
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 74
+    .line 76
     invoke-virtual {p1, p0, v3}, Landroidx/slice/Slice$Builder;->addSubSlice(Landroidx/slice/Slice;Ljava/lang/String;)V
 
-    .line 77
+    .line 79
     return-void
-    .line 80
+    .line 82
 .end method
 
 .method public final setHeader(Landroidx/slice/builders/ListBuilder$HeaderBuilder;)V
@@ -201,42 +201,42 @@
     iget-object p0, p0, Landroidx/slice/builders/impl/TemplateBuilderImpl;->mSliceBuilder:Landroidx/slice/Slice$Builder;
 
     .line 2
-    const-string v0, "ttl"
+    const-string/jumbo v0, "ttl"
 
     .line 4
     filled-new-array {v0}, [Ljava/lang/String;
 
-    .line 6
+    .line 7
     move-result-object v0
 
-    .line 9
+    .line 10
     iget-object p0, p0, Landroidx/slice/Slice$Builder;->mItems:Ljava/util/ArrayList;
 
-    .line 10
+    .line 11
     new-instance v1, Landroidx/slice/SliceItem;
 
-    .line 12
+    .line 13
     const-wide/16 v2, -0x1
 
-    .line 14
+    .line 15
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 16
+    .line 17
     move-result-object v2
 
-    .line 19
+    .line 20
     const-string v3, "long"
 
-    .line 20
+    .line 21
     const-string v4, "millis"
 
-    .line 22
+    .line 23
     invoke-direct {v1, v2, v3, v4, v0}, Landroidx/slice/SliceItem;-><init>(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 24
+    .line 25
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 27
+    .line 28
     return-void
-    .line 30
+    .line 31
 .end method

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/usb/UsbResolverActivity;
 .super Lcom/android/internal/app/ResolverActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -366,7 +366,7 @@
     move-result-object v1
 
     .line 224
-    const v5, 0x10402cc    # @android:string/config_wwan_data_service_class
+    const v5, 0x10402c3    # @android:string/config_wimaxNativeLibLocation
 
     .line 225
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -447,7 +447,7 @@
     move-result-object v0
 
     .line 282
-    const v1, 0x10401d7    # @android:string/common_name_suffixes
+    const v1, 0x10401d0    # @android:string/close_button_text
 
     .line 283
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -492,7 +492,7 @@
     if-nez p0, :cond_9
 
     .line 310
-    const p0, 0x7f14013b    # @string/always_use_accessory 'Always open %1$s when %2$s is connected'
+    const p0, 0x7f130140    # @string/always_use_accessory 'Always open %1$s when %2$s is connected'
 
     .line 312
     invoke-virtual {p1, p0}, Landroid/widget/CheckBox;->setText(I)V
@@ -502,7 +502,7 @@
 
     .line 318
     :cond_9
-    const p0, 0x7f14013c    # @string/always_use_device 'Always open %1$s when %2$s is connected'
+    const p0, 0x7f130141    # @string/always_use_device 'Always open %1$s when %2$s is connected'
 
     .line 319
     invoke-virtual {p1, p0}, Landroid/widget/CheckBox;->setText(I)V

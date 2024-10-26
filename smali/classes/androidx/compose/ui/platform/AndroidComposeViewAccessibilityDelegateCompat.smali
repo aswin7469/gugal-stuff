@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;
 .super Landroidx/core/view/AccessibilityDelegateCompat;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -163,7 +163,7 @@
     const-string v4, " must be in 0.."
 
     .line 52
-    invoke-static {v1, v4, v3}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v1, v4, v3}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 54
     move-result-object v1
@@ -192,38 +192,38 @@
     .line 71
     :array_0
     .array-data 4
-        0x7f0b0030    # @id/accessibility_custom_action_0
-        0x7f0b0031    # @id/accessibility_custom_action_1
-        0x7f0b003c    # @id/accessibility_custom_action_2
-        0x7f0b0047    # @id/accessibility_custom_action_3
-        0x7f0b004a    # @id/accessibility_custom_action_4
-        0x7f0b004b    # @id/accessibility_custom_action_5
-        0x7f0b004c    # @id/accessibility_custom_action_6
-        0x7f0b004d    # @id/accessibility_custom_action_7
-        0x7f0b004e    # @id/accessibility_custom_action_8
-        0x7f0b004f    # @id/accessibility_custom_action_9
-        0x7f0b0032    # @id/accessibility_custom_action_10
-        0x7f0b0033    # @id/accessibility_custom_action_11
-        0x7f0b0034    # @id/accessibility_custom_action_12
-        0x7f0b0035    # @id/accessibility_custom_action_13
-        0x7f0b0036    # @id/accessibility_custom_action_14
-        0x7f0b0037    # @id/accessibility_custom_action_15
-        0x7f0b0038    # @id/accessibility_custom_action_16
-        0x7f0b0039    # @id/accessibility_custom_action_17
-        0x7f0b003a    # @id/accessibility_custom_action_18
-        0x7f0b003b    # @id/accessibility_custom_action_19
-        0x7f0b003d    # @id/accessibility_custom_action_20
-        0x7f0b003e    # @id/accessibility_custom_action_21
-        0x7f0b003f    # @id/accessibility_custom_action_22
-        0x7f0b0040    # @id/accessibility_custom_action_23
-        0x7f0b0041    # @id/accessibility_custom_action_24
-        0x7f0b0042    # @id/accessibility_custom_action_25
-        0x7f0b0043    # @id/accessibility_custom_action_26
-        0x7f0b0044    # @id/accessibility_custom_action_27
-        0x7f0b0045    # @id/accessibility_custom_action_28
-        0x7f0b0046    # @id/accessibility_custom_action_29
-        0x7f0b0048    # @id/accessibility_custom_action_30
-        0x7f0b0049    # @id/accessibility_custom_action_31
+        0x7f0a0030    # @id/accessibility_custom_action_0
+        0x7f0a0031    # @id/accessibility_custom_action_1
+        0x7f0a003c    # @id/accessibility_custom_action_2
+        0x7f0a0047    # @id/accessibility_custom_action_3
+        0x7f0a004a    # @id/accessibility_custom_action_4
+        0x7f0a004b    # @id/accessibility_custom_action_5
+        0x7f0a004c    # @id/accessibility_custom_action_6
+        0x7f0a004d    # @id/accessibility_custom_action_7
+        0x7f0a004e    # @id/accessibility_custom_action_8
+        0x7f0a004f    # @id/accessibility_custom_action_9
+        0x7f0a0032    # @id/accessibility_custom_action_10
+        0x7f0a0033    # @id/accessibility_custom_action_11
+        0x7f0a0034    # @id/accessibility_custom_action_12
+        0x7f0a0035    # @id/accessibility_custom_action_13
+        0x7f0a0036    # @id/accessibility_custom_action_14
+        0x7f0a0037    # @id/accessibility_custom_action_15
+        0x7f0a0038    # @id/accessibility_custom_action_16
+        0x7f0a0039    # @id/accessibility_custom_action_17
+        0x7f0a003a    # @id/accessibility_custom_action_18
+        0x7f0a003b    # @id/accessibility_custom_action_19
+        0x7f0a003d    # @id/accessibility_custom_action_20
+        0x7f0a003e    # @id/accessibility_custom_action_21
+        0x7f0a003f    # @id/accessibility_custom_action_22
+        0x7f0a0040    # @id/accessibility_custom_action_23
+        0x7f0a0041    # @id/accessibility_custom_action_24
+        0x7f0a0042    # @id/accessibility_custom_action_25
+        0x7f0a0043    # @id/accessibility_custom_action_26
+        0x7f0a0044    # @id/accessibility_custom_action_27
+        0x7f0a0045    # @id/accessibility_custom_action_28
+        0x7f0a0046    # @id/accessibility_custom_action_29
+        0x7f0a0048    # @id/accessibility_custom_action_30
+        0x7f0a0049    # @id/accessibility_custom_action_31
     .end array-data
     .line 72
 .end method
@@ -4137,7 +4137,7 @@
     move-result-object v0
 
     .line 55
-    const v1, 0x7f140423    # @string/indeterminate 'Partially checked'
+    const v1, 0x7f13046d    # @string/indeterminate 'Partially checked'
 
     .line 56
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -4188,7 +4188,7 @@
     move-result-object v0
 
     .line 85
-    const v1, 0x7f140910    # @string/state_off 'Off'
+    const v1, 0x7f13098b    # @string/state_off 'Off'
 
     .line 86
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -4239,7 +4239,7 @@
     move-result-object v0
 
     .line 115
-    const v1, 0x7f140911    # @string/state_on 'On'
+    const v1, 0x7f13098c    # @string/state_on 'On'
 
     .line 116
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -4315,7 +4315,7 @@
     move-result-object v0
 
     .line 161
-    const v1, 0x7f1408a7    # @string/selected 'Selected'
+    const v1, 0x7f130918    # @string/selected 'Selected'
 
     .line 162
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -4340,7 +4340,7 @@
     move-result-object v0
 
     .line 177
-    const v1, 0x7f1406ca    # @string/not_selected 'Not selected'
+    const v1, 0x7f130725    # @string/not_selected 'Not selected'
 
     .line 178
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -4552,7 +4552,7 @@
     move-result-object v1
 
     .line 289
-    const v3, 0x7f14094e    # @string/template_percent '%1$d percent.'
+    const v3, 0x7f1309d3    # @string/template_percent '%1$d percent.'
 
     .line 290
     invoke-virtual {v0, v3, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -4580,7 +4580,7 @@
     move-result-object v0
 
     .line 307
-    const v1, 0x7f14041d    # @string/in_progress 'In progress'
+    const v1, 0x7f130463    # @string/in_progress 'In progress'
 
     .line 308
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -4726,7 +4726,7 @@
     move-result-object p0
 
     .line 397
-    const p1, 0x7f14090f    # @string/state_empty 'Empty'
+    const p1, 0x7f13098a    # @string/state_empty 'Empty'
 
     .line 398
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -5058,7 +5058,7 @@
     move-result-object v13
 
     .line 67
-    const v14, 0x7f14094a    # @string/tab 'Tab'
+    const v14, 0x7f1309cc    # @string/tab 'Tab'
 
     .line 68
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -5104,7 +5104,7 @@
     move-result-object v13
 
     .line 98
-    const v14, 0x7f14093f    # @string/switch_role 'Switch'
+    const v14, 0x7f1309c1    # @string/switch_role 'Switch'
 
     .line 99
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -7488,2235 +7488,2235 @@
     if-eqz v7, :cond_4b
 
     .line 1584
-    const-string v8, "text/*"
+    const-string/jumbo v8, "text/*"
 
     .line 1586
     invoke-virtual {v7, v8}, Landroid/content/ClipDescription;->hasMimeType(Ljava/lang/String;)Z
 
-    .line 1588
+    .line 1589
     move-result v7
 
-    .line 1591
+    .line 1592
     goto :goto_25
 
-    .line 1592
+    .line 1593
     :cond_4b
     const/4 v7, 0x0
 
-    .line 1593
+    .line 1594
     :goto_25
     if-eqz v7, :cond_4d
 
-    .line 1594
+    .line 1595
     new-instance v7, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 1596
+    .line 1597
     const v8, 0x8000
 
-    .line 1598
+    .line 1599
     iget-object v4, v4, Landroidx/compose/ui/semantics/AccessibilityAction;->label:Ljava/lang/String;
 
-    .line 1601
+    .line 1602
     invoke-direct {v7, v8, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 1603
+    .line 1604
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 1606
+    .line 1607
     goto :goto_26
 
-    .line 1609
+    .line 1610
     :cond_4c
     move-object/from16 v6, v28
 
-    .line 1610
+    .line 1611
     :cond_4d
     :goto_26
     invoke-static/range {p3 .. p3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->getIterableTextForAccessibility(Landroidx/compose/ui/semantics/SemanticsNode;)Ljava/lang/String;
 
-    .line 1612
+    .line 1613
     move-result-object v4
 
-    .line 1615
+    .line 1616
     if-eqz v4, :cond_4f
 
-    .line 1616
+    .line 1617
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
-    .line 1618
+    .line 1619
     move-result v4
 
-    .line 1621
+    .line 1622
     if-nez v4, :cond_4e
 
-    .line 1622
+    .line 1623
     goto :goto_27
 
-    .line 1624
+    .line 1625
     :cond_4e
     const/4 v4, 0x0
 
-    .line 1625
+    .line 1626
     goto :goto_28
 
-    .line 1626
+    .line 1627
     :cond_4f
     :goto_27
     const/4 v4, 0x1
 
-    .line 1627
+    .line 1628
     :goto_28
     if-nez v4, :cond_56
 
-    .line 1628
+    .line 1629
     invoke-virtual {v0, v3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->getAccessibilitySelectionStart(Landroidx/compose/ui/semantics/SemanticsNode;)I
 
-    .line 1630
+    .line 1631
     move-result v4
 
-    .line 1633
+    .line 1634
     invoke-virtual {v0, v3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->getAccessibilitySelectionEnd(Landroidx/compose/ui/semantics/SemanticsNode;)I
 
-    .line 1634
+    .line 1635
     move-result v7
 
-    .line 1637
+    .line 1638
     iget-object v8, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 1638
+    .line 1639
     invoke-virtual {v8, v4, v7}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTextSelection(II)V
 
-    .line 1640
+    .line 1641
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->SetSelection:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 1643
+    .line 1644
     invoke-static {v5, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 1645
+    .line 1646
     move-result-object v4
 
-    .line 1648
+    .line 1649
     check-cast v4, Landroidx/compose/ui/semantics/AccessibilityAction;
 
-    .line 1649
+    .line 1650
     new-instance v7, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 1651
+    .line 1652
     if-eqz v4, :cond_50
 
-    .line 1653
+    .line 1654
     iget-object v4, v4, Landroidx/compose/ui/semantics/AccessibilityAction;->label:Ljava/lang/String;
 
-    .line 1655
+    .line 1656
     goto :goto_29
 
-    .line 1657
+    .line 1658
     :cond_50
     const/4 v4, 0x0
 
-    .line 1658
+    .line 1659
     :goto_29
     const/high16 v8, 0x20000
 
-    .line 1659
+    .line 1660
     invoke-direct {v7, v8, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 1661
+    .line 1662
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 1664
+    .line 1665
     const/16 v4, 0x100
 
-    .line 1667
+    .line 1668
     invoke-virtual {v2, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(I)V
 
-    .line 1669
+    .line 1670
     const/16 v4, 0x200
 
-    .line 1672
+    .line 1673
     invoke-virtual {v2, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(I)V
 
-    .line 1674
+    .line 1675
     iget-object v4, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 1677
+    .line 1678
     const/16 v7, 0xb
 
-    .line 1679
+    .line 1680
     invoke-virtual {v4, v7}, Landroid/view/accessibility/AccessibilityNodeInfo;->setMovementGranularities(I)V
 
-    .line 1681
+    .line 1682
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsProperties;->ContentDescription:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 1684
+    .line 1685
     invoke-static {v5, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 1686
+    .line 1687
     move-result-object v4
 
-    .line 1689
+    .line 1690
     check-cast v4, Ljava/util/List;
 
-    .line 1690
+    .line 1691
     if-eqz v4, :cond_52
 
-    .line 1692
+    .line 1693
     invoke-interface {v4}, Ljava/util/Collection;->isEmpty()Z
 
-    .line 1694
+    .line 1695
     move-result v4
 
-    .line 1697
+    .line 1698
     if-eqz v4, :cond_51
 
-    .line 1698
+    .line 1699
     goto :goto_2a
 
-    .line 1700
+    .line 1701
     :cond_51
     const/4 v4, 0x0
 
-    .line 1701
+    .line 1702
     goto :goto_2b
 
-    .line 1702
+    .line 1703
     :cond_52
     :goto_2a
     const/4 v4, 0x1
 
-    .line 1703
+    .line 1704
     :goto_2b
     if-eqz v4, :cond_56
 
-    .line 1704
+    .line 1705
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->GetTextLayoutResult:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 1706
+    .line 1707
     iget-object v7, v5, Landroidx/compose/ui/semantics/SemanticsConfiguration;->props:Ljava/util/Map;
 
-    .line 1708
+    .line 1709
     invoke-interface {v7, v4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 1710
+    .line 1711
     move-result v4
-
-    .line 1713
-    if-eqz v4, :cond_56
 
     .line 1714
+    if-eqz v4, :cond_56
+
+    .line 1715
     iget-object v4, v3, Landroidx/compose/ui/semantics/SemanticsNode;->unmergedConfig:Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 1716
+    .line 1717
     sget-object v7, Landroidx/compose/ui/semantics/SemanticsActions;->SetText:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 1718
+    .line 1719
     iget-object v4, v4, Landroidx/compose/ui/semantics/SemanticsConfiguration;->props:Ljava/util/Map;
 
-    .line 1720
+    .line 1721
     invoke-interface {v4, v7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 1722
+    .line 1723
     move-result v4
-
-    .line 1725
-    if-eqz v4, :cond_53
 
     .line 1726
+    if-eqz v4, :cond_53
+
+    .line 1727
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsProperties;->Focused:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 1728
+    .line 1729
     iget-object v7, v3, Landroidx/compose/ui/semantics/SemanticsNode;->unmergedConfig:Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 1730
+    .line 1731
     invoke-static {v7, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 1732
+    .line 1733
     move-result-object v4
 
-    .line 1735
+    .line 1736
     sget-object v7, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 1736
+    .line 1737
     invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 1738
+    .line 1739
     move-result v4
 
-    .line 1741
+    .line 1742
     if-nez v4, :cond_53
 
-    .line 1742
+    .line 1743
     :goto_2c
     const/4 v4, 0x1
 
-    .line 1744
+    .line 1745
     goto :goto_2e
 
-    .line 1745
+    .line 1746
     :cond_53
     sget-object v4, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt$excludeLineAndPageGranularities$ancestor$1;->INSTANCE:Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt$excludeLineAndPageGranularities$ancestor$1;
 
-    .line 1746
+    .line 1747
     iget-object v7, v3, Landroidx/compose/ui/semantics/SemanticsNode;->layoutNode:Landroidx/compose/ui/node/LayoutNode;
 
-    .line 1748
+    .line 1749
     invoke-static {v7, v4}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt;->findClosestParentNode(Landroidx/compose/ui/node/LayoutNode;Lkotlin/jvm/functions/Function1;)Landroidx/compose/ui/node/LayoutNode;
 
-    .line 1750
+    .line 1751
     move-result-object v4
-
-    .line 1753
-    if-eqz v4, :cond_55
 
     .line 1754
+    if-eqz v4, :cond_55
+
+    .line 1755
     invoke-virtual {v4}, Landroidx/compose/ui/node/LayoutNode;->getCollapsedSemantics$ui_release()Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 1756
+    .line 1757
     move-result-object v4
-
-    .line 1759
-    if-eqz v4, :cond_54
 
     .line 1760
+    if-eqz v4, :cond_54
+
+    .line 1761
     sget-object v7, Landroidx/compose/ui/semantics/SemanticsProperties;->Focused:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 1762
+    .line 1763
     invoke-static {v4, v7}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 1764
+    .line 1765
     move-result-object v4
 
-    .line 1767
+    .line 1768
     sget-object v7, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 1768
+    .line 1769
     invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 1770
+    .line 1771
     move-result v4
 
-    .line 1773
+    .line 1774
     goto :goto_2d
 
-    .line 1774
+    .line 1775
     :cond_54
     const/4 v4, 0x0
 
-    .line 1775
+    .line 1776
     :goto_2d
     if-nez v4, :cond_55
 
-    .line 1776
+    .line 1777
     goto :goto_2c
 
-    .line 1778
+    .line 1779
     :cond_55
     const/4 v4, 0x0
 
-    .line 1779
+    .line 1780
     :goto_2e
     if-nez v4, :cond_56
 
-    .line 1780
+    .line 1781
     iget-object v4, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 1782
+    .line 1783
     invoke-virtual {v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->getMovementGranularities()I
 
-    .line 1784
+    .line 1785
     move-result v4
 
-    .line 1787
+    .line 1788
     or-int/lit8 v4, v4, 0x14
 
-    .line 1788
+    .line 1789
     iget-object v7, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 1790
+    .line 1791
     invoke-virtual {v7, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setMovementGranularities(I)V
 
-    .line 1792
+    .line 1793
     :cond_56
     new-instance v4, Ljava/util/ArrayList;
 
-    .line 1795
+    .line 1796
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1797
+    .line 1798
     const-string v7, "androidx.compose.ui.semantics.id"
 
-    .line 1800
+    .line 1801
     invoke-interface {v4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1802
+    .line 1803
     invoke-virtual/range {p2 .. p2}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getText()Ljava/lang/CharSequence;
 
-    .line 1805
+    .line 1806
     move-result-object v7
 
-    .line 1808
+    .line 1809
     if-eqz v7, :cond_58
 
-    .line 1809
+    .line 1810
     invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
 
-    .line 1811
+    .line 1812
     move-result v7
 
-    .line 1814
+    .line 1815
     if-nez v7, :cond_57
 
-    .line 1815
+    .line 1816
     goto :goto_2f
 
-    .line 1817
+    .line 1818
     :cond_57
     const/4 v7, 0x0
 
-    .line 1818
+    .line 1819
     goto :goto_30
 
-    .line 1819
+    .line 1820
     :cond_58
     :goto_2f
     const/4 v7, 0x1
 
-    .line 1820
+    .line 1821
     :goto_30
     if-nez v7, :cond_59
 
-    .line 1821
+    .line 1822
     sget-object v7, Landroidx/compose/ui/semantics/SemanticsActions;->GetTextLayoutResult:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 1823
+    .line 1824
     iget-object v8, v5, Landroidx/compose/ui/semantics/SemanticsConfiguration;->props:Ljava/util/Map;
 
-    .line 1825
+    .line 1826
     invoke-interface {v8, v7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 1827
+    .line 1828
     move-result v7
 
-    .line 1830
+    .line 1831
     if-eqz v7, :cond_59
 
-    .line 1831
+    .line 1832
     const-string v7, "android.view.accessibility.extra.DATA_TEXT_CHARACTER_LOCATION_KEY"
 
-    .line 1833
+    .line 1834
     invoke-interface {v4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1835
+    .line 1836
     :cond_59
     sget-object v7, Landroidx/compose/ui/semantics/SemanticsProperties;->TestTag:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 1838
+    .line 1839
     iget-object v8, v5, Landroidx/compose/ui/semantics/SemanticsConfiguration;->props:Ljava/util/Map;
 
-    .line 1840
+    .line 1841
     invoke-interface {v8, v7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 1842
+    .line 1843
     move-result v7
 
-    .line 1845
+    .line 1846
     if-eqz v7, :cond_5a
 
-    .line 1846
+    .line 1847
     const-string v7, "androidx.compose.ui.semantics.testTag"
 
-    .line 1848
+    .line 1849
     invoke-interface {v4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1850
+    .line 1851
     :cond_5a
     iget-object v7, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 1853
+    .line 1854
     invoke-virtual {v7, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setAvailableExtraData(Ljava/util/List;)V
 
-    .line 1855
+    .line 1856
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsProperties;->ProgressBarRangeInfo:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 1858
+    .line 1859
     invoke-static {v5, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 1860
+    .line 1861
     move-result-object v4
 
-    .line 1863
+    .line 1864
     check-cast v4, Landroidx/compose/ui/semantics/ProgressBarRangeInfo;
 
-    .line 1864
+    .line 1865
     if-eqz v4, :cond_5e
 
-    .line 1866
+    .line 1867
     sget-object v7, Landroidx/compose/ui/semantics/SemanticsActions;->SetProgress:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 1868
+    .line 1869
     iget-object v8, v5, Landroidx/compose/ui/semantics/SemanticsConfiguration;->props:Ljava/util/Map;
 
-    .line 1870
+    .line 1871
     invoke-interface {v8, v7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 1872
+    .line 1873
     move-result v8
 
-    .line 1875
+    .line 1876
     if-eqz v8, :cond_5b
 
-    .line 1876
+    .line 1877
     const-string v8, "android.widget.SeekBar"
 
-    .line 1878
+    .line 1879
     invoke-virtual {v2, v8}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 1880
+    .line 1881
     goto :goto_31
 
-    .line 1883
+    .line 1884
     :cond_5b
     const-string v8, "android.widget.ProgressBar"
 
-    .line 1884
+    .line 1885
     invoke-virtual {v2, v8}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 1886
+    .line 1887
     :goto_31
     sget-object v8, Landroidx/compose/ui/semantics/ProgressBarRangeInfo;->Indeterminate:Landroidx/compose/ui/semantics/ProgressBarRangeInfo;
 
-    .line 1889
+    .line 1890
     iget v9, v4, Landroidx/compose/ui/semantics/ProgressBarRangeInfo;->current:F
 
-    .line 1891
+    .line 1892
     iget-object v10, v4, Landroidx/compose/ui/semantics/ProgressBarRangeInfo;->range:Lkotlin/ranges/ClosedFloatingPointRange;
 
-    .line 1893
+    .line 1894
     if-eq v4, v8, :cond_5c
 
-    .line 1895
+    .line 1896
     move-object v4, v10
 
-    .line 1897
+    .line 1898
     check-cast v4, Lkotlin/ranges/ClosedFloatRange;
 
-    .line 1898
+    .line 1899
     iget v4, v4, Lkotlin/ranges/ClosedFloatRange;->_start:F
 
-    .line 1900
+    .line 1901
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 1902
+    .line 1903
     move-result-object v4
-
-    .line 1905
-    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
 
     .line 1906
+    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
+
+    .line 1907
     move-result v4
 
-    .line 1909
+    .line 1910
     move-object v8, v10
 
-    .line 1910
+    .line 1911
     check-cast v8, Lkotlin/ranges/ClosedFloatRange;
 
-    .line 1911
+    .line 1912
     iget v8, v8, Lkotlin/ranges/ClosedFloatRange;->_endInclusive:F
 
-    .line 1913
+    .line 1914
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 1915
+    .line 1916
     move-result-object v8
 
-    .line 1918
+    .line 1919
     invoke-virtual {v8}, Ljava/lang/Number;->floatValue()F
 
-    .line 1919
+    .line 1920
     move-result v8
 
-    .line 1922
+    .line 1923
     new-instance v11, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;
 
-    .line 1923
+    .line 1924
     const/4 v12, 0x1
 
-    .line 1925
+    .line 1926
     invoke-static {v12, v4, v8, v9}, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->obtain(IFFF)Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
 
-    .line 1926
+    .line 1927
     move-result-object v4
 
-    .line 1929
+    .line 1930
     invoke-direct {v11, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;-><init>(Ljava/lang/Object;)V
 
-    .line 1930
+    .line 1931
     iget-object v4, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 1933
+    .line 1934
     iget-object v8, v11, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;->mInfo:Ljava/lang/Object;
 
-    .line 1935
+    .line 1936
     check-cast v8, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
 
-    .line 1937
+    .line 1938
     invoke-virtual {v4, v8}, Landroid/view/accessibility/AccessibilityNodeInfo;->setRangeInfo(Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;)V
 
-    .line 1939
+    .line 1940
     :cond_5c
     iget-object v4, v5, Landroidx/compose/ui/semantics/SemanticsConfiguration;->props:Ljava/util/Map;
 
-    .line 1942
+    .line 1943
     invoke-interface {v4, v7}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 1944
+    .line 1945
     move-result v4
-
-    .line 1947
-    if-eqz v4, :cond_5e
 
     .line 1948
-    invoke-static/range {p3 .. p3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt;->access$enabled(Landroidx/compose/ui/semantics/SemanticsNode;)Z
-
-    .line 1950
-    move-result v4
-
-    .line 1953
     if-eqz v4, :cond_5e
 
+    .line 1949
+    invoke-static/range {p3 .. p3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt;->access$enabled(Landroidx/compose/ui/semantics/SemanticsNode;)Z
+
+    .line 1951
+    move-result v4
+
     .line 1954
+    if-eqz v4, :cond_5e
+
+    .line 1955
     move-object v4, v10
 
-    .line 1956
+    .line 1957
     check-cast v4, Lkotlin/ranges/ClosedFloatRange;
 
-    .line 1957
+    .line 1958
     iget v4, v4, Lkotlin/ranges/ClosedFloatRange;->_endInclusive:F
 
-    .line 1959
+    .line 1960
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 1961
+    .line 1962
     move-result-object v4
 
-    .line 1964
+    .line 1965
     invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
 
-    .line 1965
+    .line 1966
     move-result v4
-
-    .line 1968
-    move-object v7, v10
 
     .line 1969
-    check-cast v7, Lkotlin/ranges/ClosedFloatRange;
+    move-object v7, v10
 
     .line 1970
+    check-cast v7, Lkotlin/ranges/ClosedFloatRange;
+
+    .line 1971
     iget v7, v7, Lkotlin/ranges/ClosedFloatRange;->_start:F
 
-    .line 1972
+    .line 1973
     invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 1974
+    .line 1975
     move-result-object v7
 
-    .line 1977
+    .line 1978
     invoke-virtual {v7}, Ljava/lang/Number;->floatValue()F
 
-    .line 1978
+    .line 1979
     move-result v7
 
-    .line 1981
+    .line 1982
     invoke-static {v4, v7}, Lkotlin/ranges/RangesKt;->coerceAtLeast(FF)F
 
-    .line 1982
+    .line 1983
     move-result v4
 
-    .line 1985
+    .line 1986
     cmpg-float v4, v9, v4
 
-    .line 1986
+    .line 1987
     if-gez v4, :cond_5d
 
-    .line 1988
+    .line 1989
     sget-object v4, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_FORWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 1990
+    .line 1991
     invoke-virtual {v2, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 1992
+    .line 1993
     :cond_5d
     move-object v4, v10
 
-    .line 1995
+    .line 1996
     check-cast v4, Lkotlin/ranges/ClosedFloatRange;
 
-    .line 1996
+    .line 1997
     iget v4, v4, Lkotlin/ranges/ClosedFloatRange;->_start:F
 
-    .line 1998
+    .line 1999
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 2000
+    .line 2001
     move-result-object v4
 
-    .line 2003
+    .line 2004
     invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
 
-    .line 2004
+    .line 2005
     move-result v4
-
-    .line 2007
-    check-cast v10, Lkotlin/ranges/ClosedFloatRange;
 
     .line 2008
+    check-cast v10, Lkotlin/ranges/ClosedFloatRange;
+
+    .line 2009
     iget v7, v10, Lkotlin/ranges/ClosedFloatRange;->_endInclusive:F
 
-    .line 2010
+    .line 2011
     invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 2012
+    .line 2013
     move-result-object v7
 
-    .line 2015
+    .line 2016
     invoke-virtual {v7}, Ljava/lang/Number;->floatValue()F
 
-    .line 2016
+    .line 2017
     move-result v7
 
-    .line 2019
+    .line 2020
     invoke-static {v4, v7}, Lkotlin/ranges/RangesKt;->coerceAtMost(FF)F
 
-    .line 2020
+    .line 2021
     move-result v4
 
-    .line 2023
+    .line 2024
     cmpl-float v4, v9, v4
 
-    .line 2024
+    .line 2025
     if-lez v4, :cond_5e
 
-    .line 2026
+    .line 2027
     sget-object v4, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_BACKWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2028
+    .line 2029
     invoke-virtual {v2, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2030
+    .line 2031
     :cond_5e
     invoke-static/range {p3 .. p3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt;->access$enabled(Landroidx/compose/ui/semantics/SemanticsNode;)Z
 
-    .line 2033
+    .line 2034
     move-result v4
 
-    .line 2036
+    .line 2037
     if-eqz v4, :cond_5f
 
-    .line 2037
+    .line 2038
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->SetProgress:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2039
+    .line 2040
     iget-object v7, v3, Landroidx/compose/ui/semantics/SemanticsNode;->unmergedConfig:Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 2041
+    .line 2042
     invoke-static {v7, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2043
+    .line 2044
     move-result-object v4
 
-    .line 2046
+    .line 2047
     check-cast v4, Landroidx/compose/ui/semantics/AccessibilityAction;
 
-    .line 2047
+    .line 2048
     if-eqz v4, :cond_5f
 
-    .line 2049
+    .line 2050
     new-instance v7, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2051
+    .line 2052
     const v8, 0x102003d    # @android:id/accessibilityActionSetProgress
 
-    .line 2053
+    .line 2054
     iget-object v4, v4, Landroidx/compose/ui/semantics/AccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2056
+    .line 2057
     invoke-direct {v7, v8, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2058
+    .line 2059
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2061
+    .line 2062
     :cond_5f
     invoke-virtual/range {p3 .. p3}, Landroidx/compose/ui/semantics/SemanticsNode;->getConfig()Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 2064
+    .line 2065
     move-result-object v4
-
-    .line 2067
-    sget-object v7, Landroidx/compose/ui/semantics/SemanticsProperties;->CollectionInfo:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
     .line 2068
+    sget-object v7, Landroidx/compose/ui/semantics/SemanticsProperties;->CollectionInfo:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
+
+    .line 2069
     invoke-static {v4, v7}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2070
+    .line 2071
     move-result-object v4
-
-    .line 2073
-    check-cast v4, Landroidx/compose/ui/semantics/CollectionInfo;
 
     .line 2074
+    check-cast v4, Landroidx/compose/ui/semantics/CollectionInfo;
+
+    .line 2075
     if-eqz v4, :cond_60
 
-    .line 2076
+    .line 2077
     iget v7, v4, Landroidx/compose/ui/semantics/CollectionInfo;->rowCount:I
 
-    .line 2078
+    .line 2079
     iget v4, v4, Landroidx/compose/ui/semantics/CollectionInfo;->columnCount:I
 
-    .line 2080
+    .line 2081
     const/4 v8, 0x0
 
-    .line 2082
+    .line 2083
     invoke-static {v7, v4, v8, v8}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->obtain(IIZI)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
-    .line 2083
+    .line 2084
     move-result-object v4
 
-    .line 2086
+    .line 2087
     iget-object v7, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 2087
+    .line 2088
     invoke-virtual {v7, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCollectionInfo(Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;)V
 
-    .line 2089
+    .line 2090
     goto :goto_36
 
-    .line 2092
+    .line 2093
     :cond_60
     new-instance v4, Ljava/util/ArrayList;
 
-    .line 2093
+    .line 2094
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2095
+    .line 2096
     invoke-virtual/range {p3 .. p3}, Landroidx/compose/ui/semantics/SemanticsNode;->getConfig()Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 2098
+    .line 2099
     move-result-object v7
-
-    .line 2101
-    sget-object v8, Landroidx/compose/ui/semantics/SemanticsProperties;->SelectableGroup:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
     .line 2102
+    sget-object v8, Landroidx/compose/ui/semantics/SemanticsProperties;->SelectableGroup:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
+
+    .line 2103
     invoke-static {v7, v8}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2104
+    .line 2105
     move-result-object v7
 
-    .line 2107
+    .line 2108
     if-eqz v7, :cond_62
 
-    .line 2108
+    .line 2109
     const/4 v7, 0x1
 
-    .line 2110
+    .line 2111
     const/4 v8, 0x4
 
-    .line 2111
+    .line 2112
     invoke-static {v3, v7, v8}, Landroidx/compose/ui/semantics/SemanticsNode;->getChildren$ui_release$default(Landroidx/compose/ui/semantics/SemanticsNode;ZI)Ljava/util/List;
 
-    .line 2112
+    .line 2113
     move-result-object v8
 
-    .line 2115
+    .line 2116
     invoke-interface {v8}, Ljava/util/List;->size()I
 
-    .line 2116
+    .line 2117
     move-result v7
 
-    .line 2119
+    .line 2120
     const/4 v9, 0x0
 
-    .line 2120
+    .line 2121
     :goto_32
     if-ge v9, v7, :cond_62
 
-    .line 2121
+    .line 2122
     invoke-interface {v8, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 2123
+    .line 2124
     move-result-object v10
 
-    .line 2126
+    .line 2127
     check-cast v10, Landroidx/compose/ui/semantics/SemanticsNode;
 
-    .line 2127
+    .line 2128
     invoke-virtual {v10}, Landroidx/compose/ui/semantics/SemanticsNode;->getConfig()Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 2129
+    .line 2130
     move-result-object v11
 
-    .line 2132
+    .line 2133
     sget-object v12, Landroidx/compose/ui/semantics/SemanticsProperties;->Selected:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2133
+    .line 2134
     iget-object v11, v11, Landroidx/compose/ui/semantics/SemanticsConfiguration;->props:Ljava/util/Map;
 
-    .line 2135
+    .line 2136
     invoke-interface {v11, v12}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 2137
+    .line 2138
     move-result v11
 
-    .line 2140
+    .line 2141
     if-eqz v11, :cond_61
 
-    .line 2141
+    .line 2142
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2143
+    .line 2144
     :cond_61
     const/4 v10, 0x1
 
-    .line 2146
+    .line 2147
     add-int/2addr v9, v10
 
-    .line 2147
+    .line 2148
     goto :goto_32
 
-    .line 2148
+    .line 2149
     :cond_62
     const/4 v10, 0x1
 
-    .line 2149
+    .line 2150
     invoke-interface {v4}, Ljava/util/Collection;->isEmpty()Z
 
-    .line 2150
+    .line 2151
     move-result v7
-
-    .line 2153
-    xor-int/2addr v7, v10
 
     .line 2154
-    if-eqz v7, :cond_65
+    xor-int/2addr v7, v10
 
     .line 2155
+    if-eqz v7, :cond_65
+
+    .line 2156
     invoke-static {v4}, Landroidx/compose/ui/platform/accessibility/CollectionInfo_androidKt;->calculateIfHorizontallyStacked(Ljava/util/List;)Z
 
-    .line 2157
+    .line 2158
     move-result v7
 
-    .line 2160
+    .line 2161
     if-eqz v7, :cond_63
 
-    .line 2161
+    .line 2162
     const/4 v8, 0x1
 
-    .line 2163
+    .line 2164
     goto :goto_33
 
-    .line 2164
+    .line 2165
     :cond_63
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    .line 2165
+    .line 2166
     move-result v8
 
-    .line 2168
+    .line 2169
     :goto_33
     if-eqz v7, :cond_64
 
-    .line 2169
+    .line 2170
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    .line 2171
+    .line 2172
     move-result v4
 
-    .line 2174
+    .line 2175
     :goto_34
     const/4 v7, 0x0
 
-    .line 2175
+    .line 2176
     goto :goto_35
 
-    .line 2176
+    .line 2177
     :cond_64
     const/4 v4, 0x1
 
-    .line 2177
+    .line 2178
     goto :goto_34
 
-    .line 2178
+    .line 2179
     :goto_35
     invoke-static {v8, v4, v7, v7}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->obtain(IIZI)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
-    .line 2179
+    .line 2180
     move-result-object v4
 
-    .line 2182
+    .line 2183
     iget-object v7, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 2183
+    .line 2184
     invoke-virtual {v7, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCollectionInfo(Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;)V
 
-    .line 2185
+    .line 2186
     :cond_65
     :goto_36
     invoke-static {v3, v2}, Landroidx/compose/ui/platform/accessibility/CollectionInfo_androidKt;->setCollectionItemInfo(Landroidx/compose/ui/semantics/SemanticsNode;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
 
-    .line 2188
+    .line 2189
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsProperties;->HorizontalScrollAxisRange:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2191
+    .line 2192
     invoke-static {v5, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2193
+    .line 2194
     move-result-object v4
 
-    .line 2196
+    .line 2197
     check-cast v4, Landroidx/compose/ui/semantics/ScrollAxisRange;
 
-    .line 2197
+    .line 2198
     sget-object v7, Landroidx/compose/ui/semantics/SemanticsActions;->ScrollBy:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2199
+    .line 2200
     invoke-static {v5, v7}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2201
+    .line 2202
     move-result-object v7
 
-    .line 2204
+    .line 2205
     check-cast v7, Landroidx/compose/ui/semantics/AccessibilityAction;
 
-    .line 2205
+    .line 2206
     const/4 v8, 0x0
 
-    .line 2207
+    .line 2208
     if-eqz v4, :cond_6d
 
-    .line 2208
+    .line 2209
     if-eqz v7, :cond_6d
 
-    .line 2210
+    .line 2211
     invoke-virtual/range {p3 .. p3}, Landroidx/compose/ui/semantics/SemanticsNode;->getConfig()Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 2212
+    .line 2213
     move-result-object v9
-
-    .line 2215
-    sget-object v10, Landroidx/compose/ui/semantics/SemanticsProperties;->CollectionInfo:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
     .line 2216
+    sget-object v10, Landroidx/compose/ui/semantics/SemanticsProperties;->CollectionInfo:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
+
+    .line 2217
     invoke-static {v9, v10}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2218
+    .line 2219
     move-result-object v9
-
-    .line 2221
-    if-nez v9, :cond_67
 
     .line 2222
+    if-nez v9, :cond_67
+
+    .line 2223
     invoke-virtual/range {p3 .. p3}, Landroidx/compose/ui/semantics/SemanticsNode;->getConfig()Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 2224
+    .line 2225
     move-result-object v9
-
-    .line 2227
-    sget-object v10, Landroidx/compose/ui/semantics/SemanticsProperties;->SelectableGroup:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
     .line 2228
+    sget-object v10, Landroidx/compose/ui/semantics/SemanticsProperties;->SelectableGroup:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
+
+    .line 2229
     invoke-static {v9, v10}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2230
+    .line 2231
     move-result-object v9
 
-    .line 2233
+    .line 2234
     if-eqz v9, :cond_66
 
-    .line 2234
+    .line 2235
     goto :goto_37
 
-    .line 2236
+    .line 2237
     :cond_66
     const/4 v9, 0x0
 
-    .line 2237
+    .line 2238
     goto :goto_38
 
-    .line 2238
+    .line 2239
     :cond_67
     :goto_37
     const/4 v9, 0x1
 
-    .line 2239
+    .line 2240
     :goto_38
     if-nez v9, :cond_68
 
-    .line 2240
+    .line 2241
     const-string v9, "android.widget.HorizontalScrollView"
 
-    .line 2242
+    .line 2243
     invoke-virtual {v2, v9}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 2244
+    .line 2245
     :cond_68
     iget-object v9, v4, Landroidx/compose/ui/semantics/ScrollAxisRange;->maxValue:Lkotlin/jvm/functions/Function0;
 
-    .line 2247
+    .line 2248
     invoke-interface {v9}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
-    .line 2249
+    .line 2250
     move-result-object v9
 
-    .line 2252
+    .line 2253
     check-cast v9, Ljava/lang/Number;
 
-    .line 2253
+    .line 2254
     invoke-virtual {v9}, Ljava/lang/Number;->floatValue()F
 
-    .line 2255
+    .line 2256
     move-result v9
 
-    .line 2258
+    .line 2259
     cmpl-float v9, v9, v8
 
-    .line 2259
+    .line 2260
     if-lez v9, :cond_69
 
-    .line 2261
+    .line 2262
     const/4 v9, 0x1
 
-    .line 2263
+    .line 2264
     invoke-virtual {v2, v9}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setScrollable(Z)V
 
-    .line 2264
+    .line 2265
     :cond_69
     invoke-static/range {p3 .. p3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt;->access$enabled(Landroidx/compose/ui/semantics/SemanticsNode;)Z
 
-    .line 2267
+    .line 2268
     move-result v9
-
-    .line 2270
-    if-eqz v9, :cond_6d
 
     .line 2271
+    if-eqz v9, :cond_6d
+
+    .line 2272
     invoke-static {v4}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->populateAccessibilityNodeInfoProperties$canScrollForward(Landroidx/compose/ui/semantics/ScrollAxisRange;)Z
 
-    .line 2273
+    .line 2274
     move-result v9
-
-    .line 2276
-    if-eqz v9, :cond_6b
 
     .line 2277
+    if-eqz v9, :cond_6b
+
+    .line 2278
     sget-object v9, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_FORWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2279
+    .line 2280
     invoke-virtual {v2, v9}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2281
+    .line 2282
     invoke-static/range {p3 .. p3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt;->access$isRtl(Landroidx/compose/ui/semantics/SemanticsNode;)Z
 
-    .line 2284
+    .line 2285
     move-result v9
 
-    .line 2287
+    .line 2288
     if-nez v9, :cond_6a
 
-    .line 2288
+    .line 2289
     sget-object v9, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_RIGHT:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2290
+    .line 2291
     goto :goto_39
 
-    .line 2292
+    .line 2293
     :cond_6a
     sget-object v9, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_LEFT:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2293
+    .line 2294
     :goto_39
     invoke-virtual {v2, v9}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2295
+    .line 2296
     :cond_6b
     invoke-static {v4}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->populateAccessibilityNodeInfoProperties$canScrollBackward(Landroidx/compose/ui/semantics/ScrollAxisRange;)Z
 
-    .line 2298
+    .line 2299
     move-result v4
-
-    .line 2301
-    if-eqz v4, :cond_6d
 
     .line 2302
+    if-eqz v4, :cond_6d
+
+    .line 2303
     sget-object v4, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_BACKWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2304
+    .line 2305
     invoke-virtual {v2, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2306
+    .line 2307
     invoke-static/range {p3 .. p3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt;->access$isRtl(Landroidx/compose/ui/semantics/SemanticsNode;)Z
 
-    .line 2309
+    .line 2310
     move-result v4
 
-    .line 2312
+    .line 2313
     if-nez v4, :cond_6c
 
-    .line 2313
+    .line 2314
     sget-object v4, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_LEFT:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2315
+    .line 2316
     goto :goto_3a
 
-    .line 2317
+    .line 2318
     :cond_6c
     sget-object v4, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_RIGHT:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2318
+    .line 2319
     :goto_3a
     invoke-virtual {v2, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2320
+    .line 2321
     :cond_6d
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsProperties;->VerticalScrollAxisRange:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2323
+    .line 2324
     invoke-static {v5, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2325
+    .line 2326
     move-result-object v4
 
-    .line 2328
+    .line 2329
     check-cast v4, Landroidx/compose/ui/semantics/ScrollAxisRange;
 
-    .line 2329
+    .line 2330
     if-eqz v4, :cond_73
 
-    .line 2331
+    .line 2332
     if-eqz v7, :cond_73
 
-    .line 2333
+    .line 2334
     invoke-virtual/range {p3 .. p3}, Landroidx/compose/ui/semantics/SemanticsNode;->getConfig()Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 2335
+    .line 2336
     move-result-object v7
-
-    .line 2338
-    sget-object v9, Landroidx/compose/ui/semantics/SemanticsProperties;->CollectionInfo:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
     .line 2339
+    sget-object v9, Landroidx/compose/ui/semantics/SemanticsProperties;->CollectionInfo:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
+
+    .line 2340
     invoke-static {v7, v9}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2341
+    .line 2342
     move-result-object v7
-
-    .line 2344
-    if-nez v7, :cond_6f
 
     .line 2345
+    if-nez v7, :cond_6f
+
+    .line 2346
     invoke-virtual/range {p3 .. p3}, Landroidx/compose/ui/semantics/SemanticsNode;->getConfig()Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 2347
+    .line 2348
     move-result-object v7
-
-    .line 2350
-    sget-object v9, Landroidx/compose/ui/semantics/SemanticsProperties;->SelectableGroup:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
     .line 2351
+    sget-object v9, Landroidx/compose/ui/semantics/SemanticsProperties;->SelectableGroup:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
+
+    .line 2352
     invoke-static {v7, v9}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2353
+    .line 2354
     move-result-object v7
 
-    .line 2356
+    .line 2357
     if-eqz v7, :cond_6e
 
-    .line 2357
+    .line 2358
     goto :goto_3b
 
-    .line 2359
+    .line 2360
     :cond_6e
     const/4 v7, 0x0
 
-    .line 2360
+    .line 2361
     goto :goto_3c
 
-    .line 2361
+    .line 2362
     :cond_6f
     :goto_3b
     const/4 v7, 0x1
 
-    .line 2362
+    .line 2363
     :goto_3c
     if-nez v7, :cond_70
 
-    .line 2363
+    .line 2364
     const-string v7, "android.widget.ScrollView"
 
-    .line 2365
+    .line 2366
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 2367
+    .line 2368
     :cond_70
     iget-object v7, v4, Landroidx/compose/ui/semantics/ScrollAxisRange;->maxValue:Lkotlin/jvm/functions/Function0;
 
-    .line 2370
+    .line 2371
     invoke-interface {v7}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
 
-    .line 2372
+    .line 2373
     move-result-object v7
 
-    .line 2375
+    .line 2376
     check-cast v7, Ljava/lang/Number;
 
-    .line 2376
+    .line 2377
     invoke-virtual {v7}, Ljava/lang/Number;->floatValue()F
 
-    .line 2378
+    .line 2379
     move-result v7
 
-    .line 2381
+    .line 2382
     cmpl-float v7, v7, v8
 
-    .line 2382
+    .line 2383
     if-lez v7, :cond_71
 
-    .line 2384
+    .line 2385
     const/4 v7, 0x1
 
-    .line 2386
+    .line 2387
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setScrollable(Z)V
 
-    .line 2387
+    .line 2388
     :cond_71
     invoke-static/range {p3 .. p3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt;->access$enabled(Landroidx/compose/ui/semantics/SemanticsNode;)Z
 
-    .line 2390
+    .line 2391
     move-result v7
-
-    .line 2393
-    if-eqz v7, :cond_73
 
     .line 2394
+    if-eqz v7, :cond_73
+
+    .line 2395
     invoke-static {v4}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->populateAccessibilityNodeInfoProperties$canScrollForward(Landroidx/compose/ui/semantics/ScrollAxisRange;)Z
 
-    .line 2396
+    .line 2397
     move-result v7
 
-    .line 2399
+    .line 2400
     if-eqz v7, :cond_72
 
-    .line 2400
+    .line 2401
     sget-object v7, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_FORWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2402
+    .line 2403
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2404
+    .line 2405
     sget-object v7, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_DOWN:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2407
+    .line 2408
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2409
+    .line 2410
     :cond_72
     invoke-static {v4}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->populateAccessibilityNodeInfoProperties$canScrollBackward(Landroidx/compose/ui/semantics/ScrollAxisRange;)Z
 
-    .line 2412
+    .line 2413
     move-result v4
 
-    .line 2415
+    .line 2416
     if-eqz v4, :cond_73
 
-    .line 2416
+    .line 2417
     sget-object v4, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_BACKWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2418
+    .line 2419
     invoke-virtual {v2, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2420
+    .line 2421
     sget-object v4, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_UP:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2423
+    .line 2424
     invoke-virtual {v2, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2425
+    .line 2426
     :cond_73
     invoke-static/range {p3 .. p3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt;->access$enabled(Landroidx/compose/ui/semantics/SemanticsNode;)Z
 
-    .line 2428
+    .line 2429
     move-result v4
 
-    .line 2431
+    .line 2432
     if-eqz v4, :cond_77
 
-    .line 2432
+    .line 2433
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->PageUp:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2434
+    .line 2435
     iget-object v7, v3, Landroidx/compose/ui/semantics/SemanticsNode;->unmergedConfig:Landroidx/compose/ui/semantics/SemanticsConfiguration;
 
-    .line 2436
+    .line 2437
     invoke-static {v7, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2438
+    .line 2439
     move-result-object v4
 
-    .line 2441
+    .line 2442
     check-cast v4, Landroidx/compose/ui/semantics/AccessibilityAction;
 
-    .line 2442
+    .line 2443
     if-eqz v4, :cond_74
 
-    .line 2444
+    .line 2445
     new-instance v8, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2446
+    .line 2447
     const v9, 0x1020046    # @android:id/accessibilityActionPageUp
 
-    .line 2448
+    .line 2449
     iget-object v4, v4, Landroidx/compose/ui/semantics/AccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2451
+    .line 2452
     invoke-direct {v8, v9, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2453
+    .line 2454
     invoke-virtual {v2, v8}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2456
+    .line 2457
     :cond_74
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->PageDown:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2459
+    .line 2460
     invoke-static {v7, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2461
+    .line 2462
     move-result-object v4
 
-    .line 2464
+    .line 2465
     check-cast v4, Landroidx/compose/ui/semantics/AccessibilityAction;
 
-    .line 2465
+    .line 2466
     if-eqz v4, :cond_75
 
-    .line 2467
+    .line 2468
     new-instance v8, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2469
+    .line 2470
     const v9, 0x1020047    # @android:id/accessibilityActionPageDown
 
-    .line 2471
+    .line 2472
     iget-object v4, v4, Landroidx/compose/ui/semantics/AccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2474
+    .line 2475
     invoke-direct {v8, v9, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2476
+    .line 2477
     invoke-virtual {v2, v8}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2479
+    .line 2480
     :cond_75
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->PageLeft:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2482
+    .line 2483
     invoke-static {v7, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2484
+    .line 2485
     move-result-object v4
 
-    .line 2487
+    .line 2488
     check-cast v4, Landroidx/compose/ui/semantics/AccessibilityAction;
 
-    .line 2488
+    .line 2489
     if-eqz v4, :cond_76
 
-    .line 2490
+    .line 2491
     new-instance v8, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2492
+    .line 2493
     const v9, 0x1020048    # @android:id/accessibilityActionPageLeft
 
-    .line 2494
+    .line 2495
     iget-object v4, v4, Landroidx/compose/ui/semantics/AccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2497
+    .line 2498
     invoke-direct {v8, v9, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2499
+    .line 2500
     invoke-virtual {v2, v8}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2502
+    .line 2503
     :cond_76
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->PageRight:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2505
+    .line 2506
     invoke-static {v7, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2507
+    .line 2508
     move-result-object v4
 
-    .line 2510
+    .line 2511
     check-cast v4, Landroidx/compose/ui/semantics/AccessibilityAction;
 
-    .line 2511
+    .line 2512
     if-eqz v4, :cond_77
 
-    .line 2513
+    .line 2514
     new-instance v7, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2515
+    .line 2516
     const v8, 0x1020049    # @android:id/accessibilityActionPageRight
 
-    .line 2517
+    .line 2518
     iget-object v4, v4, Landroidx/compose/ui/semantics/AccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2520
+    .line 2521
     invoke-direct {v7, v8, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2522
+    .line 2523
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2525
+    .line 2526
     :cond_77
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsProperties;->PaneTitle:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2528
+    .line 2529
     invoke-static {v5, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2530
+    .line 2531
     move-result-object v4
-
-    .line 2533
-    check-cast v4, Ljava/lang/CharSequence;
 
     .line 2534
+    check-cast v4, Ljava/lang/CharSequence;
+
+    .line 2535
     iget-object v7, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 2536
+    .line 2537
     invoke-virtual {v7, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setPaneTitle(Ljava/lang/CharSequence;)V
 
-    .line 2538
+    .line 2539
     invoke-static/range {p3 .. p3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat_androidKt;->access$enabled(Landroidx/compose/ui/semantics/SemanticsNode;)Z
 
-    .line 2541
+    .line 2542
     move-result v4
 
-    .line 2544
+    .line 2545
     if-eqz v4, :cond_86
 
-    .line 2545
+    .line 2546
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->Expand:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2547
+    .line 2548
     invoke-static {v5, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2549
+    .line 2550
     move-result-object v4
 
-    .line 2552
+    .line 2553
     check-cast v4, Landroidx/compose/ui/semantics/AccessibilityAction;
 
-    .line 2553
+    .line 2554
     if-eqz v4, :cond_78
 
-    .line 2555
+    .line 2556
     new-instance v7, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2557
+    .line 2558
     const/high16 v8, 0x40000
 
-    .line 2559
+    .line 2560
     iget-object v4, v4, Landroidx/compose/ui/semantics/AccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2561
+    .line 2562
     invoke-direct {v7, v8, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2563
+    .line 2564
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2566
+    .line 2567
     :cond_78
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->Collapse:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2569
+    .line 2570
     invoke-static {v5, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2571
+    .line 2572
     move-result-object v4
 
-    .line 2574
+    .line 2575
     check-cast v4, Landroidx/compose/ui/semantics/AccessibilityAction;
 
-    .line 2575
+    .line 2576
     if-eqz v4, :cond_79
 
-    .line 2577
+    .line 2578
     new-instance v7, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2579
+    .line 2580
     const/high16 v8, 0x80000
 
-    .line 2581
+    .line 2582
     iget-object v4, v4, Landroidx/compose/ui/semantics/AccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2583
+    .line 2584
     invoke-direct {v7, v8, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2585
+    .line 2586
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2588
+    .line 2589
     :cond_79
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->Dismiss:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2591
+    .line 2592
     invoke-static {v5, v4}, Landroidx/compose/ui/semantics/SemanticsConfigurationKt;->getOrNull(Landroidx/compose/ui/semantics/SemanticsConfiguration;Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2593
+    .line 2594
     move-result-object v4
 
-    .line 2596
+    .line 2597
     check-cast v4, Landroidx/compose/ui/semantics/AccessibilityAction;
 
-    .line 2597
+    .line 2598
     if-eqz v4, :cond_7a
 
-    .line 2599
+    .line 2600
     new-instance v7, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2601
+    .line 2602
     const/high16 v8, 0x100000
 
-    .line 2603
+    .line 2604
     iget-object v4, v4, Landroidx/compose/ui/semantics/AccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2605
+    .line 2606
     invoke-direct {v7, v8, v4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2607
+    .line 2608
     invoke-virtual {v2, v7}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2610
+    .line 2611
     :cond_7a
     sget-object v4, Landroidx/compose/ui/semantics/SemanticsActions;->CustomActions:Landroidx/compose/ui/semantics/SemanticsPropertyKey;
 
-    .line 2613
+    .line 2614
     iget-object v7, v5, Landroidx/compose/ui/semantics/SemanticsConfiguration;->props:Ljava/util/Map;
 
-    .line 2615
+    .line 2616
     invoke-interface {v7, v4}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 2617
+    .line 2618
     move-result v7
 
-    .line 2620
+    .line 2621
     if-eqz v7, :cond_86
 
-    .line 2621
+    .line 2622
     invoke-virtual {v5, v4}, Landroidx/compose/ui/semantics/SemanticsConfiguration;->get(Landroidx/compose/ui/semantics/SemanticsPropertyKey;)Ljava/lang/Object;
 
-    .line 2623
+    .line 2624
     move-result-object v4
 
-    .line 2626
+    .line 2627
     check-cast v4, Ljava/util/List;
 
-    .line 2627
+    .line 2628
     invoke-interface {v4}, Ljava/util/List;->size()I
 
-    .line 2629
+    .line 2630
     move-result v5
 
-    .line 2632
+    .line 2633
     sget-object v7, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->AccessibilityActionsResourceIds:Landroidx/collection/MutableIntList;
 
-    .line 2633
+    .line 2634
     iget v8, v7, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 2635
+    .line 2636
     if-ge v5, v8, :cond_85
 
-    .line 2637
+    .line 2638
     new-instance v5, Landroidx/collection/SparseArrayCompat;
 
-    .line 2639
+    .line 2640
     const/4 v14, 0x0
 
-    .line 2641
+    .line 2642
     invoke-direct {v5, v14}, Landroidx/collection/SparseArrayCompat;-><init>(I)V
 
-    .line 2642
+    .line 2643
     sget-object v8, Landroidx/collection/ObjectIntMapKt;->EmptyObjectIntMap:Landroidx/collection/MutableObjectIntMap;
 
-    .line 2645
+    .line 2646
     new-instance v8, Landroidx/collection/MutableObjectIntMap;
 
-    .line 2647
+    .line 2648
     invoke-direct {v8}, Landroidx/collection/MutableObjectIntMap;-><init>()V
 
-    .line 2649
+    .line 2650
     iget-object v9, v0, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->labelToActionId:Landroidx/collection/SparseArrayCompat;
 
-    .line 2652
+    .line 2653
     iget-object v10, v9, Landroidx/collection/SparseArrayCompat;->keys:[I
 
-    .line 2654
+    .line 2655
     iget v11, v9, Landroidx/collection/SparseArrayCompat;->size:I
 
-    .line 2656
+    .line 2657
     invoke-static {v11, v1, v10}, Landroidx/collection/internal/ContainerHelpersKt;->binarySearch(II[I)I
 
-    .line 2658
+    .line 2659
     move-result v10
 
-    .line 2661
+    .line 2662
     if-ltz v10, :cond_7b
 
-    .line 2662
+    .line 2663
     const/4 v10, 0x1
 
-    .line 2664
+    .line 2665
     goto :goto_3d
 
-    .line 2665
+    .line 2666
     :cond_7b
     move v10, v14
 
-    .line 2666
+    .line 2667
     :goto_3d
     if-eqz v10, :cond_83
 
-    .line 2667
+    .line 2668
     invoke-virtual {v9, v1}, Landroidx/collection/SparseArrayCompat;->get(I)Ljava/lang/Object;
 
-    .line 2669
+    .line 2670
     move-result-object v10
 
-    .line 2672
+    .line 2673
     check-cast v10, Landroidx/collection/MutableObjectIntMap;
 
-    .line 2673
+    .line 2674
     new-instance v11, Landroidx/collection/MutableIntList;
 
-    .line 2675
+    .line 2676
     invoke-direct {v11}, Landroidx/collection/MutableIntList;-><init>()V
 
-    .line 2677
+    .line 2678
     iget-object v12, v7, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 2680
+    .line 2681
     iget v7, v7, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 2682
+    .line 2683
     move v13, v14
 
-    .line 2684
+    .line 2685
     :goto_3e
     if-ge v13, v7, :cond_7c
 
-    .line 2685
+    .line 2686
     aget v15, v12, v13
 
-    .line 2687
+    .line 2688
     invoke-virtual {v11, v15}, Landroidx/collection/MutableIntList;->add(I)V
 
-    .line 2689
+    .line 2690
     const/4 v15, 0x1
 
-    .line 2692
+    .line 2693
     add-int/2addr v13, v15
 
-    .line 2693
+    .line 2694
     goto :goto_3e
 
-    .line 2694
+    .line 2695
     :cond_7c
     new-instance v7, Ljava/util/ArrayList;
 
-    .line 2695
+    .line 2696
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2697
+    .line 2698
     invoke-interface {v4}, Ljava/util/List;->size()I
 
-    .line 2700
+    .line 2701
     move-result v12
 
-    .line 2703
+    .line 2704
     move v13, v14
 
-    .line 2704
+    .line 2705
     :goto_3f
     if-ge v13, v12, :cond_82
 
-    .line 2705
+    .line 2706
     invoke-interface {v4, v13}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 2707
+    .line 2708
     move-result-object v15
 
-    .line 2710
+    .line 2711
     check-cast v15, Landroidx/compose/ui/semantics/CustomAccessibilityAction;
 
-    .line 2711
+    .line 2712
     invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 2713
+    .line 2714
     iget-object v14, v15, Landroidx/compose/ui/semantics/CustomAccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2716
+    .line 2717
     invoke-virtual {v10, v14}, Landroidx/collection/MutableObjectIntMap;->findKeyIndex(Ljava/lang/Object;)I
 
-    .line 2718
+    .line 2719
     move-result v14
 
-    .line 2721
+    .line 2722
     if-ltz v14, :cond_7d
 
-    .line 2722
+    .line 2723
     const/4 v14, 0x1
 
-    .line 2724
+    .line 2725
     goto :goto_40
 
-    .line 2725
+    .line 2726
     :cond_7d
     const/4 v14, 0x0
 
-    .line 2726
+    .line 2727
     :goto_40
     if-eqz v14, :cond_81
 
-    .line 2727
+    .line 2728
     iget-object v14, v15, Landroidx/compose/ui/semantics/CustomAccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2729
+    .line 2730
     invoke-virtual {v10, v14}, Landroidx/collection/MutableObjectIntMap;->get(Ljava/lang/Object;)I
 
-    .line 2731
+    .line 2732
     move-result v15
 
-    .line 2734
+    .line 2735
     invoke-virtual {v5, v15, v14}, Landroidx/collection/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
-    .line 2735
+    .line 2736
     invoke-virtual {v8, v15, v14}, Landroidx/collection/MutableObjectIntMap;->set(ILjava/lang/Object;)V
 
-    .line 2738
+    .line 2739
     move-object/from16 v16, v10
 
-    .line 2741
+    .line 2742
     iget-object v10, v11, Landroidx/collection/MutableIntList;->content:[I
 
-    .line 2743
+    .line 2744
     move/from16 v17, v12
 
-    .line 2745
+    .line 2746
     iget v12, v11, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 2747
+    .line 2748
     move-object/from16 v28, v6
 
-    .line 2749
+    .line 2750
     const/4 v6, 0x0
 
-    .line 2751
+    .line 2752
     :goto_41
     if-ge v6, v12, :cond_7f
 
-    .line 2752
+    .line 2753
     move/from16 v18, v12
 
-    .line 2754
+    .line 2755
     aget v12, v10, v6
 
-    .line 2756
+    .line 2757
     if-ne v15, v12, :cond_7e
 
-    .line 2758
+    .line 2759
     goto :goto_42
 
-    .line 2760
+    .line 2761
     :cond_7e
     const/4 v12, 0x1
 
-    .line 2761
+    .line 2762
     add-int/2addr v6, v12
 
-    .line 2762
+    .line 2763
     move/from16 v12, v18
 
-    .line 2763
+    .line 2764
     goto :goto_41
 
-    .line 2765
+    .line 2766
     :cond_7f
     const/4 v6, -0x1
 
-    .line 2766
+    .line 2767
     :goto_42
     if-ltz v6, :cond_80
 
-    .line 2767
+    .line 2768
     invoke-virtual {v11, v6}, Landroidx/collection/MutableIntList;->removeAt(I)I
 
-    .line 2769
+    .line 2770
     :cond_80
     new-instance v6, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2772
+    .line 2773
     invoke-direct {v6, v15, v14}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2774
+    .line 2775
     invoke-virtual {v2, v6}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2777
+    .line 2778
     :goto_43
     const/4 v6, 0x1
 
-    .line 2780
+    .line 2781
     goto :goto_44
 
-    .line 2781
+    .line 2782
     :cond_81
     move-object/from16 v28, v6
 
-    .line 2782
+    .line 2783
     move-object/from16 v16, v10
 
-    .line 2784
+    .line 2785
     move/from16 v17, v12
 
-    .line 2786
+    .line 2787
     invoke-interface {v7, v15}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2788
+    .line 2789
     goto :goto_43
 
-    .line 2791
+    .line 2792
     :goto_44
     add-int/2addr v13, v6
 
-    .line 2792
+    .line 2793
     move-object/from16 v10, v16
 
-    .line 2793
+    .line 2794
     move/from16 v12, v17
 
-    .line 2795
+    .line 2796
     move-object/from16 v6, v28
 
-    .line 2797
+    .line 2798
     const/4 v14, 0x0
 
-    .line 2799
+    .line 2800
     goto :goto_3f
 
-    .line 2800
+    .line 2801
     :cond_82
     move-object/from16 v28, v6
 
-    .line 2801
+    .line 2802
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
-    .line 2803
+    .line 2804
     move-result v4
 
-    .line 2806
+    .line 2807
     const/4 v6, 0x0
 
-    .line 2807
+    .line 2808
     :goto_45
     if-ge v6, v4, :cond_84
 
-    .line 2808
+    .line 2809
     invoke-virtual {v7, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 2810
+    .line 2811
     move-result-object v10
 
-    .line 2813
+    .line 2814
     check-cast v10, Landroidx/compose/ui/semantics/CustomAccessibilityAction;
 
-    .line 2814
+    .line 2815
     invoke-virtual {v11, v6}, Landroidx/collection/MutableIntList;->get(I)I
 
-    .line 2816
+    .line 2817
     move-result v12
 
-    .line 2819
+    .line 2820
     iget-object v13, v10, Landroidx/compose/ui/semantics/CustomAccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2820
+    .line 2821
     invoke-virtual {v5, v12, v13}, Landroidx/collection/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
-    .line 2822
+    .line 2823
     iget-object v10, v10, Landroidx/compose/ui/semantics/CustomAccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2825
+    .line 2826
     invoke-virtual {v8, v12, v10}, Landroidx/collection/MutableObjectIntMap;->set(ILjava/lang/Object;)V
 
-    .line 2827
+    .line 2828
     new-instance v13, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2830
+    .line 2831
     invoke-direct {v13, v12, v10}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2832
+    .line 2833
     invoke-virtual {v2, v13}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2835
+    .line 2836
     const/4 v10, 0x1
 
-    .line 2838
+    .line 2839
     add-int/2addr v6, v10
 
-    .line 2839
+    .line 2840
     goto :goto_45
 
-    .line 2840
+    .line 2841
     :cond_83
     move-object/from16 v28, v6
 
-    .line 2841
+    .line 2842
     invoke-interface {v4}, Ljava/util/List;->size()I
 
-    .line 2843
+    .line 2844
     move-result v6
 
-    .line 2846
+    .line 2847
     const/4 v10, 0x0
 
-    .line 2847
+    .line 2848
     :goto_46
     if-ge v10, v6, :cond_84
 
-    .line 2848
+    .line 2849
     invoke-interface {v4, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 2850
+    .line 2851
     move-result-object v11
 
-    .line 2853
+    .line 2854
     check-cast v11, Landroidx/compose/ui/semantics/CustomAccessibilityAction;
 
-    .line 2854
+    .line 2855
     invoke-virtual {v7, v10}, Landroidx/collection/MutableIntList;->get(I)I
 
-    .line 2856
+    .line 2857
     move-result v12
 
-    .line 2859
+    .line 2860
     iget-object v13, v11, Landroidx/compose/ui/semantics/CustomAccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2860
+    .line 2861
     invoke-virtual {v5, v12, v13}, Landroidx/collection/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
-    .line 2862
+    .line 2863
     iget-object v11, v11, Landroidx/compose/ui/semantics/CustomAccessibilityAction;->label:Ljava/lang/String;
 
-    .line 2865
+    .line 2866
     invoke-virtual {v8, v12, v11}, Landroidx/collection/MutableObjectIntMap;->set(ILjava/lang/Object;)V
 
-    .line 2867
+    .line 2868
     new-instance v13, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    .line 2870
+    .line 2871
     invoke-direct {v13, v12, v11}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;)V
 
-    .line 2872
+    .line 2873
     invoke-virtual {v2, v13}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
-    .line 2875
+    .line 2876
     const/4 v11, 0x1
 
-    .line 2878
+    .line 2879
     add-int/2addr v10, v11
 
-    .line 2879
+    .line 2880
     goto :goto_46
 
-    .line 2880
+    .line 2881
     :cond_84
     iget-object v4, v0, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->actionIdToLabel:Landroidx/collection/SparseArrayCompat;
 
-    .line 2881
+    .line 2882
     invoke-virtual {v4, v1, v5}, Landroidx/collection/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
-    .line 2883
+    .line 2884
     invoke-virtual {v9, v1, v8}, Landroidx/collection/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
-    .line 2886
+    .line 2887
     goto :goto_47
 
-    .line 2889
+    .line 2890
     :cond_85
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 2890
+    .line 2891
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 2892
+    .line 2893
     const-string v2, "Can\'t have more than "
 
-    .line 2894
+    .line 2895
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 2896
+    .line 2897
     iget v2, v7, Landroidx/collection/MutableIntList;->_size:I
 
-    .line 2899
+    .line 2900
     const-string v3, " custom actions for one widget"
 
-    .line 2901
+    .line 2902
     invoke-static {v1, v2, v3}, Landroidx/compose/runtime/Anchor$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    .line 2903
+    .line 2904
     move-result-object v1
 
-    .line 2906
+    .line 2907
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 2907
+    .line 2908
     throw v0
 
-    .line 2910
+    .line 2911
     :cond_86
     move-object/from16 v28, v6
 
-    .line 2911
+    .line 2912
     :goto_47
     invoke-virtual {v0, v3}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->isScreenReaderFocusable(Landroidx/compose/ui/semantics/SemanticsNode;)Z
 
-    .line 2913
+    .line 2914
     move-result v3
-
-    .line 2916
-    iget-object v4, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .line 2917
+    iget-object v4, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    .line 2918
     invoke-virtual {v4, v3}, Landroid/view/accessibility/AccessibilityNodeInfo;->setScreenReaderFocusable(Z)V
 
-    .line 2919
+    .line 2920
     iget-object v3, v0, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->idToBeforeMap:Landroidx/collection/MutableIntIntMap;
 
-    .line 2922
+    .line 2923
     invoke-virtual {v3, v1}, Landroidx/collection/MutableIntIntMap;->getOrDefault(I)I
 
-    .line 2924
+    .line 2925
     move-result v3
 
-    .line 2927
+    .line 2928
     const/4 v4, -0x1
 
-    .line 2928
+    .line 2929
     if-eq v3, v4, :cond_88
 
-    .line 2929
+    .line 2930
     invoke-virtual/range {v28 .. v28}, Landroidx/compose/ui/platform/AndroidComposeView;->getAndroidViewsHandler$ui_release()Landroidx/compose/ui/platform/AndroidViewsHandler;
 
-    .line 2931
+    .line 2932
     move-result-object v4
-
-    .line 2934
-    invoke-static {v4, v3}, Landroidx/compose/ui/platform/SemanticsUtils_androidKt;->semanticsIdToView(Landroidx/compose/ui/platform/AndroidViewsHandler;I)Landroidx/compose/ui/viewinterop/AndroidViewHolder;
 
     .line 2935
+    invoke-static {v4, v3}, Landroidx/compose/ui/platform/SemanticsUtils_androidKt;->semanticsIdToView(Landroidx/compose/ui/platform/AndroidViewsHandler;I)Landroidx/compose/ui/viewinterop/AndroidViewHolder;
+
+    .line 2936
     move-result-object v4
 
-    .line 2938
+    .line 2939
     if-eqz v4, :cond_87
 
-    .line 2939
+    .line 2940
     iget-object v3, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 2941
+    .line 2942
     invoke-virtual {v3, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalBefore(Landroid/view/View;)V
 
-    .line 2943
+    .line 2944
     move-object/from16 v5, v28
 
-    .line 2946
+    .line 2947
     goto :goto_48
 
-    .line 2948
+    .line 2949
     :cond_87
     iget-object v4, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 2949
+    .line 2950
     move-object/from16 v5, v28
 
-    .line 2951
+    .line 2952
     invoke-virtual {v4, v5, v3}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalBefore(Landroid/view/View;I)V
 
-    .line 2953
+    .line 2954
     :goto_48
     iget-object v3, v0, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->ExtraDataTestTraversalBeforeVal:Ljava/lang/String;
 
-    .line 2956
+    .line 2957
     const/4 v4, 0x0
 
-    .line 2958
+    .line 2959
     invoke-virtual {v0, v1, v2, v3, v4}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->addExtraDataToAccessibilityNodeInfoHelper(ILandroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 2959
+    .line 2960
     goto :goto_49
 
-    .line 2962
+    .line 2963
     :cond_88
     move-object/from16 v5, v28
 
-    .line 2963
+    .line 2964
     :goto_49
     iget-object v3, v0, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->idToAfterMap:Landroidx/collection/MutableIntIntMap;
 
-    .line 2965
+    .line 2966
     invoke-virtual {v3, v1}, Landroidx/collection/MutableIntIntMap;->getOrDefault(I)I
 
-    .line 2967
+    .line 2968
     move-result v3
 
-    .line 2970
+    .line 2971
     const/4 v4, -0x1
 
-    .line 2971
+    .line 2972
     if-eq v3, v4, :cond_89
 
-    .line 2972
+    .line 2973
     invoke-virtual {v5}, Landroidx/compose/ui/platform/AndroidComposeView;->getAndroidViewsHandler$ui_release()Landroidx/compose/ui/platform/AndroidViewsHandler;
 
-    .line 2974
+    .line 2975
     move-result-object v4
 
-    .line 2977
+    .line 2978
     invoke-static {v4, v3}, Landroidx/compose/ui/platform/SemanticsUtils_androidKt;->semanticsIdToView(Landroidx/compose/ui/platform/AndroidViewsHandler;I)Landroidx/compose/ui/viewinterop/AndroidViewHolder;
 
-    .line 2978
+    .line 2979
     move-result-object v3
 
-    .line 2981
+    .line 2982
     if-eqz v3, :cond_89
 
-    .line 2982
+    .line 2983
     iget-object v4, v2, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    .line 2984
+    .line 2985
     invoke-virtual {v4, v3}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;)V
 
-    .line 2986
+    .line 2987
     iget-object v3, v0, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->ExtraDataTestTraversalAfterVal:Ljava/lang/String;
 
-    .line 2989
+    .line 2990
     const/4 v4, 0x0
 
-    .line 2991
+    .line 2992
     invoke-virtual {v0, v1, v2, v3, v4}, Landroidx/compose/ui/platform/AndroidComposeViewAccessibilityDelegateCompat;->addExtraDataToAccessibilityNodeInfoHelper(ILandroidx/core/view/accessibility/AccessibilityNodeInfoCompat;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 2992
+    .line 2993
     :cond_89
     return-void
-    .line 2995
+    .line 2996
 .end method
 
 .method public final semanticsNodeIdToAccessibilityVirtualNodeId(I)I

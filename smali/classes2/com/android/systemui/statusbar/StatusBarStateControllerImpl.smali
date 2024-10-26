@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
@@ -37,8 +37,6 @@
 .field public mIsExpanded:Z
 
 .field public final mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
-
-.field public final mKeyguardClockInteractorLazy:Ldagger/Lazy;
 
 .field public mKeyguardRequested:Z
 
@@ -77,7 +75,7 @@
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     .line 5
-    new-instance v0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda1;
+    new-instance v0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda3;
 
     .line 8
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -190,7 +188,7 @@
 .end method
 
 .method public constructor <init>(Lcom/android/internal/logging/UiEventLogger;Ldagger/Lazy;Lcom/android/systemui/util/kotlin/JavaAdapter;Ldagger/Lazy;Ldagger/Lazy;Ldagger/Lazy;Ldagger/Lazy;Ldagger/Lazy;)V
-    .locals 1
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -214,16 +212,16 @@
     const/16 p7, 0x20
 
     .line 15
-    new-array v0, p7, [Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$HistoricalState;
+    new-array p8, p7, [Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$HistoricalState;
 
     .line 17
-    iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mHistoricalRecords:[Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$HistoricalState;
+    iput-object p8, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mHistoricalRecords:[Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$HistoricalState;
 
     .line 19
-    sget-object v0, Lcom/android/app/animation/Interpolators;->FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
+    sget-object p8, Lcom/android/app/animation/Interpolators;->FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
     .line 21
-    iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mDozeInterpolator:Landroid/view/animation/Interpolator;
+    iput-object p8, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mDozeInterpolator:Landroid/view/animation/Interpolator;
 
     .line 23
     iput-object p1, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
@@ -241,34 +239,31 @@
     iput-object p5, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mShadeInteractorLazy:Ldagger/Lazy;
 
     .line 33
-    iput-object p8, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mKeyguardClockInteractorLazy:Ldagger/Lazy;
-
-    .line 35
     :goto_0
     if-ge p6, p7, :cond_0
 
-    .line 37
+    .line 35
     iget-object p1, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mHistoricalRecords:[Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$HistoricalState;
 
-    .line 39
+    .line 37
     new-instance p2, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$HistoricalState;
 
-    .line 41
+    .line 39
     invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
-    .line 43
+    .line 41
     aput-object p2, p1, p6
 
-    .line 46
+    .line 44
     add-int/lit8 p6, p6, 0x1
 
-    .line 48
+    .line 46
     goto :goto_0
 
-    .line 50
+    .line 48
     :cond_0
     return-void
-    .line 51
+    .line 49
 .end method
 
 
@@ -454,13 +449,13 @@
     check-cast v3, Lcom/android/internal/jank/InteractionJankMonitor;
 
     .line 34
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_7
 
     .line 36
     iget-object v4, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mView:Landroid/view/View;
 
     .line 38
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_7
 
     .line 40
     invoke-virtual {v4}, Landroid/view/View;->isAttachedToWindow()Z
@@ -469,7 +464,7 @@
     move-result v4
 
     .line 45
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_7
 
     .line 46
     if-eqz v0, :cond_3
@@ -481,10 +476,10 @@
     move-result-object v0
 
     .line 53
-    new-instance v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda2;
+    new-instance v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda4;
 
     .line 54
-    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda4;-><init>(Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;)V
 
     .line 56
     const/4 p0, 0x0
@@ -493,7 +488,7 @@
     invoke-virtual {v0, v2, v1, p0}, Landroid/view/Choreographer;->postCallback(ILjava/lang/Runnable;Ljava/lang/Object;)V
 
     .line 60
-    goto :goto_2
+    goto :goto_3
 
     .line 63
     :cond_3
@@ -523,31 +518,70 @@
     move-result-object v0
 
     .line 78
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->getClockId()Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mClockSwitchView:Lcom/android/keyguard/KeyguardClockSwitch;
 
     .line 79
-    move-result-object p0
+    const-string v2, "CLOCK_MISSING"
 
-    .line 82
-    invoke-virtual {v0, p0}, Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;->setTag(Ljava/lang/String;)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
+    .line 81
+    if-nez p0, :cond_5
 
     .line 83
-    move-result-object p0
+    const-string p0, "SbStateController"
 
-    .line 86
-    invoke-virtual {p0, v1}, Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;->setDeferMonitorForAnimationStart(Z)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
+    .line 85
+    const-string v4, "Clock container was missing"
 
     .line 87
+    invoke-static {p0, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 89
+    goto :goto_2
+
+    .line 92
+    :cond_5
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClock:Lcom/android/systemui/plugins/clocks/ClockController;
+
+    .line 93
+    if-nez p0, :cond_6
+
+    .line 95
+    goto :goto_2
+
+    .line 97
+    :cond_6
+    invoke-interface {p0}, Lcom/android/systemui/plugins/clocks/ClockController;->getConfig()Lcom/android/systemui/plugins/clocks/ClockConfig;
+
+    .line 98
     move-result-object p0
 
-    .line 90
+    .line 101
+    invoke-virtual {p0}, Lcom/android/systemui/plugins/clocks/ClockConfig;->getId()Ljava/lang/String;
+
+    .line 102
+    move-result-object v2
+
+    .line 105
+    :goto_2
+    invoke-virtual {v0, v2}, Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;->setTag(Ljava/lang/String;)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
+
+    .line 106
+    move-result-object p0
+
+    .line 109
+    invoke-virtual {p0, v1}, Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;->setDeferMonitorForAnimationStart(Z)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
+
+    .line 110
+    move-result-object p0
+
+    .line 113
     invoke-virtual {v3, p0}, Lcom/android/internal/jank/InteractionJankMonitor;->begin(Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;)Z
 
-    .line 91
-    :cond_5
-    :goto_2
+    .line 114
+    :cond_7
+    :goto_3
     return-void
-    .line 94
+    .line 117
 .end method
 
 .method public createDarkAnimator()Landroid/animation/ObjectAnimator;
@@ -969,130 +1003,6 @@
     .line 248
 .end method
 
-.method public final getClockId()Ljava/lang/String;
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    const-string v1, "CLOCK_MISSING"
-
-    .line 6
-    if-eqz v0, :cond_2
-
-    .line 8
-    iget-object p0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mKeyguardClockInteractorLazy:Ldagger/Lazy;
-
-    .line 10
-    invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
-
-    .line 12
-    move-result-object p0
-
-    .line 15
-    check-cast p0, Lcom/android/systemui/keyguard/domain/interactor/KeyguardClockInteractor;
-
-    .line 16
-    iget-object p0, p0, Lcom/android/systemui/keyguard/domain/interactor/KeyguardClockInteractor;->clock$receiver:Lcom/android/keyguard/ClockEventController;
-
-    .line 18
-    iget-object p0, p0, Lcom/android/keyguard/ClockEventController;->clock:Lcom/android/systemui/plugins/clocks/ClockController;
-
-    .line 20
-    if-eqz p0, :cond_1
-
-    .line 22
-    invoke-interface {p0}, Lcom/android/systemui/plugins/clocks/ClockController;->getConfig()Lcom/android/systemui/plugins/clocks/ClockConfig;
-
-    .line 24
-    move-result-object p0
-
-    .line 27
-    invoke-virtual {p0}, Lcom/android/systemui/plugins/clocks/ClockConfig;->getId()Ljava/lang/String;
-
-    .line 28
-    move-result-object p0
-
-    .line 31
-    if-nez p0, :cond_0
-
-    .line 32
-    goto :goto_0
-
-    .line 34
-    :cond_0
-    move-object v1, p0
-
-    .line 35
-    goto :goto_1
-
-    .line 36
-    :cond_1
-    :goto_0
-    sget-object p0, Lcom/android/systemui/keyguard/domain/interactor/KeyguardClockInteractorKt;->TAG:Ljava/lang/String;
-
-    .line 37
-    const-string v0, "No clock is available"
-
-    .line 39
-    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 41
-    :goto_1
-    return-object v1
-
-    .line 44
-    :cond_2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mClockSwitchView:Lcom/android/keyguard/KeyguardClockSwitch;
-
-    .line 45
-    if-nez p0, :cond_3
-
-    .line 47
-    const-string p0, "SbStateController"
-
-    .line 49
-    const-string v0, "Clock container was missing"
-
-    .line 51
-    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 53
-    return-object v1
-
-    .line 56
-    :cond_3
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClock:Lcom/android/systemui/plugins/clocks/ClockController;
-
-    .line 57
-    if-nez p0, :cond_4
-
-    .line 59
-    goto :goto_2
-
-    .line 61
-    :cond_4
-    invoke-interface {p0}, Lcom/android/systemui/plugins/clocks/ClockController;->getConfig()Lcom/android/systemui/plugins/clocks/ClockConfig;
-
-    .line 62
-    move-result-object p0
-
-    .line 65
-    invoke-virtual {p0}, Lcom/android/systemui/plugins/clocks/ClockConfig;->getId()Ljava/lang/String;
-
-    .line 66
-    move-result-object v1
-
-    .line 69
-    :goto_2
-    return-object v1
-    .line 70
-.end method
-
 .method public final getDozeAmount()F
     .locals 0
 
@@ -1406,413 +1316,419 @@
 .end method
 
 .method public final setState(IZ)Z
-    .locals 6
+    .locals 5
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 2
     const/4 v0, 0x2
 
-    .line 5
+    .line 2
     if-gt p1, v0, :cond_9
 
-    .line 6
+    .line 3
     if-ltz p1, :cond_9
 
-    .line 8
-    const/4 v1, 0x0
-
-    .line 10
+    .line 5
     if-nez p2, :cond_0
 
-    .line 11
+    .line 7
     iget p2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
+
+    .line 9
+    if-ne p1, p2, :cond_0
+
+    .line 11
+    iget p2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mUpcomingState:I
 
     .line 13
     if-ne p1, p2, :cond_0
 
     .line 15
-    iget p2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mUpcomingState:I
+    const/4 p0, 0x0
 
     .line 17
-    if-ne p1, p2, :cond_0
+    return p0
 
-    .line 19
-    return v1
-
-    .line 21
+    .line 18
     :cond_0
     const-string p2, "StatusBarStateControllerImpl#setState("
 
-    .line 22
-    iget v2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mUpcomingState:I
+    .line 19
+    iget v0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mUpcomingState:I
 
-    .line 24
-    if-eq p1, v2, :cond_1
+    .line 21
+    if-eq p1, v0, :cond_1
 
-    .line 26
-    const-string v2, "SbStateController"
+    .line 23
+    const-string v0, "SbStateController"
 
-    .line 28
-    new-instance v3, Ljava/lang/StringBuilder;
+    .line 25
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 30
-    const-string v4, "setState: requested state "
+    .line 27
+    const-string v2, "setState: requested state "
 
-    .line 32
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 29
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 34
+    .line 31
     invoke-static {p1}, Lcom/android/systemui/statusbar/StatusBarState;->toString(I)Ljava/lang/String;
 
-    .line 37
-    move-result-object v4
+    .line 34
+    move-result-object v2
 
-    .line 40
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 37
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 38
+    const-string v2, "!= upcomingState: "
 
     .line 41
-    const-string v4, "!= upcomingState: "
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 44
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 43
+    iget v2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mUpcomingState:I
 
     .line 46
-    iget v4, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mUpcomingState:I
+    invoke-static {v2}, Lcom/android/systemui/statusbar/StatusBarState;->toString(I)Ljava/lang/String;
 
-    .line 49
-    invoke-static {v4}, Lcom/android/systemui/statusbar/StatusBarState;->toString(I)Ljava/lang/String;
+    .line 48
+    move-result-object v2
 
     .line 51
-    move-result-object v4
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 54
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 52
+    const-string v2, ". This usually means the status bar state transition was interrupted before the upcoming state could be applied."
 
     .line 55
-    const-string v4, ". This usually means the status bar state transition was interrupted before the upcoming state could be applied."
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 58
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 57
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 60
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
     .line 63
-    move-result-object v3
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 64
+    :cond_1
+    iget v0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
 
     .line 67
-    :cond_1
-    iget v2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
+    const/4 v1, 0x0
+
+    .line 69
+    invoke-virtual {p0, p1, v0, v1}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->recordHistoricalState(IIZ)V
 
     .line 70
-    invoke-virtual {p0, p1, v2, v1}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->recordHistoricalState(IIZ)V
+    iget v0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
 
-    .line 72
-    iget v1, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
+    .line 73
+    const/4 v1, 0x2
 
     .line 75
-    if-nez v1, :cond_2
+    if-nez v0, :cond_2
 
-    .line 77
-    if-ne p1, v0, :cond_2
+    .line 76
+    if-ne p1, v1, :cond_2
 
-    .line 79
-    const-string v1, "SbStateController"
+    .line 78
+    const-string v0, "SbStateController"
 
-    .line 81
+    .line 80
     const-string v2, "Invalid state transition: SHADE -> SHADE_LOCKED"
 
-    .line 83
+    .line 82
     new-instance v3, Ljava/lang/Throwable;
 
-    .line 85
+    .line 84
     invoke-direct {v3}, Ljava/lang/Throwable;-><init>()V
 
-    .line 87
-    invoke-static {v1, v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    .line 86
+    invoke-static {v0, v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 90
+    .line 89
     :cond_2
-    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mListeners:Ljava/util/ArrayList;
 
-    .line 93
-    monitor-enter v1
+    .line 92
+    monitor-enter v0
 
-    .line 95
+    .line 94
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 96
+    .line 95
     invoke-direct {v2, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 98
+    .line 97
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 101
+    .line 100
     const-string p2, ")"
 
-    .line 104
+    .line 103
     invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
+    .line 105
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 109
+    .line 108
     move-result-object p2
 
-    .line 112
+    .line 111
     invoke-static {p2}, Lcom/android/systemui/DejankUtils;->startDetectingBlockingIpcs(Ljava/lang/String;)V
 
-    .line 113
+    .line 112
     new-instance v2, Ljava/util/ArrayList;
 
-    .line 116
+    .line 115
     iget-object v3, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mListeners:Ljava/util/ArrayList;
 
-    .line 118
+    .line 117
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 120
+    .line 119
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 123
+    .line 122
     move-result-object v2
 
-    .line 126
+    .line 125
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 127
+    .line 126
     move-result v3
 
-    .line 130
+    .line 129
     if-eqz v3, :cond_3
 
-    .line 131
+    .line 130
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 133
+    .line 132
     move-result-object v3
 
-    .line 136
+    .line 135
     check-cast v3, Lcom/android/systemui/statusbar/SysuiStatusBarStateController$RankedListener;
 
-    .line 137
+    .line 136
     iget-object v3, v3, Lcom/android/systemui/statusbar/SysuiStatusBarStateController$RankedListener;->mListener:Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;
 
-    .line 139
+    .line 138
     iget v4, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
 
-    .line 141
+    .line 140
     invoke-interface {v3, v4, p1}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;->onStatePreChange(II)V
 
-    .line 143
+    .line 142
     goto :goto_0
 
-    .line 146
+    .line 145
     :catchall_0
     move-exception p0
 
-    .line 147
+    .line 146
     goto/16 :goto_4
 
-    .line 148
+    .line 147
     :cond_3
     iget v2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
 
-    .line 150
+    .line 149
     iput v2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mLastState:I
 
-    .line 152
+    .line 151
     iput p1, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
 
-    .line 154
+    .line 153
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->updateUpcomingState(I)V
 
-    .line 156
+    .line 155
     iget-object p1, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mUiEventLogger:Lcom/android/internal/logging/UiEventLogger;
 
-    .line 159
+    .line 158
     iget v2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
 
-    .line 161
-    const/4 v3, 0x1
-
-    .line 163
+    .line 160
     if-eqz v2, :cond_6
+
+    .line 162
+    const/4 v3, 0x1
 
     .line 164
     if-eq v2, v3, :cond_5
 
-    .line 166
-    if-eq v2, v0, :cond_4
+    .line 165
+    if-eq v2, v1, :cond_4
 
-    .line 168
-    sget-object v0, Lcom/android/systemui/statusbar/StatusBarStateEvent;->STATUS_BAR_STATE_UNKNOWN:Lcom/android/systemui/statusbar/StatusBarStateEvent;
+    .line 167
+    sget-object v1, Lcom/android/systemui/statusbar/StatusBarStateEvent;->STATUS_BAR_STATE_UNKNOWN:Lcom/android/systemui/statusbar/StatusBarStateEvent;
 
-    .line 170
+    .line 169
     goto :goto_1
+
+    .line 171
+    :cond_4
+    sget-object v1, Lcom/android/systemui/statusbar/StatusBarStateEvent;->STATUS_BAR_STATE_SHADE_LOCKED:Lcom/android/systemui/statusbar/StatusBarStateEvent;
 
     .line 172
-    :cond_4
-    sget-object v0, Lcom/android/systemui/statusbar/StatusBarStateEvent;->STATUS_BAR_STATE_SHADE_LOCKED:Lcom/android/systemui/statusbar/StatusBarStateEvent;
-
-    .line 173
     goto :goto_1
+
+    .line 174
+    :cond_5
+    sget-object v1, Lcom/android/systemui/statusbar/StatusBarStateEvent;->STATUS_BAR_STATE_KEYGUARD:Lcom/android/systemui/statusbar/StatusBarStateEvent;
 
     .line 175
-    :cond_5
-    sget-object v0, Lcom/android/systemui/statusbar/StatusBarStateEvent;->STATUS_BAR_STATE_KEYGUARD:Lcom/android/systemui/statusbar/StatusBarStateEvent;
-
-    .line 176
     goto :goto_1
 
-    .line 178
+    .line 177
     :cond_6
-    sget-object v0, Lcom/android/systemui/statusbar/StatusBarStateEvent;->STATUS_BAR_STATE_SHADE:Lcom/android/systemui/statusbar/StatusBarStateEvent;
+    sget-object v1, Lcom/android/systemui/statusbar/StatusBarStateEvent;->STATUS_BAR_STATE_SHADE:Lcom/android/systemui/statusbar/StatusBarStateEvent;
 
-    .line 179
+    .line 178
     :goto_1
-    invoke-interface {p1, v0}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
+    invoke-interface {p1, v1}, Lcom/android/internal/logging/UiEventLogger;->log(Lcom/android/internal/logging/UiEventLogger$UiEventEnum;)V
 
-    .line 181
+    .line 180
     const-string p1, "UI Events"
 
-    .line 184
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 183
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 186
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 185
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 188
+    .line 187
     const-string v2, "StatusBarState "
 
-    .line 191
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 190
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 193
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 192
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 196
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 195
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 199
-    move-result-object v0
+    .line 198
+    move-result-object v1
+
+    .line 201
+    const-wide/16 v2, 0x1000
 
     .line 202
-    const-wide/16 v4, 0x1000
+    invoke-static {v2, v3, p1, v1}, Landroid/os/Trace;->instantForTrack(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 203
-    invoke-static {v4, v5, p1, v0}, Landroid/os/Trace;->instantForTrack(JLjava/lang/String;Ljava/lang/String;)V
-
-    .line 205
+    .line 204
     new-instance p1, Ljava/util/ArrayList;
 
-    .line 208
-    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mListeners:Ljava/util/ArrayList;
+    .line 207
+    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mListeners:Ljava/util/ArrayList;
 
-    .line 210
-    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    .line 209
+    invoke-direct {p1, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 212
+    .line 211
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 215
+    .line 214
     move-result-object p1
 
-    .line 218
+    .line 217
     :goto_2
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 219
-    move-result v0
+    .line 218
+    move-result v1
+
+    .line 221
+    if-eqz v1, :cond_7
 
     .line 222
-    if-eqz v0, :cond_7
-
-    .line 223
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 225
-    move-result-object v0
+    .line 224
+    move-result-object v1
+
+    .line 227
+    check-cast v1, Lcom/android/systemui/statusbar/SysuiStatusBarStateController$RankedListener;
 
     .line 228
-    check-cast v0, Lcom/android/systemui/statusbar/SysuiStatusBarStateController$RankedListener;
+    iget-object v1, v1, Lcom/android/systemui/statusbar/SysuiStatusBarStateController$RankedListener;->mListener:Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;
 
-    .line 229
-    iget-object v0, v0, Lcom/android/systemui/statusbar/SysuiStatusBarStateController$RankedListener;->mListener:Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;
-
-    .line 231
+    .line 230
     iget v2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mState:I
 
-    .line 233
-    invoke-interface {v0, v2}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;->onStateChanged(I)V
+    .line 232
+    invoke-interface {v1, v2}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;->onStateChanged(I)V
 
-    .line 235
+    .line 234
     goto :goto_2
 
-    .line 238
+    .line 237
     :cond_7
     new-instance p1, Ljava/util/ArrayList;
 
-    .line 239
+    .line 238
     iget-object p0, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mListeners:Ljava/util/ArrayList;
 
-    .line 241
+    .line 240
     invoke-direct {p1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 243
+    .line 242
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 246
+    .line 245
     move-result-object p0
 
-    .line 249
+    .line 248
     :goto_3
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 250
+    .line 249
     move-result p1
 
-    .line 253
+    .line 252
     if-eqz p1, :cond_8
 
-    .line 254
+    .line 253
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 256
+    .line 255
     move-result-object p1
 
-    .line 259
+    .line 258
     check-cast p1, Lcom/android/systemui/statusbar/SysuiStatusBarStateController$RankedListener;
 
-    .line 260
+    .line 259
     iget-object p1, p1, Lcom/android/systemui/statusbar/SysuiStatusBarStateController$RankedListener;->mListener:Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;
 
-    .line 262
+    .line 261
     invoke-interface {p1}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;->onStatePostChange()V
 
-    .line 264
+    .line 263
     goto :goto_3
 
-    .line 267
+    .line 266
     :cond_8
     invoke-static {p2}, Lcom/android/systemui/DejankUtils;->stopDetectingBlockingIpcs(Ljava/lang/String;)V
 
-    .line 268
-    monitor-exit v1
+    .line 267
+    monitor-exit v0
+
+    .line 270
+    const/4 p0, 0x1
 
     .line 271
-    return v3
+    return p0
 
     .line 272
     :goto_4
-    monitor-exit v1
+    monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1827,7 +1743,7 @@
     const-string p2, "Invalid state "
 
     .line 277
-    invoke-static {p1, p2}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 279
     move-result-object p1
@@ -1865,13 +1781,13 @@
     move-result-object v0
 
     .line 15
-    new-instance v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda3;
+    new-instance v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda1;
 
     .line 16
     const/4 v2, 0x0
 
     .line 18
-    invoke-direct {v1, p0, v2}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;I)V
+    invoke-direct {v1, p0, v2}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;I)V
 
     .line 19
     iget-object v2, p0, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
@@ -1904,23 +1820,20 @@
     move-result-object v0
 
     .line 42
-    new-instance v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda3;
+    new-instance v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda1;
 
     .line 43
     const/4 v3, 0x1
 
     .line 45
-    invoke-direct {v1, p0, v3}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;I)V
+    invoke-direct {v1, p0, v3}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;I)V
 
     .line 46
     invoke-virtual {v2, v0, v1}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
 
     .line 49
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 52
     return-void
-    .line 55
+    .line 52
 .end method
 
 .method public final updateUpcomingState(I)V

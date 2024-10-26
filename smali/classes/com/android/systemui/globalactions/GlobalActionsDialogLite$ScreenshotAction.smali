@@ -1,6 +1,6 @@
 .class Lcom/android/systemui/globalactions/GlobalActionsDialogLite$ScreenshotAction;
 .super Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -15,10 +15,10 @@
     iput-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$ScreenshotAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialogLite;
 
     .line 2
-    const v0, 0x1080587    # @android:drawable/ic_satellite_alt_24px
+    const v0, 0x1080585    # @android:drawable/ic_refresh
 
     .line 4
-    const v1, 0x104044f    # @android:string/httpErrorAuth
+    const v1, 0x1040446    # @android:string/hearing_aids_feature_name
 
     .line 7
     invoke-direct {p0, p1, v0, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialogLite;II)V
@@ -78,7 +78,7 @@
     move-result-object p0
 
     .line 9
-    const v0, 0x10e00cf    # @android:integer/config_nightDisplayColorTemperatureDefault
+    const v0, 0x10e00c9    # @android:integer/config_networkDefaultDailyMultipathQuotaBytes
 
     .line 10
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I

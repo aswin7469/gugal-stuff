@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/util/AlarmTimeout;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/app/AlarmManager$OnAlarmListener;
@@ -101,29 +101,29 @@
     .line 15
 .end method
 
-.method public final schedule(IJ)Z
+.method public final schedule(JI)Z
     .locals 8
 
     .line 1
     const/4 v0, 0x1
 
     .line 2
-    if-eqz p1, :cond_2
+    if-eqz p3, :cond_2
 
     .line 3
-    if-eq p1, v0, :cond_1
+    if-eq p3, v0, :cond_1
 
     .line 5
     const/4 v1, 0x2
 
     .line 7
-    if-ne p1, v1, :cond_0
+    if-ne p3, v1, :cond_0
 
     .line 8
-    iget-boolean p1, p0, Lcom/android/systemui/util/AlarmTimeout;->mScheduled:Z
+    iget-boolean p3, p0, Lcom/android/systemui/util/AlarmTimeout;->mScheduled:Z
 
     .line 10
-    if-eqz p1, :cond_3
+    if-eqz p3, :cond_3
 
     .line 12
     invoke-virtual {p0}, Lcom/android/systemui/util/AlarmTimeout;->cancel()V
@@ -136,10 +136,10 @@
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     .line 18
-    const-string p2, "Illegal mode: "
+    const-string p1, "Illegal mode: "
 
     .line 20
-    invoke-static {p1, p2}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p1}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 22
     move-result-object p1
@@ -152,10 +152,10 @@
 
     .line 29
     :cond_1
-    iget-boolean p1, p0, Lcom/android/systemui/util/AlarmTimeout;->mScheduled:Z
+    iget-boolean p3, p0, Lcom/android/systemui/util/AlarmTimeout;->mScheduled:Z
 
     .line 30
-    if-eqz p1, :cond_3
+    if-eqz p3, :cond_3
 
     .line 32
     const/4 p0, 0x0
@@ -165,10 +165,10 @@
 
     .line 35
     :cond_2
-    iget-boolean p1, p0, Lcom/android/systemui/util/AlarmTimeout;->mScheduled:Z
+    iget-boolean p3, p0, Lcom/android/systemui/util/AlarmTimeout;->mScheduled:Z
 
     .line 36
-    if-nez p1, :cond_4
+    if-nez p3, :cond_4
 
     .line 38
     :cond_3
@@ -182,7 +182,7 @@
     move-result-wide v2
 
     .line 45
-    add-long v3, v2, p2
+    add-long v3, v2, p1
 
     .line 46
     iget-object v5, p0, Lcom/android/systemui/util/AlarmTimeout;->mTag:Ljava/lang/String;

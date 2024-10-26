@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/battery/BatteryMeterViewController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -129,7 +129,7 @@
     move-result-object p2
 
     .line 66
-    const p3, 0x7f05005c    # @bool/flag_battery_shield_icon 'false'
+    const p3, 0x7f05006c    # @bool/flag_battery_shield_icon 'false'
 
     .line 67
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -147,7 +147,7 @@
     move-result-object p1
 
     .line 79
-    const p2, 0x104096a    # @android:string/submit
+    const p2, 0x1040961    # @android:string/stk_cc_ussd_to_dial_video
 
     .line 80
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -232,92 +232,89 @@
     .line 34
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+    iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mBatteryStateChangeCallback:Lcom/android/systemui/battery/BatteryMeterViewController$3;
 
     .line 36
-    check-cast v0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
+    iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
     .line 38
-    iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mBatteryStateChangeCallback:Lcom/android/systemui/battery/BatteryMeterViewController$3;
+    invoke-interface {v1, v0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
     .line 40
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->addCallback(Ljava/lang/Object;)V
-
-    .line 42
     iget-object v0, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 45
+    .line 43
     check-cast v0, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 47
+    .line 45
     invoke-virtual {v0}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 49
+    .line 47
     move-result v1
 
-    .line 52
+    .line 50
     iget-object v2, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 53
-    const-string v3, "status_bar_show_battery_percent"
+    .line 51
+    const-string/jumbo v3, "status_bar_show_battery_percent"
 
-    .line 55
+    .line 53
     invoke-static {v3}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 57
+    .line 56
     move-result-object v3
 
-    .line 60
+    .line 59
     const/4 v4, 0x0
 
-    .line 61
+    .line 60
     iget-object v5, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mSettingObserver:Lcom/android/systemui/battery/BatteryMeterViewController$SettingObserver;
 
-    .line 62
+    .line 61
     invoke-virtual {v2, v3, v4, v5, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 64
+    .line 63
     iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 67
+    .line 66
     const-string v2, "battery_estimates_last_update_time"
 
-    .line 69
+    .line 68
     invoke-static {v2}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 71
+    .line 70
     move-result-object v2
 
-    .line 74
+    .line 73
     invoke-virtual {v1, v2, v4, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 75
+    .line 74
     iget-object v1, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mUserChangedCallback:Lcom/android/systemui/settings/UserTracker$Callback;
 
-    .line 78
+    .line 77
     new-instance v2, Landroid/os/HandlerExecutor;
 
-    .line 80
+    .line 79
     iget-object v3, p0, Lcom/android/systemui/battery/BatteryMeterViewController;->mMainHandler:Landroid/os/Handler;
 
-    .line 82
+    .line 81
     invoke-direct {v2, v3}, Landroid/os/HandlerExecutor;-><init>(Landroid/os/Handler;)V
 
-    .line 84
+    .line 83
     invoke-virtual {v0, v1, v2}, Lcom/android/systemui/settings/UserTrackerImpl;->addCallback(Lcom/android/systemui/settings/UserTracker$Callback;Ljava/util/concurrent/Executor;)V
 
-    .line 87
+    .line 86
     iget-object p0, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    .line 90
+    .line 89
     check-cast p0, Lcom/android/systemui/battery/BatteryMeterView;
 
-    .line 92
+    .line 91
     invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->updateShowPercent()V
 
-    .line 94
+    .line 93
     return-void
-    .line 97
+    .line 96
 .end method
 
 .method public final onViewDetached()V

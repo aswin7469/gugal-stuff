@@ -5,7 +5,9 @@
     <item>ສະແດງເປີເຊັນເມື່ອກຳລັງສາກໄຟ (ຄ່າເລີ່ມຕົ້ນ)</item>
     <item>ຢ່າສະແດງໄອຄອນນີ້</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>ສະແດງຊົ່ວໂມງ, ນາທີ ແລະ ວິນາທີ</item>
     <item>ສະແດງຊົ່ວໂມງ ແລະ ນາທີ (ຄ່າເລີ່ມຕົ້ນ)</item>

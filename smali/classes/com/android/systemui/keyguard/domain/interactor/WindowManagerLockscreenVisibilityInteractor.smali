@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -114,303 +114,156 @@
     invoke-static {p4}, Lkotlin/LazyKt__LazyJVMKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
 
     .line 49
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 52
-    move-result p4
-
-    .line 55
-    if-eqz p4, :cond_0
-
-    .line 56
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 58
-    move-result p4
-
-    .line 61
-    if-eqz p4, :cond_0
-
-    .line 62
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 64
-    move-result p4
-
-    .line 67
-    if-eqz p4, :cond_0
-
-    .line 68
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 70
-    move-result p4
-
-    .line 73
-    if-eqz p4, :cond_0
-
-    .line 74
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 76
-    move-result p4
-
-    .line 79
-    if-eqz p4, :cond_0
-
-    .line 80
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 82
-    :cond_0
     new-instance p4, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor$special$$inlined$flatMapLatest$2;
 
-    .line 85
+    .line 52
     invoke-direct {p4, v2, p0}, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor$special$$inlined$flatMapLatest$2;-><init>(Lkotlin/coroutines/Continuation;Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor;)V
 
-    .line 87
+    .line 54
     iget-object p5, p2, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->isInTransitionToAnyState:Lkotlinx/coroutines/flow/Flow;
 
-    .line 90
+    .line 57
     invoke-static {p5, p4}, Lkotlinx/coroutines/flow/FlowKt;->transformLatest(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 92
+    .line 59
     move-result-object p4
 
-    .line 95
+    .line 62
     invoke-static {p4}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 96
+    .line 63
     move-result-object p4
 
-    .line 99
+    .line 66
     iput-object p4, p0, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor;->surfaceBehindVisibility:Lkotlinx/coroutines/flow/Flow;
 
-    .line 100
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 102
-    move-result p4
-
-    .line 105
-    if-eqz p4, :cond_1
-
-    .line 106
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 108
-    move-result p4
-
-    .line 111
-    if-eqz p4, :cond_1
-
-    .line 112
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 114
-    move-result p4
-
-    .line 117
-    if-eqz p4, :cond_1
-
-    .line 118
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 120
-    move-result p4
-
-    .line 123
-    if-eqz p4, :cond_1
-
-    .line 124
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 126
-    move-result p4
-
-    .line 129
-    if-eqz p4, :cond_1
-
-    .line 130
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 132
-    :cond_1
+    .line 67
     sget-object p4, Lcom/android/systemui/keyguard/shared/model/Edge;->Companion:Lcom/android/systemui/keyguard/shared/model/Edge$Companion;
 
-    .line 135
+    .line 69
     sget-object p4, Lcom/android/systemui/scene/shared/model/Scenes;->Gone:Lcom/android/compose/animation/scene/SceneKey;
 
-    .line 137
+    .line 71
     invoke-static {p4}, Lcom/android/systemui/keyguard/shared/model/Edge$Companion;->create$default(Lcom/android/compose/animation/scene/SceneKey;)Lcom/android/systemui/keyguard/shared/model/Edge$StateToScene;
 
-    .line 139
+    .line 73
     move-result-object p4
 
-    .line 142
+    .line 76
     sget-object p5, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GONE:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 143
+    .line 77
     const/4 p6, 0x1
 
-    .line 145
+    .line 79
     invoke-static {v2, p5, p6}, Lcom/android/systemui/keyguard/shared/model/Edge$Companion;->create$default(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;I)Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;
 
-    .line 146
+    .line 80
     move-result-object p5
 
-    .line 149
+    .line 83
     invoke-virtual {p2, p4, p5}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->isInTransition(Lcom/android/systemui/keyguard/shared/model/Edge;Lcom/android/systemui/keyguard/shared/model/Edge;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 150
+    .line 84
     move-result-object p4
 
-    .line 153
+    .line 87
     iget-object p3, p3, Lcom/android/systemui/keyguard/domain/interactor/KeyguardSurfaceBehindInteractor;->isAnimatingSurface:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 154
+    .line 88
     iget-object p5, p7, Lcom/android/systemui/statusbar/notification/domain/interactor/NotificationLaunchAnimationInteractor;->repository:Lcom/android/systemui/statusbar/notification/data/repository/NotificationLaunchAnimationRepository;
 
-    .line 156
+    .line 90
     iget-object p5, p5, Lcom/android/systemui/statusbar/notification/data/repository/NotificationLaunchAnimationRepository;->isLaunchAnimationRunning:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 158
+    .line 92
     new-instance p6, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor$usingKeyguardGoingAwayAnimation$2;
 
-    .line 160
+    .line 94
     const/4 p7, 0x5
 
-    .line 162
+    .line 96
     invoke-direct {p6, p7, v2}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 163
+    .line 97
     invoke-static {p4, v0, p3, p5, p6}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
 
-    .line 166
+    .line 100
     move-result-object p3
 
-    .line 169
+    .line 103
     invoke-static {p3}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 170
+    .line 104
     move-result-object p3
 
-    .line 173
+    .line 107
     iput-object p3, p0, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor;->usingKeyguardGoingAwayAnimation:Lkotlinx/coroutines/flow/Flow;
 
-    .line 174
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 176
-    move-result p3
-
-    .line 179
-    if-eqz p3, :cond_2
-
-    .line 180
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 182
-    move-result p3
-
-    .line 185
-    if-eqz p3, :cond_2
-
-    .line 186
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 188
-    move-result p3
-
-    .line 191
-    if-eqz p3, :cond_2
-
-    .line 192
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 194
-    move-result p3
-
-    .line 197
-    if-eqz p3, :cond_2
-
-    .line 198
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 200
-    move-result p3
-
-    .line 203
-    if-eqz p3, :cond_2
-
-    .line 204
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 206
-    :cond_2
+    .line 108
     sget-object p3, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor$lockscreenVisibility$2;->INSTANCE:Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor$lockscreenVisibility$2;
 
-    .line 209
+    .line 110
     iget-object p4, p2, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->currentKeyguardState:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 211
+    .line 112
     iget-object p2, p2, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->startedStepWithPrecedingStep:Lkotlinx/coroutines/flow/ReadonlySharedFlow;
 
-    .line 213
+    .line 114
     invoke-static {p4, p2, p3}, Lcom/android/systemui/util/kotlin/FlowKt;->sample(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/SafeFlow;
 
-    .line 215
+    .line 116
     move-result-object p2
 
-    .line 218
+    .line 119
     new-instance p3, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor$special$$inlined$map$2;
 
-    .line 219
+    .line 120
     invoke-direct {p3, p2, p8}, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor$special$$inlined$map$2;-><init>(Lkotlinx/coroutines/flow/SafeFlow;Ldagger/Lazy;)V
 
-    .line 221
+    .line 122
     invoke-static {p3}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 224
+    .line 125
     move-result-object p2
 
-    .line 227
+    .line 128
     iput-object p2, p0, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor;->lockscreenVisibility:Lkotlinx/coroutines/flow/Flow;
 
-    .line 228
+    .line 129
     iget-object p2, p1, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;->biometricUnlockState:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 230
+    .line 131
     new-instance p3, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor$aodVisibility$1;
 
-    .line 232
+    .line 133
     const/4 p4, 0x4
 
-    .line 234
+    .line 135
     invoke-direct {p3, p4, v2}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 235
+    .line 136
     iget-object p4, p1, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;->isDozing:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 238
+    .line 139
     iget-object p1, p1, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;->isAodAvailable:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 240
+    .line 141
     invoke-static {p4, p1, p2, p3}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function4;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;
 
-    .line 242
+    .line 143
     move-result-object p1
 
-    .line 245
+    .line 146
     invoke-static {p1}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 246
+    .line 147
     move-result-object p1
 
-    .line 249
+    .line 150
     iput-object p1, p0, Lcom/android/systemui/keyguard/domain/interactor/WindowManagerLockscreenVisibilityInteractor;->aodVisibility:Lkotlinx/coroutines/flow/Flow;
 
-    .line 250
+    .line 151
     return-void
-    .line 252
+    .line 153
 .end method

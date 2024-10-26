@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/InstantAppNotifier;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -261,7 +261,7 @@
     iget-object v0, v1, Lcom/android/systemui/statusbar/notification/InstantAppNotifier;->mContext:Landroid/content/Context;
 
     .line 16
-    const v7, 0x7f14042f    # @string/instant_apps 'Instant Apps'
+    const v7, 0x7f130479    # @string/instant_apps 'Instant Apps'
 
     .line 18
     invoke-virtual {v0, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -297,7 +297,7 @@
     iget-object v0, v1, Lcom/android/systemui/statusbar/notification/InstantAppNotifier;->mContext:Landroid/content/Context;
 
     .line 44
-    const v7, 0x7f140430    # @string/instant_apps_help_url ''
+    const v7, 0x7f13047a    # @string/instant_apps_help_url 'https://support.google.com/googleplay/?p=instant_apps'
 
     .line 46
     invoke-virtual {v0, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -321,14 +321,14 @@
     if-eqz v7, :cond_0
 
     .line 60
-    const v9, 0x7f140432    # @string/instant_apps_message_with_help 'App opened without being installed. Tap to learn more.'
+    const v9, 0x7f13047c    # @string/instant_apps_message_with_help 'App opened without being installed. Tap to learn more.'
 
     .line 62
     goto :goto_0
 
     .line 65
     :cond_0
-    const v9, 0x7f140431    # @string/instant_apps_message 'App opened without being installed.'
+    const v9, 0x7f13047b    # @string/instant_apps_message 'App opened without being installed.'
 
     .line 66
     :goto_0
@@ -401,7 +401,7 @@
     iget-object v11, v1, Lcom/android/systemui/statusbar/notification/InstantAppNotifier;->mContext:Landroid/content/Context;
 
     .line 109
-    const v12, 0x7f140144    # @string/app_info 'App info'
+    const v12, 0x7f130149    # @string/app_info 'App info'
 
     .line 111
     invoke-virtual {v11, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -829,7 +829,7 @@
     iget-object v9, v1, Lcom/android/systemui/statusbar/notification/InstantAppNotifier;->mContext:Landroid/content/Context;
 
     .line 370
-    const v10, 0x7f1403c5    # @string/go_to_web 'Go to browser'
+    const v10, 0x7f130407    # @string/go_to_web 'Go to browser'
 
     .line 372
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -891,7 +891,7 @@
     iget-object v5, v1, Lcom/android/systemui/statusbar/notification/InstantAppNotifier;->mContext:Landroid/content/Context;
 
     .line 411
-    const v6, 0x7f0600f9    # @color/instant_apps_color '#ff4d5a64'
+    const v6, 0x7f060103    # @color/instant_apps_color '#ff4d5a64'
 
     .line 413
     invoke-virtual {v5, v6}, Landroid/content/Context;->getColor(I)I
@@ -927,7 +927,7 @@
     move-result-object v6
 
     .line 437
-    const v7, 0x7f140433    # @string/instant_apps_title '%1$s running'
+    const v7, 0x7f13047d    # @string/instant_apps_title '%1$s running'
 
     .line 438
     invoke-virtual {v5, v7, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -966,7 +966,7 @@
     move-result-object v1
 
     .line 464
-    const v4, 0x7f080986    # @drawable/instant_icon 'res/drawable/instant_icon.xml'
+    const v4, 0x7f0809bf    # @drawable/instant_icon 'res/drawable/instant_icon.xml'
 
     .line 465
     invoke-static {v1, v4}, Landroid/graphics/drawable/Icon;->createWithResource(Ljava/lang/String;I)Landroid/graphics/drawable/Icon;
@@ -1036,7 +1036,6 @@
 
     .line 510
     return-void
-    .line 513
 .end method
 
 .method public final preloadRecentApps()V

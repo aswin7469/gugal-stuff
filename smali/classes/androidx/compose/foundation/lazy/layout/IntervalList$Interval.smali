@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/lazy/layout/IntervalList$Interval;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -41,7 +41,7 @@
     const-string p0, "size should be >0, but was "
 
     .line 16
-    invoke-static {p2, p0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 18
     move-result-object p0
@@ -63,27 +63,27 @@
 
     .line 31
     :cond_1
-    const-string p0, "startIndex should be >= 0, but was "
+    const-string/jumbo p0, "startIndex should be >= 0, but was "
 
     .line 32
-    invoke-static {p1, p0}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
-    .line 34
+    .line 35
     move-result-object p0
-
-    .line 37
-    new-instance p1, Ljava/lang/IllegalArgumentException;
 
     .line 38
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    .line 39
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 40
+    .line 41
     move-result-object p0
 
-    .line 43
+    .line 44
     invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    .line 44
+    .line 45
     throw p1
-    .line 47
+    .line 48
 .end method

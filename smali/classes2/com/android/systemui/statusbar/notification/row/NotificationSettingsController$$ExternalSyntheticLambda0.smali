@@ -1,129 +1,74 @@
 .class public final synthetic Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic $r8$classId:I
-
-.field public final synthetic f$0:Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$Listener;
+.field public final synthetic f$0:Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController;
 
 .field public final synthetic f$1:Landroid/net/Uri;
 
-.field public final synthetic f$2:I
-
-.field public final synthetic f$3:Ljava/lang/String;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$Listener;ILjava/lang/String;)V
+.method public synthetic constructor <init>(Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController;)V
     .locals 1
 
     .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->$r8$classId:I
-
     sget-object v0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRowController;->BUBBLES_SETTING_URI:Landroid/net/Uri;
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$Listener;
+    .line 4
+    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController;
 
+    .line 7
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$1:Landroid/net/Uri;
 
-    iput p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$2:I
-
-    iput-object p3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$3:Ljava/lang/String;
-
+    .line 9
     return-void
-.end method
-
-.method public synthetic constructor <init>(Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$Listener;Landroid/net/Uri;ILjava/lang/String;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->$r8$classId:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$Listener;
-
-    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$1:Landroid/net/Uri;
-
-    iput p3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$2:I
-
-    iput-object p4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$3:Ljava/lang/String;
-
-    return-void
+    .line 11
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 4
 
     .line 1
-    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->$r8$classId:I
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController;
 
     .line 2
-    packed-switch v0, :pswitch_data_0
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$1:Landroid/net/Uri;
 
     .line 4
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$Listener;
+    iget-object v1, v0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController;->mContentObserver:Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$1;
 
-    .line 7
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$1:Landroid/net/Uri;
+    .line 6
+    iget-object v2, v0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 9
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$2:I
+    .line 8
+    check-cast v2, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 11
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$3:Ljava/lang/String;
+    .line 10
+    invoke-virtual {v2}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 13
-    check-cast v0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRowController$1;
+    .line 12
+    move-result v2
 
     .line 15
-    invoke-virtual {v0, v2, v1, p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRowController$1;->onSettingChanged(ILandroid/net/Uri;Ljava/lang/String;)V
+    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController;->mSecureSettings:Lcom/android/systemui/util/settings/SecureSettings;
 
-    .line 17
+    .line 16
+    const/4 v3, 0x0
+
+    .line 18
+    invoke-interface {v0, p0, v3, v1, v2}, Lcom/android/systemui/util/settings/UserSettingsProxy;->registerContentObserverForUserSync(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    .line 19
     return-void
-
-    .line 20
-    :pswitch_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$Listener;
-
-    .line 21
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$1:Landroid/net/Uri;
-
-    .line 23
-    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$2:I
-
-    .line 25
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationSettingsController$$ExternalSyntheticLambda0;->f$3:Ljava/lang/String;
-
-    .line 27
-    check-cast v0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRowController$1;
-
-    .line 29
-    invoke-virtual {v0, v2, v1, p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRowController$1;->onSettingChanged(ILandroid/net/Uri;Ljava/lang/String;)V
-
-    .line 31
-    return-void
-
-    .line 34
-    nop
-
-    .line 35
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-    .line 36
+    .line 22
 .end method

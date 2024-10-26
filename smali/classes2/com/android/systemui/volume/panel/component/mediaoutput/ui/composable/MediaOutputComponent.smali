@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/panel/component/mediaoutput/ui/composable/MediaOutputComponent;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/volume/panel/ui/composable/ComposeVolumePanelUiComponent;
@@ -927,7 +927,7 @@
     move-result-object v3
 
     .line 29
-    const v4, 0x7f140a0b    # @string/volume_panel_enter_media_output_settings 'Enter output settings'
+    const v4, 0x7f130a98    # @string/volume_panel_enter_media_output_settings 'Enter output settings'
 
     .line 30
     invoke-static {v4, v14}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(ILandroidx/compose/runtime/Composer;)Ljava/lang/String;

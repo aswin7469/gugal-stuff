@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/navigationbar/NavigationBarTransitions;
 .super Lcom/android/systemui/statusbar/phone/BarTransitions;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/phone/LightBarTransitionsController$DarkIntensityApplier;
@@ -31,11 +31,11 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/navigationbar/NavigationBarView;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$11;Lcom/android/systemui/settings/DisplayTracker;)V
+.method public constructor <init>(Lcom/android/systemui/navigationbar/NavigationBarView;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$8;Lcom/android/systemui/settings/DisplayTracker;)V
     .locals 1
 
     .line 1
-    const v0, 0x7f080a5d    # @drawable/nav_background 'res/drawable-hdpi/nav_background.9.png'
+    const v0, 0x7f080a96    # @drawable/nav_background 'res/drawable-hdpi/nav_background.9.png'
 
     .line 2
     invoke-direct {p0, p1, v0}, Lcom/android/systemui/statusbar/phone/BarTransitions;-><init>(Landroid/view/View;I)V
@@ -59,7 +59,7 @@
     iput-object p1, p0, Lcom/android/systemui/navigationbar/NavigationBarTransitions;->mView:Lcom/android/systemui/navigationbar/NavigationBarView;
 
     .line 18
-    invoke-virtual {p2, p0}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$11;->create(Lcom/android/systemui/statusbar/phone/LightBarTransitionsController$DarkIntensityApplier;)Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;
+    invoke-virtual {p2, p0}, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$8;->create(Lcom/android/systemui/statusbar/phone/LightBarTransitionsController$DarkIntensityApplier;)Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;
 
     .line 20
     move-result-object p2
@@ -83,7 +83,7 @@
     move-result-object p2
 
     .line 35
-    const p3, 0x7f050026    # @bool/config_navigation_bar_enable_auto_dim_no_visible_wallpaper 'true'
+    const p3, 0x7f05002c    # @bool/config_navigation_bar_enable_auto_dim_no_visible_wallpaper 'true'
 
     .line 36
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -119,7 +119,7 @@
     if-eqz p1, :cond_0
 
     .line 62
-    const p2, 0x7f0b054d    # @id/nav_buttons
+    const p2, 0x7f0a0571    # @id/nav_buttons
 
     .line 64
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -571,6 +571,7 @@
     .line 26
     :goto_1
     return p0
+    .line 27
 .end method
 
 .method public final onTransition(IIZ)V

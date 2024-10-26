@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/ambient/touch/ShadeTouchHandler$1;
 .super Landroid/view/GestureDetector$SimpleOnGestureListener;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -122,28 +122,34 @@
     iget-object p3, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler$1;->this$0:Lcom/android/systemui/ambient/touch/ShadeTouchHandler;
 
     .line 44
-    invoke-virtual {p3, p1}, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->sendTouchEvent(Landroid/view/MotionEvent;)V
+    iget-object p3, p3, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->mShadeViewController:Lcom/android/systemui/shade/ShadeViewController;
 
     .line 46
+    invoke-interface {p3, p1}, Lcom/android/systemui/shade/ShadeViewController;->handleExternalTouch(Landroid/view/MotionEvent;)Z
+
+    .line 48
     iget-object p1, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler$1;->this$0:Lcom/android/systemui/ambient/touch/ShadeTouchHandler;
 
-    .line 49
-    invoke-virtual {p1, p2}, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->sendTouchEvent(Landroid/view/MotionEvent;)V
-
     .line 51
+    iget-object p1, p1, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->mShadeViewController:Lcom/android/systemui/shade/ShadeViewController;
+
+    .line 53
+    invoke-interface {p1, p2}, Lcom/android/systemui/shade/ShadeViewController;->handleExternalTouch(Landroid/view/MotionEvent;)Z
+
+    .line 55
     :cond_1
     iget-object p0, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler$1;->this$0:Lcom/android/systemui/ambient/touch/ShadeTouchHandler;
 
-    .line 54
+    .line 58
     iget-object p0, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->mCapture:Ljava/lang/Boolean;
 
-    .line 56
+    .line 60
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 58
+    .line 62
     move-result p0
 
-    .line 61
+    .line 65
     return p0
-    .line 62
+    .line 66
 .end method

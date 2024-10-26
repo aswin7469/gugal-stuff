@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/StatusBarContentInsetsProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/CallbackController;
@@ -403,7 +403,7 @@
     move-result v3
 
     .line 11
-    const v4, 0x7f070928    # @dimen/rounded_corner_content_padding '8.0dp'
+    const v4, 0x7f070978    # @dimen/rounded_corner_content_padding '@android:dimen/secondary_rounded_corner_radius_top'
 
     .line 12
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -436,7 +436,7 @@
     if-eqz v6, :cond_0
 
     .line 32
-    const v6, 0x7f070841    # @dimen/ongoing_appops_dot_min_padding '20.0dp'
+    const v6, 0x7f070884    # @dimen/ongoing_appops_dot_min_padding '20.0dp'
 
     .line 34
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -471,7 +471,7 @@
     if-eqz v5, :cond_1
 
     .line 53
-    const v5, 0x7f070840    # @dimen/ongoing_appops_dot_diameter '6.0dp'
+    const v5, 0x7f070883    # @dimen/ongoing_appops_dot_diameter '6.0dp'
 
     .line 55
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -585,7 +585,7 @@
     if-ne v2, v4, :cond_4
 
     .line 114
-    const v4, 0x7f0709bd    # @dimen/status_bar_bottom_aligned_margin_rotation_270 '-1.0px'
+    const v4, 0x7f070a15    # @dimen/status_bar_bottom_aligned_margin_rotation_270 '-1.0px'
 
     .line 116
     goto :goto_4
@@ -598,7 +598,7 @@
     const-string v1, "Unknown rotation: "
 
     .line 122
-    invoke-static {p1, v1}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 124
     move-result-object v1
@@ -611,21 +611,21 @@
 
     .line 131
     :cond_5
-    const v4, 0x7f0709bc    # @dimen/status_bar_bottom_aligned_margin_rotation_180 '-1.0px'
+    const v4, 0x7f070a14    # @dimen/status_bar_bottom_aligned_margin_rotation_180 '-1.0px'
 
     .line 132
     goto :goto_4
 
     .line 135
     :cond_6
-    const v4, 0x7f0709be    # @dimen/status_bar_bottom_aligned_margin_rotation_90 '-1.0px'
+    const v4, 0x7f070a16    # @dimen/status_bar_bottom_aligned_margin_rotation_90 '-1.0px'
 
     .line 136
     goto :goto_4
 
     .line 139
     :cond_7
-    const v4, 0x7f0709bb    # @dimen/status_bar_bottom_aligned_margin_rotation_0 '-1.0px'
+    const v4, 0x7f070a13    # @dimen/status_bar_bottom_aligned_margin_rotation_0 '-1.0px'
 
     .line 140
     :goto_4
@@ -639,7 +639,7 @@
 
     .line 147
     :goto_5
-    const v4, 0x7f0709cd    # @dimen/status_bar_icon_size_sp '@android:dimen/text_size_display_3_material'
+    const v4, 0x7f070a25    # @dimen/status_bar_icon_size_sp '@android:dimen/text_size_display_3_material'
 
     .line 148
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -779,7 +779,7 @@
     move-result-object p1
 
     .line 25
-    const v0, 0x7f070840    # @dimen/ongoing_appops_dot_diameter '6.0dp'
+    const v0, 0x7f070883    # @dimen/ongoing_appops_dot_diameter '6.0dp'
 
     .line 26
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -788,7 +788,7 @@
     move-result v0
 
     .line 32
-    const v1, 0x7f070838    # @dimen/ongoing_appops_chip_max_width '76.0dp'
+    const v1, 0x7f07087b    # @dimen/ongoing_appops_chip_max_width '76.0dp'
 
     .line 33
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

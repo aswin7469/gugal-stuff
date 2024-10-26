@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/phone/ScrimController$Callback;
@@ -30,7 +30,7 @@
 
 # virtual methods
 .method public expandedVisibleChanged(Z)V
-    .locals 2
+    .locals 3
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl$4;->this$0:Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
@@ -70,7 +70,7 @@
     iget-boolean p1, p1, Lcom/android/systemui/statusbar/phone/StatusBarNotificationActivityStarter;->mIsCollapsingToShowActivityOverLockscreen:Z
 
     .line 23
-    if-nez p1, :cond_2
+    if-nez p1, :cond_3
 
     .line 25
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
@@ -79,7 +79,7 @@
     iget-boolean p1, p1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mHiding:Z
 
     .line 29
-    if-nez p1, :cond_2
+    if-nez p1, :cond_3
 
     .line 31
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -88,7 +88,7 @@
     iget-boolean p1, p1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mKeyguardGoingAway:Z
 
     .line 35
-    if-nez p1, :cond_2
+    if-nez p1, :cond_3
 
     .line 37
     iget p1, p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mState:I
@@ -110,7 +110,7 @@
 
     .line 49
     :cond_1
-    if-ne p1, v0, :cond_2
+    if-ne p1, v0, :cond_3
 
     .line 50
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->primaryBouncerIsOrWillBeShowing()Z
@@ -119,7 +119,7 @@
     move-result p1
 
     .line 55
-    if-nez p1, :cond_2
+    if-nez p1, :cond_3
 
     .line 56
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mSelectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
@@ -131,37 +131,92 @@
     move-result p1
 
     .line 63
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mKeyguardSecurityModel:Lcom/android/keyguard/KeyguardSecurityModel;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mKeyguardSecurityModel:Lcom/android/keyguard/KeyguardSecurityModel;
 
     .line 64
-    invoke-virtual {v0, p1}, Lcom/android/keyguard/KeyguardSecurityModel;->getSecurityMode(I)Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    invoke-virtual {v1, p1}, Lcom/android/keyguard/KeyguardSecurityModel;->getSecurityMode(I)Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
     .line 66
     move-result-object p1
 
     .line 69
-    sget-object v0, Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;->None:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    sget-object v1, Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;->None:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
     .line 70
-    if-eq p1, v0, :cond_2
+    if-eq p1, v1, :cond_3
 
     .line 72
     const-string p1, "CentralSurfaces"
 
     .line 74
-    const-string v0, "showBouncerOrLockScreenIfKeyguard, showingBouncer"
+    const-string v1, "showBouncerOrLockScreenIfKeyguard, showingBouncer"
 
     .line 76
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 78
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->showBouncer()V
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mAlternateBouncerInteractor:Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;
 
     .line 81
+    iget-object v1, p1, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->canShowAlternateBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 83
+    iget-object v1, v1, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+
+    .line 85
+    invoke-interface {v1}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+
+    .line 87
+    move-result-object v1
+
+    .line 90
+    check-cast v1, Ljava/lang/Boolean;
+
+    .line 91
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 93
+    move-result v1
+
+    .line 96
+    if-eqz v1, :cond_2
+
+    .line 97
+    const-string v1, "StatusBarKeyguardViewManager"
+
+    .line 99
+    const-string v2, "showBouncer:alternateBouncer.forceShow()"
+
+    .line 101
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 103
+    iget-object v1, p1, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->bouncerRepository:Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;
+
+    .line 106
+    invoke-virtual {v1, v0}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->setAlternateVisible(Z)V
+
+    .line 108
+    invoke-virtual {p1}, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->isVisibleState()Z
+
+    .line 111
+    move-result p1
+
+    .line 114
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->updateAlternateBouncerShowing(Z)V
+
+    .line 115
+    goto :goto_0
+
+    .line 118
     :cond_2
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->showPrimaryBouncer(Z)V
+
+    .line 119
+    :cond_3
     :goto_0
     return-void
-    .line 84
+    .line 122
 .end method
 
 .method public hide()V

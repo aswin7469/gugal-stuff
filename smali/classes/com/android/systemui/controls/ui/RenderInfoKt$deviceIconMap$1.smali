@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/controls/ui/RenderInfoKt$deviceIconMap$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -54,7 +54,7 @@
     invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
     .line 4
-    const p0, 0x7f080790    # @drawable/ic_device_unknown 'res/drawable/ic_device_unknown.xml'
+    const p0, 0x7f0807a9    # @drawable/ic_device_unknown 'res/drawable/ic_device_unknown.xml'
 
     .line 7
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/DozeParameters;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/tuner/TunerService$Tunable;
@@ -313,17 +313,11 @@
     invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/phone/DozeParameters$2;-><init>(Lcom/android/systemui/statusbar/phone/DozeParameters;)V
 
     .line 155
-    move-object v0, v2
+    invoke-interface {p7, v1}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
     .line 158
-    check-cast v0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
-
-    .line 159
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->addCallback(Ljava/lang/Object;)V
-
-    .line 161
     return-void
-    .line 164
+    .line 161
 .end method
 
 
@@ -475,7 +469,7 @@
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mResources:Landroid/content/res/Resources;
 
     .line 19
-    const v0, 0x7f050050    # @bool/doze_display_state_supported 'false'
+    const v0, 0x7f050060    # @bool/doze_display_state_supported 'false'
 
     .line 21
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -505,7 +499,7 @@
     const-string p2, "doze.pulse.duration.in"
 
     .line 42
-    const v0, 0x7f0c004c    # @integer/doze_pulse_duration_in '130'
+    const v0, 0x7f0b0051    # @integer/doze_pulse_duration_in '130'
 
     .line 44
     invoke-virtual {p0, v0, p2}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getInt(ILjava/lang/String;)I
@@ -517,7 +511,7 @@
     const-string v2, "doze.pulse.duration.visible"
 
     .line 51
-    const v3, 0x7f0c004e    # @integer/doze_pulse_duration_visible '6000'
+    const v3, 0x7f0b0053    # @integer/doze_pulse_duration_visible '6000'
 
     .line 53
     invoke-virtual {p0, v3, v2}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getInt(ILjava/lang/String;)I
@@ -532,7 +526,7 @@
     const-string v1, "doze.pulse.duration.out"
 
     .line 61
-    const v5, 0x7f0c004d    # @integer/doze_pulse_duration_out '600'
+    const v5, 0x7f0b0052    # @integer/doze_pulse_duration_out '600'
 
     .line 63
     invoke-virtual {p0, v5, v1}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getInt(ILjava/lang/String;)I
@@ -601,7 +595,7 @@
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mResources:Landroid/content/res/Resources;
 
     .line 115
-    const v0, 0x7f050054    # @bool/doze_pulse_on_significant_motion 'false'
+    const v0, 0x7f050064    # @bool/doze_pulse_on_significant_motion 'false'
 
     .line 117
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -670,7 +664,7 @@
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mResources:Landroid/content/res/Resources;
 
     .line 167
-    const v0, 0x7f050053    # @bool/doze_proximity_check_before_pulse 'true'
+    const v0, 0x7f050063    # @bool/doze_proximity_check_before_pulse 'true'
 
     .line 169
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -700,7 +694,7 @@
     const-string p2, "doze.pickup.vibration.threshold"
 
     .line 190
-    const v0, 0x7f0c004b    # @integer/doze_pickup_vibration_threshold '2000'
+    const v0, 0x7f0b0050    # @integer/doze_pickup_vibration_threshold '2000'
 
     .line 192
     invoke-virtual {p0, v0, p2}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getInt(ILjava/lang/String;)I
@@ -721,7 +715,7 @@
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mResources:Landroid/content/res/Resources;
 
     .line 207
-    const v0, 0x7f050055    # @bool/doze_selectively_register_prox 'false'
+    const v0, 0x7f050065    # @bool/doze_selectively_register_prox 'false'
 
     .line 209
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -814,7 +808,7 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/DozeParameters;->mResources:Landroid/content/res/Resources;
 
     .line 10
-    const v0, 0x1110140    # @android:bool/config_displayWhiteBalanceEnabledDefault
+    const v0, 0x111013f    # @android:bool/config_displayWhiteBalanceAvailable
 
     .line 12
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getBoolean(I)Z

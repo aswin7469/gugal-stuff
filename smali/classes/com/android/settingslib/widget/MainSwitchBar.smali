@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/MainSwitchBar;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
@@ -72,7 +72,7 @@
 
     move-result-object p4
 
-    const v0, 0x7f0e0248    # @layout/settingslib_main_switch_bar 'res/layout/settingslib_main_switch_bar.xml'
+    const v0, 0x7f0d0258    # @layout/settingslib_main_switch_bar 'res/layout/settingslib_main_switch_bar.xml'
 
     invoke-virtual {p4, v0, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -84,7 +84,7 @@
     .line 8
     invoke-virtual {p0, p4}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
-    const p4, 0x7f0b031c    # @id/frame
+    const p4, 0x7f0a0338    # @id/frame
 
     .line 9
     invoke-virtual {p0, p4}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -93,7 +93,7 @@
 
     iput-object p4, p0, Lcom/android/settingslib/widget/MainSwitchBar;->mFrameView:Landroid/view/View;
 
-    const v0, 0x7f0b07bf    # @id/switch_text
+    const v0, 0x7f0a07ee    # @id/switch_text
 
     .line 10
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -355,7 +355,6 @@
 
     .line 62
     return-void
-    .line 65
 .end method
 
 .method public final onSaveInstanceState()Landroid/os/Parcelable;

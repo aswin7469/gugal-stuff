@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/biometrics/UdfpsShell;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/commandline/Command;
@@ -24,14 +24,14 @@
     invoke-direct {v0, p0}, Lcom/android/systemui/biometrics/UdfpsShell$1;-><init>(Lcom/android/systemui/biometrics/UdfpsShell;)V
 
     .line 7
-    const-string p0, "udfps"
+    const-string/jumbo p0, "udfps"
 
     .line 10
     invoke-virtual {p1, p0, v0}, Lcom/android/systemui/statusbar/commandline/CommandRegistry;->registerCommand(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
 
-    .line 12
+    .line 13
     return-void
-    .line 15
+    .line 16
 .end method
 
 .method public static obtainMotionEvent(IFF)Landroid/view/MotionEvent;
@@ -818,7 +818,6 @@
     .line 21
     :cond_1
     return-void
-    .line 24
 .end method
 
 .method public final setIgnoreDisplayTouches(Z)V
@@ -865,7 +864,6 @@
     .line 23
     :cond_1
     return-void
-    .line 26
 .end method
 
 .method public final simFingerDown()V

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -11,210 +11,128 @@
 
 .field public final synthetic f$0:Ljava/lang/Object;
 
-.field public final synthetic f$1:I
-
 
 # direct methods
-.method public synthetic constructor <init>(IILjava/lang/Object;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
     .line 1
-    iput p2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->$r8$classId:I
+    iput p1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->$r8$classId:I
 
     .line 2
-    iput-object p3, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->f$0:Ljava/lang/Object;
+    iput-object p2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->f$0:Ljava/lang/Object;
 
     .line 4
-    iput p1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->f$1:I
-
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
+    .line 6
     return-void
-    .line 11
+    .line 9
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .locals 8
+    .locals 2
 
     .line 1
     iget v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->$r8$classId:I
 
     .line 2
-    packed-switch v0, :pswitch_data_0
+    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->f$0:Ljava/lang/Object;
 
     .line 4
-    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->f$0:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    .line 7
-    check-cast v0, Lcom/android/systemui/keyguard/KeyguardViewMediator$14;
+    .line 6
+    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$9;
 
     .line 9
-    iget p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->f$1:I
+    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$9;->mUnoccludeAnimator:Landroid/animation/ValueAnimator;
 
     .line 11
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz p0, :cond_0
 
     .line 13
-    :try_start_0
-    iget-object v0, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator$14;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 16
-    iget-object v0, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mActivityTaskManagerService:Landroid/app/IActivityTaskManager;
-
-    .line 18
-    invoke-interface {v0, p0}, Landroid/app/IActivityTaskManager;->keyguardGoingAway(I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 20
-    goto :goto_0
-
-    .line 23
-    :catch_0
-    move-exception p0
-
-    .line 24
-    const-string v0, "KeyguardViewMediator"
-
-    .line 25
-    const-string v1, "Error while calling WindowManager"
-
-    .line 27
-    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 29
-    :goto_0
-    return-void
-
-    .line 32
-    :pswitch_0
-    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->f$0:Ljava/lang/Object;
-
-    .line 33
-    check-cast v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
-
-    .line 35
-    iget p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->f$1:I
-
-    .line 37
-    iget-object v1, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-
-    .line 39
-    invoke-virtual {v1, p0}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
-
-    .line 41
-    move-result v1
-
-    .line 44
-    if-eqz v1, :cond_0
-
-    .line 45
-    iget-object v0, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-
-    .line 47
-    invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils;->getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
-
-    .line 49
-    move-result-object v0
-
-    .line 52
-    invoke-virtual {v0, p0}, Landroid/app/admin/DevicePolicyManager;->reportKeyguardDismissed(I)V
-
-    .line 53
+    .line 15
     :cond_0
     return-void
 
-    .line 56
-    :pswitch_1
-    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->f$0:Ljava/lang/Object;
+    .line 18
+    :pswitch_0
+    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;
 
-    .line 57
-    check-cast v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    .line 19
+    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;->mOccludeByDreamAnimator:Ljava/lang/Object;
 
-    .line 59
-    iget v2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda7;->f$1:I
+    .line 21
+    check-cast p0, Landroid/animation/ValueAnimator;
 
-    .line 61
-    iget-object p0, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mAudioManager:Landroid/media/AudioManager;
-
-    .line 63
-    iget v1, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mUiSoundsStreamType:I
-
-    .line 65
-    invoke-virtual {p0, v1}, Landroid/media/AudioManager;->isStreamMute(I)Z
-
-    .line 67
-    move-result p0
-
-    .line 70
+    .line 23
     if-eqz p0, :cond_1
 
-    .line 71
-    goto :goto_1
+    .line 25
+    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 73
+    .line 27
     :cond_1
-    iget-object v1, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mLockSounds:Landroid/media/SoundPool;
-
-    .line 74
-    iget v4, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mLockSoundVolume:F
-
-    .line 76
-    const/4 v5, 0x1
-
-    .line 78
-    const/4 v6, 0x0
-
-    .line 79
-    const/high16 v7, 0x3f800000    # 1.0f
-
-    .line 80
-    move v3, v4
-
-    .line 82
-    invoke-virtual/range {v1 .. v7}, Landroid/media/SoundPool;->play(IFFIIF)I
-
-    .line 83
-    move-result p0
-
-    .line 86
-    monitor-enter v0
-
-    .line 87
-    :try_start_1
-    iput p0, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mLockSoundStreamId:I
-
-    .line 88
-    monitor-exit v0
-
-    .line 90
-    :goto_1
     return-void
 
-    .line 91
-    :catchall_0
-    move-exception p0
+    .line 30
+    :pswitch_1
+    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$3;
 
-    .line 92
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .line 31
+    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$3;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 93
-    throw p0
+    .line 33
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 94
-    nop
+    .line 35
+    new-instance v0, Lcom/android/systemui/keyguard/KeyguardViewMediator$DismissMessage;
 
-    .line 95
+    .line 38
+    const/4 v1, 0x0
+
+    .line 40
+    invoke-direct {v0, v1, v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator$DismissMessage;-><init>(Lcom/android/internal/policy/IKeyguardDismissCallback;Ljava/lang/CharSequence;)V
+
+    .line 41
+    const/16 v1, 0xb
+
+    .line 44
+    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mHandler:Lcom/android/systemui/keyguard/KeyguardViewMediator$13;
+
+    .line 46
+    invoke-virtual {p0, v1, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    .line 48
+    move-result-object p0
+
+    .line 51
+    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
+
+    .line 52
+    return-void
+
+    .line 55
+    :pswitch_2
+    check-cast p0, Landroid/app/trust/TrustManager;
+
+    .line 56
+    invoke-virtual {p0}, Landroid/app/trust/TrustManager;->reportKeyguardShowingChanged()V
+
+    .line 58
+    return-void
+
+    .line 61
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 96
+    .line 62
 .end method

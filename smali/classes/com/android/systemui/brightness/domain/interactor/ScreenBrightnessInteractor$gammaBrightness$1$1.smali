@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/brightness/domain/interactor/ScreenBrightnessInteractor$gammaBrightness$1$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function4;
@@ -131,28 +131,25 @@
     move-result p0
 
     .line 25
-    invoke-static {p0}, Lcom/android/systemui/brightness/shared/model/GammaBrightness;->constructor-impl(I)V
-
-    .line 26
     new-instance p1, Lcom/android/systemui/brightness/shared/model/GammaBrightness;
 
-    .line 29
+    .line 26
     invoke-direct {p1, p0}, Lcom/android/systemui/brightness/shared/model/GammaBrightness;-><init>(I)V
 
-    .line 31
+    .line 28
     return-object p1
 
-    .line 34
+    .line 31
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 35
+    .line 32
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    .line 37
+    .line 34
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 39
+    .line 36
     throw p0
-    .line 42
+    .line 39
 .end method

@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">τοποθέτηση επιλεγμένου γραφικού στοιχείου</string>
   <string name="accessibility_action_label_remove_widget">κατάργηση γραφικού στοιχείου</string>
   <string name="accessibility_action_label_select_widget">επιλογή γραφικού στοιχείου</string>
-  <string name="accessibility_action_open_communal_hub">Γραφικά στοιχεία στην οθόνη κλειδώματος</string>
   <string name="accessibility_action_pip_resize">Αλλαγή μεγέθους</string>
   <string name="accessibility_action_pip_stash">Απόκρυψη</string>
   <string name="accessibility_action_pip_unstash">Κατάργηση απόκρυψης</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">'Έξοδος από τη λειτουργία ενός χεριού</string>
   <string name="accessibility_airplane_mode">Λειτουργία πτήσης.</string>
   <string name="accessibility_allow_diagonal_scrolling">Να επιτρέπεται η διαγώνια κύλιση</string>
+  <string name="accessibility_assistant_poodle">Φωνητική αναζήτηση</string>
   <string name="accessibility_authenticate_hint">έλεγχος ταυτότητας</string>
   <string name="accessibility_back">Πίσω</string>
   <string name="accessibility_banner_message_dismiss">Παράβλεψη</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">εισαγωγή συσκευής</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Το Ethernet αποσυνδέθηκε.</string>
-  <string name="accessibility_fingerprint_bouncer">Απαιτείται έλεγχος ταυτότητας. Αγγίξτε τον αισθητήρα δακτυλικών αποτυπωμάτων για έλεγχο ταυτότητας.</string>
   <string name="accessibility_fingerprint_label">Αισθητήρας δακτυλικών αποτυπωμάτων</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">εναλλαγή</string>
   <string name="accessibility_floating_button_action_edit">Επεξεργασία</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Μενού</string>
   <string name="accessibility_multi_user_list_switcher">αναπτυσσόμενο μενού</string>
   <string name="accessibility_multi_user_switch_switcher">Εναλλαγή χρήστη</string>
+  <string name="accessibility_next_alarm">Επόμενο ξυπνητήρι στις %s</string>
   <string name="accessibility_no_calling">Χωρίς κλήσεις.</string>
   <string name="accessibility_no_phone">Δεν υπάρχει τηλέφωνο.</string>
   <string name="accessibility_no_wifi">Το Wi-Fi έχει αποσυνδεθεί.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Η οθόνη έχει κλειδωθεί σε κατακόρυφο προσανατολισμό.</string>
   <string name="accessibility_send_smart_reply">Αποστολή</string>
   <string name="accessibility_sensors_off_active">Απενεργοποίηση αισθητήρων ενεργή</string>
+  <string name="accessibility_settings_gear">Ρυθμίσεις Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Αγγίξτε τον αισθητήρα δακτυλικών αποτυπωμάτων. Είναι το πιο κοντό κουμπί στην πλευρά του τηλεφώνου.</string>
+  <string name="accessibility_smartspace_page">Σελίδα %1$d από %2$d</string>
   <string name="accessibility_split_bottom">Διαχωρισμός κάτω</string>
   <string name="accessibility_split_left">Διαχωρισμός αριστερά</string>
   <string name="accessibility_split_right">Διαχωρισμός δεξιά</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Τρεις γραμμές Wi-Fi.</string>
   <string name="accessibility_wifi_two_bars">Δύο γραμμές Wi-Fi.</string>
   <string name="accesssibility_keyguard_retry">Σύρ. προς τα πάνω για να επαναλ. το Ξεκλείδωμα με το πρόσωπο</string>
+  <string name="adaptive_charging_notify_des">Η μπαταρία θα έχει φορτίσει πλήρως έως τις %1$s. Σταθερή φόρτιση με σκοπό την επιμήκυνση της διάρκειας ζωής της μπαταρίας.</string>
+  <string name="adaptive_charging_notify_title">Η προσαρμοστική φόρτιση είναι ενεργή</string>
+  <string name="adaptive_charging_notify_turn_off_once">Απενεργοποίηση μία φορά</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Προσαρμοστική φόρτιση • Πλήρης φόρτιση έως τις %2$s</string>
   <string name="add">Προσθήκη</string>
   <string name="add_guest_failed">Αποτυχία δημιουργίας νέου επισκέπτη</string>
   <string name="airplane_mode">Λειτουργία πτήσης</string>
   <string name="alarm_template">στις %1$s</string>
-  <string name="alarm_template_far">στις %1$s</string>
+  <string name="alarm_template_far">το/τη(ν) %1$s</string>
   <string name="all_network_unavailable">Δεν υπάρχουν διαθέσιμα δίκτυα</string>
   <string name="always_use_accessory">Να ανοίγει πάντα η εφ. %1$s όταν είναι συνδεδεμένο το %2$s</string>
   <string name="always_use_device">Να ανοίγει πάντα η εφ. %1$s όταν είναι συνδεδεμένo το %2$s</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Πληροφορ. εφαρμογής</string>
   <string name="app_label">UI συστήματ.</string>
   <string name="assistant_attention_content_description">Εντοπίστηκε παρουσία χρήστη</string>
+  <string name="assistant_scrim_label">Ακρόαση, πατήστε για ακύρωση</string>
   <string name="audio_sharing_description">Κοινοποίηση ήχου</string>
   <string name="audio_status">Ακρόαση</string>
   <string name="auto_data_switch_dialog_negative_button">Όχι, ευχαριστώ</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Πίσω</string>
   <string name="battery">Μπαταρία</string>
   <string name="battery_detail_switch_title">Εξοικονόμηση μπαταρίας</string>
-  <string name="battery_low_description">Απομένει %s μπαταρία. Η Εξοικονόμηση μπαταρίας ενεργοποιεί το Σκούρο θέμα, περιορίζει τη δραστηριότητα στο παρασκήνιο και καθυστερεί τις ειδοποιήσεις.</string>
+  <string name="battery_health_notify_learn_more">Μάθετε περισσότερα</string>
   <string name="battery_low_intro">Η Εξοικονόμηση μπαταρίας ενεργοποιεί το Σκούρο θέμα, περιορίζει τη δραστηριότητα στο παρασκήνιο και καθυστερεί τις ειδοποιήσεις.</string>
-  <string name="battery_low_title">Ενεργοποίηση Εξοικονόμησης μπαταρίας;</string>
   <string name="battery_saver_confirmation_ok">Ενεργοποίηση</string>
   <string name="battery_saver_confirmation_title">Να ενεργοποιηθεί η Εξοικονόμηση μπαταρίας;</string>
   <string name="battery_saver_confirmation_title_generic">Σχετικά με την Εξοικονόμηση μπαταρίας</string>
-  <string name="battery_saver_dismiss_action">Όχι, ευχαριστώ</string>
   <string name="battery_saver_start_action">Ενεργοποίηση</string>
   <string name="battery_state_unknown_notification_text">Πατήστε για περισσότερες πληροφορίες.</string>
   <string name="battery_state_unknown_notification_title">Υπάρχει κάποιο πρόβλημα με την ανάγνωση του μετρητή μπαταρίας</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">Ενεργό. Α: %1$s, Δ: %2$s μπαταρία.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Ενεργό. Α: %1$s μπαταρία.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Ενεργό. Δ: %1$s μπαταρία.</string>
-  <string name="bluetooth_active_media_only_battery_level">Ενεργό (μόνο για μέσα). %1$s μπαταρία.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Ενεργό (μόνο για μέσα). Α: %1$s, Δ: %2$s μπαταρία.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Ενεργό (μόνο για μέσα)</string>
   <string name="bluetooth_active_no_battery_level">Ενεργό</string>
   <string name="bluetooth_battery_level">%1$s μπαταρία</string>
-  <string name="bluetooth_battery_level_lea_support">Συνδεδεμένο (υποστηρίζει κοινή χρήση ήχου). %1$s μπαταρία.</string>
   <string name="bluetooth_battery_level_untethered">Α: %1$s, Δ: %2$s μπαταρία.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Συνδεδεμένο (υποστηρίζει κοινή χρήση ήχου). Α: %1$s, Δ: %2$s μπαταρία.</string>
   <string name="bluetooth_connected">Σε σύνδεση%1$s</string>
   <string name="bluetooth_connecting">Σύνδεση...</string>
   <string name="bluetooth_disconnected">Αποσυνδέθηκε</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">Ενεργό (μόνο το αριστερό)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Ενεργό (αριστερό και δεξί)</string>
   <string name="bluetooth_hearing_aid_right_active">Ενεργό (μόνο το δεξί)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Συνδεδεμένο (υποστηρίζει κοινή χρήση ήχου)</string>
   <string name="bluetooth_pairing">Σύζευξη...</string>
   <string name="bluetooth_pairing_device_down_error_message">Δεν είναι δυνατή η σύνδεση με τη συσκευή %1$s.</string>
   <string name="bluetooth_pairing_error_message">Δεν ήταν δυνατή η σύζευξη με τη συσκευή %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Δεν ήταν δυνατή η σύζευξη με το %1$s λόγω λάθους PIN ή κλειδιού πρόσβ.</string>
   <string name="bluetooth_pairing_rejected_error_message">Η ζεύξη απορρίφθηκε από τη συσκευή %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">Υποστηρίζει κοινή χρήση ήχου</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Υπολογιστής</string>
   <string name="bluetooth_talkback_headphone">Ακουστικά</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">Υπερχείλιση</string>
   <string name="bubble_overflow_empty_subtitle">Τα πρόσφατα συννεφάκια και τα συννεφάκια που παραβλέψατε θα εμφανίζονται εδώ.</string>
   <string name="bubble_overflow_empty_title">Δεν υπάρχουν πρόσφατα συννεφάκια</string>
-  <string name="bubble_shortcut_label">Συννεφάκια</string>
-  <string name="bubble_shortcut_long_label">Εμφάνιση συννεφακίων</string>
   <string name="bubbles_app_settings">Ρυθμίσεις %1$s</string>
   <string name="bubbles_dont_bubble_conversation">Να μην γίνει προβολή της συζήτησης σε συννεφάκια.</string>
   <string name="bubbles_settings_button_description">Ρυθμίσεις για συννεφάκια %1$s</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">Διακοπή μετάδοσης</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Θα διακόψετε τη μετάδοση της εφαρμογής &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">Τα δεδομένα κινητής τηλεφωνίας απενεργοποιήθηκαν</string>
+  <string name="charge_limit_discovery_notification_enable_button">Ενεργοποίηση τώρα</string>
+  <string name="charge_limit_discovery_notification_text">Ενεργοποιήστε τη λειτουργία ορίου 80% για να προστατέψετε την υγεία και τη διάρκεια ζωής της μπαταρίας. Μπορείτε να διαχειριστείτε αυτή την επιλογή στις Ρυθμίσεις ανά πάσα στιγμή</string>
+  <string name="charge_limit_discovery_notification_title">Προστατέψτε την μπαταρία σας κατά τη διάρκεια της φόρτισης</string>
+  <string name="charging_reverse_text">Κοινή χρήση μπαταρίας σε εξέλιξη</string>
   <string name="clear_all_notifications_text">Διαγραφή όλων</string>
   <string name="clipboard">Πρόχειρο</string>
   <string name="clipboard_content_copied">Το περιεχόμενο αντιγράφηκε</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">Κλείσιμο</string>
   <string name="close_dialog_button">Κλείσιμο</string>
   <string name="collapse_menu_text">Κλείσιμο μενού</string>
+  <string name="columbus_bouncer_message">Ξεκλειδώστε για ολοκλήρωση του Γρήγορου πατήματος</string>
+  <string name="columbus_target_request_dialog_allow">Αποδοχή</string>
+  <string name="columbus_target_request_dialog_deny">Να μην επιτραπεί</string>
+  <string name="columbus_target_request_dialog_summary">Πατήστε δύο φορές το πίσω μέρος του τηλεφώνου για άνοιγμα της εφαρμογής %1$s. Μπορείτε να αλλάξετε αυτήν τη ρύθμιση ανά πάσα στιγμή από τις Ρυθμίσεις.</string>
+  <string name="columbus_target_request_dialog_title">Να επιτραπεί το άνοιγμα της εφαρμογής %1$s με το Γρήγορο πάτημα;</string>
   <string name="communal_tutorial_indicator_text">Σύρετε προς τα αριστερά για να ξεκινήσετε τον κοινόχρηστο οδηγό</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Θα γίνει κατοπτρισμός της εσωτερικής προβολής. Η μπροστινή οθόνη θα απενεργοποιηθεί.</string>
   <string name="connected_display_dialog_start_mirroring">Κατοπτρισμός σε εξωτερική οθόνη;</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">Τα δεδομένα κινητής τηλεφωνίας τέθηκαν σε παύση</string>
   <string name="data_usage_disabled_dialog_title">Τα δεδομένα τέθηκαν σε παύση</string>
   <string name="days_timestamp">Πριν από %1$s ημέρες</string>
-  <string name="default_error_message">Μη έγκυρη καταχώριση</string>
   <string name="default_popup_window_title">Αναδυόμενο παράθυρο</string>
+  <string name="defender_notify_resume_charge">Παράκαμψη</string>
+  <string name="defender_notify_title">Προστασία της μπαταρίας</string>
+  <string name="defender_post_notify_des">Για την επέκταση της διάρκειας ζωής της μπαταρίας, η φόρτιση βελτιστοποιήθηκε από τις %1$s έως τις %2$s</string>
+  <string name="defender_post_notify_title">Η φόρτιση βελτιστοποιήθηκε</string>
   <string name="demo_mode">Λειτουργία επίδειξης διεπαφής χρήστη συστήματος</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Μεγιστοποίηση οθόνης</string>
   <string name="desktop_mode_maximize_menu_snap_text">Προβολή στο μισό της οθόνης</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">Αυτή η συσκευή ανήκει στον οργανισμό σας.</string>
   <string name="do_disclosure_with_name">Αυτή η συσκευή ανήκει στον οργανισμό %s</string>
   <string name="do_financed_disclosure_with_name">Αυτή η συσκευή παρέχεται από τον οργανισμό %s</string>
+  <string name="dock_a11y_action_show_photo_text">Εμφάνιση κάδρου φωτογραφίας</string>
+  <string name="dock_alignment_not_charging">Ευθυγραμμίστε ξανά το τηλέφωνο, για να το φορτίσετε ασύρματα</string>
+  <string name="dock_alignment_slow_charging">Ευθυγραμμίστε ξανά το τηλέφωνο για ταχύτερη φόρτιση</string>
+  <string name="dock_defender_first_run_des">Για την επέκταση της διάρκειας ζωής μπαταρίας, η φόρτιση τίθεται σε αναμονή στο 90% όταν το tablet σας είναι στη βάση σύνδεσης. Μεταβείτε στις Ρυθμίσεις ανά πάσα στιγμή για παράκαμψη.</string>
+  <string name="dock_defender_first_run_settings">Ρυθμίσεις</string>
+  <string name="dock_defender_first_run_title">Η φόρτιση τέθηκε σε αναμονή για προστασία της μπαταρίας</string>
   <string name="dock_multi_instances_not_supported_text">Αυτή η εφαρμογή μπορεί να ανοίξει μόνο σε ένα παράθυρο</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Η εφαρμογή δεν υποστηρίζει διαχωρισμό οθόνης.</string>
+  <string name="dock_photo_preview_text">Έναρξη κάδρου φωτογραφιών…</string>
+  <string name="dock_promo_text">Σύρετε αριστερά για κάδρο φωτογραφιών</string>
   <string name="done">Τέλος</string>
   <string name="drag_split_not_supported">Αυτή η ειδοποίηση δεν υποστηρίζει τη μεταφορά με σύρσιμο για τον διαχωρισμό οθόνης</string>
   <string name="drag_to_add_tiles">Κρατήστε και σύρετε για την προσθήκη πλακιδίων</string>
   <string name="drag_to_rearrange_tiles">Κρατήστε και σύρετε για αναδιάταξη των πλακιδίων</string>
   <string name="drag_to_remove_disabled">Χρειάζεστε τουλάχιστον %1$d πλακίδια</string>
   <string name="drag_to_remove_tiles">Σύρετε εδώ για κατάργηση</string>
+  <string name="dream_lockscreen_wallpaper_description">Χρήση τρέχουσας ταπετσαρίας οθόνης κλειδ.</string>
+  <string name="dream_lockscreen_wallpaper_label">Ταπετσαρία</string>
   <string name="dream_overlay_status_bar_alarm_set">Το ξυπνητήρι ρυθμίστηκε</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Η κάμερα και το μικρόφωνο έχουν απενεργοποιηθεί</string>
   <string name="dream_overlay_status_bar_camera_off">Η κάμερα είναι απενεργοποιημένη</string>
   <string name="dream_overlay_status_bar_mic_off">Το μικρόφωνο είναι απενεργοποιημένο</string>
   <string name="dream_overlay_status_bar_priority_mode">Λειτουργία προτεραιότητας</string>
   <string name="dream_overlay_status_bar_wifi_off">Το Wi‑Fi δεν είναι διαθέσιμο</string>
+  <string name="dwell_defender_notify_des">Αυτό συμβάλλει στην επέκταση της διάρκειας ζωής μπαταρίας, όταν αφήνετε το τηλέφωνό σας να φορτίζει για υπερβολικά πολύ χρόνο</string>
+  <string name="dwell_defender_notify_title">Η φόρτιση τέθηκε σε αναμονή για προστασία της μπαταρίας</string>
   <string name="edit_user_info_message">Το όνομα και η εικόνα που θα επιλέξετε θα είναι ορατά σε όλους όσους χρησιμοποιούν αυτή τη συσκευή.</string>
   <string name="edit_widget">Επεξεργασία γραφικού στοιχείου</string>
   <string name="empty_shade_text">Δεν υπάρχουν ειδοποιήσεις</string>
@@ -561,13 +581,17 @@
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Σύνθετες</string>
   <string name="expand_menu_text">Άνοιγμα μενού</string>
+  <string name="extreme_battery_saver_text">Μέγιστη</string>
+  <string name="extreme_low_battery_notification_text">Η λειτουργία του τηλεφώνου θα τερματιστεί, αν δεν το φορτίσετε σύντομα</string>
+  <string name="extreme_low_battery_notification_title">Πολύ χαμηλή μπαταρία</string>
   <string name="face_re_enroll_dialog_content">Για να ρυθμίσετε ξανά το Ξεκλείδωμα με το πρόσωπο, το τρέχον μοντέλο προσώπου σας θα διαγραφεί.
 
 Θα χρειαστεί να ρυθμίσετε ξανά αυτήν τη λειτουργία για να χρησιμοποιήσετε το πρόσωπό σας για να ξεκλειδώσετε το τηλέφωνό σας.</string>
   <string name="face_re_enroll_dialog_title">Ρύθμιση λειτουργίας Ξεκλείδωμα με το πρόσωπο</string>
   <string name="face_re_enroll_notification_name">Ξεκλείδωμα με το πρόσωπο</string>
   <string name="face_re_enroll_notification_title">Επαναρρύθμιση λειτουργίας Ξεκλείδωμα με το πρόσωπο</string>
-  <string name="face_reenroll_failure_dialog_content">Δεν ήταν δυνατή η ρύθμιση για το Ξεκλείδωμα με το πρόσωπο. Μεταβείτε στις Ρυθμίσεις και δοκιμάστε ξανά.</string>
+  <string name="face_reenroll_dialog_confirm">Ρύθμιση</string>
+  <string name="face_reenroll_failure_dialog_content">Δεν ήταν δυνατή η ρύθμιση για ξεκλείδωμα με το πρόσωπο. Μεταβείτε στις Ρυθμίσεις και δοκιμάστε ξανά.</string>
   <string name="failed_attempts_now_wiping_device">Πάρα πολλές ανεπιτυχείς προσπάθειες. Τα δεδομένα αυτής της συσκευής θα διαγραφούν.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Παράβλεψη</string>
   <string name="failed_attempts_now_wiping_profile">Πάρα πολλές ανεπιτυχείς προσπάθειες. Αυτό το προφίλ εργασίας και τα δεδομένα του θα διαγραφούν.</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">Να μικρύνουν</string>
   <string name="fullscreen_text">Πλήρης οθόνη</string>
   <string name="game_status">Παίζει τώρα</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Η Επέκταση ξεκλειδώματος είναι απενεργοποιημένη</string>
   <string name="go_to_web">Μετάβ. σε πρόγ. περ.</string>
   <string name="got_it">Το κατάλαβα</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">Επαναφορά περιόδου σύνδεσης επισκέπτη;</string>
   <string name="guest_reset_guest_confirm_button">Επαναφορά</string>
   <string name="guest_resetting">Επαναφορά επισκέπτη…</string>
+  <string name="handle_invocation_prompt">Σύρετε για να μιλήσετε</string>
   <string name="handle_text">Λαβή</string>
   <string name="headset">Ακουστικά</string>
   <string name="hearing_devices_preset_label">Προεπιλογή</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">Το τηλέφωνο θερμαίνεται</string>
   <string name="home_controls_dream_description">Γρήγ. πρόσβαση σε οικιακ. ελέγχους ως προφ. οθόνης</string>
   <string name="home_controls_dream_label">Οικιακοί έλεγχοι</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Διατίθεται τουλάχιστον μία συσκευή ή ένα πλαίσιο συσκευής</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Για να προσθέσετε την εφαρμογή Home ως συντόμευση, βεβαιωθείτε ότι η εφαρμογή είναι εγκατεστημένη</string>
   <string name="hub_mode_add_widget_button_text">Προσθήκη γραφικού στοιχείου</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">Σε εξέλιξη</string>
   <string name="inattentive_sleep_warning_message">Η συσκευή σύντομα θα απενεργοποιηθεί. Πατήστε, για να την κρατήσετε ενεργοποιημένη.</string>
   <string name="inattentive_sleep_warning_title">Κατάσταση αναμονής</string>
+  <string name="incompatible_charging_learn_more">Μάθετε περισσότερα</string>
+  <string name="incompatible_charging_notify_des">Το τηλέφωνό σας μπορεί να φορτίζει αργά ή να μην φορτίζει. Για πιο γρήγορη φόρτιση, χρησιμοποιήστε ένα προτεινόμενο καλώδιο και μετασχηματιστή.</string>
+  <string name="incompatible_charging_notify_title">Έλεγχος αξεσουάρ φόρτισης</string>
   <string name="indeterminate">Έγινε μερικός έλεγχος</string>
   <string name="inline_done_button">Τέλος</string>
   <string name="inline_ok_button">Εφαρμογή</string>
   <string name="inline_turn_off_notifications">Απενεργοποίηση ειδοποιήσεων</string>
   <string name="input_switch_input_language_next">Εναλλαγή στην επόμενη γλώσσα</string>
   <string name="input_switch_input_language_previous">Εναλλαγή στην προηγούμενη γλώσσα</string>
+  <string name="install_app">Εγκατάσταση εφαρμογής</string>
   <string name="install_dialer_on_work_profile_action">Εγκαταστήστε μια εφαρμογή εργασιών για τηλεφωνικές κλήσεις</string>
   <string name="install_type_instant">Instant Εφαρμογή</string>
   <string name="instant_apps">Instant Εφαρμογές</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">Η εφαρμογή %1$s εκτελείται</string>
   <string name="interruption_level_none">Πλήρης σίγαση</string>
   <string name="interruption_level_priority">Μόνο προτεραιότητας</string>
-  <string name="invalid_charger_text">Χρησιμοποιήστε τον φορτιστή που συνοδεύει τη συσκευή σας</string>
-  <string name="invalid_charger_title">Δεν είναι δυνατή η φόρτιση μέσω USB</string>
   <string name="issuerecord_background_processing_label">Επεξερ. καταγραφής προβλήματος</string>
   <string name="issuerecord_ongoing_screen_only">Πρόβλημα καταγραφής</string>
   <string name="issuerecord_save_title">Η καταγραφή του προβλήματος αποθηκεύτηκε</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">Η συσκευή είναι κλειδωμένη
 Ο έλεγχος ταυτότητας απέτυχε</string>
   <string name="keyguard_indication_charging_time">%2$s • Φόρτιση • Πλήρης φόρτιση σε %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Η φόρτιση θα ολοκληρωθεί έως τις %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Φόρτιση • Πλήρης φόρτιση σε %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Πλήρης φόρτιση έως τις %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Γρήγορη φόρτιση • Πλήρης φόρτιση σε %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Γρήγορη φόρτιση • Πλήρης φόρτιση έως τις %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Η φόρτιση ολοκληρώθηκε</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Αργή φόρτιση • Πλήρης φόρτιση σε %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Πλήρης φόρτιση έως τις %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Πλήρης φόρτιση έως τις %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Ασύρματη φόρτιση • Πλήρης φόρτιση σε %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Διατήρηση ξεκλειδώματος με TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Πλήρης φόρτιση έως τις %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Διατηρείται ξεκλει. από την Επέκτ. ξεκλ.</string>
   <string name="keyguard_missing_sim_message_short">Δεν υπάρχει SIM</string>
   <string name="keyguard_network_locked_message">Κλειδωμένο δίκτυο</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Η SIM δεν μπορεί να χρησιμοποιηθεί.</string>
   <string name="keyguard_plugged_in">%s • Φόρτιση</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Γρήγορη φόρτιση</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Γρήγορη φόρτιση σε εξέλιξη</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Η φόρτιση τέθηκε σε αναμονή για την προστασία της μπαταρίας</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Αργή φόρτιση</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Φόρτιση σε εξέλιξη</string>
   <string name="keyguard_plugged_in_dock">%s • Φόρτιση</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Φόρτιση σε εξέλιξη</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Ελέγξτε το αξεσουάρ φόρτισης</string>
+  <string name="keyguard_plugged_in_v2">%s • Φόρτιση σε εξέλιξη</string>
   <string name="keyguard_plugged_in_wireless">%s • Ασύρματη φόρτιση</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Φόρτιση σε εξέλιξη</string>
   <string name="keyguard_retry">Σύρετε προς τα πάνω για να δοκιμάσετε ξανά</string>
   <string name="keyguard_sim_error_message_short">Μη έγκυρη κάρτα.</string>
   <string name="keyguard_sim_locked_message">Η SIM είναι κλειδωμένη.</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">Οι κωδικοί PIN δεν ταυτίζονται</string>
   <string name="kg_invalid_sim_pin_hint">Πληκτρολογήστε έναν αριθμό PIN που να αποτελείται από 4 έως 8 αριθμούς.</string>
   <string name="kg_invalid_sim_puk_hint">Ο κωδικός PUK θα πρέπει να περιέχει τουλάχιστον 8 αριθμούς.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Εισαγάγετε τον κωδικό PIN της κάρτας SIM. Απομένει άλλη # προσπάθεια. Στη συνέχεια, θα πρέπει να επικοινωνήσετε με τον πάροχο κινητής τηλεφωνίας, για να ξεκλειδώσετε τη συσκευή.}other{Εισαγάγετε τον κωδικό PIN της κάρτας SIM. Απομένουν # προσπάθειες.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{Η κάρτα SIM απενεργοποιήθηκε. Εισαγάγετε τον κωδικό PUK, για να συνεχίσετε. Απομένει # ακόμη προσπάθεια προτού να μην είναι πλέον δυνατή η χρήση της κάρτας SIM. Επικοινωνήστε με την εταιρεία κινητής τηλεφωνίας για λεπτομέρειες.}other{Η κάρτα SIM απενεργοποιήθηκε. Εισαγάγετε τον κωδικό PUK, για να συνεχίσετε. Απομένουν # ακόμη προσπάθειες προτού να μην είναι πλέον δυνατή η χρήση της κάρτας SIM. Επικοινωνήστε με την εταιρεία κινητής τηλεφωνίας για λεπτομέρειες.}}</string>
   <string name="kg_password_pin_failed">Αποτυχία λειτουργίας κωδικού PIN κάρτας SIM!</string>
   <string name="kg_password_puk_failed">Αποτυχία λειτουργίας κωδικού PUK κάρτας SIM!</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">Εισαγάγετε τον αριθμό PIN της κάρτας SIM "%1$s".</string>
   <string name="kg_sim_unlock_progress_dialog_message">Ξεκλείδωμα SIM…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Δοκιμάστε ξανά σε # δευτερόλεπτο.}other{Δοκιμάστε ξανά σε # δευτερόλεπτα.}}</string>
-  <string name="kg_trust_agent_disabled">Ο παράγοντας εμπιστοσύνης δεν είναι διαθέσιμος</string>
+  <string name="kg_trust_agent_disabled">Η Επέκταση ξεκλειδώματος δεν είναι διαθέσιμη</string>
   <string name="kg_unlock_with_password_or_fp">Ξεκλ. με κωδ. πρόσβ. ή δακτ. αποτ.</string>
   <string name="kg_unlock_with_pattern_or_fp">Ξεκλ. με μοτίβο ή δακτ. αποτ.</string>
   <string name="kg_unlock_with_pin_or_fp">Ξεκλ. με PIN ή δακτ. αποτ.</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">Μάθετε περισσότερα</string>
   <string name="log_access_confirmation_learn_more_at">Μάθετε περισσότερα στο %s.</string>
   <string name="log_access_confirmation_title">Να επιτρέπεται στο %s η πρόσβαση σε όλα τα αρχεία καταγραφής συσκευής;</string>
+  <string name="low_battery_label">Χαμηλή στάθμη μπαταρίας</string>
+  <string name="low_battery_notification_text">Ενεργοποιήστε τη Βασική εξοικονόμηση μπαταρίας, για να επεκτείνετε τη διάρκεια ζωή μπαταρίας</string>
+  <string name="low_battery_notification_text_ebs">Ενεργοποιήστε τη Μέγιστη εξοικονόμηση μπαταρίας, για να επεκτείνετε τη διάρκεια ζωή μπαταρίας</string>
+  <string name="low_battery_notification_title">Απομένει %s μπαταρία</string>
   <string name="m3c_search_bar_search">Αναζήτηση</string>
   <string name="m3c_suggestions_available">Προτάσεις παρακάτω</string>
   <string name="magnification_close_settings_click_label">Κλείσιμο ρυθμίσεων μεγιστοποίησης</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Διακοπή</string>
   <string name="media_output_end_session_dialog_summary">Διακόψτε την κοινόχρηστη περίοδο λειτουργίας για να μεταφέρετε μέσα σε άλλη συσκευή</string>
-  <string name="media_output_first_broadcast_title">Πώς λειτουργεί η μετάδοση</string>
-  <string name="media_output_first_notify_broadcast_message">Οι άνθρωποι με συμβατές συσκευές Bluetooth που βρίσκονται κοντά σας μπορούν να ακούσουν το μέσο που μεταδίδετε.</string>
   <string name="media_output_group_title_speakers_and_displays">Ηχεία και οθόνες</string>
   <string name="media_output_group_title_suggested_device">Προτεινόμενες συσκευές</string>
   <string name="media_output_label_title">Αναπαραγωγή %s σε</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Όταν κάνετε μετάδοση μιας εφαρμογής, το Android έχει πρόσβαση σε οτιδήποτε είναι ορατό ή αναπαράγεται στη συγκεκριμένη εφαρμογή. Επομένως, να είστε προσεκτικοί με τους κωδικούς πρόσβασης, τα στοιχεία πληρωμής, τα μηνύματα, τις φωτογραφίες, τον ήχο και το βίντεο.</string>
   <string name="media_projection_sys_service_dialog_title">Έναρξη εγγραφής ή μετάδοσης;</string>
   <string name="media_projection_sys_service_dialog_warning">Η υπηρεσία που παρέχει αυτήν τη λειτουργία θα έχει πρόσβαση σε όλες τις πληροφορίες που εμφανίζονται στην οθόνη σας ή που αναπαράγονται από τη συσκευή σας κατά την εγγραφή ή τη μετάδοση. Αυτό περιλαμβάνει πληροφορίες όπως κωδικούς πρόσβασης, στοιχεία πληρωμής, φωτογραφίες, μηνύματα και ήχο που αναπαράγετε.</string>
-  <string name="media_projection_task_switcher_action_back">Επιστροφή</string>
-  <string name="media_projection_task_switcher_action_switch">Εναλλακτικά, κοινοποιήστε την εφαρμογή</string>
-  <string name="media_projection_task_switcher_text">Η κοινοποίηση τίθεται σε παύση κατά την εναλλαγή μεταξύ εφαρμογών</string>
   <string name="media_seamless_other_device">Άλλη συσκευή</string>
   <string name="media_transfer_default_device_name">Συνδεδεμένη συσκευή</string>
   <string name="media_transfer_dock_speaker_device_name">Ηχείο βάσης σύνδεσης</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">Για υψηλότερη ανάλυση, αναστρέψτε το τηλέφωνο</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Αλλαγή οθονών;</string>
   <string name="recent_conversations">Πρόσφατες συζητήσεις</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">έστειλε μια εικόνα</string>
   <string name="remove_from_settings">Κατάργηση από τις Ρυθμίσεις</string>
   <string name="remove_from_settings_prompt">Κατάργηση System UI Tuner από τις Ρυθμίσεις και διακοπή χρήσης όλων των λειτουργιών του;</string>
   <string name="require_unlock_for_nfc">Ξεκλείδωμα για χρήση του NFC</string>
   <string name="restart_button_description">Πατήστε για να επανεκκινήσετε αυτή την εφαρμογή για καλύτερη προβολή</string>
   <string name="retry_face">Επανάληψη ελέγχου ταυτότητας προσώπου</string>
+  <string name="reverse_charging_device_name_text">Άλλο Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">Η συσκευή %1$s παρέχει φόρτιση (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Η Κοινή χρήση μπαταρίας είναι ενεργή</string>
+  <string name="reverse_charging_title">Κοινή χρήση μπαταρίας</string>
   <string name="right_icon">Δεξιό εικονίδιο</string>
   <string name="right_keycode">Δεξιός κωδικός</string>
   <string name="right_nav_bar_button_type">Επιπλέον τύπος δεξιού κουμπιού</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">Πατήστε για λεπτομέρειες σχετικά με τη χρήση μπαταρίας και δεδομένων</string>
   <string name="running_foreground_services_title">Εφαρμογές που εκτελούνται στο παρασκήνιο</string>
-  <string name="satellite_connected_carrier_text">Δορυφορικό SOS</string>
+  <string name="satellite_connected_carrier_text">Δορυφορικό SOS του Pixel</string>
   <string name="save">Αποθήκευση</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Ακύρωση</string>
+  <string name="saver_confirmation_dialog_subtitle">Επιλέξτε ποια λειτουργία θα χρησιμοποιηθεί</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Περιλαμβάνει όλες τις αλλαγές που αναφέρονται παραπάνω. Επίσης, θέτει σε παύση τις μη βασικές εφαρμογές και τις ειδοποιήσεις τους.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Περιορίζει τα οπτικά εφέ και τη δραστηριότητα στο παρασκήνιο. Ενεργοποιεί το Σκούρο θέμα, αν δεν είναι ήδη ενεργοποιημένο.</string>
+  <string name="saver_confirmation_dialog_title">Καλώς ορίσατε στην Εξοικονόμηση μπαταρίας</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Μέγιστη εξοικονόμηση μπαταρίας</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Βασική εξοικονόμηση μπαταρίας</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Η καταγραφή οθόνης έχει απενεργοποιηθεί από την πολιτική χρήσης συσκευής.</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Αποκλείστηκε από τον διαχειριστή IT</string>
   <string name="screen_pinning_can_open_other_apps">Η καρφιτσωμένη εφαρμογή μπορεί να ανοίξει άλλες εφαρμογές.</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">Για να ξεκαρφιτσώσετε αυτή την εφαρμογή, αγγίξτε παρατεταμένα τα κουμπιά Πίσω και Επισκόπηση.</string>
   <string name="screen_pinning_toast_gesture_nav">Για να ξεκαρφ. την εφαρμογή, σύρετε προς τα πάνω και κρατήστε</string>
   <string name="screen_pinning_toast_recents_invisible">Για να ξεκαρφιτσώσετε αυτή την εφαρμογή, αγγίξτε παρατεταμένα τα κουμπιά Πίσω και Αρχική οθόνη.</string>
+  <string name="screen_protector_absent_message">Η απενεργοποίηση της λειτουργίας προστατευτικού οθόνης βελτιώνει την αφή όταν δεν χρησιμοποιείται προστατευτικό οθόνης.</string>
+  <string name="screen_protector_disable_notification">Απενεργοποίηση ειδοποίησης</string>
+  <string name="screen_protector_go_to_settings">Μετάβαση στις ρυθμίσεις</string>
+  <string name="screen_protector_got_it">Το κατάλαβα</string>
+  <string name="screen_protector_mode_title">Λειτουργία προστατευτικού οθόνης</string>
+  <string name="screen_protector_present_message">Η ενεργ. της λειτουργίας προστατευτικού οθόνης βελτιώνει την αφή.</string>
   <string name="screen_share_permission_app_selector_title">Κοινή χρήση ή εγγραφή εφαρμογής</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Ολόκληρη την οθόνη</string>
   <string name="screen_share_permission_dialog_option_single_app">Μία εφαρμογή</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">Αποθήκευση στιγμιότ. οθόνης στο προφίλ εργασίας…</string>
   <string name="screenshot_scroll_label">Περισσότερα</string>
   <string name="screenshot_share_description">Κοινοποίηση στιγμιότυπου οθόνης</string>
-  <string name="screenshot_share_label">Κοινή χρήση</string>
   <string name="screenshot_text">Στιγμιότυπο οθόνης</string>
   <string name="screenshot_top_boundary_pct">Επάνω όριο %1$d τοις εκατό</string>
+  <string name="screenshot_view_description">Προβολή στιγμιότυπου οθόνης</string>
   <string name="screenshot_work_profile_notification">Αποθηκεύτηκε στην εφαρμογή %1$s στο προφίλ εργασίας</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Ο αισθητήρας δακτυλικών αποτυπωμάτων βρίσκεται στο κουμπί λειτουργίας. Είναι το επίπεδο κουμπί δίπλα στο ανυψωμένο κουμπί έντασης ήχου στο άκρο του τηλεφώνου.</string>
   <string name="see_all_bluetooth_devices">Εμφάνιση όλων</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">Ορίστε την προεπιλεγμένη εφαρμογή σημειώσεων στις Ρυθμίσεις</string>
   <string name="settings_label">Ρυθμίσεις</string>
   <string name="settingslib_learn_more_text">Μάθετε περισσότερα</string>
+  <string name="severe_battery_notification_switch_text">Εναλλαγή σε Μέγιστη εξοικονόμηση μπαταρίας; 
+
+Αυτή η επιλογή θα θέσει σε παύση όλες τις μη βασικές εφαρμογές και τις ειδοποιήσεις τους</string>
+  <string name="severe_battery_notification_text">Ενεργοποίηση Μέγιστης εξοικονόμησης μπαταρίας. Αυτή η επιλογή θα θέσει σε παύση όλες τις μη βασικές εφαρμογές</string>
+  <string name="severe_battery_notification_title">Απομένει %s μπαταρία</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Εναλλαγή</string>
   <string name="share_to_app_stop_dialog_button">Διακοπή κοινής χρήσης</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Θα διακόψετε την κοινή χρήση της εφαρμογής &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Διακοπή κοινής χρήσης οθόνης;</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- Μπορεί να διαβάζει πληροφορίες από την εφαρμογή %1$s</string>
   <string name="slice_permission_text_2">- Μπορεί να εκτελεί ενέργειες εντός της εφαρμογής %1$s</string>
   <string name="slice_permission_title">Να επιτρέπεται στο %1$s να εμφανίζει τμήματα της εφαρμογής %2$s;</string>
+  <string name="smartspace_content_desc">Με μια ματιά</string>
+  <string name="smartspace_flight_qr_code">Κωδικός QR</string>
+  <string name="smartspace_role_desc">Προβολή</string>
   <string name="snoozeHourOptions">{count,plural, =1{# ώρα}=2{# ώρες}other{# ώρες}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# λεπτό}other{# λεπτά}}</string>
   <string name="snooze_undo">Αναίρεση</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">Αργή</string>
   <string name="speed_label_very_fast">Πολύ γρήγορη</string>
   <string name="split_screen_text">Διαχωρισμός οθόνης</string>
+  <string name="squeeze_invocation_prompt">Πιέστε για να μιλήσετε</string>
+  <string name="standard_battery_saver_text">Βασική</string>
   <string name="start_dreams">Προφύλαξη οθόνης</string>
   <string name="state_empty">Κενό</string>
   <string name="state_off">Ανενεργός</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">Καρτέλα</string>
   <string name="tap_a_network_to_connect">Πατήστε ένα δίκτυο για να συνδεθείτε</string>
   <string name="tap_again">Πατήστε ξανά</string>
+  <string name="temp_defender_notify_des">Η φόρτιση θα συνεχιστεί όταν η θερμοκρασία του τηλεφώνου σας επιστρέψει σε κανονικά επίπεδα</string>
+  <string name="temp_defender_notify_title">Η φόρτιση τέθηκε σε αναμονή για προστασία της μπαταρίας</string>
   <string name="template_percent">%1$d τοις εκατό.</string>
   <string name="thermal">Θερμικό</string>
   <string name="thermal_shutdown_dialog_help_text">Δείτε βήματα αντιμετώπισης.</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">Αποκτήστε γρήγορα πρόσβαση στα αγαπημένα σας γραφικά στοιχεία εφαρμογών χωρίς να ξεκλειδώσετε το tablet σας.</string>
   <string name="title_usb_accessory">Αξεσουάρ USB</string>
   <string name="to_switch_networks_disconnect_ethernet">Για εναλλαγή δικτύων, αποσυνδέστε το ethernet</string>
+  <string name="too_hot_label">Το Pixel είναι πολύ ζεστό</string>
   <string name="touch_filtered_warning">Επειδή μια εφαρμογή αποκρύπτει ένα αίτημα άδειας, δεν είναι δυνατή η επαλήθευση της απάντησής σας από τις Ρυθμίσεις.</string>
   <string name="touchpad_tutorial_action_key_button">Πλήκτρο ενέργειας</string>
   <string name="touchpad_tutorial_back_gesture_button">Κίνηση επιστροφής</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">Μενού</string>
   <string name="tuner_minus">Πλην</string>
   <string name="tuner_other_apps">Άλλες εφαρμογές</string>
+  <string name="tuner_persistent_warning">Αυτές οι πειραματικές λειτουργίες ενδέχεται να τροποποιηθούν, να παρουσιάσουν σφάλματα ή να καταργηθούν σε μελλοντικές εκδόσεις. Συνεχίστε με προσοχή.</string>
   <string name="tuner_plus">Συν</string>
   <string name="tuner_right">Δεξιά</string>
   <string name="tuner_time">Ώρα</string>
+  <string name="tuner_warning">Το System UI Tuner σάς προσφέρει επιπλέον τρόπους για να τροποποιήσετε και να προσαρμόσετε τη διεπαφή χρήστη Android. Αυτές οι πειραματικές λειτουργίες ενδέχεται να τροποποιηθούν, να παρουσιάσουν σφάλματα ή να καταργηθούν σε μελλοντικές εκδόσεις. Συνεχίστε με προσοχή.</string>
+  <string name="tuner_warning_title">Διασκέδαση για ορισμένους, αλλά όχι για όλους</string>
   <string name="turn_off_airplane_mode">Απενεργοποίηση λειτουργίας πτήσης</string>
   <string name="turn_on_bluetooth">Χρήση Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Λειτουργίες όπως το Quick Share και η Εύρεση συσκευής χρησιμοποιούν το Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Το Bluetooth θα ενεργοποιηθεί αύριο το πρωί</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Αυτόματη ενεργοποίηση αύριο</string>
   <string name="turn_on_wifi">Wi‑Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Προεπιλογή τηλεόρασης</string>
   <string name="two_weeks_timestamp">Πριν από 2 εβδομάδες</string>
   <string name="unknown">Άγνωστο</string>
   <string name="unlock_to_see_notif_text">Ξεκλειδώστε για εμφάνιση παλαιότ. ειδοπ.</string>
@@ -1552,7 +1624,9 @@
   <string name="volume_odi_captions_hint_enable">ενεργοποίηση</string>
   <string name="volume_odi_captions_tip">Αυτόματοι υπότιτλοι στο μέσο</string>
   <string name="volume_panel_captioning_title">Ζωντανοί υπότιτλοι</string>
+  <string name="volume_panel_clear_calling_title">Κλήσεις με ευκρινή ήχο</string>
   <string name="volume_panel_collapsed_sliders">Τα ρυθμιστικά έντασης ήχου συμπτύχθηκαν</string>
+  <string name="volume_panel_device_settings_title">Ρυθμίσεις συσκευής</string>
   <string name="volume_panel_dialog_settings_button">Ρυθμίσεις</string>
   <string name="volume_panel_enter_media_output_settings">Εισαγωγή ρυθμίσεων εξόδου</string>
   <string name="volume_panel_expanded_sliders">Τα ρυθμιστικά έντασης ήχου αναπτύχθηκαν</string>
@@ -1667,10 +1741,13 @@
   <string name="wifitrackerlib_wifi_standard_unknown">Άγνωστο</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Χωρίς περιορισμούς</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Δεν θα γίνεται προς το παρόν αυτόματη σύνδεση Wi-Fi</string>
+  <string name="wireless_charging_label">Ασύρματη φόρτιση</string>
+  <string name="wireless_charging_notification_text">Η ασύρματη φόρτιση ενδέχεται να καταναλώνει περισσότερη ενέργεια από την ενσύρματη φόρτιση. Για να εξοικονομήσετε ηλεκτρική ενέργεια και χρόνο, δοκιμάστε να χρησιμοποιήσετε ενσύρματο φορτιστή.</string>
+  <string name="wireless_charging_notification_title">Ασύρματη φόρτιση</string>
   <string name="work_challenge_emergency_button_text">Έκτακτη ανάγκη</string>
   <string name="work_mode_off_title">Αναίρ. παύσης εφαρμ. εργασιών;</string>
   <string name="work_mode_turn_on">Αναίρεση παύσης</string>
-  <string name="zen_alarm_warning">Δεν θα ακούσετε το επόμενο ξυπνητήρι σας %1$s</string>
+  <string name="zen_alarm_warning">Δεν θα ακούσετε το επόμενο ξυπνητήρι %1$s</string>
   <string name="zen_alarm_warning_indef">Δεν θα ακούσετε το επόμενο ξυπνητήρι %1$s, εκτός εάν το απενεργοποιήσετε νωρίτερα</string>
   <string name="zen_mode_enable_dialog_turn_on">Ενεργοποίηση</string>
   <string name="zen_mode_settings_turn_on_dialog_title">Ενεργοποίηση λειτουργίας "Μην ενοχλείτε"</string>

@@ -5,7 +5,9 @@
     <item>充電時顯示百分比 (預設)</item>
     <item>不顯示這個圖示</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>顯示小時、分鐘和秒</item>
     <item>顯示小時和分鐘 (預設)</item>

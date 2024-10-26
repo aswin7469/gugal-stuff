@@ -1,6 +1,6 @@
 .class public final Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture$1;
 .super Landroidx/concurrent/futures/AbstractResolvableFuture;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -56,30 +56,30 @@
     new-instance v0, Ljava/lang/StringBuilder;
 
     .line 17
-    const-string v1, "tag=["
+    const-string/jumbo v1, "tag=["
 
     .line 19
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 21
+    .line 22
     iget-object p0, p0, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->tag:Ljava/lang/Object;
 
-    .line 24
+    .line 25
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 26
+    .line 27
     const-string p0, "]"
 
-    .line 29
+    .line 30
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 31
+    .line 32
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 34
+    .line 35
     move-result-object p0
 
-    .line 37
-    return-object p0
     .line 38
+    return-object p0
+    .line 39
 .end method

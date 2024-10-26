@@ -1,6 +1,6 @@
 .class public Lcom/android/keyguard/KeyguardSimPinView;
 .super Lcom/android/keyguard/KeyguardSimInputView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -30,7 +30,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f0b071f    # @id/simPinEntry
+    const p0, 0x7f0a074b    # @id/simPinEntry
 
     .line 2
     return p0
@@ -58,7 +58,7 @@
     move-result-object p0
 
     .line 5
-    const v0, 0x1040508    # @android:string/kg_login_username_hint
+    const v0, 0x10404ff    # @android:string/kg_invalid_sim_pin_hint
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

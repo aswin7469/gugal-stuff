@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/display/ui/view/MirroringConfirmationDialogDelegate;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/phone/DialogDelegate;
@@ -50,7 +50,7 @@
     move-result-object p1
 
     .line 16
-    const p2, 0x7f070270    # @dimen/dialog_bottom_padding '18.0dp'
+    const p2, 0x7f070292    # @dimen/dialog_bottom_padding '18.0dp'
 
     .line 17
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -147,13 +147,13 @@
     .locals 2
 
     .line 1
-    const p2, 0x7f0e007c    # @layout/connected_display_dialog 'res/layout/connected_display_dialog.xml'
+    const p2, 0x7f0d0084    # @layout/connected_display_dialog 'res/layout/connected_display_dialog.xml'
 
     .line 2
     invoke-virtual {p1, p2}, Landroid/app/Dialog;->setContentView(I)V
 
     .line 5
-    const p2, 0x7f0b02cc    # @id/enable_display
+    const p2, 0x7f0a02e5    # @id/enable_display
 
     .line 8
     invoke-virtual {p1, p2}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;
@@ -177,7 +177,7 @@
     iput-boolean p2, p0, Lcom/android/systemui/display/ui/view/MirroringConfirmationDialogDelegate;->enabledPressed:Z
 
     .line 23
-    const p2, 0x7f0b01a3    # @id/cancel
+    const p2, 0x7f0a01a9    # @id/cancel
 
     .line 25
     invoke-virtual {p1, p2}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;
@@ -195,7 +195,7 @@
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 36
-    const p2, 0x7f0b02af    # @id/dual_display_warning
+    const p2, 0x7f0a02c2    # @id/dual_display_warning
 
     .line 39
     invoke-virtual {p1, p2}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;
@@ -227,7 +227,7 @@
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 56
-    const p2, 0x7f0b01b7    # @id/cd_bottom_sheet
+    const p2, 0x7f0a01bd    # @id/cd_bottom_sheet
 
     .line 59
     invoke-virtual {p1, p2}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;

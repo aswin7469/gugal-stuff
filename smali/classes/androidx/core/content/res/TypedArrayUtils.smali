@@ -1,6 +1,6 @@
 .class public abstract Landroidx/core/content/res/TypedArrayUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -44,150 +44,151 @@
     .locals 4
 
     .line 1
-    const-string v0, "tint"
+    const-string/jumbo v0, "tint"
 
     .line 2
     invoke-static {p1, v0}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
-    .line 4
+    .line 5
     move-result p1
 
-    .line 7
+    .line 8
     const/4 v0, 0x0
 
-    .line 8
+    .line 9
     if-eqz p1, :cond_2
 
-    .line 9
+    .line 10
     new-instance p1, Landroid/util/TypedValue;
 
-    .line 11
+    .line 12
     invoke-direct {p1}, Landroid/util/TypedValue;-><init>()V
 
-    .line 13
+    .line 14
     const/4 v1, 0x1
 
-    .line 16
+    .line 17
     invoke-virtual {p0, v1, p1}, Landroid/content/res/TypedArray;->getValue(ILandroid/util/TypedValue;)Z
 
-    .line 17
+    .line 18
     iget v2, p1, Landroid/util/TypedValue;->type:I
 
-    .line 20
+    .line 21
     const/4 v3, 0x2
 
-    .line 22
+    .line 23
     if-eq v2, v3, :cond_1
 
-    .line 23
+    .line 24
     const/16 v3, 0x1c
 
-    .line 25
+    .line 26
     if-lt v2, v3, :cond_0
 
-    .line 27
+    .line 28
     const/16 v3, 0x1f
 
-    .line 29
+    .line 30
     if-gt v2, v3, :cond_0
 
-    .line 31
+    .line 32
     iget p0, p1, Landroid/util/TypedValue;->data:I
 
-    .line 33
+    .line 34
     invoke-static {p0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    .line 35
+    .line 36
     move-result-object p0
 
-    .line 38
+    .line 39
     return-object p0
 
-    .line 39
+    .line 40
     :cond_0
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->getResources()Landroid/content/res/Resources;
 
-    .line 40
+    .line 41
     move-result-object p1
 
-    .line 43
+    .line 44
     const/4 v2, 0x0
 
-    .line 44
+    .line 45
     invoke-virtual {p0, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    .line 45
+    .line 46
     move-result p0
 
-    .line 48
+    .line 49
     sget-object v1, Landroidx/core/content/res/ColorStateListInflaterCompat;->sTempTypedValue:Ljava/lang/ThreadLocal;
 
-    .line 49
+    .line 50
     :try_start_0
     invoke-virtual {p1, p0}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
-    .line 51
+    .line 52
     move-result-object p0
 
-    .line 54
+    .line 55
     invoke-static {p1, p0, p2}, Landroidx/core/content/res/ColorStateListInflaterCompat;->createFromXml(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
 
-    .line 55
+    .line 56
     move-result-object v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
+    .line 59
     goto :goto_0
 
-    .line 59
+    .line 60
     :catch_0
     move-exception p0
 
-    .line 60
+    .line 61
     const-string p1, "CSLCompat"
 
-    .line 61
+    .line 62
     const-string p2, "Failed to inflate ColorStateList."
 
-    .line 63
+    .line 64
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 65
+    .line 66
     :goto_0
     return-object v0
 
-    .line 68
+    .line 69
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    .line 69
+    .line 70
     new-instance p2, Ljava/lang/StringBuilder;
 
-    .line 71
+    .line 72
     const-string v0, "Failed to resolve attribute at index 1: "
 
-    .line 73
+    .line 74
     invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 75
+    .line 76
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 78
+    .line 79
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 81
+    .line 82
     move-result-object p1
 
-    .line 84
+    .line 85
     invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    .line 85
+    .line 86
     throw p0
 
-    .line 88
+    .line 89
     :cond_2
     return-object v0
+    .line 90
 .end method
 
 .method public static getNamedComplexColor(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;Ljava/lang/String;I)Landroidx/core/content/res/ComplexColorCompat;
@@ -259,7 +260,7 @@
 
     .line 43
     :try_start_0
-    invoke-static {p0, p2, p1}, Landroidx/core/content/res/ComplexColorCompat;->createFromXml(ILandroid/content/res/Resources$Theme;Landroid/content/res/Resources;)Landroidx/core/content/res/ComplexColorCompat;
+    invoke-static {p1, p0, p2}, Landroidx/core/content/res/ComplexColorCompat;->createFromXml(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroidx/core/content/res/ComplexColorCompat;
 
     .line 44
     move-result-object p0

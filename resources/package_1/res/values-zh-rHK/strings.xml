@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">放置所選小工具</string>
   <string name="accessibility_action_label_remove_widget">移除小工具</string>
   <string name="accessibility_action_label_select_widget">揀小工具</string>
-  <string name="accessibility_action_open_communal_hub">上鎖畫面上的小工具</string>
   <string name="accessibility_action_pip_resize">調整大小</string>
   <string name="accessibility_action_pip_stash">保護</string>
   <string name="accessibility_action_pip_unstash">取消保護</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">結束單手模式</string>
   <string name="accessibility_airplane_mode">飛航模式。</string>
   <string name="accessibility_allow_diagonal_scrolling">允許斜角捲動</string>
+  <string name="accessibility_assistant_poodle">語音搜尋</string>
   <string name="accessibility_authenticate_hint">驗證</string>
   <string name="accessibility_back">返回</string>
   <string name="accessibility_banner_message_dismiss">關閉</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">進入裝置</string>
   <string name="accessibility_ethernet_connected">以太網絡。</string>
   <string name="accessibility_ethernet_disconnected">以太網連接中斷。</string>
-  <string name="accessibility_fingerprint_bouncer">需要驗證。掂一下指紋感應器就可以驗證。</string>
   <string name="accessibility_fingerprint_label">指紋感應器</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">切換</string>
   <string name="accessibility_floating_button_action_edit">編輯</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">選單</string>
   <string name="accessibility_multi_user_list_switcher">下拉式選單</string>
   <string name="accessibility_multi_user_switch_switcher">切換使用者</string>
+  <string name="accessibility_next_alarm">下次鬧鐘時間：%s</string>
   <string name="accessibility_no_calling">不啟用通話。</string>
   <string name="accessibility_no_phone">沒有電話訊號。</string>
   <string name="accessibility_no_wifi">Wi-Fi 連線已中斷。</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">螢幕已鎖定為垂直模式。</string>
   <string name="accessibility_send_smart_reply">傳送</string>
   <string name="accessibility_sensors_off_active">已啟用「感應器關閉」</string>
+  <string name="accessibility_settings_gear">Pixel Stand 設定</string>
   <string name="accessibility_side_fingerprint_indicator_label">輕輕掂下指紋感應器，即係手機側邊短啲嗰粒掣</string>
+  <string name="accessibility_smartspace_page">第 %1$d 頁，總共有 %2$d 頁</string>
   <string name="accessibility_split_bottom">分割下方區域</string>
   <string name="accessibility_split_left">分割左側區域</string>
   <string name="accessibility_split_right">分割右側區域</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi 訊號三格。</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi 訊號兩格。</string>
   <string name="accesssibility_keyguard_retry">向上掃即可重試面孔解鎖</string>
+  <string name="adaptive_charging_notify_des">電池會在%1$s前充滿電。目前正在穩定充電，以延長電池壽命。</string>
+  <string name="adaptive_charging_notify_title">「自動調節充電速度」功能已開啟</string>
+  <string name="adaptive_charging_notify_turn_off_once">關閉一次</string>
+  <string name="adaptive_charging_time_estimate">%1$s • 自動調節充電速度 • 在%2$s前充滿電</string>
   <string name="add">新增</string>
   <string name="add_guest_failed">無法建立新訪客</string>
   <string name="airplane_mode">飛行模式</string>
-  <string name="alarm_template">在 %1$s</string>
-  <string name="alarm_template_far">在%1$s</string>
+  <string name="alarm_template">時間：%1$s</string>
+  <string name="alarm_template_far">時間：%1$s</string>
   <string name="all_network_unavailable">沒有可用的網絡</string>
   <string name="always_use_accessory">連接「%2$s」時一律開啟「%1$s」</string>
   <string name="always_use_device">連接「%2$s」時一律開啟「%1$s」</string>
@@ -233,6 +239,7 @@
   <string name="app_info">應用程式資料</string>
   <string name="app_label">系統使用者介面</string>
   <string name="assistant_attention_content_description">偵測到使用者動態</string>
+  <string name="assistant_scrim_label">正在聆聽，輕按即可取消</string>
   <string name="audio_sharing_description">正在分享音訊</string>
   <string name="audio_status">正在收聽音訊</string>
   <string name="auto_data_switch_dialog_negative_button">不用了，謝謝</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">返去</string>
   <string name="battery">電池</string>
   <string name="battery_detail_switch_title">慳電模式</string>
-  <string name="battery_low_description">剩餘 %s 電量。「慳電模式」會開啟深色主題背景、限制背景活動，並延遲顯示通知。</string>
+  <string name="battery_health_notify_learn_more">瞭解詳情</string>
   <string name="battery_low_intro">「慳電模式」會開啟深色主題背景、限制背景活動，並延遲顯示通知。</string>
-  <string name="battery_low_title">要開啟「慳電模式」嗎？</string>
   <string name="battery_saver_confirmation_ok">開啟</string>
   <string name="battery_saver_confirmation_title">要開啟慳電模式嗎？</string>
   <string name="battery_saver_confirmation_title_generic">關於「慳電模式」</string>
-  <string name="battery_saver_dismiss_action">不用了，謝謝</string>
   <string name="battery_saver_start_action">開啟</string>
   <string name="battery_state_unknown_notification_text">輕按即可瞭解詳情</string>
   <string name="battery_state_unknown_notification_title">讀取電池計量器時發生問題</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">啟用。左側：%1$s，右側：%2$s 電量。</string>
   <string name="bluetooth_active_battery_level_untethered_left">使用中。左側：%1$s 電量。</string>
   <string name="bluetooth_active_battery_level_untethered_right">使用中。右側：%1$s 電量。</string>
-  <string name="bluetooth_active_media_only_battery_level">啟用 (只限媒體)。%1$s 電量。</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">啟用 (只限媒體)，左側：%1$s 電量，右側：%2$s 電量。</string>
-  <string name="bluetooth_active_media_only_no_battery_level">啟用 (只限媒體)</string>
   <string name="bluetooth_active_no_battery_level">使用中</string>
   <string name="bluetooth_battery_level">電量：%1$s</string>
-  <string name="bluetooth_battery_level_lea_support">已連線 (支援音訊分享功能)，%1$s 電量。</string>
   <string name="bluetooth_battery_level_untethered">左側：%1$s，右側：%2$s 電量。</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">已連線 (支援音訊分享功能)，左側：%1$s 電量，右側：%2$s 電量。</string>
   <string name="bluetooth_connected">已連接「%1$s」</string>
   <string name="bluetooth_connecting">正在連線...</string>
   <string name="bluetooth_disconnected">已中斷連線</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">使用中 (僅左側)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">使用中 (左右兩側)</string>
   <string name="bluetooth_hearing_aid_right_active">使用中 (僅右側)</string>
-  <string name="bluetooth_no_battery_level_lea_support">已連線 (支援音訊分享功能)</string>
   <string name="bluetooth_pairing">正在配對...</string>
   <string name="bluetooth_pairing_device_down_error_message">無法與 %1$s 通訊。</string>
   <string name="bluetooth_pairing_error_message">無法與 %1$s 配對。</string>
   <string name="bluetooth_pairing_pin_error_message">無法與 %1$s 配對，因為 PIN 碼或密鑰不正確。</string>
   <string name="bluetooth_pairing_rejected_error_message">「%1$s」拒絕配對要求。</string>
-  <string name="bluetooth_saved_device_lea_support">支援音訊分享功能</string>
   <string name="bluetooth_talkback_bluetooth">藍牙</string>
   <string name="bluetooth_talkback_computer">電腦</string>
   <string name="bluetooth_talkback_headphone">耳機</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">顯示更多</string>
   <string name="bubble_overflow_empty_subtitle">最近使用和關閉的小視窗會在這裡顯示</string>
   <string name="bubble_overflow_empty_title">沒有最近曾使用的小視窗</string>
-  <string name="bubble_shortcut_label">對話氣泡</string>
-  <string name="bubble_shortcut_long_label">顯示對話氣泡</string>
   <string name="bubbles_app_settings">「%1$s」設定</string>
   <string name="bubbles_dont_bubble_conversation">不要透過小視窗顯示對話</string>
   <string name="bubbles_settings_button_description">「%1$s」小視窗設定</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">停止投放</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">你將停止投放「%1$s」&lt;b&gt;&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">流動數據已關閉</string>
+  <string name="charge_limit_discovery_notification_enable_button">立即啟用</string>
+  <string name="charge_limit_discovery_notification_text">嘗試啟用 80% 充電上限功能，保護電池效能和壽命。你可隨時前往「設定」管理此設定。</string>
+  <string name="charge_limit_discovery_notification_title">在充電時保護電池</string>
+  <string name="charging_reverse_text">正在共用電池</string>
   <string name="clear_all_notifications_text">全部清除</string>
   <string name="clipboard">剪貼簿</string>
   <string name="clipboard_content_copied">已複製內容</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">關閉</string>
   <string name="close_dialog_button">關閉</string>
   <string name="collapse_menu_text">關閉選單</string>
+  <string name="columbus_bouncer_message">解鎖才能完成「快速輕觸」</string>
+  <string name="columbus_target_request_dialog_allow">允許</string>
+  <string name="columbus_target_request_dialog_deny">不允許</string>
+  <string name="columbus_target_request_dialog_summary">輕按手機背面兩下即可開啟「%1$s」。你隨時可以在「設定」中變更此設定。</string>
+  <string name="columbus_target_request_dialog_title">是否允許「快速輕觸」開啟「%1$s」？</string>
   <string name="communal_tutorial_indicator_text">向左滑動即可開始共用教學課程</string>
   <string name="connected_display_dialog_dual_display_stop_warning">鏡像畫面將顯示在內部螢幕，前方螢幕則會關閉。</string>
   <string name="connected_display_dialog_start_mirroring">要鏡像投射至外部顯示屏嗎？</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">已暫停使用流動數據</string>
   <string name="data_usage_disabled_dialog_title">已暫停使用數據</string>
   <string name="days_timestamp">%1$s 天前</string>
-  <string name="default_error_message">輸入嘅資料無效</string>
   <string name="default_popup_window_title">彈出式視窗</string>
+  <string name="defender_notify_resume_charge">取代</string>
+  <string name="defender_notify_title">保護電池</string>
+  <string name="defender_post_notify_des">為延長電池壽命，系統已在 %1$s 至 %2$s 優化充電</string>
+  <string name="defender_post_notify_title">已優化充電</string>
   <string name="demo_mode">系統使用者介面示範模式</string>
   <string name="desktop_mode_maximize_menu_maximize_text">畫面最大化</string>
   <string name="desktop_mode_maximize_menu_snap_text">貼齊畫面</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">此裝置屬於你的機構</string>
   <string name="do_disclosure_with_name">此裝置屬於「%s」</string>
   <string name="do_financed_disclosure_with_name">此裝置由 %s 提供</string>
+  <string name="dock_a11y_action_show_photo_text">顯示相框</string>
+  <string name="dock_alignment_not_charging">請重新調整手機位置以使用無線充電</string>
+  <string name="dock_alignment_slow_charging">請重新調整手機位置以使用快速充電</string>
+  <string name="dock_defender_first_run_des">為延長電池壽命，平板電腦放在插座上充電至 90％ 後便會暫停充電。你可隨時前往「設定」取代此操作。</string>
+  <string name="dock_defender_first_run_settings">設定</string>
+  <string name="dock_defender_first_run_title">為保護電池，目前暫停充電</string>
   <string name="dock_multi_instances_not_supported_text">此應用程式只可在 1 個視窗中開啟</string>
   <string name="dock_non_resizeble_failed_to_dock_text">應用程式不支援分割螢幕</string>
+  <string name="dock_photo_preview_text">正在啟動相框模式…</string>
+  <string name="dock_promo_text">向左滑動即可使用相框模式</string>
   <string name="done">完成</string>
   <string name="drag_split_not_supported">此通知無法拖曳到分割螢幕中。</string>
   <string name="drag_to_add_tiles">按住並拖曳即可新增圖塊</string>
   <string name="drag_to_rearrange_tiles">按住並拖曳即可重新排列圖塊</string>
   <string name="drag_to_remove_disabled">你需要有至少 %1$d 個資訊方塊</string>
   <string name="drag_to_remove_tiles">拖曳這裡即可移除</string>
+  <string name="dream_lockscreen_wallpaper_description">使用目前上鎖畫面桌布</string>
+  <string name="dream_lockscreen_wallpaper_label">桌布</string>
   <string name="dream_overlay_status_bar_alarm_set">已設定鬧鐘</string>
   <string name="dream_overlay_status_bar_camera_mic_off">相機和麥克風已關閉</string>
   <string name="dream_overlay_status_bar_camera_off">相機已關閉</string>
   <string name="dream_overlay_status_bar_mic_off">麥克風已關閉</string>
   <string name="dream_overlay_status_bar_priority_mode">優先模式</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi 已關閉</string>
+  <string name="dwell_defender_notify_des">手機充電時間太長時，此功能可協助延長電池壽命</string>
+  <string name="dwell_defender_notify_title">為保護電池，目前暫停充電</string>
   <string name="edit_user_info_message">此裝置的任何使用者都能看到你選擇的名稱和圖片。</string>
   <string name="edit_widget">編輯小工具</string>
   <string name="empty_shade_text">沒有通知</string>
@@ -561,12 +581,16 @@
   <string name="ethernet_label">以太網</string>
   <string name="expand_button_title">進階</string>
   <string name="expand_menu_text">打開選單</string>
+  <string name="extreme_battery_saver_text">超級</string>
+  <string name="extreme_low_battery_notification_text">請盡快充電，否則手機將會關機</string>
+  <string name="extreme_low_battery_notification_title">電量極低</string>
   <string name="face_re_enroll_dialog_content">如要重新設定「面孔解鎖」功能，必須刪除目前的面部模型。
 
 你必須重新設定此功能，才能使用用面孔解鎖手機。</string>
   <string name="face_re_enroll_dialog_title">設定「面孔解鎖」功能</string>
   <string name="face_re_enroll_notification_name">面孔解鎖</string>
   <string name="face_re_enroll_notification_title">重新設定「面孔解鎖」功能</string>
+  <string name="face_reenroll_dialog_confirm">設定</string>
   <string name="face_reenroll_failure_dialog_content">無法設定「面孔解鎖」功能，請前往「設定」再試一次。</string>
   <string name="failed_attempts_now_wiping_device">錯誤次數太多，系統將會刪除此裝置上的資料。</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">關閉</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">縮小</string>
   <string name="fullscreen_text">全螢幕</string>
   <string name="game_status">正在玩遊戲</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s，%2$s</string>
   <string name="global_action_smart_lock_disabled">「延長解鎖」功能已停用</string>
   <string name="go_to_web">前往瀏覽器</string>
   <string name="got_it">知道了</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">要重設訪客工作階段嗎？</string>
   <string name="guest_reset_guest_confirm_button">重設</string>
   <string name="guest_resetting">正在重設訪客…</string>
+  <string name="handle_invocation_prompt">滑動即可說話</string>
   <string name="handle_text">控點</string>
   <string name="headset">耳機</string>
   <string name="hearing_devices_preset_label">預設</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">手機溫度正在上升</string>
   <string name="home_controls_dream_description">在螢幕保護程式畫面上控制智能家居</string>
   <string name="home_controls_dream_label">智能家居</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• 至少要有一部可用裝置或一個裝置面板</string>
   <string name="home_quick_affordance_unavailable_install_the_app">如要將 Home 應用程式新增為捷徑，請確認已安裝該應用程式</string>
   <string name="hub_mode_add_widget_button_text">新增小工具</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">進行中</string>
   <string name="inattentive_sleep_warning_message">裝置即將關閉，輕按即可保持開啟。</string>
   <string name="inattentive_sleep_warning_title">待機</string>
+  <string name="incompatible_charging_learn_more">瞭解詳情</string>
+  <string name="incompatible_charging_notify_des">手機可能充電速度緩慢或未充電。如要快速充電，請使用建議的連接線和電源適配器。</string>
+  <string name="incompatible_charging_notify_title">檢查充電配件</string>
   <string name="indeterminate">部分剔咗</string>
   <string name="inline_done_button">完成</string>
   <string name="inline_ok_button">套用</string>
   <string name="inline_turn_off_notifications">關閉通知</string>
   <string name="input_switch_input_language_next">切換至下一個語言</string>
   <string name="input_switch_input_language_previous">切換至上一個語言</string>
+  <string name="install_app">安裝應用程式</string>
   <string name="install_dialer_on_work_profile_action">安裝工作電話應用程式</string>
   <string name="install_type_instant">免安裝應用程式</string>
   <string name="instant_apps">免安裝應用程式</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">%1$s 運作中</string>
   <string name="interruption_level_none">完全靜音</string>
   <string name="interruption_level_priority">只限優先</string>
-  <string name="invalid_charger_text">使用裝置隨附的充電器</string>
-  <string name="invalid_charger_title">無法透過 USB 充電</string>
   <string name="issuerecord_background_processing_label">正在處理問題記錄</string>
   <string name="issuerecord_ongoing_screen_only">錄影問題</string>
   <string name="issuerecord_save_title">問題記錄已儲存</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">裝置已鎖定
 驗證失敗</string>
   <string name="keyguard_indication_charging_time">%2$s • 充電中 • %1$s後充滿電</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • %1$s前完成充電</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • 充電中 • %1$s後充滿電</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • 在%1$s前充滿電</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • 快速充電中 • %1$s後充滿電</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • 快速充電 • 在%1$s前充滿電</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • 完成充電</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • 慢速充電中 • %1$s後充滿電</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • 在%1$s前充滿電</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • 在%1$s前充滿電</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • 無線充電中 • %1$s後充滿電</string>
-  <string name="keyguard_indication_trust_unlocked">由信任的代理保持解鎖狀態</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • 在%1$s前充滿電</string>
+  <string name="keyguard_indication_trust_unlocked">裝置保持解鎖原因：「延長解鎖」功能已開啟</string>
   <string name="keyguard_missing_sim_message_short">沒有 SIM 卡</string>
   <string name="keyguard_network_locked_message">網絡已鎖定</string>
   <string name="keyguard_permanent_disabled_sim_message_short">SIM 卡無法使用。</string>
   <string name="keyguard_plugged_in">%s • 正在充電</string>
   <string name="keyguard_plugged_in_charging_fast">%s • 快速充電中</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • 快速充電</string>
   <string name="keyguard_plugged_in_charging_limited">%s - 為保護電池，目前暫停充電</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • 慢速充電中</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • 正在充電</string>
   <string name="keyguard_plugged_in_dock">%s • 正在充電</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • 正在充電</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • 檢查充電配件</string>
+  <string name="keyguard_plugged_in_v2">%s • 正在充電</string>
   <string name="keyguard_plugged_in_wireless">%s • 無線充電中</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • 正在充電</string>
   <string name="keyguard_retry">請向上滑動以再試一次</string>
   <string name="keyguard_sim_error_message_short">SIM 卡無效。</string>
   <string name="keyguard_sim_locked_message">SIM 卡已鎖定。</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">PIN 碼不符</string>
   <string name="kg_invalid_sim_pin_hint">請輸入 4 至 8 位數的 PIN 碼。</string>
   <string name="kg_invalid_sim_puk_hint">PUK 碼應由 8 個或以上數字組成。</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{輸入 SIM 卡的 PIN，你還可以再試 # 次。如果仍然輸入錯誤，你必須聯絡流動網絡供應商解鎖你的裝置。}other{輸入 SIM 卡的 PIN。你還可以再試 # 次。}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM 卡已停用。請輸入 PUK 碼以繼續進行。你還可以再試 # 次。如果仍然輸入錯誤，SIM 卡將永久無法使用。詳情請向流動網絡供應商查詢。}other{SIM 卡已停用。請輸入 PUK 碼以繼續進行。你還可以再試 # 次。如果仍然輸入錯誤，SIM 卡將永久無法使用。詳情請向流動網絡供應商查詢。}}</string>
   <string name="kg_password_pin_failed">無法使用 SIM 卡 PIN 碼解鎖！</string>
   <string name="kg_password_puk_failed">無法使用 SIM 卡 PUK 碼解鎖！</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">輸入「%1$s」SIM 卡的 PIN 碼。</string>
   <string name="kg_sim_unlock_progress_dialog_message">正在解鎖 SIM 卡…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{請在 # 秒後再試一次。}other{請在 # 秒後再試一次。}}</string>
-  <string name="kg_trust_agent_disabled">信任代理程式無法使用</string>
+  <string name="kg_trust_agent_disabled">「延長解鎖」功能無法使用</string>
   <string name="kg_unlock_with_password_or_fp">使用密碼或指紋解鎖</string>
   <string name="kg_unlock_with_pattern_or_fp">使用解鎖圖案或指紋解鎖</string>
   <string name="kg_unlock_with_pin_or_fp">使用 PIN 或指紋解鎖</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">瞭解詳情</string>
   <string name="log_access_confirmation_learn_more_at">詳情請瀏覽 %s</string>
   <string name="log_access_confirmation_title">要允許「%s」存取所有裝置記錄嗎？</string>
+  <string name="low_battery_label">電量不足</string>
+  <string name="low_battery_notification_text">開啟「標準慳電模式」以延長電池壽命</string>
+  <string name="low_battery_notification_text_ebs">開啟「超慳電模式」以延長電池壽命</string>
+  <string name="low_battery_notification_title">剩餘 %s 電量</string>
   <string name="m3c_search_bar_search">搜尋</string>
   <string name="m3c_suggestions_available">建議如下</string>
   <string name="magnification_close_settings_click_label">關閉放大設定</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">停止</string>
   <string name="media_output_end_session_dialog_summary">停止共享工作階段以移動媒體至其他裝置</string>
-  <string name="media_output_first_broadcast_title">廣播運作方式</string>
-  <string name="media_output_first_notify_broadcast_message">附近有兼容藍牙裝置的人可收聽你正在廣播的媒體內容</string>
   <string name="media_output_group_title_speakers_and_displays">喇叭和螢幕</string>
   <string name="media_output_group_title_suggested_device">建議的裝置</string>
   <string name="media_output_label_title">正在播放「%s」的裝置：</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">當你投放應用程式時，Android 可存取在該應用程式中顯示或播放的所有內容。因此，請謹慎處理密碼、付款資料、訊息、相片、音訊和影片等。</string>
   <string name="media_projection_sys_service_dialog_title">要開始錄影或投放嗎？</string>
   <string name="media_projection_sys_service_dialog_warning">在錄影或投放時，此功能的服務供應商可存取螢幕顯示或裝置播放的任何資料，當中包括密碼、付款資料、相片、訊息和播放的語音等資料。</string>
-  <string name="media_projection_task_switcher_action_back">切換回先前的應用程式</string>
-  <string name="media_projection_task_switcher_action_switch">改為分享此應用程式</string>
-  <string name="media_projection_task_switcher_text">切換應用程式時，系統會暫停分享</string>
   <string name="media_seamless_other_device">其他裝置</string>
   <string name="media_transfer_default_device_name">已連接的裝置</string>
   <string name="media_transfer_dock_speaker_device_name">插座喇叭</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">如要提高解像度，請切換至手機後置鏡頭</string>
   <string name="rear_display_unfolded_bottom_sheet_title">要切換螢幕嗎？</string>
   <string name="recent_conversations">最近的對話</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">已傳送圖片</string>
   <string name="remove_from_settings">從「設定」移除</string>
   <string name="remove_from_settings_prompt">要從「設定」移除系統使用者介面調諧器，並停止其所有功能嗎？</string>
   <string name="require_unlock_for_nfc">解鎖方可使用 NFC</string>
   <string name="restart_button_description">輕按並重新啟動此應用程式，以取得更佳的觀看體驗</string>
   <string name="retry_face">重新進行面孔驗證</string>
+  <string name="reverse_charging_device_name_text">其他 Pixel 裝置</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s 正在為其他裝置充電 (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">電池分享功能已開啟</string>
+  <string name="reverse_charging_title">電池分享</string>
   <string name="right_icon">向右圖示</string>
   <string name="right_keycode">向右按鍵碼</string>
   <string name="right_nav_bar_button_type">其他向右按鈕類型</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">輕按即可查看電池和數據用量詳情</string>
   <string name="running_foreground_services_title">正在背景中執行的應用程式</string>
-  <string name="satellite_connected_carrier_text">緊急衛星連接</string>
+  <string name="satellite_connected_carrier_text">Pixel 緊急衛星連接</string>
   <string name="save">儲存</string>
+  <string name="saver_confirmation_dialog_dismiss_text">取消</string>
+  <string name="saver_confirmation_dialog_subtitle">選取要使用的模式</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">包括上述所有變更。系統亦會暫停非必要的應用程式及其通知。</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">限制視覺效果和背景活動。系統會開啟深色主題背景 (如未開啟)。</string>
+  <string name="saver_confirmation_dialog_title">歡迎使用「慳電模式」</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">超慳電模式</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">標準慳電模式</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">螢幕截圖功能因裝置政策而停用</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">已被你的 IT 管理員封鎖</string>
   <string name="screen_pinning_can_open_other_apps">固定的應用程式可開啟其他應用程式。</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">如要取消固定此應用程式，請按住「返回」按鈕和「概覽」按鈕</string>
   <string name="screen_pinning_toast_gesture_nav">如要取消固定此應用程式，請向上滑動並按住</string>
   <string name="screen_pinning_toast_recents_invisible">如要取消固定此應用程式，請按住「返回」按鈕和主按鈕</string>
+  <string name="screen_protector_absent_message">在沒有使用螢幕保護貼時停用螢幕保護貼模式，改善觸感。</string>
+  <string name="screen_protector_disable_notification">停用通知</string>
+  <string name="screen_protector_go_to_settings">前往設定</string>
+  <string name="screen_protector_got_it">知道了</string>
+  <string name="screen_protector_mode_title">螢幕保護貼模式</string>
+  <string name="screen_protector_present_message">在使用螢幕保護貼時啟用螢幕保護貼模式，改善觸感。</string>
   <string name="screen_share_permission_app_selector_title">分享或錄影應用程式</string>
   <string name="screen_share_permission_dialog_option_entire_screen">整個螢幕畫面</string>
   <string name="screen_share_permission_dialog_option_single_app">單一應用程式</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">正在將螢幕截圖儲存至工作設定檔…</string>
   <string name="screenshot_scroll_label">擷取更大範圍的螢幕內容</string>
   <string name="screenshot_share_description">分享螢幕截圖</string>
-  <string name="screenshot_share_label">分享</string>
   <string name="screenshot_text">螢幕截圖</string>
   <string name="screenshot_top_boundary_pct">上方邊界 %1$d%%</string>
+  <string name="screenshot_view_description">查看螢幕截圖</string>
   <string name="screenshot_work_profile_notification">已儲存在工作設定檔的「%1$s」中</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">指紋感應器位於開關按鈕上，開關按鈕形狀扁平，位於手機邊緣凸起的音量按鈕旁。</string>
   <string name="see_all_bluetooth_devices">查看全部</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">在「設定」中指定預設筆記應用程式</string>
   <string name="settings_label">設定</string>
   <string name="settingslib_learn_more_text">瞭解詳情</string>
+  <string name="severe_battery_notification_switch_text">要切換至「超慳電模式」嗎？
+
+系統將暫停所有非必要應用程式及其通知</string>
+  <string name="severe_battery_notification_text">開啟「超慳電模式」。系統將暫停所有非必要應用程式</string>
+  <string name="severe_battery_notification_title">剩餘 %s 電量</string>
+  <string name="severe_low_battery_dialog_switch_action_text">切換</string>
   <string name="share_to_app_stop_dialog_button">停止分享</string>
   <string name="share_to_app_stop_dialog_message_specific_app">你將停止分享「%1$s」&lt;b&gt;&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">要停止分享螢幕嗎？</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- 可以讀取「%1$s」中的資料</string>
   <string name="slice_permission_text_2">- 可以在「%1$s」內執行操作</string>
   <string name="slice_permission_title">要允許「%1$s」顯示「%2$s」的快訊嗎？</string>
+  <string name="smartspace_content_desc">資訊一覽</string>
+  <string name="smartspace_flight_qr_code">QR 碼</string>
+  <string name="smartspace_role_desc">睇下</string>
   <string name="snoozeHourOptions">{count,plural, =1{# 小時}=2{# 小時}other{# 小時}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# 分鐘}other{# 分鐘}}</string>
   <string name="snooze_undo">復原</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">慢</string>
   <string name="speed_label_very_fast">非常快</string>
   <string name="split_screen_text">分割螢幕</string>
+  <string name="squeeze_invocation_prompt">握緊即可說話</string>
+  <string name="standard_battery_saver_text">標準</string>
   <string name="start_dreams">螢幕保護程式</string>
   <string name="state_empty">空白</string>
   <string name="state_off">閂</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">分頁</string>
   <string name="tap_a_network_to_connect">輕按網絡以連線</string>
   <string name="tap_again">再次輕按</string>
+  <string name="temp_defender_notify_des">手機回到正常溫度時，就會繼續充電</string>
+  <string name="temp_defender_notify_title">為保護電池，目前暫停充電</string>
   <string name="template_percent">百分之 %1$d。</string>
   <string name="thermal">熱能</string>
   <string name="thermal_shutdown_dialog_help_text">查看保養步驟</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">無需解鎖平板電腦，就能快速使用最愛的應用程式小工具。</string>
   <string name="title_usb_accessory">USB 配件</string>
   <string name="to_switch_networks_disconnect_ethernet">如要切換網絡，請中斷以太網連線</string>
+  <string name="too_hot_label">Pixel 過熱</string>
   <string name="touch_filtered_warning">由於某個應用程式已阻擋權限要求畫面，因此「設定」應用程式無法驗證你的回應。</string>
   <string name="touchpad_tutorial_action_key_button">快捷操作鍵</string>
   <string name="touchpad_tutorial_back_gesture_button">返去手勢</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">選單</string>
   <string name="tuner_minus">減號</string>
   <string name="tuner_other_apps">其他應用程式</string>
+  <string name="tuner_persistent_warning">請小心，這些實驗功能可能會在日後發佈時更改、分拆或消失。</string>
   <string name="tuner_plus">加號</string>
   <string name="tuner_right">向右</string>
   <string name="tuner_time">時間</string>
+  <string name="tuner_warning">使用者介面調諧器讓你以更多方法修改和自訂 Android 使用者介面。但請小心，這些實驗功能可能會在日後發佈時更改、分拆或消失。</string>
+  <string name="tuner_warning_title">這只是測試版本，並不包含完整功能</string>
   <string name="turn_off_airplane_mode">關閉飛行模式</string>
   <string name="turn_on_bluetooth">使用藍牙</string>
   <string name="turn_on_bluetooth_auto_info_disabled">「快速共享」和「尋找我的裝置」等功能都會使用藍牙</string>
   <string name="turn_on_bluetooth_auto_info_enabled">藍牙將於明天上午開啟</string>
   <string name="turn_on_bluetooth_auto_tomorrow">明天自動開啟</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">電視預設的音訊輸出</string>
   <string name="two_weeks_timestamp">2 週前</string>
   <string name="unknown">未知</string>
   <string name="unlock_to_see_notif_text">解鎖即可查看舊通知</string>
@@ -1552,7 +1624,9 @@ USB 連接埠可安全使用時，你會收到通知。</string>
   <string name="volume_odi_captions_hint_enable">啟用</string>
   <string name="volume_odi_captions_tip">自動為媒體加入字幕</string>
   <string name="volume_panel_captioning_title">即時字幕</string>
+  <string name="volume_panel_clear_calling_title">清晰通話</string>
   <string name="volume_panel_collapsed_sliders">閂埋咗音量滑桿</string>
+  <string name="volume_panel_device_settings_title">裝置設定</string>
   <string name="volume_panel_dialog_settings_button">設定</string>
   <string name="volume_panel_enter_media_output_settings">輸入輸出設定</string>
   <string name="volume_panel_expanded_sliders">打開咗音量滑桿</string>
@@ -1667,10 +1741,13 @@ Wi‑Fi 地址 (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">不明</string>
   <string name="wifitrackerlib_wifi_unmetered_label">非按用量收費</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">目前系統不會自動連線至 Wi-Fi</string>
+  <string name="wireless_charging_label">正在透過無線方式充電</string>
+  <string name="wireless_charging_notification_text">無線充電可能比有線充電使用更多能源。嘗試轉用有線充電器，可節省電力和時間。</string>
+  <string name="wireless_charging_notification_title">無線充電中</string>
   <string name="work_challenge_emergency_button_text">緊急</string>
   <string name="work_mode_off_title">要取消暫停工作應用程式嗎？</string>
   <string name="work_mode_turn_on">取消暫停</string>
-  <string name="zen_alarm_warning">你不會%1$s聽到鬧鐘</string>
+  <string name="zen_alarm_warning">你不會聽到下一個%1$s的鬧鐘響鬧</string>
   <string name="zen_alarm_warning_indef">除非你預先關閉此功能，否則你不會聽到下一個%1$s的鬧鐘響鬧</string>
   <string name="zen_mode_enable_dialog_turn_on">開啟</string>
   <string name="zen_mode_settings_turn_on_dialog_title">開啟「請勿騷擾」模式</string>

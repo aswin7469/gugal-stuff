@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/graphics/drawscope/Stroke;
 .super Landroidx/compose/ui/graphics/drawscope/DrawStyle;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -247,7 +247,7 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     .line 1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -286,57 +286,167 @@
     iget v1, p0, Landroidx/compose/ui/graphics/drawscope/Stroke;->cap:I
 
     .line 29
-    invoke-static {v1}, Landroidx/compose/ui/graphics/StrokeCap;->toString-impl(I)Ljava/lang/String;
+    const/4 v2, 0x0
 
     .line 31
-    move-result-object v1
+    invoke-static {v1, v2}, Landroidx/compose/ui/graphics/StrokeCap;->equals-impl0(II)Z
 
-    .line 34
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 32
+    move-result v2
 
     .line 35
-    const-string v1, ", join="
+    if-eqz v2, :cond_0
+
+    .line 36
+    const-string v1, "Butt"
 
     .line 38
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
     .line 40
-    iget v1, p0, Landroidx/compose/ui/graphics/drawscope/Stroke;->join:I
+    :cond_0
+    const/4 v2, 0x1
 
-    .line 43
-    invoke-static {v1}, Landroidx/compose/ui/graphics/StrokeJoin;->toString-impl(I)Ljava/lang/String;
+    .line 41
+    invoke-static {v1, v2}, Landroidx/compose/ui/graphics/StrokeCap;->equals-impl0(II)Z
+
+    .line 42
+    move-result v2
 
     .line 45
-    move-result-object v1
+    if-eqz v2, :cond_1
+
+    .line 46
+    const-string v1, "Round"
 
     .line 48
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    .line 49
-    const-string v1, ", pathEffect="
+    .line 50
+    :cond_1
+    const/4 v2, 0x2
+
+    .line 51
+    invoke-static {v1, v2}, Landroidx/compose/ui/graphics/StrokeCap;->equals-impl0(II)Z
 
     .line 52
+    move-result v1
+
+    .line 55
+    if-eqz v1, :cond_2
+
+    .line 56
+    const-string v1, "Square"
+
+    .line 58
+    goto :goto_0
+
+    .line 60
+    :cond_2
+    const-string v1, "Unknown"
+
+    .line 61
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 63
+    const-string v1, ", join="
+
+    .line 66
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 54
+    .line 68
+    iget v1, p0, Landroidx/compose/ui/graphics/drawscope/Stroke;->join:I
+
+    .line 71
+    const/4 v2, 0x0
+
+    .line 73
+    invoke-static {v1, v2}, Landroidx/compose/ui/graphics/StrokeJoin;->equals-impl0(II)Z
+
+    .line 74
+    move-result v2
+
+    .line 77
+    if-eqz v2, :cond_3
+
+    .line 78
+    const-string v1, "Miter"
+
+    .line 80
+    goto :goto_1
+
+    .line 82
+    :cond_3
+    const/4 v2, 0x1
+
+    .line 83
+    invoke-static {v1, v2}, Landroidx/compose/ui/graphics/StrokeJoin;->equals-impl0(II)Z
+
+    .line 84
+    move-result v2
+
+    .line 87
+    if-eqz v2, :cond_4
+
+    .line 88
+    const-string v1, "Round"
+
+    .line 90
+    goto :goto_1
+
+    .line 92
+    :cond_4
+    const/4 v2, 0x2
+
+    .line 93
+    invoke-static {v1, v2}, Landroidx/compose/ui/graphics/StrokeJoin;->equals-impl0(II)Z
+
+    .line 94
+    move-result v1
+
+    .line 97
+    if-eqz v1, :cond_5
+
+    .line 98
+    const-string v1, "Bevel"
+
+    .line 100
+    goto :goto_1
+
+    .line 102
+    :cond_5
+    const-string v1, "Unknown"
+
+    .line 103
+    :goto_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 105
+    const-string v1, ", pathEffect="
+
+    .line 108
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 110
     iget-object p0, p0, Landroidx/compose/ui/graphics/drawscope/Stroke;->pathEffect:Landroidx/compose/ui/graphics/AndroidPathEffect;
 
-    .line 57
+    .line 113
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 59
+    .line 115
     const/16 p0, 0x29
 
-    .line 62
+    .line 118
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 64
+    .line 120
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 67
+    .line 123
     move-result-object p0
 
-    .line 70
+    .line 126
     return-object p0
-    .line 71
+    .line 127
 .end method

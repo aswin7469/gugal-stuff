@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/ui/AbsoluteAlignment;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -48,18 +48,12 @@
     invoke-direct {v0, v1}, Landroidx/compose/ui/BiasAbsoluteAlignment$Horizontal;-><init>(F)V
 
     .line 22
-    sput-object v0, Landroidx/compose/ui/AbsoluteAlignment;->Left:Landroidx/compose/ui/BiasAbsoluteAlignment$Horizontal;
-
-    .line 25
     new-instance v0, Landroidx/compose/ui/BiasAbsoluteAlignment$Horizontal;
 
-    .line 27
+    .line 25
     invoke-direct {v0, v2}, Landroidx/compose/ui/BiasAbsoluteAlignment$Horizontal;-><init>(F)V
 
-    .line 29
-    sput-object v0, Landroidx/compose/ui/AbsoluteAlignment;->Right:Landroidx/compose/ui/BiasAbsoluteAlignment$Horizontal;
-
-    .line 32
+    .line 27
     return-void
-    .line 34
+    .line 30
 .end method

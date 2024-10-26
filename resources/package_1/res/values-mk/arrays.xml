@@ -5,7 +5,9 @@
     <item>Прикажи процент кога се полни (стандардно)</item>
     <item>Не прикажувај ја иконава</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Прикажи часови, минути и секунди</item>
     <item>Прикажи часови и минути (стандардно)</item>

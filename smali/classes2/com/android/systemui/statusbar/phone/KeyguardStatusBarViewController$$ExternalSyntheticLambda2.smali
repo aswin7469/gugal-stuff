@@ -1,9 +1,9 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Function;
+.implements Ljava/util/function/BiConsumer;
 
 
 # instance fields
@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
     .line 1
@@ -37,15 +37,24 @@
     check-cast p1, Landroid/view/View;
 
     .line 4
-    iget p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController;->mKeyguardHeadsUpShowingAmount:F
+    check-cast p2, Ljava/lang/Float;
 
     .line 6
-    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 8
-    move-result-object p0
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     .line 11
-    return-object p0
-    .line 12
+    move-result p1
+
+    .line 14
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController;->mKeyguardHeadsUpShowingAmount:F
+
+    .line 15
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController;->updateViewState()V
+
+    .line 17
+    return-void
+    .line 20
 .end method

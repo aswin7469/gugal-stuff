@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/keyguard/KeyguardInputViewController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/keyguard/KeyguardSecurityView;
@@ -54,7 +54,7 @@
     if-eqz p5, :cond_0
 
     .line 20
-    const p2, 0x7f0b0145    # @id/bouncer_message_area
+    const p2, 0x7f0a014b    # @id/bouncer_message_area
 
     .line 22
     :try_start_0
@@ -148,7 +148,7 @@
 .end method
 
 .method public onViewAttached()V
-    .locals 3
+    .locals 2
 
     .line 1
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardInputViewController;->updateMessageAreaVisibility()V
@@ -214,15 +214,12 @@
     const/4 v1, 0x0
 
     .line 43
-    const/4 v2, 0x0
+    invoke-virtual {v0, p0, v1}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     .line 44
-    invoke-virtual {v0, p0, v2, v1}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;ZLandroid/hardware/biometrics/BiometricSourceType;)V
-
-    .line 45
     :cond_0
     return-void
-    .line 48
+    .line 47
 .end method
 
 .method public abstract reset$1()V

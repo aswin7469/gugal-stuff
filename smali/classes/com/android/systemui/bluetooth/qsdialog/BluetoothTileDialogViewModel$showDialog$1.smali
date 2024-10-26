@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -99,7 +99,7 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 20
+    .locals 21
 
     .line 1
     move-object/from16 v0, p0
@@ -156,7 +156,7 @@
     move-object/from16 v4, p1
 
     .line 34
-    goto/16 :goto_4
+    goto/16 :goto_3
 
     .line 36
     :cond_0
@@ -400,7 +400,7 @@
     move-object v14, v9
 
     .line 182
-    move-object/from16 p1, v15
+    move-object/from16 v20, v15
 
     .line 183
     move-object v15, v6
@@ -439,7 +439,7 @@
     move-object v12, v5
 
     .line 208
-    move-object/from16 v13, p1
+    move-object/from16 v13, v20
 
     .line 209
     move-object v14, v8
@@ -469,348 +469,301 @@
     invoke-static {v6, v2}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
     .line 227
-    invoke-static {}, Lcom/android/settingslib/bluetooth/BluetoothUtils;->isAudioSharingEnabled()Z
+    invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     .line 230
-    move-result v4
-
-    .line 233
-    if-eqz v4, :cond_7
-
-    .line 234
-    iget-object v4, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->this$0:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
-
-    .line 236
-    iget-object v4, v4, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->audioSharingInteractor:Lcom/android/systemui/bluetooth/qsdialog/AudioSharingInteractor;
-
-    .line 238
-    iget-object v4, v4, Lcom/android/systemui/bluetooth/qsdialog/AudioSharingInteractor;->audioSharingButtonStateUpdate:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 240
-    new-instance v5, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$5;
-
-    .line 242
-    move-object/from16 v10, p1
-
-    .line 244
-    const/4 v6, 0x0
-
-    .line 246
-    invoke-direct {v5, v8, v9, v10, v6}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$5;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;Lcom/android/systemui/statusbar/phone/SystemUIDialog;Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
-
-    .line 247
-    new-instance v6, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
-
-    .line 250
-    const/4 v11, 0x0
-
-    .line 252
-    invoke-direct {v6, v4, v5, v11}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
-
-    .line 253
-    invoke-static {v6, v2}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
-
-    .line 256
-    goto :goto_3
-
-    .line 259
-    :cond_7
-    move-object/from16 v10, p1
-
-    .line 260
-    :goto_3
     iget-object v15, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->this$0:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
-    .line 262
+    .line 233
     iget-object v4, v15, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->bluetoothStateInteractor:Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;
 
-    .line 264
+    .line 235
     iget-object v4, v4, Lcom/android/systemui/bluetooth/qsdialog/BluetoothStateInteractor;->bluetoothStateUpdate:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 266
+    .line 237
     new-instance v5, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$6;
 
-    .line 268
+    .line 239
     const/16 v17, 0x0
 
-    .line 270
+    .line 241
     move-object v12, v5
 
-    .line 272
-    move-object v13, v10
+    .line 243
+    move-object/from16 v13, v20
 
-    .line 273
+    .line 244
     move-object v14, v8
 
-    .line 274
+    .line 246
     move-object/from16 v16, v9
 
-    .line 275
+    .line 247
     move-object/from16 v18, v7
 
-    .line 277
+    .line 249
     move-object/from16 v19, v2
 
-    .line 279
+    .line 251
     invoke-direct/range {v12 .. v19}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$6;-><init>(Landroid/content/Context;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;Lcom/android/systemui/statusbar/phone/SystemUIDialog;Lkotlin/coroutines/Continuation;Lkotlin/jvm/internal/Ref$ObjectRef;Lkotlinx/coroutines/CoroutineScope;)V
 
-    .line 281
+    .line 253
     new-instance v6, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 284
+    .line 256
     const/4 v7, 0x0
 
-    .line 286
+    .line 258
     invoke-direct {v6, v4, v5, v7}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 287
+    .line 259
     invoke-static {v6, v2}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 290
+    .line 262
     new-instance v4, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 293
+    .line 265
     iget-object v5, v8, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->mutableBluetoothStateToggle:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 295
+    .line 267
     invoke-direct {v4, v5}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
-    .line 297
+    .line 269
     new-instance v5, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;
 
-    .line 300
+    .line 272
     invoke-direct {v5, v4}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
 
-    .line 302
+    .line 274
     new-instance v4, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$7;
 
-    .line 305
+    .line 277
     iget-object v6, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->this$0:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
-    .line 307
+    .line 279
     const/4 v7, 0x0
 
-    .line 309
+    .line 281
     invoke-direct {v4, v8, v9, v6, v7}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$7;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;Lcom/android/systemui/statusbar/phone/SystemUIDialog;Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;Lkotlin/coroutines/Continuation;)V
 
-    .line 310
+    .line 282
     new-instance v6, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 313
+    .line 285
     const/4 v7, 0x0
 
-    .line 315
+    .line 287
     invoke-direct {v6, v5, v4, v7}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 316
+    .line 288
     invoke-static {v6, v2}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 319
+    .line 291
     iget-object v4, v8, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->mutableDeviceItemClick:Lkotlinx/coroutines/flow/SharedFlowImpl;
 
-    .line 322
+    .line 294
     new-instance v5, Lkotlinx/coroutines/flow/ReadonlySharedFlow;
 
-    .line 324
+    .line 296
     invoke-direct {v5, v4}, Lkotlinx/coroutines/flow/ReadonlySharedFlow;-><init>(Lkotlinx/coroutines/flow/SharedFlow;)V
 
-    .line 326
+    .line 298
     new-instance v4, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$8;
 
-    .line 329
+    .line 301
     iget-object v6, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->this$0:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
-    .line 331
+    .line 303
     const/4 v7, 0x0
 
-    .line 333
+    .line 305
     invoke-direct {v4, v6, v9, v7}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$8;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;Lcom/android/systemui/statusbar/phone/SystemUIDialog;Lkotlin/coroutines/Continuation;)V
 
-    .line 334
+    .line 306
     new-instance v6, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 337
+    .line 309
     const/4 v7, 0x0
 
-    .line 339
+    .line 311
     invoke-direct {v6, v5, v4, v7}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 340
+    .line 312
     invoke-static {v6, v2}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 343
+    .line 315
     iget-object v4, v8, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->mutableContentHeight:Lkotlinx/coroutines/flow/SharedFlowImpl;
 
-    .line 346
+    .line 318
     new-instance v5, Lkotlinx/coroutines/flow/ReadonlySharedFlow;
 
-    .line 348
+    .line 320
     invoke-direct {v5, v4}, Lkotlinx/coroutines/flow/ReadonlySharedFlow;-><init>(Lkotlinx/coroutines/flow/SharedFlow;)V
 
-    .line 350
+    .line 322
     new-instance v4, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$9;
 
-    .line 353
+    .line 325
     iget-object v6, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->this$0:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
-    .line 355
+    .line 327
     const/4 v7, 0x0
 
-    .line 357
+    .line 329
     invoke-direct {v4, v6, v7}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$9;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;Lkotlin/coroutines/Continuation;)V
 
-    .line 358
+    .line 330
     new-instance v6, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 361
+    .line 333
     const/4 v7, 0x0
 
-    .line 363
+    .line 335
     invoke-direct {v6, v5, v4, v7}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 364
+    .line 336
     invoke-static {v6, v2}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 367
+    .line 339
     iget-object v4, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->this$0:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
-    .line 370
+    .line 342
     iput-object v2, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->L$0:Ljava/lang/Object;
 
-    .line 372
+    .line 344
     iput-object v8, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->L$1:Ljava/lang/Object;
 
-    .line 374
+    .line 346
     iput-object v9, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->L$2:Ljava/lang/Object;
 
-    .line 376
+    .line 348
     const/4 v5, 0x2
 
-    .line 378
+    .line 350
     iput v5, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->label:I
 
-    .line 379
+    .line 351
     invoke-virtual {v4, v0}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->isAutoOnToggleFeatureAvailable$frameworks__base__packages__SystemUI__android_common__SystemUI_core(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 381
+    .line 353
     move-result-object v4
 
-    .line 384
-    if-ne v4, v1, :cond_8
+    .line 356
+    if-ne v4, v1, :cond_7
 
-    .line 385
+    .line 357
     return-object v1
 
-    .line 387
-    :cond_8
+    .line 359
+    :cond_7
     move-object v5, v2
 
-    .line 388
+    .line 360
     move-object v2, v8
 
-    .line 389
+    .line 361
     move-object v1, v9
 
-    .line 390
-    :goto_4
+    .line 362
+    :goto_3
     check-cast v4, Ljava/lang/Boolean;
 
-    .line 391
+    .line 363
     invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 393
+    .line 365
     move-result v4
 
-    .line 396
-    if-eqz v4, :cond_9
+    .line 368
+    if-eqz v4, :cond_8
 
-    .line 397
+    .line 369
     iget-object v4, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->this$0:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
-    .line 399
+    .line 371
     iget-object v4, v4, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;->bluetoothAutoOnInteractor:Lcom/android/systemui/bluetooth/qsdialog/BluetoothAutoOnInteractor;
 
-    .line 401
+    .line 373
     iget-object v4, v4, Lcom/android/systemui/bluetooth/qsdialog/BluetoothAutoOnInteractor;->isEnabled:Lkotlinx/coroutines/flow/Flow;
 
-    .line 403
+    .line 375
     new-instance v6, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$10;
 
-    .line 405
+    .line 377
     const/4 v7, 0x0
 
-    .line 407
+    .line 379
     invoke-direct {v6, v2, v1, v7}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$10;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;Lcom/android/systemui/statusbar/phone/SystemUIDialog;Lkotlin/coroutines/Continuation;)V
 
-    .line 408
+    .line 380
     new-instance v7, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 411
+    .line 383
     const/4 v8, 0x0
 
-    .line 413
+    .line 385
     invoke-direct {v7, v4, v6, v8}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 414
+    .line 386
     invoke-static {v7, v5}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 417
+    .line 389
     iget-object v2, v2, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogDelegate;->mutableBluetoothAutoOnToggle:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 420
+    .line 392
     new-instance v4, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 422
+    .line 394
     invoke-direct {v4, v2}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
-    .line 424
+    .line 396
     new-instance v2, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;
 
-    .line 427
+    .line 399
     invoke-direct {v2, v4}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;)V
 
-    .line 429
+    .line 401
     new-instance v4, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$11;
 
-    .line 432
+    .line 404
     iget-object v0, v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1;->this$0:Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;
 
-    .line 434
+    .line 406
     const/4 v6, 0x0
 
-    .line 436
+    .line 408
     invoke-direct {v4, v0, v6}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$11;-><init>(Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel;Lkotlin/coroutines/Continuation;)V
 
-    .line 437
+    .line 409
     new-instance v0, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;
 
-    .line 440
+    .line 412
     const/4 v7, 0x0
 
-    .line 442
+    .line 414
     invoke-direct {v0, v2, v4, v7}, Lkotlinx/coroutines/flow/FlowKt__TransformKt$onEach$$inlined$unsafeTransform$1;-><init>(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;I)V
 
-    .line 443
+    .line 415
     invoke-static {v0, v5}, Lkotlinx/coroutines/flow/FlowKt;->launchIn(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/CoroutineScope;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 446
-    goto :goto_5
+    .line 418
+    goto :goto_4
 
-    .line 449
-    :cond_9
+    .line 421
+    :cond_8
     const/4 v6, 0x0
 
-    .line 450
-    :goto_5
+    .line 422
+    :goto_4
     new-instance v0, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$12;
 
-    .line 451
+    .line 423
     invoke-direct {v0, v1, v6}, Lcom/android/systemui/bluetooth/qsdialog/BluetoothTileDialogViewModel$showDialog$1$12;-><init>(Lcom/android/systemui/statusbar/phone/SystemUIDialog;Lkotlin/coroutines/Continuation;)V
 
-    .line 453
+    .line 425
     invoke-static {v5, v0}, Lkotlinx/coroutines/channels/ProduceKt;->produce$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/jvm/functions/Function2;)Lkotlinx/coroutines/channels/ProducerCoroutine;
 
-    .line 456
+    .line 428
     return-object v3
-    .line 459
+    .line 431
 .end method

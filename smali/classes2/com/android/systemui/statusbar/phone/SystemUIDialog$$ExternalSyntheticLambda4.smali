@@ -1,42 +1,70 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Predicate;
+.implements Ljava/lang/Runnable;
 
 
-# virtual methods
-.method public final test(Ljava/lang/Object;)Z
+# instance fields
+.field public final synthetic f$0:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+
+.field public final synthetic f$1:I
+
+.field public final synthetic f$2:Landroid/content/DialogInterface$OnClickListener;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILandroid/content/DialogInterface$OnClickListener;Lcom/android/systemui/statusbar/phone/SystemUIDialog;)V
     .locals 0
 
     .line 1
-    check-cast p1, Landroid/view/View;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    const p0, 0x7f0b07cc    # @id/tag_dialog_background
+    iput-object p3, p0, Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda4;->f$0:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
 
-    .line 4
-    invoke-virtual {p1, p0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+    .line 5
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda4;->f$1:I
 
     .line 7
-    move-result-object p0
+    iput-object p2, p0, Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda4;->f$2:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 10
-    if-eqz p0, :cond_0
+    .line 9
+    return-void
+    .line 11
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda4;->f$0:Lcom/android/systemui/statusbar/phone/SystemUIDialog;
+
+    .line 2
+    iget v1, p0, Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda4;->f$1:I
+
+    .line 4
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda4;->f$2:Landroid/content/DialogInterface$OnClickListener;
+
+    .line 6
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->getButton(I)Landroid/widget/Button;
+
+    .line 8
+    move-result-object v2
 
     .line 11
-    const/4 p0, 0x1
+    new-instance v3, Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda5;
 
-    .line 13
-    goto :goto_0
+    .line 12
+    invoke-direct {v3, v1, p0, v0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog$$ExternalSyntheticLambda5;-><init>(ILandroid/content/DialogInterface$OnClickListener;Lcom/android/systemui/statusbar/phone/SystemUIDialog;)V
 
     .line 14
-    :cond_0
-    const/4 p0, 0x0
+    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 15
-    :goto_0
-    return p0
-    .line 16
+    .line 17
+    return-void
+    .line 20
 .end method

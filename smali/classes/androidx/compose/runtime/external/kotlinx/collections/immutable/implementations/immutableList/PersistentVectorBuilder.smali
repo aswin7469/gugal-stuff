@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;
 .super Lkotlin/collections/AbstractMutableList;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/Collection;
@@ -164,7 +164,7 @@
 
     sub-int/2addr p1, v0
 
-    invoke-virtual {p0, v1, p1, p2}, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->insertIntoTail([Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {p0, p1, p2, v1}, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->insertIntoTail(ILjava/lang/Object;[Ljava/lang/Object;)V
 
     return-void
 
@@ -201,7 +201,7 @@
     const/4 v0, 0x0
 
     .line 11
-    invoke-virtual {p0, p1, v0, p2}, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->insertIntoTail([Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {p0, v0, p2, p1}, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->insertIntoTail(ILjava/lang/Object;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -988,7 +988,7 @@
     const/16 v7, 0x20
 
     .line 35
-    invoke-static {v4, v2, v6, v5, v7}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v6, v5, v7, v4, v2}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 37
     invoke-virtual {p0, p3, v4}, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->makeMutableShiftingRight(I[Ljava/lang/Object;)[Ljava/lang/Object;
@@ -1231,7 +1231,7 @@
     .line 76
 .end method
 
-.method public final insertIntoTail([Ljava/lang/Object;ILjava/lang/Object;)V
+.method public final insertIntoTail(ILjava/lang/Object;[Ljava/lang/Object;)V
     .locals 5
 
     .line 1
@@ -1259,16 +1259,16 @@
     iget-object v2, p0, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->tail:[Ljava/lang/Object;
 
     .line 16
-    add-int/lit8 v3, p2, 0x1
+    add-int/lit8 v3, p1, 0x1
 
     .line 18
-    invoke-static {v2, v1, v3, p2, v0}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v3, p1, v0, v2, v1}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 20
-    aput-object p3, v1, p2
+    aput-object p2, v1, p1
 
     .line 23
-    iput-object p1, p0, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->root:[Ljava/lang/Object;
+    iput-object p3, p0, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->root:[Ljava/lang/Object;
 
     .line 25
     iput-object v1, p0, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->tail:[Ljava/lang/Object;
@@ -1296,22 +1296,22 @@
     aget-object v3, v0, v2
 
     .line 40
-    add-int/lit8 v4, p2, 0x1
+    add-int/lit8 v4, p1, 0x1
 
     .line 42
-    invoke-static {v0, v1, v4, p2, v2}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v4, p1, v2, v0, v1}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 44
-    aput-object p3, v1, p2
+    aput-object p2, v1, p1
 
     .line 47
     invoke-virtual {p0, v3}, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->mutableBufferWith(Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 49
-    move-result-object p2
+    move-result-object p1
 
     .line 52
-    invoke-virtual {p0, p1, v1, p2}, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->pushFilledTail([Ljava/lang/Object;[Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-virtual {p0, p3, v1, p1}, Landroidx/compose/runtime/external/kotlinx/collections/immutable/implementations/immutableList/PersistentVectorBuilder;->pushFilledTail([Ljava/lang/Object;[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 53
     :goto_0
@@ -1533,7 +1533,7 @@
     const/4 v2, 0x0
 
     .line 27
-    invoke-static {p1, p0, v2, v0, v1}, Lkotlin/collections/ArraysKt;->copyInto$default([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v2, v0, v1, p1, p0}, Lkotlin/collections/ArraysKt;->copyInto$default(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 28
     return-object p0
@@ -3666,7 +3666,7 @@
     add-int/2addr p2, v0
 
     .line 29
-    invoke-static {p3, p7, p2, v2, p4}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {p2, v2, p4, p3, p7}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 30
     goto :goto_1
@@ -3702,13 +3702,13 @@
     sub-int v3, p4, v3
 
     .line 48
-    invoke-static {p3, p7, v1, v3, p4}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {v1, v3, p4, p3, p7}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 50
     add-int/2addr p2, v0
 
     .line 53
-    invoke-static {p3, v4, p2, v2, v3}, Lkotlin/collections/ArraysKt;->copyInto([Ljava/lang/Object;[Ljava/lang/Object;III)V
+    invoke-static {p2, v2, v3, p3, v4}, Lkotlin/collections/ArraysKt;->copyInto(III[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 54
     move-object p7, v4

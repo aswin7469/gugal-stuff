@@ -1,9 +1,9 @@
 .class public final synthetic Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Lcom/android/systemui/ambient/touch/TouchHandler$TouchSession$Callback;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
@@ -27,85 +27,58 @@
 
 
 # virtual methods
-.method public final onRemoved()V
-    .locals 6
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler$$ExternalSyntheticLambda0;->f$0:Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;
 
     .line 2
-    iget-object v0, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 4
-    const/4 v1, 0x0
-
-    .line 6
-    if-eqz v0, :cond_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     .line 7
-    invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
+    move-result-object p1
 
-    .line 9
-    iput-object v1, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;->mVelocityTracker:Landroid/view/VelocityTracker;
+    .line 10
+    check-cast p1, Ljava/lang/Float;
 
-    .line 12
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;->mScrimManager:Lcom/android/systemui/ambient/touch/scrim/ScrimManager;
+    .line 11
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    .line 14
-    iget-object v2, v0, Lcom/android/systemui/ambient/touch/scrim/ScrimManager;->mExecutor:Ljava/util/concurrent/Executor;
+    .line 13
+    move-result p1
 
     .line 16
-    new-instance v3, Lcom/android/systemui/ambient/touch/scrim/ScrimManager$$ExternalSyntheticLambda1;
+    iput p1, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;->mCurrentExpansion:F
 
-    .line 18
-    iget-object v4, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;->mScrimManagerCallback:Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler$1;
+    .line 17
+    new-instance v0, Lcom/android/systemui/shade/ShadeExpansionChangeEvent;
 
-    .line 20
-    const/4 v5, 0x0
+    .line 19
+    iget-object v1, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;->mExpanded:Ljava/lang/Boolean;
 
-    .line 22
-    invoke-direct {v3, v0, v4, v5}, Lcom/android/systemui/ambient/touch/scrim/ScrimManager$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/ambient/touch/scrim/ScrimManager;Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler$1;I)V
+    .line 21
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 23
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    move-result v1
 
     .line 26
-    iput-object v1, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;->mCapture:Ljava/lang/Boolean;
+    const/4 v2, 0x1
 
-    .line 29
-    iput-object v1, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;->mTouchSession:Lcom/android/systemui/ambient/touch/TouchMonitor$TouchSessionImpl;
+    .line 27
+    invoke-direct {v0, p1, v1, v2}, Lcom/android/systemui/shade/ShadeExpansionChangeEvent;-><init>(FZZ)V
+
+    .line 28
+    iget-object p0, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;->mCurrentScrimController:Lcom/android/systemui/ambient/touch/scrim/ScrimController;
 
     .line 31
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
+    invoke-interface {p0, v0}, Lcom/android/systemui/ambient/touch/scrim/ScrimController;->expand(Lcom/android/systemui/shade/ShadeExpansionChangeEvent;)V
 
     .line 33
-    if-nez v0, :cond_1
-
-    .line 35
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 37
-    :cond_1
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->communalBouncerDoNotModifyPluginOpen:Z
-
-    .line 40
-    if-nez v0, :cond_2
-
-    .line 42
-    iget-object v0, p0, Lcom/android/systemui/ambient/touch/BouncerSwipeTouchHandler;->mNotificationShadeWindowController:Lcom/android/systemui/statusbar/NotificationShadeWindowController;
-
-    .line 44
-    check-cast v0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
-
-    .line 46
-    const/4 v1, 0x0
-
-    .line 48
-    invoke-virtual {v0, p0, v1}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->setForcePluginOpen(Ljava/lang/Object;Z)V
-
-    .line 49
-    :cond_2
     return-void
-    .line 52
+    .line 36
 .end method

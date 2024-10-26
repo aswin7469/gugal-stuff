@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/gestures/ScrollingLogic;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -139,7 +139,7 @@
     if-eqz v3, :cond_1
 
     .line 28
-    invoke-virtual {v3, v8, v1, v2}, Landroidx/compose/ui/input/nestedscroll/NestedScrollNode;->onPreScroll-OzD1aCk(IJ)J
+    invoke-virtual {v3, v1, v2, v8}, Landroidx/compose/ui/input/nestedscroll/NestedScrollNode;->onPreScroll-OzD1aCk(JI)J
 
     .line 30
     move-result-wide v9

@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/graphics/vector/GroupComponent;
 .super Landroidx/compose/ui/graphics/vector/VNode;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -731,74 +731,6 @@
     :goto_1
     return-void
     .line 90
-.end method
-
-.method public final remove(II)V
-    .locals 3
-
-    .line 1
-    const/4 v0, 0x0
-
-    .line 2
-    :goto_0
-    if-ge v0, p2, :cond_1
-
-    .line 3
-    iget-object v1, p0, Landroidx/compose/ui/graphics/vector/GroupComponent;->children:Ljava/util/List;
-
-    .line 5
-    check-cast v1, Ljava/util/ArrayList;
-
-    .line 7
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    .line 9
-    move-result v1
-
-    .line 12
-    if-ge p1, v1, :cond_0
-
-    .line 13
-    iget-object v1, p0, Landroidx/compose/ui/graphics/vector/GroupComponent;->children:Ljava/util/List;
-
-    .line 15
-    check-cast v1, Ljava/util/ArrayList;
-
-    .line 17
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    .line 19
-    move-result-object v1
-
-    .line 22
-    check-cast v1, Landroidx/compose/ui/graphics/vector/VNode;
-
-    .line 23
-    const/4 v2, 0x0
-
-    .line 25
-    invoke-virtual {v1, v2}, Landroidx/compose/ui/graphics/vector/VNode;->setInvalidateListener$ui_release(Lkotlin/jvm/functions/Function1;)V
-
-    .line 26
-    iget-object v1, p0, Landroidx/compose/ui/graphics/vector/GroupComponent;->children:Ljava/util/List;
-
-    .line 29
-    invoke-interface {v1, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    .line 31
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    .line 34
-    goto :goto_0
-
-    .line 36
-    :cond_1
-    invoke-virtual {p0}, Landroidx/compose/ui/graphics/vector/VNode;->invalidate()V
-
-    .line 37
-    return-void
-    .line 40
 .end method
 
 .method public final setInvalidateListener$ui_release(Lkotlin/jvm/functions/Function1;)V

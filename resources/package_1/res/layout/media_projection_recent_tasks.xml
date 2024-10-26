@@ -22,7 +22,7 @@
              android:layout_height="2.0dp"
              android:layout_marginTop="24.0dp"
              android:layout_marginBottom="8.0dp"
-             android:src="@android:drawable/ic_doc_video"
+             android:src="@android:drawable/ic_doc_spreadsheet"
              android:tint="?android:attr/textColorSecondary"
              android:importantForAccessibility="no" />
 </LinearLayout>

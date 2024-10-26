@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/ambient/touch/ShadeTouchHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/ambient/touch/TouchHandler;
@@ -8,8 +8,6 @@
 
 # instance fields
 .field public mCapture:Ljava/lang/Boolean;
-
-.field public final mDreamManager:Landroid/app/DreamManager;
 
 .field public final mInitiationHeight:I
 
@@ -32,14 +30,11 @@
     iput-object p2, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->mShadeViewController:Lcom/android/systemui/shade/ShadeViewController;
 
     .line 7
-    iput-object p3, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->mDreamManager:Landroid/app/DreamManager;
-
-    .line 9
     iput p4, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->mInitiationHeight:I
 
-    .line 11
+    .line 9
     return-void
-    .line 13
+    .line 11
 .end method
 
 
@@ -143,126 +138,4 @@
     .line 41
     return-void
     .line 44
-.end method
-
-.method public final sendTouchEvent(Landroid/view/MotionEvent;)V
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->communalHub()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_3
-
-    .line 6
-    iget-object v0, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->mDreamManager:Landroid/app/DreamManager;
-
-    .line 8
-    invoke-virtual {v0}, Landroid/app/DreamManager;->isDreaming()Z
-
-    .line 10
-    move-result v0
-
-    .line 13
-    if-nez v0, :cond_3
-
-    .line 14
-    iget-object p0, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->mSurfaces:Ljava/util/Optional;
-
-    .line 16
-    invoke-virtual {p0}, Ljava/util/Optional;->get()Ljava/lang/Object;
-
-    .line 18
-    move-result-object p0
-
-    .line 21
-    check-cast p0, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
-
-    .line 22
-    check-cast p0, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
-
-    .line 24
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->getNotificationShadeWindowViewController()Lcom/android/systemui/shade/NotificationShadeWindowViewController;
-
-    .line 26
-    move-result-object p0
-
-    .line 29
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 30
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    .line 33
-    move-result v0
-
-    .line 36
-    if-nez v0, :cond_0
-
-    .line 37
-    const/4 v0, 0x0
-
-    .line 39
-    iput-boolean v0, p0, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mExternalTouchIntercepted:Z
-
-    .line 40
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mView:Lcom/android/systemui/shade/NotificationShadeWindowView;
-
-    .line 42
-    invoke-virtual {v0, p1}, Lcom/android/systemui/shade/NotificationShadeWindowView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-
-    .line 44
-    move-result v1
-
-    .line 47
-    if-nez v1, :cond_1
-
-    .line 48
-    goto :goto_0
-
-    .line 50
-    :cond_1
-    iget-boolean v1, p0, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mExternalTouchIntercepted:Z
-
-    .line 51
-    if-nez v1, :cond_2
-
-    .line 53
-    invoke-virtual {v0, p1}, Lcom/android/systemui/shade/NotificationShadeWindowView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-
-    .line 55
-    move-result v1
-
-    .line 58
-    iput-boolean v1, p0, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mExternalTouchIntercepted:Z
-
-    .line 59
-    :cond_2
-    iget-boolean p0, p0, Lcom/android/systemui/shade/NotificationShadeWindowViewController;->mExternalTouchIntercepted:Z
-
-    .line 61
-    if-eqz p0, :cond_4
-
-    .line 63
-    invoke-virtual {v0, p1}, Lcom/android/systemui/shade/NotificationShadeWindowView;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    .line 65
-    goto :goto_0
-
-    .line 68
-    :cond_3
-    iget-object p0, p0, Lcom/android/systemui/ambient/touch/ShadeTouchHandler;->mShadeViewController:Lcom/android/systemui/shade/ShadeViewController;
-
-    .line 69
-    invoke-interface {p0, p1}, Lcom/android/systemui/shade/ShadeViewController;->handleExternalTouch(Landroid/view/MotionEvent;)Z
-
-    .line 71
-    :cond_4
-    :goto_0
-    return-void
-    .line 74
 .end method

@@ -1,16 +1,12 @@
 .class public final Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final configurationValues:Lkotlinx/coroutines/flow/Flow;
 
 .field public final layoutDirection:Lkotlinx/coroutines/flow/Flow;
-
-.field public final maxBounds:Lkotlinx/coroutines/flow/Flow;
-
-.field public final naturalMaxBounds:Lkotlinx/coroutines/flow/Flow;
 
 .field public final onAnyConfigurationChange:Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;
 
@@ -48,89 +44,77 @@
     invoke-static {v0}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
     .line 17
-    move-result-object v0
-
-    .line 20
-    iput-object v0, p0, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;->maxBounds:Lkotlinx/coroutines/flow/Flow;
-
-    .line 21
     new-instance v0, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor$special$$inlined$map$2;
 
-    .line 23
+    .line 20
     iget-object v1, p1, Lcom/android/systemui/common/ui/data/repository/ConfigurationRepositoryImpl;->configurationValues:Lkotlinx/coroutines/flow/Flow;
 
-    .line 25
+    .line 22
     invoke-direct {v0, v1, p0}, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor$special$$inlined$map$2;-><init>(Lkotlinx/coroutines/flow/Flow;Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;)V
 
-    .line 27
+    .line 24
     invoke-static {v0}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 30
-    move-result-object v0
-
-    .line 33
-    iput-object v0, p0, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;->naturalMaxBounds:Lkotlinx/coroutines/flow/Flow;
-
-    .line 34
+    .line 27
     new-instance v0, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor$special$$inlined$map$1;
 
-    .line 36
+    .line 30
     iget-object v1, p1, Lcom/android/systemui/common/ui/data/repository/ConfigurationRepositoryImpl;->configurationValues:Lkotlinx/coroutines/flow/Flow;
 
-    .line 38
+    .line 32
     const/4 v2, 0x1
 
-    .line 40
+    .line 34
     invoke-direct {v0, v1, v2}, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 41
+    .line 35
     invoke-static {v0}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 44
+    .line 38
     move-result-object v0
 
-    .line 47
+    .line 41
     iput-object v0, p0, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;->layoutDirection:Lkotlinx/coroutines/flow/Flow;
 
-    .line 48
+    .line 42
     new-instance v0, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor$onAnyConfigurationChange$1;
 
-    .line 50
+    .line 44
     const/4 v1, 0x2
 
-    .line 52
+    .line 46
     const/4 v2, 0x0
 
-    .line 53
+    .line 47
     invoke-direct {v0, v1, v2}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 54
+    .line 48
     new-instance v1, Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;
 
-    .line 57
+    .line 51
     iget-object v2, p1, Lcom/android/systemui/common/ui/data/repository/ConfigurationRepositoryImpl;->onAnyConfigurationChange:Lkotlinx/coroutines/flow/Flow;
 
-    .line 59
+    .line 53
     invoke-direct {v1, v0, v2}, Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;-><init>(Lkotlin/jvm/functions/Function2;Lkotlinx/coroutines/flow/Flow;)V
 
-    .line 61
+    .line 55
     iput-object v1, p0, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;->onAnyConfigurationChange:Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;
 
-    .line 64
+    .line 58
     iget-object v0, p1, Lcom/android/systemui/common/ui/data/repository/ConfigurationRepositoryImpl;->configurationValues:Lkotlinx/coroutines/flow/Flow;
 
-    .line 66
+    .line 60
     iput-object v0, p0, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;->configurationValues:Lkotlinx/coroutines/flow/Flow;
 
-    .line 68
+    .line 62
     iget-object p1, p1, Lcom/android/systemui/common/ui/data/repository/ConfigurationRepositoryImpl;->scaleForResolution:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 70
+    .line 64
     iput-object p1, p0, Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;->scaleForResolution:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 72
+    .line 66
     return-void
-    .line 74
+    .line 68
 .end method
 
 

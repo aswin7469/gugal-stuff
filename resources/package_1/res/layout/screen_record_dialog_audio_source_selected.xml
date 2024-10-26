@@ -8,7 +8,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/screenrecord_audio_label"
-            android:fontFamily="@android:string/config_networkLocationProviderPackageName" />
+            android:fontFamily="@android:string/config_mediaProjectionPermissionDialogComponent" />
   <TextView android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="?android:attr/textColorSecondary"
             android:id="@id/screen_recording_dialog_source_text"

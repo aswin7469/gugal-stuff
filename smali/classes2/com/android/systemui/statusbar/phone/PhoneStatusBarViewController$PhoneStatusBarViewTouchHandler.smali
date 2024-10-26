@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/PhoneStatusBarViewController$PhoneStatusBarViewTouchHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Gefingerpoken;
@@ -134,141 +134,92 @@
 
     .line 55
     :cond_1
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     .line 56
     move-result v0
 
     .line 59
-    if-eqz v0, :cond_2
-
-    .line 60
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 62
-    move-result v0
-
-    .line 65
-    if-eqz v0, :cond_2
-
-    .line 66
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 68
-    move-result v0
-
-    .line 71
-    if-eqz v0, :cond_2
-
-    .line 72
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 74
-    move-result v0
-
-    .line 77
-    if-eqz v0, :cond_2
-
-    .line 78
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 80
-    move-result v0
-
-    .line 83
-    if-eqz v0, :cond_2
-
-    .line 84
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 86
-    :cond_2
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    .line 89
-    move-result v0
-
-    .line 92
-    if-nez v0, :cond_4
-
-    .line 93
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarViewController;->shadeViewController:Lcom/android/systemui/shade/ShadeViewController;
-
-    .line 95
-    invoke-interface {v0}, Lcom/android/systemui/shade/ShadeViewController;->isViewEnabled()Z
-
-    .line 97
-    move-result v0
-
-    .line 100
-    const/4 v1, 0x1
-
-    .line 101
     if-nez v0, :cond_3
 
-    .line 102
+    .line 60
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarViewController;->shadeViewController:Lcom/android/systemui/shade/ShadeViewController;
+
+    .line 62
+    invoke-interface {v0}, Lcom/android/systemui/shade/ShadeViewController;->isViewEnabled()Z
+
+    .line 64
+    move-result v0
+
+    .line 67
+    const/4 v1, 0x1
+
+    .line 68
+    if-nez v0, :cond_2
+
+    .line 69
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarViewController;->shadeLogger:Lcom/android/systemui/shade/ShadeLogger;
 
-    .line 104
+    .line 71
     const-string v0, "onTouchForwardedFromStatusBar: panel view disabled"
 
-    .line 106
+    .line 73
     invoke-virtual {p0, p1, v0}, Lcom/android/systemui/shade/ShadeLogger;->logMotionEvent(Landroid/view/MotionEvent;Ljava/lang/String;)V
 
-    .line 108
+    .line 75
     return v1
 
-    .line 111
-    :cond_3
+    .line 78
+    :cond_2
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarViewController;->panelExpansionInteractor:Lcom/android/systemui/shade/domain/interactor/PanelExpansionInteractor;
 
-    .line 112
+    .line 79
     invoke-interface {v0}, Lcom/android/systemui/shade/domain/interactor/PanelExpansionInteractor;->isFullyCollapsed()Z
 
-    .line 114
+    .line 81
     move-result v0
 
-    .line 117
-    if-eqz v0, :cond_4
+    .line 84
+    if-eqz v0, :cond_3
 
-    .line 118
+    .line 85
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    .line 120
+    .line 87
     move-result v0
 
-    .line 123
+    .line 90
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 124
+    .line 91
     cmpg-float v0, v0, v2
 
-    .line 126
-    if-gez v0, :cond_4
+    .line 93
+    if-gez v0, :cond_3
 
-    .line 128
+    .line 95
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarViewController;->shadeLogger:Lcom/android/systemui/shade/ShadeLogger;
 
-    .line 130
+    .line 97
     const-string v0, "top edge touch ignored"
 
-    .line 132
+    .line 99
     invoke-virtual {p0, p1, v0}, Lcom/android/systemui/shade/ShadeLogger;->logMotionEvent(Landroid/view/MotionEvent;Ljava/lang/String;)V
 
-    .line 134
+    .line 101
     return v1
 
-    .line 137
-    :cond_4
+    .line 104
+    :cond_3
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarViewController;->shadeViewController:Lcom/android/systemui/shade/ShadeViewController;
 
-    .line 138
+    .line 105
     invoke-interface {p0, p1}, Lcom/android/systemui/shade/ShadeViewController;->handleExternalTouch(Landroid/view/MotionEvent;)Z
 
-    .line 140
+    .line 107
     move-result p0
 
-    .line 143
+    .line 110
     return p0
-    .line 144
+    .line 111
 .end method

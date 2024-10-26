@@ -1,702 +1,586 @@
 .class public abstract Lcom/android/compose/animation/scene/SceneTransitionLayoutKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
-.method public static final SceneTransitionLayout(Lcom/android/compose/animation/scene/SceneKey;Lkotlin/jvm/functions/Function1;Lcom/android/compose/animation/scene/SceneTransitions;Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/SwipeSourceDetector;Lcom/android/compose/animation/scene/SwipeDetector;FZLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
-    .locals 20
-
-    move/from16 v11, p11
-
-    .line 10
-    move-object/from16 v9, p9
-
-    check-cast v9, Landroidx/compose/runtime/ComposerImpl;
-
-    const v0, -0x72f87ae7
-
-    invoke-virtual {v9, v0}, Landroidx/compose/runtime/ComposerImpl;->startRestartGroup(I)Landroidx/compose/runtime/ComposerImpl;
-
-    and-int/lit8 v0, v11, 0x8
-
-    if-eqz v0, :cond_0
-
-    .line 11
-    sget-object v0, Landroidx/compose/ui/Modifier$Companion;->$$INSTANCE:Landroidx/compose/ui/Modifier$Companion;
-
-    move-object v10, v0
-
-    goto :goto_0
-
-    :cond_0
-    move-object/from16 v10, p3
-
-    :goto_0
-    and-int/lit8 v0, v11, 0x10
-
-    if-eqz v0, :cond_1
-
-    .line 12
-    sget-object v0, Lcom/android/compose/animation/scene/EdgeDetectorKt;->DefaultEdgeDetector:Lcom/android/compose/animation/scene/FixedSizeEdgeDetector;
-
-    move-object v12, v0
-
-    goto :goto_1
-
-    :cond_1
-    move-object/from16 v12, p4
-
-    :goto_1
-    and-int/lit8 v0, v11, 0x20
-
-    if-eqz v0, :cond_2
-
-    .line 13
-    sget-object v0, Lcom/android/compose/animation/scene/SwipeDetectorKt;->DefaultSwipeDetector:Lcom/android/compose/animation/scene/PassthroughSwipeDetector;
-
-    move-object v13, v0
-
-    goto :goto_2
-
-    :cond_2
-    move-object/from16 v13, p5
-
-    :goto_2
-    and-int/lit8 v0, v11, 0x40
-
-    if-eqz v0, :cond_3
-
-    const/4 v0, 0x0
-
-    move v14, v0
-
-    goto :goto_3
-
-    :cond_3
-    move/from16 v14, p6
-
-    :goto_3
-    and-int/lit16 v0, v11, 0x80
-
-    if-eqz v0, :cond_4
-
-    const/4 v0, 0x1
-
-    move v15, v0
-
-    goto :goto_4
-
-    :cond_4
-    move/from16 v15, p7
-
-    .line 14
-    :goto_4
-    sget-object v0, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
-
-    and-int/lit8 v0, p10, 0xe
-
-    or-int/lit16 v0, v0, 0x200
-
-    and-int/lit8 v1, p10, 0x70
-
-    or-int/2addr v0, v1
-
-    shr-int/lit8 v16, p10, 0x6
-
-    const/high16 v17, 0x70000
-
-    and-int v1, v16, v17
-
-    or-int/2addr v0, v1
-
-    const v1, 0x7dde00fc
-
-    .line 15
-    invoke-virtual {v9, v1}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
-
-    .line 16
-    sget-object v8, Lcom/android/compose/animation/scene/SceneTransitionLayoutStateKt$updateSceneTransitionLayoutState$1;->INSTANCE:Lcom/android/compose/animation/scene/SceneTransitionLayoutStateKt$updateSceneTransitionLayoutState$1;
-
-    .line 17
-    sget-object v18, Lkotlin/collections/EmptyList;->INSTANCE:Lkotlin/collections/EmptyList;
-
-    const v1, -0x68b4be84
-
-    .line 18
-    invoke-virtual {v9, v1}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
-
-    .line 19
-    invoke-virtual {v9}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    .line 20
-    sget-object v2, Landroidx/compose/runtime/Composer$Companion;->Empty:Landroidx/compose/runtime/Composer$Companion$Empty$1;
-
-    if-ne v1, v2, :cond_5
-
-    .line 21
-    new-instance v7, Lcom/android/compose/animation/scene/HoistedSceneTransitionLayoutState;
-
-    move-object v1, v7
-
-    move-object/from16 v2, p0
-
-    move-object/from16 v3, p2
-
-    move-object/from16 v4, p1
-
-    move-object v5, v8
-
-    move-object/from16 v6, v18
-
-    move-object v11, v7
-
-    move v7, v15
-
-    invoke-direct/range {v1 .. v7}, Lcom/android/compose/animation/scene/HoistedSceneTransitionLayoutState;-><init>(Lcom/android/compose/animation/scene/SceneKey;Lcom/android/compose/animation/scene/SceneTransitions;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Ljava/util/List;Z)V
-
-    .line 22
-    invoke-virtual {v9, v11}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
-
-    move-object v1, v11
-
-    .line 23
-    :cond_5
-    move-object v11, v1
-
-    check-cast v11, Lcom/android/compose/animation/scene/HoistedSceneTransitionLayoutState;
-
-    const/4 v7, 0x0
-
-    .line 24
-    invoke-virtual {v9, v7}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
-
-    and-int/lit8 v1, v0, 0xe
-
-    const v2, 0x9000
-
-    or-int/2addr v1, v2
-
-    and-int/lit8 v2, v0, 0x70
-
-    or-int/2addr v1, v2
-
-    and-int v0, v0, v17
-
-    or-int v19, v1, v0
-
-    move-object v0, v11
-
-    move-object/from16 v1, p0
-
-    move-object/from16 v2, p1
-
-    move-object v3, v8
-
-    move-object/from16 v4, p2
-
-    move-object/from16 v5, v18
-
-    move v6, v15
-
-    move v8, v7
-
-    move-object v7, v9
-
-    move/from16 p3, v15
-
-    move v15, v8
-
-    move/from16 v8, v19
-
-    .line 25
-    invoke-virtual/range {v0 .. v8}, Lcom/android/compose/animation/scene/HoistedSceneTransitionLayoutState;->update(Lcom/android/compose/animation/scene/SceneKey;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lcom/android/compose/animation/scene/SceneTransitions;Ljava/util/List;ZLandroidx/compose/runtime/Composer;I)V
-
-    .line 26
-    invoke-virtual {v9, v15}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
-
-    const v0, 0xfff0
-
-    and-int v0, v16, v0
-
-    shr-int/lit8 v1, p10, 0x9
-
-    and-int v1, v1, v17
-
-    or-int v7, v0, v1
-
-    const/4 v8, 0x0
-
-    move-object v0, v11
-
-    move-object v1, v10
-
-    move-object v2, v12
-
-    move-object v3, v13
-
-    move v4, v14
-
-    move-object/from16 v5, p8
-
-    move-object v6, v9
-
-    .line 27
-    invoke-static/range {v0 .. v8}, Lcom/android/compose/animation/scene/SceneTransitionLayoutKt;->SceneTransitionLayout(Lcom/android/compose/animation/scene/SceneTransitionLayoutState;Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/SwipeSourceDetector;Lcom/android/compose/animation/scene/SwipeDetector;FLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
-
-    invoke-virtual {v9}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
-
-    move-result-object v15
-
-    if-eqz v15, :cond_6
-
-    new-instance v11, Lcom/android/compose/animation/scene/SceneTransitionLayoutKt$SceneTransitionLayout$2;
-
-    move-object v0, v11
-
-    move-object/from16 v1, p0
-
-    move-object/from16 v2, p1
-
-    move-object/from16 v3, p2
-
-    move-object v4, v10
-
-    move-object v5, v12
-
-    move-object v6, v13
-
-    move v7, v14
-
-    move/from16 v8, p3
-
-    move-object/from16 v9, p8
-
-    move/from16 v10, p10
-
-    move-object v12, v11
-
-    move/from16 v11, p11
-
-    invoke-direct/range {v0 .. v11}, Lcom/android/compose/animation/scene/SceneTransitionLayoutKt$SceneTransitionLayout$2;-><init>(Lcom/android/compose/animation/scene/SceneKey;Lkotlin/jvm/functions/Function1;Lcom/android/compose/animation/scene/SceneTransitions;Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/SwipeSourceDetector;Lcom/android/compose/animation/scene/SwipeDetector;FZLkotlin/jvm/functions/Function1;II)V
-
-    .line 28
-    iput-object v12, v15, Landroidx/compose/runtime/RecomposeScopeImpl;->block:Lkotlin/jvm/functions/Function2;
-
-    :cond_6
-    return-void
-.end method
-
 .method public static final SceneTransitionLayout(Lcom/android/compose/animation/scene/SceneTransitionLayoutState;Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/SwipeSourceDetector;Lcom/android/compose/animation/scene/SwipeDetector;FLkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
     .locals 19
 
+    .line 1
     move/from16 v7, p7
 
+    .line 2
     const/16 v0, 0x10
 
+    .line 4
     const/16 v1, 0x20
 
+    .line 6
     const/4 v2, 0x2
 
+    .line 8
     const/4 v3, 0x4
 
-    .line 1
+    .line 9
     move-object/from16 v4, p6
 
+    .line 10
     check-cast v4, Landroidx/compose/runtime/ComposerImpl;
 
+    .line 12
     const v5, 0x56de3c13
 
+    .line 14
     invoke-virtual {v4, v5}, Landroidx/compose/runtime/ComposerImpl;->startRestartGroup(I)Landroidx/compose/runtime/ComposerImpl;
 
+    .line 17
     and-int/lit8 v5, p8, 0x1
 
+    .line 20
     if-eqz v5, :cond_0
 
+    .line 22
     or-int/lit8 v5, v7, 0x6
 
+    .line 24
     move v6, v5
 
+    .line 26
     move-object/from16 v5, p0
 
+    .line 27
     goto :goto_1
 
+    .line 29
     :cond_0
     and-int/lit8 v5, v7, 0xe
 
+    .line 30
     if-nez v5, :cond_2
 
+    .line 32
     move-object/from16 v5, p0
 
+    .line 34
     invoke-virtual {v4, v5}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
 
+    .line 36
     move-result v6
 
+    .line 39
     if-eqz v6, :cond_1
 
+    .line 40
     move v6, v3
 
+    .line 42
     goto :goto_0
 
+    .line 43
     :cond_1
     move v6, v2
 
+    .line 44
     :goto_0
     or-int/2addr v6, v7
 
+    .line 45
     goto :goto_1
 
+    .line 46
     :cond_2
     move-object/from16 v5, p0
 
+    .line 47
     move v6, v7
 
+    .line 49
     :goto_1
     and-int/lit8 v2, p8, 0x2
 
+    .line 50
     if-eqz v2, :cond_4
 
+    .line 52
     or-int/lit8 v6, v6, 0x30
 
+    .line 54
     :cond_3
     move-object/from16 v8, p1
 
+    .line 56
     goto :goto_3
 
+    .line 58
     :cond_4
     and-int/lit8 v8, v7, 0x70
 
+    .line 59
     if-nez v8, :cond_3
 
+    .line 61
     move-object/from16 v8, p1
 
+    .line 63
     invoke-virtual {v4, v8}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
 
+    .line 65
     move-result v9
 
+    .line 68
     if-eqz v9, :cond_5
 
+    .line 69
     move v9, v1
 
+    .line 71
     goto :goto_2
 
+    .line 72
     :cond_5
     move v9, v0
 
+    .line 73
     :goto_2
     or-int/2addr v6, v9
 
+    .line 74
     :goto_3
     and-int/lit8 v3, p8, 0x4
 
+    .line 75
     if-eqz v3, :cond_7
 
+    .line 77
     or-int/lit16 v6, v6, 0x180
 
+    .line 79
     :cond_6
     move-object/from16 v9, p2
 
+    .line 81
     goto :goto_5
 
+    .line 83
     :cond_7
     and-int/lit16 v9, v7, 0x380
 
+    .line 84
     if-nez v9, :cond_6
 
+    .line 86
     move-object/from16 v9, p2
 
+    .line 88
     invoke-virtual {v4, v9}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
 
+    .line 90
     move-result v10
 
+    .line 93
     if-eqz v10, :cond_8
 
+    .line 94
     const/16 v10, 0x100
 
+    .line 96
     goto :goto_4
 
+    .line 98
     :cond_8
     const/16 v10, 0x80
 
+    .line 99
     :goto_4
     or-int/2addr v6, v10
 
+    .line 101
     :goto_5
     and-int/lit8 v10, p8, 0x8
 
+    .line 102
     if-eqz v10, :cond_a
 
+    .line 104
     or-int/lit16 v6, v6, 0xc00
 
+    .line 106
     :cond_9
     move-object/from16 v11, p3
 
+    .line 108
     goto :goto_7
 
+    .line 110
     :cond_a
     and-int/lit16 v11, v7, 0x1c00
 
+    .line 111
     if-nez v11, :cond_9
 
+    .line 113
     move-object/from16 v11, p3
 
+    .line 115
     invoke-virtual {v4, v11}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
 
+    .line 117
     move-result v12
 
+    .line 120
     if-eqz v12, :cond_b
 
+    .line 121
     const/16 v12, 0x800
 
+    .line 123
     goto :goto_6
 
+    .line 125
     :cond_b
     const/16 v12, 0x400
 
+    .line 126
     :goto_6
     or-int/2addr v6, v12
 
+    .line 128
     :goto_7
     and-int/lit8 v0, p8, 0x10
 
+    .line 129
     const v12, 0xe000
 
+    .line 131
     if-eqz v0, :cond_d
 
+    .line 134
     or-int/lit16 v6, v6, 0x6000
 
+    .line 136
     :cond_c
     move/from16 v13, p4
 
+    .line 138
     goto :goto_9
 
+    .line 140
     :cond_d
     and-int v13, v7, v12
 
+    .line 141
     if-nez v13, :cond_c
 
+    .line 143
     move/from16 v13, p4
 
+    .line 145
     invoke-virtual {v4, v13}, Landroidx/compose/runtime/ComposerImpl;->changed(F)Z
 
+    .line 147
     move-result v14
 
+    .line 150
     if-eqz v14, :cond_e
 
+    .line 151
     const/16 v14, 0x4000
 
+    .line 153
     goto :goto_8
 
+    .line 155
     :cond_e
     const/16 v14, 0x2000
 
+    .line 156
     :goto_8
     or-int/2addr v6, v14
 
+    .line 158
     :goto_9
     and-int/lit8 v1, p8, 0x20
 
+    .line 159
     const/high16 v14, 0x30000
 
+    .line 161
     if-eqz v1, :cond_10
 
+    .line 163
     or-int/2addr v6, v14
 
+    .line 165
     :cond_f
     move-object/from16 v1, p5
 
+    .line 166
     goto :goto_b
 
+    .line 168
     :cond_10
     const/high16 v1, 0x70000
 
+    .line 169
     and-int/2addr v1, v7
 
+    .line 171
     if-nez v1, :cond_f
 
+    .line 172
     move-object/from16 v1, p5
 
+    .line 174
     invoke-virtual {v4, v1}, Landroidx/compose/runtime/ComposerImpl;->changedInstance(Ljava/lang/Object;)Z
 
+    .line 176
     move-result v15
 
+    .line 179
     if-eqz v15, :cond_11
 
+    .line 180
     const/high16 v15, 0x20000
 
+    .line 182
     goto :goto_a
 
+    .line 184
     :cond_11
     const/high16 v15, 0x10000
 
+    .line 185
     :goto_a
     or-int/2addr v6, v15
 
+    .line 187
     :goto_b
     const v15, 0x5b6db
 
+    .line 188
     and-int/2addr v15, v6
 
+    .line 191
     const v12, 0x12492
 
+    .line 192
     if-ne v15, v12, :cond_13
 
+    .line 195
     invoke-virtual {v4}, Landroidx/compose/runtime/ComposerImpl;->getSkipping()Z
 
+    .line 197
     move-result v12
 
+    .line 200
     if-nez v12, :cond_12
 
+    .line 201
     goto :goto_c
 
-    .line 2
+    .line 203
     :cond_12
     invoke-virtual {v4}, Landroidx/compose/runtime/ComposerImpl;->skipToGroupEnd()V
 
+    .line 204
     move-object v2, v8
 
+    .line 207
     move-object v3, v9
 
+    .line 208
     goto :goto_11
 
+    .line 209
     :cond_13
     :goto_c
     if-eqz v2, :cond_14
 
-    .line 3
+    .line 210
     sget-object v2, Landroidx/compose/ui/Modifier$Companion;->$$INSTANCE:Landroidx/compose/ui/Modifier$Companion;
 
+    .line 212
     goto :goto_d
 
+    .line 214
     :cond_14
     move-object v2, v8
 
+    .line 215
     :goto_d
     if-eqz v3, :cond_15
 
-    .line 4
+    .line 216
     sget-object v3, Lcom/android/compose/animation/scene/EdgeDetectorKt;->DefaultEdgeDetector:Lcom/android/compose/animation/scene/FixedSizeEdgeDetector;
 
+    .line 218
     goto :goto_e
 
+    .line 220
     :cond_15
     move-object v3, v9
 
+    .line 221
     :goto_e
     if-eqz v10, :cond_16
 
-    .line 5
+    .line 222
     sget-object v8, Lcom/android/compose/animation/scene/SwipeDetectorKt;->DefaultSwipeDetector:Lcom/android/compose/animation/scene/PassthroughSwipeDetector;
 
+    .line 224
     move-object/from16 v18, v8
 
+    .line 226
     goto :goto_f
 
+    .line 228
     :cond_16
     move-object/from16 v18, v11
 
+    .line 229
     :goto_f
     if-eqz v0, :cond_17
 
+    .line 231
     const v0, 0x3d4ccccd    # 0.05f
 
+    .line 233
     goto :goto_10
 
+    .line 236
     :cond_17
     move v0, v13
 
-    .line 6
+    .line 237
     :goto_10
     sget-object v8, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
 
+    .line 238
     and-int/lit8 v8, v6, 0xe
 
+    .line 240
     or-int/2addr v8, v14
 
+    .line 242
     and-int/lit8 v9, v6, 0x70
 
+    .line 243
     or-int/2addr v8, v9
 
+    .line 245
     and-int/lit16 v9, v6, 0x380
 
+    .line 246
     or-int/2addr v8, v9
 
+    .line 248
     and-int/lit16 v9, v6, 0x1c00
 
+    .line 249
     or-int/2addr v8, v9
 
+    .line 251
     const v9, 0xe000
 
+    .line 252
     and-int/2addr v9, v6
 
+    .line 255
     or-int/2addr v8, v9
 
+    .line 256
     shl-int/lit8 v6, v6, 0x3
 
+    .line 257
     const/high16 v9, 0x380000
 
+    .line 259
     and-int/2addr v6, v9
 
+    .line 261
     or-int v16, v8, v6
 
+    .line 262
     const/16 v17, 0x0
 
+    .line 264
     const/4 v13, 0x0
 
+    .line 266
     move-object/from16 v8, p0
 
+    .line 267
     move-object v9, v2
 
+    .line 269
     move-object v10, v3
 
+    .line 270
     move-object/from16 v11, v18
 
+    .line 271
     move v12, v0
 
+    .line 273
     move-object/from16 v14, p5
 
+    .line 274
     move-object v15, v4
 
-    .line 7
+    .line 276
     invoke-static/range {v8 .. v17}, Lcom/android/compose/animation/scene/SceneTransitionLayoutKt;->SceneTransitionLayoutForTesting(Lcom/android/compose/animation/scene/SceneTransitionLayoutState;Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/SwipeSourceDetector;Lcom/android/compose/animation/scene/SwipeDetector;FLkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
 
+    .line 277
     move v13, v0
 
+    .line 280
     move-object/from16 v11, v18
 
-    .line 8
+    .line 281
     :goto_11
     invoke-virtual {v4}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
 
+    .line 283
     move-result-object v9
 
+    .line 286
     if-eqz v9, :cond_18
 
+    .line 287
     new-instance v10, Lcom/android/compose/animation/scene/SceneTransitionLayoutKt$SceneTransitionLayout$1;
 
+    .line 289
     move-object v0, v10
 
+    .line 291
     move-object/from16 v1, p0
 
+    .line 292
     move-object v4, v11
 
+    .line 294
     move v5, v13
 
+    .line 295
     move-object/from16 v6, p5
 
+    .line 296
     move/from16 v7, p7
 
+    .line 298
     move/from16 v8, p8
 
+    .line 300
     invoke-direct/range {v0 .. v8}, Lcom/android/compose/animation/scene/SceneTransitionLayoutKt$SceneTransitionLayout$1;-><init>(Lcom/android/compose/animation/scene/SceneTransitionLayoutState;Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/SwipeSourceDetector;Lcom/android/compose/animation/scene/SwipeDetector;FLkotlin/jvm/functions/Function1;II)V
 
-    .line 9
+    .line 302
     iput-object v10, v9, Landroidx/compose/runtime/RecomposeScopeImpl;->block:Lkotlin/jvm/functions/Function2;
 
+    .line 305
     :cond_18
     return-void
+    .line 307
 .end method
 
 .method public static final SceneTransitionLayoutForTesting(Lcom/android/compose/animation/scene/SceneTransitionLayoutState;Landroidx/compose/ui/Modifier;Lcom/android/compose/animation/scene/SwipeSourceDetector;Lcom/android/compose/animation/scene/SwipeDetector;FLkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/WakefulnessLifecycle$Observer;
@@ -340,10 +340,10 @@
     check-cast p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
 
     .line 106
-    iget-object p1, p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
+    iget-object p1, p1, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
     .line 108
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
     .line 110
     invoke-static {v1, p1}, Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;->withView(ILandroid/view/View;)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
@@ -355,45 +355,84 @@
     iget-object p2, p0, Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;->statusBarStateControllerImpl:Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
     .line 116
-    invoke-virtual {p2}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->getClockId()Ljava/lang/String;
+    iget-object p2, p2, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mClockSwitchView:Lcom/android/keyguard/KeyguardClockSwitch;
 
     .line 118
-    move-result-object p2
+    const-string v0, "CLOCK_MISSING"
 
-    .line 121
-    invoke-virtual {p1, p2}, Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;->setTag(Ljava/lang/String;)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
+    .line 120
+    if-nez p2, :cond_0
 
     .line 122
-    move-result-object p1
+    const-string p2, "SbStateController"
 
-    .line 125
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;->interactionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
+    .line 124
+    const-string v1, "Clock container was missing"
 
     .line 126
-    invoke-virtual {p0, p1}, Lcom/android/internal/jank/InteractionJankMonitor;->begin(Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;)Z
+    invoke-static {p2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 128
-    return-void
+    goto :goto_0
 
     .line 131
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-object p2, p2, Lcom/android/keyguard/KeyguardClockSwitch;->mClock:Lcom/android/systemui/plugins/clocks/ClockController;
 
     .line 132
-    const-string p1, "Required value was null."
+    if-nez p2, :cond_1
 
     .line 134
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    goto :goto_0
 
     .line 136
-    move-result-object p1
+    :cond_1
+    invoke-interface {p2}, Lcom/android/systemui/plugins/clocks/ClockController;->getConfig()Lcom/android/systemui/plugins/clocks/ClockConfig;
 
-    .line 139
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    .line 137
+    move-result-object p2
 
     .line 140
+    invoke-virtual {p2}, Lcom/android/systemui/plugins/clocks/ClockConfig;->getId()Ljava/lang/String;
+
+    .line 141
+    move-result-object v0
+
+    .line 144
+    :goto_0
+    invoke-virtual {p1, v0}, Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;->setTag(Ljava/lang/String;)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
+
+    .line 145
+    move-result-object p1
+
+    .line 148
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;->interactionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
+
+    .line 149
+    invoke-virtual {p0, p1}, Lcom/android/internal/jank/InteractionJankMonitor;->begin(Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;)Z
+
+    .line 151
+    return-void
+
+    .line 154
+    :cond_2
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    .line 155
+    const-string p1, "Required value was null."
+
+    .line 157
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 159
+    move-result-object p1
+
+    .line 162
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 163
     throw p0
-    .line 143
+    .line 166
 .end method
 
 .method public final initialize(Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/shade/ShadeViewController;Lcom/android/systemui/statusbar/LightRevealScrim;)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/data/repository/VolumeDialogRepository;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -11,7 +11,7 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,12 +29,15 @@
     iput-object v0, p0, Lcom/android/systemui/volume/data/repository/VolumeDialogRepository;->_isDialogVisible:Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 11
-    new-instance p0, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    new-instance v1, Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 13
-    invoke-direct {p0, v0}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
+    invoke-direct {v1, v0}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
     .line 15
-    return-void
+    iput-object v1, p0, Lcom/android/systemui/volume/data/repository/VolumeDialogRepository;->isDialogVisible:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
     .line 18
+    return-void
+    .line 20
 .end method

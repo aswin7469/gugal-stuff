@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/controls/management/ControlsProviderSelectorActivity;
 .super Landroidx/activity/ComponentActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -86,7 +86,7 @@
     .locals 2
 
     .line 1
-    const v0, 0x7f0b0217    # @id/controls_management_root
+    const v0, 0x7f0a0222    # @id/controls_management_root
 
     .line 2
     invoke-virtual {p0, v0}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -187,13 +187,13 @@
     invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    const p1, 0x7f0e0087    # @layout/controls_management 'res/layout/controls_management.xml'
+    const p1, 0x7f0d008f    # @layout/controls_management 'res/layout/controls_management.xml'
 
     .line 5
     invoke-virtual {p0, p1}, Landroidx/activity/ComponentActivity;->setContentView(I)V
 
     .line 8
-    const p1, 0x7f0b0217    # @id/controls_management_root
+    const p1, 0x7f0a0222    # @id/controls_management_root
 
     .line 11
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -229,7 +229,7 @@
     invoke-virtual {v0, p1}, Landroidx/lifecycle/LifecycleRegistry;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
     .line 34
-    const p1, 0x7f0b077b    # @id/stub
+    const p1, 0x7f0a07aa    # @id/stub
 
     .line 37
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -241,7 +241,7 @@
     check-cast p1, Landroid/view/ViewStub;
 
     .line 44
-    const v0, 0x7f0e0088    # @layout/controls_management_apps 'res/layout/controls_management_apps.xml'
+    const v0, 0x7f0d0090    # @layout/controls_management_apps 'res/layout/controls_management_apps.xml'
 
     .line 46
     invoke-virtual {p1, v0}, Landroid/view/ViewStub;->setLayoutResource(I)V
@@ -250,7 +250,7 @@
     invoke-virtual {p1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     .line 52
-    const p1, 0x7f0b0436    # @id/list
+    const p1, 0x7f0a0457    # @id/list
 
     .line 55
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -280,7 +280,7 @@
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 75
-    const p1, 0x7f0b07ff    # @id/title
+    const p1, 0x7f0a082e    # @id/title
 
     .line 78
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -298,7 +298,7 @@
     move-result-object v0
 
     .line 90
-    const v1, 0x7f1402ec    # @string/controls_providers_title 'Choose app to add controls'
+    const v1, 0x7f130308    # @string/controls_providers_title 'Choose app to add controls'
 
     .line 91
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -310,7 +310,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 98
-    const p1, 0x7f0b05ac    # @id/other_apps
+    const p1, 0x7f0a05d1    # @id/other_apps
 
     .line 101
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -343,7 +343,7 @@
     invoke-virtual {p1, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 124
-    const p1, 0x7f0b0293    # @id/done
+    const p1, 0x7f0a02a2    # @id/done
 
     .line 127
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;

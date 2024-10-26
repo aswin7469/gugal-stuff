@@ -6,6 +6,6 @@
           android:layout_width="fill_parent"
           android:layout_height="fill_parent"
           android:singleLine="true"
-          android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent"
+          android:fontFamily="@android:string/config_chooseTypeAndAccountActivity"
           android:paddingStart="@dimen/screenrecord_spinner_text_padding_start"
           android:paddingEnd="@dimen/screenrecord_spinner_text_padding_end" xmlns:android="http://schemas.android.com/apk/res/android" />

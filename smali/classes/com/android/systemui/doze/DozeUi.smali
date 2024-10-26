@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/doze/DozeUi;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/doze/DozeMachine$Part;
@@ -35,7 +35,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/app/AlarmManager;Lcom/android/systemui/util/wakelock/WakeLock;Lcom/android/systemui/statusbar/phone/DozeServiceHost;Landroid/os/Handler;Landroid/os/Handler;Lcom/android/systemui/statusbar/phone/DozeParameters;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/doze/DozeLog;)V
+.method public constructor <init>(Landroid/content/Context;Landroid/app/AlarmManager;Lcom/android/systemui/util/wakelock/WakeLock;Lcom/android/systemui/statusbar/phone/DozeServiceHost;Landroid/os/Handler;Lcom/android/systemui/statusbar/phone/DozeParameters;Lcom/android/systemui/util/concurrency/DelayableExecutor;Lcom/android/systemui/doze/DozeLog;)V
     .locals 2
 
     .line 1
@@ -69,10 +69,10 @@
     iput-object p5, p0, Lcom/android/systemui/doze/DozeUi;->mHandler:Landroid/os/Handler;
 
     .line 22
-    iput-object p8, p0, Lcom/android/systemui/doze/DozeUi;->mBgExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
+    iput-object p7, p0, Lcom/android/systemui/doze/DozeUi;->mBgExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
     .line 24
-    invoke-virtual {p7}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getDisplayNeedsBlanking()Z
+    invoke-virtual {p6}, Lcom/android/systemui/statusbar/phone/DozeParameters;->getDisplayNeedsBlanking()Z
 
     .line 26
     move-result p1
@@ -84,68 +84,32 @@
     iput-boolean p1, p0, Lcom/android/systemui/doze/DozeUi;->mCanAnimateTransition:Z
 
     .line 32
-    iput-object p7, p0, Lcom/android/systemui/doze/DozeUi;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
+    iput-object p6, p0, Lcom/android/systemui/doze/DozeUi;->mDozeParameters:Lcom/android/systemui/statusbar/phone/DozeParameters;
 
     .line 34
-    sget-boolean p1, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
+    new-instance p1, Lcom/android/systemui/util/AlarmTimeout;
 
     .line 36
-    if-nez p1, :cond_0
+    new-instance p3, Lcom/android/systemui/doze/DozeUi$$ExternalSyntheticLambda1;
 
     .line 38
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
+    invoke-direct {p3, p0}, Lcom/android/systemui/doze/DozeUi$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/doze/DozeUi;)V
 
     .line 40
-    :cond_0
-    sget-boolean p1, Lcom/android/systemui/FeatureFlagsImpl;->dozeuiSchedulingAlarmsBackgroundExecution:Z
+    const-string p4, "doze_time_tick"
 
     .line 43
-    const-string p3, "doze_time_tick"
+    invoke-direct {p1, p2, p3, p4, p5}, Lcom/android/systemui/util/AlarmTimeout;-><init>(Landroid/app/AlarmManager;Landroid/app/AlarmManager$OnAlarmListener;Ljava/lang/String;Landroid/os/Handler;)V
 
     .line 45
-    if-eqz p1, :cond_1
-
-    .line 47
-    new-instance p1, Lcom/android/systemui/util/AlarmTimeout;
-
-    .line 49
-    new-instance p4, Lcom/android/systemui/doze/DozeUi$$ExternalSyntheticLambda1;
-
-    .line 51
-    invoke-direct {p4, p0}, Lcom/android/systemui/doze/DozeUi$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/doze/DozeUi;)V
-
-    .line 53
-    invoke-direct {p1, p2, p4, p3, p6}, Lcom/android/systemui/util/AlarmTimeout;-><init>(Landroid/app/AlarmManager;Landroid/app/AlarmManager$OnAlarmListener;Ljava/lang/String;Landroid/os/Handler;)V
-
-    .line 56
     iput-object p1, p0, Lcom/android/systemui/doze/DozeUi;->mTimeTicker:Lcom/android/systemui/util/AlarmTimeout;
 
-    .line 59
-    goto :goto_0
+    .line 48
+    iput-object p8, p0, Lcom/android/systemui/doze/DozeUi;->mDozeLog:Lcom/android/systemui/doze/DozeLog;
 
-    .line 61
-    :cond_1
-    new-instance p1, Lcom/android/systemui/util/AlarmTimeout;
-
-    .line 62
-    new-instance p4, Lcom/android/systemui/doze/DozeUi$$ExternalSyntheticLambda1;
-
-    .line 64
-    invoke-direct {p4, p0}, Lcom/android/systemui/doze/DozeUi$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/doze/DozeUi;)V
-
-    .line 66
-    invoke-direct {p1, p2, p4, p3, p5}, Lcom/android/systemui/util/AlarmTimeout;-><init>(Landroid/app/AlarmManager;Landroid/app/AlarmManager$OnAlarmListener;Ljava/lang/String;Landroid/os/Handler;)V
-
-    .line 69
-    iput-object p1, p0, Lcom/android/systemui/doze/DozeUi;->mTimeTicker:Lcom/android/systemui/util/AlarmTimeout;
-
-    .line 72
-    :goto_0
-    iput-object p9, p0, Lcom/android/systemui/doze/DozeUi;->mDozeLog:Lcom/android/systemui/doze/DozeLog;
-
-    .line 74
+    .line 50
     return-void
-    .line 76
+    .line 52
 .end method
 
 
@@ -227,7 +191,7 @@
     const/4 v5, 0x2
 
     .line 48
-    invoke-virtual {v0, v5, v3, v4}, Lcom/android/systemui/util/AlarmTimeout;->schedule(IJ)Z
+    invoke-virtual {v0, v3, v4, v5}, Lcom/android/systemui/util/AlarmTimeout;->schedule(JI)Z
 
     .line 49
     move-result v0

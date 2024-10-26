@@ -1,6 +1,6 @@
 .class public final Landroidx/slice/widget/SliceActionView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -69,7 +69,7 @@
     move-result-object p1
 
     .line 12
-    const v0, 0x7f070049    # @dimen/abc_slice_icon_size '24.0dp'
+    const v0, 0x7f07004a    # @dimen/abc_slice_icon_size '24.0dp'
 
     .line 13
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -81,7 +81,7 @@
     iput v0, p0, Landroidx/slice/widget/SliceActionView;->mIconSize:I
 
     .line 20
-    const v0, 0x7f070058    # @dimen/abc_slice_small_image_size '48.0dp'
+    const v0, 0x7f070059    # @dimen/abc_slice_small_image_size '48.0dp'
 
     .line 22
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -412,7 +412,7 @@
     move-result-object p2
 
     .line 44
-    const v1, 0x7f0e002c    # @layout/abc_slice_switch 'res/layout/abc_slice_switch.xml'
+    const v1, 0x7f0d002c    # @layout/abc_slice_switch 'res/layout/abc_slice_switch.xml'
 
     .line 45
     invoke-virtual {p2, v1, p0, p5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -523,7 +523,7 @@
     move-result-object p3
 
     .line 129
-    const p5, 0x7f060570    # @color/switch_thumb_normal_material_light '#fff1f1f1'
+    const p5, 0x7f060586    # @color/switch_thumb_normal_material_light '#fff1f1f1'
 
     .line 130
     invoke-virtual {p3, p5}, Landroid/content/Context;->getColor(I)I

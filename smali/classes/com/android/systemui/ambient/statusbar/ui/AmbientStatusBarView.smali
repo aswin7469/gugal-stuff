@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarView;
 .super Landroidx/constraintlayout/widget/ConstraintLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -170,7 +170,7 @@
     move-result-object v1
 
     .line 12
-    const v2, 0x7f0702bb    # @dimen/dream_overlay_status_bar_key_text_shadow_radius '1.0dp'
+    const v2, 0x7f0702e7    # @dimen/dream_overlay_status_bar_key_text_shadow_radius '1.0dp'
 
     .line 13
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -188,7 +188,7 @@
     move-result-object v2
 
     .line 25
-    const v3, 0x7f0702b9    # @dimen/dream_overlay_status_bar_key_text_shadow_dx '0.5dp'
+    const v3, 0x7f0702e5    # @dimen/dream_overlay_status_bar_key_text_shadow_dx '0.5dp'
 
     .line 26
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -206,7 +206,7 @@
     move-result-object v3
 
     .line 38
-    const v4, 0x7f0702ba    # @dimen/dream_overlay_status_bar_key_text_shadow_dy '0.5dp'
+    const v4, 0x7f0702e6    # @dimen/dream_overlay_status_bar_key_text_shadow_dy '0.5dp'
 
     .line 39
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
@@ -236,7 +236,7 @@
     move-result-object v1
 
     .line 61
-    const v2, 0x7f0702b5    # @dimen/dream_overlay_status_bar_ambient_text_shadow_radius '2.0dp'
+    const v2, 0x7f0702e1    # @dimen/dream_overlay_status_bar_ambient_text_shadow_radius '2.0dp'
 
     .line 62
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -254,7 +254,7 @@
     move-result-object v2
 
     .line 74
-    const v3, 0x7f0702b3    # @dimen/dream_overlay_status_bar_ambient_text_shadow_dx '0.5dp'
+    const v3, 0x7f0702df    # @dimen/dream_overlay_status_bar_ambient_text_shadow_dx '0.5dp'
 
     .line 75
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -272,7 +272,7 @@
     move-result-object v3
 
     .line 87
-    const v4, 0x7f0702b4    # @dimen/dream_overlay_status_bar_ambient_text_shadow_dy '0.5dp'
+    const v4, 0x7f0702e0    # @dimen/dream_overlay_status_bar_ambient_text_shadow_dy '0.5dp'
 
     .line 88
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
@@ -299,7 +299,7 @@
     move-result-object v0
 
     .line 108
-    const v1, 0x7f0702b8    # @dimen/dream_overlay_status_bar_icon_size '@android:dimen/text_size_headline_material'
+    const v1, 0x7f0702e4    # @dimen/dream_overlay_status_bar_icon_size '@android:dimen/text_size_headline_material'
 
     .line 109
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -320,7 +320,7 @@
     move-result-object v0
 
     .line 123
-    const v1, 0x7f0702b1    # @dimen/dream_overlay_icon_inset_dimen '0.0dp'
+    const v1, 0x7f0702dd    # @dimen/dream_overlay_icon_inset_dimen '0.0dp'
 
     .line 124
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -344,7 +344,7 @@
     move-result-object v1
 
     .line 139
-    const v2, 0x7f0b02ad    # @id/dream_overlay_wifi_status
+    const v2, 0x7f0a02bc    # @id/dream_overlay_wifi_status
 
     .line 140
     invoke-virtual {p0, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarView;->fetchStatusIconForResId(I)Landroid/view/View;
@@ -371,7 +371,7 @@
     move-result-object v1
 
     .line 159
-    const v2, 0x7f0b02a0    # @id/dream_overlay_alarm_set
+    const v2, 0x7f0a02af    # @id/dream_overlay_alarm_set
 
     .line 160
     invoke-virtual {p0, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarView;->fetchStatusIconForResId(I)Landroid/view/View;
@@ -398,7 +398,7 @@
     move-result-object v1
 
     .line 179
-    const v2, 0x7f0b02a3    # @id/dream_overlay_camera_off
+    const v2, 0x7f0a02b2    # @id/dream_overlay_camera_off
 
     .line 180
     invoke-virtual {p0, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarView;->fetchStatusIconForResId(I)Landroid/view/View;
@@ -422,7 +422,7 @@
     move-result-object v1
 
     .line 196
-    const v2, 0x7f0b02a8    # @id/dream_overlay_mic_off
+    const v2, 0x7f0a02b7    # @id/dream_overlay_mic_off
 
     .line 197
     invoke-virtual {p0, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarView;->fetchStatusIconForResId(I)Landroid/view/View;
@@ -446,7 +446,7 @@
     move-result-object v1
 
     .line 213
-    const v2, 0x7f0b02a2    # @id/dream_overlay_camera_mic_off
+    const v2, 0x7f0a02b1    # @id/dream_overlay_camera_mic_off
 
     .line 214
     invoke-virtual {p0, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarView;->fetchStatusIconForResId(I)Landroid/view/View;
@@ -470,7 +470,7 @@
     move-result-object v1
 
     .line 230
-    const v2, 0x7f0b02a9    # @id/dream_overlay_notification_indicator
+    const v2, 0x7f0a02b8    # @id/dream_overlay_notification_indicator
 
     .line 231
     invoke-virtual {p0, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarView;->fetchStatusIconForResId(I)Landroid/view/View;
@@ -494,7 +494,7 @@
     move-result-object v1
 
     .line 247
-    const v2, 0x7f0b02aa    # @id/dream_overlay_priority_mode
+    const v2, 0x7f0a02b9    # @id/dream_overlay_priority_mode
 
     .line 248
     invoke-virtual {p0, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarView;->fetchStatusIconForResId(I)Landroid/view/View;
@@ -521,7 +521,7 @@
     move-result-object v1
 
     .line 267
-    const v2, 0x7f0b02a1    # @id/dream_overlay_assistant_attention_indicator
+    const v2, 0x7f0a02b0    # @id/dream_overlay_assistant_attention_indicator
 
     .line 268
     invoke-virtual {p0, v2}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarView;->fetchStatusIconForResId(I)Landroid/view/View;
@@ -533,7 +533,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 275
-    const v0, 0x7f0b02ac    # @id/dream_overlay_system_status
+    const v0, 0x7f0a02bb    # @id/dream_overlay_system_status
 
     .line 278
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -548,7 +548,7 @@
     iput-object v0, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarView;->mSystemStatusViewGroup:Landroid/view/ViewGroup;
 
     .line 287
-    const v0, 0x7f0b02a7    # @id/dream_overlay_extra_items
+    const v0, 0x7f0a02b6    # @id/dream_overlay_extra_items
 
     .line 289
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;

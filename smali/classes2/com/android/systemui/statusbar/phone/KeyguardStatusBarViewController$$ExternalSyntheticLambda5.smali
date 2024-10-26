@@ -1,9 +1,9 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController$$ExternalSyntheticLambda5;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Landroidx/core/animation/Animator$AnimatorUpdateListener;
 
 
 # instance fields
@@ -27,31 +27,40 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final onAnimationUpdate(Landroidx/core/animation/Animator;)V
     .locals 0
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController$$ExternalSyntheticLambda5;->f$0:Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController;
 
     .line 2
-    check-cast p1, Ljava/lang/Boolean;
-
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 6
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 4
+    check-cast p1, Landroidx/core/animation/ValueAnimator;
+
+    .line 7
+    invoke-virtual {p1}, Landroidx/core/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     .line 9
-    move-result p1
+    move-result-object p1
 
     .line 12
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController;->mCommunalShowing:Z
+    check-cast p1, Ljava/lang/Float;
 
     .line 13
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController;->updateViewState()V
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     .line 15
-    return-void
+    move-result p1
+
     .line 18
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController;->mKeyguardStatusBarAnimateAlpha:F
+
+    .line 19
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController;->updateViewState()V
+
+    .line 21
+    return-void
+    .line 24
 .end method

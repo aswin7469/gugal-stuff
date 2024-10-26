@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/SelectorWithWidgetPreference;
 .super Landroidx/preference/CheckBoxPreference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -27,13 +27,13 @@
     iput p1, p0, Lcom/android/settingslib/widget/SelectorWithWidgetPreference;->mAppendixVisibility:I
 
     .line 6
-    const p1, 0x7f0e01f6    # @layout/preference_widget_radiobutton 'res/layout/preference_widget_radiobutton.xml'
+    const p1, 0x7f0d0204    # @layout/preference_widget_radiobutton 'res/layout/preference_widget_radiobutton.xml'
 
     .line 8
     iput p1, p0, Landroidx/preference/Preference;->mWidgetLayoutResId:I
 
     .line 11
-    const p1, 0x7f0e01f0    # @layout/preference_selector_with_widget 'res/layout/preference_selector_with_widget.xml'
+    const p1, 0x7f0d01fe    # @layout/preference_selector_with_widget 'res/layout/preference_selector_with_widget.xml'
 
     .line 13
     iput p1, p0, Landroidx/preference/Preference;->mLayoutResId:I
@@ -68,7 +68,7 @@
     invoke-super {p0, p1}, Landroidx/preference/CheckBoxPreference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
     .line 2
-    const v0, 0x7f0b07b6    # @id/summary_container
+    const v0, 0x7f0a07e5    # @id/summary_container
 
     .line 5
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -115,7 +115,7 @@
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 30
-    const v0, 0x7f0b00cf    # @id/appendix
+    const v0, 0x7f0a00d2    # @id/appendix
 
     .line 33
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -140,7 +140,7 @@
 
     .line 47
     :cond_1
-    const v0, 0x7f0b06ed    # @id/selector_extra_widget
+    const v0, 0x7f0a0718    # @id/selector_extra_widget
 
     .line 50
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
@@ -155,7 +155,7 @@
     iput-object v0, p0, Lcom/android/settingslib/widget/SelectorWithWidgetPreference;->mExtraWidget:Landroid/widget/ImageView;
 
     .line 59
-    const v0, 0x7f0b06ee    # @id/selector_extra_widget_container
+    const v0, 0x7f0a0719    # @id/selector_extra_widget_container
 
     .line 61
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

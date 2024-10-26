@@ -1,6 +1,6 @@
 .class public final enum Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 .super Ljava/lang/Enum;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/internal/logging/UiEventLogger$UiEventEnum;
@@ -10,6 +10,10 @@
 .field public static final synthetic $VALUES:[Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
 .field public static final enum VOLUME_PANEL_ALARM_SLIDER_TOUCHED:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+
+.field public static final enum VOLUME_PANEL_ANC_BUTTON_GONE:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+
+.field public static final enum VOLUME_PANEL_ANC_BUTTON_SHOWN:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
 .field public static final enum VOLUME_PANEL_ANC_POPUP_SHOWN:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
@@ -36,6 +40,10 @@
 .field public static final enum VOLUME_PANEL_SHOWN:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
 .field public static final enum VOLUME_PANEL_SOUND_SETTINGS_CLICKED:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+
+.field public static final enum VOLUME_PANEL_SPATIAL_AUDIO_BUTTON_GONE:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+
+.field public static final enum VOLUME_PANEL_SPATIAL_AUDIO_BUTTON_SHOWN:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
 .field public static final enum VOLUME_PANEL_SPATIAL_AUDIO_POP_UP_SHOWN:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
@@ -326,197 +334,209 @@
     invoke-direct {v14, v15, v13, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
 
     .line 188
-    new-instance v15, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+    sput-object v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;->VOLUME_PANEL_SPATIAL_AUDIO_BUTTON_SHOWN:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
     .line 191
-    const/16 v12, 0x670
+    new-instance v15, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
     .line 193
-    const-string v13, "VOLUME_PANEL_SPATIAL_AUDIO_BUTTON_GONE"
+    const/16 v12, 0x670
 
     .line 195
-    move-object/from16 v18, v14
+    const-string v13, "VOLUME_PANEL_SPATIAL_AUDIO_BUTTON_GONE"
 
     .line 197
-    const/16 v14, 0xf
+    move-object/from16 v18, v14
 
     .line 199
-    invoke-direct {v15, v13, v14, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
+    const/16 v14, 0xf
 
     .line 201
-    new-instance v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+    invoke-direct {v15, v13, v14, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
 
-    .line 204
-    const/16 v12, 0x671
+    .line 203
+    sput-object v15, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;->VOLUME_PANEL_SPATIAL_AUDIO_BUTTON_GONE:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
     .line 206
-    const-string v13, "VOLUME_PANEL_SPATIAL_AUDIO_POP_UP_SHOWN"
+    new-instance v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
     .line 208
-    move-object/from16 v19, v15
+    const/16 v12, 0x671
 
     .line 210
-    const/16 v15, 0x10
+    const-string v13, "VOLUME_PANEL_SPATIAL_AUDIO_POP_UP_SHOWN"
 
     .line 212
-    invoke-direct {v14, v13, v15, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
+    move-object/from16 v19, v15
 
     .line 214
+    const/16 v15, 0x10
+
+    .line 216
+    invoke-direct {v14, v13, v15, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
+
+    .line 218
     sput-object v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;->VOLUME_PANEL_SPATIAL_AUDIO_POP_UP_SHOWN:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
-    .line 217
-    new-instance v15, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
-
-    .line 219
-    const/16 v12, 0x672
-
     .line 221
-    const-string v13, "VOLUME_PANEL_SPATIAL_AUDIO_TOGGLE_CLICKED"
+    new-instance v15, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
     .line 223
-    move-object/from16 v20, v14
+    const/16 v12, 0x672
 
     .line 225
-    const/16 v14, 0x11
+    const-string v13, "VOLUME_PANEL_SPATIAL_AUDIO_TOGGLE_CLICKED"
 
     .line 227
-    invoke-direct {v15, v13, v14, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
+    move-object/from16 v20, v14
 
     .line 229
+    const/16 v14, 0x11
+
+    .line 231
+    invoke-direct {v15, v13, v14, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
+
+    .line 233
     sput-object v15, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;->VOLUME_PANEL_SPATIAL_AUDIO_TOGGLE_CLICKED:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
-    .line 232
-    new-instance v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
-
-    .line 234
-    const/16 v12, 0x673
-
     .line 236
-    const-string v13, "VOLUME_PANEL_ANC_BUTTON_SHOWN"
+    new-instance v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
     .line 238
-    move-object/from16 v21, v15
+    const/16 v12, 0x673
 
     .line 240
-    const/16 v15, 0x12
+    const-string v13, "VOLUME_PANEL_ANC_BUTTON_SHOWN"
 
     .line 242
-    invoke-direct {v14, v13, v15, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
+    move-object/from16 v21, v15
 
     .line 244
-    new-instance v15, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+    const/16 v15, 0x12
 
-    .line 247
-    const/16 v12, 0x674
-
-    .line 249
-    const-string v13, "VOLUME_PANEL_ANC_BUTTON_GONE"
-
-    .line 251
-    move-object/from16 v22, v14
-
-    .line 253
-    const/16 v14, 0x13
-
-    .line 255
-    invoke-direct {v15, v13, v14, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
-
-    .line 257
-    new-instance v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
-
-    .line 260
-    const/16 v12, 0x675
-
-    .line 262
-    const-string v13, "VOLUME_PANEL_ANC_POPUP_SHOWN"
-
-    .line 264
-    move-object/from16 v23, v15
-
-    .line 266
-    const/16 v15, 0x14
-
-    .line 268
+    .line 246
     invoke-direct {v14, v13, v15, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
 
-    .line 270
-    sput-object v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;->VOLUME_PANEL_ANC_POPUP_SHOWN:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+    .line 248
+    sput-object v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;->VOLUME_PANEL_ANC_BUTTON_SHOWN:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
-    .line 273
+    .line 251
     new-instance v15, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
-    .line 275
-    const/16 v12, 0x676
+    .line 253
+    const/16 v12, 0x674
 
-    .line 277
-    const-string v13, "VOLUME_PANEL_ANC_TOGGLE_CLICKED"
+    .line 255
+    const-string v13, "VOLUME_PANEL_ANC_BUTTON_GONE"
 
-    .line 279
-    move-object/from16 v24, v14
+    .line 257
+    move-object/from16 v22, v14
 
-    .line 281
-    const/16 v14, 0x15
+    .line 259
+    const/16 v14, 0x13
 
-    .line 283
+    .line 261
     invoke-direct {v15, v13, v14, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
 
-    .line 285
-    move-object/from16 v12, v16
+    .line 263
+    sput-object v15, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;->VOLUME_PANEL_ANC_BUTTON_GONE:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
-    .line 288
-    move-object/from16 v13, v17
+    .line 266
+    new-instance v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
-    .line 290
-    move-object/from16 v16, v20
+    .line 268
+    const/16 v12, 0x675
 
-    .line 292
-    move-object/from16 v20, v22
+    .line 270
+    const-string v13, "VOLUME_PANEL_ANC_POPUP_SHOWN"
 
-    .line 294
-    move-object/from16 v22, v24
-
-    .line 296
-    move-object/from16 v14, v18
-
-    .line 298
-    move-object/from16 v17, v21
-
-    .line 300
-    move-object/from16 v21, v23
-
-    .line 302
+    .line 272
     move-object/from16 v23, v15
 
-    .line 304
-    move-object/from16 v15, v19
+    .line 274
+    const/16 v15, 0x14
 
-    .line 306
-    move-object/from16 v18, v20
+    .line 276
+    invoke-direct {v14, v13, v15, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
 
-    .line 308
-    move-object/from16 v19, v21
+    .line 278
+    sput-object v14, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;->VOLUME_PANEL_ANC_POPUP_SHOWN:Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
 
-    .line 310
+    .line 281
+    new-instance v15, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+
+    .line 283
+    const/16 v12, 0x676
+
+    .line 285
+    const-string v13, "VOLUME_PANEL_ANC_TOGGLE_CLICKED"
+
+    .line 287
+    move-object/from16 v24, v14
+
+    .line 289
+    const/16 v14, 0x15
+
+    .line 291
+    invoke-direct {v15, v13, v14, v12}, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;-><init>(Ljava/lang/String;II)V
+
+    .line 293
+    move-object/from16 v12, v16
+
+    .line 296
+    move-object/from16 v13, v17
+
+    .line 298
+    move-object/from16 v16, v20
+
+    .line 300
     move-object/from16 v20, v22
 
-    .line 312
+    .line 302
+    move-object/from16 v22, v24
+
+    .line 304
+    move-object/from16 v14, v18
+
+    .line 306
+    move-object/from16 v17, v21
+
+    .line 308
     move-object/from16 v21, v23
 
+    .line 310
+    move-object/from16 v23, v15
+
+    .line 312
+    move-object/from16 v15, v19
+
     .line 314
-    filled-new-array/range {v0 .. v21}, [Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+    move-object/from16 v18, v20
 
     .line 316
-    move-result-object v0
+    move-object/from16 v19, v21
 
-    .line 319
-    sput-object v0, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;->$VALUES:[Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+    .line 318
+    move-object/from16 v20, v22
 
     .line 320
-    invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;->enumEntries([Ljava/lang/Enum;)Lkotlin/enums/EnumEntries;
+    move-object/from16 v21, v23
 
     .line 322
+    filled-new-array/range {v0 .. v21}, [Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+
+    .line 324
+    move-result-object v0
+
+    .line 327
+    sput-object v0, Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;->$VALUES:[Lcom/android/systemui/volume/panel/ui/VolumePanelUiEvent;
+
+    .line 328
+    invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;->enumEntries([Ljava/lang/Enum;)Lkotlin/enums/EnumEntries;
+
+    .line 330
     return-void
-    .line 325
+    .line 333
 .end method
 
 .method public constructor <init>(Ljava/lang/String;II)V

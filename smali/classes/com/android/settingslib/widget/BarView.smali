@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/BarView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -126,7 +126,7 @@
     move-result-object v0
 
     .line 9
-    const v1, 0x7f0e023e    # @layout/settings_bar_view 'res/layout/settings_bar_view.xml'
+    const v1, 0x7f0d024e    # @layout/settings_bar_view 'res/layout/settings_bar_view.xml'
 
     .line 10
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -144,7 +144,7 @@
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setGravity(I)V
 
     .line 22
-    const v0, 0x7f0b0107    # @id/bar_view
+    const v0, 0x7f0a010b    # @id/bar_view
 
     .line 25
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -156,7 +156,7 @@
     iput-object v0, p0, Lcom/android/settingslib/widget/BarView;->mBarView:Landroid/view/View;
 
     .line 32
-    const v0, 0x7f0b0387    # @id/icon_view
+    const v0, 0x7f0a03a7    # @id/icon_view
 
     .line 34
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -168,7 +168,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 41
-    const v0, 0x7f0b0106    # @id/bar_title
+    const v0, 0x7f0a010a    # @id/bar_title
 
     .line 43
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -183,7 +183,7 @@
     iput-object v0, p0, Lcom/android/settingslib/widget/BarView;->mBarTitle:Landroid/widget/TextView;
 
     .line 52
-    const v0, 0x7f0b0105    # @id/bar_summary
+    const v0, 0x7f0a0109    # @id/bar_summary
 
     .line 54
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;

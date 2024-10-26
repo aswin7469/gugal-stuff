@@ -5,7 +5,7 @@
                       android:layout_gravity="center"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:fontFamily="@android:string/config_datause_iface"
+                      android:fontFamily="@android:string/config_customAdbWifiNetworkConfirmationComponent"
                       android:elegantTextHeight="false"
                       chargeAnimationDelay="200"
                       dozeWeight="200"

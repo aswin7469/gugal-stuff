@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/CaptionWindowDecoration;
 .super Lcom/android/wm/shell/windowdecor/WindowDecoration;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -162,7 +162,7 @@
     .locals 0
 
     .line 1
-    const p0, 0x7f0b01a7    # @id/caption
+    const p0, 0x7f0a01ad    # @id/caption
 
     .line 2
     return p0
@@ -210,12 +210,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f0702e6    # @dimen/freeform_decor_shadow_focused_thickness '20.0dp'
+    const v1, 0x7f070317    # @dimen/freeform_decor_shadow_focused_thickness '20.0dp'
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f0702e7    # @dimen/freeform_decor_shadow_unfocused_thickness '5.0dp'
+    const v1, 0x7f070318    # @dimen/freeform_decor_shadow_unfocused_thickness '5.0dp'
 
     .line 5
     :goto_0
@@ -303,7 +303,7 @@
 
     iput-object v0, v2, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mRunningTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    const v3, 0x7f0e006d    # @layout/caption_window_decor 'res/layout/caption_window_decor.xml'
+    const v3, 0x7f0d0072    # @layout/caption_window_decor 'res/layout/caption_window_decor.xml'
 
     .line 22
     iput v3, v2, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mLayoutResId:I
@@ -311,7 +311,7 @@
     .line 23
     invoke-virtual/range {p1 .. p1}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
 
-    const v0, 0x7f0702e5    # @dimen/freeform_decor_caption_height '42.0dp'
+    const v0, 0x7f070316    # @dimen/freeform_decor_caption_height '42.0dp'
 
     iput v0, v2, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mCaptionHeightId:I
 
@@ -381,7 +381,7 @@
     .line 33
     check-cast v0, Lcom/android/wm/shell/windowdecor/WindowDecorLinearLayout;
 
-    const v1, 0x7f0b01a7    # @id/caption
+    const v1, 0x7f0a01ad    # @id/caption
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -392,7 +392,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const v1, 0x7f0b01df    # @id/close_window
+    const v1, 0x7f0a01ea    # @id/close_window
 
     .line 35
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -404,7 +404,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0b00ef    # @id/back_button
+    const v1, 0x7f0a00f3    # @id/back_button
 
     .line 37
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -416,7 +416,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0b04d4    # @id/minimize_window
+    const v1, 0x7f0a04f8    # @id/minimize_window
 
     .line 39
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -428,7 +428,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0b049b    # @id/maximize_window
+    const v1, 0x7f0a04bf    # @id/maximize_window
 
     .line 41
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -586,38 +586,23 @@
     .line 58
     invoke-static {}, Lcom/android/window/flags/Flags;->enableWindowingEdgeDragResize()Z
 
-    move-result v5
-
-    if-eqz v5, :cond_a
-
-    const v5, 0x7f070246    # @dimen/desktop_mode_edge_handle '12.0dp'
+    const v5, 0x7f07031b    # @dimen/freeform_resize_handle '15.0dp'
 
     .line 59
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v5
 
-    goto :goto_4
-
-    :cond_a
-    const v5, 0x7f0702ea    # @dimen/freeform_resize_handle '15.0dp'
+    const v6, 0x7f07031a    # @dimen/freeform_resize_corner '44.0dp'
 
     .line 60
-    invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v5
-
-    :goto_4
-    const v6, 0x7f0702e9    # @dimen/freeform_resize_corner '44.0dp'
-
-    .line 61
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v6
 
-    const v7, 0x7f070242    # @dimen/desktop_mode_corner_resize_large '48.0dp'
+    const v7, 0x7f070264    # @dimen/desktop_mode_corner_resize_large '48.0dp'
 
-    .line 62
+    .line 61
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
@@ -636,10 +621,10 @@
 
     move/from16 p5, v1
 
-    .line 63
+    .line 62
     invoke-direct/range {p0 .. p5}, Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;-><init>(ILandroid/util/Size;III)V
 
-    .line 64
+    .line 63
     invoke-virtual {v2, v3, v0}, Lcom/android/wm/shell/windowdecor/DragResizeInputListener;->setGeometry(Lcom/android/wm/shell/windowdecor/DragResizeWindowGeometry;I)Z
 
     return-void

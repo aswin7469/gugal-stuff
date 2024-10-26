@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/biometrics/dagger/BiometricsModule_Companion_ProvidesOverlapDetectorFactory;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ldagger/internal/Provider;
@@ -17,7 +17,7 @@
     move-result-object v0
 
     .line 5
-    const v1, 0x10e011b    # @android:integer/config_stableDeviceDisplayHeight
+    const v1, 0x10e0115    # @android:integer/config_sidefpsPostAuthDowntime
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -32,7 +32,7 @@
     move-result-object v1
 
     .line 16
-    const v2, 0x10700e3    # @android:array/device_state_notification_power_save_contents
+    const v2, 0x10700da    # @android:array/config_waterfallCutoutArray
 
     .line 17
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/volume/VolumeDialogImpl$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnShowListener;
@@ -71,13 +71,16 @@
     iget-object p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDialogView:Landroid/view/ViewGroup;
 
     .line 26
-    invoke-virtual {p0}, Lcom/android/systemui/volume/VolumeDialogImpl;->isWindowGravityLeft()Z
+    iget v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mWindowGravity:I
 
     .line 28
-    move-result v0
+    const/4 v1, 0x3
+
+    .line 30
+    and-int/2addr v0, v1
 
     .line 31
-    if-eqz v0, :cond_1
+    if-ne v0, v1, :cond_1
 
     .line 32
     const/4 v0, -0x1
@@ -91,153 +94,150 @@
 
     .line 36
     :goto_0
-    iget-object v1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDialogView:Landroid/view/ViewGroup;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getWidth()I
 
     .line 37
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getWidth()I
-
-    .line 39
     move-result v1
 
-    .line 42
+    .line 40
     mul-int/2addr v1, v0
 
-    .line 43
+    .line 41
     int-to-float v0, v1
 
-    .line 44
+    .line 42
     const/high16 v1, 0x40000000    # 2.0f
 
-    .line 45
+    .line 43
     div-float/2addr v0, v1
 
-    .line 47
+    .line 45
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setTranslationX(F)V
 
-    .line 48
+    .line 46
     :goto_1
     iget-object p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDialogView:Landroid/view/ViewGroup;
 
-    .line 51
+    .line 49
     const/4 v0, 0x0
 
-    .line 53
+    .line 51
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    .line 54
+    .line 52
     iget-object p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDialogView:Landroid/view/ViewGroup;
 
-    .line 57
+    .line 55
     invoke-virtual {p1}, Landroid/view/ViewGroup;->animate()Landroid/view/ViewPropertyAnimator;
 
-    .line 59
+    .line 57
     move-result-object p1
 
-    .line 62
+    .line 60
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 63
+    .line 61
     invoke-virtual {p1, v1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 65
+    .line 63
     move-result-object p1
 
-    .line 68
+    .line 66
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 69
+    .line 67
     move-result-object p1
 
-    .line 72
+    .line 70
     iget v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDialogShowAnimationDurationMs:I
 
-    .line 73
+    .line 71
     int-to-long v0, v0
 
-    .line 75
+    .line 73
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    .line 76
+    .line 74
     move-result-object p1
 
-    .line 79
+    .line 77
     iget-object v2, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDialogView:Landroid/view/ViewGroup;
 
-    .line 80
+    .line 78
     iget v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mDialogTimeoutMillis:I
 
-    .line 82
+    .line 80
     int-to-long v4, v0
 
-    .line 84
+    .line 82
     iget-boolean v0, p0, Lcom/android/systemui/volume/VolumeDialogImpl;->mShouldListenForJank:Z
 
-    .line 85
+    .line 83
     if-nez v0, :cond_2
 
-    .line 87
+    .line 85
     const/4 v0, 0x0
 
-    .line 89
+    .line 87
     goto :goto_2
 
-    .line 90
+    .line 88
     :cond_2
     new-instance v6, Lcom/android/systemui/volume/VolumeDialogImpl$3;
 
-    .line 91
+    .line 89
     const-string v3, "show"
 
-    .line 93
+    .line 91
     move-object v0, v6
 
-    .line 95
+    .line 93
     move-object v1, p0
 
-    .line 96
+    .line 94
     invoke-direct/range {v0 .. v5}, Lcom/android/systemui/volume/VolumeDialogImpl$3;-><init>(Lcom/android/systemui/volume/VolumeDialogImpl;Landroid/view/View;Ljava/lang/String;J)V
 
-    .line 97
+    .line 95
     :goto_2
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 100
+    .line 98
     move-result-object p1
 
-    .line 103
+    .line 101
     new-instance v0, Lcom/android/systemui/volume/SystemUIInterpolators$LogAccelerateInterpolator;
 
-    .line 104
+    .line 102
     const/4 v1, 0x1
 
-    .line 106
+    .line 104
     invoke-direct {v0, v1}, Lcom/android/systemui/volume/SystemUIInterpolators$LogAccelerateInterpolator;-><init>(I)V
 
-    .line 107
+    .line 105
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    .line 110
+    .line 108
     move-result-object p1
 
-    .line 113
-    new-instance v0, Lcom/android/systemui/volume/VolumeDialogImpl$$ExternalSyntheticLambda0;
+    .line 111
+    new-instance v0, Lcom/android/systemui/volume/VolumeDialogImpl$$ExternalSyntheticLambda2;
 
-    .line 114
+    .line 112
     const/4 v1, 0x3
 
-    .line 116
-    invoke-direct {v0, p0, v1}, Lcom/android/systemui/volume/VolumeDialogImpl$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/volume/VolumeDialogImpl;I)V
+    .line 114
+    invoke-direct {v0, p0, v1}, Lcom/android/systemui/volume/VolumeDialogImpl$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/volume/VolumeDialogImpl;I)V
 
-    .line 117
+    .line 115
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
-    .line 120
+    .line 118
     move-result-object p0
 
-    .line 123
+    .line 121
     invoke-virtual {p0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 124
+    .line 122
     return-void
-    .line 127
+    .line 125
 .end method

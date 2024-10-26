@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -45,15 +45,13 @@
 
 .field public final keyguardTransitionController$delegate:Lkotlin/Lazy;
 
-.field public final keyguardTransitionControllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$14;
+.field public final keyguardTransitionControllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$11;
 
 .field public final lazyQSSceneAdapter:Ldagger/Lazy;
 
 .field public final lockScreenUserManager:Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
 .field public final logger:Lcom/android/systemui/statusbar/phone/LSShadeTransitionLogger;
-
-.field public mUdfpsKeyguardViewControllerLegacy:Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;
 
 .field public final mediaHierarchyManager:Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;
 
@@ -81,11 +79,11 @@
 
 .field public final shadeRepository:Lcom/android/systemui/shade/data/repository/ShadeRepository;
 
-.field public final singleShadeOverScrollerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$16;
+.field public final singleShadeOverScrollerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$13;
 
 .field public final splitShadeOverScroller$delegate:Lkotlin/Lazy;
 
-.field public final splitShadeOverScrollerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$15;
+.field public final splitShadeOverScrollerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$12;
 
 .field public final splitShadeStateController:Lcom/android/systemui/statusbar/policy/SplitShadeStateControllerImpl;
 
@@ -101,8 +99,8 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/statusbar/phone/LSShadeTransitionLogger;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/statusbar/notification/stack/AmbientState;Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;Lcom/android/systemui/statusbar/LockscreenShadeScrimTransitionController;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$14;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Landroid/content/Context;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$15;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$16;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$17;Lcom/android/systemui/shade/data/repository/ShadeRepository;Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;Lcom/android/systemui/statusbar/policy/SplitShadeStateControllerImpl;Ldagger/Lazy;Lcom/android/systemui/keyguard/domain/interactor/NaturalScrollingSettingObserver;Ldagger/Lazy;)V
-    .locals 5
+.method public constructor <init>(Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/statusbar/phone/LSShadeTransitionLogger;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/statusbar/notification/stack/AmbientState;Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;Lcom/android/systemui/statusbar/LockscreenShadeScrimTransitionController;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$11;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Landroid/content/Context;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$12;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$13;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/dump/DumpManager;Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$14;Lcom/android/systemui/shade/data/repository/ShadeRepository;Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;Lcom/android/systemui/statusbar/policy/SplitShadeStateControllerImpl;Ldagger/Lazy;Lcom/android/systemui/keyguard/domain/interactor/NaturalScrollingSettingObserver;Ldagger/Lazy;)V
+    .locals 8
 
     .line 1
     move-object v0, p0
@@ -153,230 +151,302 @@
     iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->mediaHierarchyManager:Lcom/android/systemui/media/controls/ui/controller/MediaHierarchyManager;
 
     .line 25
-    move-object v2, p8
+    move-object/from16 v2, p8
 
     .line 27
     iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->scrimTransitionController:Lcom/android/systemui/statusbar/LockscreenShadeScrimTransitionController;
 
-    .line 28
-    move-object v2, p9
-
-    .line 30
-    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->keyguardTransitionControllerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$14;
+    .line 29
+    move-object/from16 v2, p9
 
     .line 31
-    move-object v2, p10
+    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->keyguardTransitionControllerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$11;
 
     .line 33
+    move-object/from16 v2, p10
+
+    .line 35
     iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->depthController:Lcom/android/systemui/statusbar/NotificationShadeDepthController;
 
-    .line 34
+    .line 37
     move-object/from16 v2, p11
 
-    .line 36
+    .line 39
     iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->context:Landroid/content/Context;
 
-    .line 38
+    .line 41
     move-object/from16 v3, p12
 
-    .line 40
-    iput-object v3, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->splitShadeOverScrollerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$15;
+    .line 43
+    iput-object v3, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->splitShadeOverScrollerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$12;
 
-    .line 42
+    .line 45
     move-object/from16 v3, p13
 
-    .line 44
-    iput-object v3, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->singleShadeOverScrollerFactory:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$16;
+    .line 47
+    iput-object v3, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->singleShadeOverScrollerFactory:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$13;
 
-    .line 46
+    .line 49
     move-object/from16 v3, p14
 
-    .line 48
+    .line 51
     iput-object v3, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->activityStarter:Lcom/android/systemui/plugins/ActivityStarter;
 
-    .line 50
+    .line 53
     move-object/from16 v3, p20
 
-    .line 52
+    .line 55
     iput-object v3, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->shadeRepository:Lcom/android/systemui/shade/data/repository/ShadeRepository;
 
-    .line 54
+    .line 57
     move-object/from16 v4, p21
 
-    .line 56
+    .line 59
     iput-object v4, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->shadeInteractor:Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
 
-    .line 58
+    .line 61
     move-object/from16 v4, p22
 
-    .line 60
+    .line 63
     iput-object v4, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->splitShadeStateController:Lcom/android/systemui/statusbar/policy/SplitShadeStateControllerImpl;
 
-    .line 62
+    .line 65
     move-object/from16 v4, p23
 
-    .line 64
+    .line 67
     iput-object v4, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->shadeLockscreenInteractorLazy:Ldagger/Lazy;
 
-    .line 66
+    .line 69
     move-object/from16 v4, p25
 
-    .line 68
+    .line 71
     iput-object v4, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->lazyQSSceneAdapter:Ldagger/Lazy;
 
-    .line 70
+    .line 73
     new-instance v4, Lcom/android/systemui/statusbar/DragDownHelper;
 
-    .line 72
+    .line 75
     move-object p2, v4
 
-    .line 74
+    .line 77
     move-object/from16 p3, p17
 
-    .line 75
+    .line 78
     move-object p4, p0
 
-    .line 77
+    .line 80
     move-object/from16 p5, p24
 
-    .line 78
+    .line 81
     move-object/from16 p6, p20
 
-    .line 80
+    .line 83
     move-object/from16 p7, p11
 
-    .line 82
+    .line 85
     invoke-direct/range {p2 .. p7}, Lcom/android/systemui/statusbar/DragDownHelper;-><init>(Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/keyguard/domain/interactor/NaturalScrollingSettingObserver;Lcom/android/systemui/shade/data/repository/ShadeRepository;Landroid/content/Context;)V
 
-    .line 84
+    .line 87
     iput-object v4, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->touchHelper:Lcom/android/systemui/statusbar/DragDownHelper;
 
-    .line 87
+    .line 90
     new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$splitShadeOverScroller$2;
 
-    .line 89
+    .line 92
     invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$splitShadeOverScroller$2;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
 
-    .line 91
-    invoke-static {v2}, Lkotlin/LazyKt__LazyJVMKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
-
     .line 94
-    move-result-object v2
+    invoke-static {v2}, Lkotlin/LazyKt__LazyJVMKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
 
     .line 97
-    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->splitShadeOverScroller$delegate:Lkotlin/Lazy;
-
-    .line 98
-    new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$phoneShadeOverScroller$2;
+    move-result-object v2
 
     .line 100
+    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->splitShadeOverScroller$delegate:Lkotlin/Lazy;
+
+    .line 101
+    new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$phoneShadeOverScroller$2;
+
+    .line 103
     invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$phoneShadeOverScroller$2;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
 
-    .line 102
-    invoke-static {v2}, Lkotlin/LazyKt__LazyJVMKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
-
     .line 105
-    move-result-object v2
+    invoke-static {v2}, Lkotlin/LazyKt__LazyJVMKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
 
     .line 108
-    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->phoneShadeOverScroller$delegate:Lkotlin/Lazy;
-
-    .line 109
-    new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$keyguardTransitionController$2;
+    move-result-object v2
 
     .line 111
+    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->phoneShadeOverScroller$delegate:Lkotlin/Lazy;
+
+    .line 112
+    new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$keyguardTransitionController$2;
+
+    .line 114
     invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$keyguardTransitionController$2;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
 
-    .line 113
+    .line 116
     invoke-static {v2}, Lkotlin/LazyKt__LazyJVMKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
 
-    .line 116
-    move-result-object v2
-
     .line 119
-    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->keyguardTransitionController$delegate:Lkotlin/Lazy;
-
-    .line 120
-    new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$qsTransitionController$1;
+    move-result-object v2
 
     .line 122
+    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->keyguardTransitionController$delegate:Lkotlin/Lazy;
+
+    .line 123
+    new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$qsTransitionController$1;
+
+    .line 125
     invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$qsTransitionController$1;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
 
-    .line 124
-    move-object/from16 v3, p19
-
     .line 127
-    invoke-virtual {v3, v2}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl$SwitchingProvider$17;->create(Lkotlin/jvm/functions/Function0;)Lcom/android/systemui/statusbar/LockscreenShadeQsTransitionController;
+    new-instance v3, Lcom/android/systemui/statusbar/LockscreenShadeQsTransitionController;
 
-    .line 129
-    move-result-object v2
+    .line 130
+    move-object/from16 v4, p19
 
     .line 132
-    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->qsTransitionController:Lcom/android/systemui/statusbar/LockscreenShadeQsTransitionController;
+    iget-object v4, v4, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl$SwitchingProvider$14;->this$0:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;
 
-    .line 133
-    new-instance v2, Ljava/util/ArrayList;
+    .line 134
+    iget-object v5, v4, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
 
-    .line 135
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    .line 136
+    iget-object v5, v5, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->context:Landroid/content/Context;
 
-    .line 137
-    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->callbacks:Ljava/util/List;
+    .line 138
+    iget-object v6, v4, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->wMComponentImpl:Ljava/lang/Object;
 
     .line 140
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->updateResources$8()V
+    check-cast v6, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;
 
     .line 142
-    new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$1;
+    iget-object v7, v6, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->configurationControllerImplProvider:Ldagger/internal/Provider;
 
-    .line 145
-    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$1;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
+    .line 144
+    invoke-interface {v7}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 147
-    move-object/from16 v3, p16
+    .line 146
+    move-result-object v7
+
+    .line 149
+    check-cast v7, Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
     .line 150
-    check-cast v3, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
+    iget-object v4, v4, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider;->sysUIGoogleGlobalRootComponentImpl:Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;
 
     .line 152
-    invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
+    iget-object v4, v4, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleGlobalRootComponentImpl;->dumpManagerProvider:Ldagger/internal/Provider;
 
     .line 154
-    move-object/from16 v2, p18
+    invoke-interface {v4}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 157
-    invoke-virtual {v2, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
+    .line 156
+    move-result-object v4
 
     .line 159
-    new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$2;
+    check-cast v4, Lcom/android/systemui/dump/DumpManager;
+
+    .line 160
+    iget-object v6, v6, Lcom/google/android/systemui/dagger/DaggerSysUIGoogleGlobalRootComponent$SysUIGoogleSysUIComponentImpl;->splitShadeStateControllerImplProvider:Ldagger/internal/Provider;
 
     .line 162
-    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$2;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
+    invoke-interface {v6}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 164
-    check-cast v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
+    move-result-object v6
 
     .line 167
-    invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->addCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
+    check-cast v6, Lcom/android/systemui/statusbar/policy/SplitShadeStateControllerImpl;
 
-    .line 169
-    new-instance v1, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$3;
+    .line 168
+    move-object p2, v3
+
+    .line 170
+    move-object p3, v5
+
+    .line 171
+    move-object p4, v7
 
     .line 172
-    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$3;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
+    move-object p5, v4
+
+    .line 173
+    move-object p6, v2
 
     .line 174
-    move-object/from16 v0, p15
+    move-object p7, v6
 
-    .line 177
-    iget-object v0, v0, Lcom/android/systemui/keyguard/Lifecycle;->mObservers:Ljava/util/ArrayList;
+    .line 175
+    invoke-direct/range {p2 .. p7}, Lcom/android/systemui/statusbar/LockscreenShadeQsTransitionController;-><init>(Landroid/content/Context;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/dump/DumpManager;Lkotlin/jvm/functions/Function0;Lcom/android/systemui/statusbar/policy/SplitShadeStateControllerImpl;)V
+
+    .line 176
+    iput-object v3, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->qsTransitionController:Lcom/android/systemui/statusbar/LockscreenShadeQsTransitionController;
 
     .line 179
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    new-instance v2, Ljava/util/ArrayList;
 
     .line 181
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 183
+    iput-object v2, v0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->callbacks:Ljava/util/List;
+
+    .line 186
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->updateResources$8()V
+
+    .line 188
+    new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$1;
+
+    .line 191
+    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$1;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
+
+    .line 193
+    move-object/from16 v3, p16
+
+    .line 196
+    check-cast v3, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
+
+    .line 198
+    invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
+
+    .line 200
+    move-object/from16 v2, p18
+
+    .line 203
+    invoke-virtual {v2, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
+
+    .line 205
+    new-instance v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$2;
+
+    .line 208
+    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$2;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
+
+    .line 210
+    check-cast v1, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
+
+    .line 213
+    invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->addCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
+
+    .line 215
+    new-instance v1, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$3;
+
+    .line 218
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController$3;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
+
+    .line 220
+    move-object/from16 v0, p15
+
+    .line 223
+    iget-object v0, v0, Lcom/android/systemui/keyguard/Lifecycle;->mObservers:Ljava/util/ArrayList;
+
+    .line 225
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 227
     return-void
-    .line 184
+    .line 230
 .end method
 
 .method public static synthetic getDragDownAnimator$frameworks__base__packages__SystemUI__android_common__SystemUI_core$annotations()V
@@ -464,7 +534,6 @@
     :cond_3
     :goto_0
     return v1
-    .line 36
 .end method
 
 .method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
@@ -2444,7 +2513,7 @@
 .end method
 
 .method public final transitionToShadeAmountCommon(F)V
-    .locals 4
+    .locals 3
 
     .line 1
     iget v0, p0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->depthControllerTransitionDistance:I
@@ -2541,64 +2610,51 @@
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 56
-    move-result-object v2
+    move-result-object v0
 
     .line 59
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 60
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 63
-    invoke-virtual {v1, v3, v2}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2, v0}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 64
-    iget-object v1, p0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->mUdfpsKeyguardViewControllerLegacy:Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;
-
-    .line 67
-    if-eqz v1, :cond_3
-
-    .line 69
-    iput v0, v1, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;->transitionToFullShadeProgress:F
-
-    .line 71
-    invoke-virtual {v1}, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;->updateAlpha()V
-
-    .line 73
-    :cond_3
     iget v0, p0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->statusBarTransitionDistance:I
 
-    .line 76
+    .line 67
     int-to-float v0, v0
 
-    .line 78
+    .line 69
     div-float/2addr p1, v0
 
-    .line 79
+    .line 70
     invoke-static {p1}, Landroid/util/MathUtils;->saturate(F)F
 
-    .line 80
+    .line 71
     move-result p1
 
-    .line 83
+    .line 74
     iget-object p0, p0, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;->centralSurfaces:Lcom/android/systemui/statusbar/phone/CentralSurfaces;
 
-    .line 84
-    if-eqz p0, :cond_4
+    .line 75
+    if-eqz p0, :cond_3
 
-    .line 86
-    move-object v3, p0
+    .line 77
+    move-object v2, p0
 
-    .line 88
-    :cond_4
-    check-cast v3, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
+    .line 79
+    :cond_3
+    check-cast v2, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;
 
-    .line 89
-    iput p1, v3, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mTransitionToFullShadeProgress:F
+    .line 80
+    iput p1, v2, Lcom/android/systemui/statusbar/phone/CentralSurfacesImpl;->mTransitionToFullShadeProgress:F
 
-    .line 91
+    .line 82
     return-void
-    .line 93
+    .line 84
 .end method
 
 .method public final updateResources$8()V
@@ -2614,7 +2670,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f070489    # @dimen/lockscreen_shade_full_transition_distance '80.0dp'
+    const v1, 0x7f0704c5    # @dimen/lockscreen_shade_full_transition_distance '80.0dp'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2635,7 +2691,7 @@
     move-result-object v0
 
     .line 22
-    const v1, 0x7f070498    # @dimen/lockscreen_shade_transition_by_tap_distance '200.0dp'
+    const v1, 0x7f0704d4    # @dimen/lockscreen_shade_transition_by_tap_distance '200.0dp'
 
     .line 23
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2656,7 +2712,7 @@
     move-result-object v0
 
     .line 37
-    const v1, 0x7f07048e    # @dimen/lockscreen_shade_notif_shelf_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
+    const v1, 0x7f0704ca    # @dimen/lockscreen_shade_notif_shelf_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
 
     .line 38
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2677,7 +2733,7 @@
     move-result-object v0
 
     .line 52
-    const v1, 0x7f070488    # @dimen/lockscreen_shade_depth_controller_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
+    const v1, 0x7f0704c4    # @dimen/lockscreen_shade_depth_controller_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
 
     .line 53
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2698,7 +2754,7 @@
     move-result-object v0
 
     .line 67
-    const v1, 0x7f070499    # @dimen/lockscreen_shade_udfps_keyguard_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
+    const v1, 0x7f0704d5    # @dimen/lockscreen_shade_udfps_keyguard_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
 
     .line 68
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -2719,7 +2775,7 @@
     move-result-object v0
 
     .line 82
-    const v1, 0x7f070497    # @dimen/lockscreen_shade_status_bar_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
+    const v1, 0x7f0704d3    # @dimen/lockscreen_shade_status_bar_transition_distance '@dimen/lockscreen_shade_full_transition_distance'
 
     .line 83
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

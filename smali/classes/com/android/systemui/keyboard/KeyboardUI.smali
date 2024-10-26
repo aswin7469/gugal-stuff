@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyboard/KeyboardUI;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -44,7 +44,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ldagger/internal/Provider;Lcom/android/systemui/util/settings/SecureSettings;Lcom/android/systemui/keyboard/BluetoothDialogDelegate;)V
+.method public constructor <init>(Landroid/content/Context;Ljavax/inject/Provider;Lcom/android/systemui/util/settings/SecureSettings;Lcom/android/systemui/keyboard/BluetoothDialogDelegate;)V
     .locals 1
 
     .line 1
@@ -194,7 +194,7 @@
     const-string v1, ")"
 
     .line 79
-    invoke-static {v0, v1, p0}, Landroidx/compose/foundation/lazy/LazyListMeasuredItem$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v1, p0}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     .line 81
     move-result-object p0
@@ -285,6 +285,7 @@
     .line 122
     return-void
 
+    .line 125
     :pswitch_data_0
     .packed-switch -0x1
         :pswitch_a
@@ -299,6 +300,7 @@
         :pswitch_2
         :pswitch_1
     .end packed-switch
+    .line 126
 .end method
 
 .method public final onBootCompleted()V
@@ -997,5 +999,4 @@
     .line 22
     :cond_1
     return-void
-    .line 24
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -43,920 +43,1887 @@
 
 # virtual methods
 .method public final emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 9
+    .locals 16
 
     .line 1
-    instance-of v0, p2, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;
+    move-object/from16 v0, p0
 
     .line 2
-    if-eqz v0, :cond_0
+    move-object/from16 v1, p2
 
     .line 4
-    move-object v0, p2
+    const v2, 0x7f1304df    # @string/keyguard_enter_pin 'Enter PIN'
 
     .line 6
-    check-cast v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;
-
-    .line 7
-    iget v1, v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;->label:I
+    const v3, 0x7f1304dd    # @string/keyguard_enter_password 'Enter password'
 
     .line 9
-    const/high16 v2, -0x80000000
+    const v4, 0x7f1304de    # @string/keyguard_enter_pattern 'Draw pattern'
 
-    .line 11
-    and-int v3, v1, v2
-
-    .line 13
-    if-eqz v3, :cond_0
+    .line 12
+    sget-object v5, Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel$Pin;->INSTANCE:Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel$Pin;
 
     .line 15
-    sub-int/2addr v1, v2
+    sget-object v6, Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel$Password;->INSTANCE:Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel$Password;
 
     .line 17
-    iput v1, v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;->label:I
+    sget-object v7, Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel$Pattern;->INSTANCE:Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel$Pattern;
 
-    .line 18
-    goto :goto_0
-
-    .line 20
-    :cond_0
-    new-instance v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;
+    .line 19
+    instance-of v8, v1, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;
 
     .line 21
-    invoke-direct {v0, p0, p2}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;-><init>(Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;Lkotlin/coroutines/Continuation;)V
+    if-eqz v8, :cond_0
 
     .line 23
-    :goto_0
-    iget-object p2, v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;->result:Ljava/lang/Object;
+    move-object v8, v1
+
+    .line 25
+    check-cast v8, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;
 
     .line 26
-    sget-object v1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+    iget v9, v8, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;->label:I
 
     .line 28
-    iget v2, v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;->label:I
+    const/high16 v10, -0x80000000
 
     .line 30
-    const/4 v3, 0x1
+    and-int v11, v9, v10
 
     .line 32
-    if-eqz v2, :cond_2
+    if-eqz v11, :cond_0
 
-    .line 33
-    if-ne v2, v3, :cond_1
+    .line 34
+    sub-int/2addr v9, v10
 
-    .line 35
-    invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+    .line 36
+    iput v9, v8, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;->label:I
 
     .line 37
-    goto/16 :goto_5
+    goto :goto_0
+
+    .line 39
+    :cond_0
+    new-instance v8, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;
 
     .line 40
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-direct {v8, v0, v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;-><init>(Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;Lkotlin/coroutines/Continuation;)V
 
     .line 42
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    iget-object v1, v8, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;->result:Ljava/lang/Object;
 
-    .line 44
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    .line 45
+    sget-object v9, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
 
-    .line 46
-    throw p0
+    .line 47
+    iget v10, v8, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;->label:I
 
     .line 49
-    :cond_2
-    invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+    const/4 v11, 0x1
 
-    .line 50
-    check-cast p1, Lcom/android/systemui/util/kotlin/Septuple;
+    .line 51
+    if-eqz v10, :cond_2
 
-    .line 53
-    iget-object p2, p1, Lcom/android/systemui/util/kotlin/Septuple;->second:Ljava/lang/Object;
+    .line 52
+    if-ne v10, v11, :cond_1
 
-    .line 55
-    check-cast p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;
+    .line 54
+    invoke-static {v1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 57
-    iget-object v2, p1, Lcom/android/systemui/util/kotlin/Septuple;->fourth:Ljava/lang/Object;
+    .line 56
+    goto/16 :goto_f
 
     .line 59
-    check-cast v2, Ljava/lang/Boolean;
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
 
     .line 61
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
 
     .line 63
-    move-result v2
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 66
-    iget-object v4, p1, Lcom/android/systemui/util/kotlin/Septuple;->fifth:Ljava/lang/Object;
+    .line 65
+    throw v0
 
-    .line 67
-    check-cast v4, Ljava/lang/Boolean;
+    .line 68
+    :cond_2
+    invoke-static {v1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     .line 69
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
+    move-object/from16 v1, p1
 
-    .line 71
-    move-result v4
+    .line 72
+    check-cast v1, Lcom/android/systemui/util/kotlin/Septuple;
 
     .line 74
-    iget-object p1, p1, Lcom/android/systemui/util/kotlin/Septuple;->sixth:Ljava/lang/Object;
+    iget-object v10, v1, Lcom/android/systemui/util/kotlin/Septuple;->second:Ljava/lang/Object;
 
-    .line 75
-    check-cast p1, Ljava/lang/Boolean;
+    .line 76
+    check-cast v10, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;
 
-    .line 77
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 78
+    iget-object v12, v1, Lcom/android/systemui/util/kotlin/Septuple;->fourth:Ljava/lang/Object;
 
-    .line 79
-    move-result p1
+    .line 80
+    check-cast v12, Ljava/lang/Boolean;
 
     .line 82
-    iget-object v5, p0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;->$trustRepository$inlined:Lcom/android/systemui/keyguard/data/repository/TrustRepositoryImpl;
+    invoke-virtual {v12}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 83
-    iget-object v5, v5, Lcom/android/systemui/keyguard/data/repository/TrustRepositoryImpl;->isCurrentUserTrustUsuallyManaged:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 85
-    iget-object v5, v5, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+    .line 84
+    move-result v12
 
     .line 87
-    invoke-interface {v5}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+    iget-object v13, v1, Lcom/android/systemui/util/kotlin/Septuple;->fifth:Ljava/lang/Object;
 
-    .line 89
-    move-result-object v5
+    .line 88
+    check-cast v13, Ljava/lang/Boolean;
+
+    .line 90
+    invoke-virtual {v13}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 92
-    check-cast v5, Ljava/lang/Boolean;
-
-    .line 93
-    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result v13
 
     .line 95
-    move-result v5
+    iget-object v1, v1, Lcom/android/systemui/util/kotlin/Septuple;->sixth:Ljava/lang/Object;
+
+    .line 96
+    check-cast v1, Ljava/lang/Boolean;
 
     .line 98
-    if-nez v5, :cond_4
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 99
-    if-eqz v2, :cond_3
-
-    .line 101
-    goto :goto_1
+    .line 100
+    move-result v1
 
     .line 103
-    :cond_3
-    const/4 v2, 0x0
+    iget-object v14, v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;->$trustRepository$inlined:Lcom/android/systemui/keyguard/data/repository/TrustRepositoryImpl;
 
     .line 104
-    goto :goto_2
-
-    .line 105
-    :cond_4
-    :goto_1
-    move v2, v3
+    iget-object v14, v14, Lcom/android/systemui/keyguard/data/repository/TrustRepositoryImpl;->isCurrentUserTrustUsuallyManaged:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 106
-    :goto_2
-    iget-object v6, p0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;->this$0:Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;
+    iget-object v14, v14, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 107
-    if-eqz v2, :cond_6
+    .line 108
+    invoke-interface {v14}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
-    .line 109
-    iget-boolean v7, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredAfterReboot:Z
-
-    .line 111
-    if-eqz v7, :cond_6
+    .line 110
+    move-result-object v14
 
     .line 113
-    iget-object p1, v6, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->systemPropertiesHelper:Lcom/android/systemui/flags/SystemPropertiesHelper;
+    check-cast v14, Ljava/lang/Boolean;
 
-    .line 115
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 114
+    invoke-virtual {v14}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 117
-    const-string p1, "sys.boot.reason.last"
+    .line 116
+    move-result v14
+
+    .line 119
+    if-nez v14, :cond_4
 
     .line 120
-    invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v12, :cond_3
 
     .line 122
-    move-result-object p1
+    goto :goto_1
+
+    .line 124
+    :cond_3
+    const/4 v12, 0x0
 
     .line 125
-    const-string p2, "reboot,mainline_update"
+    goto :goto_2
 
     .line 126
-    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    :cond_4
+    :goto_1
+    move v12, v11
+
+    .line 127
+    :goto_2
+    iget-object v15, v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;->this$0:Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;
 
     .line 128
-    move-result p1
+    if-eqz v12, :cond_c
 
-    .line 131
-    if-eqz p1, :cond_5
+    .line 130
+    iget-boolean v11, v10, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredAfterReboot:Z
 
     .line 132
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+    if-eqz v11, :cond_c
 
     .line 134
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    iget-object v1, v15, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->systemPropertiesHelper:Lcom/android/systemui/flags/SystemPropertiesHelper;
 
     .line 136
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 139
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+    .line 138
+    const-string/jumbo v1, "sys.boot.reason.last"
 
-    .line 140
-    move-result-object p1
-
-    .line 143
-    invoke-static {p1}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->authRequiredForMainlineUpdate(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;)Lkotlin/Pair;
+    .line 141
+    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     .line 144
-    move-result-object p1
+    move-result-object v1
 
     .line 147
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+    const-string v10, "reboot,mainline_update"
 
     .line 148
-    move-result-object p1
+    invoke-virtual {v1, v10}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 151
-    goto/16 :goto_4
+    .line 150
+    move-result v1
 
-    .line 152
-    :cond_5
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+    .line 153
+    if-eqz v1, :cond_8
 
     .line 154
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
 
     .line 156
-    move-result-object p1
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
-    .line 159
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+    .line 158
+    move-result-object v1
 
-    .line 160
-    move-result-object p1
+    .line 161
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
 
-    .line 163
-    invoke-static {p1}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->authRequiredAfterReboot(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;)Lkotlin/Pair;
+    .line 162
+    move-result-object v1
 
-    .line 164
-    move-result-object p1
+    .line 165
+    invoke-virtual {v1, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 167
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+    .line 166
+    move-result v7
 
-    .line 168
-    move-result-object p1
+    .line 169
+    if-eqz v7, :cond_5
 
-    .line 171
-    goto/16 :goto_4
+    .line 170
+    new-instance v1, Lkotlin/Pair;
 
     .line 172
-    :cond_6
-    if-eqz v2, :cond_7
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 174
-    iget-boolean v7, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredAfterTimeout:Z
+    move-result-object v2
 
-    .line 176
-    if-eqz v7, :cond_7
+    .line 177
+    const v3, 0x7f130542    # @string/kg_prompt_after_update_pattern 'Device updated. Draw pattern to continue.'
 
     .line 178
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 180
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    .line 181
+    move-result-object v3
 
-    .line 182
-    move-result-object p1
+    .line 184
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 185
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
-
-    .line 186
-    move-result-object p1
-
-    .line 189
-    invoke-static {p1}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->authRequiredAfterPrimaryAuthTimeout(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;)Lkotlin/Pair;
-
-    .line 190
-    move-result-object p1
-
-    .line 193
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
-
-    .line 194
-    move-result-object p1
-
-    .line 197
-    goto/16 :goto_4
-
-    .line 198
-    :cond_7
-    iget-boolean v7, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredAfterDpmLockdown:Z
-
-    .line 200
-    if-eqz v7, :cond_8
-
-    .line 202
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
-
-    .line 204
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
-
-    .line 206
-    move-result-object p1
-
-    .line 209
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
-
-    .line 210
-    move-result-object p1
-
-    .line 213
-    invoke-static {p1}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->authRequiredAfterAdminLockdown(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;)Lkotlin/Pair;
-
-    .line 214
-    move-result-object p1
-
-    .line 217
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
-
-    .line 218
-    move-result-object p1
-
-    .line 221
-    goto/16 :goto_4
-
-    .line 222
-    :cond_8
-    if-eqz v2, :cond_9
-
-    .line 224
-    iget-boolean v7, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredForUnattendedUpdate:Z
-
-    .line 226
-    if-eqz v7, :cond_9
-
-    .line 228
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
-
-    .line 230
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
-
-    .line 232
-    move-result-object p1
-
-    .line 235
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
-
-    .line 236
-    move-result-object p1
-
-    .line 239
-    invoke-static {p1}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->authRequiredForUnattendedUpdate(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;)Lkotlin/Pair;
-
-    .line 240
-    move-result-object p1
-
-    .line 243
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
-
-    .line 244
-    move-result-object p1
-
-    .line 247
-    goto/16 :goto_4
-
-    .line 248
-    :cond_9
-    iget-object v7, p0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;->$biometricSettingsRepository$inlined:Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;
-
-    .line 250
-    iget-object v8, v7, Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;->isFingerprintEnrolledAndEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 252
-    iget-object v8, v8, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
-
-    .line 254
-    invoke-interface {v8}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
-
-    .line 256
-    move-result-object v8
-
-    .line 259
-    check-cast v8, Ljava/lang/Boolean;
-
-    .line 260
-    invoke-virtual {v8}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 262
-    move-result v8
-
-    .line 265
-    if-eqz v8, :cond_a
-
-    .line 266
-    if-eqz v4, :cond_a
-
-    .line 268
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
-
-    .line 270
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
-
-    .line 272
-    move-result-object p1
-
-    .line 275
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
-
-    .line 276
-    move-result-object p1
-
-    .line 279
-    invoke-static {p1}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->class3AuthLockedOut(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;)Lkotlin/Pair;
-
-    .line 280
-    move-result-object p1
-
-    .line 283
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
-
-    .line 284
-    move-result-object p1
-
-    .line 287
-    goto/16 :goto_4
-
-    .line 288
-    :cond_a
-    iget-object v4, v7, Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;->isFaceAuthEnrolledAndEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 290
-    iget-object v4, v4, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
-
-    .line 292
-    invoke-interface {v4}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
-
-    .line 294
-    move-result-object v4
-
-    .line 297
-    check-cast v4, Ljava/lang/Boolean;
-
-    .line 298
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 300
-    move-result v4
-
-    .line 303
-    if-eqz v4, :cond_d
-
-    .line 304
-    if-eqz p1, :cond_d
-
-    .line 306
-    iget-object p1, v6, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->facePropertyRepository:Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;
-
-    .line 308
-    iget-object p1, p1, Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;->sensorInfo:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 310
-    iget-object p1, p1, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
-
-    .line 312
-    invoke-interface {p1}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
-
-    .line 314
-    move-result-object p1
-
-    .line 317
-    check-cast p1, Lcom/android/systemui/biometrics/data/repository/FaceSensorInfo;
-
-    .line 318
-    if-eqz p1, :cond_b
-
-    .line 320
-    iget-object p1, p1, Lcom/android/systemui/biometrics/data/repository/FaceSensorInfo;->strength:Lcom/android/systemui/biometrics/shared/model/SensorStrength;
-
-    .line 322
     goto :goto_3
 
-    .line 324
+    .line 188
+    :cond_5
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 189
+    move-result v4
+
+    .line 192
+    if-eqz v4, :cond_6
+
+    .line 193
+    new-instance v1, Lkotlin/Pair;
+
+    .line 195
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 197
+    move-result-object v2
+
+    .line 200
+    const v3, 0x7f130541    # @string/kg_prompt_after_update_password 'Device updated. Enter password to continue.'
+
+    .line 201
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 204
+    move-result-object v3
+
+    .line 207
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 208
+    goto :goto_3
+
+    .line 211
+    :cond_6
+    invoke-virtual {v1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 212
+    move-result v1
+
+    .line 215
+    if-eqz v1, :cond_7
+
+    .line 216
+    new-instance v1, Lkotlin/Pair;
+
+    .line 218
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 220
+    move-result-object v2
+
+    .line 223
+    const v3, 0x7f130543    # @string/kg_prompt_after_update_pin 'Device updated. Enter PIN to continue.'
+
+    .line 224
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 227
+    move-result-object v3
+
+    .line 230
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 231
+    goto :goto_3
+
+    .line 234
+    :cond_7
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 235
+    :goto_3
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 237
+    move-result-object v1
+
+    .line 240
+    :goto_4
+    const/4 v2, 0x1
+
+    .line 241
+    goto/16 :goto_e
+
+    .line 242
+    :cond_8
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 244
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+
+    .line 246
+    move-result-object v1
+
+    .line 249
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+
+    .line 250
+    move-result-object v1
+
+    .line 253
+    invoke-virtual {v1, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 254
+    move-result v7
+
+    .line 257
+    if-eqz v7, :cond_9
+
+    .line 258
+    new-instance v1, Lkotlin/Pair;
+
+    .line 260
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 262
+    move-result-object v2
+
+    .line 265
+    const v3, 0x7f13054d    # @string/kg_prompt_reason_restart_pattern 'Pattern is required after device restarts'
+
+    .line 266
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 269
+    move-result-object v3
+
+    .line 272
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 273
+    goto :goto_5
+
+    .line 276
+    :cond_9
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 277
+    move-result v4
+
+    .line 280
+    if-eqz v4, :cond_a
+
+    .line 281
+    new-instance v1, Lkotlin/Pair;
+
+    .line 283
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 285
+    move-result-object v2
+
+    .line 288
+    const v3, 0x7f13054c    # @string/kg_prompt_reason_restart_password 'Password is required after device restarts'
+
+    .line 289
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 292
+    move-result-object v3
+
+    .line 295
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 296
+    goto :goto_5
+
+    .line 299
+    :cond_a
+    invoke-virtual {v1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 300
+    move-result v1
+
+    .line 303
+    if-eqz v1, :cond_b
+
+    .line 304
+    new-instance v1, Lkotlin/Pair;
+
+    .line 306
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 308
+    move-result-object v2
+
+    .line 311
+    const v3, 0x7f13054e    # @string/kg_prompt_reason_restart_pin 'PIN is required after device restarts'
+
+    .line 312
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 315
+    move-result-object v3
+
+    .line 318
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 319
+    goto :goto_5
+
+    .line 322
     :cond_b
-    const/4 p1, 0x0
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 323
+    :goto_5
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
 
     .line 325
-    :goto_3
-    sget-object p2, Lcom/android/systemui/biometrics/shared/model/SensorStrength;->STRONG:Lcom/android/systemui/biometrics/shared/model/SensorStrength;
-
-    .line 326
-    if-ne p1, p2, :cond_c
+    move-result-object v1
 
     .line 328
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+    goto :goto_4
+
+    .line 329
+    :cond_c
+    if-eqz v12, :cond_10
 
     .line 330
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    iget-boolean v11, v10, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredAfterTimeout:Z
 
     .line 332
-    move-result-object p1
+    if-eqz v11, :cond_10
 
-    .line 335
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+    .line 334
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
 
     .line 336
-    move-result-object p1
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
-    .line 339
-    invoke-static {p1}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->class3AuthLockedOut(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;)Lkotlin/Pair;
+    .line 338
+    move-result-object v1
 
-    .line 340
-    move-result-object p1
+    .line 341
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
 
-    .line 343
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+    .line 342
+    move-result-object v1
 
-    .line 344
-    move-result-object p1
+    .line 345
+    invoke-virtual {v1, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 347
-    goto/16 :goto_4
+    .line 346
+    move-result v7
 
-    .line 348
-    :cond_c
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+    .line 349
+    if-eqz v7, :cond_d
 
     .line 350
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    new-instance v1, Lkotlin/Pair;
 
     .line 352
-    move-result-object p1
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 355
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+    .line 354
+    move-result-object v2
 
-    .line 356
-    move-result-object p1
+    .line 357
+    const v3, 0x7f130549    # @string/kg_prompt_pattern_auth_timeout 'Added security required. Pattern not used for a while.'
 
-    .line 359
-    iget-object p2, v6, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->isFingerprintAuthCurrentlyAllowedOnBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 358
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 360
-    iget-object p2, p2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
-
-    .line 362
-    invoke-interface {p2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+    .line 361
+    move-result-object v3
 
     .line 364
-    move-result-object p2
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 367
-    check-cast p2, Ljava/lang/Boolean;
+    .line 365
+    goto :goto_6
 
     .line 368
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    :cond_d
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 370
-    move-result p2
+    .line 369
+    move-result v4
+
+    .line 372
+    if-eqz v4, :cond_e
 
     .line 373
-    invoke-static {p1, p2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->faceLockedOut(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;Z)Lkotlin/Pair;
+    new-instance v1, Lkotlin/Pair;
 
-    .line 374
-    move-result-object p1
+    .line 375
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 377
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+    move-result-object v2
 
-    .line 378
-    move-result-object p1
+    .line 380
+    const v3, 0x7f130548    # @string/kg_prompt_password_auth_timeout 'Added security required. Password not used for a while.'
 
     .line 381
-    goto/16 :goto_4
-
-    .line 382
-    :cond_d
-    iget-boolean p1, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isSomeAuthRequiredAfterAdaptiveAuthRequest:Z
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 384
-    if-eqz p1, :cond_e
+    move-result-object v3
 
-    .line 386
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+    .line 387
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 388
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    goto :goto_6
 
-    .line 390
-    move-result-object p1
+    .line 391
+    :cond_e
+    invoke-virtual {v1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 393
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+    .line 392
+    move-result v1
 
-    .line 394
-    move-result-object p1
+    .line 395
+    if-eqz v1, :cond_f
 
-    .line 397
-    iget-object p2, v6, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->isFingerprintAuthCurrentlyAllowedOnBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 396
+    new-instance v1, Lkotlin/Pair;
 
     .line 398
-    iget-object p2, p2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 400
-    invoke-interface {p2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+    move-result-object v2
 
-    .line 402
-    move-result-object p2
+    .line 403
+    const v3, 0x7f13054a    # @string/kg_prompt_pin_auth_timeout 'Added security required. PIN not used for a while.'
 
-    .line 405
-    check-cast p2, Ljava/lang/Boolean;
+    .line 404
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 406
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 407
+    move-result-object v3
 
-    .line 408
-    move-result p2
+    .line 410
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 411
-    invoke-static {p1, p2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->authRequiredAfterAdaptiveAuthRequest(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;Z)Lkotlin/Pair;
+    goto :goto_6
 
-    .line 412
-    move-result-object p1
+    .line 414
+    :cond_f
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
 
     .line 415
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+    :goto_6
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
 
-    .line 416
-    move-result-object p1
-
-    .line 419
-    goto/16 :goto_4
+    .line 417
+    move-result-object v1
 
     .line 420
-    :cond_e
-    if-eqz v2, :cond_f
+    goto/16 :goto_4
 
-    .line 422
-    iget-boolean p1, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->strongerAuthRequiredAfterNonStrongBiometricsTimeout:Z
+    .line 421
+    :cond_10
+    iget-boolean v11, v10, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredAfterDpmLockdown:Z
 
-    .line 424
-    if-eqz p1, :cond_f
+    .line 423
+    if-eqz v11, :cond_14
 
-    .line 426
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+    .line 425
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
 
-    .line 428
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    .line 427
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
-    .line 430
-    move-result-object p1
+    .line 429
+    move-result-object v1
+
+    .line 432
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
 
     .line 433
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+    move-result-object v1
 
-    .line 434
-    move-result-object p1
+    .line 436
+    invoke-virtual {v1, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 437
-    iget-object p2, v6, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->isFingerprintAuthCurrentlyAllowedOnBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 438
-    iget-object p2, p2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+    move-result v7
 
     .line 440
-    invoke-interface {p2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+    const v10, 0x7f130540    # @string/kg_prompt_after_dpm_lock 'For added security, device was locked by work policy'
 
-    .line 442
-    move-result-object p2
+    .line 441
+    if-eqz v7, :cond_11
 
-    .line 445
-    check-cast p2, Ljava/lang/Boolean;
+    .line 444
+    new-instance v1, Lkotlin/Pair;
 
     .line 446
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 448
-    move-result p2
+    move-result-object v2
 
     .line 451
-    invoke-static {p1, p2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->nonStrongAuthTimeout(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;Z)Lkotlin/Pair;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 452
-    move-result-object p1
+    move-result-object v3
 
     .line 455
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 456
-    move-result-object p1
+    goto :goto_7
 
     .line 459
-    goto :goto_4
+    :cond_11
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 460
-    :cond_f
-    if-eqz v5, :cond_10
-
-    .line 461
-    iget-boolean p1, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->someAuthRequiredAfterUserRequest:Z
+    move-result v4
 
     .line 463
-    if-eqz p1, :cond_10
+    if-eqz v4, :cond_12
 
-    .line 465
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+    .line 464
+    new-instance v1, Lkotlin/Pair;
 
-    .line 467
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    .line 466
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 469
-    move-result-object p1
+    .line 468
+    move-result-object v2
+
+    .line 471
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 472
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+    move-result-object v3
 
-    .line 473
-    move-result-object p1
+    .line 475
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 476
-    iget-object p2, v6, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->isFingerprintAuthCurrentlyAllowedOnBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 477
-    iget-object p2, p2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+    goto :goto_7
 
     .line 479
-    invoke-interface {p2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+    :cond_12
+    invoke-virtual {v1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 481
-    move-result-object p2
+    .line 480
+    move-result v1
+
+    .line 483
+    if-eqz v1, :cond_13
 
     .line 484
-    check-cast p2, Ljava/lang/Boolean;
+    new-instance v1, Lkotlin/Pair;
 
-    .line 485
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 486
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 487
-    move-result p2
-
-    .line 490
-    invoke-static {p1, p2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->trustAgentDisabled(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;Z)Lkotlin/Pair;
+    .line 488
+    move-result-object v2
 
     .line 491
-    move-result-object p1
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 494
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+    .line 492
+    move-result-object v3
 
     .line 495
-    move-result-object p1
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 498
-    goto :goto_4
+    .line 496
+    goto :goto_7
 
     .line 499
-    :cond_10
-    if-eqz v5, :cond_11
+    :cond_13
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
 
     .line 500
-    iget-boolean p1, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->someAuthRequiredAfterTrustAgentExpired:Z
+    :goto_7
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
 
     .line 502
-    if-eqz p1, :cond_11
+    move-result-object v1
 
-    .line 504
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+    .line 505
+    goto/16 :goto_4
 
     .line 506
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    :cond_14
+    if-eqz v12, :cond_18
 
     .line 508
-    move-result-object p1
+    iget-boolean v11, v10, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isPrimaryAuthRequiredForUnattendedUpdate:Z
 
-    .line 511
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+    .line 510
+    if-eqz v11, :cond_18
 
     .line 512
-    move-result-object p1
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
 
-    .line 515
-    iget-object p2, v6, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->isFingerprintAuthCurrentlyAllowedOnBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+    .line 514
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
     .line 516
-    iget-object p2, p2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+    move-result-object v1
 
-    .line 518
-    invoke-interface {p2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+    .line 519
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
 
     .line 520
-    move-result-object p2
+    move-result-object v1
 
     .line 523
-    check-cast p2, Ljava/lang/Boolean;
+    invoke-virtual {v1, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 524
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result v7
 
-    .line 526
-    move-result p2
+    .line 527
+    if-eqz v7, :cond_15
 
-    .line 529
-    invoke-static {p1, p2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->trustAgentDisabled(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;Z)Lkotlin/Pair;
+    .line 528
+    new-instance v1, Lkotlin/Pair;
 
     .line 530
-    move-result-object p1
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 533
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+    .line 532
+    move-result-object v2
 
-    .line 534
-    move-result-object p1
+    .line 535
+    const v3, 0x7f13053d    # @string/kg_prompt_added_security_pattern 'Pattern required for additional security'
 
-    .line 537
-    goto :goto_4
-
-    .line 538
-    :cond_11
-    if-eqz v2, :cond_12
+    .line 536
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 539
-    iget-boolean p1, p2, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isInUserLockdown:Z
+    move-result-object v3
 
-    .line 541
-    if-eqz p1, :cond_12
+    .line 542
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 543
-    sget-object p1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+    goto :goto_8
 
-    .line 545
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    .line 546
+    :cond_15
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 547
-    move-result-object p1
+    move-result v4
 
     .line 550
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+    if-eqz v4, :cond_16
 
     .line 551
-    move-result-object p1
+    new-instance v1, Lkotlin/Pair;
 
-    .line 554
-    invoke-static {p1}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->authRequiredAfterUserLockdown(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;)Lkotlin/Pair;
+    .line 553
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 555
-    move-result-object p1
+    move-result-object v2
 
     .line 558
-    invoke-static {p1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+    const v3, 0x7f13053c    # @string/kg_prompt_added_security_password 'Password required for additional security'
 
     .line 559
-    move-result-object p1
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 562
-    goto :goto_4
+    move-result-object v3
 
-    .line 563
-    :cond_12
-    invoke-virtual {v6}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getDefaultMessage()Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+    .line 565
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 564
-    move-result-object p1
+    .line 566
+    goto :goto_8
 
-    .line 567
-    :goto_4
-    iput v3, v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;->label:I
-
-    .line 568
-    iget-object p0, p0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;->$this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
+    .line 569
+    :cond_16
+    invoke-virtual {v1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     .line 570
-    invoke-interface {p0, p1, v0}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result v1
 
-    .line 572
-    move-result-object p0
+    .line 573
+    if-eqz v1, :cond_17
 
-    .line 575
-    if-ne p0, v1, :cond_13
+    .line 574
+    new-instance v1, Lkotlin/Pair;
 
     .line 576
-    return-object v1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 578
-    :cond_13
-    :goto_5
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    move-result-object v2
 
-    .line 579
-    return-object p0
     .line 581
+    const v3, 0x7f13053e    # @string/kg_prompt_added_security_pin 'PIN required for additional security'
+
+    .line 582
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 585
+    move-result-object v3
+
+    .line 588
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 589
+    goto :goto_8
+
+    .line 592
+    :cond_17
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 593
+    :goto_8
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 595
+    move-result-object v1
+
+    .line 598
+    goto/16 :goto_4
+
+    .line 599
+    :cond_18
+    iget-object v11, v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;->$biometricSettingsRepository$inlined:Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;
+
+    .line 601
+    iget-object v2, v11, Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;->isFingerprintEnrolledAndEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 603
+    iget-object v2, v2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+
+    .line 605
+    invoke-interface {v2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+
+    .line 607
+    move-result-object v2
+
+    .line 610
+    check-cast v2, Ljava/lang/Boolean;
+
+    .line 611
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 613
+    move-result v2
+
+    .line 616
+    if-eqz v2, :cond_19
+
+    .line 617
+    if-eqz v13, :cond_19
+
+    .line 619
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 621
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+
+    .line 623
+    move-result-object v1
+
+    .line 626
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+
+    .line 627
+    move-result-object v1
+
+    .line 630
+    invoke-static {v1}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->class3AuthLockedOut(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;)Lkotlin/Pair;
+
+    .line 631
+    move-result-object v1
+
+    .line 634
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 635
+    move-result-object v1
+
+    .line 638
+    goto/16 :goto_4
+
+    .line 639
+    :cond_19
+    iget-object v2, v11, Lcom/android/systemui/keyguard/data/repository/BiometricSettingsRepositoryImpl;->isFaceAuthEnrolledAndEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 641
+    iget-object v2, v2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+
+    .line 643
+    invoke-interface {v2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+
+    .line 645
+    move-result-object v2
+
+    .line 648
+    check-cast v2, Ljava/lang/Boolean;
+
+    .line 649
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 651
+    move-result v2
+
+    .line 654
+    if-eqz v2, :cond_1f
+
+    .line 655
+    if-eqz v1, :cond_1f
+
+    .line 657
+    iget-object v1, v15, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->facePropertyRepository:Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;
+
+    .line 659
+    iget-object v1, v1, Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;->sensorInfo:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 661
+    iget-object v1, v1, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+
+    .line 663
+    invoke-interface {v1}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+
+    .line 665
+    move-result-object v1
+
+    .line 668
+    check-cast v1, Lcom/android/systemui/biometrics/data/repository/FaceSensorInfo;
+
+    .line 669
+    if-eqz v1, :cond_1a
+
+    .line 671
+    iget-object v1, v1, Lcom/android/systemui/biometrics/data/repository/FaceSensorInfo;->strength:Lcom/android/systemui/biometrics/shared/model/SensorStrength;
+
+    .line 673
+    goto :goto_9
+
+    .line 675
+    :cond_1a
+    const/4 v1, 0x0
+
+    .line 676
+    :goto_9
+    sget-object v2, Lcom/android/systemui/biometrics/shared/model/SensorStrength;->STRONG:Lcom/android/systemui/biometrics/shared/model/SensorStrength;
+
+    .line 677
+    if-ne v1, v2, :cond_1b
+
+    .line 679
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 681
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+
+    .line 683
+    move-result-object v1
+
+    .line 686
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+
+    .line 687
+    move-result-object v1
+
+    .line 690
+    invoke-static {v1}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->class3AuthLockedOut(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;)Lkotlin/Pair;
+
+    .line 691
+    move-result-object v1
+
+    .line 694
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 695
+    move-result-object v1
+
+    .line 698
+    goto/16 :goto_4
+
+    .line 699
+    :cond_1b
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 701
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+
+    .line 703
+    move-result-object v1
+
+    .line 706
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+
+    .line 707
+    move-result-object v1
+
+    .line 710
+    iget-object v2, v15, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->isFingerprintAuthCurrentlyAllowedOnBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 711
+    iget-object v2, v2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+
+    .line 713
+    invoke-interface {v2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+
+    .line 715
+    move-result-object v2
+
+    .line 718
+    check-cast v2, Ljava/lang/Boolean;
+
+    .line 719
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 721
+    move-result v2
+
+    .line 724
+    invoke-virtual {v1, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 725
+    move-result v3
+
+    .line 728
+    const v4, 0x7f130522    # @string/kg_face_locked_out 'Can’t unlock with face. Too many attempts.'
+
+    .line 729
+    if-eqz v3, :cond_1c
+
+    .line 732
+    new-instance v1, Lkotlin/Pair;
+
+    .line 734
+    invoke-static {v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->patternDefaultMessage(Z)I
+
+    .line 736
+    move-result v2
+
+    .line 739
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 740
+    move-result-object v2
+
+    .line 743
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 744
+    move-result-object v3
+
+    .line 747
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 748
+    goto :goto_a
+
+    .line 751
+    :cond_1c
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 752
+    move-result v3
+
+    .line 755
+    if-eqz v3, :cond_1d
+
+    .line 756
+    new-instance v1, Lkotlin/Pair;
+
+    .line 758
+    invoke-static {v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->passwordDefaultMessage(Z)I
+
+    .line 760
+    move-result v2
+
+    .line 763
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 764
+    move-result-object v2
+
+    .line 767
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 768
+    move-result-object v3
+
+    .line 771
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 772
+    goto :goto_a
+
+    .line 775
+    :cond_1d
+    invoke-virtual {v1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 776
+    move-result v1
+
+    .line 779
+    if-eqz v1, :cond_1e
+
+    .line 780
+    new-instance v1, Lkotlin/Pair;
+
+    .line 782
+    invoke-static {v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->pinDefaultMessage(Z)I
+
+    .line 784
+    move-result v2
+
+    .line 787
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 788
+    move-result-object v2
+
+    .line 791
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 792
+    move-result-object v3
+
+    .line 795
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 796
+    goto :goto_a
+
+    .line 799
+    :cond_1e
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 800
+    :goto_a
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 802
+    move-result-object v1
+
+    .line 805
+    goto/16 :goto_4
+
+    .line 806
+    :cond_1f
+    iget-boolean v1, v10, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isSomeAuthRequiredAfterAdaptiveAuthRequest:Z
+
+    .line 808
+    if-eqz v1, :cond_23
+
+    .line 810
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 812
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+
+    .line 814
+    move-result-object v1
+
+    .line 817
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+
+    .line 818
+    move-result-object v1
+
+    .line 821
+    iget-object v2, v15, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->isFingerprintAuthCurrentlyAllowedOnBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 822
+    iget-object v2, v2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+
+    .line 824
+    invoke-interface {v2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+
+    .line 826
+    move-result-object v2
+
+    .line 829
+    check-cast v2, Ljava/lang/Boolean;
+
+    .line 830
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 832
+    move-result v2
+
+    .line 835
+    invoke-virtual {v1, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 836
+    move-result v3
+
+    .line 839
+    const v4, 0x7f13053f    # @string/kg_prompt_after_adaptive_auth_lock 'Device was locked, too many authentication attempts'
+
+    .line 840
+    if-eqz v3, :cond_20
+
+    .line 843
+    new-instance v1, Lkotlin/Pair;
+
+    .line 845
+    invoke-static {v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->patternDefaultMessage(Z)I
+
+    .line 847
+    move-result v2
+
+    .line 850
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 851
+    move-result-object v2
+
+    .line 854
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 855
+    move-result-object v3
+
+    .line 858
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 859
+    goto :goto_b
+
+    .line 862
+    :cond_20
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 863
+    move-result v3
+
+    .line 866
+    if-eqz v3, :cond_21
+
+    .line 867
+    new-instance v1, Lkotlin/Pair;
+
+    .line 869
+    invoke-static {v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->passwordDefaultMessage(Z)I
+
+    .line 871
+    move-result v2
+
+    .line 874
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 875
+    move-result-object v2
+
+    .line 878
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 879
+    move-result-object v3
+
+    .line 882
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 883
+    goto :goto_b
+
+    .line 886
+    :cond_21
+    invoke-virtual {v1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 887
+    move-result v1
+
+    .line 890
+    if-eqz v1, :cond_22
+
+    .line 891
+    new-instance v1, Lkotlin/Pair;
+
+    .line 893
+    invoke-static {v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->pinDefaultMessage(Z)I
+
+    .line 895
+    move-result v2
+
+    .line 898
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 899
+    move-result-object v2
+
+    .line 902
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 903
+    move-result-object v3
+
+    .line 906
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 907
+    goto :goto_b
+
+    .line 910
+    :cond_22
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 911
+    :goto_b
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 913
+    move-result-object v1
+
+    .line 916
+    goto/16 :goto_4
+
+    .line 917
+    :cond_23
+    if-eqz v12, :cond_27
+
+    .line 919
+    iget-boolean v1, v10, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->strongerAuthRequiredAfterNonStrongBiometricsTimeout:Z
+
+    .line 921
+    if-eqz v1, :cond_27
+
+    .line 923
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 925
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+
+    .line 927
+    move-result-object v1
+
+    .line 930
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+
+    .line 931
+    move-result-object v1
+
+    .line 934
+    iget-object v2, v15, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->isFingerprintAuthCurrentlyAllowedOnBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 935
+    iget-object v2, v2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+
+    .line 937
+    invoke-interface {v2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+
+    .line 939
+    move-result-object v2
+
+    .line 942
+    check-cast v2, Ljava/lang/Boolean;
+
+    .line 943
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 945
+    move-result v2
+
+    .line 948
+    invoke-virtual {v1, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 949
+    move-result v3
+
+    .line 952
+    const v4, 0x7f130547    # @string/kg_prompt_auth_timeout 'Added security required. Device wasn’t unlocked for a while.'
+
+    .line 953
+    if-eqz v3, :cond_24
+
+    .line 956
+    new-instance v1, Lkotlin/Pair;
+
+    .line 958
+    invoke-static {v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->patternDefaultMessage(Z)I
+
+    .line 960
+    move-result v2
+
+    .line 963
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 964
+    move-result-object v2
+
+    .line 967
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 968
+    move-result-object v3
+
+    .line 971
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 972
+    goto :goto_c
+
+    .line 975
+    :cond_24
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 976
+    move-result v3
+
+    .line 979
+    if-eqz v3, :cond_25
+
+    .line 980
+    new-instance v1, Lkotlin/Pair;
+
+    .line 982
+    invoke-static {v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->passwordDefaultMessage(Z)I
+
+    .line 984
+    move-result v2
+
+    .line 987
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 988
+    move-result-object v2
+
+    .line 991
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 992
+    move-result-object v3
+
+    .line 995
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 996
+    goto :goto_c
+
+    .line 999
+    :cond_25
+    invoke-virtual {v1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 1000
+    move-result v1
+
+    .line 1003
+    if-eqz v1, :cond_26
+
+    .line 1004
+    new-instance v1, Lkotlin/Pair;
+
+    .line 1006
+    invoke-static {v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->pinDefaultMessage(Z)I
+
+    .line 1008
+    move-result v2
+
+    .line 1011
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 1012
+    move-result-object v2
+
+    .line 1015
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 1016
+    move-result-object v3
+
+    .line 1019
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 1020
+    goto :goto_c
+
+    .line 1023
+    :cond_26
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 1024
+    :goto_c
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 1026
+    move-result-object v1
+
+    .line 1029
+    goto/16 :goto_4
+
+    .line 1030
+    :cond_27
+    if-eqz v14, :cond_28
+
+    .line 1032
+    iget-boolean v1, v10, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->someAuthRequiredAfterUserRequest:Z
+
+    .line 1034
+    if-eqz v1, :cond_28
+
+    .line 1036
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 1038
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+
+    .line 1040
+    move-result-object v1
+
+    .line 1043
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+
+    .line 1044
+    move-result-object v1
+
+    .line 1047
+    iget-object v2, v15, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->isFingerprintAuthCurrentlyAllowedOnBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 1048
+    iget-object v2, v2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+
+    .line 1050
+    invoke-interface {v2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+
+    .line 1052
+    move-result-object v2
+
+    .line 1055
+    check-cast v2, Ljava/lang/Boolean;
+
+    .line 1056
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 1058
+    move-result v2
+
+    .line 1061
+    invoke-static {v1, v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->trustAgentDisabled(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;Z)Lkotlin/Pair;
+
+    .line 1062
+    move-result-object v1
+
+    .line 1065
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 1066
+    move-result-object v1
+
+    .line 1069
+    goto/16 :goto_4
+
+    .line 1070
+    :cond_28
+    if-eqz v14, :cond_29
+
+    .line 1072
+    iget-boolean v1, v10, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->someAuthRequiredAfterTrustAgentExpired:Z
+
+    .line 1074
+    if-eqz v1, :cond_29
+
+    .line 1076
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 1078
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+
+    .line 1080
+    move-result-object v1
+
+    .line 1083
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+
+    .line 1084
+    move-result-object v1
+
+    .line 1087
+    iget-object v2, v15, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->isFingerprintAuthCurrentlyAllowedOnBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    .line 1088
+    iget-object v2, v2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
+
+    .line 1090
+    invoke-interface {v2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
+
+    .line 1092
+    move-result-object v2
+
+    .line 1095
+    check-cast v2, Ljava/lang/Boolean;
+
+    .line 1096
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 1098
+    move-result v2
+
+    .line 1101
+    invoke-static {v1, v2}, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->trustAgentDisabled(Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;Z)Lkotlin/Pair;
+
+    .line 1102
+    move-result-object v1
+
+    .line 1105
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 1106
+    move-result-object v1
+
+    .line 1109
+    goto/16 :goto_4
+
+    .line 1110
+    :cond_29
+    if-eqz v12, :cond_2d
+
+    .line 1112
+    iget-boolean v1, v10, Lcom/android/systemui/keyguard/shared/model/AuthenticationFlags;->isInUserLockdown:Z
+
+    .line 1114
+    if-eqz v1, :cond_2d
+
+    .line 1116
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 1118
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getCurrentSecurityMode()Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+
+    .line 1120
+    move-result-object v1
+
+    .line 1123
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toAuthModel(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/systemui/authentication/shared/model/AuthenticationMethodModel;
+
+    .line 1124
+    move-result-object v1
+
+    .line 1127
+    invoke-virtual {v1, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 1128
+    move-result v2
+
+    .line 1131
+    if-eqz v2, :cond_2a
+
+    .line 1132
+    new-instance v1, Lkotlin/Pair;
+
+    .line 1134
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 1136
+    move-result-object v2
+
+    .line 1139
+    const v3, 0x7f130545    # @string/kg_prompt_after_user_lockdown_pattern 'Pattern is required after lockdown'
+
+    .line 1140
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 1143
+    move-result-object v3
+
+    .line 1146
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 1147
+    goto :goto_d
+
+    .line 1150
+    :cond_2a
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 1151
+    move-result v2
+
+    .line 1154
+    if-eqz v2, :cond_2b
+
+    .line 1155
+    new-instance v1, Lkotlin/Pair;
+
+    .line 1157
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 1159
+    move-result-object v2
+
+    .line 1162
+    const v3, 0x7f130544    # @string/kg_prompt_after_user_lockdown_password 'Password is required after lockdown'
+
+    .line 1163
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 1166
+    move-result-object v3
+
+    .line 1169
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 1170
+    goto :goto_d
+
+    .line 1173
+    :cond_2b
+    invoke-virtual {v1, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 1174
+    move-result v1
+
+    .line 1177
+    if-eqz v1, :cond_2c
+
+    .line 1178
+    new-instance v1, Lkotlin/Pair;
+
+    .line 1180
+    const v2, 0x7f1304df    # @string/keyguard_enter_pin 'Enter PIN'
+
+    .line 1182
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 1185
+    move-result-object v2
+
+    .line 1188
+    const v3, 0x7f130546    # @string/kg_prompt_after_user_lockdown_pin 'PIN is required after lockdown'
+
+    .line 1189
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 1192
+    move-result-object v3
+
+    .line 1195
+    invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 1196
+    goto :goto_d
+
+    .line 1199
+    :cond_2c
+    sget-object v1, Lcom/android/systemui/bouncer/shared/model/BouncerMessageStrings;->EmptyMessage:Lkotlin/Pair;
+
+    .line 1200
+    :goto_d
+    invoke-static {v1}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractorKt;->toMessage(Lkotlin/Pair;)Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 1202
+    move-result-object v1
+
+    .line 1205
+    goto/16 :goto_4
+
+    .line 1206
+    :cond_2d
+    invoke-virtual {v15}, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor;->getDefaultMessage()Lcom/android/systemui/bouncer/shared/model/BouncerMessageModel;
+
+    .line 1208
+    move-result-object v1
+
+    .line 1211
+    goto/16 :goto_4
+
+    .line 1212
+    :goto_e
+    iput v2, v8, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2$1;->label:I
+
+    .line 1214
+    iget-object v0, v0, Lcom/android/systemui/bouncer/domain/interactor/BouncerMessageInteractor$special$$inlined$map$1$2;->$this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
+
+    .line 1216
+    invoke-interface {v0, v1, v8}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 1218
+    move-result-object v0
+
+    .line 1221
+    if-ne v0, v9, :cond_2e
+
+    .line 1222
+    return-object v9
+
+    .line 1224
+    :cond_2e
+    :goto_f
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    .line 1225
+    return-object v0
+    .line 1227
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -118,7 +118,7 @@
     move-result-object p2
 
     .line 33
-    const p3, 0x7f0c00d0    # @integer/primary_bouncer_passive_auth_delay '500'
+    const p3, 0x7f0b00e5    # @integer/primary_bouncer_passive_auth_delay '500'
 
     .line 34
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -316,32 +316,29 @@
     invoke-direct {p4, p5, p1, p2}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
     .line 172
-    iput-object p4, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->bouncerExpansion:Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
-
-    .line 175
     new-instance p1, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor$special$$inlined$map$1;
 
-    .line 177
+    .line 175
     const/4 p2, 0x5
 
-    .line 179
+    .line 177
     invoke-direct {p1, p4, p2}, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor$special$$inlined$map$1;-><init>(Lkotlinx/coroutines/flow/Flow;I)V
 
-    .line 180
+    .line 178
     iput-object p1, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->isInteractable:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor$special$$inlined$map$1;
 
-    .line 183
+    .line 181
     new-instance p1, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor$1;
 
-    .line 185
+    .line 183
     invoke-direct {p1, p0, p3}, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor$1;-><init>(Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;Lkotlin/coroutines/Continuation;)V
 
-    .line 187
+    .line 185
     invoke-static {p12, p3, p3, p1, v0}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 190
+    .line 188
     return-void
-    .line 193
+    .line 191
 .end method
 
 
@@ -911,31 +908,25 @@
     iget-object p0, p0, Lcom/android/systemui/bouncer/ui/binder/KeyguardBouncerViewBinder$bind$delegate$1;->$securityContainerController:Lcom/android/keyguard/KeyguardSecurityContainerController;
 
     .line 25
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 27
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 30
     iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainerController;->mCancelAction:Ljava/lang/Runnable;
 
-    .line 33
+    .line 27
     if-eqz v0, :cond_1
 
-    .line 35
+    .line 29
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 37
+    .line 31
     :cond_1
     iput-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainerController;->mDismissAction:Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;
 
-    .line 40
+    .line 34
     iput-object p2, p0, Lcom/android/keyguard/KeyguardSecurityContainerController;->mCancelAction:Ljava/lang/Runnable;
 
-    .line 42
+    .line 36
     :cond_2
     return-void
-    .line 44
+    .line 38
 .end method
 
 .method public final setPanelExpansion(F)V
@@ -1265,463 +1256,398 @@
     .locals 14
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 8
-    move-result v0
-
-    .line 11
-    if-eqz v0, :cond_0
-
-    .line 12
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 14
-    move-result v0
-
-    .line 17
-    if-eqz v0, :cond_0
-
-    .line 18
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 20
-    move-result v0
-
-    .line 23
-    if-eqz v0, :cond_0
-
-    .line 24
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 26
-    move-result v0
-
-    .line 29
-    if-eqz v0, :cond_0
-
-    .line 30
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 32
-    :cond_0
     iget-object v0, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->primaryBouncerView:Lcom/android/systemui/bouncer/ui/BouncerViewImpl;
 
-    .line 35
+    .line 2
     invoke-virtual {v0}, Lcom/android/systemui/bouncer/ui/BouncerViewImpl;->getDelegate()Lcom/android/systemui/bouncer/ui/binder/KeyguardBouncerViewBinder$bind$delegate$1;
 
-    .line 37
+    .line 4
     move-result-object v1
 
-    .line 40
+    .line 7
     const-string v2, "PrimaryBouncerInteractor"
 
-    .line 41
-    if-nez v1, :cond_2
+    .line 8
+    if-nez v1, :cond_0
 
-    .line 43
-    sget-boolean v1, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 45
-    if-nez v1, :cond_1
-
-    .line 47
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 49
-    :cond_1
-    sget-boolean v1, Lcom/android/systemui/FeatureFlagsImpl;->composeBouncer:Z
-
-    .line 52
-    if-nez v1, :cond_2
-
-    .line 54
+    .line 10
     const-string p0, "PrimaryBouncerInteractor#show is being called before the primaryBouncerDelegate is set. Let\'s exit early so we don\'t set the wrong primaryBouncer state."
 
-    .line 56
+    .line 12
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
+    .line 14
     return-void
 
-    .line 61
-    :cond_2
+    .line 17
+    :cond_0
     iget-object v1, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->repository:Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;
 
-    .line 62
+    .line 18
     iget-object v3, v1, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->_keyguardAuthenticatedBiometrics:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 64
+    .line 20
     const/4 v4, 0x0
 
-    .line 66
+    .line 22
     invoke-virtual {v3, v4}, Lkotlinx/coroutines/flow/StateFlowImpl;->setValue(Ljava/lang/Object;)V
 
-    .line 67
+    .line 23
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 70
+    .line 26
     iget-object v5, v1, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->_primaryBouncerStartingToHide:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 72
+    .line 28
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 74
+    .line 30
     invoke-virtual {v5, v4, v3}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 77
+    .line 33
     invoke-virtual {p0}, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->isBouncerShowing()Z
 
-    .line 80
+    .line 36
     move-result v5
 
-    .line 83
+    .line 39
     sget-object v6, Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;->SimPuk:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
-    .line 84
+    .line 40
     sget-object v7, Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;->SimPin:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
-    .line 86
+    .line 42
     iget-object v8, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->keyguardSecurityModel:Lcom/android/keyguard/KeyguardSecurityModel;
 
-    .line 88
+    .line 44
     iget-object v9, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->selectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
 
-    .line 90
+    .line 46
     const/4 v10, 0x0
 
-    .line 92
+    .line 48
     const/4 v11, 0x1
 
-    .line 93
-    if-nez v5, :cond_3
+    .line 49
+    if-nez v5, :cond_1
 
-    .line 94
+    .line 50
     iget-object v5, v1, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->primaryBouncerShowingSoon:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 96
+    .line 52
     iget-object v5, v5, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 98
+    .line 54
     invoke-interface {v5}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
-    .line 100
+    .line 56
     move-result-object v5
 
-    .line 103
+    .line 59
     check-cast v5, Ljava/lang/Boolean;
 
-    .line 104
+    .line 60
     invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 106
+    .line 62
     move-result v5
 
-    .line 109
-    if-eqz v5, :cond_4
+    .line 65
+    if-eqz v5, :cond_2
 
-    .line 110
-    :cond_3
+    .line 66
+    :cond_1
     invoke-virtual {v9}, Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;->getSelectedUserId()I
 
-    .line 112
+    .line 68
     move-result v5
 
-    .line 115
+    .line 71
     invoke-virtual {v8, v5}, Lcom/android/keyguard/KeyguardSecurityModel;->getSecurityMode(I)Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
-    .line 116
+    .line 72
     move-result-object v5
 
-    .line 119
-    if-eq v5, v7, :cond_5
+    .line 75
+    if-eq v5, v7, :cond_3
 
-    .line 120
-    if-ne v5, v6, :cond_4
+    .line 76
+    if-ne v5, v6, :cond_2
 
-    .line 122
+    .line 78
     goto :goto_0
 
-    .line 124
-    :cond_4
+    .line 80
+    :cond_2
     move v5, v10
 
-    .line 125
+    .line 81
     goto :goto_1
 
-    .line 126
-    :cond_5
+    .line 82
+    :cond_3
     :goto_0
     move v5, v11
 
-    .line 127
+    .line 83
     :goto_1
     const-string v12, "KeyguardBouncer#show"
 
-    .line 128
+    .line 84
     invoke-static {v12}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 130
+    .line 86
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 133
+    .line 89
     move-result-object v12
 
-    .line 136
+    .line 92
     iget-object v13, v1, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->_primaryBouncerScrimmed:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 137
+    .line 93
     invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 139
+    .line 95
     invoke-virtual {v13, v4, v12}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 142
-    if-eqz p1, :cond_6
+    .line 98
+    if-eqz p1, :cond_4
 
-    .line 145
+    .line 101
     const/4 p1, 0x0
 
-    .line 147
+    .line 103
     invoke-virtual {p0, p1}, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->setPanelExpansion(F)V
 
-    .line 148
-    :cond_6
-    if-eqz v5, :cond_7
+    .line 104
+    :cond_4
+    if-eqz v5, :cond_5
 
-    .line 151
+    .line 107
     iget-object p1, v1, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->_primaryBouncerShow:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 153
+    .line 109
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 155
+    .line 111
     invoke-virtual {p1, v4, v3}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 158
-    :cond_7
+    .line 114
+    :cond_5
     invoke-virtual {v0}, Lcom/android/systemui/bouncer/ui/BouncerViewImpl;->getDelegate()Lcom/android/systemui/bouncer/ui/binder/KeyguardBouncerViewBinder$bind$delegate$1;
 
-    .line 161
+    .line 117
     move-result-object p1
 
-    .line 164
-    if-eqz p1, :cond_8
+    .line 120
+    if-eqz p1, :cond_6
 
-    .line 165
+    .line 121
     iget-object v0, p1, Lcom/android/systemui/bouncer/ui/binder/KeyguardBouncerViewBinder$bind$delegate$1;->$selectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
 
-    .line 167
+    .line 123
     invoke-virtual {v0}, Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;->getSelectedUserId()I
 
-    .line 169
+    .line 125
     move-result v0
 
-    .line 172
+    .line 128
     iget-object p1, p1, Lcom/android/systemui/bouncer/ui/binder/KeyguardBouncerViewBinder$bind$delegate$1;->$securityContainerController:Lcom/android/keyguard/KeyguardSecurityContainerController;
 
-    .line 173
+    .line 129
     iget-object v3, p1, Lcom/android/keyguard/KeyguardSecurityContainerController;->mKeyguardSecurityCallback:Lcom/android/keyguard/KeyguardSecurityContainerController$3;
 
-    .line 175
+    .line 131
     iget-object p1, p1, Lcom/android/keyguard/KeyguardSecurityContainerController;->mCurrentSecurityMode:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
-    .line 177
+    .line 133
     iget-object v3, v3, Lcom/android/keyguard/KeyguardSecurityContainerController$3;->this$0:Lcom/android/keyguard/KeyguardSecurityContainerController;
 
-    .line 179
+    .line 135
     invoke-virtual {v3, v10, v0, v10, p1}, Lcom/android/keyguard/KeyguardSecurityContainerController;->showNextSecurityScreenOrFinish(ZIZLcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)Z
 
-    .line 181
+    .line 137
     move-result p1
 
-    .line 184
-    if-ne p1, v11, :cond_8
+    .line 140
+    if-ne p1, v11, :cond_6
 
-    .line 185
+    .line 141
     return-void
 
-    .line 187
-    :cond_8
+    .line 143
+    :cond_6
     sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 188
+    .line 144
     iget-object v0, v1, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->_primaryBouncerShowingSoon:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    .line 190
+    .line 146
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 192
+    .line 148
     invoke-virtual {v0, v4, p1}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 195
+    .line 151
     iget-boolean p1, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->currentUserActiveUnlockRunning:Z
 
-    .line 198
-    if-eqz p1, :cond_9
+    .line 154
+    if-eqz p1, :cond_7
 
-    .line 200
+    .line 156
     iget-object p1, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 202
+    .line 158
     invoke-virtual {p1, v10}, Lcom/android/keyguard/KeyguardUpdateMonitor;->shouldTriggerActiveUnlock(Z)Z
 
-    .line 204
+    .line 160
     move-result p1
 
-    .line 207
-    if-eqz p1, :cond_9
+    .line 163
+    if-eqz p1, :cond_7
 
-    .line 208
+    .line 164
     move v10, v11
 
-    .line 210
-    :cond_9
+    .line 166
+    :cond_7
     invoke-virtual {v9}, Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;->getSelectedUserId()I
 
-    .line 211
+    .line 167
     move-result p1
 
-    .line 214
+    .line 170
     invoke-virtual {v8, p1}, Lcom/android/keyguard/KeyguardSecurityModel;->getSecurityMode(I)Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
-    .line 215
+    .line 171
     move-result-object p1
 
-    .line 218
+    .line 174
     iget-object v0, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->showRunnable:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor$showRunnable$1;
 
-    .line 219
-    if-eq p1, v7, :cond_c
+    .line 175
+    if-eq p1, v7, :cond_a
 
-    .line 221
-    if-ne p1, v6, :cond_a
+    .line 177
+    if-ne p1, v6, :cond_8
 
-    .line 223
+    .line 179
     goto :goto_2
 
-    .line 225
-    :cond_a
+    .line 181
+    :cond_8
     iget-object p1, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->deviceEntryFaceAuthInteractor:Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryFaceAuthInteractor;
 
-    .line 226
+    .line 182
     invoke-interface {p1}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryFaceAuthInteractor;->canFaceAuthRun()Z
 
-    .line 228
+    .line 184
     move-result p1
 
-    .line 231
-    if-nez p1, :cond_b
+    .line 187
+    if-nez p1, :cond_9
 
-    .line 232
-    if-eqz v10, :cond_c
+    .line 188
+    if-eqz v10, :cond_a
 
-    .line 234
-    :cond_b
+    .line 190
+    :cond_9
     const-string p1, "delay bouncer, passive auth may succeed"
 
-    .line 236
+    .line 192
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
+    .line 194
     iget-wide v1, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->passiveAuthBouncerDelay:J
 
-    .line 241
+    .line 197
     iget-object p1, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->mainHandler:Landroid/os/Handler;
 
-    .line 243
+    .line 199
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 245
+    .line 201
     goto :goto_3
 
-    .line 248
-    :cond_c
+    .line 204
+    :cond_a
     :goto_2
     invoke-static {v0}, Lcom/android/systemui/DejankUtils;->postAfterTraversal(Ljava/lang/Runnable;)V
 
-    .line 249
+    .line 205
     :goto_3
     iget-object p1, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->keyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 252
+    .line 208
     check-cast p1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 254
+    .line 210
     iget-boolean v0, p1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mPrimaryBouncerShowing:Z
 
-    .line 256
-    if-eq v0, v11, :cond_d
+    .line 212
+    if-eq v0, v11, :cond_b
 
-    .line 258
+    .line 214
     iput-boolean v11, p1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mPrimaryBouncerShowing:Z
 
-    .line 260
+    .line 216
     new-instance v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl$$ExternalSyntheticLambda0;
 
-    .line 262
+    .line 218
     const/4 v1, 0x1
 
-    .line 264
+    .line 220
     invoke-direct {v0, v1}, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl$$ExternalSyntheticLambda0;-><init>(I)V
 
-    .line 265
+    .line 221
     invoke-virtual {p1, v0}, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->invokeForEachCallback(Ljava/util/function/Consumer;)V
 
-    .line 268
-    :cond_d
+    .line 224
+    :cond_b
     iget-object p0, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerInteractor;->primaryBouncerCallbackInteractor:Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerCallbackInteractor;
 
-    .line 271
+    .line 227
     iget-object p0, p0, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerCallbackInteractor;->expansionCallbacks:Ljava/util/ArrayList;
 
-    .line 273
+    .line 229
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 275
+    .line 231
     move-result-object p0
 
-    .line 278
+    .line 234
     :goto_4
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 279
+    .line 235
     move-result p1
 
-    .line 282
-    if-eqz p1, :cond_e
+    .line 238
+    if-eqz p1, :cond_c
 
-    .line 283
+    .line 239
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 285
+    .line 241
     move-result-object p1
 
-    .line 288
+    .line 244
     check-cast p1, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerCallbackInteractor$PrimaryBouncerExpansionCallback;
 
-    .line 289
+    .line 245
     invoke-interface {p1}, Lcom/android/systemui/bouncer/domain/interactor/PrimaryBouncerCallbackInteractor$PrimaryBouncerExpansionCallback;->onStartingToShow()V
 
-    .line 291
+    .line 247
     goto :goto_4
 
-    .line 294
-    :cond_e
+    .line 250
+    :cond_c
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 295
+    .line 251
     return-void
-    .line 298
+    .line 254
 .end method
 
 .method public final willRunDismissFromKeyguard()Z

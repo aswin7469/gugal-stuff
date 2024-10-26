@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -222,7 +222,7 @@
     move-result-object v2
 
     .line 16
-    const v3, 0x7f070208    # @dimen/default_burn_in_prevention_offset '15.0dp'
+    const v3, 0x7f07022a    # @dimen/default_burn_in_prevention_offset '15.0dp'
 
     .line 17
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -240,7 +240,7 @@
     move-result-object v4
 
     .line 29
-    const v5, 0x7f070335    # @dimen/keyguard_affordance_fixed_width '48.0dp'
+    const v5, 0x7f070371    # @dimen/keyguard_affordance_fixed_width '48.0dp'
 
     .line 30
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -255,7 +255,7 @@
     move-result-object v0
 
     .line 40
-    const v5, 0x7f070332    # @dimen/keyguard_affordance_fixed_height '48.0dp'
+    const v5, 0x7f07036e    # @dimen/keyguard_affordance_fixed_height '48.0dp'
 
     .line 41
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -313,7 +313,7 @@
     move-result-object p0
 
     .line 82
-    const v1, 0x7f070346    # @dimen/keyguard_indication_margin_bottom '32.0dp'
+    const v1, 0x7f070382    # @dimen/keyguard_indication_margin_bottom '32.0dp'
 
     .line 83
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -340,7 +340,7 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b00b1    # @id/ambient_indication_container
+    const v0, 0x7f0a00b1    # @id/ambient_indication_container
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -352,7 +352,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->ambientIndicationArea:Landroid/view/View;
 
     .line 12
-    const v0, 0x7f0b03d6    # @id/keyguard_indication_area
+    const v0, 0x7f0a03f7    # @id/keyguard_indication_area
 
     .line 14
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -375,7 +375,7 @@
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
     .line 2
-    const p1, 0x7f0b00b1    # @id/ambient_indication_container
+    const p1, 0x7f0a00b1    # @id/ambient_indication_container
 
     .line 5
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;

@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/bubbles/BubbleViewInfoTask$BubbleViewInfo;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -95,7 +95,7 @@
     move-result-object v1
 
     .line 30
-    const v2, 0x7f0e006b    # @layout/bubble_view 'res/layout/bubble_view.xml'
+    const v2, 0x7f0d0070    # @layout/bubble_view 'res/layout/bubble_view.xml'
 
     .line 31
     const/4 v4, 0x0
@@ -128,7 +128,7 @@
     move-result-object v6
 
     .line 51
-    const v2, 0x7f0e0063    # @layout/bubble_expanded_view 'res/layout/bubble_expanded_view.xml'
+    const v2, 0x7f0d0068    # @layout/bubble_expanded_view 'res/layout/bubble_expanded_view.xml'
 
     .line 52
     invoke-virtual {v1, v2, p4, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;

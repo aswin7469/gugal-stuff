@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/row/ChannelEditorListView$updateAppControlRow$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
@@ -116,7 +116,7 @@
     .line 44
     :cond_3
     :goto_2
-    const p1, 0x7f0b0294    # @id/done_button
+    const p1, 0x7f0a02a3    # @id/done_button
 
     .line 45
     invoke-virtual {v0, p1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
@@ -134,14 +134,14 @@
     if-eqz v1, :cond_4
 
     .line 56
-    const p2, 0x7f140425    # @string/inline_ok_button 'Apply'
+    const p2, 0x7f13046f    # @string/inline_ok_button 'Apply'
 
     .line 58
     goto :goto_3
 
     .line 61
     :cond_4
-    const p2, 0x7f140424    # @string/inline_done_button 'Done'
+    const p2, 0x7f13046e    # @string/inline_done_button 'Done'
 
     .line 62
     :goto_3

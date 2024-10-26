@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/foundation/gestures/DraggableNode;
 .super Landroidx/compose/foundation/gestures/DragGestureNode;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public final drag(Lkotlin/coroutines/Continuation;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
+.method public final drag(Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 3
 
     .line 1
@@ -31,10 +31,10 @@
     const/4 v2, 0x0
 
     .line 6
-    invoke-direct {v1, p2, p0, v2}, Landroidx/compose/foundation/gestures/DraggableNode$drag$2;-><init>(Lkotlin/jvm/functions/Function2;Landroidx/compose/foundation/gestures/DraggableNode;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p1, p0, v2}, Landroidx/compose/foundation/gestures/DraggableNode$drag$2;-><init>(Lkotlin/jvm/functions/Function2;Landroidx/compose/foundation/gestures/DraggableNode;Lkotlin/coroutines/Continuation;)V
 
     .line 7
-    invoke-virtual {v0, p1, v1}, Landroidx/compose/material3/SliderState;->drag(Lkotlin/coroutines/Continuation;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, p2}, Landroidx/compose/material3/SliderState;->drag(Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     .line 10
     move-result-object p0

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/assist/PhoneStateMonitor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -80,173 +80,103 @@
     invoke-direct {p1, p0}, Lcom/android/systemui/assist/PhoneStateMonitor$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/assist/PhoneStateMonitor;)V
 
     .line 19
-    iget-object p3, p4, Lcom/android/systemui/BootCompleteCacheImpl;->bootComplete:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {p4, p1}, Lcom/android/systemui/BootCompleteCacheImpl;->addListener(Lcom/android/systemui/BootCompleteCache$BootCompleteListener;)Z
 
     .line 22
-    invoke-virtual {p3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    new-instance p1, Landroid/content/IntentFilter;
 
-    .line 24
-    move-result p3
+    .line 25
+    invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     .line 27
-    if-eqz p3, :cond_0
-
-    .line 28
-    goto :goto_0
+    sget-object p3, Lcom/android/systemui/assist/PhoneStateMonitor;->DEFAULT_HOME_CHANGE_ACTIONS:[Ljava/lang/String;
 
     .line 30
-    :cond_0
-    iget-object p3, p4, Lcom/android/systemui/BootCompleteCacheImpl;->listeners:Ljava/util/List;
+    const/4 p4, 0x0
 
-    .line 31
-    monitor-enter p3
+    .line 32
+    move p5, p4
 
     .line 33
-    :try_start_0
-    iget-object p5, p4, Lcom/android/systemui/BootCompleteCacheImpl;->bootComplete:Ljava/util/concurrent/atomic/AtomicBoolean;
+    :goto_0
+    const/4 v0, 0x4
 
     .line 34
-    invoke-virtual {p5}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    if-ge p5, v0, :cond_0
 
-    .line 36
-    move-result p5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 35
+    aget-object v0, p3, p5
+
+    .line 37
+    invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 39
-    if-eqz p5, :cond_1
-
-    .line 40
-    monitor-exit p3
+    add-int/lit8 p5, p5, 0x1
 
     .line 42
     goto :goto_0
 
-    .line 43
-    :cond_1
-    :try_start_1
-    iget-object p4, p4, Lcom/android/systemui/BootCompleteCacheImpl;->listeners:Ljava/util/List;
-
     .line 44
-    new-instance p5, Ljava/lang/ref/WeakReference;
-
-    .line 46
-    invoke-direct {p5, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    .line 48
-    invoke-interface {p4, p5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 51
-    monitor-exit p3
-
-    .line 54
-    :goto_0
-    new-instance p1, Landroid/content/IntentFilter;
-
-    .line 55
-    invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
-
-    .line 57
-    sget-object p3, Lcom/android/systemui/assist/PhoneStateMonitor;->DEFAULT_HOME_CHANGE_ACTIONS:[Ljava/lang/String;
-
-    .line 60
-    const/4 p4, 0x0
-
-    .line 62
-    move p5, p4
-
-    .line 63
-    :goto_1
-    const/4 v0, 0x4
-
-    .line 64
-    if-ge p5, v0, :cond_2
-
-    .line 65
-    aget-object v0, p3, p5
-
-    .line 67
-    invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 69
-    add-int/lit8 p5, p5, 0x1
-
-    .line 72
-    goto :goto_1
-
-    .line 74
-    :cond_2
+    :cond_0
     new-instance p3, Lcom/android/systemui/assist/PhoneStateMonitor$1;
 
-    .line 75
+    .line 45
     invoke-direct {p3, p0}, Lcom/android/systemui/assist/PhoneStateMonitor$1;-><init>(Lcom/android/systemui/assist/PhoneStateMonitor;)V
 
-    .line 77
+    .line 47
     invoke-virtual {p2, p3, p1}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
-    .line 80
+    .line 50
     sget-object p1, Lcom/android/systemui/shared/system/ActivityManagerWrapper;->sInstance:Lcom/android/systemui/shared/system/ActivityManagerWrapper;
 
-    .line 83
+    .line 53
     invoke-virtual {p1}, Lcom/android/systemui/shared/system/ActivityManagerWrapper;->getRunningTask()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 85
+    .line 55
     move-result-object p1
 
-    .line 88
-    if-eqz p1, :cond_4
+    .line 58
+    if-eqz p1, :cond_2
 
-    .line 89
+    .line 59
     iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
-    .line 91
-    if-nez p1, :cond_3
+    .line 61
+    if-nez p1, :cond_1
 
-    .line 93
-    goto :goto_2
+    .line 63
+    goto :goto_1
 
-    .line 95
-    :cond_3
+    .line 65
+    :cond_1
     iget-object p2, p0, Lcom/android/systemui/assist/PhoneStateMonitor;->mDefaultHome:Landroid/content/ComponentName;
 
-    .line 96
+    .line 66
     invoke-virtual {p1, p2}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
-    .line 98
+    .line 68
     move-result p4
 
-    .line 101
-    :cond_4
-    :goto_2
+    .line 71
+    :cond_2
+    :goto_1
     iput-boolean p4, p0, Lcom/android/systemui/assist/PhoneStateMonitor;->mLauncherShowing:Z
 
-    .line 102
+    .line 72
     sget-object p1, Lcom/android/systemui/shared/system/TaskStackChangeListeners;->INSTANCE:Lcom/android/systemui/shared/system/TaskStackChangeListeners;
 
-    .line 104
+    .line 74
     new-instance p2, Lcom/android/systemui/assist/PhoneStateMonitor$2;
 
-    .line 106
+    .line 76
     invoke-direct {p2, p0}, Lcom/android/systemui/assist/PhoneStateMonitor$2;-><init>(Lcom/android/systemui/assist/PhoneStateMonitor;)V
 
-    .line 108
+    .line 78
     invoke-virtual {p1, p2}, Lcom/android/systemui/shared/system/TaskStackChangeListeners;->registerTaskStackListener(Lcom/android/systemui/shared/system/TaskStackChangeListener;)V
 
-    .line 111
+    .line 81
     return-void
-
-    .line 114
-    :catchall_0
-    move-exception p0
-
-    .line 115
-    monitor-exit p3
-
-    .line 116
-    throw p0
-    .line 117
+    .line 84
 .end method
 
 .method public static getCurrentDefaultHome()Landroid/content/ComponentName;

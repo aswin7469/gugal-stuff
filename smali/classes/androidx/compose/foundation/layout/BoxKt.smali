@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/foundation/layout/BoxKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -51,17 +51,14 @@
     invoke-direct {v1, v2, v0}, Landroidx/compose/foundation/layout/BoxMeasurePolicy;-><init>(Landroidx/compose/ui/Alignment;Z)V
 
     .line 20
-    sput-object v1, Landroidx/compose/foundation/layout/BoxKt;->DefaultBoxMeasurePolicy:Landroidx/compose/foundation/layout/BoxMeasurePolicy;
-
-    .line 23
     sget-object v0, Landroidx/compose/foundation/layout/BoxKt$EmptyBoxMeasurePolicy$1;->INSTANCE:Landroidx/compose/foundation/layout/BoxKt$EmptyBoxMeasurePolicy$1;
 
-    .line 25
+    .line 23
     sput-object v0, Landroidx/compose/foundation/layout/BoxKt;->EmptyBoxMeasurePolicy:Landroidx/compose/foundation/layout/BoxKt$EmptyBoxMeasurePolicy$1;
 
-    .line 27
+    .line 25
     return-void
-    .line 29
+    .line 27
 .end method
 
 .method public static final Box(Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;I)V
@@ -509,97 +506,4 @@
     :cond_1
     return-object v0
     .line 22
-.end method
-
-.method public static final rememberBoxMeasurePolicy(Landroidx/compose/runtime/Composer;)Landroidx/compose/foundation/layout/BoxMeasurePolicy;
-    .locals 4
-
-    .line 1
-    sget-object v0, Landroidx/compose/ui/Alignment$Companion;->TopStart:Landroidx/compose/ui/BiasAlignment;
-
-    .line 2
-    sget-object v1, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
-
-    .line 4
-    check-cast p0, Landroidx/compose/runtime/ComposerImpl;
-
-    .line 6
-    const v1, -0x349cac5
-
-    .line 8
-    invoke-virtual {p0, v1}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
-
-    .line 11
-    invoke-virtual {v0, v0}, Landroidx/compose/ui/BiasAlignment;->equals(Ljava/lang/Object;)Z
-
-    .line 14
-    move-result v1
-
-    .line 17
-    const/4 v2, 0x0
-
-    .line 18
-    if-eqz v1, :cond_0
-
-    .line 19
-    sget-object v0, Landroidx/compose/foundation/layout/BoxKt;->DefaultBoxMeasurePolicy:Landroidx/compose/foundation/layout/BoxMeasurePolicy;
-
-    .line 21
-    goto :goto_0
-
-    .line 23
-    :cond_0
-    invoke-virtual {p0, v0}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
-
-    .line 24
-    move-result v1
-
-    .line 27
-    invoke-virtual {p0, v2}, Landroidx/compose/runtime/ComposerImpl;->changed(Z)Z
-
-    .line 28
-    move-result v3
-
-    .line 31
-    or-int/2addr v1, v3
-
-    .line 32
-    invoke-virtual {p0}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
-
-    .line 33
-    move-result-object v3
-
-    .line 36
-    if-nez v1, :cond_1
-
-    .line 37
-    sget-object v1, Landroidx/compose/runtime/Composer$Companion;->Empty:Landroidx/compose/runtime/Composer$Companion$Empty$1;
-
-    .line 39
-    if-ne v3, v1, :cond_2
-
-    .line 41
-    :cond_1
-    new-instance v3, Landroidx/compose/foundation/layout/BoxMeasurePolicy;
-
-    .line 43
-    invoke-direct {v3, v0, v2}, Landroidx/compose/foundation/layout/BoxMeasurePolicy;-><init>(Landroidx/compose/ui/Alignment;Z)V
-
-    .line 45
-    invoke-virtual {p0, v3}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
-
-    .line 48
-    :cond_2
-    move-object v0, v3
-
-    .line 51
-    check-cast v0, Landroidx/compose/foundation/layout/BoxMeasurePolicy;
-
-    .line 52
-    :goto_0
-    invoke-virtual {p0, v2}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
-
-    .line 54
-    return-object v0
-    .line 57
 .end method

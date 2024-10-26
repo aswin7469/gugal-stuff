@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">選択したウィジェットを配置</string>
   <string name="accessibility_action_label_remove_widget">ウィジェットを削除</string>
   <string name="accessibility_action_label_select_widget">ウィジェットを選択</string>
-  <string name="accessibility_action_open_communal_hub">ロック画面のウィジェット</string>
   <string name="accessibility_action_pip_resize">サイズ変更</string>
   <string name="accessibility_action_pip_stash">非表示</string>
   <string name="accessibility_action_pip_unstash">表示</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">片手モードを終了します</string>
   <string name="accessibility_airplane_mode">機内モード。</string>
   <string name="accessibility_allow_diagonal_scrolling">斜めスクロールを許可</string>
+  <string name="accessibility_assistant_poodle">音声検索</string>
   <string name="accessibility_authenticate_hint">認証</string>
   <string name="accessibility_back">戻る</string>
   <string name="accessibility_banner_message_dismiss">閉じる</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">デバイスを入力</string>
   <string name="accessibility_ethernet_connected">イーサネット。</string>
   <string name="accessibility_ethernet_disconnected">イーサネット接続を解除しました。</string>
-  <string name="accessibility_fingerprint_bouncer">認証が必要です。指紋認証センサーをタッチして認証してください。</string>
   <string name="accessibility_fingerprint_label">指紋認証センサー</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">切り替え</string>
   <string name="accessibility_floating_button_action_edit">編集</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">メニュー</string>
   <string name="accessibility_multi_user_list_switcher">プルダウン メニュー</string>
   <string name="accessibility_multi_user_switch_switcher">ユーザーを切り替える</string>
+  <string name="accessibility_next_alarm">次のアラーム: %s</string>
   <string name="accessibility_no_calling">通話なし。</string>
   <string name="accessibility_no_phone">電波状態:なし</string>
   <string name="accessibility_no_wifi">Wi-Fiが切断されました。</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">画面は縦向きにロックされています。</string>
   <string name="accessibility_send_smart_reply">送信</string>
   <string name="accessibility_sensors_off_active">センサー OFF: 有効</string>
+  <string name="accessibility_settings_gear">Pixel Stand の設定</string>
   <string name="accessibility_side_fingerprint_indicator_label">指紋認証センサーに触れてください。スマートフォンの側面にある高さが低い方のボタンです。</string>
+  <string name="accessibility_smartspace_page">%1$d/%2$d ページ</string>
   <string name="accessibility_split_bottom">下に分割</string>
   <string name="accessibility_split_left">左に分割</string>
   <string name="accessibility_split_right">右に分割</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">Wi-Fiはレベル3です。</string>
   <string name="accessibility_wifi_two_bars">Wi-Fiはレベル2です。</string>
   <string name="accesssibility_keyguard_retry">顔認証をもう一度試すには上にスワイプします</string>
+  <string name="adaptive_charging_notify_des">%1$sまでに充電が完了します。バッテリーを長持ちさせるために、ゆっくりと充電します。</string>
+  <string name="adaptive_charging_notify_title">アダプティブ充電は ON です</string>
+  <string name="adaptive_charging_notify_turn_off_once">一度だけ OFF にする</string>
+  <string name="adaptive_charging_time_estimate">%1$s • アダプティブ充電中 • %2$s までにフル充電</string>
   <string name="add">追加</string>
   <string name="add_guest_failed">新しいゲストを作成できませんでした</string>
   <string name="airplane_mode">機内モード</string>
@@ -233,6 +239,7 @@
   <string name="app_info">アプリ情報</string>
   <string name="app_label">システム UI</string>
   <string name="assistant_attention_content_description">会話を始められます</string>
+  <string name="assistant_scrim_label">認識しています。キャンセルするにはタップします</string>
   <string name="audio_sharing_description">音声を共有中</string>
   <string name="audio_status">再生中</string>
   <string name="auto_data_switch_dialog_negative_button">キャンセル</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">戻る</string>
   <string name="battery">バッテリー</string>
   <string name="battery_detail_switch_title">バッテリー セーバー</string>
-  <string name="battery_low_description">バッテリー残量は %s です。バッテリー セーバーを ON にすると、ダークモードが ON になります。また、バックグラウンド アクティビティが制限され、通知が届くのが遅くなります。</string>
+  <string name="battery_health_notify_learn_more">詳細</string>
   <string name="battery_low_intro">バッテリー セーバーを ON にすると、ダークモードが ON になります。また、バックグラウンド アクティビティが制限され、通知が届くのが遅くなります。</string>
-  <string name="battery_low_title">バッテリー セーバーを ON にしますか？</string>
   <string name="battery_saver_confirmation_ok">ONにする</string>
   <string name="battery_saver_confirmation_title">バッテリー セーバーを ON にしますか？</string>
   <string name="battery_saver_confirmation_title_generic">バッテリー セーバーについて</string>
-  <string name="battery_saver_dismiss_action">いいえ</string>
   <string name="battery_saver_start_action">ON にする</string>
   <string name="battery_state_unknown_notification_text">タップすると詳細が表示されます</string>
   <string name="battery_state_unknown_notification_title">バッテリー残量の読み込み中に問題が発生しました</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">有効。左: バッテリー残量 %1$s、右: バッテリー残量 %2$s。</string>
   <string name="bluetooth_active_battery_level_untethered_left">アクティブ。左: バッテリー残量 %1$s。</string>
   <string name="bluetooth_active_battery_level_untethered_right">アクティブ。右: バッテリー残量 %1$s。</string>
-  <string name="bluetooth_active_media_only_battery_level">有効（メディアのみ）。バッテリー残量 %1$s。</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">有効（メディアのみ）。左: バッテリー残量 %1$s、右: バッテリー残量 %2$s。</string>
-  <string name="bluetooth_active_media_only_no_battery_level">有効（メディアのみ）</string>
   <string name="bluetooth_active_no_battery_level">有効</string>
   <string name="bluetooth_battery_level">バッテリー %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">接続済み（音声の共有をサポート）。バッテリー残量 %1$s。</string>
   <string name="bluetooth_battery_level_untethered">左: バッテリー残量 %1$s、右: バッテリー残量 %2$s。</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">接続済み（音声の共有をサポート）。左: バッテリー残量 %1$s、右: バッテリー残量 %2$s。</string>
   <string name="bluetooth_connected">接続済み: %1$s</string>
   <string name="bluetooth_connecting">接続処理中...</string>
   <string name="bluetooth_disconnected">切断</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">アクティブ（左のみ）</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">アクティブ（左と右）</string>
   <string name="bluetooth_hearing_aid_right_active">アクティブ（右のみ）</string>
-  <string name="bluetooth_no_battery_level_lea_support">接続済み（音声の共有をサポート）</string>
   <string name="bluetooth_pairing">ペアとして設定中...</string>
   <string name="bluetooth_pairing_device_down_error_message">%1$sと通信できません。</string>
   <string name="bluetooth_pairing_error_message">%1$sをペアに設定できません。</string>
   <string name="bluetooth_pairing_pin_error_message">PIN またはパスキーが正しくないため、%1$s をペアに設定できませんでした。</string>
   <string name="bluetooth_pairing_rejected_error_message">ペア設定が%1$sに拒否されました。</string>
-  <string name="bluetooth_saved_device_lea_support">音声の共有をサポートしています</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">コンピュータ</string>
   <string name="bluetooth_talkback_headphone">ヘッドフォン</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">オーバーフロー</string>
   <string name="bubble_overflow_empty_subtitle">最近表示されたバブルや閉じたバブルが、ここに表示されます</string>
   <string name="bubble_overflow_empty_title">最近閉じたバブルはありません</string>
-  <string name="bubble_shortcut_label">バブル</string>
-  <string name="bubble_shortcut_long_label">バブルを表示</string>
   <string name="bubbles_app_settings">%1$s の設定</string>
   <string name="bubbles_dont_bubble_conversation">会話をバブルで表示しない</string>
   <string name="bubbles_settings_button_description">%1$s のバブルの設定</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">キャストを停止</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; のキャストを停止します</string>
   <string name="cell_data_off_content_description">モバイルデータ OFF</string>
+  <string name="charge_limit_discovery_notification_enable_button">今すぐ有効にする</string>
+  <string name="charge_limit_discovery_notification_text">バッテリーの健全性を守り、長持ちさせるため、充電を 80% に制限する機能を有効にしてみましょう。これはいつでも [設定] で管理できます。</string>
+  <string name="charge_limit_discovery_notification_title">充電時にバッテリーを保護</string>
+  <string name="charging_reverse_text">電池を共有しています</string>
   <string name="clear_all_notifications_text">すべて消去</string>
   <string name="clipboard">クリップボード</string>
   <string name="clipboard_content_copied">コンテンツをコピーしました</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">閉じる</string>
   <string name="close_dialog_button">閉じる</string>
   <string name="collapse_menu_text">メニューを閉じる</string>
+  <string name="columbus_bouncer_message">クイックタップを完了するにはロックを解除してください</string>
+  <string name="columbus_target_request_dialog_allow">許可</string>
+  <string name="columbus_target_request_dialog_deny">許可しない</string>
+  <string name="columbus_target_request_dialog_summary">スマートフォンの背面を 2 回タップすると、%1$s が開きます。これは [設定] でいつでも変更できます。</string>
+  <string name="columbus_target_request_dialog_title">クイックタップで %1$s を開くことを許可しますか？</string>
   <string name="communal_tutorial_indicator_text">左にスワイプすると、コミュニティ チュートリアルが開始します</string>
   <string name="connected_display_dialog_dual_display_stop_warning">インナー ディスプレイがミラーリングされます。フロント ディスプレイはオフになります。</string>
   <string name="connected_display_dialog_start_mirroring">外部ディスプレイにミラーリングしますか？</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">モバイルデータが一時停止</string>
   <string name="data_usage_disabled_dialog_title">データの一時停止</string>
   <string name="days_timestamp">%1$s 日前</string>
-  <string name="default_error_message">入力値が無効です</string>
   <string name="default_popup_window_title">ポップアップウィンドウ</string>
+  <string name="defender_notify_resume_charge">オーバーライド</string>
+  <string name="defender_notify_title">バッテリーの保護</string>
+  <string name="defender_post_notify_des">バッテリーを長持ちさせるために、%1$sから %2$sの間に充電が最適化されました</string>
+  <string name="defender_post_notify_title">充電が最適化されました</string>
   <string name="demo_mode">システム UI デモモード</string>
   <string name="desktop_mode_maximize_menu_maximize_text">画面の最大化</string>
   <string name="desktop_mode_maximize_menu_snap_text">画面のスナップ</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">これは組織が所有するデバイスです</string>
   <string name="do_disclosure_with_name">これは %s が所有するデバイスです</string>
   <string name="do_financed_disclosure_with_name">このデバイスは %s から提供されています</string>
+  <string name="dock_a11y_action_show_photo_text">フォトフレームを表示する</string>
+  <string name="dock_alignment_not_charging">ワイヤレス充電するにはスマートフォンの位置を調整してください</string>
+  <string name="dock_alignment_slow_charging">急速充電するにはスマートフォンの位置を調整してください</string>
+  <string name="dock_defender_first_run_des">バッテリーを長持ちさせるため、タブレットをホルダーに置いている間は充電を 90% で一時停止します。これはいつでも [設定] でオーバーライドできます。</string>
+  <string name="dock_defender_first_run_settings">設定</string>
+  <string name="dock_defender_first_run_title">充電を一時停止してバッテリーを保護</string>
   <string name="dock_multi_instances_not_supported_text">このアプリはウィンドウが 1 つの場合のみ開くことができます</string>
   <string name="dock_non_resizeble_failed_to_dock_text">アプリで分割画面がサポートされていません</string>
+  <string name="dock_photo_preview_text">フォトフレームを開始しています...</string>
+  <string name="dock_promo_text">左にスワイプしてフォトフレームを表示</string>
   <string name="done">完了</string>
   <string name="drag_split_not_supported">この通知は、分割画面へのドラッグをサポートしていません</string>
   <string name="drag_to_add_tiles">タイルを追加するには長押ししてドラッグ</string>
   <string name="drag_to_rearrange_tiles">タイルを並べ替えるには長押ししてドラッグ</string>
   <string name="drag_to_remove_disabled">タイルは %1$d 個以上必要です</string>
   <string name="drag_to_remove_tiles">削除するにはここにドラッグ</string>
+  <string name="dream_lockscreen_wallpaper_description">現在のロック画面の壁紙を使用します</string>
+  <string name="dream_lockscreen_wallpaper_label">壁紙</string>
   <string name="dream_overlay_status_bar_alarm_set">アラームを設定しました</string>
   <string name="dream_overlay_status_bar_camera_mic_off">カメラとマイクが OFF です</string>
   <string name="dream_overlay_status_bar_camera_off">カメラは OFF です</string>
   <string name="dream_overlay_status_bar_mic_off">マイクは OFF です</string>
   <string name="dream_overlay_status_bar_priority_mode">優先順位モード</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi-Fi を利用できません</string>
+  <string name="dwell_defender_notify_des">この機能を使うと、スマートフォンが長時間充電されている状態のときに、バッテリーを長持ちさせることができます</string>
+  <string name="dwell_defender_notify_title">バッテリーを保護するため、充電を一時停止しています</string>
   <string name="edit_user_info_message">選択した名前と写真は、このデバイスを使用しているすべてのユーザーが見ることができます。</string>
   <string name="edit_widget">ウィジェットを編集</string>
   <string name="empty_shade_text">通知はありません</string>
@@ -561,12 +581,16 @@
   <string name="ethernet_label">イーサネット</string>
   <string name="expand_button_title">詳細設定</string>
   <string name="expand_menu_text">メニューを開く</string>
+  <string name="extreme_battery_saver_text">スーパー</string>
+  <string name="extreme_low_battery_notification_text">すぐに充電しないとスマートフォンはシャットダウンします</string>
+  <string name="extreme_low_battery_notification_title">バッテリー残量: 非常に少ない</string>
   <string name="face_re_enroll_dialog_content">顔認証をもう一度設定するために、現在の顔モデルが削除されます。
 
 スマートフォンのロックの解除に顔認証を使用するには、この機能をもう一度設定する必要があります。</string>
   <string name="face_re_enroll_dialog_title">顔認証の設定</string>
   <string name="face_re_enroll_notification_name">顔認証</string>
   <string name="face_re_enroll_notification_title">顔認証をもう一度設定してください</string>
+  <string name="face_reenroll_dialog_confirm">設定</string>
   <string name="face_reenroll_failure_dialog_content">顔認証を設定できませんでした。[設定] に移動してもう一度お試しください。</string>
   <string name="failed_attempts_now_wiping_device">試行回数が上限に達しました。このデバイスのデータが削除されます。</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">閉じる</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">縮小</string>
   <string name="fullscreen_text">全画面表示</string>
   <string name="game_status">プレイ中</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s、%2$s</string>
   <string name="global_action_smart_lock_disabled">ロック解除延長は無効です</string>
   <string name="go_to_web">ブラウザに移動</string>
   <string name="got_it">OK</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">ゲスト セッションをリセットしますか？</string>
   <string name="guest_reset_guest_confirm_button">リセット</string>
   <string name="guest_resetting">ゲストをリセットしています…</string>
+  <string name="handle_invocation_prompt">スワイプして話しかけてください</string>
   <string name="handle_text">ハンドル</string>
   <string name="headset">ヘッドセット</string>
   <string name="hearing_devices_preset_label">プリセット</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">スマートフォンの温度が上昇中</string>
   <string name="home_controls_dream_description">ホーム コントロールにスクリーンセーバーからすばやくアクセス</string>
   <string name="home_controls_dream_label">ホーム コントロール</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• 利用できるデバイスまたはデバイスパネルが 1 つ以上あります</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Google Home アプリをショートカットとして追加するには、アプリがインストールされていることを確認してください</string>
   <string name="hub_mode_add_widget_button_text">ウィジェットを追加</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">処理しています</string>
   <string name="inattentive_sleep_warning_message">このデバイスはまもなく OFF になります。ON 状態を維持するには、ボタンを押してください。</string>
   <string name="inattentive_sleep_warning_title">スタンバイ</string>
+  <string name="incompatible_charging_learn_more">詳細</string>
+  <string name="incompatible_charging_notify_des">スマートフォンのバッテリーが充電されていないか、充電に非常に時間がかかっています。充電をすばやく完了するには、推奨されるケーブルとアダプターを使用してください。</string>
+  <string name="incompatible_charging_notify_title">充電用アクセサリを確認してください</string>
   <string name="indeterminate">一部 ON</string>
   <string name="inline_done_button">完了</string>
   <string name="inline_ok_button">適用</string>
   <string name="inline_turn_off_notifications">通知を OFF にする</string>
   <string name="input_switch_input_language_next">次の言語に切り替える</string>
   <string name="input_switch_input_language_previous">前の言語に切り替える</string>
+  <string name="install_app">アプリをインストール</string>
   <string name="install_dialer_on_work_profile_action">仕事用電話アプリをインストール</string>
   <string name="install_type_instant">Instant App</string>
   <string name="instant_apps">Instant Apps</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">%1$s を実行中</string>
   <string name="interruption_level_none">サイレント</string>
   <string name="interruption_level_priority">優先する通知のみ</string>
-  <string name="invalid_charger_text">デバイスに付属の充電器を使用してください</string>
-  <string name="invalid_charger_title">USB 経由では充電できません</string>
   <string name="issuerecord_background_processing_label">問題の記録を処理しています</string>
   <string name="issuerecord_ongoing_screen_only">問題を記録しています</string>
   <string name="issuerecord_save_title">問題の記録を保存しました</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">デバイスがロックされました
 認証に失敗しました</string>
   <string name="keyguard_indication_charging_time">%2$s • 充電中 • 完了まで %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • %1$sまでに充電完了</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • 充電中 • フル充電まで %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • %1$sまでに充電完了</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • 急速充電中 • 完了まで %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • 急速充電中 • %1$sまでに完了</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • 充電完了</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • 低速充電中 • 完了まで %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • %1$sまでに充電完了</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • %1$sまでに充電完了</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • ワイヤレス充電中 • 完了まで %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">信頼エージェントがロック解除を管理</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • %1$sまでに充電完了</string>
+  <string name="keyguard_indication_trust_unlocked">ロック解除延長がロック解除を管理</string>
   <string name="keyguard_missing_sim_message_short">SIM がありません</string>
   <string name="keyguard_network_locked_message">ネットワークがロックされました</string>
   <string name="keyguard_permanent_disabled_sim_message_short">SIM が使用できません。</string>
   <string name="keyguard_plugged_in">%s • 充電中</string>
   <string name="keyguard_plugged_in_charging_fast">%s • 急速充電中</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • 急速充電中</string>
   <string name="keyguard_plugged_in_charging_limited">%s • バッテリーを保護するため、充電を一時停止しています</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • 低速充電中</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • 充電中</string>
   <string name="keyguard_plugged_in_dock">%s • 充電中</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • 充電中</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • 充電用アクセサリを確認してください</string>
+  <string name="keyguard_plugged_in_v2">%s • 充電中</string>
   <string name="keyguard_plugged_in_wireless">%s • ワイヤレス充電中</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • 充電中</string>
   <string name="keyguard_retry">上にスワイプしてもう一度お試しください</string>
   <string name="keyguard_sim_error_message_short">無効なカードです。</string>
   <string name="keyguard_sim_locked_message">SIM がロックされています。</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">PIN コードが一致しません</string>
   <string name="kg_invalid_sim_pin_hint">PIN は 4～8 桁の数字で入力してください。</string>
   <string name="kg_invalid_sim_puk_hint">PUK コードは 8 桁以下の数字で入力してください。</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{SIM PIN を入力してください。入力できるのはあと # 回です。この回数を超えると、お使いのデバイスをロック解除するのに携帯通信会社にお問い合わせいただく必要があります。}other{SIM PIN を入力してください。入力できるのはあと # 回です。}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM が無効になりました。続行するには PUK コードを入力してください。入力できるのはあと # 回です。この回数を超えると SIM は完全に使用できなくなります。詳しくは携帯通信会社にお問い合わせください。}other{SIM が無効になりました。続行するには PUK コードを入力してください。入力できるのはあと # 回です。この回数を超えると SIM は完全に使用できなくなります。詳しくは携帯通信会社にお問い合わせください。}}</string>
   <string name="kg_password_pin_failed">SIM PIN 操作に失敗しました。</string>
   <string name="kg_password_puk_failed">SIM PUK 操作に失敗しました。</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">「%1$s」の SIM PIN を入力してください。</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM ロックを解除しています…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{# 秒後にもう一度お試しください。}other{# 秒後にもう一度お試しください。}}</string>
-  <string name="kg_trust_agent_disabled">信頼エージェントは利用できません</string>
+  <string name="kg_trust_agent_disabled">ロック解除延長は利用できません</string>
   <string name="kg_unlock_with_password_or_fp">パスワードか指紋で解除</string>
   <string name="kg_unlock_with_pattern_or_fp">パターンか指紋で解除</string>
   <string name="kg_unlock_with_pin_or_fp">PIN か指紋で解除</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">詳細</string>
   <string name="log_access_confirmation_learn_more_at">詳しくは、%s をご覧ください</string>
   <string name="log_access_confirmation_title">%s にすべてのデバイスログへのアクセスを許可しますか？</string>
+  <string name="low_battery_label">バッテリー残量: 少ない</string>
+  <string name="low_battery_notification_text">標準バッテリー セーバーを ON にするとバッテリーが長持ちします</string>
+  <string name="low_battery_notification_text_ebs">スーパー バッテリー セーバーを ON にするとバッテリーが長持ちします</string>
+  <string name="low_battery_notification_title">バッテリー残量: %s</string>
   <string name="m3c_search_bar_search">検索</string>
   <string name="m3c_suggestions_available">検索候補は次のとおりです</string>
   <string name="magnification_close_settings_click_label">拡大の設定を閉じる</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">停止</string>
   <string name="media_output_end_session_dialog_summary">メディアを他のデバイスに移動する共有中のセッションを停止します。</string>
-  <string name="media_output_first_broadcast_title">ブロードキャストの仕組み</string>
-  <string name="media_output_first_notify_broadcast_message">Bluetooth 対応デバイスを持っている付近のユーザーは、あなたがブロードキャストしているメディアを聴けます</string>
   <string name="media_output_group_title_speakers_and_displays">スピーカーとディスプレイ</string>
   <string name="media_output_group_title_suggested_device">デバイスの候補</string>
   <string name="media_output_label_title">%s の再生先:</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">アプリのキャスト中は、そのアプリで表示または再生される内容に Android がアクセスできるため、パスワード、お支払いの詳細、メッセージ、写真、音声、動画などの情報にご注意ください。</string>
   <string name="media_projection_sys_service_dialog_title">録画やキャストを開始しますか？</string>
   <string name="media_projection_sys_service_dialog_warning">この機能を提供するサービスは、録画中またはキャスト中に画面上に表示または再生される情報のすべてにアクセスできるようになります。これには、パスワード、お支払いの詳細、写真、メッセージ、音声などが含まれます。</string>
-  <string name="media_projection_task_switcher_action_back">切り替える</string>
-  <string name="media_projection_task_switcher_action_switch">代わりにこのアプリを共有する</string>
-  <string name="media_projection_task_switcher_text">アプリを切り替えるときに共有を一時停止します</string>
   <string name="media_seamless_other_device">その他のデバイス</string>
   <string name="media_transfer_default_device_name">接続済みのデバイス</string>
   <string name="media_transfer_dock_speaker_device_name">ホルダー スピーカー</string>
@@ -1280,12 +1319,17 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
   <string name="rear_display_unfolded_bottom_sheet_description">高解像度で撮るにはスマートフォンを裏返してください</string>
   <string name="rear_display_unfolded_bottom_sheet_title">画面を切り替えますか？</string>
   <string name="recent_conversations">最近の会話</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">画像を送信しました</string>
   <string name="remove_from_settings">設定から削除</string>
   <string name="remove_from_settings_prompt">設定からシステムUI調整ツールを削除して、全機能の使用を停止しますか？</string>
   <string name="require_unlock_for_nfc">NFC を使用するには、ロックを解除してください</string>
   <string name="restart_button_description">タップしてこのアプリを再起動すると、表示が適切になります</string>
   <string name="retry_face">顔認証を再試行</string>
+  <string name="reverse_charging_device_name_text">もう一方の Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s から充電されています（%2$s）</string>
+  <string name="reverse_charging_on_notification_title">バッテリー シェアはオンです</string>
+  <string name="reverse_charging_title">バッテリー シェア</string>
   <string name="right_icon">右アイコン</string>
   <string name="right_keycode">右キーコード</string>
   <string name="right_nav_bar_button_type">その他の右ボタンタイプ</string>
@@ -1293,8 +1337,15 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">タップしてバッテリーやデータの使用量を確認</string>
   <string name="running_foreground_services_title">バックグラウンドで実行中のアプリ</string>
-  <string name="satellite_connected_carrier_text">衛星 SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel 衛星 SOS</string>
   <string name="save">保存</string>
+  <string name="saver_confirmation_dialog_dismiss_text">キャンセル</string>
+  <string name="saver_confirmation_dialog_subtitle">使用するモードを選択してください</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">上記の変更がすべて反映されるほか、必須ではないアプリやその通知が一時停止されます。</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">視覚効果を抑え、バックグラウンド アクティビティを制限します。ダークモードが ON になっていない場合は ON になります。</string>
+  <string name="saver_confirmation_dialog_title">バッテリー セーバーへようこそ</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">スーパー バッテリー セーバー</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">標準バッテリー セーバー</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">デバイス ポリシーに基づき、画面のキャプチャが無効になりました</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">IT 管理者によりブロックされました</string>
   <string name="screen_pinning_can_open_other_apps">固定したアプリが他のアプリを開く可能性があります。</string>
@@ -1312,6 +1363,12 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
   <string name="screen_pinning_toast">このアプリの固定を解除するには [戻る] ボタンと [最近] ボタンを長押しします</string>
   <string name="screen_pinning_toast_gesture_nav">このアプリの固定を解除するには、上にスワイプして長押しします</string>
   <string name="screen_pinning_toast_recents_invisible">このアプリの固定を解除するには [戻る] ボタンと [ホーム] ボタンを長押しします</string>
+  <string name="screen_protector_absent_message">無効にすると、画面保護シートを使用していないときのタップの感度を高めることができます。</string>
+  <string name="screen_protector_disable_notification">通知を無効にする</string>
+  <string name="screen_protector_go_to_settings">設定に移動する</string>
+  <string name="screen_protector_got_it">OK</string>
+  <string name="screen_protector_mode_title">画面保護シート モード</string>
+  <string name="screen_protector_present_message">有効にすると、画面保護シートを使用しているときのタップの感度を高めることができます。</string>
   <string name="screen_share_permission_app_selector_title">アプリの共有または録画</string>
   <string name="screen_share_permission_dialog_option_entire_screen">画面全体</string>
   <string name="screen_share_permission_dialog_option_single_app">1 つのアプリ</string>
@@ -1364,9 +1421,9 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
   <string name="screenshot_saving_work_profile_title">スクリーンショットを仕事用プロファイルに保存中…</string>
   <string name="screenshot_scroll_label">キャプチャ範囲を拡大</string>
   <string name="screenshot_share_description">スクリーンショットを共有</string>
-  <string name="screenshot_share_label">共有</string>
   <string name="screenshot_text">スクリーンショット</string>
   <string name="screenshot_top_boundary_pct">上部の境界線 %1$d パーセント</string>
+  <string name="screenshot_view_description">スクリーンショットを表示</string>
   <string name="screenshot_work_profile_notification">仕事用プロファイルで %1$s に保存しました</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">指紋認証センサーは電源ボタンに内蔵されています。スマートフォン側面のボタンのうち、音量ボタンの横にあるフラットなボタンです。</string>
   <string name="see_all_bluetooth_devices">すべて表示</string>
@@ -1384,6 +1441,12 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
   <string name="set_default_notes_app_toast_content">[設定] でデフォルトのメモアプリを設定してください</string>
   <string name="settings_label">設定</string>
   <string name="settingslib_learn_more_text">詳細</string>
+  <string name="severe_battery_notification_switch_text">スーパー バッテリー セーバーに切り替えますか？
+
+必須ではないアプリやその通知を一時停止します。</string>
+  <string name="severe_battery_notification_text">スーパー バッテリー セーバーをオンにします。必須ではないアプリをすべて一時停止します</string>
+  <string name="severe_battery_notification_title">バッテリー残量: %s</string>
+  <string name="severe_low_battery_dialog_switch_action_text">切り替える</string>
   <string name="share_to_app_stop_dialog_button">共有を停止</string>
   <string name="share_to_app_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; の共有を停止します</string>
   <string name="share_to_app_stop_dialog_title">画面の共有を停止しますか？</string>
@@ -1406,6 +1469,9 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
   <string name="slice_permission_text_1">- 「%1$s」からの情報の読み取り</string>
   <string name="slice_permission_text_2">- 「%1$s」内部での操作</string>
   <string name="slice_permission_title">「%2$s」のスライスの表示を「%1$s」に許可しますか？</string>
+  <string name="smartspace_content_desc">スナップショット</string>
+  <string name="smartspace_flight_qr_code">QR コード</string>
+  <string name="smartspace_role_desc">表示</string>
   <string name="snoozeHourOptions">{count,plural, =1{# 時間}=2{# 時間}other{# 時間}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# 分}other{# 分}}</string>
   <string name="snooze_undo">元に戻す</string>
@@ -1416,6 +1482,8 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
   <string name="speed_label_slow">遅い</string>
   <string name="speed_label_very_fast">非常に速い</string>
   <string name="split_screen_text">分割画面</string>
+  <string name="squeeze_invocation_prompt">スクイーズして話しかけてください</string>
+  <string name="standard_battery_saver_text">標準</string>
   <string name="start_dreams">スクリーン セーバー</string>
   <string name="state_empty">なし</string>
   <string name="state_off">OFF</string>
@@ -1453,6 +1521,8 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
   <string name="tab">タブ</string>
   <string name="tap_a_network_to_connect">ネットワークをタップして接続</string>
   <string name="tap_again">もう一度タップしてください</string>
+  <string name="temp_defender_notify_des">スマートフォンが正常な温度に戻ると、充電が再開されます</string>
+  <string name="temp_defender_notify_title">バッテリーを保護するため、充電を一時停止しています</string>
   <string name="template_percent">%1$dパーセント。</string>
   <string name="thermal">温度</string>
   <string name="thermal_shutdown_dialog_help_text">取り扱いに関する手順をご覧ください</string>
@@ -1469,6 +1539,7 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
   <string name="title_for_empty_state_cta">タブレットのロックを解除せずにお気に入りのアプリ ウィジェットにすばやくアクセスできます。</string>
   <string name="title_usb_accessory">USBアクセサリ</string>
   <string name="to_switch_networks_disconnect_ethernet">ネットワークを変更するにはイーサネット接続を解除してください</string>
+  <string name="too_hot_label">Pixel が過熱しています</string>
   <string name="touch_filtered_warning">アプリが許可リクエストを隠しているため、設定側でユーザーの応答を確認できません。</string>
   <string name="touchpad_tutorial_action_key_button">アクションキー</string>
   <string name="touchpad_tutorial_back_gesture_button">「戻る」ジェスチャー</string>
@@ -1483,17 +1554,18 @@ IT 管理者が、このデバイスに関連付けられている設定、コ�
   <string name="tuner_menu">メニュー</string>
   <string name="tuner_minus">マイナス</string>
   <string name="tuner_other_apps">その他のアプリ</string>
+  <string name="tuner_persistent_warning">これらの試験運用機能は今後のリリースで変更となったり、中止となったり、削除されたりする可能性がありますのでご注意ください。</string>
   <string name="tuner_plus">プラス</string>
   <string name="tuner_right">右</string>
   <string name="tuner_time">時間</string>
+  <string name="tuner_warning">システムUI調整ツールでは、Androidユーザーインターフェースの調整やカスタマイズを行えます。これらの試験運用機能は今後のリリースで変更となったり、中止となったり、削除されたりする可能性がありますのでご注意ください。</string>
+  <string name="tuner_warning_title">一部の方のみお楽しみいただける限定公開ツール</string>
   <string name="turn_off_airplane_mode">機内モードを OFF にする</string>
   <string name="turn_on_bluetooth">Bluetooth を使用</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Quick Share や「デバイスを探す」などの機能は Bluetooth を使用します</string>
   <string name="turn_on_bluetooth_auto_info_enabled">明日の朝に Bluetooth が ON になります</string>
   <string name="turn_on_bluetooth_auto_tomorrow">明日自動的に ON にする</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">テレビのデフォルト</string>
   <string name="two_weeks_timestamp">2 週間前</string>
   <string name="unknown">不明</string>
   <string name="unlock_to_see_notif_text">ロック解除して以前の通知を表示</string>
@@ -1552,7 +1624,9 @@ USB ポートを再び安全に使用できるようになりましたらお知�
   <string name="volume_odi_captions_hint_enable">有効にする</string>
   <string name="volume_odi_captions_tip">メディアの自動字幕起こし</string>
   <string name="volume_panel_captioning_title">自動字幕起こし</string>
+  <string name="volume_panel_clear_calling_title">クリア音声通話</string>
   <string name="volume_panel_collapsed_sliders">音量スライダーを閉じました</string>
+  <string name="volume_panel_device_settings_title">デバイスの設定</string>
   <string name="volume_panel_dialog_settings_button">設定</string>
   <string name="volume_panel_enter_media_output_settings">出力の設定を入力してください</string>
   <string name="volume_panel_expanded_sliders">音量スライダーを開きました</string>
@@ -1667,6 +1741,9 @@ Wi‑Fi アドレス（BSSID）
   <string name="wifitrackerlib_wifi_standard_unknown">不明</string>
   <string name="wifitrackerlib_wifi_unmetered_label">定額制</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi に自動接続しません</string>
+  <string name="wireless_charging_label">ワイヤレスで充電しています</string>
+  <string name="wireless_charging_notification_text">ワイヤレス充電は有線での充電よりも電力使用量が増えることがあります。電力と時間を節約するには、有線充電器に切り替えてみてください。</string>
+  <string name="wireless_charging_notification_title">ワイヤレス充電中</string>
   <string name="work_challenge_emergency_button_text">緊急通報</string>
   <string name="work_mode_off_title">仕事用アプリの停止解除</string>
   <string name="work_mode_turn_on">停止解除</string>

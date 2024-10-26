@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/recents/RecentTasksController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/TaskStackListenerCallback;
@@ -234,7 +234,7 @@
     const/4 v6, 0x0
 
     .line 54
-    if-ge v3, v5, :cond_6
+    if-ge v3, v5, :cond_7
 
     .line 55
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -271,7 +271,7 @@
     move-result v7
 
     .line 78
-    if-eqz v7, :cond_4
+    if-eqz v7, :cond_5
 
     .line 79
     iget-object v7, p0, Lcom/android/wm/shell/recents/RecentTasksController;->mDesktopModeTaskRepository:Ljava/util/Optional;
@@ -283,7 +283,7 @@
     move-result v7
 
     .line 86
-    if-eqz v7, :cond_4
+    if-eqz v7, :cond_5
 
     .line 87
     iget-object v7, p0, Lcom/android/wm/shell/recents/RecentTasksController;->mDesktopModeTaskRepository:Ljava/util/Optional;
@@ -301,204 +301,256 @@
     iget v8, v5, Landroid/app/ActivityManager$RecentTaskInfo;->taskId:I
 
     .line 97
-    invoke-virtual {v7, v8}, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;->isActiveTask(I)Z
+    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 99
-    move-result v7
+    new-instance v9, Landroidx/core/util/SparseArrayKt$valueIterator$1;
 
     .line 102
-    if-eqz v7, :cond_4
+    iget-object v7, v7, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;->displayData:Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$displayData$1;
 
-    .line 103
-    iget-object v6, p0, Lcom/android/wm/shell/recents/RecentTasksController;->mDesktopModeTaskRepository:Ljava/util/Optional;
+    .line 104
+    invoke-direct {v9, v7}, Landroidx/core/util/SparseArrayKt$valueIterator$1;-><init>(Landroid/util/SparseArray;)V
 
-    .line 105
-    invoke-virtual {v6}, Ljava/util/Optional;->get()Ljava/lang/Object;
+    .line 106
+    invoke-static {v9}, Lkotlin/sequences/SequencesKt;->asSequence(Ljava/util/Iterator;)Lkotlin/sequences/Sequence;
 
-    .line 107
-    move-result-object v6
+    .line 109
+    move-result-object v7
 
-    .line 110
-    check-cast v6, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;
-
-    .line 111
-    iget v7, v5, Landroid/app/ActivityManager$RecentTaskInfo;->taskId:I
+    .line 112
+    invoke-interface {v7}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     .line 113
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;->isMinimizedTask(I)Z
+    move-result-object v7
 
-    .line 115
-    move-result v6
-
-    .line 118
-    if-eqz v6, :cond_2
-
-    .line 119
-    goto :goto_2
-
-    .line 121
+    .line 116
     :cond_2
-    if-ne v4, v2, :cond_3
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 122
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    .line 124
-    move-result v4
-
-    .line 127
-    :cond_3
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 128
-    goto :goto_2
-
-    .line 131
-    :cond_4
-    iget-object v7, p0, Lcom/android/wm/shell/recents/RecentTasksController;->mSplitTasks:Landroid/util/SparseIntArray;
-
-    .line 132
-    iget v8, v5, Landroid/app/ActivityManager$RecentTaskInfo;->taskId:I
-
-    .line 134
-    const/4 v9, -0x1
-
-    .line 136
-    invoke-virtual {v7, v8, v9}, Landroid/util/SparseIntArray;->get(II)I
-
-    .line 137
-    move-result v7
-
-    .line 140
-    const/4 v8, 0x1
-
-    .line 141
-    if-eq v7, v9, :cond_5
-
-    .line 142
-    invoke-virtual {p2, v7}, Landroid/util/SparseArray;->contains(I)Z
-
-    .line 144
+    .line 117
     move-result v9
 
-    .line 147
+    .line 120
     if-eqz v9, :cond_5
 
-    .line 148
-    invoke-virtual {p2, v7}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    .line 121
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 150
+    .line 123
+    move-result-object v9
+
+    .line 126
+    check-cast v9, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$DisplayData;
+
+    .line 127
+    iget-object v9, v9, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository$DisplayData;->activeTasks:Landroid/util/ArraySet;
+
+    .line 129
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 131
+    move-result-object v10
+
+    .line 134
+    invoke-virtual {v9, v10}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
+
+    .line 135
+    move-result v9
+
+    .line 138
+    if-eqz v9, :cond_2
+
+    .line 139
+    iget-object v6, p0, Lcom/android/wm/shell/recents/RecentTasksController;->mDesktopModeTaskRepository:Ljava/util/Optional;
+
+    .line 141
+    invoke-virtual {v6}, Ljava/util/Optional;->get()Ljava/lang/Object;
+
+    .line 143
     move-result-object v6
 
-    .line 153
-    check-cast v6, Landroid/app/ActivityManager$RecentTaskInfo;
+    .line 146
+    check-cast v6, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;
+
+    .line 147
+    iget v7, v5, Landroid/app/ActivityManager$RecentTaskInfo;->taskId:I
+
+    .line 149
+    invoke-virtual {v6, v7}, Lcom/android/wm/shell/desktopmode/DesktopModeTaskRepository;->isMinimizedTask(I)Z
+
+    .line 151
+    move-result v6
 
     .line 154
-    invoke-virtual {p2, v7}, Landroid/util/SparseArray;->remove(I)V
+    if-eqz v6, :cond_3
 
-    .line 156
-    iget-object v9, p0, Lcom/android/wm/shell/recents/RecentTasksController;->mTaskSplitBoundsMap:Ljava/util/Map;
-
-    .line 159
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 161
-    move-result-object v7
-
-    .line 164
-    invoke-interface {v9, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 165
-    move-result-object v7
-
-    .line 168
-    check-cast v7, Lcom/android/wm/shell/util/SplitBounds;
-
-    .line 169
-    new-instance v9, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
-
-    .line 171
-    const/4 v10, 0x2
-
-    .line 173
-    new-array v11, v10, [Landroid/app/ActivityManager$RecentTaskInfo;
-
-    .line 174
-    aput-object v5, v11, p3
-
-    .line 176
-    aput-object v6, v11, v8
-
-    .line 178
-    invoke-direct {v9, v11, v7, v10}, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;-><init>([Landroid/app/ActivityManager$RecentTaskInfo;Lcom/android/wm/shell/util/SplitBounds;I)V
-
-    .line 180
-    invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 183
+    .line 155
     goto :goto_2
 
-    .line 186
-    :cond_5
-    new-instance v7, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
+    .line 157
+    :cond_3
+    if-ne v4, v2, :cond_4
 
-    .line 187
-    new-array v9, v8, [Landroid/app/ActivityManager$RecentTaskInfo;
+    .line 158
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    .line 160
+    move-result v4
+
+    .line 163
+    :cond_4
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 164
+    goto :goto_2
+
+    .line 167
+    :cond_5
+    iget-object v7, p0, Lcom/android/wm/shell/recents/RecentTasksController;->mSplitTasks:Landroid/util/SparseIntArray;
+
+    .line 168
+    iget v8, v5, Landroid/app/ActivityManager$RecentTaskInfo;->taskId:I
+
+    .line 170
+    const/4 v9, -0x1
+
+    .line 172
+    invoke-virtual {v7, v8, v9}, Landroid/util/SparseIntArray;->get(II)I
+
+    .line 173
+    move-result v7
+
+    .line 176
+    const/4 v8, 0x1
+
+    .line 177
+    if-eq v7, v9, :cond_6
+
+    .line 178
+    invoke-virtual {p2, v7}, Landroid/util/SparseArray;->contains(I)Z
+
+    .line 180
+    move-result v9
+
+    .line 183
+    if-eqz v9, :cond_6
+
+    .line 184
+    invoke-virtual {p2, v7}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    .line 186
+    move-result-object v6
 
     .line 189
+    check-cast v6, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    .line 190
+    invoke-virtual {p2, v7}, Landroid/util/SparseArray;->remove(I)V
+
+    .line 192
+    iget-object v9, p0, Lcom/android/wm/shell/recents/RecentTasksController;->mTaskSplitBoundsMap:Ljava/util/Map;
+
+    .line 195
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 197
+    move-result-object v7
+
+    .line 200
+    invoke-interface {v9, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 201
+    move-result-object v7
+
+    .line 204
+    check-cast v7, Lcom/android/wm/shell/util/SplitBounds;
+
+    .line 205
+    new-instance v9, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
+
+    .line 207
+    const/4 v10, 0x2
+
+    .line 209
+    new-array v11, v10, [Landroid/app/ActivityManager$RecentTaskInfo;
+
+    .line 210
+    aput-object v5, v11, p3
+
+    .line 212
+    aput-object v6, v11, v8
+
+    .line 214
+    invoke-direct {v9, v11, v7, v10}, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;-><init>([Landroid/app/ActivityManager$RecentTaskInfo;Lcom/android/wm/shell/util/SplitBounds;I)V
+
+    .line 216
+    invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 219
+    goto :goto_2
+
+    .line 222
+    :cond_6
+    new-instance v7, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
+
+    .line 223
+    new-array v9, v8, [Landroid/app/ActivityManager$RecentTaskInfo;
+
+    .line 225
     aput-object v5, v9, p3
 
-    .line 191
+    .line 227
     invoke-direct {v7, v9, v6, v8}, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;-><init>([Landroid/app/ActivityManager$RecentTaskInfo;Lcom/android/wm/shell/util/SplitBounds;I)V
 
-    .line 193
+    .line 229
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 196
+    .line 232
     :goto_2
     add-int/lit8 v3, v3, 0x1
 
-    .line 199
+    .line 235
     goto/16 :goto_1
 
-    .line 201
-    :cond_6
+    .line 237
+    :cond_7
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    .line 203
+    .line 239
     move-result p0
 
-    .line 206
-    if-nez p0, :cond_7
+    .line 242
+    if-nez p0, :cond_8
 
-    .line 207
+    .line 243
     new-array p0, p3, [Landroid/app/ActivityManager$RecentTaskInfo;
 
-    .line 209
+    .line 245
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 211
+    .line 247
     move-result-object p0
 
-    .line 214
+    .line 250
     check-cast p0, [Landroid/app/ActivityManager$RecentTaskInfo;
 
-    .line 215
+    .line 251
     new-instance p1, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;
 
-    .line 217
+    .line 253
     const/4 p2, 0x3
 
-    .line 219
+    .line 255
     invoke-direct {p1, p0, v6, p2}, Lcom/android/wm/shell/util/GroupedRecentTaskInfo;-><init>([Landroid/app/ActivityManager$RecentTaskInfo;Lcom/android/wm/shell/util/SplitBounds;I)V
 
-    .line 220
+    .line 256
     invoke-virtual {v1, v4, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 223
-    :cond_7
+    .line 259
+    :cond_8
     return-object v1
-    .line 226
+    .line 262
 .end method
 
 .method public final getRemoteCallExecutor()Lcom/android/wm/shell/common/ShellExecutor;
@@ -541,7 +593,7 @@
     .locals 7
 
     .line 1
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENT_TASKS_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENT_TASKS_enabled:[Z
 
     .line 2
     const/4 v1, 0x1
@@ -568,7 +620,7 @@
     const/4 v4, 0x0
 
     .line 18
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 19
     :cond_0
@@ -700,7 +752,7 @@
     invoke-virtual {p0}, Lcom/android/wm/shell/recents/RecentTasksController;->notifyRecentTasksChanged()V
 
     .line 39
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_RECENT_TASKS_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_RECENT_TASKS_enabled:[Z
 
     .line 42
     const/4 v1, 0x1
@@ -748,7 +800,7 @@
     const/4 v6, 0x0
 
     .line 71
-    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 72
     :cond_0
@@ -781,30 +833,20 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->enableDesktopWindowingTaskbarRunningApps()Z
 
     .line 14
-    move-result p0
-
-    .line 17
-    if-eqz p0, :cond_0
-
-    .line 18
-    goto :goto_0
-
-    .line 20
     :cond_0
     const/4 p0, 0x0
 
-    .line 21
-    goto :goto_1
+    .line 17
+    goto :goto_0
 
-    .line 22
+    .line 18
     :cond_1
-    :goto_0
     const/4 p0, 0x1
 
-    .line 23
-    :goto_1
+    .line 19
+    :goto_0
     return p0
-    .line 24
+    .line 20
 .end method
 
 .method public unregisterRecentTasksListener()V

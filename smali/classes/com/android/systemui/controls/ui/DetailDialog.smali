@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/ui/DetailDialog;
 .super Landroid/app/Dialog;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -30,7 +30,7 @@
     .locals 1
 
     .line 1
-    const v0, 0x7f1504c2    # @style/Theme.SystemUI.Dialog.Control.DetailPanel
+    const v0, 0x7f1404ca    # @style/Theme.SystemUI.Dialog.Control.DetailPanel
 
     .line 2
     invoke-direct {p0, p1, v0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
@@ -60,7 +60,7 @@
     move-result-object p1
 
     .line 23
-    const p2, 0x7f0701f8    # @dimen/controls_task_view_width_percentage '1.0'
+    const p2, 0x7f070219    # @dimen/controls_task_view_width_percentage '1.0'
 
     .line 24
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getFloat(I)F
@@ -140,13 +140,13 @@
 
     .line 80
     :cond_1
-    const p2, 0x7f0e0081    # @layout/controls_detail_dialog 'res/layout/controls_detail_dialog.xml'
+    const p2, 0x7f0d0089    # @layout/controls_detail_dialog 'res/layout/controls_detail_dialog.xml'
 
     .line 83
     invoke-virtual {p0, p2}, Landroid/app/Dialog;->setContentView(I)V
 
     .line 86
-    const p2, 0x7f0b020c    # @id/control_task_view_container
+    const p2, 0x7f0a0217    # @id/control_task_view_container
 
     .line 89
     invoke-virtual {p0, p2}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;
@@ -158,7 +158,7 @@
     iput-object p2, p0, Lcom/android/systemui/controls/ui/DetailDialog;->taskViewContainer:Landroid/view/View;
 
     .line 96
-    const p2, 0x7f0b020b    # @id/control_detail_root
+    const p2, 0x7f0a0216    # @id/control_detail_root
 
     .line 98
     invoke-virtual {p0, p2}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;
@@ -179,7 +179,7 @@
     invoke-virtual {p2, p6}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 111
-    const p2, 0x7f0b020e    # @id/controls_activity_view
+    const p2, 0x7f0a0219    # @id/controls_activity_view
 
     .line 114
     invoke-virtual {p0, p2}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;
@@ -200,7 +200,7 @@
     invoke-virtual {p2, p6}, Landroid/view/ViewGroup;->setAlpha(F)V
 
     .line 127
-    const p2, 0x7f0b0209    # @id/control_detail_close
+    const p2, 0x7f0a0214    # @id/control_detail_close
 
     .line 130
     invoke-virtual {p0, p2}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;
@@ -221,7 +221,7 @@
     invoke-virtual {p2, p6}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 144
-    const p2, 0x7f0b020a    # @id/control_detail_open_in_app
+    const p2, 0x7f0a0215    # @id/control_detail_open_in_app
 
     .line 147
     invoke-virtual {p0, p2}, Landroid/app/Dialog;->requireViewById(I)Landroid/view/View;
@@ -299,7 +299,7 @@
     move-result-object p0
 
     .line 201
-    const p2, 0x7f0701cf    # @dimen/controls_activity_view_corner_radius '@android:dimen/config_highResTaskSnapshotScale'
+    const p2, 0x7f0701f0    # @dimen/controls_activity_view_corner_radius '@android:dimen/config_highResTaskSnapshotScale'
 
     .line 202
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

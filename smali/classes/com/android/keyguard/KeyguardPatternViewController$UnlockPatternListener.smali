@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardPatternViewController$UnlockPatternListener;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/internal/widget/LockPatternView$OnPatternListener;
@@ -214,7 +214,7 @@
     iget-object p1, p1, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
 
     .line 99
-    const p2, 0x7f140513    # @string/kg_wrong_pattern 'Wrong pattern'
+    const p2, 0x7f130569    # @string/kg_wrong_pattern 'Wrong pattern'
 
     .line 101
     invoke-virtual {p1, p2}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(I)V
@@ -490,12 +490,15 @@
     iget-object p0, p0, Lcom/android/keyguard/KeyguardInputViewController;->mMessageAreaController:Lcom/android/keyguard/KeyguardMessageAreaController;
 
     .line 13
-    const-string v0, ""
+    const/4 v0, 0x1
 
     .line 15
-    invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;)V
+    const-string v1, ""
 
-    .line 17
+    .line 16
+    invoke-virtual {p0, v1, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
+
+    .line 18
     return-void
-    .line 20
+    .line 21
 .end method

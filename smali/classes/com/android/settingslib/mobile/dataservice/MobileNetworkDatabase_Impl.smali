@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/mobile/dataservice/MobileNetworkDatabase_Impl;
 .super Lcom/android/settingslib/mobile/dataservice/MobileNetworkDatabase;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -45,20 +45,20 @@
     const-string v4, "MobileNetworkInfo"
 
     .line 18
-    const-string v5, "subscriptionInfo"
+    const-string/jumbo v5, "subscriptionInfo"
 
     .line 20
     filled-new-array {v5, v3, v4}, [Ljava/lang/String;
 
-    .line 22
+    .line 23
     move-result-object v3
 
-    .line 25
+    .line 26
     invoke-direct {v1, p0, v0, v2, v3}, Landroidx/room/InvalidationTracker;-><init>(Landroidx/room/RoomDatabase;Ljava/util/Map;Ljava/util/Map;[Ljava/lang/String;)V
 
-    .line 26
+    .line 27
     return-object v1
-    .line 29
+    .line 30
 .end method
 
 .method public final createOpenDelegate()Landroidx/room/RoomOpenDelegate;

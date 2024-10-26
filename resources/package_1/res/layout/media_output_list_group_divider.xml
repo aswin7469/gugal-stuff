@@ -10,7 +10,7 @@
             android:layout_width="wrap_content"
             android:layout_height="36.0dp"
             android:maxLines="1"
-            android:fontFamily="@android:string/config_networkOverLimitComponent"
+            android:fontFamily="@android:string/config_misprovisionedBrandValue"
             android:layout_marginStart="16.0dp"
             android:layout_marginEnd="56.0dp" />
 </LinearLayout>

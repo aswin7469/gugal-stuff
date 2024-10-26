@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">koma valinni græju fyrir</string>
   <string name="accessibility_action_label_remove_widget">fjarlægja græju</string>
   <string name="accessibility_action_label_select_widget">velja græju</string>
-  <string name="accessibility_action_open_communal_hub">Græjur á lásskjá</string>
   <string name="accessibility_action_pip_resize">Breyta stærð</string>
   <string name="accessibility_action_pip_stash">Geymsla</string>
   <string name="accessibility_action_pip_unstash">Taka úr geymslu</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Hætta í einhentri stillingu</string>
   <string name="accessibility_airplane_mode">Flugstilling</string>
   <string name="accessibility_allow_diagonal_scrolling">Leyfa skáflettingu</string>
+  <string name="accessibility_assistant_poodle">Raddleit</string>
   <string name="accessibility_authenticate_hint">auðkenna</string>
   <string name="accessibility_back">Til baka</string>
   <string name="accessibility_banner_message_dismiss">Hunsa</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">opna tæki</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Ethernet aftengt.</string>
-  <string name="accessibility_fingerprint_bouncer">Auðkenningar krafist. Auðkenndu með því að snerta fingrafaralesarann.</string>
   <string name="accessibility_fingerprint_label">Fingrafaralesari</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">kveikja/slökkva</string>
   <string name="accessibility_floating_button_action_edit">Breyta</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Valmynd</string>
   <string name="accessibility_multi_user_list_switcher">Fellivalmynd</string>
   <string name="accessibility_multi_user_switch_switcher">Skipta um notanda</string>
+  <string name="accessibility_next_alarm">Næsti vekjari kl. %s</string>
   <string name="accessibility_no_calling">Engin símtöl.</string>
   <string name="accessibility_no_phone">Ekkert símasamband.</string>
   <string name="accessibility_no_wifi">Wi-Fi ótengt.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Skjárinn er læstur í skammsniði.</string>
   <string name="accessibility_send_smart_reply">Senda</string>
   <string name="accessibility_sensors_off_active">Slökkt á skynjurum valið</string>
+  <string name="accessibility_settings_gear">Stillingar Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Snertu fingrafaralesarann. Það er styttri hnappurinn á hlið símans</string>
+  <string name="accessibility_smartspace_page">Síða %1$d af %2$d</string>
   <string name="accessibility_split_bottom">Skipta neðst</string>
   <string name="accessibility_split_left">Skipta vinstra megin</string>
   <string name="accessibility_split_right">Skipta hægra megin</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi: Þrjú strik.</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi: Tvö strik.</string>
   <string name="accesssibility_keyguard_retry">Strjúktu upp til að prófa andlitskenni aftur</string>
+  <string name="adaptive_charging_notify_des">Rafhlaða fullhlaðin kl. %1$s. Hleður jafnt og þétt til að lengja endingartíma rafhlöðu.</string>
+  <string name="adaptive_charging_notify_title">Kveikt er á aðlagaðri hleðslu</string>
+  <string name="adaptive_charging_notify_turn_off_once">Slökkva einu sinni</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Aðlöguð hleðsla • Full hleðsla kl. %2$s</string>
   <string name="add">Bæta við</string>
   <string name="add_guest_failed">Ekki tókst að búa til nýjan gest</string>
   <string name="airplane_mode">Flugstilling</string>
-  <string name="alarm_template">%1$s</string>
-  <string name="alarm_template_far">%1$s</string>
+  <string name="alarm_template">á/í %1$s</string>
+  <string name="alarm_template_far">á/í %1$s</string>
   <string name="all_network_unavailable">Ekkert net í boði</string>
   <string name="always_use_accessory">Opna alltaf %1$s þegar %2$s er tengt</string>
   <string name="always_use_device">Opna alltaf %1$s þegar %2$s er tengt</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Forritsupplýsingar</string>
   <string name="app_label">Kerfisviðmót</string>
   <string name="assistant_attention_content_description">Viðvera notanda greindist</string>
+  <string name="assistant_scrim_label">Hlustar, ýttu til að hætta við</string>
   <string name="audio_sharing_description">Deilir hljóði</string>
   <string name="audio_status">Hlustar</string>
   <string name="auto_data_switch_dialog_negative_button">Nei takk</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Til baka</string>
   <string name="battery">Rafhlaða</string>
   <string name="battery_detail_switch_title">Rafhlöðusparnaður</string>
-  <string name="battery_low_description">%s rafhlöðuhleðsla eftir. Rafhlöðusparnaður kveikir á dökku þema, dregur úr bakgrunnsvirkni og seinkar tilkynningum.</string>
+  <string name="battery_health_notify_learn_more">Nánar</string>
   <string name="battery_low_intro">Rafhlöðusparnaður kveikir á dökku þema, dregur úr bakgrunnsvirkni og seinkar tilkynningum.</string>
-  <string name="battery_low_title">Kveikja á rafhlöðusparnaði?</string>
   <string name="battery_saver_confirmation_ok">Kveikja</string>
   <string name="battery_saver_confirmation_title">Kveikja á rafhlöðusparnaði?</string>
   <string name="battery_saver_confirmation_title_generic">Um rafhlöðusparnað</string>
-  <string name="battery_saver_dismiss_action">Nei, takk</string>
   <string name="battery_saver_start_action">Kveikja</string>
   <string name="battery_state_unknown_notification_text">Ýttu til að fá frekari upplýsingar</string>
   <string name="battery_state_unknown_notification_title">Vandamál við að lesa stöðu rafhlöðu</string>
@@ -296,14 +301,9 @@ Reyndu aftur eftir %d sekúndur.</string>
   <string name="bluetooth_active_battery_level_untethered">Virkt. V: %1$s, H: %2$s rafhlöðuhleðsla.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Kveikt. V: %1$s hleðsla.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Kveikt. H: %1$s hleðsla.</string>
-  <string name="bluetooth_active_media_only_battery_level">Virkt (eingöngu margmiðlunarefni). %1$s rafhlöðuhleðsla.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Virkt (eingöngu margmiðlunarefni), V: %1$s, H: %2$s rafhlöðuhleðsla.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Virkt (eingöngu margmiðlunarefni)</string>
   <string name="bluetooth_active_no_battery_level">Virkt</string>
   <string name="bluetooth_battery_level">%1$s rafhlöðuhleðsla</string>
-  <string name="bluetooth_battery_level_lea_support">Tengt (styður hljóðdeilingu), %1$s rafhlöðuhleðsla.</string>
   <string name="bluetooth_battery_level_untethered">V: %1$s, H: %2$s rafhlöðuhleðsla.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Tengt (styður hljóðdeilingu), V: %1$s, H: %2$s rafhlöðuhleðsla.</string>
   <string name="bluetooth_connected">Tengt við %1$s</string>
   <string name="bluetooth_connecting">Tengist…</string>
   <string name="bluetooth_disconnected">Aftengt</string>
@@ -311,13 +311,11 @@ Reyndu aftur eftir %d sekúndur.</string>
   <string name="bluetooth_hearing_aid_left_active">Kveikt (eingöngu vinstra)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Kveikt (vinstra og hægra)</string>
   <string name="bluetooth_hearing_aid_right_active">Kveikt (eingöngu hægra)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Tengt (styður hljóðdeilingu)</string>
   <string name="bluetooth_pairing">Parar…</string>
   <string name="bluetooth_pairing_device_down_error_message">Ekki er hægt að eiga samskipti við %1$s.</string>
   <string name="bluetooth_pairing_error_message">Ekki var hægt að para við %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Ekki tókst að para við %1$s þar sem PIN-númer eða aðgangslykill er rangur.</string>
   <string name="bluetooth_pairing_rejected_error_message">%1$s hafnaði pörun.</string>
-  <string name="bluetooth_saved_device_lea_support">Styður hljóðdeilingu</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Tölva</string>
   <string name="bluetooth_talkback_headphone">Heyrnartól</string>
@@ -356,8 +354,6 @@ Reyndu aftur eftir %d sekúndur.</string>
   <string name="bubble_overflow_button_content_description">Yfirflæði</string>
   <string name="bubble_overflow_empty_subtitle">Nýlegar blöðrur og blöðrur sem þú hefur lokað birtast hér</string>
   <string name="bubble_overflow_empty_title">Engar nýlegar blöðrur</string>
-  <string name="bubble_shortcut_label">Blöðrur</string>
-  <string name="bubble_shortcut_long_label">Sýna blöðrur</string>
   <string name="bubbles_app_settings">Stillingar %1$s</string>
   <string name="bubbles_dont_bubble_conversation">Ekki setja samtal í blöðru</string>
   <string name="bubbles_settings_button_description">Stillingar fyrir blöðrur frá %1$s</string>
@@ -387,6 +383,10 @@ Reyndu aftur eftir %d sekúndur.</string>
   <string name="cast_to_other_device_stop_dialog_button">Hætta að varpa</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Þú munt hætta vörpun úr &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">Slökkt á farsímagögnum</string>
+  <string name="charge_limit_discovery_notification_enable_button">Kveikja núna</string>
+  <string name="charge_limit_discovery_notification_text">Prófaðu að kveikja á 80% takmörkunarvirkni til að verja ástand og líftíma rafhlöðunnar. Þú getur stjórnað þessu í stillingum hvenær sem er</string>
+  <string name="charge_limit_discovery_notification_title">Verndaðu rafhlöðuna þína meðan þú hleður</string>
+  <string name="charging_reverse_text">Deiling rafhlöðu</string>
   <string name="clear_all_notifications_text">Hreinsa allt</string>
   <string name="clipboard">Klippiborð</string>
   <string name="clipboard_content_copied">Efni afritað</string>
@@ -406,6 +406,11 @@ Reyndu aftur eftir %d sekúndur.</string>
   <string name="close_button_text">Loka</string>
   <string name="close_dialog_button">Loka</string>
   <string name="collapse_menu_text">Loka valmynd</string>
+  <string name="columbus_bouncer_message">Taktu úr lás til að ljúka við að pikka</string>
+  <string name="columbus_target_request_dialog_allow">Leyfa</string>
+  <string name="columbus_target_request_dialog_deny">Ekki leyfa</string>
+  <string name="columbus_target_request_dialog_summary">Ýttu tvisvar á bakhlið símans til að opna %1$s. Þú getur breytt þessu hvenær sem er í stillingunum.</string>
+  <string name="columbus_target_request_dialog_title">Leyfa pikki að opna %1$s?</string>
   <string name="communal_tutorial_indicator_text">Strjúktu til vinstri til að hefja samfélagsleiðsögnina</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Innri skjárinn þinn verður speglaður. Slökkt verður á framskjánum þínum.</string>
   <string name="connected_display_dialog_start_mirroring">Spegla yfir á ytri skjá?</string>
@@ -511,8 +516,11 @@ Ef þú heldur áfram gætu gjöld verið innheimt fyrir gagnanotkun.</string>
   <string name="data_usage_disabled_dialog_mobile_title">Hlé gert á farsímagögnum</string>
   <string name="data_usage_disabled_dialog_title">Slökkt er á gagnanotkun</string>
   <string name="days_timestamp">Fyrir %1$s dögum</string>
-  <string name="default_error_message">Ógildur innsláttur</string>
   <string name="default_popup_window_title">Sprettigluggi</string>
+  <string name="defender_notify_resume_charge">Hnekkja</string>
+  <string name="defender_notify_title">Verndar rafhlöðuna þína</string>
+  <string name="defender_post_notify_des">Hleðsla var fínstillt frá %1$s til %2$s til að hjálpa til við að lengja endingartíma rafhlöðunnar</string>
+  <string name="defender_post_notify_title">Hleðsla var fínstillt</string>
   <string name="demo_mode">Prufustilling kerfisviðmóts</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Stækka skjá</string>
   <string name="desktop_mode_maximize_menu_snap_text">Smelluskjár</string>
@@ -532,20 +540,32 @@ Ef þú heldur áfram gætu gjöld verið innheimt fyrir gagnanotkun.</string>
   <string name="do_disclosure_generic">Þetta tæki tilheyrir fyrirtækinu þínu</string>
   <string name="do_disclosure_with_name">Þetta tæki tilheyrir %s</string>
   <string name="do_financed_disclosure_with_name">Þetta tæki er frá %s</string>
+  <string name="dock_a11y_action_show_photo_text">Sýna myndaramma</string>
+  <string name="dock_alignment_not_charging">Færðu símann til að hlaða þráðlaust</string>
+  <string name="dock_alignment_slow_charging">Færðu símann til að fá hraðari hleðslu</string>
+  <string name="dock_defender_first_run_des">Þegar spjaldtölvan er tengd við dokku og hefur náð 90% hleðslu verður gert hlé á hleðslunni til að lengja endingartíma rafhlöðunnar. Þú getur hnekkt þessu hvenær sem er í stillingunum.</string>
+  <string name="dock_defender_first_run_settings">Stillingar</string>
+  <string name="dock_defender_first_run_title">Hleðsla í bið til að vernda rafhlöðuna</string>
   <string name="dock_multi_instances_not_supported_text">Aðeins er hægt að opna þetta forrit í 1 glugga</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Forritið styður ekki skjáskiptingu</string>
+  <string name="dock_photo_preview_text">Myndarammi ræsist...</string>
+  <string name="dock_promo_text">Strjúktu til vinstri til að fá myndaramma</string>
   <string name="done">Lokið</string>
   <string name="drag_split_not_supported">Þessi tilkynning styður ekki að draga yfir á skiptan skjá.</string>
   <string name="drag_to_add_tiles">Haltu inni og dragðu til að bæta við flísum</string>
   <string name="drag_to_rearrange_tiles">Haltu og dragðu til að endurraða flísum</string>
   <string name="drag_to_remove_disabled">Flísarnar mega ekki vera færri en %1$d</string>
   <string name="drag_to_remove_tiles">Dragðu hingað til að fjarlægja</string>
+  <string name="dream_lockscreen_wallpaper_description">Nota núverandi veggfóður lásskjás</string>
+  <string name="dream_lockscreen_wallpaper_label">Veggfóður</string>
   <string name="dream_overlay_status_bar_alarm_set">Vekjari stilltur</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Slökkt á myndavél og hljóðnema</string>
   <string name="dream_overlay_status_bar_camera_off">Slökkt er á myndavél</string>
   <string name="dream_overlay_status_bar_mic_off">Slökkt er á hljóðnema</string>
   <string name="dream_overlay_status_bar_priority_mode">Forgangsstilling</string>
   <string name="dream_overlay_status_bar_wifi_off">WiFi ekki tiltækt</string>
+  <string name="dwell_defender_notify_des">Þetta hjálpar til við að lengja endingartíma rafhlöðunnar þegar síminn er skilinn eftir í hleðslu of lengi</string>
+  <string name="dwell_defender_notify_title">Hleðsla í bið til að vernda rafhlöðuna</string>
   <string name="edit_user_info_message">Allir sem nota þetta tæki geta séð nafnið og myndina sem þú velur.</string>
   <string name="edit_widget">Breyta græju</string>
   <string name="empty_shade_text">Engar tilkynningar</string>
@@ -561,12 +581,16 @@ Ef þú heldur áfram gætu gjöld verið innheimt fyrir gagnanotkun.</string>
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Ítarlegt</string>
   <string name="expand_menu_text">Opna valmynd</string>
+  <string name="extreme_battery_saver_text">Mikill</string>
+  <string name="extreme_low_battery_notification_text">Ef síminn er ekki hlaðinn fljótlega mun slokkna á honum</string>
+  <string name="extreme_low_battery_notification_title">Mjög lítil hleðsla</string>
   <string name="face_re_enroll_dialog_content">Núverandi andlitslíkani verður eytt til að setja andlitskenni upp á ný.
 
 Þú þarft að setja þennan eiginleika upp aftur til að nota andlitið til að taka símann úr lás.</string>
   <string name="face_re_enroll_dialog_title">Setja upp andlitskenni</string>
   <string name="face_re_enroll_notification_name">Andlitskenni</string>
   <string name="face_re_enroll_notification_title">Setja upp andlitskenni aftur</string>
+  <string name="face_reenroll_dialog_confirm">Setja upp</string>
   <string name="face_reenroll_failure_dialog_content">Ekki var hægt að setja upp andlitskenni. Farðu í stillingar og reyndu aftur.</string>
   <string name="failed_attempts_now_wiping_device">Of margar rangar tilraunir. Gögnum tækisins verður eytt.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Hunsa</string>
@@ -604,6 +628,7 @@ Ef þú heldur áfram gætu gjöld verið innheimt fyrir gagnanotkun.</string>
   <string name="font_scaling_smaller">Minnka</string>
   <string name="fullscreen_text">Allur skjárinn</string>
   <string name="game_status">Spilar</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Slökkt á Lengri opnun</string>
   <string name="go_to_web">Opna vafra</string>
   <string name="got_it">Ég skil</string>
@@ -640,6 +665,7 @@ Ef þú heldur áfram gætu gjöld verið innheimt fyrir gagnanotkun.</string>
   <string name="guest_reset_and_restart_dialog_title">Endurstilla gestalotu?</string>
   <string name="guest_reset_guest_confirm_button">Endurstilla</string>
   <string name="guest_resetting">Endurstillir gest…</string>
+  <string name="handle_invocation_prompt">Strjúktu til að tala</string>
   <string name="handle_text">Handfang</string>
   <string name="headset">Höfuðtól</string>
   <string name="hearing_devices_preset_label">Forstilling</string>
@@ -656,6 +682,7 @@ Ef þú heldur áfram gætu gjöld verið innheimt fyrir gagnanotkun.</string>
   <string name="high_temp_title">Síminn er að hitna</string>
   <string name="home_controls_dream_description">Fáðu skjótan aðgang að heimastýringum sem skjávara</string>
   <string name="home_controls_dream_label">Heimastýringar</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Að minnsta kosti eitt tæki eða tækjasvæði tiltækt</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Til að bæta Home-forritinu við sem flýtileið skaltu ganga úr skugga um að forritið sé uppsett</string>
   <string name="hub_mode_add_widget_button_text">Bæta græju við</string>
@@ -669,12 +696,16 @@ Ef þú heldur áfram gætu gjöld verið innheimt fyrir gagnanotkun.</string>
   <string name="in_progress">Í vinnslu</string>
   <string name="inattentive_sleep_warning_message">Tækið slekkur á sér fljótlega. Ýttu á takka til að það slokkni ekki á því.</string>
   <string name="inattentive_sleep_warning_title">Biðstaða</string>
+  <string name="incompatible_charging_learn_more">Nánar</string>
+  <string name="incompatible_charging_notify_des">Síminn þinn hleðst hugsanlega hægt eða hleðst ekki. Notaðu straumbreyti og snúru sem mælt er með til að hlaða hraðar.</string>
+  <string name="incompatible_charging_notify_title">Athugaðu hleðslubúnaðinn</string>
   <string name="indeterminate">Hakað við að hluta til</string>
   <string name="inline_done_button">Lokið</string>
   <string name="inline_ok_button">Nota</string>
   <string name="inline_turn_off_notifications">Slökkva á tilkynningum</string>
   <string name="input_switch_input_language_next">Skipta yfir í næsta tungumál</string>
   <string name="input_switch_input_language_previous">Skipta yfir í fyrra tungumál</string>
+  <string name="install_app">Setja upp forrit</string>
   <string name="install_dialer_on_work_profile_action">Setja upp símaforrit fyrir vinnu</string>
   <string name="install_type_instant">Skyndiforrit</string>
   <string name="instant_apps">Skyndiforrit</string>
@@ -683,8 +714,6 @@ Ef þú heldur áfram gætu gjöld verið innheimt fyrir gagnanotkun.</string>
   <string name="instant_apps_title">%1$s er í gangi</string>
   <string name="interruption_level_none">Algjör þögn</string>
   <string name="interruption_level_priority">Aðeins forgangur</string>
-  <string name="invalid_charger_text">Notaðu hleðslutækið sem fylgdi tækinu þínu</string>
-  <string name="invalid_charger_title">Ekki er hægt að hlaða í gegnum USB</string>
   <string name="issuerecord_background_processing_label">Vinnur úr upptöku af vandamáli</string>
   <string name="issuerecord_ongoing_screen_only">Tekur upp vandamál</string>
   <string name="issuerecord_save_title">Upptaka af vandamáli var vistuð</string>
@@ -766,21 +795,33 @@ Ef þú heldur áfram gætu gjöld verið innheimt fyrir gagnanotkun.</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Tæki læst
 Auðkenning mistókst</string>
   <string name="keyguard_indication_charging_time">%2$s • Í hleðslu • Full hleðsla eftir %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Hleðslu lýkur kl. %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Í hleðslu • Full hleðsla eftir %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Full hleðsla kl. %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Hraðhleðsla • Full hleðsla eftir %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Hraðhleðsla • Full hleðsla kl. %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Hleðslu lokið</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Hæg hleðsla • Full hleðsla eftir %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Full hleðsla kl. %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Full hleðsla kl. %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Þráðlaus hleðsla • Full hleðsla eftir %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Haldið opnu af TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Full hleðsla kl. %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Haldið opnu með Lengri opnun</string>
   <string name="keyguard_missing_sim_message_short">Ekkert SIM-kort</string>
   <string name="keyguard_network_locked_message">Net læst</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Ónothæft SIM-kort.</string>
   <string name="keyguard_plugged_in">%s • Í hleðslu</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Hröð hleðsla</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Hraðhleðsla</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Hleðsla í bið til að vernda rafhlöðuna</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Hæg hleðsla</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Í hleðslu</string>
   <string name="keyguard_plugged_in_dock">%s • Í hleðslu</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Í hleðslu</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Athugaðu hleðslubúnaðinn</string>
+  <string name="keyguard_plugged_in_v2">%s • Í hleðslu</string>
   <string name="keyguard_plugged_in_wireless">%s • Í þráðlausri hleðslu</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Í hleðslu</string>
   <string name="keyguard_retry">Strjúktu upp til að reyna aftur</string>
   <string name="keyguard_sim_error_message_short">Ógilt kort.</string>
   <string name="keyguard_sim_locked_message">SIM-kort er læst.</string>
@@ -811,7 +852,6 @@ Auðkenning mistókst</string>
   <string name="kg_invalid_confirm_pin_hint">PIN-númerin stemma ekki</string>
   <string name="kg_invalid_sim_pin_hint">Sláðu in PIN-númer sem er 4 til 8 tölustafir.</string>
   <string name="kg_invalid_sim_puk_hint">PUK-númerið verður að vera 8 tölustafir eða lengra.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Sláðu inn PIN-númer SIM-korts. Þú átt # tilraun eftir áður en þú þarft að hafa samband við símafyrirtækið þitt til að taka tækið úr lás.}one{Sláðu inn PIN-númer SIM-kortsins. Þú átt # tilraun eftir.}other{Sláðu inn PIN-númer SIM-kortsins. Þú átt # tilraunir eftir.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM-kortið er nú óvirkt. Sláðu inn PUK-númer til að halda áfram. Þú átt # tilraun eftir þar til SIM-kortið verður ónothæft til frambúðar. Hafðu samband við símafyrirtækið til að fá upplýsingar.}one{SIM-kortið er nú óvirkt. Sláðu inn PUK-númer til að halda áfram. Þú átt # tilraun eftir þar til SIM-kortið verður ónothæft til frambúðar. Hafðu samband við símafyrirtækið til að fá upplýsingar.}other{SIM-kortið er nú óvirkt. Sláðu inn PUK-númer til að halda áfram. Þú átt # tilraunir eftir þar til SIM-kortið verður ónothæft til frambúðar. Hafðu samband við símafyrirtækið til að fá upplýsingar.}}</string>
   <string name="kg_password_pin_failed">PIN-aðgerð SIM-korts mistókst!</string>
   <string name="kg_password_puk_failed">PUK-aðgerð SIM-korts mistókst!</string>
@@ -852,7 +892,7 @@ Auðkenning mistókst</string>
   <string name="kg_sim_pin_instructions_multi">Sláðu inn PIN-númer SIM-korts fyrir „%1$s“.</string>
   <string name="kg_sim_unlock_progress_dialog_message">Opnar SIM-kort…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Reyndu aftur eftir # sekúndu.}one{Reyndu aftur eftir # sekúndu.}other{Reyndu aftur eftir # sekúndur.}}</string>
-  <string name="kg_trust_agent_disabled">Traustfulltrúi er ekki tiltækur</string>
+  <string name="kg_trust_agent_disabled">Lengri opnun er ekki í boði</string>
   <string name="kg_unlock_with_password_or_fp">Opnaðu með aðgangsorði eða fingrafari</string>
   <string name="kg_unlock_with_pattern_or_fp">Opnaðu með mynstri eða fingrafari</string>
   <string name="kg_unlock_with_pin_or_fp">Opnaðu með PIN-númeri eða fingrafari</string>
@@ -900,6 +940,10 @@ Ef þú veitir þessu forriti ekki aðgang að öllum annálum tækisins hefur �
   <string name="log_access_confirmation_learn_more">Nánar</string>
   <string name="log_access_confirmation_learn_more_at">Nánar á %s</string>
   <string name="log_access_confirmation_title">Veita „%s“ aðgang að öllum annálum í tækinu?</string>
+  <string name="low_battery_label">Rafhlaða að tæmast</string>
+  <string name="low_battery_notification_text">Kveiktu á stöðluðum rafhlöðusparnaði til að auka endingu rafhlöðunnar</string>
+  <string name="low_battery_notification_text_ebs">Kveiktu á ofurrafhlöðusparnaði til að auka endingu rafhlöðunnar</string>
+  <string name="low_battery_notification_title">%s rafhleðsla eftir</string>
   <string name="m3c_search_bar_search">Leit</string>
   <string name="m3c_suggestions_available">Tillögur hér fyrir neðan</string>
   <string name="magnification_close_settings_click_label">Loka stillingum stækkunar</string>
@@ -939,8 +983,6 @@ Ef þú veitir þessu forriti ekki aðgang að öllum annálum tækisins hefur �
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Stöðva</string>
   <string name="media_output_end_session_dialog_summary">Stöðvaðu sameiginlega lotu til að flytja efni yfir í annað tæki</string>
-  <string name="media_output_first_broadcast_title">Svona virkar útsending</string>
-  <string name="media_output_first_notify_broadcast_message">Fólk nálægt þér með samhæf Bluetooth-tæki getur hlustað á efnið sem þú sendir út</string>
   <string name="media_output_group_title_speakers_and_displays">Hátalarar og skjáir</string>
   <string name="media_output_group_title_suggested_device">Tillögur að tækjum</string>
   <string name="media_output_label_title">Í spilun í %s</string>
@@ -967,9 +1009,6 @@ Ef þú veitir þessu forriti ekki aðgang að öllum annálum tækisins hefur �
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Þegar þú varpar forriti hefur Android aðgang að öllu sem sést eða spilast í viðkomandi forriti. Passaðu því upp á aðgangsorð, greiðsluupplýsingar, skilaboð, myndir, hljóð og myndskeið.</string>
   <string name="media_projection_sys_service_dialog_title">Viltu hefja upptöku eða vörpun?</string>
   <string name="media_projection_sys_service_dialog_warning">Þjónustan sem býður upp á þennan eiginleika fær aðgang að öllum upplýsingum sem sjást á skjánum eða eru spilaðar í tækinu á meðan upptaka eða vörpun er í gangi, þar á meðal aðgangsorði, greiðsluupplýsingum, myndum, skilaboðum og hljóðefni sem þú spilar.</string>
-  <string name="media_projection_task_switcher_action_back">Skipta til baka</string>
-  <string name="media_projection_task_switcher_action_switch">Deila frekar þessu forriti</string>
-  <string name="media_projection_task_switcher_text">Hlé er gert á samnýtingu þegar þú skiptir um forrit</string>
   <string name="media_seamless_other_device">Annað tæki</string>
   <string name="media_transfer_default_device_name">Tengt tæki</string>
   <string name="media_transfer_dock_speaker_device_name">Hátalaradokka</string>
@@ -1280,12 +1319,17 @@ Ef spurningar vakna skaltu hafa samband við %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Snúðu símanum til að fá betri upplausn</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Skipta um skjá?</string>
   <string name="recent_conversations">Nýleg samtöl</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">sendi mynd</string>
   <string name="remove_from_settings">Fjarlægja úr stillingum</string>
   <string name="remove_from_settings_prompt">Viltu fjarlægja fínstillingar kerfisviðmóts úr stillingum og hætta að nota eiginleika þeirra?</string>
   <string name="require_unlock_for_nfc">Taktu úr lás til að nota NFC</string>
   <string name="restart_button_description">Ýttu til að endurræsa forritið og fá betri sýn</string>
   <string name="retry_face">Prófa andlitsgreiningu aftur</string>
+  <string name="reverse_charging_device_name_text">Hitt Pixel tækið</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s veitir hleðslu (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Kveikt er á „Deiling rafhlöðu“</string>
+  <string name="reverse_charging_title">Deiling rafhlöðu</string>
   <string name="right_icon">Tákn til hægri</string>
   <string name="right_keycode">Lykiltákn til hægri</string>
   <string name="right_nav_bar_button_type">Gerð aukahnapps til hægri</string>
@@ -1293,8 +1337,15 @@ Ef spurningar vakna skaltu hafa samband við %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">Ýttu til að fá upplýsingar um rafhlöðu- og gagnanotkun</string>
   <string name="running_foreground_services_title">Forrit sem keyra í bakgrunni</string>
-  <string name="satellite_connected_carrier_text">Gervihnattar-SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel Gervihnattar-SOS</string>
   <string name="save">Vista</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Hætta við</string>
+  <string name="saver_confirmation_dialog_subtitle">Veldu stillingu til að nota</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Inniheldur allar breytingar sem getið er hér að ofan. Gerir einnig hlé á ónauðsynlegum forritum og tilkynningum frá þeim.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Takmarkar myndáhrif og bakgrunnsvirkni. Kveikir á dökku þema, ef ekki er þegar kveikt á því.</string>
+  <string name="saver_confirmation_dialog_title">Velkomin(n) í rafhlöðusparnað</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Ofurrafhlöðu­sparnaður</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Venjulegur rafhlöðusparnaður</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Slökkt er á skjáupptöku í tækjareglum</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Útilokað af kerfisstjóra</string>
   <string name="screen_pinning_can_open_other_apps">Fest forrit getur opnað önnur forrit.</string>
@@ -1312,6 +1363,12 @@ Ef spurningar vakna skaltu hafa samband við %2$s.</string>
   <string name="screen_pinning_toast">Til að losa þetta forrit skaltu halda inni bakkhnappinum og yfirlitshnappinum</string>
   <string name="screen_pinning_toast_gesture_nav">Til að losa þetta forrit skaltu strjúka upp og halda</string>
   <string name="screen_pinning_toast_recents_invisible">Til að losa þetta forrit skaltu halda inni bakkhnappinum og heimahnappinum</string>
+  <string name="screen_protector_absent_message">Þegar slökkt er á skjávarnarstillingu verður snertisvörun betri þegar skjávörn er ekki notuð.</string>
+  <string name="screen_protector_disable_notification">Slökkva á tilkynningu</string>
+  <string name="screen_protector_go_to_settings">Opna stillingar</string>
+  <string name="screen_protector_got_it">Ég skil</string>
+  <string name="screen_protector_mode_title">Skjávarnarstilling</string>
+  <string name="screen_protector_present_message">Þegar kveikt er á skjávarnarstillingu verður snertisvörun betri þegar skjávörn er notuð.</string>
   <string name="screen_share_permission_app_selector_title">Deila eða taka upp forrit</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Allur skjárinn</string>
   <string name="screen_share_permission_dialog_option_single_app">Eitt forrit</string>
@@ -1364,9 +1421,9 @@ Ef spurningar vakna skaltu hafa samband við %2$s.</string>
   <string name="screenshot_saving_work_profile_title">Vistar skjámynd á vinnusnið…</string>
   <string name="screenshot_scroll_label">Mynda meira</string>
   <string name="screenshot_share_description">Deila skjámynd</string>
-  <string name="screenshot_share_label">Deila</string>
   <string name="screenshot_text">Skjámynd</string>
   <string name="screenshot_top_boundary_pct">Efri mörk %1$d prósent</string>
+  <string name="screenshot_view_description">Skoða skjámynd</string>
   <string name="screenshot_work_profile_notification">Vistað á vinnusniði í %1$s</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Fingrafaralesarinn er á aflrofanum. Það er flati hnappurinn við hliðina á upphleypta hljóðstyrkshnappnum á hlið símans.</string>
   <string name="see_all_bluetooth_devices">Sjá allt</string>
@@ -1384,6 +1441,12 @@ Ef spurningar vakna skaltu hafa samband við %2$s.</string>
   <string name="set_default_notes_app_toast_content">Stilltu sjálfgefið glósuforrit í stillingunum</string>
   <string name="settings_label">Stillingar</string>
   <string name="settingslib_learn_more_text">Nánar</string>
+  <string name="severe_battery_notification_switch_text">Skipta yfir í ofurrafhlöðusparnað? 
+
+Þetta gerir hlé á ónauðsynlegum forritum og tilkynningum frá þeim</string>
+  <string name="severe_battery_notification_text">Kveikja á ofurrafhlöðusparnaði. Þetta gerir hlé á ónauðsynlegum forritum</string>
+  <string name="severe_battery_notification_title">%s eftir af rafhlöðu</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Skipta</string>
   <string name="share_to_app_stop_dialog_button">Hætta að deila</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Þú munt hætta að deila úr &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Hætta að deila skjá?</string>
@@ -1406,6 +1469,9 @@ Ef spurningar vakna skaltu hafa samband við %2$s.</string>
   <string name="slice_permission_text_1">- Það getur lesið upplýsingar úr %1$s</string>
   <string name="slice_permission_text_2">- Það getur gripið til aðgerða í %1$s</string>
   <string name="slice_permission_title">Viltu leyfa %1$s að sýna sneiðar úr %2$s?</string>
+  <string name="smartspace_content_desc">Í fljótu bragði</string>
+  <string name="smartspace_flight_qr_code">QR-kóði</string>
+  <string name="smartspace_role_desc">Skoða</string>
   <string name="snoozeHourOptions">{count,plural, =1{# klukkustund}=2{# klukkustundir}one{# klukkustund}other{# klukkustundir}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# mínúta}one{# mínúta}other{# mínútur}}</string>
   <string name="snooze_undo">Afturkalla</string>
@@ -1416,6 +1482,8 @@ Ef spurningar vakna skaltu hafa samband við %2$s.</string>
   <string name="speed_label_slow">Hægt</string>
   <string name="speed_label_very_fast">Mjög hratt</string>
   <string name="split_screen_text">Skjáskipting</string>
+  <string name="squeeze_invocation_prompt">Kreistu til að tala</string>
+  <string name="standard_battery_saver_text">Staðlað</string>
   <string name="start_dreams">Skjávari</string>
   <string name="state_empty">Autt</string>
   <string name="state_off">Slökkt</string>
@@ -1453,6 +1521,8 @@ Ef spurningar vakna skaltu hafa samband við %2$s.</string>
   <string name="tab">Flipi</string>
   <string name="tap_a_network_to_connect">Ýttu á net til að tengjast</string>
   <string name="tap_again">Ýttu aftur</string>
+  <string name="temp_defender_notify_des">Hleðsla hefst á ný þegar hitastig símans kemst í eðlilegt horf</string>
+  <string name="temp_defender_notify_title">Hleðsla í bið til að vernda rafhlöðuna</string>
   <string name="template_percent">%1$d prósent.</string>
   <string name="thermal">Varmi</string>
   <string name="thermal_shutdown_dialog_help_text">Sjá varúðarskref</string>
@@ -1469,6 +1539,7 @@ Síminn getur orðið of heitur ef þú:
   <string name="title_for_empty_state_cta">Fáðu skjótan aðgang að eftirlætis forritagræjunum án þess að taka spjaldtölvuna úr lás.</string>
   <string name="title_usb_accessory">USB-aukabúnaður</string>
   <string name="to_switch_networks_disconnect_ethernet">Aftengdu ethernet til að skipta um net</string>
+  <string name="too_hot_label">Pixel er of heitur</string>
   <string name="touch_filtered_warning">Stillingar geta ekki staðfest svarið þitt vegna þess að forrit er að fela heimildarbeiðni.</string>
   <string name="touchpad_tutorial_action_key_button">Aðgerðalykill</string>
   <string name="touchpad_tutorial_back_gesture_button">Bending til að fara til baka</string>
@@ -1483,17 +1554,18 @@ Síminn getur orðið of heitur ef þú:
   <string name="tuner_menu">Valmynd</string>
   <string name="tuner_minus">Mínus</string>
   <string name="tuner_other_apps">Önnur forrit</string>
+  <string name="tuner_persistent_warning">Þessir tilraunaeiginleikar geta breyst, bilað eða horfið í síðari útgáfum. Gakktu því hægt um gleðinnar dyr.</string>
   <string name="tuner_plus">Plúsmerki</string>
   <string name="tuner_right">Hægri</string>
   <string name="tuner_time">Tími</string>
+  <string name="tuner_warning">Fínstillingar kerfisviðmóts gera þér kleift að fínstilla og sérsníða notendaviðmót Android. Þessir tilraunaeiginleikar geta breyst, bilað eða horfið í síðari útgáfum. Gakktu því hægt um gleðinnar dyr.</string>
+  <string name="tuner_warning_title">Þetta er ekki allra</string>
   <string name="turn_off_airplane_mode">Slökkva á flugstillingu</string>
   <string name="turn_on_bluetooth">Nota Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Eiginleikar eins og Flýtideiling og Finna tækið mitt nota Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Kveikt verður á Bluetooth í fyrramálið</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Kveikja sjálfkrafa á morgun</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Sjálfgefið í sjónvarpi</string>
   <string name="two_weeks_timestamp">Fyrir 2 vikum</string>
   <string name="unknown">Óþekkt</string>
   <string name="unlock_to_see_notif_text">Taktu úr lás til að sjá eldri tilkynningar</string>
@@ -1552,7 +1624,9 @@ Hvaða notandi sem er getur uppfært forrit fyrir alla aðra notendur.</string>
   <string name="volume_odi_captions_hint_enable">virkja</string>
   <string name="volume_odi_captions_tip">Sjálfvirkir skjátextar</string>
   <string name="volume_panel_captioning_title">Skjátextar í rauntíma</string>
+  <string name="volume_panel_clear_calling_title">Skýrt símtal</string>
   <string name="volume_panel_collapsed_sliders">Minnkaðir hljóðstyrkssleðar</string>
+  <string name="volume_panel_device_settings_title">Stillingar tækis</string>
   <string name="volume_panel_dialog_settings_button">Stillingar</string>
   <string name="volume_panel_enter_media_output_settings">Færa inn stillingar úttaks</string>
   <string name="volume_panel_expanded_sliders">Stækkaðir hljóðstyrkssleðar</string>
@@ -1667,10 +1741,13 @@ Wi‑Fi vistfang (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Óþekkt</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Notkun ekki mæld</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi tengist ekki sjálfkrafa eins og er</string>
+  <string name="wireless_charging_label">Hleður þráðlaust</string>
+  <string name="wireless_charging_notification_text">Þráðlaus hleðsla kann að nota meiri orku en hleðsla með snúru. Til að spara rafmagn og tíma skaltu prófa að skipta yfir í hleðslu með snúru.</string>
+  <string name="wireless_charging_notification_title">Þráðlaus hleðsla</string>
   <string name="work_challenge_emergency_button_text">Neyðartilvik</string>
   <string name="work_mode_off_title">Ljúka hléi vinnuforrita?</string>
   <string name="work_mode_turn_on">Ljúka hléi</string>
-  <string name="zen_alarm_warning">Ekki mun heyrast í vekjaranum %1$s</string>
+  <string name="zen_alarm_warning">Ekki mun heyrast í næsta vekjara %1$s</string>
   <string name="zen_alarm_warning_indef">Ekki mun heyrast í næsta vekjara %1$s nema slökkt sé á þessu fyrir þann tíma</string>
   <string name="zen_mode_enable_dialog_turn_on">Kveikja</string>
   <string name="zen_mode_settings_turn_on_dialog_title">Kveikja á „Ónáðið ekki“</string>

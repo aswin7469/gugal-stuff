@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/keyguard/ui/view/layout/sections/transitions/ClockSizeTransition$ClockFaceTransition;
 .super Lcom/android/systemui/keyguard/ui/view/layout/sections/transitions/ClockSizeTransition$VisibilityBoundsTransition;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -120,7 +120,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 60
-    const v0, 0x7f0b0451    # @id/lockscreen_clock_view_large
+    const v0, 0x7f0a0472    # @id/lockscreen_clock_view_large
 
     .line 63
     invoke-virtual {p0, v0}, Landroid/transition/Transition;->addTarget(I)Landroid/transition/Transition;
@@ -133,7 +133,7 @@
     sget v0, Lcom/android/systemui/keyguard/ui/view/layout/sections/transitions/ClockSizeTransition;->$r8$clinit:I
 
     .line 70
-    const v0, 0x7f0b0450    # @id/lockscreen_clock_view
+    const v0, 0x7f0a0471    # @id/lockscreen_clock_view
 
     .line 72
     invoke-virtual {p0, v0}, Landroid/transition/Transition;->addTarget(I)Landroid/transition/Transition;

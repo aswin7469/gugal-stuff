@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">kijelölt modul áthelyezése</string>
   <string name="accessibility_action_label_remove_widget">modul törlése</string>
   <string name="accessibility_action_label_select_widget">modul kiválasztása</string>
-  <string name="accessibility_action_open_communal_hub">Modulok a lezárási képernyőn</string>
   <string name="accessibility_action_pip_resize">Átméretezés</string>
   <string name="accessibility_action_pip_stash">Félretevés</string>
   <string name="accessibility_action_pip_unstash">Félretevés megszüntetése</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Kilépés az egykezes módból</string>
   <string name="accessibility_airplane_mode">Repülőgép üzemmód.</string>
   <string name="accessibility_allow_diagonal_scrolling">Átlós görgetés engedélyezése</string>
+  <string name="accessibility_assistant_poodle">Hangalapú keresés</string>
   <string name="accessibility_authenticate_hint">a hitelesítéshez</string>
   <string name="accessibility_back">Vissza</string>
   <string name="accessibility_banner_message_dismiss">Bezárás</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">eszköz megadásához</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Ethernet leválasztva.</string>
-  <string name="accessibility_fingerprint_bouncer">Hitelesítés szükséges. Érintse meg az ujjlenyomat-érzékelőt a hitelesítéshez.</string>
   <string name="accessibility_fingerprint_label">Ujjlenyomat-érzékelő</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">váltás</string>
   <string name="accessibility_floating_button_action_edit">Szerkesztés</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menü</string>
   <string name="accessibility_multi_user_list_switcher">lehúzható menü</string>
   <string name="accessibility_multi_user_switch_switcher">Felhasználóváltás</string>
+  <string name="accessibility_next_alarm">Következő ébresztés időpontja: %s</string>
   <string name="accessibility_no_calling">Nem kezdeményezhet hanghívást.</string>
   <string name="accessibility_no_phone">Nincs telefon.</string>
   <string name="accessibility_no_wifi">Nincs Wi-Fi-kapcsolat.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">A képernyő zárolva van álló tájolásban.</string>
   <string name="accessibility_send_smart_reply">Küldés</string>
   <string name="accessibility_sensors_off_active">Az Érzékelők kikapcsolva kártya aktív</string>
+  <string name="accessibility_settings_gear">Pixel Stand beállításai</string>
   <string name="accessibility_side_fingerprint_indicator_label">Érintse meg az ujjlenyomat-érzékelőt. Ez a rövidebb gomb a telefon oldalán.</string>
+  <string name="accessibility_smartspace_page">%1$d. oldal, összesen: %2$d oldal</string>
   <string name="accessibility_split_bottom">Osztás alul</string>
   <string name="accessibility_split_left">Osztás a képernyő bal oldalán</string>
   <string name="accessibility_split_right">Osztás a képernyő jobb oldalán</string>
@@ -218,6 +220,10 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi-jel: három sáv.</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi-jel: két sáv.</string>
   <string name="accesssibility_keyguard_retry">Felfelé csúsztatással próbálja újra az arcalapú feloldást</string>
+  <string name="adaptive_charging_notify_des">A teljes töltöttséget ekkor éri el az akkumulátor: %1$s. Folyamatos töltés az akkumulátor élettartamának megőrzése érdekében.</string>
+  <string name="adaptive_charging_notify_title">Az adaptív töltés be van kapcsolva</string>
+  <string name="adaptive_charging_notify_turn_off_once">Kikapcsolás egyszer</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Adaptív töltés • Teljes töltöttség ekkorra: %2$s</string>
   <string name="add">Hozzáadás</string>
   <string name="add_guest_failed">Az új vendég létrehozása nem sikerült</string>
   <string name="airplane_mode">Repülős üzemmód</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Alkalmazásadatok</string>
   <string name="app_label">Rendszer UI</string>
   <string name="assistant_attention_content_description">Felhasználói jelenlét észlelve</string>
+  <string name="assistant_scrim_label">Figyelek. Koppintson a megszakításhoz.</string>
   <string name="audio_sharing_description">Hang megosztása…</string>
   <string name="audio_status">Figyelés</string>
   <string name="auto_data_switch_dialog_negative_button">Most nem</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Vissza</string>
   <string name="battery">Akkumulátor</string>
   <string name="battery_detail_switch_title">Akkumulátorkímélő mód</string>
-  <string name="battery_low_description">Az akkumulátor töltöttségi szintje %s. Az Akkumulátorkímélő mód bekapcsolja a Sötét témát, korlátozza a háttérbeli tevékenységeket, és késlelteti az értesítéseket.</string>
+  <string name="battery_health_notify_learn_more">További információ</string>
   <string name="battery_low_intro">Az Akkumulátorkímélő mód bekapcsolja a Sötét témát, korlátozza a háttérbeli tevékenységeket, és késlelteti az értesítéseket.</string>
-  <string name="battery_low_title">Bekapcsolja az Akkumulátorkímélő módot?</string>
   <string name="battery_saver_confirmation_ok">Bekapcsolás</string>
   <string name="battery_saver_confirmation_title">Bekapcsolja az Akkumulátorkímélő módot?</string>
   <string name="battery_saver_confirmation_title_generic">Az Akkumulátorkímélő módról</string>
-  <string name="battery_saver_dismiss_action">Most nem</string>
   <string name="battery_saver_start_action">Bekapcsolás</string>
   <string name="battery_state_unknown_notification_text">Koppintással további információkat érhet el.</string>
   <string name="battery_state_unknown_notification_title">Probléma merült fel az akkumulátor-töltésmérő olvasásakor</string>
@@ -296,14 +301,9 @@ Próbálja újra %d másodperc múlva.</string>
   <string name="bluetooth_active_battery_level_untethered">Aktív. Akkumulátorok töltöttségi szintje: %1$s (bal) és %2$s (jobb).</string>
   <string name="bluetooth_active_battery_level_untethered_left">Aktív. Akku: %1$s (bal).</string>
   <string name="bluetooth_active_battery_level_untethered_right">Aktív. Akku: %1$s (jobb).</string>
-  <string name="bluetooth_active_media_only_battery_level">Aktív (csak médiatartalom lejátszása esetén). Akkumulátor töltöttségi szintje: %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Aktív (csak médiatartalom lejátszása esetén). Akkumulátorok töltöttségi szintje: %1$s (bal) és %2$s (jobb).</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Aktív (csak médiatartalom lejátszása)</string>
   <string name="bluetooth_active_no_battery_level">Aktív</string>
   <string name="bluetooth_battery_level">Akkumulátor: %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Csatlakoztatva (támogatja a hang megosztását). Akkumulátor töltöttségi szintje: %1$s.</string>
   <string name="bluetooth_battery_level_untethered">Akkumulátorok töltöttségi szintje: %1$s (bal) és %2$s (jobb).</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Csatlakoztatva (támogatja a hang megosztását). Akkumulátorok töltöttségi szintje: %1$s (bal) és %2$s (jobb).</string>
   <string name="bluetooth_connected">Csatlakoztatva%1$s</string>
   <string name="bluetooth_connecting">Csatlakozás…</string>
   <string name="bluetooth_disconnected">Szétkapcsolva</string>
@@ -311,13 +311,11 @@ Próbálja újra %d másodperc múlva.</string>
   <string name="bluetooth_hearing_aid_left_active">Aktív (csak bal)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Aktív (bal és jobb)</string>
   <string name="bluetooth_hearing_aid_right_active">Aktív (csak jobb)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Csatlakoztatva (támogatja a hang megosztását).</string>
   <string name="bluetooth_pairing">Párosítás...</string>
   <string name="bluetooth_pairing_device_down_error_message">Nem lehet kommunikálni a(z) %1$s eszközzel.</string>
   <string name="bluetooth_pairing_error_message">Nem lehet párosítani a(z) %1$s eszközzel.</string>
   <string name="bluetooth_pairing_pin_error_message">Sikertelen párosítás a(z) %1$s eszközzel – hibás PIN vagy jelszó</string>
   <string name="bluetooth_pairing_rejected_error_message">A(z) %1$s eszköz elutasította a párosítást.</string>
-  <string name="bluetooth_saved_device_lea_support">Támogatja a hang megosztását</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Számítógép</string>
   <string name="bluetooth_talkback_headphone">Fejhallgató</string>
@@ -356,8 +354,6 @@ Próbálja újra %d másodperc múlva.</string>
   <string name="bubble_overflow_button_content_description">További elemeket tartalmazó menü</string>
   <string name="bubble_overflow_empty_subtitle">A legutóbbi és az elvetett buborékok itt jelennek majd meg</string>
   <string name="bubble_overflow_empty_title">Nincsenek buborékok a közelmúltból</string>
-  <string name="bubble_shortcut_label">Buborékok</string>
-  <string name="bubble_shortcut_long_label">Buborékok megjelenítése</string>
   <string name="bubbles_app_settings">%1$s beállításai</string>
   <string name="bubbles_dont_bubble_conversation">Ne jelenjen meg a beszélgetés buborékban</string>
   <string name="bubbles_settings_button_description">A(z) %1$s-buborékok beállításai</string>
@@ -387,6 +383,10 @@ Koppintson a megoldáshoz.</string>
   <string name="cast_to_other_device_stop_dialog_button">Átküldés leállítása</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Le fogja állítani a(z) &lt;b&gt;%1$s&lt;/b&gt; átküldését</string>
   <string name="cell_data_off_content_description">Mobiladatok kikapcsolva</string>
+  <string name="charge_limit_discovery_notification_enable_button">Engedélyezés most</string>
+  <string name="charge_limit_discovery_notification_text">Próbálja ki az akkumulátor állapotának és élettartamának védelmére szolgáló, 80%-os korlátot alkalmazó funkció bekapcsolását. A funkció működése a Beállításokban bármikor módosítható.</string>
+  <string name="charge_limit_discovery_notification_title">Gondoskodjon az akkumulátor töltés közbeni védelméről</string>
+  <string name="charging_reverse_text">Akkumulátor megosztása</string>
   <string name="clear_all_notifications_text">Az összes törlése</string>
   <string name="clipboard">Vágólap</string>
   <string name="clipboard_content_copied">Tartalom másolva</string>
@@ -406,6 +406,11 @@ Koppintson a megoldáshoz.</string>
   <string name="close_button_text">Bezárás</string>
   <string name="close_dialog_button">Bezárás</string>
   <string name="collapse_menu_text">Menü bezárása</string>
+  <string name="columbus_bouncer_message">Oldja fel a zárolást a Gyors koppintás művelet befejezéséhez</string>
+  <string name="columbus_target_request_dialog_allow">Engedélyezés</string>
+  <string name="columbus_target_request_dialog_deny">Tiltás</string>
+  <string name="columbus_target_request_dialog_summary">Koppintson kétszer a telefonja hátoldalán a(z) %1$s megnyitásához. A Beállításokban ezt bármikor módosíthatja.</string>
+  <string name="columbus_target_request_dialog_title">Engedélyezi, hogy a Gyors koppintás megnyissa a következőt: %1$s?</string>
   <string name="communal_tutorial_indicator_text">Csúsztasson gyorsan balra a közösségi útmutató elindításához</string>
   <string name="connected_display_dialog_dual_display_stop_warning">A belső kijelző tükrözve lesz. Az elülső kijelző ki lesz kapcsolva.</string>
   <string name="connected_display_dialog_start_mirroring">Tükrözi a kijelzőt a külső képernyőre?</string>
@@ -511,8 +516,11 @@ Ha a folytatást választja, szolgáltatója adathasználati díjat számíthat 
   <string name="data_usage_disabled_dialog_mobile_title">Mobiladatok szüneteltetve</string>
   <string name="data_usage_disabled_dialog_title">Az adatforgalom szünetel</string>
   <string name="days_timestamp">%1$s napja</string>
-  <string name="default_error_message">Érvénytelen adat</string>
   <string name="default_popup_window_title">Előugró ablak</string>
+  <string name="defender_notify_resume_charge">Felülbírálás</string>
+  <string name="defender_notify_title">Az akkumulátor védelme</string>
+  <string name="defender_post_notify_des">Az akkumulátor élettartamának növelése érdekében optimalizálva volt a töltés %1$s és %2$s között</string>
+  <string name="defender_post_notify_title">Optimalizálva volt a töltés</string>
   <string name="demo_mode">A rendszer kezelőfelületének demómódja</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Képernyő méretének maximalizálása</string>
   <string name="desktop_mode_maximize_menu_snap_text">Igazodás a képernyő adott részéhez</string>
@@ -532,20 +540,32 @@ Ha a folytatást választja, szolgáltatója adathasználati díjat számíthat 
   <string name="do_disclosure_generic">Ez az eszköz az Ön szervezetének tulajdonában van</string>
   <string name="do_disclosure_with_name">Ez az eszköz a(z) %s tulajdonában van</string>
   <string name="do_financed_disclosure_with_name">Ezt az eszközt a(z) %s szervezet biztosítja</string>
+  <string name="dock_a11y_action_show_photo_text">Fényképkeret megjelenítése</string>
+  <string name="dock_alignment_not_charging">Igazítsa a helyére a telefont a vezeték nélküli töltéshez</string>
+  <string name="dock_alignment_slow_charging">Igazítsa a helyére a telefont a gyorsabb töltéshez</string>
+  <string name="dock_defender_first_run_des">Az akkumulátor élettartamának meghosszabbítása érdekében a töltés 90%-nál megáll, amíg a táblagép dokkolt állapotban van. Ezt a viselkedést bármikor felülbírálhatja a beállításokban.</string>
+  <string name="dock_defender_first_run_settings">Beállítások</string>
+  <string name="dock_defender_first_run_title">Az akkumulátor védelme érdekében a töltés szünetel</string>
   <string name="dock_multi_instances_not_supported_text">Ez az alkalmazás csak egy ablakban nyitható meg</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Az alkalmazás nem támogatja az osztott képernyőt</string>
+  <string name="dock_photo_preview_text">Fényképkeret indítása…</string>
+  <string name="dock_promo_text">Fényképkeret használatához csúsztasson balra</string>
   <string name="done">Kész</string>
   <string name="drag_split_not_supported">Az értesítés nem támogatja az osztott képernyőre való áthúzást.</string>
   <string name="drag_to_add_tiles">Tartsa lenyomva, és húzza a mozaikok hozzáadásához</string>
   <string name="drag_to_rearrange_tiles">Tartsa lenyomva, és húzza a mozaikok átrendezéséhez</string>
   <string name="drag_to_remove_disabled">Legalább %1$d kártya szükséges</string>
   <string name="drag_to_remove_tiles">Húzza ide az eltávolításhoz</string>
+  <string name="dream_lockscreen_wallpaper_description">Aktuális lezárási képernyő háttérképe</string>
+  <string name="dream_lockscreen_wallpaper_label">Háttérkép</string>
   <string name="dream_overlay_status_bar_alarm_set">Ébresztő beállítva</string>
   <string name="dream_overlay_status_bar_camera_mic_off">A kamera és a mikrofon ki vannak kapcsolva</string>
   <string name="dream_overlay_status_bar_camera_off">A kamera ki van kapcsolva</string>
   <string name="dream_overlay_status_bar_mic_off">A mikrofon ki van kapcsolva</string>
   <string name="dream_overlay_status_bar_priority_mode">Prioritás mód</string>
   <string name="dream_overlay_status_bar_wifi_off">A Wi‑Fi nem áll rendelkezésre</string>
+  <string name="dwell_defender_notify_des">Ez a funkció segít meghosszabbítani az akkumulátor élettartamát, amikor túl sokáig hagyja töltőn a telefont.</string>
+  <string name="dwell_defender_notify_title">Az akkumulátor védelme érdekében a töltés szünetel</string>
   <string name="edit_user_info_message">A kiválasztott név és kép mindenki számára látható lesz, aki ezt az eszközt használja.</string>
   <string name="edit_widget">Modul szerkesztése</string>
   <string name="empty_shade_text">Nincs értesítés</string>
@@ -561,12 +581,16 @@ Ha a folytatást választja, szolgáltatója adathasználati díjat számíthat 
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Speciális</string>
   <string name="expand_menu_text">Menü megnyitása</string>
+  <string name="extreme_battery_saver_text">Extrém</string>
+  <string name="extreme_low_battery_notification_text">Telefonja hamarosan kikapcsol, ha nem tölti fel</string>
+  <string name="extreme_low_battery_notification_title">Mindjárt lemerül</string>
   <string name="face_re_enroll_dialog_content">Az Arcalapú feloldás újbóli beállításához a rendszer törli majd arcmodelljét.
 
 A funkciót újból be kell állítania ahhoz, hogy arca segítségével tudja feloldani telefonja zárolását.</string>
   <string name="face_re_enroll_dialog_title">Az Arcalapú feloldás beállítása</string>
   <string name="face_re_enroll_notification_name">Arcalapú feloldás</string>
   <string name="face_re_enroll_notification_title">Állítsa be újra az Arcalapú feloldást</string>
+  <string name="face_reenroll_dialog_confirm">Beállítás</string>
   <string name="face_reenroll_failure_dialog_content">Nem sikerült beállítani az arcalapú feloldást. Próbálkozzon újra a Beállításokban.</string>
   <string name="failed_attempts_now_wiping_device">Túl sok sikertelen próbálkozás. A rendszer törli az adatokat az eszközről.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Bezárás</string>
@@ -604,6 +628,7 @@ Törlésüket követően újból be kell állítania a Feloldás ujjlenyomattal 
   <string name="font_scaling_smaller">Kisebb</string>
   <string name="fullscreen_text">Teljes képernyő</string>
   <string name="game_status">Játékban</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Tartós feloldás letiltva</string>
   <string name="go_to_web">Ugrás a böngészőbe</string>
   <string name="got_it">Értem</string>
@@ -640,6 +665,7 @@ Törlésüket követően újból be kell állítania a Feloldás ujjlenyomattal 
   <string name="guest_reset_and_restart_dialog_title">Visszaállítja a vendégmunkamenetet?</string>
   <string name="guest_reset_guest_confirm_button">Visszaállítás</string>
   <string name="guest_resetting">Vendég munkamenet visszaállítása…</string>
+  <string name="handle_invocation_prompt">Csúsztassa el a beszédhez</string>
   <string name="handle_text">Fogópont</string>
   <string name="headset">Headset</string>
   <string name="hearing_devices_preset_label">Beállításkészlet</string>
@@ -656,6 +682,7 @@ Koppintson, ha további információra van szüksége.</string>
   <string name="high_temp_title">A telefon melegszik</string>
   <string name="home_controls_dream_description">Gyorsan vezérelheti otthonát képernyőkímélővel</string>
   <string name="home_controls_dream_label">Otthon vezérlése</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Legalább egy eszköz vagy eszközpanel rendelkezésre áll</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Ha szeretné felvenni Home appot gyorsparancsként, gondoskodjon az alkalmazás telepítéséről</string>
   <string name="hub_mode_add_widget_button_text">Modul hozzáadása</string>
@@ -669,12 +696,16 @@ Koppintson, ha további információra van szüksége.</string>
   <string name="in_progress">Folyamatban</string>
   <string name="inattentive_sleep_warning_message">Az eszköz hamarosan kikapcsol. Nyomja meg, hogy bekapcsolva tarthassa.</string>
   <string name="inattentive_sleep_warning_title">Készenléti mód</string>
+  <string name="incompatible_charging_learn_more">További információ</string>
+  <string name="incompatible_charging_notify_des">Előfordulhat, hogy telefonja lassan vagy egyáltalán nem tölt. A gyorsabb töltéshez használjon ajánlott kábelt és adaptert.</string>
+  <string name="incompatible_charging_notify_title">A töltőtartozék ellenőrzése</string>
   <string name="indeterminate">Részlegesen ellenőrizve</string>
   <string name="inline_done_button">Kész</string>
   <string name="inline_ok_button">Alkalmaz</string>
   <string name="inline_turn_off_notifications">Az értesítések kikapcsolása</string>
   <string name="input_switch_input_language_next">Váltás a következő nyelvre</string>
   <string name="input_switch_input_language_previous">Váltás az előző nyelvre</string>
+  <string name="install_app">Alkalmazás telepítése</string>
   <string name="install_dialer_on_work_profile_action">Munkahelyi telefonalkalmazás telepítése</string>
   <string name="install_type_instant">Azonnali alkalmazás</string>
   <string name="instant_apps">Azonnali alkalmazások</string>
@@ -683,8 +714,6 @@ Koppintson, ha további információra van szüksége.</string>
   <string name="instant_apps_title">A(z) %1$s alkalmazás jelenleg fut</string>
   <string name="interruption_level_none">Teljes némítás</string>
   <string name="interruption_level_priority">Csak prioritásos</string>
-  <string name="invalid_charger_text">Használja az eszközhöz kapott eredeti töltőt</string>
-  <string name="invalid_charger_title">Nem tölthető USB-n keresztül</string>
   <string name="issuerecord_background_processing_label">Problémafelvétel feldolgozása…</string>
   <string name="issuerecord_ongoing_screen_only">Problémafelvétel folyamatban…</string>
   <string name="issuerecord_save_title">Problémafelvétel mentve</string>
@@ -766,21 +795,33 @@ Koppintson, ha további információra van szüksége.</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Eszköz zárolva
 Sikertelen hitelesítés</string>
   <string name="keyguard_indication_charging_time">%2$s • Töltés • A teljes töltöttségig: %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • A töltés ekkor lesz kész: %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Töltés • A teljes töltöttségig: %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Ennyi idő kell a teljes feltöltésig: %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Gyors töltés • A teljes töltöttségig: %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Gyors töltés • Teljes töltöttség ekkorra: %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Töltés kész</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Lassú töltés • A teljes töltöttségig: %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Ennyi idő kell a teljes feltöltésig: %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Ennyi idő kell a teljes feltöltésig: %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Vezeték nélküli töltés • A teljes töltöttségig: %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Feloldva tartva TrustAgent által</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Ennyi idő kell a teljes feltöltésig: %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Feloldva marad a Tartós feloldással</string>
   <string name="keyguard_missing_sim_message_short">Nincs SIM</string>
   <string name="keyguard_network_locked_message">Hálózat zárolva</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Nem használható SIM.</string>
   <string name="keyguard_plugged_in">%s • Töltés</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Gyors töltés</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Gyors töltés…</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Az akkumulátor védelme érdekében a töltés szünetel</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Lassú töltés</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Töltés…</string>
   <string name="keyguard_plugged_in_dock">%s • Töltés…</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Töltés…</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Ellenőrizze a töltőtartozékot</string>
+  <string name="keyguard_plugged_in_v2">%s • Töltés…</string>
   <string name="keyguard_plugged_in_wireless">%s • Vezeték nélküli töltés</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Töltés…</string>
   <string name="keyguard_retry">Az újrapróbálkozáshoz csúsztassa felfelé az ujját</string>
   <string name="keyguard_sim_error_message_short">Érvénytelen kártya.</string>
   <string name="keyguard_sim_locked_message">Zárolt SIM.</string>
@@ -811,7 +852,6 @@ Sikertelen hitelesítés</string>
   <string name="kg_invalid_confirm_pin_hint">A PIN-kódok nem egyeznek</string>
   <string name="kg_invalid_sim_pin_hint">Írjon be egy 4-8 számjegyű PIN-kódot.</string>
   <string name="kg_invalid_sim_puk_hint">A PUK-kódnak legalább nyolc számjegyből kell állnia.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Adja meg a SIM-kártya PIN-kódját. # próbálkozása maradt. Ha elfogynak a próbálkozási lehetőségek, az eszköz feloldásához fel kell vennie a kapcsolatot szolgáltatójával.}other{Adja meg a SIM-kártya PIN-kódját. # próbálkozási lehetősége maradt.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{A SIM-kártya le van tiltva. A folytatáshoz adja meg a PUK-kódot. Még # próbálkozása van, mielőtt végleg használhatatlanná válik a SIM-kártya. További információért forduljon a szolgáltatóhoz.}other{A SIM-kártya le van tiltva. A folytatáshoz adja meg a PUK-kódot. Még # próbálkozása van, mielőtt végleg használhatatlanná válik a SIM-kártya. További információért forduljon a szolgáltatóhoz.}}</string>
   <string name="kg_password_pin_failed">A SIM-kártya PIN-művelete sikertelen!</string>
   <string name="kg_password_puk_failed">A SIM-kártya PUK-művelete sikertelen!</string>
@@ -852,7 +892,7 @@ Sikertelen hitelesítés</string>
   <string name="kg_sim_pin_instructions_multi">Adja meg a(z) „%1$s” SIM-kártya PIN-kódját.</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM zárolásának feloldása…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Próbálja újra # másodperc múlva.}other{Próbálja újra # másodperc múlva.}}</string>
-  <string name="kg_trust_agent_disabled">A trust agent komponens nem áll rendelkezésre</string>
+  <string name="kg_trust_agent_disabled">A Tartós feloldás nem áll rendelkezésre</string>
   <string name="kg_unlock_with_password_or_fp">Feloldás jelszóval vagy ujjlenyomattal</string>
   <string name="kg_unlock_with_pattern_or_fp">Feloldás mintával vagy ujjlenyomattal</string>
   <string name="kg_unlock_with_pin_or_fp">Feloldás PIN-kóddal vagy ujjlenyomattal</string>
@@ -900,6 +940,10 @@ Ha nem engedélyezi ennek az alkalmazásnak, hogy hozzáférjen az összes eszk�
   <string name="log_access_confirmation_learn_more">További információ</string>
   <string name="log_access_confirmation_learn_more_at">További információ: %s</string>
   <string name="log_access_confirmation_title">Engedélyezi a(z) %s számára, hogy hozzáférjen az összes eszköznaplóhoz?</string>
+  <string name="low_battery_label">Alacsony töltöttség</string>
+  <string name="low_battery_notification_text">Kapcsolja be a Normál akkumulátorkímélő módot az akkumulátor-élettartam növeléséhez.</string>
+  <string name="low_battery_notification_text_ebs">Kapcsolja be az Extrém akkumulátorkímélő módot az akkumulátor-élettartam növeléséhez.</string>
+  <string name="low_battery_notification_title">Az akkumulátor töltöttségi szintje: %s</string>
   <string name="m3c_search_bar_search">Keresés</string>
   <string name="m3c_suggestions_available">Javaslatok alább</string>
   <string name="magnification_close_settings_click_label">Nagyítási beállítások bezárása</string>
@@ -939,8 +983,6 @@ Ha nem engedélyezi ennek az alkalmazásnak, hogy hozzáférjen az összes eszk�
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Leállítás</string>
   <string name="media_output_end_session_dialog_summary">Állítsa le a megosztott munkamenetet, ha át szeretné helyezni a médiát egy másik eszközre</string>
-  <string name="media_output_first_broadcast_title">A közvetítés működése</string>
-  <string name="media_output_first_notify_broadcast_message">A közelben tartózkodó, kompatibilis Bluetooth-eszközzel rendelkező személyek meghallgathatják az Ön közvetített médiatartalmait</string>
   <string name="media_output_group_title_speakers_and_displays">Hangfalak és kijelzők</string>
   <string name="media_output_group_title_suggested_device">Javasolt eszközök</string>
   <string name="media_output_label_title">%s lejátszása itt:</string>
@@ -967,9 +1009,6 @@ Ha nem engedélyezi ennek az alkalmazásnak, hogy hozzáférjen az összes eszk�
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Alkalmazás átküldése közben az Android az adott appban látható vagy lejátszott minden tartalomhoz hozzáfér. Ezért legyen elővigyázatos a jelszavakkal, a fizetési adatokkal, az üzenetekkel, a fotókkal, valamint a hang- és videófelvételekkel.</string>
   <string name="media_projection_sys_service_dialog_title">Biztosan elkezdi a rögzítést vagy az átküldést?</string>
   <string name="media_projection_sys_service_dialog_warning">A funkciót biztosító szolgáltatás hozzáfér majd minden olyan információhoz, amely látható az Ön képernyőjén, illetve amelyet az Ön eszközéről játszanak le rögzítés vagy átküldés közben. Ez olyan információkat is tartalmaz, mint a jelszavak, a fizetési részletek, a fotók, az üzenetek és a lejátszott audiotartalmak.</string>
-  <string name="media_projection_task_switcher_action_back">Visszaváltás</string>
-  <string name="media_projection_task_switcher_action_switch">Inkább ennek az appnak a megosztása</string>
-  <string name="media_projection_task_switcher_text">A megosztás szünetel alkalmazásváltáskor</string>
   <string name="media_seamless_other_device">Más eszköz</string>
   <string name="media_transfer_default_device_name">Csatlakoztatott eszköz</string>
   <string name="media_transfer_dock_speaker_device_name">Dokkhangszóró</string>
@@ -1138,7 +1177,7 @@ Ha kérdései vannak, forduljon a következőhöz: %2$s.</string>
   <string name="pip_skip_to_prev">Ugrás az előzőre</string>
   <string name="popup_on_dismiss_cta_tile_text">Nyomja meg hosszan a modulok személyre szabásához</string>
   <string name="power_discharge_by_only_short">Eddig: %1$s</string>
-  <string name="preference_summary_default_combination">%2$s/%1$s</string>
+  <string name="preference_summary_default_combination">%1$s / %2$s</string>
   <string name="priority_conversations">Fontos beszélgetések</string>
   <string name="priority_mode_dream_overlay_content_description">Ne zavarjanak</string>
   <string name="privacy_dialog_active_app_usage">Használatban a következő által: %1$s</string>
@@ -1280,12 +1319,17 @@ Ha kérdései vannak, forduljon a következőhöz: %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">A nagyobb felbontás érdekében fordítsa meg a telefont</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Szeretne képernyőt váltani?</string>
   <string name="recent_conversations">Legutóbbi beszélgetések</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">képet küldött</string>
   <string name="remove_from_settings">Eltávolítás a Beállítások közül</string>
   <string name="remove_from_settings_prompt">Eltávolítja a Kezelőfelület-hangolót a Beállításokból, és nem használja tovább egyik funkcióját sem?</string>
   <string name="require_unlock_for_nfc">Az NFC használatához oldja fel a képernyőzárat</string>
   <string name="restart_button_description">A jobb nézet érdekében koppintson az alkalmazás újraindításához.</string>
   <string name="retry_face">Arcfelismerés újraindítása</string>
+  <string name="reverse_charging_device_name_text">Másik Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">A töltést biztosítja: %1$s (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Az akkumumegosztás be van kapcsolva</string>
+  <string name="reverse_charging_title">Akkumegosztás</string>
   <string name="right_icon">Jobb oldali ikon</string>
   <string name="right_keycode">Jobb oldali billentyűkód</string>
   <string name="right_nav_bar_button_type">További jobb oldali gombtípus</string>
@@ -1293,8 +1337,15 @@ Ha kérdései vannak, forduljon a következőhöz: %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">Koppintson az akkumulátor- és adathasználat részleteinek megtekintéséhez</string>
   <string name="running_foreground_services_title">A háttérben még futnak alkalmazások</string>
-  <string name="satellite_connected_carrier_text">Műholdas SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel Műholdas SOS</string>
   <string name="save">Mentés</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Mégse</string>
+  <string name="saver_confirmation_dialog_subtitle">Válassza ki a használni kívánt üzemmódot</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Az összes fenti módosítást tartalmazza. Ezek mellett nem alapvető alkalmazásokat és azok értesítéseit is szünetelteti.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Korlátozza a vizuális effekteket és a háttértevékenységeket. Bekapcsolja a Sötét témát, ha még nem aktív.</string>
+  <string name="saver_confirmation_dialog_title">Üdvözöljük az Akkumulátorkímélő módban</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Extrém akkumulátorkímélő mód</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Normál akkumulátorkímélő mód</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">A képernyőfelvételt eszközszabályzat tiltja</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Rendszergazda által letiltva</string>
   <string name="screen_pinning_can_open_other_apps">A kitűzött alkalmazás megnyithat más alkalmazásokat.</string>
@@ -1312,6 +1363,12 @@ Ha kérdései vannak, forduljon a következőhöz: %2$s.</string>
   <string name="screen_pinning_toast">Az alkalmazás kitűzésének megszüntetéséhez tartsa lenyomva a Vissza és az Áttekintés gombokat</string>
   <string name="screen_pinning_toast_gesture_nav">A kitűzés megszüntetéséhez csúsztassa felfelé ujját, majd tartsa lenyomva</string>
   <string name="screen_pinning_toast_recents_invisible">Az alkalmazás kitűzésének megszüntetéséhez tartsa lenyomva a Vissza és a Kezdőképernyő gombot</string>
+  <string name="screen_protector_absent_message">A kijelzővédó mód kikapcsolása javítja az érintésérzékelést, amikor nem használ kijelzővédőt.</string>
+  <string name="screen_protector_disable_notification">Értesítések kikapcsolása</string>
+  <string name="screen_protector_go_to_settings">Ugrás a beállításokhoz</string>
+  <string name="screen_protector_got_it">Értem</string>
+  <string name="screen_protector_mode_title">Kijelzővédő mód</string>
+  <string name="screen_protector_present_message">A kijelzővédó mód bekapcsolása javítja az érintésérzékelést, amikor kijelzővédőt használ.</string>
   <string name="screen_share_permission_app_selector_title">Alkalmazás megosztása vagy rögzítése</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Teljes képernyő</string>
   <string name="screen_share_permission_dialog_option_single_app">Egyetlen alkalmazás</string>
@@ -1364,9 +1421,9 @@ Ha kérdései vannak, forduljon a következőhöz: %2$s.</string>
   <string name="screenshot_saving_work_profile_title">Képernyőkép mentése a munkaprofilba…</string>
   <string name="screenshot_scroll_label">Több rögzítése</string>
   <string name="screenshot_share_description">Képernyőkép megosztása</string>
-  <string name="screenshot_share_label">Megosztás</string>
   <string name="screenshot_text">Képernyőkép</string>
   <string name="screenshot_top_boundary_pct">Felső rész %1$d százaléka</string>
+  <string name="screenshot_view_description">Képernyőkép megtekintése</string>
   <string name="screenshot_work_profile_notification">Mentve a(z) %1$s alkalmazás munkaprofiljába</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Az ujjlenyomat-érzékelő a bekapcsológombon található. Ez a kiemelkedő hangerőgomb melletti lapos gomb a telefon szélén.</string>
   <string name="see_all_bluetooth_devices">Összes megtekintése</string>
@@ -1384,6 +1441,12 @@ Ha kérdései vannak, forduljon a következőhöz: %2$s.</string>
   <string name="set_default_notes_app_toast_content">Állítson be alapértelmezett jegyzetkészítő alkalmazást a Beállításokban</string>
   <string name="settings_label">Beállítások</string>
   <string name="settingslib_learn_more_text">További információ</string>
+  <string name="severe_battery_notification_switch_text">Átvált az Extrém akkumulátorkímélő módra? 
+
+Ezzel a nem alapvető alkalmazásokat és azok értesítéseit is szünetelteti.</string>
+  <string name="severe_battery_notification_text">Kapcsolja be az Extrém akkumulátorkímélő módot. Ezzel szüneteltet minden nem alapvető alkalmazást.</string>
+  <string name="severe_battery_notification_title">Az akkumulátor töltöttségi szintje: %s</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Váltás</string>
   <string name="share_to_app_stop_dialog_button">Megosztás leállítása</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Le fogja állítani a(z) &lt;b&gt;%1$s&lt;/b&gt; megosztását</string>
   <string name="share_to_app_stop_dialog_title">Leállítja a képernyőmegosztást?</string>
@@ -1406,6 +1469,9 @@ Ha kérdései vannak, forduljon a következőhöz: %2$s.</string>
   <string name="slice_permission_text_1">– Információkat olvashat a(z) %1$s alkalmazásból</string>
   <string name="slice_permission_text_2">– Műveleteket végezhet a(z) %1$s alkalmazáson belül</string>
   <string name="slice_permission_title">Engedélyezi a(z) %1$s alkalmazásnak, hogy részleteket mutasson a(z) %2$s alkalmazásból?</string>
+  <string name="smartspace_content_desc">Áttekintés</string>
+  <string name="smartspace_flight_qr_code">QR-kód</string>
+  <string name="smartspace_role_desc">Megtekintés</string>
   <string name="snoozeHourOptions">{count,plural, =1{# óra}=2{# óra}other{# óra}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# perc}other{# perc}}</string>
   <string name="snooze_undo">Visszavonás</string>
@@ -1416,6 +1482,8 @@ Ha kérdései vannak, forduljon a következőhöz: %2$s.</string>
   <string name="speed_label_slow">Lassú</string>
   <string name="speed_label_very_fast">Nagyon gyors</string>
   <string name="split_screen_text">Osztott képernyő</string>
+  <string name="squeeze_invocation_prompt">Nyomja össze a beszédhez</string>
+  <string name="standard_battery_saver_text">Normál</string>
   <string name="start_dreams">Képernyővédő</string>
   <string name="state_empty">Üres</string>
   <string name="state_off">Ki</string>
@@ -1453,6 +1521,8 @@ Ha kérdései vannak, forduljon a következőhöz: %2$s.</string>
   <string name="tab">Lap</string>
   <string name="tap_a_network_to_connect">A kapcsolódáshoz koppintson a kívánt hálózatra</string>
   <string name="tap_again">Koppintson újra</string>
+  <string name="temp_defender_notify_des">A töltés akkor folytatódik, amikor visszaállt a telefon normál hőmérséklete.</string>
+  <string name="temp_defender_notify_title">Az akkumulátor védelme érdekében a töltés szünetel</string>
   <string name="template_percent">%1$d százalék.</string>
   <string name="thermal">Termikus</string>
   <string name="thermal_shutdown_dialog_help_text">Olvassa el a kímélő használat lépéseit</string>
@@ -1469,6 +1539,7 @@ Koppintson, ha további információra van szüksége.</string>
   <string name="title_for_empty_state_cta">Táblagépe feloldása nélkül, gyorsan hozzáférhet kedvenc alkalmazásmoduljaihoz.</string>
   <string name="title_usb_accessory">USB-kellék</string>
   <string name="to_switch_networks_disconnect_ethernet">Hálózatváltáshoz válassza le az ethernetet</string>
+  <string name="too_hot_label">A Pixel telefon túl forró</string>
   <string name="touch_filtered_warning">Mivel az egyik alkalmazás eltakarja az engedélykérést, a Beállítások alkalmazás nem tudja ellenőrizni az Ön válaszát.</string>
   <string name="touchpad_tutorial_action_key_button">Műveletbillentyű</string>
   <string name="touchpad_tutorial_back_gesture_button">Vissza kézmozdulat</string>
@@ -1483,17 +1554,18 @@ Koppintson, ha további információra van szüksége.</string>
   <string name="tuner_menu">Menü</string>
   <string name="tuner_minus">Mínusz</string>
   <string name="tuner_other_apps">Egyéb alkalmazások</string>
+  <string name="tuner_persistent_warning">Ezek a kísérleti funkciók változhatnak vagy megsérülhetnek a későbbi kiadásokban, illetve eltűnhetnek azokból. Körültekintően járjon el.</string>
   <string name="tuner_plus">Plusz</string>
   <string name="tuner_right">Jobb</string>
   <string name="tuner_time">Idő</string>
+  <string name="tuner_warning">A Kezelőfelület-hangoló az Android felhasználói felületének szerkesztéséhez és testreszabásához nyújt további megoldásokat. Ezek a kísérleti funkciók változhatnak vagy megsérülhetnek a későbbi kiadásokban, illetve eltűnhetnek azokból. Körültekintően járjon el.</string>
+  <string name="tuner_warning_title">Egyeseknek tetszik, másoknak nem</string>
   <string name="turn_off_airplane_mode">Repülős üzemmód kikapcsolása</string>
   <string name="turn_on_bluetooth">Bluetooth használata</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Egyes funkciók (például a Quick Share és a Készülékkereső) Bluetootht használnak</string>
   <string name="turn_on_bluetooth_auto_info_enabled">A Bluetooth holnap reggel bekapcsol</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Automatikus bekapcsolás holnap</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Tévé alapértelmezett eszköze</string>
   <string name="two_weeks_timestamp">2 hete</string>
   <string name="unknown">Ismeretlen</string>
   <string name="unlock_to_see_notif_text">A régebbiek feloldás után láthatók</string>
@@ -1552,7 +1624,9 @@ Bármely felhasználó frissítheti az alkalmazásokat valamennyi felhasználó 
   <string name="volume_odi_captions_hint_enable">engedélyezés</string>
   <string name="volume_odi_captions_tip">Automatikus feliratozás</string>
   <string name="volume_panel_captioning_title">Élő feliratozás</string>
+  <string name="volume_panel_clear_calling_title">Tiszta hívás</string>
   <string name="volume_panel_collapsed_sliders">Hangerő-szabályozók összecsukva</string>
+  <string name="volume_panel_device_settings_title">Eszközbeállítások</string>
   <string name="volume_panel_dialog_settings_button">Beállítások</string>
   <string name="volume_panel_enter_media_output_settings">Kimenet beállításainak megadása</string>
   <string name="volume_panel_expanded_sliders">Hangerő-szabályozók kibontva</string>
@@ -1667,10 +1741,13 @@ Wi‑Fi-cím (BSSID):
   <string name="wifitrackerlib_wifi_standard_unknown">Ismeretlen</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Nem forgalomkorlátos</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">A Wi-Fi-re történő csatlakozás jelenleg nem automatikus</string>
+  <string name="wireless_charging_label">Vezeték nélküli töltés</string>
+  <string name="wireless_charging_notification_text">A vezeték nélküli töltéshez több energiára lehet szükség, mint a vezetékes töltéshez. Ha vezetékes töltőre vált, villamos áramot és időt spórolhat meg.</string>
+  <string name="wireless_charging_notification_title">Vezeték nélküli töltés folyamatban</string>
   <string name="work_challenge_emergency_button_text">Vészhelyzet</string>
   <string name="work_mode_off_title">Feloldja a munkahelyi appokat?</string>
   <string name="work_mode_turn_on">Szüneteltetés feloldása</string>
-  <string name="zen_alarm_warning">Nem fogja hallani az ébresztést ekkor: %1$s</string>
+  <string name="zen_alarm_warning">Nem fogja hallani a következő ébresztést. Időpontja: %1$s</string>
   <string name="zen_alarm_warning_indef">Ha előbb ezt nem kapcsolja ki, nem fogja hallani a következő ébresztést. Időpontja: %1$s</string>
   <string name="zen_mode_enable_dialog_turn_on">Bekapcsolás</string>
   <string name="zen_mode_settings_turn_on_dialog_title">A Ne zavarjanak mód bekapcsolása</string>

@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">сонгосон виджетийг байрлуулах</string>
   <string name="accessibility_action_label_remove_widget">виджетийг хасах</string>
   <string name="accessibility_action_label_select_widget">виджет сонгох</string>
-  <string name="accessibility_action_open_communal_hub">Түгжээтэй дэлгэц дээрх виджетүүд</string>
   <string name="accessibility_action_pip_resize">Хэмжээг өөрчлөх</string>
   <string name="accessibility_action_pip_stash">Нуух</string>
   <string name="accessibility_action_pip_unstash">Ил гаргах</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Нэг гарын горимоос гарах</string>
   <string name="accessibility_airplane_mode">Нислэгийн горим</string>
   <string name="accessibility_allow_diagonal_scrolling">Хөндлөн гүйлгэхийг зөвшөөрөх</string>
+  <string name="accessibility_assistant_poodle">Дуут хайлт</string>
   <string name="accessibility_authenticate_hint">баталгаажуулах</string>
   <string name="accessibility_back">Буцах</string>
   <string name="accessibility_banner_message_dismiss">Үл хэрэгсэх</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">төхөөрөмж оруулах</string>
   <string name="accessibility_ethernet_connected">Этернэт.</string>
   <string name="accessibility_ethernet_disconnected">Ethernet саллаа.</string>
-  <string name="accessibility_fingerprint_bouncer">Баталгаажуулалт шаардлагатай. Баталгаажуулахын тулд хурууны хээ мэдрэгчид хүрнэ үү.</string>
   <string name="accessibility_fingerprint_label">Хурууны хээ мэдрэгч</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">асаах/унтраах</string>
   <string name="accessibility_floating_button_action_edit">Засах</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Цэс</string>
   <string name="accessibility_multi_user_list_switcher">эвхмэл цэс</string>
   <string name="accessibility_multi_user_switch_switcher">Хэрэглэгчийг сэлгэх</string>
+  <string name="accessibility_next_alarm">Дараагийн сэрүүлэг %s-д байна</string>
   <string name="accessibility_no_calling">Дуудлага байхгүй.</string>
   <string name="accessibility_no_phone">Утас байхгүй.</string>
   <string name="accessibility_no_wifi">Wifi холбогдоогүй байна.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Дэлгэц босоо чиглэлээр түгжигдсэн.</string>
   <string name="accessibility_send_smart_reply">Илгээх</string>
   <string name="accessibility_sensors_off_active">Мэдрэгчийг унтраах идэвхтэй байна</string>
+  <string name="accessibility_settings_gear">Pixel Stand-н тохиргоо</string>
   <string name="accessibility_side_fingerprint_indicator_label">Хурууны хээ мэдрэгчид хүрнэ үү. Энэ нь утасны хажуу талын арай богино товч юм</string>
+  <string name="accessibility_smartspace_page">%2$d-н %1$d-р хуудас</string>
   <string name="accessibility_split_bottom">Доод талд хуваах</string>
   <string name="accessibility_split_left">Зүүн талд хуваах</string>
   <string name="accessibility_split_right">Баруун талд хуваах</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Wifi сүлжээний дохио гурван баганатай байна.</string>
   <string name="accessibility_wifi_two_bars">Wifi сүлжээний дохио хоёр баганатай байна.</string>
   <string name="accesssibility_keyguard_retry">Царайгаар түгжээ тайлахыг дахин оролдохын тулд дээш шудар</string>
+  <string name="adaptive_charging_notify_des">%1$s гэхэд батарей дүүрнэ. Батарейн эдэлгээг уртасгахын тулд тогтвортой цэнэглэж байна.</string>
+  <string name="adaptive_charging_notify_title">Орчинтой тохируулан цэнэглэх онцлог асаалттай байна</string>
+  <string name="adaptive_charging_notify_turn_off_once">Дараахыг болмогц унтраах</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Орчинтой тохируулан цэнэглэх • %2$s гэхэд дүүрнэ</string>
   <string name="add">Нэмэх</string>
   <string name="add_guest_failed">Шинэ зочин үүсгэж чадсангүй</string>
   <string name="airplane_mode">Нислэгийн горим</string>
-  <string name="alarm_template">%1$s цагт</string>
-  <string name="alarm_template_far">%1$s-т</string>
+  <string name="alarm_template">%1$s-д</string>
+  <string name="alarm_template_far">%1$s-д</string>
   <string name="all_network_unavailable">Боломжтой сүлжээ байхгүй байна</string>
   <string name="always_use_accessory">%2$s-г холбогдсон үед %1$s-г тогтмол нээх</string>
   <string name="always_use_device">%2$s-г холбогдсон үед %1$s-г тогтмол нээх</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Аппын мэдээлэл</string>
   <string name="app_label">Систем UI</string>
   <string name="assistant_attention_content_description">Хэрэглэгч байгааг илрүүлсэн</string>
+  <string name="assistant_scrim_label">Сонсож байна. Цуцлахын тулд товшино уу</string>
   <string name="audio_sharing_description">Аудио хуваалцаж байна</string>
   <string name="audio_status">Сонсож байна</string>
   <string name="auto_data_switch_dialog_negative_button">Үгүй, баярлалаа</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Буцах</string>
   <string name="battery">Батарей</string>
   <string name="battery_detail_switch_title">Батарей хэмнэгч</string>
-  <string name="battery_low_description">Танд %s батарей үлдсэн байна. Батарей хэмнэгч нь Бараан загварыг асааж, дэвсгэрийн үйл ажиллагааг хязгаарлаж мөн мэдэгдлийг саатуулна.</string>
+  <string name="battery_health_notify_learn_more">Нэмэлт мэдээлэл авах</string>
   <string name="battery_low_intro">Батарей хэмнэгч нь Бараан загварыг асааж, дэвсгэрийн үйл ажиллагааг хязгаарлаж мөн мэдэгдлийг саатуулна.</string>
-  <string name="battery_low_title">Батарей хэмнэгчийг асаах уу?</string>
   <string name="battery_saver_confirmation_ok">Асаах</string>
   <string name="battery_saver_confirmation_title">Батарей хэмнэгчийг асаах уу?</string>
   <string name="battery_saver_confirmation_title_generic">Батарей хэмнэгчийн тухай</string>
-  <string name="battery_saver_dismiss_action">Үгүй, баярлалаа</string>
   <string name="battery_saver_start_action">Асаах</string>
   <string name="battery_state_unknown_notification_text">Нэмэлт мэдээлэл авахын тулд товшино уу</string>
   <string name="battery_state_unknown_notification_title">Таны батарей хэмжигчийг уншихад асуудал гарлаа</string>
@@ -296,14 +301,9 @@
   <string name="bluetooth_active_battery_level_untethered">Идэвхтэй байна. З: %1$s, Б: %2$s батарей.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Идэвхтэй байна. З: %1$s батарей.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Идэвхтэй байна. Б: %1$s батарей.</string>
-  <string name="bluetooth_active_media_only_battery_level">Идэвхтэй (зөвхөн медиа). %1$s батарей.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Идэвхтэй (зөвхөн медиа). З: %1$s, Б: %2$s батарей.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Идэвхтэй (зөвхөн медиа)</string>
   <string name="bluetooth_active_no_battery_level">Идэвхтэй</string>
   <string name="bluetooth_battery_level">Батарей %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Холбогдсон (аудио хуваалцахыг дэмждэг). %1$s батарей.</string>
   <string name="bluetooth_battery_level_untethered">З: %1$s, Б: %2$s батарей.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Холбогдсон (аудио хуваалцахыг дэмждэг). З: %1$s, Б: %2$s батарей.</string>
   <string name="bluetooth_connected">Холбогдсон%1$s</string>
   <string name="bluetooth_connecting">Холбогдож байна...</string>
   <string name="bluetooth_disconnected">Салгагдсан</string>
@@ -311,13 +311,11 @@
   <string name="bluetooth_hearing_aid_left_active">Идэвхтэй (зөвхөн зүүн тал)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Идэвхтэй (зүүн, баруун тал)</string>
   <string name="bluetooth_hearing_aid_right_active">Идэвхтэй (зөвхөн баруун тал)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Холбогдсон (аудио хуваалцахыг дэмждэг)</string>
   <string name="bluetooth_pairing">Хослуулж байна…</string>
   <string name="bluetooth_pairing_device_down_error_message">%1$s-тай холбоо барих боломжгүй.</string>
   <string name="bluetooth_pairing_error_message">%1$s-тай хослуулж чадсангүй.</string>
   <string name="bluetooth_pairing_pin_error_message">Буруу ПИН эсхүл нэвтрэх түлхүүрээс шалтгаалан %1$s-тай хослуулж чадсангүй.</string>
   <string name="bluetooth_pairing_rejected_error_message">Хослуулахаас %1$s татгалзсан.</string>
-  <string name="bluetooth_saved_device_lea_support">Аудио хуваалцахыг дэмждэг</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Компьютер</string>
   <string name="bluetooth_talkback_headphone">Чихэвч</string>
@@ -356,8 +354,6 @@
   <string name="bubble_overflow_button_content_description">Халих</string>
   <string name="bubble_overflow_empty_subtitle">Саяхны бөмбөлгүүд болон үл хэрэгссэн бөмбөлгүүд энд харагдана</string>
   <string name="bubble_overflow_empty_title">Саяхны бөмбөлөг алга байна</string>
-  <string name="bubble_shortcut_label">Бөмбөлгүүд</string>
-  <string name="bubble_shortcut_long_label">Бөмбөлгүүдийг харуулах</string>
   <string name="bubbles_app_settings">%1$s-н тохиргоо</string>
   <string name="bubbles_dont_bubble_conversation">Харилцан яриаг бүү бөмбөлөг болго</string>
   <string name="bubbles_settings_button_description">%1$s-н бөмбөлгүүдийн тохиргоо</string>
@@ -387,6 +383,10 @@
   <string name="cast_to_other_device_stop_dialog_button">Дамжуулахыг зогсоох</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Та &lt;b&gt;%1$s&lt;/b&gt;-г дамжуулахаа болино</string>
   <string name="cell_data_off_content_description">Мобайл дата унтраалттай байна</string>
+  <string name="charge_limit_discovery_notification_enable_button">Одоо идэвхжүүлэх</string>
+  <string name="charge_limit_discovery_notification_text">Цэнэг барилт болон эдэлгээг хамгаалахын тулд 80%-ийн хязгаар онцлогийг асааж үзнэ үү. Та үүнийг тохиргоонд хүссэн үедээ удирдах боломжтой</string>
+  <string name="charge_limit_discovery_notification_title">Цэнэглэх үеэр батарейгаа хамгаалах</string>
+  <string name="charging_reverse_text">Батарейн цэнэгийг хуваалцаж байна</string>
   <string name="clear_all_notifications_text">Бүгдийг арилгах</string>
   <string name="clipboard">Түр санах ой</string>
   <string name="clipboard_content_copied">Контентыг хуулсан</string>
@@ -406,6 +406,11 @@
   <string name="close_button_text">Хаах</string>
   <string name="close_dialog_button">Хаах</string>
   <string name="collapse_menu_text">Цэсийг хаах</string>
+  <string name="columbus_bouncer_message">Шуурхай товшилтыг дуусгахын тулд түгжээг тайлна уу</string>
+  <string name="columbus_target_request_dialog_allow">Зөвшөөрөх</string>
+  <string name="columbus_target_request_dialog_deny">Бүү зөвшөөр</string>
+  <string name="columbus_target_request_dialog_summary">%1$s-г нээхийн тулд утасныхаа ард талд хоёр товшино уу. Та үүнийг Тохиргоо хэсэгт хүссэн үедээ өөрчлөх боломжтой.</string>
+  <string name="columbus_target_request_dialog_title">Шуурхай товшилтод %1$s-г нээхийг зөвшөөрөх үү?</string>
   <string name="communal_tutorial_indicator_text">Нийтийн практик хичээлийг эхлүүлэхийн тулд зүүн тийш шударна уу</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Таны дотоод дэлгэцийн тусгалыг үүсгэнэ. Таны урд талын дэлгэцийг унтраана.</string>
   <string name="connected_display_dialog_start_mirroring">Гадны дэлгэцэд тусгал үүсгэх үү?</string>
@@ -511,8 +516,11 @@
   <string name="data_usage_disabled_dialog_mobile_title">Мобайл датаг түр зогсоосон</string>
   <string name="data_usage_disabled_dialog_title">Дата-г түр зогсоосон байна</string>
   <string name="days_timestamp">%1$s хоногийн өмнө</string>
-  <string name="default_error_message">Буруу оролт</string>
   <string name="default_popup_window_title">Попап цонх</string>
+  <string name="defender_notify_resume_charge">Дарах</string>
+  <string name="defender_notify_title">Таны батарейг хамгаалж байна</string>
+  <string name="defender_post_notify_des">Батарейн эдэлгээг уртасгахад туслахын тулд цэнэглэх явцыг %1$s-с %2$s хүртэл оновчилсон</string>
+  <string name="defender_post_notify_title">Цэнэглэх явцыг оновчилсон</string>
   <string name="demo_mode">Системийн UI демо горим</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Дэлгэцийг томруулах</string>
   <string name="desktop_mode_maximize_menu_snap_text">Дэлгэцийг таллах</string>
@@ -532,20 +540,32 @@
   <string name="do_disclosure_generic">Энэ төхөөрөмж танай байгууллагад харьяалагддаг</string>
   <string name="do_disclosure_with_name">Энэ төхөөрөмж %s-д харьяалагддаг</string>
   <string name="do_financed_disclosure_with_name">Энэ төхөөрөмжийг %s-с нийлүүлдэг</string>
+  <string name="dock_a11y_action_show_photo_text">Зургийн жаазыг харуулах</string>
+  <string name="dock_alignment_not_charging">Утасгүйгээр цэнэглэхийн тулд утсыг дахин байрлуулна уу</string>
+  <string name="dock_alignment_slow_charging">Илүү хурдан цэнэглэхийн тулд утсыг дахин байрлуулна уу</string>
+  <string name="dock_defender_first_run_des">Батарейн эдэлгээг уртасгахад туслахын тулд таны таблетыг суурилуулсан байхад цэнэглэлийг 90% дээр барьдаг. Дарахын тулд Тохиргоо руу хүссэн үедээ очно уу.</string>
+  <string name="dock_defender_first_run_settings">Тохиргоо</string>
+  <string name="dock_defender_first_run_title">Батарейг хамгаалахын тулд цэнэглэлийг барих</string>
   <string name="dock_multi_instances_not_supported_text">Энэ аппыг зөвхөн 1 цонхонд нээх боломжтой</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Апп дэлгэцийг хуваах горимыг дэмждэггүй</string>
+  <string name="dock_photo_preview_text">Зургийн жаазыг эхлүүлж байна...</string>
+  <string name="dock_promo_text">Зургийн жаазыг харах бол зүүн тийш шударна уу</string>
   <string name="done">Болсон</string>
   <string name="drag_split_not_supported">Энэ мэдэгдэл нь дэлгэцийг хуваах горим руу чирэхийг дэмждэггүй</string>
   <string name="drag_to_add_tiles">Хавтан нэмэхийн тулд дараад чирэх</string>
   <string name="drag_to_rearrange_tiles">Хавтангуудыг дахин цэгцлэхийн тулд дараад чирнэ үү</string>
   <string name="drag_to_remove_disabled">Танд хамгийн багадаа %1$d хавтан шаардлагатай</string>
   <string name="drag_to_remove_tiles">Устгахын тулд энд зөөнө үү</string>
+  <string name="dream_lockscreen_wallpaper_description">Одоогийн түгжээтэй дэлгэцийн зургаа ашиглана уу</string>
+  <string name="dream_lockscreen_wallpaper_label">Дэлгэцийн зураг</string>
   <string name="dream_overlay_status_bar_alarm_set">Сэрүүлгийг тохируулсан</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Камер болон микрофон унтраалттай байна</string>
   <string name="dream_overlay_status_bar_camera_off">Камер унтраалттай байна</string>
   <string name="dream_overlay_status_bar_mic_off">Микрофон унтраалттай байна</string>
   <string name="dream_overlay_status_bar_priority_mode">Чухал горим</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi боломжгүй</string>
+  <string name="dwell_defender_notify_des">Та утсаа хэт удаан хугацааны турш цэнэглэхээр орхисон үед энэ нь батарейн эдэлгээг уртасгахад тусалдаг</string>
+  <string name="dwell_defender_notify_title">Батарейг хамгаалахын тулд цэнэглэхийг хүлээлгэсэн</string>
   <string name="edit_user_info_message">Таны сонгосон нэр болон зураг энэ төхөөрөмжийг ашигладаг хүн бүрд харагдана.</string>
   <string name="edit_widget">Виджетийг засах</string>
   <string name="empty_shade_text">Мэдэгдэл байхгүй</string>
@@ -561,13 +581,17 @@
   <string name="ethernet_label">Этернет</string>
   <string name="expand_button_title">Дэлгэрэнгүй</string>
   <string name="expand_menu_text">Цэс нээх</string>
+  <string name="extreme_battery_saver_text">Экстрим</string>
+  <string name="extreme_low_battery_notification_text">Утсаа удахгүй цэнэглэхгүй бол унтарна</string>
+  <string name="extreme_low_battery_notification_title">Батарей маш бага байна</string>
   <string name="face_re_enroll_dialog_content">Царайгаар түгжээ тайлахыг дахин тохируулахын тулд таны одоогийн нүүрний загварыг устгана.
 
 Та царайгаа утасныхаа түгжээг тайлахад ашиглахын тулд энэ онцлогийг дахин тохируулах шаардлагатай.</string>
   <string name="face_re_enroll_dialog_title">Царайгаар түгжээ тайлахыг тохируулна уу</string>
   <string name="face_re_enroll_notification_name">Царайгаар түгжээ тайлах</string>
   <string name="face_re_enroll_notification_title">Царайгаар түгжээ тайлахыг дахин тохируулна уу</string>
-  <string name="face_reenroll_failure_dialog_content">Царайгаар түгжээ тайлахыг тохируулж чадсангүй. Дахин оролдохын тулд Тохиргоо руу очно уу.</string>
+  <string name="face_reenroll_dialog_confirm">Тохируулах</string>
+  <string name="face_reenroll_failure_dialog_content">Царайгаар түгжээ тайлах онцлогийг тохируулж чадсангүй. Дахин оролдохын тулд Тохиргоо руу очно уу.</string>
   <string name="failed_attempts_now_wiping_device">Түгжээг хэт олон удаа буруу оруулсан тул энэ төхөөрөмжийн өгөгдлийг устгах болно.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Хаах</string>
   <string name="failed_attempts_now_wiping_profile">Түгжээг хэт олон удаа буруу оруулсан тул энэ ажлын профайл, түүний өгөгдлийн устгах болно.</string>
@@ -604,6 +628,7 @@
   <string name="font_scaling_smaller">Жижгэрүүлэх</string>
   <string name="fullscreen_text">Бүтэн дэлгэц</string>
   <string name="game_status">Тоглож байна</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Түгжээгүй байлгахыг идэвхгүй болгосон</string>
   <string name="go_to_web">Хөтчид очих</string>
   <string name="got_it">Ойлголоо</string>
@@ -640,6 +665,7 @@
   <string name="guest_reset_and_restart_dialog_title">Зочны харилцан үйлдлийг шинэчлэх үү?</string>
   <string name="guest_reset_guest_confirm_button">Шинэчлэх</string>
   <string name="guest_resetting">Зочныг шинэчилж байна…</string>
+  <string name="handle_invocation_prompt">Ярихын тулд шударна уу</string>
   <string name="handle_text">Бариул</string>
   <string name="headset">Чихэвч</string>
   <string name="hearing_devices_preset_label">Урьдчилсан тохируулга</string>
@@ -656,6 +682,7 @@
   <string name="high_temp_title">Утас халж байна</string>
   <string name="home_controls_dream_description">Гэрийн удирдлагадаа дэлгэц амраагчаар шуурхай ханд</string>
   <string name="home_controls_dream_label">Гэрийн удирдлага</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Дор хаяж нэг төхөөрөмж эсвэл төхөөрөмжийн түр зуурын самбар боломжтой</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Home аппыг товчлолоор нэмэхийн тулд уг аппыг суулгасан эсэхийг шалгана уу</string>
   <string name="hub_mode_add_widget_button_text">Виджет нэмэх</string>
@@ -669,12 +696,16 @@
   <string name="in_progress">Үргэлжилж байна</string>
   <string name="inattentive_sleep_warning_message">Төхөөрөмж удахгүй унтрах тул асаалттай хэвээр байлгахын тулд дарна уу.</string>
   <string name="inattentive_sleep_warning_title">Зогсолтын горим</string>
+  <string name="incompatible_charging_learn_more">Нэмэлт мэдээлэл авах</string>
+  <string name="incompatible_charging_notify_des">Таны утас удаан цэнэглэгдэж эсвэл цэнэглэгдээгүй байж магадгүй. Илүү хурдан цэнэглэхийн тулд санал болгосон кабель болон адаптерыг ашиглана уу.</string>
+  <string name="incompatible_charging_notify_title">Цэнэглэх нэмэлт хэрэгслийг шалгах</string>
   <string name="indeterminate">Хэсэгчлэн тэмдэглэсэн</string>
   <string name="inline_done_button">Болсон</string>
   <string name="inline_ok_button">Ашиглах</string>
   <string name="inline_turn_off_notifications">Мэдэгдлийг унтраах</string>
   <string name="input_switch_input_language_next">Дараагийн хэл рүү сэлгэх</string>
   <string name="input_switch_input_language_previous">Өмнөх хэл рүү сэлгэх</string>
+  <string name="install_app">Аппыг суулгах</string>
   <string name="install_dialer_on_work_profile_action">Ажлын гар утасны апп суулгах</string>
   <string name="install_type_instant">Шуурхай апп</string>
   <string name="instant_apps">Шуурхай апп</string>
@@ -683,8 +714,6 @@
   <string name="instant_apps_title">%1$s-г ажиллуулж байна</string>
   <string name="interruption_level_none">Дуугүй болгох</string>
   <string name="interruption_level_priority">Зөвхөн чухал зүйлс</string>
-  <string name="invalid_charger_text">Төхөөрөмждөө дагалдаж ирсэн цэнэглэгчийг ашиглах</string>
-  <string name="invalid_charger_title">USB-р цэнэглэх боломжгүй байна</string>
   <string name="issuerecord_background_processing_label">Асуудлын бичлэгийг боловсруулж байна</string>
   <string name="issuerecord_ongoing_screen_only">Асуудлыг бичиж байна</string>
   <string name="issuerecord_save_title">Асуудлын бичлэгийг хадгалсан</string>
@@ -766,21 +795,33 @@
   <string name="keyguard_indication_after_adaptive_auth_lock">Төхөөрөмжийг түгжсэн
 Баталгаажуулж чадсангүй</string>
   <string name="keyguard_indication_charging_time">%2$s • Цэнэглэж байна • %1$s-н дараа дүүрнэ</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • %1$s гэхэд цэнэглэж дуусна</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Цэнэглэж байна • %1$s-н дараа дүүрнэ</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • %1$s гэхэд бүрэн цэнэглэгдэнэ</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Хурдтай цэнэглэж байна • %1$s-н дараа дүүрнэ</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Шуурхай цэнэглэх • %1$s гэхэд дүүрнэ</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Цэнэглэж дууссан</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Удаан цэнэглэж байна • %1$s-н дараа дүүрнэ</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • %1$s гэхэд бүрэн цэнэглэгдэнэ</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • %1$s гэхэд бүрэн цэнэглэгдэнэ</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Утасгүй цэнэглэж байна • %1$s-н дараа дүүрнэ</string>
-  <string name="keyguard_indication_trust_unlocked">TrustAgent-р түгжээгүй байлгасан</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • %1$s гэхэд бүрэн цэнэглэгдэнэ</string>
+  <string name="keyguard_indication_trust_unlocked">Түгжээгүй байлгахаар түгжээгүй хэвээр байлгасан</string>
   <string name="keyguard_missing_sim_message_short">SIM байхгүй</string>
   <string name="keyguard_network_locked_message">Сүлжээ түгжигдсэн</string>
   <string name="keyguard_permanent_disabled_sim_message_short">Ашиглах боломжгүй SIM.</string>
   <string name="keyguard_plugged_in">%s • Цэнэглэж байна</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Хурдан цэнэглэж байна</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Шуурхай цэнэглэх</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Батарейг хамгаалахын тулд цэнэглэхийг хүлээлгэсэн</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Удаан цэнэглэж байна</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Цэнэглэж байна</string>
   <string name="keyguard_plugged_in_dock">%s • Цэнэглэж байна</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Цэнэглэж байна</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Цэнэглэх нэмэлт хэрэгслийг шалгах</string>
+  <string name="keyguard_plugged_in_v2">%s • Цэнэглэж байна</string>
   <string name="keyguard_plugged_in_wireless">%s • Утасгүй цэнэглэж байна</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Цэнэглэж байна</string>
   <string name="keyguard_retry">Дахин оролдохын тулд дээш шударна уу</string>
   <string name="keyguard_sim_error_message_short">Карт хүчингүй байна.</string>
   <string name="keyguard_sim_locked_message">SIM-г түгжсэн байна.</string>
@@ -811,7 +852,6 @@
   <string name="kg_invalid_confirm_pin_hint">ПИН код тохирохгүй байна</string>
   <string name="kg_invalid_sim_pin_hint">4-8 тооноос бүтэх ПИН-г оруулна уу.</string>
   <string name="kg_invalid_sim_puk_hint">PUK код 8-с цөөнгүй тооноос бүтнэ.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{SIM-н ПИН-г оруулна уу. Танд оператор компанитайгаа холбогдохгүйгээр төхөөрөмжийн түгжээг тайлах # оролдлого үлдлээ.}other{SIM-н ПИН-г оруулна уу. Танд # оролдлого үлдлээ.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM-г идэвхгүй болголоо. Үргэлжлүүлэхийн тулд PUK кодыг оруулна уу. Таны SIM бүрмөсөн хүчингүй болох хүртэл # оролдлого үлдлээ. Дэлгэрэнгүй мэдээлэл авахын тулд оператор компанитайгаа холбогдоно уу.}other{SIM-г идэвхгүй болголоо. Үргэлжлүүлэхийн тулд PUK кодыг оруулна уу. Таны SIM бүрмөсөн хүчингүй болох хүртэл # оролдлого үлдлээ. Дэлгэрэнгүй мэдээлэл авахын тулд оператор компанитайгаа холбогдоно уу.}}</string>
   <string name="kg_password_pin_failed">SIM-н ПИН-г буруу орууллаа!</string>
   <string name="kg_password_puk_failed">SIM-н PUK-г буруу орууллаа!</string>
@@ -852,7 +892,7 @@
   <string name="kg_sim_pin_instructions_multi">"%1$s"-н SIM-н ПИН-г оруулна уу.</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM-н түгжээг тайлж байна…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{# секундийн дараа дахин оролдоно уу.}other{# секундийн дараа дахин оролдоно уу.}}</string>
-  <string name="kg_trust_agent_disabled">Итгэмжлэгдсэн агент боломжгүй байна</string>
+  <string name="kg_trust_agent_disabled">Түгжээгүй байлгах онцлог боломжгүй байна</string>
   <string name="kg_unlock_with_password_or_fp">Нууц үг эсвэл хурууны хээгээр түгжээ тайл</string>
   <string name="kg_unlock_with_pattern_or_fp">Хээ эсвэл хурууны хээгээр түгжээ тайл</string>
   <string name="kg_unlock_with_pin_or_fp">ПИН эсвэл хурууны хээгээр түгжээ тайл</string>
@@ -900,6 +940,10 @@
   <string name="log_access_confirmation_learn_more">Нэмэлт мэдээлэл авах</string>
   <string name="log_access_confirmation_learn_more_at">%s-с нэмэлт мэдээлэл авна уу</string>
   <string name="log_access_confirmation_title">%s-д төхөөрөмжийн бүх логт хандахыг зөвшөөрөх үү?</string>
+  <string name="low_battery_label">Батарейн цэнэг бага байна</string>
+  <string name="low_battery_notification_text">Батарейн ажиллах хугацааг уртасгахын тулд Стандарт батарей хэмнэгчийг асаана уу</string>
+  <string name="low_battery_notification_text_ebs">Батарейн ажиллах хугацааг уртасгахын тулд Дээд зэргээр батарей хэмнэгчийг асаана уу</string>
+  <string name="low_battery_notification_title">%s батарей үлдсэн</string>
   <string name="m3c_search_bar_search">Хайх</string>
   <string name="m3c_suggestions_available">Доорх зөвлөмжүүд</string>
   <string name="magnification_close_settings_click_label">Томруулах тохиргоог хаах</string>
@@ -939,8 +983,6 @@
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Зогсоох</string>
   <string name="media_output_end_session_dialog_summary">Өөр төхөөрөмж рүү медиа зөөхийн тулд хуваалцсан харилцан үйлдлээ зогсооно уу</string>
-  <string name="media_output_first_broadcast_title">Нэвтрүүлэлт хэрхэн ажилладаг вэ?</string>
-  <string name="media_output_first_notify_broadcast_message">Тохиромжтой Bluetooth төхөөрөмжүүдтэй таны ойролцоох хүмүүс таны нэвтрүүлж буй медиаг сонсох боломжтой</string>
   <string name="media_output_group_title_speakers_and_displays">Чанга яригч ба дэлгэц</string>
   <string name="media_output_group_title_suggested_device">Санал болгосон төхөөрөмжүүд</string>
   <string name="media_output_label_title">%s тоглуулж байна</string>
@@ -967,9 +1009,6 @@
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Таныг апп дамжуулж байх үед Android тухайн аппад харуулсан эсвэл тоглуулсан аливаа зүйлд хандах эрхтэй. Тиймээс нууц үг, төлбөрийн мэдээлэл, мессеж, зураг, аудио болон видео зэрэг зүйлд болгоомжтой хандаарай.</string>
   <string name="media_projection_sys_service_dialog_title">Бичлэг хийж эсвэл дамжуулж эхлэх үү?</string>
   <string name="media_projection_sys_service_dialog_warning">Энэ функцийг олгож буй үйлчилгээ нь бичлэг хийж эсвэл дамжуулж байх үед таны дэлгэцэд харуулсан эсвэл төхөөрөмжөөс тань тоглуулсан бүх мэдээлэлд хандах эрхтэй. Үүнд нууц үг, төлбөрийн дэлгэрэнгүй, мессеж, зураг болон таны тоглуулдаг аудио зэрэг мэдээлэл багтана.</string>
-  <string name="media_projection_task_switcher_action_back">Буцаж сэлгэх</string>
-  <string name="media_projection_task_switcher_action_switch">Оронд нь энэ аппыг хуваалцах</string>
-  <string name="media_projection_task_switcher_text">Таныг аппууд сэлгэх үед хуваалцахыг түр зогсооно</string>
   <string name="media_seamless_other_device">Бусад төхөөрөмж</string>
   <string name="media_transfer_default_device_name">Холбогдсон төхөөрөмж</string>
   <string name="media_transfer_dock_speaker_device_name">Суурилуулагчийн чанга яригч</string>
@@ -1280,12 +1319,17 @@
   <string name="rear_display_unfolded_bottom_sheet_description">Илүү өндөр нягтрал авах бол утсыг хөнтөрнө үү</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Дэлгэцүүдийг сэлгэх үү?</string>
   <string name="recent_conversations">Саяхны харилцан яриа</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">зураг илгээсэн</string>
   <string name="remove_from_settings">Тохиргооноос устгах</string>
   <string name="remove_from_settings_prompt">Системийн UI Тохируулагчийг тохиргооноос устгаж, үүнтэй холбоотой бүх тохиргоог ашиглахаа болих уу?</string>
   <string name="require_unlock_for_nfc">NFC-г ашиглахын тулд түгжээг тайлна уу</string>
   <string name="restart_button_description">Харагдах байдлыг сайжруулахын тулд энэ аппыг товшиж, дахин эхлүүлнэ үү</string>
   <string name="retry_face">Царай баталгаажуулалтыг дахин оролдох</string>
+  <string name="reverse_charging_device_name_text">Бусад Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s цэнэглэж байна (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Батарей хуваалцах онцлог асаалттай байна</string>
+  <string name="reverse_charging_title">Батарей хуваалцах</string>
   <string name="right_icon">Баруун дүрс тэмдэг</string>
   <string name="right_keycode">Баруун түлхүүрийн код</string>
   <string name="right_nav_bar_button_type">Нэмэлт баруун товчлуураар шивэх</string>
@@ -1293,8 +1337,15 @@
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">Батарей, дата ашиглалтын талаар дэлгэрэнгүйг харахын тулд товшино уу</string>
   <string name="running_foreground_services_title">Цаана ажиллаж буй апп</string>
-  <string name="satellite_connected_carrier_text">Хиймэл дагуул SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel-н Хиймэл дагуул SOS</string>
   <string name="save">Хадгалах</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Цуцлах</string>
+  <string name="saver_confirmation_dialog_subtitle">Ашиглах горим сонгоорой</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Дээр жагсаасан бүх өөрчлөлт багтсан. Мөн чухал бус аппууд болон тэдгээрийн мэдэгдлүүдийг түр зогсооно.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Визуал эффект болон арын үйл ажиллагааг хязгаарладаг. Бараан загварыг асаалттай биш тохиолдолд асаана.</string>
+  <string name="saver_confirmation_dialog_title">Батарей хэмнэгчид тавтай морилно уу</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Дээд зэргээр батарей хэмнэгч</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Стандарт батарей хэмнэгч</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Төхөөрөмжийн бодлогоор дэлгэцийн зураг авахыг идэвхгүй болгосон</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Таны IT админ блоклосон</string>
   <string name="screen_pinning_can_open_other_apps">Бэхэлсэн апп бусад аппыг нээж магадгүй.</string>
@@ -1312,6 +1363,12 @@
   <string name="screen_pinning_toast">Энэ аппыг тогтоосныг болиулахын тулд Буцах, Тойм товчлуурыг дараад хүлээнэ үү</string>
   <string name="screen_pinning_toast_gesture_nav">Энэ аппыг бэхэлснийг болиулахын тулд дээш шударч барина уу</string>
   <string name="screen_pinning_toast_recents_invisible">Энэ аппыг тогтоосныг болиулахын тулд Буцах, Нүүр хуудасны товчлуурыг дараад хүлээнэ үү</string>
+  <string name="screen_protector_absent_message">Дэлгэц хамгаалагч горимыг идэвхгүй болгох нь дэлгэц хамгаалагчийг ашиглаагүй үед хүрэлтийг сайжруулдаг.</string>
+  <string name="screen_protector_disable_notification">Мэдэгдлийг идэвхгүй болгох</string>
+  <string name="screen_protector_go_to_settings">Тохиргоо руу очих</string>
+  <string name="screen_protector_got_it">Ойлголоо</string>
+  <string name="screen_protector_mode_title">Дэлгэц хамгаалагч горим</string>
+  <string name="screen_protector_present_message">Дэлгэц хамгаалагч горимыг идэвхжүүлэх нь дэлгэц хамгаалагчийг ашиглаж байх үед хүрэлтийг сайжруулдаг.</string>
   <string name="screen_share_permission_app_selector_title">Апп хуваалцах эсвэл бичих</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Бүтэн дэлгэц</string>
   <string name="screen_share_permission_dialog_option_single_app">Нэг апп</string>
@@ -1364,9 +1421,9 @@
   <string name="screenshot_saving_work_profile_title">Дэлгэцийн агшныг ажлын профайлд хадгалж байна…</string>
   <string name="screenshot_scroll_label">Ихийг багтаасан зураг авах</string>
   <string name="screenshot_share_description">Дэлгэцийн агшныг хуваалцах</string>
-  <string name="screenshot_share_label">Хуваалцах</string>
   <string name="screenshot_text">Дэлгэцийн агшин</string>
   <string name="screenshot_top_boundary_pct">Дээд талын хязгаар %1$d хувь</string>
+  <string name="screenshot_view_description">Дэлгэцийн агшныг үзэх</string>
   <string name="screenshot_work_profile_notification">Ажлын профайл дахь %1$s-д хадгалсан</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Хурууны хээ мэдрэгч асаах/унтраах товчин дээр байдаг. Энэ нь утасны ирмэг дээрх дууны түвшний товгор товчлуурын хажууд байх хавтгай товчлуур юм.</string>
   <string name="see_all_bluetooth_devices">Бүгдийг харах</string>
@@ -1384,6 +1441,12 @@
   <string name="set_default_notes_app_toast_content">Тохиргоонд тэмдэглэлийн өгөгдмөл апп тохируулна уу</string>
   <string name="settings_label">Тохиргоо</string>
   <string name="settingslib_learn_more_text">Нэмэлт мэдээлэл авах</string>
+  <string name="severe_battery_notification_switch_text">Дээд зэргээр батарей хэмнэгч рүү сэлгэх үү? 
+
+Энэ нь бүх чухал бус апп болон тэдгээрийн мэдэгдлийг түр зогсооно</string>
+  <string name="severe_battery_notification_text">Дээд зэргээр батарей хэмнэгчийг асаана уу. Энэ нь бүх чухал бус аппыг түр зогсооно</string>
+  <string name="severe_battery_notification_title">%s батарей үлдсэн</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Сэлгэх</string>
   <string name="share_to_app_stop_dialog_button">Хуваалцахыг зогсоох</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Та &lt;b&gt;%1$s&lt;/b&gt;-г хуваалцахаа болино</string>
   <string name="share_to_app_stop_dialog_title">Дэлгэц хуваалцахыг зогсоох уу?</string>
@@ -1406,6 +1469,9 @@
   <string name="slice_permission_text_1">- Энэ нь %1$s-с мэдээлэл унших боломжтой</string>
   <string name="slice_permission_text_2">- Энэ нь %1$s-д үйлдэл хийх боломжтой</string>
   <string name="slice_permission_title">%1$s-д %2$s-н хэсгүүдийг (slices) харуулахыг зөвшөөрөх үү?</string>
+  <string name="smartspace_content_desc">Гялс харах</string>
+  <string name="smartspace_flight_qr_code">QR код</string>
+  <string name="smartspace_role_desc">Харах</string>
   <string name="snoozeHourOptions">{count,plural, =1{# цаг}=2{# цаг}other{# цаг}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# минут}other{# минут}}</string>
   <string name="snooze_undo">Болих</string>
@@ -1416,6 +1482,8 @@
   <string name="speed_label_slow">Удаан</string>
   <string name="speed_label_very_fast">Маш хурдан</string>
   <string name="split_screen_text">Дэлгэцийг хуваах</string>
+  <string name="squeeze_invocation_prompt">Ярихын тулд атгана уу</string>
+  <string name="standard_battery_saver_text">Стандарт</string>
   <string name="start_dreams">Дэлгэц амраагч</string>
   <string name="state_empty">Хоосон</string>
   <string name="state_off">Унтраалттай</string>
@@ -1453,6 +1521,8 @@
   <string name="tab">Таб</string>
   <string name="tap_a_network_to_connect">Холбогдохын тулд сүлжээг товшино уу</string>
   <string name="tap_again">Дaхин товшино уу</string>
+  <string name="temp_defender_notify_des">Таны утас хэвийн температур луу буцах үед үргэлжлүүлэн цэнэглэнэ</string>
+  <string name="temp_defender_notify_title">Батарейг хамгаалахын тулд цэнэглэхийг хүлээлгэсэн</string>
   <string name="template_percent">%1$d хувь.</string>
   <string name="thermal">Дулааны</string>
   <string name="thermal_shutdown_dialog_help_text">Хянамж болгоомжийн алхмыг харах</string>
@@ -1469,6 +1539,7 @@
   <string name="title_for_empty_state_cta">Таблетынхаа түгжээг тайлалгүйгээр дуртай аппынхаа виджетүүдэд шуурхай хандах эрх аваарай.</string>
   <string name="title_usb_accessory">USB төхөөрөмж</string>
   <string name="to_switch_networks_disconnect_ethernet">Сүлжээг сэлгэхийн тулд этернэтийг салгана уу</string>
+  <string name="too_hot_label">Pixel хэт халуун байна</string>
   <string name="touch_filtered_warning">Апп нь зөвшөөрлийн хүсэлтийг танихгүй байгаа тул Тохиргооноос таны хариултыг баталгаажуулах боломжгүй байна.</string>
   <string name="touchpad_tutorial_action_key_button">Тусгай товчлуур</string>
   <string name="touchpad_tutorial_back_gesture_button">Буцах зангаа</string>
@@ -1483,17 +1554,18 @@
   <string name="tuner_menu">Цэс</string>
   <string name="tuner_minus">Хасах</string>
   <string name="tuner_other_apps">Бусад апп</string>
+  <string name="tuner_persistent_warning">Эдгээр туршилтын тохиргоо нь цаашид өөрчлөгдөх, эвдрэх, алга болох магадлалтай. Үйлдлийг болгоомжтой хийнэ үү.</string>
   <string name="tuner_plus">Нэмэх</string>
   <string name="tuner_right">Баруун</string>
   <string name="tuner_time">Цаг</string>
+  <string name="tuner_warning">Системийн UI Tохируулагч нь Android хэрэглэгчийн интерфэйсийг тааруулах, өөрчлөх нэмэлт аргыг зааж өгөх болно. Эдгээр туршилтын тохиргоо нь цаашид өөрчлөгдөх, эвдрэх, алга болох магадлалтай. Үйлдлийг болгоомжтой хийнэ үү.</string>
+  <string name="tuner_warning_title">Зарим хүнд хөгжилтэй байж болох ч бүх хүнд тийм биш</string>
   <string name="turn_off_airplane_mode">Нислэгийн горимыг унтраах</string>
   <string name="turn_on_bluetooth">Bluetooth-г ашиглах</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Түргэн хуваалцах, Миний төхөөрөмжийг олох зэрэг онцлогууд Bluetooth-г ашигладаг</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth-г маргааш өглөө асаана</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Маргааш автоматаар асаах</string>
   <string name="turn_on_wifi">Wi‑Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">ТВ-ийн өгөгдмөл</string>
   <string name="two_weeks_timestamp">2 долоо хоногийн өмнө</string>
   <string name="unknown">Тодорхойгүй</string>
   <string name="unlock_to_see_notif_text">Хуучин мэдэгдлийг харах бол түгжээг тайл</string>
@@ -1552,7 +1624,9 @@
   <string name="volume_odi_captions_hint_enable">идэвхжүүлэх</string>
   <string name="volume_odi_captions_tip">Медиад автоматаар тайлбар нэмэх</string>
   <string name="volume_panel_captioning_title">Шууд тайлбар</string>
+  <string name="volume_panel_clear_calling_title">Тод дуудлага</string>
   <string name="volume_panel_collapsed_sliders">Дууны түвшний гулсуулагчдыг хураасан</string>
+  <string name="volume_panel_device_settings_title">Төхөөрөмжийн тохиргоо</string>
   <string name="volume_panel_dialog_settings_button">Тохиргоо</string>
   <string name="volume_panel_enter_media_output_settings">Оролтын тохиргоог оруулах</string>
   <string name="volume_panel_expanded_sliders">Дууны түвшний гулсуулагчдыг дэлгэсэн</string>
@@ -1667,10 +1741,13 @@ Wi‑Fi хаяг (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Тодорхойгүй</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Хязгааргүй</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi одоогоор автоматаар холбогдохгүй</string>
+  <string name="wireless_charging_label">Утасгүй цэнэглэж байна</string>
+  <string name="wireless_charging_notification_text">Утасгүй цэнэглэх нь утастай цэнэглэхээс илүү их эрчим хүч ашиглаж магадгүй. Цахилгаан болон цаг хэмнэхийн тулд утастай цэнэглэгч рүү сэлгэж үзнэ үү.</string>
+  <string name="wireless_charging_notification_title">Утасгүй цэнэглэж байна</string>
   <string name="work_challenge_emergency_button_text">Яаралтай тусламж</string>
   <string name="work_mode_off_title">Ажлын аппыг үргэлжлүүлэх үү?</string>
   <string name="work_mode_turn_on">Үргэлжлүүлэх</string>
-  <string name="zen_alarm_warning">%1$s-т та дараагийн сэрүүлгээ сонсохгүй</string>
+  <string name="zen_alarm_warning">Та дараагийн сэрүүлгээ %1$s-д сонсохгүй</string>
   <string name="zen_alarm_warning_indef">Та сэрүүлгээ %1$s-с өмнө унтраагаагүй тохиолдолд дараагийн сэрүүлгээ тус хугацаанд сонсохгүй</string>
   <string name="zen_mode_enable_dialog_turn_on">Асаах</string>
   <string name="zen_mode_settings_turn_on_dialog_title">Бүү саад бол горимыг асаах</string>

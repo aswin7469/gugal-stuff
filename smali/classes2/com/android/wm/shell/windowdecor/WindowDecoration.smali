@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/wm/shell/windowdecor/WindowDecoration;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/AutoCloseable;
@@ -636,1109 +636,1437 @@
 .method public final updateViewsAndSurfaces(Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl$Transaction;Landroid/window/WindowContainerTransaction;Landroid/view/View;Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;)V
     .locals 16
 
+    .line 1
     move-object/from16 v0, p0
 
+    .line 2
     move-object/from16 v1, p1
 
+    .line 4
     move-object/from16 v2, p2
 
+    .line 6
     move-object/from16 v3, p3
 
+    .line 8
     move-object/from16 v4, p4
 
+    .line 10
     move-object/from16 v5, p5
 
+    .line 12
     move-object/from16 v6, p6
 
+    .line 14
     const/4 v7, 0x0
 
-    .line 1
+    .line 16
     iput v7, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mWidth:I
 
-    .line 2
+    .line 17
     iput v7, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mHeight:I
 
-    .line 3
+    .line 19
     iput v7, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCaptionHeight:I
 
-    .line 4
+    .line 21
     iput v7, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCaptionWidth:I
 
-    .line 5
+    .line 23
     iput v7, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCaptionX:I
 
-    .line 6
+    .line 25
     iget-object v8, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCustomizableCaptionRegion:Landroid/graphics/Region;
 
+    .line 27
     invoke-virtual {v8}, Landroid/graphics/Region;->setEmpty()V
 
+    .line 29
     const/4 v8, 0x0
 
-    .line 7
+    .line 32
     iput-object v8, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
 
-    .line 8
+    .line 33
     iget-object v9, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mRunningTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 35
     if-eqz v9, :cond_0
 
-    .line 9
+    .line 37
     iput-object v9, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 10
+    .line 39
     :cond_0
     iget v9, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mLayoutResId:I
 
-    .line 11
+    .line 41
     iget v10, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mLayoutResId:I
 
+    .line 43
     iput v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mLayoutResId:I
 
-    .line 12
+    .line 45
     iget-object v11, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 47
     iget-boolean v12, v11, Landroid/app/ActivityManager$RunningTaskInfo;->isVisible:Z
 
+    .line 49
     if-nez v12, :cond_1
 
-    .line 13
+    .line 51
     invoke-virtual {v0, v4}, Lcom/android/wm/shell/windowdecor/WindowDecoration;->releaseViews(Landroid/window/WindowContainerTransaction;)V
 
-    .line 14
+    .line 53
     iget-object v0, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 56
     invoke-virtual {v3, v0}, Landroid/view/SurfaceControl$Transaction;->hide(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
+    .line 58
     return-void
 
+    .line 61
     :cond_1
     if-nez v5, :cond_3
 
+    .line 62
     if-eqz v10, :cond_2
 
+    .line 64
     goto :goto_0
 
-    .line 15
+    .line 66
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
+    .line 67
     const-string v1, "layoutResId and rootView can\'t both be invalid."
 
+    .line 69
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
+    .line 71
     throw v0
 
-    .line 16
+    .line 74
     :cond_3
     :goto_0
     iput-object v5, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
 
-    .line 17
+    .line 75
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mWindowDecorConfig:Landroid/content/res/Configuration;
 
+    .line 77
     if-eqz v5, :cond_4
 
-    .line 18
+    .line 79
     iget v10, v5, Landroid/content/res/Configuration;->densityDpi:I
 
+    .line 81
     goto :goto_1
 
+    .line 83
     :cond_4
     move v10, v7
 
+    .line 84
     :goto_1
     if-eqz v5, :cond_5
 
-    .line 19
+    .line 85
     iget v5, v5, Landroid/content/res/Configuration;->uiMode:I
 
+    .line 87
     and-int/lit8 v5, v5, 0x30
 
+    .line 89
     goto :goto_2
 
+    .line 91
     :cond_5
     move v5, v7
 
-    .line 20
+    .line 92
     :goto_2
     iget-object v12, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mWindowDecorConfig:Landroid/content/res/Configuration;
 
+    .line 93
     if-eqz v12, :cond_6
 
+    .line 95
     goto :goto_3
 
-    .line 21
+    .line 97
     :cond_6
     invoke-virtual {v11}, Landroid/app/ActivityManager$RunningTaskInfo;->getConfiguration()Landroid/content/res/Configuration;
 
+    .line 98
     move-result-object v12
 
+    .line 101
     :goto_3
     iput-object v12, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mWindowDecorConfig:Landroid/content/res/Configuration;
 
-    .line 22
+    .line 102
     iget v11, v12, Landroid/content/res/Configuration;->densityDpi:I
 
-    .line 23
+    .line 104
     iget v12, v12, Landroid/content/res/Configuration;->uiMode:I
 
+    .line 106
     and-int/lit8 v12, v12, 0x30
 
+    .line 108
     if-ne v10, v11, :cond_7
 
-    .line 24
+    .line 110
     iget-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDisplay:Landroid/view/Display;
 
+    .line 112
     if-eqz v10, :cond_7
 
-    .line 25
+    .line 114
     invoke-virtual {v10}, Landroid/view/Display;->getDisplayId()I
 
+    .line 116
     move-result v10
 
+    .line 119
     iget-object v11, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 120
     iget v11, v11, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
+    .line 122
     if-ne v10, v11, :cond_7
 
+    .line 124
     iget v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mLayoutResId:I
 
+    .line 126
     if-ne v9, v10, :cond_7
 
+    .line 128
     if-ne v5, v12, :cond_7
 
+    .line 130
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
 
+    .line 132
     if-nez v5, :cond_9
 
-    .line 26
+    .line 134
     :cond_7
     invoke-virtual {v0, v4}, Lcom/android/wm/shell/windowdecor/WindowDecoration;->releaseViews(Landroid/window/WindowContainerTransaction;)V
 
-    .line 27
+    .line 136
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
 
+    .line 139
     iget-object v9, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 141
     iget v9, v9, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
+    .line 143
     invoke-virtual {v5, v9}, Lcom/android/wm/shell/common/DisplayController;->getDisplay(I)Landroid/view/Display;
 
+    .line 145
     move-result-object v5
 
+    .line 148
     iput-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDisplay:Landroid/view/Display;
 
+    .line 149
     if-nez v5, :cond_8
 
-    .line 28
+    .line 151
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
 
+    .line 153
     iget-object v9, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mOnDisplaysChangedListener:Lcom/android/wm/shell/windowdecor/WindowDecoration$1;
 
+    .line 155
     invoke-virtual {v5, v9}, Lcom/android/wm/shell/common/DisplayController;->addDisplayWindowListener(Lcom/android/wm/shell/common/DisplayController$OnDisplaysChangedListener;)V
 
-    .line 29
+    .line 157
     iput-object v8, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
 
+    .line 160
     goto :goto_4
 
-    .line 30
+    .line 162
     :cond_8
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mContext:Landroid/content/Context;
 
+    .line 163
     iget-object v9, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mWindowDecorConfig:Landroid/content/res/Configuration;
 
+    .line 165
     invoke-virtual {v5, v9}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
 
+    .line 167
     move-result-object v5
 
+    .line 170
     iput-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
 
-    .line 31
+    .line 171
     iget-object v9, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mContext:Landroid/content/Context;
 
+    .line 173
     invoke-virtual {v9}, Landroid/content/Context;->getThemeResId()I
 
+    .line 175
     move-result v9
 
+    .line 178
     invoke-virtual {v5, v9}, Landroid/content/Context;->setTheme(I)V
 
-    .line 32
+    .line 179
     iget v5, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mLayoutResId:I
 
+    .line 182
     if-eqz v5, :cond_9
 
-    .line 33
+    .line 184
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
 
+    .line 186
     invoke-static {v5}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
+    .line 188
     move-result-object v5
 
+    .line 191
     iget v9, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mLayoutResId:I
 
-    .line 34
+    .line 192
     invoke-virtual {v5, v9, v8}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
+    .line 194
     move-result-object v5
 
+    .line 197
     iput-object v5, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
 
-    .line 35
+    .line 198
     :cond_9
     iget-object v5, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
 
+    .line 200
     if-nez v5, :cond_a
 
-    .line 36
+    .line 202
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
 
+    .line 204
     invoke-static {v5}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
+    .line 206
     move-result-object v5
 
+    .line 209
     iget v9, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mLayoutResId:I
 
-    .line 37
+    .line 210
     invoke-virtual {v5, v9, v8}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
+    .line 212
     move-result-object v5
 
+    .line 215
     iput-object v5, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
 
-    .line 38
+    .line 216
     :cond_a
     :goto_4
     iget-object v5, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
 
+    .line 218
     if-nez v5, :cond_b
 
+    .line 220
     return-void
 
-    .line 39
+    .line 222
     :cond_b
     iget-object v9, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 223
     iget v9, v9, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
-    .line 40
+    .line 225
     iget-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
 
-    .line 41
+    .line 227
     iget-object v10, v10, Lcom/android/wm/shell/common/DisplayController;->mDisplays:Landroid/util/SparseArray;
 
-    .line 42
+    .line 229
     invoke-virtual {v10, v9}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
+    .line 231
     move-result-object v9
 
+    .line 234
     check-cast v9, Lcom/android/wm/shell/common/DisplayController$DisplayRecord;
 
+    .line 235
     if-eqz v9, :cond_c
 
-    .line 43
+    .line 237
     iget-object v9, v9, Lcom/android/wm/shell/common/DisplayController$DisplayRecord;->mInsetsState:Landroid/view/InsetsState;
 
+    .line 239
     goto :goto_5
 
+    .line 241
     :cond_c
     move-object v9, v8
 
+    .line 242
     :goto_5
     move v10, v7
 
-    .line 44
+    .line 243
     :goto_6
     invoke-virtual {v9}, Landroid/view/InsetsState;->sourceSize()I
 
+    .line 244
     move-result v11
 
+    .line 247
     if-ge v10, v11, :cond_f
 
-    .line 45
+    .line 248
     invoke-virtual {v9, v10}, Landroid/view/InsetsState;->sourceAt(I)Landroid/view/InsetsSource;
 
+    .line 250
     move-result-object v11
 
-    .line 46
+    .line 253
     invoke-virtual {v11}, Landroid/view/InsetsSource;->getType()I
 
+    .line 254
     move-result v12
 
+    .line 257
     invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
 
+    .line 258
     move-result v13
 
+    .line 261
     if-eq v12, v13, :cond_d
 
+    .line 262
     add-int/lit8 v10, v10, 0x1
 
+    .line 264
     goto :goto_6
 
-    .line 47
+    .line 266
     :cond_d
     invoke-virtual {v11}, Landroid/view/InsetsSource;->isVisible()Z
 
+    .line 267
     move-result v9
 
+    .line 270
     iput-boolean v9, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mIsCaptionVisible:Z
 
+    .line 271
     if-eqz v9, :cond_e
 
+    .line 273
     move v9, v7
 
+    .line 275
     goto :goto_7
 
+    .line 276
     :cond_e
     const/16 v9, 0x8
 
-    .line 48
+    .line 277
     :goto_7
     invoke-virtual/range {p0 .. p0}, Lcom/android/wm/shell/windowdecor/WindowDecoration;->getCaptionViewId()I
 
+    .line 279
     move-result v10
 
+    .line 282
     invoke-virtual {v5, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
+    .line 283
     move-result-object v5
 
-    .line 49
+    .line 286
     invoke-virtual {v5, v9}, Landroid/view/View;->setVisibility(I)V
 
-    .line 50
+    .line 287
     :cond_f
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 290
     invoke-virtual {v5}, Landroid/app/ActivityManager$RunningTaskInfo;->getConfiguration()Landroid/content/res/Configuration;
 
+    .line 292
     move-result-object v5
 
+    .line 295
     iget-object v5, v5, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
+    .line 296
     invoke-virtual {v5}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
 
+    .line 298
     move-result-object v5
 
-    .line 51
+    .line 301
     invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
 
+    .line 302
     move-result v9
 
+    .line 305
     iput v9, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mWidth:I
 
-    .line 52
+    .line 306
     invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
 
+    .line 308
     move-result v9
 
+    .line 311
     iput v9, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mHeight:I
 
-    .line 53
+    .line 312
     iget-object v9, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
 
+    .line 314
     check-cast v9, Lcom/android/wm/shell/windowdecor/TaskFocusStateConsumer;
 
+    .line 316
     iget-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 318
     iget-boolean v10, v10, Landroid/app/ActivityManager$RunningTaskInfo;->isFocused:Z
 
+    .line 320
     check-cast v9, Lcom/android/wm/shell/windowdecor/WindowDecorLinearLayout;
 
-    .line 54
+    .line 322
     iput-boolean v10, v9, Lcom/android/wm/shell/windowdecor/WindowDecorLinearLayout;->mIsTaskFocused:Z
 
-    .line 55
+    .line 324
     invoke-virtual {v9}, Landroid/widget/LinearLayout;->refreshDrawableState()V
 
-    .line 56
+    .line 326
     iget-object v9, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
 
+    .line 329
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
+    .line 331
     move-result-object v9
 
-    .line 57
+    .line 334
     iget v10, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mCaptionHeightId:I
 
+    .line 335
     invoke-static {v10, v9}, Lcom/android/wm/shell/windowdecor/WindowDecoration;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
 
+    .line 337
     move-result v10
 
+    .line 340
     iput v10, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCaptionHeight:I
 
-    .line 58
+    .line 341
     iget v10, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mCaptionWidthId:I
 
+    .line 343
     if-eqz v10, :cond_10
 
-    .line 59
+    .line 345
     invoke-static {v10, v9}, Lcom/android/wm/shell/windowdecor/WindowDecoration;->loadDimensionPixelSize(ILandroid/content/res/Resources;)I
 
+    .line 347
     move-result v9
 
+    .line 350
     goto :goto_8
 
+    .line 351
     :cond_10
     invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
 
+    .line 352
     move-result v9
 
+    .line 355
     :goto_8
     iput v9, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCaptionWidth:I
 
-    .line 60
+    .line 356
     iget v10, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mWidth:I
 
+    .line 358
     sub-int/2addr v10, v9
 
+    .line 360
     const/4 v9, 0x2
 
+    .line 361
     div-int/2addr v10, v9
 
+    .line 362
     iput v10, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCaptionX:I
 
-    .line 61
+    .line 363
     iget-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorationContainerSurface:Landroid/view/SurfaceControl;
 
+    .line 365
     const/4 v11, 0x1
 
+    .line 367
     if-nez v10, :cond_11
 
-    .line 62
+    .line 368
     iget-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mSurfaceControlBuilderSupplier:Ljava/util/function/Supplier;
 
+    .line 370
     invoke-interface {v10}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
+    .line 372
     move-result-object v10
 
+    .line 375
     check-cast v10, Landroid/view/SurfaceControl$Builder;
 
-    .line 63
+    .line 376
     new-instance v12, Ljava/lang/StringBuilder;
 
+    .line 378
     const-string v13, "Decor container of Task="
 
+    .line 380
     invoke-direct {v12, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 382
     iget-object v13, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 385
     iget v13, v13, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
+    .line 387
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 389
     invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
+    .line 392
     move-result-object v12
 
-    .line 64
+    .line 395
     invoke-virtual {v10, v12}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
+    .line 396
     move-result-object v10
 
-    .line 65
+    .line 399
     invoke-virtual {v10}, Landroid/view/SurfaceControl$Builder;->setContainerLayer()Landroid/view/SurfaceControl$Builder;
 
+    .line 400
     move-result-object v10
 
+    .line 403
     iget-object v12, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
-    .line 66
+    .line 404
     invoke-virtual {v10, v12}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
 
+    .line 406
     move-result-object v10
 
+    .line 409
     const-string v12, "WindowDecoration.updateDecorationContainerSurface"
 
-    .line 67
+    .line 410
     invoke-virtual {v10, v12}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
+    .line 412
     move-result-object v10
 
-    .line 68
+    .line 415
     invoke-virtual {v10}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
+    .line 416
     move-result-object v10
 
+    .line 419
     iput-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorationContainerSurface:Landroid/view/SurfaceControl;
 
-    .line 69
+    .line 420
     invoke-virtual {v2, v10, v11}, Landroid/view/SurfaceControl$Transaction;->setTrustedOverlay(Landroid/view/SurfaceControl;Z)Landroid/view/SurfaceControl$Transaction;
 
+    .line 422
     move-result-object v10
 
+    .line 425
     iget-object v12, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorationContainerSurface:Landroid/view/SurfaceControl;
 
+    .line 426
     const/16 v13, 0x4e20
 
-    .line 70
+    .line 428
     invoke-virtual {v10, v12, v13}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
-    .line 71
+    .line 430
     :cond_11
     iget-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorationContainerSurface:Landroid/view/SurfaceControl;
 
+    .line 433
     iget v12, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mWidth:I
 
+    .line 435
     iget v13, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mHeight:I
 
+    .line 437
     invoke-virtual {v2, v10, v12, v13}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
 
+    .line 439
     move-result-object v10
 
+    .line 442
     iget-object v12, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorationContainerSurface:Landroid/view/SurfaceControl;
 
-    .line 72
+    .line 443
     invoke-virtual {v10, v12}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 73
+    .line 445
     iget-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mCaptionContainerSurface:Landroid/view/SurfaceControl;
 
+    .line 448
     if-nez v10, :cond_12
 
-    .line 74
+    .line 450
     iget-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mSurfaceControlBuilderSupplier:Ljava/util/function/Supplier;
 
+    .line 452
     invoke-interface {v10}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
+    .line 454
     move-result-object v10
 
+    .line 457
     check-cast v10, Landroid/view/SurfaceControl$Builder;
 
-    .line 75
+    .line 458
     new-instance v12, Ljava/lang/StringBuilder;
 
+    .line 460
     const-string v13, "Caption container of Task="
 
+    .line 462
     invoke-direct {v12, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 464
     iget-object v13, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 467
     iget v13, v13, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
+    .line 469
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 471
     invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
+    .line 474
     move-result-object v12
 
-    .line 76
+    .line 477
     invoke-virtual {v10, v12}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
+    .line 478
     move-result-object v10
 
-    .line 77
+    .line 481
     invoke-virtual {v10}, Landroid/view/SurfaceControl$Builder;->setContainerLayer()Landroid/view/SurfaceControl$Builder;
 
+    .line 482
     move-result-object v10
 
+    .line 485
     iget-object v12, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorationContainerSurface:Landroid/view/SurfaceControl;
 
-    .line 78
+    .line 486
     invoke-virtual {v10, v12}, Landroid/view/SurfaceControl$Builder;->setParent(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Builder;
 
+    .line 488
     move-result-object v10
 
+    .line 491
     const-string v12, "WindowDecoration.updateCaptionContainerSurface"
 
-    .line 79
+    .line 492
     invoke-virtual {v10, v12}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
+    .line 494
     move-result-object v10
 
-    .line 80
+    .line 497
     invoke-virtual {v10}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
+    .line 498
     move-result-object v10
 
+    .line 501
     iput-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mCaptionContainerSurface:Landroid/view/SurfaceControl;
 
-    .line 81
+    .line 502
     :cond_12
     iget-object v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mCaptionContainerSurface:Landroid/view/SurfaceControl;
 
+    .line 504
     iget v12, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCaptionWidth:I
 
+    .line 506
     iget v13, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCaptionHeight:I
 
+    .line 508
     invoke-virtual {v2, v10, v12, v13}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
 
+    .line 510
     move-result-object v10
 
+    .line 513
     iget-object v12, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mCaptionContainerSurface:Landroid/view/SurfaceControl;
 
+    .line 514
     iget v13, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCaptionX:I
 
+    .line 516
     int-to-float v13, v13
 
+    .line 518
     const/4 v14, 0x0
 
-    .line 82
+    .line 519
     invoke-virtual {v10, v12, v13, v14}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
+    .line 520
     move-result-object v10
 
+    .line 523
     iget-object v12, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mCaptionContainerSurface:Landroid/view/SurfaceControl;
 
+    .line 524
     const/4 v13, -0x1
 
-    .line 83
+    .line 526
     invoke-virtual {v10, v12, v13}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
+    .line 527
     move-result-object v10
 
+    .line 530
     iget-object v12, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mCaptionContainerSurface:Landroid/view/SurfaceControl;
 
-    .line 84
+    .line 531
     invoke-virtual {v10, v12}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 85
+    .line 533
     iget-boolean v10, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mIsCaptionVisible:Z
 
+    .line 536
     if-nez v10, :cond_13
 
-    .line 86
+    .line 538
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mWindowDecorationInsets:Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;
 
+    .line 540
     if-eqz v5, :cond_1a
 
-    .line 87
+    .line 542
     iget-object v10, v5, Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;->mToken:Landroid/window/WindowContainerToken;
 
+    .line 544
     iget-object v12, v5, Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;->mOwner:Landroid/os/Binder;
 
+    .line 546
     invoke-static {}, Landroid/view/WindowInsets$Type;->captionBar()I
 
+    .line 548
     move-result v13
 
+    .line 551
     invoke-virtual {v4, v10, v12, v7, v13}, Landroid/window/WindowContainerTransaction;->removeInsetsSource(Landroid/window/WindowContainerToken;Landroid/os/IBinder;II)Landroid/window/WindowContainerTransaction;
 
-    .line 88
+    .line 552
     iget-object v10, v5, Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;->mToken:Landroid/window/WindowContainerToken;
 
+    .line 555
     iget-object v5, v5, Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;->mOwner:Landroid/os/Binder;
 
+    .line 557
     invoke-static {}, Landroid/view/WindowInsets$Type;->mandatorySystemGestures()I
 
+    .line 559
     move-result v12
 
+    .line 562
     invoke-virtual {v4, v10, v5, v7, v12}, Landroid/window/WindowContainerTransaction;->removeInsetsSource(Landroid/window/WindowContainerToken;Landroid/os/IBinder;II)Landroid/window/WindowContainerTransaction;
 
-    .line 89
+    .line 563
     iput-object v8, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mWindowDecorationInsets:Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;
 
+    .line 566
     goto/16 :goto_c
 
-    .line 90
+    .line 568
     :cond_13
     new-instance v10, Landroid/graphics/Rect;
 
+    .line 570
     invoke-direct {v10, v5}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 91
+    .line 572
     iget v5, v10, Landroid/graphics/Rect;->top:I
 
+    .line 575
     iget v12, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCaptionHeight:I
 
+    .line 577
     add-int/2addr v5, v12
 
+    .line 579
     iput v5, v10, Landroid/graphics/Rect;->bottom:I
 
-    .line 92
+    .line 580
     iget-object v5, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mOccludingCaptionElements:Ljava/util/List;
 
+    .line 582
     check-cast v5, Ljava/util/ArrayList;
 
+    .line 584
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
+    .line 586
     move-result v5
 
+    .line 589
     if-nez v5, :cond_14
 
+    .line 590
     goto/16 :goto_b
 
-    .line 93
+    .line 592
     :cond_14
     iget v8, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mInputFeatures:I
 
+    .line 594
     and-int/lit8 v8, v8, 0x4
 
+    .line 596
     if-eqz v8, :cond_15
 
-    .line 94
+    .line 598
     iget-object v8, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCustomizableCaptionRegion:Landroid/graphics/Region;
 
+    .line 600
     invoke-virtual {v8, v10}, Landroid/graphics/Region;->set(Landroid/graphics/Rect;)Z
 
-    .line 95
+    .line 602
     :cond_15
     iget-object v8, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
 
+    .line 605
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
+    .line 607
     move-result-object v8
 
-    .line 96
+    .line 610
     new-array v12, v5, [Landroid/graphics/Rect;
 
+    .line 611
     move v13, v7
 
+    .line 613
     :goto_9
     if-ge v13, v5, :cond_19
 
-    .line 97
+    .line 614
     iget-object v15, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mOccludingCaptionElements:Ljava/util/List;
 
-    .line 98
+    .line 616
     check-cast v15, Ljava/util/ArrayList;
 
+    .line 618
     invoke-virtual {v15, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
+    .line 620
     move-result-object v15
 
+    .line 623
     check-cast v15, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams$OccludingCaptionElement;
 
-    .line 99
+    .line 624
     iget v14, v15, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams$OccludingCaptionElement;->mWidthResId:I
 
-    .line 100
+    .line 626
     invoke-virtual {v8, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
+    .line 628
     move-result v14
 
-    .line 101
+    .line 631
     iget-object v9, v15, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams$OccludingCaptionElement;->mAlignment:Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams$OccludingCaptionElement$Alignment;
 
+    .line 632
     invoke-virtual {v9}, Ljava/lang/Enum;->ordinal()I
 
+    .line 634
     move-result v9
 
+    .line 637
     if-eqz v9, :cond_17
 
+    .line 638
     if-ne v9, v11, :cond_16
 
-    .line 102
+    .line 640
     new-instance v9, Landroid/graphics/Rect;
 
+    .line 642
     invoke-virtual {v10}, Landroid/graphics/Rect;->width()I
 
+    .line 644
     move-result v15
 
+    .line 647
     sub-int/2addr v15, v14
 
-    .line 103
+    .line 648
     invoke-virtual {v10}, Landroid/graphics/Rect;->width()I
 
+    .line 649
     move-result v14
 
+    .line 652
     invoke-virtual {v10}, Landroid/graphics/Rect;->height()I
 
+    .line 653
     move-result v11
 
+    .line 656
     invoke-direct {v9, v15, v7, v14, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
+    .line 657
     goto :goto_a
 
-    .line 104
+    .line 660
     :cond_16
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
+    .line 661
     new-instance v1, Ljava/lang/StringBuilder;
 
+    .line 663
     const-string v2, "Unexpected alignment "
 
+    .line 665
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 667
     iget-object v2, v15, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams$OccludingCaptionElement;->mAlignment:Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams$OccludingCaptionElement$Alignment;
 
+    .line 670
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
+    .line 672
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
+    .line 675
     move-result-object v1
 
+    .line 678
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
+    .line 679
     throw v0
 
-    .line 105
+    .line 682
     :cond_17
     new-instance v9, Landroid/graphics/Rect;
 
+    .line 683
     invoke-virtual {v10}, Landroid/graphics/Rect;->height()I
 
+    .line 685
     move-result v11
 
+    .line 688
     invoke-direct {v9, v7, v7, v14, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 106
+    .line 689
     :goto_a
     aput-object v9, v12, v13
 
-    .line 107
+    .line 692
     iget v11, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mInputFeatures:I
 
+    .line 694
     and-int/lit8 v11, v11, 0x4
 
+    .line 696
     if-eqz v11, :cond_18
 
-    .line 108
+    .line 698
     iget-object v11, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mCustomizableCaptionRegion:Landroid/graphics/Region;
 
+    .line 700
     sget-object v14, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
 
+    .line 702
     invoke-virtual {v11, v9, v14}, Landroid/graphics/Region;->op(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
+    .line 704
     :cond_18
     add-int/lit8 v13, v13, 0x1
 
+    .line 707
     const/4 v9, 0x2
 
+    .line 709
     const/4 v11, 0x1
 
+    .line 710
     const/4 v14, 0x0
 
+    .line 711
     goto :goto_9
 
+    .line 712
     :cond_19
     move-object v8, v12
 
-    .line 109
+    .line 713
     :goto_b
     new-instance v5, Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;
 
+    .line 714
     iget-object v9, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 716
     iget-object v9, v9, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
+    .line 718
     iget-object v11, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mOwner:Landroid/os/Binder;
 
+    .line 720
     invoke-direct {v5, v9, v11, v10, v8}, Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;-><init>(Landroid/window/WindowContainerToken;Landroid/os/Binder;Landroid/graphics/Rect;[Landroid/graphics/Rect;)V
 
-    .line 110
+    .line 722
     iget-object v8, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mWindowDecorationInsets:Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;
 
+    .line 725
     invoke-virtual {v5, v8}, Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;->equals(Ljava/lang/Object;)Z
 
+    .line 727
     move-result v8
 
+    .line 730
     if-nez v8, :cond_1a
 
-    .line 111
+    .line 731
     iput-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mWindowDecorationInsets:Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;
 
-    .line 112
+    .line 733
     invoke-virtual {v5, v4}, Lcom/android/wm/shell/windowdecor/WindowDecoration$WindowDecorationInsets;->addOrUpdate(Landroid/window/WindowContainerTransaction;)V
 
-    .line 113
+    .line 735
     :cond_1a
     :goto_c
     iget-boolean v4, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mSetTaskPositionAndCrop:Z
 
+    .line 738
     if-eqz v4, :cond_1b
 
-    .line 114
+    .line 740
     iget-object v4, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 742
     iget-object v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->positionInParent:Landroid/graphics/Point;
 
-    .line 115
+    .line 744
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 746
     iget v8, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mWidth:I
 
+    .line 748
     iget v9, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mHeight:I
 
+    .line 750
     invoke-virtual {v2, v5, v8, v9}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
 
-    .line 116
+    .line 752
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 755
     iget v8, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mWidth:I
 
+    .line 757
     iget v6, v6, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutResult;->mHeight:I
 
+    .line 759
     invoke-virtual {v3, v5, v8, v6}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
 
+    .line 761
     move-result-object v5
 
+    .line 764
     iget-object v6, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 765
     iget v8, v4, Landroid/graphics/Point;->x:I
 
+    .line 767
     int-to-float v8, v8
 
+    .line 769
     iget v4, v4, Landroid/graphics/Point;->y:I
 
+    .line 770
     int-to-float v4, v4
 
-    .line 117
+    .line 772
     invoke-virtual {v5, v6, v8, v4}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 118
+    .line 773
     :cond_1b
     iget-object v4, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 776
     invoke-virtual {v4}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
 
+    .line 778
     move-result v4
 
+    .line 781
     const/4 v5, 0x1
 
+    .line 782
     if-ne v4, v5, :cond_1c
 
+    .line 783
     :goto_d
     const/4 v14, 0x0
 
+    .line 785
     goto :goto_e
 
-    .line 119
+    .line 786
     :cond_1c
     iget-object v4, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mDecorWindowContext:Landroid/content/Context;
 
-    .line 120
+    .line 787
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
+    .line 789
     move-result-object v4
 
+    .line 792
     iget v5, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mShadowRadiusId:I
 
+    .line 793
     if-nez v5, :cond_1d
 
+    .line 795
     goto :goto_d
 
-    .line 121
+    .line 797
     :cond_1d
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimension(I)F
 
+    .line 798
     move-result v14
 
-    .line 122
+    .line 801
     :goto_e
     iget-object v4, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 802
     invoke-virtual {v2, v4, v14}, Landroid/view/SurfaceControl$Transaction;->setShadowRadius(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
+    .line 804
     move-result-object v4
 
+    .line 807
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 808
     invoke-virtual {v4, v5}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 123
+    .line 810
     iget-object v4, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 813
     invoke-virtual {v3, v4, v14}, Landroid/view/SurfaceControl$Transaction;->setShadowRadius(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 124
+    .line 815
     iget-object v4, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 818
     invoke-virtual {v4}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
 
+    .line 820
     move-result v4
 
+    .line 823
     const/4 v5, 0x5
 
+    .line 824
     if-ne v4, v5, :cond_1f
 
-    .line 125
+    .line 825
     sget-boolean v4, Lcom/android/wm/shell/shared/DesktopModeStatus;->IS_VEILED_RESIZE_ENABLED:Z
 
+    .line 827
     if-nez v4, :cond_1e
 
-    .line 126
+    .line 829
     iget-object v4, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
+    .line 831
     iget-object v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->taskDescription:Landroid/app/ActivityManager$TaskDescription;
 
+    .line 833
     invoke-virtual {v4}, Landroid/app/ActivityManager$TaskDescription;->getBackgroundColor()I
 
+    .line 835
     move-result v4
 
-    .line 127
+    .line 838
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTmpColor:[F
 
+    .line 839
     invoke-static {v4}, Landroid/graphics/Color;->red(I)I
 
+    .line 841
     move-result v6
 
+    .line 844
     int-to-float v6, v6
 
+    .line 845
     const/high16 v8, 0x437f0000    # 255.0f
 
+    .line 846
     div-float/2addr v6, v8
 
+    .line 848
     aput v6, v5, v7
 
-    .line 128
+    .line 849
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTmpColor:[F
 
+    .line 851
     invoke-static {v4}, Landroid/graphics/Color;->green(I)I
 
+    .line 853
     move-result v6
 
+    .line 856
     int-to-float v6, v6
 
+    .line 857
     div-float/2addr v6, v8
 
+    .line 858
     const/4 v7, 0x1
 
+    .line 859
     aput v6, v5, v7
 
-    .line 129
+    .line 860
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTmpColor:[F
 
+    .line 862
     invoke-static {v4}, Landroid/graphics/Color;->blue(I)I
 
+    .line 864
     move-result v4
 
+    .line 867
     int-to-float v4, v4
 
+    .line 868
     div-float/2addr v4, v8
 
+    .line 869
     const/4 v6, 0x2
 
+    .line 870
     aput v4, v5, v6
 
-    .line 130
+    .line 871
     iget-object v4, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 873
     iget-object v5, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTmpColor:[F
 
+    .line 875
     invoke-virtual {v2, v4, v5}, Landroid/view/SurfaceControl$Transaction;->setColor(Landroid/view/SurfaceControl;[F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 131
+    .line 877
     :cond_1e
     iget-object v4, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 880
     iget v5, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mCornerRadius:I
 
+    .line 882
     int-to-float v5, v5
 
+    .line 884
     invoke-virtual {v2, v4, v5}, Landroid/view/SurfaceControl$Transaction;->setCornerRadius(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 132
+    .line 885
     iget-object v0, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 888
     iget v1, v1, Lcom/android/wm/shell/windowdecor/WindowDecoration$RelayoutParams;->mCornerRadius:I
 
+    .line 890
     int-to-float v1, v1
 
+    .line 892
     invoke-virtual {v3, v0, v1}, Landroid/view/SurfaceControl$Transaction;->setCornerRadius(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
+    .line 893
     goto :goto_f
 
-    .line 133
+    .line 896
     :cond_1f
     sget-boolean v1, Lcom/android/wm/shell/shared/DesktopModeStatus;->IS_VEILED_RESIZE_ENABLED:Z
 
+    .line 897
     if-nez v1, :cond_20
 
-    .line 134
+    .line 899
     iget-object v0, v0, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
+    .line 901
     invoke-virtual {v2, v0}, Landroid/view/SurfaceControl$Transaction;->unsetColor(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
+    .line 903
     :cond_20
     :goto_f
     return-void

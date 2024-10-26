@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/monet/CustomDynamicColors$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/Function;
@@ -273,435 +273,438 @@
     const/4 v8, 0x0
 
     .line 143
-    const-string v1, "theme_app"
+    const-string/jumbo v1, "theme_app"
 
     .line 144
     const/4 v4, 0x1
 
-    .line 146
+    .line 147
     const/4 v5, 0x0
 
-    .line 147
+    .line 148
     const/4 v6, 0x0
 
-    .line 148
+    .line 149
     move-object v0, p0
 
-    .line 149
+    .line 150
     invoke-direct/range {v0 .. v8}, Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;-><init>(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;ZLjava/util/function/Function;Ljava/util/function/Function;Lcom/google/ux/material/libmonet/dynamiccolor/ContrastCurve;Ljava/util/function/Function;)V
 
-    .line 150
+    .line 151
     return-object p0
 
-    .line 153
+    .line 154
     :pswitch_9
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 154
+    .line 155
     invoke-static {}, Lcom/android/systemui/monet/CustomDynamicColors;->underSurface()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 157
+    .line 158
     move-result-object p0
 
-    .line 160
+    .line 161
     return-object p0
 
-    .line 161
+    .line 162
     :pswitch_a
     new-instance p1, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;
 
-    .line 162
+    .line 163
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->onShadeInactive()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 164
+    .line 165
     move-result-object v1
 
-    .line 167
+    .line 168
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->onShadeInactiveVariant()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 168
+    .line 169
     move-result-object v2
 
-    .line 171
+    .line 172
     sget-object v5, Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;->NEARER:Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;
 
-    .line 172
+    .line 173
     const/4 v6, 0x0
 
-    .line 174
+    .line 175
     const-wide/high16 v3, 0x4024000000000000L    # 10.0
 
-    .line 175
+    .line 176
     move-object v0, p1
 
-    .line 177
+    .line 178
     invoke-direct/range {v0 .. v6}, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;DLcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;Z)V
 
-    .line 178
+    .line 179
     return-object p1
 
-    .line 181
+    .line 182
     :pswitch_b
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->shadeInactive()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 182
+    .line 183
     move-result-object p0
 
-    .line 185
+    .line 186
     return-object p0
 
-    .line 186
+    .line 187
     :pswitch_c
     new-instance p1, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;
 
-    .line 187
+    .line 188
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->clockHour()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 189
+    .line 190
     move-result-object v1
 
-    .line 192
+    .line 193
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->clockMinute()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 193
+    .line 194
     move-result-object v2
 
-    .line 196
+    .line 197
     sget-object v5, Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;->DARKER:Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;
 
-    .line 197
+    .line 198
     const/4 v6, 0x0
 
-    .line 199
+    .line 200
     const-wide/high16 v3, 0x4024000000000000L    # 10.0
 
-    .line 200
+    .line 201
     move-object v0, p1
 
-    .line 202
+    .line 203
     invoke-direct/range {v0 .. v6}, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;DLcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;Z)V
 
-    .line 203
+    .line 204
     return-object p1
 
-    .line 206
+    .line 207
     :pswitch_d
     new-instance p1, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;
 
-    .line 207
+    .line 208
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->brandA()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 209
+    .line 210
     move-result-object v1
 
-    .line 212
+    .line 213
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->brandB()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 213
+    .line 214
     move-result-object v2
 
-    .line 216
+    .line 217
     sget-object v5, Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;->NEARER:Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;
 
-    .line 217
+    .line 218
     const/4 v6, 0x0
 
-    .line 219
+    .line 220
     const-wide/high16 v3, 0x4024000000000000L    # 10.0
 
-    .line 220
+    .line 221
     move-object v0, p1
 
-    .line 222
+    .line 223
     invoke-direct/range {v0 .. v6}, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;DLcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;Z)V
 
-    .line 223
+    .line 224
     return-object p1
 
-    .line 226
+    .line 227
     :pswitch_e
     iget-object p0, p0, Lcom/android/systemui/monet/CustomDynamicColors;->mMdc:Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;
 
-    .line 227
+    .line 228
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 229
+    .line 230
     invoke-static {}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->surfaceContainerLow()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 232
+    .line 233
     move-result-object p0
 
-    .line 235
+    .line 236
     return-object p0
 
-    .line 236
+    .line 237
     :pswitch_f
     new-instance p1, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;
 
-    .line 237
+    .line 238
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->brandB()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 239
+    .line 240
     move-result-object v1
 
-    .line 242
+    .line 243
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->brandC()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 243
+    .line 244
     move-result-object v2
 
-    .line 246
+    .line 247
     sget-object v5, Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;->NEARER:Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;
 
-    .line 247
+    .line 248
     const/4 v6, 0x0
 
-    .line 249
+    .line 250
     const-wide/high16 v3, 0x4024000000000000L    # 10.0
 
-    .line 250
+    .line 251
     move-object v0, p1
 
-    .line 252
+    .line 253
     invoke-direct/range {v0 .. v6}, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;DLcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;Z)V
 
-    .line 253
+    .line 254
     return-object p1
 
-    .line 256
+    .line 257
     :pswitch_10
     iget-object p0, p0, Lcom/android/systemui/monet/CustomDynamicColors;->mMdc:Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;
 
-    .line 257
+    .line 258
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 259
+    .line 260
     invoke-static {}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->surfaceContainerLow()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 262
+    .line 263
     move-result-object p0
 
-    .line 265
+    .line 266
     return-object p0
 
-    .line 266
+    .line 267
     :pswitch_11
     new-instance p1, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;
 
-    .line 267
+    .line 268
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->onShadeActiveVariant()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 269
+    .line 270
     move-result-object v1
 
-    .line 272
+    .line 273
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->onShadeActive()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 273
+    .line 274
     move-result-object v2
 
-    .line 276
+    .line 277
     sget-object v5, Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;->NEARER:Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;
 
-    .line 277
+    .line 278
     const/4 v6, 0x0
 
-    .line 279
+    .line 280
     const-wide/high16 v3, 0x4034000000000000L    # 20.0
 
-    .line 280
+    .line 281
     move-object v0, p1
 
-    .line 282
+    .line 283
     invoke-direct/range {v0 .. v6}, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;DLcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;Z)V
 
-    .line 283
+    .line 284
     return-object p1
 
-    .line 286
+    .line 287
     :pswitch_12
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->shadeActive()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 287
+    .line 288
     move-result-object p0
 
-    .line 290
+    .line 291
     return-object p0
 
-    .line 291
+    .line 292
     :pswitch_13
     new-instance p1, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;
 
-    .line 292
+    .line 293
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->shadeActive()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 294
+    .line 295
     move-result-object v1
 
-    .line 297
+    .line 298
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->shadeInactive()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 298
+    .line 299
     move-result-object v2
 
-    .line 301
+    .line 302
     sget-object v5, Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;->LIGHTER:Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;
 
-    .line 302
+    .line 303
     const/4 v6, 0x0
 
-    .line 304
+    .line 305
     const-wide/high16 v3, 0x403e000000000000L    # 30.0
 
-    .line 305
+    .line 306
     move-object v0, p1
 
-    .line 307
+    .line 308
     invoke-direct/range {v0 .. v6}, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;DLcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;Z)V
 
-    .line 308
+    .line 309
     return-object p1
 
-    .line 311
+    .line 312
     :pswitch_14
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 312
+    .line 313
     invoke-static {}, Lcom/android/systemui/monet/CustomDynamicColors;->underSurface()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 315
+    .line 316
     move-result-object p0
 
-    .line 318
+    .line 319
     return-object p0
 
-    .line 319
+    .line 320
     :pswitch_15
     new-instance p1, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;
 
-    .line 320
+    .line 321
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->brandD()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 322
+    .line 323
     move-result-object v1
 
-    .line 325
+    .line 326
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->brandA()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 326
+    .line 327
     move-result-object v2
 
-    .line 329
+    .line 330
     sget-object v5, Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;->NEARER:Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;
 
-    .line 330
+    .line 331
     const/4 v6, 0x0
 
-    .line 332
+    .line 333
     const-wide/high16 v3, 0x4024000000000000L    # 10.0
 
-    .line 333
+    .line 334
     move-object v0, p1
 
-    .line 335
+    .line 336
     invoke-direct/range {v0 .. v6}, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;DLcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;Z)V
 
-    .line 336
+    .line 337
     return-object p1
 
-    .line 339
+    .line 340
     :pswitch_16
     iget-object p0, p0, Lcom/android/systemui/monet/CustomDynamicColors;->mMdc:Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;
 
-    .line 340
+    .line 341
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 342
+    .line 343
     invoke-static {}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->surfaceContainerLow()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 345
+    .line 346
     move-result-object p0
 
-    .line 348
+    .line 349
     return-object p0
 
-    .line 349
+    .line 350
     :pswitch_17
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 350
+    .line 351
     invoke-static {}, Lcom/android/systemui/monet/CustomDynamicColors;->widgetBackground()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 353
+    .line 354
     move-result-object p0
 
-    .line 356
+    .line 357
     return-object p0
 
-    .line 357
+    .line 358
     :pswitch_18
     new-instance p1, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;
 
-    .line 358
+    .line 359
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->brandC()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 360
+    .line 361
     move-result-object v1
 
-    .line 363
+    .line 364
     invoke-virtual {p0}, Lcom/android/systemui/monet/CustomDynamicColors;->brandD()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 364
+    .line 365
     move-result-object v2
 
-    .line 367
+    .line 368
     sget-object v5, Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;->NEARER:Lcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;
 
-    .line 368
+    .line 369
     const/4 v6, 0x0
 
-    .line 370
+    .line 371
     const-wide/high16 v3, 0x4024000000000000L    # 10.0
 
-    .line 371
+    .line 372
     move-object v0, p1
 
-    .line 373
+    .line 374
     invoke-direct/range {v0 .. v6}, Lcom/google/ux/material/libmonet/dynamiccolor/ToneDeltaPair;-><init>(Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;DLcom/google/ux/material/libmonet/dynamiccolor/TonePolarity;Z)V
 
-    .line 374
+    .line 375
     return-object p1
 
-    .line 377
+    .line 378
     :pswitch_19
     iget-object p0, p0, Lcom/android/systemui/monet/CustomDynamicColors;->mMdc:Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;
 
-    .line 378
+    .line 379
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 380
+    .line 381
     invoke-static {}, Lcom/google/ux/material/libmonet/dynamiccolor/MaterialDynamicColors;->surfaceContainerLow()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 383
+    .line 384
     move-result-object p0
 
-    .line 386
+    .line 387
     return-object p0
 
-    .line 387
+    .line 388
     :pswitch_1a
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 388
+    .line 389
     invoke-static {}, Lcom/android/systemui/monet/CustomDynamicColors;->widgetBackground()Lcom/google/ux/material/libmonet/dynamiccolor/DynamicColor;
 
-    .line 391
+    .line 392
     move-result-object p0
 
-    .line 394
+    .line 395
     return-object p0
 
-    .line 395
+    .line 396
+    nop
+
+    .line 397
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1a
@@ -732,5 +735,5 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 396
+    .line 398
 .end method

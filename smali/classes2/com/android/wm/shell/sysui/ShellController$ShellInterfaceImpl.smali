@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/sysui/ShellInterface;
@@ -27,6 +27,54 @@
 
 
 # virtual methods
+.method public final addDisplayImeChangeListener(Lcom/google/android/systemui/input/TouchContextService$4;Ljava/util/concurrent/Executor;)V
+    .locals 7
+
+    .line 1
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_SYSUI_EVENTS_enabled:[Z
+
+    .line 2
+    const/4 v1, 0x1
+
+    .line 4
+    aget-boolean v0, v0, v1
+
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 7
+    sget-object v1, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_SYSUI_EVENTS:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
+
+    .line 9
+    const/4 v5, 0x0
+
+    .line 11
+    const/4 v6, 0x0
+
+    .line 12
+    const-wide v2, 0x6dde32ce7a713d23L    # 1.7056176270088932E221
+
+    .line 13
+    const/4 v4, 0x0
+
+    .line 18
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+
+    .line 19
+    :cond_0
+    iget-object p0, p0, Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl;->this$0:Lcom/android/wm/shell/sysui/ShellController;
+
+    .line 22
+    iget-object p0, p0, Lcom/android/wm/shell/sysui/ShellController;->mDisplayImeChangeListeners:Ljava/util/concurrent/ConcurrentHashMap;
+
+    .line 24
+    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 26
+    return-void
+    .line 29
+.end method
+
 .method public final createExternalInterfaces(Landroid/os/Bundle;)V
     .locals 3
 
@@ -213,7 +261,7 @@
     new-instance v1, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;
 
     .line 6
-    const/4 v2, 0x3
+    const/4 v2, 0x1
 
     .line 8
     invoke-direct {v1, v2, p0}, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;-><init>(ILjava/lang/Object;)V
@@ -242,7 +290,7 @@
     new-instance v1, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;
 
     .line 6
-    const/4 v2, 0x4
+    const/4 v2, 0x2
 
     .line 8
     invoke-direct {v1, v2, p0}, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;-><init>(ILjava/lang/Object;)V
@@ -268,10 +316,10 @@
     iget-object v0, v0, Lcom/android/wm/shell/sysui/ShellController;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
 
     .line 4
-    new-instance v1, Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl$$ExternalSyntheticLambda5;
+    new-instance v1, Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl$$ExternalSyntheticLambda6;
 
     .line 6
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl$$ExternalSyntheticLambda5;-><init>(Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl;ZZZ)V
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl$$ExternalSyntheticLambda6;-><init>(Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl;ZZZ)V
 
     .line 8
     check-cast v0, Lcom/android/wm/shell/common/HandlerExecutor;
@@ -294,10 +342,10 @@
     iget-object v0, v0, Lcom/android/wm/shell/sysui/ShellController;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
 
     .line 4
-    new-instance v1, Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl$$ExternalSyntheticLambda7;
+    new-instance v1, Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl$$ExternalSyntheticLambda8;
 
     .line 6
-    invoke-direct {v1, p0, p1, p2}, Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl$$ExternalSyntheticLambda7;-><init>(Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl;ILandroid/content/Context;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl$$ExternalSyntheticLambda8;-><init>(Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl;ILandroid/content/Context;)V
 
     .line 8
     check-cast v0, Lcom/android/wm/shell/common/HandlerExecutor;
@@ -337,4 +385,52 @@
     .line 14
     return-void
     .line 17
+.end method
+
+.method public final removeDisplayImeChangeListener(Lcom/google/android/systemui/input/TouchContextService$4;)V
+    .locals 7
+
+    .line 1
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_SYSUI_EVENTS_enabled:[Z
+
+    .line 2
+    const/4 v1, 0x1
+
+    .line 4
+    aget-boolean v0, v0, v1
+
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 7
+    sget-object v1, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_SYSUI_EVENTS:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
+
+    .line 9
+    const/4 v5, 0x0
+
+    .line 11
+    const/4 v6, 0x0
+
+    .line 12
+    const-wide v2, -0x25090410886ec427L    # -1.5931845133021652E130
+
+    .line 13
+    const/4 v4, 0x0
+
+    .line 18
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+
+    .line 19
+    :cond_0
+    iget-object p0, p0, Lcom/android/wm/shell/sysui/ShellController$ShellInterfaceImpl;->this$0:Lcom/android/wm/shell/sysui/ShellController;
+
+    .line 22
+    iget-object p0, p0, Lcom/android/wm/shell/sysui/ShellController;->mDisplayImeChangeListeners:Ljava/util/concurrent/ConcurrentHashMap;
+
+    .line 24
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 26
+    return-void
+    .line 29
 .end method

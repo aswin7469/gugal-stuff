@@ -1,18 +1,12 @@
 .class public final enum Lcom/android/systemui/battery/unified/ColorProfile;
 .super Ljava/lang/Enum;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
 .field public static final synthetic $VALUES:[Lcom/android/systemui/battery/unified/ColorProfile;
 
-.field public static final enum Active:Lcom/android/systemui/battery/unified/ColorProfile;
-
-.field public static final enum Error:Lcom/android/systemui/battery/unified/ColorProfile;
-
 .field public static final enum None:Lcom/android/systemui/battery/unified/ColorProfile;
-
-.field public static final enum Warning:Lcom/android/systemui/battery/unified/ColorProfile;
 
 
 # direct methods
@@ -47,53 +41,44 @@
     invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 17
-    sput-object v1, Lcom/android/systemui/battery/unified/ColorProfile;->Active:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 20
     new-instance v2, Lcom/android/systemui/battery/unified/ColorProfile;
 
-    .line 22
+    .line 20
     const-string v3, "Warning"
 
-    .line 24
+    .line 22
     const/4 v4, 0x2
 
-    .line 26
+    .line 24
     invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 27
-    sput-object v2, Lcom/android/systemui/battery/unified/ColorProfile;->Warning:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 30
+    .line 25
     new-instance v3, Lcom/android/systemui/battery/unified/ColorProfile;
 
-    .line 32
+    .line 28
     const-string v4, "Error"
 
-    .line 34
+    .line 30
     const/4 v5, 0x3
 
-    .line 36
+    .line 32
     invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 37
-    sput-object v3, Lcom/android/systemui/battery/unified/ColorProfile;->Error:Lcom/android/systemui/battery/unified/ColorProfile;
-
-    .line 40
+    .line 33
     filled-new-array {v0, v1, v2, v3}, [Lcom/android/systemui/battery/unified/ColorProfile;
 
-    .line 42
+    .line 36
     move-result-object v0
 
-    .line 45
+    .line 39
     sput-object v0, Lcom/android/systemui/battery/unified/ColorProfile;->$VALUES:[Lcom/android/systemui/battery/unified/ColorProfile;
 
-    .line 46
+    .line 40
     invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;->enumEntries([Ljava/lang/Enum;)Lkotlin/enums/EnumEntries;
 
-    .line 48
+    .line 42
     return-void
-    .line 51
+    .line 45
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/systemui/battery/unified/ColorProfile;

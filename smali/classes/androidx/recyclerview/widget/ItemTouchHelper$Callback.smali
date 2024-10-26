@@ -1,6 +1,6 @@
 .class public abstract Landroidx/recyclerview/widget/ItemTouchHelper$Callback;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -205,7 +205,7 @@
     if-eqz p4, :cond_3
 
     .line 4
-    const p4, 0x7f0b03b4    # @id/item_touch_helper_previous_elevation
+    const p4, 0x7f0a03d5    # @id/item_touch_helper_previous_elevation
 
     .line 6
     invoke-virtual {p1, p4}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -323,7 +323,7 @@
     iget-object p0, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     .line 2
-    const p1, 0x7f0b03b4    # @id/item_touch_helper_previous_elevation
+    const p1, 0x7f0a03d5    # @id/item_touch_helper_previous_elevation
 
     .line 4
     invoke-virtual {p0, p1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -395,7 +395,7 @@
     move-result-object p1
 
     .line 10
-    const v0, 0x7f07032b    # @dimen/item_touch_helper_max_drag_scroll_per_frame '20.0dp'
+    const v0, 0x7f070367    # @dimen/item_touch_helper_max_drag_scroll_per_frame '20.0dp'
 
     .line 11
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

@@ -1,9 +1,9 @@
 .class public final synthetic Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Lcom/android/systemui/statusbar/window/StatusBarWindowStateListener;
+.implements Lcom/android/systemui/statusbar/policy/IndividualSensorPrivacyController$Callback;
 
 
 # instance fields
@@ -27,43 +27,16 @@
 
 
 # virtual methods
-.method public final onStatusBarWindowStateChanged(I)V
-    .locals 1
+.method public final onSensorBlockedChanged(IZ)V
+    .locals 0
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda3;->f$0:Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;
 
     .line 2
-    iget-boolean p1, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mIsAttached:Z
+    invoke-virtual {p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->updateMicCameraBlockedStatusIcon()V
 
     .line 4
-    if-eqz p1, :cond_1
-
-    .line 6
-    iget-boolean p1, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mEntryAnimationsFinished:Z
-
-    .line 8
-    if-nez p1, :cond_0
-
-    .line 10
-    goto :goto_0
-
-    .line 12
-    :cond_0
-    iget-object p1, p0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;->mMainExecutor:Ljava/util/concurrent/Executor;
-
-    .line 13
-    new-instance v0, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda9;
-
-    .line 15
-    invoke-direct {v0, p0}, Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController$$ExternalSyntheticLambda9;-><init>(Lcom/android/systemui/ambient/statusbar/ui/AmbientStatusBarViewController;)V
-
-    .line 17
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 20
-    :cond_1
-    :goto_0
     return-void
-    .line 23
+    .line 7
 .end method

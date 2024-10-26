@@ -5,7 +5,9 @@
     <item>ചാർജ്ജുചെയ്യുമ്പോൾ ശതമാനം കാണിക്കുക (ഡിഫോൾട്ട്)</item>
     <item>ഈ ഐക്കൺ കാണിക്കരുത്</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>മണിക്കൂറും മിനിറ്റും സെക്കൻഡും കാണിക്കുക</item>
     <item>മണിക്കൂറും മിനിറ്റും കാണിക്കുക (ഡിഫോൾട്ട്)</item>

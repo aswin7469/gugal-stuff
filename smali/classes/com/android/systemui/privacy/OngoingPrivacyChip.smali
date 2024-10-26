@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/privacy/OngoingPrivacyChip;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/events/BackgroundAnimatableView;
@@ -102,12 +102,12 @@
     .line 7
     iput-object p2, p0, Lcom/android/systemui/privacy/OngoingPrivacyChip;->privacyList:Ljava/util/List;
 
-    const p2, 0x7f0e01c4    # @layout/ongoing_privacy_chip 'res/layout/ongoing_privacy_chip.xml'
+    const p2, 0x7f0d01d1    # @layout/ongoing_privacy_chip 'res/layout/ongoing_privacy_chip.xml'
 
     .line 8
     invoke-static {p1, p2, p0}, Landroid/widget/FrameLayout;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const p2, 0x7f0b05fb    # @id/privacy_chip
+    const p2, 0x7f0a0624    # @id/privacy_chip
 
     .line 9
     invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->setId(I)V
@@ -133,7 +133,7 @@
     .line 12
     invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->setClipToPadding(Z)V
 
-    const p2, 0x7f0b0388    # @id/icons_container
+    const p2, 0x7f0a03a8    # @id/icons_container
 
     .line 13
     invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
@@ -238,6 +238,7 @@
     .line 24
     :cond_0
     return-void
+    .line 27
 .end method
 
 .method public final setBoundsForAnimation(IIII)V
@@ -336,7 +337,7 @@
     move-result-object v1
 
     .line 30
-    const v2, 0x7f14070f    # @string/ongoing_privacy_chip_content_multiple_apps 'Applications are using your %s.'
+    const v2, 0x7f13076a    # @string/ongoing_privacy_chip_content_multiple_apps 'Applications are using your %s.'
 
     .line 31
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -558,7 +559,7 @@
     move-result-object v0
 
     .line 9
-    const v1, 0x7f070836    # @dimen/ongoing_appops_chip_icon_margin '4.0dp'
+    const v1, 0x7f070879    # @dimen/ongoing_appops_chip_icon_margin '4.0dp'
 
     .line 10
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -582,7 +583,7 @@
     move-result-object v0
 
     .line 26
-    const v1, 0x7f070837    # @dimen/ongoing_appops_chip_icon_size '16.0sp'
+    const v1, 0x7f07087a    # @dimen/ongoing_appops_chip_icon_size '16.0sp'
 
     .line 27
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -627,7 +628,7 @@
     move-result-object v0
 
     .line 57
-    const v1, 0x7f070835    # @dimen/ongoing_appops_chip_height '24.0sp'
+    const v1, 0x7f070878    # @dimen/ongoing_appops_chip_height '24.0sp'
 
     .line 58
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -648,7 +649,7 @@
     move-result-object v1
 
     .line 72
-    const v3, 0x7f07083b    # @dimen/ongoing_appops_chip_side_padding '8.0dp'
+    const v3, 0x7f07087e    # @dimen/ongoing_appops_chip_side_padding '8.0dp'
 
     .line 73
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -684,7 +685,7 @@
     move-result-object p0
 
     .line 98
-    const v1, 0x7f080b67    # @drawable/statusbar_privacy_chip_bg 'res/drawable/statusbar_privacy_chip_bg.xml'
+    const v1, 0x7f080bae    # @drawable/statusbar_privacy_chip_bg 'res/drawable/statusbar_privacy_chip_bg.xml'
 
     .line 99
     invoke-virtual {p0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;

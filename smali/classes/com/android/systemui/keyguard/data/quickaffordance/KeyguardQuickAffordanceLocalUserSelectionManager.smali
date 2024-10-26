@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceSelectionManager;
@@ -14,8 +14,6 @@
 .field public final selections:Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
 .field public sharedPrefs:Landroid/content/SharedPreferences;
-
-.field public final systemSettings:Lcom/android/systemui/util/settings/SystemSettingsImpl;
 
 .field public final userFileManager:Lcom/android/systemui/settings/UserFileManager;
 
@@ -39,140 +37,137 @@
     iput-object p3, p0, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager;->userTracker:Lcom/android/systemui/settings/UserTracker;
 
     .line 9
-    iput-object p4, p0, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager;->systemSettings:Lcom/android/systemui/util/settings/SystemSettingsImpl;
-
-    .line 11
     check-cast p3, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 13
+    .line 11
     invoke-virtual {p3}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserId()I
 
-    .line 15
+    .line 13
     move-result p1
 
-    .line 18
+    .line 16
     check-cast p2, Lcom/android/systemui/settings/UserFileManagerImpl;
 
-    .line 19
+    .line 17
     const-string p3, "quick_affordance_selections"
 
-    .line 21
+    .line 19
     invoke-virtual {p2, p1, p3}, Lcom/android/systemui/settings/UserFileManagerImpl;->getSharedPreferences$1(ILjava/lang/String;)Landroid/content/SharedPreferences;
 
-    .line 23
+    .line 21
     move-result-object p1
 
-    .line 26
+    .line 24
     iput-object p1, p0, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager;->sharedPrefs:Landroid/content/SharedPreferences;
 
-    .line 27
+    .line 25
     new-instance p1, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager$userId$1;
 
-    .line 29
+    .line 27
     const/4 p2, 0x0
 
-    .line 31
+    .line 29
     invoke-direct {p1, p0, p2}, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager$userId$1;-><init>(Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager;Lkotlin/coroutines/Continuation;)V
 
-    .line 32
+    .line 30
     invoke-static {p1}, Lcom/android/systemui/utils/coroutines/flow/FlowConflatedKt;->conflatedCallbackFlow(Lkotlin/jvm/functions/Function2;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 35
+    .line 33
     move-result-object p1
 
-    .line 38
+    .line 36
     new-instance p3, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager$defaults$2;
 
-    .line 39
+    .line 37
     invoke-direct {p3, p0}, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager$defaults$2;-><init>(Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager;)V
 
-    .line 41
+    .line 39
     invoke-static {p3}, Lkotlin/LazyKt__LazyJVMKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
 
-    .line 44
+    .line 42
     move-result-object p3
 
-    .line 47
+    .line 45
     iput-object p3, p0, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager;->defaults$delegate:Lkotlin/Lazy;
 
-    .line 48
+    .line 46
     new-instance v1, Landroid/content/IntentFilter;
 
-    .line 50
+    .line 48
     const-string p3, "com.android.systemui.backup.RESTORE_FINISHED"
 
-    .line 52
+    .line 50
     invoke-direct {v1, p3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 54
+    .line 52
     const/4 v3, 0x4
 
-    .line 57
+    .line 55
     const-string v4, "com.android.systemui.permission.SELF"
 
-    .line 58
+    .line 56
     const/4 v2, 0x0
 
-    .line 60
+    .line 58
     const/4 v5, 0x2
 
-    .line 61
+    .line 59
     move-object v0, p5
 
-    .line 62
+    .line 60
     invoke-static/range {v0 .. v5}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->broadcastFlow$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/IntentFilter;Landroid/os/UserHandle;ILjava/lang/String;I)Lkotlinx/coroutines/flow/Flow;
 
-    .line 63
+    .line 61
     move-result-object p3
 
-    .line 66
+    .line 64
     new-instance p4, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager$selections$1;
 
-    .line 67
+    .line 65
     const/4 p5, 0x2
 
-    .line 69
+    .line 67
     invoke-direct {p4, p5, p2}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 70
+    .line 68
     new-instance p5, Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;
 
-    .line 73
+    .line 71
     invoke-direct {p5, p4, p3}, Lkotlinx/coroutines/flow/FlowKt__EmittersKt$onStart$$inlined$unsafeFlow$1;-><init>(Lkotlin/jvm/functions/Function2;Lkotlinx/coroutines/flow/Flow;)V
 
-    .line 75
+    .line 73
     new-instance p3, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager$selections$2;
 
-    .line 78
+    .line 76
     const/4 p4, 0x3
 
-    .line 80
+    .line 78
     invoke-direct {p3, p4, p2}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    .line 81
+    .line 79
     new-instance p4, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;
 
-    .line 84
+    .line 82
     invoke-direct {p4, p1, p5, p3}, Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$unsafeFlow$1;-><init>(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)V
 
-    .line 86
+    .line 84
     new-instance p1, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager$special$$inlined$flatMapLatest$1;
 
-    .line 89
+    .line 87
     invoke-direct {p1, p0, p2}, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager$special$$inlined$flatMapLatest$1;-><init>(Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager;Lkotlin/coroutines/Continuation;)V
 
-    .line 91
+    .line 89
     invoke-static {p4, p1}, Lkotlinx/coroutines/flow/FlowKt;->transformLatest(Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 94
+    .line 92
     move-result-object p1
 
-    .line 97
+    .line 95
     iput-object p1, p0, Lcom/android/systemui/keyguard/data/quickaffordance/KeyguardQuickAffordanceLocalUserSelectionManager;->selections:Lkotlinx/coroutines/flow/internal/ChannelFlowTransformLatest;
 
-    .line 98
+    .line 96
     return-void
-    .line 100
+    .line 98
 .end method
 
 
@@ -187,7 +182,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f05004f    # @bool/custom_lockscreen_shortcuts_enabled 'true'
+    const v1, 0x7f05005f    # @bool/custom_lockscreen_shortcuts_enabled 'true'
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -507,5 +502,4 @@
 
     .line 30
     return-void
-    .line 33
 .end method

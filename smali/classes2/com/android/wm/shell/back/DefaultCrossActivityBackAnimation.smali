@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/back/DefaultCrossActivityBackAnimation;
 .super Lcom/android/wm/shell/back/CrossActivityBackAnimation;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -37,7 +37,7 @@
     move-result-object p1
 
     .line 17
-    const p2, 0x7f070202    # @dimen/cross_activity_back_entering_start_offset '96.0dp'
+    const p2, 0x7f070223    # @dimen/cross_activity_back_entering_start_offset '96.0dp'
 
     .line 18
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -316,7 +316,6 @@
 
     .line 93
     return-void
-    .line 96
 .end method
 
 .method public final preparePreCommitClosingRectMovement(I)V
@@ -435,4 +434,5 @@
 
     .line 30
     return-void
+    .line 33
 .end method

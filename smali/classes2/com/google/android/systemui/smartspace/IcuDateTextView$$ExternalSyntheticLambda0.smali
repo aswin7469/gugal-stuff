@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/google/android/systemui/smartspace/IcuDateTextView$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -28,7 +28,7 @@
 
 # virtual methods
 .method public final run()V
-    .locals 7
+    .locals 1
 
     .line 1
     iget-object p0, p0, Lcom/google/android/systemui/smartspace/IcuDateTextView$$ExternalSyntheticLambda0;->f$0:Lcom/google/android/systemui/smartspace/IcuDateTextView;
@@ -43,40 +43,6 @@
     invoke-virtual {p0, v0}, Lcom/google/android/systemui/smartspace/IcuDateTextView;->onTimeChanged(Z)V
 
     .line 7
-    iget-object v0, p0, Lcom/google/android/systemui/smartspace/IcuDateTextView;->mHandler:Landroid/os/Handler;
-
-    .line 10
-    if-eqz v0, :cond_0
-
-    .line 12
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    .line 14
-    move-result-wide v0
-
-    .line 17
-    iget-object v2, p0, Lcom/google/android/systemui/smartspace/IcuDateTextView;->mHandler:Landroid/os/Handler;
-
-    .line 18
-    iget-object p0, p0, Lcom/google/android/systemui/smartspace/IcuDateTextView;->mTicker:Lcom/google/android/systemui/smartspace/IcuDateTextView$$ExternalSyntheticLambda0;
-
-    .line 20
-    const-wide/16 v3, 0x3e8
-
-    .line 22
-    rem-long v5, v0, v3
-
-    .line 24
-    sub-long/2addr v3, v5
-
-    .line 26
-    add-long/2addr v3, v0
-
-    .line 27
-    invoke-virtual {v2, p0, v3, v4}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
-
-    .line 28
-    :cond_0
     return-void
-    .line 31
+    .line 10
 .end method

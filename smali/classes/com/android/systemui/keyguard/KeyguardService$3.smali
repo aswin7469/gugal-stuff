@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/KeyguardService$3;
 .super Lcom/android/internal/policy/IKeyguardService$Stub;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -494,6 +494,7 @@
 
     .line 79
     throw v0
+    .line 80
 .end method
 
 .method public final onDreamingStopped()V
@@ -3084,7 +3085,7 @@
 .end method
 
 .method public final setOccluded(ZZ)V
-    .locals 3
+    .locals 2
 
     .line 1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -3141,10 +3142,10 @@
     move-result-object v0
 
     .line 45
-    const-string v2, "KeyguardService"
+    const-string v1, "KeyguardService"
 
     .line 46
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 48
     const-string v0, "KeyguardService.mBinder#setOccluded"
@@ -3159,79 +3160,20 @@
     invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardService;->checkPermission()V
 
     .line 58
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
+    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardService$3;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
 
     .line 61
-    move-result v0
-
-    .line 64
-    if-nez v0, :cond_0
-
-    .line 65
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardService$3;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
-
-    .line 67
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 69
+    .line 63
     invoke-virtual {p0, p1, p2}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->setOccluded(ZZ)V
 
-    .line 71
-    goto :goto_0
-
-    .line 74
-    :cond_0
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardService$3;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
-
-    .line 75
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardService;->mWmOcclusionManager:Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;
-
-    .line 77
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 79
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    .line 82
-    const-string v0, "#onKeyguardServiceSetOccluded("
-
-    .line 84
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 86
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 89
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 92
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 95
-    move-result-object p2
-
-    .line 98
-    const-string v0, "WindowManagerOcclusion"
-
-    .line 99
-    invoke-static {v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 101
-    iget-object p0, p0, Lcom/android/systemui/keyguard/WindowManagerOcclusionManager;->keyguardOcclusionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardOcclusionInteractor;
-
-    .line 104
-    const/4 p2, 0x0
-
-    .line 106
-    invoke-virtual {p0, p2, p1}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardOcclusionInteractor;->setWmNotifiedShowWhenLockedActivityOnTop(Landroid/app/ActivityManager$RunningTaskInfo;Z)V
-
-    .line 107
-    :goto_0
+    .line 65
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 110
+    .line 68
     return-void
-    .line 113
+    .line 71
 .end method
 
 .method public final setSwitchingUser(Z)V
@@ -3324,7 +3266,7 @@
     new-instance v0, Lcom/android/keyguard/KeyguardUpdateMonitor$$ExternalSyntheticLambda4;
 
     .line 61
-    const/4 v1, 0x2
+    const/4 v1, 0x4
 
     .line 63
     invoke-direct {v0, p0, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor$$ExternalSyntheticLambda4;-><init>(Lcom/android/keyguard/KeyguardUpdateMonitor;I)V
@@ -3428,11 +3370,8 @@
 
     .line 60
     :goto_0
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 63
     return-void
-    .line 66
+    .line 63
 .end method
 
 .method public final startKeyguardExitAnimation(JJ)V
@@ -3442,77 +3381,77 @@
     new-instance v0, Ljava/lang/StringBuilder;
 
     .line 2
-    const-string v1, "startKeyguardExitAnimation startTime="
+    const-string/jumbo v1, "startKeyguardExitAnimation startTime="
 
     .line 4
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 6
+    .line 7
     invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 9
+    .line 10
     const-string v1, " fadeoutDuration="
 
-    .line 12
+    .line 13
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 14
+    .line 15
     invoke-virtual {v0, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 17
+    .line 18
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 20
+    .line 21
     move-result-object v0
 
-    .line 23
+    .line 24
     invoke-static {v0}, Lcom/android/systemui/keyguard/KeyguardService$3;->trace(Ljava/lang/String;)V
 
-    .line 24
+    .line 25
     const-string v0, "KeyguardService.mBinder#startKeyguardExitAnimation"
 
-    .line 27
+    .line 28
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 29
+    .line 30
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$3;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
 
-    .line 32
+    .line 33
     invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardService;->checkPermission()V
 
-    .line 34
+    .line 35
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardService$3;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
 
-    .line 37
+    .line 38
     iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 39
+    .line 40
     const/4 v7, 0x0
 
-    .line 41
+    .line 42
     const/4 v8, 0x0
 
-    .line 42
+    .line 43
     const/4 v5, 0x0
 
-    .line 43
+    .line 44
     const/4 v6, 0x0
 
-    .line 44
+    .line 45
     move-wide v1, p1
 
-    .line 45
+    .line 46
     move-wide v3, p3
 
-    .line 46
+    .line 47
     invoke-virtual/range {v0 .. v8}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->startKeyguardExitAnimation(JJ[Landroid/view/RemoteAnimationTarget;[Landroid/view/RemoteAnimationTarget;[Landroid/view/RemoteAnimationTarget;Landroid/view/IRemoteAnimationFinishedCallback;)V
 
-    .line 47
+    .line 48
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 50
+    .line 51
     return-void
-    .line 53
+    .line 54
 .end method
 
 .method public final verifyUnlock(Lcom/android/internal/policy/IKeyguardExitCallback;)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/ExpandHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Gefingerpoken;
@@ -176,7 +176,7 @@
     move-result-object p2
 
     .line 51
-    const p3, 0x7f0708b0    # @dimen/pull_span_min '25.0dp'
+    const p3, 0x7f070900    # @dimen/pull_span_min '25.0dp'
 
     .line 52
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -252,7 +252,7 @@
 
 # virtual methods
 .method public final findView$1(FF)Lcom/android/systemui/statusbar/notification/row/ExpandableView;
-    .locals 7
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/ExpandHelper;->mEventSource:Landroid/view/View;
@@ -261,34 +261,34 @@
     iget-object p0, p0, Lcom/android/systemui/ExpandHelper;->mCallback:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;
 
     .line 4
-    if-eqz v0, :cond_0
+    const/4 v1, 0x1
 
     .line 6
-    const/4 v1, 0x2
+    if-eqz v0, :cond_0
 
-    .line 8
-    new-array v1, v1, [I
+    .line 7
+    const/4 v2, 0x2
 
     .line 9
-    invoke-virtual {v0, v1}, Landroid/view/View;->getLocationOnScreen([I)V
+    new-array v2, v2, [I
 
-    .line 11
+    .line 10
+    invoke-virtual {v0, v2}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    .line 12
     const/4 v0, 0x0
 
-    .line 14
-    aget v0, v1, v0
-
     .line 15
+    aget v0, v2, v0
+
+    .line 16
     int-to-float v0, v0
 
-    .line 17
+    .line 18
     add-float/2addr p1, v0
 
-    .line 18
-    const/4 v0, 0x1
-
     .line 19
-    aget v0, v1, v0
+    aget v0, v2, v1
 
     .line 20
     int-to-float v0, v0
@@ -316,33 +316,18 @@
     sget v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->$r8$clinit:I
 
     .line 34
-    const/4 v6, 0x1
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     .line 36
-    const/4 v4, 0x1
-
-    .line 37
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
+    invoke-virtual {p0, p1, p2, v1, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->getChildAtPosition(FFZZ)Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
     .line 38
-    const/4 v5, 0x1
-
-    .line 40
-    move v2, p1
-
-    .line 41
-    move v3, p2
-
-    .line 42
-    invoke-virtual/range {v1 .. v6}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->getChildAtPosition(FFZZZ)Lcom/android/systemui/statusbar/notification/row/ExpandableView;
-
-    .line 43
     move-result-object p0
 
-    .line 46
+    .line 41
     :goto_0
     return-object p0
-    .line 47
+    .line 42
 .end method
 
 .method public final finishExpanding(FZZ)V
@@ -499,14 +484,14 @@
 
     const/4 v13, 0x0
 
-    if-eqz v12, :cond_10
+    if-eqz v12, :cond_f
 
     .line 13
     iget-boolean v14, v1, Lcom/android/systemui/ExpandHelper;->mEnabled:Z
 
-    if-eqz v14, :cond_10
+    if-eqz v14, :cond_f
 
-    if-eqz p3, :cond_10
+    if-eqz p3, :cond_f
 
     .line 14
     new-array v0, v3, [F
@@ -519,23 +504,11 @@
     invoke-virtual {v6}, Landroidx/core/animation/ObjectAnimator;->initAnimation$1()V
 
     .line 16
-    iget-object v0, v6, Landroidx/core/animation/ObjectAnimator;->mTarget:Ljava/lang/ref/WeakReference;
+    invoke-virtual {v6}, Landroidx/core/animation/ObjectAnimator;->getTarget()Ljava/lang/Object;
 
-    if-nez v0, :cond_9
+    move-result-object v9
 
-    move-object v9, v13
-
-    goto :goto_7
-
-    :cond_9
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v9, v0
-
-    :goto_7
-    if-eqz v9, :cond_d
+    if-eqz v9, :cond_c
 
     .line 17
     iget-object v0, v6, Landroidx/core/animation/ValueAnimator;->mValues:[Landroidx/core/animation/PropertyValuesHolder;
@@ -544,8 +517,8 @@
 
     move v12, v2
 
-    :goto_8
-    if-ge v12, v10, :cond_d
+    :goto_7
+    if-ge v12, v10, :cond_c
 
     .line 18
     iget-object v0, v6, Landroidx/core/animation/ValueAnimator;->mValues:[Landroidx/core/animation/PropertyValuesHolder;
@@ -563,7 +536,7 @@
 
     move-result v15
 
-    if-nez v15, :cond_c
+    if-nez v15, :cond_b
 
     .line 22
     invoke-interface {v14, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -577,7 +550,7 @@
 
     iget-object v2, v0, Landroidx/core/animation/PropertyValuesHolder;->mProperty:Landroid/util/Property;
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_9
 
     .line 24
     invoke-virtual {v2, v9}, Landroid/util/Property;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -587,14 +560,14 @@
     .line 25
     invoke-virtual {v14, v0}, Landroidx/core/animation/Keyframe;->setValue(Ljava/lang/Object;)V
 
-    goto :goto_b
+    goto :goto_a
 
     .line 26
-    :cond_a
+    :cond_9
     :try_start_0
     iget-object v2, v0, Landroidx/core/animation/PropertyValuesHolder;->mGetter:Ljava/lang/reflect/Method;
 
-    if-nez v2, :cond_b
+    if-nez v2, :cond_a
 
     .line 27
     invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -612,22 +585,22 @@
 
     iput-object v2, v0, Landroidx/core/animation/PropertyValuesHolder;->mGetter:Ljava/lang/reflect/Method;
 
-    if-nez v2, :cond_b
+    if-nez v2, :cond_a
 
-    goto :goto_b
+    goto :goto_a
 
     :catch_0
     move-exception v0
 
-    goto :goto_9
+    goto :goto_8
 
     :catch_1
     move-exception v0
 
-    goto :goto_a
+    goto :goto_9
 
     .line 29
-    :cond_b
+    :cond_a
     iget-object v0, v0, Landroidx/core/animation/PropertyValuesHolder;->mGetter:Ljava/lang/reflect/Method;
 
     invoke-virtual {v0, v9, v13}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -640,35 +613,35 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_b
+    goto :goto_a
 
     .line 31
-    :goto_9
+    :goto_8
     invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v15, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_b
+    goto :goto_a
 
     .line 32
-    :goto_a
+    :goto_9
     invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v15, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_b
+    :goto_a
     const/4 v2, 0x1
 
-    goto :goto_c
+    goto :goto_b
 
-    :cond_c
+    :cond_b
     move v2, v3
 
-    :goto_c
+    :goto_b
     add-int/2addr v12, v2
 
     move v3, v2
@@ -677,10 +650,10 @@
 
     const/4 v8, 0x0
 
-    goto :goto_8
+    goto :goto_7
 
     .line 33
-    :cond_d
+    :cond_c
     iget-object v0, v1, Lcom/android/systemui/ExpandHelper;->mResizedView:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
     .line 34
@@ -694,22 +667,22 @@
 
     cmpl-float v0, p1, v2
 
-    if-ltz v0, :cond_e
+    if-ltz v0, :cond_d
 
     const/4 v3, 0x1
 
-    goto :goto_d
+    goto :goto_c
 
-    :cond_e
+    :cond_d
     const/4 v3, 0x0
 
-    :goto_d
-    if-ne v5, v3, :cond_f
+    :goto_c
+    if-ne v5, v3, :cond_e
 
     move/from16 v2, p1
 
     .line 35
-    :cond_f
+    :cond_e
     iget-object v0, v1, Lcom/android/systemui/ExpandHelper;->mFlingAnimationUtils:Lcom/android/wm/shell/animation/FlingAnimationUtils;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -748,10 +721,10 @@
 
     const/4 v3, 0x0
 
-    goto :goto_e
+    goto :goto_d
 
-    :cond_10
-    if-eqz v12, :cond_11
+    :cond_f
+    if-eqz v12, :cond_10
 
     .line 42
     iget-object v2, v0, Lcom/android/systemui/ExpandHelper$ViewScaler;->mView:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
@@ -767,7 +740,7 @@
     iput v11, v10, Lcom/android/systemui/ExpandHelper;->mCurrentHeight:F
 
     .line 45
-    :cond_11
+    :cond_10
     iget-object v2, v1, Lcom/android/systemui/ExpandHelper;->mResizedView:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
     invoke-virtual {v9, v2, v5}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;->setUserExpandedChild(Landroid/view/View;Z)V
@@ -782,7 +755,7 @@
     .line 47
     iput-object v13, v0, Lcom/android/systemui/ExpandHelper$ViewScaler;->mView:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
-    if-eqz v7, :cond_12
+    if-eqz v7, :cond_11
 
     .line 48
     invoke-static {}, Lcom/android/internal/jank/InteractionJankMonitor;->getInstance()Lcom/android/internal/jank/InteractionJankMonitor;
@@ -794,8 +767,8 @@
     invoke-virtual {v0, v2}, Lcom/android/internal/jank/InteractionJankMonitor;->end(I)Z
 
     .line 49
-    :cond_12
-    :goto_e
+    :cond_11
+    :goto_d
     iput-boolean v3, v1, Lcom/android/systemui/ExpandHelper;->mExpanding:Z
 
     .line 50
@@ -1471,103 +1444,97 @@
     iget-object v0, p0, Lcom/android/systemui/ExpandHelper;->mScrollAdapter:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;
 
     .line 262
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 264
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 267
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 270
+    .line 264
     iget v0, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mOwnScrollY:I
 
-    .line 272
+    .line 266
     if-nez v0, :cond_b
 
-    .line 274
+    .line 268
     goto :goto_2
 
-    .line 276
+    .line 270
     :cond_b
     move v5, v1
 
-    .line 277
+    .line 271
     :goto_2
     iput-boolean v5, p0, Lcom/android/systemui/ExpandHelper;->mWatchingForPull:Z
 
-    .line 278
+    .line 272
     int-to-float v0, v2
 
-    .line 280
+    .line 274
     invoke-virtual {p0, v0, v3}, Lcom/android/systemui/ExpandHelper;->findView$1(FF)Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
-    .line 281
+    .line 275
     move-result-object v0
 
-    .line 284
+    .line 278
     iput-object v0, p0, Lcom/android/systemui/ExpandHelper;->mResizedView:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
-    .line 285
+    .line 279
     if-eqz v0, :cond_c
 
-    .line 287
+    .line 281
     iget-object v2, p0, Lcom/android/systemui/ExpandHelper;->mCallback:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;
 
-    .line 289
+    .line 283
     invoke-virtual {v2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;->canChildBeExpanded(Landroid/view/View;)Z
 
-    .line 291
+    .line 285
     move-result v0
 
-    .line 294
+    .line 288
     if-nez v0, :cond_c
 
-    .line 295
+    .line 289
     iput-object v6, p0, Lcom/android/systemui/ExpandHelper;->mResizedView:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
-    .line 297
+    .line 291
     iput-boolean v1, p0, Lcom/android/systemui/ExpandHelper;->mWatchingForPull:Z
 
-    .line 299
+    .line 293
     :cond_c
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
+
+    .line 295
+    move-result v0
+
+    .line 298
+    iput v0, p0, Lcom/android/systemui/ExpandHelper;->mInitialTouchY:F
+
+    .line 299
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     .line 301
     move-result v0
 
     .line 304
-    iput v0, p0, Lcom/android/systemui/ExpandHelper;->mInitialTouchY:F
+    iput v0, p0, Lcom/android/systemui/ExpandHelper;->mInitialTouchX:F
 
     .line 305
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
+    :cond_d
+    :goto_3
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     .line 307
     move-result v0
 
     .line 310
-    iput v0, p0, Lcom/android/systemui/ExpandHelper;->mInitialTouchX:F
-
-    .line 311
-    :cond_d
-    :goto_3
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
-
-    .line 313
-    move-result v0
-
-    .line 316
     iput v0, p0, Lcom/android/systemui/ExpandHelper;->mLastMotionY:F
 
-    .line 317
+    .line 311
     invoke-virtual {p0, p1}, Lcom/android/systemui/ExpandHelper;->maybeRecycleVelocityTracker(Landroid/view/MotionEvent;)V
 
-    .line 319
+    .line 313
     iget-boolean p0, p0, Lcom/android/systemui/ExpandHelper;->mExpanding:Z
 
-    .line 322
+    .line 316
     return p0
-    .line 324
+    .line 318
 .end method
 
 .method public final onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -2301,80 +2268,80 @@
     invoke-virtual {p2, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;->expansionStateChanged(Z)V
 
     .line 24
-    iget-object v1, p0, Lcom/android/systemui/ExpandHelper;->mScaler:Lcom/android/systemui/ExpandHelper$ViewScaler;
-
-    .line 27
-    iput-object p1, v1, Lcom/android/systemui/ExpandHelper$ViewScaler;->mView:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
-
-    .line 29
-    iget v2, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->mActualHeight:I
-
-    .line 31
-    int-to-float v2, v2
-
-    .line 33
-    iput v2, p0, Lcom/android/systemui/ExpandHelper;->mOldHeight:F
-
-    .line 34
-    iput v2, p0, Lcom/android/systemui/ExpandHelper;->mCurrentHeight:F
-
-    .line 36
-    invoke-virtual {p2, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;->canChildBeExpanded(Landroid/view/View;)Z
-
-    .line 38
-    move-result v2
-
-    .line 41
-    if-eqz v2, :cond_2
-
-    .line 42
-    iget-object v2, v1, Lcom/android/systemui/ExpandHelper$ViewScaler;->this$0:Lcom/android/systemui/ExpandHelper;
-
-    .line 44
-    iget-object v2, v2, Lcom/android/systemui/ExpandHelper;->mCallback:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;
-
-    .line 46
-    iget-object v1, v1, Lcom/android/systemui/ExpandHelper$ViewScaler;->mView:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
-
-    .line 48
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 50
-    invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->getMaxContentHeight()I
-
-    .line 53
-    move-result v1
-
-    .line 56
-    int-to-float v1, v1
-
-    .line 57
-    iput v1, p0, Lcom/android/systemui/ExpandHelper;->mNaturalHeight:F
-
-    .line 58
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->getCollapsedHeight()I
-
-    .line 60
-    move-result v1
-
-    .line 63
-    iput v1, p0, Lcom/android/systemui/ExpandHelper;->mSmallSize:I
-
-    .line 64
-    goto :goto_0
-
-    .line 66
-    :cond_2
-    iget v1, p0, Lcom/android/systemui/ExpandHelper;->mOldHeight:F
-
-    .line 67
-    iput v1, p0, Lcom/android/systemui/ExpandHelper;->mNaturalHeight:F
-
-    .line 69
-    :goto_0
     invoke-virtual {p2, p1, v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;->setUserLockedChild(Landroid/view/View;Z)V
 
-    .line 71
+    .line 27
+    iget-object v1, p0, Lcom/android/systemui/ExpandHelper;->mScaler:Lcom/android/systemui/ExpandHelper$ViewScaler;
+
+    .line 30
+    iput-object p1, v1, Lcom/android/systemui/ExpandHelper$ViewScaler;->mView:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
+
+    .line 32
+    iget v2, p1, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->mActualHeight:I
+
+    .line 34
+    int-to-float v2, v2
+
+    .line 36
+    iput v2, p0, Lcom/android/systemui/ExpandHelper;->mOldHeight:F
+
+    .line 37
+    iput v2, p0, Lcom/android/systemui/ExpandHelper;->mCurrentHeight:F
+
+    .line 39
+    invoke-virtual {p2, p1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;->canChildBeExpanded(Landroid/view/View;)Z
+
+    .line 41
+    move-result p2
+
+    .line 44
+    if-eqz p2, :cond_2
+
+    .line 45
+    iget-object p2, v1, Lcom/android/systemui/ExpandHelper$ViewScaler;->this$0:Lcom/android/systemui/ExpandHelper;
+
+    .line 47
+    iget-object p2, p2, Lcom/android/systemui/ExpandHelper;->mCallback:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout$6;
+
+    .line 49
+    iget-object v1, v1, Lcom/android/systemui/ExpandHelper$ViewScaler;->mView:Lcom/android/systemui/statusbar/notification/row/ExpandableView;
+
+    .line 51
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 53
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->getMaxContentHeight()I
+
+    .line 56
+    move-result p2
+
+    .line 59
+    int-to-float p2, p2
+
+    .line 60
+    iput p2, p0, Lcom/android/systemui/ExpandHelper;->mNaturalHeight:F
+
+    .line 61
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->getCollapsedHeight()I
+
+    .line 63
+    move-result p2
+
+    .line 66
+    iput p2, p0, Lcom/android/systemui/ExpandHelper;->mSmallSize:I
+
+    .line 67
+    goto :goto_0
+
+    .line 69
+    :cond_2
+    iget p2, p0, Lcom/android/systemui/ExpandHelper;->mOldHeight:F
+
+    .line 70
+    iput p2, p0, Lcom/android/systemui/ExpandHelper;->mNaturalHeight:F
+
+    .line 72
+    :goto_0
     invoke-static {}, Lcom/android/internal/jank/InteractionJankMonitor;->getInstance()Lcom/android/internal/jank/InteractionJankMonitor;
 
     .line 74

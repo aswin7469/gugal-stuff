@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$3;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -112,7 +112,7 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 5
 
     .line 1
     sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
@@ -174,32 +174,29 @@
     iget-object v4, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$3;->$childViews:Ljava/util/Map;
 
     .line 38
-    const/4 v5, 0x0
+    invoke-direct {v1, v3, v4}, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$3$1;-><init>(Landroid/view/ViewGroup;Ljava/util/Map;)V
 
     .line 40
-    invoke-direct {v1, v5, v3, v4}, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$3$1;-><init>(ILandroid/view/ViewGroup;Ljava/lang/Object;)V
-
-    .line 41
     iput v2, p0, Lcom/android/systemui/keyguard/ui/binder/KeyguardRootViewBinder$bind$2$1$3;->label:I
 
-    .line 44
+    .line 43
     invoke-interface {p1, v1, p0}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 46
+    .line 45
     move-result-object p0
 
-    .line 49
+    .line 48
     if-ne p0, v0, :cond_2
 
-    .line 50
+    .line 49
     return-object v0
 
-    .line 52
+    .line 51
     :cond_2
     :goto_0
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 53
+    .line 52
     return-object p0
-    .line 55
+    .line 54
 .end method

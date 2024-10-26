@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer$$ExternalSyntheticLambda8;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/util/function/Consumer;
@@ -60,7 +60,7 @@
     move-result-object v2
 
     .line 16
-    const v3, 0x7f14008e    # @string/accessibility_floating_button_docking_tooltip 'Move button to the edge to hide it temporarily'
+    const v3, 0x7f13008f    # @string/accessibility_floating_button_docking_tooltip 'Move button to the edge to hide it temporarily'
 
     .line 17
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -157,7 +157,7 @@
     invoke-direct {v3, v4}, Lcom/android/systemui/accessibility/floatingmenu/AnnotationLinkSpan$LinkInfo;-><init>(Landroid/view/View$OnClickListener;)V
 
     .line 90
-    const v2, 0x7f140091    # @string/accessibility_floating_button_migration_tooltip 'Tap to open accessibility features. Customize or replace this button in Settings.\n\n<annotation id="l ...'
+    const v2, 0x7f130092    # @string/accessibility_floating_button_migration_tooltip 'Tap to open accessibility features. Customize or replace this button in Settings.\n\n<annotation id="l ...'
 
     .line 93
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;

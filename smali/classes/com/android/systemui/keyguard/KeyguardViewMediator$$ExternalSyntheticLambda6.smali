@@ -1,31 +1,31 @@
 .class public final synthetic Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda6;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic $r8$classId:I
+.field public final synthetic f$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-.field public final synthetic f$0:Ljava/lang/Object;
+.field public final synthetic f$1:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lcom/android/systemui/keyguard/KeyguardViewMediator;Z)V
     .locals 0
 
     .line 1
-    iput p1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda6;->$r8$classId:I
-
-    .line 2
-    iput-object p2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda6;->f$0:Ljava/lang/Object;
-
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
+    .line 2
+    iput-object p1, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda6;->f$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+
+    .line 5
+    iput-boolean p2, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda6;->f$1:Z
+
+    .line 7
     return-void
     .line 9
 .end method
@@ -33,106 +33,95 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 6
 
     .line 1
-    iget v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda6;->$r8$classId:I
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda6;->f$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda6;->f$0:Ljava/lang/Object;
+    iget-boolean p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda6;->f$1:Z
 
     .line 4
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardStateCallbacks:Ljava/util/ArrayList;
 
     .line 6
-    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$9;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    .line 9
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$9;->mUnoccludeAnimator:Landroid/animation/ValueAnimator;
+    .line 8
+    move-result v1
 
     .line 11
-    if-eqz p0, :cond_0
+    add-int/lit8 v1, v1, -0x1
 
-    .line 13
-    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->cancel()V
+    .line 12
+    :goto_0
+    if-ltz v1, :cond_1
 
-    .line 15
-    :cond_0
-    return-void
+    .line 14
+    iget-object v2, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardStateCallbacks:Ljava/util/ArrayList;
+
+    .line 16
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     .line 18
-    :pswitch_0
-    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;
-
-    .line 19
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$8;->mOccludeByDreamAnimator:Ljava/lang/Object;
+    move-result-object v2
 
     .line 21
-    check-cast p0, Landroid/animation/ValueAnimator;
+    check-cast v2, Lcom/android/internal/policy/IKeyguardStateCallback;
 
-    .line 23
-    if-eqz p0, :cond_1
+    .line 22
+    :try_start_0
+    iget-object v3, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mSelectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
 
-    .line 25
-    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->cancel()V
+    .line 24
+    invoke-virtual {v3}, Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;->getSelectedUserId()I
 
-    .line 27
-    :cond_1
-    return-void
+    .line 26
+    move-result v3
+
+    .line 29
+    invoke-interface {v2, p0, v3}, Lcom/android/internal/policy/IKeyguardStateCallback;->onShowingStateChanged(ZI)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 30
-    :pswitch_1
-    check-cast p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$3;
-
-    .line 31
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator$3;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
+    goto :goto_1
 
     .line 33
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :catch_0
+    move-exception v3
+
+    .line 34
+    const-string v4, "KeyguardViewMediator"
 
     .line 35
-    new-instance v0, Lcom/android/systemui/keyguard/KeyguardViewMediator$DismissMessage;
+    const-string v5, "Failed to call onShowingStateChanged"
 
-    .line 38
-    const/4 v1, 0x0
+    .line 37
+    invoke-static {v4, v5, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 40
-    invoke-direct {v0, v1, v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator$DismissMessage;-><init>(Lcom/android/internal/policy/IKeyguardDismissCallback;Ljava/lang/CharSequence;)V
+    .line 39
+    instance-of v3, v3, Landroid/os/DeadObjectException;
 
-    .line 41
-    const/16 v1, 0xb
+    .line 42
+    if-eqz v3, :cond_0
 
     .line 44
-    iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mHandler:Lcom/android/systemui/keyguard/KeyguardViewMediator$13;
+    iget-object v3, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardStateCallbacks:Ljava/util/ArrayList;
 
     .line 46
-    invoke-virtual {p0, v1, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 48
-    move-result-object p0
+    :cond_0
+    :goto_1
+    add-int/lit8 v1, v1, -0x1
 
     .line 51
-    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
+    goto :goto_0
 
-    .line 52
+    .line 53
+    :cond_1
     return-void
-
-    .line 55
-    :pswitch_2
-    check-cast p0, Landroid/app/trust/TrustManager;
-
-    .line 56
-    invoke-virtual {p0}, Landroid/app/trust/TrustManager;->reportKeyguardShowingChanged()V
-
-    .line 58
-    return-void
-
-    .line 61
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-    .line 62
+    .line 54
 .end method

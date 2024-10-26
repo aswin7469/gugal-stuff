@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/compatui/CompatUIConfiguration;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/provider/DeviceConfig$OnPropertiesChangedListener;
@@ -34,7 +34,7 @@
     move-result-object v0
 
     .line 8
-    const v1, 0x7f050023    # @bool/config_letterboxIsRestartDialogEnabled 'false'
+    const v1, 0x7f05002a    # @bool/config_letterboxIsRestartDialogEnabled 'false'
 
     .line 9
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -52,7 +52,7 @@
     move-result-object v0
 
     .line 21
-    const v1, 0x7f050022    # @bool/config_letterboxIsReachabilityEducationEnabled 'false'
+    const v1, 0x7f050029    # @bool/config_letterboxIsReachabilityEducationEnabled 'false'
 
     .line 22
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -64,7 +64,7 @@
     move-result-object v0
 
     .line 31
-    const v1, 0x7f0c002a    # @integer/config_letterboxRestartButtonHideTolerance '100'
+    const v1, 0x7f0b002f    # @integer/config_letterboxRestartButtonHideTolerance '100'
 
     .line 32
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I

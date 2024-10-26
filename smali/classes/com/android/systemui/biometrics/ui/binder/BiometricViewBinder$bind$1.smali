@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/biometrics/ui/binder/BiometricViewBinder$bind$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -717,7 +717,7 @@
     if-eqz v14, :cond_2
 
     .line 202
-    const/high16 v13, 0x7f130000    # @raw/biometricprompt_fingerprint_to_error_landscape 'res/raw/biometricprompt_fingerprint_to_error_landscape.json'
+    const/high16 v13, 0x7f120000    # @raw/biometricprompt_fingerprint_to_error_landscape 'res/raw/biometricprompt_fingerprint_to_error_landscape.json'
 
     .line 204
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -726,7 +726,7 @@
     move-result-object v14
 
     .line 209
-    const v13, 0x7f130001    # @raw/biometricprompt_folded_base_bottomright 'res/raw/biometricprompt_folded_base_bottomright.json'
+    const v13, 0x7f120001    # @raw/biometricprompt_folded_base_bottomright 'res/raw/biometricprompt_folded_base_bottomright.json'
 
     .line 210
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -735,7 +735,7 @@
     move-result-object v15
 
     .line 216
-    const v13, 0x7f130002    # @raw/biometricprompt_folded_base_default 'res/raw/biometricprompt_folded_base_default.json'
+    const v13, 0x7f120002    # @raw/biometricprompt_folded_base_default 'res/raw/biometricprompt_folded_base_default.json'
 
     .line 217
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -744,7 +744,7 @@
     move-result-object v16
 
     .line 223
-    const v13, 0x7f130003    # @raw/biometricprompt_folded_base_topleft 'res/raw/biometricprompt_folded_base_topleft.json'
+    const v13, 0x7f120003    # @raw/biometricprompt_folded_base_topleft 'res/raw/biometricprompt_folded_base_topleft.json'
 
     .line 224
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -753,7 +753,7 @@
     move-result-object v17
 
     .line 230
-    const v13, 0x7f130004    # @raw/biometricprompt_landscape_base 'res/raw/biometricprompt_landscape_base.json'
+    const v13, 0x7f120004    # @raw/biometricprompt_landscape_base 'res/raw/biometricprompt_landscape_base.json'
 
     .line 231
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -762,7 +762,7 @@
     move-result-object v18
 
     .line 237
-    const v13, 0x7f130005    # @raw/biometricprompt_portrait_base_bottomright 'res/raw/biometricprompt_portrait_base_bottomright.json'
+    const v13, 0x7f120005    # @raw/biometricprompt_portrait_base_bottomright 'res/raw/biometricprompt_portrait_base_bottomright.json'
 
     .line 238
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -771,7 +771,7 @@
     move-result-object v19
 
     .line 244
-    const v13, 0x7f130006    # @raw/biometricprompt_portrait_base_topleft 'res/raw/biometricprompt_portrait_base_topleft.json'
+    const v13, 0x7f120006    # @raw/biometricprompt_portrait_base_topleft 'res/raw/biometricprompt_portrait_base_topleft.json'
 
     .line 245
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -780,7 +780,7 @@
     move-result-object v20
 
     .line 251
-    const v13, 0x7f13000a    # @raw/biometricprompt_symbol_error_to_fingerprint_landscape 'res/raw/biometricprompt_symbol_error_to_fingerprint_landscape.json'
+    const v13, 0x7f12000a    # @raw/biometricprompt_symbol_error_to_fingerprint_landscape 'res/raw/biometricprompt_symbol_error_to_fingerprint_landscape.json'
 
     .line 252
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -789,7 +789,7 @@
     move-result-object v21
 
     .line 258
-    const v13, 0x7f13000b    # @raw/biometricprompt_symbol_error_to_fingerprint_portrait_bottomright 'res/raw/biometricprompt_symbol_error_to_fingerprint_portrait_bottomright.json'
+    const v13, 0x7f12000b    # @raw/biometricprompt_symbol_error_to_fingerprint_portrait_bottomright 'res/raw/biometricprompt_symbol_error_to_fingerprint_portrait_bottomright.json'
 
     .line 259
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -798,7 +798,7 @@
     move-result-object v22
 
     .line 265
-    const v13, 0x7f13000c    # @raw/biometricprompt_symbol_error_to_fingerprint_portrait_topleft 'res/raw/biometricprompt_symbol_error_to_fingerprint_portrait_topleft.json'
+    const v13, 0x7f12000c    # @raw/biometricprompt_symbol_error_to_fingerprint_portrait_topleft 'res/raw/biometricprompt_symbol_error_to_fingerprint_portrait_topleft.json'
 
     .line 266
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -807,7 +807,7 @@
     move-result-object v23
 
     .line 272
-    const v13, 0x7f13000d    # @raw/biometricprompt_symbol_error_to_success_landscape 'res/raw/biometricprompt_symbol_error_to_success_landscape.json'
+    const v13, 0x7f12000d    # @raw/biometricprompt_symbol_error_to_success_landscape 'res/raw/biometricprompt_symbol_error_to_success_landscape.json'
 
     .line 273
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -816,7 +816,7 @@
     move-result-object v24
 
     .line 279
-    const v13, 0x7f13000e    # @raw/biometricprompt_symbol_error_to_success_portrait_bottomright 'res/raw/biometricprompt_symbol_error_to_success_portrait_bottomright.json'
+    const v13, 0x7f12000e    # @raw/biometricprompt_symbol_error_to_success_portrait_bottomright 'res/raw/biometricprompt_symbol_error_to_success_portrait_bottomright.json'
 
     .line 280
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -825,7 +825,7 @@
     move-result-object v25
 
     .line 286
-    const v13, 0x7f13000f    # @raw/biometricprompt_symbol_error_to_success_portrait_topleft 'res/raw/biometricprompt_symbol_error_to_success_portrait_topleft.json'
+    const v13, 0x7f12000f    # @raw/biometricprompt_symbol_error_to_success_portrait_topleft 'res/raw/biometricprompt_symbol_error_to_success_portrait_topleft.json'
 
     .line 287
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -834,7 +834,7 @@
     move-result-object v26
 
     .line 293
-    const v13, 0x7f130010    # @raw/biometricprompt_symbol_fingerprint_to_error_portrait_bottomright 'res/raw/biometricprompt_symbol_fingerprint_to_error_portrait_bottomright.json'
+    const v13, 0x7f120010    # @raw/biometricprompt_symbol_fingerprint_to_error_portrait_bottomright 'res/raw/biometricprompt_symbol_fingerprint_to_error_portrait_bottomright.json'
 
     .line 294
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -843,7 +843,7 @@
     move-result-object v27
 
     .line 300
-    const v13, 0x7f130011    # @raw/biometricprompt_symbol_fingerprint_to_error_portrait_topleft 'res/raw/biometricprompt_symbol_fingerprint_to_error_portrait_topleft.json'
+    const v13, 0x7f120011    # @raw/biometricprompt_symbol_fingerprint_to_error_portrait_topleft 'res/raw/biometricprompt_symbol_fingerprint_to_error_portrait_topleft.json'
 
     .line 301
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -852,7 +852,7 @@
     move-result-object v28
 
     .line 307
-    const v13, 0x7f130012    # @raw/biometricprompt_symbol_fingerprint_to_success_landscape 'res/raw/biometricprompt_symbol_fingerprint_to_success_landscape.json'
+    const v13, 0x7f120012    # @raw/biometricprompt_symbol_fingerprint_to_success_landscape 'res/raw/biometricprompt_symbol_fingerprint_to_success_landscape.json'
 
     .line 308
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -861,7 +861,7 @@
     move-result-object v29
 
     .line 314
-    const v13, 0x7f130013    # @raw/biometricprompt_symbol_fingerprint_to_success_portrait_bottomright 'res/raw/biometricprompt_symbol_fingerprint_to_success_portrait_bottomright.json'
+    const v13, 0x7f120013    # @raw/biometricprompt_symbol_fingerprint_to_success_portrait_bottomright 'res/raw/biometricprompt_symbol_fingerprint_to_success_portrait_bottomright.json'
 
     .line 315
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -870,7 +870,7 @@
     move-result-object v30
 
     .line 321
-    const v13, 0x7f130014    # @raw/biometricprompt_symbol_fingerprint_to_success_portrait_topleft 'res/raw/biometricprompt_symbol_fingerprint_to_success_portrait_topleft.json'
+    const v13, 0x7f120014    # @raw/biometricprompt_symbol_fingerprint_to_success_portrait_topleft 'res/raw/biometricprompt_symbol_fingerprint_to_success_portrait_topleft.json'
 
     .line 322
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -895,7 +895,7 @@
 
     .line 337
     :cond_2
-    const v13, 0x7f130016    # @raw/fingerprint_dialogue_error_to_fingerprint_lottie 'res/raw/fingerprint_dialogue_error_to_fingerprint_lottie.json'
+    const v13, 0x7f120017    # @raw/fingerprint_dialogue_error_to_fingerprint_lottie 'res/raw/fingerprint_dialogue_error_to_fingerprint_lottie.json'
 
     .line 338
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -904,7 +904,7 @@
     move-result-object v13
 
     .line 344
-    const v14, 0x7f130017    # @raw/fingerprint_dialogue_error_to_success_lottie 'res/raw/fingerprint_dialogue_error_to_success_lottie.json'
+    const v14, 0x7f120018    # @raw/fingerprint_dialogue_error_to_success_lottie 'res/raw/fingerprint_dialogue_error_to_success_lottie.json'
 
     .line 345
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -913,7 +913,7 @@
     move-result-object v14
 
     .line 351
-    const v15, 0x7f130019    # @raw/fingerprint_dialogue_fingerprint_to_error_lottie 'res/raw/fingerprint_dialogue_fingerprint_to_error_lottie.json'
+    const v15, 0x7f12001a    # @raw/fingerprint_dialogue_fingerprint_to_error_lottie 'res/raw/fingerprint_dialogue_fingerprint_to_error_lottie.json'
 
     .line 352
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -922,7 +922,7 @@
     move-result-object v15
 
     .line 358
-    const v16, 0x7f13001a    # @raw/fingerprint_dialogue_fingerprint_to_success_lottie 'res/raw/fingerprint_dialogue_fingerprint_to_success_lottie.json'
+    const v16, 0x7f12001b    # @raw/fingerprint_dialogue_fingerprint_to_success_lottie 'res/raw/fingerprint_dialogue_fingerprint_to_success_lottie.json'
 
     .line 359
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1645,7 +1645,7 @@
     check-cast v37, Landroid/view/accessibility/AccessibilityManager;
 
     .line 837
-    const v2, 0x7f0b041c    # @id/leftGuideline
+    const v2, 0x7f0a043d    # @id/leftGuideline
 
     .line 839
     invoke-virtual {v1, v2}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1660,7 +1660,7 @@
     check-cast v26, Landroidx/constraintlayout/widget/Guideline;
 
     .line 848
-    const v8, 0x7f0b080e    # @id/topGuideline
+    const v8, 0x7f0a083d    # @id/topGuideline
 
     .line 850
     invoke-virtual {v1, v8}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1675,7 +1675,7 @@
     check-cast v28, Landroidx/constraintlayout/widget/Guideline;
 
     .line 859
-    const v8, 0x7f0b0659    # @id/rightGuideline
+    const v8, 0x7f0a0683    # @id/rightGuideline
 
     .line 861
     invoke-virtual {v1, v8}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1690,7 +1690,7 @@
     check-cast v27, Landroidx/constraintlayout/widget/Guideline;
 
     .line 870
-    const v9, 0x7f0b04ce    # @id/midGuideline
+    const v9, 0x7f0a04f2    # @id/midGuideline
 
     .line 872
     invoke-virtual {v1, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1705,7 +1705,7 @@
     check-cast v29, Landroidx/constraintlayout/widget/Guideline;
 
     .line 881
-    const v9, 0x7f0b011a    # @id/biometric_icon
+    const v9, 0x7f0a011f    # @id/biometric_icon
 
     .line 883
     invoke-virtual {v1, v9}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1714,7 +1714,7 @@
     move-result-object v22
 
     .line 889
-    const v9, 0x7f0b05ba    # @id/panel
+    const v9, 0x7f0a05df    # @id/panel
 
     .line 890
     invoke-virtual {v1, v9}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -1729,7 +1729,7 @@
     move-result-object v11
 
     .line 900
-    const v12, 0x7f0700c2    # @dimen/biometric_dialog_corner_size '@android:dimen/secondary_rounded_corner_radius_top_adjustment'
+    const v12, 0x7f0700c8    # @dimen/biometric_dialog_corner_size '8.0dp'
 
     .line 901
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getDimension(I)F

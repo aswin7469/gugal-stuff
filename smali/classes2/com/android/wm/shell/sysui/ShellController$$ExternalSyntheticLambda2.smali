@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -19,41 +19,15 @@
     .line 1
     iput p1, p0, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;->$r8$classId:I
 
+    .line 2
     iput-object p2, p0, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;->f$0:Ljava/lang/Object;
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     return-void
-.end method
-
-.method public synthetic constructor <init>(Lcom/android/wm/shell/sysui/ShellController;Landroid/graphics/Rect;)V
-    .locals 0
-
-    .line 2
-    const/4 p2, 0x1
-
-    iput p2, p0, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;->$r8$classId:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;->f$0:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lcom/android/wm/shell/sysui/ShellController;Z)V
-    .locals 0
-
-    .line 3
-    const/4 p2, 0x2
-
-    iput p2, p0, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;->$r8$classId:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda2;->f$0:Ljava/lang/Object;
-
-    return-void
+    .line 9
 .end method
 
 
@@ -106,83 +80,49 @@
     check-cast p0, Lcom/android/wm/shell/sysui/ShellController;
 
     .line 30
-    iget-object p0, p0, Lcom/android/wm/shell/sysui/ShellController;->mContext:Landroid/content/Context;
-
-    .line 32
-    invoke-virtual {p0}, Landroid/content/Context;->getDisplayId()I
-
-    .line 34
-    const/4 p0, 0x0
-
-    .line 37
-    throw p0
-
-    .line 38
-    :pswitch_2
-    check-cast p0, Lcom/android/wm/shell/sysui/ShellController;
-
-    .line 39
-    iget-object p0, p0, Lcom/android/wm/shell/sysui/ShellController;->mContext:Landroid/content/Context;
-
-    .line 41
-    invoke-virtual {p0}, Landroid/content/Context;->getDisplayId()I
-
-    .line 43
-    const/4 p0, 0x0
-
-    .line 46
-    throw p0
-
-    .line 47
-    :pswitch_3
-    check-cast p0, Lcom/android/wm/shell/sysui/ShellController;
-
-    .line 48
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 50
+    .line 32
     new-instance v0, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda4;
 
-    .line 53
+    .line 35
     invoke-direct {v0, p0}, Lcom/android/wm/shell/sysui/ShellController$$ExternalSyntheticLambda4;-><init>(Lcom/android/wm/shell/sysui/ShellController;)V
 
-    .line 55
+    .line 37
     iget-object v1, p0, Lcom/android/wm/shell/sysui/ShellController;->mShellCommandHandler:Lcom/android/wm/shell/sysui/ShellCommandHandler;
 
-    .line 58
+    .line 40
     invoke-virtual {v1, v0, p0}, Lcom/android/wm/shell/sysui/ShellCommandHandler;->addDumpCallback(Ljava/util/function/BiConsumer;Ljava/lang/Object;)V
 
-    .line 60
+    .line 42
     iget-object v0, p0, Lcom/android/wm/shell/sysui/ShellController;->mContext:Landroid/content/Context;
 
-    .line 63
+    .line 45
     invoke-virtual {v0}, Landroid/content/Context;->getDisplayId()I
 
-    .line 65
+    .line 47
     move-result v0
 
-    .line 68
+    .line 50
     iget-object v1, p0, Lcom/android/wm/shell/sysui/ShellController;->mInsetsChangeListener:Lcom/android/wm/shell/sysui/ShellController$1;
 
-    .line 69
+    .line 51
     iget-object p0, p0, Lcom/android/wm/shell/sysui/ShellController;->mDisplayInsetsController:Lcom/android/wm/shell/common/DisplayInsetsController;
 
-    .line 71
+    .line 53
     invoke-virtual {p0, v0, v1}, Lcom/android/wm/shell/common/DisplayInsetsController;->addInsetsChangedListener(ILcom/android/wm/shell/common/DisplayInsetsController$OnInsetsChangedListener;)V
 
-    .line 73
+    .line 55
     return-void
 
-    .line 76
+    .line 58
     nop
 
-    .line 77
+    .line 59
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 78
+    .line 60
 .end method

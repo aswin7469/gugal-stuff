@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/startingsurface/SplashScreenExitAnimation;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/animation/Animator$AnimatorListener;
@@ -150,7 +150,7 @@
     move-result-object p2
 
     .line 70
-    const p4, 0x7f0c00e2    # @integer/starting_window_app_reveal_icon_fade_out_duration '133'
+    const p4, 0x7f0b00f7    # @integer/starting_window_app_reveal_icon_fade_out_duration '133'
 
     .line 71
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getInteger(I)I
@@ -168,7 +168,7 @@
     move-result-object p2
 
     .line 83
-    const p4, 0x7f0c00e0    # @integer/starting_window_app_reveal_anim_delay '83'
+    const p4, 0x7f0b00f5    # @integer/starting_window_app_reveal_anim_delay '83'
 
     .line 84
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getInteger(I)I
@@ -216,7 +216,7 @@
     move-result-object p2
 
     .line 112
-    const p3, 0x7f0c00e1    # @integer/starting_window_app_reveal_anim_duration '266'
+    const p3, 0x7f0b00f6    # @integer/starting_window_app_reveal_anim_duration '266'
 
     .line 113
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -234,7 +234,7 @@
     move-result-object p1
 
     .line 125
-    const p3, 0x7f0c00e3    # @integer/starting_window_exit_animation_type '0'
+    const p3, 0x7f0b00f8    # @integer/starting_window_exit_animation_type '0'
 
     .line 126
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getInteger(I)I

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/ui/ThumbnailBehavior$bind$1$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -75,7 +75,7 @@
     move-result-object v0
 
     .line 16
-    const v2, 0x7f0701b6    # @dimen/control_corner_radius '14.0dp'
+    const v2, 0x7f0701d7    # @dimen/control_corner_radius '14.0dp'
 
     .line 17
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -138,7 +138,7 @@
     move-result-object v3
 
     .line 56
-    const v4, 0x7f060095    # @color/control_thumbnail_tint '#33000000'
+    const v4, 0x7f060096    # @color/control_thumbnail_tint '#33000000'
 
     .line 57
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I

@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/input/nestedscroll/NestedScrollNode;
 .super Landroidx/compose/ui/Modifier$Node;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/node/TraversableNode;
@@ -818,7 +818,7 @@
     .line 141
 .end method
 
-.method public final onPreScroll-OzD1aCk(IJ)J
+.method public final onPreScroll-OzD1aCk(JI)J
     .locals 2
 
     .line 1
@@ -850,7 +850,7 @@
     if-eqz v1, :cond_1
 
     .line 16
-    invoke-virtual {v1, p1, p2, p3}, Landroidx/compose/ui/input/nestedscroll/NestedScrollNode;->onPreScroll-OzD1aCk(IJ)J
+    invoke-virtual {v1, p1, p2, p3}, Landroidx/compose/ui/input/nestedscroll/NestedScrollNode;->onPreScroll-OzD1aCk(JI)J
 
     .line 18
     move-result-wide v0
@@ -867,13 +867,13 @@
     iget-object p0, p0, Landroidx/compose/ui/input/nestedscroll/NestedScrollNode;->connection:Landroidx/compose/ui/input/nestedscroll/NestedScrollConnection;
 
     .line 25
-    invoke-static {p2, p3, v0, v1}, Landroidx/compose/ui/geometry/Offset;->minus-MK-Hz9U(JJ)J
+    invoke-static {p1, p2, v0, v1}, Landroidx/compose/ui/geometry/Offset;->minus-MK-Hz9U(JJ)J
 
     .line 27
-    move-result-wide p2
+    move-result-wide p1
 
     .line 30
-    invoke-interface {p0, p1, p2, p3}, Landroidx/compose/ui/input/nestedscroll/NestedScrollConnection;->onPreScroll-OzD1aCk(IJ)J
+    invoke-interface {p0, p1, p2, p3}, Landroidx/compose/ui/input/nestedscroll/NestedScrollConnection;->onPreScroll-OzD1aCk(JI)J
 
     .line 31
     move-result-wide p0

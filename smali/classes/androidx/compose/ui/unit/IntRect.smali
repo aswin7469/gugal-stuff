@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/unit/IntRect;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -147,50 +147,6 @@
     :cond_5
     return v0
     .line 42
-.end method
-
-.method public final getCenter-nOcc-ac()J
-    .locals 2
-
-    .line 1
-    iget v0, p0, Landroidx/compose/ui/unit/IntRect;->right:I
-
-    .line 2
-    iget v1, p0, Landroidx/compose/ui/unit/IntRect;->left:I
-
-    .line 4
-    sub-int/2addr v0, v1
-
-    .line 6
-    div-int/lit8 v0, v0, 0x2
-
-    .line 7
-    add-int/2addr v0, v1
-
-    .line 9
-    invoke-virtual {p0}, Landroidx/compose/ui/unit/IntRect;->getHeight()I
-
-    .line 10
-    move-result v1
-
-    .line 13
-    div-int/lit8 v1, v1, 0x2
-
-    .line 14
-    iget p0, p0, Landroidx/compose/ui/unit/IntRect;->top:I
-
-    .line 16
-    add-int/2addr v1, p0
-
-    .line 18
-    invoke-static {v0, v1}, Landroidx/compose/ui/unit/IntOffsetKt;->IntOffset(II)J
-
-    .line 19
-    move-result-wide v0
-
-    .line 22
-    return-wide v0
-    .line 23
 .end method
 
 .method public final getHeight()I

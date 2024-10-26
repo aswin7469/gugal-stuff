@@ -1,6 +1,6 @@
 .class public abstract Lcom/airbnb/lottie/parser/PolystarShapeParser;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -21,45 +21,45 @@
     const-string v0, "nm"
 
     .line 6
-    const-string v1, "sy"
+    const-string/jumbo v1, "sy"
 
     .line 8
     const-string v2, "pt"
 
-    .line 10
+    .line 11
     const-string v3, "p"
 
-    .line 12
+    .line 13
     const-string v4, "r"
 
-    .line 14
+    .line 15
     const-string v5, "or"
 
-    .line 16
+    .line 17
     const-string v6, "os"
 
-    .line 18
+    .line 19
     const-string v7, "ir"
 
-    .line 20
+    .line 21
     const-string v8, "is"
 
-    .line 22
+    .line 23
     filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
 
-    .line 24
+    .line 25
     move-result-object v0
-
-    .line 27
-    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     .line 28
+    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+
+    .line 29
     move-result-object v0
 
-    .line 31
+    .line 32
     sput-object v0, Lcom/airbnb/lottie/parser/PolystarShapeParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
-    .line 32
+    .line 33
     return-void
-    .line 34
+    .line 35
 .end method

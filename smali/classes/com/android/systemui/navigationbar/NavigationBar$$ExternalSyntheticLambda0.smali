@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/navigationbar/NavigationBar$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnLongClickListener;
@@ -113,7 +113,7 @@
 
     .line 55
     :pswitch_1
-    const v0, 0x7f0b036f    # @id/home
+    const v0, 0x7f0a038e    # @id/home
 
     .line 56
     invoke-virtual {p0, p1, v0}, Lcom/android/systemui/navigationbar/NavigationBar;->onLongPressNavigationButtons(Landroid/view/View;I)Z
@@ -126,7 +126,7 @@
 
     .line 63
     :pswitch_2
-    const v0, 0x7f0b063c    # @id/recent_apps
+    const v0, 0x7f0a0665    # @id/recent_apps
 
     .line 64
     invoke-virtual {p0, p1, v0}, Lcom/android/systemui/navigationbar/NavigationBar;->onLongPressNavigationButtons(Landroid/view/View;I)Z

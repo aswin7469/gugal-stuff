@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/classifier/FalsingCollectorImpl$4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;
@@ -34,38 +34,52 @@
     iget-object p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl$4;->this$0:Lcom/android/systemui/classifier/FalsingCollectorImpl;
 
     .line 2
-    if-nez p1, :cond_0
+    if-nez p1, :cond_1
 
     .line 4
     iget-object p1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
     .line 6
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lcom/google/android/systemui/dreamliner/DockObserver;
 
     .line 8
-    iget-object p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mProximitySensor:Lcom/android/systemui/util/sensors/ProximitySensor;
+    invoke-virtual {p1}, Lcom/google/android/systemui/dreamliner/DockObserver;->isDocked()Z
 
-    .line 11
-    check-cast p0, Lcom/android/systemui/util/sensors/ProximitySensorImpl;
+    .line 10
+    move-result p1
 
     .line 13
-    invoke-virtual {p0}, Lcom/android/systemui/util/sensors/ProximitySensorImpl;->resume()V
+    if-eqz p1, :cond_0
 
-    .line 15
+    .line 14
     goto :goto_0
 
-    .line 18
+    .line 16
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mProximitySensor:Lcom/android/systemui/util/sensors/ProximitySensor;
 
-    .line 19
+    .line 17
     check-cast p0, Lcom/android/systemui/util/sensors/ProximitySensorImpl;
 
+    .line 19
+    invoke-virtual {p0}, Lcom/android/systemui/util/sensors/ProximitySensorImpl;->resume()V
+
     .line 21
+    goto :goto_1
+
+    .line 24
+    :cond_1
+    :goto_0
+    iget-object p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mProximitySensor:Lcom/android/systemui/util/sensors/ProximitySensor;
+
+    .line 25
+    check-cast p0, Lcom/android/systemui/util/sensors/ProximitySensorImpl;
+
+    .line 27
     invoke-virtual {p0}, Lcom/android/systemui/util/sensors/ProximitySensorImpl;->pause()V
 
-    .line 23
-    :goto_0
+    .line 29
+    :goto_1
     return-void
-    .line 26
+    .line 32
 .end method

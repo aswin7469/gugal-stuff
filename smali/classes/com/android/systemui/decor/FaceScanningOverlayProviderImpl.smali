@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/decor/FaceScanningOverlayProviderImpl;
 .super Lcom/android/systemui/decor/BoundDecorProvider;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -47,7 +47,7 @@
     iput-object p7, p0, Lcom/android/systemui/decor/FaceScanningOverlayProviderImpl;->facePropertyRepository:Lcom/android/systemui/biometrics/data/repository/FacePropertyRepositoryImpl;
 
     .line 15
-    const p1, 0x7f0b02f5    # @id/face_scanning_anim
+    const p1, 0x7f0a0311    # @id/face_scanning_anim
 
     .line 17
     iput p1, p0, Lcom/android/systemui/decor/FaceScanningOverlayProviderImpl;->viewId:I

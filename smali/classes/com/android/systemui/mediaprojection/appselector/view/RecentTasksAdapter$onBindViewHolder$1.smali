@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter$onBindViewHolder$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -56,7 +56,7 @@
     iget-object v1, v0, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter$onBindViewHolder$1;->this$0:Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;
 
     .line 8
-    iget-object v1, v1, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;->listener:Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter$RecentTaskClickListener;
+    iget-object v1, v1, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter;->listener:Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;
 
     .line 10
     iget-object v2, v0, Lcom/android/systemui/mediaprojection/appselector/view/RecentTasksAdapter$onBindViewHolder$1;->$task:Lcom/android/systemui/mediaprojection/appselector/data/RecentTask;
@@ -68,350 +68,347 @@
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     .line 16
-    check-cast v1, Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;
-
-    .line 18
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 20
+    .line 18
     new-instance v3, Landroid/app/ActivityOptions$LaunchCookie;
 
-    .line 23
+    .line 21
     invoke-direct {v3}, Landroid/app/ActivityOptions$LaunchCookie;-><init>()V
 
-    .line 25
+    .line 23
     iget-boolean v4, v2, Lcom/android/systemui/mediaprojection/appselector/data/RecentTask;->isForegroundTask:Z
 
-    .line 28
+    .line 26
     const/4 v5, 0x0
 
-    .line 30
+    .line 28
     iget-object v6, v2, Lcom/android/systemui/mediaprojection/appselector/data/RecentTask;->splitBounds:Lcom/android/wm/shell/util/SplitBounds;
 
-    .line 31
+    .line 29
     if-eqz v4, :cond_0
 
-    .line 33
+    .line 31
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    .line 35
+    .line 33
     move-result-object v7
 
-    .line 38
+    .line 36
     const/4 v11, 0x0
 
-    .line 39
+    .line 37
     const/4 v12, 0x0
 
-    .line 40
+    .line 38
     const/4 v8, 0x0
 
-    .line 41
+    .line 39
     const v9, 0x10a007b    # @android:anim/resolver_close_anim
 
-    .line 42
+    .line 40
     const/4 v10, 0x0
 
-    .line 45
+    .line 43
     invoke-static/range {v7 .. v12}, Landroid/app/ActivityOptions;->makeCustomTaskAnimation(Landroid/content/Context;IILandroid/os/Handler;Landroid/app/ActivityOptions$OnAnimationStartedListener;Landroid/app/ActivityOptions$OnAnimationFinishedListener;)Landroid/app/ActivityOptions;
 
-    .line 46
+    .line 44
     move-result-object v7
 
-    .line 49
+    .line 47
     invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 50
+    .line 48
     goto :goto_0
 
-    .line 53
+    .line 51
     :cond_0
     iget-object v7, v1, Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;->splitScreen:Ljava/util/Optional;
 
-    .line 54
+    .line 52
     invoke-virtual {v7}, Ljava/util/Optional;->isPresent()Z
 
-    .line 56
+    .line 54
     move-result v7
 
-    .line 59
+    .line 57
     if-eqz v7, :cond_1
 
-    .line 60
+    .line 58
     if-eqz v6, :cond_1
 
-    .line 62
+    .line 60
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
-    .line 64
+    .line 62
     move-result-object v7
 
-    .line 67
+    .line 65
     invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 68
+    .line 66
     goto :goto_0
 
-    .line 71
+    .line 69
     :cond_1
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-    .line 72
+    .line 70
     move-result v7
 
-    .line 75
+    .line 73
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
-    .line 76
+    .line 74
     move-result v8
 
-    .line 79
+    .line 77
     invoke-static {v0, v5, v5, v7, v8}, Landroid/app/ActivityOptions;->makeScaleUpAnimation(Landroid/view/View;IIII)Landroid/app/ActivityOptions;
 
-    .line 80
+    .line 78
     move-result-object v7
 
-    .line 83
+    .line 81
     invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 84
+    .line 82
     :goto_0
     const/4 v8, 0x1
 
-    .line 87
+    .line 85
     invoke-virtual {v7, v8}, Landroid/app/ActivityOptions;->setPendingIntentBackgroundActivityStartMode(I)Landroid/app/ActivityOptions;
 
-    .line 88
+    .line 86
     iget v9, v2, Lcom/android/systemui/mediaprojection/appselector/data/RecentTask;->displayId:I
 
-    .line 91
+    .line 89
     invoke-virtual {v7, v9}, Landroid/app/ActivityOptions;->setLaunchDisplayId(I)Landroid/app/ActivityOptions;
 
-    .line 93
+    .line 91
     invoke-virtual {v7, v3}, Landroid/app/ActivityOptions;->setLaunchCookie(Landroid/app/ActivityOptions$LaunchCookie;)V
 
-    .line 96
+    .line 94
     new-instance v15, Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController$onRecentAppClicked$handleResult$1;
 
-    .line 99
+    .line 97
     iget v2, v2, Lcom/android/systemui/mediaprojection/appselector/data/RecentTask;->taskId:I
 
-    .line 101
+    .line 99
     invoke-direct {v15, v1, v3, v2}, Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController$onRecentAppClicked$handleResult$1;-><init>(Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;Landroid/app/ActivityOptions$LaunchCookie;I)V
 
-    .line 103
+    .line 101
     iget-object v3, v1, Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;->splitScreen:Ljava/util/Optional;
 
-    .line 106
+    .line 104
     invoke-virtual {v3}, Ljava/util/Optional;->isPresent()Z
 
-    .line 108
+    .line 106
     move-result v3
 
-    .line 111
+    .line 109
     if-eqz v3, :cond_4
 
-    .line 112
+    .line 110
     if-eqz v6, :cond_4
 
-    .line 114
+    .line 112
     if-nez v4, :cond_4
 
-    .line 116
+    .line 114
     invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 118
+    .line 116
     iget v3, v6, Lcom/android/wm/shell/util/SplitBounds;->leftTopTaskId:I
 
-    .line 121
+    .line 119
     if-ne v2, v3, :cond_2
 
-    .line 123
+    .line 121
     move v4, v8
 
-    .line 125
+    .line 123
     goto :goto_1
 
-    .line 126
+    .line 124
     :cond_2
     move v4, v5
 
-    .line 127
+    .line 125
     :goto_1
     if-eqz v4, :cond_3
 
-    .line 128
+    .line 126
     iget v3, v6, Lcom/android/wm/shell/util/SplitBounds;->rightBottomTaskId:I
 
-    .line 130
+    .line 128
     :cond_3
     move/from16 v20, v3
 
-    .line 132
+    .line 130
     xor-int/lit8 v21, v4, 0x1
 
-    .line 134
+    .line 132
     new-instance v3, Lcom/android/systemui/mediaprojection/appselector/view/RemoteRecentSplitTaskTransitionRunner;
 
-    .line 136
+    .line 134
     invoke-virtual {v0}, Landroid/view/View;->getLocationOnScreen()[I
 
-    .line 138
+    .line 136
     move-result-object v13
 
-    .line 141
+    .line 139
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    .line 142
+    .line 140
     move-result-object v4
 
-    .line 145
+    .line 143
     invoke-virtual {v4}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
 
-    .line 146
+    .line 144
     move-result-object v4
 
-    .line 149
+    .line 147
     new-instance v8, Landroid/view/DisplayInfo;
 
-    .line 150
+    .line 148
     invoke-direct {v8}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 152
+    .line 150
     invoke-virtual {v4, v8}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
-    .line 155
+    .line 153
     new-instance v14, Landroid/graphics/Rect;
 
-    .line 158
+    .line 156
     invoke-virtual {v8}, Landroid/view/DisplayInfo;->getNaturalWidth()I
 
-    .line 160
+    .line 158
     move-result v4
 
-    .line 163
+    .line 161
     invoke-virtual {v8}, Landroid/view/DisplayInfo;->getNaturalHeight()I
 
-    .line 164
+    .line 162
     move-result v8
 
-    .line 167
+    .line 165
     invoke-direct {v14, v5, v5, v4, v8}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 168
+    .line 166
     move-object v10, v3
 
-    .line 171
+    .line 169
     move v11, v2
 
-    .line 172
+    .line 170
     move/from16 v12, v20
 
-    .line 173
+    .line 171
     invoke-direct/range {v10 .. v15}, Lcom/android/systemui/mediaprojection/appselector/view/RemoteRecentSplitTaskTransitionRunner;-><init>(II[ILandroid/graphics/Rect;Lkotlin/jvm/functions/Function0;)V
 
-    .line 175
+    .line 173
     new-instance v4, Landroid/window/RemoteTransition;
 
-    .line 178
+    .line 176
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    .line 180
+    .line 178
     move-result-object v0
 
-    .line 183
+    .line 181
     invoke-virtual {v0}, Landroid/content/Context;->getIApplicationThread()Landroid/app/IApplicationThread;
 
-    .line 184
+    .line 182
     move-result-object v0
 
-    .line 187
-    const-string v5, "startSplitScreenTask"
+    .line 185
+    const-string/jumbo v5, "startSplitScreenTask"
 
-    .line 188
+    .line 186
     invoke-direct {v4, v3, v0, v5}, Landroid/window/RemoteTransition;-><init>(Landroid/window/IRemoteTransition;Landroid/app/IApplicationThread;Ljava/lang/String;)V
 
-    .line 190
+    .line 189
     iget-object v0, v1, Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;->splitScreen:Ljava/util/Optional;
 
-    .line 193
+    .line 192
     invoke-virtual {v0}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
-    .line 195
+    .line 194
     move-result-object v0
 
-    .line 198
+    .line 197
     check-cast v0, Lcom/android/wm/shell/splitscreen/SplitScreen;
 
-    .line 199
+    .line 198
     invoke-virtual {v7}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
-    .line 201
+    .line 200
     move-result-object v19
 
-    .line 204
+    .line 203
     iget v1, v6, Lcom/android/wm/shell/util/SplitBounds;->snapPosition:I
 
-    .line 205
+    .line 204
     check-cast v0, Lcom/android/wm/shell/splitscreen/SplitScreenController$SplitScreenImpl;
 
-    .line 207
+    .line 206
     iget-object v3, v0, Lcom/android/wm/shell/splitscreen/SplitScreenController$SplitScreenImpl;->this$0:Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
-    .line 209
+    .line 208
     iget-object v3, v3, Lcom/android/wm/shell/splitscreen/SplitScreenController;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
 
-    .line 211
-    new-instance v5, Lcom/android/wm/shell/splitscreen/SplitScreenController$SplitScreenImpl$$ExternalSyntheticLambda1;
+    .line 210
+    new-instance v5, Lcom/android/wm/shell/splitscreen/SplitScreenController$SplitScreenImpl$$ExternalSyntheticLambda6;
 
-    .line 213
+    .line 212
     move-object/from16 v16, v5
 
-    .line 215
+    .line 214
     move-object/from16 v17, v0
 
-    .line 217
+    .line 216
     move/from16 v18, v2
 
-    .line 219
+    .line 218
     move/from16 v22, v1
 
-    .line 221
+    .line 220
     move-object/from16 v23, v4
 
-    .line 223
-    invoke-direct/range {v16 .. v23}, Lcom/android/wm/shell/splitscreen/SplitScreenController$SplitScreenImpl$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/splitscreen/SplitScreenController$SplitScreenImpl;ILandroid/os/Bundle;IIILandroid/window/RemoteTransition;)V
+    .line 222
+    invoke-direct/range {v16 .. v23}, Lcom/android/wm/shell/splitscreen/SplitScreenController$SplitScreenImpl$$ExternalSyntheticLambda6;-><init>(Lcom/android/wm/shell/splitscreen/SplitScreenController$SplitScreenImpl;ILandroid/os/Bundle;IIILandroid/window/RemoteTransition;)V
 
-    .line 225
+    .line 224
     check-cast v3, Lcom/android/wm/shell/common/HandlerExecutor;
 
-    .line 228
+    .line 227
     invoke-virtual {v3, v5}, Lcom/android/wm/shell/common/HandlerExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 230
+    .line 229
     goto :goto_2
 
-    .line 233
+    .line 232
     :cond_4
     iget-object v0, v1, Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController;->activityTaskManager:Landroid/app/IActivityTaskManager;
 
-    .line 234
+    .line 233
     invoke-virtual {v7}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
-    .line 236
+    .line 235
     move-result-object v1
 
-    .line 239
+    .line 238
     invoke-interface {v0, v2, v1}, Landroid/app/IActivityTaskManager;->startActivityFromRecents(ILandroid/os/Bundle;)I
 
-    .line 240
+    .line 239
     invoke-virtual {v15}, Lcom/android/systemui/mediaprojection/appselector/view/MediaProjectionRecentsViewController$onRecentAppClicked$handleResult$1;->invoke()Ljava/lang/Object;
 
-    .line 243
+    .line 242
     :goto_2
     sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 246
+    .line 245
     return-object v0
-    .line 248
+    .line 247
 .end method

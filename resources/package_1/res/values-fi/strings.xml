@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">aseta valittu widget</string>
   <string name="accessibility_action_label_remove_widget">poista widget</string>
   <string name="accessibility_action_label_select_widget">valitse widget</string>
-  <string name="accessibility_action_open_communal_hub">Widgetit lukitusnäytöllä</string>
   <string name="accessibility_action_pip_resize">Muuta kokoa</string>
   <string name="accessibility_action_pip_stash">Lisää turvasäilytykseen</string>
   <string name="accessibility_action_pip_unstash">Poista turvasäilytyksestä</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Poistu yhden käden moodista</string>
   <string name="accessibility_airplane_mode">Lentokonetila.</string>
   <string name="accessibility_allow_diagonal_scrolling">Salli diagonaalinen vierittäminen</string>
+  <string name="accessibility_assistant_poodle">Puhehaku</string>
   <string name="accessibility_authenticate_hint">todentaaksesi</string>
   <string name="accessibility_back">Takaisin</string>
   <string name="accessibility_banner_message_dismiss">Ohita</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">avataksesi laitteen</string>
   <string name="accessibility_ethernet_connected">Ethernet</string>
   <string name="accessibility_ethernet_disconnected">Ethernet on irrotettu.</string>
-  <string name="accessibility_fingerprint_bouncer">Todennus vaaditaan. Todenna koskettamalla sormenjälkitunnistinta.</string>
   <string name="accessibility_fingerprint_label">Sormenjälkitunnistin</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">vaihda</string>
   <string name="accessibility_floating_button_action_edit">Muokkaa</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Valikko</string>
   <string name="accessibility_multi_user_list_switcher">alasvetovalikko</string>
   <string name="accessibility_multi_user_switch_switcher">Vaihda käyttäjää</string>
+  <string name="accessibility_next_alarm">Seuraava hälytys klo %s</string>
   <string name="accessibility_no_calling">Ei puheluita.</string>
   <string name="accessibility_no_phone">Ei puhelinverkkoyhteyttä.</string>
   <string name="accessibility_no_wifi">Ei Wi-Fi-yhteyttä</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Ruutu on lukittu pystysuuntaan.</string>
   <string name="accessibility_send_smart_reply">Lähetä</string>
   <string name="accessibility_sensors_off_active">Anturit pois päältä aktiivinen</string>
+  <string name="accessibility_settings_gear">Pixel Stand: asetukset</string>
   <string name="accessibility_side_fingerprint_indicator_label">Kosketa sormenjälkitunnistinta. Se on puhelimen sivussa oleva lyhyempi painike.</string>
+  <string name="accessibility_smartspace_page">Sivu %1$d/%2$d</string>
   <string name="accessibility_split_bottom">Alhaalla</string>
   <string name="accessibility_split_left">Vasemmalla</string>
   <string name="accessibility_split_right">Oikealla</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi-signaali – kolme palkkia</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi-signaali – kaksi palkkia</string>
   <string name="accesssibility_keyguard_retry">Pyyhkäise ylös ja kokeile kasvojentunnistusavausta uudelleen</string>
+  <string name="adaptive_charging_notify_des">Akku täynnä klo %1$s mennessä. Akkua ladataan hiljalleen, jotta akunkäyttöikä on pidempi.</string>
+  <string name="adaptive_charging_notify_title">Mukautuva lataus on päällä</string>
+  <string name="adaptive_charging_notify_turn_off_once">Laita kerran pois päältä</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Mukautuva lataus • Täynnä klo %2$s mennessä</string>
   <string name="add">Lisää</string>
   <string name="add_guest_failed">Uutta vierasta ei voitu luoda</string>
   <string name="airplane_mode">Lentokonetila</string>
   <string name="alarm_template">kello %1$s</string>
-  <string name="alarm_template_far">ajankohtana %1$s</string>
+  <string name="alarm_template_far">%1$s</string>
   <string name="all_network_unavailable">Ei verkkoja käytettävissä</string>
   <string name="always_use_accessory">Avaa %1$s aina, kun %2$s liitetään</string>
   <string name="always_use_device">Avaa %1$s aina, kun %2$s liitetään</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Sovellustiedot</string>
   <string name="app_label">Käyttöliitt.</string>
   <string name="assistant_attention_content_description">Käyttäjän läsnäolo havaittu</string>
+  <string name="assistant_scrim_label">Kuuntelee, peru koskettamalla</string>
   <string name="audio_sharing_description">Audiota jaetaan</string>
   <string name="audio_status">Kuunnellaan</string>
   <string name="auto_data_switch_dialog_negative_button">Ei kiitos</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Takaisin</string>
   <string name="battery">Akku</string>
   <string name="battery_detail_switch_title">Virransäästö</string>
-  <string name="battery_low_description">Akkua jäljellä %s. Virransäästö laittaa tumman teeman päälle, rajoittaa taustatoimintoja ja viivästyttää ilmoituksia.</string>
+  <string name="battery_health_notify_learn_more">Lue lisää</string>
   <string name="battery_low_intro">Virransäästö laittaa tumman teeman päälle, rajoittaa taustatoimintoja ja viivästyttää ilmoituksia.</string>
-  <string name="battery_low_title">Laitetaanko virransäästö päälle?</string>
   <string name="battery_saver_confirmation_ok">Laita päälle</string>
   <string name="battery_saver_confirmation_title">Otetaanko virransäästö käyttöön?</string>
   <string name="battery_saver_confirmation_title_generic">Tietoa virransäästöstä</string>
-  <string name="battery_saver_dismiss_action">Ei kiitos</string>
   <string name="battery_saver_start_action">Laita päälle</string>
   <string name="battery_state_unknown_notification_text">Saat lisätietoja napauttamalla</string>
   <string name="battery_state_unknown_notification_title">Ongelma akkumittarin lukemisessa</string>
@@ -296,14 +301,9 @@ Yritä uudelleen %d sekunnin kuluttua.</string>
   <string name="bluetooth_active_battery_level_untethered">Aktiivinen. V: %1$s, O: %2$s virtaa.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Aktiivinen. V: virtaa %1$s.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Aktiivinen. O: virtaa %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level">Aktiivinen (vain media). %1$s virtaa.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Aktiivinen (vain media). V: %1$s, O: %2$s virtaa.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Aktiivinen (vain media)</string>
   <string name="bluetooth_active_no_battery_level">Aktiivinen</string>
   <string name="bluetooth_battery_level">Akun taso %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Yhdistetty (tukee audionjakoa). %1$s virtaa.</string>
   <string name="bluetooth_battery_level_untethered">V: %1$s, O: %2$s virtaa.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Yhdistetty (tukee audionjakoa). V: %1$s virtaa, O: %2$s virtaa.</string>
   <string name="bluetooth_connected">Yhdistetty %1$s</string>
   <string name="bluetooth_connecting">Yhdistetään…</string>
   <string name="bluetooth_disconnected">Yhteys katkaistu</string>
@@ -311,13 +311,11 @@ Yritä uudelleen %d sekunnin kuluttua.</string>
   <string name="bluetooth_hearing_aid_left_active">Aktiivinen (vain vasen)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Aktiivinen (vasen ja oikea)</string>
   <string name="bluetooth_hearing_aid_right_active">Aktiivinen (vain oikea)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Yhdistetty (tukee audionjakoa)</string>
   <string name="bluetooth_pairing">Laiteparia muodostetaan...</string>
   <string name="bluetooth_pairing_device_down_error_message">Ei yhteyttä laitteeseen %1$s.</string>
   <string name="bluetooth_pairing_error_message">Laiteparin muodostaminen laitteeseen %1$s epäonnistui.</string>
   <string name="bluetooth_pairing_pin_error_message">Laiteparia (%1$s) ei voitu muodostaa, koska PIN tai avainkoodi oli väärä.</string>
   <string name="bluetooth_pairing_rejected_error_message">Laite %1$s torjui laitepariyhteyden.</string>
-  <string name="bluetooth_saved_device_lea_support">Tukee audionjakoa</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Tietokone</string>
   <string name="bluetooth_talkback_headphone">Kuulokkeet</string>
@@ -356,8 +354,6 @@ Yritä uudelleen %d sekunnin kuluttua.</string>
   <string name="bubble_overflow_button_content_description">Ylivuoto</string>
   <string name="bubble_overflow_empty_subtitle">Viimeaikaiset ja äskettäin ohitetut kuplat näkyvät täällä</string>
   <string name="bubble_overflow_empty_title">Ei viimeaikaisia kuplia</string>
-  <string name="bubble_shortcut_label">Kuplat</string>
-  <string name="bubble_shortcut_long_label">Näytä kuplat</string>
   <string name="bubbles_app_settings">%1$s: asetukset</string>
   <string name="bubbles_dont_bubble_conversation">Älä näytä kuplia keskusteluista</string>
   <string name="bubbles_settings_button_description">Kuplien asetukset: %1$s</string>
@@ -387,6 +383,10 @@ Korjaa napauttamalla</string>
   <string name="cast_to_other_device_stop_dialog_button">Lopeta striimaus</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; ei enää striimaa sisältöä</string>
   <string name="cell_data_off_content_description">Mobiilidata poistettu käytöstä</string>
+  <string name="charge_limit_discovery_notification_enable_button">Ota käyttöön nyt</string>
+  <string name="charge_limit_discovery_notification_text">Kokeile suojata akun kuntoa ja kestoa laittamalla 80 prosentin latausrajoitusominaisuus päälle. Voit muuttaa valintaa asetuksista milloin vain.</string>
+  <string name="charge_limit_discovery_notification_title">Suojaa akkua latauksen aikana</string>
+  <string name="charging_reverse_text">Virtaa jaetaan</string>
   <string name="clear_all_notifications_text">Tyhjennä kaikki</string>
   <string name="clipboard">Leikepöytä</string>
   <string name="clipboard_content_copied">Sisältö kopioitu</string>
@@ -406,6 +406,11 @@ Korjaa napauttamalla</string>
   <string name="close_button_text">Sulje</string>
   <string name="close_dialog_button">Sulje</string>
   <string name="collapse_menu_text">Sulje valikko</string>
+  <string name="columbus_bouncer_message">Avaa lukitus, jotta voit käyttää pikanäpäytystä</string>
+  <string name="columbus_target_request_dialog_allow">Salli</string>
+  <string name="columbus_target_request_dialog_deny">Älä salli</string>
+  <string name="columbus_target_request_dialog_summary">Avaa %1$s napauttamalla puhelimen takaosaa kaksi kertaa. Voit vaihtaa valintasi milloin tahansa asetuksista.</string>
+  <string name="columbus_target_request_dialog_title">Voidaanko %1$s avata pikanäpäytyksellä?</string>
   <string name="communal_tutorial_indicator_text">Aloita yhteisöesittely pyyhkäisemällä vasemmalle</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Sisänäyttö peilataan. Etunäyttö laitetaan pois päältä.</string>
   <string name="connected_display_dialog_start_mirroring">Peilataanko ulkoiselle näytölle?</string>
@@ -511,8 +516,11 @@ Jos jatkat käyttöä, datan käytöstä saatetaan periä maksuja.</string>
   <string name="data_usage_disabled_dialog_mobile_title">Mobiilidatan käyttö on keskeytetty</string>
   <string name="data_usage_disabled_dialog_title">Tiedonsiirto keskeytettiin</string>
   <string name="days_timestamp">%1$s päivää sitten</string>
-  <string name="default_error_message">Virheellinen syöte</string>
   <string name="default_popup_window_title">Ponnahdusikkuna</string>
+  <string name="defender_notify_resume_charge">Ohita</string>
+  <string name="defender_notify_title">Akun suojaaminen</string>
+  <string name="defender_post_notify_des">Lataus oli optimoituna klo %1$s–%2$s, jotta akku kestäisi pidempään.</string>
+  <string name="defender_post_notify_title">Lataus optimoitiin</string>
   <string name="demo_mode">Käyttöliittymän esittelytila</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Suurenna näyttö</string>
   <string name="desktop_mode_maximize_menu_snap_text">Jaa näyttö</string>
@@ -532,20 +540,32 @@ Jos jatkat käyttöä, datan käytöstä saatetaan periä maksuja.</string>
   <string name="do_disclosure_generic">Organisaatiosi omistaa tämän laitteen</string>
   <string name="do_disclosure_with_name">%s omistaa tämän laitteen</string>
   <string name="do_financed_disclosure_with_name">Tämän laitteen tarjoaa %s</string>
+  <string name="dock_a11y_action_show_photo_text">Näytä kehykset</string>
+  <string name="dock_alignment_not_charging">Siirrä puhelinta, jotta se latautuu langattomasti</string>
+  <string name="dock_alignment_slow_charging">Siirrä puhelinta, jotta se latautuu nopeammin</string>
+  <string name="dock_defender_first_run_des">Lataus keskeytetään 90 %:iin akunkäyttöiän pidentämiseksi, kun tabletti on lataustelineessä. Ohita tämä asetuksissa.</string>
+  <string name="dock_defender_first_run_settings">Asetukset</string>
+  <string name="dock_defender_first_run_title">Lataus on keskeytetty akun suojaamiseksi</string>
   <string name="dock_multi_instances_not_supported_text">Tämän sovelluksen voi avata vain yhdessä ikkunassa</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Sovellus ei tue jaetun näytön tilaa</string>
+  <string name="dock_photo_preview_text">Valokuvakehys käynnistyy…</string>
+  <string name="dock_promo_text">Ota kehykset käyttöön pyyhkäisemällä vasemmalle</string>
   <string name="done">Valmis</string>
   <string name="drag_split_not_supported">Ilmoitus ei tue jaetulle näytölle vetämistä</string>
   <string name="drag_to_add_tiles">Lisää osioita koskettamalla pitkään ja vetämällä</string>
   <string name="drag_to_rearrange_tiles">Järjestele koskettamalla pitkään ja vetämällä</string>
   <string name="drag_to_remove_disabled">%1$d kiekkoa on vähimmäismäärä</string>
   <string name="drag_to_remove_tiles">Poista vetämällä tähän.</string>
+  <string name="dream_lockscreen_wallpaper_description">Käytä nykyistä lukitusnäytön taustakuvaa</string>
+  <string name="dream_lockscreen_wallpaper_label">Taustakuva</string>
   <string name="dream_overlay_status_bar_alarm_set">Hälytys asetettu</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Kamera ja mikrofoni ovat pois päältä</string>
   <string name="dream_overlay_status_bar_camera_off">Kamera on poissa päältä</string>
   <string name="dream_overlay_status_bar_mic_off">Mikrofoni on poissa päältä</string>
   <string name="dream_overlay_status_bar_priority_mode">Tärkeät-tila</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi ei ole saatavilla</string>
+  <string name="dwell_defender_notify_des">Tämä auttaa pidentämään akunkäyttöikää, kun puhelin jää lataukseen pitkäksi aikaa</string>
+  <string name="dwell_defender_notify_title">Lataus on keskeytetty akun suojaamiseksi</string>
   <string name="edit_user_info_message">Valitsemasi nimi ja kuva näkyvät kaikille tämän laitteen käyttäjille.</string>
   <string name="edit_widget">Muokkaa widgetiä</string>
   <string name="empty_shade_text">Ei ilmoituksia</string>
@@ -561,13 +581,17 @@ Jos jatkat käyttöä, datan käytöstä saatetaan periä maksuja.</string>
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Lisäasetukset</string>
   <string name="expand_menu_text">Avaa valikko</string>
+  <string name="extreme_battery_saver_text">Extreme</string>
+  <string name="extreme_low_battery_notification_text">Puhelin sammuu pian jos sitä ei ladata</string>
+  <string name="extreme_low_battery_notification_title">Akku lähes loppu</string>
   <string name="face_re_enroll_dialog_content">Jos haluat ottaa kasvojentunnistusavauksen uudelleen käyttöön, nykyinen kasvomalli poistetaan.
 
 Jos haluat avata puhelimen lukituksen kasvoilla, sinun on otettava ominaisuus uudelleen käyttöön.</string>
   <string name="face_re_enroll_dialog_title">Kasvojen&amp;shy;tunnistus&amp;shy;avauksen käyttöönotto</string>
   <string name="face_re_enroll_notification_name">Kasvojentunnistusavaus</string>
   <string name="face_re_enroll_notification_title">Ota kasvojentunnistusavaus uudelleen käyttöön</string>
-  <string name="face_reenroll_failure_dialog_content">Kasvojentunnistusavauksen käyttöönotto epäonnistui. Siirry asetuksiin ja yritä uudelleen.</string>
+  <string name="face_reenroll_dialog_confirm">Määritä</string>
+  <string name="face_reenroll_failure_dialog_content">Kasvojentunnistusavauksen määritys epäonnistui. Siirry asetuksiin ja yritä uudelleen.</string>
   <string name="failed_attempts_now_wiping_device">Liian monta virheellistä yritystä. Laitteen data poistetaan.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Ohita</string>
   <string name="failed_attempts_now_wiping_profile">Liian monta virheellistä yritystä. Tämä työprofiili ja sen data poistetaan.</string>
@@ -604,6 +628,7 @@ Kun ne on poistettu, sinun on otettava sormenjälkiavaus uudelleen käyttöön, 
   <string name="font_scaling_smaller">Pienennä</string>
   <string name="fullscreen_text">Koko näyttö</string>
   <string name="game_status">Toistetaan</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Lukitsematon tila poistettu käytöstä</string>
   <string name="go_to_web">Siirry selaimeen</string>
   <string name="got_it">Selvä</string>
@@ -640,6 +665,7 @@ Kun ne on poistettu, sinun on otettava sormenjälkiavaus uudelleen käyttöön, 
   <string name="guest_reset_and_restart_dialog_title">Nollataanko vierailija-käyttökerta?</string>
   <string name="guest_reset_guest_confirm_button">Nollaa</string>
   <string name="guest_resetting">Nollataan vierasta…</string>
+  <string name="handle_invocation_prompt">Pyyhkäise, niin voit puhua</string>
   <string name="handle_text">Kahva</string>
   <string name="headset">Kuulokemikrofoni</string>
   <string name="hearing_devices_preset_label">Esiasetus</string>
@@ -656,6 +682,7 @@ Lue lisää napauttamalla</string>
   <string name="high_temp_title">Puhelin lämpenee</string>
   <string name="home_controls_dream_description">Avaa kodin ohjaus nopeasti näytönsäästäjän kautta</string>
   <string name="home_controls_dream_label">Kodin ohjaus</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Ainakin yksi laite tai laitepaneeli on käytettävissä</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Jos haluat lisätä Home-sovelluksen pikakuvakkeena, varmista, että se on asennettuna</string>
   <string name="hub_mode_add_widget_button_text">Lisää widget</string>
@@ -669,12 +696,16 @@ Lue lisää napauttamalla</string>
   <string name="in_progress">Kesken</string>
   <string name="inattentive_sleep_warning_message">Laite sammuu pian. Pidä se päällä painamalla.</string>
   <string name="inattentive_sleep_warning_title">Virransäästötila</string>
+  <string name="incompatible_charging_learn_more">Lue lisää</string>
+  <string name="incompatible_charging_notify_des">Puhelin saattaa latautua hitaasti tai ei lainkaan. Käytä suositeltua johtoa ja laturia, jotta akku latautuu nopeammin.</string>
+  <string name="incompatible_charging_notify_title">Tarkista latauslisävaruste</string>
   <string name="indeterminate">Osittain tarkistettu</string>
   <string name="inline_done_button">Valmis</string>
   <string name="inline_ok_button">Käytä</string>
   <string name="inline_turn_off_notifications">Poista ilmoitukset käytöstä</string>
   <string name="input_switch_input_language_next">Vaihda seuraavaan kieleen</string>
   <string name="input_switch_input_language_previous">Vaihda aiempaan kieleen</string>
+  <string name="install_app">Asenna sovellus</string>
   <string name="install_dialer_on_work_profile_action">Asenna työpuhelinsovellus</string>
   <string name="install_type_instant">Pikasovellus</string>
   <string name="instant_apps">Instant Apps</string>
@@ -683,8 +714,6 @@ Lue lisää napauttamalla</string>
   <string name="instant_apps_title">%1$s on käynnissä</string>
   <string name="interruption_level_none">Täydellinen hiljaisuus</string>
   <string name="interruption_level_priority">Vain tärkeät</string>
-  <string name="invalid_charger_text">Käytä laitteesi mukana tullutta laturia</string>
-  <string name="invalid_charger_title">Lataaminen USB:llä ei onnistu</string>
   <string name="issuerecord_background_processing_label">Käsittely: Ongelman tallennus</string>
   <string name="issuerecord_ongoing_screen_only">Tallennusongelma</string>
   <string name="issuerecord_save_title">Ongelman tallennus tallennettiin</string>
@@ -766,21 +795,33 @@ Lue lisää napauttamalla</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Laite lukittu
 Todennus epäonnistui</string>
   <string name="keyguard_indication_charging_time">%2$s • Latautuu • Täynnä %1$s päästä</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Lataus valmis klo %1$s mennessä</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Latautuu • Täynnä %1$s päästä</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Ladattu täyteen klo %1$s mennessä</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Latautuu nopeasti • Täynnä %1$s päästä</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Nopea lataus • Täynnä klo %1$s mennessä</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Lataus valmis</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Latautuu hitaasti • Täynnä %1$s päästä</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Ladattu täyteen klo %1$s mennessä</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Ladattu täyteen klo %1$s mennessä</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Latautuu langattomasti • Täynnä %1$s päästä</string>
-  <string name="keyguard_indication_trust_unlocked">TrustAgent pitää lukitusta avattuna</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Ladattu täyteen klo %1$s mennessä</string>
+  <string name="keyguard_indication_trust_unlocked">Lukitsematon tila avaa lukituksen</string>
   <string name="keyguard_missing_sim_message_short">Ei SIM-korttia</string>
   <string name="keyguard_network_locked_message">Verkko lukittu</string>
   <string name="keyguard_permanent_disabled_sim_message_short">SIM-korttia ei voi käyttää.</string>
   <string name="keyguard_plugged_in">%s • Ladataan</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Ladataan nopeasti</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Nopea lataus</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Lataus on keskeytetty akun suojaamiseksi</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Ladataan hitaasti</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Ladataan</string>
   <string name="keyguard_plugged_in_dock">%s • Ladataan</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Ladataan</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Tarkista latauslisävaruste</string>
+  <string name="keyguard_plugged_in_v2">%s • Ladataan</string>
   <string name="keyguard_plugged_in_wireless">%s • Ladataan langattomasti</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Ladataan</string>
   <string name="keyguard_retry">Yritä uudelleen pyyhkäisemällä ylös</string>
   <string name="keyguard_sim_error_message_short">Virheellinen kortti</string>
   <string name="keyguard_sim_locked_message">SIM-kortti on lukittu.</string>
@@ -811,7 +852,6 @@ Todennus epäonnistui</string>
   <string name="kg_invalid_confirm_pin_hint">PIN-koodit eivät täsmää</string>
   <string name="kg_invalid_sim_pin_hint">Anna 4–8-numeroinen PIN-koodi.</string>
   <string name="kg_invalid_sim_puk_hint">PUK-koodissa tulee olla vähintään 8 numeroa.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Lisää SIM-kortin PIN-koodi. Sinulla on # yritys jäljellä, ennen kuin sinun on otettava yhteys operaattoriin laitteen lukituksen avaamiseksi.}other{Lisää SIM-kortin PIN-koodi. # yritystä jäljellä.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM-kortti on nyt lukittu. Lisää PUK-koodi, niin voit jatkaa. Sinulla on # yritys jäljellä, ennen kuin SIM-kortti poistuu käytöstä pysyvästi. Pyydä lisätietoa operaattoriltasi.}other{SIM-kortti on nyt lukittu. Lisää PUK-koodi, niin voit jatkaa. Sinulla on # yritystä jäljellä, ennen kuin SIM-kortti poistuu käytöstä pysyvästi. Pyydä lisätietoa operaattoriltasi.}}</string>
   <string name="kg_password_pin_failed">SIM-kortin PIN-toiminto epäonnistui.</string>
   <string name="kg_password_puk_failed">SIM-kortin PUK-toiminto epäonnistui.</string>
@@ -852,7 +892,7 @@ Todennus epäonnistui</string>
   <string name="kg_sim_pin_instructions_multi">Anna operaattorin %1$s SIM-kortin PIN-koodi.</string>
   <string name="kg_sim_unlock_progress_dialog_message">SIM-kortin lukitusta avataan…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Yritä uudelleen # sekunnin kuluttua.}other{Yritä uudelleen # sekunnin kuluttua.}}</string>
-  <string name="kg_trust_agent_disabled">Luotettava taho ei ole käytettävissä</string>
+  <string name="kg_trust_agent_disabled">Lukitsematon tila ei ole saatavilla</string>
   <string name="kg_unlock_with_password_or_fp">Avaa: salasana/sormenjälki</string>
   <string name="kg_unlock_with_pattern_or_fp">Avaa: kuvio/sormenjälki</string>
   <string name="kg_unlock_with_pin_or_fp">Avaa: PIN/sormenjälki</string>
@@ -900,6 +940,10 @@ Jos et salli tälle sovellukselle pääsyä kaikkiin laitelokeihin, sillä on ku
   <string name="log_access_confirmation_learn_more">Lue lisää</string>
   <string name="log_access_confirmation_learn_more_at">Lue lisää: %s</string>
   <string name="log_access_confirmation_title">Saako %s pääsyn kaikkiin laitelokeihin?</string>
+  <string name="low_battery_label">Akku vähissä</string>
+  <string name="low_battery_notification_text">Laita akun vakiosäästö päälle akunkeston parantamiseksi</string>
+  <string name="low_battery_notification_text_ebs">Laita akun tehosäästö päälle akunkeston parantamiseksi</string>
+  <string name="low_battery_notification_title">Akkua jäljellä %s</string>
   <string name="m3c_search_bar_search">Hae</string>
   <string name="m3c_suggestions_available">Ehdotuksia alla</string>
   <string name="magnification_close_settings_click_label">Sulje suurennusasetukset</string>
@@ -939,8 +983,6 @@ Jos et salli tälle sovellukselle pääsyä kaikkiin laitelokeihin, sillä on ku
   <string name="media_output_dialog_volume_percentage">%1$d %%</string>
   <string name="media_output_end_session_dialog_stop">Lopeta</string>
   <string name="media_output_end_session_dialog_summary">Lopeta jaettu istunto, jotta voit siirtyä mediaan toisella laitteella</string>
-  <string name="media_output_first_broadcast_title">Miten lähetys toimii</string>
-  <string name="media_output_first_notify_broadcast_message">Lähistöllä olevat ihmiset, joilla on yhteensopiva Bluetooth-laite, voivat kuunnella lähettämääsi mediaa</string>
   <string name="media_output_group_title_speakers_and_displays">Kaiuttimet ja näytöt</string>
   <string name="media_output_group_title_suggested_device">Ehdotetut laitteet</string>
   <string name="media_output_label_title">Toistetaan: %s</string>
@@ -967,9 +1009,6 @@ Jos et salli tälle sovellukselle pääsyä kaikkiin laitelokeihin, sillä on ku
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Kun striimaat sovellusta, Android saa pääsyn kaikkeen sovelluksessa näkyvään tai toistettuun sisältöön. Ole siis varovainen, kun lisäät salasanoja, maksutietoja, viestejä, kuvia, audiota tai videoita.</string>
   <string name="media_projection_sys_service_dialog_title">Aloitetaanko tallentaminen tai striimaus?</string>
   <string name="media_projection_sys_service_dialog_warning">Ominaisuuden tarjoavalla palvelulla on pääsy kaikkiin näytölläsi näkyviin tietoihin ja tietoihin laitteesi toistamasta sisällöstä tallennuksen tai striimauksen aikana. Näitä tietoja ovat esimerkiksi salasanat, maksutiedot, kuvat, viestit ja toistettava audiosisältö.</string>
-  <string name="media_projection_task_switcher_action_back">Vaihda takaisin</string>
-  <string name="media_projection_task_switcher_action_switch">Jaa tämä sovellus</string>
-  <string name="media_projection_task_switcher_text">Jakaminen keskeytyy, kun vaihdat sovelluksia</string>
   <string name="media_seamless_other_device">Muu laite</string>
   <string name="media_transfer_default_device_name">Yhdistetty laite</string>
   <string name="media_transfer_dock_speaker_device_name">Telinekaiutin</string>
@@ -1138,7 +1177,7 @@ Jos sinulla on kysyttävää, ota yhteyttä laitteen tarjoajaan: %2$s.</string>
   <string name="pip_skip_to_prev">Siirry edelliseen</string>
   <string name="popup_on_dismiss_cta_tile_text">Yksilöi widgetit pitkällä painalluksella</string>
   <string name="power_discharge_by_only_short">%1$s saakka</string>
-  <string name="preference_summary_default_combination">%1$s/%2$s</string>
+  <string name="preference_summary_default_combination">%1$s / %2$s</string>
   <string name="priority_conversations">Tärkeät keskustelut</string>
   <string name="priority_mode_dream_overlay_content_description">Älä häiritse</string>
   <string name="privacy_dialog_active_app_usage">Tämän käytössä: %1$s</string>
@@ -1280,12 +1319,17 @@ Jos sinulla on kysyttävää, ota yhteyttä laitteen tarjoajaan: %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Resoluutio on parempi, kun käännät puhelimen</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Vaihdetaanko näyttöä?</string>
   <string name="recent_conversations">Uusimmat keskustelut</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">lähetti kuvan</string>
   <string name="remove_from_settings">Poista Asetuksista</string>
   <string name="remove_from_settings_prompt">Haluatko poistaa System UI Tunerin Asetuksista ja lopettaa sen ominaisuuksien käytön?</string>
   <string name="require_unlock_for_nfc">Avaa lukitus, jotta voit käyttää NFC:tä</string>
   <string name="restart_button_description">Napauta, niin sovellus käynnistyy uudelleen paremmin näytölle sopivana</string>
   <string name="retry_face">Kokeile kasvojentunnistusta uudelleen</string>
+  <string name="reverse_charging_device_name_text">Muu Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s toimii virtalähteenä (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Akunjako on päällä</string>
+  <string name="reverse_charging_title">Akunjako</string>
   <string name="right_icon">Oikea kuvake</string>
   <string name="right_keycode">Oikea näppäinkoodi</string>
   <string name="right_nav_bar_button_type">Ylimääräinen oikea painiketyyppi</string>
@@ -1293,8 +1337,15 @@ Jos sinulla on kysyttävää, ota yhteyttä laitteen tarjoajaan: %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">Katso lisätietoja akun ja datan käytöstä napauttamalla</string>
   <string name="running_foreground_services_title">Sovelluksia käynnissä taustalla</string>
-  <string name="satellite_connected_carrier_text">Satellite SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel Satellite SOS</string>
   <string name="save">Tallenna</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Peru</string>
+  <string name="saver_confirmation_dialog_subtitle">Valitse käytettävä tila</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Sisältää yllä mainitut muutokset. Keskeyttää myös toissijaiset sovellukset ja niiden ilmoitukset.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Rajoittaa visuaalisia tehosteita ja taustatoimintaa. Laittaa tumman teeman päälle, jos se ei ole päällä.</string>
+  <string name="saver_confirmation_dialog_title">Tervetuloa virransäästöön</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Akun tehosäästö</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Akun vakiosäästö</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Kuvakaappaus on poistettu käytöstä laitekäytännön perusteella</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">IT-järjestelmänvalvojasi estämä</string>
   <string name="screen_pinning_can_open_other_apps">Kiinnitetty sovellus voi avata muita sovelluksia.</string>
@@ -1312,6 +1363,12 @@ Jos sinulla on kysyttävää, ota yhteyttä laitteen tarjoajaan: %2$s.</string>
   <string name="screen_pinning_toast">Irrota sovellus koskettamalla pitkään Takaisin- ja Viimeisimmät-painikkeita</string>
   <string name="screen_pinning_toast_gesture_nav">Irrota sovellus pyyhkäisemällä ylös ja painamalla pitkään</string>
   <string name="screen_pinning_toast_recents_invisible">Irrota sovellus koskettamalla pitkään Takaisin- ja Aloitusnäyttö-painikkeita</string>
+  <string name="screen_protector_absent_message">Näytönsuojustilan poistaminen käytöstä parantaa kosketusherkkyyttä, kun suojus ei ole käytössä.</string>
+  <string name="screen_protector_disable_notification">Poista ilmoitus käytöstä</string>
+  <string name="screen_protector_go_to_settings">Avaa asetukset</string>
+  <string name="screen_protector_got_it">OK</string>
+  <string name="screen_protector_mode_title">Näytönsuojustila</string>
+  <string name="screen_protector_present_message">Näytönsuojustila parantaa kosketusherkkyyttä, kun näytönsuojus on käytössä.</string>
   <string name="screen_share_permission_app_selector_title">Jaa sovellus tai tallenna sen sisältöä</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Koko näyttö</string>
   <string name="screen_share_permission_dialog_option_single_app">Yksittäinen sovellus</string>
@@ -1364,9 +1421,9 @@ Jos sinulla on kysyttävää, ota yhteyttä laitteen tarjoajaan: %2$s.</string>
   <string name="screenshot_saving_work_profile_title">Kuvakaappausta tallennetaan työprofiiliin…</string>
   <string name="screenshot_scroll_label">Kuvaa enemmän</string>
   <string name="screenshot_share_description">Jaa kuvakaappaus</string>
-  <string name="screenshot_share_label">Jaa</string>
   <string name="screenshot_text">Kuvakaappaus</string>
   <string name="screenshot_top_boundary_pct">Yläreuna %1$d prosenttia</string>
+  <string name="screenshot_view_description">Katso kuvakaappaus</string>
   <string name="screenshot_work_profile_notification">Tallennettu työprofiiliin tässä sovelluksessa: %1$s</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Sormenjälkitunnistin on virtapainikkeessa. Se on litteä painike koholla olevan äänenvoimakkuuspainikkeen vieressä puhelimen sivussa.</string>
   <string name="see_all_bluetooth_devices">Näytä kaikki</string>
@@ -1384,6 +1441,12 @@ Jos sinulla on kysyttävää, ota yhteyttä laitteen tarjoajaan: %2$s.</string>
   <string name="set_default_notes_app_toast_content">Aseta oletusmuistiinpanosovellus Asetuksista</string>
   <string name="settings_label">Asetukset</string>
   <string name="settingslib_learn_more_text">Lue lisää</string>
+  <string name="severe_battery_notification_switch_text">Vaihdetaanko akun tehosäästöön? 
+
+Tämä keskeyttää toissijaiset sovellukset ja niiden ilmoitukset</string>
+  <string name="severe_battery_notification_text">Laita akun tehosäästö päälle Tämä keskeyttää kaikki paitsi tärkeät sovellukset</string>
+  <string name="severe_battery_notification_title">Akkua jäljellä %s</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Vaihda</string>
   <string name="share_to_app_stop_dialog_button">Lopeta jakaminen</string>
   <string name="share_to_app_stop_dialog_message_specific_app">&lt;b&gt;%1$s&lt;/b&gt; ei enää jaa sisältöä</string>
   <string name="share_to_app_stop_dialog_title">Lopetetaanko näytön jakaminen?</string>
@@ -1406,6 +1469,9 @@ Jos sinulla on kysyttävää, ota yhteyttä laitteen tarjoajaan: %2$s.</string>
   <string name="slice_permission_text_1">– Se voi lukea tietoja sovelluksesta %1$s.</string>
   <string name="slice_permission_text_2">– Se voi suorittaa toimintoja sovelluksessa %1$s.</string>
   <string name="slice_permission_title">Saako %1$s näyttää osia sovelluksesta %2$s?</string>
+  <string name="smartspace_content_desc">Pikanäkymä</string>
+  <string name="smartspace_flight_qr_code">QR-koodi</string>
+  <string name="smartspace_role_desc">Näytä</string>
   <string name="snoozeHourOptions">{count,plural, =1{# tunti}=2{# tuntia}other{# tuntia}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minuutti}other{# minuuttia}}</string>
   <string name="snooze_undo">Kumoa</string>
@@ -1416,6 +1482,8 @@ Jos sinulla on kysyttävää, ota yhteyttä laitteen tarjoajaan: %2$s.</string>
   <string name="speed_label_slow">Hidas</string>
   <string name="speed_label_very_fast">Hyvin nopea</string>
   <string name="split_screen_text">Jaettu näyttö</string>
+  <string name="squeeze_invocation_prompt">Purista, niin voit puhua</string>
+  <string name="standard_battery_saver_text">Tavallinen</string>
   <string name="start_dreams">Näytönsäästäjä</string>
   <string name="state_empty">Tyhjä</string>
   <string name="state_off">Pois päältä</string>
@@ -1453,6 +1521,8 @@ Jos sinulla on kysyttävää, ota yhteyttä laitteen tarjoajaan: %2$s.</string>
   <string name="tab">Välilehti</string>
   <string name="tap_a_network_to_connect">Muodosta yhteys napauttamalla verkkoa</string>
   <string name="tap_again">Napauta uudelleen</string>
+  <string name="temp_defender_notify_des">Lataamista jatketaan, kun puhelimen lämpötila palaa normaaliksi</string>
+  <string name="temp_defender_notify_title">Lataus on keskeytetty akun suojaamiseksi</string>
   <string name="template_percent">%1$d prosenttia</string>
   <string name="thermal">Lämpökamera</string>
   <string name="thermal_shutdown_dialog_help_text">Katso huoltovaiheet</string>
@@ -1469,6 +1539,7 @@ Lue lisää napauttamalla</string>
   <string name="title_for_empty_state_cta">Pääset nopeasti tuttuihin sovelluswidgeteihin avaamatta tabletin lukitusta.</string>
   <string name="title_usb_accessory">USB-lisälaite</string>
   <string name="to_switch_networks_disconnect_ethernet">Irrota Ethernet-johto, jos haluat vaihtaa verkkoa</string>
+  <string name="too_hot_label">Pixel liian kuuma</string>
   <string name="touch_filtered_warning">Sovellus peittää käyttöoikeuspyynnön, joten Asetukset ei voi vahvistaa valintaasi.</string>
   <string name="touchpad_tutorial_action_key_button">Toimintonäppäin</string>
   <string name="touchpad_tutorial_back_gesture_button">Takaisin-ele</string>
@@ -1483,17 +1554,18 @@ Lue lisää napauttamalla</string>
   <string name="tuner_menu">Valikko</string>
   <string name="tuner_minus">Miinus</string>
   <string name="tuner_other_apps">Muut sovellukset</string>
+  <string name="tuner_persistent_warning">Nämä kokeelliset ominaisuudet voivat muuttua, lakata toimimasta tai kadota milloin tahansa. Jatka omalla vastuullasi.</string>
   <string name="tuner_plus">Plus</string>
   <string name="tuner_right">Oikea</string>
   <string name="tuner_time">Aika</string>
+  <string name="tuner_warning">System UI Tuner antaa lisämahdollisuuksia Android-käyttöliittymän muokkaamiseen. Nämä kokeelliset ominaisuudet voivat muuttua, lakata toimimasta tai kadota milloin tahansa. Jatka omalla vastuullasi.</string>
+  <string name="tuner_warning_title">Ei sovellu kaikkien käyttöön</string>
   <string name="turn_off_airplane_mode">Laita lentokonetila pois päältä</string>
   <string name="turn_on_bluetooth">Käytä Bluetoothia</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Quick Share, Paikanna laite ja tietyt muut ominaisuudet käyttävät Bluetoothia</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth menee päälle huomisaamuna</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Laita automaattisesti päälle huomenna</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">TV:n oletusasetus</string>
   <string name="two_weeks_timestamp">2 viikkoa sitten</string>
   <string name="unknown">Tuntematon</string>
   <string name="unlock_to_see_notif_text">Avaa lukitus niin näet ilmoituksia</string>
@@ -1552,7 +1624,9 @@ Kaikki käyttäjät voivat päivittää sovelluksia muille käyttäjille.</strin
   <string name="volume_odi_captions_hint_enable">ota käyttöön</string>
   <string name="volume_odi_captions_tip">Tekstitä media automaatt.</string>
   <string name="volume_panel_captioning_title">Livetekstitys</string>
+  <string name="volume_panel_clear_calling_title">Selkeä-ääniset puhelut</string>
   <string name="volume_panel_collapsed_sliders">Äänenvoimakkuuden liukusäätimet tiivistetty</string>
+  <string name="volume_panel_device_settings_title">Laiteasetukset</string>
   <string name="volume_panel_dialog_settings_button">Asetukset</string>
   <string name="volume_panel_enter_media_output_settings">Lisää tuloasetukset</string>
   <string name="volume_panel_expanded_sliders">Äänenvoimakkuuden liukusäätimet laajennettu</string>
@@ -1667,6 +1741,9 @@ Wi-Fin osoite (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Tuntematon</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Maksuton</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi ei toistaiseksi yhdistä automaattisesti</string>
+  <string name="wireless_charging_label">Ladataan langattomasti</string>
+  <string name="wireless_charging_notification_text">Langaton lataus voi kuluttaa enemmän energiaa kuin lataus johdon kautta. Säästä sähköä ja aikaa vaihtamalla johdolliseen laturiin.</string>
+  <string name="wireless_charging_notification_title">Ladataan langattomasti</string>
   <string name="work_challenge_emergency_button_text">Hätätilanne</string>
   <string name="work_mode_off_title">Laita työsovellukset päälle?</string>
   <string name="work_mode_turn_on">Laita päälle</string>

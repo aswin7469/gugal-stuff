@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">posicionar widget selecionado</string>
   <string name="accessibility_action_label_remove_widget">remover widget</string>
   <string name="accessibility_action_label_select_widget">selecionar widget</string>
-  <string name="accessibility_action_open_communal_hub">Widgets no ecrã de bloqueio</string>
   <string name="accessibility_action_pip_resize">Redimensionar</string>
   <string name="accessibility_action_pip_stash">Armazenar</string>
   <string name="accessibility_action_pip_unstash">Remover do armazenamento</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Sair do modo para uma mão</string>
   <string name="accessibility_airplane_mode">Modo de avião</string>
   <string name="accessibility_allow_diagonal_scrolling">Permitir deslocamento diagonal</string>
+  <string name="accessibility_assistant_poodle">Pesquisa por voz</string>
   <string name="accessibility_authenticate_hint">autenticar</string>
   <string name="accessibility_back">Anterior</string>
   <string name="accessibility_banner_message_dismiss">Ignorar</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">entrar no dispositivo</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">Ethernet desligada.</string>
-  <string name="accessibility_fingerprint_bouncer">Autenticação necessária. Toque no sensor de impressões digitais para autenticar.</string>
   <string name="accessibility_fingerprint_label">Sensor de impressões digitais</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">ativar/desativar</string>
   <string name="accessibility_floating_button_action_edit">Editar</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menu</string>
   <string name="accessibility_multi_user_list_switcher">menu pendente</string>
   <string name="accessibility_multi_user_switch_switcher">Mudar utilizador</string>
+  <string name="accessibility_next_alarm">Próximo alarme à(s) %s</string>
   <string name="accessibility_no_calling">Sem chamadas.</string>
   <string name="accessibility_no_phone">Sem telefone.</string>
   <string name="accessibility_no_wifi">Wi-Fi desligado.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">O ecrã está bloqueado na orientação vertical.</string>
   <string name="accessibility_send_smart_reply">Enviar</string>
   <string name="accessibility_sensors_off_active">Sensores desativados ativo</string>
+  <string name="accessibility_settings_gear">Definições do Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Toque no sensor de impressões digitais. É o botão mais pequeno na parte lateral do telemóvel</string>
+  <string name="accessibility_smartspace_page">Página %1$d de %2$d</string>
   <string name="accessibility_split_bottom">Divisão na parte inferior</string>
   <string name="accessibility_split_left">Divisão à esquerda</string>
   <string name="accessibility_split_right">Divisão à direita</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Três barras de Wi-Fi.</string>
   <string name="accessibility_wifi_two_bars">Duas barras de Wi-Fi.</string>
   <string name="accesssibility_keyguard_retry">Deslize para cima para tentar o Desbloqueio facial novamente</string>
+  <string name="adaptive_charging_notify_des">Bateria totalmente carregada até à(s) %1$s. A carregar de forma regular para prolongar a vida útil da bateria.</string>
+  <string name="adaptive_charging_notify_title">O carregamento adaptável está ativado</string>
+  <string name="adaptive_charging_notify_turn_off_once">Desativar uma vez</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Carregamento adaptável • Completo até à(s) %2$s</string>
   <string name="add">Adicionar</string>
   <string name="add_guest_failed">Falha ao criar um novo convidado</string>
   <string name="airplane_mode">Modo de avião</string>
-  <string name="alarm_template">às %1$s</string>
-  <string name="alarm_template_far">em %1$s</string>
+  <string name="alarm_template">à(s) %1$s</string>
+  <string name="alarm_template_far">no(a) %1$s</string>
   <string name="all_network_unavailable">Sem redes disponíveis</string>
   <string name="always_use_accessory">Abrir sempre %1$s quando o acessório %2$s estiver ligado</string>
   <string name="always_use_device">Abrir sempre %1$s quando o dispositivo %2$s estiver ligado</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Info. da app</string>
   <string name="app_label">IU do sistema</string>
   <string name="assistant_attention_content_description">Quando deteta a presença do utilizador</string>
+  <string name="assistant_scrim_label">A ouvir… Toque para cancelar.</string>
   <string name="audio_sharing_description">A partilhar áudio</string>
   <string name="audio_status">A ouvir</string>
   <string name="auto_data_switch_dialog_negative_button">Não</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Anterior</string>
   <string name="battery">Bateria</string>
   <string name="battery_detail_switch_title">Poupança de bateria</string>
-  <string name="battery_low_description">Tem %s de bateria. A Poupança de bateria ativa o tema escuro, restringe a atividade em segundo plano e atrasa as notificações.</string>
+  <string name="battery_health_notify_learn_more">Saber mais</string>
   <string name="battery_low_intro">A Poupança de bateria ativa o tema escuro, restringe a atividade em segundo plano e atrasa as notificações.</string>
-  <string name="battery_low_title">Ativar a Poupança de bateria?</string>
   <string name="battery_saver_confirmation_ok">Ativar</string>
   <string name="battery_saver_confirmation_title">Ativar a Poupança de bateria?</string>
   <string name="battery_saver_confirmation_title_generic">Acerca da Poupança de bateria</string>
-  <string name="battery_saver_dismiss_action">Não</string>
   <string name="battery_saver_start_action">Ativar</string>
   <string name="battery_state_unknown_notification_text">Toque para obter mais informações</string>
   <string name="battery_state_unknown_notification_title">Ocorreu um problema ao ler o medidor da bateria</string>
@@ -296,14 +301,9 @@ Tente novamente dentro de %d segundos.</string>
   <string name="bluetooth_active_battery_level_untethered">Ativo. E: %1$s. D: %2$s de bateria.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Ativo. E: bateria a %1$s.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Ativo. D: bateria a %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level">Ativo (apenas para multimédia). %1$s de bateria.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Ativo (apenas para multimédia). E: %1$s de bateria. D: %2$s de bateria.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Ativo (apenas para multimédia)</string>
   <string name="bluetooth_active_no_battery_level">Ativo</string>
   <string name="bluetooth_battery_level">%1$s de bateria</string>
-  <string name="bluetooth_battery_level_lea_support">Ligado (suporta partilha de áudio). %1$s de bateria.</string>
   <string name="bluetooth_battery_level_untethered">E: %1$s. D: %2$s de bateria.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Ligado (suporta partilha de áudio). E: %1$s de bateria. D: %2$s de bateria.</string>
   <string name="bluetooth_connected">Ligado%1$s</string>
   <string name="bluetooth_connecting">A ligar...</string>
   <string name="bluetooth_disconnected">Desligado</string>
@@ -311,13 +311,11 @@ Tente novamente dentro de %d segundos.</string>
   <string name="bluetooth_hearing_aid_left_active">Ativo (apenas esquerdo)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Ativo (esquerdo e direito)</string>
   <string name="bluetooth_hearing_aid_right_active">Ativo (apenas direito)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Ligado (suporta a partilha de áudio)</string>
   <string name="bluetooth_pairing">A sincronizar...</string>
   <string name="bluetooth_pairing_device_down_error_message">Não é possível comunicar com %1$s.</string>
   <string name="bluetooth_pairing_error_message">Não foi possível sincronizar com %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Não foi possível sincronizar com %1$s: PIN ou chave de acesso errado.</string>
   <string name="bluetooth_pairing_rejected_error_message">Emparelhamento rejeitado por %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">Suporta partilha de áudio</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Computador</string>
   <string name="bluetooth_talkback_headphone">Auricular</string>
@@ -356,8 +354,6 @@ Tente novamente dentro de %d segundos.</string>
   <string name="bubble_overflow_button_content_description">Menu adicional</string>
   <string name="bubble_overflow_empty_subtitle">Os balões recentes e ignorados vão aparecer aqui.</string>
   <string name="bubble_overflow_empty_title">Nenhum balão recente</string>
-  <string name="bubble_shortcut_label">Balões</string>
-  <string name="bubble_shortcut_long_label">Mostrar balões</string>
   <string name="bubbles_app_settings">Definições de %1$s</string>
   <string name="bubbles_dont_bubble_conversation">Não apresentar a conversa em balões</string>
   <string name="bubbles_settings_button_description">Definições dos balões da app %1$s</string>
@@ -387,6 +383,10 @@ Toque aqui para reajustar</string>
   <string name="cast_to_other_device_stop_dialog_button">Parar transmissão</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Vai parar de transmitir &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">Dados móveis desativados</string>
+  <string name="charge_limit_discovery_notification_enable_button">Ativar agora</string>
+  <string name="charge_limit_discovery_notification_text">Experimente ativar a funcionalidade de limite de 80% para proteger a vida útil e o estado da bateria. Pode gerir esta opção nas definições em qualquer altura</string>
+  <string name="charge_limit_discovery_notification_title">Proteja a sua bateria durante o carregamento</string>
+  <string name="charging_reverse_text">A partilhar a bateria</string>
   <string name="clear_all_notifications_text">Limpar tudo</string>
   <string name="clipboard">Área de transferência</string>
   <string name="clipboard_content_copied">Conteúdo copiado</string>
@@ -406,6 +406,11 @@ Toque aqui para reajustar</string>
   <string name="close_button_text">Fechar</string>
   <string name="close_dialog_button">Fechar</string>
   <string name="collapse_menu_text">Fechar menu</string>
+  <string name="columbus_bouncer_message">Desbloqueie para efetuar o Quick Tap</string>
+  <string name="columbus_target_request_dialog_allow">Permitir</string>
+  <string name="columbus_target_request_dialog_deny">Não permitir</string>
+  <string name="columbus_target_request_dialog_summary">Toque duas vezes na parte posterior do telemóvel para abrir a app %1$s. Poderá alterar esta definição em qualquer altura nas Definições.</string>
+  <string name="columbus_target_request_dialog_title">Permitir que o Quick Tap abra a app %1$s?</string>
   <string name="communal_tutorial_indicator_text">Deslize rapidamente para a esquerda para iniciar o tutorial coletivo</string>
   <string name="connected_display_dialog_dual_display_stop_warning">O seu ecrã interior vai ser espelhado. O seu ecrã frontal vai ser desativado.</string>
   <string name="connected_display_dialog_start_mirroring">Espelhar para o ecrã externo?</string>
@@ -511,8 +516,11 @@ Se retomar, podem aplicar-se custos relativos à utilização de dados.</string>
   <string name="data_usage_disabled_dialog_mobile_title">Dados móveis em pausa</string>
   <string name="data_usage_disabled_dialog_title">Dados em pausa</string>
   <string name="days_timestamp">Há %1$s dias</string>
-  <string name="default_error_message">Entrada inválida</string>
   <string name="default_popup_window_title">Janela pop-up</string>
+  <string name="defender_notify_resume_charge">Substituir</string>
+  <string name="defender_notify_title">Proteger a sua bateria</string>
+  <string name="defender_post_notify_des">Para ajudar a aumentar a vida útil da bateria, o carregamento foi otimizado da(s) %1$s à(s) %2$s</string>
+  <string name="defender_post_notify_title">O carregamento foi otimizado</string>
   <string name="demo_mode">Modo de demonstração da IU do sistema</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Maximizar ecrã</string>
   <string name="desktop_mode_maximize_menu_snap_text">Encaixar ecrã</string>
@@ -532,20 +540,32 @@ Se retomar, podem aplicar-se custos relativos à utilização de dados.</string>
   <string name="do_disclosure_generic">Este dispositivo pertence à sua entidade.</string>
   <string name="do_disclosure_with_name">Este dispositivo pertence à entidade %s.</string>
   <string name="do_financed_disclosure_with_name">Este dispositivo foi fornecido por %s.</string>
+  <string name="dock_a11y_action_show_photo_text">Mostrar Moldura de foto</string>
+  <string name="dock_alignment_not_charging">Realinhe o telemóvel para carregar sem fios.</string>
+  <string name="dock_alignment_slow_charging">Realinhe o telemóvel para um carregamento mais rápido.</string>
+  <string name="dock_defender_first_run_des">Para ajudar a aumentar a vida útil da bateria, o carregamento é colocado em espera a 90% enquanto o seu tablet estiver na estação de carregamento Aceda às Definições em qualquer altura para substituir.</string>
+  <string name="dock_defender_first_run_settings">Definições</string>
+  <string name="dock_defender_first_run_title">Carregamento em espera para proteger a bateria</string>
   <string name="dock_multi_instances_not_supported_text">Esta app só pode ser aberta em 1 janela</string>
   <string name="dock_non_resizeble_failed_to_dock_text">A app não é compatível com o ecrã dividido</string>
+  <string name="dock_photo_preview_text">A iniciar a Moldura de foto…</string>
+  <string name="dock_promo_text">Deslize rapidamente para a esquerda para aceder à Moldura de foto.</string>
   <string name="done">Concluir</string>
   <string name="drag_split_not_supported">Esta notificação não pode ser arrastada para o ecrã dividido</string>
   <string name="drag_to_add_tiles">Toque sem soltar e arraste para reorganizar os mosaicos</string>
   <string name="drag_to_rearrange_tiles">Toque sem soltar e arraste para reorganizar os mosaicos</string>
   <string name="drag_to_remove_disabled">Necessita de, pelo menos, %1$d cartões</string>
   <string name="drag_to_remove_tiles">Arrastar para aqui para remover</string>
+  <string name="dream_lockscreen_wallpaper_description">Use imag. de fundo do ecrã de bloq. atual</string>
+  <string name="dream_lockscreen_wallpaper_label">Imagem de fundo</string>
   <string name="dream_overlay_status_bar_alarm_set">Alarme definido</string>
   <string name="dream_overlay_status_bar_camera_mic_off">A câmara e o microfone estão desativados</string>
   <string name="dream_overlay_status_bar_camera_off">A câmara está desativada</string>
   <string name="dream_overlay_status_bar_mic_off">O microfone está desativado</string>
   <string name="dream_overlay_status_bar_priority_mode">Modo Prioridade</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi indisponível</string>
+  <string name="dwell_defender_notify_des">Isto ajuda a prolongar a vida útil da bateria quando o telemóvel é deixado a carregar durante demasiado tempo</string>
+  <string name="dwell_defender_notify_title">Carregamento em espera para proteger a bateria</string>
   <string name="edit_user_info_message">O nome e a imagem que escolher ficam visíveis para qualquer pessoa que use este dispositivo.</string>
   <string name="edit_widget">Editar widget</string>
   <string name="empty_shade_text">Sem notificações</string>
@@ -561,12 +581,16 @@ Se retomar, podem aplicar-se custos relativos à utilização de dados.</string>
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Avançadas</string>
   <string name="expand_menu_text">Abrir menu</string>
+  <string name="extreme_battery_saver_text">Extrema</string>
+  <string name="extreme_low_battery_notification_text">O telemóvel vai ser encerrado se não for carregado brevemente</string>
+  <string name="extreme_low_battery_notification_title">Bateria muito fraca</string>
   <string name="face_re_enroll_dialog_content">Para configurar o Desbloqueio facial novamente, o seu modelo de rosto atual vai ser eliminado.
 
 Vai ter de configurar novamente esta funcionalidade para desbloquear o telemóvel com o rosto.</string>
   <string name="face_re_enroll_dialog_title">Configure o Desbloqueio facial</string>
   <string name="face_re_enroll_notification_name">Desbloqueio facial</string>
   <string name="face_re_enroll_notification_title">Configure o Desbloqueio facial novamente</string>
+  <string name="face_reenroll_dialog_confirm">Configurar</string>
   <string name="face_reenroll_failure_dialog_content">Não foi possível configurar o Desbloqueio facial. Aceda às Definições para tentar novamente.</string>
   <string name="failed_attempts_now_wiping_device">Demasiadas tentativas incorretas. Os dados deste dispositivo vão ser eliminados.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Ignorar</string>
@@ -604,6 +628,7 @@ Após a eliminação, vai ter de configurar novamente o Desbloqueio por impress�
   <string name="font_scaling_smaller">Diminuir</string>
   <string name="fullscreen_text">Ecrã inteiro</string>
   <string name="game_status">Em reprodução</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Desbloqueio extra desativado</string>
   <string name="go_to_web">Ir para o navegador</string>
   <string name="got_it">OK</string>
@@ -640,6 +665,7 @@ Após a eliminação, vai ter de configurar novamente o Desbloqueio por impress�
   <string name="guest_reset_and_restart_dialog_title">Repor sessão de convidado?</string>
   <string name="guest_reset_guest_confirm_button">Repor</string>
   <string name="guest_resetting">A repor o convidado…</string>
+  <string name="handle_invocation_prompt">Deslize rapidamente para falar</string>
   <string name="handle_text">Indicador</string>
   <string name="headset">Ausc. com microfone integrado</string>
   <string name="hearing_devices_preset_label">Predefinição</string>
@@ -656,6 +682,7 @@ Toque para obter mais informações</string>
   <string name="high_temp_title">O telemóvel está a aquecer</string>
   <string name="home_controls_dream_description">Use controlos domésticos como proteção de ecrã</string>
   <string name="home_controls_dream_label">Controlos domésticos</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Está disponível, pelo menos, um dispositivo ou um painel de dispositivo</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Para adicionar a app Home como um atalho, certifique-se de que a app está instalada</string>
   <string name="hub_mode_add_widget_button_text">Adicionar widget</string>
@@ -669,12 +696,16 @@ Toque para obter mais informações</string>
   <string name="in_progress">Em curso</string>
   <string name="inattentive_sleep_warning_message">O dispositivo irá desligar-se brevemente. Prima para o manter ligado.</string>
   <string name="inattentive_sleep_warning_title">Modo de espera</string>
+  <string name="incompatible_charging_learn_more">Saber mais</string>
+  <string name="incompatible_charging_notify_des">O telemóvel pode estar a carregar lentamente ou não estar a carregar. Para um carregamento mais rápido, use um cabo e um transformador recomendados.</string>
+  <string name="incompatible_charging_notify_title">Verifique o acessório de carregamento</string>
   <string name="indeterminate">Parcialmente selecionada</string>
   <string name="inline_done_button">Concluído</string>
   <string name="inline_ok_button">Aplicar</string>
   <string name="inline_turn_off_notifications">Desativar notificações</string>
   <string name="input_switch_input_language_next">Mudar para idioma seguinte</string>
   <string name="input_switch_input_language_previous">Mudar para idioma anterior</string>
+  <string name="install_app">Instalar app</string>
   <string name="install_dialer_on_work_profile_action">Instalar app telefone de trabalho</string>
   <string name="install_type_instant">App instantânea</string>
   <string name="instant_apps">Apps instantâneas</string>
@@ -683,8 +714,6 @@ Toque para obter mais informações</string>
   <string name="instant_apps_title">%1$s em execução</string>
   <string name="interruption_level_none">Silêncio total</string>
   <string name="interruption_level_priority">Apenas prioridade</string>
-  <string name="invalid_charger_text">Utilize o carregador fornecido com o dispositivo.</string>
-  <string name="invalid_charger_title">Não é possível carregar através de USB.</string>
   <string name="issuerecord_background_processing_label">A proc. registo de problemas</string>
   <string name="issuerecord_ongoing_screen_only">Problema na gravação</string>
   <string name="issuerecord_save_title">Registo de problemas guardado</string>
@@ -766,21 +795,33 @@ Toque para obter mais informações</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Dispositivo bloqueado
 A autenticação falhou</string>
   <string name="keyguard_indication_charging_time">%2$s • A carregar • Carga completa em %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Carregamento concluído até à(s) %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • A carregar • Carga completa em %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Completamente carregado até à(s) %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • A carregar rapidamente • Carga completa em %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Carregamento rápido • Completo até à(s) %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Carregamento concluído</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • A carregar lentamente • Carga completa em %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Completamente carregado até à(s) %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Completamente carregado até à(s) %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • A carregar sem fios • Carga completa em %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Mantido desbloqueado pelo TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Completamente carregado até à(s) %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Mantido desbloq. pelo Desbloqueio extra</string>
   <string name="keyguard_missing_sim_message_short">Sem SIM</string>
   <string name="keyguard_network_locked_message">Rede bloqueada</string>
   <string name="keyguard_permanent_disabled_sim_message_short">SIM inutilizável.</string>
   <string name="keyguard_plugged_in">%s • A carregar…</string>
   <string name="keyguard_plugged_in_charging_fast">%s • A carregar rapidamente…</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Carregamento rápido</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Carregamento em espera para proteger a bateria</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • A carregar lentamente…</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • A carregar</string>
   <string name="keyguard_plugged_in_dock">%s • A carregar</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • A carregar</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Verificar acessório de carregamento</string>
+  <string name="keyguard_plugged_in_v2">%s • A carregar</string>
   <string name="keyguard_plugged_in_wireless">%s • A carregar sem fios</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • A carregar</string>
   <string name="keyguard_retry">Deslize rapidamente para cima para tentar novamente.</string>
   <string name="keyguard_sim_error_message_short">Cartão inválido.</string>
   <string name="keyguard_sim_locked_message">O SIM está bloqueado.</string>
@@ -811,7 +852,6 @@ A autenticação falhou</string>
   <string name="kg_invalid_confirm_pin_hint">Os códigos PIN não coincidem.</string>
   <string name="kg_invalid_sim_pin_hint">Introduza um PIN com 4 a 8 números.</string>
   <string name="kg_invalid_sim_puk_hint">O código PUK deve ter 8 ou mais números.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Introduza o PIN do SIM. Tem mais # tentativa antes de ser necessário contactar o operador para desbloquear o dispositivo.}many{Introduza o PIN do SIM. Tem mais # tentativas.}other{Introduza o PIN do SIM. Tem mais # tentativas.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{O SIM está desativado. Introduza o código PUK para continuar. Tem mais # tentativa antes de o SIM ficar permanentemente inutilizável. Contacte o operador para obter mais detalhes.}many{O SIM está desativado. Introduza o código PUK para continuar. Tem mais # tentativas antes de o SIM ficar permanentemente inutilizável. Contacte o operador para obter mais detalhes.}other{O SIM está desativado. Introduza o código PUK para continuar. Tem mais # tentativas antes de o SIM ficar permanentemente inutilizável. Contacte o operador para obter mais detalhes.}}</string>
   <string name="kg_password_pin_failed">Falha ao introduzir o PIN do cartão SIM!</string>
   <string name="kg_password_puk_failed">Falha ao introduzir o PUK do cartão SIM!</string>
@@ -852,7 +892,7 @@ A autenticação falhou</string>
   <string name="kg_sim_pin_instructions_multi">Introduza o PIN do cartão SIM "%1$s".</string>
   <string name="kg_sim_unlock_progress_dialog_message">A desbloquear SIM…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Tente novamente dentro de # segundo.}many{Tente novamente dentro de # segundos.}other{Tente novamente dentro de # segundos.}}</string>
-  <string name="kg_trust_agent_disabled">O agente fidedigno está indisponível</string>
+  <string name="kg_trust_agent_disabled">O Desbloqueio extra está indisponível</string>
   <string name="kg_unlock_with_password_or_fp">Desbl. c/ palavra-passe/impr. dig.</string>
   <string name="kg_unlock_with_pattern_or_fp">Desbl. c/ padrão/impressão digital</string>
   <string name="kg_unlock_with_pin_or_fp">Desbl. com PIN ou imp. digital</string>
@@ -900,6 +940,10 @@ Se não permitir o acesso desta app a todos os registos do dispositivo, esta pod
   <string name="log_access_confirmation_learn_more">Saiba mais</string>
   <string name="log_access_confirmation_learn_more_at">Saiba mais em %s</string>
   <string name="log_access_confirmation_title">Permitir que a app %s aceda a todos os registos do dispositivo?</string>
+  <string name="low_battery_label">Bateria fraca</string>
+  <string name="low_battery_notification_text">Ative a Poupança de bateria padrão para prolongar a autonomia da bateria</string>
+  <string name="low_battery_notification_text_ebs">Ative a Poupança de bateria extrema para prolongar a autonomia da bateria</string>
+  <string name="low_battery_notification_title">%s de bateria restante</string>
   <string name="m3c_search_bar_search">Pesquisar</string>
   <string name="m3c_suggestions_available">Sugestões abaixo</string>
   <string name="magnification_close_settings_click_label">Fechar definições de ampliação</string>
@@ -939,8 +983,6 @@ Se não permitir o acesso desta app a todos os registos do dispositivo, esta pod
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Parar</string>
   <string name="media_output_end_session_dialog_summary">Pare a sua sessão partilhada para mover conteúdos multimédia para outro dispositivo</string>
-  <string name="media_output_first_broadcast_title">Como funciona a transmissão</string>
-  <string name="media_output_first_notify_broadcast_message">As pessoas próximas de si com dispositivos Bluetooth compatíveis podem ouvir o conteúdo multimédia que está a transmitir</string>
   <string name="media_output_group_title_speakers_and_displays">Altifalantes e ecrãs</string>
   <string name="media_output_group_title_suggested_device">Dispositivos sugeridos</string>
   <string name="media_output_label_title">A ouvir %s em:</string>
@@ -967,9 +1009,6 @@ Se não permitir o acesso desta app a todos os registos do dispositivo, esta pod
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Quando está a transmitir uma app, o Android tem acesso a tudo o que é apresentado ou reproduzido nessa app. Por isso, tenha cuidado com, por exemplo, palavras-passe, detalhes de pagamento, mensagens, fotos, áudio e vídeo.</string>
   <string name="media_projection_sys_service_dialog_title">Começar a gravar ou a transmitir?</string>
   <string name="media_projection_sys_service_dialog_warning">O serviço que fornece esta função vai ter acesso a todas as informações que estiverem visíveis no ecrã ou que forem reproduzidas a partir do dispositivo durante a gravação ou a transmissão. Isto inclui informações como palavras-passe, detalhes de pagamentos, fotos, mensagens e áudio reproduzido.</string>
-  <string name="media_projection_task_switcher_action_back">Voltar</string>
-  <string name="media_projection_task_switcher_action_switch">Partilhar antes esta app</string>
-  <string name="media_projection_task_switcher_text">A partilha é pausada quando muda de app</string>
   <string name="media_seamless_other_device">Outro dispositivo</string>
   <string name="media_transfer_default_device_name">Dispositivo associado</string>
   <string name="media_transfer_dock_speaker_device_name">Altifalante estação carregamento</string>
@@ -1280,12 +1319,17 @@ Se tiver perguntas, contacte a %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Para uma resolução superior, inverta o telemóvel</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Mudar de ecrã?</string>
   <string name="recent_conversations">Conversas recentes</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">enviou uma imagem</string>
   <string name="remove_from_settings">Remover das Definições</string>
   <string name="remove_from_settings_prompt">Remover o Sintonizador da interface do sistema das Definições e deixar de utilizar todas as respetivas funcionalidades?</string>
   <string name="require_unlock_for_nfc">Desbloquear para utilizar o NFC</string>
   <string name="restart_button_description">Toque para reiniciar esta app e ficar com uma melhor visão</string>
   <string name="retry_face">Tentar novamente autenticação facial</string>
+  <string name="reverse_charging_device_name_text">Outro Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s a fornecer carga (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">A Partilha de bateria está ativada</string>
+  <string name="reverse_charging_title">Partilhar bateria</string>
   <string name="right_icon">Ícone direito</string>
   <string name="right_keycode">Código de tecla direito</string>
   <string name="right_nav_bar_button_type">Tipo de botão direito adicional</string>
@@ -1293,8 +1337,15 @@ Se tiver perguntas, contacte a %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">Toque para obter detalhes acerca da utilização da bateria e dos dados</string>
   <string name="running_foreground_services_title">Apps em execução em segundo plano</string>
-  <string name="satellite_connected_carrier_text">Satélite SOS</string>
+  <string name="satellite_connected_carrier_text">Satélite SOS do Pixel</string>
   <string name="save">Guardar</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Cancelar</string>
+  <string name="saver_confirmation_dialog_subtitle">Selecione o modo a usar</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Inclui todas as alterações indicadas acima. Também pausa apps não essenciais e as respetivas notificações.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Limita os efeitos visuais e a atividade em segundo plano. Se o tema escuro estiver desativado, ativa-o.</string>
+  <string name="saver_confirmation_dialog_title">Poupança de bateria</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Poupança de bateria extrema</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Poupança de bateria padrão</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">A captura de ecrã está desativada pela política do dispositivo</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Bloqueado pelo administrador de TI</string>
   <string name="screen_pinning_can_open_other_apps">Uma app fixada pode abrir outras apps.</string>
@@ -1312,6 +1363,12 @@ Se tiver perguntas, contacte a %2$s.</string>
   <string name="screen_pinning_toast">Para soltar esta app, toque sem soltar nos botões Anterior e Vista geral.</string>
   <string name="screen_pinning_toast_gesture_nav">Para soltar esta app, deslize rapidamente para cima sem soltar.</string>
   <string name="screen_pinning_toast_recents_invisible">Para soltar esta app, toque sem soltar nos botões Anterior e Página inicial.</string>
+  <string name="screen_protector_absent_message">A desativação do modo de protetor de ecrã melhora o toque quando não usa um protetor de ecrã.</string>
+  <string name="screen_protector_disable_notification">Desativar notificação</string>
+  <string name="screen_protector_go_to_settings">Aceder às definições</string>
+  <string name="screen_protector_got_it">OK</string>
+  <string name="screen_protector_mode_title">Modo de protetor de ecrã</string>
+  <string name="screen_protector_present_message">A ativação do modo de protetor de ecrã melhora o toque quando é usado um protetor de ecrã.</string>
   <string name="screen_share_permission_app_selector_title">Partilhe ou grave uma app</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Ecrã inteiro</string>
   <string name="screen_share_permission_dialog_option_single_app">Só uma app</string>
@@ -1364,9 +1421,9 @@ Se tiver perguntas, contacte a %2$s.</string>
   <string name="screenshot_saving_work_profile_title">A guardar captura de ecrã no perfil de trabalho…</string>
   <string name="screenshot_scroll_label">Capturar mais</string>
   <string name="screenshot_share_description">Partilhar captura de ecrã</string>
-  <string name="screenshot_share_label">Partilhar</string>
   <string name="screenshot_text">Captura de ecrã</string>
   <string name="screenshot_top_boundary_pct">Limite superior de %1$d por cento</string>
+  <string name="screenshot_view_description">Ver captura de ecrã</string>
   <string name="screenshot_work_profile_notification">Guardada na app %1$s no perfil de trabalho</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">O sensor de impressões digitais encontra-se no botão ligar/desligar. É o botão sem relevo junto ao botão de volume com relevo na extremidade do telemóvel.</string>
   <string name="see_all_bluetooth_devices">Ver tudo</string>
@@ -1384,6 +1441,12 @@ Se tiver perguntas, contacte a %2$s.</string>
   <string name="set_default_notes_app_toast_content">Predefina a app de notas nas Definições</string>
   <string name="settings_label">Definições</string>
   <string name="settingslib_learn_more_text">Saiba mais</string>
+  <string name="severe_battery_notification_switch_text">Mudar para a Poupança de bateria extrema? 
+
+Isto vai pausar todas as aps não essenciais e as respetivas notificações</string>
+  <string name="severe_battery_notification_text">Ative a Poupança de bateria extrema. Isto vai pausar todas as apps não essenciais</string>
+  <string name="severe_battery_notification_title">%s de bateria restante</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Mudar</string>
   <string name="share_to_app_stop_dialog_button">Parar partilha</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Vai parar de partilhar &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Parar a partilha do ecrã?</string>
@@ -1406,6 +1469,9 @@ Se tiver perguntas, contacte a %2$s.</string>
   <string name="slice_permission_text_1">- Pode ler informações da app %1$s</string>
   <string name="slice_permission_text_2">- Pode realizar ações na app %1$s</string>
   <string name="slice_permission_title">Permitir que a app %1$s mostre partes da app %2$s?</string>
+  <string name="smartspace_content_desc">Resumo</string>
+  <string name="smartspace_flight_qr_code">Código QR</string>
+  <string name="smartspace_role_desc">Ver</string>
   <string name="snoozeHourOptions">{count,plural, =1{# hora}=2{# horas}many{# horas}other{# horas}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minuto}many{# minutos}other{# minutos}}</string>
   <string name="snooze_undo">Anular</string>
@@ -1416,6 +1482,8 @@ Se tiver perguntas, contacte a %2$s.</string>
   <string name="speed_label_slow">Lenta</string>
   <string name="speed_label_very_fast">Muito rápida</string>
   <string name="split_screen_text">Ecrã dividido</string>
+  <string name="squeeze_invocation_prompt">Aperte para falar.</string>
+  <string name="standard_battery_saver_text">Padrão</string>
   <string name="start_dreams">Proteção ecrã</string>
   <string name="state_empty">Vazio</string>
   <string name="state_off">Desativado</string>
@@ -1453,6 +1521,8 @@ Se tiver perguntas, contacte a %2$s.</string>
   <string name="tab">Separador</string>
   <string name="tap_a_network_to_connect">Toque numa rede para estabelecer ligação</string>
   <string name="tap_again">Toque novamente</string>
+  <string name="temp_defender_notify_des">O carregamento vai ser retomado quando o telemóvel voltar à temperatura normal</string>
+  <string name="temp_defender_notify_title">Carregamento em espera para proteger a bateria</string>
   <string name="template_percent">%1$d por cento.</string>
   <string name="thermal">Térmico</string>
   <string name="thermal_shutdown_dialog_help_text">Veja os passos de manutenção</string>
@@ -1469,6 +1539,7 @@ Toque para obter mais informações</string>
   <string name="title_for_empty_state_cta">Tenha acesso rápido aos widgets das suas apps favoritas sem desbloquear o tablet.</string>
   <string name="title_usb_accessory">Acessório USB</string>
   <string name="to_switch_networks_disconnect_ethernet">Para mudar de rede, desligue a Ethernet</string>
+  <string name="too_hot_label">Pixel demasiado quente</string>
   <string name="touch_filtered_warning">Uma vez que uma app está a ocultar um pedido de autorização, as Definições não conseguem validar a sua resposta.</string>
   <string name="touchpad_tutorial_action_key_button">Tecla de ação</string>
   <string name="touchpad_tutorial_back_gesture_button">Gesto para retroceder</string>
@@ -1483,17 +1554,18 @@ Toque para obter mais informações</string>
   <string name="tuner_menu">Menu</string>
   <string name="tuner_minus">Menos</string>
   <string name="tuner_other_apps">Outras aplicações</string>
+  <string name="tuner_persistent_warning">Estas funcionalidades experimentais podem ser alteradas, deixar de funcionar ou desaparecer em versões futuras. Prossiga com cuidado.</string>
   <string name="tuner_plus">Mais</string>
   <string name="tuner_right">Direita</string>
   <string name="tuner_time">Hora</string>
+  <string name="tuner_warning">O Sintonizador da interface do sistema disponibiliza-lhe formas adicionais ajustar e personalizar a interface do utilizador do Android. Estas funcionalidades experimentais podem ser alteradas, deixar de funcionar ou desaparecer em versões futuras. Prossiga com cuidado.</string>
+  <string name="tuner_warning_title">Diversão para alguns, mas não para todos</string>
   <string name="turn_off_airplane_mode">Desativar o modo de avião</string>
   <string name="turn_on_bluetooth">Usar Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Funcionalidades como a Partilha rápida e o serviço Localizar o meu dispositivo usam o Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">O Bluetooth vai ser ativado amanhã de manhã</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Ativar automaticamente amanhã</string>
   <string name="turn_on_wifi">Wi‑Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Predefinição da TV</string>
   <string name="two_weeks_timestamp">Há 2 semanas</string>
   <string name="unknown">Desconhecido</string>
   <string name="unlock_to_see_notif_text">Desbloqueie e veja notificações antigas</string>
@@ -1552,7 +1624,9 @@ Qualquer utilizador pode atualizar apps para todos os outros utilizadores.</stri
   <string name="volume_odi_captions_hint_enable">ativar</string>
   <string name="volume_odi_captions_tip">Multim. legendas automáticas</string>
   <string name="volume_panel_captioning_title">Legendas instantâneas</string>
+  <string name="volume_panel_clear_calling_title">Chamadas nítidas</string>
   <string name="volume_panel_collapsed_sliders">Controlos de deslize do volume reduzidos</string>
+  <string name="volume_panel_device_settings_title">Definições do dispositivo</string>
   <string name="volume_panel_dialog_settings_button">Definições</string>
   <string name="volume_panel_enter_media_output_settings">Introduzir definições de saída</string>
   <string name="volume_panel_expanded_sliders">Controlos de deslize do volume expandidos</string>
@@ -1667,10 +1741,13 @@ Endereço Wi-Fi (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Desconhecido</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Com acesso ilimitado</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Por agora, o Wi-Fi não irá estabelecer ligação automaticamente</string>
+  <string name="wireless_charging_label">A carregar por ligação sem fios…</string>
+  <string name="wireless_charging_notification_text">O carregamento sem fios pode usar mais energia do que o carregamento com fios. Para poupar eletricidade e tempo, experimente mudar para um carregador com fios.</string>
+  <string name="wireless_charging_notification_title">Carregamento sem fios</string>
   <string name="work_challenge_emergency_button_text">Emergência</string>
   <string name="work_mode_off_title">Retomar apps de trabalho?</string>
   <string name="work_mode_turn_on">Retomar</string>
-  <string name="zen_alarm_warning">Não vai ouvir o próximo alarme às %1$s</string>
+  <string name="zen_alarm_warning">Não vai ouvir o próximo alarme à(s) %1$s.</string>
   <string name="zen_alarm_warning_indef">Só vai ouvir o próximo alarme %1$s se desativar esta funcionalidade antes dessa hora.</string>
   <string name="zen_mode_enable_dialog_turn_on">Ativar</string>
   <string name="zen_mode_settings_turn_on_dialog_title">Ativar o modo Não incomodar</string>

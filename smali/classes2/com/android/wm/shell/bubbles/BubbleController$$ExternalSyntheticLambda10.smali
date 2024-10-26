@@ -1,143 +1,90 @@
 .class public final synthetic Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda10;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Lcom/android/wm/shell/common/DisplayChangeController$OnDisplayChangingListener;
 
 
 # instance fields
-.field public final synthetic $r8$classId:I
-
 .field public final synthetic f$0:Lcom/android/wm/shell/bubbles/BubbleController;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/wm/shell/bubbles/BubbleController;I)V
+.method public synthetic constructor <init>(Lcom/android/wm/shell/bubbles/BubbleController;)V
     .locals 0
 
     .line 1
-    iput p2, p0, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda10;->$r8$classId:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
     iput-object p1, p0, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda10;->f$0:Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
+    .line 5
     return-void
-    .line 9
+    .line 7
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 10
+.method public final onDisplayChange$1(IIILandroid/window/DisplayAreaInfo;Landroid/window/WindowContainerTransaction;)V
+    .locals 0
 
     .line 1
-    iget v0, p0, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda10;->$r8$classId:I
-
-    .line 2
     iget-object p0, p0, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda10;->f$0:Lcom/android/wm/shell/bubbles/BubbleController;
 
-    .line 4
-    packed-switch v0, :pswitch_data_0
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 6
-    move-object v0, p1
+    .line 4
+    new-instance p1, Landroid/graphics/Rect;
+
+    .line 7
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     .line 9
-    check-cast v0, Lcom/android/wm/shell/bubbles/Bubble;
-
-    .line 10
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz p4, :cond_0
 
     .line 12
-    iget-object p1, v0, Lcom/android/wm/shell/bubbles/Bubble;->mKey:Ljava/lang/String;
+    iget-object p1, p4, Landroid/window/DisplayAreaInfo;->configuration:Landroid/content/res/Configuration;
 
-    .line 15
-    iget-object v1, p0, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleData:Lcom/android/wm/shell/bubbles/BubbleData;
+    .line 14
+    iget-object p1, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    .line 17
-    invoke-virtual {v1, p1}, Lcom/android/wm/shell/bubbles/BubbleData;->hasAnyBubbleWithKey(Ljava/lang/String;)Z
+    .line 16
+    invoke-virtual {p1}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
 
-    .line 19
-    move-result p1
+    .line 18
+    move-result-object p1
+
+    .line 21
+    :cond_0
+    if-ne p2, p3, :cond_1
 
     .line 22
-    if-eqz p1, :cond_0
+    iget-object p2, p0, Lcom/android/wm/shell/bubbles/BubbleController;->mScreenBounds:Landroid/graphics/Rect;
 
-    .line 23
-    goto :goto_0
-
-    .line 25
-    :cond_0
-    new-instance v1, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda25;
+    .line 24
+    invoke-virtual {p1, p2}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
     .line 26
-    invoke-direct {v1, p0, v0}, Lcom/android/wm/shell/bubbles/BubbleController$$ExternalSyntheticLambda25;-><init>(Lcom/android/wm/shell/bubbles/BubbleController;Lcom/android/wm/shell/bubbles/Bubble;)V
+    move-result p1
 
-    .line 28
-    iget-object v2, p0, Lcom/android/wm/shell/bubbles/BubbleController;->mContext:Landroid/content/Context;
+    .line 29
+    if-nez p1, :cond_2
 
-    .line 31
-    iget-object v6, p0, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
+    .line 30
+    :cond_1
+    iget-object p0, p0, Lcom/android/wm/shell/bubbles/BubbleController;->mStackView:Lcom/android/wm/shell/bubbles/BubbleStackView;
 
-    .line 33
-    iget-object v7, p0, Lcom/android/wm/shell/bubbles/BubbleController;->mLayerView:Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;
+    .line 32
+    if-eqz p0, :cond_2
 
-    .line 35
-    iget-object v8, p0, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleIconFactory:Lcom/android/launcher3/icons/BubbleIconFactory;
+    .line 34
+    invoke-virtual {p0}, Lcom/android/wm/shell/bubbles/BubbleStackView;->onOrientationChanged()V
 
-    .line 37
-    const/4 v9, 0x1
-
+    .line 36
+    :cond_2
+    return-void
     .line 39
-    iget-object v5, p0, Lcom/android/wm/shell/bubbles/BubbleController;->mBubblePositioner:Lcom/android/wm/shell/bubbles/BubblePositioner;
-
-    .line 40
-    iget-object v3, p0, Lcom/android/wm/shell/bubbles/BubbleController;->mExpandedViewManager:Lcom/android/wm/shell/bubbles/BubbleExpandedViewManager$Companion$fromBubbleController$1;
-
-    .line 42
-    iget-object v4, p0, Lcom/android/wm/shell/bubbles/BubbleController;->mBubbleTaskViewFactory:Lcom/android/wm/shell/bubbles/BubbleController$1;
-
-    .line 44
-    invoke-virtual/range {v0 .. v9}, Lcom/android/wm/shell/bubbles/Bubble;->inflate(Lcom/android/wm/shell/bubbles/BubbleViewInfoTask$Callback;Landroid/content/Context;Lcom/android/wm/shell/bubbles/BubbleExpandedViewManager;Lcom/android/wm/shell/bubbles/BubbleTaskViewFactory;Lcom/android/wm/shell/bubbles/BubblePositioner;Lcom/android/wm/shell/bubbles/BubbleStackView;Lcom/android/wm/shell/bubbles/bar/BubbleBarLayerView;Lcom/android/launcher3/icons/BubbleIconFactory;Z)V
-
-    .line 46
-    :goto_0
-    return-void
-
-    .line 49
-    :pswitch_0
-    check-cast p1, Lcom/android/wm/shell/onehanded/OneHandedController;
-
-    .line 50
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 52
-    new-instance v0, Lcom/android/wm/shell/bubbles/BubbleController$2;
-
-    .line 55
-    invoke-direct {v0, p0}, Lcom/android/wm/shell/bubbles/BubbleController$2;-><init>(Lcom/android/wm/shell/bubbles/BubbleController;)V
-
-    .line 57
-    iget-object p0, p1, Lcom/android/wm/shell/onehanded/OneHandedController;->mDisplayAreaOrganizer:Lcom/android/wm/shell/onehanded/OneHandedDisplayAreaOrganizer;
-
-    .line 60
-    iget-object p0, p0, Lcom/android/wm/shell/onehanded/OneHandedDisplayAreaOrganizer;->mTransitionCallbacks:Ljava/util/List;
-
-    .line 62
-    invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 64
-    return-void
-
-    .line 67
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-    .line 68
 .end method

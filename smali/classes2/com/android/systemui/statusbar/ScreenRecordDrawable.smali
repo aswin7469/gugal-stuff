@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/ScreenRecordDrawable;
 .super Landroid/graphics/drawable/DrawableWrapper;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -329,7 +329,7 @@
     invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/DrawableWrapper;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
     .line 2
-    const p2, 0x7f080913    # @drawable/ic_screen_record_background 'res/drawable/ic_screen_record_background.xml'
+    const p2, 0x7f08093d    # @drawable/ic_screen_record_background 'res/drawable/ic_screen_record_background.xml'
 
     .line 5
     invoke-virtual {p1, p2, p4}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -362,7 +362,7 @@
     iput-object p2, p0, Lcom/android/systemui/statusbar/ScreenRecordDrawable;->mFillDrawable:Landroid/graphics/drawable/Drawable;
 
     .line 27
-    const p2, 0x7f080914    # @drawable/ic_screenrecord 'res/drawable/ic_screenrecord.xml'
+    const p2, 0x7f08093e    # @drawable/ic_screenrecord 'res/drawable/ic_screenrecord.xml'
 
     .line 29
     invoke-virtual {p1, p2, p4}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -380,7 +380,7 @@
     iput-object p2, p0, Lcom/android/systemui/statusbar/ScreenRecordDrawable;->mIconDrawable:Landroid/graphics/drawable/Drawable;
 
     .line 40
-    const p2, 0x7f0709c6    # @dimen/status_bar_horizontal_padding '2.5sp'
+    const p2, 0x7f070a1e    # @dimen/status_bar_horizontal_padding '2.5sp'
 
     .line 42
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -392,7 +392,7 @@
     iput p2, p0, Lcom/android/systemui/statusbar/ScreenRecordDrawable;->mHorizontalPadding:I
 
     .line 49
-    const p2, 0x7f070950    # @dimen/screenrecord_status_text_size '14.0sp'
+    const p2, 0x7f0709a1    # @dimen/screenrecord_status_text_size '14.0sp'
 
     .line 51
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -407,7 +407,7 @@
     iput p2, p0, Lcom/android/systemui/statusbar/ScreenRecordDrawable;->mTextSize:F
 
     .line 59
-    const p2, 0x7f07094e    # @dimen/screenrecord_status_icon_radius '7.0dp'
+    const p2, 0x7f07099f    # @dimen/screenrecord_status_icon_radius '7.0dp'
 
     .line 61
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -479,7 +479,7 @@
     invoke-virtual {p2, p3}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
     .line 108
-    const p2, 0x7f07094f    # @dimen/screenrecord_status_icon_width '21.0dp'
+    const p2, 0x7f0709a0    # @dimen/screenrecord_status_icon_width '21.0dp'
 
     .line 111
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -491,7 +491,7 @@
     iput p2, p0, Lcom/android/systemui/statusbar/ScreenRecordDrawable;->mWidthPx:I
 
     .line 118
-    const p2, 0x7f07094d    # @dimen/screenrecord_status_icon_height '17.5dp'
+    const p2, 0x7f07099e    # @dimen/screenrecord_status_icon_height '17.5dp'
 
     .line 120
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

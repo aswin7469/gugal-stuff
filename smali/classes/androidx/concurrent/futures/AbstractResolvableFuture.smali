@@ -1,6 +1,6 @@
 .class public abstract Landroidx/concurrent/futures/AbstractResolvableFuture;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/google/common/util/concurrent/ListenableFuture;
@@ -78,124 +78,124 @@
     const-class v2, Ljava/lang/Thread;
 
     .line 32
-    const-string v3, "thread"
+    const-string/jumbo v3, "thread"
 
     .line 34
     invoke-static {v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    .line 36
+    .line 37
     move-result-object v3
 
-    .line 39
+    .line 40
     const-string v2, "next"
 
-    .line 40
+    .line 41
     invoke-static {v0, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    .line 42
+    .line 43
     move-result-object v4
 
-    .line 45
+    .line 46
     const-class v2, Landroidx/concurrent/futures/AbstractResolvableFuture;
 
-    .line 46
+    .line 47
     const-string/jumbo v5, "waiters"
 
-    .line 48
+    .line 49
     invoke-static {v2, v0, v5}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    .line 51
+    .line 52
     move-result-object v5
 
-    .line 54
+    .line 55
     const-class v0, Landroidx/concurrent/futures/AbstractResolvableFuture;
 
-    .line 55
+    .line 56
     const-class v2, Landroidx/concurrent/futures/AbstractResolvableFuture$Listener;
 
-    .line 57
+    .line 58
     const-string v6, "listeners"
 
-    .line 59
+    .line 60
     invoke-static {v0, v2, v6}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    .line 61
+    .line 62
     move-result-object v6
 
-    .line 64
+    .line 65
     const-class v0, Landroidx/concurrent/futures/AbstractResolvableFuture;
 
-    .line 65
+    .line 66
     const-class v2, Ljava/lang/Object;
 
-    .line 67
+    .line 68
     const-string/jumbo v7, "value"
 
-    .line 69
+    .line 70
     invoke-static {v0, v2, v7}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    .line 72
+    .line 73
     move-result-object v7
 
-    .line 75
+    .line 76
     move-object v2, v1
 
-    .line 76
+    .line 77
     invoke-direct/range {v2 .. v7}, Landroidx/concurrent/futures/AbstractResolvableFuture$SafeAtomicHelper;-><init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 77
+    .line 78
     const/4 v0, 0x0
 
-    .line 80
+    .line 81
     goto :goto_0
 
-    .line 81
+    .line 82
     :catchall_0
     move-exception v0
 
-    .line 82
+    .line 83
     new-instance v1, Landroidx/concurrent/futures/AbstractResolvableFuture$SynchronizedHelper;
 
-    .line 83
+    .line 84
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    .line 85
+    .line 86
     :goto_0
     sput-object v1, Landroidx/concurrent/futures/AbstractResolvableFuture;->ATOMIC_HELPER:Landroidx/concurrent/futures/AbstractResolvableFuture$AtomicHelper;
 
-    .line 88
+    .line 89
     const-class v1, Ljava/util/concurrent/locks/LockSupport;
 
-    .line 90
+    .line 91
     if-eqz v0, :cond_0
 
-    .line 92
+    .line 93
     sget-object v1, Landroidx/concurrent/futures/AbstractResolvableFuture;->log:Ljava/util/logging/Logger;
 
-    .line 94
+    .line 95
     sget-object v2, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
 
-    .line 96
+    .line 97
     const-string v3, "SafeAtomicHelper is broken!"
 
-    .line 98
+    .line 99
     invoke-virtual {v1, v2, v3, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 100
+    .line 101
     :cond_0
     new-instance v0, Ljava/lang/Object;
 
-    .line 103
+    .line 104
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
+    .line 106
     sput-object v0, Landroidx/concurrent/futures/AbstractResolvableFuture;->NULL:Ljava/lang/Object;
 
-    .line 108
+    .line 109
     return-void
-    .line 110
+    .line 111
 .end method
 
 .method public static complete(Landroidx/concurrent/futures/AbstractResolvableFuture;)V
@@ -439,6 +439,68 @@
     .line 40
 .end method
 
+.method public static getUninterruptibly(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    :goto_0
+    :try_start_0
+    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+
+    .line 3
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 6
+    if-eqz v0, :cond_0
+
+    .line 7
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    .line 9
+    move-result-object v0
+
+    .line 12
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    .line 13
+    :cond_0
+    return-object p0
+
+    .line 16
+    :catchall_0
+    move-exception p0
+
+    .line 17
+    if-eqz v0, :cond_1
+
+    .line 18
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    .line 20
+    move-result-object v0
+
+    .line 23
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    .line 24
+    :cond_1
+    throw p0
+
+    .line 27
+    :catch_0
+    const/4 v0, 0x1
+
+    .line 28
+    goto :goto_0
+    .line 29
+.end method
+
 
 # virtual methods
 .method public final addDoneString$1(Ljava/lang/StringBuilder;)V
@@ -448,168 +510,120 @@
     const-string v0, "]"
 
     .line 2
-    const/4 v1, 0x0
+    :try_start_0
+    invoke-static {p0}, Landroidx/concurrent/futures/AbstractResolvableFuture;->getUninterruptibly(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     .line 4
-    :goto_0
-    :try_start_0
-    invoke-virtual {p0}, Landroidx/concurrent/futures/AbstractResolvableFuture;->get()Ljava/lang/Object;
-
-    .line 5
-    move-result-object v2
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_3
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 8
-    if-eqz v1, :cond_0
-
-    .line 9
-    :try_start_1
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    .line 11
     move-result-object v1
 
-    .line 14
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
+    .line 7
+    const-string v2, "SUCCESS, result=["
+
+    .line 8
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 10
+    if-ne v1, p0, :cond_0
+
+    .line 13
+    const-string/jumbo p0, "this future"
 
     .line 15
-    :cond_0
-    const-string v1, "SUCCESS, result=["
+    goto :goto_0
 
     .line 18
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 20
-    if-ne v2, p0, :cond_1
-
-    .line 23
-    const-string p0, "this future"
-
-    .line 25
-    goto :goto_1
-
-    .line 27
-    :cond_1
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 28
+    .line 19
     move-result-object p0
 
-    .line 31
-    :goto_1
+    .line 22
+    :goto_0
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 32
+    .line 23
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_end_0
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 35
-    goto :goto_4
+    .line 26
+    goto :goto_3
 
-    .line 38
+    .line 29
     :catch_0
     move-exception p0
 
-    .line 39
-    goto :goto_2
+    .line 30
+    goto :goto_1
 
-    .line 40
+    .line 31
     :catch_1
     move-exception p0
 
-    .line 41
-    goto :goto_3
+    .line 32
+    goto :goto_2
 
-    .line 42
-    :catchall_0
-    move-exception p0
-
-    .line 43
-    if-eqz v1, :cond_2
-
-    .line 44
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    .line 46
-    move-result-object v1
-
-    .line 49
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
-
-    .line 50
-    :cond_2
-    throw p0
-    :try_end_1
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
-
-    .line 53
-    :goto_2
+    .line 33
+    :goto_1
     const-string v0, "UNKNOWN, cause=["
 
-    .line 54
+    .line 34
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 56
+    .line 36
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 59
+    .line 39
     move-result-object p0
 
-    .line 62
+    .line 42
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 63
+    .line 43
     const-string p0, " thrown from get()]"
 
-    .line 66
+    .line 46
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 68
-    goto :goto_4
+    .line 48
+    goto :goto_3
 
-    .line 71
+    .line 51
     :catch_2
     const-string p0, "CANCELLED"
 
-    .line 72
+    .line 52
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 74
-    goto :goto_4
+    .line 54
+    goto :goto_3
 
-    .line 77
-    :goto_3
+    .line 57
+    :goto_2
     const-string v1, "FAILURE, cause=["
 
-    .line 78
+    .line 58
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 80
+    .line 60
     invoke-virtual {p0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
-    .line 83
+    .line 63
     move-result-object p0
 
-    .line 86
+    .line 66
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 87
+    .line 67
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 90
-    :goto_4
+    .line 70
+    :goto_3
     return-void
-
-    .line 93
-    :catch_3
-    const/4 v1, 0x1
-
-    .line 94
-    goto :goto_0
-    .line 95
+    .line 73
 .end method
 
 .method public final addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
@@ -1115,7 +1129,7 @@
     const-string v8, " (plus "
 
     .line 30
-    invoke-static {p2, v8}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v8}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1180,13 +1194,13 @@
     const-string p3, ","
 
     .line 35
-    invoke-static {p2, p3}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p3}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     .line 36
     :cond_e
-    invoke-static {p2, p1}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1215,7 +1229,7 @@
     const-string p1, "delay)"
 
     .line 39
-    invoke-static {p2, p1}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1233,7 +1247,7 @@
     const-string p1, " but future completed as timeout expired"
 
     .line 42
-    invoke-static {p2, p1}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1249,7 +1263,7 @@
     const-string p1, " for "
 
     .line 45
-    invoke-static {p2, p1, v4}, Landroidx/concurrent/futures/AbstractResolvableFuture$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1, v4}, Landroidx/appsearch/app/DocumentClassFactoryRegistry$$ExternalSyntheticOutline0;->m$1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/navigationbar/NavigationBarInflaterView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -447,7 +447,7 @@
     if-eqz v0, :cond_0
 
     .line 8
-    const v0, 0x7f140297    # @string/config_navBarLayoutHandle 'back[70AC];home_handle;ime_switcher[70AC]'
+    const v0, 0x7f1302b2    # @string/config_navBarLayoutHandle 'back[70AC];home_handle;ime_switcher[70AC]'
 
     .line 10
     goto :goto_0
@@ -466,14 +466,14 @@
     if-eqz v0, :cond_1
 
     .line 20
-    const v0, 0x7f140298    # @string/config_navBarLayoutQuickstep 'back[1.7WC];home;contextual[1.7WC]'
+    const v0, 0x7f1302b3    # @string/config_navBarLayoutQuickstep 'back[1.7WC];home;contextual[1.7WC]'
 
     .line 22
     goto :goto_0
 
     .line 25
     :cond_1
-    const v0, 0x7f140296    # @string/config_navBarLayout 'left[.5W],back[1WC];home;recent[1WC],right[.5W]'
+    const v0, 0x7f1302b1    # @string/config_navBarLayout 'left[.5W],back[1WC];home;recent[1WC],right[.5W]'
 
     .line 26
     :goto_0
@@ -548,889 +548,889 @@
     const-string v7, "menu_ime"
 
     .line 27
-    const-string v8, "space"
+    const-string/jumbo v8, "space"
 
     .line 29
     if-eqz v6, :cond_1
 
-    .line 31
+    .line 32
     invoke-static {v8}, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->extractButton(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 33
+    .line 34
     move-result-object v5
 
-    .line 36
+    .line 37
     goto :goto_2
 
-    .line 37
+    .line 38
     :cond_1
     const-string v6, "right"
 
-    .line 38
+    .line 39
     invoke-virtual {v6, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 40
+    .line 41
     move-result v6
 
-    .line 43
+    .line 44
     if-eqz v6, :cond_2
 
-    .line 44
+    .line 45
     invoke-static {v7}, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->extractButton(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 46
+    .line 47
     move-result-object v5
 
-    .line 49
+    .line 50
     :cond_2
     :goto_2
     const-string v6, "home"
 
-    .line 50
+    .line 51
     invoke-virtual {v6, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 52
+    .line 53
     move-result v6
 
-    .line 55
+    .line 56
     const/4 v9, 0x0
 
-    .line 56
+    .line 57
     if-eqz v6, :cond_3
 
-    .line 57
-    const v5, 0x7f0e00d0    # @layout/home 'res/layout/home.xml'
+    .line 58
+    const v5, 0x7f0d00d9    # @layout/home 'res/layout/home.xml'
 
-    .line 59
+    .line 60
     invoke-virtual {v4, v5, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 62
+    .line 63
     move-result-object v4
 
-    .line 65
+    .line 66
     goto/16 :goto_5
 
-    .line 66
+    .line 67
     :cond_3
     const-string v6, "back"
 
-    .line 68
+    .line 69
     invoke-virtual {v6, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 70
+    .line 71
     move-result v6
 
-    .line 73
+    .line 74
     if-eqz v6, :cond_4
 
-    .line 74
-    const v5, 0x7f0e0049    # @layout/back 'res/layout/back.xml'
+    .line 75
+    const v5, 0x7f0d004d    # @layout/back 'res/layout/back.xml'
 
-    .line 76
+    .line 77
     invoke-virtual {v4, v5, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 79
+    .line 80
     move-result-object v4
 
-    .line 82
+    .line 83
     goto/16 :goto_5
 
-    .line 83
+    .line 84
     :cond_4
     const-string v6, "recent"
 
-    .line 85
+    .line 86
     invoke-virtual {v6, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 87
+    .line 88
     move-result v6
 
-    .line 90
+    .line 91
     if-eqz v6, :cond_5
 
-    .line 91
-    const v5, 0x7f0e021b    # @layout/recent_apps 'res/layout/recent_apps.xml'
+    .line 92
+    const v5, 0x7f0d0229    # @layout/recent_apps 'res/layout/recent_apps.xml'
 
-    .line 93
+    .line 94
     invoke-virtual {v4, v5, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 96
+    .line 97
     move-result-object v4
 
-    .line 99
+    .line 100
     goto/16 :goto_5
 
-    .line 100
+    .line 101
     :cond_5
     invoke-virtual {v7, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 102
+    .line 103
     move-result v6
 
-    .line 105
+    .line 106
     if-eqz v6, :cond_6
 
-    .line 106
-    const v5, 0x7f0e0170    # @layout/menu_ime 'res/layout/menu_ime.xml'
+    .line 107
+    const v5, 0x7f0d017d    # @layout/menu_ime 'res/layout/menu_ime.xml'
 
-    .line 108
+    .line 109
     invoke-virtual {v4, v5, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 111
+    .line 112
     move-result-object v4
 
-    .line 114
+    .line 115
     goto/16 :goto_5
 
-    .line 115
+    .line 116
     :cond_6
     invoke-virtual {v8, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 117
+    .line 118
     move-result v6
 
-    .line 120
+    .line 121
     if-eqz v6, :cond_7
 
-    .line 121
-    const v5, 0x7f0e01a2    # @layout/nav_key_space 'res/layout/nav_key_space.xml'
+    .line 122
+    const v5, 0x7f0d01af    # @layout/nav_key_space 'res/layout/nav_key_space.xml'
 
-    .line 123
+    .line 124
     invoke-virtual {v4, v5, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 126
+    .line 127
     move-result-object v4
 
-    .line 129
+    .line 130
     goto/16 :goto_5
 
-    .line 130
+    .line 131
     :cond_7
     const-string v6, "clipboard"
 
-    .line 132
+    .line 133
     invoke-virtual {v6, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 134
+    .line 135
     move-result v6
 
-    .line 137
+    .line 138
     if-eqz v6, :cond_8
 
-    .line 138
-    const v5, 0x7f0e006f    # @layout/clipboard 'res/layout/clipboard.xml'
+    .line 139
+    const v5, 0x7f0d0076    # @layout/clipboard 'res/layout/clipboard.xml'
 
-    .line 140
+    .line 141
     invoke-virtual {v4, v5, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 143
+    .line 144
     move-result-object v4
 
-    .line 146
+    .line 147
     goto/16 :goto_5
 
-    .line 147
+    .line 148
     :cond_8
     const-string v6, "contextual"
 
-    .line 149
+    .line 150
     invoke-virtual {v6, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 151
+    .line 152
     move-result v6
 
-    .line 154
+    .line 155
     if-eqz v6, :cond_9
 
-    .line 155
-    const v5, 0x7f0e007e    # @layout/contextual 'res/layout/contextual.xml'
+    .line 156
+    const v5, 0x7f0d0086    # @layout/contextual 'res/layout/contextual.xml'
 
-    .line 157
+    .line 158
     invoke-virtual {v4, v5, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 160
+    .line 161
     move-result-object v4
 
-    .line 163
+    .line 164
     goto/16 :goto_5
 
-    .line 164
+    .line 165
     :cond_9
     const-string v6, "home_handle"
 
-    .line 166
+    .line 167
     invoke-virtual {v6, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 168
+    .line 169
     move-result v6
 
-    .line 171
+    .line 172
     if-eqz v6, :cond_a
 
-    .line 172
-    const v5, 0x7f0e00d1    # @layout/home_handle 'res/layout/home_handle.xml'
+    .line 173
+    const v5, 0x7f0d00da    # @layout/home_handle 'res/layout/home_handle.xml'
 
-    .line 174
+    .line 175
     invoke-virtual {v4, v5, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 177
+    .line 178
     move-result-object v4
 
-    .line 180
+    .line 181
     goto/16 :goto_5
 
-    .line 181
+    .line 182
     :cond_a
     const-string v6, "ime_switcher"
 
-    .line 183
+    .line 184
     invoke-virtual {v6, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 185
+    .line 186
     move-result v6
 
-    .line 188
+    .line 189
     if-eqz v6, :cond_b
 
-    .line 189
-    const v5, 0x7f0e00d9    # @layout/ime_switcher 'res/layout/ime_switcher.xml'
+    .line 190
+    const v5, 0x7f0d00e4    # @layout/ime_switcher 'res/layout/ime_switcher.xml'
 
-    .line 191
+    .line 192
     invoke-virtual {v4, v5, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 194
+    .line 195
     move-result-object v4
 
-    .line 197
+    .line 198
     goto/16 :goto_5
 
-    .line 198
+    .line 199
     :cond_b
     const-string v6, "key"
 
-    .line 200
+    .line 201
     invoke-virtual {v5, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    .line 202
+    .line 203
     move-result v6
 
-    .line 205
+    .line 206
     if-eqz v6, :cond_f
 
-    .line 206
+    .line 207
     const-string v6, ":"
 
-    .line 208
+    .line 209
     invoke-virtual {v5, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    .line 210
+    .line 211
     move-result v7
 
-    .line 213
+    .line 214
     if-nez v7, :cond_c
 
-    .line 214
+    .line 215
     move-object v7, v9
 
-    .line 216
+    .line 217
     goto :goto_3
 
-    .line 217
+    .line 218
     :cond_c
     invoke-virtual {v5, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    .line 218
+    .line 219
     move-result v7
 
-    .line 221
+    .line 222
     add-int/2addr v7, v0
 
-    .line 222
+    .line 223
     const-string v8, ")"
 
-    .line 223
+    .line 224
     invoke-virtual {v5, v8}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    .line 225
+    .line 226
     move-result v8
 
-    .line 228
+    .line 229
     invoke-virtual {v5, v7, v8}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    .line 229
+    .line 230
     move-result-object v7
 
-    .line 232
+    .line 233
     :goto_3
     const-string v8, "("
 
-    .line 233
+    .line 234
     invoke-virtual {v5, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    .line 235
+    .line 236
     move-result v10
 
-    .line 238
+    .line 239
     if-nez v10, :cond_d
 
-    .line 239
+    .line 240
     move v5, v0
 
-    .line 241
+    .line 242
     goto :goto_4
 
-    .line 242
+    .line 243
     :cond_d
     invoke-virtual {v5, v8}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    .line 243
+    .line 244
     move-result v8
 
-    .line 246
+    .line 247
     add-int/2addr v8, v0
 
-    .line 247
+    .line 248
     invoke-virtual {v5, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    .line 248
+    .line 249
     move-result v10
 
-    .line 251
+    .line 252
     invoke-virtual {v5, v8, v10}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    .line 252
+    .line 253
     move-result-object v5
-
-    .line 255
-    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     .line 256
-    move-result v5
+    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    .line 259
-    :goto_4
-    const v8, 0x7f0e0095    # @layout/custom_key 'res/layout/custom_key.xml'
+    .line 257
+    move-result v5
 
     .line 260
+    :goto_4
+    const v8, 0x7f0d009d    # @layout/custom_key 'res/layout/custom_key.xml'
+
+    .line 261
     invoke-virtual {v4, v8, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 263
+    .line 264
     move-result-object v4
 
-    .line 266
+    .line 267
     move-object v8, v4
 
-    .line 267
+    .line 268
     check-cast v8, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;
 
-    .line 268
+    .line 269
     iput v5, v8, Lcom/android/systemui/navigationbar/buttons/KeyButtonView;->mCode:I
 
-    .line 270
+    .line 271
     if-eqz v7, :cond_10
 
-    .line 272
+    .line 273
     invoke-virtual {v7, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    .line 274
+    .line 275
     move-result v5
 
-    .line 277
+    .line 278
     if-eqz v5, :cond_e
 
-    .line 278
+    .line 279
     invoke-static {v7}, Landroid/graphics/drawable/Icon;->createWithContentUri(Ljava/lang/String;)Landroid/graphics/drawable/Icon;
 
-    .line 280
+    .line 281
     move-result-object v5
 
-    .line 283
+    .line 284
     new-instance v6, Lcom/android/systemui/navigationbar/buttons/KeyButtonView$2;
 
-    .line 284
+    .line 285
     invoke-direct {v6, v8}, Lcom/android/systemui/navigationbar/buttons/KeyButtonView$2;-><init>(Lcom/android/systemui/navigationbar/buttons/KeyButtonView;)V
 
-    .line 286
+    .line 287
     new-array v7, v0, [Landroid/graphics/drawable/Icon;
 
-    .line 289
+    .line 290
     aput-object v5, v7, v1
 
-    .line 291
+    .line 292
     invoke-virtual {v6, v7}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 293
+    .line 294
     goto :goto_5
 
-    .line 296
+    .line 297
     :cond_e
     const-string v5, "/"
 
-    .line 297
+    .line 298
     invoke-virtual {v7, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    .line 299
+    .line 300
     move-result v5
-
-    .line 302
-    if-eqz v5, :cond_10
 
     .line 303
+    if-eqz v5, :cond_10
+
+    .line 304
     const/16 v5, 0x2f
 
-    .line 305
+    .line 306
     invoke-virtual {v7, v5}, Ljava/lang/String;->indexOf(I)I
 
-    .line 307
+    .line 308
     move-result v5
-
-    .line 310
-    invoke-virtual {v7, v1, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     .line 311
+    invoke-virtual {v7, v1, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    .line 312
     move-result-object v6
 
-    .line 314
+    .line 315
     add-int/2addr v5, v0
 
-    .line 315
+    .line 316
     invoke-virtual {v7, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    .line 316
+    .line 317
     move-result-object v5
-
-    .line 319
-    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     .line 320
+    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    .line 321
     move-result v5
 
-    .line 323
+    .line 324
     invoke-static {v6, v5}, Landroid/graphics/drawable/Icon;->createWithResource(Ljava/lang/String;I)Landroid/graphics/drawable/Icon;
 
-    .line 324
+    .line 325
     move-result-object v5
 
-    .line 327
+    .line 328
     new-instance v6, Lcom/android/systemui/navigationbar/buttons/KeyButtonView$2;
 
-    .line 328
+    .line 329
     invoke-direct {v6, v8}, Lcom/android/systemui/navigationbar/buttons/KeyButtonView$2;-><init>(Lcom/android/systemui/navigationbar/buttons/KeyButtonView;)V
 
-    .line 330
+    .line 331
     new-array v7, v0, [Landroid/graphics/drawable/Icon;
 
-    .line 333
+    .line 334
     aput-object v5, v7, v1
 
-    .line 335
+    .line 336
     invoke-virtual {v6, v7}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 337
+    .line 338
     goto :goto_5
 
-    .line 340
+    .line 341
     :cond_f
     move-object v4, v9
 
-    .line 341
+    .line 342
     :cond_10
     :goto_5
     if-nez v4, :cond_11
 
-    .line 342
+    .line 343
     goto/16 :goto_d
 
-    .line 344
+    .line 345
     :cond_11
     const-string v5, "["
 
-    .line 346
+    .line 347
     invoke-virtual {v3, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    .line 348
+    .line 349
     move-result v6
 
-    .line 351
+    .line 352
     if-nez v6, :cond_12
 
-    .line 352
+    .line 353
     goto :goto_6
 
-    .line 354
+    .line 355
     :cond_12
     invoke-virtual {v3, v5}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    .line 355
+    .line 356
     move-result v5
 
-    .line 358
+    .line 359
     add-int/2addr v5, v0
 
-    .line 359
+    .line 360
     const-string v6, "]"
 
-    .line 360
+    .line 361
     invoke-virtual {v3, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    .line 362
+    .line 363
     move-result v6
 
-    .line 365
+    .line 366
     invoke-virtual {v3, v5, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    .line 366
+    .line 367
     move-result-object v9
 
-    .line 369
+    .line 370
     :goto_6
     if-nez v9, :cond_13
 
-    .line 370
+    .line 371
     goto/16 :goto_b
 
-    .line 372
+    .line 373
     :cond_13
     const-string v3, "W"
 
-    .line 374
+    .line 375
     invoke-virtual {v9, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    .line 376
+    .line 377
     move-result v5
-
-    .line 379
-    const-string v6, "A"
 
     .line 380
+    const-string v6, "A"
+
+    .line 381
     if-nez v5, :cond_15
 
-    .line 382
+    .line 383
     invoke-virtual {v9, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    .line 384
+    .line 385
     move-result v5
 
-    .line 387
+    .line 388
     if-eqz v5, :cond_14
 
-    .line 388
+    .line 389
     goto :goto_7
 
-    .line 390
+    .line 391
     :cond_14
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    .line 391
+    .line 392
     move-result v3
 
-    .line 394
+    .line 395
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    .line 395
+    .line 396
     move-result-object v5
 
-    .line 398
+    .line 399
     iget v6, v5, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 399
+    .line 400
     int-to-float v6, v6
 
-    .line 401
+    .line 402
     mul-float/2addr v6, v3
 
-    .line 402
+    .line 403
     float-to-int v3, v6
 
-    .line 403
+    .line 404
     iput v3, v5, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 404
+    .line 405
     goto/16 :goto_b
 
-    .line 406
+    .line 407
     :cond_15
     :goto_7
     new-instance v5, Lcom/android/systemui/navigationbar/buttons/ReverseLinearLayout$ReverseRelativeLayout;
 
-    .line 408
+    .line 409
     iget-object v7, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
-    .line 410
+    .line 411
     invoke-direct {v5, v7}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 412
+    .line 413
     iput v1, v5, Lcom/android/systemui/navigationbar/buttons/ReverseLinearLayout$ReverseRelativeLayout;->mDefaultGravity:I
 
-    .line 415
+    .line 416
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 417
+    .line 418
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    .line 419
+    .line 420
     move-result-object v8
 
-    .line 422
+    .line 423
     invoke-direct {v7, v8}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 423
+    .line 424
     if-eqz p3, :cond_17
 
-    .line 426
+    .line 427
     if-eqz p4, :cond_16
 
-    .line 428
+    .line 429
     const/16 v8, 0x30
 
-    .line 430
+    .line 431
     goto :goto_8
 
-    .line 432
+    .line 433
     :cond_16
     const/16 v8, 0x50
 
-    .line 433
+    .line 434
     goto :goto_8
 
-    .line 435
+    .line 436
     :cond_17
     if-eqz p4, :cond_18
 
-    .line 436
+    .line 437
     const v8, 0x800003
 
-    .line 438
+    .line 439
     goto :goto_8
 
-    .line 441
+    .line 442
     :cond_18
     const v8, 0x800005
 
-    .line 442
+    .line 443
     :goto_8
     const-string v10, "WC"
 
-    .line 445
+    .line 446
     invoke-virtual {v9, v10}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    .line 447
+    .line 448
     move-result v10
 
-    .line 450
+    .line 451
     if-eqz v10, :cond_19
 
-    .line 451
+    .line 452
     const/16 v8, 0x11
 
-    .line 453
+    .line 454
     goto :goto_9
 
-    .line 455
+    .line 456
     :cond_19
     const-string v10, "C"
 
-    .line 456
+    .line 457
     invoke-virtual {v9, v10}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    .line 458
+    .line 459
     move-result v10
 
-    .line 461
+    .line 462
     if-eqz v10, :cond_1a
 
-    .line 462
+    .line 463
     const/16 v8, 0x10
 
-    .line 464
+    .line 465
     :cond_1a
     :goto_9
     iput v8, v5, Lcom/android/systemui/navigationbar/buttons/ReverseLinearLayout$ReverseRelativeLayout;->mDefaultGravity:I
 
-    .line 466
+    .line 467
     invoke-virtual {v5, v8}, Landroid/widget/RelativeLayout;->setGravity(I)V
 
-    .line 468
+    .line 469
     invoke-virtual {v5, v4, v7}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 471
+    .line 472
     invoke-virtual {v9, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    .line 474
+    .line 475
     move-result v4
 
-    .line 477
+    .line 478
     const/4 v7, -0x1
 
-    .line 478
+    .line 479
     if-eqz v4, :cond_1b
 
-    .line 479
+    .line 480
     invoke-virtual {v9, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    .line 481
+    .line 482
     move-result v3
-
-    .line 484
-    invoke-virtual {v9, v1, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     .line 485
+    invoke-virtual {v9, v1, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    .line 486
     move-result-object v3
 
-    .line 488
+    .line 489
     invoke-static {v3}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    .line 489
+    .line 490
     move-result v3
 
-    .line 492
+    .line 493
     new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 493
+    .line 494
     invoke-direct {v4, v1, v7, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
-    .line 495
+    .line 496
     invoke-virtual {v5, v4}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 498
+    .line 499
     goto :goto_a
 
-    .line 501
+    .line 502
     :cond_1b
     iget-object v3, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
-    .line 502
+    .line 503
     invoke-virtual {v9, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    .line 504
+    .line 505
     move-result v4
-
-    .line 507
-    invoke-virtual {v9, v1, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     .line 508
+    invoke-virtual {v9, v1, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    .line 509
     move-result-object v4
 
-    .line 511
+    .line 512
     invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    .line 512
+    .line 513
     move-result v4
 
-    .line 515
+    .line 516
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 516
+    .line 517
     move-result-object v3
-
-    .line 519
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     .line 520
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    .line 521
     move-result-object v3
 
-    .line 523
+    .line 524
     iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    .line 524
+    .line 525
     mul-float/2addr v4, v3
 
-    .line 526
+    .line 527
     float-to-int v3, v4
 
-    .line 527
+    .line 528
     new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 528
+    .line 529
     invoke-direct {v4, v3, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 530
+    .line 531
     invoke-virtual {v5, v4}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 533
+    .line 534
     :goto_a
     invoke-virtual {v5, v1}, Landroid/widget/RelativeLayout;->setClipChildren(Z)V
 
-    .line 536
+    .line 537
     invoke-virtual {v5, v1}, Landroid/widget/RelativeLayout;->setClipToPadding(Z)V
 
-    .line 539
+    .line 540
     move-object v4, v5
 
-    .line 542
+    .line 543
     :goto_b
     invoke-virtual {p2, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 543
+    .line 544
     invoke-virtual {p0, v4}, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->addToDispatchers(Landroid/view/View;)V
 
-    .line 546
+    .line 547
     if-eqz p3, :cond_1c
 
-    .line 549
+    .line 550
     iget-object v3, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mLastLandscape:Landroid/view/View;
 
-    .line 551
+    .line 552
     goto :goto_c
 
-    .line 553
+    .line 554
     :cond_1c
     iget-object v3, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mLastPortrait:Landroid/view/View;
 
-    .line 554
+    .line 555
     :goto_c
     instance-of v5, v4, Lcom/android/systemui/navigationbar/buttons/ReverseLinearLayout$ReverseRelativeLayout;
 
-    .line 556
+    .line 557
     if-eqz v5, :cond_1d
 
-    .line 558
+    .line 559
     check-cast v4, Lcom/android/systemui/navigationbar/buttons/ReverseLinearLayout$ReverseRelativeLayout;
 
-    .line 560
+    .line 561
     invoke-virtual {v4, v1}, Landroid/widget/RelativeLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 562
+    .line 563
     move-result-object v4
 
-    .line 565
+    .line 566
     :cond_1d
     if-eqz v3, :cond_1e
 
-    .line 566
+    .line 567
     invoke-virtual {v3}, Landroid/view/View;->getId()I
 
-    .line 568
+    .line 569
     move-result v3
 
-    .line 571
+    .line 572
     invoke-virtual {v4, v3}, Landroid/view/View;->setAccessibilityTraversalAfter(I)V
 
-    .line 572
+    .line 573
     :cond_1e
     if-eqz p3, :cond_1f
 
-    .line 575
+    .line 576
     iput-object v4, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mLastLandscape:Landroid/view/View;
 
-    .line 577
+    .line 578
     goto :goto_d
 
-    .line 579
+    .line 580
     :cond_1f
     iput-object v4, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mLastPortrait:Landroid/view/View;
 
-    .line 580
+    .line 581
     :goto_d
     add-int/2addr v2, v0
 
-    .line 582
+    .line 583
     goto/16 :goto_0
 
-    .line 583
+    .line 584
     :cond_20
     return-void
-    .line 585
+    .line 586
 .end method
 
 .method public final inflateLayout(Ljava/lang/String;)V
@@ -1532,7 +1532,7 @@
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mHorizontal:Landroid/widget/FrameLayout;
 
     .line 58
-    const v5, 0x7f0b02d7    # @id/ends_group
+    const v5, 0x7f0a02f0    # @id/ends_group
 
     .line 60
     invoke-virtual {v2, v5}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1565,7 +1565,7 @@
     iget-object v1, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mHorizontal:Landroid/widget/FrameLayout;
 
     .line 83
-    const v2, 0x7f0b01bb    # @id/center_group
+    const v2, 0x7f0a01c1    # @id/center_group
 
     .line 85
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1743,7 +1743,7 @@
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mLayoutInflater:Landroid/view/LayoutInflater;
 
     .line 8
-    const v1, 0x7f0e01a5    # @layout/navigation_layout 'res/layout/navigation_layout.xml'
+    const v1, 0x7f0d01b2    # @layout/navigation_layout 'res/layout/navigation_layout.xml'
 
     .line 10
     const/4 v2, 0x0
@@ -1767,7 +1767,7 @@
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mLayoutInflater:Landroid/view/LayoutInflater;
 
     .line 25
-    const v1, 0x7f0e01a6    # @layout/navigation_layout_vertical 'res/layout/navigation_layout_vertical.xml'
+    const v1, 0x7f0d01b3    # @layout/navigation_layout_vertical 'res/layout/navigation_layout_vertical.xml'
 
     .line 27
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -1794,7 +1794,7 @@
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mHorizontal:Landroid/widget/FrameLayout;
 
     .line 47
-    const v1, 0x7f0b054d    # @id/nav_buttons
+    const v1, 0x7f0a0571    # @id/nav_buttons
 
     .line 49
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1898,7 +1898,7 @@
     .line 1
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mHorizontal:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0b02d7    # @id/ends_group
+    const v1, 0x7f0a02f0    # @id/ends_group
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1909,7 +1909,7 @@
     .line 2
     iget-object v0, p0, Lcom/android/systemui/navigationbar/NavigationBarInflaterView;->mHorizontal:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f0b01bb    # @id/center_group
+    const v2, 0x7f0a01c1    # @id/center_group
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 

@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/protobuf/SchemaUtil;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -75,6 +75,7 @@
 
     .line 31
     return-void
+    .line 33
 .end method
 
 .method public static computeSizeByteStringList(ILjava/util/List;)I
@@ -97,7 +98,7 @@
 
     .line 9
     :cond_0
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 10
     move-result p0
@@ -125,7 +126,7 @@
     check-cast v0, Lcom/google/protobuf/ByteString;
 
     .line 25
-    invoke-static {v0}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSizeNoTag(Lcom/google/protobuf/ByteString;)I
+    invoke-static {v0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSizeNoTag(Lcom/google/protobuf/ByteString;)I
 
     .line 27
     move-result v0
@@ -171,7 +172,7 @@
     move-result p1
 
     .line 13
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 14
     move-result p0
@@ -232,7 +233,7 @@
     aget v3, v3, v1
 
     .line 24
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
     .line 26
     move-result v3
@@ -270,7 +271,7 @@
     move-result v3
 
     .line 46
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
     .line 47
     move-result v3
@@ -310,7 +311,7 @@
 
     .line 9
     :cond_0
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeFixed32Size(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed32Size(I)I
 
     .line 10
     move-result p0
@@ -360,7 +361,7 @@
 
     .line 9
     :cond_0
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeFixed64Size(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed64Size(I)I
 
     .line 10
     move-result p0
@@ -416,7 +417,7 @@
     move-result p1
 
     .line 13
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 14
     move-result p0
@@ -477,7 +478,7 @@
     aget v3, v3, v1
 
     .line 24
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
     .line 26
     move-result v3
@@ -515,7 +516,7 @@
     move-result v3
 
     .line 46
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
     .line 47
     move-result v3
@@ -567,7 +568,7 @@
     move-result p1
 
     .line 17
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 18
     move-result p0
@@ -628,7 +629,7 @@
     aget-wide v3, v3, v1
 
     .line 24
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
     .line 26
     move-result v3
@@ -666,7 +667,7 @@
     move-result-wide v3
 
     .line 46
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
     .line 47
     move-result v3
@@ -706,7 +707,7 @@
 
     .line 9
     :cond_0
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 10
     move-result p0
@@ -737,7 +738,7 @@
     move-result v2
 
     .line 28
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
     .line 29
     move-result v3
@@ -786,7 +787,7 @@
     move-result p1
 
     .line 13
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 14
     move-result p0
@@ -856,7 +857,7 @@
     xor-int/2addr v3, v4
 
     .line 30
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
     .line 31
     move-result v3
@@ -903,7 +904,7 @@
     xor-int/2addr v3, v4
 
     .line 56
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
     .line 57
     move-result v3
@@ -949,7 +950,7 @@
     move-result p1
 
     .line 13
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 14
     move-result p0
@@ -1025,7 +1026,7 @@
     xor-long/2addr v5, v7
 
     .line 32
-    invoke-static {v5, v6}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v5, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
     .line 33
     move-result v5
@@ -1072,7 +1073,7 @@
     xor-long/2addr v5, v7
 
     .line 57
-    invoke-static {v5, v6}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v5, v6}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
     .line 58
     move-result v5
@@ -1112,7 +1113,7 @@
 
     .line 9
     :cond_0
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 10
     move-result p0
@@ -1149,7 +1150,7 @@
     check-cast v2, Lcom/google/protobuf/ByteString;
 
     .line 31
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSizeNoTag(Lcom/google/protobuf/ByteString;)I
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSizeNoTag(Lcom/google/protobuf/ByteString;)I
 
     .line 33
     move-result v2
@@ -1169,7 +1170,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 40
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeStringSizeNoTag(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeStringSizeNoTag(Ljava/lang/String;)I
 
     .line 42
     move-result v2
@@ -1205,7 +1206,7 @@
     check-cast v2, Lcom/google/protobuf/ByteString;
 
     .line 60
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSizeNoTag(Lcom/google/protobuf/ByteString;)I
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSizeNoTag(Lcom/google/protobuf/ByteString;)I
 
     .line 62
     move-result v2
@@ -1225,7 +1226,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 69
-    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream;->computeStringSizeNoTag(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeStringSizeNoTag(Ljava/lang/String;)I
 
     .line 71
     move-result v2
@@ -1272,7 +1273,7 @@
     move-result p1
 
     .line 13
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 14
     move-result p0
@@ -1333,7 +1334,7 @@
     aget v3, v3, v1
 
     .line 24
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
     .line 26
     move-result v3
@@ -1371,7 +1372,7 @@
     move-result v3
 
     .line 46
-    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
     .line 47
     move-result v3
@@ -1417,7 +1418,7 @@
     move-result p1
 
     .line 13
-    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
 
     .line 14
     move-result p0
@@ -1478,7 +1479,7 @@
     aget-wide v3, v3, v1
 
     .line 24
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
     .line 26
     move-result v3
@@ -1516,7 +1517,7 @@
     move-result-wide v3
 
     .line 46
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
     .line 47
     move-result v3
@@ -1874,7 +1875,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -1886,7 +1887,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -1917,7 +1918,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 33
-    sget-object v1, Lcom/google/protobuf/CodedOutputStream;->logger:Ljava/util/logging/Logger;
+    sget-object v1, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->logger:Ljava/util/logging/Logger;
 
     .line 36
     add-int/lit8 p3, p3, 0x1
@@ -1930,7 +1931,7 @@
 
     .line 42
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 43
     :goto_1
@@ -1961,7 +1962,7 @@
     int-to-byte p0, p0
 
     .line 62
-    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream;->write(B)V
+    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->write(B)V
 
     .line 63
     add-int/lit8 v0, v0, 0x1
@@ -1996,7 +1997,7 @@
     move-result p3
 
     .line 84
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeBool(IZ)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeBool(IZ)V
 
     .line 85
     add-int/lit8 v0, v0, 0x1
@@ -2051,10 +2052,10 @@
     check-cast v1, Lcom/google/protobuf/ByteString;
 
     .line 24
-    iget-object v2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object v2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 26
-    invoke-virtual {v2, p0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeBytes(ILcom/google/protobuf/ByteString;)V
+    invoke-virtual {v2, p0, v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeBytes(ILcom/google/protobuf/ByteString;)V
 
     .line 28
     add-int/lit8 v0, v0, 0x1
@@ -2084,7 +2085,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -2096,7 +2097,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -2127,7 +2128,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 33
-    sget-object v1, Lcom/google/protobuf/CodedOutputStream;->logger:Ljava/util/logging/Logger;
+    sget-object v1, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->logger:Ljava/util/logging/Logger;
 
     .line 36
     add-int/lit8 p3, p3, 0x8
@@ -2140,7 +2141,7 @@
 
     .line 42
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 43
     :goto_1
@@ -2174,7 +2175,7 @@
     move-result-wide v1
 
     .line 65
-    invoke-virtual {p2, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64NoTag(J)V
+    invoke-virtual {p2, v1, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64NoTag(J)V
 
     .line 66
     add-int/lit8 v0, v0, 0x1
@@ -2218,7 +2219,7 @@
     move-result-wide v1
 
     .line 94
-    invoke-virtual {p2, p0, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {p2, v1, v2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
     .line 95
     add-int/lit8 v0, v0, 0x1
@@ -2248,7 +2249,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -2260,7 +2261,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -2294,7 +2295,7 @@
     move-result v1
 
     .line 36
-    invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
     .line 37
     move-result v1
@@ -2310,7 +2311,7 @@
 
     .line 44
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 45
     :goto_1
@@ -2338,7 +2339,7 @@
     move-result p0
 
     .line 63
-    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32NoTag(I)V
+    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32NoTag(I)V
 
     .line 64
     add-int/lit8 v0, v0, 0x1
@@ -2373,7 +2374,7 @@
     move-result p3
 
     .line 85
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32(II)V
 
     .line 86
     add-int/lit8 v0, v0, 0x1
@@ -2403,7 +2404,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -2415,7 +2416,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -2446,7 +2447,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 33
-    sget-object v1, Lcom/google/protobuf/CodedOutputStream;->logger:Ljava/util/logging/Logger;
+    sget-object v1, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->logger:Ljava/util/logging/Logger;
 
     .line 36
     add-int/lit8 p3, p3, 0x4
@@ -2459,7 +2460,7 @@
 
     .line 42
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 43
     :goto_1
@@ -2487,7 +2488,7 @@
     move-result p0
 
     .line 61
-    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32NoTag(I)V
+    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32NoTag(I)V
 
     .line 62
     add-int/lit8 v0, v0, 0x1
@@ -2522,7 +2523,7 @@
     move-result p3
 
     .line 83
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
     .line 84
     add-int/lit8 v0, v0, 0x1
@@ -2552,7 +2553,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -2564,7 +2565,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -2595,7 +2596,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 33
-    sget-object v1, Lcom/google/protobuf/CodedOutputStream;->logger:Ljava/util/logging/Logger;
+    sget-object v1, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->logger:Ljava/util/logging/Logger;
 
     .line 36
     add-int/lit8 p3, p3, 0x8
@@ -2608,7 +2609,7 @@
 
     .line 42
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 43
     :goto_1
@@ -2636,7 +2637,7 @@
     move-result-wide v1
 
     .line 61
-    invoke-virtual {p2, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64NoTag(J)V
+    invoke-virtual {p2, v1, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64NoTag(J)V
 
     .line 62
     add-int/lit8 v0, v0, 0x1
@@ -2671,7 +2672,7 @@
     move-result-wide v1
 
     .line 83
-    invoke-virtual {p2, p0, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {p2, v1, v2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
     .line 84
     add-int/lit8 v0, v0, 0x1
@@ -2701,7 +2702,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -2713,7 +2714,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -2744,7 +2745,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 33
-    sget-object v1, Lcom/google/protobuf/CodedOutputStream;->logger:Ljava/util/logging/Logger;
+    sget-object v1, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->logger:Ljava/util/logging/Logger;
 
     .line 36
     add-int/lit8 p3, p3, 0x4
@@ -2757,7 +2758,7 @@
 
     .line 42
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 43
     :goto_1
@@ -2791,7 +2792,7 @@
     move-result p0
 
     .line 65
-    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32NoTag(I)V
+    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32NoTag(I)V
 
     .line 66
     add-int/lit8 v0, v0, 0x1
@@ -2835,7 +2836,7 @@
     move-result p3
 
     .line 94
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
     .line 95
     add-int/lit8 v0, v0, 0x1
@@ -2917,7 +2918,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -2929,7 +2930,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -2963,7 +2964,7 @@
     move-result v1
 
     .line 36
-    invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+    invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeInt32SizeNoTag(I)I
 
     .line 37
     move-result v1
@@ -2979,7 +2980,7 @@
 
     .line 44
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 45
     :goto_1
@@ -3007,7 +3008,7 @@
     move-result p0
 
     .line 63
-    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32NoTag(I)V
+    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32NoTag(I)V
 
     .line 64
     add-int/lit8 v0, v0, 0x1
@@ -3042,7 +3043,7 @@
     move-result p3
 
     .line 85
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeInt32(II)V
 
     .line 86
     add-int/lit8 v0, v0, 0x1
@@ -3072,7 +3073,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -3084,7 +3085,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -3118,7 +3119,7 @@
     move-result-wide v1
 
     .line 36
-    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
     .line 37
     move-result v1
@@ -3134,7 +3135,7 @@
 
     .line 44
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 45
     :goto_1
@@ -3162,7 +3163,7 @@
     move-result-wide v1
 
     .line 63
-    invoke-virtual {p2, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64NoTag(J)V
+    invoke-virtual {p2, v1, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64NoTag(J)V
 
     .line 64
     add-int/lit8 v0, v0, 0x1
@@ -3197,7 +3198,7 @@
     move-result-wide v1
 
     .line 85
-    invoke-virtual {p2, p0, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    invoke-virtual {p2, v1, v2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
     .line 86
     add-int/lit8 v0, v0, 0x1
@@ -3249,13 +3250,13 @@
     move-result-object v1
 
     .line 23
-    iget-object v2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object v2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 24
     check-cast v1, Lcom/google/protobuf/MessageLite;
 
     .line 26
-    invoke-virtual {v2, p0, v1, p3}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    invoke-virtual {v2, p0, v1, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
 
     .line 28
     add-int/lit8 v0, v0, 0x1
@@ -3285,7 +3286,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -3297,7 +3298,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -3328,7 +3329,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 33
-    sget-object v1, Lcom/google/protobuf/CodedOutputStream;->logger:Ljava/util/logging/Logger;
+    sget-object v1, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->logger:Ljava/util/logging/Logger;
 
     .line 36
     add-int/lit8 p3, p3, 0x4
@@ -3341,7 +3342,7 @@
 
     .line 42
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 43
     :goto_1
@@ -3369,7 +3370,7 @@
     move-result p0
 
     .line 61
-    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32NoTag(I)V
+    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32NoTag(I)V
 
     .line 62
     add-int/lit8 v0, v0, 0x1
@@ -3404,7 +3405,7 @@
     move-result p3
 
     .line 83
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
 
     .line 84
     add-int/lit8 v0, v0, 0x1
@@ -3434,7 +3435,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -3446,7 +3447,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -3477,7 +3478,7 @@
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 33
-    sget-object v1, Lcom/google/protobuf/CodedOutputStream;->logger:Ljava/util/logging/Logger;
+    sget-object v1, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->logger:Ljava/util/logging/Logger;
 
     .line 36
     add-int/lit8 p3, p3, 0x8
@@ -3490,7 +3491,7 @@
 
     .line 42
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 43
     :goto_1
@@ -3518,7 +3519,7 @@
     move-result-wide v1
 
     .line 61
-    invoke-virtual {p2, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64NoTag(J)V
+    invoke-virtual {p2, v1, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64NoTag(J)V
 
     .line 62
     add-int/lit8 v0, v0, 0x1
@@ -3553,7 +3554,7 @@
     move-result-wide v1
 
     .line 83
-    invoke-virtual {p2, p0, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
+    invoke-virtual {p2, v1, v2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(JI)V
 
     .line 84
     add-int/lit8 v0, v0, 0x1
@@ -3583,7 +3584,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -3595,7 +3596,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -3638,7 +3639,7 @@
     xor-int/2addr v1, v2
 
     .line 41
-    invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
     .line 42
     move-result v1
@@ -3654,7 +3655,7 @@
 
     .line 49
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 50
     :goto_1
@@ -3691,7 +3692,7 @@
     xor-int/2addr p0, p3
 
     .line 73
-    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 74
     add-int/lit8 v0, v0, 0x1
@@ -3735,7 +3736,7 @@
     xor-int/2addr p3, v1
 
     .line 100
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
     .line 101
     add-int/lit8 v0, v0, 0x1
@@ -3765,7 +3766,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/16 v0, 0x3f
@@ -3783,7 +3784,7 @@
     const/4 p3, 0x2
 
     .line 18
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 19
     move p0, v2
@@ -3826,7 +3827,7 @@
     xor-long/2addr v3, v5
 
     .line 43
-    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
     .line 44
     move-result v3
@@ -3842,7 +3843,7 @@
 
     .line 51
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 52
     :goto_1
@@ -3879,7 +3880,7 @@
     xor-long/2addr v3, v5
 
     .line 74
-    invoke-virtual {p2, v3, v4}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64NoTag(J)V
+    invoke-virtual {p2, v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64NoTag(J)V
 
     .line 75
     add-int/lit8 v2, v2, 0x1
@@ -3923,7 +3924,7 @@
     xor-long/2addr v3, v5
 
     .line 100
-    invoke-virtual {p2, p0, v3, v4}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    invoke-virtual {p2, v3, v4, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
     .line 101
     add-int/lit8 v2, v2, 0x1
@@ -3959,7 +3960,7 @@
     instance-of v0, p1, Lcom/google/protobuf/LazyStringList;
 
     .line 13
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 15
     const/4 v1, 0x0
@@ -3999,7 +4000,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 37
-    invoke-virtual {p2, p0, v2}, Lcom/google/protobuf/CodedOutputStream;->writeString(ILjava/lang/String;)V
+    invoke-virtual {p2, p0, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeString(ILjava/lang/String;)V
 
     .line 39
     goto :goto_1
@@ -4009,7 +4010,7 @@
     check-cast v2, Lcom/google/protobuf/ByteString;
 
     .line 43
-    invoke-virtual {p2, p0, v2}, Lcom/google/protobuf/CodedOutputStream;->writeBytes(ILcom/google/protobuf/ByteString;)V
+    invoke-virtual {p2, p0, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeBytes(ILcom/google/protobuf/ByteString;)V
 
     .line 45
     :goto_1
@@ -4039,7 +4040,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 61
-    invoke-virtual {p2, p0, v0}, Lcom/google/protobuf/CodedOutputStream;->writeString(ILjava/lang/String;)V
+    invoke-virtual {p2, p0, v0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeString(ILjava/lang/String;)V
 
     .line 63
     add-int/lit8 v1, v1, 0x1
@@ -4069,7 +4070,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -4081,7 +4082,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -4115,7 +4116,7 @@
     move-result v1
 
     .line 36
-    invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+    invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
     .line 37
     move-result v1
@@ -4131,7 +4132,7 @@
 
     .line 44
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 45
     :goto_1
@@ -4159,7 +4160,7 @@
     move-result p0
 
     .line 63
-    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 64
     add-int/lit8 v0, v0, 0x1
@@ -4194,7 +4195,7 @@
     move-result p3
 
     .line 85
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
     .line 86
     add-int/lit8 v0, v0, 0x1
@@ -4224,7 +4225,7 @@
     if-nez v0, :cond_2
 
     .line 8
-    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream;
+    iget-object p2, p2, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     .line 10
     const/4 v0, 0x0
@@ -4236,7 +4237,7 @@
     const/4 p3, 0x2
 
     .line 15
-    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+    invoke-virtual {p2, p0, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     .line 16
     move p0, v0
@@ -4270,7 +4271,7 @@
     move-result-wide v1
 
     .line 36
-    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
 
     .line 37
     move-result v1
@@ -4286,7 +4287,7 @@
 
     .line 44
     :cond_0
-    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
+    invoke-virtual {p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     .line 45
     :goto_1
@@ -4314,7 +4315,7 @@
     move-result-wide v1
 
     .line 63
-    invoke-virtual {p2, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64NoTag(J)V
+    invoke-virtual {p2, v1, v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64NoTag(J)V
 
     .line 64
     add-int/lit8 v0, v0, 0x1
@@ -4349,7 +4350,7 @@
     move-result-wide v1
 
     .line 85
-    invoke-virtual {p2, p0, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
+    invoke-virtual {p2, v1, v2, p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(JI)V
 
     .line 86
     add-int/lit8 v0, v0, 0x1

@@ -1,21 +1,15 @@
 .class public final synthetic Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
 .field public final synthetic f$0:Landroid/animation/ValueAnimator;
 
 .field public final synthetic f$1:Landroid/view/SurfaceControl$Transaction;
-
-.field public final synthetic f$10:Lcom/android/wm/shell/common/ShellExecutor;
-
-.field public final synthetic f$11:Ljava/util/ArrayList;
-
-.field public final synthetic f$12:Ljava/lang/Runnable;
 
 .field public final synthetic f$2:Landroid/view/SurfaceControl;
 
@@ -31,11 +25,9 @@
 
 .field public final synthetic f$8:Landroid/graphics/Rect;
 
-.field public final synthetic f$9:Lcom/android/wm/shell/common/TransactionPool;
-
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/animation/ValueAnimator;Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/view/animation/Animation;Landroid/view/animation/Transformation;[FLandroid/graphics/Point;FLandroid/graphics/Rect;Lcom/android/wm/shell/common/TransactionPool;Lcom/android/wm/shell/common/ShellExecutor;Ljava/util/ArrayList;Ljava/lang/Runnable;)V
+.method public synthetic constructor <init>(Landroid/animation/ValueAnimator;Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/view/animation/Animation;Landroid/view/animation/Transformation;[FLandroid/graphics/Point;FLandroid/graphics/Rect;)V
     .locals 0
 
     .line 1
@@ -69,94 +61,64 @@
     iput-object p9, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$8:Landroid/graphics/Rect;
 
     .line 21
-    iput-object p10, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$9:Lcom/android/wm/shell/common/TransactionPool;
-
-    .line 23
-    iput-object p11, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$10:Lcom/android/wm/shell/common/ShellExecutor;
-
-    .line 25
-    iput-object p12, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$11:Ljava/util/ArrayList;
-
-    .line 27
-    iput-object p13, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$12:Ljava/lang/Runnable;
-
-    .line 29
     return-void
-    .line 31
+    .line 23
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 15
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 10
 
     .line 1
-    iget-object v0, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$0:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$0:Landroid/animation/ValueAnimator;
 
     .line 2
-    iget-object v11, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$1:Landroid/view/SurfaceControl$Transaction;
+    iget-object v2, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$1:Landroid/view/SurfaceControl$Transaction;
 
     .line 4
-    iget-object v4, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$2:Landroid/view/SurfaceControl;
+    iget-object v3, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$2:Landroid/view/SurfaceControl;
 
     .line 6
-    iget-object v5, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$3:Landroid/view/animation/Animation;
+    iget-object v4, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$3:Landroid/view/animation/Animation;
 
     .line 8
-    iget-object v6, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$4:Landroid/view/animation/Transformation;
+    iget-object v5, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$4:Landroid/view/animation/Transformation;
 
     .line 10
-    iget-object v7, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$5:[F
+    iget-object v6, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$5:[F
 
     .line 12
-    iget-object v8, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$6:Landroid/graphics/Point;
+    iget-object v7, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$6:Landroid/graphics/Point;
 
     .line 14
-    iget v9, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$7:F
+    iget v8, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$7:F
 
     .line 16
-    iget-object v10, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$8:Landroid/graphics/Rect;
+    iget-object v9, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$8:Landroid/graphics/Rect;
 
     .line 18
-    iget-object v12, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$9:Lcom/android/wm/shell/common/TransactionPool;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getDuration()J
 
     .line 20
-    iget-object v13, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$10:Lcom/android/wm/shell/common/ShellExecutor;
+    move-result-wide v0
 
-    .line 22
-    iget-object v14, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$11:Ljava/util/ArrayList;
+    .line 23
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getCurrentPlayTime()J
 
     .line 24
-    iget-object p0, p0, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda8;->f$12:Ljava/lang/Runnable;
+    move-result-wide p0
 
-    .line 26
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->getDuration()J
+    .line 27
+    invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->min(JJ)J
 
     .line 28
-    move-result-wide v1
+    move-result-wide v0
 
     .line 31
-    move-object v3, v11
+    invoke-static/range {v0 .. v9}, Lcom/android/wm/shell/transition/DefaultTransitionHandler;->applyTransformation(JLandroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/view/animation/Animation;Landroid/view/animation/Transformation;[FLandroid/graphics/Point;FLandroid/graphics/Rect;)V
 
     .line 32
-    invoke-static/range {v1 .. v10}, Lcom/android/wm/shell/transition/DefaultTransitionHandler;->applyTransformation(JLandroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;Landroid/view/animation/Animation;Landroid/view/animation/Transformation;[FLandroid/graphics/Point;FLandroid/graphics/Rect;)V
-
-    .line 33
-    invoke-virtual {v12, v11}, Lcom/android/wm/shell/common/TransactionPool;->release(Landroid/view/SurfaceControl$Transaction;)V
-
-    .line 36
-    new-instance v1, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda11;
-
-    .line 39
-    invoke-direct {v1, v14, v0, p0}, Lcom/android/wm/shell/transition/DefaultTransitionHandler$$ExternalSyntheticLambda11;-><init>(Ljava/util/ArrayList;Landroid/animation/ValueAnimator;Ljava/lang/Runnable;)V
-
-    .line 41
-    check-cast v13, Lcom/android/wm/shell/common/HandlerExecutor;
-
-    .line 44
-    invoke-virtual {v13, v1}, Lcom/android/wm/shell/common/HandlerExecutor;->execute(Ljava/lang/Runnable;)V
-
-    .line 46
     return-void
-    .line 49
+    .line 35
 .end method

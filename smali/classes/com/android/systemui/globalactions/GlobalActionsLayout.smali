@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/globalactions/GlobalActionsLayout;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -174,7 +174,7 @@
     move-result-object p1
 
     .line 21
-    const p2, 0x7f0600ec    # @color/global_actions_grid_background '#f1f3f4'
+    const p2, 0x7f0600f5    # @color/global_actions_grid_background '#f1f3f4'
 
     .line 22
     const/4 v0, 0x0
@@ -183,7 +183,7 @@
     invoke-virtual {p1, p2, v0}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
     .line 26
-    const p1, 0x7f0b06f3    # @id/separated_button
+    const p1, 0x7f0a071e    # @id/separated_button
 
     .line 29
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -204,7 +204,7 @@
     move-result-object p1
 
     .line 43
-    const p2, 0x7f0600f2    # @color/global_actions_separated_background '#f5f5f5'
+    const p2, 0x7f0600fb    # @color/global_actions_separated_background '#f5f5f5'
 
     .line 44
     invoke-virtual {p1, p2, v0}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
@@ -232,7 +232,7 @@
     const/4 v1, 0x1
 
     .line 3
-    const v2, 0x7f0b0439    # @id/list_flow
+    const v2, 0x7f0a045a    # @id/list_flow
 
     .line 4
     iget-object v3, p0, Lcom/android/systemui/globalactions/GlobalActionsLayout;->mAdapter:Lcom/android/systemui/globalactions/GlobalActionsDialogLite$MyAdapter;
@@ -272,7 +272,7 @@
     invoke-virtual {v4, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 30
-    const v3, 0x7f0b06f3    # @id/separated_button
+    const v3, 0x7f0a071e    # @id/separated_button
 
     .line 33
     invoke-virtual {p0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -456,7 +456,7 @@
     move-result-object v0
 
     .line 145
-    const v3, 0x7f0c00cb    # @integer/power_menu_lite_max_columns '2'
+    const v3, 0x7f0b00e0    # @integer/power_menu_lite_max_columns '2'
 
     .line 146
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getInteger(I)I

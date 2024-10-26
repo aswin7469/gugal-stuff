@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/media/InfoMediaDevice;
 .super Lcom/android/settingslib/media/MediaDevice;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -48,70 +48,70 @@
     packed-switch p0, :pswitch_data_0
 
     .line 16
-    const p0, 0x7f080828    # @drawable/ic_media_speaker_device 'res/drawable/ic_media_speaker_device.xml'
+    const p0, 0x7f08084b    # @drawable/ic_media_speaker_device 'res/drawable/ic_media_speaker_device.xml'
 
     .line 19
     goto :goto_0
 
     .line 22
     :pswitch_0
-    const p0, 0x7f08092b    # @drawable/ic_smartphone 'res/drawable/ic_smartphone.xml'
+    const p0, 0x7f080958    # @drawable/ic_smartphone 'res/drawable/ic_smartphone.xml'
 
     .line 23
     goto :goto_0
 
     .line 26
     :pswitch_1
-    const p0, 0x7f080827    # @drawable/ic_media_smartwatch 'res/drawable/ic_media_smartwatch.xml'
+    const p0, 0x7f08084a    # @drawable/ic_media_smartwatch 'res/drawable/ic_media_smartwatch.xml'
 
     .line 27
     goto :goto_0
 
     .line 30
     :pswitch_2
-    const p0, 0x7f080814    # @drawable/ic_media_car 'res/drawable/ic_media_car.xml'
+    const p0, 0x7f080837    # @drawable/ic_media_car 'res/drawable/ic_media_car.xml'
 
     .line 31
     goto :goto_0
 
     .line 34
     :pswitch_3
-    const p0, 0x7f080819    # @drawable/ic_media_game_console 'res/drawable/ic_media_game_console.xml'
+    const p0, 0x7f08083c    # @drawable/ic_media_game_console 'res/drawable/ic_media_game_console.xml'
 
     .line 35
     goto :goto_0
 
     .line 38
     :pswitch_4
-    const p0, 0x7f080815    # @drawable/ic_media_computer 'res/drawable/ic_media_computer.xml'
+    const p0, 0x7f080838    # @drawable/ic_media_computer 'res/drawable/ic_media_computer.xml'
 
     .line 39
     goto :goto_0
 
     .line 42
     :pswitch_5
-    const p0, 0x7f0807ab    # @drawable/ic_dock_device 'res/drawable/ic_dock_device.xml'
+    const p0, 0x7f0807c5    # @drawable/ic_dock_device 'res/drawable/ic_dock_device.xml'
 
     .line 43
     goto :goto_0
 
     .line 46
     :pswitch_6
-    const p0, 0x7f08082b    # @drawable/ic_media_tablet 'res/drawable/ic_media_tablet.xml'
+    const p0, 0x7f08084e    # @drawable/ic_media_tablet 'res/drawable/ic_media_tablet.xml'
 
     .line 47
     goto :goto_0
 
     .line 50
     :cond_0
-    const p0, 0x7f08081a    # @drawable/ic_media_group_device 'res/drawable/ic_media_group_device.xml'
+    const p0, 0x7f08083d    # @drawable/ic_media_group_device 'res/drawable/ic_media_group_device.xml'
 
     .line 51
     goto :goto_0
 
     .line 54
     :cond_1
-    const p0, 0x7f080817    # @drawable/ic_media_display_device 'res/drawable/ic_media_display_device.xml'
+    const p0, 0x7f08083a    # @drawable/ic_media_display_device 'res/drawable/ic_media_display_device.xml'
 
     .line 55
     :goto_0

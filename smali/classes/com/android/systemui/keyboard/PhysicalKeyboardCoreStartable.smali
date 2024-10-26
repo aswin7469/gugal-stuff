@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyboard/PhysicalKeyboardCoreStartable;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -10,8 +10,6 @@
 .field public final featureFlags:Lcom/android/systemui/flags/FeatureFlags;
 
 .field public final keyboardBacklightDialogCoordinator:Ldagger/Lazy;
-
-.field public final keyboardDockingIndicationViewBinder:Ldagger/Lazy;
 
 .field public final stickyKeysIndicatorCoordinator:Ldagger/Lazy;
 
@@ -30,14 +28,11 @@
     iput-object p2, p0, Lcom/android/systemui/keyboard/PhysicalKeyboardCoreStartable;->stickyKeysIndicatorCoordinator:Ldagger/Lazy;
 
     .line 7
-    iput-object p3, p0, Lcom/android/systemui/keyboard/PhysicalKeyboardCoreStartable;->keyboardDockingIndicationViewBinder:Ldagger/Lazy;
-
-    .line 9
     iput-object p4, p0, Lcom/android/systemui/keyboard/PhysicalKeyboardCoreStartable;->featureFlags:Lcom/android/systemui/flags/FeatureFlags;
 
-    .line 11
+    .line 9
     return-void
-    .line 13
+    .line 11
 .end method
 
 
@@ -89,54 +84,22 @@
     if-eqz v0, :cond_1
 
     .line 29
-    iget-object v0, p0, Lcom/android/systemui/keyboard/PhysicalKeyboardCoreStartable;->stickyKeysIndicatorCoordinator:Ldagger/Lazy;
+    iget-object p0, p0, Lcom/android/systemui/keyboard/PhysicalKeyboardCoreStartable;->stickyKeysIndicatorCoordinator:Ldagger/Lazy;
 
     .line 31
-    invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
     .line 33
-    move-result-object v0
+    move-result-object p0
 
     .line 36
-    check-cast v0, Lcom/android/systemui/keyboard/stickykeys/ui/StickyKeysIndicatorCoordinator;
+    check-cast p0, Lcom/android/systemui/keyboard/stickykeys/ui/StickyKeysIndicatorCoordinator;
 
     .line 37
-    invoke-virtual {v0}, Lcom/android/systemui/keyboard/stickykeys/ui/StickyKeysIndicatorCoordinator;->startListening()V
+    invoke-virtual {p0}, Lcom/android/systemui/keyboard/stickykeys/ui/StickyKeysIndicatorCoordinator;->startListening()V
 
     .line 39
     :cond_1
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 42
-    if-nez v0, :cond_2
-
-    .line 44
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
-
-    .line 46
-    :cond_2
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->keyboardDockingIndicator:Z
-
-    .line 49
-    if-eqz v0, :cond_3
-
-    .line 51
-    iget-object p0, p0, Lcom/android/systemui/keyboard/PhysicalKeyboardCoreStartable;->keyboardDockingIndicationViewBinder:Ldagger/Lazy;
-
-    .line 53
-    invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
-
-    .line 55
-    move-result-object p0
-
-    .line 58
-    check-cast p0, Lcom/android/systemui/keyboard/docking/binder/KeyboardDockingIndicationViewBinder;
-
-    .line 59
-    invoke-virtual {p0}, Lcom/android/systemui/keyboard/docking/binder/KeyboardDockingIndicationViewBinder;->startListening()V
-
-    .line 61
-    :cond_3
     return-void
-    .line 64
+    .line 42
 .end method

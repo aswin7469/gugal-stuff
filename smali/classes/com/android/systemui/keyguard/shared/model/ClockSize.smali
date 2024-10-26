@@ -1,18 +1,14 @@
 .class public final enum Lcom/android/systemui/keyguard/shared/model/ClockSize;
 .super Ljava/lang/Enum;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
 .field public static final synthetic $VALUES:[Lcom/android/systemui/keyguard/shared/model/ClockSize;
 
-.field public static final Companion:Lcom/android/systemui/keyguard/shared/model/ClockSize$Companion;
-
 .field public static final enum LARGE:Lcom/android/systemui/keyguard/shared/model/ClockSize;
 
 .field public static final enum SMALL:Lcom/android/systemui/keyguard/shared/model/ClockSize;
-
-.field public static final TAG:Ljava/lang/String;
 
 
 # instance fields
@@ -66,38 +62,26 @@
     invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;->enumEntries([Ljava/lang/Enum;)Lkotlin/enums/EnumEntries;
 
     .line 28
-    new-instance v0, Lcom/android/systemui/keyguard/shared/model/ClockSize$Companion;
-
-    .line 31
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 33
-    sput-object v0, Lcom/android/systemui/keyguard/shared/model/ClockSize;->Companion:Lcom/android/systemui/keyguard/shared/model/ClockSize$Companion;
-
-    .line 36
     const-class v0, Lcom/android/systemui/keyguard/shared/model/ClockSize;
 
-    .line 38
+    .line 31
     invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->getOrCreateKotlinClass(Ljava/lang/Class;)Lkotlin/jvm/internal/ClassReference;
 
-    .line 40
+    .line 33
     move-result-object v0
 
-    .line 43
+    .line 36
     invoke-virtual {v0}, Lkotlin/jvm/internal/ClassReference;->getSimpleName()Ljava/lang/String;
 
-    .line 44
+    .line 37
     move-result-object v0
 
-    .line 47
+    .line 40
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 48
-    sput-object v0, Lcom/android/systemui/keyguard/shared/model/ClockSize;->TAG:Ljava/lang/String;
-
-    .line 51
+    .line 41
     return-void
-    .line 53
+    .line 44
 .end method
 
 .method public constructor <init>(Ljava/lang/String;II)V
@@ -152,17 +136,4 @@
     .line 8
     return-object v0
     .line 10
-.end method
-
-
-# virtual methods
-.method public final getLegacyValue()I
-    .locals 0
-
-    .line 1
-    iget p0, p0, Lcom/android/systemui/keyguard/shared/model/ClockSize;->legacyValue:I
-
-    .line 2
-    return p0
-    .line 4
 .end method

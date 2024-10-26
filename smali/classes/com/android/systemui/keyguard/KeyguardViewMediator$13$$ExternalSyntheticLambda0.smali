@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/keyguard/KeyguardViewMediator$13$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -131,6 +131,8 @@
 
     .line 67
     iget-boolean v4, v4, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mFlingingToDismissKeyguardDuringSwipeGesture:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 69
     if-nez v4, :cond_1
@@ -139,427 +141,396 @@
     if-eqz p0, :cond_0
 
     .line 73
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 75
-    move-result v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 78
-    if-nez v2, :cond_0
-
-    .line 79
     :try_start_1
     invoke-interface {p0}, Landroid/view/IRemoteAnimationFinishedCallback;->onAnimationFinished()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 81
+    .line 75
     goto :goto_0
 
-    .line 84
+    .line 78
     :catchall_0
     move-exception p0
 
-    .line 85
+    .line 79
     goto/16 :goto_4
 
-    .line 86
+    .line 80
     :catch_0
     move-exception p0
 
-    .line 88
+    .line 82
     :try_start_2
     const-string v2, "KeyguardViewMediator"
 
-    .line 89
+    .line 83
     const-string v3, "Failed to call onAnimationFinished"
 
-    .line 91
+    .line 85
     invoke-static {v2, v3, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 93
+    .line 87
     :cond_0
     :goto_0
     iget-boolean p0, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mShowing:Z
 
-    .line 96
+    .line 90
     invoke-virtual {v1, p0, v7}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->setShowingLocked(ZZ)V
 
-    .line 98
+    .line 92
     monitor-exit v1
 
-    .line 101
+    .line 95
     goto/16 :goto_3
 
-    .line 102
+    .line 96
     :cond_1
     const/4 v4, 0x0
 
-    .line 104
+    .line 98
     iput-boolean v4, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mHiding:Z
 
-    .line 105
+    .line 99
     iget-object v4, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardExitAnimationRunner:Landroid/view/IRemoteAnimationRunner;
 
-    .line 107
+    .line 101
     const/4 v8, 0x0
 
-    .line 109
+    .line 103
     iput-object v8, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardExitAnimationRunner:Landroid/view/IRemoteAnimationRunner;
 
-    .line 110
+    .line 104
     iget-object v8, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
-    .line 112
+    .line 106
     invoke-static {v8}, Lcom/android/internal/util/LatencyTracker;->getInstance(Landroid/content/Context;)Lcom/android/internal/util/LatencyTracker;
 
-    .line 114
+    .line 108
     move-result-object v8
 
-    .line 117
+    .line 111
     const/16 v12, 0xb
 
-    .line 118
+    .line 112
     invoke-virtual {v8, v12}, Lcom/android/internal/util/LatencyTracker;->onActionEnd(I)V
 
-    .line 120
+    .line 114
     const/16 v8, 0x1d
 
-    .line 123
+    .line 117
     if-eqz v4, :cond_2
 
-    .line 125
+    .line 119
     if-eqz p0, :cond_2
 
-    .line 127
+    .line 121
     new-instance v12, Lcom/android/systemui/keyguard/KeyguardViewMediator$15;
 
-    .line 129
+    .line 123
     invoke-direct {v12, v1, p0}, Lcom/android/systemui/keyguard/KeyguardViewMediator$15;-><init>(Lcom/android/systemui/keyguard/KeyguardViewMediator;Landroid/view/IRemoteAnimationFinishedCallback;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 131
+    .line 125
     :try_start_3
     iget-object p0, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 134
+    .line 128
     const-string v2, "RunRemoteAnimation"
 
-    .line 136
+    .line 130
     invoke-virtual {v1, v8, v2}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->createInteractionJankMonitorConf(ILjava/lang/String;)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
 
-    .line 138
+    .line 132
     move-result-object v2
 
-    .line 141
+    .line 135
     invoke-virtual {p0, v2}, Lcom/android/internal/jank/InteractionJankMonitor;->begin(Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;)Z
 
-    .line 142
+    .line 136
     const/4 v8, 0x7
 
-    .line 145
+    .line 139
     move-object v7, v4
 
-    .line 146
+    .line 140
     invoke-interface/range {v7 .. v12}, Landroid/view/IRemoteAnimationRunner;->onAnimationStart(I[Landroid/view/RemoteAnimationTarget;[Landroid/view/RemoteAnimationTarget;[Landroid/view/RemoteAnimationTarget;Landroid/view/IRemoteAnimationFinishedCallback;)V
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 147
+    .line 141
     goto/16 :goto_2
 
-    .line 150
+    .line 144
     :catch_1
     move-exception p0
 
-    .line 152
+    .line 146
     :try_start_4
     const-string v2, "KeyguardViewMediator"
 
-    .line 153
+    .line 147
     const-string v3, "Failed to call onAnimationStart"
 
-    .line 155
+    .line 149
     invoke-static {v2, v3, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 157
+    .line 151
     goto/16 :goto_2
 
-    .line 160
+    .line 154
     :cond_2
     iget-object v4, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
-    .line 162
+    .line 156
     check-cast v4, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;
 
-    .line 164
+    .line 158
     iget-boolean v4, v4, Lcom/android/systemui/statusbar/StatusBarStateControllerImpl;->mLeaveOpenOnKeyguardHide:Z
 
-    .line 166
-    if-nez v4, :cond_5
+    .line 160
+    if-nez v4, :cond_4
 
-    .line 168
-    if-eqz v9, :cond_5
+    .line 162
+    if-eqz v9, :cond_4
 
-    .line 170
+    .line 164
     array-length v4, v9
 
-    .line 172
-    if-lez v4, :cond_5
+    .line 166
+    if-lez v4, :cond_4
 
-    .line 173
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 175
-    move-result v2
-
-    .line 178
-    if-nez v2, :cond_3
-
-    .line 179
+    .line 167
     iput-object p0, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mSurfaceBehindRemoteAnimationFinishedCallback:Landroid/view/IRemoteAnimationFinishedCallback;
 
-    .line 181
-    :cond_3
+    .line 169
     iput-boolean v7, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mSurfaceBehindRemoteAnimationRunning:Z
 
-    .line 183
+    .line 171
     iget-object p0, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 185
+    .line 173
     const-string v2, "DismissPanel"
 
-    .line 187
+    .line 175
     invoke-virtual {v1, v8, v2}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->createInteractionJankMonitorConf(ILjava/lang/String;)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
 
-    .line 189
+    .line 177
     move-result-object v2
 
-    .line 192
+    .line 180
     invoke-virtual {p0, v2}, Lcom/android/internal/jank/InteractionJankMonitor;->begin(Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;)Z
 
-    .line 193
+    .line 181
     invoke-static {}, Landroid/service/dreams/Flags;->dismissDreamOnKeyguardDismiss()Z
 
-    .line 196
+    .line 184
     move-result p0
 
-    .line 199
-    if-eqz p0, :cond_4
+    .line 187
+    if-eqz p0, :cond_3
 
-    .line 200
+    .line 188
     invoke-static {v9}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
 
-    .line 202
+    .line 190
     move-result-object p0
 
-    .line 205
+    .line 193
     new-instance v2, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda14;
 
-    .line 206
+    .line 194
     const/4 v3, 0x0
 
-    .line 208
+    .line 196
     invoke-direct {v2, v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda14;-><init>(I)V
 
-    .line 209
+    .line 197
     invoke-interface {p0, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
-    .line 212
+    .line 200
     move-result-object p0
 
-    .line 215
+    .line 203
     new-instance v2, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda15;
 
-    .line 216
+    .line 204
     const/4 v3, 0x0
 
-    .line 218
+    .line 206
     invoke-direct {v2, v3}, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda15;-><init>(I)V
 
-    .line 219
+    .line 207
     invoke-interface {p0, v2}, Ljava/util/stream/Stream;->toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;
 
-    .line 222
+    .line 210
     move-result-object p0
 
-    .line 225
+    .line 213
     check-cast p0, [Landroid/view/RemoteAnimationTarget;
 
-    .line 226
+    .line 214
     move-object v3, p0
 
-    .line 228
+    .line 216
     goto :goto_1
 
-    .line 229
-    :cond_4
+    .line 217
+    :cond_3
     move-object v3, v9
 
-    .line 230
+    .line 218
     :goto_1
     invoke-static {v10}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
 
-    .line 231
+    .line 219
     move-result-object p0
 
-    .line 234
+    .line 222
     new-instance v2, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda14;
 
-    .line 235
+    .line 223
     const/4 v4, 0x1
 
-    .line 237
+    .line 225
     invoke-direct {v2, v4}, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda14;-><init>(I)V
 
-    .line 238
+    .line 226
     invoke-interface {p0, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
-    .line 241
+    .line 229
     move-result-object p0
 
-    .line 244
+    .line 232
     new-instance v2, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda15;
 
-    .line 245
+    .line 233
     const/4 v4, 0x1
 
-    .line 247
+    .line 235
     invoke-direct {v2, v4}, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda15;-><init>(I)V
 
-    .line 248
+    .line 236
     invoke-interface {p0, v2}, Ljava/util/stream/Stream;->toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;
 
-    .line 251
+    .line 239
     move-result-object p0
 
-    .line 254
+    .line 242
     move-object v4, p0
 
-    .line 255
+    .line 243
     check-cast v4, [Landroid/view/RemoteAnimationTarget;
 
-    .line 256
+    .line 244
     iget-object p0, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardUnlockAnimationControllerLazy:Ldagger/Lazy;
 
-    .line 258
+    .line 246
     invoke-interface {p0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 260
+    .line 248
     move-result-object p0
 
-    .line 263
+    .line 251
     move-object v2, p0
 
-    .line 264
+    .line 252
     check-cast v2, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;
 
-    .line 265
+    .line 253
     iget-boolean v7, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mSurfaceBehindRemoteAnimationRequested:Z
 
-    .line 267
+    .line 255
     invoke-virtual/range {v2 .. v7}, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;->notifyStartSurfaceBehindRemoteAnimation([Landroid/view/RemoteAnimationTarget;[Landroid/view/RemoteAnimationTarget;JZ)V
 
-    .line 269
+    .line 257
     goto :goto_2
 
-    .line 272
-    :cond_5
+    .line 260
+    :cond_4
     iget-object v4, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mInteractionJankMonitor:Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 273
+    .line 261
     const-string v7, "RemoteAnimationDisabled"
 
-    .line 275
+    .line 263
     invoke-virtual {v1, v8, v7}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->createInteractionJankMonitorConf(ILjava/lang/String;)Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;
 
-    .line 277
+    .line 265
     move-result-object v7
 
-    .line 280
+    .line 268
     invoke-virtual {v4, v7}, Lcom/android/internal/jank/InteractionJankMonitor;->begin(Lcom/android/internal/jank/InteractionJankMonitor$Configuration$Builder;)Z
 
-    .line 281
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 284
-    move-result v4
-
-    .line 287
-    if-nez v4, :cond_6
-
-    .line 288
+    .line 269
     iget-object v4, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mKeyguardViewControllerLazy:Ldagger/Lazy;
 
-    .line 290
+    .line 272
     invoke-interface {v4}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 292
+    .line 274
     move-result-object v4
 
-    .line 295
+    .line 277
     check-cast v4, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
-    .line 296
+    .line 278
     invoke-virtual {v4, v5, v6, v2, v3}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->hide(JJ)V
 
-    .line 298
-    :cond_6
+    .line 280
     iget-object v2, v1, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
-    .line 301
+    .line 283
     invoke-virtual {v2}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
-    .line 303
+    .line 285
     move-result-object v2
 
-    .line 306
+    .line 288
     new-instance v3, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda18;
 
-    .line 307
+    .line 289
     invoke-direct {v3, v1, p0, v9}, Lcom/android/systemui/keyguard/KeyguardViewMediator$$ExternalSyntheticLambda18;-><init>(Lcom/android/systemui/keyguard/KeyguardViewMediator;Landroid/view/IRemoteAnimationFinishedCallback;[Landroid/view/RemoteAnimationTarget;)V
 
-    .line 309
+    .line 291
     invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 312
+    .line 294
     invoke-virtual {v1}, Lcom/android/systemui/keyguard/KeyguardViewMediator;->onKeyguardExitFinished()V
 
-    .line 315
+    .line 297
     :goto_2
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 318
+    .line 300
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 319
+    .line 301
     :goto_3
     iget-object p0, v0, Lcom/android/systemui/keyguard/KeyguardViewMediator$13;->this$0:Lcom/android/systemui/keyguard/KeyguardViewMediator;
 
-    .line 322
+    .line 304
     iget-object p0, p0, Lcom/android/systemui/keyguard/KeyguardViewMediator;->mFalsingCollector:Lcom/android/systemui/classifier/FalsingCollector;
 
-    .line 324
+    .line 306
     invoke-interface {p0}, Lcom/android/systemui/classifier/FalsingCollector;->onSuccessfulUnlock()V
 
-    .line 326
+    .line 308
     return-void
 
-    .line 329
+    .line 311
     :goto_4
     :try_start_5
     monitor-exit v1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 330
+    .line 312
     throw p0
-    .line 331
+    .line 313
 .end method

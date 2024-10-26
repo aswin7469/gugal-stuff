@@ -1,6 +1,6 @@
 .class Lcom/android/systemui/globalactions/GlobalActionsDialogLite$LockDownAction;
 .super Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -15,10 +15,10 @@
     iput-object p1, p0, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$LockDownAction;->this$0:Lcom/android/systemui/globalactions/GlobalActionsDialogLite;
 
     .line 2
-    const v0, 0x108042e    # @android:drawable/ic_lock_idle_alarm_alpha
+    const v0, 0x108042c    # @android:drawable/ic_lock_airplane_mode_off_am_alpha
 
     .line 4
-    const v1, 0x104044a    # @android:string/heavy_weight_switcher_title
+    const v1, 0x1040441    # @android:string/guest_name
 
     .line 7
     invoke-direct {p0, p1, v0, v1}, Lcom/android/systemui/globalactions/GlobalActionsDialogLite$SinglePressAction;-><init>(Lcom/android/systemui/globalactions/GlobalActionsDialogLite;II)V

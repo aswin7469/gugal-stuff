@@ -1,6 +1,6 @@
 .class public abstract Landroidx/room/BaseRoomConnectionManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -930,219 +930,219 @@
     move-result-object v4
 
     .line 289
-    const-string v5, "sqlite_"
+    const-string/jumbo v5, "sqlite_"
 
     .line 290
     invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    .line 292
+    .line 293
     move-result v5
-
-    .line 295
-    if-nez v5, :cond_12
 
     .line 296
+    if-nez v5, :cond_12
+
+    .line 297
     const-string v5, "android_metadata"
 
-    .line 298
+    .line 299
     invoke-virtual {v4, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 300
+    .line 301
     move-result v5
 
-    .line 303
+    .line 304
     if-eqz v5, :cond_13
 
-    .line 304
+    .line 305
     goto :goto_9
 
-    .line 306
+    .line 307
     :cond_13
     invoke-virtual {v2, v4}, Lkotlin/collections/builders/ListBuilder;->add(Ljava/lang/Object;)Z
 
-    .line 307
+    .line 308
     goto :goto_9
 
-    .line 310
+    .line 311
     :catchall_0
     move-exception v0
 
-    .line 311
+    .line 312
     goto :goto_b
 
-    .line 312
+    .line 313
     :cond_14
     invoke-virtual {v2}, Lkotlin/collections/builders/ListBuilder;->build()Lkotlin/collections/builders/ListBuilder;
 
-    .line 313
+    .line 314
     move-result-object v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 316
+    .line 317
     invoke-interface {v1}, Landroidx/sqlite/SQLiteStatement;->close()V
 
-    .line 317
+    .line 318
     invoke-virtual {v2, v6}, Lkotlin/collections/builders/ListBuilder;->listIterator(I)Ljava/util/ListIterator;
 
-    .line 320
+    .line 321
     move-result-object v1
 
-    .line 323
+    .line 324
     :goto_a
     move-object v2, v1
 
-    .line 324
+    .line 325
     check-cast v2, Lkotlin/collections/builders/ListBuilder$Itr;
 
-    .line 325
+    .line 326
     invoke-virtual {v2}, Lkotlin/collections/builders/ListBuilder$Itr;->hasNext()Z
 
-    .line 327
+    .line 328
     move-result v4
 
-    .line 330
+    .line 331
     if-eqz v4, :cond_16
 
-    .line 331
+    .line 332
     invoke-virtual {v2}, Lkotlin/collections/builders/ListBuilder$Itr;->next()Ljava/lang/Object;
 
-    .line 333
+    .line 334
     move-result-object v2
-
-    .line 336
-    check-cast v2, Ljava/lang/String;
 
     .line 337
+    check-cast v2, Ljava/lang/String;
+
+    .line 338
     new-instance v4, Ljava/lang/StringBuilder;
 
-    .line 339
+    .line 340
     const-string v5, "DROP TABLE IF EXISTS "
 
-    .line 341
+    .line 342
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 343
+    .line 344
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 346
+    .line 347
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 349
+    .line 350
     move-result-object v2
 
-    .line 352
+    .line 353
     invoke-static {v0, v2}, Landroidx/sqlite/SQLiteKt;->execSQL(Landroidx/sqlite/SQLiteConnection;Ljava/lang/String;)V
 
-    .line 353
+    .line 354
     goto :goto_a
 
-    .line 356
+    .line 357
     :goto_b
     invoke-interface {v1}, Landroidx/sqlite/SQLiteStatement;->close()V
 
-    .line 357
+    .line 358
     throw v0
 
-    .line 360
+    .line 361
     :cond_15
     invoke-virtual {v8, v0}, Landroidx/room/RoomOpenDelegate;->dropAllTables(Landroidx/sqlite/SQLiteConnection;)V
 
-    .line 361
+    .line 362
     :cond_16
     iget-object v1, v3, Landroidx/room/RoomConnectionManager;->callbacks:Ljava/util/List;
 
-    .line 364
+    .line 365
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 366
+    .line 367
     move-result-object v1
 
-    .line 369
+    .line 370
     :goto_c
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 370
+    .line 371
     move-result v2
 
-    .line 373
+    .line 374
     if-eqz v2, :cond_17
 
-    .line 374
+    .line 375
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 376
+    .line 377
     move-result-object v2
 
-    .line 379
+    .line 380
     check-cast v2, Landroidx/room/RoomDatabase$Callback;
 
-    .line 380
+    .line 381
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 382
+    .line 383
     instance-of v2, v0, Landroidx/room/driver/SupportSQLiteConnection;
 
-    .line 385
+    .line 386
     goto :goto_c
 
-    .line 387
+    .line 388
     :cond_17
     invoke-virtual {v8, v0}, Landroidx/room/RoomOpenDelegate;->createAllTables(Landroidx/sqlite/SQLiteConnection;)V
 
-    .line 388
+    .line 389
     :goto_d
     return-void
 
-    .line 391
+    .line 392
     :cond_18
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 392
+    .line 393
     new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 394
+    .line 395
     const-string v4, "A migration from "
 
-    .line 396
+    .line 397
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 398
+    .line 399
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 401
+    .line 402
     const-string v1, " to "
 
-    .line 404
+    .line 405
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 406
+    .line 407
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 409
+    .line 410
     const-string v1, " was required but not found. Please provide the necessary Migration path via RoomDatabase.Builder.addMigration(...) or allow for destructive migrations via one of the RoomDatabase.Builder.fallbackToDestructiveMigration* methods."
 
-    .line 412
+    .line 413
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 414
+    .line 415
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 417
+    .line 418
     move-result-object v1
-
-    .line 420
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     .line 421
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 422
     move-result-object v1
 
-    .line 424
+    .line 425
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 425
+    .line 426
     throw v0
-    .line 428
+    .line 429
 .end method
 
 .method public final onOpen(Landroidx/sqlite/SQLiteConnection;)V

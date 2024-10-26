@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/biometrics/ui/binder/SideFpsOverlayViewBinder$Companion$bind$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -150,7 +150,7 @@
     check-cast v4, Landroid/view/View;
 
     .line 33
-    const v1, 0x7f0b0719    # @id/sidefps_animation
+    const v1, 0x7f0a0745    # @id/sidefps_animation
 
     .line 35
     invoke-virtual {v4, v1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;

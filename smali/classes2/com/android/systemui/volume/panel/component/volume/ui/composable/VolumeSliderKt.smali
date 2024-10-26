@@ -1,11 +1,11 @@
 .class public abstract Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
 .method public static final VolumeSlider(Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Lcom/android/compose/PlatformSliderColors;Landroidx/compose/runtime/Composer;II)V
-    .locals 23
+    .locals 22
 
     .line 1
     move-object/from16 v1, p0
@@ -297,466 +297,466 @@
     or-int/2addr v6, v3
 
     .line 155
-    move-object/from16 v12, p5
+    :cond_f
+    move-object/from16 v3, p5
 
     .line 156
-    :cond_f
     :goto_a
-    move v3, v6
+    move/from16 v16, v6
 
     .line 158
     goto :goto_c
 
-    .line 159
+    .line 160
     :cond_10
     const/high16 v3, 0x70000
 
-    .line 160
+    .line 161
     and-int/2addr v3, v14
-
-    .line 162
-    move-object/from16 v12, p5
 
     .line 163
     if-nez v3, :cond_f
 
-    .line 165
-    invoke-virtual {v13, v12}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
+    .line 164
+    move-object/from16 v3, p5
 
-    .line 167
-    move-result v3
+    .line 166
+    invoke-virtual {v13, v3}, Landroidx/compose/runtime/ComposerImpl;->changed(Ljava/lang/Object;)Z
 
-    .line 170
-    if-eqz v3, :cond_11
+    .line 168
+    move-result v8
 
     .line 171
-    const/high16 v3, 0x20000
+    if-eqz v8, :cond_11
 
-    .line 173
+    .line 172
+    const/high16 v8, 0x20000
+
+    .line 174
     goto :goto_b
 
-    .line 175
-    :cond_11
-    const/high16 v3, 0x10000
-
     .line 176
-    :goto_b
-    or-int/2addr v6, v3
+    :cond_11
+    const/high16 v8, 0x10000
 
-    .line 178
-    goto :goto_a
+    .line 177
+    :goto_b
+    or-int/2addr v6, v8
 
     .line 179
+    goto :goto_a
+
+    .line 180
     :goto_c
     const v6, 0x5b6db
 
-    .line 180
-    and-int/2addr v6, v3
-
-    .line 183
-    const v8, 0x12492
+    .line 181
+    and-int v6, v16, v6
 
     .line 184
+    const v8, 0x12492
+
+    .line 186
     if-ne v6, v8, :cond_13
 
-    .line 187
+    .line 189
     invoke-virtual {v13}, Landroidx/compose/runtime/ComposerImpl;->getSkipping()Z
 
-    .line 189
+    .line 191
     move-result v6
 
-    .line 192
+    .line 194
     if-nez v6, :cond_12
 
-    .line 193
+    .line 195
     goto :goto_d
 
-    .line 195
+    .line 197
     :cond_12
     invoke-virtual {v13}, Landroidx/compose/runtime/ComposerImpl;->skipToGroupEnd()V
 
-    .line 196
+    .line 198
     move-object v3, v5
 
-    .line 199
+    .line 201
     move-object v5, v7
 
-    .line 200
-    move-object/from16 v22, v13
-
-    .line 201
-    goto/16 :goto_12
+    .line 202
+    move-object/from16 v21, v13
 
     .line 203
+    goto/16 :goto_12
+
+    .line 205
     :cond_13
     :goto_d
     if-eqz v4, :cond_14
 
-    .line 205
+    .line 207
     const/4 v4, 0x0
 
-    .line 207
+    .line 209
     move-object/from16 v17, v4
 
-    .line 208
+    .line 210
     goto :goto_e
 
-    .line 210
+    .line 212
     :cond_14
     move-object/from16 v17, v5
 
-    .line 211
+    .line 213
     :goto_e
     if-eqz v2, :cond_15
 
-    .line 213
+    .line 215
     sget-object v2, Landroidx/compose/ui/Modifier$Companion;->$$INSTANCE:Landroidx/compose/ui/Modifier$Companion;
 
-    .line 215
+    .line 217
     move-object v5, v2
 
-    .line 217
+    .line 219
     goto :goto_f
 
-    .line 218
+    .line 220
     :cond_15
     move-object v5, v7
 
-    .line 219
+    .line 221
     :goto_f
     sget-object v2, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
 
-    .line 220
+    .line 222
     const v2, -0xd73a9fb
 
-    .line 222
+    .line 224
     invoke-virtual {v13, v2}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
 
-    .line 225
+    .line 227
     const v2, -0x425f5701
 
-    .line 228
+    .line 230
     invoke-virtual {v13, v2}, Landroidx/compose/runtime/ComposerImpl;->startReplaceGroup(I)V
 
-    .line 231
+    .line 233
     invoke-virtual {v13}, Landroidx/compose/runtime/ComposerImpl;->rememberedValue()Ljava/lang/Object;
 
-    .line 234
+    .line 236
     move-result-object v2
 
-    .line 237
+    .line 239
     sget-object v4, Landroidx/compose/runtime/Composer$Companion;->Empty:Landroidx/compose/runtime/Composer$Companion$Empty$1;
 
-    .line 238
+    .line 240
     if-ne v2, v4, :cond_16
 
-    .line 240
+    .line 242
     sget-object v2, Landroidx/compose/runtime/StructuralEqualityPolicy;->INSTANCE:Landroidx/compose/runtime/StructuralEqualityPolicy;
 
-    .line 242
+    .line 244
     invoke-static {v1, v2}, Landroidx/compose/runtime/SnapshotStateKt;->mutableStateOf(Ljava/lang/Object;Landroidx/compose/runtime/SnapshotMutationPolicy;)Landroidx/compose/runtime/ParcelableSnapshotMutableState;
 
-    .line 244
+    .line 246
     move-result-object v2
 
-    .line 247
+    .line 249
     invoke-virtual {v13, v2}, Landroidx/compose/runtime/ComposerImpl;->updateRememberedValue(Ljava/lang/Object;)V
 
-    .line 248
+    .line 250
     :cond_16
     check-cast v2, Landroidx/compose/runtime/MutableState;
 
-    .line 251
+    .line 253
     const/4 v4, 0x0
 
-    .line 253
+    .line 255
     invoke-virtual {v13, v4}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 254
+    .line 256
     invoke-interface {v2}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
-    .line 257
+    .line 259
     move-result-object v6
 
-    .line 260
+    .line 262
     check-cast v6, Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;
-
-    .line 261
-    instance-of v6, v6, Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState$Empty;
 
     .line 263
-    if-nez v6, :cond_18
+    instance-of v6, v6, Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState$Empty;
 
     .line 265
-    invoke-interface {v2}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
+    if-nez v6, :cond_18
 
     .line 267
+    invoke-interface {v2}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
+
+    .line 269
     move-result-object v6
 
-    .line 270
+    .line 272
     check-cast v6, Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;
 
-    .line 271
+    .line 273
     invoke-interface {v6}, Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;->isEnabled()Z
 
-    .line 273
+    .line 275
     move-result v6
 
-    .line 276
+    .line 278
     invoke-interface/range {p0 .. p0}, Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;->isEnabled()Z
 
-    .line 277
+    .line 279
     move-result v7
 
-    .line 280
+    .line 282
     if-eq v6, v7, :cond_17
 
-    .line 281
+    .line 283
     goto :goto_10
 
-    .line 283
+    .line 285
     :cond_17
     invoke-interface/range {p0 .. p0}, Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;->getValue()F
 
-    .line 284
+    .line 286
     move-result v6
 
-    .line 287
-    const/16 v10, 0xc00
-
-    .line 288
-    const/16 v11, 0x16
+    .line 289
+    const/16 v11, 0xc00
 
     .line 290
-    const-string v7, "VolumeSliderValueAnimation"
+    const/16 v12, 0x16
 
     .line 292
-    const/4 v8, 0x0
+    const/4 v7, 0x0
 
     .line 294
-    move-object v9, v13
+    const-string v8, "VolumeSliderValueAnimation"
 
     .line 295
-    invoke-static/range {v6 .. v11}, Landroidx/compose/animation/core/AnimateAsStateKt;->animateFloatAsState(FLjava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)Landroidx/compose/runtime/State;
+    const/4 v9, 0x0
 
-    .line 296
-    move-result-object v6
+    .line 297
+    move-object v10, v13
+
+    .line 298
+    invoke-static/range {v6 .. v12}, Landroidx/compose/animation/core/AnimateAsStateKt;->animateFloatAsState(FLandroidx/compose/animation/core/SpringSpec;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)Landroidx/compose/runtime/State;
 
     .line 299
+    move-result-object v6
+
+    .line 302
     goto :goto_11
 
-    .line 300
+    .line 303
     :cond_18
     :goto_10
     invoke-interface/range {p0 .. p0}, Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;->getValue()F
 
-    .line 301
+    .line 304
     move-result v6
 
-    .line 304
+    .line 307
     invoke-static {v6}, Landroidx/compose/runtime/PrimitiveSnapshotStateKt;->mutableFloatStateOf(F)Landroidx/compose/runtime/ParcelableSnapshotMutableFloatState;
 
-    .line 305
+    .line 308
     move-result-object v6
 
-    .line 308
+    .line 311
     :goto_11
     invoke-interface {v2, v1}, Landroidx/compose/runtime/MutableState;->setValue(Ljava/lang/Object;)V
 
-    .line 309
+    .line 312
     invoke-virtual {v13, v4}, Landroidx/compose/runtime/ComposerImpl;->end(Z)V
 
-    .line 312
+    .line 315
     new-instance v2, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt$VolumeSlider$1;
 
-    .line 315
+    .line 318
     invoke-direct {v2, v1, v15, v0, v6}, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt$VolumeSlider$1;-><init>(Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/State;)V
 
-    .line 317
+    .line 320
     invoke-static {v5, v2}, Landroidx/compose/ui/semantics/SemanticsModifierKt;->clearAndSetSemantics(Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;)Landroidx/compose/ui/Modifier;
 
-    .line 320
+    .line 323
     move-result-object v4
 
-    .line 323
+    .line 326
     invoke-interface {v6}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
 
-    .line 324
+    .line 327
     move-result-object v2
 
-    .line 327
+    .line 330
     check-cast v2, Ljava/lang/Number;
 
-    .line 328
+    .line 331
     invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
 
-    .line 330
+    .line 333
     move-result v2
 
-    .line 333
+    .line 336
     invoke-interface/range {p0 .. p0}, Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;->getValueRange()Lkotlin/ranges/ClosedFloatingPointRange;
 
-    .line 334
+    .line 337
     move-result-object v6
 
-    .line 337
+    .line 340
     invoke-interface/range {p0 .. p0}, Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;->isEnabled()Z
 
-    .line 338
+    .line 341
     move-result v7
 
-    .line 341
+    .line 344
     new-instance v8, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt$VolumeSlider$2;
 
-    .line 342
+    .line 345
     invoke-direct {v8, v1, v15}, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt$VolumeSlider$2;-><init>(Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;Lkotlin/jvm/functions/Function0;)V
 
-    .line 344
+    .line 347
     const v9, 0x67693e69
 
-    .line 347
-    invoke-static {v9, v8, v13}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->rememberComposableLambda(ILkotlin/jvm/internal/Lambda;Landroidx/compose/runtime/Composer;)Landroidx/compose/runtime/internal/ComposableLambdaImpl;
-
     .line 350
-    move-result-object v11
+    invoke-static {v9, v8, v13}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->rememberComposableLambda(ILkotlin/jvm/internal/Lambda;Landroidx/compose/runtime/Composer;)Landroidx/compose/runtime/internal/ComposableLambdaImpl;
 
     .line 353
-    new-instance v8, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt$VolumeSlider$3;
-
-    .line 354
-    invoke-direct {v8, v1}, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt$VolumeSlider$3;-><init>(Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;)V
+    move-result-object v11
 
     .line 356
-    const v9, -0xebcef25
+    new-instance v8, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt$VolumeSlider$3;
+
+    .line 357
+    invoke-direct {v8, v1}, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt$VolumeSlider$3;-><init>(Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;)V
 
     .line 359
-    invoke-static {v9, v8, v13}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->rememberComposableLambda(ILkotlin/jvm/internal/Lambda;Landroidx/compose/runtime/Composer;)Landroidx/compose/runtime/internal/ComposableLambdaImpl;
+    const v9, -0xebcef25
 
     .line 362
-    move-result-object v16
+    invoke-static {v9, v8, v13}, Landroidx/compose/runtime/internal/ComposableLambdaKt;->rememberComposableLambda(ILkotlin/jvm/internal/Lambda;Landroidx/compose/runtime/Composer;)Landroidx/compose/runtime/internal/ComposableLambdaImpl;
 
     .line 365
-    const/high16 v8, 0x30000000
-
-    .line 366
-    and-int/lit8 v9, v3, 0x70
+    move-result-object v12
 
     .line 368
-    or-int/2addr v8, v9
+    const/high16 v8, 0x30000000
 
-    .line 370
-    shl-int/lit8 v9, v3, 0x3
+    .line 369
+    and-int/lit8 v9, v16, 0x70
 
     .line 371
-    and-int/lit16 v9, v9, 0x1c00
-
-    .line 373
     or-int/2addr v8, v9
 
-    .line 375
-    const/high16 v9, 0x1c00000
+    .line 373
+    shl-int/lit8 v9, v16, 0x3
+
+    .line 374
+    and-int/lit16 v9, v9, 0x1c00
 
     .line 376
-    shl-int/lit8 v3, v3, 0x6
+    or-int/2addr v8, v9
 
     .line 378
-    and-int/2addr v3, v9
+    const/high16 v9, 0x1c00000
 
-    .line 380
-    or-int v18, v8, v3
+    .line 379
+    shl-int/lit8 v10, v16, 0x6
 
     .line 381
-    const/4 v8, 0x0
+    and-int/2addr v9, v10
 
     .line 383
-    const/4 v10, 0x0
+    or-int v16, v8, v9
 
     .line 384
-    const/16 v19, 0x6
+    const/4 v8, 0x0
 
-    .line 385
-    const/16 v20, 0x140
+    .line 386
+    const/4 v10, 0x0
 
     .line 387
+    const/16 v18, 0x6
+
+    .line 388
+    const/16 v19, 0x140
+
+    .line 390
     move-object/from16 v3, p1
 
-    .line 389
-    move-object/from16 v21, v5
+    .line 392
+    move-object/from16 v20, v5
 
-    .line 391
+    .line 394
     move-object/from16 v5, v17
 
-    .line 393
+    .line 396
     move-object/from16 v9, p5
 
-    .line 395
-    move-object/from16 v12, v16
+    .line 398
+    move-object/from16 v21, v13
 
-    .line 397
-    move-object/from16 v22, v13
+    .line 400
+    move/from16 v14, v16
 
-    .line 399
-    move/from16 v14, v18
+    .line 402
+    move/from16 v15, v18
 
-    .line 401
-    move/from16 v15, v19
+    .line 404
+    move/from16 v16, v19
 
-    .line 403
-    move/from16 v16, v20
-
-    .line 405
+    .line 406
     invoke-static/range {v2 .. v16}, Lcom/android/compose/PlatformSliderKt;->PlatformSlider-Wu8B24Y(FLkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Lkotlin/ranges/ClosedFloatingPointRange;ZLandroidx/compose/foundation/interaction/MutableInteractionSource;Lcom/android/compose/PlatformSliderColors;FLkotlin/jvm/functions/Function3;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;III)V
 
-    .line 407
+    .line 408
     move-object/from16 v3, v17
 
-    .line 410
-    move-object/from16 v5, v21
+    .line 411
+    move-object/from16 v5, v20
 
-    .line 412
+    .line 413
     :goto_12
-    invoke-virtual/range {v22 .. v22}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
+    invoke-virtual/range {v21 .. v21}, Landroidx/compose/runtime/ComposerImpl;->endRestartGroup()Landroidx/compose/runtime/RecomposeScopeImpl;
 
-    .line 414
+    .line 415
     move-result-object v9
 
-    .line 417
+    .line 418
     if-eqz v9, :cond_19
 
-    .line 418
+    .line 419
     new-instance v10, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt$VolumeSlider$4;
 
-    .line 420
+    .line 421
     move-object v0, v10
 
-    .line 422
+    .line 423
     move-object/from16 v1, p0
 
-    .line 423
+    .line 424
     move-object/from16 v2, p1
 
-    .line 425
+    .line 426
     move-object/from16 v4, p3
 
-    .line 427
+    .line 428
     move-object/from16 v6, p5
 
-    .line 429
+    .line 430
     move/from16 v7, p7
 
-    .line 431
+    .line 432
     move/from16 v8, p8
 
-    .line 433
+    .line 434
     invoke-direct/range {v0 .. v8}, Lcom/android/systemui/volume/panel/component/volume/ui/composable/VolumeSliderKt$VolumeSlider$4;-><init>(Lcom/android/systemui/volume/panel/component/volume/slider/ui/viewmodel/SliderState;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Lcom/android/compose/PlatformSliderColors;II)V
 
-    .line 435
+    .line 436
     iput-object v10, v9, Landroidx/compose/runtime/RecomposeScopeImpl;->block:Lkotlin/jvm/functions/Function2;
 
-    .line 438
+    .line 439
     :cond_19
     return-void
-    .line 440
+    .line 441
 .end method
 
 .method public static final access$SliderIcon(Lcom/android/systemui/common/shared/model/Icon;Lkotlin/jvm/functions/Function0;ZLandroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V

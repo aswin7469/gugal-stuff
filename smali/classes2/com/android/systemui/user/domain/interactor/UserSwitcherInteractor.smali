@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/user/domain/interactor/UserSwitcherInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -510,7 +510,6 @@
 
     .line 313
     return-void
-    .line 316
 .end method
 
 .method public static final access$onBroadcastReceived(Lcom/android/systemui/user/domain/interactor/UserSwitcherInteractor;Landroid/content/Intent;Landroid/content/pm/UserInfo;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -1031,7 +1030,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070678    # @dimen/max_avatar_size '48.0dp'
+    const v2, 0x7f0706ba    # @dimen/max_avatar_size '48.0dp'
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2189,7 +2188,7 @@
     iget-object v2, p0, Lcom/android/systemui/user/domain/interactor/UserSwitcherInteractor;->applicationContext:Landroid/content/Context;
 
     .line 54
-    const v4, 0x10402c4    # @android:string/config_wimaxServiceClassname
+    const v4, 0x10402bb    # @android:string/config_wearMediaSessionsPackage
 
     .line 56
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2781,7 +2780,7 @@
     iget-object p0, p0, Lcom/android/systemui/user/domain/interactor/UserSwitcherInteractor;->applicationContext:Landroid/content/Context;
 
     .line 60
-    const p1, 0x7f0806c8    # @drawable/ic_account_circle 'res/drawable/ic_account_circle.xml'
+    const p1, 0x7f0806d7    # @drawable/ic_account_circle 'res/drawable/ic_account_circle.xml'
 
     .line 62
     invoke-virtual {p0, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -2886,7 +2885,6 @@
 
     .line 125
     return-object p0
-    .line 126
 .end method
 
 .method public final getUsers()Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$1;

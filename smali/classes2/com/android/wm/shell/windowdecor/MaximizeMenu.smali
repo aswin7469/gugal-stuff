@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/windowdecor/MaximizeMenu;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -39,7 +39,7 @@
     iput-object p9, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu;->menuPosition:Landroid/graphics/PointF;
 
     .line 7
-    const p1, 0x7f070264    # @dimen/desktop_mode_maximize_menu_corner_radius '8.0dp'
+    const p1, 0x7f070286    # @dimen/desktop_mode_maximize_menu_corner_radius '8.0dp'
 
     .line 9
     invoke-virtual {p0, p1}, Lcom/android/wm/shell/windowdecor/MaximizeMenu;->loadDimensionPixelSize(I)I
@@ -54,7 +54,7 @@
     iput p1, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu;->cornerRadius:F
 
     .line 17
-    const p1, 0x7f070267    # @dimen/desktop_mode_maximize_menu_width '228.0dp'
+    const p1, 0x7f070289    # @dimen/desktop_mode_maximize_menu_width '228.0dp'
 
     .line 19
     invoke-virtual {p0, p1}, Lcom/android/wm/shell/windowdecor/MaximizeMenu;->loadDimensionPixelSize(I)I
@@ -66,7 +66,7 @@
     iput p1, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu;->menuWidth:I
 
     .line 26
-    const p1, 0x7f070265    # @dimen/desktop_mode_maximize_menu_height '114.0dp'
+    const p1, 0x7f070287    # @dimen/desktop_mode_maximize_menu_height '114.0dp'
 
     .line 28
     invoke-virtual {p0, p1}, Lcom/android/wm/shell/windowdecor/MaximizeMenu;->loadDimensionPixelSize(I)I
@@ -78,7 +78,7 @@
     iput p1, p0, Lcom/android/wm/shell/windowdecor/MaximizeMenu;->menuHeight:I
 
     .line 35
-    const p1, 0x7f070268    # @dimen/desktop_mode_menu_padding '16.0dp'
+    const p1, 0x7f07028a    # @dimen/desktop_mode_menu_padding '16.0dp'
 
     .line 37
     invoke-virtual {p0, p1}, Lcom/android/wm/shell/windowdecor/MaximizeMenu;->loadDimensionPixelSize(I)I
@@ -152,13 +152,13 @@
     div-int/lit8 v0, v0, 0x2
 
     .line 12
-    const v1, 0x7f0b0497    # @id/maximize_menu_snap_left_button
+    const v1, 0x7f0a04bb    # @id/maximize_menu_snap_left_button
 
     .line 14
     if-eq p2, v1, :cond_2
 
     .line 17
-    const v1, 0x7f0b0498    # @id/maximize_menu_snap_menu_layout
+    const v1, 0x7f0a04bc    # @id/maximize_menu_snap_menu_layout
 
     .line 19
     if-ne p2, v1, :cond_0
@@ -183,7 +183,7 @@
 
     .line 33
     :cond_0
-    const v2, 0x7f0b0499    # @id/maximize_menu_snap_right_button
+    const v2, 0x7f0a04bd    # @id/maximize_menu_snap_right_button
 
     .line 34
     if-eq p2, v2, :cond_1

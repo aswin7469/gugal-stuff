@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/Dependency;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -109,17 +109,17 @@
     new-instance v0, Lcom/android/systemui/Dependency$DependencyKey;
 
     .line 11
-    const-string v1, "time_tick_handler"
+    const-string/jumbo v1, "time_tick_handler"
 
     .line 13
     invoke-direct {v0, v1}, Lcom/android/systemui/Dependency$DependencyKey;-><init>(Ljava/lang/String;)V
 
-    .line 15
+    .line 16
     sput-object v0, Lcom/android/systemui/Dependency;->TIME_TICK_HANDLER:Lcom/android/systemui/Dependency$DependencyKey;
 
-    .line 18
+    .line 19
     return-void
-    .line 20
+    .line 21
 .end method
 
 .method public constructor <init>()V
@@ -336,5 +336,4 @@
 
     .line 25
     throw p1
-    .line 26
 .end method

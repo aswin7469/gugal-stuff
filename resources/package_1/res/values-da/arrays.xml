@@ -5,7 +5,9 @@
     <item>Vis procent ved opladning (standard)</item>
     <item>Vis ikke dette ikon</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Vis timer, minutter og sekunder</item>
     <item>Vis timer og minutter (standard)</item>

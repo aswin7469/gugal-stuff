@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/clipboardoverlay/EditTextActivity$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -79,47 +79,48 @@
     invoke-interface {p1}, Landroid/text/Editable;->clearSpans()V
 
     .line 33
-    const-string v0, "text"
+    const-string/jumbo v0, "text"
 
     .line 36
     invoke-static {v0, p1}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
 
-    .line 38
+    .line 39
     move-result-object p1
 
-    .line 41
+    .line 42
     new-instance v0, Landroid/os/PersistableBundle;
 
-    .line 42
+    .line 43
     invoke-direct {v0}, Landroid/os/PersistableBundle;-><init>()V
 
-    .line 44
+    .line 45
     const-string v1, "android.content.extra.IS_SENSITIVE"
 
-    .line 47
+    .line 48
     iget-boolean v2, p0, Lcom/android/systemui/clipboardoverlay/EditTextActivity;->mSensitive:Z
 
-    .line 49
+    .line 50
     invoke-virtual {v0, v1, v2}, Landroid/os/PersistableBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 51
+    .line 52
     invoke-virtual {p1}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
-    .line 54
+    .line 55
     move-result-object v1
 
-    .line 57
+    .line 58
     invoke-virtual {v1, v0}, Landroid/content/ClipDescription;->setExtras(Landroid/os/PersistableBundle;)V
 
-    .line 58
+    .line 59
     iget-object v0, p0, Lcom/android/systemui/clipboardoverlay/EditTextActivity;->mClipboardManager:Landroid/content/ClipboardManager;
 
-    .line 61
+    .line 62
     invoke-virtual {v0, p1}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
-    .line 63
+    .line 64
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 66
+    .line 67
     return-void
+    .line 70
 .end method

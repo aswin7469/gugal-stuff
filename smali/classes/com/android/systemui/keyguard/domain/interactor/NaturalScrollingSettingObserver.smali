@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/domain/interactor/NaturalScrollingSettingObserver;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -40,23 +40,23 @@
     move-result-object p0
 
     .line 18
-    const-string p1, "touchpad_natural_scrolling"
+    const-string/jumbo p1, "touchpad_natural_scrolling"
 
     .line 19
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 21
+    .line 22
     move-result-object p1
 
-    .line 24
+    .line 25
     const/4 p2, 0x0
 
-    .line 25
+    .line 26
     invoke-virtual {p0, p1, p2, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 26
+    .line 27
     return-void
-    .line 29
+    .line 30
 .end method
 
 
@@ -78,35 +78,35 @@
     move-result-object v1
 
     .line 8
-    const-string v2, "touchpad_natural_scrolling"
+    const-string/jumbo v2, "touchpad_natural_scrolling"
 
     .line 9
     const/4 v3, -0x2
 
-    .line 11
+    .line 12
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    .line 12
+    .line 13
     move-result v1
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 15
+    .line 16
     if-ne v1, v0, :cond_0
 
-    .line 16
+    .line 17
     goto :goto_0
 
-    .line 18
+    .line 19
     :cond_0
     const/4 v0, 0x0
 
-    .line 19
+    .line 20
     :catch_0
     :goto_0
     iput-boolean v0, p0, Lcom/android/systemui/keyguard/domain/interactor/NaturalScrollingSettingObserver;->isNaturalScrollingEnabled:Z
 
-    .line 20
+    .line 21
     return-void
-    .line 22
+    .line 23
 .end method

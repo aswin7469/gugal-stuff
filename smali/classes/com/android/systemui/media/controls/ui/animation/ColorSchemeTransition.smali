@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -13,8 +13,6 @@
 .field public final colorTransitions:[Lcom/android/systemui/media/controls/ui/animation/AnimatingColorTransition;
 
 .field public final context:Landroid/content/Context;
-
-.field public loadingEffect:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;
 
 .field public final mediaViewHolder:Lcom/android/systemui/media/controls/ui/view/MediaViewHolder;
 
@@ -46,7 +44,7 @@
     iput-object p4, p0, Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;->turbulenceNoiseController:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;
 
     .line 13
-    const p2, 0x7f060309    # @color/material_dynamic_neutral20 '@color/m3_ref_palette_dynamic_neutral20'
+    const p2, 0x7f060315    # @color/material_dynamic_neutral20 '@color/m3_ref_palette_dynamic_neutral20'
 
     .line 15
     invoke-virtual {p1, p2}, Landroid/content/Context;->getColor(I)I

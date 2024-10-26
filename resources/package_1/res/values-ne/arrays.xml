@@ -5,7 +5,9 @@
     <item>चार्ज गर्दा प्रतिशत देखाउनुहोस् (डिफल्ट)</item>
     <item>यो आइकन नदेखाउनुहोस्</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>घन्टा, मिनेट, र सेकेन्ड देखाउनुहोस्</item>
     <item>घन्टा र मिनेट (डिफल्ट) देखाउनुहोस्</item>

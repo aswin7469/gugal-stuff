@@ -20,6 +20,7 @@
   <dimen name="controls_management_zone_top_margin">24.0dp</dimen>
   <dimen name="global_actions_button_padding">20.0dp</dimen>
   <dimen name="global_actions_button_size">64.0dp</dimen>
+  <dimen name="global_actions_info_margin">24.0dp</dimen>
   <dimen name="global_actions_power_dialog_item_bottom_margin">35.0dp</dimen>
   <dimen name="global_actions_power_dialog_item_height">130.0dp</dimen>
   <dimen name="immersive_mode_cling_width">500.0dp</dimen>

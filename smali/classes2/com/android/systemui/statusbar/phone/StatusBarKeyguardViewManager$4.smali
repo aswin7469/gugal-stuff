@@ -1,6 +1,6 @@
 .class Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$4;
 .super Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -54,8 +54,8 @@
     .line 16
 .end method
 
-.method public final onTrustGrantedForCurrentUser(ZLcom/android/keyguard/TrustGrantFlags;Ljava/lang/String;)V
-    .locals 1
+.method public final onTrustGrantedForCurrentUser(ZZLcom/android/keyguard/TrustGrantFlags;Ljava/lang/String;)V
+    .locals 0
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$4;->this$0:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
@@ -76,49 +76,61 @@
     if-eqz p2, :cond_0
 
     .line 11
-    invoke-virtual {p1}, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->canShowAlternateBouncerForFingerprint()Z
+    iget-object p2, p1, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->canShowAlternateBouncer:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
     .line 13
-    move-result p2
+    iget-object p2, p2, Lkotlinx/coroutines/flow/ReadonlyStateFlow;->$$delegate_0:Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 16
-    if-nez p2, :cond_0
+    .line 15
+    invoke-interface {p2}, Lkotlinx/coroutines/flow/StateFlow;->getValue()Ljava/lang/Object;
 
     .line 17
-    iput-boolean p3, p1, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->receivedDownTouch:Z
+    move-result-object p2
 
-    .line 19
-    invoke-virtual {p1}, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->isVisibleState()Z
+    .line 20
+    check-cast p2, Ljava/lang/Boolean;
 
     .line 21
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 23
     move-result p2
 
-    .line 24
-    iget-object v0, p1, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->bouncerRepository:Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;
-
-    .line 25
-    invoke-virtual {v0, p3}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->setAlternateVisible(Z)V
+    .line 26
+    if-nez p2, :cond_0
 
     .line 27
-    if-eqz p2, :cond_0
-
-    .line 30
     invoke-virtual {p1}, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->isVisibleState()Z
 
+    .line 29
+    move-result p2
+
     .line 32
-    move-result p1
+    iget-object p4, p1, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->bouncerRepository:Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;
+
+    .line 33
+    invoke-virtual {p4, p3}, Lcom/android/systemui/bouncer/data/repository/KeyguardBouncerRepositoryImpl;->setAlternateVisible(Z)V
 
     .line 35
-    if-nez p1, :cond_0
-
-    .line 36
-    const/4 p3, 0x1
+    if-eqz p2, :cond_0
 
     .line 38
+    invoke-virtual {p1}, Lcom/android/systemui/bouncer/domain/interactor/AlternateBouncerInteractor;->isVisibleState()Z
+
+    .line 40
+    move-result p1
+
+    .line 43
+    if-nez p1, :cond_0
+
+    .line 44
+    const/4 p3, 0x1
+
+    .line 46
     :cond_0
     invoke-virtual {p0, p3}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->updateAlternateBouncerShowing(Z)V
 
-    .line 39
+    .line 47
     return-void
-    .line 42
+    .line 50
 .end method

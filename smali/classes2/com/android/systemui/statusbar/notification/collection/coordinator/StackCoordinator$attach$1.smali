@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/notification/collection/coordinator/StackCoordinator$attach$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/collection/listbuilder/OnAfterRenderListListener;
@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final onAfterRenderList(Ljava/util/List;Lcom/android/systemui/statusbar/notification/collection/render/NotifStackController;)V
+.method public final onAfterRenderList(Ljava/util/List;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;)V
     .locals 3
 
     .line 1
@@ -60,77 +60,77 @@
     move-result-object v1
 
     .line 21
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsFooterViewRefactor()Z
+    iget-object p2, p2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;->this$0:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
     .line 22
-    move-result v2
+    iput-object v1, p2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mNotifStats:Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;
 
-    .line 25
-    if-eqz v2, :cond_1
+    .line 24
+    iget-object v1, p2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mView:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     .line 26
-    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/StackCoordinator;->activeNotificationsInteractor:Lcom/android/systemui/statusbar/notification/domain/interactor/ActiveNotificationsInteractor;
+    iget-object v2, p2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->mSeenNotificationsInteractor:Lcom/android/systemui/statusbar/notification/domain/interactor/SeenNotificationsInteractor;
 
     .line 28
-    iget-object p2, p2, Lcom/android/systemui/statusbar/notification/domain/interactor/ActiveNotificationsInteractor;->repository:Lcom/android/systemui/statusbar/notification/data/repository/ActiveNotificationListRepository;
+    iget-object v2, v2, Lcom/android/systemui/statusbar/notification/domain/interactor/SeenNotificationsInteractor;->hasFilteredOutSeenNotifications:Lkotlinx/coroutines/flow/StateFlowImpl;
 
     .line 30
-    iget-object p2, p2, Lcom/android/systemui/statusbar/notification/data/repository/ActiveNotificationListRepository;->notifStats:Lkotlinx/coroutines/flow/StateFlowImpl;
+    invoke-virtual {v2}, Lkotlinx/coroutines/flow/StateFlowImpl;->getValue()Ljava/lang/Object;
 
     .line 32
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v2
 
-    .line 34
-    const/4 v2, 0x0
+    .line 35
+    check-cast v2, Ljava/lang/Boolean;
 
-    .line 37
-    invoke-virtual {p2, v2, v1}, Lkotlinx/coroutines/flow/StateFlowImpl;->updateState(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 36
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
     .line 38
-    goto :goto_0
+    move-result v2
 
     .line 41
-    :catchall_0
-    move-exception p0
+    iput-boolean v2, v1, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mHasFilteredOutSeenNotifications:Z
 
     .line 42
-    goto :goto_1
-
-    .line 43
-    :cond_1
-    check-cast p2, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;
+    invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->updateFooter()V
 
     .line 44
-    invoke-virtual {p2, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController$9;->setNotifStats(Lcom/android/systemui/statusbar/notification/collection/render/NotifStats;)V
+    invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->updateShowEmptyShadeView()V
 
-    .line 46
-    :goto_0
+    .line 47
+    invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;->updateImportantForAccessibility()V
+
+    .line 50
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/StackCoordinator;->renderListInteractor:Lcom/android/systemui/statusbar/notification/domain/interactor/RenderNotificationListInteractor;
 
-    .line 49
+    .line 53
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/domain/interactor/RenderNotificationListInteractor;->setRenderedList(Ljava/util/List;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 51
-    if-eqz v0, :cond_2
+    .line 55
+    if-eqz v0, :cond_1
 
-    .line 54
+    .line 58
     invoke-static {}, Lcom/android/app/tracing/TraceUtilsKt;->endSlice()V
-
-    .line 56
-    :cond_2
-    return-void
-
-    .line 59
-    :goto_1
-    if-eqz v0, :cond_3
 
     .line 60
+    :cond_1
+    return-void
+
+    .line 63
+    :catchall_0
+    move-exception p0
+
+    .line 64
+    if-eqz v0, :cond_2
+
+    .line 65
     invoke-static {}, Lcom/android/app/tracing/TraceUtilsKt;->endSlice()V
 
-    .line 62
-    :cond_3
+    .line 67
+    :cond_2
     throw p0
-    .line 65
+    .line 70
 .end method

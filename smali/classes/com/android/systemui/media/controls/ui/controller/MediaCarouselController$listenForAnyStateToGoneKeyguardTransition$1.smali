@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController$listenForAnyStateToGoneKeyguardTransition$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -126,125 +126,76 @@
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     .line 25
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 28
-    move-result p1
-
-    .line 31
-    if-eqz p1, :cond_2
-
-    .line 32
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 34
-    move-result p1
-
-    .line 37
-    if-eqz p1, :cond_2
-
-    .line 38
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 40
-    move-result p1
-
-    .line 43
-    if-eqz p1, :cond_2
-
-    .line 44
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 46
-    move-result p1
-
-    .line 49
-    if-eqz p1, :cond_2
-
-    .line 50
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 52
-    move-result p1
-
-    .line 55
-    if-eqz p1, :cond_2
-
-    .line 56
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 58
-    :cond_2
     iget-object p1, p0, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController$listenForAnyStateToGoneKeyguardTransition$1;->this$0:Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;
 
-    .line 61
+    .line 28
     iget-object p1, p1, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;->keyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
-    .line 63
+    .line 30
     sget-object v2, Lcom/android/systemui/keyguard/shared/model/Edge;->Companion:Lcom/android/systemui/keyguard/shared/model/Edge$Companion;
 
-    .line 65
+    .line 32
     sget-object v2, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GONE:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 67
+    .line 34
     const/4 v4, 0x0
 
-    .line 69
+    .line 36
     invoke-static {v4, v2, v0}, Lcom/android/systemui/keyguard/shared/model/Edge$Companion;->create$default(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;I)Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;
 
-    .line 70
+    .line 37
     move-result-object v2
 
-    .line 73
+    .line 40
     invoke-virtual {p1, v2}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->transition(Lcom/android/systemui/keyguard/shared/model/Edge;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 74
+    .line 41
     move-result-object p1
 
-    .line 77
+    .line 44
     new-instance v2, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController$listenForAnyStateToLockscreenTransition$1$2;
 
-    .line 78
+    .line 45
     iget-object v4, p0, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController$listenForAnyStateToGoneKeyguardTransition$1;->this$0:Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;
 
-    .line 80
+    .line 47
     invoke-direct {v2, v4, v0}, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController$listenForAnyStateToLockscreenTransition$1$2;-><init>(Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController;I)V
 
-    .line 82
+    .line 49
     iput v0, p0, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController$listenForAnyStateToGoneKeyguardTransition$1;->label:I
 
-    .line 85
+    .line 52
     new-instance v0, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController$listenForAnyStateToGoneKeyguardTransition$1$invokeSuspend$$inlined$filter$2$2;
 
-    .line 87
+    .line 54
     invoke-direct {v0, v2}, Lcom/android/systemui/media/controls/ui/controller/MediaCarouselController$listenForAnyStateToGoneKeyguardTransition$1$invokeSuspend$$inlined$filter$2$2;-><init>(Lkotlinx/coroutines/flow/FlowCollector;)V
 
-    .line 89
+    .line 56
     invoke-interface {p1, v0, p0}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 92
+    .line 59
     move-result-object p0
 
-    .line 95
-    if-ne p0, v1, :cond_3
+    .line 62
+    if-ne p0, v1, :cond_2
 
-    .line 96
+    .line 63
     goto :goto_0
 
-    .line 98
-    :cond_3
+    .line 65
+    :cond_2
     move-object p0, v3
 
-    .line 99
+    .line 66
     :goto_0
-    if-ne p0, v1, :cond_4
+    if-ne p0, v1, :cond_3
 
-    .line 100
+    .line 67
     return-object v1
 
-    .line 102
-    :cond_4
+    .line 69
+    :cond_3
     :goto_1
     return-object v3
-    .line 103
+    .line 70
 .end method

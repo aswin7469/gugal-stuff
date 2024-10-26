@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/compose/ui/graphics/drawscope/DrawScope;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/unit/Density;
@@ -329,81 +329,6 @@
     .line 23
     return-void
     .line 26
-.end method
-
-.method public static synthetic drawLine-NGM6Ib0$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;JJJFIFI)V
-    .locals 14
-
-    .line 1
-    and-int/lit8 v0, p10, 0x10
-
-    .line 2
-    if-eqz v0, :cond_0
-
-    .line 4
-    const/4 v0, 0x0
-
-    .line 6
-    move v9, v0
-
-    .line 7
-    goto :goto_0
-
-    .line 8
-    :cond_0
-    move/from16 v9, p8
-
-    .line 9
-    :goto_0
-    and-int/lit8 v0, p10, 0x40
-
-    .line 11
-    if-eqz v0, :cond_1
-
-    .line 13
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    .line 15
-    move v11, v0
-
-    .line 17
-    goto :goto_1
-
-    .line 18
-    :cond_1
-    move/from16 v11, p9
-
-    .line 19
-    :goto_1
-    const/4 v13, 0x3
-
-    .line 21
-    const/4 v10, 0x0
-
-    .line 22
-    const/4 v12, 0x0
-
-    .line 23
-    move-object v1, p0
-
-    .line 24
-    move-wide v2, p1
-
-    .line 25
-    move-wide/from16 v4, p3
-
-    .line 26
-    move-wide/from16 v6, p5
-
-    .line 28
-    move/from16 v8, p7
-
-    .line 30
-    invoke-interface/range {v1 .. v13}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawLine-NGM6Ib0(JJJFILandroidx/compose/ui/graphics/AndroidPathEffect;FLandroidx/compose/ui/graphics/ColorFilter;I)V
-
-    .line 32
-    return-void
-    .line 35
 .end method
 
 .method public static synthetic drawPath-GBMwjPU$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;Landroidx/compose/ui/graphics/Path;Landroidx/compose/ui/graphics/Brush;FLandroidx/compose/ui/graphics/drawscope/Stroke;I)V
@@ -841,53 +766,6 @@
     .line 46
     return-void
     .line 49
-.end method
-
-.method public static drawRoundRect-u-Aw5IA$default(Landroidx/compose/ui/graphics/drawscope/DrawScope;JJ)V
-    .locals 15
-
-    .line 1
-    invoke-interface {p0}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->getSize-NH-jbRc()J
-
-    .line 2
-    move-result-wide v0
-
-    .line 5
-    const-wide/16 v5, 0x0
-
-    .line 6
-    invoke-static {v0, v1, v5, v6}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->offsetSize-PENXr5M(JJ)J
-
-    .line 8
-    move-result-wide v7
-
-    .line 11
-    sget-object v11, Landroidx/compose/ui/graphics/drawscope/Fill;->INSTANCE:Landroidx/compose/ui/graphics/drawscope/Fill;
-
-    .line 12
-    const/4 v14, 0x3
-
-    .line 14
-    const/high16 v12, 0x3f800000    # 1.0f
-
-    .line 15
-    const/4 v13, 0x0
-
-    .line 17
-    move-object v2, p0
-
-    .line 18
-    move-wide/from16 v3, p1
-
-    .line 19
-    move-wide/from16 v9, p3
-
-    .line 21
-    invoke-interface/range {v2 .. v14}, Landroidx/compose/ui/graphics/drawscope/DrawScope;->drawRoundRect-u-Aw5IA(JJJJLandroidx/compose/ui/graphics/drawscope/DrawStyle;FLandroidx/compose/ui/graphics/ColorFilter;I)V
-
-    .line 23
-    return-void
-    .line 26
 .end method
 
 .method public static offsetSize-PENXr5M(JJ)J

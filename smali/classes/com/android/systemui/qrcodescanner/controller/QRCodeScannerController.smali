@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/CallbackController;
@@ -606,22 +606,22 @@
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 90
-    const-string v4, "systemui"
+    const-string/jumbo v4, "systemui"
 
     .line 93
     invoke-static {v4, v3, v2}, Landroid/provider/DeviceConfig;->addOnPropertiesChangedListener(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/provider/DeviceConfig$OnPropertiesChangedListener;)V
 
-    .line 95
+    .line 96
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
-    .line 98
+    .line 99
     goto :goto_0
 
-    .line 100
+    .line 101
     :cond_5
     return-void
-    .line 101
+    .line 102
 .end method
 
 .method public final removeCallback(Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController$Callback;)V
@@ -886,218 +886,218 @@
     iget-object v0, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mDeviceConfigProxy:Lcom/android/systemui/util/DeviceConfigProxy;
 
     .line 2
-    const-string v1, "systemui"
+    const-string/jumbo v1, "systemui"
 
     .line 4
     const-string v2, "default_qr_code_scanner"
 
-    .line 6
+    .line 7
     const-string v3, ""
 
-    .line 8
+    .line 9
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 10
+    .line 11
     invoke-static {v1, v2, v3}, Landroid/provider/DeviceConfig;->getString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 13
+    .line 14
     move-result-object v0
-
-    .line 16
-    const-string v1, ""
 
     .line 17
+    const-string v1, ""
+
+    .line 18
     invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 19
+    .line 20
     move-result v1
 
-    .line 22
+    .line 23
     if-eqz v1, :cond_0
 
-    .line 23
+    .line 24
     iget-object v0, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mContext:Landroid/content/Context;
 
-    .line 25
+    .line 26
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 27
+    .line 28
     move-result-object v0
-
-    .line 30
-    const v1, 0x104023f    # @android:string/config_deviceSpecificDevicePolicyManagerService
 
     .line 31
+    const v1, 0x1040238    # @android:string/config_defaultWearableSensingService
+
+    .line 32
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 34
+    .line 35
     move-result-object v0
 
-    .line 37
+    .line 38
     :cond_0
     iget-object v1, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mQRCodeScannerActivity:Ljava/lang/String;
 
-    .line 38
+    .line 39
     new-instance v2, Landroid/content/Intent;
 
-    .line 40
+    .line 41
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 42
+    .line 43
     if-eqz v0, :cond_1
 
-    .line 45
+    .line 46
     invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
-    .line 47
+    .line 48
     move-result-object v3
 
-    .line 50
+    .line 51
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 51
+    .line 52
     const/high16 v3, 0x14000000
 
-    .line 54
+    .line 55
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 56
+    .line 57
     :cond_1
     invoke-virtual {v2}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
-    .line 59
+    .line 60
     move-result-object v3
 
-    .line 62
+    .line 63
     if-nez v3, :cond_2
 
-    .line 63
+    .line 64
     const/4 v3, 0x0
 
-    .line 65
+    .line 66
     goto :goto_0
 
-    .line 66
+    .line 67
     :cond_2
     iget-object v3, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mContext:Landroid/content/Context;
 
-    .line 67
+    .line 68
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    .line 69
+    .line 70
     move-result-object v3
-
-    .line 72
-    const v4, 0x200ca200
 
     .line 73
+    const v4, 0x200ca200
+
+    .line 74
     invoke-virtual {v3, v2, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
-    .line 76
+    .line 77
     move-result-object v3
 
-    .line 79
+    .line 80
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
-    .line 80
+    .line 81
     move-result v3
 
-    .line 83
+    .line 84
     xor-int/lit8 v3, v3, 0x1
 
-    .line 84
+    .line 85
     :goto_0
     if-eqz v3, :cond_3
 
-    .line 86
+    .line 87
     iput-object v0, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mQRCodeScannerActivity:Ljava/lang/String;
 
-    .line 88
+    .line 89
     iput-object v2, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mIntent:Landroid/content/Intent;
 
-    .line 90
+    .line 91
     goto :goto_1
 
-    .line 92
+    .line 93
     :cond_3
     const/4 v0, 0x0
 
-    .line 93
+    .line 94
     iput-object v0, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mQRCodeScannerActivity:Ljava/lang/String;
 
-    .line 94
+    .line 95
     iput-object v0, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mIntent:Landroid/content/Intent;
 
-    .line 96
+    .line 97
     :goto_1
     iget-object v0, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mQRCodeScannerActivity:Ljava/lang/String;
 
-    .line 98
+    .line 99
     invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 100
+    .line 101
     move-result v0
 
-    .line 103
+    .line 104
     if-nez v0, :cond_4
 
-    .line 104
+    .line 105
     iget-object v0, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 106
+    .line 107
     monitor-enter v0
 
-    .line 108
+    .line 109
     :try_start_0
     iget-object p0, p0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 109
+    .line 110
     invoke-virtual {p0}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
 
-    .line 111
+    .line 112
     move-result-object p0
 
-    .line 114
+    .line 115
     check-cast p0, Ljava/util/ArrayList;
 
-    .line 115
+    .line 116
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 117
+    .line 118
     new-instance v0, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController$$ExternalSyntheticLambda5;
 
-    .line 118
+    .line 119
     const/4 v1, 0x0
 
-    .line 120
+    .line 121
     invoke-direct {v0, v1}, Lcom/android/systemui/qrcodescanner/controller/QRCodeScannerController$$ExternalSyntheticLambda5;-><init>(I)V
 
-    .line 121
+    .line 122
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 124
+    .line 125
     goto :goto_2
 
-    .line 127
+    .line 128
     :catchall_0
     move-exception p0
 
-    .line 128
+    .line 129
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 129
+    .line 130
     throw p0
 
-    .line 130
+    .line 131
     :cond_4
     :goto_2
     return-void
-    .line 131
+    .line 132
 .end method
 
 .method public final updateQRCodeScannerPreferenceDetails(Z)V

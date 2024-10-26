@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/user/ui/viewmodel/UserSwitcherViewModel$special$$inlined$map$4$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -259,7 +259,7 @@
     if-eqz v15, :cond_7
 
     .line 132
-    const v12, 0x7f0806c9    # @drawable/ic_account_circle_filled 'res/drawable/ic_account_circle_filled.xml'
+    const v12, 0x7f0806d8    # @drawable/ic_account_circle_filled 'res/drawable/ic_account_circle_filled.xml'
 
     .line 134
     goto :goto_6
@@ -269,7 +269,7 @@
     if-eqz v15, :cond_8
 
     .line 138
-    const v12, 0x7f0806cd    # @drawable/ic_add 'res/drawable/ic_add.xml'
+    const v12, 0x7f0806dc    # @drawable/ic_add 'res/drawable/ic_add.xml'
 
     .line 140
     goto :goto_6
@@ -279,7 +279,7 @@
     if-eqz v16, :cond_9
 
     .line 144
-    const v12, 0x7f0806c8    # @drawable/ic_account_circle 'res/drawable/ic_account_circle.xml'
+    const v12, 0x7f0806d7    # @drawable/ic_account_circle 'res/drawable/ic_account_circle.xml'
 
     .line 146
     goto :goto_6
@@ -289,7 +289,7 @@
     if-eqz v12, :cond_a
 
     .line 150
-    const v12, 0x7f0806d0    # @drawable/ic_add_supervised_user 'res/drawable/ic_add_supervised_user.xml'
+    const v12, 0x7f0806df    # @drawable/ic_add_supervised_user 'res/drawable/ic_add_supervised_user.xml'
 
     .line 152
     goto :goto_6
@@ -299,14 +299,14 @@
     if-eqz v17, :cond_b
 
     .line 156
-    const v12, 0x7f080812    # @drawable/ic_manage_users 'res/drawable/ic_manage_users.xml'
+    const v12, 0x7f080835    # @drawable/ic_manage_users 'res/drawable/ic_manage_users.xml'
 
     .line 158
     goto :goto_6
 
     .line 161
     :cond_b
-    const v12, 0x7f0806e1    # @drawable/ic_avatar_user 'res/drawable/ic_avatar_user.xml'
+    const v12, 0x7f0806f2    # @drawable/ic_avatar_user 'res/drawable/ic_avatar_user.xml'
 
     .line 162
     :goto_6

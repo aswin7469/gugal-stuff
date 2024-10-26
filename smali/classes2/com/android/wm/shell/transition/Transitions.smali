@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/transition/Transitions;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/RemoteCallable;
@@ -341,7 +341,7 @@
     invoke-virtual {v11, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 132
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 135
     const/4 v3, 0x1
@@ -383,14 +383,14 @@
     move-object/from16 p8, v8
 
     .line 161
-    invoke-static/range {p3 .. p8}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {p3 .. p8}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 163
     :cond_0
     invoke-virtual {v11, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 166
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 169
     aget-boolean v1, v1, v3
@@ -429,7 +429,7 @@
     move-object/from16 p8, v6
 
     .line 194
-    invoke-static/range {p3 .. p8}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {p3 .. p8}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 196
     :cond_1
@@ -491,7 +491,7 @@
 .end method
 
 .method public static calculateAnimLayer(Landroid/window/TransitionInfo$Change;III)I
-    .locals 7
+    .locals 5
 
     .line 1
     add-int/lit8 v0, p2, 0x1
@@ -524,141 +524,104 @@
     move-result v4
 
     .line 20
-    const/4 v5, 0x1
+    if-eqz v4, :cond_0
 
     .line 21
-    const/4 v6, 0x3
-
-    .line 22
-    if-eqz v4, :cond_2
-
-    .line 23
     invoke-static {}, Lcom/android/window/flags/Flags;->ensureWallpaperInTransitions()Z
 
-    .line 25
-    move-result v4
+    .line 23
+    :cond_0
+    const/4 v4, 0x1
 
-    .line 28
-    if-eqz v4, :cond_2
+    .line 26
+    if-eq v2, v4, :cond_6
+
+    .line 27
+    const/4 v4, 0x3
 
     .line 29
-    if-eq v2, v5, :cond_1
+    if-ne v2, v4, :cond_1
 
-    .line 31
-    if-ne v2, v6, :cond_0
-
-    .line 33
-    goto :goto_1
-
-    .line 35
-    :cond_0
-    neg-int p0, v0
-
-    .line 36
-    :goto_0
-    sub-int/2addr p0, p1
-
-    .line 37
-    return p0
-
-    .line 38
-    :cond_1
-    :goto_1
-    neg-int p0, v0
-
-    .line 39
-    add-int/2addr p0, p2
-
-    .line 40
-    goto :goto_0
-
-    .line 41
-    :cond_2
-    if-eq v2, v5, :cond_8
-
-    .line 42
-    if-ne v2, v6, :cond_3
-
-    .line 44
-    goto :goto_5
-
-    .line 46
-    :cond_3
-    if-eq v2, v3, :cond_7
-
-    .line 47
-    const/4 v3, 0x4
-
-    .line 49
-    if-ne v2, v3, :cond_4
-
-    .line 50
-    goto :goto_4
-
-    .line 52
-    :cond_4
-    if-nez p3, :cond_6
-
-    .line 53
-    invoke-static {p0}, Lcom/android/wm/shell/shared/TransitionUtil;->isOrderOnly(Landroid/window/TransitionInfo$Change;)Z
-
-    .line 55
-    move-result p0
-
-    .line 58
-    if-eqz p0, :cond_5
-
-    .line 59
+    .line 30
     goto :goto_3
 
-    .line 61
-    :cond_5
-    :goto_2
-    add-int/2addr v0, p2
+    .line 32
+    :cond_1
+    if-eq v2, v3, :cond_5
 
-    .line 62
-    sub-int/2addr v0, p1
+    .line 33
+    const/4 v3, 0x4
 
-    .line 63
-    return v0
+    .line 35
+    if-ne v2, v3, :cond_2
 
-    .line 64
-    :cond_6
-    :goto_3
-    sub-int/2addr v0, p1
-
-    .line 65
-    return v0
-
-    .line 66
-    :cond_7
-    :goto_4
-    if-eqz v1, :cond_5
-
-    .line 67
-    sub-int/2addr v0, p1
-
-    .line 69
-    return v0
-
-    .line 70
-    :cond_8
-    :goto_5
-    if-eqz v1, :cond_9
-
-    .line 71
+    .line 36
     goto :goto_2
 
-    .line 73
-    :cond_9
-    if-eqz p3, :cond_5
+    .line 38
+    :cond_2
+    if-nez p3, :cond_4
 
-    .line 74
+    .line 39
+    invoke-static {p0}, Lcom/android/wm/shell/shared/TransitionUtil;->isOrderOnly(Landroid/window/TransitionInfo$Change;)Z
+
+    .line 41
+    move-result p0
+
+    .line 44
+    if-eqz p0, :cond_3
+
+    .line 45
+    goto :goto_1
+
+    .line 47
+    :cond_3
+    :goto_0
+    add-int/2addr v0, p2
+
+    .line 48
     sub-int/2addr v0, p1
 
-    .line 76
+    .line 49
     return v0
-    .line 77
+
+    .line 50
+    :cond_4
+    :goto_1
+    sub-int/2addr v0, p1
+
+    .line 51
+    return v0
+
+    .line 52
+    :cond_5
+    :goto_2
+    if-eqz v1, :cond_3
+
+    .line 53
+    sub-int/2addr v0, p1
+
+    .line 55
+    return v0
+
+    .line 56
+    :cond_6
+    :goto_3
+    if-eqz v1, :cond_7
+
+    .line 57
+    goto :goto_0
+
+    .line 59
+    :cond_7
+    if-eqz p3, :cond_3
+
+    .line 60
+    sub-int/2addr v0, p1
+
+    .line 62
+    return v0
+    .line 63
 .end method
 
 .method public static setRunningRemoteTransitionDelegate(Landroid/app/IApplicationThread;)V
@@ -743,7 +706,7 @@
     invoke-interface {p1, p0}, Lcom/android/wm/shell/transition/Transitions$TransitionHandler;->setAnimScaleSetting(F)V
 
     .line 17
-    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object p0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 20
     const/4 v0, 0x1
@@ -785,7 +748,7 @@
     const/4 v3, 0x0
 
     .line 48
-    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 49
     :cond_0
@@ -915,7 +878,7 @@
 
     .line 64
     :cond_1
-    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 65
     aget-boolean v4, v4, v6
@@ -951,7 +914,7 @@
     const-wide v10, 0x6e3a4a5177f93b0bL    # 9.503256323778737E222
 
     .line 85
-    invoke-static/range {v9 .. v14}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v9 .. v14}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 90
     :cond_2
@@ -1107,7 +1070,7 @@
     if-nez v4, :cond_9
 
     .line 186
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 188
     aget-boolean v2, v2, v6
@@ -1140,7 +1103,7 @@
     const-string v11, "No transition roots in %s so abort"
 
     .line 210
-    invoke-static/range {v7 .. v12}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v7 .. v12}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 212
     :cond_8
@@ -1390,7 +1353,7 @@
 
     .line 353
     :cond_15
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 355
     aget-boolean v2, v2, v6
@@ -1423,7 +1386,7 @@
     const-string v11, "Non-visible anim so abort: %s"
 
     .line 377
-    invoke-static/range {v7 .. v12}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v7 .. v12}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 379
     :cond_16
@@ -1515,363 +1478,357 @@
     invoke-static {}, Lcom/android/window/flags/Flags;->ensureWallpaperInTransitions()Z
 
     .line 435
-    move-result v13
-
-    .line 438
-    if-nez v13, :cond_19
-
-    .line 439
     goto :goto_a
 
-    .line 441
+    .line 438
     :cond_19
     invoke-virtual {v10}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
 
-    .line 442
+    .line 439
     move-result-object v15
 
-    .line 445
+    .line 442
     invoke-virtual {v2}, Landroid/window/TransitionInfo;->getChanges()Ljava/util/List;
 
-    .line 446
+    .line 443
     move-result-object v13
 
-    .line 449
+    .line 446
     invoke-interface {v13, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 450
+    .line 447
     move-result-object v13
 
-    .line 453
+    .line 450
     check-cast v13, Landroid/window/TransitionInfo$Change;
 
-    .line 454
+    .line 451
     invoke-virtual {v13}, Landroid/window/TransitionInfo$Change;->getMode()I
 
-    .line 456
+    .line 453
     move-result v13
 
-    .line 459
+    .line 456
     if-ne v13, v5, :cond_1a
 
-    .line 460
+    .line 457
     invoke-virtual {v10}, Landroid/window/TransitionInfo$Change;->getEndRelOffset()Landroid/graphics/Point;
+
+    .line 459
+    move-result-object v14
 
     .line 462
-    move-result-object v14
-
-    .line 465
     iget v14, v14, Landroid/graphics/Point;->x:I
 
-    .line 466
+    .line 463
     int-to-float v14, v14
 
-    .line 468
+    .line 465
     invoke-virtual {v10}, Landroid/window/TransitionInfo$Change;->getEndRelOffset()Landroid/graphics/Point;
 
-    .line 469
+    .line 466
     move-result-object v12
 
-    .line 472
+    .line 469
     iget v12, v12, Landroid/graphics/Point;->y:I
 
-    .line 473
+    .line 470
     int-to-float v12, v12
 
-    .line 475
+    .line 472
     invoke-virtual {v4, v15, v14, v12}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 476
+    .line 473
     invoke-virtual {v10}, Landroid/window/TransitionInfo$Change;->getEndAbsBounds()Landroid/graphics/Rect;
 
-    .line 479
+    .line 476
     move-result-object v12
 
-    .line 482
+    .line 479
     invoke-virtual {v12}, Landroid/graphics/Rect;->width()I
 
-    .line 483
+    .line 480
     move-result v12
 
-    .line 486
+    .line 483
     invoke-virtual {v10}, Landroid/window/TransitionInfo$Change;->getEndAbsBounds()Landroid/graphics/Rect;
 
-    .line 487
+    .line 484
     move-result-object v14
 
-    .line 490
+    .line 487
     invoke-virtual {v14}, Landroid/graphics/Rect;->height()I
 
-    .line 491
+    .line 488
     move-result v14
 
-    .line 494
+    .line 491
     invoke-virtual {v4, v15, v12, v14}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
 
-    .line 495
+    .line 492
     :cond_1a
     invoke-static {v10, v2}, Landroid/window/TransitionInfo;->isIndependent(Landroid/window/TransitionInfo$Change;Landroid/window/TransitionInfo;)Z
 
-    .line 498
+    .line 495
     move-result v12
 
-    .line 501
+    .line 498
     const/4 v14, 0x6
 
-    .line 502
+    .line 499
     if-nez v12, :cond_1d
 
-    .line 503
+    .line 500
     if-eq v13, v6, :cond_1c
 
-    .line 505
+    .line 502
     if-eq v13, v5, :cond_1c
 
-    .line 507
+    .line 504
     if-ne v13, v14, :cond_1b
 
-    .line 509
+    .line 506
     goto :goto_c
 
-    .line 511
+    .line 508
     :cond_1b
     :goto_b
     const/16 v11, 0x8
 
-    .line 512
+    .line 509
     goto/16 :goto_10
 
-    .line 514
+    .line 511
     :cond_1c
     :goto_c
     invoke-virtual {v4, v15}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 516
+    .line 513
     const/16 v17, 0x0
 
-    .line 519
+    .line 516
     const/high16 v18, 0x3f800000    # 1.0f
 
-    .line 521
+    .line 518
     const/high16 v11, 0x3f800000    # 1.0f
 
-    .line 523
+    .line 520
     const/16 v16, 0x0
 
-    .line 525
+    .line 522
     move-object v13, v4
 
-    .line 527
+    .line 524
     move-object v14, v15
 
-    .line 528
+    .line 525
     move-object v12, v15
 
-    .line 529
+    .line 526
     move v15, v11
 
-    .line 530
+    .line 527
     invoke-virtual/range {v13 .. v18}, Landroid/view/SurfaceControl$Transaction;->setMatrix(Landroid/view/SurfaceControl;FFFF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 531
+    .line 528
     invoke-virtual {v4, v12, v11}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 534
+    .line 531
     invoke-virtual {v10}, Landroid/window/TransitionInfo$Change;->getEndRelOffset()Landroid/graphics/Point;
+
+    .line 534
+    move-result-object v11
 
     .line 537
-    move-result-object v11
-
-    .line 540
     iget v11, v11, Landroid/graphics/Point;->x:I
 
-    .line 541
+    .line 538
     int-to-float v11, v11
 
-    .line 543
+    .line 540
     invoke-virtual {v10}, Landroid/window/TransitionInfo$Change;->getEndRelOffset()Landroid/graphics/Point;
 
-    .line 544
+    .line 541
     move-result-object v13
 
-    .line 547
+    .line 544
     iget v13, v13, Landroid/graphics/Point;->y:I
 
-    .line 548
+    .line 545
     int-to-float v13, v13
 
-    .line 550
+    .line 547
     invoke-virtual {v4, v12, v11, v13}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 551
+    .line 548
     invoke-virtual {v10}, Landroid/window/TransitionInfo$Change;->getEndAbsBounds()Landroid/graphics/Rect;
 
-    .line 554
+    .line 551
     move-result-object v11
 
-    .line 557
+    .line 554
     invoke-virtual {v11}, Landroid/graphics/Rect;->width()I
 
-    .line 558
+    .line 555
     move-result v11
 
-    .line 561
+    .line 558
     invoke-virtual {v10}, Landroid/window/TransitionInfo$Change;->getEndAbsBounds()Landroid/graphics/Rect;
 
-    .line 562
+    .line 559
     move-result-object v10
 
-    .line 565
+    .line 562
     invoke-virtual {v10}, Landroid/graphics/Rect;->height()I
 
-    .line 566
+    .line 563
     move-result v10
 
-    .line 569
+    .line 566
     invoke-virtual {v4, v12, v11, v10}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
 
-    .line 570
+    .line 567
     goto :goto_b
 
-    .line 573
+    .line 570
     :cond_1d
     move-object v12, v15
 
-    .line 574
+    .line 571
     if-eq v13, v6, :cond_21
 
-    .line 575
+    .line 572
     if-ne v13, v5, :cond_1e
 
-    .line 577
+    .line 574
     goto :goto_e
 
-    .line 579
+    .line 576
     :cond_1e
     if-eq v13, v11, :cond_20
 
-    .line 580
+    .line 577
     if-ne v13, v8, :cond_1f
 
-    .line 582
+    .line 579
     goto :goto_d
 
-    .line 584
+    .line 581
     :cond_1f
     if-eqz v7, :cond_1b
 
-    .line 585
+    .line 582
     if-ne v13, v14, :cond_1b
 
-    .line 587
+    .line 584
     invoke-virtual {v4, v12}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 589
+    .line 586
     goto :goto_b
 
-    .line 592
+    .line 589
     :cond_20
     :goto_d
     invoke-virtual {v1, v12}, Landroid/view/SurfaceControl$Transaction;->hide(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 593
+    .line 590
     goto :goto_b
 
-    .line 596
+    .line 593
     :cond_21
     :goto_e
     invoke-virtual {v4, v12}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 597
+    .line 594
     const/16 v17, 0x0
 
-    .line 600
+    .line 597
     const/high16 v18, 0x3f800000    # 1.0f
 
-    .line 602
+    .line 599
     const/high16 v15, 0x3f800000    # 1.0f
 
-    .line 604
+    .line 601
     const/16 v16, 0x0
 
-    .line 606
+    .line 603
     move-object v13, v4
 
-    .line 608
+    .line 605
     move-object v14, v12
 
-    .line 609
+    .line 606
     invoke-virtual/range {v13 .. v18}, Landroid/view/SurfaceControl$Transaction;->setMatrix(Landroid/view/SurfaceControl;FFFF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 610
+    .line 607
     if-eqz v7, :cond_22
 
-    .line 613
+    .line 610
     invoke-virtual {v10}, Landroid/window/TransitionInfo$Change;->getFlags()I
 
-    .line 615
+    .line 612
     move-result v10
 
-    .line 618
+    .line 615
     const/16 v11, 0x8
 
-    .line 619
+    .line 616
     and-int/2addr v10, v11
 
-    .line 621
+    .line 618
     if-nez v10, :cond_23
 
-    .line 622
+    .line 619
     const/4 v10, 0x0
 
-    .line 624
+    .line 621
     invoke-virtual {v4, v12, v10}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 625
+    .line 622
     goto :goto_f
 
-    .line 628
+    .line 625
     :cond_22
     const/16 v11, 0x8
 
-    .line 629
+    .line 626
     :cond_23
     :goto_f
     invoke-virtual {v1, v12}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 631
+    .line 628
     :goto_10
     add-int/lit8 v9, v9, -0x1
 
-    .line 634
+    .line 631
     move v12, v11
 
-    .line 636
+    .line 633
     goto/16 :goto_9
 
-    .line 637
+    .line 634
     :cond_24
     iget-object v1, v3, Lcom/android/wm/shell/transition/Transitions$Track;->mReadyTransitions:Ljava/util/ArrayList;
 
-    .line 639
+    .line 636
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    .line 641
+    .line 638
     move-result v1
 
-    .line 644
+    .line 641
     if-le v1, v6, :cond_25
 
-    .line 645
+    .line 642
     return v6
 
-    .line 647
+    .line 644
     :cond_25
     invoke-virtual {v0, v3}, Lcom/android/wm/shell/transition/Transitions;->processReadyQueue(Lcom/android/wm/shell/transition/Transitions$Track;)V
 
-    .line 648
+    .line 645
     return v6
-    .line 651
+    .line 648
 .end method
 
 .method public final dispatchRequest(Landroid/os/IBinder;Landroid/window/TransitionRequestInfo;Lcom/android/wm/shell/transition/Transitions$TransitionHandler;)Landroid/util/Pair;
@@ -2007,7 +1964,7 @@
 
     .line 20
     :cond_0
-    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v2, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 22
     aget-boolean v2, v2, v1
@@ -2049,7 +2006,7 @@
     const-string v7, " try handler %s"
 
     .line 50
-    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 52
     :cond_1
@@ -2092,7 +2049,7 @@
     if-eqz v2, :cond_3
 
     .line 73
-    sget-object p1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object p1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 75
     aget-boolean p1, p1, v1
@@ -2134,7 +2091,7 @@
     const-string v5, " animated by %s"
 
     .line 103
-    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 105
     :cond_2
@@ -2519,7 +2476,7 @@
 
     .line 213
     :goto_1
-    sget-object v8, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v8, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 216
     aget-boolean v8, v8, v6
@@ -2558,7 +2515,7 @@
     const-string v20, " Attempt to merge sync %s into %s via a SLEEP proxy"
 
     .line 243
-    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v16 .. v21}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 245
     :cond_8
@@ -2867,7 +2824,7 @@
 
     .line 80
     :cond_2
-    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v4, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 81
     const/4 v5, 0x1
@@ -2912,7 +2869,7 @@
     const-wide v7, 0x4863957e921631eeL    # 5.331261708211386E40
 
     .line 107
-    invoke-static/range {v6 .. v11}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v6 .. v11}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 112
     :cond_3
@@ -3198,7 +3155,7 @@
     check-cast v0, Lcom/android/wm/shell/transition/Transitions$Track;
 
     .line 22
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 24
     const/4 v2, 0x1
@@ -3240,7 +3197,7 @@
     const-string v7, "Transition was merged: %s into %s"
 
     .line 51
-    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v3 .. v8}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 53
     :cond_0
@@ -3634,7 +3591,7 @@
     invoke-virtual {p2, v0}, Landroid/window/TransitionInfo;->setUnreleasedWarningCallSiteForAllSurfaces(Ljava/lang/String;)V
 
     .line 4
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 7
     const/4 v1, 0x1
@@ -3691,7 +3648,7 @@
     const-string v9, "onTransitionReady (#%d) %s: %s"
 
     .line 43
-    invoke-static/range {v5 .. v10}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v5 .. v10}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 45
     :cond_0
@@ -4063,7 +4020,7 @@
     if-nez v0, :cond_6
 
     .line 18
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 20
     aget-boolean v0, v0, v2
@@ -4108,7 +4065,7 @@
     const-wide v9, -0xeddd48c2ff5ca92L    # -9.243473914748986E236
 
     .line 46
-    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 51
     :cond_0
@@ -4227,7 +4184,7 @@
     if-eqz v0, :cond_6
 
     .line 123
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 125
     aget-boolean v0, v0, v2
@@ -4251,7 +4208,7 @@
     const/4 v13, 0x0
 
     .line 141
-    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v8 .. v13}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 142
     :cond_4
@@ -4370,7 +4327,7 @@
 
     .line 217
     :cond_9
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 218
     aget-boolean v0, v0, v2
@@ -4403,7 +4360,7 @@
     const-wide v11, 0x6e1a939596143ba4L
 
     .line 237
-    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 242
     :cond_a
@@ -4670,7 +4627,7 @@
     if-eqz v0, :cond_13
 
     .line 402
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 404
     aget-boolean v1, v1, v2
@@ -4703,7 +4660,7 @@
     const-wide v11, 0x463014e5574532b2L    # 1.2741175565597104E30
 
     .line 423
-    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 428
     :cond_11
@@ -4755,7 +4712,7 @@
     if-eqz v0, :cond_13
 
     .line 461
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 463
     aget-boolean v0, v0, v2
@@ -4779,7 +4736,7 @@
     const/4 v13, 0x0
 
     .line 479
-    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 480
     :cond_12
@@ -4868,7 +4825,7 @@
 
     .line 532
     :cond_15
-    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v1, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 533
     aget-boolean v1, v1, v2
@@ -4907,7 +4864,7 @@
     const-string v14, "Transition %s ready while %s is still animating. Notify the animating transition in case they can be merged"
 
     .line 559
-    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v10 .. v15}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 561
     :cond_16
@@ -5094,7 +5051,7 @@
     .locals 10
 
     .line 1
-    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_2044752636$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
+    sget-object v0, Lcom/android/internal/protolog/ProtoLogImpl_1818669230$Cache;->WM_SHELL_TRANSITIONS_enabled:[Z
 
     .line 2
     const/4 v1, 0x1
@@ -5145,7 +5102,7 @@
     const-string v8, "Directly starting a new transition type=%d wct=%s handler=%s"
 
     .line 34
-    invoke-static/range {v4 .. v9}, Lcom/android/internal/protolog/ProtoLogImpl_2044752636;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static/range {v4 .. v9}, Lcom/android/internal/protolog/ProtoLogImpl_1818669230;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;JILjava/lang/String;[Ljava/lang/Object;)V
 
     .line 36
     :cond_0

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/tuner/TunerActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/preference/PreferenceFragment$OnPreferenceStartFragmentCallback;
@@ -76,7 +76,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    const p1, 0x7f15042f    # @style/Theme.AppCompat.DayNight
+    const p1, 0x7f140437    # @style/Theme.AppCompat.DayNight
 
     .line 5
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setTheme(I)V
@@ -100,13 +100,13 @@
     invoke-virtual {p0, p1}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 21
-    const p1, 0x7f0e02f4    # @layout/tuner_activity 'res/layout/tuner_activity.xml'
+    const p1, 0x7f0d0306    # @layout/tuner_activity 'res/layout/tuner_activity.xml'
 
     .line 24
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setContentView(I)V
 
     .line 27
-    const p1, 0x7f0b005c    # @id/action_bar
+    const p1, 0x7f0a005c    # @id/action_bar
 
     .line 30
     invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -214,7 +214,7 @@
     move-result-object p0
 
     .line 102
-    const v1, 0x7f0b0200    # @id/content_frame
+    const v1, 0x7f0a020b    # @id/content_frame
 
     .line 103
     invoke-virtual {p0, v1, p1, v0}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/volume/VolumeDialogImpl$5;
 .super Lcom/android/systemui/statusbar/phone/SystemUIDialog;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnDismissListener;
@@ -80,7 +80,7 @@
     move-result-object p1
 
     .line 21
-    const p3, 0x1110205    # @android:bool/config_setColorTransformAcceleratedPerLayer
+    const p3, 0x1110204    # @android:bool/config_setColorTransformAccelerated
 
     .line 22
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -123,7 +123,7 @@
     iget-object p1, p0, Lcom/android/systemui/volume/VolumeDialogImpl$5;->mContext:Landroid/content/Context;
 
     .line 47
-    const p3, 0x10408e5    # @android:string/sensor_privacy_notification_channel_label
+    const p3, 0x10408dc    # @android:string/select_keyboard_layout_notification_message
 
     .line 49
     invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;

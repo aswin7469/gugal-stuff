@@ -1,6 +1,6 @@
 .class public final enum Lcom/android/systemui/privacy/PrivacyType;
 .super Ljava/lang/Enum;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -31,10 +31,10 @@
     new-instance v7, Lcom/android/systemui/privacy/PrivacyType;
 
     .line 2
-    const v3, 0x7f14077e    # @string/privacy_type_camera 'camera'
+    const v3, 0x7f1307da    # @string/privacy_type_camera 'camera'
 
     .line 4
-    const v4, 0x10806db    # @android:drawable/perm_group_phone_calls
+    const v4, 0x10806d9    # @android:drawable/perm_group_network
 
     .line 7
     const-string v1, "TYPE_CAMERA"
@@ -61,10 +61,10 @@
     new-instance v0, Lcom/android/systemui/privacy/PrivacyType;
 
     .line 23
-    const v11, 0x7f140781    # @string/privacy_type_microphone 'microphone'
+    const v11, 0x7f1307dd    # @string/privacy_type_microphone 'microphone'
 
     .line 25
-    const v12, 0x10806e0    # @android:drawable/perm_group_shortrange_network
+    const v12, 0x10806de    # @android:drawable/perm_group_screenlock
 
     .line 28
     const-string v9, "TYPE_MICROPHONE"
@@ -91,10 +91,10 @@
     new-instance v1, Lcom/android/systemui/privacy/PrivacyType;
 
     .line 44
-    const v18, 0x7f14077f    # @string/privacy_type_location 'location'
+    const v18, 0x7f1307db    # @string/privacy_type_location 'location'
 
     .line 46
-    const v19, 0x10806df    # @android:drawable/perm_group_sensors
+    const v19, 0x10806dd    # @android:drawable/perm_group_read_media_visual
 
     .line 49
     const-string v16, "TYPE_LOCATION"
@@ -121,10 +121,10 @@
     new-instance v2, Lcom/android/systemui/privacy/PrivacyType;
 
     .line 66
-    const v11, 0x7f140780    # @string/privacy_type_media_projection 'screen recording'
+    const v11, 0x7f1307dc    # @string/privacy_type_media_projection 'screen recording'
 
     .line 68
-    const v12, 0x7f080b4a    # @drawable/stat_sys_cast 'res/drawable/stat_sys_cast.xml'
+    const v12, 0x7f080b91    # @drawable/stat_sys_cast 'res/drawable/stat_sys_cast.xml'
 
     .line 71
     const-string v9, "TYPE_MEDIA_PROJECTION"

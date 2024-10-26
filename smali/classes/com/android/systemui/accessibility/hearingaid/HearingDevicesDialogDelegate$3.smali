@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/hearingaid/HearingDevicesDialogDelegate$3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemSelectedListener;
@@ -222,34 +222,34 @@
 
     .line 120
     :cond_5
-    const-string p5, "supportSynchronizedPresets but hapGroupId is invalid."
+    const-string/jumbo p5, "supportSynchronizedPresets but hapGroupId is invalid."
 
     .line 121
     invoke-static {p4, p5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
+    .line 124
     invoke-virtual {p1, p2}, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesPresetsController;->selectPresetIndependently(I)V
 
-    .line 126
+    .line 127
     goto :goto_2
 
-    .line 129
+    .line 130
     :cond_6
     invoke-virtual {p1, p2}, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesPresetsController;->selectPresetIndependently(I)V
 
-    .line 130
+    .line 131
     :goto_2
     iget-object p0, p0, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesDialogDelegate$3;->this$0:Lcom/android/systemui/accessibility/hearingaid/HearingDevicesDialogDelegate;
 
-    .line 133
+    .line 134
     iget-object p0, p0, Lcom/android/systemui/accessibility/hearingaid/HearingDevicesDialogDelegate;->mPresetSpinner:Landroid/widget/Spinner;
 
-    .line 135
+    .line 136
     invoke-virtual {p0, p3}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 137
+    .line 138
     return-void
-    .line 140
+    .line 141
 .end method
 
 .method public final onNothingSelected(Landroid/widget/AdapterView;)V

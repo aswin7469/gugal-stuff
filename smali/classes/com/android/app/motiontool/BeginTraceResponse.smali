@@ -1,6 +1,6 @@
 .class public final Lcom/android/app/motiontool/BeginTraceResponse;
 .super Lcom/google/protobuf/GeneratedMessageLite;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -200,50 +200,53 @@
     const-string p0, "bitField0_"
 
     .line 58
-    const-string p1, "traceId_"
+    const-string/jumbo p1, "traceId_"
 
     .line 60
     filled-new-array {p0, p1}, [Ljava/lang/Object;
 
-    .line 62
+    .line 63
     move-result-object p0
 
-    .line 65
+    .line 66
     const-string p1, "\u0001\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1004\u0000"
 
-    .line 66
+    .line 67
     sget-object v0, Lcom/android/app/motiontool/BeginTraceResponse;->DEFAULT_INSTANCE:Lcom/android/app/motiontool/BeginTraceResponse;
 
-    .line 68
+    .line 69
     new-instance v1, Lcom/google/protobuf/RawMessageInfo;
 
-    .line 70
+    .line 71
     invoke-direct {v1, v0, p1, p0}, Lcom/google/protobuf/RawMessageInfo;-><init>(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 72
+    .line 73
     return-object v1
 
-    .line 75
+    .line 76
     :pswitch_5
     const/4 p0, 0x0
 
-    .line 76
+    .line 77
     return-object p0
 
-    .line 77
+    .line 78
     :pswitch_6
     const/4 p0, 0x1
 
-    .line 78
+    .line 79
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    .line 79
+    .line 80
     move-result-object p0
 
-    .line 82
+    .line 83
     return-object p0
 
-    .line 83
+    .line 84
+    nop
+
+    .line 85
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_6
@@ -254,5 +257,5 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 84
+    .line 86
 .end method

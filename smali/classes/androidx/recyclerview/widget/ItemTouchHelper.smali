@@ -1,6 +1,6 @@
 .class public final Landroidx/recyclerview/widget/ItemTouchHelper;
 .super Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/recyclerview/widget/RecyclerView$OnChildAttachStateChangeListener;
@@ -395,7 +395,7 @@
     move-result-object p1
 
     .line 115
-    const v0, 0x7f07032d    # @dimen/item_touch_helper_swipe_escape_velocity '120.0dp'
+    const v0, 0x7f070369    # @dimen/item_touch_helper_swipe_escape_velocity '120.0dp'
 
     .line 116
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
@@ -407,7 +407,7 @@
     iput v0, p0, Landroidx/recyclerview/widget/ItemTouchHelper;->mSwipeEscapeVelocity:F
 
     .line 123
-    const v0, 0x7f07032c    # @dimen/item_touch_helper_swipe_escape_max_velocity '800.0dp'
+    const v0, 0x7f070368    # @dimen/item_touch_helper_swipe_escape_max_velocity '800.0dp'
 
     .line 125
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F

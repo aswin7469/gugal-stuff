@@ -1,6 +1,6 @@
 .class public final Lcom/airbnb/lottie/model/layer/Layer;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -225,7 +225,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .line 27
+    .line 1
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Lcom/airbnb/lottie/model/layer/Layer;->toString(Ljava/lang/String;)Ljava/lang/String;
@@ -238,12 +238,14 @@
 .method public final toString(Ljava/lang/String;)Ljava/lang/String;
     .locals 7
 
-    .line 1
-    invoke-static {p1}, Landroidx/compose/ui/text/input/EditProcessor$generateBatchErrorMessage$1$1$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
     .line 2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 3
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/Layer;->layerName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -252,12 +254,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
+    .line 4
     iget-object v2, p0, Lcom/airbnb/lottie/model/layer/Layer;->composition:Lcom/airbnb/lottie/LottieComposition;
 
     iget-object v3, v2, Lcom/airbnb/lottie/LottieComposition;->layerMap:Landroidx/collection/LongSparseArray;
 
-    .line 4
+    .line 5
     iget-wide v4, p0, Lcom/airbnb/lottie/model/layer/Layer;->parentId:J
 
     invoke-virtual {v3, v4, v5}, Landroidx/collection/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -268,7 +270,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 5
+    .line 6
     const-string v4, "\t\tParents: "
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -277,7 +279,7 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
+    .line 7
     iget-object v4, v2, Lcom/airbnb/lottie/LottieComposition;->layerMap:Landroidx/collection/LongSparseArray;
 
     iget-wide v5, v3, Lcom/airbnb/lottie/model/layer/Layer;->parentId:J
@@ -291,7 +293,7 @@
     :goto_0
     if-eqz v3, :cond_0
 
-    .line 7
+    .line 8
     const-string v4, "->"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -300,7 +302,7 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8
+    .line 9
     iget-object v4, v2, Lcom/airbnb/lottie/LottieComposition;->layerMap:Landroidx/collection/LongSparseArray;
 
     iget-wide v5, v3, Lcom/airbnb/lottie/model/layer/Layer;->parentId:J
@@ -313,34 +315,34 @@
 
     goto :goto_0
 
-    .line 9
+    .line 10
     :cond_0
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 10
+    .line 11
     :cond_1
     iget-object v2, p0, Lcom/airbnb/lottie/model/layer/Layer;->masks:Ljava/util/List;
 
-    .line 11
+    .line 12
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 12
+    .line 13
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, "\tMasks: "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 13
+    .line 14
     iget-object v2, p0, Lcom/airbnb/lottie/model/layer/Layer;->masks:Ljava/util/List;
 
-    .line 14
+    .line 15
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v2
@@ -349,7 +351,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 15
+    .line 16
     :cond_2
     iget v2, p0, Lcom/airbnb/lottie/model/layer/Layer;->solidWidth:I
 
@@ -359,7 +361,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 16
+    .line 17
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "\tBackground: "
@@ -368,7 +370,7 @@
 
     sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 17
+    .line 18
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -393,10 +395,10 @@
 
     move-result-object v2
 
-    .line 18
+    .line 19
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 19
+    .line 20
     :cond_3
     iget-object v2, p0, Lcom/airbnb/lottie/model/layer/Layer;->shapes:Ljava/util/List;
 
@@ -406,14 +408,14 @@
 
     if-nez v2, :cond_4
 
-    .line 20
+    .line 21
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, "\tShapes:\n"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 21
+    .line 22
     iget-object p0, p0, Lcom/airbnb/lottie/model/layer/Layer;->shapes:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -431,7 +433,7 @@
 
     move-result-object v2
 
-    .line 22
+    .line 23
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v3, "\t\t"
@@ -444,7 +446,7 @@
 
     goto :goto_1
 
-    .line 23
+    .line 24
     :cond_4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

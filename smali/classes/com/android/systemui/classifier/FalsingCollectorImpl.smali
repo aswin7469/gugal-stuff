@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/classifier/FalsingCollectorImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/classifier/FalsingCollector;
@@ -49,7 +49,7 @@
 
 .field public mScreenOn:Z
 
-.field public final mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda1;
+.field public final mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda3;
 
 .field public mSessionStarted:Z
 
@@ -170,13 +170,13 @@
     iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mAcceptedKeycodes:Ljava/util/Set;
 
     .line 49
-    new-instance v1, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda1;
+    new-instance v1, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda3;
 
     .line 51
-    invoke-direct {v1, p0}, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda1;-><init>(Lcom/android/systemui/classifier/FalsingCollectorImpl;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda3;-><init>(Lcom/android/systemui/classifier/FalsingCollectorImpl;)V
 
     .line 53
-    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda1;
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda3;
 
     .line 56
     new-instance v1, Lcom/android/systemui/classifier/FalsingCollectorImpl$1;
@@ -215,97 +215,107 @@
     iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mBatteryListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$4;
 
     .line 84
-    move-object v1, p1
+    new-instance v1, Lcom/android/systemui/classifier/FalsingCollectorImpl$5;
 
     .line 86
-    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mFalsingDataProvider:Lcom/android/systemui/classifier/FalsingDataProvider;
+    invoke-direct {v1, p0}, Lcom/android/systemui/classifier/FalsingCollectorImpl$5;-><init>(Lcom/android/systemui/classifier/FalsingCollectorImpl;)V
 
-    .line 87
-    move-object v1, p2
+    .line 88
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mDockEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$5;
 
-    .line 89
-    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
-
-    .line 90
-    move-object v1, p3
-
-    .line 92
-    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+    .line 91
+    move-object v1, p1
 
     .line 93
-    move-object v1, p4
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mFalsingDataProvider:Lcom/android/systemui/classifier/FalsingDataProvider;
 
-    .line 95
-    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mHistoryTracker:Lcom/android/systemui/classifier/HistoryTracker;
+    .line 94
+    move-object v1, p2
 
     .line 96
-    move-object v1, p5
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mFalsingManager:Lcom/android/systemui/plugins/FalsingManager;
 
-    .line 98
-    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mProximitySensor:Lcom/android/systemui/util/sensors/ProximitySensor;
+    .line 97
+    move-object v1, p3
 
     .line 99
-    move-object v1, p6
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 101
-    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+    .line 100
+    move-object v1, p4
 
     .line 102
-    move-object v1, p7
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mHistoryTracker:Lcom/android/systemui/classifier/HistoryTracker;
 
-    .line 104
-    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
+    .line 103
+    move-object v1, p5
 
     .line 105
-    move-object v1, p8
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mProximitySensor:Lcom/android/systemui/util/sensors/ProximitySensor;
 
-    .line 107
-    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mShadeInteractorLazy:Ldagger/Lazy;
+    .line 106
+    move-object v1, p6
 
     .line 108
-    move-object/from16 v1, p9
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
-    .line 110
-    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+    .line 109
+    move-object v1, p7
+
+    .line 111
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
     .line 112
-    move-object/from16 v1, p10
+    move-object v1, p8
 
     .line 114
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mShadeInteractorLazy:Ldagger/Lazy;
+
+    .line 115
+    move-object/from16 v1, p9
+
+    .line 117
+    iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+
+    .line 119
+    move-object/from16 v1, p10
+
+    .line 121
     iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
-    .line 116
+    .line 123
     move-object/from16 v1, p11
 
-    .line 118
+    .line 125
     iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mMainExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
 
-    .line 120
+    .line 127
     move-object/from16 v1, p12
 
-    .line 122
+    .line 129
     iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
 
-    .line 124
+    .line 131
     move-object/from16 v1, p13
 
-    .line 126
+    .line 133
     iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSystemClock:Lcom/android/systemui/util/time/SystemClock;
 
-    .line 128
+    .line 135
     move-object/from16 v1, p14
 
-    .line 130
+    .line 137
     iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mUserInteractor:Ldagger/Lazy;
 
-    .line 132
+    .line 139
     move-object/from16 v1, p15
 
-    .line 134
+    .line 141
     iput-object v1, v0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mCommunalInteractorLazy:Ldagger/Lazy;
 
-    .line 136
+    .line 143
     return-void
+    .line 145
 .end method
 
 .method public static logDebug(Ljava/lang/String;)V
@@ -404,167 +414,167 @@
     iput v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mState:I
 
     .line 25
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 27
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 30
+    .line 27
     check-cast v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 32
+    .line 29
     iget-object v1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mKeyguardStateControllerCallback:Lcom/android/systemui/classifier/FalsingCollectorImpl$2;
 
-    .line 34
+    .line 31
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 36
+    .line 33
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 39
+    .line 36
     iget-object v1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mKeyguardUpdateCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 41
+    .line 38
     invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 43
+    .line 40
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mShadeInteractorLazy:Ldagger/Lazy;
 
-    .line 46
+    .line 43
     invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
+
+    .line 45
+    move-result-object v0
 
     .line 48
-    move-result-object v0
-
-    .line 51
     check-cast v0, Lcom/android/systemui/shade/domain/interactor/ShadeInteractor;
 
-    .line 52
+    .line 49
     check-cast v0, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;
 
-    .line 54
+    .line 51
     iget-object v0, v0, Lcom/android/systemui/shade/domain/interactor/ShadeInteractorImpl;->baseShadeInteractor:Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;
 
-    .line 56
+    .line 53
     invoke-interface {v0}, Lcom/android/systemui/shade/domain/interactor/BaseShadeInteractor;->isQsExpanded()Lkotlinx/coroutines/flow/StateFlow;
 
-    .line 58
+    .line 55
     move-result-object v0
 
-    .line 61
-    new-instance v1, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;
+    .line 58
+    new-instance v1, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda0;
 
-    .line 62
+    .line 59
     const/4 v2, 0x0
 
-    .line 64
-    invoke-direct {v1, p0, v2}, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/classifier/FalsingCollectorImpl;I)V
+    .line 61
+    invoke-direct {v1, p0, v2}, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/classifier/FalsingCollectorImpl;I)V
 
-    .line 65
+    .line 62
     iget-object v2, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mJavaAdapter:Lcom/android/systemui/util/kotlin/JavaAdapter;
 
-    .line 68
+    .line 65
     invoke-virtual {v2, v0, v1}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 70
+    .line 67
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mCommunalInteractorLazy:Ldagger/Lazy;
 
-    .line 73
+    .line 70
     invoke-interface {v0}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
-    .line 75
+    .line 72
     move-result-object v0
 
-    .line 78
+    .line 75
     check-cast v0, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;
 
-    .line 79
+    .line 76
     iget-object v1, v0, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;->isCommunalEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 81
+    .line 78
     iget-object v0, v0, Lcom/android/systemui/communal/domain/interactor/CommunalInteractor;->isCommunalShowing:Lkotlinx/coroutines/flow/ReadonlySharedFlow;
 
-    .line 83
+    .line 80
     filled-new-array {v1, v0}, [Lkotlinx/coroutines/flow/Flow;
 
-    .line 85
+    .line 82
     move-result-object v0
 
-    .line 88
+    .line 85
     invoke-static {v0}, Lkotlin/collections/ArraysKt;->asIterable([Ljava/lang/Object;)Ljava/lang/Iterable;
 
-    .line 89
+    .line 86
     move-result-object v0
 
-    .line 92
+    .line 89
     invoke-static {v0}, Lkotlin/collections/CollectionsKt;->toList(Ljava/lang/Iterable;)Ljava/util/List;
 
-    .line 93
+    .line 90
     move-result-object v0
 
-    .line 96
+    .line 93
     const/4 v1, 0x0
 
-    .line 97
+    .line 94
     new-array v1, v1, [Lkotlinx/coroutines/flow/Flow;
 
-    .line 98
+    .line 95
     invoke-interface {v0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 100
+    .line 97
     move-result-object v0
 
-    .line 103
+    .line 100
     check-cast v0, [Lkotlinx/coroutines/flow/Flow;
 
-    .line 104
+    .line 101
     new-instance v1, Lcom/android/systemui/util/kotlin/BooleanFlowOperators$not$$inlined$map$1;
 
-    .line 106
+    .line 103
     const/4 v3, 0x1
 
-    .line 108
+    .line 105
     invoke-direct {v1, v3, v0}, Lcom/android/systemui/util/kotlin/BooleanFlowOperators$not$$inlined$map$1;-><init>(ILjava/lang/Object;)V
 
-    .line 109
+    .line 106
     invoke-static {v1}, Lkotlinx/coroutines/flow/FlowKt;->distinctUntilChanged(Lkotlinx/coroutines/flow/Flow;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 112
+    .line 109
     move-result-object v0
 
-    .line 115
-    new-instance v1, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;
+    .line 112
+    new-instance v1, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda0;
 
-    .line 116
+    .line 113
     const/4 v3, 0x1
 
-    .line 118
-    invoke-direct {v1, p0, v3}, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/classifier/FalsingCollectorImpl;I)V
+    .line 115
+    invoke-direct {v1, p0, v3}, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/classifier/FalsingCollectorImpl;I)V
 
-    .line 119
+    .line 116
     invoke-virtual {v2, v0, v1}, Lcom/android/systemui/util/kotlin/JavaAdapter;->alwaysCollectFlow(Lkotlinx/coroutines/flow/Flow;Ljava/util/function/Consumer;)Lkotlinx/coroutines/StandaloneCoroutine;
 
+    .line 119
+    iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mBatteryListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$4;
+
     .line 122
-    iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
+    iget-object v1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mBatteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
-    .line 125
-    check-cast v0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
+    .line 124
+    invoke-interface {v1, v0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
-    .line 127
-    iget-object v1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mBatteryListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$4;
+    .line 126
+    iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mDockManager:Lcom/android/systemui/dock/DockManager;
 
     .line 129
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->addCallback(Ljava/lang/Object;)V
+    check-cast v0, Lcom/google/android/systemui/dreamliner/DockObserver;
 
     .line 131
-    iget-object p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mDockManager:Lcom/android/systemui/dock/DockManager;
+    iget-object p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mDockEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$5;
 
-    .line 134
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 133
+    invoke-virtual {v0, p0}, Lcom/google/android/systemui/dreamliner/DockObserver;->addListener(Lcom/android/systemui/dock/DockManager$DockEventListener;)V
 
-    .line 136
+    .line 135
     return-void
-    .line 139
+    .line 138
 .end method
 
 .method public final onA11yAction()V
@@ -606,6 +616,7 @@
 
     .line 23
     return-void
+    .line 25
 .end method
 
 .method public final onBouncerHidden()V
@@ -624,7 +635,7 @@
     if-eqz v0, :cond_0
 
     .line 9
-    iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda1;
+    iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda3;
 
     .line 11
     iget-object p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mProximitySensor:Lcom/android/systemui/util/sensors/ProximitySensor;
@@ -648,7 +659,7 @@
     invoke-static {v0}, Lcom/android/systemui/classifier/FalsingCollectorImpl;->logDebug(Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda1;
+    iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda3;
 
     .line 7
     iget-object p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mProximitySensor:Lcom/android/systemui/util/sensors/ProximitySensor;
@@ -776,10 +787,10 @@
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 9
-    new-instance v1, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda0;
+    new-instance v1, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;
 
     .line 12
-    invoke-direct {v1, v0}, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/classifier/FalsingDataProvider;)V
+    invoke-direct {v1, v0}, Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda2;-><init>(Lcom/android/systemui/classifier/FalsingDataProvider;)V
 
     .line 14
     const-wide/16 v2, 0x64
@@ -792,7 +803,6 @@
 
     .line 21
     return-void
-    .line 24
 .end method
 
 .method public onQsExpansionChanged(Ljava/lang/Boolean;)V
@@ -835,7 +845,7 @@
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mProximitySensor:Lcom/android/systemui/util/sensors/ProximitySensor;
 
     .line 28
-    iget-object v1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda1;
+    iget-object v1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda3;
 
     .line 30
     if-eqz p1, :cond_0
@@ -992,110 +1002,107 @@
     invoke-static {v0}, Lcom/android/systemui/classifier/FalsingCollectorImpl;->logDebug(Ljava/lang/String;)V
 
     .line 29
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 32
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 35
+    .line 32
     check-cast v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 37
+    .line 34
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mShowing:Z
 
-    .line 39
+    .line 36
     if-nez v0, :cond_0
 
-    .line 41
+    .line 38
     invoke-virtual {p0}, Lcom/android/systemui/classifier/FalsingCollectorImpl;->avoidGesture()V
 
-    .line 43
+    .line 40
     return-void
 
-    .line 46
+    .line 43
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    .line 47
+    .line 44
     move-result v0
 
-    .line 50
+    .line 47
     const/4 v1, 0x4
 
-    .line 51
+    .line 48
     if-ne v0, v1, :cond_1
 
-    .line 52
+    .line 49
     return-void
 
-    .line 54
+    .line 51
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    .line 55
+    .line 52
     move-result v0
 
-    .line 58
+    .line 55
     if-nez v0, :cond_2
 
-    .line 59
+    .line 56
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    .line 61
+    .line 58
     move-result-object p1
 
-    .line 64
+    .line 61
     iput-object p1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mPendingDownEvent:Landroid/view/MotionEvent;
 
-    .line 65
+    .line 62
     const/4 p1, 0x0
 
-    .line 67
+    .line 64
     iput-boolean p1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mAvoidGesture:Z
 
-    .line 68
+    .line 65
     goto :goto_0
 
-    .line 70
+    .line 67
     :cond_2
     iget-boolean v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mAvoidGesture:Z
 
-    .line 71
+    .line 68
     if-nez v0, :cond_4
 
-    .line 73
+    .line 70
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mPendingDownEvent:Landroid/view/MotionEvent;
 
-    .line 75
+    .line 72
     iget-object v1, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mFalsingDataProvider:Lcom/android/systemui/classifier/FalsingDataProvider;
 
-    .line 77
+    .line 74
     if-eqz v0, :cond_3
 
-    .line 79
+    .line 76
     invoke-virtual {v1, v0}, Lcom/android/systemui/classifier/FalsingDataProvider;->onMotionEvent(Landroid/view/MotionEvent;)V
 
-    .line 81
+    .line 78
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mPendingDownEvent:Landroid/view/MotionEvent;
 
-    .line 84
+    .line 81
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 86
+    .line 83
     const/4 v0, 0x0
 
-    .line 89
+    .line 86
     iput-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mPendingDownEvent:Landroid/view/MotionEvent;
 
-    .line 90
+    .line 87
     :cond_3
     invoke-virtual {v1, p1}, Lcom/android/systemui/classifier/FalsingDataProvider;->onMotionEvent(Landroid/view/MotionEvent;)V
 
-    .line 92
+    .line 89
     :cond_4
     :goto_0
     return-void
-    .line 95
+    .line 92
 .end method
 
 .method public final sessionEnd()V
@@ -1373,78 +1380,72 @@
     if-nez v0, :cond_1
 
     .line 11
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 13
     iget-object v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 16
+    .line 13
     move-object v4, v0
 
-    .line 18
+    .line 15
     check-cast v4, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 19
+    .line 16
     iget-boolean v4, v4, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mShowing:Z
 
-    .line 21
+    .line 18
     if-eqz v4, :cond_1
 
-    .line 23
-    invoke-static {}, Lcom/android/systemui/scene/shared/flag/SceneContainerFlag;->isEnabled()V
-
-    .line 25
+    .line 20
     check-cast v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 28
+    .line 22
     iget-boolean v0, v0, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mOccluded:Z
 
-    .line 30
+    .line 24
     if-eqz v0, :cond_1
 
-    .line 32
+    .line 26
     move v1, v2
 
-    .line 34
+    .line 28
     :cond_1
     iget-boolean v0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mScreenOn:Z
 
-    .line 35
+    .line 29
     iget-object v2, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mProximitySensor:Lcom/android/systemui/util/sensors/ProximitySensor;
 
-    .line 37
-    iget-object v4, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda1;
+    .line 31
+    iget-object v4, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mSensorEventListener:Lcom/android/systemui/classifier/FalsingCollectorImpl$$ExternalSyntheticLambda3;
 
-    .line 39
+    .line 33
     if-eqz v0, :cond_3
 
-    .line 41
+    .line 35
     iget-boolean p0, p0, Lcom/android/systemui/classifier/FalsingCollectorImpl;->mShowingAod:Z
 
-    .line 43
+    .line 37
     if-nez p0, :cond_3
 
-    .line 45
+    .line 39
     if-nez v3, :cond_2
 
-    .line 47
+    .line 41
     if-eqz v1, :cond_3
 
-    .line 49
+    .line 43
     :cond_2
     invoke-interface {v2, v4}, Lcom/android/systemui/util/sensors/ThresholdSensor;->register(Lcom/android/systemui/util/sensors/ThresholdSensor$Listener;)V
 
-    .line 51
+    .line 45
     goto :goto_1
 
-    .line 54
+    .line 48
     :cond_3
     invoke-interface {v2, v4}, Lcom/android/systemui/util/sensors/ThresholdSensor;->unregister(Lcom/android/systemui/util/sensors/ThresholdSensor$Listener;)V
 
-    .line 55
+    .line 49
     :goto_1
     return-void
-    .line 58
+    .line 52
 .end method
 
 .method public final updateSessionActive()V

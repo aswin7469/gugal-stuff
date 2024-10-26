@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/keyguard/ResourceTrimmer$start$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -134,111 +134,61 @@
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     .line 27
-    invoke-static {}, Lcom/android/systemui/Flags;->sceneContainer()Z
-
-    .line 30
-    move-result p1
-
-    .line 33
-    if-eqz p1, :cond_3
-
-    .line 34
-    invoke-static {}, Lcom/android/systemui/Flags;->composeLockscreen()Z
-
-    .line 36
-    move-result p1
-
-    .line 39
-    if-eqz p1, :cond_3
-
-    .line 40
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardBottomAreaRefactor()Z
-
-    .line 42
-    move-result p1
-
-    .line 45
-    if-eqz p1, :cond_3
-
-    .line 46
-    invoke-static {}, Lcom/android/systemui/Flags;->keyguardWmStateRefactor()Z
-
-    .line 48
-    move-result p1
-
-    .line 51
-    if-eqz p1, :cond_3
-
-    .line 52
-    invoke-static {}, Lcom/android/systemui/Flags;->migrateClocksToBlueprint()Z
-
-    .line 54
-    move-result p1
-
-    .line 57
-    if-eqz p1, :cond_3
-
-    .line 58
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 60
-    :cond_3
     iget-object p1, p0, Lcom/android/systemui/keyguard/ResourceTrimmer$start$1;->this$0:Lcom/android/systemui/keyguard/ResourceTrimmer;
 
-    .line 63
+    .line 30
     iget-object p1, p1, Lcom/android/systemui/keyguard/ResourceTrimmer;->keyguardTransitionInteractor:Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
-    .line 65
+    .line 32
     sget-object v1, Lcom/android/systemui/keyguard/shared/model/Edge;->Companion:Lcom/android/systemui/keyguard/shared/model/Edge$Companion;
 
-    .line 67
+    .line 34
     sget-object v1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GONE:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 69
+    .line 36
     const/4 v4, 0x0
 
-    .line 71
+    .line 38
     invoke-static {v4, v1, v3}, Lcom/android/systemui/keyguard/shared/model/Edge$Companion;->create$default(Lcom/android/systemui/keyguard/shared/model/KeyguardState;Lcom/android/systemui/keyguard/shared/model/KeyguardState;I)Lcom/android/systemui/keyguard/shared/model/Edge$StateToState;
 
-    .line 72
+    .line 39
     move-result-object v1
 
-    .line 75
+    .line 42
     invoke-virtual {p1, v1}, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;->transition(Lcom/android/systemui/keyguard/shared/model/Edge;)Lkotlinx/coroutines/flow/Flow;
 
-    .line 76
+    .line 43
     move-result-object p1
 
-    .line 79
+    .line 46
     new-instance v1, Lcom/android/systemui/keyguard/ResourceTrimmer$start$1$3;
 
-    .line 80
+    .line 47
     iget-object v3, p0, Lcom/android/systemui/keyguard/ResourceTrimmer$start$1;->this$0:Lcom/android/systemui/keyguard/ResourceTrimmer;
 
-    .line 82
+    .line 49
     invoke-direct {v1, v3}, Lcom/android/systemui/keyguard/ResourceTrimmer$start$1$3;-><init>(Lcom/android/systemui/keyguard/ResourceTrimmer;)V
 
-    .line 84
+    .line 51
     iput v2, p0, Lcom/android/systemui/keyguard/ResourceTrimmer$start$1;->label:I
 
-    .line 87
+    .line 54
     invoke-interface {p1, v1, p0}, Lkotlinx/coroutines/flow/Flow;->collect(Lkotlinx/coroutines/flow/FlowCollector;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 89
+    .line 56
     move-result-object p0
 
-    .line 92
-    if-ne p0, v0, :cond_4
+    .line 59
+    if-ne p0, v0, :cond_3
 
-    .line 93
+    .line 60
     return-object v0
 
-    .line 95
-    :cond_4
+    .line 62
+    :cond_3
     :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 96
+    .line 63
     return-object p0
-    .line 98
 .end method

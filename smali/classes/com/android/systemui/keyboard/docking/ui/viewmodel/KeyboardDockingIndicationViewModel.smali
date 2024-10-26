@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyboard/docking/ui/viewmodel/KeyboardDockingIndicationViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -50,32 +50,26 @@
     invoke-direct {p2, p1}, Lkotlinx/coroutines/flow/ReadonlyStateFlow;-><init>(Lkotlinx/coroutines/flow/StateFlow;)V
 
     .line 21
-    iput-object p2, p0, Lcom/android/systemui/keyboard/docking/ui/viewmodel/KeyboardDockingIndicationViewModel;->edgeGlow:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-    .line 24
     iget-object p1, p3, Lcom/android/systemui/keyboard/docking/domain/interactor/KeyboardDockingIndicationInteractor;->onKeyboardConnected:Lkotlinx/coroutines/flow/Flow;
 
-    .line 26
-    iput-object p1, p0, Lcom/android/systemui/keyboard/docking/ui/viewmodel/KeyboardDockingIndicationViewModel;->keyboardConnected:Lkotlinx/coroutines/flow/Flow;
-
-    .line 28
+    .line 24
     new-instance p1, Lcom/android/systemui/keyboard/docking/ui/viewmodel/KeyboardDockingIndicationViewModel$1;
 
-    .line 30
+    .line 26
     const/4 p2, 0x0
 
-    .line 32
+    .line 28
     invoke-direct {p1, p4, p0, p2}, Lcom/android/systemui/keyboard/docking/ui/viewmodel/KeyboardDockingIndicationViewModel$1;-><init>(Lcom/android/systemui/common/ui/domain/interactor/ConfigurationInteractor;Lcom/android/systemui/keyboard/docking/ui/viewmodel/KeyboardDockingIndicationViewModel;Lkotlin/coroutines/Continuation;)V
 
-    .line 33
+    .line 29
     const/4 p0, 0x3
 
-    .line 36
+    .line 32
     invoke-static {p5, p2, p2, p1, p0}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;I)Lkotlinx/coroutines/StandaloneCoroutine;
 
-    .line 37
+    .line 33
     return-void
-    .line 40
+    .line 36
 .end method
 
 

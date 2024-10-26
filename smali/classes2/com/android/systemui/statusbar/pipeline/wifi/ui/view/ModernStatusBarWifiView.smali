@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/pipeline/wifi/ui/view/ModernStatusBarWifiView;
 .super Lcom/android/systemui/statusbar/pipeline/shared/ui/view/ModernStatusBarView;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -25,7 +25,7 @@
     move-result-object p0
 
     .line 5
-    const v0, 0x7f0e01a7    # @layout/new_status_bar_wifi_group 'res/layout/new_status_bar_wifi_group.xml'
+    const v0, 0x7f0d01b4    # @layout/new_status_bar_wifi_group 'res/layout/new_status_bar_wifi_group.xml'
 
     .line 6
     const/4 v1, 0x0
@@ -40,51 +40,17 @@
     check-cast p0, Lcom/android/systemui/statusbar/pipeline/wifi/ui/view/ModernStatusBarWifiView;
 
     .line 14
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 16
-    move-result v0
-
-    .line 19
-    if-eqz v0, :cond_0
-
-    .line 20
-    const v0, 0x7f0b08fa    # @id/wifi_signal
-
-    .line 22
-    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->requireViewById(I)Landroid/view/View;
-
-    .line 25
-    move-result-object v0
-
-    .line 28
-    check-cast v0, Landroid/widget/ImageView;
-
-    .line 29
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    .line 31
-    move-result-object v0
-
-    .line 34
-    const/4 v1, -0x2
-
-    .line 35
-    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    .line 36
-    :cond_0
     new-instance v0, Lcom/android/systemui/statusbar/pipeline/wifi/ui/view/ModernStatusBarWifiView$Companion$constructAndBind$1$1;
 
-    .line 38
+    .line 16
     invoke-direct {v0, p0, p2}, Lcom/android/systemui/statusbar/pipeline/wifi/ui/view/ModernStatusBarWifiView$Companion$constructAndBind$1$1;-><init>(Lcom/android/systemui/statusbar/pipeline/wifi/ui/view/ModernStatusBarWifiView;Lcom/android/systemui/statusbar/pipeline/wifi/ui/viewmodel/LocationBasedWifiViewModel;)V
 
-    .line 40
+    .line 18
     invoke-virtual {p0, p1, v0}, Lcom/android/systemui/statusbar/pipeline/shared/ui/view/ModernStatusBarView;->initView(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
 
-    .line 43
+    .line 21
     return-object p0
-    .line 46
+    .line 24
 .end method
 
 

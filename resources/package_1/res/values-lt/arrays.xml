@@ -5,7 +5,9 @@
     <item>Rodyti procentus kraunant (numatytasis nustatymas)</item>
     <item>Nerodyti šios piktogramos</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>Rodyti valandas, minutes ir sekundes</item>
     <item>Rodyti valandas ir minutes (numatytasis nustatymas)</item>

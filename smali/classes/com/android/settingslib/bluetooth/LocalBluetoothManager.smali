@@ -1,10 +1,6 @@
 .class public final Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
-
-
-# static fields
-.field public static sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -90,83 +86,4 @@
     .line 42
     return-void
     .line 45
-.end method
-
-.method public static declared-synchronized getInstance(Landroid/content/Context;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-    .locals 4
-
-    .line 1
-    const-class v0, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-    .line 2
-    monitor-enter v0
-
-    .line 4
-    :try_start_0
-    sget-object v1, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-    .line 5
-    if-nez v1, :cond_1
-
-    .line 7
-    invoke-static {}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getInstance()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-
-    .line 9
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 12
-    const/4 v2, 0x0
-
-    .line 13
-    if-nez v1, :cond_0
-
-    .line 14
-    monitor-exit v0
-
-    .line 16
-    return-object v2
-
-    .line 17
-    :cond_0
-    :try_start_1
-    new-instance v3, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-    .line 18
-    invoke-direct {v3, v1, p0, v2, v2}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;-><init>(Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;Landroid/content/Context;Landroid/os/Handler;Landroid/os/UserHandle;)V
-
-    .line 20
-    sput-object v3, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-
-    .line 23
-    goto :goto_0
-
-    .line 25
-    :catchall_0
-    move-exception p0
-
-    .line 26
-    goto :goto_1
-
-    .line 27
-    :cond_1
-    :goto_0
-    sget-object p0, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 28
-    monitor-exit v0
-
-    .line 30
-    return-object p0
-
-    .line 31
-    :goto_1
-    monitor-exit v0
-
-    .line 32
-    throw p0
-    .line 33
 .end method

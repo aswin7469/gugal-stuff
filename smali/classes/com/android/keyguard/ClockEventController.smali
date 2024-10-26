@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/ClockEventController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -673,109 +673,106 @@
     iget-object v0, p0, Lcom/android/keyguard/ClockEventController;->batteryController:Lcom/android/systemui/statusbar/policy/BatteryController;
 
     .line 39
-    check-cast v0, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;
-
-    .line 41
     iget-object v1, p0, Lcom/android/keyguard/ClockEventController;->batteryCallback:Lcom/android/keyguard/ClockEventController$batteryCallback$1;
 
-    .line 43
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/policy/BatteryControllerImpl;->addCallback(Ljava/lang/Object;)V
+    .line 41
+    invoke-interface {v0, v1}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
-    .line 45
+    .line 43
     iget-object v0, p0, Lcom/android/keyguard/ClockEventController;->keyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 48
+    .line 46
     iget-object v1, p0, Lcom/android/keyguard/ClockEventController;->keyguardUpdateMonitorCallback:Lcom/android/keyguard/ClockEventController$keyguardUpdateMonitorCallback$1;
 
-    .line 50
+    .line 48
     invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 52
+    .line 50
     iget-object v0, p0, Lcom/android/keyguard/ClockEventController;->zenModeController:Lcom/android/systemui/statusbar/policy/ZenModeController;
 
-    .line 55
+    .line 53
     check-cast v0, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;
 
-    .line 57
+    .line 55
     iget-object v1, p0, Lcom/android/keyguard/ClockEventController;->zenModeCallback:Lcom/android/keyguard/ClockEventController$zenModeCallback$1;
 
-    .line 59
+    .line 57
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 61
+    .line 59
     new-instance v0, Lcom/android/keyguard/ClockEventController$registerListeners$1;
 
-    .line 64
+    .line 62
     const/4 v1, 0x0
 
-    .line 66
+    .line 64
     invoke-direct {v0, p0, v1}, Lcom/android/keyguard/ClockEventController$registerListeners$1;-><init>(Lcom/android/keyguard/ClockEventController;Lkotlin/coroutines/Continuation;)V
 
-    .line 67
+    .line 65
     sget-object v1, Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt;->MAIN_DISPATCHER_SINGLETON:Lkotlin/coroutines/CoroutineContext;
 
-    .line 70
+    .line 68
     sget-object v1, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
-    .line 72
+    .line 70
     invoke-static {p1, v1, v0}, Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt;->repeatWhenAttached(Landroid/view/View;Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function3;)Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt$repeatWhenAttached$1;
 
-    .line 74
+    .line 72
     move-result-object p1
 
-    .line 77
+    .line 75
     iput-object p1, p0, Lcom/android/keyguard/ClockEventController;->disposableHandle:Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt$repeatWhenAttached$1;
 
-    .line 78
+    .line 76
     iget-object p1, p0, Lcom/android/keyguard/ClockEventController;->smallTimeListener:Lcom/android/keyguard/ClockEventController$TimeListener;
 
-    .line 80
+    .line 78
     if-eqz p1, :cond_1
 
-    .line 82
+    .line 80
     invoke-virtual {p0}, Lcom/android/keyguard/ClockEventController;->getShouldTimeListenerRun()Z
 
-    .line 84
+    .line 82
     move-result v0
 
-    .line 87
+    .line 85
     invoke-virtual {p1, v0}, Lcom/android/keyguard/ClockEventController$TimeListener;->update(Z)V
 
-    .line 88
+    .line 86
     :cond_1
     iget-object p1, p0, Lcom/android/keyguard/ClockEventController;->largeTimeListener:Lcom/android/keyguard/ClockEventController$TimeListener;
 
-    .line 91
+    .line 89
     if-eqz p1, :cond_2
 
-    .line 93
+    .line 91
     invoke-virtual {p0}, Lcom/android/keyguard/ClockEventController;->getShouldTimeListenerRun()Z
 
-    .line 95
+    .line 93
     move-result v0
 
-    .line 98
+    .line 96
     invoke-virtual {p1, v0}, Lcom/android/keyguard/ClockEventController$TimeListener;->update(Z)V
 
-    .line 99
+    .line 97
     :cond_2
     iget-object p1, p0, Lcom/android/keyguard/ClockEventController;->bgExecutor:Ljava/util/concurrent/Executor;
 
-    .line 102
+    .line 100
     new-instance v0, Lcom/android/keyguard/ClockEventController$registerListeners$2;
 
-    .line 104
+    .line 102
     const/4 v1, 0x0
 
-    .line 106
+    .line 104
     invoke-direct {v0, v1, p0}, Lcom/android/keyguard/ClockEventController$registerListeners$2;-><init>(ILjava/lang/Object;)V
 
-    .line 107
+    .line 105
     invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 110
+    .line 108
     return-void
-    .line 113
+    .line 111
 .end method
 
 .method public final setClock(Lcom/android/systemui/plugins/clocks/ClockController;)V
@@ -1483,7 +1480,7 @@
     iget-object v2, p0, Lcom/android/keyguard/ClockEventController;->resources:Landroid/content/res/Resources;
 
     .line 14
-    const v3, 0x7f07098c    # @dimen/small_clock_text_size '86.0dp'
+    const v3, 0x7f0709e3    # @dimen/small_clock_text_size '86.0dp'
 
     .line 16
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1519,7 +1516,7 @@
     iget-object p0, p0, Lcom/android/keyguard/ClockEventController;->resources:Landroid/content/res/Resources;
 
     .line 39
-    const v1, 0x7f0708a8    # @dimen/presentation_clock_text_size '50.0dp'
+    const v1, 0x7f0708f8    # @dimen/presentation_clock_text_size '50.0dp'
 
     .line 41
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1539,7 +1536,7 @@
     iget-object p0, p0, Lcom/android/keyguard/ClockEventController;->resources:Landroid/content/res/Resources;
 
     .line 50
-    const v1, 0x7f070373    # @dimen/large_clock_text_size '150.0dp'
+    const v1, 0x7f0703af    # @dimen/large_clock_text_size '150.0dp'
 
     .line 52
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

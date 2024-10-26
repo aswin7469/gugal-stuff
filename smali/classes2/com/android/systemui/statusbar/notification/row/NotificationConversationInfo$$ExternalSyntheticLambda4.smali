@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -9,25 +9,35 @@
 # instance fields
 .field public final synthetic $r8$classId:I
 
-.field public final synthetic f$0:Ljava/lang/Object;
+.field public final synthetic f$0:Landroid/view/View;
+
+.field public final synthetic f$1:Landroid/view/View;
+
+.field public final synthetic f$2:Landroid/view/View;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;I)V
     .locals 0
 
     .line 1
-    iput p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->$r8$classId:I
+    iput p4, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->$r8$classId:I
 
     .line 2
-    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$0:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$0:Landroid/view/View;
 
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$1:Landroid/view/View;
 
     .line 6
+    iput-object p3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$2:Landroid/view/View;
+
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 10
     return-void
-    .line 9
+    .line 13
 .end method
 
 
@@ -36,129 +46,99 @@
     .locals 5
 
     .line 1
-    iget v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->$r8$classId:I
+    const/4 v0, 0x1
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$0:Ljava/lang/Object;
+    const/4 v1, 0x0
+
+    .line 3
+    iget v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->$r8$classId:I
 
     .line 4
-    packed-switch v0, :pswitch_data_0
+    packed-switch v2, :pswitch_data_0
 
     .line 6
-    check-cast p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$UpdateChannelRunnable;
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$0:Landroid/view/View;
 
     .line 9
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$UpdateChannelRunnable;->this$0:Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$1:Landroid/view/View;
 
     .line 11
-    iget-object v0, v0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mBubblesManagerOptional:Ljava/util/Optional;
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$2:Landroid/view/View;
 
     .line 13
-    invoke-virtual {v0}, Ljava/util/Optional;->get()Ljava/lang/Object;
+    sget v4, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->$r8$clinit:I
 
     .line 15
-    move-result-object v0
+    invoke-virtual {v2, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 18
-    check-cast v0, Lcom/android/systemui/wmshell/BubblesManager;
+    .line 17
+    invoke-virtual {v3, v0}, Landroid/view/View;->setSelected(Z)V
 
-    .line 19
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$UpdateChannelRunnable;->this$0:Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;
-
-    .line 21
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
+    .line 20
+    invoke-virtual {p0, v1}, Landroid/view/View;->setSelected(Z)V
 
     .line 23
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
 
-    .line 25
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mBubbleMetadata:Landroid/app/Notification$BubbleMetadata;
+    .line 26
+    :pswitch_0
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$0:Landroid/view/View;
 
-    .line 28
-    if-nez v1, :cond_0
+    .line 27
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$1:Landroid/view/View;
 
-    .line 30
-    goto :goto_1
+    .line 29
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$2:Landroid/view/View;
 
-    .line 32
-    :cond_0
-    const/4 v1, 0x1
+    .line 31
+    sget v4, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->$r8$clinit:I
 
     .line 33
-    :try_start_0
-    iget-object v2, v0, Lcom/android/systemui/wmshell/BubblesManager;->mBarService:Lcom/android/internal/statusbar/IStatusBarService;
+    invoke-virtual {v2, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 34
-    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mKey:Ljava/lang/String;
-
-    .line 36
-    const/4 v4, 0x2
+    .line 35
+    invoke-virtual {v3, v1}, Landroid/view/View;->setSelected(Z)V
 
     .line 38
-    invoke-interface {v2, v3, v1, v4}, Lcom/android/internal/statusbar/IStatusBarService;->onNotificationBubbleChanged(Ljava/lang/String;ZI)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p0, v0}, Landroid/view/View;->setSelected(Z)V
 
-    .line 39
-    goto :goto_0
-
-    .line 42
-    :catch_0
-    move-exception v2
-
-    .line 43
-    const-string v3, "Bubbles"
+    .line 41
+    return-void
 
     .line 44
-    invoke-virtual {v2}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
+    :pswitch_1
+    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$0:Landroid/view/View;
 
-    .line 46
-    move-result-object v2
+    .line 45
+    iget-object v3, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$1:Landroid/view/View;
+
+    .line 47
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo$$ExternalSyntheticLambda4;->f$2:Landroid/view/View;
 
     .line 49
-    invoke-static {v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    sget v4, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->$r8$clinit:I
 
-    .line 50
-    :goto_0
-    iget-object v0, v0, Lcom/android/systemui/wmshell/BubblesManager;->mShadeController:Lcom/android/systemui/shade/ShadeController;
+    .line 51
+    invoke-virtual {v2, v0}, Landroid/view/View;->setSelected(Z)V
 
     .line 53
-    invoke-interface {v0, v1}, Lcom/android/systemui/shade/ShadeController;->collapseShade(Z)V
+    invoke-virtual {v3, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 55
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->row:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
+    .line 56
+    invoke-virtual {p0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 58
-    if-eqz p0, :cond_1
-
-    .line 60
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->updateBubbleButton()V
+    .line 59
+    return-void
 
     .line 62
-    :cond_1
-    :goto_1
-    return-void
+    nop
 
-    .line 65
-    :pswitch_0
-    check-cast p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;
-
-    .line 66
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mOnUserInteractionCallback:Lcom/android/systemui/statusbar/notification/collection/inflation/OnUserInteractionCallbackImpl;
-
-    .line 68
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/NotificationConversationInfo;->mEntry:Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
-
-    .line 70
-    invoke-virtual {v0, p0}, Lcom/android/systemui/statusbar/notification/collection/inflation/OnUserInteractionCallbackImpl;->onImportanceChanged(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
-
-    .line 72
-    return-void
-
-    .line 75
+    .line 63
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 76
+    .line 64
 .end method

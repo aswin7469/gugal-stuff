@@ -1,6 +1,6 @@
 .class public final Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat;
 .super Landroidx/vectordrawable/graphics/drawable/VectorDrawableCommon;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -1110,7 +1110,7 @@
     iget-object v8, v7, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VectorDrawableCompatState;->mVPathRenderer:Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VPathRenderer;
 
     .line 11
-    const-string v9, "tintMode"
+    const-string/jumbo v9, "tintMode"
 
     invoke-static {v2, v9}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -1592,7 +1592,7 @@
     iput v10, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VFullPath;->mFillAlpha:F
 
     .line 81
-    const-string v10, "strokeLineCap"
+    const-string/jumbo v10, "strokeLineCap"
 
     invoke-static {v2, v10}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -1654,7 +1654,7 @@
     iput-object v11, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VFullPath;->mStrokeLineCap:Landroid/graphics/Paint$Cap;
 
     .line 87
-    const-string v10, "strokeLineJoin"
+    const-string/jumbo v10, "strokeLineJoin"
 
     invoke-static {v2, v10}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -1717,7 +1717,7 @@
     iget v10, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VFullPath;->mStrokeMiterlimit:F
 
     .line 94
-    const-string v11, "strokeMiterLimit"
+    const-string/jumbo v11, "strokeMiterLimit"
 
     invoke-static {v2, v11}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -1740,7 +1740,7 @@
     iput v10, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VFullPath;->mStrokeMiterlimit:F
 
     .line 97
-    const-string v10, "strokeColor"
+    const-string/jumbo v10, "strokeColor"
 
     const/4 v11, 0x3
 
@@ -1754,7 +1754,7 @@
     iget v10, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VFullPath;->mStrokeAlpha:F
 
     .line 99
-    const-string v11, "strokeAlpha"
+    const-string/jumbo v11, "strokeAlpha"
 
     invoke-static {v2, v11}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -1780,7 +1780,7 @@
     iget v10, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VFullPath;->mStrokeWidth:F
 
     .line 103
-    const-string v11, "strokeWidth"
+    const-string/jumbo v11, "strokeWidth"
 
     invoke-static {v2, v11}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -1806,7 +1806,7 @@
     iget v10, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VFullPath;->mTrimPathEnd:F
 
     .line 107
-    const-string v11, "trimPathEnd"
+    const-string/jumbo v11, "trimPathEnd"
 
     invoke-static {v2, v11}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -1832,7 +1832,7 @@
     iget v10, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VFullPath;->mTrimPathOffset:F
 
     .line 111
-    const-string v11, "trimPathOffset"
+    const-string/jumbo v11, "trimPathOffset"
 
     invoke-static {v2, v11}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -1858,7 +1858,7 @@
     iget v10, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VFullPath;->mTrimPathStart:F
 
     .line 115
-    const-string v11, "trimPathStart"
+    const-string/jumbo v11, "trimPathStart"
 
     invoke-static {v2, v11}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -2210,7 +2210,7 @@
     iget v9, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VGroup;->mTranslateX:F
 
     .line 162
-    const-string v10, "translateX"
+    const-string/jumbo v10, "translateX"
 
     invoke-static {v2, v10}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -2238,7 +2238,7 @@
     iget v9, v6, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VGroup;->mTranslateY:F
 
     .line 166
-    const-string v10, "translateY"
+    const-string/jumbo v10, "translateY"
 
     invoke-static {v2, v10}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 

@@ -1,14 +1,12 @@
 .class public final Lcom/android/systemui/keyguard/domain/interactor/KeyguardSmartspaceInteractor;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
 .field public final bcSmartspaceVisibility:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
 .field public final isWeatherEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
-
-.field public final keyguardSmartspaceRepository:Lcom/android/systemui/keyguard/data/repository/KeyguardSmartspaceRepositoryImpl;
 
 
 # direct methods
@@ -19,21 +17,18 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/android/systemui/keyguard/domain/interactor/KeyguardSmartspaceInteractor;->keyguardSmartspaceRepository:Lcom/android/systemui/keyguard/data/repository/KeyguardSmartspaceRepositoryImpl;
-
-    .line 5
     iget-object v0, p1, Lcom/android/systemui/keyguard/data/repository/KeyguardSmartspaceRepositoryImpl;->bcSmartspaceVisibility:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 7
+    .line 5
     iput-object v0, p0, Lcom/android/systemui/keyguard/domain/interactor/KeyguardSmartspaceInteractor;->bcSmartspaceVisibility:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 9
+    .line 7
     iget-object p1, p1, Lcom/android/systemui/keyguard/data/repository/KeyguardSmartspaceRepositoryImpl;->isWeatherEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 11
+    .line 9
     iput-object p1, p0, Lcom/android/systemui/keyguard/domain/interactor/KeyguardSmartspaceInteractor;->isWeatherEnabled:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
 
-    .line 13
+    .line 11
     return-void
-    .line 15
+    .line 13
 .end method

@@ -1,9 +1,9 @@
 .class public final synthetic Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Lcom/android/systemui/statusbar/policy/UserInfoController$OnUserInfoChangedListener;
+.implements Ljava/util/function/Function;
 
 
 # instance fields
@@ -27,25 +27,25 @@
 
 
 # virtual methods
-.method public final onUserInfoChanged(Landroid/graphics/drawable/Drawable;)V
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .line 1
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController$$ExternalSyntheticLambda3;->f$0:Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController;
 
     .line 2
-    iget-object p0, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
+    check-cast p1, Landroid/view/View;
 
     .line 4
-    check-cast p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;
+    iget p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarViewController;->mKeyguardHeadsUpShowingAmount:F
 
     .line 6
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardStatusBarView;->mMultiUserAvatar:Landroid/widget/ImageView;
+    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 8
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    move-result-object p0
 
-    .line 10
-    return-void
-    .line 13
+    .line 11
+    return-object p0
+    .line 12
 .end method

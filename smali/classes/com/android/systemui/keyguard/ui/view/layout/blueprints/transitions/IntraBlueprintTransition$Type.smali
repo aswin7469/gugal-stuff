@@ -1,16 +1,10 @@
 .class public final enum Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 .super Ljava/lang/Enum;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
 .field public static final synthetic $VALUES:[Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
-
-.field public static final enum ClockSize:Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
-
-.field public static final enum DefaultClockStepping:Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
-
-.field public static final enum DefaultTransition:Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
 .field public static final enum NoTransition:Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
@@ -46,110 +40,101 @@
     invoke-direct {v0, v2, v3, v1, v4}, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;-><init>(IILjava/lang/String;Z)V
 
     .line 10
-    sput-object v0, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;->ClockSize:Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
-
-    .line 13
     new-instance v1, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
-    .line 15
+    .line 13
     const-string v3, "ClockCenter"
 
-    .line 17
+    .line 15
     const/16 v5, 0x63
 
-    .line 19
+    .line 17
     invoke-direct {v1, v4, v5, v3, v2}, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;-><init>(IILjava/lang/String;Z)V
 
-    .line 21
+    .line 19
     new-instance v3, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
-    .line 24
+    .line 22
     const-string v5, "DefaultClockStepping"
 
-    .line 26
+    .line 24
     const/4 v6, 0x2
 
-    .line 28
+    .line 26
     const/16 v7, 0x62
 
-    .line 29
+    .line 27
     invoke-direct {v3, v6, v7, v5, v2}, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;-><init>(IILjava/lang/String;Z)V
 
-    .line 31
-    sput-object v3, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;->DefaultClockStepping:Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
-
-    .line 34
+    .line 29
     new-instance v5, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
-    .line 36
+    .line 32
     const-string v7, "SmartspaceVisibility"
 
-    .line 38
+    .line 34
     const/4 v8, 0x3
 
-    .line 40
+    .line 36
     invoke-direct {v5, v8, v6, v7, v4}, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;-><init>(IILjava/lang/String;Z)V
 
-    .line 41
+    .line 37
     sput-object v5, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;->SmartspaceVisibility:Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
-    .line 44
+    .line 40
     new-instance v6, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
-    .line 46
+    .line 42
     const-string v7, "DefaultTransition"
 
-    .line 48
+    .line 44
     const/4 v8, 0x4
 
-    .line 50
+    .line 46
     invoke-direct {v6, v8, v4, v7, v2}, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;-><init>(IILjava/lang/String;Z)V
 
-    .line 51
-    sput-object v6, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;->DefaultTransition:Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
-
-    .line 54
+    .line 47
     new-instance v7, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
-    .line 56
+    .line 50
     const-string v4, "NoTransition"
 
-    .line 58
+    .line 52
     const/4 v8, 0x5
 
-    .line 60
+    .line 54
     invoke-direct {v7, v8, v2, v4, v2}, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;-><init>(IILjava/lang/String;Z)V
 
-    .line 61
+    .line 55
     sput-object v7, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;->NoTransition:Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
-    .line 64
+    .line 58
     move-object v2, v3
 
-    .line 66
+    .line 60
     move-object v3, v5
 
-    .line 67
+    .line 61
     move-object v4, v6
 
-    .line 68
+    .line 62
     move-object v5, v7
 
-    .line 69
+    .line 63
     filled-new-array/range {v0 .. v5}, [Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
-    .line 70
+    .line 64
     move-result-object v0
 
-    .line 73
+    .line 67
     sput-object v0, Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;->$VALUES:[Lcom/android/systemui/keyguard/ui/view/layout/blueprints/transitions/IntraBlueprintTransition$Type;
 
-    .line 74
+    .line 68
     invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;->enumEntries([Ljava/lang/Enum;)Lkotlin/enums/EnumEntries;
 
-    .line 76
+    .line 70
     return-void
-    .line 79
+    .line 73
 .end method
 
 .method public constructor <init>(IILjava/lang/String;Z)V

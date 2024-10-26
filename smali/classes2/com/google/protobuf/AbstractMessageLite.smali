@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/protobuf/AbstractMessageLite;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/google/protobuf/MessageLite;
@@ -333,7 +333,7 @@
 .end method
 
 .method public final toByteArray()[B
-    .locals 4
+    .locals 5
 
     .line 1
     :try_start_0
@@ -355,7 +355,7 @@
     new-array v1, v0, [B
 
     .line 10
-    sget-object v2, Lcom/google/protobuf/CodedOutputStream;->logger:Ljava/util/logging/Logger;
+    sget-object v2, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->logger:Ljava/util/logging/Logger;
 
     .line 12
     new-instance v2, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
@@ -370,82 +370,117 @@
     check-cast v0, Lcom/google/protobuf/GeneratedMessageLite;
 
     .line 20
-    invoke-virtual {v0, v2}, Lcom/google/protobuf/GeneratedMessageLite;->writeTo(Lcom/google/protobuf/CodedOutputStream;)V
+    sget-object v3, Lcom/google/protobuf/Protobuf;->INSTANCE:Lcom/google/protobuf/Protobuf;
 
     .line 22
-    invoke-virtual {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->spaceLeft()I
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 25
-    move-result v0
+    .line 24
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 28
-    if-nez v0, :cond_0
+    .line 27
+    move-result-object v4
 
-    .line 29
-    return-object v1
+    .line 30
+    invoke-virtual {v3, v4}, Lcom/google/protobuf/Protobuf;->schemaFor(Ljava/lang/Class;)Lcom/google/protobuf/Schema;
 
     .line 31
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    .line 32
-    const-string v1, "Did not write as much data as expected."
+    move-result-object v3
 
     .line 34
+    iget-object v4, v2, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->wrapper:Lcom/google/protobuf/CodedOutputStreamWriter;
+
+    .line 35
+    if-eqz v4, :cond_0
+
+    .line 37
+    goto :goto_0
+
+    .line 39
+    :cond_0
+    new-instance v4, Lcom/google/protobuf/CodedOutputStreamWriter;
+
+    .line 40
+    invoke-direct {v4, v2}, Lcom/google/protobuf/CodedOutputStreamWriter;-><init>(Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;)V
+
+    .line 42
+    :goto_0
+    invoke-interface {v3, v0, v4}, Lcom/google/protobuf/Schema;->writeTo(Ljava/lang/Object;Lcom/google/protobuf/CodedOutputStreamWriter;)V
+
+    .line 45
+    invoke-virtual {v2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->spaceLeft()I
+
+    .line 48
+    move-result v0
+
+    .line 51
+    if-nez v0, :cond_1
+
+    .line 52
+    return-object v1
+
+    .line 54
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    .line 55
+    const-string v1, "Did not write as much data as expected."
+
+    .line 57
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 36
+    .line 59
     throw v0
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 39
+    .line 62
     :catch_0
     move-exception v0
 
-    .line 40
+    .line 63
     new-instance v1, Ljava/lang/RuntimeException;
 
-    .line 41
+    .line 64
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 43
+    .line 66
     const-string v3, "Serializing "
 
-    .line 45
+    .line 68
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 47
+    .line 70
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 50
+    .line 73
     move-result-object p0
 
-    .line 53
+    .line 76
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    .line 54
+    .line 77
     move-result-object p0
 
-    .line 57
+    .line 80
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 58
+    .line 81
     const-string p0, " to a byte array threw an IOException (should never happen)."
 
-    .line 61
+    .line 84
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 63
+    .line 86
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 66
+    .line 89
     move-result-object p0
 
-    .line 69
+    .line 92
     invoke-direct {v1, p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 70
+    .line 93
     throw v1
-    .line 73
+    .line 96
 .end method

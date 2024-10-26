@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/wallet/ui/WalletActivity;
 .super Landroidx/activity/ComponentActivity;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/service/quickaccesswallet/QuickAccessWalletClient$WalletServiceEventListener;
@@ -125,13 +125,13 @@
     invoke-virtual {v12, v14}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
     .line 18
-    const v0, 0x7f0e0215    # @layout/quick_access_wallet 'res/layout/quick_access_wallet.xml'
+    const v0, 0x7f0d0223    # @layout/quick_access_wallet 'res/layout/quick_access_wallet.xml'
 
     .line 21
     invoke-virtual {v12, v0}, Landroidx/activity/ComponentActivity;->setContentView(I)V
 
     .line 24
-    const v0, 0x7f0b005c    # @id/action_bar
+    const v0, 0x7f0a005c    # @id/action_bar
 
     .line 27
     invoke-virtual {v12, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -174,7 +174,7 @@
     move-result-object v0
 
     .line 58
-    const v1, 0x7f080710    # @drawable/ic_close 'res/drawable/ic_close.xml'
+    const v1, 0x7f080727    # @drawable/ic_close 'res/drawable/ic_close.xml'
 
     .line 59
     invoke-virtual {v12, v1}, Landroid/app/Activity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -183,7 +183,7 @@
     move-result-object v1
 
     .line 65
-    const v2, 0x7f06030e    # @color/material_dynamic_neutral70 '@color/m3_ref_palette_dynamic_neutral70'
+    const v2, 0x7f06031a    # @color/material_dynamic_neutral70 '@color/m3_ref_palette_dynamic_neutral70'
 
     .line 66
     invoke-virtual {v12, v2}, Landroid/app/Activity;->getColor(I)I
@@ -204,13 +204,13 @@
     move-result-object v0
 
     .line 82
-    const v1, 0x7f140075    # @string/accessibility_desc_close 'Close'
+    const v1, 0x7f130076    # @string/accessibility_desc_close 'Close'
 
     .line 83
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setHomeActionContentDescription(I)V
 
     .line 86
-    const v0, 0x7f0b08de    # @id/wallet_view
+    const v0, 0x7f0a0914    # @id/wallet_view
 
     .line 89
     invoke-virtual {v12, v0}, Landroid/app/Activity;->requireViewById(I)Landroid/view/View;
@@ -341,20 +341,20 @@
     move-result-object v0
 
     .line 5
-    const/high16 v1, 0x7f100000    # @menu/wallet_activity_options_menu 'res/menu/wallet_activity_options_menu.xml'
+    const v1, 0x7f0f0001    # @menu/wallet_activity_options_menu 'res/menu/wallet_activity_options_menu.xml'
 
     .line 6
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    .line 8
+    .line 9
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 11
+    .line 12
     move-result p0
 
-    .line 14
-    return p0
     .line 15
+    return p0
+    .line 16
 .end method
 
 .method public final onDestroy()V
@@ -544,6 +544,7 @@
 
     .line 119
     return-void
+    .line 122
 .end method
 
 .method public final onOptionsItemSelected(Landroid/view/MenuItem;)Z
@@ -572,7 +573,7 @@
 
     .line 15
     :cond_0
-    const v1, 0x7f0b08dc    # @id/wallet_lockscreen_settings
+    const v1, 0x7f0a0912    # @id/wallet_lockscreen_settings
 
     .line 16
     if-ne v0, v1, :cond_1
@@ -617,7 +618,7 @@
 .end method
 
 .method public final onPause()V
-    .locals 3
+    .locals 2
 
     .line 1
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
@@ -635,43 +636,21 @@
     iput-boolean v1, v0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mOccludingAppRequestingFp:Z
 
     .line 10
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
     .line 12
-    invoke-virtual {v0, v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->updateFingerprintListeningState(I)V
+    invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->updateFingerprintListeningState(I)V
 
     .line 13
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mOccludingAppBiometricUI:Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy$occludingAppBiometricUI$1;
 
     .line 16
-    if-eqz p0, :cond_0
-
-    .line 18
-    iget-object p0, p0, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy$occludingAppBiometricUI$1;->this$0:Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;
-
-    .line 20
-    iput-boolean v1, p0, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;->udfpsRequested:Z
-
-    .line 22
-    iget-object v0, p0, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;->view:Lcom/android/systemui/biometrics/UdfpsKeyguardViewLegacy;
-
-    .line 24
-    iput-boolean v1, v0, Lcom/android/systemui/biometrics/UdfpsKeyguardViewLegacy;->mUdfpsRequested:Z
-
-    .line 26
-    invoke-virtual {p0}, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;->updateAlpha()V
-
-    .line 28
-    invoke-virtual {p0}, Lcom/android/systemui/biometrics/UdfpsAnimationViewController;->updatePauseAuth()V
-
-    .line 31
-    :cond_0
     return-void
-    .line 34
+    .line 18
 .end method
 
 .method public final onResume()V
-    .locals 4
+    .locals 3
 
     .line 1
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
@@ -704,45 +683,23 @@
     iput-boolean v2, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mOccludingAppRequestingFp:Z
 
     .line 22
-    const/4 v3, 0x2
+    const/4 v2, 0x2
 
     .line 24
-    invoke-virtual {v1, v3}, Lcom/android/keyguard/KeyguardUpdateMonitor;->updateFingerprintListeningState(I)V
+    invoke-virtual {v1, v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->updateFingerprintListeningState(I)V
 
     .line 25
     iget-object v0, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mOccludingAppBiometricUI:Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy$occludingAppBiometricUI$1;
 
     .line 28
-    if-eqz v0, :cond_0
-
-    .line 30
-    iget-object v0, v0, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy$occludingAppBiometricUI$1;->this$0:Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;
-
-    .line 32
-    iput-boolean v2, v0, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;->udfpsRequested:Z
-
-    .line 34
-    iget-object v1, v0, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;->view:Lcom/android/systemui/biometrics/UdfpsKeyguardViewLegacy;
-
-    .line 36
-    iput-boolean v2, v1, Lcom/android/systemui/biometrics/UdfpsKeyguardViewLegacy;->mUdfpsRequested:Z
-
-    .line 38
-    invoke-virtual {v0}, Lcom/android/systemui/biometrics/UdfpsKeyguardViewControllerLegacy;->updateAlpha()V
-
-    .line 40
-    invoke-virtual {v0}, Lcom/android/systemui/biometrics/UdfpsAnimationViewController;->updatePauseAuth()V
-
-    .line 43
-    :cond_0
     iget-object p0, p0, Lcom/android/systemui/wallet/ui/WalletActivity;->mDeviceEntryFaceAuthInteractor:Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryFaceAuthInteractor;
 
-    .line 46
+    .line 30
     invoke-interface {p0}, Lcom/android/systemui/deviceentry/domain/interactor/DeviceEntryFaceAuthInteractor;->onWalletLaunched()V
 
-    .line 48
+    .line 32
     return-void
-    .line 51
+    .line 35
 .end method
 
 .method public final onStart()V
@@ -793,6 +750,7 @@
 
     .line 30
     return-void
+    .line 33
 .end method
 
 .method public final onStop()V

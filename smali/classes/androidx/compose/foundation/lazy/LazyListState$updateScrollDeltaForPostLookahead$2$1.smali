@@ -1,6 +1,6 @@
 .class final Landroidx/compose/foundation/lazy/LazyListState$updateScrollDeltaForPostLookahead$2$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -138,19 +138,19 @@
     invoke-direct {v4, p1}, Ljava/lang/Float;-><init>(F)V
 
     .line 33
-    new-instance p1, Ljava/lang/Float;
+    new-instance v1, Ljava/lang/Float;
 
     .line 36
-    const/high16 v1, 0x3f000000    # 0.5f
+    const/high16 v5, 0x3f000000    # 0.5f
 
     .line 38
-    invoke-direct {p1, v1}, Ljava/lang/Float;-><init>(F)V
+    invoke-direct {v1, v5}, Ljava/lang/Float;-><init>(F)V
 
     .line 40
-    const/high16 v1, 0x43c80000    # 400.0f
+    const/high16 v5, 0x43c80000    # 400.0f
 
     .line 43
-    invoke-static {v1, p1, v2}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
+    invoke-static {p1, v5, v1, v2}, Landroidx/compose/animation/core/AnimationSpecKt;->spring$default(FFLjava/lang/Object;I)Landroidx/compose/animation/core/SpringSpec;
 
     .line 45
     move-result-object v5
@@ -189,5 +189,4 @@
 
     .line 63
     return-object p0
-    .line 65
 .end method

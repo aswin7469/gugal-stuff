@@ -1,6 +1,6 @@
 .class final Landroidx/compose/foundation/MarqueeModifierNode$measure$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -54,63 +54,57 @@
     iget-object p1, p1, Landroidx/compose/foundation/MarqueeModifierNode;->offset:Landroidx/compose/animation/core/Animatable;
 
     .line 9
-    iget-object p1, p1, Landroidx/compose/animation/core/Animatable;->internalState:Landroidx/compose/animation/core/AnimationState;
+    invoke-virtual {p1}, Landroidx/compose/animation/core/Animatable;->getValue()Ljava/lang/Object;
 
     .line 11
-    iget-object p1, p1, Landroidx/compose/animation/core/AnimationState;->value$delegate:Landroidx/compose/runtime/ParcelableSnapshotMutableState;
-
-    .line 13
-    invoke-virtual {p1}, Landroidx/compose/runtime/SnapshotMutableStateImpl;->getValue()Ljava/lang/Object;
-
-    .line 15
     move-result-object p1
 
-    .line 18
+    .line 14
     check-cast p1, Ljava/lang/Number;
 
-    .line 19
+    .line 15
     invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
-    .line 21
+    .line 17
     move-result p1
 
-    .line 24
+    .line 20
     neg-float p1, p1
 
-    .line 25
+    .line 21
     iget-object p0, p0, Landroidx/compose/foundation/MarqueeModifierNode$measure$1;->this$0:Landroidx/compose/foundation/MarqueeModifierNode;
 
-    .line 26
+    .line 22
     invoke-virtual {p0}, Landroidx/compose/foundation/MarqueeModifierNode;->getDirection()F
 
-    .line 28
+    .line 24
     move-result p0
 
-    .line 31
+    .line 27
     mul-float/2addr p0, p1
 
-    .line 32
+    .line 28
     invoke-static {p0}, Lkotlin/math/MathKt;->roundToInt(F)I
 
-    .line 33
+    .line 29
     move-result v2
 
-    .line 36
+    .line 32
     const/4 v3, 0x0
 
-    .line 37
+    .line 33
     const/16 v5, 0xc
 
-    .line 38
+    .line 34
     const/4 v4, 0x0
 
-    .line 40
+    .line 36
     invoke-static/range {v0 .. v5}, Landroidx/compose/ui/layout/Placeable$PlacementScope;->placeWithLayer$default(Landroidx/compose/ui/layout/Placeable$PlacementScope;Landroidx/compose/ui/layout/Placeable;IILkotlin/jvm/functions/Function1;I)V
 
-    .line 41
+    .line 37
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 44
+    .line 40
     return-object p0
-    .line 46
+    .line 42
 .end method

@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/volume/panel/component/anc/ui/composable/SliceAndroidViewKt$SliceAndroidView$1;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -63,7 +63,7 @@
     new-instance v2, Landroid/view/ContextThemeWrapper;
 
     .line 8
-    const v3, 0x7f15072b    # @style/Widget.SliceView.VolumePanel
+    const v3, 0x7f140735    # @style/Widget.SliceView.VolumePanel
 
     .line 10
     invoke-direct {v2, p1, v3}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
@@ -176,7 +176,7 @@
     move-result-object v3
 
     .line 88
-    const v4, 0x7f070049    # @dimen/abc_slice_icon_size '24.0dp'
+    const v4, 0x7f07004a    # @dimen/abc_slice_icon_size '24.0dp'
 
     .line 89
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -188,7 +188,7 @@
     iput v4, p1, Landroidx/slice/widget/ShortcutView;->mSmallIconSize:I
 
     .line 96
-    const v4, 0x7f070056    # @dimen/abc_slice_shortcut_size '56.0dp'
+    const v4, 0x7f070057    # @dimen/abc_slice_shortcut_size '56.0dp'
 
     .line 98
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

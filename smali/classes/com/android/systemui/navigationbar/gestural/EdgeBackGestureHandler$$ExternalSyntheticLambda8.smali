@@ -1,46 +1,69 @@
 .class public final synthetic Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda8;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic $r8$classId:I
+
+.field public final synthetic f$0:Lcom/android/internal/policy/GestureNavigationSettingsObserver;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/android/internal/policy/GestureNavigationSettingsObserver;I)V
+    .locals 0
+
+    .line 1
+    iput p2, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda8;->$r8$classId:I
+
+    .line 2
+    iput-object p1, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda8;->f$0:Lcom/android/internal/policy/GestureNavigationSettingsObserver;
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    return-void
+    .line 9
+.end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+.method public final run()V
+    .locals 1
 
     .line 1
-    check-cast p1, Lcom/android/wm/shell/pip/Pip;
+    iget v0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda8;->$r8$classId:I
 
     .line 2
-    check-cast p1, Lcom/android/wm/shell/pip/phone/PipController$PipImpl;
+    iget-object p0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$$ExternalSyntheticLambda8;->f$0:Lcom/android/internal/policy/GestureNavigationSettingsObserver;
 
     .line 4
-    iget-object p0, p1, Lcom/android/wm/shell/pip/phone/PipController$PipImpl;->this$0:Lcom/android/wm/shell/pip/phone/PipController;
+    packed-switch v0, :pswitch_data_0
 
     .line 6
-    iget-object p0, p0, Lcom/android/wm/shell/pip/phone/PipController;->mMainExecutor:Lcom/android/wm/shell/common/ShellExecutor;
+    invoke-virtual {p0}, Lcom/android/internal/policy/GestureNavigationSettingsObserver;->register()V
 
-    .line 8
-    new-instance v0, Lcom/android/wm/shell/pip/phone/PipController$$ExternalSyntheticLambda0;
-
-    .line 10
-    const/4 v1, 0x0
+    .line 9
+    return-void
 
     .line 12
-    const/4 v2, 0x3
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/android/internal/policy/GestureNavigationSettingsObserver;->unregister()V
 
     .line 13
-    invoke-direct {v0, v2, p1, v1}, Lcom/android/wm/shell/pip/phone/PipController$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+    return-void
 
-    .line 14
-    check-cast p0, Lcom/android/wm/shell/common/HandlerExecutor;
+    .line 16
+    nop
 
     .line 17
-    invoke-virtual {p0, v0}, Lcom/android/wm/shell/common/HandlerExecutor;->execute(Ljava/lang/Runnable;)V
-
-    .line 19
-    return-void
-    .line 22
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+    .line 18
 .end method

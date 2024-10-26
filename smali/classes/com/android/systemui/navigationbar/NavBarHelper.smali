@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/navigationbar/NavBarHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/accessibility/AccessibilityManager$AccessibilityServicesStateChangeListener;
@@ -86,7 +86,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/view/accessibility/AccessibilityManager;Lcom/android/systemui/accessibility/AccessibilityButtonModeObserver;Lcom/android/systemui/accessibility/AccessibilityButtonTargetsObserver;Lcom/android/systemui/accessibility/SystemActions;Lcom/android/systemui/recents/OverviewProxyService;Ldagger/Lazy;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/navigationbar/NavigationModeController;Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$Factory;Landroid/view/IWindowManager;Lcom/android/systemui/settings/UserTracker;Lcom/android/systemui/settings/DisplayTracker;Lcom/android/systemui/statusbar/NotificationShadeWindowController;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/statusbar/CommandQueue;Ljava/util/concurrent/Executor;)V
-    .locals 7
+    .locals 8
 
     .line 1
     move-object v0, p0
@@ -222,116 +222,134 @@
     iput-object v4, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mAssistManagerLazy:Ldagger/Lazy;
 
     .line 92
-    move-object v4, p8
+    move-object/from16 v4, p8
 
     .line 94
     iput-object v4, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
-    .line 95
+    .line 96
     move-object/from16 v4, p12
 
-    .line 97
+    .line 98
     iput-object v4, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 99
+    .line 100
     move-object v4, p5
 
-    .line 101
+    .line 102
     iput-object v4, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mSystemActions:Lcom/android/systemui/accessibility/SystemActions;
 
-    .line 102
+    .line 103
     move-object v4, p3
 
-    .line 104
+    .line 105
     iput-object v4, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mAccessibilityButtonModeObserver:Lcom/android/systemui/accessibility/AccessibilityButtonModeObserver;
 
-    .line 105
+    .line 106
     move-object v4, p4
 
-    .line 107
+    .line 108
     iput-object v4, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mAccessibilityButtonTargetsObserver:Lcom/android/systemui/accessibility/AccessibilityButtonTargetsObserver;
 
-    .line 108
+    .line 109
     move-object/from16 v4, p11
 
-    .line 110
+    .line 111
     iput-object v4, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mWm:Landroid/view/IWindowManager;
 
-    .line 112
+    .line 113
     invoke-virtual/range {p13 .. p13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 114
-    invoke-virtual/range {p10 .. p10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 117
+    .line 115
     new-instance v4, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$Factory$$ExternalSyntheticLambda0;
 
-    .line 120
+    .line 118
     invoke-direct {v4, v2, p1}, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$Factory$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$Factory;Landroid/content/Context;)V
 
-    .line 122
+    .line 120
     iget-object v1, v2, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$Factory;->mUiThreadContext:Lcom/android/systemui/util/concurrency/UiThreadContext;
 
-    .line 125
+    .line 123
     iget-object v1, v1, Lcom/android/systemui/util/concurrency/UiThreadContext;->handler:Landroid/os/Handler;
 
+    .line 125
+    new-instance v2, Ljava/util/concurrent/atomic/AtomicReference;
+
     .line 127
-    invoke-static {v1, v4}, Lcom/android/systemui/util/concurrency/UiThreadContextKt;->runWithScissors(Landroid/os/Handler;Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;
+    invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 129
-    move-result-object v1
+    new-instance v5, Lcom/android/systemui/util/concurrency/UiThreadContextKt$runWithScissors$1;
 
     .line 132
-    check-cast v1, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;
+    invoke-direct {v5, v2, v4}, Lcom/android/systemui/util/concurrency/UiThreadContextKt$runWithScissors$1;-><init>(Ljava/util/concurrent/atomic/AtomicReference;Lkotlin/jvm/functions/Function0;)V
 
-    .line 133
-    iput-object v1, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mEdgeBackGestureHandler:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;
-
-    .line 135
-    move-object/from16 v1, p18
+    .line 134
+    const-wide/16 v6, 0x96
 
     .line 137
-    iput-object v1, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mMainExecutor:Ljava/util/concurrent/Executor;
+    invoke-virtual {v1, v5, v6, v7}, Landroid/os/Handler;->runWithScissors(Ljava/lang/Runnable;J)Z
 
     .line 139
-    move-object/from16 v1, p9
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    .line 141
-    invoke-virtual {v1, p0}, Lcom/android/systemui/navigationbar/NavigationModeController;->addListener(Lcom/android/systemui/navigationbar/NavigationModeController$ModeChangedListener;)I
+    .line 142
+    move-result-object v1
 
-    .line 143
-    move-result v1
+    .line 145
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 146
-    iput v1, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mNavBarMode:I
-
-    .line 147
-    invoke-virtual {v3, p0}, Lcom/android/systemui/statusbar/CommandQueue;->addCallback(Lcom/android/systemui/statusbar/CommandQueue$Callbacks;)V
+    check-cast v1, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;
 
     .line 149
-    move-object/from16 v1, p15
+    iput-object v1, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mEdgeBackGestureHandler:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;
 
-    .line 152
-    check-cast v1, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
+    .line 151
+    move-object/from16 v1, p18
 
-    .line 154
-    invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
+    .line 153
+    iput-object v1, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mMainExecutor:Ljava/util/concurrent/Executor;
 
-    .line 156
-    move-object v1, p6
+    .line 155
+    move-object/from16 v1, p9
+
+    .line 157
+    invoke-virtual {v1, p0}, Lcom/android/systemui/navigationbar/NavigationModeController;->addListener(Lcom/android/systemui/navigationbar/NavigationModeController$ModeChangedListener;)I
 
     .line 159
-    invoke-virtual {p6, p0}, Lcom/android/systemui/recents/OverviewProxyService;->addCallback(Lcom/android/systemui/recents/OverviewProxyService$OverviewProxyListener;)V
+    move-result v1
 
-    .line 160
-    move-object/from16 v1, p16
+    .line 162
+    iput v1, v0, Lcom/android/systemui/navigationbar/NavBarHelper;->mNavBarMode:I
 
     .line 163
-    invoke-virtual {v1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
+    invoke-virtual {v3, p0}, Lcom/android/systemui/statusbar/CommandQueue;->addCallback(Lcom/android/systemui/statusbar/CommandQueue$Callbacks;)V
 
     .line 165
-    return-void
+    move-object/from16 v1, p15
+
     .line 168
+    check-cast v1, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
+
+    .line 170
+    invoke-virtual {v1, p0}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
+
+    .line 172
+    move-object v1, p6
+
+    .line 175
+    invoke-virtual {p6, p0}, Lcom/android/systemui/recents/OverviewProxyService;->addCallback(Lcom/android/systemui/recents/OverviewProxyService$OverviewProxyListener;)V
+
+    .line 176
+    move-object/from16 v1, p16
+
+    .line 179
+    invoke-virtual {v1, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
+
+    .line 181
+    return-void
+    .line 184
 .end method
 
 .method public static transitionMode(IZ)I
@@ -487,7 +505,7 @@
     check-cast v0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
 
     .line 4
-    iget-object v0, v0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/scene/ui/view/WindowRootView;
+    iget-object v0, v0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mWindowRootView:Lcom/android/systemui/shade/NotificationShadeWindowView;
 
     .line 6
     iget-object p0, p0, Lcom/android/systemui/navigationbar/NavBarHelper;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
@@ -1227,60 +1245,57 @@
     iget-object v0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
     .line 78
-    iget-object v0, v0, Lcom/android/systemui/recents/OverviewProxyService;->mConnectionCallbacks:Ljava/util/List;
+    invoke-virtual {v0, p1}, Lcom/android/systemui/recents/OverviewProxyService;->removeCallback(Lcom/android/systemui/recents/OverviewProxyService$OverviewProxyListener;)V
 
     .line 80
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    .line 82
     iget-object p1, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mSysUiState:Lcom/android/systemui/model/SysUiState;
 
-    .line 85
+    .line 83
     iget-object p1, p1, Lcom/android/systemui/model/SysUiState;->mCallbacks:Ljava/util/List;
 
-    .line 87
+    .line 85
     iget-object v0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mSysUiStateCallback:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$6;
 
-    .line 89
+    .line 87
     invoke-interface {p1, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 91
+    .line 89
     iget-object p1, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mInputManager:Landroid/hardware/input/InputManager;
 
-    .line 94
+    .line 92
     iget-object v0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mInputDeviceListener:Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler$8;
 
-    .line 96
+    .line 94
     invoke-virtual {p1, v0}, Landroid/hardware/input/InputManager;->unregisterInputDeviceListener(Landroid/hardware/input/InputManager$InputDeviceListener;)V
 
-    .line 98
+    .line 96
     iget-object p1, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mTrackpadsConnected:Ljava/util/Set;
 
-    .line 101
+    .line 99
     check-cast p1, Landroid/util/ArraySet;
 
-    .line 103
+    .line 101
     invoke-virtual {p1}, Landroid/util/ArraySet;->clear()V
 
-    .line 105
+    .line 103
     invoke-virtual {p0}, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->updateIsEnabled()V
 
-    .line 108
+    .line 106
     iget-object p1, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mUserChangedCallback:Lcom/android/systemui/settings/UserTracker$Callback;
 
-    .line 111
+    .line 109
     iget-object p0, p0, Lcom/android/systemui/navigationbar/gestural/EdgeBackGestureHandler;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 113
+    .line 111
     check-cast p0, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 115
+    .line 113
     invoke-virtual {p0, p1}, Lcom/android/systemui/settings/UserTrackerImpl;->removeCallback(Lcom/android/systemui/settings/UserTracker$Callback;)V
 
-    .line 117
+    .line 115
     :cond_0
     return-void
-    .line 120
+    .line 118
 .end method
 
 .method public final setAssistantOverridesRequested([I)V
@@ -1296,17 +1311,23 @@
     move-result-object v0
 
     .line 7
-    check-cast v0, Lcom/android/systemui/assist/AssistManager;
+    check-cast v0, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 8
-    iput-object p1, v0, Lcom/android/systemui/assist/AssistManager;->mAssistOverrideInvocationTypes:[I
+    iput-object p1, v0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mAssistOverrideInvocationTypes:[I
 
     .line 10
-    invoke-virtual {p0}, Lcom/android/systemui/navigationbar/NavBarHelper;->updateAssistantAvailability()V
+    iget-object v0, v0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mOpaEnabledReceiver:Lcom/google/android/systemui/assist/OpaEnabledReceiver;
 
     .line 12
+    iput-object p1, v0, Lcom/google/android/systemui/assist/OpaEnabledReceiver;->mAssistOverrideInvocationTypes:[I
+
+    .line 14
+    invoke-virtual {p0}, Lcom/android/systemui/navigationbar/NavBarHelper;->updateAssistantAvailability()V
+
+    .line 16
     return-void
-    .line 15
+    .line 19
 .end method
 
 .method public final setWindowState(III)V
@@ -1346,10 +1367,10 @@
     move-result-object p0
 
     .line 7
-    check-cast p0, Lcom/android/systemui/assist/AssistManager;
+    check-cast p0, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/android/systemui/assist/AssistManager;->startAssist(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/systemui/assist/AssistManagerGoogle;->startAssist(Landroid/os/Bundle;)V
 
     .line 10
     return-void
@@ -1585,7 +1606,7 @@
     move-result-object v0
 
     .line 7
-    check-cast v0, Lcom/android/systemui/assist/AssistManager;
+    check-cast v0, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 8
     iget-object v1, p0, Lcom/android/systemui/navigationbar/NavBarHelper;->mUserTracker:Lcom/android/systemui/settings/UserTracker;
@@ -1600,7 +1621,7 @@
     move-result v1
 
     .line 17
-    iget-object v0, v0, Lcom/android/systemui/assist/AssistManager;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
+    iget-object v0, v0, Lcom/google/android/systemui/assist/AssistManagerGoogle;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
 
     .line 18
     invoke-virtual {v0, v1}, Lcom/android/internal/app/AssistUtils;->getAssistComponentForUser(I)Landroid/content/ComponentName;
@@ -1638,13 +1659,13 @@
     move-result-object v3
 
     .line 36
-    check-cast v3, Lcom/android/systemui/assist/AssistManager;
+    check-cast v3, Lcom/google/android/systemui/assist/AssistManagerGoogle;
 
     .line 37
     const/4 v4, 0x5
 
     .line 39
-    invoke-virtual {v3, v4}, Lcom/android/systemui/assist/AssistManager;->shouldOverrideAssist(I)Z
+    invoke-virtual {v3, v4}, Lcom/google/android/systemui/assist/AssistManagerGoogle;->shouldOverrideAssist(I)Z
 
     .line 40
     move-result v3
@@ -1662,7 +1683,7 @@
     if-eqz v3, :cond_1
 
     .line 50
-    const v5, 0x1110208    # @android:bool/config_sf_slowBlur
+    const v5, 0x1110207    # @android:bool/config_sf_limitedAlpha
 
     .line 52
     goto :goto_1

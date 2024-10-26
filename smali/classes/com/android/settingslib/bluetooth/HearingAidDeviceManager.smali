@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/bluetooth/HearingAidDeviceManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -1675,7 +1675,7 @@
     const-string p2, "Unexpected routingValue: "
 
     .line 150
-    invoke-static {p1, p2}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 152
     move-result-object p1
@@ -2029,45 +2029,45 @@
     if-eq p0, v3, :cond_3
 
     .line 66
-    const-string v1, "syncing preset from "
+    const-string/jumbo v1, "syncing preset from "
 
     .line 68
     const-string v2, "->"
 
-    .line 70
+    .line 71
     const-string v4, ", device="
 
-    .line 72
+    .line 73
     invoke-static {v3, p0, v1, v2, v4}, Landroidx/compose/foundation/layout/RowColumnMeasurePolicyKt$$ExternalSyntheticOutline0;->m(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 74
+    .line 75
     move-result-object v1
-
-    .line 77
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 78
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 79
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 81
+    .line 82
     move-result-object v1
 
-    .line 84
+    .line 85
     const-string v2, "HearingAidDeviceManager"
 
-    .line 85
+    .line 86
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
+    .line 88
     iget-object p1, p1, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 90
+    .line 91
     invoke-virtual {v0, p1, p0}, Lcom/android/settingslib/bluetooth/HapClientProfile;->selectPreset(Landroid/bluetooth/BluetoothDevice;I)V
 
-    .line 92
+    .line 93
     :cond_3
     return-void
-    .line 95
+    .line 96
 .end method
 
 .method public final updateHearingAidsDevices()V

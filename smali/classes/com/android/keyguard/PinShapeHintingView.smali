@@ -1,6 +1,6 @@
 .class public Lcom/android/keyguard/PinShapeHintingView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/keyguard/PinShapeInput;
@@ -77,7 +77,7 @@
     move-result-object v1
 
     .line 38
-    const v2, 0x7f070866    # @dimen/password_shape_size '30.0dp'
+    const v2, 0x7f0708b6    # @dimen/password_shape_size '30.0dp'
 
     .line 39
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -114,7 +114,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 64
-    const v2, 0x7f080a86    # @drawable/pin_dot_avd 'res/drawable/pin_dot_avd.xml'
+    const v2, 0x7f080ac1    # @drawable/pin_dot_avd 'res/drawable/pin_dot_avd.xml'
 
     .line 67
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -220,7 +220,7 @@
     iput v0, p0, Lcom/android/keyguard/PinShapeHintingView;->mPosition:I
 
     .line 9
-    const v1, 0x7f080a87    # @drawable/pin_dot_delete_avd 'res/drawable/pin_dot_delete_avd.xml'
+    const v1, 0x7f080ac2    # @drawable/pin_dot_delete_avd 'res/drawable/pin_dot_delete_avd.xml'
 
     .line 11
     invoke-virtual {p0, v0, v1}, Lcom/android/keyguard/PinShapeHintingView;->setAnimatedDrawable(II)V

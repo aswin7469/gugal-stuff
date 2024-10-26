@@ -1,6 +1,6 @@
 .class public final Landroidx/appcompat/widget/AppCompatSeekBarHelper;
 .super Landroidx/appcompat/widget/AppCompatProgressBarHelper;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -340,7 +340,7 @@
     const/4 p2, 0x1
 
     .line 2
-    const v5, 0x7f040554    # @attr/seekBarStyle
+    const v5, 0x7f040558    # @attr/seekBarStyle
 
     .line 3
     invoke-super {p0, p1, v5}, Landroidx/appcompat/widget/AppCompatProgressBarHelper;->loadFromAttributes(Landroid/util/AttributeSet;I)V

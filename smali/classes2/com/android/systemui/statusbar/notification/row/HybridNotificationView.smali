@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;
 .super Lcom/android/keyguard/AlphaOptimizedLinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/TransformableView;
@@ -318,7 +318,7 @@
 
     .line 61
     :cond_1
-    const v0, 0x7f0b0581    # @id/notification_title
+    const v0, 0x7f0a05a6    # @id/notification_title
 
     .line 64
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -333,7 +333,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/notification/row/HybridNotificationView;->mTitleView:Landroid/widget/TextView;
 
     .line 73
-    const v0, 0x7f0b0580    # @id/notification_text
+    const v0, 0x7f0a05a5    # @id/notification_text
 
     .line 75
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;

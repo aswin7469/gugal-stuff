@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/communal/data/repository/CommunalSettingsRepositoryImpl$getWidgetCategories$$inlined$map$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -103,7 +103,7 @@
     invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
     .line 37
-    goto :goto_2
+    goto :goto_1
 
     .line 40
     :cond_1
@@ -132,128 +132,53 @@
     iget-object p1, p1, Lcom/android/systemui/communal/data/repository/CommunalSettingsRepositoryImpl;->secureSettings:Lcom/android/systemui/util/settings/SecureSettings;
 
     .line 56
-    sget-boolean p2, Lcom/android/settingslib/flags/FeatureFlagsImpl;->systemui_is_cached:Z
+    iget-object p2, p0, Lcom/android/systemui/communal/data/repository/CommunalSettingsRepositoryImpl$getWidgetCategories$$inlined$map$1$2;->$user$inlined:Landroid/content/pm/UserInfo;
 
     .line 58
-    if-nez p2, :cond_3
+    iget p2, p2, Landroid/content/pm/UserInfo;->id:I
 
     .line 60
-    :try_start_0
-    const-string p2, "systemui"
+    const-string v2, "glanceable_hub_content_setting"
 
     .line 62
-    const/4 v2, 0x0
+    const/4 v4, 0x2
 
     .line 64
-    new-array v4, v2, [Ljava/lang/String;
+    invoke-interface {p1, v2, v4, p2}, Lcom/android/systemui/util/settings/UserSettingsProxy;->getIntForUser(Ljava/lang/String;II)I
 
     .line 65
-    invoke-static {p2, v4}, Landroid/provider/DeviceConfig;->getProperties(Ljava/lang/String;[Ljava/lang/String;)Landroid/provider/DeviceConfig$Properties;
-
-    .line 67
-    move-result-object p2
-
-    .line 70
-    const-string v4, "com.android.settingslib.flags.allow_all_widgets_on_lockscreen_by_default"
-
-    .line 71
-    invoke-virtual {p2, v4, v2}, Landroid/provider/DeviceConfig$Properties;->getBoolean(Ljava/lang/String;Z)Z
-
-    .line 73
-    move-result v4
-
-    .line 76
-    sput-boolean v4, Lcom/android/settingslib/flags/FeatureFlagsImpl;->allowAllWidgetsOnLockscreenByDefault:Z
-
-    .line 77
-    const-string v4, "com.android.settingslib.flags.new_status_bar_icons"
-
-    .line 79
-    invoke-virtual {p2, v4, v2}, Landroid/provider/DeviceConfig$Properties;->getBoolean(Ljava/lang/String;Z)Z
-
-    .line 81
-    move-result p2
-
-    .line 84
-    sput-boolean p2, Lcom/android/settingslib/flags/FeatureFlagsImpl;->newStatusBarIcons:Z
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 85
-    sput-boolean v3, Lcom/android/settingslib/flags/FeatureFlagsImpl;->systemui_is_cached:Z
-
-    .line 87
-    goto :goto_1
-
-    .line 89
-    :catch_0
-    move-exception p0
-
-    .line 90
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    .line 91
-    const-string p2, "Cannot read value from namespace systemui from DeviceConfig. It could be that the code using flag executed before SettingsProvider initialization. Please use fixed read-only flag by adding is_fixed_read_only: true in flag declaration."
-
-    .line 93
-    invoke-direct {p1, p2, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 95
-    throw p1
-
-    .line 98
-    :cond_3
-    :goto_1
-    sget-boolean p2, Lcom/android/settingslib/flags/FeatureFlagsImpl;->allowAllWidgetsOnLockscreenByDefault:Z
-
-    .line 99
-    or-int/lit8 p2, p2, 0x2
-
-    .line 101
-    iget-object v2, p0, Lcom/android/systemui/communal/data/repository/CommunalSettingsRepositoryImpl$getWidgetCategories$$inlined$map$1$2;->$user$inlined:Landroid/content/pm/UserInfo;
-
-    .line 103
-    iget v2, v2, Landroid/content/pm/UserInfo;->id:I
-
-    .line 105
-    const-string v4, "glanceable_hub_content_setting"
-
-    .line 107
-    invoke-interface {p1, v4, p2, v2}, Lcom/android/systemui/util/settings/UserSettingsProxy;->getIntForUser(Ljava/lang/String;II)I
-
-    .line 109
     move-result p1
 
-    .line 112
+    .line 68
     new-instance p2, Lcom/android/systemui/communal/data/model/CommunalWidgetCategories;
 
-    .line 113
+    .line 69
     invoke-direct {p2, p1}, Lcom/android/systemui/communal/data/model/CommunalWidgetCategories;-><init>(I)V
 
-    .line 115
+    .line 71
     iput v3, v0, Lcom/android/systemui/communal/data/repository/CommunalSettingsRepositoryImpl$getWidgetCategories$$inlined$map$1$2$1;->label:I
 
-    .line 118
+    .line 74
     iget-object p0, p0, Lcom/android/systemui/communal/data/repository/CommunalSettingsRepositoryImpl$getWidgetCategories$$inlined$map$1$2;->$this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
 
-    .line 120
+    .line 76
     invoke-interface {p0, p2, v0}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 122
+    .line 78
     move-result-object p0
 
-    .line 125
-    if-ne p0, v1, :cond_4
+    .line 81
+    if-ne p0, v1, :cond_3
 
-    .line 126
+    .line 82
     return-object v1
 
-    .line 128
-    :cond_4
-    :goto_2
+    .line 84
+    :cond_3
+    :goto_1
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 129
+    .line 85
     return-object p0
-    .line 131
+    .line 87
 .end method

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/row/PartialConversationInfo;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/row/NotificationGuts$GutsContent;
@@ -25,7 +25,7 @@
 
 .field public final mOnDone:Lcom/android/systemui/statusbar/notification/row/PartialConversationInfo$$ExternalSyntheticLambda0;
 
-.field public mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda1;
+.field public mOnSettingsClickListener:Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager$$ExternalSyntheticLambda2;
 
 .field public mPackageName:Ljava/lang/String;
 
@@ -201,7 +201,7 @@
     move-result-object p0
 
     .line 34
-    const v1, 0x7f1406da    # @string/notification_channel_controls_opened_accessibility 'Notification controls for %1$s opened'
+    const v1, 0x7f130735    # @string/notification_channel_controls_opened_accessibility 'Notification controls for %1$s opened'
 
     .line 35
     invoke-virtual {v0, v1, p0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -235,7 +235,7 @@
     move-result-object p0
 
     .line 57
-    const v1, 0x7f1406d9    # @string/notification_channel_controls_closed_accessibility 'Notification controls for %1$s closed'
+    const v1, 0x7f130734    # @string/notification_channel_controls_closed_accessibility 'Notification controls for %1$s closed'
 
     .line 58
     invoke-virtual {v0, v1, p0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

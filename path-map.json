@@ -100,6 +100,30 @@
     "alias": "META-INF/alias_67677103"
   },
   {
+    "name": "META-INF/vendor__google__AILabs__warp__lockscreen__src__main__java__com__google__android__apps__warp__lockscreen__presentation__composables__android_common__ailabs_warp_lockscreen_presentation_composables.kotlin_module",
+    "alias": "META-INF/alias_1e25ab99"
+  },
+  {
+    "name": "META-INF/vendor__google__AILabs__warp__lockscreen__src__main__java__com__google__android__apps__warp__lockscreen__presentation__uidata__android_common__ailabs_warp_lockscreen_presentation_uidata.kotlin_module",
+    "alias": "META-INF/alias_34642c11"
+  },
+  {
+    "name": "META-INF/vendor__unbundled_google__libraries__pearllib__android_common__PearlLib.kotlin_module",
+    "alias": "META-INF/alias_6de4af61"
+  },
+  {
+    "name": "META-INF/vendor__unbundled_google__libraries__settingsgooglelib__android_common__SettingsGoogleLib.kotlin_module",
+    "alias": "META-INF/alias_c208ad0d"
+  },
+  {
+    "name": "META-INF/vendor__unbundled_google__packages__SystemUIGoogle__android_common__sysuig.kotlin_module",
+    "alias": "META-INF/alias_0e8c8693"
+  },
+  {
+    "name": "META-INF/vendor__unbundled_google__packages__SystemUIGoogle__bcsmartspace__android_common__bcsmartspace.kotlin_module",
+    "alias": "META-INF/alias_6b384589"
+  },
+  {
     "name": "res/anim-v21/design_bottom_sheet_slide_in.xml",
     "alias": "res/anim/design_bottom_sheet_slide_in.xml"
   },
@@ -606,10 +630,6 @@
   {
     "name": "res/drawable-nodpi-v4/tuner.xml",
     "alias": "res/drawable-nodpi/tuner.xml"
-  },
-  {
-    "name": "res/drawable-nodpi-v4/udfps_icon_pressed.png",
-    "alias": "res/drawable-nodpi/udfps_icon_pressed.png"
   },
   {
     "name": "res/drawable-sw600dp-hdpi-v13/ic_sysbar_lights_out_dot_small.png",

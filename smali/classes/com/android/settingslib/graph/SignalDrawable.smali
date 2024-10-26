@@ -1,10 +1,10 @@
 .class public final Lcom/android/settingslib/graph/SignalDrawable;
 .super Landroid/graphics/drawable/DrawableWrapper;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
-.field public static final ICON_RES:I
+.field public static final synthetic $r8$clinit:I
 
 
 # instance fields
@@ -38,301 +38,270 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    .line 1
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 2
-    move-result v0
-
-    .line 5
-    if-eqz v0, :cond_0
-
-    .line 6
-    const v0, 0x7f08084b    # @drawable/ic_mobile_level_list 'res/drawable/ic_mobile_level_list.xml'
-
-    .line 8
-    goto :goto_0
-
-    .line 11
-    :cond_0
-    const v0, 0x1080593    # @android:drawable/ic_settings_language
-
-    .line 12
-    :goto_0
-    sput v0, Lcom/android/settingslib/graph/SignalDrawable;->ICON_RES:I
-
-    .line 15
-    return-void
-    .line 17
-.end method
-
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 5
 
     .line 1
-    sget v0, Lcom/android/settingslib/graph/SignalDrawable;->ICON_RES:I
+    const v0, 0x1080591    # @android:drawable/ic_settings_24dp
 
     .line 2
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    .line 4
+    .line 5
     move-result-object v0
-
-    .line 7
-    invoke-direct {p0, v0}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     .line 8
+    invoke-direct {p0, v0}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
+
+    .line 9
     new-instance v0, Landroid/graphics/Paint;
 
-    .line 11
+    .line 12
     const/4 v1, 0x1
 
-    .line 13
+    .line 14
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 14
+    .line 15
     iput-object v0, p0, Lcom/android/settingslib/graph/SignalDrawable;->mForegroundPaint:Landroid/graphics/Paint;
 
-    .line 17
+    .line 18
     new-instance v0, Landroid/graphics/Paint;
 
-    .line 19
+    .line 20
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 21
+    .line 22
     iput-object v0, p0, Lcom/android/settingslib/graph/SignalDrawable;->mTransparentPaint:Landroid/graphics/Paint;
 
-    .line 24
+    .line 25
     new-instance v1, Landroid/graphics/Path;
 
-    .line 26
+    .line 27
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 28
+    .line 29
     iput-object v1, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutPath:Landroid/graphics/Path;
 
-    .line 31
+    .line 32
     new-instance v1, Landroid/graphics/Path;
 
-    .line 33
+    .line 34
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 35
+    .line 36
     iput-object v1, p0, Lcom/android/settingslib/graph/SignalDrawable;->mForegroundPath:Landroid/graphics/Path;
 
-    .line 38
+    .line 39
     new-instance v1, Landroid/graphics/Path;
 
-    .line 40
+    .line 41
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 42
+    .line 43
     iput-object v1, p0, Lcom/android/settingslib/graph/SignalDrawable;->mAttributionPath:Landroid/graphics/Path;
 
-    .line 45
+    .line 46
     new-instance v2, Landroid/graphics/Matrix;
 
-    .line 47
+    .line 48
     invoke-direct {v2}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 49
+    .line 50
     iput-object v2, p0, Lcom/android/settingslib/graph/SignalDrawable;->mAttributionScaleMatrix:Landroid/graphics/Matrix;
 
-    .line 52
+    .line 53
     new-instance v2, Landroid/graphics/Path;
 
-    .line 54
+    .line 55
     invoke-direct {v2}, Landroid/graphics/Path;-><init>()V
 
-    .line 56
+    .line 57
     iput-object v2, p0, Lcom/android/settingslib/graph/SignalDrawable;->mScaledAttributionPath:Landroid/graphics/Path;
 
-    .line 59
+    .line 60
     new-instance v2, Lcom/android/settingslib/graph/SignalDrawable$1;
 
-    .line 61
+    .line 62
     invoke-direct {v2, p0}, Lcom/android/settingslib/graph/SignalDrawable$1;-><init>(Lcom/android/settingslib/graph/SignalDrawable;)V
 
-    .line 63
+    .line 64
     iput-object v2, p0, Lcom/android/settingslib/graph/SignalDrawable;->mChangeDot:Lcom/android/settingslib/graph/SignalDrawable$1;
 
-    .line 66
-    const v2, 0x10402c0    # @android:string/config_wearableAmbientContextPackageNameExtraKey
+    .line 67
+    const v2, 0x10402b8    # @android:string/config_wallpaperCropperPackage
 
-    .line 68
+    .line 69
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 71
+    .line 72
     move-result-object v2
-
-    .line 74
-    invoke-static {v2}, Landroid/util/PathParser;->createPathFromPathData(Ljava/lang/String;)Landroid/graphics/Path;
 
     .line 75
+    invoke-static {v2}, Landroid/util/PathParser;->createPathFromPathData(Ljava/lang/String;)Landroid/graphics/Path;
+
+    .line 76
     move-result-object v2
 
-    .line 78
+    .line 79
     invoke-virtual {v1, v2}, Landroid/graphics/Path;->set(Landroid/graphics/Path;)V
 
-    .line 79
+    .line 80
     invoke-virtual {p0}, Lcom/android/settingslib/graph/SignalDrawable;->updateScaledAttributionPath()V
 
-    .line 82
+    .line 83
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 85
+    .line 86
     move-result-object v1
-
-    .line 88
-    const v2, 0x10500fe    # @android:dimen/controls_thumbnail_image_max_height
 
     .line 89
+    const v2, 0x10500fe    # @android:dimen/controls_thumbnail_image_max_height
+
+    .line 90
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getFloat(I)F
 
-    .line 92
+    .line 93
     move-result v1
-
-    .line 95
-    iput v1, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutWidthFraction:F
 
     .line 96
+    iput v1, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutWidthFraction:F
+
+    .line 97
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 98
+    .line 99
     move-result-object v1
-
-    .line 101
-    const v2, 0x10500fd    # @android:dimen/control_padding_material
 
     .line 102
+    const v2, 0x10500fd    # @android:dimen/control_padding_material
+
+    .line 103
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getFloat(I)F
 
-    .line 105
+    .line 106
     move-result v1
-
-    .line 108
-    iput v1, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutHeightFraction:F
 
     .line 109
-    const v1, 0x7f060099    # @color/dark_mode_icon_color_single_tone '#99000000'
+    iput v1, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutHeightFraction:F
 
-    .line 111
+    .line 110
+    const v1, 0x7f06009a    # @color/dark_mode_icon_color_single_tone '#99000000'
+
+    .line 112
     invoke-static {v1, p1}, Lcom/android/settingslib/Utils;->getColorStateListDefaultColor(ILandroid/content/Context;)I
 
-    .line 114
+    .line 115
     move-result v1
 
-    .line 117
-    const v2, 0x7f060142    # @color/light_mode_icon_color_single_tone '#ffffff'
-
     .line 118
+    const v2, 0x7f06014c    # @color/light_mode_icon_color_single_tone '#ffffff'
+
+    .line 119
     invoke-static {v2, p1}, Lcom/android/settingslib/Utils;->getColorStateListDefaultColor(ILandroid/content/Context;)I
 
-    .line 121
+    .line 122
     move-result v2
 
-    .line 124
+    .line 125
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 125
+    .line 126
     move-result-object v3
 
-    .line 128
-    const v4, 0x7f070987    # @dimen/signal_icon_size '15.0dp'
-
     .line 129
+    const v4, 0x7f0709de    # @dimen/signal_icon_size '15.0dp'
+
+    .line 130
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 132
+    .line 133
     move-result v3
 
-    .line 135
+    .line 136
     iput v3, p0, Lcom/android/settingslib/graph/SignalDrawable;->mIntrinsicSize:I
 
-    .line 136
+    .line 137
     const v3, 0x106000d    # @android:color/transparent
 
-    .line 138
+    .line 139
     invoke-virtual {p1, v3}, Landroid/content/Context;->getColor(I)I
 
-    .line 141
+    .line 142
     move-result p1
-
-    .line 144
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 145
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 146
     new-instance p1, Landroid/graphics/PorterDuffXfermode;
 
-    .line 148
+    .line 149
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    .line 150
+    .line 151
     invoke-direct {p1, v3}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 152
+    .line 153
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 155
+    .line 156
     new-instance p1, Landroid/os/Handler;
 
-    .line 158
+    .line 159
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
-    .line 160
+    .line 161
     iput-object p1, p0, Lcom/android/settingslib/graph/SignalDrawable;->mHandler:Landroid/os/Handler;
 
-    .line 163
+    .line 164
     invoke-static {}, Landroid/animation/ArgbEvaluator;->getInstance()Landroid/animation/ArgbEvaluator;
 
-    .line 165
+    .line 166
     move-result-object p1
-
-    .line 168
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 169
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 170
     move-result-object v0
 
-    .line 172
+    .line 173
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 173
+    .line 174
     move-result-object v1
 
-    .line 176
+    .line 177
     const/4 v2, 0x0
 
-    .line 177
+    .line 178
     invoke-virtual {p1, v2, v0, v1}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
+    .line 179
     move-result-object p1
-
-    .line 181
-    check-cast p1, Ljava/lang/Integer;
 
     .line 182
+    check-cast p1, Ljava/lang/Integer;
+
+    .line 183
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    .line 184
+    .line 185
     move-result p1
 
-    .line 187
+    .line 188
     invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    .line 188
+    .line 189
     move-result-object p1
 
-    .line 191
+    .line 192
     invoke-virtual {p0, p1}, Lcom/android/settingslib/graph/SignalDrawable;->setTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 192
+    .line 193
     return-void
-    .line 195
+    .line 196
 .end method
 
 .method public static getState(IIZ)I
@@ -598,116 +567,107 @@
 
     .line 136
     :cond_2
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 137
-    move-result v4
-
-    .line 140
-    if-nez v4, :cond_3
-
-    .line 141
     const/4 v4, 0x2
 
-    .line 143
+    .line 137
     invoke-virtual {p0, v4}, Lcom/android/settingslib/graph/SignalDrawable;->isInState(I)Z
 
-    .line 144
+    .line 138
     move-result v4
 
-    .line 147
+    .line 141
     if-eqz v4, :cond_3
 
-    .line 148
+    .line 142
     iget v4, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutWidthFraction:F
 
-    .line 150
+    .line 144
     mul-float/2addr v4, v0
 
-    .line 152
+    .line 146
     const/high16 v5, 0x41c00000    # 24.0f
 
-    .line 153
+    .line 147
     div-float/2addr v4, v5
 
-    .line 155
+    .line 149
     iget v6, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutHeightFraction:F
 
-    .line 156
+    .line 150
     mul-float/2addr v6, v1
 
-    .line 158
+    .line 152
     div-float/2addr v6, v5
 
-    .line 159
+    .line 153
     iget-object v5, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutPath:Landroid/graphics/Path;
 
-    .line 160
+    .line 154
     invoke-virtual {v5, v0, v1}, Landroid/graphics/Path;->moveTo(FF)V
+
+    .line 156
+    iget-object v0, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutPath:Landroid/graphics/Path;
+
+    .line 159
+    neg-float v1, v4
+
+    .line 161
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->rLineTo(FF)V
 
     .line 162
     iget-object v0, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutPath:Landroid/graphics/Path;
 
     .line 165
-    neg-float v1, v4
+    neg-float v1, v6
 
     .line 167
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->rLineTo(FF)V
+    invoke-virtual {v0, v2, v1}, Landroid/graphics/Path;->rLineTo(FF)V
 
     .line 168
     iget-object v0, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutPath:Landroid/graphics/Path;
 
     .line 171
-    neg-float v1, v6
-
-    .line 173
-    invoke-virtual {v0, v2, v1}, Landroid/graphics/Path;->rLineTo(FF)V
-
-    .line 174
-    iget-object v0, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutPath:Landroid/graphics/Path;
-
-    .line 177
     invoke-virtual {v0, v4, v2}, Landroid/graphics/Path;->rLineTo(FF)V
 
-    .line 179
+    .line 173
     iget-object v0, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutPath:Landroid/graphics/Path;
 
-    .line 182
+    .line 176
     invoke-virtual {v0, v2, v6}, Landroid/graphics/Path;->rLineTo(FF)V
 
-    .line 184
+    .line 178
     iget-object v0, p0, Lcom/android/settingslib/graph/SignalDrawable;->mCutoutPath:Landroid/graphics/Path;
 
-    .line 187
+    .line 181
     iget-object v1, p0, Lcom/android/settingslib/graph/SignalDrawable;->mTransparentPaint:Landroid/graphics/Paint;
 
-    .line 189
+    .line 183
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 191
+    .line 185
     iget-object v0, p0, Lcom/android/settingslib/graph/SignalDrawable;->mScaledAttributionPath:Landroid/graphics/Path;
 
-    .line 194
+    .line 188
     iget-object p0, p0, Lcom/android/settingslib/graph/SignalDrawable;->mForegroundPaint:Landroid/graphics/Paint;
 
-    .line 196
+    .line 190
     invoke-virtual {p1, v0, p0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 198
+    .line 192
     :cond_3
     :goto_1
     if-eqz v3, :cond_4
 
-    .line 201
+    .line 195
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 203
+    .line 197
     :cond_4
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 206
+    .line 200
     return-void
-    .line 209
+    .line 203
 .end method
 
 .method public final drawDotAndPadding(FFFFI)V
@@ -850,7 +810,7 @@
 .end method
 
 .method public final onLevelChange(I)Z
-    .locals 4
+    .locals 3
 
     .line 1
     const v0, 0xff00
@@ -874,86 +834,55 @@
     add-int/2addr v1, v2
 
     .line 13
-    const/4 v3, 0x0
-
-    .line 14
     if-ne v0, v1, :cond_0
 
-    .line 15
+    .line 14
     const/16 v0, 0xa
 
-    .line 17
+    .line 16
     goto :goto_0
 
-    .line 19
+    .line 18
     :cond_0
-    move v0, v3
+    const/4 v0, 0x0
 
-    .line 20
+    .line 19
     :goto_0
     and-int/lit16 p1, p1, 0xff
 
-    .line 21
-    invoke-static {}, Lcom/android/settingslib/flags/Flags;->newStatusBarIcons()Z
-
-    .line 23
-    move-result v1
-
-    .line 26
-    if-eqz v1, :cond_1
-
-    .line 27
-    const/4 v1, 0x2
-
-    .line 29
-    invoke-virtual {p0, v1}, Lcom/android/settingslib/graph/SignalDrawable;->isInState(I)Z
-
-    .line 30
-    move-result v1
-
-    .line 33
-    if-eqz v1, :cond_1
-
-    .line 34
-    const/16 v3, 0x14
-
-    .line 36
-    :cond_1
+    .line 20
     add-int/2addr p1, v0
 
-    .line 38
-    add-int/2addr p1, v3
-
-    .line 39
+    .line 22
     invoke-super {p0, p1}, Landroid/graphics/drawable/DrawableWrapper;->onLevelChange(I)Z
 
-    .line 40
+    .line 23
     invoke-virtual {p0}, Lcom/android/settingslib/graph/SignalDrawable;->updateAnimation()V
 
-    .line 43
+    .line 26
     iget-object p1, p0, Lcom/android/settingslib/graph/SignalDrawable;->mForegroundPaint:Landroid/graphics/Paint;
 
-    .line 46
+    .line 29
     invoke-virtual {p1}, Landroid/graphics/Paint;->getColor()I
 
-    .line 48
+    .line 31
     move-result p1
 
-    .line 51
+    .line 34
     invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    .line 52
+    .line 35
     move-result-object p1
 
-    .line 55
+    .line 38
     invoke-virtual {p0, p1}, Lcom/android/settingslib/graph/SignalDrawable;->setTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 56
+    .line 39
     invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->invalidateSelf()V
 
-    .line 59
+    .line 42
     return v2
-    .line 62
+    .line 45
 .end method
 
 .method public final setAlpha(I)V

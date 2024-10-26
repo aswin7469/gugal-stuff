@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">novietot atlasīto logrīku</string>
   <string name="accessibility_action_label_remove_widget">noņemt logrīku</string>
   <string name="accessibility_action_label_select_widget">atlasīt logrīku</string>
-  <string name="accessibility_action_open_communal_hub">Logrīki bloķēšanas ekrānā</string>
   <string name="accessibility_action_pip_resize">Mainīt lielumu</string>
   <string name="accessibility_action_pip_stash">Paslēpt</string>
   <string name="accessibility_action_pip_unstash">Rādīt</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Iziet no vienas rokas režīma</string>
   <string name="accessibility_airplane_mode">Lidmašīnas režīms.</string>
   <string name="accessibility_allow_diagonal_scrolling">Atļaut ritināšanu pa diagonāli</string>
+  <string name="accessibility_assistant_poodle">Meklēt ar balsi</string>
   <string name="accessibility_authenticate_hint">veiktu autentificēšanu</string>
   <string name="accessibility_back">Atpakaļ</string>
   <string name="accessibility_banner_message_dismiss">Nerādīt</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">izmantotu ierīci</string>
   <string name="accessibility_ethernet_connected">Tīkls Ethernet</string>
   <string name="accessibility_ethernet_disconnected">Pārtraukts savienojums ar tīklu Ethernet.</string>
-  <string name="accessibility_fingerprint_bouncer">Nepieciešama autentifikācija. Pieskarieties pirksta nospieduma sensoram, lai veiktu autentificēšanu.</string>
   <string name="accessibility_fingerprint_label">Pirksta nospieduma sensors</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">pārslēgt</string>
   <string name="accessibility_floating_button_action_edit">Rediģēt</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Izvēlne</string>
   <string name="accessibility_multi_user_list_switcher">novelkamā izvēlne</string>
   <string name="accessibility_multi_user_switch_switcher">Mainīt lietotāju</string>
+  <string name="accessibility_next_alarm">Nākamais signāls plkst. %s</string>
   <string name="accessibility_no_calling">Zvanīšana nav pieejama.</string>
   <string name="accessibility_no_phone">Nav tālruņa.</string>
   <string name="accessibility_no_wifi">Wi-Fi savienojums pārtraukts</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">Ekrāns tagad ir bloķēts portreta orientācijā.</string>
   <string name="accessibility_send_smart_reply">Sūtīt</string>
   <string name="accessibility_sensors_off_active">Aktivizēts iestatījums “Sensori izslēgti”</string>
+  <string name="accessibility_settings_gear">Pixel Stand iestatījumi</string>
   <string name="accessibility_side_fingerprint_indicator_label">Pieskarieties pirksta nospieduma sensoram. Tā ir īsākā poga tālruņa malā.</string>
+  <string name="accessibility_smartspace_page">%1$d. lapa no %2$d</string>
   <string name="accessibility_split_bottom">Sadalījums apakšdaļā</string>
   <string name="accessibility_split_left">Sadalījums pa kreisi</string>
   <string name="accessibility_split_right">Sadalījums pa labi</string>
@@ -218,10 +220,14 @@
   <string name="accessibility_wifi_three_bars">Wi-Fi: trīs joslas</string>
   <string name="accessibility_wifi_two_bars">Wi-Fi: divas joslas</string>
   <string name="accesssibility_keyguard_retry">Velciet augšup, lai atkal izmēģinātu autorizāciju pēc sejas.</string>
+  <string name="adaptive_charging_notify_des">Akumulators būs pilnīgi uzlādēts līdz plkst. %1$s. Notiek nepārtraukta uzlāde, lai paildzinātu akumulatora darbības laiku.</string>
+  <string name="adaptive_charging_notify_title">Adaptīvā uzlāde ir ieslēgta</string>
+  <string name="adaptive_charging_notify_turn_off_once">Izslēgt vienreiz</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Adaptīvā uzlāde • Tiks pabeigta līdz plkst. %2$s</string>
   <string name="add">Pievienot</string>
   <string name="add_guest_failed">Neizdevās izveidot jaunu viesa profilu</string>
   <string name="airplane_mode">Lidojuma režīms</string>
-  <string name="alarm_template">plkst. %1$s</string>
+  <string name="alarm_template">plkst. %1$s</string>
   <string name="alarm_template_far">%1$s</string>
   <string name="all_network_unavailable">Nav pieejams neviens tīkls</string>
   <string name="always_use_accessory">Vienmēr atvērt lietotni %1$s, kad ir pievienots %2$s</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Par lietotni</string>
   <string name="app_label">Sistēmas UI</string>
   <string name="assistant_attention_content_description">Konstatēta lietotāja klātbūtne</string>
+  <string name="assistant_scrim_label">Notiek klausīšanās. Pieskarieties, lai atceltu.</string>
   <string name="audio_sharing_description">Notiek audio kopīgošana</string>
   <string name="audio_status">Notiek klausīšanās…</string>
   <string name="auto_data_switch_dialog_negative_button">Nē, paldies</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Atpakaļ</string>
   <string name="battery">Akumulators</string>
   <string name="battery_detail_switch_title">Akumulatora enerģijas taupīšanas režīms</string>
-  <string name="battery_low_description">Atlikušais akumulatora uzlādes līmenis: %s. Akumulatora enerģijas taupīšanas režīmā tiek ieslēgts tumšais motīvs, ierobežotas darbības fonā un aizkavēti paziņojumi.</string>
+  <string name="battery_health_notify_learn_more">Uzzināt vairāk</string>
   <string name="battery_low_intro">Akumulatora enerģijas taupīšanas režīmā tiek ieslēgts tumšais motīvs, ierobežotas darbības fonā un aizkavēti paziņojumi.</string>
-  <string name="battery_low_title">Vai ieslēgt akumulatora enerģijas taupīšanas režīmu?</string>
   <string name="battery_saver_confirmation_ok">Ieslēgt</string>
   <string name="battery_saver_confirmation_title">Vai ieslēgt akumulatora enerģijas taupīšanas režīmu?</string>
   <string name="battery_saver_confirmation_title_generic">Par akumulatora enerģijas taupīšanas režīmu</string>
-  <string name="battery_saver_dismiss_action">Nē, paldies</string>
   <string name="battery_saver_start_action">Ieslēgt</string>
   <string name="battery_state_unknown_notification_text">Pieskarieties, lai iegūtu plašāku informāciju.</string>
   <string name="battery_state_unknown_notification_title">Nevar iegūt informāciju par akumulatora uzlādes līmeni.</string>
@@ -296,14 +301,9 @@ Mēģiniet vēlreiz pēc %d sekundēm.</string>
   <string name="bluetooth_active_battery_level_untethered">Aktīvs. Akumulatora uzlādes līmenis kreisajā austiņā: %1$s, labajā austiņā: %2$s.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Aktīvs. Kreisā puse: akumulatora uzlādes līmenis ir %1$s.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Aktīvs. Labā puse: akumulatora uzlādes līmenis ir %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level">Aktīvs (tikai multividei). Akumulatora uzlādes līmenis: %1$s.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Aktīvs (tikai multividei). Akumulatora uzlādes līmenis kreisajā austiņā: %1$s, labajā austiņā: %2$s.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Aktīvs (tikai multividei)</string>
   <string name="bluetooth_active_no_battery_level">Aktīvs</string>
   <string name="bluetooth_battery_level">Akumulatora uzlādes līmenis: %1$s</string>
-  <string name="bluetooth_battery_level_lea_support">Izveidots savienojums (atbalsta audio kopīgošanu). Akumulatora uzlādes līmenis: %1$s.</string>
   <string name="bluetooth_battery_level_untethered">Akumulatora uzlādes līmenis kreisajā austiņā: %1$s, labajā austiņā: %2$s.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Izveidots savienojums (atbalsta audio kopīgošanu). Akumulatora uzlādes līmenis kreisajā austiņā: %1$s, labajā austiņā: %2$s.</string>
   <string name="bluetooth_connected">Savienojums izveidots: %1$s</string>
   <string name="bluetooth_connecting">Notiek savienojuma izveide…</string>
   <string name="bluetooth_disconnected">Atvienots</string>
@@ -311,13 +311,11 @@ Mēģiniet vēlreiz pēc %d sekundēm.</string>
   <string name="bluetooth_hearing_aid_left_active">Ierīce aktīva (tikai kreisā auss)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Ierīces aktīvas (kreisā un labā auss)</string>
   <string name="bluetooth_hearing_aid_right_active">Ierīce aktīva (tikai labā auss)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Izveidots savienojums (atbalsta audio kopīgošanu)</string>
   <string name="bluetooth_pairing">Notiek pāra izveide...</string>
   <string name="bluetooth_pairing_device_down_error_message">Nevar sazināties ar ierīci %1$s.</string>
   <string name="bluetooth_pairing_error_message">Nevarēja savienot pārī ar ierīci %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">Nevarēja savienot pārī ar %1$s, jo tika ievadīts nepareizs PIN kods vai ieejas atslēga.</string>
   <string name="bluetooth_pairing_rejected_error_message">%1$s noraidīja pāra izveidi.</string>
-  <string name="bluetooth_saved_device_lea_support">Atbalsta audio kopīgošanu</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Dators</string>
   <string name="bluetooth_talkback_headphone">Austiņas</string>
@@ -356,8 +354,6 @@ Mēģiniet vēlreiz pēc %d sekundēm.</string>
   <string name="bubble_overflow_button_content_description">Pārpilde</string>
   <string name="bubble_overflow_empty_subtitle">Šeit būs redzami nesen rādītie burbuļi un aizvērtie burbuļi</string>
   <string name="bubble_overflow_empty_title">Nav nesen aizvērtu burbuļu</string>
-  <string name="bubble_shortcut_label">Burbuļi</string>
-  <string name="bubble_shortcut_long_label">Rādīt burbuļus</string>
   <string name="bubbles_app_settings">Lietotnes %1$s iestatījumi</string>
   <string name="bubbles_dont_bubble_conversation">Nerādīt sarunu burbuļos</string>
   <string name="bubbles_settings_button_description">Lietotnes %1$s burbuļu iestatījumi</string>
@@ -387,6 +383,10 @@ Pieskarieties, lai tās novērstu.</string>
   <string name="cast_to_other_device_stop_dialog_button">Apturēt apraidi</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Tiks pārtraukta lietotnes &lt;b&gt;%1$s&lt;/b&gt; satura apraide</string>
   <string name="cell_data_off_content_description">Mobilie dati izslēgti</string>
+  <string name="charge_limit_discovery_notification_enable_button">Iespējot tūlīt</string>
+  <string name="charge_limit_discovery_notification_text">Ieslēdziet 80% uzlādes ierobežojuma funkciju, lai saudzētu akumulatora stāvokli un pagarinātu tā darbmūžu. Jebkurā laikā varat to pārvaldīt sadaļā Iestatījumi.</string>
+  <string name="charge_limit_discovery_notification_title">Aizsargājiet akumulatoru uzlādes laikā</string>
+  <string name="charging_reverse_text">Akumulatora koplietošana</string>
   <string name="clear_all_notifications_text">Dzēst visu</string>
   <string name="clipboard">Starpliktuve</string>
   <string name="clipboard_content_copied">Saturs ir nokopēts</string>
@@ -406,6 +406,11 @@ Pieskarieties, lai tās novērstu.</string>
   <string name="close_button_text">Aizvērt</string>
   <string name="close_dialog_button">Aizvērt</string>
   <string name="collapse_menu_text">Aizvērt izvēlni</string>
+  <string name="columbus_bouncer_message">Atbloķējiet, lai izpildītu žestu Ātrais pieskāriens</string>
+  <string name="columbus_target_request_dialog_allow">Atļaut</string>
+  <string name="columbus_target_request_dialog_deny">Neatļaut</string>
+  <string name="columbus_target_request_dialog_summary">Divreiz pieskarieties tālruņa aizmugurei, lai atvērtu lietotni %1$s. Iestatījumos varat jebkurā laikā mainīt šo iespēju.</string>
+  <string name="columbus_target_request_dialog_title">Vai atļaut atvērt lietotni %1$s, izmantojot ātro pieskārienu?</string>
   <string name="communal_tutorial_indicator_text">Velciet pa kreisi, lai palaistu kopienas pamācību.</string>
   <string name="connected_display_dialog_dual_display_stop_warning">Jūsu iekšējais displejs tiks spoguļots. Jūsu priekšējais displejs tiks izslēgts.</string>
   <string name="connected_display_dialog_start_mirroring">Vai spoguļot ārējā displejā?</string>
@@ -511,8 +516,11 @@ Ja atsāksiet, var tikt piemērota maksa par datu lietojumu.</string>
   <string name="data_usage_disabled_dialog_mobile_title">Mobilo datu lietojums apturēts</string>
   <string name="data_usage_disabled_dialog_title">Datu lietojums ir apturēts</string>
   <string name="days_timestamp">Pirms %1$s dienām</string>
-  <string name="default_error_message">Nederīga ievade</string>
   <string name="default_popup_window_title">Uznirstošais logs</string>
+  <string name="defender_notify_resume_charge">Ignorēt</string>
+  <string name="defender_notify_title">Akumulatora saudzēšana</string>
+  <string name="defender_post_notify_des">Lai paildzinātu akumulatora darbmūžu, uzlāde tika optimizēta no plkst. %1$s līdz plkst. %2$s.</string>
+  <string name="defender_post_notify_title">Uzlāde tika optimizēta</string>
   <string name="demo_mode">Sistēmas lietotāja saskarnes demonstrācijas režīms</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Maksimizēt ekrānu</string>
   <string name="desktop_mode_maximize_menu_snap_text">Fiksēt ekrānu</string>
@@ -532,20 +540,32 @@ Ja atsāksiet, var tikt piemērota maksa par datu lietojumu.</string>
   <string name="do_disclosure_generic">Šī ierīce pieder jūsu organizācijai.</string>
   <string name="do_disclosure_with_name">Šī ierīce pieder organizācijai %s.</string>
   <string name="do_financed_disclosure_with_name">Šo ierīci nodrošina %s</string>
+  <string name="dock_a11y_action_show_photo_text">Rādīt fotoattēlu rāmi</string>
+  <string name="dock_alignment_not_charging">Pārvietojiet tālruni citā vietā, lai veiktu bezvadu uzlādi.</string>
+  <string name="dock_alignment_slow_charging">Pārvietojiet tālruni citā vietā, lai uzlāde notiktu ātrāk.</string>
+  <string name="dock_defender_first_run_des">Lai paildzinātu akumulatora darbmūžu, kad planšetdators ir dokots, uzlāde tiek apturēta pie 90%. Jebkurā laikā varat to ignorēt, pārejot uz sadaļu Iestatījumi.</string>
+  <string name="dock_defender_first_run_settings">Iestatījumi</string>
+  <string name="dock_defender_first_run_title">Uzlāde apturēta, lai aizsargātu akumulatoru</string>
   <string name="dock_multi_instances_not_supported_text">Šo lietotni var atvērt tikai vienā logā</string>
   <string name="dock_non_resizeble_failed_to_dock_text">Lietotnē netiek atbalstīta ekrāna sadalīšana</string>
+  <string name="dock_photo_preview_text">Notiek fotoattēlu rāmja palaišana...</string>
+  <string name="dock_promo_text">Velciet pa kreisi, lai izmantotu fotoattēlu rāmi.</string>
   <string name="done">Gatavs</string>
   <string name="drag_split_not_supported">Šis paziņojums neatbalsta vilkšanu uz sadalīto ekrānu.</string>
   <string name="drag_to_add_tiles">Lai pievienotu elementus, pieturiet tos un velciet</string>
   <string name="drag_to_rearrange_tiles">Lai pārkārtotu elementus, turiet un velciet tos</string>
   <string name="drag_to_remove_disabled">Nepieciešami vismaz %1$d elementi</string>
   <string name="drag_to_remove_tiles">Lai noņemtu vienumus, velciet tos šeit.</string>
+  <string name="dream_lockscreen_wallpaper_description">Izmantojiet esošo bloķēšanas ekrāna fona tapeti</string>
+  <string name="dream_lockscreen_wallpaper_label">Fona tapete</string>
   <string name="dream_overlay_status_bar_alarm_set">Signāls ir iestatīts</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Kamera un mikrofons ir izslēgti</string>
   <string name="dream_overlay_status_bar_camera_off">Kamera ir izslēgta</string>
   <string name="dream_overlay_status_bar_mic_off">Mikrofons ir izslēgts</string>
   <string name="dream_overlay_status_bar_priority_mode">Prioritātes režīms</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi nav pieejams</string>
+  <string name="dwell_defender_notify_des">Tas palīdz paildzināt akumulatora darbmūžu, ja tālrunis tiek uzlādēts pārāk ilgu laiku.</string>
+  <string name="dwell_defender_notify_title">Uzlāde apturēta, lai aizsargātu akumulatoru</string>
   <string name="edit_user_info_message">Jūsu izvēlētais vārds un attēls būs redzams visiem šīs ierīces lietotājiem.</string>
   <string name="edit_widget">Rediģēt logrīku</string>
   <string name="empty_shade_text">Nav paziņojumu</string>
@@ -561,12 +581,16 @@ Ja atsāksiet, var tikt piemērota maksa par datu lietojumu.</string>
   <string name="ethernet_label">Tīkls Ethernet</string>
   <string name="expand_button_title">Papildu iestatījumi</string>
   <string name="expand_menu_text">Atvērt izvēlni</string>
+  <string name="extreme_battery_saver_text">Maks. taupīšana</string>
+  <string name="extreme_low_battery_notification_text">Ja drīz neuzlādēsiet tālruni, tas tiks izslēgts.</string>
+  <string name="extreme_low_battery_notification_title">Ļoti zems akumulatora uzlādes līmenis</string>
   <string name="face_re_enroll_dialog_content">Lai vēlreiz iestatītu autorizāciju pēc sejas, jūsu pašreizējais sejas modelis tiks izdzēsts.
 
 Jums būs vēlreiz jāiestata šī funkcija, lai varētu atbloķēt tālruni, izmantojot seju.</string>
   <string name="face_re_enroll_dialog_title">Autorizācijas pēc sejas iestatīšana</string>
   <string name="face_re_enroll_notification_name">Autorizācija pēc sejas</string>
   <string name="face_re_enroll_notification_title">Vēlreiz iestatiet autorizāciju pēc sejas</string>
+  <string name="face_reenroll_dialog_confirm">Iestatīt</string>
   <string name="face_reenroll_failure_dialog_content">Nevarēja iestatīt autorizāciju pēc sejas. Atveriet iestatījumus, lai mēģinātu vēlreiz.</string>
   <string name="failed_attempts_now_wiping_device">Pārāk daudz nesekmīgu mēģinājumu. Dati šajā ierīcē tiks dzēsti.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Nerādīt</string>
@@ -604,6 +628,7 @@ Kad tie būs izdzēsti, jums būs vēlreiz jāiestata autorizācija ar pirksta n
   <string name="font_scaling_smaller">Samazināt</string>
   <string name="fullscreen_text">Pilnekrāna režīms</string>
   <string name="game_status">Tiek spēlēta spēle…</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Paildzinātā atbloķēšana ir atspējota</string>
   <string name="go_to_web">Atvērt pārlūku</string>
   <string name="got_it">Labi</string>
@@ -640,6 +665,7 @@ Kad tie būs izdzēsti, jums būs vēlreiz jāiestata autorizācija ar pirksta n
   <string name="guest_reset_and_restart_dialog_title">Vai atiestatīt viesa sesiju?</string>
   <string name="guest_reset_guest_confirm_button">Atiestatīt</string>
   <string name="guest_resetting">Notiek viesa sesijas atiestatīšana…</string>
+  <string name="handle_invocation_prompt">Velciet, lai runātu</string>
   <string name="handle_text">Turis</string>
   <string name="headset">Austiņas</string>
   <string name="hearing_devices_preset_label">Pirmsiestatījums</string>
@@ -656,6 +682,7 @@ Pieskarieties, lai uzzinātu vairāk.</string>
   <string name="high_temp_title">Tālrunis kļūst silts</string>
   <string name="home_controls_dream_description">Ātra piekļuve mājas kontrolierīcēm ekrānsaudzētājā</string>
   <string name="home_controls_dream_label">Mājas kontrolierīces</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Ir pieejama vismaz viena ierīce vai ierīces panelis.</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Lai varētu pievienot lietotni Home kā saīsni, lietotnei ir jābūt instalētai.</string>
   <string name="hub_mode_add_widget_button_text">Pievienot logrīku</string>
@@ -669,12 +696,16 @@ Pieskarieties, lai uzzinātu vairāk.</string>
   <string name="in_progress">Notiek apstrāde</string>
   <string name="inattentive_sleep_warning_message">Ierīce drīz izslēgsies. Nospiediet pogu, lai ierīce paliktu ieslēgta.</string>
   <string name="inattentive_sleep_warning_title">Gaidstāve</string>
+  <string name="incompatible_charging_learn_more">Uzzināt vairāk</string>
+  <string name="incompatible_charging_notify_des">Iespējams, tālruņa uzlāde notiek lēni vai nenotiek nemaz. Lai paātrinātu uzlādi, izmantojiet kādu no ieteiktajiem vadiem un adapteriem.</string>
+  <string name="incompatible_charging_notify_title">Pārbaudiet uzlādes piederumu</string>
   <string name="indeterminate">Daļēji atzīmēta</string>
   <string name="inline_done_button">Gatavs</string>
   <string name="inline_ok_button">Lietot</string>
   <string name="inline_turn_off_notifications">Izslēgt paziņojumus</string>
   <string name="input_switch_input_language_next">Pārslēgt uz nākamo valodu</string>
   <string name="input_switch_input_language_previous">Pārslēgt uz iepriekšējo valodu</string>
+  <string name="install_app">Instalēt lietotni</string>
   <string name="install_dialer_on_work_profile_action">Instalēt darba lietotni Tālrunis</string>
   <string name="install_type_instant">Tūlītējā lietotne</string>
   <string name="instant_apps">Tūlītējās lietotnes</string>
@@ -683,8 +714,6 @@ Pieskarieties, lai uzzinātu vairāk.</string>
   <string name="instant_apps_title">Lietotne %1$s darbojas</string>
   <string name="interruption_level_none">Pilnīgs klusums</string>
   <string name="interruption_level_priority">Tikai prioritārie</string>
-  <string name="invalid_charger_text">Izmantojiet ierīces komplektācijā iekļauto lādētāju</string>
-  <string name="invalid_charger_title">Nevar veikt uzlādi, izmantojot USB</string>
   <string name="issuerecord_background_processing_label">Apstrādā problēmas ierakstu</string>
   <string name="issuerecord_ongoing_screen_only">Notiek problēmas reģistrēšana</string>
   <string name="issuerecord_save_title">Problēmas ieraksts ir saglabāts.</string>
@@ -766,21 +795,33 @@ Pieskarieties, lai uzzinātu vairāk.</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">Ierīce bloķēta
 Autentifikācija neizdevās</string>
   <string name="keyguard_indication_charging_time">%2$s • Notiek uzlāde • Laiks līdz pilnai uzlādei: %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • Uzlāde tiks pabeigta līdz plkst. %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • Notiek uzlāde • Laiks līdz pilnai uzlādei: %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Tiks pilnībā uzlādēta līdz plkst. %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Ātrā uzlāde • Laiks līdz pilnai uzlādei: %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Ātrā uzlāde • Tiks pabeigta līdz plkst. %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • Uzlāde pabeigta</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Lēnā uzlāde • Laiks līdz pilnai uzlādei: %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Tiks pilnībā uzlādēta līdz plkst. %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Tiks pilnībā uzlādēta līdz plkst. %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Bezvadu uzlāde • Laiks līdz pilnai uzlādei: %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Bloķēšanu liedzis TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Tiks pilnībā uzlādēta līdz plkst. %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Bloķēšanu liedza paildzinātā atbloķēšana</string>
   <string name="keyguard_missing_sim_message_short">Nav SIM kartes</string>
   <string name="keyguard_network_locked_message">Tīkls ir bloķēts.</string>
   <string name="keyguard_permanent_disabled_sim_message_short">SIM karte nav izmantojama.</string>
   <string name="keyguard_plugged_in">%s • Notiek uzlāde</string>
   <string name="keyguard_plugged_in_charging_fast">%s • Notiek ātrā uzlāde</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Ātrā uzlāde</string>
   <string name="keyguard_plugged_in_charging_limited">%s • Uzlāde apturēta, lai aizsargātu akumulatoru</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • Notiek lēnā uzlāde</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • Notiek uzlāde</string>
   <string name="keyguard_plugged_in_dock">%s • Notiek uzlāde</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • Notiek uzlāde</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Pārbaudiet uzlādes piederumu</string>
+  <string name="keyguard_plugged_in_v2">%s • Notiek uzlāde</string>
   <string name="keyguard_plugged_in_wireless">%s • Notiek bezvadu uzlāde</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • Notiek uzlāde</string>
   <string name="keyguard_retry">Velciet augšup, lai mēģinātu vēlreiz</string>
   <string name="keyguard_sim_error_message_short">Nederīga karte.</string>
   <string name="keyguard_sim_locked_message">SIM karte ir bloķēta.</string>
@@ -811,7 +852,6 @@ Autentifikācija neizdevās</string>
   <string name="kg_invalid_confirm_pin_hint">PIN kodi neatbilst.</string>
   <string name="kg_invalid_sim_pin_hint">Ievadiet PIN kodu, kas sastāv no 4 līdz 8 cipariem.</string>
   <string name="kg_invalid_sim_puk_hint">PUK kodam ir jābūt vismaz 8 ciparus garam.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Ievadiet SIM kartes PIN. Varat mēģināt vēl # reizi. Kļūdas gadījumā jums būs jāsazinās ar mobilo sakaru operatoru, lai atbloķētu savu ierīci.}zero{Ievadiet SIM kartes PIN. Jums ir atlikuši # mēģinājumi.}one{Ievadiet SIM kartes PIN. Jums ir atlicis # mēģinājums.}other{Ievadiet SIM kartes PIN. Jums ir atlikuši # mēģinājumi.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{SIM karte tagad ir atspējota. Ievadiet PUK kodu, lai turpinātu. Varat mēģināt vēl # reizi. Kļūdas gadījumā SIM karti vairs nevarēs izmantot. Lai iegūtu detalizētu informāciju, sazinieties ar mobilo sakaru operatoru.}zero{SIM karte tagad ir atspējota. Ievadiet PUK kodu, lai turpinātu. Varat mēģināt vēl # reizes. Kļūdas gadījumā SIM karti vairs nevarēs izmantot. Lai iegūtu detalizētu informāciju, sazinieties ar mobilo sakaru operatoru.}one{SIM karte tagad ir atspējota. Ievadiet PUK kodu, lai turpinātu. Varat mēģināt vēl # reizi. Kļūdas gadījumā SIM karti vairs nevarēs izmantot. Lai iegūtu detalizētu informāciju, sazinieties ar mobilo sakaru operatoru.}other{SIM karte tagad ir atspējota. Ievadiet PUK kodu, lai turpinātu. Varat mēģināt vēl # reizes. Kļūdas gadījumā SIM karti vairs nevarēs izmantot. Lai iegūtu detalizētu informāciju, sazinieties ar mobilo sakaru operatoru.}}</string>
   <string name="kg_password_pin_failed">SIM kartes PIN koda ievadīšana neizdevās!</string>
   <string name="kg_password_puk_failed">SIM kartes PUK koda ievadīšana neizdevās!</string>
@@ -852,7 +892,7 @@ Autentifikācija neizdevās</string>
   <string name="kg_sim_pin_instructions_multi">Ievadiet SIM kartes “%1$s” PIN kodu.</string>
   <string name="kg_sim_unlock_progress_dialog_message">Notiek SIM kartes atbloķēšana…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Mēģiniet vēlreiz pēc # sekundes.}zero{Mēģiniet vēlreiz pēc # sekundēm.}one{Mēģiniet vēlreiz pēc # sekundes.}other{Mēģiniet vēlreiz pēc # sekundēm.}}</string>
-  <string name="kg_trust_agent_disabled">Uzticamības pārbaudes programma nav pieejama</string>
+  <string name="kg_trust_agent_disabled">Paildzinātā atbloķēšana nav pieejama</string>
   <string name="kg_unlock_with_password_or_fp">Atbloķējiet ar paroli vai pirksta nospiedumu</string>
   <string name="kg_unlock_with_pattern_or_fp">Atbloķējiet ar kombināciju vai pirksta nospiedumu</string>
   <string name="kg_unlock_with_pin_or_fp">Atbloķējiet ar PIN vai pirksta nospiedumu</string>
@@ -900,6 +940,10 @@ Ja neatļausiet šai lietotnei piekļūt visiem ierīces žurnāliem, lietotnes 
   <string name="log_access_confirmation_learn_more">Uzzināt vairāk</string>
   <string name="log_access_confirmation_learn_more_at">Uzziniet vairāk vietnē %s</string>
   <string name="log_access_confirmation_title">Vai atļaujat lietotnei %s piekļūt visiem ierīces žurnāliem?</string>
+  <string name="low_battery_label">Zems akumulatora uzlādes līmenis</string>
+  <string name="low_battery_notification_text">Ieslēdziet standarta akumulatora enerģijas taupīšanas režīmu, lai paildzinātu akumulatora darbību.</string>
+  <string name="low_battery_notification_text_ebs">Ieslēdziet akumulatora enerģijas maksimālas taupīšanas režīmu, lai paildzinātu akumulatora darbību.</string>
+  <string name="low_battery_notification_title">Atlikušais akumulatora uzlādes līmenis: %s</string>
   <string name="m3c_search_bar_search">Meklēšana</string>
   <string name="m3c_suggestions_available">Tālāk ir sniegti ieteikumi</string>
   <string name="magnification_close_settings_click_label">Aizvērt palielinājuma iestatījumus</string>
@@ -939,8 +983,6 @@ Ja neatļausiet šai lietotnei piekļūt visiem ierīces žurnāliem, lietotnes 
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Pārtraukt</string>
   <string name="media_output_end_session_dialog_summary">Pārtrauciet savu kopīgoto sesiju, lai pārvietotu multivides saturu uz citu ierīci.</string>
-  <string name="media_output_first_broadcast_title">Kā darbojas apraide</string>
-  <string name="media_output_first_notify_broadcast_message">Tuvumā esošās personas ar saderīgām Bluetooth ierīcēm var klausīties jūsu apraidīto multivides saturu.</string>
   <string name="media_output_group_title_speakers_and_displays">Skaļruņi un displeji</string>
   <string name="media_output_group_title_suggested_device">Ieteiktās ierīces</string>
   <string name="media_output_label_title">%s — atskaņošana šeit:</string>
@@ -967,9 +1009,6 @@ Ja neatļausiet šai lietotnei piekļūt visiem ierīces žurnāliem, lietotnes 
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Lietotnes apraides laikā Android var piekļūt visam, kas tiek rādīts vai atskaņots attiecīgajā lietotnē. Tāpēc piesardzīgi apejieties ar parolēm, maksājumu informāciju, ziņojumiem, fotoattēliem un audio un video saturu.</string>
   <string name="media_projection_sys_service_dialog_title">Vai vēlaties sākt ierakstīšanu vai apraidi?</string>
   <string name="media_projection_sys_service_dialog_warning">Pakalpojums, kas nodrošina šo funkciju, iegūs piekļuvi visai informācijai, kas ierakstīšanas vai apraides laikā tiks rādīta jūsu ekrānā vai atskaņota jūsu ierīcē. Atļauja attiecas uz tādu informāciju kā paroles, maksājumu informācija, fotoattēli, ziņojumi un jūsu atskaņotais audio saturs.</string>
-  <string name="media_projection_task_switcher_action_back">Pārslēgties uz iepriekšējo</string>
-  <string name="media_projection_task_switcher_action_switch">Tā vietā kopīgot šo lietotni</string>
-  <string name="media_projection_task_switcher_text">Pārslēdzot lietotnes, tiek pārtraukta kopīgošana.</string>
   <string name="media_seamless_other_device">Cita ierīce</string>
   <string name="media_transfer_default_device_name">Pievienotā ierīce</string>
   <string name="media_transfer_dock_speaker_device_name">Doka skaļrunis</string>
@@ -1138,7 +1177,7 @@ Ja jums ir jautājumi, sazinieties ar organizāciju %2$s.</string>
   <string name="pip_skip_to_prev">Pāriet uz iepriekšējo</string>
   <string name="popup_on_dismiss_cta_tile_text">Nospiediet un turiet, lai pielāgotu logrīkus.</string>
   <string name="power_discharge_by_only_short">līdz %1$s</string>
-  <string name="preference_summary_default_combination">%1$s/%2$s</string>
+  <string name="preference_summary_default_combination">%1$s / %2$s</string>
   <string name="priority_conversations">Prioritārās sarunas</string>
   <string name="priority_mode_dream_overlay_content_description">Režīms “Netraucēt”</string>
   <string name="privacy_dialog_active_app_usage">To izmanto lietotne %1$s</string>
@@ -1280,12 +1319,17 @@ Ja jums ir jautājumi, sazinieties ar organizāciju %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Lai izmantotu augstāku izšķirtspēju, apvērsiet tālruni</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Vai mainīt ekrānus?</string>
   <string name="recent_conversations">Jaunākās sarunas</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">nosūtīts attēls</string>
   <string name="remove_from_settings">Noņemt no iestatījumiem</string>
   <string name="remove_from_settings_prompt">Vai noņemt sistēmas saskarnes regulatoru no iestatījumiem un pārtraukt izmantot visas tā funkcijas?</string>
   <string name="require_unlock_for_nfc">Atbloķējiet ierīci, lai izmantotu NFC.</string>
   <string name="restart_button_description">Pieskarieties, lai restartētu šo lietotni un uzlabotu attēlojumu.</string>
   <string name="retry_face">Atkārtoti mēģināt autentificēt seju</string>
+  <string name="reverse_charging_device_name_text">Cita Pixel ierīce</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s nodrošina uzlādi (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">Akumulatora dalīšana ieslēgta</string>
+  <string name="reverse_charging_title">Akumulatora dalīšana</string>
   <string name="right_icon">Ikona labajā pusē</string>
   <string name="right_keycode">Taustiņu kods labajā pusē</string>
   <string name="right_nav_bar_button_type">Labās puses papildu pogas veids</string>
@@ -1293,8 +1337,15 @@ Ja jums ir jautājumi, sazinieties ar organizāciju %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s/%2$s</string>
   <string name="running_foreground_services_msg">Pieskarieties, lai skatītu detalizētu informāciju par akumulatora un datu lietojumu</string>
   <string name="running_foreground_services_title">Lietotnes, kas darbojas fonā</string>
-  <string name="satellite_connected_carrier_text">Satelīta SOS</string>
+  <string name="satellite_connected_carrier_text">Pixel satelīta SOS</string>
   <string name="save">Saglabāt</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Atcelt</string>
+  <string name="saver_confirmation_dialog_subtitle">Atlasiet izmantojamo režīmu</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Ietver visas iepriekš norādītās izmaiņas. Tiek arī pārtraukta nesvarīgu lietotņu darbība un to paziņojumi.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Tiek ierobežoti vizuālie efekti un fonā izpildāmas darbības. Ja vēl nav ieslēgts tumšais motīvs, tas tiek ieslēgts.</string>
+  <string name="saver_confirmation_dialog_title">Laipni lūdzam akumulatora enerģijas taupīšanas režīmā</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Akumulatora enerģijas maksimālas taupīšanas režīms</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Akumulatora enerģijas standarta taupīšanas režīms</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Ierīces politika ir atspējojusi ekrānuzņēmumu izveidi</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Bloķējis jūsu IT administrators</string>
   <string name="screen_pinning_can_open_other_apps">Piespraustā lietotne var atvērt citas lietotnes.</string>
@@ -1312,6 +1363,12 @@ Ja jums ir jautājumi, sazinieties ar organizāciju %2$s.</string>
   <string name="screen_pinning_toast">Lai atspraustu šo lietotni, pieskarieties pogām “Atpakaļ” un “Pārskats” un turiet tās</string>
   <string name="screen_pinning_toast_gesture_nav">Lai atspraustu šo lietotni, velciet augšup un turiet</string>
   <string name="screen_pinning_toast_recents_invisible">Lai atspraustu šo lietotni, pieskarieties pogām “Atpakaļ” un “Sākums” un turiet tās</string>
+  <string name="screen_protector_absent_message">Atspējojot ekrāna aizsargplēves režīmu, tiek uzlabota skārienievade, kad netiek izmantota ekrāna aizsargplēve.</string>
+  <string name="screen_protector_disable_notification">Atspējot paziņojumus</string>
+  <string name="screen_protector_go_to_settings">Atvērt iestatījumus</string>
+  <string name="screen_protector_got_it">Labi</string>
+  <string name="screen_protector_mode_title">Ekrāna aizsargplēves režīms</string>
+  <string name="screen_protector_present_message">Iespējojot ekrāna aizsargplēves režīmu, tiek uzlabota skārienievade, kad tiek izmantota ekrāna aizsargplēve.</string>
   <string name="screen_share_permission_app_selector_title">Lietotnes kopīgošana vai ierakstīšana</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Viss ekrāns</string>
   <string name="screen_share_permission_dialog_option_single_app">Viena lietotne</string>
@@ -1364,9 +1421,9 @@ Ja jums ir jautājumi, sazinieties ar organizāciju %2$s.</string>
   <string name="screenshot_saving_work_profile_title">Notiek ekrānuzņēmuma saglabāšana darba profilā…</string>
   <string name="screenshot_scroll_label">Tvert vairāk</string>
   <string name="screenshot_share_description">Kopīgot ekrānuzņēmumu</string>
-  <string name="screenshot_share_label">Kopīgot</string>
   <string name="screenshot_text">Ekrānuzņēmums</string>
   <string name="screenshot_top_boundary_pct">Augšmala: %1$d %%</string>
+  <string name="screenshot_view_description">Skatīt ekrānuzņēmumu</string>
   <string name="screenshot_work_profile_notification">Saglabāts lietotnē %1$s darba profilā</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">Pirksta nospieduma sensors atrodas uz barošanas pogas. Tā ir plakanā poga, kas atrodas blakus augstākai skaļuma pogai tālruņa sānos.</string>
   <string name="see_all_bluetooth_devices">Skatīt visas</string>
@@ -1384,6 +1441,12 @@ Ja jums ir jautājumi, sazinieties ar organizāciju %2$s.</string>
   <string name="set_default_notes_app_toast_content">Iestatījumos iestatiet noklusējuma piezīmju lietotni.</string>
   <string name="settings_label">Iestatījumi</string>
   <string name="settingslib_learn_more_text">Uzzināt vairāk</string>
+  <string name="severe_battery_notification_switch_text">Vai pārslēgt uz akumulatora enerģijas maksimālas taupīšanas režīmu? 
+
+Tādējādi tiks pārtraukta visu nesvarīgo lietotņu darbība un to paziņojumi.</string>
+  <string name="severe_battery_notification_text">Ieslēdziet akumulatora enerģijas maksimālas taupīšanas režīmu. Tādējādi tiks pārtraukta visu nesvarīgo lietotņu darbība.</string>
+  <string name="severe_battery_notification_title">Atlikušais akumulatora uzlādes līmenis: %s</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Pārslēgt</string>
   <string name="share_to_app_stop_dialog_button">Apturēt kopīgošanu</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Tiks pārtraukta lietotnes &lt;b&gt;%1$s&lt;/b&gt; satura kopīgošana</string>
   <string name="share_to_app_stop_dialog_title">Vai apturēt ekrāna kopīgošanu?</string>
@@ -1406,6 +1469,9 @@ Ja jums ir jautājumi, sazinieties ar organizāciju %2$s.</string>
   <string name="slice_permission_text_1">- Var lasīt informāciju no lietotnes %1$s</string>
   <string name="slice_permission_text_2">- Var veikt darbības lietotnē %1$s</string>
   <string name="slice_permission_title">Vai atļaut lietotnei %1$s rādīt lietotnes %2$s sadaļas?</string>
+  <string name="smartspace_content_desc">Īsumā</string>
+  <string name="smartspace_flight_qr_code">Kvadrātkods</string>
+  <string name="smartspace_role_desc">Skatīt</string>
   <string name="snoozeHourOptions">{count,plural, =1{# stunda}=2{# stundas}zero{# stundu}one{# stunda}other{# stundas}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minūte}zero{# minūšu}one{# minūte}other{# minūtes}}</string>
   <string name="snooze_undo">Atsaukt</string>
@@ -1416,6 +1482,8 @@ Ja jums ir jautājumi, sazinieties ar organizāciju %2$s.</string>
   <string name="speed_label_slow">Lēns</string>
   <string name="speed_label_very_fast">Ļoti ātrs</string>
   <string name="split_screen_text">Sadalīt ekrānu</string>
+  <string name="squeeze_invocation_prompt">Lai runātu, saspiediet ierīci</string>
+  <string name="standard_battery_saver_text">Standarta</string>
   <string name="start_dreams">Ekrānsaudzētājs</string>
   <string name="state_empty">Tukšs</string>
   <string name="state_off">Izslēgts</string>
@@ -1453,6 +1521,8 @@ Ja jums ir jautājumi, sazinieties ar organizāciju %2$s.</string>
   <string name="tab">Cilne</string>
   <string name="tap_a_network_to_connect">Pieskarieties tīklam, lai izveidotu savienojumu</string>
   <string name="tap_again">Pieskarieties vēlreiz</string>
+  <string name="temp_defender_notify_des">Uzlāde tiks atsākta, tiklīdz tālruņa temperatūra būs piemērota.</string>
+  <string name="temp_defender_notify_title">Uzlāde apturēta, lai aizsargātu akumulatoru</string>
   <string name="template_percent">Procenti: %1$d.</string>
   <string name="thermal">Ierīces temperatūra</string>
   <string name="thermal_shutdown_dialog_help_text">Skatīt apkopes norādījumus</string>
@@ -1469,6 +1539,7 @@ Pieskarieties, lai uzzinātu vairāk.</string>
   <string name="title_for_empty_state_cta">Ātri piekļūstiet saviem iecienītākajiem lietotņu logrīkiem, neatbloķējot planšetdatoru.</string>
   <string name="title_usb_accessory">USB piederums</string>
   <string name="to_switch_networks_disconnect_ethernet">Lai pārslēgtu tīklus, atvienojiet tīkla Ethernet vadu.</string>
+  <string name="too_hot_label">Pixel tālrunis ir pārāk karsts</string>
   <string name="touch_filtered_warning">Lietotne Iestatījumi nevar verificēt jūsu atbildi, jo cita lietotne aizsedz atļaujas pieprasījumu.</string>
   <string name="touchpad_tutorial_action_key_button">Darbību taustiņš</string>
   <string name="touchpad_tutorial_back_gesture_button">Žests pāriešanai atpakaļ</string>
@@ -1483,17 +1554,18 @@ Pieskarieties, lai uzzinātu vairāk.</string>
   <string name="tuner_menu">Izvēlne</string>
   <string name="tuner_minus">Mīnuss</string>
   <string name="tuner_other_apps">Citas lietotnes</string>
+  <string name="tuner_persistent_warning">Nākamajās versijās šīs eksperimentālās funkcijas var tikt mainītas, bojātas vai to darbība var tikt pārtraukta. Turpinot esiet uzmanīgs.</string>
   <string name="tuner_plus">Pluss</string>
   <string name="tuner_right">Pa labi</string>
   <string name="tuner_time">Laiks</string>
+  <string name="tuner_warning">Sistēmas saskarnes regulators sniedz papildu veidus, kā mainīt un pielāgot Android lietotāja saskarni. Nākamajās versijās šīs eksperimentālās funkcijas var tikt mainītas, bojātas vai to darbība var tikt pārtraukta. Turpinot esiet uzmanīgs.</string>
+  <string name="tuner_warning_title">Jautri dažiem, bet ne visiem</string>
   <string name="turn_off_airplane_mode">Izslēgt lidojuma režīmu</string>
   <string name="turn_on_bluetooth">Izmantot Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Tādas funkcijas kā “Ātrā kopīgošana” un “Atrast ierīci” izmanto Bluetooth savienojumu</string>
   <string name="turn_on_bluetooth_auto_info_enabled">Bluetooth savienojums tiks ieslēgts rīt no rīta</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Automātiski ieslēgt rīt</string>
   <string name="turn_on_wifi">Wi-Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Noklusējuma iestatījums televizorā</string>
   <string name="two_weeks_timestamp">Pirms 2 nedēļām</string>
   <string name="unknown">Nezināms</string>
   <string name="unlock_to_see_notif_text">Atbloķējiet vecāku paziņojumu skatīšanai</string>
@@ -1552,7 +1624,9 @@ Ikviens lietotājs var atjaunināt lietotnes citu lietotāju vietā.</string>
   <string name="volume_odi_captions_hint_enable">iespējot</string>
   <string name="volume_odi_captions_tip">Autom. paraksti multividei</string>
   <string name="volume_panel_captioning_title">Subtitri reāllaikā</string>
+  <string name="volume_panel_clear_calling_title">Skaidri zvani</string>
   <string name="volume_panel_collapsed_sliders">Skaļuma slīdņi sakļauti</string>
+  <string name="volume_panel_device_settings_title">Ierīces iestatījumi</string>
   <string name="volume_panel_dialog_settings_button">Iestatījumi</string>
   <string name="volume_panel_enter_media_output_settings">Atvērt izvades iestatījumus</string>
   <string name="volume_panel_expanded_sliders">Skaļuma slīdņi izvērsti</string>
@@ -1667,6 +1741,9 @@ Wi‑Fi adrese (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Nezināms</string>
   <string name="wifitrackerlib_wifi_unmetered_label">Bezmaksas</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Wi-Fi savienojums īslaicīgi netiks veidots automātiski</string>
+  <string name="wireless_charging_label">Bezvadu uzlāde</string>
+  <string name="wireless_charging_notification_text">Bezvadu uzlāde var patērēt vairāk enerģijas nekā uzlāde ar vadu. Lai ietaupītu elektrību un laiku, varat pārslēgties uz vadu lādētāju.</string>
+  <string name="wireless_charging_notification_title">Notiek bezvadu uzlāde</string>
   <string name="work_challenge_emergency_button_text">Ārkārtas situācija</string>
   <string name="work_mode_off_title">Vai aktivizēt darba lietotnes?</string>
   <string name="work_mode_turn_on">Aktivizēt</string>

@@ -1,6 +1,6 @@
 .class public final Lcom/airbnb/lottie/parser/DocumentDataParser;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/airbnb/lottie/parser/ValueParser;
@@ -29,59 +29,59 @@
     const-string v12, "ps"
 
     .line 9
-    const-string v13, "sz"
+    const-string/jumbo v13, "sz"
 
     .line 11
-    const-string v1, "t"
+    const-string/jumbo v1, "t"
 
-    .line 13
+    .line 14
     const-string v2, "f"
 
-    .line 15
+    .line 17
     const-string v3, "s"
 
-    .line 17
+    .line 19
     const-string v4, "j"
 
-    .line 19
-    const-string v5, "tr"
-
     .line 21
-    const-string v6, "lh"
+    const-string/jumbo v5, "tr"
 
     .line 23
+    const-string v6, "lh"
+
+    .line 26
     const-string v7, "ls"
 
-    .line 25
+    .line 28
     const-string v8, "fc"
 
-    .line 27
+    .line 30
     const-string v9, "sc"
 
-    .line 29
-    const-string v10, "sw"
+    .line 32
+    const-string/jumbo v10, "sw"
 
-    .line 31
+    .line 34
     const-string v11, "of"
 
-    .line 33
+    .line 37
     filled-new-array/range {v1 .. v13}, [Ljava/lang/String;
-
-    .line 35
-    move-result-object v0
-
-    .line 38
-    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     .line 39
     move-result-object v0
 
     .line 42
-    sput-object v0, Lcom/airbnb/lottie/parser/DocumentDataParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     .line 43
+    move-result-object v0
+
+    .line 46
+    sput-object v0, Lcom/airbnb/lottie/parser/DocumentDataParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+
+    .line 47
     return-void
-    .line 45
+    .line 49
 .end method
 
 

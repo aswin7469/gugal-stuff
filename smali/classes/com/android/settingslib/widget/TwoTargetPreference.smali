@@ -1,6 +1,6 @@
 .class public Lcom/android/settingslib/widget/TwoTargetPreference;
 .super Landroidx/preference/Preference;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # direct methods
@@ -35,7 +35,7 @@
     .locals 2
 
     .line 1
-    const v0, 0x7f0e01f1    # @layout/preference_two_target 'res/layout/preference_two_target.xml'
+    const v0, 0x7f0d01ff    # @layout/preference_two_target 'res/layout/preference_two_target.xml'
 
     .line 2
     iput v0, p0, Landroidx/preference/Preference;->mLayoutResId:I
@@ -47,7 +47,7 @@
     move-result-object v0
 
     .line 10
-    const v1, 0x7f070abb    # @dimen/two_target_pref_small_icon_size '24.0dp'
+    const v1, 0x7f070b17    # @dimen/two_target_pref_small_icon_size '24.0dp'
 
     .line 11
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -59,7 +59,7 @@
     move-result-object p1
 
     .line 20
-    const v0, 0x7f070aba    # @dimen/two_target_pref_medium_icon_size '32.0dp'
+    const v0, 0x7f070b16    # @dimen/two_target_pref_medium_icon_size '32.0dp'
 
     .line 21
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -104,7 +104,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 14
-    const v0, 0x7f0b0866    # @id/two_target_divider
+    const v0, 0x7f0a0894    # @id/two_target_divider
 
     .line 16
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

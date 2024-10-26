@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/statusbar/pipeline/shared/ui/view/ModernStatusBarView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/StatusIconDisplayable;
@@ -163,7 +163,7 @@
     invoke-direct {p1, v0, v1, v2, v3}, Lcom/android/systemui/statusbar/StatusBarIconView;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/service/notification/StatusBarNotification;Z)V
 
     .line 15
-    const v0, 0x7f0b0767    # @id/status_bar_dot
+    const v0, 0x7f0a0796    # @id/status_bar_dot
 
     .line 18
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setId(I)V
@@ -184,7 +184,7 @@
     move-result-object v0
 
     .line 33
-    const v1, 0x7f0709cd    # @dimen/status_bar_icon_size_sp '@android:dimen/text_size_display_3_material'
+    const v1, 0x7f070a25    # @dimen/status_bar_icon_size_sp '@android:dimen/text_size_display_3_material'
 
     .line 34
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

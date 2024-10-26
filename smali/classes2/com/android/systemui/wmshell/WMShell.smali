@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/wmshell/WMShell;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -233,7 +233,7 @@
 
 # virtual methods
 .method public final dump(Ljava/io/PrintWriter;[Ljava/lang/String;)V
-    .locals 2
+    .locals 3
 
     .line 1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -254,76 +254,66 @@
     move-result-object v1
 
     .line 14
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "com.android.systemui.wmshell.WMShell"
 
     .line 15
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Landroidx/exifinterface/media/ExifInterface$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 18
-    move-result-object v0
-
-    .line 21
-    const-string v1, "com.android.systemui.wmshell.WMShell"
-
-    .line 22
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 24
+    .line 17
     const/4 v0, 0x0
 
-    .line 27
+    .line 20
     aget-object v0, p2, v0
 
-    .line 28
+    .line 21
     const-string v1, "dependency"
 
-    .line 30
+    .line 23
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 32
+    .line 25
     move-result v0
 
-    .line 35
+    .line 28
     if-eqz v0, :cond_0
 
-    .line 36
+    .line 29
     const/4 v0, 0x1
 
-    .line 38
+    .line 31
     array-length v1, p2
 
-    .line 39
+    .line 32
     invoke-static {p2, v0, v1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;II)[Ljava/lang/Object;
 
-    .line 40
+    .line 33
     move-result-object p2
 
-    .line 43
+    .line 36
     check-cast p2, [Ljava/lang/String;
 
-    .line 44
+    .line 37
     :cond_0
     iget-object p0, p0, Lcom/android/systemui/wmshell/WMShell;->mShell:Lcom/android/wm/shell/sysui/ShellInterface;
 
-    .line 46
+    .line 39
     invoke-interface {p0, p1, p2}, Lcom/android/wm/shell/sysui/ShellInterface;->handleCommand(Ljava/io/PrintWriter;[Ljava/lang/String;)Z
 
-    .line 48
+    .line 41
     move-result p2
 
-    .line 51
+    .line 44
     if-eqz p2, :cond_1
 
-    .line 52
+    .line 45
     return-void
 
-    .line 54
+    .line 47
     :cond_1
     invoke-interface {p0, p1}, Lcom/android/wm/shell/sysui/ShellInterface;->dump(Ljava/io/PrintWriter;)V
 
-    .line 55
+    .line 48
     return-void
-    .line 58
 .end method
 
 .method public initOneHanded(Lcom/android/wm/shell/onehanded/OneHanded;)V

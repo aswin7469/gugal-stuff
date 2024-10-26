@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/ImmersiveModeConfirmation$ClingWindowView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -131,7 +131,7 @@
     move-result-object v1
 
     .line 13
-    const v2, 0x7f070325    # @dimen/immersive_mode_cling_width '-1.0px'
+    const v2, 0x7f07035d    # @dimen/immersive_mode_cling_width '-1.0px'
 
     .line 14
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -212,7 +212,7 @@
 
     .line 63
     :cond_1
-    const v0, 0x7f0b0395    # @id/immersive_cling_icon
+    const v0, 0x7f0a03b5    # @id/immersive_cling_icon
 
     .line 65
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -317,7 +317,7 @@
     iget-object v1, v1, Lcom/android/systemui/statusbar/ImmersiveModeConfirmation;->mSysUiContext:Landroid/content/Context;
 
     .line 32
-    const v2, 0x7f0e00da    # @layout/immersive_mode_cling 'res/layout/immersive_mode_cling.xml'
+    const v2, 0x7f0d00e5    # @layout/immersive_mode_cling 'res/layout/immersive_mode_cling.xml'
 
     .line 34
     const/4 v3, 0x0
@@ -335,7 +335,7 @@
     iput-object v1, p0, Lcom/android/systemui/statusbar/ImmersiveModeConfirmation$ClingWindowView;->mClingLayout:Landroid/view/ViewGroup;
 
     .line 44
-    const v2, 0x7f0b058a    # @id/ok
+    const v2, 0x7f0a05af    # @id/ok
 
     .line 46
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -377,7 +377,7 @@
     move-result-object v2
 
     .line 77
-    const v4, 0x7f070325    # @dimen/immersive_mode_cling_width '-1.0px'
+    const v4, 0x7f07035d    # @dimen/immersive_mode_cling_width '-1.0px'
 
     .line 78
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

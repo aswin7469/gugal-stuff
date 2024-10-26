@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/NotificationGroupingUtil$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/NotificationGroupingUtil$ViewComparator;
@@ -553,7 +553,7 @@
 .end method
 
 .method public isEmpty(Landroid/view/View;)Z
-    .locals 2
+    .locals 1
 
     .line 1
     iget p0, p0, Lcom/android/systemui/statusbar/NotificationGroupingUtil$1;->$r8$classId:I
@@ -603,60 +603,40 @@
 
     .line 25
     :pswitch_0
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationAsyncGroupHeaderInflation()Z
-
-    .line 26
-    move-result p0
-
-    .line 29
-    const/4 v0, 0x1
-
-    .line 30
-    if-eqz p0, :cond_2
-
-    .line 31
-    if-nez p1, :cond_2
-
-    .line 33
-    goto :goto_2
-
-    .line 35
-    :cond_2
     instance-of p0, p1, Landroid/widget/ImageView;
 
-    .line 36
-    const/4 v1, 0x0
+    .line 26
+    const/4 v0, 0x0
 
-    .line 38
-    if-eqz p0, :cond_3
+    .line 28
+    if-eqz p0, :cond_2
 
-    .line 39
+    .line 29
     check-cast p1, Landroid/widget/ImageView;
 
-    .line 41
+    .line 31
     invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    .line 43
+    .line 33
     move-result-object p0
 
-    .line 46
-    if-nez p0, :cond_3
+    .line 36
+    if-nez p0, :cond_2
 
-    .line 47
-    goto :goto_2
+    .line 37
+    const/4 v0, 0x1
 
-    .line 49
-    :cond_3
-    move v0, v1
-
-    .line 50
-    :goto_2
+    .line 39
+    :cond_2
     return v0
 
-    .line 51
+    .line 40
+    nop
+
+    .line 41
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_0
     .end packed-switch
-    .line 52
+    .line 42
 .end method

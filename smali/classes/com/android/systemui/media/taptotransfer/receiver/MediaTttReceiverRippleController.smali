@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/taptotransfer/receiver/MediaTttReceiverRippleController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -77,7 +77,7 @@
     move-result-object v2
 
     .line 27
-    const v3, 0x7f07069d    # @dimen/media_ttt_icon_size_receiver '112.0dp'
+    const v3, 0x7f0706df    # @dimen/media_ttt_icon_size_receiver '112.0dp'
 
     .line 28
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -175,7 +175,7 @@
     move-result-object v2
 
     .line 88
-    const v3, 0x7f07069e    # @dimen/media_ttt_receiver_icon_bottom_margin '10.0dp'
+    const v3, 0x7f0706e0    # @dimen/media_ttt_receiver_icon_bottom_margin '10.0dp'
 
     .line 89
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -199,7 +199,7 @@
     const/4 v0, 0x0
 
     .line 103
-    const v1, 0x7f04073c    # @attr/wallpaperTextColorAccent
+    const v1, 0x7f040742    # @attr/wallpaperTextColorAccent
 
     .line 104
     invoke-static {v1, v0, p0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
@@ -309,7 +309,7 @@
     move-result-object p2
 
     .line 39
-    const v2, 0x7f07069d    # @dimen/media_ttt_icon_size_receiver '112.0dp'
+    const v2, 0x7f0706df    # @dimen/media_ttt_icon_size_receiver '112.0dp'
 
     .line 40
     invoke-virtual {p2, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -417,7 +417,7 @@
     const/4 p2, 0x0
 
     .line 106
-    const v0, 0x7f04073c    # @attr/wallpaperTextColorAccent
+    const v0, 0x7f040742    # @attr/wallpaperTextColorAccent
 
     .line 107
     invoke-static {v0, p2, p0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I

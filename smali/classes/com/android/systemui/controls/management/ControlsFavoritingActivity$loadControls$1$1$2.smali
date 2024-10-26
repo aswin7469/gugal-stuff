@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/controls/management/ControlsFavoritingActivity$loadControls$1$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -159,7 +159,7 @@
     move-result-object v4
 
     .line 76
-    const v5, 0x7f1402c2    # @string/controls_favorite_load_error 'Controls could not be loaded. Check the %s app to make sure that the app settings haven’t changed.'
+    const v5, 0x7f1302de    # @string/controls_favorite_load_error 'Controls could not be loaded. Check the %s app to make sure that the app settings haven’t changed.'
 
     .line 77
     invoke-virtual {v0, v5, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -229,7 +229,7 @@
     move-result-object v0
 
     .line 120
-    const v4, 0x7f1402c3    # @string/controls_favorite_load_none 'Compatible controls unavailable'
+    const v4, 0x7f1302df    # @string/controls_favorite_load_none 'Compatible controls unavailable'
 
     .line 121
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

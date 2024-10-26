@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/navigationbar/NavigationBar$8;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/shared/system/TaskStackChangeListener;
@@ -60,7 +60,7 @@
     iget-object v2, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mSysUiFlagsContainer:Lcom/android/systemui/model/SysUiState;
 
     .line 14
-    invoke-virtual {v2, v0, v1, p1}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)V
+    invoke-virtual {v2, v0, v1, p1}, Lcom/android/systemui/model/SysUiState;->setFlag(JZ)Lcom/android/systemui/model/SysUiState;
 
     .line 16
     iget p1, p0, Lcom/android/systemui/navigationbar/NavigationBar;->mDisplayId:I

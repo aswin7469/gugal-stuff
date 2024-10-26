@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/stack/StackStateAnimator;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -213,7 +213,7 @@
     move-result-object v0
 
     .line 5
-    const v1, 0x7f070301    # @dimen/go_to_full_shade_appearing_translation '200.0dp'
+    const v1, 0x7f070336    # @dimen/go_to_full_shade_appearing_translation '200.0dp'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -231,7 +231,7 @@
     move-result-object v0
 
     .line 18
-    const v1, 0x7f070308    # @dimen/heads_up_appear_y_above_screen '32.0dp'
+    const v1, 0x7f07033d    # @dimen/heads_up_appear_y_above_screen '32.0dp'
 
     .line 19
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -252,7 +252,7 @@
     move-result-object p1
 
     .line 32
-    const v0, 0x7f070309    # @dimen/heads_up_cycling_padding '8.0dp'
+    const v0, 0x7f07033e    # @dimen/heads_up_cycling_padding '8.0dp'
 
     .line 33
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -284,230 +284,217 @@
     invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->setAnimationRunning(Z)V
 
     .line 5
-    invoke-static {}, Lcom/android/systemui/Flags;->notificationsHeadsUpRefactor()Z
-
-    .line 8
-    move-result v2
-
-    .line 11
-    if-eqz v2, :cond_0
-
-    .line 12
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->setHeadsUpAnimatingAway(Z)V
-
-    .line 14
-    :cond_0
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->requestChildrenUpdate()V
 
-    .line 17
+    .line 8
     iget-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mAnimationFinishedRunnables:Ljava/util/HashSet;
 
-    .line 20
+    .line 11
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    .line 22
+    .line 13
     move-result-object v2
 
-    .line 25
+    .line 16
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 26
+    .line 17
     move-result v3
 
-    .line 29
-    if-eqz v3, :cond_1
+    .line 20
+    if-eqz v3, :cond_0
 
-    .line 30
+    .line 21
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 32
+    .line 23
     move-result-object v3
 
-    .line 35
+    .line 26
     check-cast v3, Ljava/lang/Runnable;
 
-    .line 36
+    .line 27
     invoke-interface {v3}, Ljava/lang/Runnable;->run()V
 
-    .line 38
+    .line 29
     goto :goto_0
 
-    .line 41
-    :cond_1
+    .line 32
+    :cond_0
     iget-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mAnimationFinishedRunnables:Ljava/util/HashSet;
 
-    .line 42
+    .line 33
     invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
 
-    .line 44
+    .line 35
     iget-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mClearTransientViewsWhenFinished:Ljava/util/HashSet;
 
-    .line 47
+    .line 38
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    .line 49
+    .line 40
     move-result-object v2
 
-    .line 52
+    .line 43
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 53
+    .line 44
     move-result v3
 
-    .line 56
-    if-eqz v3, :cond_2
+    .line 47
+    if-eqz v3, :cond_1
 
-    .line 57
+    .line 48
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 59
+    .line 50
     move-result-object v3
 
-    .line 62
+    .line 53
     check-cast v3, Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
-    .line 63
+    .line 54
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->removeFromTransientContainer()V
 
-    .line 65
+    .line 56
     goto :goto_1
 
-    .line 68
-    :cond_2
+    .line 59
+    :cond_1
     iget-object v2, v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mClearTransientViewsWhenFinished:Ljava/util/HashSet;
 
-    .line 69
+    .line 60
     invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
 
-    .line 71
+    .line 62
     move v2, v1
 
-    .line 74
+    .line 65
     :goto_2
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    .line 75
+    .line 66
     move-result v3
 
-    .line 78
-    if-ge v2, v3, :cond_4
+    .line 69
+    if-ge v2, v3, :cond_3
 
-    .line 79
+    .line 70
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    .line 81
+    .line 72
     move-result-object v3
 
-    .line 84
+    .line 75
     instance-of v4, v3, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 85
-    if-eqz v4, :cond_3
+    .line 76
+    if-eqz v4, :cond_2
 
-    .line 87
+    .line 78
     check-cast v3, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 89
+    .line 80
     invoke-virtual {v3, v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setHeadsUpAnimatingAway(Z)V
 
-    .line 91
+    .line 82
     iget-boolean v4, v3, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsSummaryWithChildren:Z
 
-    .line 94
-    if-eqz v4, :cond_3
+    .line 85
+    if-eqz v4, :cond_2
 
-    .line 96
+    .line 87
     invoke-virtual {v3}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->getAttachedChildren()Ljava/util/List;
 
-    .line 98
+    .line 89
     move-result-object v3
 
-    .line 101
+    .line 92
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    .line 102
+    .line 93
     move-result-object v3
 
-    .line 105
+    .line 96
     :goto_3
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 106
+    .line 97
     move-result v4
 
-    .line 109
-    if-eqz v4, :cond_3
+    .line 100
+    if-eqz v4, :cond_2
 
-    .line 110
+    .line 101
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 112
+    .line 103
     move-result-object v4
 
-    .line 115
+    .line 106
     check-cast v4, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 116
+    .line 107
     invoke-virtual {v4, v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setHeadsUpAnimatingAway(Z)V
 
-    .line 118
+    .line 109
     goto :goto_3
 
-    .line 121
-    :cond_3
+    .line 112
+    :cond_2
     add-int/lit8 v2, v2, 0x1
 
-    .line 122
+    .line 113
     goto :goto_2
 
-    .line 124
-    :cond_4
+    .line 115
+    :cond_3
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->finalizeClearAllAnimation()V
 
-    .line 125
+    .line 116
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/stack/StackStateAnimator;->mTransientViewsToRemove:Ljava/util/ArrayList;
 
-    .line 128
+    .line 119
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 130
+    .line 121
     move-result-object v0
 
-    .line 133
+    .line 124
     :goto_4
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 134
+    .line 125
     move-result v1
 
-    .line 137
-    if-eqz v1, :cond_5
+    .line 128
+    if-eqz v1, :cond_4
 
-    .line 138
+    .line 129
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 140
+    .line 131
     move-result-object v1
 
-    .line 143
+    .line 134
     check-cast v1, Lcom/android/systemui/statusbar/notification/row/ExpandableView;
 
-    .line 144
+    .line 135
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableView;->removeFromTransientContainer()V
 
-    .line 146
+    .line 137
     goto :goto_4
 
-    .line 149
-    :cond_5
+    .line 140
+    :cond_4
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/StackStateAnimator;->mTransientViewsToRemove:Ljava/util/ArrayList;
 
-    .line 150
+    .line 141
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
-    .line 152
+    .line 143
     return-void
-    .line 155
+    .line 146
 .end method

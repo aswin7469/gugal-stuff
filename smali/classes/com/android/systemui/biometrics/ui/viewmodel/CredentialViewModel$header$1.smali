@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/biometrics/ui/viewmodel/CredentialViewModel$header$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -238,14 +238,14 @@
     if-eqz v3, :cond_5
 
     .line 81
-    const v0, 0x7f080611    # @drawable/auth_dialog_enterprise 'res/drawable/auth_dialog_enterprise.xml'
+    const v0, 0x7f080612    # @drawable/auth_dialog_enterprise 'res/drawable/auth_dialog_enterprise.xml'
 
     .line 83
     goto :goto_5
 
     .line 86
     :cond_5
-    const v0, 0x7f080612    # @drawable/auth_dialog_lock 'res/drawable/auth_dialog_lock.xml'
+    const v0, 0x7f080613    # @drawable/auth_dialog_lock 'res/drawable/auth_dialog_lock.xml'
 
     .line 87
     :goto_5

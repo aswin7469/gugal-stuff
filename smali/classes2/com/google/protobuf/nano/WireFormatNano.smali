@@ -1,9 +1,30 @@
 .class public abstract Lcom/google/protobuf/nano/WireFormatNano;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
+
+
+# static fields
+.field public static final EMPTY_FLOAT_ARRAY:[F
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    new-array v0, v0, [F
+
+    .line 3
+    sput-object v0, Lcom/google/protobuf/nano/WireFormatNano;->EMPTY_FLOAT_ARRAY:[F
+
+    .line 5
+    return-void
+    .line 7
+.end method
+
 .method public static final getRepeatedFieldArrayLength(Lcom/google/protobuf/nano/CodedInputByteBufferNano;I)I
     .locals 4
 
@@ -71,7 +92,7 @@
     const-string p1, "Bad position "
 
     .line 36
-    invoke-static {v0, p1}, Landroidx/appcompat/view/menu/SubMenuBuilder$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Landroid/frameworks/stats/VendorAtomValue$1$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Ljava/lang/String;
 
     .line 38
     move-result-object p1
@@ -93,7 +114,7 @@
     const-string v3, " is beyond current "
 
     .line 50
-    invoke-static {v2, v3, v0}, Landroidx/collection/MutableIntList$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0}, Landroidx/appsearch/app/GenericDocument$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/StringBuilder;
 
     .line 52
     move-result-object v0

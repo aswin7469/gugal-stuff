@@ -1,14 +1,12 @@
 .class public final Lcom/android/systemui/SliceBroadcastRelayHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
 
 
 # instance fields
-.field public final mBackgroundExecutor:Ljava/util/concurrent/Executor;
-
 .field public final mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
 .field public final mContext:Landroid/content/Context;
@@ -20,28 +18,28 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/broadcast/BroadcastDispatcher;Ljava/util/concurrent/Executor;)V
-    .locals 1
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Landroid/util/ArrayMap;
+    new-instance p3, Landroid/util/ArrayMap;
 
     .line 5
-    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
+    invoke-direct {p3}, Landroid/util/ArrayMap;-><init>()V
 
     .line 7
-    iput-object v0, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mRelays:Landroid/util/ArrayMap;
+    iput-object p3, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mRelays:Landroid/util/ArrayMap;
 
     .line 10
-    new-instance v0, Lcom/android/systemui/SliceBroadcastRelayHandler$1;
+    new-instance p3, Lcom/android/systemui/SliceBroadcastRelayHandler$1;
 
     .line 12
-    invoke-direct {v0, p0}, Lcom/android/systemui/SliceBroadcastRelayHandler$1;-><init>(Lcom/android/systemui/SliceBroadcastRelayHandler;)V
+    invoke-direct {p3, p0}, Lcom/android/systemui/SliceBroadcastRelayHandler$1;-><init>(Lcom/android/systemui/SliceBroadcastRelayHandler;)V
 
     .line 14
-    iput-object v0, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mReceiver:Lcom/android/systemui/SliceBroadcastRelayHandler$1;
+    iput-object p3, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mReceiver:Lcom/android/systemui/SliceBroadcastRelayHandler$1;
 
     .line 17
     iput-object p1, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mContext:Landroid/content/Context;
@@ -50,11 +48,8 @@
     iput-object p2, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
     .line 21
-    iput-object p3, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
-
-    .line 23
     return-void
-    .line 25
+    .line 23
 .end method
 
 
@@ -295,84 +290,33 @@
 .end method
 
 .method public final start()V
-    .locals 8
+    .locals 2
 
     .line 1
-    new-instance v2, Landroid/content/IntentFilter;
+    new-instance v0, Landroid/content/IntentFilter;
 
     .line 2
-    const-string v0, "com.android.settingslib.action.REGISTER_SLICE_RECEIVER"
+    const-string v1, "com.android.settingslib.action.REGISTER_SLICE_RECEIVER"
 
     .line 4
-    invoke-direct {v2, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
     .line 6
-    const-string v0, "com.android.settingslib.action.UNREGISTER_SLICE_RECEIVER"
+    const-string v1, "com.android.settingslib.action.UNREGISTER_SLICE_RECEIVER"
 
     .line 9
-    invoke-virtual {v2, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 11
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->systemui_is_cached:Z
+    iget-object v1, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mReceiver:Lcom/android/systemui/SliceBroadcastRelayHandler$1;
 
     .line 14
-    if-nez v0, :cond_0
+    iget-object p0, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
     .line 16
-    invoke-static {}, Lcom/android/systemui/FeatureFlagsImpl;->load_overrides_systemui()V
+    invoke-virtual {p0, v1, v0}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
     .line 18
-    :cond_0
-    sget-boolean v0, Lcom/android/systemui/FeatureFlagsImpl;->sliceBroadcastRelayInBackground:Z
-
-    .line 21
-    iget-object v1, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mBroadcastDispatcher:Lcom/android/systemui/broadcast/BroadcastDispatcher;
-
-    .line 23
-    if-eqz v0, :cond_1
-
-    .line 25
-    iget-object v3, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mBackgroundExecutor:Ljava/util/concurrent/Executor;
-
-    .line 27
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 29
-    const/4 v4, 0x0
-
-    .line 32
-    const/16 v7, 0x38
-
-    .line 33
-    iget-object p0, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mReceiver:Lcom/android/systemui/SliceBroadcastRelayHandler$1;
-
-    .line 35
-    const/4 v5, 0x0
-
-    .line 37
-    const/4 v6, 0x0
-
-    .line 38
-    move-object v0, v1
-
-    .line 39
-    move-object v1, p0
-
-    .line 40
-    invoke-static/range {v0 .. v7}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiver$default(Lcom/android/systemui/broadcast/BroadcastDispatcher;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/util/concurrent/Executor;Landroid/os/UserHandle;ILjava/lang/String;I)V
-
-    .line 41
-    goto :goto_0
-
-    .line 44
-    :cond_1
-    iget-object p0, p0, Lcom/android/systemui/SliceBroadcastRelayHandler;->mReceiver:Lcom/android/systemui/SliceBroadcastRelayHandler$1;
-
-    .line 45
-    invoke-virtual {v1, p0, v2}, Lcom/android/systemui/broadcast/BroadcastDispatcher;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
-
-    .line 47
-    :goto_0
     return-void
-    .line 50
+    .line 21
 .end method

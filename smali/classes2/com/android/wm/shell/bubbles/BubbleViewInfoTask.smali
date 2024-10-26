@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/bubbles/BubbleViewInfoTask;
 .super Landroid/os/AsyncTask;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -331,7 +331,7 @@
     move-result-object p1
 
     .line 184
-    const p3, 0x1040279    # @android:string/config_oem_enabled_satellite_s2cell_file
+    const p3, 0x1040272    # @android:string/config_mobile_hotspot_provision_app_no_ui
 
     .line 185
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -530,7 +530,7 @@
 
     move-result-object v3
 
-    const v9, 0x7f0e005d    # @layout/bubble_bar_expanded_view 'res/layout/bubble_bar_expanded_view.xml'
+    const v9, 0x7f0d0062    # @layout/bubble_bar_expanded_view 'res/layout/bubble_bar_expanded_view.xml'
 
     const/4 v10, 0x0
 

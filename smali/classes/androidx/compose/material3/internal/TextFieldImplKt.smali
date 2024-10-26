@@ -1,6 +1,6 @@
 .class public abstract Landroidx/compose/material3/internal/TextFieldImplKt;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -3347,30 +3347,6 @@
     :cond_6
     return-void
     .line 93
-.end method
-
-.method public static final defaultErrorSemantics(Landroidx/compose/ui/Modifier;ZLjava/lang/String;)Landroidx/compose/ui/Modifier;
-    .locals 0
-
-    .line 1
-    if-eqz p1, :cond_0
-
-    .line 2
-    new-instance p1, Landroidx/compose/material3/internal/TextFieldImplKt$defaultErrorSemantics$1;
-
-    .line 4
-    invoke-direct {p1, p2}, Landroidx/compose/material3/internal/TextFieldImplKt$defaultErrorSemantics$1;-><init>(Ljava/lang/String;)V
-
-    .line 6
-    invoke-static {p0, p1}, Landroidx/compose/ui/semantics/SemanticsModifierKt;->semantics$default(Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function1;)Landroidx/compose/ui/Modifier;
-
-    .line 9
-    move-result-object p0
-
-    .line 12
-    :cond_0
-    return-object p0
-    .line 13
 .end method
 
 .method public static final getLayoutId(Landroidx/compose/ui/layout/Measurable;)Ljava/lang/Object;

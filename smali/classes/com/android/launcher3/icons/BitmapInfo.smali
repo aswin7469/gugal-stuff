@@ -1,6 +1,6 @@
 .class public Lcom/android/launcher3/icons/BitmapInfo;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -74,7 +74,7 @@
     sget-object v1, Lcom/android/launcher3/icons/GraphicsUtils;->sOnNewBitmapRunnable:Lcom/android/launcher3/icons/GraphicsUtils$$ExternalSyntheticLambda0;
 
     .line 3
-    const v1, 0x7f0401da    # @attr/disabledIconAlpha
+    const v1, 0x7f0401db    # @attr/disabledIconAlpha
 
     .line 5
     filled-new-array {v1}, [I
@@ -192,7 +192,7 @@
     new-instance p0, Lcom/android/launcher3/icons/UserBadgeDrawable;
 
     .line 70
-    const p3, 0x7f0807f1    # @drawable/ic_instant_app_badge 'res/drawable/ic_instant_app_badge.xml'
+    const p3, 0x7f080813    # @drawable/ic_instant_app_badge 'res/drawable/ic_instant_app_badge.xml'
 
     .line 72
     const v0, 0x7f060043    # @color/badge_tint_instant '@android:color/black'
@@ -214,7 +214,7 @@
     new-instance p0, Lcom/android/launcher3/icons/UserBadgeDrawable;
 
     .line 86
-    const p3, 0x7f08097f    # @drawable/ic_work_app_badge 'res/drawable/ic_work_app_badge.xml'
+    const p3, 0x7f0809b4    # @drawable/ic_work_app_badge 'res/drawable/ic_work_app_badge.xml'
 
     .line 88
     const v0, 0x7f060045    # @color/badge_tint_work '#1a73e8'
@@ -236,7 +236,7 @@
     new-instance p0, Lcom/android/launcher3/icons/UserBadgeDrawable;
 
     .line 102
-    const p3, 0x7f08070f    # @drawable/ic_clone_app_badge 'res/drawable/ic_clone_app_badge.xml'
+    const p3, 0x7f080726    # @drawable/ic_clone_app_badge 'res/drawable/ic_clone_app_badge.xml'
 
     .line 104
     const v0, 0x7f060042    # @color/badge_tint_clone '#ff3c4043'
@@ -258,7 +258,7 @@
     new-instance p0, Lcom/android/launcher3/icons/UserBadgeDrawable;
 
     .line 118
-    const p3, 0x7f0808ef    # @drawable/ic_private_profile_app_badge 'res/drawable/ic_private_profile_app_badge.xml'
+    const p3, 0x7f080914    # @drawable/ic_private_profile_app_badge 'res/drawable/ic_private_profile_app_badge.xml'
 
     .line 120
     const v0, 0x7f060044    # @color/badge_tint_private '#3c4043'
@@ -437,7 +437,7 @@
     move-result-object v1
 
     .line 28
-    const v2, 0x7f060576    # @color/themed_icon_background_color '@android:color/system_accent1_100'
+    const v2, 0x7f06058c    # @color/themed_icon_background_color '@android:color/system_accent1_100'
 
     .line 29
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
@@ -446,7 +446,7 @@
     move-result v2
 
     .line 35
-    const v3, 0x7f060577    # @color/themed_icon_color '@android:color/system_accent1_700'
+    const v3, 0x7f06058d    # @color/themed_icon_color '@android:color/system_accent1_700'
 
     .line 36
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I

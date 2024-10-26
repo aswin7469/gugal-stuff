@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor$listenForLockscreenToGone$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlinx/coroutines/flow/FlowCollector;
@@ -144,240 +144,112 @@
 
     .line 60
     :pswitch_1
-    check-cast p1, Lcom/android/systemui/keyguard/data/repository/ShowWhenLockedActivityInfo;
+    check-cast p1, Ljava/lang/Boolean;
 
     .line 61
-    iget-object p1, p1, Lcom/android/systemui/keyguard/data/repository/ShowWhenLockedActivityInfo;->taskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 63
-    if-eqz p1, :cond_2
+    sget-object v1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->ALTERNATE_BOUNCER:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
-    .line 65
-    iget p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityType:I
-
-    .line 67
-    const/4 v0, 0x5
-
-    .line 69
-    if-ne p1, v0, :cond_2
-
-    .line 70
-    sget-object p1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->DREAMING:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
-
-    .line 72
-    :goto_2
-    move-object v1, p1
-
-    .line 74
-    goto :goto_3
-
-    .line 75
-    :cond_2
-    sget-object p1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->OCCLUDED:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
-
-    .line 76
-    goto :goto_2
-
-    .line 78
-    :goto_3
+    .line 66
     const/4 v2, 0x0
 
-    .line 79
+    .line 68
     const/16 v6, 0xe
 
-    .line 80
+    .line 69
     iget-object v0, p0, Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor$listenForLockscreenToGone$1$2;->this$0:Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor;
 
-    .line 82
+    .line 71
     const/4 v3, 0x0
 
-    .line 84
+    .line 73
     const/4 v4, 0x0
 
-    .line 85
+    .line 74
     move-object v5, p2
 
-    .line 86
+    .line 75
     invoke-static/range {v0 .. v6}, Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;->startTransitionTo$default(Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;Lcom/android/systemui/keyguard/shared/model/KeyguardState;Landroid/animation/ValueAnimator;Lcom/android/systemui/keyguard/shared/model/TransitionModeOnCanceled;Ljava/lang/String;Lkotlin/coroutines/Continuation;I)Ljava/lang/Object;
 
-    .line 87
+    .line 76
     move-result-object p0
 
-    .line 90
+    .line 79
     sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
 
-    .line 91
-    if-ne p0, p1, :cond_3
+    .line 80
+    if-ne p0, p1, :cond_2
+
+    .line 82
+    goto :goto_2
+
+    .line 84
+    :cond_2
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    .line 85
+    :goto_2
+    return-object p0
+
+    .line 87
+    :pswitch_2
+    check-cast p1, Ljava/lang/Boolean;
+
+    .line 88
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 90
+    sget-object v1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GONE:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
 
     .line 93
-    goto :goto_4
+    sget-object v3, Lcom/android/systemui/keyguard/shared/model/TransitionModeOnCanceled;->RESET:Lcom/android/systemui/keyguard/shared/model/TransitionModeOnCanceled;
 
     .line 95
+    iget-object v0, p0, Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor$listenForLockscreenToGone$1$2;->this$0:Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor;
+
+    .line 97
+    const/16 v6, 0xa
+
+    .line 99
+    const/4 v2, 0x0
+
+    .line 101
+    const/4 v4, 0x0
+
+    .line 102
+    move-object v5, p2
+
+    .line 103
+    invoke-static/range {v0 .. v6}, Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;->startTransitionTo$default(Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;Lcom/android/systemui/keyguard/shared/model/KeyguardState;Landroid/animation/ValueAnimator;Lcom/android/systemui/keyguard/shared/model/TransitionModeOnCanceled;Ljava/lang/String;Lkotlin/coroutines/Continuation;I)Ljava/lang/Object;
+
+    .line 104
+    move-result-object p0
+
+    .line 107
+    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    .line 108
+    if-ne p0, p1, :cond_3
+
+    .line 110
+    goto :goto_3
+
+    .line 112
     :cond_3
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 96
-    :goto_4
+    .line 113
+    :goto_3
     return-object p0
-
-    .line 98
-    :pswitch_2
-    check-cast p1, Lcom/android/systemui/shade/data/repository/FlingInfo;
-
-    .line 99
-    sget-object v1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GONE:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
-
-    .line 101
-    const/4 v2, 0x0
-
-    .line 103
-    const/16 v6, 0xe
-
-    .line 104
-    iget-object v0, p0, Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor$listenForLockscreenToGone$1$2;->this$0:Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor;
-
-    .line 106
-    const/4 v3, 0x0
-
-    .line 108
-    const/4 v4, 0x0
-
-    .line 109
-    move-object v5, p2
-
-    .line 110
-    invoke-static/range {v0 .. v6}, Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;->startTransitionTo$default(Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;Lcom/android/systemui/keyguard/shared/model/KeyguardState;Landroid/animation/ValueAnimator;Lcom/android/systemui/keyguard/shared/model/TransitionModeOnCanceled;Ljava/lang/String;Lkotlin/coroutines/Continuation;I)Ljava/lang/Object;
-
-    .line 111
-    move-result-object p0
-
-    .line 114
-    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
 
     .line 115
-    if-ne p0, p1, :cond_4
-
-    .line 117
-    goto :goto_5
-
-    .line 119
-    :cond_4
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    .line 120
-    :goto_5
-    return-object p0
-
-    .line 122
-    :pswitch_3
-    check-cast p1, Ljava/lang/Boolean;
-
-    .line 123
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 125
-    sget-object v1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->ALTERNATE_BOUNCER:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
-
-    .line 128
-    const/4 v2, 0x0
-
-    .line 130
-    const/16 v6, 0xe
-
-    .line 131
-    iget-object v0, p0, Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor$listenForLockscreenToGone$1$2;->this$0:Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor;
-
-    .line 133
-    const/4 v3, 0x0
-
-    .line 135
-    const/4 v4, 0x0
-
-    .line 136
-    move-object v5, p2
-
-    .line 137
-    invoke-static/range {v0 .. v6}, Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;->startTransitionTo$default(Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;Lcom/android/systemui/keyguard/shared/model/KeyguardState;Landroid/animation/ValueAnimator;Lcom/android/systemui/keyguard/shared/model/TransitionModeOnCanceled;Ljava/lang/String;Lkotlin/coroutines/Continuation;I)Ljava/lang/Object;
-
-    .line 138
-    move-result-object p0
-
-    .line 141
-    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
-
-    .line 142
-    if-ne p0, p1, :cond_5
-
-    .line 144
-    goto :goto_6
-
-    .line 146
-    :cond_5
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    .line 147
-    :goto_6
-    return-object p0
-
-    .line 149
-    :pswitch_4
-    check-cast p1, Ljava/lang/Boolean;
-
-    .line 150
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 152
-    sget-object v1, Lcom/android/systemui/keyguard/shared/model/KeyguardState;->GONE:Lcom/android/systemui/keyguard/shared/model/KeyguardState;
-
-    .line 155
-    sget-object v3, Lcom/android/systemui/keyguard/shared/model/TransitionModeOnCanceled;->RESET:Lcom/android/systemui/keyguard/shared/model/TransitionModeOnCanceled;
-
-    .line 157
-    iget-object v0, p0, Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor$listenForLockscreenToGone$1$2;->this$0:Lcom/android/systemui/keyguard/domain/interactor/FromLockscreenTransitionInteractor;
-
-    .line 159
-    const/16 v6, 0xa
-
-    .line 161
-    const/4 v2, 0x0
-
-    .line 163
-    const/4 v4, 0x0
-
-    .line 164
-    move-object v5, p2
-
-    .line 165
-    invoke-static/range {v0 .. v6}, Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;->startTransitionTo$default(Lcom/android/systemui/keyguard/domain/interactor/TransitionInteractor;Lcom/android/systemui/keyguard/shared/model/KeyguardState;Landroid/animation/ValueAnimator;Lcom/android/systemui/keyguard/shared/model/TransitionModeOnCanceled;Ljava/lang/String;Lkotlin/coroutines/Continuation;I)Ljava/lang/Object;
-
-    .line 166
-    move-result-object p0
-
-    .line 169
-    sget-object p1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
-
-    .line 170
-    if-ne p0, p1, :cond_6
-
-    .line 172
-    goto :goto_7
-
-    .line 174
-    :cond_6
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
-
-    .line 175
-    :goto_7
-    return-object p0
-
-    .line 177
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 178
+    .line 116
 .end method

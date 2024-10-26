@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardPreviewSmartspaceViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -61,7 +61,7 @@
     if-eqz p1, :cond_0
 
     .line 6
-    const p1, 0x7f07035f    # @dimen/keyguard_split_shade_top_margin '68.0dp'
+    const p1, 0x7f07039b    # @dimen/keyguard_split_shade_top_margin '68.0dp'
 
     .line 8
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -74,7 +74,7 @@
 
     .line 15
     :cond_0
-    const p1, 0x7f07033e    # @dimen/keyguard_clock_top_margin '18.0dp'
+    const p1, 0x7f07037a    # @dimen/keyguard_clock_top_margin '18.0dp'
 
     .line 16
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -83,7 +83,7 @@
     move-result p1
 
     .line 22
-    const v0, 0x7f0709c4    # @dimen/status_bar_header_height_keyguard '40.0dp'
+    const v0, 0x7f070a1c    # @dimen/status_bar_header_height_keyguard '40.0dp'
 
     .line 23
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -95,7 +95,7 @@
     add-int/2addr v0, p1
 
     .line 30
-    const p1, 0x7f07035e    # @dimen/keyguard_smartspace_top_offset '12.0dp'
+    const p1, 0x7f07039a    # @dimen/keyguard_smartspace_top_offset '12.0dp'
 
     .line 31
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/common/DisplayLayout;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -198,7 +198,7 @@
 
     move-result-object p1
 
-    const v4, 0x1110218    # @android:bool/config_skipActivityRelaunchWhenDocking
+    const v4, 0x1110217    # @android:bool/config_sip_wifi_only
 
     invoke-virtual {p1, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -318,7 +318,7 @@
 
     iput-boolean p1, p0, Lcom/android/wm/shell/common/DisplayLayout;->mAllowSeamlessRotationDespiteNavBarMoving:Z
 
-    const p1, 0x11101dd    # @android:bool/config_offsetWallpaperToCenterOfLargestDisplay
+    const p1, 0x11101dc    # @android:bool/config_oem_enabled_satellite_access_allow
 
     .line 42
     invoke-virtual {p2, p1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -327,7 +327,7 @@
 
     iput-boolean p1, p0, Lcom/android/wm/shell/common/DisplayLayout;->mNavigationBarCanMove:Z
 
-    const p1, 0x1110204    # @android:bool/config_setColorTransformAccelerated
+    const p1, 0x1110203    # @android:bool/config_sensorPrivacyRequiresAuthentication
 
     .line 43
     invoke-virtual {p2, p1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -828,7 +828,7 @@
     if-eq v1, v2, :cond_1
 
     .line 39
-    const v11, 0x11101dd    # @android:bool/config_offsetWallpaperToCenterOfLargestDisplay
+    const v11, 0x11101dc    # @android:bool/config_oem_enabled_satellite_access_allow
 
     .line 41
     invoke-virtual {p1, v11}, Landroid/content/res/Resources;->getBoolean(I)Z

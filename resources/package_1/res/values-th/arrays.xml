@@ -5,7 +5,9 @@
     <item>แสดงเปอร์เซ็นต์เมื่อชาร์จ (ค่าเริ่มต้น)</item>
     <item>อย่าแสดงไอคอนนี้</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>แสดงชั่วโมง นาที และวินาที</item>
     <item>แสดงชั่วโมงและนาที (ค่าเริ่มต้น)</item>

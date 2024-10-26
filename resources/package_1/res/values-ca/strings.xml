@@ -46,7 +46,6 @@
   <string name="accessibility_action_label_place_widget">col·loca el widget seleccionat</string>
   <string name="accessibility_action_label_remove_widget">suprimeix el widget</string>
   <string name="accessibility_action_label_select_widget">selecciona el widget</string>
-  <string name="accessibility_action_open_communal_hub">Widgets a la pantalla de bloqueig</string>
   <string name="accessibility_action_pip_resize">Canvia la mida</string>
   <string name="accessibility_action_pip_stash">Amaga</string>
   <string name="accessibility_action_pip_unstash">Deixa d'amagar</string>
@@ -54,6 +53,7 @@
   <string name="accessibility_action_stop_one_handed">Surt del mode d'una mà</string>
   <string name="accessibility_airplane_mode">Mode d'avió.</string>
   <string name="accessibility_allow_diagonal_scrolling">Permet el desplaçament en diagonal</string>
+  <string name="accessibility_assistant_poodle">Cerca per veu</string>
   <string name="accessibility_authenticate_hint">autenticar</string>
   <string name="accessibility_back">Enrere</string>
   <string name="accessibility_banner_message_dismiss">Ignora</string>
@@ -104,7 +104,6 @@
   <string name="accessibility_enter_hint">accedir al dispositiu</string>
   <string name="accessibility_ethernet_connected">Ethernet.</string>
   <string name="accessibility_ethernet_disconnected">S'ha desconnectat l'Ethernet.</string>
-  <string name="accessibility_fingerprint_bouncer">Autenticació necessària. Toca el sensor d'empremtes digitals per autenticar-te.</string>
   <string name="accessibility_fingerprint_label">Sensor d'empremtes digitals</string>
   <string name="accessibility_floating_button_action_double_tap_to_toggle">commuta</string>
   <string name="accessibility_floating_button_action_edit">Edita</string>
@@ -146,6 +145,7 @@
   <string name="accessibility_menu">Menú</string>
   <string name="accessibility_multi_user_list_switcher">menú desplegable</string>
   <string name="accessibility_multi_user_switch_switcher">Canvia d'usuari</string>
+  <string name="accessibility_next_alarm">Pròxima alarma a les %s</string>
   <string name="accessibility_no_calling">Sense trucades.</string>
   <string name="accessibility_no_phone">No hi ha senyal de telèfon.</string>
   <string name="accessibility_no_wifi">Wi-Fi desconnectada.</string>
@@ -191,7 +191,9 @@
   <string name="accessibility_rotation_lock_on_portrait">La pantalla està bloquejada en orientació vertical.</string>
   <string name="accessibility_send_smart_reply">Envia</string>
   <string name="accessibility_sensors_off_active">Sensors desactivats</string>
+  <string name="accessibility_settings_gear">Configuració de Pixel Stand</string>
   <string name="accessibility_side_fingerprint_indicator_label">Toca el sensor d'empremtes digitals. És el botó més curt del lateral del telèfon.</string>
+  <string name="accessibility_smartspace_page">Pàgina %1$d de %2$d</string>
   <string name="accessibility_split_bottom">Divideix a la part inferior</string>
   <string name="accessibility_split_left">Divideix a l'esquerra</string>
   <string name="accessibility_split_right">Divideix a la dreta</string>
@@ -218,11 +220,15 @@
   <string name="accessibility_wifi_three_bars">Senyal Wi-Fi: tres barres.</string>
   <string name="accessibility_wifi_two_bars">Senyal Wi-Fi: dues barres.</string>
   <string name="accesssibility_keyguard_retry">Llisca cap amunt per tornar a provar Desbloqueig facial</string>
+  <string name="adaptive_charging_notify_des">La bateria estarà completament carregada a les %1$s. Es carrega de manera estable per allargar-ne la vida útil.</string>
+  <string name="adaptive_charging_notify_title">La càrrega intel·ligent està activada</string>
+  <string name="adaptive_charging_notify_turn_off_once">Desactiva una vegada</string>
+  <string name="adaptive_charging_time_estimate">%1$s • Càrrega intel·ligent • S'haurà completat a les %2$s</string>
   <string name="add">Afegeix</string>
   <string name="add_guest_failed">No s'ha pogut crear un convidat</string>
   <string name="airplane_mode">Mode d'avió</string>
   <string name="alarm_template">Hora: %1$s</string>
-  <string name="alarm_template_far">Dia: %1$s</string>
+  <string name="alarm_template_far">Data: %1$s</string>
   <string name="all_network_unavailable">No hi ha cap xarxa disponible</string>
   <string name="always_use_accessory">Obre sempre %1$s quan es connecti %2$s</string>
   <string name="always_use_device">Obre sempre %1$s quan es connecti %2$s</string>
@@ -233,6 +239,7 @@
   <string name="app_info">Informació de l'aplicació</string>
   <string name="app_label">IU del sistema</string>
   <string name="assistant_attention_content_description">S'ha detectat la presència d'usuaris</string>
+  <string name="assistant_scrim_label">S'està escoltant; toca per cancel·lar.</string>
   <string name="audio_sharing_description">S'està compartint l'àudio</string>
   <string name="audio_status">Escoltant</string>
   <string name="auto_data_switch_dialog_negative_button">No, gràcies</string>
@@ -245,13 +252,11 @@
   <string name="back_button_text">Enrere</string>
   <string name="battery">Bateria</string>
   <string name="battery_detail_switch_title">Estalvi de bateria</string>
-  <string name="battery_low_description">Et queda un %s de bateria. Estalvi de bateria activa el tema fosc, restringeix l'activitat en segon pla i endarrereix les notificacions.</string>
+  <string name="battery_health_notify_learn_more">Més informació</string>
   <string name="battery_low_intro">Estalvi de bateria activa el tema fosc, restringeix l'activitat en segon pla i endarrereix les notificacions.</string>
-  <string name="battery_low_title">Vols activar Estalvi de bateria?</string>
   <string name="battery_saver_confirmation_ok">Activa</string>
   <string name="battery_saver_confirmation_title">Vols activar la funció Estalvi de bateria?</string>
   <string name="battery_saver_confirmation_title_generic">Sobre la funció Estalvi de bateria</string>
-  <string name="battery_saver_dismiss_action">No, gràcies</string>
   <string name="battery_saver_start_action">Activa</string>
   <string name="battery_state_unknown_notification_text">Toca per obtenir més informació</string>
   <string name="battery_state_unknown_notification_title">Hi ha hagut un problema en llegir el mesurador de la bateria</string>
@@ -296,14 +301,9 @@ Torna-ho a provar d'aquí a %d segons.</string>
   <string name="bluetooth_active_battery_level_untethered">Actiu. E: %1$s de bateria, D: %2$s de bateria.</string>
   <string name="bluetooth_active_battery_level_untethered_left">Actiu. E: %1$s de bateria.</string>
   <string name="bluetooth_active_battery_level_untethered_right">Actiu. D: %1$s de bateria.</string>
-  <string name="bluetooth_active_media_only_battery_level">Actiu (només contingut multimèdia). %1$s de bateria.</string>
-  <string name="bluetooth_active_media_only_battery_level_untethered">Actiu (només contingut multimèdia), E: %1$s de bateria, D: %2$s de bateria.</string>
-  <string name="bluetooth_active_media_only_no_battery_level">Actiu (només contingut multimèdia)</string>
   <string name="bluetooth_active_no_battery_level">Actiu</string>
   <string name="bluetooth_battery_level">%1$s de bateria</string>
-  <string name="bluetooth_battery_level_lea_support">Connectat (admet compartició d'àudio). %1$s de bateria.</string>
   <string name="bluetooth_battery_level_untethered">E: %1$s de bateria, D: %2$s de bateria.</string>
-  <string name="bluetooth_battery_level_untethered_lea_support">Connectat (admet compartició d'àudio), E: %1$s de bateria, D: %2$s de bateria.</string>
   <string name="bluetooth_connected">%1$s Connectat</string>
   <string name="bluetooth_connecting">S'està connectant…</string>
   <string name="bluetooth_disconnected">Desconnectat</string>
@@ -311,13 +311,11 @@ Torna-ho a provar d'aquí a %d segons.</string>
   <string name="bluetooth_hearing_aid_left_active">Actiu (només l'esquerre)</string>
   <string name="bluetooth_hearing_aid_left_and_right_active">Actiu (esquerre i dret)</string>
   <string name="bluetooth_hearing_aid_right_active">Actiu (només el dret)</string>
-  <string name="bluetooth_no_battery_level_lea_support">Connectat (admet compartició d'àudio)</string>
   <string name="bluetooth_pairing">S'està vinculant...</string>
   <string name="bluetooth_pairing_device_down_error_message">No es pot comunicar amb %1$s.</string>
   <string name="bluetooth_pairing_error_message">No s'ha pogut vincular a %1$s.</string>
   <string name="bluetooth_pairing_pin_error_message">No s'ha pogut vincular a %1$s: el PIN o la clau d'accés són incorrectes.</string>
   <string name="bluetooth_pairing_rejected_error_message">Vinculació rebutjada per %1$s.</string>
-  <string name="bluetooth_saved_device_lea_support">Admet compartició d'àudio</string>
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <string name="bluetooth_talkback_computer">Ordinador</string>
   <string name="bluetooth_talkback_headphone">Auricular</string>
@@ -356,8 +354,6 @@ Torna-ho a provar d'aquí a %d segons.</string>
   <string name="bubble_overflow_button_content_description">Menú de desbordament</string>
   <string name="bubble_overflow_empty_subtitle">Les bombolles recents i les ignorades es mostraran aquí</string>
   <string name="bubble_overflow_empty_title">No hi ha bombolles recents</string>
-  <string name="bubble_shortcut_label">Bombolles</string>
-  <string name="bubble_shortcut_long_label">Mostra les bombolles</string>
   <string name="bubbles_app_settings">Configuració de l'aplicació %1$s</string>
   <string name="bubbles_dont_bubble_conversation">No mostris la conversa com a bombolla</string>
   <string name="bubbles_settings_button_description">Configuració de les bombolles: %1$s</string>
@@ -387,6 +383,10 @@ Toca per resoldre'ls</string>
   <string name="cast_to_other_device_stop_dialog_button">Atura l'emissió</string>
   <string name="cast_to_other_device_stop_dialog_message_specific_app">Deixaràs d'emetre &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="cell_data_off_content_description">S'han desactivat les dades mòbils</string>
+  <string name="charge_limit_discovery_notification_enable_button">Activa ara</string>
+  <string name="charge_limit_discovery_notification_text">Prova d'activar la funció de límit de càrrega del 80 % per protegir l'estat i la vida útil de la bateria. Pots gestionar-ho a la configuració en qualsevol moment.</string>
+  <string name="charge_limit_discovery_notification_title">Protegeix la bateria durant la càrrega</string>
+  <string name="charging_reverse_text">S'està compartint la bateria</string>
   <string name="clear_all_notifications_text">Esborra-ho tot</string>
   <string name="clipboard">Porta-retalls</string>
   <string name="clipboard_content_copied">El contingut s'ha copiat</string>
@@ -406,6 +406,11 @@ Toca per resoldre'ls</string>
   <string name="close_button_text">Tanca</string>
   <string name="close_dialog_button">Tanca</string>
   <string name="collapse_menu_text">Tanca el menú</string>
+  <string name="columbus_bouncer_message">Desbloqueja per completar Toc ràpid</string>
+  <string name="columbus_target_request_dialog_allow">Permet</string>
+  <string name="columbus_target_request_dialog_deny">No permetis</string>
+  <string name="columbus_target_request_dialog_summary">Fes doble toc a la part posterior del telèfon per obrir %1$s. Pots canviar aquesta opció en qualsevol moment a Configuració.</string>
+  <string name="columbus_target_request_dialog_title">Vols permetre que Toc ràpid obri %1$s?</string>
   <string name="communal_tutorial_indicator_text">Llisca cap a l'esquerra per iniciar el tutorial de la comunitat</string>
   <string name="connected_display_dialog_dual_display_stop_warning">La pantalla interior es duplicarà. La pantalla frontal es desactivarà.</string>
   <string name="connected_display_dialog_start_mirroring">Duplicar a la pantalla externa?</string>
@@ -511,8 +516,11 @@ Si reprens l'ús de les dades, es poden aplicar càrrecs.</string>
   <string name="data_usage_disabled_dialog_mobile_title">S'han posat en pausa les dades mòbils</string>
   <string name="data_usage_disabled_dialog_title">Les dades estan aturades</string>
   <string name="days_timestamp">Fa %1$s dies</string>
-  <string name="default_error_message">L'entrada no és vàlida</string>
   <string name="default_popup_window_title">Finestra emergent</string>
+  <string name="defender_notify_resume_charge">Substitueix</string>
+  <string name="defender_notify_title">S'està protegint la bateria</string>
+  <string name="defender_post_notify_des">Per ajudar-te a allargar la vida útil de la bateria, la càrrega s'ha optimitzat des de les %1$s fins a les %2$s</string>
+  <string name="defender_post_notify_title">La càrrega s'ha optimitzat</string>
   <string name="demo_mode">Mode de demostració de la IU del sistema</string>
   <string name="desktop_mode_maximize_menu_maximize_text">Maximitza la pantalla</string>
   <string name="desktop_mode_maximize_menu_snap_text">Ajusta la pantalla</string>
@@ -532,20 +540,32 @@ Si reprens l'ús de les dades, es poden aplicar càrrecs.</string>
   <string name="do_disclosure_generic">Aquest dispositiu pertany a la teva organització</string>
   <string name="do_disclosure_with_name">Aquest dispositiu pertany a %s</string>
   <string name="do_financed_disclosure_with_name">%s proporciona aquest dispositiu</string>
+  <string name="dock_a11y_action_show_photo_text">Mostra el marc de fotos</string>
+  <string name="dock_alignment_not_charging">Col·loca bé el telèfon per carregar-lo sense fil</string>
+  <string name="dock_alignment_slow_charging">Col·loca bé el telèfon per carregar-lo més ràpidament</string>
+  <string name="dock_defender_first_run_des">Per ajudar-te a allargar la vida útil de la bateria, la càrrega s'ha posat en espera al 90 % mentre la tauleta està acoblada. Ves a Configuració en qualsevol moment per anul·lar aquesta opció.</string>
+  <string name="dock_defender_first_run_settings">Configuració</string>
+  <string name="dock_defender_first_run_title">La càrrega s'ha posat en espera per protegir la bateria</string>
   <string name="dock_multi_instances_not_supported_text">Aquesta aplicació només pot obrir-se en 1 finestra</string>
   <string name="dock_non_resizeble_failed_to_dock_text">L'aplicació no admet la pantalla dividida</string>
+  <string name="dock_photo_preview_text">S'està iniciant el marc de fotos...</string>
+  <string name="dock_promo_text">Llisca cap a l'esquerra per configurar un marc de fotos</string>
   <string name="done">Fet</string>
   <string name="drag_split_not_supported">Aquesta notificació no es pot arrossegar a la pantalla dividida</string>
   <string name="drag_to_add_tiles">Mantén premudes les icones i arrossega-les per afegir-les</string>
   <string name="drag_to_rearrange_tiles">Mantén premudes les icones i arrossega-les per reordenar-les</string>
   <string name="drag_to_remove_disabled">Necessites com a mínim %1$d mosaics</string>
   <string name="drag_to_remove_tiles">Arrossega aquí per suprimir</string>
+  <string name="dream_lockscreen_wallpaper_description">Utilitza el fons de la pantalla de bloqueig</string>
+  <string name="dream_lockscreen_wallpaper_label">Fons de pantalla</string>
   <string name="dream_overlay_status_bar_alarm_set">Alarma definida</string>
   <string name="dream_overlay_status_bar_camera_mic_off">Càmera i micròfon desactivats</string>
   <string name="dream_overlay_status_bar_camera_off">La càmera està desactivada</string>
   <string name="dream_overlay_status_bar_mic_off">El micròfon està desactivat</string>
   <string name="dream_overlay_status_bar_priority_mode">Mode Prioritat</string>
   <string name="dream_overlay_status_bar_wifi_off">Wi‑Fi no disponible</string>
+  <string name="dwell_defender_notify_des">Això ajuda a allargar la vida útil de la bateria quan el telèfon es deixa carregant massa estona</string>
+  <string name="dwell_defender_notify_title">La càrrega s'ha posat en espera per protegir la bateria</string>
   <string name="edit_user_info_message">El nom i la foto que triïs seran visibles per a qualsevol persona que faci servir aquest dispositiu.</string>
   <string name="edit_widget">Edita el widget</string>
   <string name="empty_shade_text">No hi ha cap notificació</string>
@@ -561,12 +581,16 @@ Si reprens l'ús de les dades, es poden aplicar càrrecs.</string>
   <string name="ethernet_label">Ethernet</string>
   <string name="expand_button_title">Opcions avançades</string>
   <string name="expand_menu_text">Obre el menú</string>
+  <string name="extreme_battery_saver_text">Extrem</string>
+  <string name="extreme_low_battery_notification_text">El telèfon s'apagarà si no el carregues aviat</string>
+  <string name="extreme_low_battery_notification_title">Bateria molt baixa</string>
   <string name="face_re_enroll_dialog_content">Per tornar a configurar Desbloqueig facial, el model facial actual se suprimirà.
 
 Hauràs de tornar configurar aquesta funció per desbloquejar el telèfon utilitzant la cara.</string>
   <string name="face_re_enroll_dialog_title">Configura Desbloqueig facial</string>
   <string name="face_re_enroll_notification_name">Desbloqueig facial</string>
   <string name="face_re_enroll_notification_title">Torna a configurar Desbloqueig facial</string>
+  <string name="face_reenroll_dialog_confirm">Configura</string>
   <string name="face_reenroll_failure_dialog_content">No s'ha pogut configurar el desbloqueig facial. Ves a Configuració per tornar-ho a provar.</string>
   <string name="failed_attempts_now_wiping_device">Has superat el nombre d'intents incorrectes permesos. Les dades d'aquest dispositiu se suprimiran.</string>
   <string name="failed_attempts_now_wiping_dialog_dismiss">Ignora</string>
@@ -604,6 +628,7 @@ Després de suprimir-los, hauràs de tornar a configurar Desbloqueig amb empremt
   <string name="font_scaling_smaller">Redueix</string>
   <string name="fullscreen_text">Pantalla completa</string>
   <string name="game_status">Jugant</string>
+  <string name="generic_smartspace_concatenated_desc">%1$s, %2$s</string>
   <string name="global_action_smart_lock_disabled">Desbloqueig ampliat desactivat</string>
   <string name="go_to_web">Ves al navegador</string>
   <string name="got_it">Entesos</string>
@@ -640,6 +665,7 @@ Després de suprimir-los, hauràs de tornar a configurar Desbloqueig amb empremt
   <string name="guest_reset_and_restart_dialog_title">Vols restablir la sessió de convidat?</string>
   <string name="guest_reset_guest_confirm_button">Restableix</string>
   <string name="guest_resetting">S'està restablint el convidat…</string>
+  <string name="handle_invocation_prompt">Llisca per parlar</string>
   <string name="handle_text">Ansa</string>
   <string name="headset">Auriculars</string>
   <string name="hearing_devices_preset_label">Valors predefinits</string>
@@ -656,6 +682,7 @@ Toca per obtenir més informació.</string>
   <string name="high_temp_title">El telèfon s'està escalfant</string>
   <string name="home_controls_dream_description">Utilitza controls de la llar com a estalvi de pantalla</string>
   <string name="home_controls_dream_label">Controls de la llar</string>
+  <string name="home_controls_tile_title">Home</string>
   <string name="home_quick_affordance_unavailable_configure_the_app">• Almenys un dispositiu o tauler de dispositius estan disponibles</string>
   <string name="home_quick_affordance_unavailable_install_the_app">Per afegir l'aplicació Home com a drecera, assegura't que estigui instal·lada</string>
   <string name="hub_mode_add_widget_button_text">Afegeix un widget</string>
@@ -669,12 +696,16 @@ Toca per obtenir més informació.</string>
   <string name="in_progress">En curs</string>
   <string name="inattentive_sleep_warning_message">El dispositiu s'apagarà aviat; prem per mantenir-lo encès.</string>
   <string name="inattentive_sleep_warning_title">En espera</string>
+  <string name="incompatible_charging_learn_more">Més informació</string>
+  <string name="incompatible_charging_notify_des">És possible que el telèfon s'estigui carregant lentament o que no s'estigui carregant. Per carregar-lo ràpidament, utilitza un cable i un adaptador recomanats.</string>
+  <string name="incompatible_charging_notify_title">Revisa l'accessori de càrrega</string>
   <string name="indeterminate">Marcat parcialment</string>
   <string name="inline_done_button">Fet</string>
   <string name="inline_ok_button">Aplica</string>
   <string name="inline_turn_off_notifications">Desactiva les notificacions</string>
   <string name="input_switch_input_language_next">Canvia a l'idioma següent</string>
   <string name="input_switch_input_language_previous">Caniva a l'idioma anterior</string>
+  <string name="install_app">Instal·la l'aplicació</string>
   <string name="install_dialer_on_work_profile_action">Instal·la una aplicació de treball per a telèfons</string>
   <string name="install_type_instant">Aplicació instantània</string>
   <string name="instant_apps">Aplicacions instantànies</string>
@@ -683,8 +714,6 @@ Toca per obtenir més informació.</string>
   <string name="instant_apps_title">S'està executant %1$s</string>
   <string name="interruption_level_none">Silenci total</string>
   <string name="interruption_level_priority">Només amb prioritat</string>
-  <string name="invalid_charger_text">Fes servir el carregador original del dispositiu</string>
-  <string name="invalid_charger_title">No es pot carregar per USB</string>
   <string name="issuerecord_background_processing_label">Processant gravació del problema</string>
   <string name="issuerecord_ongoing_screen_only">S'està gravant el problema</string>
   <string name="issuerecord_save_title">S'ha desat la gravació del problema</string>
@@ -766,21 +795,33 @@ Toca per obtenir més informació.</string>
   <string name="keyguard_indication_after_adaptive_auth_lock">El dispositiu s'ha bloquejat
 Ha fallat l'autenticació</string>
   <string name="keyguard_indication_charging_time">%2$s • S'està carregant • Es completarà d'aquí a %1$s</string>
+  <string name="keyguard_indication_charging_time_charge_limit">%2$s • La càrrega es completarà a les %1$s</string>
   <string name="keyguard_indication_charging_time_dock">%2$s • S'està carregant • Es completarà d'aquí a %1$s</string>
+  <string name="keyguard_indication_charging_time_dock_v2">%2$s • Càrrega completa a les %1$s</string>
   <string name="keyguard_indication_charging_time_fast">%2$s • Carregant ràpidament • Es completarà d'aquí a %1$s</string>
+  <string name="keyguard_indication_charging_time_fast_v2">%2$s • Càrrega ràpida • S'haurà completat a les %1$s</string>
+  <string name="keyguard_indication_charging_time_reach_charge_limit">%1$s • La càrrega s'ha completat</string>
   <string name="keyguard_indication_charging_time_slowly">%2$s • Carregant lentament • Es completarà d'aquí a %1$s</string>
+  <string name="keyguard_indication_charging_time_slowly_v2">%2$s • Càrrega completa a les %1$s</string>
+  <string name="keyguard_indication_charging_time_v2">%2$s • Càrrega completa a les %1$s</string>
   <string name="keyguard_indication_charging_time_wireless">%2$s • Carregant sense fil • Es completarà d'aquí a %1$s</string>
-  <string name="keyguard_indication_trust_unlocked">Desbloquejat per TrustAgent</string>
+  <string name="keyguard_indication_charging_time_wireless_v2">%2$s • Càrrega completa a les %1$s</string>
+  <string name="keyguard_indication_trust_unlocked">Desbloquejat per Desbloqueig ampliat</string>
   <string name="keyguard_missing_sim_message_short">No hi ha cap SIM</string>
   <string name="keyguard_network_locked_message">La xarxa està bloquejada</string>
   <string name="keyguard_permanent_disabled_sim_message_short">La SIM no es pot utilitzar.</string>
   <string name="keyguard_plugged_in">%s • S'està carregant</string>
   <string name="keyguard_plugged_in_charging_fast">%s • S'està carregant ràpidament</string>
+  <string name="keyguard_plugged_in_charging_fast_v2">%s • Càrrega ràpida</string>
   <string name="keyguard_plugged_in_charging_limited">%s • La càrrega s'ha posat en espera per protegir la bateria</string>
   <string name="keyguard_plugged_in_charging_slowly">%s • S'està carregant lentament</string>
+  <string name="keyguard_plugged_in_charging_slowly_v2">%s • S'està carregant</string>
   <string name="keyguard_plugged_in_dock">%s • S'està carregant</string>
+  <string name="keyguard_plugged_in_dock_v2">%s • S'està carregant</string>
   <string name="keyguard_plugged_in_incompatible_charger">%s • Revisa l'accessori de càrrega</string>
+  <string name="keyguard_plugged_in_v2">%s • S'està carregant</string>
   <string name="keyguard_plugged_in_wireless">%s • S'està carregant sense fil</string>
+  <string name="keyguard_plugged_in_wireless_v2">%s • S'està carregant</string>
   <string name="keyguard_retry">Llisca cap a dalt per tornar-ho a provar</string>
   <string name="keyguard_sim_error_message_short">La targeta no és vàlida.</string>
   <string name="keyguard_sim_locked_message">La SIM està bloquejada.</string>
@@ -811,7 +852,6 @@ Ha fallat l'autenticació</string>
   <string name="kg_invalid_confirm_pin_hint">Els PIN no coincideixen</string>
   <string name="kg_invalid_sim_pin_hint">Escriu un PIN que tingui entre 4 i 8 números.</string>
   <string name="kg_invalid_sim_puk_hint">El codi PUK ha de tenir 8 números o més.</string>
-  <string name="kg_password_default_pin_message">{count,plural, =1{Introdueix el PIN de la SIM. Et queda # intent; si no l'encertes, contacta amb l'operador per desbloquejar el dispositiu.}many{Introdueix el PIN de la SIM. Et queden # intents.}other{Introdueix el PIN de la SIM. Et queden # intents.}}</string>
   <string name="kg_password_default_puk_message">{count,plural, =1{La targeta SIM s'ha desactivat. Introdueix el codi PUK per continuar. Et queda # intent; si no l'encertes, la SIM no es podrà tornar a fer servir. Contacta amb l'operador per obtenir informació.}many{La targeta SIM s'ha desactivat. Introdueix el codi PUK per continuar. Et queden # intents; si no l'encertes, la SIM no es podrà tornar a fer servir. Contacta amb l'operador per obtenir informació.}other{La targeta SIM s'ha desactivat. Introdueix el codi PUK per continuar. Et queden # intents; si no l'encertes, la SIM no es podrà tornar a fer servir. Contacta amb l'operador per obtenir informació.}}</string>
   <string name="kg_password_pin_failed">Ha fallat l'operació del PIN de la SIM</string>
   <string name="kg_password_puk_failed">No s'ha pogut desbloquejar la SIM amb el codi PUK.</string>
@@ -852,7 +892,7 @@ Ha fallat l'autenticació</string>
   <string name="kg_sim_pin_instructions_multi">Introdueix el PIN de la SIM de: %1$s.</string>
   <string name="kg_sim_unlock_progress_dialog_message">S'està desbloquejant la targeta SIM…</string>
   <string name="kg_too_many_failed_attempts_countdown">{count,plural, =1{Torna-ho a provar d'aquí a # segon.}many{Torna-ho a provar d'aquí a # segons.}other{Torna-ho a provar d'aquí a # segons.}}</string>
-  <string name="kg_trust_agent_disabled">L'agent de confiança no està disponible</string>
+  <string name="kg_trust_agent_disabled">Desbloqueig ampliat no està disponible</string>
   <string name="kg_unlock_with_password_or_fp">Desbloqueja amb contrasenya o empremta</string>
   <string name="kg_unlock_with_pattern_or_fp">Desbloqueja amb patró o empremta</string>
   <string name="kg_unlock_with_pin_or_fp">Desbloqueja amb PIN o empremta</string>
@@ -900,6 +940,10 @@ Encara que no permetis que aquesta aplicació accedeixi a tots els registres del
   <string name="log_access_confirmation_learn_more">Més informació</string>
   <string name="log_access_confirmation_learn_more_at">Més informació a %s</string>
   <string name="log_access_confirmation_title">Vols permetre que %s accedeixi a tots els registres del dispositiu?</string>
+  <string name="low_battery_label">Bateria baixa</string>
+  <string name="low_battery_notification_text">Activa l'estalvi de bateria estàndard per allargar-ne la durada</string>
+  <string name="low_battery_notification_text_ebs">Activa l'estalvi de bateria extrem per allargar-ne la durada</string>
+  <string name="low_battery_notification_title">Queda un %s de bateria</string>
   <string name="m3c_search_bar_search">Cerca</string>
   <string name="m3c_suggestions_available">Suggeriments a continuació</string>
   <string name="magnification_close_settings_click_label">Tanca la configuració de l'ampliació</string>
@@ -939,8 +983,6 @@ Encara que no permetis que aquesta aplicació accedeixi a tots els registres del
   <string name="media_output_dialog_volume_percentage">%1$d%%</string>
   <string name="media_output_end_session_dialog_stop">Atura</string>
   <string name="media_output_end_session_dialog_summary">Atura la sessió compartida per moure contingut multimèdia a un altre dispositiu</string>
-  <string name="media_output_first_broadcast_title">Com funciona l'emissió</string>
-  <string name="media_output_first_notify_broadcast_message">Les persones properes amb dispositius Bluetooth compatibles poden escoltar el contingut multimèdia que emets</string>
   <string name="media_output_group_title_speakers_and_displays">Altaveus i pantalles</string>
   <string name="media_output_group_title_suggested_device">Dispositius suggerits</string>
   <string name="media_output_label_title">S'està reproduint %s a</string>
@@ -967,9 +1009,6 @@ Encara que no permetis que aquesta aplicació accedeixi a tots els registres del
   <string name="media_projection_entry_cast_permission_dialog_warning_single_app">Quan emets una aplicació, Android té accés a qualsevol cosa que es mostri o que es reprodueixi en aquella aplicació. Per aquest motiu, ves amb compte amb les contrasenyes, les dades de pagament, els missatges, les fotos i l'àudio i el vídeo.</string>
   <string name="media_projection_sys_service_dialog_title">Vols començar a gravar o emetre contingut?</string>
   <string name="media_projection_sys_service_dialog_warning">El servei que ofereix aquesta funció tindrà accés a tota la informació visible a la teva pantalla o que es reprodueix al dispositiu mentre graves o emets contingut, com ara les contrasenyes, les dades de pagament, les fotos, els missatges i àudio que reprodueixis.</string>
-  <string name="media_projection_task_switcher_action_back">Torna a canviar</string>
-  <string name="media_projection_task_switcher_action_switch">Comparteix aquesta aplicació</string>
-  <string name="media_projection_task_switcher_text">La compartició es posa en pausa quan canvies d'aplicació</string>
   <string name="media_seamless_other_device">Un altre dispositiu</string>
   <string name="media_transfer_default_device_name">Dispositiu connectat</string>
   <string name="media_transfer_dock_speaker_device_name">Base d'altaveu</string>
@@ -1138,7 +1177,7 @@ Si tens cap pregunta, contacta amb %2$s.</string>
   <string name="pip_skip_to_prev">Ves a l'anterior</string>
   <string name="popup_on_dismiss_cta_tile_text">Mantén premut per personalitzar els widgets</string>
   <string name="power_discharge_by_only_short">fins a les %1$s</string>
-  <string name="preference_summary_default_combination">%1$s/%2$s</string>
+  <string name="preference_summary_default_combination">%1$s / %2$s</string>
   <string name="priority_conversations">Converses prioritàries</string>
   <string name="priority_mode_dream_overlay_content_description">No molestis</string>
   <string name="privacy_dialog_active_app_usage">En ús per %1$s</string>
@@ -1280,12 +1319,17 @@ Si tens cap pregunta, contacta amb %2$s.</string>
   <string name="rear_display_unfolded_bottom_sheet_description">Per a una resolució més alta, gira el telèfon</string>
   <string name="rear_display_unfolded_bottom_sheet_title">Vols canviar de pantalla?</string>
   <string name="recent_conversations">Converses recents</string>
+  <string name="reminder_description"></string>
   <string name="remote_input_image_insertion_text">ha enviat una imatge</string>
   <string name="remove_from_settings">Treu de Configuració</string>
   <string name="remove_from_settings_prompt">Vols suprimir el Personalitzador d'interfície d'usuari de Configuració i deixar d'utilitzar-ne totes les funcions?</string>
   <string name="require_unlock_for_nfc">Desbloqueja per utilitzar l'NFC</string>
   <string name="restart_button_description">Toca per reiniciar aquesta aplicació i obtenir una millor visualització</string>
   <string name="retry_face">Torna a provar l'autenticació facial</string>
+  <string name="reverse_charging_device_name_text">Un altre dispositiu Pixel</string>
+  <string name="reverse_charging_device_providing_charge_text">%1$s està proporcionant la càrrega (%2$s)</string>
+  <string name="reverse_charging_on_notification_title">La funció Compartició de bateria està activada</string>
+  <string name="reverse_charging_title">Compartició de bateria</string>
   <string name="right_icon">Icona de la dreta</string>
   <string name="right_keycode">Codi de tecla de la dreta</string>
   <string name="right_nav_bar_button_type">Tipus de botó addicional de la dreta</string>
@@ -1293,8 +1337,15 @@ Si tens cap pregunta, contacta amb %2$s.</string>
   <string name="rotation_tile_with_posture_secondary_label_template">%1$s / %2$s</string>
   <string name="running_foreground_services_msg">Toca per obtenir informació sobre l'ús de dades i de bateria</string>
   <string name="running_foreground_services_title">Aplicacions que s'estan executant en segon pla</string>
-  <string name="satellite_connected_carrier_text">SOS per satèl·lit</string>
+  <string name="satellite_connected_carrier_text">SOS per satèl·lit de Pixel</string>
   <string name="save">Desa</string>
+  <string name="saver_confirmation_dialog_dismiss_text">Cancel·la</string>
+  <string name="saver_confirmation_dialog_subtitle">Selecciona el mode que vols utilitzar</string>
+  <string name="saver_confirmation_dialog_summary_extreme_mode">Inclou tots els canvis anteriors. També posa en pausa aplicacions no essencials i les seves notificacions.</string>
+  <string name="saver_confirmation_dialog_summary_standard_mode">Limita els efectes visuals i l'activitat en segon pla. Activa el tema fosc si encara no està activat.</string>
+  <string name="saver_confirmation_dialog_title">Et donem la benvinguda a Estalvi de bateria</string>
+  <string name="saver_confirmation_dialog_title_extreme_mode">Estalvi de bateria extrem</string>
+  <string name="saver_confirmation_dialog_title_standard_mode">Estalvi de bateria estàndard</string>
   <string name="screen_capturing_disabled_by_policy_dialog_description">Les captures de pantalla estan desactivades per la política de dispositius</string>
   <string name="screen_capturing_disabled_by_policy_dialog_title">Bloquejat per l'administrador de TI</string>
   <string name="screen_pinning_can_open_other_apps">Una aplicació fixada pot obrir-ne d'altres.</string>
@@ -1312,6 +1363,12 @@ Si tens cap pregunta, contacta amb %2$s.</string>
   <string name="screen_pinning_toast">Per deixar de fixar aquesta aplicació, mantén premuts els botons Enrere i Aplicacions recents</string>
   <string name="screen_pinning_toast_gesture_nav">Per deixar de fixar aquesta aplicació, fes-la lliscar cap amunt i mantén-la premuda</string>
   <string name="screen_pinning_toast_recents_invisible">Per deixar de fixar aquesta aplicació, mantén premuts els botons Enrere i Inici</string>
+  <string name="screen_protector_absent_message">En desactivar-lo, millora la resposta tàctil quan no s'utilitza un protector de pantalla.</string>
+  <string name="screen_protector_disable_notification">Desactiva la notificació</string>
+  <string name="screen_protector_go_to_settings">Ves a la configuració</string>
+  <string name="screen_protector_got_it">Entesos</string>
+  <string name="screen_protector_mode_title">Mode de protector de pantalla</string>
+  <string name="screen_protector_present_message">En activar-lo, millora la resposta tàctil quan s'utilitza un protector de pantalla.</string>
   <string name="screen_share_permission_app_selector_title">Comparteix o grava una aplicació</string>
   <string name="screen_share_permission_dialog_option_entire_screen">Tota la pantalla</string>
   <string name="screen_share_permission_dialog_option_single_app">Una sola aplicació</string>
@@ -1364,9 +1421,9 @@ Si tens cap pregunta, contacta amb %2$s.</string>
   <string name="screenshot_saving_work_profile_title">S'està desant la captura al perfil de treball…</string>
   <string name="screenshot_scroll_label">Captura més</string>
   <string name="screenshot_share_description">Comparteix la captura de pantalla</string>
-  <string name="screenshot_share_label">Comparteix</string>
   <string name="screenshot_text">Captura de pantalla</string>
   <string name="screenshot_top_boundary_pct">Marge superior %1$d per cent</string>
+  <string name="screenshot_view_description">Mostra la captura de pantalla</string>
   <string name="screenshot_work_profile_notification">S'ha desat al perfil de treball de %1$s</string>
   <string name="security_settings_sfps_enroll_find_sensor_message">El sensor d'empremtes digitals es troba al botó d'engegada. És el botó pla situat al costat del botó de volum amb relleu al lateral del telèfon.</string>
   <string name="see_all_bluetooth_devices">Mostra-ho tot</string>
@@ -1384,6 +1441,12 @@ Si tens cap pregunta, contacta amb %2$s.</string>
   <string name="set_default_notes_app_toast_content">Defineix l'aplicació de notes predeterminada a Configuració</string>
   <string name="settings_label">Configuració</string>
   <string name="settingslib_learn_more_text">Més informació</string>
+  <string name="severe_battery_notification_switch_text">Vols canviar a Estalvi de bateria extrem? 
+
+Aquesta acció posarà en pausa totes les aplicacions no essencials i les seves notificacions</string>
+  <string name="severe_battery_notification_text">Activa l'estalvi de bateria extrem i es posaran en pausa totes les aplicacions no essencials</string>
+  <string name="severe_battery_notification_title">Queda un %s de bateria</string>
+  <string name="severe_low_battery_dialog_switch_action_text">Canvia</string>
   <string name="share_to_app_stop_dialog_button">Deixa de compartir</string>
   <string name="share_to_app_stop_dialog_message_specific_app">Deixaràs de compartir &lt;b&gt;%1$s&lt;/b&gt;</string>
   <string name="share_to_app_stop_dialog_title">Vols deixar de compartir la pantalla?</string>
@@ -1406,6 +1469,9 @@ Si tens cap pregunta, contacta amb %2$s.</string>
   <string name="slice_permission_text_1">- Pot llegir informació de l'aplicació %1$s</string>
   <string name="slice_permission_text_2">- Pot dur a terme accions dins de l'aplicació %1$s</string>
   <string name="slice_permission_title">Vols permetre que %1$s mostri porcions de l'aplicació %2$s?</string>
+  <string name="smartspace_content_desc">D'una ullada</string>
+  <string name="smartspace_flight_qr_code">Codi QR</string>
+  <string name="smartspace_role_desc">Mostra</string>
   <string name="snoozeHourOptions">{count,plural, =1{# hora}=2{# hores}many{# hores}other{# hores}}</string>
   <string name="snoozeMinuteOptions">{count,plural, =1{# minut}many{# minuts}other{# minuts}}</string>
   <string name="snooze_undo">Desfés</string>
@@ -1416,6 +1482,8 @@ Si tens cap pregunta, contacta amb %2$s.</string>
   <string name="speed_label_slow">Lenta</string>
   <string name="speed_label_very_fast">Molt ràpida</string>
   <string name="split_screen_text">Pantalla dividida</string>
+  <string name="squeeze_invocation_prompt">Estreny per parlar</string>
+  <string name="standard_battery_saver_text">Estàndard</string>
   <string name="start_dreams">Estalvi de pantalla</string>
   <string name="state_empty">Buit</string>
   <string name="state_off">Desactivat</string>
@@ -1453,6 +1521,8 @@ Si tens cap pregunta, contacta amb %2$s.</string>
   <string name="tab">Pestanya</string>
   <string name="tap_a_network_to_connect">Toca una xarxa per connectar-t'hi</string>
   <string name="tap_again">Torna a tocar</string>
+  <string name="temp_defender_notify_des">La càrrega es reprendrà quan el telèfon torni a la temperatura normal</string>
+  <string name="temp_defender_notify_title">La càrrega s'ha posat en espera per protegir la bateria</string>
   <string name="template_percent">%1$d per cent</string>
   <string name="thermal">Tèrmic</string>
   <string name="thermal_shutdown_dialog_help_text">Mostra els passos de manteniment</string>
@@ -1469,6 +1539,7 @@ Toca per obtenir més informació.</string>
   <string name="title_for_empty_state_cta">Accedeix ràpidament als teus widgets d'aplicacions preferits sense desbloquejar la tauleta.</string>
   <string name="title_usb_accessory">Accessori USB</string>
   <string name="to_switch_networks_disconnect_ethernet">Per canviar de xarxa, desconnecta la connexió Ethernet</string>
+  <string name="too_hot_label">El Pixel està massa calent</string>
   <string name="touch_filtered_warning">Com que hi ha una aplicació que oculta una sol·licitud de permís, no es pot verificar la teva resposta des de la configuració.</string>
   <string name="touchpad_tutorial_action_key_button">Tecla d'acció</string>
   <string name="touchpad_tutorial_back_gesture_button">Gest Enrere</string>
@@ -1483,17 +1554,18 @@ Toca per obtenir més informació.</string>
   <string name="tuner_menu">Menú</string>
   <string name="tuner_minus">Menys</string>
   <string name="tuner_other_apps">Altres aplicacions</string>
+  <string name="tuner_persistent_warning">És possible que aquestes funcions experimentals canviïn, deixin de funcionar o desapareguin en versions futures. Continua amb precaució.</string>
   <string name="tuner_plus">Més</string>
   <string name="tuner_right">Dreta</string>
   <string name="tuner_time">Hora</string>
+  <string name="tuner_warning">El Personalitzador d'interfície d'usuari presenta opcions addicionals per canviar i personalitzar la interfície d'usuari d'Android. És possible que aquestes funcions experimentals canviïn, deixin de funcionar o desapareguin en versions futures. Continua amb precaució.</string>
+  <string name="tuner_warning_title">Diversió per a uns quants, però no per a tothom</string>
   <string name="turn_off_airplane_mode">Desactiva el mode d'avió</string>
   <string name="turn_on_bluetooth">Utilitza el Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_disabled">Les funcions com Quick Share i Troba el meu dispositiu utilitzen el Bluetooth</string>
   <string name="turn_on_bluetooth_auto_info_enabled">El Bluetooth s'activarà demà al matí</string>
   <string name="turn_on_bluetooth_auto_tomorrow">Activa automàticament demà</string>
   <string name="turn_on_wifi">Wi‑Fi</string>
-  <string name="tv_media_transfer_arc_fallback_title">HDMI ARC</string>
-  <string name="tv_media_transfer_default">Televisor predeterminat</string>
   <string name="two_weeks_timestamp">Fa 2 setmanes</string>
   <string name="unknown">Desconegut</string>
   <string name="unlock_to_see_notif_text">Desbloqueja per veure notif. anteriors</string>
@@ -1552,7 +1624,9 @@ Qualsevol usuari pot actualitzar les aplicacions dels altres usuaris.</string>
   <string name="volume_odi_captions_hint_enable">activar</string>
   <string name="volume_odi_captions_tip">Subtitula el contingut multimèdia automàticament</string>
   <string name="volume_panel_captioning_title">Subtítols instantanis</string>
+  <string name="volume_panel_clear_calling_title">Trucades nítides</string>
   <string name="volume_panel_collapsed_sliders">Els controls lliscants de volum s'han replegat</string>
+  <string name="volume_panel_device_settings_title">Configuració del dispositiu</string>
   <string name="volume_panel_dialog_settings_button">Configuració</string>
   <string name="volume_panel_enter_media_output_settings">Introdueix opcions de configuració de sortida</string>
   <string name="volume_panel_expanded_sliders">Els controls lliscants de volum s'han desplegat</string>
@@ -1667,10 +1741,13 @@ Adreça Wi‑Fi (BSSID)
   <string name="wifitrackerlib_wifi_standard_unknown">Desconeguda</string>
   <string name="wifitrackerlib_wifi_unmetered_label">D'ús no mesurat</string>
   <string name="wifitrackerlib_wifi_wont_autoconnect_for_now">Per ara la Wi‑Fi no es connectarà automàticament</string>
+  <string name="wireless_charging_label">S'està carregant sense fil</string>
+  <string name="wireless_charging_notification_text">És possible que la càrrega sense fil utilitzi més energia que la càrrega amb cable. Per estalviar electricitat i temps, prova de canviar a un carregador amb cable.</string>
+  <string name="wireless_charging_notification_title">Càrrega sense fil</string>
   <string name="work_challenge_emergency_button_text">Emergència</string>
   <string name="work_mode_off_title">Reactivar les apps de treball?</string>
   <string name="work_mode_turn_on">Reactiva</string>
-  <string name="zen_alarm_warning">%1$s no sentiràs la pròxima alarma</string>
+  <string name="zen_alarm_warning">No sentiràs la pròxima alarma (%1$s)</string>
   <string name="zen_alarm_warning_indef">Si no desactives aquesta opció abans, no sentiràs la pròxima alarma (%1$s)</string>
   <string name="zen_mode_enable_dialog_turn_on">Activa</string>
   <string name="zen_mode_settings_turn_on_dialog_title">Activa el mode No molestis</string>

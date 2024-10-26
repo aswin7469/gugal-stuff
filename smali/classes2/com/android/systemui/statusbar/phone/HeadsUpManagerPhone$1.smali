@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$1;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/util/Pools$Pool;
@@ -42,52 +42,49 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/shared/NotificationsHeadsUpRefactor;->assertInLegacyMode()V
-
-    .line 2
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$1;->mPoolObjects:Ljava/util/Stack;
 
-    .line 5
+    .line 2
     invoke-virtual {v0}, Ljava/util/Stack;->isEmpty()Z
 
-    .line 7
+    .line 4
     move-result v0
 
-    .line 10
+    .line 7
     if-nez v0, :cond_0
 
-    .line 11
+    .line 8
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$1;->mPoolObjects:Ljava/util/Stack;
 
-    .line 13
+    .line 10
     invoke-virtual {p0}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
-    .line 15
+    .line 12
     move-result-object p0
 
-    .line 18
+    .line 15
     check-cast p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;
 
-    .line 19
+    .line 16
     goto :goto_0
 
-    .line 21
+    .line 18
     :cond_0
     new-instance v0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;
 
-    .line 22
+    .line 19
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$1;->this$0:Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
-    .line 24
+    .line 21
     invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;-><init>(Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;)V
 
-    .line 26
+    .line 23
     move-object p0, v0
 
-    .line 29
+    .line 26
     :goto_0
     return-object p0
-    .line 30
+    .line 27
 .end method
 
 .method public final release(Ljava/lang/Object;)Z
@@ -97,18 +94,15 @@
     check-cast p1, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$HeadsUpEntryPhone;
 
     .line 2
-    invoke-static {}, Lcom/android/systemui/statusbar/notification/shared/NotificationsHeadsUpRefactor;->assertInLegacyMode()V
-
-    .line 4
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone$1;->mPoolObjects:Ljava/util/Stack;
 
-    .line 7
+    .line 4
     invoke-virtual {p0, p1}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
+    .line 6
     const/4 p0, 0x1
 
-    .line 12
+    .line 9
     return p0
-    .line 13
+    .line 10
 .end method

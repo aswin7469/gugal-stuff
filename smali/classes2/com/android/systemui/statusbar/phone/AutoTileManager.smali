@@ -1,6 +1,6 @@
-.class public final Lcom/android/systemui/statusbar/phone/AutoTileManager;
+.class public abstract Lcom/android/systemui/statusbar/phone/AutoTileManager;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -13,6 +13,8 @@
 .field public final mCastController:Lcom/android/systemui/statusbar/policy/CastController;
 
 .field public final mContext:Landroid/content/Context;
+
+.field public final mCurrentUser:Landroid/os/UserHandle;
 
 .field public final mDataSaverController:Lcom/android/systemui/statusbar/policy/DataSaverControllerImpl;
 
@@ -30,9 +32,15 @@
 
 .field public final mHotspotController:Lcom/android/systemui/statusbar/policy/HotspotController;
 
+.field public final mIsReduceBrightColorsAvailable:Z
+
 .field public final mManagedProfileController:Lcom/android/systemui/statusbar/phone/ManagedProfileController;
 
 .field final mNightDisplayCallback:Landroid/hardware/display/NightDisplayListener$Callback;
+
+.field public final mNightDisplayListener:Landroid/hardware/display/NightDisplayListener;
+
+.field public final mNightDisplayListenerBuilder:Lcom/android/systemui/dagger/NightDisplayListenerModule$Builder;
 
 .field public final mProfileCallback:Lcom/android/systemui/statusbar/phone/AutoTileManager$1;
 
@@ -42,7 +50,11 @@
 
 .field final mSafetyCallback:Lcom/android/systemui/statusbar/policy/SafetyController$Listener;
 
+.field public final mSafetyController:Lcom/android/systemui/statusbar/policy/SafetyController;
+
 .field public final mSafetySpec:Ljava/lang/String;
+
+.field public final mWalletController:Lcom/android/systemui/statusbar/policy/WalletControllerImpl;
 
 
 # direct methods
@@ -252,7 +264,7 @@
     move-result-object v2
 
     .line 140
-    const v3, 0x7f14083a    # @string/safety_quick_settings_tile_class 'com.android.permissioncontroller.permission.service.v33.SafetyCenterQsTileService'
+    const v3, 0x7f130897    # @string/safety_quick_settings_tile_class 'com.android.permissioncontroller.permission.service.v33.SafetyCenterQsTileService'
 
     .line 141
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

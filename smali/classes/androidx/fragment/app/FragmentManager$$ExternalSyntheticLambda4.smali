@@ -1,6 +1,6 @@
 .class public final synthetic Landroidx/fragment/app/FragmentManager$$ExternalSyntheticLambda4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/savedstate/SavedStateRegistry$SavedStateProvider;
@@ -399,154 +399,154 @@
     iput-object v2, v3, Landroidx/fragment/app/FragmentManagerState;->mLaunchedFragments:Ljava/util/ArrayList;
 
     .line 240
-    const-string v2, "state"
+    const-string/jumbo v2, "state"
 
     .line 242
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 244
+    .line 245
     iget-object v2, p0, Landroidx/fragment/app/FragmentManagerImpl;->mResults:Ljava/util/Map;
 
-    .line 247
+    .line 248
     invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
-    .line 249
+    .line 250
     move-result-object v2
-
-    .line 252
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     .line 253
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 254
     move-result-object v2
 
-    .line 256
+    .line 257
     :goto_4
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 257
+    .line 258
     move-result v3
 
-    .line 260
+    .line 261
     if-eqz v3, :cond_6
 
-    .line 261
+    .line 262
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 263
+    .line 264
     move-result-object v3
-
-    .line 266
-    check-cast v3, Ljava/lang/String;
 
     .line 267
+    check-cast v3, Ljava/lang/String;
+
+    .line 268
     const-string v4, "result_"
 
-    .line 269
-    invoke-static {v4, v3}, Landroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 270
+    invoke-static {v4, v3}, Landroidx/appsearch/app/AppSearchSchema$Builder$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 271
+    .line 272
     move-result-object v4
 
-    .line 274
+    .line 275
     iget-object v5, p0, Landroidx/fragment/app/FragmentManagerImpl;->mResults:Ljava/util/Map;
 
-    .line 275
+    .line 276
     invoke-interface {v5, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 277
+    .line 278
     move-result-object v3
 
-    .line 280
+    .line 281
     check-cast v3, Landroid/os/Bundle;
 
-    .line 281
+    .line 282
     invoke-virtual {v0, v4, v3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 283
+    .line 284
     goto :goto_4
 
-    .line 286
+    .line 287
     :cond_6
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
-    .line 287
+    .line 288
     move-result-object p0
-
-    .line 290
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     .line 291
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 292
     move-result-object p0
 
-    .line 294
+    .line 295
     :goto_5
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 295
+    .line 296
     move-result v2
 
-    .line 298
+    .line 299
     if-eqz v2, :cond_7
 
-    .line 299
+    .line 300
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 301
+    .line 302
     move-result-object v2
-
-    .line 304
-    check-cast v2, Ljava/lang/String;
 
     .line 305
+    check-cast v2, Ljava/lang/String;
+
+    .line 306
     const-string v3, "fragment_"
 
-    .line 307
-    invoke-static {v3, v2}, Landroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 308
+    invoke-static {v3, v2}, Landroidx/appsearch/app/AppSearchSchema$Builder$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 309
+    .line 310
     move-result-object v3
 
-    .line 312
+    .line 313
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 313
+    .line 314
     move-result-object v2
 
-    .line 316
+    .line 317
     check-cast v2, Landroid/os/Bundle;
 
-    .line 317
+    .line 318
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 319
+    .line 320
     goto :goto_5
 
-    .line 322
+    .line 323
     :cond_7
     :goto_6
     return-object v0
 
-    .line 323
+    .line 324
     :cond_8
     :try_start_1
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 324
+    .line 325
     move-result-object p0
 
-    .line 327
+    .line 328
     invoke-static {p0}, Landroidx/appcompat/app/WindowDecorActionBar$$ExternalSyntheticThrowCCEIfNotNull0;->m(Ljava/lang/Object;)V
 
-    .line 328
+    .line 329
     throw v6
 
-    .line 331
+    .line 332
     :goto_7
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 332
-    throw p0
     .line 333
+    throw p0
+    .line 334
 .end method

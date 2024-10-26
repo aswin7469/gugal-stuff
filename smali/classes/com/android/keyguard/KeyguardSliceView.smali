@@ -1,6 +1,6 @@
 .class public Lcom/android/keyguard/KeyguardSliceView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -139,7 +139,7 @@
     move-result-object v0
 
     .line 7
-    const v1, 0x7f070afe    # @dimen/widget_icon_size '18.0dp'
+    const v1, 0x7f070b61    # @dimen/widget_icon_size '18.0dp'
 
     .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -160,7 +160,7 @@
     move-result-object v0
 
     .line 22
-    const v1, 0x7f070306    # @dimen/header_icon_size '16.0dp'
+    const v1, 0x7f07033b    # @dimen/header_icon_size '16.0dp'
 
     .line 23
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -231,7 +231,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 2
-    const v0, 0x7f0b07ff    # @id/title
+    const v0, 0x7f0a082e    # @id/title
 
     .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -246,7 +246,7 @@
     iput-object v0, p0, Lcom/android/keyguard/KeyguardSliceView;->mTitle:Landroid/widget/TextView;
 
     .line 14
-    const v0, 0x7f0b066e    # @id/row
+    const v0, 0x7f0a0697    # @id/row
 
     .line 16
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -267,7 +267,7 @@
     const/4 v1, 0x0
 
     .line 29
-    const v2, 0x7f04073b    # @attr/wallpaperTextColor
+    const v2, 0x7f040741    # @attr/wallpaperTextColor
 
     .line 30
     invoke-static {v2, v1, v0}, Lcom/android/settingslib/Utils;->getColorAttrDefaultColor(IILandroid/content/Context;)I
@@ -288,7 +288,7 @@
     move-result-object v0
 
     .line 44
-    const v1, 0x7f070afe    # @dimen/widget_icon_size '18.0dp'
+    const v1, 0x7f070b61    # @dimen/widget_icon_size '18.0dp'
 
     .line 45
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -312,7 +312,7 @@
     move-result-object v0
 
     .line 60
-    const v1, 0x7f070306    # @dimen/header_icon_size '16.0dp'
+    const v1, 0x7f07033b    # @dimen/header_icon_size '16.0dp'
 
     .line 61
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -628,7 +628,7 @@
     iget-object v10, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     .line 143
-    const v11, 0x7f15038f    # @style/TextAppearance.Keyguard.Secondary
+    const v11, 0x7f140397    # @style/TextAppearance.Keyguard.Secondary
 
     .line 145
     invoke-direct {v9, v10, v4, v1, v11}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -85,7 +85,7 @@
     iput-object p3, p0, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->faceAuthEnabledChangedCallback:Lcom/android/systemui/statusbar/phone/KeyguardBypassController$faceAuthEnabledChangedCallback$1;
 
     .line 27
-    const p3, 0x7f0c0027    # @integer/config_face_unlock_bypass_override '0'
+    const p3, 0x7f0b002c    # @integer/config_face_unlock_bypass_override '0'
 
     .line 29
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -97,7 +97,7 @@
     iput p3, p0, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;->bypassOverride:I
 
     .line 36
-    const p3, 0x7f0c0026    # @integer/config_face_auth_supported_posture '0'
+    const p3, 0x7f0b002b    # @integer/config_face_auth_supported_posture '0'
 
     .line 38
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -155,7 +155,7 @@
     invoke-interface {p5, p2}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->addCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
 
     .line 79
-    const p2, 0x1110191    # @android:bool/config_forceWindowDrawsStatusBarBackground
+    const p2, 0x1110190    # @android:bool/config_forceSystemPackagesQueryable
 
     .line 82
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getBoolean(I)Z

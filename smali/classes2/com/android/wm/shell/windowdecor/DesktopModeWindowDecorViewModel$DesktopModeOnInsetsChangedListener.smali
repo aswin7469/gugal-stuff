@@ -1,6 +1,6 @@
 .class Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel$DesktopModeOnInsetsChangedListener;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/DisplayInsetsController$OnInsetsChangedListener;
@@ -41,7 +41,7 @@
     move-result v1
 
     .line 6
-    if-ge v0, v1, :cond_3
+    if-ge v0, v1, :cond_2
 
     .line 7
     invoke-virtual {p1, v0}, Landroid/view/InsetsState;->sourceAt(I)Landroid/view/InsetsSource;
@@ -91,38 +91,25 @@
     invoke-virtual {v1}, Landroid/view/InsetsSource;->isVisible()Z
 
     .line 35
-    move-result v0
+    move-result p1
 
     .line 38
-    xor-int/lit8 v0, v0, 0x1
+    xor-int/lit8 p1, p1, 0x1
 
     .line 39
-    iget-boolean v1, p0, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mInImmersiveMode:Z
+    iget-boolean v0, p0, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mInImmersiveMode:Z
 
     .line 41
-    if-eq v0, v1, :cond_3
+    if-eq p1, v0, :cond_2
 
     .line 43
     invoke-static {}, Lcom/android/window/flags/Flags;->enableDesktopWindowingImmersiveHandleHiding()Z
 
     .line 45
-    move-result v1
+    iput-boolean p1, p0, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mInImmersiveMode:Z
 
     .line 48
-    if-eqz v1, :cond_2
-
-    .line 49
-    iget-object v1, p1, Lcom/android/wm/shell/windowdecor/WindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 51
-    invoke-virtual {p1, v1}, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecoration;->relayout(Landroid/app/ActivityManager$RunningTaskInfo;)V
-
-    .line 53
     :cond_2
-    iput-boolean v0, p0, Lcom/android/wm/shell/windowdecor/DesktopModeWindowDecorViewModel;->mInImmersiveMode:Z
-
-    .line 56
-    :cond_3
     return-void
-    .line 58
+    .line 50
 .end method

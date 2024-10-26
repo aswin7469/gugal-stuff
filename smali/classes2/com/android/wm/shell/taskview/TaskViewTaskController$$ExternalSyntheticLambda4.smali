@@ -1,21 +1,21 @@
 .class public final synthetic Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda4;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/android/wm/shell/common/SyncTransactionQueue$TransactionRunnable;
 
 
 # instance fields
 .field public final synthetic f$0:Lcom/android/wm/shell/taskview/TaskViewTaskController;
 
-.field public final synthetic f$1:I
+.field public final synthetic f$1:Landroid/app/ActivityManager$RunningTaskInfo;
 
-.field public final synthetic f$2:Landroid/content/ComponentName;
+.field public final synthetic f$2:Landroid/view/SurfaceControl;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/wm/shell/taskview/TaskViewTaskController;ILandroid/content/ComponentName;)V
+.method public synthetic constructor <init>(Lcom/android/wm/shell/taskview/TaskViewTaskController;Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;)V
     .locals 0
 
     .line 1
@@ -25,37 +25,76 @@
     iput-object p1, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda4;->f$0:Lcom/android/wm/shell/taskview/TaskViewTaskController;
 
     .line 5
-    iput p2, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda4;->f$1:I
+    iput-object p2, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda4;->f$1:Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 7
-    iput-object p3, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda4;->f$2:Landroid/content/ComponentName;
-
-    .line 9
     return-void
-    .line 11
+    .line 9
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final runWithTransaction(Landroid/view/SurfaceControl$Transaction;)V
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda4;->f$0:Lcom/android/wm/shell/taskview/TaskViewTaskController;
+    iget-object p1, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda4;->f$1:Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 2
-    iget v1, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda4;->f$1:I
+    iget-object p0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda4;->f$0:Lcom/android/wm/shell/taskview/TaskViewTaskController;
 
     .line 4
-    iget-object p0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController$$ExternalSyntheticLambda4;->f$2:Landroid/content/ComponentName;
+    iget-object p0, p0, Lcom/android/wm/shell/taskview/TaskViewTaskController;->mTaskViewBase:Lcom/android/wm/shell/taskview/TaskViewBase;
 
     .line 6
-    iget-object v0, v0, Lcom/android/wm/shell/taskview/TaskViewTaskController;->mListener:Lcom/android/wm/shell/taskview/TaskView$Listener;
+    check-cast p0, Lcom/android/wm/shell/taskview/TaskView;
 
     .line 8
-    invoke-interface {v0, v1, p0}, Lcom/android/wm/shell/taskview/TaskView$Listener;->onTaskCreated(ILandroid/content/ComponentName;)V
+    iget-object v0, p0, Lcom/android/wm/shell/taskview/TaskView;->mTaskViewTaskController:Lcom/android/wm/shell/taskview/TaskViewTaskController;
 
     .line 10
+    invoke-virtual {v0}, Lcom/android/wm/shell/taskview/TaskViewTaskController;->isUsingShellTransitions()Z
+
+    .line 12
+    move-result v0
+
+    .line 15
+    if-eqz v0, :cond_0
+
+    .line 16
+    goto :goto_0
+
+    .line 18
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/wm/shell/taskview/TaskView;->onLocationChanged()V
+
+    .line 19
+    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskDescription:Landroid/app/ActivityManager$TaskDescription;
+
+    .line 22
+    if-eqz p1, :cond_1
+
+    .line 24
+    invoke-virtual {p1}, Landroid/app/ActivityManager$TaskDescription;->getBackgroundColor()I
+
+    .line 26
+    move-result p1
+
+    .line 29
+    new-instance v0, Lcom/android/wm/shell/taskview/TaskView$$ExternalSyntheticLambda0;
+
+    .line 30
+    const/4 v1, 0x1
+
+    .line 32
+    invoke-direct {v0, p0, p1, v1}, Lcom/android/wm/shell/taskview/TaskView$$ExternalSyntheticLambda0;-><init>(Lcom/android/wm/shell/taskview/TaskView;II)V
+
+    .line 33
+    invoke-virtual {p0, v0}, Lcom/android/wm/shell/taskview/TaskView;->runOnViewThread(Ljava/lang/Runnable;)V
+
+    .line 36
+    :cond_1
+    :goto_0
     return-void
-    .line 13
+    .line 39
 .end method

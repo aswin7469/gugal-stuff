@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:animateLayoutChanges="true"
                 android:importantForAccessibility="no"
-                android:fontFamily="@android:string/config_networkOverLimitComponent" />
+                android:fontFamily="@android:string/config_misprovisionedBrandValue" />
     </FrameLayout>
     <TextView android:textSize="16.0sp"
               android:ellipsize="end"
@@ -58,7 +58,7 @@
               android:layout_height="wrap_content"
               android:maxLines="1"
               android:importantForAccessibility="no"
-              android:fontFamily="@android:string/config_networkOverLimitComponent"
+              android:fontFamily="@android:string/config_misprovisionedBrandValue"
               android:layout_marginStart="72.0dp"
               android:layout_marginEnd="56.0dp" />
     <LinearLayout android:layout_gravity="center|start"
@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:fontFamily="@android:string/config_networkOverLimitComponent" />
+                android:fontFamily="@android:string/config_misprovisionedBrandValue" />
       <TextView android:textSize="14.0sp"
                 android:textColor="@color/media_dialog_item_main_content"
                 android:ellipsize="marquee"
@@ -86,7 +86,7 @@
                 android:maxLines="1"
                 android:singleLine="true"
                 android:marqueeRepeatLimit="marquee_forever"
-                android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent" />
+                android:fontFamily="@android:string/config_chooseTypeAndAccountActivity" />
     </LinearLayout>
     <ProgressBar android:layout_gravity="center|end"
                  android:id="@id/volume_indeterminate_progress"

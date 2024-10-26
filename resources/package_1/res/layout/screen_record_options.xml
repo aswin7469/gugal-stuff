@@ -51,7 +51,7 @@
               android:text="@string/screenrecord_taps_label"
               android:layout_weight="1.0"
               android:contentDescription="@string/screenrecord_taps_label"
-              android:fontFamily="@android:string/config_customAdbPublicKeyConfirmationComponent" />
+              android:fontFamily="@android:string/config_chooseTypeAndAccountActivity" />
     <Switch android:id="@id/screenrecord_taps_switch"
             android:layout_width="wrap_content"
             android:layout_height="48.0dp"

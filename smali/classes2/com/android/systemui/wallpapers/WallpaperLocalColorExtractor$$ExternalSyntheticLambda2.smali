@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -9,11 +9,11 @@
 # instance fields
 .field public final synthetic f$0:Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;
 
-.field public final synthetic f$1:F
+.field public final synthetic f$1:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;F)V
+.method public synthetic constructor <init>(Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;I)V
     .locals 0
 
     .line 1
@@ -23,7 +23,7 @@
     iput-object p1, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;
 
     .line 5
-    iput p2, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;->f$1:F
+    iput p2, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;->f$1:I
 
     .line 7
     return-void
@@ -39,7 +39,7 @@
     iget-object v0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;->f$0:Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;
 
     .line 2
-    iget p0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;->f$1:F
+    iget p0, p0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor$$ExternalSyntheticLambda2;->f$1:I
 
     .line 4
     iget-object v1, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mLock:Ljava/lang/Object;
@@ -49,54 +49,79 @@
 
     .line 8
     :try_start_0
-    iget v2, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mWallpaperDimAmount:F
+    iget v2, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mPages:I
 
     .line 9
-    cmpl-float v2, v2, p0
+    if-ne v2, p0, :cond_0
 
     .line 11
-    if-nez v2, :cond_0
-
-    .line 13
     monitor-exit v1
 
-    .line 15
+    .line 13
     goto :goto_0
 
-    .line 16
+    .line 14
     :catchall_0
     move-exception p0
 
-    .line 17
+    .line 15
     goto :goto_1
 
-    .line 18
+    .line 16
     :cond_0
-    iput p0, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mWallpaperDimAmount:F
+    iput p0, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mPages:I
+
+    .line 17
+    iget-object p0, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mMiniBitmap:Landroid/graphics/Bitmap;
 
     .line 19
-    const/4 p0, 0x1
+    if-eqz p0, :cond_1
 
     .line 21
-    iput-boolean p0, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mRecomputeColors:Z
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
-    .line 22
-    invoke-virtual {v0}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->recomputeColorsInternal()V
+    .line 23
+    move-result p0
 
-    .line 24
-    monitor-exit v1
+    .line 26
+    if-nez p0, :cond_1
 
     .line 27
+    iget-object p0, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mPendingRegions:Ljava/util/List;
+
+    .line 29
+    iget-object v2, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mProcessedRegions:Ljava/util/Set;
+
+    .line 31
+    invoke-interface {p0, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 33
+    iget-object p0, v0, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->mProcessedRegions:Ljava/util/Set;
+
+    .line 36
+    check-cast p0, Landroid/util/ArraySet;
+
+    .line 38
+    invoke-virtual {p0}, Landroid/util/ArraySet;->clear()V
+
+    .line 40
+    invoke-virtual {v0}, Lcom/android/systemui/wallpapers/WallpaperLocalColorExtractor;->processLocalColorsInternal()V
+
+    .line 43
+    :cond_1
+    monitor-exit v1
+
+    .line 46
     :goto_0
     return-void
 
-    .line 28
+    .line 47
     :goto_1
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 29
+    .line 48
     throw p0
-    .line 30
+    .line 49
 .end method

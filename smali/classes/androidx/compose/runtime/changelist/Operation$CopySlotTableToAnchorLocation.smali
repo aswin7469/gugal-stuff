@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/runtime/changelist/Operation$CopySlotTableToAnchorLocation;
 .super Landroidx/compose/runtime/changelist/Operation;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -321,20 +321,20 @@
     if-eqz v0, :cond_3
 
     .line 37
-    const-string p0, "to"
+    const-string/jumbo p0, "to"
 
     .line 39
     goto :goto_0
 
-    .line 41
+    .line 42
     :cond_3
     invoke-super {p0, p1}, Landroidx/compose/runtime/changelist/Operation;->objectParamName-31yXWZQ(I)Ljava/lang/String;
 
-    .line 42
+    .line 43
     move-result-object p0
 
-    .line 45
+    .line 46
     :goto_0
     return-object p0
-    .line 46
+    .line 47
 .end method

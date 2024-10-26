@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/deviceentry/domain/interactor/SystemUIDeviceEntryFaceAuthInteractor$observeFaceAuthStateUpdates$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -360,7 +360,7 @@
     iget-object v2, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mContext:Landroid/content/Context;
 
     .line 177
-    const v5, 0x7f1404ce    # @string/kg_face_sensor_privacy_enabled 'To use Face Unlock, turn on camera access in Settings'
+    const v5, 0x7f130524    # @string/kg_face_sensor_privacy_enabled 'To use Face Unlock, turn on camera access in Settings'
 
     .line 179
     invoke-virtual {v2, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -527,241 +527,241 @@
 
     .line 286
     :cond_c
-    const-string v2, "udfpsFpDown"
+    const-string/jumbo v2, "udfpsFpDown"
 
     .line 287
     :goto_4
     sget-object v4, Lcom/android/keyguard/ActiveUnlockConfig$ActiveUnlockRequestOrigin;->BIOMETRIC_FAIL:Lcom/android/keyguard/ActiveUnlockConfig$ActiveUnlockRequestOrigin;
 
-    .line 289
+    .line 290
     const-string v5, "faceFailure-"
 
-    .line 291
+    .line 292
     invoke-virtual {v5, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 293
+    .line 294
     move-result-object v2
 
-    .line 296
+    .line 297
     invoke-virtual {v1, v4, v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->requestActiveUnlock(Lcom/android/keyguard/ActiveUnlockConfig$ActiveUnlockRequestOrigin;Ljava/lang/String;)V
 
-    .line 297
+    .line 298
     iget-object v2, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mLogger:Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;
 
-    .line 300
+    .line 301
     const-string v4, "onFaceAuthFailed"
 
-    .line 302
+    .line 303
     invoke-virtual {v2, v4}, Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;->d(Ljava/lang/String;)V
 
-    .line 304
+    .line 305
     :goto_5
     iget-object v2, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 307
+    .line 308
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    .line 309
+    .line 310
     move-result v2
 
-    .line 312
+    .line 313
     if-ge v3, v2, :cond_e
 
-    .line 313
+    .line 314
     iget-object v2, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 315
+    .line 316
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 317
+    .line 318
     move-result-object v2
-
-    .line 320
-    check-cast v2, Ljava/lang/ref/WeakReference;
 
     .line 321
+    check-cast v2, Ljava/lang/ref/WeakReference;
+
+    .line 322
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    .line 323
+    .line 324
     move-result-object v2
 
-    .line 326
+    .line 327
     check-cast v2, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 327
+    .line 328
     if-eqz v2, :cond_d
 
-    .line 329
+    .line 330
     sget-object v4, Landroid/hardware/biometrics/BiometricSourceType;->FACE:Landroid/hardware/biometrics/BiometricSourceType;
 
-    .line 331
+    .line 332
     invoke-virtual {v2, v4}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;->onBiometricAuthFailed(Landroid/hardware/biometrics/BiometricSourceType;)V
 
-    .line 333
+    .line 334
     :cond_d
     add-int/2addr v3, v0
 
-    .line 336
+    .line 337
     goto :goto_5
 
-    .line 337
+    .line 338
     :cond_e
     iget-object v2, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mContext:Landroid/content/Context;
 
-    .line 338
-    const v3, 0x7f1404cd    # @string/kg_face_not_recognized 'Not recognized'
+    .line 339
+    const v3, 0x7f130523    # @string/kg_face_not_recognized 'Not recognized'
 
-    .line 340
+    .line 341
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 343
+    .line 344
     move-result-object v2
 
-    .line 346
+    .line 347
     const/4 v3, -0x2
 
-    .line 347
+    .line 348
     invoke-virtual {v1, v3, v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFaceHelp(ILjava/lang/String;)V
 
-    .line 348
+    .line 349
     goto/16 :goto_0
 
-    .line 351
+    .line 352
     :cond_f
     instance-of v2, p1, Lcom/android/systemui/deviceentry/shared/model/HelpFaceAuthenticationStatus;
 
-    .line 353
+    .line 354
     if-eqz v2, :cond_10
 
-    .line 355
+    .line 356
     move-object v2, p1
 
-    .line 357
+    .line 358
     check-cast v2, Lcom/android/systemui/deviceentry/shared/model/HelpFaceAuthenticationStatus;
 
-    .line 358
+    .line 359
     iget v3, v2, Lcom/android/systemui/deviceentry/shared/model/HelpFaceAuthenticationStatus;->msgId:I
 
-    .line 360
+    .line 361
     iget-object v2, v2, Lcom/android/systemui/deviceentry/shared/model/HelpFaceAuthenticationStatus;->msg:Ljava/lang/String;
 
-    .line 362
+    .line 363
     invoke-virtual {v1, v3, v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFaceHelp(ILjava/lang/String;)V
 
-    .line 364
+    .line 365
     goto/16 :goto_0
 
-    .line 367
+    .line 368
     :cond_10
     instance-of v2, p1, Lcom/android/systemui/deviceentry/shared/model/SuccessFaceAuthenticationStatus;
 
-    .line 369
+    .line 370
     if-eqz v2, :cond_0
 
-    .line 371
+    .line 372
     move-object v2, p1
 
-    .line 373
+    .line 374
     check-cast v2, Lcom/android/systemui/deviceentry/shared/model/SuccessFaceAuthenticationStatus;
 
-    .line 374
+    .line 375
     iget-object v2, v2, Lcom/android/systemui/deviceentry/shared/model/SuccessFaceAuthenticationStatus;->successResult:Landroid/hardware/face/FaceManager$AuthenticationResult;
 
-    .line 376
+    .line 377
     invoke-virtual {v2}, Landroid/hardware/face/FaceManager$AuthenticationResult;->getUserId()I
 
-    .line 378
+    .line 379
     move-result v3
 
-    .line 381
+    .line 382
     invoke-virtual {v2}, Landroid/hardware/face/FaceManager$AuthenticationResult;->isStrongBiometric()Z
 
-    .line 382
+    .line 383
     move-result v2
 
-    .line 385
+    .line 386
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 386
+    .line 387
     const-string v4, "KeyGuardUpdateMonitor#handlerFaceAuthenticated"
 
-    .line 389
+    .line 390
     invoke-static {v4}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 391
+    .line 392
     iget-boolean v4, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mGoingToSleep:Z
 
-    .line 394
+    .line 395
     if-eqz v4, :cond_11
 
-    .line 396
+    .line 397
     iget-object v1, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mLogger:Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;
 
-    .line 398
+    .line 399
     const-string v2, "Aborted successful auth because device is going to sleep."
 
-    .line 400
+    .line 401
     invoke-virtual {v1, v2}, Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;->d(Ljava/lang/String;)V
 
-    .line 402
+    .line 403
     goto/16 :goto_0
 
-    .line 405
+    .line 406
     :cond_11
     iget-object v4, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mSelectedUserInteractor:Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;
 
-    .line 407
+    .line 408
     invoke-virtual {v4}, Lcom/android/systemui/user/domain/interactor/SelectedUserInteractor;->getSelectedUserId()I
 
-    .line 409
+    .line 410
     move-result v4
 
-    .line 412
+    .line 413
     if-eq v4, v3, :cond_12
 
-    .line 413
+    .line 414
     iget-object v1, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mLogger:Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;
 
-    .line 415
+    .line 416
     invoke-virtual {v1, v3}, Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;->logFaceAuthForWrongUser(I)V
 
-    .line 417
+    .line 418
     goto/16 :goto_0
 
-    .line 420
+    .line 421
     :cond_12
     iget-object v3, v1, Lcom/android/keyguard/KeyguardUpdateMonitor;->mLogger:Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;
 
-    .line 422
+    .line 423
     invoke-virtual {v3, v4}, Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger;->logFaceAuthSuccess(I)V
 
-    .line 424
+    .line 425
     invoke-virtual {v1, v4, v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->onFaceAuthenticated(IZ)V
 
-    .line 427
+    .line 428
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 430
+    .line 431
     goto/16 :goto_0
 
-    .line 433
+    .line 434
     :cond_13
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 435
+    .line 436
     return-object p0
 
-    .line 437
+    .line 438
     :cond_14
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 438
+    .line 439
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    .line 440
+    .line 441
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 442
+    .line 443
     throw p0
-    .line 445
+    .line 446
 .end method

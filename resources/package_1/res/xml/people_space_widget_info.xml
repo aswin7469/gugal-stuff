@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<appwidget-provider android:description="@0x7f14072b"
+<appwidget-provider android:description="@0x7f130786"
                     android:minWidth="136.0dp"
                     android:updatePeriodMillis="60000"
-                    android:initialLayout="@0x7f0e01ce"
+                    android:initialLayout="@0x7f0d01db"
                     android:configure="com.android.systemui.people.PeopleSpaceActivity"
                     android:resizeMode="horizontal|vertical"
                     android:minResizeWidth="60.0dp"

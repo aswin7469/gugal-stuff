@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -442,270 +442,288 @@
 
     .line 265
     :cond_7
-    invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/collection/provider/NotificationVisibilityProviderImpl;->getCount()I
+    iget-object p2, p2, Lcom/android/systemui/statusbar/notification/collection/provider/NotificationVisibilityProviderImpl;->notifDataStore:Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;
 
     .line 266
-    move-result p2
+    iget-object p2, p2, Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;->activeNotifCount:Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataImpl;
 
-    .line 269
-    const/4 v0, 0x0
+    .line 268
+    iget-object p2, p2, Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataImpl;->atomicValue:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 270
-    invoke-static {p1, v2, p2, v0}, Lcom/android/internal/statusbar/NotificationVisibility;->obtain(Ljava/lang/String;IIZ)Lcom/android/internal/statusbar/NotificationVisibility;
+    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    .line 271
+    .line 272
     move-result-object p2
 
-    .line 274
+    .line 275
+    check-cast p2, Ljava/lang/Number;
+
+    .line 276
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    .line 278
+    move-result p2
+
+    .line 281
+    const/4 v0, 0x0
+
+    .line 282
+    invoke-static {p1, v2, p2, v0}, Lcom/android/internal/statusbar/NotificationVisibility;->obtain(Ljava/lang/String;IIZ)Lcom/android/internal/statusbar/NotificationVisibility;
+
+    .line 283
+    move-result-object p2
+
+    .line 286
     :goto_1
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 275
+    .line 287
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mClickNotifier:Lcom/android/systemui/statusbar/NotificationClickNotifier;
 
-    .line 277
+    .line 289
     invoke-virtual {p0, p1, p2}, Lcom/android/systemui/statusbar/NotificationClickNotifier;->onNotificationClick(Ljava/lang/String;Lcom/android/internal/statusbar/NotificationVisibility;)V
 
-    .line 279
+    .line 291
     goto :goto_3
 
-    .line 282
+    .line 294
     :cond_8
     :goto_2
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 283
+    .line 295
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->updateCurrentProfilesCache()V
 
-    .line 285
+    .line 297
     :cond_9
     :goto_3
     return-void
 
-    .line 288
+    .line 300
     :pswitch_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    .line 289
-    move-result-object p1
-
-    .line 292
-    const-string p2, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
-
-    .line 293
-    invoke-virtual {p2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    .line 295
-    move-result p1
-
-    .line 298
-    if-eqz p1, :cond_d
-
-    .line 299
-    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getSendingUserId()I
-
     .line 301
-    move-result p1
+    move-result-object p1
 
     .line 304
-    const/4 p2, -0x1
+    const-string p2, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
 
     .line 305
-    if-ne p1, p2, :cond_b
+    invoke-virtual {p2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 306
-    iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
-
-    .line 308
-    iget p2, p1, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mCurrentUserId:I
+    .line 307
+    move-result p1
 
     .line 310
-    iget-object p1, p1, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mUserManager:Landroid/os/UserManager;
+    if-eqz p1, :cond_d
 
-    .line 312
-    invoke-virtual {p1}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
+    .line 311
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getSendingUserId()I
 
-    .line 314
-    move-result-object p1
+    .line 313
+    move-result p1
+
+    .line 316
+    const/4 p2, -0x1
 
     .line 317
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    if-ne p1, p2, :cond_b
 
     .line 318
-    move-result v0
+    iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 321
-    add-int/lit8 v0, v0, -0x1
+    .line 320
+    iget p2, p1, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mCurrentUserId:I
 
     .line 322
-    const/4 v1, 0x0
+    iget-object p1, p1, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mUserManager:Landroid/os/UserManager;
 
     .line 324
+    invoke-virtual {p1}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
+
+    .line 326
+    move-result-object p1
+
+    .line 329
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    .line 330
+    move-result v0
+
+    .line 333
+    add-int/lit8 v0, v0, -0x1
+
+    .line 334
+    const/4 v1, 0x0
+
+    .line 336
     :goto_4
     if-ltz v0, :cond_a
 
-    .line 325
+    .line 337
     iget-object v2, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 327
+    .line 339
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 329
+    .line 341
     move-result-object v3
 
-    .line 332
+    .line 344
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 333
+    .line 345
     iget v3, v3, Landroid/content/pm/UserInfo;->id:I
 
-    .line 335
+    .line 347
     invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->updateDpcSettings(I)Z
 
-    .line 337
+    .line 349
     move-result v2
 
-    .line 340
+    .line 352
     or-int/2addr v1, v2
 
-    .line 341
+    .line 353
     add-int/lit8 v0, v0, -0x1
 
-    .line 342
+    .line 354
     goto :goto_4
 
-    .line 344
+    .line 356
     :cond_a
     move p1, p2
 
-    .line 345
+    .line 357
     goto :goto_5
 
-    .line 346
+    .line 358
     :cond_b
     iget-object p2, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 347
+    .line 359
     invoke-virtual {p2, p1}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->updateDpcSettings(I)Z
 
-    .line 349
+    .line 361
     move-result v1
 
-    .line 352
+    .line 364
     :goto_5
     iget-object p2, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 353
+    .line 365
     iget v0, p2, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mCurrentUserId:I
 
-    .line 355
+    .line 367
     if-ne v0, p1, :cond_c
 
-    .line 357
+    .line 369
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->updateLockscreenNotificationSetting()Z
 
-    .line 359
+    .line 371
     move-result p1
 
-    .line 362
+    .line 374
     or-int/2addr v1, p1
 
-    .line 363
+    .line 375
     :cond_c
     if-eqz v1, :cond_d
 
-    .line 364
+    .line 376
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 366
+    .line 378
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->notifyNotificationStateChanged()V
 
-    .line 368
+    .line 380
     :cond_d
     return-void
 
-    .line 371
+    .line 383
     :pswitch_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    .line 372
+    .line 384
     move-result-object p1
 
-    .line 375
+    .line 387
     const-string v0, "android.app.action.KEYGUARD_PRIVATE_NOTIFICATIONS_CHANGED"
 
-    .line 376
+    .line 388
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 378
+    .line 390
     move-result p1
-
-    .line 381
-    if-eqz p1, :cond_e
-
-    .line 382
-    iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
-
-    .line 384
-    const-string v0, "android.app.extra.KM_PRIVATE_NOTIFS_ALLOWED"
-
-    .line 386
-    const/4 v1, 0x0
-
-    .line 388
-    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    .line 389
-    move-result p2
-
-    .line 392
-    iput-boolean p2, p1, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mKeyguardAllowingNotifications:Z
 
     .line 393
-    iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
-
-    .line 395
-    iget p1, p1, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mCurrentUserId:I
-
-    .line 397
-    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getSendingUserId()I
-
-    .line 399
-    move-result p2
-
-    .line 402
-    if-ne p1, p2, :cond_e
-
-    .line 403
-    iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
-
-    .line 405
-    invoke-virtual {p1}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->updateLockscreenNotificationSetting()Z
-
-    .line 407
-    move-result p1
-
-    .line 410
     if-eqz p1, :cond_e
 
-    .line 411
-    iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
+    .line 394
+    iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
 
-    .line 413
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->notifyNotificationStateChanged()V
+    .line 396
+    const-string v0, "android.app.extra.KM_PRIVATE_NOTIFS_ALLOWED"
+
+    .line 398
+    const/4 v1, 0x0
+
+    .line 400
+    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    .line 401
+    move-result p2
+
+    .line 404
+    iput-boolean p2, p1, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mKeyguardAllowingNotifications:Z
+
+    .line 405
+    iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
+
+    .line 407
+    iget p1, p1, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->mCurrentUserId:I
+
+    .line 409
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getSendingUserId()I
+
+    .line 411
+    move-result p2
+
+    .line 414
+    if-ne p1, p2, :cond_e
 
     .line 415
+    iget-object p1, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
+
+    .line 417
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->updateLockscreenNotificationSetting()Z
+
+    .line 419
+    move-result p1
+
+    .line 422
+    if-eqz p1, :cond_e
+
+    .line 423
+    iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl$1;->this$0:Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;
+
+    .line 425
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManagerImpl;->notifyNotificationStateChanged()V
+
+    .line 427
     :cond_e
     return-void
 
-    .line 418
+    .line 430
     nop
 
-    .line 419
+    .line 431
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
         :pswitch_0
     .end packed-switch
-    .line 420
+    .line 432
 .end method

@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/unit/DpOffset;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -20,105 +20,6 @@
     .line 5
     return-void
     .line 7
-.end method
-
-.method public static toString-impl(J)Ljava/lang/String;
-    .locals 3
-
-    .line 1
-    const-wide v0, 0x7fc000007fc00000L    # 2.247117487993712E307
-
-    .line 2
-    cmp-long v0, p0, v0
-
-    .line 7
-    if-eqz v0, :cond_0
-
-    .line 9
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 11
-    const-string v1, "("
-
-    .line 13
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 15
-    const/16 v1, 0x20
-
-    .line 18
-    shr-long v1, p0, v1
-
-    .line 20
-    long-to-int v1, v1
-
-    .line 22
-    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    .line 23
-    move-result v1
-
-    .line 26
-    invoke-static {v1}, Landroidx/compose/ui/unit/Dp;->toString-impl(F)Ljava/lang/String;
-
-    .line 27
-    move-result-object v1
-
-    .line 30
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 31
-    const-string v1, ", "
-
-    .line 34
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 36
-    const-wide v1, 0xffffffffL
-
-    .line 39
-    and-long/2addr p0, v1
-
-    .line 44
-    long-to-int p0, p0
-
-    .line 45
-    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    .line 46
-    move-result p0
-
-    .line 49
-    invoke-static {p0}, Landroidx/compose/ui/unit/Dp;->toString-impl(F)Ljava/lang/String;
-
-    .line 50
-    move-result-object p0
-
-    .line 53
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 54
-    const/16 p0, 0x29
-
-    .line 57
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 59
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 62
-    move-result-object p0
-
-    .line 65
-    goto :goto_0
-
-    .line 66
-    :cond_0
-    const-string p0, "DpOffset.Unspecified"
-
-    .line 67
-    :goto_0
-    return-object p0
 .end method
 
 
@@ -185,18 +86,104 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
     .line 1
     iget-wide v0, p0, Landroidx/compose/ui/unit/DpOffset;->packedValue:J
 
     .line 2
-    invoke-static {v0, v1}, Landroidx/compose/ui/unit/DpOffset;->toString-impl(J)Ljava/lang/String;
+    const-wide v2, 0x7fc000007fc00000L    # 2.247117487993712E307
 
     .line 4
+    cmp-long p0, v0, v2
+
+    .line 9
+    if-eqz p0, :cond_0
+
+    .line 11
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    .line 13
+    const-string v2, "("
+
+    .line 15
+    invoke-direct {p0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 17
+    const/16 v2, 0x20
+
+    .line 20
+    shr-long v2, v0, v2
+
+    .line 22
+    long-to-int v2, v2
+
+    .line 24
+    invoke-static {v2}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    .line 25
+    move-result v2
+
+    .line 28
+    invoke-static {v2}, Landroidx/compose/ui/unit/Dp;->toString-impl(F)Ljava/lang/String;
+
+    .line 29
+    move-result-object v2
+
+    .line 32
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 33
+    const-string v2, ", "
+
+    .line 36
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 38
+    const-wide v2, 0xffffffffL
+
+    .line 41
+    and-long/2addr v0, v2
+
+    .line 46
+    long-to-int v0, v0
+
+    .line 47
+    invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    .line 48
+    move-result v0
+
+    .line 51
+    invoke-static {v0}, Landroidx/compose/ui/unit/Dp;->toString-impl(F)Ljava/lang/String;
+
+    .line 52
+    move-result-object v0
+
+    .line 55
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 56
+    const/16 v0, 0x29
+
+    .line 59
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 61
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 64
     move-result-object p0
 
-    .line 7
+    .line 67
+    goto :goto_0
+
+    .line 68
+    :cond_0
+    const-string p0, "DpOffset.Unspecified"
+
+    .line 69
+    :goto_0
     return-object p0
-    .line 8
+    .line 71
 .end method

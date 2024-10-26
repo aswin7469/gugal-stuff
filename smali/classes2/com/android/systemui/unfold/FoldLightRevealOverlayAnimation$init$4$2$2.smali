@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation$init$4$2$2;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function3;
@@ -74,7 +74,7 @@
     iget v0, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation$init$4$2$2;->label:I
 
     .line 4
-    if-nez v0, :cond_4
+    if-nez v0, :cond_6
 
     .line 6
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
@@ -105,7 +105,7 @@
     iget-object p1, p1, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->readyCallback:Lkotlinx/coroutines/CompletableDeferred;
 
     .line 24
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_4
 
     .line 26
     move-object v1, p1
@@ -131,58 +131,108 @@
 
     .line 38
     :goto_0
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_4
 
     .line 39
     check-cast p1, Lkotlinx/coroutines/CompletableDeferredImpl;
 
     .line 41
-    invoke-virtual {p1}, Lkotlinx/coroutines/JobSupport;->getCompletedInternal$external__kotlinx_coroutines__linux_glibc_common__kotlinx_coroutines_host()Ljava/lang/Object;
+    invoke-virtual {p1}, Lkotlinx/coroutines/JobSupport;->getState$external__kotlinx_coroutines__linux_glibc_common__kotlinx_coroutines_host()Ljava/lang/Object;
 
     .line 43
     move-result-object p1
 
     .line 46
-    check-cast p1, Ljava/lang/Runnable;
+    instance-of v1, p1, Lkotlinx/coroutines/Incomplete;
 
     .line 47
-    goto :goto_1
+    xor-int/lit8 v1, v1, 0x1
 
     .line 49
-    :cond_2
-    move-object p1, v0
-
-    .line 50
-    :goto_1
-    if-eqz p1, :cond_3
+    if-eqz v1, :cond_3
 
     .line 51
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    instance-of v1, p1, Lkotlinx/coroutines/CompletedExceptionally;
 
     .line 53
-    :cond_3
-    iget-object p0, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation$init$4$2$2;->this$0:Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;
+    if-nez v1, :cond_2
 
-    .line 56
-    iput-object v0, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->readyCallback:Lkotlinx/coroutines/CompletableDeferred;
+    .line 55
+    invoke-static {p1}, Lkotlinx/coroutines/JobSupportKt;->unboxState(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 58
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    .line 57
+    move-result-object p1
 
     .line 60
-    return-object p0
+    check-cast p1, Ljava/lang/Runnable;
 
-    .line 62
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
+    .line 61
+    goto :goto_1
 
     .line 63
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :cond_2
+    check-cast p1, Lkotlinx/coroutines/CompletedExceptionally;
 
-    .line 65
+    .line 64
+    iget-object p0, p1, Lkotlinx/coroutines/CompletedExceptionally;->cause:Ljava/lang/Throwable;
+
+    .line 66
+    throw p0
+
+    .line 68
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    .line 69
+    const-string p1, "This job has not completed yet"
+
+    .line 71
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 73
+    move-result-object p1
+
+    .line 76
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 67
+    .line 77
     throw p0
-    .line 70
+
+    .line 80
+    :cond_4
+    move-object p1, v0
+
+    .line 81
+    :goto_1
+    if-eqz p1, :cond_5
+
+    .line 82
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    .line 84
+    :cond_5
+    iget-object p0, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation$init$4$2$2;->this$0:Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;
+
+    .line 87
+    iput-object v0, p0, Lcom/android/systemui/unfold/FoldLightRevealOverlayAnimation;->readyCallback:Lkotlinx/coroutines/CompletableDeferred;
+
+    .line 89
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    .line 91
+    return-object p0
+
+    .line 93
+    :cond_6
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    .line 94
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    .line 96
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 98
+    throw p0
+    .line 101
 .end method

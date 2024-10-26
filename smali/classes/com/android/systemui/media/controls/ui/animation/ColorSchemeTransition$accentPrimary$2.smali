@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition$accentPrimary$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -31,7 +31,7 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 3
 
     .line 1
     check-cast p1, Ljava/lang/Number;
@@ -135,26 +135,26 @@
     sget-object v2, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;->NOT_PLAYING:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController$Companion$AnimationState;
 
     .line 68
-    const-string v3, "in_color"
-
-    .line 70
     if-ne v1, v2, :cond_1
 
-    .line 72
+    .line 70
     goto :goto_1
 
-    .line 74
+    .line 72
     :cond_1
     iget-object v0, v0, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseController;->turbulenceNoiseView:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;
 
-    .line 75
+    .line 73
     iget-object v0, v0, Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseView;->turbulenceNoiseShader:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader;
 
-    .line 77
+    .line 75
     if-eqz v0, :cond_2
 
+    .line 77
+    const-string v1, "in_color"
+
     .line 79
-    invoke-virtual {v0, v3, p1}, Landroid/graphics/RuntimeShader;->setColorUniform(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, p1}, Landroid/graphics/RuntimeShader;->setColorUniform(Ljava/lang/String;I)V
 
     .line 81
     :cond_2
@@ -162,22 +162,12 @@
     iget-object p0, p0, Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition$accentPrimary$2;->this$0:Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;
 
     .line 84
-    iget-object p0, p0, Lcom/android/systemui/media/controls/ui/animation/ColorSchemeTransition;->loadingEffect:Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 86
-    if-eqz p0, :cond_3
-
-    .line 88
-    iget-object p0, p0, Lcom/android/systemui/surfaceeffects/loadingeffect/LoadingEffect;->turbulenceNoiseShader:Lcom/android/systemui/surfaceeffects/turbulencenoise/TurbulenceNoiseShader;
-
-    .line 90
-    invoke-virtual {p0, v3, p1}, Landroid/graphics/RuntimeShader;->setColorUniform(Ljava/lang/String;I)V
-
-    .line 92
-    :cond_3
     sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
-    .line 95
+    .line 89
     return-object p0
-    .line 97
+    .line 91
 .end method

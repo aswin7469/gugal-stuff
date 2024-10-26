@@ -1,6 +1,6 @@
 .class public final Lcom/android/launcher3/icons/IconProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -28,35 +28,34 @@
     move-result-object v0
 
     .line 5
-    const-string v1, "string"
+    const-string/jumbo v1, "string"
 
     .line 6
     const-string v2, "android"
 
-    .line 8
+    .line 9
     const-string v3, "config_icon_mask"
 
-    .line 10
+    .line 11
     invoke-virtual {v0, v3, v1, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
+    .line 13
     move-result v0
 
-    .line 15
+    .line 16
     sput v0, Lcom/android/launcher3/icons/IconProvider;->CONFIG_ICON_MASK_RES_ID:I
 
-    .line 16
+    .line 17
     sget v0, Landroidx/core/os/BuildCompat;->$r8$clinit:I
 
-    .line 18
+    .line 19
     const/4 v0, 0x1
 
-    .line 20
+    .line 21
     sput-boolean v0, Lcom/android/launcher3/icons/IconProvider;->ATLEAST_T:Z
 
-    .line 21
+    .line 22
     return-void
-    .line 23
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
@@ -69,7 +68,7 @@
     iput-object p1, p0, Lcom/android/launcher3/icons/IconProvider;->mContext:Landroid/content/Context;
 
     .line 5
-    const v0, 0x7f140241    # @string/calendar_component_name ''
+    const v0, 0x7f130248    # @string/calendar_component_name ''
 
     .line 7
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -107,7 +106,7 @@
     iput-object v0, p0, Lcom/android/launcher3/icons/IconProvider;->mCalendar:Landroid/content/ComponentName;
 
     .line 27
-    const v0, 0x7f14027b    # @string/clock_component_name ''
+    const v0, 0x7f130288    # @string/clock_component_name ''
 
     .line 29
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

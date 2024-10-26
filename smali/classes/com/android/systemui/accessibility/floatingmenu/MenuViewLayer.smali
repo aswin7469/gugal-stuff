@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;
@@ -584,7 +584,7 @@
     iget-object p3, p3, Lcom/android/wm/shell/common/bubbles/DismissView;->circle:Lcom/android/wm/shell/common/bubbles/DismissCircleView;
 
     .line 110
-    const p5, 0x7f0b007f    # @id/action_remove_menu
+    const p5, 0x7f0a007f    # @id/action_remove_menu
 
     .line 112
     invoke-virtual {p3, p5}, Landroid/widget/FrameLayout;->setId(I)V
@@ -785,257 +785,240 @@
     .locals 6
 
     .line 1
-    const v0, 0x7f0b007f    # @id/action_remove_menu
+    const v0, 0x7f0a007f    # @id/action_remove_menu
 
     .line 2
     const/4 v1, 0x0
 
     .line 5
-    if-ne p1, v0, :cond_1
+    if-ne p1, v0, :cond_0
 
     .line 6
-    invoke-static {}, Lcom/android/systemui/Flags;->floatingMenuDragToHide()Z
-
-    .line 8
-    move-result v0
-
-    .line 11
-    if-eqz v0, :cond_0
-
-    .line 12
-    invoke-virtual {p0}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->hideMenuAndShowNotification()V
-
-    .line 14
-    goto :goto_0
-
-    .line 17
-    :cond_0
     invoke-virtual {p0}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->hideMenuAndShowMessage()V
 
-    .line 18
-    :goto_0
+    .line 8
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mMenuView:Lcom/android/systemui/accessibility/floatingmenu/MenuView;
 
-    .line 21
+    .line 11
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 23
+    .line 13
     const-string v0, "accessibility.value_fab_shortcut_dismiss"
 
-    .line 26
+    .line 16
     invoke-static {v0}, Lcom/android/modules/expresslog/Counter;->logIncrement(Ljava/lang/String;)V
 
-    .line 28
-    goto/16 :goto_1
+    .line 18
+    goto/16 :goto_0
 
-    .line 31
-    :cond_1
-    const v0, 0x7f0b0067    # @id/action_edit
+    .line 21
+    :cond_0
+    const v0, 0x7f0a0067    # @id/action_edit
 
-    .line 33
-    if-ne p1, v0, :cond_3
+    .line 23
+    if-ne p1, v0, :cond_2
 
-    .line 36
+    .line 26
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mMenuAnimationController:Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;
 
-    .line 38
+    .line 28
     iget-object v2, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mMenuView:Lcom/android/systemui/accessibility/floatingmenu/MenuView;
 
-    .line 40
+    .line 30
     iget-object v2, v2, Lcom/android/systemui/accessibility/floatingmenu/MenuView;->mMenuViewAppearance:Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;
 
-    .line 42
+    .line 32
     invoke-virtual {v2}, Lcom/android/systemui/accessibility/floatingmenu/MenuViewAppearance;->getMenuPosition()Landroid/graphics/PointF;
 
-    .line 44
+    .line 34
     move-result-object v2
 
-    .line 47
+    .line 37
     iget v2, v2, Landroid/graphics/PointF;->x:F
 
-    .line 48
+    .line 38
     const/high16 v3, 0x42c80000    # 100.0f
 
-    .line 50
+    .line 40
     const/4 v4, 0x0
 
-    .line 52
+    .line 42
     invoke-virtual {v0, v2, v3, v4}, Lcom/android/systemui/accessibility/floatingmenu/MenuAnimationController;->flingMenuThenSpringToEdge(FFF)V
 
-    .line 53
+    .line 43
     new-instance v0, Landroid/provider/SettingsStringUtil$ColonDelimitedSet$OfStrings;
 
-    .line 56
+    .line 46
     iget-object v2, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mSecureSettings:Lcom/android/systemui/util/settings/SecureSettings;
 
-    .line 58
+    .line 48
     check-cast v2, Lcom/android/systemui/util/settings/SecureSettingsImpl;
 
-    .line 60
+    .line 50
     const-string v3, "accessibility_button_targets"
 
-    .line 62
+    .line 52
     const/4 v4, -0x2
 
-    .line 64
+    .line 54
     invoke-virtual {v2, v4, v3}, Lcom/android/systemui/util/settings/SecureSettingsImpl;->getStringForUser(ILjava/lang/String;)Ljava/lang/String;
 
-    .line 65
+    .line 55
     move-result-object v2
 
-    .line 68
+    .line 58
     invoke-direct {v0, v2}, Landroid/provider/SettingsStringUtil$ColonDelimitedSet$OfStrings;-><init>(Ljava/lang/String;)V
 
-    .line 69
+    .line 59
     invoke-virtual {v0}, Landroid/provider/SettingsStringUtil$ColonDelimitedSet$OfStrings;->stream()Ljava/util/stream/Stream;
 
-    .line 72
+    .line 62
     move-result-object v0
 
-    .line 75
+    .line 65
     invoke-interface {v0}, Ljava/util/stream/Stream;->toList()Ljava/util/List;
 
-    .line 76
+    .line 66
     move-result-object v0
 
-    .line 79
+    .line 69
     new-instance v2, Landroid/content/Intent;
 
-    .line 80
+    .line 70
     const-string v3, "android.settings.ACCESSIBILITY_SHORTCUT_SETTINGS"
 
-    .line 82
+    .line 72
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 84
+    .line 74
     new-instance v3, Landroid/os/Bundle;
 
-    .line 87
+    .line 77
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 89
+    .line 79
     new-instance v4, Landroid/os/Bundle;
 
-    .line 92
+    .line 82
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 94
+    .line 84
     new-array v5, v1, [Ljava/lang/String;
 
-    .line 97
+    .line 87
     invoke-interface {v0, v5}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 99
+    .line 89
     move-result-object v0
 
-    .line 102
+    .line 92
     check-cast v0, [Ljava/lang/String;
 
-    .line 103
-    const-string v5, "targets"
+    .line 93
+    const-string/jumbo v5, "targets"
 
-    .line 105
+    .line 95
     invoke-virtual {v4, v5, v0}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 107
+    .line 98
     const-string v0, ":settings:show_fragment_args"
 
-    .line 110
+    .line 101
     invoke-virtual {v3, v0, v4}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 112
+    .line 103
     invoke-virtual {v2, v3}, Landroid/content/Intent;->replaceExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 115
+    .line 106
     const/high16 v0, 0x14000000
 
-    .line 118
+    .line 109
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 120
+    .line 111
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
-    .line 123
+    .line 114
     move-result-object v0
 
-    .line 126
+    .line 117
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    .line 127
+    .line 118
     move-result-object v0
 
-    .line 130
+    .line 121
     const-wide/32 v3, 0x10000
 
-    .line 131
+    .line 122
     invoke-static {v3, v4}, Landroid/content/pm/PackageManager$ResolveInfoFlags;->of(J)Landroid/content/pm/PackageManager$ResolveInfoFlags;
 
-    .line 134
+    .line 125
     move-result-object v3
 
-    .line 137
+    .line 128
     invoke-virtual {v0, v2, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;Landroid/content/pm/PackageManager$ResolveInfoFlags;)Ljava/util/List;
 
-    .line 138
+    .line 129
     move-result-object v0
 
-    .line 141
+    .line 132
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
-    .line 142
+    .line 133
     move-result v0
 
-    .line 145
-    if-nez v0, :cond_2
+    .line 136
+    if-nez v0, :cond_1
 
-    .line 146
+    .line 137
     iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
-    .line 148
+    .line 139
     invoke-virtual {v0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 150
+    .line 141
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mStatusBarManager:Landroid/app/StatusBarManager;
 
-    .line 153
+    .line 144
     invoke-virtual {v0}, Landroid/app/StatusBarManager;->collapsePanels()V
 
-    .line 155
-    :cond_2
+    .line 146
+    :cond_1
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mMenuView:Lcom/android/systemui/accessibility/floatingmenu/MenuView;
 
-    .line 158
+    .line 149
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 160
+    .line 151
     const-string v0, "accessibility.value_fab_shortcut_edit"
 
-    .line 163
+    .line 154
     invoke-static {v0}, Lcom/android/modules/expresslog/Counter;->logIncrement(Ljava/lang/String;)V
 
-    .line 165
-    :cond_3
-    :goto_1
+    .line 156
+    :cond_2
+    :goto_0
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mDismissView:Lcom/android/wm/shell/common/bubbles/DismissView;
 
-    .line 168
+    .line 159
     invoke-virtual {v0}, Lcom/android/wm/shell/common/bubbles/DismissView;->hide()V
 
-    .line 170
+    .line 161
     iget-object v0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mDragToInteractView:Lcom/android/systemui/accessibility/floatingmenu/DragToInteractView;
 
-    .line 173
+    .line 164
     invoke-virtual {v0}, Lcom/android/systemui/accessibility/floatingmenu/DragToInteractView;->hide()V
 
-    .line 175
+    .line 166
     iget-object p0, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mDragToInteractAnimationController:Lcom/android/systemui/accessibility/floatingmenu/DragToInteractAnimationController;
 
-    .line 178
+    .line 169
     invoke-virtual {p0, p1, v1}, Lcom/android/systemui/accessibility/floatingmenu/DragToInteractAnimationController;->animateInteractMenu(IZ)V
 
-    .line 180
+    .line 171
     return-void
-    .line 183
+    .line 174
 .end method
 
 .method public getDragToInteractAnimationController()Lcom/android/systemui/accessibility/floatingmenu/DragToInteractAnimationController;
@@ -1195,7 +1178,7 @@
     iget-object v5, v4, Lcom/android/systemui/accessibility/floatingmenu/MenuNotificationFactory;->mContext:Landroid/content/Context;
 
     .line 58
-    const v6, 0x7f140090    # @string/accessibility_floating_button_hidden_notification_title 'Accessibility button hidden'
+    const v6, 0x7f130091    # @string/accessibility_floating_button_hidden_notification_title 'Accessibility button hidden'
 
     .line 60
     invoke-virtual {v5, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -1207,7 +1190,7 @@
     iget-object v6, v4, Lcom/android/systemui/accessibility/floatingmenu/MenuNotificationFactory;->mContext:Landroid/content/Context;
 
     .line 67
-    const v7, 0x7f14008f    # @string/accessibility_floating_button_hidden_notification_text 'Tap to show accessibility button'
+    const v7, 0x7f130090    # @string/accessibility_floating_button_hidden_notification_text 'Tap to show accessibility button'
 
     .line 69
     invoke-virtual {v6, v7}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -1240,7 +1223,7 @@
     move-result-object v5
 
     .line 92
-    const v6, 0x7f08091d    # @drawable/ic_settings_24dp 'res/drawable/ic_settings_24dp.xml'
+    const v6, 0x7f080949    # @drawable/ic_settings_24dp 'res/drawable/ic_settings_24dp.xml'
 
     .line 93
     invoke-virtual {v5, v6}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
@@ -1333,33 +1316,33 @@
     move-result-object v1
 
     .line 157
-    const-string v3, "sys"
+    const-string/jumbo v3, "sys"
 
     .line 158
     invoke-virtual {v1, v3}, Landroid/app/Notification$Builder;->setCategory(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
-    .line 160
+    .line 161
     move-result-object v1
-
-    .line 163
-    invoke-virtual {v1}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
     .line 164
+    invoke-virtual {v1}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
+
+    .line 165
     move-result-object v1
 
-    .line 167
+    .line 168
     const/16 v3, 0x3f1
 
-    .line 168
+    .line 169
     invoke-virtual {v0, v3, v1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 170
+    .line 171
     iput-boolean v2, p0, Lcom/android/systemui/accessibility/floatingmenu/MenuViewLayer;->mIsNotificationShown:Z
 
-    .line 173
+    .line 174
     :cond_1
     return-void
-    .line 175
+    .line 176
 .end method
 
 .method public final onAttachedToWindow()V
@@ -1926,7 +1909,7 @@
     move-result-object v1
 
     .line 28
-    const v2, 0x7f0702df    # @dimen/floating_dismiss_gradient_height '548.0dp'
+    const v2, 0x7f07030f    # @dimen/floating_dismiss_gradient_height '548.0dp'
 
     .line 29
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1944,7 +1927,7 @@
     move-result-object v0
 
     .line 41
-    const v1, 0x7f07027c    # @dimen/dismiss_circle_size '96.0dp'
+    const v1, 0x7f07029e    # @dimen/dismiss_circle_size '96.0dp'
 
     .line 42
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

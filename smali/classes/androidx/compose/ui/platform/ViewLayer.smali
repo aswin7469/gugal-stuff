@@ -1,6 +1,6 @@
 .class public final Landroidx/compose/ui/platform/ViewLayer;
 .super Landroid/view/View;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 # interfaces
 .implements Landroidx/compose/ui/node/OwnedLayer;
@@ -200,7 +200,6 @@
 
     .line 21
     return-void
-    .line 24
 .end method
 
 .method public final dispatchDraw(Landroid/graphics/Canvas;)V
@@ -417,7 +416,6 @@
     .line 23
     :goto_1
     return-object p0
-    .line 24
 .end method
 
 .method public final hasOverlappingRendering()Z
@@ -685,6 +683,7 @@
     .line 32
     :goto_0
     return-void
+    .line 35
 .end method
 
 .method public final mapOffset-8S9VItk(JZ)J
@@ -740,7 +739,6 @@
     .line 32
     :goto_0
     return-wide p0
-    .line 33
 .end method
 
 .method public final move--gyyYBs(J)V
@@ -1668,74 +1666,77 @@
     if-eqz v1, :cond_18
 
     .line 300
-    invoke-virtual {p0, v7}, Landroid/view/View;->setRenderEffect(Landroid/graphics/RenderEffect;)V
+    iget-object v1, p1, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->renderEffect:Landroidx/compose/ui/graphics/AndroidRenderEffect;
 
     .line 302
+    invoke-virtual {p0, v7}, Landroid/view/View;->setRenderEffect(Landroid/graphics/RenderEffect;)V
+
+    .line 304
     :cond_18
     const v1, 0x8000
 
-    .line 305
+    .line 307
     and-int/2addr v0, v1
 
-    .line 308
+    .line 310
     if-eqz v0, :cond_1b
 
-    .line 309
+    .line 311
     iget v0, p1, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->compositingStrategy:I
 
-    .line 311
+    .line 313
     invoke-static {v0, v2}, Landroidx/compose/ui/graphics/CompositingStrategy;->equals-impl0(II)Z
 
-    .line 313
+    .line 315
     move-result v1
 
-    .line 316
+    .line 318
     const/4 v4, 0x2
 
-    .line 317
+    .line 319
     if-eqz v1, :cond_19
 
-    .line 318
+    .line 320
     invoke-virtual {p0, v4, v7}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 320
+    .line 322
     goto :goto_5
 
-    .line 323
+    .line 325
     :cond_19
     invoke-static {v0, v4}, Landroidx/compose/ui/graphics/CompositingStrategy;->equals-impl0(II)Z
 
-    .line 324
+    .line 326
     move-result v0
 
-    .line 327
+    .line 329
     if-eqz v0, :cond_1a
 
-    .line 328
+    .line 330
     invoke-virtual {p0, v3, v7}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 330
+    .line 332
     move v2, v3
 
-    .line 333
+    .line 335
     goto :goto_5
 
-    .line 334
+    .line 336
     :cond_1a
     invoke-virtual {p0, v3, v7}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 335
+    .line 337
     :goto_5
     iput-boolean v2, p0, Landroidx/compose/ui/platform/ViewLayer;->mHasOverlappingRendering:Z
 
-    .line 338
+    .line 340
     :cond_1b
     iget p1, p1, Landroidx/compose/ui/graphics/ReusableGraphicsLayerScope;->mutatedFields:I
 
-    .line 340
+    .line 342
     iput p1, p0, Landroidx/compose/ui/platform/ViewLayer;->mutatedFields:I
 
-    .line 342
-    return-void
     .line 344
+    return-void
+    .line 346
 .end method

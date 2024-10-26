@@ -5,7 +5,9 @@
     <item>هنگام شارژ شدن درصد نشان داده شود (پیش‌فرض)</item>
     <item>این نماد نشان داده نشود</item>
   </string-array>
-  <array name="biometric_dialog_package_names_for_logo_with_overrides" />
+  <string-array name="biometric_dialog_package_names_for_logo_with_overrides">
+    <item>com.google.android.gms</item>
+  </string-array>
   <string-array name="clock_options">
     <item>ساعت، دقیقه و ثانیه نشان داده شود</item>
     <item>ساعت و دقیقه نشان داده شود (پیش‌فرض)</item>

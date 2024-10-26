@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/authentication/shared/model/AuthenticationWipeModel$WipeTarget$User;
 .super Lcom/android/systemui/authentication/shared/model/AuthenticationWipeModel$WipeTarget;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # static fields
@@ -15,10 +15,10 @@
     new-instance v0, Lcom/android/systemui/authentication/shared/model/AuthenticationWipeModel$WipeTarget$User;
 
     .line 2
-    const v1, 0x7f1404d0    # @string/kg_failed_attempts_almost_at_erase_user 'You have incorrectly attempted to unlock the phone %1$d times. After %2$d more unsuccessful attempts ...'
+    const v1, 0x7f130526    # @string/kg_failed_attempts_almost_at_erase_user 'You have incorrectly attempted to unlock the phone %1$d times. After %2$d more unsuccessful attempts ...'
 
     .line 4
-    const v2, 0x7f1404d4    # @string/kg_failed_attempts_now_erasing_user 'You have incorrectly attempted to unlock the phone %d times. This user will be removed, which will d ...'
+    const v2, 0x7f13052a    # @string/kg_failed_attempts_now_erasing_user 'You have incorrectly attempted to unlock the phone %d times. This user will be removed, which will d ...'
 
     .line 7
     invoke-direct {v0, v1, v2}, Lcom/android/systemui/authentication/shared/model/AuthenticationWipeModel$WipeTarget;-><init>(II)V

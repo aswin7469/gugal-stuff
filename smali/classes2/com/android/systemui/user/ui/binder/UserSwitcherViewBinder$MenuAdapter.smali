@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/user/ui/binder/UserSwitcherViewBinder$MenuAdapter;
 .super Landroid/widget/BaseAdapter;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -152,7 +152,7 @@
     move-result-object v4
 
     .line 42
-    const v6, 0x7f08062b    # @drawable/bouncer_user_switcher_popup_bg 'res/drawable/bouncer_user_switcher_popup_bg.xml'
+    const v6, 0x7f08062c    # @drawable/bouncer_user_switcher_popup_bg 'res/drawable/bouncer_user_switcher_popup_bg.xml'
 
     .line 43
     invoke-virtual {p3, v6, v4}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -167,7 +167,7 @@
     invoke-virtual {p2, v0}, Landroid/widget/LinearLayout;->setShowDividers(I)V
 
     .line 53
-    const p3, 0x7f0806ab    # @drawable/fullscreen_userswitcher_menu_item_divider 'res/drawable/fullscreen_userswitcher_menu_item_divider.xml'
+    const p3, 0x7f0806b6    # @drawable/fullscreen_userswitcher_menu_item_divider 'res/drawable/fullscreen_userswitcher_menu_item_divider.xml'
 
     .line 56
     invoke-virtual {v3, p3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -220,7 +220,7 @@
     iget-object v6, p0, Lcom/android/systemui/user/ui/binder/UserSwitcherViewBinder$MenuAdapter;->layoutInflater:Landroid/view/LayoutInflater;
 
     .line 90
-    const v7, 0x7f0e030a    # @layout/user_switcher_fullscreen_popup_item 'res/layout/user_switcher_fullscreen_popup_item.xml'
+    const v7, 0x7f0d031d    # @layout/user_switcher_fullscreen_popup_item 'res/layout/user_switcher_fullscreen_popup_item.xml'
 
     .line 92
     invoke-virtual {v6, v7, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -229,7 +229,7 @@
     move-result-object v6
 
     .line 98
-    const v7, 0x7f0b0379    # @id/icon
+    const v7, 0x7f0a0399    # @id/icon
 
     .line 99
     invoke-virtual {v6, v7}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
@@ -247,7 +247,7 @@
     invoke-virtual {v7, v8}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 110
-    const v7, 0x7f0b07e0    # @id/text
+    const v7, 0x7f0a080f    # @id/text
 
     .line 113
     invoke-virtual {v6, v7}, Landroid/view/View;->requireViewById(I)Landroid/view/View;

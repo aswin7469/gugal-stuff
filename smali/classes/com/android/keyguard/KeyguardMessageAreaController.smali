@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardMessageAreaController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme ac1975bfc252e4cb929ff324f3b2719d8e3ae220dfcb8b81934b657d21a03519"
+.source "go/retraceme 9b320cbcaa51ecfa26b180c5eec5021dfe215f9e9a4edd00dd9861b8163ddbff"
 
 
 # instance fields
@@ -242,19 +242,17 @@
 .end method
 
 .method public final setMessage(Ljava/lang/CharSequence;)V
-    .locals 2
+    .locals 1
 
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     .line 1
-    invoke-virtual {p0, p1, v1, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;ZLandroid/hardware/biometrics/BiometricSourceType;)V
+    invoke-virtual {p0, p1, v0}, Lcom/android/keyguard/KeyguardMessageAreaController;->setMessage(Ljava/lang/CharSequence;Z)V
 
     return-void
 .end method
 
-.method public final setMessage(Ljava/lang/CharSequence;ZLandroid/hardware/biometrics/BiometricSourceType;)V
+.method public final setMessage(Ljava/lang/CharSequence;Z)V
     .locals 6
 
     .line 2
@@ -269,7 +267,7 @@
 
     sget-object v3, Landroid/hardware/biometrics/BiometricSourceType;->FACE:Landroid/hardware/biometrics/BiometricSourceType;
 
-    if-ne p3, v3, :cond_0
+    if-nez v3, :cond_0
 
     iget-object v3, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -325,28 +323,26 @@
 
     move-result-object v0
 
-    invoke-direct {v2, p3, v0}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v1, 0x0
+
+    invoke-direct {v2, v1, v0}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     iput-object v2, p0, Lcom/android/keyguard/KeyguardMessageAreaController;->mMessageBiometricSource:Landroid/util/Pair;
 
     .line 7
     iget-object p0, p0, Lcom/android/systemui/util/ViewController;->mView:Landroid/view/View;
 
-    move-object p3, p0
-
-    check-cast p3, Lcom/android/keyguard/KeyguardMessageArea;
+    check-cast p0, Lcom/android/keyguard/KeyguardMessageArea;
 
     .line 8
-    iget-boolean p3, p3, Lcom/android/keyguard/KeyguardMessageArea;->mIsDisabled:Z
+    iget-boolean v0, p0, Lcom/android/keyguard/KeyguardMessageArea;->mIsDisabled:Z
 
-    if-eqz p3, :cond_1
+    if-eqz v0, :cond_1
 
     return-void
 
     .line 9
     :cond_1
-    check-cast p0, Lcom/android/keyguard/KeyguardMessageArea;
-
     invoke-virtual {p0, p1, p2}, Lcom/android/keyguard/KeyguardMessageArea;->setMessage(Ljava/lang/CharSequence;Z)V
 
     return-void
